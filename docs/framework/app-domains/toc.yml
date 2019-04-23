@@ -1,105 +1,98 @@
-items:
 - name: Домены приложений и сборки
   href: index.md
   items:
-  - name: Сборки в среде CLR
-    href: assemblies-in-the-common-language-runtime.md
-    items:
-    - name: Содержимое сборок
-      href: assembly-contents.md
-    - name: Манифест сборки
-      href: assembly-manifest.md
-    - name: глобальный кэш сборок
-      href: gac.md
-    - name: Сборки со строгими именами
-      href: strong-named-assemblies.md
-    - name: Вопросы безопасности сборок
-      href: assembly-security-considerations.md
-    - name: Управление версиями сборок
-      href: assembly-versioning.md
-    - name: Размещение сборок
-      href: assembly-placement.md
-    - name: сборки и параллельное выполнение
-      href: assemblies-and-side-by-side-execution.md
-  - name: Домены приложений
-    href: application-domains.md
-  - name: Руководства по работе с доменами приложений и сборками
-    href: application-domains-and-assemblies-how-to-topics.md
-  - name: Использование доменов приложений
-    href: use.md
-    items:
-    - name: Практическое руководство. Создание домена приложения
-      href: how-to-create-an-application-domain.md
-    - name: Практическое руководство. Выгрузка домена приложения
-      href: how-to-unload-an-application-domain.md
-    - name: Практическое руководство. Настройка домена приложения
-      href: how-to-configure-an-application-domain.md
-    - name: Извлечение сведений о настройке из домена приложения
-      href: retrieve-setup-information.md
-    - name: Практическое руководство. Загрузка сборок в домен приложения
-      href: how-to-load-assemblies-into-an-application-domain.md
-    - name: Практическое руководство. Получение сведений о типах и членах из сборки
-      href: how-to-obtain-type-and-member-information-from-an-assembly.md
-    - name: Теневое копирование сборок
-      href: shadow-copy-assemblies.md
-    - name: Практическое руководство. Получение уведомлений о первом этапе обработки исключений
-      href: how-to-receive-first-chance-exception-notifications.md
-    - name: разрешение загрузки сборок
-      href: resolve-assembly-loads.md
-  - name: Программирование с использованием сборок
-    href: programming-with-assemblies.md
-    items:
-    - name: Создание сборок
-      href: create-assemblies.md
-    - name: Имена сборок
-      href: assembly-names.md
-    - name: Практическое руководство. определение полного имени сборки
-      href: how-to-determine-assembly-fully-qualified-name.md
-    - name: Выполнение приложений интранета с полным доверием
-      href: running-intranet-applications-in-full-trust.md
-    - name: Расположение сборки
-      href: assembly-location.md
-    - name: Практическое руководство. Построение однофайловой сборки
-      href: how-to-build-a-single-file-assembly.md
-    - name: Многофайловые сборки
-      href: multifile-assemblies.md
-    - name: Практическое руководство. Создание многофайловой сборки
-      href: how-to-build-a-multifile-assembly.md
-    - name: Настройка атрибутов сборки
-      href: set-assembly-attributes.md
-    - name: Создание и использование сборок со строгими именами
-      href: create-and-use-strong-named-assemblies.md
+    - name: Сборки в среде CLR
+      href: assemblies-in-the-common-language-runtime.md
       items:
-      - name: Практическое руководство. Создание пары открытого и закрытого ключей
-        href: how-to-create-a-public-private-key-pair.md
-      - name: Практическое руководство. Подписание сборки строгим именем
-        href: how-to-sign-an-assembly-with-a-strong-name.md
-      - name: Усовершенствованное строгое именование
-        href: enhanced-strong-naming.md
-      - name: Практическое руководство. Создание ссылки на сборку со строгим именем
-        href: how-to-reference-a-strong-named-assembly.md
-      - name: Практическое руководство. Отключение функции пропуска строгих имен
-        href: how-to-disable-the-strong-name-bypass-feature.md
-    - name: Отложенная подпись сборки
-      href: delay-sign-assembly.md
-    - name: Работа со сборками и глобальным кэшем сборок
-      href: working-with-assemblies-and-the-gac.md
+        - name: Содержимое сборок
+          href: assembly-contents.md
+        - name: Манифест сборки
+          href: assembly-manifest.md
+        - name: глобальный кэш сборок
+          href: gac.md
+        - name: Сборки со строгими именами
+          href: strong-named-assemblies.md
+        - name: Вопросы безопасности сборок
+          href: assembly-security-considerations.md
+        - name: Управление версиями сборок
+          href: assembly-versioning.md
+        - name: Размещение сборок
+          href: assembly-placement.md
+        - name: сборки и параллельное выполнение
+          href: assemblies-and-side-by-side-execution.md
+    - name: Домены приложений
+      href: application-domains.md
+    - name: Руководства по работе с доменами приложений и сборками
+      href: application-domains-and-assemblies-how-to-topics.md
+    - name: Использование доменов приложений
+      href: use.md
       items:
-      - name: Практическое руководство. Установка сборки в глобальный кэш сборок
-        href: how-to-install-an-assembly-into-the-gac.md
-      - name: Практическое руководство. Просмотр содержимого глобального кэша сборок
-        href: how-to-view-the-contents-of-the-gac.md
-      - name: Практическое руководство. Удаление сборки из глобального кэша сборок
-        href: how-to-remove-an-assembly-from-the-gac.md
-      - name: Использование обслуживаемых компонентов с глобальным кэшем сборок
-        href: use-serviced-components-with-the-gac.md
-    - name: Практическое руководство. Просмотр содержимого сборки
-      href: how-to-view-assembly-contents.md
-    - name: Переадресация типов в общеязыковой среде CLR
-      href: type-forwarding-in-the-common-language-runtime.md
-ms.openlocfilehash: 8a928eda090b144daf61c768fb5d8b8de079af16
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470088"
+        - name: Как выполнить Создание домена приложения
+          href: how-to-create-an-application-domain.md
+        - name: Как выполнить Выгрузка домена приложения
+          href: how-to-unload-an-application-domain.md
+        - name: Как выполнить Настройка домена приложения
+          href: how-to-configure-an-application-domain.md
+        - name: Извлечение сведений о настройке из домена приложения
+          href: retrieve-setup-information.md
+        - name: Как выполнить Загрузка сборок в домен приложения
+          href: how-to-load-assemblies-into-an-application-domain.md
+        - name: Как выполнить Получение сведений о типах и членах из сборки
+          href: how-to-obtain-type-and-member-information-from-an-assembly.md
+        - name: Теневое копирование сборок
+          href: shadow-copy-assemblies.md
+        - name: Как выполнить Получение уведомлений о первом этапе обработки исключений
+          href: how-to-receive-first-chance-exception-notifications.md
+        - name: разрешение загрузки сборок
+          href: resolve-assembly-loads.md
+    - name: Программирование с использованием сборок
+      href: programming-with-assemblies.md
+      items:
+        - name: Создание сборок
+          href: create-assemblies.md
+        - name: Имена сборок
+          href: assembly-names.md
+        - name: Как выполнить определение полного имени сборки
+          href: how-to-determine-assembly-fully-qualified-name.md
+        - name: Выполнение приложений интранета с полным доверием
+          href: running-intranet-applications-in-full-trust.md
+        - name: Расположение сборки
+          href: assembly-location.md
+        - name: Как выполнить Построение однофайловой сборки
+          href: how-to-build-a-single-file-assembly.md
+        - name: Многофайловые сборки
+          href: multifile-assemblies.md
+        - name: Как выполнить Создание многофайловой сборки
+          href: how-to-build-a-multifile-assembly.md
+        - name: Настройка атрибутов сборки
+          href: set-assembly-attributes.md
+        - name: Создание и использование сборок со строгими именами
+          href: create-and-use-strong-named-assemblies.md
+          items:
+            - name: Как выполнить Создание пары открытого и закрытого ключей
+              href: how-to-create-a-public-private-key-pair.md
+            - name: Как выполнить Подписание сборки строгим именем
+              href: how-to-sign-an-assembly-with-a-strong-name.md
+            - name: Усовершенствованное строгое именование
+              href: enhanced-strong-naming.md
+            - name: Как выполнить Создание ссылки на сборку со строгим именем
+              href: how-to-reference-a-strong-named-assembly.md
+            - name: Как выполнить Отключение функции пропуска строгих имен
+              href: how-to-disable-the-strong-name-bypass-feature.md
+        - name: Отложенная подпись сборки
+          href: delay-sign-assembly.md
+        - name: Работа со сборками и глобальным кэшем сборок
+          href: working-with-assemblies-and-the-gac.md
+          items:
+            - name: Как выполнить Установка сборки в глобальный кэш сборок
+              href: how-to-install-an-assembly-into-the-gac.md
+            - name: Как выполнить Просмотр содержимого глобального кэша сборок
+              href: how-to-view-the-contents-of-the-gac.md
+            - name: Как выполнить Удаление сборки из глобального кэша сборок
+              href: how-to-remove-an-assembly-from-the-gac.md
+            - name: Использование обслуживаемых компонентов с глобальным кэшем сборок
+              href: use-serviced-components-with-the-gac.md
+        - name: Как выполнить Просмотр содержимого сборки
+          href: how-to-view-assembly-contents.md
+        - name: Переадресация типов в общеязыковой среде CLR
+          href: type-forwarding-in-the-common-language-runtime.md

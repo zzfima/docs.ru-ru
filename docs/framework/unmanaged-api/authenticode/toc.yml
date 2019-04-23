@@ -1,28 +1,21 @@
-items:
 - name: Authenticode
   href: index.md
   items:
-  - name: Функция _AxlGetIssuerPublicKeyHash
-    href: axlgetissuerpublickeyhash-function.md
-  - name: Функция _AxlPublicKeyBlobToPublicKeyToken
-    href: axlpublickeyblobtopublickeytoken-function.md
-  - name: Функция _AxlRSAKeyValueToPublicKeyToken
-    href: axlrsakeyvaluetopublickeytoken-function.md
-  - name: Функция CertFreeAuthenticodeSignerInfo
-    href: certfreeauthenticodesignerinfo-function.md
-  - name: Функция CertFreeAuthenticodeTimestamperInfo
-    href: certfreeauthenticodetimestamperinfo-function.md
-  - name: Функция CertTimestampAuthenticodeLicense
-    href: certtimestampauthenticodelicense-function.md
-  - name: Функция CertVerifyAuthenticodeLicense
-    href: certverifyauthenticodelicense-function.md
-  - name: Структура AXL_AUTHENTICODE_SIGNER_INFO
-    href: axl-authenticode-signer-info-structure.md
-  - name: Структура AXL_AUTHENTICODE_TIMESTAMPER_INFO
-    href: axl-authenticode-timestamper-info-structure.md
-ms.openlocfilehash: 2ef9b3d6a038f9e57375b7c99ab82f00547af726
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470053"
+    - name: Функция _AxlGetIssuerPublicKeyHash
+      href: axlgetissuerpublickeyhash-function.md
+    - name: Функция _AxlPublicKeyBlobToPublicKeyToken
+      href: axlpublickeyblobtopublickeytoken-function.md
+    - name: Функция _AxlRSAKeyValueToPublicKeyToken
+      href: axlrsakeyvaluetopublickeytoken-function.md
+    - name: Функция CertFreeAuthenticodeSignerInfo
+      href: certfreeauthenticodesignerinfo-function.md
+    - name: Функция CertFreeAuthenticodeTimestamperInfo
+      href: certfreeauthenticodetimestamperinfo-function.md
+    - name: Функция CertTimestampAuthenticodeLicense
+      href: certtimestampauthenticodelicense-function.md
+    - name: Функция CertVerifyAuthenticodeLicense
+      href: certverifyauthenticodelicense-function.md
+    - name: Структура AXL_AUTHENTICODE_SIGNER_INFO
+      href: axl-authenticode-signer-info-structure.md
+    - name: Структура AXL_AUTHENTICODE_TIMESTAMPER_INFO
+      href: axl-authenticode-timestamper-info-structure.md

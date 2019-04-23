@@ -1,598 +1,591 @@
-items:
 - name: Метаданные
   href: index.md
   items:
-  - name: Интерфейсы метаданных
-    href: metadata-interfaces.md
-    items:
-    - name: Интерфейс ICeeGen
-      href: iceegen-interface.md
+    - name: Интерфейсы метаданных
+      href: metadata-interfaces.md
       items:
-      - name: Метод AddSectionReloc
-        href: iceegen-addsectionreloc-method.md
-      - name: Метод AllocateMethodBuffer
-        href: iceegen-allocatemethodbuffer-method.md
-      - name: Метод ComputePointer
-        href: iceegen-computepointer-method.md
-      - name: Метод EmitString
-        href: iceegen-emitstring-method.md
-      - name: Метод GenerateCeeFile
-        href: iceegen-generateceefile-method.md
-      - name: Метод GenerateCeeMemoryImage
-        href: iceegen-generateceememoryimage-method.md
-      - name: Метод GetIlSection
-        href: iceegen-getilsection-method.md
-      - name: Метод GetIMapTokenIface
-        href: iceegen-getimaptokeniface-method.md
-      - name: Метод GetMethodBuffer
-        href: iceegen-getmethodbuffer-method.md
-      - name: Метод GetSectionBlock
-        href: iceegen-getsectionblock-method.md
-      - name: Метод GetSectionCreate
-        href: iceegen-getsectioncreate-method.md
-      - name: Метод GetSectionDataLen
-        href: iceegen-getsectiondatalen-method.md
-      - name: Метод GetString
-        href: iceegen-getstring-method.md
-      - name: Метод GetStringSection
-        href: iceegen-getstringsection-method.md
-      - name: Метод TruncateSection
-        href: iceegen-truncatesection-method.md
-    - name: Интерфейс IHostFilter
-      href: ihostfilter-interface.md
+        - name: Интерфейс ICeeGen
+          href: iceegen-interface.md
+          items:
+            - name: Метод AddSectionReloc
+              href: iceegen-addsectionreloc-method.md
+            - name: Метод AllocateMethodBuffer
+              href: iceegen-allocatemethodbuffer-method.md
+            - name: Метод ComputePointer
+              href: iceegen-computepointer-method.md
+            - name: Метод EmitString
+              href: iceegen-emitstring-method.md
+            - name: Метод GenerateCeeFile
+              href: iceegen-generateceefile-method.md
+            - name: Метод GenerateCeeMemoryImage
+              href: iceegen-generateceememoryimage-method.md
+            - name: Метод GetIlSection
+              href: iceegen-getilsection-method.md
+            - name: Метод GetIMapTokenIface
+              href: iceegen-getimaptokeniface-method.md
+            - name: Метод GetMethodBuffer
+              href: iceegen-getmethodbuffer-method.md
+            - name: Метод GetSectionBlock
+              href: iceegen-getsectionblock-method.md
+            - name: Метод GetSectionCreate
+              href: iceegen-getsectioncreate-method.md
+            - name: Метод GetSectionDataLen
+              href: iceegen-getsectiondatalen-method.md
+            - name: Метод GetString
+              href: iceegen-getstring-method.md
+            - name: Метод GetStringSection
+              href: iceegen-getstringsection-method.md
+            - name: Метод TruncateSection
+              href: iceegen-truncatesection-method.md
+        - name: Интерфейс IHostFilter
+          href: ihostfilter-interface.md
+          items:
+            - name: Метод MarkToken
+              href: ihostfilter-marktoken-method.md
+        - name: Интерфейс IMapToken
+          href: imaptoken-interface.md
+          items:
+            - name: Метод Map
+              href: imaptoken-map-method.md
+        - name: Интерфейс IMetaDataAssemblyEmit
+          href: imetadataassemblyemit-interface.md
+          items:
+            - name: Метод DefineAssembly
+              href: imetadataassemblyemit-defineassembly-method.md
+            - name: Метод DefineAssemblyRef
+              href: imetadataassemblyemit-defineassemblyref-method.md
+            - name: Метод DefineExportedType
+              href: imetadataassemblyemit-defineexportedtype-method.md
+            - name: Метод DefineFile
+              href: imetadataassemblyemit-definefile-method.md
+            - name: Метод DefineManifestResource
+              href: imetadataassemblyemit-definemanifestresource-method.md
+            - name: Метод SetAssemblyProps
+              href: imetadataassemblyemit-setassemblyprops-method.md
+            - name: Метод SetAssemblyRefProps
+              href: imetadataassemblyemit-setassemblyrefprops-method.md
+            - name: Метод SetExportedTypeProps
+              href: imetadataassemblyemit-setexportedtypeprops-method.md
+            - name: Метод SetFileProps
+              href: imetadataassemblyemit-setfileprops-method.md
+            - name: Метод SetManifestResourceProps
+              href: imetadataassemblyemit-setmanifestresourceprops-method.md
+        - name: Интерфейс IMetaDataAssemblyImport
+          href: imetadataassemblyimport-interface.md
+          items:
+            - name: Метод CloseEnum
+              href: imetadataassemblyimport-closeenum-method.md
+            - name: Метод EnumAssemblyRefs
+              href: imetadataassemblyimport-enumassemblyrefs-method.md
+            - name: Метод EnumExportedTypes
+              href: imetadataassemblyimport-enumexportedtypes-method.md
+            - name: Метод EnumFiles
+              href: imetadataassemblyimport-enumfiles-method.md
+            - name: Метод EnumManifestResources
+              href: imetadataassemblyimport-enummanifestresources-method.md
+            - name: Метод FindAssembliesByName
+              href: imetadataassemblyimport-findassembliesbyname-method.md
+            - name: Метод FindExportedTypeByName
+              href: imetadataassemblyimport-findexportedtypebyname-method.md
+            - name: Метод FindManifestResourceByName
+              href: imetadataassemblyimport-findmanifestresourcebyname-method.md
+            - name: Метод GetAssemblyFromScop
+              href: imetadataassemblyimport-getassemblyfromscope-method.md
+            - name: Метод GetAssemblyProps
+              href: imetadataassemblyimport-getassemblyprops-method.md
+            - name: Метод GetAssemblyRefProps
+              href: imetadataassemblyimport-getassemblyrefprops-method.md
+            - name: Метод GetExportedTypeProps
+              href: imetadataassemblyimport-getexportedtypeprops-method.md
+            - name: Метод GetFileProps
+              href: imetadataassemblyimport-getfileprops-method.md
+            - name: Метод GetManifestResourceProps
+              href: imetadataassemblyimport-getmanifestresourceprops-method.md
+        - name: Интерфейс IMetaDataConverter
+          href: imetadataconverter-interface.md
+          items:
+            - name: Метод GetMetaDataFromTypeInfo
+              href: imetadataconverter-getmetadatafromtypeinfo-method.md
+            - name: Метод GetMetaDataFromTypeLib
+              href: imetadataconverter-getmetadatafromtypelib-method.md
+            - name: Метод GetTypeLibFromMetaData
+              href: imetadataconverter-gettypelibfrommetadata-method.md
+        - name: Интерфейс IMetaDataDispenser
+          href: imetadatadispenser-interface.md
+          items:
+            - name: Метод DefineScope
+              href: imetadatadispenser-definescope-method.md
+            - name: Метод OpenScope
+              href: imetadatadispenser-openscope-method.md
+            - name: Метод OpenScopeOnMemory
+              href: imetadatadispenser-openscopeonmemory-method.md
+        - name: Интерфейс IMetaDataDispenserEx
+          href: imetadatadispenserex-interface.md
+          items:
+            - name: Метод FindAssembly
+              href: imetadatadispenserex-findassembly-method.md
+            - name: Метод FindAssemblyModule
+              href: imetadatadispenserex-findassemblymodule-method.md
+            - name: Метод GetCORSystemDirectory
+              href: imetadatadispenserex-getcorsystemdirectory-method.md
+            - name: Метод GetOption
+              href: imetadatadispenserex-getoption-method.md
+            - name: Метод OpenScopeOnITypeInfo
+              href: imetadatadispenserex-openscopeonitypeinfo-method.md
+            - name: Метод SetOption
+              href: imetadatadispenserex-setoption-method.md
+        - name: Интерфейс IMetaDataEmit
+          href: imetadataemit-interface.md
+          items:
+            - name: Метод ApplyEditAndContinue
+              href: imetadataemit-applyeditandcontinue-method.md
+            - name: Метод DefineCustomAttribute
+              href: imetadataemit-definecustomattribute-method.md
+            - name: Метод DefineEvent
+              href: imetadataemit-defineevent-method.md
+            - name: Метод DefineField
+              href: imetadataemit-definefield-method.md
+            - name: Метод DefineImportMember
+              href: imetadataemit-defineimportmember-method.md
+            - name: Метод DefineImportType
+              href: imetadataemit-defineimporttype-method.md
+            - name: Метод DefineMemberRef
+              href: imetadataemit-definememberref-method.md
+            - name: Метод DefineMethod
+              href: imetadataemit-definemethod-method.md
+            - name: Метод DefineMethodImpl
+              href: imetadataemit-definemethodimpl-method.md
+            - name: Метод DefineModuleRef
+              href: imetadataemit-definemoduleref-method.md
+            - name: Метод DefineNestedType
+              href: imetadataemit-definenestedtype-method.md
+            - name: Метод DefineParam
+              href: imetadataemit-defineparam-method.md
+            - name: Метод DefinePermissionSet
+              href: imetadataemit-definepermissionset-method.md
+            - name: Метод DefinePinvokeMap
+              href: imetadataemit-definepinvokemap-method.md
+            - name: Метод DefineProperty
+              href: imetadataemit-defineproperty-method.md
+            - name: Метод DefineSecurityAttributeSet
+              href: imetadataemit-definesecurityattributeset-method.md
+            - name: Метод DefineTypeDef
+              href: imetadataemit-definetypedef-method.md
+            - name: Метод DefineTypeRefByName
+              href: imetadataemit-definetyperefbyname-method.md
+            - name: Метод DefineUserString
+              href: imetadataemit-defineuserstring-method.md
+            - name: Метод DeleteClassLayout
+              href: imetadataemit-deleteclasslayout-method.md
+            - name: Метод DeleteFieldMarshal
+              href: imetadataemit-deletefieldmarshal-method.md
+            - name: Метод DeletePinvokeMap
+              href: imetadataemit-deletepinvokemap-method.md
+            - name: Метод DeleteToken
+              href: imetadataemit-deletetoken-method.md
+            - name: Метод GetSaveSize
+              href: imetadataemit-getsavesize-method.md
+            - name: Метод GetTokenFromSig
+              href: imetadataemit-gettokenfromsig-method.md
+            - name: Метод GetTokenFromTypeSpec
+              href: imetadataemit-gettokenfromtypespec-method.md
+            - name: Метод Merge
+              href: imetadataemit-merge-method.md
+            - name: Метод MergeEnd
+              href: imetadataemit-mergeend-method.md
+            - name: Метод Save
+              href: imetadataemit-save-method.md
+            - name: Метод SaveToMemory
+              href: imetadataemit-savetomemory-method.md
+            - name: Метод SaveToStream
+              href: imetadataemit-savetostream-method.md
+            - name: Метод SetClassLayout
+              href: imetadataemit-setclasslayout-method.md
+            - name: Метод SetCustomAttributeValue
+              href: imetadataemit-setcustomattributevalue-method.md
+            - name: Метод SetEventProps
+              href: imetadataemit-seteventprops-method.md
+            - name: Метод SetFieldMarshal
+              href: imetadataemit-setfieldmarshal-method.md
+            - name: Метод SetFieldProps
+              href: imetadataemit-setfieldprops-method.md
+            - name: Метод SetFieldRVA
+              href: imetadataemit-setfieldrva-method.md
+            - name: Метод SetHandler
+              href: imetadataemit-sethandler-method.md
+            - name: Метод SetMethodImplFlags
+              href: imetadataemit-setmethodimplflags-method.md
+            - name: Метод SetMethodProps
+              href: imetadataemit-setmethodprops-method.md
+            - name: Метод SetModuleProps
+              href: imetadataemit-setmoduleprops-method.md
+            - name: Метод SetParamProps
+              href: imetadataemit-setparamprops-method.md
+            - name: Метод SetParent
+              href: imetadataemit-setparent-method.md
+            - name: Метод SetPermissionSetProps
+              href: imetadataemit-setpermissionsetprops-method.md
+            - name: Метод SetPinvokeMap
+              href: imetadataemit-setpinvokemap-method.md
+            - name: Метод SetPropertyProps
+              href: imetadataemit-setpropertyprops-method.md
+            - name: Метод SetRVA
+              href: imetadataemit-setrva-method.md
+            - name: Метод SetTypeDefProps
+              href: imetadataemit-settypedefprops-method.md
+            - name: Метод TranslateSigWithScope
+              href: imetadataemit-translatesigwithscope-method.md
+        - name: Интерфейс IMetaDataEmit2
+          href: imetadataemit2-interface.md
+          items:
+            - name: Метод DefineGenericParam
+              href: imetadataemit2-definegenericparam-method.md
+            - name: Метод DefineMethodSpec
+              href: imetadataemit2-definemethodspec-method.md
+            - name: Метод GetDeltaSaveSize
+              href: imetadataemit2-getdeltasavesize-method.md
+            - name: Метод ResetENCLog
+              href: imetadataemit2-resetenclog-method.md
+            - name: Метод SaveDelta
+              href: imetadataemit2-savedelta-method.md
+            - name: Метод SaveDeltaToMemory
+              href: imetadataemit2-savedeltatomemory-method.md
+            - name: Метод SaveDeltaToStream
+              href: imetadataemit2-savedeltatostream-method.md
+            - name: Метод SetGenericParamProps
+              href: imetadataemit2-setgenericparamprops-method.md
+        - name: Интерфейс IMetaDataError
+          href: imetadataerror-interface.md
+          items:
+            - name: Метод OnError
+              href: imetadataerror-onerror-method.md
+        - name: Интерфейс IMetaDataFilter
+          href: imetadatafilter-interface.md
+          items:
+            - name: Метод IsTokenMarked
+              href: imetadatafilter-istokenmarked-method.md
+            - name: Метод MarkToken
+              href: imetadatafilter-marktoken-method.md
+            - name: Метод UnmarkAll
+              href: imetadatafilter-unmarkall-method.md
+        - name: Интерфейс IMetaDataImport
+          href: imetadataimport-interface.md
+          items:
+            - name: Метод CloseEnum
+              href: imetadataimport-closeenum-method.md
+            - name: Метод CountEnum
+              href: imetadataimport-countenum-method.md
+            - name: Метод EnumCustomAttributes
+              href: imetadataimport-enumcustomattributes-method.md
+            - name: Метод EnumEvents
+              href: imetadataimport-enumevents-method.md
+            - name: Метод EnumFields
+              href: imetadataimport-enumfields-method.md
+            - name: Метод EnumFieldsWithName
+              href: imetadataimport-enumfieldswithname-method.md
+            - name: Метод EnumInterfaceImpls
+              href: imetadataimport-enuminterfaceimpls-method.md
+            - name: Метод EnumMemberRefs
+              href: imetadataimport-enummemberrefs-method.md
+            - name: Метод EnumMembers
+              href: imetadataimport-enummembers-method.md
+            - name: Метод EnumMembersWithName
+              href: imetadataimport-enummemberswithname-method.md
+            - name: Метод EnumMethodImpls
+              href: imetadataimport-enummethodimpls-method.md
+            - name: Метод EnumMethods
+              href: imetadataimport-enummethods-method.md
+            - name: Метод EnumMethodSemantics
+              href: imetadataimport-enummethodsemantics-method.md
+            - name: Метод EnumMethodsWithName
+              href: imetadataimport-enummethodswithname-method.md
+            - name: Метод EnumModuleRefs
+              href: imetadataimport-enummodulerefs-method.md
+            - name: Метод EnumParams
+              href: imetadataimport-enumparams-method.md
+            - name: Метод EnumPermissionSets
+              href: imetadataimport-enumpermissionsets-method.md
+            - name: Метод EnumProperties
+              href: imetadataimport-enumproperties-method.md
+            - name: Метод EnumSignatures
+              href: imetadataimport-enumsignatures-method.md
+            - name: Метод EnumTypeDefs
+              href: imetadataimport-enumtypedefs-method.md
+            - name: Метод EnumTypeRefs
+              href: imetadataimport-enumtyperefs-method.md
+            - name: Метод EnumTypeSpecs
+              href: imetadataimport-enumtypespecs-method.md
+            - name: Метод EnumUnresolvedMethods
+              href: imetadataimport-enumunresolvedmethods-method.md
+            - name: Метод EnumUserStrings
+              href: imetadataimport-enumuserstrings-method.md
+            - name: Метод FindField
+              href: imetadataimport-findfield-method.md
+            - name: Метод FindMember
+              href: imetadataimport-findmember-method.md
+            - name: Метод FindMemberRef
+              href: imetadataimport-findmemberref-method.md
+            - name: Метод FindMethod
+              href: imetadataimport-findmethod-method.md
+            - name: Метод FindTypeDefByName
+              href: imetadataimport-findtypedefbyname-method.md
+            - name: Метод FindTypeRef
+              href: imetadataimport-findtyperef-method.md
+            - name: Метод GetClassLayout
+              href: imetadataimport-getclasslayout-method.md
+            - name: Метод GetCustomAttributeByName
+              href: imetadataimport-getcustomattributebyname-method.md
+            - name: Метод GetCustomAttributeProps
+              href: imetadataimport-getcustomattributeprops-method.md
+            - name: Метод GetEventProps
+              href: imetadataimport-geteventprops-method.md
+            - name: Метод GetFieldMarshal
+              href: imetadataimport-getfieldmarshal-method.md
+            - name: Метод GetFieldProps
+              href: imetadataimport-getfieldprops-method.md
+            - name: Метод GetInterfaceImplProps
+              href: imetadataimport-getinterfaceimplprops-method.md
+            - name: Метод GetMemberProps
+              href: imetadataimport-getmemberprops-method.md
+            - name: Метод GetMemberRefProps
+              href: imetadataimport-getmemberrefprops-method.md
+            - name: Метод GetMethodProps
+              href: imetadataimport-getmethodprops-method.md
+            - name: Метод GetMethodSemantics
+              href: imetadataimport-getmethodsemantics-method.md
+            - name: Метод GetModuleFromScope
+              href: imetadataimport-getmodulefromscope-method.md
+            - name: Метод GetModuleRefProps
+              href: imetadataimport-getmodulerefprops-method.md
+            - name: Метод GetNameFromToken
+              href: imetadataimport-getnamefromtoken-method.md
+            - name: Метод GetNativeCallConvFromSig
+              href: imetadataimport-getnativecallconvfromsig-method.md
+            - name: Метод GetNestedClassProps
+              href: imetadataimport-getnestedclassprops-method.md
+            - name: Метод GetParamForMethodIndex
+              href: imetadataimport-getparamformethodindex-method.md
+            - name: Метод GetParamProps
+              href: imetadataimport-getparamprops-method.md
+            - name: Метод GetPermissionSetProps
+              href: imetadataimport-getpermissionsetprops-method.md
+            - name: Метод GetPinvokeMap
+              href: imetadataimport-getpinvokemap-method.md
+            - name: Метод GetPropertyProps
+              href: imetadataimport-getpropertyprops-method.md
+            - name: Метод GetRVA
+              href: imetadataimport-getrva-method.md
+            - name: Метод GetScopeProps
+              href: imetadataimport-getscopeprops-method.md
+            - name: Метод GetSigFromToken
+              href: imetadataimport-getsigfromtoken-method.md
+            - name: Метод GetTypeDefProps
+              href: imetadataimport-gettypedefprops-method.md
+            - name: Метод GetTypeRefProps
+              href: imetadataimport-gettyperefprops-method.md
+            - name: Метод GetTypeSpecFromToken
+              href: imetadataimport-gettypespecfromtoken-method.md
+            - name: Метод GetUserString
+              href: imetadataimport-getuserstring-method.md
+            - name: Метод IsGlobal
+              href: imetadataimport-isglobal-method.md
+            - name: Метод IsValidToken
+              href: imetadataimport-isvalidtoken-method.md
+            - name: Метод ResetEnum
+              href: imetadataimport-resetenum-method.md
+            - name: Метод ResolveTypeRef
+              href: imetadataimport-resolvetyperef-method.md
+        - name: Интерфейс IMetaDataImport2
+          href: imetadataimport2-interface.md
+          items:
+            - name: Метод EnumGenericParamConstraints
+              href: imetadataimport2-enumgenericparamconstraints-method.md
+            - name: Метод EnumGenericParams
+              href: imetadataimport2-enumgenericparams-method.md
+            - name: Метод EnumMethodSpecs
+              href: imetadataimport2-enummethodspecs-method.md
+            - name: Метод GetGenericParamConstraintProps
+              href: imetadataimport2-getgenericparamconstraintprops-method.md
+            - name: Метод GetGenericParamProps
+              href: imetadataimport2-getgenericparamprops-method.md
+            - name: Метод GetMethodSpecProps
+              href: imetadataimport2-getmethodspecprops-method.md
+            - name: Метод GetPEKind
+              href: imetadataimport2-getpekind-method.md
+            - name: Метод GetVersionString
+              href: imetadataimport2-getversionstring-method.md
+        - name: Интерфейс IMetaDataInfo
+          href: imetadatainfo-interface.md
+          items:
+            - name: Метод GetFileMapping
+              href: imetadatainfo-getfilemapping-method.md
+        - name: Интерфейс IMetaDataTables
+          href: imetadatatables-interface.md
+          items:
+            - name: Метод GetBlob
+              href: imetadatatables-getblob-method.md
+            - name: Метод GetBlobHeapSize
+              href: imetadatatables-getblobheapsize-method.md
+            - name: Метод GetCodedTokenInfo
+              href: imetadatatables-getcodedtokeninfo-method.md
+            - name: Метод GetColumn
+              href: imetadatatables-getcolumn-method.md
+            - name: Метод GetColumnInfo
+              href: imetadatatables-getcolumninfo-method.md
+            - name: Метод GetGuid
+              href: imetadatatables-getguid-method.md
+            - name: Метод GetGuidHeapSize
+              href: imetadatatables-getguidheapsize-method.md
+            - name: Метод GetNextBlob
+              href: imetadatatables-getnextblob-method.md
+            - name: Метод GetNextGuid
+              href: imetadatatables-getnextguid-method.md
+            - name: Метод GetNextString
+              href: imetadatatables-getnextstring-method.md
+            - name: Метод GetNextUserString
+              href: imetadatatables-getnextuserstring-method.md
+            - name: Метод GetNumTables
+              href: imetadatatables-getnumtables-method.md
+            - name: Метод GetRow
+              href: imetadatatables-getrow-method.md
+            - name: Метод GetString
+              href: imetadatatables-getstring-method.md
+            - name: Метод GetStringHeapSize
+              href: imetadatatables-getstringheapsize-method.md
+            - name: Метод GetTableIndex
+              href: imetadatatables-gettableindex-method.md
+            - name: Метод GetTableInfo
+              href: imetadatatables-gettableinfo-method.md
+            - name: Метод GetUserString
+              href: imetadatatables-getuserstring-method.md
+            - name: Метод GetUserStringHeapSize
+              href: imetadatatables-getuserstringheapsize-method.md
+        - name: Интерфейс IMetaDataTables2
+          href: imetadatatables2-interface.md
+          items:
+            - name: Метод GetMetaDataStorage
+              href: imetadatatables2-getmetadatastorage-method.md
+            - name: Метод GetMetaDataStreamInfo
+              href: imetadatatables2-getmetadatastreaminfo-method.md
+        - name: Интерфейс IMetaDataValidate
+          href: imetadatavalidate-interface.md
+          items:
+            - name: Метод ValidateMetaData
+              href: imetadatavalidate-validatemetadata-method.md
+            - name: Метод ValidatorInit
+              href: imetadatavalidate-validatorinit-method.md
+    - name: Глобальные статические функции метаданных
+      href: metadata-global-static-functions.md
+    - name: Перечисления метаданных
+      href: metadata-enumerations.md
       items:
-      - name: Метод MarkToken
-        href: ihostfilter-marktoken-method.md
-    - name: Интерфейс IMapToken
-      href: imaptoken-interface.md
+        - name: Перечисление AssemblyFlags
+          href: assemblyflags-enumeration.md
+        - name: Перечисление AssemblyRefFlags
+          href: assemblyrefflags-enumeration.md
+        - name: Перечисление CeeSectionAttr
+          href: ceesectionattr-enumeration.md
+        - name: Перечисление CeeSectionRelocType
+          href: ceesectionreloctype-enumeration.md
+        - name: Перечисление COINITICOR
+          href: coiniticor-enumeration.md
+        - name: Перечисление COINITIEE
+          href: coinitiee-enumeration.md
+        - name: Перечисление CorArgType
+          href: corargtype-enumeration.md
+        - name: Перечисление CorAssemblyFlags
+          href: corassemblyflags-enumeration.md
+        - name: Перечисление CorAttributeTargets
+          href: corattributetargets-enumeration.md
+        - name: Перечисление CorCallingConvention
+          href: corcallingconvention-enumeration.md
+        - name: Перечисление CorCheckDuplicatesFor
+          href: corcheckduplicatesfor-enumeration.md
+        - name: Перечисление CorDeclSecurity
+          href: cordeclsecurity-enumeration.md
+        - name: Перечисление1 CorElementType
+          href: corelementtype-enumeration.md
+        - name: Перечисление CorErrorIfEmitOutOfOrder
+          href: corerrorifemitoutoforder-enumeration.md
+        - name: Перечисление CorEventAttr
+          href: coreventattr-enumeration.md
+        - name: Перечисление CorFieldAttr
+          href: corfieldattr-enumeration.md
+        - name: Перечисление CorFileFlags
+          href: corfileflags-enumeration.md
+        - name: Перечисление CorFileMapping
+          href: corfilemapping-enumeration.md
+        - name: Перечисление CorGenericParamAttr
+          href: corgenericparamattr-enumeration.md
+        - name: Перечисление CorImportOptions
+          href: corimportoptions-enumeration.md
+        - name: Перечисление CorLinkerOptions
+          href: corlinkeroptions-enumeration.md
+        - name: Перечисление CorLocalRefPreservation
+          href: corlocalrefpreservation-enumeration.md
+        - name: Перечисление CorManifestResourceFlags
+          href: cormanifestresourceflags-enumeration.md
+        - name: Перечисление CorMethodAttr
+          href: cormethodattr-enumeration.md
+        - name: Перечисление CorMethodImpl
+          href: cormethodimpl-enumeration.md
+        - name: Перечисление CorMethodSemanticsAttr
+          href: cormethodsemanticsattr-enumeration.md
+        - name: Перечисление CorNativeLinkFlags
+          href: cornativelinkflags-enumeration.md
+        - name: Перечисление CorNativeLinkType
+          href: cornativelinktype-enumeration.md
+        - name: Перечисление CorNativeType
+          href: cornativetype-enumeration.md
+        - name: Перечисление CorNotificationForTokenMovement
+          href: cornotificationfortokenmovement-enumeration.md
+        - name: Перечисление CorOpenFlags
+          href: coropenflags-enumeration.md
+        - name: Перечисление CorParamAttr
+          href: corparamattr-enumeration.md
+        - name: Перечисление CorPEKind
+          href: corpekind-enumeration.md
+        - name: Перечисление CorPinvokeMap
+          href: corpinvokemap-enumeration.md
+        - name: Перечисление CorPropertyAttr
+          href: corpropertyattr-enumeration.md
+        - name: Перечисление CorRefToDefCheck
+          href: correftodefcheck-enumeration.md
+        - name: Перечисление CorRegFlags
+          href: corregflags-enumeration.md
+        - name: Перечисление CorSaveSize
+          href: corsavesize-enumeration.md
+        - name: Перечисление CorSerializationType
+          href: corserializationtype-enumeration.md
+        - name: Перечисление CorSetENC
+          href: corsetenc-enumeration.md
+        - name: Перечисление CorThreadSafetyOptions
+          href: corthreadsafetyoptions-enumeration.md
+        - name: Перечисление CorTokenType
+          href: cortokentype-enumeration.md
+        - name: Перечисление CorTypeAttr
+          href: cortypeattr-enumeration.md
+        - name: Перечисление CorUnmanagedCallingConvention
+          href: corunmanagedcallingconvention-enumeration.md
+        - name: Перечисление CorValidatorModuleType
+          href: corvalidatormoduletype-enumeration.md
+        - name: Перечисление COUNINITIEE
+          href: couninitiee-enumeration.md
+    - name: Структуры метаданных
+      href: metadata-structures.md
       items:
-      - name: Метод Map
-        href: imaptoken-map-method.md
-    - name: Интерфейс IMetaDataAssemblyEmit
-      href: imetadataassemblyemit-interface.md
+        - name: Структура ASSEMBLYMETADATA
+          href: assemblymetadata-structure.md
+        - name: Структура COR_FIELD_OFFSET
+          href: cor-field-offset-structure.md
+        - name: Структура COR_NATIVE_LINK
+          href: cor-native-link-structure.md
+        - name: Структура CVStruct
+          href: cvstruct-structure.md
+        - name: Структура OSINFO
+          href: osinfo-structure.md
+    - name: Объединения метаданных
+      href: metadata-unions.md
       items:
-      - name: Метод DefineAssembly
-        href: imetadataassemblyemit-defineassembly-method.md
-      - name: Метод DefineAssemblyRef
-        href: imetadataassemblyemit-defineassemblyref-method.md
-      - name: Метод DefineExportedType
-        href: imetadataassemblyemit-defineexportedtype-method.md
-      - name: Метод DefineFile
-        href: imetadataassemblyemit-definefile-method.md
-      - name: Метод DefineManifestResource
-        href: imetadataassemblyemit-definemanifestresource-method.md
-      - name: Метод SetAssemblyProps
-        href: imetadataassemblyemit-setassemblyprops-method.md
-      - name: Метод SetAssemblyRefProps
-        href: imetadataassemblyemit-setassemblyrefprops-method.md
-      - name: Метод SetExportedTypeProps
-        href: imetadataassemblyemit-setexportedtypeprops-method.md
-      - name: Метод SetFileProps
-        href: imetadataassemblyemit-setfileprops-method.md
-      - name: Метод SetManifestResourceProps
-        href: imetadataassemblyemit-setmanifestresourceprops-method.md
-    - name: Интерфейс IMetaDataAssemblyImport
-      href: imetadataassemblyimport-interface.md
-      items:
-      - name: Метод CloseEnum
-        href: imetadataassemblyimport-closeenum-method.md
-      - name: Метод EnumAssemblyRefs
-        href: imetadataassemblyimport-enumassemblyrefs-method.md
-      - name: Метод EnumExportedTypes
-        href: imetadataassemblyimport-enumexportedtypes-method.md
-      - name: Метод EnumFiles
-        href: imetadataassemblyimport-enumfiles-method.md
-      - name: Метод EnumManifestResources
-        href: imetadataassemblyimport-enummanifestresources-method.md
-      - name: Метод FindAssembliesByName
-        href: imetadataassemblyimport-findassembliesbyname-method.md
-      - name: Метод FindExportedTypeByName
-        href: imetadataassemblyimport-findexportedtypebyname-method.md
-      - name: Метод FindManifestResourceByName
-        href: imetadataassemblyimport-findmanifestresourcebyname-method.md
-      - name: Метод GetAssemblyFromScop
-        href: imetadataassemblyimport-getassemblyfromscope-method.md
-      - name: Метод GetAssemblyProps
-        href: imetadataassemblyimport-getassemblyprops-method.md
-      - name: Метод GetAssemblyRefProps
-        href: imetadataassemblyimport-getassemblyrefprops-method.md
-      - name: Метод GetExportedTypeProps
-        href: imetadataassemblyimport-getexportedtypeprops-method.md
-      - name: Метод GetFileProps
-        href: imetadataassemblyimport-getfileprops-method.md
-      - name: Метод GetManifestResourceProps
-        href: imetadataassemblyimport-getmanifestresourceprops-method.md
-    - name: Интерфейс IMetaDataConverter
-      href: imetadataconverter-interface.md
-      items:
-      - name: Метод GetMetaDataFromTypeInfo
-        href: imetadataconverter-getmetadatafromtypeinfo-method.md
-      - name: Метод GetMetaDataFromTypeLib
-        href: imetadataconverter-getmetadatafromtypelib-method.md
-      - name: Метод GetTypeLibFromMetaData
-        href: imetadataconverter-gettypelibfrommetadata-method.md
-    - name: Интерфейс IMetaDataDispenser
-      href: imetadatadispenser-interface.md
-      items:
-      - name: Метод DefineScope
-        href: imetadatadispenser-definescope-method.md
-      - name: Метод OpenScope
-        href: imetadatadispenser-openscope-method.md
-      - name: Метод OpenScopeOnMemory
-        href: imetadatadispenser-openscopeonmemory-method.md
-    - name: Интерфейс IMetaDataDispenserEx
-      href: imetadatadispenserex-interface.md
-      items:
-      - name: Метод FindAssembly
-        href: imetadatadispenserex-findassembly-method.md
-      - name: Метод FindAssemblyModule
-        href: imetadatadispenserex-findassemblymodule-method.md
-      - name: Метод GetCORSystemDirectory
-        href: imetadatadispenserex-getcorsystemdirectory-method.md
-      - name: Метод GetOption
-        href: imetadatadispenserex-getoption-method.md
-      - name: Метод OpenScopeOnITypeInfo
-        href: imetadatadispenserex-openscopeonitypeinfo-method.md
-      - name: Метод SetOption
-        href: imetadatadispenserex-setoption-method.md
-    - name: Интерфейс IMetaDataEmit
-      href: imetadataemit-interface.md
-      items:
-      - name: Метод ApplyEditAndContinue
-        href: imetadataemit-applyeditandcontinue-method.md
-      - name: Метод DefineCustomAttribute
-        href: imetadataemit-definecustomattribute-method.md
-      - name: Метод DefineEvent
-        href: imetadataemit-defineevent-method.md
-      - name: Метод DefineField
-        href: imetadataemit-definefield-method.md
-      - name: Метод DefineImportMember
-        href: imetadataemit-defineimportmember-method.md
-      - name: Метод DefineImportType
-        href: imetadataemit-defineimporttype-method.md
-      - name: Метод DefineMemberRef
-        href: imetadataemit-definememberref-method.md
-      - name: Метод DefineMethod
-        href: imetadataemit-definemethod-method.md
-      - name: Метод DefineMethodImpl
-        href: imetadataemit-definemethodimpl-method.md
-      - name: Метод DefineModuleRef
-        href: imetadataemit-definemoduleref-method.md
-      - name: Метод DefineNestedType
-        href: imetadataemit-definenestedtype-method.md
-      - name: Метод DefineParam
-        href: imetadataemit-defineparam-method.md
-      - name: Метод DefinePermissionSet
-        href: imetadataemit-definepermissionset-method.md
-      - name: Метод DefinePinvokeMap
-        href: imetadataemit-definepinvokemap-method.md
-      - name: Метод DefineProperty
-        href: imetadataemit-defineproperty-method.md
-      - name: Метод DefineSecurityAttributeSet
-        href: imetadataemit-definesecurityattributeset-method.md
-      - name: Метод DefineTypeDef
-        href: imetadataemit-definetypedef-method.md
-      - name: Метод DefineTypeRefByName
-        href: imetadataemit-definetyperefbyname-method.md
-      - name: Метод DefineUserString
-        href: imetadataemit-defineuserstring-method.md
-      - name: Метод DeleteClassLayout
-        href: imetadataemit-deleteclasslayout-method.md
-      - name: Метод DeleteFieldMarshal
-        href: imetadataemit-deletefieldmarshal-method.md
-      - name: Метод DeletePinvokeMap
-        href: imetadataemit-deletepinvokemap-method.md
-      - name: Метод DeleteToken
-        href: imetadataemit-deletetoken-method.md
-      - name: Метод GetSaveSize
-        href: imetadataemit-getsavesize-method.md
-      - name: Метод GetTokenFromSig
-        href: imetadataemit-gettokenfromsig-method.md
-      - name: Метод GetTokenFromTypeSpec
-        href: imetadataemit-gettokenfromtypespec-method.md
-      - name: Метод Merge
-        href: imetadataemit-merge-method.md
-      - name: Метод MergeEnd
-        href: imetadataemit-mergeend-method.md
-      - name: Метод Save
-        href: imetadataemit-save-method.md
-      - name: Метод SaveToMemory
-        href: imetadataemit-savetomemory-method.md
-      - name: Метод SaveToStream
-        href: imetadataemit-savetostream-method.md
-      - name: Метод SetClassLayout
-        href: imetadataemit-setclasslayout-method.md
-      - name: Метод SetCustomAttributeValue
-        href: imetadataemit-setcustomattributevalue-method.md
-      - name: Метод SetEventProps
-        href: imetadataemit-seteventprops-method.md
-      - name: Метод SetFieldMarshal
-        href: imetadataemit-setfieldmarshal-method.md
-      - name: Метод SetFieldProps
-        href: imetadataemit-setfieldprops-method.md
-      - name: Метод SetFieldRVA
-        href: imetadataemit-setfieldrva-method.md
-      - name: Метод SetHandler
-        href: imetadataemit-sethandler-method.md
-      - name: Метод SetMethodImplFlags
-        href: imetadataemit-setmethodimplflags-method.md
-      - name: Метод SetMethodProps
-        href: imetadataemit-setmethodprops-method.md
-      - name: Метод SetModuleProps
-        href: imetadataemit-setmoduleprops-method.md
-      - name: Метод SetParamProps
-        href: imetadataemit-setparamprops-method.md
-      - name: Метод SetParent
-        href: imetadataemit-setparent-method.md
-      - name: Метод SetPermissionSetProps
-        href: imetadataemit-setpermissionsetprops-method.md
-      - name: Метод SetPinvokeMap
-        href: imetadataemit-setpinvokemap-method.md
-      - name: Метод SetPropertyProps
-        href: imetadataemit-setpropertyprops-method.md
-      - name: Метод SetRVA
-        href: imetadataemit-setrva-method.md
-      - name: Метод SetTypeDefProps
-        href: imetadataemit-settypedefprops-method.md
-      - name: Метод TranslateSigWithScope
-        href: imetadataemit-translatesigwithscope-method.md
-    - name: Интерфейс IMetaDataEmit2
-      href: imetadataemit2-interface.md
-      items:
-      - name: Метод DefineGenericParam
-        href: imetadataemit2-definegenericparam-method.md
-      - name: Метод DefineMethodSpec
-        href: imetadataemit2-definemethodspec-method.md
-      - name: Метод GetDeltaSaveSize
-        href: imetadataemit2-getdeltasavesize-method.md
-      - name: Метод ResetENCLog
-        href: imetadataemit2-resetenclog-method.md
-      - name: Метод SaveDelta
-        href: imetadataemit2-savedelta-method.md
-      - name: Метод SaveDeltaToMemory
-        href: imetadataemit2-savedeltatomemory-method.md
-      - name: Метод SaveDeltaToStream
-        href: imetadataemit2-savedeltatostream-method.md
-      - name: Метод SetGenericParamProps
-        href: imetadataemit2-setgenericparamprops-method.md
-    - name: Интерфейс IMetaDataError
-      href: imetadataerror-interface.md
-      items:
-      - name: Метод OnError
-        href: imetadataerror-onerror-method.md
-    - name: Интерфейс IMetaDataFilter
-      href: imetadatafilter-interface.md
-      items:
-      - name: Метод IsTokenMarked
-        href: imetadatafilter-istokenmarked-method.md
-      - name: Метод MarkToken
-        href: imetadatafilter-marktoken-method.md
-      - name: Метод UnmarkAll
-        href: imetadatafilter-unmarkall-method.md
-    - name: Интерфейс IMetaDataImport
-      href: imetadataimport-interface.md
-      items:
-      - name: Метод CloseEnum
-        href: imetadataimport-closeenum-method.md
-      - name: Метод CountEnum
-        href: imetadataimport-countenum-method.md
-      - name: Метод EnumCustomAttributes
-        href: imetadataimport-enumcustomattributes-method.md
-      - name: Метод EnumEvents
-        href: imetadataimport-enumevents-method.md
-      - name: Метод EnumFields
-        href: imetadataimport-enumfields-method.md
-      - name: Метод EnumFieldsWithName
-        href: imetadataimport-enumfieldswithname-method.md
-      - name: Метод EnumInterfaceImpls
-        href: imetadataimport-enuminterfaceimpls-method.md
-      - name: Метод EnumMemberRefs
-        href: imetadataimport-enummemberrefs-method.md
-      - name: Метод EnumMembers
-        href: imetadataimport-enummembers-method.md
-      - name: Метод EnumMembersWithName
-        href: imetadataimport-enummemberswithname-method.md
-      - name: Метод EnumMethodImpls
-        href: imetadataimport-enummethodimpls-method.md
-      - name: Метод EnumMethods
-        href: imetadataimport-enummethods-method.md
-      - name: Метод EnumMethodSemantics
-        href: imetadataimport-enummethodsemantics-method.md
-      - name: Метод EnumMethodsWithName
-        href: imetadataimport-enummethodswithname-method.md
-      - name: Метод EnumModuleRefs
-        href: imetadataimport-enummodulerefs-method.md
-      - name: Метод EnumParams
-        href: imetadataimport-enumparams-method.md
-      - name: Метод EnumPermissionSets
-        href: imetadataimport-enumpermissionsets-method.md
-      - name: Метод EnumProperties
-        href: imetadataimport-enumproperties-method.md
-      - name: Метод EnumSignatures
-        href: imetadataimport-enumsignatures-method.md
-      - name: Метод EnumTypeDefs
-        href: imetadataimport-enumtypedefs-method.md
-      - name: Метод EnumTypeRefs
-        href: imetadataimport-enumtyperefs-method.md
-      - name: Метод EnumTypeSpecs
-        href: imetadataimport-enumtypespecs-method.md
-      - name: Метод EnumUnresolvedMethods
-        href: imetadataimport-enumunresolvedmethods-method.md
-      - name: Метод EnumUserStrings
-        href: imetadataimport-enumuserstrings-method.md
-      - name: Метод FindField
-        href: imetadataimport-findfield-method.md
-      - name: Метод FindMember
-        href: imetadataimport-findmember-method.md
-      - name: Метод FindMemberRef
-        href: imetadataimport-findmemberref-method.md
-      - name: Метод FindMethod
-        href: imetadataimport-findmethod-method.md
-      - name: Метод FindTypeDefByName
-        href: imetadataimport-findtypedefbyname-method.md
-      - name: Метод FindTypeRef
-        href: imetadataimport-findtyperef-method.md
-      - name: Метод GetClassLayout
-        href: imetadataimport-getclasslayout-method.md
-      - name: Метод GetCustomAttributeByName
-        href: imetadataimport-getcustomattributebyname-method.md
-      - name: Метод GetCustomAttributeProps
-        href: imetadataimport-getcustomattributeprops-method.md
-      - name: Метод GetEventProps
-        href: imetadataimport-geteventprops-method.md
-      - name: Метод GetFieldMarshal
-        href: imetadataimport-getfieldmarshal-method.md
-      - name: Метод GetFieldProps
-        href: imetadataimport-getfieldprops-method.md
-      - name: Метод GetInterfaceImplProps
-        href: imetadataimport-getinterfaceimplprops-method.md
-      - name: Метод GetMemberProps
-        href: imetadataimport-getmemberprops-method.md
-      - name: Метод GetMemberRefProps
-        href: imetadataimport-getmemberrefprops-method.md
-      - name: Метод GetMethodProps
-        href: imetadataimport-getmethodprops-method.md
-      - name: Метод GetMethodSemantics
-        href: imetadataimport-getmethodsemantics-method.md
-      - name: Метод GetModuleFromScope
-        href: imetadataimport-getmodulefromscope-method.md
-      - name: Метод GetModuleRefProps
-        href: imetadataimport-getmodulerefprops-method.md
-      - name: Метод GetNameFromToken
-        href: imetadataimport-getnamefromtoken-method.md
-      - name: Метод GetNativeCallConvFromSig
-        href: imetadataimport-getnativecallconvfromsig-method.md
-      - name: Метод GetNestedClassProps
-        href: imetadataimport-getnestedclassprops-method.md
-      - name: Метод GetParamForMethodIndex
-        href: imetadataimport-getparamformethodindex-method.md
-      - name: Метод GetParamProps
-        href: imetadataimport-getparamprops-method.md
-      - name: Метод GetPermissionSetProps
-        href: imetadataimport-getpermissionsetprops-method.md
-      - name: Метод GetPinvokeMap
-        href: imetadataimport-getpinvokemap-method.md
-      - name: Метод GetPropertyProps
-        href: imetadataimport-getpropertyprops-method.md
-      - name: Метод GetRVA
-        href: imetadataimport-getrva-method.md
-      - name: Метод GetScopeProps
-        href: imetadataimport-getscopeprops-method.md
-      - name: Метод GetSigFromToken
-        href: imetadataimport-getsigfromtoken-method.md
-      - name: Метод GetTypeDefProps
-        href: imetadataimport-gettypedefprops-method.md
-      - name: Метод GetTypeRefProps
-        href: imetadataimport-gettyperefprops-method.md
-      - name: Метод GetTypeSpecFromToken
-        href: imetadataimport-gettypespecfromtoken-method.md
-      - name: Метод GetUserString
-        href: imetadataimport-getuserstring-method.md
-      - name: Метод IsGlobal
-        href: imetadataimport-isglobal-method.md
-      - name: Метод IsValidToken
-        href: imetadataimport-isvalidtoken-method.md
-      - name: Метод ResetEnum
-        href: imetadataimport-resetenum-method.md
-      - name: Метод ResolveTypeRef
-        href: imetadataimport-resolvetyperef-method.md
-    - name: Интерфейс IMetaDataImport2
-      href: imetadataimport2-interface.md
-      items:
-      - name: Метод EnumGenericParamConstraints
-        href: imetadataimport2-enumgenericparamconstraints-method.md
-      - name: Метод EnumGenericParams
-        href: imetadataimport2-enumgenericparams-method.md
-      - name: Метод EnumMethodSpecs
-        href: imetadataimport2-enummethodspecs-method.md
-      - name: Метод GetGenericParamConstraintProps
-        href: imetadataimport2-getgenericparamconstraintprops-method.md
-      - name: Метод GetGenericParamProps
-        href: imetadataimport2-getgenericparamprops-method.md
-      - name: Метод GetMethodSpecProps
-        href: imetadataimport2-getmethodspecprops-method.md
-      - name: Метод GetPEKind
-        href: imetadataimport2-getpekind-method.md
-      - name: Метод GetVersionString
-        href: imetadataimport2-getversionstring-method.md
-    - name: Интерфейс IMetaDataInfo
-      href: imetadatainfo-interface.md
-      items:
-      - name: Метод GetFileMapping
-        href: imetadatainfo-getfilemapping-method.md
-    - name: Интерфейс IMetaDataTables
-      href: imetadatatables-interface.md
-      items:
-      - name: Метод GetBlob
-        href: imetadatatables-getblob-method.md
-      - name: Метод GetBlobHeapSize
-        href: imetadatatables-getblobheapsize-method.md
-      - name: Метод GetCodedTokenInfo
-        href: imetadatatables-getcodedtokeninfo-method.md
-      - name: Метод GetColumn
-        href: imetadatatables-getcolumn-method.md
-      - name: Метод GetColumnInfo
-        href: imetadatatables-getcolumninfo-method.md
-      - name: Метод GetGuid
-        href: imetadatatables-getguid-method.md
-      - name: Метод GetGuidHeapSize
-        href: imetadatatables-getguidheapsize-method.md
-      - name: Метод GetNextBlob
-        href: imetadatatables-getnextblob-method.md
-      - name: Метод GetNextGuid
-        href: imetadatatables-getnextguid-method.md
-      - name: Метод GetNextString
-        href: imetadatatables-getnextstring-method.md
-      - name: Метод GetNextUserString
-        href: imetadatatables-getnextuserstring-method.md
-      - name: Метод GetNumTables
-        href: imetadatatables-getnumtables-method.md
-      - name: Метод GetRow
-        href: imetadatatables-getrow-method.md
-      - name: Метод GetString
-        href: imetadatatables-getstring-method.md
-      - name: Метод GetStringHeapSize
-        href: imetadatatables-getstringheapsize-method.md
-      - name: Метод GetTableIndex
-        href: imetadatatables-gettableindex-method.md
-      - name: Метод GetTableInfo
-        href: imetadatatables-gettableinfo-method.md
-      - name: Метод GetUserString
-        href: imetadatatables-getuserstring-method.md
-      - name: Метод GetUserStringHeapSize
-        href: imetadatatables-getuserstringheapsize-method.md
-    - name: Интерфейс IMetaDataTables2
-      href: imetadatatables2-interface.md
-      items:
-      - name: Метод GetMetaDataStorage
-        href: imetadatatables2-getmetadatastorage-method.md
-      - name: Метод GetMetaDataStreamInfo
-        href: imetadatatables2-getmetadatastreaminfo-method.md
-    - name: Интерфейс IMetaDataValidate
-      href: imetadatavalidate-interface.md
-      items:
-      - name: Метод ValidateMetaData
-        href: imetadatavalidate-validatemetadata-method.md
-      - name: Метод ValidatorInit
-        href: imetadatavalidate-validatorinit-method.md
-  - name: Глобальные статические функции метаданных
-    href: metadata-global-static-functions.md
-  - name: Перечисления метаданных
-    href: metadata-enumerations.md
-    items:
-    - name: Перечисление AssemblyFlags
-      href: assemblyflags-enumeration.md
-    - name: Перечисление AssemblyRefFlags
-      href: assemblyrefflags-enumeration.md
-    - name: Перечисление CeeSectionAttr
-      href: ceesectionattr-enumeration.md
-    - name: Перечисление CeeSectionRelocType
-      href: ceesectionreloctype-enumeration.md
-    - name: Перечисление COINITICOR
-      href: coiniticor-enumeration.md
-    - name: Перечисление COINITIEE
-      href: coinitiee-enumeration.md
-    - name: Перечисление CorArgType
-      href: corargtype-enumeration.md
-    - name: Перечисление CorAssemblyFlags
-      href: corassemblyflags-enumeration.md
-    - name: Перечисление CorAttributeTargets
-      href: corattributetargets-enumeration.md
-    - name: Перечисление CorCallingConvention
-      href: corcallingconvention-enumeration.md
-    - name: Перечисление CorCheckDuplicatesFor
-      href: corcheckduplicatesfor-enumeration.md
-    - name: Перечисление CorDeclSecurity
-      href: cordeclsecurity-enumeration.md
-    - name: Перечисление1 CorElementType
-      href: corelementtype-enumeration.md
-    - name: Перечисление CorErrorIfEmitOutOfOrder
-      href: corerrorifemitoutoforder-enumeration.md
-    - name: Перечисление CorEventAttr
-      href: coreventattr-enumeration.md
-    - name: Перечисление CorFieldAttr
-      href: corfieldattr-enumeration.md
-    - name: Перечисление CorFileFlags
-      href: corfileflags-enumeration.md
-    - name: Перечисление CorFileMapping
-      href: corfilemapping-enumeration.md
-    - name: Перечисление CorGenericParamAttr
-      href: corgenericparamattr-enumeration.md
-    - name: Перечисление CorImportOptions
-      href: corimportoptions-enumeration.md
-    - name: Перечисление CorLinkerOptions
-      href: corlinkeroptions-enumeration.md
-    - name: Перечисление CorLocalRefPreservation
-      href: corlocalrefpreservation-enumeration.md
-    - name: Перечисление CorManifestResourceFlags
-      href: cormanifestresourceflags-enumeration.md
-    - name: Перечисление CorMethodAttr
-      href: cormethodattr-enumeration.md
-    - name: Перечисление CorMethodImpl
-      href: cormethodimpl-enumeration.md
-    - name: Перечисление CorMethodSemanticsAttr
-      href: cormethodsemanticsattr-enumeration.md
-    - name: Перечисление CorNativeLinkFlags
-      href: cornativelinkflags-enumeration.md
-    - name: Перечисление CorNativeLinkType
-      href: cornativelinktype-enumeration.md
-    - name: Перечисление CorNativeType
-      href: cornativetype-enumeration.md
-    - name: Перечисление CorNotificationForTokenMovement
-      href: cornotificationfortokenmovement-enumeration.md
-    - name: Перечисление CorOpenFlags
-      href: coropenflags-enumeration.md
-    - name: Перечисление CorParamAttr
-      href: corparamattr-enumeration.md
-    - name: Перечисление CorPEKind
-      href: corpekind-enumeration.md
-    - name: Перечисление CorPinvokeMap
-      href: corpinvokemap-enumeration.md
-    - name: Перечисление CorPropertyAttr
-      href: corpropertyattr-enumeration.md
-    - name: Перечисление CorRefToDefCheck
-      href: correftodefcheck-enumeration.md
-    - name: Перечисление CorRegFlags
-      href: corregflags-enumeration.md
-    - name: Перечисление CorSaveSize
-      href: corsavesize-enumeration.md
-    - name: Перечисление CorSerializationType
-      href: corserializationtype-enumeration.md
-    - name: Перечисление CorSetENC
-      href: corsetenc-enumeration.md
-    - name: Перечисление CorThreadSafetyOptions
-      href: corthreadsafetyoptions-enumeration.md
-    - name: Перечисление CorTokenType
-      href: cortokentype-enumeration.md
-    - name: Перечисление CorTypeAttr
-      href: cortypeattr-enumeration.md
-    - name: Перечисление CorUnmanagedCallingConvention
-      href: corunmanagedcallingconvention-enumeration.md
-    - name: Перечисление CorValidatorModuleType
-      href: corvalidatormoduletype-enumeration.md
-    - name: Перечисление COUNINITIEE
-      href: couninitiee-enumeration.md
-  - name: Структуры метаданных
-    href: metadata-structures.md
-    items:
-    - name: Структура ASSEMBLYMETADATA
-      href: assemblymetadata-structure.md
-    - name: Структура COR_FIELD_OFFSET
-      href: cor-field-offset-structure.md
-    - name: Структура COR_NATIVE_LINK
-      href: cor-native-link-structure.md
-    - name: Структура CVStruct
-      href: cvstruct-structure.md
-    - name: Структура OSINFO
-      href: osinfo-structure.md
-  - name: Объединения метаданных
-    href: metadata-unions.md
-    items:
-    - name: Объединение CeeSectionRelocExtra
-      href: ceesectionrelocextra-union.md
-ms.openlocfilehash: d6f0c7ae4251db28a509e9b3323db2cfa0c2d655
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470956"
+        - name: Объединение CeeSectionRelocExtra
+          href: ceesectionrelocextra-union.md

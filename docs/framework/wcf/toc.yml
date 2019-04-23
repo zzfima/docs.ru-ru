@@ -1,256 +1,249 @@
-items:
 - name: Сервисноориентированные приложения с WCF
   href: index.md
   items:
-  - name: Новые возможности в Windows Communication Foundation 4.5
-    href: whats-new.md
-  - name: Возможности упрощения WCF
-    href: wcf-simplification-features.md
-  - name: Руководство по работе с документацией
-    href: guide-to-the-documentation.md
-  - name: Общие сведения об основных понятиях
-    href: conceptual-overview.md
-    items:
-    - name: Что такое Windows Communication Foundation
-      href: whats-wcf.md
-    - name: Основные понятия Windows Communication Foundation
-      href: fundamental-concepts.md
-    - name: Архитектура Windows Communication Foundation
-      href: architecture.md
-    - name: WCF и профиль клиента .NET Framework
-      href: wcf-and-net-framework-client-profile.md
-  - name: Учебник по началу работы
-    href: getting-started-tutorial.md
-    items:
-    - name: Определение контракта службы
-      href: how-to-define-a-wcf-service-contract.md
-    - name: Реализация контракта службы
-      href: how-to-implement-a-wcf-contract.md
-    - name: Размещение и запуск базовой службы
-      href: how-to-host-and-run-a-basic-wcf-service.md
-    - name: Создание клиента
-      href: how-to-create-a-wcf-client.md
-    - name: Использование клиента
-      href: how-to-use-a-wcf-client.md
-    - name: Устранение неполадок с учебником по началу работы
-      href: troubleshooting-the-getting-started-tutorial.md
-  - name: Базовое программирование WCF
-    href: basic-wcf-programming.md
-    items:
-    - name: Базовый жизненный цикл программирования
-      href: basic-programming-lifecycle.md
-    - name: Проектирование и реализация служб
-      href: designing-and-implementing-services.md
+    - name: Новые возможности в Windows Communication Foundation 4.5
+      href: whats-new.md
+    - name: Возможности упрощения WCF
+      href: wcf-simplification-features.md
+    - name: Руководство по работе с документацией
+      href: guide-to-the-documentation.md
+    - name: Общие сведения об основных понятиях
+      href: conceptual-overview.md
       items:
-      - name: Создание контрактов служб
-        href: designing-service-contracts.md
-        items:
-        - name: Задание и обработка сбоев в контрактах и службах
-          href: specifying-and-handling-faults-in-contracts-and-services.md
+        - name: Что такое Windows Communication Foundation
+          href: whats-wcf.md
+        - name: Основные понятия Windows Communication Foundation
+          href: fundamental-concepts.md
+        - name: Архитектура Windows Communication Foundation
+          href: architecture.md
+        - name: WCF и профиль клиента .NET Framework
+          href: wcf-and-net-framework-client-profile.md
+    - name: Учебник по началу работы
+      href: getting-started-tutorial.md
+      items:
+        - name: Определение контракта службы
+          href: how-to-define-a-wcf-service-contract.md
+        - name: Реализация контракта службы
+          href: how-to-implement-a-wcf-contract.md
+        - name: Размещение и запуск базовой службы
+          href: how-to-host-and-run-a-basic-wcf-service.md
+        - name: Создание клиента
+          href: how-to-create-a-wcf-client.md
+        - name: Использование клиента
+          href: how-to-use-a-wcf-client.md
+        - name: Устранение неполадок с учебником по началу работы
+          href: troubleshooting-the-getting-started-tutorial.md
+    - name: Базовое программирование WCF
+      href: basic-wcf-programming.md
+      items:
+        - name: Базовый жизненный цикл программирования
+          href: basic-programming-lifecycle.md
+        - name: Проектирование и реализация служб
+          href: designing-and-implementing-services.md
           items:
-          - name: Определение и задание сбоев
-            href: defining-and-specifying-faults.md
-            items:
-            - name: Практическое руководство. Объявление сбоев в контрактах служб
-              href: how-to-declare-faults-in-service-contracts.md
-          - name: Сбои при отправке и получении
-            href: sending-and-receiving-faults.md
-        - name: Использование сеансов
-          href: using-sessions.md
-        - name: Синхронные и асинхронные операции
-          href: synchronous-and-asynchronous-operations.md
+            - name: Создание контрактов служб
+              href: designing-service-contracts.md
+              items:
+                - name: Задание и обработка сбоев в контрактах и службах
+                  href: specifying-and-handling-faults-in-contracts-and-services.md
+                  items:
+                    - name: Определение и задание сбоев
+                      href: defining-and-specifying-faults.md
+                      items:
+                        - name: Как выполнить Объявление сбоев в контрактах служб
+                          href: how-to-declare-faults-in-service-contracts.md
+                    - name: Сбои при отправке и получении
+                      href: sending-and-receiving-faults.md
+                - name: Использование сеансов
+                  href: using-sessions.md
+                - name: Синхронные и асинхронные операции
+                  href: synchronous-and-asynchronous-operations.md
+                  items:
+                    - name: Как выполнить Асинхронная реализация операции службы
+                      href: how-to-implement-an-asynchronous-service-operation.md
+                - name: Надежные службы
+                  href: reliable-services.md
+                - name: Службы и транзакции
+                  href: services-and-transactions.md
+            - name: Реализация контрактов служб
+              href: implementing-service-contracts.md
+              items:
+                - name: Указание поведения службы во время выполнения
+                  href: specifying-service-run-time-behavior.md
+        - name: Настройка служб
+          href: configuring-services.md
           items:
-          - name: Практическое руководство. Асинхронная реализация операции службы
-            href: how-to-implement-an-asynchronous-service-operation.md
-        - name: Надежные службы
-          href: reliable-services.md
-        - name: Службы и транзакции
-          href: services-and-transactions.md
-      - name: Реализация контрактов служб
-        href: implementing-service-contracts.md
-        items:
-        - name: Указание поведения службы во время выполнения
-          href: specifying-service-run-time-behavior.md
-    - name: Настройка служб
-      href: configuring-services.md
-      items:
-      - name: Упрощенная конфигурация
-        href: simplified-configuration.md
-      - name: Настройка служб с использованием файлов конфигурации
-        href: configuring-services-using-configuration-files.md
-      - name: Настройка служб WCF в коде
-        href: configuring-wcf-services-in-code.md
-      - name: Привязки
-        href: bindings.md
-        items:
-        - name: Общие сведения о привязках WCF
-          href: bindings-overview.md
-        - name: Привязки, предоставляемые системой
-          href: system-provided-bindings.md
-        - name: Использование привязок для настройки служб и клиентов
-          href: using-bindings-to-configure-services-and-clients.md
+            - name: Упрощенная конфигурация
+              href: simplified-configuration.md
+            - name: Настройка служб с использованием файлов конфигурации
+              href: configuring-services-using-configuration-files.md
+            - name: Настройка служб WCF в коде
+              href: configuring-wcf-services-in-code.md
+            - name: Привязки
+              href: bindings.md
+              items:
+                - name: "Общие сведения о привязках\_WCF"
+                  href: bindings-overview.md
+                - name: 'Привязки, предоставляемые системой'
+                  href: system-provided-bindings.md
+                - name: Использование привязок для настройки служб и клиентов
+                  href: using-bindings-to-configure-services-and-clients.md
+                  items:
+                    - name: Как выполнить Задание привязки клиента в коде
+                      href: how-to-specify-a-client-binding-in-code.md
+                    - name: Как выполнить Указание привязки клиента в конфигурации
+                      href: how-to-specify-a-client-binding-in-configuration.md
+                    - name: Как выполнить Задание привязки службы в коде
+                      href: how-to-specify-a-service-binding-in-code.md
+                    - name: Как выполнить Задание привязки службы в конфигурации
+                      href: how-to-specify-a-service-binding-in-configuration.md
+                - name: Настройка привязок для служб
+                  href: configuring-bindings-for-wcf-services.md
+            - name: Конечные точки
+              href: endpoints.md
+              items:
+                - name: Общие сведения о создании конечных точек
+                  href: endpoint-creation-overview.md
+                - name: Задание адреса конечной точки
+                  href: specifying-an-endpoint-address.md
+                - name: Публикация конечных точек метаданных
+                  href: publishing-metadata-endpoints.md
+            - name: Защита служб
+              href: securing-services.md
+              items:
+                - name: Как выполнить Защита службы с использованием учетных данных Windows
+                  href: how-to-secure-a-service-with-windows-credentials.md
+                - name: Как выполнить Задание режима безопасности
+                  href: how-to-set-the-security-mode.md
+                - name: Как выполнить Указание типа учетных данных клиента
+                  href: how-to-specify-the-client-credential-type.md
+                - name: Как выполнить Ограничение доступа с использованием класса PrincipalPermissionAttribute
+                  href: how-to-restrict-access-with-the-principalpermissionattribute-class.md
+                - name: Как выполнить Олицетворение клиента в рамках службы
+                  href: how-to-impersonate-a-client-on-a-service.md
+                - name: Как выполнить Анализ контекста безопасности
+                  href: how-to-examine-the-security-context.md
+                - name: Основные сведения об уровне защиты
+                  href: understanding-protection-level.md
+                - name: Как выполнить Установка свойства ProtectionLevel
+                  href: how-to-set-the-protectionlevel-property.md
+            - name: 'Создание служб, поддерживающих взаимодействие с базовым профилем WS-I 1.1'
+              href: creating-ws-i-basic-profile-1-1-interoperable-services.md
+        - name: Размещение служб
+          href: hosting-services.md
           items:
-          - name: Практическое руководство. Задание привязки клиента в коде
-            href: how-to-specify-a-client-binding-in-code.md
-          - name: Практическое руководство. Указание привязки клиента в конфигурации
-            href: how-to-specify-a-client-binding-in-configuration.md
-          - name: Практическое руководство. Задание привязки службы в коде
-            href: how-to-specify-a-service-binding-in-code.md
-          - name: Практическое руководство. Задание привязки службы в конфигурации
-            href: how-to-specify-a-service-binding-in-configuration.md
-        - name: Настройка привязок для служб
-          href: configuring-bindings-for-wcf-services.md
-      - name: Конечные точки
-        href: endpoints.md
-        items:
-        - name: Общие сведения о создании конечных точек
-          href: endpoint-creation-overview.md
-        - name: Задание адреса конечной точки
-          href: specifying-an-endpoint-address.md
-        - name: Публикация конечных точек метаданных
-          href: publishing-metadata-endpoints.md
-      - name: Защита служб
-        href: securing-services.md
-        items:
-        - name: Практическое руководство. Защита службы с использованием учетных данных Windows
-          href: how-to-secure-a-service-with-windows-credentials.md
-        - name: Практическое руководство. Задание режима безопасности
-          href: how-to-set-the-security-mode.md
-        - name: Практическое руководство. Указание типа учетных данных клиента
-          href: how-to-specify-the-client-credential-type.md
-        - name: Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute
-          href: how-to-restrict-access-with-the-principalpermissionattribute-class.md
-        - name: Практическое руководство. Олицетворение клиента в рамках службы
-          href: how-to-impersonate-a-client-on-a-service.md
-        - name: Практическое руководство. Анализ контекста безопасности
-          href: how-to-examine-the-security-context.md
-        - name: Основные сведения об уровне защиты
-          href: understanding-protection-level.md
-        - name: Практическое руководство. Установка свойства ProtectionLevel
-          href: how-to-set-the-protectionlevel-property.md
-      - name: Создание служб, поддерживающих взаимодействие с базовым профилем WS-I 1.1
-        href: creating-ws-i-basic-profile-1-1-interoperable-services.md
-    - name: Размещение служб
-      href: hosting-services.md
+            - name: Как выполнить Размещение службы WCF в управляемом приложении
+              href: how-to-host-a-wcf-service-in-a-managed-application.md
+            - name: "Как выполнить Размещение службы WCF, написанной для.NET Framework\_3.5 в IIS, которая работает в .NET Framework\_4"
+              href: host-a-wcf-service-net-framework-3-5-iis--net-framework-4.md
+        - name: Создание клиентов
+          href: building-clients.md
+          items:
+            - name: Общие сведения о клиентах WCF
+              href: wcf-client-overview.md
+            - name: Обращение к службам с использованием клиента WCF
+              href: accessing-services-using-a-wcf-client.md
+              items:
+                - name: Добавление ссылки на службу в проект переносного вложенного набора
+                  href: add-service-reference-in-a-portable-subset-project.md
+                - name: Задание поведения клиента во время выполнения
+                  href: specifying-client-run-time-behavior.md
+                - name: Настройка поведений клиентов
+                  href: configuring-client-behaviors.md
+            - name: Обеспечение безопасности клиентов
+              href: securing-clients.md
+              items:
+                - name: Как выполнить Задание значений учетных данных клиента
+                  href: how-to-specify-client-credential-values.md
+        - name: Введение в расширяемость
+          href: introduction-to-extensibility.md
+        - name: Примеры устранения неполадок WCF
+          href: wcf-troubleshooting-quickstart.md
+        - name: Обработка ошибок WCF
+          href: wcf-error-handling.md
+        - name: WCF и ASP.NET Web API
+          href: wcf-and-aspnet-web-api.md
+    - name: Подробные сведения о возможностях WCF
+      href: feature-details/
+    - name: Расширение WCF
+      href: extending/
+    - name: Правила и рекомендации
+      href: guidelines-and-best-practices.md
       items:
-      - name: Практическое руководство. Размещение службы WCF в управляемом приложении
-        href: how-to-host-a-wcf-service-in-a-managed-application.md
-      - name: Практическое руководство. Размещение службы WCF, написанной для.NET Framework 3.5 в IIS, которая работает в .NET Framework 4
-        href: host-a-wcf-service-net-framework-3-5-iis--net-framework-4.md
-    - name: Создание клиентов
-      href: building-clients.md
+        - name: Рекомендации. Управление версиями контракта данных
+          href: best-practices-data-contract-versioning.md
+        - name: Рекомендации. Посредники
+          href: best-practices-intermediaries.md
+        - name: Управление версиями службы
+          href: service-versioning.md
+        - name: Балансировка нагрузки
+          href: load-balancing.md
+        - name: Управление потреблением ресурсов и повышение производительности
+          href: controlling-resource-consumption-and-improving-performance.md
+        - name: Развертывание приложений WCF с помощью ClickOnce
+          href: deploying-wcf-applications-with-clickonce.md
+    - name: Администрирование и диагностика
+      href: diagnostics/
+    - name: Требования к системе
+      href: wcf-system-requirements.md
+    - name: 'Ресурсы операционной системы, необходимые WCF'
+      href: operating-system-resources-required-by-wcf.md
+    - name: Устранение неполадок с установкой
+      href: troubleshooting-setup-issues.md
+    - name: Перенос из .NET на платформу WCF
+      href: migrating-from-net-remoting-to-wcf.md
+    - name: Использование средств разработки WCF
+      href: using-the-wcf-development-tools.md
       items:
-      - name: Общие сведения о клиентах WCF
-        href: wcf-client-overview.md
-      - name: Обращение к службам с использованием клиента WCF
-        href: accessing-services-using-a-wcf-client.md
-        items:
-        - name: Добавление ссылки на службу в проект переносного вложенного набора
-          href: add-service-reference-in-a-portable-subset-project.md
-        - name: Задание поведения клиента во время выполнения
-          href: specifying-client-run-time-behavior.md
-        - name: Настройка поведений клиентов
-          href: configuring-client-behaviors.md
-      - name: Обеспечение безопасности клиентов
-        href: securing-clients.md
-        items:
-        - name: Практическое руководство. Задание значений учетных данных клиента
-          href: how-to-specify-client-credential-values.md
-    - name: Введение в расширяемость
-      href: introduction-to-extensibility.md
-    - name: Примеры устранения неполадок WCF
-      href: wcf-troubleshooting-quickstart.md
-    - name: Обработка ошибок WCF
-      href: wcf-error-handling.md
-    - name: WCF и ASP.NET Web API
-      href: wcf-and-aspnet-web-api.md
-  - name: Подробные сведения о возможностях WCF
-    href: feature-details/
-  - name: Расширение WCF
-    href: extending/
-  - name: Правила и рекомендации
-    href: guidelines-and-best-practices.md
-    items:
-    - name: Рекомендации. Управление версиями контракта данных
-      href: best-practices-data-contract-versioning.md
-    - name: Рекомендации. Посредники
-      href: best-practices-intermediaries.md
-    - name: Управление версиями службы
-      href: service-versioning.md
-    - name: Балансировка нагрузки
-      href: load-balancing.md
-    - name: Управление потреблением ресурсов и повышение производительности
-      href: controlling-resource-consumption-and-improving-performance.md
-    - name: Развертывание приложений WCF с помощью ClickOnce
-      href: deploying-wcf-applications-with-clickonce.md
-  - name: Администрирование и диагностика
-    href: diagnostics/
-  - name: Требования к системе
-    href: wcf-system-requirements.md
-  - name: Ресурсы операционной системы, необходимые WCF
-    href: operating-system-resources-required-by-wcf.md
-  - name: Устранение неполадок с установкой
-    href: troubleshooting-setup-issues.md
-  - name: Перенос из .NET на платформу WCF
-    href: migrating-from-net-remoting-to-wcf.md
-  - name: Использование средств разработки WCF
-    href: using-the-wcf-development-tools.md
-    items:
-    - name: Узел службы WCF (WcfSvcHost.exe)
-      href: wcf-service-host-wcfsvchost-exe.md
-    - name: Тестовый клиент WCF (WcfTestClient.exe)
-      href: wcf-test-client-wcftestclient-exe.md
-    - name: Шаблоны WCF в Visual Studio
-      href: wcf-vs-templates.md
-    - name: Публикация служб WCF
-      href: wcf-service-publishing.md
-    - name: Переименование службы WCF
-      href: renaming-a-wcf-service.md
-    - name: Развертывание проекта библиотеки WCF
-      href: deploying-a-wcf-library-project.md
-    - name: Управление автозапуском узла службы WCF
-      href: controlling-auto-launching-of-wcf-service-host.md
-    - name: Формирование классов типов данных из XML
-      href: generating-data-type-classes-from-xml.md
-  - name: Средства Windows Communication Foundation
-    href: tools.md
-    items:
-    - name: Служебное средство ServiceModel Metadata Utility Tool (Svcutil.exe)
-      href: servicemodel-metadata-utility-tool-svcutil-exe.md
-    - name: Средство поиска закрытых ключей (FindPrivateKey.exe)
-      href: find-private-key-tool-findprivatekey-exe.md
-    - name: Средство регистрации ServiceModel (ServiceModelReg.exe)
-      href: servicemodelreg-exe.md
-    - name: Программа Service Trace Viewer (SvcTraceViewer.exe)
-      href: service-trace-viewer-tool-svctraceviewer-exe.md
-    - name: Средство редактирования конфигурации (SvcConfigEditor.exe)
-      href: configuration-editor-tool-svcconfigeditor-exe.md
-    - name: Программа командной строки настройки модели служб COM+ (ComSvcConfig.exe)
-      href: com-service-model-configuration-tool-comsvcconfig-exe.md
-    - name: Программа конфигурации WS-AtomicTransaction (wsatConfig.exe)
-      href: ws-atomictransaction-configuration-utility-wsatconfig-exe.md
+        - name: Узел службы WCF (WcfSvcHost.exe)
+          href: wcf-service-host-wcfsvchost-exe.md
+        - name: Тестовый клиент WCF (WcfTestClient.exe)
+          href: wcf-test-client-wcftestclient-exe.md
+        - name: Шаблоны WCF в Visual Studio
+          href: wcf-vs-templates.md
+        - name: Публикация служб WCF
+          href: wcf-service-publishing.md
+        - name: Переименование службы WCF
+          href: renaming-a-wcf-service.md
+        - name: Развертывание проекта библиотеки WCF
+          href: deploying-a-wcf-library-project.md
+        - name: Управление автозапуском узла службы WCF
+          href: controlling-auto-launching-of-wcf-service-host.md
+        - name: Формирование классов типов данных из XML
+          href: generating-data-type-classes-from-xml.md
+    - name: Средства Windows Communication Foundation
+      href: tools.md
       items:
-      - name: Интерпретация кодов ошибок, возвращаемых wsatConfig.exe
-        href: interpreting-error-codes-returned-by-wsatconfig-exe.md
-    - name: Оснастка консоли MMC для конфигурации WS-AtomicTransaction
-      href: ws-atomictransaction-configuration-mmc-snap-in.md
-    - name: Программа регистрации служб WorkFlow (WFServicesReg.exe)
-      href: workflow-service-registration-tool-wfservicesreg-exe.md
-    - name: Средство первого контакта
-      href: contract-first-tool.md
-  - name: Примеры Windows Communication Foundation
-    href: samples/
-  - name: Глоссарий по Windows Communication Foundation
-    href: glossary.md
-  - name: Общие справочные сведения
-    href: general-reference.md
-  - name: Отзывы и предложения и сообщество
-    href: feedback-and-community.md
-  - name: Сведения о конфиденциальности
-    href: privacy-information.md
-ms.openlocfilehash: 4bd93b468fb7f077fc070053745d8ac6b2abb810
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470701"
+        - name: Служебное средство ServiceModel Metadata Utility Tool (Svcutil.exe)
+          href: servicemodel-metadata-utility-tool-svcutil-exe.md
+        - name: Средство поиска закрытых ключей (FindPrivateKey.exe)
+          href: find-private-key-tool-findprivatekey-exe.md
+        - name: Средство регистрации ServiceModel (ServiceModelReg.exe)
+          href: servicemodelreg-exe.md
+        - name: Программа Service Trace Viewer (SvcTraceViewer.exe)
+          href: service-trace-viewer-tool-svctraceviewer-exe.md
+        - name: Средство редактирования конфигурации (SvcConfigEditor.exe)
+          href: configuration-editor-tool-svcconfigeditor-exe.md
+        - name: Программа командной строки настройки модели служб COM+ (ComSvcConfig.exe)
+          href: com-service-model-configuration-tool-comsvcconfig-exe.md
+        - name: Программа конфигурации WS-AtomicTransaction (wsatConfig.exe)
+          href: ws-atomictransaction-configuration-utility-wsatconfig-exe.md
+          items:
+            - name: 'Интерпретация кодов ошибок, возвращаемых wsatConfig.exe'
+              href: interpreting-error-codes-returned-by-wsatconfig-exe.md
+        - name: Оснастка консоли MMC для конфигурации WS-AtomicTransaction
+          href: ws-atomictransaction-configuration-mmc-snap-in.md
+        - name: Программа регистрации служб WorkFlow (WFServicesReg.exe)
+          href: workflow-service-registration-tool-wfservicesreg-exe.md
+        - name: Средство первого контакта
+          href: contract-first-tool.md
+    - name: "Примеры Windows Communication\_Foundation"
+      href: samples/
+    - name: "Глоссарий по Windows Communication\_Foundation"
+      href: glossary.md
+    - name: Общие справочные сведения
+      href: general-reference.md
+    - name: Отзывы и предложения и сообщество
+      href: feedback-and-community.md
+    - name: Сведения о конфиденциальности
+      href: privacy-information.md

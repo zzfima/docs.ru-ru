@@ -1,49 +1,42 @@
-items:
-- name: Инструкции, выражения и операторы
+- name: 'Инструкции, выражения и операторы'
   href: index.md
   items:
-  - name: Операторы
-    href: statements.md
-  - name: Выражения
-    href: expressions.md
-    items:
-    - name: Элементы, воплощающие выражение
-      href: expression-bodied-members.md
-  - name: Операторы
-    href: operators.md
-  - name: Анонимные функции
-    href: anonymous-functions.md
-    items:
-    - name: Лямбда-выражения
-      href: lambda-expressions.md
+    - name: Операторы
+      href: statements.md
+    - name: Выражения
+      href: expressions.md
       items:
-      - name: Практическое руководство. Использование лямбда-выражений в запросах
-        href: how-to-use-lambda-expressions-in-a-query.md
-      - name: Практическое руководство. Использование лямбда-выражений вне LINQ
-        href: how-to-use-lambda-expressions-outside-linq.md
-    - name: Анонимные методы
-      href: anonymous-methods.md
-  - name: Перегружаемые операторы
-    href: overloadable-operators.md
-  - name: Операторы преобразования
-    href: conversion-operators.md
-    items:
-    - name: Использование операторов преобразования
-      href: using-conversion-operators.md
-    - name: Практическое руководство. Реализация определяемых пользователем преобразований между структурами
-      href: how-to-implement-user-defined-conversions-between-structs.md
-  - name: Выражения значения по умолчанию
-    href: default-value-expressions.md
-  - name: Сравнения на равенство
-    href: equality-comparisons.md
-    items:
-    - name: Практическое руководство. Определение равенства значений для типа
-      href: how-to-define-value-equality-for-a-type.md
-    - name: Практическое руководство. Проверка на ссылочное равенство (идентичность)
-      href: how-to-test-for-reference-equality-identity.md
-ms.openlocfilehash: d5f37fd97cf72c7c8d9b7854753eb25fdea8bbb2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470021"
+        - name: 'Элементы, воплощающие выражение'
+          href: expression-bodied-members.md
+    - name: Операторы
+      href: operators.md
+    - name: Анонимные функции
+      href: anonymous-functions.md
+      items:
+        - name: Лямбда-выражения
+          href: lambda-expressions.md
+          items:
+            - name: Как выполнить Использование лямбда-выражений в запросах
+              href: how-to-use-lambda-expressions-in-a-query.md
+            - name: Как выполнить Использование лямбда-выражений вне LINQ
+              href: how-to-use-lambda-expressions-outside-linq.md
+        - name: Анонимные методы
+          href: anonymous-methods.md
+    - name: Перегружаемые операторы
+      href: overloadable-operators.md
+    - name: Операторы преобразования
+      href: conversion-operators.md
+      items:
+        - name: Использование операторов преобразования
+          href: using-conversion-operators.md
+        - name: Как выполнить Реализация определяемых пользователем преобразований между структурами
+          href: how-to-implement-user-defined-conversions-between-structs.md
+    - name: Выражения значения по умолчанию
+      href: default-value-expressions.md
+    - name: Сравнения на равенство
+      href: equality-comparisons.md
+      items:
+        - name: Как выполнить Определение равенства значений для типа
+          href: how-to-define-value-equality-for-a-type.md
+        - name: Как выполнить Проверка на ссылочное равенство (идентичность)
+          href: how-to-test-for-reference-equality-identity.md

@@ -1,162 +1,155 @@
-items:
-- name: Наборы данных, таблицы данных и объекты DataView
+- name: 'Наборы данных, таблицы данных и объекты DataView'
   href: index.md
   items:
-  - name: Создание набора данных
-    href: creating-a-dataset.md
-  - name: Добавление новой таблицы данных в набор данных
-    href: adding-a-datatable-to-a-dataset.md
-  - name: Добавление отношений DataRelation
-    href: adding-datarelations.md
-  - name: Навигация по отношениям DataRelation
-    href: navigating-datarelations.md
-  - name: Слияние содержимого набора данных
-    href: merging-dataset-contents.md
-  - name: Копирование содержимого набора данных
-    href: copying-dataset-contents.md
-  - name: Обработка событий наборов данных
-    href: handling-dataset-events.md
-  - name: Типизированные наборы данных
-    href: typed-datasets.md
-    items:
-    - name: Создание строго типизированных наборов данных
-      href: generating-strongly-typed-datasets.md
-    - name: Создание примечаний к типизированным наборам данных
-      href: annotating-typed-datasets.md
-  - name: DataTables
-    href: datatables.md
-    items:
-    - name: Создание таблицы данных
-      href: creating-a-datatable.md
-    - name: Определение схемы таблицы данных
-      href: datatable-schema-definition.md
+    - name: Создание набора данных
+      href: creating-a-dataset.md
+    - name: Добавление новой таблицы данных в набор данных
+      href: adding-a-datatable-to-a-dataset.md
+    - name: Добавление отношений DataRelation
+      href: adding-datarelations.md
+    - name: Навигация по отношениям DataRelation
+      href: navigating-datarelations.md
+    - name: Слияние содержимого набора данных
+      href: merging-dataset-contents.md
+    - name: Копирование содержимого набора данных
+      href: copying-dataset-contents.md
+    - name: Обработка событий наборов данных
+      href: handling-dataset-events.md
+    - name: Типизированные наборы данных
+      href: typed-datasets.md
       items:
-      - name: Добавление столбцов в таблицу данных
-        href: adding-columns-to-a-datatable.md
-      - name: Создание столбцов выражений
-        href: creating-expression-columns.md
-      - name: Создание столбцов AutoIncrement
-        href: creating-autoincrement-columns.md
-      - name: Определение первичных ключей
-        href: defining-primary-keys.md
-      - name: Ограничения таблиц данных
-        href: datatable-constraints.md
-    - name: Управление данными в таблице данных
-      href: manipulating-data-in-a-datatable.md
+        - name: Создание строго типизированных наборов данных
+          href: generating-strongly-typed-datasets.md
+        - name: Создание примечаний к типизированным наборам данных
+          href: annotating-typed-datasets.md
+    - name: DataTables
+      href: datatables.md
       items:
-      - name: Добавление данных в таблицу данных
-        href: adding-data-to-a-datatable.md
-      - name: Просмотр данных в таблице данных
-        href: viewing-data-in-a-datatable.md
-      - name: Метод Load
-        href: the-load-method.md
-      - name: Редактирование таблиц данных
-        href: datatable-edits.md
-      - name: Состояния и версии строк
-        href: row-states-and-row-versions.md
-      - name: Удаление DataRow
-        href: datarow-deletion.md
-      - name: Сведения об ошибках строк
-        href: row-error-information.md
-      - name: AcceptChanges и RejectChanges
-        href: acceptchanges-and-rejectchanges.md
-    - name: Обработка событий таблиц данных
-      href: handling-datatable-events.md
-  - name: Объекты DataTableReader
-    href: datatablereaders.md
-    items:
-    - name: Создание объекта DataReader
-      href: creating-a-datareader.md
-    - name: Навигация по таблицам данных
-      href: navigating-datatables.md
-  - name: Объекты DataView
-    href: dataviews.md
-    items:
-    - name: Создание DataView
-      href: creating-a-dataview.md
-    - name: Сортировка и фильтрация данных
-      href: sorting-and-filtering-data.md
-    - name: Объекты DataRow и DataRowView
-      href: datarows-and-datarowviews.md
-    - name: Поиск строк
-      href: finding-rows.md
-    - name: ChildView и отношения
-      href: childviews-and-relations.md
-    - name: Изменение объектов DataView
-      href: modifying-dataviews.md
-    - name: Обработка событий DataView
-      href: handling-dataview-events.md
-    - name: Управление объектами DataView
-      href: managing-dataviews.md
-    - name: Создание таблицы данных из объекта DataView
-      href: creating-a-datatable-from-a-dataview.md
-  - name: Использование XML в наборах данных
-    href: using-xml-in-a-dataset.md
-    items:
-    - name: DiffGrams
-      href: diffgrams.md
-    - name: Загрузка набора данных из XML
-      href: loading-a-dataset-from-xml.md
-    - name: Запись содержимого набора как данных XML
-      href: writing-dataset-contents-as-xml-data.md
-    - name: Загрузка сведений о схеме набора данных из XML
-      href: loading-dataset-schema-information-from-xml.md
-    - name: Запись сведений о схеме набора данных как XSD
-      href: writing-dataset-schema-information-as-xsd.md
-    - name: Синхронизация набора данных и XmlDataDocument
-      href: dataset-and-xmldatadocument-synchronization.md
+        - name: Создание таблицы данных
+          href: creating-a-datatable.md
+        - name: Определение схемы таблицы данных
+          href: datatable-schema-definition.md
+          items:
+            - name: Добавление столбцов в таблицу данных
+              href: adding-columns-to-a-datatable.md
+            - name: Создание столбцов выражений
+              href: creating-expression-columns.md
+            - name: Создание столбцов AutoIncrement
+              href: creating-autoincrement-columns.md
+            - name: Определение первичных ключей
+              href: defining-primary-keys.md
+            - name: Ограничения таблиц данных
+              href: datatable-constraints.md
+        - name: Управление данными в таблице данных
+          href: manipulating-data-in-a-datatable.md
+          items:
+            - name: Добавление данных в таблицу данных
+              href: adding-data-to-a-datatable.md
+            - name: Просмотр данных в таблице данных
+              href: viewing-data-in-a-datatable.md
+            - name: Метод Load
+              href: the-load-method.md
+            - name: Редактирование таблиц данных
+              href: datatable-edits.md
+            - name: Состояния и версии строк
+              href: row-states-and-row-versions.md
+            - name: Удаление DataRow
+              href: datarow-deletion.md
+            - name: Сведения об ошибках строк
+              href: row-error-information.md
+            - name: AcceptChanges и RejectChanges
+              href: acceptchanges-and-rejectchanges.md
+        - name: Обработка событий таблиц данных
+          href: handling-datatable-events.md
+    - name: Объекты DataTableReader
+      href: datatablereaders.md
       items:
-      - name: Синхронизация набора данных с XmlDataDocument
-        href: synchronizing-a-dataset-with-an-xmldatadocument.md
-      - name: Выполнение запроса XPath к набору данных
-        href: performing-an-xpath-query-on-a-dataset.md
-      - name: Применение преобразования XSLT к набору данных
-        href: applying-an-xslt-transform-to-a-dataset.md
-    - name: Вложение отношений DataRelation
-      href: nesting-datarelations.md
-    - name: Наследование реляционной структуры набора данных от схемы XML (XSD)
-      href: deriving-dataset-relational-structure-from-xml-schema-xsd.md
+        - name: Создание объекта DataReader
+          href: creating-a-datareader.md
+        - name: Навигация по таблицам данных
+          href: navigating-datatables.md
+    - name: Объекты DataView
+      href: dataviews.md
       items:
-      - name: Сопоставление ограничений XML-схемы (XSD) с ограничениями набора данных
-        href: mapping-xml-schema-xsd-constraints-to-dataset-constraints.md
-        items:
-        - name: Сопоставление уникальных ограничений XML-схемы (XSD) с ограничениями набора данных
-          href: map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md
-        - name: Сопоставление ключевых ограничений XML-схемы (XSD) с ограничениями набора данных
-          href: map-key-xml-schema-xsd-constraints-to-dataset-constraints.md
-        - name: Сопоставление ограничений XML-схемы (XSD) keyref с ограничениями набора данных
-          href: map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md
-      - name: Создание отношений наборов данных из схемы XML (XSD)
-        href: generating-dataset-relations-from-xml-schema-xsd.md
-        items:
-        - name: Сопоставление неявных отношений между вложенными элементами схемы
-          href: map-implicit-relations-between-nested-schema-elements.md
-        - name: Сопоставление отношений, заданных для вложенных элементов
-          href: map-relations-specified-for-nested-elements.md
-        - name: Указание отношений между элементами без вложенности
-          href: specify-relations-between-elements-with-no-nesting.md
-      - name: Ограничения и отношения схемы XML
-        href: xml-schema-constraints-and-relationships.md
-    - name: Определение реляционной структуры набора данных из XML
-      href: inferring-dataset-relational-structure-from-xml.md
+        - name: Создание DataView
+          href: creating-a-dataview.md
+        - name: Сортировка и фильтрация данных
+          href: sorting-and-filtering-data.md
+        - name: Объекты DataRow и DataRowView
+          href: datarows-and-datarowviews.md
+        - name: Поиск строк
+          href: finding-rows.md
+        - name: ChildView и отношения
+          href: childviews-and-relations.md
+        - name: Изменение объектов DataView
+          href: modifying-dataviews.md
+        - name: Обработка событий DataView
+          href: handling-dataview-events.md
+        - name: Управление объектами DataView
+          href: managing-dataviews.md
+        - name: Создание таблицы данных из объекта DataView
+          href: creating-a-datatable-from-a-dataview.md
+    - name: Использование XML в наборах данных
+      href: using-xml-in-a-dataset.md
       items:
-      - name: Общие сведения о процессе определения схемы набора данных
-        href: summary-of-the-dataset-schema-inference-process.md
-      - name: Определение таблиц
-        href: inferring-tables.md
-      - name: Определение столбцов
-        href: inferring-columns.md
-      - name: Определение отношений
-        href: inferring-relationships.md
-      - name: Определение текста элемента
-        href: inferring-element-text.md
-      - name: Ограничения определения
-        href: inference-limitations.md
-  - name: Потребление набора данных из веб-службы XML
-    href: consuming-a-dataset-from-an-xml-web-service.md
-ms.openlocfilehash: 739874c03720eac9e49db2f1e80a8bcafd28d1f8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469760"
+        - name: DiffGrams
+          href: diffgrams.md
+        - name: Загрузка набора данных из XML
+          href: loading-a-dataset-from-xml.md
+        - name: Запись содержимого набора как данных XML
+          href: writing-dataset-contents-as-xml-data.md
+        - name: Загрузка сведений о схеме набора данных из XML
+          href: loading-dataset-schema-information-from-xml.md
+        - name: Запись сведений о схеме набора данных как XSD
+          href: writing-dataset-schema-information-as-xsd.md
+        - name: Синхронизация набора данных и XmlDataDocument
+          href: dataset-and-xmldatadocument-synchronization.md
+          items:
+            - name: Синхронизация набора данных с XmlDataDocument
+              href: synchronizing-a-dataset-with-an-xmldatadocument.md
+            - name: Выполнение запроса XPath к набору данных
+              href: performing-an-xpath-query-on-a-dataset.md
+            - name: Применение преобразования XSLT к набору данных
+              href: applying-an-xslt-transform-to-a-dataset.md
+        - name: Вложение отношений DataRelation
+          href: nesting-datarelations.md
+        - name: Наследование реляционной структуры набора данных от схемы XML (XSD)
+          href: deriving-dataset-relational-structure-from-xml-schema-xsd.md
+          items:
+            - name: Сопоставление ограничений XML-схемы (XSD) с ограничениями набора данных
+              href: mapping-xml-schema-xsd-constraints-to-dataset-constraints.md
+              items:
+                - name: Сопоставление уникальных ограничений XML-схемы (XSD) с ограничениями набора данных
+                  href: map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md
+                - name: Сопоставление ключевых ограничений XML-схемы (XSD) с ограничениями набора данных
+                  href: map-key-xml-schema-xsd-constraints-to-dataset-constraints.md
+                - name: Сопоставление ограничений XML-схемы (XSD) keyref с ограничениями набора данных
+                  href: map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md
+            - name: Создание отношений наборов данных из схемы XML (XSD)
+              href: generating-dataset-relations-from-xml-schema-xsd.md
+              items:
+                - name: Сопоставление неявных отношений между вложенными элементами схемы
+                  href: map-implicit-relations-between-nested-schema-elements.md
+                - name: 'Сопоставление отношений, заданных для вложенных элементов'
+                  href: map-relations-specified-for-nested-elements.md
+                - name: Указание отношений между элементами без вложенности
+                  href: specify-relations-between-elements-with-no-nesting.md
+            - name: Ограничения и отношения схемы XML
+              href: xml-schema-constraints-and-relationships.md
+        - name: Определение реляционной структуры набора данных из XML
+          href: inferring-dataset-relational-structure-from-xml.md
+          items:
+            - name: Общие сведения о процессе определения схемы набора данных
+              href: summary-of-the-dataset-schema-inference-process.md
+            - name: Определение таблиц
+              href: inferring-tables.md
+            - name: Определение столбцов
+              href: inferring-columns.md
+            - name: Определение отношений
+              href: inferring-relationships.md
+            - name: Определение текста элемента
+              href: inferring-element-text.md
+            - name: Ограничения определения
+              href: inference-limitations.md
+    - name: Потребление набора данных из веб-службы XML
+      href: consuming-a-dataset-from-an-xml-web-service.md

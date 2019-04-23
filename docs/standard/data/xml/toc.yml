@@ -1,288 +1,281 @@
-items:
 - name: XML-документы и данные
   href: index.md
   items:
-  - name: Параметры обработки XML
-    href: xml-processing-options.md
-  - name: Обработка XML-данных в памяти
-    href: processing-xml-data-in-memory.md
-    items:
-    - name: Обработка XML-данных с использованием модели DOM
-      href: process-xml-data-using-the-dom-model.md
+    - name: Параметры обработки XML
+      href: xml-processing-options.md
+    - name: Обработка XML-данных в памяти
+      href: processing-xml-data-in-memory.md
       items:
-      - name: Модель объектов XML-документов (DOM)
-        href: xml-document-object-model-dom.md
-      - name: Типы XML-узлов
-        href: types-of-xml-nodes.md
-      - name: Иерархия модели объектов (DOM) XML-документа
-        href: xml-document-object-model-dom-hierarchy.md
-      - name: Сопоставление объектной иерархии с XML-данными
-        href: mapping-the-object-hierarchy-to-xml-data.md
-      - name: Создание XML-документа
-        href: xml-document-creation.md
-      - name: Считывание XML-документа в DOM
-        href: reading-an-xml-document-into-the-dom.md
-        items:
-        - name: Директивы таблицы стилей, встроенные в документ
-          href: style-sheet-directives-embedded-in-a-document.md
-        - name: Загрузка данных из модуля чтения
-          href: load-data-from-a-reader.md
-        - name: Обработка незначительных и значительных пробелов при загрузке DOM
-          href: white-space-and-significant-white-space-handling-when-loading-the-dom.md
-        - name: Доступ к атрибутам в модели DOM
-          href: accessing-attributes-in-the-dom.md
-        - name: Считывание объявлений сущностей и ссылок на сущности в DOM
-          href: reading-entity-declarations-and-entity-references-into-the-dom.md
-        - name: Сохраняемые ссылки на сущности
-          href: entity-references-are-preserved.md
-        - name: Разворачиваемые и не сохраняемые ссылки на сущности
-          href: entity-references-are-expanded-and-not-preserved.md
-      - name: Вставка узлов в XML-документ
-        href: inserting-nodes-into-an-xml-document.md
-        items:
-        - name: Создание новых узлов в модели DOM
-          href: create-new-nodes-in-the-dom.md
+        - name: Обработка XML-данных с использованием модели DOM
+          href: process-xml-data-using-the-dom-model.md
           items:
-          - name: Создание новых атрибутов для элементов в модели DOM
-            href: creating-new-attributes-for-elements-in-the-dom.md
-          - name: Проверка имен XML-элементов и атрибутов при создании новых узлов
-            href: xml-element-and-attribute-name-verification-when-creating-new-nodes.md
-          - name: Создание новых ссылок на сущности
-            href: creating-new-entity-references.md
-          - name: Влияние пространства имен на раскрытие ссылок на сущности для новых узлов, содержащих элементы и атрибуты
-            href: namespace-affect-on-entity-ref-expansion-for-new-nodes.md
-        - name: Копирование существующих узлов
-          href: copy-existing-nodes.md
-        - name: Копирование существующих узлов из одного документа в другой
-          href: copying-existing-nodes-from-one-document-to-another.md
-        - name: Копирование фрагментов документа
-          href: copying-document-fragments.md
-      - name: Удаление узлов, содержимого и значений из XML-документа
-        href: removing-nodes-content-and-values-from-an-xml-document.md
-        items:
-        - name: Удаление узлов из DOM
-          href: removing-nodes-from-the-dom.md
-        - name: Удаление атрибутов из узла элемента в DOM
-          href: removing-attributes-from-an-element-node-in-the-dom.md
-        - name: Удаление содержимого узла в DOM
-          href: removing-node-content-in-the-dom.md
-      - name: Изменение узлов, содержимого и значений в XML-документе
-        href: modifying-nodes-content-and-values-in-an-xml-document.md
-      - name: Проверка XML-документа в DOM
-        href: validating-an-xml-document-in-the-dom.md
-      - name: Сохранение и запись документа
-        href: saving-and-writing-a-document.md
-      - name: Выбор узлов с помощью XPath-навигации
-        href: select-nodes-using-xpath-navigation.md
-      - name: Разрешение внешних ресурсов
-        href: resolving-external-resources.md
-      - name: Сравнение объектов с помощью XmlNameTable
-        href: object-comparison-using-xmlnametable.md
-      - name: Коллекции узлов в NamedNodeMap и NodeList
-        href: node-collections-in-namednodemaps-and-nodelists.md
-        items:
-        - name: Неупорядоченное извлечение узлов по имени или индексу
-          href: unordered-node-retrieval-by-name-or-index.md
-        - name: Упорядоченное извлечение узлов по индексу
-          href: ordered-node-retrieval-by-index.md
-      - name: Динамические обновления объектов NodeList и NamedNodeMap
-        href: dynamic-updates-to-nodelists-and-namednodemaps.md
-      - name: Поддержка пространств имен в модели DOM
-        href: namespace-support-in-the-dom.md
-        items:
-        - name: Пространства имен и DTD в DOM
-          href: namespaces-and-dtds-in-the-dom.md
-        - name: Изменение деклараций пространств имен в XML-документе
-          href: changing-namespace-declarations-in-an-xml-document.md
-        - name: Изменение свойств префикса пространства имен
-          href: changing-namespace-prefix-properties.md
-      - name: Обработка событий в XML-документе с помощью XmlNodeChangedEventArgs
-        href: event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md
-      - name: Расширение модели DOM
-        href: extending-the-dom.md
-    - name: Обработка XML-данных с использованием модели данных XPath
-      href: process-xml-data-using-the-xpath-data-model.md
+            - name: Модель объектов XML-документов (DOM)
+              href: xml-document-object-model-dom.md
+            - name: Типы XML-узлов
+              href: types-of-xml-nodes.md
+            - name: Иерархия модели объектов (DOM) XML-документа
+              href: xml-document-object-model-dom-hierarchy.md
+            - name: Сопоставление объектной иерархии с XML-данными
+              href: mapping-the-object-hierarchy-to-xml-data.md
+            - name: Создание XML-документа
+              href: xml-document-creation.md
+            - name: Считывание XML-документа в DOM
+              href: reading-an-xml-document-into-the-dom.md
+              items:
+                - name: 'Директивы таблицы стилей, встроенные в документ'
+                  href: style-sheet-directives-embedded-in-a-document.md
+                - name: Загрузка данных из модуля чтения
+                  href: load-data-from-a-reader.md
+                - name: Обработка незначительных и значительных пробелов при загрузке DOM
+                  href: white-space-and-significant-white-space-handling-when-loading-the-dom.md
+                - name: Доступ к атрибутам в модели DOM
+                  href: accessing-attributes-in-the-dom.md
+                - name: Считывание объявлений сущностей и ссылок на сущности в DOM
+                  href: reading-entity-declarations-and-entity-references-into-the-dom.md
+                - name: Сохраняемые ссылки на сущности
+                  href: entity-references-are-preserved.md
+                - name: Разворачиваемые и не сохраняемые ссылки на сущности
+                  href: entity-references-are-expanded-and-not-preserved.md
+            - name: Вставка узлов в XML-документ
+              href: inserting-nodes-into-an-xml-document.md
+              items:
+                - name: Создание новых узлов в модели DOM
+                  href: create-new-nodes-in-the-dom.md
+                  items:
+                    - name: Создание новых атрибутов для элементов в модели DOM
+                      href: creating-new-attributes-for-elements-in-the-dom.md
+                    - name: Проверка имен XML-элементов и атрибутов при создании новых узлов
+                      href: xml-element-and-attribute-name-verification-when-creating-new-nodes.md
+                    - name: Создание новых ссылок на сущности
+                      href: creating-new-entity-references.md
+                    - name: 'Влияние пространства имен на раскрытие ссылок на сущности для новых узлов, содержащих элементы и атрибуты'
+                      href: namespace-affect-on-entity-ref-expansion-for-new-nodes.md
+                - name: Копирование существующих узлов
+                  href: copy-existing-nodes.md
+                - name: Копирование существующих узлов из одного документа в другой
+                  href: copying-existing-nodes-from-one-document-to-another.md
+                - name: Копирование фрагментов документа
+                  href: copying-document-fragments.md
+            - name: 'Удаление узлов, содержимого и значений из XML-документа'
+              href: removing-nodes-content-and-values-from-an-xml-document.md
+              items:
+                - name: Удаление узлов из DOM
+                  href: removing-nodes-from-the-dom.md
+                - name: Удаление атрибутов из узла элемента в DOM
+                  href: removing-attributes-from-an-element-node-in-the-dom.md
+                - name: Удаление содержимого узла в DOM
+                  href: removing-node-content-in-the-dom.md
+            - name: 'Изменение узлов, содержимого и значений в XML-документе'
+              href: modifying-nodes-content-and-values-in-an-xml-document.md
+            - name: Проверка XML-документа в DOM
+              href: validating-an-xml-document-in-the-dom.md
+            - name: Сохранение и запись документа
+              href: saving-and-writing-a-document.md
+            - name: Выбор узлов с помощью XPath-навигации
+              href: select-nodes-using-xpath-navigation.md
+            - name: Разрешение внешних ресурсов
+              href: resolving-external-resources.md
+            - name: Сравнение объектов с помощью XmlNameTable
+              href: object-comparison-using-xmlnametable.md
+            - name: Коллекции узлов в NamedNodeMap и NodeList
+              href: node-collections-in-namednodemaps-and-nodelists.md
+              items:
+                - name: Неупорядоченное извлечение узлов по имени или индексу
+                  href: unordered-node-retrieval-by-name-or-index.md
+                - name: Упорядоченное извлечение узлов по индексу
+                  href: ordered-node-retrieval-by-index.md
+            - name: Динамические обновления объектов NodeList и NamedNodeMap
+              href: dynamic-updates-to-nodelists-and-namednodemaps.md
+            - name: Поддержка пространств имен в модели DOM
+              href: namespace-support-in-the-dom.md
+              items:
+                - name: Пространства имен и DTD в DOM
+                  href: namespaces-and-dtds-in-the-dom.md
+                - name: Изменение деклараций пространств имен в XML-документе
+                  href: changing-namespace-declarations-in-an-xml-document.md
+                - name: Изменение свойств префикса пространства имен
+                  href: changing-namespace-prefix-properties.md
+            - name: Обработка событий в XML-документе с помощью XmlNodeChangedEventArgs
+              href: event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md
+            - name: Расширение модели DOM
+              href: extending-the-dom.md
+        - name: Обработка XML-данных с использованием модели данных XPath
+          href: process-xml-data-using-the-xpath-data-model.md
+          items:
+            - name: Чтение XML-данных с помощью XPathDocument и XmlDocument
+              href: reading-xml-data-using-xpathdocument-and-xmldocument.md
+            - name: 'Выбор, вычисление и отбор XML-данных с помощью XPathNavigator'
+              href: selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md
+              items:
+                - name: Выборка XML-данных с помощью XPathNavigator
+                  href: select-xml-data-using-xpathnavigator.md
+                - name: Вычисление выражения XPath с помощью класса XPathNavigator
+                  href: evaluate-xpath-expressions-using-xpathnavigator.md
+                - name: Соответствие узлов с помощью XPathNavigator
+                  href: matching-nodes-using-xpathnavigator.md
+                - name: 'Типы узлов, распознаваемые запросами XPath'
+                  href: node-types-recognized-with-xpath-queries.md
+                - name: Запросы XPath и пространства имен
+                  href: xpath-queries-and-namespaces.md
+                - name: Скомпилированные выражения XPath
+                  href: compiled-xpath-expressions.md
+                - name: Навигация по пространствам имен XPath
+                  href: xpath-namespace-navigation.md
+            - name: Доступ к XML-данным с помощью класса XPathNavigator
+              href: accessing-xml-data-using-xpathnavigator.md
+              items:
+                - name: Навигация в наборе узлов с помощью XPathNavigator
+                  href: node-set-navigation-using-xpathnavigator.md
+                - name: Навигация по узлам атрибутов и пространств имен с помощью XPathNavigator
+                  href: attribute-and-namespace-node-navigation-using-xpathnavigator.md
+                - name: Извлечение XML-данных с помощью XPathNavigator
+                  href: extract-xml-data-using-xpathnavigator.md
+                - name: Доступ к XML-данным со строгой типизацией с помощью XPathNavigator
+                  href: accessing-strongly-typed-xml-data-using-xpathnavigator.md
+                - name: Определяемые пользователем функции и переменные
+                  href: user-defined-functions-and-variables.md
+            - name: Изменение XML-данных с помощью XPathNavigator
+              href: editing-xml-data-using-xpathnavigator.md
+              items:
+                - name: Вставка XML-данных с помощью XPathNavigator
+                  href: insert-xml-data-using-xpathnavigator.md
+                - name: Изменение XML-данных с помощью класса XPathNavigator
+                  href: modify-xml-data-using-xpathnavigator.md
+                - name: Удаление XML-данных с помощью XPathNavigator
+                  href: remove-xml-data-using-xpathnavigator.md
+            - name: Проверка по схеме с помощью XPathNavigator
+              href: schema-validation-using-xpathnavigator.md
+        - name: Обработка XML-данных с помощью LINQ to XML
+          href: process-xml-data-using-linq-to-xml.md
+    - name: Преобразования XSLT
+      href: xslt-transformations.md
       items:
-      - name: Чтение XML-данных с помощью XPathDocument и XmlDocument
-        href: reading-xml-data-using-xpathdocument-and-xmldocument.md
-      - name: Выбор, вычисление и отбор XML-данных с помощью XPathNavigator
-        href: selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md
-        items:
-        - name: Выборка XML-данных с помощью XPathNavigator
-          href: select-xml-data-using-xpathnavigator.md
-        - name: Вычисление выражения XPath с помощью класса XPathNavigator
-          href: evaluate-xpath-expressions-using-xpathnavigator.md
-        - name: Соответствие узлов с помощью XPathNavigator
-          href: matching-nodes-using-xpathnavigator.md
-        - name: Типы узлов, распознаваемые запросами XPath
-          href: node-types-recognized-with-xpath-queries.md
-        - name: Запросы XPath и пространства имен
-          href: xpath-queries-and-namespaces.md
-        - name: Скомпилированные выражения XPath
-          href: compiled-xpath-expressions.md
-        - name: Навигация по пространствам имен XPath
-          href: xpath-namespace-navigation.md
-      - name: Доступ к XML-данным с помощью класса XPathNavigator
-        href: accessing-xml-data-using-xpathnavigator.md
-        items:
-        - name: Навигация в наборе узлов с помощью XPathNavigator
-          href: node-set-navigation-using-xpathnavigator.md
-        - name: Навигация по узлам атрибутов и пространств имен с помощью XPathNavigator
-          href: attribute-and-namespace-node-navigation-using-xpathnavigator.md
-        - name: Извлечение XML-данных с помощью XPathNavigator
-          href: extract-xml-data-using-xpathnavigator.md
-        - name: Доступ к XML-данным со строгой типизацией с помощью XPathNavigator
-          href: accessing-strongly-typed-xml-data-using-xpathnavigator.md
-        - name: Определяемые пользователем функции и переменные
-          href: user-defined-functions-and-variables.md
-      - name: Изменение XML-данных с помощью XPathNavigator
-        href: editing-xml-data-using-xpathnavigator.md
-        items:
-        - name: Вставка XML-данных с помощью XPathNavigator
-          href: insert-xml-data-using-xpathnavigator.md
-        - name: Изменение XML-данных с помощью класса XPathNavigator
-          href: modify-xml-data-using-xpathnavigator.md
-        - name: Удаление XML-данных с помощью XPathNavigator
-          href: remove-xml-data-using-xpathnavigator.md
-      - name: Проверка по схеме с помощью XPathNavigator
-        href: schema-validation-using-xpathnavigator.md
-    - name: Обработка XML-данных с помощью LINQ to XML
-      href: process-xml-data-using-linq-to-xml.md
-  - name: Преобразования XSLT
-    href: xslt-transformations.md
-    items:
-    - name: Использование класса XslCompiledTransform
-      href: using-the-xslcompiledtransform-class.md
+        - name: Использование класса XslCompiledTransform
+          href: using-the-xslcompiledtransform-class.md
+          items:
+            - name: Входные данные для класса XslCompiledTransform
+              href: inputs-to-the-xslcompiledtransform-class.md
+            - name: Параметры вывода в классе XslCompiledTransform
+              href: output-options-on-the-xslcompiledtransform-class.md
+            - name: Разрешение внешних ресурсов в ходе обработки XSLT
+              href: resolving-external-resources-during-xslt-processing.md
+            - name: Расширение таблиц стилей XSLT
+              href: extending-xslt-style-sheets.md
+              items:
+                - name: Объекты расширения XSLT
+                  href: xslt-extension-objects.md
+                - name: Параметры XSLT
+                  href: xslt-parameters.md
+                - name: 'Блоки скриптов с использованием msxsl:script'
+                  href: script-blocks-using-msxsl-script.md
+            - name: Устранимые ошибки XSLT
+              href: recoverable-xslt-errors.md
+            - name: Как выполнить Преобразование фрагмента узла
+              href: how-to-transform-a-node-fragment.md
+        - name: Миграция с класса XslTransform
+          href: migrating-from-the-xsltransform-class.md
+          items:
+            - name: Как выполнить Как провести миграцию кода XslTransform
+              href: how-to-migrate-your-xsltransform-code.md
+        - name: Рекомендации по безопасности XSLT
+          href: xslt-security-considerations.md
+        - name: XSLT-компилятор (xsltc.exe)
+          href: xslt-compiler-xsltc-exe.md
+          items:
+            - name: Как выполнить Выполнение XSLT-преобразования с помощью сборки
+              href: how-to-perform-an-xslt-transformation-by-using-an-assembly.md
+        - name: XSLT-преобразования с помощью класса XslTransform
+          href: xslt-transformations-with-the-xsltransform-class.md
+          items:
+            - name: Реализация поведения по выбору в классе XslTransform
+              href: implementation-of-discretionary-behaviors-in-the-xsltransform-class.md
+            - name: Реализация классом XslTransform XSLT-процессора
+              href: xsltransform-class-implements-the-xslt-processor.md
+              items:
+                - name: Результаты вывода XslTransform
+                  href: outputs-from-an-xsltransform.md
+                - name: XSLT-преобразования над различными хранилищами
+                  href: xslt-transformations-over-different-stores.md
+                - name: Разрешение внешних таблиц стилей XSLT и документов
+                  href: resolving-external-xslt-style-sheets-and-documents.md
+                - name: XsltArgumentList для параметров таблицы стилей и объектов расширения
+                  href: xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md
+                - name: 'Создание скриптов таблиц стилей XSLT с помощью <msxsl:script>'
+                  href: xslt-stylesheet-scripting-using-msxsl-script.md
+                - name: 'Поддержка функции msxsl:node-set()'
+                  href: support-for-the-msxsl-node-set-function.md
+                - name: Наборы узлов в преобразованиях
+                  href: node-sets-in-transformations.md
+                - name: Фрагмент дерева результатов в преобразованиях
+                  href: result-tree-fragment-in-transformations.md
+            - name: XPathNavigator в преобразованиях
+              href: xpathnavigator-in-transformations.md
+            - name: XPathNodeIterator в преобразованиях
+              href: xpathnodeiterator-in-transformations.md
+            - name: Ввод XPathDocument в XslTransform
+              href: xpathdocument-input-to-xsltransform.md
+            - name: Ввод XmlDataDocument в XslTransform
+              href: xmldatadocument-input-to-xsltransform.md
+            - name: Ввод XmlDocument в XslTransform
+              href: xmldocument-input-to-xsltransform.md
+    - name: Работа с XML-схемами
+      href: working-with-xml-schemas.md
       items:
-      - name: Входные данные для класса XslCompiledTransform
-        href: inputs-to-the-xslcompiledtransform-class.md
-      - name: Параметры вывода в классе XslCompiledTransform
-        href: output-options-on-the-xslcompiledtransform-class.md
-      - name: Разрешение внешних ресурсов в ходе обработки XSLT
-        href: resolving-external-resources-during-xslt-processing.md
-      - name: Расширение таблиц стилей XSLT
-        href: extending-xslt-style-sheets.md
-        items:
-        - name: Объекты расширения XSLT
-          href: xslt-extension-objects.md
-        - name: Параметры XSLT
-          href: xslt-parameters.md
-        - name: Блоки скриптов с использованием msxsl:script
-          href: script-blocks-using-msxsl-script.md
-      - name: Устранимые ошибки XSLT
-        href: recoverable-xslt-errors.md
-      - name: Практическое руководство. Преобразование фрагмента узла
-        href: how-to-transform-a-node-fragment.md
-    - name: Миграция с класса XslTransform
-      href: migrating-from-the-xsltransform-class.md
+        - name: Модель объектов схемы XML (SOM)
+          href: xml-schema-object-model-som.md
+          items:
+            - name: Общие сведения об модели объектов XML-схемы
+              href: xml-schema-object-model-overview.md
+            - name: Чтение и запись XML-схем
+              href: reading-and-writing-xml-schemas.md
+            - name: Построение XML-схем
+              href: building-xml-schemas.md
+            - name: Обход XML-схем
+              href: traversing-xml-schemas.md
+            - name: Изменение XML-схем
+              href: editing-xml-schemas.md
+            - name: Включение или импорт XML-схем
+              href: including-or-importing-xml-schemas.md
+        - name: XmlSchemaSet для компиляции схемы
+          href: xmlschemaset-for-schema-compilation.md
+          items:
+            - name: Набор сведений для постсхемной компиляции
+              href: post-schema-compilation-infoset.md
+            - name: Проверка по XML-схеме (XSD) с помощью XmlSchemaSet
+              href: xml-schema-xsd-validation-with-xmlschemaset.md
+            - name: Компиляция схемы XmlSchemaCollection
+              href: xmlschemacollection-schema-compilation.md
+              items:
+                - name: XDR-проверка с помощью XmlSchemaCollection
+                  href: xdr-validation-with-xmlschemacollection.md
+                - name: Проверка по XML-схеме (XSD) с помощью XmlSchemaCollection
+                  href: xml-schema-xsd-validation-with-xmlschemacollection.md
+        - name: Принудительная проверка с помощью XmlSchemaValidator
+          href: xmlschemavalidator-push-based-validation.md
+        - name: Выведение XML-схемы
+          href: inferring-an-xml-schema.md
+          items:
+            - name: Выведение схем из XML-документов
+              href: inferring-schemas-from-xml-documents.md
+            - name: Правила выведения структуры и типов узлов схемы
+              href: rules-for-inferring-schema-node-types-and-structure.md
+            - name: Правила выведения простых типов
+              href: rules-for-inferring-simple-types.md
+    - name: Интеграция XML с реляционными данными и ADO.NET
+      href: xml-integration-with-relational-data-and-adonet.md
+    - name: Управление пространствами имен в XML-документе
+      href: managing-namespaces-in-an-xml-document.md
+    - name: Поддержка типов в классах System.Xml
+      href: type-support-in-the-system-xml-classes.md
       items:
-      - name: Практическое руководство. Как провести миграцию кода XslTransform
-        href: how-to-migrate-your-xsltransform-code.md
-    - name: Рекомендации по безопасности XSLT
-      href: xslt-security-considerations.md
-    - name: XSLT-компилятор (xsltc.exe)
-      href: xslt-compiler-xsltc-exe.md
-      items:
-      - name: Практическое руководство. Выполнение XSLT-преобразования с помощью сборки
-        href: how-to-perform-an-xslt-transformation-by-using-an-assembly.md
-    - name: XSLT-преобразования с помощью класса XslTransform
-      href: xslt-transformations-with-the-xsltransform-class.md
-      items:
-      - name: Реализация поведения по выбору в классе XslTransform
-        href: implementation-of-discretionary-behaviors-in-the-xsltransform-class.md
-      - name: Реализация классом XslTransform XSLT-процессора
-        href: xsltransform-class-implements-the-xslt-processor.md
-        items:
-        - name: Результаты вывода XslTransform
-          href: outputs-from-an-xsltransform.md
-        - name: XSLT-преобразования над различными хранилищами
-          href: xslt-transformations-over-different-stores.md
-        - name: Разрешение внешних таблиц стилей XSLT и документов
-          href: resolving-external-xslt-style-sheets-and-documents.md
-        - name: XsltArgumentList для параметров таблицы стилей и объектов расширения
-          href: xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md
-        - name: Создание скриптов таблиц стилей XSLT с помощью <msxsl:script>
-          href: xslt-stylesheet-scripting-using-msxsl-script.md
-        - name: Поддержка функции msxsl:node-set()
-          href: support-for-the-msxsl-node-set-function.md
-        - name: Наборы узлов в преобразованиях
-          href: node-sets-in-transformations.md
-        - name: Фрагмент дерева результатов в преобразованиях
-          href: result-tree-fragment-in-transformations.md
-      - name: XPathNavigator в преобразованиях
-        href: xpathnavigator-in-transformations.md
-      - name: XPathNodeIterator в преобразованиях
-        href: xpathnodeiterator-in-transformations.md
-      - name: Ввод XPathDocument в XslTransform
-        href: xpathdocument-input-to-xsltransform.md
-      - name: Ввод XmlDataDocument в XslTransform
-        href: xmldatadocument-input-to-xsltransform.md
-      - name: Ввод XmlDocument в XslTransform
-        href: xmldocument-input-to-xsltransform.md
-  - name: Работа с XML-схемами
-    href: working-with-xml-schemas.md
-    items:
-    - name: Модель объектов схемы XML (SOM)
-      href: xml-schema-object-model-som.md
-      items:
-      - name: Общие сведения об модели объектов XML-схемы
-        href: xml-schema-object-model-overview.md
-      - name: Чтение и запись XML-схем
-        href: reading-and-writing-xml-schemas.md
-      - name: Построение XML-схем
-        href: building-xml-schemas.md
-      - name: Обход XML-схем
-        href: traversing-xml-schemas.md
-      - name: Изменение XML-схем
-        href: editing-xml-schemas.md
-      - name: Включение или импорт XML-схем
-        href: including-or-importing-xml-schemas.md
-    - name: XmlSchemaSet для компиляции схемы
-      href: xmlschemaset-for-schema-compilation.md
-      items:
-      - name: Набор сведений для постсхемной компиляции
-        href: post-schema-compilation-infoset.md
-      - name: Проверка по XML-схеме (XSD) с помощью XmlSchemaSet
-        href: xml-schema-xsd-validation-with-xmlschemaset.md
-      - name: Компиляция схемы XmlSchemaCollection
-        href: xmlschemacollection-schema-compilation.md
-        items:
-        - name: XDR-проверка с помощью XmlSchemaCollection
-          href: xdr-validation-with-xmlschemacollection.md
-        - name: Проверка по XML-схеме (XSD) с помощью XmlSchemaCollection
-          href: xml-schema-xsd-validation-with-xmlschemacollection.md
-    - name: Принудительная проверка с помощью XmlSchemaValidator
-      href: xmlschemavalidator-push-based-validation.md
-    - name: Выведение XML-схемы
-      href: inferring-an-xml-schema.md
-      items:
-      - name: Выведение схем из XML-документов
-        href: inferring-schemas-from-xml-documents.md
-      - name: Правила выведения структуры и типов узлов схемы
-        href: rules-for-inferring-schema-node-types-and-structure.md
-      - name: Правила выведения простых типов
-        href: rules-for-inferring-simple-types.md
-  - name: Интеграция XML с реляционными данными и ADO.NET
-    href: xml-integration-with-relational-data-and-adonet.md
-  - name: Управление пространствами имен в XML-документе
-    href: managing-namespaces-in-an-xml-document.md
-  - name: Поддержка типов в классах System.Xml
-    href: type-support-in-the-system-xml-classes.md
-    items:
-    - name: Сопоставление типов XML-данных с типами CLR
-      href: mapping-xml-data-types-to-clr-types.md
-    - name: Примечания по реализации поддержки типов XML
-      href: xml-type-support-implementation-notes.md
-    - name: Преобразование типов XML-данных
-      href: conversion-of-xml-data-types.md
-      items:
-      - name: Преобразование строк в типы данных .NET Framework
-        href: converting-strings-to-dotnet-data-types.md
-      - name: Преобразование типов .NET Framework в строки
-        href: converting-dotnet-types-to-strings.md
-ms.openlocfilehash: da588944eecde3fd6e05e765797648c3c48ff46d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470781"
+        - name: Сопоставление типов XML-данных с типами CLR
+          href: mapping-xml-data-types-to-clr-types.md
+        - name: Примечания по реализации поддержки типов XML
+          href: xml-type-support-implementation-notes.md
+        - name: Преобразование типов XML-данных
+          href: conversion-of-xml-data-types.md
+          items:
+            - name: Преобразование строк в типы данных .NET Framework
+              href: converting-strings-to-dotnet-data-types.md
+            - name: Преобразование типов .NET Framework в строки
+              href: converting-dotnet-types-to-strings.md

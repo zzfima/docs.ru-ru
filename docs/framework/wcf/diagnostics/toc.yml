@@ -1,38 +1,31 @@
-items:
 - name: Администрирование и диагностика
   href: index.md
 - name: Ведение журналов сообщений
   href: message-logging.md
   items:
-  - name: Общие сведения о потоках сообщений
-    href: message-flow-overview.md
-  - name: Настройка ведения журналов сообщений
-    href: configuring-message-logging.md
-  - name: Просмотр журналов сообщений
-    href: viewing-message-logs.md
-  - name: Проблемы безопасности при ведении журналов сообщений
-    href: security-concerns-for-message-logging.md
-  - name: Трассировка
-    href: tracing/
-  - name: Аналитическое отслеживание ETW
-    href: etw/
-  - name: Счетчики производительности
-    href: performance-counters/
-  - name: Ведение журнала событий
-    href: event-logging/
-  - name: Использование Windows Management Instrumentation для диагностики
-    href: wmi/
-  - name: Справочник по исключениям
-    href: exceptions-reference/
+    - name: Общие сведения о потоках сообщений
+      href: message-flow-overview.md
+    - name: Настройка ведения журналов сообщений
+      href: configuring-message-logging.md
+    - name: Просмотр журналов сообщений
+      href: viewing-message-logs.md
+    - name: Проблемы безопасности при ведении журналов сообщений
+      href: security-concerns-for-message-logging.md
+    - name: Трассировка
+      href: tracing/
+    - name: Аналитическое отслеживание ETW
+      href: etw/
+    - name: Счетчики производительности
+      href: performance-counters/
+    - name: Ведение журнала событий
+      href: event-logging/
+    - name: Использование Windows Management Instrumentation для диагностики
+      href: wmi/
+    - name: Справочник по исключениям
+      href: exceptions-reference/
 - name: Настройка приложения
   href: configuring-your-application.md
 - name: Средство регистрации ServiceModel
   href: servicemodel-registration-tool.md
 - name: Развертывание служб
   href: deploying-services.md
-ms.openlocfilehash: 4d111b1284ffcb29397a6caafdad4df9abc85086
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470936"

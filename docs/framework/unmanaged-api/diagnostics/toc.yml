@@ -1,406 +1,399 @@
-items:
 - name: Хранилище символов диагностики
   href: index.md
   items:
-  - name: Интерфейсы хранилища символов диагностики
-    href: diagnostics-symbol-store-interfaces.md
-    items:
-    - name: Интерфейс IBindingDisplay
-      href: ibindingdisplay-interface.md
+    - name: Интерфейсы хранилища символов диагностики
+      href: diagnostics-symbol-store-interfaces.md
       items:
-      - name: Метод GetCurrentDisplay
-        href: ibindingdisplay-getcurrentdisplay-method.md
-      - name: Метод InitializeForProcess
-        href: ibindingdisplay-initializeforprocess-method.md
-    - name: Интерфейс IDebugAutoAttach
-      href: idebugautoattach-interface.md
+        - name: Интерфейс IBindingDisplay
+          href: ibindingdisplay-interface.md
+          items:
+            - name: Метод GetCurrentDisplay
+              href: ibindingdisplay-getcurrentdisplay-method.md
+            - name: Метод InitializeForProcess
+              href: ibindingdisplay-initializeforprocess-method.md
+        - name: Интерфейс IDebugAutoAttach
+          href: idebugautoattach-interface.md
+          items:
+            - name: Метод AutoAttach
+              href: idebugautoattach-autoattach-method.md
+        - name: Интерфейс INotifyConnection2
+          href: inotifyconnection2-interface.md
+          items:
+            - name: Метод RegisterNotifySource
+              href: inotifyconnection2-registernotifysource-method.md
+            - name: Метод UnregisterNotifySource
+              href: inotifyconnection2-unregisternotifysource-method.md
+        - name: Интерфейс INotifySink2
+          href: inotifysink2-interface.md
+          items:
+            - name: Метод OnSyncCallEnter
+              href: inotifysink2-onsynccallenter-method.md
+            - name: Метод OnSyncCallExit
+              href: inotifysink2-onsynccallexit-method.md
+            - name: Метод OnSyncCallOut
+              href: inotifysink2-onsynccallout-method.md
+            - name: Метод OnSyncCallReturn
+              href: inotifysink2-onsynccallreturn-method.md
+        - name: Интерфейс INotifySource2
+          href: inotifysource2-interface.md
+          items:
+            - name: Метод SetNotifyFilter
+              href: inotifysource2-setnotifyfilter-method.md
+        - name: Интерфейс ISymENCUnmanagedMethod
+          href: isymencunmanagedmethod-interface.md
+          items:
+            - name: Метод GetDocumentsForMethod
+              href: isymencunmanagedmethod-getdocumentsformethod-method.md
+            - name: Метод GetDocumentsForMethodCount
+              href: isymencunmanagedmethod-getdocumentsformethodcount-method.md
+            - name: Метод GetFileNameFromOffset
+              href: isymencunmanagedmethod-getfilenamefromoffset-method.md
+            - name: Метод GetLineFromOffset
+              href: isymencunmanagedmethod-getlinefromoffset-method.md
+            - name: Метод GetSourceExtentInDocument
+              href: isymencunmanagedmethod-getsourceextentindocument-method.md
+        - name: Интерфейс ISymUnmanagedAsyncMethod
+          href: isymunmanagedasyncmethod-interface.md
+          items:
+            - name: Метод GetAsyncStepInfo
+              href: isymunmanagedasyncmethod-getasyncstepinfo-method.md
+            - name: Метод GetAsyncStepInfoCount
+              href: isymunmanagedasyncmethod-getasyncstepinfocount-method.md
+            - name: Метод GetCatchHandlerILOffset
+              href: isymunmanagedasyncmethod-getcatchhandleriloffset-method.md
+            - name: Метод GetKickoffMethod
+              href: isymunmanagedasyncmethod-getkickoffmethod-method.md
+            - name: Метод HasCatchHandlerILOffset
+              href: isymunmanagedasyncmethod-hascatchhandleriloffset-method.md
+            - name: Метод IsAsyncMethod
+              href: isymunmanagedasyncmethod-isasyncmethod-method.md
+        - name: Интерфейс ISymUnmanagedAsyncMethodPropertiesWriter
+          href: isymunmanagedasyncmethodpropertieswriter-interface.md
+          items:
+            - name: Метод DefineAsyncStepInfo
+              href: isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md
+            - name: Метод DefineCatchHandlerILOffset
+              href: isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md
+            - name: Метод DefineKickoffMethod
+              href: isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md
+        - name: Интерфейс ISymUnmanagedBinder
+          href: isymunmanagedbinder-interface.md
+          items:
+            - name: Метод GetReaderForFile
+              href: isymunmanagedbinder-getreaderforfile-method.md
+            - name: Метод GetReaderFromStream
+              href: isymunmanagedbinder-getreaderfromstream-method.md
+        - name: Интерфейс ISymUnmanagedBinder2
+          href: isymunmanagedbinder2-interface.md
+          items:
+            - name: Метод GetReaderForFile2
+              href: isymunmanagedbinder2-getreaderforfile2-method.md
+        - name: Интерфейс ISymUnmanagedBinder3
+          href: isymunmanagedbinder3-interface.md
+          items:
+            - name: Метод GetReaderFromCallback
+              href: isymunmanagedbinder3-getreaderfromcallback-method.md
+        - name: Интерфейс ISymUnmanagedConstant
+          href: isymunmanagedconstant-interface.md
+          items:
+            - name: Метод GetName
+              href: isymunmanagedconstant-getname-method.md
+            - name: Метод GetSignature
+              href: isymunmanagedconstant-getsignature-method.md
+            - name: Метод GetValue
+              href: isymunmanagedconstant-getvalue-method.md
+        - name: Интерфейс ISymUnmanagedDispose
+          href: isymunmanageddispose-interface.md
+          items:
+            - name: Метод Destroy
+              href: isymunmanageddispose-destroy-method.md
+        - name: Интерфейс ISymUnmanagedDocument
+          href: isymunmanageddocument-interface.md
+          items:
+            - name: Метод FindClosestLine
+              href: isymunmanageddocument-findclosestline-method.md
+            - name: Метод GetCheckSum
+              href: isymunmanageddocument-getchecksum-method.md
+            - name: Метод GetCheckSumAlgorithmId
+              href: isymunmanageddocument-getchecksumalgorithmid-method.md
+            - name: Метод GetDocumentType
+              href: isymunmanageddocument-getdocumenttype-method.md
+            - name: Метод GetLanguage
+              href: isymunmanageddocument-getlanguage-method.md
+            - name: Метод GetLanguageVendor
+              href: isymunmanageddocument-getlanguagevendor-method.md
+            - name: Метод GetSourceLength
+              href: isymunmanageddocument-getsourcelength-method.md
+            - name: Метод GetSourceRange
+              href: isymunmanageddocument-getsourcerange-method.md
+            - name: Метод GetURL
+              href: isymunmanageddocument-geturl-method.md
+            - name: Метод HasEmbeddedSource
+              href: isymunmanageddocument-hasembeddedsource-method.md
+        - name: Интерфейс ISymUnmanagedDocumentWriter
+          href: isymunmanageddocumentwriter-interface.md
+          items:
+            - name: Метод SetCheckSum
+              href: isymunmanageddocumentwriter-setchecksum-method.md
+            - name: Метод SetSource
+              href: isymunmanageddocumentwriter-setsource-method.md
+        - name: Интерфейс ISymUnmanagedENCUpdate
+          href: isymunmanagedencupdate-interface.md
+          items:
+            - name: Метод GetLocalVariableCount
+              href: isymunmanagedencupdate-getlocalvariablecount-method.md
+            - name: Метод GetLocalVariables
+              href: isymunmanagedencupdate-getlocalvariables-method.md
+            - name: Метод InitializeForEnc
+              href: isymunmanagedencupdate-initializeforenc-method.md
+            - name: Метод UpdateMethodLines
+              href: isymunmanagedencupdate-updatemethodlines-method.md
+            - name: Метод UpdateSymbolStore2
+              href: isymunmanagedencupdate-updatesymbolstore2-method.md
+        - name: Интерфейс ISymUnmanagedMethod
+          href: isymunmanagedmethod-interface.md
+          items:
+            - name: Метод GetNamespace
+              href: isymunmanagedmethod-getnamespace-method.md
+            - name: Метод GetOffset
+              href: isymunmanagedmethod-getoffset-method.md
+            - name: Метод GetParameters
+              href: isymunmanagedmethod-getparameters-method.md
+            - name: Метод GetRanges
+              href: isymunmanagedmethod-getranges-method.md
+            - name: Метод GetRootScope
+              href: isymunmanagedmethod-getrootscope-method.md
+            - name: Метод GetScopeFromOffset
+              href: isymunmanagedmethod-getscopefromoffset-method.md
+            - name: Метод GetSequencePointCount
+              href: isymunmanagedmethod-getsequencepointcount-method.md
+            - name: Метод GetSequencePoints
+              href: isymunmanagedmethod-getsequencepoints-method.md
+            - name: Метод GetSourceStartEnd
+              href: isymunmanagedmethod-getsourcestartend-method.md
+            - name: Метод GetToken
+              href: isymunmanagedmethod-gettoken-method.md
+        - name: Интерфейс ISymUnmanagedNamespace
+          href: isymunmanagednamespace-interface.md
+          items:
+            - name: Метод GetName
+              href: isymunmanagednamespace-getname-method.md
+            - name: Метод GetNamespaces
+              href: isymunmanagednamespace-getnamespaces-method.md
+            - name: Метод GetVariables
+              href: isymunmanagednamespace-getvariables-method.md
+        - name: Интерфейс ISymUnmanagedReader
+          href: isymunmanagedreader-interface.md
+          items:
+            - name: Метод GetDocument
+              href: isymunmanagedreader-getdocument-method.md
+            - name: Метод GetDocuments
+              href: isymunmanagedreader-getdocuments-method.md
+            - name: Метод GetDocumentVersion
+              href: isymunmanagedreader-getdocumentversion-method.md
+            - name: Метод GetGlobalVariables
+              href: isymunmanagedreader-getglobalvariables-method.md
+            - name: Метод GetMethod
+              href: isymunmanagedreader-getmethod-method.md
+            - name: Метод GetMethodByVersion
+              href: isymunmanagedreader-getmethodbyversion-method.md
+            - name: Метод GetMethodFromDocumentPosition
+              href: isymunmanagedreader-getmethodfromdocumentposition-method.md
+            - name: Метод GetMethodsFromDocumentPosition
+              href: isymunmanagedreader-getmethodsfromdocumentposition-method.md
+            - name: Метод GetMethodVersion
+              href: isymunmanagedreader-getmethodversion-method.md
+            - name: Метод GetNamespaces
+              href: isymunmanagedreader-getnamespaces-method.md
+            - name: Метод GetSymAttribute
+              href: isymunmanagedreader-getsymattribute-method.md
+            - name: Метод GetSymbolStoreFileName
+              href: isymunmanagedreader-getsymbolstorefilename-method.md
+            - name: Метод GetUserEntryPoint
+              href: isymunmanagedreader-getuserentrypoint-method.md
+            - name: Метод GetVariables
+              href: isymunmanagedreader-getvariables-method.md
+            - name: Метод Initialize
+              href: isymunmanagedreader-initialize-method.md
+            - name: Метод ReplaceSymbolStore
+              href: isymunmanagedreader-replacesymbolstore-method.md
+            - name: Метод UpdateSymbolStore
+              href: isymunmanagedreader-updatesymbolstore-method.md
+        - name: Интерфейс ISymUnmanagedReader2
+          href: isymunmanagedreader2-interface.md
+          items:
+            - name: Метод GetMethodByVersionPreRemap
+              href: isymunmanagedreader2-getmethodbyversionpreremap-method.md
+            - name: Метод GetMethodsInDocument
+              href: isymunmanagedreader2-getmethodsindocument-method.md
+            - name: Метод GetSymAttributePreRemap
+              href: isymunmanagedreader2-getsymattributepreremap-method.md
+        - name: Интерфейс ISymUnmanagedReaderSymbolSearchInfo
+          href: isymunmanagedreadersymbolsearchinfo-interface.md
+          items:
+            - name: Метод GetSymbolSearchInfoCount
+              href: isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md
+            - name: Метод GetSymbolSearchInfo
+              href: isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md
+        - name: Интерфейс ISymUnmanagedScope
+          href: isymunmanagedscope-interface.md
+          items:
+            - name: Метод GetChildren
+              href: isymunmanagedscope-getchildren-method.md
+            - name: Метод GetEndOffset
+              href: isymunmanagedscope-getendoffset-method.md
+            - name: Метод GetLocalCount
+              href: isymunmanagedscope-getlocalcount-method.md
+            - name: Метод GetLocals
+              href: isymunmanagedscope-getlocals-method.md
+            - name: Метод GetMethod
+              href: isymunmanagedscope-getmethod-method.md
+            - name: Метод GetNamespaces
+              href: isymunmanagedscope-getnamespaces-method.md
+            - name: Метод GetParent
+              href: isymunmanagedscope-getparent-method.md
+            - name: Метод GetStartOffset
+              href: isymunmanagedscope-getstartoffset-method.md
+        - name: Интерфейс ISymUnmanagedScope2
+          href: isymunmanagedscope2-interface.md
+          items:
+            - name: Метод GetConstantCount
+              href: isymunmanagedscope2-getconstantcount-method.md
+            - name: Метод GetConstants
+              href: isymunmanagedscope2-getconstants-method.md
+        - name: Интерфейс ISymUnmanagedSourceServerModule
+          href: isymunmanagedsourceservermodule-interface.md
+          items:
+            - name: Метод GetSourceServerData
+              href: isymunmanagedsourceservermodule-getsourceserverdata-method.md
+        - name: Интерфейс ISymUnmanagedSymbolSearchInfo
+          href: isymunmanagedsymbolsearchinfo-interface.md
+          items:
+            - name: Метод GetHRESULT
+              href: isymunmanagedsymbolsearchinfo-gethresult-method.md
+            - name: Метод GetSearchPath
+              href: isymunmanagedsymbolsearchinfo-getsearchpath-method.md
+            - name: Метод GetSearchPathLength
+              href: isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md
+        - name: Интерфейс ISymUnmanagedVariable
+          href: isymunmanagedvariable-interface.md
+          items:
+            - name: Метод GetAddressField1
+              href: isymunmanagedvariable-getaddressfield1-method.md
+            - name: Метод GetAddressField2
+              href: isymunmanagedvariable-getaddressfield2-method.md
+            - name: Метод GetAddressField3
+              href: isymunmanagedvariable-getaddressfield3-method.md
+            - name: Метод GetAddressKind
+              href: isymunmanagedvariable-getaddresskind-method.md
+            - name: Метод GetAttributes
+              href: isymunmanagedvariable-getattributes-method.md
+            - name: Метод GetEndOffset
+              href: isymunmanagedvariable-getendoffset-method.md
+            - name: Метод GetName
+              href: isymunmanagedvariable-getname-method.md
+            - name: Метод GetSignature
+              href: isymunmanagedvariable-getsignature-method.md
+            - name: Метод GetStartOffset
+              href: isymunmanagedvariable-getstartoffset-method.md
+        - name: Интерфейс ISymUnmanagedWriter
+          href: isymunmanagedwriter-interface.md
+          items:
+            - name: Метод Abort
+              href: isymunmanagedwriter-abort-method.md
+            - name: Метод Close
+              href: isymunmanagedwriter-close-method.md
+            - name: Метод CloseMethod
+              href: isymunmanagedwriter-closemethod-method.md
+            - name: Метод CloseNamespace
+              href: isymunmanagedwriter-closenamespace-method.md
+            - name: Метод CloseScope
+              href: isymunmanagedwriter-closescope-method.md
+            - name: Метод DefineConstant
+              href: isymunmanagedwriter-defineconstant-method.md
+            - name: Метод DefineDocument
+              href: isymunmanagedwriter-definedocument-method.md
+            - name: Метод DefineField
+              href: isymunmanagedwriter-definefield-method.md
+            - name: Метод DefineGlobalVariable
+              href: isymunmanagedwriter-defineglobalvariable-method.md
+            - name: Метод DefineLocalVariable
+              href: isymunmanagedwriter-definelocalvariable-method.md
+            - name: Метод DefineParameter
+              href: isymunmanagedwriter-defineparameter-method.md
+            - name: Метод DefineSequencePoints
+              href: isymunmanagedwriter-definesequencepoints-method.md
+            - name: Метод GetDebugInfo
+              href: isymunmanagedwriter-getdebuginfo-method.md
+            - name: Метод Initialize
+              href: isymunmanagedwriter-initialize-method.md
+            - name: Метод Initialize2
+              href: isymunmanagedwriter-initialize2-method.md
+            - name: Метод OpenMethod
+              href: isymunmanagedwriter-openmethod-method.md
+            - name: Метод OpenNamespace
+              href: isymunmanagedwriter-opennamespace-method.md
+            - name: Метод OpenScope
+              href: isymunmanagedwriter-openscope-method.md
+            - name: Метод RemapToken
+              href: isymunmanagedwriter-remaptoken-method.md
+            - name: Метод SetMethodSourceRange
+              href: isymunmanagedwriter-setmethodsourcerange-method.md
+            - name: Метод SetScopeRange
+              href: isymunmanagedwriter-setscoperange-method.md
+            - name: Метод SetSymAttribute
+              href: isymunmanagedwriter-setsymattribute-method.md
+            - name: Метод SetUserEntryPoint
+              href: isymunmanagedwriter-setuserentrypoint-method.md
+            - name: Метод UsingNamespace
+              href: isymunmanagedwriter-usingnamespace-method.md
+        - name: Интерфейс ISymUnmanagedWriter2
+          href: isymunmanagedwriter2-interface.md
+          items:
+            - name: Метод DefineConstant2
+              href: isymunmanagedwriter2-defineconstant2-method.md
+            - name: Метод DefineGlobalVariable2
+              href: isymunmanagedwriter2-defineglobalvariable2-method.md
+            - name: Метод DefineLocalVariable2
+              href: isymunmanagedwriter2-definelocalvariable2-method.md
+        - name: Интерфейс ISymUnmanagedWriter3
+          href: isymunmanagedwriter3-interface.md
+          items:
+            - name: Метод Commit
+              href: isymunmanagedwriter3-commit-method.md
+            - name: Метод OpenMethod2
+              href: isymunmanagedwriter3-openmethod2-method.md
+        - name: Интерфейс ISymUnmanagedWriter4
+          href: isymunmanagedwriter4-interface.md
+          items:
+            - name: Метод GetDebugInfoWithPadding
+              href: isymunmanagedwriter4-getdebuginfowithpadding-method.md
+        - name: Интерфейс ISymUnmanagedWriter5
+          href: isymunmanagedwriter5-interface.md
+          items:
+            - name: Метод CloseMapTokensToSourceSpans
+              href: isymunmanagedwriter5-closemaptokenstosourcespans-method.md
+            - name: Метод MapTokenToSourceSpan
+              href: isymunmanagedwriter5-maptokentosourcespan-method.md
+            - name: Метод OpenMapTokensToSourceSpans
+              href: isymunmanagedwriter5-openmaptokenstosourcespans-method.md
+    - name: Перечисления хранилища символов диагностики
+      href: diagnostics-symbol-store-enumerations.md
       items:
-      - name: Метод AutoAttach
-        href: idebugautoattach-autoattach-method.md
-    - name: Интерфейс INotifyConnection2
-      href: inotifyconnection2-interface.md
+        - name: Перечисление CorSymAddrKind
+          href: corsymaddrkind-enumeration.md
+        - name: Перечисление CorSymSearchPolicyAttributes
+          href: corsymsearchpolicyattributes-enumeration.md
+        - name: Перечисление CorSymVarFlag
+          href: corsymvarflag-enumeration.md
+        - name: Перечисление NOTIFY_FILTER
+          href: notify-filter-enumeration.md
+    - name: Структуры хранения символов диагностики
+      href: diagnostics-symbol-store-structures.md
       items:
-      - name: Метод RegisterNotifySource
-        href: inotifyconnection2-registernotifysource-method.md
-      - name: Метод UnregisterNotifySource
-        href: inotifyconnection2-unregisternotifysource-method.md
-    - name: Интерфейс INotifySink2
-      href: inotifysink2-interface.md
-      items:
-      - name: Метод OnSyncCallEnter
-        href: inotifysink2-onsynccallenter-method.md
-      - name: Метод OnSyncCallExit
-        href: inotifysink2-onsynccallexit-method.md
-      - name: Метод OnSyncCallOut
-        href: inotifysink2-onsynccallout-method.md
-      - name: Метод OnSyncCallReturn
-        href: inotifysink2-onsynccallreturn-method.md
-    - name: Интерфейс INotifySource2
-      href: inotifysource2-interface.md
-      items:
-      - name: Метод SetNotifyFilter
-        href: inotifysource2-setnotifyfilter-method.md
-    - name: Интерфейс ISymENCUnmanagedMethod
-      href: isymencunmanagedmethod-interface.md
-      items:
-      - name: Метод GetDocumentsForMethod
-        href: isymencunmanagedmethod-getdocumentsformethod-method.md
-      - name: Метод GetDocumentsForMethodCount
-        href: isymencunmanagedmethod-getdocumentsformethodcount-method.md
-      - name: Метод GetFileNameFromOffset
-        href: isymencunmanagedmethod-getfilenamefromoffset-method.md
-      - name: Метод GetLineFromOffset
-        href: isymencunmanagedmethod-getlinefromoffset-method.md
-      - name: Метод GetSourceExtentInDocument
-        href: isymencunmanagedmethod-getsourceextentindocument-method.md
-    - name: Интерфейс ISymUnmanagedAsyncMethod
-      href: isymunmanagedasyncmethod-interface.md
-      items:
-      - name: Метод GetAsyncStepInfo
-        href: isymunmanagedasyncmethod-getasyncstepinfo-method.md
-      - name: Метод GetAsyncStepInfoCount
-        href: isymunmanagedasyncmethod-getasyncstepinfocount-method.md
-      - name: Метод GetCatchHandlerILOffset
-        href: isymunmanagedasyncmethod-getcatchhandleriloffset-method.md
-      - name: Метод GetKickoffMethod
-        href: isymunmanagedasyncmethod-getkickoffmethod-method.md
-      - name: Метод HasCatchHandlerILOffset
-        href: isymunmanagedasyncmethod-hascatchhandleriloffset-method.md
-      - name: Метод IsAsyncMethod
-        href: isymunmanagedasyncmethod-isasyncmethod-method.md
-    - name: Интерфейс ISymUnmanagedAsyncMethodPropertiesWriter
-      href: isymunmanagedasyncmethodpropertieswriter-interface.md
-      items:
-      - name: Метод DefineAsyncStepInfo
-        href: isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md
-      - name: Метод DefineCatchHandlerILOffset
-        href: isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md
-      - name: Метод DefineKickoffMethod
-        href: isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md
-    - name: Интерфейс ISymUnmanagedBinder
-      href: isymunmanagedbinder-interface.md
-      items:
-      - name: Метод GetReaderForFile
-        href: isymunmanagedbinder-getreaderforfile-method.md
-      - name: Метод GetReaderFromStream
-        href: isymunmanagedbinder-getreaderfromstream-method.md
-    - name: Интерфейс ISymUnmanagedBinder2
-      href: isymunmanagedbinder2-interface.md
-      items:
-      - name: Метод GetReaderForFile2
-        href: isymunmanagedbinder2-getreaderforfile2-method.md
-    - name: Интерфейс ISymUnmanagedBinder3
-      href: isymunmanagedbinder3-interface.md
-      items:
-      - name: Метод GetReaderFromCallback
-        href: isymunmanagedbinder3-getreaderfromcallback-method.md
-    - name: Интерфейс ISymUnmanagedConstant
-      href: isymunmanagedconstant-interface.md
-      items:
-      - name: Метод GetName
-        href: isymunmanagedconstant-getname-method.md
-      - name: Метод GetSignature
-        href: isymunmanagedconstant-getsignature-method.md
-      - name: Метод GetValue
-        href: isymunmanagedconstant-getvalue-method.md
-    - name: Интерфейс ISymUnmanagedDispose
-      href: isymunmanageddispose-interface.md
-      items:
-      - name: Метод Destroy
-        href: isymunmanageddispose-destroy-method.md
-    - name: Интерфейс ISymUnmanagedDocument
-      href: isymunmanageddocument-interface.md
-      items:
-      - name: Метод FindClosestLine
-        href: isymunmanageddocument-findclosestline-method.md
-      - name: Метод GetCheckSum
-        href: isymunmanageddocument-getchecksum-method.md
-      - name: Метод GetCheckSumAlgorithmId
-        href: isymunmanageddocument-getchecksumalgorithmid-method.md
-      - name: Метод GetDocumentType
-        href: isymunmanageddocument-getdocumenttype-method.md
-      - name: Метод GetLanguage
-        href: isymunmanageddocument-getlanguage-method.md
-      - name: Метод GetLanguageVendor
-        href: isymunmanageddocument-getlanguagevendor-method.md
-      - name: Метод GetSourceLength
-        href: isymunmanageddocument-getsourcelength-method.md
-      - name: Метод GetSourceRange
-        href: isymunmanageddocument-getsourcerange-method.md
-      - name: Метод GetURL
-        href: isymunmanageddocument-geturl-method.md
-      - name: Метод HasEmbeddedSource
-        href: isymunmanageddocument-hasembeddedsource-method.md
-    - name: Интерфейс ISymUnmanagedDocumentWriter
-      href: isymunmanageddocumentwriter-interface.md
-      items:
-      - name: Метод SetCheckSum
-        href: isymunmanageddocumentwriter-setchecksum-method.md
-      - name: Метод SetSource
-        href: isymunmanageddocumentwriter-setsource-method.md
-    - name: Интерфейс ISymUnmanagedENCUpdate
-      href: isymunmanagedencupdate-interface.md
-      items:
-      - name: Метод GetLocalVariableCount
-        href: isymunmanagedencupdate-getlocalvariablecount-method.md
-      - name: Метод GetLocalVariables
-        href: isymunmanagedencupdate-getlocalvariables-method.md
-      - name: Метод InitializeForEnc
-        href: isymunmanagedencupdate-initializeforenc-method.md
-      - name: Метод UpdateMethodLines
-        href: isymunmanagedencupdate-updatemethodlines-method.md
-      - name: Метод UpdateSymbolStore2
-        href: isymunmanagedencupdate-updatesymbolstore2-method.md
-    - name: Интерфейс ISymUnmanagedMethod
-      href: isymunmanagedmethod-interface.md
-      items:
-      - name: Метод GetNamespace
-        href: isymunmanagedmethod-getnamespace-method.md
-      - name: Метод GetOffset
-        href: isymunmanagedmethod-getoffset-method.md
-      - name: Метод GetParameters
-        href: isymunmanagedmethod-getparameters-method.md
-      - name: Метод GetRanges
-        href: isymunmanagedmethod-getranges-method.md
-      - name: Метод GetRootScope
-        href: isymunmanagedmethod-getrootscope-method.md
-      - name: Метод GetScopeFromOffset
-        href: isymunmanagedmethod-getscopefromoffset-method.md
-      - name: Метод GetSequencePointCount
-        href: isymunmanagedmethod-getsequencepointcount-method.md
-      - name: Метод GetSequencePoints
-        href: isymunmanagedmethod-getsequencepoints-method.md
-      - name: Метод GetSourceStartEnd
-        href: isymunmanagedmethod-getsourcestartend-method.md
-      - name: Метод GetToken
-        href: isymunmanagedmethod-gettoken-method.md
-    - name: Интерфейс ISymUnmanagedNamespace
-      href: isymunmanagednamespace-interface.md
-      items:
-      - name: Метод GetName
-        href: isymunmanagednamespace-getname-method.md
-      - name: Метод GetNamespaces
-        href: isymunmanagednamespace-getnamespaces-method.md
-      - name: Метод GetVariables
-        href: isymunmanagednamespace-getvariables-method.md
-    - name: Интерфейс ISymUnmanagedReader
-      href: isymunmanagedreader-interface.md
-      items:
-      - name: Метод GetDocument
-        href: isymunmanagedreader-getdocument-method.md
-      - name: Метод GetDocuments
-        href: isymunmanagedreader-getdocuments-method.md
-      - name: Метод GetDocumentVersion
-        href: isymunmanagedreader-getdocumentversion-method.md
-      - name: Метод GetGlobalVariables
-        href: isymunmanagedreader-getglobalvariables-method.md
-      - name: Метод GetMethod
-        href: isymunmanagedreader-getmethod-method.md
-      - name: Метод GetMethodByVersion
-        href: isymunmanagedreader-getmethodbyversion-method.md
-      - name: Метод GetMethodFromDocumentPosition
-        href: isymunmanagedreader-getmethodfromdocumentposition-method.md
-      - name: Метод GetMethodsFromDocumentPosition
-        href: isymunmanagedreader-getmethodsfromdocumentposition-method.md
-      - name: Метод GetMethodVersion
-        href: isymunmanagedreader-getmethodversion-method.md
-      - name: Метод GetNamespaces
-        href: isymunmanagedreader-getnamespaces-method.md
-      - name: Метод GetSymAttribute
-        href: isymunmanagedreader-getsymattribute-method.md
-      - name: Метод GetSymbolStoreFileName
-        href: isymunmanagedreader-getsymbolstorefilename-method.md
-      - name: Метод GetUserEntryPoint
-        href: isymunmanagedreader-getuserentrypoint-method.md
-      - name: Метод GetVariables
-        href: isymunmanagedreader-getvariables-method.md
-      - name: Метод Initialize
-        href: isymunmanagedreader-initialize-method.md
-      - name: Метод ReplaceSymbolStore
-        href: isymunmanagedreader-replacesymbolstore-method.md
-      - name: Метод UpdateSymbolStore
-        href: isymunmanagedreader-updatesymbolstore-method.md
-    - name: Интерфейс ISymUnmanagedReader2
-      href: isymunmanagedreader2-interface.md
-      items:
-      - name: Метод GetMethodByVersionPreRemap
-        href: isymunmanagedreader2-getmethodbyversionpreremap-method.md
-      - name: Метод GetMethodsInDocument
-        href: isymunmanagedreader2-getmethodsindocument-method.md
-      - name: Метод GetSymAttributePreRemap
-        href: isymunmanagedreader2-getsymattributepreremap-method.md
-    - name: Интерфейс ISymUnmanagedReaderSymbolSearchInfo
-      href: isymunmanagedreadersymbolsearchinfo-interface.md
-      items:
-      - name: Метод GetSymbolSearchInfoCount
-        href: isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md
-      - name: Метод GetSymbolSearchInfo
-        href: isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md
-    - name: Интерфейс ISymUnmanagedScope
-      href: isymunmanagedscope-interface.md
-      items:
-      - name: Метод GetChildren
-        href: isymunmanagedscope-getchildren-method.md
-      - name: Метод GetEndOffset
-        href: isymunmanagedscope-getendoffset-method.md
-      - name: Метод GetLocalCount
-        href: isymunmanagedscope-getlocalcount-method.md
-      - name: Метод GetLocals
-        href: isymunmanagedscope-getlocals-method.md
-      - name: Метод GetMethod
-        href: isymunmanagedscope-getmethod-method.md
-      - name: Метод GetNamespaces
-        href: isymunmanagedscope-getnamespaces-method.md
-      - name: Метод GetParent
-        href: isymunmanagedscope-getparent-method.md
-      - name: Метод GetStartOffset
-        href: isymunmanagedscope-getstartoffset-method.md
-    - name: Интерфейс ISymUnmanagedScope2
-      href: isymunmanagedscope2-interface.md
-      items:
-      - name: Метод GetConstantCount
-        href: isymunmanagedscope2-getconstantcount-method.md
-      - name: Метод GetConstants
-        href: isymunmanagedscope2-getconstants-method.md
-    - name: Интерфейс ISymUnmanagedSourceServerModule
-      href: isymunmanagedsourceservermodule-interface.md
-      items:
-      - name: Метод GetSourceServerData
-        href: isymunmanagedsourceservermodule-getsourceserverdata-method.md
-    - name: Интерфейс ISymUnmanagedSymbolSearchInfo
-      href: isymunmanagedsymbolsearchinfo-interface.md
-      items:
-      - name: Метод GetHRESULT
-        href: isymunmanagedsymbolsearchinfo-gethresult-method.md
-      - name: Метод GetSearchPath
-        href: isymunmanagedsymbolsearchinfo-getsearchpath-method.md
-      - name: Метод GetSearchPathLength
-        href: isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md
-    - name: Интерфейс ISymUnmanagedVariable
-      href: isymunmanagedvariable-interface.md
-      items:
-      - name: Метод GetAddressField1
-        href: isymunmanagedvariable-getaddressfield1-method.md
-      - name: Метод GetAddressField2
-        href: isymunmanagedvariable-getaddressfield2-method.md
-      - name: Метод GetAddressField3
-        href: isymunmanagedvariable-getaddressfield3-method.md
-      - name: Метод GetAddressKind
-        href: isymunmanagedvariable-getaddresskind-method.md
-      - name: Метод GetAttributes
-        href: isymunmanagedvariable-getattributes-method.md
-      - name: Метод GetEndOffset
-        href: isymunmanagedvariable-getendoffset-method.md
-      - name: Метод GetName
-        href: isymunmanagedvariable-getname-method.md
-      - name: Метод GetSignature
-        href: isymunmanagedvariable-getsignature-method.md
-      - name: Метод GetStartOffset
-        href: isymunmanagedvariable-getstartoffset-method.md
-    - name: Интерфейс ISymUnmanagedWriter
-      href: isymunmanagedwriter-interface.md
-      items:
-      - name: Метод Abort
-        href: isymunmanagedwriter-abort-method.md
-      - name: Метод Close
-        href: isymunmanagedwriter-close-method.md
-      - name: Метод CloseMethod
-        href: isymunmanagedwriter-closemethod-method.md
-      - name: Метод CloseNamespace
-        href: isymunmanagedwriter-closenamespace-method.md
-      - name: Метод CloseScope
-        href: isymunmanagedwriter-closescope-method.md
-      - name: Метод DefineConstant
-        href: isymunmanagedwriter-defineconstant-method.md
-      - name: Метод DefineDocument
-        href: isymunmanagedwriter-definedocument-method.md
-      - name: Метод DefineField
-        href: isymunmanagedwriter-definefield-method.md
-      - name: Метод DefineGlobalVariable
-        href: isymunmanagedwriter-defineglobalvariable-method.md
-      - name: Метод DefineLocalVariable
-        href: isymunmanagedwriter-definelocalvariable-method.md
-      - name: Метод DefineParameter
-        href: isymunmanagedwriter-defineparameter-method.md
-      - name: Метод DefineSequencePoints
-        href: isymunmanagedwriter-definesequencepoints-method.md
-      - name: Метод GetDebugInfo
-        href: isymunmanagedwriter-getdebuginfo-method.md
-      - name: Метод Initialize
-        href: isymunmanagedwriter-initialize-method.md
-      - name: Метод Initialize2
-        href: isymunmanagedwriter-initialize2-method.md
-      - name: Метод OpenMethod
-        href: isymunmanagedwriter-openmethod-method.md
-      - name: Метод OpenNamespace
-        href: isymunmanagedwriter-opennamespace-method.md
-      - name: Метод OpenScope
-        href: isymunmanagedwriter-openscope-method.md
-      - name: Метод RemapToken
-        href: isymunmanagedwriter-remaptoken-method.md
-      - name: Метод SetMethodSourceRange
-        href: isymunmanagedwriter-setmethodsourcerange-method.md
-      - name: Метод SetScopeRange
-        href: isymunmanagedwriter-setscoperange-method.md
-      - name: Метод SetSymAttribute
-        href: isymunmanagedwriter-setsymattribute-method.md
-      - name: Метод SetUserEntryPoint
-        href: isymunmanagedwriter-setuserentrypoint-method.md
-      - name: Метод UsingNamespace
-        href: isymunmanagedwriter-usingnamespace-method.md
-    - name: Интерфейс ISymUnmanagedWriter2
-      href: isymunmanagedwriter2-interface.md
-      items:
-      - name: Метод DefineConstant2
-        href: isymunmanagedwriter2-defineconstant2-method.md
-      - name: Метод DefineGlobalVariable2
-        href: isymunmanagedwriter2-defineglobalvariable2-method.md
-      - name: Метод DefineLocalVariable2
-        href: isymunmanagedwriter2-definelocalvariable2-method.md
-    - name: Интерфейс ISymUnmanagedWriter3
-      href: isymunmanagedwriter3-interface.md
-      items:
-      - name: Метод Commit
-        href: isymunmanagedwriter3-commit-method.md
-      - name: Метод OpenMethod2
-        href: isymunmanagedwriter3-openmethod2-method.md
-    - name: Интерфейс ISymUnmanagedWriter4
-      href: isymunmanagedwriter4-interface.md
-      items:
-      - name: Метод GetDebugInfoWithPadding
-        href: isymunmanagedwriter4-getdebuginfowithpadding-method.md
-    - name: Интерфейс ISymUnmanagedWriter5
-      href: isymunmanagedwriter5-interface.md
-      items:
-      - name: Метод CloseMapTokensToSourceSpans
-        href: isymunmanagedwriter5-closemaptokenstosourcespans-method.md
-      - name: Метод MapTokenToSourceSpan
-        href: isymunmanagedwriter5-maptokentosourcespan-method.md
-      - name: Метод OpenMapTokensToSourceSpans
-        href: isymunmanagedwriter5-openmaptokenstosourcespans-method.md
-  - name: Перечисления хранилища символов диагностики
-    href: diagnostics-symbol-store-enumerations.md
-    items:
-    - name: Перечисление CorSymAddrKind
-      href: corsymaddrkind-enumeration.md
-    - name: Перечисление CorSymSearchPolicyAttributes
-      href: corsymsearchpolicyattributes-enumeration.md
-    - name: Перечисление CorSymVarFlag
-      href: corsymvarflag-enumeration.md
-    - name: Перечисление NOTIFY_FILTER
-      href: notify-filter-enumeration.md
-  - name: Структуры хранения символов диагностики
-    href: diagnostics-symbol-store-structures.md
-    items:
-    - name: Структура CALL_ID
-      href: call-id-structure.md
-    - name: Структура SYMLINEDELTA
-      href: symlinedelta-structure.md
-    - name: Структура USER_THREAD
-      href: user-thread-structure.md
-ms.openlocfilehash: e9bec23db08e17d11aa5cabadb8967bcc8b32b77
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470040"
+        - name: Структура CALL_ID
+          href: call-id-structure.md
+        - name: Структура SYMLINEDELTA
+          href: symlinedelta-structure.md
+        - name: Структура USER_THREAD
+          href: user-thread-structure.md

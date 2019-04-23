@@ -1,16 +1,9 @@
-items:
 - name: Индексаторы
   href: index.md
   items:
-  - name: Использование индексаторов
-    href: using-indexers.md
-  - name: Индексаторы в интерфейсах
-    href: indexers-in-interfaces.md
-  - name: Сравнение свойств и индексаторов
-    href: comparison-between-properties-and-indexers.md
-ms.openlocfilehash: 8f620f2864f6d4569bf4d999f437519551809067
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470181"
+    - name: Использование индексаторов
+      href: using-indexers.md
+    - name: Индексаторы в интерфейсах
+      href: indexers-in-interfaces.md
+    - name: Сравнение свойств и индексаторов
+      href: comparison-between-properties-and-indexers.md

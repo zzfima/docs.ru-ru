@@ -1,152 +1,145 @@
-items:
 - name: Fusion
   href: index.md
   items:
-  - name: Fusion-интерфейсы
-    href: fusion-interfaces.md
-    items:
-    - name: Интерфейс IAppIdAuthority
-      href: iappidauthority-interface.md
-    - name: Интерфейс IAssemblyCache
-      href: iassemblycache-interface.md
+    - name: Fusion-интерфейсы
+      href: fusion-interfaces.md
       items:
-      - name: Метод CreateAssemblyCacheItem
-        href: iassemblycache-createassemblycacheitem-method.md
-      - name: Метод CreateAssemblyScavenger
-        href: iassemblycache-createassemblyscavenger-method.md
-      - name: Метод InstallAssembly
-        href: iassemblycache-installassembly-method.md
-      - name: Метод QueryAssemblyInfo
-        href: iassemblycache-queryassemblyinfo-method.md
-      - name: Метод UninstallAssembly
-        href: iassemblycache-uninstallassembly-method.md
-    - name: Интерфейс IAssemblyCacheItem
-      href: iassemblycacheitem-interface.md
+        - name: Интерфейс IAppIdAuthority
+          href: iappidauthority-interface.md
+        - name: Интерфейс IAssemblyCache
+          href: iassemblycache-interface.md
+          items:
+            - name: Метод CreateAssemblyCacheItem
+              href: iassemblycache-createassemblycacheitem-method.md
+            - name: Метод CreateAssemblyScavenger
+              href: iassemblycache-createassemblyscavenger-method.md
+            - name: Метод InstallAssembly
+              href: iassemblycache-installassembly-method.md
+            - name: Метод QueryAssemblyInfo
+              href: iassemblycache-queryassemblyinfo-method.md
+            - name: Метод UninstallAssembly
+              href: iassemblycache-uninstallassembly-method.md
+        - name: Интерфейс IAssemblyCacheItem
+          href: iassemblycacheitem-interface.md
+          items:
+            - name: Метод AbortItem
+              href: iassemblycacheitem-abortitem-method.md
+            - name: Метод Commit
+              href: iassemblycacheitem-commit-method.md
+            - name: Метод CreateStream
+              href: iassemblycacheitem-createstream-method.md
+        - name: Интерфейс IAssemblyEnum
+          href: iassemblyenum-interface.md
+          items:
+            - name: Метод Clone
+              href: iassemblyenum-clone-method.md
+            - name: Метод GetNextAssembly
+              href: iassemblyenum-getnextassembly-method.md
+            - name: Метод Reset
+              href: iassemblyenum-reset-method.md
+        - name: Интерфейс IAssemblyName
+          href: iassemblyname-interface.md
+          items:
+            - name: Метод Clone
+              href: iassemblyname-clone-method.md
+            - name: Метод Finalize
+              href: iassemblyname-finalize-method.md
+            - name: Метод GetDisplayName
+              href: iassemblyname-getdisplayname-method.md
+            - name: Метод GetName
+              href: iassemblyname-getname-method.md
+            - name: Метод GetProperty
+              href: iassemblyname-getproperty-method.md
+            - name: Метод GetVersion
+              href: iassemblyname-getversion-method.md
+            - name: Метод IsEqual
+              href: iassemblyname-isequal-method.md
+            - name: Метод SetProperty
+              href: iassemblyname-setproperty-method.md
+        - name: Интерфейс IDefinitionAppId
+          href: idefinitionappid-interface.md
+        - name: Интерфейс IDefinitionIdentity
+          href: idefinitionidentity-interface.md
+        - name: Интерфейс IEnumDefinitionIdentity
+          href: ienumdefinitionidentity-interface.md
+        - name: Интерфейс IEnumIDENTITY_ATTRIBUTE
+          href: ienumidentity-attribute-interface.md
+        - name: Интерфейс IEnumReferenceIdentity
+          href: ienumreferenceidentity-interface.md
+        - name: Интерфейс IIdentityAuthority
+          href: iidentityauthority-interface.md
+        - name: Интерфейс IInstallReferenceEnum
+          href: iinstallreferenceenum-interface.md
+          items:
+            - name: Метод GetNextInstallReferenceItem
+              href: iinstallreferenceenum-getnextinstallreferenceitem-method.md
+        - name: Интерфейс IInstallReferenceItem
+          href: iinstallreferenceitem-interface.md
+          items:
+            - name: Метод GetReference
+              href: iinstallreferenceitem-getreference-method.md
+        - name: Интерфейс IReferenceAppId
+          href: ireferenceappid-interface.md
+        - name: Интерфейс IReferenceIdentity
+          href: ireferenceidentity-interface.md
+    - name: Глобальные статические функции Fusion
+      href: fusion-global-static-functions.md
       items:
-      - name: Метод AbortItem
-        href: iassemblycacheitem-abortitem-method.md
-      - name: Метод Commit
-        href: iassemblycacheitem-commit-method.md
-      - name: Метод CreateStream
-        href: iassemblycacheitem-createstream-method.md
-    - name: Интерфейс IAssemblyEnum
-      href: iassemblyenum-interface.md
+        - name: Функция ClearDownloadCache
+          href: cleardownloadcache-function.md
+        - name: Функция CompareAssemblyIdentity
+          href: compareassemblyidentity-function.md
+        - name: Функция CreateApplicationContext
+          href: createapplicationcontext-function.md
+        - name: Функция CreateAssemblyCache
+          href: createassemblycache-function.md
+        - name: Функция CreateAssemblyEnum
+          href: createassemblyenum-function.md
+        - name: Функция CreateAssemblyNameObject
+          href: createassemblynameobject-function.md
+        - name: Функция CreateHistoryReader
+          href: createhistoryreader-function.md
+        - name: Функция CreateInstallReferenceEnum
+          href: createinstallreferenceenum-function.md
+        - name: Функция GetAppIdAuthority
+          href: getappidauthority-function.md
+        - name: Функция GetAssemblyIdentityFromFile
+          href: getassemblyidentityfromfile-function.md
+        - name: Функция GetCachePath
+          href: getcachepath-function.md
+        - name: Функция GetHistoryFileDirectory
+          href: gethistoryfiledirectory-function.md
+        - name: Функция GetIdentityAuthority
+          href: getidentityauthority-function.md
+        - name: Функция IsFrameworkAssembly
+          href: isframeworkassembly-function.md
+        - name: Функция NukeDownloadedCache
+          href: nukedownloadedcache-function.md
+        - name: Функция PreBindAssemblyEx
+          href: prebindassemblyex-function.md
+    - name: Перечисления Fusion
+      href: fusion-enumerations.md
       items:
-      - name: Метод Clone
-        href: iassemblyenum-clone-method.md
-      - name: Метод GetNextAssembly
-        href: iassemblyenum-getnextassembly-method.md
-      - name: Метод Reset
-        href: iassemblyenum-reset-method.md
-    - name: Интерфейс IAssemblyName
-      href: iassemblyname-interface.md
+        - name: Перечисление ASM_CACHE_FLAGS
+          href: asm-cache-flags-enumeration.md
+        - name: Перечисление ASM_CMP_FLAGS
+          href: asm-cmp-flags-enumeration.md
+        - name: Перечисление ASM_DISPLAY_FLAGS
+          href: asm-display-flags-enumeration.md
+        - name: Перечисление ASM_NAME
+          href: asm-name-enumeration.md
+        - name: Перечисление AssemblyComparisonResult
+          href: assemblycomparisonresult-enumeration.md
+        - name: Перечисление CREATE_ASM_NAME_OBJ_FLAGS
+          href: create-asm-name-obj-flags-enumeration.md
+    - name: Структуры Fusion
+      href: fusion-structures.md
       items:
-      - name: Метод Clone
-        href: iassemblyname-clone-method.md
-      - name: Метод Finalize
-        href: iassemblyname-finalize-method.md
-      - name: Метод GetDisplayName
-        href: iassemblyname-getdisplayname-method.md
-      - name: Метод GetName
-        href: iassemblyname-getname-method.md
-      - name: Метод GetProperty
-        href: iassemblyname-getproperty-method.md
-      - name: Метод GetVersion
-        href: iassemblyname-getversion-method.md
-      - name: Метод IsEqual
-        href: iassemblyname-isequal-method.md
-      - name: Метод SetProperty
-        href: iassemblyname-setproperty-method.md
-    - name: Интерфейс IDefinitionAppId
-      href: idefinitionappid-interface.md
-    - name: Интерфейс IDefinitionIdentity
-      href: idefinitionidentity-interface.md
-    - name: Интерфейс IEnumDefinitionIdentity
-      href: ienumdefinitionidentity-interface.md
-    - name: Интерфейс IEnumIDENTITY_ATTRIBUTE
-      href: ienumidentity-attribute-interface.md
-    - name: Интерфейс IEnumReferenceIdentity
-      href: ienumreferenceidentity-interface.md
-    - name: Интерфейс IIdentityAuthority
-      href: iidentityauthority-interface.md
-    - name: Интерфейс IInstallReferenceEnum
-      href: iinstallreferenceenum-interface.md
-      items:
-      - name: Метод GetNextInstallReferenceItem
-        href: iinstallreferenceenum-getnextinstallreferenceitem-method.md
-    - name: Интерфейс IInstallReferenceItem
-      href: iinstallreferenceitem-interface.md
-      items:
-      - name: Метод GetReference
-        href: iinstallreferenceitem-getreference-method.md
-    - name: Интерфейс IReferenceAppId
-      href: ireferenceappid-interface.md
-    - name: Интерфейс IReferenceIdentity
-      href: ireferenceidentity-interface.md
-  - name: Глобальные статические функции Fusion
-    href: fusion-global-static-functions.md
-    items:
-    - name: Функция ClearDownloadCache
-      href: cleardownloadcache-function.md
-    - name: Функция CompareAssemblyIdentity
-      href: compareassemblyidentity-function.md
-    - name: Функция CreateApplicationContext
-      href: createapplicationcontext-function.md
-    - name: Функция CreateAssemblyCache
-      href: createassemblycache-function.md
-    - name: Функция CreateAssemblyEnum
-      href: createassemblyenum-function.md
-    - name: Функция CreateAssemblyNameObject
-      href: createassemblynameobject-function.md
-    - name: Функция CreateHistoryReader
-      href: createhistoryreader-function.md
-    - name: Функция CreateInstallReferenceEnum
-      href: createinstallreferenceenum-function.md
-    - name: Функция GetAppIdAuthority
-      href: getappidauthority-function.md
-    - name: Функция GetAssemblyIdentityFromFile
-      href: getassemblyidentityfromfile-function.md
-    - name: Функция GetCachePath
-      href: getcachepath-function.md
-    - name: Функция GetHistoryFileDirectory
-      href: gethistoryfiledirectory-function.md
-    - name: Функция GetIdentityAuthority
-      href: getidentityauthority-function.md
-    - name: Функция IsFrameworkAssembly
-      href: isframeworkassembly-function.md
-    - name: Функция NukeDownloadedCache
-      href: nukedownloadedcache-function.md
-    - name: Функция PreBindAssemblyEx
-      href: prebindassemblyex-function.md
-  - name: Перечисления Fusion
-    href: fusion-enumerations.md
-    items:
-    - name: Перечисление ASM_CACHE_FLAGS
-      href: asm-cache-flags-enumeration.md
-    - name: Перечисление ASM_CMP_FLAGS
-      href: asm-cmp-flags-enumeration.md
-    - name: Перечисление ASM_DISPLAY_FLAGS
-      href: asm-display-flags-enumeration.md
-    - name: Перечисление ASM_NAME
-      href: asm-name-enumeration.md
-    - name: Перечисление AssemblyComparisonResult
-      href: assemblycomparisonresult-enumeration.md
-    - name: Перечисление CREATE_ASM_NAME_OBJ_FLAGS
-      href: create-asm-name-obj-flags-enumeration.md
-  - name: Структуры Fusion
-    href: fusion-structures.md
-    items:
-    - name: Структура ASSEMBLY_INFO
-      href: assembly-info-structure.md
-    - name: Структура FUSION_INSTALL_REFERENCE
-      href: fusion-install-reference-structure.md
-    - name: Структура IDENTITY_ATTRIBUTE
-      href: identity-attribute-structure.md
-    - name: Структура IDENTITY_ATTRIBUTE_BLOB
-      href: identity-attribute-blob-structure.md
-ms.openlocfilehash: 1f0a82977e7a39315ab8c4d328be76dd5804ae71
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470016"
+        - name: Структура ASSEMBLY_INFO
+          href: assembly-info-structure.md
+        - name: Структура FUSION_INSTALL_REFERENCE
+          href: fusion-install-reference-structure.md
+        - name: Структура IDENTITY_ATTRIBUTE
+          href: identity-attribute-structure.md
+        - name: Структура IDENTITY_ATTRIBUTE_BLOB
+          href: identity-attribute-blob-structure.md

@@ -1,122 +1,115 @@
-items:
 - name: Взаимодействие с неуправляемым кодом
   href: index.md
   items:
-  - name: Предоставление клиентам .NET Framework доступа к COM-компонентам
-    href: exposing-com-components.md
-    items:
-    - name: Импорт библиотеки типов в виде сборки
-      href: importing-a-type-library-as-an-assembly.md
-    - name: Практическое руководство. Добавление ссылок на библиотеки типов
-      href: how-to-add-references-to-type-libraries.md
-    - name: Практическое руководство. Создание сборок взаимодействия из библиотек типов
-      href: how-to-generate-interop-assemblies-from-type-libraries.md
-    - name: Компиляция проекта, использующего взаимодействие
-      href: compiling-an-interop-project.md
-    - name: Развертывание приложения взаимодействия
-      href: deploying-an-interop-application.md
-    - name: Пример COM-взаимодействия. Клиент .NET и COM-сервер
-      href: com-interop-sample-net-client-and-com-server.md
-  - name: Предоставление COM-клиентам доступа к компонентам .NET Framework
-    href: exposing-dotnet-components-to-com.md
-    items:
-    - name: Уточнение типов .NET для взаимодействия
-      href: qualifying-net-types-for-interoperation.md
-    - name: Применение атрибутов взаимодействия
-      href: applying-interop-attributes.md
-    - name: Упаковка сборки для модели COM
-      href: packaging-an-assembly-for-com.md
-    - name: Регистрация сборок в COM
-      href: registering-assemblies-with-com.md
-    - name: Практическое руководство. Создание ссылки на типы .NET из COM
-      href: how-to-reference-net-types-from-com.md
-    - name: Пример COM-взаимодействия. COM-клиент и сервер .NET
-      href: com-interop-sample-com-client-and-net-server.md
-  - name: Использование неуправляемых функций DLL
-    href: consuming-unmanaged-dll-functions.md
-    items:
-    - name: Идентификация функций в библиотеках DLL
-      href: identifying-functions-in-dlls.md
-    - name: Создание класса, содержащего функции DLL
-      href: creating-a-class-to-hold-dll-functions.md
-    - name: Создание прототипов в управляемом коде
-      href: creating-prototypes-in-managed-code.md
+    - name: Предоставление клиентам .NET Framework доступа к COM-компонентам
+      href: exposing-com-components.md
       items:
-      - name: Задание точки входа
-        href: specifying-an-entry-point.md
-      - name: Определение кодировки
-        href: specifying-a-character-set.md
-      - name: Примеры вызовов неуправляемого кода
-        href: platform-invoke-examples.md
-    - name: Вызов функции DLL
-      href: calling-a-dll-function.md
+        - name: Импорт библиотеки типов в виде сборки
+          href: importing-a-type-library-as-an-assembly.md
+        - name: Как выполнить Добавление ссылок на библиотеки типов
+          href: how-to-add-references-to-type-libraries.md
+        - name: Как выполнить Создание сборок взаимодействия из библиотек типов
+          href: how-to-generate-interop-assemblies-from-type-libraries.md
+        - name: 'Компиляция проекта, использующего взаимодействие'
+          href: compiling-an-interop-project.md
+        - name: Развертывание приложения взаимодействия
+          href: deploying-an-interop-application.md
+        - name: Пример COM-взаимодействия. Клиент .NET и COM-сервер
+          href: com-interop-sample-net-client-and-com-server.md
+    - name: Предоставление COM-клиентам доступа к компонентам .NET Framework
+      href: exposing-dotnet-components-to-com.md
       items:
-      - name: Передача структур
-        href: passing-structures.md
-      - name: Функции обратного вызова
-        href: callback-functions.md
-      - name: Практическое руководство. Реализация функций обратного вызова
-        href: how-to-implement-callback-functions.md
-  - name: Маршалинг взаимодействия
-    href: interop-marshaling.md
-    items:
-    - name: Поведение маршалинга по умолчанию
-      href: default-marshaling-behavior.md
+        - name: Уточнение типов .NET для взаимодействия
+          href: qualifying-net-types-for-interoperation.md
+        - name: Применение атрибутов взаимодействия
+          href: applying-interop-attributes.md
+        - name: Упаковка сборки для модели COM
+          href: packaging-an-assembly-for-com.md
+        - name: Регистрация сборок в COM
+          href: registering-assemblies-with-com.md
+        - name: Как выполнить Создание ссылки на типы .NET из COM
+          href: how-to-reference-net-types-from-com.md
+        - name: Пример COM-взаимодействия. COM-клиент и сервер .NET
+          href: com-interop-sample-com-client-and-net-server.md
+    - name: Использование неуправляемых функций DLL
+      href: consuming-unmanaged-dll-functions.md
       items:
-      - name: Преобразуемые и непреобразуемые типы
-        href: blittable-and-non-blittable-types.md
-      - name: Копирование и закрепление
-        href: copying-and-pinning.md
-      - name: Маршалинг по умолчанию для массивов
-        href: default-marshaling-for-arrays.md
-      - name: Маршалинг по умолчанию для объектов
-        href: default-marshaling-for-objects.md
-      - name: Маршалинг по умолчанию для строк
-        href: default-marshaling-for-strings.md
-    - name: Маршалинг данных при вызове неуправляемого кода
-      href: marshaling-data-with-platform-invoke.md
+        - name: Идентификация функций в библиотеках DLL
+          href: identifying-functions-in-dlls.md
+        - name: 'Создание класса, содержащего функции DLL'
+          href: creating-a-class-to-hold-dll-functions.md
+        - name: Создание прототипов в управляемом коде
+          href: creating-prototypes-in-managed-code.md
+          items:
+            - name: Задание точки входа
+              href: specifying-an-entry-point.md
+            - name: Определение кодировки
+              href: specifying-a-character-set.md
+            - name: Примеры вызовов неуправляемого кода
+              href: platform-invoke-examples.md
+        - name: Вызов функции DLL
+          href: calling-a-dll-function.md
+          items:
+            - name: Передача структур
+              href: passing-structures.md
+            - name: Функции обратного вызова
+              href: callback-functions.md
+            - name: Как выполнить Реализация функций обратного вызова
+              href: how-to-implement-callback-functions.md
+    - name: Маршалинг взаимодействия
+      href: interop-marshaling.md
       items:
-      - name: Маршалинг строк
-        href: marshaling-strings.md
-      - name: Пример MsgBox
-        href: msgbox-sample.md
-      - name: Маршалинг классов, структур и объединений
-        href: marshaling-classes-structures-and-unions.md
-      - name: Маршалинг различных типов массивов
-        href: marshaling-different-types-of-arrays.md
-      - name: Маршалинг делегата как метода обратного вызова
-        href: marshaling-a-delegate-as-a-callback-method.md
-    - name: Маршалинг с помощью COM- взаимодействия
-      href: marshaling-data-with-com-interop.md
+        - name: Поведение маршалинга по умолчанию
+          href: default-marshaling-behavior.md
+          items:
+            - name: Преобразуемые и непреобразуемые типы
+              href: blittable-and-non-blittable-types.md
+            - name: Копирование и закрепление
+              href: copying-and-pinning.md
+            - name: Маршалинг по умолчанию для массивов
+              href: default-marshaling-for-arrays.md
+            - name: Маршалинг по умолчанию для объектов
+              href: default-marshaling-for-objects.md
+            - name: Маршалинг по умолчанию для строк
+              href: default-marshaling-for-strings.md
+        - name: Маршалинг данных при вызове неуправляемого кода
+          href: marshaling-data-with-platform-invoke.md
+          items:
+            - name: Маршалинг строк
+              href: marshaling-strings.md
+            - name: Пример MsgBox
+              href: msgbox-sample.md
+            - name: 'Маршалинг классов, структур и объединений'
+              href: marshaling-classes-structures-and-unions.md
+            - name: Маршалинг различных типов массивов
+              href: marshaling-different-types-of-arrays.md
+            - name: Маршалинг делегата как метода обратного вызова
+              href: marshaling-a-delegate-as-a-callback-method.md
+        - name: Маршалинг с помощью COM- взаимодействия
+          href: marshaling-data-with-com-interop.md
+          items:
+            - name: Как выполнить Создание оболочек вручную
+              href: how-to-create-wrappers-manually.md
+            - name: Как выполнить Миграция DCOM с управляемым кодом в WCF
+              href: how-to-migrate-managed-code-dcom-to-wcf.md
+    - name: Как выполнить Сопоставление значений HRESULT и исключений
+      href: how-to-map-hresults-and-exceptions.md
+    - name: Оболочки COM
+      href: com-wrappers.md
       items:
-      - name: Практическое руководство. Создание оболочек вручную
-        href: how-to-create-wrappers-manually.md
-      - name: Практическое руководство. Миграция DCOM с управляемым кодом в WCF
-        href: how-to-migrate-managed-code-dcom-to-wcf.md
-  - name: Практическое руководство. Сопоставление значений HRESULT и исключений
-    href: how-to-map-hresults-and-exceptions.md
-  - name: Оболочки COM
-    href: com-wrappers.md
-    items:
-    - name: Вызываемая оболочка времени выполнения
-      href: runtime-callable-wrapper.md
-    - name: Вызываемая оболочка COM
-      href: com-callable-wrapper.md
-    - name: Практическое руководство. Создание оболочек COM
-      href: how-to-create-com-wrappers.md
-  - name: Эквивалентность типов и внедренные типы взаимодействия
-    href: type-equivalence-and-embedded-interop-types.md
-  - name: Практическое руководство. Создание основной сборки взаимодействия с помощью программы Tlbimp.exe
-    href: how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md
-  - name: Практическое руководство. Регистрация основных сборок взаимодействия
-    href: how-to-register-primary-interop-assemblies.md
-  - name: COM-взаимодействие без регистрации
-    href: registration-free-com-interop.md
-  - name: Практическое руководство. Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
-    href: configure-net-framework-based-com-components-for-reg.md
-ms.openlocfilehash: be9d4bcdaeb8b7389d72bddfa36e1594b5149ce4
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469784"
+        - name: Вызываемая оболочка времени выполнения
+          href: runtime-callable-wrapper.md
+        - name: Вызываемая оболочка COM
+          href: com-callable-wrapper.md
+        - name: Как выполнить Создание оболочек COM
+          href: how-to-create-com-wrappers.md
+    - name: Эквивалентность типов и внедренные типы взаимодействия
+      href: type-equivalence-and-embedded-interop-types.md
+    - name: Как выполнить Создание основной сборки взаимодействия с помощью программы Tlbimp.exe
+      href: how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md
+    - name: Как выполнить Регистрация основных сборок взаимодействия
+      href: how-to-register-primary-interop-assemblies.md
+    - name: COM-взаимодействие без регистрации
+      href: registration-free-com-interop.md
+    - name: Как выполнить Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
+      href: configure-net-framework-based-com-components-for-reg.md

@@ -1,113 +1,106 @@
-items:
 - name: API ALink
   href: index.md
   items:
-  - name: AssemblyAttributesGoHere
-    href: assemblyattributesgohere.md
-  - name: AssemblyAttributesGoHereM
-    href: assemblyattributesgoherem.md
-  - name: AssemblyAttributesGoHereS
-    href: assemblyattributesgoheres.md
-  - name: AssemblyAttributesGoHereSM
-    href: assemblyattributesgoheresm.md
-  - name: Перечисление AssemblyOptions
-    href: assemblyoptions-enumeration.md
-  - name: Функция CreateALink
-    href: createalink-function.md
-  - name: Функция GetALinkMessageDll
-    href: getalinkmessagedll-function.md
-  - name: Интерфейс IALink
-    href: ialink-interface.md
-    items:
-    - name: Метод Init
-      href: init-method.md
-    - name: Метод ImportFile
-      href: importfile-method.md
-    - name: Метод SetAssemblyFile
-      href: setassemblyfile-method.md
-    - name: Метод AddFile
-      href: addfile-method.md
-    - name: Метод AddImport
-      href: addimport-method.md
-    - name: Метод GetScope
-      href: getscope-method.md
-    - name: Метод GetAssemblyRefHash
-      href: getassemblyrefhash-method.md
-    - name: Метод ImportTypes
-      href: importtypes-method.md
-    - name: Метод EnumCustomAttributes
-      href: enumcustomattributes-method.md
-    - name: Метод EnumImportTypes
-      href: enumimporttypes-method.md
-    - name: Метод CloseEnum
-      href: closeenum-method.md
-    - name: Метод ExportType
-      href: exporttype-method.md
-    - name: Метод ExportNestedType
-      href: exportnestedtype-method.md
-    - name: Метод EmbedResource
-      href: embedresource-method.md
-    - name: Метод LinkResource
-      href: linkresource-method.md
-    - name: Метод GetResolutionScope
-      href: getresolutionscope-method.md
-    - name: Метод SetAssemblyProps
-      href: setassemblyprops-method.md
-    - name: Метод EmitAssemblyCustomAttribute
-      href: emitassemblycustomattribute-method.md
-    - name: Метод GetWin32ResBlob
-      href: getwin32resblob-method.md
-    - name: Метод FreeWin32ResBlob
-      href: freewin32resblob-method.md
-    - name: Метод EmitManifest
-      href: emitmanifest-method.md
-    - name: Метод PreCloseAssembly
-      href: precloseassembly-method.md
-    - name: Метод CloseAssembly
-      href: closeassembly-method.md
-    - name: Метод EndMerge
-      href: endmerge-method.md
-    - name: Метод SetNonAssemblyFlags
-      href: setnonassemblyflags-method.md
-    - name: Метод ImportFile2
-      href: importfile2-method.md
-    - name: Метод ExportTypeForwarder
-      href: exporttypeforwarder-method.md
-    - name: Метод ExportNestedTypeForwarder
-      href: exportnestedtypeforwarder-method.md
-  - name: Интерфейс IALink2
-    href: ialink2-interface.md
-    items:
-    - name: Метод SetAssemblyFile2
-      href: setassemblyfile2-method.md
-    - name: Метод AddFile2
-      href: addfile2-method.md
-    - name: Метод GetScope2
-      href: getscope2-method.md
-    - name: Метод ImportTypes2
-      href: importtypes2-method.md
-    - name: Метод GetFileDef
-      href: getfiledef-method.md
-    - name: Метод GetPublicKeyToken
-      href: getpublickeytoken-method.md
-    - name: Метод EmitInternalExportedTypes
-      href: emitinternalexportedtypes-method.md
-    - name: Метод ImportFileEx
-      href: importfileex-method.md
-    - name: Метод ImportFileEx2
-      href: importfileex2-method.md
-    - name: Метод SetPEKind
-      href: setpekind-method.md
-    - name: Метод EmitAssembly
-      href: emitassembly-method.md
-  - name: Интерфейс IALink3
-    href: ialink3-interface.md
-    items:
-    - name: Метод SetManifestFile
-      href: setmanifestfile-method.md
-ms.openlocfilehash: c4c5d53634a8585c80f60aa77a3511440a77b9b3
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470552"
+    - name: AssemblyAttributesGoHere
+      href: assemblyattributesgohere.md
+    - name: AssemblyAttributesGoHereM
+      href: assemblyattributesgoherem.md
+    - name: AssemblyAttributesGoHereS
+      href: assemblyattributesgoheres.md
+    - name: AssemblyAttributesGoHereSM
+      href: assemblyattributesgoheresm.md
+    - name: Перечисление AssemblyOptions
+      href: assemblyoptions-enumeration.md
+    - name: Функция CreateALink
+      href: createalink-function.md
+    - name: Функция GetALinkMessageDll
+      href: getalinkmessagedll-function.md
+    - name: Интерфейс IALink
+      href: ialink-interface.md
+      items:
+        - name: Метод Init
+          href: init-method.md
+        - name: Метод ImportFile
+          href: importfile-method.md
+        - name: Метод SetAssemblyFile
+          href: setassemblyfile-method.md
+        - name: Метод AddFile
+          href: addfile-method.md
+        - name: Метод AddImport
+          href: addimport-method.md
+        - name: Метод GetScope
+          href: getscope-method.md
+        - name: Метод GetAssemblyRefHash
+          href: getassemblyrefhash-method.md
+        - name: Метод ImportTypes
+          href: importtypes-method.md
+        - name: Метод EnumCustomAttributes
+          href: enumcustomattributes-method.md
+        - name: Метод EnumImportTypes
+          href: enumimporttypes-method.md
+        - name: Метод CloseEnum
+          href: closeenum-method.md
+        - name: Метод ExportType
+          href: exporttype-method.md
+        - name: Метод ExportNestedType
+          href: exportnestedtype-method.md
+        - name: Метод EmbedResource
+          href: embedresource-method.md
+        - name: Метод LinkResource
+          href: linkresource-method.md
+        - name: Метод GetResolutionScope
+          href: getresolutionscope-method.md
+        - name: Метод SetAssemblyProps
+          href: setassemblyprops-method.md
+        - name: Метод EmitAssemblyCustomAttribute
+          href: emitassemblycustomattribute-method.md
+        - name: Метод GetWin32ResBlob
+          href: getwin32resblob-method.md
+        - name: Метод FreeWin32ResBlob
+          href: freewin32resblob-method.md
+        - name: Метод EmitManifest
+          href: emitmanifest-method.md
+        - name: Метод PreCloseAssembly
+          href: precloseassembly-method.md
+        - name: Метод CloseAssembly
+          href: closeassembly-method.md
+        - name: Метод EndMerge
+          href: endmerge-method.md
+        - name: Метод SetNonAssemblyFlags
+          href: setnonassemblyflags-method.md
+        - name: Метод ImportFile2
+          href: importfile2-method.md
+        - name: Метод ExportTypeForwarder
+          href: exporttypeforwarder-method.md
+        - name: Метод ExportNestedTypeForwarder
+          href: exportnestedtypeforwarder-method.md
+    - name: Интерфейс IALink2
+      href: ialink2-interface.md
+      items:
+        - name: Метод SetAssemblyFile2
+          href: setassemblyfile2-method.md
+        - name: Метод AddFile2
+          href: addfile2-method.md
+        - name: Метод GetScope2
+          href: getscope2-method.md
+        - name: Метод ImportTypes2
+          href: importtypes2-method.md
+        - name: Метод GetFileDef
+          href: getfiledef-method.md
+        - name: Метод GetPublicKeyToken
+          href: getpublickeytoken-method.md
+        - name: Метод EmitInternalExportedTypes
+          href: emitinternalexportedtypes-method.md
+        - name: Метод ImportFileEx
+          href: importfileex-method.md
+        - name: Метод ImportFileEx2
+          href: importfileex2-method.md
+        - name: Метод SetPEKind
+          href: setpekind-method.md
+        - name: Метод EmitAssembly
+          href: emitassembly-method.md
+    - name: Интерфейс IALink3
+      href: ialink3-interface.md
+      items:
+        - name: Метод SetManifestFile
+          href: setmanifestfile-method.md

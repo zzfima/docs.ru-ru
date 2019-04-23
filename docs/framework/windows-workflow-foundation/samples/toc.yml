@@ -1,117 +1,110 @@
-items:
 - name: Примеры Windows Workflow
   href: index.md
   items:
-  - name: Приложение
-    href: application.md
-    items:
-    - name: Процесс утверждения документа
-      href: document-approval-process.md
-    - name: Процесс корпоративных закупок
-      href: corporate-purchase-process.md
-    - name: Процесс найма
-      href: hiring-process.md
-    - name: Визуальное отслеживание рабочего процесса
-      href: visual-workflow-tracking.md
-    - name: Управление приостановленным экземпляром
-      href: suspended-instance-management.md
-  - name: Basic
-    href: basic.md
-    items:
-    - name: Встроенные действия
-      href: built-in-activities.md
+    - name: Приложение
+      href: application.md
       items:
-      - name: Обработка ошибок в действии блок-схемы с помощью TryCatch
-        href: fault-handling-in-a-flowchart-activity-using-trycatch.md
-      - name: Загрузка из XAML
-        href: load-from-xaml.md
-      - name: Использование действия InvokeMethod
-        href: using-the-invokemethod-activity.md
-      - name: Использование действия Pick
-        href: using-the-pick-activity.md
-    - name: Настраиваемые действия
-      href: custom-activities.md
+        - name: Процесс утверждения документа
+          href: document-approval-process.md
+        - name: Процесс корпоративных закупок
+          href: corporate-purchase-process.md
+        - name: Процесс найма
+          href: hiring-process.md
+        - name: Визуальное отслеживание рабочего процесса
+          href: visual-workflow-tracking.md
+        - name: Управление приостановленным экземпляром
+          href: suspended-instance-management.md
+    - name: Basic
+      href: basic.md
       items:
-      - name: Образцы в коде
-        href: code-bodied.md
-        items:
-        - name: Пользовательское составное действие, использующее собственное действие
-          href: custom-composite-using-native-activity.md
-      - name: Пользовательские конструкторы действий
-        href: custom-activity-designers.md
-        items:
-        - name: Пользовательские составные конструкторы - средство представления элементов рабочего процесса
-          href: custom-composite-designers-workflow-item-presenter.md
-        - name: Пользовательские составные конструкторы - средство представления элементов рабочего процесса
-          href: custom-composite-designers-workflow-items-presenter.md
-        - name: Использование ExpressionTextBox в пользовательском конструкторе действия
-          href: using-the-expressiontextbox-in-a-custom-activity-designer.md
-        - name: Использование области редактирования
-          href: using-editing-scope.md
-    - name: Designer
-      href: designer.md
+        - name: Встроенные действия
+          href: built-in-activities.md
+          items:
+            - name: Обработка ошибок в действии блок-схемы с помощью TryCatch
+              href: fault-handling-in-a-flowchart-activity-using-trycatch.md
+            - name: Загрузка из XAML
+              href: load-from-xaml.md
+            - name: Использование действия InvokeMethod
+              href: using-the-invokemethod-activity.md
+            - name: Использование действия Pick
+              href: using-the-pick-activity.md
+        - name: Настраиваемые действия
+          href: custom-activities.md
+          items:
+            - name: Образцы в коде
+              href: code-bodied.md
+              items:
+                - name: 'Пользовательское составное действие, использующее собственное действие'
+                  href: custom-composite-using-native-activity.md
+            - name: Пользовательские конструкторы действий
+              href: custom-activity-designers.md
+              items:
+                - name: Пользовательские составные конструкторы - средство представления элементов рабочего процесса
+                  href: custom-composite-designers-workflow-item-presenter.md
+                - name: Пользовательские составные конструкторы - средство представления элементов рабочего процесса
+                  href: custom-composite-designers-workflow-items-presenter.md
+                - name: Использование ExpressionTextBox в пользовательском конструкторе действия
+                  href: using-the-expressiontextbox-in-a-custom-activity-designer.md
+                - name: Использование области редактирования
+                  href: using-editing-scope.md
+        - name: Designer
+          href: designer.md
+          items:
+            - name: Удаление добавляемого конструктором в файл XAML состояния просмотра
+              href: removing-the-view-state-the-designer-adds-to-an-xaml-file.md
+            - name: Программирование дерева элементов модели
+              href: programming-model-item-tree.md
+            - name: Расширяемость сетки свойств
+              href: property-grid-extensibility.md
+        - name: Повторное размещение конструктора
+          href: designer-rehosting.md
+        - name: Выполнение
+          href: execution.md
+          items:
+            - name: Создание и запуск экземпляра рабочего процесса
+              href: creating-and-running-a-workflow-instance.md
+            - name: Закладка возобновления для конечной точки WorkflowHostingEndpoint
+              href: workflowhostingendpoint-resume-bookmark.md
+            - name: Арбитр закладок для конечной точки WorkflowHostingEndpoint
+              href: bookmark-resolver-for-workflowhostingendpoint.md
+        - name: Отслеживание
+          href: tracking.md
+          items:
+            - name: Настраиваемое отслеживание
+              href: custom-tracking.md
+            - name: Отслеживание событий в системе трассировки событий Windows
+              href: tracking-events-into-event-tracing-in-windows.md
+            - name: Отслеживание SQL
+              href: sql-tracking.md
+    - name: Сценарий
+      href: scenario.md
       items:
-      - name: Удаление добавляемого конструктором в файл XAML состояния просмотра
-        href: removing-the-view-state-the-designer-adds-to-an-xaml-file.md
-      - name: Программирование дерева элементов модели
-        href: programming-model-item-tree.md
-      - name: Расширяемость сетки свойств
-        href: property-grid-extensibility.md
-    - name: Повторное размещение конструктора
-      href: designer-rehosting.md
-    - name: Выполнение
-      href: execution.md
-      items:
-      - name: Создание и запуск экземпляра рабочего процесса
-        href: creating-and-running-a-workflow-instance.md
-      - name: Закладка возобновления для конечной точки WorkflowHostingEndpoint
-        href: workflowhostingendpoint-resume-bookmark.md
-      - name: Арбитр закладок для конечной точки WorkflowHostingEndpoint
-        href: bookmark-resolver-for-workflowhostingendpoint.md
-    - name: Отслеживание
-      href: tracking.md
-      items:
-      - name: Настраиваемое отслеживание
-        href: custom-tracking.md
-      - name: Отслеживание событий в системе трассировки событий Windows
-        href: tracking-events-into-event-tracing-in-windows.md
-      - name: Отслеживание SQL
-        href: sql-tracking.md
-  - name: Сценарий
-    href: scenario.md
-    items:
-    - name: Библиотека действий
-      href: activity-library.md
-      items:
-      - name: Настраиваемое действие SendMail
-        href: sendmail-custom-activity.md
-      - name: Параллельное действие ForEach с ограничением
-        href: throttled-parallel-foreach.md
-      - name: Действия доступа к базе данных
-        href: database-access-activities.md
-      - name: Реализованное действие политики в .NET Framework 4.5
-        href: externalized-policy-activity-in-net-framework-4-5.md
-      - name: Неуниверсальное действие ForEach
-        href: non-generic-foreach.md
-      - name: Неуниверсальное действие ParallelForEach
-        href: non-generic-parallelforeach.md
-      - name: Получение GetWorkflowInstanceId
-        href: get-workflowinstanceid.md
-    - name: Службы
-      items:
-      - name: Доступ к контексту OperationContext
-        href: accessing-operationcontext.md
-      - name: Корреляция запросов сообщений LINQ
-        href: linq-message-query-correlation.md
-      - name: Асинхронное взаимодействие
-        href: asynchronous-communication.md
-    - name: Интеграция WPF и WF в XAML
-      href: wpf-and-wf-integration-in-xaml.md
-    - name: Набор средств внешнего набора правил
-      href: external-ruleset-toolkit.md
-ms.openlocfilehash: 19369f2096ca3e9a15d514d88faec40d861dc752
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470621"
+        - name: Библиотека действий
+          href: activity-library.md
+          items:
+            - name: Настраиваемое действие SendMail
+              href: sendmail-custom-activity.md
+            - name: Параллельное действие ForEach с ограничением
+              href: throttled-parallel-foreach.md
+            - name: Действия доступа к базе данных
+              href: database-access-activities.md
+            - name: Реализованное действие политики в .NET Framework 4.5
+              href: externalized-policy-activity-in-net-framework-4-5.md
+            - name: Неуниверсальное действие ForEach
+              href: non-generic-foreach.md
+            - name: Неуниверсальное действие ParallelForEach
+              href: non-generic-parallelforeach.md
+            - name: Получение GetWorkflowInstanceId
+              href: get-workflowinstanceid.md
+        - name: Службы
+          items:
+            - name: Доступ к контексту OperationContext
+              href: accessing-operationcontext.md
+            - name: Корреляция запросов сообщений LINQ
+              href: linq-message-query-correlation.md
+            - name: Асинхронное взаимодействие
+              href: asynchronous-communication.md
+        - name: Интеграция WPF и WF в XAML
+          href: wpf-and-wf-integration-in-xaml.md
+        - name: Набор средств внешнего набора правил
+          href: external-ruleset-toolkit.md
