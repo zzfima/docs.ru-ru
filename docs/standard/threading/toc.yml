@@ -1,87 +1,80 @@
-items:
 - name: Потоки
   href: index.md
   items:
-  - name: Основы управляемых потоков
-    href: managed-threading-basics.md
-    items:
-    - name: Потоки и работа с потоками
-      href: threads-and-threading.md
-    - name: Исключения в управляемых потоках
-      href: exceptions-in-managed-threads.md
-    - name: Синхронизация данных для многопоточности
-      href: synchronizing-data-for-multithreading.md
-    - name: Основные и фоновые потоки
-      href: foreground-and-background-threads.md
-    - name: Управляемые и неуправляемые потоки в Windows
-      href: managed-and-unmanaged-threading-in-windows.md
-    - name: Метод Thread.Suspend, сборка мусора и безопасные точки
-      href: thread-suspend-garbage-collection-and-safe-points.md
-    - name: Локальное хранилище потока. Статические поля потока и области данных
-      href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
-  - name: Использование потоков и работа с потоками
-    href: using-threads-and-threading.md
-    items:
-    - name: Создание потоков и передача данных во время запуска
-      href: creating-threads-and-passing-data-at-start-time.md
-    - name: Приостановка и прерывание потоков
-      href: pausing-and-resuming-threads.md
-    - name: Удаление потоков
-      href: destroying-threads.md
-    - name: Планирование потоков
-      href: scheduling-threads.md
-    - name: Отмена в управляемых потоках
-      href: cancellation-in-managed-threads.md
+    - name: Основы управляемых потоков
+      href: managed-threading-basics.md
       items:
-      - name: Согласованная отмена потоков
-        href: canceling-threads-cooperatively.md
-      - name: Практическое руководство. Прослушивание запросов на отмену посредством опросов
-        href: how-to-listen-for-cancellation-requests-by-polling.md
-      - name: Практическое руководство. Регистрация обратных вызовов для запросов на отмену
-        href: how-to-register-callbacks-for-cancellation-requests.md
-      - name: Практическое руководство. Прослушивание запросов на отмену, содержащих дескрипторы ожидания
-        href: how-to-listen-for-cancellation-requests-that-have-wait-handles.md
-      - name: Практическое руководство. Прослушивание нескольких запросов на отмену
-        href: how-to-listen-for-multiple-cancellation-requests.md
-  - name: Рекомендации по работе с потоками
-    href: managed-threading-best-practices.md
-  - name: Объекты и функциональные возможности работы с потоками
-    href: threading-objects-and-features.md
-    items:
-    - name: Пул управляемых потоков
-      href: the-managed-thread-pool.md
-    - name: таймеры
-      href: timers.md
-    - name: Общие сведения о примитивах синхронизации
-      href: overview-of-synchronization-primitives.md
-    - name: EventWaitHandle
-      href: eventwaithandle.md
-    - name: CountdownEvent
-      href: countdownevent.md
-    - name: Mutexes
-      href: mutexes.md
-    - name: Классы Semaphore и SemaphoreSlim
-      href: semaphore-and-semaphoreslim.md
-    - name: Барьер
-      href: barrier.md
+        - name: Потоки и работа с потоками
+          href: threads-and-threading.md
+        - name: Исключения в управляемых потоках
+          href: exceptions-in-managed-threads.md
+        - name: Синхронизация данных для многопоточности
+          href: synchronizing-data-for-multithreading.md
+        - name: Основные и фоновые потоки
+          href: foreground-and-background-threads.md
+        - name: Управляемые и неуправляемые потоки в Windows
+          href: managed-and-unmanaged-threading-in-windows.md
+        - name: 'Метод Thread.Suspend, сборка мусора и безопасные точки'
+          href: thread-suspend-garbage-collection-and-safe-points.md
+        - name: Локальное хранилище потока. Статические поля потока и области данных
+          href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
+    - name: Использование потоков и работа с потоками
+      href: using-threads-and-threading.md
       items:
-      - name: Практическое руководство. Синхронизация параллельных операций с барьером
-        href: how-to-synchronize-concurrent-operations-with-a-barrier.md
-    - name: SpinLock
-      href: spinlock.md
+        - name: Создание потоков и передача данных во время запуска
+          href: creating-threads-and-passing-data-at-start-time.md
+        - name: Приостановка и прерывание потоков
+          href: pausing-and-resuming-threads.md
+        - name: Удаление потоков
+          href: destroying-threads.md
+        - name: Планирование потоков
+          href: scheduling-threads.md
+        - name: Отмена в управляемых потоках
+          href: cancellation-in-managed-threads.md
+          items:
+            - name: Согласованная отмена потоков
+              href: canceling-threads-cooperatively.md
+            - name: Как выполнить Прослушивание запросов на отмену посредством опросов
+              href: how-to-listen-for-cancellation-requests-by-polling.md
+            - name: Как выполнить Регистрация обратных вызовов для запросов на отмену
+              href: how-to-register-callbacks-for-cancellation-requests.md
+            - name: 'Как выполнить Прослушивание запросов на отмену, содержащих дескрипторы ожидания'
+              href: how-to-listen-for-cancellation-requests-that-have-wait-handles.md
+            - name: Как выполнить Прослушивание нескольких запросов на отмену
+              href: how-to-listen-for-multiple-cancellation-requests.md
+    - name: Рекомендации по работе с потоками
+      href: managed-threading-best-practices.md
+    - name: Объекты и функциональные возможности работы с потоками
+      href: threading-objects-and-features.md
       items:
-      - name: Практическое руководство. SpinLock и низкоуровневая синхронизация
-        href: how-to-use-spinlock-for-low-level-synchronization.md
-      - name: Практическое руководство. Включение режима отслеживания потоков в SpinLock
-        href: how-to-enable-thread-tracking-mode-in-spinlock.md
-    - name: SpinWait
-      href: spinwait.md
-      items:
-      - name: Практическое руководство. Использование объекта SpinWait для реализации двухэтапной операции ожидания
-        href: how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md
-ms.openlocfilehash: c015db2bc66897ca487e29e36d93e7d84a0897f1
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469816"
+        - name: Пул управляемых потоков
+          href: the-managed-thread-pool.md
+        - name: таймеры
+          href: timers.md
+        - name: Общие сведения о примитивах синхронизации
+          href: overview-of-synchronization-primitives.md
+        - name: EventWaitHandle
+          href: eventwaithandle.md
+        - name: CountdownEvent
+          href: countdownevent.md
+        - name: Mutexes
+          href: mutexes.md
+        - name: Классы Semaphore и SemaphoreSlim
+          href: semaphore-and-semaphoreslim.md
+        - name: Барьер
+          href: barrier.md
+          items:
+            - name: Как выполнить Синхронизация параллельных операций с барьером
+              href: how-to-synchronize-concurrent-operations-with-a-barrier.md
+        - name: SpinLock
+          href: spinlock.md
+          items:
+            - name: Как выполнить SpinLock и низкоуровневая синхронизация
+              href: how-to-use-spinlock-for-low-level-synchronization.md
+            - name: Как выполнить Включение режима отслеживания потоков в SpinLock
+              href: how-to-enable-thread-tracking-mode-in-spinlock.md
+        - name: SpinWait
+          href: spinwait.md
+          items:
+            - name: Как выполнить Использование объекта SpinWait для реализации двухэтапной операции ожидания
+              href: how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md
