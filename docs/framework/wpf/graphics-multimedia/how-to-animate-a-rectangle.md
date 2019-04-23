@@ -9,10 +9,10 @@ helpviewer_keywords:
 - rectangles [WPF], animating
 ms.assetid: 572ffb95-790d-4ace-adbf-b2ea8a90e75b
 ms.openlocfilehash: 7f7cf24f7883553329de3761ff0670e8e3a09463
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151012"
 ---
 # <a name="how-to-animate-a-rectangle"></a>Практическое руководство. Анимация прямоугольника
@@ -31,5 +31,5 @@ ms.locfileid: "59151012"
 - <xref:System.Windows.Media.RectangleGeometry>
 - [Общие сведения об эффектах анимации](animation-overview.md)
 - [Графика и мультимедиа](index.md)
-- [Разделы практического руководства, посвященные графике](graphics-how-to-topics.md)
-- [Разделы руководства по анимации и таймерам](animation-and-timing-how-to-topics.md)
+- [Разделы руководства, посвященные графики](graphics-how-to-topics.md)
+- [Анимации и практические руководства](animation-and-timing-how-to-topics.md)

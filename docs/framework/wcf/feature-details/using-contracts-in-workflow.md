@@ -3,10 +3,10 @@ title: Использование контрактов в рабочих про�
 ms.date: 03/30/2017
 ms.assetid: 939c64e9-e7cc-4abc-b41e-27cfce1d7e50
 ms.openlocfilehash: dd35766011c412acc937eed75d523a0574f6b9cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150063"
 ---
 # <a name="using-contracts-in-workflow"></a>Использование контрактов в рабочих процессах
@@ -15,7 +15,7 @@ ms.locfileid: "59150063"
 ## <a name="contract-inference"></a>Вывод контракта  
  При размещении службы рабочего процесса с использованием <xref:System.ServiceModel.Activities.WorkflowServiceHost> просматривается определение рабочего процесса и формируется контракт на основе набора действий по отправке и получению сообщений, обнаруженных в рабочем процессе. В частности, для создания контракта используются следующие действия и свойства:  
   
- <xref:System.ServiceModel.Activities.Receive> Действие  
+ Действие <xref:System.ServiceModel.Activities.Receive>  
   
 -   <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>  
   
@@ -23,17 +23,17 @@ ms.locfileid: "59150063"
   
 -   <xref:System.ServiceModel.Activities.Receive.Action%2A>   
  
- <xref:System.ServiceModel.Activities.SendReply> Действие  
+ Действие <xref:System.ServiceModel.Activities.SendReply>  
   
 -   <xref:System.ServiceModel.Activities.SendReply.Action%2A>  
   
- <xref:System.ServiceModel.Activities.TransactedReceiveScope> Действие  
+ Действие <xref:System.ServiceModel.Activities.TransactedReceiveScope>  
   
  Конечным результатом вывода контракта является описание службы, использующее структуры данных, аналогичные структурам данных служб WCF и контрактов операций. Затем эти сведения используются для предоставления WSDL для службы рабочего процесса.  
   
 ## <a name="see-also"></a>См. также
 
-- [Службы рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [Действия обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
-- [Практическое руководство. Как создать службу рабочего процесса с помощью действий обмена сообщениями](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
-- [Практическое руководство. Создание службы рабочих процессов, использующей существующий контракт службы](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)
+- [Практическое руководство. Создание службы рабочего процесса с помощью действий обмена сообщениями](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
+- [Практическое руководство. Создание службы рабочего процесса, который использует существующий контракт службы](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)

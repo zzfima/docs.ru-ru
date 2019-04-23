@@ -10,10 +10,10 @@ helpviewer_keywords:
 - brushes [WPF], painting with a video
 ms.assetid: 04dd6600-4a6e-4b43-a93e-21cce7dfbcb8
 ms.openlocfilehash: be09d1310847cd7214ea795a704c25d994f07b7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151181"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>Практическое руководство. Заливка области с помощью видео
@@ -40,6 +40,6 @@ ms.locfileid: "59151181"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Media.VisualBrush>
-- [Рисование с помощью объектов Image, Drawing и Visual](painting-with-images-drawings-and-visuals.md)
-- [Общие сведения о TileBrush](tilebrush-overview.md)
+- [Заполнение с использованием изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md)
+- [Общие сведения об объекте TileBrush](tilebrush-overview.md)
 - [Общие сведения о мультимедиа](multimedia-overview.md)

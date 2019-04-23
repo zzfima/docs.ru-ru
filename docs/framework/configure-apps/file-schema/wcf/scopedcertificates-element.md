@@ -1,12 +1,12 @@
 ---
-title: <scopedCertificates> Элемент
+title: Элемент <scopedCertificates>
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
 ms.openlocfilehash: 73e78a6ca27ed45e1eadc7121987b75f79bc6aa5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145204"
 ---
 # <a name="scopedcertificates-element"></a>\<scopedCertificates > элемент
@@ -83,5 +83,5 @@ ms.locfileid: "59145204"
 - [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Практическое руководство. Создание федеративного клиента](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)
-- [Обеспечение безопасности клиентов](../../../../../docs/framework/wcf/securing-clients.md)
+- [Защита клиентов](../../../../../docs/framework/wcf/securing-clients.md)
 - [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

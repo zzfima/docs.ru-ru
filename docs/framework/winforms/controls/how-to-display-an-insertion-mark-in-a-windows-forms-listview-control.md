@@ -12,10 +12,10 @@ helpviewer_keywords:
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
 ms.openlocfilehash: 60b775408f5c43ff08fc5c7de72a8302b20b2264
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145617"
 ---
 # <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Практическое руководство. Индикация места вставки в элементе управления ListView в Windows Forms
@@ -49,4 +49,4 @@ ms.locfileid: "59145617"
 - <xref:System.Windows.Forms.ListViewInsertionMark>
 - [Элемент управления ListView](listview-control-windows-forms.md)
 - [Общие сведения об элементе управления ListView](listview-control-overview-windows-forms.md)
-- [Пошаговое руководство. Выполнение операции перетаскивания в Windows Forms](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)
+- [Пошаговое руководство: Выполнение операции перетаскивания и вставки в Windows Forms](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)

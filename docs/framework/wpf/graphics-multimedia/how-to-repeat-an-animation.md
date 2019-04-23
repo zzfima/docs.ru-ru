@@ -8,10 +8,10 @@ helpviewer_keywords:
 - animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
 ms.openlocfilehash: a80f72b0e67c13890d4befcbd5ab7c4a92a93fe7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150544"
 ---
 # <a name="how-to-repeat-an-animation"></a>Практическое руководство. Повторение анимации
@@ -32,6 +32,6 @@ ms.locfileid: "59150544"
 
 - [Накапливание значений анимации в повторяющихся циклах](how-to-accumulate-animation-values-during-repeat-cycles.md)
 - [Определение автоматического реверса для шкалы времени](how-to-specify-whether-a-timeline-automatically-reverses.md)
-- [Разделы руководства по анимации и таймерам](animation-and-timing-how-to-topics.md)
+- [Анимации и практические руководства](animation-and-timing-how-to-topics.md)
 - [Общие сведения об эффектах анимации](animation-overview.md)
-- [Пример поведения анимации времени](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Пример поведения анимации с учетом времени](https://go.microsoft.com/fwlink/?LinkID=159970)

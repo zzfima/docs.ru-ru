@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8254d3de7dc282edb8ebe8bf0dd71ce1c943322d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51e34d8eed40481de47dfd217392e95a11a412d1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689212"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59145123"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Динамическая загрузка и использование типов
 Отражение предоставляет инфраструктуру, с помощью которой компиляторы различных языков, таких как [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] и JScript, реализуют позднее связывание. Привязка — это процесс поиска объявления (то есть реализации), которое соответствует уникально определенному типу. Если этот процесс происходит во время выполнения, а не во время компиляции, он называется поздним связыванием. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] позволяет использовать неявное позднее связывание в коде; компилятор Visual Basic вызывает вспомогательный метод, который использует отражение для получения типа объекта. Аргументы, передаваемые вспомогательному методу, приводят к вызову соответствующего метода во время выполнения. Эти аргументы определяют экземпляр (объект), для которого вызывается метод, имя вызываемого метода (строка) и аргументы, передаваемые в вызываемый метод (массив объектов).  
@@ -100,6 +100,7 @@ End Module
  Класс <xref:System.Type> содержит методы **Get**, которые используют параметры типа **Binder**, чтобы разрешить ссылки на конкретный член. Методы <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> и <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> выполняют поиск определенного члена текущего типа по сведениям о подписи для этого члена. Методы <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> и <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> используются в качестве методов обратного вызова для выбора заданных сведений о подписи для соответствующих методов.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - [Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)

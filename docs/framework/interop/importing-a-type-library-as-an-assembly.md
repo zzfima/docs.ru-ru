@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 043fe74f66635c30f12555efb9ccc9415e200ec3
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 4104ddba1942f9cb9bd860d53dc54968de5af891
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835243"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59151272"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Импорт библиотеки типов в виде сборки
 Определения COM-типов обычно хранятся в библиотеке типов. С другой стороны, CLS-совместимые компиляторы создают в сборке метаданные типов. Эти два источника сведений о типах заметно отличаются. В этом разделе описываются способы создания метаданных из библиотеки типов. Результирующая сборка и называется сборкой взаимодействия, а содержащиеся в ней сведения о типах позволяют приложениям .NET Framework использовать COM-типы.  
@@ -71,6 +71,7 @@ ms.locfileid: "56835243"
  Дополнительные сведения процессе импорта COM-взаимодействия см. в разделе [Обзор преобразования библиотек типов в сборки](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - [Предоставление COM-компонентов платформе .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
 - [Общие сведения о преобразовании библиотеки типов в сборку](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))

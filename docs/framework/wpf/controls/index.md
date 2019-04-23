@@ -8,10 +8,10 @@ helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
 ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154418"
 ---
 # <a name="controls"></a>Элементы управления
@@ -104,7 +104,7 @@ ms.locfileid: "59154418"
 - [Библиотека элементов управления](control-library.md)
 - [Общие сведения о шаблонах данных](../data/data-templating-overview.md)
 - [Общие сведения о привязке данных](../data/data-binding-overview.md)
-- [Входные данные](../advanced/input-wpf.md)
+- [Ввод](../advanced/input-wpf.md)
 - [Включение команды](../advanced/how-to-enable-a-command.md)
-- [Пошаговые руководства. Создание пользовательской анимированной кнопки](walkthroughs-create-a-custom-animated-button.md)
+- [Пошаговые руководства: Создание пользовательской анимированной кнопки](walkthroughs-create-a-custom-animated-button.md)
 - [Настройка элементов управления](control-customization.md)

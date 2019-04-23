@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: e41b92239f0ba1a94190262c337f09eedaddab31
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f515268af13ef95b8b6d9a79f71c49d5d4a98d05
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965726"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59149842"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Значения, возвращаемые методом Main() (Руководство по программированию на C#)
 
@@ -94,6 +94,7 @@ private static async Task<int> AsyncConsoleWork()
 >Если бы в примерах использовался модификатор `async` метода `Main`, компилятор сформировал бы точно такой же код.
 
 ## <a name="see-also"></a>См. также
+
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Справочник по C#](../index.md)
 - [Main() и аргументы командной строки](index.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: c66fd3f7-2377-4553-8f1b-006527f08f32
 ms.openlocfilehash: 0d0a0bdba779fad7bd9b19acb2ea09408dea60a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151922"
 ---
 # <a name="how-to-implement-a-custom-toolstriprenderer"></a>Практическое руководство. Реализация пользовательского класса, производного от ToolStripRenderer
@@ -23,11 +23,11 @@ ms.locfileid: "59151922"
   
  Класс `GridStripRenderer` настраивает три характеристики внешнего вида элемента управления `GridStrip`:  
   
--   `GridStrip` border  
+-   граница `GridStrip`;  
   
--   <xref:System.Windows.Forms.ToolStripButton> border  
+-   граница <xref:System.Windows.Forms.ToolStripButton>;  
   
--   <xref:System.Windows.Forms.ToolStripButton> изображение  
+-   <xref:System.Windows.Forms.ToolStripButton> Изображение  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#1)]  

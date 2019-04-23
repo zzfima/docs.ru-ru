@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2f229e421cc69f2ff45110233c4c6c36d7a1fc4c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152754"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>Метод ICLRRuntimeInfo::GetInterface
@@ -54,7 +54,7 @@ HRESULT GetInterface(
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_POINTER|`ppUnk` имеет значение null.|  
+|E_POINTER|Параметр `ppUnk` имеет значение null.|  
 |E_OUTOFMEMORY|Недостаточно памяти для обработки запроса.|  
 |CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Другие среды выполнения уже была привязана к устаревшая политика активации 2 версии среды CLR.|  
   

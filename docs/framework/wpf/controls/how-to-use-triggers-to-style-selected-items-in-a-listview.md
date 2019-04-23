@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 1e2bdce0-afe8-4507-9b18-f33de43de25a
 ms.openlocfilehash: ad64382b871bae9114a1e63257de3f8595376923
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145409"
 ---
 # <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a>Практическое руководство. Применение триггеров для определения стиля выбранных элементов в ListView
@@ -34,6 +34,6 @@ ms.locfileid: "59145409"
 - <xref:System.Windows.Controls.Control>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Практические руководства](listview-how-to-topics.md)
+- [Разделы практического руководства](listview-how-to-topics.md)
 - [Общие сведения об элементе управления ListView](listview-overview.md)
 - [Общие сведения о GridView](gridview-overview.md)

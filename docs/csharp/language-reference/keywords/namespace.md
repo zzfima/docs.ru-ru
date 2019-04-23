@@ -10,10 +10,10 @@ helpviewer_keywords:
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
 ms.openlocfilehash: 4859c361b3321c1144204f63896152694f6ac5c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148763"
 ---
 # <a name="namespace-c-reference"></a>namespace (Справочник по C#)
@@ -28,15 +28,15 @@ ms.locfileid: "59148763"
 
 - другое пространство имен
 
-- [класс](class.md)
+- [class](class.md)
 
-- [интерфейс](interface.md)
+- [interface](interface.md)
 
-- [структура](struct.md)
+- [struct](struct.md)
 
-- [перечисление](enum.md)
+- [enum](enum.md)
 
-- [делегат](delegate.md)
+- [delegate](delegate.md)
 
 Независимо от того, было ли пространство имен объявлено явным образом в исходном файле на языке C#, компилятор добавляет пространство имен по умолчанию. Это безымянное пространство имен, иногда называемое глобальным пространством имен, существует в каждом файле. Любой идентификатор в глобальном пространстве имен доступен для использования в именованном пространстве имен.
 
@@ -60,7 +60,7 @@ ms.locfileid: "59148763"
 
 - [Использование пространств имен](../../programming-guide/namespaces/using-namespaces.md)
 
-- [Практическое руководство. Использованию псевдонима глобального пространства имен](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
+- [Практическое руководство. Использование псевдонима глобального пространства имен](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
@@ -70,7 +70,7 @@ ms.locfileid: "59148763"
 
 - [Справочник по C#](../../language-reference/index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
-- [Ключевые слова C#](index.md)
+- [Ключевые слова в C#](index.md)
 - [Ключевые слова, используемые для пространств имен](namespace-keywords.md)
 - [using](using-directive.md)
 - [using static](using-static.md)
