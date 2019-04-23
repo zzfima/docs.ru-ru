@@ -11,10 +11,10 @@ helpviewer_keywords:
 - UI Automation, navigating among elements
 ms.assetid: afcd21dc-2ffa-48c9-9332-51269f44b7e9
 ms.openlocfilehash: aed8c624a75364dcc97c73ae7ebd6331275ceff4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182875"
 ---
 # <a name="navigate-among-ui-automation-elements-with-treewalker"></a>Навигация между элементами автоматизированного пользовательского интерфейса с помощью TreeWalker
@@ -37,4 +37,4 @@ ms.locfileid: "59182875"
   
 ## <a name="see-also"></a>См. также
 
-- [Получение элементов автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)
+- [Получение элементов модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)

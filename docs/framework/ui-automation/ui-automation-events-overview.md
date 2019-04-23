@@ -10,23 +10,23 @@ helpviewer_keywords:
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
 ms.openlocfilehash: ae780da7d6c6d45cb791333e5f0edcf0690f297b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183746"
 ---
 # <a name="ui-automation-events-overview"></a>Обзор событий автоматизации пользовательского интерфейса
 > [!NOTE]
 >  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] уведомление о событии является основной возможностью для вспомогательных технологий, таких как средства чтения с экрана и экранные лупы. Эти клиенты автоматизации пользовательского интерфейса отслеживают события, вызываемые поставщиками автоматизации пользовательского интерфейса, когда что-то происходит в [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] , и используют эти сведения, чтобы уведомить конечных пользователей.  
+ Уведомление о событии[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] — это ключевая функция для вспомогательных технологий, таких как средства чтения с экрана и экранные лупы. Эти клиенты автоматизации пользовательского интерфейса отслеживают события, вызываемые поставщиками автоматизации пользовательского интерфейса, когда что-то происходит в [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] , и используют эти сведения, чтобы уведомить конечных пользователей.  
   
  Повысить эффективность можно, позволяя приложениям поставщика вызывать события выборочно в зависимости от того, было ли все клиенты подписаны на эти события или прослушивают ли клиенты события.  
   
 <a name="Types_of_Events"></a>   
 ## <a name="types-of-events"></a>Типы событий  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] события делятся на следующие категории.  
+ События[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] делятся на следующие категории.  
   
 |событие|Описание|  
 |-----------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "59183746"
   
 <a name="UI_Automation_Event_Identifiers"></a>   
 ## <a name="ui-automation-event-identifiers"></a>Идентификаторы событий автоматизации пользовательского интерфейса  
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] события идентифицируются <xref:System.Windows.Automation.AutomationEvent> объектов. Свойство <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> содержит значение, которое однозначно определяет тип события.  
+ События[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] идентифицируются объектами <xref:System.Windows.Automation.AutomationEvent> . Свойство <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> содержит значение, которое однозначно определяет тип события.  
   
  Возможные значения параметра <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> приведены в следующей таблице вместе с типом, используемым для аргументов событий. Обратите внимание, что идентификаторы, используемые клиентами и поставщиками, идентичны именованным полям из различных классов.  
   

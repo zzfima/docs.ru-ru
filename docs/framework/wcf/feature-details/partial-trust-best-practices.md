@@ -3,10 +3,10 @@ title: Рекомендации по частичному доверию
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
 ms.openlocfilehash: c83c36020cfd5b41e99ff9eeb7968d0b5df909a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184084"
 ---
 # <a name="partial-trust-best-practices"></a>Рекомендации по частичному доверию
@@ -29,7 +29,7 @@ ms.locfileid: "59184084"
   
 -   Методы, обрабатывающие события сериализации (например, `OnSerializing`, `OnSerialized`, `OnDeserializing` и `OnDeserialized`) должны быть объявлены как открытые. Однако поддерживаются явные и неявные реализации <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%28System.Object%29>.  
   
--   `[DataContract]` типы, которые реализованы в сборках, отмеченные <xref:System.Security.AllowPartiallyTrustedCallersAttribute> не должен выполнять действия, относящиеся к безопасности, в конструктор типа как <xref:System.Runtime.Serialization.DataContractSerializer> не вызывает конструктор вновь созданного объекта при десериализации. В частности, для типов `[DataContract]` следует избегать использования указанных ниже общих методов обеспечения безопасности:  
+-   Типы `[DataContract]`, реализованные в сборках, отмеченных атрибутом <xref:System.Security.AllowPartiallyTrustedCallersAttribute>, не должны выполнять в конструкторе типа действия, связанные с безопасностью, так как <xref:System.Runtime.Serialization.DataContractSerializer> не вызывает конструктор вновь созданного объекта во время десериализации. В частности, для типов `[DataContract]` следует избегать использования указанных ниже общих методов обеспечения безопасности:  
   
 -   попытка ограничить доступ с частичным доверием, делая конструктор типа внутренним или закрытым;  
   

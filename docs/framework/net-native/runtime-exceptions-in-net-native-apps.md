@@ -5,10 +5,10 @@ ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 06e07c41d398c0792094b4481a38c69b2ba73004
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59208284"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Исключения среды выполнения в собственных приложениях .NET
@@ -61,5 +61,5 @@ Additional information: Value does not fall within the expected range.
   
 ## <a name="see-also"></a>См. также
 
-- [Отладка универсальных приложений Windows .NET в .NET Native](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
+- [Отладка универсальных приложений .NET Native Windows](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
 - [Начало работы](../../../docs/framework/net-native/getting-started-with-net-native.md)

@@ -3,10 +3,10 @@ title: LINQ (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
 ms.openlocfilehash: c7dbe1bdef85de6028d37f8005dc5edea6c07925
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186632"
 ---
 # <a name="language-integrated-query-linq"></a>Синтаксис LINQ
@@ -35,7 +35,7 @@ ms.locfileid: "59186632"
   
 -   Некоторых операции запросов, например <xref:System.Linq.Enumerable.Count%2A> или <xref:System.Linq.Enumerable.Max%2A>, не имеют эквивалентных предложений выражения для запросов и должны выражаться как вызовы методов. Синтаксис запросов и синтаксис методов можно сочетать друг с другом различными способами. Дополнительные сведения см. в статье [Query syntax and method syntax in LINQ](query-syntax-and-method-syntax-in-linq.md) (Синтаксис запросов и синтаксис методов в LINQ).  
   
--   Выражения запросов могут компилироваться в деревья выражений или в делегаты, в зависимости от типа, к которому применяется конкретный запрос. <xref:System.Collections.Generic.IEnumerable%601> компилируются в делегаты. <xref:System.Linq.IQueryable> и <xref:System.Linq.IQueryable%601> компилируются в деревья выражений. Дополнительные сведения см. в статье [Expression trees](../../../expression-trees.md) (Деревья выражений).  
+-   Выражения запросов могут компилироваться в деревья выражений или в делегаты, в зависимости от типа, к которому применяется конкретный запрос. Запросы <xref:System.Collections.Generic.IEnumerable%601> компилируются в делегаты. Запросы <xref:System.Linq.IQueryable> и <xref:System.Linq.IQueryable%601> компилируются в деревья выражений. Дополнительные сведения см. в статье [Expression trees](../../../expression-trees.md) (Деревья выражений).  
 
 ## <a name="next-steps"></a>Следующие шаги
 

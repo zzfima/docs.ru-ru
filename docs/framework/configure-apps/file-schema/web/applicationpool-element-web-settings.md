@@ -1,15 +1,15 @@
 ---
-title: <applicationPool> Элемент (веб-параметры)
+title: Элемент <applicationPool> (веб-параметры)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
 ms.openlocfilehash: 16207c3f3c711d06b71cafb2b67c5d29f3f14e39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184734"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<пул приложений > элемент (веб-параметры)
@@ -49,7 +49,7 @@ ms.locfileid: "59184734"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<System.Web >](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|Содержит сведения о взаимодействии ASP.NET с ведущими приложениями.|  
+|[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|Содержит сведения о взаимодействии ASP.NET с ведущими приложениями.|  
   
 ## <a name="remarks"></a>Примечания  
  При запуске [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздней версии в режиме интеграции с, это сочетание элементов позволяет настроить, как ASP.NET управляет потоков и очереди запросов, когда приложение размещается в пуле приложений IIS. При использовании IIS 6 или при использовании [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] в классическом режиме или режиме ISAPI, эти параметры игнорируются.  
@@ -96,4 +96,4 @@ ms.locfileid: "59184734"
   
 ## <a name="see-also"></a>См. также
 
-- [\<System.Web > элемент (веб-параметры)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)
+- [Элемент \<system.web> (веб-параметры)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)

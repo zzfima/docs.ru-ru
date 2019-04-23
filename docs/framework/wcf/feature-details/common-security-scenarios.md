@@ -5,10 +5,10 @@ helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
 ms.openlocfilehash: af58d6b529fba32380bedb9a892a2b1fd4807d96
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199275"
 ---
 # <a name="common-security-scenarios"></a>Типовые сценарии безопасности
@@ -48,7 +48,7 @@ ms.locfileid: "59199275"
  [Безопасность сообщений с использованием клиента Windows без согласования учетных данных](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client-without-credential-negotiation.md)  
  Клиент и служба, защищенные доменом Kerberos.  
   
- [Безопасность сообщений с использованием взаимных сертификатов](../../../../docs/framework/wcf/feature-details/message-security-with-mutual-certificates.md)  
+ [Безопасность сообщений с взаимными сертификатами](../../../../docs/framework/wcf/feature-details/message-security-with-mutual-certificates.md)  
  Серверы имеют сертификаты и каждый клиент имеет сертификат. Сертификат сервера распространяется вместе с приложением и доступен внештатно.  
   
  [Безопасность сообщений с использованием выданных маркеров](../../../../docs/framework/wcf/feature-details/message-security-with-issued-tokens.md)  
@@ -71,7 +71,7 @@ ms.locfileid: "59199275"
   
  [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
- [Проверка подлинности](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ [Authentication](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
  [Авторизация](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   

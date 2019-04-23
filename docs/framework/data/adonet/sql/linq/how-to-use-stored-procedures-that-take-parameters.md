@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
 ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181770"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Практическое руководство. Как использовать хранимые процедуры, которые принимают параметры
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сопоставляет выходные параметры, чтобы ссылаться на параметры, а для типов значений объявляет, что параметры как допускающие значение NULL.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сопоставляет выходные параметры с параметрами, передаваемыми по ссылке, и для типов значений объявляет, что параметры могут принимать значение NULL.  
   
  Пример демонстрирует использование входного параметра в запросе, который возвращает набор строк, см. в разделе [как: Возврат наборов строк](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).  
   
@@ -44,4 +44,4 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 - [Хранимые процедуры](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
 - [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
 - [Использование допускающих значение NULL типов](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
-- [Типы значения, допускающие Null](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Типы значений, допускающие значение NULL](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

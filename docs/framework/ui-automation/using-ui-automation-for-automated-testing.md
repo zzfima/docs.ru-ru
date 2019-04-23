@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
 ms.openlocfilehash: ad5a14ed3baab5b25cb1ed15271474580faaf176
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183980"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Использование Автоматизации Пользовательского Интерфейса для автоматизированного тестирования
@@ -19,9 +19,9 @@ ms.locfileid: "59183980"
   
  В этом обзоре описывается, как можно использовать [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] в качестве платформы для программного доступа в скриптах автоматического тестирования.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] предоставляет унифицированную объектную модель, поддерживающую все [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] платформы для представления сложных и широких функциональных возможностей доступным и легко автоматизируемым образом.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] предоставляет унифицированную объектную модель, поддерживающую все платформы [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] для представления сложных и широких функциональных возможностей доступным и легко автоматизируемым образом.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] был разработан для замены [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] Существующая платформа предназначена для предоставления решения по обеспечению доступности приложений и элементов управления. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] не было разработано с автоматизации тестирования, несмотря на то, что она стала выполнять эту роль из-за очень схожих требований доступности и автоматизации. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], помимо предоставления более качественных решений для специальных возможностей, также разработан специально для предоставления надежной функциональности для автоматического тестирования. Например, [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] опирается на единый интерфейс и для предоставления сведений о пользовательском интерфейсе, и для сбора сведений, необходимых для продуктов автоматического тестирования; [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] разделяет эти две модели.  
+ Модель[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] была разработана для замены [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] — это существующая платформа, предназначенная для предоставления решения по обеспечению доступности приложений и элементов управления. Модель[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] не разрабатывалась для автоматизации тестирования, хотя и стала выполнять эту роль из-за очень схожих требований доступности и автоматизации. Помимо предоставления более качественных решений для специальных возможностей, модель[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]также специально разрабатывалась в целях предоставления надежной функциональности для автоматического тестирования. Например, [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] опирается на единый интерфейс и для предоставления сведений о пользовательском интерфейсе, и для сбора сведений, необходимых для продуктов автоматического тестирования; [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] разделяет эти две модели.  
   
  Чтобы модель [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] можно было использовать в качестве средства автоматических тестов, для ее реализации требуется как клиент, так и поставщик. Поставщики автоматизации пользовательского интерфейса — это приложения, такие как Microsoft Word, Excel, а также другие сторонние приложения или элементы управления на основе операционной системы [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] . Клиенты автоматизации пользовательского интерфейса включают скрипты автоматических тестов приложения и приложения специальных возможностей.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "59183980"
   
 <a name="Programmatic_Access"></a>   
 ### <a name="programmatic-access"></a>Программный доступ  
- Программный доступ предоставляет возможность имитировать через код любое взаимодействие, обеспечиваемое традиционным вводом с помощью мыши и клавиатуры. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] обеспечивает программный доступ через пять компонентов:  
+ Программный доступ предоставляет возможность имитировать через код любое взаимодействие, обеспечиваемое традиционным вводом с помощью мыши и клавиатуры. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] обеспечивает программный доступ с помощью пяти следующих компонентов.  
   
 -   Дерево [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] упрощает навигацию по структуре [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Это дерево строится из коллекции hWnd. Дополнительные сведения см. в разделе [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "59183980"
  Возможность уникально идентифицировать и затем находить любой элемент управления в [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] служит основой для работы приложений автоматизированного тестирования в этом [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Существует несколько свойств [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] , используемых клиентами и поставщиками, которые помогают в этом.  
   
 #### <a name="automationid"></a>AutomationId  
- Уникально идентифицирует элемент автоматизации среди элементов того же уровня. <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> не локализован, в отличие от свойства, такие как <xref:System.Windows.Automation.AutomationElement.NameProperty> , обычно локализуемые, если продукт получает поставляется на нескольких языках. См. раздел [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md).  
+ Уникально идентифицирует элемент автоматизации среди элементов того же уровня. Элемент<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> не локализован, в отличие от свойства, такого как <xref:System.Windows.Automation.AutomationElement.NameProperty> , которое обычно локализуется, если продукт поставляется на нескольких языках. См. раздел [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md).  
   
 > [!NOTE]
 >  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> не гарантирует уникальную идентификацию по всему дереву автоматизации. Например, приложение может содержать элемент управления меню с несколькими пунктами меню верхнего уровня, которые, в свою очередь, имеют несколько дочерних пунктов меню. Эти пункты меню второго уровня могут идентифицироваться по универсальной схеме, такой как "элемент1, элемент2, элемент3 и т. д.", что допускает повторяющиеся идентификаторы дочерних элементов в разных пунктах меню верхнего уровня.  
@@ -85,7 +85,7 @@ ms.locfileid: "59183980"
  Определяет тип элемента управления, представленного элементом автоматизации. Из знания типа элемента управления могут быть получены важные сведения. См. раздел [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md).  
   
 #### <a name="nameproperty"></a>NameProperty  
- Это текстовая строка, которая определяет или описывает элемент управления. <xref:System.Windows.Automation.AutomationElement.NameProperty> следует использовать с осторожностью, так как оно может быть локализовано. См. раздел [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ Это текстовая строка, которая определяет или описывает элемент управления. Свойство<xref:System.Windows.Automation.AutomationElement.NameProperty> следует использовать с осторожностью, поскольку оно может быть локализовано. См. раздел [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
   
 <a name="Steps_Required_To_Automate_the_UI_in_a_Test_Application"></a>   
 ### <a name="implementing-ui-automation-in-a-test-application"></a>Реализация автоматизации пользовательского интерфейса в тестовом приложении  

@@ -3,14 +3,14 @@ title: Упрощенная конфигурация
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
 ms.openlocfilehash: 13cf8bd46ef3aabb011cb2ddd207963235468662
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184058"
 ---
 # <a name="simplified-configuration"></a>Упрощенная конфигурация
-Настройка служб Windows Communication Foundation (WCF) может оказаться сложной задачей. Разных параметров много, и не всегда легко понять, какие настройки необходимы. Хотя файлы конфигурации и увеличивают гибкость служб WCF, они также являются источником многих трудно обнаруживаемых проблем. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] устраняет эти проблемы и предоставляет способ уменьшить размер и сложность конфигурации службы.  
+Настройка служб Windows Communication Foundation (WCF) может оказаться сложной задачей. Разных параметров много, и не всегда легко понять, какие настройки необходимы. Хотя файлы конфигурации и увеличивают гибкость служб WCF, они также являются источником многих трудно обнаруживаемых проблем. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] устраняет эти проблемы, предоставляя способ уменьшить размер и упростить конфигурацию службы.  
   
 ## <a name="simplified-configuration"></a>Упрощенная конфигурация  
  В файлах конфигурации службы WCF <`system.serviceModel`> содержит раздел <`service`> для каждой размещенной службы. <`service`> Элемент содержит коллекцию элементов <`endpoint`> элементы, которые определяют конечные точки, открытые для каждой службы и по желанию набор поведений службы. <`endpoint`> Элементы указывают адрес, привязку и контракт, открытые в конечной точке и при необходимости конфигурацию привязки и поведения конечной точки. <`system.serviceModel`> Раздел также содержит <`behaviors`> элемент, позволяющий указать поведение служб или конечной точки. В следующем примере показан <`system.serviceModel`> раздел файла конфигурации.  
@@ -120,4 +120,4 @@ ms.locfileid: "59184058"
 - [Настройка привязок, предоставляемых системой](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Настройка служб](../../../docs/framework/wcf/configuring-services.md)
 - [Настройка служб WCF](configuring-services.md)
-- [Настройка служб WCF в коде](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)
+- [Настройка служб WCF в коде](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

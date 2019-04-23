@@ -3,10 +3,10 @@ title: ServiceDescription и справочная информация о WSDL
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
 ms.openlocfilehash: 6690bea3d3df0f39a5581c3a6c14723c0f30f40c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182888"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription и справочная информация о WSDL
@@ -50,7 +50,7 @@ ms.locfileid: "59182888"
 |----------------|------------------|  
 |`Name`|Используется в имени по умолчанию конечной точки, которое состоит из имени привязки и имени контракта, разделенных символом подчеркивания.|  
 |`Namespace`|`targetNamespace` для определения `wsdl:binding`.<br /><br /> При импорте, если политика прикреплена к порту WSDL, импортируемое пространство имен привязки сопоставляется с `targetNamespace` для определения `wsdl:port`.|  
-|`BindingElementCollection`, возвращенный `CreateBindingElements`метод)|Различные зависящие от домена расширения определения `wsdl:binding`, обычно утверждения политики.|  
+|`BindingElementCollection`, возвращаемое методом `CreateBindingElements`()|Различные зависящие от домена расширения определения `wsdl:binding`, обычно утверждения политики.|  
 |`MessageVersion`|`EnvelopeVersion` и `AddressingVersion` для конечной точки.<br /><br /> Если задано свойство `MessageVersion.None`, привязка WSDL не содержит привязки SOAP, а порт WSDL не содержит данных о WS-Addressing. Этот вариант обычно используется для конечных точек POX (передающих сообщения в формате "plain old XML").|  
   
 #### <a name="bindingelements"></a>BindingElements  

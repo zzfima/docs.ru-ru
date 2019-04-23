@@ -9,10 +9,10 @@ helpviewer_keywords:
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
 ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182472"
 ---
 # <a name="path-animations-overview"></a>Общие сведения об анимация с использованием пути
@@ -45,11 +45,11 @@ ms.locfileid: "59182472"
   
  Классы анимации по контуру принадлежат <xref:System.Windows.Media.Animation> пространства имен и используется следующее соглашение об именовании:  
   
- *\<Тип >* `AnimationUsingPath`  
+ *\<Тип>* `AnimationUsingPath`  
   
  Где *\<Type>* — тип значения, которое выполняет анимацию класса.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет классы анимации по следующему пути.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет следующие классы анимации по контуру.  
   
 |Тип свойства|Соответствующий класс анимации по контуру|Пример|  
 |-------------------|----------------------------------------|-------------|  
@@ -93,6 +93,6 @@ ms.locfileid: "59182472"
 
 - [Пример анимации вдоль пути](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [Синтаксис разметки пути](path-markup-syntax.md)
-- [Практические руководства, посвященные анимации пути](path-animation-how-to-topics.md)
+- [Практические руководства, посвященные анимации по контуру](path-animation-how-to-topics.md)
 - [Общие сведения об эффектах анимации](animation-overview.md)
 - [Общие сведения о методах анимации свойств](property-animation-techniques-overview.md)
