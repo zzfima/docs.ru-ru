@@ -7,10 +7,10 @@ helpviewer_keywords:
 - data grids [Windows Forms], resizing columns and rows
 ms.assetid: 7532764d-e5c1-4943-a08b-6377a722d3b6
 ms.openlocfilehash: e1fa2d57cfb2cd374d691fe03a0e0bdbd3ad7141
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138116"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Изменение размера столбцов и строк элемента управления DataGridView в Windows Forms
@@ -30,10 +30,10 @@ ms.locfileid: "59138116"
  [Практическое руководство. Режимы изменения размеров элемента управления DataGridView в Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
  В этой статье описывается настройка режимы установки размеров для общих целей.  
   
- [Практическое руководство. Программное изменение размера ячеек элемента управления DataGridView в соответствии с размером отображаемых данных в Windows Forms](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
+ [Практическое руководство. Программное изменение размера ячеек в соответствии с размером в элементе управления DataGridView Windows Forms](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
  Предоставляет демонстрационный код, который можно использовать для экспериментов с программного изменения размеров.  
   
- [Практическое руководство. Автоматическое изменение размера ячеек при изменении содержимого в элементе управления DataGridView в Windows Forms](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
+ [Практическое руководство. Автоматическое изменение размера ячеек при изменении содержимого в элементе управления DataGridView Windows Forms](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
  Предоставляет демонстрационный код, который можно использовать для экспериментов с режимами автоматического изменения размера.  
   
 ## <a name="reference"></a>Ссылка  

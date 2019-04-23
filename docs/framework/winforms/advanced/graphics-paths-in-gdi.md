@@ -11,10 +11,10 @@ helpviewer_keywords:
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
 ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140508"
 ---
 # <a name="graphics-paths-in-gdi"></a>Контуры в GDI+
@@ -70,6 +70,6 @@ ms.locfileid: "59140508"
 
 - <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
 - <xref:System.Drawing.Point?displayProperty=nameWithType>
-- [Прямые и кривые линии и фигуры](lines-curves-and-shapes.md)
-- [Практическое руководство. Создание графических объектов для рисования](how-to-create-graphics-objects-for-drawing.md)
+- [Линии, кривые и фигуры](lines-curves-and-shapes.md)
+- [Практическое руководство. Создание объектов Graphics для рисования](how-to-create-graphics-objects-for-drawing.md)
 - [Построение и рисование контуров](constructing-and-drawing-paths.md)

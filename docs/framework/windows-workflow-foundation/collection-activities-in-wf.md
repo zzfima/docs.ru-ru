@@ -3,14 +3,14 @@ title: Действия коллекции в WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
 ms.openlocfilehash: 6e4b9ce6f967ba9405f55dbf5fd4708d3319b458
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133793"
 ---
 # <a name="collection-activities-in-wf"></a>Действия коллекции в WF
-Действия коллекции используются для работы с объектами коллекции в рамках рабочего процесса. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] имеет системные действия для добавления и удаления элементов из коллекции, тестирования на наличие элемента в коллекции и очистки коллекции. `ExistsInCollection` и `RemoveFromCollection` имеют <xref:System.Activities.OutArgument%601> типа <xref:System.Boolean>, который определяет результат.  
+Действия коллекции используются для работы с объектами коллекции в рамках рабочего процесса. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] имеет системные действия для добавления элементов в коллекцию и удаления из нее, тестирования на наличие элемента в коллекции и очистки коллекции. `ExistsInCollection` и `RemoveFromCollection` имеют <xref:System.Activities.OutArgument%601> типа <xref:System.Boolean>, который определяет результат.  
   
 > [!IMPORTANT]
 >  Если действие коллекции выполняется до задания базового объекта коллекции, то формируется исключение <xref:System.InvalidOperationException> и действие завершается ошибкой.  
@@ -225,7 +225,7 @@ Activity wf = new Sequence
 </Sequence>  
 ```  
   
- Перечисленные выше образцы кода также могут создаваться с использованием <xref:Microsoft.CSharp.Activities.CSharpValue%601> вместо <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
+ Перечисленные выше образцы кода можно также создать с помощью <xref:Microsoft.CSharp.Activities.CSharpValue%601> вместо <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
   
 ```csharp
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -427,4 +427,4 @@ Activity wf = new Sequence
   
 ## <a name="see-also"></a>См. также
 
-- [Разработка рабочих процессов, действий и выражений с помощью императивного кода](authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [Разработка рабочих процессов, действий и выражений с использованием императивного кода](authoring-workflows-activities-and-expressions-using-imperative-code.md)

@@ -20,10 +20,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: afb31646d21ec7e15f79601f5fe83ea6ce44fa90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134684"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>Метод ICoreClrDebugTarget::EnumRuntimes
@@ -54,7 +54,7 @@ HRESULT EnumRuntimes (
  Выполнено.  
   
  S_FALSE  
- `dwInternalProcessID` не соответствует любой процесс, который выполняется на компьютере, возможно, так как процесс был прерван. `pcRuntimes` и `ppRuntimes` будет иметь значение null.  
+ `dwInternalProcessID` не соответствует ни одному процессу, который выполняется на компьютере, возможно потому, что этот процесс был завершен. `pcRuntimes` и `ppRuntimes` будут иметь значение null.  
   
  E_OUTOFMEMORY  
  Не удается выделить достаточно памяти для `ppRuntimes`.  

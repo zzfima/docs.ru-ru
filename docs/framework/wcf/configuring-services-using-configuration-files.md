@@ -5,10 +5,10 @@ helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
 ms.openlocfilehash: 144d2b6732ea319ba920317601eff2ebd7b58322
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132578"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Настройка служб с использованием файлов конфигурации
@@ -91,7 +91,7 @@ ms.locfileid: "59132578"
   
 -   `contract`. Задает интерфейс, определяющий контракт. Это интерфейс, реализованный в типе CLR, который задан атрибутом `name` элемента `service` .  
   
--   [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md)  
+-   [\<Конечная точка >](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
 ### <a name="the-bindings-element"></a>\<Привязки > элемент  
  Элемент `bindings` содержит спецификации для всех привязок, которые могут использоваться любой конечной точкой, заданной в любой службе.  

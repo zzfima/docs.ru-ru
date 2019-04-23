@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms dialog boxes [Windows Forms], tabs
 ms.assetid: 2b4ea784-a39d-463c-81d8-af74ce068476
 ms.openlocfilehash: 4511882aa4c7804e535f228dd150c26a8f7689f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140885"
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>Общие сведения об элементе управления TabControl (Windows Forms)
@@ -28,6 +28,6 @@ ms.locfileid: "59140885"
 - [Элемент управления TabControl](tabcontrol-control-windows-forms.md)
 - [Практическое руководство. Изменение внешнего вида элемента управления TabControl в Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
 - [Практическое руководство. Добавление элемента управления на вкладку](how-to-add-a-control-to-a-tab-page.md)
-- [Практическое руководство. Добавление и удаление вкладок с помощью элемента управления TabControl в Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Практическое руководство. Добавление и удаление вкладок с помощью Windows Forms TabControl](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
 - [Практическое руководство. Блокировка доступа ко вкладкам](how-to-disable-tab-pages.md)
 - [Диалоговые окна в Windows Forms](../dialog-boxes-in-windows-forms.md)

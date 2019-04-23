@@ -3,16 +3,16 @@ title: Система типов (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
 ms.openlocfilehash: 0afeffd3ad180d6cc6175010140754e279988b38
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134567"
 ---
 # <a name="type-system-entity-sql"></a>Система типов (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает несколько типов:  
   
--   Примитив (простое) типы, такие как `Int32` и `String.`  
+-   Типы-примитивы (простые типы), такие как `Int32` и `String.`  
   
 -   Номинальные типы, которые определяются в схеме, например <xref:System.Data.Metadata.Edm.EntityType>, <xref:System.Data.Metadata.Edm.ComplexType> и <xref:System.Data.Metadata.Edm.RelationshipType>.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "59134567"
 ## <a name="references"></a>Ссылки  
  Ссылка - это логический указатель на отдельную сущность в определенном наборе сущностей.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает следующие операторы для конструирования, деконструирования и перехода по ссылкам:  
+ Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает следующие операторы для конструирования, деконструирования и перехода по ссылкам.  
   
 -   [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)  
   

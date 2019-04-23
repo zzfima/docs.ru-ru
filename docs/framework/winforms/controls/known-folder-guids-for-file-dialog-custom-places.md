@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
 ms.openlocfilehash: 0f06ca2251ae1bf9bd5e199562eff116614e7117
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140235"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>Известные GUID папок для пользовательских размещений, отображаемых в диалоговом окне открытия или сохранения файла
@@ -289,4 +289,4 @@ ms.locfileid: "59140235"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [Как выполнить: Добавление пользовательского размещения в диалоговое окно сохранения или открытия файла](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [Практическое руководство. Добавление пользовательских размещений в диалоговое окно файла](how-to-add-a-custom-place-to-a-file-dialog-box.md)

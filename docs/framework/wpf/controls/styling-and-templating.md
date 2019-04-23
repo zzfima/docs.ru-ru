@@ -16,14 +16,14 @@ helpviewer_keywords:
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
 ms.openlocfilehash: 3fae4993a13b02ad998668f644a80ba7c07196fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132303"
 ---
 # <a name="styling-and-templating"></a>Стилизация и использование шаблонов
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Стилизация и использование шаблонов относятся к набору возможностей (стили, шаблоны, триггеры и раскадровки), которые позволяют разработчикам и дизайнерам создавать визуально привлекательные эффекты и создавать согласованный внешний вид своего продукта. Несмотря на то что разработчики и дизайнеры могут создавать внешний вид отдельно для каждого приложения, надежная модель стилизации и использования шаблонов необходима для поддержки и совместного использования внешнего вида как внутри одного приложения, так и в ряде приложений. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет такую модель.  
+Стилизация и использование шаблонов [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] относятся к набору возможностей (стили, шаблоны, триггеры и раскадровки), которые позволяют разработчикам и дизайнерам создавать визуально привлекательные эффекты, а также создавать согласованный внешний вид своих продуктов. Несмотря на то что разработчики и дизайнеры могут создавать внешний вид отдельно для каждого приложения, надежная модель стилизации и использования шаблонов необходима для поддержки и совместного использования внешнего вида как внутри одного приложения, так и в ряде приложений. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет такую модель.  
   
  Еще одной возможностью модели стилизации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] является разделение представления и логики. Это означает, что дизайнеры могут создавать внешний вид приложения только с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] в то же самое время, когда разработчики работают над логикой программы, используя языки C# или Visual Basic.  
   
@@ -199,5 +199,5 @@ ms.locfileid: "59132303"
 ## <a name="see-also"></a>См. также
 
 - [URI типа "pack" в WPF](../app-development/pack-uris-in-wpf.md)
-- [Практическое руководство. Поиск элемента, созданного шаблоном ControlTemplate](how-to-find-controltemplate-generated-elements.md)
+- [Практическое руководство. Найти, созданного шаблоном ControlTemplate](how-to-find-controltemplate-generated-elements.md)
 - [Поиск элементов, созданных с использованием шаблона DataTemplate](../data/how-to-find-datatemplate-generated-elements.md)

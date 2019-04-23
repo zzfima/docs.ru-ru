@@ -3,10 +3,10 @@ title: Одновременное выполнение в ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
 ms.openlocfilehash: a8747d749ed7e751ba577a2cd29c2048065f2645
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136764"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Одновременное выполнение в ADO.NET
@@ -15,7 +15,7 @@ ms.locfileid: "59136764"
  Приложение, скомпилированное при помощи одной версии платформы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], может работать на другой версии [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Однако рекомендуется компилировать разные версии приложения для каждой установленной версии [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] и выполнять их по отдельности. В любом случае следует знать, какие изменения вносятся в разные версии [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], которые могут повлиять на прямую и обратную совместимость приложения.  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>Прямая и обратная совместимость  
- Прямая совместимость означает, что приложение может быть скомпилировано в более ранней версии [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], но по-прежнему будет работать в более поздней версии [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] код, написанный для [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.1, обладает прямой совместимостью с более поздними версиями.  
+ Прямая совместимость означает, что приложение может быть скомпилировано в более ранней версии [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], но по-прежнему будет работать в более поздней версии [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Код [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], написанный для [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.1, имеет прямую совместимость с более поздними версиями.  
   
  Обратная совместимость означает, что приложение, скомпилированное для более новой версии [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], будет работать и на предыдущих версиях [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] без потери функциональности. Разумеется, возможности, появившиеся в новой версии [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], при этом будут недоступны.  
   
@@ -66,6 +66,6 @@ SET NOCOUNT OFF;
   
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения о ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Общие сведения об ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

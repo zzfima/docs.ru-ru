@@ -3,10 +3,10 @@ title: Оснастка консоли MMC для конфигурации WS-At
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
 ms.openlocfilehash: b1d86fa57b31d1f9be12f76c28f9d042e7e28e24
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138213"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Оснастка консоли MMC для конфигурации WS-AtomicTransaction
@@ -89,5 +89,5 @@ regasm.exe /codebase WsatUI.dll
 ## <a name="see-also"></a>См. также
 
 - [Настройка поддержки транзакций WS-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
-- [Программа конфигурации WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [Служебная программа конфигурации WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
 - [Администрирование и диагностика](../../../docs/framework/wcf/diagnostics/index.md)

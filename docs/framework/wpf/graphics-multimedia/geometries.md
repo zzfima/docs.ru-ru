@@ -10,10 +10,10 @@ helpviewer_keywords:
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
 ms.openlocfilehash: 57e32d3e56c3f319f7ee8aa58020d37e46a6454d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140222"
 ---
 # <a name="geometries"></a>Геометрия
@@ -22,7 +22,7 @@ ms.locfileid: "59140222"
 ## <a name="in-this-section"></a>В этом разделе  
  [Синтаксис разметки пути](path-markup-syntax.md)  
  [Общие сведения о классе Geometry](geometry-overview.md)  
- [Практические руководства](geometries-how-to-topics.md)  
+ [Разделы практического руководства](geometries-how-to-topics.md)  
   
 ## <a name="see-also"></a>См. также
 

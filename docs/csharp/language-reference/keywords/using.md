@@ -1,29 +1,26 @@
 ---
 title: Справочник по C#. Ключевое слово using
-ms.custom: seodec18
-ms.date: 07/20/2015
+ms.custom: seoapril2019
+ms.date: 04/05/2019
 f1_keywords:
 - using_CSharpKeyword
 - using
 helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
-ms.openlocfilehash: 4fcd46b5f532a1b9cb1df910dd9c99b27ec9f29a
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 07563d32b176832966ab50942cda2b0b26b80e44
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611390"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59137973"
 ---
 # <a name="using-c-reference"></a>using (справочник по C#)
 
-Ключевое слово `using` имеет два основных применения:
-
-- В качестве директивы, если используется при создании псевдонима для пространства имен или при импорте типов, определенных в других пространствах имен. См. раздел [Директива using](using-directive.md).
-
-- В качестве оператора, если определяет область, по завершении которой объект удаляется. См. раздел [Оператор using](using-statement.md).
-
-Кроме того, директива [using static](using-static.md) позволяет определить тип, доступ к статическим членам которого можно получить, не указывая имя типа.
+Ключевое слово `using` имеет три основных применения:
+- [Инструкция using](using-statement.md) определяет область, по завершении которой объект удаляется. 
+- [Директива](using-directive.md) using создает псевдоним для пространства имен или импортирует типы, определенные в других пространствах имен. 
+- [Директива using static](using-static.md) импортирует элементы из одного класса.
 
 ## <a name="see-also"></a>См. также
 

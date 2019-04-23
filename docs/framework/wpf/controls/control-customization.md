@@ -8,10 +8,10 @@ helpviewer_keywords:
 - controls [WPF], customization
 ms.assetid: a3d9930e-5597-470e-a636-dcf65eac500b
 ms.openlocfilehash: b70a6654e5c3722ad1ef1d926ee3a441d24d9e68
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135386"
 ---
 # <a name="control-customization"></a>Настройка элементов управления
@@ -21,7 +21,7 @@ ms.locfileid: "59135386"
  [Общие сведения о разработке элементов управления](control-authoring-overview.md)  
  [Рекомендации по разработке элементов управления с возможностью использования стилей](guidelines-for-designing-stylable-controls.md)  
  [Декоративные элементы](adorners.md)  
- [Стили и шаблоны элемента Control](control-styles-and-templates.md)  
+ [Стили и шаблоны элемента управления](control-styles-and-templates.md)  
  [Модель автоматизации пользовательского интерфейса пользовательского элемента управления WPF](ui-automation-of-a-wpf-custom-control.md)  
   
 ## <a name="see-also"></a>См. также

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
 ms.openlocfilehash: a174b6ae60f87e91e6f97e8fa7f8ad3892ef017a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132942"
 ---
 # <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a>Практическое руководство. Переход по заданному URL с помощью элемента управления WebBrowser
@@ -48,4 +48,4 @@ this.webBrowser1.Navigate("http://www.microsoft.com");
 - <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.WebBrowser.Navigated?displayProperty=nameWithType>
 - [Элемент управления WebBrowser](webbrowser-control-windows-forms.md)
-- [Практическое руководство. Печать с использованием элемента управления WebBrowser](how-to-print-with-a-webbrowser-control.md)
+- [Практическое руководство. Печать с элементом управления WebBrowser](how-to-print-with-a-webbrowser-control.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to DBNull values
 ms.assetid: 96494e6f-5f40-4f83-af97-bbd7192c2af8
 ms.openlocfilehash: cc3dde0db3dad6faff548951ff06a39d23248d53
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137765"
 ---
 # <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Практическое руководство. Привязка элементов управления Windows Forms к значениям DBNull
@@ -37,5 +37,5 @@ ms.locfileid: "59137765"
 ## <a name="see-also"></a>См. также
 
 - [Компонент BindingSource](bindingsource-component.md)
-- [Практическое руководство. Обработка ошибок и исключений, происходящих при связывании элементов управления с данными](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
-- [Практическое руководство. Связывание элемента управления с типом в Windows Forms](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Практическое руководство. Обработка ошибок и исключений, происходящих при выполнении привязки данных](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [Практическое руководство. Привязка элемента управления Windows Forms к типу](how-to-bind-a-windows-forms-control-to-a-type.md)

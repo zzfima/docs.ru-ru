@@ -3,10 +3,10 @@ title: Извлечение сведений о схеме базы данных
 ms.date: 03/30/2017
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
 ms.openlocfilehash: 885d3c9ad61c9099c960ddb0c0f77fa8a98dbefa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133709"
 ---
 # <a name="retrieving-database-schema-information"></a>Извлечение сведений о схеме базы данных
@@ -31,7 +31,7 @@ ms.locfileid: "59133709"
  [Коллекции схемы SQL Server](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)  
  Описывается коллекция схем, поддерживаемая поставщиком .NET Framework для SQL Server.  
   
- [Коллекции схемы в Oracle](../../../../docs/framework/data/adonet/oracle-schema-collections.md)  
+ [Коллекции схемы Oracle](../../../../docs/framework/data/adonet/oracle-schema-collections.md)  
  Описывается коллекция схем, поддерживаемая поставщиком .NET Framework для Oracle.  
   
  [Коллекции схемы ODBC](../../../../docs/framework/data/adonet/odbc-schema-collections.md)  
@@ -74,4 +74,4 @@ ms.locfileid: "59133709"
 ## <a name="see-also"></a>См. также
 
 - [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

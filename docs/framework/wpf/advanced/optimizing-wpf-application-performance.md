@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
 ms.openlocfilehash: 53291a0e428b723cd7a6e7b1184639a7b3c3b972
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141561"
 ---
 # <a name="optimizing-wpf-application-performance"></a>Улучшение производительности приложений WPF
@@ -33,7 +33,7 @@ ms.locfileid: "59141561"
   
  [Ресурсы приложений](optimizing-performance-application-resources.md)  
   
- [Текста](optimizing-performance-text.md)  
+ [Text](optimizing-performance-text.md)  
   
  [Привязка данных](optimizing-performance-data-binding.md)  
   
@@ -62,4 +62,4 @@ ms.locfileid: "59141561"
 - [Общие сведения о привязке данных](../data/data-binding-overview.md)
 - [Общие сведения о переходах](../app-development/navigation-overview.md)
 - [Советы и рекомендации по анимации](../graphics-multimedia/animation-tips-and-tricks.md)
-- [Пошаговое руководство. Кэширование данных приложения WPF](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Пошаговое руководство: Кэширование данных приложения WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

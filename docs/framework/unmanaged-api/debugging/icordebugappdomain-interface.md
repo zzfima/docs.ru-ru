@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 40619aa40f9924d94c82541eb8d30790e774a675
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141509"
 ---
 # <a name="icordebugappdomain-interface"></a>Интерфейс ICorDebugAppDomain
@@ -35,7 +35,7 @@ ms.locfileid: "59141509"
 |[Метод EnumerateAssemblies](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-enumerateassemblies-method.md)|Получает перечислитель для сборок в домене приложения.|  
 |[Метод EnumerateBreakpoints](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-enumeratebreakpoints-method.md)|Возвращает перечислитель для всех активных точек останова в домене приложения.|  
 |[Метод EnumerateSteppers](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-enumeratesteppers-method.md)|Возвращает перечислитель для всех активных средств организации пошагового режима в домене приложения.|  
-|[Метод GetID](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-getid-method.md)|Получает уникальный идентификатор домена приложения.|  
+|[Метод GetId](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-getid-method.md)|Получает уникальный идентификатор домена приложения.|  
 |[Метод GetModuleFromMetaDataInterface](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-getmodulefrommetadatainterface-method.md)|Получает объект ICorDebugModule с интерфейсом указанных метаданных.|  
 |[Метод GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-getname-method.md)|Возвращает имя домена приложения.|  
 |[Метод GetObject](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-getobject-method.md)|Получает указатель интерфейса на домен приложения среды выполнения (CLR).|  

@@ -1,12 +1,12 @@
 ---
-title: <add> Элемент для schemeSettings (параметры Uri)
+title: Элемент <add> для schemeSettings (параметры URI)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
 ms.openlocfilehash: e7606a1185d406384a926ca4dcb7c42586461574
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139936"
 ---
 # <a name="add-element-for-schemesettings-uri-settings"></a>\<Добавить > элемент для schemeSettings (параметры Uri)
@@ -48,7 +48,7 @@ ms.locfileid: "59139936"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<schemeSettings > (параметры Uri)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Определяет, как <xref:System.Uri> анализируется для определенных схем.|  
+|[Элемент \<schemeSettings> (параметры URI)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Определяет, как <xref:System.Uri> анализируется для определенных схем.|  
   
 ## <a name="remarks"></a>Примечания  
  По умолчанию <xref:System.Uri?displayProperty=nameWithType> знаком процента Отмена переходов класс разделители пути до выполнения сжатия пути. Это было реализовано в качестве механизма защиты от атак, следующим образом:  

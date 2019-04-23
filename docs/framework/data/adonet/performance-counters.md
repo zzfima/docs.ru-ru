@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
 ms.openlocfilehash: e7e7ba379f6f92f3ba8fba55f22c8eaec81ab1cf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133891"
 ---
 # <a name="performance-counters-in-adonet"></a>Счетчики производительности в ADO.NET
@@ -397,8 +397,8 @@ class Program
 ## <a name="see-also"></a>См. также
 
 - [Подключение к источнику данных](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [OLE DB, ODBC и объединение подключений в пул в Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
+- [Организация пулов соединений OLE DB, ODBC и Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
 - [Счетчики производительности для ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
 - [Профилирование среды выполнения](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)
 - [Введение в мониторинг пороговых значений производительности](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
-- [Общие сведения о ADO.NET](ado-net-overview.md)
+- [Общие сведения об ADO.NET](ado-net-overview.md)

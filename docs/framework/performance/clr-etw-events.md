@@ -9,10 +9,10 @@ ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cb7520518497b244be8be3751ca8a3063a02717a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135867"
 ---
 # <a name="clr-etw-events"></a>События трассировки событий Windows в среде CLR
@@ -31,7 +31,7 @@ ms.locfileid: "59135867"
  [Событие ExceptionThrown_V1](../../../docs/framework/performance/exception-thrown-v1-etw-event.md)  
  Захватывает информацию о сгенерированных исключениях.  
   
- [События состязания](../../../docs/framework/performance/contention-etw-events.md)  
+ [События конфликтов](../../../docs/framework/performance/contention-etw-events.md)  
  Захватывают информацию о конкуренции за блокировки мониторинга или неуправляемые блокировки, используемые исполняющей средой.  
   
  [События пула потоков](../../../docs/framework/performance/thread-pool-etw-events.md)  
@@ -66,6 +66,6 @@ ms.locfileid: "59135867"
 - [Улучшение отладки и настройки производительности с помощью ETW](https://go.microsoft.com/fwlink/?LinkId=179696)
 - [Блог, посвященный производительности Windows](https://go.microsoft.com/fwlink/?LinkId=179509)
 - [Контроль ведения журнала .NET Framework](../../../docs/framework/performance/controlling-logging.md)
-- [Поставщики ETW среды CLR](../../../docs/framework/performance/clr-etw-providers.md)
+- [Поставщики трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-providers.md)
 - [Ключевые слова и уровни среды CLR (трассировка событий Windows)](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)
 - [События в среде CLR (трассировка событий Windows)](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

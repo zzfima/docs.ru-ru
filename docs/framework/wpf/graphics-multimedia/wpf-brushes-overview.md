@@ -8,10 +8,10 @@ helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
 ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132214"
 ---
 # <a name="wpf-brushes-overview"></a>Общие сведения о кистях WPF
@@ -165,10 +165,10 @@ ms.locfileid: "59132214"
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
 - [Общие сведения о закраске сплошным цветом и градиентом](painting-with-solid-colors-and-gradients-overview.md)
-- [Рисование с помощью объектов Image, Drawing и Visual](painting-with-images-drawings-and-visuals.md)
+- [Заполнение с использованием изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md)
 - [Общие сведения об объектах класса Freezable](../advanced/freezable-objects-overview.md)
 - [Пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [Пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [Пример использования VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [Практические руководства](brushes-how-to-topics.md)
+- [Разделы практического руководства](brushes-how-to-topics.md)
 - [Дополнительные рекомендации по повышению производительности](../advanced/optimizing-performance-other-recommendations.md)

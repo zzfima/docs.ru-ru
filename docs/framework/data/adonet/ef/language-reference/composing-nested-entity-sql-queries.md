@@ -3,14 +3,14 @@ title: Составление вложенных запросов Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
 ms.openlocfilehash: 4d6892e96cfbc9c5ba9d389aa03588c5133c7943
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137986"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Составление вложенных запросов Entity SQL
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] — это богатый функциональный язык. Строительный блок [!INCLUDE[esql](../../../../../../includes/esql-md.md)] — это выражение. В отличие от обычного языка SQL [!INCLUDE[esql](../../../../../../includes/esql-md.md)] не ограничивается табличного результирующего набора: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает создание сложных выражений, которые могут присутствовать литералы, параметры или вложенные выражения. Значение в выражении может быть параметризованным или состоящих из другого выражения.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] - это богатый функциональный язык. Строительный блок [!INCLUDE[esql](../../../../../../includes/esql-md.md)] — это выражение. В отличие от обычного языка SQL [!INCLUDE[esql](../../../../../../includes/esql-md.md)] не ограничивается табличного результирующего набора: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает создание сложных выражений, которые могут присутствовать литералы, параметры или вложенные выражения. Значение в выражении может быть параметризованным или состоящих из другого выражения.  
   
 ## <a name="nested-expressions"></a>Вложенные выражения  
  Вложенное выражение можно разместить в любом месте, где допустим тип возвращаемого им значения. Пример:  

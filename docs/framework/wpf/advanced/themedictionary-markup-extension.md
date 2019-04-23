@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
 ms.openlocfilehash: ad2248c791fadc5363d90ff496d5e040f6036ab3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132097"
 ---
 # <a name="themedictionary-markup-extension"></a>Расширение разметки ThemeDictionary
@@ -49,9 +49,9 @@ ms.locfileid: "59132097"
   
  Синтаксис атрибутов является наиболее распространенным синтаксисом, используемым с этим расширением разметки. Строковая лексема, указываемая после строки идентификатора `ThemeDictionary`, присваивается в качестве значения <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> соответствующего класса расширения <xref:System.Windows.ThemeDictionaryExtension>.  
   
- `ThemeDictionary` может также использоваться в синтаксисе элемента объекта. В этом случае укажите значение параметра <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> свойство является обязательным.  
+ `ThemeDictionary` также можно использовать в синтаксисе элемента объекта. В этом случае укажите значение параметра <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> свойство является обязательным.  
   
- `ThemeDictionary` Можно также использовать в использовании атрибут verbose, который указывает <xref:System.Windows.Markup.StaticExtension.Member%2A> как свойство = значение пары:  
+ Излишним может оказаться и использование `ThemeDictionary` в атрибуте, в котором свойство <xref:System.Windows.Markup.StaticExtension.Member%2A> определено как пара "свойство=значение".  
   
 ```xml  
 <object property="{ThemeDictionary AssemblyName=assemblyUri}" .../>  
@@ -66,6 +66,6 @@ ms.locfileid: "59132097"
 ## <a name="see-also"></a>См. также
 
 - [Стилизация и использование шаблонов](../controls/styling-and-templating.md)
-- [Обзор XAML (WPF)](xaml-overview-wpf.md)
+- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
 - [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md)
-- [Ресурсы, Содержимое и Файлы данных WPF-приложения](../app-development/wpf-application-resource-content-and-data-files.md)
+- [Файлы ресурсов, содержимого и данных WPF-приложения](../app-development/wpf-application-resource-content-and-data-files.md)

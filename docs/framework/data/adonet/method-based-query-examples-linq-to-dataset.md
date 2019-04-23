@@ -3,10 +3,10 @@ title: Примеры запросов на основе методов (LINQ to
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
 ms.openlocfilehash: 9419bd664a0e918b1ed40e5d468d01cf724f054d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139806"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>Примеры запросов на основе методов (LINQ to DataSet)
@@ -22,7 +22,7 @@ ms.locfileid: "59139806"
  [Упорядочение](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
  Примеры в данном разделе демонстрируют, как использовать методы <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.Reverse%2A> и <xref:System.Linq.Enumerable.ThenByDescending%2A> для запроса к <xref:System.Data.DataSet> и упорядочения результатов.  
   
- [Операторы набора](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
+ [Операторы задания](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
  В примерах этого раздела показано, как использовать операторы <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Intersect%2A> и <xref:System.Linq.Enumerable.Union%2A> для сравнения на основе значений наборов и рядов данных.  
   
  [Операторы преобразования](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "59139806"
  [Операторы элементов](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  
  Примеры в данном разделе демонстрируют, как использовать методы <xref:System.Linq.Enumerable.First%2A> и <xref:System.Linq.Enumerable.ElementAt%2A> для получения элементов <xref:System.Data.DataRow> из <xref:System.Data.DataSet>.  
   
- [Статистические операторы](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
+ [Операторы статистических выражений](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
  Примеры в данном разделе демонстрируют, как использовать методы <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A> и <xref:System.Linq.Enumerable.Sum%2A> для запроса <xref:System.Data.DataSet> и статистической обработки данных.  
   
  [Join](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  

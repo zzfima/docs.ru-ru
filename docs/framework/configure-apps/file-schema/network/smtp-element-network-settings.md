@@ -1,5 +1,5 @@
 ---
-title: <smtp> (Сетевые параметры)
+title: Элемент <smtp> (параметры сети)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 ms.openlocfilehash: 1b5f7406f995a86f0a192dbf3249c067dff570ea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140378"
 ---
 # <a name="smtp-element-network-settings"></a>\<SMTP > (сетевые параметры)
@@ -57,7 +57,7 @@ ms.locfileid: "59140378"
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[\<mailSettings > (сетевые параметры)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Настраивает параметры отправки сообщений.|  
+|[Элемент \<mailSettings> (параметры сети)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Настраивает параметры отправки сообщений.|  
   
 ## <a name="example"></a>Пример  
  Следующий пример указывает соответствующие параметры SMTP для отправки электронной почты, используя сетевые учетные данные по умолчанию.  

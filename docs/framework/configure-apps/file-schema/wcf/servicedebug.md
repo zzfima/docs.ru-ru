@@ -3,10 +3,10 @@ title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
 ms.openlocfilehash: 7b7526dbcbd1948d3d8a27d146efd0462fefaca5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142848"
 ---
 # <a name="servicedebug"></a>\<serviceDebug >
@@ -74,6 +74,6 @@ ms.locfileid: "59142848"
 
 - <xref:System.ServiceModel.Configuration.ServiceDebugElement>
 - <xref:System.ServiceModel.Description.ServiceDebugBehavior>
-- [Задание и обработка сбоев в контрактах и службах](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Указание и обработка сбоев в контрактах и службах](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Обработка исключений и сбоев](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
 - [Поведение отладки службы](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)
