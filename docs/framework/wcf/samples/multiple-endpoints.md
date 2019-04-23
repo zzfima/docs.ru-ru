@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
 ms.openlocfilehash: 90b8c3cb49ff7b246b6bf7799d6b76f8549b23e5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310328"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976083"
 ---
 # <a name="multiple-endpoints"></a>Несколько конечных точек
 В образце "Несколько конечных точек" показано, как настроить несколько конечных точек на службе и как взаимодействовать с каждой конечной точкой со стороны клиента. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md). Конфигурация службы была изменена для определения двух конечных точек, которые поддерживают контракт `ICalculator`, но для которых заданы различные адреса с использованием различных привязок. Конфигурация и код клиента были изменены, чтобы он мог взаимодействовать с обеими конечными точками службы.  

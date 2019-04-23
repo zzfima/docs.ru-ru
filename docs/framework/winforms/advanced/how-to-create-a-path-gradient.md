@@ -9,19 +9,21 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186099"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975758"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Практическое руководство. Создание градиента вдоль контура
 <xref:System.Drawing.Drawing2D.PathGradientBrush> Класс позволяет настраивать то, как вы постепенно изменение цвета заливки фигуры. Например можно указать один цвет для центра контура, а другой — для границы пути. Можно также определить отдельные цвета для каждой из нескольких точек на границе пути.  
   
 > [!NOTE]
->  В [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], путь представляет собой последовательность линий и кривых, поддерживаемых <xref:System.Drawing.Drawing2D.GraphicsPath> объекта. Дополнительные сведения о [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] пути, см. в разделе [контуры в GDI +](graphics-paths-in-gdi.md) и [Constructing и рисование контуров](constructing-and-drawing-paths.md).  
-  
+>  В GDI +, путь представляет собой последовательность линий и кривых, поддерживаемых <xref:System.Drawing.Drawing2D.GraphicsPath> объекта. Дополнительные сведения о GDI + пути, см. в разделе [контуры в GDI +](graphics-paths-in-gdi.md) и [Constructing и рисование контуров](constructing-and-drawing-paths.md).  
+
+В этой статье относятся методы, вызываемые из элемента управления <xref:System.Windows.Forms.Control.Paint> обработчик событий.  
+
 ### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Заливка эллипса с градиента вдоль контура  
   
 -   В следующем примере заполняется эллипса с кисти градиента контура. Имеет значение центрального цвета на синем и граничным цветом — зеленовато-голубой. На следующем рисунке заполненного эллипса.  
@@ -30,7 +32,7 @@ ms.locfileid: "59186099"
   
      По умолчанию кисти градиента контура не распространяется за пределами границы пути. При использовании пути градиентной кисти для заливки фигуры, которая выходит за пределы границ пути области экрана за пределами контура заполняться не будет.  
   
-     На следующем рисунке показано, что происходит при изменении <xref:System.Drawing.Graphics.FillEllipse%2A> вызов в следующий код, чтобы `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
+     На следующем рисунке показано, что происходит при изменении <xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType> вызов в следующий код, чтобы `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
      ![Градиент контура выходили за пределы границ пути.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   

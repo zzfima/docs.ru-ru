@@ -12,10 +12,10 @@ ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b7380556e13e17e26ffb2f8c5fbbc7136a1fb5e9
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481331"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Развертывание .NET Framework и приложений
@@ -32,45 +32,45 @@ ms.locfileid: "59481331"
 
   - Тип установщика:
 
-    - [веб-установщик](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [веб-установщик](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable);
 
-    - [автономный установщик](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [автономный установщик](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable).
 
   - Режимы установки:
 
-    - [автоматическая установка;](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining_custom)
+    - [автоматическая установка](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining_custom);
 
-    - [отображение пользовательского интерфейса.](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining_default)
+    - [отображение пользовательского интерфейса](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining_default).
 
   - [Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)
 
-  - [Устранение неполадок заблокированных установок и удалений .NET Framework](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+  - [Устранение неполадок с заблокированными установками и удалениями .NET Framework](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
 
 - Развертывание .NET Framework с клиентским приложением (для разработчиков):
 
   - [Использование InstallShield](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield-deployment) в проекте установки и развертывания.
 
-  - [Использование приложения Visual Studio ClickOnce.](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce-deployment)
+  - [Использование приложения Visual Studio ClickOnce](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce-deployment).
 
-  - [Создание пакета установки WiX.](../../../docs/framework/deployment/deployment-guide-for-developers.md#wix)
+  - [Создание пакета установки WiX](../../../docs/framework/deployment/deployment-guide-for-developers.md#wix).
 
-  - [Использование настраиваемого установщика.](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining)
+  - [Использование настраиваемого установщика](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining).
 
   - [Дополнительные сведения](../../../docs/framework/deployment/deployment-guide-for-developers.md) для разработчиков.
 
 - Развертывание .NET Framework (для изготовителей оборудования и администраторов):
 
-  - [Комплект средств для развертывания и оценки Windows (ADK).](https://go.microsoft.com/fwlink/p/?LinkId=254976)
+  - [Комплект средств для развертывания и оценки Windows (ADK)](https://go.microsoft.com/fwlink/p/?LinkId=254976).
 
-  - [Руководство администратора.](../../../docs/framework/deployment/guide-for-administrators.md)
+  - [Руководство администратора](../../../docs/framework/deployment/guide-for-administrators.md).
 
-**Обслуживание**
+**Обслуживание**.
 
 - Общие сведения см. в [блоге по .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=254977).
 
-- [Обнаружение версий.](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
+- [Обнаружение версий](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).
 
-- [Обнаружение обновлений и пакетов обновления.](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)
+- [Обнаружение обновлений и пакетов обновления](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md).
 
 ## <a name="features-that-simplify-deployment"></a>Возможности, упрощающие развертывание
 
@@ -164,14 +164,14 @@ ms.locfileid: "59481331"
 |-----------|-----------------|
 |[Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Описывается то, как среда CLR определяет, какую сборку следует использовать для выполнения запроса привязки.|
 |[Рекомендации для загрузки сборок](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|Описывается, как избежать проблем с идентификацией типов, которые могут привести к возникновению исключений <xref:System.InvalidCastException> и <xref:System.MissingMethodException> и других ошибок.|
-|[Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)|Описывается диспетчер перезапуска, который по возможности предотвращает перезагрузки, и его преимущества для приложений, устанавливающих платформу .NET Framework.|
+|[Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)|Описывается диспетчер перезапуска, который по возможности предотвращает перезагрузки, и его преимущества для приложений, устанавливающих платформу .NET Framework.|
 |[Руководство по развертыванию для администраторов](../../../docs/framework/deployment/guide-for-administrators.md)|Описывается развертывание платформы .NET Framework и ее системных зависимостей в сети с помощью System Center Configuration Manager (SCCM).|
 |[Руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md)|Описываются способы установки .NET Framework на компьютеры пользователей вместе с приложениями.|
 |[Развертывание приложений, служб и компонентов](/visualstudio/deployment/deploying-applications-services-and-components)|Рассматриваются варианты развертывания в Visual Studio, включая инструкции по публикации приложения с помощью технологии ClickOnce и установщика Windows.|
-|[Публикация ClickOnce-приложений](/visualstudio/deployment/publishing-clickonce-applications)|Описывается, как упаковать приложение Windows Forms и развернуть его на клиентских компьютерах в сети с помощью технологии ClickOnce.|
+|[Публикация приложений ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Описывается, как упаковать приложение Windows Forms и развернуть его на клиентских компьютерах в сети с помощью технологии ClickOnce.|
 |[Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|Описывается модель "звезда", которую платформа .NET Framework использует для упаковки и развертывания ресурсов; рассматриваются соглашения об именовании ресурсов, процесс перехода на резервные ресурсы и альтернативные способы упаковки.|
 |[Развертывание приложения взаимодействия](../../../docs/framework/interop/deploying-an-interop-application.md)|Описывается поставка и установка приложений взаимодействия, которые обычно включают клиентскую сборку .NET Framework, одну или несколько сборок взаимодействия (представляющих различные библиотеки типов COM) и один или несколько зарегистрированных COM-компонентов.|
-|[Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Описывается автоматический запуск и отслеживание процесса установки .NET Framework с выводом собственного представления хода выполнения установки.|
+|[Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Описывается автоматический запуск и отслеживание процесса установки .NET Framework с выводом собственного представления хода выполнения установки.|
 
 ## <a name="see-also"></a>См. также
 
