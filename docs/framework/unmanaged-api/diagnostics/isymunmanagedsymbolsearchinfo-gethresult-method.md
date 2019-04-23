@@ -18,32 +18,32 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1534955c1f7cfd37732a08b0b33cda5bff8a8aab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113026"
 ---
-# <a name="isymunmanagedsymbolsearchinfogethresult-method"></a><span data-ttu-id="ef57d-102">Метод ISymUnmanagedSymbolSearchInfo::GetHRESULT</span><span class="sxs-lookup"><span data-stu-id="ef57d-102">ISymUnmanagedSymbolSearchInfo::GetHRESULT Method</span></span>
-<span data-ttu-id="ef57d-103">Получает значение HRESULT.</span><span class="sxs-lookup"><span data-stu-id="ef57d-103">Gets the HRESULT.</span></span>  
+# <a name="isymunmanagedsymbolsearchinfogethresult-method"></a><span data-ttu-id="4bc97-102">Метод ISymUnmanagedSymbolSearchInfo::GetHRESULT</span><span class="sxs-lookup"><span data-stu-id="4bc97-102">ISymUnmanagedSymbolSearchInfo::GetHRESULT Method</span></span>
+<span data-ttu-id="4bc97-103">Получает значение HRESULT.</span><span class="sxs-lookup"><span data-stu-id="4bc97-103">Gets the HRESULT.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ef57d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ef57d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4bc97-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4bc97-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHRESULT(  
     [out] HRESULT *phr);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ef57d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ef57d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4bc97-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="4bc97-105">Parameters</span></span>  
  `phr`  
- <span data-ttu-id="ef57d-106">[out] Указатель на значение HRESULT.</span><span class="sxs-lookup"><span data-stu-id="ef57d-106">[out] A pointer to the HRESULT.</span></span>  
+ <span data-ttu-id="4bc97-106">[out] Указатель на значение HRESULT.</span><span class="sxs-lookup"><span data-stu-id="4bc97-106">[out] A pointer to the HRESULT.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ef57d-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="ef57d-107">Return Value</span></span>  
- <span data-ttu-id="ef57d-108">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="ef57d-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4bc97-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="4bc97-107">Return Value</span></span>  
+ <span data-ttu-id="4bc97-108">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="4bc97-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ef57d-109">Требования</span><span class="sxs-lookup"><span data-stu-id="ef57d-109">Requirements</span></span>  
- <span data-ttu-id="ef57d-110">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ef57d-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4bc97-109">Требования</span><span class="sxs-lookup"><span data-stu-id="4bc97-109">Requirements</span></span>  
+ <span data-ttu-id="4bc97-110">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4bc97-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ef57d-111">См. также</span><span class="sxs-lookup"><span data-stu-id="ef57d-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4bc97-111">См. также</span><span class="sxs-lookup"><span data-stu-id="4bc97-111">See also</span></span>
 
-- [<span data-ttu-id="ef57d-112">Интерфейс ISymUnmanagedSymbolSearchInfo</span><span class="sxs-lookup"><span data-stu-id="ef57d-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)
+- [<span data-ttu-id="4bc97-112">Интерфейс ISymUnmanagedSymbolSearchInfo</span><span class="sxs-lookup"><span data-stu-id="4bc97-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)

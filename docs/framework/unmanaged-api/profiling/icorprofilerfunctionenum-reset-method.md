@@ -18,31 +18,31 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 31ce787cea567645c303e0355e8ae7a3a52659a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118174"
 ---
-# <a name="icorprofilerfunctionenumreset-method"></a><span data-ttu-id="7597d-102">Метод ICorProfilerFunctionEnum::Reset</span><span class="sxs-lookup"><span data-stu-id="7597d-102">ICorProfilerFunctionEnum::Reset Method</span></span>
-<span data-ttu-id="7597d-103">Перемещает курсор перечислителя в начальную позицию последовательности.</span><span class="sxs-lookup"><span data-stu-id="7597d-103">Moves the enumerator's cursor to the starting position of the sequence.</span></span>  
+# <a name="icorprofilerfunctionenumreset-method"></a><span data-ttu-id="11056-102">Метод ICorProfilerFunctionEnum::Reset</span><span class="sxs-lookup"><span data-stu-id="11056-102">ICorProfilerFunctionEnum::Reset Method</span></span>
+<span data-ttu-id="11056-103">Перемещает курсор перечислителя в начальную позицию последовательности.</span><span class="sxs-lookup"><span data-stu-id="11056-103">Moves the enumerator's cursor to the starting position of the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7597d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7597d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="11056-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="11056-104">Syntax</span></span>  
   
 ```  
 HRESULT Reset();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="7597d-105">Требования</span><span class="sxs-lookup"><span data-stu-id="7597d-105">Requirements</span></span>  
- <span data-ttu-id="7597d-106">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7597d-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="11056-105">Требования</span><span class="sxs-lookup"><span data-stu-id="11056-105">Requirements</span></span>  
+ <span data-ttu-id="11056-106">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="11056-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7597d-107">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7597d-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="11056-107">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="11056-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="7597d-108">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7597d-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="11056-108">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="11056-108">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="7597d-109">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="7597d-109">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="11056-109">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="11056-109">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7597d-110">См. также</span><span class="sxs-lookup"><span data-stu-id="7597d-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="11056-110">См. также</span><span class="sxs-lookup"><span data-stu-id="11056-110">See also</span></span>
 
-- [<span data-ttu-id="7597d-111">Интерфейс ICorProfilerFunctionEnum</span><span class="sxs-lookup"><span data-stu-id="7597d-111">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [<span data-ttu-id="7597d-112">Профилирующие интерфейсы</span><span class="sxs-lookup"><span data-stu-id="7597d-112">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="11056-111">Интерфейс ICorProfilerFunctionEnum</span><span class="sxs-lookup"><span data-stu-id="11056-111">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
+- [<span data-ttu-id="11056-112">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="11056-112">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
