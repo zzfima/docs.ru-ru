@@ -9,26 +9,26 @@ helpviewer_keywords:
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
 ms.openlocfilehash: 94c838a69aab9fcae9dc0c79b6038ee90e2369e7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299141"
 ---
-# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a><span data-ttu-id="30968-102">Практическое руководство. Увеличение скорости доступа к объекту с длинным классификационным путем (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="30968-102">How to: Speed Up Access to an Object with a Long Qualification Path (Visual Basic)</span></span>
-<span data-ttu-id="30968-103">Если вы обращаетесь чаще всего объекта, который требует классификационным путем несколько методов и свойств, можно ускорить код, не повторяя путь квалификации.</span><span class="sxs-lookup"><span data-stu-id="30968-103">If you frequently access an object that requires a qualification path of several methods and properties, you can speed up your code by not repeating the qualification path.</span></span>  
+# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a><span data-ttu-id="3502a-102">Практическое руководство. Увеличение скорости доступа к объекту с длинным классификационным путем (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3502a-102">How to: Speed Up Access to an Object with a Long Qualification Path (Visual Basic)</span></span>
+<span data-ttu-id="3502a-103">Если вы обращаетесь чаще всего объекта, который требует классификационным путем несколько методов и свойств, можно ускорить код, не повторяя путь квалификации.</span><span class="sxs-lookup"><span data-stu-id="3502a-103">If you frequently access an object that requires a qualification path of several methods and properties, you can speed up your code by not repeating the qualification path.</span></span>  
   
- <span data-ttu-id="30968-104">Существует два способа, можно избежать повторение классификационного пути.</span><span class="sxs-lookup"><span data-stu-id="30968-104">There are two ways you can avoid repeating the qualification path.</span></span> <span data-ttu-id="30968-105">Объект может быть присвоен переменной, или можно использовать его в `With`... `End With` блок.</span><span class="sxs-lookup"><span data-stu-id="30968-105">You can assign the object to a variable, or you can use it in a `With`...`End With` block.</span></span>  
+ <span data-ttu-id="3502a-104">Существует два способа, можно избежать повторение классификационного пути.</span><span class="sxs-lookup"><span data-stu-id="3502a-104">There are two ways you can avoid repeating the qualification path.</span></span> <span data-ttu-id="3502a-105">Объект может быть присвоен переменной, или можно использовать его в `With`... `End With` блок.</span><span class="sxs-lookup"><span data-stu-id="3502a-105">You can assign the object to a variable, or you can use it in a `With`...`End With` block.</span></span>  
   
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a><span data-ttu-id="30968-106">Чтобы ускорить доступ к сильно уточненный объект, присвоив его переменной</span><span class="sxs-lookup"><span data-stu-id="30968-106">To speed up access to a heavily qualified object by assigning it to a variable</span></span>  
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a><span data-ttu-id="3502a-106">Чтобы ускорить доступ к сильно уточненный объект, присвоив его переменной</span><span class="sxs-lookup"><span data-stu-id="3502a-106">To speed up access to a heavily qualified object by assigning it to a variable</span></span>  
   
-1. <span data-ttu-id="30968-107">Объявите переменную типа объекта, который вы обращаетесь к часто.</span><span class="sxs-lookup"><span data-stu-id="30968-107">Declare a variable of the type of the object that you are accessing frequently.</span></span> <span data-ttu-id="30968-108">Укажите путь квалификации в части инициализации объявления.</span><span class="sxs-lookup"><span data-stu-id="30968-108">Specify the qualification path in the initialization part of the declaration.</span></span>  
+1. <span data-ttu-id="3502a-107">Объявите переменную типа объекта, который вы обращаетесь к часто.</span><span class="sxs-lookup"><span data-stu-id="3502a-107">Declare a variable of the type of the object that you are accessing frequently.</span></span> <span data-ttu-id="3502a-108">Укажите путь квалификации в части инициализации объявления.</span><span class="sxs-lookup"><span data-stu-id="3502a-108">Specify the qualification path in the initialization part of the declaration.</span></span>  
   
     ```  
     Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl  
     ```  
   
-2. <span data-ttu-id="30968-109">Используйте переменную для доступа к членам объекта.</span><span class="sxs-lookup"><span data-stu-id="30968-109">Use the variable to access the object's members.</span></span>  
+2. <span data-ttu-id="3502a-109">Используйте переменную для доступа к членам объекта.</span><span class="sxs-lookup"><span data-stu-id="3502a-109">Use the variable to access the object's members.</span></span>  
   
     ```  
     ctrlActv.Text = "Test"  
@@ -36,15 +36,15 @@ ms.locfileid: "59299141"
     ctrlActv.Show()  
     ```  
   
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a><span data-ttu-id="30968-110">Чтобы ускорить доступ к сильно уточненный объект с помощью аргумента With... Блок End With</span><span class="sxs-lookup"><span data-stu-id="30968-110">To speed up access to a heavily qualified object by using a With...End With block</span></span>  
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a><span data-ttu-id="3502a-110">Чтобы ускорить доступ к сильно уточненный объект с помощью аргумента With... Блок End With</span><span class="sxs-lookup"><span data-stu-id="3502a-110">To speed up access to a heavily qualified object by using a With...End With block</span></span>  
   
-1. <span data-ttu-id="30968-111">Поместить путь квалификации в `With` инструкции.</span><span class="sxs-lookup"><span data-stu-id="30968-111">Put the qualification path in a `With` statement.</span></span>  
+1. <span data-ttu-id="3502a-111">Поместить путь квалификации в `With` инструкции.</span><span class="sxs-lookup"><span data-stu-id="3502a-111">Put the qualification path in a `With` statement.</span></span>  
   
     ```  
     With someForm.ActiveForm.ActiveControl  
     ```  
   
-2. <span data-ttu-id="30968-112">Доступ к членам объекта внутри `With` блокируется, прежде чем `End With` инструкции.</span><span class="sxs-lookup"><span data-stu-id="30968-112">Access the object's members inside the `With` block, before the `End With` statement.</span></span>  
+2. <span data-ttu-id="3502a-112">Доступ к членам объекта внутри `With` блокируется, прежде чем `End With` инструкции.</span><span class="sxs-lookup"><span data-stu-id="3502a-112">Access the object's members inside the `With` block, before the `End With` statement.</span></span>  
   
     ```  
         .Text = "Test"  
@@ -53,7 +53,7 @@ ms.locfileid: "59299141"
     End With  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="30968-113">См. также</span><span class="sxs-lookup"><span data-stu-id="30968-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3502a-113">См. также</span><span class="sxs-lookup"><span data-stu-id="3502a-113">See also</span></span>
 
-- [<span data-ttu-id="30968-114">Объектные переменные</span><span class="sxs-lookup"><span data-stu-id="30968-114">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [<span data-ttu-id="30968-115">Оператор With...End With</span><span class="sxs-lookup"><span data-stu-id="30968-115">With...End With Statement</span></span>](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+- [<span data-ttu-id="3502a-114">Объектные переменные</span><span class="sxs-lookup"><span data-stu-id="3502a-114">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [<span data-ttu-id="3502a-115">Оператор With...End With</span><span class="sxs-lookup"><span data-stu-id="3502a-115">With...End With Statement</span></span>](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
