@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7a2a7b251f38a2f1add39e50e32a832adaedc965
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: df91d9da1f743e17072ad6106d0c4e06d751c2ea
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362804"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612824"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Создание приложения Hello World на C# с помощью пакета SDK для .NET Core в Visual Studio 2017
 
@@ -29,7 +29,7 @@ ms.locfileid: "54362804"
 1. Запустите Visual Studio 2017. Выберите **Файл** > **Создать** > **Проект** в меню. В диалоговом окне *Новый проект* * выберите узел **Visual C#**, а затем — узел **.NET Core**. Выберите шаблон проекта **Консольное приложение (.NET Core)**. В текстовом поле **Имя** введите "HelloWorld". Нажмите кнопку **OK**.
 
    ![Диалоговое окно создания проекта, в котором выбран шаблон проекта консольного приложения](./media/with-visual-studio/visual-studio-new-project.png)
-   
+
 1. Visual Studio использует шаблон для создания проекта. Шаблон консольного приложения C# для .NET Core автоматически определяет класс `Program` с одним методом `Main`, который принимает в качестве аргумента массив <xref:System.String>. `Main` — точка входа в приложение. Это метод, который автоматически вызывается средой выполнения при запуске приложения. Все аргументы, предоставленные в командной строке при запуске приложения, доступны через массив *args*.
 
    ![Visual Studio и новый проект Hello World](./media/with-visual-studio/visual-studio-main-window.png)
@@ -42,6 +42,7 @@ ms.locfileid: "54362804"
    Console.Write("Press any key to continue...");
    Console.ReadKey(true);
    ```
+
    Этот код предлагает пользователю нажать любую клавишу и приостанавливает работу программы до нажатия клавиши.
 
 1. В строке меню выберите **Сборка** > **Собрать решение**. При этом программа компилируется в промежуточный язык IL, который затем преобразуется в двоичный код JIT-компилятором.

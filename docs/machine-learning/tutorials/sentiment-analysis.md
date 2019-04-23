@@ -4,12 +4,12 @@ description: На примере двоичной классификации с 
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 202edc5127388df2397053d5703d33a39046374f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: e88a85b96c1e5d33d748332991cb9480222a9c66
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303119"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612099"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Учебник. Использование ML.NET для анализа тональности методом двоичной классификации
 
@@ -33,7 +33,7 @@ ms.locfileid: "59303119"
 
 ## <a name="sentiment-analysis-sample-overview"></a>Обзор примера для анализа тональности
 
-В качестве примера мы используем консольное приложение, которое использует ML.NET для обучения модели, которая классифицирует и прогнозирует тональность по двоичному признаку: положительная или отрицательная. Набор данных тональности Yelp был взят из Калифорнийского Университета в Ирвайне (UCI) и делится на два набора данных — для обучения и для тестирования. Для анализа качества в примере модель оценивается по набору данных для тестирования. 
+В качестве примера мы используем консольное приложение, которое использует ML.NET для обучения модели, которая классифицирует и прогнозирует тональность по двоичному признаку: положительная или отрицательная. Набор данных тональности Yelp был взят из Калифорнийского Университета в Ирвайне (UCI) и делится на два набора данных — для обучения и для тестирования. Для анализа качества в примере модель оценивается по набору данных для тестирования.
 
 Исходный код для этого руководства можно найти в репозитории [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis).
 
@@ -41,7 +41,7 @@ ms.locfileid: "59303119"
 
 * [Visual Studio 2017 15.6 или более поздней версии](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core".
 
-* [ZIP-файл набора данных предложений с меткой тональности UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)
+* [ZIP-файл набора данных предложений с меткой тональности UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip).
 
 ## <a name="machine-learning-workflow"></a>Рабочий процесс машинного обучения
 
@@ -49,13 +49,13 @@ ms.locfileid: "59303119"
 
 Вот основные этапы этого рабочего процесса:
 
-1. **Определение проблемы**
-2. **подготавливать данные;**
-   * **Загрузка данных**
-   * **Извлечение компонентов (преобразование данных)**
-3. **Сборка и обучение** 
-   * **Обучение модели**
-   * **Оценка модели**
+1. **определение проблемы**;
+2. **Подготовка данных**.
+   * **Загрузка данных**.
+   * **Извлечение компонентов (преобразование данных)**.
+3. **Сборка и обучение**.
+   * **Обучение модели**.
+   * **оценка модели**;
 4. **Развертывание модели**
    * **Использование модели для прогнозирования**
 
@@ -96,7 +96,7 @@ ms.locfileid: "59303119"
 * Двоичная: A или B.
 * Многоклассовая: несколько категорий, которые прогнозируются по одной модели.
 
-Так как комментарии с сайта необходимо классифицировать как положительные или отрицательные, используется алгоритм двоичной классификации. 
+Так как комментарии с сайта необходимо классифицировать как положительные или отрицательные, используется алгоритм двоичной классификации.
 
 ## <a name="create-a-console-application"></a>Создание консольного приложения
 
@@ -150,9 +150,9 @@ ms.locfileid: "59303119"
 
 [!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#DeclareTypes "Declare data record types")]
 
-Класс входного набора данных `SentimentData` содержит параметры `string` — для комментария (`SentimentText`) и `bool` (`Sentiment`) — для определения положительной или отрицательной тональности. Для обоих полей указаны атрибуты <xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29>. Этот атрибут позволяет описать порядок полей в файле данных.  Кроме того, свойство `Sentiment` имеет атрибут <xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A>, который позволяет обозначить его как поле `Label`. `SentimentPrediction` используется для прогнозирования после обучения модели. Он имеет один параметр типа boolean (`Sentiment`) и атрибут `PredictedLabel` `ColumnName`. Параметр `Label` используется для создания и обучения модели, а также для оценки модели по разделенному набору данных для тестирования. `PredictedLabel` используется для прогнозирования и оценки. Для оценки применяются входные обучающие данные, прогнозируемые значения и модель.
+Класс входного набора данных `SentimentData` содержит параметры `string` — для комментария (`SentimentText`) и `bool` (`Sentiment`) — для определения положительной или отрицательной тональности. Для обоих полей указаны атрибуты <xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29>. Этот атрибут позволяет описать порядок полей в файле данных.  Кроме того, свойство `Sentiment` имеет атрибут <xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A>, который позволяет обозначить его как поле `Label`. Класс `SentimentPrediction` используется для прогнозирования после обучения модели. Он имеет один параметр типа boolean (`Sentiment`) и атрибут `PredictedLabel` `ColumnName`. Параметр `Label` используется для создания и обучения модели, а также для оценки модели по разделенному набору данных для тестирования. `PredictedLabel` используется для прогнозирования и оценки. Для оценки применяются входные обучающие данные, прогнозируемые значения и модель.
 
-При создании модели с использованием ML.NET сначала необходимо создать <xref:Microsoft.ML.MLContext>. `MLContext` сопоставимо с использованием `DbContext` в Entity Framework. Среда предоставляет контекст для вашего задания Машинного обучения, который можно использовать для отслеживания исключений и ведения журнала.
+При создании модели с использованием ML.NET сначала необходимо создать <xref:Microsoft.ML.MLContext>. Концептуально `MLContext` сопоставимо с использованием `DbContext` в Entity Framework. Среда предоставляет контекст для вашего задания Машинного обучения, который можно использовать для отслеживания исключений и ведения журнала.
 
 ### <a name="initialize-variables-in-main"></a>Инициализация переменных в методе Main
 
@@ -178,21 +178,22 @@ public static TrainCatalogBase.TrainTestData LoadData(MLContext mlContext)
 
 }
 ```
+
 ## <a name="load-the-data"></a>Загрузка данных
 
-Так как созданный ранее тип модели данных `SentimentData` соответствует схеме набора данных, вы можете объединить инициализацию, сопоставление и загрузку набора данных в одной строке кода с использованием оболочки `MLContext.Data.LoadFromTextFile` для [метода LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). В результате возвратится <xref:Microsoft.Data.DataView.IDataView>. 
+Так как созданный ранее тип модели данных `SentimentData` соответствует схеме набора данных, вы можете объединить инициализацию, сопоставление и загрузку набора данных в одной строке кода с использованием оболочки `MLContext.Data.LoadFromTextFile` для [метода LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). В результате возвратится <xref:Microsoft.Data.DataView.IDataView>.
 
- Точно так же как входные и выходные данные `Transforms`, `DataView` является основным типом конвейера данных, сравнимым с `IEnumerable` для `LINQ`.
+Точно так же как входные и выходные данные `Transforms`, `DataView` является основным типом конвейера данных, сравнимым с `IEnumerable` для `LINQ`.
 
 В ML.NET данные аналогичны представлению SQL. Они схематизированы, неоднородны, и к ним применено отложенное вычисление. Объект является первой частью конвейера. Он загружает данные. Для этого руководства он загружает набор данных с комментариями и соответствующей токсичной или нетоксичной тональностью. Это позволяет создать и обучить модель.
 
- Добавьте следующий код в первую строку метода `LoadData`:
+Добавьте следующий код в первую строку метода `LoadData`:
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#LoadData "loading dataset")]
 
 ### <a name="split-the-dataset-for-model-training-and-testing"></a>Разделение набора данных для обучения и тестирования модели
 
-Затем для обучения модели необходимо использовать набор данных для обучения, а для оценки модели — набор данных для тестирования. Используйте параметр `MLContext.BinaryClassification.TrainTestSplit` который заключает в оболочку <xref:Microsoft.ML.StaticPipe.TrainingStaticExtensions.TrainTestSplit%2A>, чтобы разделить загруженный набор данных на наборы данных для обучения и тестирования и вернуть их в <xref:Microsoft.ML.TrainCatalogBase.TrainTestData>. С помощью параметра `testFraction` можно указать, какие данные необходимо добавить в набор для тестирования. По умолчанию параметр имеет значение 10%, но в этом примере необходимо задать 20%, чтобы использовать дополнительные данные для оценки.  
+Затем для обучения модели необходимо использовать набор данных для обучения, а для оценки модели — набор данных для тестирования. Используйте параметр `MLContext.BinaryClassification.TrainTestSplit` который заключает в оболочку <xref:Microsoft.ML.StaticPipe.TrainingStaticExtensions.TrainTestSplit%2A>, чтобы разделить загруженный набор данных на наборы данных для обучения и тестирования и вернуть их в <xref:Microsoft.ML.TrainCatalogBase.TrainTestData>. С помощью параметра `testFraction` можно указать, какие данные необходимо добавить в набор для тестирования. По умолчанию параметр имеет значение 10%, но в этом примере необходимо задать 20%, чтобы использовать дополнительные данные для оценки.
 
 Чтобы разделить скачанные данные на необходимые наборы данных, добавьте код в следующей строке метода `LoadData`:
 
@@ -224,7 +225,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView spl
 }
 ```
 
-Обратите внимание, что в метод Train передаются два параметра: `MLContext` для контекста (`mlContext`) и `IDataView` набора данных для обучения (`splitTrainSet`). 
+Обратите внимание, что в метод Train передаются два параметра: `MLContext` для контекста (`mlContext`) и `IDataView` набора данных для обучения (`splitTrainSet`).
 
 ## <a name="extract-and-transform-the-data"></a>Извлечение и преобразование данных
 
@@ -353,7 +354,7 @@ private static void UseModelWithSingleItem(MLContext mlContext, ITransformer mod
 Несмотря на то что `model` представляет собой `transformer`, который обрабатывает многочисленные строки данных, достаточно распространенным сценарием рабочей среды является прогнозирование на основе отдельных примеров. <xref:Microsoft.ML.PredictionEngine%602> — это программа-оболочка, возвращаемая из метода `CreatePredictionEngine`. Давайте добавим следующий код в качестве первой строки в методе `Predict` для создания `PredictionEngine`:
 
 [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
-  
+
 Добавьте комментарий для проверки прогнозирования обученной модели в методе `Predict`, создав экземпляр `SentimentData`:
 
 [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
@@ -450,7 +451,7 @@ Press any key to continue . . .
 
 ```
 
-Поздравляем! Вы успешно создали модель машинного обучения для классификации и прогнозирования тональности сообщений. 
+Поздравляем! Вы успешно создали модель машинного обучения для классификации и прогнозирования тональности сообщений.
 
 Построение успешных моделей — итеративный процесс. Изначально эта модель имеет низкое качество, так как в руководстве используются небольшие наборы данных для быстрого обучения. Если вам требуется модель более высокого качества, можно попытаться улучшить ее, использовав более крупные наборы данных для обучения или выбрав другие алгоритмы обучения с разными гиперпараметрами для каждого алгоритма.
 
@@ -459,6 +460,7 @@ Press any key to continue . . .
 ## <a name="next-steps"></a>Следующие шаги
 
 В этом руководстве вы узнали, как:
+
 > [!div class="checklist"]
 > * Определение проблемы
 > * Выбор подходящего алгоритма машинного обучения
@@ -470,5 +472,6 @@ Press any key to continue . . .
 > * Развертывание и прогнозирование с помощью загруженной модели
 
 Переходите к следующему руководству:
+
 > [!div class="nextstepaction"]
-> [Классификация проблем](github-issue-classification.md)
+> [Классификация задач](github-issue-classification.md)
