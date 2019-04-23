@@ -6,10 +6,10 @@ helpviewer_keywords:
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
 ms.openlocfilehash: ebff66e185bdca75a0150b22a16392bfd08892d3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165496"
 ---
 # <a name="authentication-in-wcf"></a>Аутентификация в WCF
@@ -19,13 +19,13 @@ ms.locfileid: "59165496"
  [Практическое руководство. Использование поставщика членства ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
  Возможности ASP.NET включают членство и поставщик ролей, базу данных для хранения пар имя пользователя-пароль, используемых для проверки подлинности, и роли пользователя для авторизации. В этом разделе объясняется, как службы WCF можно использовать ту же базу данных для проверки подлинности и авторизации пользователей.  
   
- [Практическое руководство. Использование пользовательского проверяющего элемента управления для имени пользователя и пароля](../../../../docs/framework/wcf/feature-details/how-to-use-a-custom-user-name-and-password-validator.md)  
+ [Практическое руководство. Использовать настраиваемое имя пользователя и пароль проверяющий элемент управления](../../../../docs/framework/wcf/feature-details/how-to-use-a-custom-user-name-and-password-validator.md)  
  Демонстрируется процесс интеграции настраиваемого проверяющего элемента управления для имени пользователя/пароля.  
   
  [Идентификация и проверка подлинности службы](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  В качестве дополнительного средства защиты, клиент может проверить подлинность службы, задавая ожидаемое *удостоверений* службы. Если ожидаемое и возвращаемое службой удостоверения не совпадают, проверку подлинности выполнить не удается.  
   
- [Согласование безопасности и тайм-ауты](../../../../docs/framework/wcf/feature-details/security-negotiation-and-timeouts.md)  
+ [Согласование безопасности и время ожидания](../../../../docs/framework/wcf/feature-details/security-negotiation-and-timeouts.md)  
  Как следует использовать свойство <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NegotiationTimeout%2A> в классе <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>.  
   
  [Отладка ошибок проверки подлинности Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  

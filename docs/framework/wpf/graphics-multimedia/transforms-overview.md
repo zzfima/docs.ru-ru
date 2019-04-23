@@ -13,10 +13,10 @@ helpviewer_keywords:
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
 ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162208"
 ---
 # <a name="transforms-overview"></a>Общие сведения о классах Transform
@@ -152,5 +152,5 @@ ms.locfileid: "59162208"
 
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
-- [Практические руководства](transformations-how-to-topics.md)
+- [Разделы практического руководства](transformations-how-to-topics.md)
 - [Пример двумерных преобразований](https://go.microsoft.com/fwlink/?LinkID=158252)

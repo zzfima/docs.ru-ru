@@ -5,10 +5,10 @@ helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
 ms.openlocfilehash: 81727adbf985986a71cc9f9e2d42a1de0cb1fd76
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59156511"
 ---
 # <a name="configuring-wcf-services"></a>Настройка служб WCF
@@ -33,7 +33,7 @@ ms.locfileid: "59156511"
  [Защита служб](../../../docs/framework/wcf/securing-services.md)  
  С помощью WCF и существующих механизмов обеспечения безопасности, можно реализовать конфиденциальность, целостность, проверку подлинности и авторизацию в любой службе. Также можно выполнить аудит на предмет успешных и неудачных попыток выполнения службы.  
   
- [Создание служб, поддерживающих взаимодействие с базовым профилем WS-I 1.1](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
+ [Создание служб для взаимодействия с базовым профилем WS-I 1.1](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
  Требования к развертыванию службы с возможностью взаимодействия со службами и клиентами, размещенными на другой платформе или в другой операционной системе, указаны в спецификации WS-I Basic Profile 1.1.  
   
 ## <a name="reference"></a>Ссылка  
@@ -58,6 +58,6 @@ ms.locfileid: "59156511"
   
 ## <a name="see-also"></a>См. также
 
-- [Базовое программирование WCF](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Общие сведения об основных понятиях](../../../docs/framework/wcf/conceptual-overview.md)
-- [Подробные сведения о возможностях WCF](../../../docs/framework/wcf/feature-details/index.md)
+- [Базовое программирование для WCF](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Концептуальный обзор](../../../docs/framework/wcf/conceptual-overview.md)
+- [Подробные сведения о возможностях WCF](../../../docs/framework/wcf/feature-details/index.md)

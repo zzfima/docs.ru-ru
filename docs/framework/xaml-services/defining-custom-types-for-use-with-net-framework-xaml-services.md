@@ -5,10 +5,10 @@ helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
 ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164441"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Определение пользовательских типов для использования со службами XAML .NET Framework
@@ -70,7 +70,7 @@ ms.locfileid: "59164441"
 #### <a name="the-getpropertyname-accessor"></a>Метод доступа GetИмяСвойства  
  Сигнатура для метода доступа `Get`*ИмяСвойства* должна быть следующей.  
   
- `public static object Get` *PropertyName* `(object`  `target` `)`  
+ `public static object Get` *ИмяСвойства* `(object` `target` `)`  
   
 -   Объект `target` можно указать как более конкретный тип в реализации. Это можно использовать для определения области использования присоединяемого члена; Использование за пределами этих границ, исключения недопустимого приведения, которые затем отображаются ошибку синтаксического анализа XAML. Имя параметра `target` не является обязательным, но называется `target` по соглашению в большинстве реализаций.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "59164441"
 #### <a name="the-setpropertyname-accessor"></a>Метод доступа SetИмяСвойства  
  Подпись для набора*PropertyName* должен быть метод доступа:  
   
- `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
+ `public static void Set` *ИмяСвойства* `(object` `target` `, object` `value` `)`  
   
 -   `target` Объекта можно указать как более конкретный тип в реализации, с тем же логикой и последствия, как описано в предыдущем разделе.  
   

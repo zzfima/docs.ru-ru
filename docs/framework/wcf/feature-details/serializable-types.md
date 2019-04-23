@@ -3,10 +3,10 @@ title: Сериализуемые типы
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
 ms.openlocfilehash: 44fc538ccb69296b91c94d2b9ae497be599c0c7e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160853"
 ---
 # <a name="serializable-types"></a>Сериализуемые типы
@@ -27,7 +27,7 @@ ms.locfileid: "59160853"
   
 -   Доступные только для чтения поля, свойства без метода `get` или `set` и свойства с внутренними или закрытыми методами `set` или `get` не сериализуются. Такие свойства игнорируются без вызова исключения, кроме случаев с доступными только для возвращения коллекциями.  
   
--   <xref:System.Xml.Serialization.XmlSerializer> атрибуты (такие как `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude`, и так далее) учитываются.  
+-   Атрибуты <xref:System.Xml.Serialization.XmlSerializer> (такие как `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude` и т. д.) игнорируются.  
   
 -   Если не применить к типу атрибут <xref:System.Runtime.Serialization.DataContractAttribute>, все члены в этом типе, к которым применен атрибут <xref:System.Runtime.Serialization.DataMemberAttribute>, игнорируются сериализатором.  
   

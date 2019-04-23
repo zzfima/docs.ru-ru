@@ -13,10 +13,10 @@ helpviewer_keywords:
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
 ms.openlocfilehash: c0fcbc8054272356c39ba7925041ecef05a0322c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165273"
 ---
 # <a name="binding-declarations-overview"></a>Общие сведения об объявлении привязок
@@ -79,7 +79,7 @@ ms.locfileid: "59165273"
   
 -   Индексаторы свойства можно указать в квадратных скобках после имени свойства, для которого применяется индексатор. Например, предложение `Path=ShoppingCart[0]` задает привязку к индексу, который соответствует способу, который внутренняя индексация свойства использует для обработки символьной строки "0". Также поддерживаются вложенные индексаторы.  
   
--   Индексаторы и вложенные свойства могут сочетаться в `Path` предложения, например `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
+-   Индексаторы и вложенные свойства могут сочетаться в предложении `Path`, например, `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
   
 -   Индексаторы могут иметь несколько внутренних параметров, разделенных запятыми (,). Тип каждого параметра указывается в скобках. Например, вы можете задать предложение `Path="[(sys:Int32)42,(sys:Int32)24]"`, где `sys` сопоставляется с пространством имен `System`.  
   
@@ -126,6 +126,6 @@ ms.locfileid: "59165273"
 ## <a name="see-also"></a>См. также
 
 - [Общие сведения о привязке данных](data-binding-overview.md)
-- [Практические руководства](data-binding-how-to-topics.md)
+- [Разделы практического руководства](data-binding-how-to-topics.md)
 - [Привязка данных](../advanced/optimizing-performance-data-binding.md)
-- [Синтаксис PropertyPath XAML](../advanced/propertypath-xaml-syntax.md)
+- [Синтаксис PropertyPath в XAML](../advanced/propertypath-xaml-syntax.md)

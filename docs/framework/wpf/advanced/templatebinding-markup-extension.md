@@ -9,10 +9,10 @@ helpviewer_keywords:
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
 ms.openlocfilehash: c004560a0b7ab367fbf4fbb48b0e8d8b63f3d8f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59156004"
 ---
 # <a name="templatebinding-markup-extension"></a>Расширение разметки TemplateBinding
@@ -34,7 +34,7 @@ ms.locfileid: "59156004"
   
 |||  
 |-|-|  
-|`propertyName`|<xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> задаваемое в синтаксисе метода задания свойства.|  
+|`propertyName`|<xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> для свойства задается в синтаксисе метода задания значения.|  
 |`sourceProperty`|Другое свойство зависимостей для типа, который используется в качестве шаблона, задается с помощью <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>.<br /><br /> -или-<br /><br /> "Краткое" имя свойства, которое определяется типом, отличным от целевого шаблонного типа. Фактически это <xref:System.Windows.PropertyPath>. См. в разделе [синтаксис PropertyPath XAML](propertypath-xaml-syntax.md).|  
   
 ## <a name="remarks"></a>Примечания  
@@ -46,9 +46,9 @@ ms.locfileid: "59156004"
   
  Синтаксис атрибутов является наиболее распространенным синтаксисом, используемым с этим расширением разметки. Строковая лексема, указываемая после строки идентификатора `TemplateBinding`, присваивается в качестве значения <xref:System.Windows.TemplateBindingExtension.Property%2A> соответствующего класса расширения <xref:System.Windows.TemplateBindingExtension>.  
   
- Синтаксис элемента объекта возможен, но он не рассматривается из-за отсутствия практического применения. `TemplateBinding` используется для заполнения значений в методах установки значений, с помощью вычисленных выражений, а также с помощью синтаксиса объектных элементов для `TemplateBinding` для заполнения `<Setter.Property>` синтаксис элемента свойства является излишним.  
+ Синтаксис элемента объекта возможен, но он не рассматривается из-за отсутствия практического применения. `TemplateBinding` используется для заполнения значений в методах установки значений с помощью вычисленных выражений. Использование синтаксиса элемента объекта для `TemplateBinding` для заполнения синтаксиса элемента свойства `<Setter.Property>` является излишним.  
   
- `TemplateBinding` Можно также использовать в использовании атрибут verbose, который указывает <xref:System.Windows.TemplateBindingExtension.Property%2A> как свойство = значение пары:  
+ Излишним может оказаться и использование `TemplateBinding` в атрибуте, в котором свойство <xref:System.Windows.TemplateBindingExtension.Property%2A> определено как пара "свойство=значение".  
   
 ```xml  
 <object property="{TemplateBinding Property=sourceProperty}" .../>  
@@ -65,7 +65,7 @@ ms.locfileid: "59156004"
 - <xref:System.Windows.Style>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Стилизация и использование шаблонов](../controls/styling-and-templating.md)
-- [Обзор XAML (WPF)](xaml-overview-wpf.md)
+- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
 - [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md)
 - [Расширение разметки RelativeSource](relativesource-markupextension.md)
 - [Привязка расширения разметки](binding-markup-extension.md)

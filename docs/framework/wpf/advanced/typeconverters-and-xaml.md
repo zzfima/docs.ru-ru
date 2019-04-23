@@ -5,10 +5,10 @@ helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
 ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164994"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters и XAML
@@ -71,7 +71,7 @@ ms.locfileid: "59164994"
   
  Далее наиболее важным методом является <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>. Если приложение преобразуется в представление разметки (например, если он сохраняется в XAML как файл), <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> отвечает за создание представления разметки. В этом случае правильный для XAML путь кода — при передаче `destinationType` из <xref:System.String> .  
   
- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> и <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> поддерживают методы, которые используются, когда служба запрашивает возможности <xref:System.ComponentModel.TypeConverter> реализации. Вам необходимо реализовать эти методы для возврата `true` для определенных типов. Они аналогичны методам преобразования для поддержки вашего преобразователя. В целях XAML обычно это означает тип <xref:System.String> .  
+ <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> и <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> — это вспомогательные методы, используемые, когда служба запрашивает возможности реализации <xref:System.ComponentModel.TypeConverter> . Вам необходимо реализовать эти методы для возврата `true` для определенных типов. Они аналогичны методам преобразования для поддержки вашего преобразователя. В целях XAML обычно это означает тип <xref:System.String> .  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>Сведения о языке и преобразователи типов для XAML  
  Каждый <xref:System.ComponentModel.TypeConverter> реализация может иметь собственную интерпретацию того, что составляет допустимую строку для преобразования и можно также использовать или игнорировать описание типа, переданного в качестве параметров. Важное замечание относительно языка и региональных параметров и преобразования типов XAML. Использование локализуемых строк в качестве значений атрибутов полностью поддерживается в XAML. Но использование локализуемых строк в качестве входных данных преобразователя типов с учетом индивидуальных требований для языка и региональных параметров не поддерживается, так как преобразователи типов значений атрибутов XAML по необходимости выполняют анализ с фиксированным языком, используя язык и региональные параметры `en-US`. Дополнительные сведения о причинах этого ограничения с точки зрения проектирования см. в спецификации языка XAML ([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)).  
@@ -110,6 +110,6 @@ ms.locfileid: "59164994"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.ComponentModel.TypeConverter>
-- [Обзор XAML (WPF)](xaml-overview-wpf.md)
+- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
 - [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md)
 - [Подробное описание синтаксиса XAML](xaml-syntax-in-detail.md)

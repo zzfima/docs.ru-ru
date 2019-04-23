@@ -3,10 +3,10 @@ title: Введение в маршрутизацию
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
 ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158682"
 ---
 # <a name="routing-introduction"></a>Введение в маршрутизацию
@@ -152,7 +152,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
 > [!NOTE]
 >  По умолчанию служба маршрутизации оценивает только заголовки сообщений. Чтобы предоставить фильтрам доступ к тексту сообщения, нужно присвоить параметру <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A> значение `false`.  
   
- **Multicast**  
+ **Многоадресная рассылка**  
   
  Множество конфигураций службы маршрутизации используют логику монопольной фильтрации (сообщения перенаправляются в одну конкретную конечную точку). Однако может возникнуть необходимость перенаправить сообщение в несколько целевых конечных точек. Для многоадресной рассылки сообщения в разные целевые точки должны быть выполнены следующие условия.  
   
@@ -193,7 +193,7 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
  Действия, предпринятые для создания нового **MessageVersion** для исходящего сообщения, следующим образом:  
   
- **Обработка запроса**  
+ **Обработка запросов**  
   
 -   Получить **MessageVersion** из исходящей привязки или канала.  
   

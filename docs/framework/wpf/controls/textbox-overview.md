@@ -6,10 +6,10 @@ helpviewer_keywords:
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
 ms.openlocfilehash: 577a12a0c04e5e3bfbfecb2c45263b684f0ffc17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162650"
 ---
 # <a name="textbox-overview"></a>Общие сведения о TextBox
@@ -67,5 +67,5 @@ ms.locfileid: "59162650"
   
 ## <a name="see-also"></a>См. также
 
-- [Практические руководства](textbox-how-to-topics.md)
+- [Разделы практического руководства](textbox-how-to-topics.md)
 - [Общие сведения о RichTextBox](richtextbox-overview.md)

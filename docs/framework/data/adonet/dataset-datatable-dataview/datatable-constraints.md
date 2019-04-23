@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
 ms.openlocfilehash: 254f486fa19d8af30759d9a9fd6642a1a40e82a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165182"
 ---
 # <a name="datatable-constraints"></a>Ограничения таблиц данных
@@ -27,7 +27,7 @@ ms.locfileid: "59165182"
 |**Cascade**|Удалить или обновить связанные строки.|  
 |**SetNull**|Задайте значения в связанных строках **DBNull**.|  
 |**SetDefault**|Присвоить столбцам в связанных строках значение по умолчанию.|  
-|**Нет**|Не выполнять никаких действий в связанных строках. Это значение по умолчанию.|  
+|**None**|Не выполнять никаких действий в связанных строках. Это значение по умолчанию.|  
   
  Объект **ForeignKeyConstraint** может ограничивать или распространять, изменения на связанные столбцы. В зависимости от свойств, заданных для **ForeignKeyConstraint** столбца, если **EnforceConstraints** свойство **набора данных** является **true**, определенные операции в родительскую строку приведет к исключению. Например если **DeleteRule** свойство **ForeignKeyConstraint** — **None**, родительскую строку нельзя удалить, если он имеет дочерние строки.  
   
@@ -61,7 +61,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
 |Установка правил|Описание|  
 |------------------|-----------------|  
 |**Cascade**|Принять или отклонить изменения в дочерних строках.|  
-|**Нет**|Не выполнять никаких действий в дочерних строках. Это значение по умолчанию.|  
+|**None**|Не выполнять никаких действий в дочерних строках. Это значение по умолчанию.|  
   
 ### <a name="example"></a>Пример  
  В следующем примере создается ограничение <xref:System.Data.ForeignKeyConstraint>, устанавливаются некоторые из его свойств, в том числе <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>, а само ограничение добавляется в коллекцию <xref:System.Data.ConstraintCollection> объекта <xref:System.Data.DataTable>.  
@@ -98,6 +98,6 @@ custDS.Tables["Customers"].Constraints.Add(custUnique);
 - <xref:System.Data.DataTable>
 - <xref:System.Data.ForeignKeyConstraint>
 - <xref:System.Data.UniqueConstraint>
-- [Определение схемы таблицы данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
+- [Определение схемы DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
 - [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

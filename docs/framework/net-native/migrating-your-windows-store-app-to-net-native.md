@@ -5,10 +5,10 @@ ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1d14e4ad45a4d5805187b993f2fc622a16dac09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163141"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Миграция приложения для магазина Windows в машинный код .NET
@@ -147,13 +147,13 @@ ms.locfileid: "59163141"
   
  `Delegate.BeginInvoke` и `Delegate.EndInvoke` не поддерживаются.  
   
- **Различные интерфейсы API**  
+ **Различные API**  
   
 -   [TypeInfo.GUID](xref:System.Type.GUID) свойство выдает исключение <xref:System.PlatformNotSupportedException> исключения Если <xref:System.Runtime.InteropServices.GuidAttribute> атрибут не применяется к типу. Идентификатор GUID используется в основном для поддержки модели COM.  
   
 -   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> Метод правильно выполняет синтаксический анализ строк, содержащих даты в коротком формате в .NET Native. Тем не менее он не поддерживает совместимость с синтаксическим анализом изменений даты и времени, описанным в статьях базы знаний Microsoft: [KB2803771](https://support.microsoft.com/kb/2803771) и [KB2803755](https://support.microsoft.com/kb/2803755).  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` is correправильно округляется в .NET Native. В некоторых версиях среды CLR, результирующая строка усекается вместо округления.  
+-   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` правильно округляется в .NET Native. В некоторых версиях среды CLR, результирующая строка усекается вместо округления.  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>Различия HttpClient  
@@ -165,7 +165,7 @@ ms.locfileid: "59163141"
   
  В следующих подразделах описаны некоторые дополнительные различия в поведении.  
   
- **Прокси**  
+ **Прокси-сервер**  
   
  <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> Класс не поддерживает настройку или переопределение прокси для каждого запроса.  Это означает, что все запросы на .NET Native использовать системные настройки прокси-сервера или прокси-сервер, в зависимости от значения <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType> свойство.  В приложениях .NET для магазина Windows, прокси-сервер определяется свойством <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> .  В среде .NET Native, установка <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> на значение, отличное от `null` вызывает <xref:System.PlatformNotSupportedException> исключение.  <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType> Возвращает `false` машинного кода .NET, в то время как он возвращает `true` в стандартных приложениях .NET Framework для Windows Store.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "59163141"
   
  В приложениях .NET для магазина Windows свойства <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> и <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> работают независимо друг от друга.  Кроме того, свойство <xref:System.Net.Http.HttpClientHandler.Credentials%2A> принимает любой объект, реализующий интерфейс <xref:System.Net.ICredentials> .  В .NET Native, установка <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> свойства `true` вызывает <xref:System.Net.Http.HttpClientHandler.Credentials%2A> свойство станет `null`.  Кроме этого, свойство <xref:System.Net.Http.HttpClientHandler.Credentials%2A> может быть задано только в `null`, <xref:System.Net.CredentialCache.DefaultCredentials%2A>или объект типа <xref:System.Net.NetworkCredential>.  Назначение любого другого объекта <xref:System.Net.ICredentials> , наиболее популярный из которых <xref:System.Net.CredentialCache>, свойству <xref:System.Net.Http.HttpClientHandler.Credentials%2A> вызывает исключение <xref:System.PlatformNotSupportedException>.  
   
- **Другие неподдерживаемые и ненастраиваемые возможности**  
+ **Другие неподдерживаемые и ненастраиваемые функции**  
   
  В машинный код .NET:  
   
@@ -215,7 +215,7 @@ ms.locfileid: "59163141"
 - <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>  
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> поддерживается, но выдает исключение в некоторых сценариях, например при использовании с [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) или ByRef.  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> поддерживается, но создает исключение в некоторых сценариях, например когда используется с вариантами [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) или byref.  
   
  Устаревшие интерфейсы API для [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) Техническая поддержка включает:  
   
@@ -574,7 +574,7 @@ ms.locfileid: "59163141"
   
      Тип `InnerType` не известен сериализатору, так как члены базового класса не передаются во время сериализации.  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> не удается сериализовать класс или структура, реализующие <xref:System.Collections.Generic.IEnumerable%601> интерфейс. Например, не удается сериализовать или десериализовать следующие типы:  
+-   <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> не удается сериализовать класс или структуру, которая реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601> . Например, не удается сериализовать или десериализовать следующие типы:  
 
 -   <xref:System.Xml.Serialization.XmlSerializer> не удается сериализовать следующие значения объекта, так как он не знает точный тип объекта для сериализации:  
 
@@ -606,7 +606,7 @@ ms.locfileid: "59163141"
   
     -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> не удается создать код для типа, который содержит методы, определенные с любым из следующих атрибутов:  
+-   <xref:System.Xml.Serialization.XmlSerializer> не удается создать код для типа, который содержит методы, определенные любым из следующих атрибутов:  
   
     -   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
@@ -616,7 +616,7 @@ ms.locfileid: "59163141"
   
     -   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> не поддерживает <xref:System.Xml.Serialization.IXmlSerializable> настраиваемый интерфейс сериализации. Если имеется класс, реализующий этот интерфейс, <xref:System.Xml.Serialization.XmlSerializer> рассматривает тип, как тип объекта (POCO) простой старой среды CLR и сериализует только его открытые свойства.  
+-   <xref:System.Xml.Serialization.XmlSerializer> не поддерживает настраиваемый интерфейс сериализации <xref:System.Xml.Serialization.IXmlSerializable> . Если имеется класс, реализующий этот интерфейс, <xref:System.Xml.Serialization.XmlSerializer> рассматривает тип, как тип объекта (POCO) простой старой среды CLR и сериализует только его открытые свойства.  
   
 -   Сериализация простого <xref:System.Exception> объекта не работает с <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.
 
@@ -649,6 +649,6 @@ ms.locfileid: "59163141"
 ## <a name="see-also"></a>См. также
 
 - [Начало работы](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Ссылка на файл конфигурации директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Общие сведения о .NET для приложений Магазина Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
-- [Поддержка приложений для Магазина Windows и среды выполнения Windows в .NET Framework](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Обзор приложений .NET для Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
+- [Поддержка платформы .NET Framework для приложений магазина Windows и среды выполнения Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

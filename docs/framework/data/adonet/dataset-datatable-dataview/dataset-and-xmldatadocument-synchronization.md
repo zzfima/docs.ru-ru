@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
 ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164740"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>Синхронизация набора данных и XmlDataDocument
@@ -90,20 +90,20 @@ ADO.NET <xref:System.Data.DataSet> обеспечивает реляционно
  При синхронизации **набора данных** с **XmlDataDocument**, результаты могут отличаться в зависимости от того, нужно ли вашей <xref:System.Data.DataRelation> объекты являются вложенными. Дополнительные сведения см. в разделе [вложение отношений DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Синхронизация набора данных с XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
+ [Синхронизация DataSet с XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
  Демонстрирует синхронизацию строго типизированный **набора данных**, с минимальной схемой, с помощью **XmlDataDocument**.  
   
- [Выполнение запроса XPath к набору данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
+ [Выполнение запроса XPath к DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
  Демонстрирует выполнение запроса XPath на содержание **набора данных**.  
   
- [Применение преобразования XSLT к набору данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
+ [Применение преобразования XSLT к DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
  Демонстрирует применение преобразования XSLT к содержимому **набора данных**.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Использование XML в наборах данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  Описывает способ **набора данных** взаимодействие с XML в качестве источника данных, включая загрузку и сохранение содержимого **набора данных** как XML-данных.  
   
- [Вложение отношений DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
+ [Вложенность объектов DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  Обсуждается важность вложенных **DataRelation** объектов при представлении содержимого **набора данных** как XML-данных и описывается создание этих связей.  
   
  [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
@@ -114,4 +114,4 @@ ADO.NET <xref:System.Data.DataSet> обеспечивает реляционно
   
 ## <a name="see-also"></a>См. также
 
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

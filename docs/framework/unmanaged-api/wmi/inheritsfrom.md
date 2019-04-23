@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d2af1b41f47a3906c0e573c104847aa3ff36cf8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158435"
 ---
 # <a name="inheritsfrom-function"></a>Функция InheritsFrom
@@ -57,7 +57,7 @@ HRESULT InheritsFrom (
 |---------|---------|---------|
 | `WBEM_S_NO_ERROR` | 0 | Наследуется текущий объект из `wszAncestor`.  |
 | `WBEM_S_FALSE` | 1 | Текущий объект не наследует от `wszAncestor`. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` — `null`. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Свойство `wszAncestor` имеет значение `null`. |
   
 ## <a name="remarks"></a>Примечания
 
@@ -72,4 +72,4 @@ HRESULT InheritsFrom (
   
 ## <a name="see-also"></a>См. также
 
-- [WMI и счетчики производительности (справочник по неуправляемым API)](index.md)
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

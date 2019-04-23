@@ -10,10 +10,10 @@ helpviewer_keywords:
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
 ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158448"
 ---
 # <a name="user-drawn-controls"></a>Элементы управления, разработанные пользователем
@@ -82,6 +82,6 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 - <xref:System.Drawing.Graphics>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Windows.Forms.PaintEventArgs>
-- [Практическое руководство. Создание графических объектов для рисования](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Практическое руководство. Создание объектов Graphics для рисования](../advanced/how-to-create-graphics-objects-for-drawing.md)
 - [Составные элементы управления](constituent-controls.md)
-- [Создание собственных элементов управления](varieties-of-custom-controls.md)
+- [Разновидности пользовательских элементов управления](varieties-of-custom-controls.md)

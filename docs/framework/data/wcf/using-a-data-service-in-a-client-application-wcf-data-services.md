@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
 ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155939"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Использование служб данных в клиентском приложении (службы данных WCF)
@@ -21,7 +21,7 @@ ms.locfileid: "59155939"
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] помогает осуществить взаимодействие между службами, которые предоставляют [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-каналы и приложения, обрабатывающие [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-каналов. Приложения обращаются и изменяют данные в [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-службу на основе, отправляя сообщения запросов конкретного действия HTTP вместе с URI, Адресующим ресурс сущности, над которой должно быть выполнено действие. Если необходимо передать данные сущности, они передаются в специально закодированных полезных данных в тексте сообщения.  
   
 ### <a name="http-actions"></a>Действия HTTP  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] поддерживает следующие действия HTTP для создания, чтения, обновления и удаления данных сущностей, представленных адресуемыми ресурсами.  
+ Службы [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] поддерживают следующие действия HTTP для создания, чтения, обновления и удаления данных сущностей, представленных адресуемыми ресурсами.  
   
 -   **HTTP GET** -это действие по умолчанию при доступе к ресурсу из браузера. Сообщение запроса не содержит полезных данных, а возвращается метод ответа с полезными данными, содержащими запрошенные данные.  
   

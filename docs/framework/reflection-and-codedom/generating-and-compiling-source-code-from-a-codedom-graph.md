@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0218f74f5aa66921104fd36c085aaed04c9b435
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 7bfc915287e579374c69636135c4b049184ef6ce
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219530"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59164792"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Создание и компиляция исходного кода из графа CodeDOM
 Пространство имен <xref:System.CodeDom.Compiler> предоставляет интерфейсы для создания исходного кода из графов объекта CodeDOM и для управления компиляцией в поддерживаемых компиляторах. Поставщик кода может создавать исходный код на конкретном языке программирования, используя граф CodeDOM. Класс, производный от <xref:System.CodeDom.Compiler.CodeDomProvider>, обычно может предоставлять методы для создания и компиляции кода для языка, поддерживаемого поставщиком.  
@@ -94,6 +94,7 @@ ms.locfileid: "56219530"
  .NET Framework предоставляет компиляторы и генераторы кода для следующих языков: C#, Visual Basic, C++ и JScript. Поддержка CodeDOM может быть расширена на другие языки путем реализации генераторов и компиляторов кода для определенных языков.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.CodeDom>
 - <xref:System.CodeDom.Compiler>
 - [Динамическое создание и компиляция исходного кода](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

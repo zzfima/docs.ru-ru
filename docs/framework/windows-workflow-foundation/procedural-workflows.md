@@ -3,10 +3,10 @@ title: Процедурные рабочие процессы
 ms.date: 03/30/2017
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
 ms.openlocfilehash: 05942418038ca4349e32973aeefdfc4a50e49f46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164753"
 ---
 # <a name="procedural-workflows"></a>Процедурные рабочие процессы
@@ -38,4 +38,4 @@ ms.locfileid: "59164753"
   
 ## <a name="see-also"></a>См. также
 
-- [Рабочие процессы блок-схемы](flowchart-workflows.md)
+- [Рабочие процессы с блок-схемой](flowchart-workflows.md)

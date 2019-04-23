@@ -3,10 +3,10 @@ title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
 ms.openlocfilehash: c34eba2614a354f1753d8da077f8653f2c260a97
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165897"
 ---
 # <a name="systemruntimeserialization"></a>\<system.runtime.serialization>
@@ -47,9 +47,9 @@ ms.locfileid: "59165897"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
-|[\<Конфигурация > элемент](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Элемент конфигурации верхнего уровня.|  
+|[Элемент \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Элемент конфигурации верхнего уровня.|  
   
 ## <a name="see-also"></a>См. также
 

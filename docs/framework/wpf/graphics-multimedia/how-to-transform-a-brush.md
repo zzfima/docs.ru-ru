@@ -10,10 +10,10 @@ helpviewer_keywords:
 - rotating contents of brushes [WPF]
 ms.assetid: ebada2f9-f01f-4863-9ea2-c2e4e51610f1
 ms.openlocfilehash: a83f3b1c046e94faa8816e8c310f438b4711048a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163011"
 ---
 # <a name="how-to-transform-a-brush"></a>Практическое руководство. Преобразование кисти
@@ -46,6 +46,6 @@ ms.locfileid: "59163011"
   
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения о преобразованиях объекта Brush](brush-transformation-overview.md)
+- [Общие сведения о преобразованиях кистей](brush-transformation-overview.md)
 - [Общие сведения о закраске сплошным цветом и градиентом](painting-with-solid-colors-and-gradients-overview.md)
 - [Общие сведения о классах Transform](transforms-overview.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157876"
 ---
 # <a name="panels-overview"></a>Общие сведения о панелях
@@ -81,7 +81,7 @@ ms.locfileid: "59157876"
   
  Каждый производный <xref:System.Windows.Controls.Panel> элемент рассматривает ограничения размеров по-разному. Основные сведения о том, как <xref:System.Windows.Controls.Panel> обрабатывает ограничения в горизонтальном или вертикальном направлении, может сделать макет более предсказуемой.  
   
-|**Имя панели**|**Оси x**|**Измерение y**|  
+|**Имя панели**|**Размеры по оси x**|**Размеры по оси y**|  
 |--------------------|----------------------|----------------------|  
 |<xref:System.Windows.Controls.Canvas>|Ограничено содержимым|Ограничено содержимым|  
 |<xref:System.Windows.Controls.DockPanel>|Ограничено|Ограничено|  
@@ -242,7 +242,7 @@ ms.locfileid: "59157876"
   
 <a name="Panels_global_localization"></a>   
 ## <a name="localizationglobalization-support"></a>Поддержка локализации и глобализации  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает ряд функций, которые помогают в создании локализуемого [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает ряд возможностей для создания локализуемого [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
  Все элементы панели изначально поддерживают <xref:System.Windows.FrameworkElement.FlowDirection%2A> свойство, которое может использоваться для динамического содержимого на основе параметров языкового стандарта или языка пользователя. Дополнительные сведения см. в разделе <xref:System.Windows.FrameworkElement.FlowDirection%2A>.  
   
@@ -254,12 +254,12 @@ ms.locfileid: "59157876"
   
 ## <a name="see-also"></a>См. также
 
-- [Пошаговое руководство. Создание классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)
 - [Пример коллекции макетов WPF](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [Макет](../advanced/layout.md)
 - [Пример коллекции элементов управления WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
 - [Общие сведения о свойствах Alignment, Margin, Padding](../advanced/alignment-margins-and-padding-overview.md)
 - [Создание пользовательского содержимого пример](https://go.microsoft.com/fwlink/?LinkID=159979)
-- [Общие сведения о вложенных свойствах зависимостей](../advanced/attached-properties-overview.md)
+- [Общие сведения о присоединенных свойствах](../advanced/attached-properties-overview.md)
 - [Обзор использования автоматической разметки](../advanced/use-automatic-layout-overview.md)
 - [Разметка и разработка](../advanced/optimizing-performance-layout-and-design.md)

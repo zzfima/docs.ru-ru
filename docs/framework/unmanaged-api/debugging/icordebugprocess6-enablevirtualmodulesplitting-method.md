@@ -5,10 +5,10 @@ ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bb41cc47351ccf22fcd522b7d4291c235312bfaa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167693"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>Метод ICorDebugProcess6::EnableVirtualModuleSplitting
@@ -24,7 +24,7 @@ HRESULT EnableVirtualModuleSplitting(
   
 ## <a name="parameters"></a>Параметры  
  `enableSplitting`  
- `true` Чтобы включить разделение виртуальных модулей; `false` его отключить.  
+ `true`, чтобы включить разделение виртуальных модулей; `false`, чтобы отключить его.  
   
 ## <a name="remarks"></a>Примечания  
  Разделении виртуальных модулей метод [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) для распознавания модули, которые были объединены во время сборки и представляет их в виде группы отдельных модулей, а не одного крупного модуля. При этом изменяется поведение различных [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) описанных ниже методов.  

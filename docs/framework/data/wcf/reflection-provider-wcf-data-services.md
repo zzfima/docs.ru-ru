@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
 ms.openlocfilehash: e36f9124ec9979dac69b596c6d87491581ae9ec6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159527"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Поставщик отражений (службы данных WCF)
-Помимо предоставления данных из модели данных через Entity Framework, службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживают предоставление данных, не определенных строго в модели на основе сущностей. Поставщик отражения предоставляет данные в классах, типы возвращаемого значения которых реализуют интерфейс <xref:System.Linq.IQueryable%601>. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] использует отражение для определения модели данных для этих классов и поддерживают преобразование запросов к ресурсам на основе адресов языка в интегрированные в запросы (LINQ) — запросы к предоставляемым на основе <xref:System.Linq.IQueryable%601> типов.  
+Помимо предоставления данных из модели данных через Entity Framework, службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживают предоставление данных, не определенных строго в модели на основе сущностей. Поставщик отражения предоставляет данные в классах, типы возвращаемого значения которых реализуют интерфейс <xref:System.Linq.IQueryable%601>. Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] используют отражение для определения модели данных для таких классов и поддерживают преобразование запросов к таким ресурсам на основе адресов в интегрированные в язык запросы (LINQ) к предоставляемым типам <xref:System.Linq.IQueryable%601>.  
   
 > [!NOTE]
 >  Метод <xref:System.Linq.Queryable.AsQueryable%2A> позволяет получить интерфейс <xref:System.Linq.IQueryable%601> любого класса, реализующего интерфейс <xref:System.Collections.Generic.IEnumerable%601>. Это позволяет использовать большинство типов универсальных коллекций в качестве источника данных для службы данных.  

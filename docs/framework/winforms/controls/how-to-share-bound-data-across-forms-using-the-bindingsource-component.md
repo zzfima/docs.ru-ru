@@ -11,10 +11,10 @@ helpviewer_keywords:
 - BindingSource [Windows Forms], using with multiple forms
 ms.assetid: a1a49630-db9c-4485-b888-1f62a373a4f7
 ms.openlocfilehash: 19505c690728147d2a67c26371e1cea4c281ab08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154874"
 ---
 # <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>Практическое руководство. Совместное использование одних и тех же данных в нескольких формах посредством компонента BindingSource
@@ -40,4 +40,4 @@ ms.locfileid: "59154874"
 
 - [Компонент BindingSource](bindingsource-component.md)
 - [Привязка данных Windows Forms](../windows-forms-data-binding.md)
-- [Практическое руководство. Обработка ошибок и исключений, происходящих при связывании элементов управления с данными](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [Практическое руководство. Обработка ошибок и исключений, происходящих при выполнении привязки данных](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)

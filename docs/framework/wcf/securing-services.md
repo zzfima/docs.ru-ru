@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
 ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157681"
 ---
 # <a name="securing-services"></a>Защита служб
@@ -107,13 +107,13 @@ ms.locfileid: "59157681"
 - [Идентификация и проверка подлинности службы](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Основные сведения об уровне защиты](../../../docs/framework/wcf/understanding-protection-level.md)
 - [Делегирование и олицетворение](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
-- [Создание контрактов служб](../../../docs/framework/wcf/designing-service-contracts.md)
+- [Разработка контрактов службы](../../../docs/framework/wcf/designing-service-contracts.md)
 - [Безопасность](../../../docs/framework/wcf/feature-details/security.md)
 - [Общие сведения о безопасности](../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Практическое руководство. Установка свойства ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [Практическое руководство. Защита службы с использованием учетных данных Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [Практическое руководство. Задание режима безопасности](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Практическое руководство. Защита службы с помощью учетных данных Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Практическое руководство. Настройка режима безопасности](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
 - [Практическое руководство. Указание типа учетных данных клиента](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
 - [Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [Практическое руководство. Олицетворение клиента в рамках службы](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Практическое руководство. Олицетворение клиента в службе](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
 - [Практическое руководство. Анализ контекста безопасности](../../../docs/framework/wcf/how-to-examine-the-security-context.md)
