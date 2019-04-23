@@ -3,10 +3,10 @@ title: Использование программы Service Trace Viewer для
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
 ms.openlocfilehash: dd5fe08054b3a10c1663a7dd7dab5f9de5327cbb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329054"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Использование программы Service Trace Viewer для просмотра скоррелированных трассировок и устранения неполадок
@@ -43,19 +43,19 @@ ms.locfileid: "59329054"
   
  В представлении XML имеются следующие важные теги xml:  
   
--   `<SubType>` (уровень трассировки).  
+-   `<SubType>` (уровень трассировки);  
   
 -   `<TimeCreated>`.  
   
--   `<Source>` (имя источника трассировки).  
+-   `<Source>` (имя источника трассировки);  
   
--   `<Correlation>` (идентификатор действия, заданный при создании трассировки).  
+-   `<Correlation>` (идентификатор действия, заданный при создании трассировки);  
   
--   `<Execution>` (процесс и идентификатор потока).  
+-   `<Execution>` (процесс и идентификатор потока);  
   
 -   `<Computer>`.  
   
--   `<ExtendedData>`, включая `<Action>`, `<MessageID>` и `<ActivityId>` значение в заголовке сообщения при отправке сообщения.  
+-   `<ExtendedData>`, включая `<Action>`, `<MessageID>` и `<ActivityId>`, установленные в заголовке сообщения при отправке сообщения.  
   
  При анализе трассировки "Передано сообщение по каналу" отображаются следующие сведения.  
   
@@ -207,5 +207,5 @@ ms.locfileid: "59329054"
 ## <a name="see-also"></a>См. также
 
 - [Сценарии сквозной трассировки](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [Программа Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Средство просмотра трассировки служб (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

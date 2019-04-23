@@ -11,18 +11,18 @@ helpviewer_keywords:
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
 ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313961"
 ---
 # <a name="documents-in-wpf"></a>Документы в WPF
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предлагает широкий диапазон свойств документа, которые позволяют создавать содержимое высокого качества, который позволяет проще доступа и чтения, чем в предыдущих поколениях [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. В дополнение к расширенным возможностям и повышенному качеству [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет интегрированные службы для отображения, упаковки и обеспечения безопасности документов. В этом разделе содержатся вводные сведения о типах и упаковке документов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предлагает широкий ассортимент функций для работы с документами, позволяющих создавать содержимое высокого качества. Работать с ним удобнее, чем в предыдущих поколениях [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. В дополнение к расширенным возможностям и повышенному качеству [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет интегрированные службы для отображения, упаковки и обеспечения безопасности документов. В этом разделе содержатся вводные сведения о типах и упаковке документов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
 
 <a name="types_of_documents"></a>   
 ## <a name="types-of-documents"></a>Типы документов  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] разделяет документы на две основные категории на основе их предполагаемого использования; Эти категории документов называются «документы фиксированного формата» и «документы нефиксированного формата.»  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] разделяет документы на две основные категории на основе их предполагаемого использования; эти категории документов называются "документы фиксированного формата" и "документы нефиксированного формата".  
   
  Документы фиксированного формата предназначены для сфер применения, требующих точного представления [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] независимо от используемого дисплея или принтера. Документы фиксированного формата используются в компьютерной верстке, текстовой обработке и макетах форм, где строгое соответствие дизайну исходной страницы имеет критическое значение. При использовании такого макета документ фиксированного формата сохраняет точное расположение элементов содержимого независимо от используемого устройства изображения или печати. Так, страница документа фиксированного формата, отображаемая на дисплее 96 точек на дюйм, будет совершенно одинаково отображаться на лазерном принтере 600 точек на дюйм и фотонаборной машине 4800 точек на дюйм. Макет страницы остается неизменным во всех случаях, хотя качество документа повышается с учетом возможностей устройства.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59313961"
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>Текст в пользовательском интерфейсе  
- Текст можно добавлять не только в документы, но и использовать в интерфейсе приложений, например в формах. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержит несколько элементов управления для рисования текста на экране. Каждый элемент управления предназначен для своего сценария и имеет собственный список функций и ограничений. В общем случае <xref:System.Windows.Controls.TextBlock> элемент должен использоваться при необходимости, например короткого предложения в ограниченная поддержка текста [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> может использоваться, если требуется Минимальная текстовая поддержка. Дополнительные сведения см. в разделе [Общие сведения о классе TextBlock](../controls/textblock-overview.md).  
+ Текст можно добавлять не только в документы, но и использовать в интерфейсе приложений, например в формах. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет множество элементов управления для отображения текста на экране. Каждый элемент управления предназначен для своего сценария и имеет собственный список функций и ограничений. В общем случае <xref:System.Windows.Controls.TextBlock> элемент должен использоваться при необходимости, например короткого предложения в ограниченная поддержка текста [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> может использоваться, если требуется Минимальная текстовая поддержка. Дополнительные сведения см. в разделе [Общие сведения о классе TextBlock](../controls/textblock-overview.md).  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>Упаковка документов  
@@ -61,7 +61,7 @@ ms.locfileid: "59313961"
   
  Архитектура пакета [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] лежит в основе ряда ключевых технологий:  
   
--   [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] документы, удовлетворяющие [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
+-   Документы [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)], соответствующие стандарту [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
   
 -   Документы открытого XML-формата Microsoft Office "12" (.docx).  
   
@@ -123,7 +123,7 @@ ms.locfileid: "59313961"
   
 <a name="XPS_Documents"></a>   
 ## <a name="xps-documents"></a>XPS-документы  
- [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] документ является пакет, содержащий один или несколько фиксированных документов и все ресурсы и сведения, необходимые для подготовки к просмотру.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] также является собственным [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] формат файла очереди печати.  <xref:System.Windows.Xps.Packaging.XpsDocument> Хранится в стандартном наборе данных ZIP и может включать комбинацию XML и двоичных компонентов, таких как файлы изображений и шрифтов. [PackageRelationships](#PackageRelationships) используются для определения зависимостей между содержимым и ресурсами, необходимыми для полного отображения документа.  <xref:System.Windows.Xps.Packaging.XpsDocument> Подход обеспечивает единый, высококачественный документ решение, которое поддерживает многократного использования:  
+ Документ [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] — это пакет, который содержит один или несколько фиксированных документов и все ресурсы и сведения, необходимые для отображения.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] также является собственным форматом файлов в очереди на печать [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  <xref:System.Windows.Xps.Packaging.XpsDocument> Хранится в стандартном наборе данных ZIP и может включать комбинацию XML и двоичных компонентов, таких как файлы изображений и шрифтов. [PackageRelationships](#PackageRelationships) используются для определения зависимостей между содержимым и ресурсами, необходимыми для полного отображения документа.  <xref:System.Windows.Xps.Packaging.XpsDocument> Подход обеспечивает единый, высококачественный документ решение, которое поддерживает многократного использования:  
   
 -   Чтение, запись и хранение содержимого и ресурсов документов фиксированного формата в одном портативном документе с возможностью удобного распространения.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "59313961"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [Текста](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [Общие сведения о документах нефиксированного формата](flow-document-overview.md)
 - [Общие сведения о печати](printing-overview.md)
 - [Сериализация и хранение документов](document-serialization-and-storage.md)

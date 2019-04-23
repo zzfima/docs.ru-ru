@@ -9,10 +9,10 @@ helpviewer_keywords:
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
 ms.openlocfilehash: cbecb82acb22915af96fa26f08e441b4f6686c4a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312724"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Практическое руководство. Предоставление справки в приложении Windows
@@ -58,6 +58,6 @@ ms.locfileid: "59312724"
 ## <a name="see-also"></a>См. также
 
 - [Практическое руководство. Отображение всплывающей справки](how-to-display-pop-up-help.md)
-- [Отображение справки по элементам управления с помощью всплывающих подсказок](control-help-using-tooltips.md)
+- [Отображение справки по элементам управления с помощью подсказок](control-help-using-tooltips.md)
 - [Интеграция справки пользователя в формы Windows Forms](integrating-user-help-in-windows-forms.md)
 - [Windows Forms](../index.md)

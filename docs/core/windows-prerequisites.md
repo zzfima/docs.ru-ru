@@ -1,21 +1,22 @@
 ---
 title: Необходимые компоненты для .NET Core в Windows
 description: Узнайте о том, какие зависимости необходимы для разработки и запуска приложений .NET Core на компьютере Windows.
-ms.date: 12/14/2018
-ms.openlocfilehash: 2209c6e74413204c38ba54ffc538846f27d0bdf6
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.custom: updateeachvsrelease
+ms.date: 04/08/2019
+ms.openlocfilehash: 2941721dfa4b87d4113e4f4b529845e47f3dc1b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656119"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313714"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Необходимые компоненты для .NET Core в Windows
 
 В этой статье описываются поддерживаемые версии ОС, необходимые для запуска приложений .NET Core в Windows. Поддерживаемые версии ОС, а также перечисленные ниже зависимости относятся к трем способам разработки приложений .NET Core в Windows:
 
-* [командная строка;](tutorials/using-with-xplat-cli.md)
+* [Командная строка](tutorials/using-with-xplat-cli.md)
 * [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
-* [Visual Studio Code.](https://code.visualstudio.com/)
+* [Visual Studio Code](https://code.visualstudio.com/)
 
 Кроме того, если вы разрабатываете приложение в Windows с помощью Visual Studio 2017, ознакомьтесь с минимальными поддерживаемыми версиями для разработки .NET Core в разделе [Необходимые компоненты для Visual Studio 2017](#prerequisites-with-visual-studio-2017).
 
@@ -35,10 +36,10 @@ ms.locfileid: "53656119"
 
 В следующих статьях содержится полный список операционных систем с указанием версий, в которых поддерживается .NET Core:
 
-* [.NET Core 3.0 (предварительная версия)](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)
-* [.NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).
-* [.NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
-* [.NET Core 1.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
+* [.NET Core 3.0 (предварительная версия)](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)
+* [.NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)
+* [.NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
+* [.NET Core 1.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
 
 Дополнительные сведения и ссылки для скачивания см. на следующих страницах: [на странице скачиваемых файлов .NET](https://dotnet.microsoft.com/download) для загрузки новой версии и [на странице архива загрузок .NET](https://dotnet.microsoft.com/download/archives#dotnet-core) для более старых версий.
 
@@ -54,7 +55,7 @@ ms.locfileid: "53656119"
 * установка .NET Core из файла *.zip*, включая серверы сборки/непрерывной интеграции/непрерывного развертывания.
 
 > [!NOTE]
-> **Для Windows 8.1 и более ранних версий или Windows Server 2012 R2 и более ранних версий:**
+> **Для Windows 8.1 и более ранних версий или Windows Server 2012 R2 и более ранних версий:**
 >
 > Убедитесь, что установленная версия Windows актуальна и содержит обновление [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows), которое можно установить через Центр обновления Windows. Если это обновление не установлено, при запуске приложения .NET Core появится следующая ошибка: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 >
@@ -62,9 +63,9 @@ ms.locfileid: "53656119"
 >
 > Убедитесь, что помимо обновления KB2999226 также установлено обновление [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot). Если это обновление не установлено, при запуске приложения .NET Core появится примерно следующая ошибка: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
 
-## <a name="prerequisites-for-net-core-30-preview-1"></a>Необходимые компоненты для .NET Core 3.0 (предварительная версия 1)
+## <a name="prerequisites-for-net-core-30-preview-3"></a>Необходимые компоненты для .NET Core 3.0 (предварительная версия 3)
 
-Необходимые компоненты для .NET Core 3.0 (предварительная версия 1) такие же, как и для других версий .NET Core. Но если вы хотите создавать проекты .NET Core 3.0 с помощью Visual Studio, необходимо использовать [предварительную версию Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/). Предварительную версию Visual Studio 2019 можно установить параллельно с другими версиями Visual Studio без конфликтов.
+Необходимые компоненты для .NET Core 3.0 (предварительная версия 3) такие же, как и для других версий .NET Core. Но если вы хотите создавать проекты .NET Core 3.0 с помощью Visual Studio, необходимо использовать [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Visual Studio 2019 можно установить параллельно с другими версиями Visual Studio без конфликтов.
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Необходимые компоненты для Visual Studio 2017
     
@@ -72,7 +73,7 @@ ms.locfileid: "53656119"
 
 Дополнительные сведения об обновлениях Visual Studio 2017 см. в [заметках о выпуске](/visualstudio/releasenotes/vs2017-relnotes).
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# [<a name="net-core-2x"></a>.NET Core 2.x](#tab/netcore2x)
 
 Для разработки приложений .NET Core в Visual Studio 2017 с помощью пакета SDK для .NET Core 2.2 выполните указанные ниже действия:
 
@@ -100,7 +101,7 @@ ms.locfileid: "53656119"
 * перенацеливание проектов .NET Core 1.x и 2.x на .NET Core 2.2, сборка и запуск;
 * создание проектов .NET Core 2.2.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
 
 Для разработки приложений .NET Core 1.x в Visual Studio [скачайте и установите Visual Studio 2017](/visualstudio/install/install-visual-studio) с выбранной рабочей нагрузкой **Кроссплатформенная разработка .NET Core** (в разделе **Другие наборы инструментов**).
 
@@ -122,7 +123,7 @@ ms.locfileid: "53656119"
 >
 > * В меню **Справка** выберите пункт **О программе Microsoft Visual Studio**.
 > * В диалоговом окне **О программе Microsoft Visual Studio** проверьте номер версии.
->   * Для приложений .NET Core 3.0 (предварительная версия 1) — Visual Studio 2019 (предварительная версия 1) или более поздняя.
+>   * Для приложений .NET Core 3.0, (предварительная версия 3) — Visual Studio 2019 версии 16.0 или более поздняя.
 >   * Для приложений .NET Core 2.2 — Visual Studio 2017 версии 15.9 или более поздней версии.
 >   * Для приложений .NET Core 2.1 — Visual Studio 2017 версии 15.7 или более поздней версии.
 >   * Для приложений .NET Core 1.x — Visual Studio 2017 версии 15.0 или более поздняя версия.

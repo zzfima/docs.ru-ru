@@ -3,11 +3,11 @@ title: Извлечение метаданных
 ms.date: 03/30/2017
 ms.assetid: e8a6ef8c-a195-495a-a15e-7d92bdf0b28c
 ms.openlocfilehash: 48cac2b4b5a625546ab0c8ac9662fde01c7074b4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59329678"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768739"
 ---
 # <a name="retrieve-metadata"></a>Извлечение метаданных
 В этом образце показана реализация клиента, динамически извлекающего метаданные из службы для выбора конечной точки для взаимодействия. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md). Служба была изменена предоставляет две конечные точки — конечную точку по базовому адресу с использованием `basicHttpBinding` привязки и защищенную конечную точку в {*baseaddress*} / secure с использованием `wsHttpBinding` привязки. Вместо выполнения настройки адресов и привязок конечных точек клиента, клиент динамически извлекает метаданные для службы с помощью класса <xref:System.ServiceModel.Description.MetadataExchangeClient>, а затем импортирует эти метаданные в виде <xref:System.ServiceModel.Description.ServiceEndpointCollection>, используя класс <xref:System.ServiceModel.Description.WsdlImporter>.  

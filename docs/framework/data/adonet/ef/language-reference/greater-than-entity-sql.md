@@ -3,10 +3,10 @@ title: '> (Больше) (Язык entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 4cea865c-677c-4b06-99a1-010f2ae2394a
 ms.openlocfilehash: e1d13fa863eb79982d239f4e2dc298f7fcd1346f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328560"
 ---
 # <a name="-greater-than-entity-sql"></a>> (Больше) (язык Entity SQL)
@@ -23,7 +23,7 @@ expression > expression
  Любое допустимое выражение. Оба выражения должны иметь типы данных, допускающих неявное преобразование.  
   
 ## <a name="result-types"></a>Типы результата  
- `true` Если левое выражение значение, большее значения правого выражения; в противном случае `false`.  
+ Значение`true` , если левое выражение больше правого. В противном случае - значение `false`.  
   
 ## <a name="example"></a>Пример  
  Следующий запрос Entity SQL использует оператор сравнения > для сравнения двух выражений и определяет, имеет ли левое выражение значение, большее значения правого выражения. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  

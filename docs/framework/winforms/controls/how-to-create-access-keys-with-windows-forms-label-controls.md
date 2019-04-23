@@ -18,10 +18,10 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
 ms.openlocfilehash: ffe4bf6fb29e82b04938e2ba9a2d9d21e5eabcde
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314312"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Практическое руководство. Определение клавиш доступа с помощью элементов управления Label в Windows Forms
@@ -65,6 +65,6 @@ Windows Forms <xref:System.Windows.Forms.Label> элементы управле�
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Приведение размера элемента управления Label в соответствие с его содержимым в Windows Forms](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Практическое руководство. Размер элемента управления Windows Forms метка подгоняются под размеры его содержимого](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
 - [Общие сведения об элементе управления Label](label-control-overview-windows-forms.md)
 - [Элемент управления Label](label-control-windows-forms.md)

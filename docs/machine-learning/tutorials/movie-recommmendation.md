@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/08/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 822ad0fc7a0a765fbf8664522a2e23f7aca4ea16
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: efa217440ae636422bc8d2bd429f0396d7d28057
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921264"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311101"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>Учебник. Создание системы рекомендации фильмов с помощью ML.NET
 
@@ -33,6 +33,7 @@ ms.locfileid: "58921264"
 Исходный код для этого руководства можно найти в репозитории [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation).
 
 ## <a name="machine-learning-workflow"></a>Рабочий процесс машинного обучения
+
 Решение поставленной задачи, как и любой задачи в ML.NET, состоит из следующих этапов:
 
 1. [Загрузка данных](#load-your-data)
@@ -42,7 +43,7 @@ ms.locfileid: "58921264"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-* [Visual Studio 2017 15.6 или более поздней версии](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core".
+* [Visual Studio 2017 15.6 или более поздней версии](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core".
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>Выбор подходящей задачи машинного обучения
 
@@ -62,19 +63,19 @@ ms.locfileid: "58921264"
 
     В **обозревателе решений** щелкните проект правой кнопкой мыши и выберите **Управление пакетами NuGet**. Выберите nuget.org в качестве источника пакетов, перейдите на вкладку **Обзор**, выполните поиск по фразе **Microsoft.ML**, выберите из списка этот пакет и нажмите кнопку **Установить**. Нажмите кнопку **ОК** в диалоговом окне **Предварительный просмотр изменений**, а затем нажмите кнопку **Принимаю** в диалоговом окне **Принятие условий лицензионного соглашения**, если вы согласны с указанными условиями лицензионного соглашения для выбранных пакетов. Повторите эти действия для пакета **Microsoft.ML.Recommender**.
 
-  > [!NOTE]
-  > В этом руководстве используются версии пакетов **Microsoft.ML 0.11.0** и **Microsoft.ML.Recommender 0.11.0**.
-    
+    > [!NOTE]
+    > В этом руководстве используются версии пакетов **Microsoft.ML 0.11.0** и **Microsoft.ML.Recommender 0.11.0**.
+
 4. Добавьте следующие операторы `using` в начало файла *Program.cs*:
-    
+
     [!code-csharp[UsingStatements](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#UsingStatements "Add necessary usings")]
 
 ### <a name="download-your-data"></a>Скачивание данных
 
 1. Скачайте два набора данных и сохраните их в ранее созданную папку *Data*.
 
-*   Щелкните файл [*recommendation-ratings-train.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-train.csv) правой кнопкой мыши и выберите команду "Сохранить ссылку (объект) как...".
-*   Щелкните файл [*recommendation-ratings-test.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-test.csv) правой кнопкой мыши и выберите команду "Сохранить ссылку (объект) как...".
+   * Щелкните файл [*recommendation-ratings-train.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-train.csv) правой кнопкой мыши и выберите команду "Сохранить ссылку (объект) как...".
+   * Щелкните файл [*recommendation-ratings-test.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-test.csv) правой кнопкой мыши и выберите команду "Сохранить ссылку (объект) как...".
 
      Файлы \*.csv нужно сохранить в папке *Data*. Если вы сохранили файлы \*.csv в другом месте, переместите их в папку *Data*.
 
@@ -149,10 +150,10 @@ using Microsoft.ML.Data;
 [Класс MLContext](xref:Microsoft.ML.MLContext) является отправной точкой для любых операций ML.NET. В результате инициализации класса `mlContext` создается среда ML.NET, которая может использоваться всеми объектами в рамках процесса создания модели. По существу он аналогичен классу `DBContext` в Entity Framework.
 
 После метода `Main()` создайте метод `LoadData()`:
+
 ```csharp
 public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 {
-
 
 }
 ```
@@ -164,14 +165,13 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadData "Load data from data paths")]
 
-Данные в ML.NET представлены [классом IDataView](xref:Microsoft.Data.DataView.IDataView). `IDataView` позволяет гибко и полно описывать табличные данные (числовые и текстовые). Данные можно загружать в объект `IDataView` из текстового файла или в режиме реального времени (например, из базы данных SQL или файлов журнала).
+Данные в ML.NET представлены [классом IDataView](xref:Microsoft.ML.IDataView). `IDataView` позволяет гибко и полно описывать табличные данные (числовые и текстовые). Данные можно загружать в объект `IDataView` из текстового файла или в режиме реального времени (например, из базы данных SQL или файлов журнала).
 
 Метод [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) определяет схему данных и считывает файл. Он принимает переменные, содержащие пути к данным, и возвращает объект `IDataView`. В данном случае вы указываете пути к файлам `Test` и `Train`, а также заголовок текстового файла (чтобы использовались правильные имена столбцов) и разделитель данных в виде запятой (по умолчанию разделителем является символ табуляции).
 
 Добавьте в метод `Main()` следующие две строки кода для вызова метода `LoadData()` и получения наборов данных `Train` и `Test`:
 
 [!code-csharp[LoadDataMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadDataMain "Add LoadData method to Main")]
-
 
 ## <a name="build-and-train-your-model"></a>Создание и обучение модели
 
@@ -190,13 +190,14 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 Чтобы создать средство оценки (`Estimator`), выполните указанные ниже действия.
 
 Создайте метод `BuildAndTrainModel()` сразу после метода `LoadData()`, вставив в него следующий код:
+
 ```csharp
 public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView trainingDataView)
 {
 
-
 }
 ```
+
 > [!NOTE]
 > Этот метод будет вызывать ошибку, пока вы не добавите оператор return при выполнении дальнейших инструкций.
 
@@ -211,7 +212,6 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 | 1 | 1 | 4 | userKey1 | movieKey1 |
 | 1 | 3 | 4 | userKey1 | movieKey2 |
 | 1 | 6 | 4 | userKey1 | movieKey3 |
-
 
 Выберите алгоритм машинного обучения и добавьте его к определениям преобразований данных, добавив в метод `BuildAndTrainModel()` следующие строки кода:
 
@@ -234,7 +234,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 [!code-csharp[FitModel](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#FitModel "Call the Fit method and return back the trained model")]
 
-Метод [Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.Data.DataView.IDataView,Microsoft.Data.DataView.IDataView%29) обучает модель с помощью предоставленных наборов обучающих данных. С технической точки зрения, он выполняет определения средств оценки (`Estimator`), преобразовывая данные и применяя алгоритм обучения, а затем возвращает обученную модель, то есть преобразователь (`Transformer`).
+Метод [Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) обучает модель с помощью предоставленных наборов обучающих данных. С технической точки зрения, он выполняет определения средств оценки (`Estimator`), преобразовывая данные и применяя алгоритм обучения, а затем возвращает обученную модель, то есть преобразователь (`Transformer`).
 
 Добавьте в метод `Main()` следующую строку кода для вызова метода `BuildAndTrainModel()` и получения обученной модели:
 
@@ -245,10 +245,10 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 После обучения модели оцените ее эффективность с помощью тестовых данных. 
 
 Создайте метод `EvaluateModel()` сразу после метода `BuildAndTrainModel()`, вставив в него следующий код:
+
 ```csharp
 public static void EvaluateModel(MLContext mlContext, IDataView testDataView, ITransformer model)
 {
-
 
 }
 ```
@@ -304,9 +304,11 @@ RSquared: 0.412556298844873
 
 В этих выходных данных 20 итераций. В каждой итерации мера погрешности уменьшается, приближаясь к 0.
 
-Для измерения отклонения значений, спрогнозированных моделью, от фактических значений в тестовом наборе данных часто применяется среднеквадратичная погрешность (`root of mean squared error`). С технической точки зрения она вычисляется как квадратный корень из среднего значения квадратов погрешностей. Значение среднеквадратичной погрешности должно быть максимально близко к 1.
+`root of mean squared error` (RMS или RMSE) используется для измерения разницы между значениями, спрогнозированными моделью, и фактическими значениями в тестовом наборе данных. С технической точки зрения она вычисляется как квадратный корень из среднего значения квадратов погрешностей. Чем ниже это отклонение, тем лучше модель.
 
-`R Squared`  — это доля отклонения спрогнозированных значений, описываемая моделью. Он имеет значение от 0 до 1. Чем ближе значение к 0, тем лучше модель.
+`R Squared` указывает, насколько хорошо данные соответствуют модели. Значение находится в диапазоне от 0 до 1. Значение 0 означает, что данные случайные или по другим причинам не могут соответствовать модели. Значение 1 означает, что модель идеально соответствует этим данным. Значение `R Squared` должно быть максимально близко к 1.
+
+Построение успешных моделей — итеративный процесс. Изначально эта модель имеет низкое качество, так как в руководстве используются небольшие наборы данных для быстрого обучения. Если вам требуется модель более высокого качества, можно попытаться улучшить ее, использовав более крупные наборы данных для обучения или выбрав другие алгоритмы обучения с разными гиперпараметрами для каждого алгоритма. См. подробнее об [улучшении модели](#improve-your-model) в разделе ниже.
 
 ## <a name="use-your-model"></a>Использование модели
 
@@ -316,7 +318,6 @@ RSquared: 0.412556298844873
 ```csharp
 public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer model)
 {
-
 
 }
 ```
@@ -351,13 +352,14 @@ Movie 10 is recommended for user 6
 ```
 
 ### <a name="save-your-model"></a>Сохранение модели
+
 Чтобы модель можно было использовать для прогнозирования в приложениях для конечных пользователей, ее нужно сохранить.
 
 Создайте метод `SaveModel()` сразу после метода `UseModelForSinglePrediction()`, вставив в него следующий код:
+
 ```csharp
 public static void SaveModel(MLContext mlContext, ITransformer model)
 {
-
 
 }
 ```
@@ -373,6 +375,7 @@ public static void SaveModel(MLContext mlContext, ITransformer model)
 [!code-csharp[SaveModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#SaveModelMain "Create SaveModel method in Main")]
 
 ### <a name="use-your-saved-model"></a>Использование сохраненной модели
+
 После сохранения обученной модели ее можно использовать в различных средах (сведения о реализации обученной модели машинного обучения в приложениях см. в [этом практическом руководстве](../how-to-guides/consuming-model-ml-net.md)).
 
 ## <a name="results"></a>Результаты
@@ -416,7 +419,7 @@ Movie 10 is recommended for user 6
 
 Повысить эффективность модели для получения более точных прогнозов можно несколькими способами.
 
-### <a name="data"></a>Данные 
+### <a name="data"></a>Данные
 
 Чтобы повысить качество модели рекомендаций, можно дополнить обучающие данные для каждого пользователя и фильма.
 
@@ -450,6 +453,7 @@ var options = new MatrixFactorizationTrainer.Options
 ```
 
 ### <a name="other-recommendation-algorithms"></a>Другие алгоритмы рекомендаций
+
 Алгоритм разложения матрицы с совместной фильтрацией — лишь один из подходов к рекомендации фильмов. Зачастую данные по оценкам могут отсутствовать, то есть доступны только данные по просмотренным пользователями фильмам. В других случаях могут быть доступны дополнительные данные.
 
 | Алгоритм       | Сценарий           | Пример  |
@@ -458,12 +462,15 @@ var options = new MatrixFactorizationTrainer.Options
 | Факторизационные машины с полями | Следует использовать для рекомендаций при наличии дополнительных признаков, помимо userId, productId и rating (таких как описание или цена продукта). Этот алгоритм также использует метод совместной фильтрации. | [> Попробовать](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
 
 ### <a name="new-user-scenario"></a>Проблема нового пользователя
+
 Одна из распространенных проблем при использовании совместной фильтрации — это проблема "холодного запуска", когда для нового пользователя еще нет данных, на основе которых можно было бы делать выводы. Для ее решения новому пользователю часто предлагается создать профиль и, например, оценить фильмы, которые он уже видел. Хотя такой подход требует некоторых усилий от пользователя, он позволяет получить начальные данные, на которые можно было бы опираться.
 
 ## <a name="resources"></a>Ресурсы
+
 В этом учебнике используются данные из [набора данных MovieLens](http://files.grouplens.org/datasets/movielens/).
 
 ## <a name="next-steps"></a>Следующие шаги
+
 В этом руководстве вы узнали, как:
 
 > [!div class="checklist"]

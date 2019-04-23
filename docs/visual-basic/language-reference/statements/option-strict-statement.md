@@ -12,10 +12,10 @@ helpviewer_keywords:
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
 ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310191"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
@@ -69,9 +69,9 @@ Option Strict { On | Off }
   
 -   [Оператор +=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
--   [Оператор \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+-   [\ Оператор (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [Оператор /= (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+-   [/ =-Оператор (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
 -   [Тип данных Char](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
@@ -153,11 +153,11 @@ Option Strict { On | Off }
   
 ## <a name="see-also"></a>См. также
 
-- [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Расширяющие и сужающие преобразования](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Явные и неявные преобразования](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Страница "Компиляция" в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [Оператор Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Практическое руководство. Доступ к членам объекта](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
 - [Встроенные выражения в XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [Неявное преобразование делегата](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

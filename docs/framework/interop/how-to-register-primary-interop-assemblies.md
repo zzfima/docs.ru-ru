@@ -1,5 +1,5 @@
 ---
-title: Как выполнить  Регистрация основных сборок взаимодействия
+title: Как выполнить Регистрация основных сборок взаимодействия
 ms.date: 03/30/2017
 helpviewer_keywords:
 - registering primary interop assemblies
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c5f1882c37861fe7dd7997348dc51e30ce2950e
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 29f29da6f5a95181abfd4540b017561115d59284
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218545"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59314754"
 ---
-# <a name="how-to-register-primary-interop-assemblies"></a>Как выполнить  Регистрация основных сборок взаимодействия
+# <a name="how-to-register-primary-interop-assemblies"></a>Как выполнить Регистрация основных сборок взаимодействия
 
 Маршалинг классов может выполняться только с помощью COM-взаимодействия и только в качестве интерфейсов. Иногда интерфейс, используемый для маршалинга класса, называют интерфейсом класса. Сведения о переопределении интерфейса класса выбранным интерфейсом см. в разделе [Вызываемая оболочка COM](../../../docs/framework/interop/com-callable-wrapper.md).
 
@@ -36,7 +36,7 @@ ms.locfileid: "56218545"
 
 ## <a name="to-register-a-primary-interop-assembly"></a>Регистрация основной сборки взаимодействия
 
-1.  В командной строке введите следующее:
+1. В командной строке введите следующее:
 
      **regasm** *имя_сборки*
 

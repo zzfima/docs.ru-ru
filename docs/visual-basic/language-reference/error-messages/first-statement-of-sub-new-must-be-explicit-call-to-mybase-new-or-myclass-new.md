@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
 ms.openlocfilehash: 89b6c241bb637f2efc6014c4640b3b463c4facfa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313481"
 ---
 # <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>Первый оператор в «Sub New» должен иметь явный вызов в «MyBase.New» или «MyClass.New», так как "\<имя_конструктора >" в базовом классе\<имя_базового_класса > "из"\<имя_производного_класса > "помечен как устаревший:"\< сообщение об ошибке > "
@@ -31,4 +31,4 @@ ms.locfileid: "59313481"
   
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения об атрибутах](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Обзор атрибутов](../../../visual-basic/programming-guide/concepts/attributes/index.md)

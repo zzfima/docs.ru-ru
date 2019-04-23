@@ -9,10 +9,10 @@ helpviewer_keywords:
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
 ms.openlocfilehash: 2ae555c2e049e687f508e62b5b46fd8a744e827f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329107"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (параметры компилятора C#)
@@ -53,5 +53,5 @@ csc -warnaserror:642,649,652 in.cs
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Управление свойствами проекта и решения](/visualstudio/ide/managing-project-and-solution-properties)
+- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

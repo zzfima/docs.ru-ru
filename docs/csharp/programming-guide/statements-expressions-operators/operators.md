@@ -8,10 +8,10 @@ helpviewer_keywords:
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
 ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307478"
 ---
 # <a name="operators-c-programming-guide"></a>Операторы (Руководство по программированию на C#)
@@ -91,7 +91,7 @@ ms.locfileid: "59307478"
 |x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|Сдвиг влево|  
 |x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|Сдвиг вправо|  
   
- **Операторы отношения и типа**  
+ **Относительные операторы и операторы типов**  
   
 |Выражение|Описание|  
 |----------------|-----------------|  

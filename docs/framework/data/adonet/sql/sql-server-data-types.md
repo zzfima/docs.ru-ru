@@ -3,10 +3,10 @@ title: Типы данных SQL Server и ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
 ms.openlocfilehash: 9e81e54f223d35a3db9c943edf6f9f9b24110faa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326311"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Типы данных SQL Server и ADO.NET
@@ -35,7 +35,7 @@ ms.locfileid: "59326311"
  [Данные даты и времени](../../../../../docs/framework/data/adonet/sql/date-and-time-data.md)  
  Описывается использование новых типов данных даты и времени, появившихся в SQL Server 2008.  
   
- [Большие, определяемые пользователем типы](../../../../../docs/framework/data/adonet/sql/large-udts.md)  
+ [Большие определяемые пользователем типы](../../../../../docs/framework/data/adonet/sql/large-udts.md)  
  Демонстрируется извлечение данных из определяемых пользователем типов данных большого размера, появившихся в SQL Server 2008.  
   
  [Данные XML в SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
@@ -60,4 +60,4 @@ ms.locfileid: "59326311"
 - [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [Возвращающие табличное значение параметры](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)
 - [Двоичные данные и данные большого объема SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

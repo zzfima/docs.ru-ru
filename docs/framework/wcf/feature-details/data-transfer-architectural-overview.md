@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
 ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315885"
 ---
 # <a name="data-transfer-architectural-overview"></a>Общие сведения об архитектуре передачи данных
@@ -81,7 +81,7 @@ Windows Communication Foundation (WCF) может рассматриваться
 |------------------|--------------------------|--------------------------------------------------|-------------------------------------------------------|  
 |Исходящие, созданные из непотоковой модели программирования|Данные, необходимые для записи сообщения (например, объект и экземпляр <xref:System.Runtime.Serialization.DataContractSerializer> , необходимый для его сериализации)*|Пользовательская логика для записи сообщения на основании сохраненных данных (например, вызов метода `WriteObject` сериализатора `DataContractSerializer` , если используется именно этот сериализатор)*|Вызов `OnWriteBodyContents`, буферизация результатов, возврат средства чтения XML над буфером|  
 |Исходящие, созданные из потоковой модели программирования|Объект `Stream` с записываемыми данными*|Запись данных из сохраненного потока с помощью механизма <xref:System.Xml.IStreamProvider> *|Вызов `OnWriteBodyContents`, буферизация результатов, возврат средства чтения XML над буфером|  
-|Входящие из потокового стека каналов|Объект `Stream` , который представляет поступающие через сеть данные с помощью <xref:System.Xml.XmlReader> над ним|Запись содержимого из сохраненного `XmlReader` с помощью `WriteNode`|Возвращает сохраненное `XmlReader`|  
+|Входящие из потокового стека каналов|Объект `Stream` , который представляет поступающие через сеть данные с помощью <xref:System.Xml.XmlReader> над ним|Запись содержимого из сохраненного `XmlReader` с помощью `WriteNode`|Возвращает сохраненное средство чтения `XmlReader`.|  
 |Входящие из непотокового стека каналов|Буфер, который содержит данные основного текста и `XmlReader` над ними|Записывает содержимое из сохраненного `XmlReader` с помощью `WriteNode`|Возвращает сохраненный атрибут lang|  
   
  \* Эти элементы не реализованы непосредственно в `Message` подклассов, а в подклассах класса <xref:System.ServiceModel.Channels.BodyWriter> класса. Дополнительные сведения о веб-службе <xref:System.ServiceModel.Channels.BodyWriter>см. в разделе [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
@@ -135,7 +135,7 @@ Windows Communication Foundation (WCF) может рассматриваться
   
  Как уже говорилось ранее, действия могут быть самыми разнообразными: например, отправка или получение сетевых пакетов по различным протоколам, чтение или запись сообщений в базу данных, постановка сообщений в очередь сообщений или удаление сообщений из очереди. Все эти действия характерны одну вещь: их выполнение требует преобразования между WCF`Message` экземпляра и фактической группой байтов, которые могут быть отправлять, принимать, читать, записывать, в очереди или из очереди. Процесс преобразования `Message` в группу байтов называется *кодированием*, а обратный процесс создания `Message` из группы байтов - *декодированием*.  
   
- Большинство каналов транспорта для кодирования и декодирования используют компоненты под названием *кодировщики сообщений* . Кодировщик сообщений - это подкласс класса <xref:System.ServiceModel.Channels.MessageEncoder> . `MessageEncoder` включает различные `ReadMessage` и `WriteMessage` перегрузок метода для преобразования между `Message` и группами байтов.  
+ Большинство каналов транспорта для кодирования и декодирования используют компоненты под названием *кодировщики сообщений* . Кодировщик сообщений - это подкласс класса <xref:System.ServiceModel.Channels.MessageEncoder> . `MessageEncoder` включает различные перегрузки метода `ReadMessage` и `WriteMessage` , позволяющие производить преобразование из `Message` в группу байтов и обратно.  
   
  На отправляющей стороне буферизующий канал транспорта передает объект `Message` , полученный от канала более высокого уровня, методу `WriteMessage`. Он возвращает массив байтов, который затем использует для выполнения действия (например, упаковки этих байтов в виде действительных TCP-пакетов и отправки их по назначению). Потоковый канал транспорта сначала создает поток `Stream` (например, через исходящее TCP-соединение), а затем передает поток `Stream` и сообщение `Message` , которые он должен отправить записывающей сообщение перегрузке соответствующего метода `WriteMessage` .  
   
@@ -268,9 +268,9 @@ Windows Communication Foundation (WCF) может рассматриваться
   
  WCF поддерживает две технологии сериализации «стандартной» для сериализации и десериализации параметров и частей сообщений: <xref:System.Runtime.Serialization.DataContractSerializer> и `XmlSerializer`. Более того, можно создать настраиваемые сериализаторы. Тем не менее другие части WCF (например, универсальный `GetBody` сериализация ошибок метод или SOAP) может быть ограничен для использования только <xref:System.Runtime.Serialization.XmlObjectSerializer> подклассы (<xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.NetDataContractSerializer>, но не <xref:System.Xml.Serialization.XmlSerializer>), или даже может быть жестко запрограммированы для использования только <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- `XmlSerializer` представляет собой модуль сериализации, используемый в веб-службах [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . Новый модуль сериализации `DataContractSerializer` , совместимый с новой моделью программирования на основе контрактов данных. `DataContractSerializer` — Это вариант по умолчанию, а также возможность использования `XmlSerializer` можно сделать для каждой операции отдельных с помощью <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> атрибута.  
+ `XmlSerializer` представляет собой модуль сериализации, используемый в веб-службах [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . Новый модуль сериализации `DataContractSerializer` , совместимый с новой моделью программирования на основе контрактов данных. `DataContractSerializer` выбирается по умолчанию, однако можно выбрать `XmlSerializer` для отдельных операций с помощью атрибута <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> .  
   
- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> и <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> это поведения операции, ответственные за модули форматирования сообщений для подключение `DataContractSerializer` и `XmlSerializer`, соответственно. Фактически, поведение <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> может работать с любым сериализатором, наследуемым от <xref:System.Runtime.Serialization.XmlObjectSerializer>, включая <xref:System.Runtime.Serialization.NetDataContractSerializer> (подробное описание см. в разделе "Использование автономной сериализации"). Поведение вызывает одну из перегрузок виртуального метода `CreateSerializer` для получения сериализатора. Для подключения иного сериализатора необходимо создать новый подкласс <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> и переопределить обе перегрузки метода `CreateSerializer` .  
+ <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> и <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> - это поведения операции, ответственные за подключение модулей форматирования сообщений для `DataContractSerializer` и `XmlSerializer`соответственно. Фактически, поведение <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> может работать с любым сериализатором, наследуемым от <xref:System.Runtime.Serialization.XmlObjectSerializer>, включая <xref:System.Runtime.Serialization.NetDataContractSerializer> (подробное описание см. в разделе "Использование автономной сериализации"). Поведение вызывает одну из перегрузок виртуального метода `CreateSerializer` для получения сериализатора. Для подключения иного сериализатора необходимо создать новый подкласс <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> и переопределить обе перегрузки метода `CreateSerializer` .  
   
 ## <a name="see-also"></a>См. также
 

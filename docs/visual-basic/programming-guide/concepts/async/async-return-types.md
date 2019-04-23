@@ -3,10 +3,10 @@ title: Асинхронные типы возвращаемых значений
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
 ms.openlocfilehash: 227a187f7046d128a7170b272f90f77cfaac61c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313285"
 ---
 # <a name="async-return-types-visual-basic"></a>Асинхронные типы возвращаемых значений (Visual Basic)
@@ -98,7 +98,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync` вызывается и ожидается с помощью оператора await вместо выражения await, похожего на оператор вызова для синхронного `Sub` или метода, возвращающего void. Применение `Await` оператор в этом случае не возвращает значение.  
+ `Task_MethodAsync` вызывается и ожидается с помощью оператора await (вместо выражения await), похожего на оператор вызова для синхронного метода, возвращающего `Sub` или void. Применение `Await` оператор в этом случае не возвращает значение.  
   
  В следующем коде вызывается и ожидается метод `Task_MethodAsync`.  
   
@@ -295,7 +295,7 @@ End Sub
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
-- [Пошаговое руководство. Доступ к Интернету с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Поток управления в асинхронных программах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
+- [Пошаговое руководство: Доступ к Интернету с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Control Flow in Async Programs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md) (Поток управления в асинхронных программах (Visual Basic))
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Оператор Await](../../../../visual-basic/language-reference/operators/await-operator.md)

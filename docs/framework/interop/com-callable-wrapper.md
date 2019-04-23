@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8e2cab36c1dd990a1bf848067e7ae81baeb9ed8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a6d205cc9b13a43cd3b519c2a262f3db767ace7b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355055"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309489"
 ---
 # <a name="com-callable-wrapper"></a>Вызываемая оболочка COM
 
@@ -27,7 +27,7 @@ ms.locfileid: "57355055"
 
 Среда выполнения создает одну вызываемую оболочку COM для управляемого объекта независимо от числа клиентов COM, которым требуются его службы. Как показано на рисунке ниже, несколько клиентов COM могут содержать ссылку на вызываемую оболочку COM, предоставляющую интерфейс INew. Вызываемая оболочка COM, в свою очередь, содержит единственную ссылку на управляемый объект, который реализует интерфейс и обрабатывается сборщиком мусора. Клиенты COM и .NET могут одновременно выполнять запросы к одному и тому же управляемому объекту.
 
-![Вызываемая оболочка COM](./media/ccw.gif "ccw") Доступ к объектам .NET с помощью вызываемой оболочки COM
+![Несколько клиентов COM, содержащие ссылку на вызываемую оболочку COM, предоставляющую интерфейс INew.](./media/com-callable-wrapper/com-callable-wrapper-clients.gif)
 
 Вызываемые оболочки COM невидимы для других классов, работающих в среде .NET Framework. Их основной целью является маршалинг вызовов между управляемым и неуправляемым кодом. Однако вызываемые оболочки COM также управляют идентификацией и временем жизни управляемых объектов, которые в них упакованы.
 
@@ -45,7 +45,7 @@ ms.locfileid: "57355055"
 
 Для обеспечения такой унификации вызываемая оболочка COM создает традиционные COM-интерфейсы, такие как **IUnknown** и **IDispatch**. Как показано на рисунке ниже, вызываемая оболочка COM содержит единственную ссылку на инкапсулируемый в нее объект .NET. Клиент COM и объект .NET взаимодействуют друг с другом с помощью посредника и создания заглушки вызываемой оболочки COM.
 
-![COM-интерфейсы](./media/ccwwithinterfaces.gif "ccwwithinterfaces") COM-интерфейсы и вызываемая оболочка COM
+![Схема, на которой показано, как вызываемая оболочка COM создает COM-интерфейсы.](./media/com-callable-wrapper/com-callable-wrapper-interfaces.gif)
 
 Платформа .NET Framework не только обеспечивает доступ к интерфейсам, которые явным образом реализуются классом в управляемой среде, но и от имени объекта предоставляет реализации COM-интерфейсов, перечисленных в таблице ниже. Класс .NET может переопределять заданное по умолчанию поведение, предоставляя собственную реализацию этих интерфейсов. Однако среда выполнения всегда предоставляет реализацию интерфейсов **IUnknown** и **IDispatch**.
 
@@ -197,7 +197,7 @@ public class LoanApp
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
-- [Oболочки COM](com-wrappers.md)
-- [Предоставление компонентов .NET Framework клиентам COM](exposing-dotnet-components-to-com.md)
-- [Oпределение типов .NET для взаимодействия](qualifying-net-types-for-interoperation.md)
+- [Оболочки COM](com-wrappers.md)
+- [Предоставление COM-клиентам доступа к компонентам .NET Framework](exposing-dotnet-components-to-com.md)
+- [Уточнение типов .NET для взаимодействия](qualifying-net-types-for-interoperation.md)
 - [Вызываемая оболочка времени выполнения](runtime-callable-wrapper.md)

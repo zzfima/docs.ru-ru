@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e96f86e516e7b741aa9fbf67efd1683d0845101
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a785401f0477131e6ebf0e9c04ce6d0b0b4d4f5c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488517"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59517542"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (дизассемблер IL)
 
@@ -69,7 +69,7 @@ ildasm [options] [PEfilename] [options]
 |**/classlist**|Включает список классов, определенных в этом модуле.|
 |**/forward**|Использует прямое объявление класса.|
 |**/headers**|Включает сведения заголовка файла в выходные данные.|
-|**/item:** `class`[**::** `member`[`(sig`]]|В зависимости от заданных аргументов выполняет дизассемблирование:<br /><br /> дизассемблируется указанный `class`;<br />дизассемблируется указанный член `member` этого класса `class`;<br />дизассемблируется член `member` класса `class` с указанной сигнатурой `sig`. Формат `sig` выглядит следующим образом:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Примечание.** В .NET Framework версий 1.0 и 1.1 за атрибутом `sig` должна следовать закрывающая скобка: `(sig)`. В .NET Framework 2.0 и более поздних версий закрывающая скобка должна быть опущена: (`sig`.|
+|**/item:** `class`[**::** `member`[`(sig`]]|В зависимости от заданных аргументов выполняет дизассемблирование:<br /><br /> дизассемблируется указанный `class`;<br />дизассемблируется указанный член `member` этого класса `class`;<br />дизассемблируется член `member` класса `class` с указанной сигнатурой `sig`. Формат `sig` выглядит следующим образом:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Примечание.** В .NET Framework версий 1.0 и 1.1 за атрибутом `sig` должна следовать закрывающая скобка: `(sig)`. В .NET Framework 2.0 и последующих версиях закрывающая скобка должна быть опущена: `(sig`.|
 |**/noil**|Подавляет вывод кода сборки IL.|
 |**/stats**|Включает статистику по образу.|
 |**/typelist**|Создает полный список типов, чтобы сохранить упорядочение типов в круговом пути.|

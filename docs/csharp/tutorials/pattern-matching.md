@@ -3,12 +3,12 @@ title: Использование функций сопоставления ша
 description: Этом руководстве показано, как использовать методы сопоставления шаблонов для создания функций с помощью данных и алгоритмов, которые создаются отдельно.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: c064af5fdf85587d0c4fa1471894122d6fe0d2f7
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 5fdd65fdb96cce05f15872969bbdd401095b59e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262524"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308605"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Учебник. Использование функций сопоставления шаблонов для расширения типов данных
 
@@ -23,7 +23,7 @@ ms.locfileid: "58262524"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Вам нужно настроить свой компьютер для работы с .NET Core, включая предварительную версию компилятора C# 8.0. Предварительная версия компилятора C# 8 доступна с последней предварительной версией [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) или [.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Вам нужно настроить свой компьютер для работы с .NET Core, включая предварительную версию компилятора C# 8.0. Предварительная версия компилятора C# 8 доступна с последней версией [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) или [.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 В этом руководстве предполагается, что вы знакомы с C# и .NET, включая Visual Studio или .NET Core CLI.
 

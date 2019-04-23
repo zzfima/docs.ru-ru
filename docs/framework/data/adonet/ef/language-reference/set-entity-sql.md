@@ -3,10 +3,10 @@ title: SET (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 28b4deac-c7e4-4f09-b428-4d352ef2dc94
 ms.openlocfilehash: 4e2a387cf400a881dfd91c61b36ee3ce0f5a4431
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309437"
 ---
 # <a name="set-entity-sql"></a>SET (Entity SQL)
@@ -29,7 +29,7 @@ SET ( expression )
 SELECT VALUE DISTINCT c FROM c  
 ```  
   
- `SET` является одним из [!INCLUDE[esql](../../../../../../includes/esql-md.md)] операторы работы с наборами. Все операторы работы с наборами [!INCLUDE[esql](../../../../../../includes/esql-md.md)] выполняются слева направо. См. в разделе [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md) сведения о порядке выполнения [!INCLUDE[esql](../../../../../../includes/esql-md.md)] операторы работы с наборами.  
+ Оператор`SET` - это один из операторов работы с наборами в [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . Все операторы работы с наборами [!INCLUDE[esql](../../../../../../includes/esql-md.md)] выполняются слева направо. См. в разделе [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md) сведения о порядке выполнения [!INCLUDE[esql](../../../../../../includes/esql-md.md)] операторы работы с наборами.  
   
 ## <a name="example"></a>Пример  
  В следующем запросе Entity SQL используется выражение SET для преобразования коллекции объектов в набор. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  

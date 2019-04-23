@@ -3,10 +3,10 @@ title: Направление транзакций в службы рабоче�
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
 ms.openlocfilehash: 25ab4e415ce2cd6044cedef4841c1ba88254542e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315118"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Направление транзакций в службы рабочего процесса и из них
@@ -171,7 +171,7 @@ ms.locfileid: "59315118"
   
 5. Перетащите действие <xref:System.Activities.Statements.Sequence> в текст действия <xref:System.Activities.Statements.TransactionScope>.  
   
-6. Перетаскивание `PrintTransactionInfo` в действие <xref:System.Activities.Statements.Sequence>  
+6. Перетащите действие `PrintTransactionInfo` в <xref:System.Activities.Statements.Sequence>.  
   
 7. Перетаскивание <xref:System.Activities.Statements.WriteLine> действия после `PrintTransactionInfo` действие и набор его <xref:System.Activities.Statements.WriteLine.Text%2A> свойства «клиента: Начало отправки». После этого рабочий процесс должен выглядеть так:  
   
@@ -314,5 +314,5 @@ ms.locfileid: "59315118"
   
 ## <a name="see-also"></a>См. также
 
-- [Службы рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [Общие сведения о транзакциях Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/transactions-overview.md)

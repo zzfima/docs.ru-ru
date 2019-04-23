@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
 ms.openlocfilehash: f19b8cd5f80ba9fd6d1f5a9162b04ee409e24e28
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311894"
 ---
 # <a name="isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a>Операнд IsNot типа  можно сравнить только с Nothing, так как  является типом, допускающим значение NULL
@@ -35,5 +35,5 @@ End If
   
 ## <a name="see-also"></a>См. также
 
-- [Типы значения, допускающие Null](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Типы значений, допускающие значение NULL](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
 - [Оператор IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)

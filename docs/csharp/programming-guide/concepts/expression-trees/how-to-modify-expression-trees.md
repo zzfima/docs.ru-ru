@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Изменение деревьев выражений (C#)
+title: Как выполнить Изменение деревьев выражений (C#)
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
 ms.openlocfilehash: 26c00f3acc7ab44e74a81e346ab1c017d95d53b5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308644"
 ---
-# <a name="how-to-modify-expression-trees-c"></a>Практическое руководство. Изменение деревьев выражений (C#)
+# <a name="how-to-modify-expression-trees-c"></a>Как выполнить Изменение деревьев выражений (C#)
 В этом разделе показано, как изменить дерево выражения. Деревья выражений являются неизменяемыми, что означает невозможность их изменения напрямую. Чтобы изменить дерево выражения, необходимо создать копию существующего дерева выражения, а затем внести необходимые изменения. Для прохода по существующему дереву выражения и копирования каждого пройденного узла можно использовать класс <xref:System.Linq.Expressions.ExpressionVisitor>.  
   
 ### <a name="to-modify-an-expression-tree"></a>Изменение дерева выражения  
@@ -73,4 +73,4 @@ ms.locfileid: "59308644"
 ## <a name="see-also"></a>См. также
 
 - [Практическое руководство. Выполнение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [Деревья выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Expression Trees (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (C#))

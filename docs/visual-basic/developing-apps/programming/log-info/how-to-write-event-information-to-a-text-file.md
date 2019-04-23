@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Запись сведений о событиях в текстовый файл (Visual Basic)
+title: Как выполнить Запись сведений о событиях в текстовый файл (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs [Visual Studio], writing event information
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
 ms.openlocfilehash: e696ccb7327197c2f3a2468d30085dc6d390e034
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312723"
 ---
-# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Практическое руководство. Запись сведений о событиях в текстовый файл (Visual Basic)
+# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Как выполнить Запись сведений о событиях в текстовый файл (Visual Basic)
 Объекты `My.Application.Log` и `My.Log` можно использовать для записи в журнал информации о событиях, происходящих в приложении. В этом примере показано использование метода `My.Application.Log.WriteEntry` для записи данных трассировки в файл журнала.  
   
 ### <a name="to-add-and-configure-the-file-log-listener"></a>Добавление и настройка прослушивателя файлового журнала  
@@ -71,4 +71,4 @@ ms.locfileid: "59312723"
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [Работа с журналами приложения](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Практическое руководство. Запись исключений в журнал](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Практическое руководство. Исплючения журналов](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)

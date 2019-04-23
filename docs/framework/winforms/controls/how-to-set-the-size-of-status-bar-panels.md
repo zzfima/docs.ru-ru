@@ -11,10 +11,10 @@ helpviewer_keywords:
 - panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
 ms.openlocfilehash: efd3074aaf018e7226c484061cbacb2eac0be820
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311907"
 ---
 # <a name="how-to-set-the-size-of-status-bar-panels"></a>Практическое руководство. Определение размера панелей строки состояния
@@ -69,6 +69,6 @@ ms.locfileid: "59311907"
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Пошаговое руководство. Обновление строки состояния во время выполнения](walkthrough-updating-status-bar-information-at-run-time.md)
-- [Практическое руководство. Идентификация панели элемента управления StatusBar, которую щелкнул пользователь, в Windows Forms](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Пошаговое руководство: Обновление строки состояния во время выполнения](walkthrough-updating-status-bar-information-at-run-time.md)
+- [Практическое руководство. Определить, какая из панелей в элемент управления Windows Forms StatusBar была нажата](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [Общие сведения об элементе управления StatusBar](statusbar-control-overview-windows-forms.md)

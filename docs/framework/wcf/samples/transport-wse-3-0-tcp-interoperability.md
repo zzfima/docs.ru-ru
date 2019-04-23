@@ -3,10 +3,10 @@ title: 'Транспорт: TCP-взаимодействие WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
 ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324218"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Транспорт: TCP-взаимодействие WSE 3.0
@@ -23,7 +23,7 @@ ms.locfileid: "59324218"
 5. Добавьте элемент привязки, добавляющий пользовательский транспорт в стек каналов. Дополнительные сведения см. в разделе [Добавление элемента привязки].  
   
 ## <a name="creating-iduplexsessionchannel"></a>Создание IDuplexSessionChannel  
- Первый этап создания транспорта взаимодействия TCP WSE 3.0 - это реализация интерфейса <xref:System.ServiceModel.Channels.IDuplexSessionChannel> на основе класса <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` Является производным от <xref:System.ServiceModel.Channels.ChannelBase>. Логика передачи сообщения состоит из двух основных частей: (1) кодирование сообщения в байтах и (2) Кадрирование этих байтов и отправки их по сети.  
+ Первый этап создания транспорта взаимодействия TCP WSE 3.0 - это реализация интерфейса <xref:System.ServiceModel.Channels.IDuplexSessionChannel> на основе класса <xref:System.Net.Sockets.Socket>. Интерфейс `WseTcpDuplexSessionChannel` является производным от интерфейса <xref:System.ServiceModel.Channels.ChannelBase>. Логика передачи сообщения состоит из двух основных частей: (1) кодирование сообщения в байтах и (2) Кадрирование этих байтов и отправки их по сети.  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
@@ -31,13 +31,13 @@ ms.locfileid: "59324218"
   
  Кроме того, устанавливается блокировка, чтобы вызовы Send() сохраняли гарантию порядка IDuplexSessionChannel и чтобы вызовы соответствующего сокета были правильно синхронизированы.  
   
- `WseTcpDuplexSessionChannel` использует <xref:System.ServiceModel.Channels.MessageEncoder> за преобразование <xref:System.ServiceModel.Channels.Message> в и из byte []. Так как это транспорт, канал `WseTcpDuplexSessionChannel` также отвечает за использование удаленного адреса, с которым был настроен канал. `EncodeMessage` инкапсулирует логику для этого преобразования.  
+ `WseTcpDuplexSessionChannel` использует <xref:System.ServiceModel.Channels.MessageEncoder> для преобразования <xref:System.ServiceModel.Channels.Message> в массив byte[] и из него. Так как это транспорт, канал `WseTcpDuplexSessionChannel` также отвечает за использование удаленного адреса, с которым был настроен канал. `EncodeMessage` инкапсулирует логику для этого преобразования.  
   
  `this.RemoteAddress.ApplyTo(message);`  
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- После того как сообщение <xref:System.ServiceModel.Channels.Message> закодировано в байты, оно должно быть передано по сети. Для этого требуется система определения границ сообщения. WSE 3.0 использует версию [DIME](https://go.microsoft.com/fwlink/?LinkId=94999) качестве протокола кадрирования. `WriteData` инкапсулирует логику кадрирования для заключения массива byte [] в набор записей DIME.  
+ После того как сообщение <xref:System.ServiceModel.Channels.Message> закодировано в байты, оно должно быть передано по сети. Для этого требуется система определения границ сообщения. WSE 3.0 использует версию [DIME](https://go.microsoft.com/fwlink/?LinkId=94999) качестве протокола кадрирования. `WriteData` инкапсулирует логику кадрирования для заключения массива byte[] в набор записей DIME.  
   
  Логика приема сообщений очень похожа. Основная сложность заключается в учете ситуаций, когда операция чтения сокета может вернуть меньше байтов, чем было запрошено. Чтобы принять сообщение, `WseTcpDuplexSessionChannel` считывает байты из сети, декодирует кадрирование DIME, затем использует <xref:System.ServiceModel.Channels.MessageEncoder> для преобразования массива byte[] в сообщение <xref:System.ServiceModel.Channels.Message>.  
   

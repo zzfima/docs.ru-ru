@@ -27,10 +27,10 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
 ms.openlocfilehash: 9121041f936c091cda0e2af41b4f5be8d826d582
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318456"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Практическое руководство. Определение класса, реализующего одинаковую функциональность для различных типов данных (Visual Basic)
@@ -77,9 +77,9 @@ ms.locfileid: "59318456"
 ## <a name="see-also"></a>См. также
 
 - [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Универсальные типы в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Независимость от языка и независимые от языка компоненты](../../../../standard/language-independence-and-language-independent-components.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
-- [Type List](../../../../visual-basic/language-reference/statements/type-list.md)
+- [Список типов](../../../../visual-basic/language-reference/statements/type-list.md)
 - [Практическое руководство. Использование универсального класса](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)

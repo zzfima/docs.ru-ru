@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
 ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313948"
 ---
 # <a name="custom-animations-overview"></a>Общие сведения о пользовательской анимации
@@ -130,7 +130,7 @@ ms.locfileid: "59313948"
 - [Общие сведения о методах анимации свойств](property-animation-techniques-overview.md)
 - [Общие сведения об объектах класса Freezable](../advanced/freezable-objects-overview.md)
 - [Общие сведения об анимации по ключевым кадрам](key-frame-animations-overview.md)
-- [Общие сведения об анимация с использованием пути](path-animations-overview.md)
+- [Общие сведения об анимации с использованием пути](path-animations-overview.md)
 - [Общие сведения об эффектах анимации](animation-overview.md)
 - [Общие сведения об анимации и системе управления временем](animation-and-timing-system-overview.md)
 - [Пример пользовательской анимации](https://go.microsoft.com/fwlink/?LinkID=159981)

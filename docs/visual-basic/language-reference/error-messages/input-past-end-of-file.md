@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID62
 ms.assetid: 65292704-6e7d-4622-9f50-eb655a59b016
 ms.openlocfilehash: 5da14c7a28ecdcd023fc6439cb6ed64444c1183b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59342782"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768557"
 ---
 # <a name="input-past-end-of-file"></a>Оператор Input обнаружил конец файла
 Либо `Input` считывает данные из файла, который является пустым или в которой все данные используются, или была использована инструкция `EOF` функцию с файл открыт для двоичного доступа.  

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
 ms.openlocfilehash: 4f81c7377423899c142c4270f325bbd7ed20b877
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312245"
 ---
 # <a name="overload-resolution-visual-basic"></a>Разрешение перегрузки (Visual Basic)
@@ -28,7 +28,7 @@ ms.locfileid: "59312245"
   
      На этом шаге он исключает ни одной перегрузке, для которого не может преобразовать типы данных аргументов вызова для типов параметров, определенных в перегрузке.  
   
-4. **Narrowing Conversions.** Это устраняет любые перегрузку, которая требует сужающего преобразования из типов аргументов вызова в типы определенных параметров. Это верно, является ли переключатель проверки типа ([оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) является `On` или `Off`.  
+4. **Сужающие преобразования.** Это устраняет любые перегрузку, которая требует сужающего преобразования из типов аргументов вызова в типы определенных параметров. Это верно, является ли переключатель проверки типа ([оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) является `On` или `Off`.  
   
 5. **Наименьшее расширение.** Компилятор считает, что оставшиеся перегрузки парами. Для каждой пары он сравнивает типы данных определенных параметров. Если типы в одну из перегрузок все расширяется до соответствующих типов в другой, компилятор исключает последнюю. То есть остается перегрузка, которая требует наименьший объем расширения.  
   
@@ -66,8 +66,8 @@ ms.locfileid: "59312245"
 - [Рекомендации по устранению неполадок](./troubleshooting-procedures.md)
 - [Практическое руководство. Определение различных версий процедуры](./how-to-define-multiple-versions-of-a-procedure.md)
 - [Практическое руководство. Вызов перегруженной процедуры](./how-to-call-an-overloaded-procedure.md)
-- [Практическое руководство. Перегрузка процедуры, которая принимает необязательные параметры](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Практическое руководство. Перегрузка процедуры, которая принимает один необязательный параметр](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Практическое руководство. Перегрузка процедуры, принимающей неопределенное число параметров](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Вопросы, связанные с перегрузкой процедур](./considerations-in-overloading-procedures.md)
-- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Перегрузки](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Методы расширения](./extension-methods.md)

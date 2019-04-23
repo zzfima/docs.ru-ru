@@ -3,10 +3,10 @@ title: Поддержка новых возможностей Workflow Foundatio
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
 ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324166"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Поддержка новых возможностей Workflow Foundation 4.5 во вновь размещенном конструкторе рабочих процессов
@@ -130,7 +130,7 @@ Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45
   
 3. Поддержка совместного создания перехода триггера в конструкторе  
   
-4. Действия для создания рабочих процессов конечного автомата, включая: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>, и <xref:System.Activities.Statements.Transition>  
+4. Действия для создания рабочих процессов конечного автомата, включая <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> и <xref:System.Activities.Statements.Transition>  
   
  На следующем рисунке показан рабочего процесса конечного автомата завершенное состояние из [Приступая к работе](getting-started-tutorial.md) шаг [как: Создание рабочего процесса конечного автомата](how-to-create-a-state-machine-workflow.md).  
   

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
 ms.openlocfilehash: 3b4f00617418d5f84a0da5d0e531e1f671b58bb1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323152"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Использование привязок для настройки служб и клиентов
@@ -59,7 +59,7 @@ ms.locfileid: "59323152"
 ## <a name="see-also"></a>См. также
 
 - [Общие сведения о создании конечных точек](../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Практическое руководство. Задание привязки службы в конфигурации](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [Практическое руководство. Задание привязки службы в коде](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+- [Практическое руководство. Указание привязки службы в конфигурации](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
+- [Практическое руководство. Указание привязки службы в коде](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
 - [Практическое руководство. Указание привязки клиента в конфигурации](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
-- [Практическое руководство. Задание привязки клиента в коде](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)
+- [Практическое руководство. Указание привязки клиента в коде](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)

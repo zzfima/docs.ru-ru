@@ -17,18 +17,18 @@ helpviewer_keywords:
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
 ms.openlocfilehash: 9b3d6b9391971d4c2d012345b96c2ed64d33a998
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311049"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>Практическое руководство. Пользовательская прорисовка элемента управления ToolStrip
 Элементы управления <xref:System.Windows.Forms.ToolStrip> имеют следующие связанные классы отрисовки:  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer> предоставляет внешний вид и стиль операционной системы.  
+-   <xref:System.Windows.Forms.ToolStripSystemRenderer> предоставляет внешний вид и стиль операционной системы;  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> предоставляет внешний вид и стиль Microsoft Office.  
+-   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> предоставляет внешний вид и стиль Microsoft Office;  
   
 -   <xref:System.Windows.Forms.ToolStripRenderer> является абстрактным базовым классом для двух других классов отрисовки.  
   
@@ -138,6 +138,6 @@ ms.locfileid: "59311049"
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
-- [Элементы управления Windows Forms со встроенной поддержки рисования владельцем](controls-with-built-in-owner-drawing-support.md)
+- [Элементы управления со встроенной поддержкой рисования владельцем](controls-with-built-in-owner-drawing-support.md)
 - [Практическое руководство. Создание и определение пользовательского средства визуализации для элемента управления ToolStrip в Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
 - [Общие сведения об элементе управления ToolStrip](toolstrip-control-overview-windows-forms.md)

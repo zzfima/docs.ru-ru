@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92b72667101575aebea9b60a41979e374004b541
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e378eb36e633575d5afa886e886aed302cbdab9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499266"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59310989"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Переадресация типов в общеязыковой среде CLR
 Перенаправление типа позволяет переместить тип в другую сборку без повторной компиляции приложений, использующих исходную сборку.  
@@ -30,9 +30,9 @@ ms.locfileid: "54499266"
 ## <a name="forwarding-types"></a>Перенаправление типов  
  Для перенаправления типа следует выполнить следующую процедуру.  
   
-1.  Переместите исходный код для типа из исходной сборки в целевую сборку.  
+1. Переместите исходный код для типа из исходной сборки в целевую сборку.  
   
-2.  В сборке, где раньше находился тип, добавьте <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> для типа, который был перемещен. В следующем коде показан атрибут для типа с именем `Example`, который был перемещен.  
+2. В сборке, где раньше находился тип, добавьте <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> для типа, который был перемещен. В следующем коде показан атрибут для типа с именем `Example`, который был перемещен.  
   
     ```csharp  
     [assembly:TypeForwardedToAttribute(typeof(Example))]  
@@ -42,11 +42,12 @@ ms.locfileid: "54499266"
     [assembly:TypeForwardedToAttribute(Example::typeid)]  
     ```  
   
-3.  Скомпилируйте сборку, которая теперь содержит тип.  
+3. Скомпилируйте сборку, которая теперь содержит тип.  
   
-4.  Перекомпилируйте сборку, где раньше находился тип, со ссылкой на сборку, которая теперь содержит тип. Например, при компиляции файла C# из командной строки используйте параметр [/reference (параметры компилятора C#)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md), чтобы указать сборку, содержащую тип. В C++ используйте директиву [#using](/cpp/preprocessor/hash-using-directive-cpp) в исходном файле, чтобы указать сборку, содержащую тип.  
+4. Перекомпилируйте сборку, где раньше находился тип, со ссылкой на сборку, которая теперь содержит тип. Например, при компиляции файла C# из командной строки используйте параметр [/reference (параметры компилятора C#)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md), чтобы указать сборку, содержащую тип. В C++ используйте директиву [#using](/cpp/preprocessor/hash-using-directive-cpp) в исходном файле, чтобы указать сборку, содержащую тип.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>
 - [Перенаправление типов (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)
 - [Директива #using](/cpp/preprocessor/hash-using-directive-cpp)

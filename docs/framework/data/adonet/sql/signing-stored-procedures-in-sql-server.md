@@ -3,10 +3,10 @@ title: Подписывание хранимых процедур в SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
 ms.openlocfilehash: 2c2076294c0e06ec411ceb1f5b1238dc3d7eb304
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313922"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Подписывание хранимых процедур в SQL Server
@@ -63,4 +63,4 @@ ms.locfileid: "59313922"
 - [Написание безопасного динамического кода SQL в SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
 - [Настройка разрешений с олицетворением в SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
 - [Изменение данных с помощью хранимых процедур](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

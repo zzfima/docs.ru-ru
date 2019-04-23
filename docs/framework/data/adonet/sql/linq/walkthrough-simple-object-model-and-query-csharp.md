@@ -3,10 +3,10 @@ title: Пошаговое руководство. Простая модель о
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
 ms.openlocfilehash: dc56f1e7886a1a1391d94b512ba5c91ca8c9092a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309463"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Пошаговое руководство. Простая модель объектов и простой запрос (C#)
@@ -87,7 +87,7 @@ ms.locfileid: "59309463"
   
 -   Назначается свойство `CustomerID`, представляющее столбец первичного ключа в базе данных.  
   
--   Назначаются поля `_CustomerID` и `_City` для закрытого хранения. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] можно сохранять и извлекать значения напрямую, вместо использования открытых методов доступа, которые могут содержать бизнес-логики.  
+-   Назначаются поля `_CustomerID` и `_City` для закрытого хранения. После этого [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сможет напрямую сохранять и извлекать значения, вместо вызова открытых методов доступа, которые могут содержать бизнес-логику.  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>Представление характеристик двух столбцов базы данных  
   

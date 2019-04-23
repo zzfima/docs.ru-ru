@@ -3,10 +3,10 @@ title: Практическое руководство. Как представ�
 ms.date: 03/30/2017
 ms.assetid: 4025f1fd-9dfa-46c0-b04f-34e8bc7957a2
 ms.openlocfilehash: df72562b303e5b9a7c31334df06926f157b59b05
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324747"
 ---
 # <a name="how-to-represent-computed-columns"></a>Практическое руководство. Как представить вычисляемые столбцы
@@ -26,4 +26,4 @@ ms.locfileid: "59324747"
 ## <a name="see-also"></a>См. также
 
 - [Модель объектов LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Практическое руководство. Как настроить классы сущностей с помощью редактора кода](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Практическое руководство. Настройка классов сущностей с помощью редактора кода](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

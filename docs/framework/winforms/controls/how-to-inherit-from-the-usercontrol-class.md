@@ -8,10 +8,10 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
 ms.openlocfilehash: 5e9bdb6d6628b1c696b7944dc0ea1f4c974c8172
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311413"
 ---
 # <a name="how-to-inherit-from-the-usercontrol-class"></a>Практическое руководство. Наследование класса UserControl
@@ -36,9 +36,9 @@ ms.locfileid: "59311413"
   
 ## <a name="see-also"></a>См. также
 
-- [Создание собственных элементов управления](varieties-of-custom-controls.md)
-- [Практическое руководство. Наследование класса Control](how-to-inherit-from-the-control-class.md)
-- [Практическое руководство. Наследование существующих элементов управления Windows Forms](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Практическое руководство. Создание элементов управления для форм Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Разновидности пользовательских элементов управления](varieties-of-custom-controls.md)
+- [Практическое руководство. Наследовать от класса Control](how-to-inherit-from-the-control-class.md)
+- [Практическое руководство. Наследование Windows существующих элементов управления формы](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Практическое руководство. Автор элементы управления для форм Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Практическое руководство. Тестирование во время выполнения поведения элемента UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)

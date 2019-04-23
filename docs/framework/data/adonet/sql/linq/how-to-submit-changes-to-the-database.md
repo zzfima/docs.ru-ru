@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
 ms.openlocfilehash: 222ce575d9e977cc8b68862385b4a1b147c6394a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326389"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a>Практическое руководство. Как отправить изменения в базу данных
@@ -35,7 +35,7 @@ ms.locfileid: "59326389"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Как обнаруживать и разрешать конфликты отправки](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
-- [Практическое руководство. Как управлять конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Практическое руководство. Обнаруживать и разрешать конфликты отправки](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
+- [Практическое руководство. Управление конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
 - [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
 - [Внесение и отправка изменений данных](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

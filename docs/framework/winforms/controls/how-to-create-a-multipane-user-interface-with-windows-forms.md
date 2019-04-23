@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
 ms.openlocfilehash: 8650ba3b8011e50779080e31d94727609f2d08f1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315158"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Практическое руководство. Создание пользовательского интерфейса с несколькими областями с помощью Windows Forms
@@ -180,4 +180,4 @@ ms.locfileid: "59315158"
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [Элемент управления SplitContainer](splitcontainer-control-windows-forms.md)
-- [Практическое руководство. Создание пользовательского интерфейса с несколькими областями с использованием форм Windows Forms с помощью конструктора](create-a-multipane-user-interface-with-wf-using-the-designer.md)
+- [Практическое руководство. Создание с несколькими областями пользовательского интерфейса с помощью Windows Forms с помощью конструктора](create-a-multipane-user-interface-with-wf-using-the-designer.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c2209fdb-70ef-4dea-8bb8-097fe96f5563
 ms.openlocfilehash: a428f54c3834ccdf6a0c7a5bfce8307172724524
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322892"
 ---
 # <a name="how-to-execute-a-query-that-returns-complex-types"></a>Практическое руководство. Выполнение запроса, возвращающего сложные типы
@@ -26,7 +26,7 @@ ms.locfileid: "59322892"
   
 3. Дважды щелкните EDMX-файл для отображения модели в [окно браузера моделей](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738483(v=vs.100)) конструктора сущностей. В области конструктора сущностей выберите `Email` и `Phone` свойства `Contact` тип сущности, а затем щелкните правой кнопкой мыши и выберите **реструктурировать в новый сложный тип**.  
   
-4. Новый сложный тип с выбранными `Email` и `Phone` добавляется свойства **браузер моделей**. Сложному типу присваивается имя по умолчанию: переименовать тип в `EmailPhone` в **свойства** окна. Кроме того, новое свойство `ComplexProperty` добавляется к типу сущности `Contact`. Переименовать свойство `EmailPhoneComplexType.`  
+4. Новый сложный тип с выбранными `Email` и `Phone` добавляется свойства **браузер моделей**. Сложному типу присваивается имя по умолчанию: переименовать тип в `EmailPhone` в **свойства** окна. Кроме того, новое свойство `ComplexProperty` добавляется к типу сущности `Contact`. Измените имя свойства на `EmailPhoneComplexType.`  
   
      Сведения о создании и изменении сложных типов с помощью мастера моделей EDM, см. в разделе [как: Реструктурировать существующие свойства в свойство сложного типа](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456814(v=vs.100)) и [как: Создавать и изменять сложные типы](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100)).  
   

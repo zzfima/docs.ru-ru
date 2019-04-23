@@ -10,10 +10,10 @@ ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c35e796333aa3a93b7a66416fe0d93b7b1f3837f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311959"
 ---
 # <a name="net-framework-tools"></a>Инструменты .NET Framework
@@ -32,7 +32,7 @@ ms.locfileid: "59311959"
  [Al.exe (компоновщик сборок)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  Создает файл, обладающий манифестом сборки из модулей или файлов ресурсов.  
   
- [Aximp.exe (программа импорта элементов ActiveX форм Windows)](../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
+ [Aximp.exe (программа импорта элементов ActiveX форм Windows Forms)](../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
  Преобразует определения типов для элемента управления ActiveX из библиотеки типов COM в элемент управления Windows Forms.  
   
  [Caspol.exe (средство настройки политики управления доступом для кода)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
@@ -129,7 +129,7 @@ ms.locfileid: "59311959"
  Помогает производить локализацию ресурсов пользовательского интерфейса (файлы .resx или .resources), используемых формами Windows Forms. Можно перевести строки, а затем изменять размеры элементов управления, перемещать их и скрывать, чтобы вместить в них локализованные строки.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Средства WPF](https://docs.microsoft.com/previous-versions/ms742404(v=vs.110))  
+ [средства WPF](https://docs.microsoft.com/previous-versions/ms742404(v=vs.110))  
  Включает такие инструменты, как средство соответствия isXPS (isXPS.exe) и средства профилирования производительности.  
   
  [Средства Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  

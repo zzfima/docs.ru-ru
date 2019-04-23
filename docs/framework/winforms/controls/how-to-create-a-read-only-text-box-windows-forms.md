@@ -7,10 +7,10 @@ helpviewer_keywords:
 - text boxes [Windows Forms], read-only
 ms.assetid: 60baa9ab-fa57-44ad-bb7c-61b05aa64296
 ms.openlocfilehash: 72dc188993474ad4b39f0cfa74cadffdb99ff46f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308579"
 ---
 # <a name="how-to-create-a-read-only-text-box-windows-forms"></a>Практическое руководство. Создать только для чтения текстовое поле (Windows Forms)
@@ -27,9 +27,9 @@ ms.locfileid: "59308579"
 
 - <xref:System.Windows.Forms.TextBox>
 - [Общие сведения об элементе управления TextBox](textbox-control-overview-windows-forms.md)
-- [Практическое руководство. Управление положением курсора в элементе управления TextBox в Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Практическое руководство. Создание текстового поля для ввода пароля с помощью элемента управления TextBox в Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Управление положением курсора в элементе управления Windows Forms TextBox](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Практическое руководство. Создание текстового поля пароля с помощью элемента управления TextBox в Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [Практическое руководство. Добавление кавычек в строку](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Практическое руководство. Выделение текста в элементе управления TextBox в Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Практическое руководство. Многострочные элементы управления TextBox в Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Выделите текст в элементе управления Windows Forms TextBox](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Просмотр нескольких строк в элементе управления Windows Forms TextBox](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [Элемент управления TextBox](textbox-control-windows-forms.md)

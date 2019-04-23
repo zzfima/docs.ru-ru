@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отправка данных с помощью класса WebRequest
+title: Как выполнить Отправка данных с помощью класса WebRequest
 ms.date: 03/25/2019
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: 6d7a2e52177c05ead6300e775021572f3a64340a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3878a94debc7066cb8ace3b119d95d3b76d91610
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822275"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59322879"
 ---
-# <a name="how-to-send-data-by-using-the-webrequest-class"></a>Практическое руководство. Отправка данных с помощью класса WebRequest
+# <a name="how-to-send-data-by-using-the-webrequest-class"></a>Как выполнить Отправка данных с помощью класса WebRequest
 В следующей процедуре описаны действия для отправки данных на сервер. Эта процедура обычно используется для отправки данных на веб-страницу. 
   
 ## <a name="to-send-data-to-a-host-server"></a>Отправка данных на сервер узла  
   
-1.  Создайте экземпляр <xref:System.Net.WebRequest>, вызвав метод <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> с URI ресурса, например сценария или страницы ASP.NET, который принимает данные. Например: 
+1. Создайте экземпляр <xref:System.Net.WebRequest>, вызвав метод <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> с URI ресурса, например сценария или страницы ASP.NET, который принимает данные. Например: 
   
     ```csharp  
     WebRequest request = WebRequest.Create("http://www.contoso.com/PostAccepter.aspx");  
@@ -34,7 +34,7 @@ ms.locfileid: "58822275"
     > Платформа .NET Framework предоставляет связанные с определенным протоколом классы, производные от классов <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse>, для URI, которые начинаются с *http:*, *https:*, *ftp:* и *file:*.
     Если нужно задать или считать связанные с определенным протоколом свойства, следует привести объект <xref:System.Net.WebRequest> или <xref:System.Net.WebResponse> к типу объекта, связанному с определенным протоколом. Дополнительные сведения см. в разделе [Программирование подключаемых протоколов](programming-pluggable-protocols.md). 
   
-2.  Укажите все необходимые значения свойств в объекте `WebRequest`. Например, чтобы включить проверку подлинности, установите для свойства <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> значение экземпляра класса <xref:System.Net.NetworkCredential>:
+2. Укажите все необходимые значения свойств в объекте `WebRequest`. Например, чтобы включить проверку подлинности, установите для свойства <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> значение экземпляра класса <xref:System.Net.NetworkCredential>:
   
     ```csharp  
     request.Credentials = CredentialCache.DefaultCredentials;  
@@ -44,7 +44,7 @@ ms.locfileid: "58822275"
     request.Credentials = CredentialCache.DefaultCredentials  
     ```  
   
-3.  Укажите метод протокола, который разрешает отправлять данные с запросом, например метод `POST` HTTP:  
+3. Укажите метод протокола, который разрешает отправлять данные с запросом, например метод `POST` HTTP:  
   
     ```csharp  
     request.Method = "POST";  
@@ -54,7 +54,7 @@ ms.locfileid: "58822275"
     request.Method = "POST"  
     ```  
   
-4.  Задайте для свойства <xref:System.Web.HttpRequest.ContentLength> число байт, включаемых в запрос. Например: 
+4. Задайте для свойства <xref:System.Web.HttpRequest.ContentLength> число байт, включаемых в запрос. Например: 
   
     ```csharp  
     request.ContentLength = byteArray.Length;  
@@ -64,7 +64,7 @@ ms.locfileid: "58822275"
     request.ContentLength = byteArray.Length  
     ```  
   
-5.  Присвойте свойству <xref:System.Web.HttpRequest.ContentType> соответствующее значение. Например:
+5. Присвойте свойству <xref:System.Web.HttpRequest.ContentType> соответствующее значение. Например:
   
     ```csharp  
     request.ContentType = "application/x-www-form-urlencoded";  
@@ -74,7 +74,7 @@ ms.locfileid: "58822275"
     request.ContentType = "application/x-www-form-urlencoded"  
     ```  
   
-6.  Получите поток, который содержит данные запроса, вызвав метод <xref:System.Net.WebRequest.GetRequestStream%2A>. Например:
+6. Получите поток, который содержит данные запроса, вызвав метод <xref:System.Net.WebRequest.GetRequestStream%2A>. Например:
   
     ```csharp  
     Stream dataStream = request.GetRequestStream();  
@@ -84,7 +84,7 @@ ms.locfileid: "58822275"
     Stream dataStream = request.GetRequestStream()  
     ```  
   
-7.  Запишите данные в объект <xref:System.IO.Stream>, возвращенный методом `GetRequestStream`. Например:
+7. Запишите данные в объект <xref:System.IO.Stream>, возвращенный методом `GetRequestStream`. Например:
   
     ```csharp  
     dataStream.Write(byteArray, 0, byteArray.Length);  
@@ -94,7 +94,7 @@ ms.locfileid: "58822275"
     dataStream.Write(byteArray, 0, byteArray.Length)  
     ```  
   
-8.  Закройте поток запроса, вызвав метод <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>. Например:
+8. Закройте поток запроса, вызвав метод <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>. Например:
   
     ```csharp  
     dataStream.Close();  
@@ -153,8 +153,8 @@ ms.locfileid: "58822275"
 [!code-csharp[SendDataUsingWebRequest](../../../samples/snippets/csharp/VS_Snippets_Network/SendDataUsingWebRequest/cs/WebRequestPostExample.cs)]
 [!code-vb[SendDataUsingWebRequest](../../../samples/snippets/visualbasic/VS_Snippets_Network/SendDataUsingWebRequest/vb/WebRequestPostExample.vb)]
 
-  
 ## <a name="see-also"></a>См. также
+
 - [Создание интернет-запросов](creating-internet-requests.md)
 - [Использование потоков в сети](using-streams-on-the-network.md)
 - [Доступ к Интернету через прокси-сервер](accessing-the-internet-through-a-proxy.md)

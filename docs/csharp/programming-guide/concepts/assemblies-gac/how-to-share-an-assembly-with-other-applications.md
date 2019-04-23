@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Совместное использование сборки с другими приложениями (C#)
+title: Как выполнить Совместное использование сборки с другими приложениями (C#)
 ms.date: 07/20/2015
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
 ms.openlocfilehash: 8bb36c2aded1144349b86b17a45eef4b48c8aabe
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314793"
 ---
-# <a name="how-to-share-an-assembly-with-other-applications-c"></a>Практическое руководство. Совместное использование сборки с другими приложениями (C#)
+# <a name="how-to-share-an-assembly-with-other-applications-c"></a>Как выполнить Совместное использование сборки с другими приложениями (C#)
 Сборки могут быть закрытыми или общими. По умолчанию большинство простых программ состоят из закрытой сборки, так как она не предназначена для использования другими приложениями.  
   
  Для совместного использования сборки с другими приложениями ее необходимо поместить в [глобальный кэш сборок](../../../../framework/app-domains/gac.md) (GAC).  

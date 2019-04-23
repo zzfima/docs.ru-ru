@@ -8,10 +8,10 @@ helpviewer_keywords:
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
 ms.openlocfilehash: 91f34de36e88724ccab21097bf54a4604f7eee37
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306720"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Практическое руководство. Создать свойство (Visual Basic)

@@ -3,10 +3,10 @@ title: Использование действий .NET Framework 3.0 WF на п
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
 ms.openlocfilehash: 33140ac85cd50140c0aa34d1986365fefc005c78
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329418"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Использование действий .NET Framework 3.0 WF на платформе .NET Framework 4 с действием «Interop»
@@ -34,13 +34,13 @@ ms.locfileid: "59329418"
 ## <a name="limitations-of-using-a-wf-3-activity-within-an-interop-activity"></a>Ограничения использования действия WF 3 в действии взаимодействия  
  Действия WF 3, предоставленные системой, могут быть непосредственно обернуты в оболочку действия <xref:System.Activities.Statements.Interop>. Для некоторых действий WF 3, например для <xref:System.Workflow.Activities.DelayActivity>, это вызвано тем, что существует аналогичное действие WF 4.5. Для других это вызвано тем, что функциональные возможности действия не поддерживаются. Многие действия WF 3, предоставляемые системой, могут быть использованы в рабочих процессах, обернутых в оболочку действия <xref:System.Activities.Statements.Interop>, со следующими ограничениями:  
   
-1. <xref:System.ServiceModel.Activities.Send> и <xref:System.ServiceModel.Activities.Receive> не может использоваться в <xref:System.Activities.Statements.Interop> действия.  
+1. Действия <xref:System.ServiceModel.Activities.Send> и <xref:System.ServiceModel.Activities.Receive> не могут использоваться в действии <xref:System.Activities.Statements.Interop>.  
   
-2. <xref:System.Workflow.Activities.WebServiceInputActivity>, <xref:System.Workflow.Activities.WebServiceOutputActivity>, и <xref:System.Workflow.Activities.WebServiceFaultActivity> нельзя использовать в <xref:System.Activities.Statements.Interop> действия.  
+2. Действия <xref:System.Workflow.Activities.WebServiceInputActivity>, <xref:System.Workflow.Activities.WebServiceOutputActivity> и <xref:System.Workflow.Activities.WebServiceFaultActivity> не могут использоваться внутри действия <xref:System.Activities.Statements.Interop>.  
   
-3. <xref:System.Workflow.Activities.InvokeWorkflowActivity> нельзя использовать в <xref:System.Activities.Statements.Interop> действия.  
+3. Действие <xref:System.Workflow.Activities.InvokeWorkflowActivity> не может быть использовано внутри действия <xref:System.Activities.Statements.Interop>.  
   
-4. <xref:System.Workflow.ComponentModel.SuspendActivity> нельзя использовать в <xref:System.Activities.Statements.Interop> действия.  
+4. Действие <xref:System.Workflow.ComponentModel.SuspendActivity> не может быть использовано внутри действия <xref:System.Activities.Statements.Interop>.  
   
 5. Действия, связанные с компенсацией, не могут использоваться внутри действия <xref:System.Activities.Statements.Interop>.  
   

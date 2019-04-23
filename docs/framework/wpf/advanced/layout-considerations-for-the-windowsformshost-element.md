@@ -10,10 +10,10 @@ helpviewer_keywords:
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
 ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327858"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Вопросы, связанные с макетом элемента WindowsFormsHost
@@ -40,7 +40,7 @@ ms.locfileid: "59327858"
   
 -   В некоторых случаях размеры элемента управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] изменять нельзя, или же их можно изменять, но только в фиксированных пределах. Например [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> элемент управления поддерживает только одну высоту, которая определяется размером шрифта элемента управления. В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] динамический макет, где элементы можно растянуть по вертикали, вложенный <xref:System.Windows.Forms.ComboBox> управления не растягивается, как ожидалось.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления нельзя поворачивать или неравномерным. <xref:System.Windows.Forms.Integration.WindowsFormsHost> — Вызывает <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> событий при применении преобразования Искажение или поворот. Если не обработать <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> событий, <xref:System.InvalidOperationException> возникает.  
+-   Элементы управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] нельзя поворачивать или наклонять. <xref:System.Windows.Forms.Integration.WindowsFormsHost> — Вызывает <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> событий при применении преобразования Искажение или поворот. Если не обработать <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> событий, <xref:System.InvalidOperationException> возникает.  
   
 -   В большинстве случаев элементы управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] не поддерживают пропорциональное масштабирование. Несмотря на то, что общий размер элемента управления масштабируется, дочерние элементы управления и компоненты элемента управления могут изменять размеры не так, как ожидается. Это ограничение зависит от поддержки масштабирования каждым элементом управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Кроме того, нельзя масштабировать [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементов управления до размера, равные 0 пикселей.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "59327858"
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Пошаговое руководство. Упорядочение элементов управления Windows Forms в WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [Пошаговое руководство: Упорядочение Windows Forms элементы управления в WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
 - [Элементы управления упорядочение Windows Forms в WPF](https://go.microsoft.com/fwlink/?LinkID=159971)
 - [Сопоставление свойств Windows Forms и WPF](windows-forms-and-wpf-property-mapping.md)
 - [Миграция и взаимодействие систем](migration-and-interoperability.md)

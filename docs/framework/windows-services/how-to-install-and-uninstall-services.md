@@ -1,5 +1,5 @@
 ---
-title: Как выполнить  Установка и удаление служб Windows
+title: Как выполнить Установка и удаление служб Windows
 ms.date: 02/05/2019
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 43b5ad2f346406897e8bcbcce5660a6c9524f9af
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 0119fee443aafd1d4215260d2cf42cec9f7eba74
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826277"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59308475"
 ---
-# <a name="how-to-install-and-uninstall-windows-services"></a>Как выполнить  Установка и удаление служб Windows
+# <a name="how-to-install-and-uninstall-windows-services"></a>Как выполнить Установка и удаление служб Windows
 Если вы разрабатываете службу Windows с помощью платформы .NET Framework, можно быстро установить приложение службы с помощью служебной программы командной строки [*InstallUtil.exe*](../tools/installutil-exe-installer-tool.md). Если вы являетесь разработчиком и хотите создать службу Windows, которую пользователи могут устанавливать и удалять, необходимо использовать InstallShield. Дополнительные сведения см. в разделе [Создание пакета установщика (клиент Windows)](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client).
   
 > [!WARNING]
@@ -34,13 +34,13 @@ ms.locfileid: "55826277"
   
 ### <a name="install-your-service-manually"></a>Установка службы вручную  
   
-1.  В меню **Пуск** выберите каталог **Visual Studio \<*версия*>**, а затем выберите **Командная строка разработчика для VS \<*версия*>**.
+1. В меню **Пуск** выберите каталог **Visual Studio \<*версия*>**, а затем выберите **Командная строка разработчика для VS \<*версия*>**.
   
      Появится командная строка разработчика для Visual Studio. 
   
-2.  Откройте каталог, где находится скомпилированный исполняемый файл вашего проекта.  
+2. Откройте каталог, где находится скомпилированный исполняемый файл вашего проекта.  
   
-3.  Запустите *InstallUtil.exe* из командной строки, указав исполняемый файл проекта в качестве параметра:  
+3. Запустите *InstallUtil.exe* из командной строки, указав исполняемый файл проекта в качестве параметра:  
   
     ```console
     installutil <yourproject>.exe  
@@ -58,7 +58,7 @@ ms.locfileid: "55826277"
   
      Появится командная строка разработчика для Visual Studio.  
   
-2.  Запустите *InstallUtil.exe* из командной строки, указав выходные данные проекта в качестве параметра:  
+2. Запустите *InstallUtil.exe* из командной строки, указав выходные данные проекта в качестве параметра:  
   
     ```console  
     installutil /u <yourproject>.exe  
@@ -67,6 +67,7 @@ ms.locfileid: "55826277"
 3. После удаления исполняемого файла для службы сама служба может по-прежнему присутствовать в реестре. В этом случае удалить запись службы из реестра можно с помощью команды [sc delete](/windows-server/administration/windows-commands/sc-delete).  
   
 ## <a name="see-also"></a>См. также
+
 - [Знакомство с приложениями служб Windows](../windows-services/introduction-to-windows-service-applications.md)
 - [Практическое руководство. Создание служб Windows](../windows-services/how-to-create-windows-services.md)
 - [Практическое руководство. Добавление установщиков в приложение-службу](../windows-services/how-to-add-installers-to-your-service-application.md)

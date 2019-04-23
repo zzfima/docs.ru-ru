@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Копирование файлов в каталог с использованием шаблона в Visual Basic
+title: Как выполнить Копирование файлов в каталог с использованием шаблона в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.FileSystem.CopyFile method, copying files [Visual Basic]
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
 ms.openlocfilehash: 437a7058abd9ae167fcde15d4bddbe69bc64b7e0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310776"
 ---
-# <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Практическое руководство. Копирование файлов в каталог с использованием шаблона в Visual Basic
+# <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Как выполнить Копирование файлов в каталог с использованием шаблона в Visual Basic
 Метод <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> возвращает доступную только для чтения коллекцию строк, представляющих имена путей для файлов. Для указания определенного шаблона можно использовать параметр `wildCards` .  
   
  Если соответствующие файлы не найдены, возвращается пустая коллекция.  
@@ -62,5 +62,5 @@ ms.locfileid: "59310776"
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
 - [Практическое руководство. Поиск подкаталогов по заданному шаблону](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
-- [Устранение неполадок: Чтение из текстовых файлов и запись в такие файлы](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Устранение неполадок. Чтение из текстовых файлов и запись в такие файлы](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
 - [Практическое руководство. Получение коллекции содержащихся в каталоге файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

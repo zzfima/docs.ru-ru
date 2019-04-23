@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Создание подписанных дружественных сборок в (C#)
+title: Как выполнить Создание подписанных дружественных сборок в (C#)
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 ms.openlocfilehash: b80d22aa68a969a5468aa1395195058e47f300c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325206"
 ---
-# <a name="how-to-create-signed-friend-assemblies-c"></a>Практическое руководство. Создание подписанных дружественных сборок в (C#)
+# <a name="how-to-create-signed-friend-assemblies-c"></a>Как выполнить Создание подписанных дружественных сборок в (C#)
 В этом примере демонстрируется использование дружественных сборок со сборками, имеющими строгие имена. Обе сборки должны иметь строгое имя. Хотя обе сборки в этом примере используют одинаковые ключи, вы можете использовать для двух сборок разные ключи.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Создание подписанной и дружественной сборки  

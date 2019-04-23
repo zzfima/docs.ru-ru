@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
 ms.openlocfilehash: 3c0763f21940831f401194356dc25b0d99c8d6f2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308540"
 ---
 # <a name="expose-your-data-as-a-service-wcf-data-services"></a>Предоставления данных как услуга (службы данных WCF)
@@ -25,7 +25,7 @@ ms.locfileid: "59308540"
 
 2. **Создание службы данных.** Самая базовая служба данных предоставляет класс, производный от класса <xref:System.Data.Services.DataService%601> , с типом `T` , представляющим имя контейнера сущностей, квалифицированное пространством имен. Дополнительные сведения см. в разделе [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md).
 
-3. **Настройте службу данных.** По умолчанию службы данных WCF запрещает доступ к ресурсам, предоставляемым контейнером сущностей. <xref:System.Data.Services.DataServiceConfiguration> Интерфейс позволяет настроить доступ к ресурсам и операциям службы, задать поддерживаемую версию OData и определить другие особенности поведения службы, такие как использование пакетирования или максимальное количество сущностей, которые могут быть возвращены в одном ответе. Дополнительные сведения см. в разделе [Настройка службы данных](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).
+3. **Настройка службы данных.** По умолчанию службы данных WCF запрещает доступ к ресурсам, предоставляемым контейнером сущностей. <xref:System.Data.Services.DataServiceConfiguration> Интерфейс позволяет настроить доступ к ресурсам и операциям службы, задать поддерживаемую версию OData и определить другие особенности поведения службы, такие как использование пакетирования или максимальное количество сущностей, которые могут быть возвращены в одном ответе. Дополнительные сведения см. в разделе [Настройка службы данных](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).
 
 Пример создания простой службы данных, основанный на образце базы данных Northwind, см. в разделе [быстрого запуска](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).
 

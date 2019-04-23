@@ -8,10 +8,10 @@ helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
 ms.openlocfilehash: d327605c084cd5fb1c65fbb786e871b421730b83
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313324"
 ---
 # <a name="programming-wcf-security"></a>Программирование безопасности WCF
@@ -103,5 +103,5 @@ ms.locfileid: "59313324"
   
 ## <a name="see-also"></a>См. также
 
-- [Базовое программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Базовое программирование для WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Типовые сценарии безопасности](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)

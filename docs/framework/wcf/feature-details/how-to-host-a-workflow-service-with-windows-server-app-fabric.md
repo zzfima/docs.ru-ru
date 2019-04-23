@@ -3,10 +3,10 @@ title: Практическое руководство. Как размести�
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
 ms.openlocfilehash: d1042aca7e4127c39e59bf0bf400974f0cecb1e8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314741"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Практическое руководство. Как разместить службу рабочего процесса с помощью Windows Server App Fabric
@@ -93,6 +93,6 @@ ms.locfileid: "59314741"
 ## <a name="see-also"></a>См. также
 
 - [Создание службы долго выполняющегося рабочего процесса](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)
-- [Возможности размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193143)
+- [Функции размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193143)
 - [Установка Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136)
 - [Документация по Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)

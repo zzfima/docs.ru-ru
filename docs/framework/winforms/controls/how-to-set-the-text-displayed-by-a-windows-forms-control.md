@@ -22,10 +22,10 @@ helpviewer_keywords:
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
 ms.openlocfilehash: 59570af89e6236e3c13866d45dc5361d52b84274
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308527"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Практическое руководство. Определение текста, отображаемого элементом управления Windows Forms
@@ -75,4 +75,4 @@ ms.locfileid: "59308527"
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
 - [Практическое руководство. Определение клавиш доступа для элементов управления Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Практическое руководство. Обработка события нажатия кнопки в Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
+- [Практическое руководство. Ответ на нажатие кнопки Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)

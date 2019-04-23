@@ -3,10 +3,10 @@ title: 'Транспорт: Пользовательские транзакци�
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
 ms.openlocfilehash: e257c987d93fc7a5b5e8e7f51d79dd8399b45d72
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310126"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Транспорт: Пользовательские транзакции по UDP-пример
@@ -46,7 +46,7 @@ byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMes
 int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
- `TransactionMessageBuffer.WriteTransactionMessageBuffer` — Это вспомогательный метод, который содержит новые функции для слияния маркера распространения для текущей транзакции с сущностью сообщения и поместить его в буфер.  
+ `TransactionMessageBuffer.WriteTransactionMessageBuffer` - вспомогательный метод, содержащий новые функции для слияния маркера распространения для текущей транзакции с сущностью сообщения и его помещения в буфер.  
   
  Для транспорта пользовательского потока транзакций, реализация клиента должна знать, какие операции службы нуждаются в потоке транзакций и передавать эти сведения для WCF. Должен быть и механизм для передачи транзакции пользователя на транспортный уровень. В этом примере используется «Инспекторы сообщений WCF» для получения этих сведений. Инспектор сообщений клиента, реализованный здесь, называется `TransactionFlowInspector` и выполняет следующие задачи:  
   
@@ -159,7 +159,7 @@ count = listenSocket.EndReceiveFrom(result, ref dummy);
 // read the transaction and message                       TransactionMessageBuffer.ReadTransactionMessageBuffer(buffer, count, out transaction, out msg);  
 ```  
   
- `TransactionMessageBuffer.ReadTransactionMessageBuffer()` Это вспомогательный метод, обращающий процесс сериализации, выполняемый `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.  
+ `TransactionMessageBuffer.ReadTransactionMessageBuffer()` - это вспомогательный метод, обращающий процесс сериализации, выполняемый `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.  
   
  Если транзакция получена в потоке, она присоединяется к сообщению в свойстве `TransactionMessageProperty`.  
   

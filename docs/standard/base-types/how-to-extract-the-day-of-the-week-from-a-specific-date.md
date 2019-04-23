@@ -24,23 +24,23 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2c422a75244302ae6433af933995b00bdfaa061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c665cb590a090c546d50f780477c254344914a2f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537976"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59327767"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Как выполнить Извлечение дня недели из конкретной даты
 Платформа .NET Framework упрощает определение дня недели и отображение локализованного дня для определенной даты. Значение перечисления, которое указывает день недели, соответствующий определенной дате, можно получить из свойства <xref:System.DateTime.DayOfWeek%2A> или <xref:System.DateTimeOffset.DayOfWeek%2A>. Напротив, получение названия дня недели — это операция форматирования, которую можно выполнить с помощью метода форматирования, например метода `ToString` значения даты и времени или метода <xref:System.String.Format%2A?displayProperty=nameWithType>. В этом разделе показано, как выполнить эти операции форматирования.  
   
 ### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a>Извлечение числа, обозначающего день недели, из определенной даты  
   
-1.  Если вы работаете со строковым представлением даты, преобразуйте ее в значение типа <xref:System.DateTime> или <xref:System.DateTimeOffset>, используя статичный метод <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> или <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.  
+1. Если вы работаете со строковым представлением даты, преобразуйте ее в значение типа <xref:System.DateTime> или <xref:System.DateTimeOffset>, используя статичный метод <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> или <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.  
   
-2.  Используйте свойство <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> или <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> для получения значения типа <xref:System.DayOfWeek>, которое указывает день недели.  
+2. Используйте свойство <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> или <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> для получения значения типа <xref:System.DayOfWeek>, которое указывает день недели.  
   
-3.  При необходимости приведите (в C#) или преобразуйте (в Visual Basic) значение <xref:System.DayOfWeek> в целочисленный тип.  
+3. При необходимости приведите (в C#) или преобразуйте (в Visual Basic) значение <xref:System.DayOfWeek> в целочисленный тип.  
   
  Следующий пример отображает целое число, представляющее день недели для определенной даты.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "54537976"
   
 ### <a name="to-extract-the-abbreviated-weekday-name-from-a-specific-date"></a>Извлечение сокращенного названия дня недели из определенной даты  
   
-1.  Если вы работаете со строковым представлением даты, преобразуйте ее в значение типа <xref:System.DateTime> или <xref:System.DateTimeOffset>, используя статичный метод <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> или <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.  
+1. Если вы работаете со строковым представлением даты, преобразуйте ее в значение типа <xref:System.DateTime> или <xref:System.DateTimeOffset>, используя статичный метод <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> или <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.  
   
-2.  Вы можете извлечь сокращенное название дня недели для текущих или заданных региональных параметров:  
+2. Вы можете извлечь сокращенное название дня недели для текущих или заданных региональных параметров:  
   
     1.  Чтобы извлечь сокращенное название дня недели для текущих региональных параметров, вызовите метод <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> значения даты и времени или метод экземпляра <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> и передайте строку "ddd" в параметре `format`. В следующем примере показано использование метода <xref:System.DateTime.ToString%28System.String%29>.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "54537976"
   
 ### <a name="to-extract-the-full-weekday-name-from-a-specific-date"></a>Извлечение полного названия дня недели из определенной даты  
   
-1.  Если вы работаете со строковым представлением даты, преобразуйте ее в значение типа <xref:System.DateTime> или <xref:System.DateTimeOffset>, используя статичный метод <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> или <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.  
+1. Если вы работаете со строковым представлением даты, преобразуйте ее в значение типа <xref:System.DateTime> или <xref:System.DateTimeOffset>, используя статичный метод <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> или <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.  
   
-2.  Вы можете извлечь полное название дня недели для текущих или заданных региональных параметров:  
+2. Вы можете извлечь полное название дня недели для текущих или заданных региональных параметров:  
   
     1.  Чтобы извлечь полное название дня недели для текущих региональных параметров, вызовите метод <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> значения даты и времени или метод экземпляра <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> и передайте строку "dddd" в параметре `format`. В следующем примере показано использование метода <xref:System.DateTime.ToString%28System.String%29>.  
   

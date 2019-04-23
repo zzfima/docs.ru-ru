@@ -3,10 +3,10 @@ title: Инициализация создания экземпляров
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
 ms.openlocfilehash: 1414908025416f4cdd6e5b51c052799631ab52cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322190"
 ---
 # <a name="instancing-initialization"></a>Инициализация создания экземпляров
@@ -154,7 +154,7 @@ if (activeObjectsCount == 0)
   
  В этом образце используется пользовательский атрибут. При создании <xref:System.ServiceModel.ServiceHost> проверяются атрибуты, используемые в определении типа службы, а в коллекцию поведений описания службы добавляются доступные поведения.  
   
- <xref:System.ServiceModel.Description.IServiceBehavior> Интерфейс содержит три метода: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>`,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>`,` и <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Эти методы вызываются платформой WCF при <xref:System.ServiceModel.ServiceHost> выполняется инициализация. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> Сперва; он позволяет проверить согласованность службы. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> Затем вызывается; Этот метод требуется только в очень сложных сценариях. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> вызывается последним и отвечает за настройку среды выполнения. Следующие параметры передаются методу <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>.  
+ <xref:System.ServiceModel.Description.IServiceBehavior> Интерфейс содержит три метода: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` и <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Эти методы вызываются платформой WCF при <xref:System.ServiceModel.ServiceHost> выполняется инициализация. Сначала вызывается метод <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>, который позволяет проверить согласованность службы. Затем вызывается метод <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>, который используется только в очень сложных сценариях. Метод <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> вызывается в последнюю очередь и отвечает за настройку среды выполнения. Следующие параметры передаются методу <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>.  
   
 -   `Description`: Этот параметр содержит описание службы для всей службы. Его можно использовать для проверки данных описания о конечных точках, контрактах и привязках службы, а также других связанных со службой данных.  
   
@@ -203,7 +203,7 @@ public class PoolService : IPoolService
 ## <a name="hooking-activation-and-deactivation"></a>Активация и деактивация связывания  
  Основной целью создания пулов объектов является оптимизация использования объектов с небольшим временем существования, чтобы экономить на ресурсоемких процедурах создания и инициализации. Поэтому создание пулов при его правильном использовании позволяет значительно повысить производительность приложения. Поскольку объект возвращается из пула, конструктор вызывается только один раз. Однако некоторым приложениями требуется более высокий уровень контроля, чтобы они могли инициализировать и высвобождать ресурсы в рамках одного контекста. Например, объект, используемый для набора вычислений, может сбрасывать значения своих закрытых полей, прежде чем переходить к следующим вычислениям. Службы Enterprise Services поддерживают такую инициализацию в зависимости от контекста, позволяя разработчику объектов переопределять методы `Activate` и `Deactivate` из базового класса <xref:System.EnterpriseServices.ServicedComponent>.  
   
- Пул объектов вызывает метод `Activate` непосредственно перед возвращением объекта из пула. `Deactivate` вызывается, когда объект возвращается в пул. Кроме того, у базового класса <xref:System.EnterpriseServices.ServicedComponent> имеется свойство типа `boolean` с именем `CanBePooled`, с помощью которого можно уведомить пул о том, можно ли и дальше размещать объект в пуле.  
+ Пул объектов вызывает метод `Activate` непосредственно перед возвращением объекта из пула. Метод `Deactivate` вызывается при возвращении объекта в пул. Кроме того, у базового класса <xref:System.EnterpriseServices.ServicedComponent> имеется свойство типа `boolean` с именем `CanBePooled`, с помощью которого можно уведомить пул о том, можно ли и дальше размещать объект в пуле.  
   
  Чтобы сымитировать эту функциональность, в этом образце объявляется открытый интерфейс (`IObjectControl`), имеющий указанные выше члены. Затем этот интерфейс реализуется классами службы, предназначенными для инициализации с учетом контекста. Реализацию <xref:System.ServiceModel.Dispatcher.IInstanceProvider> необходимо изменить, чтобы она удовлетворяла этим требованиям. Теперь при каждом получении объекта путем вызова `GetInstance` метод, необходимо проверить, реализует ли объект `IObjectControl.` в этом случае необходимо вызвать `Activate` метод соответствующим образом.  
   

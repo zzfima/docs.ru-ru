@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Руководство по программированию на C#. Публикация событий, соответствующих рекомендациям .NET Framework
+title: Как выполнить Руководство по программированию на C#. Публикация событий, соответствующих рекомендациям .NET Framework
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
 ms.openlocfilehash: 3ea5f5fb3b94c3edfd129a08a57c4c584b1412aa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306590"
 ---
-# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Публикация событий, соответствующих рекомендациям .NET Framework
+# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Публикация событий, соответствующих рекомендациям .NET Framework
 Следующая процедура демонстрирует добавление событий, которые соответствуют стандартному шаблону [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] для классов и структур. Все события в библиотеке классов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] основаны на делегате <xref:System.EventHandler>, который определен следующим образом:  
   
 ```csharp  

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
 ms.openlocfilehash: 152706cee511e4bca1dd324a652e8077b1f8548a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312661"
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Практическое руководство. Отображение полос прокрутки в элементе управления RichTextBox в Windows Forms
@@ -44,4 +44,4 @@ ms.locfileid: "59312661"
 - <xref:System.Windows.Forms.RichTextBoxScrollBars>
 - <xref:System.Windows.Forms.RichTextBox>
 - [Элемент управления RichTextBox](richtextbox-control-windows-forms.md)
-- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)
+- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: 70a2c184e7b39af7b4f0466ac9ac627cff98f0c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baa7655481c24ebe96b76a0accbff63b6965a021
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672916"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59328430"
 ---
 # <a name="how-to-write-services-programmatically"></a>Как выполнить Создание службы программным способом
 Если вы решили не использовать шаблон проекта "Служба Windows", для создания собственной службы вам придется настроить наследование и другие элементы инфраструктуры самостоятельно. Создавая службу программным способом, вам необходимо выполнить несколько действий, которые в случае с шаблоном выполняются автоматически.  
@@ -27,7 +27,7 @@ ms.locfileid: "54672916"
   
 ### <a name="to-write-a-service-programmatically"></a>Создание службы программным способом  
   
-1.  Создайте пустой проект, а затем создайте ссылку на необходимые пространства имен.  
+1. Создайте пустой проект, а затем создайте ссылку на необходимые пространства имен.  
   
     1.  В окне **Обозреватель решений** щелкните правой кнопкой мыши узел **Ссылки** и выберите пункт **Добавить ссылку**.  
   
@@ -37,31 +37,31 @@ ms.locfileid: "54672916"
   
     4.  Нажмите кнопку **ОК**.  
   
-2.  Добавьте класс и настройте для него наследование от <xref:System.ServiceProcess.ServiceBase>.  
+2. Добавьте класс и настройте для него наследование от <xref:System.ServiceProcess.ServiceBase>.  
   
      [!code-csharp[VbRadconService#7](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#7)]
      [!code-vb[VbRadconService#7](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#7)]  
   
-3.  Настройте класс службы, добавив следующий код:  
+3. Настройте класс службы, добавив следующий код:  
   
      [!code-csharp[VbRadconService#8](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#8)]
      [!code-vb[VbRadconService#8](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#8)]  
   
-4.  Создайте для класса метод `Main` и с его помощью определите службы, которые будет содержать класс. `userService1` — имя класса.  
+4. Создайте для класса метод `Main` и с его помощью определите службы, которые будет содержать класс. `userService1` — имя класса.  
   
      [!code-csharp[VbRadconService#9](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#9)]
      [!code-vb[VbRadconService#9](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#9)]  
   
-5.  Переопределите метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и укажите обработку, которая должна выполняться при запуске службы.  
+5. Переопределите метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и укажите обработку, которая должна выполняться при запуске службы.  
   
      [!code-csharp[VbRadconService#10](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#10)]
      [!code-vb[VbRadconService#10](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#10)]  
   
-6.  Переопределите все прочие методы, для которых нужно задать определенную обработку, и напишите код, благодаря которому служба будет понимать, что нужно делать в каждом случае.  
+6. Переопределите все прочие методы, для которых нужно задать определенную обработку, и напишите код, благодаря которому служба будет понимать, что нужно делать в каждом случае.  
   
-7.  Добавить установщики, необходимые для приложения службы. Дополнительные сведения см. в разделе [Как Добавление установщиков в приложение-службу](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+7. Добавить установщики, необходимые для приложения службы. Дополнительные сведения см. в разделе [Как Добавление установщиков в приложение-службу](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-8.  Скомпилируйте проект, выбрав в меню **Сборка** пункт **Собрать решение**.  
+8. Скомпилируйте проект, выбрав в меню **Сборка** пункт **Собрать решение**.  
   
     > [!NOTE]
     >  Не нажимайте клавишу F5 для запуска проекта — таким способом нельзя запустить проект службы.  
@@ -71,6 +71,7 @@ ms.locfileid: "54672916"
 10. Установите службу. Дополнительные сведения см. в разделе [Как Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [Практическое руководство. Создание служб Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
 - [Практическое руководство. Добавление установщиков в приложение-службу](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

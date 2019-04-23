@@ -12,14 +12,14 @@ helpviewer_keywords:
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
 ms.openlocfilehash: 0cc1ac9adf40948a5109b37336d45a2be833e54f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317211"
 ---
 # <a name="optimizing-performance-text"></a>Оптимизация производительности: Текста
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] включает поддержку представления текстового контента с помощью многофункциональных [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] элементов управления. В целом можно разделить отрисовку текста на три уровня.  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]включает поддержку представления текстового контента с помощью многофункциональных элементов управления [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. В целом можно разделить отрисовку текста на три уровня.  
   
 1. С помощью <xref:System.Windows.Documents.Glyphs> и <xref:System.Windows.Media.GlyphRun> объекты непосредственно.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "59317211"
   
 <a name="FlowDocument_TextBlock_Label"></a>   
 ## <a name="flowdocument-textblock-and-label-controls"></a>Элементы управления FlowDocument, TextBlock и Label  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержит несколько элементов управления для рисования текста на экране. Каждый элемент управления предназначен для своего сценария и имеет собственный список функций и ограничений.  
+ В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеется множество элементов управления для рисования текста на экране. Каждый элемент управления предназначен для различных сценариев и имеет свой собственный список функций и ограничений.  
   
 ### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>FlowDocument влияет на производительность больше, чем TextBlock и Label  
  В общем случае <xref:System.Windows.Controls.TextBlock> элемент должен использоваться при необходимости, например короткого предложения в ограниченная поддержка текста [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> может использоваться, если требуется Минимальная текстовая поддержка. <xref:System.Windows.Documents.FlowDocument> Элемент — это контейнер для документов плавающей верстки, поддерживающих представление форматированного контента и таким образом, имеет большее влияние на производительность, чем при использовании <xref:System.Windows.Controls.TextBlock> или <xref:System.Windows.Controls.Label> элементов управления.  
@@ -149,7 +149,7 @@ ms.locfileid: "59317211"
   
 <a name="Text_Formatting_Features"></a>   
 ## <a name="text-formatting-features"></a>Возможности форматирования текста  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет службы, такие как автоматическая расстановка переносов форматирования RTF. Эти службы могут влиять на производительность приложения и должны использоваться только при необходимости.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет службы форматирования RTF, такие как автоматическая расстановка переносов. Эти службы могут влиять на производительность приложения и должны использоваться только при необходимости.  
   
 ### <a name="avoid-unnecessary-use-of-hyphenation"></a>Избегайте излишнего использования расстановки переносов  
  Автоматическая расстановка переносов находит точки останова дефиса для строк текста и разрешает дополнительные позиции разрыва для строк в <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Documents.FlowDocument> объектов. По умолчанию возможность автоматического переноса в этих объектах отключена. Эту функцию можно включить, установив свойство IsHyphenationEnabled объекта в значение `true`. Однако включение этой функции заставляет [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] инициировать взаимодействие [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)], которое может повлиять на производительность приложения. Рекомендуется не использовать автоматическую расстановку переносов, если это не является обязательным.  

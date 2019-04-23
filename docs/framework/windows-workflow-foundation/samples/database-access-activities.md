@@ -3,10 +3,10 @@ title: Действия доступа к базе данных
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
 ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322606"
 ---
 # <a name="database-access-activities"></a>Действия доступа к базе данных
@@ -242,7 +242,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 |CommandType|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|
 |Sql|Выполняемая команда SQL.|
 |Параметры|Коллекция параметров SQL-запроса.|
-|Результат|<xref:System.Data.DataSet> полученный после выполнения запроса.|
+|Результат|<xref:System.Data.DataSet>, полученный после выполнения запроса.|
 
 ## <a name="configuring-connection-information"></a>Настройка сведений о соединении
  Все DbActivities используют одни и те же параметры конфигурации. Их можно настроить двумя способами.

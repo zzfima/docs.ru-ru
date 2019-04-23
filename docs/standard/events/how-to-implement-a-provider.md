@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Реализация поставщика
+title: Как выполнить Реализация поставщика
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 12c229b3a1436f9794258fec13905cce0fb767aa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324777"
 ---
-# <a name="how-to-implement-a-provider"></a>Практическое руководство. Реализация поставщика
+# <a name="how-to-implement-a-provider"></a>Как выполнить Реализация поставщика
 Шаблон разработки наблюдателя подразумевает разделение ролей поставщика, который отслеживает данные и отправляет уведомления, и одного или нескольких наблюдателей, которые получают от поставщика уведомления (обратные вызовы). В этой статье описан процесс создания поставщика. Создание наблюдателя рассматривается в связанной статье [Практическое руководство. Реализация наблюдателя](../../../docs/standard/events/how-to-implement-an-observer.md).  
   
 ### <a name="to-create-a-provider"></a>Создание поставщика  
@@ -63,6 +63,6 @@ ms.locfileid: "59324777"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.IObservable%601>
-- [Шаблон разработки Observer](../../../docs/standard/events/observer-design-pattern.md)
+- [Шаблон разработки наблюдателя](../../../docs/standard/events/observer-design-pattern.md)
 - [Практическое руководство. Реализация наблюдателя](../../../docs/standard/events/how-to-implement-an-observer.md)
 - [Рекомендации по шаблону разработки Observer](../../../docs/standard/events/observer-design-pattern-best-practices.md)

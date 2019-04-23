@@ -11,10 +11,10 @@ helpviewer_keywords:
 - tab pages [Windows Forms], adding controls
 ms.assetid: b092532e-7346-469f-b9a1-897f9bea4fb7
 ms.openlocfilehash: 9806583fda60f1cb8a5ef2d97f42eba158593f61
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322723"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page"></a>Практическое руководство. Добавление элемента управления на вкладку
@@ -34,4 +34,4 @@ ms.locfileid: "59322723"
 - [Общие сведения об элементе управления TabControl](tabcontrol-control-overview-windows-forms.md)
 - [Практическое руководство. Изменение внешнего вида элемента управления TabControl в Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
 - [Практическое руководство. Блокировка доступа ко вкладкам](how-to-disable-tab-pages.md)
-- [Практическое руководство. Добавление и удаление вкладок с помощью элемента управления TabControl в Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Практическое руководство. Добавление и удаление вкладок с помощью Windows Forms TabControl](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

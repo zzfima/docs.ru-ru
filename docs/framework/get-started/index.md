@@ -9,10 +9,10 @@ ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d6604beca5c0031b55fc22fc48e0c23d27c8a37e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314975"
 ---
 # <a name="get-started-with-the-net-framework"></a>Начало работы с .NET Framework
@@ -81,9 +81,9 @@ ms.locfileid: "59314975"
 | ----- |------------ |
 | [Обзор](overview.md) | Содержит подробные сведения для разработчиков, которые занимаются созданием приложений, предназначенных для платформы .NET Framework. |
 | [Руководство по установке](../install/index.md) | Содержит сведения об установке платформы .NET Framework. |  
-| [.NET Framework и внештатные выпуски](the-net-framework-and-out-of-band-releases.md) | Содержит описание внештатных выпусков платформы .NET Framework и порядка их использования в приложении. |
+| [.NET Framework и отдельные выпуски](the-net-framework-and-out-of-band-releases.md) | Содержит описание внештатных выпусков платформы .NET Framework и порядка их использования в приложении. |
 | [Требования к системе](system-requirements.md) | Содержит требования к оборудованию и операционной системе для использования платформы .NET Framework. |
-| [Ядро .NET и открытый исходный код](net-core-and-open-source.md) | Описание .NET Core относительно .NET Framework и сведения о получении доступа к проектам .NET Core с открытым исходным кодом. |
+| [.NET Core и открытый исходный код](net-core-and-open-source.md) | Описание .NET Core относительно .NET Framework и сведения о получении доступа к проектам .NET Core с открытым исходным кодом. |
 | [Документация по .NET Core](../../core/index.md) | Концептуальная и справочная документация по API для .NET Core. |
 | [.NET Standard](../../standard/net-standard.md) | Описывает стандарт .NET, который представляет собой спецификацию с возможностью управления версиями, поддерживаемую отдельными реализациями платформы .NET, что позволяет гарантировать наличие согласованного набора API-интерфейсов на различных платформах.
 

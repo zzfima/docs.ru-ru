@@ -7,10 +7,10 @@ helpviewer_keywords:
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
 ms.openlocfilehash: 2639322707c1c7e378f6d389a1dec80fd619841c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328222"
 ---
 # <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Практическое руководство. Переназначение существующих элементов управления другим родительским элементам
@@ -47,6 +47,6 @@ ms.locfileid: "59328222"
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Расположение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)
-- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Упорядочение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)
+- [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента управления TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Пошаговое руководство: Упорядочение элементов управления в формах Windows Forms, с помощью линий привязки](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

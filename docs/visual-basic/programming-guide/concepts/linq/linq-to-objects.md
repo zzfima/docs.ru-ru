@@ -3,10 +3,10 @@ title: LINQ to Objects (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: dd4c30bc-1c9b-4781-a482-b5eada38deb2
 ms.openlocfilehash: c1e2e8fbaaf984fec69322a459fc7c55890965ad
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326883"
 ---
 # <a name="linq-to-objects-visual-basic"></a>LINQ to Objects (Visual Basic)
@@ -42,5 +42,5 @@ ms.locfileid: "59326883"
  [Практическое руководство. Добавление настраиваемых методов для запросов LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
  Расширение набора методов, которые можно использовать для запросов LINQ путем добавления методов расширения в интерфейс <xref:System.Collections.Generic.IEnumerable%601>.  
   
- [LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [Синтаксис LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  Ссылки на разделы, рассказывающие LINQ и содержащие примеры кода выполнения запросов.

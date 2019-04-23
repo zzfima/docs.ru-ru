@@ -6,10 +6,10 @@ helpviewer_keywords:
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
 ms.openlocfilehash: 5cb0684637a716dfec947740ba345c62eaabddd7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313805"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>Практическое руководство. Вызов метода расширения (Visual Basic)
@@ -98,4 +98,4 @@ End Module
 
 - [Практическое руководство. Написание метода расширения](./how-to-write-an-extension-method.md)
 - [Методы расширения](./extension-methods.md)
-- [Область видимости в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Область, в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

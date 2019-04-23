@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
 ms.openlocfilehash: 14f225f5587379b3efa7b6dc2475f1b697ebb281
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314221"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>Практическое руководство. Наследование класса Control
@@ -45,9 +45,9 @@ ms.locfileid: "59314221"
   
 ## <a name="see-also"></a>См. также
 
-- [Создание собственных элементов управления](varieties-of-custom-controls.md)
+- [Разновидности пользовательских элементов управления](varieties-of-custom-controls.md)
 - [Практическое руководство. Наследование класса UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Практическое руководство. Наследование существующих элементов управления Windows Forms](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Практическое руководство. Создание элементов управления для форм Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Практическое руководство. Наследование Windows существующих элементов управления формы](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Практическое руководство. Автор элементы управления для форм Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [Создание элементов управления Windows Forms во время разработки](developing-windows-forms-controls-at-design-time.md)

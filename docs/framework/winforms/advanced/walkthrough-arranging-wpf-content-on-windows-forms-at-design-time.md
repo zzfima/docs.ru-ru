@@ -10,10 +10,10 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 ms.openlocfilehash: 306c042fe432f0c087ceb1b5ff6b5aec0fe0bbc7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327312"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Пошаговое руководство. Упорядочение содержимого WPF для формы Windows Forms во время разработки
@@ -152,8 +152,8 @@ ms.locfileid: "59327312"
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Практическое руководство. Выравнивание элементов управления по границам формы во время выполнения](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
-- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Практическое руководство. Выравнивание элементов управления по границам формы во время разработки](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [Пошаговое руководство: Упорядочение элементов управления в формах Windows Forms, с помощью линий привязки](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Миграция и взаимодействие систем](../../wpf/advanced/migration-and-interoperability.md)
 - [Использование элементов управления WPF](using-wpf-controls.md)
 - [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

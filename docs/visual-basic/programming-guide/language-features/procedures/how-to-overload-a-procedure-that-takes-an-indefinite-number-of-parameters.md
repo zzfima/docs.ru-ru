@@ -11,10 +11,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
 ms.openlocfilehash: 3cf75fc6221364704379eb23d308481c34e6c0d6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316457"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Практическое руководство. Перегрузка процедуры, принимающей неопределенное число параметров (Visual Basic)
@@ -63,5 +63,5 @@ ms.locfileid: "59316457"
 - [Рекомендации по устранению неполадок](./troubleshooting-procedures.md)
 - [Практическое руководство. Определение различных версий процедуры](./how-to-define-multiple-versions-of-a-procedure.md)
 - [Практическое руководство. Вызов перегруженной процедуры](./how-to-call-an-overloaded-procedure.md)
-- [Практическое руководство. Перегрузка процедуры, которая принимает необязательные параметры](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Overload Resolution](./overload-resolution.md)
+- [Практическое руководство. Перегрузка процедуры, которая принимает один необязательный параметр](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Разрешение перегрузки](./overload-resolution.md)

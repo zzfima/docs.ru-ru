@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
 ms.openlocfilehash: db120df1b2efd28cc484c3749bb22fc2196e9dd4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59339948"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768258"
 ---
 # <a name="service-transaction-behavior"></a>Транзакционное поведение службы
 В этом образце показано использование координируемой клиентом транзакции и параметры ServiceBehaviorAttribute и OperationBehaviorAttribute, управляющие поведением транзакции службы. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующем службу калькулятора, но ведется журнал выполненных операций в таблицу базы данных, а также нарастающий итог операций калькулятора. Операции записи в таблицу журнала сервера зависят от результата координируемой клиентом транзакции - если транзакция клиента не была завершена, транзакция веб-службы подтверждает, что обновления базы данных не будут зафиксированы.  

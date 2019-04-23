@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
 ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329134"
 ---
 # <a name="service-channel-level-programming"></a>Программирование служб на уровне канала
@@ -36,7 +36,7 @@ ms.locfileid: "59329134"
 #### <a name="building-a-channellistener"></a>Создание прослушивателя каналов  
  После создания привязки вызывается метод <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType>, с помощью которого создается прослушиватель канала, параметр Type которого указывает форму создаваемого канала. В этом примере используется интерфейс <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType>, поскольку требуется ожидать передачи данных для входящих сообщений в рамках шаблона обмена сообщениями запрос-ответ.  
   
- <xref:System.ServiceModel.Channels.IReplyChannel> используется для отправки сообщений и отправки обратно сообщений ответов на запрос. Вызов метода <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> возвращает интерфейс <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, с помощью которого можно принимать сообщения запросов и отправлять обратно сообщения ответов.  
+ Интерфейс <xref:System.ServiceModel.Channels.IReplyChannel> используется для приема сообщений запросов и отправки обратно сообщений ответов. Вызов метода <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> возвращает интерфейс <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, с помощью которого можно принимать сообщения запросов и отправлять обратно сообщения ответов.  
   
  При создании прослушивателя передается сетевой адрес, на котором он ожидает передачи данных, в данном случае `http://localhost:8080/channelapp`. В общем случае каждый канал транспорта поддерживает одну или, возможно, несколько схем адресов, например HTTP-транспорт поддерживает как схему HTTP, так и HTTPS.  
   

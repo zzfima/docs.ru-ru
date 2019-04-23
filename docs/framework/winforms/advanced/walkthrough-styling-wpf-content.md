@@ -7,10 +7,10 @@ helpviewer_keywords:
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 ms.openlocfilehash: 887a157494c2992c1ae5868229c442f31fafb276
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312154"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>Пошаговое руководство. Применение стилей к содержимому WPF
@@ -72,7 +72,7 @@ ms.locfileid: "59312154"
   
 3. В панели смарт-тега для `elementHost1`, нажмите кнопку **редактировать содержимое** из раскрывающегося списка.  
   
-     `UserControl1` Открывает в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
+     `UserControl1` откроется в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
 4. В представлении XAML вставьте следующий код XAML после открывающего тега `<UserControl>` .  
   
@@ -156,5 +156,5 @@ ms.locfileid: "59312154"
 - [Миграция и взаимодействие систем](../../wpf/advanced/migration-and-interoperability.md)
 - [Использование элементов управления WPF](using-wpf-controls.md)
 - [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Обзор XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
+- [Общие сведения о языке XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
 - [Стилизация и использование шаблонов](../../wpf/controls/styling-and-templating.md)

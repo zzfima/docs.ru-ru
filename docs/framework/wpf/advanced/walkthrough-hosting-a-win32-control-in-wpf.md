@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
 ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307708"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Пошаговое руководство. Размещение элемента управления Win32 в WPF
@@ -156,4 +156,4 @@ Windows Presentation Foundation (WPF) предоставляет среду с �
 
 - <xref:System.Windows.Interop.HwndHost>
 - [Взаимодействие WPF и Win32](wpf-and-win32-interoperation.md)
-- [Пошаговое руководство. Создание классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)

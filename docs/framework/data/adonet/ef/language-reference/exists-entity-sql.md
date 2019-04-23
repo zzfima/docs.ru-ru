@@ -3,10 +3,10 @@ title: EXISTS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d28ead43-4afb-4bdc-af64-efd2e05005d7
 ms.openlocfilehash: 72d96c5f24fcedf870370de3792680831145a454
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311140"
 ---
 # <a name="exists-entity-sql"></a>EXISTS (Entity SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "59311140"
  Указывает, что результат оператора EXISTS должен быть инвертирован.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` Если коллекция не пуста; в противном случае `false`.  
+ Значение `true`, если коллекция не пуста; в противном случае - значение `false`.  
   
 ## <a name="remarks"></a>Примечания  
  EXISTS - это один из операторов работы с наборами [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Все операторы работы с наборами [!INCLUDE[esql](../../../../../../includes/esql-md.md)] выполняются слева направо. Сведения о порядке выполнения [!INCLUDE[esql](../../../../../../includes/esql-md.md)] операторы работы с наборами, см. в разделе [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).  

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание оболочек COM
+title: Как выполнить Создание оболочек COM
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
@@ -8,13 +8,13 @@ ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1c26c84ece1231a4e118144c163fa3e9c7619301
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324137"
 ---
-# <a name="how-to-create-com-wrappers"></a>Практическое руководство. Создание оболочек COM
+# <a name="how-to-create-com-wrappers"></a>Как выполнить Создание оболочек COM
 
 Программы-оболочки модели COM можно создавать с использованием функций Visual Studio 2005 или средств платформы .NET Framework (Tlbimp.exe и Regasm.exe). Оба метода позволяют создать два типа программ-оболочек COM:
 

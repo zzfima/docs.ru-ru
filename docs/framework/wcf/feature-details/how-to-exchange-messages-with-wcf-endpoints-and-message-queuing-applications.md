@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
 ms.openlocfilehash: 7463f9cfc37c2bf4f271f6e59896a7d77f3f65cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310310"
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Практическое руководство. Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений
@@ -61,7 +61,7 @@ ms.locfileid: "59310310"
 ## <a name="see-also"></a>См. также
 
 - [Общие сведения об очередях](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Практическое руководство. Обмен сообщениями в очереди с конечными точками WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Практическое руководство. Обмен сообщениями с конечными точками WCF в очереди](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
 - [Отправка сообщений из приложения Windows Communication Foundation в приложение MSMQ](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
 - [Установка системы очередей сообщений (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
 - [Передача сообщений из приложения MSMQ в приложение Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)

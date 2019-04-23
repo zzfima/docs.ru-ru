@@ -13,10 +13,10 @@ helpviewer_keywords:
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
 ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324322"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Практическое руководство. Управление областью действия переменной (Visual Basic)
@@ -88,9 +88,9 @@ Public strMsg As String
   
 ## <a name="see-also"></a>См. также
 
-- [Область видимости в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Область, в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Уровни доступа в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Переменные](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Объявление переменной](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Объявление переменных](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)

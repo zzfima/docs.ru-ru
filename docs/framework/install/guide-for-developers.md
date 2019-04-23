@@ -11,10 +11,10 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ff1bc6f0aa29742f61129ff9acb9980658f118a4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327871"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Установка .NET Framework для разработчиков
@@ -37,15 +37,15 @@ ms.locfileid: "59327871"
 
 |Версия платформы .NET Framework|Установка для разработчиков|Установка распространяемого пакета|Поддержка платформ|
 |----------------------------|----------------------------|----------------------------------|----------------------|
-|**4.7.2**|[.NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338)|[Веб-установщик центра загрузки 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Автономный установщик центра загрузки 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863265)|**Входит в состав:** <br/><br/>Обновление Windows 10 за октябрь 2018 г.<br/>Обновление Windows 10 за апрель 2018 г.<br/>Windows Server 2019<br/>Windows Server, версия 1809<br/>Windows Server, версия 1803<br /><br /> **Можно установить в:**<br/> <br/>Windows 10 Fall Creators Update<br/>Обновление Windows 10 Creators Update <br /> Юбилейное обновление Windows 10 Anniversary Update<br /> Windows 8.1 и более ранней версии<br /> Windows Server, версия 1709 и более ранние<br /><br/> (полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))||
+|**4.7.2**|[NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338)|[Веб-установщик центра загрузки 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Автономный установщик центра загрузки 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863265)|**Входит в состав:** <br/><br/>Обновление Windows 10 за октябрь 2018 г.<br/>Обновление Windows 10 за апрель 2018 г.<br/>Windows Server 2019<br/>Windows Server, версия 1809<br/>Windows Server, версия 1803<br /><br /> **Можно установить в:**<br/> <br/>Windows 10 Fall Creators Update<br/>Обновление Windows 10 Creators Update <br /> Юбилейное обновление Windows 10 Anniversary Update<br /> Windows 8.1 и более ранней версии<br /> Windows Server, версия 1709 и более ранние<br /><br/> (полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))||
 |**4.7.1**|[NET Framework 4.7.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=852105)|[Страница загрузки веб-установщика 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [Страница загрузки автономного установщика 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852107)|**Входит в состав:** <br/><br/>Windows 10 Fall Creators Update<br/>Windows Server, версия 1709<br /><br /> **Можно установить в:**<br/><br/> Обновление Windows 10 Creators Update <br /> Юбилейное обновление Windows 10 Anniversary Update<br /> Windows 8.1 и более ранней версии<br /> Windows Server 2016 и более ранние версии<br /> (полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))||
-|**4.7**|[NET Framework 4.7 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=825319)|[Страница загрузки веб-установщика 4.7](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [Страница загрузки автономного установщика 4.7](https://go.microsoft.com/fwlink/?LinkId=825303)|**Входит в состав:** <br/><br/>Обновление Windows 10 Creators Update<br /><br /> **Можно установить в:**<br /><br/> Юбилейное обновление Windows 10 Anniversary Update<br /> Windows 8.1 и более ранней версии<br /> Windows Server 2016 и более ранние версии<br /> (полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))||
+|**4.7**|[NET Framework 4.7 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=825319)|[Страница загрузки веб-установщика 4.7](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [Страница загрузки автономного установщика 4.7](https://go.microsoft.com/fwlink/?LinkId=825303)|**Входит в состав:** <br/><br/>Обновление Windows 10 Creators Update<br /><br /> **Можно установить в:**<br /><br/> Юбилейное обновление Windows 10 Anniversary Update<br /> Windows 8.1 и более ранней версии<br /> Windows Server 2016 и более ранние версии<br /> (полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))||
 |**4.6.2**|[NET Framework 4.6.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=780617)|[Страница загрузки веб-установщика 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [Страница загрузки автономного установщика 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780601)|**Входит в состав:** <br/><br /> Юбилейное обновление Windows 10 Anniversary Update<br /><br /> **Можно установить в:**<br /><br/> Ноябрьское обновление Windows 10 <br/> Windows 10 <br /> Windows 8.1 и более ранней версии<br /> Windows Server 2012 R2 и более ранней версии<br /> (полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))|
 |**4.6.1**|[NET Framework 4.6.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=690706)|[Страница загрузки веб-установщика 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [Страница загрузки автономного установщика 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671744)|**Можно установить в:**<br /><br/> Windows 10 <br /> Windows 8.1 и более ранней версии<br /> Windows Server 2012 R2 и более ранней версии<br /> (полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))|
-|**4.6**|Включено в Visual Studio 2015.<br /><br /> [Microsoft .NET Framework 4.6 Targeting Pack](https://go.microsoft.com/fwlink/?LinkId=528261)|[Страница загрузки веб-установщика 4.6](https://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [Страница загрузки автономного установщика 4.6](https://go.microsoft.com/fwlink/?LinkId=528233)|**Входит в состав:** <br/><br /> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **Также устанавливается в:**<br /><br/> Windows 8.1 и более ранней версии<br /> Windows Server 2012 R2 и более ранней версии<br /> (полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))|
-|**4.5.2**|[Microsoft .NET Framework 4.5.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> Для использования с Visual Studio 2013, Visual Studio 2012 и другими интегрированными средами разработки|[Страница загрузки веб-установщика 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [Страница загрузки автономного установщика 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706)|**Можно установить в:**<br /><br/> Windows 8.1 и более ранней версии<br /> Windows Server 2012 R2 и более ранней версии<br /> (полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))|
-|**4.5.1**|[Microsoft .NET Framework 4.5.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> Для использования с Visual Studio 2013, Visual Studio 2012 и другими интегрированными средами разработки|[Страница загрузки веб-установщика 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [Страница загрузки автономного установщика 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**Входит в состав:**<br /> <br/>[!INCLUDE[win81](../../../includes/win81-md.md)]<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **Также устанавливается в:**<br /><br/> [!INCLUDE[win8](../../../includes/win8-md.md)] и более ранние версии<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] и более ранние версии<br />(полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))|
-|**4.5**|Включено в Visual Studio 2012<br /><br /> Также доступно как часть пакета SDK для Windows 8|[Страница загрузки веб-установщика 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**Входит в состав:** <br/><br /> [!INCLUDE[win8](../../../includes/win8-md.md)]<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **Также устанавливается в:**<br/><br /> Windows 7 и более ранние версии<br /> Windows Server 2008 SP2 и более ранние версии<br />(полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))|
+|**4.6**|Включено в Visual Studio 2015.<br /><br /> [Пакет выбора целевой платформы Microsoft .NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528261)|[Страница загрузки веб-установщика 4.6](https://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [Страница загрузки автономного установщика 4.6](https://go.microsoft.com/fwlink/?LinkId=528233)|**Входит в состав:** <br/><br /> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **Также устанавливается в:**<br /><br/> Windows 8.1 и более ранней версии<br /> Windows Server 2012 R2 и более ранней версии<br /> (полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))|
+|**4.5.2**|[Пакет разработчика Microsoft .NET Framework 4.5.2](https://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> Для использования с Visual Studio 2013, Visual Studio 2012 и другими интегрированными средами разработки|[Страница загрузки веб-установщика 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [Страница загрузки автономного установщика 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706)|**Можно установить в:**<br /><br/> Windows 8.1 и более ранней версии<br /> Windows Server 2012 R2 и более ранней версии<br /> (полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))|
+|**4.5.1**|[Пакет разработчика Microsoft .NET Framework 4.5.1](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> Для использования с Visual Studio 2013, Visual Studio 2012 и другими интегрированными средами разработки|[Страница загрузки веб-установщика 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [Страница загрузки автономного установщика 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**Входит в состав:**<br /> <br/>[!INCLUDE[win81](../../../includes/win81-md.md)]<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **Также устанавливается в:**<br /><br/> [!INCLUDE[win8](../../../includes/win8-md.md)] и более ранние версии<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] и более ранние версии<br />(полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))|
+|**4.5**|Включено в Visual Studio 2012<br /><br /> Также доступно как часть пакета SDK для Windows 8|[Страница загрузки веб-установщика 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**Входит в состав:** <br/><br /> [!INCLUDE[win8](../../../includes/win8-md.md)]<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **Также устанавливается в:**<br/><br /> Windows 7 и более ранние версии<br /> Windows Server 2008 SP2 и более ранние версии<br />(полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))|
 
 Можно установить **Developer Pack** (если он доступен) для конкретной версии платформы .NET Framework на всех поддерживаемых платформах.
 
@@ -79,7 +79,7 @@ ms.locfileid: "59327871"
 
 - [Microsoft .NET Framework 4.6.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=690706)
 
-- [Microsoft .NET Framework 4.6 Targeting Pack](https://go.microsoft.com/fwlink/?LinkId=528261)
+- [Пакет выбора целевой платформы Microsoft .NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528261)
 
 - [Пакет разработчика .NET Framework 4.5.2](https://go.microsoft.com/fwlink/?LinkId=397702) для установки версии 4.5.2 в Windows 8.1 или более ранних версиях, Visual Studio 2013, Visual Studio 2012 и других интегрированных средах разработки.
 
@@ -125,7 +125,7 @@ ms.locfileid: "59327871"
 
     - .NET Framework 4.5.1 ([веб-установщик](https://go.microsoft.com/fwlink/p/?LinkId=310158) или [автономный установщик](https://go.microsoft.com/fwlink/p/?LinkId=310159))
 
-    - [.NET Framework 4,5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
+    - [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
 
 1. Выберите язык страницы загрузки. Этот параметр не загружает локализованные ресурсы платформы .NET Framework; он влияет только на текст, отображаемый на странице загрузки.
 
@@ -144,7 +144,7 @@ ms.locfileid: "59327871"
 > [!NOTE]
 > При возникновении неполадок во время установки см. раздел [Устранение неполадок](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md).
 
-**Примечания по установке:**
+**Примечания по установке**
 
 - [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] и 4.5.2, а также [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2, 4.7, 4.7.1 и 4.7.2 — это обновления на месте для [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
 
@@ -165,13 +165,13 @@ ms.locfileid: "59327871"
 
 1. Откройте страницу загрузки языковых пакетов для установленной версии платформы .NET Framework:
 
-    - [Языковые пакеты .NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863258)
+    - [Языковые пакеты .NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863258)
 
-    - [Языковые пакеты .NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkID=852090)
+    - [Языковые пакеты .NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkID=852090)
 
     - [Языковые пакеты .NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkID=825306)
 
-    - [Языковые пакеты .NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkID=780604)
+    - [Языковые пакеты .NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkID=780604)
 
     - [Языковые пакеты .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkID=671747)
 
@@ -234,5 +234,5 @@ ms.locfileid: "59327871"
 
 - [Руководство по развертыванию для разработчиков](~/docs/framework/deployment/deployment-guide-for-developers.md)
 - [Руководство по развертыванию для администраторов](~/docs/framework/deployment/guide-for-administrators.md)
-- [Установка платформы .NET Framework 3.5 на Windows 10, Windows 8.1 и Windows 8](~/docs/framework/install/dotnet-35-windows-10.md)
-- [Устранение неполадок заблокированных установок и удалений .NET Framework](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [Установка .NET Framework 3.5 на Windows 10, Windows 8.1 и Windows 8](~/docs/framework/install/dotnet-35-windows-10.md)
+- [Устранение неполадок с заблокированными установками и удалениями .NET Framework](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

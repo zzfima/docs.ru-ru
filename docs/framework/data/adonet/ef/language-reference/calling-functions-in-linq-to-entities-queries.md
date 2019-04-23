@@ -3,10 +3,10 @@ title: Вызов функций в запросах LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
 ms.openlocfilehash: 6fa1a7204a91a62c30e8683c449cc2be44132b4f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312089"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>Вызов функций в запросах LINQ to Entities
@@ -39,5 +39,5 @@ ms.locfileid: "59312089"
 
 - [Запросы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
 - [Канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
-- [Общие сведения о EDMX-файлах](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Обзор файла .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Практическое руководство. Определения пользовательских функций в концептуальной модели](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))

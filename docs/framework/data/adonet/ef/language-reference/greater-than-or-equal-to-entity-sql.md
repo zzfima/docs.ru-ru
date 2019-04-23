@@ -3,10 +3,10 @@ title: '>= (Больше или равно) (язык Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 70780ac4-0123-4da8-b731-8af856daffe3
 ms.openlocfilehash: b5a8a834c325cca38e2c106ca3f8ee829dd699b2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317146"
 ---
 # <a name="-greater-than-or-equal-to-entity-sql"></a>> = (больше или равно) (язык Entity SQL)
@@ -23,7 +23,7 @@ expression >= expression
  Любое допустимое выражение. Оба выражения должны иметь типы данных, допускающих неявное преобразование.  
   
 ## <a name="result-types"></a>Типы результата  
- `true` Если левое выражение значение больше или равно правому выражению. в противном случае `false`.  
+ Значение`true` , если левое выражение больше или равно правому. В противном случае - значение `false`.  
   
 ## <a name="example"></a>Пример  
  Следующий запрос Entity SQL использует оператор сравнения >= для сравнения двух выражений и определяет, имеет ли левое выражение значение, большее или равное значению правого выражения. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  

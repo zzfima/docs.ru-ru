@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: 48df9b90a92468858bd3ac5498bd83fd0d57fe75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315144"
 ---
 # <a name="how-to-create-an-activity"></a>Практическое руководство. Создание действия
@@ -46,7 +46,7 @@ ms.locfileid: "59315144"
      [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
-    > Действие `ReadInt` является производным от <xref:System.Activities.NativeActivity%601>, а не от <xref:System.Activities.CodeActivity>, которое задается по умолчанию для шаблона действия кода. <xref:System.Activities.CodeActivity%601> можно использовать в том случае, если действие обеспечивает один результат, который предоставляется с помощью <xref:System.Activities.Activity%601.Result%2A> аргумент, но <xref:System.Activities.CodeActivity%601> не поддерживает использование закладок, поэтому <xref:System.Activities.NativeActivity%601> используется.
+    > Действие `ReadInt` является производным от <xref:System.Activities.NativeActivity%601>, а не от <xref:System.Activities.CodeActivity>, которое задается по умолчанию для шаблона действия кода. <xref:System.Activities.CodeActivity%601> можно использовать, если действие возвращает один результат, который предоставляется с помощью аргумента <xref:System.Activities.Activity%601.Result%2A>. Однако <xref:System.Activities.CodeActivity%601> не поддерживает использование закладок, поэтому используется <xref:System.Activities.NativeActivity%601>.
 
 ## <a name="create-the-prompt-activity"></a>Создание действия Prompt
 
@@ -107,6 +107,6 @@ ms.locfileid: "59315144"
 - <xref:System.Activities.CodeActivity>
 - <xref:System.Activities.NativeActivity%601>
 - [Разработка и реализация настраиваемых действий](designing-and-implementing-custom-activities.md)
-- [Учебник по началу работы](getting-started-tutorial.md)
+- [Руководство по началу работы](getting-started-tutorial.md)
 - [Практическое руководство. Создание рабочего процесса](how-to-create-a-workflow.md)
 - [Использование ExpressionTextBox в пользовательском конструкторе действия](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

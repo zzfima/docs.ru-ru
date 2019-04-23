@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a417c94106988e07e2b2ab2766c691f081ca7006
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74acea566e4b0e407e86cb67d3f521f18c2d68af
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734520"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59307721"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Как выполнить Миграция DCOM с управляемым кодом в WCF
 Для вызовов управляемого кода между серверами и клиентами в распределенной среде рекомендуется использовать технологию Windows Communication Foundation (WCF), а не модель DCOM, из соображений безопасности. В этом разделе описывается, как перенести код из DCOM в WCF в перечисленных ниже ситуациях.  
@@ -302,7 +302,7 @@ public interface ISessionBoundObject
     }  
 ```  
   
- Ниже показана реализация этой службы. Эта реализация поддерживает единственную фабрику каналов для создания объектов сеанса.  При вызове метода `GetInstanceAddress` создается канал и объект <xref:System.ServiceModel.EndpointAddress10>, указывающий на удаленный адрес, связанный с этим каналом.   <xref:System.ServiceModel.EndpointAddress10> — это тип данных, который можно вернуть клиенту по значению.  
+ Ниже показана реализация этой службы. Эта реализация поддерживает единственную фабрику каналов для создания объектов, связанных с сеансами.  При вызове метода `GetInstanceAddress` создается канал и объект <xref:System.ServiceModel.EndpointAddress10>, указывающий на удаленный адрес, связанный с этим каналом.   <xref:System.ServiceModel.EndpointAddress10> — это тип данных, который можно вернуть клиенту по значению.  
   
 ```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
@@ -325,9 +325,9 @@ public class SessionBoundFactory : ISessionBoundFactory
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>Шаг 3. Настройка и запуск служб WCF  
  Для размещения этих служб необходимо добавить указанные ниже записи в файл конфигурации сервера (web.config).  
   
-1.  Добавьте раздел `<client>`, который описывает конечную точку для объекта сеанса.  В этом сценарии сервер также выступает в роли клиента, и его нужно настроить соответствующим образом.  
+1. Добавьте раздел `<client>`, который описывает конечную точку для объекта сеанса.  В этом сценарии сервер также выступает в роли клиента, и его нужно настроить соответствующим образом.  
   
-2.  В разделе `<services>` объявите конечные точки службы для фабрики и объекта сеанса.  Это позволит клиенту связаться с конечными точками службы, получить адрес <xref:System.ServiceModel.EndpointAddress10> и создать канал сеанса.  
+2. В разделе `<services>` объявите конечные точки службы для фабрики и объекта сеанса.  Это позволит клиенту связаться с конечными точками службы, получить адрес <xref:System.ServiceModel.EndpointAddress10> и создать канал сеанса.  
   
  Ниже приведен пример файла конфигурации с этими настройками.  
   
@@ -390,13 +390,13 @@ sessionBoundServiceHost.Open();
   
  Для вызова службы добавьте в клиент код, выполняющий следующие задачи:  
   
-1.  создание канала для связи со службой `ISessionBoundFactory`;  
+1. создание канала для связи со службой `ISessionBoundFactory`;  
   
-2.  использование канала для вызова службы `ISessionBoundFactory` и получения объекта <xref:System.ServiceModel.EndpointAddress10>;  
+2. использование канала для вызова службы `ISessionBoundFactory` и получения объекта <xref:System.ServiceModel.EndpointAddress10>;  
   
-3.  создание канала для получения объекта сеанса с помощью адреса <xref:System.ServiceModel.EndpointAddress10>;  
+3. создание канала для получения объекта сеанса с помощью адреса <xref:System.ServiceModel.EndpointAddress10>;  
   
-4.  вызов методов `SetCurrentValue` и `GetCurrentValue` для демонстрации того, что в рамках нескольких вызовов используется один и тот же экземпляр объекта.  
+4. вызов методов `SetCurrentValue` и `GetCurrentValue` для демонстрации того, что в рамках нескольких вызовов используется один и тот же экземпляр объекта.  
   
 ```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  
@@ -422,6 +422,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Базовое программирование для WCF](../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md)
 - [Создание клиентов](../../../docs/framework/wcf/building-clients.md)

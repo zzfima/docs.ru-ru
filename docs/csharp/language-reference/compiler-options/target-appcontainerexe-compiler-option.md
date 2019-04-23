@@ -3,10 +3,10 @@ title: -target:appcontainerexe (параметры компилятора C#)
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
 ms.openlocfilehash: b3819c0582c414e1f1e3b75ab5bfe517873a1eb3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311075"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe (параметры компилятора C#)
@@ -46,4 +46,4 @@ csc -target:appcontainerexe filename.cs
 
 - [-target (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
 - [-target:winexe (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)
-- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)

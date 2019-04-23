@@ -6,10 +6,10 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
 ms.openlocfilehash: 01530d4ae9779934948bbaff60fbbd392de6e701
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329301"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Пошаговое руководство. Локализация гибридного приложения
@@ -46,7 +46,7 @@ ms.locfileid: "59329301"
 
 1. Создание **приложение WPF** проект с именем `LocalizingWpfInWf`.  (**Файл** > **новый** > **проекта** > **Visual C#** или **Visual Basic**   >  **Классический рабочий стол** > **приложение WPF**).
 
-2. Добавить [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.UserControl> элемент с именем `SimpleControl` в проект.
+2. Добавить [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> элемент с именем `SimpleControl` в проект.
 
 3. Используйте <xref:System.Windows.Forms.Integration.ElementHost> элементу управления размещение `SimpleControl` элемент на форме. Дополнительные сведения см. в разделе [Пошаговое руководство: Размещение составного элемента управления WPF, трехмерного в Windows Forms](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
 
@@ -177,5 +177,5 @@ ms.locfileid: "59329301"
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Локализация приложения](how-to-localize-an-application.md)
-- [Пошаговое руководство. Локализация форм Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
+- [Пошаговое руководство: Локализация форм Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
 - [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

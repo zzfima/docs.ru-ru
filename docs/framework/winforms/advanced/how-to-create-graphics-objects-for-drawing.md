@@ -11,10 +11,10 @@ helpviewer_keywords:
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
 ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324205"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Практическое руководство. Создание графических объектов для рисования
@@ -165,14 +165,14 @@ ms.locfileid: "59324205"
   
     |Для отрисовки|См.|  
     |---------------|---------|  
-    |Прямых линий|[Практическое руководство. Рисований линий в Windows Forms](how-to-draw-a-line-on-a-windows-form.md)|  
-    |Фигур|[Практическое руководство. Рисование линии или контурной фигуры](how-to-draw-an-outlined-shape.md)|  
-    |Текста|[Практическое руководство. Отрисовка текста в Windows Forms](how-to-draw-text-on-a-windows-form.md)|  
-    |Изображений|[Практическое руководство. Отрисовка изображений с использованием GDI+](how-to-render-images-with-gdi.md)|  
+    |Прямых линий|[Практическое руководство. Нарисовать линию в форме Windows](how-to-draw-a-line-on-a-windows-form.md)|  
+    |Фигур|[Практическое руководство. Рисование контурной фигуры](how-to-draw-an-outlined-shape.md)|  
+    |Текста|[Практическое руководство. Рисование текста в форме Windows](how-to-draw-text-on-a-windows-form.md)|  
+    |Изображений|[Практическое руководство. Вывод изображений с использованием GDI +](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>См. также
 
 - [Приступая к программированию графики](getting-started-with-graphics-programming.md)
 - [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)
-- [Прямые и кривые линии и фигуры](lines-curves-and-shapes.md)
-- [Практическое руководство. Отрисовка изображений с использованием GDI+](how-to-render-images-with-gdi.md)
+- [Линии, кривые и фигуры](lines-curves-and-shapes.md)
+- [Практическое руководство. Вывод изображений с использованием GDI +](how-to-render-images-with-gdi.md)

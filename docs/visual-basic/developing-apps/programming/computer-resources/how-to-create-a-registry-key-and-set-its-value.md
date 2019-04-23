@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание раздела реестра и задание его значения в Visual Basic
+title: Как выполнить Создание раздела реестра и задание его значения в Visual Basic
 ms.date: 07/20/2015
 f1_keywords:
 - RegistryKey.CreateSubKey
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
 ms.openlocfilehash: 0cadff8b44c60041e2664b1d3b70830209014301
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312623"
 ---
-# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Практическое руководство. Создание раздела реестра и задание его значения в Visual Basic
+# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Как выполнить Создание раздела реестра и задание его значения в Visual Basic
 Метод `CreateSubKey` объекта `My.Computer.Registry` можно использовать для создания раздела реестра.  
   
 ## <a name="procedure"></a>Процедура  
@@ -75,5 +75,5 @@ ms.locfileid: "59312623"
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>
 - <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>
-- [Чтение данных из реестра и запись в реестр (Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+- [Чтение данных из реестра и запись в реестр](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
 - [Основы управления доступом для кода](../../../../framework/misc/code-access-security-basics.md)

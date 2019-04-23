@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], hosting controls
 ms.assetid: e2ce4990-661d-4882-a116-8a9eb575dc84
 ms.openlocfilehash: ccf82b2ea767d69797af1ffa38381a7cc0fd3b67
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308007"
 ---
 # <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Практическое руководство. Заключение элемента управления в оболочку ToolStripControlHost в Windows Forms
-<xref:System.Windows.Forms.ToolStripControlHost> обеспечивает возможность размещения произвольных элементов управления Windows Forms с помощью <xref:System.Windows.Forms.ToolStripControlHost> конструктора или путем расширения <xref:System.Windows.Forms.ToolStripControlHost> сам. Создавать оболочку для элемента управления проще путем расширения <xref:System.Windows.Forms.ToolStripControlHost> и реализации свойств и методов, которые будут предоставлять часто используемые свойства и методы элемента управления. Можно также обеспечить доступ к событиям для элемента управления на уровне <xref:System.Windows.Forms.ToolStripControlHost>.  
+<xref:System.Windows.Forms.ToolStripControlHost> обеспечивает возможность размещения произвольных элементов управления Windows Forms с помощью конструктора <xref:System.Windows.Forms.ToolStripControlHost> или путем расширения самого <xref:System.Windows.Forms.ToolStripControlHost>. Создавать оболочку для элемента управления проще путем расширения <xref:System.Windows.Forms.ToolStripControlHost> и реализации свойств и методов, которые будут предоставлять часто используемые свойства и методы элемента управления. Можно также обеспечить доступ к событиям для элемента управления на уровне <xref:System.Windows.Forms.ToolStripControlHost>.  
   
 ### <a name="to-host-a-control-in-a-toolstripcontrolhost-by-derivation"></a>Размещение элемента управления в ToolStripControlHost путем наследования  
   

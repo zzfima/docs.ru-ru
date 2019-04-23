@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c680c1a4671b38c9b2c35945ddecaf9d92d0f477
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60173739842835a705a72da4e7ab442cacfc08d2
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729240"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306551"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Как выполнить Сопоставление значений HRESULT и исключений
 Методы COM сообщают об ошибках, возвращая значения HRESULT. Методы .NET в этом случае вызывают исключения. Среда выполнения обеспечивает сопоставление этих двух элементов. Каждый класс платформы .NET Framework сопоставляется со значением HRESULT.  
@@ -31,7 +31,7 @@ ms.locfileid: "54729240"
   
 ### <a name="to-create-a-new-exception-class-and-map-it-to-an-hresult"></a>Создание нового класса исключения и его сопоставление со значением HRESULT  
   
-1.  В следующем коде создается новый класс исключения `NoAccessException`, который сопоставляется со значением HRESULT `E_ACCESSDENIED`.  
+1. В следующем коде создается новый класс исключения `NoAccessException`, который сопоставляется со значением HRESULT `E_ACCESSDENIED`.  
   
     ```cpp  
     Class NoAccessException : public ApplicationException  
@@ -143,5 +143,6 @@ CMyClass::MethodThatThrows
  Поля исключения **Message**, **Source** и **StackTrace** недоступны для **StackOverflowException**.  
   
 ## <a name="see-also"></a>См. также
+
 - [Расширенное COM-взаимодействие](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Исключения](../../standard/exceptions/index.md)

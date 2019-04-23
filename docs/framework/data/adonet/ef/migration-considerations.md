@@ -3,10 +3,10 @@ title: Вопросы миграции (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
 ms.openlocfilehash: b6224dcf883daef7b35ef50b7556fc568e433a46
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310425"
 ---
 # <a name="migration-considerations-entity-framework"></a>Вопросы миграции (Entity Framework)
@@ -79,7 +79,7 @@ ms.locfileid: "59310425"
   
   Дополнительные сведения см. в разделе [привязка объектов к элементам управления](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100)).  
   
-- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] элементы управления источником данных.  
+- Элементы управления источником данных [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
 
   [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Включает элемент управления источником данных, разработанная для упрощения привязки данных в [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] веб-приложений. Дополнительные сведения см. в разделе [Обзор элемента управления EntityDataSource веб-сервера](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100)).  
   

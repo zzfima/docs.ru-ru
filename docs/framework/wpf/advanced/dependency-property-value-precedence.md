@@ -8,10 +8,10 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315690"
 ---
 # <a name="dependency-property-value-precedence"></a>Приоритет значения свойств зависимостей
@@ -59,7 +59,7 @@ ms.locfileid: "59315690"
   
 8. **Методы задания стилей.** Значения из <xref:System.Windows.Setter> в стилях со страницы или приложения.  
   
-9. **Стиль по умолчанию (тема).** Подробные сведения о применении этих стилей и связи стилей тем с шаблонами в стилях тем см. в теме [Стили (темы) по умолчанию](#themestyles) далее в этом разделе. В стиле по умолчанию применяется следующий порядок приоритета:  
+9. **Стиль (тема) по умолчанию.** Подробные сведения о применении этих стилей и связи стилей тем с шаблонами в стилях тем см. в теме [Стили (темы) по умолчанию](#themestyles) далее в этом разделе. В стиле по умолчанию применяется следующий порядок приоритета:  
   
     1.  Активные триггеры в тематическом стиле.  
   

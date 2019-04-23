@@ -1,21 +1,21 @@
 ---
-title: Практическое руководство. Запись в журнал сведений об исключениях в Visual Basic
+title: Как выполнить Запись в журнал сведений об исключениях в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
 ms.openlocfilehash: 53bf93a326123ddb1e26ef5964fa057148505116
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307227"
 ---
-# <a name="how-to-log-exceptions-in-visual-basic"></a>Практическое руководство. Запись в журнал сведений об исключениях в Visual Basic
+# <a name="how-to-log-exceptions-in-visual-basic"></a>Как выполнить Запись в журнал сведений об исключениях в Visual Basic
 Объекты `My.Application.Log` и `My.Log` можно использовать для записи в журнал сведений об исключениях, возникающих в приложении. Эти примеры демонстрируют применение метода `My.Application.Log.WriteException` для регистрации явно перехваченных исключений и исключений, которые не обрабатываются.  
   
- Для записи сведений в журнал используйте метод `My.Application.Log.WriteEntry`. Дополнительные сведения см. в разделе . <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
+ Для записи сведений в журнал используйте метод `My.Application.Log.WriteEntry`. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>.  
   
 ### <a name="to-log-a-handled-exception"></a>Запись обработанного исключения в журнал  
   
@@ -72,5 +72,5 @@ ms.locfileid: "59307227"
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [Работа с журналами приложения](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
 - [Практическое руководство. Запись сообщений в журнал](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Пошаговое руководство. Определение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [Пошаговое руководство. Изменение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Пошаговое руководство: Определение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [Пошаговое руководство: Изменение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

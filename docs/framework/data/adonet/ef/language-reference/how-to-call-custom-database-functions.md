@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
 ms.openlocfilehash: cc2e25183649f6a95e7862520ccc5719f201277a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311491"
 ---
 # <a name="how-to-call-custom-database-functions"></a>Практическое руководство. Вызов настраиваемых функций базы данных
@@ -62,5 +62,5 @@ ms.locfileid: "59311491"
   
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения о EDMX-файлах](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Обзор файла .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Запросы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

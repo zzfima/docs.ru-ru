@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], changing
 ms.assetid: 5da91272-ad7e-49e7-9d1f-eb64439a1e4d
 ms.openlocfilehash: 6421171072f72764927b1a449c0257a29e8e82d6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326558"
 ---
 # <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Как выполнить: Изменение значения существующего параметра во время разработки
@@ -34,5 +34,5 @@ Visual Studio можно использовать для изменения зн
 ## <a name="see-also"></a>См. также
 
 - [Использование параметров приложения и параметров пользователя](using-application-settings-and-user-settings.md)
-- [Как выполнить: Создание нового параметра во время разработки](how-to-create-a-new-setting-at-design-time.md)
+- [Практическое руководство. Создание новых параметров во время разработки](how-to-create-a-new-setting-at-design-time.md)
 - [Общие сведения о параметрах приложений](application-settings-overview.md)

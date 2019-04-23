@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
 ms.openlocfilehash: f106ce1bca67f8b88df0835496eea0b3297ac946
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309684"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Практическое руководство. Размещение службы WCF в IIS
@@ -66,7 +66,7 @@ ms.locfileid: "59309684"
   
      В этом примере конечные точки явно задаются в файле конфигурации. Если в службу не добавлена ни одна конечная точка, то среда выполнения добавляет конечные точки по умолчанию. Дополнительные сведения о конечных точках по умолчанию, привязок и поведений см. в разделе [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) и [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-11. Чтобы проверить правильность размещения службы, откройте экземпляр Internet Explorer и перейдите к URL-адрес службы: `http://localhost/IISHostedCalc/Service.svc`  
+11. Чтобы проверить правильность размещения службы, откройте экземпляр окна Internet Explorer и перейдите по URL-адресу службы: `http://localhost/IISHostedCalc/Service.svc`.  
   
 ## <a name="example"></a>Пример  
  Далее представлен полный код службы калькулятора, размещаемой в IIS.  
@@ -81,4 +81,4 @@ ms.locfileid: "59309684"
 - [Размещение служб](../../../../docs/framework/wcf/hosting-services.md)
 - [Службы WCF и ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
 - [Безопасность](../../../../docs/framework/wcf/feature-details/security.md)
-- [Возможности размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Функции размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
 ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327377"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Практическое руководство. Создание интерфейса в стиле проводника в форме Windows Forms
@@ -52,7 +52,7 @@ Windows Explorer является распространенным вариан�
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [Практическое руководство. Создание пользовательского интерфейса с несколькими областями с помощью Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [Практическое руководство. Определение способа изменения размеров и позиционирования в окне с перемещаемым разделителем](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [Практическое руководство. Создание с несколькими областями пользовательского интерфейса с помощью Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Практическое руководство. Определение изменения размеров и позиционирования в окне с перемещаемым разделителем](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
 - [Практическое руководство. Разделение окна по горизонтали](how-to-split-a-window-horizontally.md)
 - [Элемент управления SplitContainer](splitcontainer-control-windows-forms.md)

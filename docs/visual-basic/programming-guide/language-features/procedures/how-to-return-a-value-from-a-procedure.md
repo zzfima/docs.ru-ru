@@ -7,10 +7,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
 ms.openlocfilehash: 8b53df1634d2b9971bc44c968a17db81cac3924f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307890"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Практическое руководство. Возвращение значения из процедуры (Visual Basic)

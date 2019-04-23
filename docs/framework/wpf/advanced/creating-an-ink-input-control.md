@@ -15,10 +15,10 @@ helpviewer_keywords:
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
 ms.openlocfilehash: 105a44f90c1c654a21fc8920a149ad63b2dabc99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323854"
 ---
 # <a name="creating-an-ink-input-control"></a>Создание элемента управления рукописным вводом
@@ -100,5 +100,5 @@ ms.locfileid: "59323854"
   
 ## <a name="see-also"></a>См. также
 
-- [Дополнительная обработка рукописных данных](advanced-ink-handling.md)
+- [Дополнительная обработка рукописных фрагментов](advanced-ink-handling.md)
 - [Доступ и управление с помощью пера](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

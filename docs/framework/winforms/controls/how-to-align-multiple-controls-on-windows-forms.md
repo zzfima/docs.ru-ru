@@ -8,10 +8,10 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
 ms.openlocfilehash: 262487eabb3f0ab27efe8bc7fdb31a822ed07823
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307747"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Практическое руководство. Выравнивание нескольких элементов управления в формах Windows Forms
@@ -31,11 +31,11 @@ ms.locfileid: "59307747"
 ## <a name="see-also"></a>См. также
 
 - [Элементы управления Windows Forms](index.md)
-- [Практическое руководство. Добавление элементов управления в формы Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [Расположение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)
-- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)
+- [Практическое руководство. Добавление элементов управления Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Упорядочение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)
+- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
 - [Функциональная классификация элементов управления Windows Forms](windows-forms-controls-by-function.md)
-- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Практическое руководство. Переназначение существующих элементов управления другим родительским элементам](how-to-reassign-existing-controls-to-a-different-parent.md)
+- [Пошаговое руководство: Упорядочение элементов управления в формах Windows Forms, с помощью линий привязки](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента управления TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Практическое руководство. Переназначение существующих элементов управления другим родительским](how-to-reassign-existing-controls-to-a-different-parent.md)

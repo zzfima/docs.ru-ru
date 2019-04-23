@@ -3,10 +3,10 @@ title: Процесс найма
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
 ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313155"
 ---
 # <a name="hiring-process"></a>Процесс найма
@@ -18,7 +18,7 @@ ms.locfileid: "59313155"
   
  Этот образец демонстрирует следующие возможности [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
--   <xref:System.Activities.Statements.Flowchart> и <xref:System.Activities.Statements.Sequence> рабочих процессов для моделирования бизнес-процессов.  
+-   Рабочие процессы <xref:System.Activities.Statements.Flowchart> и <xref:System.Activities.Statements.Sequence> для моделирования бизнес-процессов.  
   
 -   Службы рабочего процесса.  
   
@@ -38,9 +38,9 @@ ms.locfileid: "59313155"
   
 -   Сочетание действий.  
   
--   <xref:System.Activities.Statements.Parallel> действия.  
+-   Действия <xref:System.Activities.Statements.Parallel>.  
   
--   <xref:System.Activities.Statements.CancellationScope> действие.  
+-   Действие <xref:System.Activities.Statements.CancellationScope>.  
   
 -   Устойчивые таймеры (действие <xref:System.Activities.Statements.Delay>).  
   
@@ -121,8 +121,8 @@ ms.locfileid: "59313155"
 |Сочетание действий|В определении процесса используется свободное сочетание действий <xref:System.Activities.Activity>. Flowchart содержит несколько действий Sequence и Parallel, которые одновременно содержат другие действия (и так далее).|HiringRequestService|  
 |Параллельные действия|-   <xref:System.Activities.Statements.ParallelForEach%601> используется для регистрации в папке «Входящие» главы компании и менеджеров по Персоналу в параллельном режиме (ожидает утверждаемых двумя менеджерами по Персоналу).<br />-   <xref:System.Activities.Statements.Parallel> используется для выполнения некоторых задач очистки на шагах завершено» и «отклонено|HiringRequestService|  
 |Отмена модели|Flowchart использует <xref:System.Activities.Statements.CancellationScope> для создания режима отмены (в данном случае он выполняет очистку).|HiringRequestService|  
-|Участник Customer Persistence|`HiringRequestPersistenceParticipant` сохраняет данные из переменной рабочего процесса в таблице, хранящейся в базе данных Персонала Contoso.|HiringRequestService|  
-|Службы рабочего процесса|`ResumeRequestService` реализуется с помощью служб рабочих процессов. Определение рабочего процесса и данные службы содержатся в ResumeRequestService.xamlx. Служба настроена на использование сохраняемости и отслеживания.|ResumeRequestService|  
+|Участник Customer Persistence|`HiringRequestPersistenceParticipant` сохраняет данные из переменной рабочего процесса в таблицу, хранящуюся в базе данных персонала Contoso.|HiringRequestService|  
+|Службы рабочего процесса|`ResumeRequestService` реализована с помощью служб рабочего процесса. Определение рабочего процесса и данные службы содержатся в ResumeRequestService.xamlx. Служба настроена на использование сохраняемости и отслеживания.|ResumeRequestService|  
 |Устойчивые таймеры|`ResumeRequestService` использует устойчивые таймеры для определения продолжительности публикации вакансии (по истечении времени ожидания вакансия закрывается).|ResumeRequestService|  
 |Транзакции|<xref:System.Activities.Statements.TransactionScope> используется для обеспечения согласованности данных в рамках выполнения нескольких действий (при получении нового резюме).|ResumeRequestService|  
 |Транзакции|Участник настраиваемой сохраняемости (`HiringRequestPersistenceParticipant`) и участник настраиваемого отслеживания (`HistoryFileTrackingParticipant`) используют одну и ту же транзакцию.|HiringRequestService|  

@@ -6,16 +6,16 @@ dev_langs:
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
 ms.openlocfilehash: 84762d8917609b84a049ea665b575acfa6e5fecf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325193"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Практическое руководство. Настройка службы WCF для взаимодействия с клиентами веб-службы ASP.NET
 Чтобы настроить конечную точку службы Windows Communication Foundation (WCF) с [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] клиентами веб-службы, используйте <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> тип как тип привязки для конечной точки службы.  
   
- В привязке можно дополнительно включить поддержку протокола HTTPS и проверку подлинности клиента на транспортном уровне. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Клиенты веб-службы не поддерживают кодирование сообщений MTOM, поэтому <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> свойство следует оставить значение по умолчанию, который является <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. Клиенты веб-служб ASP.Net не поддерживают WS-Security, поэтому для <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> должно быть задано значение <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
+ В привязке можно дополнительно включить поддержку протокола HTTPS и проверку подлинности клиента на транспортном уровне. Клиенты веб-службы [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] не поддерживают кодирование сообщений MTOM, поэтому для свойства <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> следует сохранить значение по умолчанию, т. е. <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. Клиенты веб-служб ASP.Net не поддерживают WS-Security, поэтому для <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> должно быть задано значение <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
   
  Для предоставления метаданных для службы WCF [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-инструменты для создания прокси-сервера службы (то есть [инструмент языка описания веб-служб (Wsdl.exe)](https://go.microsoft.com/fwlink/?LinkId=73833), [инструмент обнаружения веб-служб (Disco.exe)](https://go.microsoft.com/fwlink/?LinkId=73834), а также функцию Add Web Reference в Visual Studio), следует предоставлять конечную точку метаданных HTTP/GET.  
   
@@ -48,10 +48,10 @@ ms.locfileid: "59325193"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Создание конечной точки службы в коде](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)
-- [Практическое руководство. Публикация метаданных для службы с использованием кода](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
-- [Практическое руководство. Задание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [Практическое руководство. Создание конечной точки службы в конфигурации](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [Практическое руководство. Публикация метаданных для службы с использованием файла конфигурации](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Практическое руководство. Создать конечную точку службы в коде](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)
+- [Практическое руководство. Публикация метаданных для службы в коде](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [Практическое руководство. Указание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
+- [Практическое руководство. Создать конечную точку службы в конфигурации](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [Практическое руководство. Публикация метаданных для службы с помощью файла конфигурации](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Безопасность транспорта](../../../../docs/framework/wcf/feature-details/transport-security.md)
 - [Использование метаданных](../../../../docs/framework/wcf/feature-details/using-metadata.md)

@@ -3,10 +3,10 @@ title: Обработка повторного входа в асинхронн�
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
 ms.openlocfilehash: 0913a8b422d8ea3d6b38680a26bac143087dd2c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324790"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Обработка повторного входа в асинхронных приложениях (Visual Basic)
@@ -412,9 +412,9 @@ End Sub
 #### <a name="the-accessthewebasync-method"></a>Метод AccessTheWebAsync  
  В этом примере метод `AccessTheWebAsync` разбит на два метода. Первый метод, `AccessTheWebAsync`, запускает все задачи загрузки для группы и передает задаче `pendingWork` управление процессом отображения. Метод использует запрос LINQ и <xref:System.Linq.Enumerable.ToArray%2A> для запуска всех задач загрузки одновременно.  
   
- `AccessTheWebAsync` затем вызывает `FinishOneGroupAsync` для ожидания завершения каждой загрузки и отображения ее длины.  
+ Затем метод `AccessTheWebAsync` вызывает метод `FinishOneGroupAsync` для ожидания завершения каждой загрузки и отображения ее длины.  
   
- `FinishOneGroupAsync` Возвращает задачу, которая назначается `pendingWork` в `AccessTheWebAsync`. Это значение предотвращает прерывание другой операцией до завершения выполнения задачи.  
+ Метод `FinishOneGroupAsync` возвращает задачу, которая назначена `pendingWork`, в `AccessTheWebAsync`. Это значение предотвращает прерывание другой операцией до завершения выполнения задачи.  
   
 ```vb  
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)  
@@ -678,5 +678,5 @@ End Function
   
 ## <a name="see-also"></a>См. также
 
-- [Пошаговое руководство. Доступ к Интернету с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Пошаговое руководство: Доступ к Интернету с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

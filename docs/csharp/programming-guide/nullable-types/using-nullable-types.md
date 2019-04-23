@@ -6,12 +6,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: 5e468641efd4627c887d9a980fc4ed1129196e20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef7c9c18d303131b5a1c0156be820e1d475e7ec1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658251"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306655"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Использование допускающих значение NULL типов (руководство по программированию на C#)
 
@@ -66,6 +66,9 @@ ms.locfileid: "54658251"
 Предопределенные унарные и бинарные операции, а также любые операции, определенные программистом, которые существуют для значащих типов, также можно использовать и с типами, допускающими значение null. Эти операции возвращают значение NULL, если один или оба операнда имеют значение NULL; в противном случае операция использует содержащееся значение для вычисления результата. Например:  
   
 [!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
+
+> [!NOTE]
+> Для типа `bool?` предопределенные операторы `&` и `|` не следуют правилам, описанным в этом разделе: результат вычисления оператора может быть отличным от NULL, даже если один из операндов имеет значение NULL. См. подробнее о [логических операторах, поддерживающих значение NULL](../../language-reference/operators/boolean-logical-operators.md#nullable-boolean-logical-operators) в описании [логических операторов](../../language-reference/operators/boolean-logical-operators.md).
   
 Для операторов отношения (`<`, `>`, `<=`, `>=`), если один или оба операнда имеют значение NULL, результатом будет `false`. Тут важно не полагать, что если какая-то операция сравнения (например, `<=`) возвращает `false`, то противоположное сравнение (`>`) обязательно вернет `true`. В следующем примере показано, что 10
 
@@ -75,6 +78,8 @@ ms.locfileid: "54658251"
 [!code-csharp-interactive[relational and equality operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#8)]
   
 В приведенном выше примере видно, что проверка на равенство двух типов, допускающих значение NULL, которые оба равны NULL, всегда даст `true`.
+
+Дополнительные сведения см. в разделе о [поднятых операторах](~/_csharplang/spec/expressions.md#lifted-operators) в [спецификации языка C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="boxing-and-unboxing"></a>Упаковка-преобразование и распаковка-преобразование
 
@@ -87,29 +92,6 @@ ms.locfileid: "54658251"
 
 [!code-csharp-interactive[boxing and unboxing](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#9)]
 
-## <a name="the-bool-type"></a>Тип bool?
-
-Тип `bool?`, допускающий значение NULL, может содержать три разных значения: [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md) и [null](../../language-reference/keywords/null.md). Тип `bool?` подобен типу Boolean в SQL. Чтобы убедиться, что результаты операторов `&` и `|` согласуются с трехзначным типом Boolean в SQL, предусмотрены следующие предопределенные операторы:
-
-- `bool? operator &(bool? x, bool? y)`  
-- `bool? operator |(bool? x, bool? y)`  
-  
-Семантика этих операторов определяется по следующей таблице:  
-  
-|x|y|x&y|x&#124;y|  
-|-------|-------|---------|--------------|  
-|true|true|true|true|  
-|true|False|false|true|  
-|true|null|null|true|  
-|False|true|False|true|  
-|False|False|False|False|  
-|False|null|False|null|  
-|null|true|null|true|  
-|null|False|False|null|  
-|null|null|null|null|  
-
-Обратите внимание, что эти два оператора не следуют правилам, описанным в разделе [Операторы](#operators): результат вычисления оператора может быть отличным от NULL, даже если один из операндов имеет значение NULL.
-  
 ## <a name="see-also"></a>См. также
 
 - [Типы, допускающие значения NULL](index.md)

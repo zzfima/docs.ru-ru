@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
 ms.openlocfilehash: 6c144bddff4e485673dbdc7e218e82808c20aa61
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59305238"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768869"
 ---
 # <a name="default-service-behavior"></a>Поведение служб по умолчанию
 В этом образце показано, как могут настраиваться параметры поведения службы. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), который реализует `ICalculator` контракт службы. В этом образце с помощью атрибутов <xref:System.ServiceModel.ServiceBehaviorAttribute> и <xref:System.ServiceModel.OperationBehaviorAttribute> явным образом определены поведения службы и операции. Поведения можно настраивать в файлах конфигурации или непосредственно в коде (как показано в этом образце).  

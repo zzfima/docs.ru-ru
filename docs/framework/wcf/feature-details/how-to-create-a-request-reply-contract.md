@@ -3,10 +3,10 @@ title: Практическое руководство. Создание кон�
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
 ms.openlocfilehash: 7a446db49dcc6a12b900292f1b19c9973835f2c1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327481"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>Практическое руководство. Создание контракта типа "запрос — ответ"
@@ -45,10 +45,10 @@ public interface ICalculator
   
 -   Дополнительные сведения об указании контрактов операции см. в разделе <xref:System.ServiceModel.OperationContractAttribute> класс и <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> свойство.  
   
--   Применение атрибутов <xref:System.ServiceModel.ServiceContractAttribute> и <xref:System.ServiceModel.OperationContractAttribute> вызывает автоматическое создание определений контракта службы в документе WSDL после развертывания службы. Документ загружается путем добавления `?wsdl` к базовому адресу HTTP для службы, Например, примененная к объекту директива `http://microsoft/CalculatorService?wsdl`  
+-   Применение атрибутов <xref:System.ServiceModel.ServiceContractAttribute> и <xref:System.ServiceModel.OperationContractAttribute> вызывает автоматическое создание определений контракта службы в документе WSDL после развертывания службы. Документ загружается путем добавления `?wsdl` к базовому адресу HTTP для службы, Например `http://microsoft/CalculatorService?wsdl`   
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.ServiceModel.OperationContractAttribute>
-- [Создание контрактов служб](../../../../docs/framework/wcf/designing-service-contracts.md)
-- [Практическое руководство. Создание двухстороннего контракта](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Разработка контрактов службы](../../../../docs/framework/wcf/designing-service-contracts.md)
+- [Практическое руководство. Создание дуплексного контракта](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

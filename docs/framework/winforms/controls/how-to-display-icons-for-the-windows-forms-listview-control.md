@@ -12,10 +12,10 @@ helpviewer_keywords:
 - list views [Windows Forms], displaying icons
 ms.assetid: 9d577542-8595-429b-99e5-078770ec9d35
 ms.openlocfilehash: 8e4ae744eecbe894767114179dd63651828b191b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318615"
 ---
 # <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>Практическое руководство. Отображение значков в элементе управления ListView в Windows Forms
@@ -41,6 +41,6 @@ Windows Forms <xref:System.Windows.Forms.ListView> элемент управле
 
 - [Общие сведения об элементе управления ListView](listview-control-overview-windows-forms.md)
 - [Практическое руководство. Добавление и удаление элементов с помощью элемента управления ListView в Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Практическое руководство. Добавление столбцов в элемент управления ListView в Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Практическое руководство. Добавить столбцы для элемента управления ListView в Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или элемент управления ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
 - [Компонент ImageList](imagelist-component-windows-forms.md)

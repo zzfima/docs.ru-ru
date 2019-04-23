@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
 ms.openlocfilehash: 19d0b284238ed662b25627d6077c1ebe6ecc6e86
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323711"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Практическое руководство. Определение значка для кнопки на панели инструментов с помощью конструктора
@@ -44,6 +44,6 @@ ms.locfileid: "59323711"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Практическое руководство. Генерирование событий меню для кнопок элемента управления Toolbar](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Практическое руководство. Триггер событий меню для кнопок панели инструментов](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [Элемент управления ToolBar](toolbar-control-windows-forms.md)
 - [Компонент ImageList](imagelist-component-windows-forms.md)

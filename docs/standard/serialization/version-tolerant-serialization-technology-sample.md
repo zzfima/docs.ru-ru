@@ -3,14 +3,14 @@ title: Образец технологии сериализации, незав�
 ms.date: 03/30/2017
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
 ms.openlocfilehash: d7dfcf7548571d29032495ca8be96db70f2336fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308371"
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>Образец технологии сериализации, независимой от версии
-[Загрузить образец](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
+[Скачать образец](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
   
  В этом образце демонстрируются возможности .NET-сериализации, независимой от версии. В примере выполняется построение приложений, использующих различные версии объекта <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> для сериализации и десериализации данных. Несмотря на наличие различных типов версий, приложения легко взаимодействуют друг с другом. Дополнительные сведения см. в разделе [Независимая от версий сериализация](../../../docs/standard/serialization/version-tolerant-serialization.md).  
   

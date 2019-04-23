@@ -3,10 +3,10 @@ title: Пример UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 0aaf91d0-ce18-468d-8006-bc9bc2e48231
 ms.openlocfilehash: 5f8a969a9ddea633d12ebe2d922c152dbb0d7241
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322619"
 ---
 # <a name="uritemplate-sample"></a>Пример UriTemplate
@@ -16,7 +16,7 @@ ms.locfileid: "59322619"
   
 -   Создание экземпляров кодов URI из шаблона `UriTemplate` с помощью методов <xref:System.UriTemplate.BindByName%2A> и <xref:System.UriTemplate.BindByPosition%2A>.  
   
--   <xref:System.UriTemplateTable.Match%2A>, который является операцией, обратной `BindByName` и `BindByPosition`.  
+-   Метод <xref:System.UriTemplateTable.Match%2A>, являющийся обратной операцией для `BindByName` и `BindByPosition`.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   

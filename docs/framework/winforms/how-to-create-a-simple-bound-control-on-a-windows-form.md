@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
 ms.openlocfilehash: fc59e6d5e71bfc69dea0bfc5098a1fa14c97d4b6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322177"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Практическое руководство. Создание элемента управления с простой привязкой в форме Windows Forms
@@ -49,4 +49,4 @@ ms.locfileid: "59322177"
 
 - <xref:System.Windows.Forms.Binding>
 - [Привязка данных Windows Forms](windows-forms-data-binding.md)
-- [Связывание данных и Windows Forms](data-binding-and-windows-forms.md)
+- [Привязка данных и Windows Forms](data-binding-and-windows-forms.md)

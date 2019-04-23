@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отображение дат в календарях, отличных от григорианского
+title: Как выполнить Отображение дат в календарях, отличных от григорианского
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63af71f92af9c2f3a5986dcb73f44d0e53c00f58
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 224e8e82b7e71d7efbfdf0ce26cc4bd783cce3c8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079465"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59313311"
 ---
-# <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Практическое руководство. Отображение дат в календарях, отличных от григорианского
+# <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Как выполнить Отображение дат в календарях, отличных от григорианского
 Для типов<xref:System.DateTime> и <xref:System.DateTimeOffset> в качестве календаря по умолчанию используется григорианский календарь. Это означает, что вызов метода `ToString` для значения даты и времени выведет строковое представление даты и времени по григорианскому календарю даже в том случае, если значение даты и времени создавалось с помощью другого календаря. Это показано в следующем примере, в котором двумя разными способами создаются значения даты и времени с персидским календарем. При вызове метода <xref:System.DateTime.ToString%2A> значения даты и времени по-прежнему отображаются в григорианском календаре. В этом примере представлены два часто используемых неверных способа отображения даты в заданном календаре.  
   
  [!code-csharp[Formatting.HowTo.Calendar#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#1)]
@@ -30,26 +30,26 @@ ms.locfileid: "44079465"
   
 ### <a name="to-display-the-date-for-a-cultures-default-calendar"></a>Отображение даты в календаре, который является календарем по умолчанию доя определенного языка и региональных параметров  
   
-1.  Создайте экземпляр календаря, производного от класса <xref:System.Globalization.Calendar>, который представляет нужный календарь.  
+1. Создайте экземпляр календаря, производного от класса <xref:System.Globalization.Calendar>, который представляет нужный календарь.  
   
-2.  Создайте экземпляр объекта <xref:System.Globalization.CultureInfo>, который представляет нужные язык и региональные параметры для отображения даты.  
+2. Создайте экземпляр объекта <xref:System.Globalization.CultureInfo>, который представляет нужные язык и региональные параметры для отображения даты.  
   
-3.  Вызовите метод <xref:System.Array.Exists%2A?displayProperty=nameWithType>, чтобы определить, является ли объект календаря элементом массива, возвращаемого свойством <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType>. Если это так, то календарь можно использовать в качестве календаря по умолчанию для объекта <xref:System.Globalization.CultureInfo>. Если это не является элементом массива, следуйте инструкциям в разделе "Отображение даты в любом календаре".  
+3. Вызовите метод <xref:System.Array.Exists%2A?displayProperty=nameWithType>, чтобы определить, является ли объект календаря элементом массива, возвращаемого свойством <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType>. Если это так, то календарь можно использовать в качестве календаря по умолчанию для объекта <xref:System.Globalization.CultureInfo>. Если это не является элементом массива, следуйте инструкциям в разделе "Отображение даты в любом календаре".  
   
-4.  Присвойте объект календаря в качестве значения свойству <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> в объекте <xref:System.Globalization.DateTimeFormatInfo>, который возвращается свойством <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  
+4. Присвойте объект календаря в качестве значения свойству <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> в объекте <xref:System.Globalization.DateTimeFormatInfo>, который возвращается свойством <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  
   
     > [!NOTE]
     >  Класс <xref:System.Globalization.CultureInfo> также содержит свойство <xref:System.Globalization.CultureInfo.Calendar%2A>. Но это свойство доступно только для чтения и является константой, то есть не изменяется в соответствии с новым календарем по умолчанию, присвоенным свойству <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType>.  
   
-5.  Вызовите метод <xref:System.DateTime.ToString%2A> или <xref:System.DateTime.ToString%2A>, передав ему объект <xref:System.Globalization.CultureInfo>, для которого мы на предыдущем шаге изменили календарь по умолчанию.  
+5. Вызовите метод <xref:System.DateTime.ToString%2A> или <xref:System.DateTime.ToString%2A>, передав ему объект <xref:System.Globalization.CultureInfo>, для которого мы на предыдущем шаге изменили календарь по умолчанию.  
   
 ### <a name="to-display-the-date-in-any-calendar"></a>Отображение даты в любом календаре  
   
-1.  Создайте экземпляр календаря, производного от класса <xref:System.Globalization.Calendar>, который представляет нужный календарь.  
+1. Создайте экземпляр календаря, производного от класса <xref:System.Globalization.Calendar>, который представляет нужный календарь.  
   
-2.  Определите, какие элементы даты и времени должны отображаться в строковом представлении значения даты и времени.  
+2. Определите, какие элементы даты и времени должны отображаться в строковом представлении значения даты и времени.  
   
-3.  Для каждого элемента даты и времени, который требуется отобразить, вызовите метод `Get`... объекта календаря. метод. Доступны указанные далее методы.  
+3. Для каждого элемента даты и времени, который требуется отобразить, вызовите метод `Get`... объекта календаря. метод. Доступны указанные далее методы.  
   
     -   <xref:System.Globalization.Calendar.GetYear%2A> отвечает за отображение года в соответствующем календаре.  
   

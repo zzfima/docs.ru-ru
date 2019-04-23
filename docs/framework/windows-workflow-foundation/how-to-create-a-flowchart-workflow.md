@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
 ms.openlocfilehash: 15cf94d5ea191435723f754f35e43d65632142e2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311205"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Практическое руководство. Создание рабочего процесса c блок-схемой
@@ -154,8 +154,8 @@ ms.locfileid: "59311205"
 
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
-- [Программирование в Windows Workflow Foundation](programming.md)
+- [Программирование в Windows Workflow Foundation](programming.md)
 - [Разработка рабочих процессов](designing-workflows.md)
-- [Учебник по началу работы](getting-started-tutorial.md)
+- [Руководство по началу работы](getting-started-tutorial.md)
 - [Практическое руководство. Создание действия](how-to-create-an-activity.md)
 - [Практическое руководство. Запуск рабочего процесса](how-to-run-a-workflow.md)

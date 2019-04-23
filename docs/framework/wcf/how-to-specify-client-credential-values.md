@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
 ms.openlocfilehash: ecb8f7ef74f1f0625454eb2d6cebf9d282a5ece3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327104"
 ---
 # <a name="how-to-specify-client-credential-values"></a>Практическое руководство. Задание значений учетных данных клиента
@@ -100,13 +100,13 @@ ms.locfileid: "59327104"
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
 - [Программирование безопасности WCF](../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Выбор типа учетных данных](../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [Служебное средство ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Работа с сертификатами](../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Практическое руководство. Создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [\<netTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
+- [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
 - [\<Безопасность >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
 - [\<сообщение >](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)
 - [\<поведение >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)
 - [\<варианты поведения >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
-- [\<clientCertificate>](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)
+- [\<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)
 - [\<clientCredentials>](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
