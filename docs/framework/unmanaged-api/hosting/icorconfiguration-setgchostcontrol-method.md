@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 50a92058e8a394b95c690d19f1bafdddbed8246a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135997"
 ---
-# <a name="icorconfigurationsetgchostcontrol-method"></a><span data-ttu-id="3ec6b-102">Метод ICorConfiguration::SetGCHostControl</span><span class="sxs-lookup"><span data-stu-id="3ec6b-102">ICorConfiguration::SetGCHostControl Method</span></span>
-<span data-ttu-id="3ec6b-103">Задает интерфейс обратного вызова, используемый сборщиком мусора для запроса узла, чтобы изменить ограничения виртуальной памяти.</span><span class="sxs-lookup"><span data-stu-id="3ec6b-103">Sets the callback interface to be used by the garbage collector to request the host to change the limits of virtual memory.</span></span>  
+# <a name="icorconfigurationsetgchostcontrol-method"></a><span data-ttu-id="400ed-102">Метод ICorConfiguration::SetGCHostControl</span><span class="sxs-lookup"><span data-stu-id="400ed-102">ICorConfiguration::SetGCHostControl Method</span></span>
+<span data-ttu-id="400ed-103">Задает интерфейс обратного вызова, используемый сборщиком мусора для запроса узла, чтобы изменить ограничения виртуальной памяти.</span><span class="sxs-lookup"><span data-stu-id="400ed-103">Sets the callback interface to be used by the garbage collector to request the host to change the limits of virtual memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3ec6b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3ec6b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="400ed-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="400ed-104">Syntax</span></span>  
   
 ```  
 HRESULT SetGCHostControl (  
@@ -35,19 +35,19 @@ HRESULT SetGCHostControl (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3ec6b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="3ec6b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="400ed-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="400ed-105">Parameters</span></span>  
  `pGCHostControl`  
- <span data-ttu-id="3ec6b-106">[in] Указатель на [IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md) объект, который позволяет сборщику мусора запросить узла, чтобы изменить ограничения виртуальной памяти.</span><span class="sxs-lookup"><span data-stu-id="3ec6b-106">[in] A pointer to an [IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md) object that allows the garbage collector to request the host to change the limits of virtual memory.</span></span>  
+ <span data-ttu-id="400ed-106">[in] Указатель на [IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md) объект, который позволяет сборщику мусора запросить узла, чтобы изменить ограничения виртуальной памяти.</span><span class="sxs-lookup"><span data-stu-id="400ed-106">[in] A pointer to an [IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md) object that allows the garbage collector to request the host to change the limits of virtual memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3ec6b-107">Требования</span><span class="sxs-lookup"><span data-stu-id="3ec6b-107">Requirements</span></span>  
- <span data-ttu-id="3ec6b-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3ec6b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="400ed-107">Требования</span><span class="sxs-lookup"><span data-stu-id="400ed-107">Requirements</span></span>  
+ <span data-ttu-id="400ed-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="400ed-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3ec6b-109">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3ec6b-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="400ed-109">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="400ed-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="3ec6b-110">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3ec6b-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="400ed-110">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="400ed-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="3ec6b-111">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="3ec6b-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="400ed-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="400ed-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3ec6b-112">См. также</span><span class="sxs-lookup"><span data-stu-id="3ec6b-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="400ed-112">См. также</span><span class="sxs-lookup"><span data-stu-id="400ed-112">See also</span></span>
 
-- [<span data-ttu-id="3ec6b-113">Интерфейс ICorConfiguration</span><span class="sxs-lookup"><span data-stu-id="3ec6b-113">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)
+- [<span data-ttu-id="400ed-113">Интерфейс ICorConfiguration</span><span class="sxs-lookup"><span data-stu-id="400ed-113">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)

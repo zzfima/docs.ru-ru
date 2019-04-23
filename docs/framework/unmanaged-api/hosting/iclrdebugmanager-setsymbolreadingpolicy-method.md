@@ -19,16 +19,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2dc3d350f5c97736b3b65c814a668195aceef2b0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132825"
 ---
-# <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a><span data-ttu-id="eff56-102">Метод ICLRDebugManager::SetSymbolReadingPolicy</span><span class="sxs-lookup"><span data-stu-id="eff56-102">ICLRDebugManager::SetSymbolReadingPolicy Method</span></span>
-<span data-ttu-id="eff56-103">Задает политику для чтения файлов базы данных (PDB).</span><span class="sxs-lookup"><span data-stu-id="eff56-103">Sets the policy for reading program database (PDB) files.</span></span> <span data-ttu-id="eff56-104">Политика определяет, включаются ли сведения о файлах и номера строк в стеках вызовов.</span><span class="sxs-lookup"><span data-stu-id="eff56-104">The policy determines whether information about line numbers and files is included in call stacks.</span></span>  
+# <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a><span data-ttu-id="20862-102">Метод ICLRDebugManager::SetSymbolReadingPolicy</span><span class="sxs-lookup"><span data-stu-id="20862-102">ICLRDebugManager::SetSymbolReadingPolicy Method</span></span>
+<span data-ttu-id="20862-103">Задает политику для чтения файлов базы данных (PDB).</span><span class="sxs-lookup"><span data-stu-id="20862-103">Sets the policy for reading program database (PDB) files.</span></span> <span data-ttu-id="20862-104">Политика определяет, включаются ли сведения о файлах и номера строк в стеках вызовов.</span><span class="sxs-lookup"><span data-stu-id="20862-104">The policy determines whether information about line numbers and files is included in call stacks.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eff56-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="eff56-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="20862-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="20862-105">Syntax</span></span>  
   
 ```  
 HRESULT SetSymbolReadingPolicy (  
@@ -36,27 +36,27 @@ HRESULT SetSymbolReadingPolicy (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="eff56-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="eff56-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="20862-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="20862-106">Parameters</span></span>  
  `policy`  
- <span data-ttu-id="eff56-107">[in] Является членом [ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md) перечисления.</span><span class="sxs-lookup"><span data-stu-id="eff56-107">[in] A member of the [ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="20862-107">[in] Является членом [ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md) перечисления.</span><span class="sxs-lookup"><span data-stu-id="20862-107">[in] A member of the [ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md) enumeration.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="eff56-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="eff56-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="20862-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="20862-108">Return Value</span></span>  
   
-|<span data-ttu-id="eff56-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="eff56-109">HRESULT</span></span>|<span data-ttu-id="eff56-110">Описание</span><span class="sxs-lookup"><span data-stu-id="eff56-110">Description</span></span>|  
+|<span data-ttu-id="20862-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="20862-109">HRESULT</span></span>|<span data-ttu-id="20862-110">Описание</span><span class="sxs-lookup"><span data-stu-id="20862-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="eff56-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="eff56-111">S_OK</span></span>|`SetSymbolReadingPolicy` <span data-ttu-id="eff56-112">успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="eff56-112">returned successfully.</span></span>|  
-|<span data-ttu-id="eff56-113">ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="eff56-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="eff56-114">Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="eff56-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="eff56-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="eff56-115">E_FAIL</span></span>|<span data-ttu-id="eff56-116">Неизвестный Разрушительный сбой.</span><span class="sxs-lookup"><span data-stu-id="eff56-116">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="eff56-117">После метод вернет значение E_FAIL, среда CLR больше не использовать в данном процессе.</span><span class="sxs-lookup"><span data-stu-id="eff56-117">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="eff56-118">Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="eff56-118">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="20862-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="20862-111">S_OK</span></span>|<span data-ttu-id="20862-112">`SetSymbolReadingPolicy` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="20862-112">`SetSymbolReadingPolicy` returned successfully.</span></span>|  
+|<span data-ttu-id="20862-113">ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="20862-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="20862-114">Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="20862-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="20862-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="20862-115">E_FAIL</span></span>|<span data-ttu-id="20862-116">Неизвестный Разрушительный сбой.</span><span class="sxs-lookup"><span data-stu-id="20862-116">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="20862-117">После метод вернет значение E_FAIL, среда CLR больше не использовать в данном процессе.</span><span class="sxs-lookup"><span data-stu-id="20862-117">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="20862-118">Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="20862-118">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="eff56-119">Требования</span><span class="sxs-lookup"><span data-stu-id="eff56-119">Requirements</span></span>  
- <span data-ttu-id="eff56-120">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eff56-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="20862-119">Требования</span><span class="sxs-lookup"><span data-stu-id="20862-119">Requirements</span></span>  
+ <span data-ttu-id="20862-120">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="20862-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eff56-121">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="eff56-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="20862-121">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="20862-121">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="eff56-122">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="eff56-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="20862-122">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="20862-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="eff56-123">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="eff56-123">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="20862-123">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20862-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eff56-124">См. также</span><span class="sxs-lookup"><span data-stu-id="eff56-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="20862-124">См. также</span><span class="sxs-lookup"><span data-stu-id="20862-124">See also</span></span>
 
-- [<span data-ttu-id="eff56-125">Интерфейс ICLRDebugManager</span><span class="sxs-lookup"><span data-stu-id="eff56-125">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
+- [<span data-ttu-id="20862-125">Интерфейс ICLRDebugManager</span><span class="sxs-lookup"><span data-stu-id="20862-125">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)

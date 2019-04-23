@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63d4b885b6968b800bc965a9be1ec6b795a42220
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140664"
 ---
-# <a name="iclrstrongnamestrongnamecompareassemblies-method"></a><span data-ttu-id="47ffb-102">Метод ICLRStrongName::StrongNameCompareAssemblies</span><span class="sxs-lookup"><span data-stu-id="47ffb-102">ICLRStrongName::StrongNameCompareAssemblies Method</span></span>
-<span data-ttu-id="47ffb-103">Определяет, отличаются ли две сборки только подписями строгого имени.</span><span class="sxs-lookup"><span data-stu-id="47ffb-103">Determines whether two assemblies differ only by their strong name signatures.</span></span>  
+# <a name="iclrstrongnamestrongnamecompareassemblies-method"></a><span data-ttu-id="ea074-102">Метод ICLRStrongName::StrongNameCompareAssemblies</span><span class="sxs-lookup"><span data-stu-id="ea074-102">ICLRStrongName::StrongNameCompareAssemblies Method</span></span>
+<span data-ttu-id="ea074-103">Определяет, отличаются ли две сборки только подписями строгого имени.</span><span class="sxs-lookup"><span data-stu-id="ea074-103">Determines whether two assemblies differ only by their strong name signatures.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="47ffb-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="47ffb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ea074-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ea074-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameCompareAssemblies (  
@@ -37,37 +37,37 @@ HRESULT StrongNameCompareAssemblies (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="47ffb-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="47ffb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ea074-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ea074-105">Parameters</span></span>  
  `wszAssembly1`  
- <span data-ttu-id="47ffb-106">[in] Путь к первой сборки.</span><span class="sxs-lookup"><span data-stu-id="47ffb-106">[in] The path to the first assembly.</span></span>  
+ <span data-ttu-id="ea074-106">[in] Путь к первой сборки.</span><span class="sxs-lookup"><span data-stu-id="ea074-106">[in] The path to the first assembly.</span></span>  
   
  `wszAssembly2`  
- <span data-ttu-id="47ffb-107">[in] Путь к вторую сборку.</span><span class="sxs-lookup"><span data-stu-id="47ffb-107">[in] The path to the second assembly.</span></span>  
+ <span data-ttu-id="ea074-107">[in] Путь к вторую сборку.</span><span class="sxs-lookup"><span data-stu-id="ea074-107">[in] The path to the second assembly.</span></span>  
   
  `pdwResult`  
- <span data-ttu-id="47ffb-108">[out] Одно из следующих значений:</span><span class="sxs-lookup"><span data-stu-id="47ffb-108">[out] One of the following values:</span></span>  
+ <span data-ttu-id="ea074-108">[out] Одно из следующих значений:</span><span class="sxs-lookup"><span data-stu-id="ea074-108">[out] One of the following values:</span></span>  
   
--   `SN_CMP_DIFFERENT` <span data-ttu-id="47ffb-109">(0) — указывает, что сборки содержат разные данные.</span><span class="sxs-lookup"><span data-stu-id="47ffb-109">(0) - Specifies that the assemblies contain different data.</span></span>  
+-   <span data-ttu-id="ea074-109">`SN_CMP_DIFFERENT` (0) — указывает, что сборки содержат разные данные.</span><span class="sxs-lookup"><span data-stu-id="ea074-109">`SN_CMP_DIFFERENT` (0) - Specifies that the assemblies contain different data.</span></span>  
   
--   `SN_CMP_IDENTICAL` <span data-ttu-id="47ffb-110">(1) — указывает, что сборки идентичны, включая их подписи и контрольной суммы.</span><span class="sxs-lookup"><span data-stu-id="47ffb-110">(1) - Specifies that the assemblies are exactly the same, including their signatures and checksum.</span></span>  
+-   <span data-ttu-id="ea074-110">`SN_CMP_IDENTICAL` (1) — указывает, что сборки идентичны, включая их подписи и контрольной суммы.</span><span class="sxs-lookup"><span data-stu-id="ea074-110">`SN_CMP_IDENTICAL` (1) - Specifies that the assemblies are exactly the same, including their signatures and checksum.</span></span>  
   
--   `SN_CMP_SIGONLY` <span data-ttu-id="47ffb-111">(2) — указывает, что сборки отличаются только подпись и контрольная сумма.</span><span class="sxs-lookup"><span data-stu-id="47ffb-111">(2) - Specifies that the assemblies differ only by signature and checksum.</span></span>  
+-   <span data-ttu-id="ea074-111">`SN_CMP_SIGONLY` (2) — указывает, что сборки отличаются только подпись и контрольная сумма.</span><span class="sxs-lookup"><span data-stu-id="ea074-111">`SN_CMP_SIGONLY` (2) - Specifies that the assemblies differ only by signature and checksum.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="47ffb-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="47ffb-112">Return Value</span></span>  
- `S_OK` <span data-ttu-id="47ffb-113">Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="47ffb-113">if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ea074-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="ea074-112">Return Value</span></span>  
+ <span data-ttu-id="ea074-113">`S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="ea074-113">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="47ffb-114">Требования</span><span class="sxs-lookup"><span data-stu-id="47ffb-114">Requirements</span></span>  
- <span data-ttu-id="47ffb-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="47ffb-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ea074-114">Требования</span><span class="sxs-lookup"><span data-stu-id="ea074-114">Requirements</span></span>  
+ <span data-ttu-id="ea074-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ea074-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="47ffb-116">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="47ffb-116">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="ea074-116">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="ea074-116">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="47ffb-117">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="47ffb-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ea074-117">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ea074-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="47ffb-118">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="47ffb-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="ea074-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ea074-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="47ffb-119">Примечания</span><span class="sxs-lookup"><span data-stu-id="47ffb-119">Remarks</span></span>  
- <span data-ttu-id="47ffb-120">Подпись строгого имени сборки состоит из текстовое имя сборки, версию, язык и региональные параметры и маркер открытого ключа.</span><span class="sxs-lookup"><span data-stu-id="47ffb-120">The strong name signature of an assembly consists of the assembly's text name, version, culture, and public key token.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ea074-119">Примечания</span><span class="sxs-lookup"><span data-stu-id="ea074-119">Remarks</span></span>  
+ <span data-ttu-id="ea074-120">Подпись строгого имени сборки состоит из текстовое имя сборки, версию, язык и региональные параметры и маркер открытого ключа.</span><span class="sxs-lookup"><span data-stu-id="ea074-120">The strong name signature of an assembly consists of the assembly's text name, version, culture, and public key token.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="47ffb-121">См. также</span><span class="sxs-lookup"><span data-stu-id="47ffb-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ea074-121">См. также</span><span class="sxs-lookup"><span data-stu-id="ea074-121">See also</span></span>
 
-- [<span data-ttu-id="47ffb-122">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="47ffb-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="ea074-122">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="ea074-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
