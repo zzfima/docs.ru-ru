@@ -18,18 +18,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3fe1f93c621fd567471b9a49e4aa75cb90e6e0e7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161165"
 ---
-# <a name="iclrruntimeinfoloadlibrary-method"></a><span data-ttu-id="1a0b3-102">Метод ICLRRuntimeInfo::LoadLibrary</span><span class="sxs-lookup"><span data-stu-id="1a0b3-102">ICLRRuntimeInfo::LoadLibrary Method</span></span>
-<span data-ttu-id="1a0b3-103">Загружает библиотеку .NET Framework из общеязыковой среды выполнения (CLR), представленный [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) интерфейс.</span><span class="sxs-lookup"><span data-stu-id="1a0b3-103">Loads a .NET Framework library from the common language runtime (CLR) represented by an [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.</span></span>  
+# <a name="iclrruntimeinfoloadlibrary-method"></a><span data-ttu-id="f7b3b-102">Метод ICLRRuntimeInfo::LoadLibrary</span><span class="sxs-lookup"><span data-stu-id="f7b3b-102">ICLRRuntimeInfo::LoadLibrary Method</span></span>
+<span data-ttu-id="f7b3b-103">Загружает библиотеку .NET Framework из общеязыковой среды выполнения (CLR), представленный [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) интерфейс.</span><span class="sxs-lookup"><span data-stu-id="f7b3b-103">Loads a .NET Framework library from the common language runtime (CLR) represented by an [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.</span></span>  
   
- <span data-ttu-id="1a0b3-104">Этот метод заменяет [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) функции.</span><span class="sxs-lookup"><span data-stu-id="1a0b3-104">This method supersedes the [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) function.</span></span>  
+ <span data-ttu-id="f7b3b-104">Этот метод заменяет [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) функции.</span><span class="sxs-lookup"><span data-stu-id="f7b3b-104">This method supersedes the [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1a0b3-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1a0b3-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f7b3b-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f7b3b-105">Syntax</span></span>  
   
 ```  
 HRESULT LoadLibrary(  
@@ -37,36 +37,36 @@ HRESULT LoadLibrary(
      [out, retval] HMODULE *phndModule);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1a0b3-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="1a0b3-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f7b3b-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="f7b3b-106">Parameters</span></span>  
  `pwzDllName`  
- <span data-ttu-id="1a0b3-107">[in] Имя сборки для загрузки.</span><span class="sxs-lookup"><span data-stu-id="1a0b3-107">[in] The name of the assembly to be loaded.</span></span>  
+ <span data-ttu-id="f7b3b-107">[in] Имя сборки для загрузки.</span><span class="sxs-lookup"><span data-stu-id="f7b3b-107">[in] The name of the assembly to be loaded.</span></span>  
   
  `phndModule`  
- <span data-ttu-id="1a0b3-108">[out] Дескриптор загруженной сборки.</span><span class="sxs-lookup"><span data-stu-id="1a0b3-108">[out] A handle to the loaded assembly.</span></span>  
+ <span data-ttu-id="f7b3b-108">[out] Дескриптор загруженной сборки.</span><span class="sxs-lookup"><span data-stu-id="f7b3b-108">[out] A handle to the loaded assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1a0b3-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="1a0b3-109">Return Value</span></span>  
- <span data-ttu-id="1a0b3-110">Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.</span><span class="sxs-lookup"><span data-stu-id="1a0b3-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f7b3b-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="f7b3b-109">Return Value</span></span>  
+ <span data-ttu-id="f7b3b-110">Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.</span><span class="sxs-lookup"><span data-stu-id="f7b3b-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="1a0b3-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1a0b3-111">HRESULT</span></span>|<span data-ttu-id="1a0b3-112">Описание</span><span class="sxs-lookup"><span data-stu-id="1a0b3-112">Description</span></span>|  
+|<span data-ttu-id="f7b3b-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f7b3b-111">HRESULT</span></span>|<span data-ttu-id="f7b3b-112">Описание</span><span class="sxs-lookup"><span data-stu-id="f7b3b-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="1a0b3-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="1a0b3-113">S_OK</span></span>|<span data-ttu-id="1a0b3-114">Метод завершился успешно.</span><span class="sxs-lookup"><span data-stu-id="1a0b3-114">The method completed successfully.</span></span>|  
-|<span data-ttu-id="1a0b3-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="1a0b3-115">E_POINTER</span></span>|`pwzDllName` <span data-ttu-id="1a0b3-116">или `phndModule` имеет значение null.</span><span class="sxs-lookup"><span data-stu-id="1a0b3-116">or `phndModule` is null.</span></span>|  
-|<span data-ttu-id="1a0b3-117">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="1a0b3-117">E_OUTOFMEMORY</span></span>|<span data-ttu-id="1a0b3-118">Недостаточно памяти для обработки запроса.</span><span class="sxs-lookup"><span data-stu-id="1a0b3-118">Not enough memory is available to handle the request.</span></span>|  
+|<span data-ttu-id="f7b3b-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="f7b3b-113">S_OK</span></span>|<span data-ttu-id="f7b3b-114">Метод завершился успешно.</span><span class="sxs-lookup"><span data-stu-id="f7b3b-114">The method completed successfully.</span></span>|  
+|<span data-ttu-id="f7b3b-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="f7b3b-115">E_POINTER</span></span>|<span data-ttu-id="f7b3b-116">`pwzDllName` или `phndModule` равно null.</span><span class="sxs-lookup"><span data-stu-id="f7b3b-116">`pwzDllName` or `phndModule` is null.</span></span>|  
+|<span data-ttu-id="f7b3b-117">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="f7b3b-117">E_OUTOFMEMORY</span></span>|<span data-ttu-id="f7b3b-118">Недостаточно памяти для обработки запроса.</span><span class="sxs-lookup"><span data-stu-id="f7b3b-118">Not enough memory is available to handle the request.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1a0b3-119">Примечания</span><span class="sxs-lookup"><span data-stu-id="1a0b3-119">Remarks</span></span>  
- <span data-ttu-id="1a0b3-120">Этот метод загружает только библиотеки DLL, включенные в распространяемый пакет .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1a0b3-120">This method only loads DLLs included in the .NET Framework redistributable package.</span></span> <span data-ttu-id="1a0b3-121">Он не может загружать сборки, созданное пользователем.</span><span class="sxs-lookup"><span data-stu-id="1a0b3-121">It can not load user-generated assemblies.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f7b3b-119">Примечания</span><span class="sxs-lookup"><span data-stu-id="f7b3b-119">Remarks</span></span>  
+ <span data-ttu-id="f7b3b-120">Этот метод загружает только библиотеки DLL, включенные в распространяемый пакет .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f7b3b-120">This method only loads DLLs included in the .NET Framework redistributable package.</span></span> <span data-ttu-id="f7b3b-121">Он не может загружать сборки, созданное пользователем.</span><span class="sxs-lookup"><span data-stu-id="f7b3b-121">It can not load user-generated assemblies.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1a0b3-122">Требования</span><span class="sxs-lookup"><span data-stu-id="1a0b3-122">Requirements</span></span>  
- <span data-ttu-id="1a0b3-123">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1a0b3-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f7b3b-122">Требования</span><span class="sxs-lookup"><span data-stu-id="f7b3b-122">Requirements</span></span>  
+ <span data-ttu-id="f7b3b-123">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f7b3b-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1a0b3-124">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="1a0b3-124">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="f7b3b-124">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="f7b3b-124">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="1a0b3-125">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1a0b3-125">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f7b3b-125">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f7b3b-125">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="1a0b3-126">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="1a0b3-126">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="f7b3b-126">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f7b3b-126">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1a0b3-127">См. также</span><span class="sxs-lookup"><span data-stu-id="1a0b3-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f7b3b-127">См. также</span><span class="sxs-lookup"><span data-stu-id="f7b3b-127">See also</span></span>
 
-- [<span data-ttu-id="1a0b3-128">Интерфейс ICLRRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="1a0b3-128">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="1a0b3-129">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="1a0b3-129">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="1a0b3-130">Размещение</span><span class="sxs-lookup"><span data-stu-id="1a0b3-130">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="f7b3b-128">Интерфейс ICLRRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="f7b3b-128">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="f7b3b-129">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="f7b3b-129">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="f7b3b-130">Размещение</span><span class="sxs-lookup"><span data-stu-id="f7b3b-130">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

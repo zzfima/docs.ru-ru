@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 846ff76fb1073394cc27597c9a2015148581cc70
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165104"
 ---
-# <a name="isymunmanagedreadergetvariables-method"></a><span data-ttu-id="d16b9-102">Метод ISymUnmanagedReader::GetVariables</span><span class="sxs-lookup"><span data-stu-id="d16b9-102">ISymUnmanagedReader::GetVariables Method</span></span>
-<span data-ttu-id="d16b9-103">Возвращает не являющейся локальной переменной, ее родительскому объекту и имя.</span><span class="sxs-lookup"><span data-stu-id="d16b9-103">Returns a non-local variable, given its parent and name.</span></span>  
+# <a name="isymunmanagedreadergetvariables-method"></a><span data-ttu-id="77e9a-102">Метод ISymUnmanagedReader::GetVariables</span><span class="sxs-lookup"><span data-stu-id="77e9a-102">ISymUnmanagedReader::GetVariables Method</span></span>
+<span data-ttu-id="77e9a-103">Возвращает не являющейся локальной переменной, ее родительскому объекту и имя.</span><span class="sxs-lookup"><span data-stu-id="77e9a-103">Returns a non-local variable, given its parent and name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d16b9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d16b9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="77e9a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="77e9a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVariables (  
@@ -38,25 +38,25 @@ HRESULT GetVariables (
         length_is (*pcVars)] ISymUnmanagedVariable *pVars[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d16b9-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d16b9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="77e9a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="77e9a-105">Parameters</span></span>  
  `parent`  
- <span data-ttu-id="d16b9-106">[in] Родительская переменная.</span><span class="sxs-lookup"><span data-stu-id="d16b9-106">[in] The parent of the variable.</span></span>  
+ <span data-ttu-id="77e9a-106">[in] Родительская переменная.</span><span class="sxs-lookup"><span data-stu-id="77e9a-106">[in] The parent of the variable.</span></span>  
   
  `cVars`  
- <span data-ttu-id="d16b9-107">[in] Размер массива `pVars`.</span><span class="sxs-lookup"><span data-stu-id="d16b9-107">[in] The size of the `pVars` array.</span></span>  
+ <span data-ttu-id="77e9a-107">[in] Размер массива `pVars`.</span><span class="sxs-lookup"><span data-stu-id="77e9a-107">[in] The size of the `pVars` array.</span></span>  
   
  `pcVars`  
- <span data-ttu-id="d16b9-108">[out] Указатель на переменную, которая получает количество переменных, возвращаемых в `pVars`.</span><span class="sxs-lookup"><span data-stu-id="d16b9-108">[out] A pointer to the variable that receives the number of variables returned in `pVars`.</span></span>  
+ <span data-ttu-id="77e9a-108">[out] Указатель на переменную, которая получает количество переменных, возвращаемых в `pVars`.</span><span class="sxs-lookup"><span data-stu-id="77e9a-108">[out] A pointer to the variable that receives the number of variables returned in `pVars`.</span></span>  
   
  `pVars`  
- <span data-ttu-id="d16b9-109">[out] Указатель на переменную, которая получает переменные.</span><span class="sxs-lookup"><span data-stu-id="d16b9-109">[out] A pointer to the variable that receives the variables.</span></span>  
+ <span data-ttu-id="77e9a-109">[out] Указатель на переменную, которая получает переменные.</span><span class="sxs-lookup"><span data-stu-id="77e9a-109">[out] A pointer to the variable that receives the variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d16b9-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="d16b9-110">Return Value</span></span>  
- <span data-ttu-id="d16b9-111">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="d16b9-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="77e9a-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="77e9a-110">Return Value</span></span>  
+ <span data-ttu-id="77e9a-111">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="77e9a-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d16b9-112">Требования</span><span class="sxs-lookup"><span data-stu-id="d16b9-112">Requirements</span></span>  
- <span data-ttu-id="d16b9-113">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d16b9-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="77e9a-112">Требования</span><span class="sxs-lookup"><span data-stu-id="77e9a-112">Requirements</span></span>  
+ <span data-ttu-id="77e9a-113">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="77e9a-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d16b9-114">См. также</span><span class="sxs-lookup"><span data-stu-id="d16b9-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="77e9a-114">См. также</span><span class="sxs-lookup"><span data-stu-id="77e9a-114">See also</span></span>
 
-- [<span data-ttu-id="d16b9-115">Интерфейс ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="d16b9-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="77e9a-115">Интерфейс ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="77e9a-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

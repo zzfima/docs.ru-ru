@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e677aefd5420f71867c1f11a2c9408c77d305c45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161386"
 ---
-# <a name="iclrmetadatalocatorgetmetadata-method"></a><span data-ttu-id="a97fa-102">Метод ICLRMetadataLocator::GetMetadata</span><span class="sxs-lookup"><span data-stu-id="a97fa-102">ICLRMetadataLocator::GetMetadata Method</span></span>
-<span data-ttu-id="a97fa-103">Вызывается службами доступа к данным среды выполнения (CLR) для получения метаданных изображения.</span><span class="sxs-lookup"><span data-stu-id="a97fa-103">Called by the common language runtime (CLR) data access services to retrieve the metadata of an image.</span></span>  
+# <a name="iclrmetadatalocatorgetmetadata-method"></a><span data-ttu-id="01129-102">Метод ICLRMetadataLocator::GetMetadata</span><span class="sxs-lookup"><span data-stu-id="01129-102">ICLRMetadataLocator::GetMetadata Method</span></span>
+<span data-ttu-id="01129-103">Вызывается службами доступа к данным среды выполнения (CLR) для получения метаданных изображения.</span><span class="sxs-lookup"><span data-stu-id="01129-103">Called by the common language runtime (CLR) data access services to retrieve the metadata of an image.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a97fa-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a97fa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="01129-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="01129-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMetadata(  
@@ -44,46 +44,46 @@ HRESULT GetMetadata(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a97fa-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a97fa-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="01129-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="01129-105">Parameters</span></span>  
  `imagePath`  
- <span data-ttu-id="a97fa-106">[in] Строка, указывающая путь к файлу изображения.</span><span class="sxs-lookup"><span data-stu-id="a97fa-106">[in] A string that specifies the path of the image file.</span></span>  
+ <span data-ttu-id="01129-106">[in] Строка, указывающая путь к файлу изображения.</span><span class="sxs-lookup"><span data-stu-id="01129-106">[in] A string that specifies the path of the image file.</span></span>  
   
  `imageTimestamp`  
- <span data-ttu-id="a97fa-107">[in] Метка времени файла изображения.</span><span class="sxs-lookup"><span data-stu-id="a97fa-107">[in] The time stamp of the image file.</span></span>  
+ <span data-ttu-id="01129-107">[in] Метка времени файла изображения.</span><span class="sxs-lookup"><span data-stu-id="01129-107">[in] The time stamp of the image file.</span></span>  
   
  `imageSize`  
- <span data-ttu-id="a97fa-108">[in] Размер файла изображения.</span><span class="sxs-lookup"><span data-stu-id="a97fa-108">[in] The size of the image file.</span></span>  
+ <span data-ttu-id="01129-108">[in] Размер файла изображения.</span><span class="sxs-lookup"><span data-stu-id="01129-108">[in] The size of the image file.</span></span>  
   
  `mvid`  
- <span data-ttu-id="a97fa-109">[in] Глобальный уникальный идентификатор изображения.</span><span class="sxs-lookup"><span data-stu-id="a97fa-109">[in] The globally unique identifier of the image.</span></span>  
+ <span data-ttu-id="01129-109">[in] Глобальный уникальный идентификатор изображения.</span><span class="sxs-lookup"><span data-stu-id="01129-109">[in] The globally unique identifier of the image.</span></span>  
   
  `mdRva`  
- <span data-ttu-id="a97fa-110">[in] Относительный виртуальный адрес (RVA) метаданных.</span><span class="sxs-lookup"><span data-stu-id="a97fa-110">[in] The relative virtual address (RVA) of the metadata.</span></span> <span data-ttu-id="a97fa-111">Адрес задается относительно базового адреса образа.</span><span class="sxs-lookup"><span data-stu-id="a97fa-111">The address is relative to the image base address.</span></span>  
+ <span data-ttu-id="01129-110">[in] Относительный виртуальный адрес (RVA) метаданных.</span><span class="sxs-lookup"><span data-stu-id="01129-110">[in] The relative virtual address (RVA) of the metadata.</span></span> <span data-ttu-id="01129-111">Адрес задается относительно базового адреса образа.</span><span class="sxs-lookup"><span data-stu-id="01129-111">The address is relative to the image base address.</span></span>  
   
  `flags`  
- <span data-ttu-id="a97fa-112">[in] Зарезервировано для будущего использования.</span><span class="sxs-lookup"><span data-stu-id="a97fa-112">[in] Reserved for future use.</span></span>  
+ <span data-ttu-id="01129-112">[in] Зарезервировано для будущего использования.</span><span class="sxs-lookup"><span data-stu-id="01129-112">[in] Reserved for future use.</span></span>  
   
  `bufferSize`  
- <span data-ttu-id="a97fa-113">[in] Размер буфера для размещения метаданных.</span><span class="sxs-lookup"><span data-stu-id="a97fa-113">[in] The size of the buffer in which to place the metadata.</span></span>  
+ <span data-ttu-id="01129-113">[in] Размер буфера для размещения метаданных.</span><span class="sxs-lookup"><span data-stu-id="01129-113">[in] The size of the buffer in which to place the metadata.</span></span>  
   
  `buffer`  
- <span data-ttu-id="a97fa-114">[out] Буфер, в котором следует разместить метаданные.</span><span class="sxs-lookup"><span data-stu-id="a97fa-114">[out] The buffer in which to place the metadata.</span></span>  
+ <span data-ttu-id="01129-114">[out] Буфер, в котором следует разместить метаданные.</span><span class="sxs-lookup"><span data-stu-id="01129-114">[out] The buffer in which to place the metadata.</span></span>  
   
  `dataSize`  
- <span data-ttu-id="a97fa-115">[out] Размер метаданных, который возвращается.</span><span class="sxs-lookup"><span data-stu-id="a97fa-115">[out] The size of the metadata that is returned.</span></span>  
+ <span data-ttu-id="01129-115">[out] Размер метаданных, который возвращается.</span><span class="sxs-lookup"><span data-stu-id="01129-115">[out] The size of the metadata that is returned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a97fa-116">Примечания</span><span class="sxs-lookup"><span data-stu-id="a97fa-116">Remarks</span></span>  
- <span data-ttu-id="a97fa-117">Этот метод реализуется модулем записи отладчика.</span><span class="sxs-lookup"><span data-stu-id="a97fa-117">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="01129-116">Примечания</span><span class="sxs-lookup"><span data-stu-id="01129-116">Remarks</span></span>  
+ <span data-ttu-id="01129-117">Этот метод реализуется модулем записи отладчика.</span><span class="sxs-lookup"><span data-stu-id="01129-117">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a97fa-118">Требования</span><span class="sxs-lookup"><span data-stu-id="a97fa-118">Requirements</span></span>  
- <span data-ttu-id="a97fa-119">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a97fa-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="01129-118">Требования</span><span class="sxs-lookup"><span data-stu-id="01129-118">Requirements</span></span>  
+ <span data-ttu-id="01129-119">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="01129-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a97fa-120">**Заголовок.** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="a97fa-120">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="01129-120">**Заголовок.** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="01129-120">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="a97fa-121">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a97fa-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="01129-121">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="01129-121">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="a97fa-122">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="a97fa-122">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="01129-122">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01129-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a97fa-123">См. также</span><span class="sxs-lookup"><span data-stu-id="a97fa-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="01129-123">См. также</span><span class="sxs-lookup"><span data-stu-id="01129-123">See also</span></span>
 
-- [<span data-ttu-id="a97fa-124">Интерфейс ICLRMetadataLocator</span><span class="sxs-lookup"><span data-stu-id="a97fa-124">ICLRMetadataLocator Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)
+- [<span data-ttu-id="01129-124">Интерфейс ICLRMetadataLocator</span><span class="sxs-lookup"><span data-stu-id="01129-124">ICLRMetadataLocator Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)

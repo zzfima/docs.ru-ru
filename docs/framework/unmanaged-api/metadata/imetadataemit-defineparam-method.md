@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 86711d107636505ab7aa23f0f72f70bd3e27635d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167776"
 ---
-# <a name="imetadataemitdefineparam-method"></a><span data-ttu-id="7729a-102">Метод IMetaDataEmit::DefineParam</span><span class="sxs-lookup"><span data-stu-id="7729a-102">IMetaDataEmit::DefineParam Method</span></span>
-<span data-ttu-id="7729a-103">Создает определение параметра с указанной сигнатурой метода, который ссылается указанный токен и получает маркер для данного определения параметра.</span><span class="sxs-lookup"><span data-stu-id="7729a-103">Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.</span></span>  
+# <a name="imetadataemitdefineparam-method"></a><span data-ttu-id="bca19-102">Метод IMetaDataEmit::DefineParam</span><span class="sxs-lookup"><span data-stu-id="bca19-102">IMetaDataEmit::DefineParam Method</span></span>
+<span data-ttu-id="bca19-103">Создает определение параметра с указанной сигнатурой метода, который ссылается указанный токен и получает маркер для данного определения параметра.</span><span class="sxs-lookup"><span data-stu-id="bca19-103">Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7729a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7729a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bca19-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bca19-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineParam (  
@@ -42,44 +42,44 @@ HRESULT DefineParam (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7729a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="7729a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bca19-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="bca19-105">Parameters</span></span>  
  `md`  
- <span data-ttu-id="7729a-106">[in] Токен для метода, параметр которого определяется.</span><span class="sxs-lookup"><span data-stu-id="7729a-106">[in] The token for the method whose parameter is being defined.</span></span>  
+ <span data-ttu-id="bca19-106">[in] Токен для метода, параметр которого определяется.</span><span class="sxs-lookup"><span data-stu-id="bca19-106">[in] The token for the method whose parameter is being defined.</span></span>  
   
  `ulParamSeq`  
- <span data-ttu-id="7729a-107">[in] Порядковый номер параметра.</span><span class="sxs-lookup"><span data-stu-id="7729a-107">[in] The parameter sequence number.</span></span>  
+ <span data-ttu-id="bca19-107">[in] Порядковый номер параметра.</span><span class="sxs-lookup"><span data-stu-id="bca19-107">[in] The parameter sequence number.</span></span>  
   
  `szName`  
- <span data-ttu-id="7729a-108">[in] Имя параметра в формате Юникод.</span><span class="sxs-lookup"><span data-stu-id="7729a-108">[in] The name of the parameter in Unicode.</span></span>  
+ <span data-ttu-id="bca19-108">[in] Имя параметра в формате Юникод.</span><span class="sxs-lookup"><span data-stu-id="bca19-108">[in] The name of the parameter in Unicode.</span></span>  
   
  `dwParamFlags`  
- <span data-ttu-id="7729a-109">[in] Флаги для параметра.</span><span class="sxs-lookup"><span data-stu-id="7729a-109">[in] Flags for the parameter.</span></span> <span data-ttu-id="7729a-110">Это битовая маска `CorParamAttr` значения.</span><span class="sxs-lookup"><span data-stu-id="7729a-110">This is a bitmask of `CorParamAttr` values.</span></span>  
+ <span data-ttu-id="bca19-109">[in] Флаги для параметра.</span><span class="sxs-lookup"><span data-stu-id="bca19-109">[in] Flags for the parameter.</span></span> <span data-ttu-id="bca19-110">Это битовая маска `CorParamAttr` значения.</span><span class="sxs-lookup"><span data-stu-id="bca19-110">This is a bitmask of `CorParamAttr` values.</span></span>  
   
  `dwCPlusTypeFlag`  
- <span data-ttu-id="7729a-111">[in] `ELEMENT_TYPE_` *\** для постоянного значения.</span><span class="sxs-lookup"><span data-stu-id="7729a-111">[in] `ELEMENT_TYPE_`*\** for the constant value.</span></span>  
+ <span data-ttu-id="bca19-111">[in] `ELEMENT_TYPE_` *\** для постоянного значения.</span><span class="sxs-lookup"><span data-stu-id="bca19-111">[in] `ELEMENT_TYPE_`*\** for the constant value.</span></span>  
   
  `pValue`  
- <span data-ttu-id="7729a-112">[in] Постоянное значение для параметра.</span><span class="sxs-lookup"><span data-stu-id="7729a-112">[in] The constant value for the parameter.</span></span>  
+ <span data-ttu-id="bca19-112">[in] Постоянное значение для параметра.</span><span class="sxs-lookup"><span data-stu-id="bca19-112">[in] The constant value for the parameter.</span></span>  
   
  `cchValue`  
- <span data-ttu-id="7729a-113">[in] Размер в символы Юникода из `pValue`.</span><span class="sxs-lookup"><span data-stu-id="7729a-113">[in] The size, in Unicode characters, of `pValue`.</span></span>  
+ <span data-ttu-id="bca19-113">[in] Размер в символы Юникода из `pValue`.</span><span class="sxs-lookup"><span data-stu-id="bca19-113">[in] The size, in Unicode characters, of `pValue`.</span></span>  
   
  `ppd`  
- <span data-ttu-id="7729a-114">[out] `mdParamDef` Маркер, назначенный.</span><span class="sxs-lookup"><span data-stu-id="7729a-114">[out] The `mdParamDef` token assigned.</span></span>  
+ <span data-ttu-id="bca19-114">[out] `mdParamDef` Маркер, назначенный.</span><span class="sxs-lookup"><span data-stu-id="bca19-114">[out] The `mdParamDef` token assigned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7729a-115">Примечания</span><span class="sxs-lookup"><span data-stu-id="7729a-115">Remarks</span></span>  
- <span data-ttu-id="7729a-116">Последовательность значений элементов в `ulParamSeq` начинаются с 1 для параметров.</span><span class="sxs-lookup"><span data-stu-id="7729a-116">The sequence values in `ulParamSeq` begin with 1 for parameters.</span></span> <span data-ttu-id="7729a-117">Возвращаемое значение имеет порядковый номер 0.</span><span class="sxs-lookup"><span data-stu-id="7729a-117">A return value has a sequence number of 0.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bca19-115">Примечания</span><span class="sxs-lookup"><span data-stu-id="bca19-115">Remarks</span></span>  
+ <span data-ttu-id="bca19-116">Последовательность значений элементов в `ulParamSeq` начинаются с 1 для параметров.</span><span class="sxs-lookup"><span data-stu-id="bca19-116">The sequence values in `ulParamSeq` begin with 1 for parameters.</span></span> <span data-ttu-id="bca19-117">Возвращаемое значение имеет порядковый номер 0.</span><span class="sxs-lookup"><span data-stu-id="bca19-117">A return value has a sequence number of 0.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7729a-118">Требования</span><span class="sxs-lookup"><span data-stu-id="7729a-118">Requirements</span></span>  
- <span data-ttu-id="7729a-119">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7729a-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bca19-118">Требования</span><span class="sxs-lookup"><span data-stu-id="bca19-118">Requirements</span></span>  
+ <span data-ttu-id="bca19-119">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bca19-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7729a-120">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7729a-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="bca19-120">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bca19-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7729a-121">**Библиотека:** Используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7729a-121">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="bca19-121">**Библиотека:** Используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="bca19-121">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="7729a-122">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="7729a-122">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="bca19-122">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bca19-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7729a-123">См. также</span><span class="sxs-lookup"><span data-stu-id="7729a-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bca19-123">См. также</span><span class="sxs-lookup"><span data-stu-id="bca19-123">See also</span></span>
 
-- [<span data-ttu-id="7729a-124">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="7729a-124">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="7729a-125">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="7729a-125">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="bca19-124">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="bca19-124">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="bca19-125">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="bca19-125">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

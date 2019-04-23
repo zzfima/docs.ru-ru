@@ -3,28 +3,28 @@ title: 'Служба: Количество сбоев вызовов в секу
 ms.date: 03/30/2017
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
 ms.openlocfilehash: d87d5f06d0c9a3849ec80a3d1c7badefde7cf372
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167496"
 ---
-# <a name="service-calls-failed-per-second"></a><span data-ttu-id="52bb4-102">Служба: Количество сбоев вызовов в секунду</span><span class="sxs-lookup"><span data-stu-id="52bb4-102">Service: Calls Failed Per Second</span></span>
-<span data-ttu-id="52bb4-103">Имя счетчика: Количество сбоев вызовов в секунду.</span><span class="sxs-lookup"><span data-stu-id="52bb4-103">Counter Name: Calls Failed Per Second.</span></span>  
+# <a name="service-calls-failed-per-second"></a><span data-ttu-id="bded8-102">Служба: Количество сбоев вызовов в секунду</span><span class="sxs-lookup"><span data-stu-id="bded8-102">Service: Calls Failed Per Second</span></span>
+<span data-ttu-id="bded8-103">Имя счетчика: Количество сбоев вызовов в секунду.</span><span class="sxs-lookup"><span data-stu-id="bded8-103">Counter Name: Calls Failed Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="52bb4-104">Описание</span><span class="sxs-lookup"><span data-stu-id="52bb4-104">Description</span></span>  
- <span data-ttu-id="52bb4-105">Число вызовов с необработанными исключениями, получаемых этой службой за секунду.</span><span class="sxs-lookup"><span data-stu-id="52bb4-105">Number of calls that have unhandled exceptions, and are received by this service in a second.</span></span>  
+## <a name="description"></a><span data-ttu-id="bded8-104">Описание</span><span class="sxs-lookup"><span data-stu-id="bded8-104">Description</span></span>  
+ <span data-ttu-id="bded8-105">Число вызовов с необработанными исключениями, получаемых этой службой за секунду.</span><span class="sxs-lookup"><span data-stu-id="bded8-105">Number of calls that have unhandled exceptions, and are received by this service in a second.</span></span>  
   
- <span data-ttu-id="52bb4-106">Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.</span><span class="sxs-lookup"><span data-stu-id="52bb4-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="bded8-106">Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.</span><span class="sxs-lookup"><span data-stu-id="bded8-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="52bb4-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="52bb4-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>  
+ <span data-ttu-id="bded8-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="bded8-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>  
   
- <span data-ttu-id="52bb4-108">В управляемом коде исключения создаются в случае возникновения ошибки.</span><span class="sxs-lookup"><span data-stu-id="52bb4-108">In managed code, exceptions are thrown when error conditions occur.</span></span>  
+ <span data-ttu-id="bded8-108">В управляемом коде исключения создаются в случае возникновения ошибки.</span><span class="sxs-lookup"><span data-stu-id="bded8-108">In managed code, exceptions are thrown when error conditions occur.</span></span>  
   
- <span data-ttu-id="52bb4-109">В управляемом коде исключения создаются в случае возникновения ошибки.</span><span class="sxs-lookup"><span data-stu-id="52bb4-109">In managed code, exceptions are thrown when error conditions occur.</span></span>  
+ <span data-ttu-id="bded8-109">В управляемом коде исключения создаются в случае возникновения ошибки.</span><span class="sxs-lookup"><span data-stu-id="bded8-109">In managed code, exceptions are thrown when error conditions occur.</span></span>  
   
- <span data-ttu-id="52bb4-110">Значение этого счетчика увеличивается при каждом обнаружении необработанного исключения в данной службе.</span><span class="sxs-lookup"><span data-stu-id="52bb4-110">This counter is incremented every time there is an unhandled exception in this service.</span></span>  
+ <span data-ttu-id="bded8-110">Значение этого счетчика увеличивается при каждом обнаружении необработанного исключения в данной службе.</span><span class="sxs-lookup"><span data-stu-id="bded8-110">This counter is incremented every time there is an unhandled exception in this service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="52bb4-111">См. также</span><span class="sxs-lookup"><span data-stu-id="52bb4-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bded8-111">См. также</span><span class="sxs-lookup"><span data-stu-id="bded8-111">See also</span></span>
 
-- [<span data-ttu-id="52bb4-112">Задание и обработка сбоев в контрактах и службах</span><span class="sxs-lookup"><span data-stu-id="52bb4-112">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [<span data-ttu-id="bded8-112">Указание и обработка сбоев в контрактах и службах</span><span class="sxs-lookup"><span data-stu-id="bded8-112">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
