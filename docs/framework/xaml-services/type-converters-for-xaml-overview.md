@@ -7,10 +7,10 @@ helpviewer_keywords:
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
 ms.openlocfilehash: 7a5ec731eacda8017c307a0ffa8ec282da78c40f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095728"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Общие сведения о преобразователях типов для XAML
@@ -32,7 +32,7 @@ ms.locfileid: "59095728"
  Процессор XAML должен обработать расширения разметки, прежде чем он проверит тип свойства и другие аспекты. Например, если устанавливаемое как атрибут свойство обычно использует преобразования типов, однако в конкретном случае задается расширение разметки, сначала обрабатывается расширение разметки. Одна из распространенных ситуаций, где необходимо расширение разметки — указание ссылки на объект, который уже существует. Для этого сценария преобразователь типов без состояния может создать только новый экземпляр, что может быть нежелательно. Дополнительные сведения о расширениях разметки см. в разделе [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
 ### <a name="native-type-converters"></a>Собственные преобразователи типа  
- В реализациях служб WPF и XAML .NET существуют определенные типы среды CLR, которые имеют собственную обработку преобразования типов, однако эти типы CLR не рассматриваются как примитивы. Пример такого типа — <xref:System.DateTime>. Одна из причин этого — работа архитектуры платформы .NET Framework: тип <xref:System.DateTime> определяется в mscorlib, в основной библиотеке .NET. <xref:System.DateTime> не может быть снабжены атрибутом атрибут, поступающий из другой сборки, что вводит зависимость (<xref:System.ComponentModel.TypeConverterAttribute> из системы); таким образом, обычный механизм преобразователя типа обнаружения через атрибут не поддерживается. Вместо этого средство синтаксического анализа XAML использует список типов, требующих собственный обработки. Эти типы обрабатываются как настоящие примитивы. В случае <xref:System.DateTime>при обработке вызывается <xref:System.DateTime.Parse%2A>.  
+ В реализациях служб WPF и XAML .NET существуют определенные типы среды CLR, которые имеют собственную обработку преобразования типов, однако эти типы CLR не рассматриваются как примитивы. Пример такого типа — <xref:System.DateTime>. Одна из причин этого — работа архитектуры платформы .NET Framework: тип <xref:System.DateTime> определяется в mscorlib, в основной библиотеке .NET. Для<xref:System.DateTime> не разрешается атрибут, поступающий из другой сборки, который представляет зависимость (<xref:System.ComponentModel.TypeConverterAttribute> из системы). Поэтому обычный механизм обнаружения преобразователя типов по атрибуту не поддерживается. Вместо этого средство синтаксического анализа XAML использует список типов, требующих собственный обработки. Эти типы обрабатываются как настоящие примитивы. В случае <xref:System.DateTime>при обработке вызывается <xref:System.DateTime.Parse%2A>.  
   
 <a name="Implementing_a_Type_Converter"></a>   
 ## <a name="implementing-a-type-converter"></a>Реализация преобразователя типов  
@@ -43,7 +43,7 @@ ms.locfileid: "59095728"
   
  Для XAML роль <xref:System.ComponentModel.TypeConverter> расширяется. В XAML <xref:System.ComponentModel.TypeConverter> — это базовый класс для поддержки определенных преобразований в строку и из строки. Преобразование из строки позволяет выполнить анализ значения строкового атрибута из XAML. Преобразование в строку позволяет преобразовать значение определенного свойства объекта во время выполнения в атрибут в XAML для сериализации.  
   
- <xref:System.ComponentModel.TypeConverter> определены четыре элемента, относящихся к преобразованию в строку и из строки для нужд обработки XAML:  
+ В<xref:System.ComponentModel.TypeConverter> определены четыре элемента, относящихся к преобразованию в строку и из строки для обработки XAML:  
   
 -   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
@@ -57,7 +57,7 @@ ms.locfileid: "59095728"
   
  Второй наиболее важный метод — <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>. Если приложение преобразуется в представление разметки (например, если оно сохранено в файл XAML), <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> участвует в более масштабном сценарии создания модулями записи текста XAML представления разметки. В этом случае важный путь кода XAML — передача вызывающим объектом `destinationType` из <xref:System.String>.  
   
- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> и <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> поддерживают методы, которые используются, когда служба запрашивает возможности <xref:System.ComponentModel.TypeConverter> реализации. Вам необходимо реализовать эти методы для возврата `true` для определенных типов. Они аналогичны методам преобразования для поддержки вашего преобразователя. В целях XAML обычно это означает тип <xref:System.String> .  
+ <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> и <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> — это вспомогательные методы, используемые, когда служба запрашивает возможности реализации <xref:System.ComponentModel.TypeConverter> . Вам необходимо реализовать эти методы для возврата `true` для определенных типов. Они аналогичны методам преобразования для поддержки вашего преобразователя. В целях XAML обычно это означает тип <xref:System.String> .  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>Сведения о языке и преобразователи типов для XAML  
  Каждая реализация <xref:System.ComponentModel.TypeConverter> может однозначно интерпретировать допустимую строку для преобразования, а также может использовать или игнорировать описание типа, переданного в качестве параметров. Важный аспект для региональных параметров и преобразования типов XAML: хотя использование локализуемых строк в качестве значений атрибутов поддерживается в XAML, невозможно применять эти локализуемые строки в качестве входных данных преобразователя типов с определенными требованиями для региональных параметров. Это ограничение вызвано тем, что преобразователи типов для значений атрибутов XAML обязательно используют фиксированное поведение обработки XAML, для чего применяются региональные параметры `en-US` . Дополнительные сведения о причинах этого ограничения см. в спецификации языка XAML ([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)) или [WPF и](../wpf/advanced/wpf-globalization-and-localization-overview.md).  
@@ -111,4 +111,4 @@ ms.locfileid: "59095728"
 
 - <xref:System.ComponentModel.TypeConverterAttribute>
 - [Преобразователи типов или расширения разметки для XAML](type-converters-and-markup-extensions-for-xaml.md)
-- [Обзор XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Общие сведения о языке XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

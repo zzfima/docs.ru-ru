@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 13640e508dafe28b53f4254656afe744b90a2eb2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 906d9d4dfd1c1082a4b49b7143f590967dcc7fd0
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491481"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59092271"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (средство изолированного хранилища)
 Программа изолированного хранилища выводит список или удаляет все существующие хранилища для текущего пользователя.  
@@ -61,6 +61,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
  Управление программой Storeadm.exe не зависит от того, включен ли режим перемещения для пользователя. При запуске программы без параметров все действия применяются к локальному хранилищу. При запуске программы с параметром **/roaming** все действия будут применяться к перемещаемому хранилищу. При запуске программы с параметром **/machine** все действия применяются к хранилищу компьютера.  
   
 ## <a name="see-also"></a>См. также
+
 - [Инструменты](../../../docs/framework/tools/index.md)
 - [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)
 - [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

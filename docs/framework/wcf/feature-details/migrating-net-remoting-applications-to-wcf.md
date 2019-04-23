@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ',NET remoting [WCF]'
 ms.assetid: 24793465-65ae-4308-8c12-dce4fd12a583
 ms.openlocfilehash: 4040fb0ac223f91705a49b733f6a1f42d144068e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091128"
 ---
 # <a name="migrating-net-remoting-applications-to-wcf"></a>Перенос приложений удаленного взаимодействия .NET на платформу WCF
@@ -18,4 +18,4 @@ ms.locfileid: "59091128"
   
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения об основных понятиях](../../../../docs/framework/wcf/conceptual-overview.md)
+- [Концептуальный обзор](../../../../docs/framework/wcf/conceptual-overview.md)

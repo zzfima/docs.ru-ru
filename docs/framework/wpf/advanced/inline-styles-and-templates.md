@@ -8,10 +8,10 @@ helpviewer_keywords:
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
 ms.openlocfilehash: b566e157e2d4a9e9be21a678541bf5d5341a898c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091438"
 ---
 # <a name="inline-styles-and-templates"></a>Встроенные стили и шаблоны
@@ -20,15 +20,15 @@ ms.locfileid: "59091438"
 ## <a name="limitations-of-inline-styles-and-templates"></a>Ограничения встроенные стили и шаблоны  
  В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], свойства стиля и шаблона с технической точки зрения можно задать одним из двух способов. Можно использовать синтаксис атрибутов для ссылки на стиль, который был определен в ресурсе, например `<` *объект*`Style="{StaticResource`*myResourceKey*`}" .../>`. Или можно использовать синтаксис элемента свойства для определения встроенный стиль, например:  
   
- `<` *object* `>`  
+ `<` *объект* `>`  
   
- `<` *object* `.Style>`  
+ `<` *объект* `.Style>`  
   
  `<` `Style`  `.../>`  
   
- `</` *object* `.Style>`  
+ `</` *объект* `.Style>`  
   
- `</` *object* `>`  
+ `</` *объект* `>`  
   
  Использование атрибута является гораздо более распространенным. Стиль, определенный встроенным образом и не определенный в ресурсах, обязательно распространяется только на содержащий элемент и не может повторно использоваться так же легко, так как он не имеет ключа ресурса. В общем более универсален и полезен стиль, определенный ресурсом и соответствующим общим [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] программирования модели принцип разделения программной логики в коде, от проектирования в разметке.  
   

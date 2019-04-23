@@ -3,10 +3,10 @@ title: Параметры компилятора
 description: Используйте F# параметрах компилятора командной строки для управления компиляцией вашей F# приложений и библиотек.
 ms.date: 12/10/2018
 ms.openlocfilehash: fa639fe37ed336ad9f990e01bf2645c5a86498e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089761"
 ---
 # <a name="compiler-options"></a>Параметры компилятора
@@ -70,5 +70,5 @@ ms.locfileid: "59089761"
 
 |Заголовок|Описание|
 |-----|-----------|
-|[Параметры F# Interactive](fsharp-interactive-options.md)|Описываются параметры командной строки, поддерживаемые F# интерпретатор, fsi.exe.|
+|[Параметры окна "Интерактивный F#"](fsharp-interactive-options.md)|Описываются параметры командной строки, поддерживаемые F# интерпретатор, fsi.exe.|
 |[Справочник по свойствам проектов](/visualstudio/ide/reference/project-properties-reference)|Описывает пользовательский Интерфейс для проектов, включая страницы свойств проекта, которые обеспечивают параметры построения.|

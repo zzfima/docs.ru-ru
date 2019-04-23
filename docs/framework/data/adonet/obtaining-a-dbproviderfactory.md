@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
 ms.openlocfilehash: c84229dc1c32217099eb7ed8b90accc04cc66148
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097412"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Получение класса DbProviderFactory
@@ -41,7 +41,7 @@ ms.locfileid: "59097412"
   
 |Порядковый номер столбца|Имя столбца|Пример результата|Описание|  
 |--------------------|-----------------|--------------------|-----------------|  
-|0|**name**|Поставщик данных SqlClient|Понятное имя поставщика данных.|  
+|0|**Name**|Поставщик данных SqlClient|Понятное имя поставщика данных.|  
 |1|**Описание**|Поставщик данных .NET Framework для SqlServer|Понятное описание поставщика данных.|  
 |2|**InvariantName**|System.Data.SqlClient|Имя, которое можно использовать программно, чтобы ссылаться на поставщик данных.|  
 |3|**AssemblyQualifiedName**|System.Data.SqlClient.SqlClientFactory, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Полное имя фабричного класса, которое содержит достаточно данных для создания экземпляров объектов.|  
@@ -100,4 +100,4 @@ ms.locfileid: "59097412"
 - [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
 - [Строки подключения](../../../../docs/framework/data/adonet/connection-strings.md)
 - [Использование классов конфигурации](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
-- [Общие сведения о ADO.NET](ado-net-overview.md)
+- [Общие сведения об ADO.NET](ado-net-overview.md)

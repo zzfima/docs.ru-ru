@@ -3,12 +3,12 @@ title: Деревья выражений
 description: Сведения о деревьях выражений в .NET Core, а также о том, как использовать их для представления кода в виде структур, которые можно проверять, изменять и выполнять.
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: b7a39ccec293a22e4b4d7d01b30f9f441fd0079b
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: db6e23d1ad0014a7dbb58a0cd473e67d6bd9acc0
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125841"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59096619"
 ---
 # <a name="expression-trees"></a>Деревья выражений
 
@@ -51,4 +51,3 @@ ms.locfileid: "58125841"
 7. [Заключение](expression-trees-summary.md)
 
     Сводные сведения о деревьях выражений.
-    

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
 ms.openlocfilehash: d4976b3725d04162ac10242c486f57c4d2598769
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086368"
 ---
 # <a name="panel-control-overview-windows-forms"></a>Общие сведения об элементе управления Panel (Windows Forms)
@@ -27,5 +27,5 @@ Windows Forms <xref:System.Windows.Forms.Panel> элементы управле�
 
 - <xref:System.Windows.Forms.Panel>
 - [Элемент управления GroupBox](groupbox-control-windows-forms.md)
-- [Практическое руководство. Группирование элементов управление с элементом управления Panel в формах Windows Forms с помощью конструктора](group-controls-with-wf-panel-control-using-the-designer.md)
-- [Практическое руководство. Установка фона панели формы Windows Forms с помощью конструктора](how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)
+- [Практическое руководство. Группа элементов управления с помощью панели управления Windows Forms с помощью конструктора](group-controls-with-wf-panel-control-using-the-designer.md)
+- [Практическое руководство. Меняем цвет фона панели формы Windows Forms с помощью конструктора](how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)

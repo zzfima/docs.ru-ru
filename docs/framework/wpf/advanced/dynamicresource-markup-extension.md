@@ -9,10 +9,10 @@ helpviewer_keywords:
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
 ms.openlocfilehash: d07816718ebee2507f1888cffb70e6f8037bb996
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091412"
 ---
 # <a name="dynamicresource-markup-extension"></a>Расширение разметки DynamicResource
@@ -60,7 +60,7 @@ ms.locfileid: "59091412"
   
  `DynamicResource` может использоваться в синтаксисе элемента объекта. В этом случае укажите значение параметра <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> свойство является обязательным.  
   
- `DynamicResource` Можно также использовать в использовании атрибут verbose, который указывает <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> как свойство = значение пары:  
+ Излишним может оказаться и использование `DynamicResource` в атрибуте, в котором свойство <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> определено как пара "свойство=значение".  
   
 ```xml  
 <object property="{DynamicResource ResourceKey=key}" .../>  
@@ -77,7 +77,7 @@ ms.locfileid: "59091412"
 - [Ресурсы XAML](xaml-resources.md)
 - [Ресурсы и код](resources-and-code.md)
 - [Директива x:Key](../../xaml-services/x-key-directive.md)
-- [Обзор XAML (WPF)](xaml-overview-wpf.md)
+- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
 - [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md)
 - [Расширение разметки StaticResource](staticresource-markup-extension.md)
 - [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md)

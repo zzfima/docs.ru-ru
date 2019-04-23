@@ -20,10 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096268"
 ---
 # <a name="common-type-system"></a>Система общих типов CTS
@@ -63,7 +63,7 @@ ms.locfileid: "59096268"
   
 -   [Перечисления](#Enumerations)  
   
--   [интерфейсов,](#Interfaces)  
+-   [Интерфейсы](#Interfaces)  
   
 -   [Делегаты](#Delegates)  
   
@@ -319,5 +319,5 @@ ms.locfileid: "59096268"
 ## <a name="see-also"></a>См. также
 
 - [Браузер API .NET](/dotnet/api)
-- [Среда CLR](../../../docs/standard/clr.md)
+- [Общеязыковая среда выполнения](../../../docs/standard/clr.md)
 - [Преобразование типов в .NET](../../../docs/standard/base-types/type-conversion.md)

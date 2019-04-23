@@ -3,10 +3,10 @@ title: Роли сервера и базы данных в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
 ms.openlocfilehash: e2d0de08f23bc3767e11de31c4ded4a326d060a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087980"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Роли сервера и базы данных в SQL Server
@@ -16,7 +16,7 @@ ms.locfileid: "59087980"
  Предопределенные роли сервера имеют предопределенный набор разрешений на уровне сервера. Они предназначены для использования в администрировании SQL Server, и разрешения, назначенные им, не могут быть изменены. Предопределенным ролям сервера могут назначаться имена входа без наличия учетной записи пользователя в базе данных.  
   
 > [!IMPORTANT]
->  Предопределенная роль сервера `sysadmin` включает в себя все остальные роли и имеет неограниченную область действия. В эту роль следует включать только доверенных участников. `sysadmin` Члены роли обладают безотзывными правами администратора на все сервера баз данных и ресурсы.  
+>  Предопределенная роль сервера `sysadmin` включает в себя все остальные роли и имеет неограниченную область действия. В эту роль следует включать только доверенных участников. Члены роли `sysadmin` обладают безотзывными правами администратора применительно ко всем базам данных и ресурсам сервера.  
   
  Тщательно обосновывайте решение по добавлению пользователей к предопределенным ролям сервера. Например, роль `bulkadmin` позволяет пользователям вставлять содержимое любого локального файла в таблицу, что может подвергнуть риску целостность данных. См. в разделе электронной документации по SQL Server для полный список предопределенных ролей сервера и разрешения.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "59087980"
 |Ресурс|Описание|  
 |--------------|-----------------|  
 |[Приступая к работе с разрешениями Database Engine](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Содержит ссылки на разделы, описывающие участников, роли, учетные данные, защищаемые объекты и разрешения.|  
-|[Участники](/sql/relational-databases/security/authentication-access/principals-database-engine)|Описывает участников и содержит ссылки на разделы, описывающие роли сервера и базы данных.|  
+|[Субъекты](/sql/relational-databases/security/authentication-access/principals-database-engine)|Описывает участников и содержит ссылки на разделы, описывающие роли сервера и базы данных.|  
   
 ## <a name="see-also"></a>См. также
 
 - [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Аутентификация в SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
+- [Проверка подлинности в SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [Владение и отделение пользователей от схем в SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
 - [Авторизация и разрешения в SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

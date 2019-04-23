@@ -7,10 +7,10 @@ helpviewer_keywords:
 - painting [WPF], with solid colors
 ms.assetid: 5d27d8a7-4bd7-4063-bdf3-2c5c0f19f9d3
 ms.openlocfilehash: c85ba72c858d155f29875bb944824db1c44ffaab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086849"
 ---
 # <a name="how-to-paint-an-area-with-a-solid-color"></a>Практическое руководство. Заливка области с помощью сплошного цвета
@@ -27,7 +27,7 @@ ms.locfileid: "59086849"
   
  [!code-csharp[brushsamples_procedural_snip#_graphicsmm_PredefinedBrush1](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/SolidColorBrushExample.cs#_graphicsmm_predefinedbrush1)]  
   
- **С помощью шестнадцатеричного формата**  
+ **Использование шестнадцатеричной нотации**  
   
  В следующем примере используется шестнадцатеричная нотация из 8 цифр для закрашивания прямоугольника синим цветом.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "59086849"
   
  Другие способы описания цвета см. в разделе <xref:System.Windows.Media.Color> структуры.  
   
- **См. также**  
+ **Связанные разделы**  
   
  Дополнительные сведения о <xref:System.Windows.Media.SolidColorBrush> и Дополнительные примеры см. в разделе [закраске сплошным цветом и градиентом Обзор](painting-with-solid-colors-and-gradients-overview.md) Обзор.  
   

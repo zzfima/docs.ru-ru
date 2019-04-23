@@ -9,10 +9,10 @@ helpviewer_keywords:
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
 ms.openlocfilehash: 1807170b2f5df2333ec3b271a11f9b929c1e7993
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087187"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Элементы управления Windows Forms со встроенной поддержки рисования владельцем
@@ -86,7 +86,7 @@ ms.locfileid: "59087187"
   
 -   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [Практическое руководство. Индивидуальное форматирование строк, отображаемых в элементе управления ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+-   [Практическое руководство. Индивидуальное в элементе управления ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>Компонент MenuItem  
  <xref:System.Windows.Forms.MenuItem> Компонент представляет собой отдельный пункт меню в <xref:System.Windows.Forms.MainMenu> или <xref:System.Windows.Forms.ContextMenu> компонента.  
@@ -191,4 +191,4 @@ ms.locfileid: "59087187"
   
 ## <a name="see-also"></a>См. также
 
-- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)
+- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

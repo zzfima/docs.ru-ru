@@ -7,10 +7,10 @@ helpviewer_keywords:
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
 ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086446"
 ---
 # <a name="windows-forms-control-development-basics"></a>Основы разработки элементов управления форм Windows Forms
@@ -32,7 +32,7 @@ ms.locfileid: "59086446"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Разработка простого элемента управления форм Windows Forms](how-to-develop-a-simple-windows-forms-control.md)
+- [Практическое руководство. Разработка элемента управления простого Windows Forms](how-to-develop-a-simple-windows-forms-control.md)
 - [Разработка составного элемента Windows Forms](developing-a-composite-windows-forms-control.md)
-- [Практическое руководство. Создание элемента управления, показывающего прогресс в форме Windows Forms](how-to-create-a-windows-forms-control-that-shows-progress.md)
-- [Создание собственных элементов управления](varieties-of-custom-controls.md)
+- [Практическое руководство. Создание элемента управления Windows Forms, показывающего прогресс](how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [Разновидности пользовательских элементов управления](varieties-of-custom-controls.md)

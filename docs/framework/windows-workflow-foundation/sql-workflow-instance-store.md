@@ -3,10 +3,10 @@ title: Хранилище экземпляров рабочих процессо
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
 ms.openlocfilehash: 8314781f46d9cd4eddd06f6be95f8e952feef1b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086576"
 ---
 # <a name="sql-workflow-instance-store"></a>Хранилище экземпляров рабочих процессов SQL
@@ -22,9 +22,9 @@ ms.locfileid: "59086576"
   
 ## <a name="in-this-section"></a>В этом разделе  
   
--   [Свойства хранилища экземпляров рабочего процесса SQL](properties-of-sql-workflow-instance-store.md)  
+-   [Свойства хранилища экземпляров рабочих процессов SQL](properties-of-sql-workflow-instance-store.md)  
   
--   [Практическое руководство. Включение сохраняемости для рабочих процессов и их служб в SQL](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+-   [Практическое руководство. Включить сохраняемость SQL для рабочих процессов и служб рабочих процессов](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
 -   [Активация экземпляров](instance-activation.md)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "59086576"
   
 -   [Безопасность](security.md)  
   
--   [База данных постоянного хранения SQL Server](sql-server-persistence-database.md)  
+-   [База данных сохраняемости SQL Server](sql-server-persistence-database.md)  
   
 ## <a name="see-also"></a>См. также
 

@@ -8,10 +8,10 @@ ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d4c1d07e2469a36c4b8e1ef7b8d90a80a3530ae3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097178"
 ---
 # <a name="constrained-execution-regions"></a>области с ограничением выполнения
@@ -70,14 +70,14 @@ ms.locfileid: "59097178"
   
 -   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. В состоянии исключения метод может гарантировать, что повреждение состояния будет ограничено областью текущего экземпляра.  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, При возникновении исключительных условий среда CLR не обеспечивает согласованности состояний; то есть условие может повредить процесс.  
+-   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>. В состоянии исключения среда CLR не гарантирует согласованность состояния, то есть такое условие может привести к повреждению процесса.  
   
 -   <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. В состоянии исключения гарантируется, что метод не приведет к повреждению состояния.  
   
 ## <a name="reliability-trycatchfinally"></a>Надежность блоков try/catch/finally  
  Надежность блоков `try/catch/finally` определяет механизм обработки исключений с тем же уровнем гарантий предсказуемости, что и неуправляемая версия. Блок `catch/finally` представляет собой область ограниченного выполнения. Методы в этом блоке подготавливаются заранее и не должны прерываться.  
   
- На платформе .NET Framework версии 2.0 код информирует среду выполнения о надежности блока try, вызывая <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> непосредственно перед этим блоком. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> является членом <xref:System.Runtime.CompilerServices.RuntimeHelpers>, вспомогательного класса компилятора. Ожидается реализация прямого вызова метода <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> посредством компиляторов.  
+ На платформе .NET Framework версии 2.0 код информирует среду выполнения о надежности блока try, вызывая <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> непосредственно перед этим блоком. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> является членом вспомогательного класса компилятора <xref:System.Runtime.CompilerServices.RuntimeHelpers>. Ожидается реализация прямого вызова метода <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> посредством компиляторов.  
   
 ## <a name="noninterruptible-regions"></a>Непрерываемые области  
  Непрерываемая область служит для группировки набора инструкций в области ограниченного выполнения.  
@@ -102,11 +102,11 @@ ms.locfileid: "59097178"
   
 -   Вызовы методов посредством отражения.  
   
--   <xref:System.Threading.Monitor.Enter%2A> и <xref:System.IO.FileStream.Lock%2A>.  
+-   <xref:System.Threading.Monitor.Enter%2A> или <xref:System.IO.FileStream.Lock%2A>.  
   
 -   Проверки безопасности. Нельзя выполнять запросы, только требования ссылок.  
   
--   <xref:System.Reflection.Emit.OpCodes.Isinst> и <xref:System.Reflection.Emit.OpCodes.Castclass> для COM-объектов и прокси-серверы  
+-   <xref:System.Reflection.Emit.OpCodes.Isinst> и <xref:System.Reflection.Emit.OpCodes.Castclass> для COM-объектов и прокси-элементов.  
   
 -   Получение или установка полей для прозрачных прокси.  
   

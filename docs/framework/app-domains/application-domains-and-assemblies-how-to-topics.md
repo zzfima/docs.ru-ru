@@ -8,10 +8,10 @@ ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1610322e33be81a109dec1cd1d189544a33b17d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095521"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Руководства по работе с доменами приложений и сборками
@@ -31,7 +31,7 @@ ms.locfileid: "59095521"
   
  **Сборки**  
   
--   [Практическое руководство. определение полного имени сборки](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
+-   [Практическое руководство. Определение полного имени сборки](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
   
 -   [Практическое руководство. Построение однофайловой сборки](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "59095521"
   
 -   [Практическое руководство. Подписание сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
   
--   [Практическое руководство. Создание ссылки на сборку со строгим именем](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)  
+-   [Практическое руководство. Ссылка на сборку со строгим именем](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)  
   
 -   [Практическое руководство. Отключение функции пропуска строгих имен](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
   

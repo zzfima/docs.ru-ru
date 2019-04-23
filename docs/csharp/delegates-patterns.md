@@ -3,12 +3,12 @@ title: Общие шаблоны делегатов
 description: Сведения об общих шаблонах, позволяющих использовать делегаты в коде и избежать возникновения сильных взаимозависимостей между компонентами.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 20d55a1aba345b962c506bbc3f82248a817923ea
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827024"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59095702"
 ---
 # <a name="common-patterns-for-delegates"></a>Общие шаблоны делегатов
 
@@ -98,7 +98,6 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 Вот это средство ведения журнала на основе файла:
 
 [!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
-
 
 После создания этого класса можно создать его экземпляр, и он подключит свой метод LogMessage к компоненту Logger:
 

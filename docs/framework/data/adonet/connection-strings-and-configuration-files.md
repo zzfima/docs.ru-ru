@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
 ms.openlocfilehash: 786094bc426066b45fd1a214950ec1e030f0b731
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088838"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Строки подключения и файлы конфигурации
@@ -67,7 +67,7 @@ ms.locfileid: "59088838"
 >  Файл **machine.config** также содержит раздел **connectionStrings**, включающий строку подключения, используемую Visual Studio. При получении строк подключения из файла **app.config** приложения Windows с помощью имени поставщика в первую очередь загружаются строки подключения из файла **machine.config**, затем записи из файла **app.config**. Добавление ключевого слова **clear** сразу после элемента**connectionStrings** приводит к удалению из памяти всех ссылок, унаследованных от структуры данных, поэтому учитываются только строки подключения, определенные в локальном файле **app.config**.  
   
 ### <a name="working-with-the-configuration-classes"></a>Работа с классами конфигурации  
- Начиная с версии .NET Framework 2.0, для работы с файлами конфигурации на локальном компьютере используется класс <xref:System.Configuration.ConfigurationManager>, который заменил устаревший класс <xref:System.Configuration.ConfigurationSettings>. <xref:System.Web.Configuration.WebConfigurationManager> используется для работы с файлами конфигурации ASP.NET. Он создан для работы с файлами конфигурации веб-сервера и предоставляет программный доступ к разделам файла конфигураций, например **system.web**.  
+ Начиная с версии .NET Framework 2.0, для работы с файлами конфигурации на локальном компьютере используется класс <xref:System.Configuration.ConfigurationManager>, который заменил устаревший класс <xref:System.Configuration.ConfigurationSettings>. <xref:System.Web.Configuration.WebConfigurationManager> служит для работы с файлами конфигурации ASP.NET. Он создан для работы с файлами конфигурации веб-сервера и предоставляет программный доступ к разделам файла конфигураций, например **system.web**.  
   
 > [!NOTE]
 >  Вызывающему объекту для доступа к файлам конфигурации во время выполнения должны быть предоставлены разрешения. Требуемые разрешения зависят от типа приложения, файла конфигурации и расположения. Дополнительные сведения см. в разделах [Использование классов конфигурации](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100)) и <xref:System.Web.Configuration.WebConfigurationManager> для приложений ASP.NET и <xref:System.Configuration.ConfigurationManager> для приложений Windows.  
@@ -176,4 +176,4 @@ ms.locfileid: "59088838"
 - [Использование классов конфигурации](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
 - [Настройка приложений](../../../../docs/framework/configure-apps/index.md)
 - [Администрирование веб-сайта ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
