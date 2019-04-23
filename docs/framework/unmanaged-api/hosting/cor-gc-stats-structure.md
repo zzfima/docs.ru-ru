@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d335a62545f06a66d4044b59aa9499d3f7ede515
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59208479"
 ---
-# <a name="corgcstats-structure"></a><span data-ttu-id="af3f7-102">Структура COR_GC_STATS</span><span class="sxs-lookup"><span data-stu-id="af3f7-102">COR_GC_STATS Structure</span></span>
-<span data-ttu-id="af3f7-103">Предоставляет статистику механизм сбора мусора общеязыковой среды выполнения (CLR).</span><span class="sxs-lookup"><span data-stu-id="af3f7-103">Provides statistics about the garbage collection mechanism of the common language runtime (CLR).</span></span>  
+# <a name="corgcstats-structure"></a><span data-ttu-id="f17c7-102">Структура COR_GC_STATS</span><span class="sxs-lookup"><span data-stu-id="f17c7-102">COR_GC_STATS Structure</span></span>
+<span data-ttu-id="f17c7-103">Предоставляет статистику механизм сбора мусора общеязыковой среды выполнения (CLR).</span><span class="sxs-lookup"><span data-stu-id="f17c7-103">Provides statistics about the garbage collection mechanism of the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="af3f7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="af3f7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f17c7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f17c7-104">Syntax</span></span>  
   
 ```  
 typedef struct _COR_GC_STATS {  
@@ -44,32 +44,32 @@ typedef struct _COR_GC_STATS {
 } COR_GC_STATS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="af3f7-105">Участники</span><span class="sxs-lookup"><span data-stu-id="af3f7-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f17c7-105">Участники</span><span class="sxs-lookup"><span data-stu-id="f17c7-105">Members</span></span>  
   
-|<span data-ttu-id="af3f7-106">Член</span><span class="sxs-lookup"><span data-stu-id="af3f7-106">Member</span></span>|<span data-ttu-id="af3f7-107">Описание</span><span class="sxs-lookup"><span data-stu-id="af3f7-107">Description</span></span>|  
+|<span data-ttu-id="f17c7-106">Член</span><span class="sxs-lookup"><span data-stu-id="f17c7-106">Member</span></span>|<span data-ttu-id="f17c7-107">Описание</span><span class="sxs-lookup"><span data-stu-id="f17c7-107">Description</span></span>|  
 |------------|-----------------|  
-|`Flags`|<span data-ttu-id="af3f7-108">Указывает, вычисления и возвращаемых значений полей, которые.</span><span class="sxs-lookup"><span data-stu-id="af3f7-108">Indicates which field values should be calculated and returned.</span></span>|  
-|`ExplicitGCCount`|<span data-ttu-id="af3f7-109">Указывает номер сборки мусора, которые были принудительно с помощью внешнего запроса.</span><span class="sxs-lookup"><span data-stu-id="af3f7-109">Indicates the number of garbage collections that were forced by external request.</span></span>|  
-|`GenCollectionsTaken`|<span data-ttu-id="af3f7-110">Указывает число сборов мусора, выполненных для каждого поколения.</span><span class="sxs-lookup"><span data-stu-id="af3f7-110">Indicates the number of garbage collections performed for each generation.</span></span>|  
-|`CommittedKBytes`|<span data-ttu-id="af3f7-111">Общее число килобайтов зафиксированных во всех кучах.</span><span class="sxs-lookup"><span data-stu-id="af3f7-111">The total number of kilobytes committed in all heaps.</span></span>|  
-|`ReservedKBytes`|<span data-ttu-id="af3f7-112">Общее число килобайтов зарезервированных во всех кучах.</span><span class="sxs-lookup"><span data-stu-id="af3f7-112">The total number of kilobytes reserved in all heaps.</span></span>|  
-|`Gen0HeapSizeKBytes`|<span data-ttu-id="af3f7-113">Размер в килобайтах, нулевого поколения кучи.</span><span class="sxs-lookup"><span data-stu-id="af3f7-113">The size, in kilobytes, of the generation-zero heap.</span></span>|  
-|`Gen1HeapSizeKBytes`|<span data-ttu-id="af3f7-114">Размер в килобайтах, кучи поколения.</span><span class="sxs-lookup"><span data-stu-id="af3f7-114">The size, in kilobytes, of the generation-one heap.</span></span>|  
-|`Gen2HeapSizeKBytes`|<span data-ttu-id="af3f7-115">Размер в килобайтах, кучи второго поколения.</span><span class="sxs-lookup"><span data-stu-id="af3f7-115">The size, in kilobytes, of the generation-two heap.</span></span>|  
-|`LargeObjectHeapSizeKBytes`|<span data-ttu-id="af3f7-116">Размер в килобайтах, куча больших объектов.</span><span class="sxs-lookup"><span data-stu-id="af3f7-116">The size, in kilobytes, of the large object heap.</span></span>|  
-|`KBytesPromotedFromGen0`|<span data-ttu-id="af3f7-117">Размер в килобайтах, объектов, перенесенных из нулевого поколения, одно.</span><span class="sxs-lookup"><span data-stu-id="af3f7-117">The size, in kilobytes, of the objects promoted from generation zero to generation one.</span></span>|  
-|`KBytesPromotedFromGen1`|<span data-ttu-id="af3f7-118">Размер в килобайтах, перенесенных из первого поколения двух объектов.</span><span class="sxs-lookup"><span data-stu-id="af3f7-118">The size, in kilobytes, of the objects promoted from generation one to generation two.</span></span>|  
+|`Flags`|<span data-ttu-id="f17c7-108">Указывает, вычисления и возвращаемых значений полей, которые.</span><span class="sxs-lookup"><span data-stu-id="f17c7-108">Indicates which field values should be calculated and returned.</span></span>|  
+|`ExplicitGCCount`|<span data-ttu-id="f17c7-109">Указывает номер сборки мусора, которые были принудительно с помощью внешнего запроса.</span><span class="sxs-lookup"><span data-stu-id="f17c7-109">Indicates the number of garbage collections that were forced by external request.</span></span>|  
+|`GenCollectionsTaken`|<span data-ttu-id="f17c7-110">Указывает число сборов мусора, выполненных для каждого поколения.</span><span class="sxs-lookup"><span data-stu-id="f17c7-110">Indicates the number of garbage collections performed for each generation.</span></span>|  
+|`CommittedKBytes`|<span data-ttu-id="f17c7-111">Общее число килобайтов зафиксированных во всех кучах.</span><span class="sxs-lookup"><span data-stu-id="f17c7-111">The total number of kilobytes committed in all heaps.</span></span>|  
+|`ReservedKBytes`|<span data-ttu-id="f17c7-112">Общее число килобайтов зарезервированных во всех кучах.</span><span class="sxs-lookup"><span data-stu-id="f17c7-112">The total number of kilobytes reserved in all heaps.</span></span>|  
+|`Gen0HeapSizeKBytes`|<span data-ttu-id="f17c7-113">Размер в килобайтах, нулевого поколения кучи.</span><span class="sxs-lookup"><span data-stu-id="f17c7-113">The size, in kilobytes, of the generation-zero heap.</span></span>|  
+|`Gen1HeapSizeKBytes`|<span data-ttu-id="f17c7-114">Размер в килобайтах, кучи поколения.</span><span class="sxs-lookup"><span data-stu-id="f17c7-114">The size, in kilobytes, of the generation-one heap.</span></span>|  
+|`Gen2HeapSizeKBytes`|<span data-ttu-id="f17c7-115">Размер в килобайтах, кучи второго поколения.</span><span class="sxs-lookup"><span data-stu-id="f17c7-115">The size, in kilobytes, of the generation-two heap.</span></span>|  
+|`LargeObjectHeapSizeKBytes`|<span data-ttu-id="f17c7-116">Размер в килобайтах, куча больших объектов.</span><span class="sxs-lookup"><span data-stu-id="f17c7-116">The size, in kilobytes, of the large object heap.</span></span>|  
+|`KBytesPromotedFromGen0`|<span data-ttu-id="f17c7-117">Размер в килобайтах, объектов, перенесенных из нулевого поколения, одно.</span><span class="sxs-lookup"><span data-stu-id="f17c7-117">The size, in kilobytes, of the objects promoted from generation zero to generation one.</span></span>|  
+|`KBytesPromotedFromGen1`|<span data-ttu-id="f17c7-118">Размер в килобайтах, перенесенных из первого поколения двух объектов.</span><span class="sxs-lookup"><span data-stu-id="f17c7-118">The size, in kilobytes, of the objects promoted from generation one to generation two.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="af3f7-119">Примечания</span><span class="sxs-lookup"><span data-stu-id="af3f7-119">Remarks</span></span>  
- <span data-ttu-id="af3f7-120">[ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) метод требует `Flags` поле `COR_GC_STATS` структура будет присвоено одно или несколько значений из [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) перечисления, чтобы указать, какие Статистика устанавливаемое значение.</span><span class="sxs-lookup"><span data-stu-id="af3f7-120">The [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) method requires the `Flags` field of the `COR_GC_STATS` structure to be set to one or more values of the [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration to specify which statistics are to be set.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f17c7-119">Примечания</span><span class="sxs-lookup"><span data-stu-id="f17c7-119">Remarks</span></span>  
+ <span data-ttu-id="f17c7-120">[ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) метод требует `Flags` поле `COR_GC_STATS` структура будет присвоено одно или несколько значений из [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) перечисления, чтобы указать, какие Статистика устанавливаемое значение.</span><span class="sxs-lookup"><span data-stu-id="f17c7-120">The [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) method requires the `Flags` field of the `COR_GC_STATS` structure to be set to one or more values of the [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration to specify which statistics are to be set.</span></span>  
   
- <span data-ttu-id="af3f7-121">В таблице ниже приведены статистические данные, предоставляемые этой структуры к двум [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) значений перечисления, `COR_GC_COUNTS` и `COR_GC_MEMORYUSAGE`.</span><span class="sxs-lookup"><span data-stu-id="af3f7-121">The following table maps the statistics provided by this structure to the two [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration values, `COR_GC_COUNTS` and `COR_GC_MEMORYUSAGE`.</span></span>  
+ <span data-ttu-id="f17c7-121">В таблице ниже приведены статистические данные, предоставляемые этой структуры к двум [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) значений перечисления, `COR_GC_COUNTS` и `COR_GC_MEMORYUSAGE`.</span><span class="sxs-lookup"><span data-stu-id="f17c7-121">The following table maps the statistics provided by this structure to the two [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration values, `COR_GC_COUNTS` and `COR_GC_MEMORYUSAGE`.</span></span>  
   
-|<span data-ttu-id="af3f7-122">Определяемое COR_GC_COUNTS</span><span class="sxs-lookup"><span data-stu-id="af3f7-122">Specified by COR_GC_COUNTS</span></span>|<span data-ttu-id="af3f7-123">Определяемое COR_GC_MEMORYUSAGE</span><span class="sxs-lookup"><span data-stu-id="af3f7-123">Specified by COR_GC_MEMORYUSAGE</span></span>|  
+|<span data-ttu-id="f17c7-122">Определяемое COR_GC_COUNTS</span><span class="sxs-lookup"><span data-stu-id="f17c7-122">Specified by COR_GC_COUNTS</span></span>|<span data-ttu-id="f17c7-123">Определяемое COR_GC_MEMORYUSAGE</span><span class="sxs-lookup"><span data-stu-id="f17c7-123">Specified by COR_GC_MEMORYUSAGE</span></span>|  
 |----------------------------------|---------------------------------------|  
 |`ExplicitGCCount`<br /><br /> `GenCollectionsTaken`|`CommittedKBytes`<br /><br /> `ReservedKBytes`<br /><br /> `Gen0HeapSizeKBytes`<br /><br /> `Gen1HeapSizeKBytes`<br /><br /> `Gen2HeapSizeKBytes`<br /><br /> `LargeObjectHeapSizeKBytes`<br /><br /> `KBytesPromotedFromGen0`<br /><br /> `KBytesPromotedFromGen1`|  
   
- <span data-ttu-id="af3f7-124">Ниже приведен пример использования:</span><span class="sxs-lookup"><span data-stu-id="af3f7-124">An example of the usage is as follows:</span></span>  
+ <span data-ttu-id="f17c7-124">Ниже приведен пример использования:</span><span class="sxs-lookup"><span data-stu-id="f17c7-124">An example of the usage is as follows:</span></span>  
   
 ```  
 COR_GC_STATS GCStats;  
@@ -77,17 +77,17 @@ GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;
 pCLRGCManager->GetStats(&GCStats);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="af3f7-125">Требования</span><span class="sxs-lookup"><span data-stu-id="af3f7-125">Requirements</span></span>  
- <span data-ttu-id="af3f7-126">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="af3f7-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f17c7-125">Требования</span><span class="sxs-lookup"><span data-stu-id="f17c7-125">Requirements</span></span>  
+ <span data-ttu-id="f17c7-126">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f17c7-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="af3f7-127">**Заголовок.** GCHost.idl</span><span class="sxs-lookup"><span data-stu-id="af3f7-127">**Header:** GCHost.idl</span></span>  
+ <span data-ttu-id="f17c7-127">**Заголовок.** GCHost.idl</span><span class="sxs-lookup"><span data-stu-id="f17c7-127">**Header:** GCHost.idl</span></span>  
   
- <span data-ttu-id="af3f7-128">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="af3f7-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f17c7-128">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f17c7-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="af3f7-129">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="af3f7-129">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="f17c7-129">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f17c7-129">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af3f7-130">См. также</span><span class="sxs-lookup"><span data-stu-id="af3f7-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f17c7-130">См. также</span><span class="sxs-lookup"><span data-stu-id="f17c7-130">See also</span></span>
 
-- [<span data-ttu-id="af3f7-131">Структуры размещения</span><span class="sxs-lookup"><span data-stu-id="af3f7-131">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [<span data-ttu-id="af3f7-132">Automatic Memory Management</span><span class="sxs-lookup"><span data-stu-id="af3f7-132">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
-- [<span data-ttu-id="af3f7-133">Сборка мусора</span><span class="sxs-lookup"><span data-stu-id="af3f7-133">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)
+- [<span data-ttu-id="f17c7-131">Структуры размещения</span><span class="sxs-lookup"><span data-stu-id="f17c7-131">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [<span data-ttu-id="f17c7-132">Автоматическое управление памятью</span><span class="sxs-lookup"><span data-stu-id="f17c7-132">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
+- [<span data-ttu-id="f17c7-133">Сборка мусора</span><span class="sxs-lookup"><span data-stu-id="f17c7-133">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)
