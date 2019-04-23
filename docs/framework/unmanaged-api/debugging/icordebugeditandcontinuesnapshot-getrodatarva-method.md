@@ -18,15 +18,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bfec360dc7817864c57ae99c9d1648c805f524b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154471"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a><span data-ttu-id="a8b2a-102">Метод ICorDebugEditAndContinueSnapshot::GetRoDataRVA</span><span class="sxs-lookup"><span data-stu-id="a8b2a-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Method</span></span>
-`GetRoDataRVA` <span data-ttu-id="a8b2a-103">является устаревшим.</span><span class="sxs-lookup"><span data-stu-id="a8b2a-103">is obsolete.</span></span> <span data-ttu-id="a8b2a-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="a8b2a-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a><span data-ttu-id="58a79-102">Метод ICorDebugEditAndContinueSnapshot::GetRoDataRVA</span><span class="sxs-lookup"><span data-stu-id="58a79-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Method</span></span>
+<span data-ttu-id="58a79-103">`GetRoDataRVA` устарел.</span><span class="sxs-lookup"><span data-stu-id="58a79-103">`GetRoDataRVA` is obsolete.</span></span> <span data-ttu-id="58a79-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="58a79-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a8b2a-105">См. также</span><span class="sxs-lookup"><span data-stu-id="a8b2a-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="58a79-105">См. также</span><span class="sxs-lookup"><span data-stu-id="58a79-105">See also</span></span>
 
-- [<span data-ttu-id="a8b2a-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="a8b2a-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="58a79-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="58a79-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

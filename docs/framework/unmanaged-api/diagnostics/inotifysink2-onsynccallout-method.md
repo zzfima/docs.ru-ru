@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4cf36b9e09f5e9eeb28930a6adc48426927a60e7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145695"
 ---
-# <a name="inotifysink2onsynccallout-method"></a><span data-ttu-id="fdee6-102">Метод INotifySink2::OnSyncCallOut</span><span class="sxs-lookup"><span data-stu-id="fdee6-102">INotifySink2::OnSyncCallOut Method</span></span>
-<span data-ttu-id="fdee6-103">Вызывается, когда вызова.</span><span class="sxs-lookup"><span data-stu-id="fdee6-103">Gets invoked when a call is out.</span></span>  
+# <a name="inotifysink2onsynccallout-method"></a><span data-ttu-id="ca341-102">Метод INotifySink2::OnSyncCallOut</span><span class="sxs-lookup"><span data-stu-id="ca341-102">INotifySink2::OnSyncCallOut Method</span></span>
+<span data-ttu-id="ca341-103">Вызывается, когда вызова.</span><span class="sxs-lookup"><span data-stu-id="ca341-103">Gets invoked when a call is out.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fdee6-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fdee6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ca341-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ca341-104">Syntax</span></span>  
   
 ```  
 HRESULT OnSyncCallOut  
@@ -38,24 +38,24 @@ HRESULT OnSyncCallOut
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fdee6-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="fdee6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ca341-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ca341-105">Parameters</span></span>  
  `in_CallID`  
- <span data-ttu-id="fdee6-106">[in] Идентификатор вызова, который вышел. См. в разделе [структура CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span><span class="sxs-lookup"><span data-stu-id="fdee6-106">[in] ID of the call that is out. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span></span>  
+ <span data-ttu-id="ca341-106">[in] Идентификатор вызова, который вышел. См. в разделе [структура CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span><span class="sxs-lookup"><span data-stu-id="ca341-106">[in] ID of the call that is out. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span></span>  
   
  `out_ppBuffer`  
- <span data-ttu-id="fdee6-107">[out] Буфер для вызова.</span><span class="sxs-lookup"><span data-stu-id="fdee6-107">[out] Call buffer.</span></span>  
+ <span data-ttu-id="ca341-107">[out] Буфер для вызова.</span><span class="sxs-lookup"><span data-stu-id="ca341-107">[out] Call buffer.</span></span>  
   
  `out_pBufferSize`  
- <span data-ttu-id="fdee6-108">[out] Размер буфера вызова в байтах.</span><span class="sxs-lookup"><span data-stu-id="fdee6-108">[out] Size of the call buffer, in bytes.</span></span>  
+ <span data-ttu-id="ca341-108">[out] Размер буфера вызова в байтах.</span><span class="sxs-lookup"><span data-stu-id="ca341-108">[out] Size of the call buffer, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fdee6-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="fdee6-109">Return Value</span></span>  
- <span data-ttu-id="fdee6-110">Значение S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="fdee6-110">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ca341-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="ca341-109">Return Value</span></span>  
+ <span data-ttu-id="ca341-110">Значение S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="ca341-110">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fdee6-111">Требования</span><span class="sxs-lookup"><span data-stu-id="fdee6-111">Requirements</span></span>  
- <span data-ttu-id="fdee6-112">**Заголовок.** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="fdee6-112">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ca341-111">Требования</span><span class="sxs-lookup"><span data-stu-id="ca341-111">Requirements</span></span>  
+ <span data-ttu-id="ca341-112">**Заголовок.** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="ca341-112">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fdee6-113">См. также</span><span class="sxs-lookup"><span data-stu-id="fdee6-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ca341-113">См. также</span><span class="sxs-lookup"><span data-stu-id="ca341-113">See also</span></span>
 
-- [<span data-ttu-id="fdee6-114">Интерфейс INotifySink2</span><span class="sxs-lookup"><span data-stu-id="fdee6-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="fdee6-115">Интерфейс INotifySource2</span><span class="sxs-lookup"><span data-stu-id="fdee6-115">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="fdee6-116">Интерфейс INotifyConnection2</span><span class="sxs-lookup"><span data-stu-id="fdee6-116">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="ca341-114">Интерфейс INotifySink2</span><span class="sxs-lookup"><span data-stu-id="ca341-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="ca341-115">Интерфейс INotifySource2</span><span class="sxs-lookup"><span data-stu-id="ca341-115">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="ca341-116">Интерфейс INotifyConnection2</span><span class="sxs-lookup"><span data-stu-id="ca341-116">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

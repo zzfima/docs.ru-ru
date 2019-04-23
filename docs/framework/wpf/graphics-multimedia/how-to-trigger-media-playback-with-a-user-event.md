@@ -8,25 +8,25 @@ helpviewer_keywords:
 - multimedia [WPF], synchronizing media playback with events
 ms.assetid: c4dbe632-6e7f-4d7f-9df5-98737a758bc3
 ms.openlocfilehash: ae8ba54cc852bb85350492c95e3e890aebf6534f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150180"
 ---
-# <a name="how-to-trigger-media-playback-with-a-user-event"></a><span data-ttu-id="b7d39-102">Практическое руководство. Инициирование воспроизведения мультимедиа с помощью пользовательского события</span><span class="sxs-lookup"><span data-stu-id="b7d39-102">How to: Trigger Media Playback with a User Event</span></span>
-<span data-ttu-id="b7d39-103">В этом примере показано, как синхронизировать воспроизведение мультимедиа с событием.</span><span class="sxs-lookup"><span data-stu-id="b7d39-103">This example shows how to synchronize media playback with an event.</span></span>  
+# <a name="how-to-trigger-media-playback-with-a-user-event"></a><span data-ttu-id="e5513-102">Практическое руководство. Инициирование воспроизведения мультимедиа с помощью пользовательского события</span><span class="sxs-lookup"><span data-stu-id="e5513-102">How to: Trigger Media Playback with a User Event</span></span>
+<span data-ttu-id="e5513-103">В этом примере показано, как синхронизировать воспроизведение мультимедиа с событием.</span><span class="sxs-lookup"><span data-stu-id="e5513-103">This example shows how to synchronize media playback with an event.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b7d39-104">Пример</span><span class="sxs-lookup"><span data-stu-id="b7d39-104">Example</span></span>  
- <span data-ttu-id="b7d39-105">В следующем примере используется <xref:System.Windows.Controls.MediaElement> управления и <xref:System.Windows.Media.MediaTimeline> класс для воспроизведения звука, возникающее, когда пользователь щелкает <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="b7d39-105">The following example uses the <xref:System.Windows.Controls.MediaElement> control and the <xref:System.Windows.Media.MediaTimeline> class to play a sound that occurs when the user clicks a <xref:System.Windows.Controls.Button>.</span></span>  
+## <a name="example"></a><span data-ttu-id="e5513-104">Пример</span><span class="sxs-lookup"><span data-stu-id="e5513-104">Example</span></span>  
+ <span data-ttu-id="e5513-105">В следующем примере используется <xref:System.Windows.Controls.MediaElement> управления и <xref:System.Windows.Media.MediaTimeline> класс для воспроизведения звука, возникающее, когда пользователь щелкает <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="e5513-105">The following example uses the <xref:System.Windows.Controls.MediaElement> control and the <xref:System.Windows.Media.MediaTimeline> class to play a sound that occurs when the user clicks a <xref:System.Windows.Controls.Button>.</span></span>  
   
  [!code-xaml[MediaGallery_snippet#SoundFromUserEventExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snippet/CSharp/SoundFromUserEventExample.xaml#soundfromusereventexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="b7d39-106">См. также</span><span class="sxs-lookup"><span data-stu-id="b7d39-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e5513-106">См. также</span><span class="sxs-lookup"><span data-stu-id="e5513-106">See also</span></span>
 
 - <xref:System.Windows.Controls.MediaElement>
 - <xref:System.Windows.Media.MediaTimeline>
 - <xref:System.Windows.EventTrigger.RoutedEvent%2A>
 - <xref:System.Windows.Media.Animation.Storyboard>
-- [<span data-ttu-id="b7d39-107">Практические руководства</span><span class="sxs-lookup"><span data-stu-id="b7d39-107">How-to Topics</span></span>](audio-and-video-how-to-topics.md)
-- [<span data-ttu-id="b7d39-108">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="b7d39-108">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="e5513-107">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="e5513-107">How-to Topics</span></span>](audio-and-video-how-to-topics.md)
+- [<span data-ttu-id="e5513-108">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="e5513-108">Graphics and Multimedia</span></span>](index.md)
