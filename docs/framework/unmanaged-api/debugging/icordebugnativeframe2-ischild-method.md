@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9503c12da9e98fbd43f3904aad25c5d10655cec2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075565"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>Метод ICorDebugNativeFrame2::IsChild
@@ -44,7 +44,7 @@ HRESULT IsChild([out] BOOL * pIsChild);
 |-------------|-----------------|  
 |S_OK|Состояние дочернего был успешно возвращен.|  
 |E_FAIL|Состояние дочернего не могут быть возвращены.|  
-|E_INVALIDARG|`pIsChild` имеет значение null.|  
+|E_INVALIDARG|Параметр `pIsChild` имеет значение null.|  
   
 ## <a name="exceptions"></a>Исключения  
   

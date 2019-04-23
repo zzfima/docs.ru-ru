@@ -16,10 +16,10 @@ ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055317"
 ---
 # <a name="working-with-calendars"></a>Работа с календарями
@@ -30,33 +30,33 @@ ms.locfileid: "59055317"
 
 Всех календарей в .NET являются производными от <xref:System.Globalization.Calendar?displayProperty=nameWithType> класс, который предоставляет базовую реализацию календаря. Одним из классов, наследующих от класса <xref:System.Globalization.Calendar>, является класс <xref:System.Globalization.EastAsianLunisolarCalendar> — базовый класс для всех лунно-солнечных календарей. .NET включает следующие реализации календарей:
 
-* <xref:System.Globalization.ChineseLunisolarCalendar>, который представляет китайский лунно-солнечного календаря.
+* <xref:System.Globalization.ChineseLunisolarCalendar>. Представляет китайский лунно-солнечный календарь.
 
-* <xref:System.Globalization.GregorianCalendar>, который представляет григорианский календарь. Этот календарь, в свою очередь, разделяется на подтипы (такие как арабский и ближневосточный французский), определяемые перечислением <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType>. Свойство <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> определяет подтип григорианского календаря.
+* <xref:System.Globalization.GregorianCalendar>. Представляет григорианский календарь. Этот календарь, в свою очередь, разделяется на подтипы (такие как арабский и ближневосточный французский), определяемые перечислением <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType>. Свойство <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> определяет подтип григорианского календаря.
 
-* <xref:System.Globalization.HebrewCalendar>, который представляет еврейский календарь.
+* <xref:System.Globalization.HebrewCalendar>. Представляет еврейский календарь.
 
-* <xref:System.Globalization.HijriCalendar>, который представляет календарь хиджра.
+* <xref:System.Globalization.HijriCalendar>. Представляет календарь Хиджра.
 
-* <xref:System.Globalization.JapaneseCalendar>, который представляет японский календарь.
+* <xref:System.Globalization.JapaneseCalendar>. Представляет японский календарь.
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar>, который представляет японский лунно-солнечный календарь.
+* <xref:System.Globalization.JapaneseLunisolarCalendar>. Представляет японский лунно-солнечный календарь.
 
-* <xref:System.Globalization.JulianCalendar>, который представляет юлианский календарь.
+* <xref:System.Globalization.JulianCalendar>Представляет юлианский календарь.
 
-* <xref:System.Globalization.KoreanCalendar>, который представляет Корейский календарь.
+* <xref:System.Globalization.KoreanCalendar>. Представляет корейский календарь.
 
-* <xref:System.Globalization.KoreanLunisolarCalendar>, который представляет корейский лунно-солнечный календарь.
+* <xref:System.Globalization.KoreanLunisolarCalendar>. Представляет корейский лунно-солнечный календарь.
 
-* <xref:System.Globalization.PersianCalendar>, который представляет персидский календарь.
+* <xref:System.Globalization.PersianCalendar>. Представляет персидский календарь.
 
-* <xref:System.Globalization.TaiwanCalendar>, который представляет тайваньский календарь.
+* <xref:System.Globalization.TaiwanCalendar>. Представляет тайваньский календарь.
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar>, который представляет тайваньский лунно-солнечный календарь.
+* <xref:System.Globalization.TaiwanLunisolarCalendar>. Представляет тайваньский лунно-солнечный календарь.
 
-* <xref:System.Globalization.ThaiBuddhistCalendar>, который представляет Тай-буддистский календарь.
+* <xref:System.Globalization.ThaiBuddhistCalendar>. Представляет тай-буддистский календарь.
 
-* <xref:System.Globalization.UmAlQuraCalendar>, который представляет саудовский календарь.
+* <xref:System.Globalization.UmAlQuraCalendar>. Представляет саудовский календарь.
 
 Календарь можно использовать одним из двух способов:
 
@@ -363,5 +363,5 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 ## <a name="see-also"></a>См. также
 
 - [Практическое руководство. Отображение дат в календарях, отличных от григорианского](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-- [Пример: Служебная программа диапазон неделя календаря](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+- [Пример. Служебная программа диапазон неделя календаря](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
 - [Класс календаря](xref:System.Globalization.Calendar)

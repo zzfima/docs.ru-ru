@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8056ef18089f56f1f9b6717d505fa3d058957541
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074421"
 ---
 # <a name="spawninstance-function"></a>Функция SpawnInstance
@@ -60,7 +60,7 @@ HRESULT SpawnInstance (
 |---------|---------|---------|
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` не является допустимым определением класса и не может создавать новые экземпляры. Он не полон, либо он не был зарегистрирован с помощью службы управления Windows, вызвав [PutClassWmi](putclasswmi.md). |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Недостаточно памяти для завершения операции. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` — `null`. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Свойство `ppNewClass` имеет значение `null`. |
 | `WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
   
 ## <a name="remarks"></a>Примечания
@@ -80,4 +80,4 @@ HRESULT SpawnInstance (
   
 ## <a name="see-also"></a>См. также
 
-- [WMI и счетчики производительности (справочник по неуправляемым API)](index.md)
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

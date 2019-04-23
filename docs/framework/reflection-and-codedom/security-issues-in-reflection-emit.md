@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40db78b8b09b90ab5e11dcc61dc042af1981e827
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2717655ac73cac6635aba563f008feb460a5f788
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701408"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59074525"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Вопросы безопасности в порождаемом отражении
 Платформа [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] предоставляет три способа создания кода MSIL, с каждым из которых связаны определенные вопросы безопасности.  
@@ -154,5 +154,6 @@ ms.locfileid: "54701408"
  Начиная с [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] для получения сведений о закрытых типах и членах никакие разрешения не требуются. Для получения сведений, необходимых для порождения динамических методов, используется отражение. Например, объекты <xref:System.Reflection.MethodInfo> используются для порождения вызовов метода. В более ранних версиях [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] для этого требовалось разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [Соображения о безопасности для отражения](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Соображения о безопасности для отражения](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
 - [Предоставление динамических методов и сборок](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)

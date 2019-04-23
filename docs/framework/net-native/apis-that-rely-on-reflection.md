@@ -5,10 +5,10 @@ ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076865"
 ---
 # <a name="apis-that-rely-on-reflection"></a>API-интерфейсы, основанные на отражении
@@ -51,9 +51,9 @@ App1.AppClass`1<System.Int32>.
   
  Для успешного выполнения этого кода необходимо несколько элементов метаданных:  
   
--   `Browse` метаданные для типа, метод которого необходимо вызвать.  
+-   Метаданные `Browse` для типа, метод которого необходимо вызвать.  
   
--   `Browse` метаданные для метода необходимо вызвать.  Если это открытый метод, добавление открытых метаданных `Browse` для содержащего типа включает и сам метод.  
+-   Метаданные `Browse` для метода, который требуется вызвать.  Если это открытый метод, добавление открытых метаданных `Browse` для содержащего типа включает и сам метод.  
   
 -   Динамические метаданные для метода, который необходимо вызвать, для того, чтобы делегат вызова отражения не удалялся цепочкой инструментов [!INCLUDE[net_native](../../../includes/net-native-md.md)]. В случае отсутствия динамических метаданных для метода создается следующее исключение <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>, когда вызывается метод:  
   
@@ -86,7 +86,7 @@ App1.Class1[]
 Unfortunately, no further information is available.  
 ```  
   
- `Browse` метаданные для типа массива, необходим для динамического создания его экземпляра.  Следующая директива среды выполнения позволяет создать динамический экземпляр `Class1[]`.  
+ метаданные `Browse` для типа массива требуются для динамического создания его экземпляра.  Следующая директива среды выполнения позволяет создать динамический экземпляр `Class1[]`.  
   
 ```xml  
 <Type Name="App1.Class1[]" Browse="Required Public" />  
@@ -95,4 +95,4 @@ Unfortunately, no further information is available.
 ## <a name="see-also"></a>См. также
 
 - [Начало работы](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Ссылка на файл конфигурации директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

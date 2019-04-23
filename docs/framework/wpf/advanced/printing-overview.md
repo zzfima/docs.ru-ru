@@ -16,10 +16,10 @@ helpviewer_keywords:
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
 ms.openlocfilehash: 2aeafa7065b587497fb6f3b23605c21dca291cd1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075864"
 ---
 # <a name="printing-overview"></a>Общие сведения о печати
@@ -29,7 +29,7 @@ ms.locfileid: "59075864"
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>О формате XPS  
- [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] — Это формат электронного документа, формат файла очереди и язык описания страницы. Это формат открытого документа, который использует [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] и другие отраслевые стандарты для создания кроссплатформенных документов. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] упрощает процесс создания, общие, печати, просматривать и архивирования цифровых документов. Дополнительные сведения о [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], см. в разделе [документы XPS](/windows/desktop/printdocs/documents).  
+ [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] — это формат электронного документа, формат файла очереди и язык описания страницы. Это формат открытого документа, который использует [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] и другие отраслевые стандарты для создания кроссплатформенных документов. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] упрощает процесс создания, совместного использования, печати, просмотра и архивирования цифровых документов. Дополнительные сведения о [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], см. в разделе [документы XPS](/windows/desktop/printdocs/documents).  
   
  Несколько методов печати содержимого на основе [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] с помощью [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] демонстрируются в разделе [Печать XPS-файлов программным способом](how-to-programmatically-print-xps-files.md). Ссылки на эти примеры могут оказаться полезными при просмотре содержимого этого раздела. (Разработчикам неуправляемого кода следует изучить документацию по [MXDC_ESCAPE функция](/windows/desktop/printdocs/mxdc-escape). Windows Forms разработчики приложений должны использовать [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] в <xref:System.Drawing.Printing> пространства имен, который не поддерживает полный [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] способ печати, но также поддерживает гибридные GDI в XPS путь печати. См. раздел **Архитектура способа печати** ниже.)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "59075864"
   
  Преимущества способа печати [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] являются существенными и включают следующее.  
   
--   [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)] поддержка печати  
+-   Поддержка печати [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)]  
   
 -   Встроенная поддержка дополнительных цветовых профилей, включая 32 бита на канал (bpc), CMYK, именованные цвета, n-краски и встроенную поддержку прозрачности и градиентов.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59075864"
   
  Для базовых сценариев печати доступен простой и понятный [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] с одной точкой входа для пользовательского интерфейса, конфигурации и отправкой задания. Для расширенных сценариев добавлена дополнительная поддержка настройки [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] (или не [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] вообще), синхронной или асинхронной печати и возможностей пакетной печати. Оба параметра обеспечивают поддержку печати в режиме полного или частичного доверия.  
   
- [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] была разработана с учетом возможности расширения. С помощью инфраструктуры расширяемости функции и возможности можно добавлять в [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] модульным способом. Функции расширяемости включают следующее.  
+ [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] был разработан с учетом возможности расширения. С помощью инфраструктуры расширяемости функции и возможности можно добавлять в [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] модульным способом. Функции расширяемости включают следующее.  
   
 -   Схема печати. Общая схема обновляется регулярно и позволяет быстро расширять возможности устройства. (См. **PrintTicket и PrintCapabilities** ниже.)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "59075864"
  ![Снимок экрана показывает, что система печати XPS.](./media/printing-overview/xml-paper-specification-print-system.png)  
   
 ### <a name="basic-xps-printing"></a>Базовая печать XPS  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] определяет как базовый и расширенный [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Для приложений, которым не требуется настройка расширенной печати или доступ к полному набору функций [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], доступна базовая поддержка печати. Базовая поддержка печати предоставляется с помощью элемента управления диалогового окна печати, который требует минимальной конфигурации и представляет знакомый [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. С помощью этой упрощенной модели печати доступны многие функции [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)].  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] определяет как базовый, так и расширенный [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Для приложений, которым не требуется настройка расширенной печати или доступ к полному набору функций [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], доступна базовая поддержка печати. Базовая поддержка печати предоставляется с помощью элемента управления диалогового окна печати, который требует минимальной конфигурации и представляет знакомый [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. С помощью этой упрощенной модели печати доступны многие функции [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)].  
   
 #### <a name="printdialog"></a>PrintDialog  
  Элемент управления <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> предоставляет единую точку входа для [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], конфигурации и отправки задания [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]. Сведения о том, как создать и использовать элемент управления, см. в разделе [Вызов диалогового окна печати](how-to-invoke-a-print-dialog.md).  
@@ -116,7 +116,7 @@ ms.locfileid: "59075864"
 ## <a name="xpsdrv-driver-model"></a>Модель драйвера XPSDrv  
  Способ печати [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] повышает эффективность очереди печати путем использования [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] в качестве собственного формата очереди печати при печати в принтер или драйвер с поддержкой [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]. Упрощенный процесс постановки в очередь избавляет от необходимости создания промежуточных файлов очередей, таких как файл данных [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)], до помещения документа в очередь. Благодаря меньшим размерам файлов очереди способ печати [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] может сократить сетевой трафик и повысить производительность печати.  
   
- [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] является закрытым форматом, представляющим вывод приложения как ряд вызовов в [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] для служб обработки. В отличие от [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)],  формат очереди [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] представляет фактический документ без необходимости дальнейшей интерпретации при выводе в драйвер принтера на основе [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv). Драйверы могут работать непосредственно с данными в этом формате. Эта возможность позволяет избежать преобразования данных и цветового пространства, необходимого при использовании файлов [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] и драйверов печати на основе [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)].  
+ [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] является закрытым форматом, представляющим вывод приложения как последовательность вызовов [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] для служб обработки. В отличие от [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)],  формат очереди [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] представляет фактический документ без необходимости дальнейшей интерпретации при выводе в драйвер принтера на основе [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv). Драйверы могут работать непосредственно с данными в этом формате. Эта возможность позволяет избежать преобразования данных и цветового пространства, необходимого при использовании файлов [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] и драйверов печати на основе [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)].  
   
  Размеры файлов очереди обычно уменьшаются при использовании документов [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], предназначенных для драйвера принтера [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv), по сравнению с их эквивалентами [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)]; однако бывают следующие исключения.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "59075864"
 - <xref:System.Printing.PrintCapabilities>
 - <xref:System.Printing.PrintServer>
 - <xref:System.Printing.PrintQueue>
-- [Практические руководства](printing-how-to-topics.md)
+- [Разделы практического руководства](printing-how-to-topics.md)
 - [Документы в WPF](documents-in-wpf.md)
 - [XPS-документы](/windows/desktop/printdocs/documents)
 - [Сериализация и хранение документов](document-serialization-and-storage.md)

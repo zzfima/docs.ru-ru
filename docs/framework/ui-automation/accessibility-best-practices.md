@@ -6,10 +6,10 @@ helpviewer_keywords:
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074239"
 ---
 # <a name="accessibility-best-practices"></a>Рекомендации по специальным возможностям
@@ -24,7 +24,7 @@ ms.locfileid: "59074239"
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>   
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>Включение программного доступа ко всем элементам и тексту пользовательского интерфейса  
- [!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] элементы должны включать программный доступ. Если [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] — это стандартный элемент управления [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] , то поддержка программного доступа уже включена в этот элемент управления. Если это пользовательский элемент управления, т. е. элемент управления, являющийся подклассом стандартного элемента управления или элемента управления Control, то вы должны проверить в реализации <xref:System.Windows.Automation.Peers.AutomationPeer> области, которые, возможно, необходимо изменить.  
+ Элементы[!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] должны включать программный доступ. Если [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] — это стандартный элемент управления [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] , то поддержка программного доступа уже включена в этот элемент управления. Если это пользовательский элемент управления, т. е. элемент управления, являющийся подклассом стандартного элемента управления или элемента управления Control, то вы должны проверить в реализации <xref:System.Windows.Automation.Peers.AutomationPeer> области, которые, возможно, необходимо изменить.  
   
  Следование этой рекомендации позволяет поставщикам [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] идентифицировать элементы [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]вашего продукта и управлять ими.  
   

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
 ms.openlocfilehash: 6e8b4eba40cc1872cb289ca120679bb951f2652a
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920809"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>COM-взаимодействие в приложениях .NET Framework (Visual Basic)
@@ -27,6 +27,6 @@ ms.locfileid: "58920809"
 |---------|---------|
 | [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md) | Ссылки на разделы, посвященные COM-взаимодействие в Visual Basic, включая объекты COM, элементы управления ActiveX, библиотеки DLL Win32, управляемых объектов и наследования COM-объектов. |
 | [Взаимодействие с неуправляемым кодом](../../../framework/interop/index.md) | Краткое описание некоторых проблем взаимодействия между управляемым и неуправляемым кодом и ссылки для дальнейшего изучения. |
-| [Оболочки COM](../../../framework/interop/com-wrappers.md) | Описание вызываемых оболочек времени выполнения, которые позволяют управляемому коду вызывать методы COM, и вызываемые оболочки COM, которые позволяют клиентам COM вызывать методы объекта .NET. |
+| [Oболочки COM](../../../framework/interop/com-wrappers.md) | Описание вызываемых оболочек времени выполнения, которые позволяют управляемому коду вызывать методы COM, и вызываемые оболочки COM, которые позволяют клиентам COM вызывать методы объекта .NET. |
 | [Расширенное COM-взаимодействие](../../../framework/interop/index.md) | Содержит ссылки на разделы, посвященные оболочки, исключения, наследования, работа с потоками, событий, преобразований и маршалинг COM-взаимодействию. |
 | [Tlbimp.exe (программа экспорта библиотек типов)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | Описывает средства, которые можно использовать для преобразования определения типов, найденные в библиотеке типов COM, в эквивалентные определения сборки среды CLR. |

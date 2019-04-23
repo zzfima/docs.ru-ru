@@ -10,10 +10,10 @@ helpviewer_keywords:
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
 ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078502"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Сглаживание прямых и кривых линий
@@ -47,5 +47,5 @@ ms.locfileid: "59078502"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=nameWithType>
-- [Прямые и кривые линии и фигуры](lines-curves-and-shapes.md)
+- [Линии, кривые и фигуры](lines-curves-and-shapes.md)
 - [Практическое руководство. Сглаживание текста](how-to-use-antialiasing-with-text.md)

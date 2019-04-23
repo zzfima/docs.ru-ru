@@ -10,10 +10,10 @@ helpviewer_keywords:
 - parts [WPF], RadioButton
 ms.assetid: 9acf93f7-dd2f-4010-8ce0-1edd81c52ae2
 ms.openlocfilehash: f11a8338c96d14c3c518713865061e4095ff23b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078724"
 ---
 # <a name="radiobutton-styles-and-templates"></a>Стили и шаблоны элемента RadioButton
@@ -33,8 +33,8 @@ ms.locfileid: "59078724"
 |Отключено|CommonStates|Элемент управления отключен.|  
 |Focused|FocusStates|Элемент управления имеет фокус.|  
 |Без фокуса ввода|FocusStates|Элемент управления не имеет фокуса.|  
-|Помечено|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> — `true`.|  
-|Unchecked|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> — `false`.|  
+|Помечено|CheckStates|Свойство <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> имеет значение `true`.|  
+|Unchecked|CheckStates|Свойство <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> имеет значение `false`.|  
 |Неопределенное|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> — `true`, и <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> является `null`.|  
 |Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класс и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенное свойство `false`.|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления имеет фокус.|  
@@ -55,7 +55,7 @@ ms.locfileid: "59078724"
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Стили и шаблоны элемента Control](control-styles-and-templates.md)
+- [Стили и шаблоны элемента управления](control-styles-and-templates.md)
 - [Настройка элементов управления](control-customization.md)
 - [Стилизация и использование шаблонов](styling-and-templating.md)
 - [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
 ms.openlocfilehash: 9c532858ba3b93d427e5c0455f953db2499ebd6a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072549"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Типы, поддерживаемые сериализатором контракта данных
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF) использует <xref:System.Runtime
   
 -   Типы, помеченные с помощью атрибута <xref:System.SerializableAttribute> . В эту категорию попадают многие типы из библиотеки базовых классов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> обеспечивает полную поддержку этой модели программирования сериализации, используемой в удаленном взаимодействии .NET Framework в <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>и <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>, включая поддержку интерфейса <xref:System.Runtime.Serialization.ISerializable> .  
   
--   Типы, представляющие исходный XML, и типы, представляющие реляционные данные [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] . Типы <xref:System.Xml.XmlElement> и массив элементов <xref:System.Xml.XmlNode> поддерживаются для прямого представления XML. Кроме того, поддерживаются типы, реализующие интерфейс <xref:System.Xml.Serialization.IXmlSerializable> , включая связанный атрибут <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> и типы <xref:System.Xml.Linq.XDocument> и <xref:System.Xml.Linq.XElement> . [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> Типа и <xref:System.Data.DataSet> типа (а также его наследуемые типизированные классы) реализуют <xref:System.Xml.Serialization.IXmlSerializable> интерфейс и поэтому тоже попадают в эту категорию. Дополнительные сведения см. в разделе [типы XML и ADO.NET в контрактах данных](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).  
+-   Типы, представляющие исходный XML, и типы, представляющие реляционные данные [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] . Типы <xref:System.Xml.XmlElement> и массив элементов <xref:System.Xml.XmlNode> поддерживаются для прямого представления XML. Кроме того, поддерживаются типы, реализующие интерфейс <xref:System.Xml.Serialization.IXmlSerializable> , включая связанный атрибут <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> и типы <xref:System.Xml.Linq.XDocument> и <xref:System.Xml.Linq.XElement> . Сериализатор [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> и <xref:System.Data.DataSet> (а также его наследуемые типизированные классы) реализуют интерфейс <xref:System.Xml.Serialization.IXmlSerializable> и поэтому тоже попадают в эту категорию. Дополнительные сведения см. в разделе [типы XML и ADO.NET в контрактах данных](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).  
   
 ## <a name="limitations-of-using-certain-types-in-partial-trust-mode"></a>Ограничения по использованию определенных типов в режиме частичного доверия  
  Ниже приведен список ограничений при использовании некоторых типов в режиме частичного доверия.  

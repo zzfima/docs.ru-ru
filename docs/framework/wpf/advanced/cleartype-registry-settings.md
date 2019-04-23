@@ -6,18 +6,18 @@ helpviewer_keywords:
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
 ms.openlocfilehash: a776c3d4060b9ca291e4e919ab6ca33fb713434c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079998"
 ---
 # <a name="cleartype-registry-settings"></a>Параметры реестра ClearType
-В этом разделе содержится обзор [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] параметры реестра, используемые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений.  
+В этом разделе содержится обзор [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] параметры реестра, используемые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Общие сведения о технологии  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения, которые отображают текст на устройство отображения, используют [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] признаки должны предоставлять чтение. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] — это программная технология, разработанная компанией [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] для улучшения удобочитаемости текста на современных ЖК-мониторах (жидкокристаллических дисплеях), например экранах ноутбуков, карманных ПК и плоскопанельных мониторах. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] работает путем обращения к отдельным вертикальным элементам цветных полос в каждом пикселе ЖК-экрана. Дополнительные сведения о [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], см. в разделе [Общие сведения о технологии ClearType](cleartype-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения, которые отображают текст на устройство отображения, используют [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] признаки должны предоставлять чтение. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] — это программная технология, разработанная [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] для улучшения удобочитаемости текста на современных ЖК-мониторах (жидкокристаллических дисплеях), например экранах ноутбуков, карманных ПК и плоскопанельных мониторах. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] работает путем обращения к отдельным элементам вертикальных цветных полос в каждом пикселе ЖК-экрана. Дополнительные сведения о [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], см. в разделе [Общие сведения о технологии ClearType](cleartype-overview.md).  
   
  Текст, отображаемый с [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] может существенно отличаться при просмотре на различных устройствах отображения. Например, небольшое число мониторов реализуют элементы полос цвета расположены в порядке синий, зеленый, красный, а не чаще, красный, зеленый, синий ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) порядке.  
   
@@ -31,17 +31,17 @@ ms.locfileid: "59079998"
   
 |Параметр|Описание|  
 |-------------|-----------------|  
-|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] level|Описывает уровень [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] прозрачности цвета.|  
+|Уровень [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]|Описывает уровень [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] прозрачности цвета.|  
 |Гамма-уровень|Описывает уровень компонента цвета пикселя для устройства отображения.|  
 |Структура пикселей|Описывает расположение пикселей для устройства отображения.|  
 |Уровень контрастности текста|Описывает уровень контрастности отображаемого текста.|  
   
- Эти параметры доступны внешней конфигурации программы, которая знает, как ссылаться на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] параметры реестра. Эти параметры также можно создать или изменить через прямой доступ к значениям с использованием редактора реестра [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
+ Эти параметры доступны внешней конфигурации программы, которая знает, как ссылаться на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] параметры реестра. Эти параметры также можно создать или изменить через прямой доступ к значениям с использованием редактора реестра [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
   
- Если [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] (это состояние по умолчанию), не заданы параметры реестра [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] запросов приложения [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] сведения о системных параметрах для настроек сглаживания шрифтов.  
+ Если [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] (это состояние по умолчанию), не заданы параметры реестра [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] запросов приложения [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] сведения о системных параметрах для настроек сглаживания шрифтов.  
   
 > [!NOTE]
->  Сведения о перечислении имен устройств отображения см. в разделе `SystemParametersInfo`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] функции.  
+>  Сведения о перечислении имен устройств отображения см. в разделе `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] функции.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>Уровень ClearType  
@@ -89,7 +89,7 @@ ms.locfileid: "59079998"
  Структура пикселей соответствует целочисленному значению в диапазоне от 0 до 2. Значение по умолчанию — 0, представляющее плоскую структуру пикселей.  
   
 > [!NOTE]
->  Сведения о перечислении имен устройств отображения см. в разделе `EnumDisplayDevices`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] функции.  
+>  Сведения о перечислении имен устройств отображения см. в разделе `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] функции.  
   
 ### <a name="registry-setting"></a>Параметр реестра  
  Расположение параметра реестра для структуры пикселей — параметр локальной машины, соответствующий имени определенного устройства отображения.  

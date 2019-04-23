@@ -3,10 +3,10 @@ title: <filterTables>
 ms.date: 03/30/2017
 ms.assetid: 41f1ac35-f559-473a-b2c3-8cc83a6a3831
 ms.openlocfilehash: c49c7cf3a196595556c2bf1b4ed4365bfe1e4cbf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075734"
 ---
 # <a name="filtertables"></a>\<filterTables >
@@ -43,7 +43,7 @@ ms.locfileid: "59075734"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Фильтры >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Таблица маршрутизации, содержащая сопоставление между фильтрами маршрутизации и целевыми конечными точками (которые будут использованы при отправке сообщений при условии совпадения с критериями фильтров).|  
+|[\<Фильтры>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Таблица маршрутизации, содержащая сопоставление между фильтрами маршрутизации и целевыми конечными точками (которые будут использованы при отправке сообщений при условии совпадения с критериями фильтров).|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   

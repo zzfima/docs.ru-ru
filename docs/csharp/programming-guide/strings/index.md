@@ -7,10 +7,10 @@ helpviewer_keywords:
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920692"
 ---
 # <a name="strings-c-programming-guide"></a>Строки (Руководство по программированию на C#)
@@ -128,17 +128,17 @@ string s = String.Empty;
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Практическое руководство. Изменение содержимого строк](../../how-to/modify-string-contents.md)|Описание методов преобразования строк и изменения их содержимого.|  
+|[Практическое руководство. Изменение содержимого строки](../../how-to/modify-string-contents.md)|Описание методов преобразования строк и изменения их содержимого.|  
 |[Практическое руководство. Сравнение строк](../../how-to/compare-strings.md)|Рассказывает, как строки сравниваются по языку, региональным параметрам и порядку.|  
-|[Практическое руководство. Объединение нескольких строк](../../how-to/concatenate-multiple-strings.md)|Демонстрирует разные способы соединения нескольких строк в одну.|
+|[Практическое руководство. Сцепка нескольких строк](../../how-to/concatenate-multiple-strings.md)|Демонстрирует разные способы соединения нескольких строк в одну.|
 |[Практическое руководство. Анализ строк с помощью метода String.Split](../../how-to/parse-strings-using-split.md)|Содержит примеры кода, демонстрирующие использование метода `String.Split` для анализа строк.|  
 |[Практическое руководство. Поиск по строкам](../../how-to/search-strings.md)|Описание использования поиска для нахождения в строках определенных шаблонов или текста.|  
 |[Практическое руководство. Определение представления числового значения в строке](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Объясняет, как безопасно проанализировать строку, чтобы проверить, содержит ли она допустимое числовое значение.|  
 |[Интерполяция строк](../../language-reference/tokens/interpolated.md)|Описывает функцию интерполяции строк, которая предоставляет удобный синтаксис для форматирования строк.|
 |[Базовые операции со строками в .NET Framework](../../../../docs/standard/base-types/basic-string-operations.md)|Содержит ссылки на статьи, в которых показаны базовые операции над строками с помощью методов <xref:System.String?displayProperty=nameWithType> и <xref:System.Text.StringBuilder?displayProperty=nameWithType>.|  
-|[Анализ строк](../../../standard/base-types/parsing-strings.md)|Описывает, как преобразовать строковые представления базовых типов .NET в экземпляры соответствующих типов.|  
+|[Parsing Strings](../../../standard/base-types/parsing-strings.md)|Описывает, как преобразовать строковые представления базовых типов .NET в экземпляры соответствующих типов.|  
 |[Синтаксический анализ строк даты и времени в .NET](../../../standard/base-types/parsing-datetime.md)|Показывает, как преобразовать строку, например "01/24/2008", в объект <xref:System.DateTime?displayProperty=nameWithType>.|  
-|[Сравнение строк](../../../../docs/standard/base-types/comparing.md)|Объясняет, как сравнивать строки, и содержит примеры на языках C# и Visual Basic.|  
-|[Использование класса StringBuilder](../../../standard/base-types/stringbuilder.md)|Описывает создание и изменение динамических строковых объектов с помощью класса <xref:System.Text.StringBuilder>.|  
+|[Сравнение строк в .NET Framework](../../../../docs/standard/base-types/comparing.md)|Объясняет, как сравнивать строки, и содержит примеры на языках C# и Visual Basic.|  
+|[Using the StringBuilder class](../../../standard/base-types/stringbuilder.md) (Использование класса StringBuilder)|Описывает создание и изменение динамических строковых объектов с помощью класса <xref:System.Text.StringBuilder>.|  
 |[LINQ и строки](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|Содержит инструкции по выполнению различных операций со строками с помощью запросов LINQ.|  
 |[Руководство по программированию на C#](../../../csharp/programming-guide/index.md)|Содержит ссылки на статьи с конструкциями программирования на C#.|  

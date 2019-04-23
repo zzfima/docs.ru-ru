@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
 ms.openlocfilehash: ee45771a289804395387f9d6d49b667da1a76024
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077736"
 ---
 # <a name="data"></a>Данные
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Привязка данных обеспечивает простой и последовательный способ представления и взаимодействия с данными приложениях. Элементы можно связывать с данными из различных источников данных в виде объектов [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] также предоставляет механизм для передачи данных с помощью операций перетаскивания и вставки.  
+Привязка данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет приложениям простой и последовательный способ представления данных и взаимодействия с ними. Элементы можно связывать с данными из различных источников данных в виде объектов [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] также предоставляет механизм передачи данных с помощью операций перетаскивания.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Привязка данных](data-binding-wpf.md)  
@@ -40,5 +40,5 @@ ms.locfileid: "59077736"
   
 ## <a name="see-also"></a>См. также
 
-- [Пошаговое руководство. Создание классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [Пошаговое руководство. Кэширование данных приложения WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)
+- [Пошаговое руководство: Кэширование данных приложения WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

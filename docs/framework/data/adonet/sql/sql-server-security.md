@@ -3,10 +3,10 @@ title: Безопасность SQL Server
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
 ms.openlocfilehash: 4aa4feadb6305f8a0ea6f99c2add780d6fca95cd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080775"
 ---
 # <a name="sql-server-security"></a>Безопасность SQL Server
@@ -29,7 +29,7 @@ SQL Server предоставляет много функций для созд�
  [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  Подразделы с описанием различных сценариев обеспечения безопасности для приложений ADO.NET и SQL Server.  
   
- [Безопасность SQL Server, экспресс-выпуск](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
+ [Безопасность SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
  Описывает вопросы безопасности для SQL Server Express.  
   
 ## <a name="related-sections"></a>Связанные разделы  

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
 ms.openlocfilehash: 56522ee5bd4391e43c261558b2fa622234c9ea3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073276"
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>Практическое руководство. Управление анимацией с помощью From, To и By
@@ -41,4 +41,4 @@ ms.locfileid: "59073276"
 
 - [Общие сведения об эффектах анимации](animation-overview.md)
 - [Общие сведения об анимации по ключевым кадрам](key-frame-animations-overview.md)
-- [FROM, To и пример целевых значений анимации](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [Пример целевых значений анимации From, To и By](https://go.microsoft.com/fwlink/?LinkID=159988)

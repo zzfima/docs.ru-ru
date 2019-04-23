@@ -11,10 +11,10 @@ helpviewer_keywords:
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
 ms.openlocfilehash: 9ce0b70bfdd70b47857167ff14e62ed2bbda569d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077463"
 ---
 # <a name="collection-type-dependency-properties"></a>Свойства зависимостей типа коллекция
@@ -61,4 +61,4 @@ ms.locfileid: "59077463"
 - [Общие сведения о привязке данных](../data/data-binding-overview.md)
 - [Общие сведения о свойствах зависимости](dependency-properties-overview.md)
 - [Пользовательские свойства зависимостей](custom-dependency-properties.md)
-- [Метаданные свойства зависимости](dependency-property-metadata.md)
+- [Метаданные свойства зависимостей](dependency-property-metadata.md)

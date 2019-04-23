@@ -8,10 +8,10 @@ helpviewer_keywords:
 - buttons [Windows Forms], about buttons
 ms.assetid: 255b291b-51a9-4a92-a1a4-2400cd82443f
 ms.openlocfilehash: 1ded871fdfab83407d8022ca0c4ce6b2c8a6c67c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076553"
 ---
 # <a name="button-control-overview-windows-forms"></a>Общие сведения об элементе управления Button (Windows Forms)
@@ -24,8 +24,8 @@ ms.locfileid: "59076553"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.Button>
-- [Практическое руководство. Обработка события нажатия кнопки в Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
+- [Практическое руководство. Ответ на нажатие кнопки Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
 - [Способы активации элемента управления Button в Windows Forms](ways-to-select-a-windows-forms-button-control.md)
-- [Практическое руководство. Создание кнопки принятия в формах Windows Forms с помощью конструктора](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
-- [Практическое руководство. Создание кнопки отмены в формах Windows Forms с помощью конструктора](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
+- [Практическое руководство. Создание кнопки принятия в конструкторе Windows Forms](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
+- [Практическое руководство. Создание кнопки отмены, с помощью конструктора Windows Forms](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
 - [Элемент управления Button](button-control-windows-forms.md)

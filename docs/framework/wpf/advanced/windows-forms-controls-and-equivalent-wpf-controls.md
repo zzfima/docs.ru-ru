@@ -7,10 +7,10 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 ms.assetid: 8a157e6b-8054-46db-a5cf-a78966acc7a1
 ms.openlocfilehash: abfcb9f5398a6a8d264985543df585bea93a0446
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075279"
 ---
 # <a name="windows-forms-controls-and-equivalent-wpf-controls"></a>Элементы управления Windows Forms и эквивалентные элементы управления WPF
@@ -26,13 +26,13 @@ ms.locfileid: "59075279"
 |<xref:System.Windows.Forms.BindingSource>|<xref:System.Windows.Data.CollectionViewSource>||  
 |<xref:System.Windows.Forms.Button>|<xref:System.Windows.Controls.Button>||  
 |<xref:System.Windows.Forms.CheckBox>|<xref:System.Windows.Controls.CheckBox>||  
-|<xref:System.Windows.Forms.CheckedListBox>|<xref:System.Windows.Controls.ListBox> с композицией.||  
+|<xref:System.Windows.Forms.CheckedListBox>|<xref:System.Windows.Controls.ListBox>с использованием композиции.||  
 |<xref:System.Windows.Forms.ColorDialog>|Эквивалент отсутствует.||  
 |<xref:System.Windows.Forms.ComboBox>|<xref:System.Windows.Controls.ComboBox>|<xref:System.Windows.Controls.ComboBox> не поддерживает автоматическое завершение.|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|<xref:System.Windows.Controls.ContextMenu>||  
 |<xref:System.Windows.Forms.DataGridView>|<xref:System.Windows.Controls.DataGrid>||  
 |<xref:System.Windows.Forms.DateTimePicker>|<xref:System.Windows.Controls.DatePicker>||  
-|<xref:System.Windows.Forms.DomainUpDown>|<xref:System.Windows.Controls.TextBox> и два <xref:System.Windows.Controls.Primitives.RepeatButton> элементов управления.||  
+|<xref:System.Windows.Forms.DomainUpDown>|<xref:System.Windows.Controls.TextBox> с двумя элементами управления <xref:System.Windows.Controls.Primitives.RepeatButton>||  
 |<xref:System.Windows.Forms.ErrorProvider>|Эквивалент отсутствует.||  
 |<xref:System.Windows.Forms.FlowLayoutPanel>|<xref:System.Windows.Controls.WrapPanel> или <xref:System.Windows.Controls.StackPanel>||  
 |<xref:System.Windows.Forms.FolderBrowserDialog>|Эквивалент отсутствует.||  
@@ -47,10 +47,10 @@ ms.locfileid: "59075279"
 |<xref:System.Windows.Forms.ListBox>|<xref:System.Windows.Controls.ListBox>||  
 |<xref:System.Windows.Forms.ListView>|<xref:System.Windows.Controls.ListView>|<xref:System.Windows.Controls.ListView> Управления содержит представления сведения только для чтения.|  
 |<xref:System.Windows.Forms.MaskedTextBox>|Эквивалент отсутствует.||  
-|<xref:System.Windows.Forms.MenuStrip>|<xref:System.Windows.Controls.Menu>|<xref:System.Windows.Controls.Menu> стили элемента управления можно приблизительно реализовать поведение и внешний вид <xref:System.Windows.Forms.ToolStripProfessionalRenderer?displayProperty=nameWithType> класса.|  
+|<xref:System.Windows.Forms.MenuStrip>|<xref:System.Windows.Controls.Menu>|Стили элемента управления <xref:System.Windows.Controls.Menu> могут использоваться для имитации поведения и внешнего вида класса <xref:System.Windows.Forms.ToolStripProfessionalRenderer?displayProperty=nameWithType>|  
 |<xref:System.Windows.Forms.MonthCalendar>|<xref:System.Windows.Controls.Calendar>||  
 |<xref:System.Windows.Forms.NotifyIcon>|Эквивалент отсутствует.||  
-|<xref:System.Windows.Forms.NumericUpDown>|<xref:System.Windows.Controls.TextBox> и два <xref:System.Windows.Controls.Primitives.RepeatButton> элементов управления.||  
+|<xref:System.Windows.Forms.NumericUpDown>|<xref:System.Windows.Controls.TextBox> с двумя элементами управления <xref:System.Windows.Controls.Primitives.RepeatButton>||  
 |<xref:System.Windows.Forms.OpenFileDialog>|<xref:Microsoft.Win32.OpenFileDialog>|<xref:Microsoft.Win32.OpenFileDialog>Класс [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] оболочка[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] для элемента управления |  
 |<xref:System.Windows.Forms.PageSetupDialog>|Эквивалент отсутствует.||  
 |<xref:System.Windows.Forms.Panel>|<xref:System.Windows.Controls.Canvas>||  
@@ -73,10 +73,10 @@ ms.locfileid: "59075279"
 |<xref:System.Windows.Forms.TextBox>|<xref:System.Windows.Controls.TextBox>||  
 |<xref:System.Windows.Forms.Timer>|<xref:System.Windows.Threading.DispatcherTimer>||  
 |<xref:System.Windows.Forms.ToolStrip>|<xref:System.Windows.Controls.ToolBar>||  
-|<xref:System.Windows.Forms.ToolStripContainer>|<xref:System.Windows.Controls.ToolBar> с композицией.||  
-|<xref:System.Windows.Forms.ToolStripDropDown>|<xref:System.Windows.Controls.ToolBar> с композицией.||  
-|<xref:System.Windows.Forms.ToolStripDropDownMenu>|<xref:System.Windows.Controls.ToolBar> с композицией.||  
-|<xref:System.Windows.Forms.ToolStripPanel>|<xref:System.Windows.Controls.ToolBar> с композицией.||  
+|<xref:System.Windows.Forms.ToolStripContainer>|<xref:System.Windows.Controls.ToolBar>с использованием композиции.||  
+|<xref:System.Windows.Forms.ToolStripDropDown>|<xref:System.Windows.Controls.ToolBar>с использованием композиции.||  
+|<xref:System.Windows.Forms.ToolStripDropDownMenu>|<xref:System.Windows.Controls.ToolBar>с использованием композиции.||  
+|<xref:System.Windows.Forms.ToolStripPanel>|<xref:System.Windows.Controls.ToolBar>с использованием композиции.||  
 |<xref:System.Windows.Forms.ToolTip>|<xref:System.Windows.Controls.ToolTip>||  
 |<xref:System.Windows.Forms.TrackBar>|<xref:System.Windows.Controls.Slider>||  
 |<xref:System.Windows.Forms.TreeView>|<xref:System.Windows.Controls.TreeView>||  
@@ -88,7 +88,7 @@ ms.locfileid: "59075279"
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Конструктор WPF для Windows Forms разработчики](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/cc165605(v=vs.100))
-- [Пошаговое руководство. Размещение элементов управления Windows Forms в WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
-- [Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Конструктор WPF для разработчиков Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/cc165605(v=vs.100))
+- [Пошаговое руководство: Размещение элемента управления Windows Forms в WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Пошаговое руководство: Размещение составного элемента управления WPF в Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
 - [Миграция и взаимодействие систем](migration-and-interoperability.md)

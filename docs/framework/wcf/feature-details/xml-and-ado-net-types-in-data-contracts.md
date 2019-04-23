@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
 ms.openlocfilehash: 1053a543a23ed36a5c06c45044c8fdbe25a60538
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073966"
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>Типы XML и ADO.NET в контрактах данных
@@ -146,7 +146,7 @@ ms.locfileid: "59073966"
  Те же правила объявления глобального элемента применяются и к устаревшим типам наборов данных. Важно отметить, что `XmlRootAttribute` не может переопределить объявления глобальных элементов, добавленных с помощью пользовательского кода или добавленных в набор схем `XmlSchemaSet` с помощью метода поставщика схем или посредством метода `GetSchema` для устаревших типов наборов данных.  
   
 ### <a name="ixmlserializable-element-types"></a>Типы элемента IXmlSerializable  
- `IXmlSerializable` типы элементов имеющие `IsAny` свойство значение `true` или их метод поставщика схем возвращает `null`.  
+ Типы элементов `IXmlSerializable` либо имеют свойство `IsAny`, которому присвоено значение `true`, либо их метод поставщика схем возвращает значение `null`.  
   
  Сериализация и десериализация типа элемента очень похожа на сериализацию и десериализацию типа содержимого. Однако есть некоторые важные отличия.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "59073966"
   
 -   При сериализации типа элемента на верхнем уровне без указания корневого имени и пространства имен во время создания <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> и <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> обычно не выполняют никаких операций, а <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> вызывает `WriteXml`. В данном режиме сериализуемый объект не может иметь значение null и не может быть назначен полиморфно. Кроме того, не может быть включено сохранение графов объектов и не может использоваться `NetDataContractSerializer`.  
   
--   При десериализации типа элемента на верхнем уровне без указания корневого имени и пространства имен во время построения <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> возвращает значение `true`, если не может найти начало хотя бы одного из элементов. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> с помощью `verifyObjectName` параметру присвоить `true` ведет себя так же, как `IsStartObject` перед фактическим считыванием объекта. `ReadObject` затем передает управление `ReadXml` метод.  
+-   При десериализации типа элемента на верхнем уровне без указания корневого имени и пространства имен во время построения <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> возвращает значение `true`, если не может найти начало хотя бы одного из элементов. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> с параметром `verifyObjectName`, установленным в значение `true`, работает таким же образом, как и `IsStartObject` перед фактическим считыванием объекта. Затем `ReadObject` передает управление методу `ReadXml`.  
   
  Схема, экспортированная для типов элементов, аналогична схеме для типа `XmlElement`, как описано в предыдущем разделе, за исключением того, что метод поставщика схемы может добавлять дополнительную схему в <xref:System.Xml.Schema.XmlSchemaSet> как типы содержимого. Использование атрибута `XmlRootAttribute` с типами элемента не разрешено, и для данных типов никогда не выдаются глобальные объявления элемента.  
   

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
 ms.openlocfilehash: a5a32220ad1f638bf2e93051e9b436d8270aec2f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082195"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Переопределение идентификатора службы для проверки подлинности
@@ -59,5 +59,5 @@ ms.locfileid: "59082195"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Создание пользовательского средства проверки идентификации клиентов](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+- [Практическое руководство. Создание средства проверки идентификации настраиваемого клиента](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
 - [Идентификация и проверка подлинности службы](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

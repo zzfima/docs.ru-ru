@@ -3,10 +3,10 @@ title: Безопасность в LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
 ms.openlocfilehash: 6af073a86b0feaba2fdcd9facd9474bb334096e7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078148"
 ---
 # <a name="security-in-linq-to-sql"></a>Безопасность в LINQ to SQL
@@ -36,4 +36,4 @@ ms.locfileid: "59078148"
 ## <a name="see-also"></a>См. также
 
 - [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Вопросы и ответы](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+- [Часто задаваемые вопросы](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

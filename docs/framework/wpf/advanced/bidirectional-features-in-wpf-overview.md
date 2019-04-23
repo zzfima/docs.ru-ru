@@ -6,10 +6,10 @@ helpviewer_keywords:
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
 ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079829"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Общие сведения о двусторонних возможностях в WPF
@@ -41,7 +41,7 @@ ms.locfileid: "59079829"
   
  [!code-xaml[FlowDirection#FlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDirection/CS/Window1.xaml#flowdirection)]  
   
- Верхний уровень <xref:System.Windows.Window> имеет <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>, поэтому все элементы, содержащиеся в нем, наследуют то же <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Элемент мог переопределить заданное <xref:System.Windows.FrameworkElement.FlowDirection%2A> его необходимо добавить явное изменение направления как во втором <xref:System.Windows.Controls.TextBlock> в предыдущем примере, который изменяет на <xref:System.Windows.FlowDirection.LeftToRight>. Если аргумент <xref:System.Windows.FrameworkElement.FlowDirection%2A> определен, по умолчанию <xref:System.Windows.FlowDirection.LeftToRight> применяется.  
+ Верхний уровень <xref:System.Windows.Window> имеет <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection>, поэтому все элементы, содержащиеся в нем, наследуют то же <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Элемент мог переопределить заданное <xref:System.Windows.FrameworkElement.FlowDirection%2A> его необходимо добавить явное изменение направления как во втором <xref:System.Windows.Controls.TextBlock> в предыдущем примере, который изменяет на <xref:System.Windows.FlowDirection.LeftToRight>. Если аргумент <xref:System.Windows.FrameworkElement.FlowDirection%2A> определен, по умолчанию <xref:System.Windows.FlowDirection.LeftToRight> применяется.  
   
  На следующем рисунке показан в предыдущем примере выходных данных:
 
@@ -114,7 +114,7 @@ ms.locfileid: "59079829"
     
  ![Рисунок, показывающий элемент toolbar с правом градиент слева.](./media/bidirectional-features-in-wpf-overview/toolbar-right-left-gradient.png)  
   
- В следующем примере рисуется <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.Controls.ToolBar>. (Чтобы нарисовать его слева направо, удалите <xref:System.Windows.FlowDirection> атрибут <xref:System.Windows.Controls.ToolBar>.  
+ В следующем примере рисуется <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.Controls.ToolBar>. (Чтобы нарисовать его слева направо, удалите <xref:System.Windows.FlowDirection> атрибут <xref:System.Windows.Controls.ToolBar>.  
   
  [!code-xaml[Gradient#Gradient](~/samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]  
   
@@ -138,11 +138,11 @@ ms.locfileid: "59079829"
   
  **Примечание** включенные в загружаемые файлы — **ms_logo.jpg** файл. В коде предполагается, что JPG-файл находится не внутри проекта, а где-нибудь на диске C:\. Необходимо скопировать JPG-файл из файлов проекта на диск C:\ или изменить код так, чтобы выполнялся поиск файла внутри проекта. Чтобы сделать это, измените `Source="file://c:/ms_logo.jpg"` для `Source="ms_logo.jpg"`.  
   
- **Пути**  
+ **Paths**  
   
- В дополнение к <xref:System.Windows.Controls.Image>, еще один интересный элемент <xref:System.Windows.Shapes.Path>. Контур — это объект, который может нарисовать последовательность соединенных линий и кривых. Он ведет себя так же, как <xref:System.Windows.Controls.Image> относительно его <xref:System.Windows.FlowDirection>, например его <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> является горизонтальным отражением элемента его <xref:System.Windows.FlowDirection.LeftToRight> один. Однако в отличие от <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> наследует его <xref:System.Windows.FlowDirection> из контейнера и не требуется указывать явно.  
+ В дополнение к <xref:System.Windows.Controls.Image>, еще один интересный элемент <xref:System.Windows.Shapes.Path>. Контур — это объект, который может нарисовать последовательность соединенных линий и кривых. Он ведет себя так же, как <xref:System.Windows.Controls.Image> относительно его <xref:System.Windows.FlowDirection>, например его <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> является горизонтальным отражением элемента его <xref:System.Windows.FlowDirection.LeftToRight> один. Однако в отличие от <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> наследует его <xref:System.Windows.FlowDirection> из контейнера и не требуется указывать явно.  
   
- В следующем примере рисуется простая стрелка, использующая три линии. Первая стрелка наследует <xref:System.Windows.FlowDirection.RightToLeft> направление из потока <xref:System.Windows.Controls.StackPanel> таким образом, чтобы его начальная и конечная точки отсчитываются от корня на правой стороне. Вторая стрелка, который явно <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> также начинается справа от оператора. Однако третья стрелка начинается от корня с левой стороны. Дополнительные сведения о рисовании см. в разделе <xref:System.Windows.Media.LineGeometry> и <xref:System.Windows.Media.GeometryGroup>.  
+ В следующем примере рисуется простая стрелка, использующая три линии. Первая стрелка наследует <xref:System.Windows.FlowDirection.RightToLeft> направление из потока <xref:System.Windows.Controls.StackPanel> таким образом, чтобы его начальная и конечная точки отсчитываются от корня на правой стороне. Вторая стрелка, который явно <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> также начинается справа от оператора. Однако третья стрелка начинается от корня с левой стороны. Дополнительные сведения о рисовании см. в разделе <xref:System.Windows.Media.LineGeometry> и <xref:System.Windows.Media.GeometryGroup>.  
   
  [!code-xaml[Paths#Paths](~/samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]  
   
@@ -158,11 +158,11 @@ ms.locfileid: "59079829"
   
  Это позволяет приложениям обрабатывать числовые данные без необходимости преобразовать их с одного языка на другой, например, пользователь может открыть [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] электронную таблицу в локализованных арабский [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] числа на арабском языке и открыть его в европейскую версию [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] он увидит европейское представление тех же чисел. Это также необходимо для других символов, например запятая или символ процента, так как они обычно сопровождают числа в одном документе.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] продолжает традицию и добавляет новые для этого средства, позволяющие пользователю более точно контролировать время и способ подстановки используется. Эта функция может использоваться со всеми языками, но особенно полезна она в обработке двунаправленного содержимого, когда представление чисел для разных региональных стандартов становится проблемой для разработчиков приложений, предназначенных для использования в разных странах.  
+ Платформа [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] продолжает эту традицию и добавляет новые возможности, позволяющие пользователю более точно определять, когда и как должна применяться подстановка. Эта функция может использоваться со всеми языками, но особенно полезна она в обработке двунаправленного содержимого, когда представление чисел для разных региональных стандартов становится проблемой для разработчиков приложений, предназначенных для использования в разных странах.  
   
  Основным свойством, управляющим способом подстановки чисел работает [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] является <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> свойства зависимостей. <xref:System.Windows.Media.NumberSubstitution> Класс указывает, как должны отображаться числа в тексте. Он имеет три открытых свойства, определяющих его поведение. Ниже приведен краткий обзор каждого из свойств.  
   
- **CultureSource:**  
+ **CultureSource.**  
   
  Это свойство задает способ определения регионального стандарта для чисел. Оно принимает одно из трех <xref:System.Windows.Media.NumberCultureSource> значений перечисления.  
   

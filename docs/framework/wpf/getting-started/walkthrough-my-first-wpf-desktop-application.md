@@ -12,10 +12,10 @@ author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
 ms.openlocfilehash: dbfc40bd1fcc97810ea1397731bd8c232297cbd1
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055252"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Пошаговое руководство. Создание классического приложения WPF
@@ -494,7 +494,7 @@ ms.locfileid: "59055252"
 
 - [Архитектура WPF](../advanced/wpf-architecture.md)
 - [Обзор XAML (WPF)](../advanced/xaml-overview-wpf.md)
-- [Общие сведения о свойствах зависимости](../advanced/dependency-properties-overview.md)
+- [Общие сведения о свойствах зависимостей](../advanced/dependency-properties-overview.md)
 - [Макет](../advanced/layout.md)
 
 Более подробную информацию о создании приложений см. в следующих разделах:

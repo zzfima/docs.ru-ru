@@ -3,10 +3,10 @@ title: Общие сведения о LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
 ms.openlocfilehash: 635f1c17da40095990c238912f9e09ad398e6637
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073680"
 ---
 # <a name="linq-to-dataset-overview"></a>Общие сведения о LINQ to DataSet
@@ -14,7 +14,7 @@ ms.locfileid: "59073680"
   
  Объект <xref:System.Data.DataSet> имеет ограниченные возможности запросов. Метод <xref:System.Data.DataTable.Select%2A> можно использовать для фильтрации и сортировки, а методы <xref:System.Data.DataRow.GetChildRows%2A> и <xref:System.Data.DataRow.GetParentRow%2A> - для навигации по иерархии. Для более сложных операций необходимо писать пользовательские запросы. Это может снизить производительность приложений и создать трудности при их сопровождении.  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] упрощает и ускоряет запросы к данным, кэшированным в <xref:System.Data.DataSet> объекта. Эти запросы выражены на языке программирования, а не в виде строковых литералов, внедренных в код приложения. Это означает, что разработчикам не придется изучать отдельный язык запросов. Кроме того [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] разработчики Visual Studio могут работать более продуктивно, так как в интегрированной среде разработки Visual Studio обеспечивает проверку синтаксиса во время компиляции, статическую типизацию и поддержку технологии IntelliSense для [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] также можно использовать для запросов к данным, находящимся в одной или нескольких источников данных. Это делает возможными много сценариев, требующих гибкости в представлении и управлении данными. В частности, этот метод обработки требуется для универсальных приложений отчетности, анализа и бизнес-аналитики.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] упрощает и ускоряет запросы к данным, кэшированным в объекте <xref:System.Data.DataSet>. Эти запросы выражены на языке программирования, а не в виде строковых литералов, внедренных в код приложения. Это означает, что разработчикам не придется изучать отдельный язык запросов. Кроме того [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] разработчики Visual Studio могут работать более продуктивно, так как в интегрированной среде разработки Visual Studio обеспечивает проверку синтаксиса во время компиляции, статическую типизацию и поддержку технологии IntelliSense для [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. Технология [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] также может использоваться для запросов к данным, находящимся в одном или нескольких источниках. Это делает возможными много сценариев, требующих гибкости в представлении и управлении данными. В частности, этот метод обработки требуется для универсальных приложений отчетности, анализа и бизнес-аналитики.  
   
 ## <a name="querying-datasets-using-linq-to-dataset"></a>Запросы к наборам данных с помощью LINQ to DataSet  
  Перед запросом к объекту <xref:System.Data.DataSet> с помощью [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] нужно поместить в объект <xref:System.Data.DataSet> данные. Существует несколько способов загрузить данные в <xref:System.Data.DataSet>, например с помощью <xref:System.Data.Common.DataAdapter> класса или [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md). После загрузки данных в <xref:System.Data.DataSet> объекта, началом для выполнения запроса. Составление запросов с использованием [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] похоже на использование [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] с другими [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-источниками данных, поддерживающих. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] запросы можно выполнять к одиночным таблицам <xref:System.Data.DataSet> или от более одной таблицы с помощью <xref:System.Linq.Enumerable.Join%2A> и <xref:System.Linq.Enumerable.GroupJoin%2A> стандартные операторы запросов.  
@@ -31,6 +31,6 @@ ms.locfileid: "59073680"
 ## <a name="see-also"></a>См. также
 
 - [Запросы к DataSet](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
-- [Language-Integrated Query (LINQ):C#](../../../csharp/programming-guide/concepts/linq/index.md)
-- [Language-Integrated Query (LINQ): Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [LINQ — C#](../../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ — Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)

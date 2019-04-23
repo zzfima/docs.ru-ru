@@ -7,14 +7,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
 ms.openlocfilehash: 5a962b30771414e4b20711b001dc38ff8dc69823
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082572"
 ---
 # <a name="toolstripcontainer-control"></a>Элемент управления ToolStripContainer
-<xref:System.Windows.Forms.ToolStrip> элементы управления обладают возможностью встроенного нависания (совместного использования горизонтального или вертикального пространства в области инструментов при прикреплении) с помощью <xref:System.Windows.Forms.ToolStripContainer>.  
+Элементы управления <xref:System.Windows.Forms.ToolStrip> обладают возможностью встроенного нависания (совместного использования горизонтального или вертикального пространства в области инструментов при прикреплении) благодаря использованию <xref:System.Windows.Forms.ToolStripContainer>.  
   
  В подразделах данного раздела описываются принципы и методы применения возможностей <xref:System.Windows.Forms.ToolStripContainer> в приложениях.  
   
@@ -22,10 +22,10 @@ ms.locfileid: "59082572"
  [Общие сведения об элементе управления ToolStripContainer](toolstripcontainer-control-overview.md)  
  Содержит разделы с описанием назначения и основных понятий элемента управления <xref:System.Windows.Forms.ToolStripContainer> Windows Forms.  
   
- [Практическое руководство. Добавление в форму элемента управления ToolStripContainer](how-to-add-a-toolstripcontainer-to-a-form.md)  
+ [Практическое руководство. Добавление контейнера ToolStripContainer в форму](how-to-add-a-toolstripcontainer-to-a-form.md)  
  Показано добавление элемента <xref:System.Windows.Forms.ToolStripContainer> в приложение и добавление элемента управления на определенную панель <xref:System.Windows.Forms.ToolStripContainer>.  
   
- [Практическое руководство. Добавление элемента управления на панель, представленную компонентом ToolStripContentPanel](how-to-add-a-control-to-a-toolstripcontentpanel.md)  
+ [Практическое руководство. Руководство Добавление элемента управления](how-to-add-a-control-to-a-toolstripcontentpanel.md)  
  Показано добавление элемента управления в <xref:System.Windows.Forms.ToolStripContentPanel>.  
   
 ## <a name="reference"></a>Ссылка  
@@ -43,4 +43,4 @@ ms.locfileid: "59082572"
   
 ## <a name="see-also"></a>См. также
 
-- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)
+- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

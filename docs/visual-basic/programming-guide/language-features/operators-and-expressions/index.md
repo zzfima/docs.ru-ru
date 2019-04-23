@@ -11,10 +11,10 @@ helpviewer_keywords:
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
 ms.openlocfilehash: b762c3002913cbd925579ef28f2aa01411976c32
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073654"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Операторы и выражения в Visual Basic
@@ -64,6 +64,6 @@ ms.locfileid: "59073654"
 
 ## <a name="see-also"></a>См. также
 
-- [Операторы](../../../../visual-basic/language-reference/operators/index.md)
+- [Инструкции](../../../../visual-basic/language-reference/operators/index.md)
 - [Эффективное сочетание операторов](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
 - [Операторы](../../../../visual-basic/language-reference/statements/index.md)

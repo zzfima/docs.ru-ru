@@ -3,10 +3,10 @@ title: Поддерживаемые и неподдерживаемые мето
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
 ms.openlocfilehash: 74b3973f931fa6f0d1f5b380833b8d5e5566563b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077079"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Поддерживаемые и неподдерживаемые методы LINQ (LINQ to Entities)
@@ -150,7 +150,7 @@ ms.locfileid: "59077079"
 |Метод|Поддержка|Сигнатура функции Visual Basic|Сигнатура метода C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.Cast%2A>|Поддерживается для типов-примитивов модели EDM|`Function Cast(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Cast<TResult>( this IQueryable source )`|  
-|<xref:System.Linq.Queryable.OfType%2A>|Поддерживается для <xref:System.Data.Metadata.Edm.EntityType>|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
+|<xref:System.Linq.Queryable.OfType%2A>|Поддерживается для объекта <xref:System.Data.Metadata.Edm.EntityType>|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
   
 ## <a name="paging-methods"></a>Методы постраничного просмотра  
  В запросах [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] не поддерживается целый ряд методов постраничного просмотра LINQ. Дополнительные сведения см. в разделе [стандартных операторов запросов в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). В следующей таблице перечисляются поддерживаемые и неподдерживаемые методы постраничного просмотра.  
@@ -180,4 +180,4 @@ ms.locfileid: "59077079"
   
 ## <a name="see-also"></a>См. также
 
-- [Стандартные операторы в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)
+- [Стандартные операторы запроса в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)

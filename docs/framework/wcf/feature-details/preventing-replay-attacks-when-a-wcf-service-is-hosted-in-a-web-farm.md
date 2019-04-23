@@ -3,10 +3,10 @@ title: Предотвращение атак воспроизведения, к�
 ms.date: 03/30/2017
 ms.assetid: 1c2ed695-7a31-4257-92bd-9e9731b886a5
 ms.openlocfilehash: e27a85d42268df107b26d3bd24af15a639bb1836
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072927"
 ---
 # <a name="preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm"></a>Предотвращение атак воспроизведения, когда служба WCF размещена на веб-ферме

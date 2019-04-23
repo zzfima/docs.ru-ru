@@ -4,12 +4,12 @@ description: Сведения о том, как определять и испо
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: dd5094789114f7ad620dd681877318ad49b78997
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcac162f63438b6cbe54908383467d4b0f227c39
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514423"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59081852"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Возвращаемые ссылочные значения и ссылочные локальные переменные
 
@@ -59,7 +59,6 @@ public ref Person GetContactInformation(string fname, string lname)
 - Возвращая псевдоним *по ссылке*, вы возвращаете новый псевдоним для той же переменной.
 - Передавая псевдоним другому методу *по ссылке*, вы передаете ссылку на переменную, на которую ссылается псевдоним.
 - Создавая для псевдонима [локальную ссылочную переменную](#ref-locals), вы создаете новый псевдоним для той же переменной.
-
 
 ## <a name="ref-locals"></a>Ссылочные локальные переменные
 
