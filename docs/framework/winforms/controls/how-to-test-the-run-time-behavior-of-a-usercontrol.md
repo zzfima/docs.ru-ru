@@ -9,10 +9,10 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
 ms.openlocfilehash: 15b37c71e6643b588c0378510965a9a3e7cb56e9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321774"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Практическое руководство. Тестирование поведения элемента UserControl во время выполнения
@@ -70,6 +70,6 @@ ms.locfileid: "59321774"
 
 - <xref:System.Windows.Forms.UserControl>
 - [Практическое руководство. Создание составных элементов управления](how-to-author-composite-controls.md)
-- [Пошаговое руководство. Создание составного элемента управления с помощью Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Пошаговое руководство. Создание составного элемента управления с помощью C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [конструктор пользовательских элементов управления](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))
+- [Пошаговое руководство: Создание составного элемента управления с помощью Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Пошаговое руководство: Создание составного элемента управления с помощью VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Конструктор пользовательских элементов управления](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))
