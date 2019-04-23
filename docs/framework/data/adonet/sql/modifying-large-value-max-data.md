@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
 ms.openlocfilehash: eb938cfae645a9cc3811f1b5a02cddef742bac89
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317107"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Изменение данных больших объемов (max) в ADO.NET
@@ -21,7 +21,7 @@ ms.locfileid: "59317107"
   
  **Электронная документация по SQL Server**  
   
-1. [Использование типов данных большого размера](https://go.microsoft.com/fwlink/?LinkId=120498)  
+1. [Использование типов данных больших значений](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## <a name="large-value-type-restrictions"></a>Ограничения для типов данных большого размера  
  Следующие ограничения, не существующие для более мелких типов данных, применяются к типам данных `max`.  
@@ -33,7 +33,7 @@ ms.locfileid: "59317107"
 -   Большие столбцы типа `varchar` нельзя использовать в качестве ключевых столбцов секционирования.  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>Работа с типами большого размера на языке Transact-SQL  
- Функция `OPENROWSET` языка Transact-SQL является единовременным методом соединения и доступа к удаленным данным. Включает все сведения о соединении, необходимые для доступа к удаленным данным источника данных OLE DB. `OPENROWSET` можно ссылаться в предложении FROM запроса, как если бы оно было имя таблицы. Она также может быть использована в качестве целевой таблицы в инструкциях INSERT, UPDATE или DELETE. Это зависит от возможностей поставщика OLE DB.  
+ Функция `OPENROWSET` языка Transact-SQL является единовременным методом соединения и доступа к удаленным данным. Включает все сведения о соединении, необходимые для доступа к удаленным данным источника данных OLE DB. Из предложения FROM запроса на `OPENROWSET` можно ссылаться как на имя таблицы. Она также может быть использована в качестве целевой таблицы в инструкциях INSERT, UPDATE или DELETE. Это зависит от возможностей поставщика OLE DB.  
   
  В функции `OPENROWSET` включен поставщик набора строк `BULK`, позволяющий считывать данные непосредственно из файла без загрузки данных в целевую таблицу. Это позволяет использовать `OPENROWSET` в простой инструкции INSERT SELECT.  
   
@@ -69,7 +69,7 @@ FROM OPENROWSET
 |--------|----------|  
 |Выражение устанавливается в значение NULL.|`@Length` игнорируется, а значение в *column_name* усекается по указанному индексу `@Offset`.|  
 |`@Offset` имеет значение NULL|Операция обновления добавляет выражение в конец существующего *column_name* значение и `@Length` учитывается.|  
-|`@Offset` больше, чем длина значения column_name|SQL Server возвращает ошибку.|  
+|Аргумент `@Offset` больше, чем длина поля column_name.|SQL Server возвращает ошибку.|  
 |`@Length` имеет значение NULL|Операция обновления удаляет все данные, со значения `@Offset` до конца значения `column_name`.|  
   
 > [!NOTE]
@@ -254,4 +254,4 @@ WHERE   DocumentID=@DocumentID
 - [Двоичные данные и данные большого объема SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [Сопоставления типов данных SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [Операции данных SQL Server Data в ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

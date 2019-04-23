@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
 ms.openlocfilehash: bb7d4c89e63982a3052857dcb50d04d36d9517dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314399"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Практическое руководство. Привязка к коллекции и вывод сведений в зависимости от выделенного элемента
@@ -51,4 +51,4 @@ ms.locfileid: "59314399"
 - [Использование шаблона "Основной/подробности" с иерархическими XML-данными](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
 - [Общие сведения о привязке данных](data-binding-overview.md)
 - [Общие сведения о шаблонах данных](data-templating-overview.md)
-- [Практические руководства](data-binding-how-to-topics.md)
+- [Разделы практического руководства](data-binding-how-to-topics.md)
