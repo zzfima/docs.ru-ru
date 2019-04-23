@@ -3,10 +3,10 @@ title: <exposedMethod>
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
 ms.openlocfilehash: 91eafa46aa73b5e6d359fcbe48f098f9f8a4d0f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174516"
 ---
 # <a name="exposedmethod"></a>\<exposedMethod >
@@ -45,7 +45,7 @@ ms.locfileid: "59174516"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<exposedMethods>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethods.md)|Коллекция [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) элементов.|  
+|[\<exposedMethods >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethods.md)|Коллекция [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) элементов.|  
   
 ## <a name="remarks"></a>Примечания  
  Средство конфигурации интеграции COM+ (ComSvcConfig.exe) может применяться для добавления определенных методов COM-интерфейса для использования в созданном контракте службы.  
@@ -74,4 +74,4 @@ ms.locfileid: "59174516"
 - <xref:System.ServiceModel.Configuration.ComMethodElement>
 - [\<comContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
 - [Интеграция с приложениями COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Практическое руководство. Настройка параметров службы COM+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [Практическое руководство. Настройка параметров службы COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

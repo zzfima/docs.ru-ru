@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
 ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174113"
 ---
 # <a name="code-access-security-and-adonet"></a>Управление доступом для кода и ADO.NET
@@ -27,11 +27,11 @@ ms.locfileid: "59174113"
   
  Существует три типа прав доступа для кода.  
   
--   `Code access permissions` являются производными от <xref:System.Security.CodeAccessPermission> класса. Права доступа требуются для использования защищенных ресурсов, например файлов и переменных среды, а также для выполнения защищенных операций, например для доступа к неуправляемому коду.  
+-   `Code access permissions` получаются из класса <xref:System.Security.CodeAccessPermission>. Права доступа требуются для использования защищенных ресурсов, например файлов и переменных среды, а также для выполнения защищенных операций, например для доступа к неуправляемому коду.  
   
 -   `Identity permissions` представляют собой характеристики, определяющие сборку. Права доступа предоставляются сборке, исходя из свидетельства, которое может содержать такие элементы, как цифровая сигнатура или сведения об источнике кода. Права доступа для удостоверения также являются производными от базового класса <xref:System.Security.CodeAccessPermission>.  
   
--   `Role-based security permissions` зависит ли участник имеет указанное удостоверение или является членом указанной роли. Класс <xref:System.Security.Permissions.PrincipalPermission> позволяет проводить декларативные и императивные проверки прав доступа по активному участнику.  
+-   `Role-based security permissions` основаны на том, имеет ли участник указанное свидетельство или является ли членом указанной роли. Класс <xref:System.Security.Permissions.PrincipalPermission> позволяет проводить декларативные и императивные проверки прав доступа по активному участнику.  
   
  Система безопасности среды выполнения просматривает стек вызова, сравнивая разрешения, предоставленные каждому вызывающему, с запрашиваемым разрешением, чтобы определить, разрешено ли коду иметь доступ к ресурсу. Если какой-либо вызывающий объект в стеке вызова не имеет запрашиваемого разрешения, формируется исключение <xref:System.Security.SecurityException> и ему отказывается в доступе.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "59174113"
 |`AllowBlankPassword`|Разрешает или запрещает использование пустого пароля в строке соединения. Допустимые значения - `true` (чтобы разрешить использование пустых паролей) и `false` (чтобы запретить использование пустых паролей). Наследуется от <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`ConnectionString`|Определяет допустимую строку соединения. Можно определить несколько строк соединения. **Примечание.**  Не включайте в строку соединения идентификатор пользователя или пароль. В этой версии изменение ограничений строки соединения при помощи средства настройки .NET Framework невозможно. <br /><br /> Наследуется от <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`KeyRestrictions`|Определяет допустимые или недопустимые параметры строки соединения. Параметры строки соединения определяются в виде  *\<имя параметра > =*. Можно указать несколько параметров, разделив их точкой с запятой (;). **Примечание.**  Если не указать `KeyRestrictions` и задать свойству `KeyRestrictionBehavior` значение `AllowOnly` или `PreventUsage`, то другие параметры строки соединения будут недопустимы. Наследуется от <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`KeyRestrictionBehavior`|Определяет единственно допустимые дополнительные параметры строки соединения (`AllowOnly`) или определяет недопустимые дополнительные параметры (`PreventUsage`). `AllowOnly` значение по умолчанию. Наследуется от <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`KeyRestrictionBehavior`|Определяет единственно допустимые дополнительные параметры строки соединения (`AllowOnly`) или определяет недопустимые дополнительные параметры (`PreventUsage`). Значение по умолчанию — `AllowOnly`. Наследуется от <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`TypeID`|Возвращает уникальный идентификатор для этого атрибута при реализации в производном классе. Наследуется от <xref:System.Attribute>.|  
 |`Unrestricted`|Указывает, объявлено ли неограниченное право доступа к ресурсу. Наследуется от <xref:System.Security.Permissions.SecurityAttribute>.|  
   
@@ -199,4 +199,4 @@ Failed, as expected: Request failed.
 - [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Безопасность в машинном коде и коде .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Безопасность на основе ролей](../../../../docs/standard/security/role-based-security.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

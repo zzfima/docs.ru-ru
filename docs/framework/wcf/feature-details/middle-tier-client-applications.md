@@ -3,10 +3,10 @@ title: Клиентские приложения среднего уровня
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
 ms.openlocfilehash: 667cc98f46b131fe91e17f3b1b16af429dc597ee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174087"
 ---
 # <a name="middle-tier-client-applications"></a>Клиентские приложения среднего уровня
@@ -37,4 +37,4 @@ ms.locfileid: "59174087"
   
 ## <a name="see-also"></a>См. также
 
-- [Обращение к службам с использованием клиента WCF](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)
+- [Обращение к службам с помощью клиента WCF](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
 ms.openlocfilehash: 241d2824fc2d87a0505eb6e790c865bfa7d8ef90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175543"
 ---
 # <a name="how-to-rotate-colors"></a>Практическое руководство. Циклический сдвиг цветов
@@ -45,11 +45,11 @@ ms.locfileid: "59175543"
  [!code-vb[System.Drawing.RotateColors#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs>`e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий. Замените `RotationInput.bmp` в вашей системе путь и имя файла изображения.  
+ Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром обработчика события <xref:System.Windows.Forms.Control.Paint>. Замените `RotationInput.bmp` в вашей системе путь и имя файла изображения.  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
 - [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)
-- [Перекрашивание изображений](recoloring-images.md)
+- [перекрашивание изображений](recoloring-images.md)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
 ms.openlocfilehash: 198b664ff52b42b7f393eec3e8162f3a12037d9d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175920"
 ---
 # <a name="wcf-syndication"></a>Синдикация WCF
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) обеспечивает поддержк
  [Практическое руководство. Создание базового канала Atom](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
  Создание службы, которая предоставляет доступ к базовому ATOM-каналу.  
   
- [Практическое руководство. Как предоставить доступ к каналу в форматах Atom и RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)  
+ [Практическое руководство. Публикация канала в форматах Atom и RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)  
  Создание службы, которая предоставляет доступ к одному и тому же каналу в форматах ATOM и RSS.  
   
  [Расширяемость синдикации](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)  

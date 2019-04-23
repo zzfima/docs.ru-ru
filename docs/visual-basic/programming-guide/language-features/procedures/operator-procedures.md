@@ -12,10 +12,10 @@ helpviewer_keywords:
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175023"
 ---
 # <a name="operator-procedures-visual-basic"></a>Процедуры операторов (Visual Basic)
@@ -44,7 +44,7 @@ ms.locfileid: "59175023"
 ## <a name="declaration-syntax"></a>Синтаксис объявления  
  Ниже приведен синтаксис объявления процедуры оператора:  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *символ_оператора* `(` *операнд1*`[,`*операнд2* `]) As` *тип данных*   
+ `Public Shared`   `[Widening | Narrowing]`   `Operator`  *символ_оператора* `(` *операнд1*`[,`*операнд2* `]) As` *тип данных*  
   
  `' Statements of the operator procedure.`  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59175023"
   
  `Dim testStruct As`  *Имя структуры*  
   
- `Dim testNewStruct As`  *Имя структуры*`= testStruct`*символ_оператора*   `10`  
+ `Dim testNewStruct As`  *Имя структуры*`= testStruct`*символ_оператора*  `10`  
   
 ### <a name="illustration-of-declaration-and-call"></a>Пример объявления и вызова  
  Следующая структура сохраняет значение 128-битового знакового целого числа в качестве составных частей старшие и младшие. Он определяет `+` оператора для добавления двух `veryLong` значения и сформировать результирующий `veryLong` значение.  
@@ -86,8 +86,8 @@ ms.locfileid: "59175023"
 - [Процедуры функций](./function-procedures.md)
 - [Процедуры свойств](./property-procedures.md)
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Оператор Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Практическое руководство. Определение оператора](./how-to-define-an-operator.md)
 - [Практическое руководство. Определение оператора преобразования](./how-to-define-a-conversion-operator.md)
 - [Практическое руководство. Вызов процедуры оператора](./how-to-call-an-operator-procedure.md)
-- [Практическое руководство. Использование класса, в котором определяются операторы](./how-to-use-a-class-that-defines-operators.md)
+- [Практическое руководство. Используйте класс, в котором определяются операторы](./how-to-use-a-class-that-defines-operators.md)
