@@ -3,10 +3,10 @@ title: Триггеры CLR
 ms.date: 03/30/2017
 ms.assetid: defe379c-30c7-487f-9abd-9c5e12ff49be
 ms.openlocfilehash: 70ba8e072761df561f94c7343fa75c0398f1b5e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215330"
 ---
 # <a name="clr-triggers"></a>Триггеры CLR
@@ -20,4 +20,4 @@ ms.locfileid: "59215330"
   
 ## <a name="see-also"></a>См. также
 
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

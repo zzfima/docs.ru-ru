@@ -9,10 +9,10 @@ helpviewer_keywords:
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 ms.openlocfilehash: 7ee4ce1d6efdc4927fc2d20100f0b12f7405261f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213146"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Ошибки во время разработки в конструкторе Windows Forms Designer
@@ -47,14 +47,14 @@ ms.locfileid: "59213146"
   
 -   [Форум по конструктору Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Windows Forms форумы](https://go.microsoft.com/fwlink/?LinkId=203523)  
+-   [Форумы по Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>Игнорировать и продолжить  
  Условие ошибки можно проигнорировать и продолжить загрузку конструктора. Такое решение может привести к непредвиденному поведению. Например, на поверхности разработки могут отсутствовать элементы управления.  
   
 ## <a name="see-also"></a>См. также
 
-- [Устранение неполадок, возникающих в режиме разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))
+- [Устранение неполадок при разработке во время разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))
 - [Разрешение вопросов, связанных с созданием элементов управления и компонентов](troubleshooting-control-and-component-authoring.md)
 - [Создание элементов управления Windows Forms во время разработки](developing-windows-forms-controls-at-design-time.md)
 - [Сообщения об ошибках конструктора Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233640(v=vs.100))

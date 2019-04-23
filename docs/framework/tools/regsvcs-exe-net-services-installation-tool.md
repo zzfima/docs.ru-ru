@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b80df56c9f45f7dd195e1f7bbd03063fa30abb3a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1b529ccd8c5e0cf0563adf556a7d316372ac4d0e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466765"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59215044"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (программа установки служб .NET)
 Программа установки служб .NET выполняет следующие действия.  
@@ -87,6 +87,7 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Инструменты](../../../docs/framework/tools/index.md)
 - [Практическое руководство. Подписание сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
 - [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

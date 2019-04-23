@@ -1,5 +1,5 @@
 ---
-title: <performanceCounter> (Сетевые параметры)
+title: Элемент <performanceCounter> (параметры сети)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/performanceCounters
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
 ms.openlocfilehash: 30c5cd07c92a8fc3c340cab0ff9ae74e940c0c12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210936"
 ---
 # <a name="performancecounter-element-network-settings"></a>\<performanceCounter > (сетевые параметры)
@@ -47,7 +47,7 @@ ms.locfileid: "59210936"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[параметры](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
+|[Параметры](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Примечания  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
@@ -78,4 +78,4 @@ ms.locfileid: "59210936"
 - <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
 - [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [Счетчики работы сети](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)
+- [Счетчики производительности сети](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)

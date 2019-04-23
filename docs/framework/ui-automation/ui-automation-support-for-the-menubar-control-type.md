@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Menu Bar control type
 ms.assetid: c1202b21-c1f0-4560-853c-7b99bd73ad97
 ms.openlocfilehash: d577f053e2865462a32349baba97edeff89cb585
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215187"
 ---
 # <a name="ui-automation-support-for-the-menubar-control-type"></a>Поддержка автоматизации пользовательского интерфейса для типа элемента управления MenuBar
@@ -37,7 +37,7 @@ ms.locfileid: "59215187"
 ## <a name="required-ui-automation-properties"></a>Требуемые свойства модели автоматизации пользовательского интерфейса  
  В следующей таблице перечислены свойства [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значения или определения которых особенно актуальны для элементов управления "Строка меню". Дополнительные сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] свойства, см. в разделе [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Свойство|Значение|Примечания|  
+|Свойство[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Значение|Примечания|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|См. примечания.|Значение, представляемое этим свойством, должно включать все содержащиеся в нем элементы управления.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|См. примечания.|Элементу управления "Строка меню" имя не требуется, кроме случая, когда в приложении имеется несколько строк меню. Если в приложении имеется несколько строк меню, то это свойство должно использоваться для предоставления различающихся имен, например "Форматирование" или "Структурирование".|  
@@ -67,12 +67,12 @@ ms.locfileid: "59215187"
 ## <a name="required-ui-automation-events"></a>Необходимые события модели автоматизации пользовательского интерфейса  
  В следующей таблице перечислены события [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , которые должны поддерживаться всеми элементами управления "Строка меню". Дополнительные сведения о событиях см. в разделе [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] событие|Поддержка/значение|Примечания|  
+|Событие[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Поддержка/значение|Примечания|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> событие изменения свойства.|Обязательно|Нет|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> событие изменения свойства.|Обязательно|Нет|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> событие изменения свойства.|Обязательно|Нет|  
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> событие изменения свойства.|Зависит от обстоятельств|Нет|  
+|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> |Обязательно|Нет|  
+|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> |Обязательно|Нет|  
+|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> |Обязательно|Нет|  
+|Событие изменения свойства<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> |Зависит от обстоятельств|Нет|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Обязательно|Нет|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Обязательно|Нет|  
   

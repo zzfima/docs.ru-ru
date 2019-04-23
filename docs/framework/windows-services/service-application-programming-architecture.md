@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: 009d95089efdfb78680ca7e364093e5f2b65bc77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17e16cec34b381cdfe46e1066c3219a93c3780e3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714884"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59216396"
 ---
 # <a name="service-application-programming-architecture"></a>Программная архитектура приложений служб
 В основе приложений-служб Windows лежит класс, наследуемый от класса <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Вы можете переопределить методы из этого класса и определить функции для них, чтобы настроить поведение службы.  
@@ -67,5 +67,6 @@ ms.locfileid: "54714884"
  Можно также использовать компонент, называемый <xref:System.ServiceProcess.ServiceController>, для обмена данными с существующей службой и управления ее поведением.  
   
 ## <a name="see-also"></a>См. также
+
 - [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [Практическое руководство. Создание служб Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)

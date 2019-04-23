@@ -10,10 +10,10 @@ helpviewer_keywords:
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
 ms.openlocfilehash: adcfff0196bd0430ec1ae563fbd5489062de11f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217189"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>Практическое руководство. Перечисление подмножества очередей печати
@@ -44,4 +44,4 @@ ms.locfileid: "59217189"
 - <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
 - [Документы в WPF](documents-in-wpf.md)
 - [Общие сведения о печати](printing-overview.md)
-- [Средство записи XPS-документов (Майкрософт)](https://go.microsoft.com/fwlink/?LinkId=147319)
+- [Средство записи документов Microsoft XPS](https://go.microsoft.com/fwlink/?LinkId=147319)

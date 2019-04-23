@@ -22,10 +22,10 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
 ms.openlocfilehash: c7fb4c95b6ef09508df57b3a0c08a651b122e251
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302407"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>Практическое руководство. Использование универсального класса (Visual Basic)
@@ -48,9 +48,9 @@ ms.locfileid: "59302407"
 ## <a name="see-also"></a>См. также
 
 - [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Универсальные типы в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Независимость от языка и независимые от языка компоненты](../../../../standard/language-independence-and-language-independent-components.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
-- [Оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [Практическое руководство. Определение класса, реализующего одинаковую функциональность для различных типов данных](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
+- [Оператор Imports (пространство имен и тип .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Практическое руководство. Определение класса, реализующего одинаковую функциональность для разных типов данных](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
 - [Итераторы](../../../../visual-basic/programming-guide/concepts/iterators.md)

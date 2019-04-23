@@ -3,10 +3,10 @@ title: REF CURSOR в Oracle
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
 ms.openlocfilehash: b23b0f07d7755fed820481a3ad1fe831ae3f5224
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213172"
 ---
 # <a name="oracle-ref-cursors"></a>REF CURSOR в Oracle
@@ -36,13 +36,13 @@ ms.locfileid: "59213172"
  [Параметры REF CURSOR в объекте OracleDataReader](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)  
  Демонстрирует выполнение PL/SQL хранимой процедуры, возвращает параметр REF CURSOR и считывает значение в виде **OracleDataReader**.  
   
- [Извлечение данных нескольких REF CURSOR с использованием OracleDataReader](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)  
+ [Извлечение данных из нескольких REF CURSOR с использованием OracleDataReader](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)  
  Демонстрирует выполнение PL/SQL хранимой процедуры, возвращает два параметра REF CURSOR и считывает значения с использованием **OracleDataReader**.  
   
- [Заполнение набора данных с помощью одного или нескольких параметров REF CURSOR](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)  
+ [Заполнение DataSet с помощью одного или нескольких параметров REF CURSOR](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)  
  Показывает, как выполнить хранимую процедуру PL/SQL, которая возвращает два параметра REF CURSOR и заполняет <xref:System.Data.DataSet> возвращаемыми строками.  
   
 ## <a name="see-also"></a>См. также
 
 - [Oracle и ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

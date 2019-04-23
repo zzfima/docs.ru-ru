@@ -7,10 +7,10 @@ helpviewer_keywords:
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
 ms.openlocfilehash: f7f1ed2fbca4ab8892cb6c439ae8841fa8828bf0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302547"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Практическое руководство. Создание связанного элемента управления и форматирование отображаемых данных
@@ -56,6 +56,6 @@ ms.locfileid: "59302547"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Создание элемента управления с простой привязкой в форме Windows Forms](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Практическое руководство. Создание элемента управления простой привязкой в форме Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md)
 - [Проверка введенных пользователем данных в Windows Forms](user-input-validation-in-windows-forms.md)
 - [Привязка данных Windows Forms](windows-forms-data-binding.md)

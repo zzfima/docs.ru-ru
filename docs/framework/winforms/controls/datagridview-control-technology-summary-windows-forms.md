@@ -6,10 +6,10 @@ helpviewer_keywords:
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
 ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217423"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>Технологическая сводка по элементам управления DataGridView (Windows Forms)
@@ -53,7 +53,7 @@ ms.locfileid: "59217423"
 |---------------------|-------------------------------------------------|  
 |Привязка данных|<xref:System.Windows.Forms.BindingSource>|  
 |Представление данных|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell> и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewRow> и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
-|<xref:System.Windows.Forms.DataGridView> Расширение среды|<xref:System.Windows.Forms.DataGridViewCell> и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> и производные классы<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
+|<xref:System.Windows.Forms.DataGridView> Расширяемость|<xref:System.Windows.Forms.DataGridViewCell> и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> и производные классы<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
 ## <a name="whats-new"></a>Новые возможности  
  <xref:System.Windows.Forms.DataGridView> Элемент управления предназначен для законченное решение для отображения табличных данных с помощью Windows Forms. Следует рассмотреть возможность использования <xref:System.Windows.Forms.DataGridView> управлять перед другими решениями, такими как <xref:System.Windows.Forms.DataGrid>, при создании нового приложения. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  

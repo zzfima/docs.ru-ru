@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
 ms.openlocfilehash: cc38b0f3ded9e3c2a5a4146eb6bb474921d1e19f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210097"
 ---
 # <a name="label-control-overview-windows-forms"></a>Общие сведения об элементе управления Label (Windows Forms)
@@ -26,5 +26,5 @@ Windows Forms <xref:System.Windows.Forms.Label> элементы управле�
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.Label>
-- [Практическое руководство. Приведение размера элемента управления Label в соответствие с его содержимым в Windows Forms](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
-- [Практическое руководство. Определение клавиш доступа с помощью элементов управления Label в Windows Forms](how-to-create-access-keys-with-windows-forms-label-controls.md)
+- [Практическое руководство. Размер элемента управления Windows Forms метка подгоняются под размеры его содержимого](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Практическое руководство. Создание ключей доступа с помощью элементов управления Label в Windows Forms](how-to-create-access-keys-with-windows-forms-label-controls.md)

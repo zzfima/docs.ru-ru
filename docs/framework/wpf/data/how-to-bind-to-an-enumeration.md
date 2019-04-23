@@ -7,10 +7,10 @@ helpviewer_keywords:
 - enumeration [WPF]
 ms.assetid: b9091eba-1119-424e-868b-d1a4168b3732
 ms.openlocfilehash: 5026261366d6abde82790f05780d8ba2c29c4a49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210026"
 ---
 # <a name="how-to-bind-to-an-enumeration"></a>Практическое руководство. Привязка к перечислению
@@ -25,4 +25,4 @@ ms.locfileid: "59210026"
 
 - [Создание привязки к методу](how-to-bind-to-a-method.md)
 - [Общие сведения о привязке данных](data-binding-overview.md)
-- [Практические руководства](data-binding-how-to-topics.md)
+- [Разделы практического руководства](data-binding-how-to-topics.md)

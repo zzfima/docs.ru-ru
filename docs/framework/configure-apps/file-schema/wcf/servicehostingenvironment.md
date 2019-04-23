@@ -3,10 +3,10 @@ title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
 ms.openlocfilehash: 24cf36aba81b5bb31eaac475361e2d07bc6f8b12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215993"
 ---
 # <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
@@ -52,7 +52,7 @@ ms.locfileid: "59215993"
 |-------------|-----------------|  
 |[\<baseAddressPrefixFilters>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Коллекция элементов конфигурации, которые задают префиксные фильтры для базовых адресов, используемых узлом службы.|  
 |[\<serviceActivations >](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|Раздел конфигурации, в котором описываются параметры активации.|  
-|[\<transportConfigurationTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|Коллекция элементов конфигурации, которые определяют тип конкретного транспорта.|  
+|[\<transportConfigurationTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|Коллекция элементов конфигурации, которые определяют тип конкретного транспорта.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   

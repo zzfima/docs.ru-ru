@@ -3,10 +3,10 @@ title: <issuerMetadata> из <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 1a85ca37-496d-4fa3-8d44-d6c9383d735c
 ms.openlocfilehash: e46e56c6285af24941a550b2c4f7dec3b441db69
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59214810"
 ---
 # <a name="issuermetadata-of-issuedtokenparameters"></a>\<issuerMetadata> of \<issuedTokenParameters>
@@ -37,7 +37,7 @@ ms.locfileid: "59214810"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Коллекция заголовков адреса.|  
+|[\<заголовки >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Коллекция заголовков адреса.|  
 |[\<удостоверение >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Удостоверение, обеспечивающее проверку подлинности конечной точки другими конечными точками, которые обмениваются с ней сообщениями.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  

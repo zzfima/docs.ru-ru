@@ -13,10 +13,10 @@ helpviewer_keywords:
 - sorting data in views [WPF]
 ms.assetid: f4c43578-01b7-4774-a953-acb95a13b94a
 ms.openlocfilehash: 32f73d3c3ba213778654f0d1ee7bbae16b9d845b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211261"
 ---
 # <a name="how-to-sort-data-in-a-view"></a>Практическое руководство. Сортировка данных в представлении
@@ -42,4 +42,4 @@ ms.locfileid: "59211261"
 - [Сортировка столбцов GridView при нажатии на заголовок](../controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
 - [Общие сведения о привязке данных](data-binding-overview.md)
 - [Фильтрация данных в представлении](how-to-filter-data-in-a-view.md)
-- [Практические руководства](data-binding-how-to-topics.md)
+- [Разделы практического руководства](data-binding-how-to-topics.md)

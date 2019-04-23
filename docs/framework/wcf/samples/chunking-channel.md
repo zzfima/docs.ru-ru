@@ -3,10 +3,10 @@ title: Фрагментирование канала
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
 ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302703"
 ---
 # <a name="chunking-channel"></a>Фрагментирование канала
@@ -201,11 +201,11 @@ as the ChunkingStart message.
 ## <a name="chunking-channel-architecture"></a>Архитектура канала фрагментации  
  Канал фрагментации является каналом `IDuplexSessionChannel`, следующим стандартной архитектуре каналов на высоком уровне. `ChunkingBindingElement` может выполнить построение `ChunkingChannelFactory` и `ChunkingChannelListener`. `ChunkingChannelFactory` создает экземпляры `ChunkingChannel` при соответствующем запросе. `ChunkingChannelListener` создает экземпляры `ChunkingChannel`, когда принимается новый внутренний канал. `ChunkingChannel` отвечает за отправку и получение сообщений.  
   
- На следующем более низком уровне `ChunkingChannel` основывается на нескольких компонентах для реализации протокола фрагментации. На отправляющей стороне канал использует пользовательский <xref:System.Xml.XmlDictionaryWriter>, называемый `ChunkingWriter`, который непосредственно выполняет фрагментацию. `ChunkingWriter` использует внутренний канал для отправки фрагментов, напрямую. Использование пользовательского средства записи `XmlDictionaryWriter` позволяет отправлять фрагменты одновременно с записью большого тела исходного сообщения. Это означает, что все исходное сообщение не буферизуется.  
+ На следующем более низком уровне `ChunkingChannel` основывается на нескольких компонентах для реализации протокола фрагментации. На отправляющей стороне канал использует пользовательский <xref:System.Xml.XmlDictionaryWriter>, называемый `ChunkingWriter`, который непосредственно выполняет фрагментацию. `ChunkingWriter` непосредственно использует внутренний канал для отправки фрагментов данных. Использование пользовательского средства записи `XmlDictionaryWriter` позволяет отправлять фрагменты одновременно с записью большого тела исходного сообщения. Это означает, что все исходное сообщение не буферизуется.  
   
  ![Схема, показывающая канал фрагментации отправлять архитектуры.](./media/chunking-channel/chunking-channel-send.gif)  
   
- На получающей стороне `ChunkingChannel` извлекает сообщения из внутреннего канала и передает их в пользовательский <xref:System.Xml.XmlDictionaryReader>, называемый `ChunkingReader`, который восстанавливает исходное сообщение из входящих фрагментов данных. `ChunkingChannel` выступает в роли оболочки `ChunkingReader` в настраиваемом `Message` реализация вызван `ChunkingMessage` и возвращает это сообщение на уровень выше. Данное сочетание `ChunkingReader` и `ChunkingMessage` позволяет дефрагментировать текст исходного сообщения в процессе его считывания вышележащим уровнем вместо необходимости помещения в буфер всего текста исходного сообщения. `ChunkingReader` имеет очередь, в которой буферизуются входящие фрагменты — пока можно настроить максимальное количество буферизуемых фрагментов. При достижении максимального количества средство чтения ожидает, пока сообщения не будут извлечены из очереди вышестоящим уровнем (то есть прочитаны из тела исходного сообщения) или пока не истечет время ожидания получения максимального количества сообщений.  
+ На получающей стороне `ChunkingChannel` извлекает сообщения из внутреннего канала и передает их в пользовательский <xref:System.Xml.XmlDictionaryReader>, называемый `ChunkingReader`, который восстанавливает исходное сообщение из входящих фрагментов данных. `ChunkingChannel` выступает в роли оболочки `ChunkingReader` в пользовательской реализации `Message`, называемой `ChunkingMessage`, и возвращает это сообщение на уровень выше. Данное сочетание `ChunkingReader` и `ChunkingMessage` позволяет дефрагментировать текст исходного сообщения в процессе его считывания вышележащим уровнем вместо необходимости помещения в буфер всего текста исходного сообщения. `ChunkingReader` имеет очередь, в которой буферизуются входящие фрагменты данных, пока их количество не достигнет заданного. При достижении максимального количества средство чтения ожидает, пока сообщения не будут извлечены из очереди вышестоящим уровнем (то есть прочитаны из тела исходного сообщения) или пока не истечет время ожидания получения максимального количества сообщений.  
   
  ![Схема, показывающая канал фрагментации получения архитектуры.](./media/chunking-channel/chunking-channel-receive.gif)  
   
@@ -268,13 +268,13 @@ interface ITestService
 ## <a name="communicationobject-overrides"></a>CommunicationObject - переопределения  
   
 ### <a name="onopen"></a>OnOpen  
- `OnOpen` вызовы `innerChannel.Open` открыть Внутренний канал.  
+ `OnOpen` вызывает `innerChannel.Open`, чтобы открыть внутренний канал.  
   
 ### <a name="onclose"></a>OnClose  
- `OnClose` Сначала задает `stopReceive` для `true` сигнала ожидающие `ReceiveChunkLoop` для остановки. Затем метод ожидает `receiveStopped` <xref:System.Threading.ManualResetEvent>, которое задается при `ReceiveChunkLoop` останавливается. Предполагая, что `ReceiveChunkLoop` остановится в течение заданного времени ожидания, `OnClose` вызывает `innerChannel.Close` с остающимся временем ожидания.  
+ `OnClose` сначала задает `stopReceive` значение `true`, чтобы указать, что требуется остановить выполняющийся `ReceiveChunkLoop`. Затем метод ожидает `receiveStopped` <xref:System.Threading.ManualResetEvent>, которое задается при `ReceiveChunkLoop` останавливается. Предполагая, что `ReceiveChunkLoop` остановится в течение заданного времени ожидания, `OnClose` вызывает `innerChannel.Close` с остающимся временем ожидания.  
   
 ### <a name="onabort"></a>OnAbort  
- `OnAbort` вызовы `innerChannel.Abort` прервать внутренний канал. Если имеется выполняемый `ReceiveChunkLoop`, он возвращает исключение от выполняемого вызова `innerChannel.Receive`.  
+ `OnAbort` вызывает `innerChannel.Abort`, чтобы прервать внутренний канал. Если имеется выполняемый `ReceiveChunkLoop`, он возвращает исключение от выполняемого вызова `innerChannel.Receive`.  
   
 ### <a name="onfaulted"></a>OnFaulted  
  Для `ChunkingChannel` не требуется специальное поведение при возникновении ошибки в канале, поэтому `OnFaulted` не переопределяется.  
@@ -282,7 +282,7 @@ interface ITestService
 ## <a name="implementing-channel-factory"></a>Реализация фабрики каналов  
  `ChunkingChannelFactory` отвечает за создание экземпляров каналов `ChunkingDuplexSessionChannel` и выполнение каскадных переходов состояний в фабрику внутренних каналов.  
   
- `OnCreateChannel` использует фабрику внутренних каналов для создания `IDuplexSessionChannel` внутренний канал. Затем метод создает новый `ChunkingDuplexSessionChannel`, передавая ему этот внутренний канал вместе со списком действий фрагментируемых сообщений и максимальным количеством фрагментов, буферизуемых при получении. Список фрагментируемых сообщений и максимальное количество буферизуемых фрагментов - это два параметра, передаваемые `ChunkingChannelFactory` в его конструкторе. В разделе об `ChunkingBindingElement` описывается, откуда возникают эти значения.  
+ `OnCreateChannel` использует фабрику внутренних каналов для создания внутреннего канала `IDuplexSessionChannel`. Затем метод создает новый `ChunkingDuplexSessionChannel`, передавая ему этот внутренний канал вместе со списком действий фрагментируемых сообщений и максимальным количеством фрагментов, буферизуемых при получении. Список фрагментируемых сообщений и максимальное количество буферизуемых фрагментов - это два параметра, передаваемые `ChunkingChannelFactory` в его конструкторе. В разделе об `ChunkingBindingElement` описывается, откуда возникают эти значения.  
   
  Методы `OnOpen`, `OnClose`, `OnAbort` и их асинхронные эквиваленты вызывают соответствующий метод перехода между состояниями в фабрике внутренних каналов.  
   
@@ -290,15 +290,15 @@ interface ITestService
  `ChunkingChannelListener` является оболочкой прослушивателя внутренних каналов. Его основной функцией, помимо делегирования вызовов в прослушиватель внутренних каналов, является создание новой программы-оболочки `ChunkingDuplexSessionChannels` для каналов, принимаемых из прослушивателя внутренних каналов. Это выполняется в методах `OnAcceptChannel` и `OnEndAcceptChannel`. Созданная `ChunkingDuplexSessionChannel` передается во внутренний канал вместе с другими ранее описанными параметрами.  
   
 ## <a name="implementing-binding-element-and-binding"></a>Реализация элемента привязки и привязки  
- `ChunkingBindingElement` отвечает за создание `ChunkingChannelFactory` и `ChunkingChannelListener`. `ChunkingBindingElement` Проверяет, является ли T в `CanBuildChannelFactory` \<T > и `CanBuildChannelListener` \<T > имеет тип `IDuplexSessionChannel` (единственный канал, поддерживаемый каналом фрагментации) и поддерживают ли другие элементы привязки в привязке это Тип канала.  
+ Элемент `ChunkingBindingElement` отвечает за создание фабрики `ChunkingChannelFactory` и прослушивателя `ChunkingChannelListener`. `ChunkingBindingElement` Проверяет, является ли T в `CanBuildChannelFactory` \<T > и `CanBuildChannelListener` \<T > имеет тип `IDuplexSessionChannel` (единственный канал, поддерживаемый каналом фрагментации) и поддерживают ли другие элементы привязки в привязке это Тип канала.  
   
  `BuildChannelFactory`\<T > сначала проверяет, что требуемого типа канала можно построить и затем получает список действий фрагментируемых сообщений. Дополнительные сведения см. в следующем разделе. Затем метод создает новую фабрику `ChunkingChannelFactory`, передавая ей фабрику внутренних каналов (возвращенную из `context.BuildInnerChannelFactory<IDuplexSessionChannel>`), список действий фрагментируемых сообщений и максимальное количество буферизуемых фрагментов. Максимальное количество фрагментов определяется свойством `MaxBufferedChunks`, предоставляемым `ChunkingBindingElement`.  
   
- `BuildChannelListener<T>` имеет аналогичную реализацию для создания `ChunkingChannelListener` и передавая ему внутренний прослушиватель каналов.  
+ `BuildChannelListener<T>` имеет аналогичную реализацию для создания прослушивателя `ChunkingChannelListener` и передаче его прослушивателю внутреннего канала.  
   
  Пример привязки включен в пример `TcpChunkingBinding`. Эта привязка состоит из двух элементов привязки: `TcpTransportBindingElement` и `ChunkingBindingElement`. Помимо предоставления свойства `MaxBufferedChunks`, привязка также задает некоторые свойства `TcpTransportBindingElement`, например `MaxReceivedMessageSize` (задает ему значение `ChunkingUtils.ChunkSize` + 100 КБ байтов для заголовков).  
   
- `TcpChunkingBinding` также реализует `IBindingRuntimePreferences` и возвращает значение true от `ReceiveSynchronously` метод, указывающий, что реализуются только синхронные вызовы операции получения.  
+ `TcpChunkingBinding` также реализует `IBindingRuntimePreferences` и возвращает значение "true" из метода `ReceiveSynchronously`, означающее, что реализуются только синхронные вызовы операции получения.  
   
 ### <a name="determining-which-messages-to-chunk"></a>Какие сообщения следует фрагментировать  
  Канал фрагментации фрагментирует только сообщения, определенные посредством атрибута `ChunkingBehavior`. Класс `ChunkingBehavior` реализует метод `IOperationBehavior` и реализуется с помощью вызова метода `AddBindingParameter`. В этом методе `ChunkingBehavior` проверяет значение свойства `AppliesTo` (`InMessage`, `OutMessage` или обоих), чтобы определить, какие сообщения следует фрагментировать. Затем он возвращает действие для каждого сообщения (из коллекции сообщений в `OperationDescription`) и добавляет их в коллекцию строк, содержащуюся в экземпляре `ChunkingBindingParameter`. Затем он добавляет этот параметр `ChunkingBindingParameter` в предоставленную коллекцию `BindingParameterCollection`.  

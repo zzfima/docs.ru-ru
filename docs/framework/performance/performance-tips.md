@@ -10,10 +10,10 @@ ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c825ccc15ff7eeb736169f7ae120b4a3692ffe39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216474"
 ---
 # <a name="net-performance-tips"></a>Советы по производительности .NET
@@ -34,11 +34,11 @@ ms.locfileid: "59216474"
   
 -   [Написание высокой производительности управляемого приложения: Основные сведения](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
--   [Основные сведения о сборщике мусора и повышении производительности](https://go.microsoft.com/fwlink/?LinkId=99296)  
+-   [Общие сведения о сборке мусора и советы по повышению производительности](https://go.microsoft.com/fwlink/?LinkId=99296)  
   
--   [Советы и рекомендации в приложениях .NET](https://go.microsoft.com/fwlink/?LinkId=99297)  
+-   [Советы и рекомендации по повышению производительности в приложениях .NET](https://go.microsoft.com/fwlink/?LinkId=99297)  
 
--   [Rico Mariani's Performance Tidbits](https://go.microsoft.com/fwlink/?LinkId=115679)  
+-   [Советы по повышению производительности от Рико Мариани](https://go.microsoft.com/fwlink/?LinkId=115679)  
 
 -   [Блоге Вэнса Моррисона](https://blogs.msdn.microsoft.com/vancem/)
   

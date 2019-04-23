@@ -3,10 +3,10 @@ title: Общие коллекции схемы
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
 ms.openlocfilehash: f6307352cc2d976e4e9f47d1e111d40f96fc16c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209675"
 ---
 # <a name="common-schema-collections"></a>Общие коллекции схемы
@@ -98,4 +98,4 @@ ms.locfileid: "59209675"
 
 - [Извлечение сведений о схеме базы данных](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [Коллекции GetSchema и Schema](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

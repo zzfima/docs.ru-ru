@@ -6,14 +6,14 @@ helpviewer_keywords:
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
 ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301858"
 ---
 # <a name="localization-attributes-and-comments"></a>Атрибуты и комментарии локализации
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] комментарии локализации являются свойствами в [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] исходный код, предоставленными разработчиками для обеспечения правил и подсказок при локализации. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] комментарии локализации содержат два набора данных: атрибуты локализуемости и комментарии локализации в свободной форме. Атрибуты локализуемости используются API локализации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для указания того, какие ресурсы должны быть локализованы. Комментарии произвольной формы представляют собой любые сведения, которые автор приложения хочет указать.  
+Комментарии локализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] являются свойствами в исходном коде [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], предоставленными разработчиками для обеспечения правил и подсказок при локализации. Комментарии локализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] содержат два набора данных: атрибуты локализуемости и комментарии локализации в свободной форме. Атрибуты локализуемости используются API локализации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для указания того, какие ресурсы должны быть локализованы. Комментарии произвольной формы представляют собой любые сведения, которые автор приложения хочет указать.  
 
 <a name="Localizer_Comments_"></a>   
 ## <a name="localization-comments"></a>Комментарии локализации  
@@ -100,6 +100,6 @@ ms.locfileid: "59301858"
 ## <a name="see-also"></a>См. также
 
 - [Глобализация для WPF](globalization-for-wpf.md)
-- [Использование автоматического макета для создания кнопки](how-to-use-automatic-layout-to-create-a-button.md)
-- [Использование сетки для автоматического макета](how-to-use-a-grid-for-automatic-layout.md)
+- [Использование автоматической разметки для создания кнопки](how-to-use-automatic-layout-to-create-a-button.md)
+- [Использование сетки для автоматической разметки](how-to-use-a-grid-for-automatic-layout.md)
 - [Локализация приложения](how-to-localize-an-application.md)

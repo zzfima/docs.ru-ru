@@ -1,5 +1,5 @@
 ---
-title: <sources> Элемент
+title: Элемент <sources>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources
@@ -10,10 +10,10 @@ helpviewer_keywords:
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
 ms.openlocfilehash: 9104a4a302aa9c6094adbc13396074fdd4db4bbc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215785"
 ---
 # <a name="sources-element"></a>\<источники > элемент
@@ -41,7 +41,7 @@ ms.locfileid: "59215785"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Источник >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Обязательный элемент.<br /><br /> Содержит источник трассировки, который инициирует сообщения трассировки.|  
+|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Обязательный элемент.<br /><br /> Содержит источник трассировки, который инициирует сообщения трассировки.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -88,4 +88,4 @@ ms.locfileid: "59215785"
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
 - [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [\<Источник >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+- [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)

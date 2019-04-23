@@ -5,10 +5,10 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
 ms.openlocfilehash: c948c20788ae4e16e6b626a3f168cf9dcb94d718
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211482"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Привязки Windows Communication Foundation
@@ -31,7 +31,7 @@ ms.locfileid: "59211482"
  <xref:System.ServiceModel.Channels>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Конечные точки: адреса, привязки и контракты](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Конечные точки: Адреса, привязки и контракты](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
   
  [Привязки](../../../docs/framework/wcf/feature-details/bindings.md)  
   

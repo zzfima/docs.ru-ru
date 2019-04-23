@@ -8,12 +8,12 @@ helpviewer_keywords:
 - keycontainer compiler option [C#]
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
-ms.openlocfilehash: 06a714bf9140ac793e8d853183047ca7255d565e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf51bccc98f04c38149ec821b7064a4844d7e804
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728998"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59302781"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer (параметры компилятора C#)
 Задает имя контейнера криптографического ключа.  
@@ -41,7 +41,7 @@ ms.locfileid: "54728998"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  Данный параметр компилятора недоступен в среде разработки Visual Studio.  
+1. Данный параметр компилятора недоступен в среде разработки Visual Studio.  
   
  Программный доступ к этому параметру компилятора возможен с помощью свойства <xref:VSLangProj.ProjectProperties.AssemblyKeyContainerName%2A>.  
   

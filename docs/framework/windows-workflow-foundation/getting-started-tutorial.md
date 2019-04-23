@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], getting started
 ms.assetid: c2d3585f-6b1a-4d4f-9865-bd7cd31c5d42
 ms.openlocfilehash: 540765c09dceef583798ceaf1abf9f191f444697
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217436"
 ---
 # <a name="getting-started-tutorial"></a>Учебник по началу работы
@@ -25,18 +25,18 @@ ms.locfileid: "59217436"
  [Практическое руководство. Запуск рабочего процесса](how-to-run-a-workflow.md)  
  Описывает вызов рабочего процесса из среды узла и из рабочего процесса, а также возобновление закладок.  
   
- [Практическое руководство. Создание и запуск длительного рабочего процесса](how-to-create-and-run-a-long-running-workflow.md)  
+ [Практическое руководство. Создание и запуск длительно выполнении рабочего процесса](how-to-create-and-run-a-long-running-workflow.md)  
  Описывает способы добавления сохраняемости к приложению рабочего процесса.  
   
- [Практическое руководство. Создание настраиваемого участника отслеживания](how-to-create-a-custom-tracking-participant.md)  
+ [Практическое руководство. Создание пользовательского участника отслеживания](how-to-create-a-custom-tracking-participant.md)  
  Описывает процесс создания настраиваемого участника отслеживания и профиля отслеживания.  
   
- [Практическое руководство. Параллельное размещение множества версий рабочего процесса](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)  
+ [Практическое руководство. Размещение нескольких версий рабочего процесса Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)  
  Описывает, как использовать `WorkflowIdentity` для параллельного размещения нескольких версий рабочего процесса.  
   
- [Практическое руководство. Обновление определения выполняющегося экземпляра рабочего процесса](how-to-update-the-definition-of-a-running-workflow-instance.md)  
+ [Практическое руководство. Обновить определение выполняющегося экземпляра рабочего процесса](how-to-update-the-definition-of-a-running-workflow-instance.md)  
  Описывает, как использовать динамическое обновление для изменения выполняемых экземпляров рабочих процессов.  
   
 ## <a name="see-also"></a>См. также
 
-- [Программирование в Windows Workflow Foundation](programming.md)
+- [Программирование в Windows Workflow Foundation](programming.md)

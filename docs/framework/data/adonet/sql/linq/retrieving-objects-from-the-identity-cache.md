@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
 ms.openlocfilehash: 702d88f844f00b86e64404bd100fd6b3d34971c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211235"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Извлечение объектов из кэша идентификации
@@ -30,7 +30,7 @@ ms.locfileid: "59211235"
   
  В этих общих формах параметры `Function1`, `Function2` и `predicate` определяются следующим образом.  
   
- `Function1` может быть одним из следующих:  
+ Параметр `Function1` может иметь любое из следующих значений.  
   
 -   <xref:System.Linq.Queryable.Where%2A>  
   
@@ -42,7 +42,7 @@ ms.locfileid: "59211235"
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `Function2` может быть одним из следующих:  
+ Параметр `Function2` может иметь любое из следующих значений.  
   
 -   <xref:System.Linq.Queryable.First%2A>  
   
@@ -52,7 +52,7 @@ ms.locfileid: "59211235"
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `predicate` должно быть выражением, в котором свойство первичного ключа объекта присваивается значение константы. Если первичный ключ определен в нескольких свойствах объекта, то в каждом свойстве должно быть задано постоянное значение. Далее представлены примеры формы, которую должен принимать параметр `predicate`.  
+ Параметр `predicate` должен быть выражением, в котором свойство первичного ключа объекта устанавливается в постоянное значение. Если первичный ключ определен в нескольких свойствах объекта, то в каждом свойстве должно быть задано постоянное значение. Далее представлены примеры формы, которую должен принимать параметр `predicate`.  
   
 -   `c => c.PK == constant_value`  
   

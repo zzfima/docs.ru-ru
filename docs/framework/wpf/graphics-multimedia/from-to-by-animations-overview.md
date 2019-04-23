@@ -9,10 +9,10 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209155"
 ---
 # <a name="fromtoby-animations-overview"></a>Общие сведения об анимациях From/To/By
@@ -36,11 +36,11 @@ ms.locfileid: "59209155"
   
  Классы анимации From/To/By принадлежат к <xref:System.Windows.Media.Animation> пространства имен и используется следующее соглашение об именовании:  
   
- *\<Тип >* `Animation`  
+ *\<Тип>* `Animation`  
   
  Где *\<Type>* — тип значения, которое выполняет анимацию класса.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет следующие From/To/By классы анимации.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет следующие классы анимации From/To/By.  
   
 |Тип свойства|Соответствующий класс анимации From/To/By|  
 |-------------------|------------------------------------------------|  
@@ -145,8 +145,8 @@ ms.locfileid: "59209155"
 - <xref:System.Windows.Media.Animation.Timeline>
 - <xref:System.Windows.Media.Animation.Storyboard>
 - [Общие сведения об эффектах анимации](animation-overview.md)
-- [Общие сведения о Storyboard](storyboards-overview.md)
+- [Общие сведения о раскадровке](storyboards-overview.md)
 - [Общие сведения об анимации по ключевым кадрам](key-frame-animations-overview.md)
-- [Общие сведения об анимация с использованием пути](path-animations-overview.md)
+- [Общие сведения об анимации с использованием пути](path-animations-overview.md)
 - [Общие сведения о пользовательской анимации](custom-animations-overview.md)
-- [FROM, To и пример целевых значений анимации](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [Пример целевых значений анимации From, To и By](https://go.microsoft.com/fwlink/?LinkID=159988)

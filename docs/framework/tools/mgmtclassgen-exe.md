@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 333bd8c1793e4982b11208aa1a547e78fe680bb3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 061b5aa2208a73f6a53bc5eaee056410256ac6ac
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628855"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59213133"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (генератор строго типизированных классов управления)
 Генератор классов управления со строгим типом позволяет быстро создавать управляемые классы с ранней привязкой для указанного класса инструментария управления Windows (WMI). Создаваемый класс упрощает код, необходимый для доступа к экземпляру класса WMI.  
@@ -151,6 +151,7 @@ public class App
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Management>
 - <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>
 - <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>

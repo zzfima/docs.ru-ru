@@ -1,12 +1,12 @@
 ---
-title: <clientCertificate> из <clientCredentials> элемент
+title: <clientCertificate> элемента <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
 ms.openlocfilehash: 5abf0a99beff1b9fb3655cb82d74484f3b88237f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216461"
 ---
 # <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate > элемента \<clientCredentials > элемент
@@ -60,8 +60,8 @@ ms.locfileid: "59216461"
 - <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
-- [Поведение безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Практическое руководство. Задание значений учетных данных клиента](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
-- [Обеспечение безопасности клиентов](../../../../../docs/framework/wcf/securing-clients.md)
+- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Практическое руководство. Укажите значения учетных данных клиента](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Защита клиентов](../../../../../docs/framework/wcf/securing-clients.md)
 - [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

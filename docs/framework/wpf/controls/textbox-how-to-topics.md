@@ -8,10 +8,10 @@ helpviewer_keywords:
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
 ms.openlocfilehash: d3d5116a2fa2198661050a1c1adbae9512cd078a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211430"
 ---
 # <a name="textbox-how-to-topics"></a>Разделы руководства, посвященные TextBox
@@ -24,7 +24,7 @@ ms.locfileid: "59211430"
  [Получение коллекции строк из элемента TextBox](how-to-get-a-collection-of-lines-from-a-textbox.md)  
  [Перевод элемента управления TextBox в режим только для чтения](how-to-make-a-textbox-control-read-only.md)  
  [Позиционирование курсора в начале или конце текста в элементе управления TextBox](position-the-cursor-at-the-beginning-or-end-of-text.md)  
- [Получение выделенного текста](how-to-retrieve-a-text-selection.md)  
+ [Извлечение выделенного текста](how-to-retrieve-a-text-selection.md)  
  [Установка фокуса в элементе управления TextBox](how-to-set-focus-in-a-textbox-control.md)  
  [Установка текстового содержимого для элемента управления TextBox](how-to-set-the-text-content-of-a-textbox-control.md)  
  [Включение проверки орфографии в элементе управления редактирования текста](how-to-enable-spell-checking-in-a-text-editing-control.md)  

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], unbound data
 ms.assetid: f7bdc4d8-ba8e-421b-ad62-82d936f01372
 ms.openlocfilehash: 40308f7e8cc12dcff5b7d4393645f6a9007cc2b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215843"
 ---
 # <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a>Практическое руководство. Добавление столбца, не связанного с данными, в связанный с данными элемент управления DataGridView в Windows Forms

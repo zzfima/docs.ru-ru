@@ -3,10 +3,10 @@ title: Объекты DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
 ms.openlocfilehash: aff4d6f648fa091130bfd9951f2a5001947b09a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215915"
 ---
 # <a name="dataviews"></a>Объекты DataView
@@ -47,7 +47,7 @@ ms.locfileid: "59215915"
  [Веб-приложения ASP.NET](https://docs.microsoft.com/previous-versions/655cec97(v=vs.100))  
  Описывает обзоры и подробные пошаговые инструкции по созданию приложений ASP.NET, Web Forms и веб-служб.  
   
- [Windows-приложения](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
+ [Приложения Windows](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
  Содержит подробные сведения о работе с консольными приложениями и Windows Forms.  
   
  [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
@@ -61,4 +61,4 @@ ms.locfileid: "59215915"
   
 ## <a name="see-also"></a>См. также
 
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

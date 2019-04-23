@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
 ms.openlocfilehash: ff07f5264ccb3ec699e3676a2e9ba64443b2875f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211664"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>Реализация шаблона элемента управления ExpandCollapse модели автоматизации пользовательского интерфейса
@@ -32,7 +32,7 @@ ms.locfileid: "59211664"
   
 -   Когда <xref:System.Windows.Automation.ExpandCollapseState> элемента управления имеет значение <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>, в это время для него неактивны все функциональные возможности <xref:System.Windows.Automation.ExpandCollapsePattern> и с помощью этого шаблона элемента управления можно получить только сведения <xref:System.Windows.Automation.ExpandCollapseState>. Если впоследствии добавляются какие-либо дочерние объекты, <xref:System.Windows.Automation.ExpandCollapseState> изменяется и функциональность <xref:System.Windows.Automation.ExpandCollapsePattern> активируется.  
   
--   <xref:System.Windows.Automation.ExpandCollapseState> относится к видимости непосредственных дочерних объектов. он не относится к видимости всех дочерних объектов.  
+-   <xref:System.Windows.Automation.ExpandCollapseState> относится только к видимости непосредственных дочерних объектов; этот параметр не относится к видимости всех дочерних объектов.  
   
 -   Функциональность развертывания и свертывания определяется элементом управления. Ниже представлены примеры такого поведения.  
   
@@ -66,8 +66,8 @@ ms.locfileid: "59211664"
 ## <a name="see-also"></a>См. также
 
 - [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Навигация между элементами автоматизированного пользовательского интерфейса с помощью TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
+- [Навигация между элементами модели автоматизации пользовательского интерфейса с помощью TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
 - [Общие сведения о дереве модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
 - [Использование кэширования в модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

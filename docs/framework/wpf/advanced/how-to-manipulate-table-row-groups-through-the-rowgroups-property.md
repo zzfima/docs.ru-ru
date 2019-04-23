@@ -11,10 +11,10 @@ helpviewer_keywords:
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
 ms.openlocfilehash: edc5fbe552a04387fc3f152cb53444605d142624
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209974"
 ---
 # <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>Практическое руководство. Управление группами строк таблицы пользователя с помощью свойства RowGroups
@@ -85,6 +85,6 @@ ms.locfileid: "59209974"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Управление элементами потокового содержимого с помощью свойства Inlines](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [Практическое руководство. Управление элементами потокового содержимого через свойство Inlines](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
 - [Управление FlowDocument с помощью свойства Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Управление столбцами таблицы с помощью свойства Columns](how-to-manipulate-table-columns-through-the-columns-property.md)

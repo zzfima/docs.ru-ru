@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d861aa59b31871d20d21d88d9587239f76ae386d
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 368d5f7fa2eec8f3526a10b4777a862e8334617c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203643"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59210234"
 ---
 # <a name="net-framework-4-migration-issues"></a>Проблемы при переходе на .NET Framework 4
 
@@ -85,7 +85,6 @@ ms.locfileid: "57203643"
 | ------- | ------------------------ | ------------------- |
 | **Летнее время** | Для соответствия системным часам свойства времени (такие как <xref:System.TimeZoneInfo.Local> и <xref:System.DateTime.Now>) теперь используют правила операционной системы вместо других данных .NET Framework для перехода на летнее время. | Отсутствует. |
 | **Форматирование строк** | Для поддержки форматирования, учитывающего язык и региональные параметры, структура <xref:System.TimeSpan> содержит новые перегрузки методов `ToString`, `Parse` и `TryParse`, а также новые методы `ParseExact` и `TryParseExact`. | Отсутствует. |
-
 
 ### <a name="globalization"></a>Глобализация
 

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 5ed5f01d-acb2-4dd4-be60-f04c2d570fa8
 ms.openlocfilehash: 88d9c7299c9dbf024a07f223ef7ec7d03f8066d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215135"
 ---
 # <a name="method-based-query-syntax-examples-aggregate-operators-linq-to-dataset"></a>Примеры синтаксиса запросов на основе методов. Операторы агрегатной обработки (LINQ to DataSet)
@@ -149,7 +149,7 @@ ms.locfileid: "59215135"
   
 ## <a name="see-also"></a>См. также
 
-- [Загрузка данных в набор данных](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [Загрузка данных в DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Примеры LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
 - [Общие сведения о стандартных операторах запроса (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Общие сведения о стандартных операторах (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

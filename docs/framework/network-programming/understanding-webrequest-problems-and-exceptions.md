@@ -2,12 +2,12 @@
 title: Основные сведения о проблемах и исключениях WebRequest
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: 55ef0b0f5260c986cad01d2854202dea3755ace7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a6dc06ed7abdbb6a28f9d6c09eda079157493d9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587532"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59215018"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Основные сведения о проблемах и исключениях WebRequest
 Класс <xref:System.Net.WebRequest> и его производные классы (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> и <xref:System.Net.FileWebRequest>) сообщают об аномальных состояниях, создавая исключения. Иногда способ решения проблемы не очевиден.  
@@ -29,6 +29,7 @@ ms.locfileid: "54587532"
 |<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|Ответ от сервера не является допустимым ответом HTTP. Эта проблема возникает, если платформа .NET Framework определяет, что ответ от сервера не соответствует требованиям документа RFC HTTP 1.1. Причиной может быть то, что ответ содержит неправильные заголовки или разделители заголовков. В документе RFC 2616 определяется протокол HTTP 1.1 и допустимый формат ответа от сервера. Дополнительные сведения см. в документе [RFC 2616 — Hypertext Transfer Protocol — HTTP/1.1](https://go.microsoft.com/fwlink/?LinkID=147388) (RFC 2616 — протокол передачи гипертекста — HTTP/1.1) на веб-сайте [Internet Engineering Task Force (IETF)](https://www.ietf.org/).|Получите сетевую трассировку транзакции и изучите заголовки в ответе.<br /><br /> Если приложению требуется ответ от сервера без синтаксического разбора (это может создать угрозу безопасности), присвойте `useUnsafeHeaderParsing` значение `true` в файле конфигурации. См. раздел [Элемент \<httpWebRequest> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.Dns>

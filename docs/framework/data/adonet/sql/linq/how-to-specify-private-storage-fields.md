@@ -3,10 +3,10 @@ title: Практическое руководство. Как указать п
 ms.date: 03/30/2017
 ms.assetid: 5a40e816-cc6e-43a0-b32a-9caaa0ab6912
 ms.openlocfilehash: 843b7ae8dbddb76e0e5fa33d3594a5655dbf1a37
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302456"
 ---
 # <a name="how-to-specify-private-storage-fields"></a>Практическое руководство. Как указать поля закрытого хранения
@@ -23,4 +23,4 @@ ms.locfileid: "59302456"
 ## <a name="see-also"></a>См. также
 
 - [Модель объектов LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Практическое руководство. Как настроить классы сущностей с помощью редактора кода](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Практическое руководство. Настройка классов сущностей с помощью редактора кода](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
