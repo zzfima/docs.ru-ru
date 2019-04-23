@@ -1,66 +1,59 @@
-items:
 - name: Схема файла конфигурации
   href: index.md
   items:
-  - name: Элемент <configuration>
-    href: configuration-element.md
-  - name: Элемент <assemblyBinding>
-    href: assemblybinding-element-for-configuration.md
-  - name: Элемент <linkedConfiguration>
-    href: linkedconfiguration-element.md
-  - name: Элемент <configSections>
-    href: configsections-element-for-configuration.md
-  - name: Элемент <clear> для <configSections>
-    href: clear-element-for-configsections.md
-  - name: Элемент <remove> для <configSections>
-    href: remove-element-for-configsections.md
-  - name: Элемент <sectionGroup>
-    href: sectiongroup-element-for-configsections.md
-  - name: Настраиваемый элемент для SingleTagSectionHandler
-    href: custom-element-1.md
-  - name: Настраиваемый элемент для NameValueSectionHandler и DictionarySectionHandler
-    href: custom-element-2.md
-  - name: Элемент <add>
-    href: add-element-for-custom-2.md
-  - name: Элемент <clear> для NameValueSectionHandler и DictionarySectionHandler
-    href: clear-element-for-custom-2.md
-  - name: Элемент <remove> для NameValueSectionHandler и DictionarySectionHandler
-    href: remove-element-for-custom-2.md
-  - name: <section> Элемент
-    href: section-element.md
-  - name: Схема параметров приложения
-    href: appsettings/index.md
-  - name: Схема параметров приложения
-    href: application-settings-schema.md
-  - name: Схема параметров поставщиков языков и компиляторов
-    href: compiler/index.md
-  - name: Схема разделов конфигурации
-    href: configuration-sections-schema.md
-  - name: Схема параметров криптографии
-    href: cryptography/index.md
-  - name: Схема параметров сети
-    href: network/index.md
-  - name: Схема параметров среды выполнения
-    href: runtime/index.md
-  - name: Схема параметров запуска
-    href: startup/index.md
-  - name: Схема параметров трассировки и отладки
-    href: trace-debug/index.md
-  - name: Схема веб-параметров
-    href: web/index.md
-  - name: Схем конфигурации WCF
-    href: wcf/index.md
-  - name: Синтаксис директив WCF
-    href: wcf-directive/index.md
-  - name: Схема конфигурации WIF
-    href: windows-identity-foundation/index.md
-  - name: Раздел конфигурации Windows Forms
-    href: winforms/index.md
-  - name: Схема конфигурации Windows Workflow Foundation
-    href: windows-workflow-foundation/index.md
-ms.openlocfilehash: 69b0e7862ab6c9a7540469f79d6870a8f9976f14
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469688"
+    - name: Элемент <configuration>
+      href: configuration-element.md
+    - name: Элемент <assemblyBinding>
+      href: assemblybinding-element-for-configuration.md
+    - name: Элемент <linkedConfiguration>
+      href: linkedconfiguration-element.md
+    - name: Элемент <configSections>
+      href: configsections-element-for-configuration.md
+    - name: Элемент <clear> для <configSections>
+      href: clear-element-for-configsections.md
+    - name: Элемент <remove> для <configSections>
+      href: remove-element-for-configsections.md
+    - name: Элемент <sectionGroup>
+      href: sectiongroup-element-for-configsections.md
+    - name: Настраиваемый элемент для SingleTagSectionHandler
+      href: custom-element-1.md
+    - name: Настраиваемый элемент для NameValueSectionHandler и DictionarySectionHandler
+      href: custom-element-2.md
+    - name: Элемент <add>
+      href: add-element-for-custom-2.md
+    - name: Элемент <clear> для NameValueSectionHandler и DictionarySectionHandler
+      href: clear-element-for-custom-2.md
+    - name: Элемент <remove> для NameValueSectionHandler и DictionarySectionHandler
+      href: remove-element-for-custom-2.md
+    - name: <section> Элемент
+      href: section-element.md
+    - name: Схема параметров приложения
+      href: appsettings/index.md
+    - name: Схема параметров приложения
+      href: application-settings-schema.md
+    - name: Схема параметров поставщиков языков и компиляторов
+      href: compiler/index.md
+    - name: Схема разделов конфигурации
+      href: configuration-sections-schema.md
+    - name: Схема параметров криптографии
+      href: cryptography/index.md
+    - name: Схема параметров сети
+      href: network/index.md
+    - name: Схема параметров среды выполнения
+      href: runtime/index.md
+    - name: Схема параметров запуска
+      href: startup/index.md
+    - name: Схема параметров трассировки и отладки
+      href: trace-debug/index.md
+    - name: Схема веб-параметров
+      href: web/index.md
+    - name: Схем конфигурации WCF
+      href: wcf/index.md
+    - name: Синтаксис директив WCF
+      href: wcf-directive/index.md
+    - name: "Схема конфигурации\_WIF"
+      href: windows-identity-foundation/index.md
+    - name: Раздел конфигурации Windows Forms
+      href: winforms/index.md
+    - name: Схема конфигурации Windows Workflow Foundation
+      href: windows-workflow-foundation/index.md

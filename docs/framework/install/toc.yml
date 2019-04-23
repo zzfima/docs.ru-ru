@@ -1,32 +1,25 @@
-items:
 - name: Руководство по установке
   href: index.md
   items:
-  - name: Установка платформы .NET Framework в Windows 10 и Windows Server 2016
-    href: on-windows-10.md
-  - name: Установка .NET Framework в Windows 8.1 и Windows Server 2012 R2
-    href: on-windows-8-1.md
-  - name: Установка .NET Framework в Windows 8 и Windows Server 2012
-    href: on-windows-8.md
-  - name: Установка .NET Framework в Windows 7 с пакетом обновления 1 (SP1) и Windows Server 2008 R2
-    href: on-windows-7.md
-  - name: Установка .NET Framework в Windows Vista и Windows Server 2008
-    href: on-windows-vista.md
-  - name: Установка .NET Framework в Windows XP и Windows Server 2003
-    href: on-windows-xp.md
-  - name: Руководство по установке для разработчиков
-    href: guide-for-developers.md
-  - name: Восстановление .NET Framework
-    href: repair.md
-  - name: Устранение неполадок заблокированных установок и удалений .NET Framework
-    href: troubleshoot-blocked-installations-and-uninstallations.md
-  - name: Установка платформы .NET Framework 3.5 на Windows 10, Windows 8.1 и Windows 8
-    href: dotnet-35-windows-10.md
-  - name: Выполнение приложений .NET Framework 1.1 в Windows 8, Windows 8.1 или Windows 10
-    href: run-net-framework-1-1-apps.md
-ms.openlocfilehash: b7035dfbff4d6e0e7c306f3992240ff560c5170d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470717"
+    - name: "Установка платформы .NET Framework в Windows\_10 и Windows\_Server 2016"
+      href: on-windows-10.md
+    - name: Установка .NET Framework в Windows 8.1 и Windows Server 2012 R2
+      href: on-windows-8-1.md
+    - name: Установка .NET Framework в Windows 8 и Windows Server 2012
+      href: on-windows-8.md
+    - name: Установка .NET Framework в Windows 7 с пакетом обновления 1 (SP1) и Windows Server 2008 R2
+      href: on-windows-7.md
+    - name: Установка .NET Framework в Windows Vista и Windows Server 2008
+      href: on-windows-vista.md
+    - name: Установка .NET Framework в Windows XP и Windows Server 2003
+      href: on-windows-xp.md
+    - name: Руководство по установке для разработчиков
+      href: guide-for-developers.md
+    - name: Восстановление .NET Framework
+      href: repair.md
+    - name: Устранение неполадок заблокированных установок и удалений .NET Framework
+      href: troubleshoot-blocked-installations-and-uninstallations.md
+    - name: "Установка платформы .NET Framework\_3.5 на Windows\_10, Windows\_8.1 и Windows\_8"
+      href: dotnet-35-windows-10.md
+    - name: "Выполнение приложений .NET Framework\_1.1 в Windows\_8, Windows\_8.1 или Windows\_10"
+      href: run-net-framework-1-1-apps.md
