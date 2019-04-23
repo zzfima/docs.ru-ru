@@ -10,10 +10,10 @@ helpviewer_keywords:
 - loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
 ms.openlocfilehash: 4db87c5f266a9eed136f0651f48d11720abede65
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083840"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>Загрузка кода XAML и свойства зависимостей
@@ -43,8 +43,8 @@ ms.locfileid: "59083840"
 ## <a name="see-also"></a>См. также
 
 - [Общие сведения о свойствах зависимости](dependency-properties-overview.md)
-- [Обзор XAML (WPF)](xaml-overview-wpf.md)
-- [Метаданные свойства зависимости](dependency-property-metadata.md)
-- [Свойства зависимостей типа коллекция](collection-type-dependency-properties.md)
-- [Безопасность свойства зависимости](dependency-property-security.md)
+- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
+- [Метаданные свойства зависимостей](dependency-property-metadata.md)
+- [Свойства зависимостей типа коллекции](collection-type-dependency-properties.md)
+- [Безопасность свойства зависимостей](dependency-property-security.md)
 - [Шаблоны безопасного конструктора для DependencyObjects](safe-constructor-patterns-for-dependencyobjects.md)

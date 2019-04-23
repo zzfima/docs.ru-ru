@@ -12,10 +12,10 @@ ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4bdb2035906b9383342201017b58d1d0050113b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084561"
 ---
 # <a name="invalidoverlappedtopinvoke-mda"></a>invalidOverlappedToPinvoke MDA
@@ -75,5 +75,5 @@ ms.locfileid: "59084561"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Диагностика ошибок посредством управляемых помощников по отладке](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)

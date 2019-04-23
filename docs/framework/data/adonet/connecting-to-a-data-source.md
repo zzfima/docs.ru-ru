@@ -3,10 +3,10 @@ title: Подключение к источнику данных в ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
 ms.openlocfilehash: c04624be758e4bc7c8b1981ad6a9dc44430d62b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083716"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>Подключение к источнику данных в ADO.NET
@@ -28,4 +28,4 @@ ms.locfileid: "59083716"
 - [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Транзакции и параллельность](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

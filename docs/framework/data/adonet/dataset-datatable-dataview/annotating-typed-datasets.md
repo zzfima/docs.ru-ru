@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
 ms.openlocfilehash: d8a1a12a4d8ab5e6f4b0fe6ad6c2a3759aa65aa9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085133"
 ---
 # <a name="annotating-typed-datasets"></a>Создание примечаний к типизированным наборам данных
@@ -69,7 +69,7 @@ ms.locfileid: "59085133"
 |**DataRowCollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**Свойство**|PropertyName|typedName|  
+|**Property**|PropertyName|typedName|  
 |**Дочерние** метода доступа|GetChildTableNameRows|typedChildren|  
 |**Родительский** метода доступа|TableNameRow|typedParent|  
 |**Набор данных** события|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
@@ -228,4 +228,4 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
 - <xref:System.Data.DataSet>
 - [Типизированные наборы данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
 - [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

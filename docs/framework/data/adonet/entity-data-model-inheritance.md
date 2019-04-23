@@ -3,10 +3,10 @@ title: 'EDM (модель данных с использованием сущн�
 ms.date: 03/30/2017
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
 ms.openlocfilehash: 9f77f2ebb86ea050c124fbd1c6f2b30ed9e75a1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083820"
 ---
 # <a name="entity-data-model-inheritance"></a>EDM (модель данных с использованием сущностей): Наследование
@@ -29,4 +29,4 @@ Entity Data Model (EDM) поддерживает наследование для
 ## <a name="see-also"></a>См. также
 
 - [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [EDM (модель данных с использованием сущностей)](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)
