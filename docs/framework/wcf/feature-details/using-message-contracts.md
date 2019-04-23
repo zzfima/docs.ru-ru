@@ -8,10 +8,10 @@ helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121983"
 ---
 # <a name="using-message-contracts"></a>Использование контрактов сообщений
@@ -105,7 +105,7 @@ public class BankingTransaction
  Атрибут <xref:System.ServiceModel.MessageContractAttribute> позволяет указать атрибуты WrapperName и WrapperNamespace, от которых зависит имя элемента-оболочки в тексте сообщения SOAP. По умолчанию имя типа контракта сообщения используется для оболочки и пространства имен, в котором определен контракт сообщения. `http://tempuri.org/` используется в качестве пространства имен по умолчанию.  
   
 > [!NOTE]
->  <xref:System.Runtime.Serialization.KnownTypeAttribute> атрибуты учитываются в контрактах сообщений. Если атрибут <xref:System.Runtime.Serialization.KnownTypeAttribute> необходим, поместите его в операцию, в которой используется данный контракт сообщения.  
+>  Атрибуты <xref:System.Runtime.Serialization.KnownTypeAttribute> в контрактах сообщений не учитываются. Если атрибут <xref:System.Runtime.Serialization.KnownTypeAttribute> необходим, поместите его в операцию, в которой используется данный контракт сообщения.  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>Управление именами и пространствами имен заголовков и разделов тела  
  В SOAP-представлении контракта сообщения каждый заголовок и раздел тела сообщения сопоставляется с XML-элементом, имеющим имя и пространство имен.  

@@ -8,10 +8,10 @@ ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c638531bd54f14c7e4b04a093deaec729db404ba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129640"
 ---
 # <a name="assembly-location"></a>Расположение сборки
@@ -32,6 +32,6 @@ ms.locfileid: "59129640"
 ## <a name="see-also"></a>См. также
 
 - [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)
-- [глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)
+- [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)
 - [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)

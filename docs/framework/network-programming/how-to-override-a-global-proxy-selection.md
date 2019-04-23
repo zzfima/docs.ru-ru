@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Переопределение глобальных прокси-серверов
+title: Как выполнить Переопределение глобальных прокси-серверов
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
 ms.openlocfilehash: f822aa18b6eecaa1b1302ad6cc6b94f0b016e330
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127378"
 ---
-# <a name="how-to-override-a-global-proxy-selection"></a>Практическое руководство. Переопределение глобальных прокси-серверов
+# <a name="how-to-override-a-global-proxy-selection"></a>Как выполнить Переопределение глобальных прокси-серверов
 В этом примере класс **WebRequest** отправляется на веб-сайт `www.contoso.com`, который переопределяет глобальные прокси-серверы прокси-сервером с именем `alternateproxy` на порту 80.  
   
 ## <a name="example"></a>Пример  

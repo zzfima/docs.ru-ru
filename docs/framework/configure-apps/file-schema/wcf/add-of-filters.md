@@ -3,10 +3,10 @@ title: <add> из <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
 ms.openlocfilehash: 399fc4e22a9253469a5494af61dac862e33814a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128704"
 ---
 # <a name="add-of-filters"></a>\<Добавить > из \<фильтры >
@@ -42,7 +42,7 @@ ms.locfileid: "59128704"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Фильтры >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|Содержит коллекцию фильтров XPath, используемых для контроля типов регистрируемых сообщений.|  
+|[\<Фильтры>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|Содержит коллекцию фильтров XPath, используемых для контроля типов регистрируемых сообщений.|  
   
 ## <a name="remarks"></a>Примечания  
  Фильтры применяются только на транспортном уровне, когда параметр `logMessagesAtTransportLevel` имеет значение `true`. Фильтры не влияют на ведение журнала сообщений уровня службы и неправильно сформированных сообщений.  

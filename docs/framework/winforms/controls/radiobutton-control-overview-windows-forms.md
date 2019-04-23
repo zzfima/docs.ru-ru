@@ -10,10 +10,10 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
 ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129120"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>Общие сведения об элементе управления RadioButton (Windows Forms)
@@ -31,6 +31,6 @@ Windows Forms <xref:System.Windows.Forms.RadioButton> элементов упр�
 - [Общие сведения об элементе управления GroupBox](groupbox-control-overview-windows-forms.md)
 - [Общие сведения об элементе управления CheckBox](checkbox-control-overview-windows-forms.md)
 - [Практическое руководство. Определение клавиш доступа для элементов управления Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Практическое руководство. Определение текста, отображаемого элементом управления Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Практическое руководство. Создание переключателя для выбора одной из нескольких установок на базе элементов управления RadioButton в Windows Forms](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
+- [Практическое руководство. Задать текст, отображаемый элементом управления форм Windows](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Практическое руководство. Группа элементов управления RadioButton Windows Forms выступать в качестве набора](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
 - [Элемент управления RadioButton](radiobutton-control-windows-forms.md)

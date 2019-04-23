@@ -17,12 +17,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: fa99806510bac8102478cc21e0782067f7bdff86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0fb9b50fdbc0a1e11992baac684c5e2e8c081f5f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497424"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59129315"
 ---
 # <a name="time-based-cache-policies"></a>политики кэша на основе времени
 Политика кэша на основе времени определяет актуальность записей в кэше на основе времени извлечения ресурса, заголовков, возвращаемых вместе с ним, и текущего времени. При задании политики кэша на основе времени можно использовать политику на основе времени <xref:System.Net.Cache.HttpRequestCacheLevel.Default> или создать настраиваемую политику на основе времени. При использовании политики на основе времени по умолчанию для ресурсов, полученных по протоколу HTTP, способ кэширования определяется заголовками, включенными в кэшированный ответ, и поведением, описанным в разделах 13 и 14 документа RFC 2616, который доступен на веб-сайте [IETF](https://www.ietf.org/). Пример кода, в котором демонстрируется задание политики на основе времени по умолчанию для ресурсов HTTP, см. в разделе [Практическое руководство. Установка политики кэша для приложения на основе времени по умолчанию](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Примеры кода, демонстрирующие создание и использование политик кэша, см. в разделе [Настройка кэширования в сетевых приложениях](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
@@ -62,6 +62,7 @@ ms.locfileid: "54497424"
 -   [Взаимодействие с политикой кэша: максимальный возраст и минимальная актуальность](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
 ## <a name="see-also"></a>См. также
+
 - [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)
 - [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)

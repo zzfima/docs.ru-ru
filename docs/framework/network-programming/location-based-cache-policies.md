@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Cache Or Next Cache Only policy
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
-ms.openlocfilehash: 594aef9feee81d026abd6313f1e75cb518479688
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04efb24dd9e48d7e33fa3ea3c41a51c2dc96ac77
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499834"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59129900"
 ---
 # <a name="location-based-cache-policies"></a>политики кэша на основе расположения
 Политики кэша на основе расположения определяют актуальность действительных записей в кэше на основе расположения, в котором может быть получен запрашиваемый ресурс. Кэшируемый ресурс является действительным, если он не нарушает требований сервера по повторной проверке. Политика кэша на основе расположения создается программным способом с помощью конструктора класса <xref:System.Net.Cache.RequestCachePolicy> или <xref:System.Net.Cache.HttpRequestCachePolicy>. Тип политики на основе расположения передается в конструктор с помощью значения перечисления <xref:System.Net.Cache.RequestCacheLevel> или <xref:System.Net.Cache.HttpRequestCacheLevel>. Примеры кода с созданием политик на основе расположения см. в разделе [Практическое руководство. Установка политики кэша для приложения на основе расположения для приложения](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). В следующих разделах приводится описание каждого типа политики кэша на основе расположения для ресурсов HTTP и HTTPS.  
@@ -47,6 +47,7 @@ ms.locfileid: "54499834"
  Сравнивает копию ресурса в кэше с копией на сервере. Если копия на сервере более свежая, эта копия возвращается в ответ на запрос и записывается в кэш. Если копия в кэше аналогична копии на сервере, возвращается копия из кэша. В протоколе кэширования HTTP для этого используется условный запрос.  
   
 ## <a name="see-also"></a>См. также
+
 - [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)
 - [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)

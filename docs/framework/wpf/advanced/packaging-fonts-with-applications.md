@@ -11,10 +11,10 @@ helpviewer_keywords:
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
 ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59123802"
 ---
 # <a name="packaging-fonts-with-applications"></a>Упаковка шрифтов с приложениями
@@ -177,4 +177,4 @@ ms.locfileid: "59123802"
 - [Microsoft Typography: Ссылки, новости и контакты](https://docs.microsoft.com/typography/)
 - [Спецификация OpenType](https://www.microsoft.com/typography/otspec/)
 - [Возможности шрифта OpenType](opentype-font-features.md)
-- [Образец пакета шрифтов OpenType](sample-opentype-font-pack.md)
+- [Пакет образцов шрифтов OpenType](sample-opentype-font-pack.md)

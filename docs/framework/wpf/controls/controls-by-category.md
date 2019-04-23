@@ -5,10 +5,10 @@ helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
 ms.openlocfilehash: 26488b76608aa46b56285581e7368bf24f8b1be7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127846"
 ---
 # <a name="controls-by-category"></a>Категории элементов управления
@@ -162,7 +162,7 @@ ms.locfileid: "59127846"
 -   <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="media"></a>Мультимедиа  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] включает встроенную поддержку для размещения содержимому аудио и видео, а также [кодеков] для большинства популярных форматов изображений.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] включает интегрированную поддержку для размещения как аудио- и видеоконтента, так и [кодеков] для большинства популярных форматов изображений.  
   
 -   <xref:System.Windows.Controls.Image>  
   

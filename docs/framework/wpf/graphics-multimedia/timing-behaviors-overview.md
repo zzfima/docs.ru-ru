@@ -6,10 +6,10 @@ helpviewer_keywords:
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
 ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129601"
 ---
 # <a name="timing-behaviors-overview"></a>Общие сведения о характере поведения во времени
@@ -42,7 +42,7 @@ ms.locfileid: "59129601"
 |----------|-----------------|----------------|-|-|-|  
 |Простая длительность|Длительность, необходимая для одной итерации временной шкалы вперед.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>||||  
 |Одно повторение|Время, необходимое для временной шкалы для воспроизведения вперед, после и, если <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> свойство имеет значение true, обратная однократного воспроизведения.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
-|Период активности|Время, необходимое для временной шкалы для выполнения всех повторений, определяемое его <xref:System.Windows.Media.Animation.RepeatBehavior> свойство.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>значение <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>значение <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
+|Период активности|Время, необходимое для временной шкалы для выполнения всех повторений, определяемое его <xref:System.Windows.Media.Animation.RepeatBehavior> свойство.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
   
 <a name="duration"></a>   
 ### <a name="the-duration-property"></a>Свойство Duration  
@@ -127,5 +127,5 @@ ms.locfileid: "59129601"
 - [Общие сведения об эффектах анимации](animation-overview.md)
 - [Общие сведения об анимации и системе управления временем](animation-and-timing-system-overview.md)
 - [Общие сведения о временных событиях](timing-events-overview.md)
-- [Практические руководства](animation-and-timing-how-to-topics.md)
-- [Пример поведения анимации времени](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Разделы практического руководства](animation-and-timing-how-to-topics.md)
+- [Пример поведения анимации с учетом времени](https://go.microsoft.com/fwlink/?LinkID=159970)

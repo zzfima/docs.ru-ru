@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
 ms.openlocfilehash: ce92705d22edfc832e894dd2feaafcd11088bf26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120670"
 ---
 # <a name="oracle-and-adonet"></a>Oracle и ADO.NET
@@ -43,7 +43,7 @@ csc /r:System.Data.OracleClient.dll
  [BFILE в Oracle](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  Описывает класс <xref:System.Data.OracleClient.OracleBFile>, который используется для работы с типом данных Oracle BFILE.  
   
- [Большие двоичные объекты (LOB) Oracle](../../../../docs/framework/data/adonet/oracle-lobs.md)  
+ [Большие объекты (LOB) в Oracle](../../../../docs/framework/data/adonet/oracle-lobs.md)  
  Описывает класс <xref:System.Data.OracleClient.OracleLob>, который используется для работы с типом данных Oracle LOB.  
   
  [REF CURSOR в Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
@@ -80,4 +80,4 @@ csc /r:System.Data.OracleClient.dll
 ## <a name="see-also"></a>См. также
 
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

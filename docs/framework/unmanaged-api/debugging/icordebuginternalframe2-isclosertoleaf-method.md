@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 30a9d26283d4f544bdd865e40cfc1c1c625ae462
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120904"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>Метод ICorDebugInternalFrame2::IsCloserToLeaf
@@ -48,7 +48,7 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 |-------------|-----------------|  
 |S_OK|Сравнение успешно выполнено.|  
 |E_FAIL|Не удается выполнить сравнение.|  
-|E_INVALIDARG|`pFrameToCompare` или `pIsCloser` имеет значение null.|  
+|E_INVALIDARG|`pFrameToCompare` или `pIsCloser` равно null.|  
   
 ## <a name="remarks"></a>Примечания  
  `IsCloserToLeaf` можно использовать для реализации политики чередования внутренних кадров с другими фреймы в стеке.  

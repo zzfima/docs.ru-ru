@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
 ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122308"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Основные понятия Windows Communication Foundation
@@ -154,5 +154,5 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
   
 ## <a name="see-also"></a>См. также
 
-- [Что такое Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
-- [Архитектура Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)
+- [Что такое Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Архитектура Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)

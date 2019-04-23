@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d58f6ef590e798e52730d79e56b8c16830c1712
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978336"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59128392"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Разработка приложений MVC ASP.NET Core
 
@@ -425,7 +425,6 @@ public void ConfigureServices(IServiceCollection services)
 #### <a name="custom-security"></a>Настраиваемая безопасность
 
 Будьте особенно осторожны при самостоятельной реализации криптографии, членства пользователей или системы создания токенов. Есть много платных и бесплатных инструментов, которые почти наверняка гарантируют более высокий уровень безопасности, чем пользовательские реализации.
-
 
 > ### <a name="references--security"></a>Ссылки — безопасность
 >

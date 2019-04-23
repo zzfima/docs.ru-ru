@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
 ms.openlocfilehash: b5a7f68edc49a02bb99ca05765d4582b798e72ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127391"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Сопоставление объектной модели синдикации WCF моделям Atom и RSS
@@ -37,12 +37,12 @@ ms.locfileid: "59127391"
   
  В примерах кода в данном разделе для выполнения фактической сериализации используется один из двух определенных здесь методов.  
   
- `SerializeFeed` Сериализует веб-канала синдикации.  
+ `SerializeFeed` сериализует веб-канал синдикации.  
   
  [!code-csharp[SyndicationMapping#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#10)]
  [!code-vb[SyndicationMapping#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#10)]  
   
- `SerializeItem` Сериализует элемент синдикации.  
+ `SerializeItem` сериализует элемент синдикации.  
   
  [!code-csharp[SyndicationMapping#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#11)]
  [!code-vb[SyndicationMapping#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#11)]  
@@ -403,4 +403,4 @@ ms.locfileid: "59127391"
 - [Архитектура синдикации](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
 - [Практическое руководство. Создание базового RSS-канала](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)
 - [Практическое руководство. Создание базового канала Atom](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)
-- [Практическое руководство. Как предоставить доступ к каналу в форматах Atom и RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+- [Практическое руководство. Публикация канала в форматах Atom и RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

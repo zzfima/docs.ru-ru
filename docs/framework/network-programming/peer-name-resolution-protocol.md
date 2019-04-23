@@ -2,12 +2,12 @@
 title: Протокол PNRP
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: 9f1850ff3a42526de988df032c39aaa916987d25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4473ccb01349d2697ba512861aa505d5e363ab19
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662665"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59119071"
 ---
 # <a name="peer-name-resolution-protocol"></a>Протокол PNRP
 В одноранговых средах одноранговые узлы используют определенные системы разрешения имен для определения сетевого расположения (адреса, протоколы и порты) друг друга на основе имен и идентификаторов других типов. Раньше разрешение имен одноранговых узлов было затруднено из-за временного характера подключений, а также других недостатков службы доменных имен (DNS).  
@@ -47,6 +47,7 @@ ms.locfileid: "54662665"
 -   <xref:System.Net.PeerToPeer.PeerNameResolver>: Определяет процесс разрешения имени однорангового узла в его сетевые конечные точки, включая синхронные и асинхронные методы разрешения.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.PeerResolvers>
 - <xref:System.Net.PeerToPeer>
 - [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)

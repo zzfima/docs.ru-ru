@@ -11,10 +11,10 @@ helpviewer_keywords:
 - z-order
 ms.assetid: 8b595429-ba9f-46af-9c55-3d5cc53f7fff
 ms.openlocfilehash: 3347722383b7388c00335683537e00851e642bb6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129172"
 ---
 # <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>Практическое руководство. Определение z-порядка закрепленных элементов управления ToolStrip
@@ -26,7 +26,7 @@ ms.locfileid: "59129172"
  [!code-csharp[System.Windows.Forms.ToolStrip.Misc#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#21)]
  [!code-vb[System.Windows.Forms.ToolStrip.Misc#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#21)]  
   
- Z порядок определяется порядком, в котором <xref:System.Windows.Forms.ToolStrip> и <xref:System.Windows.Forms.MenuStrip>  
+ z-порядок определяется порядком, в котором элементы управления <xref:System.Windows.Forms.ToolStrip> и <xref:System.Windows.Forms.MenuStrip>  
   
  добавляются в коллекцию <xref:System.Windows.Forms.Control.Controls%2A> формы.  
   

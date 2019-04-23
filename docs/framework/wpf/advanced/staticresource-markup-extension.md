@@ -9,10 +9,10 @@ helpviewer_keywords:
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
 ms.openlocfilehash: 8319e451268152e95326c02027157db72df631b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125150"
 ---
 # <a name="staticresource-markup-extension"></a>Расширение разметки StaticResource
@@ -55,7 +55,7 @@ ms.locfileid: "59125150"
   
  `StaticResource` может использоваться в синтаксисе элемента объекта. В этом случае укажите значение параметра <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> свойство является обязательным.  
   
- `StaticResource` Можно также использовать в использовании атрибут verbose, который указывает <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> как свойство = значение пары:  
+ Излишним может оказаться и использование `StaticResource` в атрибуте, в котором свойство <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> определено как пара "свойство=значение".  
   
 ```xml  
 <object property="{StaticResource ResourceKey=key}" .../>  
@@ -70,7 +70,7 @@ ms.locfileid: "59125150"
 ## <a name="see-also"></a>См. также
 
 - [Стилизация и использование шаблонов](../controls/styling-and-templating.md)
-- [Обзор XAML (WPF)](xaml-overview-wpf.md)
+- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
 - [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md)
 - [Ресурсы XAML](xaml-resources.md)
 - [Ресурсы и код](resources-and-code.md)

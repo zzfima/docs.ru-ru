@@ -9,10 +9,10 @@ helpviewer_keywords:
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
 ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125309"
 ---
 # <a name="tilebrush-overview"></a>Общие сведения о TileBrush
@@ -126,8 +126,8 @@ ms.locfileid: "59125309"
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
-- [Рисование с помощью объектов Image, Drawing и Visual](painting-with-images-drawings-and-visuals.md)
-- [Практические руководства](brushes-how-to-topics.md)
+- [Заполнение с использованием изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md)
+- [Разделы практического руководства](brushes-how-to-topics.md)
 - [Общие сведения об объектах класса Freezable](../advanced/freezable-objects-overview.md)
 - [Пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [Пример использования VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)

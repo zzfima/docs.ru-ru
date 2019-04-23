@@ -5,12 +5,12 @@ author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 9d842f26336d0ddf5375d49676523086bb632684
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 660b966c6d02353b855e5728094083042a561558
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239531"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126091"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>Проверка опубликованных выходных данных с помощью dotnet vstest
 
@@ -37,6 +37,7 @@ dotnet vstest out/MyProject.Tests.dll
 > Примечание. Если приложение не предназначено для платформы `netcoreapp`, вы все равно можете выполнить команду `dotnet vstest`, передав требуемую версию .NET Framework с помощью флага платформы. Например, `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`. В обновлении 5 для Visual Studio 2017 нужная платформа определяется автоматически.
 
 ## <a name="see-also"></a>См. также
-- [Модульное тестирование C# в .NET Core с использованием dotnet test и xUnit](unit-testing-with-dotnet-test.md)
-- [Модульное тестирование с использованием dotnet test и xUnit](unit-testing-with-nunit.md)
-- [Модульное тестирование кода C# с использованием MSTest и .NET Core](unit-testing-with-mstest.md)
+
+- [Модульное тестирование с использованием dotnet test и xUnit](unit-testing-with-dotnet-test.md)
+- [Модульное тестирование с использованием dotnet test и NUnit](unit-testing-with-nunit.md)
+- [Модульное тестирование с использованием dotnet test и MSTest](unit-testing-with-mstest.md)
