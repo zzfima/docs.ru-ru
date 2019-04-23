@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320056"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Практическое руководство. Создание и запуск длительного рабочего процесса
@@ -23,25 +23,25 @@ ms.locfileid: "59320056"
   
 ## <a name="in-this-topic"></a>Содержание раздела  
   
--   [Создание базы данных сохраняемости](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
+-   [Чтобы создать базу данных сохраняемости](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
--   [Добавление ссылки в сборки DurableInstancing](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+-   [Для добавления ссылки на сборки DurableInstancing](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
 -   [Создание ведущей формы рабочего процесса](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [Добавление свойств и вспомогательных методов формы](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+-   [Для добавления свойств и вспомогательных методов формы](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [Настройка хранилища экземпляров, обработчиков жизненного цикла рабочего процесса и расширений](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+-   [Чтобы настроить хранилище экземпляров, обработчиков жизненного цикла рабочего процесса и расширения](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [Разрешение запуска и возобновления нескольких типов рабочих процессов](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+-   [Чтобы включить запуск и возобновление нескольких типов рабочих процессов](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [Запуск нового рабочего процесса](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+-   [Чтобы запустить новый рабочий процесс](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
 -   [Возобновление рабочего процесса](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
 -   [Завершение рабочего процесса](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [Сборка и запуск приложения](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+-   [Построение и запуск приложения](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
 ### <a name="BKMK_CreatePersistenceDatabase"></a> Чтобы создать базу данных сохраняемости  
   
@@ -94,12 +94,12 @@ ms.locfileid: "59320056"
   
     |Элемент управления|Свойство: Значение|  
     |-------------|---------------------|  
-    |**Кнопка**|Имя. NewGame<br /><br /> Расположение: 13, 13<br /><br /> Размер: 75, 23<br /><br /> Text: Новая игра|  
-    |**Метка**|Расположение: 94, 18<br /><br /> Text: Угадайте число от 1 до|  
+    |**Button**|Имя. NewGame<br /><br /> Расположение: 13, 13<br /><br /> Размер: 75, 23<br /><br /> Text: Новая игра|  
+    |**Label**|Расположение: 94, 18<br /><br /> Text: Угадайте число от 1 до|  
     |**ComboBox**|Имя. NumberRange<br /><br /> Значением DropDownStyle: DropDownList<br /><br /> Элементы: 10, 100, 1000<br /><br /> Расположение: 228, 12<br /><br /> Размер: 143, 21|  
-    |**Метка**|Расположение: 13, 43<br /><br /> Text: Тип рабочего процесса|  
+    |**Label**|Расположение: 13, 43<br /><br /> Text: Тип рабочего процесса|  
     |**ComboBox**|Имя. WorkflowType<br /><br /> Значением DropDownStyle: DropDownList<br /><br /> Элементы: StateMachineNumberGuessWorkflow FlowchartNumberGuessWorkflow, SequentialNumberGuessWorkflow<br /><br /> Расположение: 94, 40<br /><br /> Размер: 277, 21|  
-    |**Метка**|Имя. WorkflowVersion<br /><br /> Расположение: 13, 362<br /><br /> Text: Версия рабочего процесса|  
+    |**Label**|Имя. WorkflowVersion<br /><br /> Расположение: 13, 362<br /><br /> Text: Версия рабочего процесса|  
     |**GroupBox**|Расположение: 13, 67<br /><br /> Размер: 358, 287<br /><br /> Text: Игра|  
   
     > [!NOTE]
@@ -107,12 +107,12 @@ ms.locfileid: "59320056"
   
     |Элемент управления|Свойство: Значение|  
     |-------------|---------------------|  
-    |**Метка**|Расположение: 7, 20<br /><br /> Text: Идентификатор экземпляра рабочего процесса|  
+    |**Label**|Расположение: 7, 20<br /><br /> Text: Идентификатор экземпляра рабочего процесса|  
     |**ComboBox**|Имя. InstanceId<br /><br /> Значением DropDownStyle: DropDownList<br /><br /> Расположение: 121, 17<br /><br /> Размер: 227, 21|  
-    |**Метка**|Расположение: 7, 47<br /><br /> Text: Догадка|  
+    |**Label**|Расположение: 7, 47<br /><br /> Text: Догадка|  
     |**TextBox**|Имя. Догадка<br /><br /> Расположение: 50, 44<br /><br /> Размер: 65, 20|  
-    |**Кнопка**|Имя. EnterGuess<br /><br /> Расположение: 121, 42<br /><br /> Размер: 75, 23<br /><br /> Text: Ввести догадку|  
-    |**Кнопка**|Имя. QuitGame<br /><br /> Расположение: 274, 42<br /><br /> Размер: 75, 23<br /><br /> Text: Выход|  
+    |**Button**|Имя. EnterGuess<br /><br /> Расположение: 121, 42<br /><br /> Размер: 75, 23<br /><br /> Text: Ввести догадку|  
+    |**Button**|Имя. QuitGame<br /><br /> Расположение: 274, 42<br /><br /> Размер: 75, 23<br /><br /> Text: Выход|  
     |**TextBox**|Имя. WorkflowStatus<br /><br /> Расположение: 10, 73<br /><br /> Многострочный: True<br /><br /> Только для чтения: True<br /><br /> Полосы прокрутки: Вертикально<br /><br /> Размер: 338, 208|  
   
 5. Задайте **AcceptButton** свойства формы **EnterGuess**.  
@@ -341,7 +341,7 @@ ms.locfileid: "59320056"
     }  
     ```  
   
-     `ListPersistedWorkflows` запрашивает хранилища экземпляров сохраненные экземпляры рабочих процессов и добавляет идентификаторы экземпляров для `cboInstanceId` поле со списком.  
+     `ListPersistedWorkflows` запрашивает у хранилища экземпляров сохраненные экземпляры рабочих процессов и добавляет их идентификаторы в поле со списком `cboInstanceId`.  
   
 10. Добавьте следующий метод `UpdateStatus` и соответствующий делегат в класс формы. Этот метод обновляет окно состояния в форме с данными о состоянии рабочего процесса, выполняемого в данный момент.  
   
@@ -574,7 +574,7 @@ ms.locfileid: "59320056"
     };  
     ```  
   
-     Для перечисления <xref:System.Activities.PersistableIdleAction> существует три значения: <xref:System.Activities.PersistableIdleAction.None>,<xref:System.Activities.PersistableIdleAction.Persist> и <xref:System.Activities.PersistableIdleAction.Unload>. <xref:System.Activities.PersistableIdleAction.Persist> Вызывает сохранение рабочего процесса, но не приводит к выгрузке рабочего процесса. <xref:System.Activities.PersistableIdleAction.Unload> Вызывает сохранение и выгрузку рабочего процесса.  
+     Для перечисления <xref:System.Activities.PersistableIdleAction> существует три значения: <xref:System.Activities.PersistableIdleAction.None>,<xref:System.Activities.PersistableIdleAction.Persist> и <xref:System.Activities.PersistableIdleAction.Unload>. Значение <xref:System.Activities.PersistableIdleAction.Persist> вызывает сохранение рабочего процесса, но не его выгрузку. Значение <xref:System.Activities.PersistableIdleAction.Unload> вызывает сохранение и выгрузку рабочего процесса.  
   
      Ниже приведен полный пример метода `ConfigureWorkflowApplication`.  
   
@@ -692,7 +692,7 @@ ms.locfileid: "59320056"
     ```  
   
 ### <a name="BKMK_WorkflowVersionMap"></a> Чтобы включить запуск и возобновление нескольких типов рабочих процессов  
- Чтобы возобновить экземпляр рабочего процесса, ведущее приложение должно предоставить определение рабочего процесса. В этом учебнике описано 3 типа рабочих процессов и далее предоставлено несколько версий этих типов. `WorkflowIdentity` Позволяет ведущему приложению связать идентификационные данные с помощью сохраненного экземпляра рабочего процесса. В этом разделе показано, как создать служебный класс, который поможет сопоставить идентификационные данные из сохраненного экземпляра рабочего процесса с соответствующим определением рабочего процесса. Дополнительные сведения о `WorkflowIdentity` и управления версиями, см. в разделе [с помощью WorkflowIdentity и управления версиями](using-workflowidentity-and-versioning.md).  
+ Чтобы возобновить экземпляр рабочего процесса, ведущее приложение должно предоставить определение рабочего процесса. В этом учебнике описано 3 типа рабочих процессов и далее предоставлено несколько версий этих типов. `WorkflowIdentity` позволяет ведущему приложению связать идентификационные данные с сохраненным экземпляром рабочего процесса. В этом разделе показано, как создать служебный класс, который поможет сопоставить идентификационные данные из сохраненного экземпляра рабочего процесса с соответствующим определением рабочего процесса. Дополнительные сведения о `WorkflowIdentity` и управления версиями, см. в разделе [с помощью WorkflowIdentity и управления версиями](using-workflowidentity-and-versioning.md).  
   
 1. Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **добавить**, **класс**. Тип `WorkflowVersionMap` в **имя** поле и нажмите кнопку **добавить**.  
   
@@ -806,7 +806,7 @@ ms.locfileid: "59320056"
     }  
     ```  
   
-     `WorkflowVersionMap` содержит три удостоверения рабочего процесса, которые сопоставляются с тремя определениями рабочих процессов из этого учебника и используется в следующих разделах при запуске и возобновлении рабочих процессов.  
+     `WorkflowVersionMap` содержит три удостоверения рабочего процесса, которые сопоставляются с тремя определениями рабочих процессов из этого учебника и используются в следующих разделах при запуске и возобновлении рабочих процессов.  
   
 ### <a name="BKMK_StartWorkflow"></a> Чтобы запустить новый рабочий процесс  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 2c95b903ae03ea261674885262b24a33efa9e2db
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 76c7b9fa9ef103fc5fc62830932cc724ba50baca
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973747"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59333376"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Реализация асинхронной модели, основанной на событиях
 Если вы создаете класс и некоторые операции этого класса могут привести к значительным задержкам, подумайте о том, чтобы реализовать асинхронные функции для этого класса с помощью [асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -75,7 +75,7 @@ ms.locfileid: "56973747"
   
  Для каждой отдельной сигнатуры метода _MethodName_**Async** выполните следующие действия.  
   
-1.  Определите следующее событие в том же классе, в котором находится метод.  
+1. Определите следующее событие в том же классе, в котором находится метод.  
   
     ```vb  
     Public Event MethodNameCompleted As MethodNameCompletedEventHandler  
@@ -85,7 +85,7 @@ ms.locfileid: "56973747"
     public event MethodNameCompletedEventHandler MethodNameCompleted;  
     ```  
   
-2.  Определите следующий делегат и <xref:System.ComponentModel.AsyncCompletedEventArgs>. Обычно они определяются за пределами класса, но в том же пространстве имен.  
+2. Определите следующий делегат и <xref:System.ComponentModel.AsyncCompletedEventArgs>. Обычно они определяются за пределами класса, но в том же пространстве имен.  
   
     ```vb  
     Public Delegate Sub MethodNameCompletedEventHandler( _  

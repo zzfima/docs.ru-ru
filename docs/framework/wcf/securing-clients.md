@@ -5,10 +5,10 @@ helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331810"
 ---
 # <a name="securing-clients"></a>Обеспечение безопасности клиентов
@@ -129,7 +129,7 @@ ms.locfileid: "59331810"
  Дополнительные сведения о настройке учетных данных клиента, см. в разделе [как: Укажите значения учетных данных клиента](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 > [!NOTE]
->  `ClientCredentialType` игнорируется, если `SecurityMode` присваивается `"TransportWithMessageCredential",` как показано в следующем образце конфигурации.  
+>  Значение `ClientCredentialType` игнорируется, если для параметра `SecurityMode` задано значение `"TransportWithMessageCredential",` как показано в следующем примере конфигурации.  
   
 ```xml  
 <wsHttpBinding>  
@@ -152,9 +152,9 @@ ms.locfileid: "59331810"
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
 - [\<привязки >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
-- [Средство редактирования конфигурации (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
+- [Редактор конфигурации (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
 - [Защита служб](../../../docs/framework/wcf/securing-services.md)
-- [Обращение к службам с использованием клиента WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [Практическое руководство. Задание значений учетных данных клиента](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
-- [Служебное средство ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Обращение к службам с помощью клиента WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [Практическое руководство. Укажите значения учетных данных клиента](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Практическое руководство. Указание типа учетных данных клиента](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)

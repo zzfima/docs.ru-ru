@@ -11,10 +11,10 @@ helpviewer_keywords:
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
 ms.openlocfilehash: 81ae93871fa5e3fc46382ee9a1810808574fb043
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320136"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Общие сведения о приложениях браузера WPF XAML
@@ -189,4 +189,4 @@ ms.locfileid: "59320136"
 ## <a name="see-also"></a>См. также
 
 - [Настройка Visual Studio для отладки приложений браузера XAML для вызова веб-службы](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
-- [Развертывание приложения WPF](deploying-a-wpf-application-wpf.md)
+- [Развертывание приложений WPF](deploying-a-wpf-application-wpf.md)

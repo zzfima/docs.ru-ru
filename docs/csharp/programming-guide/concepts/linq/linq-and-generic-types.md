@@ -6,19 +6,19 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: fe29bb14b85b74c249a5d9b7f8c2802ef991b13d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: cd0fae0c7d99491f21e5e1fb265e4aabafaa63c4
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977816"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59332699"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ и универсальные типы (C#)
 Запросы [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] основаны на универсальных типах, которые впервые появились в версии [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 2.0. Для того чтобы приступить к написанию запросов, не требуется глубокое знание универсальных типов. Тем не менее необходимо понимание двух основных принципов.  
   
-1.  При создании экземпляра универсального класса коллекции, такого как <xref:System.Collections.Generic.List%601>, замените "T" типом объектов, которые будут храниться в списке. Например, список строк выражается как `List<string>`, а список объектов `Customer` — как `List<Customer>`. Универсальный список является строго типизированным и предоставляет ряд преимуществ по сравнению с коллекциями, которые хранят свои элементы как <xref:System.Object>. При попытке добавить `Customer` в `List<string>` будет выдана ошибка во время компиляции. Универсальные коллекции просты в использовании, поскольку нет необходимости выполнять приведение типов во время выполнения.  
+1. При создании экземпляра универсального класса коллекции, такого как <xref:System.Collections.Generic.List%601>, замените "T" типом объектов, которые будут храниться в списке. Например, список строк выражается как `List<string>`, а список объектов `Customer` — как `List<Customer>`. Универсальный список является строго типизированным и предоставляет ряд преимуществ по сравнению с коллекциями, которые хранят свои элементы как <xref:System.Object>. При попытке добавить `Customer` в `List<string>` будет выдана ошибка во время компиляции. Универсальные коллекции просты в использовании, поскольку нет необходимости выполнять приведение типов во время выполнения.  
   
-2.  <xref:System.Collections.Generic.IEnumerable%601> — это интерфейс, поддерживающий перечисление универсальных классов коллекций с помощью оператора `foreach`. Универсальные классы коллекций поддерживают <xref:System.Collections.Generic.IEnumerable%601> так же, как неуниверсальные классы коллекций (например <xref:System.Collections.ArrayList>) поддерживают <xref:System.Collections.IEnumerable>.  
+2. <xref:System.Collections.Generic.IEnumerable%601> — это интерфейс, поддерживающий перечисление универсальных классов коллекций с помощью оператора `foreach`. Универсальные классы коллекций поддерживают <xref:System.Collections.Generic.IEnumerable%601> так же, как неуниверсальные классы коллекций (например <xref:System.Collections.ArrayList>) поддерживают <xref:System.Collections.IEnumerable>.  
   
  Дополнительные сведения об универсальных классах см. в разделе [Универсальные шаблоны](../../../../csharp/programming-guide/generics/index.md).  
   

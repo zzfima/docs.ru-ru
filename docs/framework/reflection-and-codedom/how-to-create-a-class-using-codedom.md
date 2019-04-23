@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание класса с помощью CodeDOM
+title: Как выполнить Создание класса с помощью CodeDOM
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,13 +14,13 @@ ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5d431fd472df329dd0a8421483eb36b573dce775
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333175"
 ---
-# <a name="how-to-create-a-class-using-codedom"></a>Практическое руководство. Создание класса с помощью CodeDOM
+# <a name="how-to-create-a-class-using-codedom"></a>Как выполнить Создание класса с помощью CodeDOM
 В следующих процедурах демонстрируется создание и компиляция графа CodeDOM, который создает класс, содержащий два поля, три свойства, метод, конструктор и точку входа.  
   
 1. Создайте приложение консоли, которое будет использовать код CodeDOM для создания исходного кода класса.  

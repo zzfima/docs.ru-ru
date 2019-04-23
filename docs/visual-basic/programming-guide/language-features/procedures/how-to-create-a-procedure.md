@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
 ms.openlocfilehash: 56099d334a03e85b816cf48983cbbead0784ef5b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320396"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>Практическое руководство. Создание процедуры (Visual Basic)
@@ -64,4 +64,4 @@ ms.locfileid: "59320396"
 - [Рекурсивные процедуры](./recursive-procedures.md)
 - [Перегрузка процедур](./procedure-overloading.md)
 - [Объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Объектно ориентированного программирования (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [Object-Oriented Programming (Visual Basic)](../../concepts/object-oriented-programming.md) (Объектно-ориентированное программирование на языке Visual Basic)

@@ -3,10 +3,10 @@ title: Пользовательские критерии поиска
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: d676d7b2edbfb517f3fd8fe0c99fe7cc54eca2a8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332538"
 ---
 # <a name="custom-find-criteria"></a>Пользовательские критерии поиска
@@ -45,7 +45,7 @@ ms.locfileid: "59332538"
   
      Эта пользовательская логика проходит по всем областям в каждой из конечных точек, входящих в службу. Если области конечной точки совпадают с любыми из областей, указанных клиентом, служба обнаружения добавляет конечную точку в ответ, который отправляется обратно клиенту.  
   
-3. **CustomDiscoveryExtension.cs**: Последний шаг в реализации службы обнаружения является подключение этой реализации пользовательской службы обнаружения к узлу службы. Здесь используется вспомогательный класс `CustomDiscoveryExtension`. Этот класс расширяет класс <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>. Пользователь должен переопределить метод <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>. В этом случае метод возвращает экземпляр пользовательской службы обнаружения, который был создан ранее. `PublishedEndpoints` — <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> , содержащий все конечные точки приложения, которые добавляются к <xref:System.ServiceModel.ServiceHost>. Пользовательская служба обнаружения использует эту коллекцию для заполнения внутреннего списка. Пользователь может добавлять и другие метаданные конечных точек.  
+3. **CustomDiscoveryExtension.cs**: Последний шаг в реализации службы обнаружения является подключение этой реализации пользовательской службы обнаружения к узлу службы. Здесь используется вспомогательный класс `CustomDiscoveryExtension`. Этот класс расширяет класс <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>. Пользователь должен переопределить метод <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>. В этом случае метод возвращает экземпляр пользовательской службы обнаружения, который был создан ранее. `PublishedEndpoints` - коллекция <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, которая содержит все конечные точки приложения, добавленные в <xref:System.ServiceModel.ServiceHost>. Пользовательская служба обнаружения использует эту коллекцию для заполнения внутреннего списка. Пользователь может добавлять и другие метаданные конечных точек.  
   
  Наконец, откройте файл Program.cs. Заметьте, что в узел добавляются объекты <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> и `CustomDiscoveryExtension`. После этого, когда в узле есть конечная точка, через которую принимаются сообщения обнаружения, приложение может использовать пользовательскую службу обнаружения.  
   

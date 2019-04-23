@@ -3,10 +3,10 @@ title: Задача 1. Создание нового приложения Window
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
 ms.openlocfilehash: 63b84e4fd2c88d98fbf417ee1f55ec203d295116
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320384"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Задача 1. Создание нового приложения Windows Presentation Foundation
@@ -44,5 +44,5 @@ ms.locfileid: "59320384"
   
 ## <a name="see-also"></a>См. также
 
-- [Повторное размещение конструктора рабочих процессов](rehosting-the-workflow-designer.md)
+- [Отдельное размещение конструктора рабочих процессов](rehosting-the-workflow-designer.md)
 - [Задача 2. Размещение конструктора рабочих процессов](task-2-host-the-workflow-designer.md)

@@ -3,14 +3,14 @@ title: Образец технологии базовой сериализаци
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315014"
 ---
 # <a name="basic-serialization-technology-sample"></a>Образец технологии базовой сериализации
-[Загрузить образец](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
+[Скачать образец](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
   
  В этом образце демонстрируется возможность среды CLR выполнять сериализацию графа объекта в поток. Для сериализации в примере могут использоваться классы <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> или <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Связанный список, заполненный данными, сериализируется в поток файла или десериализируется из потока файла. В любом случае этот список отображается для того, чтобы можно было видеть результаты. Связанный список является списком типа `LinkedList`, который определен в этом примере.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "59315014"
   
     -   <xref:System.IO.Stream> Используется для сериализации и десериализации. Особый тип потока, который используется в этом примере, является типом <xref:System.IO.FileStream>. Однако сериализация может быть использована с любым типом, производным от <xref:System.IO.Stream>.  
   
-    -   <xref:System.IO.File> Используется для создания <xref:System.IO.FileStream> объектов для чтения и создания файлов на диске.  
+    -   <xref:System.IO.File> Используется для создания объектов <xref:System.IO.FileStream> для чтения и создания файлов на диске.  
   
     -   <xref:System.IO.FileStream> Используется для сериализации и десериализации связанных списков.  
   

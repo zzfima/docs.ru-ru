@@ -3,10 +3,10 @@ title: УстановкаF#
 description: Дополнительные сведения об установке F# об используемой среде.
 ms.date: 08/28/2018
 ms.openlocfilehash: 792c61c0522cd4d0c68a64572f2892ce33f71ea6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331979"
 ---
 # <a name="install-f"></a>Установка F\#
@@ -31,7 +31,7 @@ F#устанавливается по умолчанию в [Visual Studio дл�
 
 Необходимо иметь [репозиторий git](https://git-scm.com/download) и доступные в свой путь, чтобы сделать использование шаблонов проектов. Убедитесь, что он установлен правильно, введя `git --version` командной строки и нажмите клавишу **ввод**.
 
-### [<a name="macos"></a>macOS](#tab/macos)
+### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 [Mono](https://www.mono-project.com) используется для [ F# интерактивные](../tutorials/fsharp-interactive/index.md) поддержки. Самый простой способ установить Mono в macOS — с помощью Homebrew. Просто введите следующую команду в окне терминала:
 
@@ -41,7 +41,7 @@ brew install mono
 
 Кроме того, установить [пакет SDK для .NET Core](https://www.microsoft.com/net/download).
 
-### [<a name="linux"></a>Linux](#tab/linux)
+### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 [Mono](https://www.mono-project.com) используется для [ F# интерактивные](../tutorials/fsharp-interactive/index.md) поддержки. Если вы в Debian и Ubuntu, можно использовать следующее:
 
@@ -52,7 +52,7 @@ sudo apt-get install mono-complete fsharp
 
 Кроме того, установить [пакет SDK для .NET Core](https://www.microsoft.com/net/download).
 
-### [<a name="windows"></a>Windows](#tab/windows)
+### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 Установка [Visual Studio с F# поддерживает](#install-f-with-visual-studio). При этом будут установлены все необходимые компоненты для написания, компиляции и выполнения F# кода.
 

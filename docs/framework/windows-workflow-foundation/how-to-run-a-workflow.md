@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
 ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319928"
 ---
 # <a name="how-to-run-a-workflow"></a>Практическое руководство. Запуск рабочего процесса
@@ -62,7 +62,7 @@ ms.locfileid: "59319928"
     WorkflowInvoker.Invoke(workflow1);
     ```
 
-     Этот код размещения использует <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker> предоставляет простой способ вызова рабочего процесса аналогично вызову метода и может использоваться только для рабочих процессов, не использующих сохраняемость. <xref:System.Activities.WorkflowApplication> предоставляет улучшенную модель выполнения рабочих процессов, включающую уведомления о событиях жизненного цикла, управление выполнением, возобновления закладок и сохраняемость. В этом примере используются закладки, а для размещения рабочего процесса используется <xref:System.Activities.WorkflowApplication> . Добавьте инструкцию `using` или **Imports** в начало файла **Program.cs** или **Module1.vb** после существующих инструкций **using** или **Imports** .
+     Этот код размещения использует <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker> предоставляет простой способ вызова рабочего процесса аналогично вызову метода и может использоваться только для рабочих процессов, не использующих сохраняемость. <xref:System.Activities.WorkflowApplication> предоставляет улучшенную модель выполнения рабочих процессов, которая включает уведомления о событиях жизненного цикла, управление выполнением, возобновление закладок и сохраняемость. В этом примере используются закладки, а для размещения рабочего процесса используется <xref:System.Activities.WorkflowApplication> . Добавьте инструкцию `using` или **Imports** в начало файла **Program.cs** или **Module1.vb** после существующих инструкций **using** или **Imports** .
 
     ```vb
     Imports NumberGuessWorkflowActivities
@@ -163,9 +163,9 @@ ms.locfileid: "59319928"
 
 - <xref:System.Activities.WorkflowApplication>
 - <xref:System.Activities.Bookmark>
-- [Программирование в Windows Workflow Foundation](programming.md)
-- [Учебник по началу работы](getting-started-tutorial.md)
+- [Программирование в Windows Workflow Foundation](programming.md)
+- [Руководство по началу работы](getting-started-tutorial.md)
 - [Практическое руководство. Создание рабочего процесса](how-to-create-a-workflow.md)
-- [Практическое руководство. Создание и запуск длительного рабочего процесса](how-to-create-and-run-a-long-running-workflow.md)
+- [Практическое руководство. Создание и запуск длительно выполнении рабочего процесса](how-to-create-and-run-a-long-running-workflow.md)
 - [Ожидание входных данных в рабочем процессе](waiting-for-input-in-a-workflow.md)
 - [Размещение рабочих процессов](hosting-workflows.md)

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
 ms.openlocfilehash: ce616f45ceaa3db117c6981d2987ac09bba7b3fb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319902"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Практическое руководство. Обработка события щелчка элемента управления CheckBox в Windows Forms
@@ -139,5 +139,5 @@ ms.locfileid: "59319902"
 
 - <xref:System.Windows.Forms.CheckBox>
 - [Общие сведения об элементе управления CheckBox](checkbox-control-overview-windows-forms.md)
-- [Практическое руководство. Задание параметров с помощью элементов управления CheckBox в Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [Практическое руководство. Настройка параметров с помощью элементов управления Windows Forms CheckBox](how-to-set-options-with-windows-forms-checkbox-controls.md)
 - [Элемент управления CheckBox](checkbox-control-windows-forms.md)

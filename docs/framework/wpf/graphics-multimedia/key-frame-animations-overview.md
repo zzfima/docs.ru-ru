@@ -7,10 +7,10 @@ helpviewer_keywords:
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
 ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316743"
 ---
 # <a name="key-frame-animations-overview"></a>Общие сведения об анимации по ключевым кадрам
@@ -46,7 +46,7 @@ ms.locfileid: "59316743"
   
  Классы анимации по ключевым кадрам принадлежат к <xref:System.Windows.Media.Animation> пространства имен и соответствовать следующее соглашение об именовании:  
   
- *\<Тип >* `AnimationUsingKeyFrames`  
+ *\<Тип>* `AnimationUsingKeyFrames`  
   
  Где *\<Type>* — тип значения, которое выполняет анимацию класса.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "59316743"
 ## <a name="target-values-key-frames-and-key-times"></a>Целевые значения (ключевые кадры) и временная шкала  
  Для анимации различных типов свойств существуют различные типы анимации по ключевым кадрам и, соответственно, различные типы объектов ключевых кадров — по одному для каждого типа анимированного значения и поддерживаемого метода интерполяции. Типы ключевых кадров удовлетворяют требованиям следующего соглашения об именах.  
   
- *\<InterpolationMethod >\<тип >* `KeyFrame`  
+ *\<InterpolationMethod>\<Type>* `KeyFrame`  
   
  Где *\<InterpolationMethod>* — метод интерполяции, используемый при анимации по ключевым кадрам, а *\<Type>* — тип значения, анимируемый классом. Метод анимации по ключевым кадрам, поддерживающий все три метода интерполяции, будет включать в себя три типа ключевых кадров, которые можно использовать. Например, можно использовать три типа ключевых кадров с <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>, и <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>. (Методы интерполяции подробно описаны в следующем разделе.)  
   
@@ -291,6 +291,6 @@ ms.locfileid: "59316743"
 - [Пример анимации ключевого сплайна](https://go.microsoft.com/fwlink/?LinkID=160011)
 - [Пример анимации по ключевым кадрам](https://go.microsoft.com/fwlink/?LinkID=160012)
 - [Общие сведения об эффектах анимации](animation-overview.md)
-- [Общие сведения о Storyboard](storyboards-overview.md)
+- [Общие сведения о раскадровке](storyboards-overview.md)
 - [Практические руководства, посвященные анимации по ключевым кадрам](key-frame-animation-how-to-topics.md)
 - [Общие сведения о характере поведения во времени](timing-behaviors-overview.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
 ms.openlocfilehash: ee1e93b4e9819992f17738eb024004a4d66210d1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332590"
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>Практическое руководство. Создание новой переменной (Visual Basic)
@@ -58,10 +58,10 @@ ms.locfileid: "59332590"
 ## <a name="see-also"></a>См. также
 
 - [Переменные](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Объявление переменной](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Объявление переменных](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Характеристики объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Операторы](../../../../visual-basic/language-reference/statements/index.md)
 - [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Option Infer - оператор](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Оператор Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

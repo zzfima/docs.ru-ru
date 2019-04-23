@@ -4,12 +4,12 @@ description: Понимание роли реестров образов кон�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 9bfd2a834039af9f71d263df3606d1b65a2d784f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: ea25612417f5b0c23eca2a36b52db6f303a4bb45
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466352"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612567"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>Возможность адресации микрослужб и реестр служб
 
@@ -24,13 +24,13 @@ ms.locfileid: "58466352"
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Крис Ричардсон (Chris Richardson). Шаблон: Реестр служб** \
-  [https://microservices.io/patterns/service-registry.html](https://microservices.io/patterns/service-registry.html)
+  <https://microservices.io/patterns/service-registry.html>
 
 - **Auth0. Реестр служб** \
-  [https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/](https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/)
+  <https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/>
 
 - **Габриэль Шенкер (Gabriel Schenker). Обнаружение служб** \
-  [https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/](https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/)
+  <https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/>
 
 >[!div class="step-by-step"]
 >[Назад](maintain-microservice-apis.md)

@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Создание неподписанных дружественных сборок (C#)
+title: Как выполнить Создание неподписанных дружественных сборок (C#)
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
 ms.openlocfilehash: 6bc2d807b3d1cf6c82a9ba6303139b9758581f35
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318238"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-c"></a>Практическое руководство. Создание неподписанных дружественных сборок (C#)
+# <a name="how-to-create-unsigned-friend-assemblies-c"></a>Как выполнить Создание неподписанных дружественных сборок (C#)
 В этом примере показано использование дружественных сборок с неподписанными сборками.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Создание сборки и дружественной сборки  
@@ -95,5 +95,5 @@ ms.locfileid: "59318238"
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Сборки в .NET](../../../../standard/assembly/index.md)
 - [Дружественные сборки](../../../../standard/assembly/friend-assemblies.md)
-- [Практическое руководство. Создание подписанных дружественных сборок в (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [Практическое руководство. Создание подписанных дружественных сборок в C#](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
 - [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)

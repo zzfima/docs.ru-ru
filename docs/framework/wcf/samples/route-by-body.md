@@ -3,10 +3,10 @@ title: Маршрутизация по телу сообщения
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
 ms.openlocfilehash: b8a3f7785d7d59d8ad85d6dddde7fd6a04a12d63
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320721"
 ---
 # <a name="route-by-body"></a>Маршрутизация по телу сообщения
@@ -35,7 +35,7 @@ ms.locfileid: "59320721"
     }  
 ```  
   
- Чтобы при таком контракте можно было распределять сообщения между операциями, службе требуется пользовательское поведение диспетчеризации `DispatchByBodyBehavior`. Это поведение отправки инициализирует `DispatchByBodyElementOperationSelector` пользовательский селектор операций с таблицей имен операций, обозначенных с помощью значений QName соответствующих элементов оболочек. `DispatchByBodyElementOperationSelector` проверяет начальный тег первого дочернего элемента Body и выбирает операцию, используя упомянутую ранее таблицу.  
+ Чтобы при таком контракте можно было распределять сообщения между операциями, службе требуется пользовательское поведение диспетчеризации `DispatchByBodyBehavior`. Это поведение отправки инициализирует `DispatchByBodyElementOperationSelector` пользовательский селектор операций с таблицей имен операций, обозначенных с помощью значений QName соответствующих элементов оболочек. Операция `DispatchByBodyElementOperationSelector` проверяет начальный тег первого дочернего элемента Body и выбирает операцию, используя упомянутую ранее таблицу.  
   
  Клиент использует прокси-сервера, автоматически создается из кода WSDL, экспортированного службой с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   

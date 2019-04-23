@@ -8,10 +8,10 @@ helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
 ms.openlocfilehash: c00e5d8e50de89d3d4d346ccddc50282f24735b2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332135"
 ---
 # <a name="how-to-create-a-duplex-contract"></a>Практическое руководство. Создание двухстороннего контракта
@@ -71,8 +71,8 @@ ms.locfileid: "59332135"
 
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
-- [Практическое руководство. Доступ к службам с дуплексным контрактом](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Практическое руководство. Службы доступа с дуплексным контрактом](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
 - [Дуплекс](../../../../docs/framework/wcf/samples/duplex.md)
 - [Проектирование и реализация служб](../../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [Практическое руководство. Определение контракта службы](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
-- [Сеанс](../../../../docs/framework/wcf/samples/session.md)
+- [Практическое руководство. Определите контракт службы](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [Session](../../../../docs/framework/wcf/samples/session.md)

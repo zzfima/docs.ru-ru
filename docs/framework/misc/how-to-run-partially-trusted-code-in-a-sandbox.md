@@ -11,10 +11,10 @@ ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316535"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Практическое руководство. Выполнение частично доверенного кода в изолированной среде
@@ -63,7 +63,7 @@ AppDomain.CreateDomain( string friendlyName,
     PermissionSet internetPS = SecurityManager.GetStandardSandbox(ev);  
     ```  
   
-     Метод <xref:System.Security.SecurityManager.GetStandardSandbox%2A> возвращает набор разрешений `Internet` или `LocalIntranet` в зависимости от зоны в свидетельстве. <xref:System.Security.SecurityManager.GetStandardSandbox%2A> также создает разрешения идентификации для некоторых объектов свидетельства, переданных по ссылке.  
+     Метод <xref:System.Security.SecurityManager.GetStandardSandbox%2A> возвращает набор разрешений `Internet` или `LocalIntranet` в зависимости от зоны в свидетельстве. Метод <xref:System.Security.SecurityManager.GetStandardSandbox%2A> также создает разрешения идентификации для некоторых объектов свидетельства, переданных по ссылке.  
   
 2. Подпишите сборку, которая содержит размещающий класс (в этом примере это класс `Sandboxer`), вызывающий ненадежный код. Добавьте объект <xref:System.Security.Policy.StrongName>, используемый для подписания сборки, в массив <xref:System.Security.Policy.StrongName> в параметре `fullTrustAssemblies` вызова метода <xref:System.AppDomain.CreateDomain%2A>. Чтобы разрешить выполнение кода с частичным доверием или предложить службы приложению с частичным доверием, нужно запустить размещающий класс как полностью доверенный. Ниже показано, как читается строгое имя <xref:System.Security.Policy.StrongName> сборки.  
   

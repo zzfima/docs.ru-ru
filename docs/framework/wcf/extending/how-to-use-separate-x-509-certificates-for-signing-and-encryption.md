@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
 ms.openlocfilehash: f95274861f58d1581e4c5439861ebf186b1b3489
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332564"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Практическое руководство. Использование отдельных сертификатов X.509 для подписывания и шифрования
@@ -23,13 +23,13 @@ ms.locfileid: "59332564"
   
  На представленном ниже рисунке показаны основные используемые классы, классы, от которых они наследуются (показаны стрелкой вверх), и типы возвращаемого значения некоторых методов и свойств.  
   
--   `MyClientCredentials` — это пользовательская реализация <xref:System.ServiceModel.Description.ClientCredentials>.  
+-   `MyClientCredentials` - это пользовательская реализация <xref:System.ServiceModel.Description.ClientCredentials>.  
   
     -   Все показанные на рисунке свойства этой реализации возвращают экземпляры <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>.  
   
     -   Метод <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> этой реализации возвращает экземпляр `MyClientCredentialsSecurityTokenManager`.  
   
--   `MyClientCredentialsSecurityTokenManager` — это пользовательская реализация <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
+-   `MyClientCredentialsSecurityTokenManager` - это пользовательская реализация <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
   
     -   Метод <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> этой реализации возвращает экземпляр <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>.  
   
@@ -96,4 +96,4 @@ ms.locfileid: "59332564"
 - <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
-- [Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Пошаговое руководство: Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)

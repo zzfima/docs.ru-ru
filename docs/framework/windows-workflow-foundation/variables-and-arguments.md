@@ -3,10 +3,10 @@ title: Переменные и аргументы
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
 ms.openlocfilehash: 29ce5222435b68ed13cbc967e58e72a937625e8e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320747"
 ---
 # <a name="variables-and-arguments"></a>Переменные и аргументы
@@ -67,7 +67,7 @@ Variable<string> var = new Variable<string>
   
 2. При вызове <xref:System.Activities.InOutArgument%601.Set%2A> среда выполнения немедленно задает значение.  
   
-3. Для аргументов может быть дополнительно задан их <xref:System.Activities.Argument.EvaluationOrder%2A>. <xref:System.Activities.Argument.EvaluationOrder%2A> — это отсчитываемое от нуля значение, которое указывает порядок вычисления аргумента. По умолчанию порядок вычисления аргумента не указан и равен значению <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>. Свойству <xref:System.Activities.Argument.EvaluationOrder%2A> задайте значение, большее или равное нулю, чтобы указать порядок вычисления для этого аргумента. Windows Workflow Foundation вычисляет аргументы в заданном порядке вычисления в порядке возрастания. Следует отметить, что аргументы с незаданным порядком вычисления вычисляются до вычисления аргументов, порядок вычисления которых задан.  
+3. Для аргументов может быть дополнительно задан их <xref:System.Activities.Argument.EvaluationOrder%2A>. <xref:System.Activities.Argument.EvaluationOrder%2A> - отсчитываемое от нуля значение, которое указывает порядок вычисления аргумента. По умолчанию порядок вычисления аргумента не указан и равен значению <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>. Свойству <xref:System.Activities.Argument.EvaluationOrder%2A> задайте значение, большее или равное нулю, чтобы указать порядок вычисления для этого аргумента. Windows Workflow Foundation вычисляет аргументы в заданном порядке вычисления в порядке возрастания. Следует отметить, что аргументы с незаданным порядком вычисления вычисляются до вычисления аргументов, порядок вычисления которых задан.  
   
  Создатель действия для предоставления доступа к аргументам действия может использовать механизм со строгой типизацией. Для этого объявляются свойства типа <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> и <xref:System.Activities.InOutArgument%601>. Благодаря этому для создателя действия обеспечивается возможность установки определенного контракта, касающегося потока данных в действие и из действия.  
   
@@ -87,7 +87,7 @@ public class Prompt : Activity
 >  Действия, которые возвращают одно значение, могут быть производными от <xref:System.Activities.Activity%601>, <xref:System.Activities.NativeActivity%601> или <xref:System.Activities.CodeActivity%601>. У этих действий существует полностью определенный аргумент <xref:System.Activities.OutArgument%601> с именем <xref:System.Activities.Activity%601.Result%2A>, который содержит возвращаемое значение действия.  
   
 ### <a name="using-variables-and-arguments-in-workflows"></a>Использование переменных и аргументов в рабочих процессах  
- В следующем примере показано, как переменные и аргументы используются в рабочих процессах. Рабочий процесс представляет собой последовательность, объявляющую три переменные: `var1`, `var2` и `var3`. Первым действием в рабочем процессе является действие `Assign`, которое присваивает значение переменной `var1` переменной `var2`. За этим следует действие `WriteLine`, выполняющее печать значения переменной `var2`. Затем следует еще одно действие `Assign`, которое присваивает значение переменной `var2` переменной `var3`. И, наконец, существует еще одно действие `WriteLine`, выполняющее печать значения переменной `var3`. Первое действие `Assign` использует объекты `InArgument<string>` и `OutArgument<string>`, которые явно представляют привязки аргументов действия. `InArgument<string>` используется для <xref:System.Activities.Statements.Assign.Value%2A> так как значение передается в <xref:System.Activities.Statements.Assign%601> через его <xref:System.Activities.Statements.Assign.Value%2A> аргумента, и `OutArgument<string>` используется для <xref:System.Activities.Statements.Assign.To%2A> поскольку значение передается от <xref:System.Activities.Statements.Assign.To%2A> аргумент в переменную. Второе действие `Assign` позволяет добиться такого же результата с использованием более компактного, но аналогичного синтаксиса, в котором используются явные операции приведения. Действия `WriteLine` также используют компактный синтаксис.  
+ В следующем примере показано, как переменные и аргументы используются в рабочих процессах. Рабочий процесс представляет собой последовательность, объявляющую три переменные: `var1`, `var2` и `var3`. Первым действием в рабочем процессе является действие `Assign`, которое присваивает значение переменной `var1` переменной `var2`. За этим следует действие `WriteLine`, выполняющее печать значения переменной `var2`. Затем следует еще одно действие `Assign`, которое присваивает значение переменной `var2` переменной `var3`. И, наконец, существует еще одно действие `WriteLine`, выполняющее печать значения переменной `var3`. Первое действие `Assign` использует объекты `InArgument<string>` и `OutArgument<string>`, которые явно представляют привязки аргументов действия. `InArgument<string>` используется для <xref:System.Activities.Statements.Assign.Value%2A>, поскольку значение передается действию <xref:System.Activities.Statements.Assign%601> с помощью его аргумента <xref:System.Activities.Statements.Assign.Value%2A>, а `OutArgument<string>` используется для <xref:System.Activities.Statements.Assign.To%2A>, так как значение передается от аргумента <xref:System.Activities.Statements.Assign.To%2A> переменной. Второе действие `Assign` позволяет добиться такого же результата с использованием более компактного, но аналогичного синтаксиса, в котором используются явные операции приведения. Действия `WriteLine` также используют компактный синтаксис.  
   
 ```csharp  
 // Declare three variables; the first one is given an initial value.  

@@ -3,10 +3,10 @@ title: Корреляция сообщений
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
 ms.openlocfilehash: ed6fc8f5d16ae2d604cdbdf4659ecfaaa83bfa02
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333279"
 ---
 # <a name="message-correlation"></a>Корреляция сообщений
@@ -315,4 +315,4 @@ static void DisplayOrderStatus()
 ## <a name="see-also"></a>См. также
 
 - [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Очередь сообщений](https://go.microsoft.com/fwlink/?LinkId=94968)
+- [Очереди сообщений](https://go.microsoft.com/fwlink/?LinkId=94968)

@@ -5,10 +5,10 @@ dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
 ms.openlocfilehash: 1527e3b4b614d4e700ae0c2c0fc555e14c7bc8d2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314832"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Пошаговое руководство. Применение только хранимых процедур (Visual Basic)
@@ -105,7 +105,7 @@ ms.locfileid: "59314832"
   
 1. В **обозревателе решений**, щелкните правой кнопкой мыши **Form1.vb**, а затем нажмите кнопку **Просмотр кода**.  
   
-     `Class Form1` Откроется в редакторе кода.  
+     В редакторе кода откроется `Class Form1`.  
   
 2. В блок кода `Form1` введите следующий код.  
   

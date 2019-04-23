@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение и использование настраиваемых поставщиков числовых форматов
+title: Как выполнить Определение и использование настраиваемых поставщиков числовых форматов
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18a784db1ff02f459fbc2265c3ca1a2abfaff9b4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4fab94c85745bf17a632d04c563070d79b48aa95
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879040"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59318381"
 ---
-# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Практическое руководство. Определение и использование настраиваемых поставщиков числовых форматов
+# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Как выполнить Определение и использование настраиваемых поставщиков числовых форматов
 Платформа [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] дает широкие возможности контроля над строковым представлением числовых значений. Эта платформа поддерживает указанные далее возможности для настройки форматов числовых значений.  
   
 -   Строки стандартных числовых форматов, которые предоставляют стандартный набор форматов для преобразования чисел в их строковое представление. Вы можете использовать их с любым методом числового форматирования, например <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> с параметром `format`. Дополнительные сведения см. в статье [Строки стандартных числовых форматов](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
@@ -37,9 +37,9 @@ ms.locfileid: "43879040"
   
 ### <a name="to-define-a-custom-format-provider"></a>Определение поставщика пользовательского формата  
   
-1.  Определите класс, реализующий интерфейсы <xref:System.IFormatProvider> и <xref:System.ICustomFormatter>.  
+1. Определите класс, реализующий интерфейсы <xref:System.IFormatProvider> и <xref:System.ICustomFormatter>.  
   
-2.  Выполните метод <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. <xref:System.IFormatProvider.GetFormat%2A> — это метод обратного вызова, с помощью которого метод форматирования (например, <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>) вызывает объект, отвечающий за выполнение пользовательского форматирования. Метод <xref:System.IFormatProvider.GetFormat%2A> в типичной реализации выполняет следующие действия:  
+2. Выполните метод <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. <xref:System.IFormatProvider.GetFormat%2A> — это метод обратного вызова, с помощью которого метод форматирования (например, <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>) вызывает объект, отвечающий за выполнение пользовательского форматирования. Метод <xref:System.IFormatProvider.GetFormat%2A> в типичной реализации выполняет следующие действия:  
   
     1.  Определяет, предоставляет ли объект <xref:System.Type>, полученный в качестве параметра, интерфейс <xref:System.ICustomFormatter>.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "43879040"
   
     3.  Если параметр не представляет интерфейс <xref:System.ICustomFormatter>, <xref:System.IFormatProvider.GetFormat%2A> возвращает `null`.  
   
-3.  Выполните метод <xref:System.ICustomFormatter.Format%2A>. Этот метод вызывается из метода <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> и возвращает строковое представление числа. Реализация этого метода обычно включает в себя выполнение следующих действий.  
+3. Выполните метод <xref:System.ICustomFormatter.Format%2A>. Этот метод вызывается из метода <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> и возвращает строковое представление числа. Реализация этого метода обычно включает в себя выполнение следующих действий.  
   
     1.  Вы можете проверить параметр `provider`, чтобы убедиться, что метод действительно предназначен для форматирования. Для объектов форматирования, которые реализуют интерфейсы <xref:System.IFormatProvider> и <xref:System.ICustomFormatter>, нужно проверить еще и параметр `provider`, значение которого должно совпадать с текущим объектом форматирования.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "43879040"
   
 ### <a name="to-use-a-custom-numeric-formatting-object"></a>Использование объекта настраиваемого числового форматирования  
   
-1.  Создайте новый экземпляр класса настраиваемого форматирования.  
+1. Создайте новый экземпляр класса настраиваемого форматирования.  
   
-2.  Вызовите метод форматирования <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, передав ему объект пользовательского форматирования, описатель форматирования (или <xref:System.String.Empty?displayProperty=nameWithType>, если описатель не используется) и числовое значение для форматирования.  
+2. Вызовите метод форматирования <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, передав ему объект пользовательского форматирования, описатель форматирования (или <xref:System.String.Empty?displayProperty=nameWithType>, если описатель не используется) и числовое значение для форматирования.  
   
 ## <a name="example"></a>Пример  
  В следующем примере определяется поставщик настраиваемого числового формата с именем `TelephoneFormatter`, который преобразует число, представляющее номер телефона в США, в формат NANP или E.123. Метод обрабатывает два описателя формата "N" (вывод в формате NANP) и "I" (вывод в международном формате E.123).  

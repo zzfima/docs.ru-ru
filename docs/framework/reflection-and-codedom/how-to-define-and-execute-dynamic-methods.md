@@ -1,5 +1,5 @@
 ---
-title: Как выполнить  Определение и выполнение динамических методов
+title: Как выполнить Определение и выполнение динамических методов
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,31 +11,31 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f24d3e456285efe694e598aa3d435fc15341283
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 17bc7c417980c0850788f082ebb6e810fd0c53d9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221060"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59333305"
 ---
-# <a name="how-to-define-and-execute-dynamic-methods"></a>Как выполнить  Определение и выполнение динамических методов
+# <a name="how-to-define-and-execute-dynamic-methods"></a>Как выполнить Определение и выполнение динамических методов
 В следующих процедурах показаны способы определения и выполнения простого динамического метода и динамического метода, привязанного к экземпляру класса. Дополнительные сведения о динамических методах см. в описании класса <xref:System.Reflection.Emit.DynamicMethod> и в разделе [Сценарии динамических методов порождаемого отражения](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>Определение и выполнение динамического метода  
   
-1.  Объявите тип делегата для выполнения метода. Рассмотрите возможность использования универсального делегата для уменьшения числа типов делегата, которые необходимо будет объявлять. В следующем коде объявляются два типа делегата, которые могут быть использованы для метода `SquareIt`.  
+1. Объявите тип делегата для выполнения метода. Рассмотрите возможность использования универсального делегата для уменьшения числа типов делегата, которые необходимо будет объявлять. В следующем коде объявляются два типа делегата, которые могут быть использованы для метода `SquareIt`.  
   
      [!code-cpp[DynamicMethodHowTo#2](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#2)]
      [!code-csharp[DynamicMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#2)]
      [!code-vb[DynamicMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#2)]  
   
-2.  Создайте массив, в котором будут указаны типы параметров динамического метода. В этом примере единственным параметром является `int` (`Integer` в Visual Basic), поэтому массив содержит только один элемент.  
+2. Создайте массив, в котором будут указаны типы параметров динамического метода. В этом примере единственным параметром является `int` (`Integer` в Visual Basic), поэтому массив содержит только один элемент.  
   
      [!code-cpp[DynamicMethodHowTo#3](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#3)]
      [!code-csharp[DynamicMethodHowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#3)]
      [!code-vb[DynamicMethodHowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#3)]  
   
-3.  Создайте таблицу <xref:System.Reflection.Emit.DynamicMethod>. В этом примере метод называется `SquareIt`.  
+3. Создайте таблицу <xref:System.Reflection.Emit.DynamicMethod>. В этом примере метод называется `SquareIt`.  
   
     > [!NOTE]
     >  Нет необходимости предоставлять имена динамических методов, они не могут быть вызваны по именам. Несколько динамических методов могут иметь одинаковое имя. Но это имя отображается в стеках вызовов и может оказаться полезным при отладке.  
@@ -46,7 +46,7 @@ ms.locfileid: "56221060"
      [!code-csharp[DynamicMethodHowTo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#4)]
      [!code-vb[DynamicMethodHowTo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#4)]  
   
-4.  Выпустите основную часть метода. В этом примере объект <xref:System.Reflection.Emit.ILGenerator> используется для выпуска MSIL. В качестве альтернативы объект <xref:System.Reflection.Emit.DynamicILInfo> может быть использован вместе с генераторами неуправляемого кода для выпуска основной части метода для <xref:System.Reflection.Emit.DynamicMethod>.  
+4. Выпустите основную часть метода. В этом примере объект <xref:System.Reflection.Emit.ILGenerator> используется для выпуска MSIL. В качестве альтернативы объект <xref:System.Reflection.Emit.DynamicILInfo> может быть использован вместе с генераторами неуправляемого кода для выпуска основной части метода для <xref:System.Reflection.Emit.DynamicMethod>.  
   
      В этом примере MSIL загружает аргумент, который является `int`, в стек, преобразует его в `long`, дублирует `long` и умножает два значения. Эти действия приводят к появлению в стеке возведенного в квадрат значения, поэтому методу остается только вернуться.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "56221060"
      [!code-csharp[DynamicMethodHowTo#5](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#5)]
      [!code-vb[DynamicMethodHowTo#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#5)]  
   
-5.  Создайте экземпляр делегата (объявлен на этапе 1), который представляет динамический метод посредством вызова метода <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>. Создание делегата завершает этот метод, любые дальнейшие попытки изменить этот метод, например добавить MSIL, будут игнорироваться. В следующем коде создается и вызывается делегат с помощью универсального делегата.  
+5. Создайте экземпляр делегата (объявлен на этапе 1), который представляет динамический метод посредством вызова метода <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>. Создание делегата завершает этот метод, любые дальнейшие попытки изменить этот метод, например добавить MSIL, будут игнорироваться. В следующем коде создается и вызывается делегат с помощью универсального делегата.  
   
      [!code-cpp[DynamicMethodHowTo#6](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#6)]
      [!code-csharp[DynamicMethodHowTo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#6)]
@@ -62,25 +62,25 @@ ms.locfileid: "56221060"
   
 ### <a name="to-define-and-execute-a-dynamic-method-that-is-bound-to-an-object"></a>Определение и выполнение динамического метода, привязанного к объекту  
   
-1.  Объявите тип делегата для выполнения метода. Рассмотрите возможность использования универсального делегата для уменьшения числа типов делегата, которые необходимо будет объявлять. В следующем примере кода объявляется делегат универсального типа, который может быть использован для выполнения любого метода с одним параметром и возвращаемым значением или метода с двумя параметрами и возвращаемым значением, если делегат привязан к объекту.  
+1. Объявите тип делегата для выполнения метода. Рассмотрите возможность использования универсального делегата для уменьшения числа типов делегата, которые необходимо будет объявлять. В следующем примере кода объявляется делегат универсального типа, который может быть использован для выполнения любого метода с одним параметром и возвращаемым значением или метода с двумя параметрами и возвращаемым значением, если делегат привязан к объекту.  
   
      [!code-cpp[DynamicMethodHowTo#12](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#12)]
      [!code-csharp[DynamicMethodHowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#12)]
      [!code-vb[DynamicMethodHowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#12)]  
   
-2.  Создайте массив, в котором будут указаны типы параметров динамического метода. Если делегат, представляющий метод, должен быть привязан к объекту, первый параметр должен соответствовать типу, к которому привязывается делегат. В этом примере есть два параметра: один типа `Example`, а другой — типа `int` (`Integer` в Visual Basic).  
+2. Создайте массив, в котором будут указаны типы параметров динамического метода. Если делегат, представляющий метод, должен быть привязан к объекту, первый параметр должен соответствовать типу, к которому привязывается делегат. В этом примере есть два параметра: один типа `Example`, а другой — типа `int` (`Integer` в Visual Basic).  
   
      [!code-cpp[DynamicMethodHowTo#13](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#13)]
      [!code-csharp[DynamicMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#13)]
      [!code-vb[DynamicMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#13)]  
   
-3.  Создайте таблицу <xref:System.Reflection.Emit.DynamicMethod>. В этом примере не задано имя для данного метода. Тип возвращаемого значения указан как `int` (`Integer` в Visual Basic). Этот метод имеет доступ к закрытым и защищенным элементам класса `Example`.  
+3. Создайте таблицу <xref:System.Reflection.Emit.DynamicMethod>. В этом примере не задано имя для данного метода. Тип возвращаемого значения указан как `int` (`Integer` в Visual Basic). Этот метод имеет доступ к закрытым и защищенным элементам класса `Example`.  
   
      [!code-cpp[DynamicMethodHowTo#14](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#14)]
      [!code-csharp[DynamicMethodHowTo#14](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#14)]
      [!code-vb[DynamicMethodHowTo#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#14)]  
   
-4.  Выпустите основную часть метода. В этом примере объект <xref:System.Reflection.Emit.ILGenerator> используется для выпуска MSIL. В качестве альтернативы объект <xref:System.Reflection.Emit.DynamicILInfo> может быть использован вместе с генераторами неуправляемого кода для выпуска основной части метода для <xref:System.Reflection.Emit.DynamicMethod>.  
+4. Выпустите основную часть метода. В этом примере объект <xref:System.Reflection.Emit.ILGenerator> используется для выпуска MSIL. В качестве альтернативы объект <xref:System.Reflection.Emit.DynamicILInfo> может быть использован вместе с генераторами неуправляемого кода для выпуска основной части метода для <xref:System.Reflection.Emit.DynamicMethod>.  
   
      В этом примере MSIL загружает первый аргумент, которым является экземпляр класса `Example`, и использует его для загрузки значения закрытого поля экземпляра типа `int`. Загружается второй аргумент, после чего два числа перемножаются. Если результат превышает значение `int`, то он усекается и отбрасываются старшие разряды. Метод возвращается с возвращаемым значением, содержащимся в стеке.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "56221060"
      [!code-csharp[DynamicMethodHowTo#15](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#15)]
      [!code-vb[DynamicMethodHowTo#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#15)]  
   
-5.  Создайте экземпляр делегата (объявленного на этапе 1), который представляет динамический метод посредством вызова перегрузки метода <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29>. Создание делегата завершает этот метод, любые дальнейшие попытки изменить этот метод, например добавить MSIL, будут игнорироваться.  
+5. Создайте экземпляр делегата (объявленного на этапе 1), который представляет динамический метод посредством вызова перегрузки метода <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29>. Создание делегата завершает этот метод, любые дальнейшие попытки изменить этот метод, например добавить MSIL, будут игнорироваться.  
   
     > [!NOTE]
     >  Можно вызвать метод <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> несколько раз для создания делегатов, привязанных к другим экземплярам целевого типа.  
@@ -123,6 +123,7 @@ ms.locfileid: "56221060"
 -   Скомпилируйте код из командной строки с помощью команд csc.exe, vbc.exe или cl.exe. Для компиляции кода в Visual Studio поместите его в шаблон проекта консольного приложения.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Reflection.Emit.DynamicMethod>
 - [Использование порождаемого отражения](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
 - [Сценарии динамических методов порождаемого отражения](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))

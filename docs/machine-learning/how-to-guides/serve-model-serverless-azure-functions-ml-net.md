@@ -4,10 +4,10 @@ description: Использование модели машинного обуч
 ms.date: 03/08/2019
 ms.custom: mvc,how-to
 ms.openlocfilehash: 4681b37da64097dd8e537b4c956917277ecff96b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330640"
 ---
 # <a name="how-to-use-mlnet-model-in-azure-functions"></a>Руководство. Использование модели ML.NET в Функциях Azure
@@ -22,7 +22,7 @@ ms.locfileid: "59330640"
 ## <a name="prerequisites"></a>Предварительные требования
 
 - [Visual Studio 2017 версии 15.6 и выше](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core" и "Разработка в Azure". 
-- [Средства функций Azure](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
+- [Средства Функций Azure](/azure/azure-functions/functions-develop-vs#check-your-tools-version).
 - PowerShell.
 - Предварительно обученная модель. 
     - Используйте [руководство по анализу тональности ML.NET](../tutorials/sentiment-analysis.md), чтобы создать собственную модель.

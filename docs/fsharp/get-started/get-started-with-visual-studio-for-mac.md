@@ -3,10 +3,10 @@ title: Начало работы с F# в Visual Studio для Mac
 description: Сведения об использовании F# с помощью Visual Studio для Mac.
 ms.date: 07/03/2018
 ms.openlocfilehash: a6997f139d7e6c5fdf77878442db0b0b75b3d727
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331875"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Начало работы с F# в Visual Studio для Mac
@@ -116,7 +116,7 @@ val it : bool = true
 ## <a name="see-also"></a>См. также
 
 - [Visual F#](../index.md)
-- [Обзор языка F#](../tour.md)
+- [Обзор языка F#](../tour.md)
 - [F#Справочник по языку](../language-reference/index.md)
 - [Вывод типа](../language-reference/type-inference.md)
 - [Справочник символов и оператор](../language-reference/symbol-and-operator-reference/index.md)

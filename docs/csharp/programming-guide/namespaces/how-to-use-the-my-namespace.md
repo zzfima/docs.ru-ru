@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Руководство по программированию на C#. Использование пространства имен "My"
+title: Как выполнить Руководство по программированию на C#. Использование пространства имен "My"
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
 ms.openlocfilehash: 9621f6a01ef4e30bf34b97df3d2c3033e9b62a23
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316028"
 ---
-# <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Практическое руководство. Использование пространства имен "My"
+# <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Практическое руководство. Использование пространства имен "My"
 Пространство имен <xref:Microsoft.VisualBasic.MyServices> (`My` в Visual Basic) обеспечивает простой и интуитивно понятный доступ к ряду классов .NET Framework, позволяя создавать код, взаимодействующий с компьютером, приложением, параметрами, ресурсами и т. д. Пространство имен `MyServices` изначально разработано для Visual Basic, однако может применяться и в приложениях C#.  
   
  Дополнительные сведения об использовании пространства имен `MyServices` из Visual Basic см. в разделе [Разработка с использованием пространства имен My](../../../visual-basic/developing-apps/development-with-my/index.md).  

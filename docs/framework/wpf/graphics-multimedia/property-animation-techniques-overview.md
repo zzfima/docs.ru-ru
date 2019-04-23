@@ -10,10 +10,10 @@ helpviewer_keywords:
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
 ms.openlocfilehash: ebee350f69b5c5e4f9d38c452b9c87bf003528ee
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317913"
 ---
 # <a name="property-animation-techniques-overview"></a>Общие сведения о методах анимации свойств
@@ -59,7 +59,7 @@ ms.locfileid: "59317913"
 |<xref:System.Windows.Media.Animation.BeginStoryboard> и <xref:System.Windows.EventTrigger>|Да|Да|Да|Да|[Анимация свойства с помощью раскадровки](how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> и свойство <xref:System.Windows.Trigger>|Нет|Да|Да|Да|[Запуск анимации при изменении значения свойства](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> и <xref:System.Windows.DataTrigger>|Нет|Да|Да|Да|[Практическое руководство. Запуск анимации при изменении данных](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> метод|Да|Нет|Нет|Нет|[Анимация свойства с помощью раскадровки](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|Метод <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Да|Нет|Нет|Нет|[Анимация свойства с помощью раскадровки](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Дополнительные сведения о <xref:System.Windows.Media.Animation.Storyboard> объектов, см. в разделе [Общие сведения о раскадровках](storyboards-overview.md).  
   
@@ -124,6 +124,6 @@ ms.locfileid: "59317913"
 ## <a name="see-also"></a>См. также
 
 - [Общие сведения об эффектах анимации](animation-overview.md)
-- [Общие сведения о Storyboard](storyboards-overview.md)
+- [Общие сведения о раскадровке](storyboards-overview.md)
 - [Общие сведения об анимации и системе управления временем](animation-and-timing-system-overview.md)
 - [Общие сведения о свойствах зависимости](../advanced/dependency-properties-overview.md)

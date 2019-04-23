@@ -8,10 +8,10 @@ helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
 ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320929"
 ---
 # <a name="using-sessions"></a>Использование сеансов
@@ -32,11 +32,11 @@ ms.locfileid: "59320929"
   
  Если вы знакомы с <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> в класс [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] приложения и функциональные возможности она предоставляет, можно отметить следующие различия между его сеансами и сеансами WCF:  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] сеансы будут всегда инициированного сервером.  
+-   Сеансы[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] всегда инициируются сервером.  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] сеансы явным образом неупорядочены.  
+-   Сеансы[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] явным образом неупорядочены.  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] сеансы обеспечивают общий механизм хранения данных для запросов.  
+-   Сеансы[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] обеспечивают общий механизм хранения данных для запросов.  
   
  В этом разделе описываются следующие функции и операции:  
   
@@ -108,14 +108,14 @@ ms.locfileid: "59320929"
 > [!NOTE]
 >  Поведение по умолчанию имеет сходство с локальными конструкторами и деструкторами, но это не более чем сходство. Все операции службы WCF может быть инициирующей или завершающей или оба одновременно. Кроме того, в случае по умолчанию инициирующие операции можно вызывать сколько угодно раз и в любом порядке. После того как сеанс установлен и связан с экземпляром, дополнительные сеансы могут быть созданы только в случае осуществления явным образом управления временем существования экземпляра службы (путем обработки объекта <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> ). И наконец, состояние связывается с сеансом, а не с объектом службы.  
   
- Например `ICalculatorSession` контракта, используемого в предыдущем примере требуется, что клиент WCF объект первый вызов `Clear` операцию до выполнения любой другой операции и что сеанс с этим объектом клиента WCF завершался при вызове `Equals` операции. В следующем примере кода приведен контракт, обеспечивающий выполнение этих требований. `Clear` Сначала необходимо вызвать для инициации сеанса, а завершится сеанс при `Equals` вызывается.  
+ Например `ICalculatorSession` контракта, используемого в предыдущем примере требуется, что клиент WCF объект первый вызов `Clear` операцию до выполнения любой другой операции и что сеанс с этим объектом клиента WCF завершался при вызове `Equals` операции. В следующем примере кода приведен контракт, обеспечивающий выполнение этих требований. Для инициации сеанса сначала необходимо вызвать операцию`Clear` , а завершится сеанс при вызове операции `Equals` .  
   
  [!code-csharp[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.isinitiatingisterminating/cs/service.cs#1)]
  [!code-vb[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.isinitiatingisterminating/vb/service.vb#1)]  
   
  Службы не начинают сеансы с клиентами. В клиентских приложениях WCF существует прямая связь между временем существования канала на основе сеансов и время существования самого сеанса. Таким образом, клиенты создают новые сеансы путем создания новых каналов, основанных на сеансах, и прерывают существующие сеансы путем правильного закрытия этих каналов. Клиент начинает сеанс с конечной точкой службы путем вызова одной из следующих операций:  
   
--   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> для канала, возвращенного вызовом <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
+-   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> для канала, возвращенного при вызове <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
   
 -   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> в объекте клиента WCF, создаваемые [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
@@ -123,7 +123,7 @@ ms.locfileid: "59320929"
   
  Обычно клиент завершает сеанс с конечной точкой службы путем вызова одной из следующих операций:  
   
--   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> для канала, возвращенного вызовом <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
+-   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> для канала, возвращенного при вызове <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
   
 -   <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> в объекте клиента WCF, созданный средством Svcutil.exe.  
   

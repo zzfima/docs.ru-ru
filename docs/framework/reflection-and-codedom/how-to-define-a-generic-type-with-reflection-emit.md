@@ -1,5 +1,5 @@
 ---
-title: Как выполнить  Определение универсального типа с порождаемым отражением
+title: Как выполнить Определение универсального типа с порождаемым отражением
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74ddda813d756fb5cb54cb600e3cbf1cf68b3f38
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: b129da00fcd841566a4a823d8929348441d0a0f3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221151"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59315547"
 ---
-# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Как выполнить  Определение универсального типа с порождаемым отражением
+# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Как выполнить Определение универсального типа с порождаемым отражением
 В этом разделе приведено описание способов создания простого универсального типа с двумя параметрами типа, порядка применения ограничений класса, ограничений интерфейса и специальных ограничений параметров типа, создания элементов, использующих параметры типа класса в качестве типов параметров и возвращаемых типов.  
   
 > [!IMPORTANT]
@@ -27,25 +27,25 @@ ms.locfileid: "56221151"
   
 ### <a name="to-define-a-generic-type"></a>Определение универсального типа  
   
-1.  Определите динамическую сборку с именем `GenericEmitExample1`. В этом примере сборка выполняется и сохраняется на диске, так что указан флаг <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>.  
+1. Определите динамическую сборку с именем `GenericEmitExample1`. В этом примере сборка выполняется и сохраняется на диске, так что указан флаг <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>.  
   
      [!code-cpp[EmitGenericType#2](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#2)]
      [!code-csharp[EmitGenericType#2](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#2)]
      [!code-vb[EmitGenericType#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#2)]  
   
-2.  Определите динамический модуль. Сборка состоит из выполняемых модулей. Для сборки с одним модулем именем модуля является имя сборки, а именем файла — имя сборки с расширением.  
+2. Определите динамический модуль. Сборка состоит из выполняемых модулей. Для сборки с одним модулем именем модуля является имя сборки, а именем файла — имя сборки с расширением.  
   
      [!code-cpp[EmitGenericType#3](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#3)]
      [!code-csharp[EmitGenericType#3](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#3)]
      [!code-vb[EmitGenericType#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#3)]  
   
-3.  Определите класс. В этом примере класс называется `Sample`.  
+3. Определите класс. В этом примере класс называется `Sample`.  
   
      [!code-cpp[EmitGenericType#4](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#4)]
      [!code-csharp[EmitGenericType#4](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#4)]
      [!code-vb[EmitGenericType#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#4)]  
   
-4.  Определите параметры универсального типа метода `Sample` посредством передачи массива строк, содержащего имена параметров, в метод <xref:System.Reflection.Emit.TypeBuilder.DefineGenericParameters%2A?displayProperty=nameWithType>. Этот класс станет универсального типа. Возвращаемое значение — это массив объектов <xref:System.Reflection.Emit.GenericTypeParameterBuilder>, представляющих параметры типа, который может использоваться в выпущенном коде.  
+4. Определите параметры универсального типа метода `Sample` посредством передачи массива строк, содержащего имена параметров, в метод <xref:System.Reflection.Emit.TypeBuilder.DefineGenericParameters%2A?displayProperty=nameWithType>. Этот класс станет универсального типа. Возвращаемое значение — это массив объектов <xref:System.Reflection.Emit.GenericTypeParameterBuilder>, представляющих параметры типа, который может использоваться в выпущенном коде.  
   
      В следующем коде `Sample` становится универсальным типом с параметрами типа `TFirst` и `TSecond`. Чтобы сделать код более удобными для чтения, каждый объект <xref:System.Reflection.Emit.GenericTypeParameterBuilder> помещается в переменную с тем же именем, что параметр типа.  
   
@@ -53,25 +53,25 @@ ms.locfileid: "56221151"
      [!code-csharp[EmitGenericType#5](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#5)]
      [!code-vb[EmitGenericType#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#5)]  
   
-5.  Добавьте специальные ограничения параметров типа. В этом примере параметр типа `TFirst` ограничен типами, имеющими конструкторы без параметров, а также ссылочными типами.  
+5. Добавьте специальные ограничения параметров типа. В этом примере параметр типа `TFirst` ограничен типами, имеющими конструкторы без параметров, а также ссылочными типами.  
   
      [!code-cpp[EmitGenericType#6](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#6)]
      [!code-csharp[EmitGenericType#6](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#6)]
      [!code-vb[EmitGenericType#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#6)]  
   
-6.  Дополнительно добавьте ограничения класса и интерфейса в параметры типа. В этом примере параметр типа `TFirst` ограничен типами, которые являются производными из базового класса, представленного объектом <xref:System.Type>, содержащимся в переменной `baseType`, а также которые реализуют интерфейсы, содержащие типы в переменных `interfaceA` и `interfaceB`. Объявление и назначение этих переменных см. в примере кода.  
+6. Дополнительно добавьте ограничения класса и интерфейса в параметры типа. В этом примере параметр типа `TFirst` ограничен типами, которые являются производными из базового класса, представленного объектом <xref:System.Type>, содержащимся в переменной `baseType`, а также которые реализуют интерфейсы, содержащие типы в переменных `interfaceA` и `interfaceB`. Объявление и назначение этих переменных см. в примере кода.  
   
      [!code-cpp[EmitGenericType#7](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#7)]
      [!code-csharp[EmitGenericType#7](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#7)]
      [!code-vb[EmitGenericType#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#7)]  
   
-7.  Определите поле. В этом примере тип поля задается параметром типа `TFirst`. <xref:System.Reflection.Emit.GenericTypeParameterBuilder> является производным от <xref:System.Type>, поэтому параметры универсального типа можно использовать везде, где можно использовать тип.  
+7. Определите поле. В этом примере тип поля задается параметром типа `TFirst`. <xref:System.Reflection.Emit.GenericTypeParameterBuilder> является производным от <xref:System.Type>, поэтому параметры универсального типа можно использовать везде, где можно использовать тип.  
   
      [!code-cpp[EmitGenericType#21](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#21)]
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
      [!code-vb[EmitGenericType#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#21)]  
   
-8.  Определите метод, который использует параметры типа, относящиеся к универсальному типу. Обратите внимание, что такие методы не являются универсальными, если только они не имеют собственный список параметров типа. В следующем примере кода определяется метод `static` (`Shared` в Visual Basic), который принимает массив `TFirst` и возвращает `List<TFirst>` (`List(Of TFirst)` в Visual Basic), содержащий все элементы массива. Чтобы определить этот метод, необходимо создать тип `List<TFirst>` путем вызова метода <xref:System.Type.MakeGenericType%2A> в определении универсального типа `List<T>`. (`T` опускается при использовании оператора `typeof` (`GetType` в Visual Basic), чтобы получить определение универсального типа.) Тип параметра создается с помощью метода <xref:System.Type.MakeArrayType%2A>.  
+8. Определите метод, который использует параметры типа, относящиеся к универсальному типу. Обратите внимание, что такие методы не являются универсальными, если только они не имеют собственный список параметров типа. В следующем примере кода определяется метод `static` (`Shared` в Visual Basic), который принимает массив `TFirst` и возвращает `List<TFirst>` (`List(Of TFirst)` в Visual Basic), содержащий все элементы массива. Чтобы определить этот метод, необходимо создать тип `List<TFirst>` путем вызова метода <xref:System.Type.MakeGenericType%2A> в определении универсального типа `List<T>`. (`T` опускается при использовании оператора `typeof` (`GetType` в Visual Basic), чтобы получить определение универсального типа.) Тип параметра создается с помощью метода <xref:System.Type.MakeArrayType%2A>.  
   
      [!code-cpp[EmitGenericType#22](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#22)]
      [!code-csharp[EmitGenericType#22](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#22)]
@@ -136,6 +136,7 @@ ms.locfileid: "56221151"
 -   Скомпилируйте код из командной строки с помощью команд csc.exe, vbc.exe или cl.exe. Для компиляции кода в Visual Studio поместите его в шаблон проекта консольного приложения.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
 - [Использование порождаемого отражения](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
 - [Сценарии динамических сборок порождаемого отражения](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))

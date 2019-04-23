@@ -13,10 +13,10 @@ helpviewer_keywords:
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 ms.openlocfilehash: 17dd992edbec5ce444b53ed42b2b486282618672
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315807"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (параметры компилятора C#)
@@ -66,5 +66,5 @@ csc -warn:1 in.cs
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Управление свойствами проекта и решения](/visualstudio/ide/managing-project-and-solution-properties)
+- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
