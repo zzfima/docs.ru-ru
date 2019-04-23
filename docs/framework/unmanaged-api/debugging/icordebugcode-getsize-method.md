@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 678b7fbd595b1238b7025c22b0ed80b02ed4becd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085679"
 ---
-# <a name="icordebugcodegetsize-method"></a><span data-ttu-id="d9a4f-102">Метод ICorDebugCode::GetSize</span><span class="sxs-lookup"><span data-stu-id="d9a4f-102">ICorDebugCode::GetSize Method</span></span>
-<span data-ttu-id="d9a4f-103">Получает размер в байтах двоичного кода, представленного «ICorDebugCode».</span><span class="sxs-lookup"><span data-stu-id="d9a4f-103">Gets the size, in bytes, of the binary code represented by this "ICorDebugCode".</span></span>  
+# <a name="icordebugcodegetsize-method"></a><span data-ttu-id="d9e7a-102">Метод ICorDebugCode::GetSize</span><span class="sxs-lookup"><span data-stu-id="d9e7a-102">ICorDebugCode::GetSize Method</span></span>
+<span data-ttu-id="d9e7a-103">Получает размер в байтах двоичного кода, представленного «ICorDebugCode».</span><span class="sxs-lookup"><span data-stu-id="d9e7a-103">Gets the size, in bytes, of the binary code represented by this "ICorDebugCode".</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d9a4f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d9a4f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d9e7a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d9e7a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSize (  
@@ -35,17 +35,17 @@ HRESULT GetSize (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d9a4f-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d9a4f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d9e7a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d9e7a-105">Parameters</span></span>  
  `pcBytes`  
- <span data-ttu-id="d9a4f-106">[out] Указатель на размер в байтах двоичного файла кода, что этот `ICorDebugCode` представляет объект.</span><span class="sxs-lookup"><span data-stu-id="d9a4f-106">[out] A pointer to the size, in bytes, of the binary code that this `ICorDebugCode` object represents.</span></span>  
+ <span data-ttu-id="d9e7a-106">[out] Указатель на размер в байтах двоичного файла кода, что этот `ICorDebugCode` представляет объект.</span><span class="sxs-lookup"><span data-stu-id="d9e7a-106">[out] A pointer to the size, in bytes, of the binary code that this `ICorDebugCode` object represents.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d9a4f-107">Требования</span><span class="sxs-lookup"><span data-stu-id="d9a4f-107">Requirements</span></span>  
- <span data-ttu-id="d9a4f-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d9a4f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d9e7a-107">Требования</span><span class="sxs-lookup"><span data-stu-id="d9e7a-107">Requirements</span></span>  
+ <span data-ttu-id="d9e7a-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d9e7a-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d9a4f-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d9a4f-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d9e7a-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d9e7a-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d9a4f-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d9a4f-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d9e7a-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d9e7a-110">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="d9a4f-111">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="d9a4f-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="d9e7a-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9e7a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d9a4f-112">См. также</span><span class="sxs-lookup"><span data-stu-id="d9a4f-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d9e7a-112">См. также</span><span class="sxs-lookup"><span data-stu-id="d9e7a-112">See also</span></span>
