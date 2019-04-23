@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3d7ac84971f7d0e97f7ccd26710151d1aeefe729
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207218"
 ---
-# <a name="isymunmanagednamespacegetnamespaces-method"></a><span data-ttu-id="2dd7f-102">Метод ISymUnmanagedNamespace::GetNamespaces</span><span class="sxs-lookup"><span data-stu-id="2dd7f-102">ISymUnmanagedNamespace::GetNamespaces Method</span></span>
-<span data-ttu-id="2dd7f-103">Возвращает дочерние элементы этого пространства имен.</span><span class="sxs-lookup"><span data-stu-id="2dd7f-103">Gets the children of this namespace.</span></span>  
+# <a name="isymunmanagednamespacegetnamespaces-method"></a><span data-ttu-id="db2fa-102">Метод ISymUnmanagedNamespace::GetNamespaces</span><span class="sxs-lookup"><span data-stu-id="db2fa-102">ISymUnmanagedNamespace::GetNamespaces Method</span></span>
+<span data-ttu-id="db2fa-103">Возвращает дочерние элементы этого пространства имен.</span><span class="sxs-lookup"><span data-stu-id="db2fa-103">Gets the children of this namespace.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2dd7f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2dd7f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="db2fa-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="db2fa-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNamespaces(  
@@ -37,22 +37,22 @@ HRESULT GetNamespaces(
         ISymUnmanagedNamespace* namespaces[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2dd7f-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="2dd7f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="db2fa-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="db2fa-105">Parameters</span></span>  
  `cNameSpaces`  
- <span data-ttu-id="2dd7f-106">[in] Объект `ULONG32` указывает размер `namespaces` массива.</span><span class="sxs-lookup"><span data-stu-id="2dd7f-106">[in] A `ULONG32` that indicates the size of the `namespaces` array.</span></span>  
+ <span data-ttu-id="db2fa-106">[in] Объект `ULONG32` указывает размер `namespaces` массива.</span><span class="sxs-lookup"><span data-stu-id="db2fa-106">[in] A `ULONG32` that indicates the size of the `namespaces` array.</span></span>  
   
  `pcNameSpaces`  
- <span data-ttu-id="2dd7f-107">[out] Указатель на `ULONG32` размер, который получает в символах, буфера, требуемого для хранения пространства имен.</span><span class="sxs-lookup"><span data-stu-id="2dd7f-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespaces.</span></span>  
+ <span data-ttu-id="db2fa-107">[out] Указатель на `ULONG32` размер, который получает в символах, буфера, требуемого для хранения пространства имен.</span><span class="sxs-lookup"><span data-stu-id="db2fa-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespaces.</span></span>  
   
  `namespaces`  
- <span data-ttu-id="2dd7f-108">[out] Указатель на буфер, содержащий пространства имен.</span><span class="sxs-lookup"><span data-stu-id="2dd7f-108">[out] A pointer to the buffer that contains the namespaces.</span></span>  
+ <span data-ttu-id="db2fa-108">[out] Указатель на буфер, содержащий пространства имен.</span><span class="sxs-lookup"><span data-stu-id="db2fa-108">[out] A pointer to the buffer that contains the namespaces.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2dd7f-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="2dd7f-109">Return Value</span></span>  
- <span data-ttu-id="2dd7f-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="2dd7f-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="db2fa-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="db2fa-109">Return Value</span></span>  
+ <span data-ttu-id="db2fa-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="db2fa-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2dd7f-111">Требования</span><span class="sxs-lookup"><span data-stu-id="2dd7f-111">Requirements</span></span>  
- <span data-ttu-id="2dd7f-112">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="2dd7f-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="db2fa-111">Требования</span><span class="sxs-lookup"><span data-stu-id="db2fa-111">Requirements</span></span>  
+ <span data-ttu-id="db2fa-112">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="db2fa-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2dd7f-113">См. также</span><span class="sxs-lookup"><span data-stu-id="2dd7f-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="db2fa-113">См. также</span><span class="sxs-lookup"><span data-stu-id="db2fa-113">See also</span></span>
 
-- [<span data-ttu-id="2dd7f-114">Интерфейс ISymUnmanagedNamespace</span><span class="sxs-lookup"><span data-stu-id="2dd7f-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [<span data-ttu-id="db2fa-114">Интерфейс ISymUnmanagedNamespace</span><span class="sxs-lookup"><span data-stu-id="db2fa-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

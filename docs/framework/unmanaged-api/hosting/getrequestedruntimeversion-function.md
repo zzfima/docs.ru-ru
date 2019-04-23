@@ -18,18 +18,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1ee737f4c6d34e77996f5ba08ce4d84132a99238
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207335"
 ---
-# <a name="getrequestedruntimeversion-function"></a><span data-ttu-id="c9421-102">Функция GetRequestedRuntimeVersion</span><span class="sxs-lookup"><span data-stu-id="c9421-102">GetRequestedRuntimeVersion Function</span></span>
-<span data-ttu-id="c9421-103">Возвращает номер версии общеязыковой среды выполнения (CLR), запрашиваемой указанным приложением.</span><span class="sxs-lookup"><span data-stu-id="c9421-103">Gets the version number of the common language runtime (CLR) requested by the specified application.</span></span> <span data-ttu-id="c9421-104">Если эта версия не установлена, Получает самую последнюю версию, установленную перед запрашиваемой.</span><span class="sxs-lookup"><span data-stu-id="c9421-104">If that version is not installed, gets the most recent version that is installed before the requested version.</span></span>  
+# <a name="getrequestedruntimeversion-function"></a><span data-ttu-id="7953e-102">Функция GetRequestedRuntimeVersion</span><span class="sxs-lookup"><span data-stu-id="7953e-102">GetRequestedRuntimeVersion Function</span></span>
+<span data-ttu-id="7953e-103">Возвращает номер версии общеязыковой среды выполнения (CLR), запрашиваемой указанным приложением.</span><span class="sxs-lookup"><span data-stu-id="7953e-103">Gets the version number of the common language runtime (CLR) requested by the specified application.</span></span> <span data-ttu-id="7953e-104">Если эта версия не установлена, Получает самую последнюю версию, установленную перед запрашиваемой.</span><span class="sxs-lookup"><span data-stu-id="7953e-104">If that version is not installed, gets the most recent version that is installed before the requested version.</span></span>  
   
- <span data-ttu-id="c9421-105">Эта функция устарели в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c9421-105">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="7953e-105">Эта функция устарели в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7953e-105">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c9421-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c9421-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7953e-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7953e-106">Syntax</span></span>  
   
 ```  
 HRESULT GetRequestedRuntimeVersion (  
@@ -40,39 +40,39 @@ HRESULT GetRequestedRuntimeVersion (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c9421-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="c9421-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7953e-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="7953e-107">Parameters</span></span>  
  `pExe`  
- <span data-ttu-id="c9421-108">[in] Имя приложения.</span><span class="sxs-lookup"><span data-stu-id="c9421-108">[in] The name of the application.</span></span>  
+ <span data-ttu-id="7953e-108">[in] Имя приложения.</span><span class="sxs-lookup"><span data-stu-id="7953e-108">[in] The name of the application.</span></span>  
   
  `pVersion`  
- <span data-ttu-id="c9421-109">[out] Буфер, содержащий строку номера версии после успешного завершения.</span><span class="sxs-lookup"><span data-stu-id="c9421-109">[out] A buffer that contains the version number string upon successful completion.</span></span>  
+ <span data-ttu-id="7953e-109">[out] Буфер, содержащий строку номера версии после успешного завершения.</span><span class="sxs-lookup"><span data-stu-id="7953e-109">[out] A buffer that contains the version number string upon successful completion.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="c9421-110">[in] Длина буфера версии.</span><span class="sxs-lookup"><span data-stu-id="c9421-110">[in] The length of the version buffer.</span></span>  
+ <span data-ttu-id="7953e-110">[in] Длина буфера версии.</span><span class="sxs-lookup"><span data-stu-id="7953e-110">[in] The length of the version buffer.</span></span>  
   
  `pdwLength`  
- <span data-ttu-id="c9421-111">[out] Указатель на длину строку номера версии.</span><span class="sxs-lookup"><span data-stu-id="c9421-111">[out] A pointer to the length of the version number string.</span></span>  
+ <span data-ttu-id="7953e-111">[out] Указатель на длину строку номера версии.</span><span class="sxs-lookup"><span data-stu-id="7953e-111">[out] A pointer to the length of the version number string.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c9421-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="c9421-112">Return Value</span></span>  
- <span data-ttu-id="c9421-113">Этот метод возвращает стандартные коды ошибок объектов модели компонентов (COM), как определено в файле WinError.h, помимо следующих значений.</span><span class="sxs-lookup"><span data-stu-id="c9421-113">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7953e-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="7953e-112">Return Value</span></span>  
+ <span data-ttu-id="7953e-113">Этот метод возвращает стандартные коды ошибок объектов модели компонентов (COM), как определено в файле WinError.h, помимо следующих значений.</span><span class="sxs-lookup"><span data-stu-id="7953e-113">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
   
-|<span data-ttu-id="c9421-114">Код возврата</span><span class="sxs-lookup"><span data-stu-id="c9421-114">Return code</span></span>|<span data-ttu-id="c9421-115">Описание</span><span class="sxs-lookup"><span data-stu-id="c9421-115">Description</span></span>|  
+|<span data-ttu-id="7953e-114">Код возврата</span><span class="sxs-lookup"><span data-stu-id="7953e-114">Return code</span></span>|<span data-ttu-id="7953e-115">Описание</span><span class="sxs-lookup"><span data-stu-id="7953e-115">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="c9421-116">S_OK</span><span class="sxs-lookup"><span data-stu-id="c9421-116">S_OK</span></span>|<span data-ttu-id="c9421-117">Метод завершился успешно.</span><span class="sxs-lookup"><span data-stu-id="c9421-117">The method completed successfully.</span></span>|  
-|<span data-ttu-id="c9421-118">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="c9421-118">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="c9421-119">Версии буфера недостаточен для хранения строки версии.</span><span class="sxs-lookup"><span data-stu-id="c9421-119">The version buffer is not large enough to store the version string.</span></span>|  
-|<span data-ttu-id="c9421-120">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="c9421-120">E_POINTER</span></span>|`pdwLength` <span data-ttu-id="c9421-121">имеет значение null.</span><span class="sxs-lookup"><span data-stu-id="c9421-121">is null.</span></span>|  
+|<span data-ttu-id="7953e-116">S_OK</span><span class="sxs-lookup"><span data-stu-id="7953e-116">S_OK</span></span>|<span data-ttu-id="7953e-117">Метод завершился успешно.</span><span class="sxs-lookup"><span data-stu-id="7953e-117">The method completed successfully.</span></span>|  
+|<span data-ttu-id="7953e-118">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="7953e-118">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="7953e-119">Версии буфера недостаточен для хранения строки версии.</span><span class="sxs-lookup"><span data-stu-id="7953e-119">The version buffer is not large enough to store the version string.</span></span>|  
+|<span data-ttu-id="7953e-120">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="7953e-120">E_POINTER</span></span>|<span data-ttu-id="7953e-121">Параметр `pdwLength` имеет значение null.</span><span class="sxs-lookup"><span data-stu-id="7953e-121">`pdwLength` is null.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c9421-122">Требования</span><span class="sxs-lookup"><span data-stu-id="c9421-122">Requirements</span></span>  
- <span data-ttu-id="c9421-123">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9421-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7953e-122">Требования</span><span class="sxs-lookup"><span data-stu-id="7953e-122">Requirements</span></span>  
+ <span data-ttu-id="7953e-123">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7953e-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c9421-124">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c9421-124">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="7953e-124">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7953e-124">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c9421-125">**Библиотека:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c9421-125">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="7953e-125">**Библиотека:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7953e-125">**Library:** MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="c9421-126">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="c9421-126">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ <span data-ttu-id="7953e-126">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7953e-126">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9421-127">См. также</span><span class="sxs-lookup"><span data-stu-id="c9421-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7953e-127">См. также</span><span class="sxs-lookup"><span data-stu-id="7953e-127">See also</span></span>
 
-- [<span data-ttu-id="c9421-128">Функция GetRequestedRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="c9421-128">GetRequestedRuntimeInfo Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
-- [<span data-ttu-id="c9421-129">Функция GetVersionFromProcess</span><span class="sxs-lookup"><span data-stu-id="c9421-129">GetVersionFromProcess Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
-- [<span data-ttu-id="c9421-130">Устаревшие функции размещения CLR</span><span class="sxs-lookup"><span data-stu-id="c9421-130">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="7953e-128">Функция GetRequestedRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="7953e-128">GetRequestedRuntimeInfo Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
+- [<span data-ttu-id="7953e-129">Функция GetVersionFromProcess</span><span class="sxs-lookup"><span data-stu-id="7953e-129">GetVersionFromProcess Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
+- [<span data-ttu-id="7953e-130">Устаревшие функции размещения CLR</span><span class="sxs-lookup"><span data-stu-id="7953e-130">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -17,26 +17,26 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d573264bb7a3cac02dd41afacaa2bc4a6f9e6dcd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207556"
 ---
-# <a name="isymunmanagedsymbolsearchinfo-interface"></a><span data-ttu-id="e6c91-102">Интерфейс ISymUnmanagedSymbolSearchInfo</span><span class="sxs-lookup"><span data-stu-id="e6c91-102">ISymUnmanagedSymbolSearchInfo Interface</span></span>
-<span data-ttu-id="e6c91-103">Предоставляет методы, которые получают сведения о пути поиска.</span><span class="sxs-lookup"><span data-stu-id="e6c91-103">Provides methods that get information about the search path.</span></span> <span data-ttu-id="e6c91-104">Получить этот интерфейс, вызвав `QueryInterface` на объект, реализующий [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) интерфейс.</span><span class="sxs-lookup"><span data-stu-id="e6c91-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
+# <a name="isymunmanagedsymbolsearchinfo-interface"></a><span data-ttu-id="52737-102">Интерфейс ISymUnmanagedSymbolSearchInfo</span><span class="sxs-lookup"><span data-stu-id="52737-102">ISymUnmanagedSymbolSearchInfo Interface</span></span>
+<span data-ttu-id="52737-103">Предоставляет методы, которые получают сведения о пути поиска.</span><span class="sxs-lookup"><span data-stu-id="52737-103">Provides methods that get information about the search path.</span></span> <span data-ttu-id="52737-104">Получить этот интерфейс, вызвав `QueryInterface` на объект, реализующий [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) интерфейс.</span><span class="sxs-lookup"><span data-stu-id="52737-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="e6c91-105">Методы</span><span class="sxs-lookup"><span data-stu-id="e6c91-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="52737-105">Методы</span><span class="sxs-lookup"><span data-stu-id="52737-105">Methods</span></span>  
   
-|<span data-ttu-id="e6c91-106">Метод</span><span class="sxs-lookup"><span data-stu-id="e6c91-106">Method</span></span>|<span data-ttu-id="e6c91-107">Описание</span><span class="sxs-lookup"><span data-stu-id="e6c91-107">Description</span></span>|  
+|<span data-ttu-id="52737-106">Метод</span><span class="sxs-lookup"><span data-stu-id="52737-106">Method</span></span>|<span data-ttu-id="52737-107">Описание</span><span class="sxs-lookup"><span data-stu-id="52737-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="e6c91-108">Метод GetHRESULT</span><span class="sxs-lookup"><span data-stu-id="e6c91-108">GetHRESULT Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-gethresult-method.md)|<span data-ttu-id="e6c91-109">Получает значение HRESULT.</span><span class="sxs-lookup"><span data-stu-id="e6c91-109">Gets the HRESULT.</span></span>|  
-|[<span data-ttu-id="e6c91-110">Метод GetSearchPath</span><span class="sxs-lookup"><span data-stu-id="e6c91-110">GetSearchPath Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-getsearchpath-method.md)|<span data-ttu-id="e6c91-111">Получает пути поиска.</span><span class="sxs-lookup"><span data-stu-id="e6c91-111">Gets the search path.</span></span>|  
-|[<span data-ttu-id="e6c91-112">Метод GetSearchPathLength</span><span class="sxs-lookup"><span data-stu-id="e6c91-112">GetSearchPathLength Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md)|<span data-ttu-id="e6c91-113">Получает длину пути поиска.</span><span class="sxs-lookup"><span data-stu-id="e6c91-113">Gets the search path length.</span></span>|  
+|[<span data-ttu-id="52737-108">Метод GetHRESULT</span><span class="sxs-lookup"><span data-stu-id="52737-108">GetHRESULT Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-gethresult-method.md)|<span data-ttu-id="52737-109">Получает значение HRESULT.</span><span class="sxs-lookup"><span data-stu-id="52737-109">Gets the HRESULT.</span></span>|  
+|[<span data-ttu-id="52737-110">Метод GetSearchPath</span><span class="sxs-lookup"><span data-stu-id="52737-110">GetSearchPath Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-getsearchpath-method.md)|<span data-ttu-id="52737-111">Получает пути поиска.</span><span class="sxs-lookup"><span data-stu-id="52737-111">Gets the search path.</span></span>|  
+|[<span data-ttu-id="52737-112">Метод GetSearchPathLength</span><span class="sxs-lookup"><span data-stu-id="52737-112">GetSearchPathLength Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md)|<span data-ttu-id="52737-113">Получает длину пути поиска.</span><span class="sxs-lookup"><span data-stu-id="52737-113">Gets the search path length.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e6c91-114">Требования</span><span class="sxs-lookup"><span data-stu-id="e6c91-114">Requirements</span></span>  
- <span data-ttu-id="e6c91-115">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e6c91-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="52737-114">Требования</span><span class="sxs-lookup"><span data-stu-id="52737-114">Requirements</span></span>  
+ <span data-ttu-id="52737-115">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="52737-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e6c91-116">См. также</span><span class="sxs-lookup"><span data-stu-id="e6c91-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="52737-116">См. также</span><span class="sxs-lookup"><span data-stu-id="52737-116">See also</span></span>
 
-- [<span data-ttu-id="e6c91-117">Интерфейсы хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="e6c91-117">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="52737-117">Интерфейсы хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="52737-117">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
