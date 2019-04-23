@@ -1,12 +1,12 @@
 ---
-title: <authentication> из <serviceCertificate> элемент
+title: <authentication> элемента <serviceCertificate>
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
 ms.openlocfilehash: b96d53312d672eebd67de82f69cd9a0a2b5bd22e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117774"
 ---
 # <a name="authentication-of-servicecertificate-element"></a>\<Проверка подлинности > из \<serviceCertificate > элемента
@@ -106,9 +106,9 @@ ms.locfileid: "59117774"
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.Authentication%2A>
 - <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication>
-- [Поведение безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Практическое руководство. Создание службы, использующей пользовательский проверяющий элемент управления для сертификатов](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
-- [\<Проверка подлинности >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)
-- [Обеспечение безопасности клиентов](../../../../../docs/framework/wcf/securing-clients.md)
+- [Практическое руководство. Создание службы, использующей пользовательское средство проверки сертификатов](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)
+- [Защита клиентов](../../../../../docs/framework/wcf/securing-clients.md)
 - [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

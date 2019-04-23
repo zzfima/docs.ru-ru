@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
 ms.openlocfilehash: 53080975c03430a6c05bf72f58610b328430a3c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118031"
 ---
 # <a name="data-contract-versioning"></a>Управление версиями контракта данных
@@ -126,7 +126,7 @@ ms.locfileid: "59118031"
 - <xref:System.Runtime.Serialization.SerializationException>
 - <xref:System.Runtime.Serialization.IExtensibleDataObject>
 - [Обратные вызовы сериализации, независимые от версий](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
-- [Рекомендации. Управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Советы и рекомендации: Управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
 - [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Эквивалентность контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Контракты данных, совместимые с любыми будущими изменениями](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

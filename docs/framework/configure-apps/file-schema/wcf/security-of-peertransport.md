@@ -3,10 +3,10 @@ title: <security> из <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
 ms.openlocfilehash: 1aff79bf5867a3a1ebe05e3f812475dac4b413e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116867"
 ---
 # <a name="security-of-peertransport"></a>\<Безопасность > из \<peerTransport >
@@ -64,7 +64,7 @@ ms.locfileid: "59116867"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Безопасность транспорта](../../../../../docs/framework/wcf/feature-details/transport-security.md)
 - [Транспорты](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Выбор транспортов](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Выбор транспорта](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Привязки](../../../../../docs/framework/wcf/bindings.md)
 - [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)

@@ -1,5 +1,5 @@
 ---
-title: <add> из <declaredTypes> элемент
+title: <add> элемента <declaredTypes>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
 ms.openlocfilehash: 9b280a63e85beac3231bc1a414430239bea4a1f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111518"
 ---
 # <a name="add-of-declaredtypes-element"></a>\<Добавить > из \<declaredTypes > элемент

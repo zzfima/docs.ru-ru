@@ -14,10 +14,10 @@ helpviewer_keywords:
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
 ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115314"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Кисти и закрашенные фигуры в GDI+
@@ -82,6 +82,6 @@ ms.locfileid: "59115314"
 - <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>
-- [Прямые и кривые линии и фигуры](lines-curves-and-shapes.md)
-- [Практическое руководство. Рисование заполненного прямоугольника в Windows Forms](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
+- [Линии, кривые и фигуры](lines-curves-and-shapes.md)
+- [Практическое руководство. Нарисовать закрашенный прямоугольник в форме Windows](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
 - [Практическое руководство. Рисование заполненного эллипса в Windows Forms](how-to-draw-a-filled-ellipse-on-a-windows-form.md)

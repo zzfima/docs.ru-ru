@@ -3,10 +3,10 @@ title: Производство каналов и кэширование
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
 ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106461"
 ---
 # <a name="channel-factory-and-caching"></a>Производство каналов и кэширование
@@ -25,7 +25,7 @@ ms.locfileid: "59106461"
 > [!TIP]
 >  Вы непосредственно управляете созданием фабрики каналов, когда класс <xref:System.ServiceModel.ChannelFactory%601> используется напрямую.  
   
- Прокси клиента WCF, сформированные с [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) являются производными от <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601> Определяет статическое <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> свойство, определяющее режим кэширования фабрики каналов. Параметры кэша задаются для определенного типа. Например, установка `ClientBase<ITest>.CacheSettings` одно из значений, указанных ниже повлияет только эти прокси-сервера или ClientBase типа `ITest`. Параметры кэша для конкретного <xref:System.ServiceModel.ClientBase%601> являются неизменяемыми после создания первого экземпляра класса-посредника или ClientBase.  
+ Прокси клиента WCF, сформированные с [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) являются производными от <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601> определяет статическое свойство <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A>, которое определяет режим кэширования фабрики каналов. Параметры кэша задаются для определенного типа. Например, установка `ClientBase<ITest>.CacheSettings` одно из значений, указанных ниже повлияет только эти прокси-сервера или ClientBase типа `ITest`. Параметры кэша для конкретного <xref:System.ServiceModel.ClientBase%601> являются неизменяемыми после создания первого экземпляра класса-посредника или ClientBase.  
   
 ## <a name="specifying-caching-behavior"></a>Установка режима кэширования  
  Режим кэширования задается установкой свойства <xref:System.ServiceModel.ClientBase%601.CacheSetting> в одно из следующих значений.  
@@ -116,5 +116,5 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
 - <xref:System.ServiceModel.ClientBase%601>
 - [Создание клиентов](../../../../docs/framework/wcf/building-clients.md)
 - [Клиенты](../../../../docs/framework/wcf/feature-details/clients.md)
-- [Обращение к службам с использованием клиента WCF](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [Обращение к службам с помощью клиента WCF](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
 - [Практическое руководство. Использование ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

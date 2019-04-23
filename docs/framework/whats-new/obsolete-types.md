@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a8c6046d05dc706074a732d9ba2a9c1ec73c56f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b4b10ff681f7300412fd2f6a1e310989fcc3b31c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412348"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59114698"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Устаревшие типы в платформе .NET Framework
 <a name="introduction"></a>В таблицах этой статьи перечислены типы, которые являются устаревшими в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Они сгруппированы по сборкам. Используйте следующие ссылки для просмотра списка устаревших типов и рекомендованных альтернатив в каждой сборке. Поскольку эти типы считаются устаревшими, все их члены также являются устаревшими. Список дополнительных устаревших членов в библиотеке классов платформы .NET Framework см. в разделе [Устаревшие члены](obsolete-members.md).
@@ -779,5 +779,6 @@ ms.locfileid: "58412348"
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Сборка Microsoft.VisualC.dll устарела и существует только из соображений обратной совместимости.|
 
 ## <a name="see-also"></a>См. также
+
 - [Устаревшие классы библиотеки классов](whats-obsolete.md)
 - [Устаревшие члены](obsolete-members.md)

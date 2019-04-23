@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 253a25fdfc1f00adbc20388660caf6c227030a1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111245"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>Метод ICorDebugStackWalk::GetFrame
@@ -45,7 +45,7 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
 |S_OK|Среда выполнения успешно возвращено текущего кадра.|  
 |E_FAIL|Текущий кадр не возвращен.|  
 |S_FALSE|Текущий кадр является кадром стека.|  
-|E_INVALIDARG|`pFrame` имеет значение null.|  
+|E_INVALIDARG|Параметр `pFrame` имеет значение null.|  
 |CORDBG_E_PAST_END_OF_STACK|Указатель кадра уже находится в конце стека; Таким образом может осуществляться без дополнительных кадров.|  
   
 ## <a name="exceptions"></a>Исключения  

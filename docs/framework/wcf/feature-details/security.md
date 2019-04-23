@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
 ms.openlocfilehash: 58bec40f197dd1f2b104607a65c3ad456b95f69d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118200"
 ---
 # <a name="windows-communication-foundation-security"></a>Безопасность Windows Communication Foundation
@@ -28,7 +28,7 @@ ms.locfileid: "59118200"
  [Типовые сценарии безопасности](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
  Описание сценариев и топологий, которые можно настроить с помощью WCF.  
   
- [Поведение безопасности](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [Поведения безопасности](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  Общие сведения о поведении WCF, которые оказывают влияние на безопасность, например на настройки учетных данных.  
   
  [Привязки и безопасность](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
@@ -37,7 +37,7 @@ ms.locfileid: "59118200"
  [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  Описывает способ защиты сообщений с помощью средств безопасности WCF.  
   
- [Проверка подлинности](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ [Authentication](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  Примеры типичных задач, связанных с проверкой подлинности.  
   
  [Авторизация](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
@@ -61,13 +61,13 @@ ms.locfileid: "59118200"
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Подробные сведения о возможностях WCF](../../../../docs/framework/wcf/feature-details/index.md)  
+ [Подробные сведения о возможностях WCF](../../../../docs/framework/wcf/feature-details/index.md)  
   
- [Базовое программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Базовое программирование для WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
- [Учебник по началу работы](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [Руководство по началу работы](../../../../docs/framework/wcf/getting-started-tutorial.md)  
   
- [Общие сведения об основных понятиях](../../../../docs/framework/wcf/conceptual-overview.md)  
+ [Концептуальный обзор](../../../../docs/framework/wcf/conceptual-overview.md)  
   
 ## <a name="see-also"></a>См. также
 

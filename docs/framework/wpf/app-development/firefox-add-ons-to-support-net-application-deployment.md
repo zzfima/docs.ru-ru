@@ -8,10 +8,10 @@ helpviewer_keywords:
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
 ms.openlocfilehash: 4b0552ab9f565d9118415bc2da2823762f34fe2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111739"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>Надстройки Firefox для поддержки развертывания приложений .NET
@@ -35,6 +35,6 @@ ms.locfileid: "59111739"
   
 ## <a name="see-also"></a>См. также
 
-- [Развертывание приложения WPF](deploying-a-wpf-application-wpf.md)
+- [Развертывание приложений WPF](deploying-a-wpf-application-wpf.md)
 - [Общие сведения о приложениях браузера WPF XAML](wpf-xaml-browser-applications-overview.md)
 - [Проверка наличия установленного подключаемого модуля WPF для Firefox](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)

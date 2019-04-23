@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
 ms.openlocfilehash: 29a6b897115c5f2f3ae8d7e4ec708be59dc0d85b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115340"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Модель автоматизации пользовательского интерфейса и Microsoft Active Accessibility
 > [!NOTE]
 >  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] — предыдущее решение по обеспечению доступности приложений. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] Новая модель специальных возможностей для [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] и предназначен для удовлетворения потребностей продуктов поддержки специальных возможностей и средств автоматизированного тестирования. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] предоставляет множество улучшений по [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)].  
+ Предыдущее решение по обеспечению доступности приложений —[!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] . [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] — это новая модель специальных возможностей для [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] , предназначенная для удовлетворения потребностей продуктов поддержки специальных возможностей и средств автоматизированного тестирования. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] предоставляет множество улучшений по сравнению с [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)].  
   
  В этом разделе рассматриваются основные функции [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] и объясняется, как эти функции отличаются от [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)].  
   
@@ -28,7 +28,7 @@ ms.locfileid: "59115340"
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Поддержка в Windows Presentation Foundation  
- Windows Presentation Foundation (WPF) — это новая модель для создания пользовательских интерфейсов. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] элементы не содержат встроенную поддержку [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]; тем не менее, они поддерживают [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], включая использование моста для [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] клиентов. Только клиенты, написанные специально для [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , могут использовать все преимущества специальных возможностей [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], таких как расширенная поддержка текста.  
+ Windows Presentation Foundation (WPF) — это новая модель для создания пользовательских интерфейсов. В элементах[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] не предусмотрена собственная поддержка [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]; однако они поддерживают [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], включая использование моста для клиентов [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] . Только клиенты, написанные специально для [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , могут использовать все преимущества специальных возможностей [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], таких как расширенная поддержка текста.  
   
 <a name="Servers_and_Clients_compare"></a>   
 ## <a name="servers-and-clients"></a>Серверы и клиенты  
@@ -40,7 +40,7 @@ ms.locfileid: "59115340"
   
 <a name="UI_Elements_compare"></a>   
 ## <a name="ui-elements"></a>Элементы пользовательского интерфейса  
- [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] Представляет [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] элементов либо как `IAccessible` интерфейс или идентификатор дочернего элемента. Трудно сравнивать два указателя `IAccessible` , чтобы определить, ссылаются ли они на один и тот же элемент.  
+ [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] представляет элементы [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] либо в виде интерфейса `IAccessible` , либо в виде идентификатора дочернего элемента. Трудно сравнивать два указателя `IAccessible` , чтобы определить, ссылаются ли они на один и тот же элемент.  
   
  В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]каждый элемент представлен как объект <xref:System.Windows.Automation.AutomationElement> . Сравнение выполняется с помощью оператора равенства или метода <xref:System.Windows.Automation.AutomationElement.Equals%2A> ; в обоих способах сравниваются уникальные идентификаторы среды выполнения элементов.  
   
@@ -50,25 +50,25 @@ ms.locfileid: "59115340"
   
  В [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]многие элементы автоматизации, которые не касаются конечных пользователей, представлены в дереве. Клиентские приложения должны просмотреть все элементы, чтобы определить имеющие значение.  
   
- Клиентские приложения модели автоматизации пользовательского интерфейса видят [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] через отфильтрованное представление. Это представление содержит только элементы, представляющие интерес, т. е. те, которые предоставляют пользователю сведения или разрешают взаимодействие. Доступны предопределенные представления только элементов управления и только элементов содержимого; кроме того, приложения могут задавать специальные представления. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] упрощает задачу описания [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] пользователю, а также помогает пользователю взаимодействовать с приложением.  
+ Клиентские приложения модели автоматизации пользовательского интерфейса видят [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] через отфильтрованное представление. Это представление содержит только элементы, представляющие интерес, т. е. те, которые предоставляют пользователю сведения или разрешают взаимодействие. Доступны предопределенные представления только элементов управления и только элементов содержимого; кроме того, приложения могут задавать специальные представления. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] упрощает задачу описания [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] для пользователя и помогает пользователю взаимодействовать с приложением.  
   
  Навигация по элементам в [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]может быть пространственной (например, переход к элементу, который располагается слева на экране), логической (например, перемещение к следующему пункту меню или к следующему элементу в последовательности табуляции в диалоговом окне) или иерархической (например, перемещение в первый дочерний элемент в контейнере или от дочернего элемента к родительскому). Иерархическая навигация осложняется тем, что дочерние элементы не всегда являются объектами, которые реализуют `IAccessible`.  
   
  В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]все элементы [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] являются объектами <xref:System.Windows.Automation.AutomationElement> , которые поддерживают те же базовые функциональные возможности. (С точки зрения поставщика они являются объектами, которые реализуют интерфейс, унаследованный от <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>.) Большей частью навигация является иерархической: от родительских элементов к дочерним и от одного элемента того же уровня к следующему. (Навигация между одноуровневыми элементами имеет логическую составляющую, так как она может следовать последовательности табуляции.) Вы можете переходить из любой начальной точки, используя любое отфильтрованное представление дерева, с помощью класса <xref:System.Windows.Automation.TreeWalker>. Вы также можете переходить к конкретному дочернему элементу или к потомкам с помощью методов <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> и <xref:System.Windows.Automation.AutomationElement.FindAll%2A>; например, очень легко получить все элементы в диалоговом окне, поддерживающем указанный шаблон элемента управления.  
   
- Навигация в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] более последовательна, чем в [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]. Некоторые элементы, например раскрывающиеся списки и всплывающие окна, появляются дважды в дереве [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] , и навигация из них может иметь непредсказуемые результаты. Фактически невозможно правильно реализовать [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] для элемента управления "Главная панель". [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] позволяет осуществлять переподчинение и изменение расположения, так что элемент может быть размещена в любом месте в дереве, несмотря на иерархии, обусловленной принадлежностью окон.  
+ Навигация в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] более последовательна, чем в [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]. Некоторые элементы, например раскрывающиеся списки и всплывающие окна, появляются дважды в дереве [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] , и навигация из них может иметь непредсказуемые результаты. Фактически невозможно правильно реализовать [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] для элемента управления "Главная панель". [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] допускает переподчинение и изменение расположения, так что элемент можно разместить в любом месте дерева, независимо от иерархии, обусловленной принадлежностью окон.  
   
 <a name="Roles_and_Control_Types"></a>   
 ## <a name="roles-and-control-types"></a>Роли и типы элементов управления  
- [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] использует `accRole` свойство (`IAccessible::get_actRole`) для получения описания роли элемента в [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], например ROLE_SYSTEM_SLIDER или ROLE_SYSTEM_MENUITEM. Роль элемента — это основной ключ к его доступным функциональным возможностям. Взаимодействие с элементом управления достигается с помощью фиксированных методов, таких как `IAccessible::accSelect` и `IAccessible::accDoDefaultAction`. Взаимодействие между клиентским приложением и [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ограничено тем, что может быть сделано с помощью `IAccessible`.  
+ [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] использует свойство `accRole` (`IAccessible::get_actRole`) для получения описания роли элемента в [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], например ROLE_SYSTEM_SLIDER или ROLE_SYSTEM_MENUITEM. Роль элемента — это основной ключ к его доступным функциональным возможностям. Взаимодействие с элементом управления достигается с помощью фиксированных методов, таких как `IAccessible::accSelect` и `IAccessible::accDoDefaultAction`. Взаимодействие между клиентским приложением и [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ограничено тем, что может быть сделано с помощью `IAccessible`.  
   
  Напротив, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] во многом отделяет тип элемента управления (описываемый свойством <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> ) от его ожидаемой функциональности. Функциональность определяется шаблонами элементов управления, которые поддерживаются поставщиком через его реализацию специализированных интерфейсов. Шаблоны элементов управления можно объединить для описания полного набора функциональных возможностей, поддерживаемых конкретным элементом [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] . Некоторые поставщики обязаны поддерживать определенный шаблон элемента управления; например, поставщик флажка должен поддерживать шаблон элемента управления Toggle. Другие поставщики должны поддерживать хотя бы один набор шаблонов элементов управления; например, кнопки должны поддерживать Toggle или Invoke. Третьи поставщики вообще не поддерживают никакие шаблоны элементов управления; например, область, которую нельзя перемещать, изменять размер или закреплять, не имеет ни одного элемента управления.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] поддерживает пользовательские элементы управления, которые идентифицируются по <xref:System.Windows.Automation.ControlType.Custom> свойства и могут быть описаны свойством <xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty> свойство.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] поддерживает пользовательские элементы управления, которые идентифицируются по свойству <xref:System.Windows.Automation.ControlType.Custom> и могут быть описаны свойством <xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty> .  
   
  В следующей таблице показано соответствие [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] ролей типам элементов управления [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
-|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] роль|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Тип элемента управления|  
+|Роль[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] |Тип элемента управления[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |  
 |----------------------------------------------------------------------|----------------------------------------------------------------------------------------|  
 |ROLE_SYSTEM_PUSHBUTTON|Кнопка|  
 |ROLE_SYSTEM_CLIENT|Календарь|  
@@ -116,7 +116,7 @@ ms.locfileid: "59115340"
 ## <a name="states-and-properties"></a>Состояния и свойства  
  В [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]элементы поддерживают общий набор свойств, и некоторые свойства (например `accState`) должны описывать очень разные вещи, в зависимости от роли элемента. Серверы должны реализовывать все методы `IAccessible` , возвращающие свойство, даже те, которые не относятся к элементу.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Определяет множество других свойств, некоторые из них соответствует состояниям в [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]. Одни свойства являются общими для всех элементов, а другие относятся к типам элементов управления и шаблонам элементов управления. Свойства различаются по уникальным идентификаторам, и большинство свойств можно получить с помощью одного метода, <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> или <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>. Многие свойства легко извлекаются из методов доступа к свойствам <xref:System.Windows.Automation.AutomationElement.Current%2A> и <xref:System.Windows.Automation.AutomationElement.Cached%2A> .  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] определяет множество других свойств. Некоторые из них соответствует состояниям в [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]. Одни свойства являются общими для всех элементов, а другие относятся к типам элементов управления и шаблонам элементов управления. Свойства различаются по уникальным идентификаторам, и большинство свойств можно получить с помощью одного метода, <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> или <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>. Многие свойства легко извлекаются из методов доступа к свойствам <xref:System.Windows.Automation.AutomationElement.Current%2A> и <xref:System.Windows.Automation.AutomationElement.Cached%2A> .  
   
  Поставщик автоматизации пользовательского интерфейса не должен реализовывать ненужные свойства, он может просто возвращать значение `null` для всех свойств, которые он не поддерживает. Кроме того, основная служба [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] может получить некоторые свойства от поставщика окна по умолчанию, и эти свойства объединяются со свойствами, явно реализуемыми поставщиком.  
   
@@ -124,28 +124,28 @@ ms.locfileid: "59115340"
   
  В следующей таблице показано соответствие свойств в этих двух моделях.  
   
-|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] метод доступа к свойству|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Идентификатор свойства|Примечания|  
+|Метод доступа к свойству[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] |Идентификатор свойства[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Примечания|  
 |-----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|-------------|  
-|`get_accKeyboardShortcut`|<xref:System.Windows.Automation.AutomationElement.AccessKeyProperty> или <xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|`AccessKeyProperty` приоритет, если они присутствуют.|  
+|`get_accKeyboardShortcut`|<xref:System.Windows.Automation.AutomationElement.AccessKeyProperty> или <xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|Если заданы оба свойства,`AccessKeyProperty` имеет более высокий приоритет.|  
 |`get_accName`|<xref:System.Windows.Automation.AutomationElement.NameProperty>||  
 |`get_accRole`|<xref:System.Windows.Automation.AutomationElement.ControlTypeProperty>|Сопоставления ролей и типов элементов управления см. в предыдущей таблице.|  
 |`get_accValue`|<xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType>|Допустимо только для типов элементов управления, которые поддерживают ValuePattern или RangeValuePattern. Значения RangeValue нормализованы в значения от 0 до 100 для согласованности с поведением MSAA. Элементы Value используют строку.|  
 |`get_accHelp`|<xref:System.Windows.Automation.AutomationElement.HelpTextProperty>||  
 |`accLocation`|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>||  
-|`get_accDescription`|Не поддерживается в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|`accDescription` не имеет четкой спецификации в MSAA, в результате чего поставщики помещают в это свойство разные части сведений.|  
-|`get_accHelpTopic`|Не поддерживается в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]||  
+|`get_accDescription`|В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]не поддерживается.|`accDescription` не имеет четкой спецификации в MSAA, в результате чего поставщики помещают в это свойство разные части сведений.|  
+|`get_accHelpTopic`|В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]не поддерживается.||  
   
  В следующей таблице показано, какие свойства [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] соответствуют константам состояний [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] .  
   
-|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] state|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] свойство;|Вызывает изменение состояния?|  
+|Состояние[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] |Свойство[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Вызывает изменение состояния?|  
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------|----------------------------|  
-|STATE_SYSTEM_CHECKED|Для "флажок" <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> Для переключателя, <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|Y|  
+|STATE_SYSTEM_CHECKED|Для флажка — <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> Для переключателя — <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|Y|  
 |STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|Y|  
-|STATE_SYSTEM_EXPANDED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Expanded> Или <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>|Y|  
+|STATE_SYSTEM_EXPANDED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Expanded> или <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>|Y|  
 |STATE_SYSTEM_FOCUSABLE|<xref:System.Windows.Automation.AutomationElement.IsKeyboardFocusableProperty>|в|  
 |STATE_SYSTEM_FOCUSED|<xref:System.Windows.Automation.AutomationElement.HasKeyboardFocusProperty>|в|  
 |STATE_SYSTEM_HASPOPUP|<xref:System.Windows.Automation.ExpandCollapsePattern> для пунктов меню|в|  
-|STATE_SYSTEM_INVISIBLE|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> = True и <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A> приводит к <xref:System.Windows.Automation.NoClickablePointException>|в|  
+|STATE_SYSTEM_INVISIBLE|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> = True и <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A> вызывает <xref:System.Windows.Automation.NoClickablePointException>|в|  
 |STATE_SYSTEM_LINKED|<xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> =<br /><br /> <xref:System.Windows.Automation.ControlType.Hyperlink>|в|  
 |STATE_SYSTEM_MIXED|<xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> = <xref:System.Windows.Automation.ToggleState.Indeterminate>|в|  
 |STATE_SYSTEM_MOVEABLE|<xref:System.Windows.Automation.TransformPattern.CanMoveProperty>|в|  
@@ -153,14 +153,14 @@ ms.locfileid: "59115340"
 |STATE_SYSTEM_OFFSCREEN|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> = True|в|  
 |STATE_SYSTEM_PROTECTED|<xref:System.Windows.Automation.AutomationElement.IsPasswordProperty>|в|  
 |STATE_SYSTEM_READONLY|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty?displayProperty=nameWithType> и <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty?displayProperty=nameWithType>|в|  
-|STATE_SYSTEM_SELECTABLE|<xref:System.Windows.Automation.SelectionItemPattern> поддерживается|в|  
+|STATE_SYSTEM_SELECTABLE|Поддерживается<xref:System.Windows.Automation.SelectionItemPattern> |в|  
 |STATE_SYSTEM_SELECTED|<xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|в|  
 |STATE_SYSTEM_SIZEABLE|<xref:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize%2A>|в|  
 |STATE_SYSTEM_UNAVAILABLE|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|Y|  
   
  Следующие состояния либо не реализованы большинством серверов управления [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] , либо не имеют эквивалента в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
-|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] state|Примечания|  
+|Состояние[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] |Примечания|  
 |-----------------------------------------------------------------------|-------------|  
 |STATE_SYSTEM_BUSY|Недоступно в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_DEFAULT|Недоступно в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
@@ -186,19 +186,19 @@ ms.locfileid: "59115340"
   
  В следующей таблице показано соответствие событий WinEvent [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] и событий [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
-|WinEvent|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Идентификатор события|  
+|WinEvent|Идентификатор события[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |  
 |--------------|--------------------------------------------------------------------------------------------|  
-|EVENT_OBJECT_ACCELERATORCHANGE|<xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty> Изменение свойства|  
-|EVENT_OBJECT_CONTENTSCROLLED|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> или <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> изменения свойства для связанных полосах прокрутки|  
+|EVENT_OBJECT_ACCELERATORCHANGE|Изменение свойства<xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty> |  
+|EVENT_OBJECT_CONTENTSCROLLED|Изменение свойства<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> или <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> в связанных полосах прокрутки|  
 |EVENT_OBJECT_CREATE|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_DEFACTIONCHANGE|Эквивалент отсутствует|  
 |EVENT_OBJECT_DESCRIPTIONCHANGE|Нет точного эквивалента; возможно, изменение свойства <xref:System.Windows.Automation.AutomationElement.HelpTextProperty> или <xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty>|  
 |EVENT_OBJECT_DESTROY|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_FOCUS|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|  
-|EVENT_OBJECT_HELPCHANGE|<xref:System.Windows.Automation.AutomationElement.HelpTextProperty> изменение|  
+|EVENT_OBJECT_HELPCHANGE|Изменение<xref:System.Windows.Automation.AutomationElement.HelpTextProperty> |  
 |EVENT_OBJECT_HIDE|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
-|EVENT_OBJECT_LOCATIONCHANGE|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> Изменение свойства|  
-|EVENT_OBJECT_NAMECHANGE|<xref:System.Windows.Automation.AutomationElement.NameProperty> Изменение свойства|  
+|EVENT_OBJECT_LOCATIONCHANGE|Изменение свойства<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> |  
+|EVENT_OBJECT_NAMECHANGE|Изменение свойства<xref:System.Windows.Automation.AutomationElement.NameProperty> |  
 |EVENT_OBJECT_PARENTCHANGE|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_REORDER|Несогласованно используется в [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]. Непосредственно соответствующее событие в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]не определено.|  
 |EVENT_OBJECT_SELECTION|<xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent>|  
@@ -207,7 +207,7 @@ ms.locfileid: "59115340"
 |EVENT_OBJECT_SELECTIONWITHIN|Эквивалент отсутствует|  
 |EVENT_OBJECT_SHOW|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_STATECHANGE|Различные события изменения свойств|  
-|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType> и <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> изменен|  
+|EVENT_OBJECT_VALUECHANGE|Изменены<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType> и <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> .|  
 |EVENT_SYSTEM_ALERT|Эквивалент отсутствует|  
 |EVENT_SYSTEM_CAPTUREEND|Эквивалент отсутствует|  
 |EVENT_SYSTEM_CAPTURESTART|Эквивалент отсутствует|  
@@ -222,25 +222,25 @@ ms.locfileid: "59115340"
 |EVENT_SYSTEM_MENUPOPUPEND|<xref:System.Windows.Automation.AutomationElement.MenuClosedEvent>|  
 |EVENT_SYSTEM_MENUPOPUPSTART|<xref:System.Windows.Automation.AutomationElement.MenuOpenedEvent>|  
 |EVENT_SYSTEM_MENUSTART|<xref:System.Windows.Automation.AutomationElement.MenuOpenedEvent>|  
-|EVENT_SYSTEM_MINIMIZEEND|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty> Изменение свойства|  
-|EVENT_SYSTEM_MINIMIZESTART|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty> Изменение свойства|  
-|EVENT_SYSTEM_MOVESIZEEND|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> Изменение свойства|  
-|EVENT_SYSTEM_MOVESIZESTART|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> Изменение свойства|  
-|EVENT_SYSTEM_SCROLLINGEND|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> или <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> изменение свойства|  
-|EVENT_SYSTEM_SCROLLINGSTART|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> или <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> изменение свойства|  
+|EVENT_SYSTEM_MINIMIZEEND|Изменение свойства<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty> |  
+|EVENT_SYSTEM_MINIMIZESTART|Изменение свойства<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty> |  
+|EVENT_SYSTEM_MOVESIZEEND|Изменение свойства<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> |  
+|EVENT_SYSTEM_MOVESIZESTART|Изменение свойства<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> |  
+|EVENT_SYSTEM_SCROLLINGEND|Изменение свойства<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> или <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty>|  
+|EVENT_SYSTEM_SCROLLINGSTART|Изменение свойства<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> или <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty>|  
 |EVENT_SYSTEM_SOUND|Эквивалент отсутствует|  
 |EVENT_SYSTEM_SWITCHEND|Нет эквивалента, но событие <xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent> сигнализирует, что новое приложение получило фокус|  
 |EVENT_SYSTEM_SWITCHSTART|Эквивалент отсутствует|  
-|Эквивалент отсутствует|<xref:System.Windows.Automation.MultipleViewPattern.CurrentViewProperty> Изменение свойства|  
-|Эквивалент отсутствует|<xref:System.Windows.Automation.ScrollPattern.HorizontallyScrollableProperty> Изменение свойства|  
-|Эквивалент отсутствует|<xref:System.Windows.Automation.ScrollPattern.VerticallyScrollableProperty> Изменение свойства|  
-|Эквивалент отсутствует|<xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> Изменение свойства|  
-|Эквивалент отсутствует|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> Изменение свойства|  
-|Эквивалент отсутствует|<xref:System.Windows.Automation.ScrollPattern.HorizontalViewSizeProperty> Изменение свойства|  
-|Эквивалент отсутствует|<xref:System.Windows.Automation.ScrollPattern.VerticalViewSizeProperty> Изменение свойства|  
-|Эквивалент отсутствует|<xref:System.Windows.Automation.TogglePattern.ToggleStateProperty> Изменение свойства|  
-|Эквивалент отсутствует|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty> Изменение свойства|  
-|Эквивалент отсутствует|<xref:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent> событие|  
+|Эквивалент отсутствует|Изменение свойства<xref:System.Windows.Automation.MultipleViewPattern.CurrentViewProperty> |  
+|Эквивалент отсутствует|Изменение свойства<xref:System.Windows.Automation.ScrollPattern.HorizontallyScrollableProperty> |  
+|Эквивалент отсутствует|Изменение свойства<xref:System.Windows.Automation.ScrollPattern.VerticallyScrollableProperty> |  
+|Эквивалент отсутствует|Изменение свойства<xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> |  
+|Эквивалент отсутствует|Изменение свойства<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> |  
+|Эквивалент отсутствует|Изменение свойства<xref:System.Windows.Automation.ScrollPattern.HorizontalViewSizeProperty> |  
+|Эквивалент отсутствует|Изменение свойства<xref:System.Windows.Automation.ScrollPattern.VerticalViewSizeProperty> |  
+|Эквивалент отсутствует|Изменение свойства<xref:System.Windows.Automation.TogglePattern.ToggleStateProperty> |  
+|Эквивалент отсутствует|Изменение свойства<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty> |  
+|Эквивалент отсутствует|Событие<xref:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent> |  
 |Эквивалент отсутствует|<xref:System.Windows.Automation.AutomationElement.ToolTipOpenedEvent>|  
   
 <a name="Security_compare"></a>   

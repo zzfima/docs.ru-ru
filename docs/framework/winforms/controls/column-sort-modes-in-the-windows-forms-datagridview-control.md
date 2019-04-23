@@ -6,16 +6,16 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
 ms.openlocfilehash: b8f6048946d367dd79b1ce0d23d84446ffdb1115
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106670"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Установка режимов сортировки для столбцов элемента управления DataGridView в Windows Forms
 <xref:System.Windows.Forms.DataGridView> столбцы имеют три режима сортировки. Режим сортировки для каждого столбца указывается с помощью <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> свойство столбца, который может быть присвоено одно из следующих <xref:System.Windows.Forms.DataGridViewColumnSortMode> значений перечисления.  
   
-|`DataGridViewColumnSortMode` value|Описание|  
+|Значение`DataGridViewColumnSortMode` |Описание|  
 |----------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|По умолчанию для столбцов текстовых полей. Если заголовки столбцов не используются для выбора, щелкнув заголовок столбца автоматически сортирует <xref:System.Windows.Forms.DataGridView> по этому столбцу и отображает глиф, указывающее порядок сортировки.|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|По умолчанию для столбцов не — текстовое поле. Этот столбец можно отсортировать программным образом. Тем не менее он не предназначен для сортировки, поэтому место не резервируется для глифа сортировки.|  
@@ -67,5 +67,5 @@ ms.locfileid: "59106670"
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
 - [Сортировка данных в элементе управления DataGridView в Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Определение режимов сортировки для столбцов элемента управления DataGridView в Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [Практическое руководство. Настройка сортировки данных элемента управления DataGridView в Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Определение режимов сортировки для столбцов в элементе управления DataGridView Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Практическое руководство. Настройка сортировки в элементе управления DataGridView Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

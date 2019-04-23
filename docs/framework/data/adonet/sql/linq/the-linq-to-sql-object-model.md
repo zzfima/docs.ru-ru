@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
 ms.openlocfilehash: 7ce759de004d479f5162d2ce3a965f5c40afa450
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110797"
 ---
 # <a name="the-linq-to-sql-object-model"></a>Модель объектов LINQ to SQL
@@ -65,11 +65,11 @@ ms.locfileid: "59110797"
  Дополнительные сведения см. в разделе атрибут Association [сопоставление, основанное на атрибутах](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
 ## <a name="linq-to-sql-methods-and-database-stored-procedures"></a>Хранимые процедуры методов и баз данных LINQ to SQL.  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает хранимые процедуры и определяемые пользователем функции. В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], сопоставить эти абстракции, определенные базой данных с клиентскими объектами так, что они будут доступны в режиме строгой типизации из клиентского кода. Подписи методов очень схожи с сигнатурами процедур и функций, определенных в базе данных. Для определения этих методов можно использовать IntelliSense.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает хранимые процедуры и пользовательские функции. В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], сопоставить эти абстракции, определенные базой данных с клиентскими объектами так, что они будут доступны в режиме строгой типизации из клиентского кода. Подписи методов очень схожи с сигнатурами процедур и функций, определенных в базе данных. Для определения этих методов можно использовать IntelliSense.  
   
  В качестве набора результатов, возвращенного вызовом сопоставленной процедуры, выступает строго типизированная коллекция.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сопоставляет хранимые процедуры и функции с методами с помощью <xref:System.Data.Linq.Mapping.FunctionAttribute> и <xref:System.Data.Linq.Mapping.ParameterAttribute> атрибуты. Методы, представляющие хранимые процедуры, отличаются от методов, представляющих пользовательские функции, свойством <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>. Если данное свойство имеет значение `false` (значение по умолчанию), значит метод представляет хранимую процедуру. Если свойству задано значение `true`, метод представляет функцию базы данных.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сопоставляет хранимые процедуры и функции с методами с помощью атрибутов <xref:System.Data.Linq.Mapping.FunctionAttribute> и <xref:System.Data.Linq.Mapping.ParameterAttribute>. Методы, представляющие хранимые процедуры, отличаются от методов, представляющих пользовательские функции, свойством <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>. Если данное свойство имеет значение `false` (значение по умолчанию), значит метод представляет хранимую процедуру. Если свойству задано значение `true`, метод представляет функцию базы данных.  
   
 > [!NOTE]
 >  Если вы используете Visual Studio, можно использовать [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для создания методов, сопоставленных с хранимыми процедурами и пользовательскими функциями.  

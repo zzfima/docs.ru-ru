@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
 ms.openlocfilehash: ea6994e653b3a06239634f5a0fddea84a07086e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107267"
 ---
 # <a name="using-application-settings-and-user-settings"></a>Использование параметров приложения и параметров пользователя
@@ -18,27 +18,27 @@ ms.locfileid: "59107267"
  В этом разделе описываются способы использования параметров во время разработки и времени выполнения.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Как выполнить: Создание нового параметра во время разработки](how-to-create-a-new-setting-at-design-time.md)  
+ [Практическое руководство. Создание новых параметров во время разработки](how-to-create-a-new-setting-at-design-time.md)  
   
  Объясняется, как использовать Visual Studio для создания нового значения для приложения.  
   
- [Как выполнить: Изменение значения существующего параметра во время разработки](how-to-change-the-value-of-an-existing-setting-at-design-time.md)  
+ [Практическое руководство. Изменить значение существующего параметра во время разработки](how-to-change-the-value-of-an-existing-setting-at-design-time.md)  
   
  В этой статье описывается использование Visual Studio, чтобы изменить значение существующего параметра.  
   
- [Как выполнить: Изменение значения параметра между сеансами приложения](how-to-change-the-value-of-a-setting-between-application-sessions.md)  
+ [Практическое руководство. Измените значение параметра между сеансами приложения](how-to-change-the-value-of-a-setting-between-application-sessions.md)  
   
  Подробные сведения изменить значение параметра в скомпилированном приложении между сеансами приложения.  
   
- [Как выполнить: Считывание параметров во время выполнения с помощью C#](how-to-read-settings-at-run-time-with-csharp.md)  
+ [Практическое руководство. Считывание параметров во время выполнения с помощьюC#](how-to-read-settings-at-run-time-with-csharp.md)  
   
  Описывает, как использовать код для чтения параметров с помощью C#.  
   
- [Как выполнить: Написание параметров пользователя во время выполнения с помощью C#](how-to-write-user-settings-at-run-time-with-csharp.md)  
+ [Практическое руководство. Написание параметров пользователя во время выполнения с помощьюC#](how-to-write-user-settings-at-run-time-with-csharp.md)  
   
  Объясняет, как использовать код для записи и сохраните значения параметров пользователя с C#.  
   
- [Как выполнить: Добавление нескольких наборов параметров в приложение на C#](how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
+ [Практическое руководство. Добавить несколько наборов параметров в приложениеC#](how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
   
  Объясняется, как добавить несколько наборов параметров в приложение с C#.  
   

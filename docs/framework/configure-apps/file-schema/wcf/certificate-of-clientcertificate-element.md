@@ -1,12 +1,12 @@
 ---
-title: <certificate> из <clientCertificate> элемент
+title: <certificate> элемента <clientCertificate>
 ms.date: 03/30/2017
 ms.assetid: 00297efb-a7f2-4e03-bc2b-943d545610fc
 ms.openlocfilehash: 98e60d750dad1529ffb35055d26e278ceb7c873a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113937"
 ---
 # <a name="certificate-of-clientcertificate-element"></a>\<сертификат > из \<clientCertificate > элемента
@@ -48,7 +48,7 @@ ms.locfileid: "59113937"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<clientCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)||  
+|[\<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)||  
   
 ## <a name="remarks"></a>Примечания  
  Элемент `<certificate>` используется в случаях, когда служба должна заранее получить клиентский сертификат для безопасного обмена данными с клиентом. Это характерно для дуплексного обмена данными. В более распространенном варианте «запрос/отклик» клиент включает сертификат в запрос, который используется службой для шифрования и подписания отклика. Тем не менее при дуплексном обмене данными служба не получает запроса от клиента, и ей, таким образом, необходим сертификат клиента заранее, чтобы обеспечить защиту сообщения, отправляемого клиенту. Следовательно, необходимо получить сертификат клиента при согласовании вне диапазона и указать сертификат с помощью этого элемента. Дополнительные сведения о дуплексных службах см. в разделе [как: Создание дуплексного контракта](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
@@ -79,6 +79,6 @@ ms.locfileid: "59113937"
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Certificate%2A>
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Certificate%2A>
 - <xref:System.ServiceModel.Configuration.X509ClientCertificateCredentialsElement>
-- [Поведение безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Практическое руководство. Создание службы, использующей пользовательский проверяющий элемент управления для сертификатов](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Практическое руководство. Создание службы, использующей пользовательское средство проверки сертификатов](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
 - [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

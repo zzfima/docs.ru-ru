@@ -21,10 +21,10 @@ ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113728"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Маршалинг классов, структур и объединений
@@ -98,13 +98,13 @@ typedef struct _MYARRAYSTRUCT
   
  Управляемые структуры `MyPerson`, `MyPerson2`, `MyPerson3` и `MyArrayStruct` обладают следующими характеристиками:  
   
--   `MyPerson` содержит только элементы строк. Поле [CharSet](specifying-a-character-set.md) задает формат строк ANSI при передаче строки в неуправляемую функцию.  
+-   Структура `MyPerson` содержит только члены-строки. Поле [CharSet](specifying-a-character-set.md) задает формат строк ANSI при передаче строки в неуправляемую функцию.  
   
 -   `MyPerson2` содержит указатель **IntPtr** на структуру `MyPerson`. Тип **IntPtr** заменяет исходный указатель на неуправляемую структуру, так как приложения .NET Framework не используют указатели, если код не помечен как **небезопасный**.  
   
--   `MyPerson3` содержит `MyPerson` в качестве внедренной структуры. Внедренную структуру можно выровнять путем помещения ее элементов прямо в основную структуру, или ее можно оставить внедренной, как показано в примере.  
+-   Структура `MyPerson3` содержит структуру `MyPerson` в качестве внедренной. Внедренную структуру можно выровнять путем помещения ее элементов прямо в основную структуру, или ее можно оставить внедренной, как показано в примере.  
   
--   `MyArrayStruct` содержит массив целочисленных значений. Атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute> задает для перечисления <xref:System.Runtime.InteropServices.UnmanagedType> значение **ByValArray**, которое используется для указания количества элементов в массиве.  
+-   Структура `MyArrayStruct` содержит массив целочисленных значений. Атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute> задает для перечисления <xref:System.Runtime.InteropServices.UnmanagedType> значение **ByValArray**, которое используется для указания количества элементов в массиве.  
   
  Для всех структур в этом примере применяется атрибут <xref:System.Runtime.InteropServices.StructLayoutAttribute>, гарантирующий последовательное размещение элементов в памяти в порядке их появления.  
   
@@ -112,7 +112,7 @@ typedef struct _MYARRAYSTRUCT
   
 -   `TestStructInStruct` объявляет в качестве своего параметра ссылку на тип `MyPerson2`.  
   
--   `TestStructInStruct3` объявляет в качестве своего параметра тип `MyPerson3` и передает параметр по значению.  
+-   `TestStructInStruct3` в качестве своего параметра объявляет тип `MyPerson3` и передает параметр по значению.  
   
 -   `TestArrayInStruct` объявляет в качестве своего параметра ссылку на тип `MyArrayStruct`.  
   
@@ -200,7 +200,7 @@ union MYUNION2
   
  В управляемом коде объединения определяются как структуры. Структура `MyUnion` в качестве своих членов содержит два типа значений: целочисленный и число двойной точности. Для управления точным положением каждого члена данных задается атрибут <xref:System.Runtime.InteropServices.StructLayoutAttribute>. Атрибут <xref:System.Runtime.InteropServices.FieldOffsetAttribute> предоставляет физическое положение полей внутри неуправляемого представления объединения. Обратите внимание, что значения смещения у обоих членов одинаковы, что позволяет членам определять один и тот же участок памяти.  
   
- `MyUnion2_1` и `MyUnion2_2` содержат тип значения (целочисленный) и строку, соответственно. В управляемом коде типы значений и ссылочные типы не могут перекрываться. Чтобы при вызове одной и той же неуправляемой функции вызывающий объект мог использовать оба типа, в этом примере применяется перегрузка метода. Структура `MyUnion2_1` задана явным образом и имеет точное значение смещения. Напротив, `MyUnion2_2` имеет последовательную структуру, так как структуры, заданные явным образом, нельзя использовать со ссылочными типами. Атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute> задает для перечисления <xref:System.Runtime.InteropServices.UnmanagedType> значение **ByValTStr**, которое используется для идентификации встроенных символьных массивов фиксированной длины в неуправляемом представлении объединения.  
+ Объединения `MyUnion2_1` и `MyUnion2_2` содержат тип значения (целое число) и строку соответственно. В управляемом коде типы значений и ссылочные типы не могут перекрываться. Чтобы при вызове одной и той же неуправляемой функции вызывающий объект мог использовать оба типа, в этом примере применяется перегрузка метода. Структура `MyUnion2_1` задана явным образом и имеет точное значение смещения. Напротив, `MyUnion2_2` имеет последовательную структуру, так как структуры, заданные явным образом, нельзя использовать со ссылочными типами. Атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute> задает для перечисления <xref:System.Runtime.InteropServices.UnmanagedType> значение **ByValTStr**, которое используется для идентификации встроенных символьных массивов фиксированной длины в неуправляемом представлении объединения.  
   
  Класс `LibWrap` содержит прототипы для методов `TestUnion` и `TestUnion2`. `TestUnion2` перегружается для объявления `MyUnion2_1` или `MyUnion2_2` в качестве параметров.  
   
@@ -270,11 +270,11 @@ typedef struct _MYSTRSTRUCT2
   
  Класс `App` реализует метод `UsingMarshaling`, который выполняет все задачи, необходимые для передачи массива. Чтобы указать, что данные передаются от вызываемого объекта к вызывающему, массив помечается зарезервированным словом `out` (`ByRef` в Visual Basic). Реализация использует следующие методы класса <xref:System.Runtime.InteropServices.Marshal>:  
   
--   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> для маршалинга данных из неуправляемого буфера в управляемый объект;  
+-   метод <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> для маршалинга данных из неуправляемого буфера в управляемый объект;  
   
--   <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> для освобождения памяти, зарезервированной для строк структуры;  
+-   метод <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> для освобождения памяти, зарезервированной для строк структуры;  
   
--   <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> для освобождения памяти, зарезервированной для массива.  
+-   метод <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> для освобождения памяти, зарезервированной для массива.  
   
  Как упоминалось выше, в C# разрешено использовать небезопасный код, а в [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] — нет. В примере кода C# `UsingUnsafePointer` является альтернативной реализацией метода, в которой для обратной передачи массива, содержащего структуру `MyUnsafeStruct`, вместо класса <xref:System.Runtime.InteropServices.Marshal> используются указатели.  
   
@@ -291,5 +291,5 @@ typedef struct _MYSTRSTRUCT2
 ## <a name="see-also"></a>См. также
 
 - [Маршалинг данных при вызове неуправляемого кода](marshaling-data-with-platform-invoke.md)
-- [Маршалинг строк](marshaling-strings.md)
+- [Mаршалинг строк](marshaling-strings.md)
 - [Маршалинг различных типов массивов](marshaling-different-types-of-arrays.md)

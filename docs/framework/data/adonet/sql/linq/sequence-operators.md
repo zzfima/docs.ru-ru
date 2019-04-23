@@ -3,10 +3,10 @@ title: Операторы последовательности
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
 ms.openlocfilehash: 62cb654922af9df65b0ec9abb67bdc33fda09339
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113689"
 ---
 # <a name="sequence-operators"></a>Операторы последовательности
@@ -43,7 +43,7 @@ ms.locfileid: "59113689"
 |<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="differences-from-net"></a>Отличия от платформы .NET  
- Все поддерживаемые операторы последовательности правильно работают в среде (CLR), за исключением `Average`. `Average` Возвращает значение того же типа в качестве типа среднее значение, тогда как в среде CLR `Average` всегда возвращает один <xref:System.Double> или <xref:System.Decimal>. Если исходный аргумент явно приведен к типу double / decimal или селектор приводится к типу double / decimal, в конечном коде SQL также будет присутствовать подобное преобразование и будет получен ожидаемый результат.  
+ Все поддерживаемые операторы последовательности правильно работают в среде (CLR), за исключением `Average`. `Average` возвращает значение, тип которого совпадает с усредняемым типом, тогда как в CLR оператор `Average` всегда возвращает тип <xref:System.Double> или <xref:System.Decimal>. Если исходный аргумент явно приведен к типу double / decimal или селектор приводится к типу double / decimal, в конечном коде SQL также будет присутствовать подобное преобразование и будет получен ожидаемый результат.  
   
 ## <a name="see-also"></a>См. также
 

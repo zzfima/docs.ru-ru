@@ -3,10 +3,10 @@ title: <clientCertificate> из <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 90ad03aa-2317-43dd-8a72-6d24cdcad15c
 ms.openlocfilehash: 26ebac6439a90959e3a926e6a36c9044251a4aae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107995"
 ---
 # <a name="clientcertificate-of-servicecredentials"></a>\<clientCertificate > элемента \<serviceCredentials >
@@ -39,7 +39,7 @@ ms.locfileid: "59107995"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Проверка подлинности >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)|Задает параметры проверки подлинности для сертификата клиента.|  
+|[\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)|Задает параметры проверки подлинности для сертификата клиента.|  
 |[\<сертификат >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)|Задает тип сертификата для использования.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
@@ -60,6 +60,6 @@ ms.locfileid: "59107995"
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>
-- [Практическое руководство. Создание двухстороннего контракта](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [Поведение безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Практическое руководство. Создание дуплексного контракта](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

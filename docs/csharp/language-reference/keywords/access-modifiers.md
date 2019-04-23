@@ -6,10 +6,10 @@ helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
 ms.openlocfilehash: d87ea1ff18c4697a2c04f22cbf67720f21cbf459
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118135"
 ---
 # <a name="access-modifiers-c-reference"></a>Модификаторы доступа (Справочник по C#)
@@ -46,7 +46,7 @@ ms.locfileid: "59118135"
 
 - [Справочник по C#](../../../csharp/language-reference/index.md)
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Ключевые слова C#](../../../csharp/language-reference/keywords/index.md)
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
 - [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [Ключевые слова доступа](../../../csharp/language-reference/keywords/access-keywords.md)
 - [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)

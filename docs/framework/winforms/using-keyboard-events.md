@@ -10,10 +10,10 @@ helpviewer_keywords:
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
 ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59114274"
 ---
 # <a name="using-keyboard-events"></a>Использование событий клавиатуры
@@ -41,5 +41,5 @@ ms.locfileid: "59114274"
 ## <a name="see-also"></a>См. также
 
 - [Ввод с клавиатуры в приложении Windows Forms](keyboard-input-in-a-windows-forms-application.md)
-- [Принцип работы ввод с клавиатуры](how-keyboard-input-works.md)
+- [Принцип работы ввода с клавиатуры](how-keyboard-input-works.md)
 - [Ввод данных мышью в приложении Windows Forms](mouse-input-in-a-windows-forms-application.md)

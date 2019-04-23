@@ -1,12 +1,12 @@
 ---
-title: <peer> из <clientCredentials> элемент
+title: <peer> элемента <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
 ms.openlocfilehash: 7074ee992755557d7e5503035c89bdbefd678792
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107241"
 ---
 # <a name="peer-of-clientcredentials-element"></a>\<Одноранговый > из \<clientCredentials > элемент
@@ -62,8 +62,8 @@ ms.locfileid: "59107241"
 - <xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>
 - <xref:System.ServiceModel.Security.PeerCredential>
 - [Одноранговая сеть](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [Обеспечение безопасности клиентов](../../../../../docs/framework/wcf/securing-clients.md)
-- [Проверка подлинности сообщений для однорангового канала](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Пользовательской проверка подлинности для однорангового канала](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Защита клиентов](../../../../../docs/framework/wcf/securing-clients.md)
+- [Проверка подлинности сообщений однорангового канала](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Нестандартной проверки подлинности одноранговых каналов](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Защита приложений одноранговых каналов](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
 - [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

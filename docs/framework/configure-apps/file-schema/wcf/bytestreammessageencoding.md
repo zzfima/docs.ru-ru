@@ -3,10 +3,10 @@ title: <byteStreamMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
 ms.openlocfilehash: ce9f282ea1101befe3bf99762efa61e9b47b74cf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109906"
 ---
 # <a name="bytestreammessageencoding"></a>\<byteStreamMessageEncoding >
@@ -51,7 +51,7 @@ ms.locfileid: "59109906"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>
-- [Message Encoding](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [Кодирование сообщений](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
 - [Выбор кодировщика сообщений](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
 - [Привязки](../../../../../docs/framework/wcf/bindings.md)
 - [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)

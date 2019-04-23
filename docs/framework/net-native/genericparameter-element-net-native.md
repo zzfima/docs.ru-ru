@@ -5,10 +5,10 @@ ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111661"
 ---
 # <a name="genericparameter-element-net-native"></a>\<GenericParameter > элемент (машинный код .NET)
@@ -68,8 +68,8 @@ ms.locfileid: "59111661"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Метод >](../../../docs/framework/net-native/method-element-net-native.md)|Применяет политику отражения среды выполнения к конструктору или методу.|  
-|[\<Тип >](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения среды выполнения для конкретного типа, например, класса или структуры.|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Применяет политику отражения среды выполнения к конструктору или методу.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения среды выполнения для конкретного типа, например, класса или структуры.|  
   
 ## <a name="remarks"></a>Примечания  
  Элемент `<GenericParameter>` является дочерним для элемента [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) или [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) и используется для применения политики к определенному параметру универсального типа, который задается его именем в сигнатуре универсального типа или метода.  
@@ -88,8 +88,8 @@ ms.locfileid: "59111661"
   
 ## <a name="see-also"></a>См. также
 
-- [\<Метод > элемент](../../../docs/framework/net-native/method-element-net-native.md)
+- [Элемент \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
 - [\<Тип > элемент](../../../docs/framework/net-native/type-element-net-native.md)
-- [Ссылка на файл конфигурации директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)

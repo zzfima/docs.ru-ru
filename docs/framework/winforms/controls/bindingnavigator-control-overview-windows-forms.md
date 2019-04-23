@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
 ms.openlocfilehash: ad63f622aae55cb4175eddc93ab5e086965a8fe8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109113"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>Общие сведения об элементе управления BindingNavigator (Windows Forms)
@@ -29,14 +29,14 @@ ms.locfileid: "59109113"
   
 |Элемент управления|Функция|  
 |-------------|--------------|  
-|<xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A> button|Вставляет новую строку в базовый источник данных.|  
-|<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> button|Удаляет текущую строку из базового источника данных.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> button|Переход к первому элементу базового источника данных.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A> button|Переход к последнему элементу базового источника данных.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A> button|Переход к следующему элементу базового источника данных.|  
-|<xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A> button|Переход к предыдущему элементу базового источника данных.|  
-|<xref:System.Windows.Forms.BindingNavigator.PositionItem%2A> Текстовое поле|Возвращает текущую позицию в базовом источнике данных.|  
-|<xref:System.Windows.Forms.BindingNavigator.CountItem%2A> Текстовое поле|Возвращает общее число элементов в базовом источнике данных.|  
+|<xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A> Кнопка|Вставляет новую строку в базовый источник данных.|  
+|<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> Кнопка|Удаляет текущую строку из базового источника данных.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> Кнопка|Переход к первому элементу базового источника данных.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A> Кнопка|Переход к последнему элементу базового источника данных.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A> Кнопка|Переход к следующему элементу базового источника данных.|  
+|<xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A> Кнопка|Переход к предыдущему элементу базового источника данных.|  
+|Текстовое поле <xref:System.Windows.Forms.BindingNavigator.PositionItem%2A>|Возвращает текущую позицию в базовом источнике данных.|  
+|Текстовое поле <xref:System.Windows.Forms.BindingNavigator.CountItem%2A>|Возвращает общее число элементов в базовом источнике данных.|  
   
  Каждому элементу управления этой коллекции соответствует член компонента <xref:System.Windows.Forms.BindingSource>, обеспечивающий ту же функциональность программным путем. Например, кнопка <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> соответствует методу <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> компонента <xref:System.Windows.Forms.BindingSource>, кнопка <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> соответствует методу <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> и т. д.  
   
@@ -46,4 +46,4 @@ ms.locfileid: "59109113"
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>
-- [BindingNavigator — элемент управления](bindingnavigator-control-windows-forms.md)
+- [Элемент управления BindingNavigator](bindingnavigator-control-windows-forms.md)

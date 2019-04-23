@@ -17,10 +17,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 373ff0470e2403f91534df0c0ffe4039dbb0f832
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112636"
 ---
 # <a name="imetadataassemblyimport-interface"></a>Интерфейс IMetaDataAssemblyImport
@@ -38,7 +38,7 @@ ms.locfileid: "59112636"
 |[Метод FindAssembliesByName](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-findassembliesbyname-method.md)|Получает или задает массив `mdAssemblyRef` маркеры для сборок с указанным именем.|  
 |[Метод FindExportedTypeByName](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-findexportedtypebyname-method.md)|Получает `mdExportedType` токена для COM-типа с указанным именем.|  
 |[Метод FindManifestResourceByName](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-findmanifestresourcebyname-method.md)|Получает `mdManifestResource` маркера для ресурса с указанным именем.|  
-|[Метод GetAssemblyFromScop](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getassemblyfromscope-method.md)|Получает токен для сборки в текущей области метаданных.|  
+|[Метод GetAssemblyFromScope](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getassemblyfromscope-method.md)|Получает токен для сборки в текущей области метаданных.|  
 |[Метод GetAssemblyProps](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getassemblyprops-method.md)|Возвращает значения свойств указанной сборки.|  
 |[Метод GetAssemblyRefProps](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getassemblyrefprops-method.md)|Возвращает значения свойств заданного объекта `mdAssemblyRef` токена.|  
 |[Метод GetExportedTypeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-getexportedtypeprops-method.md)|Возвращает значения свойств указанного COM-типа.|  

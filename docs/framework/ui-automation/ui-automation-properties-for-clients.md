@@ -9,10 +9,10 @@ helpviewer_keywords:
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
 ms.openlocfilehash: a75b502dc02f0541b9debb6cd1ae23ba10eed8b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116367"
 ---
 # <a name="ui-automation-properties-for-clients"></a>Свойства автоматизации пользовательского интерфейса для клиентов
@@ -25,7 +25,7 @@ ms.locfileid: "59116367"
   
  Шаблоны элементов управления также обладают свойствами. Свойства шаблонов элементов управления относятся к конкретному шаблону. Например, <xref:System.Windows.Automation.ScrollPattern> имеет свойства, которые позволяют клиентскому приложению обнаружить, является ли окно горизонтально или вертикально прокручиваемым, а также размеры текущего представления и позиции прокрутки. Шаблоны элементов управления предоставляют все свои свойства через структуру; например <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation>.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] свойства доступны только для чтения. Чтобы задать свойства элемента управления, вы должны использовать методы соответствующего шаблона элемента управления. Например, используйте метод <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> для изменения значений позиции прокручиваемого окна.  
+ Свойства[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] предназначены только для чтения. Чтобы задать свойства элемента управления, вы должны использовать методы соответствующего шаблона элемента управления. Например, используйте метод <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> для изменения значений позиции прокручиваемого окна.  
   
  Для повышения производительности значения свойств и шаблоны элементов управления могут кэшироваться при получении объектов <xref:System.Windows.Automation.AutomationElement> . Дополнительные сведения см. в разделе [кэширование в клиентах автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md).  
   

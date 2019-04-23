@@ -3,10 +3,10 @@ title: Взаимодействие с веб-службами ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
 ms.openlocfilehash: c6fec1d520cd251473d8840b7b1afe879002a04c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108580"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>Взаимодействие с веб-службами ASP.NET
@@ -57,4 +57,4 @@ public class Service : IEcho
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Настройка службы WCF для взаимодействия с клиентами веб-службы ASP.NET](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)
+- [Практическое руководство. Настройка службы WCF для взаимодействия с клиентами ASP.NET веб-службы](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)

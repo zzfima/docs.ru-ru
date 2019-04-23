@@ -3,10 +3,10 @@ title: Стандартные операторы в запросах LINQ to Ent
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
 ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118148"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Стандартные операторы в запросах LINQ to Entities
@@ -79,4 +79,4 @@ ms.locfileid: "59118148"
 ## <a name="see-also"></a>См. также
 
 - [Поддерживаемые и неподдерживаемые методы LINQ (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)
-- [Общие сведения о стандартных операторах запросов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))
+- [Общие сведения о стандартных операторах запроса](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))

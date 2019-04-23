@@ -8,10 +8,10 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 ms.assetid: 2ad124d2-2406-4157-aaf2-64e067298f01
 ms.openlocfilehash: ef0bc5d344f7d465de9209708430d3e61d40d4f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59114654"
 ---
 # <a name="how-to-create-an-expander-with-a-scrollviewer"></a>Практическое руководство. Создание расширителя с элементом ScrollViewer
@@ -29,5 +29,5 @@ ms.locfileid: "59114654"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Controls.Expander>
-- [Общие сведения об элементе управления Expander](expander-overview.md)
-- [Практические руководства](expander-how-to-topics.md)
+- [Общие сведения о расширителе](expander-overview.md)
+- [Разделы практического руководства](expander-how-to-topics.md)

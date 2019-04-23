@@ -9,10 +9,10 @@ helpviewer_keywords:
 - animation [WPF], PointAnimation
 ms.assetid: 42310977-cc90-438a-8a47-0345898e01be
 ms.openlocfilehash: 1ef3f77e551affaa7e61d2aabf95f10c29275417
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111310"
 ---
 # <a name="how-to-animate-the-position-of-an-object-by-using-pointanimation"></a>Практическое руководство. Анимация расположения объекта с помощью PointAnimation
@@ -32,5 +32,5 @@ ms.locfileid: "59111310"
 - <xref:System.Windows.Media.EllipseGeometry.Center%2A>
 - [Общие сведения об эффектах анимации](animation-overview.md)
 - [Графика и мультимедиа](index.md)
-- [Разделы практического руководства, посвященные графике](graphics-how-to-topics.md)
-- [Разделы руководства по анимации и таймерам](animation-and-timing-how-to-topics.md)
+- [Разделы руководства, посвященные графики](graphics-how-to-topics.md)
+- [Анимации и практические руководства](animation-and-timing-how-to-topics.md)

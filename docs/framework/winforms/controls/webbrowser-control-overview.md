@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
 ms.openlocfilehash: c75d0b348a2f3dd678f2bfb235bce2e4e227c4b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109439"
 ---
 # <a name="webbrowser-control-overview"></a>Общие сведения об элементе управления WebBrowser
@@ -26,19 +26,19 @@ ms.locfileid: "59109439"
   
 |name|Описание|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.WebBrowser.Document%2A> свойство;|Возвращает объект, который предоставляет управляемый доступ HTML объектной модели документа (DOM) текущего веб-страницы.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> событие|Происходит по завершении загрузки веб-страницы.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentText%2A> свойство;|Возвращает или задает HTML-содержимое текущей веб-страницы.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A> свойство;|Получает заголовок текущей страницы.|  
-|<xref:System.Windows.Forms.WebBrowser.GoBack%2A> метод|Переход на предыдущую страницу в журнале.|  
-|<xref:System.Windows.Forms.WebBrowser.GoForward%2A> метод|Переходит на следующую страницу в журнале.|  
-|<xref:System.Windows.Forms.WebBrowser.Navigate%2A> метод|Выполняет переход к указанному URL-АДРЕСУ.|  
-|<xref:System.Windows.Forms.WebBrowser.Navigating> событие|Происходит перед выполнением перехода, что позволяет отменить действие.|  
-|<xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> свойство;|Возвращает или задает объект, который веб-страницы код сценария можно использовать для взаимодействия с приложением.|  
-|<xref:System.Windows.Forms.WebBrowser.Print%2A> метод|Печать текущей страницы.|  
-|<xref:System.Windows.Forms.WebBrowser.Refresh%2A> метод|Перезагружает текущий веб-страницы.|  
-|<xref:System.Windows.Forms.WebBrowser.Stop%2A> метод|Прерывает текущую операцию перехода и останавливает динамической страницы элементы, такие как звуки и анимации.|  
-|<xref:System.Windows.Forms.WebBrowser.Url%2A> свойство;|Возвращает или задает URL-адрес текущей веб-страницы. Задание этого свойства переходит элемент управления на новый URL-адрес.|  
+|Свойство <xref:System.Windows.Forms.WebBrowser.Document%2A>|Возвращает объект, который предоставляет управляемый доступ HTML объектной модели документа (DOM) текущего веб-страницы.|  
+|Событие<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> |Происходит по завершении загрузки веб-страницы.|  
+|Свойство <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>|Возвращает или задает HTML-содержимое текущей веб-страницы.|  
+|Свойство <xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A>|Получает заголовок текущей страницы.|  
+|Метод <xref:System.Windows.Forms.WebBrowser.GoBack%2A>|Переход на предыдущую страницу в журнале.|  
+|Метод <xref:System.Windows.Forms.WebBrowser.GoForward%2A>|Переходит на следующую страницу в журнале.|  
+|Метод <xref:System.Windows.Forms.WebBrowser.Navigate%2A>|Выполняет переход к указанному URL-АДРЕСУ.|  
+|Событие<xref:System.Windows.Forms.WebBrowser.Navigating> |Происходит перед выполнением перехода, что позволяет отменить действие.|  
+|Свойство <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A>|Возвращает или задает объект, который веб-страницы код сценария можно использовать для взаимодействия с приложением.|  
+|Метод <xref:System.Windows.Forms.WebBrowser.Print%2A>|Печать текущей страницы.|  
+|Метод <xref:System.Windows.Forms.WebBrowser.Refresh%2A>|Перезагружает текущий веб-страницы.|  
+|Метод <xref:System.Windows.Forms.WebBrowser.Stop%2A>|Прерывает текущую операцию перехода и останавливает динамической страницы элементы, такие как звуки и анимации.|  
+|Свойство <xref:System.Windows.Forms.WebBrowser.Url%2A>|Возвращает или задает URL-адрес текущей веб-страницы. Задание этого свойства переходит элемент управления на новый URL-адрес.|  
   
 ## <a name="see-also"></a>См. также
 
@@ -53,9 +53,9 @@ ms.locfileid: "59109439"
 - <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>
 - <xref:System.Windows.Forms.WebBrowserReadyState>
 - <xref:System.Windows.Forms.WebBrowserRefreshOption>
-- [Практическое руководство. Переход по заданному URL с помощью элемента управления WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [Практическое руководство. Печать с использованием элемента управления WebBrowser](how-to-print-with-a-webbrowser-control.md)
+- [Практическое руководство. Перейдите на URL-адрес с элементом управления WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Практическое руководство. Печать с элементом управления WebBrowser](how-to-print-with-a-webbrowser-control.md)
 - [Практическое руководство. Добавление функциональности веб-браузера в приложения Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [Практическое руководство. Создание средства просмотра HTML-документов в приложении Windows Forms](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [Практическое руководство. Создание средства просмотра HTML-документ в приложении Windows Forms](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
 - [Практическое руководство. Реализация двунаправленного взаимодействия между кодом DHTML и клиентским кодом приложений](implement-two-way-com-between-dhtml-and-client.md)
 - [Безопасность элемента управления WebBrowser](webbrowser-security.md)

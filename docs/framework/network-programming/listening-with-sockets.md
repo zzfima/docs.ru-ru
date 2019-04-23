@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
 ms.openlocfilehash: c3d5a7d6040038eb6d768815b1ae9e8ad45c5810
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109958"
 ---
 # <a name="listening-with-sockets"></a>прослушивание с помощью сокетов
@@ -65,4 +65,4 @@ listener.Listen(100);
 - [Использование асинхронных сокетов сервера](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
 - [Использование сокетов клиента](../../../docs/framework/network-programming/using-client-sockets.md)
 - [Практическое руководство. Создание сокета](../../../docs/framework/network-programming/how-to-create-a-socket.md)
-- [сокеты](../../../docs/framework/network-programming/sockets.md)
+- [Сокеты](../../../docs/framework/network-programming/sockets.md)

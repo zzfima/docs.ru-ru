@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6db8f5914a325a276872ff804f679f8b3e0745a0
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 74469948ffe4045e6d367f1f60b8e66dc2a7810d
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653929"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59109802"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Извлечение ресурсов в приложениях для настольных систем
 При работе с локализованными ресурсами в классических приложениях .NET Framework желательно упаковывать ресурсы для нейтральной или стандартной комбинации языка и региональных параметров в основную сборку и создавать отдельную вспомогательную сборку для каждого языка или каждой комбинации языка и региональных параметров, поддерживаемых вашим приложением. Затем можно использовать класс <xref:System.Resources.ResourceManager> для доступа к именованным ресурсам, как описано в следующем разделе. Если вы решили не внедрять ресурсы в основную и вспомогательные сборки, можно обратиться к двоичным файлам RESOURCES напрямую, как описано в разделе [Извлечение ресурсов из файлов RESOURCES](#from_file) далее в этой статье.  Сведения об извлечении ресурсов в приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] см. на странице [Создание и извлечение ресурсов в приложениях для Магазина Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674) в центре разработки для Windows.  
@@ -202,6 +202,7 @@ csc Example.cs
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Resources.ResourceManager>
 - [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)
 - [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

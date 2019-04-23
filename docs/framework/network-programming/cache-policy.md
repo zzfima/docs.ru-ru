@@ -11,10 +11,10 @@ helpviewer_keywords:
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
 ms.openlocfilehash: 33043652e11beb374843d43c9683ff4b7928eb3d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112805"
 ---
 # <a name="cache-policy"></a>Политика кэша
@@ -41,6 +41,6 @@ ms.locfileid: "59112805"
 ## <a name="see-also"></a>См. также
 
 - [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)
 - [Настройка кэширования в сетевых приложениях](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
