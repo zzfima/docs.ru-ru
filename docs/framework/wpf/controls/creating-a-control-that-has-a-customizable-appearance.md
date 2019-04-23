@@ -14,10 +14,10 @@ helpviewer_keywords:
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
 ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298348"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Создание элемента управления с настраиваемым внешним видом
@@ -37,7 +37,7 @@ ms.locfileid: "59298348"
   
  В этом разделе содержатся следующие подразделы.  
   
--   [Предварительные требования](#prerequisites)  
+-   [Необходимые компоненты](#prerequisites)  
   
 -   [Модель частей и состояний](#parts_and_states_model)  
   
@@ -121,7 +121,7 @@ ms.locfileid: "59298348"
 ### <a name="use-the-visualstatemanager-to-manage-states"></a>Использование VisualStateManager для управления состояниями  
  <xref:System.Windows.VisualStateManager> Отслеживает состояния элемента управления и выполняет логику, необходимую для перехода между состояниями. При добавлении <xref:System.Windows.VisualState> объектов <xref:System.Windows.Controls.ControlTemplate>, их следует добавить <xref:System.Windows.VisualStateGroup> и добавьте <xref:System.Windows.VisualStateGroup> для <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> вложенного свойства зависимостей, чтобы <xref:System.Windows.VisualStateManager> имеет доступ к ним.  
   
- В следующем примере повторяется предыдущий пример, в котором показано <xref:System.Windows.VisualState> объекты, которые соответствуют `Positive` и `Negative` состояний элемента управления. <xref:System.Windows.Media.Animation.Storyboard> В `Negative`<xref:System.Windows.VisualState> включает <xref:System.Windows.Controls.TextBlock.Foreground%2A> из <xref:System.Windows.Controls.TextBlock> красным.   Когда `NumericUpDown` элемент управления находится в `Negative` state, раскадровки в `Negative` состояние начинается.  Затем <xref:System.Windows.Media.Animation.Storyboard> в `Negative` состояние останавливается, когда элемент управления возвращается `Positive` состояния.  `Positive`<xref:System.Windows.VisualState> Не содержать <xref:System.Windows.Media.Animation.Storyboard> так как при <xref:System.Windows.Media.Animation.Storyboard> для `Negative` останавливается, <xref:System.Windows.Controls.TextBlock.Foreground%2A> возвращает исходного цвета.  
+ В следующем примере повторяется предыдущий пример, в котором показано <xref:System.Windows.VisualState> объекты, которые соответствуют `Positive` и `Negative` состояний элемента управления. <xref:System.Windows.Media.Animation.Storyboard> В `Negative` <xref:System.Windows.VisualState> включает <xref:System.Windows.Controls.TextBlock.Foreground%2A> из <xref:System.Windows.Controls.TextBlock> красным.   Когда `NumericUpDown` элемент управления находится в `Negative` state, раскадровки в `Negative` состояние начинается.  Затем <xref:System.Windows.Media.Animation.Storyboard> в `Negative` состояние останавливается, когда элемент управления возвращается `Positive` состояния.  `Positive` <xref:System.Windows.VisualState> Не содержать <xref:System.Windows.Media.Animation.Storyboard> так как при <xref:System.Windows.Media.Animation.Storyboard> для `Negative` останавливается, <xref:System.Windows.Controls.TextBlock.Foreground%2A> возвращает исходного цвета.  
   
  [!code-xaml[VSMCustomControl#ValueStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#valuestates)]  
   
@@ -156,7 +156,7 @@ ms.locfileid: "59298348"
   
  Если передать имя состояния для <xref:System.Windows.VisualStateManager.GoToState%2A> когда элемент управления уже находится в этом состоянии <xref:System.Windows.VisualStateManager.GoToState%2A> ничего не делает, поэтому не нужно проверить текущее состояние элемента управления.  Например если `Value` изменяется от одного отрицательного числа на другое отрицательное число, раскадровка для `Negative` состояние не прерывается, и пользователь не увидит изменений в элементе управления.  
   
- <xref:System.Windows.VisualStateManager> Использует <xref:System.Windows.VisualStateGroup> объектов, чтобы определить, какое состояние, чтобы завершить работу при вызове <xref:System.Windows.VisualStateManager.GoToState%2A>. Элемент управления всегда находится в одном состоянии для каждой <xref:System.Windows.VisualStateGroup> , определенный в его <xref:System.Windows.Controls.ControlTemplate> и покидает это состояние только при переходе в другое состояние с использованием того же <xref:System.Windows.VisualStateGroup>. Например <xref:System.Windows.Controls.ControlTemplate> из `NumericUpDown` управления определяет `Positive` и `Negative`<xref:System.Windows.VisualState> объектов в одном <xref:System.Windows.VisualStateGroup> и `Focused` и `Unfocused`<xref:System.Windows.VisualState> объекты в другой. (Вы увидите `Focused` и `Unfocused`<xref:System.Windows.VisualState> определенные в [полный пример](#complete_example) в этой статье, когда элемент управления переходит из `Positive` состояние `Negative` состояние, или наоборот, элемент управления остается в либо `Focused` или `Unfocused` состояния.  
+ <xref:System.Windows.VisualStateManager> Использует <xref:System.Windows.VisualStateGroup> объектов, чтобы определить, какое состояние, чтобы завершить работу при вызове <xref:System.Windows.VisualStateManager.GoToState%2A>. Элемент управления всегда находится в одном состоянии для каждой <xref:System.Windows.VisualStateGroup> , определенный в его <xref:System.Windows.Controls.ControlTemplate> и покидает это состояние только при переходе в другое состояние с использованием того же <xref:System.Windows.VisualStateGroup>. Например <xref:System.Windows.Controls.ControlTemplate> из `NumericUpDown` управления определяет `Positive` и `Negative` <xref:System.Windows.VisualState> объектов в одном <xref:System.Windows.VisualStateGroup> и `Focused` и `Unfocused` <xref:System.Windows.VisualState> объекты в другой. (Вы увидите `Focused` и `Unfocused` <xref:System.Windows.VisualState> определенные в [полный пример](#complete_example) в этой статье, когда элемент управления переходит из `Positive` состояние `Negative` состояние, или наоборот, элемент управления остается в любом `Focused` или `Unfocused` состояния.  
   
  Существует три типичные места, где может изменить состояние элемента управления:  
   
@@ -205,13 +205,13 @@ ms.locfileid: "59298348"
   
  Размер элемента управления можно в следующих состояниях:  
   
--   В поле `ValueStates`<xref:System.Windows.VisualStateGroup>  
+-   В `ValueStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Positive`  
   
     -   `Negative`  
   
--   В поле `FocusStates`<xref:System.Windows.VisualStateGroup>  
+-   В `FocusStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Focused`  
   

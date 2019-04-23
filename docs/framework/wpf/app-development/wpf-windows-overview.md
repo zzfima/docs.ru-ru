@@ -29,10 +29,10 @@ helpviewer_keywords:
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
 ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296125"
 ---
 # <a name="wpf-windows-overview"></a>Общие сведения об окнах WPF
@@ -108,9 +108,9 @@ ms.locfileid: "59296125"
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Настройка определения окна для MSBuild  
  Реализация окна определяет его конфигурацию для [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Для окна, которое определяется с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] разметки и кода:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файлы разметки настраиваются как [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` элементов.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файлы разметки настраиваются как [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` элементов.  
   
--   Файлы кода программной части настраиваются как [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile` элементов.  
+-   Файлы кода программной части настраиваются как [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` элементов.  
   
  Это показано в следующем [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] файл проекта.  
   
@@ -257,7 +257,7 @@ ms.locfileid: "59296125"
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
 
- <xref:System.Windows.Window.Closing> Обработчику события передаются <xref:System.ComponentModel.CancelEventArgs>, который реализует `Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A> задание для свойства `true` для предотвращения закрытия окна.  
+ <xref:System.Windows.Window.Closing> Обработчику события передаются <xref:System.ComponentModel.CancelEventArgs>, который реализует `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> задание для свойства `true` для предотвращения закрытия окна.  
   
  Если <xref:System.Windows.Window.Closing> не обрабатывается или обрабатывается, но не отменено, оно будет закрыто. Непосредственно перед фактическим закрытием окна <xref:System.Windows.Window.Closed> возникает. На этом этапе невозможно предотвратить закрытие окна.  
   
@@ -272,7 +272,7 @@ ms.locfileid: "59296125"
   
 -   Закрывается главное окно приложения и <xref:System.Windows.Application.ShutdownMode%2A> является <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
   
--   <xref:System.Windows.Application.Shutdown%2A> вызывается.  
+-   вызывается метод <xref:System.Windows.Application.Shutdown%2A>;  
   
 > [!NOTE]
 >  После закрытия окно нельзя открыть повторно.  

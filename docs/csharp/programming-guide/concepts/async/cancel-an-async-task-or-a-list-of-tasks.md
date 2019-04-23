@@ -2,12 +2,12 @@
 title: Отмена асинхронной задачи или списка задач (C#)
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 27c14a4cc67d9f7e26f053b417d36c8de4bf594a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 01557bf80f40d4197d29ab05cfb4838f5d993a82
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131525"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59295748"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Отмена асинхронной задачи или списка задач в C#
 
@@ -24,17 +24,17 @@ ms.locfileid: "53131525"
 
 ### <a name="download-the-example"></a>Скачивание примера
 
-Вы можете скачать весь проект Windows Presentation Foundation (WPF) со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea), а затем выполнить необходимые действия.
+Скачать полный проект Windows Presentation Foundation (WPF) можно со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea). Затем выполните следующие шаги.
 
-1.  Распакуйте загруженный файл, а затем запустите Visual Studio.
+1. Распакуйте загруженный файл, а затем запустите Visual Studio.
 
-2.  В строке меню выберите **Файл** > **Открыть** > **Решение или проект**.
+2. В строке меню выберите **Файл** > **Открыть** > **Решение или проект**.
 
-3.  В диалоговом окне **Открытие проекта** откройте папку с примером кода, который вы распаковали, а затем откройте файл решения (SLN) для AsyncFineTuningCS.
+3. В диалоговом окне **Открытие проекта** откройте папку с примером кода, который вы распаковали, а затем откройте файл решения (SLN) для AsyncFineTuningCS.
 
-4.  В **обозревателе решений** откройте контекстное меню проекта **CancelATask** и выберите команду **Назначить запускаемым проектом**.
+4. В **обозревателе решений** откройте контекстное меню проекта **CancelATask** и выберите команду **Назначить запускаемым проектом**.
 
-5.  Нажмите клавишу **F5**, чтобы запустить проект (или нажмите клавиши **Ctrl**+**F5**, чтобы запустить проект без отладки).
+5. Нажмите клавишу **F5**, чтобы запустить проект (или нажмите клавиши **Ctrl**+**F5**, чтобы запустить проект без отладки).
 
 > [!TIP]
 > Если не хотите скачивать проект, можете просмотреть файл MainWindow.xaml.cs в конце этого раздела.
@@ -46,7 +46,7 @@ ms.locfileid: "53131525"
 
  Внесите в файл MainWindow.xaml.cs проекта указанные ниже изменения.
 
-1.  Объявите переменную `CancellationTokenSource`, `cts`, которая находится в области действия всех методов, имеющих к ней доступ.
+1. Объявите переменную `CancellationTokenSource`, `cts`, которая находится в области действия всех методов, имеющих к ней доступ.
 
     ```csharp
     public partial class MainWindow : Window
@@ -55,7 +55,7 @@ ms.locfileid: "53131525"
         CancellationTokenSource cts;
     ```
 
-2.  Добавьте следующий обработчик событий для кнопки **Отмена**. Этот обработчик событий использует метод <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> для отправки уведомления в `cts` при запросе отмены пользователем.
+2. Добавьте следующий обработчик событий для кнопки **Отмена**. Этот обработчик событий использует метод <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> для отправки уведомления в `cts` при запросе отмены пользователем.
 
     ```csharp
     // ***Add an event handler for the Cancel button.
@@ -68,7 +68,7 @@ ms.locfileid: "53131525"
     }
     ```
 
-3.  Внесите в обработчик событий указанные ниже изменения для кнопки **Пуск**, `startButton_Click`.
+3. Внесите в обработчик событий указанные ниже изменения для кнопки **Пуск**, `startButton_Click`.
 
     -   Создайте экземпляр `CancellationTokenSource`, `cts`.
 
@@ -97,7 +97,7 @@ ms.locfileid: "53131525"
         }
         ```
 
-4.  В `AccessTheWebAsync` используйте перегрузку <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> метода `GetAsync` в типе <xref:System.Net.Http.HttpClient> для скачивания содержимого веб-сайта. Передайте `ct` параметр <xref:System.Threading.CancellationToken> метода `AccessTheWebAsync` в качестве второго аргумента. Благодаря токену, если пользователь нажмет кнопку **Отмена**, будет выведено соответствующее сообщение.
+4. В `AccessTheWebAsync` используйте перегрузку <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> метода `GetAsync` в типе <xref:System.Net.Http.HttpClient> для скачивания содержимого веб-сайта. Передайте `ct` параметр <xref:System.Threading.CancellationToken> метода `AccessTheWebAsync` в качестве второго аргумента. Благодаря токену, если пользователь нажмет кнопку **Отмена**, будет выведено соответствующее сообщение.
 
      Эти изменения в `AccessTheWebAsync` показаны в следующем примере кода.
 
@@ -124,7 +124,7 @@ ms.locfileid: "53131525"
     }
     ```
 
-5.  Если программа не отменяется, она выдает представленный ниже результат.
+5. Если программа не отменяется, она выдает представленный ниже результат.
 
     ```text
     Ready to download.
@@ -144,17 +144,17 @@ ms.locfileid: "53131525"
 
 ### <a name="download-the-example"></a>Скачивание примера
 
-Вы можете скачать весь проект Windows Presentation Foundation (WPF) со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea), а затем выполнить необходимые действия.
+Скачать полный проект Windows Presentation Foundation (WPF) можно со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea). Затем выполните следующие шаги.
 
-1.  Распакуйте загруженный файл, а затем запустите Visual Studio.
+1. Распакуйте загруженный файл, а затем запустите Visual Studio.
 
-2.  В строке меню выберите **Файл** > **Открыть** > **Решение или проект**.
+2. В строке меню выберите **Файл** > **Открыть** > **Решение или проект**.
 
-3.  В диалоговом окне **Открытие проекта** откройте папку с примером кода, который вы распаковали, а затем откройте файл решения (SLN) для AsyncFineTuningCS.
+3. В диалоговом окне **Открытие проекта** откройте папку с примером кода, который вы распаковали, а затем откройте файл решения (SLN) для AsyncFineTuningCS.
 
-4.  В **обозревателе решений** откройте контекстное меню проекта **CancelAListOfTasks** и выберите команду **Назначить запускаемым проектом**.
+4. В **обозревателе решений** откройте контекстное меню проекта **CancelAListOfTasks** и выберите команду **Назначить запускаемым проектом**.
 
-5.  Нажмите клавишу **F5**, чтобы запустить проект.
+5. Нажмите клавишу **F5**, чтобы запустить проект.
 
      Нажмите клавиши **CTRL**+**F5**, чтобы запустить проект без отладки.
 
@@ -164,7 +164,7 @@ ms.locfileid: "53131525"
 
 Для самостоятельного построения примера шаг за шагом выполните инструкции в разделе "Загрузка примера", но выберите **CancelATask** как **запускаемый проект**. Добавьте в проект указанные ниже изменения. Звездочками отмечены изменения в программе.
 
-1.  Добавьте метод для создания списка веб-адресов.
+1. Добавьте метод для создания списка веб-адресов.
 
     ```csharp
     // ***Add a method that creates a list of web addresses.
@@ -184,14 +184,14 @@ ms.locfileid: "53131525"
     }
     ```
 
-2.  Вызовите метод в `AccessTheWebAsync`.
+2. Вызовите метод в `AccessTheWebAsync`.
 
     ```csharp
     // ***Call SetUpURLList to make a list of web addresses.
     List<string> urlList = SetUpURLList();
     ```
 
-3.  Добавьте в `AccessTheWebAsync` следующий цикл для обработки каждого веб-адреса в списке.
+3. Добавьте в `AccessTheWebAsync` следующий цикл для обработки каждого веб-адреса в списке.
 
     ```csharp
     // ***Add a loop to process the list of web addresses.
@@ -210,7 +210,7 @@ ms.locfileid: "53131525"
     }
     ```
 
-4.  Поскольку `AccessTheWebAsync` отображает длину, метод не должен ничего возвращать. Удалите инструкцию return и измените тип возвращаемого значения на <xref:System.Threading.Tasks.Task> вместо <xref:System.Threading.Tasks.Task%601>.
+4. Поскольку `AccessTheWebAsync` отображает длину, метод не должен ничего возвращать. Удалите инструкцию return и измените тип возвращаемого значения на <xref:System.Threading.Tasks.Task> вместо <xref:System.Threading.Tasks.Task%601>.
 
     ```csharp
     async Task AccessTheWebAsync(CancellationToken ct)
@@ -222,7 +222,7 @@ ms.locfileid: "53131525"
     await AccessTheWebAsync(cts.Token);
     ```
 
-5.  Если программа не отменяется, она выдает представленный ниже результат.
+5. Если программа не отменяется, она выдает представленный ниже результат.
 
     ```text
     Length of the downloaded string: 35939.
@@ -258,7 +258,7 @@ ms.locfileid: "53131525"
 
 Следующие разделы содержат код каждого из приведенных выше примеров. Обратите внимание на то, что необходимо добавить ссылку для <xref:System.Net.Http>.
 
-Проекты можно загрузить со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
+Вы можете скачать проект из статьи c [примером использования async. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
 ### <a name="example---cancel-a-task"></a>Пример отмены задачи
 
@@ -523,4 +523,4 @@ namespace CancelAListOfTasks
 - <xref:System.Threading.CancellationToken>
 - [Асинхронное программирование с использованием ключевых слов async и await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Тонкая настройка асинхронного приложения в C#)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Пример использования async. Тонкая настройка асинхронного приложения)
+- [Пример использования Async. Настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

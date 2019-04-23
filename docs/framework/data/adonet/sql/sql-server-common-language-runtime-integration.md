@@ -3,10 +3,10 @@ title: Интеграция среды CLR и SQL Server
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
 ms.openlocfilehash: fd043aa6c7e5b9246a36146e000e5cba9e090d3e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297504"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>Интеграция среды CLR и SQL Server
@@ -18,16 +18,16 @@ ms.locfileid: "59297504"
   
  **Электронная документация по SQL Server**  
   
-1. [Основные понятия программирования при интеграции со средой CLR](https://go.microsoft.com/fwlink/?LinkId=115240)  
+1. [Распространенные языка среды CLR Integration основные понятия программирования](https://go.microsoft.com/fwlink/?LinkId=115240)  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Знакомство с интеграцией CLR в SQL Server](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  
  Предоставляет вводные сведения об интеграции SQL Server со средой CLR. Приводятся ссылки на дополнительные разделы.  
   
- [Пользовательские функции CLR](../../../../../docs/framework/data/adonet/sql/clr-user-defined-functions.md)  
+ [Определяемые пользователем функции среды CLR](../../../../../docs/framework/data/adonet/sql/clr-user-defined-functions.md)  
  Содержит описание реализации и использования различных типов функций среды CLR: возвращающих табличное значение, скалярных и определяемых пользователем агрегатных функций.  
   
- [Пользовательские типы CLR](../../../../../docs/framework/data/adonet/sql/clr-user-defined-types.md)  
+ [Определяемые пользователем типы CLR](../../../../../docs/framework/data/adonet/sql/clr-user-defined-types.md)  
  Показывает, как реализовать и использовать определяемые пользователем типы среды CLR. Приводятся ссылки на дополнительные разделы.  
   
  [Хранимые процедуры CLR](../../../../../docs/framework/data/adonet/sql/clr-stored-procedures.md)  
@@ -45,4 +45,4 @@ ms.locfileid: "59297504"
 ## <a name="see-also"></a>См. также
 
 - [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

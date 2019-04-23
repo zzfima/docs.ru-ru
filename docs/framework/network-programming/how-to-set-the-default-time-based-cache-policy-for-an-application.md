@@ -9,21 +9,21 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-ms.openlocfilehash: d40b0ffbe514429ed24eaa5d0c2ce2d52c80d37d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99f9905109a4deabe3cfb2e3616913e84f565cb7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608957"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59299128"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Как выполнить Установка политики кэша для приложения на основе времени по умолчанию
 Политики кэша на основе времени по умолчанию позволяют приложению определить поведение кэширования с помощью заголовков, которые отправляются с кэшируемым ресурсом. Поведение кэширования определяется в разделах 13 и 14 стандарта RFC 2616, который доступен на веб-сайте [IETF](https://www.ietf.org/). Это поведение кэширования подходит для большинства приложений.  
   
 ### <a name="to-set-the-default-automatic-policy-for-an-application"></a>Установка политики кэша по умолчанию для приложения  
   
-1.  Создайте объект политики на основе времени по умолчанию.  
+1. Создайте объект политики на основе времени по умолчанию.  
   
-2.  Установите этот объект политики как объект по умолчанию для домена приложения.  
+2. Установите этот объект политики как объект по умолчанию для домена приложения.  
   
 ## <a name="example"></a>Пример  
  В двух примерах в этом разделе формируются идентичные политики.  
@@ -63,6 +63,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)
 - [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
 ms.openlocfilehash: ba7348ae50965ffcf2719b20934451916c8fa95a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296359"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>Параметры типа нельзя использовать в качестве квалификаторов
@@ -40,6 +40,6 @@ End Function
   
 ## <a name="see-also"></a>См. также
 
-- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Универсальные типы в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Type List](../../../visual-basic/language-reference/statements/type-list.md)
+- [Ссылки на объявленные элементы](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Список типов](../../../visual-basic/language-reference/statements/type-list.md)

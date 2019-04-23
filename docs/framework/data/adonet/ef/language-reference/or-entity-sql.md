@@ -3,10 +3,10 @@ title: '|| (ИЛИ) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
 ms.openlocfilehash: d089bcec56ff13ddcd5250a63aee6a00d0c3ef11
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297802"
 ---
 # <a name="-or-entity-sql"></a>|| (ИЛИ) (Entity SQL)
@@ -25,7 +25,7 @@ boolean_expression || boolean_expression
  Любое допустимое выражение, возвращающее значение типа `Boolean`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true` Если любое из условий равно `true`; в противном случае `false`.  
+ `true` , если любое из условий есть `true`; в противном случае `false`.  
   
 ## <a name="remarks"></a>Примечания  
  OR - это логический оператор [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . Он используется только для объединения двух условий. Если в инструкции используется более одного логического оператора, операторы OR вычисляются после операторов AND. Однако порядок выполнения можно изменить с помощью скобок.  

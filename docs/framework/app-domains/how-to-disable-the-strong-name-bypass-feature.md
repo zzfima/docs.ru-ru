@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4e5ea1907ec3de4536d09b3d76ca4956c8756d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86fc35ae20211bd32a21d60b7313074361aef671
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494306"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59296177"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Как выполнить Отключение функции пропуска строгих имен
 Начиная с версии .NET Framework 3.5 с пакетом обновления 1 (SP1), подписи строгого имени не проходили проверку при загрузке сборки в объект <xref:System.AppDomain> с полным доверием, например в `MyComputer` по умолчанию для зоны <xref:System.AppDomain>. Это называется возможностью обхода строгих имен. В среде с полным доверием всегда успешно обрабатываются запросы <xref:System.Security.Permissions.StrongNameIdentityPermission> для подписанных сборок с полным доверием независимо от их подписи. Единственное исключение связано с тем, что сборка должна иметь полное доверие, потому что полное доверие имеет ее зона. Так как в этом случае наличие строгого имени не является решающим фактором, смысла в проверке подписи нет. Пропуск проверки подписей строгого имени позволяет значительно повысить производительность приложения.  
@@ -34,11 +34,11 @@ ms.locfileid: "54494306"
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>Отключение функции обхода строгих имен для отдельного приложения  
   
-1.  Откройте или создайте файл конфигурации приложения.  
+1. Откройте или создайте файл конфигурации приложения.  
   
      Дополнительные сведения об этом файле см. в разделе "Файлы конфигурации приложений" документа [Настройка приложений](../../../docs/framework/configure-apps/index.md).  
   
-2.  Добавьте следующую запись:  
+2. Добавьте следующую запись:  
   
     ```xml  
     <configuration>  
@@ -54,6 +54,7 @@ ms.locfileid: "54494306"
 >  Функцию проверки строгих имен можно включать и отключать на уровне приложения, если пропуск строгих имен включен на уровне компьютера. Если функция пропуска на уровне компьютера отключена, строгие имена будут проверяться для всех приложений и пропустить проверку для отдельного приложения будет невозможно.  
   
 ## <a name="see-also"></a>См. также
+
 - [Sn.exe (средство строгих имен)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [Элемент \<bypassTrustedAppStrongNames>](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)
 - [Создание и использование сборок со строгими именами](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

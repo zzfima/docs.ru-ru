@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
 ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299453"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Отладка ошибок проверки подлинности Windows
@@ -91,7 +91,7 @@ ms.locfileid: "59299453"
   
 3. Потребуйте, чтобы при согласовании SSPI использовался протокол Kerberos, запретив использование NTLM:  
   
-    1.  Для этого в коде, с помощью следующей инструкции: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
+    1.  для этого в коде воспользуйтесь инструкцией: `ChannelFactory.Credentials.Windows.AllowNtlm = false`;  
   
     2.  либо в файле конфигурации установите атрибут `allowNtlm` равным `false`. Этот атрибут содержится в [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
   

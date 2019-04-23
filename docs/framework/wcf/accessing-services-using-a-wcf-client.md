@@ -8,10 +8,10 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
 ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297256"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Обращение к службам с использованием клиента WCF
@@ -189,11 +189,11 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 ## <a name="see-also"></a>См. также
 
 - [Практическое руководство. Создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Практическое руководство. Доступ к службам с дуплексным контрактом](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Практическое руководство. Службы доступа с дуплексным контрактом](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
 - [Практическое руководство. Асинхронный вызов операций службы](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [Практическое руководство. Доступ к службам с односторонним контрактом и контрактом типа "запрос — ответ"](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Практическое руководство. Доступ к службе WSE 3.0](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Практическое руководство. Доступ к службам с односторонним контрактом и контрактом типа запрос ответ](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Практическое руководство. Доступ к WSE 3.0 служба](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [Основные сведения о созданном коде клиента](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [Практическое руководство. Сокращение времени запуска клиентских приложений WCF с использованием XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
-- [Задание поведения клиента во время выполнения](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [Настройка поведений клиентов](../../../docs/framework/wcf/configuring-client-behaviors.md)
+- [Практическое руководство. Улучшения запуска время клиентских приложений WCF с использованием XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Указание поведения клиента во время выполнения](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [Настройка поведения клиентов](../../../docs/framework/wcf/configuring-client-behaviors.md)

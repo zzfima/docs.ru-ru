@@ -9,10 +9,10 @@ helpviewer_keywords:
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
 ms.openlocfilehash: 24c05bf41152fba2f54636cd0c15dde6fa71aa2b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299336"
 ---
 # <a name="defining-and-specifying-faults"></a>Определение и задание сбоев
@@ -92,7 +92,7 @@ End Class
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [Задание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Указание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Сбои при отправке и получении](../../../docs/framework/wcf/sending-and-receiving-faults.md)
 - [Практическое руководство. Объявление сбоев в контрактах служб](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
 - [Основные сведения об уровне защиты](../../../docs/framework/wcf/understanding-protection-level.md)

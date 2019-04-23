@@ -5,21 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 927a87b250863c4d59e630264ee11286c30deb3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fa84052bcf9ca97b903111fc02e319b25deb384
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608003"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59296970"
 ---
 # <a name="how-to-assign-user-information-to-group-connections"></a>Как выполнить Присвоение данных пользователя групповым подключениям
 
-  
  В следующем примере демонстрируется, как присвоить данные пользователя групповым подключениям. В этом разделе предполагается, что приложение присвоило значения переменным *UserName*, *SecurelyStoredPassword* и *Domain* до вызова этого раздела кода, а переменная *UserName* является уникальной.  
   
 ### <a name="to-assign-user-information-to-a-group-connection"></a>Присвоение данных пользователя групповому подключению  
   
-1.  Создайте имя группы подключений.  
+1. Создайте имя группы подключений.  
   
     ```csharp  
     SHA1Managed Sha1 = new SHA1Managed();  
@@ -33,7 +32,7 @@ ms.locfileid: "54608003"
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2.  Создайте запрос к конкретному URL-адресу. Например, следующий код создает запрос к URL-адресу `http://www.contoso.com.`  
+2. Создайте запрос к конкретному URL-адресу. Например, следующий код создает запрос к URL-адресу `http://www.contoso.com.`  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -43,7 +42,7 @@ ms.locfileid: "54608003"
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3.  Задайте учетные данные и имя группы подключений для веб-запроса и вызовите метод **GetResponse**, чтобы получить объект **WebResponse**.  
+3. Задайте учетные данные и имя группы подключений для веб-запроса и вызовите метод **GetResponse**, чтобы получить объект **WebResponse**.  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
@@ -59,7 +58,7 @@ ms.locfileid: "54608003"
     Dim myWebResponse As WebResponse = myWebRequest.GetResponse()  
     ```  
   
-4.  После использования объекта WebRespose закройте поток ответа.  
+4. После использования объекта WebRespose закройте поток ответа.  
   
     ```csharp  
     MyWebResponse.Close();  
@@ -109,5 +108,6 @@ MyWebResponse.Close()
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Управление подключениями](../../../docs/framework/network-programming/managing-connections.md)
 - [Группирование подключений](../../../docs/framework/network-programming/connection-grouping.md)

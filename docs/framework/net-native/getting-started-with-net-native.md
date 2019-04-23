@@ -5,10 +5,10 @@ ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f72a1d6a10c5899a02019bf826dc3cc9d5457bed
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298478"
 ---
 # <a name="getting-started-with-net-native"></a>Начало работы с машинным кодом .NET
@@ -106,18 +106,18 @@ ms.locfileid: "59298478"
   
  Конкретные примеры обработки исключений и других проблем, возникающих при тестировании приложения, см. в:  
   
--   [Пример Обработка исключений при привязке данных](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [Пример: Обработка исключений при привязке данных](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
--   [Пример Устранение неполадок динамического программирования](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
+-   [Пример: Устранение неполадок динамического программирования](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
 -   [Исключения среды выполнения в собственных приложениях .NET](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>См. также
 
-- [Ссылка на файл конфигурации директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Установка и конфигурация машинного кода .NET](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
-- [Машинный код .NET и компиляция](../../../docs/framework/net-native/net-native-and-compilation.md)
-- [Отражение и машинный код .NET](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Установка .NET и конфигурация](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [.NET Native и компиляция](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [Отражение и .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [API-интерфейсы, основанные на отражении](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
 - [Сериализация и метаданные](../../../docs/framework/net-native/serialization-and-metadata.md)
-- [Миграция приложения для магазина Windows в машинный код .NET](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
+- [Миграция приложения для Магазина Windows в .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

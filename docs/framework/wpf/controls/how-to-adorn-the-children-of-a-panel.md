@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Panel control [WPF], binding adorners to children
 ms.assetid: 4cc9b972-b472-4e5c-bdf3-3702d7fbb1f5
 ms.openlocfilehash: 746f197a5132934f94a678dc3b5e2a1f65eb93bd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299823"
 ---
 # <a name="how-to-adorn-the-children-of-a-panel"></a>Практическое руководство. Декорирование дочерних элементов Panel
@@ -21,7 +21,7 @@ ms.locfileid: "59299823"
 ## <a name="example"></a>Пример  
  Для привязки декоративного элемента к дочерним элементам <xref:System.Windows.Controls.Panel>, выполните следующие действия:  
   
-1. Объявите новый <xref:System.Windows.Documents.AdornerLayer> и вызовите `static`<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> метод, чтобы найти слой графических элементов для элемента, дочерние элементы которого нужно декорировать.  
+1. Объявите новый <xref:System.Windows.Documents.AdornerLayer> и вызовите `static` <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> метод, чтобы найти слой графических элементов для элемента, дочерние элементы которого нужно декорировать.  
   
 2. Перечислите дочерние элементы родительского элемента и вызовите <xref:System.Windows.Documents.AdornerLayer.Add%2A> метод для привязки декоративного элемента для каждого дочернего элемента.  
   

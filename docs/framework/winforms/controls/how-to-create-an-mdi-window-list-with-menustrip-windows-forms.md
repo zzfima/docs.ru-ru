@@ -9,10 +9,10 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
 ms.openlocfilehash: ec0d8af81e320bea3d9d69305f91bd56666ba7cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299648"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Практическое руководство. Создание списка в окне интерфейса MDI с помощью MenuStrip (Windows Forms)
@@ -30,11 +30,11 @@ ms.locfileid: "59299648"
   
 4. Добавьте пункт подменю в элемент меню `&File` и присвойте его свойству <xref:System.Windows.Forms.ToolStripItem.Text%2A> значение `&Open`.  
   
-5. Задайте <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> свойство <xref:System.Windows.Forms.MenuStrip> для `&Window`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+5. Задайте <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> свойство <xref:System.Windows.Forms.MenuStrip> для `&Window` <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
 6. Добавьте форму в проект и добавьте нужный элемент управления, такие как другой <xref:System.Windows.Forms.MenuStrip>.  
   
-7. Создайте обработчик событий для <xref:System.Windows.Forms.Control.Click> событие `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+7. Создайте обработчик событий для события <xref:System.Windows.Forms.Control.Click> элемента `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
 8. В обработчик событий вставьте код, аналогичный приведенному ниже, чтобы создать и отобразить новые экземпляры `Form2` качестве дочерних окон MDI `Form1`.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59299648"
     }  
     ```  
   
-9. Поместите код, аналогичный следующему в `&New`<xref:System.Windows.Forms.ToolStripMenuItem> для регистрации обработчика событий.  
+9. Поместите код, аналогичный следующему в `&New` <xref:System.Windows.Forms.ToolStripMenuItem> для регистрации обработчика событий.  
   
     ```vb  
     Private Sub newToolStripMenuItem_Click(sender As Object, e As _  
@@ -84,5 +84,5 @@ ms.locfileid: "59299648"
 ## <a name="see-also"></a>См. также
 
 - [Практическое руководство. Создание родительских MDI-форм](../advanced/how-to-create-mdi-parent-forms.md)
-- [Практическое руководство. Создание дочерних форм MDI](../advanced/how-to-create-mdi-child-forms.md)
+- [Практическое руководство. Создание дочерних MDI-форм](../advanced/how-to-create-mdi-child-forms.md)
 - [Элемент управления MenuStrip](menustrip-control-windows-forms.md)

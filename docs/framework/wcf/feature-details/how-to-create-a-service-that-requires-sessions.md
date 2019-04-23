@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8a7613ef-0df9-47c3-b8dc-47f42cb1fd8b
 ms.openlocfilehash: 53b6c809103a2a32d544b8317164a5fa3aa81596
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300558"
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>Практическое руководство. Создание службы, для которой требуются сеансы
@@ -21,11 +21,11 @@ ms.locfileid: "59300558"
   
 2. Измените элемент <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>, объявляющий контракт, присвоив свойству <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> одно из следующих значений:  
   
-    -   <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> Если этот контракт выполнялся в сеансе.  
+    -   <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>, если требуется, чтобы этот контракт выполнялся в сеансе.  
   
-    -   <xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType> Если этот контракт может выполняться в рамках сеанса.  
+    -   <xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType>, если этот контракт может выполняться в сеансе.  
   
-    -   <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> Если этот контракт не должна выполняться в рамках сеанса.  
+    -   <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType>, если требуется, чтобы этот контракт не выполнялся в сеансе.  
   
 3. Настройте конечную точку службы так, чтобы она использовала привязку, поддерживающую сеансы. В следующем примере конфигурации показано использование привязки <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>, поддерживающей сеанс WS`-`ReliableMessaging.  
   

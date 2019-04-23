@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296099"
 ---
 # <a name="ws-transaction-flow"></a>Поток транзакций WS
@@ -188,7 +188,7 @@ Console.WriteLine("Transaction committed");
   
 -   Второй запрос `Subtract` выполняется в новой области транзакции, объявленной с помощью параметра `TransactionScopeOption.Suppress`. Он подавляет первоначальную внешнюю транзакцию клиента, и запрос не передает транзакцию службе. Этот подход позволяет клиенту явно отказаться и защититься от передачи транзакции службе, если в этом нет необходимости. Действия службы происходят в области новой, несвязанной транзакции.  
   
--   `Multiply` Запрос передает транзакцию службе, так как созданное клиентом определение `ICalculator` интерфейс включает <xref:System.ServiceModel.TransactionFlowAttribute> присвоено <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`.  
+-   Запрос `Multiply` не передает транзакцию службе, так как созданное клиентом определение интерфейса `ICalculator` включает объект <xref:System.ServiceModel.TransactionFlowAttribute>, которому присвоено значение <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`.  
   
 -   Запрос `Divide` не передает транзакцию службе, так как, опять же, созданное клиентом определение интерфейса `ICalculator` не включает `TransactionFlowAttribute`. Действия службы снова происходят в области новой, несвязанной транзакции.  
   
@@ -225,7 +225,7 @@ Press <ENTER> to terminate the service.
   
 1. Чтобы построить версию решения C# или Visual Basic .NET, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
-2. Убедитесь, что установлен SQL Server Express Edition, SQL Server, а в файле конфигурации приложения службы правильно задана строка подключения. Чтобы запустить образец без использования базы данных, задайте `usingSql` значение в файле конфигурации приложения службы для `false`  
+2. Убедитесь, что установлен SQL Server Express Edition, SQL Server, а в файле конфигурации приложения службы правильно задана строка подключения. Чтобы выполнить образец без использования базы данных, установите значение `usingSql` в файле конфигурации приложения службы равным `false`  
   
 3. Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   

@@ -2,12 +2,12 @@
 title: Как выполнить Оптимизация производительности асинхронных процедур с использованием метода Task.WhenAll (C#)
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: 6143dfa43227f35eb8c74b386bee96ccec696a4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9710e5f31b9d01c5151b548c1b642293122d44b3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631806"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59297958"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Как выполнить Оптимизация производительности асинхронных процедур с использованием метода Task.WhenAll (C#)
 Можно повысить производительность асинхронного решения, которое описывается в разделе [Пошаговое руководство. Доступ к Интернету с помощью модификатора Async и оператора Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md), с помощью метода <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Этот метод асинхронно ожидает несколько асинхронных операций, которые представлены в виде коллекции задач.  
@@ -23,7 +23,7 @@ ms.locfileid: "54631806"
   
 ### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>Добавление метода Task.WhenAll в решение GetURLContentsAsync  
   
-1.  Добавьте метод `ProcessURLAsync` в первое приложение, которое разрабатывается в статье [Пошаговое руководство. Доступ к Интернету с помощью модификатора Async и оператора Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1. Добавьте метод `ProcessURLAsync` в первое приложение, которое разрабатывается в статье [Пошаговое руководство. Доступ к Интернету с помощью модификатора Async и оператора Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
     -   Если вы скачали код со страницы [Примеры кода от разработчиков](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), откройте проект AsyncWalkthrough, а затем добавьте `ProcessURLAsync` в файл MainWindow.xaml.cs.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "54631806"
     }  
     ```  
   
-2.  Закомментируйте или удалите цикл `foreach` в `SumPageSizesAsync`, как показано в следующем коде.  
+2. Закомментируйте или удалите цикл `foreach` в `SumPageSizesAsync`, как показано в следующем коде.  
   
     ```csharp  
     //var total = 0;  
@@ -61,7 +61,7 @@ ms.locfileid: "54631806"
     //}  
     ```  
   
-3.  Создайте коллекцию задач. Следующий код определяет [запрос](../../../../csharp/programming-guide/concepts/linq/index.md), который при выполнении метода <xref:System.Linq.Enumerable.ToArray%2A> создает коллекцию задач, скачивающих содержимое каждого веб-сайта. Задачи запускаются при вычислении запроса.  
+3. Создайте коллекцию задач. Следующий код определяет [запрос](../../../../csharp/programming-guide/concepts/linq/index.md), который при выполнении метода <xref:System.Linq.Enumerable.ToArray%2A> создает коллекцию задач, скачивающих содержимое каждого веб-сайта. Задачи запускаются при вычислении запроса.  
   
      Добавьте следующий код в метод `SumPageSizesAsync` после объявления `urlList`.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "54631806"
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  Примените `Task.WhenAll` к коллекции задач, `downloadTasks`. `Task.WhenAll` возвращает одну задачу, которая завершается после завершения всех задач в коллекции задач.  
+4. Примените `Task.WhenAll` к коллекции задач, `downloadTasks`. `Task.WhenAll` возвращает одну задачу, которая завершается после завершения всех задач в коллекции задач.  
   
      В следующем примере выражение `await` ожидает завершения одной задачи, возвращаемой `WhenAll`. Результат этого выражения – массив целых чисел, каждое из которых – размер загруженного веб-сайта. Добавьте следующий код в `SumPageSizesAsync` сразу после кода, добавленного на предыдущем шаге.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "54631806"
     //int[] lengths = await whenAllTask;  
     ```  
   
-5.  И, наконец, используйте метод <xref:System.Linq.Enumerable.Sum%2A> для вычисления суммы длин всех веб-сайтов. Добавьте следующую строку в `SumPageSizesAsync`.  
+5. И, наконец, используйте метод <xref:System.Linq.Enumerable.Sum%2A> для вычисления суммы длин всех веб-сайтов. Добавьте следующую строку в `SumPageSizesAsync`.  
   
     ```csharp  
     int total = lengths.Sum();  
@@ -95,7 +95,7 @@ ms.locfileid: "54631806"
   
 ### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>Добавление метода Task.WhenAll в решение HttpClient.GetByteArrayAsync  
   
-1.  Добавьте следующую версию метода `ProcessURLAsync` во второе приложение, которое разрабатывается в статье [Пошаговое руководство. Доступ к Интернету с помощью модификатора Async и оператора Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1. Добавьте следующую версию метода `ProcessURLAsync` во второе приложение, которое разрабатывается в статье [Пошаговое руководство. Доступ к Интернету с помощью модификатора Async и оператора Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
     -   Если вы скачали код со страницы [Примеры кода от разработчиков](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), откройте проект AsyncWalkthrough_HttpClient, а затем добавьте `ProcessURLAsync` в файл MainWindow.xaml.cs.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "54631806"
     }  
     ```  
   
-2.  Закомментируйте или удалите цикл `For Each` или `foreach` в `SumPageSizesAsync`, как показано в следующем коде.  
+2. Закомментируйте или удалите цикл `For Each` или `foreach` в `SumPageSizesAsync`, как показано в следующем коде.  
   
     ```csharp  
     //var total = 0;  
@@ -136,7 +136,7 @@ ms.locfileid: "54631806"
     //}  
     ```  
   
-3.  Определите [запрос](../../../../csharp/programming-guide/concepts/linq/index.md), который при выполнении метода <xref:System.Linq.Enumerable.ToArray%2A> создает коллекцию задач, скачивающих содержимое каждого веб-сайта. Задачи запускаются при вычислении запроса.  
+3. Определите [запрос](../../../../csharp/programming-guide/concepts/linq/index.md), который при выполнении метода <xref:System.Linq.Enumerable.ToArray%2A> создает коллекцию задач, скачивающих содержимое каждого веб-сайта. Задачи запускаются при вычислении запроса.  
   
      Добавьте следующий код в метод `SumPageSizesAsync` после объявления `client` и `urlList`.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "54631806"
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  Затем примените `Task.WhenAll` к коллекции задач, `downloadTasks`. `Task.WhenAll` возвращает одну задачу, которая завершается после завершения всех задач в коллекции задач.  
+4. Затем примените `Task.WhenAll` к коллекции задач, `downloadTasks`. `Task.WhenAll` возвращает одну задачу, которая завершается после завершения всех задач в коллекции задач.  
   
      В следующем примере выражение `await` ожидает завершения одной задачи, возвращаемой `WhenAll`. Результат выражения `await` — массив целых чисел, каждое из которых представляет размер скачанного веб-сайта. Добавьте следующий код в `SumPageSizesAsync` сразу после кода, добавленного на предыдущем шаге.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "54631806"
     //int[] lengths = await whenAllTask;  
     ```  
   
-5.  И, наконец, используйте метод <xref:System.Linq.Enumerable.Sum%2A> для получения суммы длин всех веб-сайтов. Добавьте следующую строку в `SumPageSizesAsync`.  
+5. И, наконец, используйте метод <xref:System.Linq.Enumerable.Sum%2A> для получения суммы длин всех веб-сайтов. Добавьте следующую строку в `SumPageSizesAsync`.  
   
     ```csharp  
     int total = lengths.Sum();

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
 ms.openlocfilehash: 603ee57475b3e7b1af607d49050e3276fd3082d8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298660"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Практическое руководство. Асинхронная реализация операции службы
@@ -47,5 +47,5 @@ ms.locfileid: "59298660"
   
 ## <a name="see-also"></a>См. также
 
-- [Создание контрактов служб](../../../docs/framework/wcf/designing-service-contracts.md)
+- [Разработка контрактов службы](../../../docs/framework/wcf/designing-service-contracts.md)
 - [Синхронные и асинхронные операции](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)

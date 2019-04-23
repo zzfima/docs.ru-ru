@@ -11,10 +11,10 @@ helpviewer_keywords:
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
 ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295644"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Практическое руководство. Объявление и вызов свойства по умолчанию в Visual Basic
@@ -85,10 +85,10 @@ ms.locfileid: "59295644"
 
 - [Процедуры свойств](./property-procedures.md)
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
-- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Значение по умолчанию](../../../../visual-basic/language-reference/modifiers/default.md)
+- [Оператор Property](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Default](../../../../visual-basic/language-reference/modifiers/default.md)
 - [Различия между свойствами и переменными в Visual Basic](./differences-between-properties-and-variables.md)
-- [Практическое руководство. Создание свойства](./how-to-create-a-property.md)
+- [Практическое руководство. Создать свойство](./how-to-create-a-property.md)
 - [Практическое руководство. Объявление свойства со смешанным уровнем доступа](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Практическое руководство. Вызов процедуры свойства](./how-to-call-a-property-procedure.md)
 - [Практическое руководство. Запись значения в свойство](./how-to-put-a-value-in-a-property.md)

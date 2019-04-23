@@ -3,12 +3,12 @@ title: Сведения о .NET Core
 description: Дополнительные сведения о .NET Core.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 6c76d5e80cba6947eb5a91fb31fc3e511970d165
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 87514b476124196c835e4b22154f9bbaca7482a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675970"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296411"
 ---
 # <a name="about-net-core"></a>Сведения о .NET Core
 
@@ -24,7 +24,7 @@ ms.locfileid: "57675970"
 
 ## <a name="languages"></a>Языки
 
-.NET Core позволяет создавать приложения и библиотеки на языках C#, Visual Basic и F#. Эти языки уже интегрированы или могут быть интегрированы в ваши любимые текстовые редакторы и интегрированные среды разработки, такие как [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text и Vim. Интеграция возможна во многом благодаря участникам проектов [OmniSharp](https://www.omnisharp.net/) и [Ionide](http://ionide.io).
+.NET Core позволяет создавать приложения и библиотеки на языках C#, Visual Basic и F#. Эти языки уже интегрированы или могут быть интегрированы в ваши любимые текстовые редакторы и интегрированные среды разработки, такие как [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text и Vim. Интеграция возможна во многом благодаря участникам проектов [OmniSharp](https://www.omnisharp.net/) и [Ionide](http://ionide.io).
 
 ## <a name="apis"></a>API - интерфейсы
 

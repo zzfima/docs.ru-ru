@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
 ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296528"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Пошаговое руководство. Сопоставление свойств с помощью элемента WindowsFormsHost
@@ -83,7 +83,7 @@ ms.locfileid: "59296528"
 
      `AddClipMapping` Метод добавляет новое сопоставление для <xref:System.Windows.UIElement.Clip%2A> свойство.
 
-     `OnClipChange` Метод преобразует <xref:System.Windows.UIElement.Clip%2A> свойства [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A> свойство.
+     `OnClipChange` Метод преобразует <xref:System.Windows.UIElement.Clip%2A> свойства [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Control.Region%2A> свойство.
 
      `Window1_SizeChanged` Метод обрабатывает окна <xref:System.Windows.FrameworkElement.SizeChanged> событий и изменяет размер отсеченной области по размеру окна приложения.
 
@@ -113,7 +113,7 @@ ms.locfileid: "59296528"
 
      `ReplaceFlowDirectionMapping` Метод заменяет сопоставление по умолчанию для <xref:System.Windows.FrameworkElement.FlowDirection%2A> свойство.
 
-     `OnFlowDirectionChange` Метод преобразует <xref:System.Windows.FrameworkElement.FlowDirection%2A> свойства [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A> свойство.
+     `OnFlowDirectionChange` Метод преобразует <xref:System.Windows.FrameworkElement.FlowDirection%2A> свойства [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Control.RightToLeft%2A> свойство.
 
      `cb_CheckedChanged` Метод обрабатывает <xref:System.Windows.Forms.CheckBox.CheckedChanged> событий на <xref:System.Windows.Forms.CheckBox> элемента управления. Он назначает <xref:System.Windows.FrameworkElement.FlowDirection%2A> значение в зависимости от значения <xref:System.Windows.Forms.CheckBox.CheckState%2A> свойство
 
@@ -145,7 +145,7 @@ ms.locfileid: "59296528"
 
      `WindowLoaded` Метод обрабатывает <xref:System.Windows.FrameworkElement.Loaded> событий и выполнения следующей инициализации.
 
-    -   Создает [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox> элемента управления.
+    -   Создает [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> элемента управления.
 
     -   Вызывает методы, ранее определенные в руководстве, для настройки сопоставлений свойств.
 
@@ -160,4 +160,4 @@ ms.locfileid: "59296528"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Сопоставление свойств Windows Forms и WPF](windows-forms-and-wpf-property-mapping.md)
 - [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Пошаговое руководство. Размещение элементов управления Windows Forms в WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Пошаговое руководство: Размещение элемента управления Windows Forms в WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)

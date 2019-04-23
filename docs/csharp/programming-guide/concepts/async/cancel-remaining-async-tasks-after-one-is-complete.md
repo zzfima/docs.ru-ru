@@ -2,12 +2,12 @@
 title: Отмена оставшихся асинхронных задач после завершения одной из них (C#)
 ms.date: 07/20/2015
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-ms.openlocfilehash: c4998733fbfe4cdc6730d2433828f5ea996ff6a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baf757f7f7a71528dd5dc36b0f807eb452577a38
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529428"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59298673"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Отмена оставшихся асинхронных задач после завершения одной из них (C#)
 Используя метод <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> вместе с <xref:System.Threading.CancellationToken>, можно отменить все оставшиеся задачи после выполнения отдельной задачи. Метод `WhenAny` принимает аргумент, который представляет собой коллекцию задач. Метод запускает все задачи и возвращает одну задачу. Одна задача считается завершенной, когда завершена любая задача в коллекции.  
@@ -20,19 +20,19 @@ ms.locfileid: "54529428"
 ## <a name="downloading-the-example"></a>Загрузка примера  
  Скачать полный проект Windows Presentation Foundation (WPF) можно со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea). Затем выполните следующие шаги.  
   
-1.  Распакуйте загруженный файл, а затем запустите Visual Studio.  
+1. Распакуйте загруженный файл, а затем запустите Visual Studio.  
   
-2.  В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.  
+2. В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.  
   
-3.  В диалоговом окне **Открытие проекта** откройте папку с примером кода, который вы распаковали, а затем откройте файл решения (SLN) для AsyncFineTuningCS.  
+3. В диалоговом окне **Открытие проекта** откройте папку с примером кода, который вы распаковали, а затем откройте файл решения (SLN) для AsyncFineTuningCS.  
   
-4.  В **обозревателе решений** откройте контекстное меню проекта **CancelAfterOneTask** и выберите команду **Назначить запускаемым проектом**.  
+4. В **обозревателе решений** откройте контекстное меню проекта **CancelAfterOneTask** и выберите команду **Назначить запускаемым проектом**.  
   
-5.  Нажмите клавишу F5, чтобы запустить проект.  
+5. Нажмите клавишу F5, чтобы запустить проект.  
   
      Нажмите сочетание клавиш CTRL+F5, чтобы запустить проект без отладки.  
   
-6.  Запустите программу несколько раз, чтобы убедиться, что разные задачи завершаются первыми.  
+6. Запустите программу несколько раз, чтобы убедиться, что разные задачи завершаются первыми.  
   
  Если вы не хотите скачивать проект, можете просмотреть файл MainWindow.xaml.cs в конце этого раздела.  
   
@@ -61,9 +61,9 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
  Внесите следующие изменения в `AccessTheWebAsync`. Звездочками отмечены изменения в файле кода.  
   
-1.  Закомментируйте или удалите цикл.  
+1. Закомментируйте или удалите цикл.  
   
-2.  Создайте запрос, который во время выполнения создает коллекцию общих заданий. Каждый вызов `ProcessURLAsync` возвращает <xref:System.Threading.Tasks.Task%601>, где `TResult` — это целое число.  
+2. Создайте запрос, который во время выполнения создает коллекцию общих заданий. Каждый вызов `ProcessURLAsync` возвращает <xref:System.Threading.Tasks.Task%601>, где `TResult` — это целое число.  
   
     ```csharp  
     // ***Create a query that, when executed, returns a collection of tasks.  
@@ -71,14 +71,14 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
         from url in urlList select ProcessURLAsync(url, client, ct);  
     ```  
   
-3.  Вызовите `ToArray` для выполнения запроса и запуска задач. Применение метода `WhenAny` в следующем шаге будет выполнять запрос и запускать задачи без использования `ToArray`, однако этот режим может быть недоступен для других методов. Наиболее безопасным способом является явное принудительное выполнения запроса.  
+3. Вызовите `ToArray` для выполнения запроса и запуска задач. Применение метода `WhenAny` в следующем шаге будет выполнять запрос и запускать задачи без использования `ToArray`, однако этот режим может быть недоступен для других методов. Наиболее безопасным способом является явное принудительное выполнения запроса.  
   
     ```csharp  
     // ***Use ToArray to execute the query and start the download tasks.   
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  Вызовите `WhenAny` для коллекции задач. `WhenAny` возвращает `Task(Of Task(Of Integer))` или `Task<Task<int>>`.  То есть `WhenAny` возвращает задачу, которая вычисляется как одна задача `Task(Of Integer)` или `Task<int>`, если она ожидается. Одна задача — это первая завершившаяся задача в коллекции. Задача, которая завершается первой, назначается `firstFinishedTask`. `firstFinishedTask` имеет тип <xref:System.Threading.Tasks.Task%601>, где `TResult` является целым числом, поскольку это возвращаемый тип `ProcessURLAsync`.  
+4. Вызовите `WhenAny` для коллекции задач. `WhenAny` возвращает `Task(Of Task(Of Integer))` или `Task<Task<int>>`.  То есть `WhenAny` возвращает задачу, которая вычисляется как одна задача `Task(Of Integer)` или `Task<int>`, если она ожидается. Одна задача — это первая завершившаяся задача в коллекции. Задача, которая завершается первой, назначается `firstFinishedTask`. `firstFinishedTask` имеет тип <xref:System.Threading.Tasks.Task%601>, где `TResult` является целым числом, поскольку это возвращаемый тип `ProcessURLAsync`.  
   
     ```csharp  
     // ***Call WhenAny and then await the result. The task that finishes   
@@ -86,14 +86,14 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
     Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);  
     ```  
   
-5.  В этом примере нас интересует только та задача, которая завершается первой. Таким образом, используйте <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> для отмены оставшихся задач.  
+5. В этом примере нас интересует только та задача, которая завершается первой. Таким образом, используйте <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> для отмены оставшихся задач.  
   
     ```csharp  
     // ***Cancel the rest of the downloads. You just want the first one.  
     cts.Cancel();  
     ```  
   
-6.  Наконец, мы ожидаем `firstFinishedTask` для получения длины скачанного содержимого.  
+6. Наконец, мы ожидаем `firstFinishedTask` для получения длины скачанного содержимого.  
   
     ```csharp  
     var length = await firstFinishedTask;  

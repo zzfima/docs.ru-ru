@@ -10,10 +10,10 @@ helpviewer_keywords:
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
 ms.openlocfilehash: 39b3ad9bebfc56002f77ad6e9026a4446c95455b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298335"
 ---
 # <a name="brush-transformation-overview"></a>Общие сведения о преобразованиях объекта Brush
@@ -104,5 +104,5 @@ ms.locfileid: "59298335"
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Brush>
 - [Общие сведения о закраске сплошным цветом и градиентом](painting-with-solid-colors-and-gradients-overview.md)
-- [Рисование с помощью объектов Image, Drawing и Visual](painting-with-images-drawings-and-visuals.md)
+- [Заполнение с использованием изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md)
 - [Общие сведения о классах Transform](transforms-overview.md)

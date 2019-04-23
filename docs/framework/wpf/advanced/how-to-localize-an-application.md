@@ -10,10 +10,10 @@ helpviewer_keywords:
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
 ms.openlocfilehash: d08f991204b2d74899cbd1aee82c0cc23e175dd4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298322"
 ---
 # <a name="how-to-localize-an-application"></a>Практическое руководство. Локализация приложения
@@ -118,7 +118,7 @@ ms.locfileid: "59298322"
   
 2. Чтобы выполнить анализ файла вспомогательной сборки и сохранить результат в виде CSV-файла, используйте следующую команду:  
   
-     **/Parse LocBaml.exe HelloApp.resources.dll /out:Hello.csv**  
+     **LocBaml.exe /parse HelloApp.resources.dll /out:Hello.csv**  
   
     > [!NOTE]
     >  Если входной файл HelloApp.resources.dll не находится в том же каталоге, что и LocBaml.exe, переместите один из файлов таким образом, чтобы оба файла были в одном каталоге.  
@@ -180,7 +180,7 @@ ms.locfileid: "59298322"
   
 4. Для перевода на другой язык используйте язык, на который вы переводите. В следующем примере показано, как переводить на канадский французский.  
   
-     **LocBaml.exe / создать HelloApp.resources.dll /trans:Hellofr-CA.csv /out:c: \ /cul:fr-ЦС**  
+     **LocBaml.exe /generate HelloApp.resources.dll /trans:Hellofr-CA.csv /out:c:\ /cul:fr-CA**  
   
 5. В той же основной сборке приложения создайте новую папку для выбранного языка и региональных параметров, в которой будет размещена новая вспомогательная сборка. Для канадского французского папку можно назвать fr-CA.  
   

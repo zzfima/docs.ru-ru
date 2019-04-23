@@ -13,10 +13,10 @@ ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298582"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug
@@ -97,7 +97,7 @@ ms.locfileid: "59298582"
   
 ## <a name="see-also"></a>См. также
 
-- [Трассировка и оборудование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
 - [Практическое руководство. Создание, инициализация и настройка переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [Прослушиватели трассировки](../../../docs/framework/debug-trace-profile/trace-listeners.md)

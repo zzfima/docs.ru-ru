@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2c5acf5cad41dba46b9f711ee842200ae86cc9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712578"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59299479"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Пошаговое руководство. Выпуск кода в сценариях частичного доверия
 При порождении отражения для полного или частичного доверия используется одинаковый набор интерфейсов API, но для некоторых функциональных возможностей требуются особые разрешения в коде с частичным доверием. Кроме того, в порождении отражения имеется функциональная возможность, анонимно размещенные динамические методы, которые предназначены для использования при частичном доверии и в прозрачных с точки зрения безопасности сборках.  
@@ -59,12 +59,12 @@ ms.locfileid: "54712578"
   
 ##### <a name="to-create-an-application-domain-with-partial-trust"></a>Создание домена приложения с частичным доверием  
   
-1.  Создайте набор разрешений, которые следует предоставить сборкам в домене изолированного приложения. В этом случае используется набор разрешений зоны Интернета.  
+1. Создайте набор разрешений, которые следует предоставить сборкам в домене изолированного приложения. В этом случае используется набор разрешений зоны Интернета.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#2)]
      [!code-vb[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#2)]  
   
-2.  Создайте объект <xref:System.AppDomainSetup> для инициализации домена приложения с помощью пути к приложению.  
+2. Создайте объект <xref:System.AppDomainSetup> для инициализации домена приложения с помощью пути к приложению.  
   
     > [!IMPORTANT]
     >  Для простоты в этом примере кода используется текущая папка. Для выполнения кода, поступившего из Интернета, используйте отдельную папку для ненадежного кода, как описано в разделе [Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
@@ -72,7 +72,7 @@ ms.locfileid: "54712578"
      [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
      [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]  
   
-3.  Создайте домен приложения, указав сведения о настройке домена приложения и набор правил для всех сборок, выполняющихся в домене приложения.  
+3. Создайте домен приложения, указав сведения о настройке домена приложения и набор правил для всех сборок, выполняющихся в домене приложения.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
@@ -89,7 +89,7 @@ ms.locfileid: "54712578"
   
 ##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>Создание домена приложения с частичным доверием и RMA  
   
-1.  Создайте объект <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA) и используйте метод <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> для добавления разрешения в набор правил.  
+1. Создайте объект <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA) и используйте метод <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> для добавления разрешения в набор правил.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#7)]
      [!code-vb[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#7)]  
@@ -99,7 +99,7 @@ ms.locfileid: "54712578"
     > [!NOTE]
     >  RMA — это функциональная возможность анонимно размещенных динамических методов. Если обычные динамические методы пропускают проверки видимости, выполняемые JIT-компилятором, порождаемый код требует полного доверия.  
   
-2.  Создайте домен приложения, указав сведения о настройке домена приложения и набор правил.  
+2. Создайте домен приложения, указав сведения о настройке домена приложения и набор правил.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#8)]
      [!code-vb[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#8)]  
@@ -110,24 +110,24 @@ ms.locfileid: "54712578"
   
 #### <a name="to-define-and-execute-a-method-in-an-application-domain"></a>Определение и выполнение метода в домене приложения  
   
-1.  Определите класс, производный от класса <xref:System.MarshalByRefObject>. Это позволит создавать экземпляры класса в других доменах приложений, а также вызывать методы за пределами домена приложения. Класс в этом примере назван `Worker`.  
+1. Определите класс, производный от класса <xref:System.MarshalByRefObject>. Это позволит создавать экземпляры класса в других доменах приложений, а также вызывать методы за пределами домена приложения. Класс в этом примере назван `Worker`.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#10)]
      [!code-vb[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#10)]  
   
-2.  Определите открытый метод, содержащий код, который следует выполнить. В этом примере в коде порождается простой динамический метод, создается делегат для выполнения этого метода и вызывается делегат.  
+2. Определите открытый метод, содержащий код, который следует выполнить. В этом примере в коде порождается простой динамический метод, создается делегат для выполнения этого метода и вызывается делегат.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#11)]
      [!code-vb[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#11)]  
   
-3.  В основной программе получите отображаемое имя сборки. Это имя используется при создании экземпляров класса `Worker` в домене изолированного приложения.  
+3. В основной программе получите отображаемое имя сборки. Это имя используется при создании экземпляров класса `Worker` в домене изолированного приложения.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#14)]
      [!code-vb[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#14)]  
   
-4.  В основной программе создайте домен изолированного приложения, как описано в [первой процедуре](#Setting_up) этого пошагового руководства. Добавлять какие-либо разрешения в набор разрешений `Internet` не нужно, так как метод `SimpleEmitDemo` использует только открытые методы.  
+4. В основной программе создайте домен изолированного приложения, как описано в [первой процедуре](#Setting_up) этого пошагового руководства. Добавлять какие-либо разрешения в набор разрешений `Internet` не нужно, так как метод `SimpleEmitDemo` использует только открытые методы.  
   
-5.  В основной программе создайте экземпляр класса `Worker` в домене изолированного приложения.  
+5. В основной программе создайте экземпляр класса `Worker` в домене изолированного приложения.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#12)]
      [!code-vb[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#12)]  
@@ -137,7 +137,7 @@ ms.locfileid: "54712578"
     > [!NOTE]
     >  При использовании этого кода в Visual Studio необходимо изменить имя класса для включения пространства имен. По умолчанию пространство имен носит имя проекта. Например, если проект называется PartialTrust, имя класса должно быть PartialTrust.Worker.  
   
-6.  Добавьте код для вызова метода `SimpleEmitDemo`. Вызов маршалируется за пределы домена приложения, а код выполняется в изолированном домене приложения.  
+6. Добавьте код для вызова метода `SimpleEmitDemo`. Вызов маршалируется за пределы домена приложения, а код выполняется в изолированном домене приложения.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#13)]
      [!code-vb[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#13)]  
@@ -212,5 +212,6 @@ ms.locfileid: "54712578"
 -   При сборке этого примера кода в Visual Studio необходимо изменить имя класса при передаче его в метод <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>, включив в него пространство имен. По умолчанию пространство имен носит имя проекта. Например, если проект называется PartialTrust, имя класса должно быть PartialTrust.Worker.  
   
 ## <a name="see-also"></a>См. также
+
 - [Вопросы безопасности в порождении отражения](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
 - [Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
