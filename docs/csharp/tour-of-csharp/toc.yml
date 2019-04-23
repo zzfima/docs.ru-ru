@@ -1,32 +1,25 @@
-items:
-- name: Обзор языка C#
+- name: 'Обзор языка C#'
   href: index.md
   items:
-  - name: Структура программы
-    href: program-structure.md
-  - name: Типы и переменные
-    href: types-and-variables.md
-  - name: Выражения
-    href: expressions.md
-  - name: Операторы
-    href: statements.md
-  - name: Классы и объекты
-    href: classes-and-objects.md
-  - name: Структуры
-    href: structs.md
-  - name: Массивы
-    href: arrays.md
-  - name: интерфейсов,
-    href: interfaces.md
-  - name: перечислениям;
-    href: enums.md
-  - name: Делегаты
-    href: delegates.md
-  - name: Атрибуты
-    href: attributes.md
-ms.openlocfilehash: 9f1265c48bea8f76bd352eb95605187b1385cae5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470048"
+    - name: Структура программы
+      href: program-structure.md
+    - name: Типы и переменные
+      href: types-and-variables.md
+    - name: Выражения
+      href: expressions.md
+    - name: Операторы
+      href: statements.md
+    - name: Классы и объекты
+      href: classes-and-objects.md
+    - name: Структуры
+      href: structs.md
+    - name: Массивы
+      href: arrays.md
+    - name: 'интерфейсов,'
+      href: interfaces.md
+    - name: перечислениям;
+      href: enums.md
+    - name: Делегаты
+      href: delegates.md
+    - name: Атрибуты
+      href: attributes.md

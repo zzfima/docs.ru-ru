@@ -1,18 +1,11 @@
-items:
 - name: Начало работы
   href: index.md
   items:
-  - name: Обзор
-    href: overview.md
-  - name: .NET Framework и внештатные выпуски
-    href: the-net-framework-and-out-of-band-releases.md
-  - name: Ядро .NET и открытый исходный код
-    href: net-core-and-open-source.md
-  - name: Требования к системе
-    href: system-requirements.md
-ms.openlocfilehash: 97d711d4e038084e307fbdf2f84438ddd824ca14
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469696"
+    - name: Обзор
+      href: overview.md
+    - name: .NET Framework и внештатные выпуски
+      href: the-net-framework-and-out-of-band-releases.md
+    - name: Ядро .NET и открытый исходный код
+      href: net-core-and-open-source.md
+    - name: Требования к системе
+      href: system-requirements.md

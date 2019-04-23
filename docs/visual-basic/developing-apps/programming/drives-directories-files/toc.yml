@@ -1,87 +1,80 @@
-items:
-- name: Операции с дисками, каталогами и файлами
+- name: 'Операции с дисками, каталогами и файлами'
   href: processing.md
   items:
-  - name: Доступ к файлам с помощью Visual Basic
-    href: file-access.md
-    items:
-    - name: Чтение из файлов
-      href: reading-from-files.md
+    - name: Доступ к файлам с помощью Visual Basic
+      href: file-access.md
       items:
-      - name: Практическое руководство. Чтение из текстовых файлов
-        href: how-to-read-from-text-files.md
-      - name: Практическое руководство. Чтение из текстовых файлов с разделителями-запятыми
-        href: how-to-read-from-comma-delimited-text-files.md
-      - name: Практическое руководство. Чтение из текстовых файлов с полями фиксированного размера
-        href: how-to-read-from-fixed-width-text-files.md
-      - name: Практическое руководство. Чтение из текстовых файлов различных форматов
-        href: how-to-read-from-text-files-with-multiple-formats.md
-      - name: Практическое руководство. Чтение из двоичных файлов
-        href: how-to-read-from-binary-files.md
-      - name: Практическое руководство. Чтение текста из файлов с помощью StreamReader
-        href: how-to-read-text-from-files-with-a-streamreader.md
-    - name: Запись в файлы
-      href: writing-to-files.md
+        - name: Чтение из файлов
+          href: reading-from-files.md
+          items:
+            - name: Как выполнить Чтение из текстовых файлов
+              href: how-to-read-from-text-files.md
+            - name: Как выполнить Чтение из текстовых файлов с разделителями-запятыми
+              href: how-to-read-from-comma-delimited-text-files.md
+            - name: Как выполнить Чтение из текстовых файлов с полями фиксированного размера
+              href: how-to-read-from-fixed-width-text-files.md
+            - name: Как выполнить Чтение из текстовых файлов различных форматов
+              href: how-to-read-from-text-files-with-multiple-formats.md
+            - name: Как выполнить Чтение из двоичных файлов
+              href: how-to-read-from-binary-files.md
+            - name: Как выполнить Чтение текста из файлов с помощью StreamReader
+              href: how-to-read-text-from-files-with-a-streamreader.md
+        - name: Запись в файлы
+          href: writing-to-files.md
+          items:
+            - name: Как выполнить Запись текста в файлы
+              href: how-to-write-text-to-files.md
+            - name: Как выполнить Дозапись в текстовый файл
+              href: how-to-append-to-text-files.md
+            - name: Как выполнить Запись в двоичные файлы
+              href: how-to-write-to-binary-files.md
+            - name: Как выполнить Запись текста в файлы в каталоге "Мои документы"
+              href: how-to-write-text-to-files-in-the-my-documents-directory.md
+            - name: Как выполнить Запись текста в файлы с помощью StreamWriter
+              href: how-to-write-text-to-files-with-a-streamwriter.md
+        - name: 'Создание, удаление и перемещение файлов и каталогов'
+          href: creating-deleting-and-moving-files-and-directories.md
+          items:
+            - name: Как выполнить Копирование файлов с определенным шаблоном в каталог
+              href: how-to-copy-files-with-a-specific-pattern-to-a-directory.md
+            - name: Как выполнить Создание копии файла в том же каталоге
+              href: how-to-create-a-copy-of-a-file-in-the-same-directory.md
+            - name: Как выполнить Создание копии файла в другом каталоге
+              href: how-to-create-a-copy-of-a-file-in-a-different-directory.md
+            - name: Как выполнить Создание файла
+              href: how-to-create-a-file.md
+            - name: Как выполнить Удаление файла
+              href: how-to-delete-a-file.md
+            - name: Как выполнить Поиск файлов по конкретному шаблону
+              href: how-to-find-files-with-a-specific-pattern.md
+            - name: Как выполнить Перемещение файла
+              href: how-to-move-a-file.md
+            - name: Как выполнить Переименование файла
+              href: how-to-rename-a-file.md
+            - name: Как выполнить Копирование каталога в другой каталог
+              href: how-to-copy-a-directory-to-another-directory.md
+            - name: Как выполнить Создание каталога
+              href: how-to-create-a-directory.md
+            - name: Как выполнить Поиск подкаталогов по заданному шаблону
+              href: how-to-find-subdirectories-with-a-specific-pattern.md
+            - name: Как выполнить Получение коллекции содержащихся в каталоге файлов
+              href: how-to-get-the-collection-of-files-in-a-directory.md
+            - name: Как выполнить Извлечение содержимого каталога "Мои документы"
+              href: how-to-retrieve-the-contents-of-the-my-documents-directory.md
+            - name: Как выполнить Анализ путей к файлам
+              href: how-to-parse-file-paths.md
+        - name: Анализ текстовых файлов с помощью объекта TextFieldParser
+          href: parsing-text-files-with-the-textfieldparser-object.md
+        - name: Кодировки файлов
+          href: file-encodings.md
+        - name: 'Устранение неполадок: Чтение из текстовых файлов и запись в такие файлы'
+          href: troubleshooting-reading-from-and-writing-to-text-files.md
+    - name: Основы файлового ввода-вывода и файловой системы в .NET Framework
+      href: basics-of-net-framework-file-io-and-the-file-system.md
       items:
-      - name: Практическое руководство. Запись текста в файлы
-        href: how-to-write-text-to-files.md
-      - name: Практическое руководство. Дозапись в текстовый файл
-        href: how-to-append-to-text-files.md
-      - name: Практическое руководство. Запись в двоичные файлы
-        href: how-to-write-to-binary-files.md
-      - name: Практическое руководство. Запись текста в файлы в каталоге "Мои документы"
-        href: how-to-write-text-to-files-in-the-my-documents-directory.md
-      - name: Практическое руководство. Запись текста в файлы с помощью StreamWriter
-        href: how-to-write-text-to-files-with-a-streamwriter.md
-    - name: Создание, удаление и перемещение файлов и каталогов
-      href: creating-deleting-and-moving-files-and-directories.md
-      items:
-      - name: Практическое руководство. Копирование файлов с определенным шаблоном в каталог
-        href: how-to-copy-files-with-a-specific-pattern-to-a-directory.md
-      - name: Практическое руководство. Создание копии файла в том же каталоге
-        href: how-to-create-a-copy-of-a-file-in-the-same-directory.md
-      - name: Практическое руководство. Создание копии файла в другом каталоге
-        href: how-to-create-a-copy-of-a-file-in-a-different-directory.md
-      - name: Практическое руководство. Создание файла
-        href: how-to-create-a-file.md
-      - name: Практическое руководство. Удаление файла
-        href: how-to-delete-a-file.md
-      - name: Практическое руководство. Поиск файлов по конкретному шаблону
-        href: how-to-find-files-with-a-specific-pattern.md
-      - name: Практическое руководство. Перемещение файла
-        href: how-to-move-a-file.md
-      - name: Практическое руководство. Переименование файла
-        href: how-to-rename-a-file.md
-      - name: Практическое руководство. Копирование каталога в другой каталог
-        href: how-to-copy-a-directory-to-another-directory.md
-      - name: Практическое руководство. Создание каталога
-        href: how-to-create-a-directory.md
-      - name: Практическое руководство. Поиск подкаталогов по заданному шаблону
-        href: how-to-find-subdirectories-with-a-specific-pattern.md
-      - name: Практическое руководство. Получение коллекции содержащихся в каталоге файлов
-        href: how-to-get-the-collection-of-files-in-a-directory.md
-      - name: Практическое руководство. Извлечение содержимого каталога "Мои документы"
-        href: how-to-retrieve-the-contents-of-the-my-documents-directory.md
-      - name: Практическое руководство. Анализ путей к файлам
-        href: how-to-parse-file-paths.md
-    - name: Анализ текстовых файлов с помощью объекта TextFieldParser
-      href: parsing-text-files-with-the-textfieldparser-object.md
-    - name: Кодировки файлов
-      href: file-encodings.md
-    - name: 'Устранение неполадок: Чтение из текстовых файлов и запись в такие файлы'
-      href: troubleshooting-reading-from-and-writing-to-text-files.md
-  - name: Основы файлового ввода-вывода и файловой системы в .NET Framework
-    href: basics-of-net-framework-file-io-and-the-file-system.md
-    items:
-    - name: Классы, используемые при вводе-выводе файлов в .NET Framework, и файловая система
-      href: classes-used-in-net-framework-file-io-and-the-file-system.md
-  - name: Пошаговое руководство. Управление файлами с помощью методов .NET Framework
-    href: walkthrough-manipulating-files-by-using-net-framework-methods.md
-  - name: Пошаговое руководство. Операции с файлами и каталогами
-    href: walkthrough-manipulating-files-and-directories.md
-ms.openlocfilehash: 04d5b3252fa087fcbba7d29662e7ad1e3fb24d2e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470728"
+        - name: 'Классы, используемые при вводе-выводе файлов в .NET Framework, и файловая система'
+          href: classes-used-in-net-framework-file-io-and-the-file-system.md
+    - name: Пошаговое руководство. Управление файлами с помощью методов .NET Framework
+      href: walkthrough-manipulating-files-by-using-net-framework-methods.md
+    - name: Пошаговое руководство. Операции с файлами и каталогами
+      href: walkthrough-manipulating-files-and-directories.md
