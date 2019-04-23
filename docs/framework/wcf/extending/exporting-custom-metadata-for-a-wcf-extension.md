@@ -3,10 +3,10 @@ title: Экспорт пользовательских метаданных дл
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
 ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334514"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Экспорт пользовательских метаданных для расширения WCF
@@ -43,6 +43,6 @@ ms.locfileid: "59334514"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Экспорт пользовательской информации WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Практическое руководство. Экспорт проверочных утверждений пользовательской политики](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)
+- [Практическое руководство. Экспорт пользовательского языка WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Практическое руководство. Экспорт утверждений пользовательской политики](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)
 - [Импорт пользовательских метаданных для расширения WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)
