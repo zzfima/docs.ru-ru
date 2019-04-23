@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a482c7a06efe888408206f2de569e0a8739b85b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121515"
 ---
-# <a name="imetadataimportgettypedefprops-method"></a><span data-ttu-id="27612-102">Метод IMetaDataImport::GetTypeDefProps</span><span class="sxs-lookup"><span data-stu-id="27612-102">IMetaDataImport::GetTypeDefProps Method</span></span>
-<span data-ttu-id="27612-103">Возвращает сведения о метаданных для <xref:System.Type> представленного указанным токеном TypeDef.</span><span class="sxs-lookup"><span data-stu-id="27612-103">Returns metadata information for the <xref:System.Type> represented by the specified TypeDef token.</span></span>  
+# <a name="imetadataimportgettypedefprops-method"></a><span data-ttu-id="ce3f0-102">Метод IMetaDataImport::GetTypeDefProps</span><span class="sxs-lookup"><span data-stu-id="ce3f0-102">IMetaDataImport::GetTypeDefProps Method</span></span>
+<span data-ttu-id="ce3f0-103">Возвращает сведения о метаданных для <xref:System.Type> представленного указанным токеном TypeDef.</span><span class="sxs-lookup"><span data-stu-id="ce3f0-103">Returns metadata information for the <xref:System.Type> represented by the specified TypeDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="27612-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="27612-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ce3f0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ce3f0-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeDefProps (  
@@ -40,35 +40,35 @@ HRESULT GetTypeDefProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="27612-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="27612-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ce3f0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ce3f0-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="27612-106">[in] Токен TypeDef, который представляет метаданные для возвращаемого типа.</span><span class="sxs-lookup"><span data-stu-id="27612-106">[in] The TypeDef token that represents the type to return metadata for.</span></span>  
+ <span data-ttu-id="ce3f0-106">[in] Токен TypeDef, который представляет метаданные для возвращаемого типа.</span><span class="sxs-lookup"><span data-stu-id="ce3f0-106">[in] The TypeDef token that represents the type to return metadata for.</span></span>  
   
  `szTypeDef`  
- <span data-ttu-id="27612-107">[out] Буфер, содержащий имя типа.</span><span class="sxs-lookup"><span data-stu-id="27612-107">[out] A buffer containing the type name.</span></span>  
+ <span data-ttu-id="ce3f0-107">[out] Буфер, содержащий имя типа.</span><span class="sxs-lookup"><span data-stu-id="ce3f0-107">[out] A buffer containing the type name.</span></span>  
   
  `cchTypeDef`  
- <span data-ttu-id="27612-108">[in] Размер в расширенных символах `szTypeDef`.</span><span class="sxs-lookup"><span data-stu-id="27612-108">[in] The size in wide characters of `szTypeDef`.</span></span>  
+ <span data-ttu-id="ce3f0-108">[in] Размер в расширенных символах `szTypeDef`.</span><span class="sxs-lookup"><span data-stu-id="ce3f0-108">[in] The size in wide characters of `szTypeDef`.</span></span>  
   
  `pchTypeDef`  
- <span data-ttu-id="27612-109">[out] Число расширенных символов, возвращаемых в `szTypeDef`.</span><span class="sxs-lookup"><span data-stu-id="27612-109">[out] The number of wide characters returned in `szTypeDef`.</span></span>  
+ <span data-ttu-id="ce3f0-109">[out] Число расширенных символов, возвращаемых в `szTypeDef`.</span><span class="sxs-lookup"><span data-stu-id="ce3f0-109">[out] The number of wide characters returned in `szTypeDef`.</span></span>  
   
  `pdwTypeDefFlags`  
- <span data-ttu-id="27612-110">[out] Указатель на всех флагов изменить определение типа.</span><span class="sxs-lookup"><span data-stu-id="27612-110">[out] A pointer to any flags that modify the type definition.</span></span> <span data-ttu-id="27612-111">Это значение является битовой [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) перечисления.</span><span class="sxs-lookup"><span data-stu-id="27612-111">This value is a bitmask from the [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="ce3f0-110">[out] Указатель на всех флагов изменить определение типа.</span><span class="sxs-lookup"><span data-stu-id="ce3f0-110">[out] A pointer to any flags that modify the type definition.</span></span> <span data-ttu-id="ce3f0-111">Это значение является битовой [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) перечисления.</span><span class="sxs-lookup"><span data-stu-id="ce3f0-111">This value is a bitmask from the [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration.</span></span>  
   
  `ptkExtends`  
- <span data-ttu-id="27612-112">[out] Определение типа или TypeRef токен метаданных, представляющий базовый тип запрошенного типа.</span><span class="sxs-lookup"><span data-stu-id="27612-112">[out] A TypeDef or TypeRef metadata token that represents the base type of the requested type.</span></span>  
+ <span data-ttu-id="ce3f0-112">[out] Определение типа или TypeRef токен метаданных, представляющий базовый тип запрошенного типа.</span><span class="sxs-lookup"><span data-stu-id="ce3f0-112">[out] A TypeDef or TypeRef metadata token that represents the base type of the requested type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="27612-113">Требования</span><span class="sxs-lookup"><span data-stu-id="27612-113">Requirements</span></span>  
- <span data-ttu-id="27612-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="27612-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ce3f0-113">Требования</span><span class="sxs-lookup"><span data-stu-id="ce3f0-113">Requirements</span></span>  
+ <span data-ttu-id="ce3f0-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ce3f0-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="27612-115">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="27612-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ce3f0-115">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ce3f0-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="27612-116">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="27612-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ce3f0-116">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ce3f0-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="27612-117">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="27612-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="ce3f0-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ce3f0-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="27612-118">См. также</span><span class="sxs-lookup"><span data-stu-id="27612-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ce3f0-118">См. также</span><span class="sxs-lookup"><span data-stu-id="ce3f0-118">See also</span></span>
 
-- [<span data-ttu-id="27612-119">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="27612-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="27612-120">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="27612-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="ce3f0-119">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="ce3f0-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="ce3f0-120">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="ce3f0-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

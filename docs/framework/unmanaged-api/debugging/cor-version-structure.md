@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 00e58d83c19c3cb6a2e1eb38942500d7f5dc5cf9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118928"
 ---
-# <a name="corversion-structure"></a><span data-ttu-id="e7954-102">Структура COR_VERSION</span><span class="sxs-lookup"><span data-stu-id="e7954-102">COR_VERSION Structure</span></span>
-<span data-ttu-id="e7954-103">Содержит стандартный номер версии среды CLR, состоящий из четырех частей.</span><span class="sxs-lookup"><span data-stu-id="e7954-103">Stores the standard four-part version number of the common language runtime.</span></span>  
+# <a name="corversion-structure"></a><span data-ttu-id="b16b8-102">Структура COR_VERSION</span><span class="sxs-lookup"><span data-stu-id="b16b8-102">COR_VERSION Structure</span></span>
+<span data-ttu-id="b16b8-103">Содержит стандартный номер версии среды CLR, состоящий из четырех частей.</span><span class="sxs-lookup"><span data-stu-id="b16b8-103">Stores the standard four-part version number of the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e7954-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e7954-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b16b8-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b16b8-104">Syntax</span></span>  
   
 ```  
 typedef struct _COR_VERSION {  
@@ -37,28 +37,28 @@ typedef struct _COR_VERSION {
 } COR_VERSION;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e7954-105">Участники</span><span class="sxs-lookup"><span data-stu-id="e7954-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b16b8-105">Участники</span><span class="sxs-lookup"><span data-stu-id="b16b8-105">Members</span></span>  
   
-|<span data-ttu-id="e7954-106">Член</span><span class="sxs-lookup"><span data-stu-id="e7954-106">Member</span></span>|<span data-ttu-id="e7954-107">Описание</span><span class="sxs-lookup"><span data-stu-id="e7954-107">Description</span></span>|  
+|<span data-ttu-id="b16b8-106">Член</span><span class="sxs-lookup"><span data-stu-id="b16b8-106">Member</span></span>|<span data-ttu-id="b16b8-107">Описание</span><span class="sxs-lookup"><span data-stu-id="b16b8-107">Description</span></span>|  
 |------------|-----------------|  
-|`dwMajor`|<span data-ttu-id="e7954-108">Основной номер версии.</span><span class="sxs-lookup"><span data-stu-id="e7954-108">The major version number.</span></span>|  
-|`dwMinor`|<span data-ttu-id="e7954-109">Дополнительный номер версии.</span><span class="sxs-lookup"><span data-stu-id="e7954-109">The minor version number.</span></span>|  
-|`dwBuild`|<span data-ttu-id="e7954-110">Номер сборки.</span><span class="sxs-lookup"><span data-stu-id="e7954-110">The build number.</span></span>|  
-|`dwSubBuild`|<span data-ttu-id="e7954-111">Номер вложенного построения.</span><span class="sxs-lookup"><span data-stu-id="e7954-111">The sub-build number.</span></span>|  
+|`dwMajor`|<span data-ttu-id="b16b8-108">Основной номер версии.</span><span class="sxs-lookup"><span data-stu-id="b16b8-108">The major version number.</span></span>|  
+|`dwMinor`|<span data-ttu-id="b16b8-109">Дополнительный номер версии.</span><span class="sxs-lookup"><span data-stu-id="b16b8-109">The minor version number.</span></span>|  
+|`dwBuild`|<span data-ttu-id="b16b8-110">Номер сборки.</span><span class="sxs-lookup"><span data-stu-id="b16b8-110">The build number.</span></span>|  
+|`dwSubBuild`|<span data-ttu-id="b16b8-111">Номер вложенного построения.</span><span class="sxs-lookup"><span data-stu-id="b16b8-111">The sub-build number.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e7954-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="e7954-112">Remarks</span></span>  
- <span data-ttu-id="e7954-113">Если номер версии равен 1.0.3705.288, 1 — номер основной версии, 0 — это дополнительный номер версии, 3705 — номер сборки и 288 — номер вложенного построения.</span><span class="sxs-lookup"><span data-stu-id="e7954-113">If the version number is 1.0.3705.288, 1 is the major version number, 0 is the minor version number, 3705 is the build number, and 288 is the sub-build number.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b16b8-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="b16b8-112">Remarks</span></span>  
+ <span data-ttu-id="b16b8-113">Если номер версии равен 1.0.3705.288, 1 — номер основной версии, 0 — это дополнительный номер версии, 3705 — номер сборки и 288 — номер вложенного построения.</span><span class="sxs-lookup"><span data-stu-id="b16b8-113">If the version number is 1.0.3705.288, 1 is the major version number, 0 is the minor version number, 3705 is the build number, and 288 is the sub-build number.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e7954-114">Требования</span><span class="sxs-lookup"><span data-stu-id="e7954-114">Requirements</span></span>  
- <span data-ttu-id="e7954-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e7954-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b16b8-114">Требования</span><span class="sxs-lookup"><span data-stu-id="b16b8-114">Requirements</span></span>  
+ <span data-ttu-id="b16b8-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b16b8-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e7954-116">**Заголовок.** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="e7954-116">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="b16b8-116">**Заголовок.** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="b16b8-116">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="e7954-117">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e7954-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b16b8-117">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b16b8-117">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="e7954-118">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="e7954-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="b16b8-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b16b8-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e7954-119">См. также</span><span class="sxs-lookup"><span data-stu-id="e7954-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b16b8-119">См. также</span><span class="sxs-lookup"><span data-stu-id="b16b8-119">See also</span></span>
 
-- [<span data-ttu-id="e7954-120">Структуры отладки</span><span class="sxs-lookup"><span data-stu-id="e7954-120">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="e7954-121">Отладка</span><span class="sxs-lookup"><span data-stu-id="e7954-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="b16b8-120">Структуры отладки</span><span class="sxs-lookup"><span data-stu-id="b16b8-120">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="b16b8-121">Отладка</span><span class="sxs-lookup"><span data-stu-id="b16b8-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

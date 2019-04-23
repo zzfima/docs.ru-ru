@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bc82c506cf7e223e672a62ca74b215cac870e50
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59123848"
 ---
-# <a name="icordebugenumerateprocesses-method"></a><span data-ttu-id="40fff-102">Метод ICorDebug::EnumerateProcesses</span><span class="sxs-lookup"><span data-stu-id="40fff-102">ICorDebug::EnumerateProcesses Method</span></span>
-<span data-ttu-id="40fff-103">Получает перечислитель для отлаживаемых процессов.</span><span class="sxs-lookup"><span data-stu-id="40fff-103">Gets an enumerator for the processes that are being debugged.</span></span>  
+# <a name="icordebugenumerateprocesses-method"></a><span data-ttu-id="e623e-102">Метод ICorDebug::EnumerateProcesses</span><span class="sxs-lookup"><span data-stu-id="e623e-102">ICorDebug::EnumerateProcesses Method</span></span>
+<span data-ttu-id="e623e-103">Получает перечислитель для отлаживаемых процессов.</span><span class="sxs-lookup"><span data-stu-id="e623e-103">Gets an enumerator for the processes that are being debugged.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="40fff-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="40fff-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e623e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e623e-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateProcesses (  
@@ -35,19 +35,19 @@ HRESULT EnumerateProcesses (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="40fff-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="40fff-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e623e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e623e-105">Parameters</span></span>  
  `ppProcess`  
- <span data-ttu-id="40fff-106">Указатель на адрес объекта ICorDebugProcessEnum, который является перечислителем для отлаживаемых процессов.</span><span class="sxs-lookup"><span data-stu-id="40fff-106">A pointer to the address of an ICorDebugProcessEnum object that is the enumerator for the processes being debugged.</span></span>  
+ <span data-ttu-id="e623e-106">Указатель на адрес объекта ICorDebugProcessEnum, который является перечислителем для отлаживаемых процессов.</span><span class="sxs-lookup"><span data-stu-id="e623e-106">A pointer to the address of an ICorDebugProcessEnum object that is the enumerator for the processes being debugged.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="40fff-107">Требования</span><span class="sxs-lookup"><span data-stu-id="40fff-107">Requirements</span></span>  
- <span data-ttu-id="40fff-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="40fff-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e623e-107">Требования</span><span class="sxs-lookup"><span data-stu-id="e623e-107">Requirements</span></span>  
+ <span data-ttu-id="e623e-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e623e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="40fff-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="40fff-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e623e-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e623e-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="40fff-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="40fff-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e623e-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e623e-110">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="40fff-111">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="40fff-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="e623e-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e623e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="40fff-112">См. также</span><span class="sxs-lookup"><span data-stu-id="40fff-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e623e-112">См. также</span><span class="sxs-lookup"><span data-stu-id="e623e-112">See also</span></span>
 
-- [<span data-ttu-id="40fff-113">Интерфейс ICorDebug</span><span class="sxs-lookup"><span data-stu-id="40fff-113">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="e623e-113">Интерфейс ICorDebug</span><span class="sxs-lookup"><span data-stu-id="e623e-113">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
