@@ -3,12 +3,12 @@ title: История языка C# (руководство по C#)
 description: На что был похож этот язык в ранних версиях и во что он превратился сейчас?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 84274f8ddfd8295d5db1e861c790c134ba30c6e2
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126153"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59303366"
 ---
 # <a name="the-history-of-c"></a>История языка C\#
 
@@ -20,11 +20,11 @@ ms.locfileid: "58126153"
 Для использования средств сборки C# требуется последний основной выпуск версии языка по умолчанию. Основные выпуски, описанные в других статьях этого раздела, могут чередоваться с дополнительными выпусками. Чтобы использовать новые возможности доработанного выпуска, [настройте версию языка компилятора](../language-reference/configure-language-version.md), выбрав необходимую. После C# 7.0 было три дополнительных выпуска:
 
 * [C# 7.3](csharp-7-3.md).
-  - Версия C# 7.3 сейчас доступна в [Visual Studio 2017 версии 15.7](https://visualstudio.microsoft.com/vs/whatsnew/) и в [пакете SDK для .NET Core 2.1 (2.1.300 RC1)](../../core/whats-new/index.md).
+  - Версия C# 7.3 появилась в [Visual Studio 2017 версии 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) и [пакете SDK для .NET Core 2.1](../../core/whats-new/dotnet-core-2-1.md).
 * [C# 7.2](csharp-7-2.md).
-  - C# 7.2 сейчас доступен в [Visual Studio 2017 версии 15.5](https://visualstudio.microsoft.com/vs/whatsnew/) и в [пакете SDK для .NET Core 2.0](../../core/whats-new/index.md).
+  - Версия C# 7.2 появилась в [Visual Studio 2017 версии 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) и [пакете SDK для .NET Core 2.0](../../core/whats-new/dotnet-core-2-0.md).
 * [C# 7.1](csharp-7-1.md).
-  - Эти функции были добавлены в [Visual Studio 2017 версии 15.3](https://visualstudio.microsoft.com/vs/whatsnew/) и в [пакет SDK для .NET Core 2.0](../../core/whats-new/index.md).
+  - Версия C# 7.1 появилась в [Visual Studio 2017 версии 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) и [пакете SDK для .NET Core 2.0](../../core/whats-new/dotnet-core-2-0.md).
 
 ## <a name="c-version-10"></a>C# версии 1.0
 

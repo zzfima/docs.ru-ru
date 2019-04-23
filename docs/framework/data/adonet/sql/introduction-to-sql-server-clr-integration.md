@@ -3,10 +3,10 @@ title: Знакомство с интеграцией CLR в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
 ms.openlocfilehash: dc7d19bf361ed5fcda1fd5edf64eeb5e4ce15a71
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336815"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Знакомство с интеграцией CLR в SQL Server
@@ -20,7 +20,7 @@ ms.locfileid: "59336815"
   
  **Электронная документация по SQL Server**  
   
--   [Общие сведения об интеграции со средой CLR](https://go.microsoft.com/fwlink/?LinkId=115242)  
+-   [Обзор интеграции (CLR) среды CLR](https://go.microsoft.com/fwlink/?LinkId=115242)  
   
 ## <a name="enabling-clr-integration"></a>Включение интеграции со средой CLR  
  Возможность интеграции со средой CLR отключена в Microsoft SQL Server по умолчанию, поэтому ее нужно включить, чтобы использовать объекты, использующие интеграцию со средой CLR. Чтобы включить интеграцию со средой CLR с помощью Transact-SQL, воспользуйтесь параметром `clr enabled` хранимой процедуры `sp_configure`, как показано ниже.  
@@ -45,7 +45,7 @@ GO
   
  **Электронная документация по SQL Server**  
   
-1. [Развертывание объектов базы данных CLR](https://go.microsoft.com/fwlink/?LinkId=115232)  
+1. [Развертывание объектов базы данных среды CLR](https://go.microsoft.com/fwlink/?LinkId=115232)  
   
 ## <a name="clr-integration-security"></a>Безопасность интеграции со средой CLR  
  Интеграция модели безопасности Microsoft SQL Server со средой Microsoft .NET Framework CLR позволяет поддерживать доступ для различных типов объектов (как CLR, так и не CLR), выполняемых в SQL Server, а также обеспечивать безопасность этого доступа. Для вызова этих объектов может применяться инструкция Transact-SQL или другой объект CLR, выполняемый на сервере.  
@@ -68,4 +68,4 @@ GO
 ## <a name="see-also"></a>См. также
 
 - [Управление доступом для кода и ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

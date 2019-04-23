@@ -2,12 +2,12 @@
 title: Как выполнить Параллельное выполнение нескольких веб-запросов с использованием Async и Await (C#)
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: c8f1c9a134af2139f3dd0d76614b1f719b4d453c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ea41c1fa0fce3a35635e069061f1953c6395406
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547648"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59335424"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Как выполнить Параллельное выполнение нескольких веб-запросов с использованием Async и Await (C#)
 В асинхронном методе задачи запускаются в момент создания. Оператор [Await](../../../../csharp/language-reference/keywords/await.md) применяется к задаче в той точке в методе, где обработка не может продолжаться до завершения задачи. Часто задачи ожидаются в момент создания, как показано в следующем примере.  
@@ -43,7 +43,7 @@ var result = await myTask;
   
 ### <a name="to-set-up-the-project"></a>Настройка проекта  
   
-1.  Чтобы настроить приложение WPF, выполните следующие действия. Подробные инструкции для выполнения этих действий можно найти в разделе [Пошаговое руководство. Доступ к Интернету с помощью модификатора Async и оператора Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1. Чтобы настроить приложение WPF, выполните следующие действия. Подробные инструкции для выполнения этих действий можно найти в разделе [Пошаговое руководство. Доступ к Интернету с помощью модификатора Async и оператора Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
     -   Создайте приложение WPF, которое содержит текстовое поле и кнопку. Назовите кнопку `startButton`, а текстовое поле — `resultsTextBox`.  
   
@@ -53,9 +53,9 @@ var result = await myTask;
   
 ### <a name="to-add-the-code"></a>Добавление кода  
   
-1.  В окне конструктора для MainWindow.xaml дважды нажмите кнопку, чтобы создать обработчик события `startButton_Click` в файле MainWindow.xaml.cs.  
+1. В окне конструктора для MainWindow.xaml дважды нажмите кнопку, чтобы создать обработчик события `startButton_Click` в файле MainWindow.xaml.cs.  
   
-2.  Скопируйте следующий код в тело `startButton_Click` в файле MainWindow.xaml.cs.  
+2. Скопируйте следующий код в тело `startButton_Click` в файле MainWindow.xaml.cs.  
   
     ```csharp  
     resultsTextBox.Clear();  
@@ -65,7 +65,7 @@ var result = await myTask;
   
      Код вызывает асинхронный метод `CreateMultipleTasksAsync`, который управляет приложением.  
   
-3.  Добавьте следующие вспомогательные методы в проект:  
+3. Добавьте следующие вспомогательные методы в проект:  
   
     -   `ProcessURLAsync` использует метод <xref:System.Net.Http.HttpClient> для скачивания содержимого веб-сайта в виде массива байтов. Вспомогательный метод `ProcessURLAsync` затем отображает и возвращает длину массива.  
   
@@ -93,7 +93,7 @@ var result = await myTask;
     }  
     ```  
   
-4.  Наконец, определите метод `CreateMultipleTasksAsync`, который выполняет следующие действия.  
+4. Наконец, определите метод `CreateMultipleTasksAsync`, который выполняет следующие действия.  
   
     -   Этот метод объявляет объект `HttpClient`, который используется методом доступа <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> в `ProcessURLAsync`.  
   
@@ -134,7 +134,7 @@ var result = await myTask;
     }  
     ```  
   
-5.  Нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Start** .  
+5. Нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Start** .  
   
      Запустите программу несколько раз, чтобы убедиться, что три задачи не всегда завершаются в том же порядке, а порядок их завершения не обязательно совпадает с порядком, в котором они создаются и ожидаются.  
   

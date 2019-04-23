@@ -5,10 +5,10 @@ helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
 ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335034"
 ---
 # <a name="extending-dispatchers"></a>Расширение диспетчеров
@@ -84,17 +84,17 @@ ms.locfileid: "59335034"
   
 4. Компоненты, относящиеся к безопасности, могут использовать следующие свойства:  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> Указывает, куда записываются события аудита.  
+    -   Свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> обозначает место записи событий аудита.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> управляет ли служба пытаться производить олицетворение при помощи учетных данных, предоставленных входящего сообщения.  
+    -   Свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> определяет, будет ли служба пытаться производить олицетворение при помощи учетных данных, предоставленных во входящем сообщении.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> управляет ли сообщение об успешной проверки подлинности события записываются в журнал событий, определяемое <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
+    -   Свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> определяет, будут ли события успешной проверки подлинности сообщения записываться в журнал событий, указанный в <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> элементы управления как <xref:System.Threading.Thread.CurrentPrincipal%2A> свойству.  
+    -   Свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> управляет способом задания свойства <xref:System.Threading.Thread.CurrentPrincipal%2A>.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> Указывает, как выполняется аудит событий авторизации.  
+    -   Свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> указывает каким образом производится аудит событий авторизации.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> Указывает, следует ли подавлять некритические исключения, возникающие в ходе процесса ведения журнала.  
+    -   Свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> указывает, будут ли подавляться некритические исключения, создаваемые в процессе ведения журнала.  
   
  Обычно объекты пользовательских расширений присваиваются свойству <xref:System.ServiceModel.Dispatcher.DispatchRuntime> или вставляются в коллекцию поведением службы (объект, реализующий <xref:System.ServiceModel.Description.IServiceBehavior>), поведением контракта (объект, реализующий <xref:System.ServiceModel.Description.IContractBehavior>) или поведением конечной точки (объект, реализующий <xref:System.ServiceModel.Description.IEndpointBehavior>). После этого объект устанавливающего поведения добавляется в соответствующую коллекцию поведений программно или реализацией пользовательского объекта <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, чтобы разрешить вставку поведения с помощью файла конфигурации приложения.  
   
@@ -133,4 +133,4 @@ ms.locfileid: "59335034"
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
 - [Практическое руководство. Проверка и изменение сообщений в службе](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
 - [Практическое руководство. Проверка или изменение параметров](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
-- [Практическое руководство. Блокировка конечных точек в среде предприятия](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+- [Практическое руководство. Блокировка конечных точек на предприятии](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)

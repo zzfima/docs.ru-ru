@@ -5,10 +5,10 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
 ms.openlocfilehash: 947ef3c2120377fe33e0062d1ed508ddda432314
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335333"
 ---
 # <a name="message-security-user-name"></a>Безопасность сообщений с использованием имени пользователя
@@ -222,7 +222,7 @@ Press <ENTER> to terminate client.
   
 5. На сервере, запустите `setup.bat service` в командную строку разработчика для Visual Studio, открытой с правами администратора. Под управлением `setup.bat` с `service` аргумент создается сертификат службы с полным доменным именем компьютера и экспортируется в файл с именем Service.cer.  
   
-6. Изменение файла Web.config в соответствии с новым именем сертификата (в атрибуте findValue в элементе serviceCertificate) которого совпадает со значением полное доменное имя компьютера`.`  
+6. Внесите в файл Web.config изменения в соответствии с новым именем сертификата (в атрибуте findValue в элементе serviceCertificate), которое совпадает с полным именем домена компьютера`.`  
   
 7. Скопируйте файл Service.cer из каталога службы в клиентский каталог на клиентском компьютере.  
   

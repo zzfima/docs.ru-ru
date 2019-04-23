@@ -3,10 +3,10 @@ title: Пошаговое руководство. Доступ к Интерне
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
 ms.openlocfilehash: 7f9b71bc76e8d17cf2fb6714070b4439265d1fda
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335905"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Пошаговое руководство. Доступ к Интернету с использованием Async и Await (Visual Basic)
@@ -40,7 +40,7 @@ ms.locfileid: "59335905"
   
 -   [Тестирование асинхронного решения](#testAsynch)  
   
--   [Замена GetURLContentsAsync методом .NET Framework](#GetURLContentsAsync)  
+-   [Замена метода GetURLContentsAsync методом .NET Framework](#GetURLContentsAsync)  
   
 -   [Пример](#BKMK_CompleteCodeExamples)  
   
@@ -137,13 +137,13 @@ ms.locfileid: "59335905"
   
 3. Код для синхронного решения содержит следующие четыре метода:  
   
-    -   `SumPageSizes`, который получает список URL-адреса веб-странице из `SetUpURLList` , а затем вызывает `GetURLContents` и `DisplayResults` для обработки каждого URL-адреса.  
+    -   `SumPageSizes`, который получает список URL-адресов веб-страниц из `SetUpURLList`, а затем вызывает метод `GetURLContents` и `DisplayResults` для обработки каждого URL-адреса;  
   
-    -   `SetUpURLList`, который создает и возвращает список веб-адреса.  
+    -   `SetUpURLList`, который создает и возвращает список веб-адресов;  
   
-    -   `GetURLContents`, который загружает содержимое каждого веб-сайта и возвращает содержимое в виде массива байтов.  
+    -   `GetURLContents`, который загружает содержимое каждого веб-сайта и возвращает содержимое в виде массива байтов;  
   
-    -   `DisplayResults`, отображающий число байтов в массиве байтов для каждого URL-адреса.  
+    -   `DisplayResults`, который показывает число байтов в массиве байтов для каждого URL-адреса.  
   
      Скопируйте следующие четыре метода, а затем вставьте их в разделе `startButton_Click` обработчик событий в файле MainWindow.xaml.vb:  
   
@@ -263,7 +263,7 @@ ms.locfileid: "59335905"
     Using response As WebResponse = webReq.GetResponseAsync()  
     ```  
   
-2. `GetResponseAsync` Возвращает <xref:System.Threading.Tasks.Task%601>. В этом случае *переменная, возвращаемая задачей*, `TResult`, имеет тип <xref:System.Net.WebResponse>. Задача является обещанием создать фактический объект `WebResponse` после загрузки запрошенных данных и выполнения задачи до завершения.  
+2. `GetResponseAsync` возвращает значение типа <xref:System.Threading.Tasks.Task%601>. В этом случае *переменная, возвращаемая задачей*, `TResult`, имеет тип <xref:System.Net.WebResponse>. Задача является обещанием создать фактический объект `WebResponse` после загрузки запрошенных данных и выполнения задачи до завершения.  
   
      Для получения `WebResponse` значения из задачи, применить [Await](../../../../visual-basic/language-reference/operators/await-operator.md) оператор для вызова `GetResponseAsync`, как показано в следующем коде.  
   
@@ -675,11 +675,11 @@ End Class
   
 ## <a name="see-also"></a>См. также
 
-- [Пример асинхронности. Доступ к Пошаговое руководство (C# и Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Пример использования Async. Доступ к Пошаговое руководство (C# и Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [Оператор Await](../../../../visual-basic/language-reference/operators/await-operator.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Асинхронные типы возвращаемых значений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
+- [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Типы возвращаемых значений Async (Visual Basic))
 - [Асинхронное программирование на основе задач (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847)
 - [Практическое руководство. Расширение Async пошагового руководства с использованием метода Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
 - [Практическое руководство. Параллельное выполнение нескольких веб-запросов с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

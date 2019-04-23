@@ -3,10 +3,10 @@ title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
 ms.openlocfilehash: e44f48d040fc77bf702759be0c53a618cd84f9fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334891"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
@@ -29,13 +29,13 @@ END
  Заполнитель, который показывает, что можно использовать несколько предложений WHEN `Boolean_expression` THEN `result_expression` .  
   
  THEN `result_expression`  
- Выражение, возвращаемое, если результатом выражения `Boolean_expression` является значение `true`. `result expression` — Любое допустимое выражение.  
+ Выражение, возвращаемое, если результатом выражения `Boolean_expression` является значение `true`. `result expression` - любое допустимое выражение.  
   
  ELSE `else_result_expression`  
- Это выражение, возвращаемое, если ни одна из операций сравнения не дает в результате `true`. Если этот аргумент опущен и ни одна из операций сравнения не дает в результате `true`, функция CASE возвращает NULL. `else_result_expression` — Любое допустимое выражение. Типы данных аргумента `else_result_expression` и любого из аргументов `result_expression` должны быть одинаковыми или неявно приводимыми друг к другу.  
+ Это выражение, возвращаемое, если ни одна из операций сравнения не дает в результате `true`. Если этот аргумент опущен и ни одна из операций сравнения не дает в результате `true`, функция CASE возвращает NULL. `else_result_expression` - любое допустимое выражение. Типы данных аргумента `else_result_expression` и любого из аргументов `result_expression` должны быть одинаковыми или неявно приводимыми друг к другу.  
   
  WHEN `Boolean_expression`  
- Выражение типа `Boolean` , вычисляемое при использовании поискового формата оператора CASE. `Boolean_expression` любое допустимое `Boolean` выражение.  
+ Выражение типа `Boolean` , вычисляемое при использовании поискового формата оператора CASE. `Boolean_expression` - любое допустимое выражение типа `Boolean` .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает тип с наивысшим приоритетом из набора типов в выражении `result_expression` и необязательном выражении `else_result_expression`.  

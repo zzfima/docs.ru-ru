@@ -17,10 +17,10 @@ helpviewer_keywords:
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
 ms.openlocfilehash: 891a9a4d092de35ceff2f5ceb6dbde77cf2ca2ce
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303145"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Практическое руководство. Правильное позиционирование выделенной строки в дочерней таблице
@@ -85,6 +85,6 @@ ms.locfileid: "59303145"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Синхронизация элементов управления, связанных с одним источником данных](multiple-controls-bound-to-data-source-synchronized.md)
+- [Практическое руководство. Элементов управления с привязкой к тому же источнику данных будут синхронизированы](multiple-controls-bound-to-data-source-synchronized.md)
 - [Компонент BindingSource](./controls/bindingsource-component.md)
-- [Связывание данных и Windows Forms](data-binding-and-windows-forms.md)
+- [Привязка данных и Windows Forms](data-binding-and-windows-forms.md)

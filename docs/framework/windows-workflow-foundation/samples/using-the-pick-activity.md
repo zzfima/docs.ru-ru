@@ -3,10 +3,10 @@ title: Использование действия Pick
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
 ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302987"
 ---
 # <a name="using-the-pick-activity"></a>Использование действия Pick
@@ -17,7 +17,7 @@ ms.locfileid: "59302987"
  Этот образец предлагает пользователю ввести свое имя в строке консоли за отведенный для этого период времени. Действие <xref:System.Activities.Statements.Pick> в образце имеет две ветви, которые выполняются или не выполняются в зависимости от того, ввел или не ввел пользователь свое имя за отведенные для этого 5 секунд. Если пользователь успеет ввести имя в течение 5 секунд, будет выполнена первая ветвь, содержащая пользовательское действие `ReadLine`. В противном случае будет выполнена другая ветвь, содержащая действие <xref:System.Activities.Statements.Delay>. После ввода в консоли имени пользователя это имя будет выведено на экран консоли. Если в течение 5 секунд ввод не был осуществлен, время ожидания операции истечет и операция будет завершена.
 
 ## <a name="demonstrates"></a>Демонстрации
- <xref:System.Activities.Statements.Pick> действие.
+ Действие <xref:System.Activities.Statements.Pick>.
 
 ## <a name="discussion"></a>Обсуждение
  В этом образце приведены образцы рабочего процесса, создаваемого в конструкторе, и кодированного рабочего процесса.

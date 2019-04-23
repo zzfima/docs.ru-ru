@@ -6,16 +6,16 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
 ms.openlocfilehash: bf75e126c2a44b6b9d151269046d2cb8110815cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335398"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Материализация объектов (службы данных WCF)
 При использовании **Add Service Reference** диалогового окна, чтобы использовать [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала в приложении клиента на основе .NET Framework, эквивалентные классы данных создаются для каждого типа сущности в модели данных, предоставляемых каналом. Дополнительные сведения см. в разделе [Создание клиентской библиотеки службы данных](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Данные сущности, возвращаемые запросом, материализуются в экземпляр одного из созданных классов клиентской службы данных. Сведения о параметрах слияния и разрешении удостоверений для отслеживаемых объектов, см. в разделе [управление контекстом службы данных](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] также позволяет определить свои собственные клиентские классы службы данных, а не с помощью данных, формируемые средством классы. Это позволяет разработчикам использовать собственные классы данных, также называемые классами данных POCO (Plain Old CLR Object). При использовании этих типов пользовательские классы данных, необходимо присвоить класс данных <xref:System.Data.Services.Common.DataServiceKeyAttribute> или <xref:System.Data.Services.Common.DataServiceEntityAttribute> и убедитесь, что имена типов в клиент совпадают с именами типов в модели данных службы данных.  
+ Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют также определять собственные классы клиентской службы данных, а не использовать формируемые средством классы данных. Это позволяет разработчикам использовать собственные классы данных, также называемые классами данных POCO (Plain Old CLR Object). При использовании этих типов пользовательские классы данных, необходимо присвоить класс данных <xref:System.Data.Services.Common.DataServiceKeyAttribute> или <xref:System.Data.Services.Common.DataServiceEntityAttribute> и убедитесь, что имена типов в клиент совпадают с именами типов в модели данных службы данных.  
   
  После того как библиотека получает ответное сообщение на запрос, она материализует возвращенные данные из [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала в экземпляры данных клиентских классов службы, которые относятся к типу запроса. Обычно общий процесс материализации этих объектов происходит следующим образом.  
   
