@@ -7,10 +7,10 @@ helpviewer_keywords:
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
 ms.openlocfilehash: f6cd09279cf23d3273e7a4083950a5f42714c8bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097230"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Практическое руководство. Привязка к XML-данным с помощью XMLDataProvider и запросов XPath
@@ -36,13 +36,13 @@ ms.locfileid: "59097230"
   
  Свойства **XPath** в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] обрабатываются методом XmlNode.SelectNodes. Можно изменить запросы **XPath** для получения других результатов. Ниже приведено несколько примеров для <xref:System.Windows.Data.Binding.XPath%2A> запрос к привязанному элементу <xref:System.Windows.Controls.ListBox> из предыдущего примера:  
   
--   `XPath="Book[1]"` Возвращает первый элемент книги («XML в действии»). Обратите внимание, что индексы **XPath** основаны на 1, а не на 0.  
+-   `XPath="Book[1]"` возвращает первый элемент книги (XML в действии). Обратите внимание, что индексы **XPath** основаны на 1, а не на 0.  
   
--   `XPath="Book[@*]"` Возвращает все элементы книги с любыми атрибутами.  
+-   `XPath="Book[@*]"` возвращает все элементы книги с любыми атрибутами.  
   
--   `XPath="Book[last()-1]"` Возвращает второй элемент последней книги («Знакомство с Microsoft .NET»).  
+-   `XPath="Book[last()-1]"` возвращает второй элемент последней книги ("Знакомство с Microsoft .NET").  
   
--   `XPath="*[position()>3]"` Возвращает все элементы книги, за исключением первых трех.  
+-   `XPath="*[position()>3]"` возвращает все элементы книги, за исключением первых трех.  
   
  При запуске **XPath** запрос, он возвращает <xref:System.Xml.XmlNode> или список XmlNodes. <xref:System.Xml.XmlNode> — [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] объектом, то есть можно использовать <xref:System.Windows.Data.Binding.Path%2A> свойство для привязки к [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] свойства. Вернемся к нашему предыдущему примеру еще раз. Если остальная часть примера остается неизменной и вы изменяете <xref:System.Windows.Controls.TextBlock> привязке следующего, будут отображаться имена возвращенных XMLNodes в <xref:System.Windows.Controls.ListBox>. В этом случае все возвращаемые узлы называются "*книги*".  
   
@@ -65,4 +65,4 @@ ms.locfileid: "59097230"
 - [Использование шаблона "Основной/подробности" с иерархическими XML-данными](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
 - [Общие сведения об источниках привязки](binding-sources-overview.md)
 - [Общие сведения о привязке данных](data-binding-overview.md)
-- [Практические руководства](data-binding-how-to-topics.md)
+- [Разделы практического руководства](data-binding-how-to-topics.md)

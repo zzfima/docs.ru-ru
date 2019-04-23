@@ -12,10 +12,10 @@ ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8cad67f52a4ca977606d7b5a307868ff129570e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097981"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Уточнение типов .NET для взаимодействия
@@ -50,7 +50,7 @@ ms.locfileid: "59097981"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Runtime.InteropServices.ComVisibleAttribute>
-- [Предоставление COM-клиентам доступа к компонентам .NET Framework](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-- [Введение в интерфейс класса](com-callable-wrapper.md#introducing-the-class-interface)
+- [Предоставление компонентов .NET Framework клиентам COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [Introducing the class interface](com-callable-wrapper.md#introducing-the-class-interface) (Введение в интерфейс класса)
 - [Применение атрибутов взаимодействия](../../../docs/framework/interop/applying-interop-attributes.md)
 - [Упаковка сборки для модели COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - classes, TextPattern
 ms.assetid: b51206f2-1281-4ad0-9820-ea39d88ae577
 ms.openlocfilehash: 5646ecf9e2d5deb9fd1e7a1460860d8dd2f4dd9d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104641"
 ---
 # <a name="ui-automation-text-pattern"></a>Шаблон текста модели автоматизации пользовательского интерфейса
@@ -22,9 +22,9 @@ ms.locfileid: "59104641"
  В этом разделе содержатся обзоры и практические руководства, которые помогут приступить к работе в программировании для текстовых элементов во [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о TextPattern модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
+ [Общие сведения об объекте TextPattern модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
  [Общие сведения об объектах TextPattern и Embedded](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
- [Практические руководства](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
+ [Разделы практического руководства](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Automation.Text>  

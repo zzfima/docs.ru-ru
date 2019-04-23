@@ -7,10 +7,10 @@ helpviewer_keywords:
 - drawings [WPF], as image sources
 ms.assetid: dcf71c7b-9e86-4b8e-8e39-0d0ce0389ef4
 ms.openlocfilehash: d4b91a6495e1c54400d5fbfe43b6311d908565a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097864"
 ---
 # <a name="how-to-use-a-drawing-as-an-image-source"></a>Практическое руководство. Использование рисунка в качестве источника изображения
@@ -31,4 +31,4 @@ ms.locfileid: "59097864"
 - [Рисование изображения с помощью объекта ImageDrawing](how-to-draw-an-image-using-imagedrawing.md)
 - [Обзор объектов Drawing](drawing-objects-overview.md)
 - [Общие сведения об объектах класса Freezable](../advanced/freezable-objects-overview.md)
-- [Атрибут PresentationOptions:Freeze](../advanced/presentationoptions-freeze-attribute.md)
+- [Атрибут PresentationOptions: Freeze](../advanced/presentationoptions-freeze-attribute.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100084"
 ---
 # <a name="application-management-overview"></a>Общие сведения об управлении приложением
@@ -105,7 +105,7 @@ ms.locfileid: "59100084"
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>Получение текущего приложения  
- Так как функциональные возможности <xref:System.Windows.Application> являются общими для всего приложения, может существовать только один экземпляр <xref:System.Windows.Application> класса на <xref:System.AppDomain>. Для применения этого, <xref:System.Windows.Application> класс реализован в виде singleton-класса (см. в разделе [Реализация Singleton в C# ](https://go.microsoft.com/fwlink/?LinkId=100567)), который создает один экземпляр себя и предоставляет общий доступ к нему с помощью `static`<xref:System.Windows.Application.Current%2A> свойство.  
+ Так как функциональные возможности <xref:System.Windows.Application> являются общими для всего приложения, может существовать только один экземпляр <xref:System.Windows.Application> класса на <xref:System.AppDomain>. Для применения этого, <xref:System.Windows.Application> класс реализован в виде singleton-класса (см. в разделе [Реализация Singleton в C#](https://go.microsoft.com/fwlink/?LinkId=100567)), который создает один экземпляр себя и предоставляет общий доступ к нему с помощью `static` <xref:System.Windows.Application.Current%2A> свойство.  
   
  Ниже показано, как получить ссылку на <xref:System.Windows.Application> объект для текущего <xref:System.AppDomain>.  
   
@@ -359,7 +359,7 @@ ms.locfileid: "59100084"
 - <xref:System.Windows.Application>
 - [Общие сведения об окнах WPF](wpf-windows-overview.md)
 - [Общие сведения о переходах](navigation-overview.md)
-- [Ресурсы, Содержимое и Файлы данных WPF-приложения](wpf-application-resource-content-and-data-files.md)
+- [Файлы ресурсов, содержимого и данных WPF-приложения](wpf-application-resource-content-and-data-files.md)
 - [URI типа "pack" в WPF](pack-uris-in-wpf.md)
-- [Модель приложения: Практические руководства](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
+- [Модель приложения: Разделы руководства](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
 - [Разработка приложений](index.md)

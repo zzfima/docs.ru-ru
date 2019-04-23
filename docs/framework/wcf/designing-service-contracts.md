@@ -8,10 +8,10 @@ helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
 ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102743"
 ---
 # <a name="designing-service-contracts"></a>Создание контрактов служб
@@ -271,12 +271,12 @@ End Interface
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Создание контракта типа "запрос — ответ"](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
+- [Практическое руководство. Создание контракта типа запрос ответ](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
 - [Практическое руководство. Создание одностороннего контракта](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
-- [Практическое руководство. Создание двухстороннего контракта](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Практическое руководство. Создание дуплексного контракта](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
 - [Задание передачи данных в контрактах служб](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
-- [Задание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Указание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Использование сеансов](../../../docs/framework/wcf/using-sessions.md)
 - [Синхронные и асинхронные операции](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
-- [Надежные службы](../../../docs/framework/wcf/reliable-services.md)
+- [Reliable Services](../../../docs/framework/wcf/reliable-services.md)
 - [Службы и транзакции](../../../docs/framework/wcf/services-and-transactions.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
 ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097581"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Получение уведомления об изменении данных, связанных с элементом управления, в Windows Forms
@@ -39,4 +39,4 @@ ms.locfileid: "59097581"
 - <xref:System.ComponentModel.BindingList%601>
 - [Привязка данных Windows Forms](windows-forms-data-binding.md)
 - [Источники данных, поддерживаемые Windows Forms](data-sources-supported-by-windows-forms.md)
-- [Связывание данных и Windows Forms](data-binding-and-windows-forms.md)
+- [Привязка данных и Windows Forms](data-binding-and-windows-forms.md)

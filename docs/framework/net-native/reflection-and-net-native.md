@@ -5,10 +5,10 @@ ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c92d71c9862dfbdace4de2e30cf48ace7becfd0b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105859"
 ---
 # <a name="reflection-and-net-native"></a>Отражение и машинный код .NET
@@ -31,9 +31,9 @@ ms.locfileid: "59105859"
   
 -   [Справочник по API отражения](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
   
--   [Ссылка на файл конфигурации директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+-   [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
 ## <a name="see-also"></a>См. также
 
 - [Компиляция приложений с помощью машинного кода .NET](../../../docs/framework/net-native/index.md)
-- [Машинный код .NET и компиляция](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [.NET Native и компиляция](../../../docs/framework/net-native/net-native-and-compilation.md)

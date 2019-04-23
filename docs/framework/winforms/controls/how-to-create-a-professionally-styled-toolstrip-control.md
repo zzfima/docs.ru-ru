@@ -11,10 +11,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: c208b2f6-8105-474b-9075-d582e1792870
 ms.openlocfilehash: 6da6e113867efed79dfcd02f3b89ee1f9ae13c4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104596"
 ---
 # <a name="how-to-create-a-professionally-styled-toolstrip-control"></a>Практическое руководство. Создание профессионально оформленного элемента управления ToolStrip
@@ -43,4 +43,4 @@ ms.locfileid: "59104596"
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
 - [Элемент управления ToolStrip](toolstrip-control-windows-forms.md)
-- [Практическое руководство. Связывание с формой стандартных элементов меню](how-to-provide-standard-menu-items-to-a-form.md)
+- [Практическое руководство. Обеспечивают стандартные пункты меню в форму](how-to-provide-standard-menu-items-to-a-form.md)

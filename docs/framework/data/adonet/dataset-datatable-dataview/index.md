@@ -3,10 +3,10 @@ title: Наборы данных, таблицы данных и объекты 
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
 ms.openlocfilehash: 9c57f75dd94f3fbda74c13a5d5773825051fe416
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105733"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>Наборы данных, таблицы данных и объекты DataView
@@ -66,7 +66,7 @@ ADO.NET <xref:System.Data.DataSet> - расположенное в операт�
  [Новые возможности в ADO.NET](../../../../../docs/framework/data/adonet/whats-new.md)  
  Представляет новые возможности ADO.NET.  
   
- [Общие сведения о ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ [Общие сведения об ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
  Содержит введение в структуру и компоненты ADO.NET.  
   
  [Заполнение набора данных с помощью адаптера данных DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
@@ -81,4 +81,4 @@ ADO.NET <xref:System.Data.DataSet> - расположенное в операт�
 ## <a name="see-also"></a>См. также
 
 - [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

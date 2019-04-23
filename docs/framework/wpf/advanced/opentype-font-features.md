@@ -10,10 +10,10 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: 86921b610b4b42cfc0393af2966b70870bc650f9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104485"
 ---
 # <a name="opentype-font-features"></a>Возможности шрифта OpenType
@@ -22,7 +22,7 @@ ms.locfileid: "59104485"
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>Формат шрифта OpenType  
- Формат шрифта [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] является расширением формата шрифта [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)], добавляющим поддержку данных шрифтов PostScript. Формат шрифта [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] был разработан совместно [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] и Adobe Corporation. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты и операционной системы, службы, поддерживающие [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты предоставляют пользователям простой способ установки и использования шрифтов, содержат ли [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] контуров или структуры CFF (PostScript).  
+ Формат шрифта [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] является расширением формата шрифта [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)], добавляющим поддержку данных шрифтов PostScript. Формат шрифта [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] был разработан совместно [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] и Adobe Corporation. Шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] и службы операционной системы, поддерживающие шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], предоставляют пользователям простой способ установки и использования шрифтов, содержат ли они структуры [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] или структуры CFF (PostScript).  
   
  Формат шрифта [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] решает следующие задачи разработки.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "59104485"
  Подробные сведения о формате шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] см. в разделе [Спецификации OpenType](https://go.microsoft.com/fwlink/?LinkId=96731).  
   
 ### <a name="advanced-typographic-extensions"></a>Дополнительные типографские расширения  
- Дополнительные типографские таблицы (макетные таблицы [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]) расширяют функциональные возможности шрифтов со структурами [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] или CFF. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Шрифты макета содержат дополнительную информацию, которая расширяет возможности шрифтов для поддержки международной типографии высокого качества. Большинство шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] предоставляет только подмножество общих доступных функций [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты обеспечивают следующие возможности.  
+ Дополнительные типографские таблицы (макетные таблицы [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]) расширяют функциональные возможности шрифтов со структурами [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] или CFF. Шрифты макета [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] содержат дополнительные сведения, которые расширяют возможности шрифтов для поддержки высококачественной международной типографии. Большинство шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] предоставляет только подмножество общих доступных функций [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]. Шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] предоставляют следующие функции.  
   
 -   Широкое сопоставление между символами и глифами с поддержкой лигатур, позиционных форм, вариантов и других подстановок шрифтов.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "59104485"
   
 <a name="ligatures"></a>   
 ## <a name="ligatures"></a>Лигатуры  
- Лигатуры — это два (или более) глифа, превращающиеся в один глиф для создания более читаемого или привлекательного текста. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты поддерживают четыре типа лигатур:  
+ Лигатуры — это два (или более) глифа, превращающиеся в один глиф для создания более читаемого или привлекательного текста. Шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] поддерживают четыре типа лигатур.  
   
 -   **Стандартные лигатуры**. Разработаны для улучшения удобочитаемости. Стандартные лигатуры включают fi, fl и ff.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "59104485"
   
 <a name="alternates"></a>   
 ## <a name="alternates"></a>Варианты  
- Варианты — это глифы, на которые может заменяться стандартный глиф. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты, например Pericles, используемый в следующих примерах, могут содержать альтернативные глифы, которые можно использовать для создания другого внешнего вида текста. Следующий текст демонстрирует стандартные глифы для шрифта Pericles.  
+ Варианты — это глифы, на которые может заменяться стандартный глиф. Шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], например Pericles, используемый в следующих примерах, могут содержать варианты глифов, которые можно использовать для создания другого внешнего вида текста. Следующий текст демонстрирует стандартные глифы для шрифта Pericles.  
   
  ![Текст, использующий стандартные глифы OpenType](./media/opentype-font-features/opentype-standard-glyphs.gif "текст, использующий стандартные глифы OpenType")  
 
@@ -224,7 +224,7 @@ ms.locfileid: "59104485"
  Шрифты OpenType поддерживают большое количество функций, которые могут использоваться с числовыми значениями в тексте.  
   
 ### <a name="fractions"></a>Дроби  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты поддерживают разные стили для дробей, включая диагональные и вертикальные дроби.  
+ Шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] поддерживают разные стили для дробей, включая простые дроби с наклонной или горизонтальной чертой.  
   
  Следующий текст демонстрирует стили дробей для шрифта Palatino Linotype.  
   
@@ -235,7 +235,7 @@ ms.locfileid: "59104485"
  [!code-xaml[OpenTypeFontSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
 ### <a name="old-style-numerals"></a>Числа в старом стиле  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты поддерживают формат чисел старого стиля. Этот формат используется для отображения чисел в стилях, которые уже не являются стандартными. Следующий текст демонстрирует дату 18 века в стандартном формате и в формате старого стиля для шрифта Palatino Linotype.  
+ Шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] поддерживают формат чисел в старом стиле. Этот формат используется для отображения чисел в стилях, которые уже не являются стандартными. Следующий текст демонстрирует дату 18 века в стандартном формате и в формате старого стиля для шрифта Palatino Linotype.  
   
  ![Текст, использующий старый стиль числа OpenType](./media/opentype-font-features/opentype-old-style-numerals.gif "текст, использующий старый стиль числа OpenType")  
     
@@ -248,7 +248,7 @@ ms.locfileid: "59104485"
  [!code-xaml[OpenTypeFontSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
 ### <a name="proportional-and-tabular-figures"></a>Пропорциональные и табличные цифры  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты поддерживают отображение пропорциональных и табличных цифр для регулирования выравнивания по ширине при использовании чисел. При использовании пропорциональных цифр каждая цифра имеет свою ширину — например 1 будет уже, чем 5. Табличные цифры имеют одинаковую ширину, поэтому их можно выравнивать по вертикали, что повышает удобочитаемость финансовой информации.  
+ Шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] поддерживают отображение пропорциональных и табличных цифр для регулирования выравнивания по ширине при использовании чисел. При использовании пропорциональных цифр каждая цифра имеет свою ширину — например 1 будет уже, чем 5. Табличные цифры имеют одинаковую ширину, поэтому их можно выравнивать по вертикали, что повышает удобочитаемость финансовой информации.  
   
  В первом столбце следующего текста показаны два числа, использующие пропорциональные цифры и шрифт Miramonte. Обратите внимание на разную ширину цифр 5 и 1. Во втором столбце показаны те же два числа, ширина которых скорректирована с помощью функции табличных цифр.  
   
@@ -259,7 +259,7 @@ ms.locfileid: "59104485"
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
 ### <a name="slashed-zero"></a>Перечеркнутый нуль  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты поддерживают перечеркнутого нуля формат чисел, чтобы подчеркнуть разницу между буквой «O» и цифрой «0». Числа с перечеркнутым нулем часто используются для идентификаторов в финансовых и деловых сведениях.  
+ Шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] поддерживают формат чисел с перечеркнутым нулем, чтобы подчеркнуть разницу между буквой O и цифрой 0. Числа с перечеркнутым нулем часто используются для идентификаторов в финансовых и деловых сведениях.  
   
  Следующий текст демонстрирует пример идентификатора заказа с использованием шрифта Miramonte. В первой строке используются стандартные цифры. Во второй строке используются перечеркнутые нули для лучшего контраста с прописной буквой O.  
   
@@ -340,5 +340,5 @@ ms.locfileid: "59104485"
 - <xref:System.Windows.Documents.Typography>
 - [Спецификация OpenType](https://go.microsoft.com/fwlink/?LinkId=96731)
 - [Оформление в WPF](typography-in-wpf.md)
-- [Образец пакета шрифтов OpenType](sample-opentype-font-pack.md)
+- [Пакет образцов шрифтов OpenType](sample-opentype-font-pack.md)
 - [Упаковка шрифтов с приложениями](packaging-fonts-with-applications.md)

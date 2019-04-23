@@ -5,10 +5,10 @@ helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101303"
 ---
 # <a name="auditing-security-events"></a>Аудит событий безопасности
@@ -32,7 +32,7 @@ ms.locfileid: "59101303"
   
  Для записи в журнал безопасности требуются привилегии `SeAuditPrivilege`. По умолчанию этой привилегией обладают только учетные записи Local System и Network Service. Для управления функциями `read` и `delete` журнала безопасности требуются привилегии `SeSecurityPrivilege`. По умолчанию эту привилегию имеют только администраторы.  
   
- В отличие от этого авторизованные пользователи могут производить чтение и запись в журнал приложений. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] записывает события в журнал приложений аудита по умолчанию. Этот журнал может также содержать персональный сведения, видимые всем авторизованным пользователям.  
+ В отличие от этого авторизованные пользователи могут производить чтение и запись в журнал приложений. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] по умолчанию записывает события аудита в журнал приложения. Этот журнал может также содержать персональный сведения, видимые всем авторизованным пользователям.  
   
 ## <a name="suppressing-audit-failures"></a>Подавление сбоев аудита  
  При аудите можно также выбрать, следует ли подавлять сбои аудита. По умолчанию сбой аудита не влияет на приложение. Однако при необходимости можно задать для этого параметра значение `false`, что приводит к возникновению исключения.  
@@ -87,8 +87,8 @@ ms.locfileid: "59101303"
   
 |Система|Журнал приложения|Журнал безопасности|  
 |------------|---------------------|------------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] или более поздней версии|Поддерживается|Не поддерживается|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] и [!INCLUDE[wv](../../../../includes/wv-md.md)]|Поддерживается|Контекст потока должен обладать `SeAuditPrivilege`|  
+|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] или более поздняя версия|Поддерживается|Не поддерживается|  
+|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] и [!INCLUDE[wv](../../../../includes/wv-md.md)]|Поддерживается|Контекст потока должен обладать привилегиями `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Прочие факторы  
  В дополнение к операционной системе, в следующей таблице описываются другие параметры, влияющие на разрешение регистрации.  
@@ -103,7 +103,7 @@ ms.locfileid: "59101303"
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>
 - [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Базовое программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Базовое программирование для WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Практическое руководство. Аудит событий безопасности](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
 - [\<варианты поведения >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)

@@ -10,10 +10,10 @@ ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105746"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Ключевые слова и уровни среды CLR (трассировка событий Windows)
@@ -95,12 +95,12 @@ ms.locfileid: "59105746"
   
 |Ключевые слова и флаги|События DCStart и DCEnd для доменов приложений, сборок, модулей|События DCStart и DCEnd методов (включая события динамических методов)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` события.|Отсутствует.|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` события.|Отсутствует.|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Отсутствует.|`DCStart` события.|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Отсутствует.|`DCEnd` события.|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Отсутствует.|`DCStart` события.|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Отсутствует.|`DCEnd` события.|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|События`DCStart` .|Отсутствует.|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|События`DCEnd` .|Отсутствует.|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Отсутствует.|События`DCStart` .|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Отсутствует.|События`DCEnd` .|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Отсутствует.|События`DCStart` .|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Отсутствует.|События`DCEnd` .|  
   
  [К началу](#top)  
   
@@ -124,6 +124,6 @@ ms.locfileid: "59105746"
   
 ## <a name="see-also"></a>См. также
 
-- [Поставщики ETW среды CLR](../../../docs/framework/performance/clr-etw-providers.md)
+- [Поставщики трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-providers.md)
 - [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)
 - [События в среде CLR (трассировка событий Windows)](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

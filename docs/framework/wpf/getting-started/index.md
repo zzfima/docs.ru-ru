@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
 ms.openlocfilehash: 26cb4fabedb7a4e17f3ee56e95c310e6483d59e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099694"
 ---
 # <a name="getting-started-wpf"></a>Приступая к работе (WPF)
@@ -20,10 +20,10 @@ Windows Presentation Foundation (WPF) — это платформа польз�
   
 |||  
 |-|-|  
-|Необходимо перейти непосредственно к…|[Пошаговое руководство. Создание классического приложения WPF](walkthrough-my-first-wpf-desktop-application.md)|  
+|Необходимо перейти непосредственно к…|[Пошаговое руководство: My first WPF desktop application](walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)|  
 |Как проектировать пользовательский интерфейс приложения?|[Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)|  
 |Не знакомы с .NET?|[Общие сведения о платформе .NET Framework](../../get-started/overview.md)<br /><br /> [Основные сведения о приложениях .NET Framework](../../../standard/application-essentials.md)<br /><br /> [Начало работы с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)|  
-|Дополнительные сведения о WPF...|[Введение в WPF в Visual Studio](introduction-to-wpf-in-vs.md)<br /><br /> [Обзор XAML (WPF)](../advanced/xaml-overview-wpf.md)<br /><br /> [Элементы управления](../controls/index.md)<br /><br /> [Общие сведения о привязке данных](../data/data-binding-overview.md)|  
+|Дополнительные сведения о WPF...|[Введение в WPF в Visual Studio](introduction-to-wpf-in-vs.md)<br /><br /> [Общие сведения о языке XAML (WPF)](../advanced/xaml-overview-wpf.md)<br /><br /> [Элементы управления](../controls/index.md)<br /><br /> [Общие сведения о привязке данных](../data/data-binding-overview.md)|  
 |Вы разработчик Windows Forms?|[Элементы управления Windows Forms и эквивалентные элементы управления WPF](../advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [Взаимодействие WPF и Windows Forms](../advanced/wpf-and-windows-forms-interoperation.md)|  
   
 ## <a name="see-also"></a>См. также

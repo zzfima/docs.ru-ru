@@ -12,10 +12,10 @@ helpviewer_keywords:
 - playback of media [WPF], controlling with Storyboards
 ms.assetid: 6128ca77-b826-4e36-b968-6f237157c543
 ms.openlocfilehash: ae785e11b1da0f2c408b24021ad46ab071419378
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100318"
 ---
 # <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a>Практическое руководство. Управление элементом MediaElement с помощью раскадровки
@@ -41,8 +41,8 @@ ms.locfileid: "59100318"
 - <xref:System.Windows.Media.MediaTimeline>
 - <xref:System.Windows.Media.Animation.Storyboard>
 - [Управление элементом MediaElement (воспроизведение, пауза, остановка, громкость и скорость)](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)
-- [Общие сведения о Storyboard](storyboards-overview.md)
+- [Общие сведения о раскадровке](storyboards-overview.md)
 - [Общие сведения об анимации по ключевым кадрам](key-frame-animations-overview.md)
 - [Общие сведения об эффектах анимации](animation-overview.md)
-- [Практические руководства](audio-and-video-how-to-topics.md)
+- [Разделы практического руководства](audio-and-video-how-to-topics.md)
 - [Графика и мультимедиа](index.md)

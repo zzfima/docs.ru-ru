@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
 ms.openlocfilehash: 2237ba71487afc132f9164243a664b277397ccfa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098641"
 ---
 # <a name="bindingsource-component-overview"></a>Общие сведения о компоненте BindingSource
@@ -40,22 +40,22 @@ ms.locfileid: "59098641"
   
 |Член|Описание|  
 |------------|-----------------|  
-|<xref:System.Windows.Forms.BindingSource.Current%2A> свойство;|Возвращает текущий элемент источника данных.|  
-|<xref:System.Windows.Forms.BindingSource.Position%2A> свойство;|Возвращает или задает текущую позицию в базовом списке.|  
-|<xref:System.Windows.Forms.BindingSource.List%2A> свойство;|Возвращает список, который является результатом вычисления <xref:System.Windows.Forms.BindingSource.DataSource%2A> и <xref:System.Windows.Forms.BindingSource.DataMember%2A>. Если свойство <xref:System.Windows.Forms.BindingSource.DataMember%2A> не задано, то возвращается список, указанный в <xref:System.Windows.Forms.BindingSource.DataSource%2A>.|  
-|<xref:System.Windows.Forms.BindingSource.Insert%2A> метод|Вставляет элемент в список по указанному индексу.|  
-|<xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> метод|Удаляет текущий элемент из списка.|  
-|<xref:System.Windows.Forms.BindingSource.EndEdit%2A> метод|Применяет ожидающие изменения к базовому источнику данных.|  
-|<xref:System.Windows.Forms.BindingSource.CancelEdit%2A> метод|Отменяет текущую операцию редактирования.|  
-|<xref:System.Windows.Forms.BindingSource.AddNew%2A> метод|Добавляет новый элемент в базовый список. Если источник данных реализует <xref:System.ComponentModel.IBindingList> и возвращает элемент из события <xref:System.Windows.Forms.BindingSource.AddingNew>, то  добавляется этот элемент. В противном случае запрос передается в метод <xref:System.ComponentModel.IBindingList.AddNew%2A> списка. Если базовый список не является <xref:System.ComponentModel.IBindingList>, элемент автоматически создается с помощью его общего конструктора по умолчанию.|  
+|Свойство <xref:System.Windows.Forms.BindingSource.Current%2A>|Возвращает текущий элемент источника данных.|  
+|Свойство <xref:System.Windows.Forms.BindingSource.Position%2A>|Возвращает или задает текущую позицию в базовом списке.|  
+|Свойство <xref:System.Windows.Forms.BindingSource.List%2A>|Возвращает список, который является результатом вычисления <xref:System.Windows.Forms.BindingSource.DataSource%2A> и <xref:System.Windows.Forms.BindingSource.DataMember%2A>. Если свойство <xref:System.Windows.Forms.BindingSource.DataMember%2A> не задано, то возвращается список, указанный в <xref:System.Windows.Forms.BindingSource.DataSource%2A>.|  
+|Метод <xref:System.Windows.Forms.BindingSource.Insert%2A>|Вставляет элемент в список по указанному индексу.|  
+|Метод <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A>|Удаляет текущий элемент из списка.|  
+|Метод <xref:System.Windows.Forms.BindingSource.EndEdit%2A>|Применяет ожидающие изменения к базовому источнику данных.|  
+|Метод <xref:System.Windows.Forms.BindingSource.CancelEdit%2A>|Отменяет текущую операцию редактирования.|  
+|Метод <xref:System.Windows.Forms.BindingSource.AddNew%2A>|Добавляет новый элемент в базовый список. Если источник данных реализует <xref:System.ComponentModel.IBindingList> и возвращает элемент из события <xref:System.Windows.Forms.BindingSource.AddingNew>, то  добавляется этот элемент. В противном случае запрос передается в метод <xref:System.ComponentModel.IBindingList.AddNew%2A> списка. Если базовый список не является <xref:System.ComponentModel.IBindingList>, элемент автоматически создается с помощью его общего конструктора по умолчанию.|  
   
 ## <a name="sorting-and-filtering"></a>Сортировка и фильтрация  
  Как правило, работа осуществляется с упорядоченным или отфильтрованным представлением источника данных. В следующей таблице показаны члены, предоставляемые компонентом <xref:System.Windows.Forms.BindingSource> источника данных.  
   
 |Член|Описание|  
 |------------|-----------------|  
-|<xref:System.Windows.Forms.BindingSource.Sort%2A> свойство;|Если источником данных является <xref:System.ComponentModel.IBindingList>, то возвращает или задает имя столбца, используемого для сортировки, и порядок сортировки. Если источником данных является <xref:System.ComponentModel.IBindingListView> и поддерживается расширенная сортировка, то возвращает имена нескольких столбцов, используемых для сортировки, и порядок сортировки|  
-|<xref:System.Windows.Forms.BindingSource.Filter%2A> свойство;|Если источником данных является <xref:System.ComponentModel.IBindingListView>, то возвращает или задает выражение, используемое для фильтрации просматриваемых строк.|  
+|Свойство <xref:System.Windows.Forms.BindingSource.Sort%2A>|Если источником данных является <xref:System.ComponentModel.IBindingList>, то возвращает или задает имя столбца, используемого для сортировки, и порядок сортировки. Если источником данных является <xref:System.ComponentModel.IBindingListView> и поддерживается расширенная сортировка, то возвращает имена нескольких столбцов, используемых для сортировки, и порядок сортировки|  
+|Свойство <xref:System.Windows.Forms.BindingSource.Filter%2A>|Если источником данных является <xref:System.ComponentModel.IBindingListView>, то возвращает или задает выражение, используемое для фильтрации просматриваемых строк.|  
   
 ## <a name="see-also"></a>См. также
 
@@ -63,6 +63,6 @@ ms.locfileid: "59098641"
 - <xref:System.Windows.Forms.BindingNavigator>
 - [Архитектура компонента BindingSource](bindingsource-component-architecture.md)
 - [Компонент BindingSource](bindingsource-component.md)
-- [BindingNavigator — элемент управления](bindingnavigator-control-windows-forms.md)
+- [Элемент управления BindingNavigator](bindingnavigator-control-windows-forms.md)
 - [Привязка данных Windows Forms](../windows-forms-data-binding.md)
-- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)
+- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

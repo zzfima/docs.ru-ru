@@ -7,10 +7,10 @@ helpviewer_keywords:
 - images [WPF], drawing
 ms.assetid: df28ab41-25fb-4ab3-b51d-7f695b24f55e
 ms.openlocfilehash: f9459185bf81160b45222e7d6821e0f945ada381
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100162"
 ---
 # <a name="how-to-draw-an-image-using-imagedrawing"></a>Практическое руководство. Рисование изображения с помощью объекта ImageDrawing
@@ -33,4 +33,4 @@ ms.locfileid: "59100162"
 - <xref:System.Windows.Controls.Image>
 - [Обзор объектов Drawing](drawing-objects-overview.md)
 - [Общие сведения об объектах класса Freezable](../advanced/freezable-objects-overview.md)
-- [Атрибут PresentationOptions:Freeze](../advanced/presentationoptions-freeze-attribute.md)
+- [Атрибут PresentationOptions: Freeze](../advanced/presentationoptions-freeze-attribute.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
 ms.openlocfilehash: c59d19c925d99ac8f5dd07da84295ee002c956de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102353"
 ---
 # <a name="graphics"></a>Графика
@@ -21,12 +21,12 @@ ms.locfileid: "59102353"
  [Эффекты для точечных рисунков](bitmap-effects.md)  
  [Кисти](brushes.md)  
  [Объекты рисования](drawings.md)  
- [Геометрия](geometries.md)  
- [Изображений](images.md)  
- [Фигур](shapes.md)  
+ [Геометрические объекты](geometries.md)  
+ [Изображения](images.md)  
+ [Фигуры](shapes.md)  
  [Преобразования](transformations.md)  
  [Настройки реестра графической отрисовки](graphics-rendering-registry-settings.md)  
- [Практические руководства](graphics-how-to-topics.md)  
+ [Разделы практического руководства](graphics-how-to-topics.md)  
   
 ## <a name="see-also"></a>См. также
 

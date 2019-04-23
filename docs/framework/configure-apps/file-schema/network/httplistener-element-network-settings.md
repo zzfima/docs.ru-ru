@@ -1,12 +1,12 @@
 ---
-title: <httpListener> (Сетевые параметры)
+title: Элемент <httpListener> (параметры сети)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
 ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099748"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener > (сетевые параметры)
@@ -43,7 +43,7 @@ ms.locfileid: "59099748"
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[параметры](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
+|[Параметры](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Примечания  
  **UnescapeRequestUrl** атрибут указывает, если <xref:System.Net.HttpListener> использует преобразованный в escape-последовательность URI вместо преобразованного где преобразуются значения, закодированные и других нормализации действия предпринимаются.  

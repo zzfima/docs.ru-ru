@@ -8,10 +8,10 @@ helpviewer_keywords:
 - examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
 ms.openlocfilehash: 20ec03e6b84110f7ea00c134dc18b23f233c5f58
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103445"
 ---
 # <a name="double-buffered-graphics"></a>Двойная буферизация графики
@@ -37,7 +37,7 @@ ms.locfileid: "59103445"
 - <xref:System.Drawing.BufferedGraphics>
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphicsManager>
-- [Практическое руководство. Отрисовка буферизированной графики вручную](how-to-manually-render-buffered-graphics.md)
-- [Практическое руководство. Уменьшение эффекта дрожания изображения посредством двойной буферизации для форм и элементов управления](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
-- [Практическое руководство. Управление буферизацией графики вручную](how-to-manually-manage-buffered-graphics.md)
+- [Практическое руководство. Визуализация буферизированной графики вручную](how-to-manually-render-buffered-graphics.md)
+- [Практическое руководство. Уменьшить мерцания изображения посредством двойной буферизации для форм и элементов управления](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
+- [Практическое руководство. Управление буферизацией графики](how-to-manually-manage-buffered-graphics.md)
 - [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)
