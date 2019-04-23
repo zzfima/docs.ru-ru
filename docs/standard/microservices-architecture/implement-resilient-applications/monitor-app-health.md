@@ -4,12 +4,12 @@ description: Изучите один из способов реализации 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 90beb8073cd169b0a68dc0025d8cd815ccb5a308
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: deebcf6771d24be34050dd7fdfb807a681ebce1f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464012"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672208"
 ---
 # <a name="health-monitoring"></a>Мониторинг работоспособности
 
@@ -269,23 +269,20 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 Последний компонент мониторинга — визуализация потока событий, отчеты о производительности службы и оповещения при обнаружении проблем. Для реализации этого компонента мониторинга можно использовать различные решения.
 
-Можно использовать простые пользовательские приложения, которые отображают состояние служб, например пользовательскую страницу, о которой идет речь в описании библиотеки [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks). Или можно использовать более сложные инструменты, такие как Azure Application Insights, которые будут создавать оповещения на основе потока событий.
+Можно использовать простые пользовательские приложения, которые отображают состояние служб, например пользовательскую страницу, о которой идет речь в описании библиотеки [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks). Или можно использовать более сложные инструменты, такие как [Azure Monitor](https://azure.microsoft.com/services/monitor/), которые будут вызывать оповещения на основе потока событий.
 
 Наконец, если вы сохраняете все потоки событий, для визуализации данных можно использовать Microsoft Power BI или решения других поставщиков, например Kibana или Splunk.
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **HealthChecks и пользовательский интерфейс HealthChecks для ASP.NET Core**
-    [https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks )
+- **HealthChecks и пользовательский интерфейс HealthChecks для ASP.NET Core** \
+  <https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks>
 
--   **Общие сведения о наблюдении за работоспособностью Service Fabric**
-    [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
+- **Общие сведения о мониторинге работоспособности Service Fabric** \
+  [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
 
--   **Azure Application Insights**
-    [https://azure.microsoft.com/services/application-insights/](https://azure.microsoft.com/services/application-insights/)
-
--   **Microsoft Operations Management Suite**
-    [https://www.microsoft.com/en-us/cloud-platform/operations-management-suite](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
+- **Azure Monitor**
+  <https://azure.microsoft.com/services/monitor/>
 
 >[!div class="step-by-step"]
 >[Назад](implement-circuit-breaker-pattern.md)

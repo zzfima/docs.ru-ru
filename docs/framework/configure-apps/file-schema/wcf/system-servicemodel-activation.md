@@ -3,11 +3,11 @@ title: <system.serviceModel.activation>
 ms.date: 03/30/2017
 ms.assetid: c0cae85f-56cb-4030-8807-6f96edff8d2d
 ms.openlocfilehash: b29f7173b4d75ec9adff37449d3d56266f01a03c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196194"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771963"
 ---
 # <a name="systemservicemodelactivation"></a>\<system.serviceModel.activation>
 В данном разделе конфигурации представлены параметры конфигурации для средства SMSvcHost.exe. Элементы конфигурации можно задать в файле SMSvcHost.exe.config. В частности в нем содержатся все параметры компьютера, которые необходимо настроить.  

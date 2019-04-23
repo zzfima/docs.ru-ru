@@ -5,11 +5,11 @@ helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
 ms.openlocfilehash: 33ebb07e350dbbbdd324b442f52dfb6287322bd8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073849"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976772"
 ---
 # <a name="bindings-and-binding-elements"></a>Привязки и элементы привязки
 Привязки-это коллекции особых элементов конфигурации, вызывается *элементов привязки*, которые вычисляются средой выполнения службы, когда клиент или создана конечная точка службы. Тип и порядок элементов привязки в привязке определяют порядок выбора и расположения каналов транспорта и протокола в стеке канала конечной точки.  

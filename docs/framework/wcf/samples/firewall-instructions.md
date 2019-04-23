@@ -3,11 +3,11 @@ title: Инструкции брандмауэра
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
 ms.openlocfilehash: f1b576b4e413fa3bae70ef1eb8f8ed768e28e309
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295163"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773807"
 ---
 # <a name="firewall-instructions"></a>Инструкции брандмауэра
 Таким образом, чтобы примеры Windows Communication Foundation (WCF) может работать, необходимо включить несколько портов и программ в брандмауэре. Многие из образцов сообщаются с использованием портов в диапазоне 8000-8003 и порта 9000. По умолчанию брандмауэр включен и запрещает доступ к этим портам. Чтобы включить брандмауэр для примеров, завершите одну из следующих операций, в зависимости от требований и среды безопасности.  

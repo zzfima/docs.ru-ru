@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
 ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185696"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973724"
 ---
 # <a name="data-member-default-values"></a>Значения членов данных по умолчанию
 В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], типы имеют концепцию *значения по умолчанию*. Например, любой ссылочный тип имеет значение по умолчанию `null`, а значением по умолчанию для целого типа является ноль. Иногда требуется исключить член данных из сериализованных данных, если для него задано значение по умолчанию. Так как этот член имеет значение по умолчанию, нет необходимости сериализовывать фактическое значение; это повышает производительность.  

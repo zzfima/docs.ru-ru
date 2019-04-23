@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Grid control [WPF], creating [WPF], GridLengthConverter objects
 ms.assetid: 5ab75911-e36a-4825-80e4-081c57e8e182
 ms.openlocfilehash: 498d2b9c531f391f4cbeb1478469a99d381deec7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59206789"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770778"
 ---
 # <a name="how-to-create-and-use-a-gridlengthconverter-object"></a>Практическое руководство. Создание и использование объекта GridLengthConverter
 ## <a name="example"></a>Пример  

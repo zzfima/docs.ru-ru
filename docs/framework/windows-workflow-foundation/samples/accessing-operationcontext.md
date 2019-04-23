@@ -3,11 +3,11 @@ title: Доступ к контексту OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
 ms.openlocfilehash: c104ceb22117d7cc53050a6513a4aea58fdff8c1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327962"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772886"
 ---
 # <a name="accessing-operationcontext"></a>Доступ к контексту OperationContext
 В этом образце показано как действия обмена сообщениями (<xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.Send>) можно использовать с действием пользовательской области для доступа к <xref:System.ServiceModel.OperationContext.Current%2A> и подключить или извлечь пользовательского заголовка сообщения исходящего или входящего сообщения.  

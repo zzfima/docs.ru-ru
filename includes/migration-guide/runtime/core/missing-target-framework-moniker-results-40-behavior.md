@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 29b8feb7959c718391b963c8402b97351b93fa49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235976"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804876"
 ---
 ### <a name="missing-target-framework-moniker-results-in-40-behavior"></a>Отсутствие моникера целевой платформы приводит к поведению версии 4.0
 

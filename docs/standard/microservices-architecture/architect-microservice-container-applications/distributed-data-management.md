@@ -4,12 +4,12 @@ description: Сведения о проблемах и решениях для �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: f92410f2742ec1cbcb08d13614700eab348aa646
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3e683044ea6a31116f1e7da6d690fc32ad87bd76
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463375"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613711"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Распределенное управление данными: проблемы и решения
 
@@ -86,28 +86,28 @@ ms.locfileid: "58463375"
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Теорема CAP** \
-  [https://en.wikipedia.org/wiki/CAP_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
+  <https://en.wikipedia.org/wiki/CAP_theorem>
 
 - **Итоговая согласованность** \
-  [https://en.wikipedia.org/wiki/Eventual_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+  <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Основные сведения о согласованности данных** \
-  [https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)](https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10))
+  <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Мартин Фоулер (Martin Fowler). CQRS (разделение обязанностей запросов и команд)** \
-  [https://martinfowler.com/bliki/CQRS.html](https://martinfowler.com/bliki/CQRS.html)
+  <https://martinfowler.com/bliki/CQRS.html>
 
 - **Материализованное представление** \
-  [https://docs.microsoft.com/azure/architecture/patterns/materialized-view](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
+  <https://docs.microsoft.com/azure/architecture/patterns/materialized-view>
 
 - **Чарльз Роу (Charles Row). Кислота (ACID) и основание (BASE): изменение pH-показателя обработки транзакций в базах данных** \
-  [https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/](https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
+  <https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/>
 
 - **Компенсирующие транзакции** \
-  [https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
+  <https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction>
 
 - **Уди Дахан (Udi Dahan). Объединение на основе служб** \
-  [http://udidahan.com/2014/07/30/service-oriented-composition-with-video/](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
+  <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 >[!div class="step-by-step"]
 >[Назад](logical-versus-physical-architecture.md)

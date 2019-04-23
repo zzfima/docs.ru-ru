@@ -3,11 +3,11 @@ title: WS Dual Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
 ms.openlocfilehash: 8141ee85fa1d38c3f190688981ce66a9dd9c88f4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306213"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59974494"
 ---
 # <a name="ws-dual-http"></a>WS Dual Http
 В образце двустороннего HTTP-взаимодействия показано, как настроить привязку `WSDualHttpBinding`. Этот образец содержит консольную программу клиента (EXE) и библиотеку службы (DLL), размещаемую в службах IIS. Служба реализует дуплексный контракт. Контракт определяется интерфейсом `ICalculatorDuplex`, который предоставляет математические операции (добавить, вычесть, умножить и разделить). В этом образце интерфейс `ICalculatorDuplex` позволяет клиенту выполнять математические операции, вычисляя результат выполнения в сеансе. Независимо от этого служба возвращает результаты в интерфейсе `ICalculatorDuplexCallback`. Для дуплексного контракта требуется сеанс, поскольку необходимо установить контекст для корреляции набора сообщений, обмен которыми осуществляется между клиентом и службой. Привязка `WSDualHttpBinding` поддерживает дуплексное взаимодействие.  

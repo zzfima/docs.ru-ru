@@ -4,12 +4,12 @@ description: Узнайте, как создать и отладить в Visual
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: d23f095454a24d67c2b9fb7a0f090fb08ff9e8bb
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890557"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613451"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Начало работы с C# и Visual Studio Code
 
@@ -93,6 +93,7 @@ ms.locfileid: "58890557"
 1. Чтобы добавить новый класс, щелкните правой кнопкой мыши в обозревателе VSCode и выберите **Новый файл**. Так вы добавите новый файл в папку, открытую в VSCode.
 2. Назовите файл `MyClass.cs`. Необходимо сохранить его с расширением `.cs`, чтобы он распознавался как файл С#.
 3. Добавьте приведенный ниже код для создания класса. Включите правильное пространство имен, на которое будет создана ссылка из файла `Program.cs`.
+
 ``` csharp
 using System;
 
@@ -127,6 +128,7 @@ namespace HelloWorld
 ```
 
 5. Сохраните изменения и снова запустите программу. Должно отобразиться новое сообщение с добавленной строкой.
+
 ```console
 > dotnet run
 Hello World! Happy coding!
@@ -140,5 +142,5 @@ Hello World! Happy coding!
 
 ## <a name="see-also"></a>См. также
 
-- [Настройка Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
-- [Debugging in Visual Studio Code (Отладка в Visual Studio Code)](https://code.visualstudio.com/Docs/editor/debugging)
+- [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) (Настройка Visual Studio Code)
+- [Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Отладка в Visual Studio Code)

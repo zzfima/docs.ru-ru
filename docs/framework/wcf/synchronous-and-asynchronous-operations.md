@@ -9,11 +9,11 @@ helpviewer_keywords:
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
 ms.openlocfilehash: 3d7e44a468388f6d9a8f30d7fea29ec465cd8664
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59297711"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770871"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Синхронные и асинхронные операции
 В этом разделе описывается реализация и вызов асинхронных операций службы.  

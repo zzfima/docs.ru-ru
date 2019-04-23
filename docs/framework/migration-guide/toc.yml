@@ -1,35 +1,28 @@
-items:
 - name: Руководства по миграции
   href: index.md
   items:
-  - name: Совместимость приложений
-    href: application-compatibility.md
-    items:
-    - name: Изменения в среде выполнения
-      href: runtime/index.md
-    - name: Изменение целевой платформы
-      href: retargeting/index.md
-  - name: Совместимость версий
-    href: version-compatibility.md
-  - name: Версии и зависимости
-    href: versions-and-dependencies.md
-    items:
-    - name: Практическое руководство. Определение установленных версий платформы .NET Framework
-      href: how-to-determine-which-versions-are-installed.md
+    - name: Совместимость приложений
+      href: application-compatibility.md
       items:
-      - name: Минимальные значения параметра DWORD "Release" для версий .NET Framework
-        href: minimum-release-dword.md
-    - name: Практическое руководство. Определение установленных обновлений платформы .NET Framework
-      href: how-to-determine-which-net-framework-updates-are-installed.md
-  - name: Практическое руководство. Настройка приложения для включения поддержки .NET Framework версии 4 и выше
-    href: how-to-configure-an-app-to-support-net-framework-4-or-4-5.md
-  - name: Миграция из .NET Framework 1.1
-    href: migrating-from-the-net-framework-1-1.md
-  - name: Проблемы при переходе на .NET Framework 4
-    href: net-framework-4-migration-issues.md
-ms.openlocfilehash: ad5a32ddb015693e5c146e5e3dfea3979013e18e
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59054940"
+        - name: Изменения в среде выполнения
+          href: runtime/index.md
+        - name: Изменение целевой платформы
+          href: retargeting/index.md
+    - name: Совместимость версий
+      href: version-compatibility.md
+    - name: Версии и зависимости
+      href: versions-and-dependencies.md
+      items:
+        - name: Как выполнить Определение установленных версий платформы .NET Framework
+          href: how-to-determine-which-versions-are-installed.md
+          items:
+            - name: "Минимальные значения параметра DWORD \"Release\" для версий .NET\_Framework"
+              href: minimum-release-dword.md
+        - name: Как выполнить Определение установленных обновлений платформы .NET Framework
+          href: how-to-determine-which-net-framework-updates-are-installed.md
+    - name: Как выполнить Настройка приложения для включения поддержки .NET Framework версии 4 и выше
+      href: how-to-configure-an-app-to-support-net-framework-4-or-4-5.md
+    - name: "Миграция из .NET Framework\_1.1"
+      href: migrating-from-the-net-framework-1-1.md
+    - name: "Проблемы при переходе на .NET Framework\_4"
+      href: net-framework-4-migration-issues.md

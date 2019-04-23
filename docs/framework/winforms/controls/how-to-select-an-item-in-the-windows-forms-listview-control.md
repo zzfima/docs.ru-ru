@@ -11,11 +11,11 @@ helpviewer_keywords:
 - list views [Windows Forms], selecting items
 ms.assetid: ddea918e-1ddf-47f4-bd09-1e9b4c9d0c39
 ms.openlocfilehash: b3cfcc6c2873dfb0eb95cf7950adc6b2bb73e74c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143186"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977617"
 ---
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>Практическое руководство. Выделение строки элемента управления ListView в Windows Forms
 В этом примере показано, как программно выбрать элемент в формах Windows <xref:System.Windows.Forms.ListView> элемента управления. Выбор элемента программным образом не изменяется автоматически фокуса в <xref:System.Windows.Forms.ListView> элемента управления. По этой причине обычно необходимо также задать элемент как с фокусом ввода при выделении элемента.  

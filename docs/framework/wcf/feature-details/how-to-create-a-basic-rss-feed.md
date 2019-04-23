@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
 ms.openlocfilehash: 5bab8b5a19f33f8dcfcc5a5f5d882309a4b1cc99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59305277"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771144"
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>Практическое руководство. Создание базового RSS-канала
 Windows Communication Foundation (WCF) позволяет создавать службы, которая предоставляет веб-канала синдикации. В данном разделе рассматривается процесс создания службы синдикации, предоставляющей веб-канал синдикации RSS.  

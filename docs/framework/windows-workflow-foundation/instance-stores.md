@@ -3,11 +3,11 @@ title: Хранилища экземпляров
 ms.date: 03/30/2017
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
 ms.openlocfilehash: 352ffad56c77d0bd16f7e3b9aa1d82090f3a29b1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59323334"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773770"
 ---
 # <a name="instance-stores"></a>Хранилища экземпляров
 Хранилище экземпляров - это логический контейнер для экземпляров. Здесь хранятся данные и метаданные экземпляра. Хранилище экземпляров не предполагает выделения физического пространства. Хранилище экземпляра может содержать постоянные сведения в базе данных SQL Server или непостоянные сведения о состоянии в памяти. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] поставляется с хранилищем экземпляров рабочего процесса SQL - конкретной реализацией хранилища экземпляров, которая позволяет рабочему процессу хранить данные и метаданные в базе данных SQL Server 2005 или SQL Server 2008. Кроме того, Windows Server App Fabric также предоставляет конкретную реализацию хранилища экземпляров. Дополнительные сведения см. в разделе [Windows Server App Fabric экземпляр Store, запрос и поставщики управления](https://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  

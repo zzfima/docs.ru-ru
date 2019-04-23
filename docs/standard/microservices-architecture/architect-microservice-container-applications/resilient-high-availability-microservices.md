@@ -4,12 +4,12 @@ description: Микрослужбы должны разрабатываться 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: ebf3a81718cd3423d3c80edb9c2f5b10f4ef47da
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: a63b0c67e00ec91c5a91e1c6b84d1a38ab50e394
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465819"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672359"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Устойчивость и высокий уровень доступности в микрослужбах
 
@@ -42,7 +42,7 @@ ms.locfileid: "58465819"
 
 В монолитных серверных приложениях можно просто записывать журналы в файл на диске (файл журнала), а затем анализировать его с помощью любого инструмента. Поскольку приложение выполняется на фиксированном сервере или виртуальной машине, анализировать поток событий обычно не слишком сложно. Но в распределенных приложениях, где несколько служб выполняется на многих узлах в кластере оркестратора, сопоставить распределенные события бывает непросто.
 
-Приложение на основе микрослужб не должно пытаться самостоятельно сохранить поток вывода событий или файлов журнала или хотя бы управлять маршрутизацией событий в центральное хранилище. Оно должно быть прозрачным, то есть каждый процесс должен просто записывать поток событий в стандартный поток вывода, который будет поступать в инфраструктуру среды выполнения, где оно запущено. Пример маршрутизатора потока событий — [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), который собирает потоки событий из нескольких источников и публикует их в систему вывода. Это может быть стандартный поток вывода для среды разработки или облачных систем, например [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (для локальных приложений) и [система диагностики Azure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Существуют надежные сторонние платформы и инструменты анализа журналов, которые могут выполнять поиск, выводить предупреждения, составлять отчеты и отслеживать журналы, даже в режиме реального времени, например [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
+Приложение на основе микрослужб не должно пытаться самостоятельно сохранить поток вывода событий или файлов журнала или хотя бы управлять маршрутизацией событий в центральное хранилище. Оно должно быть прозрачным, то есть каждый процесс должен просто записывать поток событий в стандартный поток вывода, который будет поступать в инфраструктуру среды выполнения, где оно запущено. Пример маршрутизатора потока событий — [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), который собирает потоки событий из нескольких источников и публикует их в систему вывода. Это может быть стандартный поток вывода для среды разработки или облачных систем, таких как [Azure Monitor](https://azure.microsoft.com/services/monitor//) и [Диагностика Azure](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostics-extension-overview). Существуют надежные сторонние платформы и инструменты анализа журналов, которые могут выполнять поиск, выводить предупреждения, составлять отчеты и отслеживать журналы, даже в режиме реального времени, например [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
 
 ### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Оркестраторы, управляющие сведениями о работоспособности и диагностике
 
@@ -59,22 +59,22 @@ ms.locfileid: "58465819"
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **The Twelve-Factor App. XI. Журналы. Обработка журналов как потоков событий** \
-  [https://12factor.net/logs](https://12factor.net/logs)
+  <https://12factor.net/logs>
 
 - Репозиторий GitHub **Microsoft Diagnostic EventFlow Library**. \
-  [https://github.com/Azure/diagnostics-eventflow](https://github.com/Azure/diagnostics-eventflow)
+  <https://github.com/Azure/diagnostics-eventflow>
 
 - **Система диагностики Azure** \
-  [https://docs.microsoft.com/azure/azure-diagnostics](https://docs.microsoft.com/azure/azure-diagnostics)
+  <https://docs.microsoft.com/azure/azure-diagnostics>
 
-- **Подключение компьютеров Windows к службе Log Analytics в Azure** \
-  [https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+- **Connect Windows computers to the Azure Monitor service** \ (Подключение компьютеров Windows к службе Azure Monitor)
+  <https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows>
 
 - **Запись значения в журнал. Использование прикладного блока семантического ведения журнала** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - Официальный сайт **Splunk**. \
-  [https://www.splunk.com/](https://www.splunk.com/)
+  <https://www.splunk.com/>
 
 - **EventSource Class** Интерфейс API для трассировки событий Windows (ETW) \
   [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)

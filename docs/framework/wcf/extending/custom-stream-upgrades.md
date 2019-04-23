@@ -3,11 +3,11 @@ title: Пользовательские обновления потоков
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
 ms.openlocfilehash: 8c769321702deb774c04613d5fe5eb2fde069063
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345252"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977773"
 ---
 # <a name="custom-stream-upgrades"></a>Пользовательские обновления потоков
 Ориентированные на потоки виды транспорта, например TCP и именованные каналы, работают с непрерывным потоком данных, установленным между клиентом и сервером. Поток реализуется объектом <xref:System.IO.Stream>. при обновлении потока клиенту требуется добавить дополнительный уровень протокола в стек каналов и он отправляет соответствующий запрос другому участнику коммуникационного канала. Обновление канала предполагает замену исходного объекта <xref:System.IO.Stream> на обновленный.  

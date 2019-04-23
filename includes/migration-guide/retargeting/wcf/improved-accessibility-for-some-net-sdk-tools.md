@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 0b087fca59d60a086a9ea8b2bb19c09f646c3dfd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236562"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804932"
 ---
 ### <a name="improved-accessibility-for-some-net-sdk-tools"></a>Улучшенные специальные возможности для некоторых средств пакета SDK для .NET
 

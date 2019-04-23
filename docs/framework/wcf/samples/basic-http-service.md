@@ -3,11 +3,11 @@ title: Базовая служба HTTP
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
 ms.openlocfilehash: 247fedac339ebb22a6ef3b3e84f557451ecaaf1a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59337114"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773354"
 ---
 # <a name="basic-http-service"></a>Базовая служба HTTP
 Этот образец демонстрирует реализацию службы на базе HTTP, основанные на RPC - часто называют «POX» (Plain Old XML) службы — с помощью модели программирования REST Windows Communication Foundation (WCF). Этот образец состоит из двух компонентов: резидентной службы WCF HTTP (Service.cs) и консольного приложения (Program.cs), создает службу и выполняющего вызовы к нему.  

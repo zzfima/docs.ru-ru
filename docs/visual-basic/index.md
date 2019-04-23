@@ -4,51 +4,54 @@ ms.date: 03/28/2018
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
-ms.openlocfilehash: 716715676100b4a16c4732bef545c1c7a2e0703f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b10c520c1940b150566ab5766ca5afd2e0f03e08
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192334"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672437"
 ---
 # <a name="visual-basic-guide"></a>Руководство по Visual Basic
 
 Visual Basic предназначен для эффективного создания типобезопасных и объектно-ориентированных приложений. Visual Basic позволяет разработчикам создавать приложения Windows, веб-приложения и приложения для мобильных устройств. Программы, написанные на языке Visual Basic, как и на других языках, предназначенных для платформы Microsoft .NET Framework, отличаются безопасностью и поддержкой взаимодействия.  
   
- Современное поколение Visual Basic поддерживает традиции, предоставляя возможность легко и быстро создавать приложения на основе платформы .NET Framework.  
-  
- Если у вас нет Visual Basic, вы можете получить версию Visual Studio с бесплатным Visual Basic на сайте [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) .  
-  
+Современное поколение Visual Basic поддерживает традиции, предоставляя возможность легко и быстро создавать приложения на основе платформы .NET Framework.  
+
+Если у вас нет Visual Basic, вы можете скачать бесплатную версию Visual Studio с Visual Basic на сайте [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).
+
 ## <a name="in-this-section"></a>В этом разделе  
- [Начало работы](../visual-basic/getting-started/index.md)  
- Помогает приступить к работе и содержит список новых возможностей и возможностей, доступных в различных выпусках продукта.  
+
+[Начало работы](../visual-basic/getting-started/index.md)\
+Помогает приступить к работе и содержит список новых возможностей и возможностей, доступных в различных выпусках продукта.  
    
- [Основные понятия программирования](../visual-basic/programming-guide/concepts/index.md) Основные понятия языка Visual Basic, которые наиболее важны для программистов.
+[Основные понятия программирования](../visual-basic/programming-guide/concepts/index.md)\
+Основные понятия языка Visual Basic, которые наиболее важны для программистов.
 
- [Соглашения о структуре программы и коде](../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- Содержит документацию по базовой структуре и соглашениям кода Visual Basic, таким как соглашения об именовании, комментарии в коде и действующие в Visual Basic ограничения.  
+[Соглашения о структуре программы и коде](../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)\
+Содержит документацию по базовой структуре и соглашениям кода Visual Basic, таким как соглашения об именовании, комментарии в коде и действующие в Visual Basic ограничения.  
   
- [Возможности и элементы языка Visual Basic](../visual-basic/programming-guide/language-features/index.md)  
- Содержит ссылки на разделы с описанием важных элементов Visual Basic, включая LINQ и XML-литералы.  
+[Возможности и элементы языка Visual Basic](../visual-basic/programming-guide/language-features/index.md)\
+Содержит ссылки на разделы с описанием важных элементов Visual Basic, включая LINQ и XML-литералы.  
    
- [Справочник по Visual Basic](../visual-basic/reference/index.md)  
- Содержит сведения о языке Visual Basic и компиляторе.  
+[Справочник по Visual Basic](../visual-basic/reference/index.md)\
+Содержит сведения о языке Visual Basic и компиляторе.  
 
- [Разработка приложений в Visual Basic](../visual-basic/developing-apps/index.md)  
- Затрагивает многие аспекты разработки в Visual Basic, такие как безопасность, обработка исключений и использование библиотеки классов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].
+[Разработка приложений в Visual Basic](../visual-basic/developing-apps/index.md)\
+Затрагивает многие аспекты разработки в Visual Basic, такие как безопасность, обработка исключений и использование библиотеки классов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].
 
- [COM-взаимодействие](../visual-basic/programming-guide/com-interop/index.md)  
- Рассматривает проблемы взаимодействия, связанные с созданием и использованием объектов модели COM в Visual Basic.  
+[COM-взаимодействие](../visual-basic/programming-guide/com-interop/index.md)\
+Рассматривает проблемы взаимодействия, связанные с созданием и использованием объектов модели COM в Visual Basic.  
   
- [Примеры](../visual-basic/sample-applications.md)  
- Описание примеров.  
+[Примеры](../visual-basic/sample-applications.md)\
+Описание примеров.  
   
- [Пошаговые руководства](../visual-basic/walkthroughs.md)  
- Ссылки на пошаговые инструкции для стандартных сценариев.  
+[Пошаговые руководства](../visual-basic/walkthroughs.md)\
+Ссылки на пошаговые инструкции для стандартных сценариев.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Начало разработки в Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)  
- Ссылки на разделы об основах Visual Studio.  
+
+[Начало разработки в Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)\
+Ссылки на разделы об основах Visual Studio.  
   
- [Браузер API .NET](../../api/index.md)  
- Содержит вводные данные о библиотеке классов, интерфейсах и типах значений, включенных в Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK.
+[Браузер API .NET](../../api/index.md)\
+Содержит вводные данные о библиотеке классов, интерфейсах и типах значений, включенных в Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK.
