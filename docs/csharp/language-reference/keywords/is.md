@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 83cb308a14a6db99f65b30eded20442d675cbd57
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 9fb57caeafde9db5759300d938a85f4abf4d05f3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480837"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672463"
 ---
 # <a name="is-c-reference"></a>is (Справочник по C#)
 
@@ -144,7 +144,7 @@ ms.locfileid: "59480837"
  
 ### <a name="var" /> Шаблон переменной </a>
 
-Сопоставление шаблона с шаблоном переменной всегда завершается успешно для ненулевых выражений. Если *expr* имеет значение `null`, выражение `is` имеет значение `false`. Ненулевое значение *expr* всегда назначается локальной переменной того же типа, что и тип времени выполнения *expr*.  Он имеет следующий синтаксис:
+Шаблон `var` является универсальным и подходит для любых типов и значений. Значение *expr* всегда назначается локальной переменной того же типа, что и тип времени компиляции *expr*. Результат выражения `is` всегда равен `true`. Он имеет следующий синтаксис:
 
 ```csharp 
    expr is var varname
@@ -161,7 +161,7 @@ ms.locfileid: "59480837"
 ## <a name="see-also"></a>См. также
 
 - [Справочник по C#](../../../csharp/language-reference/index.md)
-- [Ключевые слова C#](../../../csharp/language-reference/keywords/index.md)
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
 - [typeof](../../../csharp/language-reference/keywords/typeof.md)
 - [as](../../../csharp/language-reference/keywords/as.md)
 - [Ключевые слова операторов](../../../csharp/language-reference/keywords/operator-keywords.md)
