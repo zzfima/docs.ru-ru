@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: c03fa202b413c98230ba70ca7a0b709d7865cb91
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 82ada5e4d1f56ea93bbd7f41b04cda9f98d678c9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427387"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672398"
 ---
 # <a name="-operator-c-reference"></a>?: Оператор (ссылка C#)
 
@@ -42,6 +42,12 @@ a ? b : c ? d : e
 ```csharp
 a ? b : (c ? d : e)
 ```
+
+В качестве удобного мнемонического приема, который поможет запомнить, как вычисляется этот оператор, можно использовать следующий вопрос: 
+```
+is this condition true ? yes : no
+```
+где часть фразы до "?" выступает в качестве вопроса для предыдущего выражения, а последующая часть фразы является логическим ответом на этот вопрос.
 
 В следующем примере иллюстрируется использование условного оператора:
 
@@ -85,8 +91,8 @@ condition ? ref consequent : ref alternative
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
-- [Операторы C#](index.md)
+- [Операторы в C#](index.md)
 - [if-else (Справочник по C#)](../keywords/if-else.md)
-- [?. Операторы ?. и ?[]](null-conditional-operators.md)
+- [Операторы ?. и ?[]](null-conditional-operators.md)
 - [?? Оператор](null-coalescing-operator.md)
 - [Ключевое слово ref](../keywords/ref.md)
