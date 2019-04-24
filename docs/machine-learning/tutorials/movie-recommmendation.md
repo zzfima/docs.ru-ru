@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/08/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: efa217440ae636422bc8d2bd429f0396d7d28057
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: bdc49f42e520f11ef63de873f0d30d11ba4b2366
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311101"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612281"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>Учебник. Создание системы рекомендации фильмов с помощью ML.NET
 
@@ -137,7 +137,7 @@ using Microsoft.ML.Data;
 
 [!code-csharp[MovieRatingClass](~/samples/machine-learning/tutorials/MovieRecommendation/MovieRatingData.cs#MovieRatingClass "Add the Movie Rating class")]
 
-`MovieRating`  — это класс входных данных. Атрибут [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) определяет столбцы в наборе данных, которые следует загрузить (по индексам). Столбцы `userId` и `movieId` — это признаки `Features` (входные данные модели для прогнозирования метки `Label`), а столбец rating — это прогнозируемая метка `Label` (выходные данные модели).
+`MovieRating` — это класс входных данных. Атрибут [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) определяет столбцы в наборе данных, которые следует загрузить (по индексам). Столбцы `userId` и `movieId` — это признаки `Features` (входные данные модели для прогнозирования метки `Label`), а столбец rating — это прогнозируемая метка `Label` (выходные данные модели).
 
 Создайте еще один класс, `MovieRatingPrediction`, который будет представлять результаты прогнозирования. Для этого добавьте следующий код после класса `MovieRating` в файле *MovieRatingData.cs*:
 
@@ -161,7 +161,7 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 > [!NOTE]
 > Этот метод будет вызывать ошибку, пока вы не добавите оператор return при выполнении дальнейших инструкций.
 
-Инициализируйте переменные, содержащие пути к данным, загрузите данные из файлов CSV и получите наборы данных `Train` и `Test` как объекты `IDataView`, добавив следующий код в метод `LoadData()`:
+Инициализируйте переменные, содержащие пути к данным, загрузите данные из файлов \*.csv и получите наборы данных `Train` и `Test` как объекты `IDataView`, добавив следующий код в метод `LoadData()`:
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadData "Load data from data paths")]
 
@@ -177,11 +177,11 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 
 В ML.NET есть три основных понятия: [данные](../basic-concepts-model-training-in-mldotnet.md#data), [преобразователи](../basic-concepts-model-training-in-mldotnet.md#transformer) и [средства оценки](../basic-concepts-model-training-in-mldotnet.md#estimator).
 
-Алгоритмам машинного обучения требуются данные в определенном формате. `Transformers` используются для преобразования табличных данных к совместимому формату.
+Алгоритмам машинного обучения требуются данные в определенном формате. Преобразователи (`Transformers`) приводят данные к совместимому формату.
 
 ![схема работы преобразователя](./media/movie-recommendation/transformer.png)
 
-Преобразователи (`Transformers`) в ML.NET создаются с помощью средств оценки (`Estimators`). `Estimators` принимают данные и возвращают `Transformers`.
+Преобразователи (`Transformers`) в ML.NET создаются с помощью средств оценки (`Estimators`). Средства оценки (`Estimators`) принимают данные и возвращают преобразователи (`Transformers`).
 
 ![схема работы средства оценки](./media/movie-recommendation/estimator.png)
 
@@ -202,7 +202,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 > Этот метод будет вызывать ошибку, пока вы не добавите оператор return при выполнении дальнейших инструкций.
 
 Определите преобразования данных, добавив в метод `BuildAndTrainModel()` следующий код:
-   
+
 [!code-csharp[DataTransformations](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#DataTransformations "Define data transformations")]
 
 Так как столбцы `userId` и `movieId` содержат индексы пользователей и фильмов, а не реальные значения, необходимо с помощью метода [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) преобразовать столбцы `userId` и `movieId` в столбцы признаков (`Feature`), содержащие числовые ключи (допустимый формат для алгоритмов рекомендаций), а затем добавить их в качестве новых столбцов наборов данных.
@@ -217,7 +217,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 [!code-csharp[AddAlgorithm](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#AddAlgorithm "Add the training algorithm with options")]
 
-[MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29) — это алгоритм обучения для предоставления рекомендаций.  [Разложение матрицы](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)) — стандартный подход к формированию рекомендаций при наличии данных о том, как пользователи оценивали продукты в прошлом, как в нашем случае. Есть и другие алгоритмы рекомендаций, которые используются при наличии других данных (дополнительные сведения см. в. разделе [Другие алгоритмы рекомендаций](#other-recommendation-algorithms) ниже). 
+[MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29) — это алгоритм обучения для предоставления рекомендаций.  [Разложение матрицы](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)) — стандартный подход к формированию рекомендаций при наличии данных о том, как пользователи оценивали продукты в прошлом, как в нашем случае. Есть и другие алгоритмы рекомендаций, которые используются при наличии других данных (дополнительные сведения см. в. разделе [Другие алгоритмы рекомендаций](#other-recommendation-algorithms) ниже).
 
 В данном случае алгоритм разложения матрицы (`Matrix Factorization`) использует метод, называемый "совместная фильтрация". Он основывается на том допущении, что если мнение двух людей по какому-либо вопросу совпадает, то и по другому вопросу они будут склонны иметь одинаковое мнение.
 
@@ -242,7 +242,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 ## <a name="evaluate-your-model"></a>Оценка модели
 
-После обучения модели оцените ее эффективность с помощью тестовых данных. 
+После обучения модели оцените ее эффективность с помощью тестовых данных.
 
 Создайте метод `EvaluateModel()` сразу после метода `BuildAndTrainModel()`, вставив в него следующий код:
 
@@ -253,8 +253,7 @@ public static void EvaluateModel(MLContext mlContext, IDataView testDataView, IT
 }
 ```
 
-Преобразуйте данные `Test`, добавив в метод `EvaluateModel()` следующий код:
-[!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
+Преобразуйте данные `Test`, добавив в метод `EvaluateModel()` следующий код: [!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
 
 Метод [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) делает прогнозы для нескольких входных строк тестового набора данных.
 
@@ -315,6 +314,7 @@ RSquared: 0.412556298844873
 Теперь обученную модель можно использовать для прогнозирования на основе новых данных.
 
 Создайте метод `UseModelForSinglePrediction()` сразу после метода `EvaluateModel()`, вставив в него следующий код:
+
 ```csharp
 public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer model)
 {
@@ -427,9 +427,9 @@ Movie 10 is recommended for user 6
 
 ### <a name="features"></a>Функции
 
-В этом руководстве использовались только три признака (`Features`) из набора данных (`user id`, `movie id` и `rating`). 
+В этом руководстве использовались только три признака (`Features`) из набора данных (`user id`, `movie id` и `rating`).
 
-Хотя для начала этого достаточно, на практике может потребоваться добавить дополнительные атрибуты или признаки `Features` (например, возраст, пол, географическое местоположение и другие). Добавление релевантных признаков (`Features`) может помочь повысить эффективность модели рекомендаций. 
+Хотя для начала этого достаточно, на практике может потребоваться добавить дополнительные атрибуты или признаки `Features` (например, возраст, пол, географическое местоположение и другие). Добавление релевантных признаков (`Features`) может помочь повысить эффективность модели рекомендаций.
 
 Если вы не уверены, какие признаки (`Features`) являются наиболее релевантными для конкретной задачи машинного обучения, можно использовать специальные методы, предоставляемые платформой ML.NET с целью выявления наиболее весомых признаков (`Features`): Feature Contribution Calculation (определение вклада признака) и [Feature Permutation Importance](../how-to-guides/determine-global-feature-importance-in-model.md) (важность комбинаций признаков).
 
@@ -445,7 +445,7 @@ Movie 10 is recommended for user 6
 var options = new MatrixFactorizationTrainer.Options
 {
     MatrixColumnIndexColumnName = "userIdEncoded",
-    MatrixRowIndexColumnName = "movieIdEncoded", 
+    MatrixRowIndexColumnName = "movieIdEncoded",
     LabelColumnName = "Label",
     NumberOfIterations = 20,
     ApproximationRank = 100
