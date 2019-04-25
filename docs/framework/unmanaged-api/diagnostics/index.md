@@ -9,21 +9,21 @@ ms.assetid: ee1fbb7a-b0f9-482f-8cd0-6df37e6586a2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 418c9afdec32b685f67bd457c055476b5501b414
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599307"
 ---
-# <a name="diagnostics-symbol-store-unmanaged-api-reference"></a><span data-ttu-id="0e3f6-102">Хранилище диагностических символов (ссылка неуправляемого API)</span><span class="sxs-lookup"><span data-stu-id="0e3f6-102">Diagnostics Symbol Store (Unmanaged API Reference)</span></span>
-<span data-ttu-id="0e3f6-103">API хранилища диагностических символов позволяет компилятору генерировать символьную информацию для использования отладчиком.</span><span class="sxs-lookup"><span data-stu-id="0e3f6-103">The diagnostics symbol store API enables a compiler to generate symbol information for use by a debugger.</span></span>  
+# <a name="diagnostics-symbol-store-unmanaged-api-reference"></a><span data-ttu-id="e4997-102">Хранилище диагностических символов (ссылка неуправляемого API)</span><span class="sxs-lookup"><span data-stu-id="e4997-102">Diagnostics Symbol Store (Unmanaged API Reference)</span></span>
+<span data-ttu-id="e4997-103">API хранилища символов диагностики позволяет компилятору генерировать символьную информацию для использования отладчиком.</span><span class="sxs-lookup"><span data-stu-id="e4997-103">The diagnostics symbol store API enables a compiler to generate symbol information for use by a debugger.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0e3f6-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="0e3f6-104">In This Section</span></span>  
- [<span data-ttu-id="0e3f6-105">Интерфейсы хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="0e3f6-105">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
- <span data-ttu-id="0e3f6-106">Описываются неуправляемые интерфейсы, которые использует API хранилища диагностических символов.</span><span class="sxs-lookup"><span data-stu-id="0e3f6-106">Describes the unmanaged interfaces that the diagnostics symbol store API uses.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="e4997-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="e4997-104">In This Section</span></span>  
+ [<span data-ttu-id="e4997-105">Интерфейсы хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="e4997-105">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
+ <span data-ttu-id="e4997-106">В этом разделе описываются неуправляемые интерфейсы, которые использует API хранилища символов диагностики.</span><span class="sxs-lookup"><span data-stu-id="e4997-106">Describes the unmanaged interfaces that the diagnostics symbol store API uses.</span></span>  
   
- [<span data-ttu-id="0e3f6-107">Перечисления хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="0e3f6-107">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
- <span data-ttu-id="0e3f6-108">Описываются неуправляемые перечисления, которые использует API хранилища диагностических символов.</span><span class="sxs-lookup"><span data-stu-id="0e3f6-108">Describes the unmanaged enumerations that the diagnostics symbol store API uses.</span></span>  
+ [<span data-ttu-id="e4997-107">Перечисления хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="e4997-107">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
+ <span data-ttu-id="e4997-108">В этом разделе описываются неуправляемые перечисления, которые использует API хранилища символов диагностики.</span><span class="sxs-lookup"><span data-stu-id="e4997-108">Describes the unmanaged enumerations that the diagnostics symbol store API uses.</span></span>  
   
- [<span data-ttu-id="0e3f6-109">Структуры хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="0e3f6-109">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
- <span data-ttu-id="0e3f6-110">Описываются неуправляемые структуры, используемые API хранилища диагностических символов.</span><span class="sxs-lookup"><span data-stu-id="0e3f6-110">Describes the unmanaged structures that the diagnostics symbol store API uses.</span></span>
+ [<span data-ttu-id="e4997-109">Структуры хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="e4997-109">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
+ <span data-ttu-id="e4997-110">В этом разделе описываются неуправляемые структуры, которые использует API хранилища символов диагностики.</span><span class="sxs-lookup"><span data-stu-id="e4997-110">Describes the unmanaged structures that the diagnostics symbol store API uses.</span></span>
