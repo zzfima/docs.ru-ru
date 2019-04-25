@@ -9,21 +9,21 @@ ms.assetid: ee1fbb7a-b0f9-482f-8cd0-6df37e6586a2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 418c9afdec32b685f67bd457c055476b5501b414
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599307"
 ---
 # <a name="diagnostics-symbol-store-unmanaged-api-reference"></a>Хранилище диагностических символов (ссылка неуправляемого API)
-API хранилища диагностических символов позволяет компилятору генерировать символьную информацию для использования отладчиком.  
+API хранилища символов диагностики позволяет компилятору генерировать символьную информацию для использования отладчиком.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
- Описываются неуправляемые интерфейсы, которые использует API хранилища диагностических символов.  
+ В этом разделе описываются неуправляемые интерфейсы, которые использует API хранилища символов диагностики.  
   
  [Перечисления хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
- Описываются неуправляемые перечисления, которые использует API хранилища диагностических символов.  
+ В этом разделе описываются неуправляемые перечисления, которые использует API хранилища символов диагностики.  
   
  [Структуры хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
- Описываются неуправляемые структуры, используемые API хранилища диагностических символов.
+ В этом разделе описываются неуправляемые структуры, которые использует API хранилища символов диагностики.

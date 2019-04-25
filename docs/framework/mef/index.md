@@ -11,11 +11,11 @@ ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872850"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -62,7 +62,7 @@ ms.locfileid: "49454503"
 
 <a name="simplecalculator_an_example_application"></a>
 
-## <a name="simplecalculator-an-example-application"></a>Пример приложения SimpleCalculator
+## <a name="simplecalculator-an-example-application"></a>SimpleCalculator — пример приложения
 
 Чтобы узнать о возможностях MEF, проще всего создать простое приложение MEF. В этом примере выполняется создание очень простого калькулятора, который называется SimpleCalculator. SimpleCalculator предназначен для создания консольного приложения, принимающего основные арифметические команды в формате «5 + 3» или «6 - 2» и возвращающего правильные ответы. Благодаря применению MEF, вы сможете добавлять новые операторы без изменения кода приложения.
 
@@ -150,7 +150,7 @@ private Program()
 ## <a name="imports-and-exports-with-attributes"></a>Импортируемые и экспортируемые элементы с атрибутами
  Во-первых, необходимо выбрать `Program` для импорта калькулятора. Это позволит отделять вопросы пользовательского интерфейса, например, ввод и вывод консоли, который будет поступать в `Program`, от логики калькулятора.
 
- Добавьте следующий код в класс `Program`:
+ Добавьте следующий код в класс `Program` :
 
 ```vb
 <Import(GetType(ICalculator))>
@@ -205,7 +205,7 @@ class MySimpleCalculator : ICalculator
 
  Для уровня пользовательского интерфейса (`Program`) никакая другая информация не требуется. Таким образом, можно заполнить остальную часть логики интерфейса пользователя в методе `Main`.
 
- Добавьте следующий код в метод `Main`.
+ Добавьте следующий код в метод `Main`:
 
 ```vb
 Sub Main()

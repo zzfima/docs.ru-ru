@@ -1,26 +1,26 @@
 ---
-title: Implementing Resilient Applications
-description: Learn about resilience, a core concept in a microservices architecture. You must know how to handle transient failures gracefully because they will occur.
+title: Реализация устойчивых приложений
+description: Сведения об устойчивости — основном понятии в архитектуре микрослужб. Вам необходимо знать, как правильно обрабатывать возникающие временные сбои.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/16/2018
 ms.openlocfilehash: 00724509ba6e027ef73f72bfb6f85b8ec0aa9d25
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977721"
 ---
-# <a name="implement-resilient-applications"></a>Implement Resilient Applications
+# <a name="implement-resilient-applications"></a>Реализация устойчивых приложений
 
-*Your microservice and cloud-based applications must embrace the partial failures that will certainly occur eventually. You must design your application to be resilient to those partial failures.*
+*В приложениях на основе микрослужб и облачных приложениях должна быть предусмотрена обработка частичных сбоев, которые так или иначе будут происходить. Приложение следует проектировать так, чтобы оно было устойчиво к этим сбоям.*
 
-Resiliency is the ability to recover from failures and continue to function. It isn't about avoiding failures but accepting the fact that failures will happen and responding to them in a way that avoids downtime or data loss. The goal of resiliency is to return the application to a fully functioning state after a failure.
+Устойчивость — это возможность восстановления после сбоев и продолжение работы. Исходить следует из того, что избежать сбоев невозможно, и на них нужно реагировать так, чтобы избежать простоев или потери данных. Цель устойчивости — вернуть приложение в полностью функционирующее состояние после сбоя.
 
-It's challenging enough to design and deploy a microservices-based application. But you also need to keep your application running in an environment where some sort of failure is certain. Therefore, your application should be resilient. It should be designed to cope with partial failures, like network outages or nodes or VMs crashing in the cloud. Even microservices (containers) being moved to a different node within a cluster can cause intermittent short failures within the application.
+Разработать и развернуть приложение на основе микрослужб достаточно сложно. Но помимо этого, оно должно работать в среде, в которой неизбежны определенные неполадки. Поэтому приложение должно быть устойчивым. Оно должно уметь справляться с частичными сбоями, такими как отключения сети либо аварийные сбои узлов или виртуальных машин в облаке. Даже перенос микрослужб (контейнеров) в другой узел кластера может приводить к кратковременным сбоям в приложении.
 
-The many individual components of your application should also incorporate health monitoring features. By following the guidelines in this chapter, you can create an application that can work smoothly in spite of transient downtime or the normal hiccups that occur in complex and cloud-based deployments.
+Многие отдельные компоненты приложения также должны включать функции мониторинга работоспособности. Следуя рекомендациям этой главы, можно создать приложение, которое будет продолжать работать, несмотря на временные простои или небольшие неисправности, возникающие в сложных и облачных развертываниях.
 
 >[!div class="step-by-step"]
->[Previous](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
->[Next](handle-partial-failure.md)
+>[Назад](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
+>[Вперед](handle-partial-failure.md)
