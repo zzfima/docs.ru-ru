@@ -1,0 +1,76 @@
+- name: Руководство по ML.NET
+  href: index.yml
+- name: Обзор
+  expanded: true
+  items:
+    - name: Общие сведения об ML.NET
+      href: what-is-mldotnet.md
+    - name: 'Понятия, связанные с обучением моделей'
+      href: basic-concepts-model-training-in-mldotnet.md
+- name: Учебники
+  href: null
+  items:
+    - name: Обзор
+      href: tutorials/index.md
+    - name: Анализ тональности (двоичная классификация)
+      href: tutorials/sentiment-analysis.md
+    - name: Классификация проблем (мультиклассовая классификация)
+      href: tutorials/github-issue-classification.md
+    - name: Прогнозирование цен (регрессия)
+      href: tutorials/taxi-fare.md
+    - name: Ирисы Фишера (кластеризация)
+      href: tutorials/iris-clustering.md
+    - name: Рекомендация фильмов к просмотру (рекомендация)
+      href: tutorials/movie-recommmendation.md
+    - name: Классификация изображений (передача обучения)
+      href: tutorials/image-classification.md
+- name: Практические руководства
+  items:
+    - name: Загрузка данных
+      href: how-to-guides/load-data-ml-net.md
+    - name: Подготовка данных
+      href: how-to-guides/index.md
+      items:
+        - name: Применение проектирования категориальных признаков
+          href: how-to-guides/train-model-categorical-ml-net.md
+        - name: Применение проектирования текстовых признаков
+          href: how-to-guides/train-model-textual-ml-net.md
+        - name: Предварительная обработка данных с помощью методов нормализации
+          href: how-to-guides/normalizers-preprocess-data-ml-net.md
+    - name: 'Обучение, оценка и описание модели'
+      items:
+        - name: Обучение модели с использованием перекрестной проверки
+          href: how-to-guides/train-cross-validation-ml-net.md
+        - name: Проверка промежуточных значений данных конвейера
+          href: how-to-guides/inspect-intermediate-data-ml-net.md
+        - name: Обучение регрессионной модели
+          href: how-to-guides/train-regression-model-ml-net.md
+        - name: Определение важности признаков модели с помощью PFI
+          href: how-to-guides/determine-global-feature-importance-in-model.md
+    - name: Использование обученной модели
+      items:
+        - name: Использование PredictionEngine для поочередного прогнозирования
+          href: how-to-guides/single-predict-model-ml-net.md
+        - name: Реализация обученной модели
+          href: how-to-guides/consuming-model-ml-net.md
+        - name: Использование модели с Функциями Azure
+          href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
+        - name: Использование модели с веб-API
+          href: how-to-guides/serve-model-web-api-ml-net.md
+        - name: Infer.NET
+          items: null
+        - name: Вероятностное программирование с использованием Infer.NET
+          href: how-to-guides/matchup-app-infer-net.md
+- name: Ссылка
+  items:
+    - name: Справочник по интерфейсам API
+      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
+- name: Ресурсы
+  href: resources/index.md
+  items:
+    - name: Глоссарий по машинному обучению
+      href: resources/glossary.md
+    - name: Задачи машинного обучения
+      href: resources/tasks.md
+    - name: Преобразования данных
+      href: resources/transforms.md
