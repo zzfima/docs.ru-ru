@@ -3,16 +3,16 @@ title: Определение текста элемента
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
 ms.openlocfilehash: 6ffe8f2fbf01fbe8dfa9d78f3dfb9e39b6e80b16
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879636"
 ---
-# <a name="inferring-element-text"></a><span data-ttu-id="85901-102">Определение текста элемента</span><span class="sxs-lookup"><span data-stu-id="85901-102">Inferring Element Text</span></span>
-<span data-ttu-id="85901-103">Если элемент содержит текст и не имеет дочерних элементов был определен как таблицы, например (элементы с атрибутами) или повторяющимися элементами, новый столбец с именем **TableName_Text** добавляется к таблице, выводящейся для элемента.</span><span class="sxs-lookup"><span data-stu-id="85901-103">If an element contains text and has no child elements to be inferred as tables (such as elements with attributes or repeated elements), a new column with the name **TableName_Text** will be added to the table that is inferred for the element.</span></span> <span data-ttu-id="85901-104">Текст, содержащийся в элементе, будет добавлен в строку таблицы и сохранен в новом столбце.</span><span class="sxs-lookup"><span data-stu-id="85901-104">The text contained in the element will be added to a row in the table and stored in the new column.</span></span> <span data-ttu-id="85901-105">**ColumnMapping** нового столбца будет установлено **MappingType.SimpleContent**.</span><span class="sxs-lookup"><span data-stu-id="85901-105">The **ColumnMapping** property of the new column will be set to **MappingType.SimpleContent**.</span></span>  
+# <a name="inferring-element-text"></a><span data-ttu-id="05c61-102">Определение текста элемента</span><span class="sxs-lookup"><span data-stu-id="05c61-102">Inferring Element Text</span></span>
+<span data-ttu-id="05c61-103">Если элемент содержит текст и не имеет дочерних элементов был определен как таблицы, например (элементы с атрибутами) или повторяющимися элементами, новый столбец с именем **TableName_Text** добавляется к таблице, выводящейся для элемента.</span><span class="sxs-lookup"><span data-stu-id="05c61-103">If an element contains text and has no child elements to be inferred as tables (such as elements with attributes or repeated elements), a new column with the name **TableName_Text** will be added to the table that is inferred for the element.</span></span> <span data-ttu-id="05c61-104">Текст, содержащийся в элементе, будет добавлен в строку таблицы и сохранен в новом столбце.</span><span class="sxs-lookup"><span data-stu-id="05c61-104">The text contained in the element will be added to a row in the table and stored in the new column.</span></span> <span data-ttu-id="05c61-105">**ColumnMapping** нового столбца будет установлено **MappingType.SimpleContent**.</span><span class="sxs-lookup"><span data-stu-id="05c61-105">The **ColumnMapping** property of the new column will be set to **MappingType.SimpleContent**.</span></span>  
   
- <span data-ttu-id="85901-106">Например, рассмотрим следующий XML-код:</span><span class="sxs-lookup"><span data-stu-id="85901-106">For example, consider the following XML.</span></span>  
+ <span data-ttu-id="05c61-106">Например, рассмотрим следующий XML-код:</span><span class="sxs-lookup"><span data-stu-id="05c61-106">For example, consider the following XML.</span></span>  
   
 ```xml  
 <DocumentElement>  
@@ -20,17 +20,17 @@ ms.locfileid: "59224966"
 </DocumentElement>  
 ```  
   
- <span data-ttu-id="85901-107">Процесс вывода сформирует таблицу с именем **Element1** с двумя столбцами: **attr1** и **Element1_Text**.</span><span class="sxs-lookup"><span data-stu-id="85901-107">The inference process will produce a table named **Element1** with two columns: **attr1** and **Element1_Text**.</span></span> <span data-ttu-id="85901-108">**ColumnMapping** свойство **attr1** столбца будет присвоено **MappingType.Attribute**.</span><span class="sxs-lookup"><span data-stu-id="85901-108">The **ColumnMapping** property of the **attr1** column will be set to **MappingType.Attribute**.</span></span> <span data-ttu-id="85901-109">**ColumnMapping** свойство **Element1_Text** столбца будет присвоено **MappingType.SimpleContent**.</span><span class="sxs-lookup"><span data-stu-id="85901-109">The **ColumnMapping** property of the **Element1_Text** column will be set to **MappingType.SimpleContent**.</span></span>  
+ <span data-ttu-id="05c61-107">Процесс вывода сформирует таблицу с именем **Element1** с двумя столбцами: **attr1** и **Element1_Text**.</span><span class="sxs-lookup"><span data-stu-id="05c61-107">The inference process will produce a table named **Element1** with two columns: **attr1** and **Element1_Text**.</span></span> <span data-ttu-id="05c61-108">**ColumnMapping** свойство **attr1** столбца будет присвоено **MappingType.Attribute**.</span><span class="sxs-lookup"><span data-stu-id="05c61-108">The **ColumnMapping** property of the **attr1** column will be set to **MappingType.Attribute**.</span></span> <span data-ttu-id="05c61-109">**ColumnMapping** свойство **Element1_Text** столбца будет присвоено **MappingType.SimpleContent**.</span><span class="sxs-lookup"><span data-stu-id="05c61-109">The **ColumnMapping** property of the **Element1_Text** column will be set to **MappingType.SimpleContent**.</span></span>  
   
- <span data-ttu-id="85901-110">**Набор данных:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="85901-110">**DataSet:** DocumentElement</span></span>  
+ <span data-ttu-id="05c61-110">**Набор данных:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="05c61-110">**DataSet:** DocumentElement</span></span>  
   
- <span data-ttu-id="85901-111">**Таблица:** Element1</span><span class="sxs-lookup"><span data-stu-id="85901-111">**Table:** Element1</span></span>  
+ <span data-ttu-id="05c61-111">**Таблица:** Element1</span><span class="sxs-lookup"><span data-stu-id="05c61-111">**Table:** Element1</span></span>  
   
-|<span data-ttu-id="85901-112">attr1</span><span class="sxs-lookup"><span data-stu-id="85901-112">attr1</span></span>|<span data-ttu-id="85901-113">Element1_Text</span><span class="sxs-lookup"><span data-stu-id="85901-113">Element1_Text</span></span>|  
+|<span data-ttu-id="05c61-112">attr1</span><span class="sxs-lookup"><span data-stu-id="05c61-112">attr1</span></span>|<span data-ttu-id="05c61-113">Element1_Text</span><span class="sxs-lookup"><span data-stu-id="05c61-113">Element1_Text</span></span>|  
 |-----------|--------------------|  
-|<span data-ttu-id="85901-114">value1</span><span class="sxs-lookup"><span data-stu-id="85901-114">value1</span></span>|<span data-ttu-id="85901-115">Text1</span><span class="sxs-lookup"><span data-stu-id="85901-115">Text1</span></span>|  
+|<span data-ttu-id="05c61-114">value1</span><span class="sxs-lookup"><span data-stu-id="05c61-114">value1</span></span>|<span data-ttu-id="05c61-115">Text1</span><span class="sxs-lookup"><span data-stu-id="05c61-115">Text1</span></span>|  
   
- <span data-ttu-id="85901-116">Если элемент содержит текст, а также имеет дочерние элементы, содержащие текст, столбец не будет добавлен в таблицу для хранения текста, содержащегося в элементе.</span><span class="sxs-lookup"><span data-stu-id="85901-116">If an element contains text, but also has child elements that contain text, a column will not be added to the table to store the text contained in the element.</span></span> <span data-ttu-id="85901-117">Текст, содержащийся в элементе, пропускается, а текст в дочерних элементах включается в строку таблицы.</span><span class="sxs-lookup"><span data-stu-id="85901-117">The text contained in the element will be ignored, while the text in the child elements is included in a row in the table.</span></span> <span data-ttu-id="85901-118">Например, рассмотрим следующий XML-код:</span><span class="sxs-lookup"><span data-stu-id="85901-118">For example, consider the following XML.</span></span>  
+ <span data-ttu-id="05c61-116">Если элемент содержит текст, а также имеет дочерние элементы, содержащие текст, столбец не будет добавлен в таблицу для хранения текста, содержащегося в элементе.</span><span class="sxs-lookup"><span data-stu-id="05c61-116">If an element contains text, but also has child elements that contain text, a column will not be added to the table to store the text contained in the element.</span></span> <span data-ttu-id="05c61-117">Текст, содержащийся в элементе, пропускается, а текст в дочерних элементах включается в строку таблицы.</span><span class="sxs-lookup"><span data-stu-id="05c61-117">The text contained in the element will be ignored, while the text in the child elements is included in a row in the table.</span></span> <span data-ttu-id="05c61-118">Например, рассмотрим следующий XML-код:</span><span class="sxs-lookup"><span data-stu-id="05c61-118">For example, consider the following XML.</span></span>  
   
 ```xml  
 <Element1>  
@@ -40,21 +40,21 @@ ms.locfileid: "59224966"
 </Element1>  
 ```  
   
- <span data-ttu-id="85901-119">Процесс вывода сформирует таблицу с именем **Element1** с одним столбцом с именем **ChildElement1**.</span><span class="sxs-lookup"><span data-stu-id="85901-119">The inference process will produce a table named **Element1** with one column named **ChildElement1**.</span></span> <span data-ttu-id="85901-120">Текст для **ChildElement1** элемент будет включен в строку в таблице.</span><span class="sxs-lookup"><span data-stu-id="85901-120">The text for the **ChildElement1** element will be included in a row in the table.</span></span> <span data-ttu-id="85901-121">Весь прочий текст будет пропущен.</span><span class="sxs-lookup"><span data-stu-id="85901-121">The other text will be ignored.</span></span> <span data-ttu-id="85901-122">**ColumnMapping** свойство **ChildElement1** столбца будет присвоено **MappingType.Element**.</span><span class="sxs-lookup"><span data-stu-id="85901-122">The **ColumnMapping** property of the **ChildElement1** column will be set to **MappingType.Element**.</span></span>  
+ <span data-ttu-id="05c61-119">Процесс вывода сформирует таблицу с именем **Element1** с одним столбцом с именем **ChildElement1**.</span><span class="sxs-lookup"><span data-stu-id="05c61-119">The inference process will produce a table named **Element1** with one column named **ChildElement1**.</span></span> <span data-ttu-id="05c61-120">Текст для **ChildElement1** элемент будет включен в строку в таблице.</span><span class="sxs-lookup"><span data-stu-id="05c61-120">The text for the **ChildElement1** element will be included in a row in the table.</span></span> <span data-ttu-id="05c61-121">Весь прочий текст будет пропущен.</span><span class="sxs-lookup"><span data-stu-id="05c61-121">The other text will be ignored.</span></span> <span data-ttu-id="05c61-122">**ColumnMapping** свойство **ChildElement1** столбца будет присвоено **MappingType.Element**.</span><span class="sxs-lookup"><span data-stu-id="05c61-122">The **ColumnMapping** property of the **ChildElement1** column will be set to **MappingType.Element**.</span></span>  
   
- <span data-ttu-id="85901-123">**Набор данных:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="85901-123">**DataSet:** DocumentElement</span></span>  
+ <span data-ttu-id="05c61-123">**Набор данных:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="05c61-123">**DataSet:** DocumentElement</span></span>  
   
- <span data-ttu-id="85901-124">**Таблица:** Element1</span><span class="sxs-lookup"><span data-stu-id="85901-124">**Table:** Element1</span></span>  
+ <span data-ttu-id="05c61-124">**Таблица:** Element1</span><span class="sxs-lookup"><span data-stu-id="05c61-124">**Table:** Element1</span></span>  
   
-|<span data-ttu-id="85901-125">ChildElement1</span><span class="sxs-lookup"><span data-stu-id="85901-125">ChildElement1</span></span>|  
+|<span data-ttu-id="05c61-125">ChildElement1</span><span class="sxs-lookup"><span data-stu-id="05c61-125">ChildElement1</span></span>|  
 |-------------------|  
-|<span data-ttu-id="85901-126">Text2</span><span class="sxs-lookup"><span data-stu-id="85901-126">Text2</span></span>|  
+|<span data-ttu-id="05c61-126">Text2</span><span class="sxs-lookup"><span data-stu-id="05c61-126">Text2</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="85901-127">См. также</span><span class="sxs-lookup"><span data-stu-id="85901-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="05c61-127">См. также</span><span class="sxs-lookup"><span data-stu-id="05c61-127">See also</span></span>
 
-- [<span data-ttu-id="85901-128">Определение реляционной структуры DataSet из XML</span><span class="sxs-lookup"><span data-stu-id="85901-128">Inferring DataSet Relational Structure from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [<span data-ttu-id="85901-129">Загрузка DataSet из XML</span><span class="sxs-lookup"><span data-stu-id="85901-129">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [<span data-ttu-id="85901-130">Загрузка сведений о схеме DataSet из XML</span><span class="sxs-lookup"><span data-stu-id="85901-130">Loading DataSet Schema Information from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [<span data-ttu-id="85901-131">Использование XML в наборах данных</span><span class="sxs-lookup"><span data-stu-id="85901-131">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [<span data-ttu-id="85901-132">Наборы данных, таблицы данных и объекты DataView</span><span class="sxs-lookup"><span data-stu-id="85901-132">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [<span data-ttu-id="85901-133">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="85901-133">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="05c61-128">Определение реляционной структуры DataSet из XML</span><span class="sxs-lookup"><span data-stu-id="05c61-128">Inferring DataSet Relational Structure from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
+- [<span data-ttu-id="05c61-129">Загрузка DataSet из XML</span><span class="sxs-lookup"><span data-stu-id="05c61-129">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [<span data-ttu-id="05c61-130">Загрузка сведений о схеме DataSet из XML</span><span class="sxs-lookup"><span data-stu-id="05c61-130">Loading DataSet Schema Information from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
+- [<span data-ttu-id="05c61-131">Использование XML в наборах данных</span><span class="sxs-lookup"><span data-stu-id="05c61-131">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [<span data-ttu-id="05c61-132">Наборы данных, таблицы данных и объекты DataView</span><span class="sxs-lookup"><span data-stu-id="05c61-132">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [<span data-ttu-id="05c61-133">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="05c61-133">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

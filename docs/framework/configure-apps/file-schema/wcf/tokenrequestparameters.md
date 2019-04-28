@@ -3,21 +3,21 @@ title: <tokenRequestParameters>
 ms.date: 03/30/2017
 ms.assetid: 1fc2b90c-a61f-4337-ac4c-f341e596a781
 ms.openlocfilehash: eb7276c583e0842bf461d0157cb41b3930863247
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757837"
 ---
-# <a name="tokenrequestparameters"></a><span data-ttu-id="01b48-101">\<tokenRequestParameters></span><span class="sxs-lookup"><span data-stu-id="01b48-101">\<tokenRequestParameters></span></span>
-<span data-ttu-id="01b48-102">Данный элемент конфигурации содержит дочерние элементы, которые могут использоваться для указания дополнительных элементов XML, которые будут отправляться в теле сообщения в службу маркеров безопасности (STS) при запросе маркера.</span><span class="sxs-lookup"><span data-stu-id="01b48-102">This configuration element contains child elements that can be used to specify additional XML elements to be sent in the message body to the Security Token Service when requesting a token.</span></span>  
+# <a name="tokenrequestparameters"></a><span data-ttu-id="12cb7-101">\<tokenRequestParameters></span><span class="sxs-lookup"><span data-stu-id="12cb7-101">\<tokenRequestParameters></span></span>
+<span data-ttu-id="12cb7-102">Данный элемент конфигурации содержит дочерние элементы, которые могут использоваться для указания дополнительных элементов XML, которые будут отправляться в теле сообщения в службу маркеров безопасности (STS) при запросе маркера.</span><span class="sxs-lookup"><span data-stu-id="12cb7-102">This configuration element contains child elements that can be used to specify additional XML elements to be sent in the message body to the Security Token Service when requesting a token.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01b48-103">См. также</span><span class="sxs-lookup"><span data-stu-id="01b48-103">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="12cb7-103">См. также</span><span class="sxs-lookup"><span data-stu-id="12cb7-103">See also</span></span>
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.TokenRequestParameters%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.TokenRequestParameters%2A>
-- [<span data-ttu-id="01b48-104">Идентификация и проверка подлинности службы</span><span class="sxs-lookup"><span data-stu-id="01b48-104">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [<span data-ttu-id="01b48-105">Федерация и выданные маркеры</span><span class="sxs-lookup"><span data-stu-id="01b48-105">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [<span data-ttu-id="01b48-106">Возможности безопасности при использовании пользовательских привязок</span><span class="sxs-lookup"><span data-stu-id="01b48-106">Security Capabilities with Custom Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [<span data-ttu-id="01b48-107">Федерация и выданные маркеры</span><span class="sxs-lookup"><span data-stu-id="01b48-107">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [<span data-ttu-id="01b48-108">Привязки</span><span class="sxs-lookup"><span data-stu-id="01b48-108">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
+- [<span data-ttu-id="12cb7-104">Идентификация и проверка подлинности службы</span><span class="sxs-lookup"><span data-stu-id="12cb7-104">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [<span data-ttu-id="12cb7-105">Федерация и выданные маркеры</span><span class="sxs-lookup"><span data-stu-id="12cb7-105">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [<span data-ttu-id="12cb7-106">Возможности безопасности при использовании пользовательских привязок</span><span class="sxs-lookup"><span data-stu-id="12cb7-106">Security Capabilities with Custom Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [<span data-ttu-id="12cb7-107">Федерация и выданные маркеры</span><span class="sxs-lookup"><span data-stu-id="12cb7-107">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [<span data-ttu-id="12cb7-108">Привязки</span><span class="sxs-lookup"><span data-stu-id="12cb7-108">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)

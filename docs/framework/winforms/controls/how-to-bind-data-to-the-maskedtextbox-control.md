@@ -11,28 +11,28 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
 ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761381"
 ---
-# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a><span data-ttu-id="32398-102">Практическое руководство. Связывание данных с элементом управления MaskedTextBox</span><span class="sxs-lookup"><span data-stu-id="32398-102">How to: Bind Data to the MaskedTextBox Control</span></span>
-<span data-ttu-id="32398-103">Вы можете привязывать данные к <xref:System.Windows.Forms.MaskedTextBox> управления так же, как и любым другим элементом управления Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="32398-103">You can bind data to a <xref:System.Windows.Forms.MaskedTextBox> control just as you can to any other Windows Forms control.</span></span> <span data-ttu-id="32398-104">Тем не менее если формат данных в базе данных не соответствует формату, ожидаемому определения маски, необходимо будет изменять формат данных.</span><span class="sxs-lookup"><span data-stu-id="32398-104">However, if the format of your data in the database does not match the format expected by your mask definition, you will need to reformat the data.</span></span> <span data-ttu-id="32398-105">Ниже описано, как это сделать с помощью <xref:System.Windows.Forms.Binding.Format> и <xref:System.Windows.Forms.Binding.Parse> события <xref:System.Windows.Forms.Binding> класс для отображения отдельных телефонный номер и телефон расширение поля базы данных, одного изменяемого поля.</span><span class="sxs-lookup"><span data-stu-id="32398-105">The following procedure demonstrates how to do this using the <xref:System.Windows.Forms.Binding.Format> and <xref:System.Windows.Forms.Binding.Parse> events of the <xref:System.Windows.Forms.Binding> class to display separate phone number and phone extension database fields as a single editable field.</span></span>  
+# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a><span data-ttu-id="419c6-102">Практическое руководство. Связывание данных с элементом управления MaskedTextBox</span><span class="sxs-lookup"><span data-stu-id="419c6-102">How to: Bind Data to the MaskedTextBox Control</span></span>
+<span data-ttu-id="419c6-103">Вы можете привязывать данные к <xref:System.Windows.Forms.MaskedTextBox> управления так же, как и любым другим элементом управления Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="419c6-103">You can bind data to a <xref:System.Windows.Forms.MaskedTextBox> control just as you can to any other Windows Forms control.</span></span> <span data-ttu-id="419c6-104">Тем не менее если формат данных в базе данных не соответствует формату, ожидаемому определения маски, необходимо будет изменять формат данных.</span><span class="sxs-lookup"><span data-stu-id="419c6-104">However, if the format of your data in the database does not match the format expected by your mask definition, you will need to reformat the data.</span></span> <span data-ttu-id="419c6-105">Ниже описано, как это сделать с помощью <xref:System.Windows.Forms.Binding.Format> и <xref:System.Windows.Forms.Binding.Parse> события <xref:System.Windows.Forms.Binding> класс для отображения отдельных телефонный номер и телефон расширение поля базы данных, одного изменяемого поля.</span><span class="sxs-lookup"><span data-stu-id="419c6-105">The following procedure demonstrates how to do this using the <xref:System.Windows.Forms.Binding.Format> and <xref:System.Windows.Forms.Binding.Parse> events of the <xref:System.Windows.Forms.Binding> class to display separate phone number and phone extension database fields as a single editable field.</span></span>  
   
- <span data-ttu-id="32398-106">Следующая процедура требует наличия доступа к базе данных SQL Server с установленным образец базы данных "Борей".</span><span class="sxs-lookup"><span data-stu-id="32398-106">The following procedure requires that you have access to a SQL Server database with the Northwind sample database installed.</span></span>  
+ <span data-ttu-id="419c6-106">Следующая процедура требует наличия доступа к базе данных SQL Server с установленным образец базы данных "Борей".</span><span class="sxs-lookup"><span data-stu-id="419c6-106">The following procedure requires that you have access to a SQL Server database with the Northwind sample database installed.</span></span>  
   
-### <a name="to-bind-data-to-a-maskedtextbox-control"></a><span data-ttu-id="32398-107">Привязка данных к элементу управления MaskedTextBox</span><span class="sxs-lookup"><span data-stu-id="32398-107">To bind data to a MaskedTextBox control</span></span>  
+### <a name="to-bind-data-to-a-maskedtextbox-control"></a><span data-ttu-id="419c6-107">Привязка данных к элементу управления MaskedTextBox</span><span class="sxs-lookup"><span data-stu-id="419c6-107">To bind data to a MaskedTextBox control</span></span>  
   
-1. <span data-ttu-id="32398-108">Создайте проект Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="32398-108">Create a new Windows Forms project.</span></span>  
+1. <span data-ttu-id="419c6-108">Создайте проект Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="419c6-108">Create a new Windows Forms project.</span></span>  
   
-2. <span data-ttu-id="32398-109">Перетащите два <xref:System.Windows.Forms.TextBox> элементов управления на форму; присвойте им названия `FirstName` и `LastName`.</span><span class="sxs-lookup"><span data-stu-id="32398-109">Drag two <xref:System.Windows.Forms.TextBox> controls onto your form; name them `FirstName` and `LastName`.</span></span>  
+2. <span data-ttu-id="419c6-109">Перетащите два <xref:System.Windows.Forms.TextBox> элементов управления на форму; присвойте им названия `FirstName` и `LastName`.</span><span class="sxs-lookup"><span data-stu-id="419c6-109">Drag two <xref:System.Windows.Forms.TextBox> controls onto your form; name them `FirstName` and `LastName`.</span></span>  
   
-3. <span data-ttu-id="32398-110">Перетащите <xref:System.Windows.Forms.MaskedTextBox> управления на форму, назовите его `PhoneMask`.</span><span class="sxs-lookup"><span data-stu-id="32398-110">Drag a <xref:System.Windows.Forms.MaskedTextBox> control onto your form; name it `PhoneMask`.</span></span>  
+3. <span data-ttu-id="419c6-110">Перетащите <xref:System.Windows.Forms.MaskedTextBox> управления на форму, назовите его `PhoneMask`.</span><span class="sxs-lookup"><span data-stu-id="419c6-110">Drag a <xref:System.Windows.Forms.MaskedTextBox> control onto your form; name it `PhoneMask`.</span></span>  
   
-4. <span data-ttu-id="32398-111">Задайте <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> свойство `PhoneMask` для `(000) 000-0000 x9999`.</span><span class="sxs-lookup"><span data-stu-id="32398-111">Set the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property of `PhoneMask` to `(000) 000-0000 x9999`.</span></span>  
+4. <span data-ttu-id="419c6-111">Задайте <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> свойство `PhoneMask` для `(000) 000-0000 x9999`.</span><span class="sxs-lookup"><span data-stu-id="419c6-111">Set the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property of `PhoneMask` to `(000) 000-0000 x9999`.</span></span>  
   
-5. <span data-ttu-id="32398-112">Добавьте следующее пространство имен импортируется в форму.</span><span class="sxs-lookup"><span data-stu-id="32398-112">Add the following namespace imports to the form.</span></span>  
+5. <span data-ttu-id="419c6-112">Добавьте следующее пространство имен импортируется в форму.</span><span class="sxs-lookup"><span data-stu-id="419c6-112">Add the following namespace imports to the form.</span></span>  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -42,7 +42,7 @@ ms.locfileid: "59342236"
     Imports System.Data.SqlClient  
     ```  
   
-6. <span data-ttu-id="32398-113">Щелкните форму правой кнопкой мыши и выберите **Просмотр кода**.</span><span class="sxs-lookup"><span data-stu-id="32398-113">Right-click the form and choose **View Code**.</span></span> <span data-ttu-id="32398-114">Этот код в любом помещается в класс.</span><span class="sxs-lookup"><span data-stu-id="32398-114">Place this code anywhere in your form class.</span></span>  
+6. <span data-ttu-id="419c6-113">Щелкните форму правой кнопкой мыши и выберите **Просмотр кода**.</span><span class="sxs-lookup"><span data-stu-id="419c6-113">Right-click the form and choose **View Code**.</span></span> <span data-ttu-id="419c6-114">Этот код в любом помещается в класс.</span><span class="sxs-lookup"><span data-stu-id="419c6-114">Place this code anywhere in your form class.</span></span>  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -136,7 +136,7 @@ ms.locfileid: "59342236"
     End Sub  
     ```  
   
-7. <span data-ttu-id="32398-115">Добавьте обработчики событий для <xref:System.Windows.Forms.Binding.Format> и <xref:System.Windows.Forms.Binding.Parse> события для объединения и отделения `PhoneNumber` и `Extension` поля из границы <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="32398-115">Add event handlers for the <xref:System.Windows.Forms.Binding.Format> and <xref:System.Windows.Forms.Binding.Parse> events to combine and separate the `PhoneNumber` and `Extension` fields from the bound <xref:System.Data.DataSet>.</span></span>  
+7. <span data-ttu-id="419c6-115">Добавьте обработчики событий для <xref:System.Windows.Forms.Binding.Format> и <xref:System.Windows.Forms.Binding.Parse> события для объединения и отделения `PhoneNumber` и `Extension` поля из границы <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="419c6-115">Add event handlers for the <xref:System.Windows.Forms.Binding.Format> and <xref:System.Windows.Forms.Binding.Parse> events to combine and separate the `PhoneNumber` and `Extension` fields from the bound <xref:System.Data.DataSet>.</span></span>  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -204,7 +204,7 @@ ms.locfileid: "59342236"
     End Sub  
     ```  
   
-8. <span data-ttu-id="32398-116">Добавьте два <xref:System.Windows.Forms.Button> элементов управления в форму.</span><span class="sxs-lookup"><span data-stu-id="32398-116">Add two <xref:System.Windows.Forms.Button> controls to the form.</span></span> <span data-ttu-id="32398-117">Присвойте им названия `previousButton` и `nextButton`.</span><span class="sxs-lookup"><span data-stu-id="32398-117">Name them `previousButton` and `nextButton`.</span></span> <span data-ttu-id="32398-118">Дважды щелкните каждую кнопку, чтобы добавить <xref:System.Windows.Forms.Control.Click> обработчик событий и заполните обработчики событий, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="32398-118">Double-click each button to add a <xref:System.Windows.Forms.Control.Click> event handler, and fill in the event handlers as shown in the following code example.</span></span>  
+8. <span data-ttu-id="419c6-116">Добавьте два <xref:System.Windows.Forms.Button> элементов управления в форму.</span><span class="sxs-lookup"><span data-stu-id="419c6-116">Add two <xref:System.Windows.Forms.Button> controls to the form.</span></span> <span data-ttu-id="419c6-117">Присвойте им названия `previousButton` и `nextButton`.</span><span class="sxs-lookup"><span data-stu-id="419c6-117">Name them `previousButton` and `nextButton`.</span></span> <span data-ttu-id="419c6-118">Дважды щелкните каждую кнопку, чтобы добавить <xref:System.Windows.Forms.Control.Click> обработчик событий и заполните обработчики событий, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="419c6-118">Double-click each button to add a <xref:System.Windows.Forms.Control.Click> event handler, and fill in the event handlers as shown in the following code example.</span></span>  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  
@@ -228,27 +228,27 @@ ms.locfileid: "59342236"
     End Sub  
     ```  
   
-9. <span data-ttu-id="32398-119">Выполните образец.</span><span class="sxs-lookup"><span data-stu-id="32398-119">Run the sample.</span></span> <span data-ttu-id="32398-120">Изменение данных и использовать **Назад** и **Далее** кнопки, чтобы убедиться, что данные правильно сохранены <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="32398-120">Edit the data, and use the **Previous** and **Next** buttons to see that the data is properly persisted to the <xref:System.Data.DataSet>.</span></span>  
+9. <span data-ttu-id="419c6-119">Выполните образец.</span><span class="sxs-lookup"><span data-stu-id="419c6-119">Run the sample.</span></span> <span data-ttu-id="419c6-120">Изменение данных и использовать **Назад** и **Далее** кнопки, чтобы убедиться, что данные правильно сохранены <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="419c6-120">Edit the data, and use the **Previous** and **Next** buttons to see that the data is properly persisted to the <xref:System.Data.DataSet>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="32398-121">Пример</span><span class="sxs-lookup"><span data-stu-id="32398-121">Example</span></span>  
- <span data-ttu-id="32398-122">В следующем примере кода приведен полный код, которые являются результатом выполнения описанной процедуры.</span><span class="sxs-lookup"><span data-stu-id="32398-122">The following code example is the full code listing that results from completing the previous procedure.</span></span>  
+## <a name="example"></a><span data-ttu-id="419c6-121">Пример</span><span class="sxs-lookup"><span data-stu-id="419c6-121">Example</span></span>  
+ <span data-ttu-id="419c6-122">В следующем примере кода приведен полный код, которые являются результатом выполнения описанной процедуры.</span><span class="sxs-lookup"><span data-stu-id="419c6-122">The following code example is the full code listing that results from completing the previous procedure.</span></span>  
   
  [!code-cpp[MaskedTextBoxData#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MaskedTextBoxData/cpp/form1.cpp#1)]
  [!code-csharp[MaskedTextBoxData#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MaskedTextBoxData/CS/form1.cs#1)]
  [!code-vb[MaskedTextBoxData#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MaskedTextBoxData/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="32398-123">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="32398-123">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="419c6-123">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="419c6-123">Compiling the Code</span></span>  
   
--   <span data-ttu-id="32398-124">Создание визуального элемента C# проект или Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="32398-124">Create a Visual C# or Visual Basic project.</span></span>  
+- <span data-ttu-id="419c6-124">Создание визуального элемента C# проект или Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="419c6-124">Create a Visual C# or Visual Basic project.</span></span>  
   
--   <span data-ttu-id="32398-125">Добавить <xref:System.Windows.Forms.TextBox> и <xref:System.Windows.Forms.MaskedTextBox> в форму элементы управления, как описано в предыдущей процедуре.</span><span class="sxs-lookup"><span data-stu-id="32398-125">Add the <xref:System.Windows.Forms.TextBox> and <xref:System.Windows.Forms.MaskedTextBox> controls to the form, as described in the previous procedure.</span></span>  
+- <span data-ttu-id="419c6-125">Добавить <xref:System.Windows.Forms.TextBox> и <xref:System.Windows.Forms.MaskedTextBox> в форму элементы управления, как описано в предыдущей процедуре.</span><span class="sxs-lookup"><span data-stu-id="419c6-125">Add the <xref:System.Windows.Forms.TextBox> and <xref:System.Windows.Forms.MaskedTextBox> controls to the form, as described in the previous procedure.</span></span>  
   
--   <span data-ttu-id="32398-126">Откройте файл исходного кода для формы по умолчанию проекта.</span><span class="sxs-lookup"><span data-stu-id="32398-126">Open the source code file for the project's default form.</span></span>  
+- <span data-ttu-id="419c6-126">Откройте файл исходного кода для формы по умолчанию проекта.</span><span class="sxs-lookup"><span data-stu-id="419c6-126">Open the source code file for the project's default form.</span></span>  
   
--   <span data-ttu-id="32398-127">Замените исходный код в этот файл код, приведенный в предыдущем разделе «Код».</span><span class="sxs-lookup"><span data-stu-id="32398-127">Replace the source code in this file with the code listed in the previous "Code" section.</span></span>  
+- <span data-ttu-id="419c6-127">Замените исходный код в этот файл код, приведенный в предыдущем разделе «Код».</span><span class="sxs-lookup"><span data-stu-id="419c6-127">Replace the source code in this file with the code listed in the previous "Code" section.</span></span>  
   
--   <span data-ttu-id="32398-128">Скомпилируйте приложение.</span><span class="sxs-lookup"><span data-stu-id="32398-128">Compile the application.</span></span>  
+- <span data-ttu-id="419c6-128">Скомпилируйте приложение.</span><span class="sxs-lookup"><span data-stu-id="419c6-128">Compile the application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="32398-129">См. также</span><span class="sxs-lookup"><span data-stu-id="32398-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="419c6-129">См. также</span><span class="sxs-lookup"><span data-stu-id="419c6-129">See also</span></span>
 
-- [<span data-ttu-id="32398-130">Пошаговое руководство: Работа с элементом управления MaskedTextBox</span><span class="sxs-lookup"><span data-stu-id="32398-130">Walkthrough: Working with the MaskedTextBox Control</span></span>](walkthrough-working-with-the-maskedtextbox-control.md)
+- [<span data-ttu-id="419c6-130">Пошаговое руководство: Работа с элементом управления MaskedTextBox</span><span class="sxs-lookup"><span data-stu-id="419c6-130">Walkthrough: Working with the MaskedTextBox Control</span></span>](walkthrough-working-with-the-maskedtextbox-control.md)

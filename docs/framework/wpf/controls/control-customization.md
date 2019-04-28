@@ -8,22 +8,22 @@ helpviewer_keywords:
 - controls [WPF], customization
 ms.assetid: a3d9930e-5597-470e-a636-dcf65eac500b
 ms.openlocfilehash: b70a6654e5c3722ad1ef1d926ee3a441d24d9e68
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017700"
 ---
-# <a name="control-customization"></a><span data-ttu-id="0344f-102">Настройка элементов управления</span><span class="sxs-lookup"><span data-stu-id="0344f-102">Control Customization</span></span>
-<span data-ttu-id="0344f-103">Эта категория охватывает различные базовые классы, интерфейсы и другие элементы и основные понятия, используемые при создании полнофункциональных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0344f-103">This category covers the various base classes, interfaces and other elements and concepts used in creating a fully functional [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] control.</span></span>  
+# <a name="control-customization"></a><span data-ttu-id="b8f1c-102">Настройка элементов управления</span><span class="sxs-lookup"><span data-stu-id="b8f1c-102">Control Customization</span></span>
+<span data-ttu-id="b8f1c-103">Эта категория охватывает различные базовые классы, интерфейсы и другие элементы и основные понятия, используемые при создании полнофункциональных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] элемента управления.</span><span class="sxs-lookup"><span data-stu-id="b8f1c-103">This category covers the various base classes, interfaces and other elements and concepts used in creating a fully functional [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0344f-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="0344f-104">In This Section</span></span>  
- [<span data-ttu-id="0344f-105">Общие сведения о разработке элементов управления</span><span class="sxs-lookup"><span data-stu-id="0344f-105">Control Authoring Overview</span></span>](control-authoring-overview.md)  
- [<span data-ttu-id="0344f-106">Рекомендации по разработке элементов управления с возможностью использования стилей</span><span class="sxs-lookup"><span data-stu-id="0344f-106">Guidelines for Designing Stylable Controls</span></span>](guidelines-for-designing-stylable-controls.md)  
- [<span data-ttu-id="0344f-107">Декоративные элементы</span><span class="sxs-lookup"><span data-stu-id="0344f-107">Adorners</span></span>](adorners.md)  
- [<span data-ttu-id="0344f-108">Стили и шаблоны элемента управления</span><span class="sxs-lookup"><span data-stu-id="0344f-108">Control Styles and Templates</span></span>](control-styles-and-templates.md)  
- [<span data-ttu-id="0344f-109">Модель автоматизации пользовательского интерфейса пользовательского элемента управления WPF</span><span class="sxs-lookup"><span data-stu-id="0344f-109">UI Automation of a WPF Custom Control</span></span>](ui-automation-of-a-wpf-custom-control.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b8f1c-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="b8f1c-104">In This Section</span></span>  
+ [<span data-ttu-id="b8f1c-105">Общие сведения о разработке элементов управления</span><span class="sxs-lookup"><span data-stu-id="b8f1c-105">Control Authoring Overview</span></span>](control-authoring-overview.md)  
+ [<span data-ttu-id="b8f1c-106">Рекомендации по разработке элементов управления с возможностью использования стилей</span><span class="sxs-lookup"><span data-stu-id="b8f1c-106">Guidelines for Designing Stylable Controls</span></span>](guidelines-for-designing-stylable-controls.md)  
+ [<span data-ttu-id="b8f1c-107">Декоративные элементы</span><span class="sxs-lookup"><span data-stu-id="b8f1c-107">Adorners</span></span>](adorners.md)  
+ [<span data-ttu-id="b8f1c-108">Стили и шаблоны элемента управления</span><span class="sxs-lookup"><span data-stu-id="b8f1c-108">Control Styles and Templates</span></span>](control-styles-and-templates.md)  
+ [<span data-ttu-id="b8f1c-109">Модель автоматизации пользовательского интерфейса пользовательского элемента управления WPF</span><span class="sxs-lookup"><span data-stu-id="b8f1c-109">UI Automation of a WPF Custom Control</span></span>](ui-automation-of-a-wpf-custom-control.md)  
   
-## <a name="see-also"></a><span data-ttu-id="0344f-110">См. также</span><span class="sxs-lookup"><span data-stu-id="0344f-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b8f1c-110">См. также</span><span class="sxs-lookup"><span data-stu-id="b8f1c-110">See also</span></span>
 
-- [<span data-ttu-id="0344f-111">Стилизация и использование шаблонов</span><span class="sxs-lookup"><span data-stu-id="0344f-111">Styling and Templating</span></span>](styling-and-templating.md)
+- [<span data-ttu-id="b8f1c-111">Стилизация и использование шаблонов</span><span class="sxs-lookup"><span data-stu-id="b8f1c-111">Styling and Templating</span></span>](styling-and-templating.md)

@@ -11,21 +11,21 @@ helpviewer_keywords:
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
 ms.openlocfilehash: 91ee4bf9242df822890b0a171061f375a3b24cbc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803874"
 ---
-# <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a><span data-ttu-id="20b2a-102">Типы данных параметров-типов не могут быть определены из этих аргументов</span><span class="sxs-lookup"><span data-stu-id="20b2a-102">Data type(s) of the type parameter(s) cannot be inferred from these arguments</span></span>
-<span data-ttu-id="20b2a-103">Типы данных параметров типа не могут выводиться из этих аргументов.</span><span class="sxs-lookup"><span data-stu-id="20b2a-103">Data type(s) of the type parameter(s) cannot be inferred from these arguments.</span></span> <span data-ttu-id="20b2a-104">Эту ошибку может исправить явное указание типов данных.</span><span class="sxs-lookup"><span data-stu-id="20b2a-104">Specifying the data type(s) explicitly might correct this error.</span></span>  
+# <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a><span data-ttu-id="e2dee-102">Типы данных параметров-типов не могут быть определены из этих аргументов</span><span class="sxs-lookup"><span data-stu-id="e2dee-102">Data type(s) of the type parameter(s) cannot be inferred from these arguments</span></span>
+<span data-ttu-id="e2dee-103">Типы данных параметров типа не могут выводиться из этих аргументов.</span><span class="sxs-lookup"><span data-stu-id="e2dee-103">Data type(s) of the type parameter(s) cannot be inferred from these arguments.</span></span> <span data-ttu-id="e2dee-104">Эту ошибку может исправить явное указание типов данных.</span><span class="sxs-lookup"><span data-stu-id="e2dee-104">Specifying the data type(s) explicitly might correct this error.</span></span>  
   
- <span data-ttu-id="20b2a-105">Эта ошибка возникает при неудачном разрешении перегрузки.</span><span class="sxs-lookup"><span data-stu-id="20b2a-105">This error occurs when overload resolution has failed.</span></span> <span data-ttu-id="20b2a-106">Ошибка появляется в виде сообщения, в котором указывается, почему была исключена определенная потенциальная перегрузка.</span><span class="sxs-lookup"><span data-stu-id="20b2a-106">It occurs as a subordinate message that states why a particular overload candidate has been eliminated.</span></span> <span data-ttu-id="20b2a-107">Сообщение об ошибке объясняется, что компилятор не может использовать определение типа для поиска типов данных для параметров типа.</span><span class="sxs-lookup"><span data-stu-id="20b2a-107">The error message explains that the compiler cannot use type inference to find data types for the type parameters.</span></span>  
+ <span data-ttu-id="e2dee-105">Эта ошибка возникает при неудачном разрешении перегрузки.</span><span class="sxs-lookup"><span data-stu-id="e2dee-105">This error occurs when overload resolution has failed.</span></span> <span data-ttu-id="e2dee-106">Ошибка появляется в виде сообщения, в котором указывается, почему была исключена определенная потенциальная перегрузка.</span><span class="sxs-lookup"><span data-stu-id="e2dee-106">It occurs as a subordinate message that states why a particular overload candidate has been eliminated.</span></span> <span data-ttu-id="e2dee-107">Сообщение об ошибке объясняется, что компилятор не может использовать определение типа для поиска типов данных для параметров типа.</span><span class="sxs-lookup"><span data-stu-id="e2dee-107">The error message explains that the compiler cannot use type inference to find data types for the type parameters.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="20b2a-108">Когда указание аргументов является обязательным (например, в операторах выражений запросов), это сообщение об ошибке появляется без второй фразы.</span><span class="sxs-lookup"><span data-stu-id="20b2a-108">When specifying arguments is not an option (for example, for query operators in query expressions), the error message appears without the second sentence.</span></span>  
+>  <span data-ttu-id="e2dee-108">Когда указание аргументов является обязательным (например, в операторах выражений запросов), это сообщение об ошибке появляется без второй фразы.</span><span class="sxs-lookup"><span data-stu-id="e2dee-108">When specifying arguments is not an option (for example, for query operators in query expressions), the error message appears without the second sentence.</span></span>  
   
- <span data-ttu-id="20b2a-109">Эта ошибка демонстрируется в приведенном ниже коде.</span><span class="sxs-lookup"><span data-stu-id="20b2a-109">The following code demonstrates the error.</span></span>  
+ <span data-ttu-id="e2dee-109">Эта ошибка демонстрируется в приведенном ниже коде.</span><span class="sxs-lookup"><span data-stu-id="e2dee-109">The following code demonstrates the error.</span></span>  
   
 ```vb  
 Module Module1  
@@ -51,14 +51,14 @@ Interface InterfaceExample(Of T)
 End Interface  
 ```  
   
- <span data-ttu-id="20b2a-110">**Идентификатор ошибки:** BC36647 и BC36644</span><span class="sxs-lookup"><span data-stu-id="20b2a-110">**Error ID:** BC36647 and BC36644</span></span>  
+ <span data-ttu-id="e2dee-110">**Идентификатор ошибки:** BC36647 и BC36644</span><span class="sxs-lookup"><span data-stu-id="e2dee-110">**Error ID:** BC36647 and BC36644</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="20b2a-111">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="20b2a-111">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e2dee-111">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="e2dee-111">To correct this error</span></span>  
   
--   <span data-ttu-id="20b2a-112">Попробуйте указать тип данных для параметра или параметров типа, вместо того чтобы полагаться на определение типа.</span><span class="sxs-lookup"><span data-stu-id="20b2a-112">You may be able to specify a data type for the type parameter or parameters instead of relying on type inference.</span></span>  
+- <span data-ttu-id="e2dee-112">Попробуйте указать тип данных для параметра или параметров типа, вместо того чтобы полагаться на определение типа.</span><span class="sxs-lookup"><span data-stu-id="e2dee-112">You may be able to specify a data type for the type parameter or parameters instead of relying on type inference.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="20b2a-113">См. также</span><span class="sxs-lookup"><span data-stu-id="20b2a-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2dee-113">См. также</span><span class="sxs-lookup"><span data-stu-id="e2dee-113">See also</span></span>
 
-- [<span data-ttu-id="20b2a-114">Неявное преобразование делегата</span><span class="sxs-lookup"><span data-stu-id="20b2a-114">Relaxed Delegate Conversion</span></span>](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [<span data-ttu-id="20b2a-115">Generic Procedures in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="20b2a-115">Generic Procedures in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
-- [<span data-ttu-id="20b2a-116">Преобразование типов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="20b2a-116">Type Conversions in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [<span data-ttu-id="e2dee-114">Неявное преобразование делегата</span><span class="sxs-lookup"><span data-stu-id="e2dee-114">Relaxed Delegate Conversion</span></span>](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [<span data-ttu-id="e2dee-115">Generic Procedures in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e2dee-115">Generic Procedures in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [<span data-ttu-id="e2dee-116">Преобразование типов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e2dee-116">Type Conversions in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
