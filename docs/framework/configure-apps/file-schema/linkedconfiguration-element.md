@@ -1,5 +1,5 @@
 ---
-title: <linkedConfiguration> - элемент
+title: Элемент <linkedConfiguration>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/assemblyBinding/linkedConfiguration
@@ -12,11 +12,11 @@ helpviewer_keywords:
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 ms.openlocfilehash: 909ee7cbb7cd31cf213f305b23237cb69e295882
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674653"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration > элемент
 
@@ -34,19 +34,19 @@ ms.locfileid: "55284613"
 
 ## <a name="attribute"></a>Атрибут
 
-|           | Описание: |
+|           | Описание |
 | --------- | ----------- |
 | **href**  | Обязательный атрибут.<br><br>URL-адрес файла конфигурации для включения. Единственным форматом, поддерживаемым для **href** атрибут `file://`. Поддерживаются локальные файлы и файлы UNC. |
 
 ## <a name="parent-element"></a>Родительский элемент
 
-|     | Описание: |
+|     | Описание |
 | --- | ----------- |
 | [**\<assemblyBinding >** элемент](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Определяет политику привязки сборок на уровне конфигурации. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-Нет
+None
 
 ## <a name="remarks"></a>Примечания
 

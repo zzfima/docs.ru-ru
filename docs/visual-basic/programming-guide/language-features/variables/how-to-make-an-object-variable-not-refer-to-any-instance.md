@@ -6,18 +6,18 @@ helpviewer_keywords:
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
 ms.openlocfilehash: 373d4ae84c44b212ad02b0b4266af75921e40423
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769061"
 ---
 # <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>Практическое руководство. Сделать переменная объекта ссылается на любой экземпляр (Visual Basic)
 При установке для него можно разорвать связь объектной переменной с любым экземпляром объекта [ничего не](../../../../visual-basic/language-reference/nothing.md).  
   
 ### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>Чтобы разорвать связь с любым экземпляром объекта переменной объекта  
   
--   Присвойте переменной `Nothing` в операторе присваивания.  
+- Присвойте переменной `Nothing` в операторе присваивания.  
   
     ```  
     ' Assume account is a defined class  

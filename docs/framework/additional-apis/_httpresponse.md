@@ -1,5 +1,5 @@
 ---
-title: Поле HttpWebRequest._HttpResponse
+title: HttpWebRequest._HttpResponse Field
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -13,15 +13,15 @@ ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: ef746d4a2e6782fa295b7c27f32ce5dc117350a7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675498"
 ---
 # <a name="httpwebrequesthttpresponse-field"></a>HttpWebRequest. \_HttpResponse поля
 
-`HttpWebRequest._HttpResponse` — <xref:System.Net.HttpWebResponse> содержащий сведения об ответе HTTP из HTTP-запроса. Это может быть `null` до получения ответа HTTP.
+`HttpWebRequest._HttpResponse` является <xref:System.Net.HttpWebResponse> содержащий сведения об ответе HTTP из HTTP-запроса. Это может быть `null` пока не будет получен ответ HTTP.
 
 ## <a name="syntax"></a>Синтаксис
   
@@ -30,14 +30,14 @@ internal HttpWebResponse _HttpResponse
 ```
 
 > [!WARNING]
-> `HttpWebRequest._HttpResponse` Поле является внутренним и не предназначены для непосредственного использования в коде.
+> `HttpWebRequest._HttpResponse` Поле является внутренним и не предназначены для использования непосредственно в коде.
 > 
-> Корпорация Майкрософт не поддерживает использование этого поля в реальном приложении ни при каких обстоятельствах.
+> Майкрософт не поддерживает использование этого поля в рабочем приложении ни при каких обстоятельствах.
 
 ## <a name="requirements"></a>Требования
 
 **Пространство имен:** <xref:System.Net>
 
-**Сборка:** системы (в System.dll)
+**Сборка:** Системы (в System.dll)
 
-**Версии платформы .NET framework:** доступно с версии 2.0.
+**Версии платформы .NET framework:** Доступно с версии 2.0.

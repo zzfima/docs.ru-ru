@@ -6,11 +6,11 @@ helpviewer_keywords:
 - system colors in gradients [WPF]
 ms.assetid: 11942e7e-6300-4b50-8ed1-f50e8d20e7d2
 ms.openlocfilehash: 55c99640907a0c372f8c7bbc50b9b45c9f15ef3c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769243"
 ---
 # <a name="how-to-use-system-colors-in-a-gradient"></a>Практическое руководство. Использование системных цветов в градиенте
 Чтобы использовать системный цвет в градиенте, используйте  *\<SystemColor >* цвет и  *\<SystemColor >* ColorKey статические свойства класса <xref:System.Windows.SystemColors> для получения ссылки на цвет, где  *\<SystemColor >* имя требуемого системного цвета. Используйте  *\<SystemColor >* свойства ColorKey, если вы хотите создать динамическую ссылку, которая обновляется автоматически по мере изменения темы системы. В противном случае используйте  *\<SystemColor >* свойства цветов.  

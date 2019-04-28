@@ -18,11 +18,11 @@ helpviewer_keywords:
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
 ms.openlocfilehash: 699737ffbe0b136af8862931fadacec26772b928
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757005"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Объявление переменной в Visual Basic
 Можно объявить переменную, чтобы указать ее имя и характеристики. Оператор объявления переменных — [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Определить характеристики переменной, ее расположение и содержимое.  
@@ -42,15 +42,15 @@ ms.locfileid: "58833286"
 ## <a name="declaring-data-type"></a>Объявление типа данных  
  [Как](../../../../visual-basic/language-reference/statements/as-clause.md) предложение в операторе объявления позволяет определить тип данных или тип объекта объявляемой переменной. Можно указать любой из следующих типов для переменной:  
   
--   Простой тип данных, таких как `Boolean`, `Long`, или `Decimal`  
+- Простой тип данных, таких как `Boolean`, `Long`, или `Decimal`  
   
--   Составные типы данных, например массив или структура.  
+- Составные типы данных, например массив или структура.  
   
--   Тип объекта или класса, определенного в приложении или в другом приложении  
+- Тип объекта или класса, определенного в приложении или в другом приложении  
   
--   Объект [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] класс, например <xref:System.Windows.Forms.Label> или <xref:System.Windows.Forms.TextBox>  
+- Объект [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] класс, например <xref:System.Windows.Forms.Label> или <xref:System.Windows.Forms.TextBox>  
   
--   Тип интерфейса, такие как <xref:System.IComparable> или <xref:System.IDisposable>  
+- Тип интерфейса, такие как <xref:System.IComparable> или <xref:System.IDisposable>  
   
  Можно объявить несколько переменных в одном операторе без повторения типа данных. В приведенных ниже инструкциях, переменные `i`, `j`, и `k` объявляются как тип `Integer`, `l` и `m` как `Long`, и `x` и `y` как `Single`:  
   

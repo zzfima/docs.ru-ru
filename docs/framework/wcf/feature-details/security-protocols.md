@@ -5,22 +5,22 @@ helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
 ms.openlocfilehash: 5adacbc0332d104d025ea1b888b580d34fee804e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749427"
 ---
 # <a name="security-protocols"></a>Протоколы безопасности
 Протоколы WS-Security предоставляют механизмы обеспечения безопасности веб-служб, охватывающие все существующие требования к безопасности обмена сообщениями на предприятии. В этом разделе подробно описано, Windows Communication Foundation (WCF) (реализованный в <xref:System.ServiceModel.Channels.SecurityBindingElement>) для следующих протоколов ws-security.  
   
 |Спецификация/документ|Ссылка|  
 |-|-|  
-|WSS: SOAP Message Security 1,0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf|  
+|WSS: Безопасность сообщений SOAP 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf|  
 |WSS: Username Token Profile 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
-|WSS: X509 Token Profile 1,0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf|  
+|WSS: X509 token Profile 1,0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf|  
 |WSS: SAML 1.1 Token Profile 1,0|http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf|  
-|WSS: SOAP Message Security 1.1|http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf|  
+|WSS: Безопасность сообщений SOAP 1.1|http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf|  
 |WSS Username Token Profile 1.1|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
 |WSS: X.509 Token Profile 1,1|http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf|  
 |WSS: Kerberos Token Profile 1.1|http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf|  
@@ -34,11 +34,11 @@ ms.locfileid: "50200983"
   
  WCF, версии 1, предусмотрено 17 режимов проверки подлинности, которые могут использоваться в качестве основы для Настройка безопасности веб-служб. Каждый из режимов оптимизирован для того или иного типичного набора требований к развертыванию, например следующих:  
   
--   учетные данные, используемые для проверки подлинности клиента и службы;  
+- учетные данные, используемые для проверки подлинности клиента и службы;  
   
--   механизмы обеспечения безопасности на уровне сообщений или транспорта;  
+- механизмы обеспечения безопасности на уровне сообщений или транспорта;  
   
--   шаблоны обмена сообщениями.  
+- шаблоны обмена сообщениями.  
   
 |Режим проверки подлинности|Аутентификация клиента|Проверка подлинности сервера|Mode|  
 |-------------------------|---------------------------|---------------------------|----------|  
@@ -118,7 +118,7 @@ ms.locfileid: "50200983"
   
  R1204 Если используется профиль X509TokenProfile1.1, внешняя ссылка на маркер безопасности X509 ДОЛЖНА использовать отпечаток, введенный в протоколе WS-Security 1.1.  
   
- WCF поддерживает X509IssuerSerial. Тем не менее существуют проблемы с X509IssuerSerial: WCF для сравнения двух значений X509IssuerSerial используются строки. Поэтому если изменить порядок компонентов имени субъекта и отправляет в службу WCF ссылку на сертификат, он может не найден.  
+ WCF поддерживает X509IssuerSerial. Тем не менее существуют проблемы с X509IssuerSerial: WCF использует строку для сравнения двух значений X509IssuerSerial. Поэтому если изменить порядок компонентов имени субъекта и отправляет в службу WCF ссылку на сертификат, он может не найден.  
   
 ### <a name="13-kerberos-token"></a>1.3 Маркер Kerberos  
  WCF поддерживает использование профиля KerberosTokenProfile1.1 для проверки подлинности Windows со следующими ограничениями:  
@@ -136,7 +136,7 @@ ms.locfileid: "50200983"
 ## <a name="2-common-message-security-parameters"></a>2. Общие параметры безопасности сообщений  
   
 ### <a name="21-timestamp"></a>2.1 TimeStamp  
- Наличие метки времени определяется с помощью свойства <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> класса <xref:System.ServiceModel.Channels.SecurityBindingElement>. WCF timestamp всегда сериализуется с wsse: создан и wsse: срок действия истекает поля. Если используется подписывание, wsse:TimeStamp всегда подписывается.  
+ Наличие отметки времени определяется с помощью свойства <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> класса <xref:System.ServiceModel.Channels.SecurityBindingElement>. WCF timestamp всегда сериализуется с wsse: создан и wsse: срок действия истекает поля. Если используется подписывание, wsse:TimeStamp всегда подписывается.  
   
 ### <a name="22-protection-order"></a>2.2. Порядок защиты  
  WCF поддерживает порядки защиты сообщений «Подпись перед шифрованием» и «Шифрование перед подписью» (Security Policy 1.2). По ряду причин рекомендуется использовать порядок «подпись перед шифрованием», в том числе по следующим причинам: если не используется механизм WS-Security 1.1 SignatureConfirmation, сообщения, защищенные в порядке «шифрование перед подписью», подвержены атакам подмены подписи и при подписывании зашифрованного содержимого сложнее производить аудит.  
@@ -159,7 +159,7 @@ ms.locfileid: "50200983"
 |||  
 |-|-|  
 |Strict|Элементы добавляются в заголовок безопасности в соответствии с правилами нумерованной структуры, описанными в разделе 7.7.1 спецификаций Security Policy, на основе общего принципа "объявить перед использованием".|  
-|Lax|Элементы добавляются в заголовок безопасности в любом порядке, отвечающем требованиям безопасности сообщений WSS: SOAP Message Security.|  
+|Lax|Элементы добавляются в заголовок безопасности в любом порядке, который соответствует WSS: Безопасность сообщений SOAP.|  
 |LaxTimestampFirst|Аналогично Lax, но первым элементом в заголовке безопасности должен быть элемент wsse:Timestamp.|  
 |LaxTimestampLast|Аналогично Lax, но последним элементом в заголовке безопасности должен быть элемент wsse:Timestamp.|  
   
@@ -300,7 +300,7 @@ ms.locfileid: "50200983"
 ```  
   
 ### <a name="32-using-x509-certificates-for-service-authentication"></a>3.2 с использованием сертификатов X.509 для проверки подлинности службы  
- В этом разделе рассматриваются следующие режимы проверки подлинности: MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate и IssuedTokenForCertificate.  
+ В этом разделе описаны следующие режимы проверки подлинности. MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate и IssuedTokenForCertificate.  
   
 #### <a name="321-mutualcertificate-wss10"></a>3.2.1 MutualCertificate WSS1.0  
  В этом режиме проверка подлинности клиента осуществляется с использованием сертификата X.509, который доступен на уровне SOAP в качестве маркера инициатора. Служба также проходит проверку подлинности с использованием сертификата X.509. Подписываются как заголовки, так и тело сообщений протокола SOAP. Симметричный ключ создается и шифруется с помощью сертификата транспорта для получателя.  
@@ -309,11 +309,11 @@ ms.locfileid: "50200983"
   
  Маркер инициатора: сертификат X.509 клиента, задан режим включения …/IncludeToken/AlwaysToRecipient  
   
- Маркер получателя: сертификат X.509 сервера, задан режим включения …/IncludeToken/Never  
+ Маркер получателя: Сертификат X.509 сервера, с помощью режим включения имеет значение .../IncludeToken/Never  
   
  Защита маркера: False  
   
- Сигнатуры всего заголовка и тела: True  
+ Всего заголовка и текста подписи: True  
   
  Порядок защиты: SignBeforeEncrypt  
   
@@ -362,13 +362,13 @@ ms.locfileid: "50200983"
   
  Используется асимметричная привязка со следующими значениями свойств.  
   
- Маркер инициатора: сертификат X.509 клиента, задан режим включения …/IncludeToken/AlwaysToRecipient  
+ Маркер инициатора: X509 клиента сертификат, режим включения имеет значение .../IncludeToken/AlwaysToRecipient  
   
- Маркер получателя: сертификат X.509 сервера, задан режим включения …/IncludeToken/AlwaysToInitiator  
+ Маркер получателя: X509 сервера сертификатов, режим включения имеет значение .../IncludeToken/AlwaysToInitiator  
   
  Защита маркера: False  
   
- Сигнатуры всего заголовка и тела: True  
+ Всего заголовка и текста подписи: True  
   
  Порядок защиты: SignBeforeEncrypt  
   
@@ -407,10 +407,10 @@ ms.locfileid: "50200983"
   
  В режимах проверки подлинности AnonymousForCertificate, UsernameForCertificate, MutualCertificate WSS11 и IssuedTokenForCertificate используется аналогичный экземпляр sp:SymmetricBinding со следующими значениями свойств.  
   
- Токен защиты: сертификат X.509 сервера, задан режим включения …/IncludeToken/Never  
+ Токен защиты: X509 сервера сертификатов, режим включения имеет значение .../IncludeToken/Never  
 Защита маркера: False  
   
- Сигнатуры всего заголовка и тела: True  
+ Всего заголовка и текста подписи: True  
   
  Порядок защиты: SignBeforeEncrypt  
   
@@ -585,10 +585,10 @@ ms.locfileid: "50200983"
 ## <a name="33-kerberos"></a>3.3 Kerberos  
  В этом режиме проверка подлинности клиента на стороне службы осуществляется с использованием билета Kerberos. Этот же билет обеспечивает проверку подлинности сервера. Используется симметричная привязка со следующими свойствами.  
   
- Токен защиты: билет kerberos, задан режим включения …/IncludeToken/Once  
+ Токен защиты: Билет Kerberos, режим включения имеет значение .../IncludeToken/Once  
 Защита маркера: False  
   
- Сигнатуры всего заголовка и тела: True  
+ Всего заголовка и текста подписи: True  
   
  Порядок защиты: SignBeforeEncrypt  
   
@@ -635,10 +635,10 @@ ms.locfileid: "50200983"
 #### <a name="34-issuedtoken"></a>3.4 IssuedToken  
  В этом режиме проверки подлинности клиент не проходит как таковую проверку подлинности на стороне службы; вместо этого клиент предоставляет маркер, выданный службой маркеров безопасности и подтверждает знание общего ключа. Служба не проходит как таковую проверку подлинности на стороне клиента, но служба маркеров безопасности шифрует общий ключ как часть выдаваемого маркера, чтобы только служба могла расшифровать этот ключ. Используется симметричная привязка со следующими свойствами.  
   
- Токен защиты: выданный токен, задан режим включения .../IncludeToken/AlwaysToRecipient  
+ Токен защиты: Выданный маркер, режим включения имеет значение .../IncludeToken/AlwaysToRecipient  
 Защита маркера: False  
   
- Сигнатуры всего заголовка и тела: True  
+ Всего заголовка и текста подписи: True  
   
  Порядок защиты: SignBeforeEncrypt  
   
@@ -687,10 +687,10 @@ ms.locfileid: "50200983"
   
  Используется симметричная привязка со следующими свойствами.  
   
- Токен защиты: SslContextToken, задан режим включения .../IncludeToken/Never  
+ Токен защиты: Sslcontexttoken, задан режим включения имеет значение .../IncludeToken/Never  
 Защита маркера: False  
   
- Сигнатуры всего заголовка и тела: True  
+ Всего заголовка и текста подписи: True  
   
  Порядок защиты: SignBeforeEncrypt  
   
@@ -866,10 +866,10 @@ ms.locfileid: "50200983"
 ### <a name="36-sspinegotiated"></a>3.6 SspiNegotiated  
  В этом режиме для проверки подлинности клиента и сервера используется протокол согласования. Если это возможно, используется протокол Kerberos, в противном случае - протокол NTLM. Используется симметричная привязка со следующими свойствами.  
   
- Токен защиты: SpnegoContextToken, задан режим включения .../IncludeToken/AlwaysToRecipient  
+ Токен защиты: Spnegocontexttoken, задан режим включения имеет значение .../IncludeToken/AlwaysToRecipient  
 Защита маркера: False  
   
- Сигнатуры всего заголовка и тела: True  
+ Всего заголовка и текста подписи: True  
   
  Порядок защиты: SignBeforeEncrypt  
   

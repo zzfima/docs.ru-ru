@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
 ms.openlocfilehash: 545f0f4a56e72e32d2225217225d441a10f0e52e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803445"
 ---
 # <a name="elementname-is-obsolete-visual-basic-warning"></a>"\<elementname >" является устаревшим (предупреждение Visual Basic)
 Оператор пытается получить доступ к элементу программирования, который был помечен атрибутом <xref:System.ObsoleteAttribute> и директивой, предписывающей расценивать это как предупреждение.  
@@ -25,7 +25,7 @@ ms.locfileid: "58836367"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Убедитесь, что в ссылке исходного кода имя элемента указано правильно.  
+- Убедитесь, что в ссылке исходного кода имя элемента указано правильно.  
   
 ## <a name="see-also"></a>См. также
 

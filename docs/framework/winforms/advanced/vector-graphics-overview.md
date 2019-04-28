@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
 ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748446"
 ---
 # <a name="vector-graphics-overview"></a>Общие сведения о векторной графике
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Рисует линии, прямоугольники и других фигур в системе координат. Можно выбрать из различных систем координат, но система координат по умолчанию имеет начало координат в левом верхнем углу ось x вправо, а ось y направлена вниз. Единицы измерения в системе координат по умолчанию является пиксель.  
@@ -32,19 +32,19 @@ ms.locfileid: "59087967"
   
  Со временем некоторые основные стандартные блоки оказались наиболее удобно для создания двухмерных изображений. Эти стандартные блоки, которые поддерживаются системой [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], приведены в следующем списке:  
   
--   Прямых линий  
+- Прямых линий  
   
--   Прямоугольники  
+- Прямоугольники  
   
--   Многоточие  
+- Многоточие  
   
--   Дуги  
+- Дуги  
   
--   Многоугольники  
+- Многоугольники  
   
--   Фундаментальные сплайны  
+- Фундаментальные сплайны  
   
--   сплайны Безье  
+- сплайны Безье  
   
 ## <a name="methods-for-drawing-with-a-graphics-object"></a>Методы для рисования с помощью графических объектов  
  <xref:System.Drawing.Graphics> В класс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет следующие методы для рисования элементов в списке выше: <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawRectangle%2A>, <xref:System.Drawing.Graphics.DrawEllipse%2A>, <xref:System.Drawing.Graphics.DrawPolygon%2A>, <xref:System.Drawing.Graphics.DrawArc%2A>, <xref:System.Drawing.Graphics.DrawCurve%2A> (для фундаментальные сплайны), и <xref:System.Drawing.Graphics.DrawBezier%2A>. Каждый из этих методов перегружена; то есть каждый метод поддерживает несколько различными списками параметров. Например, один из вариантов <xref:System.Drawing.Graphics.DrawLine%2A> метод получает <xref:System.Drawing.Pen> объекта и четырех целых чисел, а другой вариант <xref:System.Drawing.Graphics.DrawLine%2A> метод получает <xref:System.Drawing.Pen> и два <xref:System.Drawing.Point> объектов.  

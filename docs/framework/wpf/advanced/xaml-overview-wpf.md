@@ -20,11 +20,11 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
 ms.openlocfilehash: 56b97170884ef31004b06b0eb50a8d79ad1d041c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757221"
 ---
 # <a name="xaml-overview-wpf"></a>Обзор XAML (WPF)
 В этом разделе описаны возможности языка XAML и показано, как использовать язык XAML для написания приложений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. В частности, в этом разделе описывается реализация XAML в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Сам язык XAML — это более широкое понятие языка, чем [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -115,11 +115,11 @@ ms.locfileid: "59102834"
 ### <a name="text-content"></a>Текстовое содержимое  
  Небольшое количество элементов XAML могут непосредственно обрабатывать текст как содержимое. Это происходит в одной из следующих ситуаций.  
   
--   Класс должен объявить свойство содержимого и свойства содержимого должен относиться к типу, присваиваемому строке (тип может быть <xref:System.Object>). Например, любой <xref:System.Windows.Controls.ContentControl> использует <xref:System.Windows.Controls.ContentControl.Content%2A> как его свойство содержимого и он является типом <xref:System.Object>, и поддерживает следующее использование в практическом <xref:System.Windows.Controls.ContentControl> например <xref:System.Windows.Controls.Button>: `<Button>Hello</Button>`.  
+- Класс должен объявить свойство содержимого и свойства содержимого должен относиться к типу, присваиваемому строке (тип может быть <xref:System.Object>). Например, любой <xref:System.Windows.Controls.ContentControl> использует <xref:System.Windows.Controls.ContentControl.Content%2A> как его свойство содержимого и он является типом <xref:System.Object>, и поддерживает следующее использование в практическом <xref:System.Windows.Controls.ContentControl> например <xref:System.Windows.Controls.Button>: `<Button>Hello</Button>`.  
   
--   Тип должен объявлять преобразователь типов, при этом текстовое содержимое используется как текст инициализации для данного преобразователя типов. Например, `<Brush>Blue</Brush>`. Этот случай менее распространен.  
+- Тип должен объявлять преобразователь типов, при этом текстовое содержимое используется как текст инициализации для данного преобразователя типов. Например, `<Brush>Blue</Brush>`. Этот случай менее распространен.  
   
--   Тип должен быть известным типом-примитивом языка XAML.  
+- Тип должен быть известным типом-примитивом языка XAML.  
   
 ### <a name="content-properties-and-collection-syntax-combined"></a>Синтаксис содержимого свойства и коллекции в сочетании  
  Рассмотрим следующий пример.  
@@ -133,9 +133,9 @@ ms.locfileid: "59102834"
   
  Здесь каждый <xref:System.Windows.Controls.Button> является дочерним элементом элемента <xref:System.Windows.Controls.StackPanel>. Это рациональная и интуитивно понятная разметка, в которой опущены два тега по двум разным причинам.  
   
--   **Опущен элемент свойства StackPanel.Children:** <xref:System.Windows.Controls.StackPanel> является производным от <xref:System.Windows.Controls.Panel>. <xref:System.Windows.Controls.Panel> Определяет <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> свойства содержимого XAML его.  
+- **Опущен элемент свойства StackPanel.Children:** <xref:System.Windows.Controls.StackPanel> является производным от <xref:System.Windows.Controls.Panel>. <xref:System.Windows.Controls.Panel> Определяет <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> свойства содержимого XAML его.  
   
--   **Опущен объектный элемент UIElementCollection:** <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> Свойство принимает тип <xref:System.Windows.Controls.UIElementCollection>, который реализует <xref:System.Collections.IList>. Тег элемента коллекции можно опустить, на основании правил XAML, касающихся обработки коллекций, такие как <xref:System.Collections.IList>. (В этом случае <xref:System.Windows.Controls.UIElementCollection> фактически не может быть создан, так как он не предоставляет конструктор по умолчанию, и вот почему <xref:System.Windows.Controls.UIElementCollection> показан закомментированным объектного элемента).  
+- **Опущен объектный элемент UIElementCollection:** <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> Свойство принимает тип <xref:System.Windows.Controls.UIElementCollection>, который реализует <xref:System.Collections.IList>. Тег элемента коллекции можно опустить, на основании правил XAML, касающихся обработки коллекций, такие как <xref:System.Collections.IList>. (В этом случае <xref:System.Windows.Controls.UIElementCollection> фактически не может быть создан, так как он не предоставляет конструктор по умолчанию, и вот почему <xref:System.Windows.Controls.UIElementCollection> показан закомментированным объектного элемента).  
   
 ```xaml  
 <StackPanel>  
@@ -210,15 +210,15 @@ ms.locfileid: "59102834"
 ### <a name="the-x-prefix"></a>Префикс x:  
  В предыдущем примере корневого элемента префикс `x:` использовался для сопоставления пространства имен XAML [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)], которое является выделенным пространством имен XAML, поддерживающим конструкции языка XAML. Префикс `x:` используется для сопоставления данного пространства имен XAML в шаблонах для проектов, в примерах и в документации по всему этому [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. Пространство имен XAML для языка XAML содержит несколько конструкций программирования, которые очень часто используются в XAML. Ниже приведен список наиболее распространенных конструкций программирования с префиксом `x:`, которые могут вам потребоваться.  
   
--   [x: Key](../../xaml-services/x-key-directive.md): Задает уникальный ключ для каждого ресурса в <xref:System.Windows.ResourceDictionary> (или аналогичных словарях в других платформах). `x:Key` применяется примерно в 90 % случаев использования сопоставления `x:` в разметке типичных приложений WPF.  
+- [x: Key](../../xaml-services/x-key-directive.md): Задает уникальный ключ для каждого ресурса в <xref:System.Windows.ResourceDictionary> (или аналогичных словарях в других платформах). `x:Key` применяется примерно в 90 % случаев использования сопоставления `x:` в разметке типичных приложений WPF.  
   
--   [x: Class](../../xaml-services/x-class-directive.md): Указывает [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] пространство имен и имя класса для класса, предоставляющего код программной части для страницы XAML. Согласно модели программирования WPF, такой класс должен присутствовать для поддержки кода программной части, поэтому сопоставление `x:` присутствует почти всегда, даже если ресурсы отсутствуют.  
+- [x: Class](../../xaml-services/x-class-directive.md): Указывает [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] пространство имен и имя класса для класса, предоставляющего код программной части для страницы XAML. Согласно модели программирования WPF, такой класс должен присутствовать для поддержки кода программной части, поэтому сопоставление `x:` присутствует почти всегда, даже если ресурсы отсутствуют.  
   
--   [x: Name](../../xaml-services/x-name-directive.md): Задает имя объекта времени выполнения для экземпляра, который существует в коде во время выполнения, после обработки объектного элемента. Как правило, на практике часто используется свойство, определенное в WPF, эквивалентное [x:Name](../../xaml-services/x-name-directive.md). Такие свойства сопоставляются непосредственно с резервным свойством CLR, а потому более удобны для программирования приложений, где код времени выполнения часто используется для поиска именованных элементов из инициализированного XAML-кода. Наиболее распространенные из таких свойств — <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>. Можно по-прежнему использовать [x: Name](../../xaml-services/x-name-directive.md) при эквивалентных уровня среды WPF <xref:System.Windows.FrameworkElement.Name%2A> свойство не поддерживается в определенного типа. Это происходит в некоторых сценариях анимации.  
+- [x: Name](../../xaml-services/x-name-directive.md): Задает имя объекта времени выполнения для экземпляра, который существует в коде во время выполнения, после обработки объектного элемента. Как правило, на практике часто используется свойство, определенное в WPF, эквивалентное [x:Name](../../xaml-services/x-name-directive.md). Такие свойства сопоставляются непосредственно с резервным свойством CLR, а потому более удобны для программирования приложений, где код времени выполнения часто используется для поиска именованных элементов из инициализированного XAML-кода. Наиболее распространенные из таких свойств — <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>. Можно по-прежнему использовать [x: Name](../../xaml-services/x-name-directive.md) при эквивалентных уровня среды WPF <xref:System.Windows.FrameworkElement.Name%2A> свойство не поддерживается в определенного типа. Это происходит в некоторых сценариях анимации.  
   
--   [x: Static](../../xaml-services/x-static-markup-extension.md): Позволяет использовать ссылку, возвращающую статическое значение, которое не может быть свойством, совместимым с XAML.  
+- [x: Static](../../xaml-services/x-static-markup-extension.md): Позволяет использовать ссылку, возвращающую статическое значение, которое не может быть свойством, совместимым с XAML.  
   
--   [x: Type](../../xaml-services/x-type-markup-extension.md): Создает <xref:System.Type> ссылку на основании имени типа. Это используется для указания атрибутов, которые принимают <xref:System.Type>, такие как <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>, хотя часто свойство имеет собственную строку-к-<xref:System.Type> преобразование таким образом, [x: Type](../../xaml-services/x-type-markup-extension.md) является использование расширения разметки необязательно.  
+- [x: Type](../../xaml-services/x-type-markup-extension.md): Создает <xref:System.Type> ссылку на основании имени типа. Это используется для указания атрибутов, которые принимают <xref:System.Type>, такие как <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>, хотя часто свойство имеет собственную строку-к-<xref:System.Type> преобразование таким образом, [x: Type](../../xaml-services/x-type-markup-extension.md) является использование расширения разметки необязательно.  
   
  Существуют дополнительные конструкции программирования в пространстве имен XAML/с префиксом `x:`, которые применяются не так часто. Дополнительные сведения см. в разделе [пространства имен XAML (x:) Возможности языка](../../xaml-services/xaml-namespace-x-language-features.md).  
   

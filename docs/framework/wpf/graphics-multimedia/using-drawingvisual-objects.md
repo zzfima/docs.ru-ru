@@ -9,11 +9,11 @@ helpviewer_keywords:
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
 ms.openlocfilehash: 01e10a4b0f0bf4959850caf3951ad4ea915edb4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762115"
 ---
 # <a name="using-drawingvisual-objects"></a>Использование объектов DrawingVisual
 В этом разделе представлен обзор использования <xref:System.Windows.Media.DrawingVisual> объекты в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] визуальном уровне.  
@@ -51,9 +51,9 @@ ms.locfileid: "59121723"
   
  Ниже приводятся два члена класса, которые необходимо переопределить.  
   
--   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Возвращает дочерний элемент по указанному индексу из коллекции дочерних элементов.  
+- <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Возвращает дочерний элемент по указанному индексу из коллекции дочерних элементов.  
   
--   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Получает количество визуальных дочерних элементов внутри этого элемента.  
+- <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Получает количество визуальных дочерних элементов внутри этого элемента.  
   
  В следующем примере, переопределения для двух <xref:System.Windows.FrameworkElement> члены реализуются.  
   

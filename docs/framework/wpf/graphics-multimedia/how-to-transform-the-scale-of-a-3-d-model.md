@@ -6,11 +6,11 @@ helpviewer_keywords:
 - 3-D objects [WPF], scaling
 ms.assetid: f3fdfe33-f7dc-44b0-84a5-e43b89947f35
 ms.openlocfilehash: 6d668de08201d819ce9f8752bedf6c388a6bc718
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769334"
 ---
 # <a name="how-to-transform-the-scale-of-a-3-d-model"></a>Практическое руководство. Преобразование масштаба трехмерной модели
 В этом примере показано, как масштабировать трехмерного объекта. Чтобы увеличить трехмерного объекта, используйте <xref:System.Windows.Media.Media3D.ScaleTransform3D>. <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A>, <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A>, И <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> свойства изменения размеров элемента с определенным коэффициентом. Например <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A> значение 1,5 объект увеличивается на 150 процентов от его исходной ширины. Объект <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A> значение 0,5 сжимает высоту объекта на 50 процентов. В приведенном ниже коде показано использование <xref:System.Windows.Media.Media3D.ScaleTransform3D> как преобразование для <xref:System.Windows.Media.Media3D.GeometryModel3D>.  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 309c31dacd801f1c46a2d37932124638bc157cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749050"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>Метод ICorDebugDataTarget::GetPlatform
 Сведения о платформе, включая архитектуру процессора и операционной системы, на котором выполняется целевой процесс.  
@@ -44,9 +44,9 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
  Этот метод должен завершиться успешно. Если происходит сбой, целевая платформа — непригодным для использования. Метод может завершиться ошибкой по следующим причинам:  
   
--   Платформа, которая является эмулируемая для целевого объекта не может использоваться.  
+- Платформа, которая является эмулируемая для целевого объекта не может использоваться.  
   
--   Фактическое оборудование на целевой платформе непригодным для использования.  
+- Фактическое оборудование на целевой платформе непригодным для использования.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

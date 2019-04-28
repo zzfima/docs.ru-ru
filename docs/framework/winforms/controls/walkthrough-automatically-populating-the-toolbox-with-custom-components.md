@@ -7,33 +7,33 @@ helpviewer_keywords:
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
 ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759912"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами
 Если компоненты определяются в проекте в настоящее время в открытом решении, они автоматически будут отображаться в **элементов**, не выполняя никаких действий от вас требуется. Можно также вручную заполнять **элементов** компонентами с помощью [выберите элементов элементов-диалоговое окно (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), но **элементов** принимает учетную запись элементов в своем решении выходные данные сборки со следующими характеристиками:  
   
--   Реализует <xref:System.ComponentModel.IComponent>;  
+- Реализует <xref:System.ComponentModel.IComponent>;  
   
--   Не поддерживает <xref:System.ComponentModel.ToolboxItemAttribute> присвоено `false`;  
+- Не поддерживает <xref:System.ComponentModel.ToolboxItemAttribute> присвоено `false`;  
   
--   Не поддерживает <xref:System.ComponentModel.DesignTimeVisibleAttribute> присвоено `false`.  
+- Не поддерживает <xref:System.ComponentModel.DesignTimeVisibleAttribute> присвоено `false`.  
   
 > [!NOTE]
 >  **Элементов** отслеживает цепочки ссылок, поэтому он не будет отображаться элементы, которые не были собраны проекта в решении.  
   
  В этом пошаговом руководстве показано, как пользовательский компонент автоматически появится в **элементов** после создания компонента. В данном пошаговом руководстве представлены следующие задачи.  
   
--   Создание проекта Windows Forms.  
+- Создание проекта Windows Forms.  
   
--   Создание пользовательского компонента.  
+- Создание пользовательского компонента.  
   
--   Создание экземпляра пользовательского компонента.  
+- Создание экземпляра пользовательского компонента.  
   
--   Выгрузке и перезагрузке пользовательского компонента.  
+- Выгрузке и перезагрузке пользовательского компонента.  
   
  Когда вы закончите, вы увидите, что **элементов** заполняется компонентом, который вы создали.  
   

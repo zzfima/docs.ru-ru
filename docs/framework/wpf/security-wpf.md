@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
 ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696915"
 ---
 # <a name="security-wpf"></a>Безопасность (WPF)
 <a name="introduction"></a> При разработке Windows Presentation Foundation (WPF) автономных приложений и приложений, размещенных в веб-браузере, необходимо учитывать модель безопасности. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Автономные приложения выполняются с неограниченными разрешениями ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** набор разрешений), если развертываются с помощью установщика Windows (MSI), XCopy или [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Развертывание автономных приложений WPF с частичным доверием с помощью ClickOnce не поддерживается. Тем не менее, полным доверием ведущего приложения можно создать с частичным доверием <xref:System.AppDomain> с помощью модели надстроек платформы .NET Framework. Дополнительные сведения см. в разделе [Общие сведения о надстройках WPF](./app-development/wpf-add-ins-overview.md).  
@@ -31,17 +31,17 @@ ms.locfileid: "59313571"
   
  В этом разделе содержатся следующие подразделы.  
   
--   [Безопасная навигация](#SafeTopLevelNavigation)  
+- [Безопасная навигация](#SafeTopLevelNavigation)  
   
--   [Параметры безопасности программного обеспечения для просмотра веб-страниц](#InternetExplorerSecuritySettings)  
+- [Параметры безопасности программного обеспечения для просмотра веб-страниц](#InternetExplorerSecuritySettings)  
   
--   [Элемент управления WebBrowser и элементы управления функциями](#webbrowser_control_and_feature_controls)  
+- [Элемент управления WebBrowser и элементы управления функциями](#webbrowser_control_and_feature_controls)  
   
--   [Отключение сборок APTCA для клиентских приложений с частичным доверием](#APTCA)  
+- [Отключение сборок APTCA для клиентских приложений с частичным доверием](#APTCA)  
   
--   [Режим песочницы для свободных файлов XAML](#LooseContentSandboxing)  
+- [Режим песочницы для свободных файлов XAML](#LooseContentSandboxing)  
   
--   [Ресурсы для разработки приложений WPF, обеспечивающих безопасность](#BestPractices)  
+- [Ресурсы для разработки приложений WPF, обеспечивающих безопасность](#BestPractices)  
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>Безопасная навигация  
@@ -69,19 +69,19 @@ ms.locfileid: "59313571"
   
  Файлы этих типов содержимого поддерживают навигацию, выполняемую пользователем или программно.  
   
--   **Навигация, выполняемая пользователем**. Пользователь выполняет переходы, щелкая <xref:System.Windows.Documents.Hyperlink> элемент.  
+- **Навигация, выполняемая пользователем**. Пользователь выполняет переходы, щелкая <xref:System.Windows.Documents.Hyperlink> элемент.  
   
--   **Программная навигация**. Приложение выполняет переходы без участия пользователя, например, установив <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType> свойство.  
+- **Программная навигация**. Приложение выполняет переходы без участия пользователя, например, установив <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType> свойство.  
   
 <a name="Browser_Navigation_Security"></a>   
 ### <a name="browser-navigation-security"></a>Безопасность навигации в браузере  
  Навигация в браузере считается безопасной только при выполнении следующих условий.  
   
--   **Навигация, выполняемая пользователем**. Пользователь выполняет переходы, щелкая <xref:System.Windows.Documents.Hyperlink> элемент, расположенный в главном <xref:System.Windows.Navigation.NavigationWindow>, но не во вложенный <xref:System.Windows.Controls.Frame>.  
+- **Навигация, выполняемая пользователем**. Пользователь выполняет переходы, щелкая <xref:System.Windows.Documents.Hyperlink> элемент, расположенный в главном <xref:System.Windows.Navigation.NavigationWindow>, но не во вложенный <xref:System.Windows.Controls.Frame>.  
   
--   **Зона**. Содержимое, к которому выполняется переход, находится в Интернете или в локальной интрасети.  
+- **Зона**. Содержимое, к которому выполняется переход, находится в Интернете или в локальной интрасети.  
   
--   **Протокол**. Используемый протокол является либо **http**, **https**, **файл**, или **mailto**.  
+- **Протокол**. Используемый протокол является либо **http**, **https**, **файл**, или **mailto**.  
   
  Если [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] пытается перейти к содержимому таким способом, который не соответствует этим условиям, <xref:System.Security.SecurityException> возникает исключение.  
   
@@ -91,15 +91,15 @@ ms.locfileid: "59313571"
   
  [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] предоставляет механизм, по которому можно настроить функции, которые разрешены для выполнения в [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)], включая следующие:  
   
--   Всему компоненты .NET  
+- Всему компоненты .NET  
   
--   элементы управления ActiveX и подключаемые модули;  
+- элементы управления ActiveX и подключаемые модули;  
   
--   Загрузки  
+- Загрузки  
   
--   Скрипты  
+- Скрипты  
   
--   проверка подлинности пользователя.  
+- проверка подлинности пользователя.  
   
  Набор функциональных возможностей, которая может быть защищена таким образом настраивается для каждой зоны для **Internet**, **интрасети**, **Надежные узлы**, и  **Ограниченные узлы** зоны. Ниже приведена процедура для настройки параметров безопасности.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "59313571"
   
  Начиная с [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], включены следующие параметры безопасности специально для .NET Framework:  
   
--   **Свободный XAML**. Элементы управления ли [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] можно переходить к и свободный [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] файлов. (Варианты: "Включить", "Отключить" и "Запрашивать".)  
+- **Свободный XAML**. Элементы управления ли [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] можно переходить к и свободный [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] файлов. (Варианты: "Включить", "Отключить" и "Запрашивать".)  
   
--   **XAML-приложения браузера**. Элементы управления ли [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] можно перейти и запустить [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. (Варианты: "Включить", "Отключить" и "Запрашивать".)  
+- **XAML-приложения браузера**. Элементы управления ли [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] можно перейти и запустить [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. (Варианты: "Включить", "Отключить" и "Запрашивать".)  
   
  По умолчанию эти параметры включены для **Internet**, **Местная интрасеть**, и **надежные сайты** зоны и отключен для **Ограниченные узлы**  зоны.  
   
@@ -232,11 +232,11 @@ ms.locfileid: "59313571"
   
  Этот раздел содержит запись для сборки APTCA. Вам также потребуется создать значение в этом разделе, включающее или отключающее сборку. Ниже приведены сведения об этом значении.  
   
--   Имя значения: **APTCA_FLAG**.  
+- Имя значения: **APTCA_FLAG**.  
   
--   Тип значения: **REG_DWORD**.  
+- Тип значения: **REG_DWORD**.  
   
--   Данные значения: **1** для отключения; **0** для включения.  
+- Данные значения: **1** для отключения; **0** для включения.  
   
  Если сборку необходимо отключить для клиентских приложений с частичным доверием, можно написать обновление, создающее раздел реестра и значение.  
   

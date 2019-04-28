@@ -17,11 +17,11 @@ helpviewer_keywords:
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
 ms.openlocfilehash: 8845a6bde4e1a701b5420029788259724cd0f8d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748764"
 ---
 # <a name="ushort-data-type-visual-basic"></a>Тип данных UShort (Visual Basic)
 
@@ -64,15 +64,15 @@ Dim number = &H_5826us
 
 ## <a name="programming-tips"></a>Советы по программированию
   
--   **Отрицательные числа.** Так как `UShort` — это тип без знака, он не может представлять отрицательное число. При использовании унарного минуса (`-`) оператор на выражение, результатом вычисления которого введите `UShort`, Visual Basic преобразует выражение `Integer` первого.  
+- **Отрицательные числа.** Так как `UShort` — это тип без знака, он не может представлять отрицательное число. При использовании унарного минуса (`-`) оператор на выражение, результатом вычисления которого введите `UShort`, Visual Basic преобразует выражение `Integer` первого.  
   
--   **CLS-совместимость.** `UShort` Тип данных не является частью [спецификация CLS](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), поэтому CLS-совместимого кода нельзя использовать компонент, который его использует.
+- **CLS-совместимость.** `UShort` Тип данных не является частью [спецификация CLS](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), поэтому CLS-совместимого кода нельзя использовать компонент, который его использует.
   
--   **Расширяющие.** `UShort` Тип данных можно расширить до `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, и `Double`. Это означает, что вы можете преобразовать `UShort` к любому из этих типов без возникновения <xref:System.OverflowException?displayProperty=nameWithType> ошибки.  
+- **Расширяющие.** `UShort` Тип данных можно расширить до `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, и `Double`. Это означает, что вы можете преобразовать `UShort` к любому из этих типов без возникновения <xref:System.OverflowException?displayProperty=nameWithType> ошибки.  
   
--   **Символы типа.** Добавление символы типа литерала `US` в литерал приводит к принудительному `UShort` тип данных. `UShort` не имеет тип символа идентификатора.  
+- **Символы типа.** Добавление символы типа литерала `US` в литерал приводит к принудительному `UShort` тип данных. `UShort` не имеет тип символа идентификатора.  
   
--   **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.UInt16?displayProperty=nameWithType>.  
+- **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.UInt16?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
 

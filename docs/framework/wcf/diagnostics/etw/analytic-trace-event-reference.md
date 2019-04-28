@@ -5,14 +5,14 @@ helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
 ms.openlocfilehash: 0f8b4c15f2afefbc62b98dca66dcf3ccc31b1dc0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753040"
 ---
 # <a name="analytic-trace-event-reference"></a>Ссылка на событие аналитического отслеживания
-Следующая таблица определяет уровни событий, идентификаторы и сообщений, связанных с WCF аналитической трассировки.  
+Следующая таблица определяет уровни событий, идентификаторы и сообщения, связанные с аналитической трассировки WCF.  
   
 ## <a name="event-reference"></a>Ссылка на событие  
   
@@ -89,8 +89,8 @@ ms.locfileid: "33808641"
 |[715 — ClientChannelOpenStart](../../../../../docs/framework/wcf/diagnostics/etw/715-clientchannelopenstart.md)|Сведения|Начало открытия ServiceChannel.|ServiceModel|  
 |[716 — ClientChannelOpenStop](../../../../../docs/framework/wcf/diagnostics/etw/716-clientchannelopenstop.md)|Сведения|Остановка открытия ServiceChannel.|ServiceModel|  
 |[717 — HttpSendStreamedMessageStart](../../../../../docs/framework/wcf/diagnostics/etw/717-httpsendstreamedmessagestart.md)|Сведения|Запущено потоковое сообщение об отправке HTTP.|HTTP|  
-|[1400 — ChannelInitializationTimeout](../../../../../docs/framework/wcf/diagnostics/etw/1400-channelinitializationtimeout.md)|Error|1%|ServiceModel|  
-|[1401 — CloseTimeout](../../../../../docs/framework/wcf/diagnostics/etw/1401-closetimeout.md)|Error|1%|ServiceModel|  
+|[1400 — ChannelInitializationTimeout](../../../../../docs/framework/wcf/diagnostics/etw/1400-channelinitializationtimeout.md)|Error|1 %|ServiceModel|  
+|[1401 — CloseTimeout](../../../../../docs/framework/wcf/diagnostics/etw/1401-closetimeout.md)|Error|1 %|ServiceModel|  
 |[1402 — IdleTimeout](../../../../../docs/framework/wcf/diagnostics/etw/1402-idletimeout.md)|Error|Ключ пула соединений %1: %2|ServiceModel|  
 |[1403 — LeaseTimeout](../../../../../docs/framework/wcf/diagnostics/etw/1403-leasetimeout.md)|Сведения|Ключ пула соединений %1: %2|ServiceModel|  
 |[1405 — OpenTimeout](../../../../../docs/framework/wcf/diagnostics/etw/1405-opentimeout.md)|Error|%1|ServiceModel|  
@@ -113,12 +113,12 @@ ms.locfileid: "33808641"
 |[1436 — PendingMessagesPerChannelRatio](../../../../../docs/framework/wcf/diagnostics/etw/1436-pendingmessagesperchannelratio.md)|Verbose|Отношение ожидающих сообщений на канал: %1/%2|Квота|  
 |[1438 — ConcurrentInstancesRatio](../../../../../docs/framework/wcf/diagnostics/etw/1438-concurrentinstancesratio.md)|Verbose|Отношение одновременных экземпляров: %1/%2|Квота|  
 |[1439 — PendingAcceptsAtZero](../../../../../docs/framework/wcf/diagnostics/etw/1439-pendingacceptsatzero.md)|Сведения|Ожидающих принятий не осталось|Квота|  
-|[1441 — MaxSessionSizeReached](../../../../../docs/framework/wcf/diagnostics/etw/1441-maxsessionsizereached.md)|Предупреждение|1%|Квота|  
+|[1441 — MaxSessionSizeReached](../../../../../docs/framework/wcf/diagnostics/etw/1441-maxsessionsizereached.md)|Предупреждение|1 %|Квота|  
 |[1442 — ReceiveRetryCountReached](../../../../../docs/framework/wcf/diagnostics/etw/1442-receiveretrycountreached.md)|Предупреждение|Число повторных попыток достигнуто для сообщения MSMQ с идентификатором «%1»|Квота|  
 |[1443 — MaxRetryCyclesExceededMsmq](../../../../../docs/framework/wcf/diagnostics/etw/1443-maxretrycyclesexceededmsmq.md)|Error|Максимальное число циклов повтора превышено для сообщения MSMQ с идентификатором «%1»|Квота|  
 |[1445 — ReadPoolMiss](../../../../../docs/framework/wcf/diagnostics/etw/1445-readpoolmiss.md)|Verbose|Создан новый объект «%1»|Квота|  
 |[1446 — WritePoolMiss](../../../../../docs/framework/wcf/diagnostics/etw/1446-writepoolmiss.md)|Verbose|Создан новый объект «%1»|Квота|  
-|[1451 — MaxRetryCyclesExceeded](../../../../../docs/framework/wcf/diagnostics/etw/1451-maxretrycyclesexceeded.md)|Error|1%|Квота|  
+|[1451 — MaxRetryCyclesExceeded](../../../../../docs/framework/wcf/diagnostics/etw/1451-maxretrycyclesexceeded.md)|Error|1 %|Квота|  
 |[3300 — ReceiveContextCompleteFailed](../../../../../docs/framework/wcf/diagnostics/etw/3300-receivecontextcompletefailed.md)|Предупреждение|Не удалось завершить %1.|Канал|  
 |[3301 — ReceiveContextAbandonFailed](../../../../../docs/framework/wcf/diagnostics/etw/3301-receivecontextabandonfailed.md)|Предупреждение|Не удалось отменить %1.|Канал|  
 |[3303 — ReceiveContextAbandonWithException](../../../../../docs/framework/wcf/diagnostics/etw/3303-receivecontextabandonwithexception.md)|Предупреждение|Сбой получения контекста.|ServiceModel|  
@@ -126,7 +126,7 @@ ms.locfileid: "33808641"
 |[3305 — ClientBaseCachedChannelFactoryCount](../../../../../docs/framework/wcf/diagnostics/etw/3305-clientbasecachedchannelfactorycount.md)|Сведения|Число кэшированных фабрик каналов: «%1».  Максимальное число фабрик каналов для кэширования:  «%2».|ServiceModel|  
 |[3306 — ClientBaseChannelFactoryAgedOutofCache](../../../../../docs/framework/wcf/diagnostics/etw/3306-clientbasechannelfactoryagedoutofcache.md)|Сведения|Фабрика канала устарела и была удалена из кэша, так как объем кэша достиг предела «%1».|ServiceModel|  
 |[3307 — ClientBaseChannelFactoryCacheHit](../../../../../docs/framework/wcf/diagnostics/etw/3307-clientbasechannelfactorycachehit.md)|Сведения|В кэше обнаружена использованная одинаковая фабрика каналов.|ServiceModel|  
-|[3308 — ClientBaseUsingLocalChannelFactory](../../../../../docs/framework/wcf/diagnostics/etw/3308-clientbaseusinglocalchannelfactory.md)|Сведения|Не используется фабрика каналов из кэша, то есть кэширование отключено для экземпляра.|ServiceModel|  
+|[3308 — ClientBaseUsingLocalChannelFactory](../../../../../docs/framework/wcf/diagnostics/etw/3308-clientbaseusinglocalchannelfactory.md)|Сведения|Не используется фабрика каналов из кэша, т. е. кэширование отключено для экземпляра.|ServiceModel|  
 |[3309 — QueryCompositionExecuted](../../../../../docs/framework/wcf/diagnostics/etw/3309-querycompositionexecuted.md)|Сведения|Построение запроса с помощью «%1» было выполнено для URI запроса: «%2».|ServiceModel|  
 |[3310 — DispatchFailed](../../../../../docs/framework/wcf/diagnostics/etw/3310-dispatchfailed.md)|Error|Операция «%1» была подготовлена с ошибками.|ServiceModel|  
 |[3311 — DispatchSuccessful](../../../../../docs/framework/wcf/diagnostics/etw/3311-dispatchsuccessful.md)|Сведения|Операция «%1» была успешно подготовлена.|ServiceModel|  
@@ -309,11 +309,11 @@ ms.locfileid: "33808641"
 |[4801 — DiscoveryClientInClientChannelFailedToClose](../../../../../docs/framework/wcf/diagnostics/etw/4801-discoveryclientinclientchannelfailedtoclose.md)|Предупреждение|Не удалось закрыть DiscoveryClient, созданный внутри DiscoveryClientChannel. Работа клиента прервана.|Обнаружение|  
 |[4802 — DiscoveryClientProtocolExceptionSuppressed](../../../../../docs/framework/wcf/diagnostics/etw/4802-discoveryclientprotocolexceptionsuppressed.md)|Сведения|Исключение ProtocolException было подавлено при закрытии DiscoveryClient. Это могло произойти из-за того, что DiscoveryService по-прежнему пытается отправить ответ для DiscoveryClient.|Обнаружение|  
 |[4803 — DiscoveryClientReceivedMulticastSuppression](../../../../../docs/framework/wcf/diagnostics/etw/4803-discoveryclientreceivedmulticastsuppression.md)|Сведения|DiscoveryClient получил многоадресное сообщение подавления от DiscoveryProxy.|Обнаружение|  
-|[4804 — DiscoveryMessageReceivedAfterOperationCompleted](../../../../../docs/framework/wcf/diagnostics/etw/4804-discoverymessagereceivedafteroperationcompleted.md)|Сведения|Сообщение %1 с messageId=«%2» удалено клиентом DiscoveryClient, поскольку выполнена соответствующая операция %3.|Обнаружение|  
-|[4805 — DiscoveryMessageWithInvalidContent](../../../../../docs/framework/wcf/diagnostics/etw/4805-discoverymessagewithinvalidcontent.md)|Предупреждение|Сообщение %1 с messageId="%2" удалено из-за недопустимого содержимого.|Обнаружение|  
+|[4804 — DiscoveryMessageReceivedAfterOperationCompleted](../../../../../docs/framework/wcf/diagnostics/etw/4804-discoverymessagereceivedafteroperationcompleted.md)|Сведения|Сообщение %1 с messageId="%2" отброшено клиентом DiscoveryClient, поскольку выполнена соответствующая операция %3.|Обнаружение|  
+|[4805 — DiscoveryMessageWithInvalidContent](../../../../../docs/framework/wcf/diagnostics/etw/4805-discoverymessagewithinvalidcontent.md)|Предупреждение|Сообщение %1 с messageId="%2" отброшено из-за недопустимого содержимого.|Обнаружение|  
 |[4806 — DiscoveryMessageWithInvalidRelatesToOrOperationCompleted](../../../../../docs/framework/wcf/diagnostics/etw/4806-discoverymessagewithinvalidrelatestooroperationcompleted.md)|Предупреждение|Сообщение %1 с messageId="%2" и relatesTo="%3" удалено клиентом DiscoveryClient, поскольку выполнена соответствующая операция %4 или значение relatesTo является недопустимым.|Обнаружение|  
-|[4807 — DiscoveryMessageWithInvalidReplyTo](../../../../../docs/framework/wcf/diagnostics/etw/4807-discoverymessagewithinvalidreplyto.md)|Предупреждение|Сообщение запроса обнаружения с messageId="%1" удалено из-за недопустимого адреса ReplyTo.|Обнаружение|  
-|[4808 — DiscoveryMessageWithNoContent](../../../../../docs/framework/wcf/diagnostics/etw/4808-discoverymessagewithnocontent.md)|Предупреждение|Сообщение %1 удалено, поскольку отсутствует его содержимое.|Обнаружение|  
+|[4807 — DiscoveryMessageWithInvalidReplyTo](../../../../../docs/framework/wcf/diagnostics/etw/4807-discoverymessagewithinvalidreplyto.md)|Предупреждение|Сообщение запроса обнаружения с messageId="%1" сброшено из-за недопустимого адреса ReplyTo.|Обнаружение|  
+|[4808 — DiscoveryMessageWithNoContent](../../../../../docs/framework/wcf/diagnostics/etw/4808-discoverymessagewithnocontent.md)|Предупреждение|Сообщение %1 отброшено, поскольку отсутствует его содержимое.|Обнаружение|  
 |[4809 — DiscoveryMessageWithNullMessageId](../../../../../docs/framework/wcf/diagnostics/etw/4809-discoverymessagewithnullmessageid.md)|Предупреждение|Сообщение %1 удалено, поскольку заголовок сообщения не содержит обязательного свойства MessageId.|Обнаружение|  
 |[4810 — DiscoveryMessageWithNullMessageSequence](../../../../../docs/framework/wcf/diagnostics/etw/4810-discoverymessagewithnullmessagesequence.md)|Предупреждение|Сообщение %1 с messageId="%2" удалено клиентом DiscoveryClient, поскольку в нем отсутствует свойство DiscoveryMessageSequence.|Обнаружение|  
 |[4811 — DiscoveryMessageWithNullRelatesTo](../../../../../docs/framework/wcf/diagnostics/etw/4811-discoverymessagewithnullrelatesto.md)|Предупреждение|Сообщение %1 с messageId="%2" удалено клиентом DiscoveryClient, поскольку заголовок сообщения не содержит обязательного свойства RelatesTo.|Обнаружение|  

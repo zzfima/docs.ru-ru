@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
 ms.openlocfilehash: 75d118ee2bd4918c3a936cb341864ddc5315726b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778642"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
 Указывает, что один или несколько объявленных переменных-членов ссылаются на экземпляр класса, который может порождать события.  
@@ -28,7 +28,7 @@ ms.locfileid: "58826617"
   
 ## <a name="rules"></a>Правила  
   
--   **Типы элементов.** Необходимо объявить `WithEvents` переменные должны быть объектные переменные, чтобы они способны принять экземпляров класса. Тем не менее, нельзя объявлять их как `Object`. Их необходимо объявить как определенный класс, который может инициировать события.  
+- **Типы элементов.** Необходимо объявить `WithEvents` переменные должны быть объектные переменные, чтобы они способны принять экземпляров класса. Тем не менее, нельзя объявлять их как `Object`. Их необходимо объявить как определенный класс, который может инициировать события.  
   
  `WithEvents` Модификатор может использоваться в этом контексте: [Оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)  
   

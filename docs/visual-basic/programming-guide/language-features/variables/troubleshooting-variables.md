@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
 ms.openlocfilehash: 55d0fdcdbed4f994e50e83e5a25baf83c3ad79cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756758"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Устранение неполадок, связанных с переменными, в Visual Basic
 Этой странице перечислены некоторые распространенные проблемы, которые могут возникнуть при работе с переменными в Visual Basic.  
@@ -18,9 +18,9 @@ ms.locfileid: "58831128"
 ## <a name="unable-to-access-members-of-an-object"></a>Не удается получить доступ к членам объекта  
  Если ваш код пытается получить доступ к свойству или методу объекта, могут возникнуть две следующие ошибки.  
   
--   Компилятор может создать сообщение об ошибке, если вы объявляете переменную объекта с определенным типом и затем ссылаетесь на член, не определенный этим типом.  
+- Компилятор может создать сообщение об ошибке, если вы объявляете переменную объекта с определенным типом и затем ссылаетесь на член, не определенный этим типом.  
   
--   <xref:System.MemberAccessException> времени выполнения возникает, когда объект, присвоенный переменной объекта, не является элементом, доступ к которому пытается получить код. В случае с переменной [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)это исключение также возникает, если член не является `Public`. Это происходит потому, что позднее связывание разрешает доступ только к членам `Public` .  
+- <xref:System.MemberAccessException> времени выполнения возникает, когда объект, присвоенный переменной объекта, не является элементом, доступ к которому пытается получить код. В случае с переменной [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)это исключение также возникает, если член не является `Public`. Это происходит потому, что позднее связывание разрешает доступ только к членам `Public` .  
   
  Когда [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) задает для проверки типа значение `On`, переменная объекта может получать доступ только к методам и свойствам класса, в котором она объявлена. Это показано в следующем примере.  
 

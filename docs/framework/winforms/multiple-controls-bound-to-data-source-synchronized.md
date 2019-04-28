@@ -9,18 +9,18 @@ helpviewer_keywords:
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
 ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800781"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Практическое руководство. Синхронизация элементов управления, связанных с одним источником данных
 Иногда при работе с привязкой данных в Windows Forms, несколько элементов управления привязаны к тому же источнику данных. В некоторых случаях может потребоваться выполнить дополнительные шаги, чтобы убедиться, что привязанного свойства элементов управления будут синхронизированы друг с другом и источником данных. Эти шаги необходимы в двух случаях:  
   
--   Если источник данных не реализует <xref:System.ComponentModel.IBindingList>и поэтому вызывает <xref:System.ComponentModel.IBindingList.ListChanged> события типа <xref:System.ComponentModel.ListChangedType.ItemChanged>.  
+- Если источник данных не реализует <xref:System.ComponentModel.IBindingList>и поэтому вызывает <xref:System.ComponentModel.IBindingList.ListChanged> события типа <xref:System.ComponentModel.ListChangedType.ItemChanged>.  
   
--   Если источник данных реализует <xref:System.ComponentModel.IEditableObject>.  
+- Если источник данных реализует <xref:System.ComponentModel.IEditableObject>.  
   
  В первом случае можно использовать <xref:System.Windows.Forms.BindingSource> для привязки источника данных к элементам управления. В последнем случае используется <xref:System.Windows.Forms.BindingSource> и обрабатывать <xref:System.Windows.Forms.BindingSource.BindingComplete> событий и вызовов <xref:System.Windows.Forms.BindingManagerBase.EndCurrentEdit%2A> в связанном <xref:System.Windows.Forms.BindingManagerBase>.  
   
@@ -34,11 +34,11 @@ ms.locfileid: "59170343"
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
--   Данный пример кода требует  
+- Данный пример кода требует  
   
--   ссылки на сборки <xref:System>, <xref:System.Windows.Forms> и <xref:System.Drawing>.  
+- ссылки на сборки <xref:System>, <xref:System.Windows.Forms> и <xref:System.Drawing>.  
   
--   Форма с <xref:System.Windows.Forms.Form.Load> событие как обработанное и вызов `InitializeControlsAndDataSource` метод в примере из формы <xref:System.Windows.Forms.Form.Load> обработчик событий.  
+- Форма с <xref:System.Windows.Forms.Form.Load> событие как обработанное и вызов `InitializeControlsAndDataSource` метод в примере из формы <xref:System.Windows.Forms.Form.Load> обработчик событий.  
   
 ## <a name="see-also"></a>См. также
 

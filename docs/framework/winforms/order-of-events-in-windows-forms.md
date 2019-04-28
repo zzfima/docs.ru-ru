@@ -10,11 +10,11 @@ helpviewer_keywords:
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
 ms.openlocfilehash: 24d48a9dfdf10601099333e52073bb7fa3579beb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800793"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Порядок событий в формах Windows Forms
 Особый интерес для разработчиков представляет порядок, в котором вызываются события в приложениях Windows Forms, для обеспечения обработки каждого из этих событий в свою очередь. Если ситуация требует аккуратной обработки событий, например когда производится перерисовка части формы, то необходимо знать точный порядок, в котором вызываются события во время выполнения. В этом разделе приведены некоторые сведения о порядке событий, возникающих на нескольких важных этапах жизненного цикла приложений и элементов управления. Конкретные сведения о порядке событий щелчков мыши см. в разделе [события мыши в Windows Forms](mouse-events-in-windows-forms.md). Обзор событий в формах Windows Forms, см. в разделе [Общие сведения о событиях](events-overview-windows-forms.md). Дополнительные сведения о создании обработчиков событий, см. в разделе [Обзор обработчиков событий](event-handlers-overview-windows-forms.md).  
@@ -22,29 +22,29 @@ ms.locfileid: "59193061"
 ## <a name="application-startup-and-shutdown-events"></a>События запуска и завершения работы приложения  
  Классы <xref:System.Windows.Forms.Form> и <xref:System.Windows.Forms.Control> предоставляют набор событий, связанных с запуском и завершением приложения. При запуске приложения Windows Forms события запуска главной формы вызываются в следующем порядке:  
   
--   <xref:System.Windows.Forms.Control.HandleCreated?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Control.HandleCreated?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Control.BindingContextChanged?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Control.BindingContextChanged?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Load?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.Load?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Control.VisibleChanged?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Control.VisibleChanged?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Activated?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.Activated?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Shown?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.Shown?displayProperty=nameWithType>  
   
  При закрытии приложения события запуска главной формы вызываются в следующем порядке:  
   
--   <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Closed?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.Closed?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.FormClosed?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.FormClosed?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Deactivate?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.Form.Deactivate?displayProperty=nameWithType>  
   
  Событие <xref:System.Windows.Forms.Application.ApplicationExit> класса <xref:System.Windows.Forms.Application> вызывается после событий завершения работы основной формы.  
   
@@ -54,31 +54,31 @@ ms.locfileid: "59193061"
 ## <a name="focus-and-validation-events"></a>События, связанные с фокусом и проверками  
  При изменении фокуса с помощью клавиатуры (при нажатии клавиш TAB, SHIFT+TAB и так далее), путем вызова методов <xref:System.Windows.Forms.Control.Select%2A> или <xref:System.Windows.Forms.Control.SelectNextControl%2A>, либо присвоением свойства <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> текущей форме, события фокуса ввода класса <xref:System.Windows.Forms.Control> происходят в следующем порядке:  
   
--   <xref:System.Windows.Forms.Control.Enter>  
+- <xref:System.Windows.Forms.Control.Enter>  
   
--   <xref:System.Windows.Forms.Control.GotFocus>  
+- <xref:System.Windows.Forms.Control.GotFocus>  
   
--   <xref:System.Windows.Forms.Control.Leave>  
+- <xref:System.Windows.Forms.Control.Leave>  
   
--   <xref:System.Windows.Forms.Control.Validating>  
+- <xref:System.Windows.Forms.Control.Validating>  
   
--   <xref:System.Windows.Forms.Control.Validated>  
+- <xref:System.Windows.Forms.Control.Validated>  
   
--   <xref:System.Windows.Forms.Control.LostFocus>  
+- <xref:System.Windows.Forms.Control.LostFocus>  
   
  При изменении фокуса ввода с помощью мыши или путем вызова метода  <xref:System.Windows.Forms.Control.Focus%2A> события фокуса класса <xref:System.Windows.Forms.Control> происходят в следующем порядке.  
   
--   <xref:System.Windows.Forms.Control.Enter>  
+- <xref:System.Windows.Forms.Control.Enter>  
   
--   <xref:System.Windows.Forms.Control.GotFocus>  
+- <xref:System.Windows.Forms.Control.GotFocus>  
   
--   <xref:System.Windows.Forms.Control.LostFocus>  
+- <xref:System.Windows.Forms.Control.LostFocus>  
   
--   <xref:System.Windows.Forms.Control.Leave>  
+- <xref:System.Windows.Forms.Control.Leave>  
   
--   <xref:System.Windows.Forms.Control.Validating>  
+- <xref:System.Windows.Forms.Control.Validating>  
   
--   <xref:System.Windows.Forms.Control.Validated>  
+- <xref:System.Windows.Forms.Control.Validated>  
   
 ## <a name="see-also"></a>См. также
 

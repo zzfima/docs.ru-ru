@@ -3,11 +3,11 @@ title: Допускающие значения null структурирован
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
 ms.openlocfilehash: 632b092e1d0d99a2a40cc3cd4b323e234de6232b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760328"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>Допускающие значения null структурированные типы (Entity SQL)
 Экземпляр `null` структурированного типа - несуществующий экземпляр. Это отличается от существующего экземпляра, все свойства которого имеют значения `null`.  
@@ -17,28 +17,28 @@ ms.locfileid: "59127859"
 ## <a name="kinds-of-nullable-structured-types"></a>Разновидности структурированных типов, допускающих значение NULL  
  Существует три разновидности типов структуры, допускающие значение NULL.  
   
--   Типы строк.  
+- Типы строк.  
   
--   Сложные типы.  
+- Сложные типы.  
   
--   Типы сущностей.  
+- Типы сущностей.  
   
 ## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a>Шаблоны кода, которые формируют экземпляры NULL структурированных типов  
  В следующем сценарии формируются экземпляры `null`:  
   
--   Формирование `null` как структурированного типа:  
+- Формирование `null` как структурированного типа:  
   
     ```  
     TREAT (NULL AS StructuredType)  
     ```  
   
--   Приведение базового типа к производному типу:  
+- Приведение базового типа к производному типу:  
   
     ```  
     TREAT (BaseType AS DerivedType)  
     ```  
   
--   Внешнее соединение по условию FALSE:  
+- Внешнее соединение по условию FALSE:  
   
     ```  
     Collection1 LEFT OUTER JOIN Collection2  
@@ -59,19 +59,19 @@ ms.locfileid: "59127859"
     ON FalseCondition  
     ```  
   
--   Разыменование ссылки на `null`:  
+- Разыменование ссылки на `null`:  
   
     ```  
     DEREF(NullRef)  
     ```  
   
--   Получение значения ANYELEMENT из пустой коллекции:  
+- Получение значения ANYELEMENT из пустой коллекции:  
   
     ```  
     ANYELEMENT(EmptyCollection)  
     ```  
   
--   Проверка наличия экземпляров `null` структурированных типов:  
+- Проверка наличия экземпляров `null` структурированных типов:  
   
     ```csharp  
     ...  

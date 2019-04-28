@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 040f13f0-69f9-4ab5-be2b-079f4f80c7c0
 ms.openlocfilehash: 107391386dfbb718f9436d9a039b08439fbc3279
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762141"
 ---
 # <a name="how-to-control-a-storyboard-after-it-starts"></a>Практическое руководство. Управление раскадровкой после ее запуска
 В этом примере показано, как использовать код для управления <xref:System.Windows.Media.Animation.Storyboard> после ее запуска. Управление раскадровкой в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], использовать <xref:System.Windows.Trigger> и <xref:System.Windows.TriggerAction> объектов; например, см. в разделе [использование триггеров событий для управления раскадровкой после ее запуска](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
@@ -21,19 +21,19 @@ ms.locfileid: "59161490"
   
  Чтобы сделать раскадровку управляемой, используйте <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> метод и указать **true** качестве второго параметра. Затем можно использовать интерактивные методы раскадровки для приостановки, возобновления, поиска, остановить, ускорить работу, или снизить скорость раскадровки или перейти к периоду заполнения. Ниже приведен список интерактивных методов раскадровки:  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>: Приостанавливает раскадровку.  
+- <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>: Приостанавливает раскадровку.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: Возобновляет приостановленную раскадровку.  
+- <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: Возобновляет приостановленную раскадровку.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: Задает интерактивную скорость раскадровки.  
+- <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: Задает интерактивную скорость раскадровки.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: Ищет указанное место раскадровки.  
+- <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: Ищет указанное место раскадровки.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: Поиск раскадровки в указанное расположение. В отличие от <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> метод, эта операция обрабатывается до следующий такт.  
+- <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: Поиск раскадровки в указанное расположение. В отличие от <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> метод, эта операция обрабатывается до следующий такт.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: Перемещает раскадровку к периоду заполнения, если он имеется.  
+- <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: Перемещает раскадровку к периоду заполнения, если он имеется.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: Останавливает раскадровку.  
+- <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: Останавливает раскадровку.  
   
  В следующем примере несколько методов используются для интерактивного управления раскадровкой.  
   

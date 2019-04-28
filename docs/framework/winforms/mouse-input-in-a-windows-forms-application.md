@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Windows Forms, mouse input
 ms.assetid: 743c2f3c-219e-4a52-b6b8-2657096a2da6
 ms.openlocfilehash: 3b4e9eff3f5c4c032e75ded0913ce2cc6051498d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800741"
 ---
 # <a name="mouse-input-in-a-windows-forms-application"></a>Ввод данных мышью в приложении Windows Forms
 Windows Forms включает разнообразные события мыши и обеспечивает дополнительную поддержку настраиваемых курсоров мыши, захвата мыши и поведения при перетаскивании.  

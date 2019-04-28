@@ -3,11 +3,11 @@ title: Выбор типа учетных данных
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748812"
 ---
 # <a name="selecting-a-credential-type"></a>Выбор типа учетных данных
 *Учетные данные* — это данные, Windows Communication Foundation (WCF) использует для подтверждения заявленной идентификации или возможностей. Например, паспорт - это документ, выданный властями, в котором содержатся учетные данные, подтверждающие гражданство страны или региона. В WCF учетные данные могут принимать различные формы, например маркеры имен пользователей и сертификаты X.509. В этом разделе рассматриваются учетные данные, как они используются в WCF и способ выбора правильных учетных данных для вашего приложения.  
@@ -85,9 +85,9 @@ ms.locfileid: "59167847"
 ## <a name="how-client-credentials-are-used-to-authenticate-a-client-to-the-service"></a>Использование учетных данных клиента при проверке подлинности клиента службой  
  Учетные данные клиента, необходимые для связи со службой, предоставляются с помощью свойства <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> или <xref:System.ServiceModel.ChannelFactory.Credentials%2A>. Безопасный канал может использовать эту информацию для выполнения службой проверки подлинности клиента. Проверка подлинности выполняется в одном из двух режимов.  
   
--   Учетные данные клиента используются один раз перед отправкой первого сообщения, используя экземпляр клиента WCF для установления контекста безопасности. Все сообщения приложения после этого защищены контекстом безопасности.  
+- Учетные данные клиента используются один раз перед отправкой первого сообщения, используя экземпляр клиента WCF для установления контекста безопасности. Все сообщения приложения после этого защищены контекстом безопасности.  
   
--   Учетные данные используются для проверки подлинности всех сообщений приложения, отправляемых службе. В этом случае контекст между клиентом и службой не устанавливается.  
+- Учетные данные используются для проверки подлинности всех сообщений приложения, отправляемых службе. В этом случае контекст между клиентом и службой не устанавливается.  
   
 ### <a name="established-identities-cannot-be-changed"></a>Невозможность изменения установленных идентификаций  
  При использовании первого метода установленный контекст связывается с идентификацией клиента навсегда. Это значит, что после установки контекста безопасности нельзя изменить идентификацию, связанную с клиентом.  
@@ -108,7 +108,6 @@ ms.locfileid: "59167847"
 - <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
-- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
 - [Основные понятия безопасности](../../../../docs/framework/wcf/feature-details/security-concepts.md)

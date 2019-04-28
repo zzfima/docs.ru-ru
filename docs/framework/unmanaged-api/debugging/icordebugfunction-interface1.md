@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ca21911f3d16b79887b9d6d8185f8fab17651321
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672995"
 ---
 # <a name="icordebugfunction-interface"></a>Интерфейс ICorDebugFunction
 
@@ -45,9 +45,9 @@ ms.locfileid: "59093219"
   
  Связь между токен метаданных метода, `mdMethodDef`, а также метод `ICorDebugFunction` зависит изменить и продолжить разрешена ли функция объект:  
   
--   Если изменить и продолжить не допускается в функции, взаимно-однозначной связи межу `ICorDebugFunction` объекта и `mdMethodDef` маркеров. То есть функция имеет один `ICorDebugFunction` объекта и один `mdMethodDef` токена.  
+- Если изменить и продолжить не допускается в функции, взаимно-однозначной связи межу `ICorDebugFunction` объекта и `mdMethodDef` маркеров. То есть функция имеет один `ICorDebugFunction` объекта и один `mdMethodDef` токена.  
   
--   Если на функцию может изменить и продолжить, существует связь многие к одному между `ICorDebugFunction` объекта и `mdMethodDef` маркеров. То есть функция может иметь несколько экземпляров `ICorDebugFunction`, один для каждой версии функции, но только один `mdMethodDef` токена.  
+- Если на функцию может изменить и продолжить, существует связь многие к одному между `ICorDebugFunction` объекта и `mdMethodDef` маркеров. То есть функция может иметь несколько экземпляров `ICorDebugFunction`, один для каждой версии функции, но только один `mdMethodDef` токена.  
   
 > [!NOTE]
 >  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  

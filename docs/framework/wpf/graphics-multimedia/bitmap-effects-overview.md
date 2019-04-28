@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
 ms.openlocfilehash: 1866ba7a5419ea435a56daa63f94122d3b83473e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752754"
 ---
 # <a name="bitmap-effects-overview"></a>Общие сведения об эффектах для точечных рисунков
 Растровые эффекты позволяют конструкторам и разработчикам применять визуальные эффекты к просмотру содержимого Windows Presentation Foundation (WPF). Например, растровые эффекты позволяют легко применить <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> эффект или эффект размытия для изображения или кнопки.  
@@ -23,15 +23,15 @@ ms.locfileid: "59166898"
   
  Как особый случай в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], эффекты могут задаваться как свойства в реальном времени <xref:System.Windows.Media.Visual> объекты, такие как <xref:System.Windows.Controls.Button> или <xref:System.Windows.Controls.TextBox>. Обработка пикселей применяется и отображается во время выполнения. В этом случае во время подготовки к просмотру <xref:System.Windows.Media.Visual> автоматически преобразуется в его <xref:System.Windows.Media.Imaging.BitmapSource> эквивалентное и передается в качестве входных данных для <xref:System.Windows.Media.Effects.BitmapEffect>. Выходные данные заменяют <xref:System.Windows.Media.Visual> поведение отрисовки по умолчанию для объекта. Вот почему <xref:System.Windows.Media.Effects.BitmapEffect> объектов заставляют визуальные для подготовки к просмотру в программном обеспечении только т. е. без аппаратного ускорения на визуальных элементах при применении эффектов.  
   
--   <xref:System.Windows.Media.Effects.BlurBitmapEffect> имитирует объект, который отображается вне в фокусе.  
+- <xref:System.Windows.Media.Effects.BlurBitmapEffect> имитирует объект, который отображается вне в фокусе.  
   
--   <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect> Создает цветное свечение по периметру объекта.  
+- <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect> Создает цветное свечение по периметру объекта.  
   
--   <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> создает тень позади объекта.  
+- <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> создает тень позади объекта.  
   
--   <xref:System.Windows.Media.Effects.BevelBitmapEffect> Создает Рельеф, поднимающий поверхность изображения в соответствии с указанной кривой.  
+- <xref:System.Windows.Media.Effects.BevelBitmapEffect> Создает Рельеф, поднимающий поверхность изображения в соответствии с указанной кривой.  
   
--   <xref:System.Windows.Media.Effects.EmbossBitmapEffect> Создает рельефа <xref:System.Windows.Media.Visual> впечатление глубины и текстуры от искусственного источника света.  
+- <xref:System.Windows.Media.Effects.EmbossBitmapEffect> Создает рельефа <xref:System.Windows.Media.Visual> впечатление глубины и текстуры от искусственного источника света.  
   
 > [!NOTE]
 >  Растровые эффекты [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] отрисовываются в программном режиме. Любой объект, который применяет эффект, будет также отрисован в программном режиме. Производительность наиболее снижается при использовании растровых эффектов на больших визуальных объектах или при анимации свойств растрового эффекта. Это не означает, что не следует вовсе использовать растровые эффекты, но следует соблюдать осторожность и выполнять тщательное тестирование, чтобы убедиться, что пользователи получат то, что вы ожидаете.  

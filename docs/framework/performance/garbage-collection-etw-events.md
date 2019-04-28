@@ -9,44 +9,44 @@ ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7f9bf0e309ec8c77d4b1d6afbf111e7eeae629ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61722943"
 ---
 # <a name="garbage-collection-etw-events"></a>События сборки мусора (трассировка событий Windows)
 <a name="top"></a> Эти события собирают сведения, относящиеся к сборке мусора. Они помогают при диагностике и отладке, в том числе позволяют определить, сколько раз осуществлялась сборка мусора, какой объем памяти был освобожден в ходе сборки мусора и т. д.  
   
  Эта категория состоит из следующих событий:  
   
--   [Событие GCStart_V1](#gcstart_v1_event)  
+- [Событие GCStart_V1](#gcstart_v1_event)  
   
--   [Событие GCEnd_V1](#gcend_v1_event)  
+- [Событие GCEnd_V1](#gcend_v1_event)  
   
--   [Событие GCHeapStats_V1](#gcheapstats_v1_event)  
+- [Событие GCHeapStats_V1](#gcheapstats_v1_event)  
   
--   [Событие GCCreateSegment_V1](#gccreatesegment_v1_event)  
+- [Событие GCCreateSegment_V1](#gccreatesegment_v1_event)  
   
--   [Событие GCFreeSegment_V1](#gcfreesegment_v1_event)  
+- [Событие GCFreeSegment_V1](#gcfreesegment_v1_event)  
   
--   [Событие GCRestartEEBegin_V1](#gcrestarteebegin_v1_event)  
+- [Событие GCRestartEEBegin_V1](#gcrestarteebegin_v1_event)  
   
--   [Событие GCRestartEEEnd_V1](#gcrestarteeend_v1_event)  
+- [Событие GCRestartEEEnd_V1](#gcrestarteeend_v1_event)  
   
--   [Событие GCSuspendEE_V1](#gcsuspendee_v1_event)  
+- [Событие GCSuspendEE_V1](#gcsuspendee_v1_event)  
   
--   [Событие GCSuspendEEEnd_V1](#gcsuspendeeend_v1_event)  
+- [Событие GCSuspendEEEnd_V1](#gcsuspendeeend_v1_event)  
   
--   [Событие GCAllocationTick_V2](#gcallocationtick_v2_event)  
+- [Событие GCAllocationTick_V2](#gcallocationtick_v2_event)  
   
--   [Событие GCFinalizersBegin_V1](#gcfinalizersbegin_v1_event)  
+- [Событие GCFinalizersBegin_V1](#gcfinalizersbegin_v1_event)  
   
--   [Событие GCFinalizersEnd_V1](#gcfinalizersend_v1_event)  
+- [Событие GCFinalizersEnd_V1](#gcfinalizersend_v1_event)  
   
--   [Событие GCCreateConcurrentThread_V1](#gccreateconcurrentthread_v1_event)  
+- [Событие GCCreateConcurrentThread_V1](#gccreateconcurrentthread_v1_event)  
   
--   [Событие GCTerminateConcurrentThread_V1](#gcterminateconcurrentthread_v1_event)  
+- [Событие GCTerminateConcurrentThread_V1](#gcterminateconcurrentthread_v1_event)  
   
 <a name="gcstart_v1_event"></a>   
 ## <a name="gcstartv1-event"></a>Событие GCStart_V1  

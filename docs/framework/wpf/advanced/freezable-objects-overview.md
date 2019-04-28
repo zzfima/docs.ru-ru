@@ -10,11 +10,11 @@ helpviewer_keywords:
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
 ms.openlocfilehash: 8df19e69ff3be06704878ea290a3f4a2997127eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703327"
 ---
 # <a name="freezable-objects-overview"></a>Общие сведения об объектах класса Freezable
 В этом разделе описывается, как эффективно использовать и создавать <xref:System.Windows.Freezable> объекты, которые предоставляют специальные функции, которые могут помочь повысить производительность приложения. Объекты freezable примеры кисти, перья, преобразования, геометрии и анимации.  
@@ -63,11 +63,11 @@ ms.locfileid: "59224269"
   
  Freezable **нельзя** зафиксировать, если одно из следующих условий:  
   
--   Объект имеет анимированные или свойства с привязкой к данным.  
+- Объект имеет анимированные или свойства с привязкой к данным.  
   
--   Он имеет свойства, заданные на динамический ресурс. (См. в разделе [ресурсы XAML](xaml-resources.md) Дополнительные сведения о динамических ресурсов.)  
+- Он имеет свойства, заданные на динамический ресурс. (См. в разделе [ресурсы XAML](xaml-resources.md) Дополнительные сведения о динамических ресурсов.)  
   
--   Он содержит <xref:System.Windows.Freezable> вложенные объекты, которые нельзя зафиксировать.  
+- Он содержит <xref:System.Windows.Freezable> вложенные объекты, которые нельзя зафиксировать.  
   
  Если эти условия имеют значение false, и вы не собираетесь изменять <xref:System.Windows.Freezable>, то стоит зафиксировать, чтобы получить выигрыш в производительности, описанные ранее.  
   
@@ -122,13 +122,13 @@ mc:Ignorable="PresentationOptions"
 ## <a name="creating-your-own-freezable-class"></a>Создание собственного класса Freezable  
  Класс, производный от <xref:System.Windows.Freezable> поддерживает следующие функции.  
   
--   Особые состояния: только для чтения (замороженным) и состояние для записи.  
+- Особые состояния: только для чтения (замороженным) и состояние для записи.  
   
--   Потокобезопасность: зафиксированный <xref:System.Windows.Freezable> может использоваться несколькими потоками.  
+- Потокобезопасность: зафиксированный <xref:System.Windows.Freezable> может использоваться несколькими потоками.  
   
--   Подробные уведомления об изменениях: В отличие от других <xref:System.Windows.DependencyObject>s, объектах класса Freezable предоставить уведомление об изменениях, при изменении значений вложенных свойств.  
+- Подробные уведомления об изменениях: В отличие от других <xref:System.Windows.DependencyObject>s, объектах класса Freezable предоставить уведомление об изменениях, при изменении значений вложенных свойств.  
   
--   Удобное клонирование: Freezable класс уже реализовал несколько методов, которые обеспечивают большую глубину клонирования.  
+- Удобное клонирование: Freezable класс уже реализовал несколько методов, которые обеспечивают большую глубину клонирования.  
   
  Объект <xref:System.Windows.Freezable> — это разновидность <xref:System.Windows.DependencyObject>и поэтому использует в системе свойств зависимостей. Свойства класса не обязательно должны быть свойствами зависимости, но использование свойств зависимостей уменьшит объем кода, необходимо написать, так как <xref:System.Windows.Freezable> класс был разработан с учетом свойств зависимости. Дополнительные сведения о системе свойств зависимостей, см. в разделе [Общие сведения о свойствах зависимостей](dependency-properties-overview.md).  
   
@@ -136,23 +136,23 @@ mc:Ignorable="PresentationOptions"
   
  Если класс содержит члены данных не свойство зависимости, необходимо также переопределить следующие методы:  
   
--   <xref:System.Windows.Freezable.CloneCore%2A>  
+- <xref:System.Windows.Freezable.CloneCore%2A>  
   
--   <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
+- <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
   
--   <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.FreezeCore%2A>  
+- <xref:System.Windows.Freezable.FreezeCore%2A>  
   
  Также необходимо соблюдать следующие правила для доступа и записи на данные-члены, которые не являются свойствами зависимостей:  
   
--   В начале любого [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] , считывает элементы данных не свойство зависимости, вызовите <xref:System.Windows.Freezable.ReadPreamble%2A> метод.  
+- В начале любого [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] , считывает элементы данных не свойство зависимости, вызовите <xref:System.Windows.Freezable.ReadPreamble%2A> метод.  
   
--   В начале любого API, который записывает элементы данных не свойство зависимости, вызовите <xref:System.Windows.Freezable.WritePreamble%2A> метод. (После вызова <xref:System.Windows.Freezable.WritePreamble%2A> в [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], не требуется дополнительный вызов к <xref:System.Windows.Freezable.ReadPreamble%2A> также считывать элементы данных не свойство зависимости.)  
+- В начале любого API, который записывает элементы данных не свойство зависимости, вызовите <xref:System.Windows.Freezable.WritePreamble%2A> метод. (После вызова <xref:System.Windows.Freezable.WritePreamble%2A> в [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], не требуется дополнительный вызов к <xref:System.Windows.Freezable.ReadPreamble%2A> также считывать элементы данных не свойство зависимости.)  
   
--   Вызовите <xref:System.Windows.Freezable.WritePostscript%2A> метод перед выходом из методов, которые записывают на данные-члены не свойство зависимости.  
+- Вызовите <xref:System.Windows.Freezable.WritePostscript%2A> метод перед выходом из методов, которые записывают на данные-члены не свойство зависимости.  
   
  Если класс содержит члены данных зависимостей свойства, которые являются <xref:System.Windows.DependencyObject> объектов, необходимо также вызвать <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> метод каждый раз при изменении одного из их значения, даже если вы изменяете член `null`.  
   

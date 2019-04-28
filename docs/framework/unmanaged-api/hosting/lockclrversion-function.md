@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765275"
 ---
 # <a name="lockclrversion-function"></a>Функция LockClrVersion
 Позволяет основному приложению определить, какую версию общеязыковой среды выполнения (CLR), которая будет использоваться в процессе до явной инициализации среды CLR.  
@@ -72,15 +72,15 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
 3. Функцию, указанную аргументом `hostCallback` затем выполняет следующую последовательность вызовов:  
   
-    -   Функцию, указанную аргументом `pBeginHostSetup` параметра.  
+    - Функцию, указанную аргументом `pBeginHostSetup` параметра.  
   
-    -   `CorBindToRuntimeEx` (или другую функцию инициализации среды выполнения).  
+    - `CorBindToRuntimeEx` (или другую функцию инициализации среды выполнения).  
   
-    -   [ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
+    - [ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
   
-    -   [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
+    - [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
   
-    -   Функцию, указанную аргументом `pEndHostSetup` параметра.  
+    - Функцию, указанную аргументом `pEndHostSetup` параметра.  
   
  Все вызовы из `pBeginHostSetup` для `pEndHostSetup` должно находиться на одном потоке или нити с использованием одного логического стека. Этот поток может отличаться от потока, на котором `hostCallback` вызывается.  
   
