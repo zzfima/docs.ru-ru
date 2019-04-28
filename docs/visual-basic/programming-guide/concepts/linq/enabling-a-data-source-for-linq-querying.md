@@ -3,23 +3,23 @@ title: Включение источника данных для LINQ Querying2
 ms.date: 07/20/2015
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
 ms.openlocfilehash: f705db90f4838479621117bd9303f5a374d33d4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781034"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Включение источника данных для запросов LINQ
 
 Существуют различные способы расширения [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] для поддержки запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] к любому источнику данных. Источник данных может быть, например, структурой данных, веб-службой, файловой системой или базой данных. Шаблон [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] упрощает для клиентов осуществление запросов к источникам данных, для которых задействована поддержка запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], поскольку синтаксис и шаблон запроса не меняется. Далее перечислены способы, с помощью которых [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] может быть расширен для этих источников данных.
 
--   Реализация интерфейса <xref:System.Collections.Generic.IEnumerable%601> в типе для выполнения запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] к объектам этого типа.
+- Реализация интерфейса <xref:System.Collections.Generic.IEnumerable%601> в типе для выполнения запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] к объектам этого типа.
 
--   Создание методов стандартных операторов запроса, таких как <xref:System.Linq.Enumerable.Where%2A> и <xref:System.Linq.Enumerable.Select%2A>, расширяющих тип, для поддержки настраиваемых запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] этого типа.
+- Создание методов стандартных операторов запроса, таких как <xref:System.Linq.Enumerable.Where%2A> и <xref:System.Linq.Enumerable.Select%2A>, расширяющих тип, для поддержки настраиваемых запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] этого типа.
 
--   Создание поставщика для источника данных, который реализует интерфейс <xref:System.Linq.IQueryable%601>. Поставщик, реализующий этот интерфейс, получает запросы [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] в виде деревьев выражения, которые он может выполнять любым способом, например удаленно.
+- Создание поставщика для источника данных, который реализует интерфейс <xref:System.Linq.IQueryable%601>. Поставщик, реализующий этот интерфейс, получает запросы [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] в виде деревьев выражения, которые он может выполнять любым способом, например удаленно.
 
--   Создание поставщика для источника данных, который использует преимущества существующей технологии [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Такой поставщик позволит выполнять не только запросы, но и операции вставки, обновления, удаления и сопоставления для определяемых пользователем типов.
+- Создание поставщика для источника данных, который использует преимущества существующей технологии [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Такой поставщик позволит выполнять не только запросы, но и операции вставки, обновления, удаления и сопоставления для определяемых пользователем типов.
 
 Эти варианты рассматриваются далее.
 

@@ -3,11 +3,11 @@ title: <dispatcherSynchronization>
 ms.date: 03/30/2017
 ms.assetid: cc030f9c-4e38-4b14-94dc-9a0e41ec8e2d
 ms.openlocfilehash: 6be9752e8102a5d4db4fed31aae8ff6d56fdd24e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673411"
 ---
 # <a name="dispatchersynchronization"></a>\<dispatcherSynchronization >
   
@@ -46,7 +46,7 @@ ms.locfileid: "55273336"
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-| Элемент | Описание: |  
+| Элемент | Описание |  
 | ------- | ----------- |  
 | [\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Задает поведение конечной точки. |
 

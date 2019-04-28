@@ -3,11 +3,11 @@ title: Управление контекстом службы данных (сл
 ms.date: 03/30/2017
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
 ms.openlocfilehash: 33e7ce17eea5d534b941d778fd13144ad51b4094
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875801"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>Управление контекстом службы данных (службы WCF Data Services)
 Класс <xref:System.Data.Services.Client.DataServiceContext> инкапсулирует операции, поддерживающие работу с конкретной службой данных. Хотя службы [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] не сохраняют состояние, контекст его сохраняет. Таким образом, можно использовать <xref:System.Data.Services.Client.DataServiceContext> класса для поддержания состояния на стороне клиента между взаимодействиями со службой данных для поддержки функции, такие как управление изменениями. Этот класс также управляет идентификаторами и отслеживает изменения.  

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
 ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020274"
 ---
 # <a name="animation-tips-and-tricks"></a>Советы и рекомендации по анимации
 При работе с анимацией в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], существует ряд советов и приемов, которые анимациям работают лучше и сэкономить разочарований.  
@@ -41,11 +41,11 @@ ms.locfileid: "59295956"
   
  Для <xref:System.Windows.Media.Animation.Timeline> для отражения изменений, необходимо повторно и заменить ранее созданные часы ее часы. Автоматическое повторное создание часов не выполняется. Ниже показано несколько способов применения изменений временной шкалы.  
   
--   Если временная шкала или принадлежит <xref:System.Windows.Media.Animation.Storyboard>, его можно сделать отражать изменения посредством применения его с помощью раскадровки <xref:System.Windows.Media.Animation.BeginStoryboard> или <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> метод. Это имеет побочный эффект в виде перезапуска анимации. В коде, можно использовать <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> резервного метода для возврата раскадровки в предыдущее положение.  
+- Если временная шкала или принадлежит <xref:System.Windows.Media.Animation.Storyboard>, его можно сделать отражать изменения посредством применения его с помощью раскадровки <xref:System.Windows.Media.Animation.BeginStoryboard> или <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> метод. Это имеет побочный эффект в виде перезапуска анимации. В коде, можно использовать <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> резервного метода для возврата раскадровки в предыдущее положение.  
   
--   Если анимация применяется непосредственно к свойству с помощью <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> мы вызываем метод <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> снова метод и передать его анимации, которые были изменены.  
+- Если анимация применяется непосредственно к свойству с помощью <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> мы вызываем метод <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> снова метод и передать его анимации, которые были изменены.  
   
--   При работе непосредственно на уровне часов создайте и примените новый набор часов и используйте его для замены предыдущего набора созданных часов.  
+- При работе непосредственно на уровне часов создайте и примените новый набор часов и используйте его для замены предыдущего набора созданных часов.  
   
  Дополнительные сведения о временных шкалах и часах см. в разделе [анимации и общие сведения о характере системы](animation-and-timing-system-overview.md).  
   
@@ -105,13 +105,13 @@ ms.locfileid: "59295956"
   
  Анимацию можно удалить разными способами. Следующие методы можно использовать для удаления анимаций, принадлежащих <xref:System.Windows.Media.Animation.Storyboard>.  
   
--   Чтобы удалить <xref:System.Windows.Media.Animation.Storyboard> вы начали с помощью триггера события, см. в разделе [как: Удаление раскадровки](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90)).  
+- Чтобы удалить <xref:System.Windows.Media.Animation.Storyboard> вы начали с помощью триггера события, см. в разделе [как: Удаление раскадровки](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90)).  
   
--   Чтобы использовать код для удаления <xref:System.Windows.Media.Animation.Storyboard>, см. в разделе <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> метод.  
+- Чтобы использовать код для удаления <xref:System.Windows.Media.Animation.Storyboard>, см. в разделе <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> метод.  
   
  Следующий метод может использоваться независимо от того, как была запущена анимация.  
   
--   Чтобы удалить анимацию из определенного свойства, используйте <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> метод. Укажите в качестве первого параметра анимируемое свойство и `null` как второй. Это удалит из свойства все часы анимации.  
+- Чтобы удалить анимацию из определенного свойства, используйте <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> метод. Укажите в качестве первого параметра анимируемое свойство и `null` как второй. Это удалит из свойства все часы анимации.  
   
  Дополнительные сведения о различных способах анимации свойств см. в разделе [Общие сведения о методах анимации свойств](property-animation-techniques-overview.md).  
   
@@ -120,9 +120,9 @@ ms.locfileid: "59295956"
   
  Чтобы избежать проблем с производительностью при применении большого количества часов через <xref:System.Windows.Media.Animation.HandoffBehavior.Compose>, следует удалять составные часы из анимируемого свойства после их завершения. Есть несколько способов удаления часов.  
   
--   Чтобы удалить все часы из свойства, используйте <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> или <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> метод анимируемого объекта. Укажите в качестве первого параметра анимируемое свойство и `null` как второй. Это удалит из свойства все часы анимации.  
+- Чтобы удалить все часы из свойства, используйте <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> или <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> метод анимируемого объекта. Укажите в качестве первого параметра анимируемое свойство и `null` как второй. Это удалит из свойства все часы анимации.  
   
--   Чтобы удалить определенные <xref:System.Windows.Media.Animation.AnimationClock> из списка часов, используйте <xref:System.Windows.Media.Animation.Clock.Controller%2A> свойство <xref:System.Windows.Media.Animation.AnimationClock> извлекаемого <xref:System.Windows.Media.Animation.ClockController>, затем вызвать <xref:System.Windows.Media.Animation.ClockController.Remove%2A> метод <xref:System.Windows.Media.Animation.ClockController>. Обычно это делается <xref:System.Windows.Media.Animation.Clock.Completed> обработчик событий для часов. Обратите внимание, что только корневые часы могут управляться <xref:System.Windows.Media.Animation.ClockController>; <xref:System.Windows.Media.Animation.Clock.Controller%2A> свойство дочерних часов вернет `null`. Обратите внимание, что <xref:System.Windows.Media.Animation.Clock.Completed> событие не будет вызываться, если эффективная продолжительность часов — forever.  В этом случае пользователю будет необходимо определить, когда нужно вызывать <xref:System.Windows.Media.Animation.ClockController.Remove%2A>.  
+- Чтобы удалить определенные <xref:System.Windows.Media.Animation.AnimationClock> из списка часов, используйте <xref:System.Windows.Media.Animation.Clock.Controller%2A> свойство <xref:System.Windows.Media.Animation.AnimationClock> извлекаемого <xref:System.Windows.Media.Animation.ClockController>, затем вызвать <xref:System.Windows.Media.Animation.ClockController.Remove%2A> метод <xref:System.Windows.Media.Animation.ClockController>. Обычно это делается <xref:System.Windows.Media.Animation.Clock.Completed> обработчик событий для часов. Обратите внимание, что только корневые часы могут управляться <xref:System.Windows.Media.Animation.ClockController>; <xref:System.Windows.Media.Animation.Clock.Controller%2A> свойство дочерних часов вернет `null`. Обратите внимание, что <xref:System.Windows.Media.Animation.Clock.Completed> событие не будет вызываться, если эффективная продолжительность часов — forever.  В этом случае пользователю будет необходимо определить, когда нужно вызывать <xref:System.Windows.Media.Animation.ClockController.Remove%2A>.  
   
  В основном это проблема для анимации объектов, имеющих длинное время жизни.  Когда объект собирается как мусор, его часы отсоединяются и также собираются как мусор.  
   

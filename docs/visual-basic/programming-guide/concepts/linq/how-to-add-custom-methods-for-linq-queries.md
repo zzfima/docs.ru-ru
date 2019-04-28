@@ -3,11 +3,11 @@ title: Практическое руководство. Добавление н�
 ms.date: 07/20/2015
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
 ms.openlocfilehash: 59d08f7b7799964063514ad294567aadd11b0579
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59614013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855378"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Практическое руководство. Добавление настраиваемых методов для запросов LINQ (Visual Basic)
 

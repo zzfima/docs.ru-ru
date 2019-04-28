@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
 ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757384"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Практическое руководство. Добавление кнопок загрузки, сохранения и отмены в элемент управления BindingNavigator в формах Windows Forms
 <xref:System.Windows.Forms.BindingNavigator> Элемент управления является специализированным <xref:System.Windows.Forms.ToolStrip> элемент управления, который предназначен для навигации и управление элементами управления в форме, привязанных к данным.  
@@ -40,15 +40,15 @@ ms.locfileid: "59304783"
   
 7. В **редактор коллекции элементов**, воспользуйтесь одним из следующих:  
   
-    1.  Добавить <xref:System.Windows.Forms.ToolStripSeparator> и три <xref:System.Windows.Forms.ToolStripButton> элементы, выбрав соответствующий тип <xref:System.Windows.Forms.ToolStripItem> и щелкнув **добавить** кнопки.  
+    1. Добавить <xref:System.Windows.Forms.ToolStripSeparator> и три <xref:System.Windows.Forms.ToolStripButton> элементы, выбрав соответствующий тип <xref:System.Windows.Forms.ToolStripItem> и щелкнув **добавить** кнопки.  
   
-    2.  Задайте <xref:System.Windows.Forms.ToolStripItem.Name%2A> свойство кнопки для **LoadButton**, **SaveButton**, и **CancelButton**, соответственно.  
+    2. Задайте <xref:System.Windows.Forms.ToolStripItem.Name%2A> свойство кнопки для **LoadButton**, **SaveButton**, и **CancelButton**, соответственно.  
   
-    3.  Задайте <xref:System.Windows.Forms.ToolStripItem.Text%2A> свойство кнопки для **нагрузки**, **Сохранить**, и **отменить**.  
+    3. Задайте <xref:System.Windows.Forms.ToolStripItem.Text%2A> свойство кнопки для **нагрузки**, **Сохранить**, и **отменить**.  
   
-    4.  Задайте <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> для каждой из кнопок, чтобы **текст**. Кроме того, это свойство можно задать **изображение** или **ImageAndText**и задать изображение для отображения в <xref:System.Windows.Forms.ToolStripItem.Image%2A> свойство.  
+    4. Задайте <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> для каждой из кнопок, чтобы **текст**. Кроме того, это свойство можно задать **изображение** или **ImageAndText**и задать изображение для отображения в <xref:System.Windows.Forms.ToolStripItem.Image%2A> свойство.  
   
-    5.  Нажмите кнопку **ОК** чтобы закрыть диалоговое окно. Добавляются кнопки <xref:System.Windows.Forms.ToolStrip>.  
+    5. Нажмите кнопку **ОК** чтобы закрыть диалоговое окно. Добавляются кнопки <xref:System.Windows.Forms.ToolStrip>.  
   
 8. Щелкните форму правой кнопкой мыши и выберите **Просмотр кода**.  
   

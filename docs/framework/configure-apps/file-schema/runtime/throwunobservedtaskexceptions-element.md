@@ -11,11 +11,11 @@ ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cdce2181490d32212cd2629e98267e43bbe0d334
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674003"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > элемент
 Определяет, будут ли необработанные исключения задачи завершать выполняющийся процесс.  
@@ -69,9 +69,9 @@ ms.locfileid: "59189408"
   
  Можно также указать поведение исключений в одном из следующих способов:  
   
--   Переменной среды `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
+- Переменной среды `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
   
--   Установив реестра DWORD значение ThrowUnobservedTaskExceptions = 1 в HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. Ключ NETFramework.  
+- Установив реестра DWORD значение ThrowUnobservedTaskExceptions = 1 в HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. Ключ NETFramework.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано включение возникновение исключений в задачах с помощью файла конфигурации приложения.  

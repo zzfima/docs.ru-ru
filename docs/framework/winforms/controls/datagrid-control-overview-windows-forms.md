@@ -21,11 +21,11 @@ helpviewer_keywords:
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
 ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904452"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Общие сведения об элементе управления DataGrid (Windows Forms)
 > [!NOTE]
@@ -57,13 +57,13 @@ ms.locfileid: "59304743"
   
  Источники данных, допустимые для <xref:System.Windows.Forms.DataGrid>, включают следующие:  
   
--   Класс <xref:System.Data.DataTable>  
+- Класс <xref:System.Data.DataTable>  
   
--   Класс <xref:System.Data.DataView>  
+- Класс <xref:System.Data.DataView>  
   
--   Класс <xref:System.Data.DataSet>  
+- Класс <xref:System.Data.DataSet>  
   
--   Класс <xref:System.Data.DataViewManager>  
+- Класс <xref:System.Data.DataViewManager>  
   
  Если источником является набор данных, он может быть объектом в форме или объектом, переданным в форму веб-службой XML. Привязку можно выполнять к типизированным или нетипизированным наборам данных.  
   
@@ -71,11 +71,11 @@ ms.locfileid: "59304743"
   
  Можно выполнить привязку к следующим структурам, если их элементы предоставляют открытые свойства:  
   
--   к любым компонентам, реализующим интерфейс <xref:System.Collections.IList>; (сюда входят одномерные массивы);  
+- к любым компонентам, реализующим интерфейс <xref:System.Collections.IList>; (сюда входят одномерные массивы);  
   
--   к любым компонентам, реализующим интерфейс <xref:System.ComponentModel.IListSource>;  
+- к любым компонентам, реализующим интерфейс <xref:System.ComponentModel.IListSource>;  
   
--   к любым компонентам, реализующим интерфейс <xref:System.ComponentModel.IBindingList>;  
+- к любым компонентам, реализующим интерфейс <xref:System.ComponentModel.IBindingList>;  
   
  Дополнительные сведения о возможных источниках данных см. в разделе [Источники данных, поддерживаемые Windows Forms](../data-sources-supported-by-windows-forms.md).  
   

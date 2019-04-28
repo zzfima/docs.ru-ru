@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
 ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906741"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Практическое руководство. Удаление ресурса системы (Visual Basic)
 Можно использовать `Using` блок, чтобы гарантировать, что система удаляет ресурс, когда код выходит из блока. Это полезно, если вы используете системный ресурс, которые используют большой объем памяти или других компонентов также требуется использовать.  

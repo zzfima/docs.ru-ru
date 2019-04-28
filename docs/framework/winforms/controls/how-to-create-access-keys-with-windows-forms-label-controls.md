@@ -18,11 +18,11 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
 ms.openlocfilehash: ffe4bf6fb29e82b04938e2ba9a2d9d21e5eabcde
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747112"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Практическое руководство. Определение клавиш доступа с помощью элементов управления Label в Windows Forms
 Windows Forms <xref:System.Windows.Forms.Label> элементы управления могут использоваться для определения ключей доступа для других элементов управления. При определении ключ доступа в элемент управления label, пользователь может нажать клавишу ALT, а также символ, который будет использоваться перемещение фокуса к элементу управления, что следующий за ним в последовательности табуляции. Поскольку метки не может получать фокус, фокус автоматически перемещается к следующему элементу управления в последовательности табуляции. Этот метод используется для присвоения ключи доступа для текстовых полей, поля со списком, списков и сетки данных.  

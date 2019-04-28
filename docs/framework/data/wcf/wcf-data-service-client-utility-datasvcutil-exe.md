@@ -7,21 +7,21 @@ helpviewer_keywords:
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
 ms.openlocfilehash: bb279e6fa16b82bffbebc777f791ce7a6e06255d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875333"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>Служебная программа клиента служб данных WCF (DataSvcUtil.exe)
 
 DataSvcUtil.exe представляет собой программу командной строки, предоставляемые службами данных WCF, который использует [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала и формирующую клиентские классы службы данных, которые необходимы для доступа к службе данных из клиентского приложения .NET Framework. Эта программа формирует классы данных с использованием следующих источников метаданных.
 
--   Корневой URI службы данных. Эта программа запрашивает документ метаданных службы, в котором описывается модель данных, предоставленная службой данных. Дополнительные сведения см. в разделе [OData: Документ метаданных службы](https://go.microsoft.com/fwlink/?LinkId=186070).
+- Корневой URI службы данных. Эта программа запрашивает документ метаданных службы, в котором описывается модель данных, предоставленная службой данных. Дополнительные сведения см. в разделе [OData: Документ метаданных службы](https://go.microsoft.com/fwlink/?LinkId=186070).
 
--   Файл модели данных (с расширением CSDL), определенный с помощью языка определения концептуальной схемы (CSDL), описанного в [ \[MC-CSDL\]: Формат файла определения концептуальной схемы](https://go.microsoft.com/fwlink/?LinkID=159072) спецификации.
+- Файл модели данных (с расширением CSDL), определенный с помощью языка определения концептуальной схемы (CSDL), описанного в [ \[MC-CSDL\]: Формат файла определения концептуальной схемы](https://go.microsoft.com/fwlink/?LinkID=159072) спецификации.
 
--   Файл EDMX, созданный при помощи программ для работы с моделью EDM, входящих в комплект Entity Framework. Дополнительные сведения см. в разделе [ \[MC-EDMX\]: Модель EDM для формата упаковки служб данных](https://go.microsoft.com/fwlink/?LinkID=178833) спецификации.
+- Файл EDMX, созданный при помощи программ для работы с моделью EDM, входящих в комплект Entity Framework. Дополнительные сведения см. в разделе [ \[MC-EDMX\]: Модель EDM для формата упаковки служб данных](https://go.microsoft.com/fwlink/?LinkID=178833) спецификации.
 
 Дополнительные сведения см. в разделе [Как Создание клиентских классов службы данных вручную](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).
 

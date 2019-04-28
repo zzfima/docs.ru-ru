@@ -3,11 +3,11 @@ title: Направление транзакций в службы рабоче�
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
 ms.openlocfilehash: 25ab4e415ce2cd6044cedef4841c1ba88254542e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857080"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Направление транзакций в службы рабочего процесса и из них
 Службы и клиенты рабочих процессов могут использоваться в транзакциях.  Чтобы сделать операцию службы частью внешней транзакции, поместите действие <xref:System.ServiceModel.Activities.Receive> в действие <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Все вызовы, выполненные действием <xref:System.ServiceModel.Activities.Send> или <xref:System.ServiceModel.Activities.SendReply> в области <xref:System.ServiceModel.Activities.TransactedReceiveScope>, также будут выполнены во внешней транзакции. Клиентское приложение рабочего процесса может создавать внешнюю транзакцию с помощью действия <xref:System.Activities.Statements.TransactionScope> и вызывать операции службы с помощью внешних транзакций. В данном разделе описывается создание службы рабочего процесса и клиента рабочего процесса, которые участвуют в транзакции.  
@@ -27,13 +27,13 @@ ms.locfileid: "59315118"
   
 2. Добавьте новый проект библиотеки классов с именем `Common`. Добавьте ссылки на следующие сборки:  
   
-    -   System.Activities.dll  
+    - System.Activities.dll  
   
-    -   System.ServiceModel.dll  
+    - System.ServiceModel.dll  
   
-    -   System.ServiceModel.Activities.dll  
+    - System.ServiceModel.Activities.dll  
   
-    -   System.Transactions.dll  
+    - System.Transactions.dll  
   
 3. Добавьте новый класс с именем `PrintTransactionInfo` к проекту `Common`. Класс является производным от <xref:System.Activities.NativeActivity> и перегружает метод <xref:System.Activities.NativeActivity.Execute%2A>.  
   
@@ -215,11 +215,11 @@ ms.locfileid: "59315118"
   
 1. Добавьте в решение новый проект консольного приложения с именем `Service`. Добавьте ссылки на следующие сборки:  
   
-    1.  System.Activities.dll  
+    1. System.Activities.dll  
   
-    2.  System.ServiceModel.dll  
+    2. System.ServiceModel.dll  
   
-    3.  System.ServiceModel.Activities.dll  
+    3. System.ServiceModel.Activities.dll  
   
 2. Откройте созданный файл Program.cs и следующий код:  
   

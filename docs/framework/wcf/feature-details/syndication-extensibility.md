@@ -3,24 +3,24 @@ title: Расширяемость синдикации
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
 ms.openlocfilehash: 226ea682d8b17a818e6d5be2097a19315d106bda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915568"
 ---
 # <a name="syndication-extensibility"></a>Расширяемость синдикации
 API синдикации предназначен для обеспечения независимой от формата модели программирования, которая позволяет передавать сводный контент по каналам связи в различных форматах. Абстрактная модель данных состоит из следующих классов:  
   
--   <xref:System.ServiceModel.Syndication.SyndicationCategory>  
+- <xref:System.ServiceModel.Syndication.SyndicationCategory>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
+- <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationItem>  
+- <xref:System.ServiceModel.Syndication.SyndicationItem>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationLink>  
+- <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationPerson>  
+- <xref:System.ServiceModel.Syndication.SyndicationPerson>  
   
  Эти классы тесно сопоставлены с конструкциями, определенными в спецификации Atom 1.0, хотя некоторые имена различаются.  
   
@@ -32,17 +32,17 @@ API синдикации предназначен для обеспечения 
 ## <a name="deriving-a-new-class"></a>Создание нового производного класса  
  Новый производный класс можно создать на основе любого существующего класса абстрактной модели данных. Используйте это при реализации приложения, в котором большинство веб-каналов, с которыми вы работаете, имеют определенное расширение. В данном разделе большинство веб-каналов, с которыми работает программа, содержат расширение `MyExtension`. Для упрощения программирования выполните следующие шаги:  
   
--   Создайте класс, который будет содержать данные расширения. В данном случае создайте класс с именем MyExtension.  
+- Создайте класс, который будет содержать данные расширения. В данном случае создайте класс с именем MyExtension.  
   
--   Создайте класс MyExtensionItem, наследующий от класса <xref:System.ServiceModel.Syndication.SyndicationItem>, чтобы сделать доступным для программирования свойство типа MyExtension.  
+- Создайте класс MyExtensionItem, наследующий от класса <xref:System.ServiceModel.Syndication.SyndicationItem>, чтобы сделать доступным для программирования свойство типа MyExtension.  
   
--   Переопределите метод <xref:System.ServiceModel.Syndication.SyndicationItem.TryParseElement%28System.Xml.XmlReader%2CSystem.String%29> класса MyExtensionItem, чтобы при считывании MyExtension присваивать значение новому экземпляру MyExtension.  
+- Переопределите метод <xref:System.ServiceModel.Syndication.SyndicationItem.TryParseElement%28System.Xml.XmlReader%2CSystem.String%29> класса MyExtensionItem, чтобы при считывании MyExtension присваивать значение новому экземпляру MyExtension.  
   
--   Переопределите метод <xref:System.ServiceModel.Syndication.SyndicationItem.WriteElementExtensions%28System.Xml.XmlWriter%2CSystem.String%29> класса MyExtensionItem, чтобы записывать содержимое свойства MyExtension в средство записи XML.  
+- Переопределите метод <xref:System.ServiceModel.Syndication.SyndicationItem.WriteElementExtensions%28System.Xml.XmlWriter%2CSystem.String%29> класса MyExtensionItem, чтобы записывать содержимое свойства MyExtension в средство записи XML.  
   
--   Создайте класс MyExtensionFeed, наследующий от класса <xref:System.ServiceModel.Syndication.SyndicationFeed>.  
+- Создайте класс MyExtensionFeed, наследующий от класса <xref:System.ServiceModel.Syndication.SyndicationFeed>.  
   
--   Переопределите метод <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> класса MyExtensionFeed, чтобы он присваивал значение MyExtensionItem, а не значение по умолчанию <xref:System.ServiceModel.Syndication.SyndicationItem>. В классах <xref:System.ServiceModel.Syndication.SyndicationFeed> и <xref:System.ServiceModel.Syndication.SyndicationItem> определен ряд методов, которые могут создавать объекты <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationCategory> и <xref:System.ServiceModel.Syndication.SyndicationPerson> (например, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory> и <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>). Любой из этих методов может быть переопределен для создания пользовательского производного класса.  
+- Переопределите метод <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> класса MyExtensionFeed, чтобы он присваивал значение MyExtensionItem, а не значение по умолчанию <xref:System.ServiceModel.Syndication.SyndicationItem>. В классах <xref:System.ServiceModel.Syndication.SyndicationFeed> и <xref:System.ServiceModel.Syndication.SyndicationItem> определен ряд методов, которые могут создавать объекты <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationCategory> и <xref:System.ServiceModel.Syndication.SyndicationPerson> (например, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory> и <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>). Любой из этих методов может быть переопределен для создания пользовательского производного класса.  
   
 ## <a name="see-also"></a>См. также
 

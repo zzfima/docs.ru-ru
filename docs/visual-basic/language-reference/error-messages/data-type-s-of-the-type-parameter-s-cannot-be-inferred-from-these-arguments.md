@@ -11,11 +11,11 @@ helpviewer_keywords:
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
 ms.openlocfilehash: 91ee4bf9242df822890b0a171061f375a3b24cbc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803874"
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>Типы данных параметров-типов не могут быть определены из этих аргументов
 Типы данных параметров типа не могут выводиться из этих аргументов. Эту ошибку может исправить явное указание типов данных.  
@@ -55,7 +55,7 @@ End Interface
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Попробуйте указать тип данных для параметра или параметров типа, вместо того чтобы полагаться на определение типа.  
+- Попробуйте указать тип данных для параметра или параметров типа, вместо того чтобы полагаться на определение типа.  
   
 ## <a name="see-also"></a>См. также
 

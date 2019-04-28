@@ -13,11 +13,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
 ms.openlocfilehash: 6931f9b012a67c2d18995f2a3a56f290be0f0ddb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801001"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Практическое руководство. Имитация событий мыши и клавиатуры в коде
 В Windows Forms предоставляется несколько возможностей для программной имитации ввода данных с помощью мыши и клавиатуры. В этом разделе приведен обзор этих возможностей.  
@@ -85,7 +85,7 @@ ms.locfileid: "59313090"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылки на сборки System, System.Drawing и System.Windows.Forms.  
+- ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   

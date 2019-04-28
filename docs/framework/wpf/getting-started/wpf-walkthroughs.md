@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
 ms.openlocfilehash: 1ec147d4ec7b59a7ac8e01680266cbd24b644985
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010362"
 ---
 # <a name="wpf-walkthroughs"></a>Пошаговые руководства по WPF
 Руководства содержат пошаговые инструкции для распространенных сценариев. Они представляют собой удобный источник начальных сведений о продукте или определенной функциональной области.  
@@ -29,7 +29,7 @@ ms.locfileid: "57352425"
   
 ## <a name="wpf-walkthroughs"></a>Пошаговые руководства по WPF  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Пошаговое руководство: My first WPF desktop application](walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)|Демонстрируется создание приложения WPF с использованием многих общих возможностей WPF, включая элементы управления, макет и привязка данных.|  
 |[Создание кнопки с помощью XAML](../controls/walkthrough-create-a-button-by-using-xaml.md)|В этой статье демонстрируется создание анимированной кнопки.|  
@@ -38,7 +38,7 @@ ms.locfileid: "57352425"
   
 ## <a name="migration-and-interoperability-in-wpf"></a>Миграция и взаимодействие в WPF  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Пошаговое руководство: Размещение элемента управления Windows Forms в WPF](../advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Демонстрирует размещение форм Windows <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> элемента управления в приложении WPF.|  
 |[Пошаговое руководство: Размещение Windows Forms составного элемента управления в WPF](../advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Демонстрирует размещение Windows форм ввода данных составного элемента управления в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения.|  
@@ -48,6 +48,6 @@ ms.locfileid: "57352425"
   
 ## <a name="related-sections"></a>Связанные разделы  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Пошаговые руководства по Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/szatc41e(v=vs.100))|Список соответствующих пошаговые руководства для всех областей программирования в Visual Studio.|

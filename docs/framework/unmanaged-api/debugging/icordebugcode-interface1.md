@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ca47eb5508907297a78dba1ab2b0a6d2b8ece0d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750258"
 ---
 # <a name="icordebugcode-interface"></a>Интерфейс ICorDebugCode
 
@@ -29,7 +29,7 @@ ms.locfileid: "56976932"
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод CreateBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-createbreakpoint-method.md)|Создает точку останова с указанным смещением.|  
 |[Метод GetAddress](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getaddress-method.md)|Возвращает относительный виртуальный адрес (RVA) в фрагменте кода, это `ICorDebugCode` представляет.|  

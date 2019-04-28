@@ -1,17 +1,17 @@
 ---
-title: Пути для современных приложений, в зависимости от контейнеров
+title: Путь к современным приложениям на основе контейнеров
 description: Понять, что Docker, контейнеры и архитектуры Микрослужб не являются универсальным решением. Здесь вы найдете несколько ссылок, которые помогут вам решить.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
 ms.openlocfilehash: 94f7bc27409048ec80a4e485cea4a16d30e7c1e2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922620"
 ---
-# <a name="road-to-modern-applications-based-on-containers"></a>Пути для современных приложений, в зависимости от контейнеров
+# <a name="road-to-modern-applications-based-on-containers"></a>Путь к современным приложениям на основе контейнеров
 
 Вы читаете в этой книге, вероятно, так как вы планируете разработку новых приложений или которые вы оцениваете последствия с помощью Docker, контейнеры и новые подходы, таким как Микрослужбы в вашей компании.
 

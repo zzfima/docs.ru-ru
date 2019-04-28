@@ -3,11 +3,11 @@ title: Развертывание службы WCF, размещенной в II
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
 ms.openlocfilehash: 99ed9ce5304717073057f6712a2b96d910d43bea
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858327"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Развертывание службы WCF, размещенной в IIS
 
@@ -23,7 +23,7 @@ ms.locfileid: "47170182"
 
 - Настройка службы WCF.
 
-Подробное пошаговое руководство для создания службы WCF, размещенной в IIS, см. в разделе [как: размещение службы WCF в IIS](how-to-host-a-wcf-service-in-iis.md).
+Подробное пошаговое руководство для создания службы WCF, размещенной в IIS, см. в разделе [как: Размещение службы WCF в IIS](how-to-host-a-wcf-service-in-iis.md).
 
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>Проверка правильности установки и регистрации IIS, ASP.NET и WCF
 
@@ -35,9 +35,9 @@ ms.locfileid: "47170182"
 
 В процессе установки .NET Framework автоматически регистрирует WCF с IIS, если службы IIS уже существует на компьютере. Если IIS устанавливается после платформы .NET Framework, дополнительный шаг необходим для регистрации WCF в IIS и ASP.NET. Это можно выполнить указанным ниже способом в зависимости от операционной системы.
 
-- Windows 7 и Windows Server 2003: используйте [средство регистрации ServiceModel (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) средства для регистрации WCF в IIS. Чтобы использовать это средство, введите **/i /x для ServiceModelReg.exe** в [Командная строка разработчика для Visual Studio](../../tools/developer-command-prompt-for-vs.md).
+- Windows 7 и Windows Server 2003: Используйте [средство регистрации ServiceModel (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) средства для регистрации WCF в IIS. Чтобы использовать это средство, введите **/i /x для ServiceModelReg.exe** в [Командная строка разработчика для Visual Studio](../../tools/developer-command-prompt-for-vs.md).
 
-- Windows 7: И, наконец, необходимо убедиться, что ASP.NET настроена на использование .NET Framework 4 или более поздней версии. Это можно сделать, запустите средство ASPNET_Regiis с `–i` параметр. Дополнительные сведения см. в разделе [ASP.NET IIS Registration Tool](https://go.microsoft.com/fwlink/?LinkId=201186).
+- Windows 7: Наконец необходимо убедиться, что ASP.NET настроена на использование .NET Framework 4 или более поздней версии. Это можно сделать, запустите средство ASPNET_Regiis с `–i` параметр. Дополнительные сведения см. в разделе [ASP.NET IIS Registration Tool](https://go.microsoft.com/fwlink/?LinkId=201186).
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Создание нового приложения служб IIS или повторное использование существующего приложения ASP.NET
 
@@ -115,4 +115,4 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 
 - [Размещение в службах IIS](hosting-in-internet-information-services.md)
 - [Рекомендации по размещению в службах IIS](internet-information-services-hosting-best-practices.md)
-- [Функции размещения фабрики приложений Windows Server](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Функции размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

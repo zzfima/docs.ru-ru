@@ -16,24 +16,24 @@ helpviewer_keywords:
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
 ms.openlocfilehash: 4784ddd563ccec0f7e6271700781ee1b5d3ac105
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013326"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Практическое руководство. Сохранение файлов с помощью элемента управления RichTextBox в Windows Forms
 Windows Forms <xref:System.Windows.Forms.RichTextBox> управления может записывать сведения, которые отображаются в одном из следующих форматов:  
   
--   Обычный текст  
+- Обычный текст  
   
--   Текст в Юникоде  
+- Текст в Юникоде  
   
--   Rich Text Format (RTF)  
+- Rich Text Format (RTF)  
   
--   Формат RTF с пробелами вместо объектов OLE  
+- Формат RTF с пробелами вместо объектов OLE  
   
--   Обычный текст с текстовым представлением объектов OLE  
+- Обычный текст с текстовым представлением объектов OLE  
   
  Чтобы сохранить файл, вызовите <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> метод. Можно также использовать **SaveFile** метод для сохранения данных в поток. Дополнительные сведения см. в разделе <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d00f0efa-9084-4c17-843f-54904fcb4204
 ms.openlocfilehash: 700c29222d10177774e118e53fb51f177b723679
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760536"
 ---
 # <a name="method-based-query-syntax-examples-join-operators"></a>Примеры синтаксиса запросов на основе методов. Операторы соединения
 Примеры в этом разделе демонстрируют, как использовать <xref:System.Linq.Enumerable.Join%2A> и <xref:System.Linq.Enumerable.GroupJoin%2A> методы запроса [модели AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) с использованием синтаксиса запросов на основе методов. Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  

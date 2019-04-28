@@ -10,11 +10,11 @@ helpviewer_keywords:
 - default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
 ms.openlocfilehash: ba11eed316e227ceae4cb5acecb2b081fa8868f2
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705536"
 ---
 # <a name="configuring-cryptography-classes"></a>Настройка криптографических классов
 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Позволяет администраторам компьютера настраивать алгоритмы шифрования по умолчанию и реализаций алгоритмов, в .NET Framework и соответствующих приложениях.  Например, в организации, имеет собственную реализацию алгоритма шифрования можно использовать эту реализацию по умолчанию, а не реализации [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]. Несмотря на то, что управляемые приложения, использующие шифрование всегда можно явно привязать к конкретной реализации, рекомендуется, чтобы они создавали криптографические объекты с помощью системы настройки шифрования.  

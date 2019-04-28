@@ -3,11 +3,11 @@ title: OracleTypes
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
 ms.openlocfilehash: 3762fdaee1312a7cb008386bb1f6b7bf7cb4316e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878427"
 ---
 # <a name="oracletypes"></a>OracleTypes
 Поставщик данных .NET Framework для Oracle содержит несколько структур, которые можно использовать для работы с типами данных Oracle. В их числе <xref:System.Data.OracleClient.OracleNumber> и <xref:System.Data.OracleClient.OracleString>.  
@@ -17,9 +17,9 @@ ms.locfileid: "59212314"
   
  Далее приведены примеры на языке C#.  
   
--   Создайте таблицу Oracle и заполните ее данными.  
+- Создайте таблицу Oracle и заполните ее данными.  
   
--   Воспользуйтесь объектом <xref:System.Data.OracleClient.OracleDataReader> для доступа к данным и несколькими структурами <xref:System.Data.OracleClient.OracleType> для отображения этих данных.  
+- Воспользуйтесь объектом <xref:System.Data.OracleClient.OracleDataReader> для доступа к данным и несколькими структурами <xref:System.Data.OracleClient.OracleType> для отображения этих данных.  
   
 ## <a name="creating-an-oracle-table"></a>Создание таблицы Oracle  
  В этом примере создается и загружается данными таблица Oracle. Пример следует выполнить до запуска следующего примера.  

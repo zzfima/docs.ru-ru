@@ -3,11 +3,11 @@ title: Устранение неполадок
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
 ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917643"
 ---
 # <a name="troubleshooting"></a>Устранение неполадок
 В данном материале представлен ряд проблем, которые могут возникнуть в приложениях [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], и даны рекомендации, как их избежать или, по крайней мере, снизить их негативное влияние.  
@@ -31,9 +31,9 @@ ms.locfileid: "59105486"
 ## <a name="cascade-delete"></a>Каскадное удаление  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не поддерживает или не распознает операции каскадного удаления. Если требуется удалить строку в таблице, имеющей ограничения, необходимо выполнить любое из следующих действий.  
   
--   Установите правило `ON DELETE CASCADE` в ограничении внешнего ключа в базе данных.  
+- Установите правило `ON DELETE CASCADE` в ограничении внешнего ключа в базе данных.  
   
--   Используйте собственный код, чтобы сначала удалить дочерние объекты, не допускающие удаление родительского объекта.  
+- Используйте собственный код, чтобы сначала удалить дочерние объекты, не допускающие удаление родительского объекта.  
   
  В противном случае возникнет исключение <xref:System.Data.SqlClient.SqlException>.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "59105486"
 ## <a name="expression-not-queryable"></a>Выражение, не подходящее для запроса  
  Если вы получаете «выражение [выражение] не поддерживает запросы; Возможно, отсутствует ссылка на сборку?» Ошибка, убедитесь, что из следующих:  
   
--   Приложение предназначено для выполнения в [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].  
+- Приложение предназначено для выполнения в [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].  
   
--   Наличие ссылки на `System.Core.dll` и `System.Data.Linq.dll`.  
+- Наличие ссылки на `System.Core.dll` и `System.Data.Linq.dll`.  
   
--   У вас есть `Imports` (Visual Basic) или `using` директива (C#) для <xref:System.Linq> и <xref:System.Data.Linq>.  
+- У вас есть `Imports` (Visual Basic) или `using` директива (C#) для <xref:System.Linq> и <xref:System.Data.Linq>.  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  Во время отладки [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] проекта, можно переходить через отношения сущности. Таким образом должен связать эти элементы в кэш, и [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] узнает о своем присутствии. Если после этого предпринимается попытка выполнения метода <xref:System.Data.Linq.Table%601.Attach%2A>, или <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>, или аналогичного, результатом которого являются несколько строк с одинаковым ключом, создается исключение <xref:System.Data.Linq.DuplicateKeyException>.  

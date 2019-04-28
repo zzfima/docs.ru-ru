@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
 ms.openlocfilehash: c0967aa506b087120c776389c2891ec9e0b0b64d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761407"
 ---
 # <a name="treeview-overview"></a>Обзор элемента управления "TreeView"
 <xref:System.Windows.Controls.TreeView> Управления предоставляет способ отображения данных в виде иерархической структуры с помощью сворачиваемых узлов. В данном разделе представлены <xref:System.Windows.Controls.TreeView> и <xref:System.Windows.Controls.TreeViewItem> элементы управления и обеспечивает простые примеры их использования.  

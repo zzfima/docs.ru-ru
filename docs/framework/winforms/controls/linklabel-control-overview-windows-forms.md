@@ -9,11 +9,11 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], about LinkLabel control
 ms.assetid: 9e248549-10ca-43a3-bb5e-60f583d369f1
 ms.openlocfilehash: 541467b0f1285d372e5f6d502d9d8f28c8c6333e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012962"
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>Общие сведения об элементе управления LinkLabel (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.LinkLabel> управления позволяет добавлять веб-ссылок для приложений Windows Forms. Можно использовать <xref:System.Windows.Forms.LinkLabel> управления для всех элементов, можно использовать <xref:System.Windows.Forms.Label> управления для; часть текста можно задать как ссылку на файл, папку или веб-страницы.  

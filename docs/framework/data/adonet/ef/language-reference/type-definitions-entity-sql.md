@@ -3,11 +3,11 @@ title: Определения типов (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
 ms.openlocfilehash: 2e068db0ce202c26cad36c8ed7adf0acdfb8e363
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879558"
 ---
 # <a name="type-definitions-entity-sql"></a>Определения типов (Entity SQL)
 Определение типа используется в операторе объявления встраиваемой функции [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
@@ -19,25 +19,25 @@ ms.locfileid: "59096027"
   
  Определения типов могут представлять:  
   
--   Тип идентификатора (например, «Int32» или «AdventureWorks.Order»).  
+- Тип идентификатора (например, «Int32» или «AdventureWorks.Order»).  
   
--   Ключевое слово `COLLECTION`, за которым следует определение другого типа в скобках (например, «Collection(AdventureWorks.Order)»).  
+- Ключевое слово `COLLECTION`, за которым следует определение другого типа в скобках (например, «Collection(AdventureWorks.Order)»).  
   
--   Ключевое слово ROW, за которым следует список определений свойств в скобках (например, «Row(x AdventureWorks.Order)»). Определения свойств имеют формат "`identifier type_definition`, `identifier type_definition`,...».  
+- Ключевое слово ROW, за которым следует список определений свойств в скобках (например, «Row(x AdventureWorks.Order)»). Определения свойств имеют формат "`identifier type_definition`, `identifier type_definition`,...».  
   
--   Ключевое слово REF, за которым следует тип идентификатора в скобках (например, «Ref(AdventureWorks.Order)»). Для оператора определения типа REF требуется присутствие типа сущности в качестве аргумента. В качестве аргумента нельзя указать тип-примитив.  
+- Ключевое слово REF, за которым следует тип идентификатора в скобках (например, «Ref(AdventureWorks.Order)»). Для оператора определения типа REF требуется присутствие типа сущности в качестве аргумента. В качестве аргумента нельзя указать тип-примитив.  
   
  Определения типов также можно вкладывать друг в друга (например, «Collection(Row(x Ref(AdventureWorks.Order)))»).  
   
  Определения типов имеют следующие параметры:  
   
--   `IdentifierName supported_type`, или  
+- `IdentifierName supported_type`, или  
   
--   `IdentifierName` COLLECTION(`type_definition`), или  
+- `IdentifierName` COLLECTION(`type_definition`), или  
   
--   `IdentifierName` ROW(`property_definition`), или  
+- `IdentifierName` ROW(`property_definition`), или  
   
--   `IdentifierName` REF(`supported_entity_type`)  
+- `IdentifierName` REF(`supported_entity_type`)  
   
  Параметр, определяющий свойство, - `IdentifierName type_definition`.  
   

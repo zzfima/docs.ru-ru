@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
 ms.openlocfilehash: cbe00fb792ab5f2a7586a958ddbe5bdf004656dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875970"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Однофазная и многофазная фиксация транзакции
 Каждым используемым в транзакции ресурсом управляет диспетчер ресурсов, действия которого координируются диспетчером транзакций. [Ресурсы прикрепление в транзакции, в качестве участников](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) разделе рассматривается, как можно прикрепить ресурс (или несколько ресурсов) в транзакции. В этом разделе также описывается порядок координации процесса фиксации транзакции между зачисленными ресурсами.  

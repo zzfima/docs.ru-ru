@@ -3,11 +3,11 @@ title: 224 - MessageThrottleAtSeventyPercent
 ms.date: 03/30/2017
 ms.assetid: 82bbbfd7-10d2-41fd-805d-2443b0c1b96b
 ms.openlocfilehash: f70dc235e037b4f490a25866940fe2bccceae2a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916309"
 ---
 # <a name="224---messagethrottleatseventypercent"></a>224 - MessageThrottleAtSeventyPercent
 ## <a name="properties"></a>Свойства  
@@ -31,5 +31,5 @@ ms.locfileid: "33460399"
 |--------------------|--------------------|-----------------|  
 |Throttle Name|`xs:string`|Имя превышенного ограничителя. `MaxConcurrentCalls`, `MaxConcurrentInstances` либо `MaxConcurrentSessions`,|  
 |Limit|`xs:long`|Заданный в данный момент предел ограничителя.|  
-|HostReference|`xs:string`|Для служб, размещенных на веб-узле, это поле является уникальным идентификатором службы в веб-иерархии. Ее формат определяется как "веб-сайт имя виртуальный путь приложения&#124;виртуальный путь службы&#124;имя_службы". Пример: "по умолчанию веб-сайта или CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService".|  
-|AppDomain|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|HostReference|`xs:string`|Для служб, размещенных на веб-узле, это поле является уникальным идентификатором службы в веб-иерархии. Формат определяется как "виртуальный путь приложения имя веб-сайта&#124;виртуальный путь службы&#124;ServiceName". Пример "По умолчанию веб-сайт/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService".|  
+|Домен приложения|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|

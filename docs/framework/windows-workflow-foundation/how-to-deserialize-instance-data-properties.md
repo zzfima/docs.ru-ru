@@ -1,30 +1,30 @@
 ---
-title: Как десериализовать свойства данных экземпляра
+title: Практическое руководство. Десериализация свойств данных экземпляра
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
 ms.openlocfilehash: badea2b9731b1144a727a5d5b83c92072027e1f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761446"
 ---
-# <a name="how-to-deserialize-instance-data-properties"></a>Как десериализовать свойства данных экземпляра
+# <a name="how-to-deserialize-instance-data-properties"></a>Практическое руководство. Десериализация свойств данных экземпляра
 Могут возникнуть ситуации, когда пользователю или администратору рабочего процесса потребуется вручную проанализировать состояние сохраненного экземпляра рабочего процесса. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> содержит представление по таблицам экземпляров, предоставляющее следующие четыре столбца:  
   
--   ReadWritePrimitiveDataProperties  
+- ReadWritePrimitiveDataProperties  
   
--   WriteOnlyPrimitiveDataProperties  
+- WriteOnlyPrimitiveDataProperties  
   
--   ReadWriteComplexDataProperties  
+- ReadWriteComplexDataProperties  
   
--   WriteOnlyComplexDataProperties  
+- WriteOnlyComplexDataProperties  
   
- Свойства примитивных данных см. свойства, типы .NET Framework которых считаются «общими» (например, Int32 или String) под свойствами сложных данных подразумевают данные всех других типов. Полное перечисление типов-примитивов приведен далее в примере кода.  
+ Свойства примитивных данных ссылки на свойства, считаются быть «общим» (например, Int32 или String), а свойствами сложных данных подразумевают для всех других типов, типы .NET Framework. Полное перечисление типов-примитивов приведен далее в примере кода.  
   
  Свойствами чтения-записи называются свойства, невозвращаемые обратно в среду выполнения рабочих процессов при загрузке экземпляра. Свойства WriteOnly записываются в базу данных и никогда оттуда впоследствии не считываются.  
   
- В этом образце приведен код, позволяющий пользователю десериализировать свойства примитивных данных. Имеется массив байтов, считанный из столбца ReadWritePrimitiveDataProperties, либо WriteOnlyPrimitiveDataProperties, этот код преобразует большой двоичный объект (BLOB) в <xref:System.Collections.Generic.Dictionary%602> типа \<XName, объект > где каждого значения ключа пара представляет собой имя свойства и его соответствующее значение.  
+ В этом образце приведен код, позволяющий пользователю десериализировать свойства примитивных данных. Имеется массив байтов, считанный из столбца readwriteprimitivedataproperties, либо WriteOnlyPrimitiveDataProperties, этот код преобразует большой двоичный объект (BLOB) в <xref:System.Collections.Generic.Dictionary%602> типа \<XName, объект > где каждого значения ключа пара представляет собой имя свойства и его соответствующее значение.  
   
  Этот пример не демонстрирует десериализацию свойств сложных типов данных, поскольку данная операция в настоящее время не поддерживается.  
   

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9768dfd43b6b60df1660c48cb6d6f498b049e256
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905519"
 ---
 # <a name="iceegengetsectioncreate-method"></a>Метод ICeeGen::GetSectionCreate
 Создает и возвращает раздел кода, используя указанные имя и значения флагов.  

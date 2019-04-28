@@ -17,11 +17,11 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
 ms.openlocfilehash: 82a2badc1bb22a55f753c9075562db3a5ee0d234
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747078"
 ---
 # <a name="ulong-data-type-visual-basic"></a>Тип данных ULong (Visual Basic)
 
@@ -64,19 +64,19 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 
 ## <a name="programming-tips"></a>Советы по программированию
   
--   **Отрицательные числа.** Так как `ULong` — это тип без знака, он не может представлять отрицательное число. При использовании унарного минуса (`-`) оператор на выражение, результатом вычисления которого введите `ULong`, Visual Basic преобразует выражение `Decimal` первого.  
+- **Отрицательные числа.** Так как `ULong` — это тип без знака, он не может представлять отрицательное число. При использовании унарного минуса (`-`) оператор на выражение, результатом вычисления которого введите `ULong`, Visual Basic преобразует выражение `Decimal` первого.  
   
--   **CLS-совместимость.** `ULong` Тип данных не является частью [спецификация CLS](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), поэтому CLS-совместимого кода нельзя использовать компонент, который его использует.  
+- **CLS-совместимость.** `ULong` Тип данных не является частью [спецификация CLS](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), поэтому CLS-совместимого кода нельзя использовать компонент, который его использует.  
   
--   **Вопросы взаимодействия.** При взаимодействии с компонентами, которые не написаны для платформы .NET Framework, например, автоматизация или COM-объекты, имейте в виду, что типы, такие как `ulong` может иметь другой размер (32 бита) в других средах. Если вы передаете 32-разрядного аргумента такому компоненту, объявите его как `UInteger` вместо `ULong` в управляемом коде Visual Basic.  
+- **Вопросы взаимодействия.** При взаимодействии с компонентами, которые не написаны для платформы .NET Framework, например, автоматизация или COM-объекты, имейте в виду, что типы, такие как `ulong` может иметь другой размер (32 бита) в других средах. Если вы передаете 32-разрядного аргумента такому компоненту, объявите его как `UInteger` вместо `ULong` в управляемом коде Visual Basic.  
   
      Кроме того службы автоматизации не поддерживает 64-разрядных целых чисел в Windows 95, Windows 98, Windows ME или Windows 2000. Невозможно передать Visual Basic `ULong` аргумент в компонент автоматизации на этих платформах.  
   
--   **Расширяющие.** `ULong` Тип данных можно расширить до `Decimal`, `Single`, и `Double`. Это означает, что вы можете преобразовать `ULong` к любому из этих типов без возникновения <xref:System.OverflowException?displayProperty=nameWithType> ошибки.  
+- **Расширяющие.** `ULong` Тип данных можно расширить до `Decimal`, `Single`, и `Double`. Это означает, что вы можете преобразовать `ULong` к любому из этих типов без возникновения <xref:System.OverflowException?displayProperty=nameWithType> ошибки.  
   
--   **Символы типа.** Добавление символы типа литерала `UL` в литерал приводит к принудительному `ULong` тип данных. `ULong` не имеет тип символа идентификатора.
+- **Символы типа.** Добавление символы типа литерала `UL` в литерал приводит к принудительному `ULong` тип данных. `ULong` не имеет тип символа идентификатора.
   
--   **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.UInt64?displayProperty=nameWithType>.  
+- **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.UInt64?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
 

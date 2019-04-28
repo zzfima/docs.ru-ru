@@ -8,18 +8,18 @@ ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4ad61b3824b8155cf3f68f61865891c023b4cf32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674016"
 ---
-# <a name="shadowcopyverifybytimestamp-element"></a>\<shadowCopyVerifyByTimestamp > элемент
+# <a name="shadowcopyverifybytimestamp-element"></a>Элемент \<shadowCopyVerifyByTimeStamp>
 Указывает, использует ли теневое копирование поведение при запуске по умолчанию, представленное в [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], или возвращается к поведению при запуске, используемому в предыдущих версиях .NET Framework.  
   
  \<Конфигурация > элемент  
 \<Среда выполнения > элемент  
-\<shadowCopyVerifyByTimestamp > элемент  
+Элемент \<shadowCopyVerifyByTimeStamp>  
   
 ## <a name="syntax"></a>Синтаксис  
   

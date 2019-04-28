@@ -3,19 +3,20 @@ title: 118 ― WorkflowInstanceUnhandledExceptionRecord
 ms.date: 03/30/2017
 ms.assetid: 2ce4b193-e141-4cc4-86a3-2e8c984c110d
 ms.openlocfilehash: eb69fc4760cd89294e24680b5aab83fcd058feb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009881"
 ---
 # <a name="118---workflowinstanceunhandledexceptionrecordwithid"></a>118 ― WorkflowInstanceUnhandledExceptionRecord
 ## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
-|Идентификатор|118|  
+|ID|118|  
 |Ключевые слова|HealthMonitoring, WFTracking|  
-|Уровень|Ошибка|  
+|Уровень|Error|  
 |Канал|Microsoft-Windows-Application Server-Applications/Analytic|  
   
 ## <a name="description"></a>Описание  
@@ -37,8 +38,8 @@ ms.lasthandoff: 05/04/2018
 |SourceInstanceId|xs:string|Идентификатор экземпляра исходного действия, в котором произошла ошибка.|  
 |SourceTypeName|xs:string|Имя типа исходного действия, в котором произошла ошибка, что привело к созданию исключения unhandledException.|  
 |Исключение|xs:string|Данные необработанного исключения.|  
-|Состояние|xs:string|Текущее состояние рабочего процесса.|  
-|Заметки|xs:string|Заметки, добавленные к этому событию. Значения хранятся в виде элемента xml в формате \<элементы >\< имя элемента = «annotationName» type="System.String" > annotationValue\</товар > \< /items >. Если не задано никаких заметок, строка содержит \<элементы / >. Размер событий ETW ограничен размером буфера ETW или максимальным размером полезных данных для события ETW. Если размер события превышает пределы трассировки событий Windows, то событие усекается путем отбрасывания заметок и замены значения заметок значением с \<элементы >...  \< /items >.|  
+|Регион|xs:string|Текущее состояние рабочего процесса.|  
+|Заметки|xs:string|Заметки, добавленные к этому событию. Значения хранятся в XML-элемент в формате \<элементы >\< имя элемента = «annotationName» type="System.String" > annotationValue\</item > \< /items >. Если не задано никаких заметок, строка содержит \<элементов / >. Размер событий ETW ограничен размером буфера ETW или максимальным размером полезных данных для события ETW. Если размер события превышает пределы трассировки событий Windows, то событие усекается путем отбрасывания заметок и замены значения заметок значением \<элементы >...  \< /items >.|  
 |ProfileName|xs:string|Имя или профиль отслеживания, который привел к созданию этого события.|  
 |WorkflowDefinitionIdentity|xs:string|Идентификатор определения рабочего процесса|  
-|AppDomain|xs:string|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|Домен приложения|xs:string|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|

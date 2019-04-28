@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], resizing columns and rows
 ms.assetid: 7532764d-e5c1-4943-a08b-6377a722d3b6
 ms.openlocfilehash: e1fa2d57cfb2cd374d691fe03a0e0bdbd3ad7141
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903192"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Изменение размера столбцов и строк элемента управления DataGridView в Windows Forms
 `DataGridView` Элемент управления предоставляет множество возможностей для настройки поведения изменения размеров его столбцов и строк. Как правило `DataGridView` не меняют размер ячеек на основе их содержимого. Вместо этого они клипов любой отображаемого значения, которое больше, чем ячейки. Содержимое может отображаться в виде строки, в ячейке отображается во всплывающей подсказке.  

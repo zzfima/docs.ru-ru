@@ -3,11 +3,11 @@ title: Ошибки смешанного декларативного и имп�
 ms.date: 07/20/2015
 ms.assetid: f12b1ab4-bb92-4b92-a648-0525e45b3ce7
 ms.openlocfilehash: e7b3b624bb91525d2cda9477c29291e25eba1b07
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775990"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>Смешанные ошибки декларативного и императивного кода (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] содержит различные методы, которые позволяют прямо модифицировать XML-дерево. Можно добавить элементы, удалить элементы, изменить содержимое элемента, добавить атрибуты и т. п. Этот интерфейс программирования описывается в [изменение деревьев XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Если выполняется переход в пределах одной оси, например <xref:System.Xml.Linq.XContainer.Elements%2A>, и при этом выполняется изменение XML-дерева, можно в итоге обнаружить некоторые неожиданные ошибки.  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], creating
 ms.assetid: d198ef8e-f7c4-4b3f-a7f5-ce858cb90cec
 ms.openlocfilehash: 55c2294496800fb8692d3c8215c1c13f7dac9b01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746987"
 ---
 # <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a>Практическое руководство. Создание формы MDI с использованием элементов управления ToolStripPanel
 Можно создать форму с многодокументным интерфейсом (MDI) документа, имеющую элементы управления <xref:System.Windows.Forms.ToolStrip> по всем четырем сторонам формы.  
@@ -35,7 +35,7 @@ ms.locfileid: "59096970"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылки на сборки System.Drawing и System.Windows.Forms.  
+- ссылки на сборки System.Drawing и System.Windows.Forms.  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   

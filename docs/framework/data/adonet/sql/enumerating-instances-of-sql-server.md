@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
 ms.openlocfilehash: a723679fe18352e115df78af72975097dc28b617
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877595"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Перечисление экземпляров SQL Server (ADO.NET)
 SQL Server позволяет приложениям находить экземпляры SQL Server в существующей сети. Класс <xref:System.Data.Sql.SqlDataSourceEnumerator> обеспечивает доступ к этим сведениям разработчику приложения, предоставляя объект <xref:System.Data.DataTable> с данными обо всех видимых серверах. Эта возвращенная таблица содержит список экземпляров серверов, доступных в сети, которая совпадает со списком, когда пользователь пытается создать новое соединение и дополняет стрелку раскрывающегося списка, содержащий все доступные серверы в **подключения Свойства** диалоговое окно. Отображаемые результаты не всегда являются полными.  

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Предоставление пользователям возможности разрешения неоднозначности времени
+title: Практическое руководство. Предоставление пользователям возможности разрешения неоднозначности времени
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,13 +9,13 @@ ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae6d16bda7a2cd6f2367129b737ec79d8193ebf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903790"
 ---
-# <a name="how-to-let-users-resolve-ambiguous-times"></a>Как выполнить Предоставление пользователям возможности разрешения неоднозначности времени
+# <a name="how-to-let-users-resolve-ambiguous-times"></a>Практическое руководство. Предоставление пользователям возможности разрешения неоднозначности времени
 
 Неоднозначное время — это время, которое соответствует более чем одному значению времени в формате UTC. Это происходит, когда часы переводятся назад, как при переходе в одном часовом поясе с летнего времени на его стандартное время. При обработке неоднозначного времени можно выполнить одно из следующих действий:
 

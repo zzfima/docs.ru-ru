@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
 ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703534"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Рекомендации. Управление версиями контракта данных
 В данном разделе приводятся рекомендации по созданию контрактов данных, которые можно легко развить со временем. Дополнительные сведения о контрактах данных см. в разделах [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -39,9 +39,9 @@ ms.locfileid: "59334930"
   
  Иногда необходимо обеспечить строгое соответствие схеме для сообщений, отправляемых приложением, но нельзя полагаться на то, что входящие сообщения строго соответствуют схеме. В это случае существует опасность того, что входящее сообщение может содержать лишние данные. Лишние значение сохраняются и возвращаются с WCF, что приводит отправку сообщений с недействительной схемой. Чтобы избежать этой проблемы, необходимо выключить возможность полной совместимости версий. Это можно сделать двумя способами.  
   
--   Не реализуйте интерфейс <xref:System.Runtime.Serialization.IExtensibleDataObject> ни в одном из своих типов.  
+- Не реализуйте интерфейс <xref:System.Runtime.Serialization.IExtensibleDataObject> ни в одном из своих типов.  
   
--   Примените атрибут <xref:System.ServiceModel.ServiceBehaviorAttribute> к своему контракту службы, в котором свойству <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> присвоено значение `true`.  
+- Примените атрибут <xref:System.ServiceModel.ServiceBehaviorAttribute> к своему контракту службы, в котором свойству <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> присвоено значение `true`.  
   
  Дополнительные сведения о полной совместимости версий см. в разделе [контракты данных обладает прямой совместимостью](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
@@ -66,11 +66,11 @@ ms.locfileid: "59334930"
   
 8. В более поздних версиях можно добавлять новые члены данных. Они всегда должны соответствовать следующим правилам.  
   
-    1.  Для свойства <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> всегда следует сохранять значение по умолчанию `false`.  
+    1. Для свойства <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> всегда следует сохранять значение по умолчанию `false`.  
   
-    2.  Если значение по умолчанию `null` или нуль для члена неприемлемо, то необходимо предусмотреть метод обратного вызова с использованием <xref:System.Runtime.Serialization.OnDeserializingAttribute> для обеспечения разумного значения по умолчанию при отсутствии члена во входящем потоке. Дополнительные сведения о функции обратного вызова, см. в разделе [независимые от версий обратные вызовы сериализации](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
+    2. Если значение по умолчанию `null` или нуль для члена неприемлемо, то необходимо предусмотреть метод обратного вызова с использованием <xref:System.Runtime.Serialization.OnDeserializingAttribute> для обеспечения разумного значения по умолчанию при отсутствии члена во входящем потоке. Дополнительные сведения о функции обратного вызова, см. в разделе [независимые от версий обратные вызовы сериализации](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
-    3.  <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> Свойство должно использоваться, чтобы убедиться в том, что все члены только что добавленные данные отображаются после существующих членов данных. Рекомендуется делать это выглядит следующим образом: Ни один из членов данных в первой версии контракта данных должны иметь их `Order` набор свойств. Для всех элементов данных, добавленных в версии 2 контракта данных, свойство `Order` должно иметь значение 2. Для всех элементов данных, добавленных в версии 3 контракта данных, свойство `Order` должно иметь значение 3 и так далее Допускается задание нескольких членов данных одному номеру свойства `Order`.  
+    3. <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> Свойство должно использоваться, чтобы убедиться в том, что все члены только что добавленные данные отображаются после существующих членов данных. Рекомендуется делать это выглядит следующим образом: Ни один из членов данных в первой версии контракта данных должны иметь их `Order` набор свойств. Для всех элементов данных, добавленных в версии 2 контракта данных, свойство `Order` должно иметь значение 2. Для всех элементов данных, добавленных в версии 3 контракта данных, свойство `Order` должно иметь значение 3 и так далее Допускается задание нескольких членов данных одному номеру свойства `Order`.  
   
 9. Не удаляйте члены данных в более поздних версиях, даже если для свойства <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> сохранено значение по умолчанию `false` в предыдущих версиях.  
   

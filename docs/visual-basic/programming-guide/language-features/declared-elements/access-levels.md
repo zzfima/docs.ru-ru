@@ -15,11 +15,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
 ms.openlocfilehash: d8f2f16d2fb15f2e840f13f177d3fea83fda315e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61828104"
 ---
 # <a name="access-levels-in-visual-basic"></a>Уровни доступа в Visual Basic
 *Уровень доступа* объявленного элемента указывает объем возможность доступа к нему, то есть какой код имеет разрешение на его чтение и запись в него. Это определяется не только как объявления элемента, но также от уровня доступа контейнера элемента. Код, который не может получить доступ к элемент не может получить доступ к любой из содержащихся в нем элементов, даже если они объявлены как `Public`. Например `Public` переменных в `Private` внутри класса, который содержит структуру, но не из структуры может быть организован и за пределами этого класса.  

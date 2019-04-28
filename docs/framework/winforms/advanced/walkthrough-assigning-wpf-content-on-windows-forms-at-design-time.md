@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
 ms.openlocfilehash: b4efef869c96ddb4e58445e45ecad12b5658f9f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748894"
 ---
 # <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Пошаговое руководство. Назначение содержимого WPF для формы Windows Forms во время разработки
 В этом пошаговом руководстве показано, как выбрать типы элементов управления Windows Presentation Foundation (WPF), которые будут отображаться в форме. Можно выбрать любые типы элементов управления WPF, включенные в проект.
 
  В руководстве выполняются следующие задачи:
 
--   Создание проекта.
+- Создание проекта.
 
--   Создание типов элементов управления WPF.
+- Создание типов элементов управления WPF.
 
--   Выбор элементов управления WPF.
+- Выбор элементов управления WPF.
 
 > [!NOTE]
 >  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -32,7 +32,7 @@ ms.locfileid: "59343354"
 ## <a name="prerequisites"></a>Предварительные требования  
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
   
--   Visual Studio 2012.  
+- Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Создание проекта  
  Первым шагом является создание проекта Windows Forms.  
@@ -42,7 +42,7 @@ ms.locfileid: "59343354"
   
 #### <a name="to-create-the-project"></a>Создание проекта  
   
--   Создание нового проекта приложения Windows Forms в Visual Basic или Visual C# с именем `SelectingWpfContent`.  
+- Создание нового проекта приложения Windows Forms в Visual Basic или Visual C# с именем `SelectingWpfContent`.  
   
 ## <a name="creating-the-wpf-control-types"></a>Создание типов элементов управления WPF  
  После добавления типов элементов управления WPF в проект их можно разместить в разных элементах управления <xref:System.Windows.Forms.Integration.ElementHost>.  

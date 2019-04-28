@@ -10,11 +10,11 @@ ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 463c8e42e76a61eb0820c1af72c20d004161ad25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753976"
 ---
 # <a name="marshaling-mda"></a>MDA маршалинг
 Помощник по отладке управляемого кода (MDA) `marshaling`активируется, когда среда CLR задает сведения о маршалинге для параметра метода или поля структуры. Данный MDA не работает для сборок JIT-компиляции.  

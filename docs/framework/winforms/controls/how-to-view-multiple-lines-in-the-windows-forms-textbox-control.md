@@ -12,18 +12,18 @@ helpviewer_keywords:
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
 ms.openlocfilehash: 47404f02a753fe143dd573bdf73143416872af9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012923"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Практическое руководство. Многострочные элементы управления TextBox в Windows Forms
 По умолчанию в Windows Forms <xref:System.Windows.Forms.TextBox> элемент управления выводит одну строку текста и не отображает полосы прокрутки. Если текст длиннее, чем свободное пространство, отображается только часть текста. Это поведение по умолчанию можно изменить, задав <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, и <xref:System.Windows.Forms.TextBox.ScrollBars%2A> соответствующие значения свойств.  
   
 ### <a name="to-display-a-carriage-return-in-the-textbox-control"></a>Для отображения возврата каретки в элементе управления TextBox  
   
--   Для отображения возврата каретки в многострочном <xref:System.Windows.Forms.TextBox>, используйте <xref:System.Environment.NewLine%2A> свойство.  
+- Для отображения возврата каретки в многострочном <xref:System.Windows.Forms.TextBox>, используйте <xref:System.Environment.NewLine%2A> свойство.  
   
      Имейте в виду, что интерпретация escape-символы (\\) зависит от конкретного языка. Visual Basic использует `Chr$(13) & Chr$(10)` для сочетания символов возврата и перевода строки каретки.  
   

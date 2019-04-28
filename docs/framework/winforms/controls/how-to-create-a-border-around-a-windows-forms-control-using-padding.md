@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Margin property [Windows Forms]
 ms.assetid: bac7ed4d-a163-4259-98bd-155a36345890
 ms.openlocfilehash: e3bbf43dbe45e675df172a6c3e1db16a3ba9caa8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746894"
 ---
 # <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>Практическое руководство. Создание рамки вокруг элемента управления в Windows Forms
 В следующем примере кода демонстрируется создание рамки или контур вокруг <xref:System.Windows.Forms.RichTextBox> элемента управления. В примере задается значение <xref:System.Windows.Forms.Panel> элемента управления <xref:System.Windows.Forms.Padding> свойство до 5 и наборы <xref:System.Windows.Forms.Control.Dock%2A> дочернего <xref:System.Windows.Forms.RichTextBox> управления <xref:System.Windows.Forms.DockStyle.Fill>. <xref:System.Windows.Forms.Control.BackColor%2A> Из <xref:System.Windows.Forms.Panel> управления <xref:System.Drawing.Color.Blue%2A>, который создает синяя рамка вокруг <xref:System.Windows.Forms.RichTextBox> элемента управления.  

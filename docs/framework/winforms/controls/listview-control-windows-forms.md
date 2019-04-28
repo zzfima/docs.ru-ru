@@ -12,11 +12,11 @@ helpviewer_keywords:
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
 ms.openlocfilehash: d826fe0a64ad226db62e01259b0466f7f495f8e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757878"
 ---
 # <a name="listview-control-windows-forms"></a>Элемент управления ListView (Windows Forms)
 Элемент управления `ListView` Windows Forms отображает список элементов со значками. Представление списка можно использовать для создания пользовательского интерфейса, аналогичного правой области окна проводника.  
@@ -58,15 +58,15 @@ ms.locfileid: "59200315"
  [Практическое руководство. Добавление возможностей поиска в элемент управления ListView](how-to-add-search-capabilities-to-a-listview-control.md)  
  Описывается, как программным способом найти элемент с помощью текстового поиска или экранных координат.  
   
--   [Практическое руководство. Включить мозаичное представление в элементе управления ListView формы Windows с помощью конструктора](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
+- [Практическое руководство. Включить мозаичное представление в элементе управления ListView формы Windows с помощью конструктора](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
   
--   [Практическое руководство. Добавление и удаление элементов с помощью элемента управления ListView формы Windows, с помощью конструктора](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
+- [Практическое руководство. Добавление и удаление элементов с помощью элемента управления ListView формы Windows, с помощью конструктора](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
   
--   [Практическое руководство. Добавление столбцов в элемент управления ListView формы Windows, с помощью конструктора](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
+- [Практическое руководство. Добавление столбцов в элемент управления ListView формы Windows, с помощью конструктора](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
   
--   [Практическое руководство. Группирование элементов в элементе управления ListView формы Windows с помощью конструктора](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
+- [Практическое руководство. Группирование элементов в элементе управления ListView формы Windows с помощью конструктора](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
   
--   [Пошаговое руководство: Создание интерфейса в стиле проводника с ListView и TreeView элементов управления с помощью конструктора](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
+- [Пошаговое руководство: Создание интерфейса в стиле проводника с ListView и TreeView элементов управления с помощью конструктора](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
 ## <a name="reference"></a>Ссылка  
  Класс <xref:System.Windows.Forms.ListView>  

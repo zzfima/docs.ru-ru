@@ -11,11 +11,11 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
 ms.openlocfilehash: 0a8d95ffbabf03a0e6c9d88edb28c248b60f3252
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783881"
 ---
 # <a name="set-statement-visual-basic"></a>Инструкция Set (Visual Basic)
 Объявляет `Set` процедуру, которая используется для присвоения значения свойству.  
@@ -35,13 +35,13 @@ End Set
  `accessmodifier`  
  Необязательно. на более одного `Get` и `Set` инструкций в этом свойстве. Ниже указаны доступные значения.  
   
--   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
--   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
--   [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)  
+- [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)  
   
--   `Protected Friend`  
+- `Protected Friend`  
   
  См. раздел [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
@@ -70,13 +70,13 @@ End Set
   
 ## <a name="rules"></a>Правила  
   
--   **Смешанным уровнем доступа.** При определении свойства чтения и записи, при необходимости можно указать другой уровень доступа для любого `Get` или `Set` процедуры, но не оба. После этого, уровень доступа процедуры должен быть более ограничивающим, чем уровень доступа свойства. Например, если свойство объявлено `Friend`, можно объявить `Set` процедуры `Private`, но не `Public`.  
+- **Смешанным уровнем доступа.** При определении свойства чтения и записи, при необходимости можно указать другой уровень доступа для любого `Get` или `Set` процедуры, но не оба. После этого, уровень доступа процедуры должен быть более ограничивающим, чем уровень доступа свойства. Например, если свойство объявлено `Friend`, можно объявить `Set` процедуры `Private`, но не `Public`.  
   
      При определении `WriteOnly` свойства `Set` процедура представляет все свойство. Нельзя объявлять разные права доступа уровня для `Set`, так как это установит два уровня доступа для свойства.  
   
 ## <a name="behavior"></a>Поведение  
   
--   **Возвращение из процедуры свойства.** Когда `Set` процедура возвращает в вызывающий код, выполнение продолжается после инструкции, которая предоставляет значение для сохранения.  
+- **Возвращение из процедуры свойства.** Когда `Set` процедура возвращает в вызывающий код, выполнение продолжается после инструкции, которая предоставляет значение для сохранения.  
   
      `Set` процедуры свойств можно вернуть с помощью [оператор Return](../../../visual-basic/language-reference/statements/return-statement.md) или [оператор Exit](../../../visual-basic/language-reference/statements/exit-statement.md).  
   

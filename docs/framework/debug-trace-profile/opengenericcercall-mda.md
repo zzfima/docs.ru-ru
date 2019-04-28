@@ -13,11 +13,11 @@ ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a9ea2e274bbcd17bcc129de46c753f091501d4c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753716"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 Помощник по отладке управляемого кода `openGenericCERCall` активируется, чтобы предупредить о том, что граф области ограниченного выполнения (CER) с переменными универсального типа в корневом методе обрабатывается во время JIT-компиляции или генерации образа в машинном коде и при этом как минимум одна из переменных универсального типа представляет собой тип ссылки на объект.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703690"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Общие сведения о привязках Windows Communication Foundation
 Привязки-это объекты, которые используются для указания сведений о связи, необходимые для подключения к конечной точке службы Windows Communication Foundation (WCF). Каждая конечная точка в службе WCF требует точного задания привязки. В этом разделе описаны типы сведений о связи, определяемых привязками, элементы привязки, какие привязки включены в WCF, и как можно указать привязку для конечной точки.  
@@ -32,13 +32,13 @@ ms.locfileid: "59325063"
 ## <a name="system-provided-bindings"></a>Привязки, предоставляемые системой  
  Информация в привязке может быть сложной, а некоторые параметры могут быть несовместимыми с другими. По этой причине WCF включает набор привязок, предоставляемых системой. Эти привязки удовлетворяют большинство требований приложения. В следующих классах представлены некоторые примеры привязок, предоставляемых системой.  
   
--   <xref:System.ServiceModel.BasicHttpBinding>: Привязка подходит для подключения к веб-служб протокола HTTP, соответствующим спецификации WS-I спецификации базового профиля (например, веб-служб под управлением служб ASP.NET).  
+- <xref:System.ServiceModel.BasicHttpBinding>: Привязка подходит для подключения к веб-служб протокола HTTP, соответствующим спецификации WS-I спецификации базового профиля (например, веб-служб под управлением служб ASP.NET).  
   
--   <xref:System.ServiceModel.WSHttpBinding>: Привязку с возможностью подходит для подключения к конечным точкам, соответствующим WS-* протоколы.  
+- <xref:System.ServiceModel.WSHttpBinding>: Привязку с возможностью подходит для подключения к конечным точкам, соответствующим WS-* протоколы.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: Использует [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] для подключения к другим конечным точкам WCF на одном компьютере.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Использует [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] для подключения к другим конечным точкам WCF на одном компьютере.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: Использует [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] для создания подключений очередей сообщений с другими конечными точками WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Использует [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] для создания подключений очередей сообщений с другими конечными точками WCF.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: Эта привязка обеспечивает повышение производительности по сравнению с привязками HTTP и идеально подходит для использования в локальной сети.
   

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Выполнение частично доверенного кода в изолированной среде
+title: Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -11,13 +11,13 @@ ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752975"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Практическое руководство. Выполнение частично доверенного кода в изолированной среде
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Изолирование в песочнице — это способ запуска кода в ограниченной среде безопасности, ограничивающей разрешения доступа, предоставленные коду. Например, если имеется управляемая библиотека, полученная из источника с неполным доверием, не следует запускать ее как полностью доверенную. Вместо этого следует поместить код в "песочницу", которая ограничивает разрешения кода, которые необходимы ему по вашему мнению (например, <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>).  
@@ -92,15 +92,15 @@ AppDomain.CreateDomain( string friendlyName,
   
      Дополнительные сведения:  
   
-    -   Это единственная перегрузка метода <xref:System.AppDomain.CreateDomain%2A>, принимающая в качестве параметра набор разрешений <xref:System.Security.PermissionSet>, то есть единственная перегрузка, позволяющая загружать приложение в режиме частичного доверия.  
+    - Это единственная перегрузка метода <xref:System.AppDomain.CreateDomain%2A>, принимающая в качестве параметра набор разрешений <xref:System.Security.PermissionSet>, то есть единственная перегрузка, позволяющая загружать приложение в режиме частичного доверия.  
   
-    -   Параметр `evidence` не используется для вычисления набора разрешений. Он служит для идентификации другими компонентами .NET Framework.  
+    - Параметр `evidence` не используется для вычисления набора разрешений. Он служит для идентификации другими компонентами .NET Framework.  
   
-    -   Задание свойства <xref:System.AppDomainSetup.ApplicationBase%2A> параметра `info` является обязательным для этой перегрузки.  
+    - Задание свойства <xref:System.AppDomainSetup.ApplicationBase%2A> параметра `info` является обязательным для этой перегрузки.  
   
-    -   Параметр `fullTrustAssemblies` имеет ключевое слово `params`, означающее, что создавать массив <xref:System.Security.Policy.StrongName> не обязательно. Разрешается передавать в качестве параметров ноль, одно или несколько строгих имен.  
+    - Параметр `fullTrustAssemblies` имеет ключевое слово `params`, означающее, что создавать массив <xref:System.Security.Policy.StrongName> не обязательно. Разрешается передавать в качестве параметров ноль, одно или несколько строгих имен.  
   
-    -   Для создания домена приложения используйте следующий код:  
+    - Для создания домена приложения используйте следующий код:  
   
     ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
@@ -108,15 +108,15 @@ AppDomain.CreateDomain( string friendlyName,
   
 5. Загрузите код в созданный ранее изолирующий домен <xref:System.AppDomain>. Это можно сделать двумя способами.  
   
-    -   Вызовите для сборки метод <xref:System.AppDomain.ExecuteAssembly%2A>.  
+    - Вызовите для сборки метод <xref:System.AppDomain.ExecuteAssembly%2A>.  
   
-    -   Используйте метод <xref:System.Activator.CreateInstanceFrom%2A> для создания экземпляра класса, производного от <xref:System.MarshalByRefObject>, в новом домене <xref:System.AppDomain>.  
+    - Используйте метод <xref:System.Activator.CreateInstanceFrom%2A> для создания экземпляра класса, производного от <xref:System.MarshalByRefObject>, в новом домене <xref:System.AppDomain>.  
   
      Предпочтительнее использовать второй метод, так как в этом случае легче передавать параметры новому экземпляру домена <xref:System.AppDomain>. Метод <xref:System.Activator.CreateInstanceFrom%2A> предоставляет две важные возможности.  
   
-    -   Во-первых, можно использовать базу кода, указывающую на расположение, которое не содержит вашу сборку.  
+    - Во-первых, можно использовать базу кода, указывающую на расположение, которое не содержит вашу сборку.  
   
-    -   Во-вторых, при работе в режиме полного доверия (<xref:System.Security.CodeAccessPermission.Assert%2A>) можно использовать для создания экземпляра критически важного класса метод <xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>. (Это происходит при условии, что сборка не имеет маркеров прозрачности и загружается как полностью доверенная.) Поэтому нужно следить за тем, чтобы при использовании этой функции создавался только доверенный код. Кроме того, мы рекомендуем создавать в новом домене приложения только экземпляры полностью доверенных классов.  
+    - Во-вторых, при работе в режиме полного доверия (<xref:System.Security.CodeAccessPermission.Assert%2A>) можно использовать для создания экземпляра критически важного класса метод <xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>. (Это происходит при условии, что сборка не имеет маркеров прозрачности и загружается как полностью доверенная.) Поэтому нужно следить за тем, чтобы при использовании этой функции создавался только доверенный код. Кроме того, мы рекомендуем создавать в новом домене приложения только экземпляры полностью доверенных классов.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  

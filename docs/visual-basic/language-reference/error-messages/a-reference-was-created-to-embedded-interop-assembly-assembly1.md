@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
 ms.openlocfilehash: c0b4f56e3d1613486dd1198976557831ce657e1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774872"
 ---
 # <a name="a-reference-was-created-to-embedded-interop-assembly-assembly1-because-of-an-indirect-reference-to-that-assembly-from-assembly-assembly2"></a>Была создана ссылка на внедренную сборку взаимодействия "\<сборка1 >" из-за наличия неявной ссылки на эту сборку из сборки "\<сборка2 >"
 Была создана ссылка на внедренную сборку взаимодействия "\<сборка1>" из-за косвенной ссылки на эту сборку из сборки "\<сборка2>". Рекомендуется изменить свойство "Внедрить типы взаимодействия" в одной из сборок.  
@@ -27,9 +27,9 @@ ms.locfileid: "58837550"
   
 ### <a name="to-address-this-warning"></a>Устранение предупреждения  
   
--   Чтобы внедрить сведения о типе взаимодействия для обеих сборок, присвойте свойству `Embed Interop Types` во всех ссылках на сборку сборка1 значение `True`.  
+- Чтобы внедрить сведения о типе взаимодействия для обеих сборок, присвойте свойству `Embed Interop Types` во всех ссылках на сборку сборка1 значение `True`.  
   
--   Чтобы устранить это предупреждение, можно присвоить свойству `Embed Interop Types` сборки сборка1 значение `False`. В этом случае сведения о типе взаимодействия предоставляется основной сборки взаимодействия (PIA).  
+- Чтобы устранить это предупреждение, можно присвоить свойству `Embed Interop Types` сборки сборка1 значение `False`. В этом случае сведения о типе взаимодействия предоставляется основной сборки взаимодействия (PIA).  
   
 ## <a name="see-also"></a>См. также
 

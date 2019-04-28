@@ -7,11 +7,11 @@ helpviewer_keywords:
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
 ms.openlocfilehash: 47f671f493e7b379c36f9bf4b50ec9d185d10b8a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61804071"
 ---
 # <a name="how-to-skew-an-element"></a>Практическое руководство. Наклон элемента
 В этом примере показано, как использовать <xref:System.Windows.Media.SkewTransform> для отклонения элемента. Отклонение (или срез) — это преобразование, которое неравномерно растягивает пространство координат. Одним из примеров использования <xref:System.Windows.Media.SkewTransform> является имитация [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] глубины в [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] объектов.  

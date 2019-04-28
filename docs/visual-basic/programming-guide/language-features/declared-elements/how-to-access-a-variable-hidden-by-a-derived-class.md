@@ -10,11 +10,11 @@ helpviewer_keywords:
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
 ms.openlocfilehash: a97a51d4570d87eaa873fb3152ad810f528dff46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61829664"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Практическое руководство. Доступ к переменной, скрытой производным классом (Visual Basic)
 Когда код в производном классе получает доступ к переменной, компилятор обычно разрешает ссылку на ближайшую доступную версию, то есть доступный минимальное количество производных действий обратно из доступа к классу. Если переменная определена в производном классе, код обычно обращается к этому определению.  
@@ -23,7 +23,7 @@ ms.locfileid: "58832181"
   
 ### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>Для доступа к переменной базового класса, скрытой производным классом  
   
--   В выражение или оператор присваивания, перед именем переменной с `MyBase` ключевое слово и точка (`.`).  
+- В выражение или оператор присваивания, перед именем переменной с `MyBase` ключевое слово и точка (`.`).  
   
      Компилятор разрешает ссылку на версию базового класса переменной.  
   

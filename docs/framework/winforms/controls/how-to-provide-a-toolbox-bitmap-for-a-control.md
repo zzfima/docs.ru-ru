@@ -10,11 +10,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
 ms.openlocfilehash: 7c26e00acd4278ced53ad29c748ac076e0215a23
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913215"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Практическое руководство. Предоставление точечного рисунка панели элементов для элемента управления
 Если вы хотите иметь специальный значок для элемента управления отображаются в **элементов**, можно указать образ с помощью <xref:System.Drawing.ToolboxBitmapAttribute>. Он представляет собой *атрибут* — особый вид классов, который можно прикреплять к другим классам. Дополнительные сведения об атрибутах см. в разделе [Обзор атрибутов (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md) для Visual Basic или [атрибуты (C#)](../../../csharp/programming-guide/concepts/attributes/index.md) для C#.  

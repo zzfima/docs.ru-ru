@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
 author: BrucePerlerMS
 ms.openlocfilehash: 556c444d5e48e27036c4b49338f6e70de7ef5c5d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750752"
 ---
 # <a name="audienceuris"></a>\<audienceUris>
 Задает набор URI, — это допустимые идентификаторы проверяющей стороны (RP). Маркеры не будет принят, если только они относятся к одному из разрешенных URI аудитории.  
@@ -48,7 +48,7 @@ ms.locfileid: "55267280"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`<add value=xs:string>`|Добавляет URI, указанный параметром `value` атрибут в коллекцию audienceUris. Атрибут `value` является обязательным. URI с учетом регистра.|  
 |`<clear>`|Очищает коллекцию audienceUris. Все идентификаторы будут удалены из коллекции.|  

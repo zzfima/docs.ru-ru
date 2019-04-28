@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
 ms.openlocfilehash: 828edf2e5491394f5ac802b5c9babfb3df359e59
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758461"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Условная компиляция в Visual Basic
 В *условной компиляции*, одни блоки кода в программе компилируются, а остальные игнорируются.  
@@ -29,11 +29,11 @@ ms.locfileid: "56967858"
 ## <a name="declaring-conditional-compilation-constants"></a>Объявление констант условной компиляции  
  Константы условной компиляции можно задать одним из трех способов:  
   
--   В **в конструкторе проектов**  
+- В **в конструкторе проектов**  
   
--   В командной строке при использовании компилятора командной строки  
+- В командной строке при использовании компилятора командной строки  
   
--   В коде  
+- В коде  
   
  Константы условной компиляции находятся в отдельной области и недоступны из обычного кода. Область константы условной компиляции, зависит от того, который имеет значение. Ниже перечислены области константы, объявленные с помощью каждого из трех описанных выше методов.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "56967858"
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |---|---|  
 |[Соглашения о структуре программы и коде](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Рекомендации по упрощению чтение и обслуживание кода.|  
   

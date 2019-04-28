@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
 ms.openlocfilehash: 6aad851770fb886de5d5c00b544ac6eac2857e42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801859"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Практическое руководство. Реагирование на изменения схемы шрифтов в приложениях Windows Forms
 В операционных системах Windows пользователь может изменить параметры шрифта во всей системе, чтобы проверить шрифт по умолчанию отображаются, больше или меньше. Изменение этих параметров шрифта важно для пользователей с нарушениями зрения и требуют более длинный тип для чтения текста на экране компьютера. Вы можете настроить приложение Windows Forms реагировать на эти изменения путем увеличения или уменьшения размера формы и все содержащиеся в нем текст при каждом изменении шрифтовой схемы. Если требуется, чтобы формы в соответствии с изменениями в размерах шрифта динамически, можно добавить код в форму.  

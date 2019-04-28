@@ -3,11 +3,11 @@ title: Обработка исключений
 description: Основы обработки исключений в F# и ссылки на исключение, обработка выражения и функции.
 ms.date: 05/16/2016
 ms.openlocfilehash: 187236ca380c7de0b3714160f6c3703f8fb93d5a
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025097"
 ---
 # <a name="exception-handling"></a>Обработка исключений
 
@@ -20,7 +20,7 @@ ms.locfileid: "53614445"
 
 ## <a name="related-topics"></a>См. также
 
-|Заголовок|Описание:|
+|Заголовок|Описание|
 |-----|-----------|
 |[Типы исключения](exception-types.md)|Описывает объявление типа исключения.|
 |[Исключения. `try...with` Выражение](the-try-with-expression.md)|Описывает языковую конструкцию, поддерживающую обработку исключений.|

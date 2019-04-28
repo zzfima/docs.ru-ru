@@ -9,11 +9,11 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762401"
 ---
 # <a name="fromtoby-animations-overview"></a>Общие сведения об анимациях From/To/By
 В этом разделе описываются способы использования анимаций From/To/By для свойств зависимостей. Анимация From/To/By создает переход между двумя целевыми значениями.  
@@ -65,15 +65,15 @@ ms.locfileid: "59209155"
 ## <a name="target-values"></a>Целевые значения  
  Анимация From/To/By создает переход между двумя целевыми значениями. Обычно задается начальное значение (с помощью <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойства) и конечное значение (с помощью <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> свойство). Но можно также указать только начальное значение, конечное или значение смещения. В таких случаях анимация получает отсутствующее целевое значение из свойства, для которого она выполняется. Ниже описаны различные способы задания целевых значений анимации.  
   
--   **Начальное значение**  
+- **Начальное значение**  
   
      Используйте <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойства, если вы хотите явно указать начальное значение анимации. Можно использовать <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойство самостоятельно или с <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> или <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойство. Если указать только <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойство, анимация переходит от этого значения к базовому значению анимируемого свойства.  
   
--   **Конечное значение**  
+- **Конечное значение**  
   
      Чтобы задать конечное значение анимации, используйте его <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> свойство. Если вы используете <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> само свойство, анимация получает начальное значение из анимируемого свойства или из выходных данных другой анимации, которая применяется к тому же свойству. Можно использовать <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> свойство вместе с <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойство, чтобы явно указать начальное и конечное значения для анимации.  
   
--   **Значение смещения**  
+- **Значение смещения**  
   
      <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> Свойство позволяет указать смещение вместо явного начального или конечного значения анимации. <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> Свойство анимации определяет, сколько анимация изменяет значение за время своего выполнения. Можно использовать <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойство отдельно или с <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> свойство. Если указать только <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойство, анимация добавит значение смещения к базовому значению свойства или выходным объектом другой анимации.  
   
@@ -134,9 +134,9 @@ ms.locfileid: "59209155"
 ## <a name="other-animation-types"></a>Другие типы анимаций  
  From/To/By ― не единственный тип анимации, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет: он также предоставляет анимации по ключевым кадрам и анимация с использованием пути.  
   
--   Анимация по ключевым кадрам анимирует по любому числу конечных значений, описанных с помощью ключевых кадров. Дополнительные сведения см. в разделе [сведения об анимации по ключевым кадрам](key-frame-animations-overview.md).  
+- Анимация по ключевым кадрам анимирует по любому числу конечных значений, описанных с помощью ключевых кадров. Дополнительные сведения см. в разделе [сведения об анимации по ключевым кадрам](key-frame-animations-overview.md).  
   
--   Анимация пути формирует выходные значения из <xref:System.Windows.Media.PathGeometry>. Дополнительные сведения см. в разделе [Общие сведения об анимации пути](path-animations-overview.md).  
+- Анимация пути формирует выходные значения из <xref:System.Windows.Media.PathGeometry>. Дополнительные сведения см. в разделе [Общие сведения об анимации пути](path-animations-overview.md).  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] также позволяет создавать собственные настраиваемые типы анимации. Дополнительные сведения см. в разделе [Общие сведения о настраиваемых анимации](custom-animations-overview.md).  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
 ms.openlocfilehash: 599ad6f722251003ab56547ce050cbd0e8da831d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903985"
 ---
 # <a name="how-to-return-rowsets"></a>Практическое руководство. Как возвращать наборы строк
 В данном примере показано возвращение набора строк из базы данных и включение входного параметра в результаты фильтрации.  

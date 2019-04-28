@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Storyboards [WPF], animation
 ms.assetid: f4a314e9-1da2-4367-85fc-1232487efa7a
 ms.openlocfilehash: f6064368b4f5e4fa8324b4039d734d4430cd9174
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761212"
 ---
 # <a name="how-to-animate-a-property-by-using-a-storyboard"></a>Практическое руководство. Анимация свойства с помощью раскадровки
 В этом примере показано, как использовать <xref:System.Windows.Media.Animation.Storyboard> для анимации свойств. Для анимации свойства, с помощью <xref:System.Windows.Media.Animation.Storyboard>, создать анимацию для каждого свойства, которое вы хотите анимировать, а также создать <xref:System.Windows.Media.Animation.Storyboard> для хранения анимации.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
 ms.openlocfilehash: d1c4700a5dc8f6ed99043552999d8f014116da8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61804175"
 ---
 # <a name="how-to-rotate-an-object"></a>Практическое руководство. Вращение объекта
 В данном примере показано, как можно вращать объект. В примере сначала создается <xref:System.Windows.Media.RotateTransform> и затем задает его <xref:System.Windows.Media.RotateTransform.Angle%2A> в градусах.  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - ALT key
 ms.assetid: 4c374c4c-4ca9-4a68-ac96-9dc3ab0f518a
 ms.openlocfilehash: 410fc0134046c5fa7e05bfcd38ce6818244a0a54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746891"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>Практическое руководство. Определение клавиш доступа для элементов управления Windows Forms с помощью конструктора
 *Ключ доступа* , подчеркивается в тексте элемента меню, пункт меню или метка элемента управления, такого как кнопка. Он позволяет пользователю «click» кнопки с помощью клавиши ALT и клавишу с буквой. Например, если кнопка запускает процесс печати формы и поэтому его `Text` свойство имеет значение «Print», добавив символ амперсанда (&) перед буквой «P» буква «P» быть подчеркнуты в тексте кнопки во время выполнения. Пользователь может выполнять команда, связанная с кнопкой, нажав клавиши ALT + P. Не может иметь ключ доступа для элемента управления, который не может получить фокус.  

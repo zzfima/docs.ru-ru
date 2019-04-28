@@ -17,11 +17,11 @@ ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6805385ec21deb8748354647ab0f09b3a51353fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754418"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Практическое руководство. Использование TraceSource и фильтров с прослушивателями трассировки
 Одной из новых функций в платформе .NET Framework версии 2.0 является расширенная система трассировки. Основное условие осталось неизменным: сообщения трассировки отправляются через переключатели к прослушивателям, которые передают данные соответствующему выходному носителю. Для версии 2.0 основное отличие заключается в том, что трассировку можно инициировать через экземпляры класса <xref:System.Diagnostics.TraceSource>. Класс <xref:System.Diagnostics.TraceSource> представляет собой улучшенную систему трассировки и может использоваться вместо статических методов более старых классов трассировки <xref:System.Diagnostics.Trace> и <xref:System.Diagnostics.Debug>. Знакомые классы <xref:System.Diagnostics.Trace> и <xref:System.Diagnostics.Debug> сохранены, но для трассировки рекомендуется использовать класс <xref:System.Diagnostics.TraceSource>.  

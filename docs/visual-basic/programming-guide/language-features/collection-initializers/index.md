@@ -7,11 +7,11 @@ helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
 ms.openlocfilehash: 538efc11e477a4e90b7bca286da4ed56105d7ecb
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906832"
 ---
 # <a name="collection-initializers-visual-basic"></a>Инициализаторы коллекций (Visual Basic)
 
@@ -75,7 +75,7 @@ ms.locfileid: "57675465"
 
 ## <a name="related-topics"></a>См. также
 
-|Заголовок|Описание:|
+|Заголовок|Описание|
 |---|---|
 |[Практическое руководство. Создание метода Add, расширение используемого инициализатором набора](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Описывает создание метода расширения `Add`, который можно использовать для заполнения коллекции значениями из инициализатора набора.|
 |[Практическое руководство. Создание коллекции, используемой инициализатором набора](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Описывает, как активировать использование инициализатора набора, включив метод `Add` в класс коллекции, реализующий `IEnumerable`.|

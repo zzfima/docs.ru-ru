@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
 ms.openlocfilehash: f55c9790b8300a1a3f26e031a17a0982638b562b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765522"
 ---
 # <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Практическое руководство. Настройка поведения (службы данных WCF) привязки данных
 Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют добавлять специализированную логику, которая вызывается коллекцией <xref:System.Data.Services.Client.DataServiceCollection%601> при добавлении или удалении объекта из коллекции привязок или при изменении значения свойства. Специализированная логика представляется методами, называемое <xref:System.Func%602> делегатов, возвращающих значение `false` при поведение по умолчанию по-прежнему будет выполняться при завершении пользовательского метода и `true` при дальнейшей обработки из событие должно быть остановлено.  

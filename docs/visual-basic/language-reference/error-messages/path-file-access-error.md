@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
 ms.openlocfilehash: 4f18c9216aa24840bc205534a97124d12698cb98
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61799184"
 ---
 # <a name="pathfile-access-error"></a>Ошибка доступа к пути/файлу
 В ходе операции доступа к файлам или доступа к диску операционной системы не может установить подключение между путь и имя файла.  

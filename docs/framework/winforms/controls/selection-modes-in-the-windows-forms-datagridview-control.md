@@ -6,11 +6,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
 ms.openlocfilehash: 79e13e65938252015e43b59a962d40f20963a5df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902672"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Режимы выделения содержимого элемента управления DataGridView в Windows Forms
 Иногда требуется приложению выполнять действия в зависимости от выбора пользователя в пределах <xref:System.Windows.Forms.DataGridView> элемента управления. В зависимости от действий может потребоваться ограничить типы выделения, которые возможны. Например предположим, что приложение можно распечатать отчет для текущей выбранной записи. В этом случае может потребоваться настроить <xref:System.Windows.Forms.DataGridView> элемент управления, щелкнув в любом месте в пределах строки выбирает всей строки, и таким образом можно выбрать только одну строку за раз.  

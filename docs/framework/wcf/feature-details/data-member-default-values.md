@@ -12,8 +12,8 @@ ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857120"
 ---
 # <a name="data-member-default-values"></a>Значения членов данных по умолчанию
 В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], типы имеют концепцию *значения по умолчанию*. Например, любой ссылочный тип имеет значение по умолчанию `null`, а значением по умолчанию для целого типа является ноль. Иногда требуется исключить член данных из сериализованных данных, если для него задано значение по умолчанию. Так как этот член имеет значение по умолчанию, нет необходимости сериализовывать фактическое значение; это повышает производительность.  
@@ -50,9 +50,9 @@ ms.locfileid: "59973724"
 ### <a name="schema-representation"></a>Представление схемы  
  Сведения о представления схемы языка определения схемы XML элементов данных при `EmitDefaultValue` свойству `false` рассматриваются в [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Тем не менее ниже приводятся краткие общие сведения:  
   
--   Когда <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> присваивается `false`, она представляется в схеме как заметка, специфичная для Windows Communication Foundation (WCF). Не существует совместимого способа представления этой информации. В частности, атрибут "default" в схеме не используется для этой цели, на атрибут `minOccurs` влияет только параметр <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>, а на атрибут `nillable` влияет только тип члена данных.  
+- Когда <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> присваивается `false`, она представляется в схеме как заметка, специфичная для Windows Communication Foundation (WCF). Не существует совместимого способа представления этой информации. В частности, атрибут "default" в схеме не используется для этой цели, на атрибут `minOccurs` влияет только параметр <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>, а на атрибут `nillable` влияет только тип члена данных.  
   
--   Фактическое значение по умолчанию, которое требуется использовать, в этой схеме отсутствует. Правильная интерпретация отсутствующего элемента зависит только от принимающей конечной точки.  
+- Фактическое значение по умолчанию, которое требуется использовать, в этой схеме отсутствует. Правильная интерпретация отсутствующего элемента зависит только от принимающей конечной точки.  
   
  При импорте схемы <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> свойству автоматически присваивается `false` каждый раз, когда упомянутая заметка относящиеся конкретно к WCF обнаруживается ранее. Кроме того, значение `false` устанавливается для ссылочных типов, у которых для свойства `nillable` задано значение `false`, чтобы обеспечить поддержку специфичных сценариев взаимодействия, часто встречающихся при использовании веб-служб [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   

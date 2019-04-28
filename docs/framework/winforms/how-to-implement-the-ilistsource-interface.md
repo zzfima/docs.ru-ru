@@ -9,11 +9,11 @@ helpviewer_keywords:
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
 ms.openlocfilehash: bd4e554b7e4be51847496307b50be3084d0115d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801768"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>Практическое руководство. Реализация интерфейса IListSource
 Реализовать <xref:System.ComponentModel.IListSource> интерфейс, чтобы создать связываемый класс, который не реализует <xref:System.Collections.IList> , но вместо этого предоставляет список из другого расположения.  
@@ -36,7 +36,7 @@ ms.locfileid: "59159787"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылки на сборки System.Drawing и System.Windows.Forms.  
+- ссылки на сборки System.Drawing и System.Windows.Forms.  
   
 ## <a name="see-also"></a>См. также
 

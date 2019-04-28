@@ -1,5 +1,5 @@
 ---
-title: <appSettings> - элемент для <configuration>
+title: Элемент <appSettings> для <configuration>
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings
@@ -10,11 +10,11 @@ ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: dcdf8d0f11ae65353da08bba1f8d2fe5ab415c6b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705562"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<appSettings > элемент для \<configuration >
 
@@ -33,19 +33,19 @@ ms.locfileid: "55289592"
 
 ## <a name="attribute"></a>Атрибут
 
-|           | Описание: |
+|           | Описание |
 | --------- | ----------- |
 | **file**  | Необязательный атрибут.<br><br>Указывает относительный путь во внешний файл, содержащий пользовательские параметры конфигурации приложения. Указанный файл содержит одинаковые параметры, заданные в **\<Добавить >** , **\<удалить >** , и **\<снимите >** элементы и использует формата одной пары ключ/значение, что и эти элементы.<br><br>Указанный путь задается относительно основной файл конфигурации. Для приложения Windows Forms, это двоичного папка (например, */bin/debug*), не расположение файла конфигурации приложения. Для приложений Web Forms, этот путь задается относительно корневого каталога приложения, где *web.config* он находится.<br><br>Обратите внимание на то, что среда выполнения игнорирует атрибут, если не удается найти указанный файл. |
 
 ## <a name="parent-element"></a>Родительский элемент
 
-|     | Описание: |
+|     | Описание |
 | --- | ----------- |
 | [**\<Конфигурация >** элемент](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-|     | Описание: |
+|     | Описание |
 | --- | ----------- |
 | [**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Добавляет пользовательский параметр приложения. |
 | [**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Удаляет все ранее определенные параметры приложения. |

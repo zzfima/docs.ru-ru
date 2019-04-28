@@ -6,8 +6,8 @@ ms.openlocfilehash: 668cfb3026b9ab7259665f5e53873a512b1e2238
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916400"
 ---
 # <a name="instances"></a>Экземпляры
 Имя счетчика: экземпляры.  
@@ -17,9 +17,9 @@ ms.locfileid: "59975589"
   
  В большинстве случаев число контекстов экземпляра идентично числу экземпляров. Однако приведенные ниже сценарии являются исключением из этого правила.  
   
--   Метод службы явным образом вызывает метод <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>.  
+- Метод службы явным образом вызывает метод <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>.  
   
--   <xref:System.ServiceModel.ReleaseInstanceMode> применяется к экземпляру <xref:System.ServiceModel.OperationBehaviorAttribute>.  
+- <xref:System.ServiceModel.ReleaseInstanceMode> применяется к экземпляру <xref:System.ServiceModel.OperationBehaviorAttribute>.  
   
 ## <a name="see-also"></a>См. также
 

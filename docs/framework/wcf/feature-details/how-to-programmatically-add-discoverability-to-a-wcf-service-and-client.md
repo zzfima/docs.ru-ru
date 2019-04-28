@@ -3,11 +3,11 @@ title: Практическое руководство. Как программ�
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
 ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761550"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Практическое руководство. Как программно добавить возможность обнаружения к службе и клиенту WCF
 В этом разделе объясняется, как сделать обнаруживаемой службы Windows Communication Foundation (WCF). Он основан на [резидентного размещения](https://go.microsoft.com/fwlink/?LinkId=145523) образца.  

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
 ms.openlocfilehash: 4fa9efc593461d26eabaee5e2f62c1a17da1b543
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761017"
 ---
 # <a name="how-to-animate-a-property-by-using-an-animationclock"></a>Практическое руководство. Анимирование свойства с помощью AnimationClock
 В этом примере показано, как использовать <xref:System.Windows.Media.Animation.Clock> объектов для анимации свойства.  
   
  Есть три способа анимации свойства зависимостей:  
   
--   Создание <xref:System.Windows.Media.Animation.AnimationTimeline> и свяжите ее с этим свойством с помощью <xref:System.Windows.Media.Animation.Storyboard>.  
+- Создание <xref:System.Windows.Media.Animation.AnimationTimeline> и свяжите ее с этим свойством с помощью <xref:System.Windows.Media.Animation.Storyboard>.  
   
--   Использование объекта <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> метод для применения одного <xref:System.Windows.Media.Animation.AnimationTimeline> к целевому свойству.  
+- Использование объекта <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> метод для применения одного <xref:System.Windows.Media.Animation.AnimationTimeline> к целевому свойству.  
   
--   Создание <xref:System.Windows.Media.Animation.AnimationClock> из <xref:System.Windows.Media.Animation.AnimationTimeline> и применить его к свойству.  
+- Создание <xref:System.Windows.Media.Animation.AnimationClock> из <xref:System.Windows.Media.Animation.AnimationTimeline> и применить его к свойству.  
   
  <xref:System.Windows.Media.Animation.Storyboard> объекты и <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> метод позволяют анимировать свойства без явного создания и распределения часов (примеры см. в разделе [анимация свойства с помощью раскадровки](how-to-animate-a-property-by-using-a-storyboard.md) и [анимация свойства без С помощью раскадровки](how-to-animate-a-property-without-using-a-storyboard.md)); часы создаются и распространяются автоматически.  
   

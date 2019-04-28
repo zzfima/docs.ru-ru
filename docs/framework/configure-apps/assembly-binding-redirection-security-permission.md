@@ -6,11 +6,11 @@ helpviewer_keywords:
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
 ms.openlocfilehash: ba4e7e790860696f4489e9ef7b73bddcb8c4e399
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705432"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>Разрешение безопасности перенаправления привязки сборок
 Для явного перенаправления привязки сборки в файле конфигурации приложения необходимо разрешение безопасности. Это относится к перенаправлению как сборок платформы .NET Framework, так и сторонних сборок. Разрешение, задав <xref:System.Security.Permissions.SecurityPermissionFlag> флаг <xref:System.Security.Permissions.SecurityPermission>. Управляемые сборки не имеют разрешений по умолчанию.  

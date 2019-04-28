@@ -3,11 +3,11 @@ title: Пример безопасности сообщений
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
 ms.openlocfilehash: ad579705fa30e9b5179f2de4b829bd7f4a5817c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756056"
 ---
 # <a name="message-security-sample"></a>Пример безопасности сообщений
 Данный образец демонстрирует реализацию приложения, в котором используется привязка `basicHttpBinding` и безопасность сообщений. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующем службу калькулятора.  
@@ -161,11 +161,11 @@ Press <ENTER> to terminate client.
   
 14. На клиентском компьютере из окна командной строки запустите программу Client.exe.  
   
-    1.  Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок для образцов WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+    1. Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок для образцов WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Очистка после образца  
   
--   После завершения работы примера запустите в папке примеров файл Cleanup.bat.  
+- После завершения работы примера запустите в папке примеров файл Cleanup.bat.  
   
     > [!NOTE]
     >  Этот скрипт не удаляет сертификаты службы на клиенте при выполнении примера на нескольких компьютерах. Если вы запустили примеры Windows Communication Foundation (WCF), которые используют сертификаты между компьютерами, обязательно удалите сертификаты службы, которые были установлены в хранилище CurrentUser - trustedpeople. Чтобы сделать это, используйте следующую команду: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Например: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`  

@@ -1,17 +1,17 @@
 ---
-title: Выбор платформ вычислений Azure для приложений на основе контейнера
+title: Выбор вычислительных платформ Azure для контейнерных приложений
 description: Модернизация существующих приложений .NET с помощью облака Azure и Windows контейнерах | Выбор платформ вычислений Azure для приложений на основе контейнера
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/04/2018
 ms.openlocfilehash: f251aecfeaf2421a5cecf218577369963bc736fb
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811769"
 ---
-# <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Выбор платформ вычислений Azure для приложений на основе контейнера
+# <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Выбор вычислительных платформ Azure для контейнерных приложений
 
 Как вы могли заметить после прочтения в предыдущих разделах, Azure — это открытая облачная, который предлагает несколько вариантов. Можно использовать лучше всего подходит для ваших потребностей, однако он также перехватывает вопросы о какие продукта или технологии, следует использовать для контейнерных приложений.
 

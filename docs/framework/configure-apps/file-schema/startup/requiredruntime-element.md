@@ -1,5 +1,5 @@
 ---
-title: <requiredRuntime> - элемент
+title: Элемент <requiredRuntime>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requiredRuntime
@@ -10,11 +10,11 @@ helpviewer_keywords:
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
 ms.openlocfilehash: 5e528a8b81fa3d9abc4f345d18f01e33f483a4a9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673846"
 ---
 # <a name="requiredruntime-element"></a>\<requiredRuntime > элемент
 
@@ -43,7 +43,7 @@ safemode="true|false"/>
 
 ## <a name="safemode-attribute"></a>атрибут безопасный режим
 
-|Значение|Описание:|
+|Значение|Описание|
 |-----------|-----------------|
 |`false`|Код запуска среды выполнения ищет в реестре. Это значение по умолчанию.|
 |`true`|Код запуска среды выполнения не выглядит в реестре.|
@@ -54,7 +54,7 @@ safemode="true|false"/>
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-|Элемент|Описание:|
+|Элемент|Описание|
 |-------------|-----------------|
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|
 |`startup`|Содержит `<requiredRuntime>` элемент.|

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 505491fa-5920-43ce-8a96-c25389e125d8
 ms.openlocfilehash: a38fce33fe34bf6485d0d5fcef4f194f4c2470b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760510"
 ---
 # <a name="method-based-query-syntax-examples-projection"></a>Примеры синтаксиса запросов на основе методов. Проекция
 Примеры в этом разделе демонстрируют, как использовать <xref:System.Linq.Enumerable.Select%2A> и <xref:System.Linq.Enumerable.SelectMany%2A> методы запроса [модели AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) с использованием синтаксиса запросов на основе методов. Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  

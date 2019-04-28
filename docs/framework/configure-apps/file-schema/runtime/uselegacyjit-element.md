@@ -5,13 +5,13 @@ ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a467599084f01b1a48c95c5e25fb1f869156dffa
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673892"
 ---
-# <a name="uselegacyjit-element"></a>\<useLegacyJit > элемент
+# <a name="uselegacyjit-element"></a>Элемент \<useLegacyJit>
 
 Определяет, использует ли среда CLR устаревший 64-разрядный JIT-компилятор для JIT-компиляции.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "55278763"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-| Элемент         | Описание:                                                                                                       |  
+| Элемент         | Описание                                                                                                       |  
 | --------------- | ----------------------------------------------------------------------------------------------------------------- |  
 | `configuration` | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework. |  
 | `runtime`       | Содержит сведения о параметрах инициализации среды выполнения.                                                        |  

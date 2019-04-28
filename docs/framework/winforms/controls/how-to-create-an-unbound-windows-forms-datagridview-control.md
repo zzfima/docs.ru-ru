@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 ms.assetid: b5d4b47d-9a28-4d88-9dba-0a3c90fba71d
 ms.openlocfilehash: 9bfffac3d6970aceea3842df95f4bcae970b42e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747493"
 ---
 # <a name="how-to-create-an-unbound-windows-forms-datagridview-control"></a>Практическое руководство. Создание не связанного с данными элемента управления DataGridView в Windows Forms
 В следующем примере кода показано, как выполнить заполнение элемента управления <xref:System.Windows.Forms.DataGridView> программным путем без привязки к источнику данных. Это полезно при наличии небольшого объема данных, которые нужно отобразить в виде таблицы.  
@@ -28,7 +28,7 @@ ms.locfileid: "59167912"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылки на сборки System, System.Drawing и System.Windows.Forms.  
+- ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
 

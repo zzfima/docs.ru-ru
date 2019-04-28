@@ -8,11 +8,11 @@ helpviewer_keywords:
 - constants [Visual Basic], enumerated
 ms.assetid: bbb5c3cc-7cdb-4814-8d6a-a6d91546ed1e
 ms.openlocfilehash: e9ea359d58dfa11f7bba7fec3d31955e18d24953
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907599"
 ---
 # <a name="how-to-refer-to-an-enumeration-member-visual-basic"></a>Практическое руководство. Ссылка на член перечисления (Visual Basic)
 Перечисления предоставляют удобный способ работы с наборами связанных констант и связывать постоянные значения с именами. Например, вы можете объявить перечисление для набора целочисленных констант, связанных с днями недели, а затем использовать в коде названия дней, а не числа.  
@@ -21,7 +21,7 @@ ms.locfileid: "58813981"
   
 ### <a name="to-refer-to-an-enumeration-member"></a>Для ссылки на элемент перечисления  
   
--   Уточнить имя члена с помощью перечисления. Например, в следующем примере назначается `Saturday` членом `FirstDayOfWeek` перечисления переменной `DayValue`.  
+- Уточнить имя члена с помощью перечисления. Например, в следующем примере назначается `Saturday` членом `FirstDayOfWeek` перечисления переменной `DayValue`.  
   
      [!code-vb[VbEnumsTask#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#19)]  
   

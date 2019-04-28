@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 26a43a4f-83c9-4732-806d-bb23aad0ff6b
 ms.openlocfilehash: 6a25ea5fe80da1fed16f44fd3243ebea4d64069f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902893"
 ---
 # <a name="insert-update-and-delete-operations"></a>Операции вставки, обновления и удаления
 В `Insert` операции `Update`, `Delete` и [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] выполняются путем добавления, изменения и удаления объектов в объектной модели. По умолчанию [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] преобразует действия в язык SQL и отправляет изменения в базу данных.  

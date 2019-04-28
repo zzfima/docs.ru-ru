@@ -3,11 +3,11 @@ title: Приостановление и восстановление рабоч
 ms.date: 03/30/2017
 ms.assetid: 11f38339-79c7-4295-b610-24a7223bbf6d
 ms.openlocfilehash: aa0431b18f6d0e4b96d7494ec2e65acd355992c7
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61860962"
 ---
 # <a name="pausing-and-resuming-a-workflow"></a>Приостановление и восстановление рабочего процесса
 Выполнение рабочих процессов будет приостанавливаться и возобновляться при выполнении действий с закладками и блокировками, такими как <xref:System.Activities.Statements.Delay>. Кроме того, рабочие потоки можно будет явным образом приостановить, выгрузить и возобновить с использованием механизма сохраняемости.  

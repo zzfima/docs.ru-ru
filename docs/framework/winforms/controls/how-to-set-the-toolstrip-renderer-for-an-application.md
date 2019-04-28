@@ -12,11 +12,11 @@ helpviewer_keywords:
 - toolbars [Windows Forms], customizing
 ms.assetid: 46acef3e-9844-4ae8-9a2e-3006fe99cadf
 ms.openlocfilehash: 857d5ea3771b098d4edcbd7b24f1e6feaf3ec2cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013040"
 ---
 # <a name="how-to-set-the-toolstrip-renderer-for-an-application"></a>Практическое руководство. Задание средства визуализации компонента ToolStrip для приложения
 Настройка внешнего вида элементов управления <xref:System.Windows.Forms.ToolStrip> может производиться отдельно для каждого из них или для всех элементов управления <xref:System.Windows.Forms.ToolStrip>, используемых в приложении.  
@@ -40,7 +40,7 @@ ms.locfileid: "59083080"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылки на сборки System.Design, System.Drawing и System.Windows.Forms.  
+- ссылки на сборки System.Design, System.Drawing и System.Windows.Forms.  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   

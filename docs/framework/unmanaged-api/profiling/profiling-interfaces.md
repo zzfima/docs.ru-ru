@@ -9,21 +9,21 @@ ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 059fadc5607e76b871083682136fda542ae9bacf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758201"
 ---
 # <a name="profiling-interfaces"></a>Профилирующие интерфейсы
 В этом разделе описываются неуправляемые интерфейсы, позволяющие профилировать программу, выполняемую в среде CLR.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Интерфейс ICLRProfiling](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-interface.md)  
- Предоставляет [AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) метод, который позволяет профилировщику для присоединения к выполняющемуся процессу.  
+ Предоставляет [AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) метод, который позволяет присоединить профилировщик к выполняющемуся процессу.  
   
  [Интерфейс ICorProfilerAssemblyReferenceProvider](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md)  
- Позволяет профилировщику информировать среду CLR ссылки на сборки, которые профилировщик добавит в [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) обратного вызова.  
+ Позволяет профилировщику сообщать среде CLR о ссылках на сборку, которые профилировщик добавит в [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) обратного вызова.  
   
  [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
  Предоставляет методы, используемые средой CLR для уведомления профилировщика кода при событиях, на которые подписан профилировщик.  
@@ -44,13 +44,13 @@ ms.locfileid: "33462056"
  Предоставляет метод обратного вызова, который используется средой CLR для уведомления профилировщика о загрузке сборки.  
   
  [Интерфейс ICorProfilerCallback7](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)  
- Предоставляет метод обратного вызова, который общеязыковая среда выполнения использует для уведомления профилировщика о том, что обновляется поток символов, связанный с модулем в памяти.  
+ Предоставляет метод обратного вызова, который среда CLR использует для уведомления профилировщика о том, что обновляется поток символов, связанный с модулем в памяти.  
 
 [Интерфейс ICorProfilerCallback8](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback8-interface.md)  
-Предоставляет методы обратного вызова, общеязыковая среда выполнения использует для уведомления профилировщика о началась и завершения JIT-компиляции динамического метода.
+Предоставляет методы обратного вызова, среда CLR использует для уведомления профилировщика о началась и завершения JIT-компиляция динамического метода.
 
 [Интерфейс ICorProfilerCallback9](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback9-interface.md)  
-Предоставляет метод обратного вызова, общеязыковая среда выполнения использует для уведомления профилировщика о динамический метод является мусором, собираются и впоследствии выгружен.
+Предоставляет метод обратного вызова, который среда CLR использует для уведомления профилировщика о динамический метод является мусором собираются и впоследствии выгружен.
 
  [Интерфейс ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)  
  Предоставляет методы, позволяющие профилировщику кода взаимодействовать со средой выполнения CLR и контролировать порядок генерирования кода JIT-компилятором при повторной компиляции указанного метода.  
@@ -74,22 +74,22 @@ ms.locfileid: "33462056"
  Предоставляет методы, которые используются профилировщиками кода для взаимодействия со средой CLR с целью управления отслеживанием событий.  
   
  [Интерфейс ICorProfilerInfo6](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-interface.md)  
- Предоставляет перечислитель для всех методов, принадлежащих данного модуля NGen, и, встраиваются в основной части данного метода.  
+ Предоставляет перечислитель для всех методов, которые принадлежат данного модуля NGen и, встраиваются в тексте данного метода.  
   
  [Интерфейс ICorProfilerInfo7](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)  
- Предоставляет метод для применения вновь определен метаданных для модуля и, обеспечивающий доступ к поток символов в памяти.  
+ Предоставляет метод для применения вновь определен метаданных для модуля и, обеспечивающий доступ в поток символов в памяти.  
   
  [Интерфейс ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)  
  Предоставляет методы для последовательного перебора коллекции модулей, загруженных приложением или профилировщиком.  
   
  [Интерфейс ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)  
- Предоставляет методы для последовательного перебора коллекции замороженный объектов, создаваемых [Ngen.exe (генератор образов в машинном)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Предоставляет методы для последовательного перебора коллекции зафиксированных объектов, создаваемых [Ngen.exe (генератор образов в машинном)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
   
  [Интерфейс ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)  
  Предоставляет методы для последовательного перебора коллекции потоков в среде CLR.  
   
  [Интерфейс IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)  
- Предоставляет [Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md) метод выделения памяти для нового тела функции промежуточного языка MSIL.  
+ Предоставляет [Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md) метод выделить память для нового тела функции промежуточного языка MSIL.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Общие сведения о профилировании](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  

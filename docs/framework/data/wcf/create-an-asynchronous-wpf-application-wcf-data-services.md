@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 ms.assetid: 834614df-1427-4839-b0be-90f68e5afffd
 ms.openlocfilehash: c5dc4e34711cdb128eb012633bad104d0060be71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765869"
 ---
 # <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a>Практическое руководство. Создание приложения асинхронной Windows Presentation Framework (WCF Data Services)
 Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют привязать данные, полученные из службы данных, к элементам пользовательского интерфейса в приложении Windows Presentation Framework (WPF). Дополнительные сведения см. в разделе [привязка данных к элементам управления](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md). Также можно выполнять операции в службе данных асинхронно, что позволяет приложению продолжать реагировать во время ожидания ответа на запрос службы данных. Приложения Silverlight обязаны обращаться к службе данных асинхронно. Дополнительные сведения см. в разделе [асинхронных операций](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  

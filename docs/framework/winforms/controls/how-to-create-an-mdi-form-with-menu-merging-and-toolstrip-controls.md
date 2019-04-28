@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 ms.assetid: 64992ed9-44af-4baf-b45f-863e6ab35711
 ms.openlocfilehash: a67298614b1985152c42577de14d2c5d295f672f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746619"
 ---
 # <a name="how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Практическое руководство. Создание формы MDI путем слияния меню и с применением и элементов управления ToolStrip
 Пространство имен <xref:System.Windows.Forms?displayProperty=nameWithType> поддерживает приложения с интерфейсом MDI, а элемент управления <xref:System.Windows.Forms.MenuStrip> поддерживает слияние меню. Формы MDI также могут содержать элементы управления <xref:System.Windows.Forms.ToolStrip>.  
@@ -33,7 +33,7 @@ ms.locfileid: "59157533"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера кода требуются:  
   
--   ссылки на сборки System.Drawing и System.Windows.Forms.  
+- ссылки на сборки System.Drawing и System.Windows.Forms.  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   

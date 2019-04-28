@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], sorting data
 ms.assetid: 57dfed60-a608-40d5-86f9-d65686ffb325
 ms.openlocfilehash: 4894de00a323f70ca244ea877101a5af1cbb37e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012195"
 ---
 # <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Определение режимов сортировки для столбцов элемента управления DataGridView в Windows Forms
 В <xref:System.Windows.Forms.DataGridView> элемент управления, поле текстовых столбцов использовать автоматическую сортировку по умолчанию, а другие типы столбцов не имеют автоматической сортировки. Иногда требуется переопределить эти значения по умолчанию. Например можно отобразить изображения вместо текста, чисел и значений перечисления ячейки. Хотя нельзя отсортировать изображения, можно сортировать значения, которые они представляют.  
@@ -25,7 +25,7 @@ ms.locfileid: "59096372"
   
 ### <a name="to-set-the-sort-mode-for-a-column"></a>Чтобы задать режим сортировки для столбца  
   
--   Задайте свойство <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>.  
+- Задайте свойство <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#066](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#066)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#066](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#066)]  
@@ -33,9 +33,9 @@ ms.locfileid: "59096372"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`, содержащий столбец с именем `Priority`;  
+- элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`, содержащий столбец с именем `Priority`;  
   
--   ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
+- ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
 

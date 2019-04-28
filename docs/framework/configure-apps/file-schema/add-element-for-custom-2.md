@@ -10,11 +10,11 @@ ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: 9b421b4bab32c1aae7a6ba7d69b9f4aea2ab99a5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705497"
 ---
 # <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Добавить > элемент для NameValueSectionHandler и DictionarySectionHandler
 
@@ -32,14 +32,14 @@ ms.locfileid: "55278282"
 
 ## <a name="attributes"></a>Атрибуты
 
-| Атрибут | Описание: |
+| Атрибут | Описание |
 | --------- | ----------- |
 | **key**   | Обязательный атрибут.<br><br>Указывает имя параметра. |
 | **value** | Обязательный атрибут.<br><br>Задает значение параметра. |
 
 ## <a name="parent-element"></a>Родительский элемент
 
-| Элемент | Описание: |
+| Элемент | Описание |
 | ------- | ------------|
 | [**\<параметра sectionName >** элемент](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Определяет параметры для пользовательских разделов конфигурации, использующие <xref:System.Configuration.NameValueSectionHandler> и <xref:System.Configuration.DictionarySectionHandler> классы. |
 

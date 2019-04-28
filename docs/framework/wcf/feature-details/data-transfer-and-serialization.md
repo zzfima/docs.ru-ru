@@ -6,11 +6,11 @@ helpviewer_keywords:
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
 ms.openlocfilehash: 1eefd82a149d0bc215ca441e92c7d737a744b1e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856561"
 ---
 # <a name="data-transfer-and-serialization"></a>Передача данных и сериализация
 В распределенных системах для выполнения каких-либо задач клиенты и службы обмениваются данными. Как разработчик службы или клиента необходимо понимать как Windows Communication Foundation (WCF) обрабатывает и сериализации данных для создания приложений, которые эффективны и простые в обслуживании.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
 ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761381"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Практическое руководство. Связывание данных с элементом управления MaskedTextBox
 Вы можете привязывать данные к <xref:System.Windows.Forms.MaskedTextBox> управления так же, как и любым другим элементом управления Windows Forms. Тем не менее если формат данных в базе данных не соответствует формату, ожидаемому определения маски, необходимо будет изменять формат данных. Ниже описано, как это сделать с помощью <xref:System.Windows.Forms.Binding.Format> и <xref:System.Windows.Forms.Binding.Parse> события <xref:System.Windows.Forms.Binding> класс для отображения отдельных телефонный номер и телефон расширение поля базы данных, одного изменяемого поля.  
@@ -239,15 +239,15 @@ ms.locfileid: "59342236"
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
--   Создание визуального элемента C# проект или Visual Basic.  
+- Создание визуального элемента C# проект или Visual Basic.  
   
--   Добавить <xref:System.Windows.Forms.TextBox> и <xref:System.Windows.Forms.MaskedTextBox> в форму элементы управления, как описано в предыдущей процедуре.  
+- Добавить <xref:System.Windows.Forms.TextBox> и <xref:System.Windows.Forms.MaskedTextBox> в форму элементы управления, как описано в предыдущей процедуре.  
   
--   Откройте файл исходного кода для формы по умолчанию проекта.  
+- Откройте файл исходного кода для формы по умолчанию проекта.  
   
--   Замените исходный код в этот файл код, приведенный в предыдущем разделе «Код».  
+- Замените исходный код в этот файл код, приведенный в предыдущем разделе «Код».  
   
--   Скомпилируйте приложение.  
+- Скомпилируйте приложение.  
   
 ## <a name="see-also"></a>См. также
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 ms.openlocfilehash: 99aa61d921217ab5638172a54697054e8421fd5c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768543"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Основы разработки приложений Windows Forms (Visual Basic)
 Важной частью Visual Basic является возможность создания приложений Windows Forms, локально работающих на компьютерах пользователей. Чтобы создать приложение и пользовательский интерфейс, с помощью Windows Forms можно использовать Visual Studio. В приложении Windows Forms основано на классах из <xref:System.Windows.Forms> пространства имен.  
@@ -18,11 +18,11 @@ ms.locfileid: "56972681"
 ## <a name="designing-windows-forms-applications"></a>Проектирование Windows Forms в приложения  
  Windows Forms и приложения служб Windows можно создать с помощью Visual Studio. Дополнительные сведения см. в следующих разделах:  
   
--   [Приступая к работе с Windows Forms](../../../framework/winforms/getting-started-with-windows-forms.md). Сведения о создании и программировании Windows Forms.  
+- [Приступая к работе с Windows Forms](../../../framework/winforms/getting-started-with-windows-forms.md). Сведения о создании и программировании Windows Forms.  
    
--   [Элементам управления Windows Forms в](../../../framework/winforms/controls/index.md). Коллекция разделов, подробно описывающих использование элементов управления Windows Forms.  
+- [Элементам управления Windows Forms в](../../../framework/winforms/controls/index.md). Коллекция разделов, подробно описывающих использование элементов управления Windows Forms.  
   
--   [Приложения служб Windows](../../../framework/windows-services/index.md). Подразделы, в которых объясняется, как создавать службы Windows.  
+- [Приложения служб Windows](../../../framework/windows-services/index.md). Подразделы, в которых объясняется, как создавать службы Windows.  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>Построение многофункциональных интерактивных пользовательских интерфейсов  
  Windows Forms — это компонент смарт клиентов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], набор управляемых библиотек для выполнения распространенных задач, таких как чтение и запись в файловой системе. Используя среду разработки вроде Visual Studio, можно создавать приложения Windows Forms, которые отображают информацию, запрашивают ввод от пользователей и взаимодействовать с удаленными компьютерами по сети.  
@@ -46,7 +46,7 @@ ms.locfileid: "56972681"
   
 |Кому|См.|  
 |--------|---------|  
-|Создайте новое приложение Windows Forms с помощью Visual Studio|[Учебник 1. Создание приложения для просмотра рисунков](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|  
+|Создайте новое приложение Windows Forms с помощью Visual Studio|[Учебник 1. Создание приложения для просмотра рисунков](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|  
 |Использование элементов управления в формах|[Практическое руководство. Добавление элементов управления Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Создание графических объектов с помощью <xref:System.Drawing>|[Приступая к программированию графики](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Создание пользовательских элементов управления|[Практическое руководство. Наследование класса UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  

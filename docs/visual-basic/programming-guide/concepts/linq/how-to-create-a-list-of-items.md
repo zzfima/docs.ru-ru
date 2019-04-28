@@ -6,11 +6,11 @@ helpviewer_keywords:
 - objects [Visual Basic], list of items
 ms.assetid: fe941aba-6340-455c-8b1f-ffd9c3eb1ac5
 ms.openlocfilehash: 97952c2240a5ec1d5e41bd9b2b59aeed3eb43ab6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855466"
 ---
 # <a name="how-to-create-a-list-of-items"></a>Практическое руководство. Создание списка элементов
 Приведенный в этом разделе код определяет класс `Student` и создает список его экземпляров. Этот список служит для дополнения раздела [Пошаговое руководство: Написание запросов в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md). Его также можно использовать для любого приложения, которое требует наличия списка объектов. Код определяет элементы списка учащихся с помощью инициализаторов объектов.  

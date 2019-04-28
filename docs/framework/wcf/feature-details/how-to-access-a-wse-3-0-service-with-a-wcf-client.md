@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
 ms.openlocfilehash: 83507a95dbc4bc7499b94a516f569703f21a2726
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855131"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Практическое руководство. Доступ к WSE 3.0 службы с помощью клиента WCF
 Клиенты Windows Communication Foundation (WCF) — уровне линий связи совместимы с Web Services Enhancements (WSE) 3.0 для служб Microsoft .NET, если WCF клиенты настроены для использования версии спецификации WS-Addressing от августа 2004 г. Тем не менее, службы WSE 3.0 не поддерживают протокол exchange (MEX) метаданных, поэтому при использовании [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания класса клиента WCF, не применяются параметры безопасности в созданный Клиент WCF. Таким образом, необходимо указать параметры безопасности, служба WSE 3.0 требует после создания клиента WCF.  
@@ -29,21 +29,21 @@ ms.locfileid: "59341066"
   
      Следующий класс является частью [взаимодействие с WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29) пример:  
   
-    1.  Создайте класс, производный от класса <xref:System.ServiceModel.Channels.Binding>.  
+    1. Создайте класс, производный от класса <xref:System.ServiceModel.Channels.Binding>.  
   
          В следующем примере кода создается класс с именем `WseHttpBinding`, наследуемый от класса <xref:System.ServiceModel.Channels.Binding>.  
   
          [!code-csharp[c_WCFClientToWSEService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#1)]
          [!code-vb[c_WCFClientToWSEService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#1)]  
   
-    2.  Добавьте в класс свойства, задающие готовое к использованию утверждение WSE (используемое службой WSE), указывающие, требуются ли производные ключи, используются ли безопасные сеансы, требуется ли подтверждение подписей, а также задающие параметры защиты сообщений. В WSE 3.0 готовое к использованию утверждение задает требования к безопасности для клиентского приложения или веб-службы — аналогично режиму проверки подлинности привязки в WCF.  
+    2. Добавьте в класс свойства, задающие готовое к использованию утверждение WSE (используемое службой WSE), указывающие, требуются ли производные ключи, используются ли безопасные сеансы, требуется ли подтверждение подписей, а также задающие параметры защиты сообщений. В WSE 3.0 готовое к использованию утверждение задает требования к безопасности для клиентского приложения или веб-службы — аналогично режиму проверки подлинности привязки в WCF.  
   
          В следующем примере кода определяются свойства `SecurityAssertion`, `RequireDerivedKeys`, `EstablishSecurityContext` и `MessageProtectionOrder`, которые задают готовое к использованию утверждение WSE, указывают, требуются ли производные ключи, используются ли безопасные сеансы, требуется ли подтверждение сигнатур, и задают параметры защиты сообщений соответственно.  
   
          [!code-csharp[c_WCFClientToWSEService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#3)]
          [!code-vb[c_WCFClientToWSEService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#3)]  
   
-    3.  Переопределите метод <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> для задания свойств привязки.  
+    3. Переопределите метод <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> для задания свойств привязки.  
   
          В следующем примере кода транспорт, кодирование сообщений и параметры защиты сообщений задаются получением значений свойств `SecurityAssertion` и `MessageProtectionOrder`.  
   

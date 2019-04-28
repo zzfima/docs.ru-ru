@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b9d4b27ca0bf454b42f15b849008e5a3019bb09a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864082"
 ---
 # <a name="coreclrdebugprocinfo-structure"></a>Структура CoreClrDebugProcInfo
 Представляет процесс, который выполняется на удаленном компьютере.  
@@ -47,10 +47,10 @@ struct  CoreClrDebugProcInfo {
 |`m_wszName`|Командная строка процесса. Этот член может быть усечен.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CoreClrRemoteDebuggingInterfaces.h  
+ **Заголовок.** CoreClrRemoteDebuggingInterfaces.h  
   
- **Библиотека:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86.dll  
   
- **Версии платформы .NET framework:** 3.5 SP1
+ **Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)

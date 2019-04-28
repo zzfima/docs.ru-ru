@@ -12,11 +12,11 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], setting and returning values
 ms.assetid: 5bd8f8cd-4c12-49ea-9cc3-2a647d064689
 ms.openlocfilehash: c73200eb1c373f1d723ba82f2e6be5b625496b59
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902230"
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Практическое руководство. Ввод числовых значений с помощью элемента управления NumericUpDown в Windows Forms
 Числовое значение в Windows Forms <xref:System.Windows.Forms.NumericUpDown> управления определяется его <xref:System.Windows.Forms.NumericUpDown.Value%2A> свойство. Можно написать проверок условий для значения элемента управления так же, как и в любое другое свойство. Один раз <xref:System.Windows.Forms.NumericUpDown.Value%2A> свойству, ее можно изменить непосредственно путем написания кода для выполнения над ним операций или вы можете вызвать <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> и <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> методы.  
@@ -55,7 +55,7 @@ ms.locfileid: "59300506"
   
 ### <a name="to-return-the-numeric-value"></a>Чтобы вернуть числовое значение  
   
--   Доступ <xref:System.Windows.Forms.NumericUpDown.Value%2A> свойства в коде.  
+- Доступ <xref:System.Windows.Forms.NumericUpDown.Value%2A> свойства в коде.  
   
     ```vb  
     If NumericUpDown1.Value >= 65 Then  

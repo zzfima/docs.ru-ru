@@ -3,11 +3,11 @@ title: Практическое руководство. Объединение �
 ms.date: 07/20/2015
 ms.assetid: 5a5758d4-906b-4285-908d-5b930db192e6
 ms.openlocfilehash: 85689fa756ab20a4dcd054b70eb3003c767936ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778057"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>Практическое руководство. Объединение двух коллекций (LINQ to XML) (Visual Basic)
 Элемент или атрибут в XML-документе может иногда относиться к другому элементу или атрибуту. Например, XML-документ из раздела [Пример XML-файла. Заказчики и заказы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) содержит список заказчиков и список заказов. Каждый элемент `Customer` содержит атрибут `CustomerID`. Каждый элемент `Order` содержит элемент `CustomerID`. Элемент `CustomerID` для каждого заказа ссылается на атрибут `CustomerID`, присвоенный также и клиенту.  

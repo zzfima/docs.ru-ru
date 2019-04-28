@@ -10,11 +10,11 @@ helpviewer_keywords:
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
 ms.openlocfilehash: f64d5ef2e9bb0e977b4c007e8c5109ac0c331a84
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61799376"
 ---
 # <a name="windows-forms-security"></a>Безопасность Windows Forms
 Windows Forms представляют модель безопасности, основанные на коде (безопасности для кода, независимо от того, пользователь, запускающий код заданы режимы). Это дополнение к всем схемам безопасности, которые могут быть выполнены уже на компьютере. Они могут включать в браузере (например, безопасность на основе зон в Internet Explorer) или для операционной системы (например, безопасность Windows NT, основанная на учетных данных).  

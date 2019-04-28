@@ -10,11 +10,11 @@ helpviewer_keywords:
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
 ms.openlocfilehash: bed943466348447e30947c170e27027f324342c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746879"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Практическое руководство. Изменение расстояния между элементами и способа их выравнивания для элемента управления ToolStrip в Windows Forms
 <xref:System.Windows.Forms.ToolStrip> Управления полностью поддерживает функции макета, такие как определения размера, расстояние между <xref:System.Windows.Forms.ToolStripItem> элементов управления относительно друг друга, размещения элементов управления в <xref:System.Windows.Forms.ToolStrip>и расстояние между элементами управления <xref:System.Windows.Forms.ToolStrip>.  
@@ -67,7 +67,7 @@ ms.locfileid: "59323178"
   
 ### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a>Чтобы упорядочить элементы ToolStrip на панели инструментов  
   
--   Задайте <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> свойства к значению <xref:System.Windows.Forms.ToolStripLayoutStyle> нужную.  
+- Задайте <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> свойства к значению <xref:System.Windows.Forms.ToolStripLayoutStyle> нужную.  
   
     ```vb  
     ToolStripDropDown1.LayoutStyle = _  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], copying and pasting
 ms.assetid: 17ef4207-e92e-4db2-b648-27246e6517ad
 ms.openlocfilehash: c59af175a6ee23395e19247efd8fa15e6d19ae66
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746964"
 ---
 # <a name="how-to-copy-toolstripmenuitems"></a>Практическое руководство. Копирование объектов ToolStripMenuItems
 Во время разработки вы можете копировать целиком меню верхнего уровня и пункты их подменю в другое место в <xref:System.Windows.Forms.MenuStrip>. Вы также можете копировать отдельные пункты меню верхнего уровня или переупорядочивать пункты меню.  

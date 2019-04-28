@@ -5,43 +5,43 @@ ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1d14e4ad45a4d5805187b993f2fc622a16dac09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61867112"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Миграция приложения для магазина Windows в машинный код .NET
 .NET native обеспечивает статическую компиляцию приложений в Windows Store или на компьютере разработчика. В отличие от динамической компиляции, выполняемой JIT-компилятором для приложений магазина Windows или [Генератором машинных образов (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) на устройстве. Несмотря на различия, .NET Native пытается поддерживать совместимость с [.NET для Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29). В большинстве случаев вещи, которые работают в приложениях .NET для Windows Store также работать с .NET Native.  Тем не менее в некоторых случаях могут произойти изменения поведения. В этом документе рассматриваются различия между стандартных приложениях .NET для Windows Store и .NET Native в следующих областях:  
   
--   [Общие различия среды выполнения](#Runtime)  
+- [Общие различия среды выполнения](#Runtime)  
   
--   [Различия динамического программирования](#Dynamic)  
+- [Различия динамического программирования](#Dynamic)  
   
--   [Другие различия, связанным с отражением](#Reflection)  
+- [Другие различия, связанным с отражением](#Reflection)  
   
--   [Неподдерживаемые сценарии и API-интерфейсы](#Unsupported)  
+- [Неподдерживаемые сценарии и API-интерфейсы](#Unsupported)  
   
--   [Различия в Visual Studio](#VS)  
+- [Различия в Visual Studio](#VS)  
   
 <a name="Runtime"></a>   
 ## <a name="general-runtime-differences"></a>Общие различия среды выполнения  
   
--   Исключения, такие как <xref:System.TypeLoadException>, создаваемых компилятором JIT, при запуске приложения в общеязыковой среды выполнения (CLR) обычно привести к ошибкам во время компиляции при обработке машинного кода .NET.  
+- Исключения, такие как <xref:System.TypeLoadException>, создаваемых компилятором JIT, при запуске приложения в общеязыковой среды выполнения (CLR) обычно привести к ошибкам во время компиляции при обработке машинного кода .NET.  
   
--   Не вызывайте метод <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> из потока пользовательского интерфейса приложения. Это может привести к взаимоблокировке в среде .NET Native.  
+- Не вызывайте метод <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> из потока пользовательского интерфейса приложения. Это может привести к взаимоблокировке в среде .NET Native.  
   
--   Не полагайтесь на порядок вызова конструктора статического класса. В .NET Native порядок вызова отличается от порядка в стандартной среде выполнения. (Даже со стандартной средой выполнения, не следует рассчитывать на порядок выполнения конструкторов статических классов.)  
+- Не полагайтесь на порядок вызова конструктора статического класса. В .NET Native порядок вызова отличается от порядка в стандартной среде выполнения. (Даже со стандартной средой выполнения, не следует рассчитывать на порядок выполнения конструкторов статических классов.)  
   
--   Бесконечный цикл без вызовов (например, `while(true);`) на любом потоке может привести к остановке приложения. Аналогичным образом, большие или бесконечные ожидания могут также привести приложение к остановке.  
+- Бесконечный цикл без вызовов (например, `while(true);`) на любом потоке может привести к остановке приложения. Аналогичным образом, большие или бесконечные ожидания могут также привести приложение к остановке.  
   
--   Некоторые циклы универсальной инициализации не создают исключения в .NET Native. Например, следующий код создает исключение <xref:System.TypeLoadException> исключений в стандартной среде CLR. В .NET Native нет.  
+- Некоторые циклы универсальной инициализации не создают исключения в .NET Native. Например, следующий код создает исключение <xref:System.TypeLoadException> исключений в стандартной среде CLR. В .NET Native нет.  
   
      [!code-csharp[ProjectN#8](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat1.cs#8)]  
   
--   В некоторых случаях .NET Native предоставляет различные реализации библиотеки классов .NET Framework. Объект, возвращенный из метода, всегда будет реализовать члены возвращаемого типа. Тем не менее, поскольку его резервная реализация отличается, может оказаться невозможным привести его к тому же набору типов, как это можно было бы сделать на платформах .NET Framework. Например, в некоторых случаях может оказаться невозможным привести объект интерфейса <xref:System.Collections.Generic.IEnumerable%601> , возвращенный такими методами как <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> или <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> , к `T[]`.  
+- В некоторых случаях .NET Native предоставляет различные реализации библиотеки классов .NET Framework. Объект, возвращенный из метода, всегда будет реализовать члены возвращаемого типа. Тем не менее, поскольку его резервная реализация отличается, может оказаться невозможным привести его к тому же набору типов, как это можно было бы сделать на платформах .NET Framework. Например, в некоторых случаях может оказаться невозможным привести объект интерфейса <xref:System.Collections.Generic.IEnumerable%601> , возвращенный такими методами как <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> или <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> , к `T[]`.  
   
--   Кэш WinInet не включен по умолчанию в приложениях .NET для Windows Store, но это в среде .NET Native. Это повышает производительность, но сказывается на рабочем наборе. Не требуется никаких действий разработчика.  
+- Кэш WinInet не включен по умолчанию в приложениях .NET для Windows Store, но это в среде .NET Native. Это повышает производительность, но сказывается на рабочем наборе. Не требуется никаких действий разработчика.  
   
 <a name="Dynamic"></a>   
 ## <a name="dynamic-programming-differences"></a>Различия динамического программирования  
@@ -58,9 +58,9 @@ ms.locfileid: "59163141"
   
  Конфигурация по умолчанию для машинного кода .NET достаточно для большинства разработчиков, но некоторым разработчикам может потребоваться точная настройка своих конфигураций с помощью директив среды выполнения (. rd.xml) файла. Кроме того в некоторых случаях компилятор .NET Native не удается определить, какие метаданные должны быть доступны для отражения и опирается на подсказки, особенно в следующих случаях:  
   
--   Некоторые конструкции, такие как <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> и <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> не удается определить статически.  
+- Некоторые конструкции, такие как <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> и <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> не удается определить статически.  
   
--   Поскольку компилятор не может определить экземпляры, универсальный тип, который требуется отразить на нем должен быть указан директивами среды выполнения. Это необходимо не только потому, что весь код должен быть включен, но так же и вследствие того, что отражение на универсальных типах могут образовывать бесконечный цикл (например, при вызове универсального метода для универсального типа).  
+- Поскольку компилятор не может определить экземпляры, универсальный тип, который требуется отразить на нем должен быть указан директивами среды выполнения. Это необходимо не только потому, что весь код должен быть включен, но так же и вследствие того, что отражение на универсальных типах могут образовывать бесконечный цикл (например, при вызове универсального метода для универсального типа).  
   
 > [!NOTE]
 >  Директивы среды выполнения определяются в файле директив среды выполнения (. rd.xml). Общие сведения об использовании этого файла см. в разделе [Приступая к работе](../../../docs/framework/net-native/getting-started-with-net-native.md). Сведения о директивах среды выполнения см. в разделе [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
@@ -73,67 +73,67 @@ ms.locfileid: "59163141"
   
  В машинный код .NET:  
   
--   Отражение закрытых типов и членов в библиотеке классов платформы .NET Framework не поддерживается. Тем не менее, можно выполнить отражение на собственных закрытых типах и членах, а также типах и членах библиотек сторонних поставщиков.  
+- Отражение закрытых типов и членов в библиотеке классов платформы .NET Framework не поддерживается. Тем не менее, можно выполнить отражение на собственных закрытых типах и членах, а также типах и членах библиотек сторонних поставщиков.  
   
--   Свойство <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> корректно возвращает `false` для объекта <xref:System.Reflection.ParameterInfo> , который представляет возвращаемое значение. В приложениях .NET для магазина Windows, будет возвращено значение `true`. Промежуточный язык (IL) не поддерживает это непосредственно, и интерпретация выполняется языком.  
+- Свойство <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> корректно возвращает `false` для объекта <xref:System.Reflection.ParameterInfo> , который представляет возвращаемое значение. В приложениях .NET для магазина Windows, будет возвращено значение `true`. Промежуточный язык (IL) не поддерживает это непосредственно, и интерпретация выполняется языком.  
   
--   Открытые члены на структурах <xref:System.RuntimeFieldHandle> и <xref:System.RuntimeMethodHandle> не поддерживаются. Эти типы поддерживаются только для LINQ, деревьев выражений и инициализации статического массива.  
+- Открытые члены на структурах <xref:System.RuntimeFieldHandle> и <xref:System.RuntimeMethodHandle> не поддерживаются. Эти типы поддерживаются только для LINQ, деревьев выражений и инициализации статического массива.  
   
--   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> и <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> включают скрытые члены в базовых классах и поэтому могут переопределяться без явного переопределения. Это также справедливо для других методов [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) .  
+- <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> и <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> включают скрытые члены в базовых классах и поэтому могут переопределяться без явного переопределения. Это также справедливо для других методов [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) .  
   
--   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> и <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> не дают сбой при попытке создать определенные комбинации (например, массив byrefs).  
+- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> и <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> не дают сбой при попытке создать определенные комбинации (например, массив byrefs).  
   
--   Нельзя использовать отражение для вызова членов, которые содержат параметры указателя.  
+- Нельзя использовать отражение для вызова членов, которые содержат параметры указателя.  
   
--   Чтобы получить или задать поле указателя, нельзя использовать отражение.  
+- Чтобы получить или задать поле указателя, нельзя использовать отражение.  
   
--   Если неверное количество аргументов и тип одного из аргументов неверен, .NET Native вызывает <xref:System.ArgumentException> вместо <xref:System.Reflection.TargetParameterCountException>.  
+- Если неверное количество аргументов и тип одного из аргументов неверен, .NET Native вызывает <xref:System.ArgumentException> вместо <xref:System.Reflection.TargetParameterCountException>.  
   
--   Обычно двоичная сериализация исключений не поддерживается. В результате несериализуемые объекты могут быть добавлены к словарю <xref:System.Exception.Data%2A?displayProperty=nameWithType> .  
+- Обычно двоичная сериализация исключений не поддерживается. В результате несериализуемые объекты могут быть добавлены к словарю <xref:System.Exception.Data%2A?displayProperty=nameWithType> .  
   
 <a name="Unsupported"></a>   
 ## <a name="unsupported-scenarios-and-apis"></a>Неподдерживаемые сценарии и API-интерфейсы  
  В следующих разделах перечислены неподдерживаемые сценарии и интерфейсы API для общей разработки, взаимодействия и таких технологий, как HTTPClient и Windows Communication Foundation (WCF):  
   
--   [Общая разработка](#General)  
+- [Общая разработка](#General)  
   
--   [HttpClient](#HttpClient)  
+- [HttpClient](#HttpClient)  
   
--   [Interop](#Interop)  
+- [Interop](#Interop)  
   
--   [Неподдерживаемые API](#APIs)  
+- [Неподдерживаемые API](#APIs)  
   
 <a name="General"></a>   
 ### <a name="general-development-differences"></a>Различия общей разработки  
  **Типы значений**  
   
--   При переопределении методов <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> и <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> для типа значения не вызывайте реализации базового класса. В приложениях .NET для магазина Windows эти методы основаны на отражении. Во время компиляции .NET Native создает реализацию, которая не зависит от отражения среды выполнения. Это означает, что если не переопределить эти два метода, они будут работать как и ожидалось, так как .NET Native создает реализацию во время компиляции. Однако, переопределение этих методов с помощью вызова реализации базового класса приводит к возникновению исключения.  
+- При переопределении методов <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> и <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> для типа значения не вызывайте реализации базового класса. В приложениях .NET для магазина Windows эти методы основаны на отражении. Во время компиляции .NET Native создает реализацию, которая не зависит от отражения среды выполнения. Это означает, что если не переопределить эти два метода, они будут работать как и ожидалось, так как .NET Native создает реализацию во время компиляции. Однако, переопределение этих методов с помощью вызова реализации базового класса приводит к возникновению исключения.  
   
--   Типы значений больше одного мегабайта не поддерживаются.  
+- Типы значений больше одного мегабайта не поддерживаются.  
   
--   Типы значений не может иметь конструктор по умолчанию в .NET Native. (C# и Visual Basic запрещают конструкторы по умолчанию для типов значений. Тем не менее их можно создать в IL.)  
+- Типы значений не может иметь конструктор по умолчанию в .NET Native. (C# и Visual Basic запрещают конструкторы по умолчанию для типов значений. Тем не менее их можно создать в IL.)  
   
  **Массивы**  
   
--   Массивы с нижней границей, отличной от нуля, не поддерживаются. Как правило, эти массивы создаются путем вызова перегрузки <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> .  
+- Массивы с нижней границей, отличной от нуля, не поддерживаются. Как правило, эти массивы создаются путем вызова перегрузки <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> .  
   
--   Динамическое создание многомерных массивов не поддерживается. Такие массивы обычно создаются путем вызова перегрузки метода <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> , который включает в себя параметр `lengths` , или же путем вызова метода <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> .  
+- Динамическое создание многомерных массивов не поддерживается. Такие массивы обычно создаются путем вызова перегрузки метода <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> , который включает в себя параметр `lengths` , или же путем вызова метода <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> .  
   
--   Многомерные массивы, имеющие четыре или более измерений не поддерживаются; т.е. их значение свойства <xref:System.Array.Rank%2A?displayProperty=nameWithType> равно или больше четырех. Вместо этого используйте [ступенчатые массивы](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (массива массивов). Например `array[x,y,z]` является недопустимым, но `array[x][y][z]` нет.  
+- Многомерные массивы, имеющие четыре или более измерений не поддерживаются; т.е. их значение свойства <xref:System.Array.Rank%2A?displayProperty=nameWithType> равно или больше четырех. Вместо этого используйте [ступенчатые массивы](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (массива массивов). Например `array[x,y,z]` является недопустимым, но `array[x][y][z]` нет.  
   
--   Вариативность для многомерных массивов не поддерживается и вызывает исключение <xref:System.InvalidCastException> во время выполнения.  
+- Вариативность для многомерных массивов не поддерживается и вызывает исключение <xref:System.InvalidCastException> во время выполнения.  
   
  **Универсальные шаблоны**  
   
--   Расширения бесконечного универсального типа приводят к ошибке компилятора. Например, этот код вызывает ошибку при компиляции:  
+- Расширения бесконечного универсального типа приводят к ошибке компилятора. Например, этот код вызывает ошибку при компиляции:  
   
      [!code-csharp[ProjectN#9](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat2.cs#9)]  
   
  **Pointers**  
   
--   Массивы указателей не поддерживается.  
+- Массивы указателей не поддерживается.  
   
--   Чтобы получить или задать поле указателя, нельзя использовать отражение.  
+- Чтобы получить или задать поле указателя, нельзя использовать отражение.  
   
  **Сериализация**  
   
@@ -149,19 +149,19 @@ ms.locfileid: "59163141"
   
  **Различные API**  
   
--   [TypeInfo.GUID](xref:System.Type.GUID) свойство выдает исключение <xref:System.PlatformNotSupportedException> исключения Если <xref:System.Runtime.InteropServices.GuidAttribute> атрибут не применяется к типу. Идентификатор GUID используется в основном для поддержки модели COM.  
+- [TypeInfo.GUID](xref:System.Type.GUID) свойство выдает исключение <xref:System.PlatformNotSupportedException> исключения Если <xref:System.Runtime.InteropServices.GuidAttribute> атрибут не применяется к типу. Идентификатор GUID используется в основном для поддержки модели COM.  
   
--   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> Метод правильно выполняет синтаксический анализ строк, содержащих даты в коротком формате в .NET Native. Тем не менее он не поддерживает совместимость с синтаксическим анализом изменений даты и времени, описанным в статьях базы знаний Microsoft: [KB2803771](https://support.microsoft.com/kb/2803771) и [KB2803755](https://support.microsoft.com/kb/2803755).  
+- <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> Метод правильно выполняет синтаксический анализ строк, содержащих даты в коротком формате в .NET Native. Тем не менее он не поддерживает совместимость с синтаксическим анализом изменений даты и времени, описанным в статьях базы знаний Microsoft: [KB2803771](https://support.microsoft.com/kb/2803771) и [KB2803755](https://support.microsoft.com/kb/2803755).  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` правильно округляется в .NET Native. В некоторых версиях среды CLR, результирующая строка усекается вместо округления.  
+- <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` правильно округляется в .NET Native. В некоторых версиях среды CLR, результирующая строка усекается вместо округления.  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>Различия HttpClient  
  В .NET Native <xref:System.Net.Http.HttpClientHandler> класс внутренним образом использует WinINet (через <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> класс) вместо <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> классы, используемые в стандартных приложениях .NET для Windows Store.  WinINet не поддерживает все параметры конфигурации, которые поддерживает класс <xref:System.Net.Http.HttpClientHandler> .  Это приводит к следующим результатам.  
   
--   Некоторые свойства возможности на <xref:System.Net.Http.HttpClientHandler> возвращают `false` машинного кода .NET, в то время как они возвращают `true` в стандартных приложениях .NET для Windows Store.  
+- Некоторые свойства возможности на <xref:System.Net.Http.HttpClientHandler> возвращают `false` машинного кода .NET, в то время как они возвращают `true` в стандартных приложениях .NET для Windows Store.  
   
--   Некоторые свойства конфигурации `get` методы доступа всегда возвращают фиксированное значение в среде .NET Native, отличный от значение по умолчанию можно настроить в приложениях .NET для Windows Store.  
+- Некоторые свойства конфигурации `get` методы доступа всегда возвращают фиксированное значение в среде .NET Native, отличный от значение по умолчанию можно настроить в приложениях .NET для Windows Store.  
   
  В следующих подразделах описаны некоторые дополнительные различия в поведении.  
   
@@ -189,13 +189,13 @@ ms.locfileid: "59163141"
   
  В машинный код .NET:  
   
--   Значение свойства <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> всегда <xref:System.Net.Http.ClientCertificateOption.Automatic>.  В приложения .NET для магазина Windows, по умолчанию используется <xref:System.Net.Http.ClientCertificateOption.Manual>.  
+- Значение свойства <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> всегда <xref:System.Net.Http.ClientCertificateOption.Automatic>.  В приложения .NET для магазина Windows, по умолчанию используется <xref:System.Net.Http.ClientCertificateOption.Manual>.  
   
--   Свойство <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A?displayProperty=nameWithType> не настраивается.  
+- Свойство <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A?displayProperty=nameWithType> не настраивается.  
   
--   Свойство <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> всегда имеет значение `true`.  В приложения .NET для магазина Windows, по умолчанию используется `false`.  
+- Свойство <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> всегда имеет значение `true`.  В приложения .NET для магазина Windows, по умолчанию используется `false`.  
   
--   Заголовок `SetCookie2` в ответах игнорируется как устаревший.  
+- Заголовок `SetCookie2` в ответах игнорируется как устаревший.  
   
 <a name="Interop"></a>   
 ### <a name="interop-differences"></a>Различия взаимодействия  
@@ -262,59 +262,59 @@ ms.locfileid: "59163141"
   
  Большинство вызовов неуправляемого и сценариях COM-взаимодействия по-прежнему поддерживаются в .NET Native. В частности, поддерживаются все взаимодействия с API среды выполнения Windows (WinRT) и весь необходимый маршалинг для среды выполнения Windows. Это включает поддержку маршалинга:  
   
--   Массивы (включая <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>)  
+- Массивы (включая <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>)  
   
--   `BStr`  
+- `BStr`  
   
--   Делегаты  
+- Делегаты  
   
--   Строки (Юникод, Ansi и HSTRING)  
+- Строки (Юникод, Ansi и HSTRING)  
   
--   Структуры (`byref` и `byval`)  
+- Структуры (`byref` и `byval`)  
   
--   Объединения  
+- Объединения  
   
--   Дескрипторы Win32  
+- Дескрипторы Win32  
   
--   Все конструкции WinRT  
+- Все конструкции WinRT  
   
--   Частичная поддержка маршалинга типов variant. Поддерживаются следующие функции:  
+- Частичная поддержка маршалинга типов variant. Поддерживаются следующие функции:  
   
-    -   <xref:System.Boolean>  
+    - <xref:System.Boolean>  
   
-    -   <xref:System.Byte>  
+    - <xref:System.Byte>  
   
-    -   <xref:System.Decimal>  
+    - <xref:System.Decimal>  
   
-    -   <xref:System.Double>  
+    - <xref:System.Double>  
   
-    -   <xref:System.Int16>  
+    - <xref:System.Int16>  
   
-    -   <xref:System.Int32>  
+    - <xref:System.Int32>  
   
-    -   <xref:System.Int64>  
+    - <xref:System.Int64>  
   
-    -   <xref:System.SByte>  
+    - <xref:System.SByte>  
   
-    -   <xref:System.Single>  
+    - <xref:System.Single>  
   
-    -   <xref:System.UInt16>  
+    - <xref:System.UInt16>  
   
-    -   <xref:System.UInt32>  
+    - <xref:System.UInt32>  
   
-    -   <xref:System.UInt64>  
+    - <xref:System.UInt64>  
   
-    -   `BStr`  
+    - `BStr`  
   
-    -   [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)  
+    - [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)  
   
  Тем не менее .NET Native не поддерживает следующее:  
   
--   использование классических COM-событий  
+- использование классических COM-событий  
   
--   Реализация интерфейса <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> на управляемом типе  
+- Реализация интерфейса <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> на управляемом типе  
   
--   Реализация интерфейса [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) в управляемом типе через атрибут <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> . Однако, обратите внимание, что нельзя вызывать COM-объекты через `IDispatch`, а управляемый объект не может реализовать `IDispatch`.  
+- Реализация интерфейса [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) в управляемом типе через атрибут <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> . Однако, обратите внимание, что нельзя вызывать COM-объекты через `IDispatch`, а управляемый объект не может реализовать `IDispatch`.  
   
  Использование отражения для вызова метода неуправляемого кода не поддерживается. Это ограничение можно обойти путем заключения вызова метода в другой метод, вместо этого используя вызов оболочки.  
   
@@ -568,57 +568,57 @@ ms.locfileid: "59163141"
 ### <a name="differences-in-serializers"></a>Различия в сериализаторах  
  Существуют следующие различия, касающиеся сериализации и десериализации с классами <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>и <xref:System.Xml.Serialization.XmlSerializer> :  
   
--   В .NET Native <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> не удается сериализовать или десериализовать производный класс, имеющий член базового класса, тип которого не является корневым тип сериализации. Например, в следующем коде при сериализации или десериализации `Y` возникает ошибка:  
+- В .NET Native <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> не удается сериализовать или десериализовать производный класс, имеющий член базового класса, тип которого не является корневым тип сериализации. Например, в следующем коде при сериализации или десериализации `Y` возникает ошибка:  
   
      [!code-csharp[ProjectN#10](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat3.cs#10)]  
   
      Тип `InnerType` не известен сериализатору, так как члены базового класса не передаются во время сериализации.  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> не удается сериализовать класс или структуру, которая реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601> . Например, не удается сериализовать или десериализовать следующие типы:  
+- <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> не удается сериализовать класс или структуру, которая реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601> . Например, не удается сериализовать или десериализовать следующие типы:  
 
--   <xref:System.Xml.Serialization.XmlSerializer> не удается сериализовать следующие значения объекта, так как он не знает точный тип объекта для сериализации:  
+- <xref:System.Xml.Serialization.XmlSerializer> не удается сериализовать следующие значения объекта, так как он не знает точный тип объекта для сериализации:  
 
--   <xref:System.Xml.Serialization.XmlSerializer> не удается сериализация или десериализация, если тип сериализованного объекта <xref:System.Xml.XmlQualifiedName>.  
+- <xref:System.Xml.Serialization.XmlSerializer> не удается сериализация или десериализация, если тип сериализованного объекта <xref:System.Xml.XmlQualifiedName>.  
   
--   Все сериализаторам (<xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>и <xref:System.Xml.Serialization.XmlSerializer>) не удается создать код сериализации для типа <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> или типа, содержащего <xref:System.Xml.Linq.XElement>. Вместо этого они отображают ошибки во время построения.  
+- Все сериализаторам (<xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>и <xref:System.Xml.Serialization.XmlSerializer>) не удается создать код сериализации для типа <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> или типа, содержащего <xref:System.Xml.Linq.XElement>. Вместо этого они отображают ошибки во время построения.  
   
--   Следующие конструкторы типов сериализации не обязательно работают, как должны:  
+- Следующие конструкторы типов сериализации не обязательно работают, как должны:  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.DataContractSerializerSettings%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.DataContractSerializerSettings%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Xml.XmlDictionaryString%2CSystem.Xml.XmlDictionaryString%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Xml.XmlDictionaryString%2CSystem.Xml.XmlDictionaryString%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.Json.DataContractJsonSerializerSettings%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.Json.DataContractJsonSerializerSettings%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.String%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.String%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlRootAttribute%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlRootAttribute%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> не удается создать код для типа, который содержит методы, определенные любым из следующих атрибутов:  
+- <xref:System.Xml.Serialization.XmlSerializer> не удается создать код для типа, который содержит методы, определенные любым из следующих атрибутов:  
   
-    -   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
+    - <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
-    -   <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+    - <xref:System.Runtime.Serialization.OnSerializedAttribute>  
   
-    -   <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+    - <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
   
-    -   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+    - <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> не поддерживает настраиваемый интерфейс сериализации <xref:System.Xml.Serialization.IXmlSerializable> . Если имеется класс, реализующий этот интерфейс, <xref:System.Xml.Serialization.XmlSerializer> рассматривает тип, как тип объекта (POCO) простой старой среды CLR и сериализует только его открытые свойства.  
+- <xref:System.Xml.Serialization.XmlSerializer> не поддерживает настраиваемый интерфейс сериализации <xref:System.Xml.Serialization.IXmlSerializable> . Если имеется класс, реализующий этот интерфейс, <xref:System.Xml.Serialization.XmlSerializer> рассматривает тип, как тип объекта (POCO) простой старой среды CLR и сериализует только его открытые свойства.  
   
--   Сериализация простого <xref:System.Exception> объекта не работает с <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.
+- Сериализация простого <xref:System.Exception> объекта не работает с <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.
 
 <a name="VS"></a>   
 ## <a name="visual-studio-differences"></a>Различия в Visual Studio  
@@ -626,9 +626,9 @@ ms.locfileid: "59163141"
   
  При запуске приложений, скомпилированных с помощью .NET Native в отладчике исключения первого шанса включены для следующих типов исключений:  
   
--   <xref:System.MemberAccessException>  
+- <xref:System.MemberAccessException>  
   
--   <xref:System.TypeAccessException>  
+- <xref:System.TypeAccessException>  
   
  **Создание приложений**  
   
@@ -636,11 +636,11 @@ ms.locfileid: "59163141"
   
  **Профилировщики**  
   
--   Профилировщик ЦП в Visual Studio и профилировщик памяти XAML неправильно отображают «только мой код».  
+- Профилировщик ЦП в Visual Studio и профилировщик памяти XAML неправильно отображают «только мой код».  
   
--   Профилировщик памяти XAML неточно отображает данные управляемой кучи.  
+- Профилировщик памяти XAML неточно отображает данные управляемой кучи.  
   
--   Профилировщик ЦП неправильно идентифицирует модули и отображает имена функций с префиксами.  
+- Профилировщик ЦП неправильно идентифицирует модули и отображает имена функций с префиксами.  
   
  **Проекты модульных тестов библиотеки**  
   

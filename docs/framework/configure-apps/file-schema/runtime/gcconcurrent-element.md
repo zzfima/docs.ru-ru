@@ -12,11 +12,11 @@ ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0e2be4d9384f1e1ef73ce6064184aa2621a517a8
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674107"
 ---
 # <a name="gcconcurrent-element"></a>\<gcConcurrent > элемент
 
@@ -45,7 +45,7 @@ ms.locfileid: "55674598"
 
 ## <a name="enabled-attribute"></a>атрибут Enabled
 
-|Значение|Описание:|
+|Значение|Описание|
 |-----------|-----------------|
 |`false`|Не выполнять сборку мусора параллельно.|
 |`true`|Сборка мусора выполняется параллельно. Это значение по умолчанию.|
@@ -56,7 +56,7 @@ ms.locfileid: "55674598"
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-|Элемент|Описание:|
+|Элемент|Описание|
 |-------------|-----------------|
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|

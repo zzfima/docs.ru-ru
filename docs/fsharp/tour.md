@@ -3,11 +3,11 @@ title: Обзор языка F#
 description: Изучите некоторые из ключевых особенностей языке этого учебника с образцами кода F#.
 ms.date: 11/06/2018
 ms.openlocfilehash: 4b3ec7fd2c42712440ea7d7045c560ab20390b45
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61901735"
 ---
 # <a name="tour-of-f"></a>Обзор языка F\#
 

@@ -3,11 +3,11 @@ title: Сохранение объекта в Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
 ms.openlocfilehash: 55ad2049003baaed26f4db909ae466aefdd161e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783478"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Пошаговое руководство. Сохранение объекта в Visual Studio (Visual Basic)
 Несмотря на то, что во время разработки свойствам объекта можно задать значения по умолчанию, любые значения, введенные во время выполнения, будут потеряны при уничтожении объекта. С помощью сериализации можно сохранить данные объекта между экземплярами, что позволит сохранять значения и извлекать их при следующем создании экземпляра объекта.  
@@ -127,7 +127,7 @@ ms.locfileid: "59303353"
   
 ### <a name="to-mark-a-class-as-serializable"></a>Отметка класса как сериализуемого  
   
--   Измените объявление класса для класса Loan следующим образом:  
+- Измените объявление класса для класса Loan следующим образом:  
   
     ```vb  
     <Serializable()>  
@@ -138,7 +138,7 @@ ms.locfileid: "59303353"
   
 ### <a name="to-prevent-a-member-from-being-serialized"></a>Предотвращение сериализации членов  
   
--   Измените объявление события `PropertyChanged` следующим образом:  
+- Измените объявление события `PropertyChanged` следующим образом:  
   
     ```vb  
     <NonSerialized()>  
@@ -150,7 +150,7 @@ ms.locfileid: "59303353"
   
 ### <a name="to-add-references-to-namespaces"></a>Добавление ссылок на пространства имен  
   
--   Добавьте в начало файла `Form1` следующие инструкции:  
+- Добавьте в начало файла `Form1` следующие инструкции:  
   
     ```vb  
     Imports System.IO  
@@ -197,7 +197,7 @@ ms.locfileid: "59303353"
   
 ### <a name="to-save-the-data-and-serialize-the-class"></a>Сохранение данных и сериализация класса  
   
--   В процедуру события `Form1_FormClosing` добавьте следующий код:  
+- В процедуру события `Form1_FormClosing` добавьте следующий код:  
   
     ```vb  
     Private Sub Form1_FormClosing() Handles MyBase.FormClosing  

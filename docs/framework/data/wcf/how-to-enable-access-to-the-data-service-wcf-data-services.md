@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 3d830bcd-32b4-4f26-9287-d58a071452c6
 ms.openlocfilehash: d0a04cc38f1f57ef10e3b5065f9c476fd952050c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876295"
 ---
 # <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>Практическое руководство. Включение доступа к службе данных (службы данных WCF)
 В службах [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] требуется явно предоставлять доступ к ресурсам, предоставляемым службой данных. Это значит, что после создания новой службы данных все равно требуется явно предоставлять доступ к отдельным ресурсам в виде набора сущностей. В этом разделе показано, как включить чтения и задает доступ на запись к пяти сущности в службе данных Northwind, которая создается при завершении [быстрого запуска](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Поскольку перечисление <xref:System.Data.Services.EntitySetRights> определяется с помощью <xref:System.FlagsAttribute>, для указания нескольких разрешений для одного набора сущностей или операции можно использовать логический оператор OR.  
@@ -22,7 +22,7 @@ ms.locfileid: "59517762"
   
 ### <a name="to-enable-access-to-the-data-service"></a>Включение доступа к службе данных  
   
--   В коде службы данных замените код местозаполнителя в функции `InitializeService` следующим текстом:  
+- В коде службы данных замените код местозаполнителя в функции `InitializeService` следующим текстом:  
   
      [!code-csharp[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#allreadconfig)]
      [!code-vb[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#allreadconfig)]  

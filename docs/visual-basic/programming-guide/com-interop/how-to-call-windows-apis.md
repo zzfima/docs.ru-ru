@@ -8,11 +8,11 @@ helpviewer_keywords:
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
 ms.openlocfilehash: e7b76495b83cb9a1dfe7629a1d82695d2046eac2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61818720"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Практическое руководство. Вызов API Windows (Visual Basic)
 В этом примере определяется и вызывается `MessageBox` функция в библиотеке user32.dll, а затем передается строка.  
@@ -23,16 +23,16 @@ ms.locfileid: "56972772"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылка на пространство имен <xref:System>.  
+- ссылка на пространство имен <xref:System>.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  При следующих условиях возможно возникновение исключения:  
   
--   Метод не является статическим, является абстрактным или было определено ранее. Родительский тип является интерфейсом, или длина *имя* или *dllName* равно нулю. (<xref:System.ArgumentException>)  
+- Метод не является статическим, является абстрактным или было определено ранее. Родительский тип является интерфейсом, или длина *имя* или *dllName* равно нулю. (<xref:System.ArgumentException>)  
   
--   *Имя* или *dllName* является `Nothing`. (<xref:System.ArgumentNullException>)  
+- *Имя* или *dllName* является `Nothing`. (<xref:System.ArgumentNullException>)  
   
--   Содержащий тип был создан ранее с помощью `CreateType`. (<xref:System.InvalidOperationException>)  
+- Содержащий тип был создан ранее с помощью `CreateType`. (<xref:System.InvalidOperationException>)  
   
 ## <a name="see-also"></a>См. также
 

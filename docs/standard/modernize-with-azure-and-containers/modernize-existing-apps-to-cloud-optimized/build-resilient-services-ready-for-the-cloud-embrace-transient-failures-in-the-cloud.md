@@ -1,17 +1,17 @@
 ---
-title: Создание гибких служб, готовых для облака. Принятие временных сбоев в облаке
-description: Модернизация существующих приложений .NET с помощью облака Azure и Windows контейнерах | Создание гибких служб, готовых для облака. Принятие временных сбоев в облаке
+title: Создание гибких служб, готовых для облака. адаптация к временным сбоям в облаке
+description: Модернизация существующих приложений .NET с помощью облака Azure и Windows контейнерах | Создание гибких служб, готовых для облака. адаптация к временным сбоям в облаке
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811845"
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Создание гибких служб, которые готовы к использованию облака: Принятие временных сбоев в облаке
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Создание устойчивых служб, готовых к использованию в облаке: адаптация к временным сбоям в облаке
 
 Устойчивость — это возможность восстановления после сбоев и продолжение работы. Устойчивость не о избежать сбоев, но исходить следует из того, что происходит сбой и последующего ответа на них способом, который позволяет избежать простоев или потери данных. Цель устойчивости — вернуть приложение в полностью функционирующее состояние после сбоя.
 
@@ -43,19 +43,19 @@ ms.locfileid: "56971836"
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Реализация устойчивых взаимодействия для обработки частичного сбоя**
+- **Реализация устойчивых взаимодействия для обработки частичного сбоя**
 
     [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](../../microservices-architecture/implement-resilient-applications/partial-failure-strategies.md)
 
--   **Entity Framework подключения устойчивости и повторного выполнения логики (версия 6 и более поздние версии)**
+- **Entity Framework подключения устойчивости и повторного выполнения логики (версия 6 и более поздние версии)**
 
     [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 
--   **Блок приложения обработки временных сбоев**
+- **Блок приложения обработки временных сбоев**
 
--   <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
+- <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
 
--   **Библиотека Polly для устойчивой связью HTTP**
+- **Библиотека Polly для устойчивой связью HTTP**
 
     https://github.com/App-vNext/Polly
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e40e314c-eb30-4f44-a054-41e511e35832
 ms.openlocfilehash: 1064e4f8d4fce16d0505eb79b5e862be7c2e4ce6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760549"
 ---
 # <a name="method-based-query-syntax-examples-filtering"></a>Примеры синтаксиса запросов на основе методов. Фильтрация
 Примеры в этом разделе демонстрируют, как использовать `Where` и `Where…Contains` методы запроса [модели AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) с использованием синтаксиса запросов на основе методов. Обратите внимание, что где...`Contains` не может использоваться как часть [скомпилированного запроса](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  

@@ -3,11 +3,11 @@ title: Элемент <idn> (параметры URI)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 ms.openlocfilehash: 2d2729f9120d6b6fe673904ad2bf6d005ddf5469
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705120"
 ---
 # <a name="idn-element-uri-settings"></a>\<IDN > (параметры Uri)
 Указывает, применяется ли синтаксический анализ международных доменных имен (IDN) к имени домена.  
@@ -60,15 +60,15 @@ ms.locfileid: "59321761"
   
  Существует три возможных значения для IDN в зависимости от DNS-серверы, которые используются:  
   
--   IDN включена = All  
+- IDN включена = All  
   
      Это значение преобразует имена доменов из Юникода в их эквиваленты в Punycode (IDN-имена).  
   
--   idn enabled = AllExceptIntranet  
+- idn enabled = AllExceptIntranet  
   
      Это значение будет преобразовать все имена доменов из Юникода не в локальной интрасети эквиваленты в Punycode (IDN-имена). В этом случае чтобы обрабатывать международные имена в локальной интрасети, DNS-серверы, которые используются для интрасети должны поддерживать разрешение имен в Юникоде.  
   
--   IDN включена = нет  
+- IDN включена = нет  
   
      Это значение не будет преобразовать имена доменов из Юникода в Punycode. Это значение по умолчанию, которое совместимо с поведением .NET Framework 2.0.  
   

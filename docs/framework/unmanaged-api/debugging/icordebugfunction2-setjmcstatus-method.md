@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 49ced1b4be888c7550c3927d1b319ab2f0bef086
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763780"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>Метод ICorDebugFunction2::SetJMCStatus
 Помечает функцию, представленный этой ICorDebugFunction2 только мой код пошагового выполнения.  
@@ -41,7 +41,7 @@ HRESULT SetJMCStatus (
   
 ## <a name="return-values"></a>Возвращаемые значения  
   
-|HRESULT|Описание:|  
+|HRESULT|Описание|  
 |-------------|-----------------|  
 |`S_OK`|Функция был успешно помечен.|  
 |`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|Функции не могут быть помечены как пользовательский код, поскольку он не может быть отлажен.|  
