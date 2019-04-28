@@ -3,20 +3,20 @@ title: System.ServiceModel.Security.SecurityNewServerSessionKeyIssued
 ms.date: 03/30/2017
 ms.assetid: 2fccc492-61ea-45a8-8f1b-be65dedc5e46
 ms.openlocfilehash: 24d285fdd1984759d40cbe13a16abc9a54feff26
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915945"
 ---
-# <a name="systemservicemodelsecuritysecuritynewserversessionkeyissued"></a><span data-ttu-id="fda57-102">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span><span class="sxs-lookup"><span data-stu-id="fda57-102">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span></span>
-<span data-ttu-id="fda57-103">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span><span class="sxs-lookup"><span data-stu-id="fda57-103">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span></span>  
+# <a name="systemservicemodelsecuritysecuritynewserversessionkeyissued"></a><span data-ttu-id="b7d79-102">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span><span class="sxs-lookup"><span data-stu-id="b7d79-102">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span></span>
+<span data-ttu-id="b7d79-103">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span><span class="sxs-lookup"><span data-stu-id="b7d79-103">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span></span>  
   
-## <a name="description"></a><span data-ttu-id="fda57-104">Описание</span><span class="sxs-lookup"><span data-stu-id="fda57-104">Description</span></span>  
- <span data-ttu-id="fda57-105">Сервер выдал новый сеансовый ключ безопасности.</span><span class="sxs-lookup"><span data-stu-id="fda57-105">A new security session key was issued by the server.</span></span>  
+## <a name="description"></a><span data-ttu-id="b7d79-104">Описание</span><span class="sxs-lookup"><span data-stu-id="b7d79-104">Description</span></span>  
+ <span data-ttu-id="b7d79-105">Сервер выдал новый сеансовый ключ безопасности.</span><span class="sxs-lookup"><span data-stu-id="b7d79-105">A new security session key was issued by the server.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fda57-106">См. также</span><span class="sxs-lookup"><span data-stu-id="fda57-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b7d79-106">См. также</span><span class="sxs-lookup"><span data-stu-id="b7d79-106">See also</span></span>
 
-- [<span data-ttu-id="fda57-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="fda57-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="fda57-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="fda57-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="fda57-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="fda57-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="b7d79-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="b7d79-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="b7d79-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="b7d79-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="b7d79-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="b7d79-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

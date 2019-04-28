@@ -9,16 +9,16 @@ helpviewer_keywords:
 - rotating images [WPF]
 ms.assetid: 863fe998-9a6b-490d-bd86-6ef5c9ec6d75
 ms.openlocfilehash: 41079a4b41f3e46a1dfcadcc89522e8277a03e60
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910310"
 ---
-# <a name="how-to-rotate-an-image"></a><span data-ttu-id="75ab6-102">Практическое руководство. Поворот изображения</span><span class="sxs-lookup"><span data-stu-id="75ab6-102">How to: Rotate an Image</span></span>
-<span data-ttu-id="75ab6-103">В этом примере показано, как повернуть изображение на 90 градусов с помощью <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> свойство <xref:System.Windows.Media.Imaging.BitmapImage>.</span><span class="sxs-lookup"><span data-stu-id="75ab6-103">This example shows how to rotate an image 90 degrees by using a <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> property of a <xref:System.Windows.Media.Imaging.BitmapImage>.</span></span>  
+# <a name="how-to-rotate-an-image"></a><span data-ttu-id="a4e02-102">Практическое руководство. Поворот изображения</span><span class="sxs-lookup"><span data-stu-id="a4e02-102">How to: Rotate an Image</span></span>
+<span data-ttu-id="a4e02-103">В этом примере показано, как повернуть изображение на 90 градусов с помощью <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> свойство <xref:System.Windows.Media.Imaging.BitmapImage>.</span><span class="sxs-lookup"><span data-stu-id="a4e02-103">This example shows how to rotate an image 90 degrees by using a <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> property of a <xref:System.Windows.Media.Imaging.BitmapImage>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="75ab6-104">Пример</span><span class="sxs-lookup"><span data-stu-id="75ab6-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a4e02-104">Пример</span><span class="sxs-lookup"><span data-stu-id="a4e02-104">Example</span></span>  
  [!code-xaml[ImageElementExample_snip#TransformedXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/TransformedImageExample.xaml#transformedxaml2)]  
   
  [!code-csharp[ImageElementExample_snip#TransformedCSharp1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/TransformedImageExample.xaml.cs#transformedcsharp1)]

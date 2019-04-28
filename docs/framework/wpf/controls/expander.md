@@ -11,24 +11,24 @@ helpviewer_keywords:
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
 ms.openlocfilehash: a7dc0d2cc32d387f87221748ab94ac82c2dfc8b0
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911835"
 ---
-# <a name="expander"></a><span data-ttu-id="f5994-102">Expander</span><span class="sxs-lookup"><span data-stu-id="f5994-102">Expander</span></span>
-<span data-ttu-id="f5994-103"><xref:System.Windows.Controls.Expander> Позволяет пользователю просмотреть заголовок и развернуть заголовок, чтобы просмотреть дополнительные сведения или свернуть раздел до заголовка.</span><span class="sxs-lookup"><span data-stu-id="f5994-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  
+# <a name="expander"></a><span data-ttu-id="52b0f-102">Expander</span><span class="sxs-lookup"><span data-stu-id="52b0f-102">Expander</span></span>
+<span data-ttu-id="52b0f-103"><xref:System.Windows.Controls.Expander> Позволяет пользователю просмотреть заголовок и развернуть заголовок, чтобы просмотреть дополнительные сведения или свернуть раздел до заголовка.</span><span class="sxs-lookup"><span data-stu-id="52b0f-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  
   
- <span data-ttu-id="f5994-104">Ниже приведен пример этого элемента управления в развернутом положении.</span><span class="sxs-lookup"><span data-stu-id="f5994-104">The following illustration provides an example of this control in its expanded position.</span></span>  
+ <span data-ttu-id="52b0f-104">Ниже приведен пример этого элемента управления в развернутом положении.</span><span class="sxs-lookup"><span data-stu-id="52b0f-104">The following illustration provides an example of this control in its expanded position.</span></span>  
   
  ![Пример использования элемента управления Expander](./media/expander/expander-control-example.jpg)
   
-## <a name="in-this-section"></a><span data-ttu-id="f5994-106">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="f5994-106">In This Section</span></span>  
- [<span data-ttu-id="f5994-107">Общие сведения о расширителе</span><span class="sxs-lookup"><span data-stu-id="f5994-107">Expander Overview</span></span>](expander-overview.md)  
- [<span data-ttu-id="f5994-108">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="f5994-108">How-to Topics</span></span>](expander-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="52b0f-106">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="52b0f-106">In This Section</span></span>  
+ [<span data-ttu-id="52b0f-107">Общие сведения о расширителе</span><span class="sxs-lookup"><span data-stu-id="52b0f-107">Expander Overview</span></span>](expander-overview.md)  
+ [<span data-ttu-id="52b0f-108">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="52b0f-108">How-to Topics</span></span>](expander-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="f5994-109">Ссылка</span><span class="sxs-lookup"><span data-stu-id="f5994-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="52b0f-109">Ссылка</span><span class="sxs-lookup"><span data-stu-id="52b0f-109">Reference</span></span>  
  <xref:System.Windows.Controls.Expander>  
   
-## <a name="related-sections"></a><span data-ttu-id="f5994-110">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="f5994-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="52b0f-110">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="52b0f-110">Related Sections</span></span>

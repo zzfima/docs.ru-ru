@@ -8,42 +8,42 @@ helpviewer_keywords:
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
 ms.openlocfilehash: 4936ba7bcd78c4867dae99df8bad11776cf655db
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010323"
 ---
-# <a name="animation-and-timing-how-to-topics"></a><span data-ttu-id="a3e06-102">Разделы руководства по анимации и таймерам</span><span class="sxs-lookup"><span data-stu-id="a3e06-102">Animation and Timing How-to Topics</span></span>
-<span data-ttu-id="a3e06-103">В следующих разделах показано, как использовать [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] анимации и системы в приложениях.</span><span class="sxs-lookup"><span data-stu-id="a3e06-103">The following topics demonstrate how to use the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animation and timing system in your applications.</span></span>  
+# <a name="animation-and-timing-how-to-topics"></a><span data-ttu-id="bc15a-102">Разделы руководства по анимации и таймерам</span><span class="sxs-lookup"><span data-stu-id="bc15a-102">Animation and Timing How-to Topics</span></span>
+<span data-ttu-id="bc15a-103">В следующих разделах показано, как использовать [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] анимации и системы в приложениях.</span><span class="sxs-lookup"><span data-stu-id="bc15a-103">The following topics demonstrate how to use the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animation and timing system in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a3e06-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="a3e06-104">In This Section</span></span>  
- [<span data-ttu-id="a3e06-105">Ускорение или замедление анимации</span><span class="sxs-lookup"><span data-stu-id="a3e06-105">Accelerate or Decelerate an Animation</span></span>](how-to-accelerate-or-decelerate-an-animation.md)  
- [<span data-ttu-id="a3e06-106">Накапливание значений анимации в повторяющихся циклах</span><span class="sxs-lookup"><span data-stu-id="a3e06-106">Accumulate Animation Values During Repeat Cycles</span></span>](how-to-accumulate-animation-values-during-repeat-cycles.md)  
- [<span data-ttu-id="a3e06-107">Добавление выходного значения анимации к начальному значению анимации</span><span class="sxs-lookup"><span data-stu-id="a3e06-107">Add an Animation Output Value to an Animation Starting Value</span></span>](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
- [<span data-ttu-id="a3e06-108">Анимация свойства с помощью раскадровки</span><span class="sxs-lookup"><span data-stu-id="a3e06-108">Animate a Property by Using a Storyboard</span></span>](how-to-animate-a-property-by-using-a-storyboard.md)  
- [<span data-ttu-id="a3e06-109">Анимация свойства без использования раскадровки</span><span class="sxs-lookup"><span data-stu-id="a3e06-109">Animate a Property Without Using a Storyboard</span></span>](how-to-animate-a-property-without-using-a-storyboard.md)  
- [<span data-ttu-id="a3e06-110">Анимация в ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="a3e06-110">Animate in a ControlTemplate</span></span>](how-to-animate-in-a-controltemplate.md)  
- [<span data-ttu-id="a3e06-111">Анимация с использованием стилей</span><span class="sxs-lookup"><span data-stu-id="a3e06-111">Animate in a Style</span></span>](how-to-animate-in-a-style.md)  
- [<span data-ttu-id="a3e06-112">Анимация прозрачности элемента или кисти</span><span class="sxs-lookup"><span data-stu-id="a3e06-112">Animate the Opacity of an Element or Brush</span></span>](how-to-animate-the-opacity-of-an-element-or-brush.md)  
- [<span data-ttu-id="a3e06-113">Изменение скорости часов без изменения скорости шкалы времени</span><span class="sxs-lookup"><span data-stu-id="a3e06-113">Change the Speed of a Clock Without Changing the Speed of Its Timeline</span></span>](change-the-speed-of-a-clock.md)  
- [<span data-ttu-id="a3e06-114">Управление раскадровкой после ее запуска с помощью интерактивных методов</span><span class="sxs-lookup"><span data-stu-id="a3e06-114">Control a Storyboard After It Starts Using Its Interactive Methods</span></span>](how-to-control-a-storyboard-after-it-starts.md)  
- [<span data-ttu-id="a3e06-115">Управление анимацией с помощью From, To и By</span><span class="sxs-lookup"><span data-stu-id="a3e06-115">Control an Animation using From, To, and By</span></span>](how-to-control-an-animation-using-from-to-and-by.md)  
- [<span data-ttu-id="a3e06-116">Определение пространства имен</span><span class="sxs-lookup"><span data-stu-id="a3e06-116">Define a Name Scope</span></span>](how-to-define-a-name-scope.md)  
- [<span data-ttu-id="a3e06-117">Получение уведомлений при изменениях состояния часов</span><span class="sxs-lookup"><span data-stu-id="a3e06-117">Receive Notification When a Clock's State Changes</span></span>](how-to-receive-notification-when-clock-state-changes.md)  
- [<span data-ttu-id="a3e06-118">Повторение анимации</span><span class="sxs-lookup"><span data-stu-id="a3e06-118">Repeat an Animation</span></span>](how-to-repeat-an-animation.md)  
- [<span data-ttu-id="a3e06-119">Поиск раскадровки</span><span class="sxs-lookup"><span data-stu-id="a3e06-119">Seek a Storyboard</span></span>](how-to-seek-a-storyboard.md)  
- [<span data-ttu-id="a3e06-120">Поиск раскадровки в синхронном режиме</span><span class="sxs-lookup"><span data-stu-id="a3e06-120">Seek a Storyboard Synchronously</span></span>](how-to-seek-a-storyboard-synchronously.md)  
- [<span data-ttu-id="a3e06-121">Определение длительности анимации</span><span class="sxs-lookup"><span data-stu-id="a3e06-121">Set a Duration for an Animation</span></span>](how-to-set-a-duration-for-an-animation.md)  
- [<span data-ttu-id="a3e06-122">Определение свойства после его анимации с помощью раскадровки</span><span class="sxs-lookup"><span data-stu-id="a3e06-122">Set a Property After Animating It with a Storyboard</span></span>](how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
- [<span data-ttu-id="a3e06-123">Упрощение анимации с помощью дочерних шкал времени</span><span class="sxs-lookup"><span data-stu-id="a3e06-123">Simplify Animations by Using Child Timelines</span></span>](how-to-simplify-animations-by-using-child-timelines.md)  
- [<span data-ttu-id="a3e06-124">Задание значения свойства HandoffBehavior для анимаций раскадровки</span><span class="sxs-lookup"><span data-stu-id="a3e06-124">Specify HandoffBehavior Between Storyboard Animations</span></span>](how-to-specify-handoffbehavior-between-storyboard-animations.md)  
- [<span data-ttu-id="a3e06-125">Определение режима FillBehavior для временной шкалы, достигшей конца периода активности</span><span class="sxs-lookup"><span data-stu-id="a3e06-125">Specify the FillBehavior for a Timeline that has Reached the End of Its Active Period</span></span>](specify-the-fillbehavior-for-a-timeline.md)  
- [<span data-ttu-id="a3e06-126">Определение автоматического реверса для шкалы времени</span><span class="sxs-lookup"><span data-stu-id="a3e06-126">Specify Whether a Timeline Automatically Reverses</span></span>](how-to-specify-whether-a-timeline-automatically-reverses.md)  
- [<span data-ttu-id="a3e06-127">Запуск анимации при изменении значения свойства</span><span class="sxs-lookup"><span data-stu-id="a3e06-127">Trigger an Animation When a Property Value Changes</span></span>](how-to-trigger-an-animation-when-a-property-value-changes.md)  
- [<span data-ttu-id="a3e06-128">Использование триггеров событий для управления раскадровкой после ее запуска</span><span class="sxs-lookup"><span data-stu-id="a3e06-128">Use Event Triggers to Control a Storyboard After It Starts</span></span>](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
+## <a name="in-this-section"></a><span data-ttu-id="bc15a-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="bc15a-104">In This Section</span></span>  
+ [<span data-ttu-id="bc15a-105">Ускорение или замедление анимации</span><span class="sxs-lookup"><span data-stu-id="bc15a-105">Accelerate or Decelerate an Animation</span></span>](how-to-accelerate-or-decelerate-an-animation.md)  
+ [<span data-ttu-id="bc15a-106">Накапливание значений анимации в повторяющихся циклах</span><span class="sxs-lookup"><span data-stu-id="bc15a-106">Accumulate Animation Values During Repeat Cycles</span></span>](how-to-accumulate-animation-values-during-repeat-cycles.md)  
+ [<span data-ttu-id="bc15a-107">Добавление выходного значения анимации к начальному значению анимации</span><span class="sxs-lookup"><span data-stu-id="bc15a-107">Add an Animation Output Value to an Animation Starting Value</span></span>](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
+ [<span data-ttu-id="bc15a-108">Анимация свойства с помощью раскадровки</span><span class="sxs-lookup"><span data-stu-id="bc15a-108">Animate a Property by Using a Storyboard</span></span>](how-to-animate-a-property-by-using-a-storyboard.md)  
+ [<span data-ttu-id="bc15a-109">Анимация свойства без использования раскадровки</span><span class="sxs-lookup"><span data-stu-id="bc15a-109">Animate a Property Without Using a Storyboard</span></span>](how-to-animate-a-property-without-using-a-storyboard.md)  
+ [<span data-ttu-id="bc15a-110">Анимация в ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="bc15a-110">Animate in a ControlTemplate</span></span>](how-to-animate-in-a-controltemplate.md)  
+ [<span data-ttu-id="bc15a-111">Анимация с использованием стилей</span><span class="sxs-lookup"><span data-stu-id="bc15a-111">Animate in a Style</span></span>](how-to-animate-in-a-style.md)  
+ [<span data-ttu-id="bc15a-112">Анимация прозрачности элемента или кисти</span><span class="sxs-lookup"><span data-stu-id="bc15a-112">Animate the Opacity of an Element or Brush</span></span>](how-to-animate-the-opacity-of-an-element-or-brush.md)  
+ [<span data-ttu-id="bc15a-113">Изменение скорости часов без изменения скорости шкалы времени</span><span class="sxs-lookup"><span data-stu-id="bc15a-113">Change the Speed of a Clock Without Changing the Speed of Its Timeline</span></span>](change-the-speed-of-a-clock.md)  
+ [<span data-ttu-id="bc15a-114">Управление раскадровкой после ее запуска с помощью интерактивных методов</span><span class="sxs-lookup"><span data-stu-id="bc15a-114">Control a Storyboard After It Starts Using Its Interactive Methods</span></span>](how-to-control-a-storyboard-after-it-starts.md)  
+ [<span data-ttu-id="bc15a-115">Управление анимацией с помощью From, To и By</span><span class="sxs-lookup"><span data-stu-id="bc15a-115">Control an Animation using From, To, and By</span></span>](how-to-control-an-animation-using-from-to-and-by.md)  
+ [<span data-ttu-id="bc15a-116">Определение пространства имен</span><span class="sxs-lookup"><span data-stu-id="bc15a-116">Define a Name Scope</span></span>](how-to-define-a-name-scope.md)  
+ [<span data-ttu-id="bc15a-117">Получение уведомлений при изменениях состояния часов</span><span class="sxs-lookup"><span data-stu-id="bc15a-117">Receive Notification When a Clock's State Changes</span></span>](how-to-receive-notification-when-clock-state-changes.md)  
+ [<span data-ttu-id="bc15a-118">Повторение анимации</span><span class="sxs-lookup"><span data-stu-id="bc15a-118">Repeat an Animation</span></span>](how-to-repeat-an-animation.md)  
+ [<span data-ttu-id="bc15a-119">Поиск раскадровки</span><span class="sxs-lookup"><span data-stu-id="bc15a-119">Seek a Storyboard</span></span>](how-to-seek-a-storyboard.md)  
+ [<span data-ttu-id="bc15a-120">Поиск раскадровки в синхронном режиме</span><span class="sxs-lookup"><span data-stu-id="bc15a-120">Seek a Storyboard Synchronously</span></span>](how-to-seek-a-storyboard-synchronously.md)  
+ [<span data-ttu-id="bc15a-121">Определение длительности анимации</span><span class="sxs-lookup"><span data-stu-id="bc15a-121">Set a Duration for an Animation</span></span>](how-to-set-a-duration-for-an-animation.md)  
+ [<span data-ttu-id="bc15a-122">Определение свойства после его анимации с помощью раскадровки</span><span class="sxs-lookup"><span data-stu-id="bc15a-122">Set a Property After Animating It with a Storyboard</span></span>](how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
+ [<span data-ttu-id="bc15a-123">Упрощение анимации с помощью дочерних шкал времени</span><span class="sxs-lookup"><span data-stu-id="bc15a-123">Simplify Animations by Using Child Timelines</span></span>](how-to-simplify-animations-by-using-child-timelines.md)  
+ [<span data-ttu-id="bc15a-124">Задание значения свойства HandoffBehavior для анимаций раскадровки</span><span class="sxs-lookup"><span data-stu-id="bc15a-124">Specify HandoffBehavior Between Storyboard Animations</span></span>](how-to-specify-handoffbehavior-between-storyboard-animations.md)  
+ [<span data-ttu-id="bc15a-125">Определение режима FillBehavior для временной шкалы, достигшей конца периода активности</span><span class="sxs-lookup"><span data-stu-id="bc15a-125">Specify the FillBehavior for a Timeline that has Reached the End of Its Active Period</span></span>](specify-the-fillbehavior-for-a-timeline.md)  
+ [<span data-ttu-id="bc15a-126">Определение автоматического реверса для шкалы времени</span><span class="sxs-lookup"><span data-stu-id="bc15a-126">Specify Whether a Timeline Automatically Reverses</span></span>](how-to-specify-whether-a-timeline-automatically-reverses.md)  
+ [<span data-ttu-id="bc15a-127">Запуск анимации при изменении значения свойства</span><span class="sxs-lookup"><span data-stu-id="bc15a-127">Trigger an Animation When a Property Value Changes</span></span>](how-to-trigger-an-animation-when-a-property-value-changes.md)  
+ [<span data-ttu-id="bc15a-128">Использование триггеров событий для управления раскадровкой после ее запуска</span><span class="sxs-lookup"><span data-stu-id="bc15a-128">Use Event Triggers to Control a Storyboard After It Starts</span></span>](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
   
-## <a name="reference"></a><span data-ttu-id="a3e06-129">Ссылка</span><span class="sxs-lookup"><span data-stu-id="a3e06-129">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="bc15a-129">Ссылка</span><span class="sxs-lookup"><span data-stu-id="bc15a-129">Reference</span></span>  
  <xref:System.Windows.Media.Animation.Timeline>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
@@ -54,5 +54,5 @@ ms.locfileid: "57358500"
   
  <xref:System.Windows.Media.Animation>  
   
-## <a name="related-sections"></a><span data-ttu-id="a3e06-130">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="a3e06-130">Related Sections</span></span>  
- [<span data-ttu-id="a3e06-131">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="a3e06-131">Graphics and Multimedia</span></span>](index.md)
+## <a name="related-sections"></a><span data-ttu-id="bc15a-130">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="bc15a-130">Related Sections</span></span>  
+ [<span data-ttu-id="bc15a-131">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="bc15a-131">Graphics and Multimedia</span></span>](index.md)

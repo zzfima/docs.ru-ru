@@ -8,23 +8,23 @@ helpviewer_keywords:
 - Canvas control [WPF], how-to topics
 ms.assetid: 5c8f5bca-7ba9-4526-a9bf-0852351dbe8a
 ms.openlocfilehash: 5c07039a66b40a6ecb54eda674bf2be396fc3e68
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912526"
 ---
-# <a name="canvas-how-to-topics"></a><span data-ttu-id="9ed2c-102">Разделы руководства, посвященные холсту для рисования Canvas</span><span class="sxs-lookup"><span data-stu-id="9ed2c-102">Canvas How-to Topics</span></span>
-<span data-ttu-id="9ed2c-103">В этом разделе описываются способы использования <xref:System.Windows.Controls.Canvas> элемент для абсолютно размещения дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="9ed2c-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Canvas> element to absolutely position child elements.</span></span>  
+# <a name="canvas-how-to-topics"></a><span data-ttu-id="a1471-102">Разделы руководства, посвященные холсту для рисования Canvas</span><span class="sxs-lookup"><span data-stu-id="a1471-102">Canvas How-to Topics</span></span>
+<span data-ttu-id="a1471-103">В этом разделе описываются способы использования <xref:System.Windows.Controls.Canvas> элемент для абсолютно размещения дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="a1471-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Canvas> element to absolutely position child elements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9ed2c-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="9ed2c-104">In This Section</span></span>  
- [<span data-ttu-id="9ed2c-105">Расположение границы вокруг содержимого холста</span><span class="sxs-lookup"><span data-stu-id="9ed2c-105">Wrap a Border Around the Content of a Canvas</span></span>](how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
- [<span data-ttu-id="9ed2c-106">Получение или определение свойств размещения холста</span><span class="sxs-lookup"><span data-stu-id="9ed2c-106">Get or Set Canvas Positioning Properties</span></span>](how-to-get-or-set-canvas-positioning-properties.md)  
- [<span data-ttu-id="9ed2c-107">Создание и использование холста</span><span class="sxs-lookup"><span data-stu-id="9ed2c-107">Create and Use a Canvas</span></span>](how-to-create-and-use-a-canvas.md)  
- [<span data-ttu-id="9ed2c-108">Использование вложенных свойств холста для расположения дочерних элементов</span><span class="sxs-lookup"><span data-stu-id="9ed2c-108">Use the Attached Properties of Canvas to Position Child Elements</span></span>](how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
- [<span data-ttu-id="9ed2c-109">Изменение размеров холста с помощью бегунка</span><span class="sxs-lookup"><span data-stu-id="9ed2c-109">Resize a Canvas by Using a Thumb</span></span>](how-to-resize-a-canvas-by-using-a-thumb.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a1471-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="a1471-104">In This Section</span></span>  
+ [<span data-ttu-id="a1471-105">Расположение границы вокруг содержимого холста</span><span class="sxs-lookup"><span data-stu-id="a1471-105">Wrap a Border Around the Content of a Canvas</span></span>](how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
+ [<span data-ttu-id="a1471-106">Получение или определение свойств размещения холста</span><span class="sxs-lookup"><span data-stu-id="a1471-106">Get or Set Canvas Positioning Properties</span></span>](how-to-get-or-set-canvas-positioning-properties.md)  
+ [<span data-ttu-id="a1471-107">Создание и использование холста</span><span class="sxs-lookup"><span data-stu-id="a1471-107">Create and Use a Canvas</span></span>](how-to-create-and-use-a-canvas.md)  
+ [<span data-ttu-id="a1471-108">Использование вложенных свойств холста для расположения дочерних элементов</span><span class="sxs-lookup"><span data-stu-id="a1471-108">Use the Attached Properties of Canvas to Position Child Elements</span></span>](how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
+ [<span data-ttu-id="a1471-109">Изменение размеров холста с помощью бегунка</span><span class="sxs-lookup"><span data-stu-id="a1471-109">Resize a Canvas by Using a Thumb</span></span>](how-to-resize-a-canvas-by-using-a-thumb.md)  
   
-## <a name="reference"></a><span data-ttu-id="9ed2c-110">Ссылка</span><span class="sxs-lookup"><span data-stu-id="9ed2c-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a1471-110">Ссылка</span><span class="sxs-lookup"><span data-stu-id="a1471-110">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -39,9 +39,9 @@ ms.locfileid: "57359397"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="9ed2c-111">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="9ed2c-111">Related Sections</span></span>  
- [<span data-ttu-id="9ed2c-112">Макет</span><span class="sxs-lookup"><span data-stu-id="9ed2c-112">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="a1471-111">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="a1471-111">Related Sections</span></span>  
+ [<span data-ttu-id="a1471-112">Макет</span><span class="sxs-lookup"><span data-stu-id="a1471-112">Layout</span></span>](../advanced/layout.md)  
   
- <span data-ttu-id="9ed2c-113">[Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)</span><span class="sxs-lookup"><span data-stu-id="9ed2c-113">[Walkthrough: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md)</span></span>  
+ <span data-ttu-id="a1471-113">[Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)</span><span class="sxs-lookup"><span data-stu-id="a1471-113">[Walkthrough: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md)</span></span>  
   
- [<span data-ttu-id="9ed2c-114">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="9ed2c-114">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="a1471-114">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="a1471-114">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

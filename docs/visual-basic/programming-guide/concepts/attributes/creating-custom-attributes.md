@@ -3,14 +3,14 @@ title: Создание настраиваемых атрибутов (Visual Ba
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
 ms.openlocfilehash: 90e8e9b9a3fa8e0b488f41d035b017d6113213b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903556"
 ---
-# <a name="creating-custom-attributes-visual-basic"></a><span data-ttu-id="b3646-102">Создание настраиваемых атрибутов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b3646-102">Creating Custom Attributes (Visual Basic)</span></span>
-<span data-ttu-id="b3646-103">Собственные настраиваемые атрибуты можно создать, определив класс атрибута, то есть класс, прямо или косвенно наследующий от <xref:System.Attribute>, который упрощает задание определений атрибутов в метаданных.</span><span class="sxs-lookup"><span data-stu-id="b3646-103">You can create your own custom attributes by defining an attribute class, a class that derives directly or indirectly from <xref:System.Attribute>, which makes identifying attribute definitions in metadata fast and easy.</span></span> <span data-ttu-id="b3646-104">Предположим, что требуется пометить тип тегом с именем программиста, который его разработал.</span><span class="sxs-lookup"><span data-stu-id="b3646-104">Suppose you want to tag types with the name of the programmer who wrote the type.</span></span> <span data-ttu-id="b3646-105">Вы можете определить класс настраиваемых атрибутов `Author`:</span><span class="sxs-lookup"><span data-stu-id="b3646-105">You might define a custom `Author` attribute class:</span></span>  
+# <a name="creating-custom-attributes-visual-basic"></a><span data-ttu-id="e4dad-102">Создание настраиваемых атрибутов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e4dad-102">Creating Custom Attributes (Visual Basic)</span></span>
+<span data-ttu-id="e4dad-103">Собственные настраиваемые атрибуты можно создать, определив класс атрибута, то есть класс, прямо или косвенно наследующий от <xref:System.Attribute>, который упрощает задание определений атрибутов в метаданных.</span><span class="sxs-lookup"><span data-stu-id="e4dad-103">You can create your own custom attributes by defining an attribute class, a class that derives directly or indirectly from <xref:System.Attribute>, which makes identifying attribute definitions in metadata fast and easy.</span></span> <span data-ttu-id="e4dad-104">Предположим, что требуется пометить тип тегом с именем программиста, который его разработал.</span><span class="sxs-lookup"><span data-stu-id="e4dad-104">Suppose you want to tag types with the name of the programmer who wrote the type.</span></span> <span data-ttu-id="e4dad-105">Вы можете определить класс настраиваемых атрибутов `Author`:</span><span class="sxs-lookup"><span data-stu-id="e4dad-105">You might define a custom `Author` attribute class:</span></span>  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.Class Or   
@@ -26,9 +26,9 @@ Public Class Author
 End Class  
 ```  
   
- <span data-ttu-id="b3646-106">Имя класса — это имя атрибута, `Author`.</span><span class="sxs-lookup"><span data-stu-id="b3646-106">The class name is the attribute's name, `Author`.</span></span> <span data-ttu-id="b3646-107">Он является производным от `System.Attribute`, поэтому это класс настраиваемых атрибутов.</span><span class="sxs-lookup"><span data-stu-id="b3646-107">It is derived from `System.Attribute`, so it is a custom attribute class.</span></span> <span data-ttu-id="b3646-108">Параметры конструктора являются позиционными параметрами настраиваемого атрибута.</span><span class="sxs-lookup"><span data-stu-id="b3646-108">The constructor's parameters are the custom attribute's positional parameters.</span></span> <span data-ttu-id="b3646-109">В этом примере `name` является позиционным параметром.</span><span class="sxs-lookup"><span data-stu-id="b3646-109">In this example, `name` is a positional parameter.</span></span> <span data-ttu-id="b3646-110">Все открытые поля или свойства, доступные для чтения и записи, являются именованными параметрами.</span><span class="sxs-lookup"><span data-stu-id="b3646-110">Any public read-write fields or properties are named parameters.</span></span> <span data-ttu-id="b3646-111">В этом случае `version` — единственный именованный параметр.</span><span class="sxs-lookup"><span data-stu-id="b3646-111">In this case, `version` is the only named parameter.</span></span> <span data-ttu-id="b3646-112">Обратите внимание на использование атрибута `AttributeUsage`, делающего атрибут `Author` допустимым только для класса и объявлений `Structure`.</span><span class="sxs-lookup"><span data-stu-id="b3646-112">Note the use of the `AttributeUsage` attribute to make the `Author` attribute valid only on class and `Structure` declarations.</span></span>  
+ <span data-ttu-id="e4dad-106">Имя класса — это имя атрибута, `Author`.</span><span class="sxs-lookup"><span data-stu-id="e4dad-106">The class name is the attribute's name, `Author`.</span></span> <span data-ttu-id="e4dad-107">Он является производным от `System.Attribute`, поэтому это класс настраиваемых атрибутов.</span><span class="sxs-lookup"><span data-stu-id="e4dad-107">It is derived from `System.Attribute`, so it is a custom attribute class.</span></span> <span data-ttu-id="e4dad-108">Параметры конструктора являются позиционными параметрами настраиваемого атрибута.</span><span class="sxs-lookup"><span data-stu-id="e4dad-108">The constructor's parameters are the custom attribute's positional parameters.</span></span> <span data-ttu-id="e4dad-109">В этом примере `name` является позиционным параметром.</span><span class="sxs-lookup"><span data-stu-id="e4dad-109">In this example, `name` is a positional parameter.</span></span> <span data-ttu-id="e4dad-110">Все открытые поля или свойства, доступные для чтения и записи, являются именованными параметрами.</span><span class="sxs-lookup"><span data-stu-id="e4dad-110">Any public read-write fields or properties are named parameters.</span></span> <span data-ttu-id="e4dad-111">В этом случае `version` — единственный именованный параметр.</span><span class="sxs-lookup"><span data-stu-id="e4dad-111">In this case, `version` is the only named parameter.</span></span> <span data-ttu-id="e4dad-112">Обратите внимание на использование атрибута `AttributeUsage`, делающего атрибут `Author` допустимым только для класса и объявлений `Structure`.</span><span class="sxs-lookup"><span data-stu-id="e4dad-112">Note the use of the `AttributeUsage` attribute to make the `Author` attribute valid only on class and `Structure` declarations.</span></span>  
   
- <span data-ttu-id="b3646-113">Этот атрибут можно использовать следующим образом:</span><span class="sxs-lookup"><span data-stu-id="b3646-113">You could use this new attribute as follows:</span></span>  
+ <span data-ttu-id="e4dad-113">Этот атрибут можно использовать следующим образом:</span><span class="sxs-lookup"><span data-stu-id="e4dad-113">You could use this new attribute as follows:</span></span>  
   
 ```vb  
 <Author("P. Ackerman", Version:=1.1)>   
@@ -37,7 +37,7 @@ Class SampleClass
 End Class  
 ```  
   
- <span data-ttu-id="b3646-114">`AttributeUsage` имеет именованный параметр, `AllowMultiple`, с помощью которого можно задавать для настраиваемого атрибута однократное или многократное использование.</span><span class="sxs-lookup"><span data-stu-id="b3646-114">`AttributeUsage` has a named parameter, `AllowMultiple`, with which you can make a custom attribute single-use or multiuse.</span></span> <span data-ttu-id="b3646-115">В следующем примере кода создается многократно используемый атрибут.</span><span class="sxs-lookup"><span data-stu-id="b3646-115">In the following code example, a multiuse attribute is created.</span></span>  
+ <span data-ttu-id="e4dad-114">`AttributeUsage` имеет именованный параметр, `AllowMultiple`, с помощью которого можно задавать для настраиваемого атрибута однократное или многократное использование.</span><span class="sxs-lookup"><span data-stu-id="e4dad-114">`AttributeUsage` has a named parameter, `AllowMultiple`, with which you can make a custom attribute single-use or multiuse.</span></span> <span data-ttu-id="e4dad-115">В следующем примере кода создается многократно используемый атрибут.</span><span class="sxs-lookup"><span data-stu-id="e4dad-115">In the following code example, a multiuse attribute is created.</span></span>  
   
 ```vb  
 ' multiuse attribute  
@@ -48,7 +48,7 @@ Public Class Author
     Inherits System.Attribute  
 ```  
   
- <span data-ttu-id="b3646-116">В следующем примере кода несколько атрибутов одного типа применяются к классу.</span><span class="sxs-lookup"><span data-stu-id="b3646-116">In the following code example, multiple attributes of the same type are applied to a class.</span></span>  
+ <span data-ttu-id="e4dad-116">В следующем примере кода несколько атрибутов одного типа применяются к классу.</span><span class="sxs-lookup"><span data-stu-id="e4dad-116">In the following code example, multiple attributes of the same type are applied to a class.</span></span>  
   
 ```vb  
 <Author("P. Ackerman", Version:=1.1),   
@@ -60,14 +60,14 @@ End Class
 ```  
   
 > [!NOTE]
->  <span data-ttu-id="b3646-117">Если класс атрибутов содержит свойство, это свойство должно быть доступно для чтения и записи.</span><span class="sxs-lookup"><span data-stu-id="b3646-117">If your attribute class contains a property, that property must be read-write.</span></span>  
+>  <span data-ttu-id="e4dad-117">Если класс атрибутов содержит свойство, это свойство должно быть доступно для чтения и записи.</span><span class="sxs-lookup"><span data-stu-id="e4dad-117">If your attribute class contains a property, that property must be read-write.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b3646-118">См. также</span><span class="sxs-lookup"><span data-stu-id="b3646-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e4dad-118">См. также</span><span class="sxs-lookup"><span data-stu-id="e4dad-118">See also</span></span>
 
 - <xref:System.Reflection>
-- [<span data-ttu-id="b3646-119">Руководство по программированию на Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b3646-119">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
-- [<span data-ttu-id="b3646-120">Написание настраиваемых атрибутов</span><span class="sxs-lookup"><span data-stu-id="b3646-120">Writing Custom Attributes</span></span>](../../../../standard/attributes/writing-custom-attributes.md)
-- <span data-ttu-id="b3646-121">[Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) (Отражение (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="b3646-121">[Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)</span></span>
-- [<span data-ttu-id="b3646-122">Атрибуты (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b3646-122">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)
-- <span data-ttu-id="b3646-123">[Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="b3646-123">[Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)</span></span>
-- [<span data-ttu-id="b3646-124">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b3646-124">AttributeUsage (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+- [<span data-ttu-id="e4dad-119">Руководство по программированию на Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e4dad-119">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
+- [<span data-ttu-id="e4dad-120">Написание настраиваемых атрибутов</span><span class="sxs-lookup"><span data-stu-id="e4dad-120">Writing Custom Attributes</span></span>](../../../../standard/attributes/writing-custom-attributes.md)
+- <span data-ttu-id="e4dad-121">[Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) (Отражение (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="e4dad-121">[Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)</span></span>
+- [<span data-ttu-id="e4dad-122">Атрибуты (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e4dad-122">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)
+- <span data-ttu-id="e4dad-123">[Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="e4dad-123">[Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)</span></span>
+- [<span data-ttu-id="e4dad-124">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e4dad-124">AttributeUsage (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)

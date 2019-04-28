@@ -5,19 +5,19 @@ f1_keywords:
 - vbrID97
 ms.assetid: b9d821f0-8565-4f15-bb35-184789c69662
 ms.openlocfilehash: c65bbb5028cf042b702bb2b8336d40512c980790
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58018250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912695"
 ---
-# <a name="cannot-call-friend-function-on-object-which-is-not-an-instance-of-defining-class"></a><span data-ttu-id="bb4a0-102">Невозможно вызвать дружественную функцию для объекта, не являющегося экземпляром определяющего класса.</span><span class="sxs-lookup"><span data-stu-id="bb4a0-102">Cannot call friend function on object which is not an instance of defining class</span></span>
-<span data-ttu-id="bb4a0-103">Предпринята попытка либо вызова процедуры `Friend` класса, либо получения доступа к дружественному ( `Friend` ) свойству или методу между процессами или между потоками.</span><span class="sxs-lookup"><span data-stu-id="bb4a0-103">Either you tried to call the `Friend` procedure of a class, or you tried to access a `Friend` property or method either cross-process or cross-thread.</span></span> <span data-ttu-id="bb4a0-104">Процедура `Friend` может вызываться из модуля вне класса, однако она является частью проекта, в котором определен класс.</span><span class="sxs-lookup"><span data-stu-id="bb4a0-104">A `Friend` procedure is callable from a module outside the class, but is part of the project in which the class is defined.</span></span>  
+# <a name="cannot-call-friend-function-on-object-which-is-not-an-instance-of-defining-class"></a><span data-ttu-id="f9238-102">Невозможно вызвать дружественную функцию для объекта, не являющегося экземпляром определяющего класса.</span><span class="sxs-lookup"><span data-stu-id="f9238-102">Cannot call friend function on object which is not an instance of defining class</span></span>
+<span data-ttu-id="f9238-103">Предпринята попытка либо вызова процедуры `Friend` класса, либо получения доступа к дружественному ( `Friend` ) свойству или методу между процессами или между потоками.</span><span class="sxs-lookup"><span data-stu-id="f9238-103">Either you tried to call the `Friend` procedure of a class, or you tried to access a `Friend` property or method either cross-process or cross-thread.</span></span> <span data-ttu-id="f9238-104">Процедура `Friend` может вызываться из модуля вне класса, однако она является частью проекта, в котором определен класс.</span><span class="sxs-lookup"><span data-stu-id="f9238-104">A `Friend` procedure is callable from a module outside the class, but is part of the project in which the class is defined.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="bb4a0-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="bb4a0-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f9238-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="f9238-105">To correct this error</span></span>  
   
--   <span data-ttu-id="bb4a0-106">Убедитесь, что вызов процедуры или доступ к процедуре выполняется из модуля, являющегося частью проекта, в котором определен класс.</span><span class="sxs-lookup"><span data-stu-id="bb4a0-106">Ensure that you are calling or accessing the procedure from a module that is part of the project in which the class is defined.</span></span>  
+- <span data-ttu-id="f9238-106">Убедитесь, что вызов процедуры или доступ к процедуре выполняется из модуля, являющегося частью проекта, в котором определен класс.</span><span class="sxs-lookup"><span data-stu-id="f9238-106">Ensure that you are calling or accessing the procedure from a module that is part of the project in which the class is defined.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bb4a0-107">См. также</span><span class="sxs-lookup"><span data-stu-id="bb4a0-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f9238-107">См. также</span><span class="sxs-lookup"><span data-stu-id="f9238-107">See also</span></span>
 
-- [<span data-ttu-id="bb4a0-108">Friend</span><span class="sxs-lookup"><span data-stu-id="bb4a0-108">Friend</span></span>](../../visual-basic/language-reference/modifiers/friend.md)
+- [<span data-ttu-id="f9238-108">Friend</span><span class="sxs-lookup"><span data-stu-id="f9238-108">Friend</span></span>](../../visual-basic/language-reference/modifiers/friend.md)

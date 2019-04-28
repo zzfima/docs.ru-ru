@@ -8,29 +8,29 @@ helpviewer_keywords:
 - globalization [WPF], features
 ms.assetid: c4b484fb-bc90-4186-a08d-f081e7109cad
 ms.openlocfilehash: a2ab04f40a3299bc0cd5a17c0f31e4f4ee0433ad
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010297"
 ---
-# <a name="globalization-and-localization-how-to-topics"></a><span data-ttu-id="7c151-102">Разделы руководства по глобализации и локализации</span><span class="sxs-lookup"><span data-stu-id="7c151-102">Globalization and Localization How-to Topics</span></span>
-<span data-ttu-id="7c151-103">В этом разделе описываются способы разработки международных приложений.</span><span class="sxs-lookup"><span data-stu-id="7c151-103">The topics in this section describe how to develop world-ready applications.</span></span>  
+# <a name="globalization-and-localization-how-to-topics"></a><span data-ttu-id="ee496-102">Разделы руководства по глобализации и локализации</span><span class="sxs-lookup"><span data-stu-id="ee496-102">Globalization and Localization How-to Topics</span></span>
+<span data-ttu-id="ee496-103">В этом разделе описываются способы разработки международных приложений.</span><span class="sxs-lookup"><span data-stu-id="ee496-103">The topics in this section describe how to develop world-ready applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7c151-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="7c151-104">In This Section</span></span>  
- [<span data-ttu-id="7c151-105">Локализация приложения</span><span class="sxs-lookup"><span data-stu-id="7c151-105">Localize an Application</span></span>](how-to-localize-an-application.md)  
- [<span data-ttu-id="7c151-106">Использование автоматической разметки для создания кнопки</span><span class="sxs-lookup"><span data-stu-id="7c151-106">Use Automatic Layout to Create a Button</span></span>](how-to-use-automatic-layout-to-create-a-button.md)  
- [<span data-ttu-id="7c151-107">Использование сетки для автоматической разметки</span><span class="sxs-lookup"><span data-stu-id="7c151-107">Use a Grid for Automatic Layout</span></span>](how-to-use-a-grid-for-automatic-layout.md)  
- [<span data-ttu-id="7c151-108">Использование ResourceDictionary для управления локализуемыми строковыми ресурсами</span><span class="sxs-lookup"><span data-stu-id="7c151-108">Use a ResourceDictionary to Manage Localizable String Resources</span></span>](how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
- [<span data-ttu-id="7c151-109">Использование ресурсов в локализуемых приложениях</span><span class="sxs-lookup"><span data-stu-id="7c151-109">Use Resources in Localizable Applications</span></span>](how-to-use-resources-in-localizable-applications.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ee496-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="ee496-104">In This Section</span></span>  
+ [<span data-ttu-id="ee496-105">Локализация приложения</span><span class="sxs-lookup"><span data-stu-id="ee496-105">Localize an Application</span></span>](how-to-localize-an-application.md)  
+ [<span data-ttu-id="ee496-106">Использование автоматической разметки для создания кнопки</span><span class="sxs-lookup"><span data-stu-id="ee496-106">Use Automatic Layout to Create a Button</span></span>](how-to-use-automatic-layout-to-create-a-button.md)  
+ [<span data-ttu-id="ee496-107">Использование сетки для автоматической разметки</span><span class="sxs-lookup"><span data-stu-id="ee496-107">Use a Grid for Automatic Layout</span></span>](how-to-use-a-grid-for-automatic-layout.md)  
+ [<span data-ttu-id="ee496-108">Использование ResourceDictionary для управления локализуемыми строковыми ресурсами</span><span class="sxs-lookup"><span data-stu-id="ee496-108">Use a ResourceDictionary to Manage Localizable String Resources</span></span>](how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
+ [<span data-ttu-id="ee496-109">Использование ресурсов в локализуемых приложениях</span><span class="sxs-lookup"><span data-stu-id="ee496-109">Use Resources in Localizable Applications</span></span>](how-to-use-resources-in-localizable-applications.md)  
   
-## <a name="reference"></a><span data-ttu-id="7c151-110">Ссылка</span><span class="sxs-lookup"><span data-stu-id="7c151-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="ee496-110">Ссылка</span><span class="sxs-lookup"><span data-stu-id="ee496-110">Reference</span></span>  
  <xref:System.Globalization>  
   
  <xref:System.Windows.FrameworkElement.FlowDirection%2A>  
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [<span data-ttu-id="7c151-111">Обработка xml:lang в XAML</span><span class="sxs-lookup"><span data-stu-id="7c151-111">xml:lang Handling in XAML</span></span>](../../xaml-services/xml-lang-handling-in-xaml.md)  
+ [<span data-ttu-id="ee496-111">Обработка xml:lang в XAML</span><span class="sxs-lookup"><span data-stu-id="ee496-111">xml:lang Handling in XAML</span></span>](../../xaml-services/xml-lang-handling-in-xaml.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="7c151-112">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="7c151-112">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="ee496-112">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="ee496-112">Related Sections</span></span>

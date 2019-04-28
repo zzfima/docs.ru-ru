@@ -9,30 +9,30 @@ helpviewer_keywords:
 - adorners [WPF], binding to specified UIElements
 ms.assetid: b2101611-a0ee-4137-bdb8-9b3673d2e6b9
 ms.openlocfilehash: b6909fec466c2b31a7f4156c43b21a0c724f0217
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018974"
 ---
-# <a name="how-to-bind-an-adorner-to-an-element"></a><span data-ttu-id="b534e-102">Практическое руководство. Привязка декоративного элемента к элементу</span><span class="sxs-lookup"><span data-stu-id="b534e-102">How to: Bind an Adorner to an Element</span></span>
-<span data-ttu-id="b534e-103">В этом примере показано, как программно привязать декоративный элемент с заданным <xref:System.Windows.UIElement>.</span><span class="sxs-lookup"><span data-stu-id="b534e-103">This example shows how to programmatically bind an adorner to a specified <xref:System.Windows.UIElement>.</span></span>  
+# <a name="how-to-bind-an-adorner-to-an-element"></a><span data-ttu-id="b02e4-102">Практическое руководство. Привязка декоративного элемента к элементу</span><span class="sxs-lookup"><span data-stu-id="b02e4-102">How to: Bind an Adorner to an Element</span></span>
+<span data-ttu-id="b02e4-103">В этом примере показано, как программно привязать декоративный элемент с заданным <xref:System.Windows.UIElement>.</span><span class="sxs-lookup"><span data-stu-id="b02e4-103">This example shows how to programmatically bind an adorner to a specified <xref:System.Windows.UIElement>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b534e-104">Пример</span><span class="sxs-lookup"><span data-stu-id="b534e-104">Example</span></span>  
- <span data-ttu-id="b534e-105">Для привязки декоративного элемента к конкретному <xref:System.Windows.UIElement>, выполните следующие действия:</span><span class="sxs-lookup"><span data-stu-id="b534e-105">To bind an adorner to a particular <xref:System.Windows.UIElement>, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="b02e4-104">Пример</span><span class="sxs-lookup"><span data-stu-id="b02e4-104">Example</span></span>  
+ <span data-ttu-id="b02e4-105">Для привязки декоративного элемента к конкретному <xref:System.Windows.UIElement>, выполните следующие действия:</span><span class="sxs-lookup"><span data-stu-id="b02e4-105">To bind an adorner to a particular <xref:System.Windows.UIElement>, follow these steps:</span></span>  
   
-1. <span data-ttu-id="b534e-106">Вызовите `static` метод <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> для получения <xref:System.Windows.Documents.AdornerLayer> для объекта <xref:System.Windows.UIElement> декорируемого.</span><span class="sxs-lookup"><span data-stu-id="b534e-106">Call the `static` method <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> to get an <xref:System.Windows.Documents.AdornerLayer> object for the <xref:System.Windows.UIElement> to be adorned.</span></span> <span data-ttu-id="b534e-107"><xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> Пошаговое описание вверх по визуальному дереву, начиная с указанного **UIElement**и возвращает первый слой графических элементов, которые найдет.</span><span class="sxs-lookup"><span data-stu-id="b534e-107"><xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> walks up the visual tree, starting at the specified **UIElement**, and returns the first adorner layer it finds.</span></span> <span data-ttu-id="b534e-108">(Если слои декоративных элементов не найдены, метод возвращает значение 0.)</span><span class="sxs-lookup"><span data-stu-id="b534e-108">(If no adorner layers are found, the method returns null.)</span></span>  
+1. <span data-ttu-id="b02e4-106">Вызовите `static` метод <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> для получения <xref:System.Windows.Documents.AdornerLayer> для объекта <xref:System.Windows.UIElement> декорируемого.</span><span class="sxs-lookup"><span data-stu-id="b02e4-106">Call the `static` method <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> to get an <xref:System.Windows.Documents.AdornerLayer> object for the <xref:System.Windows.UIElement> to be adorned.</span></span> <span data-ttu-id="b02e4-107"><xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> Пошаговое описание вверх по визуальному дереву, начиная с указанного **UIElement**и возвращает первый слой графических элементов, которые найдет.</span><span class="sxs-lookup"><span data-stu-id="b02e4-107"><xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> walks up the visual tree, starting at the specified **UIElement**, and returns the first adorner layer it finds.</span></span> <span data-ttu-id="b02e4-108">(Если слои декоративных элементов не найдены, метод возвращает значение 0.)</span><span class="sxs-lookup"><span data-stu-id="b02e4-108">(If no adorner layers are found, the method returns null.)</span></span>  
   
-2. <span data-ttu-id="b534e-109">Вызовите <xref:System.Windows.Documents.AdornerLayer.Add%2A> метод для привязки декоративного элемента к целевому объекту **UIElement**.</span><span class="sxs-lookup"><span data-stu-id="b534e-109">Call the <xref:System.Windows.Documents.AdornerLayer.Add%2A> method to bind the adorner to the target **UIElement**.</span></span>  
+2. <span data-ttu-id="b02e4-109">Вызовите <xref:System.Windows.Documents.AdornerLayer.Add%2A> метод для привязки декоративного элемента к целевому объекту **UIElement**.</span><span class="sxs-lookup"><span data-stu-id="b02e4-109">Call the <xref:System.Windows.Documents.AdornerLayer.Add%2A> method to bind the adorner to the target **UIElement**.</span></span>  
   
- <span data-ttu-id="b534e-110">Следующий пример связывает SimpleCircleAdorner (как показано выше) для <xref:System.Windows.Controls.TextBox> с именем *myTextBox*.</span><span class="sxs-lookup"><span data-stu-id="b534e-110">The following example binds a SimpleCircleAdorner (shown above) to a <xref:System.Windows.Controls.TextBox> named *myTextBox*.</span></span>  
+ <span data-ttu-id="b02e4-110">Следующий пример связывает SimpleCircleAdorner (как показано выше) для <xref:System.Windows.Controls.TextBox> с именем *myTextBox*.</span><span class="sxs-lookup"><span data-stu-id="b02e4-110">The following example binds a SimpleCircleAdorner (shown above) to a <xref:System.Windows.Controls.TextBox> named *myTextBox*.</span></span>  
   
  [!code-csharp[Adorners_SimpleCircleAdorner#_AdornSingleElement](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornsingleelement)]
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornSingleElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornsingleelement)]  
   
 > [!NOTE]
->  <span data-ttu-id="b534e-111">Использование [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] для привязки декоративного элемента к другому элементу в настоящее время не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="b534e-111">Using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] to bind an adorner to another element is currently not supported.</span></span>  
+>  <span data-ttu-id="b02e4-111">Использование [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] для привязки декоративного элемента к другому элементу в настоящее время не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="b02e4-111">Using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] to bind an adorner to another element is currently not supported.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b534e-112">См. также</span><span class="sxs-lookup"><span data-stu-id="b534e-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b02e4-112">См. также</span><span class="sxs-lookup"><span data-stu-id="b02e4-112">See also</span></span>
 
-- [<span data-ttu-id="b534e-113">Общие сведения о декоративных элементах</span><span class="sxs-lookup"><span data-stu-id="b534e-113">Adorners Overview</span></span>](adorners-overview.md)
+- [<span data-ttu-id="b02e4-113">Общие сведения о декоративных элементах</span><span class="sxs-lookup"><span data-stu-id="b02e4-113">Adorners Overview</span></span>](adorners-overview.md)
