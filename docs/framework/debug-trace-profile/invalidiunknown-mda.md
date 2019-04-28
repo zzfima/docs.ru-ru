@@ -11,11 +11,11 @@ ms.assetid: c7924771-a16b-40fe-b337-ce51dcdf6a12
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 35560b966d5fba60ac35b2eb1e559e196fc868f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754546"
 ---
 # <a name="invalidiunknown-mda"></a>Помощник по отладке управляемого кода invalidIUnknown
 Помощник по отладке управляемого кода (MDA) `invalidIUnknown` активируется, когда недопустимый указатель `IUnknown` передается в управляемый код из машинного кода. `IUnknown` не удалось возвратить успех при запросе для интерфейса `IUnknown`.  

@@ -3,11 +3,11 @@ title: <authentication> элемента <serviceCertificate>
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
 ms.openlocfilehash: b96d53312d672eebd67de82f69cd9a0a2b5bd22e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704470"
 ---
 # <a name="authentication-of-servicecertificate-element"></a>\<Проверка подлинности > из \<serviceCertificate > элемента
 Задает параметры, которые использует прокси клиента для проверки подлинности сертификатов службы, полученных при помощи согласования SSL/TLS.  

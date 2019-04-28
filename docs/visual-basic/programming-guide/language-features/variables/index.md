@@ -6,11 +6,11 @@ helpviewer_keywords:
 - values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
 ms.openlocfilehash: 9a39c53ea2d57bca379297897d6d4d1b9f7a1a9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756615"
 ---
 # <a name="variables-in-visual-basic"></a>Переменные в Visual Basic
 Часто приходится хранить значения при выполнении вычислений с помощью Visual Basic. Например, может потребоваться вычислить несколько значений, сравнить их и (в зависимости от результата сравнения) выполнить с ними различные операции. Чтобы сравнить значения, их необходимо сохранить.  

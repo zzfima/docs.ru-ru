@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
 ms.openlocfilehash: 3f180fa115453be86fa5f99fbabb776eb7198623
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747944"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Параллельное управление версиями в WorkflowServiceHost
 Параллельное управление версиями <xref:System.ServiceModel.Activities.WorkflowServiceHost>, введенное в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], предоставляет возможность размещения нескольких версий службы Workflow Service на одной конечной точке. Предоставляемая функциональность параллельной работы позволяет настроить службу Workflow Service таким образом, чтобы новые экземпляры службы Workflow Service создавались с использованием нового определения рабочего процесса, а запущенные экземпляры завершались с использованием существующего определения. Данный раздел содержит общие сведения о параллельном выполнении служб Workflow Services с использованием <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
@@ -27,21 +27,21 @@ ms.locfileid: "58465871"
 ### <a name="rules-for-hosting-multiple-versions-of-a-workflow-service"></a>Правила размещения нескольких версий службы Workflow Service  
  При добавлении пользователем дополнительной версии на <xref:System.ServiceModel.Activities.WorkflowServiceHost> существует несколько условий, которые необходимо выполнить для размещения службы Workflow Service с одним и тем же описанием и набором конечных точек. Если одна из дополнительных версий не выполняет эти условия, <xref:System.ServiceModel.Activities.WorkflowServiceHost> возвращает исключение при вызове `Open`. Каждое определение рабочего процесса, предоставленное узлу в качестве дополнительной версии, должно выполнять следующие требования (где основной версией является определение службы Workflow Service, предоставленное конструктору узла). Дополнительная версия рабочего процесса должна:  
   
--   иметь одинаковый <xref:System.ServiceModel.Activities.WorkflowService.Name%2A> с основной версией службы Workflow Service.  
+- иметь одинаковый <xref:System.ServiceModel.Activities.WorkflowService.Name%2A> с основной версией службы Workflow Service.  
   
--   Не должна содержать действий <xref:System.ServiceModel.Activities.Receive> или <xref:System.ServiceModel.Activities.SendReply> в своем <xref:System.ServiceModel.Activities.WorkflowService.Body%2A>, которых нет в основной версии, и они должны соответствовать контракту операции.  
+- Не должна содержать действий <xref:System.ServiceModel.Activities.Receive> или <xref:System.ServiceModel.Activities.SendReply> в своем <xref:System.ServiceModel.Activities.WorkflowService.Body%2A>, которых нет в основной версии, и они должны соответствовать контракту операции.  
   
--   Иметь уникальный <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>. Только одно определение рабочего процесса может содержать `null`<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>.  
+- Иметь уникальный <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>. Только одно определение рабочего процесса может содержать `null`<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>.  
   
  Некоторые изменения разрешены. Следующие элементы могут различаться между версиями:  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> может иметь Name и Package, отличные от основной версии.  
+- <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> может иметь Name и Package, отличные от основной версии.  
   
--   Значение <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> может отличаться от основной версии.  
+- Значение <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> может отличаться от основной версии.  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.ConfigurationName%2A> может отличаться от основной версии.  
+- <xref:System.ServiceModel.Activities.WorkflowService.ConfigurationName%2A> может отличаться от основной версии.  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.ImplementedContracts%2A> может отличаться от основной версии.  
+- <xref:System.ServiceModel.Activities.WorkflowService.ImplementedContracts%2A> может отличаться от основной версии.  
   
 ### <a name="configuring-the-definitionidentity"></a>Настройка DefinitionIdentity  
  При создании службы рабочего процесса в конструкторе рабочих процессов, <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> задается с помощью **свойства** окна. Щелкните за пределами корневого действия службы в конструкторе, чтобы указать службы рабочего процесса и выберите **окно "Свойства"** из **представление** меню. Выберите **WorkflowIdentity** из раскрывающегося списка, который появляется рядом **DefinitionIdentity** свойства, а затем разверните и задайте необходимые <xref:System.Activities.WorkflowIdentity> свойства. В следующем примере <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> настраивается с помощью <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow` и <xref:System.Activities.WorkflowIdentity.Version%2A> из `1.0.0.0`. <xref:System.Activities.WorkflowIdentity.Package%2A> является необязательным и в данном примере равняется `null`.  

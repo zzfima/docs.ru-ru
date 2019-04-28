@@ -14,30 +14,30 @@ ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c201ab51c1af8a86fc1c2c4f80738007152b3bd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754509"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>Помощник по отладке управляемого кода invalidApartmentStateChange
 Помощник по отладке управляемого кода (MDA) `invalidApartmentStateChange` активируется при возникновении одной из двух следующих проблем.  
   
--   Предпринята попытка изменить состояние подразделения COM потока, который уже был инициализирован COM в другом состоянии подразделения.  
+- Предпринята попытка изменить состояние подразделения COM потока, который уже был инициализирован COM в другом состоянии подразделения.  
   
--   Неожиданное изменение состояния подразделения COM потока.  
+- Неожиданное изменение состояния подразделения COM потока.  
   
 ## <a name="symptoms"></a>Симптомы  
   
--   Состояние подразделения COM отличается от запрошенного. Это может привести к использованию прокси-серверов для COM-компонентов, имеющих потоковую модель, отличную от текущей. Это, в свою очередь, может привести к возникновению исключения <xref:System.InvalidCastException> при вызове COM-объекта через интерфейсы, которые не настроены для маршалинга между подразделениями.  
+- Состояние подразделения COM отличается от запрошенного. Это может привести к использованию прокси-серверов для COM-компонентов, имеющих потоковую модель, отличную от текущей. Это, в свою очередь, может привести к возникновению исключения <xref:System.InvalidCastException> при вызове COM-объекта через интерфейсы, которые не настроены для маршалинга между подразделениями.  
   
--   Состояние подразделения COM потока отличается от ожидаемого. Это может привести к <xref:System.Runtime.InteropServices.COMException> с HRESULT RPC_E_WRONG_THREAD, а также <xref:System.InvalidCastException> при вызовах [вызываемой оболочки времени выполнения](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW). Кроме того, сразу несколько потоков могут одновременно осуществлять доступ к некоторым однопоточным COM-компонентам, что может привести к повреждению или потере данных.  
+- Состояние подразделения COM потока отличается от ожидаемого. Это может привести к <xref:System.Runtime.InteropServices.COMException> с HRESULT RPC_E_WRONG_THREAD, а также <xref:System.InvalidCastException> при вызовах [вызываемой оболочки времени выполнения](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW). Кроме того, сразу несколько потоков могут одновременно осуществлять доступ к некоторым однопоточным COM-компонентам, что может привести к повреждению или потере данных.  
   
 ## <a name="cause"></a>Причина  
   
--   Поток ранее был инициализирован в другом состоянии подразделения СОМ. Обратите внимание, что состояние потока подразделения может быть задано явным или неявным образом. Явные операции содержат свойство <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> и методы <xref:System.Threading.Thread.SetApartmentState%2A> и <xref:System.Threading.Thread.TrySetApartmentState%2A>. Поток, созданный с помощью метода <xref:System.Threading.Thread.Start%2A>, неявно задан как <xref:System.Threading.ApartmentState.MTA> до тех пор, пока <xref:System.Threading.Thread.SetApartmentState%2A> не будет вызван до запуска потока. Основной поток приложения также неявно инициализирован как <xref:System.Threading.ApartmentState.MTA> до тех пор, пока в основном методе не будет указан атрибут <xref:System.STAThreadAttribute>.  
+- Поток ранее был инициализирован в другом состоянии подразделения СОМ. Обратите внимание, что состояние потока подразделения может быть задано явным или неявным образом. Явные операции содержат свойство <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> и методы <xref:System.Threading.Thread.SetApartmentState%2A> и <xref:System.Threading.Thread.TrySetApartmentState%2A>. Поток, созданный с помощью метода <xref:System.Threading.Thread.Start%2A>, неявно задан как <xref:System.Threading.ApartmentState.MTA> до тех пор, пока <xref:System.Threading.Thread.SetApartmentState%2A> не будет вызван до запуска потока. Основной поток приложения также неявно инициализирован как <xref:System.Threading.ApartmentState.MTA> до тех пор, пока в основном методе не будет указан атрибут <xref:System.STAThreadAttribute>.  
   
--   В потоке вызван метод `CoUninitialize` (или метод `CoInitializeEx`) с другой моделью параллелизма.  
+- В потоке вызван метод `CoUninitialize` (или метод `CoInitializeEx`) с другой моделью параллелизма.  
   
 ## <a name="resolution"></a>Решение  
  Задайте состояние подразделения потока перед началом его выполнения либо примените атрибут <xref:System.STAThreadAttribute> или <xref:System.MTAThreadAttribute> атрибут к основному методу приложения.  

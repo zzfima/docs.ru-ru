@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
 ms.openlocfilehash: 2da4b7483e92b02360bceb886d84a7f729b84dee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800806"
 ---
 # <a name="how-to-resize-windows-forms"></a>Практическое руководство. Изменение размера формы в Windows Forms
 Размер формы Windows Forms можно указать несколькими способами. Вы можете изменить высоту и ширину формы программными средствами, задав новое значение для свойства <xref:System.Windows.Forms.Form.Size%2A> или изменив свойства <xref:System.Windows.Forms.Control.Height%2A> или <xref:System.Windows.Forms.Control.Width%2A> по отдельности. Если вы используете Visual Studio, можно изменить размер, с помощью конструктора Windows Forms. Также см. раздел [Как Изменение размера формы Windows Forms, с помощью конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100)).  
   
 ### <a name="to-resize-a-form-programmatically"></a>Изменение размера формы программными средствами  
   
--   Чтобы определить размер формы во время выполнения, задайте свойство <xref:System.Windows.Forms.Form.Size%2A> формы.  
+- Чтобы определить размер формы во время выполнения, задайте свойство <xref:System.Windows.Forms.Form.Size%2A> формы.  
   
      В примере кода ниже размер формы устанавливается равным 100 × 100 пикселей.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "59077229"
   
 ### <a name="to-change-form-width-and-height-programmatically"></a>Изменение ширины и высоты формы программными средствами  
   
--   Определив свойство <xref:System.Windows.Forms.Form.Size%2A>, измените высоту или ширину формы с помощью свойств <xref:System.Windows.Forms.Control.Width%2A> или <xref:System.Windows.Forms.Control.Height%2A>.  
+- Определив свойство <xref:System.Windows.Forms.Form.Size%2A>, измените высоту или ширину формы с помощью свойств <xref:System.Windows.Forms.Control.Width%2A> или <xref:System.Windows.Forms.Control.Height%2A>.  
   
      В примере кода ниже для ширины формы устанавливается значение 300 пикселей, отсчитываемое от левого края формы. Высота остается неизменной.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "59077229"
   
 ### <a name="to-change-form-size-by-increments-programmatically"></a>Изменение размера формы с шагом программными средствами  
   
--   Для увеличения размера формы задайте свойства <xref:System.Drawing.Size.Width%2A> или <xref:System.Drawing.Size.Height%2A>.  
+- Для увеличения размера формы задайте свойства <xref:System.Drawing.Size.Width%2A> или <xref:System.Drawing.Size.Height%2A>.  
   
      В примере ниже ширина формы увеличивается на 200 пикселей по сравнению с первоначальным значением.  
   

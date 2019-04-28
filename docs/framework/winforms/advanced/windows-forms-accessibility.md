@@ -6,11 +6,11 @@ helpviewer_keywords:
 - accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 23a3f168-ebc0-4f23-9efc-799109aa4a2d
 ms.openlocfilehash: 0a01a0456dfef6e89f0cf1b3608a07cb359d4497
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748061"
 ---
 # <a name="windows-forms-accessibility"></a>Поддержка специальных возможностей в Windows Forms
 Специальные возможности Windows Forms позволяют вам сделать приложение доступным самым разным пользователям.  

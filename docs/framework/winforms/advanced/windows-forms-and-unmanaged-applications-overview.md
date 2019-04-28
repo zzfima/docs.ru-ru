@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
 ms.openlocfilehash: 63631378911a9ba95713e68fb19d8d08176c7562
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748180"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Общие сведения о Windows Forms и неуправляемых приложениях
 Приложения и элементы управления Windows Forms могут взаимодействовать с неуправляемыми приложениями, но с некоторыми оговорками. В следующих разделах описываются сценарии и конфигурации, которые поддерживаются и не поддерживаются элементами управления и приложениями Windows Forms.  
@@ -51,9 +51,9 @@ ms.locfileid: "59195648"
   
  Чтобы исправить работу формы Windows Forms из клиентского приложения COM, необходимо запустить его в цикле обработки сообщений Windows Forms. Для этого воспользуйтесь одним из перечисленных ниже подходов.  
   
--   Используйте метод <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> для отображения Windows Form. Дополнительные сведения см. в разделе [Как Поддержка COM-взаимодействия путем отображения формы Windows Forms с помощью метода ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md).  
+- Используйте метод <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> для отображения Windows Form. Дополнительные сведения см. в разделе [Как Поддержка COM-взаимодействия путем отображения формы Windows Forms с помощью метода ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md).  
   
--   Запускайте каждую форму Windows Forms в новом потоке. Дополнительные сведения см. в разделе [Как Поддержка COM-взаимодействия путем отображения каждой формы Windows Forms в отдельном потоке](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
+- Запускайте каждую форму Windows Forms в новом потоке. Дополнительные сведения см. в разделе [Как Поддержка COM-взаимодействия путем отображения каждой формы Windows Forms в отдельном потоке](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="see-also"></a>См. также
 

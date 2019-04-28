@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36556
 ms.assetid: e3ba1f33-3a71-4f03-9b04-ed5ec17de17c
 ms.openlocfilehash: b798f296b62b51de34a7ec5ce5a8b608273f5748
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751531"
 ---
 # <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>Имя члена анонимного типа может быть определено только из простого или уточненного имени без аргументов
 Нельзя вывести имя члена анонимного типа из сложного выражения.  
@@ -29,7 +29,7 @@ Dim numbers() As Integer = {1, 2, 3, 4, 5}
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Назначите выражение для имени члена, как показано в следующем коде:  
+- Назначите выражение для имени члена, как показано в следующем коде:  
   
     ```  
     Dim instanceName2 = New With {.number = numbers(3)}  

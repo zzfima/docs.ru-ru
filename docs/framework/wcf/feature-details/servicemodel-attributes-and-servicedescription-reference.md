@@ -3,11 +3,11 @@ title: Атрибуты ServiceModel и справочная информаци�
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
 ms.openlocfilehash: 022731d7d6e60d36c5f4a595edc90aaff0586a79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747746"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Атрибуты ServiceModel и справочная информация ServiceDescription
 *Дерево описания* — это иерархия типов (начиная с <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> класс), которые вместе описывают каждый аспект службы. Windows Communication Foundation (WCF) использует дерево описания для построения допустимой среды выполнения службы, чтобы опубликовать Web Services Description Language (WSDL), язык определения схемы XML (XSD) и утверждений политики (метаданные) о службе, которые клиенты могут использовать для подключиться и использовать службу и для создания различных кода и конфигурации файла представлений значений дерева описания.  

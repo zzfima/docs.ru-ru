@@ -10,13 +10,13 @@ ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6c39d9a1e3da9cccb2f027e9597a6f2272d187ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674211"
 ---
-# <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames > элемент
+# <a name="bypasstrustedappstrongnames-element"></a>Элемент \<bypassTrustedAppStrongNames>
 Указывает, следует ли пропустить проверку строгих имен для сборок с полным доверием, которые загружаются с полным доверием <xref:System.AppDomain>.  
   
  \<configuration>  
@@ -61,16 +61,16 @@ ms.locfileid: "59179144"
   
  Функция обхода применима к любой сборке, подписанной со строгим именем и имеющей следующие характеристики.  
   
--   Полное доверие без <xref:System.Security.Policy.StrongName> свидетельства (например, имеет `MyComputer` свидетельство зоны).  
+- Полное доверие без <xref:System.Security.Policy.StrongName> свидетельства (например, имеет `MyComputer` свидетельство зоны).  
   
--   Загрузка в домен <xref:System.AppDomain> с полным доверием.  
+- Загрузка в домен <xref:System.AppDomain> с полным доверием.  
   
--   Загрузка из расположения со свойством <xref:System.AppDomainSetup.ApplicationBase%2A> домена <xref:System.AppDomain>.  
+- Загрузка из расположения со свойством <xref:System.AppDomainSetup.ApplicationBase%2A> домена <xref:System.AppDomain>.  
   
--   Подпись осуществлена без задержки.  
+- Подпись осуществлена без задержки.  
   
 > [!NOTE]
->  Если функция пропуска отключена для всех приложений на компьютере с помощью раздела реестра, этот параметр не влияет. Дополнительные сведения см. в разделе [Как Отключение возможности обхода строгих имен](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).  
+>  Если функция пропуска отключена для всех приложений на компьютере с помощью раздела реестра, этот параметр не влияет. Дополнительные сведения см. в разделе [Как Отключение функции пропуска строгих имен](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
   
 ## <a name="example"></a>Пример  
  Приведенный ниже показано, как указать поведение, которое проверяет подпись строгого имени сборок с полным доверием.  

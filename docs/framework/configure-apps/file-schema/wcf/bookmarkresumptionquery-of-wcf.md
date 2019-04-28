@@ -3,11 +3,11 @@ title: <bookmarkResumptionQuery> для WCF
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
 ms.openlocfilehash: 38c87cefc49821b03d119299ef60e3fbbad21d7e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704392"
 ---
 # <a name="bookmarkresumptionquery-of-wcf"></a>\<bookmarkResumptionQuery > из WCF
 
@@ -45,7 +45,7 @@ ms.locfileid: "55255124"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |`name`|Строка, задающая имя записи закладки, которое используется для подписки.|  
   
@@ -55,7 +55,7 @@ ms.locfileid: "55255124"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<bookmarkResumptionQueries >](bookmarkresumptionqueries-of-wcf.md)|Представляет коллекцию запросов, используемых для отслеживания возобновления чтения с закладок в экземпляре рабочего процесса.|  
   

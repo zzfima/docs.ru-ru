@@ -3,11 +3,11 @@ title: <cancelRequestedQueries> для WCF
 ms.date: 03/30/2017
 ms.assetid: a7cc7125-9ea3-4d3f-99c0-878cdeb1258a
 ms.openlocfilehash: a9364fc53c7eb62a240206f6c81bd434b25c3f40
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704379"
 ---
 # <a name="cancelrequestedqueries-of-wcf"></a>\<cancelRequestedQueries > из WCF
 Представляет коллекцию запросов, используемых для отслеживания запросов по отмене дочернего действия родительским действием. Этот запрос необходим, чтобы участник отслеживания подписался на объекты записей запросов на отмену.  
@@ -47,7 +47,7 @@ ms.locfileid: "55289475"
   
 ### <a name="child-elements"></a>Дочерние элементы
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<cancelRequestedQuery>](cancelrequestedquery-of-wcf.md)|Запрос, используемый для отслеживания запросов по отмене дочернего действия родительским.|  
   
