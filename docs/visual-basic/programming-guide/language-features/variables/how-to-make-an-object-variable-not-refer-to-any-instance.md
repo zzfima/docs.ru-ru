@@ -6,18 +6,18 @@ helpviewer_keywords:
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
 ms.openlocfilehash: 373d4ae84c44b212ad02b0b4266af75921e40423
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769061"
 ---
-# <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a><span data-ttu-id="1204c-102">Практическое руководство. Сделать переменная объекта ссылается на любой экземпляр (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1204c-102">How to: Make an Object Variable Not Refer to Any Instance (Visual Basic)</span></span>
-<span data-ttu-id="1204c-103">При установке для него можно разорвать связь объектной переменной с любым экземпляром объекта [ничего не](../../../../visual-basic/language-reference/nothing.md).</span><span class="sxs-lookup"><span data-stu-id="1204c-103">You can disassociate an object variable from any object instance by setting it to [Nothing](../../../../visual-basic/language-reference/nothing.md).</span></span>  
+# <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a><span data-ttu-id="e9a84-102">Практическое руководство. Сделать переменная объекта ссылается на любой экземпляр (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9a84-102">How to: Make an Object Variable Not Refer to Any Instance (Visual Basic)</span></span>
+<span data-ttu-id="e9a84-103">При установке для него можно разорвать связь объектной переменной с любым экземпляром объекта [ничего не](../../../../visual-basic/language-reference/nothing.md).</span><span class="sxs-lookup"><span data-stu-id="e9a84-103">You can disassociate an object variable from any object instance by setting it to [Nothing](../../../../visual-basic/language-reference/nothing.md).</span></span>  
   
-### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a><span data-ttu-id="1204c-104">Чтобы разорвать связь с любым экземпляром объекта переменной объекта</span><span class="sxs-lookup"><span data-stu-id="1204c-104">To disassociate an object variable from any object instance</span></span>  
+### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a><span data-ttu-id="e9a84-104">Чтобы разорвать связь с любым экземпляром объекта переменной объекта</span><span class="sxs-lookup"><span data-stu-id="e9a84-104">To disassociate an object variable from any object instance</span></span>  
   
--   <span data-ttu-id="1204c-105">Присвойте переменной `Nothing` в операторе присваивания.</span><span class="sxs-lookup"><span data-stu-id="1204c-105">Set the variable to `Nothing` in an assignment statement.</span></span>  
+- <span data-ttu-id="e9a84-105">Присвойте переменной `Nothing` в операторе присваивания.</span><span class="sxs-lookup"><span data-stu-id="e9a84-105">Set the variable to `Nothing` in an assignment statement.</span></span>  
   
     ```  
     ' Assume account is a defined class  
@@ -25,16 +25,16 @@ ms.locfileid: "58818694"
     currentAccount = Nothing  
     ```  
   
-## <a name="robust-programming"></a><span data-ttu-id="1204c-106">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="1204c-106">Robust Programming</span></span>  
- <span data-ttu-id="1204c-107">Если код пытается получить доступ к члену переменной объекта, которое было задано для `Nothing`, <xref:System.NullReferenceException> происходит.</span><span class="sxs-lookup"><span data-stu-id="1204c-107">If your code tries to access a member of an object variable that has been set to `Nothing`, a <xref:System.NullReferenceException> occurs.</span></span> <span data-ttu-id="1204c-108">Если задано значение переменной объекта `Nothing` часто, или если это возможно, переменная не инициализирована, рекомендуется заключать доступе к членам в `Try...Catch...Finally` блока.</span><span class="sxs-lookup"><span data-stu-id="1204c-108">If you set an object variable to `Nothing` frequently, or if it is possible the variable is not initialized, it is a good idea to enclose member accesses in a `Try...Catch...Finally` block.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="e9a84-106">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="e9a84-106">Robust Programming</span></span>  
+ <span data-ttu-id="e9a84-107">Если код пытается получить доступ к члену переменной объекта, которое было задано для `Nothing`, <xref:System.NullReferenceException> происходит.</span><span class="sxs-lookup"><span data-stu-id="e9a84-107">If your code tries to access a member of an object variable that has been set to `Nothing`, a <xref:System.NullReferenceException> occurs.</span></span> <span data-ttu-id="e9a84-108">Если задано значение переменной объекта `Nothing` часто, или если это возможно, переменная не инициализирована, рекомендуется заключать доступе к членам в `Try...Catch...Finally` блока.</span><span class="sxs-lookup"><span data-stu-id="e9a84-108">If you set an object variable to `Nothing` frequently, or if it is possible the variable is not initialized, it is a good idea to enclose member accesses in a `Try...Catch...Finally` block.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="1204c-109">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="1204c-109">.NET Framework Security</span></span>  
- <span data-ttu-id="1204c-110">Если вы используете переменную объекта для объектов, содержащих конфиденциальные данные, можно присвоить переменной `Nothing` Если вы не работаете активно с одного из этих объектов.</span><span class="sxs-lookup"><span data-stu-id="1204c-110">If you use an object variable for objects that contain confidential or sensitive data, you can set the variable to `Nothing` when you are not actively dealing with one of those objects.</span></span> <span data-ttu-id="1204c-111">Это снижает вероятность вредоносного кода, доступ к данным.</span><span class="sxs-lookup"><span data-stu-id="1204c-111">This reduces the chance of malicious code gaining access to the data.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="e9a84-109">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="e9a84-109">.NET Framework Security</span></span>  
+ <span data-ttu-id="e9a84-110">Если вы используете переменную объекта для объектов, содержащих конфиденциальные данные, можно присвоить переменной `Nothing` Если вы не работаете активно с одного из этих объектов.</span><span class="sxs-lookup"><span data-stu-id="e9a84-110">If you use an object variable for objects that contain confidential or sensitive data, you can set the variable to `Nothing` when you are not actively dealing with one of those objects.</span></span> <span data-ttu-id="e9a84-111">Это снижает вероятность вредоносного кода, доступ к данным.</span><span class="sxs-lookup"><span data-stu-id="e9a84-111">This reduces the chance of malicious code gaining access to the data.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1204c-112">См. также</span><span class="sxs-lookup"><span data-stu-id="1204c-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e9a84-112">См. также</span><span class="sxs-lookup"><span data-stu-id="e9a84-112">See also</span></span>
 
 - <xref:System.NullReferenceException>
-- [<span data-ttu-id="1204c-113">Объектные переменные</span><span class="sxs-lookup"><span data-stu-id="1204c-113">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [<span data-ttu-id="1204c-114">Присваивание объектных переменных</span><span class="sxs-lookup"><span data-stu-id="1204c-114">Object Variable Assignment</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
-- [<span data-ttu-id="1204c-115">Nothing</span><span class="sxs-lookup"><span data-stu-id="1204c-115">Nothing</span></span>](../../../../visual-basic/language-reference/nothing.md)
-- [<span data-ttu-id="1204c-116">Оператор Try...Catch...Finally</span><span class="sxs-lookup"><span data-stu-id="1204c-116">Try...Catch...Finally Statement</span></span>](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [<span data-ttu-id="e9a84-113">Объектные переменные</span><span class="sxs-lookup"><span data-stu-id="e9a84-113">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [<span data-ttu-id="e9a84-114">Присваивание объектных переменных</span><span class="sxs-lookup"><span data-stu-id="e9a84-114">Object Variable Assignment</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
+- [<span data-ttu-id="e9a84-115">Nothing</span><span class="sxs-lookup"><span data-stu-id="e9a84-115">Nothing</span></span>](../../../../visual-basic/language-reference/nothing.md)
+- [<span data-ttu-id="e9a84-116">Оператор Try...Catch...Finally</span><span class="sxs-lookup"><span data-stu-id="e9a84-116">Try...Catch...Finally Statement</span></span>](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

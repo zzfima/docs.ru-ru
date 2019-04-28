@@ -8,27 +8,27 @@ helpviewer_keywords:
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
 ms.openlocfilehash: c59d19c925d99ac8f5dd07da84295ee002c956de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762219"
 ---
-# <a name="graphics"></a><span data-ttu-id="fdbc9-102">Графика</span><span class="sxs-lookup"><span data-stu-id="fdbc9-102">Graphics</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="fdbc9-103">обеспечивает интегрированную поддержку мультимедиа, векторную графику, анимацию и композицию содержимого, что упрощает разработчикам создание интересных пользовательских интерфейсов и содержимого.</span><span class="sxs-lookup"><span data-stu-id="fdbc9-103">offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
+# <a name="graphics"></a><span data-ttu-id="41eea-102">Графика</span><span class="sxs-lookup"><span data-stu-id="41eea-102">Graphics</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="41eea-103">обеспечивает интегрированную поддержку мультимедиа, векторную графику, анимацию и композицию содержимого, что упрощает разработчикам создание интересных пользовательских интерфейсов и содержимого.</span><span class="sxs-lookup"><span data-stu-id="41eea-103">offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="fdbc9-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="fdbc9-104">In This Section</span></span>  
- [<span data-ttu-id="fdbc9-105">Эффекты для точечных рисунков</span><span class="sxs-lookup"><span data-stu-id="fdbc9-105">Bitmap Effects</span></span>](bitmap-effects.md)  
- [<span data-ttu-id="fdbc9-106">Кисти</span><span class="sxs-lookup"><span data-stu-id="fdbc9-106">Brushes</span></span>](brushes.md)  
- [<span data-ttu-id="fdbc9-107">Объекты рисования</span><span class="sxs-lookup"><span data-stu-id="fdbc9-107">Drawings</span></span>](drawings.md)  
- [<span data-ttu-id="fdbc9-108">Геометрические объекты</span><span class="sxs-lookup"><span data-stu-id="fdbc9-108">Geometries</span></span>](geometries.md)  
- [<span data-ttu-id="fdbc9-109">Изображения</span><span class="sxs-lookup"><span data-stu-id="fdbc9-109">Images</span></span>](images.md)  
- [<span data-ttu-id="fdbc9-110">Фигуры</span><span class="sxs-lookup"><span data-stu-id="fdbc9-110">Shapes</span></span>](shapes.md)  
- [<span data-ttu-id="fdbc9-111">Преобразования</span><span class="sxs-lookup"><span data-stu-id="fdbc9-111">Transformations</span></span>](transformations.md)  
- [<span data-ttu-id="fdbc9-112">Настройки реестра графической отрисовки</span><span class="sxs-lookup"><span data-stu-id="fdbc9-112">Graphics Rendering Registry Settings</span></span>](graphics-rendering-registry-settings.md)  
- [<span data-ttu-id="fdbc9-113">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="fdbc9-113">How-to Topics</span></span>](graphics-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="41eea-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="41eea-104">In This Section</span></span>  
+ [<span data-ttu-id="41eea-105">Эффекты для точечных рисунков</span><span class="sxs-lookup"><span data-stu-id="41eea-105">Bitmap Effects</span></span>](bitmap-effects.md)  
+ [<span data-ttu-id="41eea-106">Кисти</span><span class="sxs-lookup"><span data-stu-id="41eea-106">Brushes</span></span>](brushes.md)  
+ [<span data-ttu-id="41eea-107">Объекты рисования</span><span class="sxs-lookup"><span data-stu-id="41eea-107">Drawings</span></span>](drawings.md)  
+ [<span data-ttu-id="41eea-108">Геометрические объекты</span><span class="sxs-lookup"><span data-stu-id="41eea-108">Geometries</span></span>](geometries.md)  
+ [<span data-ttu-id="41eea-109">Изображения</span><span class="sxs-lookup"><span data-stu-id="41eea-109">Images</span></span>](images.md)  
+ [<span data-ttu-id="41eea-110">Фигуры</span><span class="sxs-lookup"><span data-stu-id="41eea-110">Shapes</span></span>](shapes.md)  
+ [<span data-ttu-id="41eea-111">Преобразования</span><span class="sxs-lookup"><span data-stu-id="41eea-111">Transformations</span></span>](transformations.md)  
+ [<span data-ttu-id="41eea-112">Настройки реестра графической отрисовки</span><span class="sxs-lookup"><span data-stu-id="41eea-112">Graphics Rendering Registry Settings</span></span>](graphics-rendering-registry-settings.md)  
+ [<span data-ttu-id="41eea-113">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="41eea-113">How-to Topics</span></span>](graphics-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="fdbc9-114">См. также</span><span class="sxs-lookup"><span data-stu-id="fdbc9-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="41eea-114">См. также</span><span class="sxs-lookup"><span data-stu-id="41eea-114">See also</span></span>
 
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
@@ -37,6 +37,6 @@ ms.locfileid: "59102353"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [<span data-ttu-id="fdbc9-115">Двумерная графика и изображения</span><span class="sxs-lookup"><span data-stu-id="fdbc9-115">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="fdbc9-116">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="fdbc9-116">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="fdbc9-117">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="fdbc9-117">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="41eea-115">Двумерная графика и изображения</span><span class="sxs-lookup"><span data-stu-id="41eea-115">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="41eea-116">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="41eea-116">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="41eea-117">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="41eea-117">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)

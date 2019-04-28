@@ -7,24 +7,24 @@ helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
 ms.openlocfilehash: eb8a02445511935d64ebaa6d78d4b05c0b75167e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703378"
 ---
-# <a name="fonts-wpf"></a><span data-ttu-id="a4b4e-102">Шрифты (WPF)</span><span class="sxs-lookup"><span data-stu-id="a4b4e-102">Fonts (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="a4b4e-103">включает поддержку представление форматированного текста с помощью [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты.</span><span class="sxs-lookup"><span data-stu-id="a4b4e-103">includes support for rich presentation of text using [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> <span data-ttu-id="a4b4e-104">Стандартный пакет [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты входит в состав [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a4b4e-104">A sample pack of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts is included with the [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span></span>  
+# <a name="fonts-wpf"></a><span data-ttu-id="9693c-102">Шрифты (WPF)</span><span class="sxs-lookup"><span data-stu-id="9693c-102">Fonts (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="9693c-103">включает поддержку представление форматированного текста с помощью [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты.</span><span class="sxs-lookup"><span data-stu-id="9693c-103">includes support for rich presentation of text using [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> <span data-ttu-id="9693c-104">Стандартный пакет [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты входит в состав [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9693c-104">A sample pack of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts is included with the [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a4b4e-105">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="a4b4e-105">In This Section</span></span>  
- [<span data-ttu-id="a4b4e-106">Возможности шрифта OpenType</span><span class="sxs-lookup"><span data-stu-id="a4b4e-106">OpenType Font Features</span></span>](opentype-font-features.md)  
- [<span data-ttu-id="a4b4e-107">Упаковка шрифтов с приложениями</span><span class="sxs-lookup"><span data-stu-id="a4b4e-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
- [<span data-ttu-id="a4b4e-108">Пакет образцов шрифтов OpenType</span><span class="sxs-lookup"><span data-stu-id="a4b4e-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
- [<span data-ttu-id="a4b4e-109">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="a4b4e-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9693c-105">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="9693c-105">In This Section</span></span>  
+ [<span data-ttu-id="9693c-106">Возможности шрифта OpenType</span><span class="sxs-lookup"><span data-stu-id="9693c-106">OpenType Font Features</span></span>](opentype-font-features.md)  
+ [<span data-ttu-id="9693c-107">Упаковка шрифтов с приложениями</span><span class="sxs-lookup"><span data-stu-id="9693c-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
+ [<span data-ttu-id="9693c-108">Пакет образцов шрифтов OpenType</span><span class="sxs-lookup"><span data-stu-id="9693c-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
+ [<span data-ttu-id="9693c-109">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="9693c-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="a4b4e-110">См. также</span><span class="sxs-lookup"><span data-stu-id="a4b4e-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9693c-110">См. также</span><span class="sxs-lookup"><span data-stu-id="9693c-110">See also</span></span>
 
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [<span data-ttu-id="a4b4e-111">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="a4b4e-111">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="a4b4e-112">Оформление в WPF</span><span class="sxs-lookup"><span data-stu-id="a4b4e-112">Typography in WPF</span></span>](typography-in-wpf.md)
+- [<span data-ttu-id="9693c-111">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="9693c-111">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="9693c-112">Оформление в WPF</span><span class="sxs-lookup"><span data-stu-id="9693c-112">Typography in WPF</span></span>](typography-in-wpf.md)

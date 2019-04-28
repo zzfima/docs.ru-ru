@@ -3,75 +3,75 @@ title: Допускающие значения null структурирован
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
 ms.openlocfilehash: 632b092e1d0d99a2a40cc3cd4b323e234de6232b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760328"
 ---
-# <a name="nullable-structured-types-entity-sql"></a><span data-ttu-id="ef831-102">Допускающие значения null структурированные типы (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="ef831-102">Nullable Structured Types (Entity SQL)</span></span>
-<span data-ttu-id="ef831-103">Экземпляр `null` структурированного типа - несуществующий экземпляр.</span><span class="sxs-lookup"><span data-stu-id="ef831-103">A `null` instance of a structured type is an instance that does not exist.</span></span> <span data-ttu-id="ef831-104">Это отличается от существующего экземпляра, все свойства которого имеют значения `null`.</span><span class="sxs-lookup"><span data-stu-id="ef831-104">This is different from an existing instance in which all properties have `null` values.</span></span>  
+# <a name="nullable-structured-types-entity-sql"></a><span data-ttu-id="147b8-102">Допускающие значения null структурированные типы (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="147b8-102">Nullable Structured Types (Entity SQL)</span></span>
+<span data-ttu-id="147b8-103">Экземпляр `null` структурированного типа - несуществующий экземпляр.</span><span class="sxs-lookup"><span data-stu-id="147b8-103">A `null` instance of a structured type is an instance that does not exist.</span></span> <span data-ttu-id="147b8-104">Это отличается от существующего экземпляра, все свойства которого имеют значения `null`.</span><span class="sxs-lookup"><span data-stu-id="147b8-104">This is different from an existing instance in which all properties have `null` values.</span></span>  
   
- <span data-ttu-id="ef831-105">В этом разделе описаны структурированные типы, допускающие значение NULL, с указанием, какие типы допускают значение NULL и какие последовательности программного кода формируют экземпляры `null` структурированных типов, допускающих значение NULL.</span><span class="sxs-lookup"><span data-stu-id="ef831-105">This topic describes the nullable structured types, including which types are nullable and which code patterns produce `null` instances of structured nullable types.</span></span>  
+ <span data-ttu-id="147b8-105">В этом разделе описаны структурированные типы, допускающие значение NULL, с указанием, какие типы допускают значение NULL и какие последовательности программного кода формируют экземпляры `null` структурированных типов, допускающих значение NULL.</span><span class="sxs-lookup"><span data-stu-id="147b8-105">This topic describes the nullable structured types, including which types are nullable and which code patterns produce `null` instances of structured nullable types.</span></span>  
   
-## <a name="kinds-of-nullable-structured-types"></a><span data-ttu-id="ef831-106">Разновидности структурированных типов, допускающих значение NULL</span><span class="sxs-lookup"><span data-stu-id="ef831-106">Kinds of Nullable Structured Types</span></span>  
- <span data-ttu-id="ef831-107">Существует три разновидности типов структуры, допускающие значение NULL.</span><span class="sxs-lookup"><span data-stu-id="ef831-107">There are three kinds of nullable structure types:</span></span>  
+## <a name="kinds-of-nullable-structured-types"></a><span data-ttu-id="147b8-106">Разновидности структурированных типов, допускающих значение NULL</span><span class="sxs-lookup"><span data-stu-id="147b8-106">Kinds of Nullable Structured Types</span></span>  
+ <span data-ttu-id="147b8-107">Существует три разновидности типов структуры, допускающие значение NULL.</span><span class="sxs-lookup"><span data-stu-id="147b8-107">There are three kinds of nullable structure types:</span></span>  
   
--   <span data-ttu-id="ef831-108">Типы строк.</span><span class="sxs-lookup"><span data-stu-id="ef831-108">Row types.</span></span>  
+- <span data-ttu-id="147b8-108">Типы строк.</span><span class="sxs-lookup"><span data-stu-id="147b8-108">Row types.</span></span>  
   
--   <span data-ttu-id="ef831-109">Сложные типы.</span><span class="sxs-lookup"><span data-stu-id="ef831-109">Complex types.</span></span>  
+- <span data-ttu-id="147b8-109">Сложные типы.</span><span class="sxs-lookup"><span data-stu-id="147b8-109">Complex types.</span></span>  
   
--   <span data-ttu-id="ef831-110">Типы сущностей.</span><span class="sxs-lookup"><span data-stu-id="ef831-110">Entity types.</span></span>  
+- <span data-ttu-id="147b8-110">Типы сущностей.</span><span class="sxs-lookup"><span data-stu-id="147b8-110">Entity types.</span></span>  
   
-## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a><span data-ttu-id="ef831-111">Шаблоны кода, которые формируют экземпляры NULL структурированных типов</span><span class="sxs-lookup"><span data-stu-id="ef831-111">Code Patterns that Produce Null Instances of Structured Types</span></span>  
- <span data-ttu-id="ef831-112">В следующем сценарии формируются экземпляры `null`:</span><span class="sxs-lookup"><span data-stu-id="ef831-112">The following scenarios produce `null` instances:</span></span>  
+## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a><span data-ttu-id="147b8-111">Шаблоны кода, которые формируют экземпляры NULL структурированных типов</span><span class="sxs-lookup"><span data-stu-id="147b8-111">Code Patterns that Produce Null Instances of Structured Types</span></span>  
+ <span data-ttu-id="147b8-112">В следующем сценарии формируются экземпляры `null`:</span><span class="sxs-lookup"><span data-stu-id="147b8-112">The following scenarios produce `null` instances:</span></span>  
   
--   <span data-ttu-id="ef831-113">Формирование `null` как структурированного типа:</span><span class="sxs-lookup"><span data-stu-id="ef831-113">Shaping `null` as a structured type:</span></span>  
+- <span data-ttu-id="147b8-113">Формирование `null` как структурированного типа:</span><span class="sxs-lookup"><span data-stu-id="147b8-113">Shaping `null` as a structured type:</span></span>  
   
     ```  
     TREAT (NULL AS StructuredType)  
     ```  
   
--   <span data-ttu-id="ef831-114">Приведение базового типа к производному типу:</span><span class="sxs-lookup"><span data-stu-id="ef831-114">Upcasting of a base type to a derived type:</span></span>  
+- <span data-ttu-id="147b8-114">Приведение базового типа к производному типу:</span><span class="sxs-lookup"><span data-stu-id="147b8-114">Upcasting of a base type to a derived type:</span></span>  
   
     ```  
     TREAT (BaseType AS DerivedType)  
     ```  
   
--   <span data-ttu-id="ef831-115">Внешнее соединение по условию FALSE:</span><span class="sxs-lookup"><span data-stu-id="ef831-115">Outer join on false condition:</span></span>  
+- <span data-ttu-id="147b8-115">Внешнее соединение по условию FALSE:</span><span class="sxs-lookup"><span data-stu-id="147b8-115">Outer join on false condition:</span></span>  
   
     ```  
     Collection1 LEFT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
-     <span data-ttu-id="ef831-116">--или</span><span class="sxs-lookup"><span data-stu-id="ef831-116">--or</span></span>  
+     <span data-ttu-id="147b8-116">--или</span><span class="sxs-lookup"><span data-stu-id="147b8-116">--or</span></span>  
   
     ```  
     Collection1 RIGHT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
-     <span data-ttu-id="ef831-117">--или</span><span class="sxs-lookup"><span data-stu-id="ef831-117">--or</span></span>  
+     <span data-ttu-id="147b8-117">--или</span><span class="sxs-lookup"><span data-stu-id="147b8-117">--or</span></span>  
   
     ```  
     Collection1 FULL OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
--   <span data-ttu-id="ef831-118">Разыменование ссылки на `null`:</span><span class="sxs-lookup"><span data-stu-id="ef831-118">Dereferencing a `null` reference:</span></span>  
+- <span data-ttu-id="147b8-118">Разыменование ссылки на `null`:</span><span class="sxs-lookup"><span data-stu-id="147b8-118">Dereferencing a `null` reference:</span></span>  
   
     ```  
     DEREF(NullRef)  
     ```  
   
--   <span data-ttu-id="ef831-119">Получение значения ANYELEMENT из пустой коллекции:</span><span class="sxs-lookup"><span data-stu-id="ef831-119">Obtaining ANYELEMENT from an empty collection:</span></span>  
+- <span data-ttu-id="147b8-119">Получение значения ANYELEMENT из пустой коллекции:</span><span class="sxs-lookup"><span data-stu-id="147b8-119">Obtaining ANYELEMENT from an empty collection:</span></span>  
   
     ```  
     ANYELEMENT(EmptyCollection)  
     ```  
   
--   <span data-ttu-id="ef831-120">Проверка наличия экземпляров `null` структурированных типов:</span><span class="sxs-lookup"><span data-stu-id="ef831-120">Checking for `null` instances of structured types:</span></span>  
+- <span data-ttu-id="147b8-120">Проверка наличия экземпляров `null` структурированных типов:</span><span class="sxs-lookup"><span data-stu-id="147b8-120">Checking for `null` instances of structured types:</span></span>  
   
     ```csharp  
     ...  
@@ -88,6 +88,6 @@ ms.locfileid: "59127859"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="ef831-121">См. также</span><span class="sxs-lookup"><span data-stu-id="ef831-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="147b8-121">См. также</span><span class="sxs-lookup"><span data-stu-id="147b8-121">See also</span></span>
 
-- [<span data-ttu-id="ef831-122">Общие сведения об Entity SQL</span><span class="sxs-lookup"><span data-stu-id="ef831-122">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [<span data-ttu-id="147b8-122">Общие сведения об Entity SQL</span><span class="sxs-lookup"><span data-stu-id="147b8-122">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
