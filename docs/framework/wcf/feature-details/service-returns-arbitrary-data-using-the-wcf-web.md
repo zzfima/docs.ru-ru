@@ -3,11 +3,11 @@ title: Практическое руководство. Как создать с
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
 ms.openlocfilehash: 55fdc6824ab82bdf3b5913cd600815ed05bd909c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747853"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Практическое руководство. Как создать службу, возвращающую произвольные данные, с использованием модели программирования WCF Web HTTP
 Иногда разработчики должны полностью управлять тем, как данные возвращаются из операции службы. Это происходит, когда операция службы должна возвращать данные в формате, не поддерживаемом платформой WCF. В этом разделе рассматривается использование модели программирования HTTP WCF WEB для создания такой службы. В этой службе имеется одна операция, которая возвращает поток.  
@@ -173,7 +173,7 @@ namespace RawImageService
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
--   При компиляции образец кода обращается к файлам System.ServiceModel.dll и System.ServiceModel.Web.dll.  
+- При компиляции образец кода обращается к файлам System.ServiceModel.dll и System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>См. также
 

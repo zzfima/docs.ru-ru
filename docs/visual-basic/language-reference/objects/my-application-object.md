@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Application object
 ms.assetid: a0ecfccf-acf7-49ec-a08b-72e6458c5c8d
 ms.openlocfilehash: c88e9da85357df5b0bbbb5957ed2f7ca8276a04b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751468"
 ---
 # <a name="myapplication-object"></a>Объект My.Application
 Предоставляет свойства, методы и события, связанные с текущим приложением.  
@@ -17,11 +17,11 @@ ms.locfileid: "58818422"
 ## <a name="remarks"></a>Примечания  
  Сведения о методах и свойствах `My.Application` объекта, ознакомьтесь со следующими ресурсами:  
   
--   <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> для элементов, которые доступны во всех проектах.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> для элементов, которые доступны во всех проектах.  
   
--   <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> для элементов, доступных в приложениях Windows Forms.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> для элементов, доступных в приложениях Windows Forms.  
   
--   <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> для элементов, доступные в консольных приложениях.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> для элементов, доступные в консольных приложениях.  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** <xref:Microsoft.VisualBasic.ApplicationServices>  

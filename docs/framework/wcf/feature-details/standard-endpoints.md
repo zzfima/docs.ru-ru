@@ -3,11 +3,11 @@ title: Стандартные конечные точки
 ms.date: 03/30/2017
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
 ms.openlocfilehash: 395d910ddabc553cca47dcdd038f44b1470b3455
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747775"
 ---
 # <a name="standard-endpoints"></a>Стандартные конечные точки
 Конечные точки определяются адресом, привязкой и контрактом. Кроме того, для конечной точки можно задать и другие параметры - конфигурацию поведения, заголовки и URI прослушивания.  Эти значения не изменяются для определенных типов конечных точек. Например, конечные точки обмена метаданными всегда используют контракт <xref:System.ServiceModel.Description.IMetadataExchange>. Другим конечным точкам, например <xref:System.ServiceModel.Description.WebHttpEndpoint>, всегда требуется определенное поведение конечной точки. Конечную точку можно сделать более удобной для использования, определив значения по умолчанию для часто используемых свойств. Стандартные конечные точки дают разработчику возможность определить значения свойств по умолчанию, а также создавать конечные точки, где одно или несколько свойств не изменяются.  Это позволяет не указывать данные статического характера. Стандартная конечная точка может использоваться в качестве конечной точки инфраструктуры и приложения.  
@@ -103,7 +103,7 @@ public class CustomEndpointElement : StandardEndpointElement
 }
 ```  
   
- <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602> Предоставляет базовый тип для коллекции, отображаемой в разделе <`standardEndpoints`> раздела конфигурации стандартной конечной точки.  В следующем примере показана реализация этого класса.  
+ <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602> Реализует резервный тип для коллекции, который отображается в разделе <`standardEndpoints`> разделе конфигурации стандартной конечной точки.  В следующем примере показана реализация этого класса.  
   
 ```csharp
 public class CustomEndpointCollectionElement : StandardEndpointCollectionElement<CustomEndpoint, CustomEndpointElement>
@@ -130,7 +130,7 @@ public class CustomEndpointCollectionElement : StandardEndpointCollectionElement
 serviceHost.AddServiceEndpoint(new CustomEndpoint());  
 ```  
   
- Чтобы добавить стандартную конечную точку в конфигурации, добавьте <`endpoint`> элемента <`service`> элемент и все необходимые параметры конфигурации в <`standardEndpoints`> элемент. В следующем примере показано добавление <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, одной из стандартных конечных точек, поставляемых в составе платформы [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+ Чтобы добавить стандартную конечную точку в конфигурации, добавьте <`endpoint`> элемента <`service`> элемент, а также все необходимые параметры конфигурации в <`standardEndpoints`> элемента. В следующем примере показано добавление <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, одной из стандартных конечных точек, поставляемых в составе платформы [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
 ```xml  
 <services>  
@@ -145,7 +145,7 @@ serviceHost.AddServiceEndpoint(new CustomEndpoint());
 </standardEndpoints>
 ```  
   
- Тип стандартной конечной точки задается с помощью атрибут типа в <`endpoint`> элемент. Конечная точка настраивается в <`standardEndpoints`> элемент. В приведенном выше примере добавляется и настраивается конечная точка <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>. <`udpDiscoveryEndpoint`> Содержит элемент <`standardEndpoint`>, которая устанавливает <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A> свойство <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
+ Тип добавляемой стандартной конечной точки задается с помощью атрибута типа в <`endpoint`> элемента. Конечная точка настраивается в <`standardEndpoints`> элемента. В приведенном выше примере добавляется и настраивается конечная точка <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>. <`udpDiscoveryEndpoint`> Содержит элемент <`standardEndpoint`>, которая устанавливает <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A> свойство <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
   
 ## <a name="standard-endpoints-shipped-with-the-net-framework"></a>Стандартные конечные точки, поставляемые в составе платформы .NET Framework  
  В приведенной ниже таблице перечислены стандартные конечные точки, которые поставляются в составе платформы .NET [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  

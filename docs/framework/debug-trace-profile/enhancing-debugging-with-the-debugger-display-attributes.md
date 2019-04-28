@@ -16,11 +16,11 @@ ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: aff2dd26db4abb892b2fc775052b6e833aa25267
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754704"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Повышение эффективности отладки с помощью атрибутов просмотра отладчика
 
@@ -45,11 +45,11 @@ class MyHashtable
 ## <a name="using-the-debuggerbrowsableattribute"></a>Использование атрибута DebuggerBrowsableAttribute
  Применяя атрибут <xref:System.Diagnostics.DebuggerBrowsableAttribute> к полю или свойству, можно указать, как они будут отображаться в окне отладчика. Конструктор этого атрибута принимает одно из значений перечисления <xref:System.Diagnostics.DebuggerBrowsableState>, которое задает одно из следующих состояний:
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Never> указывает, что член не отображается в окне данных.  Например, если применить это значение к полю <xref:System.Diagnostics.DebuggerBrowsableAttribute>, это поле будет удалено из иерархии и не будет отображаться при развертывании включающего типа путем нажатия кнопки плюса (+) для экземпляра типа.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Never> указывает, что член не отображается в окне данных.  Например, если применить это значение к полю <xref:System.Diagnostics.DebuggerBrowsableAttribute>, это поле будет удалено из иерархии и не будет отображаться при развертывании включающего типа путем нажатия кнопки плюса (+) для экземпляра типа.
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> указывает, что член отображается, но по умолчанию не развернут.  Это поведение установлено по умолчанию.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> указывает, что член отображается, но по умолчанию не развернут.  Это поведение установлено по умолчанию.
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> указывает, что сам член не отображается, однако если это массив или коллекция, то выводятся составляющие его объекты.
+- <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> указывает, что сам член не отображается, однако если это массив или коллекция, то выводятся составляющие его объекты.
 
 > [!NOTE]
 >  Атрибут <xref:System.Diagnostics.DebuggerBrowsableAttribute> не поддерживается в Visual Basic на платформе .NET Framework версии 2.0.
@@ -95,7 +95,7 @@ class MyHashtable : Hashtable
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В следующем примере кода можно просмотреть в Visual Studio, чтобы увидеть результаты применения <xref:System.Diagnostics.DebuggerDisplayAttribute>, <xref:System.Diagnostics.DebuggerBrowsableAttribute>, и <xref:System.Diagnostics.DebuggerTypeProxyAttribute> атрибуты.
 

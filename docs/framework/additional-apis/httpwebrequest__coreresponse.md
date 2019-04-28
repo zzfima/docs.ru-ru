@@ -11,15 +11,15 @@ api_type:
 - Assembly
 author: stevewhims
 ms.openlocfilehash: 3627c9bf0d72ccec3a0d6d9c7c89b62f83dcd4b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706069"
 ---
 # <a name="httpwebrequestcoreresponse-field"></a>HttpWebRequest. \_CoreResponse поля
 
-`HttpWebRequest._CoreResponse` — Это объект (либо [CoreResponseData](coreresponsedata.md) или <xref:System.Exception>) содержащий результат синтаксическом разборе ответа HTTP.
+`HttpWebRequest._CoreResponse` — Это объект (либо [CoreResponseData](coreresponsedata.md) или <xref:System.Exception>) содержащее результат синтаксического анализа ответа HTTP.
 
 ## <a name="syntax"></a>Синтаксис
   
@@ -28,14 +28,14 @@ private object _CoreResponse
 ```
 
 > [!WARNING]
-> Этот API не предназначен для непосредственного использования в коде. Вместо этого следует использовать <xref:System.Diagnostics.DiagnosticSource> отключают сетевого кода. В разделе [DiagnosticSource в руководстве пользователя](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Этот API не предназначен для непосредственного использования в коде. Вместо этого следует использовать <xref:System.Diagnostics.DiagnosticSource> для подключения сетевого кода. См. в разделе [руководство пользователя DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 > 
-> В реальном приложении ни при каких обстоятельствах корпорация Майкрософт не поддерживает использование этого класса.
+> Майкрософт не поддерживает использование этого класса в рабочем приложении ни при каких обстоятельствах.
 
 ## <a name="requirements"></a>Требования
 
 **Пространство имен:** <xref:System.Net>
 
-**Сборка:** системы (в System.dll)
+**Сборка:** Системы (в System.dll)
 
-**Версии платформы .NET framework:** доступно с версии 2.0.
+**Версии платформы .NET framework:** Доступно с версии 2.0.

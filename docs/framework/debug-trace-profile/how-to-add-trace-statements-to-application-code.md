@@ -16,11 +16,11 @@ ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754545"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Практическое руководство. Добавление операторов трассировки в код приложения
 Методы, наиболее часто используемые для отслеживания приведены методы для записи выходных данных в прослушиватели. **Запись**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, и **ошибкой**. Эти методы можно разделить на две категории: **Запись**, **WriteLine**, и **ошибкой** выдают выходные данные безусловно, тогда как **WriteIf**, **WriteLineIf**и  **Assert** тестируют условие Boolean и выполняют или не запись в зависимости от значения условия. **WriteIf** и **WriteLineIf** выдают выходные данные, если условие равно `true`, а **Assert** выдает выходные данные, если условие равно `false`.  
