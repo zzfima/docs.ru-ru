@@ -10,26 +10,26 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 ms.openlocfilehash: 306c042fe432f0c087ceb1b5ff6b5aec0fe0bbc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748256"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Пошаговое руководство. Упорядочение содержимого WPF для формы Windows Forms во время разработки
 В этом пошаговом руководстве показано, как использовать функции структуры Windows Forms, такие как закрепление и линии привязки, для размещения элементов управления Windows Presentation Foundation (WPF).
 
  В руководстве выполняются следующие задачи:
 
--   Создание проекта.
+- Создание проекта.
 
--   создание элемента управления WPF;
+- создание элемента управления WPF;
 
--   размещение элементов управления WPF на панели макета;
+- размещение элементов управления WPF на панели макета;
 
--   использование линий привязки для выравнивания элементов управления WPF;
+- использование линий привязки для выравнивания элементов управления WPF;
 
--   привязка и закрепление элементов управления WPF.
+- привязка и закрепление элементов управления WPF.
 
 > [!NOTE]
 >  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -37,7 +37,7 @@ ms.locfileid: "59327312"
 ## <a name="prerequisites"></a>Предварительные требования  
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
   
--   Visual Studio 2012.  
+- Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Создание проекта  
  Первым шагом является создание проекта Windows Forms.  
@@ -47,7 +47,7 @@ ms.locfileid: "59327312"
   
 #### <a name="to-create-the-project"></a>Создание проекта  
   
--   Создание нового проекта приложения Windows Forms в Visual Basic или Visual C# с именем `ArrangeElementHost`.  
+- Создание нового проекта приложения Windows Forms в Visual Basic или Visual C# с именем `ArrangeElementHost`.  
   
 ## <a name="creating-the-wpf-control"></a>Создание элемента управления WPF  
  После добавления в проект элемента управления WPF можно разместить его в форме.  

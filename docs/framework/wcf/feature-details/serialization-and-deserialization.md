@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
 ms.openlocfilehash: d9afa49525f03c06f94b1b7b704fb3d9caa9e19d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748009"
 ---
 # <a name="serialization-and-deserialization"></a>Сериализация и десериализация
 Windows Communication Foundation (WCF) включает новый модуль сериализации, <xref:System.Runtime.Serialization.DataContractSerializer>. Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> преобразует объекты [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в формат XML и обратно. В данном разделе объясняется, как работает сериализатор.  
@@ -109,11 +109,11 @@ Windows Communication Foundation (WCF) включает новый модуль 
   
  Этот подход имеет следующие характеристики, которые могут оказаться нежелательными.  
   
--   Производительность. Репликация данных неэффективна.  
+- Производительность. Репликация данных неэффективна.  
   
--   Циклические ссылки. Если объекты ссылаются на самих себя (даже через другие объекты), сериализация результатов репликации приводит к бесконечному циклу. (В этом случае сериализатор создает исключение <xref:System.Runtime.Serialization.SerializationException> .)  
+- Циклические ссылки. Если объекты ссылаются на самих себя (даже через другие объекты), сериализация результатов репликации приводит к бесконечному циклу. (В этом случае сериализатор создает исключение <xref:System.Runtime.Serialization.SerializationException> .)  
   
--   Семантика. Иногда очень важно сохранить отнесение двух ссылок к одному и тому же объекту, а не к двум идентичным объектам.  
+- Семантика. Иногда очень важно сохранить отнесение двух ссылок к одному и тому же объекту, а не к двум идентичным объектам.  
   
  По этим причинам некоторые перегрузки конструктора `DataContractSerializer` имеют параметр `preserveObjectReferences` (по умолчанию ему задано значение `false`). Если этот параметр имеет значение `true`, используется специальный метод кодирования ссылок на объекты, которые понимает только WCF,. Если задано значение `true`, пример XML-кода выглядит следующим образом.  
   
@@ -131,11 +131,11 @@ Windows Communication Foundation (WCF) включает новый модуль 
   
  Важно понимать существующие в этом режиме ограничения.  
   
--   XML-код, создаваемый сериализатором `DataContractSerializer` с помощью `preserveObjectReferences` с заданным значением `true` , не поддерживает возможность взаимодействия с какими-либо другими технологиями, доступ к нему может осуществлять только другой экземпляр `DataContractSerializer` , для `preserveObjectReferences` которого также задано значение `true`.  
+- XML-код, создаваемый сериализатором `DataContractSerializer` с помощью `preserveObjectReferences` с заданным значением `true` , не поддерживает возможность взаимодействия с какими-либо другими технологиями, доступ к нему может осуществлять только другой экземпляр `DataContractSerializer` , для `preserveObjectReferences` которого также задано значение `true`.  
   
--   Эта функция не обеспечивается поддержкой метаданных (схемы). Созданная схема действительна, только если `preserveObjectReferences` задано значение `false`.  
+- Эта функция не обеспечивается поддержкой метаданных (схемы). Созданная схема действительна, только если `preserveObjectReferences` задано значение `false`.  
   
--   Эта функция может замедлить процесс сериализации и десериализации. Несмотря на отсутствие необходимости в репликации данных, в этом режиме необходимо выполнять дополнительные сравнения объектов.  
+- Эта функция может замедлить процесс сериализации и десериализации. Несмотря на отсутствие необходимости в репликации данных, в этом режиме необходимо выполнять дополнительные сравнения объектов.  
   
 > [!CAUTION]
 >  Если включен режим `preserveObjectReferences` , очень важно задать правильную квоту значению `maxItemsInObjectGraph` . Особенности обработки массивов в этом режиме позволяют злоумышленнику легко создавать небольшое вредоносное сообщение, которое приводит к расходованию больших объемов памяти, и препятствовать этому можно только заданием квоты `maxItemsInObjectGraph` .  
@@ -230,29 +230,29 @@ Windows Communication Foundation (WCF) включает новый модуль 
   
  Однако в связи с этим могут возникнуть некоторые проблемы:  
   
--   Безопасность. Загружается любой тип, обнаруживаемый в десериализуемом XML-коде. Этим можно воспользоваться для принудительной загрузки вредоносных типов. Использование сериализатора `NetDataContractSerializer` с ненадежными данными возможно только при условии применения *связывателя сериализации* (с использованием свойства <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> или параметра конструктора). Связыватель позволяет загружать только надежные типы. Механизм связывателя аналогичен используемому типами в пространстве имен <xref:System.Runtime.Serialization> .  
+- Безопасность. Загружается любой тип, обнаруживаемый в десериализуемом XML-коде. Этим можно воспользоваться для принудительной загрузки вредоносных типов. Использование сериализатора `NetDataContractSerializer` с ненадежными данными возможно только при условии применения *связывателя сериализации* (с использованием свойства <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> или параметра конструктора). Связыватель позволяет загружать только надежные типы. Механизм связывателя аналогичен используемому типами в пространстве имен <xref:System.Runtime.Serialization> .  
   
--   Управление версиями. Использование полных имен типов и сборок в XML-коде строго ограничивает возможности управления версиями типов. При этом невозможно изменить имена типов, пространства имен, имена и версии сборок. Задание свойству <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> или параметру конструктора значения <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> вместо значения по умолчанию <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> позволяет изменить версию сборки, но не универсальные типы параметров.  
+- Управление версиями. Использование полных имен типов и сборок в XML-коде строго ограничивает возможности управления версиями типов. При этом невозможно изменить имена типов, пространства имен, имена и версии сборок. Задание свойству <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> или параметру конструктора значения <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> вместо значения по умолчанию <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> позволяет изменить версию сборки, но не универсальные типы параметров.  
   
--   Взаимодействие. Так как имена типов и сборок [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] включены в XML-код, никакие другие платформы, кроме [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , не могут получить доступ к получаемым данным.  
+- Взаимодействие. Так как имена типов и сборок [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] включены в XML-код, никакие другие платформы, кроме [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , не могут получить доступ к получаемым данным.  
   
--   Производительность. Запись имен типов и сборок значительно увеличивает размер получаемого XML-кода.  
+- Производительность. Запись имен типов и сборок значительно увеличивает размер получаемого XML-кода.  
   
  Этот механизм аналогичен двоичной сериализации или сериализации SOAP, используемой удаленным взаимодействием [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (а именно, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> и <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>).  
   
  Сериализаторы `NetDataContractSerializer` и `DataContractSerializer`используются практически аналогично со следующими отличиями.  
   
--   Конструкторы не требуют указания корневого типа. Любой тип можно сериализовать с помощью одного и того же экземпляра сериализатора `NetDataContractSerializer`.  
+- Конструкторы не требуют указания корневого типа. Любой тип можно сериализовать с помощью одного и того же экземпляра сериализатора `NetDataContractSerializer`.  
   
--   Конструкторы не принимают список известных типов. Если имена типов сериализуются в XML-код, механизм известных типов не требуется.  
+- Конструкторы не принимают список известных типов. Если имена типов сериализуются в XML-код, механизм известных типов не требуется.  
   
--   Конструкторы не принимают суррогаты контракта данных. Вместо этого они принимают параметр <xref:System.Runtime.Serialization.ISurrogateSelector> , называемый `surrogateSelector` (который сопоставляется со свойством <xref:System.Runtime.Serialization.NetDataContractSerializer.SurrogateSelector%2A> ). Это устаревший суррогатный механизм.  
+- Конструкторы не принимают суррогаты контракта данных. Вместо этого они принимают параметр <xref:System.Runtime.Serialization.ISurrogateSelector> , называемый `surrogateSelector` (который сопоставляется со свойством <xref:System.Runtime.Serialization.NetDataContractSerializer.SurrogateSelector%2A> ). Это устаревший суррогатный механизм.  
   
--   Конструкторы принимают параметр стиля `assemblyFormat` , называемый <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> , который сопоставляется со свойством <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> . Как уже отмечалось ранее, эту особенность можно использовать для расширения возможностей сериализатора по управлению версиями. Этот подход аналогичен механизму <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> в двоичной сериализации или сериализации SOAP.  
+- Конструкторы принимают параметр стиля `assemblyFormat` , называемый <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> , который сопоставляется со свойством <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> . Как уже отмечалось ранее, эту особенность можно использовать для расширения возможностей сериализатора по управлению версиями. Этот подход аналогичен механизму <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> в двоичной сериализации или сериализации SOAP.  
   
--   Конструкторы принимают параметр <xref:System.Runtime.Serialization.StreamingContext> , называемый `context` , который сопоставляется со свойством <xref:System.Runtime.Serialization.NetDataContractSerializer.Context%2A> . Эту особенность можно использовать для передачи информации в сериализуемые типы. Данный подход аналогичен использованию механизма <xref:System.Runtime.Serialization.StreamingContext> в других классах <xref:System.Runtime.Serialization> .  
+- Конструкторы принимают параметр <xref:System.Runtime.Serialization.StreamingContext> , называемый `context` , который сопоставляется со свойством <xref:System.Runtime.Serialization.NetDataContractSerializer.Context%2A> . Эту особенность можно использовать для передачи информации в сериализуемые типы. Данный подход аналогичен использованию механизма <xref:System.Runtime.Serialization.StreamingContext> в других классах <xref:System.Runtime.Serialization> .  
   
--   Методы <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> и <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> представляют собой псевдонимы для методов <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> и <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> . Они предоставляют более последовательную модель программирования с двоичной сериализацией или сериализацией SOAP.  
+- Методы <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> и <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> представляют собой псевдонимы для методов <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> и <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> . Они предоставляют более последовательную модель программирования с двоичной сериализацией или сериализацией SOAP.  
   
  Дополнительные сведения об этих функциях см. в разделе [двоичной сериализации](../../../../docs/standard/serialization/binary-serialization.md).  
   
