@@ -11,26 +11,26 @@ api_location:
 api_type:
 - Assembly
 ms.openlocfilehash: 6758bcac7f24e2d042ca61a0853574080d16fa69
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705991"
 ---
-# <a name="ipicturehandle-property"></a><span data-ttu-id="c5901-102">Свойство IPicture.Handle</span><span class="sxs-lookup"><span data-stu-id="c5901-102">IPicture.Handle Property</span></span>
+# <a name="ipicturehandle-property"></a><span data-ttu-id="875e0-102">Свойство IPicture.Handle</span><span class="sxs-lookup"><span data-stu-id="875e0-102">IPicture.Handle Property</span></span>
 
-<span data-ttu-id="c5901-103">Получает дескриптор для изображения, управление ими осуществляется в этот объект изображения в указанном расположении.</span><span class="sxs-lookup"><span data-stu-id="c5901-103">Gets the handle to the picture managed within this picture object to a specified location.</span></span>
+<span data-ttu-id="875e0-103">Получает дескриптор для изображения, управление ими осуществляется в этот объект изображения в указанном расположении.</span><span class="sxs-lookup"><span data-stu-id="875e0-103">Gets the handle to the picture managed within this picture object to a specified location.</span></span>
 
 ```csharp
 int Handle { get; }
 ```
 
-## <a name="property-value"></a><span data-ttu-id="c5901-104">Значение свойства</span><span class="sxs-lookup"><span data-stu-id="c5901-104">Property value</span></span>
+## <a name="property-value"></a><span data-ttu-id="875e0-104">Значение свойства</span><span class="sxs-lookup"><span data-stu-id="875e0-104">Property value</span></span>
 
 <xref:System.Int32>\
 
-## <a name="requirements"></a><span data-ttu-id="c5901-105">Требования</span><span class="sxs-lookup"><span data-stu-id="c5901-105">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="875e0-105">Требования</span><span class="sxs-lookup"><span data-stu-id="875e0-105">Requirements</span></span>
 
-<span data-ttu-id="c5901-106">**Пространство имен:** `stdole`</span><span class="sxs-lookup"><span data-stu-id="c5901-106">**Namespace:** `stdole`</span></span>
+<span data-ttu-id="875e0-106">**Пространство имен:** `stdole`</span><span class="sxs-lookup"><span data-stu-id="875e0-106">**Namespace:** `stdole`</span></span>
 
-<span data-ttu-id="c5901-107">**Сборка:** stdole (в stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="c5901-107">**Assembly:** stdole (in stdole.dll)</span></span>
+<span data-ttu-id="875e0-107">**Сборка:** stdole (в stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="875e0-107">**Assembly:** stdole (in stdole.dll)</span></span>
