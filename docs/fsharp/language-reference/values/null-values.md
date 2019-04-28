@@ -3,11 +3,11 @@ title: Значения NULL
 description: Узнайте, как значение null используется в F# языка программирования.
 ms.date: 03/22/2019
 ms.openlocfilehash: 93ac48eddf36981b9df550e76405c3175ae92e0a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902282"
 ---
 # <a name="null-values"></a>Значения NULL
 

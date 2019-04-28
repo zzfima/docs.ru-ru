@@ -3,11 +3,11 @@ title: <soapProcessing>
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
 ms.openlocfilehash: 0bedcec1a87f8384a89f5e5931c18ccebe87f07e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758019"
 ---
 # <a name="soapprocessing"></a>\<soapProcessing >
 
@@ -31,7 +31,7 @@ ms.locfileid: "55279673"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|                   | Описание: |
+|                   | Описание |
 | ----------------- | ----------- |
 | `processMessages` | Логическое значение, указывающее, нужно ли выполнять упаковку сообщений между различными версиями SOAP. |
 
@@ -41,7 +41,7 @@ ms.locfileid: "55279673"
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-|     | Описание: |
+|     | Описание |
 | --- | ----------- |
 | [**\<поведение >**](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) | Задает поведение конечной точки. |
 

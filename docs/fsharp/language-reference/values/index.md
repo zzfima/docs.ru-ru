@@ -3,11 +3,11 @@ title: Значения
 description: Узнайте, как значения в F# являются величинами, имеющими конкретный тип.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5c1d4f1e59cbf092911d99a725654042bf3383b1
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902191"
 ---
 # <a name="values"></a>Значения
 
@@ -43,7 +43,7 @@ ms.locfileid: "53611884"
 
 ## <a name="related-topics"></a>См. также
 
-|Заголовок|Описание:|
+|Заголовок|Описание|
 |-----|-----------|
 |[Привязки let](../functions/let-bindings.md)|Содержит сведения об использовании `let` ключевое слово для привязки имен к значениям и функциям.|
 |[Функции](../functions/index.md)|Содержит общие сведения о функциях в F#.|

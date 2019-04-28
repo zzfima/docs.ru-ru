@@ -3,11 +3,11 @@ title: Допустимое содержимое объектов XElement и XD
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
 ms.openlocfilehash: bb5dda6bee0863a2ef951975e92c55184df9d516
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907586"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Допустимое содержимое объектов XElement и XDocument
 В этом разделе описываются допустимые аргументы, которые можно передавать конструкторам, а также методы, которые можно использовать для добавления содержимого в элементы и документы.  
@@ -17,35 +17,35 @@ ms.locfileid: "58828809"
   
  При добавлении простого содержимого этому методу могут передаваться различные типы. Допустимые типы:  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.Decimal>  
+- <xref:System.Decimal>  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.DateTime>  
+- <xref:System.DateTime>  
   
--   <xref:System.TimeSpan>  
+- <xref:System.TimeSpan>  
   
--   <xref:System.DateTimeOffset>  
+- <xref:System.DateTimeOffset>  
   
--   Любой тип, реализующий `Object.ToString`.  
+- Любой тип, реализующий `Object.ToString`.  
   
--   Любой тип, реализующий <xref:System.Collections.Generic.IEnumerable%601>.  
+- Любой тип, реализующий <xref:System.Collections.Generic.IEnumerable%601>.  
   
  При добавлении сложного содержимого этому методу могут передаваться различные типы:  
   
--   <xref:System.Xml.Linq.XObject>  
+- <xref:System.Xml.Linq.XObject>  
   
--   <xref:System.Xml.Linq.XNode>  
+- <xref:System.Xml.Linq.XNode>  
   
--   <xref:System.Xml.Linq.XAttribute>  
+- <xref:System.Xml.Linq.XAttribute>  
   
--   Любой тип, реализующий <xref:System.Collections.Generic.IEnumerable%601>  
+- Любой тип, реализующий <xref:System.Collections.Generic.IEnumerable%601>  
   
  Если объект реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601>, коллекция в этом объекте перечисляется и добавляются все элементы коллекции. Если коллекция содержит объекты <xref:System.Xml.Linq.XNode> или <xref:System.Xml.Linq.XAttribute>, каждый ее элемент добавляется отдельно. Если коллекция содержит текст (или объекты, преобразованные в текст), текст в коллекции объединяется и добавляется в виде единого текстового узла.  
   
@@ -62,15 +62,15 @@ ms.locfileid: "58828809"
   
  К допустимому содержимому для документа относится следующее:  
   
--   Ноль или один объект <xref:System.Xml.Linq.XDocumentType>. Типы документов должны указываться до элемента.  
+- Ноль или один объект <xref:System.Xml.Linq.XDocumentType>. Типы документов должны указываться до элемента.  
   
--   Ноль или один элемент.  
+- Ноль или один элемент.  
   
--   Ноль или более комментариев.  
+- Ноль или более комментариев.  
   
--   Ноль или более инструкций по обработке.  
+- Ноль или более инструкций по обработке.  
   
--   Ноль или более текстовых узлов, содержащих только пробел.  
+- Ноль или более текстовых узлов, содержащих только пробел.  
   
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>Конструкторы и функции, допускающие добавление содержимого  
  Следующие методы позволяют добавлять дочернее содержимое к элементу <xref:System.Xml.Linq.XElement> или к документу <xref:System.Xml.Linq.XDocument>.  

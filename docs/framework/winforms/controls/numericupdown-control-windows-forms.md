@@ -10,11 +10,11 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms]
 ms.assetid: 32b0c20d-4f37-4aea-873d-faded741d2db
 ms.openlocfilehash: 47aff0ae4d75ef83fd72bc0dc381963a7b496ec6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61806565"
 ---
 # <a name="numericupdown-control-windows-forms"></a>Элемент управления NumericUpDown (Windows Forms)
 Элемент управления Windows Forms `NumericUpDown` выглядит как сочетание текстового поля и пары кнопок со стрелками для корректировки значения пользователем. Он выводит и задает отдельное числовое значение из списка вариантов. Пользователь может увеличить и уменьшить число путем нажатия кнопок со стрелками, клавиш со стрелками ВВЕРХ и ВНИЗ или путем ввода числа. Нажатие клавиши со стрелкой ВВЕРХ увеличивает значение до максимума; нажатие клавиши со стрелкой ВНИЗ уменьшает значение до минимума. В качестве примера сферы применения этого элемента управления можно привести регулятор громкости музыкального проигрывателя. Числовые элементы управления "вверх/вниз" используются в некоторых приложениях панели управления Windows.  

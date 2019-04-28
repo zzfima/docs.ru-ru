@@ -3,44 +3,44 @@ title: Объявленные элементы в Visual Basic
 ms.date: 07/20/2015
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
 ms.openlocfilehash: cafc280bb4dbee388717ead4f748d66ea5d3ce72
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918012"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Объявленные элементы в Visual Basic
 *Объявленный элемент* — это элемент в программировании, который задается в операторе объявления. Объявленные элементы включают переменные, константы, перечисления, классы, структуры, модули, интерфейсы, процедуры, параметры процедур, возвращаемые значения функций, ссылки на внешние процедуры, операторы, свойства, события и делегаты.  
   
  К операторам объявления принадлежат:  
   
--   [Оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)  
+- [Оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)  
   
--   [Оператор Const](../../../../visual-basic/language-reference/statements/const-statement.md)  
+- [Оператор Const](../../../../visual-basic/language-reference/statements/const-statement.md)  
   
--   [Оператор Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)  
+- [Оператор Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)  
   
--   [Оператор Class](../../../../visual-basic/language-reference/statements/class-statement.md)  
+- [Оператор Class](../../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+- [Оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)  
   
--   [Оператор Module](../../../../visual-basic/language-reference/statements/module-statement.md)  
+- [Оператор Module](../../../../visual-basic/language-reference/statements/module-statement.md)  
   
--   [Оператор Interface](../../../../visual-basic/language-reference/statements/interface-statement.md)  
+- [Оператор Interface](../../../../visual-basic/language-reference/statements/interface-statement.md)  
   
--   [Оператор Function](../../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Оператор Function](../../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Оператор Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Оператор Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Оператор Declare](../../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Оператор Declare](../../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Оператор Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [Оператор Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Оператор Property](../../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Оператор Property](../../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Оператор Event](../../../../visual-basic/language-reference/statements/event-statement.md)  
+- [Оператор Event](../../../../visual-basic/language-reference/statements/event-statement.md)  
   
--   [Оператор Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
+- [Оператор Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  

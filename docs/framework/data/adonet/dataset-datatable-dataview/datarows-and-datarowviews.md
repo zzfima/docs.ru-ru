@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
 ms.openlocfilehash: 14e210c36ee2ab8ddba7451ac7b346ad72288d94
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879831"
 ---
 # <a name="datarows-and-datarowviews"></a>Объекты DataRow и DataRowView
 Представление <xref:System.Data.DataView> предоставляет перечисляемую коллекцию объектов <xref:System.Data.DataRowView>. **DataRowView** объекты предоставляют значения в виде массивов объектов, которые индексируются по имени или по порядковому номеру столбца в базовой таблице. Вы можете получить доступ к <xref:System.Data.DataRow> , предоставляемая **DataRowView** с помощью <xref:System.Data.DataRowView.Row%2A> свойство **DataRowView**.  

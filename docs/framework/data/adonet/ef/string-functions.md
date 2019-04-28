@@ -3,11 +3,11 @@ title: Строковые функции
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
 ms.openlocfilehash: 6da257cad90232426c71221dfd9d418265479bbe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879127"
 ---
 # <a name="string-functions"></a>Строковые функции
 Поставщик данных для SQL Server (SqlClient) платформы .NET Framework предоставляет `String` функции, выполняющие операции над входными значениями с типом `String` и возвращающие результат с типом `String` или в виде числовых значений. Эти функции находятся в пространстве имен SqlServer, которое доступно при использовании SqlClient. Свойство пространства имен поставщика позволяет платформе Entity Framework узнать, какой префикс используется поставщиком для конкретных конструкций, таких как типы или функции.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
 ms.openlocfilehash: a758d05cca5ca71943b0ef08184aef5b2c457739
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802353"
 ---
 # <a name="expression-recursively-calls-the-containing-property-propertyname"></a>Выражение рекурсивно вызывает содержащее его свойство "\<имя_свойства >"
 Оператор в `Set` процедуры определения свойства сохраняет значение в имени свойства.  
@@ -61,7 +61,7 @@ End Class
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Перепишите определение свойства использовать рекомендуемый подход, как показано в предыдущем примере.  
+- Перепишите определение свойства использовать рекомендуемый подход, как показано в предыдущем примере.  
   
 ## <a name="see-also"></a>См. также
 

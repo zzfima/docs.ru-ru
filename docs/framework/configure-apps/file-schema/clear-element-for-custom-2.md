@@ -10,11 +10,11 @@ ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: ad3ac93b2a7f92cd33787620fc0caa2b632aa072
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705367"
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Очистить > элемент для NameValueSectionHandler и DictionarySectionHandler
 
@@ -36,13 +36,13 @@ ms.locfileid: "55281883"
 
 ## <a name="parent-element"></a>Родительский элемент
 
-|     | Описание: |
+|     | Описание |
 | --- | ------------|
 | [**\<параметра sectionName >** элемент](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Определяет параметры для пользовательских разделов конфигурации, использующие <xref:System.Configuration.NameValueSectionHandler> и <xref:System.Configuration.DictionarySectionHandler> классы. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-Нет
+None
 
 ## <a name="remarks"></a>Примечания
 

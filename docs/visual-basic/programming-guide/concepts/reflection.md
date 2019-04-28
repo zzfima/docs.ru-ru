@@ -3,11 +3,11 @@ title: Отражение (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
 ms.openlocfilehash: d2ad8957d308aa98935c862ec1864b6682be904b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783530"
 ---
 # <a name="reflection-visual-basic"></a>Отражение (Visual Basic)
 Механизм отражения позволяет получать объекты (типа <xref:System.Type>), которые описывают сборки, модули и типы. Отражение можно использовать для динамического создания экземпляра типа, привязки типа к существующему объекту, а также получения типа из существующего объекта и вызова его методов или доступа к его полям и свойствам. Если в коде используются атрибуты, отражение обеспечивает доступ к ним. Дополнительные сведения см. в разделе [Атрибуты](../../../standard/attributes/index.md).  
@@ -40,26 +40,26 @@ System.Console.WriteLine(info)
 ## <a name="reflection-overview"></a>Общие сведения об отражении  
  Отражение удобно использовать в следующих ситуациях:  
   
--   При необходимости доступа к атрибутам в метаданных программы. Дополнительные сведения см. в разделе [Извлечение информации, сохраненной в атрибуте](../../../standard/attributes/retrieving-information-stored-in-attributes.md).  
+- При необходимости доступа к атрибутам в метаданных программы. Дополнительные сведения см. в разделе [Извлечение информации, сохраненной в атрибуте](../../../standard/attributes/retrieving-information-stored-in-attributes.md).  
   
--   Для проверки и создания экземпляров типов в сборке.  
+- Для проверки и создания экземпляров типов в сборке.  
   
--   Для создания типов во время выполнения. Используйте классы в <xref:System.Reflection.Emit>.  
+- Для создания типов во время выполнения. Используйте классы в <xref:System.Reflection.Emit>.  
   
--   Для выполнения позднего связывания, которое обеспечивает доступ к методам в типах, созданных во время выполнения. См. раздел [Динамическая загрузка и использование типов](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
+- Для выполнения позднего связывания, которое обеспечивает доступ к методам в типах, созданных во время выполнения. См. раздел [Динамическая загрузка и использование типов](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
   
 ## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения:  
   
--   [Отражение](../../../framework/reflection-and-codedom/reflection.md)  
+- [Отражение](../../../framework/reflection-and-codedom/reflection.md)  
   
--   [Просмотр сведений о типах](../../../framework/reflection-and-codedom/viewing-type-information.md)  
+- [Просмотр сведений о типах](../../../framework/reflection-and-codedom/viewing-type-information.md)  
   
--   [Отражение и универсальные типы](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+- [Отражение и универсальные типы](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
   
--   <xref:System.Reflection.Emit>  
+- <xref:System.Reflection.Emit>  
   
--   [Извлечение информации, сохраненной в атрибуте](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+- [Извлечение информации, сохраненной в атрибуте](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
 ## <a name="see-also"></a>См. также
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
 ms.openlocfilehash: 42980aa4691d8ecb9868336ecb270c9ad937b5a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876113"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Обновление службы данных (службы данных WCF)
 При использовании [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиентскую библиотеку для использования [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала, эта библиотека преобразует записи из канала в экземпляры классов клиентской службы данных. Эти классы службы данных отслеживаются с помощью объекта <xref:System.Data.Services.Client.DataServiceContext>, которому принадлежит объект <xref:System.Data.Services.Client.DataServiceQuery%601>. Клиент отслеживает изменения сущностей, указанных с помощью методов объекта <xref:System.Data.Services.Client.DataServiceContext>. Эти методы позволяют клиенту отслеживать добавленные и удаленные сущности, а также изменения, вносимые в значения свойств или в связи между экземплярами сущностей. При вызове метода <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> отслеженные изменения отправляются назад в службу данных в виде операций, основанных на REST.  
@@ -54,13 +54,13 @@ ms.locfileid: "59517113"
   
  Во время присоединения объектов следует принимать во внимание следующие соображения.  
   
--   Объект присоединяется в состоянии <xref:System.Data.Services.Client.EntityStates.Unchanged>.  
+- Объект присоединяется в состоянии <xref:System.Data.Services.Client.EntityStates.Unchanged>.  
   
--   При присоединении объекта связанные с ним объекты не присоединяются.  
+- При присоединении объекта связанные с ним объекты не присоединяются.  
   
--   Объект не может быть присоединен, если сущность уже отслеживается контекстом.  
+- Объект не может быть присоединен, если сущность уже отслеживается контекстом.  
   
--   При присоединении объекта сущности, полученной со значением eTag, используется перегруженный метод <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29>, принимающий параметр `etag`. Это значение eTag используется для проверки параллелизма при сохранении изменений в присоединенном объекте.  
+- При присоединении объекта сущности, полученной со значением eTag, используется перегруженный метод <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29>, принимающий параметр `etag`. Это значение eTag используется для проверки параллелизма при сохранении изменений в присоединенном объекте.  
   
  Дополнительные сведения см. в разделе [Как Присоединение существующей сущности к контексту DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md).  
   

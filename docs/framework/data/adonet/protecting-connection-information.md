@@ -3,11 +3,11 @@ title: Защита сведений о подключении
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
 ms.openlocfilehash: ccb039a79c76c31b905783b81710571d8c5ab82b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878934"
 ---
 # <a name="protecting-connection-information"></a>Защита сведений о подключении
 Защита доступа к источникам данным - одна из важнейших целей защиты приложения. Строка соединения представляет собой потенциальную уязвимость, если она не защищена. Сохранение сведений о соединении в виде простого текста или сохранение их в памяти представляет угрозу безопасности всей системы. Строки соединения, внедренные в исходный код можно считать с помощью [Ildasm.exe (дизассемблер IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) для просмотра промежуточного языка Майкрософт (MSIL) в скомпилированной сборке.  

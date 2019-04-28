@@ -3,11 +3,11 @@ title: Основные понятия модели EDM
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
 ms.openlocfilehash: 2efa54b6bd656129812cc9dd7c2ce38a4fb2a89a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879283"
 ---
 # <a name="entity-data-model-key-concepts"></a>Основные понятия модели EDM
 Entity Data Model (EDM) использует три основных понятия для описания структуры данных: *тип сущности*, *тип ассоциации*, и *свойство*. Это самые важные основные понятия в описании структуры данных в любой реализации модели EDM.  

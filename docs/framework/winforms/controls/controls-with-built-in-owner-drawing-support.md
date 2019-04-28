@@ -9,11 +9,11 @@ helpviewer_keywords:
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
 ms.openlocfilehash: 1807170b2f5df2333ec3b271a11f9b929c1e7993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011584"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Элементы управления Windows Forms со встроенной поддержки рисования владельцем
 Рисование владельцем в Windows Forms, иначе называемое пользовательским рисованием, — это способ изменения внешнего вида определенных элементов управления.  
@@ -38,27 +38,27 @@ ms.locfileid: "59087187"
   
  Следующие элементы управления Windows Forms поддерживают рисование владельцем во всех версиях .NET Framework.  
   
--   <xref:System.Windows.Forms.ListBox>  
+- <xref:System.Windows.Forms.ListBox>  
   
--   <xref:System.Windows.Forms.ComboBox>  
+- <xref:System.Windows.Forms.ComboBox>  
   
--   <xref:System.Windows.Forms.MenuItem> (используемые <xref:System.Windows.Forms.MainMenu> и <xref:System.Windows.Forms.ContextMenu>)  
+- <xref:System.Windows.Forms.MenuItem> (используемые <xref:System.Windows.Forms.MainMenu> и <xref:System.Windows.Forms.ContextMenu>)  
   
--   <xref:System.Windows.Forms.TabControl>  
+- <xref:System.Windows.Forms.TabControl>  
   
  Следующие элементы управления поддерживают рисование владельцем только в [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
--   <xref:System.Windows.Forms.ToolTip>  
+- <xref:System.Windows.Forms.ToolTip>  
   
--   <xref:System.Windows.Forms.ListView>  
+- <xref:System.Windows.Forms.ListView>  
   
--   <xref:System.Windows.Forms.TreeView>  
+- <xref:System.Windows.Forms.TreeView>  
   
  Следующие элементы управления поддерживают рисование владельцем и являются новыми в [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
--   <xref:System.Windows.Forms.DataGridView>  
+- <xref:System.Windows.Forms.DataGridView>  
   
--   <xref:System.Windows.Forms.ToolStrip>  
+- <xref:System.Windows.Forms.ToolStrip>  
   
  В следующих разделах приводятся дополнительные сведения для каждого из этих элементов управления.  
   
@@ -74,19 +74,19 @@ ms.locfileid: "59087187"
   
  Дополнительные сведения, включая примеры кода, см. в следующих разделах.  
   
--   <xref:System.Windows.Forms.ListBox.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListBox.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListBox.MeasureItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListBox.MeasureItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ComboBox.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.MeasureItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ComboBox.MeasureItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [Практическое руководство. Индивидуальное в элементе управления ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+- [Практическое руководство. Индивидуальное в элементе управления ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>Компонент MenuItem  
  <xref:System.Windows.Forms.MenuItem> Компонент представляет собой отдельный пункт меню в <xref:System.Windows.Forms.MainMenu> или <xref:System.Windows.Forms.ContextMenu> компонента.  
@@ -95,11 +95,11 @@ ms.locfileid: "59087187"
   
  Дополнительные сведения, включая примеры кода, см. в следующих разделах справочника.  
   
--   <xref:System.Windows.Forms.MenuItem.OwnerDraw%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.MenuItem.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.MenuItem.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.MenuItem.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.MenuItem.MeasureItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.MenuItem.MeasureItem?displayProperty=nameWithType>  
   
 ### <a name="tabcontrol-control"></a>Элемент управления TabControl  
  <xref:System.Windows.Forms.TabControl> Элемент управления позволяет рисовать отдельные вкладки в элементе управления. Рисование владельцем влияет только на вкладки; <xref:System.Windows.Forms.TabPage> содержимое не затрагиваются.  
@@ -108,9 +108,9 @@ ms.locfileid: "59087187"
   
  Дополнительные сведения, включая примеры кода, см. в следующих разделах справочника.  
   
--   <xref:System.Windows.Forms.TabControl.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TabControl.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.TabControl.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TabControl.DrawItem?displayProperty=nameWithType>  
   
 ### <a name="tooltip-component"></a>Компонент ToolTip  
  <xref:System.Windows.Forms.ToolTip> Компонент позволяет рисовать всю подсказку, когда она появится.  
@@ -119,11 +119,11 @@ ms.locfileid: "59087187"
   
  Дополнительные сведения, включая примеры кода, см. в следующих разделах справочника.  
   
--   <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ToolTip.Draw?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ToolTip.Draw?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType>  
   
 ### <a name="listview-control"></a>Элемент управления ListView  
  <xref:System.Windows.Forms.ListView> Управления позволяет рисовать отдельные элементы, подпункты и заголовки столбцов в элементе управления.  
@@ -136,13 +136,13 @@ ms.locfileid: "59087187"
   
  Дополнительные сведения, включая примеры кода, см. в следующих разделах справочника.  
   
--   <xref:System.Windows.Forms.ListView.OwnerDraw%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType>  
   
 ### <a name="treeview-control"></a>Элемент управления TreeView  
  <xref:System.Windows.Forms.TreeView> Элемент управления позволяет рисовать отдельные узлы в элементе управления.  
@@ -153,9 +153,9 @@ ms.locfileid: "59087187"
   
  Дополнительные сведения, включая примеры кода, см. в следующих разделах справочника.  
   
--   <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType>  
   
 ### <a name="datagridview-control"></a>Элемент управления DataGridView  
  <xref:System.Windows.Forms.DataGridView> Управления позволяет рисовать отдельные ячейки и строки в элементе управления.  
@@ -166,15 +166,15 @@ ms.locfileid: "59087187"
   
  Дополнительные сведения, включая примеры кода, см. в следующих разделах.  
   
--   <xref:System.Windows.Forms.DataGridView.CellPainting>  
+- <xref:System.Windows.Forms.DataGridView.CellPainting>  
   
--   <xref:System.Windows.Forms.DataGridView.RowPrePaint>  
+- <xref:System.Windows.Forms.DataGridView.RowPrePaint>  
   
--   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
+- <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [Практическое руководство. Настройка внешнего вида ячеек элемента управления DataGridView в Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md)  
+- [Практическое руководство. Настройка внешнего вида ячеек элемента управления DataGridView в Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [Практическое руководство. Настройка внешнего вида строк элемента управления DataGridView в Windows Forms](customize-the-appearance-of-rows-in-the-datagrid.md)  
+- [Практическое руководство. Настройка внешнего вида строк элемента управления DataGridView в Windows Forms](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>Элемент управления ToolStrip  
  <xref:System.Windows.Forms.ToolStrip> и производные элементы управления позволяют настраивать все аспекты их внешнего вида.  
@@ -183,11 +183,11 @@ ms.locfileid: "59087187"
   
  Дополнительные сведения, включая примеры кода, см. в следующих разделах.  
   
--   <xref:System.Windows.Forms.ToolStripRenderer>  
+- <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [Практическое руководство. Создание и определение пользовательского средства визуализации для элемента управления ToolStrip в Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+- [Практическое руководство. Создание и определение пользовательского средства визуализации для элемента управления ToolStrip в Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [Практическое руководство. Пользовательская прорисовка элемента управления ToolStrip](how-to-custom-draw-a-toolstrip-control.md)  
+- [Практическое руководство. Пользовательская прорисовка элемента управления ToolStrip](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>См. также
 

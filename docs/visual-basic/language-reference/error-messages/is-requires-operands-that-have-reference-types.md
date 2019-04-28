@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30020
 ms.assetid: 228afebd-1203-4bd3-8d7a-c5c56f3cedc4
 ms.openlocfilehash: b828de196a12128a9f34ee1f9ff1e57fee22c687
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61799194"
 ---
 # <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a>«Is» требуются операнды ссылочных типов, а этот операнд имеет тип значения "\<typename >"
 `Is` Оператор сравнения определяет, ссылаются ли две объектные переменные на один экземпляр. Это сравнение не определен для типов значений.  
@@ -21,7 +21,7 @@ ms.locfileid: "58843855"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Используйте соответствующий арифметический оператор сравнения или `Like` оператор для сравнения двух типов значений.  
+- Используйте соответствующий арифметический оператор сравнения или `Like` оператор для сравнения двух типов значений.  
   
 ## <a name="see-also"></a>См. также
 

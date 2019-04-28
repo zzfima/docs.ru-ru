@@ -3,11 +3,11 @@ title: Списки
 description: Дополнительные сведения о F# списки, упорядоченная, неизменная серия элементов одного типа.
 ms.date: 05/16/2016
 ms.openlocfilehash: cc4e292280cca0dca37f69cf5a46ec2822d08d5c
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904128"
 ---
 # <a name="lists"></a>Списки
 
@@ -62,7 +62,7 @@ ms.locfileid: "53656340"
 
 Тип списка поддерживает следующие свойства.
 
-|Свойство|Тип|Описание:|
+|Свойство|Тип|Описание|
 |--------|----|-----------|
 |[HEAD](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|Первый элемент|
 |[пустой](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Статическое свойство, которое возвращает пустой список соответствующего типа.|
@@ -396,7 +396,7 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet26.fs)]
 
-### <a name="fold-and-scan-operations"></a>Операции свертывания и сканирования
+### <a name="fold-and-scan-operations"></a>Операции сворачивания и сканирования
 
 Некоторые операции со списками включают взаимозависимости между всеми элементами списка. Операции свертывания и сканирования похожи на `List.iter` и `List.map` , вызвать функцию для каждого элемента, но включают дополнительный параметр, называемый *агрегатное* содержит результат вычисление.
 

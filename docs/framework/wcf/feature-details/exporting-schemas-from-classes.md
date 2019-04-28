@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
 ms.openlocfilehash: dcbccbea279796fdaec1227b7575cf39e47f9e4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856683"
 ---
 # <a name="exporting-schemas-from-classes"></a>Экспорт схем из классов
 Чтобы создать схемы языка определения схемы XML (XSD) из классов, используемых в модели контракта данных, используйте класс <xref:System.Runtime.Serialization.XsdDataContractExporter> . В данном разделе описывается процесс создания схем.  
@@ -43,18 +43,18 @@ ms.locfileid: "59336880"
 ## <a name="export-options"></a>Параметры экспорта  
  Можно присвоить свойство <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> объекта <xref:System.Runtime.Serialization.XsdDataContractExporter> экземпляру класса <xref:System.Runtime.Serialization.ExportOptions> для управления различными аспектами процесса экспорта. В частности, можно задать следующие параметры.  
   
--   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. В этой коллекции `Type` представлены известные типы для экспортируемых типов. (Дополнительные сведения см. в разделе [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Эти известные типы экспортируются при каждом вызове метода `Export` в дополнение к типам, передаваемым в метод `Export`.  
+- <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. В этой коллекции `Type` представлены известные типы для экспортируемых типов. (Дополнительные сведения см. в разделе [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Эти известные типы экспортируются при каждом вызове метода `Export` в дополнение к типам, передаваемым в метод `Export`.  
   
--   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. С помощью этого свойства можно указать <xref:System.Runtime.Serialization.IDataContractSurrogate> для настройки процесса экспорта. Дополнительные сведения см. в разделе [суррогаты контрактов данных](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). По умолчанию суррогат не используется.  
+- <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. С помощью этого свойства можно указать <xref:System.Runtime.Serialization.IDataContractSurrogate> для настройки процесса экспорта. Дополнительные сведения см. в разделе [суррогаты контрактов данных](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). По умолчанию суррогат не используется.  
   
 ## <a name="helper-methods"></a>Вспомогательные методы  
  Помимо выполнения основной задачи, заключающейся в экспорте схемы, экспортер `XsdDataContractExporter` предлагает несколько полезных вспомогательных методов, предоставляющих сведения о типах. К ним относятся следующие методы.  
   
--   Метод<xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> . Этот метод принимает `Type` и возвращает имя <xref:System.Xml.XmlQualifiedName> , представляющее имя и пространство имен корневого элемента, которые бы использовались, если бы этот тип был сериализован как корневой объект.  
+- Метод<xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> . Этот метод принимает `Type` и возвращает имя <xref:System.Xml.XmlQualifiedName> , представляющее имя и пространство имен корневого элемента, которые бы использовались, если бы этот тип был сериализован как корневой объект.  
   
--   Метод<xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> . Этот метод принимает `Type` и возвращает имя <xref:System.Xml.XmlQualifiedName> , представляющее имя типа схемы XSD, которое бы использовалось, если бы этот тип был экспортирован в схему. В случае типов <xref:System.Xml.Serialization.IXmlSerializable> , представленных как анонимные типы в схеме, этот метод возвращает значение `null`.  
+- Метод<xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> . Этот метод принимает `Type` и возвращает имя <xref:System.Xml.XmlQualifiedName> , представляющее имя типа схемы XSD, которое бы использовалось, если бы этот тип был экспортирован в схему. В случае типов <xref:System.Xml.Serialization.IXmlSerializable> , представленных как анонимные типы в схеме, этот метод возвращает значение `null`.  
   
--   Метод<xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> . Этот метод работает только с типами <xref:System.Xml.Serialization.IXmlSerializable> , представленными как анонимные типы в схеме, и возвращает значение `null` для всех других типов. В случае анонимных типов этот метод возвращает тип <xref:System.Xml.Schema.XmlSchemaType> , представляющий данный `Type`.  
+- Метод<xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> . Этот метод работает только с типами <xref:System.Xml.Serialization.IXmlSerializable> , представленными как анонимные типы в схеме, и возвращает значение `null` для всех других типов. В случае анонимных типов этот метод возвращает тип <xref:System.Xml.Schema.XmlSchemaType> , представляющий данный `Type`.  
   
  Параметры экспорта влияют на все эти методы.  
   

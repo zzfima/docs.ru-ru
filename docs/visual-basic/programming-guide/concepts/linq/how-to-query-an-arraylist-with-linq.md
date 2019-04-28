@@ -3,11 +3,11 @@ title: Практическое руководство. Выполнение з�
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
 ms.openlocfilehash: ed440a7970d0ef1a49af36fa56b1c7ca74715e5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908171"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ (Visual Basic)
 При использовании LINQ для запросов к неуниверсальным коллекциям <xref:System.Collections.IEnumerable>, таким как <xref:System.Collections.ArrayList>, необходимо явно объявить тип переменной диапазона, чтобы отразить конкретный тип объектов в коллекции. Например, если у вас есть <xref:System.Collections.ArrayList> из `Student` объектов, ваш [предложение From](../../../../visual-basic/language-reference/queries/from-clause.md) должен выглядеть следующим образом:  

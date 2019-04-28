@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
 ms.openlocfilehash: e1111077a407dc32475976b15ff71170978e3184
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765509"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Практическое руководство. Привязать данные с помощью источника данных проекта (службы данных WCF)
 
@@ -31,19 +31,19 @@ ms.locfileid: "59517074"
 
      При этом в файле XAML для данного окна будут созданы следующие элементы объектов:
 
-    -   Элемент <xref:System.Windows.Data.CollectionViewSource> с именем `customersViewSource`. Свойству <xref:System.Windows.FrameworkElement.DataContext%2A> элемента объекта верхнего уровня <xref:System.Windows.Controls.Grid> присваивается значение нового объекта <xref:System.Windows.Data.CollectionViewSource>.
+    - Элемент <xref:System.Windows.Data.CollectionViewSource> с именем `customersViewSource`. Свойству <xref:System.Windows.FrameworkElement.DataContext%2A> элемента объекта верхнего уровня <xref:System.Windows.Controls.Grid> присваивается значение нового объекта <xref:System.Windows.Data.CollectionViewSource>.
 
-    -   Привязанный к данным элемент <xref:System.Windows.Controls.ComboBox> с именем `CustomerID`.
+    - Привязанный к данным элемент <xref:System.Windows.Controls.ComboBox> с именем `CustomerID`.
 
-    -   Объект <xref:System.Windows.Controls.Label>.
+    - Объект <xref:System.Windows.Controls.Label>.
 
 4. Перетащите **заказы** свойство навигации в конструктор.
 
      При этом в файле XAML для данного окна будут созданы следующие дополнительные элементы объектов:
 
-    -   Второй элемент <xref:System.Windows.Data.CollectionViewSource> с именем `customersOrdersViewSource`, источником для которого является объект `customerViewSource`.
+    - Второй элемент <xref:System.Windows.Data.CollectionViewSource> с именем `customersOrdersViewSource`, источником для которого является объект `customerViewSource`.
 
-    -   Привязанный к данным элемент управления <xref:System.Windows.Controls.DataGrid> с именем `ordersDataGrid`.
+    - Привязанный к данным элемент управления <xref:System.Windows.Controls.DataGrid> с именем `ordersDataGrid`.
 
 5. (Необязательно) Перетащите дополнительные элементы из **клиентов** узел в конструктор.
 
@@ -82,13 +82,13 @@ ms.locfileid: "59517074"
 
      Это приведет к созданию следующих элементов управления в форме:
 
-    -   Экземпляр <xref:System.Windows.Forms.BindingSource> с именем `customersBindingSource`.
+    - Экземпляр <xref:System.Windows.Forms.BindingSource> с именем `customersBindingSource`.
 
-    -   Экземпляр <xref:System.Windows.Forms.BindingNavigator> с именем `customersBindingNavigator`. Этот элемент управления можно удалить, так как он не понадобится.
+    - Экземпляр <xref:System.Windows.Forms.BindingNavigator> с именем `customersBindingNavigator`. Этот элемент управления можно удалить, так как он не понадобится.
 
-    -   Привязанный к данным элемент <xref:System.Windows.Forms.ComboBox> с именем `CustomerID`.
+    - Привязанный к данным элемент <xref:System.Windows.Forms.ComboBox> с именем `CustomerID`.
 
-    -   Объект <xref:System.Windows.Forms.Label>.
+    - Объект <xref:System.Windows.Forms.Label>.
 
 3. Перетащите **заказы** в форму свойство навигации.
 

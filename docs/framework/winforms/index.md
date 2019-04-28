@@ -7,11 +7,11 @@ helpviewer_keywords:
 - user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
 ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801183"
 ---
 # <a name="windows-forms"></a>Windows Forms
 Так как формы являются основной частью приложения, необходимо уделить особое внимание их внешнему виду и функциям. В конечном счете форма представляет собой чистый лист, который разработчик оснащает элементами управления, формируя пользовательский интерфейс, и кодом для работы с данными. С этой целью Visual Studio позволяет среде разработки (IDE), упрощающую написание кода, а также расширенный набор элементов управления [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Дополняя функциональные возможности этих элементов управления своим кодом, вы можете легко и быстро разработать нужное приложение.  

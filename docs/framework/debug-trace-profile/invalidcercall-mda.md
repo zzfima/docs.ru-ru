@@ -12,11 +12,11 @@ ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1a68aac2a92a0569e288da858e4a4e4695fd5eaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754432"
 ---
 # <a name="invalidcercall-mda"></a>Помощник по отладке управляемого кода invalidCERCall
 Помощник по отладке управляемого кода (MDA) `invalidCERCall` активируется при осуществляемом в графе области ограниченного исполнения (CER) вызове метода, не имеющего контракта надежности или имеющего чрезвычайно слабый контракт. Слабый контракт представляет собой контракт, который объявляет, что максимальное повреждение состояния имеет большую область, чем экземпляр, переданный в вызов, то есть <xref:System.AppDomain> или состояние процесса может быть повреждено или его результат не всегда является детерминированно вычисляемым при вызове в рамках CER.  

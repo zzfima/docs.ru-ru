@@ -3,11 +3,11 @@ title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
 ms.openlocfilehash: 575b2a3e34246e1082d34545baaf812203a1dde1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855846"
 ---
 # <a name="hosting"></a>Размещение
 В подразделах этого раздела описано размещение служб. Служба может размещаться по Internet Information Services (IIS), служба активации процессов Windows (WAS), Windows Server AppFabric, службы Windows или управляемом приложении — этот параметр часто называется *размещение на собственном сервере*.  

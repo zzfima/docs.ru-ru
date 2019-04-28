@@ -7,11 +7,11 @@ helpviewer_keywords:
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
 ms.openlocfilehash: 21a297208be045eea79d6f5ca6c8eac016d26345
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61804017"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>Практическое руководство. Упрощение анимации с помощью дочерних шкал времени
 В этом примере показано, как Упрощение анимации с помощью дочерних <xref:System.Windows.Media.Animation.ParallelTimeline> объектов. Объект <xref:System.Windows.Media.Animation.Storyboard> — это разновидность <xref:System.Windows.Media.Animation.Timeline> , предоставляющий сведения о содержащихся в нем временных шкал. Используйте <xref:System.Windows.Media.Animation.Storyboard> для предоставления временной шкалы, предназначенных для сведения, включая сведения объекта и свойством.  

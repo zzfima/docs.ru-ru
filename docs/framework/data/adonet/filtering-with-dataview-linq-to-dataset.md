@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
 ms.openlocfilehash: 41e099cdca4f02231fd4b1cc8bce2c4b1e511c71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878830"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Фильтрация с использованием объекта DataView (LINQ to DataSet)
 Возможность фильтрации данных на основе заданных критериев и их предоставление клиенту с помощью элемента управления в пользовательском интерфейсе - это важный аспект привязки данных. Объект <xref:System.Data.DataView> реализует несколько способов фильтрации и возвращения подмножеств строк данных, отвечающих определенным критериям фильтрации. В дополнение к строковому возможности фильтрации <xref:System.Data.DataView> также предоставляет возможность использования [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] выражения для критериям фильтрации. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] выражения позволяют выполнять гораздо более сложные и мощные операции фильтрации, чем строковые фильтрации.  
   
  Существует два способа фильтрации данных с помощью объекта <xref:System.Data.DataView>.  
   
--   Создайте объект <xref:System.Data.DataView> на основе запроса [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] с предложением WHERE.  
+- Создайте объект <xref:System.Data.DataView> на основе запроса [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] с предложением WHERE.  
   
--   Используйте существующие возможности фильтрации на основе строк, предоставляемые объектом <xref:System.Data.DataView>.  
+- Используйте существующие возможности фильтрации на основе строк, предоставляемые объектом <xref:System.Data.DataView>.  
   
 ## <a name="creating-dataview-from-a-query-with-filtering-information"></a>Создание объекта DataView на основе запроса с данными фильтрации  
  Объект <xref:System.Data.DataView> можно создать с помощью запроса [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Если запрос содержит предложение `Where`, объект <xref:System.Data.DataView> будет создан с учетом данных фильтрации из этого запроса. Выражение в предложении `Where` используется для определения того, какие строки данных будут включены в объект <xref:System.Data.DataView>, и является основой для фильтра.  
@@ -76,9 +76,9 @@ ms.locfileid: "59176934"
 ## <a name="clearing-the-filter"></a>Очистка фильтра  
  Фильтр для объекта <xref:System.Data.DataView> можно очистить после его задания с помощью свойства <xref:System.Data.DataView.RowFilter%2A>. Фильтр для объекта <xref:System.Data.DataView> можно очистить двумя различными способами.  
   
--   Задайте для свойства <xref:System.Data.DataView.RowFilter%2A> значение `null`.  
+- Задайте для свойства <xref:System.Data.DataView.RowFilter%2A> значение `null`.  
   
--   Установите свойство <xref:System.Data.DataView.RowFilter%2A> равным пустой строке.  
+- Установите свойство <xref:System.Data.DataView.RowFilter%2A> равным пустой строке.  
   
 ### <a name="example"></a>Пример  
  В следующем примере объект <xref:System.Data.DataView> создается на основе запроса, а затем фильтр очищается путем установки для свойства <xref:System.Data.DataView.RowFilter%2A> значения `null`.  

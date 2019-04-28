@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
 ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903166"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Изменение размеров управления DataGridView в Windows Forms
 <xref:System.Windows.Forms.DataGridView> размер во многих случаях можно изменить строк, столбцов и заголовков. В следующей таблице показаны эти случаи.  
@@ -46,13 +46,13 @@ ms.locfileid: "59197845"
 ## <a name="resizing-with-the-mouse"></a>Изменение размеров с помощью мыши  
  По умолчанию пользователь может изменять размер строк, столбцов и заголовков, которые не использовать режим автоматического изменения размеров на основе значений ячеек. Чтобы запретить пользователям изменение размеров в других режимах, например в режиме заполнения столбцов, задайте одно или несколько из следующих <xref:System.Windows.Forms.DataGridView> свойства:  
   
--   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
+- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>  
+- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
  Вы можете также запретить пользователям изменять размеры отдельных строк или столбцов, задав их <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> свойства. По умолчанию <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> зависит от значения свойства <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A> значение свойства для столбцов и <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A> значение свойства для строк. Если явно задать <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> для <xref:System.Windows.Forms.DataGridViewTriState.True> или <xref:System.Windows.Forms.DataGridViewTriState.False>, но при этом указанное значение переопределяет значение элемента управления — для строки или столбца. Задайте <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> для <xref:System.Windows.Forms.DataGridViewTriState.NotSet> восстановить наследование.  
   
@@ -74,13 +74,13 @@ ms.locfileid: "59197845"
   
  Чтобы настроить режим изменения размеров для заголовков и строк и столбцов, которые не переопределяют значение элемента управления, задайте одно или несколько из следующих <xref:System.Windows.Forms.DataGridView> свойства:  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
   
  Чтобы переопределить режим изменения размеров столбца элемента управления для отдельного столбца, задайте его <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> присваивается значение, отличное от <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>. Режим изменения размеров для столбца фактически определяется его <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> свойство. Значение этого свойства основан на столбце <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> значение свойства, если это значение не <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>в этом случае элемента управления <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> значение наследуется.  
   
@@ -93,27 +93,27 @@ ms.locfileid: "59197845"
 ## <a name="programmatic-resizing"></a>Программное изменение размеров  
  При отключении автоматического изменения размера, можно программно установить точную ширину или высоту строк, столбцов или заголовки через следующие свойства:  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
   
  Можно также программно изменить размер строк, столбцов и заголовков по их содержимому, используя следующие методы:  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
   
  Эти методы изменяют размеры строк, столбцов, или один раз заголовки не настроены на постоянное изменение размеров. Новые размеры вычисляются автоматически, чтобы отобразить все содержимое ячейки без обрезки. Если программно изменить размеры столбцов, имеющих <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> значения свойств <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>, тем не менее, рассчитанных значений ширины по содержимому используются для пропорционального изменения <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> значения свойств и фактически столбец, значения ширины Затем рассчитывается в соответствии с этим новым соотношениям, таким образом, все столбцы заполняли доступную область отображения элемента управления.  
   

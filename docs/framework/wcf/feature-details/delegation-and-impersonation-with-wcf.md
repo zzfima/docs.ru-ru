@@ -9,11 +9,11 @@ helpviewer_keywords:
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
 ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856718"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Делегирование и олицетворение с использованием WCF
 *Олицетворение* - это стандартная техника, которую службы используют для ограничения клиентского доступа к ресурсам домена службы. В роли ресурсов домена службы могут выступать ресурсы компьютера, например локальные файлы (олицетворение), или ресурсы, расположенные на другом компьютере, например общая папка (делегирование). Пример приложения см. в разделе [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Пример использования олицетворения, см. в разделе [как: Олицетворение клиента в службе](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -37,22 +37,22 @@ ms.locfileid: "59345525"
 ### <a name="cached-token-impersonation"></a>Олицетворение с использованием кэшированного маркера  
  Для олицетворения с использованием кэшированного маркера используются следующие элементы:  
   
--   привязки<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>и <xref:System.ServiceModel.NetTcpBinding> , а также учетные данные клиента Windows;  
+- привязки<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>и <xref:System.ServiceModel.NetTcpBinding> , а также учетные данные клиента Windows;  
   
--   привязка<xref:System.ServiceModel.BasicHttpBinding> , у которой <xref:System.ServiceModel.BasicHttpSecurityMode> имеет значение <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> , или любая другая стандартная привязка, с помощью которой клиент представляет имя пользователя, которое служба может сопоставить с действительной учетной записью Windows;  
+- привязка<xref:System.ServiceModel.BasicHttpBinding> , у которой <xref:System.ServiceModel.BasicHttpSecurityMode> имеет значение <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> , или любая другая стандартная привязка, с помощью которой клиент представляет имя пользователя, которое служба может сопоставить с действительной учетной записью Windows;  
   
--   любая привязка <xref:System.ServiceModel.Channels.CustomBinding> , использующая учетные данные клиента Windows, где свойство `requireCancellation` имеет значение `true`. (Свойство имеется в следующих классах: <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> и <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>.) При использовании в привязке безопасного обмена данными свойство `requireCancellation` также должно иметь значение `true`;  
+- любая привязка <xref:System.ServiceModel.Channels.CustomBinding> , использующая учетные данные клиента Windows, где свойство `requireCancellation` имеет значение `true`. (Свойство имеется в следующих классах: <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> и <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>.) При использовании в привязке безопасного обмена данными свойство `requireCancellation` также должно иметь значение `true`;  
   
--   любая привязка <xref:System.ServiceModel.Channels.CustomBinding> , в которой клиент представляет имя пользователя. При использовании в привязке безопасного обмена данными свойство `requireCancellation` также должно иметь значение `true`.  
+- любая привязка <xref:System.ServiceModel.Channels.CustomBinding> , в которой клиент представляет имя пользователя. При использовании в привязке безопасного обмена данными свойство `requireCancellation` также должно иметь значение `true`.  
   
 ### <a name="s4u-based-impersonation"></a>Олицетворение на базе S4U  
  Для олицетворения на базе S4U используются следующие элементы:  
   
--   привязка<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>или <xref:System.ServiceModel.NetTcpBinding> с учетными данными сертификата клиента, которые служба может сопоставить с действительной учетной записью Windows;.  
+- привязка<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>или <xref:System.ServiceModel.NetTcpBinding> с учетными данными сертификата клиента, которые служба может сопоставить с действительной учетной записью Windows;.  
   
--   любая привязка <xref:System.ServiceModel.Channels.CustomBinding> , использующая учетные данные клиента Windows, где свойство `requireCancellation` имеет значение `false`;  
+- любая привязка <xref:System.ServiceModel.Channels.CustomBinding> , использующая учетные данные клиента Windows, где свойство `requireCancellation` имеет значение `false`;  
   
--   любая привязка <xref:System.ServiceModel.Channels.CustomBinding> , использующая имя пользователя или учетные данные клиента Windows, а также безопасный обмен данными, где свойство `requireCancellation` имеет значение `false`.  
+- любая привязка <xref:System.ServiceModel.Channels.CustomBinding> , использующая имя пользователя или учетные данные клиента Windows, а также безопасный обмен данными, где свойство `requireCancellation` имеет значение `false`.  
   
  Уровень олицетворения клиента службой зависит от привилегий, доступных учетной записи при попытке олицетворения, используемого типа олицетворения и, возможно, от уровня олицетворения, разрешенного клиентом.  
   
@@ -201,9 +201,9 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
  Более подробные инструкции по настройке ограниченного делегирования см. в следующих разделах MSDN:  
   
--   [Устранение неполадок делегирования Kerberos](https://go.microsoft.com/fwlink/?LinkId=36724)  
+- [Устранение неполадок делегирования Kerberos](https://go.microsoft.com/fwlink/?LinkId=36724)  
   
--   [Передача протокола Kerberos и ограниченное делегирование](https://go.microsoft.com/fwlink/?LinkId=36725)  
+- [Передача протокола Kerberos и ограниченное делегирование](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
 ## <a name="see-also"></a>См. также
 

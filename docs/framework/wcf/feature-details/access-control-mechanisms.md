@@ -6,11 +6,11 @@ helpviewer_keywords:
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
 ms.openlocfilehash: 53b20e7f11f5accd1436f29063817142681e4f74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857900"
 ---
 # <a name="access-control-mechanisms"></a>Механизмы управления доступом
 Вы можете управлять доступом несколькими способами с помощью Windows Communication Foundation (WCF). В настоящем разделе кратко описываются различные механизмы и приводятся рассуждения о том, когда и какой способ использовать; раздел должен помочь пользователю выбрать правильный механизм использования. Технологии доступа перечислены в порядке сложности. Самым простым является <xref:System.Security.Permissions.PrincipalPermissionAttribute>; самым сложным - модель удостоверения.  

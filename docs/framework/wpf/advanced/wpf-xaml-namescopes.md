@@ -11,11 +11,11 @@ helpviewer_keywords:
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
 ms.openlocfilehash: a46942188fd417b46ba4feb44d436800e1362098
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764651"
 ---
 # <a name="wpf-xaml-namescopes"></a>Области видимости имен XAML в WPF
 Области имен XAML — это понятие, которое идентифицирует объекты, определенные в XAML. Имена из области имен XAML можно использовать для установления связей между именами объектов, определенными в XAML, и эквивалентными им экземплярами из дерева объектов. Области имен XAML в управляемом коде [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], как правило, создаются при загрузке отдельных корневых страниц XAML для приложения XAML. Области видимости имен XAML как программируемые объекты определяются <xref:System.Windows.Markup.INameScope> и реализуются также посредством практического класса <xref:System.Windows.NameScope>.  
@@ -76,13 +76,13 @@ ms.locfileid: "59225798"
 ### <a name="xaml-namescope-implementations"></a>Реализации области имен XAML  
  Следующие классы реализуют <xref:System.Windows.Markup.INameScope> напрямую:  
   
--   <xref:System.Windows.NameScope>  
+- <xref:System.Windows.NameScope>  
   
--   <xref:System.Windows.Style>  
+- <xref:System.Windows.Style>  
   
--   <xref:System.Windows.ResourceDictionary>  
+- <xref:System.Windows.ResourceDictionary>  
   
--   <xref:System.Windows.FrameworkTemplate>  
+- <xref:System.Windows.FrameworkTemplate>  
   
  <xref:System.Windows.ResourceDictionary> не используйте имена XAML или области видимости имен; он использует ключи вместо этого, так как он является реализацией словаря. Единственная причина, по которой <xref:System.Windows.ResourceDictionary> реализует <xref:System.Windows.Markup.INameScope> — что он может вызывать исключения в пользовательском коде, которые помогают уточнить различие между true области видимости имен XAML и как <xref:System.Windows.ResourceDictionary> обрабатывает клавиши, а также чтобы убедиться, что области видимости имен XAML не применяются к <xref:System.Windows.ResourceDictionary> родительскими элементами.  
   
@@ -90,9 +90,9 @@ ms.locfileid: "59225798"
   
  Следующие классы определяют свои собственные области видимости имен XAML, с помощью <xref:System.Windows.NameScope?displayProperty=nameWithType> вспомогательный класс и подключении к его реализации области имен XAML через <xref:System.Windows.NameScope.NameScope%2A?displayProperty=nameWithType> вложенного свойства зависимостей:  
   
--   <xref:System.Windows.FrameworkElement>  
+- <xref:System.Windows.FrameworkElement>  
   
--   <xref:System.Windows.FrameworkContentElement>  
+- <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>См. также
 

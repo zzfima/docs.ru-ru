@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [Windows Forms], printing
 ms.assetid: 48fd36ac-872f-4de0-902a-e52969cd4367
 ms.openlocfilehash: 5ee170980ed02d90606c774e2a7055f047292e33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801807"
 ---
 # <a name="more-secure-printing-in-windows-forms"></a>Более безопасная печать в Windows Forms
 Приложения Windows Forms часто предусмотрена возможность печати. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Использует <xref:System.Drawing.Printing.PrintingPermission> класс для управления доступом к возможностям печати и связанный <xref:System.Drawing.Printing.PrintingPermissionLevel> значение перечисления, указывающее уровень доступа. По умолчанию она разрешена по умолчанию в зонах локальной интрасети и Интернета; Тем не менее в обоих зон ограничено уровень доступа. Ли приложение может начать печать, требует взаимодействия с пользователем, или не зависит значение разрешения, предоставленные приложению. По умолчанию в зону локальной интрасети получает <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> доступа и в зону интрасети получает <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> доступа.  

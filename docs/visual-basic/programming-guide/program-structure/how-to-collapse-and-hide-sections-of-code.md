@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
 ms.openlocfilehash: bf2a7188456097ac227039e4d902a14eb182664c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758279"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Практическое руководство. Сворачивание и скрытие частей кода (Visual Basic)
 `#Region` Директива позволяет сворачивать и скрывать разделы кода в файлах Visual Basic. `#Region` Директива позволяет указать блок кода, который можно разворачивать и сворачивать при использовании в редакторе кода Visual Studio. Возможность выборочно скрыть код делает файлы стала более управляемой и более удобными для чтения. Дополнительные сведения см. в разделе [Структура](/visualstudio/ide/outlining).  
@@ -20,7 +20,7 @@ ms.locfileid: "58822305"
   
 ### <a name="to-collapse-and-hide-a-section-of-code"></a>Чтобы свернуть и скрыть часть кода  
   
--   Поместите раздел кода между `#Region` и `#End Region` инструкции, как показано в следующем примере:  
+- Поместите раздел кода между `#Region` и `#End Region` инструкции, как показано в следующем примере:  
   
      [!code-vb[VbVbalrConditionalComp#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#6)]  
   

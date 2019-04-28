@@ -1,5 +1,5 @@
 ---
-title: <sectionGroup> - элемент для <configSections>
+title: Элемент <sectionGroup> для <configSections>
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/sectionGroup
@@ -10,11 +10,11 @@ ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: ce0fa5bd77a7b9012d69fd5afab1f4c332f213a7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673827"
 ---
 # <a name="sectiongroup-element-for-configsections"></a>\<sectionGroup > элемент для \<configSections >
 
@@ -34,19 +34,19 @@ ms.locfileid: "55276137"
 
 ## <a name="attribute"></a>Атрибут
 
-|           | Описание: |
+|           | Описание |
 | --------- | ----------- |
 | **name**  | Обязательный атрибут.<br><br>Задает имя группы раздела, который вы определяете. |
 
 ## <a name="parent-element"></a>Родительский элемент
 
-|     | Описание: |
+|     | Описание |
 | --- | ----------- |
 | [**\<configSections >** элемент](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Содержит раздел конфигурации и пространства имен объявления. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-|     | Описание: |
+|     | Описание |
 | --- | ----------- |
 | [**\<раздел >**](~/docs/framework/configure-apps/file-schema/section-element.md) | Содержит объявление раздела конфигурации. |
 

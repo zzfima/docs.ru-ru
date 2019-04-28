@@ -3,18 +3,18 @@ title: 1124 - InvokeMethodIsStatic
 ms.date: 03/30/2017
 ms.assetid: b9643641-fb52-4fa8-b354-4dd6617d68f6
 ms.openlocfilehash: 49a9dec73392681fd4150c611f78399a1e15dd48
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33511417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924063"
 ---
 # <a name="1124---invokemethodisstatic"></a>1124 - InvokeMethodIsStatic
 ## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
-|Идентификатор|1124|  
+|ID|1124|  
 |Ключевые слова|WFRuntime|  
 |Уровень|Сведения|  
 |Канал|Microsoft-Windows-Application Server-Applications/Debug|  
@@ -30,4 +30,4 @@ ms.locfileid: "33511417"
 |Имя элемента данных|Тип элемента данных|Описание|  
 |--------------------|--------------------|-----------------|  
 |InvokeMethod|xs:string|Отображаемое имя действия InvokeMethod.|  
-|AppDomain|xs:string|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|Домен приложения|xs:string|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
 ms.openlocfilehash: 67ceedffecdfba8ec0c2829a3af31d194f18bd88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920670"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 Указывает, что аргумент процедуры может быть пропущен при вызове процедуры.  
@@ -25,13 +25,13 @@ ms.locfileid: "58820793"
   
  Модификатор `Optional` можно использовать в следующих контекстах:  
   
--   [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
 >  При вызове процедуры с или без необязательных параметров, можно передать аргументы по положению или по имени. Дополнительные сведения см. в разделе [передача аргументов по позиции и по имени](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).  

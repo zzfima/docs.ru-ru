@@ -5,11 +5,11 @@ helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
 ms.openlocfilehash: 71057ec219f46cb8b51eb9b44d8b93af540d1b01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923283"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Настройка и расширение среды выполнения с помощью поведений
 Поведения позволяют изменять поведение по умолчанию и добавления пользовательских расширений, которые проверяют и проверить конфигурацию службы или изменить поведение во время выполнения в приложениях клиента и службы Windows Communication Foundation (WCF). В этом разделе описаны интерфейсы поведений, способы их реализации, а также порядок их добавления в описания служб (в приложениях служб) и конечных точек (в клиентских приложениях) как программным образом, так и с помощью файла конфигурации. Дополнительные сведения об использовании предоставляемых системой поведений см. в разделе [указание поведения службы во время выполнения](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) и [указание поведения клиента во время выполнения](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
@@ -20,11 +20,11 @@ ms.locfileid: "59768206"
 ### <a name="behavior-methods"></a>Методы поведений  
  У всех поведений имеется `AddBindingParameters` метод, `ApplyDispatchBehavior` метод, `Validate` метод и `ApplyClientBehavior` метод с одним исключением: Так как <xref:System.ServiceModel.Description.IServiceBehavior> невозможно выполнить в клиенте, он не реализует `ApplyClientBehavior`.  
   
--   Метод `AddBindingParameters` служит для изменения или добавления пользовательских объектов в коллекцию, к которой могут общаться пользовательские привязки при создании среды выполнения. Например, с помощью этого метода можно задать требования защиты, которые влияют на способ создания канала, но не известны разработчику канала.  
+- Метод `AddBindingParameters` служит для изменения или добавления пользовательских объектов в коллекцию, к которой могут общаться пользовательские привязки при создании среды выполнения. Например, с помощью этого метода можно задать требования защиты, которые влияют на способ создания канала, но не известны разработчику канала.  
   
--   Метод `Validate` служит для проверки дерева описания и соответствующего объекта среды выполнения, чтобы убедиться, что они соответствуют определенному набору условий.  
+- Метод `Validate` служит для проверки дерева описания и соответствующего объекта среды выполнения, чтобы убедиться, что они соответствуют определенному набору условий.  
   
--   Методы `ApplyDispatchBehavior` и `ApplyClientBehavior` служат для проверки дерева описания и изменения среды выполнения в определенной области (на стороне службы или на стороне клиента соответственно). Кроме того, эти методы позволяют вставлять объекты расширения.  
+- Методы `ApplyDispatchBehavior` и `ApplyClientBehavior` служат для проверки дерева описания и изменения среды выполнения в определенной области (на стороне службы или на стороне клиента соответственно). Кроме того, эти методы позволяют вставлять объекты расширения.  
   
     > [!NOTE]
     >  Хотя эти методы получают дерево описания, оно доступно им только для проверки. Если изменить дерево описания, поведение станет неопределенным.  
@@ -38,13 +38,13 @@ ms.locfileid: "59768206"
   
  Существует четыре типа поведений в WCF:  
   
--   поведения служб (типы <xref:System.ServiceModel.Description.IServiceBehavior>) позволяют настраивать среду выполнения службы целиком, включая <xref:System.ServiceModel.ServiceHostBase>;  
+- поведения служб (типы <xref:System.ServiceModel.Description.IServiceBehavior>) позволяют настраивать среду выполнения службы целиком, включая <xref:System.ServiceModel.ServiceHostBase>;  
   
--   Поведения конечных точек (типы <xref:System.ServiceModel.Description.IEndpointBehavior>) позволяют настраивать конечные точки служб и соответствующие объекты <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>;  
+- Поведения конечных точек (типы <xref:System.ServiceModel.Description.IEndpointBehavior>) позволяют настраивать конечные точки служб и соответствующие объекты <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>;  
   
--   Поведения контрактов (типы <xref:System.ServiceModel.Description.IContractBehavior>) позволяют настраивать классы <xref:System.ServiceModel.Dispatcher.ClientRuntime> и <xref:System.ServiceModel.Dispatcher.DispatchRuntime> в приложениях клиентов и служб соответственно;  
+- Поведения контрактов (типы <xref:System.ServiceModel.Description.IContractBehavior>) позволяют настраивать классы <xref:System.ServiceModel.Dispatcher.ClientRuntime> и <xref:System.ServiceModel.Dispatcher.DispatchRuntime> в приложениях клиентов и служб соответственно;  
   
--   Поведения операций (типы <xref:System.ServiceModel.Description.IOperationBehavior>) позволяют настраивать классы <xref:System.ServiceModel.Dispatcher.ClientOperation> и <xref:System.ServiceModel.Dispatcher.DispatchOperation> в приложениях клиентов и служб.  
+- Поведения операций (типы <xref:System.ServiceModel.Description.IOperationBehavior>) позволяют настраивать классы <xref:System.ServiceModel.Dispatcher.ClientOperation> и <xref:System.ServiceModel.Dispatcher.DispatchOperation> в приложениях клиентов и служб.  
   
  Эти поведения можно добавлять в различные объекты описания путем реализации пользовательских атрибутов, с помощью файлов конфигурации приложений или путем их непосредственного добавления в коллекцию поведений соответствующего объекта описания. Однако их обязательно необходимо добавлять в объекты описания службы или конечной точки службы до вызова метода <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> объектов <xref:System.ServiceModel.ServiceHost> и <xref:System.ServiceModel.ChannelFactory%601>.  
   

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
 ms.openlocfilehash: 553868ae82501e479acadd04b3d5e4447bcea36e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61867147"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Время существования: Как объекты создаются и удаляются (Visual Basic)
 Экземпляр класса, объект, создается с помощью ключевого слова `New`. Задачи инициализации зачастую необходимо выполнять на новых объектах до их использования. К распространенным задачам инициализации относится открытие файлов, подключение к базам данных и чтение значений параметров реестра. Visual Basic управляет инициализацией новых объектов с помощью процедур, которые называются *конструкторы* (специальные методы, позволяющие управлять инициализацией).  
@@ -84,13 +84,13 @@ ms.locfileid: "58839825"
 ### <a name="implementing-idisposable"></a>Использование IDisposable  
  Класс, реализующий интерфейс <xref:System.IDisposable>, должен включать следующие разделы кода:  
   
--   Поле, чтобы отслеживать, уничтожен ли объект:  
+- Поле, чтобы отслеживать, уничтожен ли объект:  
   
     ```  
     Protected disposed As Boolean = False  
     ```  
   
--   Перегрузка <xref:System.IDisposable.Dispose%2A> для высвобождения ресурсов класса. Этот метод должен вызываться методами <xref:System.IDisposable.Dispose%2A> и `Finalize` базового класса:  
+- Перегрузка <xref:System.IDisposable.Dispose%2A> для высвобождения ресурсов класса. Этот метод должен вызываться методами <xref:System.IDisposable.Dispose%2A> и `Finalize` базового класса:  
   
     ```  
     Protected Overridable Sub Dispose(ByVal disposing As Boolean)  
@@ -104,7 +104,7 @@ ms.locfileid: "58839825"
     End Sub  
     ```  
   
--   Реализация <xref:System.IDisposable.Dispose%2A>, содержащая только следующий код:  
+- Реализация <xref:System.IDisposable.Dispose%2A>, содержащая только следующий код:  
   
     ```  
     Public Sub Dispose() Implements IDisposable.Dispose  
@@ -113,7 +113,7 @@ ms.locfileid: "58839825"
     End Sub  
     ```  
   
--   Переопределение метода `Finalize`, содержащее только следующий код:  
+- Переопределение метода `Finalize`, содержащее только следующий код:  
   
     ```  
     Protected Overrides Sub Finalize()  
