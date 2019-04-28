@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
 ms.openlocfilehash: a526a58ef801e91775756e6a84a94a066d32d284
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857237"
 ---
 # <a name="data-contract-equivalence"></a>Эквивалентность контрактов данных
 Чтобы клиент мог успешно отправлять данные определенного типа службе или чтобы служба могла успешно отправлять данные клиенту, отправляемый тип не обязательно должен существовать на принимающей стороне. Единственное требование заключается в эквивалентности контрактов данных обоих типов. (Иногда Строгая эквивалентность не является обязательным, как описано в [управление версиями контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  

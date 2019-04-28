@@ -3,11 +3,11 @@ title: Обработка ошибок в действии блок-схемы �
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
 ms.openlocfilehash: 81bfeb911658a6f363a9f0f95ecc7db68a02dbe2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005047"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Обработка ошибок в действии блок-схемы с помощью TryCatch
 В этом образце показано использование действия <xref:System.Activities.Statements.TryCatch> в рамках действия сложного потока управления.

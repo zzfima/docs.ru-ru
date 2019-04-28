@@ -11,11 +11,11 @@ helpviewer_keywords:
 - BindingSource [Windows Forms], using with multiple forms
 ms.assetid: a1a49630-db9c-4485-b888-1f62a373a4f7
 ms.openlocfilehash: 19505c690728147d2a67c26371e1cea4c281ab08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013053"
 ---
 # <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>Практическое руководство. Совместное использование одних и тех же данных в нескольких формах посредством компонента BindingSource
 С помощью компонента <xref:System.Windows.Forms.BindingSource> одни и те же данные можно легко использовать в нескольких формах. Например, может потребоваться отобразить одну форму только для чтения со сводкой данных и другую редактируемую форму с подробными сведениями о выбранном в данный момент элементе в источнике данных. В этом примере демонстрируется такая возможность.  
@@ -32,7 +32,7 @@ ms.locfileid: "59154874"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   Ссылки на сборки System, System.Windows.Forms, System.Drawing, System.Data и System.Xml.  
+- Ссылки на сборки System, System.Windows.Forms, System.Drawing, System.Data и System.Xml.  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   

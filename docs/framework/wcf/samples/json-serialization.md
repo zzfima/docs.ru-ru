@@ -3,11 +3,11 @@ title: Сериализация JSON
 ms.date: 03/30/2017
 ms.assetid: 3c2c4747-7510-4bdf-b4fe-64f98428ef4a
 ms.openlocfilehash: bb38005c02e9b3e850282d2a81c2e17143657025
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989863"
 ---
 # <a name="json-serialization"></a>Сериализация JSON
 В этом образце показано, как с помощью объекта <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> сериализовать и десериализовать данные в формате JavaScript Object Notation (JSON). Механизм сериализации преобразует данные JSON в экземпляры типов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] и обратно в данные JSON. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> поддерживает те же типы, что и <xref:System.Runtime.Serialization.DataContractSerializer>. Формат данных JSON бывает особенно полезен при написании веб-приложений AJAX (Asynchronous JavaScript and XML). Поддержка AJAX в Windows Communication Foundation (WCF), оптимизирован для использования с ASP.NET AJAX с помощью элемента управления ScriptManager. Примеры использования Windows Communication Foundation (WCF) с помощью ASP.NET AJAX см. в разделе [образцы AJAX](ajax.md).  

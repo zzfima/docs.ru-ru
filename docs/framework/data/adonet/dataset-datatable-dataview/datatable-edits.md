@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
 ms.openlocfilehash: 0300ceab16d9a94bd04468f7acd105e69d13e643
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879844"
 ---
 # <a name="datatable-edits"></a>Редактирование таблиц данных
 При выполнении изменений значений столбцов в <xref:System.Data.DataRow>, изменения немедленно помещаются в текущее состояние строки. <xref:System.Data.DataRowState> Затем устанавливается **Modified**, и изменения принимаются или отвергаются с использованием <xref:System.Data.DataRow.AcceptChanges%2A> или <xref:System.Data.DataRow.RejectChanges%2A> методы **DataRow**. **DataRow** также предоставляет три метода, которые можно использовать для приостановки состояния строки, при редактировании его. Такими методами являются: <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> и <xref:System.Data.DataRow.CancelEdit%2A>.  

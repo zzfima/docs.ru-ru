@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
 ms.openlocfilehash: a10eaa3ea62df9301a53f5609b503bfabcb50a46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913085"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>Практическое руководство. Обработка события нажатия кнопки в Windows Forms
 Самый простой способ использования форм Windows <xref:System.Windows.Forms.Button> элемент управления должен выполнять определенный код, при нажатии кнопки.  
@@ -31,7 +31,7 @@ ms.locfileid: "59110075"
   
 ### <a name="to-respond-to-a-button-click"></a>Реагировать на нажатие кнопки  
   
--   На кнопке панели `Click` <xref:System.EventHandler> напишите код для выполнения. `Button1_Click` должен быть привязан к элементу управления. Дополнительные сведения см. в разделе [Как Создание обработчиков событий во время выполнения для форм Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+- На кнопке панели `Click` <xref:System.EventHandler> напишите код для выполнения. `Button1_Click` должен быть привязан к элементу управления. Дополнительные сведения см. в разделе [Как Создание обработчиков событий во время выполнения для форм Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  

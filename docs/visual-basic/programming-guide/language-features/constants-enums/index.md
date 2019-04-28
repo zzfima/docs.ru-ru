@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
 ms.openlocfilehash: dfd9330210dd748d739cd8da2985795099beacd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907300"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Константы и перечисления в Visual Basic
 Константы позволяют использовать наглядные имена вместо неизменяемых значений. Как можно понять из их названия, константы хранят значения, которые остаются постоянными в ходе выполнения приложения. С константами вы можете использовать значимые имена вместо чисел, чтобы сделать свой код более удобочитаемым.  

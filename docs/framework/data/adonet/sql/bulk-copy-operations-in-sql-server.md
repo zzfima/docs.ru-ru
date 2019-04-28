@@ -3,11 +3,11 @@ title: Операции массового копирования в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
 ms.openlocfilehash: 086b3b997cf0915be7cfa603a651eb412d52e985
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878648"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Операции массового копирования в SQL Server
 Microsoft SQL Server включает популярную программу командной строки **bcp** обеспечивающую быстрое массовое копирование больших файлов в таблицы или представления в базах данных SQL Server. Класс <xref:System.Data.SqlClient.SqlBulkCopy> позволяет разрабатывать решения на управляемом коде, обеспечивающие аналогичную функциональность. Существуют другие способы загрузки данных в таблицу SQL Server (например, инструкция INSERT), но класс <xref:System.Data.SqlClient.SqlBulkCopy> существенно превосходит их по производительности.  
@@ -16,11 +16,11 @@ Microsoft SQL Server включает популярную программу к
   
  При помощи класса <xref:System.Data.SqlClient.SqlBulkCopy> можно выполнить следующие операции.  
   
--   Отдельную операцию массового копирования.  
+- Отдельную операцию массового копирования.  
   
--   Несколько операций массового копирования.  
+- Несколько операций массового копирования.  
   
--   Операцию массового копирования внутри транзакции.  
+- Операцию массового копирования внутри транзакции.  
   
 > [!NOTE]
 >  При использовании .NET Framework версии 1.1 или более ранней версии (который не поддерживает <xref:System.Data.SqlClient.SqlBulkCopy> класс), SQL Server Transact-SQL можно выполнить **BULK INSERT** инструкции, использующей <xref:System.Data.SqlClient.SqlCommand> объекта.  

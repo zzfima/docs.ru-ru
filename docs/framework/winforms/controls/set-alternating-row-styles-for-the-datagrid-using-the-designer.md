@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
 ms.openlocfilehash: fb338a3616bc20542ec940db5977c4ffdab9654c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012429"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>Практическое руководство. Установка стилей для чередующихся строк в элементе управления DataGridView формы Windows Forms с помощью конструктора
 Данные в таблицах часто представлены в виде подобном бухгалтерским книгам: в чередующихся строках используется разный цвет фона. Такой формат позволяет проще определять, какие ячейки находятся в какой строке, что особенно удобно в широких таблицах со множеством столбцов.  

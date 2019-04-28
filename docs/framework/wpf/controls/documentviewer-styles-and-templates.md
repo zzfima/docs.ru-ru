@@ -10,11 +10,11 @@ helpviewer_keywords:
 - styles [WPF], DocumentViewer
 ms.assetid: 6bd4ff8f-ea6a-4084-ac58-e7a67446ce1c
 ms.openlocfilehash: 4e91a640b36e4793567c9e728fd71ec8ce596743
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911772"
 ---
 # <a name="documentviewer-styles-and-templates"></a>Стили и шаблоны элемента DocumentViewer
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.DocumentViewer> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  

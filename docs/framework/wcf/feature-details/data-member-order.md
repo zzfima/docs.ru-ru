@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
 ms.openlocfilehash: c78cc682c0776bfb0ce09dec7ba1ff8cab504285
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857146"
 ---
 # <a name="data-member-order"></a>Порядок членов данных
 В некоторых приложениях полезно знать порядок передачи или предполагаемого приема данных от различных элементов данных (например, порядок, в котором данные появляются в сериализованной форме XML). Иногда может потребоваться изменить этот порядок. В этом разделе рассматриваются правила упорядочивания.  
@@ -20,11 +20,11 @@ ms.locfileid: "59198573"
 ## <a name="basic-rules"></a>Основные правила  
  Ниже перечислены основные правила упорядочивания данных.  
   
--   Если тип контракта данных является частью иерархии наследования, элементы данных базовых типов всегда идут первыми.  
+- Если тип контракта данных является частью иерархии наследования, элементы данных базовых типов всегда идут первыми.  
   
--   Затем следуют (в алфавитном порядке) элементы данных текущего типа, для которых не задано свойство <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> атрибута <xref:System.Runtime.Serialization.DataMemberAttribute>.  
+- Затем следуют (в алфавитном порядке) элементы данных текущего типа, для которых не задано свойство <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> атрибута <xref:System.Runtime.Serialization.DataMemberAttribute>.  
   
--   Затем следуют любые элементы данных, для которых задано свойство <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> атрибута <xref:System.Runtime.Serialization.DataMemberAttribute>. Они упорядочиваются сначала по значению свойства `Order` и затем по алфавиту, если существует несколько элементов определенного значения `Order`. Значения свойства "Order" могут быть пропущены.  
+- Затем следуют любые элементы данных, для которых задано свойство <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> атрибута <xref:System.Runtime.Serialization.DataMemberAttribute>. Они упорядочиваются сначала по значению свойства `Order` и затем по алфавиту, если существует несколько элементов определенного значения `Order`. Значения свойства "Order" могут быть пропущены.  
   
  Алфавитный порядок устанавливается посредством вызова метода <xref:System.String.CompareOrdinal%2A>.  
   

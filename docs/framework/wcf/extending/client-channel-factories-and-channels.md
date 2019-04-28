@@ -3,11 +3,11 @@ title: 'Клиент: Фабрики каналов и каналы'
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
 ms.openlocfilehash: bfa5d2478d5c12f16c2d9531de02e1c868eab560
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858418"
 ---
 # <a name="client-channel-factories-and-channels"></a>Клиент: Фабрики каналов и каналы
 В этом разделе рассматривается создание фабрик каналов и каналов.  
@@ -22,13 +22,13 @@ ms.locfileid: "59166261"
   
  WCF предоставляет вспомогательные методы базового класса для этого процесса. (Схему вспомогательных классов каналов, описанных в этом разделе, см. в разделе [Общие сведения о модели каналов](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
   
--   <xref:System.ServiceModel.Channels.CommunicationObject> Класс реализует <xref:System.ServiceModel.ICommunicationObject> и принудительно создает конечный автомат, описанный в действии 2 [каналы развивающихся](../../../../docs/framework/wcf/extending/developing-channels.md).  
+- <xref:System.ServiceModel.Channels.CommunicationObject> Класс реализует <xref:System.ServiceModel.ICommunicationObject> и принудительно создает конечный автомат, описанный в действии 2 [каналы развивающихся](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
--   <xref:System.ServiceModel.Channels.ChannelManagerBase> Класс реализует <xref:System.ServiceModel.Channels.CommunicationObject> и предоставляет универсальный базовый класс для классов <xref:System.ServiceModel.Channels.ChannelFactoryBase?displayProperty=nameWithType> и <xref:System.ServiceModel.Channels.ChannelListenerBase?displayProperty=nameWithType>. Класс <xref:System.ServiceModel.Channels.ChannelManagerBase> работает совместно с классом <xref:System.ServiceModel.Channels.ChannelBase> - базовым классом, реализующим интерфейс <xref:System.ServiceModel.Channels.IChannel>.
+- <xref:System.ServiceModel.Channels.ChannelManagerBase> Класс реализует <xref:System.ServiceModel.Channels.CommunicationObject> и предоставляет универсальный базовый класс для классов <xref:System.ServiceModel.Channels.ChannelFactoryBase?displayProperty=nameWithType> и <xref:System.ServiceModel.Channels.ChannelListenerBase?displayProperty=nameWithType>. Класс <xref:System.ServiceModel.Channels.ChannelManagerBase> работает совместно с классом <xref:System.ServiceModel.Channels.ChannelBase> - базовым классом, реализующим интерфейс <xref:System.ServiceModel.Channels.IChannel>.
   
--   <xref:System.ServiceModel.Channels.ChannelFactoryBase> Класс реализует <xref:System.ServiceModel.Channels.ChannelManagerBase> и <xref:System.ServiceModel.Channels.IChannelFactory> и объединяет `CreateChannel` перегрузки в одну `OnCreateChannel` абстрактный метод.
+- <xref:System.ServiceModel.Channels.ChannelFactoryBase> Класс реализует <xref:System.ServiceModel.Channels.ChannelManagerBase> и <xref:System.ServiceModel.Channels.IChannelFactory> и объединяет `CreateChannel` перегрузки в одну `OnCreateChannel` абстрактный метод.
   
--   <xref:System.ServiceModel.Channels.ChannelListenerBase> Класс реализует <xref:System.ServiceModel.Channels.IChannelListener>. Он отвечает за базовое управление состоянием. 
+- <xref:System.ServiceModel.Channels.ChannelListenerBase> Класс реализует <xref:System.ServiceModel.Channels.IChannelListener>. Он отвечает за базовое управление состоянием. 
   
  Следующее обсуждение построено на базе [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца.  
   

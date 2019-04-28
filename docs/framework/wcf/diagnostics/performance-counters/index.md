@@ -5,11 +5,11 @@ helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
 ms.openlocfilehash: 31c5b386d707aa49cd36d536f1c8b419eb74a658
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916413"
 ---
 # <a name="wcf-performance-counters"></a>Счетчики производительности WCF
 Windows Communication Foundation (WCF) включает в себя большой набор счетчиков производительности с помощью которых можно измерять производительность приложения.  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) включает в себя большо
   
  Атрибут `performanceCounters` можно настроить так, чтобы включать определенный тип счетчиков производительности. Допустимы следующие значения:  
   
--   Все: Включены счетчики всех категорий (ServiceModelService, ServiceModelEndpoint и ServiceModelOperation).  
+- Все: Включены счетчики всех категорий (ServiceModelService, ServiceModelEndpoint и ServiceModelOperation).  
   
--   ServiceOnly Включены только счетчики категории ServiceModelService. Это значение по умолчанию.  
+- ServiceOnly Включены только счетчики категории ServiceModelService. Это значение по умолчанию.  
   
--   OFF: Счетчики производительности ServiceModel * отключены.  
+- OFF: Счетчики производительности ServiceModel * отключены.  
   
  Если вы хотите включить счетчики производительности для всех приложений WCF, можно поместить параметры конфигурации в файле Machine.config.  См. в разделе **увеличение объема памяти для счетчиков производительности** приведенном ниже разделе Дополнительные сведения о настройке достаточного объема памяти для счетчиков производительности на компьютере.  
   
@@ -63,11 +63,11 @@ config.Save();
   
  Можно изменить объем памяти счетчиков производительности для категорий WCF в реестре. Для этого необходимо добавить новое значение DWORD с именем `FileMappingSize` в три следующих расположения и задать для него требуемое значение в байтах. Перезагрузите компьютер, чтобы эти изменения вступили в силу.  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
   
  Если множество объектов (например, ServiceHost) удаляется, но ожидает сборки мусора, счетчик производительности `PrivateBytes` регистрирует необычно большое количество объектов. Чтобы устранить эту проблему, можно либо добавить собственные счетчики, относящиеся к приложению, либо использовать атрибут `performanceCounters`, чтобы включить только счетчики уровня службы.  
   
@@ -76,11 +76,11 @@ config.Save();
   
  Можно использовать инструментарий WMI, чтобы получить имя экземпляра счетчика производительности. Например, примененная к объекту директива  
   
--   Имя экземпляра счетчика службы можно получить с помощью WMI [службы](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) свойства «CounterInstanceName» экземпляра.  
+- Имя экземпляра счетчика службы можно получить с помощью WMI [службы](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) свойства «CounterInstanceName» экземпляра.  
   
--   Имя экземпляра счетчика конечной точки можно получить с помощью WMI [конечной точки](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) свойства «CounterInstanceName» экземпляра.  
+- Имя экземпляра счетчика конечной точки можно получить с помощью WMI [конечной точки](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) свойства «CounterInstanceName» экземпляра.  
   
--   Имя экземпляра счетчика операций можно получить с помощью WMI [конечной точки](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) метода «GetOperationCounterInstanceName» экземпляра.  
+- Имя экземпляра счетчика операций можно получить с помощью WMI [конечной точки](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) метода «GetOperationCounterInstanceName» экземпляра.  
   
  Дополнительные сведения о WMI см. в разделе [с помощью Windows Management Instrumentation для диагностики](../../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
@@ -126,15 +126,15 @@ ServiceName@ServiceBaseAddress
 ## <a name="programming-the-wcf-performance-counters"></a>Программирование счетчиков производительности WCF  
  Несколько файлов устанавливаются в папке установки пакета SDK, таким образом, счетчики производительности WCF можно обращаться программно. Ниже приводится список этих файлов.  
   
--   _ServiceModelEndpointPerfCounters.vrg  
+- _ServiceModelEndpointPerfCounters.vrg  
   
--   _ServiceModelOperationPerfCounters.vrg  
+- _ServiceModelOperationPerfCounters.vrg  
   
--   _ServiceModelServicePerfCounters.vrg  
+- _ServiceModelServicePerfCounters.vrg  
   
--   _SMSvcHostPerfCounters.vrg  
+- _SMSvcHostPerfCounters.vrg  
   
--   _TransactionBridgePerfCounters.vrg  
+- _TransactionBridgePerfCounters.vrg  
   
  Дополнительные сведения о том, как получить доступ к счетчикам программным образом см. в разделе [программная архитектура счетчика производительности](https://go.microsoft.com/fwlink/?LinkId=95179).  
   

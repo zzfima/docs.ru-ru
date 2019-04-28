@@ -5,20 +5,20 @@ ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f81ff8a347235ab1a765b4f41051dab2da786b89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866877"
 ---
 # <a name="net-native-general-troubleshooting"></a>Машинный код .NET: Устранение общих неполадок
 В этом разделе описаны способы устранения возможных проблем, с которыми можно столкнуться при разработке приложения с помощью [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
   
--   **Проблема.** Окно вывода построения не обновляется должным образом.  
+- **Проблема.** Окно вывода построения не обновляется должным образом.  
   
      **Решение.** Окно вывода построения не обновляется до завершения построения. Время построения может занимать до нескольких минут, поэтому обновления могут отображаться с задержкой.  
   
--   **Проблема.** Время построения приложения розничной торговли для ARM увеличилось.  
+- **Проблема.** Время построения приложения розничной торговли для ARM увеличилось.  
   
      **Решение.** При развертывании приложения на устройстве ARM, [!INCLUDE[net_native](../../../includes/net-native-md.md)] вызывается инфраструктура. Этой компиляции выполняет большое количество операций оптимизации, обеспечивая продолжение работы нестатической семантики, такой как отражение. Кроме того, часть платформа.NET Framework, которую использует приложение статически связывается для обеспечения оптимальной производительности и должна быть также скомпилирована в машинный код. Именно поэтому компиляция занимает больше времени.  
   
@@ -26,19 +26,19 @@ ms.locfileid: "59150778"
   
      Мы продолжаем работать над повышением производительности компиляции, занимаясь вопросами многопоточной компиляции и другими оптимизациями.  
   
--   **Проблема.** Вы не знаете, было ли ваше приложение скомпилировано с помощью [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+- **Проблема.** Вы не знаете, было ли ваше приложение скомпилировано с помощью [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
   
      **Решение.** Если [!INCLUDE[net_native](../../../includes/net-native-md.md)] вызывается компилятор, вы заметите больше времени сборки и диспетчер задач будет показывать различные [!INCLUDE[net_native](../../../includes/net-native-md.md)] компонент процессов, таких как ILC.exe и nutc_driver.exe.  
   
      После успешного построения проекта с помощью [!INCLUDE[net_native](../../../includes/net-native-md.md)] вы увидите результат в разделе конфигурации obj\\*config*\ *arch*\\*projectname*.ilc\out.  Содержимое конечного пакета машинного кода можно найти в разделе bin\\*arch*\\*config*\AppX. Содержимое конечного пакета машинного кода находится в разделе \bin\\*arch*\\*config*\AppX, если вы развернули приложение.  
   
--   **Проблема.** Ваше приложение, скомпилированное с машинным .NET создает исключения среды выполнения (обычно [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) или [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) исключения), он не создавались при компиляции без. NET машинный код.  
+- **Проблема.** Ваше приложение, скомпилированное с машинным .NET создает исключения среды выполнения (обычно [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) или [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) исключения), он не создавались при компиляции без. NET машинный код.  
   
      **Решение.** Это происходит потому, что .NET Native не предоставил метаданные или код реализации, доступный в противном случае через отражение. (Дополнительные сведения см. в разделе [.NET Native и компиляция](../../../docs/framework/net-native/net-native-and-compilation.md).) Чтобы устранить исключение, необходимо добавить запись в [файл директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md), чтобы цепочка инструментов .NET Native могла сделать метаданные или код реализации доступными во время выполнения. Доступны два средства устранения неполадок, которые создадут необходимые записи для добавления в файл директив среды выполнения.  
   
-    -   [Средство устранения неполадок MissingMetadataException](https://dotnet.github.io/native/troubleshooter/type.html) для типов.  
+    - [Средство устранения неполадок MissingMetadataException](https://dotnet.github.io/native/troubleshooter/type.html) для типов.  
   
-    -   [Средство устранения неполадок MissingMetadataException](https://dotnet.github.io/native/troubleshooter/method.html) для методов.  
+    - [Средство устранения неполадок MissingMetadataException](https://dotnet.github.io/native/troubleshooter/method.html) для методов.  
   
      Дополнительные сведения см. в разделе [Отражение и .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md).  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
 ms.openlocfilehash: 6c2e554b7e6bde3e82190f70723f272b0d39a18a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880039"
 ---
 # <a name="handling-dataview-events"></a>Обработка событий DataView
 Событие <xref:System.Data.DataView.ListChanged> объекта <xref:System.Data.DataView> используется для определения того, было ли обновлено представление. К обновлениям, которые вызывают это событие, относятся добавление, удаление или изменение строки в базовой таблице, добавление или удаление столбца из схемы базовой таблицы, изменение в родительской или дочерней связи. **ListChanged** событий также уведомляет вас, когда список строк, которые вы просматриваете значительно изменен из-за применения нового порядка сортировки или фильтра.  

@@ -3,11 +3,11 @@ title: Транзакции и параллельность
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
 ms.openlocfilehash: ba857031a54374ee295c2bfd724e7fb8651b7c1f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933709"
 ---
 # <a name="transactions-and-concurrency"></a>Транзакции и параллельность
 Транзакция состоит из одной команды или группы команд, которые выполняются как пакет. Транзакции позволяют объединить несколько операций в одну единицу работы. Если в какой-либо точке транзакции возникает ошибка, может быть выполнен откат всех обновлений к их состоянию до начала транзакции.  

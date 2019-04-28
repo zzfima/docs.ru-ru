@@ -10,11 +10,11 @@ helpviewer_keywords:
 - CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
 ms.openlocfilehash: 79836dd260cb13912ccba43cfb4a0a3e0ad195fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011207"
 ---
 # <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Как выполнить: Добавление пользовательского размещения в диалоговое окно сохранения или открытия файла
 Диалоговые окна сохранения или открытия файла по умолчанию в [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] содержат область в левой части окна под названием **Избранные ссылки**. Это область пользовательских размещений. <xref:System.Windows.Forms.OpenFileDialog> И <xref:System.Windows.Forms.SaveFileDialog> классы позволяют добавлять папки <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> коллекции.  
@@ -24,7 +24,7 @@ ms.locfileid: "59087694"
   
 ### <a name="to-add-a-custom-place-to-a-file-dialog-box"></a>Добавление пользовательского размещения в диалоговое окно сохранения или открытия файла  
   
--   Добавьте путь, GUID известной папки, или <xref:System.Windows.Forms.FileDialogCustomPlace> объект <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> коллекцию диалоговое окно.  
+- Добавьте путь, GUID известной папки, или <xref:System.Windows.Forms.FileDialogCustomPlace> объект <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> коллекцию диалоговое окно.  
   
      В следующем примере кода демонстрируется добавление пути.  
   

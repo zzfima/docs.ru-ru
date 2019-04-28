@@ -7,18 +7,18 @@ helpviewer_keywords:
 - values [Visual Basic], enumeration members
 ms.assetid: 9253e7c8-579c-49a2-8f26-392b20ea99eb
 ms.openlocfilehash: 4fa04fa621347ae961975bfb636734e6c9df39fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906806"
 ---
 # <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a>Практическое руководство. Определение строки, связанной со значением из перечисления (Visual Basic)
 <xref:System.Enum.GetValues%2A> И <xref:System.Enum.GetNames%2A> методы позволяют определить строки и значения, связанные с членами перечисления.  
   
 ### <a name="to-determine-the-string-associated-with-an-enumeration"></a>Чтобы определить строки, связанной с перечислением  
   
--   Используйте <xref:System.Enum.GetNames%2A> метод для извлечения строки, связанные с членами перечисления. В этом примере объявляется перечисление, `flavorEnum`, затем использует <xref:System.Enum.GetNames%2A> метод для отображения строк, связанных с каждым элементом.  
+- Используйте <xref:System.Enum.GetNames%2A> метод для извлечения строки, связанные с членами перечисления. В этом примере объявляется перечисление, `flavorEnum`, затем использует <xref:System.Enum.GetNames%2A> метод для отображения строк, связанных с каждым элементом.  
   
      [!code-vb[VbEnumsTask#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#2)]  
   

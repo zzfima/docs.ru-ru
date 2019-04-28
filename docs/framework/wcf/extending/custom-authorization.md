@@ -3,11 +3,11 @@ title: Пользовательская авторизация
 ms.date: 03/30/2017
 ms.assetid: 4f90311a-2593-462e-9174-2f7ac78217b9
 ms.openlocfilehash: f89fb3c14735417f2688890eb335e9700fb99d6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858342"
 ---
 # <a name="custom-authorization"></a>Пользовательская авторизация
 Авторизация - это процесс управления доступом к ресурсам и задачам. Подразделы этого раздела содержат сведения по созданию (реализации) различных типов утверждений или политик.  

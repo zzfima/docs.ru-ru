@@ -13,11 +13,11 @@ helpviewer_keywords:
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
 ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017837"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate
 <a name="introduction"></a> Объект <xref:System.Windows.Controls.ControlTemplate> указывает визуальную структуру и визуальное поведение элемента управления. Можно настроить внешний вид элемента управления, предоставляя ему новый <xref:System.Windows.Controls.ControlTemplate>. При создании <xref:System.Windows.Controls.ControlTemplate>, заменяется внешний вид существующего элемента управления без изменения его функциональных возможностей. Например, можно сделать кнопки в приложении круглыми вместо установленных по умолчанию квадратных, но кнопка по-прежнему будет вызывать <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий.  
@@ -64,11 +64,11 @@ ms.locfileid: "59098966"
   
  В данном примере визуальная структура состоит из следующих частей:  
   
--   Объект <xref:System.Windows.Controls.Border> с именем `RootElement` который выступает в качестве корневого шаблона <xref:System.Windows.FrameworkElement>.  
+- Объект <xref:System.Windows.Controls.Border> с именем `RootElement` который выступает в качестве корневого шаблона <xref:System.Windows.FrameworkElement>.  
   
--   Объект <xref:System.Windows.Controls.Grid> то есть является потомком `RootElement`.  
+- Объект <xref:System.Windows.Controls.Grid> то есть является потомком `RootElement`.  
   
--   Объект <xref:System.Windows.Controls.ContentPresenter> , отображающий содержимое кнопки. <xref:System.Windows.Controls.ContentPresenter> Позволяет любой тип объекта для отображения.  
+- Объект <xref:System.Windows.Controls.ContentPresenter> , отображающий содержимое кнопки. <xref:System.Windows.Controls.ContentPresenter> Позволяет любой тип объекта для отображения.  
   
  [!code-xaml[VSMButtonTemplate#BasicTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
   
@@ -85,9 +85,9 @@ ms.locfileid: "59098966"
   
  <xref:System.Windows.Controls.Control> Класс определяет несколько свойств, которые должны использоваться шаблон элемента управления, чтобы оказывать влияние на элемент управления, если они находятся. Каким образом <xref:System.Windows.Controls.ControlTemplate> использует свойство зависит от свойства. <xref:System.Windows.Controls.ControlTemplate> Необходимо использовать свойство одним из следующих способов:  
   
--   Элемент в <xref:System.Windows.Controls.ControlTemplate> шаблон привязывается к свойству.  
+- Элемент в <xref:System.Windows.Controls.ControlTemplate> шаблон привязывается к свойству.  
   
--   Элемент в <xref:System.Windows.Controls.ControlTemplate> наследует свойство от родительского объекта <xref:System.Windows.FrameworkElement>.  
+- Элемент в <xref:System.Windows.Controls.ControlTemplate> наследует свойство от родительского объекта <xref:System.Windows.FrameworkElement>.  
   
  В следующей таблице перечислены визуальные свойства, наследуемые элементом управления от <xref:System.Windows.Controls.Control> класса. В таблице также указывается, использует ли шаблон элемента управления по умолчанию значение наследуемого свойства или оно должно быть привязано к шаблону.  
   
@@ -167,11 +167,11 @@ ms.locfileid: "59098966"
   
  Можно указать время, необходимое анимации плавно переходил элемент управления из одного состояния в другое, добавив <xref:System.Windows.VisualTransition> объектов <xref:System.Windows.Controls.ControlTemplate>. При создании <xref:System.Windows.VisualTransition>, вы указываете одну или несколько из следующих:  
   
--   время, которое занимает переход между состояниями;  
+- время, которое занимает переход между состояниями;  
   
--   дополнительные изменения внешнего вида элемента управления, возникающие во время перехода;  
+- дополнительные изменения внешнего вида элемента управления, возникающие во время перехода;  
   
--   Какие состояния <xref:System.Windows.VisualTransition> применяется к.  
+- Какие состояния <xref:System.Windows.VisualTransition> применяется к.  
   
 ### <a name="specifying-the-duration-of-a-transition"></a>Задание продолжительности перехода  
  Можно указать, сколько времени занимает переход, задав <xref:System.Windows.VisualTransition.GeneratedDuration%2A> свойство. В предыдущем примере имеется <xref:System.Windows.VisualState> , указывающий, что граница кнопки становится прозрачной при нажатии кнопки, но анимация продолжается слишком долго, чтобы быть заметной при быстро нажата и отпущена кнопка. Можно использовать <xref:System.Windows.VisualTransition> для задания периода времени занимает элемент управления переходить в нажатом состоянии. В следующем примере задается, что переход элемента управления в нажатое состояние занимает одну сотую секунды.  
@@ -201,13 +201,13 @@ ms.locfileid: "59098966"
   
  В следующем примере показан <xref:System.Windows.VisualStateGroup> для `CommonStates`. В примере определяется <xref:System.Windows.VisualTransition> для каждого из следующих кнопки перехода.  
   
--   в состояние `Pressed`;  
+- в состояние `Pressed`;  
   
--   в состояние `MouseOver`;  
+- в состояние `MouseOver`;  
   
--   из состояния `Pressed` в состояние `MouseOver`;  
+- из состояния `Pressed` в состояние `MouseOver`;  
   
--   из состояния `MouseOver` в состояние `Normal`.  
+- из состояния `MouseOver` в состояние `Normal`.  
   
  [!code-xaml[VSMButtonTemplate#VisualTransitions](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
   
@@ -217,11 +217,11 @@ ms.locfileid: "59098966"
   
  Контракт элемента управления имеет три элемента:  
   
--   визуальный элемент, используемый логикой элемента управления;  
+- визуальный элемент, используемый логикой элемента управления;  
   
--   состояния элемента управления и группа, к которой принадлежит каждое состояние;  
+- состояния элемента управления и группа, к которой принадлежит каждое состояние;  
   
--   общие свойства, визуально воздействующие на элемент управления.  
+- общие свойства, визуально воздействующие на элемент управления.  
   
 ### <a name="visual-elements-in-the-control-contract"></a>Визуальные элементы в контракте элемента управления  
  Иногда логика элемента управления взаимодействует с <xref:System.Windows.FrameworkElement> , который находится в <xref:System.Windows.Controls.ControlTemplate>. Например, элемент управления может обрабатывать событие одного из своих элементов. Когда элемент управления ожидает найти конкретный <xref:System.Windows.FrameworkElement> в <xref:System.Windows.Controls.ControlTemplate>, он должен передать эти сведения для <xref:System.Windows.Controls.ControlTemplate> автора. Элемент управления использует <xref:System.Windows.TemplatePartAttribute> для передачи типа элемента, ожидается, что и имя элемента, которое должно быть. <xref:System.Windows.Controls.Button> Имеет <xref:System.Windows.FrameworkElement> части в контракте элемента управления, но другие элементы управления, такие как <xref:System.Windows.Controls.ComboBox>, сделать.  
@@ -250,9 +250,9 @@ ms.locfileid: "59098966"
   
  При создании <xref:System.Windows.Controls.ControlTemplate>, часто бывает проще начать с существующего <xref:System.Windows.Controls.ControlTemplate> и внести в него изменения. Можно выполнить одно из следующих действий, чтобы изменить существующий <xref:System.Windows.Controls.ControlTemplate>:  
   
--   Воспользоваться конструктором, таким как Expression Blend, который предоставляет графический пользовательский интерфейс для создания шаблонов элементов управления. Дополнительные сведения см. в статье [Настройка стиля элемента управления, поддерживающего шаблон](https://go.microsoft.com/fwlink/?LinkId=161153).  
+- Воспользоваться конструктором, таким как Expression Blend, который предоставляет графический пользовательский интерфейс для создания шаблонов элементов управления. Дополнительные сведения см. в статье [Настройка стиля элемента управления, поддерживающего шаблон](https://go.microsoft.com/fwlink/?LinkId=161153).  
   
--   Установленный по умолчанию <xref:System.Windows.Controls.ControlTemplate> и изменить его. Шаблоны элементов управления по умолчанию, включенных в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], см. в документе [Default WPF Themes](https://go.microsoft.com/fwlink/?LinkID=158252).  
+- Установленный по умолчанию <xref:System.Windows.Controls.ControlTemplate> и изменить его. Шаблоны элементов управления по умолчанию, включенных в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], см. в документе [Default WPF Themes](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>Полный пример  

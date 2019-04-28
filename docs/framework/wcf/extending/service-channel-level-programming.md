@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
 ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857765"
 ---
 # <a name="service-channel-level-programming"></a>Программирование служб на уровне канала
 В этом разделе описывается создание приложения службы Windows Communication Foundation (WCF) без использования <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> и его связанной объектной модели.  

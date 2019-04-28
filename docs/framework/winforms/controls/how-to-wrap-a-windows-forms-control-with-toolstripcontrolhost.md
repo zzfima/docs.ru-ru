@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], hosting controls
 ms.assetid: e2ce4990-661d-4882-a116-8a9eb575dc84
 ms.openlocfilehash: ccf82b2ea767d69797af1ffa38381a7cc0fd3b67
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762333"
 ---
 # <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Практическое руководство. Заключение элемента управления в оболочку ToolStripControlHost в Windows Forms
 <xref:System.Windows.Forms.ToolStripControlHost> обеспечивает возможность размещения произвольных элементов управления Windows Forms с помощью конструктора <xref:System.Windows.Forms.ToolStripControlHost> или путем расширения самого <xref:System.Windows.Forms.ToolStripControlHost>. Создавать оболочку для элемента управления проще путем расширения <xref:System.Windows.Forms.ToolStripControlHost> и реализации свойств и методов, которые будут предоставлять часто используемые свойства и методы элемента управления. Можно также обеспечить доступ к событиям для элемента управления на уровне <xref:System.Windows.Forms.ToolStripControlHost>.  
@@ -59,9 +59,9 @@ ms.locfileid: "59308007"
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
--   Для этого примера требуются:  
+- Для этого примера требуются:  
   
--   ссылки на сборки System и System.Windows.Forms;  
+- ссылки на сборки System и System.Windows.Forms;  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   

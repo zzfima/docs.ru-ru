@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
 ms.openlocfilehash: a335531b090983de4e2b3daccc9f956930cbad6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011033"
 ---
 # <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>Практическое руководство. Добавление элемента управления в родительское окно MDI (Windows Forms)
 В некоторых приложениях вид дочернего окна многодокументного интерфейса (MDI) может отличаться от родительского окна MDI. Например, родительским окном MDI может быть электронная таблица, а дочерним окном MDI — диаграмма. В этом случае может потребоваться дополнить содержимое меню родительского окна MDI содержимым меню дочерней MDI-формы, по мере того как активируются дочерние окна MDI различных типов.  
@@ -82,8 +82,8 @@ ms.locfileid: "59771702"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   два элемента управления <xref:System.Windows.Forms.Form> с именами `Form1` и `Form2`;  
+- два элемента управления <xref:System.Windows.Forms.Form> с именами `Form1` и `Form2`;  
   
--   элемент управления <xref:System.Windows.Forms.MenuStrip> на `Form1` с именем `menuStrip1` и элемент управления <xref:System.Windows.Forms.MenuStrip> на `Form2` с именем `menuStrip2`;  
+- элемент управления <xref:System.Windows.Forms.MenuStrip> на `Form1` с именем `menuStrip1` и элемент управления <xref:System.Windows.Forms.MenuStrip> на `Form2` с именем `menuStrip2`;  
   
--   ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.
+- ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.

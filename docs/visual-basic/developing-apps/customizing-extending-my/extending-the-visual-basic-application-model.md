@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
 ms.openlocfilehash: 6ba3f29ad0ceef7f1ea9d102743df568a32c26c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014286"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Расширение модели приложения Visual Basic
 Можно добавить функциональность в модель приложения путем переопределения `Overridable` членами <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> класса. Этот метод позволяет настроить поведение модели приложения и добавить вызовы собственных методов, как приложение запускается и завершает работу.  
@@ -38,11 +38,11 @@ ms.locfileid: "59320149"
   
      <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> Метод вызывает следующие методы:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Определяет, имеет ли приложение заставку и если да, отображает на экране-заставке в отдельном потоке.  
+    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Определяет, имеет ли приложение заставку и если да, отображает на экране-заставке в отдельном потоке.  
   
          <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> Метод содержит код, отображающий заставка экрана для по крайней мере число миллисекунд, определенных в <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> свойство. Чтобы использовать эту функцию, необходимо добавить экран-заставка для приложения с помощью **конструктор проектов** (какие наборы `My.Application.MinimumSplashScreenDisplayTime` свойства две секунды), или задать `My.Application.MinimumSplashScreenDisplayTime` свойство в методе, который переопределяет <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> или <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> метод. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Позволяет разработчику создавать код, инициализирующий экран-заставка.  
+    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Позволяет разработчику создавать код, инициализирующий экран-заставка.  
   
          По умолчанию этот метод не выполняет никаких действий. Если выбран экран-заставку для приложения в Visual Basic **конструктор проектов**, конструктор переопределяет <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> метод с методом, который задает <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> свойства новый экземпляр формы экрана заставки .  
   
@@ -54,11 +54,11 @@ ms.locfileid: "59320149"
   
      По умолчанию, прежде чем он входит в цикл обработки сообщений Windows Forms, этот метод вызывает `OnCreateMainForm` (для создания главной формы приложения) и `HideSplashScreen` (чтобы закрыть экран-заставка) методы:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Позволяет разработчику создавать код инициализации главной формы.  
+    1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Позволяет разработчику создавать код инициализации главной формы.  
   
          По умолчанию этот метод не выполняет никаких действий. Тем не менее, при выборе главной формы приложения в Visual Basic **конструктор проектов**, конструктор переопределяет <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> метод с методом, который задает <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> свойства новый экземпляр главной формы.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Если приложение имеет определенную заставку, и он открыт, этот метод закрывает экран-заставка.  
+    2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Если приложение имеет определенную заставку, и он открыт, этот метод закрывает экран-заставка.  
   
          По умолчанию этот метод закрывает экран-заставка.  
   
@@ -97,7 +97,6 @@ ms.locfileid: "59320149"
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - [Обзор модели приложения в Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
 - [Страница "Приложение" в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

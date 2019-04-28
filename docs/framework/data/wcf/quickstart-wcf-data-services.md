@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
 ms.openlocfilehash: f20ffcf356aa0493b1e2356746d9ad7b27d9a1aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876204"
 ---
 # <a name="quickstart-wcf-data-services"></a>Краткое руководство (службы данных WCF)
 
@@ -28,7 +28,7 @@ ms.locfileid: "43504566"
 
 - Экземпляр SQL Server. Это включает SQL Server Express, который включен по умолчанию при установке Visual Studio 2015, или как часть **хранение и обработка данных** рабочей нагрузки в Visual Studio 2017.
 
-- Наличие учебной базы данных Northwind. Чтобы скачать этот образец базы данных, см. на странице загрузки [образцы баз данных для SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
+- Наличие учебной базы данных Northwind. Чтобы скачать этот образец базы данных, см. страницу скачивания [Sample Databases for SQL Server](https://go.microsoft.com/fwlink/?linkid=24758)(Образцы баз данных для SQL Server).
 
 ## <a name="wcf-data-services-quickstart-tasks"></a>Задачи краткого руководства по служб данных WCF
 
@@ -45,7 +45,7 @@ ms.locfileid: "43504566"
  Создание приложения WPF для использования канала OData, привязка данных к элементам управления Windows, изменения данных в привязанных элементах управления и отправьте изменения обратно службе данных.
 
 > [!NOTE]
-> Файлы проекта из полной версии краткого руководства можно загрузить из [WCF Data Services Documentation Samples](https://go.microsoft.com/fwlink/?LinkId=179994) страницы.
+> Файлы проекта, создаваемого при изучении краткого руководства, можно скачать на странице [WCF Data Services Documentation Samples](https://go.microsoft.com/fwlink/?LinkId=179994) (Образцы из документации по службам данных WCF).
 
 ## <a name="next-steps"></a>Следующие шаги
 

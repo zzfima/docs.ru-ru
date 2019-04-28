@@ -5,11 +5,11 @@ helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: f64b52c7-8b11-4410-93a6-cb3aeebcc772
 ms.openlocfilehash: a5af41e25b8f82aa173e2df28cc41b313c8d68dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907079"
 ---
 # <a name="how-to-create-an-add-extension-method-used-by-a-collection-initializer-visual-basic"></a>Практическое руководство. Создание метода Add, расширение используемого инициализатором набора (Visual Basic)
 При использовании инициализатора коллекции для создания коллекции, используемые компилятором Visual Basic выполняет поиск `Add` метода типа коллекции, для которого параметры `Add` метод соответствуют типам значений в инициализаторе набора. Это `Add` метод используется для заполнения коллекции значениями из инициализатора коллекции.  

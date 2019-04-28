@@ -5,11 +5,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
 ms.openlocfilehash: 892168ec282fbf168c43515e0718fe5486a345a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011664"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>Архитектура элементов управления DataGridView (Windows Forms)
 <xref:System.Windows.Forms.DataGridView> Управления и связанные с ним классы предназначены для гибкую, расширяемую систему для отображения и редактирования табличных данных. Все эти классы содержатся в <xref:System.Windows.Forms?displayProperty=nameWithType> пространства имен и они именуются с префиксом «DataGridView».  
@@ -26,19 +26,19 @@ ms.locfileid: "59130264"
 ### <a name="datagridviewelementstates"></a>DataGridViewElementStates  
  <xref:System.Windows.Forms.DataGridViewElementStates> Перечисление содержит следующие значения:  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.None>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.None>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.Frozen>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.Frozen>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.ReadOnly>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.ReadOnly>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.Resizable>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.Resizable>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.ResizableSet>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.ResizableSet>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.Selected>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.Selected>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.Visible>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.Visible>  
   
  Значения этого перечисления могут сочетаться с побитовые логические операторы, поэтому <xref:System.Windows.Forms.DataGridViewElement.State%2A> свойство можно выразить несколько состояний одновременно. Например <xref:System.Windows.Forms.DataGridViewElement> может быть одновременно <xref:System.Windows.Forms.DataGridViewElementStates.Frozen>, <xref:System.Windows.Forms.DataGridViewElementStates.Selected>, и <xref:System.Windows.Forms.DataGridViewElementStates.Visible>.  
   
@@ -58,27 +58,27 @@ ms.locfileid: "59130264"
   
  В следующем списке приведены классы, производные от <xref:System.Windows.Forms.DataGridViewCell>:  
   
--   <xref:System.Windows.Forms.DataGridViewTextBoxCell>  
+- <xref:System.Windows.Forms.DataGridViewTextBoxCell>  
   
--   <xref:System.Windows.Forms.DataGridViewButtonCell>  
+- <xref:System.Windows.Forms.DataGridViewButtonCell>  
   
--   <xref:System.Windows.Forms.DataGridViewLinkCell>  
+- <xref:System.Windows.Forms.DataGridViewLinkCell>  
   
--   <xref:System.Windows.Forms.DataGridViewCheckBoxCell>  
+- <xref:System.Windows.Forms.DataGridViewCheckBoxCell>  
   
--   <xref:System.Windows.Forms.DataGridViewComboBoxCell>  
+- <xref:System.Windows.Forms.DataGridViewComboBoxCell>  
   
--   <xref:System.Windows.Forms.DataGridViewImageCell>  
+- <xref:System.Windows.Forms.DataGridViewImageCell>  
   
--   <xref:System.Windows.Forms.DataGridViewHeaderCell>  
+- <xref:System.Windows.Forms.DataGridViewHeaderCell>  
   
--   <xref:System.Windows.Forms.DataGridViewRowHeaderCell>  
+- <xref:System.Windows.Forms.DataGridViewRowHeaderCell>  
   
--   <xref:System.Windows.Forms.DataGridViewColumnHeaderCell>  
+- <xref:System.Windows.Forms.DataGridViewColumnHeaderCell>  
   
--   <xref:System.Windows.Forms.DataGridViewTopLeftHeaderCell>  
+- <xref:System.Windows.Forms.DataGridViewTopLeftHeaderCell>  
   
--   Пользовательские типы ячеек  
+- Пользовательские типы ячеек  
   
 ### <a name="datagridviewcolumn"></a>DataGridViewColumn  
  Схема <xref:System.Windows.Forms.DataGridView> элемента управления хранилища данных выражается в <xref:System.Windows.Forms.DataGridView> столбцов элемента управления. Вы можете получить доступ к <xref:System.Windows.Forms.DataGridView> столбцов элемента управления с помощью <xref:System.Windows.Forms.DataGridView.Columns%2A> коллекции. Доступ к выбранным столбцам с помощью <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> коллекции. Приведенные ниже объектные модели показан пример использования и показывает <xref:System.Windows.Forms.DataGridViewColumn> иерархии наследования.  
@@ -89,19 +89,19 @@ ms.locfileid: "59130264"
   
  В следующем списке приведены классы, производные от <xref:System.Windows.Forms.DataGridViewColumn>:  
   
--   <xref:System.Windows.Forms.DataGridViewButtonColumn>  
+- <xref:System.Windows.Forms.DataGridViewButtonColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>  
+- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewComboBoxColumn>  
+- <xref:System.Windows.Forms.DataGridViewComboBoxColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewImageColumn>  
+- <xref:System.Windows.Forms.DataGridViewImageColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewTextBoxColumn>  
+- <xref:System.Windows.Forms.DataGridViewTextBoxColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewLinkColumn>  
+- <xref:System.Windows.Forms.DataGridViewLinkColumn>  
   
--   Пользовательские типы столбцов  
+- Пользовательские типы столбцов  
   
 ### <a name="datagridview-editing-controls"></a>Элементы управления редактирования DataGridView  
  Ячейки, которые обычно поддерживают расширенные функции редактирования используйте размещаемого элемента управления, который является производным от элемента управления Windows Forms. Эти элементы управления также реализовать <xref:System.Windows.Forms.IDataGridViewEditingControl> интерфейс. Приведенные ниже объектные модели иллюстрирует использование этих элементов управления.  
@@ -110,9 +110,9 @@ ms.locfileid: "59130264"
   
  Следующие элементы управления редактирования входящие в состав <xref:System.Windows.Forms.DataGridView> управления:  
   
--   <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>  
+- <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>  
   
--   <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>  
+- <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>  
   
  Сведения о создании собственных редактирования элементов управления, см. в разделе [как: Ведущие элементы управления в формах Windows Forms ячеек элемента управления DataGridView](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   

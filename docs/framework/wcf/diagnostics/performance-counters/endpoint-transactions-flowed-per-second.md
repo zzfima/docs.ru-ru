@@ -1,16 +1,16 @@
 ---
-title: 'Конечная точка: количество поступивших транзакций в секунду'
+title: 'Конечная точка: Количество поступивших транзакций в секунду'
 ms.date: 03/30/2017
 ms.assetid: 0f370ff1-a913-450b-bccb-c279ad165b3d
 ms.openlocfilehash: 79f50b6706facd040ec2d325c676f210d5327bf8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47194093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916257"
 ---
-# <a name="endpoint-transactions-flowed-per-second"></a>Конечная точка: количество поступивших транзакций в секунду
-Имя счетчика: Transactions Flowed Per Second.  
+# <a name="endpoint-transactions-flowed-per-second"></a>Конечная точка: Количество поступивших транзакций в секунду
+Имя счетчика: Количество поступивших транзакций в секунду.  
   
 ## <a name="description"></a>Описание  
  Количество транзакций, поступивших в операции в этой конечной точке в секунду. Значение этого счетчика увеличивается каждый раз, когда в сообщении, отправленном в эту конечную точку, содержится идентификатор транзакции.  

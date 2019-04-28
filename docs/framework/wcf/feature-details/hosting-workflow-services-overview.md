@@ -3,11 +3,11 @@ title: Общие сведения о размещении служб рабоч
 ms.date: 03/30/2017
 ms.assetid: 19f3704f-06bf-4eeb-8724-5224e02d7ead
 ms.openlocfilehash: dbe271e30e9c4e98a52c01ffaa21de25c127c7ff
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855898"
 ---
 # <a name="hosting-workflow-services-overview"></a>Общие сведения о размещении служб рабочих процессов
 Для выполнения служб рабочего процесса они должны быть размещены. Класс <xref:System.ServiceModel.WorkflowServiceHost> представляет собой готовый узел размещения рабочих процессов, поддерживающий использование нескольких экземпляров, настройку и обмен сообщениями WCF (хотя от размещаемых рабочих процессов и не требуется обмена сообщениями).  Он также реализует сохраняемость, отслеживание и контроль за экземплярами через набор поведений службы.  Как и класс WCF <xref:System.ServiceModel.ServiceHost>, класс <xref:System.ServiceModel.WorkflowServiceHost> может быть резидентным в любом управляемом приложении .NET или размещаться на веб-сервере IIS / WAS (в виде файла XAMLX).  В этом разделе описано размещение службы рабочего процесса.  

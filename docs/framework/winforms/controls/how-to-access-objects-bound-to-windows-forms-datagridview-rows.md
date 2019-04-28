@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], accessing objects bound to rows
 ms.assetid: 0e05748f-4403-4eb8-8b2f-b098108181b5
 ms.openlocfilehash: 50882ab9a1a498bf8f76381e3f4aac53876abbb8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011285"
 ---
 # <a name="how-to-access-objects-bound-to-windows-forms-datagridview-rows"></a>Практическое руководство. Доступ к связанным объектам в строках DataGridView в Windows Forms
 Иногда полезно отображать таблицу данных, которые хранятся в коллекции бизнес-объектов. При привязке элемента управления <xref:System.Windows.Forms.DataGridView> к такого рода коллекции каждое открытое свойство отображается в собственном столбце, если только оно не помечено как недоступное для просмотра с помощью <xref:System.ComponentModel.BrowsableAttribute>. Например, коллекция объектов `Customer` будет содержать такие столбцы, как **Имя** и **Адрес**.  
@@ -23,7 +23,7 @@ ms.locfileid: "59217410"
   
 ### <a name="to-access-row-bound-objects"></a>Получение доступа к объектам, связанным со строками  
   
--   Используйте свойство <xref:System.Windows.Forms.DataGridViewRow.DataBoundItem%2A?displayProperty=nameWithType>.  
+- Используйте свойство <xref:System.Windows.Forms.DataGridViewRow.DataBoundItem%2A?displayProperty=nameWithType>.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewObjectBinding#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewObjectBinding/CS/datagridviewobjectbinding.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewObjectBinding#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewObjectBinding/VB/datagridviewobjectbinding.vb#10)]  
@@ -37,7 +37,7 @@ ms.locfileid: "59217410"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылки на сборки System и System.Windows.Forms;  
+- ссылки на сборки System и System.Windows.Forms;  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   

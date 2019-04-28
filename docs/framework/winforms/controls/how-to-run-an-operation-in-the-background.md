@@ -14,11 +14,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 5b56e2aa-dc05-444f-930c-2d7b23f9ad5b
 ms.openlocfilehash: 5ccbb6e4c09f5417f6c2766824ec7ed9722eed52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013339"
 ---
 # <a name="how-to-run-an-operation-in-the-background"></a>Практическое руководство. Фоновое выполнение операции
 Если какая-либо операция будет выполняться в течение долгого времени и при этом требуется не допустить задержек в работе пользовательского интерфейса, можно использовать класс <xref:System.ComponentModel.BackgroundWorker> для выполнения операции в другом потоке.  
@@ -36,7 +36,7 @@ ms.locfileid: "59217995"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылки на сборки System, System.Drawing и System.Windows.Forms.  
+- ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
 ms.openlocfilehash: ca52b725f5fad4b591b95bf6a6dd778c7a72d235
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875409"
 ---
 # <a name="wcf-data-services-overview"></a>Общие сведения о службах данных WCF
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] обеспечивает создание и использование служб данных в Интернете или интрасети с помощью [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] позволяет предоставлять данные в качестве ресурсов, которые можно обращаться по URI. Это позволяет обращаться к данным и изменять их с использованием семантики REST, в частности стандартных команд HTTP, таких как GET, PUT, POST и DELETE. В этом разделе приведены общие сведения о шаблонах и методиках, определенных службами [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], а также о функциях, предоставляемых службами [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для использования [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] в приложениях на базе .NET Framework.  

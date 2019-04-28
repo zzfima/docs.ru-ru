@@ -11,11 +11,11 @@ helpviewer_keywords:
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
 ms.openlocfilehash: 57c2bc5722f77338225d70b514345344211656dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913124"
 ---
 # <a name="how-to-render-a-visual-style-element"></a>Практическое руководство. Отображение элементов с использованием визуальных стилей
 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Пространство имен предоставляет <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> элементы пользовательского интерфейса, поддерживаемого стилями оформления интерфейса объекты, представляющие пользователя Windows. В этом разделе демонстрируется использование <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> класс для подготовки к просмотру <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> , представляющий **Выход** и **завершение работы** кнопок, меню «Пуск».  
@@ -37,11 +37,11 @@ ms.locfileid: "59312401"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   Пользовательские элементы управления, производные от <xref:System.Windows.Forms.Control> класса.  
+- Пользовательские элементы управления, производные от <xref:System.Windows.Forms.Control> класса.  
   
--   Объект <xref:System.Windows.Forms.Form> , на котором размещается пользовательский элемент управления.  
+- Объект <xref:System.Windows.Forms.Form> , на котором размещается пользовательский элемент управления.  
   
--   Ссылки на <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, и <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> пространства имен.  
+- Ссылки на <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, и <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> пространства имен.  
   
 ## <a name="see-also"></a>См. также
 

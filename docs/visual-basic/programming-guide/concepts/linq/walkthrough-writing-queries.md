@@ -8,11 +8,11 @@ helpviewer_keywords:
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
 ms.openlocfilehash: 8e3d893a21b36868f59d132bd8ba9a6f634cac62
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907612"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Пошаговое руководство. Написание запросов в Visual Basic
 В этом пошаговом руководстве показано, как можно использовать возможности языка Visual Basic для написания [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] выражений запросов. В примере демонстрируются способы создания запросов к списку объектов Student, как выполнять запросы и об их изменении. Запросы включают в себя несколько функций, включая инициализаторы объектов, вывод локального типа и анонимные типы.  
@@ -40,14 +40,14 @@ ms.locfileid: "59296073"
   
 #### <a name="to-add-the-data-source"></a>Добавление источника данных  
   
--   Определение `Student` класса и создания списка экземпляров класса.  
+- Определение `Student` класса и создания списка экземпляров класса.  
   
     > [!IMPORTANT]
     >  Код, необходимый для определения `Student` класса и создания списка, используемого в этом пошаговом руководстве примеры предоставляется в [как: Создание списка элементов](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Можно скопировать его оттуда и вставьте его в проект. Новый код заменяет код, появившийся при создании проекта.  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>Чтобы добавить нового учащегося в список учащихся  
   
--   Шаблону `getStudents` метод, чтобы добавить другой экземпляр `Student` класс к списку. Добавление студентов вы узнаете о инициализаторы объектов. Дополнительные сведения см. в разделе [инициализаторы объектов: Именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+- Шаблону `getStudents` метод, чтобы добавить другой экземпляр `Student` класс к списку. Добавление студентов вы узнаете о инициализаторы объектов. Дополнительные сведения см. в разделе [инициализаторы объектов: Именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="create-a-query"></a>Создание запроса  
  При выполнении запроса, добавленного в этом разделе создает список студентов, успеваемость помещает их в первых десяти. Так как запрос выбирает полный `Student` объект каждый раз, а тип результата запроса является `IEnumerable(Of Student)`. Тем не менее тип запроса обычно не указан в определениях запроса. Вместо этого компилятор использует определение локального типа для определения типа. Дополнительные сведения см. в разделе [вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Переменная диапазона запроса, `currentStudent`, служащий в качестве ссылки на каждый `Student` экземпляр в источнике, `students`, предоставляя доступ к свойствам каждого объекта в `students`.  

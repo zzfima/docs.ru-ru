@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, setting the text displayed
 ms.assetid: 9d18e0e0-f17f-4074-837d-e67ceeeaa89d
 ms.openlocfilehash: a0f567befb1e0c323dd16fffedec279ff836cbf8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013222"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer"></a>Практическое руководство. Установка текста, отображаемого элементом управления Windows Forms, с помощью конструктора
 Элементы управления Windows Forms обычно отображается текст, связанный с их основной функцией элемента управления. Например <xref:System.Windows.Forms.Button> управления обычно отображается заголовок, указывающее, какое действие выполняется при нажатии кнопки. С помощью свойства <xref:System.Windows.Forms.Control.Text%2A> можно задавать или получать текст для всех элементов управления. Шрифт можно менять с помощью свойства <xref:System.Windows.Forms.Control.Font%2A>.  

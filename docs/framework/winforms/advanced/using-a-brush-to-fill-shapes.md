@@ -7,11 +7,11 @@ helpviewer_keywords:
 - brushes
 ms.assetid: bf8f7fff-5a90-41e8-9051-494449fb2844
 ms.openlocfilehash: 95112321794359dc282749b94fd9061305b42c23
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926949"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>Использование кисти для заливки фигур
 Объект [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> объект используется для заливки внутренней части замкнутой фигуры. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] определяет следующие стили заливки: сплошной цвет, шаблон штриховки, изображение текстуры и цветового градиента.  

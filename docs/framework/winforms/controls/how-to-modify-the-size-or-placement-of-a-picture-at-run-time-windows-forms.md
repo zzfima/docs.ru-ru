@@ -12,22 +12,22 @@ helpviewer_keywords:
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
 ms.openlocfilehash: d0a86d7fe53dba3da6bd63587561f82877bc2f06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913735"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Практическое руководство. Изменение размера или размещения изображения во время выполнения (Windows Forms)
 При использовании Windows Forms <xref:System.Windows.Forms.PictureBox> элемента управления в форме, можно задать <xref:System.Windows.Forms.PictureBox.SizeMode%2A> свойства:  
   
--   Выравнивание верхнего левого угла рисунка с верхнего левого угла элемента управления  
+- Выравнивание верхнего левого угла рисунка с верхнего левого угла элемента управления  
   
--   Центрировать изображение в элементе управления  
+- Центрировать изображение в элементе управления  
   
--   Размер элемента управления в соответствии с рисунка  
+- Размер элемента управления в соответствии с рисунка  
   
--   Изменять размеры рисунка в соответствии с размерами элемента управления  
+- Изменять размеры рисунка в соответствии с размерами элемента управления  
   
  Растяжение рисунка (особенно в формат точечного рисунка) может привести к ухудшению качества изображения. Метафайлы, в которых перечислены инструкции для создания изображений во время выполнения, лучше подходят для растягивания чем растровые изображения.  
   

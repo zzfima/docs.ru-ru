@@ -3,17 +3,18 @@ title: 116 ― WorkflowInstanceSuspendedRecord
 ms.date: 03/30/2017
 ms.assetid: 38232c03-6139-4494-a020-79bc83eb9dce
 ms.openlocfilehash: ed8a500984d3e575b0e93806d1ab1bcd69bc5c73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009907"
 ---
 # <a name="116---workflowinstancesuspendedrecordwithid"></a>116 ― WorkflowInstanceSuspendedRecord
 ## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
-|Идентификатор|116|  
+|ID|116|  
 |Ключевые слова|HealthMonitoring, WFTracking|  
 |Уровень|Сведения|  
 |Канал|Microsoft-Windows-Application Server-Applications/Analytic|  
@@ -32,8 +33,8 @@ ms.lasthandoff: 05/04/2018
 |RecordNumber|xs:long|Порядковый номер созданной записи.|  
 |EventTime|xs:dateTime|Время в формате UTC, когда было создано событие.|  
 |ActivityDefinitionId|xs:string|Имя корневого действия в рабочем процессе.|  
-|Состояние|xs:string|Текущее состояние рабочего процесса.|  
-|Заметки|xs:string|Заметки, добавленные к этому событию. Значения хранятся в виде элемента xml в формате \<элементы >\< имя элемента = «annotationName» type="System.String" > annotationValue\</товар > \< /items >. Если не задано никаких заметок, строка содержит \<элементы / >. Размер событий ETW ограничен размером буфера ETW или максимальным размером полезных данных для события ETW. Если размер события превышает пределы трассировки событий Windows, то событие усекается путем отбрасывания заметок и замены значения заметок значением с \<элементы >...  \< /items >.|  
+|Регион|xs:string|Текущее состояние рабочего процесса.|  
+|Заметки|xs:string|Заметки, добавленные к этому событию. Значения хранятся в XML-элемент в формате \<элементы >\< имя элемента = «annotationName» type="System.String" > annotationValue\</item > \< /items >. Если не задано никаких заметок, строка содержит \<элементов / >. Размер событий ETW ограничен размером буфера ETW или максимальным размером полезных данных для события ETW. Если размер события превышает пределы трассировки событий Windows, то событие усекается путем отбрасывания заметок и замены значения заметок значением \<элементы >...  \< /items >.|  
 |ProfileName|xs:string|Имя или профиль отслеживания, который привел к созданию этого события.|  
 |WorkflowDefinitionIdentity|xs:string|Идентификатор определения рабочего процесса|  
-|AppDomain|xs:string|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|Домен приложения|xs:string|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|

@@ -22,11 +22,11 @@ helpviewer_keywords:
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
 ms.openlocfilehash: 59570af89e6236e3c13866d45dc5361d52b84274
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013092"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Практическое руководство. Определение текста, отображаемого элементом управления Windows Forms
 В элементах управления Windows Forms обычно отображается текст, связанный с их основной функцией. Например, в элементе управления <xref:System.Windows.Forms.Button> обычно отображается заголовок, указывающий, какое действие выполняется при нажатии кнопки. С помощью свойства <xref:System.Windows.Forms.Control.Text%2A> можно задавать или получать текст для всех элементов управления. Шрифт можно менять с помощью свойства <xref:System.Windows.Forms.Control.Font%2A>. Также с помощью конструктора можно задавать текст.  Также см. раздел [Как Определение клавиш доступа для Windows Forms с помощью конструктора элементов управления](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [как: Задать текст, отображаемый элементом управления, с помощью конструктора форм Windows](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [как: Задайте изображения, отображаемого элементом управления, с помощью конструктора форм Windows](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  

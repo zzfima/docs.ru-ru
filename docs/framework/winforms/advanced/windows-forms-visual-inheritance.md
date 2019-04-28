@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 857eb737-3602-4d49-bd8b-f70d33ace345
 ms.openlocfilehash: e94cdc38b97f95cfe8a8504733298525c25667df
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011870"
 ---
 # <a name="windows-forms-visual-inheritance"></a>Визуальное наследование в Windows Forms
 В некоторых случаях вы можете решить, что проект вызывает форму, похожую на форму, созданную в предыдущем проекте. Или можете захотеть создать базовую форму с параметрами, например водяным знаком или определенной структурой элементов управления, которые будут затем повторно использоваться в проекте, с каждой итерацией, содержащей изменения в исходном шаблоне формы. Наследование форм позволяет создать базовую форму, затем наследовать от нее и вносить изменения, сохраняя при этом все необходимые исходные параметры.  

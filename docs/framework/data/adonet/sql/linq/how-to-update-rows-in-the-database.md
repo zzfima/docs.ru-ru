@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a2b5c90f-6cc3-4128-bfab-1db488d5af26
 ms.openlocfilehash: e40866c5160d6850b39133050d09026f5ffd6cc5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902945"
 ---
 # <a name="how-to-update-rows-in-the-database"></a>Практическое руководство. Как обновлять строки в базе данных
 Вы можете обновить строки в базе данных, изменив значения членов объектов, связанных с [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> коллекции и затем отправив эти изменения в базу данных. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Преобразует изменения в соответствующие SQL `UPDATE` команды.  

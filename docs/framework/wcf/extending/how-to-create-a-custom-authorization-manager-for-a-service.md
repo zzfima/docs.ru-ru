@@ -9,11 +9,11 @@ helpviewer_keywords:
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
 ms.openlocfilehash: e3d0143cd68bc94c6ff07e65ca5a3c8971b45f23
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858017"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Практическое руководство. Создание пользовательского диспетчера авторизации для службы
 Инфраструктура модели удостоверения в Windows Communication Foundation (WCF) поддерживает модель расширяемый авторизации на основе утверждений. Утверждения извлекаются из маркеров, дополнительно обрабатываемых пользовательской политикой авторизации, и затем помещаются в контекст <xref:System.IdentityModel.Policy.AuthorizationContext>. Диспетчер авторизации проверяет утверждения в контексте <xref:System.IdentityModel.Policy.AuthorizationContext> для принятия решений об авторизации.  

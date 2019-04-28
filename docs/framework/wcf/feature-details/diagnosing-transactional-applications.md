@@ -3,11 +3,11 @@ title: Диагностика транзакционных приложений
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
 ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856743"
 ---
 # <a name="diagnosing-transactional-applications"></a>Диагностика транзакционных приложений
 В этом разделе описывается использование Windows Communication Foundation (WCF) и управлению с помощью функции диагностики для устранения неполадок транзакционного приложения.  
@@ -87,15 +87,15 @@ ms.locfileid: "59101716"
 ## <a name="tracing"></a>Трассировка  
  Трассировка позволяет контролировать и анализировать ошибки в транзакционных приложениях. Трассировку можно включить следующими способами.  
   
--   Стандартная трассировка WCF  
+- Стандартная трассировка WCF  
   
      Трассировка этого типа является таким же, как трассировка любого приложения WCF. Для получения дополнительной информации см. [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
--   Трассировка WS-AtomicTransaction  
+- Трассировка WS-AtomicTransaction  
   
      WS-AtomicTransaction трассировку можно включить с помощью [служебную программу настройки WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Такая трассировка позволяет контролировать состояние транзакций и участников внутри системы. Чтобы включить также и трассировку модели службы, можно задать для ключа реестра `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` допустимое значение перечисления <xref:System.Diagnostics.SourceLevels>. Вы можете включить ведение журнала так же, как другие приложения WCF сообщений.  
   
--   Трассировка `System.Transactions`  
+- Трассировка `System.Transactions`  
   
      При использовании протокола OleTransactions возможна трассировка сообщений протокола. Поддержка трассировки, предоставляемая инфраструктурой <xref:System.Transactions> (которая использует протокол OleTransactions), позволяет пользователям просматривать события, происходящие с транзакциями. Чтобы включить трассировку для приложения <xref:System.Transactions>, поместите приведенный ниже код в файл конфигурации `App.config`.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
 ms.openlocfilehash: 122c20e7c3e48eaa4b4986ce2cb45411dae00723
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011012"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Практическое руководство. Упорядочение элементов управления с помощью линий привязки и сетки в формах Windows Forms
 Используя возможности макета элемента Visual Studio, можно точно указать расположение элементов управления в форме. Элементы управления добавить в форму или переместить в форме автоматически выравниваются в строки и столбцы сетки в конструкторе Windows Forms, или можно выравнивать элементы управления с помощью линий привязки.  
@@ -23,7 +23,7 @@ ms.locfileid: "59115747"
   
 ### <a name="to-snap-all-controls-to-the-grid"></a>Чтобы привязать все элементы управления к сетке  
   
--   Выберите **SnapToGrid** режим макета в конструкторе Windows Forms **параметры** диалоговое окно.  
+- Выберите **SnapToGrid** режим макета в конструкторе Windows Forms **параметры** диалоговое окно.  
   
      Дополнительные сведения см. в разделе [Общие, конструктор Windows Forms, диалоговое окно параметров](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100)). Все элементы управления теперь выравниваются по точкам сетки.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "59115747"
   
 ### <a name="to-align-controls-using-snaplines"></a>Для выравнивания элементов управления с помощью линий привязки  
   
--   Выберите **линии привязки** режим макета в конструкторе Windows Forms **параметры** диалоговое окно.  
+- Выберите **линии привязки** режим макета в конструкторе Windows Forms **параметры** диалоговое окно.  
   
      Дополнительные сведения см. в разделе [Пошаговое руководство: Упорядочение элементов управления в Windows Forms с помощью линий привязки](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md). Теперь можно использовать линии привязки для выравнивания и упорядочения элементов управления в форме.  
   

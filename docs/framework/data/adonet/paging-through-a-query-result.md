@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
 ms.openlocfilehash: 023efcc15d7080afc1583f4ad8984e152b86cf23
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878388"
 ---
 # <a name="paging-through-a-query-result"></a>Разбивка на страницы результатов запроса
 Постраничный просмотр результатов запроса - это процесс возврата результатов запроса небольшими подмножествами данных (страницами). Этот метод часто используется для вывода результатов пользователю в виде небольших фрагментов, с которыми легко работать.  

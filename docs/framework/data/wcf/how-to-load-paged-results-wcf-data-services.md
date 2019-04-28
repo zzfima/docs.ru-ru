@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: bb786ea4-f3ef-4ad3-9a41-3a0b7feb6a1f
 ms.openlocfilehash: 0be7dcbefb23d2f2b283ac498f3b0ea43278f2d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875845"
 ---
 # <a name="how-to-load-paged-results-wcf-data-services"></a>Практическое руководство. Загрузка разбитых на страницы результатов (службы данных WCF)
 Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют службе данных ограничить количество сущностей, возвращаемых в отдельном канале ответа. Если это происходит, последняя запись в канале содержит ссылку на следующую страницу данных. Получить URI для следующей страницы можно, вызвав метод <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> объекта <xref:System.Data.Services.Client.QueryOperationResponse%601>, возвращенного при выполнении запроса <xref:System.Data.Services.Client.DataServiceQuery%601>. URI, представленный этим объектом, можно затем использовать для загрузки следующей страницы результатов. Дополнительные сведения см. в разделе [загрузка отложенного содержимого](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  

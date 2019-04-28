@@ -15,11 +15,11 @@ ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 85a1a017197826717280f53995ed98f26f1d80bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61873864"
 ---
 # <a name="trace-switches"></a>Переключатели трассировки
 Переключатели трассировки позволяют включать, отключать и фильтровать выходные данные трассировки. Они являются объектами, которые существуют в коде и могут настраиваться извне с помощью файла конфигурации. В .NET Framework существует три типа переключателей трассировки: класс <xref:System.Diagnostics.BooleanSwitch> , класс <xref:System.Diagnostics.TraceSwitch> и класс <xref:System.Diagnostics.SourceSwitch> . Класс <xref:System.Diagnostics.BooleanSwitch> действует как переключатель, включая или отключая различные операторы трассировки. Классы <xref:System.Diagnostics.TraceSwitch> и <xref:System.Diagnostics.SourceSwitch> позволяют включать переключатель трассировки для определенного уровня трассировки, чтобы отображались сообщения <xref:System.Diagnostics.Trace> или <xref:System.Diagnostics.TraceSource> , заданные для данного уровня и всех уровней ниже него. Если этот переключатель отключить, то сообщения трассировки не будут отображаться. Все эти классы являются производными от абстрактного (**MustInherit**) класса **Switch**, как и следует переключателям, разработанным пользователями.  
@@ -33,13 +33,13 @@ ms.locfileid: "59132669"
 ## <a name="trace-levels"></a>Уровни трассировки  
  При использовании **TraceSwitch**существуют дополнительные рекомендации. Объект **TraceSwitch** имеет четыре свойства, которые возвращают **логические** значения, указывающие, установлен ли переключатель хотя бы для отдельного уровня:  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=nameWithType>  
   
  Уровни позволяют ограничить количество получаемых сведений трассировки только теми, которые необходимы для решения проблемы. Вы указываете нужный уровень детализации в выходных данных трассировки путем установки и настройки переключателей трассировки для соответствующего уровня трассировки. Можно получать сообщения об ошибках, предупреждения, информационные сообщения, подробные сообщения трассировки или совсем не получать сообщения.  
   

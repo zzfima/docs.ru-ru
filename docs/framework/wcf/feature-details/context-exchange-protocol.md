@@ -3,11 +3,11 @@ title: Протокол обмена контекстом
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
 ms.openlocfilehash: a6bc0ac45282d94a6aea8dbbdb5a7d34163c692e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857354"
 ---
 # <a name="context-exchange-protocol"></a>Протокол обмена контекстом
 В этом разделе описывается протокол обмена контекстом, представленных в выпуске Windows Communication Foundation (WCF) .NET Framework версии 3.5. Этот протокол позволяет клиентскому каналу принимать контекст, предоставленный службой, и применять его ко всем последующим запросам, поступающим в эту службу через тот же экземпляр клиентского канала. Для распространения контекста между сервером и клиентом реализация протокола обмена контекстом можно использовать один из двух механизмов: Файлы cookie HTTP или заголовок SOAP.  
@@ -21,16 +21,16 @@ ms.locfileid: "59217007"
   
  В этом режиме перечисленное ниже остается неизменным.  
   
--   Любая попытка сброса контекста с помощью `SetContext` после того, как канал был открыт, приводит к возникновению исключения <xref:System.InvalidOperationException>.  
+- Любая попытка сброса контекста с помощью `SetContext` после того, как канал был открыт, приводит к возникновению исключения <xref:System.InvalidOperationException>.  
   
--   Любая попытка отправить контекст с использованием свойства <xref:System.ServiceModel.Channels.ContextMessageProperty> в исходящем сообщении вызывает исключение <xref:System.InvalidOperationException>.  
+- Любая попытка отправить контекст с использованием свойства <xref:System.ServiceModel.Channels.ContextMessageProperty> в исходящем сообщении вызывает исключение <xref:System.InvalidOperationException>.  
   
--   Если от сервера получено сообщение с конкретным контекстом, а канал уже инициализирован с конкретным контекстом, создается исключение <xref:System.ServiceModel.ProtocolException>.  
+- Если от сервера получено сообщение с конкретным контекстом, а канал уже инициализирован с конкретным контекстом, создается исключение <xref:System.ServiceModel.ProtocolException>.  
   
     > [!NOTE]
     >  Рекомендуется получать исходный контекст с сервера, только если канал был открыт без явного задания контекста.  
   
--   Свойство <xref:System.ServiceModel.Channels.ContextMessageProperty> для входящего сообщения всегда null.  
+- Свойство <xref:System.ServiceModel.Channels.ContextMessageProperty> для входящего сообщения всегда null.  
   
 ## <a name="mode-2-application-context-management"></a>Режим 2: Управление контекстом приложения  
  Этот режим используется, если свойству <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> присвоено значение `false`. В этом режиме канал контекста не управляет контекстом. Ответственность за извлечение, обработку и применение контекста с использованием свойства <xref:System.ServiceModel.Channels.ContextMessageProperty> возлагается на приложение. Любая попытка вызова метода `GetContext` или `SetContext` приводит к возникновению исключения <xref:System.InvalidOperationException>.  
@@ -53,7 +53,7 @@ ms.locfileid: "59217007"
   
  Конечные точки службы, которым требуется поддержка протокола обмена контекстом, могут явно объявить об этом в опубликованной политике. Были введены два новых утверждения политики, предъявляющие требование к клиенту, чтобы он поддерживал протокол обмена контекстом на уровне SOAP или была включена поддержка файлов cookie HTTP. Создание этих утверждений в политике службы управляется значением свойства <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A>, как показано ниже.  
   
--   Для <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader> создается следующее утверждение  
+- Для <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader> создается следующее утверждение  
   
     ```xml  
     <IncludeContext   
@@ -61,7 +61,7 @@ ms.locfileid: "59217007"
     protectionLevel="Sign" />  
     ```  
   
--   Для <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie> создается следующее утверждение  
+- Для <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie> создается следующее утверждение  
   
     ```xml  
     <HttpUseCookie xmlns="http://schemas.xmlsoap.org/soap/http"/>  

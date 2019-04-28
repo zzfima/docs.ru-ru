@@ -18,11 +18,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], namespaces
 ms.assetid: 08ba2738-df52-4140-bc55-f57c871c9b73
 ms.openlocfilehash: f0a806b040720cf6682f8a72025a0590dd4d91f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907443"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>Перечисления и уточнение имен (Visual Basic)
 Как правило при ссылке на член перечисления, необходимо уточнить имя члена перечисления. Например, для ссылки на `Sunday` членом вашей `Days` перечисления, используется следующий синтаксис:  

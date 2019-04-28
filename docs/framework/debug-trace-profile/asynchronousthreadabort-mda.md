@@ -11,11 +11,11 @@ ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08f67ad363d0bd3efcc7a1eeedd1f48d3bae9407
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875710"
 ---
 # <a name="asynchronousthreadabort-mda"></a>Помощник по отладке управляемого кода asynchronousThreadAbort
 Помощник по отладке управляемого кода (MDA) `asynchronousThreadAbort` активируется в том случае, если поток пытается выполнить асинхронное прерывание в другом потоке. При вызове синхронных прерываний потока помощник `asynchronousThreadAbort` не активируется.

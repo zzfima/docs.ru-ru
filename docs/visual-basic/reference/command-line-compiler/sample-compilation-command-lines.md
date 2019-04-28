@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
 ms.openlocfilehash: 0771ed41d6c58ce7cc98435b405f5819e45393db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916764"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>Примеры командных строк компиляции (Visual Basic)
 В качестве альтернативы компиляции программ Visual Basic из среды Visual Studio можно скомпилировать из командной строки для создания исполняемых файлов (.exe) или файлы библиотеки динамической компоновки (DLL).  

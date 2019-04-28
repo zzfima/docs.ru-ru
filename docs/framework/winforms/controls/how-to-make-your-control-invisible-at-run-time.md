@@ -12,11 +12,11 @@ helpviewer_keywords:
 - run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
 ms.openlocfilehash: e9af529541a40a951d6defea180dbbef04c8f3be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913709"
 ---
 # <a name="how-to-make-your-control-invisible-at-run-time"></a>Практическое руководство. Сокрытие элемента управления во время выполнения
 Бывают случаи, когда может потребоваться создать пользовательский элемент управления, который остается невидимым во время выполнения. Например элемент управления, который является будильника может быть невидимым, за исключением случаев, когда будильника. Это легко реализуется, задав <xref:System.Windows.Forms.Control.Visible%2A> свойство. Если <xref:System.Windows.Forms.Control.Visible%2A> свойство `true`, элемент управления отображается в обычном режиме. Если `false`, элемент управления будет скрыт. Несмотря на то, что код в элемент управления может выполняться будучи невидимым, вы не сможете взаимодействовать с элементом управления в пользовательском интерфейсе. Если вы хотите создать невидимому элементу управления, который реагирует на пользовательский ввод (например, щелчки мышью), следует создать прозрачный элемент управления. Дополнительные сведения см. в разделе [предоставления элемента управления прозрачный фон](how-to-give-your-control-a-transparent-background.md).  

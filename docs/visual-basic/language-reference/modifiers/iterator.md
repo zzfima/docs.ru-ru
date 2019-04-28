@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
 ms.openlocfilehash: 499949d1f4c20e1f465355bd076ba39f1496779b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920722"
 ---
 # <a name="iterator-visual-basic"></a>Итератор (Visual Basic)
 Указывает, что функция или `Get` метод доступа является итератором.  
@@ -34,9 +34,9 @@ ms.locfileid: "58822704"
 ## <a name="usage"></a>Использование  
  Модификатор `Iterator` можно использовать в следующих контекстах:  
   
--   [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="example"></a>Пример  
  Ниже приведен пример функции итератора. Имеет функции итератора `Yield` инструкцию, которая находится внутри [для... Далее](../../../visual-basic/language-reference/statements/for-next-statement.md) цикла. Каждая итерация [для каждого](../../../visual-basic/language-reference/statements/for-each-next-statement.md) тела оператора в `Main` создает вызов `Power` функции итератора. При каждом вызове функции итератора происходит переход к следующему выполнению оператора `Yield`, которое осуществляется во время следующей итерации цикла `For…Next`.  

@@ -3,11 +3,11 @@ title: Создание элемента привязки BindingElement
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
 ms.openlocfilehash: 600bf9b394078ffc1b1bc97390bd0de406d64338
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858355"
 ---
 # <a name="creating-a-bindingelement"></a>Создание элемента привязки BindingElement
 Привязки и элементы привязки (объекты, которые расширяют <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> и <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>, соответственно) — место, где модели приложения Windows Communication Foundation (WCF) связан с фабриками каналов и прослушиватели каналов. Если привязок нет, использования настраиваемых каналов требуется программирование на уровне канала как описано в разделе [программирования на уровне канала службы](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) и [программирования на уровне канала клиента](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). В этом разделе рассматриваются минимальные требования для включения канала в WCF, разработка <xref:System.ServiceModel.Channels.BindingElement> для канала и разрешение использования приложения, как описано в шаге 4 [каналы развивающихся](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -59,11 +59,11 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
 #### <a name="encoding-binding-elements"></a>Элементы привязки кодирования  
  Чтобы создать новые элементы привязки кодирования, начните с расширения класса <xref:System.ServiceModel.Channels.BindingElement> и реализации класса <xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType>. Затем, как минимум, необходимо реализовать методы <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A?displayProperty=nameWithType> и свойство <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A?displayProperty=nameWithType>.  
   
--   <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>. Возвращает новую копию этого элемента привязки. Авторам элемента привязки рекомендуется реализовать метод <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>, используя конструктор копии, который вызывает базовый конструктор копии и затем клонирует любые дополнительные поля в этом классе.  
+- <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>. Возвращает новую копию этого элемента привязки. Авторам элемента привязки рекомендуется реализовать метод <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>, используя конструктор копии, который вызывает базовый конструктор копии и затем клонирует любые дополнительные поля в этом классе.  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>. Возвращает фабрику <xref:System.ServiceModel.Channels.MessageEncoderFactory>, предоставляющую дескриптор фактическому классу, который реализует новый кодировщик и должен расширить кодировщик <xref:System.ServiceModel.Channels.MessageEncoder>. Дополнительные сведения см. в разделах <xref:System.ServiceModel.Channels.MessageEncoderFactory> и <xref:System.ServiceModel.Channels.MessageEncoder>.  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>. Возвращает фабрику <xref:System.ServiceModel.Channels.MessageEncoderFactory>, предоставляющую дескриптор фактическому классу, который реализует новый кодировщик и должен расширить кодировщик <xref:System.ServiceModel.Channels.MessageEncoder>. Дополнительные сведения см. в разделах <xref:System.ServiceModel.Channels.MessageEncoderFactory> и <xref:System.ServiceModel.Channels.MessageEncoder>.  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>. Возвращает версию <xref:System.ServiceModel.Channels.MessageVersion>, применяемую в данной кодировке, которая представляет используемые версии протокола SOAP и WS-Addressing.  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>. Возвращает версию <xref:System.ServiceModel.Channels.MessageVersion>, применяемую в данной кодировке, которая представляет используемые версии протокола SOAP и WS-Addressing.  
   
  Полный список необязательных методов и свойств для определяемых пользователем элементов привязки кодирования см. в разделе <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   

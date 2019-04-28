@@ -8,11 +8,11 @@ helpviewer_keywords:
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
 ms.openlocfilehash: 6be464ce85bd3ba91dd6e6cc810ec7d04edc0c3d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911850"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>Поведение мыши и клавиатуры по умолчанию в элементе управления DataGrid
 В этом разделе описывается, как пользователи могут взаимодействовать с <xref:System.Windows.Controls.DataGrid> элемента управления с помощью клавиатуры и мыши.  
@@ -55,21 +55,21 @@ ms.locfileid: "59083326"
   
  Следующие разделы выбора изменить выбор нескольких строк.  
   
--   SHIFT + СТРЕЛКА ВНИЗ  
+- SHIFT + СТРЕЛКА ВНИЗ  
   
--   SHIFT + СТРЕЛКА ВВЕРХ  
+- SHIFT + СТРЕЛКА ВВЕРХ  
   
--   SHIFT + PAGE DOWN  
+- SHIFT + PAGE DOWN  
   
--   SHIFT + PAGE UP  
+- SHIFT + PAGE UP  
   
--   CTRL+SHIFT+СТРЕЛКА ВНИЗ  
+- CTRL+SHIFT+СТРЕЛКА ВНИЗ  
   
--   CTRL+SHIFT+СТРЕЛКА ВВЕРХ  
+- CTRL+SHIFT+СТРЕЛКА ВВЕРХ  
   
--   CTRL + SHIFT + HOME  
+- CTRL + SHIFT + HOME  
   
--   CTRL + SHIFT + END  
+- CTRL + SHIFT + END  
   
 ## <a name="default-mouse-behavior"></a>Поведение мыши по умолчанию  
  В следующей таблице перечислены поведение мыши по умолчанию для <xref:System.Windows.Controls.DataGrid>.  

@@ -3,11 +3,11 @@ title: Количество неавторизованных вызовов си
 ms.date: 03/30/2017
 ms.assetid: 0f189767-8c05-478a-8f0b-9228e5d351e5
 ms.openlocfilehash: 15890506aece94a07d4b97101519007accf3570a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915919"
 ---
 # <a name="security-calls-not-authorized-per-second"></a>Количество неавторизованных вызовов системы безопасности в секунду
 Имя счетчика: Security Calls Not Authorized Per Second.  

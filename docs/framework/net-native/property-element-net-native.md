@@ -5,11 +5,11 @@ ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20657e0a583890b851ab8e15c50bce791a3641b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866773"
 ---
 # <a name="property-element-net-native"></a>\<Свойство > элемент (машинный код .NET)
 Применяет политику отражения среды выполнения к свойству.  
@@ -81,9 +81,9 @@ ms.locfileid: "59094493"
   
  Тем не менее компиляция и выполнение этого примера создает исключение [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md). Несмотря на то, что мы уже сделали метаданные для типа `Book` доступными, нам не удалось обеспечить динамический доступ к реализациям свойств считывания. Эту ошибку можно исправить одним из двух способов:  
   
--   определив политику `Dynamic` для типа `Book` в его элементе [\<Type>](../../../docs/framework/net-native/type-element-net-native.md);  
+- определив политику `Dynamic` для типа `Book` в его элементе [\<Type>](../../../docs/framework/net-native/type-element-net-native.md);  
   
--   добавив вложенный элемент [\<Property>](../../../docs/framework/net-native/property-element-net-native.md) для каждого свойства, считывание которого необходимо вызвать, как это делает следующий файл default.rd.xml.  
+- добавив вложенный элемент [\<Property>](../../../docs/framework/net-native/property-element-net-native.md) для каждого свойства, считывание которого необходимо вызвать, как это делает следующий файл default.rd.xml.  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

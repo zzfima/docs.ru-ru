@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
 ms.openlocfilehash: dbffe2bd196e798b90104aebb74269387660c794
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918207"
 ---
 # <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>Не являющиеся CLS-совместимыми \<membername > не допускается в CLS-совместимом интерфейсе
 Свойство, процедура или событие в интерфейсе помечен как `<CLSCompliant(True)>` когда сам интерфейс помечен как `<CLSCompliant(False)>` или не помеченный совсем.  
@@ -29,11 +29,11 @@ ms.locfileid: "58840462"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Если необходима CLS-совместимость и имеется контроль над исходным кодом интерфейса, пометьте интерфейс как `<CLSCompliant(True)>` Если все его члены являются совместимыми.  
+- Если необходима CLS-совместимость и имеется контроль над исходным кодом интерфейса, пометьте интерфейс как `<CLSCompliant(True)>` Если все его члены являются совместимыми.  
   
--   Если необходима CLS-совместимость и не можете управлять исходным кодом интерфейса, или он не квалифицирован как совместимый, определите этот член внутри другой интерфейс.  
+- Если необходима CLS-совместимость и не можете управлять исходным кодом интерфейса, или он не квалифицирован как совместимый, определите этот член внутри другой интерфейс.  
   
--   Если требуется, чтобы этот член оставался в текущем интерфейсе, удалите <xref:System.CLSCompliantAttribute> из его определения или пометьте его как `<CLSCompliant(False)>`.  
+- Если требуется, чтобы этот член оставался в текущем интерфейсе, удалите <xref:System.CLSCompliantAttribute> из его определения или пометьте его как `<CLSCompliant(False)>`.  
   
 ## <a name="see-also"></a>См. также
 

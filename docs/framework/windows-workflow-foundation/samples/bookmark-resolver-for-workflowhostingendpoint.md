@@ -3,11 +3,11 @@ title: Арбитр закладок для конечной точки Workflow
 ms.date: 03/30/2017
 ms.assetid: 97fd5816-935e-4625-ad04-e6f6befa07de
 ms.openlocfilehash: 4676b3c624a7ba1539a7a12ed38c286f688dcf9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005580"
 ---
 # <a name="bookmark-resolver-for-workflowhostingendpoint"></a>Арбитр закладок для конечной точки WorkflowHostingEndpoint
 В этом образце показано использование <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> с <xref:System.ServiceModel.Activities.WorkflowServiceHost> для создания экземпляров рабочего процесса.  
@@ -18,9 +18,9 @@ ms.locfileid: "59344303"
 ## <a name="discussion"></a>Обсуждение  
  Этот образец использует <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> для создания экземпляров рабочих процессов, размещенных с помощью <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> - точка расширения для <xref:System.ServiceModel.Activities.WorkflowServiceHost>, которую можно использовать в следующих сценариях:  
   
--   Создание новых экземпляров рабочего процесса.  
+- Создание новых экземпляров рабочего процесса.  
   
--   Возобновление закладок в экземпляре рабочего процесса, размещенного в <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
+- Возобновление закладок в экземпляре рабочего процесса, размещенного в <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
   
  В приведенном образце точки расширения представлен контракт на выполнение операций, создающих рабочий процесс и возвращающих идентификатор экземпляра или создающих экземпляр с конкретным идентификатором. В приведенном образце консольного приложения создается экземпляр <xref:System.ServiceModel.Activities.WorkflowServiceHost>, определяющий рабочий процесс, и к узлу добавляется `CreationEndpoint`. Затем в конечной точке вызывается операция `Create`, чтобы создать новый экземпляр рабочего процесса.  
   

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - 3-D scenes
 ms.assetid: adb4a598-71a2-4dd5-b677-ea3fc11b78b2
 ms.openlocfilehash: 8e176cb437055787da86d56770dd71323134fa33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910186"
 ---
 # <a name="how-to-create-a-3-d-scene"></a>Практическое руководство. Создание трехмерной сцены
 В этом примере демонстрируется создание трехмерного объекта, который выглядит как плоский листа бумаги, вращающийся. Объект <xref:System.Windows.Controls.Viewport3D> вместе с следующие компоненты, используются для создания этой простой трехмерной сцены:  
   
--   Камера создается с помощью <xref:System.Windows.Media.Media3D.PerspectiveCamera>. Камеры указывает, какая часть трехмерной сцены можно просматривать.  
+- Камера создается с помощью <xref:System.Windows.Media.Media3D.PerspectiveCamera>. Камеры указывает, какая часть трехмерной сцены можно просматривать.  
   
--   Сетка создается для задания формы трехмерного объекта (лист бумаги) с помощью <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> свойство <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
+- Сетка создается для задания формы трехмерного объекта (лист бумаги) с помощью <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A> свойство <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
   
--   Материал указывается отображаемый на поверхности объекта (линейного градиента в этом образце) с помощью <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> свойство <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
+- Материал указывается отображаемый на поверхности объекта (линейного градиента в этом образце) с помощью <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A> свойство <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
   
--   Источник света создается для освещения объекта с помощью <xref:System.Windows.Media.Media3D.DirectionalLight>.  
+- Источник света создается для освещения объекта с помощью <xref:System.Windows.Media.Media3D.DirectionalLight>.  
   
 ## <a name="example"></a>Пример  
  В приведенном ниже коде показано, как создание трехмерной сцены в XAML.  

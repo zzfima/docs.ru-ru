@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
 ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877751"
 ---
 # <a name="date-and-time-data"></a>Данные даты и времени
 В SQL Server 2008 появились указанные ниже новые типы данных для обработки сведений о дате и времени. Новые типы данных включают отдельные типы для даты и времени, а также расширенные типы данных, обладающие большим диапазоном, большей точностью и учитывающие часовые пояса. Начиная с .NET Framework 3.5 с пакетом обновления 1 (SP1), поставщик данных .NET Framework для SQL Server (<xref:System.Data.SqlClient>) полностью поддерживает все новые возможности ядра СУБД SQL Server 2008. Для использования новых возможностей с SqlClient необходимо установить .NET Framework 3.5 с пакетом обновления 1 (SP1) или более поздней версии.  
@@ -51,13 +51,13 @@ ms.locfileid: "59344183"
 ## <a name="datetime-data-types-and-parameters"></a>Параметры и типы данных даты-времени  
  Для поддержки новых типов данных даты и времени к <xref:System.Data.SqlDbType> были добавлены следующие перечисления.  
   
--   `SqlDbType.Date`  
+- `SqlDbType.Date`  
   
--   `SqlDbType.Time`  
+- `SqlDbType.Time`  
   
--   `SqlDbType.DateTime2`  
+- `SqlDbType.DateTime2`  
   
--   `SqlDbType.DateTimeOffSet`  
+- `SqlDbType.DateTimeOffSet`  
 
 Можно указать тип данных <xref:System.Data.SqlClient.SqlParameter> с помощью одного из указанных выше <xref:System.Data.SqlDbType> перечисления. 
 
@@ -66,9 +66,9 @@ ms.locfileid: "59344183"
 
  Также можно указать тип объекта <xref:System.Data.SqlClient.SqlParameter> в общей форме, задав для свойства <xref:System.Data.SqlClient.SqlParameter.DbType%2A> объекта `SqlParameter` особое значение перечисления <xref:System.Data.DbType>. Для поддержки типов данных <xref:System.Data.DbType> и `datetime2` к свойству `datetimeoffset` были добавлены следующие значения перечисления.  
   
--   DbType.DateTime2  
+- DbType.DateTime2  
   
--   DbType.DateTimeOffset  
+- DbType.DateTimeOffset  
   
  Новые перечисления дополняют перечисления `Date`, `Time` и `DateTime` из предыдущих версий .NET Framework.  
   
@@ -219,11 +219,11 @@ command.Parameters.AddWithValue( _
 ## <a name="specifying-date-and-time-values-as-literals"></a>Указание значений даты и времени в виде литералов  
  Типы данных даты и времени можно указать с помощью множества различных форматов строк литералов, которые SQL Server затем оценивает во время выполнения, преобразуя их во внутренние структуры даты и времени. SQL Server распознает данные даты и времени, заключенные в апострофы ('). В приведенных ниже примерах демонстрируются некоторые форматы.  
   
--   Алфавитные форматы даты, например `'October 15, 2006'`.  
+- Алфавитные форматы даты, например `'October 15, 2006'`.  
   
--   Численные форматы даты, например `'10/15/2006'`.  
+- Численные форматы даты, например `'10/15/2006'`.  
   
--   Строковые форматы без разделителей, например строка `'20061015'`, которую можно интерпретировать как 15 октября 2006 г. при использовании стандартного формата даты ISO.  
+- Строковые форматы без разделителей, например строка `'20061015'`, которую можно интерпретировать как 15 октября 2006 г. при использовании стандартного формата даты ISO.  
   
 > [!NOTE]
 >  Полную документацию по всем литеральным строковым форматам и другим возможностям типов данных даты и времени можно найти в электронной документации по SQL Server.  

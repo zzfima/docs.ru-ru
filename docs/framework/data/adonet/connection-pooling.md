@@ -3,11 +3,11 @@ title: Объединение подключений в пул
 ms.date: 03/30/2017
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
 ms.openlocfilehash: 4cba53993489f51ed39ac52bff4fa252beb9aafd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880025"
 ---
 # <a name="connection-pooling"></a>Объединение подключений в пул
 На соединение с источником данных может требоваться значительное время. Чтобы свести к минимуму стоимость открытия соединения, в ADO.NET используется техника *организация пулов соединений*, который позволяет минимизировать затраты на часто открываемые и закрываемые соединения. Пулы соединений обрабатываются для поставщиков данных .NET Framework по-разному.  

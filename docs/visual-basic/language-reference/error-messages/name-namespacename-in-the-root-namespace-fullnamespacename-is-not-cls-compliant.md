@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
 ms.openlocfilehash: 84706719d151ea8df478f88610df34842f6f8702
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918363"
 ---
 # <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>Имя \<Имя_пространства_имен > в корневом пространстве имен \<fullnamespacename > не является CLS-совместимым
 Сборка помечена как `<CLSCompliant(True)>`, но элемент корневое пространство имен начинается с символа подчеркивания (`_`).  
@@ -29,9 +29,9 @@ ms.locfileid: "58841541"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Если требуется CLS-совместимость, измените имя корневого пространства имен, чтобы ни один из его элементов начинается с символа подчеркивания.  
+- Если требуется CLS-совместимость, измените имя корневого пространства имен, чтобы ни один из его элементов начинается с символа подчеркивания.  
   
--   Если вам требуется, что имя пространства имен остаются неизменными, то удалите <xref:System.CLSCompliantAttribute> из сборки или пометьте его как `<CLSCompliant(False)>`.  
+- Если вам требуется, что имя пространства имен остаются неизменными, то удалите <xref:System.CLSCompliantAttribute> из сборки или пометьте его как `<CLSCompliant(False)>`.  
   
 ## <a name="see-also"></a>См. также
 

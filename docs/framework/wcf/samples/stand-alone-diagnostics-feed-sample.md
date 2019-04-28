@@ -3,11 +3,11 @@ title: Пример автономного веб-канала диагност�
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
 ms.openlocfilehash: 2737621a98f6a7e89ef3aee01fd1ad7a2a60f9b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007829"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Пример автономного веб-канала диагностики
 В этом образце демонстрируется создание RSS/Atom-канал синдикации с помощью Windows Communication Foundation (WCF). Это простая программа «Hello, World!», которая показывает, с основами объектной модели и как настроить проверку подлинности в службе Windows Communication Foundation (WCF).  

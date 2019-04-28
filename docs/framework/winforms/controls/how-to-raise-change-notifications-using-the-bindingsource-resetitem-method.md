@@ -13,11 +13,11 @@ helpviewer_keywords:
 - change notifications
 ms.assetid: ab8b4096-37ff-4e30-aabc-de79a2f2e972
 ms.openlocfilehash: 68073f245e1a2eb18a277d7011ca0183dabb3724
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913150"
 ---
 # <a name="how-to-raise-change-notifications-using-the-bindingsource-resetitem-method"></a>Практическое руководство. Уведомление об изменении данных с использованием метода ResetItem компонента BindingSource
 Некоторые источники данных для элементов управления не инициируют уведомления об изменении при добавлении, изменении или удалении элементов. При помощи компонента <xref:System.Windows.Forms.BindingSource> можно выполнить привязку к источникам данных и вызывать уведомление об изменениях из кода.  
@@ -32,7 +32,7 @@ ms.locfileid: "59085068"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылки на сборки System, System.Data, System.Drawing и System.Windows.Forms.  
+- ссылки на сборки System, System.Data, System.Drawing и System.Windows.Forms.  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   

@@ -1,17 +1,17 @@
 ---
-title: Запуск составных и на базе микрослужб приложений в производственной среде
+title: Запуск составных и основанных на микрослужбах приложений в рабочих средах
 description: Узнайте о ключевых компонентов для запуска контейнерных приложений в рабочей среде
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 52cf273194bff10192b06d236bda7c1cbea1abd8
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921593"
 ---
-# <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Запуск составных и на базе микрослужб приложений в производственной среде
+# <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Запуск составных и основанных на микрослужбах приложений в рабочих средах
 
 Приложений, состоящих из нескольких микрослужб должны быть развернуты в orchestrator кластеры, чтобы упростить сложность развертывания и сделать ее применимой с точки зрения ИТ. Отсутствие кластере оркестратора было бы трудно развертывать и масштабировать приложение для сложных микрослужб.
 

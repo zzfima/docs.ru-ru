@@ -8,11 +8,11 @@ helpviewer_keywords:
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
 ms.openlocfilehash: b13fd85ae01fd0b6f3c963d87a372add930be99d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61975303"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Пошаговое руководство. Реализация IEnumerable(Of T) в Visual Basic
 <xref:System.Collections.Generic.IEnumerable%601> Интерфейс реализуется классами, которые могут возвращать последовательность значений по одному элементу за раз. Преимущество возвращения данных одного элемента за раз в том, что не нужно загрузить полный набор данных в памяти для работы с ним. Необходимо использовать достаточно памяти для загрузки одного элемента из данных. Классы, реализующие `IEnumerable(T)` интерфейс можно использовать с `For Each` циклы или запросов LINQ.  

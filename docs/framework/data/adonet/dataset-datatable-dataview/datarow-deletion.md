@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
 ms.openlocfilehash: 57f51ada00bf24617ca3e295a010aae64f0aa849
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879870"
 ---
 # <a name="datarow-deletion"></a>Удаление DataRow
 Существует два способа, можно использовать для удаления <xref:System.Data.DataRow> объекта из <xref:System.Data.DataTable> объект: **удалить** метод <xref:System.Data.DataRowCollection> объекта и <xref:System.Data.DataRow.Delete%2A> метод **DataRow**объекта. Тогда как <xref:System.Data.DataRowCollection.Remove%2A> метод удаления **DataRow** из **DataRowCollection**, <xref:System.Data.DataRow.Delete%2A> метод только помечает строку для удаления. Фактическое удаление происходит, когда приложение вызывает **AcceptChanges** метод. Использование метода <xref:System.Data.DataRow.Delete%2A> позволяет программно проверять, какие строки помечены для удаления, перед их фактическим удалением. Когда строка отмечена для удаления, ее свойство <xref:System.Data.DataRow.RowState%2A> имеет значение <xref:System.Data.DataRow.Delete%2A>.  

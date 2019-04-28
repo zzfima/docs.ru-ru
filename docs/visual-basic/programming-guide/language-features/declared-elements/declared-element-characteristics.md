@@ -14,22 +14,22 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
 ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61830171"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Характеристики объявленных элементов (Visual Basic)
 Объект *характеристика* объявленного элемента является аспектом элемента, определяющее, каким образом код может взаимодействовать с ним. Каждый объявленный элемент имеет один или несколько из следующих характеристик, связанный с ним:  
   
--   *Тип данных* — значения, которые может содержать элемент, и способ их хранения. Дополнительные сведения см. в разделе [Типы данных](../../../../visual-basic/language-reference/data-types/index.md).  
+- *Тип данных* — значения, которые может содержать элемент, и способ их хранения. Дополнительные сведения см. в разделе [Типы данных](../../../../visual-basic/language-reference/data-types/index.md).  
   
--   *Время существования* — период времени выполнения, в течение которого элемент доступен для использования. Дополнительные сведения см. в разделе [время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+- *Время существования* — период времени выполнения, в течение которого элемент доступен для использования. Дополнительные сведения см. в разделе [время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
--   *Область* — набор весь код, который можно ссылаться на элемент без указания полного имени. Дополнительные сведения см. в разделе [Как Управление областью действия переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+- *Область* — набор весь код, который можно ссылаться на элемент без указания полного имени. Дополнительные сведения см. в разделе [Как Управление областью действия переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
   
--   *Уровень доступа* — разрешение коду на использование этого элемента. Дополнительные сведения см. в разделе [Как Управление доступностью переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+- *Уровень доступа* — разрешение коду на использование этого элемента. Дополнительные сведения см. в разделе [Как Управление доступностью переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
   
 ## <a name="characteristics-of-the-elements"></a>Характеристики элементов  
  Следующая таблица показывает объявленные элементы и характеристики, которые применяются для каждого из них.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - classes [WPF], MediaPlayer
 ms.assetid: 165d47ed-22ce-4ded-aa6a-aa9b7467de87
 ms.openlocfilehash: 186c9ae8167dafd09f029418c1d23f81f7a9e906
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926071"
 ---
 # <a name="how-to-play-media-using-a-videodrawing"></a>Практическое руководство. Воспроизведение мультимедиа с помощью объекта VideoDrawing
 Для воспроизведения аудио-или видео, используйте <xref:System.Windows.Media.VideoDrawing> и <xref:System.Windows.Media.MediaPlayer>. Есть два способа загрузки и воспроизведения мультимедиа. Первый заключается в использовании <xref:System.Windows.Media.MediaPlayer> и <xref:System.Windows.Media.VideoDrawing> , а второй способ состоит в создании собственных <xref:System.Windows.Media.MediaTimeline> для использования с <xref:System.Windows.Media.MediaPlayer> и <xref:System.Windows.Media.VideoDrawing>.  

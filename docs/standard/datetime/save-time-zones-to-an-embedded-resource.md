@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Сохранение часовых поясов во внедренном ресурсе
+title: Практическое руководство. Сохранение часовых поясов во внедренном ресурсе
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912708"
 ---
-# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Как выполнить Сохранение часовых поясов во внедренном ресурсе
+# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Практическое руководство. Сохранение часовых поясов во внедренном ресурсе
 
 Часовыми поясами приложения часто требует наличия определенного часового пояса. Тем не менее поскольку доступность отдельных <xref:System.TimeZoneInfo> объектов зависит от сведений, хранящихся в реестре локальной системы, даже настраиваемые доступные часовые пояса могут отсутствовать. Кроме того, сведения о пользовательских часовых поясов, созданных с помощью <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> метода не сохраняется вместе с другими данными часового пояса в реестре. Чтобы убедиться, что эти часовые пояса доступны, когда они нужны, можно сохранить их можно сериализовать и последующее восстановление их десериализовать.
 

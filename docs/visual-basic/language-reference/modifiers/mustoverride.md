@@ -16,11 +16,11 @@ helpviewer_keywords:
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
 ms.openlocfilehash: 0ddd7d0d2a57afc02aa7483ba5e83b65c48af534
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920761"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
 Указывает, что свойство или процедура в этом классе не реализован и должен быть переопределен в производном классе, прежде чем можно будет использовать.  
@@ -30,13 +30,13 @@ ms.locfileid: "58822821"
   
 ## <a name="rules"></a>Правила  
   
--   **Неполное объявление.** При указании `MustOverride`, не нужно вводить любые дополнительные строки кода для свойства или процедуры, не даже `End Function`, `End Property`, или `End Sub` инструкции.  
+- **Неполное объявление.** При указании `MustOverride`, не нужно вводить любые дополнительные строки кода для свойства или процедуры, не даже `End Function`, `End Property`, или `End Sub` инструкции.  
   
--   **Комбинированные модификаторы.** Нельзя указать `MustOverride` вместе с `NotOverridable`, `Overridable`, или `Shared` в одном объявлении.  
+- **Комбинированные модификаторы.** Нельзя указать `MustOverride` вместе с `NotOverridable`, `Overridable`, или `Shared` в одном объявлении.  
   
--   **Сокрытие и переопределение.** Сокрытие и переопределение заменяют наследуемый элемент, но между этими подходами существуют значительные различия. Дополнительные сведения см. в разделе [сокрытие в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+- **Сокрытие и переопределение.** Сокрытие и переопределение заменяют наследуемый элемент, но между этими подходами существуют значительные различия. Дополнительные сведения см. в разделе [сокрытие в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
--   **Альтернативные условия.** Элемент, который не может использоваться только в переопределении иногда называют *чисто виртуальный* элемент.  
+- **Альтернативные условия.** Элемент, который не может использоваться только в переопределении иногда называют *чисто виртуальный* элемент.  
   
  Модификатор `MustOverride` можно использовать в следующих контекстах:  
   

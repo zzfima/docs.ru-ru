@@ -12,18 +12,18 @@ helpviewer_keywords:
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
 ms.openlocfilehash: 3394acbb26fff4c099ad746a3dc63e663374716a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912929"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>Практическое руководство. Сохранение файлов с помощью компонента SaveFileDialog
 <xref:System.Windows.Forms.SaveFileDialog> Компонент позволяет пользователям просматривать файловую систему и выбирать файлы для сохранения. Диалоговое окно возвращает путь и имя файла, который пользователь выбрал в диалоговом окне. Тем не менее для фактического сохранения файла на диск необходимо написать специальный код.  
   
 ### <a name="to-save-a-file-using-the-savefiledialog-component"></a>Сохранение файла с помощью компонента SaveFileDialog  
   
--   Выведите на экран диалоговое окно **Сохранить файл** и вызовите метод для сохранения файла, выбранного пользователем.  
+- Выведите на экран диалоговое окно **Сохранить файл** и вызовите метод для сохранения файла, выбранного пользователем.  
   
      Используйте <xref:System.Windows.Forms.SaveFileDialog> компонента <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> метод для сохранения файла. Этот метод обеспечивает <xref:System.IO.Stream> объект можно записать.  
   

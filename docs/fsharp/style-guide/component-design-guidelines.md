@@ -3,11 +3,11 @@ title: F#рекомендации по проектированию компон
 description: Дополнительные рекомендации для записи F# компоненты, предназначенный для использования другими вызывающими объектами.
 ms.date: 05/14/2018
 ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55066029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902165"
 ---
 # <a name="f-component-design-guidelines"></a>F#рекомендации по проектированию компонентов
 
@@ -84,7 +84,7 @@ type Point =
 | Параметры | camelCase | Существительное |  Имя типа, преобразование, диапазон | |
 | Разрешить значения (внутренний) | camelCase или PascalCase | Существительное-глагол |  getValue myTable |
 | Разрешить значения (внешний) | camelCase или PascalCase | Существительное глагол  | List.map Dates.Today | привязки let значения часто являются открытыми, при использовании традиционных функциональные шаблоны разработки. Тем не менее обычно используется PascalCase, когда идентификатор может использоваться в других языках .NET. |
-| Свойство.  | PascalCase  | Существительное / прилагательными  | IsEndOfFile, BackColor  | Логические свойства обычно использование является и могут и должны быть выразил, как и в IsEndOfFile, не IsNotEndOfFile.
+| Свойство  | PascalCase  | Существительное / прилагательными  | IsEndOfFile, BackColor  | Логические свойства обычно использование является и могут и должны быть выразил, как и в IsEndOfFile, не IsNotEndOfFile.
 
 #### <a name="avoid-abbreviations"></a>Избегать сокращений
 

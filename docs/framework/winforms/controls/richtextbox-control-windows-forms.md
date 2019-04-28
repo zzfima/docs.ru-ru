@@ -7,11 +7,11 @@ helpviewer_keywords:
 - rich edit controls
 ms.assetid: 3225f2ef-c6d9-4bd4-9d3e-2219e58edbf2
 ms.openlocfilehash: 2b1a6604df3979e83e4a815cdb4a9397ab4e67ad
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012468"
 ---
 # <a name="richtextbox-control-windows-forms"></a>Элемент управления RichTextBox (Windows Forms)
 Windows Forms `RichTextBox` элемент управления используется для отображения, ввода и обработки текста с форматированием. `RichTextBox` Управления следит за недопущением <xref:System.Windows.Forms.TextBox> делает элемент управления, но можно также отображать шрифты, цвета и ссылки; загрузить текст и встроенные изображения из файла; действия отмены и повтора операций; изменения и находить указанные символы. `RichTextBox` Управления обычно используется для работы с текстом и отображения функций, как для текстовых редакторов, таких как Microsoft Word. Как <xref:System.Windows.Forms.TextBox> элемента управления, `RichTextBox` элемент управления может отображать полосы прокрутки; но в отличие от <xref:System.Windows.Forms.TextBox> элемента управления, он по умолчанию отображаются горизонтальные и вертикальные полосы прокрутки и имеет дополнительные параметры полосы прокрутки.  

@@ -3,11 +3,11 @@ title: Безопасность интеграции CLR в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 489fe096-fd1d-42de-8438-bf7aed46aea2
 ms.openlocfilehash: 946401211d515df9ba5b9e38d7cfd10730973b64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878492"
 ---
 # <a name="clr-integration-security-in-sql-server"></a>Безопасность интеграции CLR в SQL Server
 Microsoft SQL Server обеспечивает интеграцию компонентов среды CLR платформы .NET Framework. Интеграция со средой CLR позволяет записывать хранимые процедуры, триггеры, определяемые пользователем типы, определяемые пользователем функции и потоковые возвращающие табличное значение функции, используя любой язык NET Framework, например Microsoft Visual Basic .NET или Microsoft Visual C#.  

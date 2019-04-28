@@ -5,18 +5,18 @@ f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
 ms.openlocfilehash: f3184f023ab4663d5616e3878420e3a75a7f3cde
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922386"
 ---
 # <a name="line-number-cannot-be-parsed-using-the-current-fieldwidths"></a>Строки \<номер > не может быть проанализирована с использованием текущего параметра FieldWidths
 Указанная строка не может быть проанализирована, так как ее поля имеют ширину, отличную от указанной.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Настройте `FieldWidths` так, чтобы строка могла быть проанализирована правильно, или вставьте код обработки исключения, чтобы обработать строку.  
+- Настройте `FieldWidths` так, чтобы строка могла быть проанализирована правильно, или вставьте код обработки исключения, чтобы обработать строку.  
   
 ## <a name="see-also"></a>См. также
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
 ms.openlocfilehash: 05df05a52914f27a4b62cf7bde92e5d942b6ea06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904271"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Практическое руководство. Изменение внешнего вида элемента управления TabControl в Windows Forms
 Можно изменить внешний вид вкладок в формах Windows Forms с помощью свойств объекта <xref:System.Windows.Forms.TabControl> и <xref:System.Windows.Forms.TabPage> объекты, составляющие отдельные вкладки в элементе управления. Задавая эти свойства, можно отображать изображения на вкладках, отображение вкладок вертикально, отображения нескольких рядов и также включить или отключить вкладки программными средствами.  
@@ -43,7 +43,7 @@ ms.locfileid: "59331342"
   
 ### <a name="to-arrange-tabs-on-the-side-of-the-control"></a>Расположение вкладок вдоль края элемента управления  
   
--   Задайте <xref:System.Windows.Forms.TabControl.Alignment%2A> свойство <xref:System.Windows.Forms.TabControl> для <xref:System.Windows.Forms.TabAlignment.Left> или <xref:System.Windows.Forms.TabAlignment.Right>.  
+- Задайте <xref:System.Windows.Forms.TabControl.Alignment%2A> свойство <xref:System.Windows.Forms.TabControl> для <xref:System.Windows.Forms.TabAlignment.Left> или <xref:System.Windows.Forms.TabAlignment.Right>.  
   
 ### <a name="to-programmatically-enable-or-disable-all-controls-on-a-tab"></a>Чтобы включить или отключить все элементы управления на вкладке  
   
@@ -63,7 +63,7 @@ ms.locfileid: "59331342"
   
 ### <a name="to-display-tabs-as-buttons"></a>Отображение вкладок как кнопки  
   
--   Задайте <xref:System.Windows.Forms.TabControl.Appearance%2A> свойство <xref:System.Windows.Forms.TabControl> для <xref:System.Windows.Forms.TabAppearance.Buttons> или <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
+- Задайте <xref:System.Windows.Forms.TabControl.Appearance%2A> свойство <xref:System.Windows.Forms.TabControl> для <xref:System.Windows.Forms.TabAppearance.Buttons> или <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
   
 ## <a name="see-also"></a>См. также
 

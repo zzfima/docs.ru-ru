@@ -10,18 +10,18 @@ helpviewer_keywords:
 - spin button control [Windows Forms], removing items
 ms.assetid: e70f5cbc-b497-41a9-975a-344c00e56ed2
 ms.openlocfilehash: 0c07365f5be2e419b4049a466949fed2d884d897
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59131408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913137"
 ---
 # <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a>Практическое руководство. Удаление элементов из элемента управления DomainUpDown в Windows Forms
 Можно удалить элементы из Windows Forms <xref:System.Windows.Forms.DomainUpDown> элемента управления, используя <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> или <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> метод <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> класса. <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> Метод удаляет определенный элемент, пока <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> метод удаляет элемент по его позиции.  
   
 ### <a name="to-remove-an-item"></a>Удаление элемента  
   
--   Используйте <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> метод <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> класса для удаления элемента по имени.  
+- Используйте <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> метод <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> класса для удаления элемента по имени.  
   
     ```vb  
     DomainUpDown1.Items.Remove("noodles")  
@@ -37,7 +37,7 @@ ms.locfileid: "59131408"
   
      -или-  
   
--   Используйте <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> метод для удаления элемента по его позиции.  
+- Используйте <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> метод для удаления элемента по его позиции.  
   
     ```vb  
     ' Removes the first item in the list.  

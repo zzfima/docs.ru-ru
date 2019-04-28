@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
 ms.openlocfilehash: 2e1cf9efcf47fc70421c64541aead5fb36d8c9d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916777"
 ---
 # <a name="querying-across-relationships"></a>Выполнение запросов в связях
 Ссылки на другие объекты или коллекции других объектов в определениях классов указывают непосредственно на связи внешнего ключа в базе данных. Эти связи можно использовать при осуществлении запроса с помощью точечной нотации для доступа к свойствам связей и перехода от одного объекта к другому. Эти операции доступа преобразуются в более сложные соединения или коррелированные подзапросы в эквивалентном SQL.  

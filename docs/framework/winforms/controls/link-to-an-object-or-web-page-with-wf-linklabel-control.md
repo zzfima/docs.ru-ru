@@ -16,11 +16,11 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
 ms.openlocfilehash: edebfaee6f0da6826f4b757568408662f3208d41
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012870"
 ---
 # <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>Практическое руководство. Создание связи с объектом или веб-страницей с помощью элемента управления LinkLabel в Windows Forms
 Windows Forms <xref:System.Windows.Forms.LinkLabel> управления позволяет создавать веб-ссылок в форме. При щелчке ссылки, можно изменить его цвет, чтобы указать, что связь была посещена. Дополнительные сведения об изменении цвета см. в разделе [как: Изменение внешнего вида элемента управления LinkLabel в Windows Forms](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).  

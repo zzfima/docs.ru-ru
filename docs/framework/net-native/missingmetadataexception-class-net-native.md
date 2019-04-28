@@ -5,11 +5,11 @@ ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2961a4c02d8ffe17055307094f56a03680d1a59a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866981"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>Класс MissingMetadataException (машинный код .NET)
 
@@ -45,7 +45,7 @@ ms.locfileid: "57357135"
 |`public string HelpLink { get; set; }`|Получает или задает ссылку на файл справки, связанный с этим исключением. (Является наследником <xref:System.Exception?displayProperty=nameWithType>)|
 |`public int HResult { get; protected set; }`|Получает или задает `HRESULT`, закодированное числовое значение, присвоенное определенному исключению. (Является наследником <xref:System.Exception?displayProperty=nameWithType>)|
 |`public Exception InnerException { get; }`|Получает исключение, которое вызвало текущее исключение. (Является наследником <xref:System.Exception?displayProperty=nameWithType>)|
-|`public string Message { get; }`|Получает сообщение, описывающее текущее исключение. (Является наследником <xref:System.TypeLoadException>)|
+|`public string Message { get; }`|Возвращает сообщение, описывающее текущее исключение. (Является наследником <xref:System.TypeLoadException>)|
 |`public string Source { get; set; }`|Возвращает или задает имя приложения или объекта, вызвавшего ошибку. (Является наследником <xref:System.Exception?displayProperty=nameWithType>)|
 |`public string StackTrace { get; }`|Получает строковое представление непосредственных кадров в стеке вызова. (Является наследником <xref:System.Exception?displayProperty=nameWithType>)|
 |`public MethodBase TargetSite { get; }`|Возвращает метод, который вызвал текущее исключение. (Является наследником <xref:System.Exception?displayProperty=nameWithType>)|
@@ -57,7 +57,7 @@ ms.locfileid: "57357135"
 |------------|-----------------|
 |`public bool Equals(Object obj)`|Определяет, равен ли заданный объект текущему объекту.  (Является наследником <xref:System.Exception?displayProperty=nameWithType>)|
 |`protected void Finalize()`|Позволяет объекту попытаться освободить ресурсы и выполнить другие операции очистки, перед тем как он будет уничтожен во время сборки мусора. (Является наследником <xref:System.Object>)|
-|`public Exception GetBaseException()`|Возвращает исключение, которое является корневой причиной одного или нескольких исключений. (Является наследником <xref:System.Exception?displayProperty=nameWithType>)|
+|`public Exception GetBaseException()`|Возвращает исключение, которое является первопричиной одного или нескольких исключений. (Является наследником <xref:System.Exception?displayProperty=nameWithType>)|
 |`public int GetHashCode()`|Возвращает хэш-код для экземпляра`MissingMetadataException`.   (Является наследником <xref:System.Object>)|
 |`public void GetObjectData(SerializationInfo info, StreamingContext context)`|Задает объект <xref:System.Runtime.Serialization.SerializationInfo>, содержащий информацию об исключении.  (Является наследником <xref:System.TypeLoadException>)|
 |`public Type GetType()`|Возвращает тип среды выполнения текущего экземпляра. (Является наследником <xref:System.Exception?displayProperty=nameWithType>)|

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - DatePicker control [WPF]
 ms.assetid: 619765c8-8d25-4315-aec2-79aea08fed9f
 ms.openlocfilehash: 555bf31b27ba233ffa54438077984b02b5e3084a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911991"
 ---
 # <a name="datepicker"></a>DatePicker
 <xref:System.Windows.Controls.DatePicker> Управления позволяет пользователю выбрать дату, либо путем ввода его в текстовое поле или с помощью раскрывающегося списка <xref:System.Windows.Controls.Calendar> элемента управления.  

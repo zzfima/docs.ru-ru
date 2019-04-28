@@ -14,11 +14,11 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 ms.assetid: 3fb2a305-64ce-4b6c-9258-5330d3f21b6c
 ms.openlocfilehash: 3ec8edbca86dda1c67d03e5c0c34c54b2c365abf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913189"
 ---
 # <a name="how-to-print-with-a-webbrowser-control"></a>Практическое руководство. Печать с использованием элемента управления WebBrowser
 В следующем примере кода показано, как использовать <xref:System.Windows.Forms.WebBrowser> управления для печати веб-страницы без его отображения.  
@@ -30,7 +30,7 @@ ms.locfileid: "59094948"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылки на сборки `System` и `System.Windows.Forms`.  
+- ссылки на сборки `System` и `System.Windows.Forms`.  
   
 ## <a name="see-also"></a>См. также
 

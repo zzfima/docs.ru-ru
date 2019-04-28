@@ -12,11 +12,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
 ms.openlocfilehash: 2de892d94afdfcdc580d20f90fb60ebabf4a9b37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761420"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Практическое руководство. Связывание элемента управления с объектом-фабрикой в Windows Forms
 При создании элементов управления, взаимодействующих с данными, иногда требуется привязать элемент управления к объекту или методу, создающему другие объекты. Такой объект или метод называется фабрикой. Источник данных может быть, например, возвращаемым значением вызова метода, а не объектом в памяти или типом. Можно привязать элемент управления к такому типу источника данных при условии, что источник возвращает коллекцию.  
@@ -33,7 +33,7 @@ ms.locfileid: "59093037"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылки на сборки System, System.Data, System.Drawing и System.Windows.Forms.  
+- ссылки на сборки System, System.Data, System.Drawing и System.Windows.Forms.  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
 ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007136"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Пошаговое руководство. Сопоставление свойств с помощью элемента WindowsFormsHost
 
@@ -21,17 +21,17 @@ ms.locfileid: "59296528"
 
 В данном пошаговом руководстве представлены следующие задачи.
 
--   Создание проекта.
+- Создание проекта.
 
--   Определение макета приложения.
+- Определение макета приложения.
 
--   Определение нового сопоставления свойства.
+- Определение нового сопоставления свойства.
 
--   Удаление сопоставления свойства по умолчанию.
+- Удаление сопоставления свойства по умолчанию.
 
--   Замена сопоставления свойства по умолчанию.
+- Замена сопоставления свойства по умолчанию.
 
--   Расширение сопоставления свойства по умолчанию.
+- Расширение сопоставления свойства по умолчанию.
 
 Полный пример кода для задач, приведенных в этом пошаговом руководстве, см. в разделе [сопоставления свойств с помощью образец элемента WindowsFormsHost](https://go.microsoft.com/fwlink/?LinkID=160019).
 
@@ -41,7 +41,7 @@ ms.locfileid: "59296528"
 
 Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="create-and-set-up-the-project"></a>Создание и настройка проекта
 
@@ -76,7 +76,7 @@ ms.locfileid: "59296528"
 
 ### <a name="to-define-a-new-property-mapping"></a>Определение нового сопоставления свойства
 
--   Скопируйте следующий код в определение `Window1` класса.
+- Скопируйте следующий код в определение `Window1` класса.
 
      [!code-csharp[PropertyMappingWithWfhSample#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#14)]
      [!code-vb[PropertyMappingWithWfhSample#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#14)]
@@ -93,7 +93,7 @@ ms.locfileid: "59296528"
 
 ### <a name="to-remove-a-default-property-mapping"></a>Удаление сопоставления свойства по умолчанию
 
--   Скопируйте следующий код в определение `Window1` класса.
+- Скопируйте следующий код в определение `Window1` класса.
 
      [!code-csharp[PropertyMappingWithWfhSample#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#13)]
      [!code-vb[PropertyMappingWithWfhSample#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#13)]
@@ -106,7 +106,7 @@ ms.locfileid: "59296528"
 
 ### <a name="to-replace-a-default-property-mapping"></a>Замена сопоставления свойства по умолчанию
 
--   Скопируйте следующий код в определение `Window1` класса.
+- Скопируйте следующий код в определение `Window1` класса.
 
      [!code-csharp[PropertyMappingWithWfhSample#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#12)]
      [!code-vb[PropertyMappingWithWfhSample#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#12)]
@@ -123,7 +123,7 @@ ms.locfileid: "59296528"
 
 ### <a name="to-extend-a-default-property-mapping"></a>Расширение сопоставления свойства по умолчанию
 
--   Скопируйте следующий код в определение `Window1` класса.
+- Скопируйте следующий код в определение `Window1` класса.
 
      [!code-csharp[PropertyMappingWithWfhSample#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#15)]
      [!code-vb[PropertyMappingWithWfhSample#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#15)]
@@ -145,11 +145,11 @@ ms.locfileid: "59296528"
 
      `WindowLoaded` Метод обрабатывает <xref:System.Windows.FrameworkElement.Loaded> событий и выполнения следующей инициализации.
 
-    -   Создает [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> элемента управления.
+    - Создает [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> элемента управления.
 
-    -   Вызывает методы, ранее определенные в руководстве, для настройки сопоставлений свойств.
+    - Вызывает методы, ранее определенные в руководстве, для настройки сопоставлений свойств.
 
-    -   Присваивает начальные значения сопоставленным свойствам.
+    - Присваивает начальные значения сопоставленным свойствам.
 
 2. Нажмите клавишу **F5**, чтобы выполнить сборку приложения и запустить его. Щелкните флажок, чтобы увидеть эффект <xref:System.Windows.FrameworkElement.FlowDirection%2A> сопоставления. При установке флажка меняется ориентация макета по горизонтали.
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
 ms.openlocfilehash: 84762d8917609b84a049ea665b575acfa6e5fecf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857536"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Практическое руководство. Настройка службы WCF для взаимодействия с клиентами веб-службы ASP.NET
 Чтобы настроить конечную точку службы Windows Communication Foundation (WCF) с [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] клиентами веб-службы, используйте <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> тип как тип привязки для конечной точки службы.  

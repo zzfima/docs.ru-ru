@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Panel control [Windows Forms]
 ms.assetid: 37c69803-5084-4347-b035-54cfbabdc310
 ms.openlocfilehash: 752f64b2430c1fc7df4f3fd724fc12fe535ecb70
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012663"
 ---
 # <a name="panel-control-windows-forms"></a>Элемент управления Panel (Windows Forms)
 Windows Forms `Panel` элементы управления используются для предоставления возможность идентифицируемой группировки других элементов управления. Как правило панели используются для разделения формы функцией. `Panel` Управления аналогичен <xref:System.Windows.Forms.GroupBox> управления; тем не менее, только `Panel` элемент управления может иметь полосы прокрутки и только <xref:System.Windows.Forms.GroupBox> управления отображается заголовок.  

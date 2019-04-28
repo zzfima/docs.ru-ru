@@ -14,8 +14,8 @@ ms.openlocfilehash: 19571f3102039176ed4d8fab46a7f8229cbfecbe
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875541"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Потоковый поставщик (службы WCF Data Services)
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
 ms.openlocfilehash: 0fca02ab2dcb507c1129f18f31a25c7809fc9710
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917960"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Ссылки на объявленные элементы (Visual Basic)
 Когда код ссылается на объявленный элемент, компилятор Visual Basic совпадает с именем в ссылке соответствующий объявлению. Если более чем один элемент объявлен с тем же именем, вы можете контролировать, какие из этих элементов — на них ссылается *удовлетворяющим требованиям* его имя.  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c742410da8e7dbce53b53978516ab94243455849
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763715"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>Метод ICLRSyncManager::CreateRWLockOwnerIterator
 Запросы, которые среда CLR (CLR) создают итератор для узла для определения набора задач, ожидающих блокировки чтения и записи.  
@@ -58,9 +58,9 @@ HRESULT CreateRWLockOwnerIterator (
 ## <a name="remarks"></a>Примечания  
  Обычно вызывать узлы `CreateRWLockOwnerIterator`, `DeleteRWLockOwnerIterator`, и `GetRWLockOwnerNext` методов во время обнаружения взаимоблокировок. Узел отвечает за то, что блокировка чтения или записи действительна, так как среда CLR не предпринимает попытки сохранения блокировка чтения или записи. Несколько стратегий доступны для узла обеспечить правильность блокировки:  
   
--   Узел может блокировать вызовы снятия блокировки чтения и записи (например, [IHostSemaphore::ReleaseSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) гарантией того, что этот блок не приводит к взаимоблокировке.  
+- Узел может блокировать вызовы снятия блокировки чтения и записи (например, [IHostSemaphore::ReleaseSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) гарантией того, что этот блок не приводит к взаимоблокировке.  
   
--   Узел может блокировать выход из режима ожидания для объекта события, связанного с блокировкой чтения записи, еще раз, гарантируя, что этот блок не приводит к взаимоблокировке.  
+- Узел может блокировать выход из режима ожидания для объекта события, связанного с блокировкой чтения записи, еще раз, гарантируя, что этот блок не приводит к взаимоблокировке.  
   
 > [!NOTE]
 >  `CreateRWLockOwnerIterator` должен вызываться только в потоках, которые в данный момент неуправляемого кода.  

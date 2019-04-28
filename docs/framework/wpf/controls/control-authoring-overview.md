@@ -9,11 +9,11 @@ helpviewer_keywords:
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
 ms.openlocfilehash: bb35a4d47f583aad710e178bdb12cb9adf6321e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017687"
 ---
 # <a name="control-authoring-overview"></a>Общие сведения о разработке элементов управления
 Расширяемость модели элементов управления [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] значительно уменьшает необходимость создания новых элементов управления. Однако в некоторых случаях может потребоваться создать пользовательский элемент управления. В этом разделе обсуждаются функции, которые уменьшают необходимость создания пользовательских элементов управления, а также различные модели создания элементов управления в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Также здесь демонстрируется создание нового элемента управления.  
@@ -22,18 +22,18 @@ ms.locfileid: "59340026"
 ## <a name="alternatives-to-writing-a-new-control"></a>Альтернативы написанию нового элемента управления  
  Исторически сложилось, что если нужно настроить вид существующего элемента управления, то ограничиваются изменением его стандартных свойств, таких как цвет фона, ширина границы и размер шрифта. Если необходимо расширить внешний вид или поведение элемента управления за пределы этих предопределенных параметров, то необходимо создать новый элемент управления, как правило, путем наследования от существующего элемента управления и переопределения метода, ответственного за отрисовку элемента управления.  Кроме того, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] позволяет настраивать существующие элементы управления с помощью модели форматированного содержимого, стилей, шаблонов и триггеров. Ниже представлены примеры использования этих функций для создания настраиваемых и согласованных функциональных возможностей без необходимости создания нового элемента управления.  
   
--   **Форматированное содержимое.** Многие стандартные элементы управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживают форматированное содержимое. Например, свойство содержимого <xref:System.Windows.Controls.Button> имеет тип <xref:System.Object>, поэтому теоретически все может отображаться на <xref:System.Windows.Controls.Button>.  Чтобы в кнопке отображалось изображение и текст, можно добавить изображение и <xref:System.Windows.Controls.TextBlock> для <xref:System.Windows.Controls.StackPanel> и назначить <xref:System.Windows.Controls.StackPanel> для <xref:System.Windows.Controls.ContentControl.Content%2A> свойство. Поскольку элементы управления могут отображать визуальные элементы [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и произвольные данные, это уменьшает необходимость создания нового элемента управления или изменения существующего для поддержки сложной визуализации. Дополнительные сведения о модели содержимого для <xref:System.Windows.Controls.Button> и других моделях содержимого в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], см. в разделе [модель содержимого WPF](wpf-content-model.md).  
+- **Форматированное содержимое.** Многие стандартные элементы управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживают форматированное содержимое. Например, свойство содержимого <xref:System.Windows.Controls.Button> имеет тип <xref:System.Object>, поэтому теоретически все может отображаться на <xref:System.Windows.Controls.Button>.  Чтобы в кнопке отображалось изображение и текст, можно добавить изображение и <xref:System.Windows.Controls.TextBlock> для <xref:System.Windows.Controls.StackPanel> и назначить <xref:System.Windows.Controls.StackPanel> для <xref:System.Windows.Controls.ContentControl.Content%2A> свойство. Поскольку элементы управления могут отображать визуальные элементы [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и произвольные данные, это уменьшает необходимость создания нового элемента управления или изменения существующего для поддержки сложной визуализации. Дополнительные сведения о модели содержимого для <xref:System.Windows.Controls.Button> и других моделях содержимого в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], см. в разделе [модель содержимого WPF](wpf-content-model.md).  
   
--   **Стили.** Объект <xref:System.Windows.Style> — это совокупность значений, представляющих свойства для элемента управления. С помощью стилей можно создать повторно используемое представление нужного внешнего вида и поведения элемента управления без написания нового элемента управления. Например, предположим, что все ваши <xref:System.Windows.Controls.TextBlock> элементам управления иметь красный, сделанные шрифтом Arial с размером шрифта из 14. Можно создать стиль как ресурс и задать соответствующие свойства. Каждый <xref:System.Windows.Controls.TextBlock> добавить в приложение будет выглядеть одинаково.  
+- **Стили.** Объект <xref:System.Windows.Style> — это совокупность значений, представляющих свойства для элемента управления. С помощью стилей можно создать повторно используемое представление нужного внешнего вида и поведения элемента управления без написания нового элемента управления. Например, предположим, что все ваши <xref:System.Windows.Controls.TextBlock> элементам управления иметь красный, сделанные шрифтом Arial с размером шрифта из 14. Можно создать стиль как ресурс и задать соответствующие свойства. Каждый <xref:System.Windows.Controls.TextBlock> добавить в приложение будет выглядеть одинаково.  
   
--   **Шаблоны данных.** Объект <xref:System.Windows.DataTemplate> позволяет настроить способ отображения данных в элементе управления. Например <xref:System.Windows.DataTemplate> может использоваться для указания способа отображения данных в <xref:System.Windows.Controls.ListBox>.  Пример см. в разделе [Общие сведения о шаблонах данных](../data/data-templating-overview.md).  В дополнение к настройке внешнего вида данных, <xref:System.Windows.DataTemplate> может включать элементы пользовательского интерфейса, который обеспечивает большую гибкость в пользовательских интерфейсах.  Например, с помощью <xref:System.Windows.DataTemplate>, можно создать <xref:System.Windows.Controls.ComboBox> в котором каждый элемент содержит типа "флажок".  
+- **Шаблоны данных.** Объект <xref:System.Windows.DataTemplate> позволяет настроить способ отображения данных в элементе управления. Например <xref:System.Windows.DataTemplate> может использоваться для указания способа отображения данных в <xref:System.Windows.Controls.ListBox>.  Пример см. в разделе [Общие сведения о шаблонах данных](../data/data-templating-overview.md).  В дополнение к настройке внешнего вида данных, <xref:System.Windows.DataTemplate> может включать элементы пользовательского интерфейса, который обеспечивает большую гибкость в пользовательских интерфейсах.  Например, с помощью <xref:System.Windows.DataTemplate>, можно создать <xref:System.Windows.Controls.ComboBox> в котором каждый элемент содержит типа "флажок".  
   
--   **Шаблоны элементов управления.** Многие элементы управления в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использовать <xref:System.Windows.Controls.ControlTemplate> для определения структуры элемента управления и внешний вид, который отделяет внешний вид элемента управления от функциональности элемента управления. Можно существенно изменить внешний вид элемента управления путем переопределения его <xref:System.Windows.Controls.ControlTemplate>.  Предположим, что нужен элемент управления, который выглядит как светофор. Этот элемент управления имеет простой пользовательский интерфейс и функциональные возможности.  Элемент управления состоит из трех кругов, из которых одновременно загорается только один. Позже вы можете осознать, <xref:System.Windows.Controls.RadioButton> предлагает функциональные возможности выбора только один раз, но внешний вид по умолчанию <xref:System.Windows.Controls.RadioButton> похож индикаторы на светофор.  Так как <xref:System.Windows.Controls.RadioButton> использует шаблон элемента управления для определения внешнего вида, он может легко переопределить <xref:System.Windows.Controls.ControlTemplate> согласно требованиям элемента управления и использовать переключатели, чтобы сделать Светофор.  
+- **Шаблоны элементов управления.** Многие элементы управления в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использовать <xref:System.Windows.Controls.ControlTemplate> для определения структуры элемента управления и внешний вид, который отделяет внешний вид элемента управления от функциональности элемента управления. Можно существенно изменить внешний вид элемента управления путем переопределения его <xref:System.Windows.Controls.ControlTemplate>.  Предположим, что нужен элемент управления, который выглядит как светофор. Этот элемент управления имеет простой пользовательский интерфейс и функциональные возможности.  Элемент управления состоит из трех кругов, из которых одновременно загорается только один. Позже вы можете осознать, <xref:System.Windows.Controls.RadioButton> предлагает функциональные возможности выбора только один раз, но внешний вид по умолчанию <xref:System.Windows.Controls.RadioButton> похож индикаторы на светофор.  Так как <xref:System.Windows.Controls.RadioButton> использует шаблон элемента управления для определения внешнего вида, он может легко переопределить <xref:System.Windows.Controls.ControlTemplate> согласно требованиям элемента управления и использовать переключатели, чтобы сделать Светофор.  
   
     > [!NOTE]
     >  Несмотря на то что <xref:System.Windows.Controls.RadioButton> можно использовать <xref:System.Windows.DataTemplate>, <xref:System.Windows.DataTemplate> не хватает в этом примере.  <xref:System.Windows.DataTemplate> Определяет внешний вид содержимого элемента управления. В случае использования <xref:System.Windows.Controls.RadioButton>, содержимое отображается справа от круга, который указывает ли <xref:System.Windows.Controls.RadioButton> выбран.  В примере светофора переключатель должен быть тем кругом, который может "загораться". Так как требования к внешнему вида для светофора отличаются от внешнего вида по умолчанию <xref:System.Windows.Controls.RadioButton>, необходимо переопределить <xref:System.Windows.Controls.ControlTemplate>.  В целом <xref:System.Windows.DataTemplate> используется для определения содержимого (или данных) элемента управления, а также <xref:System.Windows.Controls.ControlTemplate> используется для определения того, как структурирован элемент управления.  
   
--   **Триггеры.** Объект <xref:System.Windows.Trigger> позволяет динамически изменять внешний вид и поведение элемента управления без создания нового элемента управления. Например, предположим, имеется несколько <xref:System.Windows.Controls.ListBox> элементы управления в приложении и элементы в каждом <xref:System.Windows.Controls.ListBox> должен выделяться полужирным красным при их выборе. Очевидным может быть попытка создать класс, наследующий от <xref:System.Windows.Controls.ListBox> и переопределить <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> способ изменения внешнего вида выбранного элемента, но более эффективный подход — добавить триггер к стилю <xref:System.Windows.Controls.ListBoxItem> , изменяет внешний вид Выбранный элемент. Триггер позволяет изменять значения свойств или выполнять действия в зависимости от значения свойства. <xref:System.Windows.EventTrigger> Позволяет выполнять действия при возникновении события.  
+- **Триггеры.** Объект <xref:System.Windows.Trigger> позволяет динамически изменять внешний вид и поведение элемента управления без создания нового элемента управления. Например, предположим, имеется несколько <xref:System.Windows.Controls.ListBox> элементы управления в приложении и элементы в каждом <xref:System.Windows.Controls.ListBox> должен выделяться полужирным красным при их выборе. Очевидным может быть попытка создать класс, наследующий от <xref:System.Windows.Controls.ListBox> и переопределить <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> способ изменения внешнего вида выбранного элемента, но более эффективный подход — добавить триггер к стилю <xref:System.Windows.Controls.ListBoxItem> , изменяет внешний вид Выбранный элемент. Триггер позволяет изменять значения свойств или выполнять действия в зависимости от значения свойства. <xref:System.Windows.EventTrigger> Позволяет выполнять действия при возникновении события.  
   
  Дополнительные сведения о стилях, шаблонах и триггерах см. в разделе [Использование стилей и шаблонов](styling-and-templating.md).  
   
@@ -51,11 +51,11 @@ ms.locfileid: "59340026"
 #### <a name="benefits-of-deriving-from-usercontrol"></a>Преимущества использования производного класса от UserControl  
  Рассмотрите возможность наследования от <xref:System.Windows.Controls.UserControl> применимости всем следующим условиям:  
   
--   Нужно создать элемент управления аналогично созданию приложения.  
+- Нужно создать элемент управления аналогично созданию приложения.  
   
--   Элемент управления состоит только из существующих компонентов.  
+- Элемент управления состоит только из существующих компонентов.  
   
--   Не нужно поддерживать сложные настройки.  
+- Не нужно поддерживать сложные настройки.  
   
 ### <a name="deriving-from-control"></a>Создание производного от элемента управления  
  Наследование от <xref:System.Windows.Controls.Control> класс является модель, используемая в большинстве существующих [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов управления. При создании элемента управления, который наследует от <xref:System.Windows.Controls.Control> класса, его внешний вид определяется с помощью шаблонов. Таким образом, можно отделить рабочую логику от визуального представления. Также можно обеспечить разделение пользовательского интерфейса и логики с помощью команд и привязок вместо событий и использования ссылок на элементы в <xref:System.Windows.Controls.ControlTemplate> по возможности.  Если пользовательский Интерфейс и логика элемента управления правильно разделены, пользователи элемента управления могут переопределить элемент управления <xref:System.Windows.Controls.ControlTemplate> для настройки внешнего вида. Несмотря на то, что построение пользовательского <xref:System.Windows.Controls.Control> не так просто, как строительные <xref:System.Windows.Controls.UserControl>, пользовательский <xref:System.Windows.Controls.Control> обеспечивает наибольшую гибкость.  
@@ -63,9 +63,9 @@ ms.locfileid: "59340026"
 #### <a name="benefits-of-deriving-from-control"></a>Преимущества использования производного от элемента управления  
  Рассмотрите возможность наследования от <xref:System.Windows.Controls.Control> вместо использования <xref:System.Windows.Controls.UserControl> класса, если выполняется одно из следующих условий:  
   
--   Внешний вид элемента управления нужно настраивать через <xref:System.Windows.Controls.ControlTemplate>.  
+- Внешний вид элемента управления нужно настраивать через <xref:System.Windows.Controls.ControlTemplate>.  
   
--   Элемент управления должен поддерживать различные темы.  
+- Элемент управления должен поддерживать различные темы.  
   
 ### <a name="deriving-from-frameworkelement"></a>Создание производного от FrameworkElement  
  Элементы управления, которые являются производными от <xref:System.Windows.Controls.UserControl> или <xref:System.Windows.Controls.Control> основываются на сочетании существующих элементов. Во многих сценариях это приемлемое решение, так как любой объект, который наследует <xref:System.Windows.FrameworkElement> может находиться в <xref:System.Windows.Controls.ControlTemplate>. Однако бывают случаи, когда для внешнего вида элемента управления требуется больше, чем функциональность простой композиции элементов. В таких случаях компонент создание на основе <xref:System.Windows.FrameworkElement> является правильным выбором.  
@@ -75,11 +75,11 @@ ms.locfileid: "59340026"
 #### <a name="benefits-of-deriving-from-frameworkelement"></a>Преимущества использования производного от FrameworkElement  
  Рассмотрите возможность наследования от <xref:System.Windows.FrameworkElement> Если какой-либо из указанных ниже условий:  
   
--   Требуется точный контроль над внешним видом элемента управления помимо того, который обеспечивается простой композицией элемента.  
+- Требуется точный контроль над внешним видом элемента управления помимо того, который обеспечивается простой композицией элемента.  
   
--   Необходимо определить внешний вид элемента управления путем определения собственной логики отрисовки.  
+- Необходимо определить внешний вид элемента управления путем определения собственной логики отрисовки.  
   
--   Требуется построить существующие элементы нестандартными способами, выходящими за рамки возможностей в средстве <xref:System.Windows.Controls.UserControl> и <xref:System.Windows.Controls.Control>.  
+- Требуется построить существующие элементы нестандартными способами, выходящими за рамки возможностей в средстве <xref:System.Windows.Controls.UserControl> и <xref:System.Windows.Controls.Control>.  
   
 <a name="control_authoring_basics"></a>   
 ## <a name="control-authoring-basics"></a>Основы создания элементов управления  
@@ -88,33 +88,33 @@ ms.locfileid: "59340026"
 ### <a name="use-dependency-properties"></a>Использование свойств зависимостей  
  Если свойство является свойством зависимостей, то можно сделать следующее:  
   
--   Установить свойство в стиле.  
+- Установить свойство в стиле.  
   
--   Привязать свойство к источнику данных.  
+- Привязать свойство к источнику данных.  
   
--   Использовать динамический ресурс в качестве значения свойства.  
+- Использовать динамический ресурс в качестве значения свойства.  
   
--   Анимировать свойство.  
+- Анимировать свойство.  
   
  Если свойство элемента управления должно поддерживать подобную функциональность, то следует реализовать его как свойство зависимостей. В следующем примере определяется свойство зависимостей с именем `Value` следующим способом:  
   
--   Определение <xref:System.Windows.DependencyProperty> идентификатор с именем `ValueProperty` как `public` `static` `readonly` поля.  
+- Определение <xref:System.Windows.DependencyProperty> идентификатор с именем `ValueProperty` как `public` `static` `readonly` поля.  
   
--   Зарегистрируйте имя свойства в системе свойств с помощью метода <xref:System.Windows.DependencyProperty.Register%2A?displayProperty=nameWithType>, чтобы указать следующее:  
+- Зарегистрируйте имя свойства в системе свойств с помощью метода <xref:System.Windows.DependencyProperty.Register%2A?displayProperty=nameWithType>, чтобы указать следующее:  
   
-    -   Имя свойства.  
+    - Имя свойства.  
   
-    -   Тип свойства.  
+    - Тип свойства.  
   
-    -   Тип, к которому принадлежит это свойство.  
+    - Тип, к которому принадлежит это свойство.  
   
-    -   Метаданные для свойства. Метаданные содержат значение свойства по умолчанию, <xref:System.Windows.CoerceValueCallback> и <xref:System.Windows.PropertyChangedCallback>.  
+    - Метаданные для свойства. Метаданные содержат значение свойства по умолчанию, <xref:System.Windows.CoerceValueCallback> и <xref:System.Windows.PropertyChangedCallback>.  
   
--   Определите свойство программы-оболочки [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] с именем `Value`, которое используется для регистрации свойства зависимостей, путем реализации методов доступа `get` и `set` свойства. Обратите внимание, что `get` и `set` вызывать только методы доступа <xref:System.Windows.DependencyObject.GetValue%2A> и <xref:System.Windows.DependencyObject.SetValue%2A> соответственно. Рекомендуется, чтобы методы доступа свойств зависимостей не содержали дополнительной логики, так как клиенты и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] может обойти методы доступа и вызов <xref:System.Windows.DependencyObject.GetValue%2A> и <xref:System.Windows.DependencyObject.SetValue%2A> напрямую. Например, если свойство привязано к источнику данных, то метод доступа `set` свойства не вызывается.  Вместо добавления дополнительной логики для получения и установки методов доступа, используйте <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.CoerceValueCallback>, и <xref:System.Windows.PropertyChangedCallback> реагировать на них или проверьте значение, при его изменении делегаты.  Дополнительные сведения об этих обратных вызовах см. в разделе [Проверка и обратные вызовы свойства зависимостей](../advanced/dependency-property-callbacks-and-validation.md).  
+- Определите свойство программы-оболочки [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] с именем `Value`, которое используется для регистрации свойства зависимостей, путем реализации методов доступа `get` и `set` свойства. Обратите внимание, что `get` и `set` вызывать только методы доступа <xref:System.Windows.DependencyObject.GetValue%2A> и <xref:System.Windows.DependencyObject.SetValue%2A> соответственно. Рекомендуется, чтобы методы доступа свойств зависимостей не содержали дополнительной логики, так как клиенты и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] может обойти методы доступа и вызов <xref:System.Windows.DependencyObject.GetValue%2A> и <xref:System.Windows.DependencyObject.SetValue%2A> напрямую. Например, если свойство привязано к источнику данных, то метод доступа `set` свойства не вызывается.  Вместо добавления дополнительной логики для получения и установки методов доступа, используйте <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.CoerceValueCallback>, и <xref:System.Windows.PropertyChangedCallback> реагировать на них или проверьте значение, при его изменении делегаты.  Дополнительные сведения об этих обратных вызовах см. в разделе [Проверка и обратные вызовы свойства зависимостей](../advanced/dependency-property-callbacks-and-validation.md).  
   
--   Определите метод для <xref:System.Windows.CoerceValueCallback> с именем `CoerceValue`. `CoerceValue` гарантирует, что `Value` больше или равно `MinValue` и меньше или равно `MaxValue`.  
+- Определите метод для <xref:System.Windows.CoerceValueCallback> с именем `CoerceValue`. `CoerceValue` гарантирует, что `Value` больше или равно `MinValue` и меньше или равно `MaxValue`.  
   
--   Определите метод для <xref:System.Windows.PropertyChangedCallback>с именем `OnValueChanged`. `OnValueChanged` Создает <xref:System.Windows.RoutedPropertyChangedEventArgs%601> объекта и готовится к `ValueChanged` перенаправленного события. Перенаправляемые события рассматриваются в следующем разделе.  
+- Определите метод для <xref:System.Windows.PropertyChangedCallback>с именем `OnValueChanged`. `OnValueChanged` Создает <xref:System.Windows.RoutedPropertyChangedEventArgs%601> объекта и готовится к `ValueChanged` перенаправленного события. Перенаправляемые события рассматриваются в следующем разделе.  
   
  [!code-csharp[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#dependencyproperty)]
  [!code-vb[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#dependencyproperty)]  
@@ -124,29 +124,29 @@ ms.locfileid: "59340026"
 ### <a name="use-routed-events"></a>Использование перенаправляемых событий  
  Аналогично тому, как свойства зависимостей расширяют представление свойств [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] дополнительной функциональностью, перенаправляемые события расширяют представление стандартных событий [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. При создании нового элемента управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] рекомендуется также реализовывать событие как перенаправляемое, так как такие события поддерживают следующее поведение:  
   
--   События могут обрабатываться в родительском элементе нескольких элементов управления. Если событие является событием восходящей маршрутизации, то один родительский элемент в дереве элементов может подписаться на это событие. Разработчики приложений могут использовать один обработчик для реагирования на событие нескольких элементов управления. Например, если элемент управления является частью каждого элемента в <xref:System.Windows.Controls.ListBox> (так как он включен в <xref:System.Windows.DataTemplate>), разработчик приложения может определить обработчик событий для события элемента управления на <xref:System.Windows.Controls.ListBox>. Обработчик событий вызывается при возникновении события в любом элементе управления.  
+- События могут обрабатываться в родительском элементе нескольких элементов управления. Если событие является событием восходящей маршрутизации, то один родительский элемент в дереве элементов может подписаться на это событие. Разработчики приложений могут использовать один обработчик для реагирования на событие нескольких элементов управления. Например, если элемент управления является частью каждого элемента в <xref:System.Windows.Controls.ListBox> (так как он включен в <xref:System.Windows.DataTemplate>), разработчик приложения может определить обработчик событий для события элемента управления на <xref:System.Windows.Controls.ListBox>. Обработчик событий вызывается при возникновении события в любом элементе управления.  
   
--   Перенаправленные события могут использоваться в <xref:System.Windows.EventSetter>, что позволяет разработчикам приложений указать обработчик события в стиле.  
+- Перенаправленные события могут использоваться в <xref:System.Windows.EventSetter>, что позволяет разработчикам приложений указать обработчик события в стиле.  
   
--   Перенаправленные события могут использоваться в <xref:System.Windows.EventTrigger>, что удобно для анимации свойств с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Более подробную информацию см. в разделе [Общие сведения об эффектах анимации](../graphics-multimedia/animation-overview.md).  
+- Перенаправленные события могут использоваться в <xref:System.Windows.EventTrigger>, что удобно для анимации свойств с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Более подробную информацию см. в разделе [Общие сведения об эффектах анимации](../graphics-multimedia/animation-overview.md).  
   
  Следующий пример определяет перенаправляемое событие:  
   
--   Определение <xref:System.Windows.RoutedEvent> идентификатор с именем `ValueChangedEvent` как `public` `static` `readonly` поля.  
+- Определение <xref:System.Windows.RoutedEvent> идентификатор с именем `ValueChangedEvent` как `public` `static` `readonly` поля.  
   
--   Зарегистрируйте перенаправляемое событие путем вызова <xref:System.Windows.EventManager.RegisterRoutedEvent%2A?displayProperty=nameWithType> метод. В примере указывается следующие сведения при вызове <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>:  
+- Зарегистрируйте перенаправляемое событие путем вызова <xref:System.Windows.EventManager.RegisterRoutedEvent%2A?displayProperty=nameWithType> метод. В примере указывается следующие сведения при вызове <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>:  
   
-    -   Имя события `ValueChanged`.  
+    - Имя события `ValueChanged`.  
   
-    -   Стратегия маршрутизации <xref:System.Windows.RoutingStrategy.Bubble>, что означает, что сначала вызывается обработчик событий в источнике (объект, вызывающий событие) и затем вызываются обработчики событий родительских элементов источника подряд, начиная с обработчика события для ближайшего родительский элемент.  
+    - Стратегия маршрутизации <xref:System.Windows.RoutingStrategy.Bubble>, что означает, что сначала вызывается обработчик событий в источнике (объект, вызывающий событие) и затем вызываются обработчики событий родительских элементов источника подряд, начиная с обработчика события для ближайшего родительский элемент.  
   
-    -   Тип обработчика событий — <xref:System.Windows.RoutedPropertyChangedEventHandler%601>, созданный с <xref:System.Decimal> типа.  
+    - Тип обработчика событий — <xref:System.Windows.RoutedPropertyChangedEventHandler%601>, созданный с <xref:System.Decimal> типа.  
   
-    -   Тип — владелец события — `NumericUpDown`.  
+    - Тип — владелец события — `NumericUpDown`.  
   
--   Объявите общее событие с именем `ValueChanged`, которое включает объявления метода доступа к событию. В примере вызывается <xref:System.Windows.UIElement.AddHandler%2A> в `add` объявление метода доступа и <xref:System.Windows.UIElement.RemoveHandler%2A> в `remove` объявление метода доступа для использования [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] служб событий.  
+- Объявите общее событие с именем `ValueChanged`, которое включает объявления метода доступа к событию. В примере вызывается <xref:System.Windows.UIElement.AddHandler%2A> в `add` объявление метода доступа и <xref:System.Windows.UIElement.RemoveHandler%2A> в `remove` объявление метода доступа для использования [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] служб событий.  
   
--   Создайте защищенный виртуальный метод с именем `OnValueChanged`, вызывающий событие `ValueChanged`.  
+- Создайте защищенный виртуальный метод с именем `OnValueChanged`, вызывающий событие `ValueChanged`.  
   
  [!code-csharp[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#routedevent)]
  [!code-vb[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#routedevent)]  
@@ -178,11 +178,11 @@ ms.locfileid: "59340026"
 #### <a name="attached-properties"></a>Вложенные свойства  
  При реализации вложенных свойств в пользовательских элементах управления учитывайте следующие рекомендации:  
   
--   У `public` `static` `readonly` <xref:System.Windows.DependencyProperty> формы *PropertyName* `Property` , создании с помощью <xref:System.Windows.DependencyProperty.RegisterAttached%2A> метод. Имя свойства, которое передается <xref:System.Windows.DependencyProperty.RegisterAttached%2A> должно соответствовать *PropertyName*.  
+- У `public` `static` `readonly` <xref:System.Windows.DependencyProperty> формы *PropertyName* `Property` , создании с помощью <xref:System.Windows.DependencyProperty.RegisterAttached%2A> метод. Имя свойства, которое передается <xref:System.Windows.DependencyProperty.RegisterAttached%2A> должно соответствовать *PropertyName*.  
   
--   Реализуйте пару методов CLR `public` `static` с именем `Set`*PropertyName* и `Get`*PropertyName*. Оба метода должны принимать производный класс от <xref:System.Windows.DependencyProperty> качестве первого аргумента. Метод `Set`*PropertyName* также принимает аргумент, тип которого соответствует зарегистрированному типу данных для свойства. Метод `Get`*PropertyName* должен возвращать значение такого же типа. Если метод `Set` *PropertyName* отсутствует, свойство отмечается как "только для чтения".  
+- Реализуйте пару методов CLR `public` `static` с именем `Set`*PropertyName* и `Get`*PropertyName*. Оба метода должны принимать производный класс от <xref:System.Windows.DependencyProperty> качестве первого аргумента. Метод `Set`*PropertyName* также принимает аргумент, тип которого соответствует зарегистрированному типу данных для свойства. Метод `Get`*PropertyName* должен возвращать значение такого же типа. Если метод `Set` *PropertyName* отсутствует, свойство отмечается как "только для чтения".  
   
--   `Set` *PropertyName* и `Get` *PropertyName* должны перенаправляться непосредственно в <xref:System.Windows.DependencyObject.GetValue%2A> и <xref:System.Windows.DependencyObject.SetValue%2A> методы от зависимости целевого объекта, соответственно. Разработчики могут получить доступ к вложенному свойству, вызвав программу-оболочку метода или с помощью прямого вызова целевого объекта зависимостей.  
+- `Set` *PropertyName* и `Get` *PropertyName* должны перенаправляться непосредственно в <xref:System.Windows.DependencyObject.GetValue%2A> и <xref:System.Windows.DependencyObject.SetValue%2A> методы от зависимости целевого объекта, соответственно. Разработчики могут получить доступ к вложенному свойству, вызвав программу-оболочку метода или с помощью прямого вызова целевого объекта зависимостей.  
   
  Дополнительные сведения о вложенных свойствах см. в разделе [Общие сведения о вложенных свойствах](../advanced/attached-properties-overview.md).  
   

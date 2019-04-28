@@ -3,11 +3,11 @@ title: Базовые типы данных
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
 ms.openlocfilehash: 00d5c6d866453fe9ece7f2e22a579aa43c09c23e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903374"
 ---
 # <a name="basic-data-types"></a>Базовые типы данных
 Поскольку запросы LINQ to SQL преобразуются на язык Transact-SQL перед их выполнением на Microsoft SQL Server, LINQ to SQL поддерживает встроенные функции, во многом сходные с теми, которые SQL Server использует для основных типов данных.  
@@ -18,9 +18,9 @@ ms.locfileid: "59072887"
 ## <a name="equality-operators"></a>Операторы равенства  
  LINQ to SQL поддерживает следующие операторы равенства для основных типов данных в запросах LINQ to SQL.  
   
--   Оператор «меньше или равно»: Операторы равенства и неравенства поддерживаются для числовых, <xref:System.Boolean>, <xref:System.DateTime>, и <xref:System.TimeSpan> типы. Дополнительные сведения об операторах Visual Basic `=` и `<>`, см. в разделе [операторы сравнения](~/docs/visual-basic/language-reference/operators/comparison-operators.md). Дополнительные сведения о C# операторы сравнения `==` и `!=`, см. в разделе [операторы равенства](~/docs/csharp/language-reference/operators/equality-operators.md).
+- Оператор «меньше или равно»: Операторы равенства и неравенства поддерживаются для числовых, <xref:System.Boolean>, <xref:System.DateTime>, и <xref:System.TimeSpan> типы. Дополнительные сведения об операторах Visual Basic `=` и `<>`, см. в разделе [операторы сравнения](~/docs/visual-basic/language-reference/operators/comparison-operators.md). Дополнительные сведения о C# операторы сравнения `==` и `!=`, см. в разделе [операторы равенства](~/docs/csharp/language-reference/operators/equality-operators.md).
   
--   Оператор IS: для оператора `IS` имеется поддерживаемый перевод, когда используется сопоставление наследования. Он может использоваться вместо прямой проверки столбца дискриминатора для выяснения, относится ли объект к определенному типу сущности и преобразуется ли он в проверку для столбца дискриминатора. Дополнительные сведения о Visual Basic и C# имеет значение operators, см. в разделе [оператор Is](~/docs/visual-basic/language-reference/operators/is-operator.md) и [—](~/docs/csharp/language-reference/keywords/is.md).  
+- Оператор IS: для оператора `IS` имеется поддерживаемый перевод, когда используется сопоставление наследования. Он может использоваться вместо прямой проверки столбца дискриминатора для выяснения, относится ли объект к определенному типу сущности и преобразуется ли он в проверку для столбца дискриминатора. Дополнительные сведения о Visual Basic и C# имеет значение operators, см. в разделе [оператор Is](~/docs/visual-basic/language-reference/operators/is-operator.md) и [—](~/docs/csharp/language-reference/keywords/is.md).  
   
 ## <a name="see-also"></a>См. также
 

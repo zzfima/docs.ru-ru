@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
 ms.openlocfilehash: 59a025535e850cf3c773a2a078511d41058bb24c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011733"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Практическое руководство. Привязка данных к элементу управления DataGridView в форме Windows Forms с помощью конструктора
 Конструктор можно использовать для подключения <xref:System.Windows.Forms.DataGridView> элемента управления к источникам данных разных видов, включая базы данных, бизнес-объектов или веб-служб. При привязке элемента управления к источнику данных с помощью конструктора, элемент управления автоматически привязывается к <xref:System.Windows.Forms.BindingSource> компонент, который представляет источник данных. Кроме того, в элементе управления автоматически создаются столбцы для сопоставления данных о схеме, предоставляемых источником данных.  

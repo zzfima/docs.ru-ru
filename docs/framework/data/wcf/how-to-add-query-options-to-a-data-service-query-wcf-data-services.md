@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF Data Services, accessing data
 ms.assetid: e4258526-557e-4e96-91e1-2175400c7c8f
 ms.openlocfilehash: 2056b803b34faafdaebb85883de8b76ea2f9dcd8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765548"
 ---
 # <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>Практическое руководство. Добавление параметров запроса к запросу службы данных (службы данных WCF)
 Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют выполнять запросы к службе данных из клиентского приложения на основе .NET Framework с использованием сформированных клиентских классов службы данных. Самый легкий способ сделать это — составить выражение запроса LINQ, включающее необходимые параметры запроса. Также можно вызвать ряд методов запросов LINQ для составления эквивалентного запроса. Наконец, с помощью метода <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> можно добавить в запрос параметры запросов. В каждом из этих случаев URI, формируемый клиентом, включает запрошенный набор сущностей и выбранные параметры запросов. Дополнительные сведения см. в разделе [запросы к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  

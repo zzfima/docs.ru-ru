@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
 ms.openlocfilehash: 06eaf68fef167d63e6f8404dd5049f5445881d24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912877"
 ---
 # <a name="how-to-set-the-input-mask"></a>Практическое руководство. Определение маски ввода
 Элементе скрытого текстового поля является элементом поля расширенный текст, который поддерживает декларативный синтаксис для принятия или отклонения введенных пользователем данных. Установив свойство маски, можно указать допустимых входных данных без написания настраиваемую логику проверки в приложении. Дополнительные сведения см. в разделе "Примечания" <xref:System.Windows.Forms.MaskedTextBox> класса.  
@@ -34,15 +34,15 @@ ms.locfileid: "59331472"
   
 1. В **разработки** представление, выберите <xref:System.Windows.Forms.MaskedTextBox>.  
   
-    1.  Щелкните смарт-тег, чтобы открыть **задачи MaskedTextBox** панели.  
+    1. Щелкните смарт-тег, чтобы открыть **задачи MaskedTextBox** панели.  
   
-    2.  Нажмите кнопку **определение маски**.  
+    2. Нажмите кнопку **определение маски**.  
   
      \- или -  
   
-    1.  В **свойства** выберите <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> свойство.  
+    1. В **свойства** выберите <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> свойство.  
   
-    2.  Нажмите кнопку с многоточием в столбце значений свойств.  
+    2. Нажмите кнопку с многоточием в столбце значений свойств.  
   
      **Маска ввода** откроется диалоговое окно.  
   

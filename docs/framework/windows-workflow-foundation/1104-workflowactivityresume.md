@@ -3,18 +3,18 @@ title: 1104 - WorkflowActivityResume
 ms.date: 03/30/2017
 ms.assetid: 7fe95d1e-34bd-43ca-b92e-587d2d248fff
 ms.openlocfilehash: 4c9ae5fd386fc93ea19578097aa4e0afdda527e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33511060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924128"
 ---
 # <a name="1104---workflowactivityresume"></a>1104 - WorkflowActivityResume
 ## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
-|Идентификатор|1104|  
+|ID|1104|  
 |Ключевые слова|WFRuntime|  
 |Уровень|Сведения|  
 |Канал|Microsoft-Windows-Application Server-Applications/Debug|  
@@ -30,4 +30,4 @@ ms.locfileid: "33511060"
 |Имя элемента данных|Тип элемента данных|Описание|  
 |--------------------|--------------------|-----------------|  
 |WorkflowInstanceId|xs:string|Идентификатор экземпляра рабочего процесса.|  
-|AppDomain|xs:string|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|Домен приложения|xs:string|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|

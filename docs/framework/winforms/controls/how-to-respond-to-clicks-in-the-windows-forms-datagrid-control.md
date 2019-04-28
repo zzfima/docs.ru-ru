@@ -13,11 +13,11 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
 ms.openlocfilehash: 55ca52390cd6c5d5af4a764ea4438d8ce935dfbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913098"
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Практическое руководство. Обработка щелчка мыши элементом управления DataGrid в Windows Forms
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "59191904"
   
 ### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>Чтобы определить, когда пользователь DataGrid выбирает другую ячейку  
   
--   В <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> обработчик событий, напишите код соответствующим образом отреагировать.  
+- В <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> обработчик событий, напишите код соответствующим образом отреагировать.  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -56,7 +56,7 @@ ms.locfileid: "59191904"
   
 ### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>Чтобы определить, какая часть элемента управления DataGrid пользователь щелкнул  
   
--   Вызовите <xref:System.Windows.Forms.DataGrid.HitTest%2A> метод в соответствующем обработчике событий, таких как <xref:System.Windows.Forms.Control.MouseDown> или <xref:System.Windows.Forms.Control.Click> событий.  
+- Вызовите <xref:System.Windows.Forms.DataGrid.HitTest%2A> метод в соответствующем обработчике событий, таких как <xref:System.Windows.Forms.Control.MouseDown> или <xref:System.Windows.Forms.Control.Click> событий.  
   
      <xref:System.Windows.Forms.DataGrid.HitTest%2A> Возвращает метод <xref:System.Windows.Forms.DataGrid.HitTestInfo> , содержащий строки и столбца выбранной области.  
   

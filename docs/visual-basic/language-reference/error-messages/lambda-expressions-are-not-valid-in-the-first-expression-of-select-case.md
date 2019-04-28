@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
 ms.openlocfilehash: e51ba4ad0910d0db2b927f84303e5c55515f4b84
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921281"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>Лямбда-выражения недопустимы в первом выражении оператора Select Case
 Лямбда-выражения нельзя использовать для проверки выражения в `Select Case` инструкции. Определения лямбда-выражений возвращают функции, а выражение проверки `Select Case` инструкция должна быть простой тип данных.  
@@ -29,9 +29,9 @@ ms.locfileid: "58843457"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Проверьте свой код, чтобы определить, подойдет ли вам другая условная конструкция, например оператор `If...Then...Else` .  
+- Проверьте свой код, чтобы определить, подойдет ли вам другая условная конструкция, например оператор `If...Then...Else` .  
   
--   Возможно, предполагалось вызывать функцию, как показано в следующем коде:  
+- Возможно, предполагалось вызывать функцию, как показано в следующем коде:  
   
 ```vb  
 Dim num? As Integer  

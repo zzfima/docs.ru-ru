@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Закраска области с применением радиального градиента
+title: Практическое руководство. Заливка области с помощью радиального градиента
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - painting [WPF], with radial gradients
 ms.assetid: b5d0fc8a-8986-4796-b003-a75b41a48928
 ms.openlocfilehash: c3bcc11dea4b1f223f629415591ab03588881dde
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921838"
 ---
-# <a name="how-to-paint-an-area-with-a-radial-gradient"></a>Практическое руководство. Закраска области с применением радиального градиента
+# <a name="how-to-paint-an-area-with-a-radial-gradient"></a>Практическое руководство. Заливка области с помощью радиального градиента
 В этом примере показано, как использовать <xref:System.Windows.Media.RadialGradientBrush> класс для закраски области с применением радиального градиента.  
   
 ## <a name="example"></a>Пример  

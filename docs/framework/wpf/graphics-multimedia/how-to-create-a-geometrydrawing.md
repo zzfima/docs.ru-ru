@@ -8,11 +8,11 @@ helpviewer_keywords:
 - classes [WPF], GeometryDrawing
 ms.assetid: 11d3c096-91ba-4d41-9bba-aeac0db70f97
 ms.openlocfilehash: f5cdcfdb68ad8030bcbd6c689f45a8baddd000e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904960"
 ---
 # <a name="how-to-create-a-geometrydrawing"></a>Практическое руководство. Создание объекта GeometryDrawing
 В этом примере показано, как создать и отобразить <xref:System.Windows.Media.GeometryDrawing>. Объект <xref:System.Windows.Media.GeometryDrawing> позволяет создавать фигура с заливкой и структуры, связав <xref:System.Windows.Media.Pen> и <xref:System.Windows.Media.Brush> с <xref:System.Windows.Media.Geometry>. <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> Описывает структуру фигуры <xref:System.Windows.Media.GeometryDrawing.Brush%2A> описывает заливку фигуры и <xref:System.Windows.Media.GeometryDrawing.Pen%2A> описывает контура фигуры.  

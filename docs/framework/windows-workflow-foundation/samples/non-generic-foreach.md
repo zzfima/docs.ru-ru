@@ -3,11 +3,11 @@ title: Неуниверсальное действие ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
 ms.openlocfilehash: 353128d1c313be62222e091c084e5b5e37a92b58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004917"
 ---
 # <a name="non-generic-foreach"></a>Неуниверсальное действие ForEach
 В область элементов [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] входит набор действий потока управления, включая элемент <xref:System.Activities.Statements.ForEach%601>, который позволяет проходить по коллекциям <xref:System.Collections.Generic.IEnumerable%601>.  
@@ -97,9 +97,9 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 1. Установите выбранный проект в качестве проекта для запуска решения.  
   
-    1.  **CodeTestClient** показано, как с помощью действия, с помощью кода.  
+    1. **CodeTestClient** показано, как с помощью действия, с помощью кода.  
   
-    2.  **DesignerTestClient** показано, как с помощью действия в конструкторе.  
+    2. **DesignerTestClient** показано, как с помощью действия в конструкторе.  
   
 2. Постройте и запустите проект.  
   

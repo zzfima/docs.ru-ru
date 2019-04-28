@@ -12,11 +12,11 @@ helpviewer_keywords:
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
 ms.openlocfilehash: 3b9eb6f902d0d2193f0099f8e868e4ead347ce26
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913414"
 ---
 # <a name="how-to-play-a-sound-from-a-windows-form"></a>Практическое руководство. Воспроизведение звука в Windows Forms
 В этом примере воспроизводится звук по заданному пути во время выполнения.  
@@ -40,26 +40,26 @@ private void playSimpleSound()
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   замена имени файла `"c:\Windows\Media\chimes.wav"` на допустимое имя файла.  
+- замена имени файла `"c:\Windows\Media\chimes.wav"` на допустимое имя файла.  
   
--   (C#) Ссылку на <xref:System.Media?displayProperty=nameWithType> пространства имен.  
+- (C#) Ссылку на <xref:System.Media?displayProperty=nameWithType> пространства имен.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  Операции с файлами должны быть включены в соответствующие структурированные блоки обработки исключений.  
   
  При следующих условиях возможно возникновение исключения:  
   
--   Недопустимое имя пути Например, оно содержит недопустимые символы или состоит из одних пробелов (класс <xref:System.ArgumentException>).  
+- Недопустимое имя пути Например, оно содержит недопустимые символы или состоит из одних пробелов (класс <xref:System.ArgumentException>).  
   
--   Путь доступен только для чтения (класс <xref:System.IO.IOException>).  
+- Путь доступен только для чтения (класс <xref:System.IO.IOException>).  
   
--   Имя пути — `null` (класс <xref:System.ArgumentNullException>).  
+- Имя пути — `null` (класс <xref:System.ArgumentNullException>).  
   
--   Указано слишком длинное имя пути (класс <xref:System.IO.PathTooLongException>).  
+- Указано слишком длинное имя пути (класс <xref:System.IO.PathTooLongException>).  
   
--   Недопустимый путь (класс <xref:System.IO.DirectoryNotFoundException>).  
+- Недопустимый путь (класс <xref:System.IO.DirectoryNotFoundException>).  
   
--   Путь содержит только двоеточие, «:» (<xref:System.NotSupportedException> класса).  
+- Путь содержит только двоеточие, «:» (<xref:System.NotSupportedException> класса).  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  По имени файла не всегда можно с уверенностью судить о его содержимом. Например, файл с именем `Form1.vb` может вовсе не быть исходным файлом Visual Basic. Следует проверять все входные данные перед использованием их в приложении.  

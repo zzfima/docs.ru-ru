@@ -14,11 +14,11 @@ helpviewer_keywords:
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
 ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017789"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Создание элемента управления с настраиваемым внешним видом
 <a name="introduction"></a>
@@ -37,17 +37,17 @@ ms.locfileid: "59298348"
   
  В этом разделе содержатся следующие подразделы.  
   
--   [Необходимые компоненты](#prerequisites)  
+- [Необходимые компоненты](#prerequisites)  
   
--   [Модель частей и состояний](#parts_and_states_model)  
+- [Модель частей и состояний](#parts_and_states_model)  
   
--   [Определение визуальную структуру и визуальное поведение элемента управления в ControlTemplate](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)  
+- [Определение визуальную структуру и визуальное поведение элемента управления в ControlTemplate](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)  
   
--   [Части шаблона элемента управления в коде](#using_parts_of_the_controltemplate_in_code)  
+- [Части шаблона элемента управления в коде](#using_parts_of_the_controltemplate_in_code)  
   
--   [Предоставление контракта элемента управления](#providing_the_control_contract)  
+- [Предоставление контракта элемента управления](#providing_the_control_contract)  
   
--   [Полный пример](#complete_example)  
+- [Полный пример](#complete_example)  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
@@ -60,11 +60,11 @@ ms.locfileid: "59298348"
 ## <a name="parts-and-states-model"></a>Модель частей и состояний  
  Части и состояния модели указывает способ определения визуальную структуру и визуальное поведение элемента управления. Чтобы выполнить части и состояния модели, поступайте следующим:  
   
--   Определите визуальную структуру и визуальное поведение в <xref:System.Windows.Controls.ControlTemplate> элемента управления.  
+- Определите визуальную структуру и визуальное поведение в <xref:System.Windows.Controls.ControlTemplate> элемента управления.  
   
--   Выполните определенные рекомендации, когда логика элемента управления взаимодействует с частями шаблона элемента управления.  
+- Выполните определенные рекомендации, когда логика элемента управления взаимодействует с частями шаблона элемента управления.  
   
--   Укажите контракт элемента управления, чтобы указать, что должны быть включены в <xref:System.Windows.Controls.ControlTemplate>.  
+- Укажите контракт элемента управления, чтобы указать, что должны быть включены в <xref:System.Windows.Controls.ControlTemplate>.  
   
  При определении визуальную структуру и визуальное поведение в <xref:System.Windows.Controls.ControlTemplate> элемента управления, разработчики приложения могут изменять визуальную структуру и визуальное поведение элемента управления путем создания нового <xref:System.Windows.Controls.ControlTemplate> вместо написания кода.   Необходимо предоставить разработчикам контракт элемента управления, который сообщает приложению о том, какие <xref:System.Windows.FrameworkElement> объектов и состояний должны быть определены в <xref:System.Windows.Controls.ControlTemplate>. Вы должны следовать некоторым рекомендациям при взаимодействии с частями в <xref:System.Windows.Controls.ControlTemplate> таким образом, элемент управления правильно обрабатывал неполное <xref:System.Windows.Controls.ControlTemplate>.  Если вы следуете этим трем принципам, разработчики приложений будут иметь возможность создавать <xref:System.Windows.Controls.ControlTemplate> для элемента управления просто так же легко, как только они могут для элементов управления, поставляемые с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  В следующем разделе объясняется каждый из этих рекомендаций, подробно.  
   
@@ -134,18 +134,18 @@ ms.locfileid: "59298348"
   
  <xref:System.Windows.VisualStateManager.GoToState%2A> Метод выполняет логику, необходимую для запуска и остановки раскадровки соответствующим образом. Когда элемент управления вызывает <xref:System.Windows.VisualStateManager.GoToState%2A> для изменения его состояния <xref:System.Windows.VisualStateManager> делает следующее:  
   
--   Если <xref:System.Windows.VisualState> требуется элемент управления имеет <xref:System.Windows.Media.Animation.Storyboard>, раскадровки. Затем, если <xref:System.Windows.VisualState> откуда элемент управления имеет <xref:System.Windows.Media.Animation.Storyboard>, завершения раскадровки.  
+- Если <xref:System.Windows.VisualState> требуется элемент управления имеет <xref:System.Windows.Media.Animation.Storyboard>, раскадровки. Затем, если <xref:System.Windows.VisualState> откуда элемент управления имеет <xref:System.Windows.Media.Animation.Storyboard>, завершения раскадровки.  
   
--   Если элемент управления уже находится в состоянии, которое указано, <xref:System.Windows.VisualStateManager.GoToState%2A> не предпринимает никаких действий и возвращает `true`.  
+- Если элемент управления уже находится в состоянии, которое указано, <xref:System.Windows.VisualStateManager.GoToState%2A> не предпринимает никаких действий и возвращает `true`.  
   
--   Если указанное состояние не существует в <xref:System.Windows.Controls.ControlTemplate> из `control`, <xref:System.Windows.VisualStateManager.GoToState%2A> не предпринимает никаких действий и возвращает `false`.  
+- Если указанное состояние не существует в <xref:System.Windows.Controls.ControlTemplate> из `control`, <xref:System.Windows.VisualStateManager.GoToState%2A> не предпринимает никаких действий и возвращает `false`.  
   
 #### <a name="best-practices-for-working-with-the-visualstatemanager"></a>Рекомендации по работе с VisualStateManager  
  Рекомендуется выполнить следующую команду, чтобы поддерживать состояний элемента управления.  
   
--   Свойства можно используйте для отслеживания состояния.  
+- Свойства можно используйте для отслеживания состояния.  
   
--   Создайте вспомогательный метод для перехода между состояниями.  
+- Создайте вспомогательный метод для перехода между состояниями.  
   
  `NumericUpDown` Управления использует его `Value` свойства для отслеживания, является ли он в `Positive` или `Negative` состояния.  `NumericUpDown` Управления также определяет `Focused` и `UnFocused` очевидно из записей <xref:System.Windows.UIElement.IsFocused%2A> свойство. Если вы используете состояния, которые не соответствуют естественным образом свойство элемента управления, можно определить частное свойство для отслеживания состояния.  
   
@@ -160,11 +160,11 @@ ms.locfileid: "59298348"
   
  Существует три типичные места, где может изменить состояние элемента управления:  
   
--   Когда <xref:System.Windows.Controls.ControlTemplate> применяется к <xref:System.Windows.Controls.Control>.  
+- Когда <xref:System.Windows.Controls.ControlTemplate> применяется к <xref:System.Windows.Controls.Control>.  
   
--   При изменении свойства.  
+- При изменении свойства.  
   
--   При возникновении события.  
+- При возникновении события.  
   
  В следующих примерах демонстрируется обновление состояния `NumericUpDown` элемента управления в таких случаях.  
   
@@ -189,33 +189,33 @@ ms.locfileid: "59298348"
 ## <a name="providing-the-control-contract"></a>Предоставление контракта элемента управления  
  Укажите контракт элемента управления, чтобы <xref:System.Windows.Controls.ControlTemplate> авторы будет знать, какие нужно указать в шаблоне. Контракт элемента управления имеет три элемента:  
   
--   визуальный элемент, используемый логикой элемента управления;  
+- визуальный элемент, используемый логикой элемента управления;  
   
--   состояния элемента управления и группа, к которой принадлежит каждое состояние;  
+- состояния элемента управления и группа, к которой принадлежит каждое состояние;  
   
--   общие свойства, визуально воздействующие на элемент управления.  
+- общие свойства, визуально воздействующие на элемент управления.  
   
  Кто-то, которое создает новый <xref:System.Windows.Controls.ControlTemplate> должен знать, что <xref:System.Windows.FrameworkElement> объектов логикой элемента управления, новые типы этих объектов и их имена. Объект <xref:System.Windows.Controls.ControlTemplate> автор также необходимо знать имя каждого возможного состояния элемента управления, а какие <xref:System.Windows.VisualStateGroup> состояние имеет значение.  
   
  Возвращаясь к `NumericUpDown` примере элемент управления ожидает <xref:System.Windows.Controls.ControlTemplate> быть следующие <xref:System.Windows.FrameworkElement> объектов:  
   
--   Объект <xref:System.Windows.Controls.Primitives.RepeatButton> вызывается `UpButton`.  
+- Объект <xref:System.Windows.Controls.Primitives.RepeatButton> вызывается `UpButton`.  
   
--   Объект <xref:System.Windows.Controls.Primitives.RepeatButton> вызывается `DownButton.`  
+- Объект <xref:System.Windows.Controls.Primitives.RepeatButton> вызывается `DownButton.`  
   
  Размер элемента управления можно в следующих состояниях:  
   
--   В `ValueStates`<xref:System.Windows.VisualStateGroup>  
+- В `ValueStates`<xref:System.Windows.VisualStateGroup>  
   
-    -   `Positive`  
+    - `Positive`  
   
-    -   `Negative`  
+    - `Negative`  
   
--   В `FocusStates`<xref:System.Windows.VisualStateGroup>  
+- В `FocusStates`<xref:System.Windows.VisualStateGroup>  
   
-    -   `Focused`  
+    - `Focused`  
   
-    -   `Unfocused`  
+    - `Unfocused`  
   
  Указать, что <xref:System.Windows.FrameworkElement> ожидает, что объекты элемента управления, использовать <xref:System.Windows.TemplatePartAttribute>, который указывает имя и тип ожидаемых элементов.  Для указания возможных состояний элемента управления, используется <xref:System.Windows.TemplateVisualStateAttribute>, который указывает имя состояния, а какие <xref:System.Windows.VisualStateGroup> он принадлежит.  Поместите <xref:System.Windows.TemplatePartAttribute> и <xref:System.Windows.TemplateVisualStateAttribute> в определении класса элемента управления.  
   

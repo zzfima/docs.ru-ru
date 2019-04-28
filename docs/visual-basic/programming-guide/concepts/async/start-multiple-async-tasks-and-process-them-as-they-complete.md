@@ -3,11 +3,11 @@ title: Запуск нескольких асинхронных задач и и
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
 ms.openlocfilehash: a9a41c354993e0d362c344d523d6c4c4b6f61f10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925129"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Запуск нескольких асинхронных задач и их обработка по мере завершения (Visual Basic)
 С помощью <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> можно запускать несколько задач одновременно и обрабатывать их по одной по мере завершения, а не в порядке их запуска.  
@@ -50,27 +50,27 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
   
  В файле MainWindow.xaml.vb проекта, внесите следующие изменения в `AccessTheWebAsync` метод.  
   
--   Выполните запрос, применяя <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> вместо <xref:System.Linq.Enumerable.ToArray%2A>.  
+- Выполните запрос, применяя <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> вместо <xref:System.Linq.Enumerable.ToArray%2A>.  
   
     ```vb  
     Dim downloadTasks As List(Of Task(Of Integer)) = downloadTasksQuery.ToList()  
     ```  
   
--   Добавьте цикл while, выполняющий следующие действия для каждой задачи в коллекции.  
+- Добавьте цикл while, выполняющий следующие действия для каждой задачи в коллекции.  
   
-    1.  Ожидает вызов `WhenAny` для определения первой задачи в коллекции, чтобы завершить ее загрузку.  
+    1. Ожидает вызов `WhenAny` для определения первой задачи в коллекции, чтобы завершить ее загрузку.  
   
         ```vb  
         Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
         ```  
   
-    2.  Удаляет эту задачу из коллекции.  
+    2. Удаляет эту задачу из коллекции.  
   
         ```vb  
         downloadTasks.Remove(firstFinishedTask)  
         ```  
   
-    3.  Ожидает `firstFinishedTask`, возвращаемый при вызове `ProcessURLAsync`. Переменная `firstFinishedTask` представляет собой <xref:System.Threading.Tasks.Task%601>, где `TReturn` — целое число. Задача уже завершена, но она ожидается для получения размера загруженного веб-сайта, как показано в следующем примере.  
+    3. Ожидает `firstFinishedTask`, возвращаемый при вызове `ProcessURLAsync`. Переменная `firstFinishedTask` представляет собой <xref:System.Threading.Tasks.Task%601>, где `TReturn` — целое число. Задача уже завершена, но она ожидается для получения размера загруженного веб-сайта, как показано в следующем примере.  
   
         ```vb  
         Dim length = Await firstFinishedTask  

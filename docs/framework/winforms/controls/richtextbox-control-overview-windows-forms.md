@@ -8,11 +8,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
 ms.openlocfilehash: 0827c1919597e9eb85bfa41721676008b76564d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902503"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>Общие сведения об элементе управления RichTextBox (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.RichTextBox> элемент управления используется для отображения, ввода и обработки текста с форматированием. <xref:System.Windows.Forms.RichTextBox> Управления следит за недопущением <xref:System.Windows.Forms.TextBox> делает элемент управления, но может также отображать шрифты, цвета и ссылки; загрузить текст и встроенные изображения из файла; и находить указанные символы. <xref:System.Windows.Forms.RichTextBox> Управления обычно используется для работы с текстом и отображения функций, как для текстовых редакторов, таких как Microsoft Word. Как <xref:System.Windows.Forms.TextBox> управления <xref:System.Windows.Forms.RichTextBox> элемент управления может отображать полосы прокрутки; но в отличие от <xref:System.Windows.Forms.TextBox> элемента управления, его значение по умолчанию является отображение горизонтальных и вертикальных полос прокрутки, при необходимости, и он имеет дополнительные параметры полосы прокрутки.  

@@ -3,11 +3,11 @@ title: Настраиваемое отслеживание
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
 ms.openlocfilehash: 7e275af046013dcd76cb61c25ace1d96fd7e4b93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005368"
 ---
 # <a name="custom-tracking"></a>Настраиваемое отслеживание
 В данном образце демонстрируется создание настраиваемого участника отслеживания и запись содержимого данных отслеживания в консоль. Помимо этого, в образце демонстрируется создание <xref:System.Activities.Tracking.CustomTrackingRecord> объектов, заполненных определенными пользователем данными. Консольный участник отслеживания фильтрует <xref:System.Activities.Tracking.TrackingRecord> объекты, выпущенные рабочим процессом, используя объект профиля отслеживания, созданный в коде.
@@ -110,9 +110,9 @@ invoker.Extensions.Add(customTrackingParticipant);
 ### <a name="emitting-custom-tracking-records"></a>Выдача пользовательских записей отслеживания
  В этом образце также демонстрируется возможность создания <xref:System.Activities.Tracking.CustomTrackingRecord> объектов из пользовательских действий рабочего процесса:
 
--   Объекты <xref:System.Activities.Tracking.CustomTrackingRecord> создаются и заполняются определенными пользователем данными, которые, по замыслу пользователя, будут выдаваться вместе с записью.
+- Объекты <xref:System.Activities.Tracking.CustomTrackingRecord> создаются и заполняются определенными пользователем данными, которые, по замыслу пользователя, будут выдаваться вместе с записью.
 
--   <xref:System.Activities.Tracking.CustomTrackingRecord> Создается вызовом метода отслеживания <xref:System.Activities.ActivityContext>.
+- <xref:System.Activities.Tracking.CustomTrackingRecord> Создается вызовом метода отслеживания <xref:System.Activities.ActivityContext>.
 
  В следующем примере продемонстрировано создание <xref:System.Activities.Tracking.CustomTrackingRecord> объектов в рамках пользовательской операции.
 

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
 ms.openlocfilehash: 04d5f9e6f128d9b4ed3f07a5faebe06ae4ffdebf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011259"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>Практическое руководство. Доступ к управляемой объектной модели HTML-документов
 Получить доступ к управляемой объектной модели HTML-документа (DOM) можно из двух типов приложений.  
   
--   Приложение Windows Forms (.EXE), в котором размещен управляемый элемент управления <xref:System.Windows.Forms.WebBrowser>. Эти две технологии дополняют друг друга: элемент управления <xref:System.Windows.Forms.WebBrowser> отображает страницу пользователю, а HTML DOM представляет логическую структуру документа.  
+- Приложение Windows Forms (.EXE), в котором размещен управляемый элемент управления <xref:System.Windows.Forms.WebBrowser>. Эти две технологии дополняют друг друга: элемент управления <xref:System.Windows.Forms.WebBrowser> отображает страницу пользователю, а HTML DOM представляет логическую структуру документа.  
   
--   Windows Forms <xref:System.Windows.Forms.UserControl> размещается в Internet Explorer. Вы можете открыть HTML DOM, который показывает страницу, где находится элемент управления <xref:System.Windows.Forms.UserControl>, и изменить структуру документа, открыть модальные диалоговые окна и т. д.  
+- Windows Forms <xref:System.Windows.Forms.UserControl> размещается в Internet Explorer. Вы можете открыть HTML DOM, который показывает страницу, где находится элемент управления <xref:System.Windows.Forms.UserControl>, и изменить структуру документа, открыть модальные диалоговые окна и т. д.  
   
 ### <a name="to-access-dom-from-a-windows-forms-application"></a>Доступ к DOM из приложения Windows Forms  
   

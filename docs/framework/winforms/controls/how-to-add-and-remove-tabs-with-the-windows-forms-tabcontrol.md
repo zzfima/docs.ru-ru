@@ -13,18 +13,18 @@ helpviewer_keywords:
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
 ms.openlocfilehash: 723e05803b1f7d2bc56476248987085dbe5e23f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011116"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>Практическое руководство. Добавление и удаление вкладок с помощью элемента управления TabControl в Windows Forms
 По умолчанию <xref:System.Windows.Forms.TabControl> управления содержит два <xref:System.Windows.Forms.TabPage> элементов управления. Получить доступ к этим вкладкам через <xref:System.Windows.Forms.TabControl.TabPages%2A> свойство.  
   
 ### <a name="to-add-a-tab-programmatically"></a>Чтобы добавить вкладку программными средствами  
   
--   Используйте <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> метод <xref:System.Windows.Forms.TabControl.TabPages%2A> свойство.  
+- Используйте <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> метод <xref:System.Windows.Forms.TabControl.TabPages%2A> свойство.  
   
     ```vb  
     Dim myTabPage As New TabPage()  
@@ -47,11 +47,11 @@ ms.locfileid: "59101605"
   
 ### <a name="to-remove-a-tab-programmatically"></a>Чтобы программно удалить вкладку  
   
--   Чтобы удалить выбранных вкладок, используйте <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> метод <xref:System.Windows.Forms.TabControl.TabPages%2A> свойство.  
+- Чтобы удалить выбранных вкладок, используйте <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> метод <xref:System.Windows.Forms.TabControl.TabPages%2A> свойство.  
   
      -или-  
   
--   Чтобы удалить все вкладки, используйте <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> метод <xref:System.Windows.Forms.TabControl.TabPages%2A> свойство.  
+- Чтобы удалить все вкладки, используйте <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> метод <xref:System.Windows.Forms.TabControl.TabPages%2A> свойство.  
   
     ```vb  
     ' Removes the selected tab:  

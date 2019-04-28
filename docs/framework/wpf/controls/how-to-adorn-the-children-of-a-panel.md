@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Panel control [WPF], binding adorners to children
 ms.assetid: 4cc9b972-b472-4e5c-bdf3-3702d7fbb1f5
 ms.openlocfilehash: 746f197a5132934f94a678dc3b5e2a1f65eb93bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019026"
 ---
 # <a name="how-to-adorn-the-children-of-a-panel"></a>Практическое руководство. Декорирование дочерних элементов Panel
 В этом примере показано, как программным способом привязки декоративного элемента к дочерним элементам указанного <xref:System.Windows.Controls.Panel>.  

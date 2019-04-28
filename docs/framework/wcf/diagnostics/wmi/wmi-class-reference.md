@@ -3,17 +3,17 @@ title: Справочные сведения по классам WMI
 ms.date: 03/30/2017
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
 ms.openlocfilehash: 73b36bfc3df917982a2cc9071bdb31f42b3b2dff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915663"
 ---
 # <a name="wmi-class-reference"></a>Справочные сведения по классам WMI
 В этом разделе перечислены все классы WMI, представленные поставщиком WMI Windows Communication Foundation (WCF).  
   
 ## <a name="accessing-wmi-instances"></a>Доступ к экземплярам WMI  
- Все классы, перечисленные в ссылках на объект WMI, невозможно создать напрямую, за исключением классов службы, домена приложения, контракта, ServiceToEndpointAssociation и конечной точки. Чтобы получить доступ к другим экземплярам, можно получить доступ к свойствам указанных выше классов верхнего уровня. Например, доступ к экземпляру TransportBindingElement можно получить следующим образом: экземпляр класса конечной точки -> привязка -> класс BindingElements.  
+ Все классы, перечисленные в ссылках на объект WMI, невозможно создать напрямую, за исключением классов службы, домена приложения, контракта, ServiceToEndpointAssociation и конечной точки. Чтобы получить доступ к другим экземплярам, можно получить доступ к свойствам указанных выше классов верхнего уровня. Например, доступ к экземпляру TransportBindingElement из конечной точки -> Привязка -> класс BindingElements.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [ActivityTransfer](../../../../../docs/framework/wcf/diagnostics/wmi/activitytransfer.md)  
@@ -24,7 +24,7 @@ ms.locfileid: "33487624"
   
  [AsymmetricSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/asymmetricsecuritybindingelement.md)  
   
- «Класс поведение»  
+ «Класс поведения»  
   
  [BinaryMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/binarymessageencodingbindingelement.md)  
   
@@ -80,7 +80,7 @@ ms.locfileid: "33487624"
   
  [OneWayBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/onewaybindingelement.md)  
   
- «Класс операции»  
+ «Операция class»  
   
  [OperationBehaviorAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/operationbehaviorattribute.md)  
   

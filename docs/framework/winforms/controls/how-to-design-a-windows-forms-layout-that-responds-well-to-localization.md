@@ -11,11 +11,11 @@ helpviewer_keywords:
 - localization [Windows Forms], Windows Forms layout
 ms.assetid: d13eff2d-701c-4b6e-8838-3885cbfb7223
 ms.openlocfilehash: 131dc688d2a742fa7a0d99ec7858d4e280c9882f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926519"
 ---
 # <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a>Практическое руководство. Формирование макета формы Windows Forms с учетом будущей локализации
 Создание готовых для локализации форм значительно ускоряет разработку продуктов для международных рынков. Элемент управления <xref:System.Windows.Forms.TableLayoutPanel> можно использовать для реализации макетов, которые поддерживают изменение размера элементов управления при изменении значений их свойств <xref:System.Windows.Forms.Control.Text%2A>.  
@@ -50,7 +50,7 @@ ms.locfileid: "59310763"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылки на сборки System, System.Data, System.Drawing и System.Windows.Forms.  
+- ссылки на сборки System, System.Data, System.Drawing и System.Windows.Forms.  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   

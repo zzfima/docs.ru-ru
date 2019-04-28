@@ -19,11 +19,11 @@ helpviewer_keywords:
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
 ms.openlocfilehash: 9ad992a53618fa2f410e0b0fb23886c30136384f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917921"
 ---
 # <a name="shadowing-in-visual-basic"></a>Сокрытие в Visual Basic
 Если два программных элемента имеют одинаковые имена, один из них может скрыть, или *тени*, другой. В таком случае затененный элемент недоступен для обращения. Вместо этого когда код использует имя элемента, компилятор Visual Basic разрешает его скрывающий элемент.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
 ms.openlocfilehash: e0852536a86dd415334f95a47ceb800ed2c591ad
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924024"
 ---
 # <a name="type-of-parameter-parametername-is-not-cls-compliant"></a>Тип параметра "\<имя_параметра >" не является CLS-совместимым
 Процедура помечена как `<CLSCompliant(True)>` , но объявляет параметр с типом, который помечен как `<CLSCompliant(False)>`, не помечен или не определен, так как он является несовместимым типом.  
@@ -21,13 +21,13 @@ ms.locfileid: "55265926"
   
  Следующие типы данных Visual Basic не являются CLS-совместимыми:  
   
--   [Тип данных SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+- [Тип данных SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
--   [Тип данных UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+- [Тип данных UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
   
--   [Тип данных ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+- [Тип данных ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
   
--   [Тип данных UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+- [Тип данных UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
  При применении атрибута <xref:System.CLSCompliantAttribute> к программному элементу вы задаете для параметра `isCompliant` атрибута значение `True` или `False` , чтобы указать совместимость или несовместимость. Для этого параметра нет значения по умолчанию, и вы должны предоставить значение.  
   
@@ -39,8 +39,8 @@ ms.locfileid: "55265926"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Если процедура должна принимать параметр этого конкретного типа, удалите <xref:System.CLSCompliantAttribute>. Процедура не может соответствовать CLS.  
+- Если процедура должна принимать параметр этого конкретного типа, удалите <xref:System.CLSCompliantAttribute>. Процедура не может соответствовать CLS.  
   
--   Если процедура должна быть CLS-совместимым, измените тип этого параметра на ближайший CLS-совместимый тип. Например, вместо `UInteger` вы можете использовать `Integer` , если вам не нужен диапазон значений, превышающий 2 147 483 647. Если вам нужен расширенный диапазон, вы можете заменить `UInteger` на `Long`.  
+- Если процедура должна быть CLS-совместимым, измените тип этого параметра на ближайший CLS-совместимый тип. Например, вместо `UInteger` вы можете использовать `Integer` , если вам не нужен диапазон значений, превышающий 2 147 483 647. Если вам нужен расширенный диапазон, вы можете заменить `UInteger` на `Long`.  
   
--   При взаимодействии с объектами службы автоматизации или COM-объектами помните, что длина данных некоторых типов отличается от длины данных в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Например, данные типа `int` часто являются 16-битными в других средах. Если вы принимаете 16-разрядное целое число из таких компонентов, объявите его как `Short` вместо `Integer` в управляемом коде Visual Basic.
+- При взаимодействии с объектами службы автоматизации или COM-объектами помните, что длина данных некоторых типов отличается от длины данных в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Например, данные типа `int` часто являются 16-битными в других средах. Если вы принимаете 16-разрядное целое число из таких компонентов, объявите его как `Short` вместо `Integer` в управляемом коде Visual Basic.

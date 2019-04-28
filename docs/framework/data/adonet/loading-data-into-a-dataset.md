@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a53e5dc1-9669-49d4-828d-efa633237066
 ms.openlocfilehash: cb5578d790e5d3f54f75f964bb3288d861c9d7c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878544"
 ---
 # <a name="loading-data-into-a-dataset"></a>Загрузка данных в набор данных
 Объект <xref:System.Data.DataSet> необходимо заполнить, прежде чем направлять к нему запросы [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Существует несколько способов заполнения объекта <xref:System.Data.DataSet>. Например, можно использовать [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] для запроса к базе данных и загрузки результатов в <xref:System.Data.DataSet>. Дополнительные сведения см. в разделе [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md).  

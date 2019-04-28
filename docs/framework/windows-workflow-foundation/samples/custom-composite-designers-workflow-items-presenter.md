@@ -6,22 +6,22 @@ dev_langs:
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
 ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005645"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Пользовательские составные конструкторы - средство представления элементов рабочего процесса
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> является типом ключа в модели программирования конструктора WF, позволяющим редактирование коллекции содержащихся элементов. В этом образце показано, как построить конструктор действий, который предоставляет доступ к такой изменяемой коллекции.
 
  В этом образце показаны следующие действия.
 
--   Создание настраиваемого конструктора действий с <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.
+- Создание настраиваемого конструктора действий с <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.
 
--   Создание конструктора действий со «свернутым» и «развернутым» представлением.
+- Создание конструктора действий со «свернутым» и «развернутым» представлением.
 
--   Переопределение конструктора по умолчанию в повторно размещенном приложении.
+- Переопределение конструктора по умолчанию в повторно размещенном приложении.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца
 
@@ -32,15 +32,15 @@ ms.locfileid: "59344875"
 ## <a name="sample-highlights"></a>Описание образца
  Код для этого образца показывает следующее.
 
--   Действие, для которого построен конструктор: `Parallel`
+- Действие, для которого построен конструктор: `Parallel`
 
--   Создание настраиваемого конструктора действий с <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Некоторые замечания.
+- Создание настраиваемого конструктора действий с <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Некоторые замечания.
 
-    -   Обратите внимание на использование привязки данных WPF для привязки к `ModelItem.Branches`. `ModelItem` - свойство `WorkflowElementDesigner`, которое относится к базовому объекту, для которого используется конструктор, в данном случае - `Parallel`.
+    - Обратите внимание на использование привязки данных WPF для привязки к `ModelItem.Branches`. `ModelItem` - свойство `WorkflowElementDesigner`, которое относится к базовому объекту, для которого используется конструктор, в данном случае - `Parallel`.
 
-    -   Шаблон <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> может использоваться для указания видимого изображения, отображаемого между отдельными элементами коллекции.
+    - Шаблон <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> может использоваться для указания видимого изображения, отображаемого между отдельными элементами коллекции.
 
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> является шаблоном, который может быть предоставлен для определения макета элементов в коллекции. В данном случае используется горизонтальный элемент StackPanel.
+    - <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> является шаблоном, который может быть предоставлен для определения макета элементов в коллекции. В данном случае используется горизонтальный элемент StackPanel.
 
  Это показано в следующем примере кода.
 
@@ -60,9 +60,9 @@ ms.locfileid: "59344875"
   </sad:WorkflowItemsPresenter>
 ```
 
--   Выполнение связи объекта `DesignerAttribute` с типом `Parallel`, а затем вывод указанных атрибутов.
+- Выполнение связи объекта `DesignerAttribute` с типом `Parallel`, а затем вывод указанных атрибутов.
 
-    -   Сначала зарегистрируйте все конструкторы по умолчанию.
+    - Сначала зарегистрируйте все конструкторы по умолчанию.
 
  Ниже приведен пример кода.
 
@@ -80,7 +80,7 @@ metadata.Register()
 RegisterCustomMetadata()
 ```
 
-    -   Далее переопределите параллель в методе `RegisterCustomMetadata`.
+    - Далее переопределите параллель в методе `RegisterCustomMetadata`.
 
  В следующем коде это показано на языках C# и Visual Basic.
 
@@ -101,7 +101,7 @@ Sub RegisterCustomMetadata()
 End Sub
 ```
 
--   Наконец, обратите внимание на использование различных шаблонов данных и триггеров для выбора соответствующего шаблона на основании свойства `IsRootDesigner`.
+- Наконец, обратите внимание на использование различных шаблонов данных и триггеров для выбора соответствующего шаблона на основании свойства `IsRootDesigner`.
 
  Ниже приведен пример кода.
 

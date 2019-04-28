@@ -9,22 +9,22 @@ helpviewer_keywords:
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
 ms.openlocfilehash: 7cb9278cd311d211ef95df238b930970ae472d05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012949"
 ---
 # <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Практическое руководство. Определение режима редактирования для элемента управления DataGridView в Windows Forms
 По умолчанию, пользователи могут изменять содержимое текущего <xref:System.Windows.Forms.DataGridView> ячейке текстового поля, введя его или нажав клавишу F2. Таким образом ячейки в режиме редактирования, если выполняются все из следующих условий:  
   
--   Базовый источник данных поддерживает редактирование.  
+- Базовый источник данных поддерживает редактирование.  
   
--   <xref:System.Windows.Forms.DataGridView> Включен элемент управления.  
+- <xref:System.Windows.Forms.DataGridView> Включен элемент управления.  
   
--   <xref:System.Windows.Forms.DataGridView.EditMode%2A> Значение свойства не является <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.  
+- <xref:System.Windows.Forms.DataGridView.EditMode%2A> Значение свойства не является <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.  
   
--   `ReadOnly` Свойства ячейки, строки, столбца и управления имеют значение `false`.  
+- `ReadOnly` Свойства ячейки, строки, столбца и управления имеют значение `false`.  
   
  В режиме редактирования пользователя можно изменить значение ячейки и нажмите клавишу ВВОД для подтверждения изменений или ESC, чтобы отменить изменение для ячейки в исходное значение.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "59080401"
   
 ### <a name="to-change-the-edit-mode-of-a-datagridview-control"></a>Чтобы изменить режим правки элемента управления DataGridView  
   
--   Задайте <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> свойство в соответствующий <xref:System.Windows.Forms.DataGridViewEditMode> перечисления.  
+- Задайте <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> свойство в соответствующий <xref:System.Windows.Forms.DataGridViewEditMode> перечисления.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
@@ -40,9 +40,9 @@ ms.locfileid: "59080401"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`;  
+- элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`;  
   
--   ссылки на сборки <xref:System> и <xref:System.Windows.Forms>.  
+- ссылки на сборки <xref:System> и <xref:System.Windows.Forms>.  
   
 ## <a name="see-also"></a>См. также
 

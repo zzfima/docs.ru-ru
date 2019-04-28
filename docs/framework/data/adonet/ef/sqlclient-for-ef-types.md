@@ -3,11 +3,11 @@ title: Типы SqlClient для Entity Framework
 ms.date: 03/30/2017
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
 ms.openlocfilehash: eb12bde1e319fde5adf20ad6cd54f8776aeda31d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879168"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>Типы SqlClient для Entity Framework
 Файл манифеста поставщика данных .NET Framework для SQL Server (SqlClient) содержит список типов-примитивов этого поставщика, аспекты каждого типа, сопоставления типов-примитивов между концептуальной моделью и режимом хранения, а также правила повышения и преобразования типов-примитивов концептуальной модели и модели хранения.  

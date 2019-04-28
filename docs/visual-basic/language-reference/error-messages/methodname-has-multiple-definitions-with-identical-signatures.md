@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30269
 ms.assetid: 39489621-6617-4e5c-9b24-c2faf8273891
 ms.openlocfilehash: fe8d1d8e11e25bcd79894ed82a57dd06748c3d68
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920904"
 ---
 # <a name="methodname-has-multiple-definitions-with-identical-signatures"></a>"\<имя_метода >" имеет несколько определений с одинаковыми сигнатурами
 Объект `Function` или `Sub` в объявлении процедуры используются одинаковые процедуры имя и список аргументов, как и в предыдущем объявлении. Одной из возможных причин является попытка перегрузить исходный текст процедуры. Перегруженные процедуры должны иметь разные списки аргументов.  
@@ -21,7 +21,7 @@ ms.locfileid: "58831882"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Измените имя процедуры или список аргументов, или удалите повторяющееся объявление.  
+- Измените имя процедуры или список аргументов, или удалите повторяющееся объявление.  
   
 ## <a name="see-also"></a>См. также
 

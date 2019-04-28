@@ -10,11 +10,11 @@ helpviewer_keywords:
 - animation [WPF], Storyboards [WPF], in procedural code
 ms.assetid: 4f361925-6a08-40dc-8231-a61111c6b28b
 ms.openlocfilehash: a03f477dd31909e8cb9dde9cd29da6f38d665758
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904154"
 ---
 # <a name="how-to-define-a-name-scope"></a>Практическое руководство. Определение пространства имен
 Для анимации с <xref:System.Windows.Media.Animation.Storyboard> в коде, необходимо создать <xref:System.Windows.NameScope> и регистрировать имена целевых объектов с элементом, который является владельцем этого пространства имен. В следующем примере <xref:System.Windows.NameScope> создается для `myMainPanel`. Две кнопки `button1` и `button2`, добавляются в панели, а также их имена, которые зарегистрированы. Нескольких анимаций и <xref:System.Windows.Media.Animation.Storyboard> создаются. Раскадровки <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> метод используется для запуска анимаций.  

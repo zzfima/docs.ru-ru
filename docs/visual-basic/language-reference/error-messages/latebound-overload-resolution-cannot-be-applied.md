@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
 ms.openlocfilehash: 7f2ae3bb0e7c09d966c53fb17b1cbe675dfce8b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921112"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Разрешение перегрузки не может использоваться для "\<имя_процедуры >", поскольку интерфейс доступа принадлежит к типу интерфейса
 Компилятор пытается разрешить ссылку на перегруженное свойство или процедуру, но не выполняется, так как аргумент имеет тип `Object` и ссылающийся объект имеет тип данных интерфейса. `Object` Аргумент указывает компилятору разрешить ссылку с поздней привязкой.  
@@ -24,7 +24,7 @@ ms.locfileid: "58814059"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Используйте `CType` для приведения аргументов `Object` к типу, указанному в подписи перегрузки, необходимо вызвать.  
+- Используйте `CType` для приведения аргументов `Object` к типу, указанному в подписи перегрузки, необходимо вызвать.  
   
      Обратите внимание на то, что не дает им возможность привести ссылающийся объект базового интерфейса. Необходимо привести аргумент, чтобы избежать этой ошибки.  
   

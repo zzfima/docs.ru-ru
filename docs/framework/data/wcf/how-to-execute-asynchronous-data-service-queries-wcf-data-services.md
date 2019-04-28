@@ -9,11 +9,11 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 ms.assetid: 902a2dc1-d0e9-4b00-90a8-becc4cb1f6a7
 ms.openlocfilehash: f89a5004afeffe5aa9a28cb2d43374aede8a935e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936530"
 ---
 # <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>Практическое руководство. Выполнение запросов к службе асинхронных данных (службы данных WCF)
 При использовании клиентской библиотеки служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] операции «клиент-сервер», например выполнение запросов и сохранение изменений, можно выполнять асинхронно. Дополнительные сведения см. в разделе [асинхронных операций](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  

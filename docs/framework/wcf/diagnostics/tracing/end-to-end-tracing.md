@@ -3,11 +3,11 @@ title: Сквозная трассировка
 ms.date: 03/30/2017
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
 ms.openlocfilehash: fd2964b39c758e41620fb453ddd8f61a1aa550aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912539"
 ---
 # <a name="end-to-end-tracing"></a>Сквозная трассировка
 Сквозной (e2e) Трассировка позволяет разработчикам следить за выполнением кода в инфраструктуре Windows Communication Foundation (WCF) для изучения причин сбоя пути кода или для получения подробной трассировки для емкости планирования и анализа производительности. Windows Communication Foundation (WCF) предоставляет три механизма корреляции, которые помогают диагностировать причину ошибки: действия, перенаправления и распространение.  

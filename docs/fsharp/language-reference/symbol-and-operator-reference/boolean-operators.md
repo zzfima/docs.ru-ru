@@ -3,11 +3,11 @@ title: Логические операторы
 description: Дополнительные сведения о логических операторов, которые доступны в F# языка программирования.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5353b6ec6a0bd610f3446761a1d28f01f0403302
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925818"
 ---
 # <a name="boolean-operators"></a>Логические операторы
 
@@ -17,7 +17,7 @@ ms.locfileid: "53612742"
 
 В следующей таблице перечислены логические операторы, доступные в F# языка. Единственный тип, поддерживаемый эти операторы — `bool` типа.
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |--------|-----------|
 |`not`|Логическое отрицание|
 |<code>&#124;&#124;</code>|Логическое или|

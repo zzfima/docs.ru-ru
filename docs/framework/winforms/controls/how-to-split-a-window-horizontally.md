@@ -11,11 +11,11 @@ helpviewer_keywords:
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
 ms.openlocfilehash: a43d632a82678f362a1cdf6b3ee4486a8db5adde
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012936"
 ---
 # <a name="how-to-split-a-window-horizontally"></a>Практическое руководство. Разделение окна по горизонтали
 В следующем примере кода делает разделитель <xref:System.Windows.Forms.SplitContainer> элемента управления по горизонтали.  
