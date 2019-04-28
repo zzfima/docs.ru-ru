@@ -9,24 +9,24 @@ helpviewer_keywords:
 - Border control [WPF]
 ms.assetid: 51739f83-b5a2-489b-854b-30607e74a502
 ms.openlocfilehash: 922b4b90f3f8bc74d0465691386fa1a2422c6573
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912475"
 ---
-# <a name="border"></a><span data-ttu-id="87437-102">Border</span><span class="sxs-lookup"><span data-stu-id="87437-102">Border</span></span>
-<span data-ttu-id="87437-103">В следующем образце показано, как динамически изменить свойства <xref:System.Windows.Controls.Border> элемент.</span><span class="sxs-lookup"><span data-stu-id="87437-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
+# <a name="border"></a><span data-ttu-id="82559-102">Border</span><span class="sxs-lookup"><span data-stu-id="82559-102">Border</span></span>
+<span data-ttu-id="82559-103">В следующем образце показано, как динамически изменить свойства <xref:System.Windows.Controls.Border> элемент.</span><span class="sxs-lookup"><span data-stu-id="82559-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="87437-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="87437-104">In This Section</span></span>  
- [<span data-ttu-id="87437-105">Анимирование значения BorderThickness</span><span class="sxs-lookup"><span data-stu-id="87437-105">Animate a BorderThickness Value</span></span>](how-to-animate-a-borderthickness-value.md)  
+## <a name="in-this-section"></a><span data-ttu-id="82559-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="82559-104">In This Section</span></span>  
+ [<span data-ttu-id="82559-105">Анимирование значения BorderThickness</span><span class="sxs-lookup"><span data-stu-id="82559-105">Animate a BorderThickness Value</span></span>](how-to-animate-a-borderthickness-value.md)  
   
-## <a name="reference"></a><span data-ttu-id="87437-106">Ссылка</span><span class="sxs-lookup"><span data-stu-id="87437-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="82559-106">Ссылка</span><span class="sxs-lookup"><span data-stu-id="82559-106">Reference</span></span>  
  <xref:System.Windows.Controls.Decorator>  
   
  <xref:System.Windows.Controls.Border>  
   
-## <a name="related-sections"></a><span data-ttu-id="87437-107">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="87437-107">Related Sections</span></span>  
- [<span data-ttu-id="87437-108">Общие сведения о панелях</span><span class="sxs-lookup"><span data-stu-id="87437-108">Panels Overview</span></span>](panels-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="82559-107">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="82559-107">Related Sections</span></span>  
+ [<span data-ttu-id="82559-108">Общие сведения о панелях</span><span class="sxs-lookup"><span data-stu-id="82559-108">Panels Overview</span></span>](panels-overview.md)  
   
- [<span data-ttu-id="87437-109">Общие сведения о свойствах Alignment, Margin, Padding</span><span class="sxs-lookup"><span data-stu-id="87437-109">Alignment, Margins, and Padding Overview</span></span>](../advanced/alignment-margins-and-padding-overview.md)
+ [<span data-ttu-id="82559-109">Общие сведения о свойствах Alignment, Margin, Padding</span><span class="sxs-lookup"><span data-stu-id="82559-109">Alignment, Margins, and Padding Overview</span></span>](../advanced/alignment-margins-and-padding-overview.md)

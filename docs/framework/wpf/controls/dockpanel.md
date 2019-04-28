@@ -8,19 +8,19 @@ helpviewer_keywords:
 - DockPanel control [WPF]
 ms.assetid: 8d3d290b-d38c-47d0-918e-cee2baeb92ae
 ms.openlocfilehash: 92dc0d9982e8ef92f4aa99e2bdd694a8585237cf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911876"
 ---
-# <a name="dockpanel"></a><span data-ttu-id="26bba-102">DockPanel</span><span class="sxs-lookup"><span data-stu-id="26bba-102">DockPanel</span></span>
-<span data-ttu-id="26bba-103"><xref:System.Windows.Controls.DockPanel> Элемент используется для размещения содержимого дочерних вдоль края контейнера макета.</span><span class="sxs-lookup"><span data-stu-id="26bba-103">The <xref:System.Windows.Controls.DockPanel> element is used to position child content along the edge of a layout container.</span></span>  
+# <a name="dockpanel"></a><span data-ttu-id="f1d50-102">DockPanel</span><span class="sxs-lookup"><span data-stu-id="f1d50-102">DockPanel</span></span>
+<span data-ttu-id="f1d50-103"><xref:System.Windows.Controls.DockPanel> Элемент используется для размещения содержимого дочерних вдоль края контейнера макета.</span><span class="sxs-lookup"><span data-stu-id="f1d50-103">The <xref:System.Windows.Controls.DockPanel> element is used to position child content along the edge of a layout container.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="26bba-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="26bba-104">In This Section</span></span>  
- [<span data-ttu-id="26bba-105">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="26bba-105">How-to Topics</span></span>](dockpanel-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f1d50-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="f1d50-104">In This Section</span></span>  
+ [<span data-ttu-id="f1d50-105">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="f1d50-105">How-to Topics</span></span>](dockpanel-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="26bba-106">Ссылка</span><span class="sxs-lookup"><span data-stu-id="26bba-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f1d50-106">Ссылка</span><span class="sxs-lookup"><span data-stu-id="f1d50-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -35,9 +35,9 @@ ms.locfileid: "57361880"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="26bba-107">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="26bba-107">Related Sections</span></span>  
- [<span data-ttu-id="26bba-108">Макет</span><span class="sxs-lookup"><span data-stu-id="26bba-108">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="f1d50-107">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="f1d50-107">Related Sections</span></span>  
+ [<span data-ttu-id="f1d50-108">Макет</span><span class="sxs-lookup"><span data-stu-id="f1d50-108">Layout</span></span>](../advanced/layout.md)  
   
- <span data-ttu-id="26bba-109">[Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)</span><span class="sxs-lookup"><span data-stu-id="26bba-109">[Walkthrough: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md)</span></span>  
+ <span data-ttu-id="f1d50-109">[Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)</span><span class="sxs-lookup"><span data-stu-id="f1d50-109">[Walkthrough: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md)</span></span>  
   
- [<span data-ttu-id="26bba-110">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="26bba-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="f1d50-110">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="f1d50-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

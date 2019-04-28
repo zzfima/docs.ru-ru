@@ -8,20 +8,20 @@ helpviewer_keywords:
 - digital ink [WPF]
 ms.assetid: c29f8728-bfcb-4af7-9fbc-8169e180109f
 ms.openlocfilehash: f67642342777a4b5b26b902161c83dc98893c63f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61799363"
 ---
-# <a name="digital-ink-how-to-topics"></a><span data-ttu-id="5aa87-102">Разделы руководства по рукописному вводу</span><span class="sxs-lookup"><span data-stu-id="5aa87-102">Digital Ink How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="5aa87-103">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="5aa87-103">In This Section</span></span>  
- [<span data-ttu-id="5aa87-104">Выбор рукописного ввода из пользовательского элемента управления</span><span class="sxs-lookup"><span data-stu-id="5aa87-104">Select Ink from a Custom Control</span></span>](how-to-select-ink-from-a-custom-control.md)  
-  [<span data-ttu-id="5aa87-105">Добавление пользовательских данных в данные рукописного ввода</span><span class="sxs-lookup"><span data-stu-id="5aa87-105">Add Custom Data to Ink Data</span></span>](how-to-add-custom-data-to-ink-data.md)  
-  [<span data-ttu-id="5aa87-106">Удаление рукописного ввода в пользовательском элементе управления</span><span class="sxs-lookup"><span data-stu-id="5aa87-106">Erase Ink on a Custom Control</span></span>](how-to-erase-ink-on-a-custom-control.md)  
-  [<span data-ttu-id="5aa87-107">Распознавание жестов приложений</span><span class="sxs-lookup"><span data-stu-id="5aa87-107">Recognize Application Gestures</span></span>](how-to-recognize-application-gestures.md)  
-  [<span data-ttu-id="5aa87-108">Перетаскивание рукописного текста</span><span class="sxs-lookup"><span data-stu-id="5aa87-108">Drag and Drop Ink</span></span>](how-to-drag-and-drop-ink.md)  
-  [<span data-ttu-id="5aa87-109">Привязка данных к InkCanvas</span><span class="sxs-lookup"><span data-stu-id="5aa87-109">Data Bind to an InkCanvas</span></span>](how-to-data-bind-to-an-inkcanvas.md)  
-  [<span data-ttu-id="5aa87-110">Анализ рукописного ввода с помощью подсказок анализа</span><span class="sxs-lookup"><span data-stu-id="5aa87-110">Analyze Ink with Analysis Hints</span></span>](how-to-analyze-ink-with-analysis-hints.md)  
-  [<span data-ttu-id="5aa87-111">Поворот рукописного текста</span><span class="sxs-lookup"><span data-stu-id="5aa87-111">Rotate Ink</span></span>](how-to-rotate-ink.md)  
-  [<span data-ttu-id="5aa87-112">Отключение объекта RealTimeStylus для WPF-приложений</span><span class="sxs-lookup"><span data-stu-id="5aa87-112">Disable the RealTimeStylus for WPF Applications</span></span>](disable-the-realtimestylus-for-wpf-applications.md)
+# <a name="digital-ink-how-to-topics"></a><span data-ttu-id="ad9f8-102">Разделы руководства по рукописному вводу</span><span class="sxs-lookup"><span data-stu-id="ad9f8-102">Digital Ink How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="ad9f8-103">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="ad9f8-103">In This Section</span></span>  
+ [<span data-ttu-id="ad9f8-104">Выбор рукописного ввода из пользовательского элемента управления</span><span class="sxs-lookup"><span data-stu-id="ad9f8-104">Select Ink from a Custom Control</span></span>](how-to-select-ink-from-a-custom-control.md)  
+  [<span data-ttu-id="ad9f8-105">Добавление пользовательских данных в данные рукописного ввода</span><span class="sxs-lookup"><span data-stu-id="ad9f8-105">Add Custom Data to Ink Data</span></span>](how-to-add-custom-data-to-ink-data.md)  
+  [<span data-ttu-id="ad9f8-106">Удаление рукописного ввода в пользовательском элементе управления</span><span class="sxs-lookup"><span data-stu-id="ad9f8-106">Erase Ink on a Custom Control</span></span>](how-to-erase-ink-on-a-custom-control.md)  
+  [<span data-ttu-id="ad9f8-107">Распознавание жестов приложений</span><span class="sxs-lookup"><span data-stu-id="ad9f8-107">Recognize Application Gestures</span></span>](how-to-recognize-application-gestures.md)  
+  [<span data-ttu-id="ad9f8-108">Перетаскивание рукописного текста</span><span class="sxs-lookup"><span data-stu-id="ad9f8-108">Drag and Drop Ink</span></span>](how-to-drag-and-drop-ink.md)  
+  [<span data-ttu-id="ad9f8-109">Привязка данных к InkCanvas</span><span class="sxs-lookup"><span data-stu-id="ad9f8-109">Data Bind to an InkCanvas</span></span>](how-to-data-bind-to-an-inkcanvas.md)  
+  [<span data-ttu-id="ad9f8-110">Анализ рукописного ввода с помощью подсказок анализа</span><span class="sxs-lookup"><span data-stu-id="ad9f8-110">Analyze Ink with Analysis Hints</span></span>](how-to-analyze-ink-with-analysis-hints.md)  
+  [<span data-ttu-id="ad9f8-111">Поворот рукописного текста</span><span class="sxs-lookup"><span data-stu-id="ad9f8-111">Rotate Ink</span></span>](how-to-rotate-ink.md)  
+  [<span data-ttu-id="ad9f8-112">Отключение объекта RealTimeStylus для WPF-приложений</span><span class="sxs-lookup"><span data-stu-id="ad9f8-112">Disable the RealTimeStylus for WPF Applications</span></span>](disable-the-realtimestylus-for-wpf-applications.md)

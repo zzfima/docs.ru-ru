@@ -9,24 +9,24 @@ helpviewer_keywords:
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
 ms.openlocfilehash: 3ddcb0b68e2b86393775c159a06f4c38dc7b6971
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762232"
 ---
-# <a name="graphics-how-to-topics"></a><span data-ttu-id="78076-102">Разделы практического руководства, посвященные графике</span><span class="sxs-lookup"><span data-stu-id="78076-102">Graphics How-to Topics</span></span>
-<span data-ttu-id="78076-103">В следующих разделах показано, как использовать графических возможностей [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="78076-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="graphics-how-to-topics"></a><span data-ttu-id="269dd-102">Разделы практического руководства, посвященные графике</span><span class="sxs-lookup"><span data-stu-id="269dd-102">Graphics How-to Topics</span></span>
+<span data-ttu-id="269dd-103">В следующих разделах показано, как использовать графических возможностей [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="269dd-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="78076-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="78076-104">In This Section</span></span>  
- [<span data-ttu-id="78076-105">Анимация прямоугольника</span><span class="sxs-lookup"><span data-stu-id="78076-105">Animate a Rectangle</span></span>](how-to-animate-a-rectangle.md)  
- [<span data-ttu-id="78076-106">Анимация расположения объекта с помощью PointAnimation</span><span class="sxs-lookup"><span data-stu-id="78076-106">Animate the Position of an Object by Using PointAnimation</span></span>](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
- [<span data-ttu-id="78076-107">Преобразование объектов Point и Vector</span><span class="sxs-lookup"><span data-stu-id="78076-107">Transform Points and Vectors</span></span>](how-to-transform-points-and-vectors.md)  
- [<span data-ttu-id="78076-108">Использование стеклянной рамки в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="78076-108">Extend Glass Frame Into a WPF Application</span></span>](extend-glass-frame-into-a-wpf-application.md)  
- [<span data-ttu-id="78076-109">Практическое руководство. Повышение производительности отрисовки за счет кэширования элемента</span><span class="sxs-lookup"><span data-stu-id="78076-109">How to: Improve Rendering Performance by Caching an Element</span></span>](how-to-improve-rendering-performance-by-caching-an-element.md)  
- [<span data-ttu-id="78076-110">Практическое руководство. Использование кэшированного элемента в качестве кисти</span><span class="sxs-lookup"><span data-stu-id="78076-110">How to: Use a Cached Element as a Brush</span></span>](how-to-use-a-cached-element-as-a-brush.md)  
+## <a name="in-this-section"></a><span data-ttu-id="269dd-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="269dd-104">In This Section</span></span>  
+ [<span data-ttu-id="269dd-105">Анимация прямоугольника</span><span class="sxs-lookup"><span data-stu-id="269dd-105">Animate a Rectangle</span></span>](how-to-animate-a-rectangle.md)  
+ [<span data-ttu-id="269dd-106">Анимация расположения объекта с помощью PointAnimation</span><span class="sxs-lookup"><span data-stu-id="269dd-106">Animate the Position of an Object by Using PointAnimation</span></span>](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [<span data-ttu-id="269dd-107">Преобразование объектов Point и Vector</span><span class="sxs-lookup"><span data-stu-id="269dd-107">Transform Points and Vectors</span></span>](how-to-transform-points-and-vectors.md)  
+ [<span data-ttu-id="269dd-108">Использование стеклянной рамки в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="269dd-108">Extend Glass Frame Into a WPF Application</span></span>](extend-glass-frame-into-a-wpf-application.md)  
+ [<span data-ttu-id="269dd-109">Практическое руководство. Повышение производительности отрисовки за счет кэширования элемента</span><span class="sxs-lookup"><span data-stu-id="269dd-109">How to: Improve Rendering Performance by Caching an Element</span></span>](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [<span data-ttu-id="269dd-110">Практическое руководство. Использование кэшированного элемента в качестве кисти</span><span class="sxs-lookup"><span data-stu-id="269dd-110">How to: Use a Cached Element as a Brush</span></span>](how-to-use-a-cached-element-as-a-brush.md)  
   
-## <a name="see-also"></a><span data-ttu-id="78076-111">См. также</span><span class="sxs-lookup"><span data-stu-id="78076-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="269dd-111">См. также</span><span class="sxs-lookup"><span data-stu-id="269dd-111">See also</span></span>
 
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
@@ -35,5 +35,5 @@ ms.locfileid: "59230659"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [<span data-ttu-id="78076-112">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="78076-112">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="78076-113">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="78076-113">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="269dd-112">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="269dd-112">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="269dd-113">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="269dd-113">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)

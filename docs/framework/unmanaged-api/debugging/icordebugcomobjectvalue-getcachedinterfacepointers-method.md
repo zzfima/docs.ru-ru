@@ -16,16 +16,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: da0e62250dbef9be93ccee7020e23c3f83e85592
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749908"
 ---
-# <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a><span data-ttu-id="aafee-102">Метод ICorDebugComObjectValue::GetCachedInterfacePointers</span><span class="sxs-lookup"><span data-stu-id="aafee-102">ICorDebugComObjectValue::GetCachedInterfacePointers Method</span></span>
-<span data-ttu-id="aafee-103">Возвращает интерфейс необработанные указатели, кэшируются на текущем вызываемой оболочки времени выполнения (RCW).</span><span class="sxs-lookup"><span data-stu-id="aafee-103">Gets the raw interface pointers cached on the current runtime callable wrapper (RCW).</span></span>  
+# <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a><span data-ttu-id="e3da4-102">Метод ICorDebugComObjectValue::GetCachedInterfacePointers</span><span class="sxs-lookup"><span data-stu-id="e3da4-102">ICorDebugComObjectValue::GetCachedInterfacePointers Method</span></span>
+<span data-ttu-id="e3da4-103">Возвращает интерфейс необработанные указатели, кэшируются на текущем вызываемой оболочки времени выполнения (RCW).</span><span class="sxs-lookup"><span data-stu-id="e3da4-103">Gets the raw interface pointers cached on the current runtime callable wrapper (RCW).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aafee-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="aafee-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e3da4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e3da4-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCachedInterfacePointers(  
@@ -35,31 +35,31 @@ HRESULT GetCachedInterfacePointers(
     [out, size_is(celt), length_is(*pceltFetched) CORDB_ADDRESS *ptrs);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="aafee-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="aafee-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e3da4-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e3da4-105">Parameters</span></span>  
  `bIInspectableOnly`  
- <span data-ttu-id="aafee-106">[in] Значение, указывающее, является ли этот метод возвращает только [!INCLUDE[wrt](../../../../includes/wrt-md.md)] интерфейсы (`IInspectable` интерфейсы) или все интерфейсами COM, кэшируемых вызываемой оболочки времени выполнения (RCW).</span><span class="sxs-lookup"><span data-stu-id="aafee-106">[in] A value that indicates whether the method will return only [!INCLUDE[wrt](../../../../includes/wrt-md.md)] interfaces (`IInspectable` interfaces) or all COM interfaces that are cached by the runtime callable wrapper (RCW).</span></span>  
+ <span data-ttu-id="e3da4-106">[in] Значение, указывающее, является ли этот метод возвращает только [!INCLUDE[wrt](../../../../includes/wrt-md.md)] интерфейсы (`IInspectable` интерфейсы) или все интерфейсами COM, кэшируемых вызываемой оболочки времени выполнения (RCW).</span><span class="sxs-lookup"><span data-stu-id="e3da4-106">[in] A value that indicates whether the method will return only [!INCLUDE[wrt](../../../../includes/wrt-md.md)] interfaces (`IInspectable` interfaces) or all COM interfaces that are cached by the runtime callable wrapper (RCW).</span></span>  
   
  `celt`  
- <span data-ttu-id="aafee-107">[in] Количество объектов, чьи адреса должны быть получены.</span><span class="sxs-lookup"><span data-stu-id="aafee-107">[in] The number of objects whose addresses are to be retrieved.</span></span>  
+ <span data-ttu-id="e3da4-107">[in] Количество объектов, чьи адреса должны быть получены.</span><span class="sxs-lookup"><span data-stu-id="e3da4-107">[in] The number of objects whose addresses are to be retrieved.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="aafee-108">[out] Указатель на число `CORDB_ADDRESS` значения, фактически возвращенных в `ptrs`.</span><span class="sxs-lookup"><span data-stu-id="aafee-108">[out] A pointer to the number of `CORDB_ADDRESS` values actually returned in `ptrs`.</span></span>  
+ <span data-ttu-id="e3da4-108">[out] Указатель на число `CORDB_ADDRESS` значения, фактически возвращенных в `ptrs`.</span><span class="sxs-lookup"><span data-stu-id="e3da4-108">[out] A pointer to the number of `CORDB_ADDRESS` values actually returned in `ptrs`.</span></span>  
   
  `ptrs`  
- <span data-ttu-id="aafee-109">Указатель на начальный адрес массива `CORDB_ADDRESS` значений, содержащих адреса кэшированных объектов интерфейса.</span><span class="sxs-lookup"><span data-stu-id="aafee-109">A pointer to the starting address of an array of `CORDB_ADDRESS` values that contain the addresses of cached interface objects.</span></span>  
+ <span data-ttu-id="e3da4-109">Указатель на начальный адрес массива `CORDB_ADDRESS` значений, содержащих адреса кэшированных объектов интерфейса.</span><span class="sxs-lookup"><span data-stu-id="e3da4-109">A pointer to the starting address of an array of `CORDB_ADDRESS` values that contain the addresses of cached interface objects.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="aafee-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="aafee-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e3da4-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="e3da4-110">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="aafee-111">Требования</span><span class="sxs-lookup"><span data-stu-id="aafee-111">Requirements</span></span>  
- <span data-ttu-id="aafee-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aafee-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e3da4-111">Требования</span><span class="sxs-lookup"><span data-stu-id="e3da4-111">Requirements</span></span>  
+ <span data-ttu-id="e3da4-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e3da4-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aafee-113">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="aafee-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e3da4-113">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e3da4-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="aafee-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="aafee-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e3da4-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e3da4-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="aafee-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aafee-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="e3da4-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e3da4-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aafee-116">См. также</span><span class="sxs-lookup"><span data-stu-id="aafee-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e3da4-116">См. также</span><span class="sxs-lookup"><span data-stu-id="e3da4-116">See also</span></span>
 
-- [<span data-ttu-id="aafee-117">Интерфейс ICorDebugComObjectValue</span><span class="sxs-lookup"><span data-stu-id="aafee-117">ICorDebugComObjectValue Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-interface.md)
-- [<span data-ttu-id="aafee-118">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="aafee-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="e3da4-117">Интерфейс ICorDebugComObjectValue</span><span class="sxs-lookup"><span data-stu-id="e3da4-117">ICorDebugComObjectValue Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-interface.md)
+- [<span data-ttu-id="e3da4-118">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="e3da4-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

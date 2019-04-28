@@ -9,27 +9,27 @@ helpviewer_keywords:
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
 ms.openlocfilehash: b353b413f7486990b6dd8ae5126809b27590ae3c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761344"
 ---
-# <a name="treeview"></a><span data-ttu-id="c0677-102">TreeView</span><span class="sxs-lookup"><span data-stu-id="c0677-102">TreeView</span></span>
-<span data-ttu-id="c0677-103"><xref:System.Windows.Controls.TreeView> Элемент управления отображает сведения в виде иерархической структуры с помощью сворачиваемых узлов.</span><span class="sxs-lookup"><span data-stu-id="c0677-103">The <xref:System.Windows.Controls.TreeView> control displays information in a hierarchical structure by using collapsible nodes.</span></span>  
+# <a name="treeview"></a><span data-ttu-id="70fd1-102">TreeView</span><span class="sxs-lookup"><span data-stu-id="70fd1-102">TreeView</span></span>
+<span data-ttu-id="70fd1-103"><xref:System.Windows.Controls.TreeView> Элемент управления отображает сведения в виде иерархической структуры с помощью сворачиваемых узлов.</span><span class="sxs-lookup"><span data-stu-id="70fd1-103">The <xref:System.Windows.Controls.TreeView> control displays information in a hierarchical structure by using collapsible nodes.</span></span>  
   
- <span data-ttu-id="c0677-104">На следующем рисунке показан пример <xref:System.Windows.Controls.TreeView> элемент управления, который имеет вложенные <xref:System.Windows.Controls.TreeViewItem> элементов управления:</span><span class="sxs-lookup"><span data-stu-id="c0677-104">The following illustration is an example of a <xref:System.Windows.Controls.TreeView> control that has nested <xref:System.Windows.Controls.TreeViewItem> controls:</span></span>  
+ <span data-ttu-id="70fd1-104">На следующем рисунке показан пример <xref:System.Windows.Controls.TreeView> элемент управления, который имеет вложенные <xref:System.Windows.Controls.TreeViewItem> элементов управления:</span><span class="sxs-lookup"><span data-stu-id="70fd1-104">The following illustration is an example of a <xref:System.Windows.Controls.TreeView> control that has nested <xref:System.Windows.Controls.TreeViewItem> controls:</span></span>  
   
  ![Рисунок, показывающий вложенные элементы управления TreeViewItem.](./media/treeview/nested-treeviewitem-controls.jpg)  
   
-## <a name="in-this-section"></a><span data-ttu-id="c0677-106">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="c0677-106">In This Section</span></span>  
- [<span data-ttu-id="c0677-107">Обзор элемента управления TreeView</span><span class="sxs-lookup"><span data-stu-id="c0677-107">TreeView Overview</span></span>](treeview-overview.md)  
- [<span data-ttu-id="c0677-108">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="c0677-108">How-to Topics</span></span>](treeview-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="70fd1-106">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="70fd1-106">In This Section</span></span>  
+ [<span data-ttu-id="70fd1-107">Обзор элемента управления TreeView</span><span class="sxs-lookup"><span data-stu-id="70fd1-107">TreeView Overview</span></span>](treeview-overview.md)  
+ [<span data-ttu-id="70fd1-108">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="70fd1-108">How-to Topics</span></span>](treeview-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="c0677-109">Ссылка</span><span class="sxs-lookup"><span data-stu-id="c0677-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="70fd1-109">Ссылка</span><span class="sxs-lookup"><span data-stu-id="70fd1-109">Reference</span></span>  
  <xref:System.Windows.Controls.TreeView>  
   <xref:System.Windows.Controls.TreeViewItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="c0677-110">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="c0677-110">Related Sections</span></span>  
- [<span data-ttu-id="c0677-111">Общие сведения о привязке данных</span><span class="sxs-lookup"><span data-stu-id="c0677-111">Data Binding Overview</span></span>](../data/data-binding-overview.md)  
-  [<span data-ttu-id="c0677-112">Общие сведения о шаблонах данных</span><span class="sxs-lookup"><span data-stu-id="c0677-112">Data Templating Overview</span></span>](../data/data-templating-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="70fd1-110">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="70fd1-110">Related Sections</span></span>  
+ [<span data-ttu-id="70fd1-111">Общие сведения о привязке данных</span><span class="sxs-lookup"><span data-stu-id="70fd1-111">Data Binding Overview</span></span>](../data/data-binding-overview.md)  
+  [<span data-ttu-id="70fd1-112">Общие сведения о шаблонах данных</span><span class="sxs-lookup"><span data-stu-id="70fd1-112">Data Templating Overview</span></span>](../data/data-templating-overview.md)
