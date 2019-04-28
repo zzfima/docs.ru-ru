@@ -3,18 +3,18 @@ title: Практическое руководство. Как создать с
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
 ms.openlocfilehash: 55fdc6824ab82bdf3b5913cd600815ed05bd909c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747853"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a><span data-ttu-id="f288a-102">Практическое руководство. Как создать службу, возвращающую произвольные данные, с использованием модели программирования WCF Web HTTP</span><span class="sxs-lookup"><span data-stu-id="f288a-102">How to: Create a Service That Returns Arbitrary Data Using The WCF Web HTTP Programming Model</span></span>
-<span data-ttu-id="f288a-103">Иногда разработчики должны полностью управлять тем, как данные возвращаются из операции службы.</span><span class="sxs-lookup"><span data-stu-id="f288a-103">Sometimes developers must have full control of how data is returned from a service operation.</span></span> <span data-ttu-id="f288a-104">Это происходит, когда операция службы должна возвращать данные в формате, не поддерживаемом платформой WCF.</span><span class="sxs-lookup"><span data-stu-id="f288a-104">This is the case when a service operation must return data in a format not supported by WCF.</span></span> <span data-ttu-id="f288a-105">В этом разделе рассматривается использование модели программирования HTTP WCF WEB для создания такой службы.</span><span class="sxs-lookup"><span data-stu-id="f288a-105">This topic discusses using the WCF WEB HTTP Programming Model to create such a service.</span></span> <span data-ttu-id="f288a-106">В этой службе имеется одна операция, которая возвращает поток.</span><span class="sxs-lookup"><span data-stu-id="f288a-106">This service has one operation that returns a stream.</span></span>  
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a><span data-ttu-id="b8614-102">Практическое руководство. Как создать службу, возвращающую произвольные данные, с использованием модели программирования WCF Web HTTP</span><span class="sxs-lookup"><span data-stu-id="b8614-102">How to: Create a Service That Returns Arbitrary Data Using The WCF Web HTTP Programming Model</span></span>
+<span data-ttu-id="b8614-103">Иногда разработчики должны полностью управлять тем, как данные возвращаются из операции службы.</span><span class="sxs-lookup"><span data-stu-id="b8614-103">Sometimes developers must have full control of how data is returned from a service operation.</span></span> <span data-ttu-id="b8614-104">Это происходит, когда операция службы должна возвращать данные в формате, не поддерживаемом платформой WCF.</span><span class="sxs-lookup"><span data-stu-id="b8614-104">This is the case when a service operation must return data in a format not supported by WCF.</span></span> <span data-ttu-id="b8614-105">В этом разделе рассматривается использование модели программирования HTTP WCF WEB для создания такой службы.</span><span class="sxs-lookup"><span data-stu-id="b8614-105">This topic discusses using the WCF WEB HTTP Programming Model to create such a service.</span></span> <span data-ttu-id="b8614-106">В этой службе имеется одна операция, которая возвращает поток.</span><span class="sxs-lookup"><span data-stu-id="b8614-106">This service has one operation that returns a stream.</span></span>  
   
-### <a name="to-implement-the-service-contract"></a><span data-ttu-id="f288a-107">Реализация контракта службы</span><span class="sxs-lookup"><span data-stu-id="f288a-107">To implement the service contract</span></span>  
+### <a name="to-implement-the-service-contract"></a><span data-ttu-id="b8614-107">Реализация контракта службы</span><span class="sxs-lookup"><span data-stu-id="b8614-107">To implement the service contract</span></span>  
   
-1. <span data-ttu-id="f288a-108">Определите контракт службы.</span><span class="sxs-lookup"><span data-stu-id="f288a-108">Define the service contract.</span></span> <span data-ttu-id="f288a-109">Контракт называется `IImageServer` и в нем имеется один метод под названием `GetImage`, который возвращает поток <xref:System.IO.Stream>.</span><span class="sxs-lookup"><span data-stu-id="f288a-109">The contract is called `IImageServer` and has one method called `GetImage` that returns a <xref:System.IO.Stream>.</span></span>  
+1. <span data-ttu-id="b8614-108">Определите контракт службы.</span><span class="sxs-lookup"><span data-stu-id="b8614-108">Define the service contract.</span></span> <span data-ttu-id="b8614-109">Контракт называется `IImageServer` и в нем имеется один метод под названием `GetImage`, который возвращает поток <xref:System.IO.Stream>.</span><span class="sxs-lookup"><span data-stu-id="b8614-109">The contract is called `IImageServer` and has one method called `GetImage` that returns a <xref:System.IO.Stream>.</span></span>  
   
     ```  
     [ServiceContract]  
@@ -25,9 +25,9 @@ ms.locfileid: "59303925"
         }  
     ```  
   
-     <span data-ttu-id="f288a-110">Поскольку этот метод возвращает <xref:System.IO.Stream>, WCF предполагает, что операция имеет полный контроль над байты, которые возвращаются из операции службы, и никак не форматирует возвращаемых данных.</span><span class="sxs-lookup"><span data-stu-id="f288a-110">Because the method returns a <xref:System.IO.Stream>, WCF assumes that the operation has complete control over the bytes that are returned from the service operation and it applies no formatting to the data that is returned.</span></span>  
+     <span data-ttu-id="b8614-110">Поскольку этот метод возвращает <xref:System.IO.Stream>, WCF предполагает, что операция имеет полный контроль над байты, которые возвращаются из операции службы, и никак не форматирует возвращаемых данных.</span><span class="sxs-lookup"><span data-stu-id="b8614-110">Because the method returns a <xref:System.IO.Stream>, WCF assumes that the operation has complete control over the bytes that are returned from the service operation and it applies no formatting to the data that is returned.</span></span>  
   
-2. <span data-ttu-id="f288a-111">Реализуйте контракт службы.</span><span class="sxs-lookup"><span data-stu-id="f288a-111">Implement the service contract.</span></span> <span data-ttu-id="f288a-112">В контракте есть только одна операция (`GetImage`).</span><span class="sxs-lookup"><span data-stu-id="f288a-112">The contract has only one operation (`GetImage`).</span></span> <span data-ttu-id="f288a-113">Этот метод создает растровое изображение и сохраняет его в потоке <xref:System.IO.MemoryStream> в формате JPG.</span><span class="sxs-lookup"><span data-stu-id="f288a-113">This method generates a bitmap and then save it to a <xref:System.IO.MemoryStream> in .jpg format.</span></span> <span data-ttu-id="f288a-114">Операция затем возвращает этот поток вызывающему объекту.</span><span class="sxs-lookup"><span data-stu-id="f288a-114">The operation then returns that stream to the caller.</span></span>  
+2. <span data-ttu-id="b8614-111">Реализуйте контракт службы.</span><span class="sxs-lookup"><span data-stu-id="b8614-111">Implement the service contract.</span></span> <span data-ttu-id="b8614-112">В контракте есть только одна операция (`GetImage`).</span><span class="sxs-lookup"><span data-stu-id="b8614-112">The contract has only one operation (`GetImage`).</span></span> <span data-ttu-id="b8614-113">Этот метод создает растровое изображение и сохраняет его в потоке <xref:System.IO.MemoryStream> в формате JPG.</span><span class="sxs-lookup"><span data-stu-id="b8614-113">This method generates a bitmap and then save it to a <xref:System.IO.MemoryStream> in .jpg format.</span></span> <span data-ttu-id="b8614-114">Операция затем возвращает этот поток вызывающему объекту.</span><span class="sxs-lookup"><span data-stu-id="b8614-114">The operation then returns that stream to the caller.</span></span>  
   
     ```  
     public class Service : IImageServer  
@@ -51,13 +51,13 @@ ms.locfileid: "59303925"
        }  
     ```  
   
-     <span data-ttu-id="f288a-115">Взгляните на последнюю строку кода: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`</span><span class="sxs-lookup"><span data-stu-id="f288a-115">Notice the second to last line of code: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`</span></span>  
+     <span data-ttu-id="b8614-115">Взгляните на последнюю строку кода: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`</span><span class="sxs-lookup"><span data-stu-id="b8614-115">Notice the second to last line of code: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`</span></span>  
   
-     <span data-ttu-id="f288a-116">Это задает заголовок content-type `"image/jpeg"`.</span><span class="sxs-lookup"><span data-stu-id="f288a-116">This sets the content type header to `"image/jpeg"`.</span></span> <span data-ttu-id="f288a-117">Хотя в этом образце показано, как вернуть JPG-файл, данный образец можно изменить для возврата любого типа необходимых данных в любом формате.</span><span class="sxs-lookup"><span data-stu-id="f288a-117">Although this sample shows how to return a .jpg file, it can be modified to return any type of data that is required, in any format.</span></span> <span data-ttu-id="f288a-118">Операция должна получить или создать данные и затем записать их в поток.</span><span class="sxs-lookup"><span data-stu-id="f288a-118">The operation must retrieve or generate the data and then write it to a stream.</span></span>  
+     <span data-ttu-id="b8614-116">Это задает заголовок content-type `"image/jpeg"`.</span><span class="sxs-lookup"><span data-stu-id="b8614-116">This sets the content type header to `"image/jpeg"`.</span></span> <span data-ttu-id="b8614-117">Хотя в этом образце показано, как вернуть JPG-файл, данный образец можно изменить для возврата любого типа необходимых данных в любом формате.</span><span class="sxs-lookup"><span data-stu-id="b8614-117">Although this sample shows how to return a .jpg file, it can be modified to return any type of data that is required, in any format.</span></span> <span data-ttu-id="b8614-118">Операция должна получить или создать данные и затем записать их в поток.</span><span class="sxs-lookup"><span data-stu-id="b8614-118">The operation must retrieve or generate the data and then write it to a stream.</span></span>  
   
-### <a name="to-host-the-service"></a><span data-ttu-id="f288a-119">Размещение службы</span><span class="sxs-lookup"><span data-stu-id="f288a-119">To host the service</span></span>  
+### <a name="to-host-the-service"></a><span data-ttu-id="b8614-119">Размещение службы</span><span class="sxs-lookup"><span data-stu-id="b8614-119">To host the service</span></span>  
   
-1. <span data-ttu-id="f288a-120">Создайте консольное приложение для размещения службы.</span><span class="sxs-lookup"><span data-stu-id="f288a-120">Create a console application to host the service.</span></span>  
+1. <span data-ttu-id="b8614-120">Создайте консольное приложение для размещения службы.</span><span class="sxs-lookup"><span data-stu-id="b8614-120">Create a console application to host the service.</span></span>  
   
     ```  
     class Program  
@@ -68,31 +68,31 @@ ms.locfileid: "59303925"
     }  
     ```  
   
-2. <span data-ttu-id="f288a-121">Создайте переменную для хранения базового адреса службы в методе `Main`.</span><span class="sxs-lookup"><span data-stu-id="f288a-121">Create a variable to hold the base address for the service within the `Main` method.</span></span>  
+2. <span data-ttu-id="b8614-121">Создайте переменную для хранения базового адреса службы в методе `Main`.</span><span class="sxs-lookup"><span data-stu-id="b8614-121">Create a variable to hold the base address for the service within the `Main` method.</span></span>  
   
     ```  
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3. <span data-ttu-id="f288a-122">Создайте экземпляр <xref:System.ServiceModel.ServiceHost> для службы, задав класс службы и базовый адрес.</span><span class="sxs-lookup"><span data-stu-id="f288a-122">Create a <xref:System.ServiceModel.ServiceHost> instance for the service specifying the service class and the base address.</span></span>  
+3. <span data-ttu-id="b8614-122">Создайте экземпляр <xref:System.ServiceModel.ServiceHost> для службы, задав класс службы и базовый адрес.</span><span class="sxs-lookup"><span data-stu-id="b8614-122">Create a <xref:System.ServiceModel.ServiceHost> instance for the service specifying the service class and the base address.</span></span>  
   
     ```  
     ServiceHost host = new ServiceHost(typeof(Service), new Uri(baseAddress));  
     ```  
   
-4. <span data-ttu-id="f288a-123">Добавьте конечную точку, используя <xref:System.ServiceModel.WebHttpBinding> и <xref:System.ServiceModel.Description.WebHttpBehavior>.</span><span class="sxs-lookup"><span data-stu-id="f288a-123">Add an endpoint using the <xref:System.ServiceModel.WebHttpBinding> and the <xref:System.ServiceModel.Description.WebHttpBehavior>.</span></span>  
+4. <span data-ttu-id="b8614-123">Добавьте конечную точку, используя <xref:System.ServiceModel.WebHttpBinding> и <xref:System.ServiceModel.Description.WebHttpBehavior>.</span><span class="sxs-lookup"><span data-stu-id="b8614-123">Add an endpoint using the <xref:System.ServiceModel.WebHttpBinding> and the <xref:System.ServiceModel.Description.WebHttpBehavior>.</span></span>  
   
     ```  
     host.AddServiceEndpoint(typeof(IImageServer), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
-5. <span data-ttu-id="f288a-124">Откройте узел службы.</span><span class="sxs-lookup"><span data-stu-id="f288a-124">Open the service host.</span></span>  
+5. <span data-ttu-id="b8614-124">Откройте узел службы.</span><span class="sxs-lookup"><span data-stu-id="b8614-124">Open the service host.</span></span>  
   
     ```  
     host.Open()  
     ```  
   
-6. <span data-ttu-id="f288a-125">Подождите, пока пользователь нажмет клавишу ВВОД, чтобы завершить работу службы.</span><span class="sxs-lookup"><span data-stu-id="f288a-125">Wait until the user presses ENTER to terminate the service.</span></span>  
+6. <span data-ttu-id="b8614-125">Подождите, пока пользователь нажмет клавишу ВВОД, чтобы завершить работу службы.</span><span class="sxs-lookup"><span data-stu-id="b8614-125">Wait until the user presses ENTER to terminate the service.</span></span>  
   
     ```  
     Console.WriteLine("Service is running");  
@@ -101,14 +101,14 @@ ms.locfileid: "59303925"
     host.Close();  
     ```  
   
-### <a name="to-call-the-raw-service-using-internet-explorer"></a><span data-ttu-id="f288a-126">Вызов необработанной службы с помощью Internet Explorer</span><span class="sxs-lookup"><span data-stu-id="f288a-126">To call the raw service using Internet Explorer</span></span>  
+### <a name="to-call-the-raw-service-using-internet-explorer"></a><span data-ttu-id="b8614-126">Вызов необработанной службы с помощью Internet Explorer</span><span class="sxs-lookup"><span data-stu-id="b8614-126">To call the raw service using Internet Explorer</span></span>  
   
-1. <span data-ttu-id="f288a-127">Запустите службу. От службы должно появиться следующее сообщение:</span><span class="sxs-lookup"><span data-stu-id="f288a-127">Run the service, you should see the following output from the service.</span></span> `Service is running Press ENTER to close the host`  
+1. <span data-ttu-id="b8614-127">Запустите службу. От службы должно появиться следующее сообщение:</span><span class="sxs-lookup"><span data-stu-id="b8614-127">Run the service, you should see the following output from the service.</span></span> `Service is running Press ENTER to close the host`  
   
-2. <span data-ttu-id="f288a-128">Откройте Internet Explorer и введите `http://localhost:8000/Service/GetImage?width=50&height=40`. Должен появиться желтый прямоугольник с синей диагональной линией, проходящей через центр.</span><span class="sxs-lookup"><span data-stu-id="f288a-128">Open Internet Explorer and type in `http://localhost:8000/Service/GetImage?width=50&height=40` you should see a yellow rectangle with a blue diagonal line through the center.</span></span>  
+2. <span data-ttu-id="b8614-128">Откройте Internet Explorer и введите `http://localhost:8000/Service/GetImage?width=50&height=40`. Должен появиться желтый прямоугольник с синей диагональной линией, проходящей через центр.</span><span class="sxs-lookup"><span data-stu-id="b8614-128">Open Internet Explorer and type in `http://localhost:8000/Service/GetImage?width=50&height=40` you should see a yellow rectangle with a blue diagonal line through the center.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f288a-129">Пример</span><span class="sxs-lookup"><span data-stu-id="f288a-129">Example</span></span>  
- <span data-ttu-id="f288a-130">Ниже приведен полный листинг кода для данного раздела.</span><span class="sxs-lookup"><span data-stu-id="f288a-130">The following is a complete listing of the code for this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="b8614-129">Пример</span><span class="sxs-lookup"><span data-stu-id="b8614-129">Example</span></span>  
+ <span data-ttu-id="b8614-130">Ниже приведен полный листинг кода для данного раздела.</span><span class="sxs-lookup"><span data-stu-id="b8614-130">The following is a complete listing of the code for this topic.</span></span>  
   
 ```  
 using System;  
@@ -171,10 +171,10 @@ namespace RawImageService
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f288a-131">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="f288a-131">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="b8614-131">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="b8614-131">Compiling the Code</span></span>  
   
--   <span data-ttu-id="f288a-132">При компиляции образец кода обращается к файлам System.ServiceModel.dll и System.ServiceModel.Web.dll.</span><span class="sxs-lookup"><span data-stu-id="f288a-132">When compiling the sample code reference System.ServiceModel.dll and System.ServiceModel.Web.dll.</span></span>  
+- <span data-ttu-id="b8614-132">При компиляции образец кода обращается к файлам System.ServiceModel.dll и System.ServiceModel.Web.dll.</span><span class="sxs-lookup"><span data-stu-id="b8614-132">When compiling the sample code reference System.ServiceModel.dll and System.ServiceModel.Web.dll.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f288a-133">См. также</span><span class="sxs-lookup"><span data-stu-id="f288a-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b8614-133">См. также</span><span class="sxs-lookup"><span data-stu-id="b8614-133">See also</span></span>
 
-- [<span data-ttu-id="f288a-134">Модель веб-программирования HTTP WCF</span><span class="sxs-lookup"><span data-stu-id="f288a-134">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [<span data-ttu-id="b8614-134">Модель веб-программирования HTTP WCF</span><span class="sxs-lookup"><span data-stu-id="b8614-134">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
