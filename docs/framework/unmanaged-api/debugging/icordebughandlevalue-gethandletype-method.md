@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ecc0b46618cd00ba4442e30c23a7b7e950382fee
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775698"
 ---
-# <a name="icordebughandlevaluegethandletype-method"></a><span data-ttu-id="867d9-102">Метод ICorDebugHandleValue::GetHandleType</span><span class="sxs-lookup"><span data-stu-id="867d9-102">ICorDebugHandleValue::GetHandleType Method</span></span>
-<span data-ttu-id="867d9-103">Получает значение, указывающее тип токена, на которые ссылается этот объект ICorDebugHandleValue.</span><span class="sxs-lookup"><span data-stu-id="867d9-103">Gets a value that indicates the kind of handle referenced by this ICorDebugHandleValue object.</span></span>  
+# <a name="icordebughandlevaluegethandletype-method"></a><span data-ttu-id="66879-102">Метод ICorDebugHandleValue::GetHandleType</span><span class="sxs-lookup"><span data-stu-id="66879-102">ICorDebugHandleValue::GetHandleType Method</span></span>
+<span data-ttu-id="66879-103">Получает значение, указывающее тип токена, на которые ссылается этот объект ICorDebugHandleValue.</span><span class="sxs-lookup"><span data-stu-id="66879-103">Gets a value that indicates the kind of handle referenced by this ICorDebugHandleValue object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="867d9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="867d9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="66879-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="66879-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHandleType (  
@@ -35,15 +35,15 @@ HRESULT GetHandleType (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="867d9-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="867d9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="66879-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="66879-105">Parameters</span></span>  
  `pType`  
- <span data-ttu-id="867d9-106">[out] Указатель на значение CorDebugHandleType перечисления, указывающее тип этого дескриптора.</span><span class="sxs-lookup"><span data-stu-id="867d9-106">[out] A pointer to a value of the CorDebugHandleType enumeration that indicates the type of this handle.</span></span>  
+ <span data-ttu-id="66879-106">[out] Указатель на значение CorDebugHandleType перечисления, указывающее тип этого дескриптора.</span><span class="sxs-lookup"><span data-stu-id="66879-106">[out] A pointer to a value of the CorDebugHandleType enumeration that indicates the type of this handle.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="867d9-107">Требования</span><span class="sxs-lookup"><span data-stu-id="867d9-107">Requirements</span></span>  
- <span data-ttu-id="867d9-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="867d9-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="66879-107">Требования</span><span class="sxs-lookup"><span data-stu-id="66879-107">Requirements</span></span>  
+ <span data-ttu-id="66879-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="66879-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="867d9-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="867d9-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="66879-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="66879-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="867d9-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="867d9-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="66879-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="66879-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="867d9-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="867d9-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="66879-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="66879-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

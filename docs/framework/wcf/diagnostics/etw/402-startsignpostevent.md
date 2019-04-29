@@ -3,31 +3,31 @@ title: 402 - StartSignpostEvent
 ms.date: 03/30/2017
 ms.assetid: 5e5be126-765d-4ac9-88e7-008e9ef4f0e5
 ms.openlocfilehash: 6dfb3b187f58de2c9573c2d2f6d579e3557c3de8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33466604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774963"
 ---
-# <a name="402---startsignpostevent"></a><span data-ttu-id="b8202-102">402 - StartSignpostEvent</span><span class="sxs-lookup"><span data-stu-id="b8202-102">402 - StartSignpostEvent</span></span>
-## <a name="properties"></a><span data-ttu-id="b8202-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="b8202-103">Properties</span></span>  
+# <a name="402---startsignpostevent"></a><span data-ttu-id="9d9ae-102">402 - StartSignpostEvent</span><span class="sxs-lookup"><span data-stu-id="9d9ae-102">402 - StartSignpostEvent</span></span>
+## <a name="properties"></a><span data-ttu-id="9d9ae-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="9d9ae-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="b8202-104">ID</span><span class="sxs-lookup"><span data-stu-id="b8202-104">ID</span></span>|<span data-ttu-id="b8202-105">402</span><span class="sxs-lookup"><span data-stu-id="b8202-105">402</span></span>|  
-|<span data-ttu-id="b8202-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="b8202-106">Keywords</span></span>|<span data-ttu-id="b8202-107">Устранение неполадок</span><span class="sxs-lookup"><span data-stu-id="b8202-107">Troubleshooting</span></span>|  
-|<span data-ttu-id="b8202-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="b8202-108">Level</span></span>|<span data-ttu-id="b8202-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="b8202-109">Information</span></span>|  
-|<span data-ttu-id="b8202-110">Канал</span><span class="sxs-lookup"><span data-stu-id="b8202-110">Channel</span></span>|<span data-ttu-id="b8202-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="b8202-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="9d9ae-104">ID</span><span class="sxs-lookup"><span data-stu-id="9d9ae-104">ID</span></span>|<span data-ttu-id="9d9ae-105">402</span><span class="sxs-lookup"><span data-stu-id="9d9ae-105">402</span></span>|  
+|<span data-ttu-id="9d9ae-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="9d9ae-106">Keywords</span></span>|<span data-ttu-id="9d9ae-107">Устранение неполадок</span><span class="sxs-lookup"><span data-stu-id="9d9ae-107">Troubleshooting</span></span>|  
+|<span data-ttu-id="9d9ae-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="9d9ae-108">Level</span></span>|<span data-ttu-id="9d9ae-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="9d9ae-109">Information</span></span>|  
+|<span data-ttu-id="9d9ae-110">Канал</span><span class="sxs-lookup"><span data-stu-id="9d9ae-110">Channel</span></span>|<span data-ttu-id="9d9ae-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="9d9ae-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="b8202-112">Описание</span><span class="sxs-lookup"><span data-stu-id="b8202-112">Description</span></span>  
- <span data-ttu-id="b8202-113">Это событие отмечает начало сквозного действия.</span><span class="sxs-lookup"><span data-stu-id="b8202-113">This event marks the beginning of an end-to-end activity.</span></span> <span data-ttu-id="b8202-114">В ней содержится имя действия.</span><span class="sxs-lookup"><span data-stu-id="b8202-114">It contains the name of the activity.</span></span>  
+## <a name="description"></a><span data-ttu-id="9d9ae-112">Описание</span><span class="sxs-lookup"><span data-stu-id="9d9ae-112">Description</span></span>  
+ <span data-ttu-id="9d9ae-113">Это событие отмечает начало сквозного действия.</span><span class="sxs-lookup"><span data-stu-id="9d9ae-113">This event marks the beginning of an end-to-end activity.</span></span> <span data-ttu-id="9d9ae-114">В ней содержится имя действия.</span><span class="sxs-lookup"><span data-stu-id="9d9ae-114">It contains the name of the activity.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="b8202-115">Сообщение</span><span class="sxs-lookup"><span data-stu-id="b8202-115">Message</span></span>  
- <span data-ttu-id="b8202-116">Граница действия.</span><span class="sxs-lookup"><span data-stu-id="b8202-116">Activity boundary.</span></span>  
+## <a name="message"></a><span data-ttu-id="9d9ae-115">Сообщение</span><span class="sxs-lookup"><span data-stu-id="9d9ae-115">Message</span></span>  
+ <span data-ttu-id="9d9ae-116">Граница действия.</span><span class="sxs-lookup"><span data-stu-id="9d9ae-116">Activity boundary.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="b8202-117">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="b8202-117">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="9d9ae-117">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="9d9ae-117">Details</span></span>  
   
-|<span data-ttu-id="b8202-118">Имя элемента данных</span><span class="sxs-lookup"><span data-stu-id="b8202-118">Data Item Name</span></span>|<span data-ttu-id="b8202-119">Тип элемента данных</span><span class="sxs-lookup"><span data-stu-id="b8202-119">Data Item Type</span></span>|<span data-ttu-id="b8202-120">Описание</span><span class="sxs-lookup"><span data-stu-id="b8202-120">Description</span></span>|  
+|<span data-ttu-id="9d9ae-118">Имя элемента данных</span><span class="sxs-lookup"><span data-stu-id="9d9ae-118">Data Item Name</span></span>|<span data-ttu-id="9d9ae-119">Тип элемента данных</span><span class="sxs-lookup"><span data-stu-id="9d9ae-119">Data Item Type</span></span>|<span data-ttu-id="9d9ae-120">Описание</span><span class="sxs-lookup"><span data-stu-id="9d9ae-120">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="b8202-121">Расширенные данные</span><span class="sxs-lookup"><span data-stu-id="b8202-121">Extended Data</span></span>|`xs:string`|<span data-ttu-id="b8202-122">Имя действия.</span><span class="sxs-lookup"><span data-stu-id="b8202-122">The name of the activity.</span></span>|  
-|<span data-ttu-id="b8202-123">AppDomain</span><span class="sxs-lookup"><span data-stu-id="b8202-123">AppDomain</span></span>|`xs:string`|<span data-ttu-id="b8202-124">Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="b8202-124">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="9d9ae-121">Расширенные данные</span><span class="sxs-lookup"><span data-stu-id="9d9ae-121">Extended Data</span></span>|`xs:string`|<span data-ttu-id="9d9ae-122">Имя действия.</span><span class="sxs-lookup"><span data-stu-id="9d9ae-122">The name of the activity.</span></span>|  
+|<span data-ttu-id="9d9ae-123">Домен приложения</span><span class="sxs-lookup"><span data-stu-id="9d9ae-123">AppDomain</span></span>|`xs:string`|<span data-ttu-id="9d9ae-124">Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="9d9ae-124">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

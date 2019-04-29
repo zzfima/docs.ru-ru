@@ -8,22 +8,22 @@ helpviewer_keywords:
 - flow content reference [WPF]
 ms.assetid: d32501af-0bac-4b80-8a20-61a6996753fe
 ms.openlocfilehash: 47bdc48eb6f2fcb0ffd73f06a58bd01d716e56fc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789302"
 ---
-# <a name="flow-content"></a><span data-ttu-id="d00b4-102">Содержимое нефиксированного формата</span><span class="sxs-lookup"><span data-stu-id="d00b4-102">Flow Content</span></span>
-<span data-ttu-id="d00b4-103">Элементов содержимого нефиксированного формата предоставляют строительные блоки для создания содержимого нефиксированного формата, подходящие для размещения в <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="d00b4-103">Flow content elements provide the building blocks for creating flow content suitable for hosting in a <xref:System.Windows.Documents.FlowDocument>.</span></span>  
+# <a name="flow-content"></a><span data-ttu-id="27f7a-102">Содержимое нефиксированного формата</span><span class="sxs-lookup"><span data-stu-id="27f7a-102">Flow Content</span></span>
+<span data-ttu-id="27f7a-103">Элементов содержимого нефиксированного формата предоставляют строительные блоки для создания содержимого нефиксированного формата, подходящие для размещения в <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="27f7a-103">Flow content elements provide the building blocks for creating flow content suitable for hosting in a <xref:System.Windows.Documents.FlowDocument>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d00b4-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="d00b4-104">In This Section</span></span>  
- [<span data-ttu-id="d00b4-105">Общие сведения о документах нефиксированного формата</span><span class="sxs-lookup"><span data-stu-id="d00b4-105">Flow Document Overview</span></span>](flow-document-overview.md)  
- [<span data-ttu-id="d00b4-106">Общие сведения о модели содержимого TextElement</span><span class="sxs-lookup"><span data-stu-id="d00b4-106">TextElement Content Model Overview</span></span>](textelement-content-model-overview.md)  
- [<span data-ttu-id="d00b4-107">Общие сведения о таблицах</span><span class="sxs-lookup"><span data-stu-id="d00b4-107">Table Overview</span></span>](table-overview.md)  
- [<span data-ttu-id="d00b4-108">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="d00b4-108">How-to Topics</span></span>](flow-content-elements-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="27f7a-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="27f7a-104">In This Section</span></span>  
+ [<span data-ttu-id="27f7a-105">Общие сведения о документах нефиксированного формата</span><span class="sxs-lookup"><span data-stu-id="27f7a-105">Flow Document Overview</span></span>](flow-document-overview.md)  
+ [<span data-ttu-id="27f7a-106">Общие сведения о модели содержимого TextElement</span><span class="sxs-lookup"><span data-stu-id="27f7a-106">TextElement Content Model Overview</span></span>](textelement-content-model-overview.md)  
+ [<span data-ttu-id="27f7a-107">Общие сведения о таблицах</span><span class="sxs-lookup"><span data-stu-id="27f7a-107">Table Overview</span></span>](table-overview.md)  
+ [<span data-ttu-id="27f7a-108">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="27f7a-108">How-to Topics</span></span>](flow-content-elements-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="d00b4-109">Ссылка</span><span class="sxs-lookup"><span data-stu-id="d00b4-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="27f7a-109">Ссылка</span><span class="sxs-lookup"><span data-stu-id="27f7a-109">Reference</span></span>  
  <xref:System.Windows.Documents.FlowDocument>  
   <xref:System.Windows.Documents.Block>  
   <xref:System.Windows.Documents.List>  
@@ -38,5 +38,5 @@ ms.locfileid: "57373547"
   <xref:System.Windows.Documents.Span>  
   <xref:System.Windows.Documents.ListItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="d00b4-110">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="d00b4-110">Related Sections</span></span>  
- [<span data-ttu-id="d00b4-111">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="d00b4-111">Documents in WPF</span></span>](documents-in-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="27f7a-110">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="27f7a-110">Related Sections</span></span>  
+ [<span data-ttu-id="27f7a-111">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="27f7a-111">Documents in WPF</span></span>](documents-in-wpf.md)

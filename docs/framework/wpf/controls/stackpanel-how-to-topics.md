@@ -8,21 +8,21 @@ helpviewer_keywords:
 - controls [WPF], StackPanel
 ms.assetid: c9849df3-d000-4cdf-8345-5edcd053919d
 ms.openlocfilehash: b7456eeb4fc248998730a21f757699497c83f4e9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791070"
 ---
-# <a name="stackpanel-how-to-topics"></a><span data-ttu-id="35655-102">Разделы руководства по StackPanel</span><span class="sxs-lookup"><span data-stu-id="35655-102">StackPanel How-to Topics</span></span>
-<span data-ttu-id="35655-103">В этом разделе описываются способы использования <xref:System.Windows.Controls.StackPanel> элемент для расположения содержимого, горизонтально или вертикально.</span><span class="sxs-lookup"><span data-stu-id="35655-103">The topics in this section describe how to use the <xref:System.Windows.Controls.StackPanel> element to stack content horizontally or vertically.</span></span>  
+# <a name="stackpanel-how-to-topics"></a><span data-ttu-id="9df50-102">Разделы руководства по StackPanel</span><span class="sxs-lookup"><span data-stu-id="9df50-102">StackPanel How-to Topics</span></span>
+<span data-ttu-id="9df50-103">В этом разделе описываются способы использования <xref:System.Windows.Controls.StackPanel> элемент для расположения содержимого, горизонтально или вертикально.</span><span class="sxs-lookup"><span data-stu-id="9df50-103">The topics in this section describe how to use the <xref:System.Windows.Controls.StackPanel> element to stack content horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="35655-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="35655-104">In This Section</span></span>  
- [<span data-ttu-id="35655-105">Выбор между StackPanel и DockPanel</span><span class="sxs-lookup"><span data-stu-id="35655-105">Choose Between StackPanel and DockPanel</span></span>](how-to-choose-between-stackpanel-and-dockpanel.md)  
- [<span data-ttu-id="35655-106">Создание StackPanel</span><span class="sxs-lookup"><span data-stu-id="35655-106">Create a StackPanel</span></span>](how-to-create-a-stackpanel.md)  
- [<span data-ttu-id="35655-107">Выравнивание содержимого StackPanel по горизонтали или по вертикали</span><span class="sxs-lookup"><span data-stu-id="35655-107">Horizontally or Vertically Align Content in a StackPanel</span></span>](how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9df50-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="9df50-104">In This Section</span></span>  
+ [<span data-ttu-id="9df50-105">Выбор между StackPanel и DockPanel</span><span class="sxs-lookup"><span data-stu-id="9df50-105">Choose Between StackPanel and DockPanel</span></span>](how-to-choose-between-stackpanel-and-dockpanel.md)  
+ [<span data-ttu-id="9df50-106">Создание StackPanel</span><span class="sxs-lookup"><span data-stu-id="9df50-106">Create a StackPanel</span></span>](how-to-create-a-stackpanel.md)  
+ [<span data-ttu-id="9df50-107">Выравнивание содержимого StackPanel по горизонтали или по вертикали</span><span class="sxs-lookup"><span data-stu-id="9df50-107">Horizontally or Vertically Align Content in a StackPanel</span></span>](how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
   
-## <a name="reference"></a><span data-ttu-id="35655-108">Ссылка</span><span class="sxs-lookup"><span data-stu-id="35655-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9df50-108">Ссылка</span><span class="sxs-lookup"><span data-stu-id="9df50-108">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -37,9 +37,9 @@ ms.locfileid: "57351272"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="35655-109">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="35655-109">Related Sections</span></span>  
- [<span data-ttu-id="35655-110">Макет</span><span class="sxs-lookup"><span data-stu-id="35655-110">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="9df50-109">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="9df50-109">Related Sections</span></span>  
+ [<span data-ttu-id="9df50-110">Макет</span><span class="sxs-lookup"><span data-stu-id="9df50-110">Layout</span></span>](../advanced/layout.md)  
   
- <span data-ttu-id="35655-111">[Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)</span><span class="sxs-lookup"><span data-stu-id="35655-111">[Walkthrough: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md)</span></span>  
+ <span data-ttu-id="9df50-111">[Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)</span><span class="sxs-lookup"><span data-stu-id="9df50-111">[Walkthrough: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md)</span></span>  
   
- [<span data-ttu-id="35655-112">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="35655-112">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="9df50-112">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="9df50-112">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

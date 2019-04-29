@@ -8,25 +8,25 @@ helpviewer_keywords:
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
 ms.openlocfilehash: 69f93b902fc3c35749871a187e57d45a404c6602
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59055057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766993"
 ---
-# <a name="listbox"></a><span data-ttu-id="a6c7f-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="a6c7f-102">ListBox</span></span>
-<span data-ttu-id="a6c7f-103">Объект <xref:System.Windows.Controls.ListBox> управления предоставляет пользователям список выбираемых элементов.</span><span class="sxs-lookup"><span data-stu-id="a6c7f-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
+# <a name="listbox"></a><span data-ttu-id="a7c81-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="a7c81-102">ListBox</span></span>
+<span data-ttu-id="a7c81-103">Объект <xref:System.Windows.Controls.ListBox> управления предоставляет пользователям список выбираемых элементов.</span><span class="sxs-lookup"><span data-stu-id="a7c81-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
   
- <span data-ttu-id="a6c7f-104">На следующем рисунке показано типичное <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="a6c7f-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
+ <span data-ttu-id="a7c81-104">На следующем рисунке показано типичное <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="a7c81-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
   
- <span data-ttu-id="a6c7f-105">![Снимок экрана ListBox](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="a6c7f-105">![ListBox screenshot](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
-<span data-ttu-id="a6c7f-106">Стандартный элемент управления ListBox</span><span class="sxs-lookup"><span data-stu-id="a6c7f-106">Typical ListBox</span></span>  
+ <span data-ttu-id="a7c81-105">![Снимок экрана ListBox](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="a7c81-105">![ListBox screenshot](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
+<span data-ttu-id="a7c81-106">Стандартный элемент управления ListBox</span><span class="sxs-lookup"><span data-stu-id="a7c81-106">Typical ListBox</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a6c7f-107">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="a6c7f-107">In This Section</span></span>  
- [<span data-ttu-id="a6c7f-108">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="a6c7f-108">How-to Topics</span></span>](listbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a7c81-107">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="a7c81-107">In This Section</span></span>  
+ [<span data-ttu-id="a7c81-108">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="a7c81-108">How-to Topics</span></span>](listbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="a6c7f-109">Ссылка</span><span class="sxs-lookup"><span data-stu-id="a6c7f-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a7c81-109">Ссылка</span><span class="sxs-lookup"><span data-stu-id="a7c81-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListBox>  
   <xref:System.Windows.Controls.ListBoxItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="a6c7f-110">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="a6c7f-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="a7c81-110">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="a7c81-110">Related Sections</span></span>

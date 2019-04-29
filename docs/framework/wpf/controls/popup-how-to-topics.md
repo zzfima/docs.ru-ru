@@ -8,21 +8,21 @@ helpviewer_keywords:
 - controls [WPF], Popup
 ms.assetid: 9488a245-0168-4650-b9ab-d075a108cc8f
 ms.openlocfilehash: 80f0d8bb3f78e80868d5294b5893ef409fdf478c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770582"
 ---
-# <a name="popup-how-to-topics"></a><span data-ttu-id="43b0a-102">Разделы практического руководства, посвященные всплывающему меню</span><span class="sxs-lookup"><span data-stu-id="43b0a-102">Popup How-to Topics</span></span>
-<span data-ttu-id="43b0a-103">В этом разделе описываются способы использования <xref:System.Windows.Controls.Primitives.Popup> управления для отображения содержимого в отдельном окне, расположенном поверх текущего окна приложения.</span><span class="sxs-lookup"><span data-stu-id="43b0a-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Primitives.Popup> control to display content in a separate window that floats over the current application window.</span></span>  
+# <a name="popup-how-to-topics"></a><span data-ttu-id="3346a-102">Разделы практического руководства, посвященные всплывающему меню</span><span class="sxs-lookup"><span data-stu-id="3346a-102">Popup How-to Topics</span></span>
+<span data-ttu-id="3346a-103">В этом разделе описываются способы использования <xref:System.Windows.Controls.Primitives.Popup> управления для отображения содержимого в отдельном окне, расположенном поверх текущего окна приложения.</span><span class="sxs-lookup"><span data-stu-id="3346a-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Primitives.Popup> control to display content in a separate window that floats over the current application window.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="43b0a-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="43b0a-104">In This Section</span></span>  
- [<span data-ttu-id="43b0a-105">Анимация контекстного меню</span><span class="sxs-lookup"><span data-stu-id="43b0a-105">Animate a Popup</span></span>](how-to-animate-a-popup.md)  
- [<span data-ttu-id="43b0a-106">Определение пользовательского расположения контекстного меню</span><span class="sxs-lookup"><span data-stu-id="43b0a-106">Specify a Custom Popup Position</span></span>](how-to-specify-a-custom-popup-position.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3346a-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="3346a-104">In This Section</span></span>  
+ [<span data-ttu-id="3346a-105">Анимация контекстного меню</span><span class="sxs-lookup"><span data-stu-id="3346a-105">Animate a Popup</span></span>](how-to-animate-a-popup.md)  
+ [<span data-ttu-id="3346a-106">Определение пользовательского расположения контекстного меню</span><span class="sxs-lookup"><span data-stu-id="3346a-106">Specify a Custom Popup Position</span></span>](how-to-specify-a-custom-popup-position.md)  
   
-## <a name="reference"></a><span data-ttu-id="43b0a-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="43b0a-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="3346a-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="3346a-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="43b0a-108">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="43b0a-108">Related Sections</span></span>  
- [<span data-ttu-id="43b0a-109">Общие сведения о контекстном меню</span><span class="sxs-lookup"><span data-stu-id="43b0a-109">Popup Overview</span></span>](popup-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="3346a-108">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="3346a-108">Related Sections</span></span>  
+ [<span data-ttu-id="3346a-109">Общие сведения о контекстном меню</span><span class="sxs-lookup"><span data-stu-id="3346a-109">Popup Overview</span></span>](popup-overview.md)
