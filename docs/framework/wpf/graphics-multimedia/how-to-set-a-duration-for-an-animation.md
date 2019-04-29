@@ -7,11 +7,11 @@ helpviewer_keywords:
 - duration of animations [WPF]
 ms.assetid: 155034ef-7d00-4416-a73c-b1713992d2eb
 ms.openlocfilehash: bdae1689ffeb8c54d756b9debbd26d57a052892d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651159"
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>Практическое руководство. Определение длительности анимации
 Объект <xref:System.Windows.Media.Animation.Timeline> представляет сегмент времени и длина этого сегмента определяется временной шкалы <xref:System.Windows.Duration>. Когда <xref:System.Windows.Media.Animation.Timeline> достигает окончания своей длительности, воспроизведение прекращается. Если <xref:System.Windows.Media.Animation.Timeline> имеет дочерние временные шкалы, их воспроизведение также останавливается. В случае анимации <xref:System.Windows.Duration> указывает, сколько требуется для анимации перехода от начального к конечному значению.  

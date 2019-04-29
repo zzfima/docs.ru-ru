@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a9ba09b80d7118b0ccd9b1647011a7fc7cd74e22
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645595"
 ---
 # <a name="icordebugassemblygetappdomain-method"></a>Метод ICorDebugAssembly::GetAppDomain
 Получает указатель интерфейса на домен приложения, который содержит это `ICorDebugAssembly` экземпляра.  

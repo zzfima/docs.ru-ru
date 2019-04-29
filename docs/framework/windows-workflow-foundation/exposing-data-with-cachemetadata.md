@@ -3,11 +3,11 @@ title: Предоставление данных с помощью CacheMetadata
 ms.date: 03/30/2017
 ms.assetid: 34832f23-e93b-40e6-a80b-606a855a00d9
 ms.openlocfilehash: a044c896e56541ee954fc33853376eb8293c6ede
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945708"
 ---
 # <a name="exposing-data-with-cachemetadata"></a>Предоставление данных с помощью CacheMetadata
 
@@ -31,8 +31,7 @@ ms.locfileid: "57482682"
 
 - <xref:System.Collections.ICollection> типа <xref:System.Activities.ActivityDelegate>: Все элементы в коллекции передаются в среду выполнения в виде открытых делегатов.
 
-
-  <xref:System.Activities.Activity.CacheMetadata%2A> для действий, производных от <xref:System.Activities.Activity>, <xref:System.Workflow.Activities.CodeActivity> и <xref:System.Activities.AsyncCodeActivity>, работают, как описано выше, за исключением следующих отличий.
+<xref:System.Activities.Activity.CacheMetadata%2A> для действий, производных от <xref:System.Activities.Activity>, <xref:System.Workflow.Activities.CodeActivity> и <xref:System.Activities.AsyncCodeActivity>, работают, как описано выше, за исключением следующих отличий.
 
 - Классы, производные от <xref:System.Activities.Activity>, не могут планировать дочерние действия или делегаты, поэтому такие элементы предоставляются в виде импортируемых дочерних действий и делегатов.
 

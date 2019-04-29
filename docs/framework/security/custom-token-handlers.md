@@ -7,8 +7,8 @@ ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792773"
 ---
 # <a name="custom-token-handlers"></a>Пользовательские обработчики маркеров
 В этом разделе описываются обработчики маркеров на платформе WIF и рассказывается о том, как использовать их для обработки маркеров. Кроме того, здесь рассматривается, что необходимо для создания пользовательских обработчиков для типов маркеров, которые по умолчанию не поддерживаются на платформе WIF.  
@@ -19,23 +19,23 @@ ms.locfileid: "59975680"
 ## <a name="built-in-security-token-handlers-in-wif"></a>Встроенные обработчики маркеров безопасности на платформе WIF  
  На платформе WIF 4.5 представлено девять классов для обработчиков маркеров безопасности, которые являются производными от абстрактного базового класса <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:  
   
--   <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.UserNameSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.UserNameSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
   
 ## <a name="adding-a-custom-token-handler"></a>Добавление пользовательского обработчика маркеров  
  Для маркеров некоторых типов, таких как простые веб-маркеры (SWT) и веб-маркеры JSON (JWT), на платформе WIF не предусмотрены встроенные обработчики. Для таких маркеров и других маркеров, для которых отсутствует встроенный обработчик, необходимо создать пользовательский обработчик, выполнив следующие действия.  
@@ -46,17 +46,17 @@ ms.locfileid: "59975680"
   
 2. Переопределите следующие методы и предоставьте их собственную реализацию:  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.WriteToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.WriteToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanValidateToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanValidateToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
 3. Добавьте ссылку на новый пользовательский обработчик маркеров в файл *Web.config* или *App.config* в разделе **\<system.identityModel>**, который определяет параметры платформы WIF. Например, следующая разметка конфигурации задает новый обработчик маркеров **MyCustomTokenHandler**, который размещается в пространстве имен **CustomToken**.  
   

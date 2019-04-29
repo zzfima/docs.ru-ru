@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XML namespace prefixes [Visual Basic]
 ms.assetid: 4292e1d9-eb8f-49d6-a3aa-f05a5fbe24d1
 ms.openlocfilehash: 244329058624bebb03440961c1dda4a50b4efb8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791785"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>Практическое руководство. Объявление и использование префиксов пространств имен XML (Visual Basic)
 В этом примере показано, как импортировать префикс пространства имен XML `ns` и использовать его в XML-литерала и свойства оси XML.  
@@ -21,7 +21,7 @@ ms.locfileid: "58818667"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылка на пространство имен <xref:System.Xml.Linq>.  
+- ссылка на пространство имен <xref:System.Xml.Linq>.  
   
 ## <a name="see-also"></a>См. также
 

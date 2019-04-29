@@ -14,20 +14,20 @@ helpviewer_keywords:
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
 ms.openlocfilehash: 47e93ee17f160ce5cd701fd0a12ec16b3997ce9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791863"
 ---
 # <a name="property-procedures-visual-basic"></a>Процедуры свойств (Visual Basic)
 Процедура свойства — это последовательность операторов Visual Basic, которые управляют пользовательским свойством модуля, класса или структуры. Процедуры свойств также называются *доступа к свойствам*.  
   
  Visual Basic предоставляет следующие процедуры свойств:  
   
--   Объект `Get` , возвращает значение свойства. Он вызывается при обращении к свойству в выражении.  
+- Объект `Get` , возвращает значение свойства. Он вызывается при обращении к свойству в выражении.  
   
--   Объект `Set` процедура задает свойство в значение, включая ссылку на объект. Он вызывается при попытке присвоить значение свойству.  
+- Объект `Set` процедура задает свойство в значение, включая ссылку на объект. Он вызывается при попытке присвоить значение свойству.  
   
  Обычно процедуры свойств определяются парами с помощью `Get` и `Set` инструкций, но можно определить одиночную процедуру, если свойство доступно только для чтения ([оператор Get](../../../../visual-basic/language-reference/statements/get-statement.md)) или только для записи ([значение Инструкция](../../../../visual-basic/language-reference/statements/set-statement.md)).  
   

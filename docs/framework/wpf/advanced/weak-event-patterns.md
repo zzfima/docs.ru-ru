@@ -7,11 +7,11 @@ helpviewer_keywords:
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
 ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669373"
 ---
 # <a name="weak-event-patterns"></a>Шаблоны слабых событий
 В приложениях возможно, что обработчики, присоединенные к источникам событий, не будут уничтожены в соответствии с объектом прослушиватель, который присоединил обработчик к источнику. Это может привести к утечке памяти. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] представляет шаблон, который может использоваться для решения этой проблемы путем предоставления выделенного класса диспетчера для конкретных событий и реализации интерфейса прослушивателей для данного события. Этот шаблон разработки называется *шаблоне слабых событий*.  
@@ -40,13 +40,13 @@ ms.locfileid: "59316171"
 
  В следующих разделах рассматривается реализация шаблона слабых событий.  Для целей данного обсуждения Чтобы подписаться на событие имеет следующие характеристики.  
   
--   Имя события находится `SomeEvent`.  
+- Имя события находится `SomeEvent`.  
   
--   Событие `EventSource` класс.  
+- Событие `EventSource` класс.  
   
--   Обработчик событий имеет тип: `SomeEventEventHandler` (или `EventHandler<SomeEventEventArgs>`).  
+- Обработчик событий имеет тип: `SomeEventEventHandler` (или `EventHandler<SomeEventEventArgs>`).  
   
--   Событие передает параметр типа `SomeEventEventArgs` обработчикам событий.  
+- Событие передает параметр типа `SomeEventEventArgs` обработчикам событий.  
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>С помощью существующего класса слабого диспетчера событий  
   

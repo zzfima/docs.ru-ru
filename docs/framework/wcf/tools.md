@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
 ms.openlocfilehash: 27a18d436d4ee63cb6e65ed5981b65d55aadf036
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791486"
 ---
 # <a name="windows-communication-foundation-tools"></a>Средства Windows Communication Foundation
-Средства Microsoft Windows Communication Foundation (WCF) призваны облегчить создание, развертывание и управление приложениями WCF. Данный раздел содержит подробные сведения об этих средствах. Обратите внимание, что некоторые средства могут не поддерживаться.  
+Средства Microsoft Windows Communication Foundation (WCF) предназначены для упрощения создания, развертывания и управления приложениями WCF. Данный раздел содержит подробные сведения об этих средствах. Обратите внимание, что некоторые средства могут не поддерживаться.  
   
  Все инструменты можно запускать из командной строки.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "33806137"
 |[Служебная программа конфигурации WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)|Настраивает основные параметры поддержки WS-AtomicTransaction с помощью программы командной строки.|  
 |[Оснастка консоли MMC для конфигурации WS-AtomicTransaction](../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)|Настраивает основные параметры поддержки WS-AtomicTransaction с помощью оснастки консоли MMC.|  
 |[Средство регистрации служб рабочих процессов (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)|Регистрирует службу Windows Workflow.|  
-|[Узел службы WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|Службы WCF узлов содержатся в библиотеках файлы (*.dll)|  
+|[Узел службы WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|Узлы служб WCF содержатся в библиотеках файлы (*.dll)|  
 |[Тестовый клиент WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)|Средство графического пользовательского интерфейса позволяет ввести параметры произвольного типа, отправить их в службу и просмотреть ответ, возвращенный службой.|  
 |[Средство для первоочередного назначения контрактов](../../../docs/framework/wcf/contract-first-tool.md)|Задача сборки Visual Studio, создающая классы кода из контрактов данных XSD.|  
   

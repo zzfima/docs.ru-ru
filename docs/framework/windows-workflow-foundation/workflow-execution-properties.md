@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
 ms.openlocfilehash: 0f87e58a034cbc11565fc74347e6b4362952093c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669385"
 ---
 # <a name="workflow-execution-properties"></a>Свойства выполнения рабочего процесса
 Через локальную память потока (TLS) CLR поддерживает контекст выполнения для каждого потока. Этот контекст выполнения управляет хорошо известными свойствами потоков, например идентификатором потока, внешней транзакцией и текущим набором разрешений, а также пользовательскими свойствами потока, например именованными областями.  

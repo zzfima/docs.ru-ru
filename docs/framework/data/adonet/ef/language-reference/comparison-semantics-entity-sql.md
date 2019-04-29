@@ -3,11 +3,11 @@ title: Семантика сравнения (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
 ms.openlocfilehash: 6b4c4177ebd6c45e00a1ac7774e40a43e0c14a74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605975"
 ---
 # <a name="comparison-semantics-entity-sql"></a>Семантика сравнения (Entity SQL)
 Выполнение любого следующего оператора [!INCLUDE[esql](../../../../../../includes/esql-md.md)] подразумевает сравнение типов экземпляров.  
@@ -15,53 +15,53 @@ ms.locfileid: "59083339"
 ## <a name="explicit-comparison"></a>Явное сравнение  
  Операции сравнения:  
   
--   =  
+- =  
   
--   !=  
+- !=  
   
  Операции упорядочивания:  
   
--   <  
+- <  
   
--   \<=  
+- \<=  
   
--   \>  
+- \>  
   
--   \>=  
+- \>=  
   
  Операции допустимости значений NULL:  
   
--   IS NULL  
+- IS NULL  
   
--   IS NOT NULL  
+- IS NOT NULL  
   
 ## <a name="explicit-distinction"></a>Явное отличие  
  Отличие равенства:  
   
--   DISTINCT  
+- DISTINCT  
   
--   GROUP BY  
+- GROUP BY  
   
  Отличие упорядочивания:  
   
--   ORDER BY  
+- ORDER BY  
   
 ## <a name="implicit-distinction"></a>Неявное отличие  
  Операция и предикаты для работы с наборами (равенство):  
   
--   UNION  
+- UNION  
   
--   INTERSECT  
+- INTERSECT  
   
--   EXCEPT  
+- EXCEPT  
   
--   SET  
+- SET  
   
--   OVERLAPS  
+- OVERLAPS  
   
  Предикаты элементов (равенство):  
   
--   IN  
+- IN  
   
 ## <a name="supported-combinations"></a>Поддерживаемые сочетания  
  В следующей таблице приводятся все поддерживаемые сочетания операторов сравнения для каждого типа.  

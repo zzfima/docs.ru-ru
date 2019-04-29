@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
 ms.openlocfilehash: 291240bade84bcdd3d64dac24c8c91da5ff72d4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649833"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>Для предложения Handles требуется переменная WithEvents, определенная в содержащем типе или одном из его базовых типов
 Не предоставлен `WithEvents` переменных в вашей `Handles` предложение. `Handles` Ключевое слово в конце объявления процедуры приводит к его для обработки событий, вызванных объектной переменной, объявленной с помощью `WithEvents` ключевое слово.  
@@ -21,7 +21,7 @@ ms.locfileid: "58816782"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Укажите необходимую `WithEvents` переменной.  
+- Укажите необходимую `WithEvents` переменной.  
   
 ## <a name="see-also"></a>См. также
 

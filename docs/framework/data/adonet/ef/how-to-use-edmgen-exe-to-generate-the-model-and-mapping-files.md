@@ -3,24 +3,24 @@ title: Практическое руководство. Использовани
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
 ms.openlocfilehash: 915a9f3c53dba355480a3869602f963b195d53fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605994"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Практическое руководство. Использование EdmGen.exe для создания файлов модели и сопоставления
 В этом разделе показано, как с помощью средства «Генератор модели EDM» (EdmGen.exe) на основе базы данных School формируются следующие файлы:  
   
--   Концептуальная модель (CSDL-файл).  
+- Концептуальная модель (CSDL-файл).  
   
--   Модель хранения (SSDL-файл).  
+- Модель хранения (SSDL-файл).  
   
--   Сопоставление между концептуальной моделью и моделью хранения (MSL-файл).  
+- Сопоставление между концептуальной моделью и моделью хранения (MSL-файл).  
   
--   Код уровня объекта в Visual Basic или C#.  
+- Код уровня объекта в Visual Basic или C#.  
   
--   Просмотр файлов.  
+- Просмотр файлов.  
   
  Средство EdmGen.exe использует ключ /mode:FullGeneration для создания перечисленных выше файлов. Дополнительные сведения о командах EdmGen.exe см. в разделе [генератор модели EDM (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).  
   

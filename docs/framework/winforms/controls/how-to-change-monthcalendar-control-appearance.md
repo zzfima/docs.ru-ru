@@ -10,18 +10,18 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
 ms.openlocfilehash: 233143099996759cc006b3f28b984938554a0d18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666526"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>Практическое руководство. Изменение внешнего вида элемента управления MonthCalendar в Windows Forms
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> элемент управления позволяет настраивать внешний вид календаря во многих отношениях. Например можно установить цветовую схему и выберите для отображения или скрытия номеров недель или текущей даты.  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>Чтобы изменить цветовую схему месячный календарь  
   
--   Задать такие свойства как <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> и <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>. <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> Также определяет цвет шрифта для дней недели. <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> Свойство определяет цвет дат, которые предшествуют и следуют за месяц, отображаемый или месяцев.  
+- Задать такие свойства как <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> и <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>. <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> Также определяет цвет шрифта для дней недели. <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> Свойство определяет цвет дат, которые предшествуют и следуют за месяц, отображаемый или месяцев.  
   
     ```vb  
     MonthCalendar1.TitleBackColor = System.Drawing.Color.Blue  
@@ -46,7 +46,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> элемент упра�
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>Чтобы отобразить текущую дату в нижней части элемента управления  
   
--   Задайте для свойства <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> значение `true`. В приведенном ниже примере переключение между отображением и скрытием текущей даты, когда форма будет выполнен двойной щелчок.  
+- Задайте для свойства <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> значение `true`. В приведенном ниже примере переключение между отображением и скрытием текущей даты, когда форма будет выполнен двойной щелчок.  
   
     ```vb  
     Private Sub Form1_DoubleClick(ByVal sender As Object, _  
@@ -87,7 +87,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> элемент упра�
   
 ### <a name="to-display-week-numbers"></a>Для отображения номера недель  
   
--   Задайте для свойства <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> значение `true`. Это свойство можно задать в коде или в окне «Свойства».  
+- Задайте для свойства <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> значение `true`. Это свойство можно задать в коде или в окне «Свойства».  
   
      Номера недель отображаются в отдельном столбце слева от первого дня недели.  
   

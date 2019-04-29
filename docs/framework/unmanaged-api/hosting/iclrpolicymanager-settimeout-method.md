@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b16cc6a899b1ad5c814c29a93c6125250ca8186d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638844"
 ---
 # <a name="iclrpolicymanagersettimeout-method"></a>Метод ICLRPolicyManager::SetTimeout
 Задает значение времени ожидания для указанной операции.  
@@ -40,13 +40,13 @@ HRESULT SetTimeout (
  `operation`  
  [in] Один из [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) значений, указывающее, распространенные операции среды выполнения (CLR) языка, для которого требуется задать время ожидания. Поддерживаются следующие значения:  
   
--   OPR_AppDomainUnload  
+- OPR_AppDomainUnload  
   
--   OPR_ProcessExit  
+- OPR_ProcessExit  
   
--   OPR_ThreadRudeAbortInCriticalRegion  
+- OPR_ThreadRudeAbortInCriticalRegion  
   
--   OPR_ThreadRudeAbortInNonCriticalRegion  
+- OPR_ThreadRudeAbortInNonCriticalRegion  
   
  `dwMilliseconds`  
  [in] Новое значение времени ожидания в миллисекундах. Задано значение INFINITE приводит никогда не к времени ожидания операции.  

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33213aced635549dd439cf679d89367a71baa7c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939780"
 ---
 # <a name="isymunmanageddocument-interface"></a>Интерфейс ISymUnmanagedDocument
 Представляет документ, на который ссылается хранилище символов. Документ определяется локатора универсальный код ресурса (URL-адрес) и GUID типа документа. Можно найти документ независимо от того, как они хранятся с помощью URL-адрес и идентификатор GUID типа документа. Можно сохранить в хранилище символов источник документа и получить его через этот интерфейс.  

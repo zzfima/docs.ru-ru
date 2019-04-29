@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
 ms.openlocfilehash: c9ef6a215587750f66d2cf8b5b54cbc51f89037e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938740"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>Класс XAMLServices и чтение или запись базового кода XAML
 <xref:System.Xaml.XamlServices> — это класс, предоставляемый службами XAML .NET Framework XAML, который может использоваться для сценариев  XAML, в которых не требуется отдельный доступ к потоку узлов XAML, или для информации о системе типов XAML, полученной из этих узлов. <xref:System.Xaml.XamlServices> API можно описать следующим образом: `Load` или `Parse` для поддержки пути загрузки XAML, `Save` для поддержки пути сохранения XAML, `Transform` — для предоставления метода объединения пути загрузки и пути сохранения. Можно использовать`Transform` для изменения одной схемы XAML на другую. В этом разделе собраны все классификации этих API и приведены различия между определенными перегрузками методов.  
@@ -25,9 +25,9 @@ ms.locfileid: "59162272"
   
  Перегрузки<xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> и <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> опираются на средства чтения форматов из предыдущих версий .NET Framework. Для использования этих перегрузок нужно создать экземпляр средства чтения и использовать его API `Create` для загрузки XAML в соответствующей форме (текст или XML). Это не имеет значения, если вы уже переместили указатели записей в других средствах чтения или выполняли другие операции с ними. Логика пути загрузки из <xref:System.Xaml.XamlServices.Load%2A> всегда обрабатывает все входные данные XAML, начиная с корневого элемента. Возможны следующие сценарии использования этих перегрузок:  
   
--   Рабочие области, где реализуются простые возможности редактирования XAML с помощью существующего текстового редактора, поддерживающего XML.  
+- Рабочие области, где реализуются простые возможности редактирования XAML с помощью существующего текстового редактора, поддерживающего XML.  
   
--   Варианты основных сценариев <xref:System.IO> , где для открытия файлов или потоков используются выделенные средства чтения. Логика выполняет простую проверку или обработку содержимого перед повторной попыткой загрузки в формате XAML.  
+- Варианты основных сценариев <xref:System.IO> , где для открытия файлов или потоков используются выделенные средства чтения. Логика выполняет простую проверку или обработку содержимого перед повторной попыткой загрузки в формате XAML.  
   
  Можно загрузить файл или поток, либо загрузить <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>или <xref:System.Xaml.XamlReader> для заключения входных данных XAML в оболочку путем загрузки с интерфейсами API средства чтения.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "59162272"
   
  Подпись `Load` для более сложных сценариев — <xref:System.Xaml.XamlServices.Load%28System.Xaml.XamlReader%29>. Эту подпись можно использовать в одном из следующих случаев:  
   
--   Вы определили собственную реализацию <xref:System.Xaml.XamlReader>.  
+- Вы определили собственную реализацию <xref:System.Xaml.XamlReader>.  
   
--   Для <xref:System.Xaml.XamlReader> необходимо задать параметры, отличающиеся от параметров по умолчанию.  
+- Для <xref:System.Xaml.XamlReader> необходимо задать параметры, отличающиеся от параметров по умолчанию.  
   
  Примеры параметров, отличных от параметров по умолчанию: <xref:System.Xaml.XamlReaderSettings.AllowProtectedMembersOnRoot%2A>; <xref:System.Xaml.XamlReaderSettings.BaseUri%2A>; <xref:System.Xaml.XamlReaderSettings.IgnoreUidsOnPropertyElements%2A>; <xref:System.Xaml.XamlReaderSettings.LocalAssembly%2A>; <xref:System.Xaml.XamlReaderSettings.ValuesMustBeString%2A>. Средство чтения для <xref:System.Xaml.XamlServices> по умолчанию — <xref:System.Xaml.XamlXmlReader>. Если указать собственный <xref:System.Xaml.XamlXmlReader>с параметрами, то для следующих свойств устанавливаются значения <xref:System.Xaml.XamlXmlReaderSettings>, отличные от значений по умолчанию : <xref:System.Xaml.XamlXmlReaderSettings.CloseInput%2A>; <xref:System.Xaml.XamlXmlReaderSettings.SkipXmlCompatibilityProcessing%2A>; <xref:System.Xaml.XamlXmlReaderSettings.XmlLang%2A>; <xref:System.Xaml.XamlXmlReaderSettings.XmlSpacePreserve%2A>.  
   

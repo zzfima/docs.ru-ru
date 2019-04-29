@@ -3,11 +3,11 @@ title: Функций первого класса
 description: Дополнительные сведения о функций первого класса и как они важны для функционального программирования в F#.
 ms.date: 10/29/2018
 ms.openlocfilehash: 505ad686614b53d779cb617fc04ac74c2a88b31b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772766"
 ---
 # <a name="first-class-functions"></a>Функций первого класса
 
@@ -194,4 +194,4 @@ F#Предоставляет методы сопоставления для бо
 - [Кортежи](../language-reference/tuples.md)
 - [Функции](../language-reference/functions/index.md)
 - [`let` Привязки](../language-reference/functions/let-bindings.md)
-- [Лямбда-выражения: `fun` Ключевое слово](../language-reference/functions/lambda-expressions-the-fun-keyword.md)
+- [Лямбда-выражения: Ключевое слово `fun`](../language-reference/functions/lambda-expressions-the-fun-keyword.md)

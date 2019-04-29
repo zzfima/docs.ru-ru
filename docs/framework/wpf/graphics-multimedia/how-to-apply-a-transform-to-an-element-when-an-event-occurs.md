@@ -12,20 +12,20 @@ helpviewer_keywords:
 - LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
 ms.openlocfilehash: 973b9267eaef5d55176633ee80a1dc7f8b043909
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698997"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Практическое руководство. Применение преобразования к элементу при возникновении события
 В этом примере показано, как применить <xref:System.Windows.Media.ScaleTransform> при наступлении определенного события. Показанный подход аналогичен тому, который используется при применении других типов преобразований. Дополнительные сведения о доступных типах преобразований см. в разделе <xref:System.Windows.Media.Transform> класса или [Общие сведения о преобразованиях](transforms-overview.md).  
   
  Преобразование можно применить к элементу любым из двух следующих способов:  
   
--   В этом случае *не* преобразование влияло на макет, используйте <xref:System.Windows.UIElement.RenderTransform%2A> свойство элемента.  
+- В этом случае *не* преобразование влияло на макет, используйте <xref:System.Windows.UIElement.RenderTransform%2A> свойство элемента.  
   
--   Если вы хотите, чтобы преобразование влияло на макет, используйте <xref:System.Windows.FrameworkElement.LayoutTransform%2A> свойство элемента.  
+- Если вы хотите, чтобы преобразование влияло на макет, используйте <xref:System.Windows.FrameworkElement.LayoutTransform%2A> свойство элемента.  
   
  В следующем примере применяется <xref:System.Windows.Media.ScaleTransform> для <xref:System.Windows.UIElement.RenderTransform%2A> свойства кнопки. При перемещении указателя мыши над кнопкой, <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> и <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> свойства <xref:System.Windows.Media.ScaleTransform> присваивается `2`, что приводит к увеличению кнопки. Когда указатель мыши покидает кнопку, <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> и <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> присваивается `1`, которое вызывает кнопки для возврата к исходному размеру.  
   

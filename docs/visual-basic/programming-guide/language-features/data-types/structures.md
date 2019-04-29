@@ -10,11 +10,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
 ms.openlocfilehash: ebfc82665bb18d96c83db8f29a6c206a9a71fd7f
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663366"
 ---
 # <a name="structures-visual-basic"></a>Структуры (Visual Basic)
 Объект *структура* представляет собой обобщение определяемых пользователем типов (UDT), поддерживаемых в предыдущих версиях Visual Basic. Помимо полей структуры могут предоставлять свойства, методы и события. Структура может реализовать один или несколько интерфейсов, и можно объявлять индивидуальные уровни доступа для каждого поля.  

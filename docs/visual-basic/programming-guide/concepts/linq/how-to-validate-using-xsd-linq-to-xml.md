@@ -3,11 +3,11 @@ title: Практическое руководство. Проверка с ис
 ms.date: 07/20/2015
 ms.assetid: a0fe88d4-4e77-49e7-90de-8953feeccc21
 ms.openlocfilehash: a29473b871961af0de033b77076686cc5b9dde0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613361"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>Практическое руководство. Проверка с использованием XSD (LINQ to XML) (Visual Basic)
 Пространство имен <xref:System.Xml.Schema> содержит методы расширения, облегчающие проверку правильности XML-дерева по XSD-файлу. Дополнительные сведения см. в документации метода <xref:System.Xml.Schema.Extensions.Validate%2A>.  

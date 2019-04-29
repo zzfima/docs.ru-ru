@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
 ms.openlocfilehash: ff07f5264ccb3ec699e3676a2e9ba64443b2875f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61610014"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>Реализация шаблона элемента управления ExpandCollapse модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -25,24 +25,24 @@ ms.locfileid: "59211664"
 ## <a name="implementation-guidelines-and-conventions"></a>Правила и соглашения реализации  
  При реализации шаблона элемента управления ExpandCollapse обратите внимание на следующие правила и соглашения.  
   
--   Агрегатные элементы управления, построенные с помощью дочерних объектов, предоставляющих функциональность развертывания и свертывания, должны поддерживать шаблон элемента управления <xref:System.Windows.Automation.ExpandCollapsePattern> , а их дочерние элементы — нет. Например, элемент управления «Поле со списком строится с помощью комбинации элементов управления «Список», «Кнопка» и «Поле ввода», но только родительский элемент управления «Поле со списком» должен поддерживать <xref:System.Windows.Automation.ExpandCollapsePattern>.  
+- Агрегатные элементы управления, построенные с помощью дочерних объектов, предоставляющих функциональность развертывания и свертывания, должны поддерживать шаблон элемента управления <xref:System.Windows.Automation.ExpandCollapsePattern> , а их дочерние элементы — нет. Например, элемент управления «Поле со списком строится с помощью комбинации элементов управления «Список», «Кнопка» и «Поле ввода», но только родительский элемент управления «Поле со списком» должен поддерживать <xref:System.Windows.Automation.ExpandCollapsePattern>.  
   
     > [!NOTE]
     >  Исключением является элемент управления «Меню», который является совокупностью отдельных объектов MenuItem. Объекты MenuItem могут поддерживать шаблон элемента управления <xref:System.Windows.Automation.ExpandCollapsePattern> , но родительский элемент управления «Меню» — нет. Аналогичное исключение применяется к элементам управления «Дерево» и «Элемент дерева».  
   
--   Когда <xref:System.Windows.Automation.ExpandCollapseState> элемента управления имеет значение <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>, в это время для него неактивны все функциональные возможности <xref:System.Windows.Automation.ExpandCollapsePattern> и с помощью этого шаблона элемента управления можно получить только сведения <xref:System.Windows.Automation.ExpandCollapseState>. Если впоследствии добавляются какие-либо дочерние объекты, <xref:System.Windows.Automation.ExpandCollapseState> изменяется и функциональность <xref:System.Windows.Automation.ExpandCollapsePattern> активируется.  
+- Когда <xref:System.Windows.Automation.ExpandCollapseState> элемента управления имеет значение <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>, в это время для него неактивны все функциональные возможности <xref:System.Windows.Automation.ExpandCollapsePattern> и с помощью этого шаблона элемента управления можно получить только сведения <xref:System.Windows.Automation.ExpandCollapseState>. Если впоследствии добавляются какие-либо дочерние объекты, <xref:System.Windows.Automation.ExpandCollapseState> изменяется и функциональность <xref:System.Windows.Automation.ExpandCollapsePattern> активируется.  
   
--   <xref:System.Windows.Automation.ExpandCollapseState> относится только к видимости непосредственных дочерних объектов; этот параметр не относится к видимости всех дочерних объектов.  
+- <xref:System.Windows.Automation.ExpandCollapseState> относится только к видимости непосредственных дочерних объектов; этот параметр не относится к видимости всех дочерних объектов.  
   
--   Функциональность развертывания и свертывания определяется элементом управления. Ниже представлены примеры такого поведения.  
+- Функциональность развертывания и свертывания определяется элементом управления. Ниже представлены примеры такого поведения.  
   
-    -   Личное меню Office может быть тремя состояниями MenuItem (<xref:System.Windows.Automation.ExpandCollapseState.Expanded>, <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> и <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>), где элемент управления задает принимаемое состояние, когда вызывается метод <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> или <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> .  
+    - Личное меню Office может быть тремя состояниями MenuItem (<xref:System.Windows.Automation.ExpandCollapseState.Expanded>, <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> и <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>), где элемент управления задает принимаемое состояние, когда вызывается метод <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> или <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> .  
   
-    -   Вызов метода <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> в TreeItem может отображать все потомки или только непосредственные дочерние элементы.  
+    - Вызов метода <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> в TreeItem может отображать все потомки или только непосредственные дочерние элементы.  
   
-    -   Если вызов <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> или <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> в элементе управления поддерживает состояние его потомков, должно отправляться событие изменения видимости, а не событие изменения состояния. Если родительский элемент управления не поддерживает состояние своих потомков при сворачивании, то этот элемент управления может уничтожить всех потомков, которые больше не отображаются, и вызвать событие уничтожения; или же он может изменить <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> для каждого потомка и вызвать событие изменения видимости.  
+    - Если вызов <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> или <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> в элементе управления поддерживает состояние его потомков, должно отправляться событие изменения видимости, а не событие изменения состояния. Если родительский элемент управления не поддерживает состояние своих потомков при сворачивании, то этот элемент управления может уничтожить всех потомков, которые больше не отображаются, и вызвать событие уничтожения; или же он может изменить <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> для каждого потомка и вызвать событие изменения видимости.  
   
--   Для обеспечения возможности навигации желательно, чтобы объект был в дереве [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (с указанием соответствующего состояния видимости) независимо от <xref:System.Windows.Automation.ExpandCollapseState>его родительских объектов. Если потомки создаются по запросу, они могут появляться только в дереве [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] после первого отображения или только когда они видимы.  
+- Для обеспечения возможности навигации желательно, чтобы объект был в дереве [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (с указанием соответствующего состояния видимости) независимо от <xref:System.Windows.Automation.ExpandCollapseState>его родительских объектов. Если потомки создаются по запросу, они могут появляться только в дереве [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] после первого отображения или только когда они видимы.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iexpandcollapseprovider"></a>Обязательные члены для IExpandCollapseProvider  

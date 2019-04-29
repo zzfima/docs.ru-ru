@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
 ms.openlocfilehash: 07e1aee85e22f6dd5257cdd49e8af99b423cb17f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645887"
 ---
 # <a name="whats-new-in-windows-identity-foundation-45"></a>Новые возможности Windows Identity Foundation 4.5
 Первая версия Windows Identity Foundation (WIF) поставлялась в виде отдельного загружаемого файла и называлась WIF 3.5, поскольку она вышла одновременно с .NET 3.5 с пактом обновления 1 (SP1). Начиная с версии .NET 4.5 WIF является частью .NET framework. Прямая доступность классов WIF на этой платформе обеспечивает гораздо более глубокую интеграцию удостоверения на базе утверждений с платформой .NET, благодаря которой использовать утверждения становится проще. Приложения, написанные для WIF 3.5, должны быть изменены для использования новой модели. Дополнительные сведения см. в разделе [Рекомендации по миграции приложения, созданного с использованием WIF 3.5, в WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  
@@ -23,29 +23,29 @@ ms.locfileid: "59195531"
   
 ## <a name="changes-to-the-wif-45-visual-studio-experience"></a>Изменения Visual Studio, связанные с WIF 4.5  
   
--   Функция Visual Studio **Добавить ссылку STS…** (программа командной строки FedUtil) была исключена. Вместо нее можно использовать новое расширение **Средство Identity and Access Tool для Visual Studio 2012**. Оно позволяет использовать существующую службу STS или тестировать решение с помощью локальной службы STS. После установки расширения можно щелкнуть проект правой кнопкой мыши и найти в контекстом меню пункт **Удостоверения и доступ**.  
+- Функция Visual Studio **Добавить ссылку STS…** (программа командной строки FedUtil) была исключена. Вместо нее можно использовать новое расширение **Средство Identity and Access Tool для Visual Studio 2012**. Оно позволяет использовать существующую службу STS или тестировать решение с помощью локальной службы STS. После установки расширения можно щелкнуть проект правой кнопкой мыши и найти в контекстом меню пункт **Удостоверения и доступ**.  
   
--   Шаблоны ASP.NET и STS больше не предоставляются, поскольку утверждения можно использовать непосредственно в существующих шаблонах проектов для ASP.NET, веб-сайтов и WCF.  
+- Шаблоны ASP.NET и STS больше не предоставляются, поскольку утверждения можно использовать непосредственно в существующих шаблонах проектов для ASP.NET, веб-сайтов и WCF.  
   
--   Элементы управления в пространстве имен `Microsoft.IdentityModel.Web.Controls` (`SignInControl`, `FederatedPassiveSignInControl` и `FederatedPassiveSignInStatus`) не переносятся в WIF 4.5.  
+- Элементы управления в пространстве имен `Microsoft.IdentityModel.Web.Controls` (`SignInControl`, `FederatedPassiveSignInControl` и `FederatedPassiveSignInStatus`) не переносятся в WIF 4.5.  
   
 ## <a name="changes-to-the-wif-45-api"></a>Изменения в API WIF 4.5  
   
--   Как правило, классы, связанные с утверждениями, принадлежат к пространству имен <xref:System.Security.Claims?displayProperty=nameWithType>, классы, связанные с WCF, — контракты служб, каналы, фабрики каналов и узлы служб, которые используются для сценариев WS-Trust — принадлежат к пространству имен <xref:System.ServiceModel.Security?displayProperty=nameWithType>, а все остальные классы WIF находятся в различных пространствах имен [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004). К ним относятся, например, классы, представляющие артефакты WS-* и SAML, обработчики токенов и связанные классы, а также классы, используемые в сценариях WS-Federation. Дополнительные сведения см. в разделах [Сопоставление пространств имен между WIF 3.5 и WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md) и [Справочник по API WIF](../../../docs/framework/security/wif-api-reference.md).  
+- Как правило, классы, связанные с утверждениями, принадлежат к пространству имен <xref:System.Security.Claims?displayProperty=nameWithType>, классы, связанные с WCF, — контракты служб, каналы, фабрики каналов и узлы служб, которые используются для сценариев WS-Trust — принадлежат к пространству имен <xref:System.ServiceModel.Security?displayProperty=nameWithType>, а все остальные классы WIF находятся в различных пространствах имен [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004). К ним относятся, например, классы, представляющие артефакты WS-* и SAML, обработчики токенов и связанные классы, а также классы, используемые в сценариях WS-Federation. Дополнительные сведения см. в разделах [Сопоставление пространств имен между WIF 3.5 и WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md) и [Справочник по API WIF](../../../docs/framework/security/wif-api-reference.md).  
   
--   Для использования в файлах cookie сеансов в сценариях с веб-фермами был включен ключ компьютера. Дополнительные сведения см. в разделе [WIF и веб-фермы](../../../docs/framework/security/wif-and-web-farms.md).  
+- Для использования в файлах cookie сеансов в сценариях с веб-фермами был включен ключ компьютера. Дополнительные сведения см. в разделе [WIF и веб-фермы](../../../docs/framework/security/wif-and-web-farms.md).  
   
--   Декларативная настройка WIF теперь выполняется в элементах [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) и [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md). Дополнительные сведения о настройке WIF см. в разделе [Справочник по конфигурации WIF](../../../docs/framework/security/wif-configuration-reference.md).  
+- Декларативная настройка WIF теперь выполняется в элементах [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) и [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md). Дополнительные сведения о настройке WIF см. в разделе [Справочник по конфигурации WIF](../../../docs/framework/security/wif-configuration-reference.md).  
   
 ## <a name="other-notable-net-changes-or-features-that-are-caused-by-the-integration-of-wif-into-net"></a>Другие важные изменения .NET и функции, связанные с интеграцией WIF с .NET  
   
--   Возможность выполнения авторизации на основе утверждений теперь является частью .NET Framework. Можно настроить объект <xref:System.Security.Claims.ClaimsAuthorizationManager>, а затем использовать классы <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> и <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> для осуществления императивной и декларативной проверки доступа к коду. Авторизация на основе утверждений обеспечивает большую гибкость и детализацию по сравнению с обычной проверкой доступа на основе ролей. Кроме того, она позволяет лучше отделить политику авторизации от бизнес-логики, так как в бизнес-логике можно использовать проверку доступа на базе конкретного утверждения или набора утверждений, а политику авторизации для этих утверждений можно настроить декларативно в элементе [\<claimsAuthorizationManager>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md).  
+- Возможность выполнения авторизации на основе утверждений теперь является частью .NET Framework. Можно настроить объект <xref:System.Security.Claims.ClaimsAuthorizationManager>, а затем использовать классы <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> и <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> для осуществления императивной и декларативной проверки доступа к коду. Авторизация на основе утверждений обеспечивает большую гибкость и детализацию по сравнению с обычной проверкой доступа на основе ролей. Кроме того, она позволяет лучше отделить политику авторизации от бизнес-логики, так как в бизнес-логике можно использовать проверку доступа на базе конкретного утверждения или набора утверждений, а политику авторизации для этих утверждений можно настроить декларативно в элементе [\<claimsAuthorizationManager>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md).  
   
 ## <a name="wcf-changes-as-a-result-of-wif-integration"></a>Изменения WCF, связанные с интеграцией WIF:  
   
--   Модель удостоверений WCF на базе утверждений заменяется WIF. Это означает, что от классов <xref:System.IdentityModel.Claims?displayProperty=nameWithType>, <xref:System.IdentityModel.Policy?displayProperty=nameWithType> и пространства имен <xref:System.IdentityModel.Selectors?displayProperty=nameWithType> следует отказаться в пользу использования классов WIF.  
+- Модель удостоверений WCF на базе утверждений заменяется WIF. Это означает, что от классов <xref:System.IdentityModel.Claims?displayProperty=nameWithType>, <xref:System.IdentityModel.Policy?displayProperty=nameWithType> и пространства имен <xref:System.IdentityModel.Selectors?displayProperty=nameWithType> следует отказаться в пользу использования классов WIF.  
   
--   WIF теперь включается в службе WCF с помощью атрибута `useIdentityConfiguration` в элементе `<system.serviceModel>`/`<behaviors>`/`<serviceBehaviors>`/`<serviceCredentials>`, как показано в следующем коде XML:  
+- WIF теперь включается в службе WCF с помощью атрибута `useIdentityConfiguration` в элементе `<system.serviceModel>`/`<behaviors>`/`<serviceBehaviors>`/`<serviceCredentials>`, как показано в следующем коде XML:  
   
     ```xml  
     <serviceCredentials useIdentityConfiguration="true">  

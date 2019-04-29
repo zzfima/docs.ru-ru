@@ -3,11 +3,11 @@ title: Инструменты
 ms.date: 03/30/2017
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
 ms.openlocfilehash: 6c4ada74c2fc6aba84eb1fe46f4d7cdee9978d13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780748"
 ---
 # <a name="tools"></a>Инструменты
 В этом разделе перечислены все исключения, созданные средствами Windows Communication Foundation (WCF).  
@@ -17,7 +17,7 @@ ms.locfileid: "33474618"
 |Код ресурса|Строка ресурса|  
 |-------------------|---------------------|  
 |ParametersTarget|\<Перечисление >|  
-|ParametersToolConfig|\<configFile >|  
+|ParametersToolConfig|\<configFile>|  
 |ErrInvalidPath|Указан недопустимый путь. Проверьте указанные аргумент.|  
 |ParametersReference|\<путь к файлу >|  
 |WrnCannotLoadConfigFileForValidation|Ошибка при обработке файла конфигурации, загруженного из указанного расположения. Не удается проверить службы, определенные в этом файле конфигурации.|  
@@ -87,11 +87,11 @@ ms.locfileid: "33474618"
 |ErrDirectoryNotFound|Не удается найти заданный каталог. Убедитесь, что каталог существует и у вас есть соответствующие разрешения на его чтение.|  
 |ErrUnableToLoadFile|Не удается прочитать указанный файл.|  
 |ErrNoFilesFound|Указанный входной путь не ссылается ни на один существующий файл.|  
-|ParametersConfig|\<configFile >|  
+|ParametersConfig|\<configFile>|  
 |ErrDirectoryInsteadOfFile|Указанный входной путь является каталогом. Он должен быть либо URL-адресом, либо путем к файлу.|  
 |HelpConfig|Предписывает программе создать файл конфигурации с предоставленным именем. По умолчанию: output.config.|  
 |ErrSingleUseSwitch|Указанный параметр нельзя указывать несколько раз.|  
-|Предупреждение|Предупреждение.|  
+|Предупреждение|Предупреждение:|  
 |WrnAmbiguousServiceConfig|Найдено несколько конфигураций служб с указанным именем конфигурации. Указаны следующие сборки.|  
 |ErrInvalidInputPath|Указанный входной путь не ссылается ни на один существующий файл и не является допустимым кодом URI.|  
 |ErrUnableToLoadInputs|Ошибка при чтении загруженных метаданных.|  
@@ -114,7 +114,7 @@ ms.locfileid: "33474618"
 |HelpCommonOptionsCategory|-= ОБЩИЕ ПАРАМЕТРЫ =-|  
 |ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|Не указаны допустимые входные файлы. Укажите документы метаданных или файлы сборки.|  
-|ParametersLanguage|\<язык >|  
+|ParametersLanguage|\<Язык >|  
 |ErrUnableToLoadMetadataDocument|Ошибка при чтении метаданных из одного из загруженных документов. Указывается идентификатор документа.|  
 |ErrConflictingInputs|Указанный входной аргумент конфликтует с указанным объектом, поскольку они предполагают разные режимы работы средства.|  
 |WrnUnableToLoadContractForValidation|Ошибка при загрузке типа контракта. Указывается тип и подробные сведения.|  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
 ms.openlocfilehash: 314409f5ac4ecb4b18f3b8d3f2aeb08a507ec9e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696175"
 ---
 # <a name="custom-bindings"></a>Пользовательские привязки
 Класс <xref:System.ServiceModel.Channels.CustomBinding> можно использовать, когда ни одна из системных привязок не соответствует требованиям службы. Все привязки создаются из упорядоченных наборов элементов привязки. Пользовательские привязки можно создавать из набора предоставляемых системой элементов привязки или в них можно включать определяемые пользователем элементы привязки. Пользовательские элементы привязки можно применять, например, для использования в конечной точке службы новых транспортов или кодировщиков. Рабочие примеры см. в разделе [примеры привязки Custom](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)). Дополнительные сведения см. в разделе [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
@@ -18,47 +18,47 @@ ms.locfileid: "59207270"
 ## <a name="construction-of-a-custom-binding"></a>Создание пользовательской привязки  
  Пользовательские привязки создаются с использованием одного из конструкторов <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> из коллекции элементов привязки, которые располагаются в определенном порядке.  
   
--   Вверху расположен необязательный класс <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, который разрешает поток транзакций.  
+- Вверху расположен необязательный класс <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, который разрешает поток транзакций.  
   
--   Далее следует необязательный класс <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>, который обеспечивает сеанс и механизмы сортировки, в соответствии со спецификацией WS-ReliableMessaging. Сеанс может включать посредников SOAP и транспорта.  
+- Далее следует необязательный класс <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>, который обеспечивает сеанс и механизмы сортировки, в соответствии со спецификацией WS-ReliableMessaging. Сеанс может включать посредников SOAP и транспорта.  
   
--   Далее следует необязательный класс <xref:System.ServiceModel.Channels.SecurityBindingElement>, который предоставляет возможности безопасности, такие как авторизация, проверка подлинности, защита и конфиденциальность.  
+- Далее следует необязательный класс <xref:System.ServiceModel.Channels.SecurityBindingElement>, который предоставляет возможности безопасности, такие как авторизация, проверка подлинности, защита и конфиденциальность.  
   
--   Далее следует необязательный класс <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, который обеспечивает возможность двусторонней дуплексной связи с транспортным протоколом, изначально не поддерживающим дуплексную связь, таким как HTTP.  
+- Далее следует необязательный класс <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, который обеспечивает возможность двусторонней дуплексной связи с транспортным протоколом, изначально не поддерживающим дуплексную связь, таким как HTTP.  
   
--   Далее следует необязательный класс <xref:System.ServiceModel.Channels.OneWayBindingElement>), который обеспечивает одностороннюю связь.  
+- Далее следует необязательный класс <xref:System.ServiceModel.Channels.OneWayBindingElement>), который обеспечивает одностороннюю связь.  
   
--   Далее следует обязательный элемент привязки безопасности потока, который может быть одним из следующих.  
+- Далее следует обязательный элемент привязки безопасности потока, который может быть одним из следующих.  
   
-    -   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+    - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
-    -   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+    - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
--   Далее следует обязательный элемент привязки для кодирования сообщений. Можно использовать свой кодировщик транспорта или одну из трех привязок кодировки сообщений:  
+- Далее следует обязательный элемент привязки для кодирования сообщений. Можно использовать свой кодировщик транспорта или одну из трех привязок кодировки сообщений:  
   
-    -   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
+    - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
   
-    -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
+    - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
   
-    -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
+    - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
  Внизу расположен обязательный элемент транспорта. Можно использовать собственный транспорт или один из следующих элементов привязки транспорта, предоставляемых Windows Communication Foundation (WCF):  
   
--   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
   
--   <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
   
  В следующей таблице приведены сводные данные по параметрам каждого уровня.  
   

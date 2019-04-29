@@ -8,22 +8,22 @@ helpviewer_keywords:
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
 ms.openlocfilehash: 6ec98aabd92a7a0fed11482bdf6e5e8ddc045a7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700818"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Отображение имен алгоритмов на криптографические классы
 Существует четыре способа создания криптографического объекта с помощью [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
   
--   Создание объекта с помощью **новый** оператор.  
+- Создание объекта с помощью **новый** оператор.  
   
--   Создайте объект, реализующий конкретный криптографический алгоритм, вызвав **создать** метод к абстрактному классу данного алгоритма.  
+- Создайте объект, реализующий конкретный криптографический алгоритм, вызвав **создать** метод к абстрактному классу данного алгоритма.  
   
--   Создайте объект, реализующий конкретный криптографический алгоритм, вызвав <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод.  
+- Создайте объект, реализующий конкретный криптографический алгоритм, вызвав <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод.  
   
--   Создание объекта, реализующего класс алгоритмов шифрования (например, симметричный блочный шифр) путем вызова **создать** метод на абстрактный класс для этого типа алгоритма (такие как <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
+- Создание объекта, реализующего класс алгоритмов шифрования (например, симметричный блочный шифр) путем вызова **создать** метод на абстрактный класс для этого типа алгоритма (такие как <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
   
  Например предположим, что разработчику нужно вычислить хэш SHA1 набора байтов. <xref:System.Security.Cryptography> Пространство имен содержит две реализации алгоритма SHA1, одну реализацию полностью управляемыми и тот, который создает оболочку для CryptoAPI. Разработчик может выбрать для создания экземпляра конкретной реализации SHA1 (такие как <xref:System.Security.Cryptography.SHA1Managed>) путем вызова **новый** оператор. Тем не менее, если он не имеет значения, какой класс, среда CLR загружает до тех пор, пока этот класс реализует хэш-алгоритм SHA1, разработчик может создать объект путем вызова <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> метод. Этот метод вызывает метод **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")**, который должен возвращать реализацию алгоритма хэширования SHA1.  
   

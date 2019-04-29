@@ -3,11 +3,11 @@ title: Новые возможности Windows Workflow Foundation в .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
 ms.openlocfilehash: a76ec56cf6ac5260f00031bc815b32b1e10804a4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61671422"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Новые возможности Windows Workflow Foundation в .NET 4.5
 
@@ -23,7 +23,7 @@ Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45
 
 ## <a name="BKMK_Versioning"></a> Управление версиями рабочих процессов
 
-В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] предоставлено несколько новых функций управления версиями с помощью нового класса <xref:System.Activities.WorkflowIdentity>. <xref:System.Activities.WorkflowIdentity> позволяет авторам приложений рабочего процесса сопоставить сохраненный экземпляр рабочего процесса с его определением.
+В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] предоставлено несколько новых возможностей управления версиями с помощью нового класса <xref:System.Activities.WorkflowIdentity>. <xref:System.Activities.WorkflowIdentity> позволяет авторам приложений рабочего процесса сопоставить сохраненный экземпляр рабочего процесса с его определением.
 
 - Разработчики, использующие среду размещения <xref:System.Activities.WorkflowApplication>, могут использовать <xref:System.Activities.WorkflowIdentity> для параллельного размещения нескольких версий рабочего процесса. Сохраненные экземпляры рабочего процесса можно загрузить с помощью нового класса <xref:System.Activities.WorkflowApplicationInstance>, а затем узел может использовать <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> для предоставления правильной версии определения рабочего процесса при создании экземпляра <xref:System.Activities.WorkflowApplication>. Дополнительные сведения см. в разделе [с помощью WorkflowIdentity и управления версиями](using-workflowidentity-and-versioning.md) и [как: Размещение нескольких версий рабочего процесса Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
@@ -170,7 +170,7 @@ Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45
 
 ### <a name="BKMK_AutoConnect"></a> Автоматическое соединение и автоматическая вставка в рабочих процессах блок-схемы и конечного автомата
 
-В [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] связи между узлами в рабочем процессе блок-схемы необходимо добавлять вручную. В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] узлы «Блок-схема» и «Конечный автомат» содержат точки автоматического соединения, которые становятся видимыми при перетаскивании действия из области элементов в область конструктора. При перетаскивании действия на одну из этих точек автоматически добавляется действие вместе с необходимым соединением.
+В [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] связи между узлами в рабочем процессе блок-схемы необходимо добавлять вручную. В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] узлы «Блок-схема» и «Конечный автомат» содержат точки автоматического соединения, которые становятся видимыми при перетаскивании действия из области элементов в область конструктора. При сбросе действия в одной из этих точек автоматически добавляется действие вместе с необходимым соединением.
 
 На следующем снимке экрана показаны точки присоединения, которые появляются при перетаскивании действия из области элементов.
 

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
 ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696597"
 ---
 # <a name="wpf-partial-trust-security"></a>Безопасность частичного доверия в WPF
 <a name="introduction"></a> Как правило, интернет-приложениям следует ограничить прямой доступ к критическим системным ресурсам, чтобы избежать злонамеренного повреждения. По умолчанию [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] и языки сценариев на стороне клиента не могут получить доступ к критическим системным ресурсам. Поскольку Браузерные приложения Windows Presentation Foundation (WPF) может быть запущено из браузера, они должны соответствовать аналогичному набору ограничений. Для принудительного применения этих ограничений [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] полагается на [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] и [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (см. в разделе [стратегия безопасности WPF — безопасность платформы](wpf-security-strategy-platform-security.md)). По умолчанию Браузерные приложения запрашивают зоны Интернета [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] набор разрешений, независимо от того, запускаются ли они из Интернета, локальной интрасети или локального компьютера. Приложения, выполняющиеся с набором разрешений меньшим, чем полный набор, называют выполняющимися с частичным доверием.  
@@ -29,11 +29,11 @@ ms.locfileid: "59218385"
   
  В этом разделе содержатся следующие подразделы.  
   
--   [Поддержка частичного доверия функциями WPF](#WPF_Feature_Partial_Trust_Support)  
+- [Поддержка частичного доверия функциями WPF](#WPF_Feature_Partial_Trust_Support)  
   
--   [Программирование в режиме частичного доверия](#Partial_Trust_Programming)  
+- [Программирование в режиме частичного доверия](#Partial_Trust_Programming)  
   
--   [Управление разрешениями](#Managing_Permissions)  
+- [Управление разрешениями](#Managing_Permissions)  
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>Поддержка частичного доверия функциями WPF  
@@ -52,19 +52,19 @@ ms.locfileid: "59218385"
   
  Эта таблица охватывает [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] функции на высоком уровне. Более подробные сведения, [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] задокументированы разрешения, необходимые каждому элементу в [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Кроме того, следующие функции содержат более подробные сведения, касающиеся выполнения при частичном доверии, включая некоторые особые аспекты.  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (см. в разделе [Обзор XAML (WPF)](./advanced/xaml-overview-wpf.md)).  
+- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (см. в разделе [Обзор XAML (WPF)](./advanced/xaml-overview-wpf.md)).  
   
--   Всплывающие окна (см. в разделе <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
+- Всплывающие окна (см. в разделе <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
   
--   Перетаскивание (см. в разделе [Drag and Drop Обзор](./advanced/drag-and-drop-overview.md)).  
+- Перетаскивание (см. в разделе [Drag and Drop Обзор](./advanced/drag-and-drop-overview.md)).  
   
--   Буфер обмена (см. в разделе <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
+- Буфер обмена (см. в разделе <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
   
--   Работы с образами (см. в разделе <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).  
+- Работы с образами (см. в разделе <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).  
   
--   Сериализация (см. в разделе <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>, <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
+- Сериализация (см. в разделе <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>, <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
   
--   Открыть файл-диалоговое окно (см. в разделе <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
+- Открыть файл-диалоговое окно (см. в разделе <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
   
  В следующей таблице описываются [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] набора разрешений зоны функции, которые не являются безопасными для выполнения в пределах Интернета.  
   
@@ -153,11 +153,11 @@ ms.locfileid: "59218385"
   
  Если вам требуется повысить уровень разрешений, необходимо изменить параметры проекта и манифест приложения ClickOnce. Дополнительные сведения см. в разделе [Общие сведения о приложениях браузера WPF XAML](./app-development/wpf-xaml-browser-applications-overview.md). Следующие документы также могут быть полезны.  
   
--   [Mage.exe (средство создания и редактирования манифеста)](../tools/mage-exe-manifest-generation-and-editing-tool.md)  
+- [Mage.exe (средство создания и редактирования манифеста)](../tools/mage-exe-manifest-generation-and-editing-tool.md)  
   
--   [MageUI.exe (средство создания и редактирования манифестов, графический клиент)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
+- [MageUI.exe (средство создания и редактирования манифестов, графический клиент)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
   
--   [Защита приложений ClickOnce](/visualstudio/deployment/securing-clickonce-applications)  
+- [Защита приложений ClickOnce](/visualstudio/deployment/securing-clickonce-applications)  
   
  Если ваш [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] требует полного доверия, можно использовать те же средства для предоставления запрошенных разрешений. Несмотря на то что [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] только получит полное доверие, если он установлен на локальном компьютере и запущено с локального компьютера, интрасети или с URL-адрес, который указан в браузере доверенных или разрешенных сайтов. Если приложение установлено из интрасети или с доверенного сайта, пользователь получит стандартный запрос ClickOnce, уведомляющий о повышенных разрешениях. Пользователь может выбрать продолжение или отмену установки.  
   

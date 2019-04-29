@@ -24,11 +24,11 @@ helpviewer_keywords:
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
 ms.openlocfilehash: 5d47d57b75005d5c13dbf8633981dfb2d57d3e90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638067"
 ---
 # <a name="fornext-statement-visual-basic"></a>Оператор For... Next (Visual Basic)
 Повторяет блок операторов указанное число раз.  
@@ -98,11 +98,11 @@ Next [ counter ]
   
  `Exit For` часто используется после оценки некоторого условия (например, в `If`... `Then`... `Else` структуры). Вы можете использовать `Exit For` для следующих условий:  
   
--   Продолжение для выполнения итерации, ненужных или невозможно. Ошибочное значение или запрос на завершение может создать это условие.  
+- Продолжение для выполнения итерации, ненужных или невозможно. Ошибочное значение или запрос на завершение может создать это условие.  
   
--   Объект `Try`... `Catch`... `Finally` инструкция перехватывает исключение. Можно использовать `Exit For` в конце `Finally` блока.  
+- Объект `Try`... `Catch`... `Finally` инструкция перехватывает исключение. Можно использовать `Exit For` в конце `Finally` блока.  
   
--   У вас есть бесконечный цикл, который является цикл, который может запустить большое или возможно, бесконечное число раз. При обнаружении таких условий, можно использовать `Exit For` для выхода из цикла. Дополнительные сведения см. в разделе [сделать... Цикл инструкции](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+- У вас есть бесконечный цикл, который является цикл, который может запустить большое или возможно, бесконечное число раз. При обнаружении таких условий, можно использовать `Exit For` для выхода из цикла. Дополнительные сведения см. в разделе [сделать... Цикл инструкции](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
 ## <a name="technical-implementation"></a>Техническая реализация  
  Когда `For`... `Next` начале цикла, Visual Basic вычисляет `start`, `end`, и `step`. Visual Basic вычисляет эти значения только в это время, а затем назначает `start` для `counter`. Перед оператором блок выполняется, Visual Basic сравнивает `counter` для `end`. Если `counter` уже больше, чем `end` значение (или меньшего размера, если `step` отрицательное), `For` завершения цикла и управление передается оператору, который расположен `Next` инструкции. В противном случае выполняется блок операторов.  
@@ -137,13 +137,13 @@ Next [ counter ]
   
  Тип данных `counter` определяет тип итерации, который должен быть одним из следующих типов:  
   
--   Объект `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, или `Double`.  
+- Объект `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, или `Double`.  
   
--   Перечисление, которое объявляется с помощью [оператор Enum](../../../visual-basic/language-reference/statements/enum-statement.md).  
+- Перечисление, которое объявляется с помощью [оператор Enum](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
--   Объект `Object`.  
+- Объект `Object`.  
   
--   Тип `T` , имеет следующие операторы, где `B` — это тип, который может использоваться в `Boolean` выражение.  
+- Тип `T` , имеет следующие операторы, где `B` — это тип, который может использоваться в `Boolean` выражение.  
   
      `Public Shared Operator >= (op1 As T, op2 As T) As B`  
   

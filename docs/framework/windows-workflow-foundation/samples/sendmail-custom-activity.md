@@ -3,11 +3,11 @@ title: Настраиваемое действие SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
 ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785948"
 ---
 # <a name="sendmail-custom-activity"></a>Настраиваемое действие SendMail
 В образце описывается создание настраиваемого действия, которое является производным от <xref:System.Activities.AsyncCodeActivity>, для отправки почты с помощью SMTP для работы в приложении рабочего процесса. Настраиваемое действие использует возможности <xref:System.Net.Mail.SmtpClient> асинхронно отправлять электронную почту и для отправки почты с проверкой подлинности. При этом также обеспечивается возможность использования таких возможностей конечных пользователей, как тестовый режим, замена маркеров, шаблоны файлов и тестовый путь размещения файла.  
@@ -107,13 +107,13 @@ new SendMail
   
  Дополнительные сведения о настройке SMTP-сервера см. следующие ссылки.  
   
--   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [Настройка службы SMTP (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [Настройка службы SMTP (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [IIS 7.0: Настройка электронной почты SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
+- [IIS 7.0: Настройка электронной почты SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [Установка службы SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [Установка службы SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
  Эмуляторы SMTP разработки сторонних производителей можно загрузить из Интернета.  
   

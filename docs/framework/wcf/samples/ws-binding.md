@@ -3,14 +3,14 @@ title: Привязка WS
 ms.date: 03/30/2017
 ms.assetid: 629945b2-d771-46d7-a87b-5df3b2e460da
 ms.openlocfilehash: 11480b91c6ac6a5501029dfdf10cd81d3fa18820
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949907"
 ---
 # <a name="ws-binding"></a>Привязка WS
-Этот раздел содержит образцы, которые демонстрируют привязку службы Windows в Windows Communication Foundation (WCF).  
+Этот раздел содержит образцы, демонстрирующие привязку службы Windows в Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Поток транзакций WS](../../../../docs/framework/wcf/samples/ws-transaction-flow.md)  

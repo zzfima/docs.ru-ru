@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
 ms.openlocfilehash: 2815757bf9b00375f763673f18180bfbf51a165a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779227"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Практическое руководство. Асинхронный вызов операций службы WCF
 В этом разделе описано, каким образом клиент может асинхронно обратиться к операции службы. Служба в этом разделе реализует интерфейс `ICalculator`. Клиент может асинхронно вызывать операции этого интерфейса с помощью управляемой событиями модели асинхронного вызова. (Дополнительные сведения об управляемой событиями модели асинхронного вызова см. в разделе [многопоточное программирование с использованием асинхронной модели на основе событий](https://go.microsoft.com/fwlink/?LinkId=248184)). Пример, в котором демонстрируется реализация асинхронной операции в службе, см. в разделе [как: Реализация асинхронной операции службы](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Дополнительные сведения о синхронных и асинхронных операциях см. в разделе [синхронные и асинхронные операции](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
@@ -30,17 +30,17 @@ ms.locfileid: "59317451"
   
      Это приводит к возникновению ошибки, помимо синхронной операции и стандартной делегатов асинхронными операциями, класс клиента WCF, который содержит:  
   
-    -   Два <`operationName` > `Async` операций для использования с основанной на событиях асинхронных вызовами. Пример:  
+    - Два <`operationName` > `Async` операций для использования с основанной на событиях асинхронных вызовами. Пример:  
   
          [!code-csharp[EventAsync#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#1)]
          [!code-vb[EventAsync#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#1)]  
   
-    -   События с завершенными операциями в форме <`operationName` > `Completed` для использования с основанной на событиях асинхронных вызовами. Пример:  
+    - События с завершенными операциями в форме <`operationName` > `Completed` для использования с основанной на событиях асинхронных вызовами. Пример:  
   
          [!code-csharp[EventAsync#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#2)]
          [!code-vb[EventAsync#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#2)]  
   
-    -   <xref:System.EventArgs?displayProperty=nameWithType> типы для каждой операции (в формате <`operationName`>`CompletedEventArgs`) для использования с основанной на событиях асинхронных вызовами. Пример:  
+    - <xref:System.EventArgs?displayProperty=nameWithType> типы для каждой операции (в формате <`operationName`>`CompletedEventArgs`) для использования с основанной на событиях асинхронных вызовами. Пример:  
   
          [!code-csharp[EventAsync#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#3)]
          [!code-vb[EventAsync#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#3)]  

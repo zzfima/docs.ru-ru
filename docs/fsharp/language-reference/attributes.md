@@ -3,11 +3,11 @@ title: Атрибуты
 description: Узнайте, как F# атрибуты позволяют применять к программным конструкциям метаданные.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6e80bc4e32ee4ff5ff132270bde8e2fd018369e1
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703209"
 ---
 # <a name="attributes"></a>Атрибуты
 
@@ -81,7 +81,7 @@ ms.locfileid: "58464662"
     <td><pre lang="fsharp"><code>[&lt;field: DefaultValue&gt;] val mutable x: int<code></pre></td> 
   </tr>
   <tr>
-    <td>свойство</td>
+    <td>свойство;</td>
     <td><pre lang="fsharp"><code>[&lt;property: Obsolete&gt;] this.MyProperty = x<code></pre></td> 
   </tr>
   <tr>
@@ -89,7 +89,7 @@ ms.locfileid: "58464662"
     <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10<code></pre></td> 
   </tr>
   <tr>
-    <td>Тип</td>
+    <td>type</td>
     <td>
         <pre lang="fsharp"><code>
         [&lt;type: StructLayout(Sequential)&gt;] 

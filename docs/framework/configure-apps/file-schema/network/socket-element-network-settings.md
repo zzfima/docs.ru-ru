@@ -9,11 +9,11 @@ helpviewer_keywords:
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
 ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674393"
 ---
 # <a name="socket-element-network-settings"></a>\<сокет > (сетевые параметры)
 Указывает, используют ли операции сокета порты завершения.  
@@ -64,9 +64,9 @@ ms.locfileid: "59160164"
   
  Это `ipProtectionLevel` атрибут влияет только начального входящего трафика:  
   
--   TCP-сервер, прослушивание входящих подключений через сокет.  
+- TCP-сервер, прослушивание входящих подключений через сокет.  
   
--   Приложение UDP, получения пакета на сокете.  
+- Приложение UDP, получения пакета на сокете.  
   
  Этот параметр конфигурации не влияет на уже установленные TCP-соединения, (трафик не ограничен в обоих направлениях) и не влияет на приложения, отправляющие пакеты UDP.  
   

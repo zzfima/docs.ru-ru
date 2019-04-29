@@ -3,11 +3,11 @@ title: Контекст схемы языка XAML по умолчанию и к
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
 ms.openlocfilehash: 0d6a0aa80d8490c509fa9036f88d4f6863ff040c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689402"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Контекст схемы языка XAML по умолчанию и контекст схемы языка XAML WPF
 Контекст схемы XAML представляет собой концептуальную сущность, которая определяет, как производство XAML, использующий определенные языковые XAML взаимодействует с поведением записи объектов, включая порядок разрешения сопоставлений типов, как сборки загружаются, определенных модулей чтения и записи параметры интерпретируются. В этом разделе описываются функции служб XAML .NET Framework и контекст схемы XAML по умолчанию, который основан на системе типов CLR. Кроме того, описывается контекст схемы XAML, который используется для WPF.  
@@ -50,11 +50,11 @@ ms.locfileid: "59295605"
   
 2. В противном случае — один из следующих способов на основе CLR <xref:System.Reflection.Assembly> API используются для загрузки сборки:  
   
-    -   Если в сопоставлении определено полное имя, вызовите <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> для полного имени.  
+    - Если в сопоставлении определено полное имя, вызовите <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> для полного имени.  
   
-    -   Если предыдущее действие завершится сбоем, используйте короткое имя (и токен открытого ключа при его наличии) для вызова <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+    - Если предыдущее действие завершится сбоем, используйте короткое имя (и токен открытого ключа при его наличии) для вызова <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
-    -   Если имя не определено в сопоставлении, вызвать <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
+    - Если имя не определено в сопоставлении, вызвать <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
  `XamlBuildTask` используется для Windows Communication Foundation (WCF) и Windows Workflow Foundation.  
@@ -82,11 +82,11 @@ ms.locfileid: "59295605"
   
 2. В противном случае один из следующих способов используется для загрузки сборки:  
   
-    -   Вызовите <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> для полного имени.  
+    - Вызовите <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> для полного имени.  
   
-    -   Если короткое имя + открытый маркера сочетание клавиш соответствовать сборке, загруженной из BAML, используйте эту сборку.  
+    - Если короткое имя + открытый маркера сочетание клавиш соответствовать сборке, загруженной из BAML, используйте эту сборку.  
   
-    -   Использовать короткое имя + токен открытого ключа для вызова <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+    - Использовать короткое имя + токен открытого ключа для вызова <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
 

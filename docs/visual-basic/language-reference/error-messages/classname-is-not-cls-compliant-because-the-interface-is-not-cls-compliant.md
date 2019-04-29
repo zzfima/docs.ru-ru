@@ -11,8 +11,8 @@ ms.openlocfilehash: 063c42249abbfb506fd15311659599b4777d397f
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649885"
 ---
 # <a name="classname-is-not-cls-compliant-because-the-interface-interfacename-it-implements-is-not-cls-compliant"></a>"\<имя_класса >" не является CLS-совместимым, поскольку интерфейс "\<имя_интерфейса >" он реализует, несовместим с CLS
 Класс или интерфейс помечен как `<CLSCompliant(True)>` , если он наследует или реализует тип, помеченный как `<CLSCompliant(False)>` или не помеченный совсем.  
@@ -29,6 +29,6 @@ ms.locfileid: "59975550"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Если требуется совместимость с CLS, определите этот тип в другой иерархии наследования или схеме реализации.  
+- Если требуется совместимость с CLS, определите этот тип в другой иерархии наследования или схеме реализации.  
   
--   Если требуется, чтобы этот тип оставался в текущей иерархии наследования или схеме реализации, удалите <xref:System.CLSCompliantAttribute> из его определения или пометьте его как `<CLSCompliant(False)>`.  
+- Если требуется, чтобы этот тип оставался в текущей иерархии наследования или схеме реализации, удалите <xref:System.CLSCompliantAttribute> из его определения или пометьте его как `<CLSCompliant(False)>`.  

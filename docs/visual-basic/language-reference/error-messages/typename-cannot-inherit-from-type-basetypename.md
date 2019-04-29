@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
 ms.openlocfilehash: dc979a66c73fdf15a4349a003680156e0ce27ed3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764365"
 ---
 # <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>"\<typename >" не может наследовать от \<тип > "\<имя_базового_типа >", поскольку он расширяет доступ базового \<тип > за пределы данной сборки
 Класс или интерфейс наследует от базового класса или интерфейса, но имеет менее строгий уровень доступа.  
@@ -23,11 +23,11 @@ ms.locfileid: "58838954"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Измените уровень доступа производный класс или интерфейс был менее строгий, как и для базового класса или интерфейса.  
+- Измените уровень доступа производный класс или интерфейс был менее строгий, как и для базового класса или интерфейса.  
   
      -или-  
   
--   Если требуется менее строгий уровень доступа, удалите `Inherits` инструкции. Не может наследовать от более ограниченных базового класса или интерфейса.  
+- Если требуется менее строгий уровень доступа, удалите `Inherits` инструкции. Не может наследовать от более ограниченных базового класса или интерфейса.  
   
 ## <a name="see-also"></a>См. также
 

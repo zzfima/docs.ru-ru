@@ -3,11 +3,11 @@ title: 'Исключения: функция raise'
 description: Узнайте, как F# «raise» функция используется для указания, что произошло ошибку или исключительную ситуацию.
 ms.date: 05/16/2016
 ms.openlocfilehash: 87773ead7773c62a325c7e7ff105c729e10dd69c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772675"
 ---
 # <a name="exceptions-the-raise-function"></a>Исключения: функция raise
 

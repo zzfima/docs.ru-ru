@@ -3,11 +3,11 @@ title: Переменные и аргументы
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
 ms.openlocfilehash: 29ce5222435b68ed13cbc967e58e72a937625e8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669489"
 ---
 # <a name="variables-and-arguments"></a>Переменные и аргументы
 В Windows Workflow Foundation (WF), переменные представляют хранилище данных, а аргументы представляют поток данных в действие и из действия. Действие имеет набор аргументов, которые составляют сигнатуру действия. Действие может также поддерживать список переменных, к которым разработчик может добавлять или удалять переменные при разработке рабочего процесса. Привязка аргумента выполнена с помощью выражения, возвращающего значение.  

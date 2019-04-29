@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8f83d2ac9ca96145fa89b283fec42c71858097f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651627"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>Интерфейс ICorDebugGCReferenceEnum
 Предоставляет перечислитель для объектов, для которых будет выполнена сборка мусора.  
@@ -39,11 +39,11 @@ ms.locfileid: "59080834"
   
  [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) объекты в коллекции, заполняется с помощью данного метода представляют три вида объектов:  
   
--   Объекты из всех управляемых стеков. Сюда входят активных ссылок в управляемом коде, а также объекты, созданные средой CLR.  
+- Объекты из всех управляемых стеков. Сюда входят активных ссылок в управляемом коде, а также объекты, созданные средой CLR.  
   
--   Объекты из таблицы дескрипторов. Сюда входят строгих ссылок (`HNDTYPE_STRONG` и `HNDTYPE_REFCOUNT`) и статические переменные в модуле.  
+- Объекты из таблицы дескрипторов. Сюда входят строгих ссылок (`HNDTYPE_STRONG` и `HNDTYPE_REFCOUNT`) и статические переменные в модуле.  
   
--   Объекты из очереди метода завершения. Обслуживает очередь метода завершения корневых объектов, пока не будет запущен финализатор.  
+- Объекты из очереди метода завершения. Обслуживает очередь метода завершения корневых объектов, пока не будет запущен финализатор.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

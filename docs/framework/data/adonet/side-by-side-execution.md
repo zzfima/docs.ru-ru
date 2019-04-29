@@ -3,11 +3,11 @@ title: Одновременное выполнение в ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
 ms.openlocfilehash: a8747d749ed7e751ba577a2cd29c2048065f2645
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664146"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Одновременное выполнение в ADO.NET
 Параллельное выполнение в платформе [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] - это возможность выполнять приложение на компьютере, на котором установлено несколько версий [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], используя только ту версию, для которой приложение скомпилировано. Подробные сведения о настройке side-by-side выполнения, см. в разделе [выполнения Side-by-Side](../../../../docs/framework/deployment/side-by-side-execution.md).  

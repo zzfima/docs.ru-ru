@@ -5,11 +5,11 @@ f1_keywords:
 - WcfOptions
 ms.assetid: 6abe5d34-519b-4cef-8f02-3c0a7f125585
 ms.openlocfilehash: 2fa060e567fba9bb5e6344b2c8fc67fb639ad0f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608454"
 ---
 # <a name="controlling-auto-launching-of-wcf-service-host"></a>Управление автозапуском узла службы WCF
 Вы можете управлять возможностью автозапуска узла службы Windows Communication Foundation (WCF) (WcfSvcHost.exe) для проекта библиотеки служб WCF при отладке другого проекта в том же решении Visual Studio, содержащего несколько проектов.  
@@ -20,13 +20,13 @@ ms.locfileid: "59228501"
   
  Эта возможность доступна в следующих проектах.  
   
--   Проект библиотеки службы WCF.  
+- Проект библиотеки службы WCF.  
   
--   Проект библиотеки службы последовательного рабочего процесса.  
+- Проект библиотеки службы последовательного рабочего процесса.  
   
--   Проект библиотеки рабочего процесса конечного автомата.  
+- Проект библиотеки рабочего процесса конечного автомата.  
   
--   Проект библиотеки служб синдикации.  
+- Проект библиотеки служб синдикации.  
   
 ## <a name="see-also"></a>См. также
 

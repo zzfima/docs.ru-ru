@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30451
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
 ms.openlocfilehash: 3aadc49f91021409123550ba2712f1acf5b99d83
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651029"
 ---
 # <a name="name-name-is-not-declared"></a>Имя "\<имя >" не объявлена
 Оператор ссылается на элемент программирования, но компилятор не может найти элемент с указанным именем.  

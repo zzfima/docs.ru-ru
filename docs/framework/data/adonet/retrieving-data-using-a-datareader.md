@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
 ms.openlocfilehash: 8063f239123ec1a2f2650adf9d76f7ceaaa50673
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664264"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Извлечение данных с помощью объекта DataReader
 Для получения данных с помощью **DataReader** создайте экземпляр объекта **Command**, а затем создайте **DataReader** путем вызова **Command.ExecuteReader** для получения строк из источника данных. **DataReader** предоставляет небуферизованный поток данных, позволяющий эффективно реализовать процедурную логику последовательной обработки результатов из источника данных. **DataReader** хорошо подходит для извлечения больших объемов данных, поскольку данные не кэшируются в памяти.

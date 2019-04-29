@@ -3,11 +3,11 @@ title: Отслеживание ссылок на события
 ms.date: 03/30/2017
 ms.assetid: c1c1ee87-f80a-449b-acd0-50d81eef116e
 ms.openlocfilehash: 5b3bba83b3c6c7ab27c9470213b7675f7e107c7e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699881"
 ---
 # <a name="tracking-events-reference"></a>Отслеживание ссылок на события
 При выполнении рабочего процесса в [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] создаются события отслеживания при переходе его через различные этапы времени существования. Узел можно подписать на эти события, что позволит получать последние сведения о состоянии рабочего процесса на протяжении времени его существования. Создаваемые события отслеживания описываются в этом разделе.  

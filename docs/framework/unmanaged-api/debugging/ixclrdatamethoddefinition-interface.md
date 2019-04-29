@@ -16,11 +16,11 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: 4b1e8cb1cf34bb1c5ade1353351aab953e2b734a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670109"
 ---
 # <a name="ixclrdatamethoddefinition-interface"></a>Интерфейс IXCLRDataMethodDefinition
 
@@ -32,7 +32,7 @@ ms.locfileid: "54644251"
 
 Следующие методы перечислены методы, доступные в интерфейсе.
 
-| Метод                                                                                                                          | Описание:                                                                                 |
+| Метод                                                                                                                          | Описание                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | [StartEnumInstances](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-startenuminstances-method.md) | Предоставляет дескриптор для перечисления экземпляров метода для заданного `IXCLRDataAppDomain`. |
 | [EnumInstance](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-enuminstance-method.md)             | Перечисление экземпляров класса определения метода.                                         |

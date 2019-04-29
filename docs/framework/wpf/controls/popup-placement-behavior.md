@@ -8,11 +8,11 @@ helpviewer_keywords:
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
 ms.openlocfilehash: 911c2064e34ed8d0a341ffd9a52f852eab677e0a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771400"
 ---
 # <a name="popup-placement-behavior"></a>Поведение при размещении контекстного меню
 Объект <xref:System.Windows.Controls.Primitives.Popup> управления отображает содержимое в отдельном окне, расположенном поверх приложения. Можно указать положение <xref:System.Windows.Controls.Primitives.Popup> по отношению к элементу управления, мыши или экрана с помощью <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, и <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> свойства.  Эти свойства совместной работы позволяют гибко указывать положение <xref:System.Windows.Controls.Primitives.Popup>.  
@@ -36,13 +36,13 @@ ms.locfileid: "59161504"
 ## <a name="definitions-of-terms-the-anatomy-of-a-popup"></a>Определения терминов: Анатомия всплывающего окна  
  Следующие термины полезны в понимании того как <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, и <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> свойства связаны друг с другом и <xref:System.Windows.Controls.Primitives.Popup>:  
   
--   Целевой объект  
+- Целевой объект  
   
--   Целевая область  
+- Целевая область  
   
--   Исходная точка  
+- Исходная точка  
   
--   Точка выравнивания всплывающего окна  
+- Точка выравнивания всплывающего окна  
   
  Эти термины предоставляют удобный способ для ссылки на различные аспекты <xref:System.Windows.Controls.Primitives.Popup> элементов управления, связанного с ним.  
   
@@ -135,11 +135,11 @@ ms.locfileid: "59161504"
 ## <a name="when-the-popup-encounters-the-edge-of-the-screen"></a>Когда всплывающее окно достигает края экрана  
  По соображениям безопасности <xref:System.Windows.Controls.Primitives.Popup> не могут быть скрыты за краем экрана. Одно из следующих трех действий происходит при <xref:System.Windows.Controls.Primitives.Popup> края экрана:  
   
--   Всплывающее окно располагается вдоль края экрана, который мог бы скрыть <xref:System.Windows.Controls.Primitives.Popup>.  
+- Всплывающее окно располагается вдоль края экрана, который мог бы скрыть <xref:System.Windows.Controls.Primitives.Popup>.  
   
--   Всплывающее окно использует другую точку выравнивания.  
+- Всплывающее окно использует другую точку выравнивания.  
   
--   Всплывающее окно использует другую исходную точку и точку выравнивания.  
+- Всплывающее окно использует другую исходную точку и точку выравнивания.  
   
  Эти параметры будут описаны далее в данном разделе.  
   

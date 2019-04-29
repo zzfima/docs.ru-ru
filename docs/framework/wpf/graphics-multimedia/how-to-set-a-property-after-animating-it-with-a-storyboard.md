@@ -8,11 +8,11 @@ helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
 ms.openlocfilehash: 2e1389392c6465ed56b2c71e53b2e3c1947acbe2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651107"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Практическое руководство. Определение свойства после его анимации с помощью раскадровки
 В некоторых случаях может оказаться, что не удается изменить значение свойства после его анимации.  
@@ -30,11 +30,11 @@ ms.locfileid: "59188322"
   
  Приведенный выше код не выполняет никаких действий: кисть остается желтой, что является значением, предоставляемые <xref:System.Windows.Media.Animation.ColorAnimation> , анимировать кисть. Значение базового свойства (базовое значение) фактически изменяется на синий. Тем не менее эффективно, или текущий, значение остается желтый поскольку <xref:System.Windows.Media.Animation.ColorAnimation> по-прежнему переопределяет базовое значение. Если требуется базовое значение снова становятся действительное значение, необходимо остановить влияние свойства анимации. Существует три способа это сделать с помощью анимации раскадровки:  
   
--   Анимации <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> свойства <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+- Анимации <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> свойства <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
   
--   Удаление всей раскадровки.  
+- Удаление всей раскадровки.  
   
--   Удалите анимацию из отдельного свойства.  
+- Удалите анимацию из отдельного свойства.  
   
 ## <a name="set-the-animations-fillbehavior-property-to-stop"></a>Значение Stop анимации FillBehavior-свойство  
  Установив <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> для <xref:System.Windows.Media.Animation.FillBehavior.Stop>, определяют для остановки влияет на целевое свойство после достижения конца активного периода.  

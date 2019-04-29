@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
 ms.openlocfilehash: 153c96860005046e4cc16d5a965bd569e3519b52
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607934"
 ---
 # <a name="merging-dataset-contents"></a>Слияние содержимого набора данных
 
@@ -18,7 +18,7 @@ ms.locfileid: "57356884"
 
 ## <a name="primary-keys"></a>Первичные ключи
 
-Если таблица, получающая в результате объединения новые данные и схему, имеет первичный ключ, новые строки входных данных сравниваются с существующими строками, имеющими такие же значения первичного ключа <xref:System.Data.DataRowVersion.Original>, что и во входных данных. Если столбцы из входной схемы соответствуют столбцам существующей схемы, данные в существующих строках изменяются. Столбцы, не соответствующие существующей схеме, либо пропускаются, либо добавляются на основании параметра <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>. Новые строки со значениями первичного ключа, которые не соответствуют существующим строкам, добавляются к существующей таблице.
+Если таблица, получающая в результате слияния новые данные и схему, имеет первичный ключ, новые строки входных данных сравниваются с существующими строками, имеющими такие же значения первичного ключа <xref:System.Data.DataRowVersion.Original>, что и во входных данных. Если столбцы из входной схемы соответствуют столбцам существующей схемы, данные в существующих строках изменяются. Столбцы, не соответствующие существующей схеме, либо пропускаются, либо добавляются на основании параметра <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>. Новые строки со значениями первичного ключа, которые не соответствуют существующим строкам, добавляются к существующей таблице.
 
 Если входные или существующие строки имеют состояние <xref:System.Data.DataRowState.Added>, значения их первичных ключей согласуются с использованием значения первичного ключа <xref:System.Data.DataRowVersion.Current> строки `Added`, т. к. не существует версии строки `Original`.
 
@@ -28,10 +28,10 @@ ms.locfileid: "57356884"
 
 ## <a name="table-names-and-namespaces"></a>Имена таблиц и пространства имен
 
-Объектам <xref:System.Data.DataTable> может быть, если необходимо, присвоено значение свойства <xref:System.Data.DataTable.Namespace%2A>. Когда присваиваются значения <xref:System.Data.DataTable.Namespace%2A>, <xref:System.Data.DataSet> может содержать несколько объектов <xref:System.Data.DataTable> с одинаковым значением <xref:System.Data.DataTable.TableName%2A>. Во время операции объединения и <xref:System.Data.DataTable.TableName%2A>, и <xref:System.Data.DataTable.Namespace%2A> используются для идентификации цели объединения. Если <xref:System.Data.DataTable.Namespace%2A> не назначено, только <xref:System.Data.DataTable.TableName%2A> используется для идентификации цели объединения.
+Объектам <xref:System.Data.DataTable> может быть, если необходимо, присвоено значение свойства <xref:System.Data.DataTable.Namespace%2A>. Когда присваиваются значения <xref:System.Data.DataTable.Namespace%2A>, <xref:System.Data.DataSet> может содержать несколько объектов <xref:System.Data.DataTable> с одинаковым значением <xref:System.Data.DataTable.TableName%2A>. Во время операции слияния и <xref:System.Data.DataTable.TableName%2A>, и <xref:System.Data.DataTable.Namespace%2A> используются для идентификации цели слияния. Если <xref:System.Data.DataTable.Namespace%2A> не назначено, только <xref:System.Data.DataTable.TableName%2A> используется для идентификации цели слияния.
 
 > [!NOTE]
-> Это поведение в .NET Framework версии 2.0 изменяется. В версии 1.1 пространства имен поддерживались, но во время операций объединения не учитывались. По этой причине <xref:System.Data.DataSet>, который использует значения свойства <xref:System.Data.DataTable.Namespace%2A>, будет иметь разные характеристики в зависимости от того, какая версия .NET Framework выполняется. Например, предположим, имеются два `DataSets`, содержащие `DataTables` с одинаковыми значениями свойства <xref:System.Data.DataTable.TableName%2A>, но с разными значениями свойства <xref:System.Data.DataTable.Namespace%2A>. В .NET Framework версии 1.1 разные имена <xref:System.Data.DataTable.Namespace%2A> пропускаются, когда объединяются два объекта <xref:System.Data.DataSet>. Однако, начиная с версии 2.0, слияние приводит к созданию в целевом объекте `DataTables` двух новых объектов <xref:System.Data.DataSet>. Исходные таблицы `DataTables` объединением не затрагиваются.
+> Это поведение в .NET Framework версии 2.0 изменяется. В версии 1.1 пространства имен поддерживались, но во время операций слияния не учитывались. По этой причине <xref:System.Data.DataSet>, который использует значения свойства <xref:System.Data.DataTable.Namespace%2A>, будет иметь разные характеристики в зависимости от того, какая версия .NET Framework выполняется. Например, предположим, имеются два `DataSets`, содержащие `DataTables` с одинаковыми значениями свойства <xref:System.Data.DataTable.TableName%2A>, но с разными значениями свойства <xref:System.Data.DataTable.Namespace%2A>. В .NET Framework версии 1.1 разные имена <xref:System.Data.DataTable.Namespace%2A> пропускаются, когда объединяются два объекта <xref:System.Data.DataSet>. Однако, начиная с версии 2.0, слияние приводит к созданию в целевом объекте `DataTables` двух новых объектов <xref:System.Data.DataSet>. Исходные таблицы `DataTables` объединением не затрагиваются.
 
 ## <a name="preservechanges"></a>Флаг PreserveChanges
 
@@ -39,7 +39,7 @@ ms.locfileid: "57356884"
 
 Если `PreserveChanges` имеет значение `true`, данные из существующей строки сохраняются в версии <xref:System.Data.DataRowVersion.Current> текущей строки, в то время как данные из версии <xref:System.Data.DataRowVersion.Original> существующей строки переопределяются данными из версии `Original` входной строки. <xref:System.Data.DataRow.RowState%2A> существующей строки установлен в <xref:System.Data.DataRowState.Modified>. Применяются следующие исключения:
 
-- Если существующая строка имеет версию `RowState` `Deleted`, это `RowState` остается `Deleted` и не устанавливается в `Modified`. В этом случае данные из входной строки будут сохраняться в версии `Original` существующей строки, переопределяя версию `Original` существующей строки (если только входная строка не имеет `RowState`, равное `Added`).
+- Если существующая строка имеет версию `RowState``Deleted`, это `RowState` остается `Deleted` и не устанавливается в `Modified`. В этом случае данные из входной строки будут сохраняться в версии `Original` существующей строки, переопределяя версию `Original` существующей строки (если только входная строка не имеет `RowState`, равное `Added`).
 
 - Если входная строка имеет состояние `RowState`, равное `Added`, данные из версии `Original` существующей строки не переопределяются данными из входной строки, т. к. входная строка не имеет версии `Original`.
 

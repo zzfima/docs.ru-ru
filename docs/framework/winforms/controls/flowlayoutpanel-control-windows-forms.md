@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms, arranging contents
 ms.assetid: 630c9305-9ecf-4f99-94f9-ddf06de82713
 ms.openlocfilehash: ed32d88894b2f0c4be8f1adeca8e891f3ac13810
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651484"
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a>Элемент управления FlowLayoutPanel (Windows Forms)
 Элемент управления `FlowLayoutPanel` упорядочивает свое содержимое в горизонтальном или вертикальном направлении. Его содержимое может быть перенесено из одной строки в следующую или из одного столбца в следующий. Кроме того, вместо переноса содержимое может обрезаться.  

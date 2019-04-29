@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1e31e95473136bf7e7c196eacc278fa8a1caab2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609468"
 ---
 # <a name="corgcreference-structure"></a>Структура COR_GC_REFERENCE
 Содержит сведения об объекте, в котором должна быть выполнена сборка мусора.  
@@ -49,19 +49,19 @@ typedef struct _COR_GC_REFERENCE {
 ## <a name="remarks"></a>Примечания  
  `type` Поле является [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) значение перечисления, указывающее, откуда поступили ссылки. Определенный `COR_GC_REFERENCE` значение может отражать любой из следующих типов управляемых объектов:  
   
--   Объекты из всех управляемых стеков (`CorGCReferenceType.CorReferenceStack`). Сюда входят активных ссылок в управляемый код, а также объекты, созданные средой CLR.  
+- Объекты из всех управляемых стеков (`CorGCReferenceType.CorReferenceStack`). Сюда входят активных ссылок в управляемый код, а также объекты, созданные средой CLR.  
   
--   Объекты из таблицы дескрипторов (`CorGCReferenceType.CorHandle*`). Сюда входят строгих ссылок (`HNDTYPE_STRONG` и `HNDTYPE_REFCOUNT`) и статические переменные в модуле.  
+- Объекты из таблицы дескрипторов (`CorGCReferenceType.CorHandle*`). Сюда входят строгих ссылок (`HNDTYPE_STRONG` и `HNDTYPE_REFCOUNT`) и статические переменные в модуле.  
   
--   Объекты из очереди метода завершения (`CorGCReferenceType.CorReferenceFinalizer`). Обслуживает очередь метода завершения корневых объектов, пока не будет запущен финализатор.  
+- Объекты из очереди метода завершения (`CorGCReferenceType.CorReferenceFinalizer`). Обслуживает очередь метода завершения корневых объектов, пока не будет запущен финализатор.  
   
  `extraData` Поле содержит дополнительные данные в зависимости от источника (или тип) ссылки. Доступны следующие значения:  
   
--   `DependentSource`. Если `type` — `CorGCREferenceType.CorHandleStrongDependent`, это поле является объектом, который, если в активном состоянии, корней объекта сборщиком мусора в `COR_GC_REFERENCE.Location`.  
+- `DependentSource`. Если `type` — `CorGCREferenceType.CorHandleStrongDependent`, это поле является объектом, который, если в активном состоянии, корней объекта сборщиком мусора в `COR_GC_REFERENCE.Location`.  
   
--   `RefCount`. Если `type` является `CorGCREferenceType.CorHandleStrongRefCount`, это поле является счетчик ссылок дескриптора.  
+- `RefCount`. Если `type` является `CorGCREferenceType.CorHandleStrongRefCount`, это поле является счетчик ссылок дескриптора.  
   
--   `Size`. Если `type` является `CorGCREferenceType.CorHandleStrongSizedByref`, это поле является последний размер дерева объектов, для которой сборщик мусора рассчитана корни объекта. Обратите внимание на то, что этот расчет не обязательно в актуальном состоянии.  
+- `Size`. Если `type` является `CorGCREferenceType.CorHandleStrongSizedByref`, это поле является последний размер дерева объектов, для которой сборщик мусора рассчитана корни объекта. Обратите внимание на то, что этот расчет не обязательно в актуальном состоянии.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

@@ -3,11 +3,11 @@ title: Сопоставление ограничений XML-схемы (XSD) ke
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
 ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607505"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Сопоставление ограничений XML-схемы (XSD) keyref с ограничениями набора данных
 **Keyref** элемент позволяет устанавливать ссылки между элементами внутри документа. Это похоже на связь по внешнему ключу в реляционной базе данных. Если в схеме **keyref** элемент преобразуется в процессе сопоставления схемы для соответствующего ограничения внешнего ключа на столбцы в таблицах <xref:System.Data.DataSet>. По умолчанию **keyref** элемент также формирует связь с **ParentTable**, **ChildTable**, **ParentColumn**и  **ChildColumn** свойства, указанными в этой связи.  
@@ -75,7 +75,7 @@ Order(OrderNumber, EmpNumber)
   
  Кроме того **набора данных** определяет следующие ограничения:  
   
--   Ограничение уникальности на **порядок** таблицы.  
+- Ограничение уникальности на **порядок** таблицы.  
   
     ```  
               Table: Order  
@@ -85,7 +85,7 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
--   Отношение между **порядок** и **OrderDetail** таблиц. **Nested** свойству **False** так, как два элемента не являются вложенными в схеме.  
+- Отношение между **порядок** и **OrderDetail** таблиц. **Nested** свойству **False** так, как два элемента не являются вложенными в схеме.  
   
     ```  
               ParentTable: Order  
@@ -98,7 +98,7 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
--   Ограничение внешнего ключа для **OrderDetail** таблицы.  
+- Ограничение внешнего ключа для **OrderDetail** таблицы.  
   
     ```  
               ConstraintName: OrderNoRef  

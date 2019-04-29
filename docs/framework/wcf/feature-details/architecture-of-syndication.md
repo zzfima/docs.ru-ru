@@ -3,24 +3,24 @@ title: Архитектура синдикации
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
 ms.openlocfilehash: 4083f7f7ef3fc986e9a7c430b8ed8cfe451c9d86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596366"
 ---
 # <a name="architecture-of-syndication"></a>Архитектура синдикации
 API синдикации предназначен для обеспечения независимой от формата модели программирования, которая позволяет передавать сводное содержимое по каналам связи в различных форматах. Абстрактная модель данных состоит из следующих классов:  
   
--   <xref:System.ServiceModel.Syndication.SyndicationCategory>  
+- <xref:System.ServiceModel.Syndication.SyndicationCategory>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
+- <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationItem>  
+- <xref:System.ServiceModel.Syndication.SyndicationItem>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationLink>  
+- <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationPerson>  
+- <xref:System.ServiceModel.Syndication.SyndicationPerson>  
   
  Эти классы тесно сопоставлены с конструкциями, определенными в спецификации Atom 1.0, хотя некоторые имена различаются.  
   
@@ -75,7 +75,7 @@ API синдикации предназначен для обеспечения 
   
 ## <a name="extensibility"></a>Расширение среды  
   
--   Ключевой особенностью протоколов синдикации является их расширяемость. Оба протокола, Atom 1.0 и RSS 2.0, позволяют добавлять в веб-каналы атрибуты и элементы, не определенные в спецификациях. Модель программирования синдикации WCF предоставляет два способа работы с пользовательскими атрибутами и расширениями: наследование новый класс и слабо типизированный доступ. Дополнительные сведения см. в разделе [расширяемости синдикации](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
+- Ключевой особенностью протоколов синдикации является их расширяемость. Оба протокола, Atom 1.0 и RSS 2.0, позволяют добавлять в веб-каналы атрибуты и элементы, не определенные в спецификациях. Модель программирования синдикации WCF предоставляет два способа работы с пользовательскими атрибутами и расширениями: наследование новый класс и слабо типизированный доступ. Дополнительные сведения см. в разделе [расширяемости синдикации](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>См. также
 

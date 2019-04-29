@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
 ms.openlocfilehash: d3981be7977b56af0b60f9796519b78dc9ac5db3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640512"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Автоматическое масштабирование в Windows Forms
 
 Автоматическое масштабирование позволяет форме и ее элементам управления, разработанным на одном компьютере с использованием определенного разрешения или системных шрифтов, правильно отображаться на другом компьютере с другим разрешением или системным шрифтом. Оно гарантирует, что размеры формы и ее элементов управления будут изменяться автоматически в соответствии с приложениями Windows и другими приложениями на компьютерах пользователя и разработчика. Поддержка автоматического масштабирования и стилей оформления в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] позволяет приложениям [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] сохранять согласованный внешний вид и поведение на различных компьютерах пользователей, так же как в случае с обычными приложениями Windows.
 
-В большинстве случаев автоматическое масштабирование работает должным образом в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 и более поздних версий. Однако внесение изменений в схему шрифтов может быть проблематичным. Пример того, как устранить эту проблему, см. в разделе [как: реагирование на изменения схемы шрифтов в приложении Windows Forms](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
+В большинстве случаев автоматическое масштабирование работает должным образом в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 2.0 и более поздних версий. Однако внесение изменений в схему шрифтов может быть проблематичным. Пример того, как устранить эту проблему, см. в разделе [как: Реагирование на изменения схемы шрифтов в приложении Windows Forms](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
 
 ## <a name="need-for-automatic-scaling"></a>Необходимость автоматического масштабирования
 

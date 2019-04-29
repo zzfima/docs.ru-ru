@@ -3,11 +3,11 @@ title: Транспорты
 ms.date: 03/30/2017
 ms.assetid: 5c064c51-5863-4fe7-a772-e298841b62ff
 ms.openlocfilehash: dd141ab5f8ea3ae8bafad830777af75a452f4f95
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788236"
 ---
 # <a name="transports"></a>Транспорты
 Транспортный уровень является самым нижним уровнем стека каналов. Основными транспортами, используемыми в Windows Communication Foundation (WCF) являются HTTP, HTTPS, TCP и именованные каналы. В этом разделе представлены элементы конфигурации, которые позволяют настраивать различные типы транспорта.  

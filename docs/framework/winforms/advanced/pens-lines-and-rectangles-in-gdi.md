@@ -18,11 +18,11 @@ helpviewer_keywords:
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
 ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641403"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>Перья, линии и прямоугольники в GDI+
 Чтобы нарисовать линии с [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] необходимо создать <xref:System.Drawing.Graphics> объекта и <xref:System.Drawing.Pen> объекта. <xref:System.Drawing.Graphics> Объект предоставляет методы, которые фактически выполняют рисование, и <xref:System.Drawing.Pen> объект сохраняет атрибуты, такие как цвет, ширину и стиль.  

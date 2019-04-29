@@ -6,11 +6,11 @@ helpviewer_keywords:
 - BetweenShowDelay time property [WPF]
 ms.assetid: 984ea76d-f2a2-4326-a02e-f97ec3d036d6
 ms.openlocfilehash: b6d55c72c8264546949833fc086937a8b1fe2540
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696058"
 ---
 # <a name="how-to-use-the-betweenshowdelay-property"></a>Практическое руководство. Использование свойства BetweenShowDelay
 В этом примере показано, как использовать <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> свойства времени, чтобы подсказки отображаются быстро — с минимальными задержками или без, когда пользователь перемещает указатель мыши из одна подсказка непосредственно в другой.  
@@ -20,9 +20,9 @@ ms.locfileid: "59139598"
   
  В любом из следующих сценариев <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> применяется, чего подсказка для второго эллипса ожидания одной секунды до появления:  
   
--   Если время, необходимое для перемещения вторая кнопка является более двух секунд.  
+- Если время, необходимое для перемещения вторая кнопка является более двух секунд.  
   
--   Если подсказка не отображается в начале периода времени, для первого эллипса.  
+- Если подсказка не отображается в начале периода времени, для первого эллипса.  
   
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
 [!code-xaml[ToolTipService#NoToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  

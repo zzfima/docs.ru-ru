@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 19f657fd76f73c4016824511079e6f037bc3bc53
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61597340"
 ---
 # <a name="putinstancewmi-function"></a>Функция PutInstanceWmi
 
@@ -48,7 +48,7 @@ HRESULT PutInstanceWmi (
 `lFlags`\
 [in] Сочетание флагов, влияющих на поведение этой функции. Следующие значения определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Если задано, WMI не хранит все квалификаторы с **Amended** flavor. <br> В противном случае набор, предполагается, что этот объект не локализован, а все квалификаторы хранятся с этим экземпляром. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Создайте экземпляр, если он не существует, или заменяет его, если он уже существует. |

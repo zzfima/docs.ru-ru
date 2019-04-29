@@ -3,18 +3,18 @@ title: Исходная и целевая папки совпадают
 ms.date: 07/20/2015
 ms.assetid: d4e6f996-8bbe-45f2-b662-f26b4474f44d
 ms.openlocfilehash: a3739afd25971433d78d84bb183c51ab674ecd9a
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58026365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61594767"
 ---
 # <a name="source-folder-and-target-folder-are-the-same"></a>Исходная и целевая папки совпадают
 Была предпринята попытка скопировать или переместить файл, но указанные исходный и конечный каталоги совпадают. Это может быть результатом неправильного разбора пути к файлу.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Убедитесь в том, что исходный и конечный каталоги указаны правильно.  
+- Убедитесь в том, что исходный и конечный каталоги указаны правильно.  
   
 ## <a name="see-also"></a>См. также
 

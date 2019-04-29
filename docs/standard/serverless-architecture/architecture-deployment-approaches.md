@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 5477b8c4531780fdebf194e4f798564e59cd2953
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640286"
 ---
-# <a name="architecture-deployment-approaches"></a>Подходы к архитектуре развертывания
+# <a name="architecture-deployment-approaches"></a>Подходы к развертыванию архитектуры
 
 Независимо от архитектуры подход, используемый при создании бизнес-приложения, реализация или развертывание этих приложений могут различаться. Предприятиям ведущим приложениям все — от физического оборудования бессерверные функции.
 
