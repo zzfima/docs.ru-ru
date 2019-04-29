@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 310915ce84819a2a5a2d5e1f22356b61c16e7ec7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599017"
 ---
-# <a name="corprfstatictype-enumeration"></a><span data-ttu-id="b384c-102">Перечисление COR_PRF_STATIC_TYPE</span><span class="sxs-lookup"><span data-stu-id="b384c-102">COR_PRF_STATIC_TYPE Enumeration</span></span>
-<span data-ttu-id="b384c-103">Указывает, является ли поле статическим и, если да, относящееся к этому полю статическое качество.</span><span class="sxs-lookup"><span data-stu-id="b384c-103">Indicates whether a field is static and, if so, the static quality that applies to the field.</span></span> <span data-ttu-id="b384c-104">Эти значения могут быть объединены с помощью побитовой операции или, чтобы указать, что поле имеет несколько различных статических качеств.</span><span class="sxs-lookup"><span data-stu-id="b384c-104">These values can be combined using the bitwise OR operation to indicate that the field has multiple, different static qualities.</span></span>  
+# <a name="corprfstatictype-enumeration"></a><span data-ttu-id="ae3cf-102">Перечисление COR_PRF_STATIC_TYPE</span><span class="sxs-lookup"><span data-stu-id="ae3cf-102">COR_PRF_STATIC_TYPE Enumeration</span></span>
+<span data-ttu-id="ae3cf-103">Указывает, является ли поле статическим и, если да, относящееся к этому полю статическое качество.</span><span class="sxs-lookup"><span data-stu-id="ae3cf-103">Indicates whether a field is static and, if so, the static quality that applies to the field.</span></span> <span data-ttu-id="ae3cf-104">Эти значения могут быть объединены с помощью побитовой операции или, чтобы указать, что поле имеет несколько различных статических качеств.</span><span class="sxs-lookup"><span data-stu-id="ae3cf-104">These values can be combined using the bitwise OR operation to indicate that the field has multiple, different static qualities.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b384c-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b384c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ae3cf-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ae3cf-105">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -38,25 +38,25 @@ typedef enum {
 } COR_PRF_STATIC_TYPE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b384c-106">Участники</span><span class="sxs-lookup"><span data-stu-id="b384c-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="ae3cf-106">Участники</span><span class="sxs-lookup"><span data-stu-id="ae3cf-106">Members</span></span>  
   
-|<span data-ttu-id="b384c-107">Член</span><span class="sxs-lookup"><span data-stu-id="b384c-107">Member</span></span>|<span data-ttu-id="b384c-108">Описание</span><span class="sxs-lookup"><span data-stu-id="b384c-108">Description</span></span>|  
+|<span data-ttu-id="ae3cf-107">Член</span><span class="sxs-lookup"><span data-stu-id="ae3cf-107">Member</span></span>|<span data-ttu-id="ae3cf-108">Описание</span><span class="sxs-lookup"><span data-stu-id="ae3cf-108">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_NOT_A_STATIC`|<span data-ttu-id="b384c-109">Поле не является статическим.</span><span class="sxs-lookup"><span data-stu-id="b384c-109">The field is not static.</span></span>|  
-|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|<span data-ttu-id="b384c-110">Поле является статическим в домене приложения.</span><span class="sxs-lookup"><span data-stu-id="b384c-110">The field is application domain-static.</span></span>|  
-|`COR_PRF_FIELD_THREAD_STATIC`|<span data-ttu-id="b384c-111">Поля статического потока.</span><span class="sxs-lookup"><span data-stu-id="b384c-111">The field is thread-static.</span></span>|  
-|`COR_PRF_FIELD_CONTEXT_STATIC`|<span data-ttu-id="b384c-112">Поле является статическим в контексте.</span><span class="sxs-lookup"><span data-stu-id="b384c-112">The field is context-static.</span></span>|  
-|`COR_PRF_FIELD_RVA_STATIC`|<span data-ttu-id="b384c-113">Поле является относительный виртуальный адрес (RVA)-статический.</span><span class="sxs-lookup"><span data-stu-id="b384c-113">The field is relative virtual address (RVA)-static.</span></span>|  
+|`COR_PRF_FIELD_NOT_A_STATIC`|<span data-ttu-id="ae3cf-109">Поле не является статическим.</span><span class="sxs-lookup"><span data-stu-id="ae3cf-109">The field is not static.</span></span>|  
+|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|<span data-ttu-id="ae3cf-110">Поле является статическим в домене приложения.</span><span class="sxs-lookup"><span data-stu-id="ae3cf-110">The field is application domain-static.</span></span>|  
+|`COR_PRF_FIELD_THREAD_STATIC`|<span data-ttu-id="ae3cf-111">Поля статического потока.</span><span class="sxs-lookup"><span data-stu-id="ae3cf-111">The field is thread-static.</span></span>|  
+|`COR_PRF_FIELD_CONTEXT_STATIC`|<span data-ttu-id="ae3cf-112">Поле является статическим в контексте.</span><span class="sxs-lookup"><span data-stu-id="ae3cf-112">The field is context-static.</span></span>|  
+|`COR_PRF_FIELD_RVA_STATIC`|<span data-ttu-id="ae3cf-113">Поле является относительный виртуальный адрес (RVA)-статический.</span><span class="sxs-lookup"><span data-stu-id="ae3cf-113">The field is relative virtual address (RVA)-static.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b384c-114">Требования</span><span class="sxs-lookup"><span data-stu-id="b384c-114">Requirements</span></span>  
- <span data-ttu-id="b384c-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b384c-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ae3cf-114">Требования</span><span class="sxs-lookup"><span data-stu-id="ae3cf-114">Requirements</span></span>  
+ <span data-ttu-id="ae3cf-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ae3cf-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b384c-116">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b384c-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ae3cf-116">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ae3cf-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="b384c-117">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b384c-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ae3cf-117">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ae3cf-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b384c-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b384c-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ae3cf-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ae3cf-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b384c-119">См. также</span><span class="sxs-lookup"><span data-stu-id="b384c-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ae3cf-119">См. также</span><span class="sxs-lookup"><span data-stu-id="ae3cf-119">See also</span></span>
 
-- [<span data-ttu-id="b384c-120">Перечисления профилирования</span><span class="sxs-lookup"><span data-stu-id="b384c-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="ae3cf-120">Перечисления профилирования</span><span class="sxs-lookup"><span data-stu-id="ae3cf-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
