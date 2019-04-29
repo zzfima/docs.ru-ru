@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
 ms.openlocfilehash: e371c60e3fb674e4243cec008e1098172725d4cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937726"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Как выполнить: Создание нового параметра во время разработки
 Можно создать новый параметр во время разработки с помощью конструктора параметров. Этот конструктор имеет табличный интерфейс, который позволяет создавать новые параметры и указать свойства для этих параметров. Необходимо указать имя, значение, тип и область для новых параметров. Создав параметр, он доступен в коде.  

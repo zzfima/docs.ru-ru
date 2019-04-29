@@ -1,16 +1,16 @@
 ---
-title: 'Служба: количество поступивших транзакций в секунду'
+title: 'Служба: Количество поступивших транзакций в секунду'
 ms.date: 03/30/2017
 ms.assetid: ec72eb49-2942-4811-91df-d6e5dad81fd8
 ms.openlocfilehash: cb41abe74568c3e9641443b81fce3fb6eb6e41bf
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43874944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939416"
 ---
-# <a name="service-transactions-flowed-per-second"></a>Служба: количество поступивших транзакций в секунду
-Имя счетчика: Transactions Flowed Per Second.  
+# <a name="service-transactions-flowed-per-second"></a>Служба: Количество поступивших транзакций в секунду
+Имя счетчика: Количество поступивших транзакций в секунду.  
   
 ## <a name="description"></a>Описание  
  Количество транзакций в операциях для данной службы в секунду.  

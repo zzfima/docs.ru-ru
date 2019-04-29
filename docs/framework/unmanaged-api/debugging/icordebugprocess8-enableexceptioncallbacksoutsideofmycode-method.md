@@ -7,11 +7,11 @@ ms.assetid: b3af44ec-7d41-425b-aed9-0c4379e5cbe9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 08937e87b8bd2249b8608f8ec1ed1f7734961b3b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948568"
 ---
 # <a name="icordebugprocess8enableexceptioncallbacksoutsideofmycode-method"></a>Метод ICorDebugProcess8::EnableExceptionCallbacksOutsideOfMyCode
 [Поддерживается в [!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] и более поздних версиях]  
@@ -33,9 +33,9 @@ HRESULT EnableExceptionCallbacksOutsideOfMyCode(
 ## <a name="remarks"></a>Примечания  
  Если `enableExceptionsOutsideOfJMC` имеет значение `false`:  
   
--   Исключение DEBUG_EXCEPTION_FIRST_CHANCE не приведет к обратный вызов к отладчику.  
+- Исключение DEBUG_EXCEPTION_FIRST_CHANCE не приведет к обратный вызов к отладчику.  
   
--   Исключение DEBUG_EXCEPTION_CATCH_HANDLER_FOUND не произойдет обратный вызов на отладчик Если исключение никогда не попадает в пользовательский код (то есть путь от источника исключения в обработчик исключений имеет нет методов, помеченных как JustMyCode или JMC).  
+- Исключение DEBUG_EXCEPTION_CATCH_HANDLER_FOUND не произойдет обратный вызов на отладчик Если исключение никогда не попадает в пользовательский код (то есть путь от источника исключения в обработчик исключений имеет нет методов, помеченных как JustMyCode или JMC).  
   
  Значением свойства `enableExceptionsOutsideOfJMC` по умолчанию является `true`.  
   

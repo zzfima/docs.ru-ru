@@ -3,11 +3,11 @@ title: Тестовый клиент WCF (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 ms.openlocfilehash: cd6f0d7a98ca5bc5f6bee45ad296341a5b91b2a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791200"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Тестовый клиент WCF (WcfTestClient.exe)
 Тестовый клиент Windows Communication Foundation (WCF) (WcfTestClient.exe) — это средство с графическим Интерфейсом, позволяющий пользователю вводить тестовые параметры, отправлять их в службу и просматривать ответную службы. Он предоставляет удобный способ тестирования в сочетании с узла службы WCF служб.  
@@ -136,34 +136,34 @@ ms.locfileid: "59106773"
 ## <a name="features-supported-by-wcf-test-client"></a>Возможности, поддерживаемые тестовым клиентом WCF  
  Ниже приведен список функций, поддерживаемых тестовым клиентом WCF:  
   
--   Вызов службы: Запрос-ответ и одностороннее сообщение.  
+- Вызов службы: Запрос-ответ и одностороннее сообщение.  
   
--   Привязки: все привязки, поддерживаемые программой Svcutil.exe.  
+- Привязки: все привязки, поддерживаемые программой Svcutil.exe.  
   
--   Управление сеансом.  
+- Управление сеансом.  
   
--   Контракт сообщения.  
+- Контракт сообщения.  
   
--   XML-сериализация.  
+- XML-сериализация.  
   
  Ниже приведен список компонентов, не поддерживается в тестовом клиенте WCF:  
   
--   Типы: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, типы, в которых реализован интерфейс <xref:System.Xml.Serialization.IXmlSerializable>, включая связанный атрибут <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>, а также типы <xref:System.Xml.Linq.XDocument> и <xref:System.Xml.Linq.XElement> и тип ADO.NET <xref:System.Data.DataTable>.  
+- Типы: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, типы, в которых реализован интерфейс <xref:System.Xml.Serialization.IXmlSerializable>, включая связанный атрибут <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>, а также типы <xref:System.Xml.Linq.XDocument> и <xref:System.Xml.Linq.XElement> и тип ADO.NET <xref:System.Data.DataTable>.  
   
--   Дуплексный контракт.  
+- Дуплексный контракт.  
   
--   Транзакция.  
+- Транзакция.  
   
--   Безопасность: [!INCLUDE[infocard](../../../includes/infocard-md.md)], сертификат, имя пользователя/пароль.  
+- Безопасность: [!INCLUDE[infocard](../../../includes/infocard-md.md)], сертификат, имя пользователя/пароль.  
   
--   Привязки: WSFederationbinding, любые контекстные привязки и привязка Https, WebHttpbinding (поддержка ответных сообщений Json).  
+- Привязки: WSFederationbinding, любые контекстные привязки и привязка Https, WebHttpbinding (поддержка ответных сообщений Json).  
   
 ## <a name="closing-wcf-test-client"></a>Закрытие тестового клиента WCF  
  Тестовый клиент WCF можно закрыть следующими способами:  
   
--   На **файл** меню, щелкните **выхода**. Кроме того, в главном окне тестового клиента WCF, нажмите кнопку **закрыть**. Эти действия также завершить работу WCF Service Auto Host и остановить процесс отладки Visual Studio, если был запущен тестовый клиент WCF в Visual Studio.  
+- На **файл** меню, щелкните **выхода**. Кроме того, в главном окне тестового клиента WCF, нажмите кнопку **закрыть**. Эти действия также завершить работу WCF Service Auto Host и остановить процесс отладки Visual Studio, если был запущен тестовый клиент WCF в Visual Studio.  
   
--   Щелкните правой кнопкой мыши **узел службы WCF** значок в области уведомлений и нажмите кнопку **выхода.** Это завершает работу WCF Service Auto Host и тестовый клиент WCF и останавливается процесс отладки Visual Studio.  
+- Щелкните правой кнопкой мыши **узел службы WCF** значок в области уведомлений и нажмите кнопку **выхода.** Это завершает работу WCF Service Auto Host и тестовый клиент WCF и останавливается процесс отладки Visual Studio.  
   
 ## <a name="see-also"></a>См. также
 

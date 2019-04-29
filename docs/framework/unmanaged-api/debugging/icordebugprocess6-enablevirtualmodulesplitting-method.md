@@ -5,11 +5,11 @@ ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bb41cc47351ccf22fcd522b7d4291c235312bfaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948659"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>Метод ICorDebugProcess6::EnableVirtualModuleSplitting
 Позволяет включить или отключить разделение виртуальных модулей.  
@@ -54,40 +54,40 @@ HRESULT EnableVirtualModuleSplitting(
 ## <a name="behavioral-differences"></a>Различия в поведении  
  Контейнерные модули имеют следующие режимы поведения и характеристики:  
   
--   Их метаданные для всех составных вложенных модулей объединяются друг с другом.  
+- Их метаданные для всех составных вложенных модулей объединяются друг с другом.  
   
--   Имена типов можно изменять.  
+- Имена типов можно изменять.  
   
--   [ICorDebugModule::GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) метод возвращает путь к модулю на диске.  
+- [ICorDebugModule::GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) метод возвращает путь к модулю на диске.  
   
--   [ICorDebugModule::GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) метод возвращает размер данного образа.  
+- [ICorDebugModule::GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) метод возвращает размер данного образа.  
   
--   Метод ICorDebugAssembly3.EnumerateContainedAssemblies перечисляет вложенные модули.  
+- Метод ICorDebugAssembly3.EnumerateContainedAssemblies перечисляет вложенные модули.  
   
--   Метод ICorDebugAssembly3.GetContainerAssembly возвращает `S_FALSE`.  
+- Метод ICorDebugAssembly3.GetContainerAssembly возвращает `S_FALSE`.  
   
  Вложенные модули имеют следующие режимы поведения и характеристики:  
   
--   Они имеют сокращенный набор метаданных, соответствующий исходной сборке, которая была объединена.  
+- Они имеют сокращенный набор метаданных, соответствующий исходной сборке, которая была объединена.  
   
--   Имена метаданных не изменяются.  
+- Имена метаданных не изменяются.  
   
--   Маловероятно, что токены метаданных будут совпадать с токенами в исходной сборке перед тем, как она была объединена в процессе построения.  
+- Маловероятно, что токены метаданных будут совпадать с токенами в исходной сборке перед тем, как она была объединена в процессе построения.  
   
--   [ICorDebugModule::GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) метод возвращает имя сборки, а не путь к файлу.  
+- [ICorDebugModule::GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) метод возвращает имя сборки, а не путь к файлу.  
   
--   [ICorDebugModule::GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) метод возвращает размер исходного (разъединенного) образа.  
+- [ICorDebugModule::GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) метод возвращает размер исходного (разъединенного) образа.  
   
--   Метод ICorDebugModule3.EnumerateContainedAssemblies возвращает `S_FALSE`.  
+- Метод ICorDebugModule3.EnumerateContainedAssemblies возвращает `S_FALSE`.  
   
--   Метод ICorDebugAssembly3.GetContainerAssembly возвращает составной модуль.  
+- Метод ICorDebugAssembly3.GetContainerAssembly возвращает составной модуль.  
   
 ## <a name="interfaces-retrieved-from-modules"></a>Интерфейсы, извлеченные из модулей  
  Из модулей можно создать или извлечь различные интерфейсы. Некоторые из них указаны ниже:  
   
--   ICorDebugClass объекта, который возвращается методом [ICorDebugModule::GetClassFromToken](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md) метод.  
+- ICorDebugClass объекта, который возвращается методом [ICorDebugModule::GetClassFromToken](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md) метод.  
   
--   ICorDebugAssembly объекта, который возвращается методом [ICorDebugModule::GetAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md) метод.  
+- ICorDebugAssembly объекта, который возвращается методом [ICorDebugModule::GetAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md) метод.  
   
  Эти объекты всегда кэшируются методом [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md), и они будут иметь один и тот же идентификатор указателя, независимо от того, является ли она создана или запрошены из контейнерного или вложенного модуля. Вложенный модуль обеспечивает отфильтрованное представление этих кэшированных объектов, но не отдельный кэш со своими собственными копиями.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - security [Windows Forms], WebBrowser control
 ms.assetid: 0968846e-48ee-485a-9797-65b5b9a622f8
 ms.openlocfilehash: 1e658c25ea19f966ac67402c6f3c7693c784d029
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792123"
 ---
 # <a name="webbrowser-security"></a>Безопасность элемента управления WebBrowser
 <xref:System.Windows.Forms.WebBrowser> Управления предназначен для работы в режиме полного доверия. Содержимое HTML, отображаемый в элементе управления могут поступать из внешних веб-серверов и может содержать неуправляемый код в виде скриптов или веб-элементов управления. Если вы используете <xref:System.Windows.Forms.WebBrowser> элемента управления в этом случае элемент управления не менее безопасен, чем бы Internet Explorer, но управляемый <xref:System.Windows.Forms.WebBrowser> управления не такого неуправляемого кода применялось.  

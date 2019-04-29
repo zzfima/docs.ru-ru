@@ -3,11 +3,11 @@ title: Использование действий .NET Framework 3.0 WF на п
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
 ms.openlocfilehash: 33140ac85cd50140c0aa34d1986365fefc005c78
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934723"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Использование действий .NET Framework 3.0 WF на платформе .NET Framework 4 с действием «Interop»
 Действие <xref:System.Activities.Statements.Interop> - это действие [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5), служащее оболочкой для действия [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) в рабочем процессе [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. Действие WF 3 может быть отдельным действием или целым деревом действий. Выполнение (включая отмену и обработку исключений) и сохраняемость действий [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] происходят в контексте выполняющегося экземпляра рабочего процесса [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)].  
@@ -18,13 +18,13 @@ ms.locfileid: "59329418"
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>Условия использования действия WF 3 совместно с действием взаимодействия (Interop)  
  Для успешного выполнения действия WF 3 в действии <xref:System.Activities.Statements.Interop> необходимо соблюдение следующих условий:  
   
--   Действие WF 3 должно быть производным от действия <xref:System.Workflow.ComponentModel.Activity?displayProperty=nameWithType>.  
+- Действие WF 3 должно быть производным от действия <xref:System.Workflow.ComponentModel.Activity?displayProperty=nameWithType>.  
   
--   Действие WF должно быть объявлено, как `public`, оно не может быть `abstract`.  
+- Действие WF должно быть объявлено, как `public`, оно не может быть `abstract`.  
   
--   Действие WF 3 должно иметь открытый конструктор по умолчанию.  
+- Действие WF 3 должно иметь открытый конструктор по умолчанию.  
   
--   Из-за ограничений типов интерфейсов, поддерживаемых действием <xref:System.Activities.Statements.Interop>, <xref:System.Workflow.Activities.HandleExternalEventActivity> и <xref:System.Workflow.Activities.CallExternalMethodActivity> не могут использоваться непосредственно, но можно использовать производные действия, созданные с помощью инструмента Workflow Communication Activity (WCA.exe). См. в разделе [средства Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=178889) подробные сведения.  
+- Из-за ограничений типов интерфейсов, поддерживаемых действием <xref:System.Activities.Statements.Interop>, <xref:System.Workflow.Activities.HandleExternalEventActivity> и <xref:System.Workflow.Activities.CallExternalMethodActivity> не могут использоваться непосредственно, но можно использовать производные действия, созданные с помощью инструмента Workflow Communication Activity (WCA.exe). См. в разделе [средства Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=178889) подробные сведения.  
   
 ## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a>Настройка действия WF 3 внутри действия взаимодействия  
  Для настройки, отправки и получения данных из действия WF 3 через границы взаимодействия свойства и метаданные действия WF 3 представляются действием <xref:System.Activities.Statements.Interop>. Свойства метаданных действия WF 3 (например, <xref:System.Workflow.ComponentModel.Activity.Name%2A>) предоставляются посредством коллекции <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A>. Это коллекция пар имя-значение, используемых для определения значений для свойств метаданных действия WF 3. Свойство метаданных - это свойство, поддерживаемое свойством зависимости, для которого установлен флаг <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata>.  

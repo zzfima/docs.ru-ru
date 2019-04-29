@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f994dfb2b72eacce0b53ae6f49a8173749dd96f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783010"
 ---
 # <a name="icordebugreferencevaluedereferencestrong-method"></a>Метод ICorDebugReferenceValue::DereferenceStrong
-`DereferenceStrong` не реализовано. Не вызывайте этот метод.  
+`DereferenceStrong` Не реализован. Этот метод не вызывается.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,10 +36,10 @@ HRESULT DereferenceStrong (
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

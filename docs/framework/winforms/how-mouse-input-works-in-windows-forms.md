@@ -6,11 +6,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
 ms.openlocfilehash: c9193ffa9ef34f1e43a92feec230fa2282264147
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966989"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Осуществление ввода мышью в Windows Forms
 Получение и обработка ввода с мыши является важной частью каждое приложение Windows. Можно обработать события мыши для выполнения действий в приложении, или использовать сведения о расположении мыши для проверки нажатия или других действий. Кроме того можно изменить способ, элементы управления в приложении обрабатывать ввод от мыши. В этом разделе описываются события мыши в подробности, а также как получать и изменять параметры системы для мыши. Дополнительные сведения о данных, передаваемых с помощью мыши вызываются события и порядок, в котором события щелчка мыши, см. в разделе [события мыши в Windows Forms](mouse-events-in-windows-forms.md).  

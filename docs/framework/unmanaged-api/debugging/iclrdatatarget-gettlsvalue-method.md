@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 21fa9a17067f754fe9b13c4d32193856a57750ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698139"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>Метод ICLRDataTarget::GetTLSValue
 Возвращает значение из локального хранилища потока (TLS) из указанного потока в целевом процессе. Этот метод вызывается службами доступа к данным среды CLR.  

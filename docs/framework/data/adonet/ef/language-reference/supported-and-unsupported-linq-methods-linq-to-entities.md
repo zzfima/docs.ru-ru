@@ -3,11 +3,11 @@ title: Поддерживаемые и неподдерживаемые мето
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
 ms.openlocfilehash: 74b3973f931fa6f0d1f5b380833b8d5e5566563b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797687"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Поддерживаемые и неподдерживаемые методы LINQ (LINQ to Entities)
 В данном разделе приводятся сведения о стандартных операторах запросов LINQ, поддерживаемых или неподдерживаемых в запросах [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. У многих стандартных операторов запросов LINQ существуют перегруженные версии, принимающие целочисленный аргумент. Отсчитываемый от нуля индекс в последовательности, которой выполняется операция, соответствующий целочисленному аргументу <xref:System.Collections.Generic.IEqualityComparer%601>, или <xref:System.Collections.Generic.IComparer%601>. Если не указано обратное, эти перегруженные версии стандартных операторов LINQ не поддерживаются и при попытке их использования будет вызвано исключение.  

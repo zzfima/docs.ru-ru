@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
 ms.openlocfilehash: a85745d39903719ec1e44ccf70df72d472720b7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956290"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Установка режимов заполнения для столбцов элемента управления DataGridView в Windows Forms
 В режиме заполнения столбцов элемент управления <xref:System.Windows.Forms.DataGridView> автоматически изменяет размер своих столбцов, чтобы они полностью заполняли доступную область отображения по ширине. Элемент управления не отображает горизонтальную полосу прокрутки, за исключением случаев, когда необходимо сохранить ширину каждого столбца равной или большей, чем значение его свойства <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
@@ -45,22 +45,22 @@ ms.locfileid: "59214732"
 ### <a name="comments"></a>Комментарии  
  Использование этого демонстрационного приложения.  
   
--   Измените размер формы. Обратите внимание, как изменяется ширина столбцов и одновременно сохраняются пропорции, указанные значениями свойства <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
+- Измените размер формы. Обратите внимание, как изменяется ширина столбцов и одновременно сохраняются пропорции, указанные значениями свойства <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
   
--   Измените размеры столбцов, перетаскивая их разделители с помощью мыши. Обратите внимание, как изменяются значения <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
+- Измените размеры столбцов, перетаскивая их разделители с помощью мыши. Обратите внимание, как изменяются значения <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
   
--   Измените значение <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> для одного столбца, а затем перетащите для изменения размеров формы. Обратите внимание, что при достаточном уменьшении размера формы, значения <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> не становятся меньше значений <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
+- Измените значение <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> для одного столбца, а затем перетащите для изменения размеров формы. Обратите внимание, что при достаточном уменьшении размера формы, значения <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> не становятся меньше значений <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
   
--   Измените значения <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> для всех столбцов на большие числа, чтобы суммарное значение было больше ширины элемента управления. Обратите внимание, как появляется горизонтальная полоса прокрутки.  
+- Измените значения <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> для всех столбцов на большие числа, чтобы суммарное значение было больше ширины элемента управления. Обратите внимание, как появляется горизонтальная полоса прокрутки.  
   
--   Измените значения <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> для некоторых столбцов. Наблюдайте результат при изменении размера столбцов или формы.  
+- Измените значения <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> для некоторых столбцов. Наблюдайте результат при изменении размера столбцов или формы.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылки на сборки System, System.Drawing и System.Windows.Forms.  
+- ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
--   Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
+- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
 

@@ -3,11 +3,11 @@ title: Распространение
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
 ms.openlocfilehash: faa0e6ecb53963587e3fc253cd8beae1dc2c4bf5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971383"
 ---
 # <a name="propagation"></a>Распространение
 В этом разделе описывается распространение действий в модели трассировки Windows Communication Foundation (WCF).  
@@ -26,11 +26,11 @@ ms.locfileid: "59154041"
 ## <a name="propagation-definition"></a>Определение распространения  
  Идентификатор gAId действия M распространяется на действие N, если выполняются все следующие условия.  
   
--   N создается из-за M.  
+- N создается из-за M.  
   
--   Идентификатор gAId M известен N.  
+- Идентификатор gAId M известен N.  
   
--   Идентификатор gAId N равен идентификатору gAId M.  
+- Идентификатор gAId N равен идентификатору gAId M.  
   
  Идентификатор gAId распространяется через заголовок сообщения ActivityId, как показано в следующей схеме XML.  
   

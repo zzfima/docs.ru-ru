@@ -16,11 +16,11 @@ helpviewer_keywords:
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
 ms.openlocfilehash: 42a36351ad70bc16b6cad63450ee5fcb3ed4f1ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971812"
 ---
 # <a name="date-data-type-visual-basic"></a>Тип данных Date (Visual Basic)
 Содержит 64-разрядные (8-байтные) значения IEEE, представляющие даты в диапазоне от 1 января 0001 года до 31 декабря 9999 года и время от 00:00:00 (полночь) до 23:59:9999999. Каждое приращение представляет 100 наносекунд затраченного времени с начала 1 января 1 года по григорианскому календарю. Максимальное значение представляет 100 наносекунд перед началом 1 января 10 000 года.  
@@ -61,11 +61,11 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
   
 ## <a name="programming-tips"></a>Советы по программированию  
   
--   **Вопросы взаимодействия.** При взаимодействие с компонентами, которые не написаны для платформы .NET Framework (например, автоматизация или COM-объекты), необходимо помнить, что в других средах типы даты и времени несовместимы с типом `Date` Visual Basic. Если вы передаете аргумент даты и времени такому компоненту, объявите его `Double`, а не как `Date` в новом коде Visual Basic и используйте методы преобразования <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> и <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.  
+- **Вопросы взаимодействия.** При взаимодействие с компонентами, которые не написаны для платформы .NET Framework (например, автоматизация или COM-объекты), необходимо помнить, что в других средах типы даты и времени несовместимы с типом `Date` Visual Basic. Если вы передаете аргумент даты и времени такому компоненту, объявите его `Double`, а не как `Date` в новом коде Visual Basic и используйте методы преобразования <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> и <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.  
   
--   **Символы типа.** `Date` не имеет знак типа литерала или знак типа идентификатора. Однако компилятор обрабатывает литералы, заключенные в решетки (`# #`), как `Date`.  
+- **Символы типа.** `Date` не имеет знак типа литерала или знак типа идентификатора. Однако компилятор обрабатывает литералы, заключенные в решетки (`# #`), как `Date`.  
   
--   **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.DateTime?displayProperty=nameWithType>.  
+- **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.DateTime?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Пример  
  Переменная или константа типа данных `Date` содержит дату и время. Это показано в следующем примере.  

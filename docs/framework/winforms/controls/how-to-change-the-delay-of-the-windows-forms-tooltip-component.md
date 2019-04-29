@@ -11,11 +11,11 @@ helpviewer_keywords:
 - examples [Windows Forms], tooltips
 ms.assetid: 08979ba7-dd84-477b-ab17-8d06e759be99
 ms.openlocfilehash: cf257cccd272c16c3d7c3d403456265444fc8ac8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781242"
 ---
 # <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>Практическое руководство. Изменение значения задержки для компонента ToolTip в Windows Forms
 Существует несколько значений задержки, которые можно задать для форм Windows <xref:System.Windows.Forms.ToolTip> компонента. Единица измерения для этих свойств — миллисекунд. <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> Свойство определяет, как долго пользователь должен указывать на элементом управления, чтобы появилась строка подсказки. <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> Свойство задает время в миллисекундах, затрачиваемое последующие строки подсказки будут выводиться при перемещении мыши от одного элемента управления связанный всплывающей подсказки в другой. <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> Определяет продолжительность времени, строки всплывающей подсказки. Эти значения можно задать по отдельности, или установив значение <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> свойство; другие свойства задаются с учетом на значение, присваиваемое задержка <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> свойство. Например, если <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> присваивается значение N, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> имеет значение N, <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> присваивается значение <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> деленное на пять (или N/5), и <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> присваивается значение, пять раз значение <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> свойство (или 5N).  

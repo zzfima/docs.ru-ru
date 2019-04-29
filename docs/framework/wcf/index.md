@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
 ms.openlocfilehash: 56054216dc6e90e789c230acb3d56565a9ba3d69
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928678"
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>Разработка сервисноориентированных приложений с помощью WCF
 В этом разделе документации приводятся сведения о Windows Communication Foundation (WCF) — унифицированной модели программирования для сборки сервисноориентированных приложений. Она позволяет разработчикам построить безопасные надежные решения с поддержкой транзакций и возможностью межплатформенной интеграции и взаимодействия с существующими инвестициями.
@@ -35,7 +35,7 @@ ms.locfileid: "33804275"
  Описывает основные принципы создания приложений Windows Communication Foundation.  
   
  [Подробные сведения о возможностях WCF](../../../docs/framework/wcf/feature-details/index.md)  
- Содержит список разделов, которые можно выбрать, какие WCF или функций следует использовать.  
+ Перечислены разделы, которые можно выбрать, какие WCF или функций следует использовать.  
   
  [Расширение WCF](../../../docs/framework/wcf/extending/index.md)  
  Описывает, как изменять и расширять WCF-компоненты времени выполнения  

@@ -3,11 +3,11 @@ title: 201 - ClientMessageInspectorAfterReceiveInvoked
 ms.date: 03/30/2017
 ms.assetid: 9ff637f1-cc26-4400-ab9b-546f70e5057d
 ms.openlocfilehash: 96ca318c141d49e2ac5594d5ee101658a2aa8f21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782042"
 ---
 # <a name="201---clientmessageinspectorafterreceiveinvoked"></a>201 - ClientMessageInspectorAfterReceiveInvoked
 ## <a name="properties"></a>Свойства  
@@ -30,5 +30,5 @@ ms.locfileid: "33459028"
 |Имя элемента данных|Тип элемента данных|Описание|  
 |--------------------|--------------------|-----------------|  
 |TypeName|`xs:string`|Имя CLR FullName типа вызванного инспектора.|  
-|HostReference|`xs:string`|Для служб, размещенных на веб-узле, это поле является уникальным идентификатором службы в веб-иерархии. Ее формат определяется как "веб-сайт имя виртуальный путь приложения&#124;виртуальный путь службы&#124;имя_службы". Пример: "по умолчанию веб-сайта или CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService".|  
-|AppDomain|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|HostReference|`xs:string`|Для служб, размещенных на веб-узле, это поле является уникальным идентификатором службы в веб-иерархии. Формат определяется как "виртуальный путь приложения имя веб-сайта&#124;виртуальный путь службы&#124;ServiceName". Пример "По умолчанию веб-сайт/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService".|  
+|Домен приложения|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|

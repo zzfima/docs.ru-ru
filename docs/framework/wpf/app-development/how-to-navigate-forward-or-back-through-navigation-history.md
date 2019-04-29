@@ -9,11 +9,11 @@ helpviewer_keywords:
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
 ms.openlocfilehash: 4c20ebfab45a24cf34b1476fb94dae6913fb4d99
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947762"
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>Практическое руководство. Переход вперед или назад по журналу навигации
 В этом примере показано, как для перехода к записи в журнале переходов вперед или назад.  
@@ -21,11 +21,11 @@ ms.locfileid: "57366664"
 ## <a name="example"></a>Пример  
  Код, выполняемый из содержимого в следующими узлами можно перейти вперед или назад по журналу переходов, одной записи за раз.  
   
--   <xref:System.Windows.Navigation.NavigationWindow> С помощью <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Navigation.NavigationWindow> С помощью <xref:System.Windows.Navigation.NavigationService>  
   
--   <xref:System.Windows.Controls.Frame> С помощью <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Controls.Frame> С помощью <xref:System.Windows.Navigation.NavigationService>  
   
--   [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
+- [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
   
  Прежде чем можно будет перейти вперед на одну запись, сначала следует проверить, записи в журнале переходов вперед, проверяя **CanGoForward** свойство. Чтобы перейти вперед на одну запись, необходимо вызвать **GoForward** метод. Это показано в следующем примере:  
   

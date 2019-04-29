@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
 ms.openlocfilehash: ef41b458a3f5b977eaaff523413c1a8d3b1982a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793423"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Асинхронные операции (службы данных WCF)
 При разработке веб-приложений необходимо учитывать наличие большего времени задержки между клиентом и сервером по сравнению с приложениями, выполняющимися во внутренних сетях. Для оптимизации производительности и взаимодействия приложения с пользователем рекомендуется использовать асинхронные методы классов <xref:System.Data.Services.Client.DataServiceContext> и <xref:System.Data.Services.Client.DataServiceQuery%601> при доступе к серверам [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] через Интернет.  

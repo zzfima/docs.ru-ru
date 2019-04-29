@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
 ms.openlocfilehash: e038da545bb3f56cc757710bcaa93aa2c86bfa67
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967119"
 ---
 # <a name="how-to-render-images-with-gdi"></a>Практическое руководство. Отрисовка изображений с использованием GDI+
 Для вывода изображений, которые существуют в виде файлов в приложениях, можно использовать [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Это сделать, создав новый объект <xref:System.Drawing.Image> класс (такие как <xref:System.Drawing.Bitmap>), создавая <xref:System.Drawing.Graphics> объекта, который ссылается на поверхность рисования, вы хотите использовать и вызов <xref:System.Drawing.Graphics.DrawImage%2A> метод <xref:System.Drawing.Graphics> объекта. Изображение будет выведено на поверхность для рисования, представленную классом Graphics. Можно создавать и редактировать файлы изображений во время разработки с помощью редактора изображений и отображать их во время выполнения, используя [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Дополнительные сведения см. в разделе [Редактор изображений для значков](/cpp/windows/image-editor-for-icons).  

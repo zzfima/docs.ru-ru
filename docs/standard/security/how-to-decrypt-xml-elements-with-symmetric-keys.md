@@ -16,11 +16,11 @@ ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c569407bac247e60075834e67fde9327ce6bc4a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795139"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Практическое руководство. Расшифровка XML-элементов с помощью симметричных ключей
 Классы можно использовать в пространстве имен <xref:System.Security.Cryptography.Xml> для шифрования элемента XML-документа.  Шифрование XML-данных позволяет хранить или передавать важные XML-данные, не беспокоясь о том, что они могут быть прочитаны.  Этот пример кода выполняет расшифровку XML-элемента при помощи алгоритма AES, также известного как Rijndael.  
@@ -72,9 +72,9 @@ ms.locfileid: "59334631"
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
--   Чтобы скомпилировать этот пример, необходимо включить ссылку на `System.Security.dll`.  
+- Чтобы скомпилировать этот пример, необходимо включить ссылку на `System.Security.dll`.  
   
--   Включите следующие пространства имен: <xref:System.Xml>, <xref:System.Security.Cryptography> и <xref:System.Security.Cryptography.Xml>.  
+- Включите следующие пространства имен: <xref:System.Xml>, <xref:System.Security.Cryptography> и <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Никогда не храните криптографический ключ в формате обычного текста и не передавайте этот ключ в таком формате между компьютерами.  

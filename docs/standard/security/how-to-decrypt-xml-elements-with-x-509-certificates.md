@@ -16,11 +16,11 @@ ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 72e5f1e72d3ce7ec954d61216bbac2e0e1b5a428
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795126"
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Практическое руководство. Дешифровка XML-элементов с помощью сертификатов X.509
 Классы можно использовать в пространстве имен <xref:System.Security.Cryptography.Xml> для шифрования и расшифровки элемента XML-документа.  Шифрование XML-данных — это стандартный способ обмена зашифрованными XML-данными и их хранения, позволяющий не беспокоиться о том, что эти данные могут быть прочитаны.  Дополнительные сведения о стандарте XML-шифрования, см. в спецификации консорциума World Wide Web (W3C) XML-шифрования, расположенным в <https://www.w3.org/TR/xmldsig-core/>.  
@@ -70,9 +70,9 @@ ms.locfileid: "59301208"
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
--   Чтобы скомпилировать этот пример, необходимо включить ссылку на `System.Security.dll`.  
+- Чтобы скомпилировать этот пример, необходимо включить ссылку на `System.Security.dll`.  
   
--   Включите следующие пространства имен: <xref:System.Xml>, <xref:System.Security.Cryptography> и <xref:System.Security.Cryptography.Xml>.  
+- Включите следующие пространства имен: <xref:System.Xml>, <xref:System.Security.Cryptography> и <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Используемый в этом примере сертификат X.509 предназначен исключительно для тестирования.  Приложения должны использовать сертификат X.509, созданный доверенным центром сертификации или сервером сертификатов Microsoft Windows.  

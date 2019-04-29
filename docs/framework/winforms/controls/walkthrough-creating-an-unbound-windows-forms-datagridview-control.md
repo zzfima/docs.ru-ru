@@ -12,11 +12,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
 ms.openlocfilehash: 99561490786f3f3569f272138001ea5ad8937410
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792266"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Пошаговое руководство. Создание не связанного с данными элемента управления DataGridView в Windows Forms
 Часто можно показать табличные данные, полученные не из базы данных. Например можно отображать содержимое двухмерный массив строк. <xref:System.Windows.Forms.DataGridView> Класс обеспечивает удобный и настраиваемый способ отображения данных без привязки к источнику данных. В этом пошаговом руководстве показано, как для заполнения <xref:System.Windows.Forms.DataGridView> управлять добавлением и удалением строк в режиме «свободный». По умолчанию пользователь может добавлять новые строки. Чтобы запретить добавление строк, задайте <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> свойство `false`.  
@@ -75,22 +75,22 @@ ms.locfileid: "59343473"
   
 #### <a name="to-test-the-form"></a>Чтобы проверить форму  
   
--   Нажмите клавишу F5 для запуска приложения.  
+- Нажмите клавишу F5 для запуска приложения.  
   
      Вы увидите <xref:System.Windows.Forms.DataGridView> элемент управления, отображающий песен, перечисленные в `PopulateDataGridView`. Можно добавить новые строки со **добавить строку** кнопку и можно удалить выбранные строки с **удалить строку** кнопки. Свободные <xref:System.Windows.Forms.DataGridView> управления хранилища данных и его данные не зависят от внешних источников, таких как <xref:System.Data.DataSet> или массив.  
   
 ## <a name="next-steps"></a>Следующие шаги  
  Это приложение позволяет базовое представление о <xref:System.Windows.Forms.DataGridView> возможности элемента управления. Можно настроить внешний вид и поведение <xref:System.Windows.Forms.DataGridView> управления несколькими способами:  
   
--   Изменение стилей границ и заголовка. Дополнительные сведения см. в разделе [Как Изменение границ и линий сетки в Windows Forms элемента управления DataGridView](change-the-border-and-gridline-styles-in-the-datagrid.md).  
+- Изменение стилей границ и заголовка. Дополнительные сведения см. в разделе [Как Изменение границ и линий сетки в Windows Forms элемента управления DataGridView](change-the-border-and-gridline-styles-in-the-datagrid.md).  
   
--   Разрешить или ограничить ввод данных пользователями <xref:System.Windows.Forms.DataGridView> элемента управления. Дополнительные сведения см. в разделе [Как Запретить добавление строк и удаления в Windows Forms элемента управления DataGridView](prevent-row-addition-and-deletion-datagridview.md), и [как: Определение столбцов только для чтения в Windows Forms элемента управления DataGridView](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
+- Разрешить или ограничить ввод данных пользователями <xref:System.Windows.Forms.DataGridView> элемента управления. Дополнительные сведения см. в разделе [Как Запретить добавление строк и удаления в Windows Forms элемента управления DataGridView](prevent-row-addition-and-deletion-datagridview.md), и [как: Определение столбцов только для чтения в Windows Forms элемента управления DataGridView](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
   
--   Проверьте входные данные пользователя для ошибки, относящиеся к базе данных. Дополнительные сведения см. в разделе [Пошаговое руководство: Обработка ошибок, возникающих во время ввода данных в Windows Forms элемента управления DataGridView](handling-errors-that-occur-during-data-entry-in-the-datagrid.md).  
+- Проверьте входные данные пользователя для ошибки, относящиеся к базе данных. Дополнительные сведения см. в разделе [Пошаговое руководство: Обработка ошибок, возникающих во время ввода данных в Windows Forms элемента управления DataGridView](handling-errors-that-occur-during-data-entry-in-the-datagrid.md).  
   
--   Обработка очень больших наборов данных в виртуальном режиме. Дополнительные сведения см. в разделе [Пошаговое руководство: Реализация виртуального режима в Windows Forms элемента управления DataGridView](implementing-virtual-mode-wf-datagridview-control.md).  
+- Обработка очень больших наборов данных в виртуальном режиме. Дополнительные сведения см. в разделе [Пошаговое руководство: Реализация виртуального режима в Windows Forms элемента управления DataGridView](implementing-virtual-mode-wf-datagridview-control.md).  
   
--   Настройка внешнего вида ячеек. Дополнительные сведения см. в разделе [Как Настройка внешнего вида ячеек элемента управления DataGridView в Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) и [как: Установка стилей ячейки по умолчанию для управления DataGridView в Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
+- Настройка внешнего вида ячеек. Дополнительные сведения см. в разделе [Как Настройка внешнего вида ячеек элемента управления DataGridView в Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) и [как: Установка стилей ячейки по умолчанию для управления DataGridView в Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>См. также
 

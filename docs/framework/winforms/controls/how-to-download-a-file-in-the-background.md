@@ -15,11 +15,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
 ms.openlocfilehash: af5a607b4800635d096e83b55a5bd5a912c8538d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941507"
 ---
 # <a name="how-to-download-a-file-in-the-background"></a>Практическое руководство. Фоновая загрузка файла
 Загрузка файла — это обычная задача, и было бы разумным запускать эту потенциально длительную операцию в отдельном потоке. С помощью компонента <xref:System.ComponentModel.BackgroundWorker> и небольшого фрагмента кода эта задача легко решается.  
@@ -58,7 +58,7 @@ ms.locfileid: "59128782"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылки на сборки System.Drawing, System.Windows.Forms и System.Xml.  
+- ссылки на сборки System.Drawing, System.Windows.Forms и System.Xml.  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   

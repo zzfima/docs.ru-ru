@@ -11,11 +11,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
 ms.openlocfilehash: 79937f0801a790d4ff1ab327aaaf45ef1b881827
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954548"
 ---
 # <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>Практическое руководство. Использование матрицы цветов для задания значений прозрачности в изображениях
 <xref:System.Drawing.Bitmap> Класс (который наследуется от <xref:System.Drawing.Image> класс) и <xref:System.Drawing.Imaging.ImageAttributes> предоставляют функциональные возможности для получения и установки значения в пикселях. Можно использовать <xref:System.Drawing.Imaging.ImageAttributes> значений для изменения альфа-канал для всего изображения, или можно вызвать <xref:System.Drawing.Bitmap.SetPixel%2A> метод <xref:System.Drawing.Bitmap> класса для изменения значений отдельных пикселей.  

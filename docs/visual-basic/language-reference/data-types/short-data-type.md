@@ -17,11 +17,11 @@ helpviewer_keywords:
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
 ms.openlocfilehash: d4dab1a72d1e240bc428b2c6b83a722584e35ecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971799"
 ---
 # <a name="short-data-type-visual-basic"></a>Тип данных Short (Visual Basic)
 Содержит знаком 16-разрядных целых чисел (2-байтовое), которые могут меняться в диапазоне от-32 768 до 32 767.  
@@ -62,11 +62,11 @@ Dim number = &H_3264S
 
 ## <a name="programming-tips"></a>Советы по программированию
 
--   **Расширяющие.** `Short` Тип данных можно расширить до `Integer`, `Long`, `Decimal`, `Single`, или `Double`. Это означает, что тип `Short` можно преобразовать в любой из этих типов без возникновения ошибки <xref:System.OverflowException?displayProperty=nameWithType>.  
+- **Расширяющие.** `Short` Тип данных можно расширить до `Integer`, `Long`, `Decimal`, `Single`, или `Double`. Это означает, что тип `Short` можно преобразовать в любой из этих типов без возникновения ошибки <xref:System.OverflowException?displayProperty=nameWithType>.  
   
--   **Символы типа.** При добавлении к литералу символа типа литерала `S` производится принудительное приведение литерала к типу данных `Short`. `Short` не имеет тип символа идентификатора.  
+- **Символы типа.** При добавлении к литералу символа типа литерала `S` производится принудительное приведение литерала к типу данных `Short`. `Short` не имеет тип символа идентификатора.  
   
--   **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.Int16?displayProperty=nameWithType>.  
+- **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.Int16?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
 

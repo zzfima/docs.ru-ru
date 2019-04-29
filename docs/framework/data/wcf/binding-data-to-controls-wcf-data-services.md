@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
 ms.openlocfilehash: fb2a7c8e1cf3fbae4c6417dab492343ead991204
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793454"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Привязка данных к элементам управления (службы данных WCF)
 С помощью служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] можно привязывать элементы управления, такие как `ComboBox` и `ListView`, к экземпляру класса <xref:System.Data.Services.Client.DataServiceCollection%601>. Эта коллекция, наследуемая от класса <xref:System.Collections.ObjectModel.ObservableCollection%601>, содержит данные из канала [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Этот класс представляет коллекцию динамических данных, обеспечивающих выдачу уведомлений при добавлении и удалении элементов. При использовании экземпляра <xref:System.Data.Services.Client.DataServiceCollection%601> для привязки данных, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиентские библиотеки обрабатывать эти события для объектов, отслеживаемых контекстом <xref:System.Data.Services.Client.DataServiceContext> будут синхронизированы с данными в привязанном элементе пользовательского интерфейса.  
@@ -73,17 +73,17 @@ ms.locfileid: "59517880"
 ## <a name="customizing-data-binding-behaviors"></a>Настройка поведения привязки данных  
  Класс <xref:System.Data.Services.Client.DataServiceCollection%601> позволяет перехватывать события, возникающие при изменении коллекции, например при добавлении или удалении объекта, а также при модификации свойств объекта в коллекции. Имеется возможность модифицировать события привязки для переопределения поведения по умолчанию со следующими ограничениями.  
   
--   В делегатах не выполняется никаких проверок.  
+- В делегатах не выполняется никаких проверок.  
   
--   При добавлении сущности автоматически добавляются связанные сущности.  
+- При добавлении сущности автоматически добавляются связанные сущности.  
   
--   При удалении сущности связанные сущности не удаляются.  
+- При удалении сущности связанные сущности не удаляются.  
   
  При создании нового экземпляра <xref:System.Data.Services.Client.DataServiceCollection%601> имеется возможность указать следующие параметры, определяющие делегаты методов для обработки событий, возникающих при изменении привязанных объектов.  
   
--   `entityChanged` — метод, вызываемый при изменении свойства привязанного объекта. Делегат <xref:System.Func%602> принимает объект <xref:System.Data.Services.Client.EntityChangedParams> и возвращает логическое значение, указывающее, должно ли по-прежнему применяться поведение по умолчанию, то есть вызов метода <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> контекста <xref:System.Data.Services.Client.DataServiceContext>.  
+- `entityChanged` — метод, вызываемый при изменении свойства привязанного объекта. Делегат <xref:System.Func%602> принимает объект <xref:System.Data.Services.Client.EntityChangedParams> и возвращает логическое значение, указывающее, должно ли по-прежнему применяться поведение по умолчанию, то есть вызов метода <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> контекста <xref:System.Data.Services.Client.DataServiceContext>.  
   
--   `entityCollectionChanged` — метод, вызываемый при добавлении или удалении объекта из коллекции привязок. Делегат <xref:System.Func%602> принимает объект <xref:System.Data.Services.Client.EntityCollectionChangedParams> и возвращает логическое значение, указывающее, должно ли по-прежнему применяться поведение по умолчанию, то есть вызов метода <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> для действия <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> или метода <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> для действия <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> применительно к контексту <xref:System.Data.Services.Client.DataServiceContext>.  
+- `entityCollectionChanged` — метод, вызываемый при добавлении или удалении объекта из коллекции привязок. Делегат <xref:System.Func%602> принимает объект <xref:System.Data.Services.Client.EntityCollectionChangedParams> и возвращает логическое значение, указывающее, должно ли по-прежнему применяться поведение по умолчанию, то есть вызов метода <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> для действия <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> или метода <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> для действия <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> применительно к контексту <xref:System.Data.Services.Client.DataServiceContext>.  
   
 > [!NOTE]
 >  Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] не выполняют никаких проверок специализированного поведения, реализованного в этих делегатах.  
@@ -101,15 +101,15 @@ ms.locfileid: "59517880"
 ## <a name="data-binding-with-custom-client-data-classes"></a>Привязка данных с помощью специализированных клиентских классов данных  
  Для загрузки объектов в коллекцию <xref:System.Data.Services.Client.DataServiceCollection%601> эти объекты сами должны реализовывать интерфейс <xref:System.ComponentModel.INotifyPropertyChanged>. Клиентские классы, которые создаются при использовании службы данных **Add Service Reference** диалоговое окно или [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) реализуют данный интерфейс. При предоставлении собственных клиентских классов данных необходимо использовать другой тип коллекции для привязки данных. При изменении объектов необходимо обрабатывать события в элементах управления с привязанными данными для вызова следующих методов класса <xref:System.Data.Services.Client.DataServiceContext>.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> — при добавлении в коллекцию нового объекта.  
+- <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> — при добавлении в коллекцию нового объекта.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> — при удалении объекта из коллекции.  
+- <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> — при удалении объекта из коллекции.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> — при изменении свойства объекта в коллекции.  
+- <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> — при изменении свойства объекта в коллекции.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> — при добавлении объекта в коллекцию связанного объекта.  
+- <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> — при добавлении объекта в коллекцию связанного объекта.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> — при добавлении объекта в коллекцию связанных объектов.  
+- <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> — при добавлении объекта в коллекцию связанных объектов.  
   
  Дополнительные сведения см. в разделе [обновление службы данных](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   

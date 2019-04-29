@@ -3,11 +3,11 @@ title: Обработка ошибок веб-протокола HTTP WCF
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
 ms.openlocfilehash: 834c642e36e1551081dbe1f14529ed7596df1360
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935490"
 ---
 # <a name="wcf-web-http-error-handling"></a>Обработка ошибок веб-протокола HTTP WCF
 Обработка ошибок Web HTTP Windows Communication Foundation (WCF) позволяет возвращать ошибки из службы WCF Web HTTP, которые указывают код состояния HTTP и возвращают сведения об ошибке, используя формат операции (например, XML или JSON).  
@@ -39,11 +39,11 @@ Public string Operation2()
   
  В приведенном выше коде возвращается ответ HTTP с кодом состояния «доступ запрещен» и экземпляром объекта `MyErrorDetails` в теле ответа. Формат объекта `MyErrorDetails` определяется следующими элементами.  
   
--   Значение параметра `ResponseFormat` атрибута <xref:System.ServiceModel.Web.WebGetAttribute> или <xref:System.ServiceModel.Web.WebInvokeAttribute>, указанного в операции службы.  
+- Значение параметра `ResponseFormat` атрибута <xref:System.ServiceModel.Web.WebGetAttribute> или <xref:System.ServiceModel.Web.WebInvokeAttribute>, указанного в операции службы.  
   
--   Значение <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>.  
+- Значение <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>.  
   
--   Значение свойства <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> при обращении к <xref:System.ServiceModel.Web.OutgoingWebResponseContext>.  
+- Значение свойства <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> при обращении к <xref:System.ServiceModel.Web.OutgoingWebResponseContext>.  
   
  Дополнительные сведения о том, как эти значения влияют на форматирование операции см. в разделе [WCF Web HTTP форматирование](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
   

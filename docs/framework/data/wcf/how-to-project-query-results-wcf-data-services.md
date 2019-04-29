@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 474ac625-8770-43ba-8320-d3315ea9530f
 ms.openlocfilehash: 4b0646c2ad45a86691b86b1dd5f112f598ee2dfd
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788743"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>Практическое руководство. Спроецировать результаты запроса (службы данных WCF)
 Проекция представляет собой механизм уменьшения объема возвращаемых запросом данных путем указания того, что в ответе возвращаются только определенные свойства сущности. Можно выполнить проекции результатов [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] запроса с помощью `$select` параметра запроса или с помощью [выберите](~/docs/csharp/language-reference/keywords/select-clause.md) предложение ([выберите](~/docs/visual-basic/language-reference/queries/select-clause.md) в Visual Basic) в запросе LINQ. Дополнительные сведения см. в разделе [запросы к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  

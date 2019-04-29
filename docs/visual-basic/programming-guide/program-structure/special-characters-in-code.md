@@ -31,11 +31,11 @@ helpviewer_keywords:
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
 ms.openlocfilehash: 65fcd10521742e287c7934080b3352a06668df7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967990"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Специальные символы в коде (Visual Basic)
 Иногда необходимо использовать специальные символы в коде, то есть символы, которые не являются буквой или цифрой. Знаки препинания и специальные символы в кодировке Visual Basic имеют различные применения, от организации текста программы до определения задач, выполняемых компилятором или скомпилированной программой. Эти знаки не определяют операции, подлежащие выполнению.  

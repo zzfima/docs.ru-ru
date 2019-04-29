@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cells [Windows Forms], getting and setting current
 ms.assetid: b0e41e57-493a-4bd0-9376-a6f76723540c
 ms.openlocfilehash: fb71a6e3259d3007e11f528377c95a9c4cbeb023
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971331"
 ---
 # <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Считывание и установка значения текущей ячейки элемента управления DataGridView в Windows Forms
 Взаимодействие с <xref:System.Windows.Forms.DataGridView> часто требуется программно найденные ячейки, которая в данный момент активна. Кроме того, может потребоваться изменить текущую ячейку. Можно выполнять эти задачи с помощью <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> свойство.  
@@ -26,14 +26,14 @@ ms.locfileid: "59096983"
   
 ### <a name="to-get-the-current-cell-programmatically"></a>Чтобы получить текущую ячейку программным способом  
   
--   Используйте <xref:System.Windows.Forms.DataGridView> элемента управления <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> свойство.  
+- Используйте <xref:System.Windows.Forms.DataGridView> элемента управления <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> свойство.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#080](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#080)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#080](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#080)]  
   
 ### <a name="to-set-the-current-cell-programmatically"></a>Установка текущей ячейки программным способом  
   
--   Задайте <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> свойство <xref:System.Windows.Forms.DataGridView> элемента управления. В следующем примере кода текущая ячейка имеет значение в строке 0, столбец 1.  
+- Задайте <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> свойство <xref:System.Windows.Forms.DataGridView> элемента управления. В следующем примере кода текущая ячейка имеет значение в строке 0, столбец 1.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#085](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#085)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#085](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#085)]  
@@ -41,11 +41,11 @@ ms.locfileid: "59096983"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   <xref:System.Windows.Forms.Button> элементы управления с именем `getCurrentCellButton` и `setCurrentCellButton`. В визуальном элементе C#, необходимо присоединить <xref:System.Windows.Forms.Control.Click> событий для каждой кнопки в соответствующем обработчике событий в примере кода.  
+- <xref:System.Windows.Forms.Button> элементы управления с именем `getCurrentCellButton` и `setCurrentCellButton`. В визуальном элементе C#, необходимо присоединить <xref:System.Windows.Forms.Control.Click> событий для каждой кнопки в соответствующем обработчике событий в примере кода.  
   
--   элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`;  
+- элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`;  
   
--   ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
+- ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
 

@@ -3,11 +3,11 @@ title: Управление данными в таблице данных
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
 ms.openlocfilehash: 96be67859d9fd136d7ad370ae06d9fcf33426f53
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785428"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Управление данными в таблице данных
 После создания объекта <xref:System.Data.DataTable> в объекте <xref:System.Data.DataSet> можно выполнять такие же действия, как и при использовании таблицы в базе данных. Можно добавлять, просматривать, изменять и удалять данные в таблице. Можно отслеживать ошибки и события; кроме того, можно запрашивать находящиеся в таблице данные. При изменении данных в **DataTable**, также можно проверить правильность изменений и определить, программно принять или отклонить изменения.  

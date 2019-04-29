@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data-bound columns
 ms.assetid: 699f6f9e-6aa5-4811-902b-6a2c57dec7d6
 ms.openlocfilehash: 4490a24047f5cce1328d68c529783a1d7692ff32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954314"
 ---
 # <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>Практическое руководство. Автоматическое создание столбцов связанного с данными элемента управления DataGridView в Windows Forms
 В следующем примере кода показано, как отобразить столбцы из привязанного источника данных в <xref:System.Windows.Forms.DataGridView> элемента управления. Когда <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> свойство имеет значение `true` (по умолчанию), <xref:System.Windows.Forms.DataGridViewColumn> создается для каждого столбца в исходной таблице данных.  
@@ -28,11 +28,11 @@ ms.locfileid: "59166001"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   элемент управления <xref:System.Windows.Forms.DataGridView> с именем `customersDataGridView`;  
+- элемент управления <xref:System.Windows.Forms.DataGridView> с именем `customersDataGridView`;  
   
--   Объект <xref:System.Data.DataSet> объект с именем `customersDataSet` , содержащий таблицу с именем `Customers`.  
+- Объект <xref:System.Data.DataSet> объект с именем `customersDataSet` , содержащий таблицу с именем `Customers`.  
   
--   ссылки на сборки <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType> и <xref:System.Xml?displayProperty=nameWithType>.  
+- ссылки на сборки <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType> и <xref:System.Xml?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
 

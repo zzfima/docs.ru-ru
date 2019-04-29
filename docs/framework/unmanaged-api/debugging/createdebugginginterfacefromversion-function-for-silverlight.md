@@ -11,11 +11,11 @@ ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 77164f9d8a1641ba37fa504d09d77ec6aecc3db5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965819"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>Функция CreateDebuggingInterfaceFromVersion Silverlight
 Принимает общую строку версии среды выполнения (CLR) языка, возвращенный [функция CreateVersionStringFromModule](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)и возвращает соответствующий интерфейс отладчика (как правило, [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)).  

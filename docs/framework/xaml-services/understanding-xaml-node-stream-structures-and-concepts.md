@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
 ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954093"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Общее представление о понятиях и структурах потока узлов XAML
 
@@ -45,13 +45,13 @@ ms.locfileid: "58824433"
 
 - В зависимости от типа <xref:System.Xaml.XamlNodeType> , возвращенного для текущего узла или текущей записи, вызовите один из следующих объектов, чтобы получить сведения о содержимом узла.
 
-    - Для типа <xref:System.Xaml.XamlXmlReader.NodeType%2A> объекта <xref:System.Xaml.XamlNodeType.StartMember> или <xref:System.Xaml.XamlNodeType.EndMember>вызовите <xref:System.Xaml.XamlXmlReader.Member%2A> , чтобы получить сведения <xref:System.Xaml.XamlMember> о члене. Обратите внимание, что этот член может быть <xref:System.Xaml.XamlDirective>, и поэтому не обязательно является стандартно определяемым членом предыдущего объекта. Например, примененная к объекту директива `x:Name` отображается как член XAML, свойство <xref:System.Xaml.XamlMember.IsDirective%2A> которого имеет значение true, свойство <xref:System.Xaml.XamlMember.Name%2A> этого члена имеет значение `Name`, а другие свойства указывают, что эта директива находится в пространстве имен XAML языка XAML.
+  - Для типа <xref:System.Xaml.XamlXmlReader.NodeType%2A> объекта <xref:System.Xaml.XamlNodeType.StartMember> или <xref:System.Xaml.XamlNodeType.EndMember>вызовите <xref:System.Xaml.XamlXmlReader.Member%2A> , чтобы получить сведения <xref:System.Xaml.XamlMember> о члене. Обратите внимание, что этот член может быть <xref:System.Xaml.XamlDirective>, и поэтому не обязательно является стандартно определяемым членом предыдущего объекта. Например, примененная к объекту директива `x:Name` отображается как член XAML, свойство <xref:System.Xaml.XamlMember.IsDirective%2A> которого имеет значение true, свойство <xref:System.Xaml.XamlMember.Name%2A> этого члена имеет значение `Name`, а другие свойства указывают, что эта директива находится в пространстве имен XAML языка XAML.
 
-    - Для типа <xref:System.Xaml.XamlXmlReader.NodeType%2A> объекта <xref:System.Xaml.XamlNodeType.StartObject> или <xref:System.Xaml.XamlNodeType.EndObject>вызовите <xref:System.Xaml.XamlXmlReader.Type%2A> , чтобы получить сведения <xref:System.Xaml.XamlType> об объекте.
+  - Для типа <xref:System.Xaml.XamlXmlReader.NodeType%2A> объекта <xref:System.Xaml.XamlNodeType.StartObject> или <xref:System.Xaml.XamlNodeType.EndObject>вызовите <xref:System.Xaml.XamlXmlReader.Type%2A> , чтобы получить сведения <xref:System.Xaml.XamlType> об объекте.
 
-    - Для типа <xref:System.Xaml.XamlXmlReader.NodeType%2A> объекта <xref:System.Xaml.XamlNodeType.Value>вызовите <xref:System.Xaml.XamlXmlReader.Value%2A>. Узел имеет значение только в том случае, если он является простейшим выражением значения для члена или текстом инициализации объекта (однако следует иметь в виду поведение преобразования типов, как описано в следующем разделе этой статьи).
+  - Для типа <xref:System.Xaml.XamlXmlReader.NodeType%2A> объекта <xref:System.Xaml.XamlNodeType.Value>вызовите <xref:System.Xaml.XamlXmlReader.Value%2A>. Узел имеет значение только в том случае, если он является простейшим выражением значения для члена или текстом инициализации объекта (однако следует иметь в виду поведение преобразования типов, как описано в следующем разделе этой статьи).
 
-    - Для типа <xref:System.Xaml.XamlXmlReader.NodeType%2A> объекта <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>вызовите <xref:System.Xaml.XamlXmlReader.Namespace%2A> , чтобы получить сведения о пространстве имен для узла пространства имен.
+  - Для типа <xref:System.Xaml.XamlXmlReader.NodeType%2A> объекта <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>вызовите <xref:System.Xaml.XamlXmlReader.Namespace%2A> , чтобы получить сведения о пространстве имен для узла пространства имен.
 
 - Вызовите метод <xref:System.Xaml.XamlXmlReader.Read%2A> , чтобы средство чтения XAML перешло к следующему узлу в потоке узлов XAML, и повторите эти действия.
 
@@ -140,15 +140,15 @@ while (xxr.Read()) {
 
 - Узел `Value` представляет само значение; это не EndValue. За ним может следовать только `EndMember`.
 
-    - Текст инициализации XAML объекта, который может использоваться конструкцией, не приводит к структуре «Объект-значение». Вместо этого создается выделенный узел для члена с именем `_Initialization` , и этот узел члена содержит строку значения инициализации. Если он существует, то `_Initialization` всегда является первым `StartMember`. Член`_Initialization` может быть определен в некоторых представлениях служб XAML при помощи области имен XAML языка XAML, чтобы уточнить, что `_Initialization` не является заданным свойством в резервных типах.
+  - Текст инициализации XAML объекта, который может использоваться конструкцией, не приводит к структуре «Объект-значение». Вместо этого создается выделенный узел для члена с именем `_Initialization` , и этот узел члена содержит строку значения инициализации. Если он существует, то `_Initialization` всегда является первым `StartMember`. Член`_Initialization` может быть определен в некоторых представлениях служб XAML при помощи области имен XAML языка XAML, чтобы уточнить, что `_Initialization` не является заданным свойством в резервных типах.
 
-    - Комбинация «Член-значение» представляет настройку атрибута значения. В конечном итоге возможно включение преобразователя значений в обработку этого значения, и значение представляет собой простую строку. Однако это не вычисляется до тех пор, пока средство записи объектов XAML не обработает этот поток узлов. Средство записи объектов XAML обрабатывает необходимый контекст схемы XAML, сопоставление системы типов и другую поддержку, необходимую для преобразований значений.
+  - Комбинация «Член-значение» представляет настройку атрибута значения. В конечном итоге возможно включение преобразователя значений в обработку этого значения, и значение представляет собой простую строку. Однако это не вычисляется до тех пор, пока средство записи объектов XAML не обработает этот поток узлов. Средство записи объектов XAML обрабатывает необходимый контекст схемы XAML, сопоставление системы типов и другую поддержку, необходимую для преобразований значений.
 
 - За узлом `EndMember` может следовать узел `StartMember` для последующего члена или узел `EndObject` для владельца этого члена.
 
 - За узлом `EndObject` может следовать узел `EndMember` . За ним может также следовать узел `StartObject` для случаев, когда эти объекты являются одноранговыми узлами в элементах коллекции. Кроме того, за ним может следовать узел `Namespace` , который относится к следующему `StartObject`.
 
-    - В исключительном случае закрытия всего потока узлов за объектом `EndObject` корня не следует ничего; средство чтения достигает конца файла, и метод <xref:System.Xaml.XamlReader.Read%2A> возвращает значение `false`.
+  - В исключительном случае закрытия всего потока узлов за объектом `EndObject` корня не следует ничего; средство чтения достигает конца файла, и метод <xref:System.Xaml.XamlReader.Read%2A> возвращает значение `false`.
 
 <a name="value_converters_and_the_xaml_node_stream"></a>
 

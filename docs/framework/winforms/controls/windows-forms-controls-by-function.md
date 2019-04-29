@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
 ms.openlocfilehash: 3a82642c985b7ec1cee885cdda7b054adbe3dfee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969472"
 ---
 # <a name="windows-forms-controls-by-function"></a>Функциональная классификация элементов управления Windows Forms
 Windows Forms предоставляет элементы управления и компоненты, которые выполняют несколько функций. Ниже перечислены элементы управления Windows Forms и компоненты в соответствии с основной функцией. Кроме того Если существуют несколько элементов управления, которые выполняют одинаковую функцию, рекомендуемый элемент управления отображается с примечание, касающееся элемент управления, который он заменен. В отдельной таблице с их рекомендуемые замены перечислены устаревшие элементы управления.  

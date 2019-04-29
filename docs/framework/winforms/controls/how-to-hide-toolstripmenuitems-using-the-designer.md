@@ -7,11 +7,11 @@ helpviewer_keywords:
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
 ms.openlocfilehash: 31c597a0e2cbf41484f19c8d4179823e9fb929ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941210"
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>Практическое руководство. Скрытие объектов ToolStripMenuItem с помощью конструктора
 Скрытие пунктов меню — это способ управления пользовательским интерфейсом (UI) приложения и ограничить команды пользователя. Часто требуется скрыть меню целиком, когда все элементы меню на нем будут недоступны. Это меньше отвлекаться для пользователя. Кроме того можно скрыть и отключить меню или пункта меню, как скрытие не запрещает пользователю доступ к команде меню с помощью сочетания клавиш. Дополнительные сведения об отключении пунктов меню см. в разделе [как: Отключение объектов ToolStripMenuItem с помощью конструктора](how-to-disable-toolstripmenuitems-using-the-designer.md).  

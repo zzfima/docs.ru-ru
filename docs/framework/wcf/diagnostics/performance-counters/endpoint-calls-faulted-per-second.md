@@ -3,11 +3,11 @@ title: 'Конечная точка: Количество сбоев вызов�
 ms.date: 03/30/2017
 ms.assetid: 9840fc0a-0e4d-4638-96fd-40e3ab9e4667
 ms.openlocfilehash: f425d95868a9ba5bc3c2f2291db2bc414b1918e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797310"
 ---
 # <a name="endpoint-calls-faulted-per-second"></a>Конечная точка: Количество сбоев вызовов в секунду
 Имя счетчика: Количество сбоев вызовов в секунду.  

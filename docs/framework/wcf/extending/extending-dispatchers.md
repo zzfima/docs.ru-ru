@@ -5,11 +5,11 @@ helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
 ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967620"
 ---
 # <a name="extending-dispatchers"></a>Расширение диспетчеров
 Диспетчеры отвечают за удаление входящих сообщений из базовых каналов, их перевод в вызовы метода в коде приложения и отправку результатов обратно вызывающему коду. Расширения диспетчера позволяют изменить эту процедуру.  Можно реализовать инспекторы сообщений или параметров, которые инспектируют или изменяют содержимое сообщений или параметров.  Можно изменить способ перенаправления сообщений в операции или обеспечить какие-либо другие функции.  
@@ -40,37 +40,37 @@ ms.locfileid: "59335034"
 ## <a name="scenarios"></a>Сценарии  
  Существует несколько причин для расширения диспетчера.  
   
--   Пользовательская проверка сообщений Пользователи могут принудительно указать, что сообщение допустимо для определенной схемы. Для этого нужно реализовать интерфейсы перехватчиков сообщений. Например, см. в разделе [инспекторы сообщений](../../../../docs/framework/wcf/samples/message-inspectors.md).  
+- Пользовательская проверка сообщений Пользователи могут принудительно указать, что сообщение допустимо для определенной схемы. Для этого нужно реализовать интерфейсы перехватчиков сообщений. Например, см. в разделе [инспекторы сообщений](../../../../docs/framework/wcf/samples/message-inspectors.md).  
   
--   Ведение пользовательского журнала сообщений Пользователи могут проверять и регистрировать некоторый набор сообщений приложения, которые проходят через конечную точку. Для этого также можно использовать интерфейсы перехватчиков сообщений.  
+- Ведение пользовательского журнала сообщений Пользователи могут проверять и регистрировать некоторый набор сообщений приложения, которые проходят через конечную точку. Для этого также можно использовать интерфейсы перехватчиков сообщений.  
   
--   Пользовательские преобразования сообщений Пользователи могут применять к сообщению определенные преобразования в среде выполнения (например, для управления версиями). Для этого также можно использовать интерфейсы перехватчиков сообщений.  
+- Пользовательские преобразования сообщений Пользователи могут применять к сообщению определенные преобразования в среде выполнения (например, для управления версиями). Для этого также можно использовать интерфейсы перехватчиков сообщений.  
   
--   Пользовательская модель данных Пользователи могут иметь модель сериализации данных, кроме тех, по умолчанию поддерживаются в WCF (а именно, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>и необработанные сообщения). Для этого также можно реализовать интерфейсы модулей форматирования сообщений. Например, см. в разделе [модуль форматирования и селектор операции](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
+- Пользовательская модель данных Пользователи могут иметь модель сериализации данных, кроме тех, по умолчанию поддерживаются в WCF (а именно, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>и необработанные сообщения). Для этого также можно реализовать интерфейсы модулей форматирования сообщений. Например, см. в разделе [модуль форматирования и селектор операции](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
   
--   Пользовательская проверка параметров Пользователи могут проводить принудительную проверку допустимости типизированных параметров (в отличие от XML). Для этого также можно использовать интерфейсы инспекторов параметров.  
+- Пользовательская проверка параметров Пользователи могут проводить принудительную проверку допустимости типизированных параметров (в отличие от XML). Для этого также можно использовать интерфейсы инспекторов параметров.  
   
--   Пользовательская диспетчеризация операций Пользователи могут диспетчеризовать не только действия, но и, например, элементы тела сообщения или пользовательские свойства сообщения. Это можно сделать с помощью интерфейса <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>. Например, см. в разделе [модуль форматирования и селектор операции](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
+- Пользовательская диспетчеризация операций Пользователи могут диспетчеризовать не только действия, но и, например, элементы тела сообщения или пользовательские свойства сообщения. Это можно сделать с помощью интерфейса <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>. Например, см. в разделе [модуль форматирования и селектор операции](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
   
--   Использование пулов объектов Пользователи могут объединять экземпляры в пул, вместо того чтобы выделять новый экземпляр для каждого вызова. Это можно реализовать с помощью интерфейсов поставщика экземпляров. Например, см. в разделе [Pooling](../../../../docs/framework/wcf/samples/pooling.md).  
+- Использование пулов объектов Пользователи могут объединять экземпляры в пул, вместо того чтобы выделять новый экземпляр для каждого вызова. Это можно реализовать с помощью интерфейсов поставщика экземпляров. Например, см. в разделе [Pooling](../../../../docs/framework/wcf/samples/pooling.md).  
   
--   Аренда экземпляров Пользователи могут реализовать шаблон аренды для времени существования экземпляра, аналогичный шаблону удаленного взаимодействия .NET Framework. Это можно сделать с помощью интерфейсов времени существования контекста экземпляра.  
+- Аренда экземпляров Пользователи могут реализовать шаблон аренды для времени существования экземпляра, аналогичный шаблону удаленного взаимодействия .NET Framework. Это можно сделать с помощью интерфейсов времени существования контекста экземпляра.  
   
--   Пользовательская обработка ошибок Пользователи могут управлять как обработкой локальных ошибок, так и передачей ошибок обратно клиентам. Это можно реализовать с помощью интерфейсов <xref:System.ServiceModel.Dispatcher.IErrorHandler>.  
+- Пользовательская обработка ошибок Пользователи могут управлять как обработкой локальных ошибок, так и передачей ошибок обратно клиентам. Это можно реализовать с помощью интерфейсов <xref:System.ServiceModel.Dispatcher.IErrorHandler>.  
   
--   Пользовательские поведения авторизации Пользователи могут осуществлять пользовательское управление доступом, расширяя элементы среды выполнения контракта или операции и добавляя проверки безопасности на основе маркеров, присутствующих в сообщении. Это можно сделать с помощью интерфейсов перехватчиков сообщений или перехватчиков параметров. Примеры, см. в разделе [расширяемость средств обеспечения безопасности](../../../../docs/framework/wcf/samples/security-extensibility.md).  
+- Пользовательские поведения авторизации Пользователи могут осуществлять пользовательское управление доступом, расширяя элементы среды выполнения контракта или операции и добавляя проверки безопасности на основе маркеров, присутствующих в сообщении. Это можно сделать с помощью интерфейсов перехватчиков сообщений или перехватчиков параметров. Примеры, см. в разделе [расширяемость средств обеспечения безопасности](../../../../docs/framework/wcf/samples/security-extensibility.md).  
   
     > [!CAUTION]
     >  Так как изменение свойств безопасности потенциально может угрожать безопасности приложений WCF, настоятельно рекомендуется предпринять изменения, связанные с безопасностью, с осторожностью и тщательно протестировать до развертывания.  
   
--   Пользовательские проверяющие элементы управления средой выполнения WCF Можно установить пользовательские проверяющие элементы управления, которые анализируют службы, контракты и привязки для принудительного выполнения политик корпоративного уровня с точки зрения приложений WCF. (Например, см. в разделе [как: Блокировка конечных точек на предприятии](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).)  
+- Пользовательские проверяющие элементы управления средой выполнения WCF Можно установить пользовательские проверяющие элементы управления, которые анализируют службы, контракты и привязки для принудительного выполнения политик корпоративного уровня с точки зрения приложений WCF. (Например, см. в разделе [как: Блокировка конечных точек на предприятии](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).)  
   
 ### <a name="using-the-dispatchruntime-class"></a>Использование класса DispatchRuntime  
  Используйте класс <xref:System.ServiceModel.Dispatcher.DispatchRuntime> либо для изменения поведения службы по умолчанию или отдельной конечной точки, либо для вставки объектов, реализующих пользовательские изменения, в один (или оба) из следующих процессов служб (или процессов клиентов, если речь идет о дуплексном клиенте).  
   
--   Преобразование входящих сообщений в объекты и выпуск этих объектов в качестве вызовов методов на объекте службы.  
+- Преобразование входящих сообщений в объекты и выпуск этих объектов в качестве вызовов методов на объекте службы.  
   
--   Преобразование объектов, принятых от ответа на вызов операции службы, в исходящие сообщения.  
+- Преобразование объектов, принятых от ответа на вызов операции службы, в исходящие сообщения.  
   
  Объект <xref:System.ServiceModel.Dispatcher.DispatchRuntime> разрешает перехватывать и расширять диспетчеры каналов или конечных точек для всех сообщений в конкретном контракте, даже если сообщение не распознается. При приеме сообщения, не соответствующего ни одному из заданных в контракте сообщений, оно отправляется операции, возвращаемой свойством <xref:System.ServiceModel.Dispatcher.DispatchRuntime.UnhandledDispatchOperation%2A>. Сведения о перехвате или расширении всех сообщений для конкретной операции см. в описании класса <xref:System.ServiceModel.Dispatcher.DispatchOperation>.  
   
@@ -84,17 +84,17 @@ ms.locfileid: "59335034"
   
 4. Компоненты, относящиеся к безопасности, могут использовать следующие свойства:  
   
-    -   Свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> обозначает место записи событий аудита.  
+    - Свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> обозначает место записи событий аудита.  
   
-    -   Свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> определяет, будет ли служба пытаться производить олицетворение при помощи учетных данных, предоставленных во входящем сообщении.  
+    - Свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> определяет, будет ли служба пытаться производить олицетворение при помощи учетных данных, предоставленных во входящем сообщении.  
   
-    -   Свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> определяет, будут ли события успешной проверки подлинности сообщения записываться в журнал событий, указанный в <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
+    - Свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> определяет, будут ли события успешной проверки подлинности сообщения записываться в журнал событий, указанный в <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
   
-    -   Свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> управляет способом задания свойства <xref:System.Threading.Thread.CurrentPrincipal%2A>.  
+    - Свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> управляет способом задания свойства <xref:System.Threading.Thread.CurrentPrincipal%2A>.  
   
-    -   Свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> указывает каким образом производится аудит событий авторизации.  
+    - Свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> указывает каким образом производится аудит событий авторизации.  
   
-    -   Свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> указывает, будут ли подавляться некритические исключения, создаваемые в процессе ведения журнала.  
+    - Свойство <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> указывает, будут ли подавляться некритические исключения, создаваемые в процессе ведения журнала.  
   
  Обычно объекты пользовательских расширений присваиваются свойству <xref:System.ServiceModel.Dispatcher.DispatchRuntime> или вставляются в коллекцию поведением службы (объект, реализующий <xref:System.ServiceModel.Description.IServiceBehavior>), поведением контракта (объект, реализующий <xref:System.ServiceModel.Description.IContractBehavior>) или поведением конечной точки (объект, реализующий <xref:System.ServiceModel.Description.IEndpointBehavior>). После этого объект устанавливающего поведения добавляется в соответствующую коллекцию поведений программно или реализацией пользовательского объекта <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, чтобы разрешить вставку поведения с помощью файла конфигурации приложения.  
   
@@ -109,23 +109,23 @@ ms.locfileid: "59335034"
   
  Следующие свойства управляют выполнением среды выполнения на уровне операции.  
   
--   Свойства <xref:System.ServiceModel.Dispatcher.DispatchOperation.Action%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReplyAction%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsOneWay%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsTerminating%2A> и <xref:System.ServiceModel.Dispatcher.DispatchOperation.Name%2A> получают значения, соответствующие операции.  
+- Свойства <xref:System.ServiceModel.Dispatcher.DispatchOperation.Action%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReplyAction%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsOneWay%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsTerminating%2A> и <xref:System.ServiceModel.Dispatcher.DispatchOperation.Name%2A> получают значения, соответствующие операции.  
   
--   Свойства <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete%2A> и <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A> задают поведение транзакции.  
+- Свойства <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete%2A> и <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A> задают поведение транзакции.  
   
--   Свойства <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceBeforeCall%2A> и <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceAfterCall%2A> управляют временем существования пользовательского объекта службы относительно <xref:System.ServiceModel.InstanceContext>.  
+- Свойства <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceBeforeCall%2A> и <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceAfterCall%2A> управляют временем существования пользовательского объекта службы относительно <xref:System.ServiceModel.InstanceContext>.  
   
--   Свойства <xref:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply%2A> и <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> разрешают явное управление преобразованием сообщений в объекты и наоборот.  
+- Свойства <xref:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply%2A> и <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> разрешают явное управление преобразованием сообщений в объекты и наоборот.  
   
--   Свойство <xref:System.ServiceModel.Dispatcher.DispatchOperation.Impersonation%2A> задает уровень олицетворения операции.  
+- Свойство <xref:System.ServiceModel.Dispatcher.DispatchOperation.Impersonation%2A> задает уровень олицетворения операции.  
   
--   Свойство <xref:System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers%2A> вставляет пользовательские расширения контекста вызова для операции.  
+- Свойство <xref:System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers%2A> вставляет пользовательские расширения контекста вызова для операции.  
   
--   Свойство <xref:System.ServiceModel.Dispatcher.DispatchOperation.AutoDisposeParameters%2A> управляет временем уничтожения объектов параметров.  
+- Свойство <xref:System.ServiceModel.Dispatcher.DispatchOperation.AutoDisposeParameters%2A> управляет временем уничтожения объектов параметров.  
   
--   Свойство <xref:System.ServiceModel.Dispatcher.DispatchOperation.Invoker%2A> вставляет пользовательский объект средства вызова.  
+- Свойство <xref:System.ServiceModel.Dispatcher.DispatchOperation.Invoker%2A> вставляет пользовательский объект средства вызова.  
   
--   Свойство <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> позволяет вставлять пользовательский инспектор параметров, который можно использовать для проверки или изменения параметров и возвращаемых значений.  
+- Свойство <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> позволяет вставлять пользовательский инспектор параметров, который можно использовать для проверки или изменения параметров и возвращаемых значений.  
   
 ## <a name="see-also"></a>См. также
 

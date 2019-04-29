@@ -8,11 +8,11 @@ helpviewer_keywords:
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
 ms.openlocfilehash: c247ada67f6554362f287cf252dd49856c4995da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955588"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Ключевые слова как имена элементов в коде (Visual Basic)
 Любым элементам программы, такие как переменная, класс или член — может иметь имя, совпадающее с именем служебное слово. Например, можно создать переменную с именем `Loop`. Тем не менее для ссылки на переменную, который имеет то же имя, что ограниченных `Loop` ключевое слово — необходимо поставили полной строки или заключите его в квадратные скобки (`[ ]`), как показано в следующем примере.  

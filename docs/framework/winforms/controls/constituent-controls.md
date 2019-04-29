@@ -10,11 +10,11 @@ helpviewer_keywords:
 - user controls [Windows Forms], constituent controls
 ms.assetid: 5565e720-198b-4bbd-a2bd-c447ba641798
 ms.openlocfilehash: 76a5a4f9b02a71616d247a1bb0f03cc0aec1d70d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956079"
 ---
 # <a name="constituent-controls"></a>Составные элементы управления
 Элементы управления, составляющие пользовательский элемент управления, или *составные элементы управления*, как они иначе называются, обеспечивают относительную гибкость, когда речь идет об отрисовке пользовательской графики. Все элементы управления Windows Forms обрабатывают собственную отрисовку, используя собственный <xref:System.Windows.Forms.Control.OnPaint%2A> метод. Так как этот метод защищен, он недоступен для разработчика и поэтому не может быть заблокирован при рисовании элемента управления. Это, однако, не означает, что нельзя добавить код, влияющий на внешний вид составных элементов управления. Дополнительную отрисовку можно выполнить путем добавления обработчика событий. Например, предположим, вы создаете <xref:System.Windows.Forms.UserControl> с помощью кнопки с именем `MyButton`. Если вы хотели бы отрисовки, которые не предоставляются классом <xref:System.Web.UI.WebControls.Button>, необходимо добавить код в пользовательский элемент управления, аналогичную следующей:  

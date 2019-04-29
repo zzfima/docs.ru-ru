@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
 ms.openlocfilehash: b0279c5ac658c7d0749f62066abbd705d0a271af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793904"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Задает имя сборки, частью которой будет этот модуль.  
@@ -33,9 +33,9 @@ ms.locfileid: "58832420"
   
  `-moduleassemblyname` Параметр требуется только в том случае, при выполнении следующих условий:  
   
--   Тип данных в модуле необходим доступ к `Friend` тип в сборке, на которую указывает ссылка.  
+- Тип данных в модуле необходим доступ к `Friend` тип в сборке, на которую указывает ссылка.  
   
--   Свойства ссылки был предоставлен доступ к дружественной сборке на сборку, в которую будет встроен модуль.  
+- Свойства ссылки был предоставлен доступ к дружественной сборке на сборку, в которую будет встроен модуль.  
   
  Дополнительные сведения о создании модуля см. в разделе [/Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Дополнительные сведения о дружественных сборок, см. в разделе [дружественных сборок](../../../standard/assembly/friend-assemblies.md).  
   

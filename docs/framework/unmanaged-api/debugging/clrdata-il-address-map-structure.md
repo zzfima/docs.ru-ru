@@ -16,11 +16,11 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: 3aac7e24fa9cd03350aebf5f441063bcedfaed04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961295"
 ---
 # <a name="clrdatailaddressmap-structure"></a>Структура CLRDATA_IL_ADDRESS_MAP
 
@@ -42,7 +42,7 @@ typedef struct
 
 ## <a name="members"></a>Участники
 
-| Член         | Описание:                                            |
+| Член         | Описание                                            |
 | -------------- | ------------------------------------------------------ |
 | `ilOffset`     | Смещение на промежуточном Языке автономной диапазона              |
 | `startAddress` | Начальный адрес диапазона.                        |

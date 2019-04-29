@@ -3,11 +3,11 @@ title: Взаимодействие с транзакциями Enterprise Servi
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
 ms.openlocfilehash: 8b86a032e7cbc27332864c9cc96009f12b72c53d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793657"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Взаимодействие с транзакциями Enterprise Services и COM+
 Пространство имен <xref:System.Transactions> поддерживает взаимодействие между объектами транзакций, созданными с помощью этого пространства имен, и транзакциями, созданными с помощью модели COM+.  
@@ -29,9 +29,9 @@ ms.locfileid: "59301910"
   
  <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> определяет следующие требования:  
   
--   При проверке свойства <xref:System.Transactions.Transaction.Current%2A> инфраструктура <xref:System.Transactions> должна поддерживать транзакции в контексте COM+, если обнаруживается, что данный объект выполняется в контексте, отличном от контекста по умолчанию. Обратите внимание, что транзакция не может содержаться в контексте по умолчанию. Таким образом, в контексте по умолчанию для свойства <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> возвращается транзакция, которая хранится в локальной памяти потока, используемой инфраструктурой <xref:System.Transactions>, даже если задано значение <xref:System.Transactions.Transaction.Current%2A>.  
+- При проверке свойства <xref:System.Transactions.Transaction.Current%2A> инфраструктура <xref:System.Transactions> должна поддерживать транзакции в контексте COM+, если обнаруживается, что данный объект выполняется в контексте, отличном от контекста по умолчанию. Обратите внимание, что транзакция не может содержаться в контексте по умолчанию. Таким образом, в контексте по умолчанию для свойства <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> возвращается транзакция, которая хранится в локальной памяти потока, используемой инфраструктурой <xref:System.Transactions>, даже если задано значение <xref:System.Transactions.Transaction.Current%2A>.  
   
--   Если создание нового объекта <xref:System.Transactions.TransactionScope> происходит в контексте, отличном от контекста по умолчанию, транзакция, являющаяся текущей для объекта <xref:System.Transactions.TransactionScope>, должна быть отражена в контексте COM+. В этом случае использование значения <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> приводит к тому же самому результату, что и при использовании значения <xref:System.Transactions.EnterpriseServicesInteropOption.Full> - создается контекст COM+.  
+- Если создание нового объекта <xref:System.Transactions.TransactionScope> происходит в контексте, отличном от контекста по умолчанию, транзакция, являющаяся текущей для объекта <xref:System.Transactions.TransactionScope>, должна быть отражена в контексте COM+. В этом случае использование значения <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> приводит к тому же самому результату, что и при использовании значения <xref:System.Transactions.EnterpriseServicesInteropOption.Full> - создается контекст COM+.  
   
  Кроме того, если для свойства <xref:System.Transactions.Transaction.Current%2A> определено как значение <xref:System.Transactions.EnterpriseServicesInteropOption.Full>, так и значение <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, оба этих режима подразумевают, что свойство <xref:System.Transactions.Transaction.Current%2A> нельзя задать напрямую.  Любая попытка задать свойство <xref:System.Transactions.Transaction.Current%2A> напрямую без создания объекта <xref:System.Transactions.TransactionScope> приводит к возникновению исключения <xref:System.InvalidOperationException>. Значение перечисления <xref:System.Transactions.EnterpriseServicesInteropOption> наследуется новыми областями транзакций, в которых явно не указано, какое значение следует использовать. Например, если создать новый объект <xref:System.Transactions.TransactionScope> со значением <xref:System.Transactions.EnterpriseServicesInteropOption.Full>, а затем создать второй объект <xref:System.Transactions.TransactionScope> без указания значения перечисления <xref:System.Transactions.EnterpriseServicesInteropOption>, второй объект <xref:System.Transactions.TransactionScope> будет также иметь значение <xref:System.Transactions.EnterpriseServicesInteropOption.Full>.  
   
@@ -39,11 +39,11 @@ ms.locfileid: "59301910"
   
 1. <xref:System.Transactions.Transaction.Current%2A> проверяется, чтобы выяснить, имеется транзакция. Эта проверка заключается в выполнении следующих действий.  
   
-    -   Проверяется существование области.  
+    - Проверяется существование области.  
   
-    -   Если область существует, проверяется значение перечисления <xref:System.Transactions.EnterpriseServicesInteropOption>, переданное при создании области.  
+    - Если область существует, проверяется значение перечисления <xref:System.Transactions.EnterpriseServicesInteropOption>, переданное при создании области.  
   
-    -   Если значением перечисления <xref:System.Transactions.EnterpriseServicesInteropOption> является <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, транзакция COM+ (транзакция <xref:System.EnterpriseServices>) имеет приоритет над транзакцией <xref:System.Transactions> в локальной памяти управляемого потока.  
+    - Если значением перечисления <xref:System.Transactions.EnterpriseServicesInteropOption> является <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, транзакция COM+ (транзакция <xref:System.EnterpriseServices>) имеет приоритет над транзакцией <xref:System.Transactions> в локальной памяти управляемого потока.  
   
          В случае значения <xref:System.Transactions.EnterpriseServicesInteropOption.None> приоритет имеет транзакция <xref:System.Transactions> в локальной памяти управляемого потока.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "59301910"
   
 3. Если необходимо создать новую транзакцию, в зависимости от желаемого результата используются различные значения перечисления <xref:System.Transactions.EnterpriseServicesInteropOption>.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>: позволяет создать транзакцию, связанную с контекстом COM+.  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.Full>: позволяет создать транзакцию, связанную с контекстом COM+.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.None>: <xref:System.Transactions> создана транзакция.  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.None>: <xref:System.Transactions> создана транзакция.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: Если имеется контекст COM + и присоединен к контексту транзакции.  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: Если имеется контекст COM + и присоединен к контексту транзакции.  
   
  В следующей таблице представлены контекст Enterprise Services (ES) и область транзакции, запрашивающая транзакцию с помощью перечисления <xref:System.Transactions.EnterpriseServicesInteropOption>.  
   
@@ -75,6 +75,6 @@ ms.locfileid: "59301910"
   
  В предыдущей таблице используются следующие обозначения:  
   
--   ST означает, что управление внешней транзакцией области осуществляется инфраструктурой <xref:System.Transactions> отдельно от любой существующей транзакции контекста <xref:System.EnterpriseServices>;  
+- ST означает, что управление внешней транзакцией области осуществляется инфраструктурой <xref:System.Transactions> отдельно от любой существующей транзакции контекста <xref:System.EnterpriseServices>;  
   
--   ES означает, что внешняя транзакция области совпадает с транзакцией контекста <xref:System.EnterpriseServices>.
+- ES означает, что внешняя транзакция области совпадает с транзакцией контекста <xref:System.EnterpriseServices>.

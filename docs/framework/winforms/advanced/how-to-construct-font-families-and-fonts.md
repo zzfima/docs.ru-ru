@@ -9,32 +9,32 @@ helpviewer_keywords:
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
 ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937973"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Практическое руководство. Разработка шрифтов и их семейств
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Группирует шрифты с тем же шрифт, но различные стили в семейства шрифтов. Например семейство шрифтов Arial содержит следующие шрифты:  
   
--   Arial обычного  
+- Arial обычного  
   
--   Arial полужирным шрифтом  
+- Arial полужирным шрифтом  
   
--   Arial курсив  
+- Arial курсив  
   
--   Arial полужирный курсив  
+- Arial полужирный курсив  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] используются четыре стиля для формирования семейств шрифтов: обычный, полужирный, курсив и полужирный курсив. Прилагательные, такие как *сузить* и *округленное* не учитываются стили; вместо этого они являются частью имя семейства. Например Arial Narrow является семейством шрифтов со следующими членами:  
   
--   Arial обычного узкий  
+- Arial обычного узкий  
   
--   Полужирным шрифтом Arial узкая  
+- Полужирным шрифтом Arial узкая  
   
--   Arial узкий курсив  
+- Arial узкий курсив  
   
--   Arial узкий полужирный курсив  
+- Arial узкий полужирный курсив  
   
  Прежде чем можно рисовать текст с [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], необходимо создать <xref:System.Drawing.FontFamily> объекта и <xref:System.Drawing.Font> объекта. <xref:System.Drawing.FontFamily> Объект определяет гарнитуру (например, Arial) и <xref:System.Drawing.Font> объект определяет размер, стиль и единиц.  
   

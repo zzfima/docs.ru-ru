@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows Forms dialog boxes [Windows Forms], tabs
 ms.assetid: 2b4ea784-a39d-463c-81d8-af74ce068476
 ms.openlocfilehash: 4511882aa4c7804e535f228dd150c26a8f7689f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971942"
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>Общие сведения об элементе управления TabControl (Windows Forms)
 Элемент управления <xref:System.Windows.Forms.TabControl> Windows Forms используется для отображения нескольких вкладок, аналогичных разделителям в записной книжке или меткам в наборе папок в картотеке. Вкладки могут содержать изображения и другие элементы управления. Вкладок можно использовать для создания вида диалоговых окон, отображаются во многих компонентах в операционной системе Windows, такие как свойства элемента управления панели отображения. Кроме того <xref:System.Windows.Forms.TabControl> может использоваться для создания страниц свойств, которые используются для настройки группы связанных свойств.  

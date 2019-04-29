@@ -6,13 +6,13 @@ dev_langs:
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
 ms.openlocfilehash: 131d99457427e0818f78076d987f550a99ad7cf0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929315"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Практическое: размещение службы WCF в управляемом приложении
+# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Практическое руководство. Размещение службы WCF в управляемом приложении
 
 Для размещения службы внутри управляемого приложения внедрите код службы внутрь кода управляемого приложения, определите конечную точку для службы императивно в коде, декларативно с помощью конфигурации или посредством конечных точек по умолчанию, а затем создайте экземпляр класса <xref:System.ServiceModel.ServiceHost>.
 
@@ -50,7 +50,7 @@ ms.locfileid: "47196856"
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]
 
     > [!NOTE]
-    > Дополнительные сведения о том, как определить и реализовать интерфейс службы см. в разделе [как: определение контракта службы](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) и [как: реализация контракта службы](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).
+    > Дополнительные сведения о том, как определить и реализовать интерфейс службы см. в разделе [как: Определите контракт службы](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) и [как: Реализация контракта службы](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).
 
 5. В начале метода `Main` создайте экземпляр класса <xref:System.Uri> с базовым адресом для службы.
 
@@ -67,7 +67,7 @@ ms.locfileid: "47196856"
 
 7. Нажмите клавишу **Ctrl**+**Shift**+**B** для сборки решения.
 
-## <a name="test-the-service"></a>Тестирование службы
+## <a name="test-the-service"></a>Проверка службы
 
 1. Нажмите клавишу **Ctrl**+**F5** для запуска службы.
 
@@ -102,7 +102,7 @@ ms.locfileid: "47196856"
 - [Практическое руководство. Размещение службы WCF в IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
 - [Резидентное размещение](../../../docs/framework/wcf/samples/self-host.md)
 - [Размещение служб](../../../docs/framework/wcf/hosting-services.md)
-- [Практическое руководство. Определение контракта службы](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [Практическое руководство. Определите контракт службы](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
 - [Практическое руководство. Реализация контракта службы](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
 - [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Использование привязок для настройки служб и клиентов](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

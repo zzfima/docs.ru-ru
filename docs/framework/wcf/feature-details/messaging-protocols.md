@@ -3,11 +3,11 @@ title: Протоколы обмена сообщениями
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 ms.openlocfilehash: a5292914cfebc79bf8a9af1c852dd8feec99eba4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948126"
 ---
 # <a name="messaging-protocols"></a>Протоколы обмена сообщениями
 
@@ -535,7 +535,7 @@ mail-address   =     id-left "@" id-right
 
 - В соответствии с [XOP], раздел 5,
 
-- R4148: ЧАСТЬ SOAP1.1 InfoSet должна содержать заголовок Content-Type тип носителя application/xop + xml и параметрами type = «text/xml» и charset
+- R4148: SOAP1.1 InfoSet должна содержать заголовок Content-Type тип носителя application/xop + xml и параметрами type = «text/xml» и charset
 
     ```
     Content-Type: application/xop+xml;

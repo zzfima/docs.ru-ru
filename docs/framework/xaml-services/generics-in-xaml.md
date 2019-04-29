@@ -5,11 +5,11 @@ helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
 ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954106"
 ---
 # <a name="generics-in-xaml"></a>Универсальные шаблоны в XAML
 Службы .NET Framework XAML, реализованное в System.Xaml обеспечивает поддержку использования универсальных типов среды CLR. Эта поддержка включает Указание ограничений универсальных типов в качестве аргумента типа и устанавливающий ограничение, вызвав соответствующий `Add` метод для универсальных коллекций. В этом разделе описаны аспекты использования и ссылки на универсальные типы в XAML.  

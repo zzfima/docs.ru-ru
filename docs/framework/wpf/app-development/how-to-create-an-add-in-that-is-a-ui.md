@@ -10,11 +10,11 @@ helpviewer_keywords:
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
 ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947892"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Практическое руководство. Создание надстройки, являющейся пользовательским интерфейсом
 В этом примере показано, как создать надстройку, Windows Presentation Foundation (WPF), размещаемый в автономное приложение WPF.  
@@ -25,9 +25,9 @@ ms.locfileid: "59100305"
   
  В этом примере представлены расширения WPF модель надстроек платформы .NET Framework, реализовать этот сценарий и предполагается следующее:  
   
--   Знание модели надстроек платформы .NET Framework, включая конвейер, надстройка и разработку основного приложения. Если вы не знакомы с этими понятиями, см. в разделе [надстройки и расширения](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Учебник, в котором демонстрируется реализация конвейера, надстройки и ведущего приложения, см. в разделе [Пошаговое руководство: Создание расширяемого приложения](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
+- Знание модели надстроек платформы .NET Framework, включая конвейер, надстройка и разработку основного приложения. Если вы не знакомы с этими понятиями, см. в разделе [надстройки и расширения](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Учебник, в котором демонстрируется реализация конвейера, надстройки и ведущего приложения, см. в разделе [Пошаговое руководство: Создание расширяемого приложения](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
   
--   Знание расширений WPF в .NET Framework модель. См. в разделе [Общие сведения о надстройках WPF](wpf-add-ins-overview.md).  
+- Знание расширений WPF в .NET Framework модель. См. в разделе [Общие сведения о надстройках WPF](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Пример  
  Создание надстройки, являющейся пользовательским Интерфейсом WPF требуется специальный код для каждого сегмента конвейера, надстройки и ведущего приложения.  
@@ -87,9 +87,9 @@ ms.locfileid: "59100305"
   
  Код для обработки взаимодействия с помощью пользовательского интерфейса выполняется в домен приложения надстройки. Эти взаимодействия включают следующее.  
   
--   Обработка <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий.  
+- Обработка <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий.  
   
--   Отображение <xref:System.Windows.MessageBox>.  
+- Отображение <xref:System.Windows.MessageBox>.  
   
  Это действие полностью изолировано от ведущего приложения.  
   

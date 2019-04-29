@@ -9,11 +9,11 @@ helpviewer_keywords:
 - hosting applications [WPF]
 ms.assetid: 1f73067d-c60a-4e9a-b513-c817ee7da3a1
 ms.openlocfilehash: 7259c6275b4a87eb7c4ef083dda55b24c1564e9b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947931"
 ---
 # <a name="hosting-wpf-applications"></a>Размещение WPF-приложений
 Приложения браузера WPF XAML (XBAP), расширенные клиентские приложения, которые можно развернуть на веб-сервере и запускать в браузере. Ведущее приложение WPF (PresentationHost.exe) регистрируется как оболочка и обработчик MIME для файлов XBAP и XAML. Таким образом Internet Explorer знает, что для запуска ведущего приложения WPF, когда запускается приложение XBAP. Пользователи Firefox можно установить дополнительные компоненты, которые позволяют разместить XBAP-приложения также Firefox. Приложение XBAP может размещаться в других браузерах или автономных приложений с помощью собственного браузера размещения API, предоставляемые платформой WPF.  

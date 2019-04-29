@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
 ms.openlocfilehash: 13a17473388582e5fa72cd8d335b6a05204ea509
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792890"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Создание первой службы WCF на основе утверждений
 ## <a name="applies-to"></a>Применение  
   
--   Windows Identity Foundation (WIF)  
+- Windows Identity Foundation (WIF)  
   
--   Windows Communication Foundation (WCF)  
+- Windows Communication Foundation (WCF)  
   
 ## <a name="overview"></a>Обзор  
  В этом разделе представлен сценарий создания служб WCF, поддерживающих утверждения, при помощи WIF. Обычно существует три участника сценария для веб-службы, поддерживающей утверждения: сама веб-служба, пользователь и служба маркеров безопасности (STS). Данный сценарий представлен на иллюстрации ниже:  
@@ -32,9 +32,9 @@ ms.locfileid: "59306618"
   
  STS — это служба, использующая токены после успешной аутентификации. Microsoft предлагает две службы STS, соответствующие отраслевым стандартам:  
   
--   [Службы федерации Active Directory (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
+- [Службы федерации Active Directory (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
--   [Windows Azure Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
+- [Windows Azure Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
   
  AD FS 2.0 является компонентом решения Windows Server R2 и может использоваться в качестве службы STS для локальных сценариев. Контроль доступа Azure Active Directory (также называемый службой контроля доступа или ACS) — это облачная служба, входящая в состав Microsoft Azure. Для тестирования или обучения можно также использовать другие службы STS, создавая с их помощью приложения, поддерживающие утверждения. Например, можно использовать STS локальной разработки, который является частью [Identity and Access Tool для Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) которая доступна через Интернет.  
   

@@ -11,11 +11,11 @@ ms.assetid: 294aa306-0afe-4cbe-b397-86ba9f1860f8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3b00ba0fdf732a864fb4fb757c6012a3d36740b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949296"
 ---
 # <a name="reliability"></a>Надежность
 Крайне важно обеспечить защиту кода, выполняющегося в серверных средах, таких как SQL Server, от асинхронных исключений. Вопросы, обсуждаемые в этой статье, относятся не только к SQL Server, но касаются общих принципов написания надежного кода для любого ведущего приложения, выполняющегося в среде .NET Framework версии 2.0. Тем не менее служба SQL Server приводится в качестве примера, поскольку именно в ней впервые стали широко использоваться новые возможности обеспечения надежности, представленные в версии 2.0.  

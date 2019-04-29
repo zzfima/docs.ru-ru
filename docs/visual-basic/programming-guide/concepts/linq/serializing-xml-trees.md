@@ -3,11 +3,11 @@ title: Сериализация деревьев XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2c340695-a726-4030-85be-6975d8a149cf
 ms.openlocfilehash: ddcd82a3fe8beea87913227ed0ff86fa3974bd11
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786455"
 ---
 # <a name="serializing-xml-trees-visual-basic"></a>Сериализация деревьев XML (Visual Basic)
 Сериализация XML-дерева означает создание XML из XML-дерева. Можно сериализовать в файл, в конкретный экземпляр класса <xref:System.IO.TextWriter> или в конкретный экземпляр класса <xref:System.Xml.XmlWriter>.  

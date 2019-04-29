@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing rectangles
 ms.assetid: 54a7fa14-3ad8-4d64-b424-2a12005b250c
 ms.openlocfilehash: 0e51a1e3a2d14754147dbd36f170127a7e978acd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954490"
 ---
 # <a name="how-to-use-a-pen-to-draw-rectangles"></a>Практическое руководство. Рисование прямоугольников с помощью пера
 Рисование прямоугольников, вам потребуется <xref:System.Drawing.Graphics> объекта и <xref:System.Drawing.Pen> объекта. <xref:System.Drawing.Graphics> Предоставляет <xref:System.Drawing.Graphics.DrawRectangle%2A> метод и <xref:System.Drawing.Pen> объект сохраняет функции, строки, таких как цвет и ширину.  

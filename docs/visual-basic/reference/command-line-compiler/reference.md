@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
 ms.openlocfilehash: 21efca701eb16898dd291d73bf0431641ba75d12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788886"
 ---
 # <a name="-reference-visual-basic"></a>-ссылке (Visual Basic)
 Указывает компилятору сделать сведения о типе в указанных сборках доступными для компилируемого проекта.  
@@ -38,9 +38,9 @@ ms.locfileid: "58826123"
   
  При ссылке на сборку (сборку А) которая сама ссылается на другую сборку (сборку Б), необходимо ссылаться на сборку Б, если:  
   
--   Тип из сборки A наследуется из типа или реализует интерфейс сборки Б.  
+- Тип из сборки A наследуется из типа или реализует интерфейс сборки Б.  
   
--   Вызывается поле, свойство, событие или метод, имеющий тип возвращаемого значения или тип параметра из сборки Б.  
+- Вызывается поле, свойство, событие или метод, имеющий тип возвращаемого значения или тип параметра из сборки Б.  
   
  Используйте [- libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) для указания каталога, в котором находится один или несколько ссылок на сборки.  
   

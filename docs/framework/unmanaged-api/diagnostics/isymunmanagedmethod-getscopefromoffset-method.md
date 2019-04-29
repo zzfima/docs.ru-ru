@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e0e859ba8b6ec247073b0b69b035ea4cf074ab05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939624"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>Метод ISymUnmanagedMethod::GetScopeFromOffset
 Возвращает наиболее узкую внешнюю лексическую область, в этот метод, который окружает заданного смещения. Это может использоваться для запуска поиска локальной переменной.  

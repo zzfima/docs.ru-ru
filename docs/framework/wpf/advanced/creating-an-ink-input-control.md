@@ -15,26 +15,26 @@ helpviewer_keywords:
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
 ms.openlocfilehash: 105a44f90c1c654a21fc8920a149ad63b2dabc99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928723"
 ---
 # <a name="creating-an-ink-input-control"></a>Создание элемента управления рукописным вводом
 Вы можете создать пользовательский элемент управления, динамически и статически отображает рукописные данные. То есть отрисовку рукописных фрагментов, как пользователь рисует штрих, вызывая рукописный ввод «поток» от планшетного пера и отображения рукописного ввода после него добавляется к элементу управления, либо с помощью пера, вставленный из буфера обмена, или загрузить из файла. Для динамического отображения рукописного ввода, необходимо использовать элемент управления <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Для статического отображения рукописного ввода, необходимо переопределить методы событий пера (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, и <xref:System.Windows.UIElement.OnStylusUp%2A>) для сбора <xref:System.Windows.Input.StylusPoint> данные, создавать штрихи и добавить их в <xref:System.Windows.Controls.InkPresenter> (отображает рукописные данные в элементе управления).  
   
  В этом разделе содержатся следующие подразделы:  
   
--   [Практическое руководство. Сбор данных точек пера и создание рукописных штрихов](#CollectingStylusPointDataAndCreatingInkStrokes)  
+- [Практическое руководство. Сбор данных точек пера и создание рукописных штрихов](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [Практическое руководство. Включить элемент управления принимать ввод от мыши](#EnablingYourControlToAcceptInputTromTheMouse)  
+- [Практическое руководство. Включить элемент управления принимать ввод от мыши](#EnablingYourControlToAcceptInputTromTheMouse)  
   
--   [Сводная информация](#PuttingItTogether)  
+- [Сводная информация](#PuttingItTogether)  
   
--   [С помощью дополнительных подключаемых модулей и DynamicRenderers](#UsingAdditionalPluginsAndDynamicRenderers)  
+- [С помощью дополнительных подключаемых модулей и DynamicRenderers](#UsingAdditionalPluginsAndDynamicRenderers)  
   
--   [Заключение](#AdvancedInkHandling_Conclusion)  
+- [Заключение](#AdvancedInkHandling_Conclusion)  
   
 <a name="CollectingStylusPointDataAndCreatingInkStrokes"></a>   
 ## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>Практическое руководство. Сбор данных точек пера и создание рукописных штрихов  

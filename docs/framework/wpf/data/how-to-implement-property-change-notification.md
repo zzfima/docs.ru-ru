@@ -11,11 +11,11 @@ helpviewer_keywords:
 - properties [WPF], change notifications
 ms.assetid: 30b59d9e-8c3a-4349-aa82-4be837e841cf
 ms.openlocfilehash: d37d468acc94470be8c2afdc495b40168932ec83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931447"
 ---
 # <a name="how-to-implement-property-change-notification"></a>Практическое руководство. Реализация уведомления об изменении свойства
 Для поддержки <xref:System.Windows.Data.BindingMode.OneWay> или <xref:System.Windows.Data.BindingMode.TwoWay> привязки для включения свойства целевого объекта привязки автоматическое отражение динамических изменений источника привязки (например, область просмотра обновляется автоматически, когда пользователь редактирует форму), класс необходимо предоставлять уведомления соответствующие изменения свойства. В этом примере показано, как создать класс, реализующий <xref:System.ComponentModel.INotifyPropertyChanged>.  

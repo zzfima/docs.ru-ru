@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cd48664c78e3f5772cdfa655ebbc7cfa716f4950
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796848"
 ---
 # <a name="ihostiocompletionmanagersetclriocompletionmanager-method"></a>Метод IHostIoCompletionManager::SetCLRIoCompletionManager
 Предоставляет указатель интерфейса на узле [ICLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md) экземпляра, реализуемый общеязыковой среды выполнения (CLR).  

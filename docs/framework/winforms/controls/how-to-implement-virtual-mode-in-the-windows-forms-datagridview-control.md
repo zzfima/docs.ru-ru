@@ -12,11 +12,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 ms.assetid: 98236267-f08e-4918-bcf9-77acf050a3ca
 ms.openlocfilehash: d5b34f5c9d9e6db9c3fd06f2c09f62c196c96d0a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941171"
 ---
 # <a name="how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Реализация виртуального режима для элемента управления DataGridView в Windows Forms
 В примере кода ниже показано, как управлять большими наборами данных с помощью элемента управления <xref:System.Windows.Forms.DataGridView>, свойству <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> которого присвоено значение `true`.  
@@ -31,7 +31,7 @@ ms.locfileid: "59146251"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылки на сборки System и System.Windows.Forms;  
+- ссылки на сборки System и System.Windows.Forms;  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   

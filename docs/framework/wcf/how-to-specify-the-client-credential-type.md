@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
 ms.openlocfilehash: 775c6a297047c7a0e16db091f9a22686fdb01efb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928886"
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>Практическое руководство. Указание типа учетных данных клиента
 После установки режима безопасности (на уровне транспорта или сообщений) можно установить тип учетных данных клиента. Это свойство определяет тип учетных данных, которые клиент должен предоставить службе для проверки подлинности. Дополнительные сведения о задании режима безопасности (обязательный шаг перед настройкой типа учетных данных клиента), см. в разделе [как: Настройка режима безопасности](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  

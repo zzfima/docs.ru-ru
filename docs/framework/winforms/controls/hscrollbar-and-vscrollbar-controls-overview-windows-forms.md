@@ -12,11 +12,11 @@ helpviewer_keywords:
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
 ms.openlocfilehash: d4a7912a5781fc583357affa728f7d81059b5cf9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928581"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>Общие сведения об элементах управления HScrollBar и VScrollBar (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ScrollBar> элементы управления используются для обеспечения удобного просмотра длинных списков элементов или большого объема информации с либо горизонтальной или вертикальной прокрутки окна приложения либо элемента управления. Полосы прокрутки — это распространенный элемент интерфейса Windows, поэтому <xref:System.Windows.Forms.ScrollBar> управления часто используется с элементами управления, которые не являются производными от <xref:System.Windows.Forms.ScrollableControl> класса. Аналогично, многие разработчики решили внедрить <xref:System.Windows.Forms.ScrollBar> управления собственных пользовательских элементов управления.  

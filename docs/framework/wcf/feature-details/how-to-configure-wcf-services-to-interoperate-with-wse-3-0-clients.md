@@ -3,11 +3,11 @@ title: Практическое руководство. Настройка сл�
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
 ms.openlocfilehash: 8f4407f66095f97a213d6cd987b4bd9a3ed340fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699790"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Практическое руководство. Настройка служб WCF для взаимодействия с клиентами WSE 3.0
 Службы Windows Communication Foundation (WCF) совместимы на уровне линий связи с Web Services Enhancements 3.0 для клиентов Microsoft .NET (WSE) при настройке службы WCF для использования версии спецификации WS-Addressing от августа 2004 г.  
@@ -18,11 +18,11 @@ ms.locfileid: "59303899"
   
      Чтобы указать, что для кодирования сообщений используется версия спецификации WS-Addressing от августа 2004 г., необходимо создать пользовательскую привязку.  
   
-    1.  Добавить учетную запись ребенка [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) для [ \<привязки >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) файла конфигурации службы.  
+    1. Добавить учетную запись ребенка [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) для [ \<привязки >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) файла конфигурации службы.  
   
-    2.  Укажите имя для привязки, добавив [ \<привязки >](../../../../docs/framework/misc/binding.md) для [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) и параметр `name` атрибута.  
+    2. Укажите имя для привязки, добавив [ \<привязки >](../../../../docs/framework/misc/binding.md) для [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) и параметр `name` атрибута.  
   
-    3.  Укажите режим проверки подлинности и версию спецификации WS-Security, которые используются для защиты сообщений, совместимых с WSE 3.0, добавив дочерний элемент [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) для [ \<привязки >](../../../../docs/framework/misc/binding.md).  
+    3. Укажите режим проверки подлинности и версию спецификации WS-Security, которые используются для защиты сообщений, совместимых с WSE 3.0, добавив дочерний элемент [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) для [ \<привязки >](../../../../docs/framework/misc/binding.md).  
   
          Чтобы задать режим проверки подлинности, задайте `authenicationMode` атрибут [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Режим проверки подлинности примерно соответствует готовому к использованию утверждению безопасности в WSE 3.0. В следующей таблице сопоставлены режимы проверки подлинности в WCF для утверждения готовое к использованию безопасности в WSE 3.0.  
   
@@ -39,16 +39,16 @@ ms.locfileid: "59303899"
   
          Чтобы определить версию спецификации WS-Security, который используется для защиты сообщений SOAP, задать `messageSecurityVersion` атрибут [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Для взаимодействия с WSE 3.0 установите для атрибута `messageSecurityVersion` значение <xref:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10%2A>.  
   
-    4.  Укажите, что спецификации WS-Addressing версии августа 2004 г., используется платформой WCF, добавив [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md) и задайте `messageVersion` значение <xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A>.  
+    4. Укажите, что спецификации WS-Addressing версии августа 2004 г., используется платформой WCF, добавив [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md) и задайте `messageVersion` значение <xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A>.  
   
         > [!NOTE]
         >  При использовании протокола SOAP 1.2 задайте для атрибута `messageVersion` значение <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A>.  
   
 2. Укажите, что служба использует пользовательскую привязку.  
   
-    1.  Задайте `binding` атрибут [ \<конечной точки >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) элемент `customBinding`.  
+    1. Задайте `binding` атрибут [ \<конечной точки >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) элемент `customBinding`.  
   
-    2.  Задайте `bindingConfiguration` атрибут [ \<конечной точки >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) элемента к значению, указанному в `name` атрибут [ \<привязки >](../../../../docs/framework/misc/binding.md) для настраиваемого привязка.  
+    2. Задайте `bindingConfiguration` атрибут [ \<конечной точки >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) элемента к значению, указанному в `name` атрибут [ \<привязки >](../../../../docs/framework/misc/binding.md) для настраиваемого привязка.  
   
 ## <a name="example"></a>Пример  
  Следующий пример кода задает, что служба `Service.HelloWorldService` использует для взаимодействия с клиентами WSE 3.0 пользовательскую привязку. Пользовательская привязка задает, что для кодирования пересылаемых сообщений используется версия спецификация WS-Addressing от августа 2004 г. и набор спецификаций WS-Security 1.1. Защита сообщений обеспечивается с помощью режима проверки подлинности <xref:System.ServiceModel.Configuration.AuthenticationMode.AnonymousForCertificate>.  

@@ -3,11 +3,11 @@ title: WCF Web HTTP форматирование
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
 ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935477"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP форматирование
 Модель веб-программирования HTTP WCF позволяет динамически определять лучший формат возвращаемого ответа операции службы. Поддерживается два метода для определения формата: автоматический и явный.  
@@ -125,15 +125,15 @@ public class Service : IService
   
  Если необходимо поддерживать форматы, отличающиеся от XML или JSON, операцию нужно определить таким образом, чтобы она возвращала тип <xref:System.ServiceModel.Channels.Message>. Внутри кода операции определите соответствующий формат для использования и создайте объект <xref:System.ServiceModel.Channels.Message> с помощью одного из следующих методов:  
   
--   `WebOperationContext.CreateAtom10Response`  
+- `WebOperationContext.CreateAtom10Response`  
   
--   `WebOperationContext.CreateJsonResponse`  
+- `WebOperationContext.CreateJsonResponse`  
   
--   `WebOperationContext.CreateStreamResponse`  
+- `WebOperationContext.CreateStreamResponse`  
   
--   `WebOperationContext.CreateTextResponse`  
+- `WebOperationContext.CreateTextResponse`  
   
--   `WebOperationContext.CreateXmlResponse`  
+- `WebOperationContext.CreateXmlResponse`  
   
  Каждый из этих методов принимает содержимое и создает сообщение соответствующего формата. Метод `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` можно использовать для получения списка форматов, предпочитаемых клиентом в порядке снижения предпочтения. В следующем примере показано применение `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` для определения используемого формата, а затем используется соответствующий метод создания ответа для создания ответного сообщения.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
 ms.openlocfilehash: 0cac4433ec9fe54721752c63d2b3b37f9d874c19
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779149"
 ---
 # <a name="application-settings-for-windows-forms"></a>Параметры приложения для Windows Forms
 Параметры приложения в Windows Forms позволяют легко создавать, хранить и поддерживать настраиваемые приложения и параметры пользователей в клиенте. С помощью параметров приложения можно хранить не только данные приложения, например строки подключений к базам данных, но и пользовательские данные, такие как положение панелей инструментов и списки последних использовавшихся элементов.  

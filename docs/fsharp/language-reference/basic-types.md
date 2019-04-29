@@ -3,17 +3,17 @@ title: Базовые типы
 description: Обнаружить основные базовые типы, которые используются в F# языка.
 ms.date: 07/09/2018
 ms.openlocfilehash: 74a276792e2566b8f18b87f4bdcfb923b713b9c5
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959124"
 ---
 # <a name="basic-types"></a>Базовые типы
 
 В этом разделе перечислены базовые типы, определенные в F# языка. Эти типы представляют собой фундаментальные в F#, являющееся основой практически все F# программы. Они являются подмножеством типов-примитивов .NET.
 
-|Тип|Тип .NET|Описание:|
+|Тип|Тип .NET|Описание|
 |----|---------|-----------|
 |`bool`|<xref:System.Boolean>|Возможными значениями являются `true` и `false`.|
 |`byte`|<xref:System.Byte>|Значения от 0 до 255.|

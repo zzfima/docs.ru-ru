@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
 ms.openlocfilehash: 08b30d8be83ef9d814d17c5d4ec0c95a26bacdad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790732"
 ---
 # <a name="tooltip-overview"></a>Общие сведения о всплывающих подсказках
 Подсказка — это небольшое всплывающее окно, которое отображается, когда пользователь задерживает указатель мыши над элементом, например, на <xref:System.Windows.Controls.Button>. В этом разделе рассказывается о всплывающих подсказках и о том, как создавать и настраивать их содержимое.  
@@ -24,9 +24,9 @@ ms.locfileid: "59170109"
   
  Содержимым подсказки может быть одна или несколько строк текста, изображения, фигуры или другие видимые элементы. Чтобы задать всплывающую подсказку для элемента управления, нужно задать одно из следующих свойств содержимого этой всплывающей подсказки.  
   
--   <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType>  
   
  Какое свойство можно использовать зависит от того, является ли элемент управления, определяющий подсказку наследует от <xref:System.Windows.FrameworkContentElement> или <xref:System.Windows.FrameworkElement> класса.  
   

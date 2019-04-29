@@ -9,11 +9,11 @@ helpviewer_keywords:
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
 ms.openlocfilehash: bf645cf88c4905cd5cf47c2a6c7af088fa428c8a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954667"
 ---
 # <a name="how-to-shear-colors"></a>Практическое руководство. Сдвиг цветов
 Пропорциональное изменение увеличивает или уменьшает компонент цвета, обратно пропорционально значению другого компонента цвета. Например рассмотрим преобразования, где красный компонент увеличивается на половину значения синего компонента. При таком преобразовании цвет (0,2, 0,5, 1) станет (0,7, 0,5, 1). Новое значение красного компонента — 0,2 + (1/2)(1) = 0,7.  

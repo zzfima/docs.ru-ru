@@ -12,19 +12,19 @@ helpviewer_keywords:
 - AutoSizeMode property
 ms.assetid: 9233e0c3-2fa6-405e-8701-959479b1250e
 ms.openlocfilehash: 466edeee5f45ec72ef265ef4855049c7852641b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954353"
 ---
 # <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>Автоматическое изменение размеров элемента управления TableLayoutPanel
 ## <a name="distinct-autosize-behaviors"></a>Поведение различных AutoSize  
  <xref:System.Windows.Forms.TableLayoutPanel> Элемент управления поддерживает автоматическое изменение размеров одним из следующих способов:  
   
--   Через <xref:System.Windows.Forms.Control.AutoSize%2A> свойство;  
+- Через <xref:System.Windows.Forms.Control.AutoSize%2A> свойство;  
   
--   Через <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> свойство <xref:System.Windows.Forms.TableLayoutPanel> стили столбцов и строк элемента управления.  
+- Через <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> свойство <xref:System.Windows.Forms.TableLayoutPanel> стили столбцов и строк элемента управления.  
   
 ### <a name="the-autosize-property-with-row-and-column-styles"></a>Свойство AutoSize со стилями столбцов и строк  
  В следующей таблице описаны взаимодействие между <xref:System.Windows.Forms.Control.AutoSize%2A> свойство и <xref:System.Windows.Forms.TableLayoutPanel> стили столбцов и строк элемента управления.  

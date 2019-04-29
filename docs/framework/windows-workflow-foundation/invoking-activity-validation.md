@@ -3,11 +3,11 @@ title: Вызов проверки действия
 ms.date: 03/30/2017
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
 ms.openlocfilehash: 19c2d4773cf15245ba20ff8523ebd7e67d5b9c1d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791083"
 ---
 # <a name="invoking-activity-validation"></a>Вызов проверки действия
 Проверка действия предоставляет метод выявления ошибок и сообщения о них в конфигурации любого действия до его выполнения. Когда рабочий процесс модифицируется в конструкторе, выполняется проверка и любые ошибки или предупреждения, выявленные в ее ходе, отображаются в конструкторе. Также проверка происходит во время выполнения, когда вызывается рабочий процесс, и при появлении каких-либо ошибок проверки логикой проверки по умолчанию выдается исключение <xref:System.Activities.InvalidWorkflowException>. Windows Workflow Foundation (WF) предоставляет <xref:System.Activities.Validation.ActivityValidationServices> класс, который может использоваться в приложении рабочего процесса и разработчиками средств для явной проверки действия. В этом разделе описывается, как использовать <xref:System.Activities.Validation.ActivityValidationServices> для выполнения проверки действия.  

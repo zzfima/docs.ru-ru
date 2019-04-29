@@ -3,22 +3,22 @@ title: Преобразование типов данных (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
 ms.openlocfilehash: ad9594cabe0e2382ae4e19f2541eec4aa74ccd75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968861"
 ---
 # <a name="converting-data-types-visual-basic"></a>Преобразование типов данных (Visual Basic)
 Методы преобразования изменяют тип входных объектов.  
   
  Операции преобразования в запросах LINQ удобны в различных ситуациях. Ниже приводятся некоторые примеры.  
   
--   Метод <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> можно использовать, чтобы скрыть настраиваемую реализацию типа стандартного оператора запроса.  
+- Метод <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> можно использовать, чтобы скрыть настраиваемую реализацию типа стандартного оператора запроса.  
   
--   Метод <xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType> позволяет использовать непараметризованные коллекции для запросов LINQ.  
+- Метод <xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType> позволяет использовать непараметризованные коллекции для запросов LINQ.  
   
--   Методы <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> и <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> можно использовать для принудительного немедленного выполнения запроса, не дожидаясь, пока этот запрос будет перечислен.  
+- Методы <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> и <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> можно использовать для принудительного немедленного выполнения запроса, не дожидаясь, пока этот запрос будет перечислен.  
   
 ## <a name="methods"></a>Методы  
  В следующей таблице перечислены методы стандартных операторов запросов, выполняющие преобразование типов данных.  

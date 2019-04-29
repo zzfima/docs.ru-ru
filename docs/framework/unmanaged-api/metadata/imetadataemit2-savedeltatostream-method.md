@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 31bed2019eef5a37e1086624afdae3e8f2c58632
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61927235"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>Метод IMetaDataEmit2::SaveDeltaToStream
 Сохраняет изменения в текущем сеансе, изменить и продолжить в указанный поток.  

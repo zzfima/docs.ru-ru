@@ -8,11 +8,11 @@ helpviewer_keywords:
 - buttons [Windows Forms], about buttons
 ms.assetid: 255b291b-51a9-4a92-a1a4-2400cd82443f
 ms.openlocfilehash: 1ded871fdfab83407d8022ca0c4ce6b2c8a6c67c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938987"
 ---
 # <a name="button-control-overview-windows-forms"></a>Общие сведения об элементе управления Button (Windows Forms)
 Элемент управления Windows Forms <xref:System.Windows.Forms.Button> позволяет пользователю щелкнуть его для выполнения действия. При щелчке кнопки мышью элемент управления выглядит так, как будто его нажимают и отпускают. Каждый раз, когда пользователь нажимает кнопку, <xref:System.Windows.Forms.Control.Click> вызывается обработчик событий. Поместите код в <xref:System.Windows.Forms.Control.Click> обработчик событий может выполнять любые действия.  

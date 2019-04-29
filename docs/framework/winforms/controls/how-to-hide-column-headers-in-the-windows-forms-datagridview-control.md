@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column headers
 ms.assetid: e4ad5f68-50d2-4b9e-93ee-9d622423a8ab
 ms.openlocfilehash: 85332bfdbb80e4c49bab1ff208228a88337fbb43
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941288"
 ---
 # <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Скрытие заголовков столбцов элемента управления DataGridView в Windows Forms
 Иногда требуется отобразить <xref:System.Windows.Forms.DataGridView> без заголовков столбцов. В <xref:System.Windows.Forms.DataGridView> элемента управления, <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> значение свойства определяет, отображаются ли заголовки столбцов.  
   
 ### <a name="to-hide-the-column-headers"></a>Чтобы скрыть заголовки столбцов  
   
--   Задайте для свойства <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType> значение `false`.  
+- Задайте для свойства <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType> значение `false`.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#062](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#062)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#062](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#062)]  
@@ -29,9 +29,9 @@ ms.locfileid: "59115249"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`;  
+- элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`;  
   
--   ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
+- ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], Help (using designer)
 ms.assetid: a8563d25-8a75-4bc7-a024-f1870591b50f
 ms.openlocfilehash: 207ceeafa2ea06340310577c636deb5ea1977aae
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942926"
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>Интеграция справки пользователя в формы Windows Forms
 Аспект essential, но часто не уделяют должного внимания, создания приложений на основе Windows — справочной системы, так как это которой пользователи обращаются за помощью в путаницы. Windows Forms поддерживает два различных типов поддержки, в каждом предоставляемые [компонент HelpProvider](../controls/helpprovider-component-windows-forms.md). Первый направляет пользователя к файлу справки HTML или HTML Help 1. *x* или следующих версий. Второй может отображать краткое «Что это такое» — введите Help для отдельных элементов управления; Это особенно полезно в диалоговых окнах. Оба типа справки можно использовать в той же форме.  

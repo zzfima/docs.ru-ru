@@ -9,11 +9,11 @@ helpviewer_keywords:
 - string conversion [Visual Basic], arrays
 ms.assetid: 1b54b686-ab29-413b-adce-6bd5422376eb
 ms.openlocfilehash: 921d7ad62545d3a29870aee6c6b354fdadeb0500
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938363"
 ---
 # <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>Практическое руководство. Преобразует строку в массив символов в Visual Basic
 Иногда бывает удобно иметь данные о символов в строки и позиции этих символов, например при анализе строки. В этом примере показано, как можно получить массив символов в строку путем вызова строки <xref:System.String.ToCharArray%2A> метод.  

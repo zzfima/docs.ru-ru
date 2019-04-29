@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
 ms.openlocfilehash: bb7d4c89e63982a3052857dcb50d04d36d9517dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967945"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Практическое руководство. Привязка к коллекции и вывод сведений в зависимости от выделенного элемента
 В простом сценарии «основной-подробности», у вас есть привязкой к данным <xref:System.Windows.Controls.ItemsControl> например <xref:System.Windows.Controls.ListBox>. В зависимости от выбора пользователя можно отобразить дополнительные сведения о выбранном элементе. В этом примере показано, как реализовать этот сценарий.  

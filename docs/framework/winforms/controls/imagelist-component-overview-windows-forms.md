@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ImageList component [Windows Forms], about ImageList component
 ms.assetid: 7e25d89b-5633-40c1-afc3-82e0e301ffa2
 ms.openlocfilehash: 9869e647613ccf009954a5d65445947fbced40e7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971175"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>Общие сведения о компоненте ImageList (Windows Forms)
 
@@ -23,7 +23,7 @@ ms.locfileid: "57709852"
 
 Список изображений можно использовать с любым элементом управления, который имеет свойство `ImageList` (или свойства <xref:System.Windows.Forms.ListView.SmallImageList%2A> и <xref:System.Windows.Forms.ListView.LargeImageList%2A>, если используется элемент управления <xref:System.Windows.Forms.ListView>). Элементы управления, которые могут быть связаны со списком изображений, включают: <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ToolBar>, <xref:System.Windows.Forms.TabControl>, <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.RadioButton> и <xref:System.Windows.Forms.Label>. Чтобы связать список изображений с элементом управления, задайте для свойства `ImageList` элемента управления имя компонента <xref:System.Windows.Forms.ImageList>.
 
-## <a name="key-properties"></a>Основные свойства
+## <a name="key-properties"></a>Ключевые свойства
 
 Основным свойством компонента <xref:System.Windows.Forms.ImageList> является <xref:System.Windows.Forms.ImageList.Images%2A>, которое содержит изображения для использования связанным элементом управления. Доступ к каждому отдельному изображению может осуществляться по значению индекса или ключу. Свойство <xref:System.Windows.Forms.ImageList.ColorDepth%2A> определяет количество цветов, которые используются для отрисовки изображений. Размер всех отображаемых изображений будет одинаковым (задается свойством <xref:System.Windows.Forms.ImageList.ImageSize%2A>). Изображения, размер которых больше заданного, масштабируются.
 

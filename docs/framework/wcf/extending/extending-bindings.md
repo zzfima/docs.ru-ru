@@ -5,11 +5,11 @@ helpviewer_keywords:
 - extending bindings [WCF]
 ms.assetid: 5e40d306-b3c1-4429-80c4-fbb1d956856c
 ms.openlocfilehash: f631c5df13c5633c22ef1d7179a0b7d135797b3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967600"
 ---
 # <a name="extending-bindings"></a>Расширение привязок
 Привязки задают транспорт, кодирование и протокол, необходимые для подключения к конечной точке. Расширения привязки и пользовательские привязки реализуют пользовательскую функциональность связи, необходимую для поддержки возможностей приложения.  

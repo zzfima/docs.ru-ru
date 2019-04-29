@@ -12,11 +12,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], adding transparency
 ms.assetid: 5440f48c-3ac9-44c3-b170-c1c110bdbab8
 ms.openlocfilehash: 7a8286fb741effaf668b87e90da04f79d1490de2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960944"
 ---
 # <a name="alpha-blending-lines-and-fills"></a>Альфа-смешение цвета для линий и заливок
 В [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], цвет является 32-разрядное значение с 8 бит для альфа, красного, зеленого и синего. Значение альфа определяет прозрачность цвета, области, к которому цвет смешивается с цветом фона. Альфа-значения в диапазоне от 0 до 255, где 0 соответствует полностью прозрачный цвет, а 255 представляет полностью непрозрачный цвет.  

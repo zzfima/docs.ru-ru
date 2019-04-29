@@ -9,11 +9,11 @@ helpviewer_keywords:
 - drawing [Windows Forms], flattening curves
 ms.assetid: e654b8de-25f4-4735-9208-42e4514a589c
 ms.openlocfilehash: a151b4244e14d3704fd5fa1c55de92211981232f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781374"
 ---
 # <a name="how-to-flatten-a-curved-path-into-a-line"></a>Практическое руководство. Спрямление участков кривой
 Объект <xref:System.Drawing.Drawing2D.GraphicsPath> объект хранит последовательность, линий и сплайнов Безье. Различные типы кривых (эллипсы, дуги, фундаментальные сплайны) можно добавить в путь, но каждую кривую преобразуется в кривую Безье, перед его сохранением в пути. Спрямление путь заключается в преобразовании всех сплайнов Безье в пути в последовательность прямых линий. Ниже показан путь до и после выравнивания.  
@@ -22,7 +22,7 @@ ms.locfileid: "59215161"
   
 ### <a name="to-flatten-a-path"></a>Спрямление контура  
   
--   Вызовите <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> метод <xref:System.Drawing.Drawing2D.GraphicsPath> объекта. <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> Метод получает аргумент спрямления, который указывает максимальное расстояние между уплощенный путь и исходный путь.  
+- Вызовите <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> метод <xref:System.Drawing.Drawing2D.GraphicsPath> объекта. <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> Метод получает аргумент спрямления, который указывает максимальное расстояние между уплощенный путь и исходный путь.  
   
 ## <a name="see-also"></a>См. также
 

@@ -4,49 +4,49 @@ ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
 ms.openlocfilehash: 04861b8c3f2673a5cd093be1351928b1da487147
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940521"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Как выполнить: создание веб-приложения ASP.NET MVC, поддерживающего утверждения, с использованием WIF
 ## <a name="applies-to"></a>Применение  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® MVC  
+- ASP.NET® MVC  
   
 ## <a name="summary"></a>Сводка  
  В этом практическом руководстве представлены подробные пошаговые процедуры по созданию простого веб-приложения ASP.NET MVC с поддержкой утверждений. Также здесь приводятся инструкции по тестированию простого веб-приложения ASP.NET MVC с поддержкой утверждений для реализации проверки подлинности на основе утверждений. В этом практическом руководстве не приводятся подробные инструкции по созданию службы маркеров безопасности (STS) и подразумевается, что вы уже выполнили ее настройку.  
   
 ## <a name="contents"></a>Описание  
   
--   Цели  
+- Цели  
   
--   Сводка действий  
+- Сводка действий  
   
--   Шаг 1. Создание простого приложения ASP.NET MVC  
+- Шаг 1. Создание простого приложения ASP.NET MVC  
   
--   Шаг 2. Настройка приложения ASP.NET MVC для проверки подлинности на основе утверждений  
+- Шаг 2. Настройка приложения ASP.NET MVC для проверки подлинности на основе утверждений  
   
--   Шаг 3. Тестирование решения  
+- Шаг 3. Тестирование решения  
   
--   Связанные элементы:  
+- Связанные элементы:  
   
 ## <a name="objectives"></a>Цели  
   
--   Настройка веб-приложения ASP.NET MVC для проверки подлинности на основе утверждений  
+- Настройка веб-приложения ASP.NET MVC для проверки подлинности на основе утверждений  
   
--   Тестирование веб-приложения ASP.NET MVC с поддержкой утверждений  
+- Тестирование веб-приложения ASP.NET MVC с поддержкой утверждений  
   
 ## <a name="summary-of-steps"></a>Сводка действий  
   
--   Шаг 1. Создание простого приложения ASP.NET MVC  
+- Шаг 1. Создание простого приложения ASP.NET MVC  
   
--   Шаг 2. Настройка приложения ASP.NET MVC для проверки подлинности на основе утверждений  
+- Шаг 2. Настройка приложения ASP.NET MVC для проверки подлинности на основе утверждений  
   
--   Шаг 3. Тестирование решения  
+- Шаг 3. Тестирование решения  
   
 ## <a name="step-1--create-simple-aspnet-mvc-application"></a>Шаг 1. Создание простого приложения ASP.NET MVC  
  На этом шаге создается новое приложение ASP.NET MVC.  
@@ -218,4 +218,4 @@ ms.locfileid: "59335671"
   
 ## <a name="related-items"></a>Связанные элементы:  
   
--   [Практическое руководство. Создание приложения с поддержкой утверждений ASP.NET Web Forms, с помощью WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+- [Практическое руководство. Создание приложения с поддержкой утверждений ASP.NET Web Forms, с помощью WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
 ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796108"
 ---
 # <a name="wif-and-web-farms"></a>WIF и веб-фермы
 Если вы используете Windows Identity Foundation (WIF) для защиты ресурсов приложения проверяющей стороны, развернутого в веб-ферме, необходимо выполнить определенные действия, чтобы платформа WIF могла обрабатывать токены от экземпляров этого приложения, работающих на разных компьютерах в ферме. Обработка включает в себя проверку подписей токенов сеансов, шифрование и расшифровку токенов сеансов, их кэширование, а также обнаружение повторно используемых маркеров безопасности.  
@@ -17,21 +17,21 @@ ms.locfileid: "59135360"
   
  При использовании параметров по умолчанию WIF выполняет указанные ниже действия.  
   
--   Использует экземпляр класса <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> для чтения и записи токена сеанса (экземпляра класса <xref:System.IdentityModel.Tokens.SessionSecurityToken>), с помощью которого передаются утверждения и другие сведения о токене безопасности, использовавшемся для проверки подлинности, а также сведения о самом сеансе. Токен сеанса упаковывается и сохраняется в файле cookie сеанса. По умолчанию для защиты токена сеанса <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> применяет класс <xref:System.IdentityModel.ProtectedDataCookieTransform>, который использует API защиты данных (DPAPI). Интерфейс API защиты данных обеспечивает защиту с помощью учетных данных пользователя или компьютера и сохраняет данные ключей в профиле пользователя.  
+- Использует экземпляр класса <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> для чтения и записи токена сеанса (экземпляра класса <xref:System.IdentityModel.Tokens.SessionSecurityToken>), с помощью которого передаются утверждения и другие сведения о токене безопасности, использовавшемся для проверки подлинности, а также сведения о самом сеансе. Токен сеанса упаковывается и сохраняется в файле cookie сеанса. По умолчанию для защиты токена сеанса <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> применяет класс <xref:System.IdentityModel.ProtectedDataCookieTransform>, который использует API защиты данных (DPAPI). Интерфейс API защиты данных обеспечивает защиту с помощью учетных данных пользователя или компьютера и сохраняет данные ключей в профиле пользователя.  
   
--   Он использует стандартную реализацию класса <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> в памяти для хранения и обработки токена сеанса.  
+- Он использует стандартную реализацию класса <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> в памяти для хранения и обработки токена сеанса.  
   
  Эти параметры по умолчанию подходят для случаев, когда приложение проверяющей стороны развернуто на отдельном компьютере. Однако если оно развернуто в веб-ферме, каждый HTTP-запрос может отправляться в экземпляры приложения проверяющей стороны, работающие на разных компьютерах. В такой ситуации описанные выше параметры WIF по умолчанию не подходят, так как защита и кэширование токенов привязаны к определенному компьютеру.  
   
  Чтобы развернуть приложение проверяющей стороны в веб-ферме, необходимо сделать так, чтобы обработка токенов сеансов (а также воспроизводимых токенов) не зависела от приложения, работающего на определенном компьютере. Один из способов — реализовать приложение проверяющей стороны так, чтобы оно использовало возможности, предоставляемые элементом конфигурации `<machineKey>` ASP.NET, и обеспечивало распределенное кэширование для обработки токенов сеансов и воспроизводимых токенов. Элемент `<machineKey>` позволяет указывать ключи, необходимые для проверки, шифрования и расшифровки токенов, в файле конфигурации, то есть указывать одни и те же ключи для разных компьютеров в веб-ферме. WIF предоставляет специальный обработчик токенов сеансов <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>, который защищает токены с помощью ключей, указанных в элементе `<machineKey>`. Для реализации такого подхода следует придерживаться изложенных ниже правил.  
   
--   Используйте элемент `<machineKey>` ASP.NET в файле конфигурации, чтобы явно указать ключи подписания и шифрования, которые можно использовать на разных компьютерах в ферме. Ниже приведен пример кода XML со спецификацией элемента `<machineKey>` внутри элемента `<system.web>` в файле конфигурации.  
+- Используйте элемент `<machineKey>` ASP.NET в файле конфигурации, чтобы явно указать ключи подписания и шифрования, которые можно использовать на разных компьютерах в ферме. Ниже приведен пример кода XML со спецификацией элемента `<machineKey>` внутри элемента `<system.web>` в файле конфигурации.  
   
     ```xml  
     <machineKey compatibilityMode="Framework45" decryptionKey="CC510D … 8925E6" validationKey="BEAC8 … 6A4B1DE" />  
     ```  
   
--   Настройте в приложении использование обработчика <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>, добавив его в коллекцию обработчиков токенов. Сначала из коллекции обработчиков токенов нужно удалить обработчик <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> (или любой другой обработчик, производный от класса <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>), если он имеется. Обработчик <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> использует класс <xref:System.IdentityModel.Services.MachineKeyTransform>, который защищает файл cookie сеанса с помощью криптографических данных, указанных в файле `<machineKey>`. Ниже приведен код XML, демонстрирующий добавление <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> в коллекцию обработчиков токенов.  
+- Настройте в приложении использование обработчика <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>, добавив его в коллекцию обработчиков токенов. Сначала из коллекции обработчиков токенов нужно удалить обработчик <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> (или любой другой обработчик, производный от класса <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>), если он имеется. Обработчик <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> использует класс <xref:System.IdentityModel.Services.MachineKeyTransform>, который защищает файл cookie сеанса с помощью криптографических данных, указанных в файле `<machineKey>`. Ниже приведен код XML, демонстрирующий добавление <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> в коллекцию обработчиков токенов.  
   
     ```xml  
     <securityTokenHandlers>  
@@ -40,7 +40,7 @@ ms.locfileid: "59135360"
     </securityTokenHandlers>  
     ```  
   
--   Выполните наследование от класса <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> и реализуйте распределенное кэширование, то есть кэш, доступный со всех компьютеров в ферме, на которых может размещаться проверяющая сторона. Настройте проверяющую сторону так, чтобы она использовала распределенный кэш, добавив элемент [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) в файл конфигурации. Вы можете переопределить метод <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> в производном классе, чтобы реализовать дочерние элементы элемента `<sessionSecurityTokenCache>`, если они необходимы.  
+- Выполните наследование от класса <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> и реализуйте распределенное кэширование, то есть кэш, доступный со всех компьютеров в ферме, на которых может размещаться проверяющая сторона. Настройте проверяющую сторону так, чтобы она использовала распределенный кэш, добавив элемент [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) в файл конфигурации. Вы можете переопределить метод <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> в производном классе, чтобы реализовать дочерние элементы элемента `<sessionSecurityTokenCache>`, если они необходимы.  
   
     ```xml  
     <caches>  
@@ -52,7 +52,7 @@ ms.locfileid: "59135360"
   
      Один из способов реализации распределенного кэширования — предоставить внешний интерфейс WCF для пользовательского кэша. Дополнительные сведения о реализации службы кэширования WCF см. в разделе [Служба кэширования WCF](#BKMK_TheWCFCachingService). Дополнительные сведения о реализации клиента WCF, который приложение проверяющей стороны может использовать для вызова службы кэширования, см. в разделе [Клиент кэширования WCF](#BKMK_TheWCFClient).  
   
--   Если приложение обнаруживает воспроизводимые токены, необходимо использовать аналогичный подход, реализовав распределенное кэширование для кэша воспроизведения токенов. Для этого выполните наследование от класса <xref:System.IdentityModel.Tokens.TokenReplayCache> и укажите службу кэширования воспроизводимых токенов в элементе конфигурации [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
+- Если приложение обнаруживает воспроизводимые токены, необходимо использовать аналогичный подход, реализовав распределенное кэширование для кэша воспроизведения токенов. Для этого выполните наследование от класса <xref:System.IdentityModel.Tokens.TokenReplayCache> и укажите службу кэширования воспроизводимых токенов в элементе конфигурации [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
   
 > [!IMPORTANT]
 >  Пример XML-кода и кода в этом разделе берется из [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) образца.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
 ms.openlocfilehash: 241d2824fc2d87a0505eb6e790c865bfa7d8ef90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967381"
 ---
 # <a name="how-to-rotate-colors"></a>Практическое руководство. Циклический сдвиг цветов
 Поворот в четырехмерный цветовом пространстве сложно представить. Мы можно упростить, если договориться сохранять один из компонентов цвета неизменным. Предположим, что требуется сохранить альфа-компонент, составляет 1 (полностью непрозрачный). Затем мы можете визуализировать трехмерное цветовое пространство с осями красного, зеленого и синего, как показано на следующем рисунке.  

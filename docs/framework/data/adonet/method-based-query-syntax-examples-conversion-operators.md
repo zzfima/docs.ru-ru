@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a084c16b-9b55-4690-aefd-f8e0810a92c3
 ms.openlocfilehash: e50707155d509b8300966cbba8ee885492e5b815
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772285"
 ---
 # <a name="method-based-query-syntax-examples-conversion-operators-linq-to-dataset"></a>Примеры синтаксиса запросов на основе методов. операторы преобразования (LINQ to DataSet)
 Примеры в данном разделе демонстрируют, как использовать методы <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToDictionary%2A> и <xref:System.Linq.Enumerable.ToList%2A> для немедленного выполнения выражения запроса.  

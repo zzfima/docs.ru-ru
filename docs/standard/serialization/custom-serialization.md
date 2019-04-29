@@ -18,11 +18,11 @@ helpviewer_keywords:
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
 ms.openlocfilehash: 83538dc971419ad7918c16c5ccbd2003d16e2c6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931746"
 ---
 # <a name="custom-serialization"></a>Пользовательская сериализация
 Пользовательской сериализацией называется процесс управления сериализацией и десериализацией типа. Управление сериализацией позволяет обеспечить совместимость сериализации, в результате чего становится возможной сериализация и десериализация между различными версиями типа без нарушения основных функциональных возможностей типа. Например, в первой версии типа может быть только два поля. В следующей версии типа добавлено еще несколько полей. Во второй версии приложения должна быть предусмотрена возможность сериализации и десериализации обоих типов. В следующих разделах объясняется, как управлять сериализацией.
@@ -35,13 +35,13 @@ ms.locfileid: "54628001"
 ## <a name="running-custom-methods-during-and-after-serialization"></a>Использование пользовательских методов во время сериализации и после нее  
  Для исправления данных во время сериализации и после нее рекомендуется применять к методам следующие атрибуты (впервые представлено в платформе .NET Framework версии 2.0):  
   
--   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
   
--   <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+- <xref:System.Runtime.Serialization.OnSerializedAttribute>  
   
--   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
+- <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
  Эти атрибуты обеспечивают использование типа на любом или на всех четырех этапах процесса сериализации и десериализации. Атрибуты определяют методы типа, которые должны вызываться на каждом этапе. Доступ методов к потоку сериализации отсутствует, однако можно изменить объект перед сериализацией и после нее или перед десериализацией и после нее. Атрибуты можно применять на всех уровнях иерархии наследования типов, и каждый метод вызывается в иерархии от базового до самого дальнего в цепочке наследования. Этот механизм позволяет избежать усложненности и каких-либо проблем реализации интерфейса <xref:System.Runtime.Serialization.ISerializable>, передав процесс сериализации и десериализации самой дальней в цепочке наследования реализации. Кроме того, благодаря такому механизму модули форматирования могут игнорировать заполнение полей и извлечение данных из потока сериализации. Дополнительные сведения и примеры управления сериализацией и десериализацией см. по ссылкам выше.  
   

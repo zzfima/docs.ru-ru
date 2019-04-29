@@ -1,15 +1,15 @@
 ---
-title: Свойства vs. Аргументы
+title: Свойства и Аргументы
 ms.date: 03/30/2017
 ms.assetid: 14651389-4a49-4cbb-9ddf-c83fdc155df1
 ms.openlocfilehash: a6ea4755599f18e8bbaa8187941623578d2168ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962634"
 ---
-# <a name="properties-vs-arguments"></a>Свойства vs. Аргументы
+# <a name="properties-vs-arguments"></a>Свойства и Аргументы
 Существует несколько способов передачи данных действию. Кроме использования <xref:System.Activities.InArgument>, можно также разработать действия, получающие данные либо через стандартные свойства CLR, либо через открытые свойства <xref:System.Activities.ActivityAction>. В этом разделе описано, как выбрать подходящий метод.  
   
 ## <a name="using-clr-properties"></a>Использование свойств CLR  

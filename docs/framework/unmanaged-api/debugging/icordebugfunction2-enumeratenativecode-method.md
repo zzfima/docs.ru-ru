@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a4d15d9ae63e63f98ab73e250df558dfa16002a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959969"
 ---
 # <a name="icordebugfunction2enumeratenativecode-method"></a>Метод ICorDebugFunction2::EnumerateNativeCode
-Получает указатель интерфейса на объект ICorDebugCodeEnum, содержащий инструкции машинного кода в функцию, который ссылается данный объект ICorDebugFunction2.  
+Получает указатель интерфейса на объект, содержащий инструкции машинного кода в функции, на которые ссылается этот объект ICorDebugFunction2 ICorDebugCodeEnum.  
   
 > [!NOTE]
 >  `EnumerateNativeCode` не реализован в текущей версии платформы .NET Framework.  
@@ -39,4 +39,4 @@ HRESULT EnumerateNativeCode (
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** CorDebug.idl, CorDebug.h
+ **Заголовок.** CorDebug.idl, CorDebug.h
