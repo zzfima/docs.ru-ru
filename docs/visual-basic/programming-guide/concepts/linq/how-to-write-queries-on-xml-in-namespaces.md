@@ -3,11 +3,11 @@ title: Практическое руководство. Создание зап�
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
 ms.openlocfilehash: 4efa1de254a0264752514c5ae6e601a66fa56f95
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614834"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Практическое руководство. Создание запросов к XML в пространствах имен (Visual Basic)
 Для записи XML-запросов в пространстве имен необходимо использовать объекты <xref:System.Xml.Linq.XName> с правильно заданным пространством имен.  

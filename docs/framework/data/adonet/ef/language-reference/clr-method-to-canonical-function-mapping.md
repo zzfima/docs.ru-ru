@@ -3,11 +3,11 @@ title: Сопоставление методов CLR с каноническим
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
 ms.openlocfilehash: 16d447e82959f5ade7210b36dcf9d06bed9c9b00
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605721"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Сопоставление методов CLR с каноническими функциями
 
@@ -40,7 +40,7 @@ ms.locfileid: "57378769"
 
 |Метод System.String (экземпляр)|Каноническая функция|Примечания|
 |---------------------------------------|------------------------|-----------|
-|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|Если `value` не является константой, от он сопоставляется с IndexOf(`this`, `value`) > 0|
+|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|Если `value` не является константой, а затем он сопоставляется с IndexOf (`this`, `value`) > 0|
 |Boolean EndsWith(String `value`)|`this` КАК И `'` % `value`"|Если `value` не является константой, от он сопоставляется с Right(`this`, length(`value`)) = `value`.|
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|Если `value` не является константой, от он сопоставляется с IndexOf(`this`, `value`) = 1.|
 |Длина|Length(`this`)||
@@ -66,11 +66,11 @@ ms.locfileid: "57378769"
 |System.DateTime.Now|CurrentDateTime()||
 |System.DateTime.UtcNow|CurrentUtcDateTime()||
 |Boolean op_Equality(DateTime `d1`, DateTime `d2`)|= - оператор||
-|Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|> - оператор||
-|Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|>= - оператор||
+|Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|> оператор||
+|Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|> =-оператор||
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!= - оператор||
-|Логическое op_LessThan (DateTime `t1`, даты и времени `t2`)|< - оператор||
-|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<= - оператор||
+|Логическое op_LessThan (DateTime `t1`, даты и времени `t2`)|< оператор||
+|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|< =-оператор||
 |Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` как DateInterval, \_<br /><br /> ByVal `DateValue` как значение DateTime, \_<br /><br /> Необязательный ByVal `FirstDayOfWeekValue` как FirstDayOfWeek = VbSunday, \_<br /><br /> Необязательный ByVal `FirstWeekOfYearValue` как Первая_неделя_года = VbFirstJan1 \_<br /><br /> ) As Integer||Дополнительные сведения см. в разделе «Функция DatePart».|
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||
@@ -126,7 +126,7 @@ ms.locfileid: "57378769"
 |-----------------------------------------|------------------------|-----------|
 |Часы.|Hour(`this`)|Не поддерживается для SQL Server 2005.|
 |Milliseconds|Millisecond(`this`)|Не поддерживается для SQL Server 2005.|
-|Минуты.|Minute(`this`)|Не поддерживается для SQL Server 2005.|
+|Минуты|Minute(`this`)|Не поддерживается для SQL Server 2005.|
 |Seconds|Second(`this`)|Не поддерживается для SQL Server 2005.|
 
 > [!NOTE]

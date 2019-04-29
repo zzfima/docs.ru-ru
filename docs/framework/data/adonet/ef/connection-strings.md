@@ -3,11 +3,11 @@ title: Строки подключения в ADO.NET Entity Framework
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
 ms.openlocfilehash: 55097e4977111c56cb06c590e305e31ed681fd31
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606790"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Строки подключения в ADO.NET Entity Framework
 
@@ -107,7 +107,7 @@ Metadata=.\
 
 `DataDirectory` и оператор «~» могут включать подкаталоги: `|DataDirectory|\Model`, `~/bin/Model`.
 
-Процесс преобразования строки подстановки `DataDirectory` и оператора ~ является нерекурсивным. Например, если `DataDirectory` включает символ `~`, возникает исключение. Тем самым предотвращается бесконечная рекурсия.
+Процесс разрешения строки подстановки `DataDirectory` и оператора ~ является нерекурсивным. Например, если `DataDirectory` включает символ `~`, возникает исключение. Тем самым предотвращается бесконечная рекурсия.
 
 ## <a name="see-also"></a>См. также
 

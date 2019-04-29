@@ -3,11 +3,11 @@ title: Сборка типов (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
 ms.openlocfilehash: 53aa7fcc82a476c8b8bd87b059e08bee6741c0d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605840"
 ---
 # <a name="constructing-types-entity-sql"></a>Сборка типов (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] предоставляет три типа конструкторов: конструкторы строк, конструкторы именованных типов и конструкторы коллекций.  
@@ -21,9 +21,9 @@ ms.locfileid: "59073784"
   
  В конструкторе строк псевдонимы присваиваются выражениям по следующим правилам.  
   
--   Выражение в конструкторе строк не может ссылаться на другие псевдонимы в этом же конструкторе.  
+- Выражение в конструкторе строк не может ссылаться на другие псевдонимы в этом же конструкторе.  
   
--   Два выражения в одном конструкторе строк не могут иметь одинаковый псевдоним.  
+- Два выражения в одном конструкторе строк не могут иметь одинаковый псевдоним.  
   
  Дополнительные сведения о конструкторах строк см. в разделе [строки](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).  
   

@@ -5,18 +5,18 @@ f1_keywords:
 - vbrArgument_StrConvSCandTC
 ms.assetid: d8e6a11b-f549-43b5-8337-0594340e1325
 ms.openlocfilehash: a209a83ce5bd3ecd9580abab330f1e09ecc3864e
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58043278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61594845"
 ---
 # <a name="simplifiedchinese-and-vbstrconvtraditionalchinese-cannot-be-combined"></a>VbStrConv.SimplifiedChinese и VbStrConv.TraditionalChinese не могут использоваться вместе
 Приложение пытается объединить взаимоисключающие элементы `VbStrConv` и `SimplifiedChinese` , являющиеся членами перечисления `TraditionalChinese`.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Удалите `VbStrConv.SimplifiedChinese` или `VbStrConv.TraditionalChinese`.  
+- Удалите `VbStrConv.SimplifiedChinese` или `VbStrConv.TraditionalChinese`.  
   
 ## <a name="see-also"></a>См. также
 

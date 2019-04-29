@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 503fae4b-014c-44df-a9c7-c76ec4ed4229
 ms.openlocfilehash: 7a885bd4ff0d3c35e26fd0f37e82a41abf713b6e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608669"
 ---
 # <a name="conceptual-overview"></a>Общие сведения об основных понятиях
-В этом разделе содержатся сведения о Windows Communication Foundation (WCF) системы и классах, поддерживающих ее использование обмена сообщениями.  
+В этом разделе содержатся сведения о Windows Communication Foundation (WCF) обмена сообщениями, системы и классах, поддерживающих ее использование.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Что такое Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- Общие сведения о WCF.  
+ Краткий обзор WCF.  
   
  [Основные понятия Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)  
- Обзор основных понятий модели программирования WCF.  
+ Обзор основных концепций модели программирования WCF.  
   
  [Архитектура Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)  
  Графическое представление архитектуры WCF.  
