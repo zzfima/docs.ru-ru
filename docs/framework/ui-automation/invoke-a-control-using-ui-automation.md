@@ -10,11 +10,11 @@ helpviewer_keywords:
 - controls, invoking
 ms.assetid: 5ee2de3f-256c-43ec-b64c-62ace91f9983
 ms.openlocfilehash: 3c04892fc0f1ec89b1b6555c60231ecf968a1345
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779929"
 ---
 # <a name="invoke-a-control-using-ui-automation"></a>Вызов элемента управления с помощью модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -22,13 +22,13 @@ ms.locfileid: "59149426"
   
  В этом примере показано выполнение следующих задач.  
   
--   Поиск элемента управления, который соответствует конкретным условиям свойств путем прохода представления элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] для целевого приложения.  
+- Поиск элемента управления, который соответствует конкретным условиям свойств путем прохода представления элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] для целевого приложения.  
   
--   Создание <xref:System.Windows.Automation.AutomationElement> для каждого элемента управления.  
+- Создание <xref:System.Windows.Automation.AutomationElement> для каждого элемента управления.  
   
--   Получение объекта <xref:System.Windows.Automation.InvokePattern> из любого найденного элемента [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , который поддерживает шаблон элемента управления <xref:System.Windows.Automation.InvokePattern> .  
+- Получение объекта <xref:System.Windows.Automation.InvokePattern> из любого найденного элемента [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , который поддерживает шаблон элемента управления <xref:System.Windows.Automation.InvokePattern> .  
   
--   Использование <xref:System.Windows.Automation.InvokePattern.Invoke%2A> для вызова элемента управления из обработчика событий клиента.  
+- Использование <xref:System.Windows.Automation.InvokePattern.Invoke%2A> для вызова элемента управления из обработчика событий клиента.  
   
 ## <a name="example"></a>Пример  
  В этом примере используется метод <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> класса <xref:System.Windows.Automation.AutomationElement> для создания объекта <xref:System.Windows.Automation.InvokePattern> и вызова элемента управления с помощью метода <xref:System.Windows.Automation.InvokePattern.Invoke%2A> .  

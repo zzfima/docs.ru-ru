@@ -3,11 +3,11 @@ title: Практическое руководство. Нахождение р�
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
 ms.openlocfilehash: 3757a588ed37805d6dd2569e1d25b07bd166c2d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61833031"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Практическое руководство. Нахождение разности множеств между двумя списками (LINQ) (Visual Basic)
 В этом примере показано, как использовать LINQ для сравнения двух списков строк и вывода тех строк, которые содержатся в файле names1.txt, но не в файле names2.txt.  

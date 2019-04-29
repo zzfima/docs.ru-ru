@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Hyperlink control type [WPF]
 ms.assetid: 3996cfe6-1dac-4835-aeb3-c719ce9cfee5
 ms.openlocfilehash: 5718912e24a0697f209669b0ab4e7f4df1765ed3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943953"
 ---
 # <a name="how-to-specify-whether-a-hyperlink-is-underlined"></a>Практическое руководство. Определение того, подчеркнута ли ссылка
 <xref:System.Windows.Documents.Hyperlink> Объект — это элемент содержимого потока встроенного уровня, позволяющим размещать гиперссылки в содержимом потока. По умолчанию <xref:System.Windows.Documents.Hyperlink> использует <xref:System.Windows.TextDecoration> объекта для отображения подчеркивания. <xref:System.Windows.TextDecoration> объекты могут быть производительность при создании, особенно в том случае, если имеется много <xref:System.Windows.Documents.Hyperlink> объектов. При внесении широкое использование <xref:System.Windows.Documents.Hyperlink> элементов, может потребоваться отображать подчеркивание только при возникновении события, такие как <xref:System.Windows.ContentElement.MouseEnter> событий.  

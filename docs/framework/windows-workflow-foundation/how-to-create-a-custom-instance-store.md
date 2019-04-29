@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. создать настраиваемое хранилище экземпляров
+title: Практическое руководство. Создание настраиваемого хранилища экземпляров
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
 ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945643"
 ---
-# <a name="how-to-create-a-custom-instance-store"></a>Практическое руководство. создать настраиваемое хранилище экземпляров
+# <a name="how-to-create-a-custom-instance-store"></a>Практическое руководство. Создание настраиваемого хранилища экземпляров
 
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] содержит <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> - хранилище экземпляров SQL Server, которое используется для сохранения данных рабочих процессов. Если приложению необходимо сохранить данные рабочего процесса в другой среде передачи, например базе данных или файловой системе, вы можете создать настраиваемое хранилище экземпляров. Пользовательское хранилище экземпляров создается путем расширения абстрактного класса <xref:System.Runtime.DurableInstancing.InstanceStore> и реализации методов, которые необходимы для реализации. Полную реализацию пользовательского хранилища экземпляров, см. в разделе [процесс корпоративных закупок](./samples/corporate-purchase-process.md) образца.
 

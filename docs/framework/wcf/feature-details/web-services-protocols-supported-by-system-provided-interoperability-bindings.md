@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
 ms.openlocfilehash: caf9a66e8c42fb80955539aa9d3eb32179309004
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929692"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Протоколы веб-служб, поддерживаемые предоставляемыми системой привязками
 Windows Communication Foundation (WCF) предназначено для взаимодействия с веб-службами, поддерживающими набор спецификаций, называемых спецификациями веб-служб. Чтобы упростить конфигурацию службы для рекомендации по взаимодействию, WCF представляет три с возможностью взаимодействия предоставляемых системой привязок: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, и <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Для обеспечения взаимодействия с организация для продвижения из структурированных сведения стандартов OASIS-стандартов, WCF включает в себя одну привязку с возможностью системных: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Для публикации метаданных WCF включает в себя два с возможностью взаимодействия предоставляемых системой привязок: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) и [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). В этом разделе перечислены спецификации, поддерживаемые предоставляемыми системой привязками с возможностью взаимодействия.  
@@ -63,9 +63,9 @@ Windows Communication Foundation (WCF) предназначено для вза�
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding и ws2007FederationHttpBinding  
  [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) и [ \<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) элементы вводятся для обеспечения поддержки федеративных сценариев, где это третий лицо выдает маркер, используемый для проверки подлинности клиента. В дополнение к протоколам, используемым привязкой `wsHttpBinding`, привязка `wsFederationHttpBinding` позволяет использовать следующие спецификации:  
   
--   `WS-Trust` для выдачи маркеров.  
+- `WS-Trust` для выдачи маркеров.  
   
--   WSS Security Assertions Markup Language (SAML) Token Profile 1.0 и 1.1 для наиболее часто выдаваемого формата маркеров.  
+- WSS Security Assertions Markup Language (SAML) Token Profile 1.0 и 1.1 для наиболее часто выдаваемого формата маркеров.  
   
  Пример  
   

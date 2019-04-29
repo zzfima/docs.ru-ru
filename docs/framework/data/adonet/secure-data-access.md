@@ -3,11 +3,11 @@ title: Безопасный доступ к данным
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
 ms.openlocfilehash: 32106f83785759f4e9aaadcf2198afdcdb24363d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664224"
 ---
 # <a name="secure-data-access"></a>Безопасный доступ к данным
 Для записи безопасного кода ADO.NET необходимо понять механизмы безопасности, доступные в базовом хранилище данных или базе данных. Также необходимо рассмотреть влияние на безопасность остальных возможностей или компонентов, которые может содержать приложение.  

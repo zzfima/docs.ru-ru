@@ -5,11 +5,11 @@ helpviewer_keywords:
 - strings [Visual Basic], about strings
 ms.assetid: c1b0f6b4-9717-426b-a3db-957e57a60764
 ms.openlocfilehash: 4da64b1cb25fe1a681e5790aad6abc3a478b229a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938298"
 ---
 # <a name="introduction-to-strings-in-visual-basic"></a>Знакомство со строками в Visual Basic
 В этом разделе описываются основные принципы использования строк в Visual Basic.  

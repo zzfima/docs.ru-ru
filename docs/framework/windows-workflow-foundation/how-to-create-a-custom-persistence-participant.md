@@ -3,11 +3,11 @@ title: Практическое руководство. Создание нас�
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
 ms.openlocfilehash: 1de2abb8ababd794cd644733b6e4ab0ed42b1810
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773398"
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>Практическое руководство. Создание настраиваемого участника сохраняемости
 В следующей процедуре содержаться шаги для создания участника сохраняемости. См. в разделе [участие в сохраняемости](https://go.microsoft.com/fwlink/?LinkID=177735) пример и [расширяемости Store](store-extensibility.md) разделе Примеры реализации участников сохраняемости.  

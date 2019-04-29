@@ -1,5 +1,5 @@
 ---
-title: Элемент управления ToggleButton стили и шаблоны
+title: Стили и шаблоны элемента ToggleButton
 ms.date: 03/30/2017
 helpviewer_keywords:
 - states [WPF], ToggleButton
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - parts [WPF], ToggleButton
 ms.assetid: 54f23f30-4bcb-4f09-8ce4-376a13a255a1
 ms.openlocfilehash: 46fd7d07c3904ee752ae3f467f65af4b0c031c84
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57509513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790758"
 ---
-# <a name="togglebutton-styles-and-templates"></a>Элемент управления ToggleButton стили и шаблоны
+# <a name="togglebutton-styles-and-templates"></a>Стили и шаблоны элемента ToggleButton
 
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.Primitives.ToggleButton> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
 
@@ -28,7 +28,7 @@ ms.locfileid: "57509513"
 
 В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.ToggleButton> элемента управления.
 
-|Имя VisualState|Имя VisualStateGroup|Описание:|
+|Имя VisualState|Имя VisualStateGroup|Описание|
 |-|-|-|
 |Норм.|CommonStates|Состояние по умолчанию.|
 |MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|

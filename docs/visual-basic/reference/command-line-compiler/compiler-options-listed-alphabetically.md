@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 ms.openlocfilehash: 846d033c62d0168bab4661b9ab2b71a2139e2fcb
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "58823523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649820"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Параметры компилятора Visual Basic, перечисленных в алфавитном порядке
 Компилятор командной строки Visual Basic служит альтернативой программам компиляции в среде разработки Visual Studio (IDE). Ниже приведен список параметров компилятора командной строки Visual Basic, отсортированный в алфавитном порядке.  

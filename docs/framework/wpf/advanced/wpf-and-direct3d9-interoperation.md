@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
 ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669217"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>Взаимодействие WPF и Direct3D9
 Можно включить содержимого Direct3D9 в приложении Windows Presentation Foundation (WPF). В этом разделе описывается создание содержимого Direct3D9 таким образом, чтобы эффективно взаимодействовать с WPF.  
@@ -32,9 +32,9 @@ ms.locfileid: "59307734"
   
  Создание устройства путем вызова одного из следующих методов.  
   
--   `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
+- `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
   
--   `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
+- `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
   
  В Windows Vista или более поздней версии операционной системы, используйте `Direct3DCreate9Ex` метод с отображением, который настроен для использования Windows отображения Driver Model (WDDM). Используйте `Direct3DCreate9` метод на любой другой платформы.  
   
@@ -97,11 +97,11 @@ ms.locfileid: "59307734"
   
  Существует три способа обработки изменения размера.  
   
--   Участвовать в системе макета и создайте новую поверхность, при изменении размера. Не создавайте слишком много рабочих областей, так как можно израсходовать или фрагментировать память.  
+- Участвовать в системе макета и создайте новую поверхность, при изменении размера. Не создавайте слишком много рабочих областей, так как можно израсходовать или фрагментировать память.  
   
--   Подождите, пока событие изменения размера не произошло за фиксированный период времени для создания новой рабочей области.  
+- Подождите, пока событие изменения размера не произошло за фиксированный период времени для создания новой рабочей области.  
   
--   Создание <xref:System.Windows.Threading.DispatcherTimer> , проверять размеры контейнера несколько раз в секунду.  
+- Создание <xref:System.Windows.Threading.DispatcherTimer> , проверять размеры контейнера несколько раз в секунду.  
   
 ## <a name="multi-monitor-optimization"></a>Оптимизация конфигураций с несколькими мониторами  
  Значительное снижение производительности может произойти при перемещении система отрисовки <xref:System.Windows.Interop.D3DImage> на другой монитор.  
@@ -132,11 +132,11 @@ ms.locfileid: "59307734"
 ## <a name="wpf-software-rendering"></a>WPF программной отрисовки  
  WPF выполняет визуализацию синхронно в потоке пользовательского интерфейса в программном обеспечении в следующих ситуациях.  
   
--   Печать  
+- Печать  
   
--   <xref:System.Windows.Media.Effects.BitmapEffect>  
+- <xref:System.Windows.Media.Effects.BitmapEffect>  
   
--   <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
+- <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
   
  При возникновении такой ситуации система отрисовки вызывает <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> метод копирования в буфер оборудования к программному обеспечению. По умолчанию реализация вызывает `GetRenderTargetData` метод с вашей рабочей областью. Так как этот вызов происходит вне шаблона блокирования и разблокирования, он может завершиться ошибкой. В этом случае `CopyBackBuffer` возвращает метод `null` и изображение не отображается.  
   

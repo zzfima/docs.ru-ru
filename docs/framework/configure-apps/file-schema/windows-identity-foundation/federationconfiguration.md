@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
 ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791720"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Настраивает <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) и <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM), при использовании Федеративная проверка подлинности по протоколу WS-Federation. Настраивает <xref:System.Security.Claims.ClaimsAuthorizationManager> при использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> или <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> класс, чтобы обеспечить управление доступом на основе утверждений.  
@@ -52,9 +52,9 @@ ms.locfileid: "59297491"
 ## <a name="remarks"></a>Примечания  
  \<FederationConfiguration > элемент предоставляет параметры в двух разных сценариев:  
   
--   При использовании WS-Federation passive веб-приложения, элемент содержит параметры, определяющие <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) и <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM). Он также ссылается на конфигурацию удостоверения, чтобы использовать для настройки обработчики маркеров безопасности и сертификаты и компоненты, такие как диспетчер авторизации утверждений и диспетчер аутентификации утверждений.  
+- При использовании WS-Federation passive веб-приложения, элемент содержит параметры, определяющие <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) и <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM). Он также ссылается на конфигурацию удостоверения, чтобы использовать для настройки обработчики маркеров безопасности и сертификаты и компоненты, такие как диспетчер авторизации утверждений и диспетчер аутентификации утверждений.  
   
--   При использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> или <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> класса, чтобы обеспечить управление доступом на основе утверждений в коде, элемент, ссылающийся на конфигурацию удостоверения, который настраивает диспетчера авторизации утверждений и политику, которая используется для выполнения авторизации решения. Это верно даже в сценариях, которые не являются пассивных сценариях Web; Например, приложение, которое не является веб-или приложений Windows Communication Foundation (WCF). Если приложение не пассивное веб-приложение, [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) элемента (и политики его дочерние элементы, если он имеется) конфигурации удостоверения, ссылается `<federationConfiguration>` элемент применяются только параметры. Другие атрибуты игнорируются.  
+- При использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> или <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> класса, чтобы обеспечить управление доступом на основе утверждений в коде, элемент, ссылающийся на конфигурацию удостоверения, который настраивает диспетчера авторизации утверждений и политику, которая используется для выполнения авторизации решения. Это верно даже в сценариях, которые не являются пассивных сценариях Web; Например, приложение, которое не является веб-или приложений Windows Communication Foundation (WCF). Если приложение не пассивное веб-приложение, [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) элемента (и политики его дочерние элементы, если он имеется) конфигурации удостоверения, ссылается `<federationConfiguration>` элемент применяются только параметры. Другие атрибуты игнорируются.  
   
  Независимо от сценария среда выполнения загружает конфигурации федерации по умолчанию. Поведение определяется следующим образом:  
   

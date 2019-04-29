@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
 ms.openlocfilehash: c75d0b348a2f3dd678f2bfb235bce2e4e227c4b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792136"
 ---
 # <a name="webbrowser-control-overview"></a>Общие сведения об элементе управления WebBrowser
 <xref:System.Windows.Forms.WebBrowser> Управления предоставляет управляемую оболочку для элемента управления WebBrowser ActiveX. Управляемая оболочка позволяет отображать веб-страницы в клиентских приложениях Windows Forms. Можно использовать <xref:System.Windows.Forms.WebBrowser> управления дублировать возможности просмотра веб-обозревателя в приложении. также можно отключить функциональные возможности Internet Explorer по умолчанию и использовать элемент управления в качестве простого средства просмотра документа HTML. Можно также использовать элемент управления для добавления элементов интерфейса пользователя на основе DHTML в форму и скрыть тот факт, что они размещаются в <xref:System.Windows.Forms.WebBrowser> элемента управления. Такой подход позволяет без проблем Сочетайте веб-элементов управления с помощью элементов управления Windows Forms в одном приложении.  

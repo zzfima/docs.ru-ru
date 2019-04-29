@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 18b896cebea83071bb2a8756157b48c62dcfda7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638714"
 ---
 # <a name="iclrpolicymanagersettimeoutandaction-method"></a>Метод ICLRPolicyManager::SetTimeoutAndAction
 Задает значение времени ожидания для указанной операции и указывает действие политики, которое займет общеязыковой среды выполнения (CLR), при выполнении этой операции.  
@@ -41,13 +41,13 @@ HRESULT SetTimeoutAndAction (
  `operation`  
  [in] Один из [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) значений, указывающее операцию, для которого требуется задать время ожидания и политики `action`. Поддерживаются следующие значения:  
   
--   OPR_AppDomainUnload  
+- OPR_AppDomainUnload  
   
--   OPR_ProcessExit  
+- OPR_ProcessExit  
   
--   OPR_ThreadRudeAbortInCriticalRegion  
+- OPR_ThreadRudeAbortInCriticalRegion  
   
--   OPR_ThreadRudeAbortInNonCriticalRegion  
+- OPR_ThreadRudeAbortInNonCriticalRegion  
   
  `dwMilliseconds`  
  [in] Новое значение времени ожидания в миллисекундах. Значение БЕСКОНЕЧНОГО причины `operation` никогда не для времени ожидания.  

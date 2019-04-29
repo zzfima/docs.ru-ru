@@ -12,11 +12,11 @@ helpviewer_keywords:
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
 ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768505"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Практическое руководство. Удаленный опрос состояний принтеров
 В средних и крупных компаниях могут возникнуть ситуации, когда из-за замятия или отсутствия бумаги либо по иным причинам не работают сразу несколько принтеров. Широкий набор свойства принтеров в [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] платформы Microsoft .NET Framework предоставляют средства для выполнения быстрого опроса состояния принтеров.  
@@ -39,9 +39,9 @@ ms.locfileid: "59340793"
   
  Затем в примере используется <xref:System.Printing.PrintServer.GetPrintQueues%2A> создать коллекцию всех сервера и помещает в очередь и начинает организовать цикл по ним. Этот внутренний цикл содержит структуру ветвления, соответствующую двум способам проверки состояния принтера:  
   
--   Вы можете прочесть флаги из <xref:System.Printing.PrintQueue.QueueStatus%2A> свойства, которые имеют тип <xref:System.Printing.PrintQueueStatus>.  
+- Вы можете прочесть флаги из <xref:System.Printing.PrintQueue.QueueStatus%2A> свойства, которые имеют тип <xref:System.Printing.PrintQueueStatus>.  
   
--   Можно прочитать каждое соответствующее свойство, например <xref:System.Printing.PrintQueue.IsOutOfPaper%2A>, и <xref:System.Printing.PrintQueue.IsPaperJammed%2A>.  
+- Можно прочитать каждое соответствующее свойство, например <xref:System.Printing.PrintQueue.IsOutOfPaper%2A>, и <xref:System.Printing.PrintQueue.IsPaperJammed%2A>.  
   
  В этом примере демонстрируются оба метода, поскольку пользователь получил какой метод использовать и ответил «y», если хотите использовать флаги <xref:System.Printing.PrintQueue.QueueStatus%2A> свойство. Ниже представлены подробные сведения об этих двух методах.  
   

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - OnSerializedAttribute [WCF]
 ms.assetid: aa4a3a6f-05ec-4efd-bdbf-2181e13e6468
 ms.openlocfilehash: da13f9989b427da047c4a94f77907847ed2ae4d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932630"
 ---
 # <a name="version-tolerant-serialization-callbacks"></a>Обратные вызовы сериализации, независимые от версий
 Модель программирования контракта данных полностью поддерживает методы обратных вызовов независимой от версий сериализации, которые в свою очередь поддерживают классы <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> и <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.  

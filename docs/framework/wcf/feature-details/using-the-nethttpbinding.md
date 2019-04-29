@@ -3,11 +3,11 @@ title: Использование NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
 ms.openlocfilehash: 5090cfdfeb068acda1e1092e408f3cd747c574c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932565"
 ---
 # <a name="using-the-nethttpbinding"></a>Использование NetHttpBinding
 <xref:System.ServiceModel.NetHttpBinding> - это привязка, предназначенная для использования служб HTTP или WebSocket и использующая по умолчанию двоичное кодирование. <xref:System.ServiceModel.NetHttpBinding> определит, будет ли она использоваться с дуплексным контрактом и контрактом типа «запрос-ответ» и изменит ли свое поведение для соответствия контракту. HTTP будет использоваться для контрактов типа «запрос-ответ», и WebSockets - для дуплексных контрактов. Данное поведение можно переопределить с помощью параметра <xref:System.ServiceModel.Channels.WebSocketTransportUsage>:.  

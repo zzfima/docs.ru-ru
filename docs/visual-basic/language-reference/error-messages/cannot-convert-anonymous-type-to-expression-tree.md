@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36548
 ms.assetid: 27de068f-080e-4160-86bf-1ec23fd1925a
 ms.openlocfilehash: a6ddbaa358709fe306f1529112d1f2bd0a715a91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649963"
 ---
 # <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>Не удается преобразовать анонимный тип в дерево выражений, поскольку он содержит поле, которое было использовано в инициализации другого поля
 Компилятор не принимает преобразование анонимных в дерево выражения, когда одно свойство анонимного типа используется для инициализации другого свойства анонимного типа. Например, в следующем коде `Prop1` объявлена в списке инициализации, а затем используется в качестве начального значения для `Prop2`.  
@@ -35,7 +35,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Назначать начальное значение для `Prop1` локальной переменной. Назначьте этой переменной к обоим `Prop1` и `Prop2`, как показано в следующем коде.  
+- Назначать начальное значение для `Prop1` локальной переменной. Назначьте этой переменной к обоим `Prop1` и `Prop2`, как показано в следующем коде.  
   
     ```  
     Sub Main()  

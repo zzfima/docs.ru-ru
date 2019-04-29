@@ -6,11 +6,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], class structure
 ms.assetid: 010a1e46-656b-40a1-8d5d-87aa05ee1243
 ms.openlocfilehash: 9dfffe8ea3f76d89823dfe2ef6bd0e4f3accf8f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956485"
 ---
 # <a name="structure-of-the-graphics-interface"></a>Структура интерфейса Graphics
 Интерфейс управляемых классов для [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] содержит около 60 классов, 50 перечислений и 8 структур. <xref:System.Drawing.Graphics> Класс является основой [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] функциональные возможности; это класс, который фактически рисует линий, кривых, фигур, изображений и текста.  

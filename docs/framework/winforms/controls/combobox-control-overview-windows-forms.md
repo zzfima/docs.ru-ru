@@ -10,11 +10,11 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], about combo boxes
 ms.assetid: a58b393f-a614-45d1-8961-857a024b5acd
 ms.openlocfilehash: 80056771744c9b97828a024adf32638e545a839e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956173"
 ---
 # <a name="combobox-control-overview-windows-forms"></a>Общие сведения об элементе управления ComboBox (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ComboBox> элемент управления используется для отображения данных в раскрывающемся поле со списком. По умолчанию <xref:System.Windows.Forms.ComboBox> элемент управления отображается в виде двух частей: верхняя часть представляет собой текстовое поле, которое пользователь может ввести элемент списка. Вторая часть — полем со списком, отображающий список элементов, из которых пользователь может выбрать его. Дополнительные сведения о других стилях со списком, см. в разделе [необходимости использования Windows Forms ComboBox Instead of ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md).  

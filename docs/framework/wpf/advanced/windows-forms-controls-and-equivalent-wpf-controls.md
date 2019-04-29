@@ -7,11 +7,11 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 ms.assetid: 8a157e6b-8054-46db-a5cf-a78966acc7a1
 ms.openlocfilehash: abfcb9f5398a6a8d264985543df585bea93a0446
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669307"
 ---
 # <a name="windows-forms-controls-and-equivalent-wpf-controls"></a>Элементы управления Windows Forms и эквивалентные элементы управления WPF
 Многие [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления имеют эквивалентные [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов управления, однако некоторые [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы не имеют эквивалентов в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. В этом разделе сравниваются типы элементов управления, предоставляемые эти две технологии.  

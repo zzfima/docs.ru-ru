@@ -12,28 +12,28 @@ helpviewer_keywords:
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
 ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773104"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Оптимизация производительности: Другие рекомендации
 <a name="introduction"></a> В этом разделе содержатся рекомендации по улучшению производительности в дополнение к описанным в разделах статьи [Улучшение производительности приложений WPF](optimizing-wpf-application-performance.md).  
   
  В этом разделе содержатся следующие подразделы.  
   
--   [Сравнение прозрачности кисти с прозрачностью элементов](#Opacity)  
+- [Сравнение прозрачности кисти с прозрачностью элементов](#Opacity)  
   
--   [Переход к объекту](#Navigation_Objects)  
+- [Переход к объекту](#Navigation_Objects)  
   
--   [Проверка попадания курсора мыши на больших трехмерных поверхностях](#Hit_Testing)  
+- [Проверка попадания курсора мыши на больших трехмерных поверхностях](#Hit_Testing)  
   
--   [Событие CompositionTarget.Rendering](#CompositionTarget_Rendering_Event)  
+- [Событие CompositionTarget.Rendering](#CompositionTarget_Rendering_Event)  
   
--   [Избегайте использования ScrollBarVisibility=Auto](#Avoid_Using_ScrollBarVisibility)  
+- [Избегайте использования ScrollBarVisibility=Auto](#Avoid_Using_ScrollBarVisibility)  
   
--   [Настройка службы кэширования шрифтов для сокращения времени загрузки](#FontCache)  
+- [Настройка службы кэширования шрифтов для сокращения времени загрузки](#FontCache)  
   
 <a name="Opacity"></a>   
 ## <a name="opacity-on-brushes-versus-opacity-on-elements"></a>Сравнение прозрачности кисти с прозрачностью элементов  

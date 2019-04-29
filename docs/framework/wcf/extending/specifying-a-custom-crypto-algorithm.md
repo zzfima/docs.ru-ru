@@ -3,11 +3,11 @@ title: Задание пользовательского алгоритма ши
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
 ms.openlocfilehash: b365c3c8e74adcad03246a227d6593c49f8b3993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768710"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Задание пользовательского алгоритма шифрования
 WCF позволяет указывать пользовательский алгоритм шифрования для использования при шифровании данных или вычислении цифровых подписей. Для этого выполните следующие действия.  

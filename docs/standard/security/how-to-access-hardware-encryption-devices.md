@@ -16,11 +16,11 @@ ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33af618ac3971df76683fd64346e1aa1e5977177
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795206"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>Практическое руководство. Доступ к устройствам аппаратного шифрования
 Класс <xref:System.Security.Cryptography.CspParameters> можно использовать для доступа к устройствам аппаратного шифрования. Например, этот класс можно использовать для интеграции приложения со смарт-картой, аппаратным генератором случайных чисел или аппаратной реализацией определенного алгоритма шифрования.  
@@ -54,8 +54,8 @@ ms.locfileid: "59773419"
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
--   Включите пространства имен <xref:System> и <xref:System.Security.Cryptography>.  
+- Включите пространства имен <xref:System> и <xref:System.Security.Cryptography>.  
   
--   На компьютере должно быть установлено устройство чтения смарт-карт и соответствующие драйвера.  
+- На компьютере должно быть установлено устройство чтения смарт-карт и соответствующие драйвера.  
   
--   Необходимо инициализировать объект <xref:System.Security.Cryptography.CspParameters>, используя информацию, характерную для вашего устройства чтения смарт-карт.  Дополнительные сведения см. в документации по устройству чтения смарт-карт.
+- Необходимо инициализировать объект <xref:System.Security.Cryptography.CspParameters>, используя информацию, характерную для вашего устройства чтения смарт-карт.  Дополнительные сведения см. в документации по устройству чтения смарт-карт.

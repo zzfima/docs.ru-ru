@@ -8,11 +8,11 @@ ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: af27ddaa69d34976929f40055bc2cc668f877e87
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949218"
 ---
 # <a name="runtime-information-etw-events"></a>События сведений времени выполнения (трассировка событий Windows)
 Эти события трассировки событий Windows регистрируют информацию о среде выполнения, включая SKU, номер версии, способ активизации среды выполнения, параметры командной строки при ее запуске, GUID (если применимо) и другие релевантные данные. Если в процессе выполняется одновременно несколько сред выполнения, в этих событиях предоставляются сведения (ClrInstanceID), которые позволяют однозначно определить нужную среду.  

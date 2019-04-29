@@ -10,11 +10,11 @@ helpviewer_keywords:
 - templates [WPF], NavigationWindow
 ms.assetid: 3656055e-3222-43c8-b868-fd0c90cc31a3
 ms.openlocfilehash: 32d8aac99d40693e66c7b52a6c7d2c116d2f3baf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770660"
 ---
 # <a name="navigationwindow-styles-and-templates"></a>Стили и шаблоны элемента NavigationWindow
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Navigation.NavigationWindow> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  

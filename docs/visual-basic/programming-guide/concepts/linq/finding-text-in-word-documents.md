@@ -3,11 +3,11 @@ title: Поиск текста в документах Word (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
 ms.openlocfilehash: f8414662e2013b152e471d6c4c003e602c0d277d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931551"
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>Поиск текста в документах Word (Visual Basic)
 В этом разделе производится расширение предыдущих запросов, которое позволит выполнить некоторые полезные действия: найти все повторения определенной строки в документе.  
@@ -305,7 +305,7 @@ StyleName:Code ><
 ## <a name="next-steps"></a>Следующие шаги  
  В следующем разделе приводятся дополнительные сведения о документах WordprocessingML:  
   
--   [Сведения о Office Open XML-документов WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+- [Сведения о Office Open XML-документов WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
 ## <a name="see-also"></a>См. также
 

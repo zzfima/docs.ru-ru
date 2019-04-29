@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
 ms.openlocfilehash: 10f8e0899e61d5d54589c910bdcbcd92d8ee947c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777069"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Практическое руководство. Добавление обработчика событий с помощью кода
 В этом примере показано, как добавить обработчик событий к элементу с помощью кода.  
@@ -25,9 +25,9 @@ ms.locfileid: "59129367"
   
  C# Примере `+=` оператор присвоения обработчика события. Это тот же оператор, который используется для назначения обработчика в [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] модели обработки событий. Microsoft Visual Basic не поддерживает этот оператор как средства для добавления обработчиков событий. Вместо этого требуется один из двух способов:  
   
--   Используйте <xref:System.Windows.UIElement.AddHandler%2A> метод совместно с `AddressOf` оператор, для ссылки на реализацию обработчика событий.  
+- Используйте <xref:System.Windows.UIElement.AddHandler%2A> метод совместно с `AddressOf` оператор, для ссылки на реализацию обработчика событий.  
   
--   Используйте `Handles` ключевое слово как часть определения обработчика событий. Этот способ не показан здесь. см. в разделе [Visual Basic и обработка событий WPF](visual-basic-and-wpf-event-handling.md).  
+- Используйте `Handles` ключевое слово как часть определения обработчика событий. Этот способ не показан здесь. см. в разделе [Visual Basic и обработка событий WPF](visual-basic-and-wpf-event-handling.md).  
   
  [!code-xaml[RoutedEventAddRemoveHandler#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
   

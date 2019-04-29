@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
 ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793722"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Реализация явной транзакции с помощью класса CommittableTransaction
 Класс <xref:System.Transactions.CommittableTransaction> позволяет приложениям использовать транзакцию явным образом вместо неявного использования с помощью класса <xref:System.Transactions.TransactionScope>. Он полезен при создании приложений, которым требуется использовать одну и ту же транзакцию в нескольких вызовах функций или нескольких вызовах потоков. В отличие от класса <xref:System.Transactions.TransactionScope> для фиксации или прерывания транзакции модуль записи приложения должен специально вызывать методы <xref:System.Transactions.CommittableTransaction.Commit%2A> и <xref:System.Transactions.Transaction.Rollback%2A>.  
@@ -22,9 +22,9 @@ ms.locfileid: "59105421"
   
  При работе с классом <xref:System.Transactions.CommittableTransaction> следует учитывать следующие факты.  
   
--   Создание транзакции <xref:System.Transactions.CommittableTransaction> не задает внешнюю транзакцию. Чтобы диспетчеры ресурсов работали в правильном контексте транзакции, необходимо явно задать или сбросить внешнюю транзакцию. Задать текущую внешнюю транзакцию можно путем установки статического свойства <xref:System.Transactions.Transaction.Current%2A> глобального объекта <xref:System.Transactions.Transaction>.  
+- Создание транзакции <xref:System.Transactions.CommittableTransaction> не задает внешнюю транзакцию. Чтобы диспетчеры ресурсов работали в правильном контексте транзакции, необходимо явно задать или сбросить внешнюю транзакцию. Задать текущую внешнюю транзакцию можно путем установки статического свойства <xref:System.Transactions.Transaction.Current%2A> глобального объекта <xref:System.Transactions.Transaction>.  
   
--   Объект <xref:System.Transactions.CommittableTransaction> нельзя использовать повторно. После фиксации или отката объекта <xref:System.Transactions.CommittableTransaction> его нельзя повторно использовать в транзакции. Таким образом, его нельзя задать в качестве контекста текущей внешней транзакции.  
+- Объект <xref:System.Transactions.CommittableTransaction> нельзя использовать повторно. После фиксации или отката объекта <xref:System.Transactions.CommittableTransaction> его нельзя повторно использовать в транзакции. Таким образом, его нельзя задать в качестве контекста текущей внешней транзакции.  
   
 ## <a name="creating-a-committabletransaction"></a>Создание объекта CommittableTransaction  
  В следующем примере создается и фиксируется новый объект <xref:System.Transactions.CommittableTransaction>.  

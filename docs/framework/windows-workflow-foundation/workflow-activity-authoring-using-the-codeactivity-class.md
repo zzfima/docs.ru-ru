@@ -3,11 +3,11 @@ title: Разработка действий рабочих процессов �
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
 ms.openlocfilehash: 549acec8b8101312d48bd20e63a4a988b798ff38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669450"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>Разработка действий рабочих процессов с помощью класса CodeActivity
 Действия, созданные путем наследования от <xref:System.Activities.CodeActivity>, могут реализовывать базовое императивное поведение путем переопределения метода <xref:System.Activities.CodeActivity.Execute%2A>.
@@ -15,11 +15,11 @@ ms.locfileid: "59767400"
 ## <a name="using-codeactivitycontext"></a>Использование CodeActivityContext
  Доступ к функциям среды выполнения рабочего процесса можно получить из метода <xref:System.Activities.CodeActivity.Execute%2A> при помощи элементов параметра `context` типа <xref:System.Activities.CodeActivityContext>. Функции, доступные посредством <xref:System.Activities.CodeActivityContext>:
 
--   Возврат и задание значений аргументов и переменных.
+- Возврат и задание значений аргументов и переменных.
 
--   Пользовательские функции отслеживания с использованием <xref:System.Activities.CodeActivityContext.Track%2A>.
+- Пользовательские функции отслеживания с использованием <xref:System.Activities.CodeActivityContext.Track%2A>.
 
--   Доступ к свойствам выполнения действия с помощью <xref:System.Activities.CodeActivityContext.GetProperty%2A>.
+- Доступ к свойствам выполнения действия с помощью <xref:System.Activities.CodeActivityContext.GetProperty%2A>.
 
 #### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>Создание настраиваемого действия, которое наследуется от CodeActivity
 

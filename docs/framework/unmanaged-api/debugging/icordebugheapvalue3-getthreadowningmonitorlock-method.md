@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1678f1de7c23387f028348dadbc7b61e2cdc035c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701025"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>Метод ICorDebugHeapValue3::GetThreadOwningMonitorLock
 Возвращает управляемый поток, которому принадлежит блокировка монитора для этого объекта.  
@@ -56,9 +56,9 @@ HRESULT GetThreadOwningMonitorLock (
 ## <a name="remarks"></a>Примечания  
  Если управляемый поток владеет блокировкой монитора на этот объект:  
   
--   Метод возвращает значение S_OK.  
+- Метод возвращает значение S_OK.  
   
--   Поток выходит из объекта потока остается действительным.  
+- Поток выходит из объекта потока остается действительным.  
   
  Если не управляемый поток владеет блокировкой монитора на этот объект `ppThread` и `pAcquisitionCount` ничем не отличаются, и метод возвращает значение S_FALSE.  
   

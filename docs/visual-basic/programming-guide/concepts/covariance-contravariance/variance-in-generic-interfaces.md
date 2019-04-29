@@ -3,28 +3,28 @@ title: Вариативность в универсальных интерфей
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
 ms.openlocfilehash: 50a1aeb5c17a0f193b9e90ca2167ef298f7ed237
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787222"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>Вариативность в универсальных интерфейсах (Visual Basic)
 В платформе .NET Framework 4 появилась поддержка вариативности для нескольких существующих универсальных интерфейсов. Поддержка вариативности позволяет выполнять неявное преобразование классов, реализующих эти интерфейсы. Сейчас вариативными являются следующие интерфейсы.  
   
--   <xref:System.Collections.Generic.IEnumerable%601> (T является ковариантным)  
+- <xref:System.Collections.Generic.IEnumerable%601> (T является ковариантным)  
   
--   <xref:System.Collections.Generic.IEnumerator%601> (T является ковариантным)  
+- <xref:System.Collections.Generic.IEnumerator%601> (T является ковариантным)  
   
--   <xref:System.Linq.IQueryable%601> (T является ковариантным)  
+- <xref:System.Linq.IQueryable%601> (T является ковариантным)  
   
--   <xref:System.Linq.IGrouping%602> (`TKey` и `TElement` являются ковариантными)  
+- <xref:System.Linq.IGrouping%602> (`TKey` и `TElement` являются ковариантными)  
   
--   <xref:System.Collections.Generic.IComparer%601> (T является контравариантным)  
+- <xref:System.Collections.Generic.IComparer%601> (T является контравариантным)  
   
--   <xref:System.Collections.Generic.IEqualityComparer%601> (T является контравариантным)  
+- <xref:System.Collections.Generic.IEqualityComparer%601> (T является контравариантным)  
   
--   <xref:System.IComparable%601> (T является контравариантным)  
+- <xref:System.IComparable%601> (T является контравариантным)  
   
  Ковариация позволяет методу иметь тип возвращаемого значения, степень наследования которого больше, чем указано в параметре универсального типа интерфейса. Чтобы продемонстрировать функцию ковариации, рассмотрим следующие универсальные интерфейсы: `IEnumerable(Of Object)` и `IEnumerable(Of String)`. Интерфейс `IEnumerable(Of String)` не наследует интерфейс `IEnumerable(Of Object)`. При этом тип `String` наследует тип `Object`, и в некоторых случаях может потребоваться назначить объекты этих интерфейсов друг другу. Это показано в следующем примере кода.  
   

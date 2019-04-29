@@ -3,11 +3,11 @@ title: Выражения вычисления
 description: Узнайте, как создать удобный синтаксис для записи вычислений F# , может быть виртуализированного и комбинированные с помощью управления привязок и конструкций потока.
 ms.date: 03/15/2019
 ms.openlocfilehash: 3c2abb5c6204309fc8d5215a53ce8af46c01d218
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766068"
 ---
 # <a name="computation-expressions"></a>Выражения вычисления
 

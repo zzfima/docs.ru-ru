@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2095f02cb23c3580b0a1109e8f0da669f61adabc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789393"
 ---
 # <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a>Метод ICorProfilerInfo2::GetAppDomainStaticAddress
 Возвращает адрес указанного приложения статического поля домена, в рамках указанного домена приложения.  
@@ -53,9 +53,9 @@ RESULT GetAppDomainStaticAddress(
 ## <a name="remarks"></a>Примечания  
  `GetAppDomainStaticAddress` Метод может возвращать одно из следующих:  
   
--   HRESULT CORPROF_E_DATAINCOMPLETE, если заданного статические поля не был назначен адрес в заданном контексте.  
+- HRESULT CORPROF_E_DATAINCOMPLETE, если заданного статические поля не был назначен адрес в заданном контексте.  
   
--   Адреса объектов, которые могут быть в куче сбора мусора. Эти адреса могут стать недопустимыми после сборки мусора, поэтому после сборки мусора, профилировщики не следует предполагать, что они являются допустимыми.  
+- Адреса объектов, которые могут быть в куче сбора мусора. Эти адреса могут стать недопустимыми после сборки мусора, поэтому после сборки мусора, профилировщики не следует предполагать, что они являются допустимыми.  
   
  До завершения конструктора класса `GetAppDomainStaticAddress` возвращает CORPROF_E_DATAINCOMPLETE для всех статических полей, несмотря на то, что некоторые статические поля уже могут быть инициализированы и болея объекты сборки мусора.  
   

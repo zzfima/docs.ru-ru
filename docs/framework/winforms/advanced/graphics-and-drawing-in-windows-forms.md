@@ -8,11 +8,11 @@ helpviewer_keywords:
 - drawing [Windows Forms]
 ms.assetid: 362532c5-1a06-4257-bdc8-723461009ede
 ms.openlocfilehash: 08f87436ade62bb54295b012a1c24dc177ea9667
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938181"
 ---
 # <a name="graphics-and-drawing-in-windows-forms"></a>Объекты Graphics и Drawing в Windows Forms
 Среда CLR использует расширенную реализацию интерфейса графических устройств Windows ([!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]) под названием [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. С помощью [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] можно создавать графические элементы, рисовать текст и управлять графическими изображениями как объектами. Интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] отличается высоким быстродействием и удобен в использовании. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] можно использовать для отрисовки графических изображений в формах и элементах управления Windows Forms. Хотя [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] нельзя использовать непосредственно в веб-формах, графические изображения можно выводить через элемент управления веб-сервера Image.  

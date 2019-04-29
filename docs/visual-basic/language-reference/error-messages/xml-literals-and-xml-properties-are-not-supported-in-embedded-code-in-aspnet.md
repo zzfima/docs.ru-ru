@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31200
 ms.assetid: 053e8cba-8584-45cc-9fa0-43d122779772
 ms.openlocfilehash: 79be695478983055ae1f016cf841d733d3f4c430
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766609"
 ---
 # <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a>XML литералы и XML свойства не поддерживаются во встроенном в ASP.NET коде
 Литералы XML и свойства XML не поддерживаются во встроенном в ASP.NET коде. Чтобы использовать функции XML, переместите код для кода.  
@@ -23,7 +23,7 @@ ms.locfileid: "58813929"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Переместите код, который содержит XML-литерала или свойства оси XML в файл фонового кода ASP.NET.  
+- Переместите код, который содержит XML-литерала или свойства оси XML в файл фонового кода ASP.NET.  
   
 ## <a name="see-also"></a>См. также
 

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3a16717de7c109261e73f3a41fa07e9c0d86ee72
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697463"
 ---
 # <a name="iassemblyenumclone-method"></a>Метод IAssemblyEnum::Clone
 Создает неполную копию этого [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) объекта.  

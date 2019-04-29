@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d14d542a8c1d8adeaf56dc1564e8e10121cd4064
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650730"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>Метод ISymUnmanagedWriter::SetUserEntryPoint
 Задает пользовательский метод, который представляет собой точку входа для этого модуля. Например эта точка входа может быть основным методом пользователя вместо компилятором заглушек перед основным.  

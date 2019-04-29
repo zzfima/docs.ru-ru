@@ -13,11 +13,11 @@ helpviewer_keywords:
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
 ms.openlocfilehash: 491819c52c5bb1e7767e41fce7e56d8f95d10286
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933696"
 ---
 # <a name="introducing-xml-serialization"></a>Введение в сериализацию XML
 
@@ -28,8 +28,7 @@ ms.locfileid: "56981573"
 > [!NOTE]
 > XML-сериализация не выполняет преобразование методов, индексаторов, закрытых полей или свойств только для чтения (кроме коллекций только для чтения). Для сериализации всех полей и свойств объекта, как открытых, так и закрытых, используйте <xref:System.Runtime.Serialization.DataContractSerializer> вместо XML-сериализации.
 
- Центральным классом XML-сериализации является класс <xref:System.Xml.Serialization.XmlSerializer>, а наиболее важные методы в этом классе — **Serialize** и **Deserialize**. 
-  <xref:System.Xml.Serialization.XmlSerializer> создает файлы C# и компилирует их в файлы DLL для выполнения сериализации. В платформе .NET Framework 2.0 [инструмент создания XML-сериализатора (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) предназначен для создания таких сборок сериализации заранее, они будут развертываться вместе с приложением и повышать производительность при запуске. Поток XML, создаваемый **XmlSerializer** является совместимым консорциума World Wide Web Consortium (W3C) [язык определения схемы XML (XSD) 1.0 рекомендация](https://www.w3.org/TR/xslt). Кроме того, создаваемые типы данных соответствуют документу «XML Schema Part 2: Типы данных.»
+ Центральным классом XML-сериализации является класс <xref:System.Xml.Serialization.XmlSerializer>, а наиболее важные методы в этом классе — **Serialize** и **Deserialize**. <xref:System.Xml.Serialization.XmlSerializer> создает файлы C# и компилирует их в файлы DLL для выполнения сериализации. В платформе .NET Framework 2.0 [инструмент создания XML-сериализатора (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) предназначен для создания таких сборок сериализации заранее, они будут развертываться вместе с приложением и повышать производительность при запуске. Поток XML, создаваемый **XmlSerializer** является совместимым консорциума World Wide Web Consortium (W3C) [язык определения схемы XML (XSD) 1.0 рекомендация](https://www.w3.org/TR/xslt). Кроме того, создаваемые типы данных соответствуют документу «XML Schema Part 2: Типы данных.»
 
  Данные в объектах описываются с помощью конструкций языка программирования, например классов, полей, свойств, типов примитивов, массивов и даже встроенного XML в форме объектов **XmlElement** или **XmlAttribute**. Предусмотрена возможность создания собственных классов, аннотируемых атрибутами, или использования инструмента определения схемы XML для создания классов на основе существующей схемы XML.
 

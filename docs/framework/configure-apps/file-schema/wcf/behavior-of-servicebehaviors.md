@@ -3,11 +3,11 @@ title: <behavior> из <serviceBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 78fc0a08-55de-416a-ac12-a5e6ffc9a987
 ms.openlocfilehash: 89ad23a801abce9b2fe409b7e7acb1f5e9c2ac55
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701103"
 ---
 # <a name="behavior-of-servicebehaviors"></a>\<поведение > из \<serviceBehaviors >
 Элемент `behavior` содержит коллекцию параметров для поведения службы. Каждое поведение индексируется по атрибуту `name`. Службы могут связаться с каждым поведением посредством этого имени, используя `behaviorConfiguration` атрибут [ \<конечной точки >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) элемент. Это позволяет конечным точкам иметь общие конфигурации поведений без переопределения параметров. Начиная с версии [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] для привязок и поведений необязательно задавать имена. Дополнительные сведения о конфигурации по умолчанию и безымянных привязках и поведениях см. в разделе [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) и [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
@@ -62,6 +62,6 @@ ms.locfileid: "55271136"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)|Коллекция элементов поведений службы.|

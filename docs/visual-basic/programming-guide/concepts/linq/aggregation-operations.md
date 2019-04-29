@@ -3,11 +3,11 @@ title: Операции агрегирования (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
 ms.openlocfilehash: 72268e27fdf6d573279e98438fd884a076e0c8a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669035"
 ---
 # <a name="aggregation-operations-visual-basic"></a>Операции агрегирования (Visual Basic)
 Статистическая операция вычисляет одно значение по коллекции значений. Например, статистической обработкой является вычисление средней дневной температуры с использованием значений дневной температуры за месяц.  

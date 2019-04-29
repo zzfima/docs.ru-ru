@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
 ms.openlocfilehash: 566a7905ac2eda17046595bcccc868e44f6a1e9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664116"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Объединение подключений в пул в SQL Server (ADO.NET)
 Соединение с сервером базы данных обычно состоит из нескольких длительных шагов. Необходимо установить физический канал, например сокет или именованный канал, выполнить первоначальное подтверждение установления связи с сервером, выполнить синтаксический анализ данных строки соединения, сервер должен проверить подлинность соединения, а также запустить проверку прикреплений в текущей транзакции и т. д.  

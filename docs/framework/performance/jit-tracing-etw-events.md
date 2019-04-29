@@ -8,20 +8,20 @@ ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7261e5ce06a4ac20b1e7c816ababf8c8ba129b29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949283"
 ---
 # <a name="jit-tracing-etw-events"></a>События трассировки JIT-компилятора (трассировка событий Windows)
 <a name="top"></a> Эти события собирают сведения, относящиеся к успешному или неудачному встраиванию кода JIT и вызовам с префиксом tail в JIT.  
   
  Существует две категории событий трассировки JIT:  
   
--   [События встраивания кода JIT](#jit_inlining_events)  
+- [События встраивания кода JIT](#jit_inlining_events)  
   
--   [События вызовов с префиксом tail в JIT](#jit_tail_call_events)  
+- [События вызовов с префиксом tail в JIT](#jit_tail_call_events)  
   
 <a name="jit_inlining_events"></a>   
 ## <a name="jit-inlining-events"></a>События встраивания кода JIT  

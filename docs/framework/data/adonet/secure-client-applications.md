@@ -3,11 +3,11 @@ title: Безопасные клиентские приложения
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
 ms.openlocfilehash: 0c14089247e916b91cb385c7d715cce54acee57c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664211"
 ---
 # <a name="secure-client-applications"></a>Безопасные клиентские приложения
 Обычно приложения состоят из многих частей, которые необходимо защищать от уязвимостей, которые могут привести к потере данных или иным образом нарушить безопасность системы. Создавая защищенные пользовательские интерфейсы, можно предотвратить многие проблемы за счет блокирования организаторов атак до того, как они получат доступ к данным или системным ресурсам.  

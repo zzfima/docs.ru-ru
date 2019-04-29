@@ -6,11 +6,11 @@ ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795594"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>С помощью средств Docker в Visual Studio 2017 в Windows
 
@@ -29,7 +29,7 @@ ms.locfileid: "57844253"
 
 **Добавить > поддержка Docker** и **Добавить > поддержка оркестратора контейнеров** команды, находятся в контекстном меню (или контекстное меню) узла проекта для проекта ASP.NET Core в  **Обозреватель решений**, как показано на рис. 4-31:
 
-![Добавить поддержку Docker команду меню в Visual Studio](./media/add-docker-support-menu.png)
+![Добавление поддержки Docker из меню в Visual Studio](./media/add-docker-support-menu.png)
 
 **Рис. 4-31**. Добавление поддержки Docker в проект Visual Studio 2017
 
@@ -37,7 +37,7 @@ ms.locfileid: "57844253"
 
 Можно добавить поддержку Docker в существующий проект ASP.NET Core, выбрав **добавить** > **Docker поддерживает** в **обозревателе решений**. Можно также включить поддержку Docker во время создания проекта, выбрав **Включение поддержки Docker** в **новый веб-приложение ASP.NET Core** диалоговое окно, которое открывается при нажатии **ОК** в **новый проект** диалоговое окно, как показано на рис. 4-32.
 
-![Включить поддержку Docker для нового веб-приложения ASP.NET Core в Visual Studio](./media/enable-docker-support-visual-studio.png)
+![Включение поддержки Docker для нового веб-приложения ASP.NET Core в Visual Studio](./media/enable-docker-support-visual-studio.png)
 
 **Рис. 4-32.** Включить поддержку Docker во время создания проекта в Visual Studio 2017
 
@@ -46,7 +46,7 @@ ms.locfileid: "57844253"
 > [!NOTE]
 > Когда вы включаете поддержку Docker Compose во время создания проекта для проекта ASP.NET (.NET Framework, не проект .NET Core), как показано на рис. 4-33, также добавляется поддержка оркестрации контейнеров.
 
-![Включить Docker compose поддержка проекта ASP.NET](media/enable-docker-compose-support.png)
+![Включение поддержки Docker Compose для проекта ASP.NET](media/enable-docker-compose-support.png)
 
 **Рис. 4-33.** Включение поддержки Docker Compose для проекта ASP.NET в Visual Studio 2017
 
@@ -58,11 +58,11 @@ ms.locfileid: "57844253"
 
 После добавления поддержки оркестрации контейнера в проект, вы видите добавлен в проект файл Dockerfile и **docker-compose** папка добавлена в решение в **обозревателе решений**, как показано на рис. 4-34:
 
-![Файлы docker в обозревателе решений в Visual Studio](media/docker-support-solution-explorer.png)
+![Файлы Docker в обозревателе решений Visual Studio](media/docker-support-solution-explorer.png)
 
 **Рис. 4-34**. Файлы docker в обозревателе решений в Visual Studio 2017
 
-Если *docker-compose.yml* уже существует, Visual Studio просто добавляет необходимые строки кода конфигурации к нему.
+Если файл *docker-compose.yml* уже существует, Visual Studio просто добавит в него необходимые строки кода конфигурации.
 
 ## <a name="configure-docker-tools"></a>Настройка средств Docker
 
@@ -74,7 +74,7 @@ ms.locfileid: "57844253"
 
 Следующая таблица поможет вам решить, как задавать эти параметры.
 
-| name | По умолчанию | Применение | Описание: |
+| name | По умолчанию | Применение | Описание |
 | -----|:---------------:|:----------:| ----------- |
 | Автоматически извлекать требуемые образы Docker при загрузке проекта | включить | Docker Compose | Для повышения производительности при загрузке проектов Visual Studio запустит операцию извлечения Docker в фоновом режиме, когда вы будете готовы для выполнения кода, уже будет загружен образ или находится в процессе загрузки. Если вам нужно просто загрузить проекты и просмотр кода, можно отключить это во избежание загрузки образов контейнеров, которые не нужны. |
 | Автоматически запускать контейнеры в фоновом режиме | включить | Docker Compose | Еще раз для повышения производительности Visual Studio создает контейнер с подключенных томов готова к после построения и запуска контейнера. Если вы хотите управлять, при создании контейнера, отключите этот параметр. |

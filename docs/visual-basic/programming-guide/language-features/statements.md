@@ -16,11 +16,11 @@ helpviewer_keywords:
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
 ms.openlocfilehash: e66acae5e98d561883f4ad59853dfd862c8ebfee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946462"
 ---
 # <a name="statements-in-visual-basic"></a>Операторы в Visual Basic
 
@@ -32,7 +32,7 @@ ms.locfileid: "43506294"
 
 В этом разделе описывается каждой категории. Кроме того в этом разделе описывается, как объединить несколько операторов в одной строке и дальнейшие инструкции на нескольких строках.
 
-## <a name="declaration-statements"></a>Операторы объявления
+## <a name="declaration-statements"></a>Инструкции объявления
 
 Используйте операторы объявления для именования и определения процедур, переменных, свойства, массивов и констант. При объявлении элемента программирования, можно также определить его тип данных, уровень доступа и область. Дополнительные сведения см. в разделе [характеристики объявленных элементов](./declared-elements/declared-element-characteristics.md).
 
@@ -156,7 +156,7 @@ ms.locfileid: "43506294"
 
     [!code-vb[VbVbalrLineContinuation#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#3)]
 
-    Дополнительные сведения см. в разделе [инициализаторы объектов: именованные и анонимные типы](./objects-and-classes/object-initializers-named-and-anonymous-types.md) или [Инициализаторы коллекций](./collection-initializers/index.md).
+    Дополнительные сведения см. в разделе [инициализаторы объектов: Именованные и анонимные типы](./objects-and-classes/object-initializers-named-and-anonymous-types.md) или [Инициализаторы коллекций](./collection-initializers/index.md).
 
 - После открытого встроенного выражения (`<%=`) или перед закрытием встроенного выражения (`%>`) в XML-литерала. Пример:
 
@@ -196,7 +196,7 @@ ms.locfileid: "43506294"
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
-   Дополнительные сведения см. в разделе [с... Завершить с помощью инструкции](../../../visual-basic/language-reference/statements/with-end-with-statement.md) или [инициализаторы объектов: именованные и анонимные типы](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
+   Дополнительные сведения см. в разделе [с... Завершить с помощью инструкции](../../../visual-basic/language-reference/statements/with-end-with-statement.md) или [инициализаторы объектов: Именованные и анонимные типы](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
 
 - После квалификатор свойство оси XML (`.` или `.@` или `...`). Тем не менее, необходимо использовать знак продолжения строки (`_`) при указании квалификатора элемента при использовании `With` ключевое слово. Пример:
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
 ms.openlocfilehash: 6d4a6c19dc0af8a2950754f32890ae9c3bcbad21
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769544"
 ---
 # <a name="listview-overview"></a>Общие сведения об элементе управления ListView
 <xref:System.Windows.Controls.ListView> Управления предоставляет инфраструктуру для отображения набора элементов данных в различных макетах или представлениях. Например, у пользователя может возникнуть необходимость в отображении элементов данных в таблице, а также в сортировке ее столбцов.  
@@ -58,9 +58,9 @@ ms.locfileid: "59186502"
 ## <a name="styling-a-listview-that-implements-a-gridview"></a>Задание стиля ListView, который реализует GridView  
  <xref:System.Windows.Controls.ListView> Элемент управления содержит <xref:System.Windows.Controls.ListViewItem> объектов, представляющих элементы данных, которые отображаются. Можно использовать следующие свойства для определения содержимого и стиля элементов данных:  
   
--   На <xref:System.Windows.Controls.ListView> управления, используйте <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>, и <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> свойства.  
+- На <xref:System.Windows.Controls.ListView> управления, используйте <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>, и <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> свойства.  
   
--   На <xref:System.Windows.Controls.ListViewItem> управления, используйте <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> и <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> свойства.  
+- На <xref:System.Windows.Controls.ListViewItem> управления, используйте <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> и <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> свойства.  
   
  Чтобы избежать проблем выравнивания между ячейками в <xref:System.Windows.Controls.GridView>, не используйте <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> для задания свойств или добавления содержимого, которое влияет на ширину элемента в <xref:System.Windows.Controls.ListView>. Например, проблема выравнивания может возникнуть при установке <xref:System.Windows.FrameworkElement.Margin%2A> свойство в <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>. Чтобы задать свойства или определить содержимое, влияющее на ширину элементов в <xref:System.Windows.Controls.GridView>, используйте свойства класса <xref:System.Windows.Controls.GridView> класс и связанные с ним классы, такие как <xref:System.Windows.Controls.GridViewColumn>.  
   

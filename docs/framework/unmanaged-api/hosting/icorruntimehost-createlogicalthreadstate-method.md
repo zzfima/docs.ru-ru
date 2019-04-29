@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d667013b23da3fb53ab87069748f6f5f646efeeb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936933"
 ---
 # <a name="icorruntimehostcreatelogicalthreadstate-method"></a>Метод ICorRuntimeHost::CreateLogicalThreadState
 Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
 ms.openlocfilehash: 16207c3f3c711d06b71cafb2b67c5d29f3f14e39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698581"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<пул приложений > элемент (веб-параметры)
 Задает параметры конфигурации, которые используются платформой ASP.NET для управления поведением всего процесса, когда приложение ASP.NET выполняется в режиме интеграции с [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздней версии.  
@@ -66,11 +66,11 @@ ms.locfileid: "59184734"
 ## <a name="example"></a>Пример  
  В следующем примере показано, как настроить поведение всего процесса ASP.NET в файле aspnet.config в следующих случаях:  
   
--   Приложение размещается в [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] пула приложений.  
+- Приложение размещается в [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] пула приложений.  
   
--   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] работает в режиме интеграции с.  
+- [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] работает в режиме интеграции с.  
   
--   Приложение использует [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] или более поздней версии.  
+- Приложение использует [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] или более поздней версии.  
   
  В примере значения являются значениями по умолчанию.  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773431"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Практическое руководство. Создание и запуск длительного рабочего процесса
 Одна из функций центра Windows Workflow Foundation (WF) предоставляет возможность среды выполнения сохранения и выгрузки бездействующих рабочих процессов в базе данных. Действия, описанные в [как: Запуск рабочего процесса](how-to-run-a-workflow.md) показаны основы размещение рабочих процессов, используя консольное приложение. Приведены примеры запуска рабочих процессов, обработчиков жизненного цикла рабочего процесса и возобновления закладок. Для эффективной демонстрации сохранения рабочего процесса требуется более сложный узел рабочих процессов, обеспечивающий запуск и возобновление нескольких экземпляров рабочего процесса. На этом шаге учебника показано, как создать ведущее приложение форм Windows Form, которое обеспечивает запуск и возобновление нескольких экземпляров рабочих процессов, сохранение рабочего процесса и основу для таких дополнительных возможностей, как отслеживание версий, которые показаны в последующих шагах учебника, и управление ими.  
@@ -23,25 +23,25 @@ ms.locfileid: "59320056"
   
 ## <a name="in-this-topic"></a>Содержание раздела  
   
--   [Чтобы создать базу данных сохраняемости](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
+- [Чтобы создать базу данных сохраняемости](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
--   [Для добавления ссылки на сборки DurableInstancing](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+- [Для добавления ссылки на сборки DurableInstancing](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
--   [Создание ведущей формы рабочего процесса](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
+- [Создание ведущей формы рабочего процесса](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [Для добавления свойств и вспомогательных методов формы](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+- [Для добавления свойств и вспомогательных методов формы](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [Чтобы настроить хранилище экземпляров, обработчиков жизненного цикла рабочего процесса и расширения](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+- [Чтобы настроить хранилище экземпляров, обработчиков жизненного цикла рабочего процесса и расширения](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [Чтобы включить запуск и возобновление нескольких типов рабочих процессов](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+- [Чтобы включить запуск и возобновление нескольких типов рабочих процессов](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [Чтобы запустить новый рабочий процесс](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+- [Чтобы запустить новый рабочий процесс](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
--   [Возобновление рабочего процесса](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
+- [Возобновление рабочего процесса](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
--   [Завершение рабочего процесса](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
+- [Завершение рабочего процесса](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [Построение и запуск приложения](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+- [Построение и запуск приложения](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
 ### <a name="BKMK_CreatePersistenceDatabase"></a> Чтобы создать базу данных сохраняемости  
   
@@ -54,9 +54,9 @@ ms.locfileid: "59320056"
   
      Выберите следующие два файла и нажмите кнопку **откройте**.  
   
-    -   SqlWorkflowInstanceStoreLogic.sql  
+    - SqlWorkflowInstanceStoreLogic.sql  
   
-    -   SqlWorkflowInstanceStoreSchema.sql  
+    - SqlWorkflowInstanceStoreSchema.sql  
   
 3. Выберите **SqlWorkflowInstanceStoreSchema.sql** из **окно** меню. Убедитесь, что **WF45GettingStartedTutorial** выбран в **доступных баз данных** раскрывающегося списка и выберите **Execute** из **запроса**меню.  
   

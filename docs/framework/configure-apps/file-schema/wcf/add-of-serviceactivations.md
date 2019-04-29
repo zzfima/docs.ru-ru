@@ -3,11 +3,11 @@ title: <add> из <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
 ms.openlocfilehash: 2a3ba6d41059a480fe610254c0407df16d149e3b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701467"
 ---
 # <a name="add-of-serviceactivations"></a>\<Добавить > из \<serviceActivations >
 
@@ -35,8 +35,8 @@ ms.locfileid: "57673049"
 
 |Атрибут|Описание|
 |---------------|-----------------|
-|factory|Строка, задающая имя типа CLR фабрики, которая формирует элемент активации службы.|
-|service|ServiceType, реализующий службу (либо полное, либо короткое имя типа) (когда оно размещено в папке App_Code).|
+|фабрика|Строка, задающая имя типа CLR фабрики, которая формирует элемент активации службы.|
+|служба|ServiceType, реализующий службу (либо полное, либо короткое имя типа) (когда оно размещено в папке App_Code).|
 |relativeAddress|Относительный адрес в текущем приложении IIS (например, «Service.svc»). В WCF 4.0 этот относительный адрес должен содержать одно из известных расширений файлов (SVC, XAMLX и т. д.). Ни один физический файл не должен существовать по адресу relativeUrl|
 
 ### <a name="child-elements"></a>Дочерние элементы
@@ -45,7 +45,7 @@ ms.locfileid: "57673049"
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-|Элемент|Описание:|
+|Элемент|Описание|
 |-------------|-----------------|
 |[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Раздел конфигурации, в котором описываются параметры активации.|
 
