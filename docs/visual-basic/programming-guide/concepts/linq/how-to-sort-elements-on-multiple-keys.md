@@ -3,19 +3,19 @@ title: Практическое руководство. Сортировка э�
 ms.date: 07/20/2015
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
 ms.openlocfilehash: d423505a5b47189b9de556675d4b71f428a6bdc6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614214"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a><span data-ttu-id="838b5-102">Практическое руководство. Сортировка элементов по множеству ключей (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="838b5-102">How to: Sort Elements on Multiple Keys (Visual Basic)</span></span>
-<span data-ttu-id="838b5-103">В этом разделе показана сортировка элементов по нескольким ключам.</span><span class="sxs-lookup"><span data-stu-id="838b5-103">This topic shows how to sort on multiple keys.</span></span>  
+# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a><span data-ttu-id="f165f-102">Практическое руководство. Сортировка элементов по множеству ключей (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f165f-102">How to: Sort Elements on Multiple Keys (Visual Basic)</span></span>
+<span data-ttu-id="f165f-103">В этом разделе показана сортировка элементов по нескольким ключам.</span><span class="sxs-lookup"><span data-stu-id="f165f-103">This topic shows how to sort on multiple keys.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="838b5-104">Пример</span><span class="sxs-lookup"><span data-stu-id="838b5-104">Example</span></span>  
- <span data-ttu-id="838b5-105">В этом примере результаты упорядочиваются вначале по почтовому коду доставки, а затем по дате заказа.</span><span class="sxs-lookup"><span data-stu-id="838b5-105">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>  
+## <a name="example"></a><span data-ttu-id="f165f-104">Пример</span><span class="sxs-lookup"><span data-stu-id="f165f-104">Example</span></span>  
+ <span data-ttu-id="f165f-105">В этом примере результаты упорядочиваются вначале по почтовому коду доставки, а затем по дате заказа.</span><span class="sxs-lookup"><span data-stu-id="f165f-105">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>  
   
- <span data-ttu-id="838b5-106">В этом примере используется следующий XML-документ: [Пример XML-файла. Заказчики и заказы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="838b5-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="f165f-106">В этом примере используется следующий XML-документ: [Пример XML-файла. Заказчики и заказы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="f165f-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -34,7 +34,7 @@ For Each r In result
 Next  
 ```  
   
- <span data-ttu-id="838b5-107">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="838b5-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="f165f-107">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="f165f-107">This code produces the following output:</span></span>  
   
 ```  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
@@ -61,10 +61,10 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="example"></a><span data-ttu-id="838b5-108">Пример</span><span class="sxs-lookup"><span data-stu-id="838b5-108">Example</span></span>  
- <span data-ttu-id="838b5-109">Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="838b5-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="838b5-110">Дополнительные сведения см. в разделе [работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="838b5-110">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="f165f-108">Пример</span><span class="sxs-lookup"><span data-stu-id="f165f-108">Example</span></span>  
+ <span data-ttu-id="f165f-109">Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="f165f-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="f165f-110">Дополнительные сведения см. в разделе [работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="f165f-110">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- <span data-ttu-id="838b5-111">В этом примере используется следующий XML-документ: [Пример XML-файла. Заказчики и заказы в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="838b5-111">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="f165f-111">В этом примере используется следующий XML-документ: [Пример XML-файла. Заказчики и заказы в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="f165f-111">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns='http://www.adventure-works.com'>  
@@ -89,7 +89,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="838b5-112">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="838b5-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="f165f-112">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="f165f-112">This code produces the following output:</span></span>  
   
 ```  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
@@ -116,6 +116,6 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="838b5-113">См. также</span><span class="sxs-lookup"><span data-stu-id="838b5-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f165f-113">См. также</span><span class="sxs-lookup"><span data-stu-id="f165f-113">See also</span></span>
 
-- [<span data-ttu-id="838b5-114">Базовые запросы (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="838b5-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="f165f-114">Базовые запросы (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f165f-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

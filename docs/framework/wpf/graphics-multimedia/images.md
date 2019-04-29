@@ -10,27 +10,27 @@ helpviewer_keywords:
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
 ms.openlocfilehash: f14c99b1c5f624fcebf2c08f0889903f258e5c68
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785727"
 ---
-# <a name="images"></a><span data-ttu-id="7771e-102">Изображений</span><span class="sxs-lookup"><span data-stu-id="7771e-102">Images</span></span>
-<span data-ttu-id="7771e-103">Платформа [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] обеспечивает встроенную поддержку большого числа разных форматов изображений, отрисовку изображений высокого качества и расширяемость кодеков.</span><span class="sxs-lookup"><span data-stu-id="7771e-103">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
+# <a name="images"></a><span data-ttu-id="54cd7-102">Изображений</span><span class="sxs-lookup"><span data-stu-id="54cd7-102">Images</span></span>
+<span data-ttu-id="54cd7-103">Платформа [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] обеспечивает встроенную поддержку большого числа разных форматов изображений, отрисовку изображений высокого качества и расширяемость кодеков.</span><span class="sxs-lookup"><span data-stu-id="54cd7-103">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7771e-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="7771e-104">In This Section</span></span>  
- [<span data-ttu-id="7771e-105">Общие сведения об обработке изображений</span><span class="sxs-lookup"><span data-stu-id="7771e-105">Imaging Overview</span></span>](imaging-overview.md)  
- [<span data-ttu-id="7771e-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="7771e-106">How-to Topics</span></span>](imaging-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="54cd7-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="54cd7-104">In This Section</span></span>  
+ [<span data-ttu-id="54cd7-105">Общие сведения об обработке изображений</span><span class="sxs-lookup"><span data-stu-id="54cd7-105">Imaging Overview</span></span>](imaging-overview.md)  
+ [<span data-ttu-id="54cd7-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="54cd7-106">How-to Topics</span></span>](imaging-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="7771e-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="7771e-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="54cd7-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="54cd7-107">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="7771e-108">См. также</span><span class="sxs-lookup"><span data-stu-id="7771e-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="54cd7-108">См. также</span><span class="sxs-lookup"><span data-stu-id="54cd7-108">See also</span></span>
 
-- [<span data-ttu-id="7771e-109">Двумерная графика и изображения</span><span class="sxs-lookup"><span data-stu-id="7771e-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="7771e-110">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="7771e-110">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="54cd7-109">Двумерная графика и изображения</span><span class="sxs-lookup"><span data-stu-id="54cd7-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="54cd7-110">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="54cd7-110">Graphics and Multimedia</span></span>](index.md)

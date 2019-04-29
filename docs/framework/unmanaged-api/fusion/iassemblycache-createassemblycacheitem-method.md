@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 648b641cbd2ec97305674451df06ce5be6a93a49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697645"
 ---
-# <a name="iassemblycachecreateassemblycacheitem-method"></a><span data-ttu-id="5146d-102">Метод IAssemblyCache::CreateAssemblyCacheItem</span><span class="sxs-lookup"><span data-stu-id="5146d-102">IAssemblyCache::CreateAssemblyCacheItem Method</span></span>
-<span data-ttu-id="5146d-103">Получает ссылку на новый [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) объекта.</span><span class="sxs-lookup"><span data-stu-id="5146d-103">Gets a reference to a new [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) object.</span></span>  
+# <a name="iassemblycachecreateassemblycacheitem-method"></a><span data-ttu-id="1941f-102">Метод IAssemblyCache::CreateAssemblyCacheItem</span><span class="sxs-lookup"><span data-stu-id="1941f-102">IAssemblyCache::CreateAssemblyCacheItem Method</span></span>
+<span data-ttu-id="1941f-103">Получает ссылку на новый [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) объекта.</span><span class="sxs-lookup"><span data-stu-id="1941f-103">Gets a reference to a new [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5146d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5146d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1941f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1941f-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateAssemblyCacheItem (  
@@ -38,31 +38,31 @@ HRESULT CreateAssemblyCacheItem (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5146d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="5146d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1941f-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="1941f-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="5146d-106">[in] Флаги, определенные в Fusion.idl.</span><span class="sxs-lookup"><span data-stu-id="5146d-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="5146d-107">Поддерживаются следующие значения:</span><span class="sxs-lookup"><span data-stu-id="5146d-107">The following values are supported:</span></span>  
+ <span data-ttu-id="1941f-106">[in] Флаги, определенные в Fusion.idl.</span><span class="sxs-lookup"><span data-stu-id="1941f-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="1941f-107">Поддерживаются следующие значения:</span><span class="sxs-lookup"><span data-stu-id="1941f-107">The following values are supported:</span></span>  
   
--   <span data-ttu-id="5146d-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0X00000001)</span><span class="sxs-lookup"><span data-stu-id="5146d-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span></span>  
+- <span data-ttu-id="1941f-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0X00000001)</span><span class="sxs-lookup"><span data-stu-id="1941f-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span></span>  
   
--   <span data-ttu-id="5146d-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="5146d-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span></span>  
+- <span data-ttu-id="1941f-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="1941f-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="5146d-110">[in] Зарезервировано для будущего расширения.</span><span class="sxs-lookup"><span data-stu-id="5146d-110">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="5146d-111">`pvReserved` должен быть пустой ссылкой.</span><span class="sxs-lookup"><span data-stu-id="5146d-111">`pvReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="1941f-110">[in] Зарезервировано для будущего расширения.</span><span class="sxs-lookup"><span data-stu-id="1941f-110">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="1941f-111">`pvReserved` должен быть пустой ссылкой.</span><span class="sxs-lookup"><span data-stu-id="1941f-111">`pvReserved` must be a null reference.</span></span>  
   
  `ppAsmItem`  
- <span data-ttu-id="5146d-112">[out] Возвращенный `IAssemblyCacheItem` указатель.</span><span class="sxs-lookup"><span data-stu-id="5146d-112">[out] The returned `IAssemblyCacheItem` pointer.</span></span>  
+ <span data-ttu-id="1941f-112">[out] Возвращенный `IAssemblyCacheItem` указатель.</span><span class="sxs-lookup"><span data-stu-id="1941f-112">[out] The returned `IAssemblyCacheItem` pointer.</span></span>  
   
  `pszAssemblyName`  
- <span data-ttu-id="5146d-113">[in, optional] Uncanonicalized, разделенных запятыми `name=value` пары.</span><span class="sxs-lookup"><span data-stu-id="5146d-113">[in, optional] Uncanonicalized, comma-separated `name=value` pairs.</span></span>  
+ <span data-ttu-id="1941f-113">[in, optional] Uncanonicalized, разделенных запятыми `name=value` пары.</span><span class="sxs-lookup"><span data-stu-id="1941f-113">[in, optional] Uncanonicalized, comma-separated `name=value` pairs.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5146d-114">Требования</span><span class="sxs-lookup"><span data-stu-id="5146d-114">Requirements</span></span>  
- <span data-ttu-id="5146d-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5146d-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1941f-114">Требования</span><span class="sxs-lookup"><span data-stu-id="1941f-114">Requirements</span></span>  
+ <span data-ttu-id="1941f-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1941f-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5146d-116">**Заголовок.** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="5146d-116">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="1941f-116">**Заголовок.** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="1941f-116">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="5146d-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5146d-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1941f-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1941f-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5146d-118">См. также</span><span class="sxs-lookup"><span data-stu-id="5146d-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1941f-118">См. также</span><span class="sxs-lookup"><span data-stu-id="1941f-118">See also</span></span>
 
-- [<span data-ttu-id="5146d-119">Интерфейс IAssemblyCache</span><span class="sxs-lookup"><span data-stu-id="5146d-119">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [<span data-ttu-id="5146d-120">Интерфейс IAssemblyCacheItem</span><span class="sxs-lookup"><span data-stu-id="5146d-120">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+- [<span data-ttu-id="1941f-119">Интерфейс IAssemblyCache</span><span class="sxs-lookup"><span data-stu-id="1941f-119">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [<span data-ttu-id="1941f-120">Интерфейс IAssemblyCacheItem</span><span class="sxs-lookup"><span data-stu-id="1941f-120">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

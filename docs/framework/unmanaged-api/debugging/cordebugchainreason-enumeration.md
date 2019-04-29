@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cac790ebbf25ee3095db293ba90612be37fff9b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609234"
 ---
-# <a name="cordebugchainreason-enumeration"></a><span data-ttu-id="d8b0d-102">Перечисление CorDebugChainReason</span><span class="sxs-lookup"><span data-stu-id="d8b0d-102">CorDebugChainReason Enumeration</span></span>
-<span data-ttu-id="d8b0d-103">Указывает причину или причины запуска цепочки вызовов.</span><span class="sxs-lookup"><span data-stu-id="d8b0d-103">Indicates the reason or reasons for the initiation of a call chain.</span></span>  
+# <a name="cordebugchainreason-enumeration"></a><span data-ttu-id="b02f1-102">Перечисление CorDebugChainReason</span><span class="sxs-lookup"><span data-stu-id="b02f1-102">CorDebugChainReason Enumeration</span></span>
+<span data-ttu-id="b02f1-103">Указывает причину или причины запуска цепочки вызовов.</span><span class="sxs-lookup"><span data-stu-id="b02f1-103">Indicates the reason or reasons for the initiation of a call chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d8b0d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d8b0d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b02f1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b02f1-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugChainReason {  
@@ -46,36 +46,36 @@ typedef enum CorDebugChainReason {
 } CorDebugChainReason;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="d8b0d-105">Участники</span><span class="sxs-lookup"><span data-stu-id="d8b0d-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b02f1-105">Участники</span><span class="sxs-lookup"><span data-stu-id="b02f1-105">Members</span></span>  
   
-|<span data-ttu-id="d8b0d-106">Член</span><span class="sxs-lookup"><span data-stu-id="d8b0d-106">Member</span></span>|<span data-ttu-id="d8b0d-107">Описание</span><span class="sxs-lookup"><span data-stu-id="d8b0d-107">Description</span></span>|  
+|<span data-ttu-id="b02f1-106">Член</span><span class="sxs-lookup"><span data-stu-id="b02f1-106">Member</span></span>|<span data-ttu-id="b02f1-107">Описание</span><span class="sxs-lookup"><span data-stu-id="b02f1-107">Description</span></span>|  
 |------------|-----------------|  
-|`CHAIN_NONE`|<span data-ttu-id="d8b0d-108">Цепочки вызовов не инициированы.</span><span class="sxs-lookup"><span data-stu-id="d8b0d-108">No call chain has been initiated.</span></span>|  
-|`CHAIN_CLASS_INIT`|<span data-ttu-id="d8b0d-109">Цепочка была инициирована конструктором.</span><span class="sxs-lookup"><span data-stu-id="d8b0d-109">The chain was initiated by a constructor.</span></span>|  
-|`CHAIN_EXCEPTION_FILTER`|<span data-ttu-id="d8b0d-110">Цепочка была инициирована фильтром исключений.</span><span class="sxs-lookup"><span data-stu-id="d8b0d-110">The chain was initiated by an exception filter.</span></span>|  
-|`CHAIN_SECURITY`|<span data-ttu-id="d8b0d-111">Цепочка была инициирована кодом, который принудительно обеспечивает безопасность.</span><span class="sxs-lookup"><span data-stu-id="d8b0d-111">The chain was initiated by code that enforces security.</span></span>|  
-|`CHAIN_CONTEXT_POLICY`|<span data-ttu-id="d8b0d-112">Цепочка была инициирована контекстной политикой.</span><span class="sxs-lookup"><span data-stu-id="d8b0d-112">The chain was initiated by a context policy.</span></span>|  
-|`CHAIN_INTERCEPTION`|<span data-ttu-id="d8b0d-113">Не используется.</span><span class="sxs-lookup"><span data-stu-id="d8b0d-113">Not used.</span></span>|  
-|`CHAIN_PROCESS_START`|<span data-ttu-id="d8b0d-114">Не используется.</span><span class="sxs-lookup"><span data-stu-id="d8b0d-114">Not used.</span></span>|  
-|`CHAIN_THREAD_START`|<span data-ttu-id="d8b0d-115">Цепочка была инициирована началом выполнения потока.</span><span class="sxs-lookup"><span data-stu-id="d8b0d-115">The chain was initiated by the start of a thread execution.</span></span>|  
-|`CHAIN_ENTER_MANAGED`|<span data-ttu-id="d8b0d-116">Цепочка была инициирована входом в управляемый код.</span><span class="sxs-lookup"><span data-stu-id="d8b0d-116">The chain was initiated by entry into managed code.</span></span>|  
-|`CHAIN_ENTER_UNMANAGED`|<span data-ttu-id="d8b0d-117">Цепочка была инициирована входом в неуправляемый код.</span><span class="sxs-lookup"><span data-stu-id="d8b0d-117">The chain was initiated by entry into unmanaged code.</span></span>|  
-|`CHAIN_DEBUGGER_EVAL`|<span data-ttu-id="d8b0d-118">Не используется.</span><span class="sxs-lookup"><span data-stu-id="d8b0d-118">Not used.</span></span>|  
-|`CHAIN_CONTEXT_SWITCH`|<span data-ttu-id="d8b0d-119">Не используется.</span><span class="sxs-lookup"><span data-stu-id="d8b0d-119">Not used.</span></span>|  
-|`CHAIN_FUNC_EVAL`|<span data-ttu-id="d8b0d-120">Цепочка была инициирована оценкой функции.</span><span class="sxs-lookup"><span data-stu-id="d8b0d-120">The chain was initiated by a function evaluation.</span></span>|  
+|`CHAIN_NONE`|<span data-ttu-id="b02f1-108">Цепочки вызовов не инициированы.</span><span class="sxs-lookup"><span data-stu-id="b02f1-108">No call chain has been initiated.</span></span>|  
+|`CHAIN_CLASS_INIT`|<span data-ttu-id="b02f1-109">Цепочка была инициирована конструктором.</span><span class="sxs-lookup"><span data-stu-id="b02f1-109">The chain was initiated by a constructor.</span></span>|  
+|`CHAIN_EXCEPTION_FILTER`|<span data-ttu-id="b02f1-110">Цепочка была инициирована фильтром исключений.</span><span class="sxs-lookup"><span data-stu-id="b02f1-110">The chain was initiated by an exception filter.</span></span>|  
+|`CHAIN_SECURITY`|<span data-ttu-id="b02f1-111">Цепочка была инициирована кодом, который принудительно обеспечивает безопасность.</span><span class="sxs-lookup"><span data-stu-id="b02f1-111">The chain was initiated by code that enforces security.</span></span>|  
+|`CHAIN_CONTEXT_POLICY`|<span data-ttu-id="b02f1-112">Цепочка была инициирована контекстной политикой.</span><span class="sxs-lookup"><span data-stu-id="b02f1-112">The chain was initiated by a context policy.</span></span>|  
+|`CHAIN_INTERCEPTION`|<span data-ttu-id="b02f1-113">Не используется.</span><span class="sxs-lookup"><span data-stu-id="b02f1-113">Not used.</span></span>|  
+|`CHAIN_PROCESS_START`|<span data-ttu-id="b02f1-114">Не используется.</span><span class="sxs-lookup"><span data-stu-id="b02f1-114">Not used.</span></span>|  
+|`CHAIN_THREAD_START`|<span data-ttu-id="b02f1-115">Цепочка была инициирована началом выполнения потока.</span><span class="sxs-lookup"><span data-stu-id="b02f1-115">The chain was initiated by the start of a thread execution.</span></span>|  
+|`CHAIN_ENTER_MANAGED`|<span data-ttu-id="b02f1-116">Цепочка была инициирована входом в управляемый код.</span><span class="sxs-lookup"><span data-stu-id="b02f1-116">The chain was initiated by entry into managed code.</span></span>|  
+|`CHAIN_ENTER_UNMANAGED`|<span data-ttu-id="b02f1-117">Цепочка была инициирована входом в неуправляемый код.</span><span class="sxs-lookup"><span data-stu-id="b02f1-117">The chain was initiated by entry into unmanaged code.</span></span>|  
+|`CHAIN_DEBUGGER_EVAL`|<span data-ttu-id="b02f1-118">Не используется.</span><span class="sxs-lookup"><span data-stu-id="b02f1-118">Not used.</span></span>|  
+|`CHAIN_CONTEXT_SWITCH`|<span data-ttu-id="b02f1-119">Не используется.</span><span class="sxs-lookup"><span data-stu-id="b02f1-119">Not used.</span></span>|  
+|`CHAIN_FUNC_EVAL`|<span data-ttu-id="b02f1-120">Цепочка была инициирована оценкой функции.</span><span class="sxs-lookup"><span data-stu-id="b02f1-120">The chain was initiated by a function evaluation.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d8b0d-121">Примечания</span><span class="sxs-lookup"><span data-stu-id="d8b0d-121">Remarks</span></span>  
- <span data-ttu-id="d8b0d-122">Используйте [ICorDebugChain::GetReason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) метод для выяснения причины инициирования цепочки вызовов.</span><span class="sxs-lookup"><span data-stu-id="d8b0d-122">Use the [ICorDebugChain::GetReason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) method to ascertain the reasons for the initiation of a call chain.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b02f1-121">Примечания</span><span class="sxs-lookup"><span data-stu-id="b02f1-121">Remarks</span></span>  
+ <span data-ttu-id="b02f1-122">Используйте [ICorDebugChain::GetReason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) метод для выяснения причины инициирования цепочки вызовов.</span><span class="sxs-lookup"><span data-stu-id="b02f1-122">Use the [ICorDebugChain::GetReason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) method to ascertain the reasons for the initiation of a call chain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d8b0d-123">Требования</span><span class="sxs-lookup"><span data-stu-id="d8b0d-123">Requirements</span></span>  
- <span data-ttu-id="d8b0d-124">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d8b0d-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b02f1-123">Требования</span><span class="sxs-lookup"><span data-stu-id="b02f1-123">Requirements</span></span>  
+ <span data-ttu-id="b02f1-124">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b02f1-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d8b0d-125">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d8b0d-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b02f1-125">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b02f1-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d8b0d-126">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d8b0d-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b02f1-126">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b02f1-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d8b0d-127">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d8b0d-127">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b02f1-127">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b02f1-127">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8b0d-128">См. также</span><span class="sxs-lookup"><span data-stu-id="d8b0d-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b02f1-128">См. также</span><span class="sxs-lookup"><span data-stu-id="b02f1-128">See also</span></span>
 
-- [<span data-ttu-id="d8b0d-129">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="d8b0d-129">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="b02f1-129">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="b02f1-129">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

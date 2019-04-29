@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 31ff2c62810061cd8b774e934167a5ee3acf040c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645089"
 ---
-# <a name="imetadatavalidatevalidatorinit-method"></a><span data-ttu-id="f673f-102">Метод IMetaDataValidate::ValidatorInit</span><span class="sxs-lookup"><span data-stu-id="f673f-102">IMetaDataValidate::ValidatorInit Method</span></span>
-<span data-ttu-id="f673f-103">Устанавливает флаг, который указывает тип модуля в текущей области метаданных, и регистрирует указанный метод обратного вызова для ошибок проверки.</span><span class="sxs-lookup"><span data-stu-id="f673f-103">Sets a flag that specifies the type of the module in the current metadata scope, and registers the specified callback method for validation errors.</span></span>  
+# <a name="imetadatavalidatevalidatorinit-method"></a><span data-ttu-id="94d87-102">Метод IMetaDataValidate::ValidatorInit</span><span class="sxs-lookup"><span data-stu-id="94d87-102">IMetaDataValidate::ValidatorInit Method</span></span>
+<span data-ttu-id="94d87-103">Устанавливает флаг, который указывает тип модуля в текущей области метаданных, и регистрирует указанный метод обратного вызова для ошибок проверки.</span><span class="sxs-lookup"><span data-stu-id="94d87-103">Sets a flag that specifies the type of the module in the current metadata scope, and registers the specified callback method for validation errors.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f673f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f673f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="94d87-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="94d87-104">Syntax</span></span>  
   
 ```  
 HRESULT ValidatorInit (  
@@ -36,22 +36,22 @@ HRESULT ValidatorInit (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f673f-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f673f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="94d87-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="94d87-105">Parameters</span></span>  
  `dwModule`  
- <span data-ttu-id="f673f-106">[in] Значение [CorValidatorModuleType](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md) перечисления, указывающее тип модуля в текущей области метаданных.</span><span class="sxs-lookup"><span data-stu-id="f673f-106">[in] A value of the [CorValidatorModuleType](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md) enumeration that specifies the type of the module in the current metadata scope.</span></span>  
+ <span data-ttu-id="94d87-106">[in] Значение [CorValidatorModuleType](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md) перечисления, указывающее тип модуля в текущей области метаданных.</span><span class="sxs-lookup"><span data-stu-id="94d87-106">[in] A value of the [CorValidatorModuleType](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md) enumeration that specifies the type of the module in the current metadata scope.</span></span>  
   
  `pUnk`  
- <span data-ttu-id="f673f-107">[in] Указатель на [IUnknown](/cpp/atl/iunknown) экземпляр, который служит в качестве функцию обратного вызова для ошибок проверки.</span><span class="sxs-lookup"><span data-stu-id="f673f-107">[in] A pointer to an [IUnknown](/cpp/atl/iunknown) instance that serves as a function callback for validation errors.</span></span>  
+ <span data-ttu-id="94d87-107">[in] Указатель на [IUnknown](/cpp/atl/iunknown) экземпляр, который служит в качестве функцию обратного вызова для ошибок проверки.</span><span class="sxs-lookup"><span data-stu-id="94d87-107">[in] A pointer to an [IUnknown](/cpp/atl/iunknown) instance that serves as a function callback for validation errors.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f673f-108">Требования</span><span class="sxs-lookup"><span data-stu-id="f673f-108">Requirements</span></span>  
- <span data-ttu-id="f673f-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f673f-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="94d87-108">Требования</span><span class="sxs-lookup"><span data-stu-id="94d87-108">Requirements</span></span>  
+ <span data-ttu-id="94d87-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="94d87-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f673f-110">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f673f-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="94d87-110">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="94d87-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f673f-111">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f673f-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="94d87-111">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="94d87-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f673f-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f673f-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="94d87-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="94d87-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f673f-113">См. также</span><span class="sxs-lookup"><span data-stu-id="f673f-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="94d87-113">См. также</span><span class="sxs-lookup"><span data-stu-id="94d87-113">See also</span></span>
 
-- [<span data-ttu-id="f673f-114">Интерфейс IMetaDataValidate</span><span class="sxs-lookup"><span data-stu-id="f673f-114">IMetaDataValidate Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)
+- [<span data-ttu-id="94d87-114">Интерфейс IMetaDataValidate</span><span class="sxs-lookup"><span data-stu-id="94d87-114">IMetaDataValidate Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)

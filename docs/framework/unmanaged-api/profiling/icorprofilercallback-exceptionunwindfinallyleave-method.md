@@ -18,36 +18,36 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7ba62ab2c4df73b570fb1c76adaee44a2a2ce8c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61597158"
 ---
-# <a name="icorprofilercallbackexceptionunwindfinallyleave-method"></a><span data-ttu-id="d673a-102">Метод ICorProfilerCallback::ExceptionUnwindFinallyLeave</span><span class="sxs-lookup"><span data-stu-id="d673a-102">ICorProfilerCallback::ExceptionUnwindFinallyLeave Method</span></span>
-<span data-ttu-id="d673a-103">Уведомляет профилировщик, на этапе очистки исключения, покинул обработки `finally` предложение.</span><span class="sxs-lookup"><span data-stu-id="d673a-103">Notifies the profiler that the unwind phase of exception handling has left a `finally` clause.</span></span>  
+# <a name="icorprofilercallbackexceptionunwindfinallyleave-method"></a><span data-ttu-id="b3115-102">Метод ICorProfilerCallback::ExceptionUnwindFinallyLeave</span><span class="sxs-lookup"><span data-stu-id="b3115-102">ICorProfilerCallback::ExceptionUnwindFinallyLeave Method</span></span>
+<span data-ttu-id="b3115-103">Уведомляет профилировщик, на этапе очистки исключения, покинул обработки `finally` предложение.</span><span class="sxs-lookup"><span data-stu-id="b3115-103">Notifies the profiler that the unwind phase of exception handling has left a `finally` clause.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d673a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d673a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b3115-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b3115-104">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionUnwindFinallyLeave();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="d673a-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="d673a-105">Remarks</span></span>  
- <span data-ttu-id="d673a-106">Профилировщик не должен блокироваться во время данного вызова, поскольку стек может находиться в состоянии, допускающем сбор мусора, и поэтому не удастся включить сборку мусора.</span><span class="sxs-lookup"><span data-stu-id="d673a-106">The profiler should not block during this call because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="d673a-107">Если предпринимается в блоках профилировщика и сбор мусора, среда выполнения будет блокироваться до этого обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="d673a-107">If the profiler blocks here and a garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b3115-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="b3115-105">Remarks</span></span>  
+ <span data-ttu-id="b3115-106">Профилировщик не должен блокироваться во время данного вызова, поскольку стек может находиться в состоянии, допускающем сбор мусора, и поэтому не удастся включить сборку мусора.</span><span class="sxs-lookup"><span data-stu-id="b3115-106">The profiler should not block during this call because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="b3115-107">Если предпринимается в блоках профилировщика и сбор мусора, среда выполнения будет блокироваться до этого обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="b3115-107">If the profiler blocks here and a garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
   
- <span data-ttu-id="d673a-108">Кроме того во время этого вызова профилировщик не должна вызывать управляемый код или каким-либо образом вызывать распределения управляемой памяти.</span><span class="sxs-lookup"><span data-stu-id="d673a-108">Also, during this call, the profiler must not call into managed code or in any way cause a managed-memory allocation.</span></span>  
+ <span data-ttu-id="b3115-108">Кроме того во время этого вызова профилировщик не должна вызывать управляемый код или каким-либо образом вызывать распределения управляемой памяти.</span><span class="sxs-lookup"><span data-stu-id="b3115-108">Also, during this call, the profiler must not call into managed code or in any way cause a managed-memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d673a-109">Требования</span><span class="sxs-lookup"><span data-stu-id="d673a-109">Requirements</span></span>  
- <span data-ttu-id="d673a-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d673a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b3115-109">Требования</span><span class="sxs-lookup"><span data-stu-id="b3115-109">Requirements</span></span>  
+ <span data-ttu-id="b3115-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b3115-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d673a-111">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d673a-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b3115-111">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b3115-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d673a-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d673a-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b3115-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b3115-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d673a-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d673a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b3115-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b3115-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d673a-114">См. также</span><span class="sxs-lookup"><span data-stu-id="d673a-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b3115-114">См. также</span><span class="sxs-lookup"><span data-stu-id="b3115-114">See also</span></span>
 
-- [<span data-ttu-id="d673a-115">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="d673a-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="d673a-116">Метод ExceptionUnwindFinallyEnter</span><span class="sxs-lookup"><span data-stu-id="d673a-116">ExceptionUnwindFinallyEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)
+- [<span data-ttu-id="b3115-115">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="b3115-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="b3115-116">Метод ExceptionUnwindFinallyEnter</span><span class="sxs-lookup"><span data-stu-id="b3115-116">ExceptionUnwindFinallyEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)
