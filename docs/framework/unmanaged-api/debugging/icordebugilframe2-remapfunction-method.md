@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b92885d2a6514839a864d6a345dd8af8b07b90c1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946527"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a>Метод ICorDebugILFrame2::RemapFunction
 Перераспределяет отредактированную функцию, указав новое смещение промежуточного языка MSIL Microsoft  
@@ -49,9 +49,9 @@ HRESULT RemapFunction (
   
  `RemapFunction` Метод может вызываться только в контексте текущего кадра и только в следующих случаях:  
   
--   После получения [ICorDebugManagedCallback2::FunctionRemapOpportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) обратный вызов, который еще не был продолжен.  
+- После получения [ICorDebugManagedCallback2::FunctionRemapOpportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) обратный вызов, который еще не был продолжен.  
   
--   Когда выполнение кода остановлен из-за [ICorDebugManagedCallback::EditAndContinueRemap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) событий для данного кадра.  
+- Когда выполнение кода остановлен из-за [ICorDebugManagedCallback::EditAndContinueRemap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) событий для данного кадра.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

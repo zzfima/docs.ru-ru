@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
 ms.openlocfilehash: 911c13b2a24c1906fe3da787460209f12296c993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928588"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>Практическое руководство. Задание привязки службы в конфигурации
 В этом примере контракт `ICalculator` определен для базовой службы калькулятора, служба реализуется в классе `CalculatorService`, а затем ее конечная точка настраивается в файле Web.config с указанием того, что служба использует класс <xref:System.ServiceModel.BasicHttpBinding>. Описание способов настройки этой службы с помощью кода вместо файла конфигурации, см. в разделе [как: Указание привязки службы в коде](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).  

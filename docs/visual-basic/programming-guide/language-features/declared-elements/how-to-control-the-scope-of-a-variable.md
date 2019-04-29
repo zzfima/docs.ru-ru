@@ -13,11 +13,11 @@ helpviewer_keywords:
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
 ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794736"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Практическое руководство. Управление областью действия переменной (Visual Basic)
 Как правило, переменная находится в *область*, или доступна для ссылки на протяжении всего региона, в котором она объявлена. В некоторых случаях переменная элемента *уровень доступа* может влиять на ее область действия.  
@@ -28,13 +28,13 @@ ms.locfileid: "59324322"
   
 #### <a name="to-make-a-variable-visible-only-within-a-block"></a>Чтобы сделать переменную видимой только внутри блока  
   
--   Место [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) для переменной между начальными и конечными операторы объявления блока, например между `For` и `Next` констатация `For` цикла.  
+- Место [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) для переменной между начальными и конечными операторы объявления блока, например между `For` и `Next` констатация `For` цикла.  
   
      Можно ссылаться только из переменной в блоке.  
   
 #### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>Чтобы сделать переменную видимой только внутри процедуры  
   
--   Место `Dim` инструкцию для переменной внутри процедуры, но вне любого блока (такие как `With`... `End With` блок).  
+- Место `Dim` инструкцию для переменной внутри процедуры, но вне любого блока (такие как `With`... `End With` блок).  
   
      Можно ссылаться только из переменной внутри процедуры, в том числе внутри любого блока, содержащегося в процедуре.  
   

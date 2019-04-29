@@ -3,11 +3,11 @@ title: Использование вариативности в делегата
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
 ms.openlocfilehash: 19eb3070c1b8359a4eb050e7cf2f16622f66ebe9
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787261"
 ---
 # <a name="using-variance-in-delegates-visual-basic"></a>Использование вариативности в делегатах (Visual Basic)
 
@@ -46,7 +46,7 @@ End Class
 
 ## <a name="example-2-contravariance"></a>Пример 2: Контрвариантность
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В этом примере демонстрируется использование делегатов с методами, параметры типа которых являются базовыми типами типа параметра сигнатуры делегата. Контравариантность позволяет использовать один обработчик событий вместо нескольких. Например, можно создать обработчик событий, принимающих входной параметр `EventArgs`, и использовать его с событием `Button.MouseClick`, которое отправляет тип `MouseEventArgs` в качестве параметра, а также с событием `TextBox.KeyDown`, которое отправляет параметр `KeyEventArgs`.
 

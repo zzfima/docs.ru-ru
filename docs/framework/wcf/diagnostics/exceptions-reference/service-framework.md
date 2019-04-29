@@ -3,11 +3,11 @@ title: Инфраструктура службы
 ms.date: 03/30/2017
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
 ms.openlocfilehash: 859e718a56ab63c8e012e1851c0730f53cb707be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780761"
 ---
 # <a name="service-framework"></a>Инфраструктура службы
 В этом разделе перечислены все исключения, вызываемые данными инфраструктуры службы.  
@@ -25,7 +25,7 @@ ms.locfileid: "33474926"
 |BaseAddressCannotHaveUserInfo|Базовый адрес не может содержать раздел с информацией о пользователе URI.|  
 |BaseAddressDuplicateScheme|Коллекция уже содержит адрес с указанной схемой. В этой коллекции каждой схеме может соответствовать только один адрес.|  
 |BaseAddressMustBeAbsolute|Только абсолютный URI можно использовать в качестве базового адреса.|  
-|BindingDoesnTSupportAnyChannelTypes1|Указанная привязка не поддерживает создание типов каналов. Элементы пользовательской привязки расположены в стеке неправильно или в неверном порядке. Элемент Transport должен находиться в нижней части стека. Рекомендуемый порядок элементов привязки: TransactionFlow, ReliableSession, Security, CompositeDuplex, OneWay, StreamSecurity, MessageEncoding, Transport.|  
+|BindingDoesnTSupportAnyChannelTypes1|Указанная привязка не поддерживает создание типов каналов. Элементы пользовательской привязки расположены в стеке неправильно или в неверном порядке. Элемент Transport должен находиться в нижней части стека. Рекомендуемый порядок элементов привязки:: TransactionFlow, ReliableSession, Security, CompositeDuplex, OneWay, StreamSecurity, MessageEncoding, транспорта.|  
 |BindingDoesnTSupportDuplexButContractRequires1|Контракту требуется свойство Duplex. Указанная привязка не поддерживает это или настроена неправильно.|  
 |BindingDoesnTSupportOneWayButContractRequires1|Контракту требуется свойство OneWay. Указанная привязка не поддерживает это или настроена неправильно.|  
 |BindingDoesnTSupportRequestReplyButContract1|Контракту требуется свойство Request или Reply. Указанная привязка не поддерживает это или настроена неправильно.|  
@@ -36,7 +36,7 @@ ms.locfileid: "33474926"
 |channelDoesNotHaveADuplexSession0|Текущий канал не поддерживает закрытие выходных сеансов. Этот канал не реализует ISessionChannel\<IDuplexSession >.|  
 |ClientRuntimeRequiresFormatter0|Указанный элемент ClientOperation требуется средство форматирования, так как параметры SerializeRequest и DeserializeReply не имеют одновременно значение false.|  
 |CommunicationObjectAborted1|Указанный коммуникационный объект нельзя использовать для связи, так как он остановлен.|  
-|CommunicationObjectAbortedStack2|Указанный Коммуникационный объект не может использоваться для связи, так как он остановлен: {1}|  
+|CommunicationObjectAbortedStack2|Указанный Коммуникационный объект не может использоваться для обмена данными, так как он остановлен: {1}|  
 |CommunicationObjectBaseClassMethodNotCalled|Указанный Коммуникационный объект переопределил виртуальную функцию {1} , но не вызвал версию, заданную в базовом классе.|  
 |ContractIsNotSelfConsistentItHasOneOrMore2|Указанный контракт имеет одну или несколько операций IsTerminating или non-IsInitiating. Свойству SessionMode не присвоено значение SessionMode.Required. Атрибуты IsInitiating и IsTerminating можно использовать только в контексте сеанса.|  
 |CouldnTCreateChannelForChannelType2|Указанный тип канала был запрошен, однако указанная привязка не поддерживает это или настроена неправильно.|  
@@ -48,7 +48,7 @@ ms.locfileid: "33474926"
 |MultipleMebesInParameters|Обнаружено несколько элементов MessageEncodingBindingElement в BindingParameters контекста BindingContext. Привязка CustomBinding не может иметь несколько элементов MessageEncodingBindingElements. Удалите все элементы, кроме одного.|  
 |MultipleStreamUpgradeProvidersInParameters|Обнаружено несколько элементов IStreamUpgradeProviderElement в BindingParameters контекста BindingContext. Привязка CustomBinding не может иметь несколько элементов IStreamUpgradeProviderElements. Удалите все элементы, кроме одного.|  
 |NoChannelBuilderAvailable|Невозможно использовать привязку для создания производства канала или прослушивателя канала, поскольку в ней нет элемента TransportBindingElement. В каждой привязке должен присутствовать по меньшей мере один элемент привязки, наследуемый от TransportBindingElement.|  
-|NotAllBindingElementsBuilt|Некоторые элементы данной привязки не были использовании при создании производства канала и прослушивателя канала. Элементы привязки расположены в неправильном порядке. Рекомендуемый порядок элементов привязки: TransactionFlow, ReliableSession, Security, CompositeDuplex, OneWay, StreamSecurity, MessageEncoding, Transport.  Последним должен быть элемент TransportBindingElement. Указанные элементы привязки не были созданы.|  
+|NotAllBindingElementsBuilt|Некоторые элементы данной привязки не были использовании при создании производства канала и прослушивателя канала. Элементы привязки расположены в неправильном порядке. Рекомендуемый порядок элементов привязки:: TransactionFlow, ReliableSession, Security, CompositeDuplex, OneWay, StreamSecurity, MessageEncoding, транспорта.  Последним должен быть элемент TransportBindingElement. Указанные элементы привязки не были созданы.|  
 |RuntimeRequiresInvoker0|Операции отправки требуется средство вызова.|  
 |ServiceHasZeroAppEndpoints|Указанная служба не имеет конечных точек приложения (не инфраструктурных). Это может быть связано с тем, что для данного приложения не найден файл конфигурации или в файле конфигурации не удалось найти элементы службы, соответствующие данному имени службы, или конечные точки не были определены в элементе службы.|  
 |SFxActionMismatch|Не удается создать типизированное сообщение из-за несоответствия действия. Ожидается указанное действие, а происходит другое.|  
@@ -122,7 +122,7 @@ ms.locfileid: "33474926"
 |SFxInvalidMessageContractSignature|Указанная операция имеет параметр или тип возвращаемого значения с атрибутом MessageContractAttribute. Чтобы представить сообщение запроса с помощью контракта сообщения, операция должна иметь один параметр с атрибутом MessageContractAttribute. Чтобы представить сообщение ответа с помощью контракта сообщения, возвращенное значение операции должно быть типом, имеющим атрибут MessageContractAttribute. Операция не должна иметь параметры out или ref.|  
 |SFxInvalidReplyAction|В исходящем сообщении ответа для операции указано действие Action, однако в контракте для этой операции указано другое действие ReplyAction. Действие Action в сообщении должно соответствовать действию ReplyAction в контракте, или в контракте операции должно быть задано действие ReplyAction='*'.|  
 |SFxInvalidRequestAction|В исходящем сообщении запроса для операции указано действие Action, однако в контракте для этой операции указано другое действие RequestAction. Действие Action в сообщении должно соответствовать действию RequestAction в контракте, или в контракте операции должно быть задано действие RequestAction='*'.|  
-|SFxInvalidStaticOverloadCalledForDuplexChannelFactory1|Нельзя использовать статический метод CreateChannel с указанным контрактом, так как контракт определяет контракт обратного вызова. Используйте один из статических перегрузок CreateChannel на производстве DuplexChannelFactory\<TChannel >.|  
+|SFxInvalidStaticOverloadCalledForDuplexChannelFactory1|Нельзя использовать статический метод CreateChannel с указанным контрактом, так как контракт определяет контракт обратного вызова. Воспользуйтесь одним из статических перегрузок CreateChannel для DuplexChannelFactory\<TChannel >.|  
 |SFxInvalidStreamInRequest|Чтобы запрос в указанной операции был потоком, операция должна иметь один параметр с типом Stream.|  
 |SFxInvalidStreamInResponse|Чтобы ответ в указанной операции был потоком, операция должна иметь один выходной параметр или возвращенное значение с типом Stream.|  
 |SFxInvalidStreamInTypedMessage|Чтобы использовать потоки в программной модели контракта сообщения, указанный тип должен иметь один член MessageBodyMember типа Stream.|  

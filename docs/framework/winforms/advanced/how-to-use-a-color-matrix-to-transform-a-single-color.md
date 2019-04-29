@@ -9,11 +9,11 @@ helpviewer_keywords:
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
 ms.openlocfilehash: 78fc498b0689026fb74ec0c422948c1879495560
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954832"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Практическое руководство. Использование матрицы цветов для преобразования отдельного цвета
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет <xref:System.Drawing.Image> и <xref:System.Drawing.Bitmap> классы для хранения и управления изображениями. <xref:System.Drawing.Image> и <xref:System.Drawing.Bitmap> объекты хранят цвет каждого пикселя как 32-разрядное число: 8 бит на красный, зеленый, синий и альфа-канала. Каждый из четырех компонентов является число от 0 до 255, где 0 соответствует нулевой интенсивности, а 255 — наибольшей интенсивности. Альфа-компонент определяет прозрачность цвета: 0 является полностью прозрачным, а 255 — полностью непрозрачный.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
 ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935464"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Задание поведения клиента во время выполнения
 Клиенты Windows Communication Foundation (WCF), такие как службы Windows Communication Foundation (WCF), можно настроить для изменения поведения времени выполнения в соответствии с клиентским приложением. Для задания поведения среды выполнения клиента существует три атрибута. Объекты обратного вызова дуплексного клиента могут использовать атрибуты <xref:System.ServiceModel.CallbackBehaviorAttribute> и <xref:System.ServiceModel.Description.CallbackDebugBehavior> для изменения своего поведения в среде выполнения. Атрибут <xref:System.ServiceModel.Description.ClientViaBehavior> можно использовать для разделения логического назначения и непосредственного назначения сети. Более того, типы обратного вызова дуплексного клиента могут использовать некоторые поведения на стороне службы. Дополнительные сведения см. в разделе [указание поведения службы во время выполнения](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
@@ -32,9 +32,9 @@ ms.locfileid: "59164376"
   
  Вследствие указанных проблем с безопасностью настоятельно рекомендуется делать следующее.  
   
--   Файл конфигурации приложения может использоваться для присвоения свойству <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> значения `true`.  
+- Файл конфигурации приложения может использоваться для присвоения свойству <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> значения `true`.  
   
--   Это следует делать только в контролируемых сценариях отладки.  
+- Это следует делать только в контролируемых сценариях отладки.  
   
  В следующем примере кода показан клиент, файл конфигурации, который указывает, что WCF для возврата сведений об управляемых исключениях из клиента объект обратного вызова в сообщениях SOAP.  
   

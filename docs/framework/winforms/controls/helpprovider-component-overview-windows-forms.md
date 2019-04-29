@@ -11,20 +11,20 @@ helpviewer_keywords:
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
 ms.openlocfilehash: 177b61cab99d21a844298632020244fa424d8d2a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971227"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>Общие сведения о компоненте HelpProvider (Windows Forms)
 Windows Forms [HelpProvider](helpprovider-component-windows-forms.md) компонент используется для связывания файл HTML Help 1.x справки (CHM-файл, созданный с помощью HTML Help Workshop, или HTM-файл) с приложением Windows. Можно предоставить справку в различными способами:  
   
--   Укажите контекстной справки для элементов управления в формах Windows Forms.  
+- Укажите контекстной справки для элементов управления в формах Windows Forms.  
   
--   Предоставить контекстную справку для определенного диалогового или конкретных элементов управления в диалоговом окне.  
+- Предоставить контекстную справку для определенного диалогового или конкретных элементов управления в диалоговом окне.  
   
--   Откройте файл справки для конкретной области, например на главной странице оглавление, индекс или функция поиска.  
+- Откройте файл справки для конкретной области, например на главной странице оглавление, индекс или функция поиска.  
   
 ## <a name="using-the-help-provider"></a>С помощью поставщика по справке  
  Добавление <xref:System.Windows.Forms.HelpProvider> компонента в форму Windows позволяет других элементов управления в форме для предоставления справки свойства <xref:System.Windows.Forms.HelpProvider> компонента. Это позволяет предоставить справку для элементов управления в форме Windows. Можно связать файл справки с <xref:System.Windows.Forms.HelpProvider> компонента с помощью <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> свойство. Укажите тип справки, получен с помощью вызова <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> и указав значение от <xref:System.Windows.Forms.HelpNavigator> перечисления для указанного элемента управления. Укажите ключевое слово или раздел для справки, вызвав <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> метод.  

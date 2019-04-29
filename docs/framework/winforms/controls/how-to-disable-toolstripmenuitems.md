@@ -14,18 +14,18 @@ helpviewer_keywords:
 - menus [Windows Forms], disabling menu items
 ms.assetid: bcc1da84-50fd-41d2-8475-103b581d5654
 ms.openlocfilehash: a480cd29eef1a79a69f702eed7cd02c28d7ea3de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954236"
 ---
 # <a name="how-to-disable-toolstripmenuitems"></a>Практическое руководство. Отключение объектов ToolStripMenuItem
 Можно ограничить или расширить набор команд, которые может выполнять пользователь, включение и отключение элементов меню в ответ на действия пользователя. Пункты меню включены по умолчанию, когда они создаются, но его можно настроить через <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> свойство. Можно изменить значение этого свойства во время разработки в **свойства** окна или программным способом, задав его в код.  
   
 ### <a name="to-disable-a-menu-item-programmatically"></a>Чтобы отключить пункт меню программными средствами  
   
--   В методе, где задать свойства элемента меню, добавьте код для задания <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> свойства `false`.  
+- В методе, где задать свойства элемента меню, добавьте код для задания <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> свойства `false`.  
   
     ```vb  
     MenuItem1.Enabled = False  

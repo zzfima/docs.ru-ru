@@ -11,11 +11,11 @@ helpviewer_keywords:
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
 ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937687"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Практическое руководство. Создание графических объектов для рисования
 Перед тем как рисовать линии и фигуры, отображать текст или изображения и управлять ими с помощью [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], необходимо создать объект <xref:System.Drawing.Graphics>. <xref:System.Drawing.Graphics> представляет поверхность для рисования [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] и является объектом, который используется для создания графических изображений.  
@@ -31,15 +31,15 @@ ms.locfileid: "59324205"
   
 #### <a name="to-create-a-graphics-object"></a>Чтобы создать объект Graphics  
   
--   Получите ссылку на объект Graphics как часть <xref:System.Windows.Forms.PaintEventArgs> в событии <xref:System.Windows.Forms.Control.Paint>  формы или элемента управления. Это обычный способ получения ссылки на объект Graphics при создании кода рисования для элемента управления. Аналогичным образом можно получить объект Graphics как свойство <xref:System.Drawing.Printing.PrintPageEventArgs> при обработке события <xref:System.Drawing.Printing.PrintDocument.PrintPage> для <xref:System.Drawing.Printing.PrintDocument>.  
+- Получите ссылку на объект Graphics как часть <xref:System.Windows.Forms.PaintEventArgs> в событии <xref:System.Windows.Forms.Control.Paint>  формы или элемента управления. Это обычный способ получения ссылки на объект Graphics при создании кода рисования для элемента управления. Аналогичным образом можно получить объект Graphics как свойство <xref:System.Drawing.Printing.PrintPageEventArgs> при обработке события <xref:System.Drawing.Printing.PrintDocument.PrintPage> для <xref:System.Drawing.Printing.PrintDocument>.  
   
      - или -  
   
--   Вызовите метод <xref:System.Windows.Forms.Control.CreateGraphics%2A> элемента управления или формы, чтобы получить ссылку на <xref:System.Drawing.Graphics>, представляющий поверхность рисования объекта формы или элемента управления. Используйте этот метод, чтобы рисовать на уже существующей форме или элементе управления.  
+- Вызовите метод <xref:System.Windows.Forms.Control.CreateGraphics%2A> элемента управления или формы, чтобы получить ссылку на <xref:System.Drawing.Graphics>, представляющий поверхность рисования объекта формы или элемента управления. Используйте этот метод, чтобы рисовать на уже существующей форме или элементе управления.  
   
      - или -  
   
--   Создайте объект <xref:System.Drawing.Graphics> из любого объекта, который наследует от <xref:System.Drawing.Image>. Этот подход полезен в тех случаях, когда нужно изменить уже существующий образ.  
+- Создайте объект <xref:System.Drawing.Graphics> из любого объекта, который наследует от <xref:System.Drawing.Image>. Этот подход полезен в тех случаях, когда нужно изменить уже существующий образ.  
   
      В следующих разделах приводятся сведения о каждом из этих процессов.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "59324205"
   
 #### <a name="to-create-a-graphics-object-with-the-creategraphics-method"></a>Чтобы создать объект Graphics с помощью метода CreateGraphics  
   
--   Вызовите метод <xref:System.Windows.Forms.Control.CreateGraphics%2A> формы или элемента управления, на которых необходимо отрисовывать графику.  
+- Вызовите метод <xref:System.Windows.Forms.Control.CreateGraphics%2A> формы или элемента управления, на которых необходимо отрисовывать графику.  
   
     ```vb  
     Dim g as Graphics  
@@ -122,7 +122,7 @@ ms.locfileid: "59324205"
   
 #### <a name="to-create-a-graphics-object-from-an-image"></a>Чтобы создать объект Graphics из изображения  
   
--   Вызовите метод <xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType>, указав имя переменной типа Image, из которой требуется создать объект <xref:System.Drawing.Graphics>.  
+- Вызовите метод <xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType>, указав имя переменной типа Image, из которой требуется создать объект <xref:System.Drawing.Graphics>.  
   
      В следующем примере показано, как использовать объект <xref:System.Drawing.Bitmap>:  
   
@@ -149,17 +149,17 @@ ms.locfileid: "59324205"
 ## <a name="drawing-and-manipulating-shapes-and-images"></a>Рисование и изменение фигур и изображений  
  После создания объект <xref:System.Drawing.Graphics> можно использовать для рисования линий и фигур, отрисовки текста, а также показа и изменения изображений. Основные объекты, которые используются с объектами <xref:System.Drawing.Graphics>:  
   
--   Класс <xref:System.Drawing.Pen>, используемый для рисования линий, контуров и отрисовки других геометрических объектов.  
+- Класс <xref:System.Drawing.Pen>, используемый для рисования линий, контуров и отрисовки других геометрических объектов.  
   
--   Класс <xref:System.Drawing.Brush>, используемый для заливки графических областей, например фигур, изображений или текста.  
+- Класс <xref:System.Drawing.Brush>, используемый для заливки графических областей, например фигур, изображений или текста.  
   
--   Класс <xref:System.Drawing.Font>, содержащий описание фигур, которые должны использоваться при отрисовке текста.  
+- Класс <xref:System.Drawing.Font>, содержащий описание фигур, которые должны использоваться при отрисовке текста.  
   
--   Структура <xref:System.Drawing.Color>, представляющая различные цвета для отображения.  
+- Структура <xref:System.Drawing.Color>, представляющая различные цвета для отображения.  
   
 #### <a name="to-use-the-graphics-object-you-have-created"></a>Чтобы использовать объект Graphics, который вы создали  
   
--   Используйте любой из вышеперечисленных объектов для рисования того, что вам нужно.  
+- Используйте любой из вышеперечисленных объектов для рисования того, что вам нужно.  
   
      Дополнительные сведения см. в следующих разделах:  
   

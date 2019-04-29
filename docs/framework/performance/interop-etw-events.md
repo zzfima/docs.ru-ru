@@ -8,20 +8,20 @@ ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 09b2848619256a255cc27f0268d46e5e6db8cbe4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949309"
 ---
 # <a name="interop-etw-events"></a>События взаимодействия (трассировка событий Windows)
 <a name="top"></a> С помощью событий взаимодействия регистрируются сведения о создании заглушек и кэшировании MSIL.  
   
  Эта категория состоит из следующих событий:  
   
--   [Событие ILStubGenerated](#ilstubgenerated_event)  
+- [Событие ILStubGenerated](#ilstubgenerated_event)  
   
--   [Событие ILStubCacheHit](#ilstubcachehit_event)  
+- [Событие ILStubCacheHit](#ilstubcachehit_event)  
   
 <a name="ilstubgenerated_event"></a>   
 ## <a name="ilstubgenerated-event"></a>Событие ILStubGenerated  

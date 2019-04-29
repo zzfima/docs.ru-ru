@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
 author: BrucePerlerMS
 ms.openlocfilehash: 29e18cdda9e18addef4f0f32fd30e9abf6af78fc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793852"
 ---
 # <a name="securitytokenhandlerconfiguration"></a>\<securityTokenHandlerConfiguration>
 Предоставляет конфигурацию для коллекции обработчиков токенов.  
@@ -37,14 +37,14 @@ ms.locfileid: "57360411"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |saveBootstrapContext|Указывает, включаются ли токены начальной загрузки в токен сеанса. Также можно задать значение в коллекцию обработчиков токенов, задав `saveBootstrapContext` атрибут [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) элемент. Значение, заданное на коллекцию обработчиков токенов переопределяет значение, заданное в службе.|  
 |maximumClockSkew|Объект <xref:System.TimeSpan> , указывающее максимальное допустимое время отклонения. Определяет максимальное допустимое время отклонения при выполнении операций, зависящих от времени, таких как проверка срока действия сеанса входа в систему. Значение по умолчанию — 5 минут «00: 05:00». Дополнительные сведения о способах указания <xref:System.TimeSpan> значения, см. в разделе [значения Timespan](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md). Также можно задать максимальную расфазировку синхронизирующих импульсов на уровне службы, задав `maximumClockSkew` атрибут [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) элемент. Значение, заданное на коллекцию обработчиков токенов переопределяет значение, заданное в службе.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<audienceUris>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|Задает набор URI, допустимых идентификаторов этой проверяющей стороне. Необязательный параметр.|  
 |[\<кэширует >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Регистрирует кэши маркеров сеанса и обнаружения воспроизведения маркеров. Можно указать на уровне службы или в коллекцию обработчиков токенов безопасности. Необязательный параметр.|  

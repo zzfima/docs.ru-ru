@@ -7,22 +7,22 @@ helpviewer_keywords:
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 ms.openlocfilehash: 887a157494c2992c1ae5868229c442f31fafb276
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781307"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>Пошаговое руководство. Применение стилей к содержимому WPF
 В этом пошаговом руководстве показано, как применить стили к элементу управления Windows Presentation Foundation (WPF), размещенному на форме Windows Forms.
 
  В руководстве выполняются следующие задачи:
 
--   Создание проекта.
+- Создание проекта.
 
--   создание элемента управления WPF;
+- создание элемента управления WPF;
 
--   применение стиля к элементу управления WPF.
+- применение стиля к элементу управления WPF.
 
 > [!NOTE]
 >  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -30,7 +30,7 @@ ms.locfileid: "59312154"
 ## <a name="prerequisites"></a>Предварительные требования  
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
   
--   Visual Studio 2012.  
+- Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Создание проекта  
  Первым шагом является создание проекта Windows Forms.  
@@ -40,7 +40,7 @@ ms.locfileid: "59312154"
   
 #### <a name="to-create-the-project"></a>Создание проекта  
   
--   Создание нового проекта приложения Windows Forms в Visual Basic или Visual C# с именем `StylingWpfContent`.  
+- Создание нового проекта приложения Windows Forms в Visual Basic или Visual C# с именем `StylingWpfContent`.  
   
 ## <a name="creating-the-wpf-control-types"></a>Создание типов элементов управления WPF  
  После добавления в проект типа элемента управления WPF можно разместить его в элементе управления <xref:System.Windows.Forms.Integration.ElementHost>.  

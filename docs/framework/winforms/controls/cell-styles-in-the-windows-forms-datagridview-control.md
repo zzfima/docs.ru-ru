@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
 ms.openlocfilehash: 41794c5ecadbcdc0b38c7c73afc7c010a4ea6989
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939169"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Стили ячеек элемента управления DataGridView в Windows Forms
 Каждая ячейка в <xref:System.Windows.Forms.DataGridView> элемент управления может иметь свой собственный стиль, включая формат текста, цвет фона, цвет переднего плана и шрифта. Как правило Однако несколько ячеек будет обладают одинаковым стилем.  
@@ -21,23 +21,23 @@ ms.locfileid: "59300025"
 ## <a name="the-datagridviewcellstyle-class"></a>Класс DataGridViewCellStyle  
  <xref:System.Windows.Forms.DataGridViewCellStyle> Класс содержит следующие свойства, относящиеся к стилю:  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> и <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> и <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> и <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> и <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A>  
   
  Этот класс также содержит следующие свойства, связанные с форматированием:  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> и <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> и <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> и <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> и <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.Alignment%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.Alignment%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.Padding%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.Padding%2A>  
   
  Дополнительные сведения об этих свойствах и другие свойства стиля ячейки, см. в разделе <xref:System.Windows.Forms.DataGridViewCellStyle> справочную документацию и разделы, перечисленные в разделе также см. в разделе ниже.  
   

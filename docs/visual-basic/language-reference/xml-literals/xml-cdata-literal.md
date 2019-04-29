@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
 ms.openlocfilehash: ee269ca5cf9635fec35165d1ea65d6a6483cadef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938636"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>Литеральное представление XML-раздела CDATA (Visual Basic)
 Объект литерал, представляющий <xref:System.Xml.Linq.XCData> объекта.  
@@ -40,9 +40,9 @@ ms.locfileid: "58828607"
 ## <a name="remarks"></a>Примечания  
  Разделы XML CDATA содержит необработанный текст, который должен быть включено, но не синтаксический анализ, XML, он содержится. Раздел XML CDATA может содержать любой текст. Это включает в себя зарезервированные символы XML. Раздел XML CDATA заканчивается последовательность «]] >». Это подразумевает следующее:  
   
--   Нельзя использовать внедренное выражение в представлении XML CDATA, поскольку разделители внедренного выражения являются допустимым содержимым XML CDATA.  
+- Нельзя использовать внедренное выражение в представлении XML CDATA, поскольку разделители внедренного выражения являются допустимым содержимым XML CDATA.  
   
--   Разделы XML CDATA не могут быть вложенными, так как `content` не может содержать значение «]] >».  
+- Разделы XML CDATA не могут быть вложенными, так как `content` не может содержать значение «]] >».  
   
  Можно присвоить переменной в представлении XML CDATA или включить его в литерале XML-элемента.  
   

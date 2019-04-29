@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cc94c63edb602d87a7c08a9051eb2ef760834477
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791681"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>Метод ICorProfilerInfo2::GetStringLayout
 Получает сведения о структуре строкового объекта. Этот метод является устаревшим в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]и заменяется [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) метод.  
@@ -52,11 +52,11 @@ HRESULT GetStringLayout(
 ## <a name="remarks"></a>Примечания  
  `GetStringLayout` Метод получает смещения, относительно `ObjectID` указатель из расположений, в которых хранятся следующие:  
   
--   Длина буфера строки.  
+- Длина буфера строки.  
   
--   Длина самой строки.  
+- Длина самой строки.  
   
--   Буфер, содержащий фактический строку расширенных символов.  
+- Буфер, содержащий фактический строку расширенных символов.  
   
  Строки могут представлять собой нулем.  
   

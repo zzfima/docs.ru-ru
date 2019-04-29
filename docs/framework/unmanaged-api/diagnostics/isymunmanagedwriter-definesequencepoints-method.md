@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 735b33ac1f049f8d4d3740239e7c34a6fa16dd32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969173"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>Метод ISymUnmanagedWriter::DefineSequencePoints
 Определяет группу точек следования в текущем методе. Каждая Начальная строка и начальный столбец определяют начало оператора в методе. Каждая конечная строка и конечный столбец определяет конец оператора в методе. Массивы должны быть упорядочены по возрастанию смещений. Смещение всегда измеряется от начала метода, в байтах.  

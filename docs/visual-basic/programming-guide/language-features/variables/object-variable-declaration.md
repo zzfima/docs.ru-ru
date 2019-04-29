@@ -13,11 +13,11 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
 ms.openlocfilehash: 4a3ef3a8254153fa8695ffacd9829ca9316d77a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959982"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Объявление переменных объектов (Visual Basic)
 Используйте обычный оператор объявления для объявления переменной объекта. Для типа данных, либо указать `Object` (то есть [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)) или более определенный класс, из которого будет создаваться объект.  
@@ -49,19 +49,19 @@ Dim objC As System.OperatingSystem
 ### <a name="advantages-of-early-binding"></a>Преимущества раннего связывания  
  Объявление объектной переменной в определенном классе дает несколько преимуществ:  
   
--   Автоматическая проверка типа  
+- Автоматическая проверка типа  
   
--   Гарантированный доступ ко всем членам определенного класса  
+- Гарантированный доступ ко всем членам определенного класса  
   
--   Поддержка Microsoft IntelliSense в редакторе кода  
+- Поддержка Microsoft IntelliSense в редакторе кода  
   
--   Улучшение читаемости кода  
+- Улучшение читаемости кода  
   
--   Меньшее количество ошибок в коде  
+- Меньшее количество ошибок в коде  
   
--   Обнаружение ошибок во время компиляции, а не время выполнения  
+- Обнаружение ошибок во время компиляции, а не время выполнения  
   
--   Более быстрое выполнение кода  
+- Более быстрое выполнение кода  
   
 ## <a name="access-to-object-variable-members"></a>Доступ к членам переменных объекта  
  Когда `Option Strict` включен `On`, переменная объекта может получить доступ к только методы и свойства класса, в котором она объявлена. Это показано в следующем примере.  

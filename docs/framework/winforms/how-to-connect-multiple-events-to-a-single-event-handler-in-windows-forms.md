@@ -11,11 +11,11 @@ helpviewer_keywords:
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
 ms.openlocfilehash: eec6a754b885cd169e5542221caefb3233c4c8af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967022"
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Практическое руководство. Подключение нескольких событий к одному обработчику в Windows Forms
 При разработке приложения вам может понадобиться один обработчик событий, для нескольких событий, или несколько событий выполните ту же процедуру. Например часто бывает мощные-экономии времени была команда меню для вызова того же события, что кнопки на форме они предоставляют одинаковую функциональность. Это можно сделать с помощью представления "события" окна свойств в C# или с помощью `Handles` ключевое слово и **имя класса** и **имя метода** раскрывающиеся списки в редакторе кода Visual Basic.  

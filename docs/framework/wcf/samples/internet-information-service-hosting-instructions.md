@@ -3,11 +3,11 @@ title: Инструкции по размещению в службах IIS
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
 ms.openlocfilehash: f5aa276bc1178f3e7c61af7505fcf54df8b934e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954860"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Инструкции по размещению в службах IIS
 Для выполнения примеров, размещаемых в службах IIS, следует убедиться, что службы IIS правильно установлены и запущены.  
@@ -46,13 +46,13 @@ ms.locfileid: "59328963"
   
 8. Убедитесь, что выбраны следующие элементы.  
   
-    1.  **Расширяемость .NET**  
+    1. **Расширяемость .NET**  
   
-    2.  **ASP.NET**  
+    2. **ASP.NET**  
   
-    3.  **Расширения ISAPI**  
+    3. **Расширения ISAPI**  
   
-    4.  **Фильтры ISAPI**  
+    4. **Фильтры ISAPI**  
   
 9. В элементе **World Wide Web Services**, разверните **общие компоненты Http**.  
   
@@ -104,13 +104,13 @@ ms.locfileid: "59328963"
   
 8. Убедитесь, что выбраны следующие элементы.  
   
-    1.  **Расширяемость .NET**  
+    1. **Расширяемость .NET**  
   
-    2.  **ASP.NET**  
+    2. **ASP.NET**  
   
-    3.  **Расширения ISAPI**  
+    3. **Расширения ISAPI**  
   
-    4.  **Фильтры ISAPI**  
+    4. **Фильтры ISAPI**  
   
 9. Разверните элемент **веб-средства управления**, а затем выберите **консоль управления IIS**.  
   

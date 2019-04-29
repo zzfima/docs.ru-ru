@@ -3,11 +3,11 @@ title: Службы WCF и ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
 ms.openlocfilehash: 80f4f9a473f223928981ee3f0c2e9f2464cbafaf
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935579"
 ---
 # <a name="wcf-services-and-aspnet"></a>Службы WCF и ASP.NET
 
@@ -59,7 +59,7 @@ ms.locfileid: "58463479"
 
 В отличие от конфигурации по умолчанию side-by-side где размещающая инфраструктура WCF перехватывает сообщения WCF и направляет их из конвейера HTTP, службы WCF, работающие в режиме совместимости ASP.NET полностью участвовать в жизненном цикле запроса ASP.NET HTTP. В режиме совместимости WCF-сервисы используют конвейер HTTP через <xref:System.Web.IHttpHandler> реализации, аналогичную запросы так, для обработки страниц ASPX и веб-служб ASMX. В результате WCF работает аналогично ASMX в отношении следующих возможностей ASP.NET:
 
-- <xref:System.Web.HttpContext>. Службы WCF, работающие в режиме совместимости ASP.NET можно получить доступ к <xref:System.Web.HttpContext.Current%2A> и связанное состояние.
+- <xref:System.Web.HttpContext>: Службы WCF, работающие в режиме совместимости ASP.NET можно получить доступ к <xref:System.Web.HttpContext.Current%2A> и связанное состояние.
 
 - Авторизация на основе файлов: Службы WCF, работающие в режиме совместимости ASP.NET можно защитить путем присоединения файл системы управления доступом (ACL) к службе SVC-файла.
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
 ms.openlocfilehash: bc2ac2587554215ef3b2c2580413fbbb894aa687
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967299"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>Практическое руководство. Задание толщины и выравнивания пера
 При создании <xref:System.Drawing.Pen>, указать толщину пера в качестве одного из аргументов конструктора. Можно также изменить ширину пера <xref:System.Drawing.Pen.Width%2A> свойство <xref:System.Drawing.Pen> класса.  
@@ -26,7 +26,7 @@ ms.locfileid: "59074980"
   
 ### <a name="to-vary-the-width-of-a-pen"></a>Для изменения ширины пера  
   
--   Установите для параметра <xref:System.Drawing.Pen.Alignment%2A> свойства <xref:System.Drawing.Drawing2D.PenAlignment.Center> (по умолчанию) будет что рисование зеленым пером пикселей по теоретической линии. Ниже показан итоговый строки.  
+- Установите для параметра <xref:System.Drawing.Pen.Alignment%2A> свойства <xref:System.Drawing.Drawing2D.PenAlignment.Center> (по умолчанию) будет что рисование зеленым пером пикселей по теоретической линии. Ниже показан итоговый строки.  
   
      ![Черный тонкой линии зеленым цветом.](./media/how-to-set-pen-width-and-alignment/green-pixels-centered-line.gif)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "59074980"
   
 ### <a name="to-change-the-alignment-of-a-pen"></a>Изменение выравнивания пера  
   
--   Установите для параметра <xref:System.Drawing.Pen.Alignment%2A> свойства <xref:System.Drawing.Drawing2D.PenAlignment.Center> будет что рисование зеленым пером пикселей по границ прямоугольника.  
+- Установите для параметра <xref:System.Drawing.Pen.Alignment%2A> свойства <xref:System.Drawing.Drawing2D.PenAlignment.Center> будет что рисование зеленым пером пикселей по границ прямоугольника.  
   
      На следующем рисунке показан полученный прямоугольник.
   
@@ -48,7 +48,7 @@ ms.locfileid: "59074980"
   
 ### <a name="to-create-an-inset-pen"></a>Для создания вложенного пера  
   
--   Измените выравнивание зеленого пера, изменив третья инструкция в предыдущем примере кода следующим образом:  
+- Измените выравнивание зеленого пера, изменив третья инструкция в предыдущем примере кода следующим образом:  
   
      [!code-csharp[System.Drawing.UsingAPen#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#43)]
      [!code-vb[System.Drawing.UsingAPen#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#43)]  

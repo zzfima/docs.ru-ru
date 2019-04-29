@@ -5,11 +5,11 @@ helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
 ms.openlocfilehash: 9dfe34406bfda2c16bd2f0cd53796b2fcef07b57
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967925"
 ---
 # <a name="services-and-transactions"></a>Службы и транзакции
 Приложения Windows Communication Foundation (WCF) могут инициировать транзакцию из клиента и координировать ее в пределах операции службы. Клиенты могут инициировать транзакцию, вызвать несколько операций службы и обеспечить, чтобы операции службы либо фиксировались, либо откатывались как единый блок.  

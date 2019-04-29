@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
 ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949868"
 ---
 # <a name="securing-services"></a>Защита служб
 Безопасность службы Windows Communication Foundation (WCF) состоит из двух основных требований: безопасность передачи и авторизации. (Третье требование, аудит событий безопасности, описанной в [аудит](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Вкратце, для обеспечения безопасности передачи должна быть выполнена проверка подлинности (проверка идентификации как службы, так и клиента) и обеспечены конфиденциальность (шифрование сообщений) и целостность (цифровая подпись для обнаружения подделки). Авторизация - это управление доступом к ресурсам, например разрешение чтение файла только привилегированным пользователям. С помощью функций WCF, два основных требования легко реализуются.  

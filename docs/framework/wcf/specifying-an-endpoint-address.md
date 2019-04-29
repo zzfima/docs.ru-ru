@@ -8,11 +8,11 @@ helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
 ms.openlocfilehash: 4fe21bb5b91143dff4d0a9f24bbc39be5e529985
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967860"
 ---
 # <a name="specifying-an-endpoint-address"></a>Задание адреса конечной точки
 Весь обмен данными со службой Windows Communication Foundation (WCF) происходит через ее конечные точки. Каждая конечная точка службы <xref:System.ServiceModel.Description.ServiceEndpoint> содержит адрес <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, привязку <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> и контракт <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. В контракте задается, какие операции доступны. Привязка определяет, как осуществлять взаимодействие со службой, а адрес показывает, где можно найти службу. Каждая конечная точка должна иметь уникальный адрес. Адрес конечной точки представляется классом <xref:System.ServiceModel.EndpointAddress>, содержащим универсальный код ресурса (URI), который, в свою очередь, обозначает адрес службы, <xref:System.ServiceModel.EndpointAddress.Identity%2A>, представляющий удостоверение безопасности службы и коллекцию необязательных заголовков <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Необязательные заголовки содержат более подробную информацию для идентификации конечной точки и взаимодействия с ней. Например, в заголовках может содержаться информация о том, как следует обрабатывать входящее сообщение, куда конечная точка должна отправить ответное сообщение или какой экземпляр службы необходимо использовать для обработки входящего сообщения от конкретного пользователя, если доступно несколько экземпляров.  
@@ -22,13 +22,13 @@ ms.locfileid: "59097535"
   
  Универсальный код ресурса (URI) адреса для большинства видов транспорта состоит из четырех частей. Например, этот URI, `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` состоит из следующих четырех частей:  
   
--   Схема: http:  
+- Схема: http:  
   
--   Компьютер: `www.fabrikam.com`  
+- Компьютер: `www.fabrikam.com`  
   
--   (Необязательно) Порт: 322  
+- (Необязательно) Порт: 322  
   
--   Путь: /mathservice.svc/secureEndpoint  
+- Путь: /mathservice.svc/secureEndpoint  
   
  Одной из особенностей модели EPR является то, что каждая ссылка на конечную точку может содержать некоторые ссылочные параметры, которые добавляют дополнительные идентификационные сведения. В WCF, эти ссылочные параметры моделируются как экземпляры <xref:System.ServiceModel.Channels.AddressHeader> класса.  
   

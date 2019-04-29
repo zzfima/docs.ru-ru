@@ -12,11 +12,11 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
 ms.openlocfilehash: 27b19e47d108b9af43a6d8882264d62c726ffe56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972085"
 ---
 # <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Практическое руководство. Отображение определенных дней полужирным шрифтом в элементе управления MonthCalendar в Windows Forms
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> элемент управления может отображать дней полужирным шрифтом, либо как даты в единственном числе, либо на периодической основе. Это может сделать для привлечения внимания к особые даты, такие как праздники и выходные.  

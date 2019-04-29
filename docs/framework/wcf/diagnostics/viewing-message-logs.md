@@ -3,11 +3,11 @@ title: Просмотр журналов сообщений
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
 ms.openlocfilehash: 2322d2a6e0c5a6f26ad103be72230666f6bca191
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964402"
 ---
 # <a name="viewing-message-logs"></a>Просмотр журналов сообщений
 В этом разделе описывается порядок просмотра журналов сообщений.  
@@ -29,9 +29,9 @@ ms.locfileid: "59139065"
   
  Решить эту проблему можно одним из следующих способов.  
   
--   Просматривать только два из трех журналов сообщений в [программа Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) в любое время.  
+- Просматривать только два из трех журналов сообщений в [программа Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) в любое время.  
   
--   Если необходимо просмотреть все три журнала в [программа Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) в то же время можно изменить службу-ретранслятор путем создания нового <xref:System.ServiceModel.Channels.Message> экземпляра. Этот экземпляр должен представлять собой копию тела входящего сообщения плюс все заголовки, за исключением заголовков `ActivityId` и `Action`. В следующем примере кода показано, как это сделать.  
+- Если необходимо просмотреть все три журнала в [программа Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) в то же время можно изменить службу-ретранслятор путем создания нового <xref:System.ServiceModel.Channels.Message> экземпляра. Этот экземпляр должен представлять собой копию тела входящего сообщения плюс все заголовки, за исключением заголовков `ActivityId` и `Action`. В следующем примере кода показано, как это сделать.  
   
 ```csharp
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
@@ -50,15 +50,15 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
 ## <a name="exceptional-cases-for-inaccurate-message-logging-content"></a>Исключительные случаи неточного воспроизведения содержимого сообщений в журналах  
  В следующих случаях сообщения, записываемые в журнал, могут не соответствовать в точности потоку октетов, передаваемому по линии связи.  
   
--   При использовании привязки BasicHttpBinding в журнал записываются заголовки конвертов входящих сообщений в пространстве имен /addressing/none.  
+- При использовании привязки BasicHttpBinding в журнал записываются заголовки конвертов входящих сообщений в пространстве имен /addressing/none.  
   
--   Могут не соответствовать пробельные символы.  
+- Могут не соответствовать пробельные символы.  
   
--   Пустые элементы во входящих сообщениях могут быть представлены иначе. Например \<тега >\</tag > вместо \<тега / >  
+- Пустые элементы во входящих сообщениях могут быть представлены иначе. Например \<тега >\</tag > вместо \<тега / >  
   
--   Когда отключена регистрация известных персональных данных (по умолчанию или путем явного задания enableLoggingKnownPii="true").  
+- Когда отключена регистрация известных персональных данных (по умолчанию или путем явного задания enableLoggingKnownPii="true").  
   
--   Когда для преобразования в UTF-8 включено кодирование.  
+- Когда для преобразования в UTF-8 включено кодирование.  
   
 ## <a name="see-also"></a>См. также
 

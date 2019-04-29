@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: df57cd5a2121c216fc23b9c608de091b002147e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792916"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>Перечисление CorDebugInterfaceVersion
 Указывает интерфейс, версию платформы .NET Framework или версию платформы .NET Framework, в которой был представлен интерфейс.  
@@ -227,15 +227,15 @@ typedef enum CorDebugInterfaceVersion {
 ## <a name="interface-names"></a>Имена интерфейсов  
  Число в конце каждого имени интерфейсов в API отладки (например, "3" в `ICorDebugThread3`) обозначает версию интерфейса, а не платформы .NET Framework. Все имена интерфейсов в API отладки, кроме интерфейсов, появившихся в платформе .NET Framework версии 1, включают номера версий. Любые совпадения между номерами версий интерфейсов и номерами версий платформы .NET Framework являются случайными.  
   
--   Интерфейсы, представленные в платформе .NET Framework версии 1.0, не включают цифры, потому что все они имеют версию 1.  
+- Интерфейсы, представленные в платформе .NET Framework версии 1.0, не включают цифры, потому что все они имеют версию 1.  
   
--   Платформа .NET Framework версии 1.1 использует интерфейсы версии 1.0 и не вводит никаких новых интерфейсов отладки.  
+- Платформа .NET Framework версии 1.1 использует интерфейсы версии 1.0 и не вводит никаких новых интерфейсов отладки.  
   
--   Четырнадцать интерфейсов отладки, представленных в платформе .NET Framework версии 2.0, являются логическими расширениями версии 1, а их названия содержат число "2".  
+- Четырнадцать интерфейсов отладки, представленных в платформе .NET Framework версии 2.0, являются логическими расширениями версии 1, а их названия содержат число "2".  
   
--   Платформы .NET Framework версий 3.0 и 3.5 используют существующие интерфейсы платформы .NET Framework версии 2.0 и не вводят никаких новых интерфейсов.  
+- Платформы .NET Framework версий 3.0 и 3.5 используют существующие интерфейсы платформы .NET Framework версии 2.0 и не вводят никаких новых интерфейсов.  
   
--   [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Используются разные версии интерфейсов. Например, и `ICorDebugThread3`, и `ICorDebugThread4` отображаются как третья и четвертая версии интерфейса `ICorDebugThread`. [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] Также вводит первую версию `ICorDebugStackWalk` интерфейс и вторую версию `ICorDebugNativeFrame` интерфейс (`ICorDebugNativeFrame2`).  
+- [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Используются разные версии интерфейсов. Например, и `ICorDebugThread3`, и `ICorDebugThread4` отображаются как третья и четвертая версии интерфейса `ICorDebugThread`. [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] Также вводит первую версию `ICorDebugStackWalk` интерфейс и вторую версию `ICorDebugNativeFrame` интерфейс (`ICorDebugNativeFrame2`).  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

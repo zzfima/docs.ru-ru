@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
 ms.openlocfilehash: 0a319ba4259e66ed9a37aa2de9e97d2335b78663
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784050"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Оператор Option Explicit (Visual Basic)
 Принудительное явное объявление всех переменных в файле или неявного объявления переменных.  
@@ -57,7 +57,7 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-on-the-command-line"></a>Чтобы задать Option Explicit в командной строке  
   
--   Включить [дополнительные](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) параметр компилятора в **vbc** команды.  
+- Включить [дополнительные](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) параметр компилятора в **vbc** команды.  
   
 ## <a name="example"></a>Пример  
  В следующем примере используется `Option Explicit` инструкцию, чтобы обеспечить явное объявление всех переменных. Попытка использования необъявленных переменных приводит к ошибке во время компиляции.  

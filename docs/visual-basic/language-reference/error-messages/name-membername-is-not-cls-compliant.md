@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
 ms.openlocfilehash: 06b20b4f61741f2174654d749df55c3c4348c547
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787469"
 ---
 # <a name="name-membername-is-not-cls-compliant"></a>Имя \<membername > не является CLS-совместимым
 Сборка помечена как `<CLSCompliant(True)>` , но предоставляет член с именем, начинающимся со знака подчеркивания (`_`).  
@@ -29,9 +29,9 @@ ms.locfileid: "58824628"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Если вы можете контролировать исходный код, измените имя члена таким образом, чтобы он не начинается с символа подчеркивания.  
+- Если вы можете контролировать исходный код, измените имя члена таким образом, чтобы он не начинается с символа подчеркивания.  
   
--   Если требуется, что имя члена остаются неизменными, удалите <xref:System.CLSCompliantAttribute> из его определения или пометьте его как `<CLSCompliant(False)>`. Можно также пометить ее как `<CLSCompliant(True)>`.  
+- Если требуется, что имя члена остаются неизменными, удалите <xref:System.CLSCompliantAttribute> из его определения или пометьте его как `<CLSCompliant(False)>`. Можно также пометить ее как `<CLSCompliant(True)>`.  
   
 ## <a name="see-also"></a>См. также
 

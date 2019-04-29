@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cells [Windows Forms], hosting controls
 ms.assetid: e79a9d4e-64ec-41f5-93ec-f5492633cbb2
 ms.openlocfilehash: 008b6da56c3428d0edcc44778b4d3bef1a52c443
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941235"
 ---
 # <a name="how-to-host-controls-in-windows-forms-datagridview-cells"></a>Практическое руководство. Размещение элементов управления в ячейках элемента управления DataGridView в Windows Forms
 Элемент управления <xref:System.Windows.Forms.DataGridView> предоставляет несколько типов столбцов, что позволяет пользователям вводить и редактировать значения различными способами. Если эти типы столбцов не удовлетворяют вашим потребностям ввода данных, вы можете создать собственные типы столбцов с ячейками, содержащими элементы управления по своему выбору. Для этого необходимо определить классы, производные от <xref:System.Windows.Forms.DataGridViewColumn> и <xref:System.Windows.Forms.DataGridViewCell>. Необходимо также определить класс, производный от <xref:System.Windows.Forms.Control> и реализующий интерфейс <xref:System.Windows.Forms.IDataGridViewEditingControl>.  
@@ -31,7 +31,7 @@ ms.locfileid: "59194205"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  В следующем примере требуется:  
   
--   ссылки на сборки System и System.Windows.Forms;  
+- ссылки на сборки System и System.Windows.Forms;  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   

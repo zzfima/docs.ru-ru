@@ -11,28 +11,28 @@ helpviewer_keywords:
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
 ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938167"
 ---
 # <a name="graphics-paths-in-gdi"></a>Контуры в GDI+
 Пути сформированном путем объединения линии, прямоугольники и простой кривых. Как следует из [Общие сведения о векторной графики](vector-graphics-overview.md) что следующих основных блоков оказались наиболее подходят для рисования изображений:  
   
--   Прямых линий  
+- Прямых линий  
   
--   Прямоугольники  
+- Прямоугольники  
   
--   Многоточие  
+- Многоточие  
   
--   Дуги  
+- Дуги  
   
--   Многоугольники  
+- Многоугольники  
   
--   Фундаментальные сплайны  
+- Фундаментальные сплайны  
   
--   Сплайны Безье  
+- Сплайны Безье  
   
  В GDI + <xref:System.Drawing.Drawing2D.GraphicsPath> объект позволяет собирать последовательность из этих блоков в единое целое. Вся последовательность линии, прямоугольники, многоугольники и кривых могут быть нарисована за одно обращение <xref:System.Drawing.Graphics.DrawPath%2A> метод <xref:System.Drawing.Graphics> класса. Ниже показан путь, полученное путем объединения строки, дуги, сплайна Безье и фундаментальный сплайн.  
   

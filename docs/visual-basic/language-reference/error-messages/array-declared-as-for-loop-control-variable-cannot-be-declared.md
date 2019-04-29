@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32039
 ms.assetid: 1d8b6560-c9eb-4b71-a038-24c6f5a5ce46
 ms.openlocfilehash: bee3bcd3701945f5cf77f6761defc8be77acf49f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935386"
 ---
 # <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a>Массив, объявленный как переменная управления циклом, не может быть объявлен с исходным размером
 Объект `For Each` цикле используется массив в качестве его *элемент* переменной итерации, но инициализирует этот массив.  
@@ -31,7 +31,7 @@ For Each listElement(1) As Integer In arrayList
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Удалите инициализацию из объявления *элемент* переменной итерации.  
+- Удалите инициализацию из объявления *элемент* переменной итерации.  
   
 ## <a name="see-also"></a>См. также
 

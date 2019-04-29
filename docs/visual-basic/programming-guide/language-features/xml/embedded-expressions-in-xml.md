@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
 ms.openlocfilehash: 4c96665994a7e56bc70f72b66d5922f5a6472a13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961243"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Встроенные выражения в XML (Visual Basic)
 Внедренные выражения позволяют создавать XML-литералов, которые содержат выражения, которые вычисляются во время выполнения. Для внедренного выражения используется синтаксис `<%=` `expression` `%>`, которая используется, и как синтаксис, используемый в [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -42,27 +42,27 @@ ms.locfileid: "58827579"
 |Атрибут XML-элемента|<xref:System.Xml.Linq.XAttribute> или коллекции <xref:System.Xml.Linq.XAttribute>|Не учитывается|  
 |Корневой элемент документа XML|<xref:System.Xml.Linq.XElement> или набор из одного элемента <xref:System.Xml.Linq.XElement> объекта и произвольное число <xref:System.Xml.Linq.XProcessingInstruction> и <xref:System.Xml.Linq.XComment> объектов|Не учитывается|  
   
--   Пример встроенного выражения в имя элемента XML.  
+- Пример встроенного выражения в имя элемента XML.  
   
      [!code-vb[VbXMLSamples#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#32)]  
   
--   Пример встроенного выражения в содержимом элемента XML.  
+- Пример встроенного выражения в содержимом элемента XML.  
   
      [!code-vb[VbXMLSamples#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#33)]  
   
--   Пример встроенного выражения в имя атрибута элемента XML.  
+- Пример встроенного выражения в имя атрибута элемента XML.  
   
      [!code-vb[VbXMLSamples#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#34)]  
   
--   Пример встроенного выражения в значении атрибута элемента XML.  
+- Пример встроенного выражения в значении атрибута элемента XML.  
   
      [!code-vb[VbXMLSamples#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#35)]  
   
--   Пример встроенного выражения в атрибуте XML-элемента.  
+- Пример встроенного выражения в атрибуте XML-элемента.  
   
      [!code-vb[VbXMLSamples#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#36)]  
   
--   Пример встроенного выражения в корневого элемента документа XML.  
+- Пример встроенного выражения в корневого элемента документа XML.  
   
      [!code-vb[VbXMLSamples#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#37)]  
   

@@ -6,8 +6,8 @@ ms.openlocfilehash: 8c769321702deb774c04613d5fe5eb2fde069063
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967912"
 ---
 # <a name="custom-stream-upgrades"></a>Пользовательские обновления потоков
 Ориентированные на потоки виды транспорта, например TCP и именованные каналы, работают с непрерывным потоком данных, установленным между клиентом и сервером. Поток реализуется объектом <xref:System.IO.Stream>. при обновлении потока клиенту требуется добавить дополнительный уровень протокола в стек каналов и он отправляет соответствующий запрос другому участнику коммуникационного канала. Обновление канала предполагает замену исходного объекта <xref:System.IO.Stream> на обновленный.  
@@ -32,35 +32,35 @@ ms.locfileid: "59977773"
 ## <a name="how-to-implement-a-stream-upgrade"></a>Реализация обновления потока  
  Windows Communication Foundation (WCF) предоставляет четыре `abstract` классы, которые можно реализовать:  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
   
  Чтобы реализовать пользовательское обновление потока, выполните следующие действия. Ниже приведена процедура минимального обновления потока на клиентском и сервером компьютерах.  
   
 1. Создайте класс, реализующий <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>.  
   
-    1.  Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A>, чтобы он принимал обновляемый поток и возвращал обновленный поток. Этот метод работает синхронно; имеются аналогичные методы для асинхронной инициации обновления.  
+    1. Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A>, чтобы он принимал обновляемый поток и возвращал обновленный поток. Этот метод работает синхронно; имеются аналогичные методы для асинхронной инициации обновления.  
   
-    2.  Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A>, чтобы он проверял на необходимость дополнительных обновлений.  
+    2. Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A>, чтобы он проверял на необходимость дополнительных обновлений.  
   
 2. Создайте класс, реализующий <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>.  
   
-    1.  Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A>, чтобы он принимал обновляемый поток и возвращал обновленный поток. Этот метод работает синхронно; имеются аналогичные методы для асинхронного принятия обновления.  
+    1. Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A>, чтобы он принимал обновляемый поток и возвращал обновленный поток. Этот метод работает синхронно; имеются аналогичные методы для асинхронного принятия обновления.  
   
-    2.  Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>, чтобы он проверял, поддерживается ли запрошенное обновление текущим акцептором обновления в данной точке процесса обновления.  
+    2. Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>, чтобы он проверял, поддерживается ли запрошенное обновление текущим акцептором обновления в данной точке процесса обновления.  
   
 3. Создайте класс, реализующий <xref:System.ServiceModel.Channels.StreamUpgradeProvider>. Переопределите методы <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> и <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A>, чтобы они возвращали экземпляры акцептора и инициатора, определенные на шагах 2 и 1.  
   
 4. Создайте класс, реализующий <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>.  
   
-    1.  Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> клиента и метод <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> службы.  
+    1. Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> клиента и метод <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> службы.  
   
-    2.  Переопределите метод <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> клиента и метод <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> службы, чтобы добавлять в свойство <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A> элемент привязки обновления.  
+    2. Переопределите метод <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> клиента и метод <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> службы, чтобы добавлять в свойство <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A> элемент привязки обновления.  
   
 5. Добавьте новый элемент привязки обновления потока в привязки на клиентском и серверном компьютерах.  
   
