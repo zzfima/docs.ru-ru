@@ -8,35 +8,35 @@ helpviewer_keywords:
 - ListView controls [WPF], how-to topics
 ms.assetid: aafce40c-9bfe-45ec-86a3-599616a11276
 ms.openlocfilehash: 2665fc60e1366f30fb7f3621bb0669db1ea3db0a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932253"
 ---
-# <a name="listview-how-to-topics"></a><span data-ttu-id="ba03c-102">Практические руководства, посвященные ListView</span><span class="sxs-lookup"><span data-stu-id="ba03c-102">ListView How-to Topics</span></span>
-<span data-ttu-id="ba03c-103">В этом разделе описываются способы использования <xref:System.Windows.Controls.ListView> управления для отображения набора элементов данных.</span><span class="sxs-lookup"><span data-stu-id="ba03c-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListView> control to display a set of data items.</span></span>  
+# <a name="listview-how-to-topics"></a><span data-ttu-id="12096-102">Практические руководства, посвященные ListView</span><span class="sxs-lookup"><span data-stu-id="12096-102">ListView How-to Topics</span></span>
+<span data-ttu-id="12096-103">В этом разделе описываются способы использования <xref:System.Windows.Controls.ListView> управления для отображения набора элементов данных.</span><span class="sxs-lookup"><span data-stu-id="12096-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListView> control to display a set of data items.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ba03c-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="ba03c-104">In This Section</span></span>  
- [<span data-ttu-id="ba03c-105">Сортировка столбцов GridView при нажатии на заголовок</span><span class="sxs-lookup"><span data-stu-id="ba03c-105">Sort a GridView Column When a Header Is Clicked</span></span>](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
- [<span data-ttu-id="ba03c-106">Создание пользовательского режима представления для ListView</span><span class="sxs-lookup"><span data-stu-id="ba03c-106">Create a Custom View Mode for a ListView</span></span>](how-to-create-a-custom-view-mode-for-a-listview.md)  
- [<span data-ttu-id="ba03c-107">Использование шаблонов для задания стиля ListView, использующего GridView</span><span class="sxs-lookup"><span data-stu-id="ba03c-107">Use Templates to Style a ListView That Uses GridView</span></span>](how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
- [<span data-ttu-id="ba03c-108">Создание стиля для перетаскиваемого заголовка столбца GridView</span><span class="sxs-lookup"><span data-stu-id="ba03c-108">Create a Style for a Dragged GridView Column Header</span></span>](how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
- [<span data-ttu-id="ba03c-109">Отображение содержимого ListView с помощью GridView</span><span class="sxs-lookup"><span data-stu-id="ba03c-109">Display ListView Contents by Using a GridView</span></span>](how-to-display-listview-contents-by-using-a-gridview.md)  
- [<span data-ttu-id="ba03c-110">Применение триггеров для определения стиля выбранных элементов в ListView</span><span class="sxs-lookup"><span data-stu-id="ba03c-110">Use Triggers to Style Selected Items in a ListView</span></span>](how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
- [<span data-ttu-id="ba03c-111">Создание элементов ListView с помощью CheckBox</span><span class="sxs-lookup"><span data-stu-id="ba03c-111">Create ListViewItems with a CheckBox</span></span>](how-to-create-listviewitems-with-a-checkbox.md)  
- [<span data-ttu-id="ba03c-112">Отображение данных с помощью GridViewRowPresenter</span><span class="sxs-lookup"><span data-stu-id="ba03c-112">Display Data by Using GridViewRowPresenter</span></span>](how-to-display-data-by-using-gridviewrowpresenter.md)  
- [<span data-ttu-id="ba03c-113">Группировка элементов в элементе ListView, реализующем GridView</span><span class="sxs-lookup"><span data-stu-id="ba03c-113">Group Items in a ListView That Implements a GridView</span></span>](how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
- [<span data-ttu-id="ba03c-114">Стиль строки в элементе ListView, реализующем GridView</span><span class="sxs-lookup"><span data-stu-id="ba03c-114">Style a Row in a ListView That Implements a GridView</span></span>](how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
- [<span data-ttu-id="ba03c-115">Изменение горизонтального выравнивания столбцов в элементе ListView</span><span class="sxs-lookup"><span data-stu-id="ba03c-115">Change the Horizontal Alignment of a Column in a ListView</span></span>](how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
- [<span data-ttu-id="ba03c-116">Обработка события MouseDoubleClick для каждого элемента в ListView</span><span class="sxs-lookup"><span data-stu-id="ba03c-116">Handle the MouseDoubleClick Event for Each Item in a ListView</span></span>](how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="12096-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="12096-104">In This Section</span></span>  
+ [<span data-ttu-id="12096-105">Сортировка столбцов GridView при нажатии на заголовок</span><span class="sxs-lookup"><span data-stu-id="12096-105">Sort a GridView Column When a Header Is Clicked</span></span>](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
+ [<span data-ttu-id="12096-106">Создание пользовательского режима представления для ListView</span><span class="sxs-lookup"><span data-stu-id="12096-106">Create a Custom View Mode for a ListView</span></span>](how-to-create-a-custom-view-mode-for-a-listview.md)  
+ [<span data-ttu-id="12096-107">Использование шаблонов для задания стиля ListView, использующего GridView</span><span class="sxs-lookup"><span data-stu-id="12096-107">Use Templates to Style a ListView That Uses GridView</span></span>](how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
+ [<span data-ttu-id="12096-108">Создание стиля для перетаскиваемого заголовка столбца GridView</span><span class="sxs-lookup"><span data-stu-id="12096-108">Create a Style for a Dragged GridView Column Header</span></span>](how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
+ [<span data-ttu-id="12096-109">Отображение содержимого ListView с помощью GridView</span><span class="sxs-lookup"><span data-stu-id="12096-109">Display ListView Contents by Using a GridView</span></span>](how-to-display-listview-contents-by-using-a-gridview.md)  
+ [<span data-ttu-id="12096-110">Применение триггеров для определения стиля выбранных элементов в ListView</span><span class="sxs-lookup"><span data-stu-id="12096-110">Use Triggers to Style Selected Items in a ListView</span></span>](how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
+ [<span data-ttu-id="12096-111">Создание элементов ListView с помощью CheckBox</span><span class="sxs-lookup"><span data-stu-id="12096-111">Create ListViewItems with a CheckBox</span></span>](how-to-create-listviewitems-with-a-checkbox.md)  
+ [<span data-ttu-id="12096-112">Отображение данных с помощью GridViewRowPresenter</span><span class="sxs-lookup"><span data-stu-id="12096-112">Display Data by Using GridViewRowPresenter</span></span>](how-to-display-data-by-using-gridviewrowpresenter.md)  
+ [<span data-ttu-id="12096-113">Группировка элементов в элементе ListView, реализующем GridView</span><span class="sxs-lookup"><span data-stu-id="12096-113">Group Items in a ListView That Implements a GridView</span></span>](how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
+ [<span data-ttu-id="12096-114">Стиль строки в элементе ListView, реализующем GridView</span><span class="sxs-lookup"><span data-stu-id="12096-114">Style a Row in a ListView That Implements a GridView</span></span>](how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
+ [<span data-ttu-id="12096-115">Изменение горизонтального выравнивания столбцов в элементе ListView</span><span class="sxs-lookup"><span data-stu-id="12096-115">Change the Horizontal Alignment of a Column in a ListView</span></span>](how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
+ [<span data-ttu-id="12096-116">Обработка события MouseDoubleClick для каждого элемента в ListView</span><span class="sxs-lookup"><span data-stu-id="12096-116">Handle the MouseDoubleClick Event for Each Item in a ListView</span></span>](how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
   
-## <a name="reference"></a><span data-ttu-id="ba03c-117">Ссылка</span><span class="sxs-lookup"><span data-stu-id="ba03c-117">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="12096-117">Ссылка</span><span class="sxs-lookup"><span data-stu-id="12096-117">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   
  <xref:System.Windows.Controls.ListViewItem>  
   
  <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="ba03c-118">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="ba03c-118">Related Sections</span></span>  
- [<span data-ttu-id="ba03c-119">Общие сведения об элементе управления ListView</span><span class="sxs-lookup"><span data-stu-id="ba03c-119">ListView Overview</span></span>](listview-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="12096-118">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="12096-118">Related Sections</span></span>  
+ [<span data-ttu-id="12096-119">Общие сведения об элементе управления ListView</span><span class="sxs-lookup"><span data-stu-id="12096-119">ListView Overview</span></span>](listview-overview.md)

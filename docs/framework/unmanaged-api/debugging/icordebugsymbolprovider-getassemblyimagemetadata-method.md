@@ -5,16 +5,16 @@ ms.assetid: c3c9de67-b865-4ecf-b887-1f1d0719a0c0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0be0722db374ff49541b3c4b68f295774f34163e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953456"
 ---
-# <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a><span data-ttu-id="fed16-102">Метод ICorDebugSymbolProvider::GetAssemblyImageMetadata</span><span class="sxs-lookup"><span data-stu-id="fed16-102">ICorDebugSymbolProvider::GetAssemblyImageMetadata Method</span></span>
-<span data-ttu-id="fed16-103">Возвращает метаданные из объединенной сборки.</span><span class="sxs-lookup"><span data-stu-id="fed16-103">Returns the metadata from a merged assembly.</span></span>  
+# <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a><span data-ttu-id="3b5e2-102">Метод ICorDebugSymbolProvider::GetAssemblyImageMetadata</span><span class="sxs-lookup"><span data-stu-id="3b5e2-102">ICorDebugSymbolProvider::GetAssemblyImageMetadata Method</span></span>
+<span data-ttu-id="3b5e2-103">Возвращает метаданные из объединенной сборки.</span><span class="sxs-lookup"><span data-stu-id="3b5e2-103">Returns the metadata from a merged assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fed16-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fed16-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3b5e2-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3b5e2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAssemblyImageMetadata(  
@@ -22,25 +22,25 @@ HRESULT GetAssemblyImageMetadata(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fed16-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="fed16-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3b5e2-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="3b5e2-105">Parameters</span></span>  
  `ppMemoryBuffer`  
- <span data-ttu-id="fed16-106">[out] Указатель на адрес [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) объект, содержащий сведения о размере и адресе метаданных объединенной сборки.</span><span class="sxs-lookup"><span data-stu-id="fed16-106">[out] A pointer to the address of an [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) object that contains information about the size and address of the merged assembly's metadata.</span></span>  
+ <span data-ttu-id="3b5e2-106">[out] Указатель на адрес [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) объект, содержащий сведения о размере и адресе метаданных объединенной сборки.</span><span class="sxs-lookup"><span data-stu-id="3b5e2-106">[out] A pointer to the address of an [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) object that contains information about the size and address of the merged assembly's metadata.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fed16-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="fed16-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3b5e2-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="3b5e2-107">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="fed16-108">Этот метод доступен только в машинном коде .NET.</span><span class="sxs-lookup"><span data-stu-id="fed16-108">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="3b5e2-108">Этот метод доступен только в машинном коде .NET.</span><span class="sxs-lookup"><span data-stu-id="3b5e2-108">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fed16-109">Требования</span><span class="sxs-lookup"><span data-stu-id="fed16-109">Requirements</span></span>  
- <span data-ttu-id="fed16-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fed16-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3b5e2-109">Требования</span><span class="sxs-lookup"><span data-stu-id="3b5e2-109">Requirements</span></span>  
+ <span data-ttu-id="3b5e2-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3b5e2-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fed16-111">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fed16-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3b5e2-111">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3b5e2-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="fed16-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fed16-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3b5e2-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3b5e2-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fed16-113">**Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fed16-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="3b5e2-113">**Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b5e2-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fed16-114">См. также</span><span class="sxs-lookup"><span data-stu-id="fed16-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3b5e2-114">См. также</span><span class="sxs-lookup"><span data-stu-id="3b5e2-114">See also</span></span>
 
-- [<span data-ttu-id="fed16-115">Интерфейс ICorDebugSymbolProvider</span><span class="sxs-lookup"><span data-stu-id="fed16-115">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [<span data-ttu-id="fed16-116">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="fed16-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="3b5e2-115">Интерфейс ICorDebugSymbolProvider</span><span class="sxs-lookup"><span data-stu-id="3b5e2-115">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
+- [<span data-ttu-id="3b5e2-116">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="3b5e2-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

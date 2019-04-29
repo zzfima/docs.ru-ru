@@ -5,20 +5,20 @@ f1_keywords:
 - vbrArgument_UnsupportedIOType1
 ms.assetid: b6c527e3-b75a-4c1a-b6f1-ee9f7460b5f0
 ms.openlocfilehash: f5aa215b1c9fbd141b92c227dffaa3ca5abaaf15
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58026435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971591"
 ---
-# <a name="file-io-with-type-typename-is-not-valid"></a><span data-ttu-id="4ed20-102">Файловый ввод-вывод с типом '\<typename >' является недопустимым</span><span class="sxs-lookup"><span data-stu-id="4ed20-102">File I/O with type '\<typename>' is not valid</span></span>
-<span data-ttu-id="4ed20-103">Попытка записи в файл неподдерживаемого типа.</span><span class="sxs-lookup"><span data-stu-id="4ed20-103">You are attempting to write an unsupported type to a file.</span></span>  
+# <a name="file-io-with-type-typename-is-not-valid"></a><span data-ttu-id="9e107-102">Файловый ввод-вывод с типом '\<typename >' является недопустимым</span><span class="sxs-lookup"><span data-stu-id="9e107-102">File I/O with type '\<typename>' is not valid</span></span>
+<span data-ttu-id="9e107-103">Попытка записи в файл неподдерживаемого типа.</span><span class="sxs-lookup"><span data-stu-id="9e107-103">You are attempting to write an unsupported type to a file.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="4ed20-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="4ed20-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="9e107-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="9e107-104">To correct this error</span></span>  
   
--   <span data-ttu-id="4ed20-105">Проверьте структуру, чтобы определить, где содержится неподдерживаемый тип, и измените его на допустимый тип.</span><span class="sxs-lookup"><span data-stu-id="4ed20-105">Check the structure to determine where the unsupported type occurs, and then change it to a valid type.</span></span>  
+- <span data-ttu-id="9e107-105">Проверьте структуру, чтобы определить, где содержится неподдерживаемый тип, и измените его на допустимый тип.</span><span class="sxs-lookup"><span data-stu-id="9e107-105">Check the structure to determine where the unsupported type occurs, and then change it to a valid type.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4ed20-106">См. также</span><span class="sxs-lookup"><span data-stu-id="4ed20-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9e107-106">См. также</span><span class="sxs-lookup"><span data-stu-id="9e107-106">See also</span></span>
 
-- [<span data-ttu-id="4ed20-107">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="4ed20-107">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)
-- [<span data-ttu-id="4ed20-108">My.Computer.FileSystem.WriteAllBytes</span><span class="sxs-lookup"><span data-stu-id="4ed20-108">My.Computer.FileSystem.WriteAllBytes</span></span>](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.WriteAllBytes%2A)
+- [<span data-ttu-id="9e107-107">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="9e107-107">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [<span data-ttu-id="9e107-108">My.Computer.FileSystem.WriteAllBytes</span><span class="sxs-lookup"><span data-stu-id="9e107-108">My.Computer.FileSystem.WriteAllBytes</span></span>](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.WriteAllBytes%2A)

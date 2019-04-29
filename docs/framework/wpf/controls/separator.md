@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Separator control [WPF]
 ms.assetid: 1b872bc6-1a26-401c-989b-3fafecc5a4ef
 ms.openlocfilehash: d3d8fb637363a154013115f95bae52904467b46e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938961"
 ---
-# <a name="separator"></a><span data-ttu-id="e932a-102">Separator</span><span class="sxs-lookup"><span data-stu-id="e932a-102">Separator</span></span>
-<span data-ttu-id="e932a-103">Объект <xref:System.Windows.Controls.Separator> управления Рисование линии, по горизонтали или вертикали, между элементами, такие как <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, и <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="e932a-103">A <xref:System.Windows.Controls.Separator> control draws a line, horizontal or vertical, between items in controls, such as <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, and <xref:System.Windows.Controls.ToolBar>.</span></span>  
+# <a name="separator"></a><span data-ttu-id="1bef8-102">Separator</span><span class="sxs-lookup"><span data-stu-id="1bef8-102">Separator</span></span>
+<span data-ttu-id="1bef8-103">Объект <xref:System.Windows.Controls.Separator> управления рисует линию, по горизонтали или вертикали, между элементами, такие как <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, и <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="1bef8-103">A <xref:System.Windows.Controls.Separator> control draws a line, horizontal or vertical, between items in controls, such as <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, and <xref:System.Windows.Controls.ToolBar>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e932a-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="e932a-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="1bef8-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="1bef8-104">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="e932a-105">Ссылка</span><span class="sxs-lookup"><span data-stu-id="e932a-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="1bef8-105">Ссылка</span><span class="sxs-lookup"><span data-stu-id="1bef8-105">Reference</span></span>  
  <xref:System.Windows.Controls.Separator>
