@@ -10,25 +10,25 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
 ms.openlocfilehash: 5e8b1b30fc50318882ca7a7f5ed2a4827d5446c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971006"
 ---
-# <a name="scrollviewer"></a><span data-ttu-id="4dae7-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="4dae7-102">ScrollViewer</span></span>
-<span data-ttu-id="4dae7-103"><xref:System.Windows.Controls.ScrollViewer> Элемент управления создает прокручиваемая область, в случае, если содержимое может прокручиваться горизонтально или вертикально.</span><span class="sxs-lookup"><span data-stu-id="4dae7-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
+# <a name="scrollviewer"></a><span data-ttu-id="fbfa0-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="fbfa0-102">ScrollViewer</span></span>
+<span data-ttu-id="fbfa0-103"><xref:System.Windows.Controls.ScrollViewer> Элемент управления создает прокручиваемая область, в случае, если содержимое может прокручиваться горизонтально или вертикально.</span><span class="sxs-lookup"><span data-stu-id="fbfa0-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4dae7-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="4dae7-104">In This Section</span></span>  
- [<span data-ttu-id="4dae7-105">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="4dae7-105">ScrollViewer Overview</span></span>](scrollviewer-overview.md)  
- [<span data-ttu-id="4dae7-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="4dae7-106">How-to Topics</span></span>](scrollviewer-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="fbfa0-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="fbfa0-104">In This Section</span></span>  
+ [<span data-ttu-id="fbfa0-105">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="fbfa0-105">ScrollViewer Overview</span></span>](scrollviewer-overview.md)  
+ [<span data-ttu-id="fbfa0-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="fbfa0-106">How-to Topics</span></span>](scrollviewer-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="4dae7-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="4dae7-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="fbfa0-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="fbfa0-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="4dae7-108">См. также</span><span class="sxs-lookup"><span data-stu-id="4dae7-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fbfa0-108">См. также</span><span class="sxs-lookup"><span data-stu-id="fbfa0-108">See also</span></span>
 
-- [<span data-ttu-id="4dae7-109">Общие сведения о панелях</span><span class="sxs-lookup"><span data-stu-id="4dae7-109">Panels Overview</span></span>](panels-overview.md)
-- [<span data-ttu-id="4dae7-110">Макет</span><span class="sxs-lookup"><span data-stu-id="4dae7-110">Layout</span></span>](../advanced/layout.md)
+- [<span data-ttu-id="fbfa0-109">Общие сведения о панелях</span><span class="sxs-lookup"><span data-stu-id="fbfa0-109">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="fbfa0-110">Макет</span><span class="sxs-lookup"><span data-stu-id="fbfa0-110">Layout</span></span>](../advanced/layout.md)

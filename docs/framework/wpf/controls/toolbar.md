@@ -8,29 +8,29 @@ helpviewer_keywords:
 - ToolBar control [WPF]
 ms.assetid: 8a95d759-c298-4291-aa7e-ecdeffaae6ab
 ms.openlocfilehash: 5acb5d96a9c8a1ce2d2c0c842be0e57e62eb538f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790823"
 ---
-# <a name="toolbar"></a><span data-ttu-id="96517-102">ToolBar</span><span class="sxs-lookup"><span data-stu-id="96517-102">ToolBar</span></span>
-<span data-ttu-id="96517-103"><xref:System.Windows.Controls.ToolBar> Управления — это контейнер для группы команд или элементов управления, обычно возникающих в их функции.</span><span class="sxs-lookup"><span data-stu-id="96517-103">The <xref:System.Windows.Controls.ToolBar> control is a container for a group of commands or controls that are typically related in their function.</span></span>  
+# <a name="toolbar"></a><span data-ttu-id="37957-102">ToolBar</span><span class="sxs-lookup"><span data-stu-id="37957-102">ToolBar</span></span>
+<span data-ttu-id="37957-103"><xref:System.Windows.Controls.ToolBar> Управления — это контейнер для группы команд или элементов управления, обычно возникающих в их функции.</span><span class="sxs-lookup"><span data-stu-id="37957-103">The <xref:System.Windows.Controls.ToolBar> control is a container for a group of commands or controls that are typically related in their function.</span></span>  
   
- <span data-ttu-id="96517-104">На следующих рисунках показаны горизонтальные и вертикальные <xref:System.Windows.Controls.ToolBar> элементов управления.</span><span class="sxs-lookup"><span data-stu-id="96517-104">The following illustrations show horizontal and vertical <xref:System.Windows.Controls.ToolBar> controls.</span></span>  
+ <span data-ttu-id="37957-104">На следующих рисунках показаны горизонтальные и вертикальные <xref:System.Windows.Controls.ToolBar> элементов управления.</span><span class="sxs-lookup"><span data-stu-id="37957-104">The following illustrations show horizontal and vertical <xref:System.Windows.Controls.ToolBar> controls.</span></span>  
   
- <span data-ttu-id="96517-105">![Горизонтальная панель инструментов](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span><span class="sxs-lookup"><span data-stu-id="96517-105">![Horizontal ToolBar](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span></span>  
-<span data-ttu-id="96517-106">Горизонтальная панель инструментов</span><span class="sxs-lookup"><span data-stu-id="96517-106">Horizontal Toolbar</span></span>  
+ <span data-ttu-id="37957-105">![Горизонтальная панель инструментов](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span><span class="sxs-lookup"><span data-stu-id="37957-105">![Horizontal ToolBar](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span></span>  
+<span data-ttu-id="37957-106">Горизонтальная панель инструментов</span><span class="sxs-lookup"><span data-stu-id="37957-106">Horizontal Toolbar</span></span>  
   
- <span data-ttu-id="96517-107">![Вертикальной панели инструментов](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span><span class="sxs-lookup"><span data-stu-id="96517-107">![Vertical ToolBar](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span></span>  
-<span data-ttu-id="96517-108">Вертикальной панели инструментов</span><span class="sxs-lookup"><span data-stu-id="96517-108">Vertical Toolbar</span></span>  
+ <span data-ttu-id="37957-107">![Вертикальной панели инструментов](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span><span class="sxs-lookup"><span data-stu-id="37957-107">![Vertical ToolBar](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span></span>  
+<span data-ttu-id="37957-108">Вертикальной панели инструментов</span><span class="sxs-lookup"><span data-stu-id="37957-108">Vertical Toolbar</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="96517-109">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="96517-109">In This Section</span></span>  
- [<span data-ttu-id="96517-110">Общие сведения о панели инструментов</span><span class="sxs-lookup"><span data-stu-id="96517-110">ToolBar Overview</span></span>](toolbar-overview.md)  
-  [<span data-ttu-id="96517-111">Определение стиля элементов управления на панели инструментов</span><span class="sxs-lookup"><span data-stu-id="96517-111">Style Controls on a ToolBar</span></span>](how-to-style-controls-on-a-toolbar.md)  
+## <a name="in-this-section"></a><span data-ttu-id="37957-109">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="37957-109">In This Section</span></span>  
+ [<span data-ttu-id="37957-110">Общие сведения о панели инструментов</span><span class="sxs-lookup"><span data-stu-id="37957-110">ToolBar Overview</span></span>](toolbar-overview.md)  
+  [<span data-ttu-id="37957-111">Определение стиля элементов управления на панели инструментов</span><span class="sxs-lookup"><span data-stu-id="37957-111">Style Controls on a ToolBar</span></span>](how-to-style-controls-on-a-toolbar.md)  
   
-## <a name="reference"></a><span data-ttu-id="96517-112">Ссылка</span><span class="sxs-lookup"><span data-stu-id="96517-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="37957-112">Ссылка</span><span class="sxs-lookup"><span data-stu-id="37957-112">Reference</span></span>  
  <xref:System.Windows.Controls.ToolBar>  
   <xref:System.Windows.Controls.ToolBarTray>  
   
-## <a name="related-sections"></a><span data-ttu-id="96517-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="96517-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="37957-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="37957-113">Related Sections</span></span>

@@ -18,29 +18,29 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2717a279abf7fb1b704a769d54654d97949cc0a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939871"
 ---
-# <a name="isymunmanageddocumentgetsourcelength-method"></a><span data-ttu-id="aacd5-102">Метод ISymUnmanagedDocument::GetSourceLength</span><span class="sxs-lookup"><span data-stu-id="aacd5-102">ISymUnmanagedDocument::GetSourceLength Method</span></span>
-<span data-ttu-id="aacd5-103">Возвращает длину внедренного источника в байтах.</span><span class="sxs-lookup"><span data-stu-id="aacd5-103">Gets the length, in bytes, of the embedded source.</span></span>  
+# <a name="isymunmanageddocumentgetsourcelength-method"></a><span data-ttu-id="811e9-102">Метод ISymUnmanagedDocument::GetSourceLength</span><span class="sxs-lookup"><span data-stu-id="811e9-102">ISymUnmanagedDocument::GetSourceLength Method</span></span>
+<span data-ttu-id="811e9-103">Возвращает длину внедренного источника в байтах.</span><span class="sxs-lookup"><span data-stu-id="811e9-103">Gets the length, in bytes, of the embedded source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aacd5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="aacd5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="811e9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="811e9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSourceLength(  
     [out, retval]  ULONG32*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="aacd5-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="aacd5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="811e9-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="811e9-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="aacd5-106">[out] Указатель на переменную, которая указывает длину внедренного источника, в байтах.</span><span class="sxs-lookup"><span data-stu-id="aacd5-106">[out] A pointer to a variable that indicates the length, in bytes, of the embedded source.</span></span>  
+ <span data-ttu-id="811e9-106">[out] Указатель на переменную, которая указывает длину внедренного источника, в байтах.</span><span class="sxs-lookup"><span data-stu-id="811e9-106">[out] A pointer to a variable that indicates the length, in bytes, of the embedded source.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="aacd5-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="aacd5-107">Return Value</span></span>  
- <span data-ttu-id="aacd5-108">Значение S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="aacd5-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="811e9-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="811e9-107">Return Value</span></span>  
+ <span data-ttu-id="811e9-108">Значение S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="811e9-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aacd5-109">См. также</span><span class="sxs-lookup"><span data-stu-id="aacd5-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="811e9-109">См. также</span><span class="sxs-lookup"><span data-stu-id="811e9-109">See also</span></span>
 
-- [<span data-ttu-id="aacd5-110">Интерфейс ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="aacd5-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="811e9-110">Интерфейс ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="811e9-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

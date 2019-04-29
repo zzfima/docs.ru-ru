@@ -18,32 +18,32 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7ec6e25452a40ae67570badde8a883878d103f95
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59187410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939572"
 ---
-# <a name="isymunmanagedmethodgettoken-method"></a><span data-ttu-id="35556-102">Метод ISymUnmanagedMethod::GetToken</span><span class="sxs-lookup"><span data-stu-id="35556-102">ISymUnmanagedMethod::GetToken Method</span></span>
-<span data-ttu-id="35556-103">Возвращает маркер метаданных для этого метода.</span><span class="sxs-lookup"><span data-stu-id="35556-103">Returns the metadata token for this method.</span></span>  
+# <a name="isymunmanagedmethodgettoken-method"></a><span data-ttu-id="a5631-102">Метод ISymUnmanagedMethod::GetToken</span><span class="sxs-lookup"><span data-stu-id="a5631-102">ISymUnmanagedMethod::GetToken Method</span></span>
+<span data-ttu-id="a5631-103">Возвращает маркер метаданных для этого метода.</span><span class="sxs-lookup"><span data-stu-id="a5631-103">Returns the metadata token for this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="35556-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="35556-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a5631-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a5631-104">Syntax</span></span>  
   
 ```  
 HRESULT GetToken(  
    [out, retval]  mdMethodDef  *pToken);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="35556-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="35556-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a5631-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a5631-105">Parameters</span></span>  
  `pToken`  
- <span data-ttu-id="35556-106">[out] Указатель на `mdMethodDef` размер, который получает в символах, буфера, требуемого для хранения метаданных.</span><span class="sxs-lookup"><span data-stu-id="35556-106">[out] A pointer to a `mdMethodDef` that receives the size, in characters, of the buffer required to contain the metadata.</span></span>  
+ <span data-ttu-id="a5631-106">[out] Указатель на `mdMethodDef` размер, который получает в символах, буфера, требуемого для хранения метаданных.</span><span class="sxs-lookup"><span data-stu-id="a5631-106">[out] A pointer to a `mdMethodDef` that receives the size, in characters, of the buffer required to contain the metadata.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="35556-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="35556-107">Return Value</span></span>  
- <span data-ttu-id="35556-108">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="35556-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a5631-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="a5631-107">Return Value</span></span>  
+ <span data-ttu-id="a5631-108">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="a5631-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="35556-109">Требования</span><span class="sxs-lookup"><span data-stu-id="35556-109">Requirements</span></span>  
- <span data-ttu-id="35556-110">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="35556-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a5631-109">Требования</span><span class="sxs-lookup"><span data-stu-id="a5631-109">Requirements</span></span>  
+ <span data-ttu-id="a5631-110">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a5631-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="35556-111">См. также</span><span class="sxs-lookup"><span data-stu-id="35556-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a5631-111">См. также</span><span class="sxs-lookup"><span data-stu-id="a5631-111">See also</span></span>
 
-- [<span data-ttu-id="35556-112">Интерфейс ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="35556-112">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="a5631-112">Интерфейс ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="a5631-112">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

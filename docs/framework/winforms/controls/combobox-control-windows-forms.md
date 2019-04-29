@@ -11,30 +11,30 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
 ms.openlocfilehash: 9f9653069606ec81d7ece4372d67a0a0eba4c073
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956043"
 ---
-# <a name="combobox-control-windows-forms"></a><span data-ttu-id="c72d0-102">Элемент управления ComboBox (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="c72d0-102">ComboBox Control (Windows Forms)</span></span>
-<span data-ttu-id="c72d0-103">Windows Forms `ComboBox` элемент управления используется для отображения данных в раскрывающемся поле со списком.</span><span class="sxs-lookup"><span data-stu-id="c72d0-103">The Windows Forms `ComboBox` control is used to display data in a drop-down combo box.</span></span> <span data-ttu-id="c72d0-104">По умолчанию `ComboBox` элемент управления отображается в виде двух частей: верхняя часть представляет собой текстовое поле, которое пользователь может ввести элемент списка.</span><span class="sxs-lookup"><span data-stu-id="c72d0-104">By default, the `ComboBox` control appears in two parts: the top part is a text box that allows the user to type a list item.</span></span> <span data-ttu-id="c72d0-105">Вторая часть — полем со списком, отображающий список элементов, из которых пользователь может выбрать его.</span><span class="sxs-lookup"><span data-stu-id="c72d0-105">The second part is a list box that displays a list of items from which the user can select one.</span></span>  
+# <a name="combobox-control-windows-forms"></a><span data-ttu-id="e7ada-102">Элемент управления ComboBox (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="e7ada-102">ComboBox Control (Windows Forms)</span></span>
+<span data-ttu-id="e7ada-103">Windows Forms `ComboBox` элемент управления используется для отображения данных в раскрывающемся поле со списком.</span><span class="sxs-lookup"><span data-stu-id="e7ada-103">The Windows Forms `ComboBox` control is used to display data in a drop-down combo box.</span></span> <span data-ttu-id="e7ada-104">По умолчанию `ComboBox` элемент управления отображается в виде двух частей: верхняя часть представляет собой текстовое поле, которое пользователь может ввести элемент списка.</span><span class="sxs-lookup"><span data-stu-id="e7ada-104">By default, the `ComboBox` control appears in two parts: the top part is a text box that allows the user to type a list item.</span></span> <span data-ttu-id="e7ada-105">Вторая часть — полем со списком, отображающий список элементов, из которых пользователь может выбрать его.</span><span class="sxs-lookup"><span data-stu-id="e7ada-105">The second part is a list box that displays a list of items from which the user can select one.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c72d0-106">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="c72d0-106">In This Section</span></span>  
- [<span data-ttu-id="c72d0-107">Общие сведения об элементе управления ComboBox</span><span class="sxs-lookup"><span data-stu-id="c72d0-107">ComboBox Control Overview</span></span>](combobox-control-overview-windows-forms.md)  
- <span data-ttu-id="c72d0-108">Описание элемента управления, его основных возможностей и свойств.</span><span class="sxs-lookup"><span data-stu-id="c72d0-108">Explains what this control is and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="e7ada-106">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="e7ada-106">In This Section</span></span>  
+ [<span data-ttu-id="e7ada-107">Общие сведения об элементе управления ComboBox</span><span class="sxs-lookup"><span data-stu-id="e7ada-107">ComboBox Control Overview</span></span>](combobox-control-overview-windows-forms.md)  
+ <span data-ttu-id="e7ada-108">Описание элемента управления, его основных возможностей и свойств.</span><span class="sxs-lookup"><span data-stu-id="e7ada-108">Explains what this control is and its key features and properties.</span></span>  
   
- [<span data-ttu-id="c72d0-109">Практическое руководство. Индивидуальное в элементе управления ComboBox</span><span class="sxs-lookup"><span data-stu-id="c72d0-109">How to: Create Variable Sized Text in a ComboBox Control</span></span>](how-to-create-variable-sized-text-in-a-combobox-control.md)  
- <span data-ttu-id="c72d0-110">Демонстрирует пользовательское рисование текста в `ComboBox` элемента управления.</span><span class="sxs-lookup"><span data-stu-id="c72d0-110">Demonstrates custom drawing of text in a `ComboBox` control.</span></span>  
+ [<span data-ttu-id="e7ada-109">Практическое руководство. Индивидуальное в элементе управления ComboBox</span><span class="sxs-lookup"><span data-stu-id="e7ada-109">How to: Create Variable Sized Text in a ComboBox Control</span></span>](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ <span data-ttu-id="e7ada-110">Демонстрирует пользовательское рисование текста в `ComboBox` элемента управления.</span><span class="sxs-lookup"><span data-stu-id="e7ada-110">Demonstrates custom drawing of text in a `ComboBox` control.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="c72d0-111">Ссылка</span><span class="sxs-lookup"><span data-stu-id="c72d0-111">Reference</span></span>  
- <span data-ttu-id="c72d0-112">Класс <xref:System.Windows.Forms.ComboBox></span><span class="sxs-lookup"><span data-stu-id="c72d0-112"><xref:System.Windows.Forms.ComboBox> class</span></span>  
- <span data-ttu-id="c72d0-113">Описание класса и всех его членов.</span><span class="sxs-lookup"><span data-stu-id="c72d0-113">Describes this class and has links to all its members.</span></span>  
+## <a name="reference"></a><span data-ttu-id="e7ada-111">Ссылка</span><span class="sxs-lookup"><span data-stu-id="e7ada-111">Reference</span></span>  
+ <span data-ttu-id="e7ada-112">Класс <xref:System.Windows.Forms.ComboBox></span><span class="sxs-lookup"><span data-stu-id="e7ada-112"><xref:System.Windows.Forms.ComboBox> class</span></span>  
+ <span data-ttu-id="e7ada-113">Описание класса и всех его членов.</span><span class="sxs-lookup"><span data-stu-id="e7ada-113">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="c72d0-114">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="c72d0-114">Related Sections</span></span>  
- [<span data-ttu-id="c72d0-115">Создание списка для выбора элементов в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c72d0-115">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)  
- <span data-ttu-id="c72d0-116">Предоставляет список вещей, которые можно сделать с помощью списков, поля со списком и списки.</span><span class="sxs-lookup"><span data-stu-id="c72d0-116">Provides a list of things you can do with list boxes, combo boxes, and checked list boxes.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="e7ada-114">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="e7ada-114">Related Sections</span></span>  
+ [<span data-ttu-id="e7ada-115">Создание списка для выбора элементов в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e7ada-115">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)  
+ <span data-ttu-id="e7ada-116">Предоставляет список вещей, которые можно сделать с помощью списков, поля со списком и списки.</span><span class="sxs-lookup"><span data-stu-id="e7ada-116">Provides a list of things you can do with list boxes, combo boxes, and checked list boxes.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c72d0-117">См. также</span><span class="sxs-lookup"><span data-stu-id="c72d0-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e7ada-117">См. также</span><span class="sxs-lookup"><span data-stu-id="e7ada-117">See also</span></span>
 
-- [<span data-ttu-id="c72d0-118">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c72d0-118">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="e7ada-118">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e7ada-118">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)

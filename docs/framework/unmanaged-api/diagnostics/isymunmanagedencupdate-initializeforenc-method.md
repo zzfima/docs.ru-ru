@@ -18,27 +18,27 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 135ae21c2281c545aa701ac2a22a43cea63f5242
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939715"
 ---
-# <a name="isymunmanagedencupdateinitializeforenc-method"></a><span data-ttu-id="94fc3-102">Метод ISymUnmanagedENCUpdate::InitializeForEnc</span><span class="sxs-lookup"><span data-stu-id="94fc3-102">ISymUnmanagedENCUpdate::InitializeForEnc Method</span></span>
-<span data-ttu-id="94fc3-103">Позволяет границах методов должны быть вычислены до первого вызова [ISymUnmanagedENCUpdate::UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="94fc3-103">Allows method boundaries to be computed before the first call to the [ISymUnmanagedENCUpdate::UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) method.</span></span>  
+# <a name="isymunmanagedencupdateinitializeforenc-method"></a><span data-ttu-id="4e2d5-102">Метод ISymUnmanagedENCUpdate::InitializeForEnc</span><span class="sxs-lookup"><span data-stu-id="4e2d5-102">ISymUnmanagedENCUpdate::InitializeForEnc Method</span></span>
+<span data-ttu-id="4e2d5-103">Позволяет границах методов должны быть вычислены до первого вызова [ISymUnmanagedENCUpdate::UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="4e2d5-103">Allows method boundaries to be computed before the first call to the [ISymUnmanagedENCUpdate::UpdateSymbolStore2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-updatesymbolstore2-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="94fc3-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="94fc3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4e2d5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4e2d5-104">Syntax</span></span>  
   
 ```  
 HRESULT InitializeForEnc();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="94fc3-105">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="94fc3-105">Return Value</span></span>  
- <span data-ttu-id="94fc3-106">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="94fc3-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4e2d5-105">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="4e2d5-105">Return Value</span></span>  
+ <span data-ttu-id="4e2d5-106">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="4e2d5-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="94fc3-107">Требования</span><span class="sxs-lookup"><span data-stu-id="94fc3-107">Requirements</span></span>  
- <span data-ttu-id="94fc3-108">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="94fc3-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4e2d5-107">Требования</span><span class="sxs-lookup"><span data-stu-id="4e2d5-107">Requirements</span></span>  
+ <span data-ttu-id="4e2d5-108">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4e2d5-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="94fc3-109">См. также</span><span class="sxs-lookup"><span data-stu-id="94fc3-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4e2d5-109">См. также</span><span class="sxs-lookup"><span data-stu-id="4e2d5-109">See also</span></span>
 
-- [<span data-ttu-id="94fc3-110">Интерфейс ISymUnmanagedENCUpdate</span><span class="sxs-lookup"><span data-stu-id="94fc3-110">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [<span data-ttu-id="4e2d5-110">Интерфейс ISymUnmanagedENCUpdate</span><span class="sxs-lookup"><span data-stu-id="4e2d5-110">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
