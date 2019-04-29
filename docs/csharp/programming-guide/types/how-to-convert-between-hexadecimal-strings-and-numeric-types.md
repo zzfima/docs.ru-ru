@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Руководство по программированию на C#. Преобразование из шестнадцатеричных строк в числовые типы
+title: Практическое руководство. Преобразование из шестнадцатеричных строк в числовые типы (Руководство по программированию на C#)
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,7 +15,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57200381"
 ---
-# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Преобразование из шестнадцатеричных строк в числовые типы
+# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Практическое руководство. Преобразование из шестнадцатеричных строк в числовые типы (Руководство по программированию на C#)
 В следующих примерах кода показано выполнение указанных ниже задач.  
   
 -   Получение шестнадцатеричного значения каждого символа в [string](../../../csharp/language-reference/keywords/string.md).  
