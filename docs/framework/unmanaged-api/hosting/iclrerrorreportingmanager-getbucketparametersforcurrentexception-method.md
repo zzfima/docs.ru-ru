@@ -18,18 +18,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3cb2a8d2a4e089d16b6c2129c165a9d8b6828f3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969837"
 ---
-# <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a><span data-ttu-id="42301-102">Метод ICLRErrorReportingManager::GetBucketParametersForCurrentException</span><span class="sxs-lookup"><span data-stu-id="42301-102">ICLRErrorReportingManager::GetBucketParametersForCurrentException Method</span></span>
-<span data-ttu-id="42301-103">Возвращает сегмент Watson для текущего исключения в вызывающем потоке.</span><span class="sxs-lookup"><span data-stu-id="42301-103">Gets the Watson bucket for the current exception on the calling thread.</span></span>  
+# <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a><span data-ttu-id="8542c-102">Метод ICLRErrorReportingManager::GetBucketParametersForCurrentException</span><span class="sxs-lookup"><span data-stu-id="8542c-102">ICLRErrorReportingManager::GetBucketParametersForCurrentException Method</span></span>
+<span data-ttu-id="8542c-103">Возвращает сегмент Watson для текущего исключения в вызывающем потоке.</span><span class="sxs-lookup"><span data-stu-id="8542c-103">Gets the Watson bucket for the current exception on the calling thread.</span></span>  
   
- <span data-ttu-id="42301-104">Объект *контейнеров* — это коллекция данные об ошибках, которая связана с дефектом кода.</span><span class="sxs-lookup"><span data-stu-id="42301-104">A *bucket* is a collection of error data that is related to the same code defect.</span></span> <span data-ttu-id="42301-105">*"Доктор Ватсон"* ссылается на набор технологий для сбора и анализа данных, связанный с исключением.</span><span class="sxs-lookup"><span data-stu-id="42301-105">*Watson* refers to a set of technologies for collecting and analyzing data that is associated with an exception.</span></span>  
+ <span data-ttu-id="8542c-104">Объект *контейнеров* — это коллекция данные об ошибках, которая связана с дефектом кода.</span><span class="sxs-lookup"><span data-stu-id="8542c-104">A *bucket* is a collection of error data that is related to the same code defect.</span></span> <span data-ttu-id="8542c-105">*"Доктор Ватсон"* ссылается на набор технологий для сбора и анализа данных, связанный с исключением.</span><span class="sxs-lookup"><span data-stu-id="8542c-105">*Watson* refers to a set of technologies for collecting and analyzing data that is associated with an exception.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="42301-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="42301-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8542c-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8542c-106">Syntax</span></span>  
   
 ```  
 HRESULT GetBucketParametersForCurrentException(  
@@ -37,19 +37,19 @@ HRESULT GetBucketParametersForCurrentException(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="42301-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="42301-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8542c-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="8542c-107">Parameters</span></span>  
  `pParams`  
- <span data-ttu-id="42301-108">[out] Указатель на [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) структуру, которая содержит данные об ошибках для исключения.</span><span class="sxs-lookup"><span data-stu-id="42301-108">[out] A pointer to a [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) structure that contains error data for the exception.</span></span>  
+ <span data-ttu-id="8542c-108">[out] Указатель на [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) структуру, которая содержит данные об ошибках для исключения.</span><span class="sxs-lookup"><span data-stu-id="8542c-108">[out] A pointer to a [BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) structure that contains error data for the exception.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="42301-109">Требования</span><span class="sxs-lookup"><span data-stu-id="42301-109">Requirements</span></span>  
- <span data-ttu-id="42301-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="42301-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8542c-109">Требования</span><span class="sxs-lookup"><span data-stu-id="8542c-109">Requirements</span></span>  
+ <span data-ttu-id="8542c-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8542c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="42301-111">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="42301-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="8542c-111">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8542c-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="42301-112">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="42301-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8542c-112">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8542c-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="42301-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="42301-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8542c-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8542c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="42301-114">См. также</span><span class="sxs-lookup"><span data-stu-id="42301-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8542c-114">См. также</span><span class="sxs-lookup"><span data-stu-id="8542c-114">See also</span></span>
 
-- [<span data-ttu-id="42301-115">Интерфейс ICLRErrorReportingManager</span><span class="sxs-lookup"><span data-stu-id="42301-115">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [<span data-ttu-id="8542c-115">Интерфейс ICLRErrorReportingManager</span><span class="sxs-lookup"><span data-stu-id="8542c-115">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)

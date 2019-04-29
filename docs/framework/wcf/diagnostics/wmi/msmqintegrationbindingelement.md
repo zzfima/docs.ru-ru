@@ -3,16 +3,16 @@ title: MsmqIntegrationBindingElement
 ms.date: 03/30/2017
 ms.assetid: eaaa7651-e6e5-4fae-9dad-c1867d38b586
 ms.openlocfilehash: 12d910a0b3b4931c869b9e209912f2f0c96130f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963336"
 ---
-# <a name="msmqintegrationbindingelement"></a><span data-ttu-id="aa6ff-102">MsmqIntegrationBindingElement</span><span class="sxs-lookup"><span data-stu-id="aa6ff-102">MsmqIntegrationBindingElement</span></span>
-<span data-ttu-id="aa6ff-103">MsmqIntegrationBindingElement</span><span class="sxs-lookup"><span data-stu-id="aa6ff-103">MsmqIntegrationBindingElement</span></span>  
+# <a name="msmqintegrationbindingelement"></a><span data-ttu-id="dbef9-102">MsmqIntegrationBindingElement</span><span class="sxs-lookup"><span data-stu-id="dbef9-102">MsmqIntegrationBindingElement</span></span>
+<span data-ttu-id="dbef9-103">MsmqIntegrationBindingElement</span><span class="sxs-lookup"><span data-stu-id="dbef9-103">MsmqIntegrationBindingElement</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aa6ff-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="aa6ff-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dbef9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="dbef9-104">Syntax</span></span>  
   
 ```csharp  
 class MsmqIntegrationBindingElement : MsmqBindingElementBase  
@@ -21,25 +21,25 @@ class MsmqIntegrationBindingElement : MsmqBindingElementBase
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="aa6ff-105">Методы</span><span class="sxs-lookup"><span data-stu-id="aa6ff-105">Methods</span></span>  
- <span data-ttu-id="aa6ff-106">Класс MsmqIntegrationBindingElement не определяет никаких методов.</span><span class="sxs-lookup"><span data-stu-id="aa6ff-106">The MsmqIntegrationBindingElement class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="dbef9-105">Методы</span><span class="sxs-lookup"><span data-stu-id="dbef9-105">Methods</span></span>  
+ <span data-ttu-id="dbef9-106">Класс MsmqIntegrationBindingElement не определяет никаких методов.</span><span class="sxs-lookup"><span data-stu-id="dbef9-106">The MsmqIntegrationBindingElement class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="aa6ff-107">Свойства</span><span class="sxs-lookup"><span data-stu-id="aa6ff-107">Properties</span></span>  
- <span data-ttu-id="aa6ff-108">Класс MsmqIntegrationBindingElement имеет следующее свойство:</span><span class="sxs-lookup"><span data-stu-id="aa6ff-108">The MsmqIntegrationBindingElement class has the following property:</span></span>  
+## <a name="properties"></a><span data-ttu-id="dbef9-107">Свойства</span><span class="sxs-lookup"><span data-stu-id="dbef9-107">Properties</span></span>  
+ <span data-ttu-id="dbef9-108">Класс MsmqIntegrationBindingElement имеет следующее свойство:</span><span class="sxs-lookup"><span data-stu-id="dbef9-108">The MsmqIntegrationBindingElement class has the following property:</span></span>  
   
-### <a name="serializationformat"></a><span data-ttu-id="aa6ff-109">SerializationFormat</span><span class="sxs-lookup"><span data-stu-id="aa6ff-109">SerializationFormat</span></span>  
- <span data-ttu-id="aa6ff-110">Тип данных: string</span><span class="sxs-lookup"><span data-stu-id="aa6ff-110">Data type: string</span></span>  
+### <a name="serializationformat"></a><span data-ttu-id="dbef9-109">SerializationFormat</span><span class="sxs-lookup"><span data-stu-id="dbef9-109">SerializationFormat</span></span>  
+ <span data-ttu-id="dbef9-110">Тип данных: string</span><span class="sxs-lookup"><span data-stu-id="dbef9-110">Data type: string</span></span>  
   
- <span data-ttu-id="aa6ff-111">Тип доступа: Только чтение</span><span class="sxs-lookup"><span data-stu-id="aa6ff-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="dbef9-111">Тип доступа: Только чтение</span><span class="sxs-lookup"><span data-stu-id="dbef9-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="aa6ff-112">Формат, используемый привязкой для сериализации сообщений.</span><span class="sxs-lookup"><span data-stu-id="aa6ff-112">The format that the binding uses to serialize messages.</span></span>  
+ <span data-ttu-id="dbef9-112">Формат, используемый привязкой для сериализации сообщений.</span><span class="sxs-lookup"><span data-stu-id="dbef9-112">The format that the binding uses to serialize messages.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="aa6ff-113">Требования</span><span class="sxs-lookup"><span data-stu-id="aa6ff-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dbef9-113">Требования</span><span class="sxs-lookup"><span data-stu-id="dbef9-113">Requirements</span></span>  
   
-|<span data-ttu-id="aa6ff-114">MOF</span><span class="sxs-lookup"><span data-stu-id="aa6ff-114">MOF</span></span>|<span data-ttu-id="aa6ff-115">Объявлено в файле Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="aa6ff-115">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="dbef9-114">MOF</span><span class="sxs-lookup"><span data-stu-id="dbef9-114">MOF</span></span>|<span data-ttu-id="dbef9-115">Объявлено в файле Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="dbef9-115">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="aa6ff-116">Пространство имен</span><span class="sxs-lookup"><span data-stu-id="aa6ff-116">Namespace</span></span>|<span data-ttu-id="aa6ff-117">Определено в root\ServiceModel.</span><span class="sxs-lookup"><span data-stu-id="aa6ff-117">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="dbef9-116">Пространство имен</span><span class="sxs-lookup"><span data-stu-id="dbef9-116">Namespace</span></span>|<span data-ttu-id="dbef9-117">Определено в root\ServiceModel.</span><span class="sxs-lookup"><span data-stu-id="dbef9-117">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="aa6ff-118">См. также</span><span class="sxs-lookup"><span data-stu-id="aa6ff-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dbef9-118">См. также</span><span class="sxs-lookup"><span data-stu-id="dbef9-118">See also</span></span>
 
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>

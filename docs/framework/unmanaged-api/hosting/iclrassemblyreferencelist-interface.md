@@ -17,36 +17,36 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 43c40e833e3a250239e9e90667196a2a74a96e0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59187659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969966"
 ---
-# <a name="iclrassemblyreferencelist-interface"></a><span data-ttu-id="ae1e6-102">Интерфейс ICLRAssemblyReferenceList</span><span class="sxs-lookup"><span data-stu-id="ae1e6-102">ICLRAssemblyReferenceList Interface</span></span>
-<span data-ttu-id="ae1e6-103">Управляет списком сборок, загружаемых средой CLR (CLR), а не приложением.</span><span class="sxs-lookup"><span data-stu-id="ae1e6-103">Manages a list of assemblies that are loaded by the common language runtime (CLR) and not by the host.</span></span>  
+# <a name="iclrassemblyreferencelist-interface"></a><span data-ttu-id="67f5e-102">Интерфейс ICLRAssemblyReferenceList</span><span class="sxs-lookup"><span data-stu-id="67f5e-102">ICLRAssemblyReferenceList Interface</span></span>
+<span data-ttu-id="67f5e-103">Управляет списком сборок, загружаемых средой CLR (CLR), а не приложением.</span><span class="sxs-lookup"><span data-stu-id="67f5e-103">Manages a list of assemblies that are loaded by the common language runtime (CLR) and not by the host.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="ae1e6-104">Методы</span><span class="sxs-lookup"><span data-stu-id="ae1e6-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="67f5e-104">Методы</span><span class="sxs-lookup"><span data-stu-id="67f5e-104">Methods</span></span>  
   
-|<span data-ttu-id="ae1e6-105">Метод</span><span class="sxs-lookup"><span data-stu-id="ae1e6-105">Method</span></span>|<span data-ttu-id="ae1e6-106">Описание</span><span class="sxs-lookup"><span data-stu-id="ae1e6-106">Description</span></span>|  
+|<span data-ttu-id="67f5e-105">Метод</span><span class="sxs-lookup"><span data-stu-id="67f5e-105">Method</span></span>|<span data-ttu-id="67f5e-106">Описание</span><span class="sxs-lookup"><span data-stu-id="67f5e-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="ae1e6-107">Метод IsAssemblyReferenceInList</span><span class="sxs-lookup"><span data-stu-id="ae1e6-107">IsAssemblyReferenceInList Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-isassemblyreferenceinlist-method.md)|<span data-ttu-id="ae1e6-108">Получает значение, указывающее, ссылается ли заданный указатель на сборку в списке.</span><span class="sxs-lookup"><span data-stu-id="ae1e6-108">Gets a value that indicates whether the supplied pointer references an assembly in the list.</span></span>|  
-|[<span data-ttu-id="ae1e6-109">Метод IsStringAssemblyReferenceInList</span><span class="sxs-lookup"><span data-stu-id="ae1e6-109">IsStringAssemblyReferenceInList Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-isstringassemblyreferenceinlist-method.md)|<span data-ttu-id="ae1e6-110">Получает значение, указывающее, соответствует ли указанное имя, имя сборки в списке.</span><span class="sxs-lookup"><span data-stu-id="ae1e6-110">Gets a value that indicates whether the supplied name matches the name of an assembly in the list.</span></span>|  
+|[<span data-ttu-id="67f5e-107">Метод IsAssemblyReferenceInList</span><span class="sxs-lookup"><span data-stu-id="67f5e-107">IsAssemblyReferenceInList Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-isassemblyreferenceinlist-method.md)|<span data-ttu-id="67f5e-108">Получает значение, указывающее, ссылается ли заданный указатель на сборку в списке.</span><span class="sxs-lookup"><span data-stu-id="67f5e-108">Gets a value that indicates whether the supplied pointer references an assembly in the list.</span></span>|  
+|[<span data-ttu-id="67f5e-109">Метод IsStringAssemblyReferenceInList</span><span class="sxs-lookup"><span data-stu-id="67f5e-109">IsStringAssemblyReferenceInList Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-isstringassemblyreferenceinlist-method.md)|<span data-ttu-id="67f5e-110">Получает значение, указывающее, соответствует ли указанное имя, имя сборки в списке.</span><span class="sxs-lookup"><span data-stu-id="67f5e-110">Gets a value that indicates whether the supplied name matches the name of an assembly in the list.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ae1e6-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="ae1e6-111">Remarks</span></span>  
- <span data-ttu-id="ae1e6-112">Вызовите [ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md) способ получить указатель на экземпляр `ICLRAssemblyReferenceList`.</span><span class="sxs-lookup"><span data-stu-id="ae1e6-112">Call the [ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md) method to get a pointer to an instance of `ICLRAssemblyReferenceList`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="67f5e-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="67f5e-111">Remarks</span></span>  
+ <span data-ttu-id="67f5e-112">Вызовите [ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md) способ получить указатель на экземпляр `ICLRAssemblyReferenceList`.</span><span class="sxs-lookup"><span data-stu-id="67f5e-112">Call the [ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md) method to get a pointer to an instance of `ICLRAssemblyReferenceList`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ae1e6-113">Требования</span><span class="sxs-lookup"><span data-stu-id="ae1e6-113">Requirements</span></span>  
- <span data-ttu-id="ae1e6-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ae1e6-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="67f5e-113">Требования</span><span class="sxs-lookup"><span data-stu-id="67f5e-113">Requirements</span></span>  
+ <span data-ttu-id="67f5e-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="67f5e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ae1e6-115">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ae1e6-115">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="67f5e-115">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="67f5e-115">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ae1e6-116">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ae1e6-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="67f5e-116">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="67f5e-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ae1e6-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ae1e6-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="67f5e-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="67f5e-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ae1e6-118">См. также</span><span class="sxs-lookup"><span data-stu-id="ae1e6-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="67f5e-118">См. также</span><span class="sxs-lookup"><span data-stu-id="67f5e-118">See also</span></span>
 
-- [<span data-ttu-id="ae1e6-119">Интерфейс ICLRAssemblyIdentityManager</span><span class="sxs-lookup"><span data-stu-id="ae1e6-119">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="ae1e6-120">Интерфейс IHostAssemblyStore</span><span class="sxs-lookup"><span data-stu-id="ae1e6-120">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
-- [<span data-ttu-id="ae1e6-121">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="ae1e6-121">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="67f5e-119">Интерфейс ICLRAssemblyIdentityManager</span><span class="sxs-lookup"><span data-stu-id="67f5e-119">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="67f5e-120">Интерфейс IHostAssemblyStore</span><span class="sxs-lookup"><span data-stu-id="67f5e-120">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+- [<span data-ttu-id="67f5e-121">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="67f5e-121">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

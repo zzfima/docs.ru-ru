@@ -16,19 +16,19 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: 298620092c37b2c02332e9135f73584272e326bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965928"
 ---
-# <a name="dacpgetmoduleaddressrequest-method"></a><span data-ttu-id="b97e0-102">Метод DacpGetModuleAddress::Request</span><span class="sxs-lookup"><span data-stu-id="b97e0-102">DacpGetModuleAddress::Request Method</span></span>
+# <a name="dacpgetmoduleaddressrequest-method"></a><span data-ttu-id="f25eb-102">Метод DacpGetModuleAddress::Request</span><span class="sxs-lookup"><span data-stu-id="f25eb-102">DacpGetModuleAddress::Request Method</span></span>
 
-<span data-ttu-id="b97e0-103">Выполняет запрос для заполнения структуры из структуры данной среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="b97e0-103">Performs a request to populate the structure from the given runtime structure.</span></span>
+<span data-ttu-id="f25eb-103">Выполняет запрос для заполнения структуры из структуры данной среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="f25eb-103">Performs a request to populate the structure from the given runtime structure.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="b97e0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b97e0-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="f25eb-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f25eb-104">Syntax</span></span>
 
 ```
 HRESULT Request(
@@ -36,25 +36,25 @@ HRESULT Request(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="b97e0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b97e0-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="f25eb-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f25eb-105">Parameters</span></span>
 
 `pDataModule`\
-<span data-ttu-id="b97e0-106">[in] Указатель на модуль начальное значение данных.</span><span class="sxs-lookup"><span data-stu-id="b97e0-106">[in] A pointer to the seed data module.</span></span>
+<span data-ttu-id="f25eb-106">[in] Указатель на модуль начальное значение данных.</span><span class="sxs-lookup"><span data-stu-id="f25eb-106">[in] A pointer to the seed data module.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="b97e0-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="b97e0-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="f25eb-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="f25eb-107">Remarks</span></span>
 
-<span data-ttu-id="b97e0-108">Эта структура находится внутри среды выполнения и не предоставляется через любой заголовков или библиотек.</span><span class="sxs-lookup"><span data-stu-id="b97e0-108">This structure lives inside the runtime and is not exposed through any headers or library files.</span></span> <span data-ttu-id="b97e0-109">Чтобы использовать его, проще всего имитируют реализации:</span><span class="sxs-lookup"><span data-stu-id="b97e0-109">To use it, the easiest way is to mimic the implementation:</span></span>
+<span data-ttu-id="f25eb-108">Эта структура находится внутри среды выполнения и не предоставляется через любой заголовков или библиотек.</span><span class="sxs-lookup"><span data-stu-id="f25eb-108">This structure lives inside the runtime and is not exposed through any headers or library files.</span></span> <span data-ttu-id="f25eb-109">Чтобы использовать его, проще всего имитируют реализации:</span><span class="sxs-lookup"><span data-stu-id="f25eb-109">To use it, the easiest way is to mimic the implementation:</span></span>
 
-- <span data-ttu-id="b97e0-110">Возвращает значение, полученное от вызова `Request` метод `IXCLRDataModule*` параметра со следующими параметрами: `((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`</span><span class="sxs-lookup"><span data-stu-id="b97e0-110">Return the value obtained from calling the `Request` method on the `IXCLRDataModule*` parameter with the following parameters: `((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`</span></span>
+- <span data-ttu-id="f25eb-110">Возвращает значение, полученное от вызова `Request` метод `IXCLRDataModule*` параметра со следующими параметрами: `((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`</span><span class="sxs-lookup"><span data-stu-id="f25eb-110">Return the value obtained from calling the `Request` method on the `IXCLRDataModule*` parameter with the following parameters: `((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="b97e0-111">Требования</span><span class="sxs-lookup"><span data-stu-id="b97e0-111">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="f25eb-111">Требования</span><span class="sxs-lookup"><span data-stu-id="f25eb-111">Requirements</span></span>
 
-<span data-ttu-id="b97e0-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b97e0-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-<span data-ttu-id="b97e0-113">**Заголовок.** Нет</span><span class="sxs-lookup"><span data-stu-id="b97e0-113">**Header:** None</span></span>     
-<span data-ttu-id="b97e0-114">**Библиотека:** Нет</span><span class="sxs-lookup"><span data-stu-id="b97e0-114">**Library:** None</span></span>  
-<span data-ttu-id="b97e0-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="b97e0-115">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
+<span data-ttu-id="f25eb-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f25eb-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="f25eb-113">**Заголовок.** Нет</span><span class="sxs-lookup"><span data-stu-id="f25eb-113">**Header:** None</span></span>     
+<span data-ttu-id="f25eb-114">**Библиотека:** Нет</span><span class="sxs-lookup"><span data-stu-id="f25eb-114">**Library:** None</span></span>  
+<span data-ttu-id="f25eb-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="f25eb-115">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="b97e0-116">См. также</span><span class="sxs-lookup"><span data-stu-id="b97e0-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f25eb-116">См. также</span><span class="sxs-lookup"><span data-stu-id="f25eb-116">See also</span></span>
 
-- [<span data-ttu-id="b97e0-117">Отладка</span><span class="sxs-lookup"><span data-stu-id="b97e0-117">Debugging</span></span>](index.md)
-- [<span data-ttu-id="b97e0-118">Интерфейс DacpGetModuleAddress</span><span class="sxs-lookup"><span data-stu-id="b97e0-118">DacpGetModuleAddress Interface</span></span>](dacpgetmoduleaddress-structure.md)
+- [<span data-ttu-id="f25eb-117">Отладка</span><span class="sxs-lookup"><span data-stu-id="f25eb-117">Debugging</span></span>](index.md)
+- [<span data-ttu-id="f25eb-118">Интерфейс DacpGetModuleAddress</span><span class="sxs-lookup"><span data-stu-id="f25eb-118">DacpGetModuleAddress Interface</span></span>](dacpgetmoduleaddress-structure.md)

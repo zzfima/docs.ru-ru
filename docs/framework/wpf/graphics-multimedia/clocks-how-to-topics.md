@@ -10,21 +10,21 @@ helpviewer_keywords:
 - animation [WPF], clocks
 ms.assetid: c687b2a5-b151-41e2-9ade-df2fc1a16b04
 ms.openlocfilehash: bb625c116b1c58071ec0f51729df07f43600f36f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970967"
 ---
-# <a name="clocks-how-to-topics"></a><span data-ttu-id="93100-102">Разделы руководства, посвященные часам</span><span class="sxs-lookup"><span data-stu-id="93100-102">Clocks How-to Topics</span></span>
-<span data-ttu-id="93100-103">Ниже описаны способы использования <xref:System.Windows.Media.Animation.Clock> объект для сохранения сведений о состоянии времени <xref:System.Windows.Media.Animation.Timeline>.</span><span class="sxs-lookup"><span data-stu-id="93100-103">The following topics describe how to use a <xref:System.Windows.Media.Animation.Clock> object to maintain timing state information for a <xref:System.Windows.Media.Animation.Timeline>.</span></span>  
+# <a name="clocks-how-to-topics"></a><span data-ttu-id="c6af0-102">Разделы руководства, посвященные часам</span><span class="sxs-lookup"><span data-stu-id="c6af0-102">Clocks How-to Topics</span></span>
+<span data-ttu-id="c6af0-103">Ниже описаны способы использования <xref:System.Windows.Media.Animation.Clock> объект для сохранения сведений о состоянии времени <xref:System.Windows.Media.Animation.Timeline>.</span><span class="sxs-lookup"><span data-stu-id="c6af0-103">The following topics describe how to use a <xref:System.Windows.Media.Animation.Clock> object to maintain timing state information for a <xref:System.Windows.Media.Animation.Timeline>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="93100-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="93100-104">In This Section</span></span>  
- [<span data-ttu-id="93100-105">Анимирование свойства с помощью AnimationClock</span><span class="sxs-lookup"><span data-stu-id="93100-105">Animate a Property by Using an AnimationClock</span></span>](how-to-animate-a-property-by-using-an-animationclock.md)  
- [<span data-ttu-id="93100-106">Управление часами в интерактивном режиме</span><span class="sxs-lookup"><span data-stu-id="93100-106">Interactively Control a Clock</span></span>](how-to-interactively-control-a-clock.md)  
- [<span data-ttu-id="93100-107">Установка часов в синхронном режиме</span><span class="sxs-lookup"><span data-stu-id="93100-107">Seek a Clock Synchronously</span></span>](how-to-seek-a-clock-synchronously.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c6af0-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="c6af0-104">In This Section</span></span>  
+ [<span data-ttu-id="c6af0-105">Анимирование свойства с помощью AnimationClock</span><span class="sxs-lookup"><span data-stu-id="c6af0-105">Animate a Property by Using an AnimationClock</span></span>](how-to-animate-a-property-by-using-an-animationclock.md)  
+ [<span data-ttu-id="c6af0-106">Управление часами в интерактивном режиме</span><span class="sxs-lookup"><span data-stu-id="c6af0-106">Interactively Control a Clock</span></span>](how-to-interactively-control-a-clock.md)  
+ [<span data-ttu-id="c6af0-107">Установка часов в синхронном режиме</span><span class="sxs-lookup"><span data-stu-id="c6af0-107">Seek a Clock Synchronously</span></span>](how-to-seek-a-clock-synchronously.md)  
   
-## <a name="reference"></a><span data-ttu-id="93100-108">Ссылка</span><span class="sxs-lookup"><span data-stu-id="93100-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c6af0-108">Ссылка</span><span class="sxs-lookup"><span data-stu-id="c6af0-108">Reference</span></span>  
  <xref:System.Windows.Media.Animation.Clock>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
@@ -33,7 +33,7 @@ ms.locfileid: "57361451"
   
  <xref:System.Windows.Media.Animation.Timeline>  
   
-## <a name="related-sections"></a><span data-ttu-id="93100-109">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="93100-109">Related Sections</span></span>  
- [<span data-ttu-id="93100-110">Общие сведения об эффектах анимации</span><span class="sxs-lookup"><span data-stu-id="93100-110">Animation Overview</span></span>](animation-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="c6af0-109">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="c6af0-109">Related Sections</span></span>  
+ [<span data-ttu-id="c6af0-110">Общие сведения об эффектах анимации</span><span class="sxs-lookup"><span data-stu-id="c6af0-110">Animation Overview</span></span>](animation-overview.md)  
   
- [<span data-ttu-id="93100-111">Общие сведения о раскадровке</span><span class="sxs-lookup"><span data-stu-id="93100-111">Storyboards Overview</span></span>](storyboards-overview.md)
+ [<span data-ttu-id="c6af0-111">Общие сведения о раскадровке</span><span class="sxs-lookup"><span data-stu-id="c6af0-111">Storyboards Overview</span></span>](storyboards-overview.md)

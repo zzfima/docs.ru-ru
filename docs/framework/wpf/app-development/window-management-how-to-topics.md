@@ -7,29 +7,29 @@ helpviewer_keywords:
 - windows [WPF], managing
 ms.assetid: 3090b408-94e4-446a-92ca-50f1fd36e5d8
 ms.openlocfilehash: 8de810843ea7de9bb7f27c6582a0254661dbf643
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788691"
 ---
-# <a name="window-management-how-to-topics"></a><span data-ttu-id="906cf-102">Инструкции по управлению окна</span><span class="sxs-lookup"><span data-stu-id="906cf-102">Window Management How-to Topics</span></span>
-<span data-ttu-id="906cf-103">В следующих темах управление [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span><span class="sxs-lookup"><span data-stu-id="906cf-103">The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span></span>  
+# <a name="window-management-how-to-topics"></a><span data-ttu-id="a9b92-102">Инструкции по управлению окна</span><span class="sxs-lookup"><span data-stu-id="a9b92-102">Window Management How-to Topics</span></span>
+<span data-ttu-id="a9b92-103">В следующих темах управление [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span><span class="sxs-lookup"><span data-stu-id="a9b92-103">The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="906cf-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="906cf-104">In This Section</span></span>  
- [<span data-ttu-id="906cf-105">Автоматическое изменение размера окна в соответствии с размером содержимого</span><span class="sxs-lookup"><span data-stu-id="906cf-105">Automatically Size a Window to Fit Its Content</span></span>](how-to-automatically-size-a-window-to-fit-its-content.md)  
-  [<span data-ttu-id="906cf-106">Получение всех окон в приложении</span><span class="sxs-lookup"><span data-stu-id="906cf-106">Get all Windows in an Application</span></span>](how-to-get-all-windows-in-an-application.md)  
-  [<span data-ttu-id="906cf-107">Получение и задание главного окна приложения</span><span class="sxs-lookup"><span data-stu-id="906cf-107">Get and Set the Main Application Window</span></span>](how-to-get-and-set-the-main-application-window.md)  
-  [<span data-ttu-id="906cf-108">Отображение диалогового окна</span><span class="sxs-lookup"><span data-stu-id="906cf-108">Open a Dialog Box</span></span>](how-to-open-a-dialog-box.md)  
-  [<span data-ttu-id="906cf-109">Отображение окна сообщения</span><span class="sxs-lookup"><span data-stu-id="906cf-109">Open a Message Box</span></span>](how-to-open-a-message-box.md)  
-  [<span data-ttu-id="906cf-110">Отображение окна</span><span class="sxs-lookup"><span data-stu-id="906cf-110">Open a Window</span></span>](how-to-open-a-window.md)  
-  [<span data-ttu-id="906cf-111">Возвращение результата диалогового окна</span><span class="sxs-lookup"><span data-stu-id="906cf-111">Return a Dialog Box Result</span></span>](how-to-return-a-dialog-box-result.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a9b92-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="a9b92-104">In This Section</span></span>  
+ [<span data-ttu-id="a9b92-105">Автоматическое изменение размера окна в соответствии с размером содержимого</span><span class="sxs-lookup"><span data-stu-id="a9b92-105">Automatically Size a Window to Fit Its Content</span></span>](how-to-automatically-size-a-window-to-fit-its-content.md)  
+  [<span data-ttu-id="a9b92-106">Получение всех окон в приложении</span><span class="sxs-lookup"><span data-stu-id="a9b92-106">Get all Windows in an Application</span></span>](how-to-get-all-windows-in-an-application.md)  
+  [<span data-ttu-id="a9b92-107">Получение и задание главного окна приложения</span><span class="sxs-lookup"><span data-stu-id="a9b92-107">Get and Set the Main Application Window</span></span>](how-to-get-and-set-the-main-application-window.md)  
+  [<span data-ttu-id="a9b92-108">Отображение диалогового окна</span><span class="sxs-lookup"><span data-stu-id="a9b92-108">Open a Dialog Box</span></span>](how-to-open-a-dialog-box.md)  
+  [<span data-ttu-id="a9b92-109">Отображение окна сообщения</span><span class="sxs-lookup"><span data-stu-id="a9b92-109">Open a Message Box</span></span>](how-to-open-a-message-box.md)  
+  [<span data-ttu-id="a9b92-110">Отображение окна</span><span class="sxs-lookup"><span data-stu-id="a9b92-110">Open a Window</span></span>](how-to-open-a-window.md)  
+  [<span data-ttu-id="a9b92-111">Возвращение результата диалогового окна</span><span class="sxs-lookup"><span data-stu-id="a9b92-111">Return a Dialog Box Result</span></span>](how-to-return-a-dialog-box-result.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="906cf-112">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="906cf-112">Related Sections</span></span>  
- [<span data-ttu-id="906cf-113">Общие сведения об управлении приложением</span><span class="sxs-lookup"><span data-stu-id="906cf-113">Application Management Overview</span></span>](application-management-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="a9b92-112">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="a9b92-112">Related Sections</span></span>  
+ [<span data-ttu-id="a9b92-113">Общие сведения об управлении приложением</span><span class="sxs-lookup"><span data-stu-id="a9b92-113">Application Management Overview</span></span>](application-management-overview.md)  
   
- [<span data-ttu-id="906cf-114">Общие сведения о переходах</span><span class="sxs-lookup"><span data-stu-id="906cf-114">Navigation Overview</span></span>](navigation-overview.md)  
+ [<span data-ttu-id="a9b92-114">Общие сведения о переходах</span><span class="sxs-lookup"><span data-stu-id="a9b92-114">Navigation Overview</span></span>](navigation-overview.md)  
   
- [<span data-ttu-id="906cf-115">Размещение</span><span class="sxs-lookup"><span data-stu-id="906cf-115">Hosting</span></span>](hosting-wpf-applications.md)  
+ [<span data-ttu-id="a9b92-115">Размещение</span><span class="sxs-lookup"><span data-stu-id="a9b92-115">Hosting</span></span>](hosting-wpf-applications.md)  
   
- [<span data-ttu-id="906cf-116">Сборка и развертывание</span><span class="sxs-lookup"><span data-stu-id="906cf-116">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)
+ [<span data-ttu-id="a9b92-116">Сборка и развертывание</span><span class="sxs-lookup"><span data-stu-id="a9b92-116">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)
