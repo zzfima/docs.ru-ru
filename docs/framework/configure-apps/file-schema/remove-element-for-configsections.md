@@ -1,5 +1,5 @@
 ---
-title: <remove> - элемент для <configSections>
+title: Элемент <remove> для <configSections>
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/remove
@@ -10,11 +10,11 @@ ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: 9ceffd3194c7df41f12ac6cd6b589602965b4920
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674315"
 ---
 # <a name="remove-element-for-configsections"></a>\<Удалить > элемент для \<configSections >
 
@@ -32,19 +32,19 @@ ms.locfileid: "55279101"
 
 ## <a name="attribute"></a>Атрибут
 
-|           | Описание: |
+|           | Описание |
 | --------- | ----------- |
 | **name**  | Обязательный атрибут.<br><br>Задает имя раздела или группы разделов. |
 
 ## <a name="parent-element"></a>Родительский элемент
 
-|     | Описание: |
+|     | Описание |
 | --- | ----------- |
 | [**\<configSections >** элемент](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Содержит раздел конфигурации и пространства имен объявления. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
-Нет
+None
 
 ## <a name="remarks"></a>Примечания
 

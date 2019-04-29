@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a7c7747a-5b8c-463f-8493-7266dac75066
 ms.openlocfilehash: e35df9a5dacc5f281af48cec292a09b291312119
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787664"
 ---
 # <a name="how-to-create-a-securitybindingelement-for-a-specified-authentication-mode"></a>Практическое руководство. Создание SecurityBindingElement для заданного режима проверки подлинности
 Windows Communication Foundation (WCF) предоставляет несколько режимов, по которым клиенты и службы проверяют подлинность друг друга. Для этих режимов проверки подлинности можно создать привязки безопасности с помощью статических методов класса <xref:System.ServiceModel.Channels.SecurityBindingElement> или с помощью конфигурации, как показано в следующем примере кода.  

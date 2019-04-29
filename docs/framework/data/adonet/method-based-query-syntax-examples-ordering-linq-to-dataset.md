@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8f9ce4fd-e84f-48c0-bb64-89e217236d3e
 ms.openlocfilehash: 76bc4751a25e82a731e136f838d12b8d1c1d691f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772090"
 ---
 # <a name="method-based-query-syntax-examples-ordering-linq-to-dataset"></a>Примеры синтаксиса запросов на основе методов. Упорядочение (LINQ to DataSet)
 В примерах данного раздела показано, как применять методы <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Reverse%2A> и <xref:System.Linq.Enumerable.ThenBy%2A> для запроса к объекту <xref:System.Data.DataSet> и упорядочения результатов с использованием синтаксиса запросов на основе методов.  

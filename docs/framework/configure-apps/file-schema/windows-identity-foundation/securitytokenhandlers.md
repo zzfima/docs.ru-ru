@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
 ms.openlocfilehash: a5af3893ab72d23c2b3814569decfc50431b8e55
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793839"
 ---
 # <a name="securitytokenhandlers"></a>\<securityTokenHandlers >
 Задает коллекцию обработчиков токенов безопасности, которые зарегистрированы с конечной точкой.  
@@ -39,7 +39,7 @@ ms.locfileid: "55277528"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Добавляет обработчик токенов безопасности в коллекцию обработчиков токенов.|  
 |[\<clear>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)|Удаляет все обработчики маркеров безопасности из коллекции обработчиков токенов.|  
@@ -48,7 +48,7 @@ ms.locfileid: "55277528"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Указывает параметры уровня службы идентификации.|  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
 ms.openlocfilehash: 53ae737394d76d9f293f6e03fbf04cbb46d2adbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778824"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>Пошаговое руководство. Создание первого приложения для обработки касаний
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] позволяет приложениям реагировать на касание. Например может взаимодействовать с приложением с помощью одного или более пальцами сенсорные устройства, например сенсорный экран, в этом пошаговом руководстве создается приложение, которое позволяет пользователю перемещать, изменять размер или поворот объекта с использованием сенсорного ввода.  
@@ -23,9 +23,9 @@ ms.locfileid: "59326987"
 ## <a name="prerequisites"></a>Предварительные требования  
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
   
--   Visual Studio.  
+- Visual Studio.  
   
--   Устройство, которое принимает сенсорного ввода, например сенсорный экран, который поддерживает Windows Touch.  
+- Устройство, которое принимает сенсорного ввода, например сенсорный экран, который поддерживает Windows Touch.  
   
  Кроме того, должен иметь базовое представление о том, как создать приложение в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], особенно как подписаться на и как обрабатывать событие. Дополнительные сведения см. в разделе [Пошаговое руководство: Создание первого классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
@@ -73,11 +73,11 @@ ms.locfileid: "59326987"
 ## <a name="testing-the-application"></a>Тестирование приложения
  Чтобы протестировать приложение, попробуйте следующие манипуляции. Обратите внимание на то, что можно сделать более одного из указанных ниже, в то же время.
 
--   Чтобы переместить <xref:System.Windows.Shapes.Rectangle>, поместите палец на <xref:System.Windows.Shapes.Rectangle> и переместите палец по экрану.
+- Чтобы переместить <xref:System.Windows.Shapes.Rectangle>, поместите палец на <xref:System.Windows.Shapes.Rectangle> и переместите палец по экрану.
 
--   Чтобы изменить размер <xref:System.Windows.Shapes.Rectangle>, поместите два пальца на <xref:System.Windows.Shapes.Rectangle> и Сведите Сведите или разведите их друг с другом.
+- Чтобы изменить размер <xref:System.Windows.Shapes.Rectangle>, поместите два пальца на <xref:System.Windows.Shapes.Rectangle> и Сведите Сведите или разведите их друг с другом.
 
--   Для поворота <xref:System.Windows.Shapes.Rectangle>, поместите два пальца на <xref:System.Windows.Shapes.Rectangle> и Поворачивайте их вокруг друг с другом.
+- Для поворота <xref:System.Windows.Shapes.Rectangle>, поместите два пальца на <xref:System.Windows.Shapes.Rectangle> и Поворачивайте их вокруг друг с другом.
 
  Чтобы вызвать инерцию, быстро повысить пальца на экране при выполнении предыдущих манипуляций. <xref:System.Windows.Shapes.Rectangle> Будет продолжать перемещения, размер или поворачивать на несколько секунд, прежде чем остановится.
 

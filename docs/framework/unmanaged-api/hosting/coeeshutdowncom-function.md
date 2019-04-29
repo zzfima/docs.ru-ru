@@ -21,11 +21,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8ddef35b1b707cc5c962402e880923dca7d4d9d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789653"
 ---
 # <a name="coeeshutdowncom-function"></a>Функция CoEEShutDownCOM
 Заставляет общеязыковой среды выполнения (CLR), чтобы освободить все указатели на интерфейс, содержащиеся внутри вызываемых оболочек времени выполнения (RCW). Это приводит к по освобождению всех кэшей вызываемой оболочки времени Выполнения. Это глобальная функция является устаревшей в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Вместо этого используйте точку входа для конкретной среды выполнения.  

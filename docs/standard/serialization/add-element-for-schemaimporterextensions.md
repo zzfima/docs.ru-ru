@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
 ms.openlocfilehash: 89196b094d5631c9e243a51a718e53f9c06db20d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794983"
 ---
 # <a name="add-element-for-schemaimporterextensions"></a>\<Добавить > элемент для \<schemaImporterExtensions >
 Добавляет типы, используемые <xref:System.Xml.Serialization.XmlSchemaImporter>, для сопоставления типов XSD с типами платформы .NET Framework. Дополнительные сведения о файлах конфигурации см. в разделе [Схема файла конфигурации](../../../docs/framework/configure-apps/file-schema/index.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "55270567"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |**name**|Простое имя, используемое для поиска экземпляра.|  
 |**type**|Обязательный. Задает добавляемый класс расширения схемы. Значение атрибута **type** должно располагаться на одной строке и содержать полное имя типа. Когда сборка помещается в глобальный кэш сборок (GAC), она должна также содержать версию, язык и региональные параметры и маркер открытого ключа подписанной сборки.|  
@@ -41,7 +41,7 @@ ms.locfileid: "55270567"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |\<schemaImporterExtensions>|Содержит типы, используемые классом<xref:System.Xml.Serialization.XmlSchemaImporter>.|  
   

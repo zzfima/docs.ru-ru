@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
 ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771024"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>Практическое руководство. Определение объекта Freezable как доступного только для чтения
 В этом примере показано, как сделать <xref:System.Windows.Freezable> только для чтения, вызвав его <xref:System.Windows.Freezable.Freeze%2A> метод.  
   
  Невозможно закрепить <xref:System.Windows.Freezable> объекта, если одно из следующих условий не `true` об объекте:  
   
--   Объект имеет анимированные или свойства с привязкой к данным.  
+- Объект имеет анимированные или свойства с привязкой к данным.  
   
--   Он имеет свойства, которые задаются динамический ресурс. Дополнительные сведения о динамических ресурсов, см. в разделе [ресурсы XAML](xaml-resources.md).  
+- Он имеет свойства, которые задаются динамический ресурс. Дополнительные сведения о динамических ресурсов, см. в разделе [ресурсы XAML](xaml-resources.md).  
   
--   Он содержит <xref:System.Windows.Freezable> вложенные объекты, которые нельзя зафиксировать.  
+- Он содержит <xref:System.Windows.Freezable> вложенные объекты, которые нельзя зафиксировать.  
   
  Если эти условия выполняются `false` для вашей <xref:System.Windows.Freezable> объекта и вы не собираетесь изменять, можно зафиксировать, чтобы получить выигрыш в производительности.  
   

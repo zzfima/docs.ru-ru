@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 75ef24162adbb653671ed070587e7155fae6b949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697749"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>Метод IAssemblyCache::UninstallAssembly
 Удаляет указанную сборку из глобального кэша сборок.  
@@ -51,17 +51,17 @@ HRESULT UninstallAssembly (
  `pulDisposition`  
  [out, optional] Один из методов обработки значений, определенных в Fusion.idl. Ниже приведены возможные значения:  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_STILL_IN_USE (2)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_STILL_IN_USE (2)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_ALREADY_UNINSTALLED (3)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_ALREADY_UNINSTALLED (3)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_DELETE_PENDING (4)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_DELETE_PENDING (4)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_HAS_INSTALL_REFERENCES (5)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_HAS_INSTALL_REFERENCES (5)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

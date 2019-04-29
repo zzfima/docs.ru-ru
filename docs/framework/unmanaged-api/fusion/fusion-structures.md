@@ -9,21 +9,21 @@ ms.assetid: 3feb4fc5-a1e9-445d-929c-0a7490244114
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 762b23af9eb6282a26d9b0430132023c9f76d1f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697736"
 ---
 # <a name="fusion-structures"></a>Структуры Fusion
-В этом разделе описываются неуправляемые структуры, используемые API Fusion.  
+В этом разделе описаны неуправляемые структуры, используемые API Fusion.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Структура ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md)  
- Содержит сведения о сборке, которая зарегистрирована в глобальном кэше сборок.  
+ Содержит сведения о сборке, зарегистрированный в глобальном кэше сборок.  
   
  [Структура FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)  
- Представляет ссылку, когда приложение устанавливает на сборку, установленную приложением в глобальном кэше сборок.  
+ Представляет ссылку, когда приложение устанавливает для сборки, приложение, установленной в глобальном кэше сборок.  
   
  [Структура IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
  Содержит сведения об атрибутах метаданных о [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) экземпляра.  

@@ -3,13 +3,13 @@ title: Создание проектов LINQ to DataSet в Visual Studio
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
 ms.openlocfilehash: 22763d3b9581d09d7bdda0c09480f8d36bb8e2ec
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667055"
 ---
-# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Как выполнить Создание проектов LINQ to DataSet в Visual Studio
+# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Практическое руководство. Создание проектов LINQ to DataSet в Visual Studio
 
 Различные типы проектов LINQ требуются некоторые ссылки на сборки и импортируемых пространств имен (Visual Basic) или [с помощью](../../../csharp/language-reference/keywords/using-directive.md) директивы (C#). Минимальным требованием для LINQ — это ссылка на *System.Core.dll* и `using` директив для <xref:System.Linq>.
 

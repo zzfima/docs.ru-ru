@@ -1,75 +1,75 @@
 ---
-title: Практическое руководство. Добавление данных пользователя в данные рукописного ввода
+title: Практическое руководство. Добавление пользовательских данных в данные рукописного ввода
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ink data [WPF], adding custom data
 - InkCanvas [WPF], displaying
 ms.assetid: f02aac6f-3436-4f7c-b6ea-0452cba5332c
 ms.openlocfilehash: c524e30943a21426e2e5e8fe6ae009999924fead
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777056"
 ---
-# <a name="how-to-add-custom-data-to-ink-data"></a>Практическое руководство. Добавление данных пользователя в данные рукописного ввода
+# <a name="how-to-add-custom-data-to-ink-data"></a>Практическое руководство. Добавление пользовательских данных в данные рукописного ввода
 Можно добавить пользовательские данные для рукописного ввода, который будет сохранен при сохранении рукописного ввода в форме рукописного ввода сериализации формат ISF.  Можно сохранить пользовательские данные для <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection>, или <xref:System.Windows.Ink.Stroke>.  Возможность сохранить пользовательские данные в трех объектов дает возможность выбрать лучшее место для сохранения данных.  Все три класса используйте аналогичные методы для хранения и доступа к пользовательским данным.  
   
  Как пользовательские данные могут сохраняться только следующие типы:  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.Boolean>[]  
+- <xref:System.Boolean>[]  
   
--   <xref:System.Byte>  
+- <xref:System.Byte>  
   
--   <xref:System.Byte>[]  
+- <xref:System.Byte>[]  
   
--   <xref:System.Char>  
+- <xref:System.Char>  
   
--   <xref:System.Char>[]  
+- <xref:System.Char>[]  
   
--   <xref:System.DateTime>  
+- <xref:System.DateTime>  
   
--   <xref:System.DateTime>[]  
+- <xref:System.DateTime>[]  
   
--   <xref:System.Decimal>  
+- <xref:System.Decimal>  
   
--   <xref:System.Decimal>[]  
+- <xref:System.Decimal>[]  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Double>[]  
+- <xref:System.Double>[]  
   
--   <xref:System.Int16>  
+- <xref:System.Int16>  
   
--   <xref:System.Int16>[]  
+- <xref:System.Int16>[]  
   
--   <xref:System.Int32>  
+- <xref:System.Int32>  
   
--   <xref:System.Int32>[]  
+- <xref:System.Int32>[]  
   
--   <xref:System.Int64>  
+- <xref:System.Int64>  
   
--   <xref:System.Int64>[]  
+- <xref:System.Int64>[]  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.Single>[]  
+- <xref:System.Single>[]  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.UInt16>  
+- <xref:System.UInt16>  
   
--   <xref:System.UInt16>[]  
+- <xref:System.UInt16>[]  
   
--   <xref:System.UInt32>  
+- <xref:System.UInt32>  
   
--   <xref:System.UInt32>[]  
+- <xref:System.UInt32>[]  
   
--   <xref:System.UInt64>  
+- <xref:System.UInt64>  
   
--   <xref:System.UInt64>[]  
+- <xref:System.UInt64>[]  
   
 ## <a name="example"></a>Пример  
  Следующий пример демонстрирует добавление и извлечение пользовательских данных из <xref:System.Windows.Ink.StrokeCollection>.  

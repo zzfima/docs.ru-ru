@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 48ce5381c745669b813f5b28d801add7daba7825
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965845"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>Функция CreateCoreClrDebugTarget
 Создает подключение к прокси-серверу отладчика, который выполняется на удаленном компьютере и возвращает [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) объект, который может использоваться для запроса выполняющихся процессов и загруженных сред выполнения на удаленном компьютере.  
@@ -46,13 +46,13 @@ HRESULT CreateCoreClrDebugTarget (
   
 ## <a name="return-value"></a>Возвращаемое значение  
  S_OK  
- Количество сред CLR в процессе было успешно определено, и соответствующие массивы дескрипторов и путей заполнены должным образом.  
+ Количество сред CLR в процессе успешно определено, и соответствующие массивы дескрипторов и путей заполнены должным образом.  
   
  E_OUTOFMEMORY  
  Не удается выделить достаточно памяти для `ppTarget`.  
   
  E_FAIL (или другие коды возврата E_)  
- Другие сбои.  
+ Прочие сбои.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

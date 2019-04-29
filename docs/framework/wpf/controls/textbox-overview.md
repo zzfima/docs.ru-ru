@@ -6,11 +6,11 @@ helpviewer_keywords:
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
 ms.openlocfilehash: 577a12a0c04e5e3bfbfecb2c45263b684f0ffc17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791005"
 ---
 # <a name="textbox-overview"></a>Общие сведения о TextBox
 <xref:System.Windows.Controls.TextBox> Класс позволяет отобразить или отредактировать неформатированный текст. Обычно используются <xref:System.Windows.Controls.TextBox> редактирование неформатированного текста в форме. Например, форма запроса имени пользователя, номера телефона и т.д может использовать <xref:System.Windows.Controls.TextBox> элементы управления для ввода текста. В данном разделе представлены <xref:System.Windows.Controls.TextBox> класса и приводятся примеры его использования в оба [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и C#.  

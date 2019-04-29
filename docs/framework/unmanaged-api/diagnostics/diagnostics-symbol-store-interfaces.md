@@ -12,18 +12,18 @@ ms.assetid: f96987d5-e6a5-478b-ac5e-302e16545cce
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6fca7359888b8b73b2e1cf709ab708d71abf0db6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787898"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>Интерфейсы хранилища символов диагностики
 В этом разделе описываются неуправляемые интерфейсы, позволяющие компилятору генерировать символьную информацию для использования отладчиком.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Интерфейс IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)  
- Предоставляет методы для отображения текущих привязки сведений о выполняемом приложении.  
+ Предоставляет методы, которые отображают текущие привязки сведения о выполняющемся приложении.  
   
  [Интерфейс IDebugAutoAttach](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)  
  Определяет интерфейс для вызываемого сервером автоматического вложения отладчика.  
@@ -44,16 +44,16 @@ ms.locfileid: "33435816"
  Этот интерфейс является дополнением к чтения [интерфейс ISymUnmanagedAsyncMethodPropertiesWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md).  
   
  [Интерфейс ISymUnmanagedAsyncMethodPropertiesWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)  
- Разрешает определение сведений о методе необязательный асинхронный метод символ. Необходимо использовать открытый метод (то есть, между вызовами [метод OpenMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)и [метод CloseMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)).  
+ Дает возможность определить сведения о методе необязательно асинхронный метод символ. Необходимо использовать с помощью открытого метода (то есть между вызовами [метод OpenMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)и [метод CloseMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)).  
   
  [Интерфейс ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)  
  Представляет модуль привязки символов для неуправляемого кода.  
   
  [Интерфейс ISymUnmanagedBinder2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)  
- Представляет модуль привязки символов для неуправляемого кода и расширяет `ISymUnmanagedBinder` интерфейса.  
+ Представляет модуль привязки символов для неуправляемого кода и расширяет `ISymUnmanagedBinder` интерфейс.  
   
  [Интерфейс ISymUnmanagedBinder3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)  
- Представляет модуль привязки символов для неуправляемого кода и расширяет `ISymUnmanagedBinder` интерфейса.  
+ Представляет модуль привязки символов для неуправляемого кода и расширяет `ISymUnmanagedBinder` интерфейс.  
   
  [Интерфейс ISymUnmanagedConstant](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)  
  Предоставляет доступ к неуправляемым константам.  
@@ -71,7 +71,7 @@ ms.locfileid: "33435816"
  Предоставляет методы для "Изменить и продолжить".  
   
  [Интерфейс ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)  
- Представляет метод в хранилище символов.  
+ Представляет метод, в хранилище символов.  
   
  [Интерфейс ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)  
  Представляет пространство имен.  
@@ -80,22 +80,22 @@ ms.locfileid: "33435816"
  Представляет средство чтения символов, который предоставляет доступ к документам, методам и переменным в хранилище символов.  
   
  [Интерфейс ISymUnmanagedReader2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)  
- Получает метод средства чтения символов, получив токен метода и номеру версии редактирования и копирования.  
+ Получает токен метода и номеру версии редактирования и копирования метода средства чтения символов.  
   
  [Интерфейс ISymUnmanagedReaderSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)  
- Предоставляет методы, получающие сведения о поиске символов.  
+ Предоставляет методы, получающие сведения о поиске символа.  
   
  [Интерфейс ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)  
- Представляет лексическую область видимости в пределах одного метода.  
+ Представляет лексическую область внутри метода.  
   
  [Интерфейс ISymUnmanagedScope2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)  
  Представляет лексическую область в методе и расширяет `ISymUnmanagedScope` интерфейс с методами, которые получают сведения о константы, определенные в области...  
   
  [Интерфейс ISymUnmanagedSourceServerModule](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)  
- Предоставляет данные сервера источника для модуля.  
+ Предоставляет данные исходного сервера для модуля.  
   
  [Интерфейс ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)  
- Предоставляет методы, получающие сведения о пути поиска.  
+ Предоставляет методы, которые получают сведения о пути поиска.  
   
  [Интерфейс ISymUnmanagedVariable](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)  
  Представляет переменную, например параметр, локальную переменную или поле.  
@@ -104,10 +104,10 @@ ms.locfileid: "33435816"
  Представляет модуль записи символов и предоставляет методы для определения документов, точек следования, лексические области и переменные.  
   
  [Интерфейс ISymUnmanagedWriter2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
- Представляет модуль записи символов и предоставляет методы для определения документов, точек следования, лексические области и переменные. Расширяет `ISymUnmanagedWriter` интерфейса.  
+ Представляет модуль записи символов и предоставляет методы для определения документов, точек следования, лексические области и переменные. Расширяет `ISymUnmanagedWriter` интерфейс.  
   
  [Интерфейс ISymUnmanagedWriter3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)  
- Представляет модуль записи символов и предоставляет методы для определения документов, точек следования, лексические области и переменные. Расширяет `ISymUnmanagedWriter` интерфейса.  
+ Представляет модуль записи символов и предоставляет методы для определения документов, точек следования, лексические области и переменные. Расширяет `ISymUnmanagedWriter` интерфейс.  
   
  [Интерфейс ISymUnmanagedWriter4](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-interface.md)  
  Интерфейс ISymUnmanagedWriter4.  

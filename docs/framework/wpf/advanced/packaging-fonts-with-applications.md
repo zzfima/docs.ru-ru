@@ -11,11 +11,11 @@ helpviewer_keywords:
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
 ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773237"
 ---
 # <a name="packaging-fonts-with-applications"></a>Упаковка шрифтов с приложениями
 Этот раздел содержит общие сведения об упаковке шрифтов с вашей [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложения.  
@@ -158,17 +158,17 @@ ms.locfileid: "59123802"
 ## <a name="limitations-on-font-usage"></a>Ограничения в использовании шрифтов  
  Ниже приведены некоторые ограничения по упаковке и использованию шрифтов в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений:  
   
--   **Биты разрешений на внедрение шрифтов:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения не проверяют и не применяют принудительно никакие биты разрешений на внедрение шрифтов. См. в разделе [ntroduction_to_packing Fonts](#introduction_to_packaging_fonts) Дополнительные сведения.  
+- **Биты разрешений на внедрение шрифтов:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения не проверяют и не применяют принудительно никакие биты разрешений на внедрение шрифтов. См. в разделе [ntroduction_to_packing Fonts](#introduction_to_packaging_fonts) Дополнительные сведения.  
   
--   **Сайт исходных шрифтов:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения не разрешают ссылка на шрифт для http или ftp [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
+- **Сайт исходных шрифтов:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения не разрешают ссылка на шрифт для http или ftp [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
   
--   **Абсолютный URI, с помощью пакета: нотации:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения не разрешают создавать <xref:System.Windows.Media.FontFamily> программным способом с помощью «pack:» как часть абсолютное [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] ссылки на шрифт. Например `"pack://application:,,,/resources/#Pericles Light"` является недопустимой ссылкой на шрифт.  
+- **Абсолютный URI, с помощью пакета: нотации:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения не разрешают создавать <xref:System.Windows.Media.FontFamily> программным способом с помощью «pack:» как часть абсолютное [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] ссылки на шрифт. Например `"pack://application:,,,/resources/#Pericles Light"` является недопустимой ссылкой на шрифт.  
   
--   **Автоматическое внедрение шрифтов.** Во время разработки не поддерживается поиск шрифтов, используемых приложением, и автоматическое внедрение шрифтов в ресурсы приложения.  
+- **Автоматическое внедрение шрифтов.** Во время разработки не поддерживается поиск шрифтов, используемых приложением, и автоматическое внедрение шрифтов в ресурсы приложения.  
   
--   **Подмножества шрифтов:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения не поддерживают создание подмножеств шрифтов для нефиксированных документов.  
+- **Подмножества шрифтов:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения не поддерживают создание подмножеств шрифтов для нефиксированных документов.  
   
--   Если обнаруживается неправильная ссылка, приложение прибегает к использованию доступного шрифта.  
+- Если обнаруживается неправильная ссылка, приложение прибегает к использованию доступного шрифта.  
   
 ## <a name="see-also"></a>См. также
 

@@ -3,22 +3,22 @@ title: Уровни доверия, используемые при доступ
 ms.date: 03/30/2017
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
 ms.openlocfilehash: 8e7d632c361ea73cb65668e43506d9e1128d31ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793605"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>Уровни доверия, используемые при доступе к ресурсам
 В этом разделе описывается порядок ограничения доступа к ресурсам различных типов, используемым инфраструктурой <xref:System.Transactions>.  
   
  Предусмотрено три основных уровня доверия для инфраструктуры <xref:System.Transactions>. Уровни доверия определяются на основе типов ресурсов, используемых инфраструктурой <xref:System.Transactions>, и уровня доверия, который требуется для доступа к этим ресурсам. Ресурсами, к которым инфраструктура <xref:System.Transactions> предоставляет доступ, являются системная память, ресурсы, общие для всего процесса, и ресурсы, общие для всей системы. Ниже представлены предусмотренные уровни доверия.  
   
--   **AllowPartiallyTrustedCallers** (APTCA) для приложений, использующих транзакции в одном домене приложения.  
+- **AllowPartiallyTrustedCallers** (APTCA) для приложений, использующих транзакции в одном домене приложения.  
   
--   **Разрешения DistributedTransactionPermission** (DTP) для приложений, использующих распределенные транзакции.  
+- **DistributedTransactionPermission** (DTP) для приложений, использующих распределенные транзакции.  
   
--   FullTrust - для устойчивых ресурсов, приложений управления конфигурацией и приложений взаимодействия с традиционными системами.  
+- FullTrust - для устойчивых ресурсов, приложений управления конфигурацией и приложений взаимодействия с традиционными системами.  
   
 > [!NOTE]
 >  Не следует вызывать какие-либо интерфейсы зачисления с олицетворяемыми контекстами.  
@@ -26,7 +26,7 @@ ms.locfileid: "33357599"
 ## <a name="trust-levels"></a>Уровни доверия  
   
 ### <a name="aptca-partial-trust"></a>APTCA (частичное доверие)  
- <xref:System.Transactions> Сборки может вызываться частично доверенным кодом, так как он был помечен **AllowPartiallyTrustedCallers** атрибут (APTCA). Этот атрибут по существу исключает неявный <xref:System.Security.Permissions.SecurityAction.LinkDemand> для **FullTrust** набор разрешений, в противном случае автоматически используется в каждом общедоступном методе каждого типа. Однако для некоторых типов и элементов по-прежнему требуются разрешения более высокого уровня.  
+ <xref:System.Transactions> Сборки может вызываться кодом с частичным доверием, так как он был помечен **AllowPartiallyTrustedCallers** атрибут (APTCA). Этот атрибут по существу исключает неявный <xref:System.Security.Permissions.SecurityAction.LinkDemand> для **FullTrust** набор разрешений, в противном случае автоматически размещены на каждом общедоступном методе каждого типа. Однако для некоторых типов и элементов по-прежнему требуются разрешения более высокого уровня.  
   
  Атрибут APTCA позволяет приложениям использовать транзакции с частичным доверием в одном домене приложения. Это обеспечивает использование неповышаемых транзакций и зачислений неустойчивых ресурсов, которые можно применять для обработки ошибок. В качестве примера рассмотрим транзакционную хэш-таблицу и используемое ей приложение. Данные можно добавлять и удалять из хэш-таблицы в рамках одной транзакции. В случае последующего отката транзакции все произведенные в рамках транзакции изменения хэш-таблицы могут быть отменены.  
   
@@ -38,28 +38,28 @@ ms.locfileid: "33357599"
   
  Для выполнения восстановления у этого приложения имеется способность постоянно потреблять системные ресурсы. Это необходимо, поскольку диспетчер ресурсов, выполняющий восстановление, должен вспомнить все зафиксированные транзакции, прежде чем он сможет подтвердить, что все участвующие в транзакции диспетчеры устойчивых ресурсов получили результат транзакции. Поэтому приложению данного типа требуется разрешение FullTrust, и его не следует запускать, если такой уровень доверия не предоставлен.  
   
- Дополнительные сведения о долговременным присоединением к транзакции и восстановления см. в разделе [прикрепление ресурсов в качестве участников в транзакции](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) и [выполнение восстановления](../../../../docs/framework/data/transactions/performing-recovery.md) разделы.  
+ Дополнительные сведения о зачислении устойчивых ресурсов и восстановления, см. в разделе [ресурсы прикрепление в транзакции, в качестве участников](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) и [выполнение восстановления](../../../../docs/framework/data/transactions/performing-recovery.md) разделы.  
   
  Приложениям, которые выполняют традиционные операции взаимодействия с COM+, также требуется разрешение FullTrust.  
   
- Ниже приведен список типов и членов, которые не могут вызываться частично доверенным кодом, поскольку маркируются с **FullTrust** атрибут декларативной безопасности:  
+ Ниже приведен список типов и членов, которые не могут вызываться частично доверенного кода, поскольку они отмечены **FullTrust** декларативным атрибутом безопасности:  
   
  `PermissionSetAttribute(SecurityAction.LinkDemand, Name := "FullTrust")`  
   
--   <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>  
+- <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>  
   
--   <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A>  
+- <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A>  
   
--   <xref:System.Transactions.TransactionInterop>  
+- <xref:System.Transactions.TransactionInterop>  
   
--   <xref:System.Transactions.TransactionManager.DistributedTransactionStarted>  
+- <xref:System.Transactions.TransactionManager.DistributedTransactionStarted>  
   
--   <xref:System.Transactions.HostCurrentTransactionCallback>  
+- <xref:System.Transactions.HostCurrentTransactionCallback>  
   
--   <xref:System.Transactions.TransactionManager.Reenlist%2A>  
+- <xref:System.Transactions.TransactionManager.Reenlist%2A>  
   
--   <xref:System.Transactions.TransactionManager.RecoveryComplete%2A>  
+- <xref:System.Transactions.TransactionManager.RecoveryComplete%2A>  
   
--   <xref:System.Transactions.TransactionScope.%23ctor%28System.Transactions.TransactionScopeOption%2CSystem.Transactions.TransactionOptions%2CSystem.Transactions.EnterpriseServicesInteropOption%29>  
+- <xref:System.Transactions.TransactionScope.%23ctor%28System.Transactions.TransactionScopeOption%2CSystem.Transactions.TransactionOptions%2CSystem.Transactions.EnterpriseServicesInteropOption%29>  
   
- Только непосредственный вызывающий объект должен обладать **FullTrust** набор разрешений для использования выше типов или методов.
+ Только непосредственно вызывающий объект должен обладать **FullTrust** набор разрешений, необходимо использовать перечисленные выше типы и методы.

@@ -3,11 +3,11 @@ title: Отличия Entity SQL от Transact-SQL
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
 ms.openlocfilehash: 75ce0b00962526b76ea9f4b9fdfb0d1e1e564cdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774755"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Отличия Entity SQL от Transact-SQL
 В этом разделе описываются различия между [!INCLUDE[esql](../../../../../../includes/esql-md.md)] и [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
@@ -20,15 +20,15 @@ ms.locfileid: "59162741"
 ## <a name="support-for-collections"></a>Поддержка коллекций  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] коллекции рассматриваются как сущности первого класса. Пример:  
   
--   Выражения коллекций допускаются в предложении `from`.  
+- Выражения коллекций допускаются в предложении `from`.  
   
--   Вложенные запросы `in` и `exists` были обобщены, чтобы разрешить любые коллекции.  
+- Вложенные запросы `in` и `exists` были обобщены, чтобы разрешить любые коллекции.  
   
      Вложенный запрос - один из видов коллекций. `e1 in e2` и `exists(e)` - конструкции языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)] для выполнения этих операций.  
   
--   Операторы работы с наборами, такие как `union`, `intersect` и `except`, теперь работают с коллекциями.  
+- Операторы работы с наборами, такие как `union`, `intersect` и `except`, теперь работают с коллекциями.  
   
--   Операции соединения с коллекциями.  
+- Операции соединения с коллекциями.  
   
 ## <a name="support-for-expressions"></a>Поддержка выражений  
  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] имеет вложенные запросы (таблицы) и выражения (строки и столбцы).  

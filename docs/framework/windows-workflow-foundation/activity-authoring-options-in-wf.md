@@ -3,19 +3,19 @@ title: Параметры разработки действий в WF
 ms.date: 03/30/2017
 ms.assetid: b9061f5f-12c3-47f0-adbe-1330e2714c94
 ms.openlocfilehash: 219d759cd1390a83abfb90af509b21047085f6e9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774235"
 ---
 # <a name="activity-authoring-options-in-wf"></a>Параметры разработки действий в WF
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] обеспечивает несколько вариантов разработки настраиваемых действий. Выбор правильного метода создания определенного действия зависит от требований функций времени выполнения.  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] обеспечивает несколько вариантов разработки настраиваемых действий. Выбор правильного метода создания определенного действия зависит от требований возможностей времени выполнения.  
   
 ## <a name="deciding-which-base-activity-class-to-use-for-authoring-custom-activities"></a>Выбор базового класса действий для разработки настраиваемых действий  
  В следующей таблице перечислены функции, доступные в базовых классах настраиваемых действий.  
   
-|Базовый класс действия|Доступные функции|  
+|Базовый класс действия|Доступные возможности|  
 |-------------------------|------------------------|  
 |<xref:System.Activities.Activity>|Формирует составное действие из групп системных и настраиваемых действий.|  
 |<xref:System.Activities.CodeActivity>|Реализует императивные функции путем предоставления метода <xref:System.Activities.CodeActivity%601.Execute%2A>, который можно переопределить. Также обеспечивает доступ к отслеживанию, переменным и аргументам.|  

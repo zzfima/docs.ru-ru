@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e8a842dd531576b1029c3924d12b1a4bd95bde37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791564"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>Метод ICorProfilerInfo2::GetThreadStaticAddress
 Возвращает адрес указанного поля статического потока, который находится в области заданного потока.  
@@ -53,9 +53,9 @@ HRESULT GetThreadStaticAddress(
 ## <a name="remarks"></a>Примечания  
  `GetThreadStaticAddress` Метод может возвращать одно из следующих:  
   
--   HRESULT CORPROF_E_DATAINCOMPLETE, если заданного статические поля не был назначен адрес в заданном контексте.  
+- HRESULT CORPROF_E_DATAINCOMPLETE, если заданного статические поля не был назначен адрес в заданном контексте.  
   
--   Адреса объектов, которые могут быть в куче сбора мусора. Эти адреса могут стать недопустимыми после сборки мусора, поэтому после сборки мусора коллекции профилировщики не должны предполагать, что они являются допустимыми.  
+- Адреса объектов, которые могут быть в куче сбора мусора. Эти адреса могут стать недопустимыми после сборки мусора, поэтому после сборки мусора коллекции профилировщики не должны предполагать, что они являются допустимыми.  
   
  До завершения конструктора класса `GetThreadStaticAddress` возвращает CORPROF_E_DATAINCOMPLETE для всех статических полей, несмотря на то, что некоторые статические поля уже могут быть инициализированы и болея объекты сборки мусора.  
   

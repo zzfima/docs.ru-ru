@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
 ms.openlocfilehash: 5ab1419a29dd77ac276681bb49dc529fc05d5b15
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669554"
 ---
 # <a name="whats-new-in-windows-workflow-foundation"></a>Новые возможности в Windows Workflow Foundation (WF)
 Windows Workflow Foundation (WF) в [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] изменяет несколько принципов разработки из предыдущих версий. Теперь рабочие процессы стало еще проще создавать, выполнять и поддерживать, а также реализовывать узел с новыми функциями. Дополнительные сведения о миграции .NET 3.0 и .NET 3.5 приложений рабочих процессов для использования последней версии, см. в разделе [руководство по миграции](migration-guidance.md).  
@@ -22,15 +22,15 @@ Windows Workflow Foundation (WF) в [!INCLUDE[netfx40_long](../../../includes/ne
  <xref:System.Activities.Statements.Flowchart> - это новое мощное действие потока управления, позволяющее авторам моделировать произвольные циклы и условное ветвление. <xref:System.Activities.Statements.Flowchart> предоставляет модель программирования на основе событий, которую раньше можно было реализовать только с помощью <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. Процедурные рабочие процессы получают дополнительные преимущества благодаря новым действиям управления потоком, которые моделируют обычные структуры управления потоком, такие как <xref:System.Activities.Statements.TryCatch> и <xref:System.Activities.Statements.Switch%601>.  
   
 ## <a name="expanded-built-in-activity-library"></a>Расширенная библиотека встроенных действий  
- Новые функции библиотеки действий:  
+ Новые возможности библиотеки действий:  
   
--   Новые действия управления потоком, такие как <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.Pick>, <xref:System.Activities.Statements.TryCatch>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.Switch%601> и <xref:System.Activities.Statements.ParallelForEach%601>.  
+- Новые действия управления потоком, такие как <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.Pick>, <xref:System.Activities.Statements.TryCatch>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.Switch%601> и <xref:System.Activities.Statements.ParallelForEach%601>.  
   
--   Действия для обработки данных элементов, такие как <xref:System.Activities.Statements.Assign>, и действия коллекции, такие как <xref:System.Activities.Statements.AddToCollection%601>.  
+- Действия для обработки данных элементов, такие как <xref:System.Activities.Statements.Assign>, и действия коллекции, такие как <xref:System.Activities.Statements.AddToCollection%601>.  
   
--   Действия для управления транзакциями, такие как <xref:System.Activities.Statements.TransactionScope> и <xref:System.Activities.Statements.Compensate>.  
+- Действия для управления транзакциями, такие как <xref:System.Activities.Statements.TransactionScope> и <xref:System.Activities.Statements.Compensate>.  
   
--   Новые действия для обмена сообщениями, такие как <xref:System.ServiceModel.Activities.SendContent> и <xref:System.ServiceModel.Activities.ReceiveReply>.  
+- Новые действия для обмена сообщениями, такие как <xref:System.ServiceModel.Activities.SendContent> и <xref:System.ServiceModel.Activities.ReceiveReply>.  
   
 ## <a name="explicit-activity-data-model"></a>Явная модель данных действия  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] включает новые варианты хранения и перемещения данных. Данные можно сохранить в действии при помощи переменной <xref:System.Activities.Variable>. При перемещении данных в действие и из него для определения направления перемещения данных используются специальные типы аргументов. Такими типами являются <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument> и <xref:System.Activities.OutArgument>. Дополнительные сведения см. в разделе [модель данных Windows Workflow Foundation](data-model.md).  
@@ -38,21 +38,21 @@ Windows Workflow Foundation (WF) в [!INCLUDE[netfx40_long](../../../includes/ne
 ## <a name="enhanced-hosting-persistence-and-tracking-options"></a>Улучшенные варианты размещения на узле, сохраняемости и отслеживания  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] содержит следующие усовершенствования сохраняемости.  
   
--   Добавлены новые параметры для выполнения рабочих процессов, включая <xref:System.ServiceModel.Activities.WorkflowServiceHost>, <xref:System.Activities.WorkflowApplication> и <xref:System.Activities.WorkflowInvoker>.  
+- Добавлены новые параметры для выполнения рабочих процессов, включая <xref:System.ServiceModel.Activities.WorkflowServiceHost>, <xref:System.Activities.WorkflowApplication> и <xref:System.Activities.WorkflowInvoker>.  
   
--   При помощи действия <xref:System.Activities.Statements.Persist> данные состояния рабочего процесса можно сохранять явным образом.  
+- При помощи действия <xref:System.Activities.Statements.Persist> данные состояния рабочего процесса можно сохранять явным образом.  
   
--   Узел может сохранить экземпляр <xref:System.Activities.ActivityInstance>, не выгружая его.  
+- Узел может сохранить экземпляр <xref:System.Activities.ActivityInstance>, не выгружая его.  
   
--   Рабочий процесс может указывать зоны несохраняемости во время работы с данными, которые не могут быть сохранены, чтобы отложить операцию сохраняемости до выхода из зоны несохраняемости.  
+- Рабочий процесс может указывать зоны несохраняемости во время работы с данными, которые не могут быть сохранены, чтобы отложить операцию сохраняемости до выхода из зоны несохраняемости.  
   
--   Транзакции могут быть введены в рабочий процесс при помощи <xref:System.Activities.Statements.TransactionScope>.  
+- Транзакции могут быть введены в рабочий процесс при помощи <xref:System.Activities.Statements.TransactionScope>.  
   
--   Выполнять отслеживание проще благодаря <xref:System.Activities.Tracking.TrackingParticipant>.  
+- Выполнять отслеживание проще благодаря <xref:System.Activities.Tracking.TrackingParticipant>.  
   
--   Отслеживание и запись в журнал системных событий обеспечивается при помощи <xref:System.Activities.Tracking.EtwTrackingParticipant>.  
+- Отслеживание и запись в журнал системных событий обеспечивается при помощи <xref:System.Activities.Tracking.EtwTrackingParticipant>.  
   
--   Для возобновления ожидающего рабочего процесса теперь используется объект <xref:System.Activities.Bookmark>.  
+- Для возобновления ожидающего рабочего процесса теперь используется объект <xref:System.Activities.Bookmark>.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>Более удобное расширение среды проектирования WF Designer  
  Новый WF Designer построен на Windows Presentation Foundation (WPF) и обеспечивает более удобную модель для повторного размещения WF Designer за пределами Visual Studio также обеспечивает более простые механизмы для создания пользовательских конструкторов действий. Дополнительные сведения см. в разделе [Настройка конструктора рабочих процессов](customizing-the-workflow-design-experience.md).

@@ -3,11 +3,11 @@ title: INTERSECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 93c6fe33-f341-4b52-911e-adf503891951
 ms.openlocfilehash: 85b0abb03161b2df0cfc4ddf6cafc92fb7de9d95
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780384"
 ---
 # <a name="intersect-entity-sql"></a>INTERSECT (Entity SQL)
 Возвращает коллекцию различных значений, возвращаемых выражениями запроса, указанных как слева, так и справа от операнда INTERSECT. Все выражения должны иметь тот же тип, что и аргумент `expression`, или принадлежать к базовому или производному типу для типа этого аргумента.  

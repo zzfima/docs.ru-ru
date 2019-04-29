@@ -3,11 +3,11 @@ title: Требования к системе для поставщика дан
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
 ms.openlocfilehash: 61f8509cce248f6cc0a56900227f9758eb27c4e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698412"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Требования к системе для поставщика данных платформы .NET Framework для Oracle
 Поставщику данных платформы .NET Framework для Oracle требуются компоненты Microsoft Data Access Components (MDAC) версии 2.6 или более поздней версии. Рекомендуется MDAC 2.8 с пакетом обновления 2 (SP1).  

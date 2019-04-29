@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed32fe643a7722eaf1af38e6079096194690e950
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771897"
 ---
 # <a name="iclrruntimehost-interface"></a>Интерфейс ICLRRuntimeHost
 Предоставляет функциональные возможности аналогичны [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) интерфейс, предоставляемый в .NET Framework версии 1, со следующими изменениями:  
   
--   Добавление [SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md) метод, позволяющий настраивать интерфейс управления узла.  
+- Добавление [SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md) метод, позволяющий настраивать интерфейс управления узла.  
   
--   Если пропустить некоторые методы, предоставляемые `ICorRuntimeHost`.  
+- Если пропустить некоторые методы, предоставляемые `ICorRuntimeHost`.  
   
 ## <a name="methods"></a>Методы  
   

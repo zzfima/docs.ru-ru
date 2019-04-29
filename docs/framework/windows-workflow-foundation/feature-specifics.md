@@ -3,11 +3,11 @@ title: Особенности возможностей Windows Workflow Foundati
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
 ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773712"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Особенности возможностей Windows Workflow Foundation
 
@@ -43,9 +43,9 @@ ms.locfileid: "57846549"
 
 - Образцы <xref:System.ServiceModel.WorkflowServiceHost> приведены в следующих разделах:
 
-    - [Выполнение](./samples/execution.md)
+  - [Выполнение](./samples/execution.md)
 
-    - Приложение: [Управление приостановленным экземпляром](./samples/suspended-instance-management.md)
+  - Приложение: [Управление приостановленным экземпляром](./samples/suspended-instance-management.md)
 
 - [Общие сведения о размещении служб рабочих процессов](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -67,13 +67,13 @@ ms.locfileid: "57846549"
 
 - Примером корреляции для группирования сообщений является корреляция по схеме «запрос-ответ», группирующая сообщения.
 
-    - На <xref:System.ServiceModel.Activities.Receive> действия, щелкните <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> свойство и добавьте <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> с помощью типа CorrelationHandle созданные на первом шаге выше.
+  - На <xref:System.ServiceModel.Activities.Receive> действия, щелкните <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> свойство и добавьте <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> с помощью типа CorrelationHandle созданные на первом шаге выше.
 
-    - Создать <xref:System.ServiceModel.Activities.SendReply> действия, щелкните правой кнопкой мыши <xref:System.ServiceModel.Activities.Receive> и нажав кнопку «Создать SendReply». Вставьте его в рабочий процесс после действия <xref:System.ServiceModel.Activities.Receive>.
+  - Создать <xref:System.ServiceModel.Activities.SendReply> действия, щелкните правой кнопкой мыши <xref:System.ServiceModel.Activities.Receive> и нажав кнопку «Создать SendReply». Вставьте его в рабочий процесс после действия <xref:System.ServiceModel.Activities.Receive>.
 
 - Примером сопоставления порции данных с экземпляром службы является корреляция на основе содержимого, сопоставляющая данные (например, идентификатор заказа) с определенным экземпляром рабочего процесса.
 
-    - Для любого действия обмена сообщениями щелкните свойство `CorrelationInitializers` и добавьте <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> с помощью переменной <xref:System.ServiceModel.Activities.CorrelationHandle>, созданной ранее. Дважды щелкните нужное свойство сообщения (например, OrderID) в раскрывающемся меню. Установите свойство `CorrelatesWith` в значение переменной <xref:System.ServiceModel.Activities.CorrelationHandle>, определенной выше.
+  - Для любого действия обмена сообщениями щелкните свойство `CorrelationInitializers` и добавьте <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> с помощью переменной <xref:System.ServiceModel.Activities.CorrelationHandle>, созданной ранее. Дважды щелкните нужное свойство сообщения (например, OrderID) в раскрывающемся меню. Установите свойство `CorrelatesWith` в значение переменной <xref:System.ServiceModel.Activities.CorrelationHandle>, определенной выше.
 
 - [Основная документация по корреляции](../wcf/feature-details/correlation.md)
 
@@ -131,9 +131,9 @@ ms.locfileid: "57846549"
 
 - Образцы:
 
-    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
+  - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [Атрибут KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
+  - [Атрибут KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>Сценарии арбитра контрактов данных
 
@@ -151,25 +151,25 @@ ms.locfileid: "57846549"
 
 - В блок-схеме используются следующие классы:
 
-    - <xref:System.Activities.Statements.Flowchart>
+  - <xref:System.Activities.Statements.Flowchart>
 
-    - <xref:System.Activities.Statements.FlowNode>
+  - <xref:System.Activities.Statements.FlowNode>
 
-    - <xref:System.Activities.Statements.FlowDecision>
+  - <xref:System.Activities.Statements.FlowDecision>
 
-    - <xref:System.Activities.Statements.FlowStep>
+  - <xref:System.Activities.Statements.FlowStep>
 
-    - <xref:System.Activities.Statements.FlowSwitch%601>
+  - <xref:System.Activities.Statements.FlowSwitch%601>
 
 - Образцы:
 
-    - [Обработка ошибок в действии блок-схемы с помощью TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+  - [Обработка ошибок в действии блок-схемы с помощью TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [Процесс найма](./samples/hiring-process.md)
+  - [Процесс найма](./samples/hiring-process.md)
 
 - Документация по конструктору:
 
-    - [Конструкторы действий блок-схемы](/visualstudio/workflow-designer/flowchart-activity-designers)
+  - [Конструкторы действий блок-схемы](/visualstudio/workflow-designer/flowchart-activity-designers)
 
 ### <a name="flowchart-scenarios"></a>Сценарии блок-схем
 
@@ -197,15 +197,15 @@ ms.locfileid: "57846549"
 
 - Образцы:
 
-    - [Процесс найма](./samples/hiring-process.md)
+  - [Процесс найма](./samples/hiring-process.md)
 
-    - [Процесс корпоративных закупок](./samples/corporate-purchase-process.md)
+  - [Процесс корпоративных закупок](./samples/corporate-purchase-process.md)
 
 - Документация по конструктору:
 
-    - [Конструктор действия Parallel](/visualstudio/workflow-designer/parallel-activity-designer)
+  - [Конструктор действия Parallel](/visualstudio/workflow-designer/parallel-activity-designer)
 
-    - [ParallelForEach\<T > конструктора действий](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
+  - [ParallelForEach\<T > конструктора действий](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
 
 ### <a name="procedural-activity-scenarios"></a>Сценарии процедурных действий
 
@@ -275,7 +275,7 @@ ms.locfileid: "57846549"
 
 1. Маршрутизация на основе содержимого (Объекты <xref:System.ServiceModel.Dispatcher.MessageFilter> исследуют сообщение и определяют, куда оно должно быть отправлено.)
 
-2. Связывание протоколов (транспортного и сообщений)
+2. Протокол привязки (транспортного и сообщений)
 
 3. Обработка ошибок (маршрутизатор перехватывает исключения и при возникновении сбоя переходит к резервным конечным точкам)
 

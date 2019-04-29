@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
 ms.openlocfilehash: 4464100012fe9b3e1f0e8743707b1dc9a477c3d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59205892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787872"
 ---
 # <a name="how-to-create-a-secure-session"></a>Практическое руководство. Создание сеанса безопасности
 За исключением элемента [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) привязки, предоставляемые системой привязки в Windows Communication Foundation (WCF) автоматически используют безопасные сеансы при включенной безопасности сообщений.  
@@ -21,7 +21,7 @@ ms.locfileid: "59205892"
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a>Задание использования службой безопасных сеансов с помощью одной из предоставляемых системой привязок  
   
--   Настройте службу на использование предоставляемой системой привязки, поддерживающей безопасность сообщений.  
+- Настройте службу на использование предоставляемой системой привязки, поддерживающей безопасность сообщений.  
   
      За исключением элемента [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) привязки, если предоставляемые системой привязки настроены на использование безопасности сообщений, WCF автоматически использует безопасные сеансы. В следующей таблице перечислены предоставляемые системой привязки, поддерживающие безопасность сообщений, и указано, является ли безопасность сообщений механизмом безопасности по умолчанию для данной привязки.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "59205892"
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a>Задание использования службой безопасных сеансов с помощью пользовательской привязки  
   
--   Создайте пользовательскую привязку, которая задает, что сообщения SOAP защищаются безопасным сеансом.  
+- Создайте пользовательскую привязку, которая задает, что сообщения SOAP защищаются безопасным сеансом.  
   
      Дополнительные сведения о создании пользовательской привязки, см. в разделе [как: Настройка привязки, предоставляемой системой](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
   

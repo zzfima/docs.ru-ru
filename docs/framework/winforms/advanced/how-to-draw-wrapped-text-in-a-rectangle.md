@@ -10,11 +10,11 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
 ms.openlocfilehash: 8e5c7cab1f977bef0570b2e540d7bf3a630aceb0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781413"
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Практическое руководство. Многострочный вывод текста в прямоугольнике
 Можно рисовать перенос текста в прямоугольнике, используя <xref:System.Drawing.Graphics.DrawString%2A> перегруженным методом <xref:System.Drawing.Graphics> класс, принимающий <xref:System.Drawing.Rectangle> или <xref:System.Drawing.RectangleF> параметра. Вы также будете использовать <xref:System.Drawing.Brush> и <xref:System.Drawing.Font>.  
@@ -42,7 +42,7 @@ ms.locfileid: "59301932"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для работы предыдущих примеров:  
   
--   <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
+- <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>См. также
 

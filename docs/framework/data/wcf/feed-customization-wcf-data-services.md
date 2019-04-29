@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
 ms.openlocfilehash: 51da86d6c0f565d1baa58452a661ccbaa321538c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765691"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Настройка каналов (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] использует [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] для предоставления данных в виде канала. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] поддерживает форматы Atom и нотации объектов JavaScript (JSON) для веб-каналов данных. При использовании потока Atom [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] предоставляет стандартный метод сериализации данных, таких как сущности и связи, в формате XML, которое может быть включено в тексте HTTP-сообщения. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Определяет свойства сущности по умолчанию сопоставление между данными, содержащимися в сущностях и элементах Atom. Дополнительные сведения см. в разделе [OData: Формат Atom](https://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -83,12 +83,12 @@ ms.locfileid: "59517321"
 ## <a name="feed-customization-considerations"></a>Рекомендации по настройке канала  
  При определении пользовательских сопоставлений канала необходимо учитывать следующее.  
   
--   [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Клиент рассматривает сопоставленные элементы в канале как пустые если они содержат только пробелы. По этой причине на стороне клиента с тем же пробелы не материализуются сопоставленные элементы, которые содержат только пробелы. Чтобы сохранить этот пробел на стороне клиента, необходимо задать значение `KeepInContext` для `true` в атрибуте сопоставления канала.  
+- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Клиент рассматривает сопоставленные элементы в канале как пустые если они содержат только пробелы. По этой причине на стороне клиента с тем же пробелы не материализуются сопоставленные элементы, которые содержат только пробелы. Чтобы сохранить этот пробел на стороне клиента, необходимо задать значение `KeepInContext` для `true` в атрибуте сопоставления канала.  
   
 ## <a name="versioning-requirements"></a>Требования к управлению версиями  
  При настройке канала предъявляются следующие требования к управлению версиями протокола [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]:  
   
--   Для настройки канала требуется, чтобы и клиент, и служба данных поддерживали версию 2.0 протокола [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] и последующие версии.  
+- Для настройки канала требуется, чтобы и клиент, и служба данных поддерживали версию 2.0 протокола [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] и последующие версии.  
   
  Дополнительные сведения см. в разделе [управление версиями службы данных](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   

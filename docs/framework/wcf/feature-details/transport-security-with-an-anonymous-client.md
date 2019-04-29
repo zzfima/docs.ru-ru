@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
 ms.openlocfilehash: 20d7e59ba2b4b9dedc0b0daff1c1aa9c5210e61b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932966"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Безопасность транспорта с анонимным клиентом
 
@@ -47,7 +47,7 @@ ms.locfileid: "55260389"
 [!code-csharp[c_SecurityScenarios#5](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#5)]
 [!code-vb[c_SecurityScenarios#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#5)]
 
-### <a name="configuration"></a>Конфигурация
+### <a name="configuration"></a>Параметр Configuration
 
 В следующем коде настраивается та же конечная точка с использованием конфигурации. Проверка подлинности клиента не выполняется никаким механизмом и, следовательно, клиент является анонимным.
 
@@ -84,7 +84,7 @@ ms.locfileid: "55260389"
 
 - Создайте автономный клиент, используя код (и код клиента).
 
-- Создайте клиент, который не определяет никаких адресов конечных точек. Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации. Например:
+- Создайте клиент, который не определяет никаких адресов конечных точек. Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации. Пример:
 
      [!code-csharp[C_SecurityScenarios#0](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]
@@ -94,7 +94,7 @@ ms.locfileid: "55260389"
 [!code-csharp[c_SecurityScenarios#6](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#6)]
 [!code-vb[c_SecurityScenarios#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#6)]
 
-### <a name="configuration"></a>Конфигурация
+### <a name="configuration"></a>Параметр Configuration
 
 Вместо кода для настройки службы можно использовать следующую конфигурацию.
 

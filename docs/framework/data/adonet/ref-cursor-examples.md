@@ -3,11 +3,11 @@ title: Примеры REF CURSOR
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
 ms.openlocfilehash: dfad86c6d5c99d7a1b99d7cfbde165d5ec39f5f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651679"
 ---
 # <a name="ref-cursor-examples"></a>Примеры REF CURSOR
 Примеры REF CURSOR состоят из трех следующих примеров Microsoft Visual Basic, в которых демонстрируется использование REF CURSOR.  

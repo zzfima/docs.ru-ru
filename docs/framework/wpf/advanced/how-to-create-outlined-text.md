@@ -12,11 +12,11 @@ helpviewer_keywords:
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
 ms.openlocfilehash: 237bdc097cd2a3fbfff6dd79bce401c2d091e211
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776770"
 ---
 # <a name="how-to-create-outlined-text"></a>Практическое руководство. Создание контурного текста
 В большинстве случаев при добавлении декоративных элементов в текстовые строки в вашей [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложения, вы используете текст в виде коллекции дискретных символов или глифов. Например, можно создать кисть линейного градиента и применить его к <xref:System.Windows.Controls.Control.Foreground%2A> свойство <xref:System.Windows.Controls.TextBox> объекта. При отображении или измените текстовое поле, кисти линейного градиента применяется автоматически в текущий набор символов в текстовой строке.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
 ms.openlocfilehash: 026b2a250abfac0782feb0946bc50a94f504f7ed
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663288"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Преобразование типов в Visual Basic
 Процесс изменения значения одного типа данных в другой тип называется *преобразования*. Преобразования могут быть *расширяющие* или *сужающие*, в зависимости от диапазонов данных типов. Они также *неявное* или *явных*в зависимости от синтаксиса в исходном коде.  
@@ -30,7 +30,7 @@ ms.locfileid: "44084472"
  [Преобразования значений между строковыми и другими типами](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  Описываются преобразования между строками и числовыми, `Boolean`, или значения даты и времени.  
   
- [Практическое: преобразование объекта в другой тип в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ [Практическое руководство. Преобразование объекта к другому типу в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
  Показано, как преобразовать `Object` переменной в любой другой тип данных.  
   
  [Преобразования массивов](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  

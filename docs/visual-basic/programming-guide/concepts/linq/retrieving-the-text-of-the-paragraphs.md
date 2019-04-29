@@ -3,11 +3,11 @@ title: Извлечение текста абзацев (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 095fa0d9-7b1b-4cbb-9c13-e2c9d8923d31
 ms.openlocfilehash: bc6035c7d894d30b1441dd35925c233e02d35163
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787027"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>Извлечение текста абзацев (Visual Basic)
 Этот пример основан на предыдущем примере [извлечение абзацев и стилей (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). В этом примере текст каждого абзаца получается в строку.  
@@ -139,7 +139,7 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>Следующие шаги  
  В следующем примере показано, как использовать метод расширений вместо <xref:System.Linq.Enumerable.Aggregate%2A>, чтобы объединить несколько строк в одну.  
   
--   [Рефакторинг с использованием метода расширения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+- [Рефакторинг с использованием метода расширения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
   
 ## <a name="see-also"></a>См. также
 

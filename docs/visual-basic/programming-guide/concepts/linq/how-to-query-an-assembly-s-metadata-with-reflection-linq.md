@@ -3,11 +3,11 @@ title: Практическое руководство. Запрос к мета
 ms.date: 07/20/2015
 ms.assetid: 53caa336-ab83-4181-b0f6-5c87c5f9e4ee
 ms.openlocfilehash: b5b74e27d4cfeb4360d9c743d16c16dc82134038
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644675"
 ---
 # <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-visual-basic"></a>Практическое руководство. Запрос к метаданным сборки при помощи отражения (LINQ) (Visual Basic)
 В следующем примере показано использование LINQ с отражением для извлечения определенных метаданных о методах, соответствующих условиям поиска. В этом примере запрос будет искать имена всех методов в сборке, которые возвращают перечислимые типы, такие как массивы.  

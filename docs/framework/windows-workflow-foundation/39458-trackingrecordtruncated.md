@@ -3,18 +3,18 @@ title: 39458 - TrackingRecordTruncated
 ms.date: 03/30/2017
 ms.assetid: 5352f0eb-d571-454a-bab5-e2162888b218
 ms.openlocfilehash: 416feb4073b31178b016ae72c9cd85e15c4a68c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774417"
 ---
 # <a name="39458---trackingrecordtruncated"></a>39458 - TrackingRecordTruncated
 ## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
-|Идентификатор|39458|  
+|ID|39458|  
 |Ключевые слова|WFTracking|  
 |Уровень|Предупреждение|  
 |Канал|Microsoft-Windows-Application Server-Applications/Debug|  
@@ -31,4 +31,4 @@ ms.locfileid: "33514486"
 |--------------------|--------------------|-----------------|  
 |RecordNumber|xs:string|Номер записи отслеживания.|  
 |ProviderId|xs:string|Идентификатор поставщика трассировки событий Windows.|  
-|AppDomain|xs:string|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|Домен приложения|xs:string|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|

@@ -18,20 +18,20 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b485811b0e7d2f657ff2d2c1d7a2aa135e48a335
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771674"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>Метод ICLRRuntimeInfo::LoadErrorString
 Преобразовывает значение HRESULT в соответствующее сообщение об ошибке для указанного языка и региональных параметров.  
   
  Этот метод замещает следующие функции:  
   
--   [LoadStringRC](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
+- [LoadStringRC](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
   
--   [LoadStringRCEx](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
+- [LoadStringRCEx](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   

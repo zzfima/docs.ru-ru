@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
 ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782438"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Обращение к службам с использованием клиента WCF
 
@@ -178,11 +178,11 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 Многие исключения, создаваемые клиента WCF, вызваны исключения в службе. Ниже приведены некоторые примеры.
 
--   <xref:System.Net.Sockets.SocketException>: Существующее соединение было принудительно закрыто удаленным узлом.
+- <xref:System.Net.Sockets.SocketException>: Существующее соединение было принудительно закрыто удаленным узлом.
 
--   <xref:System.ServiceModel.CommunicationException>: Базовое подключение было неожиданно закрыто.
+- <xref:System.ServiceModel.CommunicationException>: Базовое подключение было неожиданно закрыто.
 
--   <xref:System.ServiceModel.CommunicationObjectAbortedException>: Подключение через сокет прервано. Это может быть вызвано ошибкой при обработке сообщения, истечением времени ожидания на удаленном узле или проблемой с соответствующим сетевым ресурсом.
+- <xref:System.ServiceModel.CommunicationObjectAbortedException>: Подключение через сокет прервано. Это может быть вызвано ошибкой при обработке сообщения, истечением времени ожидания на удаленном узле или проблемой с соответствующим сетевым ресурсом.
 
 Если происходят исключения этих типов, лучшим решением проблемы является включение трассировки на стороне службы и определение исключения, которое там произошло. Дополнительные сведения о трассировке см. в разделе [трассировки](../../../docs/framework/wcf/diagnostics/tracing/index.md) и [с помощью трассировки для устранения неполадок приложения](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 

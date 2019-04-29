@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
 ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762898"
 ---
 # <a name="geometry-overview"></a>Общие сведения о классе Geometry
 В этом обзоре описывается использование [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> классов для описания фигур. В этом разделе также приведены различия между <xref:System.Windows.Media.Geometry> объектов и <xref:System.Windows.Shapes.Shape> элементов.  
@@ -55,11 +55,11 @@ ms.locfileid: "59180002"
   
  Простые геометрические классы включают <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.RectangleGeometry>, и <xref:System.Windows.Media.EllipseGeometry> и используются для создания простых геометрических фигур, таких как линии, прямоугольники и круги.  
   
--   Объект <xref:System.Windows.Media.LineGeometry> определяется путем указания начальной точки строки, а также конечную точку.  
+- Объект <xref:System.Windows.Media.LineGeometry> определяется путем указания начальной точки строки, а также конечную точку.  
   
--   Объект <xref:System.Windows.Media.RectangleGeometry> определяется с помощью <xref:System.Windows.Rect> структуры, указывающий его относительное положение, высоту и ширину. Можно создать прямоугольник с закругленными углами, установив <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> и <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> свойства.  
+- Объект <xref:System.Windows.Media.RectangleGeometry> определяется с помощью <xref:System.Windows.Rect> структуры, указывающий его относительное положение, высоту и ширину. Можно создать прямоугольник с закругленными углами, установив <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> и <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> свойства.  
   
--   <xref:System.Windows.Media.EllipseGeometry> Определяется центральной точки, радиус по оси x и y радиус.  Следующие примеры показывают, как создать простые геометрические объекты для отображения и для обрезки.  
+- <xref:System.Windows.Media.EllipseGeometry> Определяется центральной точки, радиус по оси x и y радиус.  Следующие примеры показывают, как создать простые геометрические объекты для отображения и для обрезки.  
   
  Эти же фигуры, а также более сложные фигуры, могут создаваться с использованием <xref:System.Windows.Media.PathGeometry> или путем объединения геометрических объектов, но эти классы предоставляют более простые средства для создания таких простых геометрических фигур.  
   
@@ -175,9 +175,9 @@ ms.locfileid: "59180002"
 ## <a name="composite-geometries"></a>Составные геометрические объекты  
  Составные геометрические объекты могут создаваться с использованием <xref:System.Windows.Media.GeometryGroup>, <xref:System.Windows.Media.CombinedGeometry>, или путем вызова статического <xref:System.Windows.Media.Geometry> метод <xref:System.Windows.Media.Geometry.Combine%2A>.  
   
--   <xref:System.Windows.Media.CombinedGeometry> Объекта и <xref:System.Windows.Media.Geometry.Combine%2A> метод выполняет логическую операцию объединения областей, определенных двумя геометрическими. <xref:System.Windows.Media.Geometry> объекты, не имеющие площади, отбрасываются. Только два <xref:System.Windows.Media.Geometry> объекты могут быть объединены (несмотря на то, что эти два геометрических объекта также могут быть составными).  
+- <xref:System.Windows.Media.CombinedGeometry> Объекта и <xref:System.Windows.Media.Geometry.Combine%2A> метод выполняет логическую операцию объединения областей, определенных двумя геометрическими. <xref:System.Windows.Media.Geometry> объекты, не имеющие площади, отбрасываются. Только два <xref:System.Windows.Media.Geometry> объекты могут быть объединены (несмотря на то, что эти два геометрических объекта также могут быть составными).  
   
--   <xref:System.Windows.Media.GeometryGroup> Класс создает объединением <xref:System.Windows.Media.Geometry> объектов без объединения их областей. Любое количество <xref:System.Windows.Media.Geometry> объекты могут быть добавлены к <xref:System.Windows.Media.GeometryGroup>. Пример см. в разделе [Создание составной фигуры](how-to-create-a-composite-shape.md).  
+- <xref:System.Windows.Media.GeometryGroup> Класс создает объединением <xref:System.Windows.Media.Geometry> объектов без объединения их областей. Любое количество <xref:System.Windows.Media.Geometry> объекты могут быть добавлены к <xref:System.Windows.Media.GeometryGroup>. Пример см. в разделе [Создание составной фигуры](how-to-create-a-composite-shape.md).  
   
  Так как они не выполняют операцию объединения, используя <xref:System.Windows.Media.GeometryGroup> объектов дает выигрыш в производительности по сравнению с использованием <xref:System.Windows.Media.CombinedGeometry> объектов или <xref:System.Windows.Media.Geometry.Combine%2A> метод.  
   
@@ -207,11 +207,11 @@ ms.locfileid: "59180002"
 ## <a name="other-geometry-features"></a>Другие функции класса Geometry  
  <xref:System.Windows.Media.Geometry> Класс также предоставляет полезные служебные методы, такие как следующие:  
   
--   <xref:System.Windows.Media.Geometry.GetArea%2A> — Возвращает область <xref:System.Windows.Media.Geometry>.  
+- <xref:System.Windows.Media.Geometry.GetArea%2A> — Возвращает область <xref:System.Windows.Media.Geometry>.  
   
--   <xref:System.Windows.Media.Geometry.FillContains%2A> — Определяет, содержит ли данная геометрия другой <xref:System.Windows.Media.Geometry>.  
+- <xref:System.Windows.Media.Geometry.FillContains%2A> — Определяет, содержит ли данная геометрия другой <xref:System.Windows.Media.Geometry>.  
   
--   <xref:System.Windows.Media.Geometry.StrokeContains%2A> — Определяет ли Обводка <xref:System.Windows.Media.Geometry> содержащую указанную точку.  
+- <xref:System.Windows.Media.Geometry.StrokeContains%2A> — Определяет ли Обводка <xref:System.Windows.Media.Geometry> содержащую указанную точку.  
   
  См. в разделе <xref:System.Windows.Media.Geometry> класс полный список методов.  
   

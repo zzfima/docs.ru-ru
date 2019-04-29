@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
 ms.openlocfilehash: 0f1b6cf27101c2a7f55757b72b56b2291198404d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767550"
 ---
 # <a name="object-identity"></a>Идентификация объектов
 Во время выполнения объекты получают уникальные идентификаторы. Две переменные, которые ссылаются на один объект, в действительности ссылаются на один экземпляр этого объекта. По этой причине изменения, произведенные посредством одной переменной, немедленно отображаются через вторую.  

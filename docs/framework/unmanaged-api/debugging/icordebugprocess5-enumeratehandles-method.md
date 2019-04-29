@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b3cc158c48e8bb9f833429bbddaa74ed459f1b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61930277"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>Метод ICorDebugProcess5::EnumerateHandles
 Возвращает перечислитель для дескрипторов объектов в процессе.  
@@ -46,11 +46,11 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
  `types` Параметр указывает типы дескрипторов для включения в коллекции. `types` может принимать любое из следующих трех членов [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) перечисления:  
   
--   `CorHandleStrongOnly` (маркеры только строгих ссылок.)  
+- `CorHandleStrongOnly` (маркеры только строгих ссылок.)  
   
--   `CorHandleWeakOnly` (маркеры только слабые ссылки.)  
+- `CorHandleWeakOnly` (маркеры только слабые ссылки.)  
   
--   `CorHandleAll` (все дескрипторы).  
+- `CorHandleAll` (все дескрипторы).  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

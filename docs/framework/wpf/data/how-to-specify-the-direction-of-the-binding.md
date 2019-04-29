@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
 ms.openlocfilehash: 4334ed178e7f2ed90928db6b434eb8c9fee77bf7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931486"
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a>Практическое руководство. Указание направления привязки
 В этом примере показано, как указать, что привязка обновляет только свойство цели привязки (цель), свойство источника привязки (источник) или обновляет свойство цели и свойство источника.  
@@ -19,15 +19,15 @@ ms.locfileid: "59206438"
 ## <a name="example"></a>Пример  
  Использовании <xref:System.Windows.Data.Binding.Mode%2A> свойство, чтобы указать направление привязки. В следующем списке перечислены доступные параметры для обновлений привязки.  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay> обновляет свойство цели или свойство, при каждом изменении целевого свойства или свойства источника.  
+- <xref:System.Windows.Data.BindingMode.TwoWay> обновляет свойство цели или свойство, при каждом изменении целевого свойства или свойства источника.  
   
--   <xref:System.Windows.Data.BindingMode.OneWay> обновляет свойство цели только при изменении свойства источника.  
+- <xref:System.Windows.Data.BindingMode.OneWay> обновляет свойство цели только при изменении свойства источника.  
   
--   <xref:System.Windows.Data.BindingMode.OneTime> обновляет свойство цели только при запуске приложения или при <xref:System.Windows.FrameworkElement.DataContext%2A> подвергается изменению.  
+- <xref:System.Windows.Data.BindingMode.OneTime> обновляет свойство цели только при запуске приложения или при <xref:System.Windows.FrameworkElement.DataContext%2A> подвергается изменению.  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource> Обновляет свойство источника при изменении свойства цели.  
+- <xref:System.Windows.Data.BindingMode.OneWayToSource> Обновляет свойство источника при изменении свойства цели.  
   
--   <xref:System.Windows.Data.BindingMode.Default> по умолчанию <xref:System.Windows.Data.Binding.Mode%2A> значение целевого свойства для использования.  
+- <xref:System.Windows.Data.BindingMode.Default> по умолчанию <xref:System.Windows.Data.Binding.Mode%2A> значение целевого свойства для использования.  
   
  Дополнительные сведения см. в описании перечисления <xref:System.Windows.Data.BindingMode>.  
   

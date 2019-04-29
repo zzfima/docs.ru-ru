@@ -10,11 +10,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f494d3176d72563a82b50fd5e077917e46045b91
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779188"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Поддержка двунаправленного письма для приложений Windows Forms
 Visual Studio можно использовать для создания приложений на основе Windows, которые поддерживают такие языки (справа налево), такие как арабский и иврит. Сюда входят стандартные формы, диалоговые окна, MDI-формы и все элементы управления, с которыми можно работать в этих формах, то есть все объекты в пространстве имен <xref:System.Windows.Forms.Control>.  
@@ -67,7 +67,7 @@ Visual Studio можно использовать для создания при
 |<xref:System.Windows.Forms.SaveFileDialog>|Не меняется; зависит от языка операционной системы.|Не влияет.|Нет|  
 |<xref:System.Windows.Forms.SplitContainer>|Макет панели обращается; вертикальная полоса прокрутки отображается слева; горизонтальная полоса прокрутки начинается справа.|Используйте <xref:System.Windows.Forms.TableLayoutPanel>, чтобы отразить порядок чтения дочерних элементов управления.|Нет|  
 |<xref:System.Windows.Forms.Splitter>|Не поддерживается|Не влияет.|Нет|  
-|<xref:System.Windows.Forms.StatusBar>|Не поддерживается; используйте <xref:System.Windows.Forms.StatusStrip>.|Не виляет; используйте <xref:System.Windows.Forms.StatusStrip>.|Нет|  
+|<xref:System.Windows.Forms.StatusBar>|Не поддерживается; используйте <xref:System.Windows.Forms.StatusStrip>.|Не влияет; используйте <xref:System.Windows.Forms.StatusStrip>.|Нет|  
 |<xref:System.Windows.Forms.TabControl>|Не изменяется этим свойством.|Зеркально отражает элемент управления.|Да|  
 |<xref:System.Windows.Forms.TextBox>|Отображение текста справа налево с порядком чтения справа налево.|Не влияет.|Нет|  
 |<xref:System.Windows.Forms.Timer>|Не требуется.|Не требуется.|Нет|  
@@ -101,19 +101,19 @@ Visual Studio можно использовать для создания при
   
  Можно создать отраженные версии следующих элементов управления:  
   
--   <xref:System.Windows.Forms.ColumnHeader.ListView%2A>  
+- <xref:System.Windows.Forms.ColumnHeader.ListView%2A>  
   
--   <xref:System.Windows.Forms.Panel>  
+- <xref:System.Windows.Forms.Panel>  
   
--   <xref:System.Windows.Forms.StatusBar>  
+- <xref:System.Windows.Forms.StatusBar>  
   
--   <xref:System.Windows.Forms.TabControl>  
+- <xref:System.Windows.Forms.TabControl>  
   
--   <xref:System.Windows.Forms.TabPage>  
+- <xref:System.Windows.Forms.TabPage>  
   
--   <xref:System.Windows.Forms.ToolBar>  
+- <xref:System.Windows.Forms.ToolBar>  
   
--   <xref:System.Windows.Forms.TreeView>  
+- <xref:System.Windows.Forms.TreeView>  
   
  Некоторые элементы управления запечатаны. Как следствие, из них нельзя наследовать новый элемент управления. К ним относятся элементы управления <xref:System.Windows.Forms.ImageList> и <xref:System.Windows.Forms.ProgressBar>.  
   

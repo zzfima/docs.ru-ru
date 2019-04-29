@@ -3,11 +3,11 @@ title: Рефакторинг с использованием чистых фу�
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
 ms.openlocfilehash: ac14385b87899490099dd0664264daef538319a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787118"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>Рефакторинг с использованием чистых функций (Visual Basic)
 Следующий пример выполняет рефакторинг предыдущему примеру, [рефакторинг с использованием метода расширения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), с использованием чистых функций в этом примере кода для поиска текста абзаца, перемещен в чисто статический метод `ParagraphText`.  
@@ -170,7 +170,7 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>Следующие шаги  
  В следующем примере показано, как выполнить проекцию XML в другую форму:  
   
--   [Проецирование XML в другую форму (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [Проецирование XML в другую форму (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>См. также
 

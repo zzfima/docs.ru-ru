@@ -3,20 +3,20 @@ title: Практическое руководство. Миграция веб-
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
 ms.openlocfilehash: 6114fa90b10a5d0cacb60a7ad40f63fae776e174
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683526"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Практическое руководство. Миграция веб-служб ASP.NET с поддержкой AJAX на платформу WCF
 В этом разделе описаны процедуры по переносу базовой службы ASP.NET AJAX для службы с поддержкой AJAX Windows Communication Foundation (WCF). В этом примере показано создание функционально эквивалентны WCF версию службы ASP.NET AJAX. Две службы затем используется рядом друг с другом или службы WCF можно использовать для замены службы ASP.NET AJAX.
 
  Перенос существующего ASP.NET AJAX вызовы между службами WCF AJAX предоставляет следующие преимущества:
 
--   службу AJAX можно сделать доступной в качестве службы SOAP при минимальной дополнительной настройке;
+- службу AJAX можно сделать доступной в качестве службы SOAP при минимальной дополнительной настройке;
 
--   Воспользуйтесь преимуществами функций WCF, таких как трассировка и т.д.
+- Воспользуйтесь преимуществами функций WCF, таких как трассировка и т.д.
 
  В следующих процедурах предполагается, что вы используете Visual Studio 2012.
 
@@ -179,9 +179,9 @@ namespace ASPHello
 
  Если веб-службы ASMX обновляются и перенести side-by-side служб WCF, избегайте сопоставления двух типов с тем же именем на стороне клиента. Это приведет к исключению при сериализации, если в атрибутах <xref:System.Web.Services.WebMethodAttribute> и <xref:System.ServiceModel.ServiceContractAttribute> будет использоваться один и тот же тип:
 
--   Если сначала добавляется служба WCF, вызывает метод на веб-службе ASMX приводит к исключению в <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> так, как приоритет WCF стиль определения порядка в прокси-сервер.
+- Если сначала добавляется служба WCF, вызывает метод на веб-службе ASMX приводит к исключению в <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> так, как приоритет WCF стиль определения порядка в прокси-сервер.
 
--   Если сначала добавляется веб-службы ASMX, вызов метода в службе WCF приводит к исключению в <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> так, как приоритет веб-службы стиль определения порядка в прокси-сервер.
+- Если сначала добавляется веб-службы ASMX, вызов метода в службе WCF приводит к исключению в <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> так, как приоритет веб-службы стиль определения порядка в прокси-сервер.
 
  Имеются важные различия в работе класса <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> и класса <xref:System.Web.Script.Serialization.JavaScriptSerializer> AJAX ASP.NET. Например, класс <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> представляет словарь в виде массива пар "ключ-значение", а класс <xref:System.Web.Script.Serialization.JavaScriptSerializer> AJAX ASP.NET представляет словарь в виде фактических объектов JSON. Ниже представлен словарь в формате AJAX ASP.NET.
 
@@ -193,9 +193,9 @@ d.Add("two", 2);
 
  Этот словарь состоит из объектов JSON, как показано в следующем списке:
 
--   [{"Key":"one","Value":1},{"Key":"two","Value":2}] - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
+- [{"Key":"one","Value":1},{"Key":"two","Value":2}] - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
 
--   {«one»: 1, «two»: 2} с ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>
+- {«one»: 1, «two»: 2} с ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
  Класс <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> обладает более широкими возможностями в том смысле, что он может обрабатываться словари, где тип ключа не является строковым; класс <xref:System.Web.Script.Serialization.JavaScriptSerializer> не поддерживает такой возможности. Однако последний класс лучше работает с форматом JSON.
 

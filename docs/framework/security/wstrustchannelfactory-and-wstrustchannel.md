@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 ms.openlocfilehash: ecc62292b2b064219127c369f43141a31ffe606d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780072"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory и WSTrustChannel
 Если вы уже знакомы с платформой Windows Communication Foundation (WCF), значит вам также известно, что клиент WCF уже включает возможности федерации. Путем настройки клиента WCF с привязкой <xref:System.ServiceModel.WSFederationHttpBinding> или аналогичной пользовательской привязкой можно включить федеративную проверку подлинности для службы.
@@ -25,7 +25,7 @@ ms.locfileid: "48839427"
 
 - использование WIF для получения токена от службы STS и настройки клиента WCF для проверки подлинности с данным токеном. Дополнительные сведения см. в описании примера [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406).
 
- Название первого сценария говорит само за себя: существующие клиенты WCF будут продолжать работать с проверяющими сторонами WIF и службами STS. В данном же разделе рассматриваются два других сценария.
+ Первый вариант — говорит само за себя: Существующие клиенты WCF будут продолжать работать с проверяющими сторонами WIF и серверами службы токенов безопасности. В данном же разделе рассматриваются два других сценария.
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>Расширение возможностей существующего клиента WCF за счет элементов ActAs и OnBehalfOf
 В типичном сценарии делегирования удостоверения клиент обращается к службе среднего уровня, которая, в свою очередь, обращается к серверной службе. Служба среднего уровня действует в качестве клиента или от его лица.

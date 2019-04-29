@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 58a39771bd89fc9c4947f80a3c87b4d340b5461c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934931"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>Метод ICorDebugAppDomain2::GetArrayOrPointerType
 Получает массив указанного типа, указатель или ссылка на указанный тип.  
@@ -54,11 +54,11 @@ HRESULT GetArrayOrPointerType (
 ## <a name="remarks"></a>Примечания  
  Значение *elementType* должно быть одно из следующих:  
   
--   ELEMENT_TYPE_PTR  
+- ELEMENT_TYPE_PTR  
   
--   ELEMENT_TYPE_BYREF  
+- ELEMENT_TYPE_BYREF  
   
--   ELEMENT_TYPE_ARRAY или ELEMENT_TYPE_SZARRAY  
+- ELEMENT_TYPE_ARRAY или ELEMENT_TYPE_SZARRAY  
   
  Если значение *elementType* ELEMENT_TYPE_PTR или ELEMENT_TYPE_BYREF, *nRank* должно быть равно нулю.  
   

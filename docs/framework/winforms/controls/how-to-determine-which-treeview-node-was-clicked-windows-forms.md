@@ -13,11 +13,11 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], determining node clicked
 ms.assetid: 06a4a191-d918-42af-9f49-956c93eff261
 ms.openlocfilehash: 71f13c7b160822c92475d4d03e923b40d4f0454d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771050"
 ---
 # <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>Практическое руководство. Определить, какой узел элемента управления TreeView была нажата (Windows Forms)
 При работе с Windows Forms <xref:System.Windows.Forms.TreeView> управления общей задачей является определение узла была нажата и реагировать соответствующим образом.  

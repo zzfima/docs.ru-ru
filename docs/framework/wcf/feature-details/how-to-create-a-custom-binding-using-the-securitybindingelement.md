@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787859"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement
 Windows Communication Foundation (WCF) включает в себя несколько предоставляемых системой привязок, которые можно настроить, но не предоставляют полную гибкость при настройке все параметры безопасности, которые поддерживает WCF. В этом разделе описывается создание пользовательской привязки непосредственно из отдельных элементов привязки с рассмотрением некоторых из параметров безопасности, которые могут быть заданы при создании такой привязки. Дополнительные сведения о создании пользовательских привязок см. в разделе [расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md).  
@@ -32,22 +32,22 @@ Windows Communication Foundation (WCF) включает в себя нескол
   
  При обеспечении безопасности на транспортном уровне используются дополнительные классы:  
   
--   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
 ## <a name="required-binding-elements"></a>Обязательные элементы привязки  
  Существует большое количество возможных элементов привязки, которые можно сочетать в одной привязке. При этом не все сочетания являются допустимыми. В этом разделе описываются обязательные элементы, которые должны присутствовать в привязке безопасности.  
   
  Допустимые привязки безопасности зависят от многих факторов, в том числе:  
   
--   режима безопасности;  
+- режима безопасности;  
   
--   транспортного протокола;  
+- транспортного протокола;  
   
--   шаблона обмена сообщениями (MEP), заданного в контракте.  
+- шаблона обмена сообщениями (MEP), заданного в контракте.  
   
  В следующей таблице приведены допустимые конфигурации стека элементов привязки для каждого сочетания перечисленных выше факторов. Эти конфигурации представляют собой минимальные требования. В привязку можно добавлять дополнительные элементы, такие как элементы для кодирования сообщений, элементы для транзакций и другие.  
   

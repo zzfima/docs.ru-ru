@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
 ms.openlocfilehash: 3752e358230b76d8984fa8e6a2ded43ad0eb2c6c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772974"
 ---
 # <a name="how-to-error-handling"></a>Как выполнить: Обработка ошибок
 В этом разделе описаны основные шаги по созданию конфигурации маршрутизации с применением обработки ошибок. В данном примере сообщения перенаправляются в целевую конечную точку. Если сообщение не удается доставить из-за сбоя сети или канала связи (<xref:System.ServiceModel.CommunicationException>), оно повторно отправляется в альтернативную конечную точку.  

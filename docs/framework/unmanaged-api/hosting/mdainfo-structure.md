@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3be6f2b9454ed2f74d2cc6792cd9aaa2c25215db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765210"
 ---
 # <a name="mdainfo-structure"></a>Структура MDAInfo
 Предоставляет сведения о `Event_MDAFired` событие, которое инициирует создание помощник по отладке управляемого (кода MDA).  
@@ -47,9 +47,9 @@ typedef struct _MDAInfo {
   
  При возникновении события, которое инициирует создание MDA, среда выполнения выполняет следующие действия:  
   
--   Если узел не зарегистрирован [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) экземпляра путем вызова [ICLROnEventManager::RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) для получения уведомлений об `Event_MDAFired` события, среда выполнения продолжает его по умолчанию, поведение без размещения.  
+- Если узел не зарегистрирован [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) экземпляра путем вызова [ICLROnEventManager::RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) для получения уведомлений об `Event_MDAFired` события, среда выполнения продолжает его по умолчанию, поведение без размещения.  
   
--   Если узел зарегистрировал обработчик для этого события, среда выполнения проверяет, присоединен ли отладчик к процессу. В противном случае среда выполнения переключается в режим отладчика. Когда отладчик продолжает, она вызывает главное приложение. Если отладчик не присоединен, среда выполнения вызывает `IActionOnCLREvent::OnEvent` и передает указатель на `MDAInfo` экземпляр как `data` параметр.  
+- Если узел зарегистрировал обработчик для этого события, среда выполнения проверяет, присоединен ли отладчик к процессу. В противном случае среда выполнения переключается в режим отладчика. Когда отладчик продолжает, она вызывает главное приложение. Если отладчик не присоединен, среда выполнения вызывает `IActionOnCLREvent::OnEvent` и передает указатель на `MDAInfo` экземпляр как `data` параметр.  
   
  Узел можно активировать MDA и получать уведомления при активации MDA. Это предоставляет узлу возможность переопределить поведение по умолчанию и отменить управляемый поток, который вызвал событие, чтобы предотвратить повреждение состояния процесса. Дополнительные сведения об использовании MDA, см. в разделе [Диагностика ошибок посредством управляемых помощников по отладке](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   

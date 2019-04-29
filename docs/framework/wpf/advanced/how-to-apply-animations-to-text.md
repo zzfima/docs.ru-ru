@@ -6,11 +6,11 @@ helpviewer_keywords:
 - animation [WPF], text
 ms.assetid: eec3d26c-0a21-420f-8012-671621c47089
 ms.openlocfilehash: 38aa432fecc5b5e10d8eb90be9c1c596728ed613
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776896"
 ---
 # <a name="how-to-apply-animations-to-text"></a>Практическое руководство. Применение анимаций к тексту
 Анимации могут менять отображение и внешний вид текста в приложении. В следующих примерах используются различные виды анимации влияющие на отображение текста в <xref:System.Windows.Controls.TextBlock> элемента управления.  

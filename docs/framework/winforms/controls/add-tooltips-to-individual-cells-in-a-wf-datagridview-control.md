@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], adding tooltips
 ms.assetid: 2a81f9de-d58b-4ea8-bc0b-8d93c2f4cf78
 ms.openlocfilehash: 3307c92a13e5730de6dce0fe45b924e44b7af554
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640300"
 ---
 # <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>Практическое руководство. Определение текста всплывающих подсказок для отдельных ячеек элемента управления DataGridView в Windows Forms
 По умолчанию всплывающие подсказки используются для отображения значений <xref:System.Windows.Forms.DataGridView> ячеек, которые слишком малы, чтобы отображать их полное содержимое. Это поведение можно переопределить тем не менее, чтобы задать значения текст подсказки для отдельных ячеек. Это полезно для отображения дополнительных сведений пользователям о ячейке, или для предоставления пользователям альтернативное описание содержимого ячейки. Например если у вас есть строка, содержащая значки состояния, может потребоваться включение текстовых пояснений, с помощью всплывающих подсказок.  
@@ -24,7 +24,7 @@ ms.locfileid: "59119643"
   
 ### <a name="to-add-a-tooltip-to-a-cell"></a>Чтобы добавить подсказку для ячейки  
   
--   Задайте свойство <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType>.  
+- Задайте свойство <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType>.  
   
      [!code-cpp[System.Windows.Forms.DataGridViewCell.ToolTipText#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/cpp/datagridviewcell.tooltiptext.cpp#1)]
      [!code-csharp[System.Windows.Forms.DataGridViewCell.ToolTipText#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/CS/datagridviewcell.tooltiptext.cs#1)]
@@ -32,11 +32,11 @@ ms.locfileid: "59119643"
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
--   Для этого примера требуются:  
+- Для этого примера требуются:  
   
--   Объект <xref:System.Windows.Forms.DataGridView> управления с именем `dataGridView1` , содержащий столбец с именем `Rating` для отображения строковых значений от одного до четырех звездочки ("*») символов. <xref:System.Windows.Forms.DataGridView.CellFormatting> События элемента управления должен быть связан с показано в примере метода обработчика событий.  
+- Объект <xref:System.Windows.Forms.DataGridView> управления с именем `dataGridView1` , содержащий столбец с именем `Rating` для отображения строковых значений от одного до четырех звездочки ("*») символов. <xref:System.Windows.Forms.DataGridView.CellFormatting> События элемента управления должен быть связан с показано в примере метода обработчика событий.  
   
--   ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
+- ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  При привязке <xref:System.Windows.Forms.DataGridView> управления к внешнему источнику данных или обеспечивается реализация виртуального режима для источника данных, могут возникнуть проблемы с производительностью. Чтобы избежать снижения производительности при работе с большими объемами данных, обрабатывать <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> событий, а не параметр <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> свойство несколько ячеек. Когда вы обрабатываете это событие, получение значения ячейки <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> свойство вызывает событие и возвращает значение <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType> свойство как указанный в событии обработчик.  

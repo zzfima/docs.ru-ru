@@ -3,11 +3,11 @@ title: Byrefs
 description: Дополнительные сведения о byref и типов, схожих с byref в F#, которые используются для программирования низкого уровня.
 ms.date: 09/02/2018
 ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59055369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703196"
 ---
 # <a name="byrefs"></a>Byrefs
 

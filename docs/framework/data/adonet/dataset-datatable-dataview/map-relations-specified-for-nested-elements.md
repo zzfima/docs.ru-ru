@@ -3,11 +3,11 @@ title: Сопоставление отношений, заданных для в
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
 ms.openlocfilehash: 9772f077991c758be65bbb44b9474f1ad341371f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785389"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>Сопоставление отношений, заданных для вложенных элементов
 Схема может включать **msdata: Relationship** заметки, чтобы явно указать сопоставление между двумя элементами в схеме. Два элемента, указанного в **msdata: Relationship** могут быть вложенными в схеме, но не обязательно. Процесс сопоставления использует **msdata: Relationship** в схеме для создания первичного ключа/связи по внешнему ключу между двумя столбцами.  
@@ -54,14 +54,14 @@ ms.locfileid: "59203149"
   
  Процесс сопоставления схем XML создает в объекте <xref:System.Data.DataSet> следующее.  
   
--   **Порядок** и **OrderDetail** таблицы.  
+- **Порядок** и **OrderDetail** таблицы.  
   
     ```  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
--   Отношение между **порядок** и **OrderDetail** таблиц. **Nested** свойство для этой связи имеет значение **True** поскольку **порядок** и **OrderDetail** элементы вложены в схеме .  
+- Отношение между **порядок** и **OrderDetail** таблиц. **Nested** свойство для этой связи имеет значение **True** поскольку **порядок** и **OrderDetail** элементы вложены в схеме .  
   
     ```  
     ParentTable: Order  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
 ms.openlocfilehash: a09c81b2d0f052884e8e54c899653a6f0e038aff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765626"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Поставщик Entity Framework (службы данных WCF)
 Как и [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], платформа ADO.NET Entity Framework основана на модели EDM, которая представляет собой разновидность модели связей сущностей. Платформа Entity Framework преобразует операции собственной реализации модели EDM, который называется *концептуальной модели*, в эквивалентные операции в источнике данных. Это превращает Entity Framework в идеальный поставщик для служб данных на основе реляционных данных. Любая база данных, на которой имеется поставщик данных, поддерживающий Entity Framework, может использоваться совместно со службами [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Список источников данных, которые поддерживают платформы Entity Framework, см. в разделе [сторонние поставщики для Entity Framework](https://go.microsoft.com/fwlink/?LinkId=143699).  

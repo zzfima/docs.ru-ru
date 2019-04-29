@@ -9,11 +9,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
 ms.openlocfilehash: a628665ccfa0a423667344b1fe81f132d6691b12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778954"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Пошаговое руководство. Включение перетаскивания для пользовательского элемента управления
 
@@ -23,13 +23,13 @@ ms.locfileid: "59321683"
 
 В данном пошаговом руководстве рассмотрены следующие задачи:
 
--   Создание настраиваемого пользовательского элемента управления.
+- Создание настраиваемого пользовательского элемента управления.
 
--   Включение пользовательского элемента управления в качестве источника перетаскивания.
+- Включение пользовательского элемента управления в качестве источника перетаскивания.
 
--   Включение пользовательского элемента управления в качестве целевого объекта перетаскивания.
+- Включение пользовательского элемента управления в качестве целевого объекта перетаскивания.
 
--   Включение панели для получения данных, перемещенных перетаскиванием из пользовательского элемента управления.
+- Включение панели для получения данных, перемещенных перетаскиванием из пользовательского элемента управления.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -108,17 +108,17 @@ ms.locfileid: "59321683"
 
      Это <xref:System.Windows.UIElement.OnMouseMove%2A> переопределение выполняет следующие задачи:
 
-    -   Проверяет, нажата ли левая кнопка мыши при перемещении мыши.
+    - Проверяет, нажата ли левая кнопка мыши при перемещении мыши.
 
-    -   Упаковывает данные Circle в <xref:System.Windows.DataObject>. В данном случае элемент управления Circle упакует три элемента данных; строковое представление цвета заливки, двойное представление высоты и копию самого себя.
+    - Упаковывает данные Circle в <xref:System.Windows.DataObject>. В данном случае элемент управления Circle упакует три элемента данных; строковое представление цвета заливки, двойное представление высоты и копию самого себя.
 
-    -   Вызывает статический <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> метода для инициации операции перетаскивания и вставки. Передайте следующие три параметра для <xref:System.Windows.DragDrop.DoDragDrop%2A> метод:
+    - Вызывает статический <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> метода для инициации операции перетаскивания и вставки. Передайте следующие три параметра для <xref:System.Windows.DragDrop.DoDragDrop%2A> метод:
 
-        -   `dragSource` — ссылка на этот элемент управления.
+        - `dragSource` — ссылка на этот элемент управления.
 
-        -   `data` — <xref:System.Windows.DataObject> Созданный в предыдущем коде.
+        - `data` — <xref:System.Windows.DataObject> Созданный в предыдущем коде.
 
-        -   `allowedEffects` Разрешенные операции перетаскивания и вставки, которые являются <xref:System.Windows.DragDropEffects.Copy> или <xref:System.Windows.DragDropEffects.Move>.
+        - `allowedEffects` Разрешенные операции перетаскивания и вставки, которые являются <xref:System.Windows.DragDropEffects.Copy> или <xref:System.Windows.DragDropEffects.Move>.
 
 3. Нажмите клавишу **F5**, чтобы выполнить сборку приложения и запустить его.
 
@@ -143,9 +143,9 @@ ms.locfileid: "59321683"
 
      Это <xref:System.Windows.UIElement.OnGiveFeedback%2A> переопределение выполняет следующие задачи:
 
-    -   Проверяет <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> значения, заданные в цели перетаскивания <xref:System.Windows.UIElement.DragOver> обработчик событий.
+    - Проверяет <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> значения, заданные в цели перетаскивания <xref:System.Windows.UIElement.DragOver> обработчик событий.
 
-    -   Задает пользовательский курсор на основе <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> значение. Курсор предназначен для предоставления визуальной обратной связи пользователю о том, какой результат будет иметь перетаскивание данных.
+    - Задает пользовательский курсор на основе <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> значение. Курсор предназначен для предоставления визуальной обратной связи пользователю о том, какой результат будет иметь перетаскивание данных.
 
 3. Нажмите клавишу **F5**, чтобы выполнить сборку приложения и запустить его.
 
@@ -181,15 +181,15 @@ ms.locfileid: "59321683"
 
      Это <xref:System.Windows.UIElement.OnDrop%2A> переопределение выполняет следующие задачи:
 
-    -   Использует <xref:System.Windows.DataObject.GetDataPresent%2A> метод, чтобы проверить наличие перемещенные данные строковый объект.
+    - Использует <xref:System.Windows.DataObject.GetDataPresent%2A> метод, чтобы проверить наличие перемещенные данные строковый объект.
 
-    -   Использует <xref:System.Windows.DataObject.GetData%2A> метод для извлечения строковых данных в том случае, если он имеется.
+    - Использует <xref:System.Windows.DataObject.GetData%2A> метод для извлечения строковых данных в том случае, если он имеется.
 
-    -   Использует <xref:System.Windows.Media.BrushConverter> для строки, преобразованные в <xref:System.Windows.Media.Brush>.
+    - Использует <xref:System.Windows.Media.BrushConverter> для строки, преобразованные в <xref:System.Windows.Media.Brush>.
 
-    -   Если преобразование прошло успешно, применяет кисть к <xref:System.Windows.Shapes.Shape.Fill%2A> из <xref:System.Windows.Shapes.Ellipse> , предоставляет пользовательский Интерфейс элемента управления Circle.
+    - Если преобразование прошло успешно, применяет кисть к <xref:System.Windows.Shapes.Shape.Fill%2A> из <xref:System.Windows.Shapes.Ellipse> , предоставляет пользовательский Интерфейс элемента управления Circle.
 
-    -   Метки <xref:System.Windows.UIElement.Drop> событие как обработанное. Событие сброса необходимо пометить как обработанное, чтобы другие элементы, которые получают это событие, знали, что событие было обработано пользовательским элементом управления Circle.
+    - Метки <xref:System.Windows.UIElement.Drop> событие как обработанное. Событие сброса необходимо пометить как обработанное, чтобы другие элементы, которые получают это событие, знали, что событие было обработано пользовательским элементом управления Circle.
 
 3. Нажмите клавишу **F5**, чтобы выполнить сборку приложения и запустить его.
 
@@ -222,11 +222,11 @@ ms.locfileid: "59321683"
 
      Это <xref:System.Windows.UIElement.OnDragOver%2A> переопределение выполняет следующие задачи:
 
-    -   Задает для свойства <xref:System.Windows.DragEventArgs.Effects%2A> значение <xref:System.Windows.DragDropEffects.None>.
+    - Задает для свойства <xref:System.Windows.DragEventArgs.Effects%2A> значение <xref:System.Windows.DragDropEffects.None>.
 
-    -   Выполняет те же проверки, выполняемые в <xref:System.Windows.UIElement.OnDrop%2A> метод, чтобы определить, может ли пользовательский элемент управления Circle обработать перенесенные данные.
+    - Выполняет те же проверки, выполняемые в <xref:System.Windows.UIElement.OnDrop%2A> метод, чтобы определить, может ли пользовательский элемент управления Circle обработать перенесенные данные.
 
-    -   Если пользовательский элемент управления может обработать данные, задает <xref:System.Windows.DragEventArgs.Effects%2A> свойства <xref:System.Windows.DragDropEffects.Copy> или <xref:System.Windows.DragDropEffects.Move>.
+    - Если пользовательский элемент управления может обработать данные, задает <xref:System.Windows.DragEventArgs.Effects%2A> свойства <xref:System.Windows.DragDropEffects.Copy> или <xref:System.Windows.DragDropEffects.Move>.
 
 3. Нажмите клавишу **F5**, чтобы выполнить сборку приложения и запустить его.
 
@@ -252,11 +252,11 @@ ms.locfileid: "59321683"
 
      Это <xref:System.Windows.UIElement.OnDragEnter%2A> переопределение выполняет следующие задачи:
 
-    -   Сохраняет <xref:System.Windows.Shapes.Shape.Fill%2A> свойство <xref:System.Windows.Shapes.Ellipse> в `_previousFill` переменной.
+    - Сохраняет <xref:System.Windows.Shapes.Shape.Fill%2A> свойство <xref:System.Windows.Shapes.Ellipse> в `_previousFill` переменной.
 
-    -   Выполняет те же проверки, выполняемые в <xref:System.Windows.UIElement.OnDrop%2A> метод, чтобы определить, может быть преобразован в данных <xref:System.Windows.Media.Brush>.
+    - Выполняет те же проверки, выполняемые в <xref:System.Windows.UIElement.OnDrop%2A> метод, чтобы определить, может быть преобразован в данных <xref:System.Windows.Media.Brush>.
 
-    -   Если данные преобразуются в допустимый <xref:System.Windows.Media.Brush>, применяемое к <xref:System.Windows.Shapes.Shape.Fill%2A> из <xref:System.Windows.Shapes.Ellipse>.
+    - Если данные преобразуются в допустимый <xref:System.Windows.Media.Brush>, применяемое к <xref:System.Windows.Shapes.Shape.Fill%2A> из <xref:System.Windows.Shapes.Ellipse>.
 
 4. Добавьте следующий <xref:System.Windows.UIElement.OnDragLeave%2A> переопределение, чтобы обеспечить обработку класса для <xref:System.Windows.UIElement.DragLeave> событий.
 
@@ -265,7 +265,7 @@ ms.locfileid: "59321683"
 
      Это <xref:System.Windows.UIElement.OnDragLeave%2A> переопределение выполняет следующие задачи:
 
-    -   Применяет <xref:System.Windows.Media.Brush> сохранен в `_previousFill` переменной <xref:System.Windows.Shapes.Shape.Fill%2A> из <xref:System.Windows.Shapes.Ellipse> , предоставляющий пользовательского интерфейса пользовательского элемента управления Circle.
+    - Применяет <xref:System.Windows.Media.Brush> сохранен в `_previousFill` переменной <xref:System.Windows.Shapes.Shape.Fill%2A> из <xref:System.Windows.Shapes.Ellipse> , предоставляющий пользовательского интерфейса пользовательского элемента управления Circle.
 
 5. Нажмите клавишу **F5**, чтобы выполнить сборку приложения и запустить его.
 
@@ -296,11 +296,11 @@ ms.locfileid: "59321683"
 
      Это <xref:System.Windows.UIElement.DragOver> обработчик событий выполняет следующие задачи:
 
-    -   Проверяет, что перетаскиваемые данные с данными «Объект», было упаковано в <xref:System.Windows.DataObject> с пользовательским элементом управления Circle и переданы в вызове <xref:System.Windows.DragDrop.DoDragDrop%2A>.
+    - Проверяет, что перетаскиваемые данные с данными «Объект», было упаковано в <xref:System.Windows.DataObject> с пользовательским элементом управления Circle и переданы в вызове <xref:System.Windows.DragDrop.DoDragDrop%2A>.
 
-    -   Если данные «Объект» отсутствует, проверяет ли **Ctrl** клавиши.
+    - Если данные «Объект» отсутствует, проверяет ли **Ctrl** клавиши.
 
-    -   Если **Ctrl** клавиша нажата, задает <xref:System.Windows.DragEventArgs.Effects%2A> свойства <xref:System.Windows.DragDropEffects.Copy>. В противном случае значение <xref:System.Windows.DragEventArgs.Effects%2A> свойства <xref:System.Windows.DragDropEffects.Move>.
+    - Если **Ctrl** клавиша нажата, задает <xref:System.Windows.DragEventArgs.Effects%2A> свойства <xref:System.Windows.DragDropEffects.Copy>. В противном случае значение <xref:System.Windows.DragEventArgs.Effects%2A> свойства <xref:System.Windows.DragDropEffects.Move>.
 
 5. Добавьте следующий код для <xref:System.Windows.UIElement.Drop> обработчик событий.
 
@@ -309,15 +309,15 @@ ms.locfileid: "59321683"
 
      Это <xref:System.Windows.UIElement.Drop> обработчик событий выполняет следующие задачи:
 
-    -   Проверяет ли <xref:System.Windows.UIElement.Drop> уже было обработано событие. Например, если элемент управления Circle перетаскивается на другом круг которого дескрипторы <xref:System.Windows.UIElement.Drop> событий, требуется панель, содержащую круг его.
+    - Проверяет ли <xref:System.Windows.UIElement.Drop> уже было обработано событие. Например, если элемент управления Circle перетаскивается на другом круг которого дескрипторы <xref:System.Windows.UIElement.Drop> событий, требуется панель, содержащую круг его.
 
-    -   Если <xref:System.Windows.UIElement.Drop> событие не обработано, проверяет ли **Ctrl** клавиши.
+    - Если <xref:System.Windows.UIElement.Drop> событие не обработано, проверяет ли **Ctrl** клавиши.
 
-    -   Если **Ctrl** при нажатии клавиши <xref:System.Windows.UIElement.Drop> происходит, создает копию круга управления и добавьте его в <xref:System.Windows.Controls.Panel.Children%2A> коллекцию <xref:System.Windows.Controls.StackPanel>.
+    - Если **Ctrl** при нажатии клавиши <xref:System.Windows.UIElement.Drop> происходит, создает копию круга управления и добавьте его в <xref:System.Windows.Controls.Panel.Children%2A> коллекцию <xref:System.Windows.Controls.StackPanel>.
 
-    -   Если **Ctrl** клавиша не нажата, перемещает элемент управления Circle из <xref:System.Windows.Controls.Panel.Children%2A> коллекцию его родительской панели <xref:System.Windows.Controls.Panel.Children%2A> коллекцию на панели, который был сброшен.
+    - Если **Ctrl** клавиша не нажата, перемещает элемент управления Circle из <xref:System.Windows.Controls.Panel.Children%2A> коллекцию его родительской панели <xref:System.Windows.Controls.Panel.Children%2A> коллекцию на панели, который был сброшен.
 
-    -   Наборы <xref:System.Windows.DragEventArgs.Effects%2A> свойства для уведомления <xref:System.Windows.DragDrop.DoDragDrop%2A> метод ли была выполнена операция перемещения или копирования.
+    - Наборы <xref:System.Windows.DragEventArgs.Effects%2A> свойства для уведомления <xref:System.Windows.DragDrop.DoDragDrop%2A> метод ли была выполнена операция перемещения или копирования.
 
 6. Нажмите клавишу **F5**, чтобы выполнить сборку приложения и запустить его.
 

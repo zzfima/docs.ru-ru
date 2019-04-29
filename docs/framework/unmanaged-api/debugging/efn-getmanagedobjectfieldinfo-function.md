@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e7d031d4a4f4e67134f4b88f3e3ff47316ce3b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698340"
 ---
 # <a name="efngetmanagedobjectfieldinfo-function"></a>Функция _EFN_GetManagedObjectFieldInfo
 Возвращает смещение от начала объекта до поля и значение поля, используя предоставленный указатель объекта и имя поля.  

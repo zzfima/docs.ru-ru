@@ -10,24 +10,24 @@ helpviewer_keywords:
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
 ms.openlocfilehash: 75f5077c2d969f026a28834144c219f289843dd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778982"
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>Практическое руководство. Использование режима интерполяции для управления качеством изображений при масштабировании
 Режим интерполяции <xref:System.Drawing.Graphics> влияет на способ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] масштабирует (растягивает и сжимает) изображения. <xref:System.Drawing.Drawing2D.InterpolationMode> Перечисление определяет различные режимы интерполяции, некоторые из которых приведены в следующем списке:  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.Bilinear>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.Bilinear>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.Bicubic>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.Bicubic>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>  
   
  Чтобы растянуть изображение, каждый пиксель исходного изображения должен быть сопоставлен группе точек увеличенного изображения. Чтобы сжать изображение, группы точек исходного изображения должны сопоставляться отдельным точкам уменьшенного изображения. Эффективность алгоритмов, которые выполняют эти сопоставления определяет качество масштабированное изображение. Алгоритмы, создающие масштабированные изображения более высокого качества, как правило, требуют большего времени обработки. В приведенном выше списке <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> режим низкое качество и <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> режим высочайшего качества.  
   

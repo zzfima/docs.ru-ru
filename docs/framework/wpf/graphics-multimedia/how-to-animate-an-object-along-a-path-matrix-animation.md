@@ -9,11 +9,11 @@ helpviewer_keywords:
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
 ms.openlocfilehash: ab15126680b7d8c6936246a7dae2f67c7541233b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651445"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Практическое руководство. Анимация объекта вдоль контура (матричная анимация)
 В этом примере показано, как использовать <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> класс для анимации объекта вдоль пути, который определяется <xref:System.Windows.Media.PathGeometry>.  
@@ -21,11 +21,11 @@ ms.locfileid: "59190929"
 ## <a name="example"></a>Пример  
  Следующий пример анимирует объект вдоль пути следующим образом:  
   
--   Применяет <xref:System.Windows.Media.MatrixTransform> к объекту, чтобы переместить его.  
+- Применяет <xref:System.Windows.Media.MatrixTransform> к объекту, чтобы переместить его.  
   
--   Определяет путь с помощью <xref:System.Windows.Media.PathGeometry>.  
+- Определяет путь с помощью <xref:System.Windows.Media.PathGeometry>.  
   
--   Создает <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> и использует его для анимации <xref:System.Windows.Media.Matrix> свойство <xref:System.Windows.Media.MatrixTransform>. <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> Принимает <xref:System.Windows.Media.PathGeometry> и использует их для создания <xref:System.Windows.Media.Matrix> значения.  
+- Создает <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> и использует его для анимации <xref:System.Windows.Media.Matrix> свойство <xref:System.Windows.Media.MatrixTransform>. <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> Принимает <xref:System.Windows.Media.PathGeometry> и использует их для создания <xref:System.Windows.Media.Matrix> значения.  
   
  [!code-xaml[PathAnimationGallery_snippet#MatrixAnimationUsingPathWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/matrixanimationusingpathexample.xaml#matrixanimationusingpathwholepage)]  
   

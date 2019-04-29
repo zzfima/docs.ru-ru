@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 73d5c98500c510630b1f8d6081b654a6dbd88a5b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771805"
 ---
 # <a name="iclrmetahostpolicygetrequestedruntime-method"></a>Метод ICLRMetaHostPolicy::GetRequestedRuntime
 
@@ -46,7 +46,7 @@ HRESULT GetRequestedRuntime(
 
 ## <a name="parameters"></a>Параметры
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`dwPolicyFlags`|[in] Обязательный. Указывает, является членом [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) перечисления, представляющий политику привязки и любое число модификаторов. Который в данный момент доступна только политика [METAHOST_POLICY_HIGHCOMPAT](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md).<br /><br /> Модификаторам относятся [METAHOST_POLICY_EMULATE_EXE_LAUNCH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_APPLY_UPGRADE_POLICY](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_SHOW_ERROR_DIALOG](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_USE_PROCESS_IMAGE_PATH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), и [METAHOST_POLICY_ENSURE_SKU_SUPPORTED](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md).|
 |`pwzBinary`|[в] Необязательно. Задает путь к файлу сборки.|
@@ -78,9 +78,9 @@ HRESULT GetRequestedRuntime(
 |HRESULT|Описание|
 |-------------|-----------------|
 |S_OK|Метод завершился успешно.|
-|E_POINTER|`pwzVersion` не равен NULL, а `pcchVersion` равен NULL.<br /><br /> - или -<br /><br /> `pwzImageVersion` не равен NULL, а `pcchImageVersion` равен NULL.|
+|E_POINTER|`pwzVersion` не равен NULL, а `pcchVersion` равен NULL.<br /><br /> -или-<br /><br /> `pwzImageVersion` не равен NULL, а `pcchImageVersion` равен NULL.|
 |E_INVALIDARG|`dwPolicyFlags` не указывает `METAHOST_POLICY_HIGHCOMPAT`.|
-|ERROR_INSUFFICIENT_BUFFER|Памяти, выделенной для `pwzVersion`, недостаточно.<br /><br /> - или -<br /><br /> Памяти, выделенной для `pwzImageVersion`, недостаточно.|
+|ERROR_INSUFFICIENT_BUFFER|Памяти, выделенной для `pwzVersion`, недостаточно.<br /><br /> -или-<br /><br /> Памяти, выделенной для `pwzImageVersion`, недостаточно.|
 |CLR_E_SHIM_RUNTIMELOAD|`dwPolicyFlags` включает в себя METAHOST_POLICY_APPLY_UPGRADE_POLICY, а как `pwzVersion`, так и `pcchVersion` имеют значение NULL.|
 
 ## <a name="requirements"></a>Требования

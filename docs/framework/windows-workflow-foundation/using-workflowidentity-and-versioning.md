@@ -3,24 +3,24 @@ title: Использование WorkflowIdentity и управления ве�
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
 ms.openlocfilehash: 5bed526a47b802c60aa679e53c84af4e14656675
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669659"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>Использование WorkflowIdentity и управления версиями
 <xref:System.Activities.WorkflowIdentity> предоставляет разработчикам приложений рабочих процессов способ связать имя и <xref:System.Version> с определением рабочего процесса, а также связать эти сведения с сохраненным экземпляром рабочего процесса. Эти идентификационные данные могут быть использованы разработчиками приложений рабочего процесса для поддержки таких сценариев, как параллельное выполнение нескольких версий определения рабочего процесса, и являются ключевым элементом для других функциональных возможностей, таких как динамическое обновление. В этом разделе представлены общие сведения об использовании <xref:System.Activities.WorkflowIdentity> с размещением <xref:System.Activities.WorkflowApplication>. Сведения о выполнении side-by-side определений рабочих процессов в службе рабочего процесса, см. в разделе [параллельное управление версиями в WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Сведения о динамическом обновлении, см. в разделе [динамического обновления](dynamic-update.md).  
   
 ## <a name="in-this-topic"></a>Содержание раздела  
   
--   [Использование WorkflowIdentity](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)  
+- [Использование WorkflowIdentity](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)  
   
-    -   [Выполнение Side-by-side, с помощью WorkflowIdentity](using-workflowidentity-and-versioning.md#SxS)  
+    - [Выполнение Side-by-side, с помощью WorkflowIdentity](using-workflowidentity-and-versioning.md#SxS)  
   
--   [Обновление .NET Framework 4 постоянного хранения и баз данных для поддержки управления версиями рабочего процесса](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
+- [Обновление .NET Framework 4 постоянного хранения и баз данных для поддержки управления версиями рабочего процесса](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
   
-    -   [Чтобы обновить схему базы данных](using-workflowidentity-and-versioning.md#ToUpgrade)  
+    - [Чтобы обновить схему базы данных](using-workflowidentity-and-versioning.md#ToUpgrade)  
   
 ## <a name="UsingWorkflowIdentity"></a> Использование WorkflowIdentity  
  Чтобы использовать <xref:System.Activities.WorkflowIdentity>, создайте экземпляр, настройте его и свяжите с экземпляром <xref:System.Activities.WorkflowApplication>. В экземпляре <xref:System.Activities.WorkflowIdentity> содержатся три элемента информации для идентификации. <xref:System.Activities.WorkflowIdentity.Name%2A> и <xref:System.Activities.WorkflowIdentity.Version%2A> содержат имя и <xref:System.Version> и являются обязательными, а <xref:System.Activities.WorkflowIdentity.Package%2A> является необязательным и может использоваться для указания дополнительной строки с информацией (например, именем сборки или другими полезными сведениями). <xref:System.Activities.WorkflowIdentity> уникален, если какое-либо из его трех свойств отличается от другого <xref:System.Activities.WorkflowIdentity>.  

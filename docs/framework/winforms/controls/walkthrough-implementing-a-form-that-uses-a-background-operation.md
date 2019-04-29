@@ -16,11 +16,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
 ms.openlocfilehash: 6399fb853162174895d892399fd3eb5226101515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792201"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Пошаговое руководство. Реализация формы, в которой выполняется фоновая операция
 Если у вас есть операция будет выполняться долго для завершения, и не требуется пользовательский интерфейс (UI) перестает отвечать на запросы или «зависания», можно использовать <xref:System.ComponentModel.BackgroundWorker> класс для выполнения операции в другом потоке.  
@@ -29,13 +29,13 @@ ms.locfileid: "59343406"
   
  В данном пошаговом руководстве представлены следующие задачи.  
   
--   Создание приложения на базе Windows  
+- Создание приложения на базе Windows  
   
--   Создание <xref:System.ComponentModel.BackgroundWorker> в форме  
+- Создание <xref:System.ComponentModel.BackgroundWorker> в форме  
   
--   Добавление обработчиков асинхронных событий  
+- Добавление обработчиков асинхронных событий  
   
--   Добавление отчетов о ходе выполнения и поддержка отмены  
+- Добавление отчетов о ходе выполнения и поддержка отмены  
   
  Полный код, используемый в этом примере, см. в разделе [как: Реализация формы, в который выполняется фоновая операция](how-to-implement-a-form-that-uses-a-background-operation.md).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59343406"
   
 #### <a name="to-create-a-backgroundworker-with-the-designer"></a>Создание BackgroundWorker с помощью конструктора  
   
--   Из **компоненты** вкладке **элементов**, перетащите <xref:System.ComponentModel.BackgroundWorker> на форму.  
+- Из **компоненты** вкладке **элементов**, перетащите <xref:System.ComponentModel.BackgroundWorker> на форму.  
   
 ## <a name="adding-asynchronous-event-handlers"></a>Добавление обработчиков асинхронных событий  
  Теперь вы готовы добавить обработчики событий для <xref:System.ComponentModel.BackgroundWorker> асинхронных событий компонента. Один из этих обработчиков вызывает длительную операцию, вычисляющую числа Фибоначчи в фоновом режиме.  
@@ -145,7 +145,7 @@ ms.locfileid: "59343406"
   
 #### <a name="to-test-your-project"></a>Тестирование проекта  
   
--   Чтобы скомпилировать и запустить приложение, нажмите клавишу F5.  
+- Чтобы скомпилировать и запустить приложение, нажмите клавишу F5.  
   
      Пока вычисление выполняется в фоновом режиме, вы увидите <xref:System.Windows.Forms.ProgressBar> отображением хода выполнения вычислений. Операцию, ожидающую выполнения, можно отменить.  
   
@@ -154,11 +154,11 @@ ms.locfileid: "59343406"
 ## <a name="next-steps"></a>Следующие шаги  
  Теперь, когда вы реализовали форму, которая использует <xref:System.ComponentModel.BackgroundWorker> компонент для вычислений в фоновом режиме, вы можете изучить другие возможности для асинхронных операций:  
   
--   Используйте несколько <xref:System.ComponentModel.BackgroundWorker> объектов для нескольких одновременных операций.  
+- Используйте несколько <xref:System.ComponentModel.BackgroundWorker> объектов для нескольких одновременных операций.  
   
--   Отладка многопоточных приложений, см. в разделе [как: Использование окна потоков](/visualstudio/debugger/how-to-use-the-threads-window).  
+- Отладка многопоточных приложений, см. в разделе [как: Использование окна потоков](/visualstudio/debugger/how-to-use-the-threads-window).  
   
--   Реализация собственного компонента, поддерживающего модель асинхронного программирования. Дополнительные сведения см. в разделе [Обзор асинхронной модели на основе событий](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
+- Реализация собственного компонента, поддерживающего модель асинхронного программирования. Дополнительные сведения см. в разделе [Обзор асинхронной модели на основе событий](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
     > [!CAUTION]
     >  При использовании любой многопоточности существует потенциальная возможность возникновения серьезных ошибок. Перед реализацией любого решения, в котором используется многопоточность, ознакомьтесь с разделом [Рекомендации по работе с потоками](../../../standard/threading/managed-threading-best-practices.md).  

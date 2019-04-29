@@ -13,11 +13,11 @@ helpviewer_keywords:
 - SelectedValue [WPF], SelectedItem properties
 ms.assetid: 2fc92ad4-f02c-4f89-bbe9-d4978a7af0db
 ms.openlocfilehash: d9f7a8f04f53b7d38a49dfef2c947dfa1c2d263d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699140"
 ---
 # <a name="how-to-use-selectedvalue-selectedvaluepath-and-selecteditem"></a>Практическое руководство. Использование элементов SelectedValue, SelectedValuePath и SelectedItem
 В этом примере показано, как использовать <xref:System.Windows.Controls.TreeView.SelectedValue%2A> и <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> свойства, чтобы указать значение для <xref:System.Windows.Controls.TreeView.SelectedItem%2A> из <xref:System.Windows.Controls.TreeView>.  

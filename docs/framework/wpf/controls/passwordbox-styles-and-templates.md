@@ -1,5 +1,5 @@
 ---
-title: PasswordBox стили и шаблоны
+title: Стили и шаблоны элемента PasswordBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - styles [WPF], PasswordBox
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - parts [WPF], PasswordBox
 ms.assetid: deb52107-959f-4a60-b303-d21a0a933060
 ms.openlocfilehash: 7783330dd56ec5b2759e783a6935761eb3587978
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57509533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770647"
 ---
-# <a name="passwordbox-styles-and-templates"></a>PasswordBox стили и шаблоны
+# <a name="passwordbox-styles-and-templates"></a>Стили и шаблоны элемента PasswordBox
 
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.PasswordBox> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
 
@@ -24,7 +24,7 @@ ms.locfileid: "57509533"
 
 В следующей таблице перечислены именованные части <xref:System.Windows.Controls.PasswordBox> элемента управления.
 
-|Отделение|Тип|Описание:|
+|Отделение|Тип|Описание|
 |-|-|-|
 |PART_ContentHost|<xref:System.Windows.FrameworkElement>|Визуальный элемент, который может содержать <xref:System.Windows.FrameworkElement>. Текст <xref:System.Windows.Controls.PasswordBox> отображается в этом элементе.|
 

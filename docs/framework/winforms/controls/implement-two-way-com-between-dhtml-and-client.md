@@ -15,11 +15,11 @@ helpviewer_keywords:
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
 ms.openlocfilehash: cf1391e88c03095e0851d75ae6d50f8e809d13e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797193"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Практическое руководство. Реализация двунаправленного взаимодействия между кодом DHTML и клиентским кодом приложений
 Элемент управления <xref:System.Windows.Forms.WebBrowser> можно использовать для добавления существующего динамического кода веб-приложений HTML (DHTML) в клиентские приложения Windows Forms. Это полезно, если на разработку элементов управления DHTML затрачено немало времени и нужно воспользоваться широкими возможностями интерфейса Windows Forms, не тратя время на переписывание существующего кода.  
@@ -103,7 +103,7 @@ ms.locfileid: "59295618"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера кода требуются:  
   
--   ссылки на сборки System и System.Windows.Forms;  
+- ссылки на сборки System и System.Windows.Forms;  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   

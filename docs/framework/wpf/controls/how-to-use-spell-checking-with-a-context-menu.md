@@ -10,11 +10,11 @@ helpviewer_keywords:
 - spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
 ms.openlocfilehash: 72b24c386eb99140c9c2729688994b81f92e1a6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699153"
 ---
 # <a name="how-to-use-spell-checking-with-a-context-menu"></a>Практическое руководство. Использование проверки орфографии с помощью контекстного меню
 По умолчанию при включении орфографии в элементе управления редактирования, такие как <xref:System.Windows.Controls.TextBox> или <xref:System.Windows.Controls.RichTextBox>, можно выбрать варианты правописания в контекстном меню. Например, если пользователи неправильно написанное слово, щелкните правой кнопкой мыши, они получают набор вариантов правописания или возможность **пропустить все**. Тем не менее при переопределении отобразится контекстное меню по умолчанию с собственного пользовательского контекстного меню, эта функция теряется, и вам нужно написать код, чтобы включить средство проверки орфографии в контекстном меню. В следующем примере показано, как включить эту функцию для <xref:System.Windows.Controls.TextBox>.  

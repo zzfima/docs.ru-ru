@@ -5,11 +5,11 @@ ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bbb2c4157ba702182056c98c959a60569e8c3d1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786416"
 ---
 # <a name="windows-forms-configuration-section"></a>Раздел конфигурации Windows Forms
 Параметры конфигурации Windows Forms позволяют приложению Windows Forms хранить и извлекать сведения о настроенных параметрах приложения, таких как поддержка нескольких мониторов, поддержка высокого разрешения (DPI) и другие предопределенные параметры конфигурации.
@@ -42,7 +42,7 @@ ms.locfileid: "54649483"
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-Элемент  |Описание: |
+Элемент  |Описание |
 ---------|---------|
 [\<configuration>](../configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями Windows Forms. |
 

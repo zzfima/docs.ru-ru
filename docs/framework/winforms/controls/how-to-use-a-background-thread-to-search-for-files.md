@@ -11,11 +11,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
 ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785857"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Практическое руководство. Применение фонового потока для поиска файлов
 <xref:System.ComponentModel.BackgroundWorker> Компонент заменяет и расширяет его функциональные возможности <xref:System.Threading> пространства имен, однако <xref:System.Threading> пространство имен сохраняется для обратной совместимости и использования в будущем, если выбран. Дополнительные сведения см. в разделе [Общие сведения о компоненте BackgroundWorker](backgroundworker-component-overview.md).  
@@ -28,13 +28,13 @@ ms.locfileid: "59157797"
   
  Следующий пример (`DirectorySearcher`) показан многопоточных управления Windows Forms, который использует фоновый поток для рекурсивного поиска каталога для файлов, соответствующих заданной строке поиска, а затем заполняет поле со списком с результатами поиска. Ниже приведены основные понятия, как показано в примере.  
   
--   `DirectorySearcher` запускает новый поток для выполнения поиска. Поток выполняет `ThreadProcedure` метод, который в свою очередь вызывает вспомогательный метод `RecurseDirectory` метод для выполнения фактического поиска и для заполнения списка. Тем не менее заполнение списка требует между потоками, как описано в следующих двух объектов.  
+- `DirectorySearcher` запускает новый поток для выполнения поиска. Поток выполняет `ThreadProcedure` метод, который в свою очередь вызывает вспомогательный метод `RecurseDirectory` метод для выполнения фактического поиска и для заполнения списка. Тем не менее заполнение списка требует между потоками, как описано в следующих двух объектов.  
   
--   `DirectorySearcher` Определяет `AddFiles` метод для добавления файлов в список; Однако `RecurseDirectory` не может напрямую вызвать `AddFiles` поскольку `AddFiles` может выполняться только в создавшем его потоке STA `DirectorySearcher`.  
+- `DirectorySearcher` Определяет `AddFiles` метод для добавления файлов в список; Однако `RecurseDirectory` не может напрямую вызвать `AddFiles` поскольку `AddFiles` может выполняться только в создавшем его потоке STA `DirectorySearcher`.  
   
--   Единственным способом `RecurseDirectory` можно вызвать `AddFiles` — посредством вызова между потоками, то есть путем вызова <xref:System.Windows.Forms.Control.Invoke%2A> или <xref:System.Windows.Forms.Control.BeginInvoke%2A> для маршалинга `AddFiles` для создающего потока из `DirectorySearcher`. `RecurseDirectory` использует <xref:System.Windows.Forms.Control.BeginInvoke%2A> таким образом, вызов может быть выполнен асинхронно.  
+- Единственным способом `RecurseDirectory` можно вызвать `AddFiles` — посредством вызова между потоками, то есть путем вызова <xref:System.Windows.Forms.Control.Invoke%2A> или <xref:System.Windows.Forms.Control.BeginInvoke%2A> для маршалинга `AddFiles` для создающего потока из `DirectorySearcher`. `RecurseDirectory` использует <xref:System.Windows.Forms.Control.BeginInvoke%2A> таким образом, вызов может быть выполнен асинхронно.  
   
--   Маршалинг метода требует эквивалент указателя функции или обратного вызова. Это можно сделать с помощью делегатов в платформе .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> принимает делегат в качестве аргумента. `DirectorySearcher` Таким образом определяется делегат (`FileListDelegate`), привязывает `AddFiles` к экземпляру `FileListDelegate` в конструкторе и передает этот экземпляр делегата для <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` также определяет делегат события, который маршалируется по завершении поиска.  
+- Маршалинг метода требует эквивалент указателя функции или обратного вызова. Это можно сделать с помощью делегатов в платформе .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> принимает делегат в качестве аргумента. `DirectorySearcher` Таким образом определяется делегат (`FileListDelegate`), привязывает `AddFiles` к экземпляру `FileListDelegate` в конструкторе и передает этот экземпляр делегата для <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` также определяет делегат события, который маршалируется по завершении поиска.  
   
 ```vb  
 Option Strict  

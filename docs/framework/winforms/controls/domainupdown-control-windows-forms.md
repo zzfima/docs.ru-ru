@@ -9,11 +9,11 @@ helpviewer_keywords:
 - up-down controls [Windows Forms], spin button controls
 ms.assetid: fb7cf017-e931-4a95-9d21-8caee4ee122a
 ms.openlocfilehash: 83d674e3fb7ff7e715b75c635b891cd4e9703a21
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972059"
 ---
 # <a name="domainupdown-control-windows-forms"></a>Элемент управления DomainUpDown (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.DomainUpDown> элемент управления выглядит как сочетание текстового поля и пары кнопок для перемещения вверх или вниз по списку. Он выводит и задает строку текста из списка вариантов. Пользователь может выбрать строки, щелкнув кнопок со стрелками вверх по списку, клавиши со стрелками вверх и вниз или введя строку, совпадающую с элементом в списке. Один из возможных способов использования для этого элемента управления можно выбрать элементы в алфавитном порядке отсортированный список имен. (Чтобы отсортировать список, установите <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> свойства `true`.) Функция этого элемента управления является очень похожа на поле со списком или поле со списком, но занимает очень мало места.  

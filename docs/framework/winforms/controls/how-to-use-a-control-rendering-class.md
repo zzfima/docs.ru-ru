@@ -11,11 +11,11 @@ helpviewer_keywords:
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: c0125e34-cd74-4c35-818c-3e40f462b0a3
 ms.openlocfilehash: 7115c227cb24cf12a50073d0dc587524abf0cbb9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785844"
 ---
 # <a name="how-to-use-a-control-rendering-class"></a>Практическое руководство. Использование класса отрисовки элемента управления
 В этом примере демонстрируется использование <xref:System.Windows.Forms.ComboBoxRenderer> класс для отображения стрелку раскрывающегося списка, поле со списком элемента управления поля. Пример состоит из <xref:System.Windows.Forms.Control.OnPaint%2A> метод простого пользовательского элемента управления. <xref:System.Windows.Forms.ComboBoxRenderer.IsSupported%2A?displayProperty=nameWithType> Свойство используется для определения, включены ли стили оформления в клиентской области окон приложений. Если визуальные стили включены, то <xref:System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton%2A?displayProperty=nameWithType> метод визуализирует стрелку раскрывающегося списка с использованием стилей оформления; в противном случае <xref:System.Windows.Forms.ControlPaint.DrawComboButton%2A?displayProperty=nameWithType> метод визуализирует стрелку раскрывающегося списка в классическом стиле Windows.  
@@ -28,11 +28,11 @@ ms.locfileid: "59163584"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   Пользовательские элементы управления, производные от <xref:System.Windows.Forms.Control> класса.  
+- Пользовательские элементы управления, производные от <xref:System.Windows.Forms.Control> класса.  
   
--   Объект <xref:System.Windows.Forms.Form> , на котором размещается пользовательский элемент управления.  
+- Объект <xref:System.Windows.Forms.Form> , на котором размещается пользовательский элемент управления.  
   
--   Ссылки на <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, и <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> пространства имен.  
+- Ссылки на <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, и <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> пространства имен.  
   
 ## <a name="see-also"></a>См. также
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UIElements [WPF], flipping
 ms.assetid: 02c6730f-65c0-40d5-a553-4cb663721882
 ms.openlocfilehash: 6b3da322493d17e4f8e36a35b9a0e40fdc9dc685
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767068"
 ---
 # <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>Практическое руководство. Отражение объекта UIElement по горизонтали или вертикали
 В этом примере показано, как использовать <xref:System.Windows.Media.ScaleTransform> перевернуть <xref:System.Windows.UIElement> горизонтально или вертикально. В этом примере <xref:System.Windows.Controls.Button> управления (разновидность <xref:System.Windows.UIElement>) изменилось, применяя <xref:System.Windows.Media.ScaleTransform> для его <xref:System.Windows.UIElement.RenderTransform%2A> свойство.  

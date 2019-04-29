@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
 ms.openlocfilehash: f95274861f58d1581e4c5439861ebf186b1b3489
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766959"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Практическое руководство. Использование отдельных сертификатов X.509 для подписывания и шифрования
 В этом разделе показано, как настроить Windows Communication Foundation (WCF) использовать разные сертификаты для подписывания и шифрования на клиенте и службе сообщений.  
@@ -23,15 +23,15 @@ ms.locfileid: "59332564"
   
  На представленном ниже рисунке показаны основные используемые классы, классы, от которых они наследуются (показаны стрелкой вверх), и типы возвращаемого значения некоторых методов и свойств.  
   
--   `MyClientCredentials` - это пользовательская реализация <xref:System.ServiceModel.Description.ClientCredentials>.  
+- `MyClientCredentials` - это пользовательская реализация <xref:System.ServiceModel.Description.ClientCredentials>.  
   
-    -   Все показанные на рисунке свойства этой реализации возвращают экземпляры <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>.  
+    - Все показанные на рисунке свойства этой реализации возвращают экземпляры <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>.  
   
-    -   Метод <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> этой реализации возвращает экземпляр `MyClientCredentialsSecurityTokenManager`.  
+    - Метод <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> этой реализации возвращает экземпляр `MyClientCredentialsSecurityTokenManager`.  
   
--   `MyClientCredentialsSecurityTokenManager` - это пользовательская реализация <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
+- `MyClientCredentialsSecurityTokenManager` - это пользовательская реализация <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
   
-    -   Метод <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> этой реализации возвращает экземпляр <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>.  
+    - Метод <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> этой реализации возвращает экземпляр <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>.  
   
  ![Диаграмма, как используются учетные данные клиента](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")  
   

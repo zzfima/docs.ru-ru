@@ -3,11 +3,11 @@ title: Поддержка нескольких привязок узла IIS
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
 ms.openlocfilehash: 5a8b06d86b505452f9ded808f727343b1453e592
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696110"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Поддержка нескольких привязок узла IIS
 При размещении службы Windows Communication Foundation (WCF) в группе Internet Information Services (IIS) 7.0, может потребоваться предоставить несколько базовых адресов, использующих тот же протокол на одном узле. Это позволяет одной и той же службе отвечать на несколько разных URI. Это полезно, если вы хотите разместить службу, прослушивает `http://www.contoso.com` и `http://contoso.com`. Также может использоваться при создании службы, имеющей базовый адрес для внутренних пользователей и отдельный базовый адрес для внешних пользователей. Например: `http://internal.contoso.com` и `http://www.contoso.com`.  
@@ -16,7 +16,7 @@ ms.locfileid: "48840872"
 >  Эта функция доступна только при использовании протокола HTTP.  
   
 ## <a name="multiple-base-addresses"></a>Несколько базовых адресов  
- Эта функция доступна только для служб WCF, размещенных в службах IIS. Эта возможность отключена по умолчанию. Чтобы его включить, то необходимо добавить `multipleSiteBindingsEnabled` атрибут <`serviceHostingEnvironment`> элемент в файле Web.config файл и присвойте ему значение `true`, как показано в следующем примере.  
+ Эта функция доступна только для служб WCF, размещенных в службах IIS. Эта функция отключена по умолчанию. Чтобы его включить, то необходимо добавить `multipleSiteBindingsEnabled` атрибут <`serviceHostingEnvironment`> элемент в файле Web.config файл и присвойте ему значение `true`, как показано в следующем примере.  
   
 ```xml  
 <serviceHostingEnvironment multipleSiteBindingsEnabled="true"/>  

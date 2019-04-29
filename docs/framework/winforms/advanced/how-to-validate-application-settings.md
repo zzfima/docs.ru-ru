@@ -10,11 +10,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
 ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778850"
 ---
 # <a name="how-to-validate-application-settings"></a>Практическое руководство. Проверка параметров приложения
 В этом разделе показано, как проверить параметры приложения перед их сохранением.  
@@ -34,11 +34,11 @@ ms.locfileid: "59317896"
   
  Обычно при обнаружении недопустимого значения обработчик событий выполняет одно из следующих действий.  
   
--   Автоматически предоставляет заведомо правильное значение, например значение по умолчанию.  
+- Автоматически предоставляет заведомо правильное значение, например значение по умолчанию.  
   
--   Повторно запрашивает сведения у пользователя серверного кода.  
+- Повторно запрашивает сведения у пользователя серверного кода.  
   
--   Для событий, возникающих до связанных с ними действий, таких как <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> и <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, использует <xref:System.ComponentModel.CancelEventArgs> аргумент для отмены операции.  
+- Для событий, возникающих до связанных с ними действий, таких как <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> и <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, использует <xref:System.ComponentModel.CancelEventArgs> аргумент для отмены операции.  
   
  Дополнительные сведения об обработке событий см. в разделе [Общие сведения об обработчиках событий](../event-handlers-overview-windows-forms.md).  
   
@@ -46,9 +46,9 @@ ms.locfileid: "59317896"
   
 ### <a name="to-obtain-the-application-settings-object"></a>Получение объекта параметров приложения  
   
--   Для получения ссылки на объект параметров приложения (экземпляр программы-оболочки) выполните одно из следующих действий:  
+- Для получения ссылки на объект параметров приложения (экземпляр программы-оболочки) выполните одно из следующих действий:  
   
-    -   Если вы создали параметры в диалоговом окне «Параметры приложения Visual Studio» в **редакторе свойств**, объект параметров по умолчанию, созданный для вашего языка, можно получить с помощью следующего выражения.  
+    - Если вы создали параметры в диалоговом окне «Параметры приложения Visual Studio» в **редакторе свойств**, объект параметров по умолчанию, созданный для вашего языка, можно получить с помощью следующего выражения.  
   
         ```csharp  
         Configuration.Settings.Default   
@@ -60,11 +60,11 @@ ms.locfileid: "59317896"
   
          -или-  
   
-    -   Если вы являетесь разработчиком на Visual Basic и создали параметры приложения с помощью конструктора проектов, для извлечения параметров можно использовать [объект My.Settings](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
+    - Если вы являетесь разработчиком на Visual Basic и создали параметры приложения с помощью конструктора проектов, для извлечения параметров можно использовать [объект My.Settings](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
   
          -или-  
   
-    -   Если параметры были созданы путем наследования от <xref:System.Configuration.ApplicationSettingsBase> напрямую, необходимо создать экземпляр класса вручную.  
+    - Если параметры были созданы путем наследования от <xref:System.Configuration.ApplicationSettingsBase> напрямую, необходимо создать экземпляр класса вручную.  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  

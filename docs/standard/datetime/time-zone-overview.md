@@ -18,11 +18,11 @@ ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5fa4376cdb0496cfd25f4764257c4f3afbc7268
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795282"
 ---
 # <a name="time-zone-overview"></a>Общие сведения о часовых поясах
 
@@ -59,7 +59,7 @@ ms.locfileid: "54697054"
 
 Зависимость от <xref:System.TimeZoneInfo> класса в реестре означает, что часовыми поясами приложение не может быть определенные, что конкретный часовой пояс определен в реестре. В результате при попытке создать экземпляр определенного часового пояса (отличного от местного часового пояса или часового пояса, представляющего UTC) следует использовать обработку исключений. Он также должен предоставить некоторые способ, позволяющий приложению продолжить работу, если требуемый <xref:System.TimeZoneInfo> объекта не может быть создан из реестра.
 
-Для обработки отсутствия требуемого часового пояса, <xref:System.TimeZoneInfo> класс включает <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> метод, который можно использовать для создания пользовательских часовых поясов, которые не найдены в реестре. Дополнительные сведения о создании пользовательского часового пояса см. в разделе [как: Создание часовых поясов без правил коррекции](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) и [как: Создание часовых поясов с правилами коррекции](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md). Кроме того, можно использовать <xref:System.TimeZoneInfo.ToSerializedString%2A> метод для преобразования в только что созданный часовой пояс в строку и сохранить его в хранилище данных (например, базу данных, в текстовый файл, реестр или ресурс приложения). Затем можно использовать <xref:System.TimeZoneInfo.FromSerializedString%2A> метод преобразование этой строки обратно в <xref:System.TimeZoneInfo> объекта. Дополнительные сведения см. в разделе [как: Сохранение часовых поясов во внедренном ресурсе](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) и [как: Восстановление часовых поясов из внедренного ресурса](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+Для обработки отсутствия требуемого часового пояса, <xref:System.TimeZoneInfo> класс включает <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> метод, который можно использовать для создания пользовательских часовых поясов, которые не найдены в реестре. Дополнительные сведения о создании пользовательского часового пояса см. в разделе [как: Создание часовых поясов без правил коррекции](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) и [как: Создание часовых поясов с правилами коррекции](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md). Кроме того, можно использовать <xref:System.TimeZoneInfo.ToSerializedString%2A> метод для преобразования в только что созданный часовой пояс в строку и сохранить его в хранилище данных (например, базу данных, в текстовый файл, реестр или ресурс приложения). Затем можно использовать <xref:System.TimeZoneInfo.FromSerializedString%2A> метод преобразование этой строки обратно в <xref:System.TimeZoneInfo> объекта. Подробную информацию см. в разделе [Практическое руководство. Сохранение часовых поясов во внедренном ресурсе](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) и [как: Восстановление часовых поясов из внедренного ресурса](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
 Поскольку каждый часовой пояс характеризуется базовым смещением относительно UTC, а также смещением относительно времени UTC, которое отражает любые существующие правила коррекции, время в одном часовом поясе может быть легко преобразовано во время в другом часовом поясе. Для этой цели <xref:System.TimeZoneInfo> объект включает несколько методов преобразования, в том числе:
 

@@ -3,11 +3,11 @@ title: Раздел <extensions>
 ms.date: 03/30/2017
 ms.assetid: 53a59fb6-dede-47ec-9384-b3c2e8f0c1fa
 ms.openlocfilehash: 0f77f621bbf9bbef00b206ef43a174f6f69364d5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673008"
 ---
 # <a name="extensions-section"></a>\<расширения > раздела
 Данный раздел конфигурации содержит коллекцию расширений, которые позволяют пользователю создавать пользовательские привязки, поведения и другие возможности расширений.  
@@ -39,7 +39,7 @@ ms.locfileid: "55268292"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<behaviorExtensions >](../../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md)|Этот раздел содержит дочерние элементы, которые задают расширения поведений, которые позволяют пользователю настроить поведения службы или конечной точки.|  
 |[\<bindingElementExtensions >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md)|В этом разделе описывается, как обеспечивается использование пользовательского элемента привязки в файле конфигурации компьютера или приложения.|  

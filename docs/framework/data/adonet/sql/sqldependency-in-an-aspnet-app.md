@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
 ms.openlocfilehash: 67c1307bb18b3e86e05b56f4853a39f6831ab9cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780293"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>SqlDependency в приложении ASP.NET
 В примере этого раздела показано, как косвенно использовать <xref:System.Data.SqlClient.SqlDependency>, используя объект ASP.NET <xref:System.Web.Caching.SqlCacheDependency>. Объект <xref:System.Web.Caching.SqlCacheDependency> использует <xref:System.Data.SqlClient.SqlDependency> для прослушивания уведомлений и правильного обновления кэша.  

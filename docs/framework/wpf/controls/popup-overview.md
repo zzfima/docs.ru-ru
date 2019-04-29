@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
 ms.openlocfilehash: 370970c80221e371db5a97303ef2650d14300b14
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770569"
 ---
 # <a name="popup-overview"></a>Общие сведения о контекстном меню
 <xref:System.Windows.Controls.Primitives.Popup> Управления предоставляет способ отображения содержимого в отдельном окне, расположенном поверх текущего окна приложения относительно обозначенного элемента или экранных координат. В данном разделе представлены <xref:System.Windows.Controls.Primitives.Popup> управления и предоставляет сведения о его использовании.  
@@ -34,13 +34,13 @@ ms.locfileid: "59102782"
 ## <a name="controls-that-implement-a-popup"></a>Элементы управления, реализующие контекстное меню  
  Вы можете создавать <xref:System.Windows.Controls.Primitives.Popup> элементы управления в другие элементы управления. Следующие элементы управления реализуют <xref:System.Windows.Controls.Primitives.Popup> управления для конкретных целей:  
   
--   <xref:System.Windows.Controls.ToolTip>. Если вы хотите создать подсказку для элемента, используйте <xref:System.Windows.Controls.ToolTip> и <xref:System.Windows.Controls.ToolTipService> классы. Дополнительные сведения см. в разделе [Общие сведения о всплывающих подсказках](tooltip-overview.md).  
+- <xref:System.Windows.Controls.ToolTip>. Если вы хотите создать подсказку для элемента, используйте <xref:System.Windows.Controls.ToolTip> и <xref:System.Windows.Controls.ToolTipService> классы. Дополнительные сведения см. в разделе [Общие сведения о всплывающих подсказках](tooltip-overview.md).  
   
--   <xref:System.Windows.Controls.ContextMenu>. Если вы хотите создать контекстное меню для элемента, используйте <xref:System.Windows.Controls.ContextMenu> элемента управления. Дополнительные сведения см. в разделе [Общие сведения об элементе управления ContextMenu](contextmenu-overview.md).  
+- <xref:System.Windows.Controls.ContextMenu>. Если вы хотите создать контекстное меню для элемента, используйте <xref:System.Windows.Controls.ContextMenu> элемента управления. Дополнительные сведения см. в разделе [Общие сведения об элементе управления ContextMenu](contextmenu-overview.md).  
   
--   <xref:System.Windows.Controls.ComboBox>. Если вы хотите создать элемент управления выбора, который содержит поле с раскрывающимся списком, может быть использовано отображаемое или скрытое, <xref:System.Windows.Controls.ComboBox> элемента управления.  
+- <xref:System.Windows.Controls.ComboBox>. Если вы хотите создать элемент управления выбора, который содержит поле с раскрывающимся списком, может быть использовано отображаемое или скрытое, <xref:System.Windows.Controls.ComboBox> элемента управления.  
   
--   <xref:System.Windows.Controls.Expander>. Если вы хотите создать элемент управления, отображающий заголовок со свертываемой областью отображения содержимого, используйте <xref:System.Windows.Controls.Expander> элемента управления. Дополнительные сведения см. в разделе [Общие сведения об элементе управления Expander](expander-overview.md).  
+- <xref:System.Windows.Controls.Expander>. Если вы хотите создать элемент управления, отображающий заголовок со свертываемой областью отображения содержимого, используйте <xref:System.Windows.Controls.Expander> элемента управления. Дополнительные сведения см. в разделе [Общие сведения об элементе управления Expander](expander-overview.md).  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>Внешний вид и поведение контекстного меню  

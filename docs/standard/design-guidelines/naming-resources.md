@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
 author: KrzysztofCwalina
 ms.openlocfilehash: 44627aafd9ec779625413a0862412a8f6c408109
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756888"
 ---
 # <a name="naming-resources"></a>Именование ресурсов
 Так как локализуемые ресурсы можно ссылаться с помощью определенных объектов, как если бы они были свойства, рекомендации по именованию для ресурсов похожи на правила свойств.  

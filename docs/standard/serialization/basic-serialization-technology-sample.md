@@ -3,11 +3,11 @@ title: Образец технологии базовой сериализаци
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795022"
 ---
 # <a name="basic-serialization-technology-sample"></a>Образец технологии базовой сериализации
 [Скачать образец](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -62,21 +62,21 @@ ms.locfileid: "59315014"
   
  В следующем маркированном списке кратко описываются технологии и классы, используемые в этом образце.  
   
--   Сериализация во время выполнения  
+- Сериализация во время выполнения  
   
-    -   <xref:System.Runtime.Serialization.IFormatter> Используется для ссылки на <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> или <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> объекта.  
+    - <xref:System.Runtime.Serialization.IFormatter> Используется для ссылки на <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> или <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> объекта.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Используется для сериализации связанного списка в поток в двоичном формате. Двоичный модуль форматирования использует формат, который понятен только типу <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Однако данные являются краткими.  
+    - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Используется для сериализации связанного списка в поток в двоичном формате. Двоичный модуль форматирования использует формат, который понятен только типу <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Однако данные являются краткими.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Используется для сериализации связанного списка в поток формата SOAP. SOAP является стандартным форматом.  
+    - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Используется для сериализации связанного списка в поток формата SOAP. SOAP является стандартным форматом.  
   
--   Потоковый ввод-вывод  
+- Потоковый ввод-вывод  
   
-    -   <xref:System.IO.Stream> Используется для сериализации и десериализации. Особый тип потока, который используется в этом примере, является типом <xref:System.IO.FileStream>. Однако сериализация может быть использована с любым типом, производным от <xref:System.IO.Stream>.  
+    - <xref:System.IO.Stream> Используется для сериализации и десериализации. Особый тип потока, который используется в этом примере, является типом <xref:System.IO.FileStream>. Однако сериализация может быть использована с любым типом, производным от <xref:System.IO.Stream>.  
   
-    -   <xref:System.IO.File> Используется для создания объектов <xref:System.IO.FileStream> для чтения и создания файлов на диске.  
+    - <xref:System.IO.File> Используется для создания объектов <xref:System.IO.FileStream> для чтения и создания файлов на диске.  
   
-    -   <xref:System.IO.FileStream> Используется для сериализации и десериализации связанных списков.  
+    - <xref:System.IO.FileStream> Используется для сериализации и десериализации связанных списков.  
   
 ## <a name="see-also"></a>См. также
 

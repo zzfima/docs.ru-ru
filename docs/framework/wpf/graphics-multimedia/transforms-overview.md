@@ -13,11 +13,11 @@ helpviewer_keywords:
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
 ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762387"
 ---
 # <a name="transforms-overview"></a>Общие сведения о классах Transform
 В этом разделе описывается использование [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> классы для поворота, масштабирования, сдвига и наклона <xref:System.Windows.FrameworkElement> объектов.  
@@ -101,9 +101,9 @@ ms.locfileid: "59162208"
 ## <a name="transforming-a-frameworkelement"></a>Преобразование элемента FrameworkElement  
  Применение преобразований к <xref:System.Windows.FrameworkElement>, создание <xref:System.Windows.Media.Transform> и примените его к одному из двух свойств, <xref:System.Windows.FrameworkElement> класс предоставляет:  
   
--   <xref:System.Windows.FrameworkElement.LayoutTransform%2A> — Преобразование, которое применяется перед проходом разметки. После применения преобразования система разметки обрабатывает преобразованные размер и положение элемента.  
+- <xref:System.Windows.FrameworkElement.LayoutTransform%2A> — Преобразование, которое применяется перед проходом разметки. После применения преобразования система разметки обрабатывает преобразованные размер и положение элемента.  
   
--   <xref:System.Windows.UIElement.RenderTransform%2A> — Преобразование, которое изменяет внешний вид элемента, но применяется после завершения прохода макета. С помощью <xref:System.Windows.UIElement.RenderTransform%2A> вместо свойства <xref:System.Windows.FrameworkElement.LayoutTransform%2A> можно добиться повышения производительности.  
+- <xref:System.Windows.UIElement.RenderTransform%2A> — Преобразование, которое изменяет внешний вид элемента, но применяется после завершения прохода макета. С помощью <xref:System.Windows.UIElement.RenderTransform%2A> вместо свойства <xref:System.Windows.FrameworkElement.LayoutTransform%2A> можно добиться повышения производительности.  
   
  Какое свойство следует использовать? Из-за преимуществ производительности, которые он предоставляет, используйте <xref:System.Windows.UIElement.RenderTransform%2A> свойство всякий раз, когда возможно, особенно при использовании анимации <xref:System.Windows.Media.Transform> объектов. Используйте <xref:System.Windows.FrameworkElement.LayoutTransform%2A> свойство при масштабирования, поворота и наклона, а вам нужны родительского элемента, чтобы изменить размер элемента. Обратите внимание, что, если они используются с <xref:System.Windows.FrameworkElement.LayoutTransform%2A> свойства <xref:System.Windows.Media.TranslateTransform> объектов, по-видимому, не влияют на элементы. Это вызвано тем, что система разметки возвращает преобразуемый элемент в исходное положение в ходе обработки.  
   

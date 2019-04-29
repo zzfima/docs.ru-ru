@@ -19,11 +19,11 @@ ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08b46d96f9fb950602766639559a375a25747010
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869020"
 ---
 # <a name="using-the-assert-method"></a>Использование метода Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -43,19 +43,19 @@ ms.locfileid: "59073732"
   
  На следующем рисунке показано, что происходит при использовании **Assert**. Предположим, что справедливы следующие утверждения о сборках A, B, C, E и F, а также разрешениях P1 и P1A:  
   
--   P1A предоставляет право чтения TXT-файлов на диске C.  
+- P1A предоставляет право чтения TXT-файлов на диске C.  
   
--   P1 предоставляет право чтения всех файлов на диске C.  
+- P1 предоставляет право чтения всех файлов на диске C.  
   
--   P1A и P1 **FileIOPermission** , а P1A является подмножеством P1.  
+- P1A и P1 **FileIOPermission** , а P1A является подмножеством P1.  
   
--   Сборкам E и F назначено разрешение P1A.  
+- Сборкам E и F назначено разрешение P1A.  
   
--   Сборке C назначено разрешение P1.  
+- Сборке C назначено разрешение P1.  
   
--   Сборкам A и B не назначено ни разрешение P1, ни разрешение P1A.  
+- Сборкам A и B не назначено ни разрешение P1, ни разрешение P1A.  
   
--   Метод A содержится в сборке A, метод B содержится в сборке B и т. д.  
+- Метод A содержится в сборке A, метод B содержится в сборке B и т. д.  
   
  ![Схема, показывающая сборки метода Assert.](./media/using-the-assert-method/assert-method-assemblies.gif)    
   

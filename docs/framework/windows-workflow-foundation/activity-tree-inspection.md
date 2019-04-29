@@ -3,11 +3,11 @@ title: Проверка дерева действий
 ms.date: 03/30/2017
 ms.assetid: 100d00e4-8c1d-4233-8fbb-dd443a01155d
 ms.openlocfilehash: 014795b79b3536b387096e4de64266e26649da21
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774152"
 ---
 # <a name="activity-tree-inspection"></a>Проверка дерева действий
 Проверка дерева действий используется авторами приложений рабочих процессов для проверки рабочих процессов, размещенных приложением. Используя службы <xref:System.Activities.WorkflowInspectionServices>, в рабочих процессах можно искать определенные дочерние действия, отдельно взятые действия и их свойства могут быть перечислены, а метаданные действий времени выполнения могут быть кэшированы в определенное время. В этом разделе представлены общие сведения о службах <xref:System.Activities.WorkflowInspectionServices> и их использовании для проверки дерева действий.  

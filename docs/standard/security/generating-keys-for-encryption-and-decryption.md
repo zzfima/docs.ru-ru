@@ -17,11 +17,11 @@ ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c566c54343f1dd7c3da2701c2b7ea9f815e22e7b
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795217"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Создание ключей для шифрования и расшифровки
 Создание ключей и управление ими — это важная часть процесса шифрования. Симметричные алгоритмы требуют создания ключа и вектора инициализации (IV). Ключ следует хранить в тайне от любого, кто не должен расшифровывать ваши данные. Вектор инициализации может не быть секретным, но должен изменяться для каждого сеанса. Асимметричные алгоритмы требуют создания открытого ключа и закрытого ключа. Открытый ключ можно предоставлять кому угодно, а закрытый ключ должен быть известен только той стороне, которая будет расшифровывать данные, зашифрованные при помощи открытого ключа. В этом разделе описывается создание ключей и управление ими для симметричных и асимметричных алгоритмов.  
@@ -64,9 +64,9 @@ tdes.GenerateKey();
   
  Пара из открытого и закрытого ключей создается каждый раз, когда создается новый экземпляр класса асимметричного алгоритма. После создания нового экземпляра класса сведения ключа можно извлечь при помощи одного из двух методов:  
   
--   метод <xref:System.Security.Cryptography.RSA.ToXmlString%2A> , возвращающий XML-представление сведений ключа;  
+- метод <xref:System.Security.Cryptography.RSA.ToXmlString%2A> , возвращающий XML-представление сведений ключа;  
   
--   метод <xref:System.Security.Cryptography.RSACryptoServiceProvider.ExportParameters%2A> , возвращающий структуру <xref:System.Security.Cryptography.RSAParameters> , которая содержит сведения ключа.  
+- метод <xref:System.Security.Cryptography.RSACryptoServiceProvider.ExportParameters%2A> , возвращающий структуру <xref:System.Security.Cryptography.RSAParameters> , которая содержит сведения ключа.  
   
  Оба метода принимают логическое значение, указывающее, следует ли возвращать только сведения об открытом ключе или сведения как об открытом, так и о закрытом ключе. Класс **RSACryptoServiceProvider** можно инициализировать значением структуры **RSAParameters** при помощи метода <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A> .  
   

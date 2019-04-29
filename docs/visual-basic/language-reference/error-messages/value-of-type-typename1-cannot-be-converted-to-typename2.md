@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
 ms.openlocfilehash: 5f313a43bc3a2f983dabbd45477d120fdb80d063
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766809"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>Значение типа "\<Имя_типа1 >" нельзя преобразовать в "\<имя_типа2 >"
 Значение типа "\<Имя_типа1 >" нельзя преобразовать в "\<имя_типа2 >". Несоответствие типов может быть вызвана смешением ссылки на файл в проект ссылку на сборку "\<имя_сборки >". Попробуйте заменить ссылку на файл "\<filepath >" в проекте "\<имя_проекта1 >" со ссылкой проекта "\<имя_проекта2 >".  
@@ -57,7 +57,7 @@ ms.locfileid: "58829031"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Измените ссылку на файл для ссылки на проект.  
+- Измените ссылку на файл для ссылки на проект.  
   
 ## <a name="see-also"></a>См. также
 

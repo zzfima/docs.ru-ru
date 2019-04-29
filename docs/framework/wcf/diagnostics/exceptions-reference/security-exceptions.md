@@ -3,11 +3,11 @@ title: Исключения безопасности
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
 ms.openlocfilehash: c1eeca9111837b9833de54ecafbc981d1c2b6343
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780865"
 ---
 # <a name="security-exceptions"></a>Исключения безопасности
 В этом разделе перечислены все исключения безопасности.  
@@ -29,8 +29,8 @@ ms.locfileid: "50201378"
 |CachedNegotiationStateQuotaReached|Служба не может кэшировать состояние согласования, так как достигнута указанная емкость. Повторите запрос.|  
 |CacheQuotaReached|Не удается добавить элемент. Максимальный размер кэша равен указанному значению.|  
 |CannotDetermineSPNBasedOnAddress|Клиент не может определить имя службы-участника на основании имени в указанном конечном адресе для SspiNegotiation/Kerberos. Целевой адрес удостоверение должно быть удостоверение имени участника-пользователя (например acmedomain\\\alice) или удостоверение имени участника-службы (например, узел/bobs-machine).|  
-|CannotFindCert|Не удается найти сертификат X.509 с помощью следующих условий поиска: StoreName, StoreLocation, FindType, FindValue.|  
-|CannotFindCertForTarget|Не удается найти сертификат X.509 с помощью следующих условий поиска: StoreName, StoreLocation, FindType, FindValue для указанного целевого объекта.|  
+|CannotFindCert|Не удалось найти сертификат X.509, с помощью условий поиска: StoreName, StoreLocation, FindType, FindValue.|  
+|CannotFindCertForTarget|Не удалось найти сертификат X.509, с помощью условий поиска: StoreName, StoreLocation, FindType, FindValue для указанного целевого объекта.|  
 |CannotFindCorrelationStateForApplyingSecurity|Не удается найти состояние корреляции для применения безопасности к ответу респондента.|  
 |CannotFindNegotiationState|Не удается найти состояние согласования для указанного контекста.|  
 |CannotFindSecuritySession|Не удается найти сеанс безопасности с указанным идентификатором.|  
@@ -55,8 +55,8 @@ ms.locfileid: "50201378"
 |ExportOfBindingWithAsymmetricAndTransportSecurityNotSupported|Ошибка экспорта политики безопасности. Привязка содержит элемент AsymmetricSecurityBindingElement и элемент привязки защищенного транспорта. Экспорт политики для такой привязки не поддерживается.|  
 |ExportOfBindingWithSymmetricAndTransportSecurityNotSupported|Ошибка экспорта политики безопасности. Привязка содержит элемент SymmetricSecurityBindingElement и элемент привязки защищенного транспорта. Экспорт политики для такой привязки не поддерживается.|  
 |ExportOfBindingWithTransportSecurityBindingElementAndNoTransportSecurityNotSupported|Ошибка экспорта политики безопасности. Привязка содержит элемент TransportSecurityBindingElement, но в ней отсутствует элемент привязки транспорта, реализующий ITransportTokenAssertionProvider. Экспорт политики для такой привязки не поддерживается. Убедитесь, что элемент привязки транспорта в данной привязке реализует интерфейс ITransportTokenAssertionProvider.|  
-|FoundMultipleCerts|С помощью указанных условий поиска StoreName, StoreLocation, FindType, FindValue найдено несколько сертификатов X.509. Укажите более точное значение.|  
-|FoundMultipleCertsForTarget|Несколько сертификатов X.509 найдено с помощью указанных условий StoreName, StoreLocation, FindType, FindValue для указанного целевого объекта. Укажите более точное значение.|  
+|FoundMultipleCerts|Найдено несколько сертификатов X.509, с помощью условий поиска: StoreName, StoreLocation, FindType, FindValue. Укажите более точное значение.|  
+|FoundMultipleCertsForTarget|Найдено несколько сертификатов X.509, с помощью условий поиска: StoreName, StoreLocation, FindType, FindValue для указанного целевого объекта. Укажите более точное значение.|  
 |HeaderDecryptionNotSupportedInWsSecurityJan2004|SecurityVersion.WSSecurityJan2004 не поддерживает описание заголовка. Используйте SecurityVersion.WsSecurityXXX2005 или более позднюю версию, либо безопасность транспорта, чтобы зашифровать все сообщение.|  
 |IdentityCheckFailedForIncomingMessage|Сбой проверки идентификации входящего сообщения. Ожидаемое имя указано для целевой конечной точки.|  
 |IdentityCheckFailedForOutgoingMessage|Сбой проверки идентификации исходящего сообщения. Ожидаемое имя указано для целевой конечной точки.|  
@@ -137,9 +137,9 @@ ms.locfileid: "50201378"
 |SslServerCertMustDoKeyExchange|Указанный сертификат должен иметь закрытый ключ, поддерживающий обмен ключами. Процесс должен иметь права доступа к этому закрытому ключу.|  
 |StandardsManagerCannotWriteObject|Сериализатор маркеров не может сериализовать указанный объект.  Если используется пользовательский тип, необходимо предоставить пользовательский сериализатор.|  
 |TimeStampHasCreationAheadOfExpiry|Отметка времени безопасности недействительна, так как ее время создания больше или равно времени истечения срока ее действия.|  
-|TimeStampHasCreationTimeInFuture|Метка времени безопасности недействительна, так как время ее создания относится к будущему. Указаны текущее время и допустимая разница в показаниях часов.|  
-|TimeStampHasExpiryTimeInPast|Отметка времени безопасности недействительна, так как время истечения срока ее действия относится к прошлому. Указаны текущее время и допустимая разница в показаниях часов.|  
-|TimeStampWasCreatedTooLongAgo|Отметка времени безопасности просрочена, так как с времени ее создания прошло слишком много времени. Указаны текущее время, максимальное время жизни отметки времени и допустимая разница в показаниях часов.|  
+|TimeStampHasCreationTimeInFuture|Отметка времени безопасности недействительна, так как время ее создания относится к будущему. Указаны текущее время и допустимая разница в показаниях часов.|  
+|TimeStampHasExpiryTimeInPast|Метка времени безопасности недействительна, так как время истечения срока ее действия относится к прошлому. Указаны текущее время и допустимая разница в показаниях часов.|  
+|TimeStampWasCreatedTooLongAgo|Метка времени безопасности просрочена, так как с времени ее создания прошло слишком много времени. Указаны текущее время, максимальное время жизни метки времени и допустимая разница в показаниях часов.|  
 |TokenProviderCannotGetTokensForTarget|Поставщику маркеров не удается получить маркеры для указанного целевого объекта.|  
 |TooManyIssuedSecurityTokenParameters|Участок федеративной цепочки безопасности содержит несколько параметров IssuedSecurityTokenParameters. Система InfoCard поддерживает только по одному параметру IssuedSecurityTokenParameters для каждого участка.|  
 |TransportDoesNotProtectMessage|Указанная привязка для указанного контракта настроена с режимом проверки подлинности, требующим целостности и конфиденциальности уровня транспорта. Однако транспорт не способен обеспечить целостность и конфиденциальность.|  

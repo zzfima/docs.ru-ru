@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
 ms.openlocfilehash: 7b64302d801a08f976de0ec969983c821f7a8471
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796998"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Тип данных Boolean (Visual Basic)
 Содержит значения, которые могут быть только `True` или `False`. Ключевые слова `True` и `False` соответствуют двух состояний `Boolean` переменные.  
@@ -36,11 +36,11 @@ ms.locfileid: "58841227"
   
 ## <a name="programming-tips"></a>Советы по программированию  
   
--   **Отрицательные числа.** `Boolean` не является числовым типом и не может представлять отрицательное значение. В любом случае не следует использовать `Boolean` для хранения числовых значений.  
+- **Отрицательные числа.** `Boolean` не является числовым типом и не может представлять отрицательное значение. В любом случае не следует использовать `Boolean` для хранения числовых значений.  
   
--   **Символы типа.** `Boolean` не имеет знак типа литерала или знак типа идентификатора.  
+- **Символы типа.** `Boolean` не имеет знак типа литерала или знак типа идентификатора.  
   
--   **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.Boolean?displayProperty=nameWithType>.  
+- **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.Boolean?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Пример  
  В следующем примере `runningVB` является `Boolean` переменной, которая хранит простой Да/нет.  
