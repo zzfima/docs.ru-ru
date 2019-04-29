@@ -18,18 +18,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 567e6533a9a9ac718f8b5acac769295c104f7f3c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628103"
 ---
-# <a name="getcorsystemdirectory-function"></a><span data-ttu-id="ab8dc-102">Функция GetCORSystemDirectory</span><span class="sxs-lookup"><span data-stu-id="ab8dc-102">GetCORSystemDirectory Function</span></span>
-<span data-ttu-id="ab8dc-103">Возвращает каталог установки среда CLR (CLR), который загружается процесс.</span><span class="sxs-lookup"><span data-stu-id="ab8dc-103">Returns the installation directory of the common language runtime (CLR) that is loaded into the process.</span></span> <span data-ttu-id="ab8dc-104">Каталог установки — полное имя, например, «c:\windows\microsoft.net\framework\v1.0.3705».</span><span class="sxs-lookup"><span data-stu-id="ab8dc-104">The installation directory is fully qualified, for example, "c:\windows\microsoft.net\framework\v1.0.3705".</span></span>  
+# <a name="getcorsystemdirectory-function"></a><span data-ttu-id="6e6a3-102">Функция GetCORSystemDirectory</span><span class="sxs-lookup"><span data-stu-id="6e6a3-102">GetCORSystemDirectory Function</span></span>
+<span data-ttu-id="6e6a3-103">Возвращает каталог установки среда CLR (CLR), который загружается процесс.</span><span class="sxs-lookup"><span data-stu-id="6e6a3-103">Returns the installation directory of the common language runtime (CLR) that is loaded into the process.</span></span> <span data-ttu-id="6e6a3-104">Каталог установки — полное имя, например, «c:\windows\microsoft.net\framework\v1.0.3705».</span><span class="sxs-lookup"><span data-stu-id="6e6a3-104">The installation directory is fully qualified, for example, "c:\windows\microsoft.net\framework\v1.0.3705".</span></span>  
   
- <span data-ttu-id="ab8dc-105">Эта функция является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="ab8dc-105">This function is deprecated.</span></span> <span data-ttu-id="ab8dc-106">Он заменен [ICLRRuntimeInfo::GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) метода [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ab8dc-106">It is superseded by the [ICLRRuntimeInfo::GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) method provided in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="6e6a3-105">Эта функция является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="6e6a3-105">This function is deprecated.</span></span> <span data-ttu-id="6e6a3-106">Он заменен [ICLRRuntimeInfo::GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) метода [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6e6a3-106">It is superseded by the [ICLRRuntimeInfo::GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) method provided in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ab8dc-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ab8dc-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6e6a3-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6e6a3-107">Syntax</span></span>  
   
 ```  
 HRESULT GetCORSystemDirectory (   
@@ -39,30 +39,30 @@ HRESULT GetCORSystemDirectory (
 );   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ab8dc-108">Параметры</span><span class="sxs-lookup"><span data-stu-id="ab8dc-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6e6a3-108">Параметры</span><span class="sxs-lookup"><span data-stu-id="6e6a3-108">Parameters</span></span>  
  `pbuffer`  
- <span data-ttu-id="ab8dc-109">[out] Буфер, в котором среда выполнения возвращает строку, содержащую полное имя каталога установки для среды выполнения, который загружается в процесс.</span><span class="sxs-lookup"><span data-stu-id="ab8dc-109">[out] A buffer in which the runtime returns a string that contains the fully qualified name of the installation directory for the runtime that is loaded into the process.</span></span> <span data-ttu-id="ab8dc-110">Если среда выполнения еще не был загружен в процесс, функция возвращает данные каталога, соответствующего для последней версии среды выполнения, установленную на компьютере.</span><span class="sxs-lookup"><span data-stu-id="ab8dc-110">If the runtime has not yet been loaded into the process, the function returns the appropriate directory information for the latest version of the runtime installed on the computer.</span></span>  
+ <span data-ttu-id="6e6a3-109">[out] Буфер, в котором среда выполнения возвращает строку, содержащую полное имя каталога установки для среды выполнения, который загружается в процесс.</span><span class="sxs-lookup"><span data-stu-id="6e6a3-109">[out] A buffer in which the runtime returns a string that contains the fully qualified name of the installation directory for the runtime that is loaded into the process.</span></span> <span data-ttu-id="6e6a3-110">Если среда выполнения еще не был загружен в процесс, функция возвращает данные каталога, соответствующего для последней версии среды выполнения, установленную на компьютере.</span><span class="sxs-lookup"><span data-stu-id="6e6a3-110">If the runtime has not yet been loaded into the process, the function returns the appropriate directory information for the latest version of the runtime installed on the computer.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="ab8dc-111">[in] Размер в байтах из `pbuffer`.</span><span class="sxs-lookup"><span data-stu-id="ab8dc-111">[in] The size, in bytes, of `pbuffer`.</span></span>  
+ <span data-ttu-id="6e6a3-111">[in] Размер в байтах из `pbuffer`.</span><span class="sxs-lookup"><span data-stu-id="6e6a3-111">[in] The size, in bytes, of `pbuffer`.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="ab8dc-112">[out] Число символов, возвращаемых в `pbuffer`.</span><span class="sxs-lookup"><span data-stu-id="ab8dc-112">[out] The number of characters returned in `pbuffer`.</span></span>  
+ <span data-ttu-id="6e6a3-112">[out] Число символов, возвращаемых в `pbuffer`.</span><span class="sxs-lookup"><span data-stu-id="6e6a3-112">[out] The number of characters returned in `pbuffer`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ab8dc-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="ab8dc-113">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6e6a3-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="6e6a3-113">Remarks</span></span>  
   
 > [!CAUTION]
->  <span data-ttu-id="ab8dc-114">Не используйте эту функцию в процессах, работающих под управлением версии 4 среды CLR.</span><span class="sxs-lookup"><span data-stu-id="ab8dc-114">Do not use this function in processes that are running version 4 of the CLR.</span></span> <span data-ttu-id="ab8dc-115">Если на компьютере установлена более ранняя версия среды CLR, эта функция возвращает каталог установки этой версии.</span><span class="sxs-lookup"><span data-stu-id="ab8dc-115">If an earlier version of the CLR is installed on the computer, this function returns the installation directory for that version.</span></span>  
+>  <span data-ttu-id="6e6a3-114">Не используйте эту функцию в процессах, работающих под управлением версии 4 среды CLR.</span><span class="sxs-lookup"><span data-stu-id="6e6a3-114">Do not use this function in processes that are running version 4 of the CLR.</span></span> <span data-ttu-id="6e6a3-115">Если на компьютере установлена более ранняя версия среды CLR, эта функция возвращает каталог установки этой версии.</span><span class="sxs-lookup"><span data-stu-id="6e6a3-115">If an earlier version of the CLR is installed on the computer, this function returns the installation directory for that version.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ab8dc-116">Требования</span><span class="sxs-lookup"><span data-stu-id="ab8dc-116">Requirements</span></span>  
- <span data-ttu-id="ab8dc-117">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ab8dc-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6e6a3-116">Требования</span><span class="sxs-lookup"><span data-stu-id="6e6a3-116">Requirements</span></span>  
+ <span data-ttu-id="6e6a3-117">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6e6a3-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ab8dc-118">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ab8dc-118">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="6e6a3-118">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="6e6a3-118">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ab8dc-119">**Библиотека:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ab8dc-119">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="6e6a3-119">**Библиотека:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6e6a3-119">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ab8dc-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab8dc-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6e6a3-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6e6a3-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab8dc-121">См. также</span><span class="sxs-lookup"><span data-stu-id="ab8dc-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6e6a3-121">См. также</span><span class="sxs-lookup"><span data-stu-id="6e6a3-121">See also</span></span>
 
-- [<span data-ttu-id="ab8dc-122">Устаревшие функции размещения CLR</span><span class="sxs-lookup"><span data-stu-id="ab8dc-122">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="6e6a3-122">Устаревшие функции размещения CLR</span><span class="sxs-lookup"><span data-stu-id="6e6a3-122">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

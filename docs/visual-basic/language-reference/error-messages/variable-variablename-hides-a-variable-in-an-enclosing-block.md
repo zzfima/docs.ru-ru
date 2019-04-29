@@ -8,20 +8,20 @@ helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
 ms.openlocfilehash: 15c35cbb829bec782771b584ea25b111b81b5e1f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766894"
 ---
-# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a><span data-ttu-id="1b891-102">Переменная "\<имя_переменной >" скрывает переменную во внешнем блоке</span><span class="sxs-lookup"><span data-stu-id="1b891-102">Variable '\<variablename>' hides a variable in an enclosing block</span></span>
-<span data-ttu-id="1b891-103">Содержится в блоке, переменная имеет имя, совпадающее с именем другой локальной переменной.</span><span class="sxs-lookup"><span data-stu-id="1b891-103">A variable enclosed in a block has the same name as another local variable.</span></span>  
+# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a><span data-ttu-id="55639-102">Переменная "\<имя_переменной >" скрывает переменную во внешнем блоке</span><span class="sxs-lookup"><span data-stu-id="55639-102">Variable '\<variablename>' hides a variable in an enclosing block</span></span>
+<span data-ttu-id="55639-103">Содержится в блоке, переменная имеет имя, совпадающее с именем другой локальной переменной.</span><span class="sxs-lookup"><span data-stu-id="55639-103">A variable enclosed in a block has the same name as another local variable.</span></span>  
   
- <span data-ttu-id="1b891-104">**Идентификатор ошибки:** BC30616</span><span class="sxs-lookup"><span data-stu-id="1b891-104">**Error ID:** BC30616</span></span>  
+ <span data-ttu-id="55639-104">**Идентификатор ошибки:** BC30616</span><span class="sxs-lookup"><span data-stu-id="55639-104">**Error ID:** BC30616</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="1b891-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="1b891-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="55639-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="55639-105">To correct this error</span></span>  
   
--   <span data-ttu-id="1b891-106">Переименуйте переменную в закрытом блоке, так как это не так же, как локальные переменные.</span><span class="sxs-lookup"><span data-stu-id="1b891-106">Rename the variable in the enclosed block so that it is not the same as any other local variables.</span></span> <span data-ttu-id="1b891-107">Пример:</span><span class="sxs-lookup"><span data-stu-id="1b891-107">For example:</span></span>  
+- <span data-ttu-id="55639-106">Переименуйте переменную в закрытом блоке, так как это не так же, как локальные переменные.</span><span class="sxs-lookup"><span data-stu-id="55639-106">Rename the variable in the enclosed block so that it is not the same as any other local variables.</span></span> <span data-ttu-id="55639-107">Пример:</span><span class="sxs-lookup"><span data-stu-id="55639-107">For example:</span></span>  
   
     ```  
     Dim a, b, x As Integer  
@@ -30,11 +30,11 @@ ms.locfileid: "58827137"
     End If  
     ```  
   
--   <span data-ttu-id="1b891-108">Распространенной причиной этой ошибки является использование `Catch e As Exception` внутри обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="1b891-108">A common cause for this error is the use of `Catch e As Exception` inside an event handler.</span></span> <span data-ttu-id="1b891-109">Если это так, имя `Catch` переменная блока `ex` вместо `e`.</span><span class="sxs-lookup"><span data-stu-id="1b891-109">If this is the case, name the `Catch` block variable `ex` rather than `e`.</span></span>  
+- <span data-ttu-id="55639-108">Распространенной причиной этой ошибки является использование `Catch e As Exception` внутри обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="55639-108">A common cause for this error is the use of `Catch e As Exception` inside an event handler.</span></span> <span data-ttu-id="55639-109">Если это так, имя `Catch` переменная блока `ex` вместо `e`.</span><span class="sxs-lookup"><span data-stu-id="55639-109">If this is the case, name the `Catch` block variable `ex` rather than `e`.</span></span>  
   
--   <span data-ttu-id="1b891-110">Другой распространенной причиной этой ошибки является попытка получить доступ к локальной переменной, объявленной в `Try` блокировать в отдельном `Catch` блока.</span><span class="sxs-lookup"><span data-stu-id="1b891-110">Another common source of this error is an attempt to access a local variable declared within a `Try` block in a separate `Catch` block.</span></span> <span data-ttu-id="1b891-111">Чтобы исправить эту ошибку, объявите переменную за пределами `Try...Catch...Finally` структуры.</span><span class="sxs-lookup"><span data-stu-id="1b891-111">To correct this, declare the variable outside the `Try...Catch...Finally` structure.</span></span>  
+- <span data-ttu-id="55639-110">Другой распространенной причиной этой ошибки является попытка получить доступ к локальной переменной, объявленной в `Try` блокировать в отдельном `Catch` блока.</span><span class="sxs-lookup"><span data-stu-id="55639-110">Another common source of this error is an attempt to access a local variable declared within a `Try` block in a separate `Catch` block.</span></span> <span data-ttu-id="55639-111">Чтобы исправить эту ошибку, объявите переменную за пределами `Try...Catch...Finally` структуры.</span><span class="sxs-lookup"><span data-stu-id="55639-111">To correct this, declare the variable outside the `Try...Catch...Finally` structure.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b891-112">См. также</span><span class="sxs-lookup"><span data-stu-id="1b891-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="55639-112">См. также</span><span class="sxs-lookup"><span data-stu-id="55639-112">See also</span></span>
 
-- [<span data-ttu-id="1b891-113">Оператор Try...Catch...Finally</span><span class="sxs-lookup"><span data-stu-id="1b891-113">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [<span data-ttu-id="1b891-114">Объявление переменных</span><span class="sxs-lookup"><span data-stu-id="1b891-114">Variable Declaration</span></span>](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [<span data-ttu-id="55639-113">Оператор Try...Catch...Finally</span><span class="sxs-lookup"><span data-stu-id="55639-113">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [<span data-ttu-id="55639-114">Объявление переменных</span><span class="sxs-lookup"><span data-stu-id="55639-114">Variable Declaration</span></span>](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

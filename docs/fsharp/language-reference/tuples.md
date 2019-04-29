@@ -3,94 +3,94 @@ title: Кортежи
 description: Дополнительные сведения о F# кортежа, группирования неименованных, но упорядоченных значений, возможно различных типов.
 ms.date: 05/16/2016
 ms.openlocfilehash: a1fc31d4dc97c0921545e53b91dcde0547002006
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755341"
 ---
-# <a name="tuples"></a><span data-ttu-id="9be40-103">Кортежи</span><span class="sxs-lookup"><span data-stu-id="9be40-103">Tuples</span></span>
+# <a name="tuples"></a><span data-ttu-id="2c863-103">Кортежи</span><span class="sxs-lookup"><span data-stu-id="2c863-103">Tuples</span></span>
 
-<span data-ttu-id="9be40-104">Объект *кортежа* представляет собой способ группирования неименованных, но упорядоченных значений, возможно различных типов.</span><span class="sxs-lookup"><span data-stu-id="9be40-104">A *tuple* is a grouping of unnamed but ordered values, possibly of different types.</span></span>  <span data-ttu-id="9be40-105">Кортежей может быть ссылочными типами или структуры.</span><span class="sxs-lookup"><span data-stu-id="9be40-105">Tuples can either be reference types or structs.</span></span>
+<span data-ttu-id="2c863-104">Объект *кортежа* представляет собой способ группирования неименованных, но упорядоченных значений, возможно различных типов.</span><span class="sxs-lookup"><span data-stu-id="2c863-104">A *tuple* is a grouping of unnamed but ordered values, possibly of different types.</span></span>  <span data-ttu-id="2c863-105">Кортежей может быть ссылочными типами или структуры.</span><span class="sxs-lookup"><span data-stu-id="2c863-105">Tuples can either be reference types or structs.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="9be40-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9be40-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="2c863-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2c863-106">Syntax</span></span>
 
 ```fsharp
 (element, ... , element)
 struct(element, ... ,element )
 ```
 
-## <a name="remarks"></a><span data-ttu-id="9be40-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="9be40-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="2c863-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="2c863-107">Remarks</span></span>
 
-<span data-ttu-id="9be40-108">Каждый *элемент* в предыдущем синтаксисе может быть любым допустимым F# выражение.</span><span class="sxs-lookup"><span data-stu-id="9be40-108">Each *element* in the previous syntax can be any valid F# expression.</span></span>
+<span data-ttu-id="2c863-108">Каждый *элемент* в предыдущем синтаксисе может быть любым допустимым F# выражение.</span><span class="sxs-lookup"><span data-stu-id="2c863-108">Each *element* in the previous syntax can be any valid F# expression.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="9be40-109">Примеры</span><span class="sxs-lookup"><span data-stu-id="9be40-109">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="2c863-109">Примеры</span><span class="sxs-lookup"><span data-stu-id="2c863-109">Examples</span></span>
 
-<span data-ttu-id="9be40-110">Кортежи примеры пары, тройки и т. д., из одной или разных типов.</span><span class="sxs-lookup"><span data-stu-id="9be40-110">Examples of tuples include pairs, triples, and so on, of the same or different types.</span></span> <span data-ttu-id="9be40-111">В следующем коде показаны некоторые примеры.</span><span class="sxs-lookup"><span data-stu-id="9be40-111">Some examples are illustrated in the following code.</span></span>
+<span data-ttu-id="2c863-110">Кортежи примеры пары, тройки и т. д., из одной или разных типов.</span><span class="sxs-lookup"><span data-stu-id="2c863-110">Examples of tuples include pairs, triples, and so on, of the same or different types.</span></span> <span data-ttu-id="2c863-111">В следующем коде показаны некоторые примеры.</span><span class="sxs-lookup"><span data-stu-id="2c863-111">Some examples are illustrated in the following code.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L6-L21)]
 
-## <a name="obtaining-individual-values"></a><span data-ttu-id="9be40-112">Получение отдельных значений</span><span class="sxs-lookup"><span data-stu-id="9be40-112">Obtaining Individual Values</span></span>
+## <a name="obtaining-individual-values"></a><span data-ttu-id="2c863-112">Получение отдельных значений</span><span class="sxs-lookup"><span data-stu-id="2c863-112">Obtaining Individual Values</span></span>
 
-<span data-ttu-id="9be40-113">Можно использовать сопоставление шаблонов для доступа и назначения имен для элементов кортежа, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="9be40-113">You can use pattern matching to access and assign names for tuple elements, as shown in the following code.</span></span>
+<span data-ttu-id="2c863-113">Можно использовать сопоставление шаблонов для доступа и назначения имен для элементов кортежа, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="2c863-113">You can use pattern matching to access and assign names for tuple elements, as shown in the following code.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L27-L29)]
 
-<span data-ttu-id="9be40-114">Можно также деконструкции кортежа с помощью сопоставления шаблонов за пределами `match` выражения через `let` привязки:</span><span class="sxs-lookup"><span data-stu-id="9be40-114">You can also deconstruct a tuple via pattern matching outside of a `match` expression via  `let` binding:</span></span>
+<span data-ttu-id="2c863-114">Можно также деконструкции кортежа с помощью сопоставления шаблонов за пределами `match` выражения через `let` привязки:</span><span class="sxs-lookup"><span data-stu-id="2c863-114">You can also deconstruct a tuple via pattern matching outside of a `match` expression via  `let` binding:</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L34-L37)]
 
-<span data-ttu-id="9be40-115">Или можно шаблонов соответствуют по кортежей в качестве входных аргументов функций:</span><span class="sxs-lookup"><span data-stu-id="9be40-115">Or you can pattern match on tuples as inputs to functions:</span></span>
+<span data-ttu-id="2c863-115">Или можно шаблонов соответствуют по кортежей в качестве входных аргументов функций:</span><span class="sxs-lookup"><span data-stu-id="2c863-115">Or you can pattern match on tuples as inputs to functions:</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L43-L47)]
 
-<span data-ttu-id="9be40-116">Если вам требуется только один элемент кортежа, можно использовать подстановочный знак (символ подчеркивания), чтобы не создавать новое имя для значения, которое не обязательно.</span><span class="sxs-lookup"><span data-stu-id="9be40-116">If you need only one element of the tuple, the wildcard character (the underscore) can be used to avoid creating a new name for a value that you do not need.</span></span>
+<span data-ttu-id="2c863-116">Если вам требуется только один элемент кортежа, можно использовать подстановочный знак (символ подчеркивания), чтобы не создавать новое имя для значения, которое не обязательно.</span><span class="sxs-lookup"><span data-stu-id="2c863-116">If you need only one element of the tuple, the wildcard character (the underscore) can be used to avoid creating a new name for a value that you do not need.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L53-L54)]
 
-<span data-ttu-id="9be40-117">Копирование элементов из кортежа ссылку на кортеж структуры также выполняется очень просто:</span><span class="sxs-lookup"><span data-stu-id="9be40-117">Copying elements from a reference tuple into a struct tuple is also simple:</span></span>
+<span data-ttu-id="2c863-117">Копирование элементов из кортежа ссылку на кортеж структуры также выполняется очень просто:</span><span class="sxs-lookup"><span data-stu-id="2c863-117">Copying elements from a reference tuple into a struct tuple is also simple:</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L62-L66)]
 
-<span data-ttu-id="9be40-118">Функции `fst` и `snd` (ссылаться только кортежей) возвращают первый и второй элементы кортежа, соответственно.</span><span class="sxs-lookup"><span data-stu-id="9be40-118">The functions `fst` and `snd` (reference tuples only) return the first and second elements of a tuple, respectively.</span></span>
+<span data-ttu-id="2c863-118">Функции `fst` и `snd` (ссылаться только кортежей) возвращают первый и второй элементы кортежа, соответственно.</span><span class="sxs-lookup"><span data-stu-id="2c863-118">The functions `fst` and `snd` (reference tuples only) return the first and second elements of a tuple, respectively.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L72-L73)]
 
-<span data-ttu-id="9be40-119">Нет встроенной функции, который возвращает третий элемент тройки, но вы легко написать следующим образом.</span><span class="sxs-lookup"><span data-stu-id="9be40-119">There is no built-in function that returns the third element of a triple, but you can easily write one as follows.</span></span>
+<span data-ttu-id="2c863-119">Нет встроенной функции, который возвращает третий элемент тройки, но вы легко написать следующим образом.</span><span class="sxs-lookup"><span data-stu-id="2c863-119">There is no built-in function that returns the third element of a triple, but you can easily write one as follows.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L78-L78)]
 
-<span data-ttu-id="9be40-120">Как правило лучше использовать сопоставление шаблонов для доступа к отдельным элементам кортежа.</span><span class="sxs-lookup"><span data-stu-id="9be40-120">Generally, it is better to use pattern matching to access individual tuple elements.</span></span>
+<span data-ttu-id="2c863-120">Как правило лучше использовать сопоставление шаблонов для доступа к отдельным элементам кортежа.</span><span class="sxs-lookup"><span data-stu-id="2c863-120">Generally, it is better to use pattern matching to access individual tuple elements.</span></span>
 
-## <a name="using-tuples"></a><span data-ttu-id="9be40-121">Использование кортежей</span><span class="sxs-lookup"><span data-stu-id="9be40-121">Using Tuples</span></span>
+## <a name="using-tuples"></a><span data-ttu-id="2c863-121">Использование кортежей</span><span class="sxs-lookup"><span data-stu-id="2c863-121">Using Tuples</span></span>
 
-<span data-ttu-id="9be40-122">Кортежи — удобный способ для возврата нескольких значений из функции, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="9be40-122">Tuples provide a convenient way to return multiple values from a function, as shown in the following example.</span></span> <span data-ttu-id="9be40-123">В этом примере выполняет целочисленное деление и возвращает округленный результат операцию, так как первый элемент пары кортежа и остаток в качестве второго элемента пары.</span><span class="sxs-lookup"><span data-stu-id="9be40-123">This example performs integer division and returns the rounded result of the operation as a first member of a tuple pair and the remainder as a second member of the pair.</span></span>
+<span data-ttu-id="2c863-122">Кортежи — удобный способ для возврата нескольких значений из функции, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="2c863-122">Tuples provide a convenient way to return multiple values from a function, as shown in the following example.</span></span> <span data-ttu-id="2c863-123">В этом примере выполняет целочисленное деление и возвращает округленный результат операцию, так как первый элемент пары кортежа и остаток в качестве второго элемента пары.</span><span class="sxs-lookup"><span data-stu-id="2c863-123">This example performs integer division and returns the rounded result of the operation as a first member of a tuple pair and the remainder as a second member of the pair.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L83-L86)]
 
-<span data-ttu-id="9be40-124">Кортежи можно также использоваться как аргументы функции, если вы хотите избежать неявное каррирование аргументов функции, которые выражается обычным синтаксисом функций.</span><span class="sxs-lookup"><span data-stu-id="9be40-124">Tuples can also be used as function arguments when you want to avoid the implicit currying of function arguments that is implied by the usual function syntax.</span></span>
+<span data-ttu-id="2c863-124">Кортежи можно также использоваться как аргументы функции, если вы хотите избежать неявное каррирование аргументов функции, которые выражается обычным синтаксисом функций.</span><span class="sxs-lookup"><span data-stu-id="2c863-124">Tuples can also be used as function arguments when you want to avoid the implicit currying of function arguments that is implied by the usual function syntax.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L88-L88)]
 
-<span data-ttu-id="9be40-125">Обычный синтаксис определения функции `let sum a b = a + b` позволяет определить функцию, представляющую собой частичное применение первого аргумента функции, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="9be40-125">The usual syntax for defining the function `let sum a b = a + b` enables you to define a function that is the partial application of the first argument of the function, as shown in the following code.</span></span>
+<span data-ttu-id="2c863-125">Обычный синтаксис определения функции `let sum a b = a + b` позволяет определить функцию, представляющую собой частичное применение первого аргумента функции, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="2c863-125">The usual syntax for defining the function `let sum a b = a + b` enables you to define a function that is the partial application of the first argument of the function, as shown in the following code.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/basic-examples.fsx#L90-L94)]
 
-<span data-ttu-id="9be40-126">Используя в качестве параметра кортеж каррирование.</span><span class="sxs-lookup"><span data-stu-id="9be40-126">Using a tuple as the parameter disables currying.</span></span> <span data-ttu-id="9be40-127">Дополнительные сведения см. в разделе «Частичное приложения из аргументы» в [функции](functions/index.md).</span><span class="sxs-lookup"><span data-stu-id="9be40-127">For more information, see "Partial Application of Arguments" in [Functions](functions/index.md).</span></span>
+<span data-ttu-id="2c863-126">Используя в качестве параметра кортеж каррирование.</span><span class="sxs-lookup"><span data-stu-id="2c863-126">Using a tuple as the parameter disables currying.</span></span> <span data-ttu-id="2c863-127">Дополнительные сведения см. в разделе «Частичное приложения из аргументы» в [функции](functions/index.md).</span><span class="sxs-lookup"><span data-stu-id="2c863-127">For more information, see "Partial Application of Arguments" in [Functions](functions/index.md).</span></span>
 
-## <a name="names-of-tuple-types"></a><span data-ttu-id="9be40-128">Имена типов кортежей</span><span class="sxs-lookup"><span data-stu-id="9be40-128">Names of Tuple Types</span></span>
+## <a name="names-of-tuple-types"></a><span data-ttu-id="2c863-128">Имена типов кортежей</span><span class="sxs-lookup"><span data-stu-id="2c863-128">Names of Tuple Types</span></span>
 
-<span data-ttu-id="9be40-129">При написании имени типа, который представляет собой кортеж, использовании `*` символ для разделения элементов.</span><span class="sxs-lookup"><span data-stu-id="9be40-129">When you write out the name of a type that is a tuple, you use the `*` symbol to separate elements.</span></span> <span data-ttu-id="9be40-130">Для кортеж, состоящий из `int`, `float`и `string`, такие как `(10, 10.0, "ten")`, тип будет записан следующим образом.</span><span class="sxs-lookup"><span data-stu-id="9be40-130">For a tuple that consists of an `int`, a `float`, and a `string`, such as `(10, 10.0, "ten")`, the type would be written as follows.</span></span>
+<span data-ttu-id="2c863-129">При написании имени типа, который представляет собой кортеж, использовании `*` символ для разделения элементов.</span><span class="sxs-lookup"><span data-stu-id="2c863-129">When you write out the name of a type that is a tuple, you use the `*` symbol to separate elements.</span></span> <span data-ttu-id="2c863-130">Для кортеж, состоящий из `int`, `float`и `string`, такие как `(10, 10.0, "ten")`, тип будет записан следующим образом.</span><span class="sxs-lookup"><span data-stu-id="2c863-130">For a tuple that consists of an `int`, a `float`, and a `string`, such as `(10, 10.0, "ten")`, the type would be written as follows.</span></span>
 
 ```fsharp
 int * float * string
 ```
 
-## <a name="interoperation-with-c-tuples"></a><span data-ttu-id="9be40-131">Взаимодействие с кортежами на C#</span><span class="sxs-lookup"><span data-stu-id="9be40-131">Interoperation with C# Tuples</span></span>
+## <a name="interoperation-with-c-tuples"></a><span data-ttu-id="2c863-131">Взаимодействие с кортежами на C#</span><span class="sxs-lookup"><span data-stu-id="2c863-131">Interoperation with C# Tuples</span></span>
 
-<span data-ttu-id="9be40-132">Язык C# 7.0 введены кортежей.</span><span class="sxs-lookup"><span data-stu-id="9be40-132">C# 7.0 introduced tuples to the language.</span></span>  <span data-ttu-id="9be40-133">Кортежи в C# являются структурами и эквивалентные структурных кортежей в F#.</span><span class="sxs-lookup"><span data-stu-id="9be40-133">Tuples in C# are structs, and are equivalent to struct tuples in F#.</span></span>  <span data-ttu-id="9be40-134">Если вам нужно взаимодействовать с C#, необходимо использовать структурных кортежей.</span><span class="sxs-lookup"><span data-stu-id="9be40-134">If you need to interoperate with C#, you must use struct tuples.</span></span>
+<span data-ttu-id="2c863-132">Язык C# 7.0 введены кортежей.</span><span class="sxs-lookup"><span data-stu-id="2c863-132">C# 7.0 introduced tuples to the language.</span></span>  <span data-ttu-id="2c863-133">Кортежи в C# являются структурами и эквивалентные структурных кортежей в F#.</span><span class="sxs-lookup"><span data-stu-id="2c863-133">Tuples in C# are structs, and are equivalent to struct tuples in F#.</span></span>  <span data-ttu-id="2c863-134">Если вам нужно взаимодействовать с C#, необходимо использовать структурных кортежей.</span><span class="sxs-lookup"><span data-stu-id="2c863-134">If you need to interoperate with C#, you must use struct tuples.</span></span>
 
-<span data-ttu-id="9be40-135">Это легко сделать.</span><span class="sxs-lookup"><span data-stu-id="9be40-135">This is easy to do.</span></span>  <span data-ttu-id="9be40-136">Например представьте, что вам нужно передать кортеж класса C#, а затем использовать его результат, который также является кортеж:</span><span class="sxs-lookup"><span data-stu-id="9be40-136">For example, imagine you have to pass a tuple to a C# class and then consume its result, which is also a tuple:</span></span>
+<span data-ttu-id="2c863-135">Это легко сделать.</span><span class="sxs-lookup"><span data-stu-id="2c863-135">This is easy to do.</span></span>  <span data-ttu-id="2c863-136">Например представьте, что вам нужно передать кортеж класса C#, а затем использовать его результат, который также является кортеж:</span><span class="sxs-lookup"><span data-stu-id="2c863-136">For example, imagine you have to pass a tuple to a C# class and then consume its result, which is also a tuple:</span></span>
 
 ```csharp
 namespace CSharpTupleInterop
@@ -103,7 +103,7 @@ namespace CSharpTupleInterop
 }
 ```
 
-<span data-ttu-id="9be40-137">В вашей F# кода, можно передать в качестве параметра кортеж структуры и использовать результат в виде структуры кортежа.</span><span class="sxs-lookup"><span data-stu-id="9be40-137">In your F# code, you can then pass a struct tuple as the parameter and consume the result as a struct tuple.</span></span>
+<span data-ttu-id="2c863-137">В вашей F# кода, можно передать в качестве параметра кортеж структуры и использовать результат в виде структуры кортежа.</span><span class="sxs-lookup"><span data-stu-id="2c863-137">In your F# code, you can then pass a struct tuple as the parameter and consume the result as a struct tuple.</span></span>
 
 ```fsharp
 open TupleInterop
@@ -112,27 +112,27 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 // newX is now 2, and newY is now 3
 ```
 
-### <a name="converting-between-reference-tuples-and-struct-tuples"></a><span data-ttu-id="9be40-138">Преобразование между ссылку кортежи и кортежи, структура</span><span class="sxs-lookup"><span data-stu-id="9be40-138">Converting between Reference Tuples and Struct Tuples</span></span>
+### <a name="converting-between-reference-tuples-and-struct-tuples"></a><span data-ttu-id="2c863-138">Преобразование между ссылку кортежи и кортежи, структура</span><span class="sxs-lookup"><span data-stu-id="2c863-138">Converting between Reference Tuples and Struct Tuples</span></span>
 
-<span data-ttu-id="9be40-139">Так как ссылка кортежи и кортежи, структуры имеют совершенно другим базовым представлением, они не могут быть неявно преобразованы.</span><span class="sxs-lookup"><span data-stu-id="9be40-139">Because Reference Tuples and Struct Tuples have a completely different underlying representation, they are not implicitly convertible.</span></span>  <span data-ttu-id="9be40-140">То есть не будет компилироваться следующий код:</span><span class="sxs-lookup"><span data-stu-id="9be40-140">That is, code such as the following won't compile:</span></span>
+<span data-ttu-id="2c863-139">Так как ссылка кортежи и кортежи, структуры имеют совершенно другим базовым представлением, они не могут быть неявно преобразованы.</span><span class="sxs-lookup"><span data-stu-id="2c863-139">Because Reference Tuples and Struct Tuples have a completely different underlying representation, they are not implicitly convertible.</span></span>  <span data-ttu-id="2c863-140">То есть не будет компилироваться следующий код:</span><span class="sxs-lookup"><span data-stu-id="2c863-140">That is, code such as the following won't compile:</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L5-L12)]
 
-<span data-ttu-id="9be40-141">Необходимо шаблон соответствует на один кортеж, а также создание на другом ― составных частей.</span><span class="sxs-lookup"><span data-stu-id="9be40-141">You must pattern match on one tuple and construct the other with the constituent parts.</span></span>  <span data-ttu-id="9be40-142">Пример:</span><span class="sxs-lookup"><span data-stu-id="9be40-142">For example:</span></span>
+<span data-ttu-id="2c863-141">Необходимо шаблон соответствует на один кортеж, а также создание на другом ― составных частей.</span><span class="sxs-lookup"><span data-stu-id="2c863-141">You must pattern match on one tuple and construct the other with the constituent parts.</span></span>  <span data-ttu-id="2c863-142">Пример:</span><span class="sxs-lookup"><span data-stu-id="2c863-142">For example:</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L18-L22)]
 
-## <a name="compiled-form-of-reference-tuples"></a><span data-ttu-id="9be40-143">Скомпилированные формы кортежей ссылки</span><span class="sxs-lookup"><span data-stu-id="9be40-143">Compiled Form of Reference Tuples</span></span>
+## <a name="compiled-form-of-reference-tuples"></a><span data-ttu-id="2c863-143">Скомпилированные формы кортежей ссылки</span><span class="sxs-lookup"><span data-stu-id="2c863-143">Compiled Form of Reference Tuples</span></span>
 
-<span data-ttu-id="9be40-144">В этом разделе объясняется виде кортежей, когда они компилируются.</span><span class="sxs-lookup"><span data-stu-id="9be40-144">This section explains the form of tuples when they're compiled.</span></span>  <span data-ttu-id="9be40-145">Приведенные здесь сведения не требуется читать, если вы ориентируетесь на .NET Framework 3.5 или ниже.</span><span class="sxs-lookup"><span data-stu-id="9be40-145">The information here isn't necessary to read unless you are targeting .NET Framework 3.5 or lower.</span></span>
+<span data-ttu-id="2c863-144">В этом разделе объясняется виде кортежей, когда они компилируются.</span><span class="sxs-lookup"><span data-stu-id="2c863-144">This section explains the form of tuples when they're compiled.</span></span>  <span data-ttu-id="2c863-145">Приведенные здесь сведения не требуется читать, если вы ориентируетесь на .NET Framework 3.5 или ниже.</span><span class="sxs-lookup"><span data-stu-id="2c863-145">The information here isn't necessary to read unless you are targeting .NET Framework 3.5 or lower.</span></span>
 
-<span data-ttu-id="9be40-146">Кортежи компилируются в объекты одного из нескольких универсальных типов, все именованные `System.Tuple`, являются перегруженными арность или количество параметров типа.</span><span class="sxs-lookup"><span data-stu-id="9be40-146">Tuples are compiled into objects of one of several generic types, all named `System.Tuple`, that are overloaded on the arity, or number of type parameters.</span></span> <span data-ttu-id="9be40-147">Типы кортежей появляются в этой форме, при их просмотре из другого языка, такие как C# или Visual Basic, или если вы используете это средство, которое ничего не знает о F# конструкции.</span><span class="sxs-lookup"><span data-stu-id="9be40-147">Tuple types appear in this form when you view them from another language, such as C# or Visual Basic, or when you are using a tool that is not aware of F# constructs.</span></span> <span data-ttu-id="9be40-148">`Tuple` Типы, которые появились в .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="9be40-148">The `Tuple` types were introduced in .NET Framework 4.</span></span> <span data-ttu-id="9be40-149">Если вы используете более раннюю версию платформы .NET Framework, компилятор использует версии [System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) из версии 2.0 F# основной библиотеки.</span><span class="sxs-lookup"><span data-stu-id="9be40-149">If you are targeting an earlier version of the .NET Framework, the compiler uses versions of [System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) from the 2.0 version of the F# Core Library.</span></span> <span data-ttu-id="9be40-150">Типы в этой библиотеке, используется только для приложений, предназначенных для 2.0, 3.0 и 3.5 версий платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9be40-150">The types in this library are used only for applications that target the 2.0, 3.0, and 3.5 versions of the .NET Framework.</span></span> <span data-ttu-id="9be40-151">Перенаправление типа используется для обеспечения двоичной совместимости между .NET Framework 2.0 и .NET Framework 4 F# компонентов.</span><span class="sxs-lookup"><span data-stu-id="9be40-151">Type forwarding is used to ensure binary compatibility between .NET Framework 2.0 and .NET Framework 4 F# components.</span></span>
+<span data-ttu-id="2c863-146">Кортежи компилируются в объекты одного из нескольких универсальных типов, все именованные `System.Tuple`, являются перегруженными арность или количество параметров типа.</span><span class="sxs-lookup"><span data-stu-id="2c863-146">Tuples are compiled into objects of one of several generic types, all named `System.Tuple`, that are overloaded on the arity, or number of type parameters.</span></span> <span data-ttu-id="2c863-147">Типы кортежей появляются в этой форме, при их просмотре из другого языка, такие как C# или Visual Basic, или если вы используете это средство, которое ничего не знает о F# конструкции.</span><span class="sxs-lookup"><span data-stu-id="2c863-147">Tuple types appear in this form when you view them from another language, such as C# or Visual Basic, or when you are using a tool that is not aware of F# constructs.</span></span> <span data-ttu-id="2c863-148">`Tuple` Типы, которые появились в .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="2c863-148">The `Tuple` types were introduced in .NET Framework 4.</span></span> <span data-ttu-id="2c863-149">Если вы используете более раннюю версию платформы .NET Framework, компилятор использует версии [System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) из версии 2.0 F# основной библиотеки.</span><span class="sxs-lookup"><span data-stu-id="2c863-149">If you are targeting an earlier version of the .NET Framework, the compiler uses versions of [System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) from the 2.0 version of the F# Core Library.</span></span> <span data-ttu-id="2c863-150">Типы в этой библиотеке, используется только для приложений, предназначенных для 2.0, 3.0 и 3.5 версий платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2c863-150">The types in this library are used only for applications that target the 2.0, 3.0, and 3.5 versions of the .NET Framework.</span></span> <span data-ttu-id="2c863-151">Перенаправление типа используется для обеспечения двоичной совместимости между .NET Framework 2.0 и .NET Framework 4 F# компонентов.</span><span class="sxs-lookup"><span data-stu-id="2c863-151">Type forwarding is used to ensure binary compatibility between .NET Framework 2.0 and .NET Framework 4 F# components.</span></span>
 
-### <a name="compiled-form-of-struct-tuples"></a><span data-ttu-id="9be40-152">Скомпилированная форма структурных кортежей</span><span class="sxs-lookup"><span data-stu-id="9be40-152">Compiled Form of Struct Tuples</span></span>
+### <a name="compiled-form-of-struct-tuples"></a><span data-ttu-id="2c863-152">Скомпилированная форма структурных кортежей</span><span class="sxs-lookup"><span data-stu-id="2c863-152">Compiled Form of Struct Tuples</span></span>
 
-<span data-ttu-id="9be40-153">Структурных кортежей (например, `struct (x, y)`), существенно отличающуюся от кортежей ссылку.</span><span class="sxs-lookup"><span data-stu-id="9be40-153">Struct tuples (for example, `struct (x, y)`), are fundamentally different from reference tuples.</span></span>  <span data-ttu-id="9be40-154">Они компилируются в <xref:System.ValueTuple> типа, перегруженные арность или количество параметров типа.</span><span class="sxs-lookup"><span data-stu-id="9be40-154">They are compiled into the <xref:System.ValueTuple> type, overloaded by arity, or the number of type parameters.</span></span>  <span data-ttu-id="9be40-155">Они эквивалентны [кортежи в C# 7.0](../../csharp/tuples.md) и [Visual Basic 2017 кортежей](../../visual-basic/programming-guide/language-features/data-types/tuples.md)и взаимодействовать в обоих направлениях.</span><span class="sxs-lookup"><span data-stu-id="9be40-155">They are equivalent to [C# 7.0 Tuples](../../csharp/tuples.md) and [Visual Basic 2017 Tuples](../../visual-basic/programming-guide/language-features/data-types/tuples.md), and interoperate bidirectionally.</span></span>
+<span data-ttu-id="2c863-153">Структурных кортежей (например, `struct (x, y)`), существенно отличающуюся от кортежей ссылку.</span><span class="sxs-lookup"><span data-stu-id="2c863-153">Struct tuples (for example, `struct (x, y)`), are fundamentally different from reference tuples.</span></span>  <span data-ttu-id="2c863-154">Они компилируются в <xref:System.ValueTuple> типа, перегруженные арность или количество параметров типа.</span><span class="sxs-lookup"><span data-stu-id="2c863-154">They are compiled into the <xref:System.ValueTuple> type, overloaded by arity, or the number of type parameters.</span></span>  <span data-ttu-id="2c863-155">Они эквивалентны [кортежи в C# 7.0](../../csharp/tuples.md) и [Visual Basic 2017 кортежей](../../visual-basic/programming-guide/language-features/data-types/tuples.md)и взаимодействовать в обоих направлениях.</span><span class="sxs-lookup"><span data-stu-id="2c863-155">They are equivalent to [C# 7.0 Tuples](../../csharp/tuples.md) and [Visual Basic 2017 Tuples](../../visual-basic/programming-guide/language-features/data-types/tuples.md), and interoperate bidirectionally.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="9be40-156">См. также</span><span class="sxs-lookup"><span data-stu-id="9be40-156">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2c863-156">См. также</span><span class="sxs-lookup"><span data-stu-id="2c863-156">See also</span></span>
 
-- [<span data-ttu-id="9be40-157">Справочник по языку F#</span><span class="sxs-lookup"><span data-stu-id="9be40-157">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="9be40-158">Типы языка F#</span><span class="sxs-lookup"><span data-stu-id="9be40-158">F# Types</span></span>](fsharp-types.md)
+- [<span data-ttu-id="2c863-157">Справочник по языку F#</span><span class="sxs-lookup"><span data-stu-id="2c863-157">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="2c863-158">Типы языка F#</span><span class="sxs-lookup"><span data-stu-id="2c863-158">F# Types</span></span>](fsharp-types.md)

@@ -8,24 +8,24 @@ helpviewer_keywords:
 - controls [WPF], ListBox
 ms.assetid: 15d58f1d-3db6-4cb5-88c7-8c45f19301e2
 ms.openlocfilehash: 0895b80f230d2c67ab0723c7935ae20443327a41
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766744"
 ---
-# <a name="listbox-how-to-topics"></a><span data-ttu-id="35d4b-102">Разделы руководства, посвященные ListBox</span><span class="sxs-lookup"><span data-stu-id="35d4b-102">ListBox How-to Topics</span></span>
-<span data-ttu-id="35d4b-103">В этом разделе описываются способы использования <xref:System.Windows.Controls.ListBox> управления для отображения выделяемых списков элементов.</span><span class="sxs-lookup"><span data-stu-id="35d4b-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListBox> control to display selectable lists of items.</span></span>  
+# <a name="listbox-how-to-topics"></a><span data-ttu-id="8569e-102">Разделы руководства, посвященные ListBox</span><span class="sxs-lookup"><span data-stu-id="8569e-102">ListBox How-to Topics</span></span>
+<span data-ttu-id="8569e-103">В этом разделе описываются способы использования <xref:System.Windows.Controls.ListBox> управления для отображения выделяемых списков элементов.</span><span class="sxs-lookup"><span data-stu-id="8569e-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListBox> control to display selectable lists of items.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="35d4b-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="35d4b-104">In This Section</span></span>  
- [<span data-ttu-id="35d4b-105">Привязка элемента ListBox к данным</span><span class="sxs-lookup"><span data-stu-id="35d4b-105">Bind a ListBox to Data</span></span>](how-to-bind-a-listbox-to-data.md)  
- [<span data-ttu-id="35d4b-106">Получение элемента ListBoxItem</span><span class="sxs-lookup"><span data-stu-id="35d4b-106">Get a ListBoxItem</span></span>](how-to-get-a-listboxitem.md)  
- <span data-ttu-id="35d4b-107">[Практическое руководство. Добавить данные в элемент управления ItemsControl](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743602(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="35d4b-107">[How to: Add Data to an ItemsControl](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743602(v=vs.90))</span></span>  
- [<span data-ttu-id="35d4b-108">Улучшение производительности прокрутки ListBox</span><span class="sxs-lookup"><span data-stu-id="35d4b-108">Improve the Scrolling Performance of a ListBox</span></span>](how-to-improve-the-scrolling-performance-of-a-listbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8569e-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="8569e-104">In This Section</span></span>  
+ [<span data-ttu-id="8569e-105">Привязка элемента ListBox к данным</span><span class="sxs-lookup"><span data-stu-id="8569e-105">Bind a ListBox to Data</span></span>](how-to-bind-a-listbox-to-data.md)  
+ [<span data-ttu-id="8569e-106">Получение элемента ListBoxItem</span><span class="sxs-lookup"><span data-stu-id="8569e-106">Get a ListBoxItem</span></span>](how-to-get-a-listboxitem.md)  
+ <span data-ttu-id="8569e-107">[Практическое руководство. Добавить данные в элемент управления ItemsControl](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743602(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="8569e-107">[How to: Add Data to an ItemsControl](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743602(v=vs.90))</span></span>  
+ [<span data-ttu-id="8569e-108">Улучшение производительности прокрутки ListBox</span><span class="sxs-lookup"><span data-stu-id="8569e-108">Improve the Scrolling Performance of a ListBox</span></span>](how-to-improve-the-scrolling-performance-of-a-listbox.md)  
   
-## <a name="reference"></a><span data-ttu-id="35d4b-109">Ссылка</span><span class="sxs-lookup"><span data-stu-id="35d4b-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="8569e-109">Ссылка</span><span class="sxs-lookup"><span data-stu-id="8569e-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListBox>  
   
  <xref:System.Windows.Controls.ListBoxItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="35d4b-110">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="35d4b-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="8569e-110">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="8569e-110">Related Sections</span></span>

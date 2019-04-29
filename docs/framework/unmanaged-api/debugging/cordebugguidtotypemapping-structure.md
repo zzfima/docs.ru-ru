@@ -19,16 +19,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9dc7093edaf12e801a1e1adc52b0be823ff92b91
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651810"
 ---
-# <a name="cordebugguidtotypemapping-structure"></a><span data-ttu-id="38214-102">Структура CorDebugGuidToTypeMapping</span><span class="sxs-lookup"><span data-stu-id="38214-102">CorDebugGuidToTypeMapping Structure</span></span>
-<span data-ttu-id="38214-103">Maps [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID для соответствующего объекта ICorDebugType.</span><span class="sxs-lookup"><span data-stu-id="38214-103">Maps a [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID to its corresponding ICorDebugType object.</span></span>  
+# <a name="cordebugguidtotypemapping-structure"></a><span data-ttu-id="e8627-102">Структура CorDebugGuidToTypeMapping</span><span class="sxs-lookup"><span data-stu-id="e8627-102">CorDebugGuidToTypeMapping Structure</span></span>
+<span data-ttu-id="e8627-103">Maps [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID для соответствующего объекта ICorDebugType.</span><span class="sxs-lookup"><span data-stu-id="e8627-103">Maps a [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID to its corresponding ICorDebugType object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="38214-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="38214-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e8627-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e8627-104">Syntax</span></span>  
   
 ```cpp
 typedef struct CorDebugGuidToTypeMapping {  
@@ -37,23 +37,23 @@ typedef struct CorDebugGuidToTypeMapping {
 } CorDebugGuidToTypeMapping;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="38214-105">Участники</span><span class="sxs-lookup"><span data-stu-id="38214-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e8627-105">Участники</span><span class="sxs-lookup"><span data-stu-id="e8627-105">Members</span></span>  
   
-|<span data-ttu-id="38214-106">Член</span><span class="sxs-lookup"><span data-stu-id="38214-106">Member</span></span>|<span data-ttu-id="38214-107">Описание</span><span class="sxs-lookup"><span data-stu-id="38214-107">Description</span></span>|  
+|<span data-ttu-id="e8627-106">Член</span><span class="sxs-lookup"><span data-stu-id="e8627-106">Member</span></span>|<span data-ttu-id="e8627-107">Описание</span><span class="sxs-lookup"><span data-stu-id="e8627-107">Description</span></span>|  
 |------------|-----------------|  
-|`iid`|<span data-ttu-id="38214-108">Идентификатор GUID для кэшированного [!INCLUDE[wrt](../../../../includes/wrt-md.md)] типа.</span><span class="sxs-lookup"><span data-stu-id="38214-108">The GUID of the cached [!INCLUDE[wrt](../../../../includes/wrt-md.md)] type.</span></span>|  
-|`pType`|<span data-ttu-id="38214-109">Указатель на объект ICorDebugType, предоставляющий сведения о кэшируемый тип.</span><span class="sxs-lookup"><span data-stu-id="38214-109">A pointer to an ICorDebugType object that provides information about the cached type.</span></span>|  
+|`iid`|<span data-ttu-id="e8627-108">Идентификатор GUID для кэшированного [!INCLUDE[wrt](../../../../includes/wrt-md.md)] типа.</span><span class="sxs-lookup"><span data-stu-id="e8627-108">The GUID of the cached [!INCLUDE[wrt](../../../../includes/wrt-md.md)] type.</span></span>|  
+|`pType`|<span data-ttu-id="e8627-109">Указатель на объект ICorDebugType, предоставляющий сведения о кэшируемый тип.</span><span class="sxs-lookup"><span data-stu-id="e8627-109">A pointer to an ICorDebugType object that provides information about the cached type.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="38214-110">Требования</span><span class="sxs-lookup"><span data-stu-id="38214-110">Requirements</span></span>  
- <span data-ttu-id="38214-111">**Платформы:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)].</span><span class="sxs-lookup"><span data-stu-id="38214-111">**Platforms:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)].</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e8627-110">Требования</span><span class="sxs-lookup"><span data-stu-id="e8627-110">Requirements</span></span>  
+ <span data-ttu-id="e8627-111">**Платформы:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e8627-111">**Platforms:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)].</span></span>  
   
- <span data-ttu-id="38214-112">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="38214-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e8627-112">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e8627-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="38214-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="38214-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e8627-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e8627-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="38214-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38214-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="e8627-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e8627-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38214-115">См. также</span><span class="sxs-lookup"><span data-stu-id="38214-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e8627-115">См. также</span><span class="sxs-lookup"><span data-stu-id="e8627-115">See also</span></span>
 
-- [<span data-ttu-id="38214-116">Структуры отладки</span><span class="sxs-lookup"><span data-stu-id="38214-116">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="38214-117">Отладка</span><span class="sxs-lookup"><span data-stu-id="38214-117">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="e8627-116">Структуры отладки</span><span class="sxs-lookup"><span data-stu-id="e8627-116">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="e8627-117">Отладка</span><span class="sxs-lookup"><span data-stu-id="e8627-117">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

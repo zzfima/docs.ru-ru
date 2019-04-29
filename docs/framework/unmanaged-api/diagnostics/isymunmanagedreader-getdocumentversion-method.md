@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 92353cfc2d9ce39074bf43937b5673ff51e34822
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939429"
 ---
-# <a name="isymunmanagedreadergetdocumentversion-method"></a><span data-ttu-id="1df3f-102">Метод ISymUnmanagedReader::GetDocumentVersion</span><span class="sxs-lookup"><span data-stu-id="1df3f-102">ISymUnmanagedReader::GetDocumentVersion Method</span></span>
-<span data-ttu-id="1df3f-103">Получает указанную версию указанного документа.</span><span class="sxs-lookup"><span data-stu-id="1df3f-103">Gets the specified version of the specified document.</span></span> <span data-ttu-id="1df3f-104">Версия документа начинается с 1 и увеличивается каждый раз, необходимо обновить документ с помощью [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="1df3f-104">The document version starts at 1 and is incremented each time the document is updated using the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method.</span></span> <span data-ttu-id="1df3f-105">Если `pbCurrent` параметр `true`, это последняя версия документа.</span><span class="sxs-lookup"><span data-stu-id="1df3f-105">If the `pbCurrent` parameter is `true`, this is the latest version of the document.</span></span>  
+# <a name="isymunmanagedreadergetdocumentversion-method"></a><span data-ttu-id="05845-102">Метод ISymUnmanagedReader::GetDocumentVersion</span><span class="sxs-lookup"><span data-stu-id="05845-102">ISymUnmanagedReader::GetDocumentVersion Method</span></span>
+<span data-ttu-id="05845-103">Получает указанную версию указанного документа.</span><span class="sxs-lookup"><span data-stu-id="05845-103">Gets the specified version of the specified document.</span></span> <span data-ttu-id="05845-104">Версия документа начинается с 1 и увеличивается каждый раз, необходимо обновить документ с помощью [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="05845-104">The document version starts at 1 and is incremented each time the document is updated using the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method.</span></span> <span data-ttu-id="05845-105">Если `pbCurrent` параметр `true`, это последняя версия документа.</span><span class="sxs-lookup"><span data-stu-id="05845-105">If the `pbCurrent` parameter is `true`, this is the latest version of the document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1df3f-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1df3f-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="05845-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="05845-106">Syntax</span></span>  
   
 ```  
 HRESULT GetDocumentVersion (  
@@ -36,22 +36,22 @@ HRESULT GetDocumentVersion (
     [out] BOOL* pbCurrent);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1df3f-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="1df3f-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="05845-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="05845-107">Parameters</span></span>  
  `pDoc`  
- <span data-ttu-id="1df3f-108">[in] Указанный документ.</span><span class="sxs-lookup"><span data-stu-id="1df3f-108">[in] The specified document.</span></span>  
+ <span data-ttu-id="05845-108">[in] Указанный документ.</span><span class="sxs-lookup"><span data-stu-id="05845-108">[in] The specified document.</span></span>  
   
  `version`  
- <span data-ttu-id="1df3f-109">[out] Указатель на переменную, которая получает версию указанного документа.</span><span class="sxs-lookup"><span data-stu-id="1df3f-109">[out] A pointer to a variable that receives the version of the specified document.</span></span>  
+ <span data-ttu-id="05845-109">[out] Указатель на переменную, которая получает версию указанного документа.</span><span class="sxs-lookup"><span data-stu-id="05845-109">[out] A pointer to a variable that receives the version of the specified document.</span></span>  
   
  `pbCurrent`  
- <span data-ttu-id="1df3f-110">[out] Указатель на переменную, получающую `true` Если это последняя версия документа, или `false` если она не является последней версии.</span><span class="sxs-lookup"><span data-stu-id="1df3f-110">[out] A pointer to a variable that receives `true` if this is the latest version of the document, or `false` if it isn't the latest version.</span></span>  
+ <span data-ttu-id="05845-110">[out] Указатель на переменную, получающую `true` Если это последняя версия документа, или `false` если она не является последней версии.</span><span class="sxs-lookup"><span data-stu-id="05845-110">[out] A pointer to a variable that receives `true` if this is the latest version of the document, or `false` if it isn't the latest version.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1df3f-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="1df3f-111">Return Value</span></span>  
- <span data-ttu-id="1df3f-112">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="1df3f-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="05845-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="05845-111">Return Value</span></span>  
+ <span data-ttu-id="05845-112">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="05845-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1df3f-113">Требования</span><span class="sxs-lookup"><span data-stu-id="1df3f-113">Requirements</span></span>  
- <span data-ttu-id="1df3f-114">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="1df3f-114">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="05845-113">Требования</span><span class="sxs-lookup"><span data-stu-id="05845-113">Requirements</span></span>  
+ <span data-ttu-id="05845-114">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="05845-114">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1df3f-115">См. также</span><span class="sxs-lookup"><span data-stu-id="1df3f-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="05845-115">См. также</span><span class="sxs-lookup"><span data-stu-id="05845-115">See also</span></span>
 
-- [<span data-ttu-id="1df3f-116">Интерфейс ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="1df3f-116">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="05845-116">Интерфейс ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="05845-116">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
