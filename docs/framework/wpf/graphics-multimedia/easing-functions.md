@@ -16,38 +16,38 @@ helpviewer_keywords:
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
 ms.openlocfilehash: 456308e37bddc1df86b49085139a3810c4959a58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763142"
 ---
 # <a name="easing-functions"></a>Функции плавности
 Функции плавности позволяют применять к анимациям настраиваемые математические формулы. Например, требуется реалистичный отскок объекта или его поведение так, словно он подвешен на пружине. Для приблизительного воспроизведения этих эффектов можно использовать анимацию по ключевым кадрам или даже анимацию From/To/By, но это потребует значительного объема работы, и анимация будет менее точна, чем при использовании математических формул.  
   
  Помимо создания собственной функции плавности путем наследования от <xref:System.Windows.Media.Animation.EasingFunctionBase>, можно использовать один из функций плавности, предоставляемых средой выполнения для создания распространенных эффектов.  
   
--   <xref:System.Windows.Media.Animation.BackEase>: Возвращающую движение анимации немного, прежде чем она начнет выполняться по заданному пути.  
+- <xref:System.Windows.Media.Animation.BackEase>: Возвращающую движение анимации немного, прежде чем она начнет выполняться по заданному пути.  
   
--   <xref:System.Windows.Media.Animation.BounceEase>: Создает эффект отскока.  
+- <xref:System.Windows.Media.Animation.BounceEase>: Создает эффект отскока.  
   
--   <xref:System.Windows.Media.Animation.CircleEase>: Создает анимацию, которая ускоряется и замедляется с помощью тригонометрической функции.  
+- <xref:System.Windows.Media.Animation.CircleEase>: Создает анимацию, которая ускоряется и замедляется с помощью тригонометрической функции.  
   
--   <xref:System.Windows.Media.Animation.CubicEase>: Создает анимацию, которая ускоряется и/или замедляется по формуле *f*(*t*) = *t*<sup>3</sup>.  
+- <xref:System.Windows.Media.Animation.CubicEase>: Создает анимацию, которая ускоряется и/или замедляется по формуле *f*(*t*) = *t*<sup>3</sup>.  
   
--   <xref:System.Windows.Media.Animation.ElasticEase>: Создает анимацию, которая напоминает пружину, и обратно до до полного успокоения.  
+- <xref:System.Windows.Media.Animation.ElasticEase>: Создает анимацию, которая напоминает пружину, и обратно до до полного успокоения.  
   
--   <xref:System.Windows.Media.Animation.ExponentialEase>: Создает анимацию, которая ускоряется и замедляется с помощью экспоненциальной формулы.  
+- <xref:System.Windows.Media.Animation.ExponentialEase>: Создает анимацию, которая ускоряется и замедляется с помощью экспоненциальной формулы.  
   
--   <xref:System.Windows.Media.Animation.PowerEase>: Создает анимацию, которая ускоряется и/или замедляется по формуле *f*(*t*) = *t*<sup>p</sup> где p равно значению <xref:System.Windows.Media.Animation.PowerEase.Power%2A>свойство.  
+- <xref:System.Windows.Media.Animation.PowerEase>: Создает анимацию, которая ускоряется и/или замедляется по формуле *f*(*t*) = *t*<sup>p</sup> где p равно значению <xref:System.Windows.Media.Animation.PowerEase.Power%2A>свойство.  
   
--   <xref:System.Windows.Media.Animation.QuadraticEase>: Создает анимацию, которая ускоряется и/или замедляется по формуле *f*(*t*) = *t*<sup>2</sup>.  
+- <xref:System.Windows.Media.Animation.QuadraticEase>: Создает анимацию, которая ускоряется и/или замедляется по формуле *f*(*t*) = *t*<sup>2</sup>.  
   
--   <xref:System.Windows.Media.Animation.QuarticEase>: Создает анимацию, которая ускоряется и/или замедляется по формуле *f*(*t*) = *t*<sup>4</sup>.  
+- <xref:System.Windows.Media.Animation.QuarticEase>: Создает анимацию, которая ускоряется и/или замедляется по формуле *f*(*t*) = *t*<sup>4</sup>.  
   
--   <xref:System.Windows.Media.Animation.QuinticEase>: Создать анимацию, которая ускоряется и/или замедляется по формуле *f*(*t*) = *t*<sup>5</sup>.  
+- <xref:System.Windows.Media.Animation.QuinticEase>: Создать анимацию, которая ускоряется и/или замедляется по формуле *f*(*t*) = *t*<sup>5</sup>.  
   
--   <xref:System.Windows.Media.Animation.SineEase>: Создает анимацию, которая ускоряется и/или замедляется по формуле синуса.  
+- <xref:System.Windows.Media.Animation.SineEase>: Создает анимацию, которая ускоряется и/или замедляется по формуле синуса.  
   
  Для применения функции плавности к анимации, используйте `EasingFunction` свойства анимации указания функции плавности для применения к анимации. В следующем примере применяется <xref:System.Windows.Media.Animation.BounceEase> функцию для реалистичной анимации <xref:System.Windows.Media.Animation.DoubleAnimation> для создания эффекта отскока.  
   
@@ -59,11 +59,11 @@ ms.locfileid: "57354509"
   
  Можно использовать <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> свойство для изменения, как функция плавности ведет себя, то есть изменить способ интерполяции анимации. Существует три возможных значения, можно задать для <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: Интерполяция следует математической формуле, связанной с функцией плавности.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: Интерполяция следует математической формуле, связанной с функцией плавности.  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: Интерполяция следует 100-процентную интерполяцию за вычетом выходного значения формулы, связанной с функцией плавности.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: Интерполяция следует 100-процентную интерполяцию за вычетом выходного значения формулы, связанной с функцией плавности.  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: Интерполяция использует <xref:System.Windows.Media.Animation.EasingMode.EaseIn> для первой половины анимации и <xref:System.Windows.Media.Animation.EasingMode.EaseOut> во второй половине.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: Интерполяция использует <xref:System.Windows.Media.Animation.EasingMode.EaseIn> для первой половины анимации и <xref:System.Windows.Media.Animation.EasingMode.EaseOut> во второй половине.  
   
  На следующих диаграммах показаны различные значения <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> где *f*(*x*) обозначает ход анимации и *t* представляет время.  
   

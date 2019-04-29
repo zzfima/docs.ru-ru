@@ -6,52 +6,52 @@ dev_langs:
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
 ms.openlocfilehash: aaee236487fedcb0c5d8ad113391bd628b11bb41
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793455"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Вызов операций служб (службы данных WCF)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] определяет операции службы для службы данных. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяет определить такие операции, как методы на службе данных. Как и для других ресурсов службы данных, для обращения к этим операциям службы используются идентификаторы URI. Операция службы может возвращать коллекции типов сущностей, единственные экземпляры типа сущностей и примитивные типы, такие как integer и string. Операция службы также может также вернуть значение `null` (`Nothing` в Visual Basic). Клиентская библиотека [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] может использоваться для доступа к операциям службы, поддерживающим запросы HTTP GET. Такого рода операции службы определяются как методы, к которым применен атрибут <xref:System.ServiceModel.Web.WebGetAttribute>. Дополнительные сведения см. в разделе [операций службы](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
   
  Операции службы представлены в метаданных, возвращаемых службой данных, которая реализует [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. В метаданных операции службы представлены как элементы `FunctionImport`. При создании строго типизированного элемента <xref:System.Data.Services.Client.DataServiceContext> средства Add Service Reference и DataSvcUtil.exe его не учитывают. Вследствие этого нельзя найти метод в контексте, который может быть использован для прямого вызова операции службы. Однако для вызова операций службы можно использовать клиент [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] одним из двух следующих способов:  
   
--   Вызов метода <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> на <xref:System.Data.Services.Client.DataServiceContext> с передачей URI операции службы вместе с любыми параметрами. Этот метод используется для вызова любой операции службы GET.  
+- Вызов метода <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> на <xref:System.Data.Services.Client.DataServiceContext> с передачей URI операции службы вместе с любыми параметрами. Этот метод используется для вызова любой операции службы GET.  
   
--   С помощью метода <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> применительно к <xref:System.Data.Services.Client.DataServiceContext> можно создать объект <xref:System.Data.Services.Client.DataServiceQuery%601>. При вызове метода <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> имя операции службы указывается в параметре `entitySetName`. Этот метод возвращает объект <xref:System.Data.Services.Client.DataServiceQuery%601>, который вызывает операцию службы при перечислении или вызове метода <xref:System.Data.Services.Client.DataServiceQuery%601.Execute%2A>. Этот метод используется для вызова операций службы GET, которые возвращают коллекцию. Можно указать один параметр с помощью метода <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>. Объект <xref:System.Data.Services.Client.DataServiceQuery%601>, возвращаемый этим методом, можно затем использовать как любой объект запроса. Дополнительные сведения см. в разделе [запросы к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+- С помощью метода <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> применительно к <xref:System.Data.Services.Client.DataServiceContext> можно создать объект <xref:System.Data.Services.Client.DataServiceQuery%601>. При вызове метода <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> имя операции службы указывается в параметре `entitySetName`. Этот метод возвращает объект <xref:System.Data.Services.Client.DataServiceQuery%601>, который вызывает операцию службы при перечислении или вызове метода <xref:System.Data.Services.Client.DataServiceQuery%601.Execute%2A>. Этот метод используется для вызова операций службы GET, которые возвращают коллекцию. Можно указать один параметр с помощью метода <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>. Объект <xref:System.Data.Services.Client.DataServiceQuery%601>, возвращаемый этим методом, можно затем использовать как любой объект запроса. Дополнительные сведения см. в разделе [запросы к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="considerations-for-calling-service-operations"></a>Рассмотрение вызова операций службы  
  При использовании клиента [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для вызова операций службы нужно учесть следующие моменты.  
   
--   При доступе к службе данных асинхронно, необходимо использовать эквивалентные асинхронные <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> методы <xref:System.Data.Services.Client.DataServiceContext> или <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> методы <xref:System.Data.Services.Client.DataServiceQuery%601>.  
+- При доступе к службе данных асинхронно, необходимо использовать эквивалентные асинхронные <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> методы <xref:System.Data.Services.Client.DataServiceContext> или <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> методы <xref:System.Data.Services.Client.DataServiceQuery%601>.  
   
--   Клиентская библиотека [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] не может материализовать результаты операции службы, которая возвращает коллекцию примитивных типов.  
+- Клиентская библиотека [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] не может материализовать результаты операции службы, которая возвращает коллекцию примитивных типов.  
   
--   Клиентская библиотека [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] не поддерживает вызов операций службы POST. Операции службы, которые вызываются запросом HTTP POST, определяются с использованием <xref:System.ServiceModel.Web.WebInvokeAttribute> с параметром `Method="POST"`. Для вызова операции службы с использованием запроса HTTP POST необходимо использовать <xref:System.Net.HttpWebRequest>.  
+- Клиентская библиотека [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] не поддерживает вызов операций службы POST. Операции службы, которые вызываются запросом HTTP POST, определяются с использованием <xref:System.ServiceModel.Web.WebInvokeAttribute> с параметром `Method="POST"`. Для вызова операции службы с использованием запроса HTTP POST необходимо использовать <xref:System.Net.HttpWebRequest>.  
   
--   Нельзя использовать <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> для вызова операции службы GET, которая возвращает единственный результат, представляющий собой сущность или простой тип, или операции, которой требуется несколько входных параметров. Вместо этого необходимо вызвать метод <xref:System.Data.Services.Client.DataServiceContext.Execute%2A>.  
+- Нельзя использовать <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> для вызова операции службы GET, которая возвращает единственный результат, представляющий собой сущность или простой тип, или операции, которой требуется несколько входных параметров. Вместо этого необходимо вызвать метод <xref:System.Data.Services.Client.DataServiceContext.Execute%2A>.  
   
--   Рассмотрите возможность создания метода расширения на строго типизированном разделяемом классе <xref:System.Data.Services.Client.DataServiceContext>, который создается этими средствами и использует метод <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> или <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> для вызова операции службы. Это позволяет вызывать операции службы непосредственно из контекста. Дополнительные сведения см. в записи блога [операций службы и клиент WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=215668).  
+- Рассмотрите возможность создания метода расширения на строго типизированном разделяемом классе <xref:System.Data.Services.Client.DataServiceContext>, который создается этими средствами и использует метод <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> или <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> для вызова операции службы. Это позволяет вызывать операции службы непосредственно из контекста. Дополнительные сведения см. в записи блога [операций службы и клиент WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=215668).  
   
--   При использовании <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> для вызова операции службы, клиентская библиотека автоматически Экранирует символы для <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> , выполняя процентное кодирование зарезервированных знаков, таких как амперсанд (&) и экранируя одиночные кавычки в строки. Тем не менее, при вызове одного из *Execute* методы для вызова операции службы, необходимо помнить о выполнении такого экранирования любых предоставленных пользователем строковых значений. Одиночные кавычки в URI-адресах экранируются как пары одиночных кавычек.  
+- При использовании <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> для вызова операции службы, клиентская библиотека автоматически Экранирует символы для <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> , выполняя процентное кодирование зарезервированных знаков, таких как амперсанд (&) и экранируя одиночные кавычки в строки. Тем не менее, при вызове одного из *Execute* методы для вызова операции службы, необходимо помнить о выполнении такого экранирования любых предоставленных пользователем строковых значений. Одиночные кавычки в URI-адресах экранируются как пары одиночных кавычек.  
   
 ## <a name="examples-of-calling-service-operations"></a>Примеры вызова операций службы  
  Данный раздел содержит следующие примеры вызова операций службы с использованием клиентской библиотеки [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
--   [Вызов метода Execute&lt;T&gt; для возврата коллекции сущностей](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
+- [Вызов метода Execute&lt;T&gt; для возврата коллекции сущностей](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
   
--   [Использование метода CreateQuery&lt;T&gt; для возврата коллекции сущностей](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#CreateQueryIQueryable)  
+- [Использование метода CreateQuery&lt;T&gt; для возврата коллекции сущностей](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#CreateQueryIQueryable)  
   
--   [Вызов метода Execute&lt;T&gt; для возврата одной сущности](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteSingleEntity)  
+- [Вызов метода Execute&lt;T&gt; для возврата одной сущности](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteSingleEntity)  
   
--   [Вызов метода Execute&lt;T&gt; для возврата коллекции значений-примитивов](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecutePrimitiveCollection)  
+- [Вызов метода Execute&lt;T&gt; для возврата коллекции значений-примитивов](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecutePrimitiveCollection)  
   
--   [Вызов метода Execute&lt;T&gt; для возврата одного значения-примитива](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecutePrimitiveValue)  
+- [Вызов метода Execute&lt;T&gt; для возврата одного значения-примитива](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecutePrimitiveValue)  
   
--   [Вызов операции службы, которая не возвращает никаких данных](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteVoid)  
+- [Вызов операции службы, которая не возвращает никаких данных](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteVoid)  
   
--   [Асинхронный вызов операции службы](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteAsync)  
+- [Асинхронный вызов операции службы](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteAsync)  
   
 <a name="ExecuteIQueryable"></a>   
 ### <a name="calling-executet-to-return-a-collection-of-entities"></a>Вызов метода Execute\<T > для возврата коллекции сущностей  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f45379fe8640ef7e7b3917bac8d10ca956d75ffb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61957590"
 ---
 # <a name="ihostsecuritymanager-interface"></a>Интерфейс IHostSecurityManager
 Предоставляет методы, разрешающие доступ к и контроль над контекст безопасности текущего потока.  
@@ -42,13 +42,13 @@ ms.locfileid: "59223762"
   
  Среда CLR обрабатывает контекста потока внутренним образом. Он запрашивает относящиеся к процессу `IHostSecurityManager` в следующих ситуациях:  
   
--   В потоке метода завершения, во время выполнения метода завершения.  
+- В потоке метода завершения, во время выполнения метода завершения.  
   
--   Во время выполнения конструктор класса и модуля.  
+- Во время выполнения конструктор класса и модуля.  
   
--   В асинхронные точки в рабочем потоке, в вызовах [IHostThreadPoolManager::QueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) метод.  
+- В асинхронные точки в рабочем потоке, в вызовах [IHostThreadPoolManager::QueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) метод.  
   
--   При обслуживании портов завершения ввода-вывода.  
+- При обслуживании портов завершения ввода-вывода.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

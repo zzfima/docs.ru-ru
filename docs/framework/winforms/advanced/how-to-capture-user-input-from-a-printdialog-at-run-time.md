@@ -12,11 +12,11 @@ helpviewer_keywords:
 - run time [Windows Forms], changing print options
 ms.assetid: 438501d8-9a70-4fb3-aae6-e46579aba0c6
 ms.openlocfilehash: 2aaf988f362baf9cd80eb16e4a08f7f65a5077bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937804"
 ---
 # <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>Практическое руководство. Перенаправление данных, введенных пользователем в PrintDialog во время выполнения
 Хотя можно задать параметры, относящиеся к печати во время разработки, иногда требуется изменить эти параметры во время выполнения, скорее всего, из-за выборов, сделанных пользователем. Ввод данных для печати документа с помощью <xref:System.Windows.Forms.PrintDialog> и <xref:System.Drawing.Printing.PrintDocument> компонентов.  

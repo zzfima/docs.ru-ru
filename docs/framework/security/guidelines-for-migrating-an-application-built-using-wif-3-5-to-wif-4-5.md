@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
 ms.openlocfilehash: ad8ff2b6daaaf48975b86c637435b31fa1869e1d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940573"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>Рекомендации по миграции приложения, созданного с использованием WIF 3.5, в WIF 4.5
 
@@ -34,7 +34,7 @@ ms.locfileid: "57370024"
 
 В следующей таблице описываются основные пространства имен платформы WIF 4.5 и виды содержащихся в них классов. Дополнительные сведения о сопоставлении пространств имен между версиями WIF 3.5 и WIF 4.5, а также об исключенных из WIF 4.5 пространствах имен и классах см. в разделе [Сопоставление пространств имен между WIF 3.5 и WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md).
 
-|Пространство имен WIF 4.5|Описание:|
+|Пространство имен WIF 4.5|Описание|
 |-----------------------|-----------------|
 |<xref:System.IdentityModel?displayProperty=nameWithType>|Содержит классы, представляющие преобразования файлов cookie, службы маркеров безопасности, а также средства чтения словарей XML. Содержит классы из следующих пространств имен WIF 3.5: `Microsoft.IdentityModel`, `Microsoft.IdentityModel.SecurityTokenService` и `Microsoft.IdentityModel.Threading`.|
 |<xref:System.Security.Claims?displayProperty=nameWithType>|Содержит классы, представляющие утверждения, удостоверения на основе утверждений, субъекты на основе утверждений, а также другие артефакты модели на основе утверждений. Содержит классы из пространства имен `Microsoft.IdentityModel.Claims`.|

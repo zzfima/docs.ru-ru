@@ -11,11 +11,11 @@ helpviewer_keywords:
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
 ms.openlocfilehash: c8044bc341ded6ef7b03bbdf701e724654460d54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938831"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>Встроенный тип XAML x:XData
 Обеспечивает размещение острова данных XML в пределах рабочей XAML. XML-элементы в `x:XData` не следует обрабатывать процессорами XAML, как если бы они были частью пространства имен XAML по умолчанию действующего или любое другое пространство имен XAML. `x:XData` может содержать произвольное XML правильного формата.  

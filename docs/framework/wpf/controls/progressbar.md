@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ProgressBar control [WPF]
 ms.assetid: 4545b358-b93c-47df-88e4-9946d7db9e3f
 ms.openlocfilehash: 27a2f54edac2add67b938300dc342744475466cc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770558"
 ---
 # <a name="progressbar"></a>ProgressBar
 Объект <xref:System.Windows.Controls.ProgressBar> показывает ход выполнения операции. <xref:System.Windows.Controls.ProgressBar> Элемент управления состоит из окна, которое заполняется системным цветом выделения в процессе выполнения операции.  

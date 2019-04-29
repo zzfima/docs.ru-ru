@@ -3,11 +3,11 @@ title: Публикация конечных точек метаданных
 ms.date: 03/30/2017
 ms.assetid: 29cd8a60-dfb7-460c-bf5a-c2b31b782671
 ms.openlocfilehash: 143a46ce18a0d9dee89bbbffac9be9a467e951df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955162"
 ---
 # <a name="publishing-metadata-endpoints"></a>Публикация конечных точек метаданных
 Службы Windows Communication Foundation (WCF) публикуют метаданные путем публикации одной или нескольких конечных точек метаданных. Публикация метаданных службы позволяет получать доступ к метаданным с использованием стандартных протоколов, таких как WS-MetadataExchange (MEX) и запросы HTTP/GET. Конечные точки подобны другим конечным точкам служб в том, что они имеют адрес, привязку и контракт, и могут быть добавлены в ведущее приложение службы посредством конфигурации или в коде. Для публикации конечных точек метаданных необходимо добавить в службу поведение <xref:System.ServiceModel.Description.ServiceMetadataBehavior>.  

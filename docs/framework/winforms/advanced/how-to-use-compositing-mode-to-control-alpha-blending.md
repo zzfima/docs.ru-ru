@@ -10,20 +10,20 @@ helpviewer_keywords:
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
 ms.openlocfilehash: 15cb111a68cedaec011e88fa4916c292786d16b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779045"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Практическое руководство. Использование режима комбинирования для управления альфа-смешением
 Могут возникнуть ситуации, когда нужно создать в битовом изображении, который имеет следующие характеристики:  
   
--   Цвета имеют альфа-значения, которые меньше 255.  
+- Цвета имеют альфа-значения, которые меньше 255.  
   
--   Не выполняется альфа-смешение цветов друг с другом при создании точечного рисунка.  
+- Не выполняется альфа-смешение цветов друг с другом при создании точечного рисунка.  
   
--   При отображении завершения растрового изображения, цвета в битовой карте, альфа-смешением с фоновыми цветами на устройстве отображения.  
+- При отображении завершения растрового изображения, цвета в битовой карте, альфа-смешением с фоновыми цветами на устройстве отображения.  
   
  Чтобы создать такой точечный рисунок, создайте пустой <xref:System.Drawing.Bitmap> объекта, а затем постройте <xref:System.Drawing.Graphics> на его основе объект. Установка режима комбинирования для <xref:System.Drawing.Graphics> объект <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>.  
   

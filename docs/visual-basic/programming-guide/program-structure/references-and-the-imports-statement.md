@@ -10,11 +10,11 @@ helpviewer_keywords:
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
 ms.openlocfilehash: f3396eb3e758dc456d86de80246de24349680f2e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967756"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>Ссылки и оператор Imports (Visual Basic)
 Вы внешние объекты можно сделать доступными в проект, выбрав **добавить ссылку** команды **проекта** меню. Ссылки в Visual Basic могут указывать на сборки, которые подобны библиотек типов, но содержат больше сведений.  

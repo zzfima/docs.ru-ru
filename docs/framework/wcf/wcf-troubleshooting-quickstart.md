@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
 ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780826"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Примеры устранения неполадок WCF
 В этом разделе приведено несколько известных проблем, с которыми столкнулись пользователи при разработке клиентов и служб WCF. Если проблема, с которой столкнулись вы, отсутствует в этом списке, рекомендуется настроить трассировку для данной службы. При этом будет создан файл трассировки, который можно просмотреть с помощью средства просмотра файлов трассировки и получить подробные сведения об исключениях, которые могут возникать в службе. Дополнительные сведения о настройке трассировки см. в разделе: [Настройка трассировки](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Дополнительные сведения о средстве просмотра файлов трассировки см. в разделе: [Службы программа Trace Viewer (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -98,15 +98,15 @@ public class MyServiceHost : ServiceHost
 ## <a name="my-service-and-client-work-great-but-i-cant-get-them-to-work-when-the-client-is-on-another-computer-whats-happening"></a>Служба и клиент работают нормально, но их не удается запустить, если клиент находится на другом компьютере. В чем причина?  
  В зависимости от исключения возможны следующие причины.  
   
--   Возможно, потребуется использовать для адреса конечной точки клиента имя узла, а не "localhost".  
+- Возможно, потребуется использовать для адреса конечной точки клиента имя узла, а не "localhost".  
   
--   Возможно, для приложения потребуется открыть порт. Дополнительные сведения см. в разделе [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) примеров SDK.  
+- Возможно, для приложения потребуется открыть порт. Дополнительные сведения см. в разделе [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) примеров SDK.  
   
--   Другие возможные причины этой проблемы см. в разделе примеров [выполнение образцов Windows Communication Foundation](./samples/running-the-samples.md).  
+- Другие возможные причины этой проблемы см. в разделе примеров [выполнение образцов Windows Communication Foundation](./samples/running-the-samples.md).  
   
--   Если в клиенте используются учетные данные Windows и создается исключение <xref:System.ServiceModel.Security.SecurityNegotiationException>, настройте Kerberos, как указано ниже.  
+- Если в клиенте используются учетные данные Windows и создается исключение <xref:System.ServiceModel.Security.SecurityNegotiationException>, настройте Kerberos, как указано ниже.  
   
-    1.  Добавьте учетные данные идентификации в элемент конечной точки в файле конфигурации клиента App.config.  
+    1. Добавьте учетные данные идентификации в элемент конечной точки в файле конфигурации клиента App.config.  
   
         ```xml
         <endpoint   
@@ -122,33 +122,33 @@ public class MyServiceHost : ServiceHost
         </endpoint>  
         ```  
   
-    2.  Для этого запустите службу от имени учетной записи System или NetworkService. Чтобы создать командное окно в учетной записи System, выполните следующую команду.  
+    2. Для этого запустите службу от имени учетной записи System или NetworkService. Чтобы создать командное окно в учетной записи System, выполните следующую команду.  
   
         ```console
         at 12:36 /interactive "cmd.exe"  
         ```  
   
-    3.  Разместите службу в службах IIS, которые по умолчанию используют учетную запись имени участника службы (SPN).  
+    3. Разместите службу в службах IIS, которые по умолчанию используют учетную запись имени участника службы (SPN).  
   
-    4.  Зарегистрируйте в домене новое имя участника службы (SPN) с помощью программы SetSPN. Обратите внимание, что для этого потребуются права администратора домена.  
+    4. Зарегистрируйте в домене новое имя участника службы (SPN) с помощью программы SetSPN. Обратите внимание, что для этого потребуются права администратора домена.  
   
  Дополнительные сведения о протоколе Kerberos см. в разделе [Security Concepts Used in WCF](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) и:  
   
--   [Отладка ошибок проверки подлинности Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
+- [Отладка ошибок проверки подлинности Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
--   [Регистрация имен субъектов-служб Kerberos в файле Http.sys](https://go.microsoft.com/fwlink/?LinkId=86943)  
+- [Регистрация имен субъектов-служб Kerberos в файле Http.sys](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
--   [Сведения о Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
+- [Сведения о Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
 ## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Когда должно выдаваться исключение FaultException\<исключение > где типом является исключение, всегда получает общий тип FaultException на стороне клиента, а не универсального типа. В чем причина?  
  Настоятельно рекомендуется создать свой собственный пользовательский тип данных об ошибке и объявить его в качестве типа сведений в контракте сбоя. Это необходимо, так как при использовании типов исключений, предоставляемых системой, могут возникнуть следующие проблемы.  
   
--   Создается зависимость типов, которая не дает возможности воспользоваться одним из главных преимуществ приложений, ориентированных на службы.  
+- Создается зависимость типов, которая не дает возможности воспользоваться одним из главных преимуществ приложений, ориентированных на службы.  
   
--   Не удается воспользоваться стандартной сериализацией исключений. Некоторые из них, например <xref:System.Security.SecurityException>, могут вообще не сериализоваться.  
+- Не удается воспользоваться стандартной сериализацией исключений. Некоторые из них, например <xref:System.Security.SecurityException>, могут вообще не сериализоваться.  
   
--   Внутренние сведения сериализации доступны для клиентов. Дополнительные сведения см. в разделе [задание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+- Внутренние сведения сериализации доступны для клиентов. Дополнительные сведения см. в разделе [задание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
  Однако при отладке приложения можно сериализовать сведения об исключении и возвратить их клиенту с помощью класса <xref:System.ServiceModel.Description.ServiceDebugBehavior> .  
   

@@ -3,20 +3,20 @@ title: Журнал с этим именем уже создан на данно
 ms.date: 07/20/2015
 ms.assetid: 3dd78d9f-890e-4409-bebb-048fdf34711b
 ms.openlocfilehash: b3a488b668c00b8e9e77f6db6d99ea5b3f82c070
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58038150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940729"
 ---
 # <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a>Журнал с этим именем уже создан на данном компьютере
 Была предпринята попытка создать журнал с уже использующимся именем.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Удалите конфликтующий журнал.  
+- Удалите конфликтующий журнал.  
   
--   Используйте другое имя для журнала.  
+- Используйте другое имя для журнала.  
   
 ## <a name="see-also"></a>См. также
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
 ms.openlocfilehash: 27f856b895f48dc2365a1721dbc90294269899c7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947827"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Практическое руководство. Проверка наличия установленной платформы .NET Framework 3.0
 Прежде чем развертывать приложения Microsoft .NET Framework в системе, их необходимо сначала убедиться, что присутствует в среде выполнения .NET Framework. В этом разделе предоставляет скрипты, написанные на HTML/JavaScript, администраторы могут использовать для определения наличия .NET Framework в системе.  

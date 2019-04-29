@@ -10,11 +10,11 @@ helpviewer_keywords:
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
 ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966923"
 ---
 # <a name="using-keyboard-events"></a>Использование событий клавиатуры
 В большинстве программ Windows Forms для обработки ввода с клавиатуры используются события клавиатуры. В этом разделе содержится обзор событий клавиатуры, включая сведения об использовании каждого события и данные, которые предоставляются для каждого события.  Также см. в разделе [Обзор обработчиков событий (Windows Forms)](event-handlers-overview-windows-forms.md) и [Общие сведения о событиях (Windows Forms)](events-overview-windows-forms.md).  
@@ -22,11 +22,11 @@ ms.locfileid: "59114274"
 ## <a name="keyboard-events"></a>События клавиатуры  
  Windows Forms содержит два события, которые возникают при нажатии пользователем клавиши клавиатуры, и одно событие, которое возникает при отпускании пользователем клавиши.  
   
--   Событие <xref:System.Windows.Forms.Control.KeyDown> возникает один раз  
+- Событие <xref:System.Windows.Forms.Control.KeyDown> возникает один раз  
   
--   Событие <xref:System.Windows.Forms.Control.KeyPress>, которое может встречаться несколько раз, если пользователь удерживает нажатую клавишу.  
+- Событие <xref:System.Windows.Forms.Control.KeyPress>, которое может встречаться несколько раз, если пользователь удерживает нажатую клавишу.  
   
--   Событие <xref:System.Windows.Forms.Control.KeyUp> возникает один раз при отпускании клавиши.  
+- Событие <xref:System.Windows.Forms.Control.KeyUp> возникает один раз при отпускании клавиши.  
   
  Когда пользователь нажимает клавишу, Windows Forms определяет, какое событие вызвать в зависимости от того, на что указывает сообщение клавиатуры — на клавишу с символом или на физическую клавишу. Дополнительные сведения о символьных и физических клавишах см. в разделе [принцип работы ввода с клавиатуры](how-keyboard-input-works.md).  
   

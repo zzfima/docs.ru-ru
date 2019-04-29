@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
 ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966976"
 ---
 # <a name="how-keyboard-input-works"></a>Принцип работы ввод с клавиатуры
 Ввод с клавиатуры обрабатывается в Windows Forms посредством вызова событий клавиатуры в ответ на сообщения Windows. В большинстве приложений Windows Forms для обработки ввода с клавиатуры используются только события клавиатуры. Тем не менее, чтобы реализовать более сложные сценарии ввода с клавиатуры, например перехват клавиш до того, как они достигнут элемента управления, необходимо понимать, как работают сообщения клавиатуры. В этом разделе описываются типы данных ключа, распознаваемых приложением Windows Forms, и приводятся общие сведения о маршрутизацией сообщений клавиатуры. Сведения о событиях клавиатуры см. в разделе [Использование событий клавиатуры](using-keyboard-events.md).  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - registering attached properties [WPF]
 ms.assetid: eb47bd94-0451-4f8d-8fb6-95f7812ac05b
 ms.openlocfilehash: 4c678a64b62b8f4db24cf39ffbafac52e56c9982
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768684"
 ---
 # <a name="how-to-register-an-attached-property"></a>Практическое руководство. Регистрация присоединенного свойства
 В этом примере демонстрируется регистрация присоединенного свойства и предоставление открытых методов доступа для использования свойства в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и в коде. Присоединенные свойства являются понятием синтаксиса, определенным в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Большинство присоединенных свойств для типов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] также реализовано как свойства зависимостей. Свойства зависимостей можно использовать на любом <xref:System.Windows.DependencyObject> типов.  

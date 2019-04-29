@@ -9,11 +9,11 @@ helpviewer_keywords:
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
 ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937646"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Практическое руководство. Создание эскизов изображений
 Эскиз — это компактная версия образа. Можно создать изображение эскиза путем вызова <xref:System.Drawing.Image.GetThumbnailImage%2A> метод <xref:System.Drawing.Image> объекта.  

@@ -3,22 +3,22 @@ title: Производство каналов и кэширование
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
 ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784310"
 ---
 # <a name="channel-factory-and-caching"></a>Производство каналов и кэширование
 Клиентские приложения WCF используют класс <xref:System.ServiceModel.ChannelFactory%601> для создания коммуникационного канала со службой WCF.  Создание экземпляров класса <xref:System.ServiceModel.ChannelFactory%601> оказывает определенное влияние на производительность, поскольку выполняются следующие операции:  
   
--   Построение дерева <xref:System.ServiceModel.Description.ContractDescription>  
+- Построение дерева <xref:System.ServiceModel.Description.ContractDescription>  
   
--   Отображение всех необходимых типов CLR  
+- Отображение всех необходимых типов CLR  
   
--   Построение стека каналов  
+- Построение стека каналов  
   
--   Освобождение ресурсов  
+- Освобождение ресурсов  
   
  Чтобы уменьшить дополнительные расходы ресурсов, WCF может кэшировать фабрики каналов при использовании прокси клиента WCF.  
   

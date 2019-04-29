@@ -10,11 +10,11 @@ helpviewer_keywords:
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
 ms.openlocfilehash: 061782dbd0ac54286a6c0da74fe769d98848f118
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945188"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Члены библиотеки времени выполнения Visual Basic
 `Microsoft.VisualBasic` Пространство имен содержит классы, модули, константы и перечисления, которые составляют библиотеку времени выполнения Visual Basic. Эти члены библиотеки предоставляют процедуры, свойства и значения констант, которые можно использовать в коде. Каждый модуль и класс предоставляет конкретную категорию функциональных возможностей.  

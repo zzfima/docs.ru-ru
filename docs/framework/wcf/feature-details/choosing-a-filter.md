@@ -3,11 +3,11 @@ title: Выбор фильтра
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
 ms.openlocfilehash: 76875cd56f74bd555133253beda97b30ee3fa90a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784466"
 ---
 # <a name="choosing-a-filter"></a>Выбор фильтра
 При настройке службы маршрутизации важно выбрать правильные фильтры сообщений и настроить их таким образом, чтобы полученное сообщение всегда определялось одним из них. Если выбранные фильтры допускают избыточные совпадения или неверно настроены, то сообщения будут маршрутизироваться неправильно. Если фильтры слишком строги, то это может привести к тому, что для некоторых сообщений не окажется ни одного допустимого маршрута.  

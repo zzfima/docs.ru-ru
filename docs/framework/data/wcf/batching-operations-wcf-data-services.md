@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
 ms.openlocfilehash: a9f74f025af6dfc5737ea9f4971f68c5ad913e8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793462"
 ---
 # <a name="batching-operations-wcf-data-services"></a>Пакетные операции (службы данных WCF)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Поддерживают пакетную обработку запросов к [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-службу на основе. Дополнительные сведения см. в разделе [OData: Пакетная обработка](https://go.microsoft.com/fwlink/?LinkId=186075). В [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], каждая операция, использующая <xref:System.Data.Services.Client.DataServiceContext>, такие как выполнение запроса или сохранения изменений, порождает отдельный запрос, отправляемый службе данных. Для создания логической области видимости для набора операций можно явно определить пакеты операций. Это гарантирует, что все операции в пакете отправляются в службу данных в одном HTTP-запросе, позволяет серверу обработать их единым блоком и сокращает количество циклов обработки в службу данных.  

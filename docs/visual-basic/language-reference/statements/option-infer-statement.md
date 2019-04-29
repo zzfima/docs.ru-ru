@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 ms.openlocfilehash: 59766999c5b03aac7aec13b293feaa8c17f2ced0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784115"
 ---
 # <a name="option-infer-statement"></a>Option Infer - оператор
 Включает использование локального определения типов при объявлении переменных.  
@@ -73,7 +73,7 @@ Option Infer { On | Off }
   
 #### <a name="to-set-option-infer-on-the-command-line"></a>Чтобы включить Option Infer в командной строке  
   
--   Включить [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) параметр компилятора в **vbc** команды.  
+- Включить [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) параметр компилятора в **vbc** команды.  
   
 ## <a name="default-data-types-and-values"></a>Типы данных и значения по умолчанию  
  В следующей таблице перечислены результаты различных сочетаний заданных типов данных и инициализаторов в операторе `Dim`.  

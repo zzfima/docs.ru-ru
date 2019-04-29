@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3476a338191a4af9cc01b7e44456f1bd20f52a10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796550"
 ---
 # <a name="icorprofilerinfo2-interface"></a>Интерфейс ICorProfilerInfo2
 Предоставляет методы, используемые профилировщиками кода для взаимодействия с CLR (CLR) для управления отслеживанием событий и сведения о запросе. `ICorProfilerInfo2` Интерфейс является расширением [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) интерфейс. То есть он предоставляет новые методы, поддерживаемые в .NET Framework версии 2.0 и более поздних версий.  

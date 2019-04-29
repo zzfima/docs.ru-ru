@@ -12,11 +12,11 @@ ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce97089ec71fc910079910957e784605387f3e06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966885"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Практическое руководство. Создание приложения Windows Forms из командной строки
 В процедурах ниже описаны основные шаги, которые необходимо выполнить для создания и запуска приложения Windows Forms из командной строки. Visual Studio предлагает расширенную поддержку этих процедур.  Также см. в разделе [Пошаговое руководство: Размещение Windows Forms элемента управления в WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).  
@@ -44,11 +44,11 @@ ms.locfileid: "59299877"
   
 4. Добавьте в класс метод `Main`.  
   
-    1.  Применить <xref:System.STAThreadAttribute> в C# `Main` метод, чтобы указать приложения Windows Forms является однопотоковое подразделение. (Атрибут не требуется в Visual Basic, так как приложения Windows forms разработанных с помощью Visual Basic используйте модели однопотоковое подразделение по умолчанию.)  
+    1. Применить <xref:System.STAThreadAttribute> в C# `Main` метод, чтобы указать приложения Windows Forms является однопотоковое подразделение. (Атрибут не требуется в Visual Basic, так как приложения Windows forms разработанных с помощью Visual Basic используйте модели однопотоковое подразделение по умолчанию.)  
   
-    2.  Вызовите <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> применение стилей операционной системы для приложения.  
+    2. Вызовите <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> применение стилей операционной системы для приложения.  
   
-    3.  Создайте экземпляр формы и запустите его.  
+    3. Создайте экземпляр формы и запустите его.  
   
      [!code-csharp[System.Windows.Forms.BasicForm#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.BasicForm#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
@@ -59,11 +59,11 @@ ms.locfileid: "59299877"
   
 2. Скомпилируйте форму.  
   
-    -   Если вы используете C#, введите: `csc form1.cs`  
+    - Если вы используете C#, введите: `csc form1.cs`  
   
          `-or-`  
   
-    -   Если вы используете Visual Basic, введите: `vbc form1.vb`  
+    - Если вы используете Visual Basic, введите: `vbc form1.vb`  
   
 3. В командной строке введите следующую команду: `Form1.exe`  
   
@@ -111,7 +111,7 @@ ms.locfileid: "59299877"
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
--   Для компиляции кода следуйте инструкциям из предыдущей процедуры, описывающим, как скомпилировать и запустить приложение.  
+- Для компиляции кода следуйте инструкциям из предыдущей процедуры, описывающим, как скомпилировать и запустить приложение.  
   
 ## <a name="see-also"></a>См. также
 

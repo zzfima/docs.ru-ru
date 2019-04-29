@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [Windows Forms], disabling items
 ms.assetid: 985e311e-7d67-4205-b5a3-d045b68a4a03
 ms.openlocfilehash: 9965825458afcd50b29699c3b89ed506078e04d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954249"
 ---
 # <a name="how-to-disable-toolstripmenuitems-using-the-designer"></a>Практическое руководство. Отключение объектов ToolStripMenuItem с помощью конструктора
 Можно ограничить или расширить набор команд, которые может выполнять пользователь, включение и отключение элементов меню в ответ на действия пользователя. Пункты меню включены по умолчанию, когда они создаются, но его можно настроить через <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> свойство. Можно изменить значение этого свойства во время разработки в **свойства** окна или программным способом, задав его в код. Дополнительные сведения см. в разделе [Как Отключение объектов ToolStripMenuItem](how-to-disable-toolstripmenuitems.md).  

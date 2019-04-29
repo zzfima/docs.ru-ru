@@ -3,11 +3,11 @@ title: Использование XSLT для преобразования де�
 ms.date: 07/20/2015
 ms.assetid: 3390ca68-c270-4e1d-b64b-6a063a77017c
 ms.openlocfilehash: a013e042bcaab321d8a5596368c349f296240d0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908158"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a>Использование XSLT для преобразования дерева XML (Visual Basic)
 Можно создавать XML-дерево, <xref:System.Xml.XmlReader> из XML-дерева, новый документ и <xref:System.Xml.XmlWriter>, который будет заносить информацию в новый документ. После этого можно вызвать преобразование XSLT, передавая <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter> этой трансформации. После успешного завершения преобразования новое XML-дерево заполняется ее результатами.  

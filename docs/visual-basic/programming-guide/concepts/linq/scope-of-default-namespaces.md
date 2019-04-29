@@ -3,11 +3,11 @@ title: Области пространств имен по умолчанию в
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
 ms.openlocfilehash: e33505dd8e8ad94e3c758f15f245d0cbaf6987bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786806"
 ---
 # <a name="scope-of-default-namespaces-in-visual-basic"></a>Области пространств имен по умолчанию в Visual Basic
 Применяемые по умолчанию пространства имен, представленные в XML-дереве, находятся вне области запросов. Если имеется XML, расположенный в используемом по умолчанию пространстве имен, для получения полного имени, которое может быть применено в запросе, то необходимо объявить переменную <xref:System.Xml.Linq.XNamespace> и использовать ее в сочетании с локальным именем.  

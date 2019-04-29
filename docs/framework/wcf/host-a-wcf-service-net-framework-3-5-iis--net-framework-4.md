@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 9aabc785-068d-4d32-8841-3ef39308d8d6
 ms.openlocfilehash: d4f0cb584f7759a6fe52a4bec4306a7d714d3906
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929471"
 ---
 # <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a>Практическое руководство. Размещение службы WCF, написанной для.NET Framework 3.5 в IIS, которая работает в .NET Framework 4
 При размещении службы Windows Communication Foundation (WCF), написанный с помощью [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] для работающего компьютера [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], может появиться <xref:System.ServiceModel.ProtocolException> со следующим текстом.  

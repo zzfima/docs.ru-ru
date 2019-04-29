@@ -11,11 +11,11 @@ helpviewer_keywords:
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
 ms.openlocfilehash: 81ae93871fa5e3fc46382ee9a1810808574fb043
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785884"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Общие сведения о приложениях браузера WPF XAML
 <a name="introduction"></a>
@@ -23,15 +23,15 @@ ms.locfileid: "59320136"
   
  В этом разделе содержатся следующие подразделы.  
   
--   [Создание приложения обозревателя XAML (XBAP)](#creating_a_new_xaml_browser_application_xbap)  
+- [Создание приложения обозревателя XAML (XBAP)](#creating_a_new_xaml_browser_application_xbap)  
   
--   [Развертывание XBAP](#deploying_a_xbap)  
+- [Развертывание XBAP](#deploying_a_xbap)  
   
--   [Связь с веб-страницей размещения](#communicating_with_the_host_web_page)  
+- [Связь с веб-страницей размещения](#communicating_with_the_host_web_page)  
   
--   [Вопросы безопасности XBAP](#xbap_security_considerations)  
+- [Вопросы безопасности XBAP](#xbap_security_considerations)  
   
--   [Влияние времени запуска XBAP на производительность](#xbap_start_time_performance_considerations)  
+- [Влияние времени запуска XBAP на производительность](#xbap_start_time_performance_considerations)  
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Создание приложения обозревателя XAML (XBAP)  
@@ -131,17 +131,17 @@ ms.locfileid: "59320136"
   
  При использовании <xref:System.Windows.Controls.WebBrowser> элемента управления в приложении WPF внутренним образом устанавливает собственный элемент управления WebBrowser ActiveX. Если ваше приложение — это XBAP частичного доверия, запущенный в браузере Internet Explorer, элемент управления ActiveX выполняется в выделенном потоке процесса Internet Explorer. В связи с этим применяются указанные ниже ограничения.  
   
--   <xref:System.Windows.Controls.WebBrowser> Элемент управления должен обеспечивать поведение, аналогичное браузеру узла, включая ограничения безопасности. Некоторыми из этих ограничений безопасности можно управлять с помощью параметров безопасности Internet Explorer. Дополнительные сведения см. в разделе [Безопасность](../security-wpf.md).  
+- <xref:System.Windows.Controls.WebBrowser> Элемент управления должен обеспечивать поведение, аналогичное браузеру узла, включая ограничения безопасности. Некоторыми из этих ограничений безопасности можно управлять с помощью параметров безопасности Internet Explorer. Дополнительные сведения см. в разделе [Безопасность](../security-wpf.md).  
   
--   Если XBAP загружается на HTML-странице в междоменном режиме, возникнет исключение.  
+- Если XBAP загружается на HTML-странице в междоменном режиме, возникнет исключение.  
   
--   Входные данные поступают как отдельный поток из WPF <xref:System.Windows.Controls.WebBrowser>, поэтому ввод с клавиатуры перехватить нельзя, а состояние IME не является общим.  
+- Входные данные поступают как отдельный поток из WPF <xref:System.Windows.Controls.WebBrowser>, поэтому ввод с клавиатуры перехватить нельзя, а состояние IME не является общим.  
   
--   Время или порядок навигации могут отличаться, если элемент управления ActiveX выполняется в другом потоке. Например, переход на какую-либо страницу не всегда отменяется при запуске другого запроса навигации.  
+- Время или порядок навигации могут отличаться, если элемент управления ActiveX выполняется в другом потоке. Например, переход на какую-либо страницу не всегда отменяется при запуске другого запроса навигации.  
   
--   Настраиваемый элемент управления ActiveX может испытывать проблемы со связью, поскольку приложение WPF выполняется в отдельном потоке.  
+- Настраиваемый элемент управления ActiveX может испытывать проблемы со связью, поскольку приложение WPF выполняется в отдельном потоке.  
   
--   <xref:System.Windows.Interop.HwndHost.MessageHook> вызывается, поскольку <xref:System.Windows.Interop.HwndHost> нельзя подкласс окно, выполняемое в другом потоке или процессе.  
+- <xref:System.Windows.Interop.HwndHost.MessageHook> вызывается, поскольку <xref:System.Windows.Interop.HwndHost> нельзя подкласс окно, выполняемое в другом потоке или процессе.  
   
 ### <a name="creating-a-full-trust-xbap"></a>Создание XBAP с полным доверием  
  Если XBAP требует полного доверия, проект можно изменить, предоставив ему соответствующее разрешение. Чтобы предоставить полное доверие, необходимо выполнить указанные ниже действия.  
@@ -152,9 +152,9 @@ ms.locfileid: "59320136"
   
  При этом происходят следующие изменения:  
   
--   В файле проекта значение элемента `<TargetZone>` изменяется на `Custom`.  
+- В файле проекта значение элемента `<TargetZone>` изменяется на `Custom`.  
   
--   В манифесте приложения (app.manifest) `Unrestricted="true"` добавляется атрибут "<xref:System.Security.PermissionSet> элемент.  
+- В манифесте приложения (app.manifest) `Unrestricted="true"` добавляется атрибут "<xref:System.Security.PermissionSet> элемент.  
   
     ```xml
     <PermissionSet class="System.Security.PermissionSet"   

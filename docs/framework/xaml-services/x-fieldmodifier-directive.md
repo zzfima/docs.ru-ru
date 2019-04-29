@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
 ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971871"
 ---
 # <a name="xfieldmodifier-directive"></a>Директива x:FieldModifier
 Изменяет поведение компиляции XAML таким образом, чтобы поля для ссылки на именованные объекты определяются с помощью <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> доступа вместо <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> поведение по умолчанию.  
@@ -36,11 +36,11 @@ ms.locfileid: "59144551"
   
  Значение для `x:FieldModifier` атрибута различается в зависимости от языка программирования, и его назначение могут различаться в конкретных платформах. Строка, используемая зависит от того, как каждый язык реализует его <xref:System.CodeDom.Compiler.CodeDomProvider> и преобразователями типов, он возвращает для определения значений для <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> и <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, а также является ли этот язык с учетом регистра.  
   
--   Для C#, строка, передаваемая для обозначения <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> является `public`.  
+- Для C#, строка, передаваемая для обозначения <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> является `public`.  
   
--   Для Microsoft Visual Basic .NET, строка, передаваемая для обозначения <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> является `Public`.  
+- Для Microsoft Visual Basic .NET, строка, передаваемая для обозначения <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> является `Public`.  
   
--   Для [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], нет целевых объектов для XAML в настоящее время существует; таким образом, строка, передаваемая не определено.  
+- Для [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], нет целевых объектов для XAML в настоящее время существует; таким образом, строка, передаваемая не определено.  
   
  Можно также указать <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> (`internal` в C#, `Friend` в Visual Basic) но указав <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> необычен поскольку `NotPublic` , поведение уже используется по умолчанию.  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
 ms.openlocfilehash: 3038e35947cd8f97266d374a367a77380df440dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772181"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>Изменение данных с помощью DbDataAdapter
 Метод <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> объекта <xref:System.Data.Common.DbProviderFactory> предоставляет объект <xref:System.Data.Common.DbDataAdapter>, являющийся строго типизированным по отношению к базовому поставщику данных, который был задан во время создания фабрики. После этого объект <xref:System.Data.Common.DbCommandBuilder> можно использовать для создания команд вставки, обновления и удаления данных из объекта <xref:System.Data.DataSet> в источнике данных.  

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
 ms.openlocfilehash: 98d51f9c6465186e77784aba080130110545f399
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941194"
 ---
 # <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Практическое руководство. Реализация формы, в которой выполняется фоновая операция
 В примере ниже программа создает форму, которая вычисляет числа Фибоначчи. Вычисление выполняется в потоке, отдельном от потока пользовательского интерфейса, поэтому в ходе вычисления пользовательский интерфейс продолжает выполняться без задержек.  
@@ -38,7 +38,7 @@ ms.locfileid: "59192164"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылки на сборки System, System.Drawing и System.Windows.Forms.  
+- ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   

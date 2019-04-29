@@ -8,28 +8,28 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
 ms.openlocfilehash: 81559444b6e3da2861e48bdc637ae01d246c0758
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961581"
 ---
 # <a name="bindingsource-component-architecture"></a>Архитектура компонента BindingSource
 С помощью <xref:System.Windows.Forms.BindingSource> компонент, глобально, все элементы управления Windows Forms можно привязать к источникам данных.  
   
  <xref:System.Windows.Forms.BindingSource> Компонента упрощает процесс привязки элементов управления к источнику данных и предоставляет следующие преимущества по сравнению с традиционной привязке данных:  
   
--   Обеспечивает связывание во время разработки к бизнес-объектам.  
+- Обеспечивает связывание во время разработки к бизнес-объектам.  
   
--   Инкапсулирует <xref:System.Windows.Forms.CurrencyManager> функциональные возможности и предоставляет <xref:System.Windows.Forms.CurrencyManager> события во время разработки.  
+- Инкапсулирует <xref:System.Windows.Forms.CurrencyManager> функциональные возможности и предоставляет <xref:System.Windows.Forms.CurrencyManager> события во время разработки.  
   
--   Упрощает создание списка, поддерживающего <xref:System.ComponentModel.IBindingList> интерфейса, предоставляя уведомления об изменении списка источников данных, которые изначально не поддерживают список уведомлений об изменениях.  
+- Упрощает создание списка, поддерживающего <xref:System.ComponentModel.IBindingList> интерфейса, предоставляя уведомления об изменении списка источников данных, которые изначально не поддерживают список уведомлений об изменениях.  
   
--   Предоставляет точку расширения для <xref:System.ComponentModel.IBindingList.AddNew%2A?displayProperty=nameWithType> метод.  
+- Предоставляет точку расширения для <xref:System.ComponentModel.IBindingList.AddNew%2A?displayProperty=nameWithType> метод.  
   
--   Обеспечивает уровень косвенного обращения между источником данных и элементом управления. Такое обращение очень важно, когда источник данных может изменяться во время выполнения.  
+- Обеспечивает уровень косвенного обращения между источником данных и элементом управления. Такое обращение очень важно, когда источник данных может изменяться во время выполнения.  
   
--   Взаимодействует с другие данных Windows Forms элементы управления, в частности <xref:System.Windows.Forms.BindingNavigator> и <xref:System.Windows.Forms.DataGridView> элементов управления.  
+- Взаимодействует с другие данных Windows Forms элементы управления, в частности <xref:System.Windows.Forms.BindingNavigator> и <xref:System.Windows.Forms.DataGridView> элементов управления.  
   
  По этим причинам <xref:System.Windows.Forms.BindingSource> компонент является предпочтительным способом привязки элементов управления Windows Forms к источникам данных.  
   
@@ -40,38 +40,38 @@ ms.locfileid: "59165351"
   
  Согласованный интерфейс, предоставляемый <xref:System.Windows.Forms.BindingSource> компонент значительно упрощает процесс привязки данных к элементам управления. Для типов источников данных, которые предоставляют уведомления об изменениях, <xref:System.Windows.Forms.BindingSource> компонент автоматически передает изменения между элементом управления и источника данных. Для типов источников данных, не предоставляет уведомления об изменениях предусмотрены события, которые позволяют получение уведомления об изменении. В следующем списке приведены возможности, поддерживаемые <xref:System.Windows.Forms.BindingSource> компонента:  
   
--   Косвенное обращение.  
+- Косвенное обращение.  
   
--   Оперативное управление.  
+- Оперативное управление.  
   
--   Источник данных в виде списка.  
+- Источник данных в виде списка.  
   
--   <xref:System.Windows.Forms.BindingSource> как <xref:System.ComponentModel.IBindingList>.  
+- <xref:System.Windows.Forms.BindingSource> как <xref:System.ComponentModel.IBindingList>.  
   
--   Создание пользовательских элементов.  
+- Создание пользовательских элементов.  
   
--   Создание транзакционных элементов.  
+- Создание транзакционных элементов.  
   
--   <xref:System.Collections.IEnumerable> Поддержка.  
+- <xref:System.Collections.IEnumerable> Поддержка.  
   
--   Поддержка времени разработки.  
+- Поддержка времени разработки.  
   
--   Статические <xref:System.Windows.Forms.ListBindingHelper> методы.  
+- Статические <xref:System.Windows.Forms.ListBindingHelper> методы.  
   
--   Сортировка и фильтрация с использованием <xref:System.ComponentModel.IBindingListView> интерфейс.  
+- Сортировка и фильтрация с использованием <xref:System.ComponentModel.IBindingListView> интерфейс.  
   
--   Интеграция с <xref:System.Windows.Forms.BindingNavigator>.  
+- Интеграция с <xref:System.Windows.Forms.BindingNavigator>.  
   
 ### <a name="indirection"></a>Косвенное обращение  
  <xref:System.Windows.Forms.BindingSource> Компонент обеспечивает уровень косвенного обращения между элементом управления и источником данных. Вместо привязки элемента управления к источнику данных, привязать элемент управления <xref:System.Windows.Forms.BindingSource>, и подключить источник данных для <xref:System.Windows.Forms.BindingSource> компонента <xref:System.Windows.Forms.BindingSource.DataSource%2A> свойство.  
   
  С этим уровнем косвенного обращения можно изменить без сброса привязки элемента управления источника данных. Это дает следующие возможности:  
   
--   Вы можете подключить <xref:System.Windows.Forms.BindingSource> к различным источникам данных, сохраняя текущие привязки элемента управления.  
+- Вы можете подключить <xref:System.Windows.Forms.BindingSource> к различным источникам данных, сохраняя текущие привязки элемента управления.  
   
--   Можно изменить элементы в источнике данных и уведомлять связанные элементы управления. Дополнительные сведения см. в разделе [Как Отражение обновились в источнике данных в элементе управления Windows Forms с использованием компонента BindingSource](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md).  
+- Можно изменить элементы в источнике данных и уведомлять связанные элементы управления. Дополнительные сведения см. в разделе [Как Отражение обновились в источнике данных в элементе управления Windows Forms с использованием компонента BindingSource](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md).  
   
--   Можно привязать к <xref:System.Type> вместо объекта в памяти. Дополнительные сведения см. в разделе [Как Привязка элемента управления Windows Forms к типу](how-to-bind-a-windows-forms-control-to-a-type.md). Затем, можно привязать к объекту во время выполнения.  
+- Можно привязать к <xref:System.Type> вместо объекта в памяти. Дополнительные сведения см. в разделе [Как Привязка элемента управления Windows Forms к типу](how-to-bind-a-windows-forms-control-to-a-type.md). Затем, можно привязать к объекту во время выполнения.  
   
 ### <a name="currency-management"></a>Управление валюты  
  <xref:System.Windows.Forms.BindingSource> Компонент реализует <xref:System.Windows.Forms.ICurrencyManagerProvider> интерфейса для обработки управления валюты для вас. С помощью <xref:System.Windows.Forms.ICurrencyManagerProvider> интерфейс, можно также обращаться для диспетчер денежных единиц для <xref:System.Windows.Forms.BindingSource>, помимо диспетчер денежных единиц для другого <xref:System.Windows.Forms.BindingSource> привязан к той же <xref:System.Windows.Forms.BindingSource.DataMember%2A>.  
@@ -128,11 +128,11 @@ ms.locfileid: "59165351"
 ### <a name="transactional-item-creation"></a>Создание транзакционных элементов  
  <xref:System.Windows.Forms.BindingSource> Компонент реализует <xref:System.ComponentModel.ICancelAddNew> интерфейс, который позволяет создавать транзакционные элементы. После элемента условно создается с помощью вызова <xref:System.Windows.Forms.BindingSource.AddNew%2A>, добавление может зафиксировать или откатить назад, одним из следующих способов:  
   
--   <xref:System.ComponentModel.ICancelAddNew.EndNew%2A> Метод явным образом подтверждает отложенное добавление.  
+- <xref:System.ComponentModel.ICancelAddNew.EndNew%2A> Метод явным образом подтверждает отложенное добавление.  
   
--   Выполнение другой операции коллекции, такие как вставки, удаления или перемещения, неявно фиксируется ожидающего добавления.  
+- Выполнение другой операции коллекции, такие как вставки, удаления или перемещения, неявно фиксируется ожидающего добавления.  
   
--   <xref:System.ComponentModel.ICancelAddNew.CancelNew%2A> Метод приведет к откату ожидающего добавления Если метод не уже была зафиксирована.  
+- <xref:System.ComponentModel.ICancelAddNew.CancelNew%2A> Метод приведет к откату ожидающего добавления Если метод не уже была зафиксирована.  
   
 ### <a name="ienumerable-support"></a>Поддержка интерфейса IEnumerable  
  <xref:System.Windows.Forms.BindingSource> Компонент позволяет привязывать элементы управления к <xref:System.Collections.IEnumerable> источников данных. С этим компонентом можно привязать к источнику данных такие как <xref:System.Data.SqlClient.SqlDataReader?displayProperty=nameWithType>.  
@@ -147,13 +147,13 @@ ms.locfileid: "59165351"
 ### <a name="static-listbindinghelper-methods"></a>ListBindingHelper статические методы  
  <xref:System.Windows.Forms.BindingContext?displayProperty=nameWithType>, <xref:System.Windows.Forms.CurrencyManager?displayProperty=nameWithType>, И <xref:System.Windows.Forms.BindingSource> типы всех общую логику общую папку для создания списка из `DataSource` / `DataMember` пары. Кроме того, эта общая логика открыта для использования авторами элемента управления и другими третьими лицами, в следующем `static` методы:  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A>  
+- <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A>  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>.  
+- <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>.  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetListName%2A>  
+- <xref:System.Windows.Forms.ListBindingHelper.GetListName%2A>  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetListItemType%2A>  
+- <xref:System.Windows.Forms.ListBindingHelper.GetListItemType%2A>  
   
 ### <a name="sorting-and-filtering-with-the-ibindinglistview-interface"></a>Сортировка и фильтрация с использованием IBindingListView-интерфейс  
  <xref:System.Windows.Forms.BindingSource> Компонент реализует <xref:System.ComponentModel.IBindingListView> интерфейс, который расширяет <xref:System.ComponentModel.IBindingList> интерфейс. <xref:System.ComponentModel.IBindingList> Предлагает сортировке одного столбца и <xref:System.ComponentModel.IBindingListView> предлагает расширенную сортировки и фильтрации. С помощью <xref:System.ComponentModel.IBindingListView>, можно сортировать и фильтровать элементы в источнике данных, если источник данных, также реализует один из этих интерфейсов. <xref:System.Windows.Forms.BindingSource> Компонент не предоставляет справочную реализацию этих членов. Вместо этого звонки передаются в базовый список.  

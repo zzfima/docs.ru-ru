@@ -10,11 +10,11 @@ helpviewer_keywords:
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
 ms.openlocfilehash: 1d710f1e6d3b208365d5b1eb2524fbeeaa673c2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941054"
 ---
 # <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Практическое руководство. Асинхронная загрузка звука в Windows Forms
 В примере кода ниже производится асинхронная загрузка звука по URL-адресу, после чего он воспроизводится в новом потоке.  
@@ -26,9 +26,9 @@ ms.locfileid: "59185761"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылки на сборки System и System.Windows.Forms;  
+- ссылки на сборки System и System.Windows.Forms;  
   
--   замена имени файла `"http://www.tailspintoys.com/sounds/stop.wav"` на допустимое имя файла.  
+- замена имени файла `"http://www.tailspintoys.com/sounds/stop.wav"` на допустимое имя файла.  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
@@ -37,17 +37,17 @@ ms.locfileid: "59185761"
   
  При следующих условиях возможно возникновение исключения:  
   
--   Недопустимое имя пути (например, путь содержит недопустимые символы или состоит только из пробелов (класс <xref:System.ArgumentException>)).  
+- Недопустимое имя пути (например, путь содержит недопустимые символы или состоит только из пробелов (класс <xref:System.ArgumentException>)).  
   
--   Путь доступен только для чтения (класс <xref:System.IO.IOException>).  
+- Путь доступен только для чтения (класс <xref:System.IO.IOException>).  
   
--   Имя пути — `Nothing` (класс <xref:System.ArgumentNullException>).  
+- Имя пути — `Nothing` (класс <xref:System.ArgumentNullException>).  
   
--   Указано слишком длинное имя пути (класс <xref:System.IO.PathTooLongException>).  
+- Указано слишком длинное имя пути (класс <xref:System.IO.PathTooLongException>).  
   
--   Недопустимый путь (класс <xref:System.IO.DirectoryNotFoundException>).  
+- Недопустимый путь (класс <xref:System.IO.DirectoryNotFoundException>).  
   
--   Путь содержит только двоеточие (":") (класс <xref:System.NotSupportedException>).  
+- Путь содержит только двоеточие (":") (класс <xref:System.NotSupportedException>).  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  По имени файла не всегда можно с уверенностью судить о его содержимом. Например, файл с именем `Form1.vb` может вовсе не быть исходным файлом Visual Basic. Следует проверять все входные данные перед использованием их в приложении.  

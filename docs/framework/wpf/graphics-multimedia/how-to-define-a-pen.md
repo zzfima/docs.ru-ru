@@ -9,11 +9,11 @@ helpviewer_keywords:
 - creating [WPF], pens
 ms.assetid: 7a4f2900-cdf9-49de-84e0-ba5d0ded4d33
 ms.openlocfilehash: 1d69a40604dbf2f7a73c17279ae946faeb6c634a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965397"
 ---
 # <a name="how-to-define-a-pen"></a>Практическое руководство. Определение пера
 В этом примере показано, как использовать <xref:System.Windows.Media.Pen> для описания формы. Для создания простого <xref:System.Windows.Media.Pen>, достаточно указать его <xref:System.Windows.Media.Pen.Thickness%2A> и <xref:System.Windows.Media.Pen.Brush%2A>. Можно создать более сложное перо, указав <xref:System.Windows.Media.Pen.DashStyle%2A>, <xref:System.Windows.Media.Pen.DashCap%2A>, <xref:System.Windows.Media.Pen.LineJoin%2A>, <xref:System.Windows.Media.Pen.StartLineCap%2A>, и <xref:System.Windows.Media.Pen.EndLineCap%2A>.  

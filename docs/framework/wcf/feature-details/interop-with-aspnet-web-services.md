@@ -3,11 +3,11 @@ title: Взаимодействие с веб-службами ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
 ms.openlocfilehash: c6fec1d520cd251473d8840b7b1afe879002a04c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972569"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>Взаимодействие с веб-службами ASP.NET
 Взаимодействие между [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-служб и веб-службы Windows Communication Foundation (WCF) служб может осуществляться, гарантируя, что служб, реализуемых используя обе технологии соответствующими требованиям WS-I Basic Profile 1.1 спецификации. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Веб-службы, соответствующие спецификации WS-I Basic Profile 1.1, могут взаимодействовать с клиентами WCF с помощью привязки, предоставляемой системой WCF, <xref:System.ServiceModel.BasicHttpBinding>.  
@@ -38,11 +38,11 @@ public class Service : IEcho
   
  XML-код, в который тип сериализуется сериализатором <xref:System.Xml.Serialization.XmlSerializer>, по умолчанию семантически идентичен XML-коду, в который тип сериализуется сериализатором <xref:System.Runtime.Serialization.DataContractSerializer>, при условии, что пространство имен для XML задано явным образом. При задании типа данных для использования с [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]веб-службы в будущем планируется переход WCF, сделайте следующее:  
   
--   Задавайте тип с использованием классов .NET Framework, а не схемы XML.  
+- Задавайте тип с использованием классов .NET Framework, а не схемы XML.  
   
--   Добавляйте в класс только атрибуты <xref:System.SerializableAttribute> и <xref:System.Xml.Serialization.XmlRootAttribute>, используя последний для явного задания пространства имен для типа. Не добавляйте дополнительные атрибуты из пространства имен <xref:System.Xml.Serialization> для задания способа преобразования класса .NET Framework в XML.  
+- Добавляйте в класс только атрибуты <xref:System.SerializableAttribute> и <xref:System.Xml.Serialization.XmlRootAttribute>, используя последний для явного задания пространства имен для типа. Не добавляйте дополнительные атрибуты из пространства имен <xref:System.Xml.Serialization> для задания способа преобразования класса .NET Framework в XML.  
   
--   Используя этот подход, вы впоследствии сможете превратить классы .NET в контракты данных, добавив атрибуты <xref:System.Runtime.Serialization.DataContractAttribute> и <xref:System.Runtime.Serialization.DataMemberAttribute>, без значительного изменения XML-кода, в который классы сериализуются для передачи. Типы, используемые в сообщениях [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-служб могут обрабатываться как контракты данных приложений WCF, что, помимо прочих преимуществ, повышения производительности в приложениях WCF.  
+- Используя этот подход, вы впоследствии сможете превратить классы .NET в контракты данных, добавив атрибуты <xref:System.Runtime.Serialization.DataContractAttribute> и <xref:System.Runtime.Serialization.DataMemberAttribute>, без значительного изменения XML-кода, в который классы сериализуются для передачи. Типы, используемые в сообщениях [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-служб могут обрабатываться как контракты данных приложений WCF, что, помимо прочих преимуществ, повышения производительности в приложениях WCF.  
   
  Избегайте использования параметров проверки подлинности, предусмотренных в службах IIS. Клиенты WCF не поддерживают их. Если служба должна быть защищена, используйте параметры, предоставляемые WCF, так как эти они надежны и основаны на стандартных протоколах.  
   

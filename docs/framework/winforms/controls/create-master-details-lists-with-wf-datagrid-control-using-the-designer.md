@@ -7,11 +7,11 @@ helpviewer_keywords:
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
 ms.openlocfilehash: f586572c850927ffe71566287986e6db6112c689
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961364"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Практическое руководство. Создание списков основных сведений с использованием элемента управления DataGrid в формах Windows Forms с помощью конструктора
 
@@ -42,15 +42,15 @@ ms.locfileid: "59332083"
   
 6. Настройка <xref:System.Windows.Forms.DataGrid> элемент управления, который вы хотите назначить основной сеткой, следующим образом:  
   
-    1.  Выберите <xref:System.Data.DataSet> из раскрывающегося списка в <xref:System.Windows.Forms.DataGrid.DataSource%2A> свойство.  
+    1. Выберите <xref:System.Data.DataSet> из раскрывающегося списка в <xref:System.Windows.Forms.DataGrid.DataSource%2A> свойство.  
   
-    2.  Выберите основную таблицу (например, «Customers») из раскрывающегося списка в <xref:System.Windows.Forms.DataGrid.DataMember%2A> свойство.  
+    2. Выберите основную таблицу (например, «Customers») из раскрывающегося списка в <xref:System.Windows.Forms.DataGrid.DataMember%2A> свойство.  
   
 7. Настройка <xref:System.Windows.Forms.DataGrid> элемент управления, который вы хотите назначить сеткой сведений, следующим образом:  
   
-    1.  Выберите <xref:System.Data.DataSet> из раскрывающегося списка в <xref:System.Windows.Forms.DataGrid.DataSource%2A> свойство.  
+    1. Выберите <xref:System.Data.DataSet> из раскрывающегося списка в <xref:System.Windows.Forms.DataGrid.DataSource%2A> свойство.  
   
-    2.  Выберите связь (например, «Customers.CustOrd») между основными и подробными стрелку раскрывающегося списка в <xref:System.Windows.Forms.DataGrid.DataMember%2A> свойство. Чтобы просмотреть связь, разверните узел, щелкнув знак "плюс" (**+**) рядом с основной таблицей в раскрывающемся списке.  
+    2. Выберите связь (например, «Customers.CustOrd») между основными и подробными стрелку раскрывающегося списка в <xref:System.Windows.Forms.DataGrid.DataMember%2A> свойство. Чтобы просмотреть связь, разверните узел, щелкнув знак "плюс" (**+**) рядом с основной таблицей в раскрывающемся списке.  
   
 ## <a name="see-also"></a>См. также
 

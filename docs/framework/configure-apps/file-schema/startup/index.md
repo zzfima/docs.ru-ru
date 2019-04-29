@@ -7,17 +7,17 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], startup settings
 ms.assetid: 03de6972-442a-4648-9f3e-efa654e3b949
 ms.openlocfilehash: e5f9c9af64ff38e7c0f1f26ccab039261b052e30
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701519"
 ---
 # <a name="startup-settings-schema"></a>Схема параметров запуска
 
 Параметры запуска определяют версию среды CLR, в которой должно выполняться приложение.  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<requiredRuntime>](requiredruntime-element.md)|Указывает, что приложение поддерживает только версию 1.0 среды CLR. Приложения, созданные с помощью среды выполнения версии 1.1, должны использовать элемент **\<supportedRuntime>**.|  
 |[\<supportedRuntime>](supportedruntime-element.md)|Указывает, какие версии среды CLR поддерживает приложение.|  

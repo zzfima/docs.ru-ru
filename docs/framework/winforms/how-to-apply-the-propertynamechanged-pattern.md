@@ -10,11 +10,11 @@ helpviewer_keywords:
 - PropertyNameChanged pattern [Windows Forms], applying
 ms.assetid: aa47ddf6-5223-40c4-833f-a78992194836
 ms.openlocfilehash: 36670eee6235277a7fe98770192df9ae05d3dd03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966820"
 ---
 # <a name="how-to-apply-the-propertynamechanged-pattern"></a>Практическое руководство. Применение шаблона PropertyNameChanged
 В следующем примере кода демонстрируется применение *PropertyName*Changed шаблон для пользовательского элемента управления. Применяйте этот шаблон при реализации пользовательских элементов управления, используемых с ними механизм привязки данных Windows Forms.  
@@ -26,7 +26,7 @@ ms.locfileid: "59213029"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для компиляции в предыдущем примере кода:  
   
--   Вставьте код в пустой файл кода. Необходимо использовать пользовательский элемент управления на форму Windows, которая содержит `Main` метод.  
+- Вставьте код в пустой файл кода. Необходимо использовать пользовательский элемент управления на форму Windows, которая содержит `Main` метод.  
   
 ## <a name="see-also"></a>См. также
 

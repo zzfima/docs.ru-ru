@@ -8,11 +8,11 @@ helpviewer_keywords:
 - binding data [WPF]
 ms.assetid: 90f79b97-17e7-40d1-abf0-3ba600ad1d7e
 ms.openlocfilehash: 60308e4797f613940c2580e10d746fb712af9f6e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954197"
 ---
 # <a name="data-binding-wpf"></a>Привязка данных (WPF)
 Привязка данных Windows Presentation Foundation (WPF) обеспечивает простой и последовательный способ представления и взаимодействия с данными приложениях. Элементы можно привязать к данным из различных источников данных в виде объекта (CLR) среды CLR и XML.  

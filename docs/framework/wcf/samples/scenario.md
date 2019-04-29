@@ -3,11 +3,11 @@ title: Scenario2
 ms.date: 03/30/2017
 ms.assetid: 816557e0-f676-4731-95c5-b02cbef3d8d7
 ms.openlocfilehash: d791681fab4b635c057d151d10183f583ae7ab2a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787495"
 ---
 # <a name="scenario"></a>Сценарий
 Этот раздел содержит образцы, демонстрирующие сценарии Windows Communication Foundation (WCF).  
@@ -23,10 +23,10 @@ ms.locfileid: "33804307"
  Демонстрирует федеративную безопасность.  
   
  [Сериализация слабо типизированных данных JSON (AJAX)](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md)  
- Показано, как разработчики WCF могли работать с произвольными Десериализованными объектами JSON без создания определяемых пользователем типов.  
+ Показано, как разработчики WCF могут работать с десериализованные произвольными объектами JSON, без создания определяемых пользователем типов.  
   
  [Доверенная фасадная служба](../../../../docs/framework/wcf/samples/trusted-facade-service.md)  
- Показано, как передать информацию удостоверения вызывающей стороны от одной службы к другой с помощью инфраструктуры безопасности WCF.  
+ Демонстрируется способ передачи данных идентификации вызывающей стороны от одной службы к другой с помощью инфраструктуры безопасности WCF.  
   
- [Шаблоны разработки: публикация-подписка на основе списка](../../../../docs/framework/wcf/samples/design-patterns-list-based-publish-subscribe.md)  
- Демонстрируется шаблон публикации-подписка на основе списка, реализованный в качестве программы Windows Communication Foundation (WCF).
+ [Шаблоны разработки: Публикация-подписка на основе списка](../../../../docs/framework/wcf/samples/design-patterns-list-based-publish-subscribe.md)  
+ Демонстрируется использование шаблона публикация-подписка на основе списка, реализован как программа Windows Communication Foundation (WCF).

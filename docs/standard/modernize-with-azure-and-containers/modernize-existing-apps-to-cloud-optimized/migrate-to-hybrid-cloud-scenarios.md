@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: b04c6edecf5b63f191cb2e0f808fb1d0f801d0a3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936736"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Переход на гибридные облачные сценарии
 
@@ -33,9 +33,9 @@ Azure Stack — это гибридная облачная платформа, �
 
 Azure Stack предлагается в двух вариантах развертывания, в соответствии с требованиями:
 
--   Интегрированные системы Azure Stack
+- Интегрированные системы Azure Stack
 
--   Пакет средств разработки Azure Stack
+- Пакет средств разработки Azure Stack
 
 ### <a name="azure-stack-integrated-systems"></a>Интегрированные системы Azure Stack
 
@@ -47,23 +47,23 @@ Azure Stack предлагается в двух вариантах развер
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Гибридное облако Azure**
+- **Гибридное облако Azure**
 
     <https://azure.microsoft.com/overview/hybrid-cloud/>
 
--   **Azure Stack**
+- **Azure Stack**
 
     <https://azure.microsoft.com/overview/azure-stack/>
 
--   **Учетные записи служб Active Directory для контейнеров Windows**
+- **Учетные записи служб Active Directory для контейнеров Windows**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts>
 
--   **Создайте контейнер с поддержкой Active Directory**
+- **Создайте контейнер с поддержкой Active Directory**
 
     <https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/>
 
--   **Лицензирование Преимущество гибридного использования Azure**
+- **Лицензирование Преимущество гибридного использования Azure**
 
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 

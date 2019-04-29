@@ -8,17 +8,17 @@ ms.openlocfilehash: 1bc75303bcc2f46e54c06e89347da28997e59786
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935256"
 ---
 # <a name="bad-record-length"></a>Недопустимая длина записи
 Некоторые из возможных причин этой ошибки:  
   
--   Длина переменной записи, указанной в `FileGet`, `FileGetObject`, `FilePut` или `FilePutObject` инструкция отличается от длины, указанной в соответствующем `FileOpen` инструкции.  
+- Длина переменной записи, указанной в `FileGet`, `FileGetObject`, `FilePut` или `FilePutObject` инструкция отличается от длины, указанной в соответствующем `FileOpen` инструкции.  
   
--   Эту переменную в `FilePut` или `FilePutObject` инструкция или включает строку переменной длины.  
+- Эту переменную в `FilePut` или `FilePutObject` инструкция или включает строку переменной длины.  
   
--   Эту переменную в `FilePut` или `FilePutObject` является или включает `Variant` типа.  
+- Эту переменную в `FilePut` или `FilePutObject` является или включает `Variant` типа.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
 ms.openlocfilehash: dbe1c0325499e7b925d504fc80f9034f9e387475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936361"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Слияние элементов меню в элементе управления MenuStrip в Windows Forms
 Если у вас есть приложения многодокументного интерфейса (MDI), можно объединить пункты меню или целые меню из дочерней формы в меню родительской формы.  
@@ -20,9 +20,9 @@ ms.locfileid: "59231569"
 ## <a name="general-concepts"></a>Общие понятия  
  Процедуры слияния охватывают целевого объекта и системы управления версиями:  
   
--   Целевой объект — <xref:System.Windows.Forms.MenuStrip> управления на главной или родительской MDI-формы, в которой выполняется слияние пунктов меню.  
+- Целевой объект — <xref:System.Windows.Forms.MenuStrip> управления на главной или родительской MDI-формы, в которой выполняется слияние пунктов меню.  
   
--   Источником является <xref:System.Windows.Forms.MenuStrip> элемента управления в дочерней форме MDI, содержащий пункты меню, которые необходимо объединить в меню «цель».  
+- Источником является <xref:System.Windows.Forms.MenuStrip> элемента управления в дочерней форме MDI, содержащий пункты меню, которые необходимо объединить в меню «цель».  
   
  <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> Свойство идентифицирует элемент меню, в которых стрелку раскрывающегося списка, то вы заполните названия MDI текущей родительской дочерние формы MDI. Например, обычно список дочерние формы MDI, открытые в настоящий момент на **окно** меню.  
   

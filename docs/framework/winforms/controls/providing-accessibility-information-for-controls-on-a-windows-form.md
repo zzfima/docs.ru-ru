@@ -7,24 +7,24 @@ helpviewer_keywords:
 - accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
 ms.openlocfilehash: 0f589f37d79c9ec8d55153aac4c846726a379055
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948025"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Определение сведений, связанных со специальными возможностями, для элементов управления в Windows Forms
 Специальные возможности — это специализированные программы и устройства, помогающие людям с ограниченными возможностями эффективнее использовать компьютеры. Примеры: средства чтения с экрана для слепых и служебные программы голосового ввода для людей, использующих голосовые команды вместо мыши и клавиатуры. Специальные возможности взаимодействуют со свойствами специальных возможностей, представленными элементами управления Windows Forms. К этим свойствам относятся следующие.  
   
--   **AccessibilityObject**  
+- **AccessibilityObject**  
   
--   **AccessibleDefaultActionDescription**  
+- **AccessibleDefaultActionDescription**  
   
--   **AccessibleDescription**  
+- **AccessibleDescription**  
   
--   **AccessibleName**  
+- **AccessibleName**  
   
--   **AccessibleRole**  
+- **AccessibleRole**  
   
 ## <a name="accessibilityobject-property"></a>Свойство AccessibilityObject  
  Это свойство, доступное только для чтения, содержит экземпляр <xref:System.Windows.Forms.AccessibleObject> . **AccessibleObject** реализует интерфейс <xref:Accessibility.IAccessible> , предоставляющий описание элементов управления, расположение на экране, возможности навигации и значение. Конструктор задает это значение при добавлении элемента управления в форму.  

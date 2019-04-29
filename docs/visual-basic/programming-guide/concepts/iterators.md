@@ -3,11 +3,11 @@ title: Итераторы (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
 ms.openlocfilehash: 313ce0c79a71af1b602ecd4ccc9bd0ebceb5696e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966183"
 ---
 # <a name="iterators-visual-basic"></a>Итераторы (Visual Basic)
 *Итератор* можно использовать для прохода по коллекции, такой как список или массив.  
@@ -44,21 +44,21 @@ End Function
   
  **Содержание раздела**  
   
--   [Простой итератор](#BKMK_SimpleIterator)  
+- [Простой итератор](#BKMK_SimpleIterator)  
   
--   [Создание класса коллекции](#BKMK_CollectionClass)  
+- [Создание класса коллекции](#BKMK_CollectionClass)  
   
--   [Блоки "try"](#BKMK_TryBlocks)  
+- [Блоки "try"](#BKMK_TryBlocks)  
   
--   [Анонимные методы](#BKMK_AnonymousMethods)  
+- [Анонимные методы](#BKMK_AnonymousMethods)  
   
--   [Использование итераторов с универсальным списком](#BKMK_GenericList)  
+- [Использование итераторов с универсальным списком](#BKMK_GenericList)  
   
--   [Сведения о синтаксисе](#BKMK_SyntaxInformation)  
+- [Сведения о синтаксисе](#BKMK_SyntaxInformation)  
   
--   [Техническая реализация](#BKMK_Technical)  
+- [Техническая реализация](#BKMK_Technical)  
   
--   [Использование итераторов](#BKMK_UseOfIterators)  
+- [Использование итераторов](#BKMK_UseOfIterators)  
   
 > [!NOTE]
 >  Все примеры в разделе, кроме примера простого итератора, включают [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) инструкций для `System.Collections` и `System.Collections.Generic` пространства имен.  
@@ -438,11 +438,11 @@ End Class
 ## <a name="BKMK_UseOfIterators"></a> Использование итераторов  
  Итераторы позволяют поддерживать простоту цикла `For Each`, когда необходимо использовать сложный код для заполнения последовательности списков. Это может оказаться полезным в следующих случаях:  
   
--   Изменение последовательности списков после первой итерации цикла `For Each`.  
+- Изменение последовательности списков после первой итерации цикла `For Each`.  
   
--   Если необходимо избежать полной загрузки большого списка перед первой итерацией цикла `For Each`. Пример: при постраничной загрузке пакета строк таблицы. Другой пример — метод <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, реализующий итераторы в .NET Framework.  
+- Если необходимо избежать полной загрузки большого списка перед первой итерацией цикла `For Each`. Пример: при постраничной загрузке пакета строк таблицы. Другой пример — метод <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, реализующий итераторы в .NET Framework.  
   
--   Инкапсулирование построения списка в итераторе. В методе итератора можно построить список, а затем выдавать каждый результат в цикле.  
+- Инкапсулирование построения списка в итераторе. В методе итератора можно построить список, а затем выдавать каждый результат в цикле.  
   
 ## <a name="see-also"></a>См. также
 

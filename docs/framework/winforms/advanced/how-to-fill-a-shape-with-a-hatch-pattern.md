@@ -10,11 +10,11 @@ helpviewer_keywords:
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
 ms.openlocfilehash: f5399c4151b335090f4b93be041375b8c2781afa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781355"
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Практическое руководство. Штриховая заливка фигуры
 Шаблон штриховки осуществляется из двух цветов: один для фона и один для строк, которые образуют узор на фоне. Для заполнения замкнутой фигуры, штриховая, использовать <xref:System.Drawing.Drawing2D.HatchBrush> объекта. Следующий пример демонстрирует Штриховая заливка эллипса:  
@@ -22,17 +22,17 @@ ms.locfileid: "59118122"
 ## <a name="example"></a>Пример  
  <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> Конструктор принимает три аргумента: стиль штриховки, цвет штриховой линии и цвет фона. Стиль штриховки может быть любое значение от <xref:System.Drawing.Drawing2D.HatchStyle> перечисления. Существует более пятидесяти элементов в <xref:System.Drawing.Drawing2D.HatchStyle> перечисления; часть из них элементы показаны в следующем списке:  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.Vertical>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.Vertical>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.BackwardDiagonal>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.BackwardDiagonal>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.Cross>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.Cross>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.DiagonalCross>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.DiagonalCross>  
   
  На следующем рисунке заполненного эллипса.  
   

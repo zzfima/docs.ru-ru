@@ -3,11 +3,11 @@ title: Привязка MSMQ на платформе .NET
 ms.date: 03/30/2017
 ms.assetid: fe4bb696-f57c-4cb3-9b7e-9d95fe6b8323
 ms.openlocfilehash: ee32ea09eed28c1c7cd5df2df2d13fd5f41f4b22
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972384"
 ---
 # <a name="net-msmq-binding"></a>Привязка MSMQ на платформе .NET
 Этот раздел содержит образцы, которые демонстрируют использование привязки атрибутов MSMQ элемента конечной точки.  

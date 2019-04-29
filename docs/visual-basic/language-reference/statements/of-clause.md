@@ -18,11 +18,11 @@ helpviewer_keywords:
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
 ms.openlocfilehash: 880570c714292b0c11eef4e2cd4c4b410bb075f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784154"
 ---
 # <a name="of-clause-visual-basic"></a>Предложение Of (Visual Basic)
 Представляет `Of` предложение, которое идентифицирует *параметр типа* на *универсального* класса, структуры, интерфейса, делегата или процедуры. Сведения об универсальных типах см. в разделе [универсальных типов в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  

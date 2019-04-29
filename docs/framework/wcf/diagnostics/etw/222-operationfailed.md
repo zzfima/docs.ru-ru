@@ -3,11 +3,11 @@ title: 222 - OperationFailed
 ms.date: 03/30/2017
 ms.assetid: 6b530ded-8f20-4d78-8bfe-1875276df6ba
 ms.openlocfilehash: c49aad0f93ce47b66306d75741267530dc6d3fe5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781645"
 ---
 # <a name="222---operationfailed"></a>222 - OperationFailed
 ## <a name="properties"></a>Свойства  
@@ -31,5 +31,5 @@ ms.locfileid: "33460746"
 |--------------------|--------------------|-----------------|  
 |Имя метода|`xs:string`|Имя CLR метода, который был вызван `OperationInvoker`.|  
 |Длительность|`xs:long`|Время в миллисекундах, которое потребовалось `OperationInvoker`, чтобы вызвать метод.|  
-|HostReference|`xs:string`|Для служб, размещенных на веб-узле, это поле является уникальным идентификатором службы в веб-иерархии. Ее формат определяется как "веб-сайт имя виртуальный путь приложения&#124;виртуальный путь службы&#124;имя_службы". Пример: "по умолчанию веб-сайта или CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService".|  
-|AppDomain|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|HostReference|`xs:string`|Для служб, размещенных на веб-узле, это поле является уникальным идентификатором службы в веб-иерархии. Формат определяется как "виртуальный путь приложения имя веб-сайта&#124;виртуальный путь службы&#124;ServiceName". Пример "По умолчанию веб-сайт/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService".|  
+|Домен приложения|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|

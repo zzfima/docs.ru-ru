@@ -10,11 +10,11 @@ helpviewer_keywords:
 - colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
 ms.openlocfilehash: dc067f5a131951bf3af7adc68e11b948d40fc0ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966880"
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a>Практическое руководство. Установка цвета пера
 В этом примере изменяется цвет в существующем <xref:System.Drawing.Pen> объекта  
@@ -27,7 +27,7 @@ ms.locfileid: "59213419"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   Объект <xref:System.Drawing.Pen> объект с именем `myPen`.  
+- Объект <xref:System.Drawing.Pen> объект с именем `myPen`.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  Следует вызывать <xref:System.Drawing.Pen.Dispose%2A> на какие объекты используют системные ресурсы (такие как <xref:System.Drawing.Pen> объекты) после завершения их использования.  

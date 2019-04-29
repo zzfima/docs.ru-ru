@@ -11,26 +11,26 @@ helpviewer_keywords:
 - properties [WPF], Inlines [WPF], manipulating flow Content elements
 ms.assetid: 510780d2-3da1-4360-8763-7054bda22ea3
 ms.openlocfilehash: cfff958bb4c87e6bfecf2d280224cda233c31806
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942852"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Практическое руководство. Управление элементами потокового содержимого с помощью свойства Inlines
 Эти примеры демонстрируют некоторые из наиболее распространенных операций, которые могут быть выполнены для элементов содержимого нефиксированного формата встроенного (и контейнерами таких элементов, таких как <xref:System.Windows.Controls.TextBlock>) через **Inlines** свойство. Это свойство используется для добавления и удаления элементов из <xref:System.Windows.Documents.InlineCollection>. Элементы содержимого на поток, эта функция **Inlines** свойства включают:  
   
--   <xref:System.Windows.Documents.Bold>  
+- <xref:System.Windows.Documents.Bold>  
   
--   <xref:System.Windows.Documents.Hyperlink>  
+- <xref:System.Windows.Documents.Hyperlink>  
   
--   <xref:System.Windows.Documents.Italic>  
+- <xref:System.Windows.Documents.Italic>  
   
--   <xref:System.Windows.Documents.Paragraph>  
+- <xref:System.Windows.Documents.Paragraph>  
   
--   <xref:System.Windows.Documents.Span>  
+- <xref:System.Windows.Documents.Span>  
   
--   <xref:System.Windows.Documents.Underline>  
+- <xref:System.Windows.Documents.Underline>  
   
  Для использования этих примерах <xref:System.Windows.Documents.Span> поток элемент содержимого, но эти методы применимы ко всем элементам или элементы управления, на которых размещены <xref:System.Windows.Documents.InlineCollection> коллекции.  
   

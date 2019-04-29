@@ -3,11 +3,11 @@ title: Формирование классов типов данных из XML
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
 ms.openlocfilehash: c1b5dfda8aa5370dbc202ab90c75ab5677970467
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929575"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>Формирование классов типов данных из XML
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] включает новую возможность для создания классов типа данных из XML. В этом разделе описывается, как для автоматического создания типов данных для веб-канала RSS блоге .NET.  

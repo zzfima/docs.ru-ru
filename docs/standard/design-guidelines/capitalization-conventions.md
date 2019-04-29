@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: KrzysztofCwalina
 ms.openlocfilehash: 9a4cf94ca7fcada7dfc0886422b373abc807a0fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966482"
 ---
 # <a name="capitalization-conventions"></a>Соглашения о написании прописными буквами
 Рекомендации в этой главе размещать простой метод с помощью варианта, когда применяется последовательно, делать идентификаторы для типов, членов и параметров, удобном для чтения.  
@@ -23,9 +23,9 @@ ms.locfileid: "54670177"
 ## <a name="capitalization-rules-for-identifiers"></a>Регистр букв правилам для идентификаторов  
  Для разделения слов в идентификаторе, преобразование первой буквы каждого слова в идентификаторе. Не используйте символы подчеркивания для разделения слов, или для того, где угодно в идентификаторах. Существует два способа соответствующие прописной идентификаторов, в зависимости от использования идентификатора:  
   
--   PascalCasing  
+- PascalCasing  
   
--   camelCasing  
+- camelCasing  
   
  Соглашение PascalCasing, применяется для всех идентификаторов, за исключением имен параметров, первая буква каждого слова (включая акронимов через двух букв), как показано в следующих примерах:  
   
@@ -54,7 +54,7 @@ ms.locfileid: "54670177"
 |Тип|Pascal|`public class StreamReader { ... }`|  
 |Интерфейс|Pascal|`public interface IEnumerable { ... }`|  
 |Метод|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
-|Свойство.|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
+|Свойство|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
 |событие|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
 |Поле|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
 |Значение перечисления|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
@@ -67,7 +67,7 @@ ms.locfileid: "54670177"
   
  Это сложные слова, записываются в одно слово, например конечной точки. Целью правила учета регистра обрабатывать составное слово единым как одно слово. Используйте текущий словарь для определения того, если составное слово записывается в закрытой формой.  
   
-|Pascal|Camel|не|  
+|Pascal|Camel|not|  
 |------------|-----------|---------|  
 |`BitFlag`|`bitFlag`|`Bitflag`|  
 |`Callback`|`callback`|`CallBack`|  

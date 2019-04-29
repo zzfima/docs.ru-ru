@@ -3,24 +3,24 @@ title: Общие сведения об атрибутах (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
 ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968055"
 ---
 # <a name="attributes-overview-visual-basic"></a>Общие сведения об атрибутах (Visual Basic)
 Атрибуты предоставляют мощное средство для связывания метаданных или декларативной информации с кодом (сборки, типы, методы, свойства и т. д.). Связав атрибут связан с сущностью программы, вы можете проверять этот атрибут во время выполнения, используя технику *отражения*. Дополнительные сведения см. в статье [Отражение (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
   
  Атрибуты имеют следующие свойства.  
   
--   Атрибуты добавляют в программу метаданные. *Метаданные* — это сведения о типах, определенных в программе. Все сборки .NET содержат некоторый набор метаданных, описывающих типы и члены типов, определенные в этой сборке. Вы можете добавить пользовательские атрибуты, чтобы указать любую дополнительную информацию. Дополнительные сведения см. в статье [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Создание пользовательских атрибутов (Visual Basic)).  
+- Атрибуты добавляют в программу метаданные. *Метаданные* — это сведения о типах, определенных в программе. Все сборки .NET содержат некоторый набор метаданных, описывающих типы и члены типов, определенные в этой сборке. Вы можете добавить пользовательские атрибуты, чтобы указать любую дополнительную информацию. Дополнительные сведения см. в статье [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Создание пользовательских атрибутов (Visual Basic)).  
   
--   Вы можете применить один или несколько атрибутов ко всей сборке, к модулю или к более мелким элементам программы, например к классам и свойствам.  
+- Вы можете применить один или несколько атрибутов ко всей сборке, к модулю или к более мелким элементам программы, например к классам и свойствам.  
   
--   Атрибуты могут принимать аргументы, так же как методы и свойства.  
+- Атрибуты могут принимать аргументы, так же как методы и свойства.  
   
--   Программа может проверить собственные метаданные или метаданные в других программах, используя отражение. Дополнительные сведения см. в статье [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic)).  
+- Программа может проверить собственные метаданные или метаданные в других программах, используя отражение. Дополнительные сведения см. в статье [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic)).  
   
 ## <a name="using-attributes"></a>Использование атрибутов  
  Атрибуты можно использовать почти в любых объявлениях, но для каждого атрибута можно ограничить типы объявлений, в которых он является допустимым. В Visual Basic атрибуты заключаются в угловые скобки (\< >). Они должны располагаться непосредственно перед тем элементом, к которому они применяются, и обязательно в той же строке.  
@@ -107,40 +107,40 @@ Module: CLSCompliant(True)>
 ## <a name="common-uses-for-attributes"></a>Популярные методы применения атрибутов  
  В следующем списке перечислены несколько распространенных применений для атрибутов.  
   
--   Указание для методов в веб-службах атрибута `WebMethod`, который обозначает, что метод должен вызываться по протоколу SOAP. Дополнительные сведения см. в разделе <xref:System.Web.Services.WebMethodAttribute>.  
+- Указание для методов в веб-службах атрибута `WebMethod`, который обозначает, что метод должен вызываться по протоколу SOAP. Дополнительные сведения см. в разделе <xref:System.Web.Services.WebMethodAttribute>.  
   
--   Описание способов упаковки параметров методов при взаимодействии с машинным кодом. Дополнительные сведения см. в разделе <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
+- Описание способов упаковки параметров методов при взаимодействии с машинным кодом. Дополнительные сведения см. в разделе <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
   
--   Описание свойств COM для классов, методов и интерфейсов.  
+- Описание свойств COM для классов, методов и интерфейсов.  
   
--   Вызов неуправляемого кода с помощью класса <xref:System.Runtime.InteropServices.DllImportAttribute>.  
+- Вызов неуправляемого кода с помощью класса <xref:System.Runtime.InteropServices.DllImportAttribute>.  
   
--   Указание для сборки таких параметров, как заголовок, версия, описание или товарный знак.  
+- Указание для сборки таких параметров, как заголовок, версия, описание или товарный знак.  
   
--   Указание членов класса, которые будут сериализованы при сохранении класса.  
+- Указание членов класса, которые будут сериализованы при сохранении класса.  
   
--   Описание правил сопоставления членов класса с XML-узлами при XML-сериализации.  
+- Описание правил сопоставления членов класса с XML-узлами при XML-сериализации.  
   
--   Описание требований безопасности для методов.  
+- Описание требований безопасности для методов.  
   
--   Указание характеристик, используемых для обеспечения безопасности.  
+- Указание характеристик, используемых для обеспечения безопасности.  
   
--   Управление оптимизацией для JIT-компилятора, сохраняя при этом простоту отладки кода.  
+- Управление оптимизацией для JIT-компилятора, сохраняя при этом простоту отладки кода.  
   
--   Получение сведений об объекте, вызывающем метод.  
+- Получение сведений об объекте, вызывающем метод.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения:  
   
--   [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Создание настраиваемых атрибутов (Visual Basic))  
+- [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Создание настраиваемых атрибутов (Visual Basic))  
   
--   [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic))  
+- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic))  
   
--   [Практическое руководство. Создание объединения C/C++ с помощью атрибутов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Практическое руководство. Создание объединения C/C++ с помощью атрибутов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
   
--   [Common Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md) (Распространенные атрибуты (Visual Basic))  
+- [Common Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md) (Распространенные атрибуты (Visual Basic))  
   
--   [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md) (Сведения о вызывающем (Visual Basic))  
+- [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md) (Сведения о вызывающем (Visual Basic))  
   
 ## <a name="see-also"></a>См. также
 

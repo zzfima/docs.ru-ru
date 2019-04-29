@@ -8,11 +8,11 @@ helpviewer_keywords:
 - date and time picker controls
 ms.assetid: 1dac1fbd-8f67-4910-9ccb-2c5462d0d855
 ms.openlocfilehash: 236017834f3a965ee0ddfc1a74121679f086050b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971344"
 ---
 # <a name="datetimepicker-control-windows-forms"></a>Элемент управления DateTimePicker (Windows Forms)
 Windows Forms `DateTimePicker` управления позволяет пользователю выбрать один элемент из списка дат или времени. При использовании для представления даты, он отображается в виде двух частей: раскрывающегося списка с датой, представленных в текст и сетки, которая появляется, если щелкнуть стрелку вниз рядом со списком.  

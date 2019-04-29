@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 59ef7bf8f17e79c9ae7b80dd314a5afce7fa9584
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782945"
 ---
 # <a name="icordebugreferencevaluesetvalue-method"></a>Метод ICorDebugReferenceValue::SetValue
 Задает адрес указанной области памяти. То есть этот метод задает этот ICorDebugReferenceValue для указания на объект.  

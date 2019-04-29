@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
 ms.openlocfilehash: f1f5a668c5d4f52ef7dd9f60a31c04f2173165f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972371"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Определение значений по умолчанию с помощью методов ShouldSerialize и Reset
 `ShouldSerialize` и `Reset` — необязательные методы, которые могут использоваться для свойства, в том случае, если свойство не имеет значения по умолчанию. Если свойство имеет значение по умолчанию, необходимо применить <xref:System.ComponentModel.DefaultValueAttribute> и вместо этого укажите значение по умолчанию для конструктора класса атрибутов. Любой из этих механизмов обеспечивает следующие возможности в конструкторе:  
   
--   Свойство предоставляет визуальную индикацию в обозревателе свойств, если он был изменен со значения по умолчанию.  
+- Свойство предоставляет визуальную индикацию в обозревателе свойств, если он был изменен со значения по умолчанию.  
   
--   Пользователь может щелкнуть свойства и выберите **Сброс** восстановить значение свойства к значению по умолчанию.  
+- Пользователь может щелкнуть свойства и выберите **Сброс** восстановить значение свойства к значению по умолчанию.  
   
--   Конструктор создает более эффективный код.  
+- Конструктор создает более эффективный код.  
   
     > [!NOTE]
     >  Либо применить <xref:System.ComponentModel.DefaultValueAttribute> или предоставить `Reset` *PropertyName* и `ShouldSerialize` *PropertyName* методы. Не используйте их вместе.  

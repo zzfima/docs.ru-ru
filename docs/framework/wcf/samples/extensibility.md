@@ -3,11 +3,11 @@ title: Расширение среды
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
 ms.openlocfilehash: af6bbb5ea703c83ec38b97fae5a6f4bd266479b3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969342"
 ---
 # <a name="extensibility"></a>Расширение среды
 Этот раздел содержит образцы кода, связанные с настраиваемой расширяемостью и других функций Windows Communication Foundation (WCF).  

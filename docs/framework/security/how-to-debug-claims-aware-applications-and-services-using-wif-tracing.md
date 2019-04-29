@@ -4,55 +4,55 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 ms.openlocfilehash: 43fa859aa84189817dffe74ecd72253ab9b82585
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940495"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Как выполнить: Отладка приложений и служб с помощью трассировки WIF
 ## <a name="applies-to"></a>Применение  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Программа Service Trace Viewer (SvcTraceViewer.exe)  
+- Программа Service Trace Viewer (SvcTraceViewer.exe)  
   
--   Устранение неполадок и отладка приложений WIF  
+- Устранение неполадок и отладка приложений WIF  
   
 ## <a name="summary"></a>Сводка  
  В этом практическом руководстве описаны действия, необходимые для настройки трассировки WIF, сбора журналов трассировки и анализа журналов трассировки с помощью средства Trace Viewer. Здесь предоставляется общее сопоставление записей трассировки с действиями, необходимыми для устранения проблем, связанных с WIF.  
   
 ## <a name="contents"></a>Описание  
   
--   Цели  
+- Цели  
   
--   Сводка действий  
+- Сводка действий  
   
--   Шаг 1. Настройка трассировки WIF с помощью файла конфигурации Web.config  
+- Шаг 1. Настройка трассировки WIF с помощью файла конфигурации Web.config  
   
--   Шаг 2. Анализ файлов трассировки WIF с помощью средства Trace Viewer  
+- Шаг 2. Анализ файлов трассировки WIF с помощью средства Trace Viewer  
   
--   Шаг 3. Определение решений для устранения проблем WIF  
+- Шаг 3. Определение решений для устранения проблем WIF  
   
--   Связанные элементы:  
+- Связанные элементы:  
   
 ## <a name="objectives"></a>Цели  
   
--   Настройка трассировки WIF.  
+- Настройка трассировки WIF.  
   
--   Просмотр журналов трассировки в средстве Trace Viewer.  
+- Просмотр журналов трассировки в средстве Trace Viewer.  
   
--   Определение проблем, связанных с WIF, в журналах трассировки.  
+- Определение проблем, связанных с WIF, в журналах трассировки.  
   
--   Применение корректирующих действий для проблем, связанных с WIF, которые обнаружены в журналах трассировки.  
+- Применение корректирующих действий для проблем, связанных с WIF, которые обнаружены в журналах трассировки.  
   
 ## <a name="summary-of-steps"></a>Сводка действий  
   
--   Шаг 1. Настройка трассировки WIF с помощью файла конфигурации Web.config  
+- Шаг 1. Настройка трассировки WIF с помощью файла конфигурации Web.config  
   
--   Шаг 2. Анализ файлов трассировки WIF с помощью средства Trace Viewer  
+- Шаг 2. Анализ файлов трассировки WIF с помощью средства Trace Viewer  
   
--   Шаг 3. Определение решений для устранения проблем WIF  
+- Шаг 3. Определение решений для устранения проблем WIF  
   
 ## <a name="step-1--configure-wif-tracing-using-webconfig-configuration-file"></a>Шаг 1. Настройка трассировки WIF с помощью файла конфигурации Web.config  
  На этом шаге вы будете добавлять изменения в разделы конфигурации файла *Web.config*, которые включают в WIF трассировку событий и сохранение их в журнале трассировки.  
@@ -108,4 +108,4 @@ ms.locfileid: "59321553"
   
 ## <a name="related-items"></a>Связанные элементы:  
   
--   [Использование программы Service Trace Viewer для просмотра скоррелированных трассировок и устранения неполадок](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Использование программы Service Trace Viewer для просмотра скоррелированных трассировок и устранения неполадок](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

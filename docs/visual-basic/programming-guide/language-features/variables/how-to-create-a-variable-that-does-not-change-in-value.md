@@ -6,22 +6,22 @@ helpviewer_keywords:
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
 ms.openlocfilehash: 7180e5141572d219ed02c57103e9d4b80cde536e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938233"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Практическое руководство. Создание переменной, которая не изменяет значение (Visual Basic)
 Понятие переменной, которая не изменяет его значение может показаться противоречивым. Но существуют ситуации, когда константа не представляется возможным, и полезно иметь переменную с фиксированным значением. В этом случае можно определить переменную-член с [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) ключевое слово.  
   
  Нельзя использовать [оператор Const](../../../../visual-basic/language-reference/statements/const-statement.md) объявить переменную и присвоить значение константы в следующих случаях:  
   
--   `Const` Оператор не принимает тип данных, который вы хотите использовать  
+- `Const` Оператор не принимает тип данных, который вы хотите использовать  
   
--   Вы не знаете значение во время компиляции  
+- Вы не знаете значение во время компиляции  
   
--   Не удается вычислить постоянное значение во время компиляции  
+- Не удается вычислить постоянное значение во время компиляции  
   
 ### <a name="to-create-a-variable-that-does-not-change-in-value"></a>Для создание переменной, которая не изменяет значение  
   

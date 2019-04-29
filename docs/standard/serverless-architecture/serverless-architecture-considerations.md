@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: b12a09c0fcef7e7ff954a3f959fb9e3080a6e859
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940950"
 ---
-# <a name="serverless-architecture-considerations"></a>Рекомендации по бессерверной архитектуры
+# <a name="serverless-architecture-considerations"></a>Рекомендации по бессерверной архитектуре
 
 Внедрение бессерверной архитектуры поставляются с определенными задачами. В этом разделе рассматриваются некоторые из наиболее типичные аспекты, которые следует учитывать. Все эти проблемы имеют решения. Как и для всех вариантов архитектуры, решение для перехода на бессерверные технологии должен принимать только после тщательной проверки преимущества и недостатки. В зависимости от потребностей вашего приложения можно решить, что бессерверной реализации не подходящим решением для определенных компонентов.
 

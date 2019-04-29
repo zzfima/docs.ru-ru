@@ -12,11 +12,11 @@ helpviewer_keywords:
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
 ms.openlocfilehash: 09a445da068f0141b9526e0228df8be0105498c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776549"
 ---
 # <a name="how-to-clone-a-printer"></a>Практическое руководство. Клонирование принтера
 Большинство компаний рано или поздно купит нескольких принтеров той же модели. Как правило они все устанавливаются с практически одинаковыми параметрами. Установка каждого принтера может занимать много времени и подвержено ошибкам. <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> Пространства имен и <xref:System.Printing.PrintServer.InstallPrintQueue%2A> класс, который предоставляется через Microsoft .NET Framework дает возможность мгновенно установить любое число дополнительных очередей печати, которые копируются из существующей очереди печати.  
@@ -28,9 +28,9 @@ ms.locfileid: "59310464"
   
 2. Создание <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> из <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A> из <xref:System.Printing.PrintQueue>. <xref:System.Collections.DictionaryEntry.Value%2A> Каждой записи в этом словаре является объектом одного из типов, производных от <xref:System.Printing.IndexedProperties.PrintProperty>. Существует два способа установки значения объекта, содержащегося в данном словаре.  
   
-    -   Использование словаря **удалить** и <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A> методов, чтобы удалить запись, а затем добавьте его повторно с требуемым значением.  
+    - Использование словаря **удалить** и <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A> методов, чтобы удалить запись, а затем добавьте его повторно с требуемым значением.  
   
-    -   Использование словаря <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A> метод.  
+    - Использование словаря <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A> метод.  
   
      В приведенном ниже примере показаны оба способа.  
   

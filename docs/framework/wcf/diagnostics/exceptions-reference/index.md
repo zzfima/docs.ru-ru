@@ -3,14 +3,14 @@ title: Справочник по исключениям
 ms.date: 03/30/2017
 ms.assetid: adc19950-5f79-4045-8403-bf6310118ee3
 ms.openlocfilehash: 7034c3bbc25ab7ae6fea1d03c42ecde2e0130ee0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777394"
 ---
 # <a name="exceptions-reference"></a>Справочник по исключениям
-В этом разделе перечислены все исключения в следующих областях, созданный Windows Communication Foundation (WCF):  
+В этом разделе перечислены все исключения, в следующих областях, созданных в Windows Communication Foundation (WCF):  
   
  [IdentityModel](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/identitymodel-exceptions.md)  
   
@@ -18,23 +18,23 @@ ms.locfileid: "33474471"
   
  [Конфигурация](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
   
- [Основное взаимодействие: структура каналов](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
+ [Основное взаимодействие: Структура каналов](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
   
- [Основное взаимодействие: структура подключения](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
+ [Основное взаимодействие: Структура подключения](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
   
  Основное взаимодействие: транспортные каналы HTTP/HTTPS  
   
- [Основное взаимодействие: внутренние дуплексные транспортные каналы](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
+ [Основное взаимодействие: Внутренние дуплексные транспортные каналы](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
   
- [Основное взаимодействие: именованные каналы конвейерной передачи](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
+ [Основное взаимодействие: Именованные каналы конвейерной передачи](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
   
- [Основное взаимодействие: транспортные каналы TCP](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
+ [Основное взаимодействие: Транспортные каналы TCP](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
   
- [Основное взаимодействие: структура транспорта](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-transport-framework.md)  
+ [Основное взаимодействие: Структура транспорта](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-transport-framework.md)  
   
- [Основное взаимодействие: служебные программы](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-utilities.md)  
+ [Основное взаимодействие: Служебные программы](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-utilities.md)  
   
- [Основное взаимодействие: поддержка Webhost](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
+ [Основное взаимодействие: Поддержка WebHost](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
   
  [Транзакция](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-exceptions.md)  
   

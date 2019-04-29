@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
 ms.openlocfilehash: 543db91eaa058a87cfe579a23abb710f21ec1b85
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953593"
 ---
 # <a name="wif-claims-programming-model"></a>Модель программирования требований WIF
 Для работы с удостоверениями пользователей разработчики на ASP.NET и Windows Communication Foundation (WCF) обычно используют интерфейсы IIdentity и IPrincipal. В .NET 4.5 интегрирована платформа Windows Identity Foundation (WIF), благодаря чему утверждения теперь всегда присутствуют для любого субъекта, как показано на схеме ниже.

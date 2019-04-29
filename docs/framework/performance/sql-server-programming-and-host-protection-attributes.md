@@ -15,11 +15,11 @@ ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1049187dabbea64599617bb4372ed50515a51e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949192"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>программирование SQL Server и атрибуты защиты ведущего приложения
 Чтобы загружать и выполнять управляемый код, ведущее приложение SQL Server должно соответствовать требованиям ведущего приложения к управлению доступом для кода и защите ресурсов ведущего приложения.  Требования к безопасности доступа кода применяется один из трех наборов разрешений SQL Server: SAFE, EXTERNAL-ACCESS или UNSAFE. В коде, выполняемом с набором разрешений SAFE или EXTERNAL-ACCESS, не рекомендуется использовать определенные типы и члены, к которым применен атрибут <xref:System.Security.Permissions.HostProtectionAttribute>. Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> не является разрешением безопасности в той же степени, что и гарантия надежности, поскольку в нем определяются конкретные конструкции кода (типы или методы), которые ведущее приложение может запрещать.  С помощью атрибута <xref:System.Security.Permissions.HostProtectionAttribute> можно реализовать модель программирования, которая позволяет гарантировать стабильность работы ведущего приложения.  
@@ -27,11 +27,11 @@ ms.locfileid: "59088723"
 ## <a name="host-protection-attributes"></a>Атрибуты защиты ведущего приложения  
  Атрибуты защиты ведущего приложения определяют типы и члены, которые не соответствуют модели программирования ведущего приложения, и представляют следующие уровни угроз надежности (по возрастанию):  
   
--   Во всех остальных случаях является безопасным.  
+- Во всех остальных случаях является безопасным.  
   
--   Может привести к дестабилизации пользовательского кода, находящегося под управлением сервера.  
+- Может привести к дестабилизации пользовательского кода, находящегося под управлением сервера.  
   
--   Может привести к дестабилизации самого процесса сервера.  
+- Может привести к дестабилизации самого процесса сервера.  
   
  SQL Server не поддерживает использование типов или членов с атрибутом <xref:System.Security.Permissions.HostProtectionAttribute>, которые задают значения <xref:System.Security.Permissions.HostProtectionResource>, равные <xref:System.Security.Permissions.HostProtectionResource.SharedState>, <xref:System.Security.Permissions.HostProtectionResource.Synchronization>, <xref:System.Security.Permissions.HostProtectionResource.MayLeakOnAbort> или <xref:System.Security.Permissions.HostProtectionResource.ExternalProcessMgmt>. Таким образом, сборки не могут вызывать члены, которые активируют общее состояние, выполняют синхронизацию, могут привести к утечке ресурсов при завершении или влияют на целостность процесса SQL Server.  
   

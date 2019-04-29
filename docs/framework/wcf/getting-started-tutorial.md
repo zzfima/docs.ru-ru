@@ -8,11 +8,11 @@ helpviewer_keywords:
 - get started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
 ms.openlocfilehash: d4613edefeb8db2c0d1e11e925f8ac41329efb0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929549"
 ---
 # <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>Учебник. Начало работы с приложениями Windows Communication Foundation
 Следующие учебники представлена в Windows Communication Foundation (WCF) опыт программирования. Работе с этими руководствами, в порядке обеспечит начальное понимание шагов, необходимых для создания приложений WCF. После завершения, вы получите работающей службы WCF и клиент WCF, который вызывает службу. 

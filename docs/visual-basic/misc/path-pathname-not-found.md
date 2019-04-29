@@ -5,11 +5,11 @@ f1_keywords:
 - vbrFileSystem_PathNotFound1
 ms.assetid: 184d09ab-771f-4298-bd71-94b33efc325b
 ms.openlocfilehash: 8c9f326cc165955353dab6c33b65ed23e3f03d35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944772"
 ---
 # <a name="path-pathname-not-found"></a>Путь '\<путь >' не найден
 Операционной системе не удалось найти указанный путь во время операции доступа к файлам или доступа к диску. Путь к файлу должен включать спецификацию диска, а также каталоги и подкаталоги, через которые нужно пройти, чтобы найти файл. Путь может быть как относительным, так и абсолютным.  

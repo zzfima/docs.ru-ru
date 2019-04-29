@@ -13,11 +13,11 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
 ms.openlocfilehash: b127c50f3319d4fe7c4890fc3bffb295baa37466
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936673"
 ---
 # <a name="mod-operator-visual-basic"></a>Оператор Mod (Visual Basic)
 Делит два числа и возвращает только остаток.  
@@ -70,9 +70,9 @@ End Module
   
  Связанные операторы включают в себя следующее:  
   
--   [\ Оператора (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) возвращает целочисленное частное от деления. Например, выражение `14 \ 4` равен 3.  
+- [\ Оператора (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) возвращает целочисленное частное от деления. Например, выражение `14 \ 4` равен 3.  
   
--   [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) возвращает полное частное, включая остаток, как число с плавающей запятой. Например, выражение `14 / 4` принимает значение 3.5.  
+- [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) возвращает полное частное, включая остаток, как число с плавающей запятой. Например, выражение `14 / 4` принимает значение 3.5.  
   
 ## <a name="attempted-division-by-zero"></a>Попытка деления на ноль  
  Если `number2` оказался равным нулю, поведение `Mod` оператора зависит от типа данных операндов. Создает целочисленного деления <xref:System.DivideByZeroException> исключение. Возвращает деления с плавающей запятой <xref:System.Double.NaN>.  

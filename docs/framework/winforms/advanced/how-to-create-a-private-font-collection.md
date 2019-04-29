@@ -9,11 +9,11 @@ helpviewer_keywords:
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
 ms.openlocfilehash: f78d48c88b72388676f5e7ae963b98d8f1b4beac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937841"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Практическое руководство. Создание частной коллекции шрифтов
 <xref:System.Drawing.Text.PrivateFontCollection> Класс наследует от <xref:System.Drawing.Text.FontCollection> абстрактного базового класса. Можно использовать <xref:System.Drawing.Text.PrivateFontCollection> объект для сохранения набора шрифты, специально для вашего приложения. Частной коллекции может включать установленных системных шрифтов, а также шрифты, которые не были установлены на компьютере. Чтобы добавить файл шрифта частной коллекции, вызовите <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> метод <xref:System.Drawing.Text.PrivateFontCollection> объекта.  
@@ -25,11 +25,11 @@ ms.locfileid: "59210695"
 ## <a name="example"></a>Пример  
  В следующем примере добавляется следующих трех шрифта файлов <xref:System.Drawing.Text.PrivateFontCollection> объекта:  
   
--   C:\\*systemroot*\Fonts\Arial.tff (Arial, обычный)  
+- C:\\*systemroot*\Fonts\Arial.tff (Arial, обычный)  
   
--   C:\\*systemroot*\Fonts\CourBI.tff (Courier New, полужирный курсив)  
+- C:\\*systemroot*\Fonts\CourBI.tff (Courier New, полужирный курсив)  
   
--   C:\\*systemroot*\Fonts\TimesBd.tff (Times New Roman, полужирным шрифтом)  
+- C:\\*systemroot*\Fonts\TimesBd.tff (Times New Roman, полужирным шрифтом)  
   
  Код извлекает массив <xref:System.Drawing.FontFamily> объектов из <xref:System.Drawing.Text.FontCollection.Families%2A> свойство <xref:System.Drawing.Text.PrivateFontCollection> объекта.  
   

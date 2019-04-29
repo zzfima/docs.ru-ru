@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: c66fd3f7-2377-4553-8f1b-006527f08f32
 ms.openlocfilehash: 0d0a0bdba779fad7bd9b19acb2ea09408dea60a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941195"
 ---
 # <a name="how-to-implement-a-custom-toolstriprenderer"></a>Практическое руководство. Реализация пользовательского класса, производного от ToolStripRenderer
 Внешний вид элемента управления <xref:System.Windows.Forms.ToolStrip> можно настроить путем реализации класса, производного от <xref:System.Windows.Forms.ToolStripRenderer>. Это дает возможность создать внешний вид, который отличается от внешнего вида, предоставляемого классами <xref:System.Windows.Forms.ToolStripProfessionalRenderer> и <xref:System.Windows.Forms.ToolStripSystemRenderer>.  
@@ -23,11 +23,11 @@ ms.locfileid: "59151922"
   
  Класс `GridStripRenderer` настраивает три характеристики внешнего вида элемента управления `GridStrip`:  
   
--   граница `GridStrip`;  
+- граница `GridStrip`;  
   
--   граница <xref:System.Windows.Forms.ToolStripButton>;  
+- граница <xref:System.Windows.Forms.ToolStripButton>;  
   
--   <xref:System.Windows.Forms.ToolStripButton> Изображение  
+- <xref:System.Windows.Forms.ToolStripButton> Изображение  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#1)]  
@@ -35,7 +35,7 @@ ms.locfileid: "59151922"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылки на сборки System.Drawing и System.Windows.Forms.  
+- ссылки на сборки System.Drawing и System.Windows.Forms.  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   

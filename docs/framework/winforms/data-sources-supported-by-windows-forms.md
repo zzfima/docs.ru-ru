@@ -16,11 +16,11 @@ helpviewer_keywords:
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
 ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967093"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Источники данных, поддерживаемые Windows Forms
 В большинстве случаев привязки данных используется в приложениях для использования данных, хранящихся в базах данных. Привязки данных Windows Forms, предоставляет доступ к данным из баз данных, а также данные в других структурах, таких как массивы и коллекции, до тех пор, пока определенные минимальные требования будут соблюдены.  
@@ -47,15 +47,15 @@ ms.locfileid: "59124622"
  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] объекты данных  
  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] предоставляет несколько структур данных, к которым можно выполнить привязку. Предлагает разные его сложности и сложность.  
   
--   <xref:System.Data.DataColumn>. Объект <xref:System.Data.DataColumn> является основным стандартным блоком из <xref:System.Data.DataTable>, в том, что количество столбцов образуют таблицу. Каждый <xref:System.Data.DataColumn> имеет <xref:System.Data.DataColumn.DataType%2A> свойство, которое определяет, какие данные содержит столбец (например, производителей автомобилей в таблице с описанием автомобилей). Можно выполнить простую привязку элемента управления (такие как <xref:System.Windows.Forms.TextBox> элемента управления <xref:System.Windows.Forms.Control.Text%2A> свойство) к столбцу в таблице данных.  
+- <xref:System.Data.DataColumn>. Объект <xref:System.Data.DataColumn> является основным стандартным блоком из <xref:System.Data.DataTable>, в том, что количество столбцов образуют таблицу. Каждый <xref:System.Data.DataColumn> имеет <xref:System.Data.DataColumn.DataType%2A> свойство, которое определяет, какие данные содержит столбец (например, производителей автомобилей в таблице с описанием автомобилей). Можно выполнить простую привязку элемента управления (такие как <xref:System.Windows.Forms.TextBox> элемента управления <xref:System.Windows.Forms.Control.Text%2A> свойство) к столбцу в таблице данных.  
   
--   <xref:System.Data.DataTable>. Объект <xref:System.Data.DataTable> — это представление таблицы, состоящей из строк и столбцов, в [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Таблица данных содержит две коллекции: <xref:System.Data.DataColumn>, представляющую столбцы данных в данной таблице (столбцы однозначно определяют типы данных, которые можно ввести в таблицу), и <xref:System.Data.DataRow>, представляющий строки данных в конкретной таблице. Вы можете сложную привязку элемента управления к сведениям, содержащимся в таблице данных (например, привязка <xref:System.Windows.Forms.DataGridView> элемента управления к таблице данных). Тем не менее, при выполнении привязки <xref:System.Data.DataTable>, действительно выполняется привязка к представлению таблицы по умолчанию.  
+- <xref:System.Data.DataTable>. Объект <xref:System.Data.DataTable> — это представление таблицы, состоящей из строк и столбцов, в [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Таблица данных содержит две коллекции: <xref:System.Data.DataColumn>, представляющую столбцы данных в данной таблице (столбцы однозначно определяют типы данных, которые можно ввести в таблицу), и <xref:System.Data.DataRow>, представляющий строки данных в конкретной таблице. Вы можете сложную привязку элемента управления к сведениям, содержащимся в таблице данных (например, привязка <xref:System.Windows.Forms.DataGridView> элемента управления к таблице данных). Тем не менее, при выполнении привязки <xref:System.Data.DataTable>, действительно выполняется привязка к представлению таблицы по умолчанию.  
   
--   <xref:System.Data.DataView>. Объект <xref:System.Data.DataView> имеет настроенное представление в одну таблицу данных, можно отфильтровать или упорядочить. Представление данных — «моментальный снимок», используемый элементами управления сложной привязкой данных. Вы можете простую привязку или сложную привязку к данным в представлении данных, но имейте в виду, что привязка осуществляется на фиксированный «рисунок» данные, а не по источнику чистую и обновления данных.  
+- <xref:System.Data.DataView>. Объект <xref:System.Data.DataView> имеет настроенное представление в одну таблицу данных, можно отфильтровать или упорядочить. Представление данных — «моментальный снимок», используемый элементами управления сложной привязкой данных. Вы можете простую привязку или сложную привязку к данным в представлении данных, но имейте в виду, что привязка осуществляется на фиксированный «рисунок» данные, а не по источнику чистую и обновления данных.  
   
--   <xref:System.Data.DataSet>. Объект <xref:System.Data.DataSet> — это коллекция таблиц, связей и ограничений данных в базе данных. Вы можете простую привязку или сложную привязку к данным в наборе данных, но имейте в виду, что привязка осуществляется по умолчанию <xref:System.Data.DataViewManager> для <xref:System.Data.DataSet> (см. следующий пункт).  
+- <xref:System.Data.DataSet>. Объект <xref:System.Data.DataSet> — это коллекция таблиц, связей и ограничений данных в базе данных. Вы можете простую привязку или сложную привязку к данным в наборе данных, но имейте в виду, что привязка осуществляется по умолчанию <xref:System.Data.DataViewManager> для <xref:System.Data.DataSet> (см. следующий пункт).  
   
--   <xref:System.Data.DataViewManager>. Объект <xref:System.Data.DataViewManager> — это настраиваемое представление для всего <xref:System.Data.DataSet>, аналогично <xref:System.Data.DataView>, но с отношениями, которые включены. С помощью <xref:System.Data.DataViewManager.DataViewSettings%2A> коллекции, можно задать фильтры по умолчанию и параметры сортировки для всех представлений, <xref:System.Data.DataViewManager> имеет для данной таблицы.  
+- <xref:System.Data.DataViewManager>. Объект <xref:System.Data.DataViewManager> — это настраиваемое представление для всего <xref:System.Data.DataSet>, аналогично <xref:System.Data.DataView>, но с отношениями, которые включены. С помощью <xref:System.Data.DataViewManager.DataViewSettings%2A> коллекции, можно задать фильтры по умолчанию и параметры сортировки для всех представлений, <xref:System.Data.DataViewManager> имеет для данной таблицы.  
   
 ## <a name="see-also"></a>См. также
 

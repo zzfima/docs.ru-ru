@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a4b718a-1b40-4957-935a-f6122819ab3c
 ms.openlocfilehash: 09bd54f4a7d56dc1215b1acd36ff131ba4cba12c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790316"
 ---
 # <a name="behavior-of-servicebehaviors-of-workflow"></a>\<поведение > из \<serviceBehaviors > рабочего процесса
 **Поведение** элемент содержит коллекцию параметров для поведения службы. Каждое поведение индексируется по его **имя**. Службы могут связаться с каждым поведением посредством этого имени, используя **behaviorConfiguration** атрибут [ \<конечной точки >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) элемент. Это позволяет конечным точкам иметь общие конфигурации поведений без переопределения параметров.  
@@ -73,6 +73,6 @@ ms.locfileid: "55268266"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/servicebehaviors-of-workflow.md)|Коллекция элементов поведений службы.|

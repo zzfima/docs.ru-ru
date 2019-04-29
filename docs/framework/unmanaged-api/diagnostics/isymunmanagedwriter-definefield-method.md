@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5fd9798b3681d66e71d5703f4d16564b153da07b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789634"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>Метод ISymUnmanagedWriter::DefineField
 Определяет одну переменную, не внутри метода. Этот метод является, используемых для некоторых полей в классах, битовые поля и т. д.  

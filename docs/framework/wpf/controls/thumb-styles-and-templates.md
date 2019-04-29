@@ -1,5 +1,5 @@
 ---
-title: Бегунок стили и шаблоны
+title: Стили и шаблоны элемента Thumb
 ms.date: 03/30/2017
 helpviewer_keywords:
 - states [WPF], Thumb
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - parts [WPF], Thumb
 ms.assetid: 86a49235-62d9-414e-923e-53126e3f930a
 ms.openlocfilehash: b7fc595f0c592d42f118c6b5542edf93716c2fca
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57509573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790784"
 ---
-# <a name="thumb-styles-and-templates"></a>Бегунок стили и шаблоны
+# <a name="thumb-styles-and-templates"></a>Стили и шаблоны элемента Thumb
 
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.Primitives.Thumb> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
 
@@ -28,7 +28,7 @@ ms.locfileid: "57509573"
 
 В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.Thumb> элемента управления.
 
-|Имя VisualState|Имя VisualStateGroup|Описание:|
+|Имя VisualState|Имя VisualStateGroup|Описание|
 |-|-|-|
 |Норм.|CommonStates|Состояние по умолчанию.|
 |MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|

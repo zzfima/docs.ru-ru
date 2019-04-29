@@ -7,11 +7,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
 ms.openlocfilehash: b1676189582596ad69981b330ffb081539e949da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960957"
 ---
 # <a name="about-gdi-managed-code"></a>Управляемый код GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] — это часть операционной системы Windows, предоставляющая возможности создания векторных изображений, рисования и оформления. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] улучшает [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (интерфейс графических устройств, входящий в состав более ранних версий Windows) путем добавления новых возможностей и оптимизации существующих.  
@@ -38,16 +38,16 @@ ms.locfileid: "57705029"
  Описание класса и всех его членов.  
   
  <xref:System.Drawing.Bitmap?displayProperty=nameWithType>,  
- Описывает данный класс и содержит ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
  <xref:System.Drawing.Imaging.Metafile?displayProperty=nameWithType>,  
- Описывает данный класс и содержит ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
  <xref:System.Drawing.Font?displayProperty=nameWithType>,  
- Описывает данный класс и содержит ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
  <xref:System.Drawing.Brush?displayProperty=nameWithType>,  
- Описывает данный класс и содержит ссылки на все его члены.  
+ Описание класса и всех его членов.  
   
  <xref:System.Drawing.Color?displayProperty=nameWithType>,  
  Описание класса и всех его членов.  

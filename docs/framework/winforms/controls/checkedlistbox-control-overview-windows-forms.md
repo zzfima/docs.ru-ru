@@ -9,11 +9,11 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 ms.assetid: e6cff3ce-e2ba-458e-851f-299e8e9c8abf
 ms.openlocfilehash: 8ff23ff449bc3b90fbd51bab1d73f8a7268bee05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956368"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>Общие сведения об элементе управления CheckedListBox (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.CheckedListBox> расширяет <xref:System.Windows.Forms.ListBox> элемента управления. Он поддерживает почти все возможности, списка, а также может отображаться флажок рядом с элементами списка. Другие различия между двумя элементами управления, который проверяется, списки поддерживают только <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; и который проверяется на списки с множественным может иметь только один элемент или выбрать ни одну. Обратите внимание, что выбранный элемент выделяется в форме и не совпадает с отмеченного элемента.  

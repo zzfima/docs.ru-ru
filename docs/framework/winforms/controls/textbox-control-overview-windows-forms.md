@@ -12,11 +12,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], adding
 ms.assetid: d1a9c7f5-fa53-480a-a75c-158f8649ea2f
 ms.openlocfilehash: a91b67df1071c79707bb20a68efb4d5e6f083ae0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932552"
 ---
 # <a name="textbox-control-overview-windows-forms"></a>Общие сведения об элементе управления TextBox (Windows Forms)
 Текстовые поля форм Windows Forms используются для получения входных данных от пользователя или для отображения текста. <xref:System.Windows.Forms.TextBox> Управления обычно используется для ввода и редактирования текста, несмотря на то, что его можно также сделать доступным только для чтения. Текстовые поля можно отобразить несколько строк, переноса текста по размеру элемента управления и добавлять основные элементы форматирования. <xref:System.Windows.Forms.TextBox> Элемент управления предоставляет в одном формате, введенные в элементе управления или отображать текст. Чтобы отобразить несколько типов форматированного текста, используйте <xref:System.Windows.Forms.RichTextBox> элемента управления. Дополнительные сведения см. в разделе [Обзор элемента управления RichTextBox](richtextbox-control-overview-windows-forms.md).  

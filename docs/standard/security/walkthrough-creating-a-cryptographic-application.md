@@ -13,20 +13,20 @@ ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f141f21f80275a592caf3f87a5cbe0def6869c0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795009"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Пошаговое руководство. Создание криптографического приложения
 В этом пошаговом руководстве показано, как зашифровать и расшифровать содержимое. Пример кода предназначен для приложения Windows Forms. Это приложение не демонстрирует реальные сценарии, такие как использование смарт-карт. Вместо этого оно демонстрирует основные принципы шифрования и расшифровки.  
   
  В этом пошаговом руководстве использует следующие правила шифрования:  
   
--   Используйте класс <xref:System.Security.Cryptography.RijndaelManaged> с симметричным алгоритмом для шифрования и расшифровки данных при помощи автоматически созданных <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> и <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>.  
+- Используйте класс <xref:System.Security.Cryptography.RijndaelManaged> с симметричным алгоритмом для шифрования и расшифровки данных при помощи автоматически созданных <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> и <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>.  
   
--   Используйте <xref:System.Security.Cryptography.RSACryptoServiceProvider> с асимметричным алгоритмом для шифрования и расшифровки ключа для данных, зашифрованных при помощи <xref:System.Security.Cryptography.RijndaelManaged>. Асимметричные алгоритмы лучше подходят для небольших объемов данных, таких как ключ.  
+- Используйте <xref:System.Security.Cryptography.RSACryptoServiceProvider> с асимметричным алгоритмом для шифрования и расшифровки ключа для данных, зашифрованных при помощи <xref:System.Security.Cryptography.RijndaelManaged>. Асимметричные алгоритмы лучше подходят для небольших объемов данных, таких как ключ.  
   
     > [!NOTE]
     >  Если вы хотите защитить данные на компьютере, а не обмениваться зашифрованным содержимым с другими людьми, рекомендуется использовать классы <xref:System.Security.Cryptography.ProtectedData> или <xref:System.Security.Cryptography.ProtectedMemory>.  
@@ -48,7 +48,7 @@ ms.locfileid: "59341768"
 ## <a name="prerequisites"></a>Предварительные требования  
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
   
--   Ссылки на пространства имен <xref:System.IO> и <xref:System.Security.Cryptography>.  
+- Ссылки на пространства имен <xref:System.IO> и <xref:System.Security.Cryptography>.  
   
 ## <a name="creating-a-windows-forms-application"></a>Создание приложения Windows Forms  
  Большинство примеров кода в этом пошаговом руководстве предназначено для использования в качестве обработчиков событий для элементов управления кнопок. В следующей таблице перечислены элементы управления, необходимые для образца приложения, и их имена в соответствии с примерами кода.  
@@ -100,15 +100,15 @@ ms.locfileid: "59341768"
   
  Пакет шифрования использует следующий формат:  
   
--   Длина ключа, байты 0–3  
+- Длина ключа, байты 0–3  
   
--   Длина вектора инициализации, байты 4–7  
+- Длина вектора инициализации, байты 4–7  
   
--   Зашифрованный ключ  
+- Зашифрованный ключ  
   
--   Вектор инициализации  
+- Вектор инициализации  
   
--   Зашифрованный текст  
+- Зашифрованный текст  
   
  Вы можете использовать значения длины ключа и вектора инициализации для определения начальных точек и длин всех частей пакета шифрования, которые затем можно использовать для расшифровки файла.  
   

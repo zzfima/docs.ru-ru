@@ -16,11 +16,11 @@ topic_type:
 author: hoyosjs
 ms.author: juhoyosa
 ms.openlocfilehash: 1bdc958f2516bcd7c2eb74312fbf478e6d49535a
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948812"
 ---
 # <a name="icordebugprocess4-interface"></a>Интерфейс ICorDebugProcess4
 
@@ -28,7 +28,7 @@ ms.locfileid: "56221441"
 
 ## <a name="methods"></a>Методы
 
-| Метод                                                                 | Описание:                                                                                             |
+| Метод                                                                 | Описание                                                                                             |
 | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | [ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) | Уведомляет конвейера ICorDebug о том, что внепроцессные отладчик процесс продолжает выполнение отлаживаемого кода. |
 

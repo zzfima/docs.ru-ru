@@ -15,11 +15,11 @@ helpviewer_keywords:
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
 ms.openlocfilehash: 1da5de4971928ca23a23c4dcfc5f338c4d7a3875
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971786"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>Тип данных SByte (Visual Basic)
 
@@ -64,13 +64,13 @@ Dim number As SByte = &H_F9
 
 ## <a name="programming-tips"></a>Советы по программированию
   
--   **CLS-совместимость.** `SByte` Тип данных не является частью [спецификация CLS](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), поэтому CLS-совместимого кода нельзя использовать компонент, который его использует.
+- **CLS-совместимость.** `SByte` Тип данных не является частью [спецификация CLS](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), поэтому CLS-совместимого кода нельзя использовать компонент, который его использует.
 
--   **Расширяющие.** `SByte` Тип данных можно расширить до `Short`, `Integer`, `Long`, `Decimal`, `Single`, и `Double`. Это означает, что вы можете преобразовать `SByte` к любому из этих типов без возникновения <xref:System.OverflowException?displayProperty=nameWithType> ошибки.
+- **Расширяющие.** `SByte` Тип данных можно расширить до `Short`, `Integer`, `Long`, `Decimal`, `Single`, и `Double`. Это означает, что вы можете преобразовать `SByte` к любому из этих типов без возникновения <xref:System.OverflowException?displayProperty=nameWithType> ошибки.
   
--   **Символы типа.** `SByte` не имеет знак типа литерала или знак типа идентификатора.  
+- **Символы типа.** `SByte` не имеет знак типа литерала или знак типа идентификатора.  
   
--   **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.SByte?displayProperty=nameWithType>.
+- **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.SByte?displayProperty=nameWithType>.
   
 ## <a name="see-also"></a>См. также
 

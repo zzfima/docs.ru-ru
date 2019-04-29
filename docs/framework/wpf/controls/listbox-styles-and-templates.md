@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ListBox [WPF], styles and templates
 ms.assetid: fc5764cb-c27b-495b-88d4-d969a8213ccb
 ms.openlocfilehash: 441db59a6d04787985245db057074798bed6b3e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766874"
 ---
 # <a name="listbox-styles-and-templates"></a>Стили и шаблоны элемента ListBox
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.ListBox> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  

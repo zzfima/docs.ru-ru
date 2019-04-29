@@ -12,11 +12,11 @@ helpviewer_keywords:
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
 ms.openlocfilehash: ee147ecd00b88b538ace32844c42ac9c5022b2ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794697"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Практическое руководство. Сокрытие наследуемой переменной (Visual Basic)
 Производный класс наследует все определения базового класса. Если вы хотите определить переменную с тем же именем, что элемент базового класса, можно скрыть, или *тени*, этот элемент базового класса при определении переменной в производном классе. После этого код в производном классе получает доступ к переменной, если явно не обходится скрывающий механизм.  

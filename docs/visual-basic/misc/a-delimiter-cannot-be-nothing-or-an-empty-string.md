@@ -5,18 +5,18 @@ f1_keywords:
 - vbrTextFieldParser_DelimiterNothing
 ms.assetid: 8885fcd1-c201-409d-9a32-6ff2b13c0c13
 ms.openlocfilehash: ff21545bfe12fb8f6eccd50fd00c138bbab92b97
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58032093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940716"
 ---
 # <a name="a-delimiter-cannot-be-nothing-or-an-empty-string"></a>Разделитель не может принимать значение Nothing или быть пустой строкой.
 `TextFieldParser` не удалось выполнить чтение из файла, поскольку свойство `Delimiters` имеет значение `Nothing` или является пустым `String` ("").  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Укажите допустимое значение для `Delimiters`.  
+- Укажите допустимое значение для `Delimiters`.  
   
 ## <a name="see-also"></a>См. также
 

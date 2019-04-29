@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
 ms.openlocfilehash: c6c36641463a45b79d437ae3910bbe7474d425cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929302"
 ---
 # <a name="how-to-examine-the-security-context"></a>Практическое руководство. Анализ контекста безопасности
 При программировании служб Windows Communication Foundation (WCF), контекст безопасности службы позволяет определять сведения об учетных данных клиента и утверждения, используемый для проверки подлинности в службе. Это осуществляется с помощью свойств класса <xref:System.ServiceModel.ServiceSecurityContext>.  
@@ -25,7 +25,7 @@ ms.locfileid: "59305108"
   
 ### <a name="to-get-the-current-security-context"></a>Получение текущего контекста безопасности  
   
--   Для получения текущего контекста безопасности необходимо получить доступ к статическому свойству <xref:System.ServiceModel.ServiceSecurityContext.Current%2A>. После этого можно проверять любые свойства текущего контекста из ссылки.  
+- Для получения текущего контекста безопасности необходимо получить доступ к статическому свойству <xref:System.ServiceModel.ServiceSecurityContext.Current%2A>. После этого можно проверять любые свойства текущего контекста из ссылки.  
   
 ### <a name="to-determine-the-identity-of-the-caller"></a>Определение удостоверения вызывающего объекта  
   
@@ -46,13 +46,13 @@ ms.locfileid: "59305108"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  В коде используются следующие пространства имен:  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.IdentityModel.Policy>  
+- <xref:System.IdentityModel.Policy>  
   
--   <xref:System.IdentityModel.Claims>  
+- <xref:System.IdentityModel.Claims>  
   
 ## <a name="see-also"></a>См. также
 
