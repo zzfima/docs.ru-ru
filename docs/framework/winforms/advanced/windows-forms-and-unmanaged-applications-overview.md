@@ -57,7 +57,7 @@ ms.locfileid: "61748180"
   
 ## <a name="see-also"></a>См. также
 
-- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
+- [Windows Forms и неуправляемые приложения](windows-forms-and-unmanaged-applications.md)
 - [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)
 - [COM-взаимодействие в приложениях .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Примеры COM-взаимодействия](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
