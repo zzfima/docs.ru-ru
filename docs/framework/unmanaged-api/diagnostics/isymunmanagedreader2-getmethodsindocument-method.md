@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 28b240159c36b03b2c476f56f7e6ad7b33f20649
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986353"
 ---
-# <a name="isymunmanagedreader2getmethodsindocument-method"></a><span data-ttu-id="74f21-102">Метод ISymUnmanagedReader2::GetMethodsInDocument</span><span class="sxs-lookup"><span data-stu-id="74f21-102">ISymUnmanagedReader2::GetMethodsInDocument Method</span></span>
-<span data-ttu-id="74f21-103">Возвращает каждый метод, который содержит сведения о строке в указанный документ.</span><span class="sxs-lookup"><span data-stu-id="74f21-103">Gets every method that has line information in the provided document.</span></span>  
+# <a name="isymunmanagedreader2getmethodsindocument-method"></a><span data-ttu-id="a314a-102">Метод ISymUnmanagedReader2::GetMethodsInDocument</span><span class="sxs-lookup"><span data-stu-id="a314a-102">ISymUnmanagedReader2::GetMethodsInDocument Method</span></span>
+<span data-ttu-id="a314a-103">Возвращает каждый метод, который содержит сведения о строке в указанный документ.</span><span class="sxs-lookup"><span data-stu-id="a314a-103">Gets every method that has line information in the provided document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="74f21-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="74f21-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a314a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a314a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodsInDocument(  
@@ -38,25 +38,25 @@ HRESULT GetMethodsInDocument(
         length_is(*pcMethod)] ISymUnmanagedMethod* pRetVal[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="74f21-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="74f21-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a314a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a314a-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="74f21-106">[in] Указатель на документ.</span><span class="sxs-lookup"><span data-stu-id="74f21-106">[in] A pointer to the document.</span></span>  
+ <span data-ttu-id="a314a-106">[in] Указатель на документ.</span><span class="sxs-lookup"><span data-stu-id="a314a-106">[in] A pointer to the document.</span></span>  
   
  `cMethod`  
- <span data-ttu-id="74f21-107">[in] Объект `ULONG32` указывает размер `pRetVal` массива.</span><span class="sxs-lookup"><span data-stu-id="74f21-107">[in] A `ULONG32` that indicates the size of the  `pRetVal` array.</span></span>  
+ <span data-ttu-id="a314a-107">[in] Объект `ULONG32` указывает размер `pRetVal` массива.</span><span class="sxs-lookup"><span data-stu-id="a314a-107">[in] A `ULONG32` that indicates the size of the  `pRetVal` array.</span></span>  
   
  `pcMethod`  
- <span data-ttu-id="74f21-108">[out] Указатель на `ULONG32` , получающий размер буфера, необходимый для методов.</span><span class="sxs-lookup"><span data-stu-id="74f21-108">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the methods.</span></span>  
+ <span data-ttu-id="a314a-108">[out] Указатель на `ULONG32` , получающий размер буфера, необходимый для методов.</span><span class="sxs-lookup"><span data-stu-id="a314a-108">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the methods.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="74f21-109">[out] Указатель на буфер, получающий методы.</span><span class="sxs-lookup"><span data-stu-id="74f21-109">[out] A pointer to the buffer that receives the methods.</span></span>  
+ <span data-ttu-id="a314a-109">[out] Указатель на буфер, получающий методы.</span><span class="sxs-lookup"><span data-stu-id="a314a-109">[out] A pointer to the buffer that receives the methods.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="74f21-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="74f21-110">Return Value</span></span>  
- <span data-ttu-id="74f21-111">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="74f21-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a314a-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="a314a-110">Return Value</span></span>  
+ <span data-ttu-id="a314a-111">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="a314a-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="74f21-112">Требования</span><span class="sxs-lookup"><span data-stu-id="74f21-112">Requirements</span></span>  
- <span data-ttu-id="74f21-113">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="74f21-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a314a-112">Требования</span><span class="sxs-lookup"><span data-stu-id="a314a-112">Requirements</span></span>  
+ <span data-ttu-id="a314a-113">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a314a-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="74f21-114">См. также</span><span class="sxs-lookup"><span data-stu-id="74f21-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a314a-114">См. также</span><span class="sxs-lookup"><span data-stu-id="a314a-114">See also</span></span>
 
-- [<span data-ttu-id="74f21-115">Интерфейс ISymUnmanagedReader2</span><span class="sxs-lookup"><span data-stu-id="74f21-115">ISymUnmanagedReader2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+- [<span data-ttu-id="a314a-115">Интерфейс ISymUnmanagedReader2</span><span class="sxs-lookup"><span data-stu-id="a314a-115">ISymUnmanagedReader2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c1261942865419762fa454eb8d4bc5e5d99e86d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995245"
 ---
-# <a name="icordebugmanagedcallbackevalcomplete-method"></a><span data-ttu-id="4738c-102">Метод ICorDebugManagedCallback::EvalComplete</span><span class="sxs-lookup"><span data-stu-id="4738c-102">ICorDebugManagedCallback::EvalComplete Method</span></span>
-<span data-ttu-id="4738c-103">Уведомляет отладчик о завершении вычисления.</span><span class="sxs-lookup"><span data-stu-id="4738c-103">Notifies the debugger that an evaluation has been completed.</span></span>  
+# <a name="icordebugmanagedcallbackevalcomplete-method"></a><span data-ttu-id="fc79b-102">Метод ICorDebugManagedCallback::EvalComplete</span><span class="sxs-lookup"><span data-stu-id="fc79b-102">ICorDebugManagedCallback::EvalComplete Method</span></span>
+<span data-ttu-id="fc79b-103">Уведомляет отладчик о завершении вычисления.</span><span class="sxs-lookup"><span data-stu-id="fc79b-103">Notifies the debugger that an evaluation has been completed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4738c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4738c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fc79b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fc79b-104">Syntax</span></span>  
   
 ```  
 HRESULT EvalComplete (  
@@ -37,25 +37,25 @@ HRESULT EvalComplete (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4738c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="4738c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fc79b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="fc79b-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="4738c-106">[in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, в котором была выполнена оценка.</span><span class="sxs-lookup"><span data-stu-id="4738c-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain in which the evaluation was performed.</span></span>  
+ <span data-ttu-id="fc79b-106">[in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, в котором была выполнена оценка.</span><span class="sxs-lookup"><span data-stu-id="fc79b-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain in which the evaluation was performed.</span></span>  
   
  `pThread`  
- <span data-ttu-id="4738c-107">[in] Указатель на объект ICorDebugThread, представляющий поток, в котором была выполнена оценка.</span><span class="sxs-lookup"><span data-stu-id="4738c-107">[in] A pointer to an ICorDebugThread object that represents the thread in which the evaluation was performed.</span></span>  
+ <span data-ttu-id="fc79b-107">[in] Указатель на объект ICorDebugThread, представляющий поток, в котором была выполнена оценка.</span><span class="sxs-lookup"><span data-stu-id="fc79b-107">[in] A pointer to an ICorDebugThread object that represents the thread in which the evaluation was performed.</span></span>  
   
  `pEval`  
- <span data-ttu-id="4738c-108">[in] Указатель на ICorDebugEval объект, представляющий код, который выполняется вычисление.</span><span class="sxs-lookup"><span data-stu-id="4738c-108">[in] A pointer to an ICorDebugEval object that represents the code that performed the evaluation.</span></span>  
+ <span data-ttu-id="fc79b-108">[in] Указатель на ICorDebugEval объект, представляющий код, который выполняется вычисление.</span><span class="sxs-lookup"><span data-stu-id="fc79b-108">[in] A pointer to an ICorDebugEval object that represents the code that performed the evaluation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4738c-109">Требования</span><span class="sxs-lookup"><span data-stu-id="4738c-109">Requirements</span></span>  
- <span data-ttu-id="4738c-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4738c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fc79b-109">Требования</span><span class="sxs-lookup"><span data-stu-id="fc79b-109">Requirements</span></span>  
+ <span data-ttu-id="fc79b-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fc79b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4738c-111">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4738c-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="fc79b-111">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fc79b-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4738c-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4738c-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fc79b-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fc79b-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4738c-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4738c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="fc79b-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fc79b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4738c-114">См. также</span><span class="sxs-lookup"><span data-stu-id="4738c-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fc79b-114">См. также</span><span class="sxs-lookup"><span data-stu-id="fc79b-114">See also</span></span>
 
-- [<span data-ttu-id="4738c-115">Интерфейс ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="4738c-115">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="fc79b-115">Интерфейс ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="fc79b-115">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

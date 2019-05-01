@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 193abe173b259ff2679642e229fce96151e37872
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992307"
 ---
-# <a name="imetadataimportenumsignatures-method"></a><span data-ttu-id="f99b8-102">Метод IMetaDataImport::EnumSignatures</span><span class="sxs-lookup"><span data-stu-id="f99b8-102">IMetaDataImport::EnumSignatures Method</span></span>
-<span data-ttu-id="f99b8-103">Перечисляет токены Signature, представляющие отдельные подписи в текущей области.</span><span class="sxs-lookup"><span data-stu-id="f99b8-103">Enumerates Signature tokens representing stand-alone signatures in the current scope.</span></span>  
+# <a name="imetadataimportenumsignatures-method"></a><span data-ttu-id="18f4e-102">Метод IMetaDataImport::EnumSignatures</span><span class="sxs-lookup"><span data-stu-id="18f4e-102">IMetaDataImport::EnumSignatures Method</span></span>
+<span data-ttu-id="18f4e-103">Перечисляет токены Signature, представляющие отдельные подписи в текущей области.</span><span class="sxs-lookup"><span data-stu-id="18f4e-103">Enumerates Signature tokens representing stand-alone signatures in the current scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f99b8-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f99b8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="18f4e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="18f4e-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumSignatures (  
@@ -38,39 +38,39 @@ HRESULT EnumSignatures (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f99b8-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f99b8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="18f4e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="18f4e-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="f99b8-106">[in, out] Указатель на перечислитель.</span><span class="sxs-lookup"><span data-stu-id="f99b8-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="f99b8-107">Это должно быть NULL при первом вызове этого метода.</span><span class="sxs-lookup"><span data-stu-id="f99b8-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="18f4e-106">[in, out] Указатель на перечислитель.</span><span class="sxs-lookup"><span data-stu-id="18f4e-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="18f4e-107">Это должно быть NULL при первом вызове этого метода.</span><span class="sxs-lookup"><span data-stu-id="18f4e-107">This must be NULL for the first call of this method.</span></span>  
   
  `rSignatures`  
- <span data-ttu-id="f99b8-108">[out] Массив, используемый для хранения токенов подписи.</span><span class="sxs-lookup"><span data-stu-id="f99b8-108">[out] The array used to store the Signature tokens.</span></span>  
+ <span data-ttu-id="18f4e-108">[out] Массив, используемый для хранения токенов подписи.</span><span class="sxs-lookup"><span data-stu-id="18f4e-108">[out] The array used to store the Signature tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="f99b8-109">[in] Максимальный размер массива `rSignatures`.</span><span class="sxs-lookup"><span data-stu-id="f99b8-109">[in] The maximum size of the `rSignatures` array.</span></span>  
+ <span data-ttu-id="18f4e-109">[in] Максимальный размер массива `rSignatures`.</span><span class="sxs-lookup"><span data-stu-id="18f4e-109">[in] The maximum size of the `rSignatures` array.</span></span>  
   
  `pcSignatures`  
- <span data-ttu-id="f99b8-110">[out] Количество подписи токенов, возвращаемых в `rSignatures`.</span><span class="sxs-lookup"><span data-stu-id="f99b8-110">[out] The number of Signature tokens returned in `rSignatures`.</span></span>  
+ <span data-ttu-id="18f4e-110">[out] Количество подписи токенов, возвращаемых в `rSignatures`.</span><span class="sxs-lookup"><span data-stu-id="18f4e-110">[out] The number of Signature tokens returned in `rSignatures`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f99b8-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="f99b8-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="18f4e-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="18f4e-111">Return Value</span></span>  
   
-|<span data-ttu-id="f99b8-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f99b8-112">HRESULT</span></span>|<span data-ttu-id="f99b8-113">Описание</span><span class="sxs-lookup"><span data-stu-id="f99b8-113">Description</span></span>|  
+|<span data-ttu-id="18f4e-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="18f4e-112">HRESULT</span></span>|<span data-ttu-id="18f4e-113">Описание</span><span class="sxs-lookup"><span data-stu-id="18f4e-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="f99b8-114">`EnumSignatures` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="f99b8-114">`EnumSignatures` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="f99b8-115">Существуют маркеры для перечисления отсутствуют.</span><span class="sxs-lookup"><span data-stu-id="f99b8-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="f99b8-116">В этом случае `pcSignatures` равно нулю.</span><span class="sxs-lookup"><span data-stu-id="f99b8-116">In that case, `pcSignatures` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="18f4e-114">`EnumSignatures` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="18f4e-114">`EnumSignatures` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="18f4e-115">Существуют маркеры для перечисления отсутствуют.</span><span class="sxs-lookup"><span data-stu-id="18f4e-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="18f4e-116">В этом случае `pcSignatures` равно нулю.</span><span class="sxs-lookup"><span data-stu-id="18f4e-116">In that case, `pcSignatures` is zero.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f99b8-117">Примечания</span><span class="sxs-lookup"><span data-stu-id="f99b8-117">Remarks</span></span>  
- <span data-ttu-id="f99b8-118">Маркеры подписи, создаваемые [IMetaDataEmit::GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="f99b8-118">The Signature tokens are created by the [IMetaDataEmit::GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="18f4e-117">Примечания</span><span class="sxs-lookup"><span data-stu-id="18f4e-117">Remarks</span></span>  
+ <span data-ttu-id="18f4e-118">Маркеры подписи, создаваемые [IMetaDataEmit::GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="18f4e-118">The Signature tokens are created by the [IMetaDataEmit::GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f99b8-119">Требования</span><span class="sxs-lookup"><span data-stu-id="f99b8-119">Requirements</span></span>  
- <span data-ttu-id="f99b8-120">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f99b8-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="18f4e-119">Требования</span><span class="sxs-lookup"><span data-stu-id="18f4e-119">Requirements</span></span>  
+ <span data-ttu-id="18f4e-120">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="18f4e-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f99b8-121">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f99b8-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="18f4e-121">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="18f4e-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f99b8-122">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f99b8-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="18f4e-122">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="18f4e-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f99b8-123">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f99b8-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="18f4e-123">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="18f4e-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f99b8-124">См. также</span><span class="sxs-lookup"><span data-stu-id="f99b8-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="18f4e-124">См. также</span><span class="sxs-lookup"><span data-stu-id="18f4e-124">See also</span></span>
 
-- [<span data-ttu-id="f99b8-125">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="f99b8-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="f99b8-126">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="f99b8-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="18f4e-125">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="18f4e-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="18f4e-126">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="18f4e-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

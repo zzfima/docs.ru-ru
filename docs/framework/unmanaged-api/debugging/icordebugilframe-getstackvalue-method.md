@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 859abdd713fb19bbb3698d0da72cbff33cfbc6fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995592"
 ---
-# <a name="icordebugilframegetstackvalue-method"></a><span data-ttu-id="37b7b-102">Метод ICorDebugILFrame::GetStackValue</span><span class="sxs-lookup"><span data-stu-id="37b7b-102">ICorDebugILFrame::GetStackValue Method</span></span>
-<span data-ttu-id="37b7b-103">Этот метод не был реализован.</span><span class="sxs-lookup"><span data-stu-id="37b7b-103">This method has not been implemented.</span></span>  
+# <a name="icordebugilframegetstackvalue-method"></a><span data-ttu-id="f492a-102">Метод ICorDebugILFrame::GetStackValue</span><span class="sxs-lookup"><span data-stu-id="f492a-102">ICorDebugILFrame::GetStackValue Method</span></span>
+<span data-ttu-id="f492a-103">Этот метод не был реализован.</span><span class="sxs-lookup"><span data-stu-id="f492a-103">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37b7b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="37b7b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f492a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f492a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStackValue (  
@@ -36,5 +36,5 @@ HRESULT GetStackValue (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="37b7b-105">Требования</span><span class="sxs-lookup"><span data-stu-id="37b7b-105">Requirements</span></span>  
- <span data-ttu-id="37b7b-106">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="37b7b-106">**Header:** CorDebug.idl, CorDebug.h</span></span>
+## <a name="requirements"></a><span data-ttu-id="f492a-105">Требования</span><span class="sxs-lookup"><span data-stu-id="f492a-105">Requirements</span></span>  
+ <span data-ttu-id="f492a-106">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f492a-106">**Header:** CorDebug.idl, CorDebug.h</span></span>

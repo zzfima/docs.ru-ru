@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5760287e01257e3f0fc99a18ba20f2f2a1b2b3af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988160"
 ---
-# <a name="icordebugmanagedcallbackloadassembly-method"></a><span data-ttu-id="24315-102">Метод ICorDebugManagedCallback::LoadAssembly</span><span class="sxs-lookup"><span data-stu-id="24315-102">ICorDebugManagedCallback::LoadAssembly Method</span></span>
-<span data-ttu-id="24315-103">Уведомляет отладчик, что сборки среды выполнения (CLR) CLR была успешно загружена.</span><span class="sxs-lookup"><span data-stu-id="24315-103">Notifies the debugger that a common language runtime (CLR) assembly has been successfully loaded.</span></span>  
+# <a name="icordebugmanagedcallbackloadassembly-method"></a><span data-ttu-id="56d4c-102">Метод ICorDebugManagedCallback::LoadAssembly</span><span class="sxs-lookup"><span data-stu-id="56d4c-102">ICorDebugManagedCallback::LoadAssembly Method</span></span>
+<span data-ttu-id="56d4c-103">Уведомляет отладчик, что сборки среды выполнения (CLR) CLR была успешно загружена.</span><span class="sxs-lookup"><span data-stu-id="56d4c-103">Notifies the debugger that a common language runtime (CLR) assembly has been successfully loaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="24315-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="24315-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="56d4c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="56d4c-104">Syntax</span></span>  
   
 ```  
 HRESULT LoadAssembly (  
@@ -36,23 +36,23 @@ HRESULT LoadAssembly (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="24315-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="24315-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="56d4c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="56d4c-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="24315-106">[in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, в который была загружена сборка.</span><span class="sxs-lookup"><span data-stu-id="24315-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain into which the assembly has been loaded.</span></span>  
+ <span data-ttu-id="56d4c-106">[in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, в который была загружена сборка.</span><span class="sxs-lookup"><span data-stu-id="56d4c-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain into which the assembly has been loaded.</span></span>  
   
  `pAssembly`  
- <span data-ttu-id="24315-107">[in] Указатель на объект ICorDebugAssembly, представляющий сборку.</span><span class="sxs-lookup"><span data-stu-id="24315-107">[in] A pointer to an ICorDebugAssembly object that represents the assembly.</span></span>  
+ <span data-ttu-id="56d4c-107">[in] Указатель на объект ICorDebugAssembly, представляющий сборку.</span><span class="sxs-lookup"><span data-stu-id="56d4c-107">[in] A pointer to an ICorDebugAssembly object that represents the assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="24315-108">Требования</span><span class="sxs-lookup"><span data-stu-id="24315-108">Requirements</span></span>  
- <span data-ttu-id="24315-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="24315-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="56d4c-108">Требования</span><span class="sxs-lookup"><span data-stu-id="56d4c-108">Requirements</span></span>  
+ <span data-ttu-id="56d4c-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="56d4c-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="24315-110">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="24315-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="56d4c-110">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="56d4c-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="24315-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="24315-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="56d4c-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="56d4c-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="24315-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="24315-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="56d4c-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56d4c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="24315-113">См. также</span><span class="sxs-lookup"><span data-stu-id="24315-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="56d4c-113">См. также</span><span class="sxs-lookup"><span data-stu-id="56d4c-113">See also</span></span>
 
-- [<span data-ttu-id="24315-114">Метод UnloadAssembly</span><span class="sxs-lookup"><span data-stu-id="24315-114">UnloadAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadassembly-method.md)
-- [<span data-ttu-id="24315-115">Интерфейс ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="24315-115">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="56d4c-114">Метод UnloadAssembly</span><span class="sxs-lookup"><span data-stu-id="56d4c-114">UnloadAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadassembly-method.md)
+- [<span data-ttu-id="56d4c-115">Интерфейс ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="56d4c-115">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

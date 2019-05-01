@@ -7,22 +7,22 @@ helpviewer_keywords:
 - navigation [WPF]
 ms.assetid: f804648e-558c-4f60-8e48-d11f4a23c436
 ms.openlocfilehash: 4d1cfd1388e68ff6a5f8c6a6b209dc38dd2f80d3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981699"
 ---
-# <a name="navigation-how-to-topics"></a><span data-ttu-id="b5cea-102">Разделы руководства, посвященные переходу</span><span class="sxs-lookup"><span data-stu-id="b5cea-102">Navigation How-to Topics</span></span>
-<span data-ttu-id="b5cea-103">Ниже показано, как использовать [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] навигации.</span><span class="sxs-lookup"><span data-stu-id="b5cea-103">The following topics show how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigation.</span></span>  
+# <a name="navigation-how-to-topics"></a><span data-ttu-id="e5b32-102">Разделы руководства, посвященные переходу</span><span class="sxs-lookup"><span data-stu-id="e5b32-102">Navigation How-to Topics</span></span>
+<span data-ttu-id="e5b32-103">Ниже показано, как использовать [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] навигации.</span><span class="sxs-lookup"><span data-stu-id="e5b32-103">The following topics show how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b5cea-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="b5cea-104">In This Section</span></span>  
- [<span data-ttu-id="b5cea-105">Вызов страничной функции</span><span class="sxs-lookup"><span data-stu-id="b5cea-105">Call a Page Function</span></span>](how-to-call-a-page-function.md)  
-  [<span data-ttu-id="b5cea-106">Получение возвращаемого значения функции страницы</span><span class="sxs-lookup"><span data-stu-id="b5cea-106">Get the Return Value of a Page Function</span></span>](how-to-get-the-return-value-of-a-page-function.md)  
-  [<span data-ttu-id="b5cea-107">Переход вперед или назад по журналу навигации</span><span class="sxs-lookup"><span data-stu-id="b5cea-107">Navigate Forward or Back Through Navigation History</span></span>](how-to-navigate-forward-or-back-through-navigation-history.md)  
-  [<span data-ttu-id="b5cea-108">Возврат из функции страницы</span><span class="sxs-lookup"><span data-stu-id="b5cea-108">Return from a Page Function</span></span>](how-to-return-from-a-page-function.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e5b32-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="e5b32-104">In This Section</span></span>  
+ [<span data-ttu-id="e5b32-105">Вызов страничной функции</span><span class="sxs-lookup"><span data-stu-id="e5b32-105">Call a Page Function</span></span>](how-to-call-a-page-function.md)  
+  [<span data-ttu-id="e5b32-106">Получение возвращаемого значения функции страницы</span><span class="sxs-lookup"><span data-stu-id="e5b32-106">Get the Return Value of a Page Function</span></span>](how-to-get-the-return-value-of-a-page-function.md)  
+  [<span data-ttu-id="e5b32-107">Переход вперед или назад по журналу навигации</span><span class="sxs-lookup"><span data-stu-id="e5b32-107">Navigate Forward or Back Through Navigation History</span></span>](how-to-navigate-forward-or-back-through-navigation-history.md)  
+  [<span data-ttu-id="e5b32-108">Возврат из функции страницы</span><span class="sxs-lookup"><span data-stu-id="e5b32-108">Return from a Page Function</span></span>](how-to-return-from-a-page-function.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="b5cea-109">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="b5cea-109">Related Sections</span></span>  
- [<span data-ttu-id="b5cea-110">Общие сведения о переходах</span><span class="sxs-lookup"><span data-stu-id="b5cea-110">Navigation Overview</span></span>](navigation-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="e5b32-109">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="e5b32-109">Related Sections</span></span>  
+ [<span data-ttu-id="e5b32-110">Общие сведения о переходах</span><span class="sxs-lookup"><span data-stu-id="e5b32-110">Navigation Overview</span></span>](navigation-overview.md)  
   
- [<span data-ttu-id="b5cea-111">Общие сведения о структурной навигации</span><span class="sxs-lookup"><span data-stu-id="b5cea-111">Structured Navigation Overview</span></span>](structured-navigation-overview.md)
+ [<span data-ttu-id="e5b32-111">Общие сведения о структурной навигации</span><span class="sxs-lookup"><span data-stu-id="e5b32-111">Structured Navigation Overview</span></span>](structured-navigation-overview.md)
