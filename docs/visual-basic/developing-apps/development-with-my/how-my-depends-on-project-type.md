@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-ms.openlocfilehash: 743160889c4f24a9edb2d0f9799662a74c5061fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: 72b9799d1f5ba7efa37d5f8f2a633e6806a58607
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842087"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808081"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>Зависимость My от типа проекта (Visual Basic)
 `My` предоставляет только те объекты, необходимые для конкретного типа проекта. Например `My.Forms` объекта, доступные в приложении Windows Forms, но не доступен в консольном приложении. В этом разделе описывается, что `My` объекты доступны в различных типов проектов.  
@@ -17,11 +17,11 @@ ms.locfileid: "58842087"
 ## <a name="my-in-windows-applications-and-web-sites"></a>Мои в Windows приложений и веб-сайтов  
  `My` предоставляет только те объекты, которые полезны в текущем типе проекта; Подавляет объекты, которые не применяются. Например, на следующем рисунке показана `My` объектной модели в проекте Windows Forms.  
   
- ![Форма My в приложении Windows Forms](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")  
+ ![Схема, показывающая моей объектной модели в приложении Windows Forms.](./media/how-my-depends-on-project-type/my-object-model-windows-forms.png)  
   
  В проекте веб-сайта `My` предоставляет объекты, относящиеся к веб-разработчик (такие как `My.Request` и `My.Response` объектов) при подавлении объекты, не относящиеся (такие как `My.Forms` объекта). На следующем рисунке показана `My` объектной модели в проекте веб-сайта:  
   
- ![Форма My в веб-приложении](../../../visual-basic/developing-apps/development-with-my/media/myinweb.png "MyInWeb")  
+ ![Схема, показывающая моей объектной модели в веб-приложения.](./media/how-my-depends-on-project-type/my-object-model-web.png)  
   
 ## <a name="project-details"></a>Сведения о проекте  
  В следующей таблице показано, что `My` объекты включены по умолчанию для восьми типов проектов: Приложения Windows, библиотеки типов, консольное приложение, Windows библиотеки элементов управления, Web Библиотека элементов управления, Windows службы, пустой и веб-сайта.  

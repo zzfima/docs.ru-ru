@@ -2,14 +2,14 @@
 title: Создать службу WCF с поддержкой AJAX и клиента ASP.NET в Visual Studio
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 954ee0409f370c3fa28814a70d51334fd75f7b79
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.openlocfilehash: 06fa3a9d0151f3b4b865c421f9960854ef471377
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024614"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807888"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Практическое руководство. Создание службы WCF с поддержкой AJAX и клиента ASP.NET для обращения к службе
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Практическое руководство. Создать службу WCF с поддержкой AJAX и клиента ASP.NET, обращающегося к службе
 
 В этом разделе показано, как использовать Visual Studio для создания службы с поддержкой AJAX Windows Communication Foundation (WCF) и клиента ASP.NET, который обращается к службе.
 
@@ -77,15 +77,15 @@ ms.locfileid: "48024614"
 
 4. Вернитесь в **источника** Просмотр, добавьте следующий код между  **\<ScriptManager >** теги, чтобы указать путь к службе WCF:
 
-    ```html
+    ```xml
     <Services>
        <asp:ServiceReference Path="~/CostService.svc" />
     </Services>
     ```
 
-1. Добавьте код для функции Javascript `Calculate()`. Поместите следующий код в **head** раздел веб-формы:
+5. Добавьте код для функции Javascript `Calculate()`. Поместите следующий код в **head** раздел веб-формы:
 
-    ```javascript
+    ```html
     <script type="text/javascript">
 
         function Calculate() {

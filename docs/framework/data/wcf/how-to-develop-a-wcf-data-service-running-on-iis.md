@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 78e8c3cacd89f88cbfa062cb30e5b3474c2614ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 74c31c748dd3483aa87afb2c9a7d926965c9f1ed
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517853"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773937"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Практическое руководство. Разработке службы данных WCF, выполняющегося на сервере IIS
 
@@ -23,9 +23,9 @@ ms.locfileid: "59517853"
 > [!NOTE]
 > Для создания службы данных Northwind необходимо установить образец базы данных Northwind на локальный компьютер. Чтобы скачать этот образец базы данных, см. страницу скачивания [Sample Databases for SQL Server](https://go.microsoft.com/fwlink/?linkid=24758)(Образцы баз данных для SQL Server).
 
- Данный раздел иллюстрирует создание службы данных с помощью поставщика Entity Framework. Доступны другие поставщики служб данных. Дополнительные сведения см. в разделе [поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
+Данный раздел иллюстрирует создание службы данных с помощью поставщика Entity Framework. Доступны другие поставщики служб данных. Дополнительные сведения см. в разделе [поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
 
- После создания службы требуется явно предоставить доступ к ресурсам службы данных. Дополнительные сведения см. в разделе [Как Включение доступа к службе данных](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
+После создания службы требуется явно предоставить доступ к ресурсам службы данных. Дополнительные сведения см. в разделе [Как Включение доступа к службе данных](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>Создание веб-приложение ASP.NET, который выполняется на IIS
 
@@ -35,7 +35,7 @@ ms.locfileid: "59517853"
 
 3. Выберите **веб-приложение ASP.NET** шаблона.
 
-1. Введите `NorthwindService` как имя проекта.
+4. Введите `NorthwindService` как имя проекта.
 
 5. Нажмите кнопку **ОК**.
 
@@ -47,13 +47,13 @@ ms.locfileid: "59517853"
 
 9. С помощью командной строки с правами администратора выполните одну из следующих команд (в зависимости от операционной системы).
 
-    -   32-разрядные системы:
+    - 32-разрядные системы:
 
         ```console
         "%windir%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
         ```
 
-    -   64-разрядные системы:
+    - 64-разрядные системы:
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
@@ -63,13 +63,13 @@ ms.locfileid: "59517853"
 
 10. С помощью командной строки с правами администратора выполните одну из следующих команд (в зависимости от операционной системы).
 
-    -   32-разрядные системы:
+    - 32-разрядные системы:
 
         ```console
         "%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe" -i -enable
         ```
 
-    -   64-разрядные системы:
+    - 64-разрядные системы:
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe" -i -enable
@@ -132,11 +132,11 @@ ms.locfileid: "59517853"
 
 5. Подключите модель данных в базу данных, выполнив одно из следующих действий, а затем нажмите кнопку **Далее**:
 
-    -   Если у вас нет подключения к базе данных уже настроена, нажмите кнопку **новое подключение** и создайте новое соединение. Дополнительные сведения см. в разделе [Как Создание подключений к базам данных SQL Server](https://go.microsoft.com/fwlink/?LinkId=123631). Этот экземпляр SQL Server должен содержать присоединенный образец базы данных Northwind.
+    - Если у вас нет подключения к базе данных уже настроена, нажмите кнопку **новое подключение** и создайте новое соединение. Дополнительные сведения см. в разделе [Как Создание подключений к базам данных SQL Server](https://go.microsoft.com/fwlink/?LinkId=123631). Этот экземпляр SQL Server должен содержать присоединенный образец базы данных Northwind.
 
          \- или -
 
-    -   Если имеется уже настроенное подключение к базе данных Northwind, выберите это подключение из списка.
+    - Если имеется уже настроенное подключение к базе данных Northwind, выберите это подключение из списка.
 
 6. На завершающей странице мастера установите флажки для всех таблиц базы данных и снимите флажки для представлений и хранимых процедур.
 

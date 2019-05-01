@@ -9,12 +9,12 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 3c477923387e5a28dcc14b44b0f77bb6acb686e5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
-ms.translationtype: MT
+ms.openlocfilehash: 04e9dd3c135c516fa5554b9b547306337fb6a668
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176738"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807822"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Практическое руководство. Квалификация элемента XML и имен атрибутов XML
 
@@ -32,7 +32,7 @@ ms.locfileid: "47176738"
 
 3. Примените соответствующий атрибут `System.Xml.Serialization` к каждому члену или классу, который <xref:System.Xml.Serialization.XmlSerializer> будет сериализовать в документ XML.
 
-  Доступные атрибуты: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute> и <xref:System.Xml.Serialization.XmlTypeAttribute>.
+    Доступные атрибуты: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute> и <xref:System.Xml.Serialization.XmlTypeAttribute>.
 
 4. Задайте свойство `Namespace` каждого атрибута как одно из значений пространства имен из `XmlSerializerNamespaces`.
 
@@ -176,6 +176,6 @@ public class Book
 - [Введение в сериализацию XML](introducing-xml-serialization.md)
 - [Класс XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
 - [Атрибуты управления сериализацией XML](attributes-that-control-xml-serialization.md)
-- [Практическое руководство. Указание имени альтернативного элемента для потока XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Практическое руководство. Указание имени альтернативного элемента для XML Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [Практическое руководство. Сериализация объекта](how-to-serialize-an-object.md)
 - [Практическое руководство. Десериализация объекта](how-to-deserialize-an-object.md)
