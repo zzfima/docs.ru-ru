@@ -8,53 +8,53 @@ helpviewer_keywords:
 - binding data [WPF], how-to topics
 ms.assetid: a3b2563e-d879-41a7-9dfd-ac56b27fdcad
 ms.openlocfilehash: 49929dc5afaa9bc1e97589d244c2bdbbd14cdb00
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023758"
 ---
-# <a name="data-binding-how-to-topics"></a><span data-ttu-id="cde73-102">Практические руководства по привязке данных</span><span class="sxs-lookup"><span data-stu-id="cde73-102">Data Binding How-to Topics</span></span>
-<span data-ttu-id="cde73-103">В этом разделе описываются способы использования привязки данных для привязки элементов к данным из различных источников данных в виде объекта (CLR) среды CLR и XML.</span><span class="sxs-lookup"><span data-stu-id="cde73-103">The topics in this section describe how to use data binding to bind elements to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>  
+# <a name="data-binding-how-to-topics"></a><span data-ttu-id="815d2-102">Практические руководства по привязке данных</span><span class="sxs-lookup"><span data-stu-id="815d2-102">Data Binding How-to Topics</span></span>
+<span data-ttu-id="815d2-103">В этом разделе описываются способы использования привязки данных для привязки элементов к данным из различных источников данных в виде объекта (CLR) среды CLR и XML.</span><span class="sxs-lookup"><span data-stu-id="815d2-103">The topics in this section describe how to use data binding to bind elements to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="cde73-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="cde73-104">In This Section</span></span>  
- [<span data-ttu-id="cde73-105">Создание простой привязки</span><span class="sxs-lookup"><span data-stu-id="cde73-105">Create a Simple Binding</span></span>](how-to-create-a-simple-binding.md)  
- [<span data-ttu-id="cde73-106">Указание источника привязки</span><span class="sxs-lookup"><span data-stu-id="cde73-106">Specify the Binding Source</span></span>](how-to-specify-the-binding-source.md)  
- [<span data-ttu-id="cde73-107">Обеспечение доступности данных для привязки в XAML</span><span class="sxs-lookup"><span data-stu-id="cde73-107">Make Data Available for Binding in XAML</span></span>](how-to-make-data-available-for-binding-in-xaml.md)  
- [<span data-ttu-id="cde73-108">Практическое руководство. Управление обновлением источника из поля TextBox</span><span class="sxs-lookup"><span data-stu-id="cde73-108">Control When the TextBox Text Updates the Source</span></span>](how-to-control-when-the-textbox-text-updates-the-source.md)  
- [<span data-ttu-id="cde73-109">Указание направления привязки</span><span class="sxs-lookup"><span data-stu-id="cde73-109">Specify the Direction of the Binding</span></span>](how-to-specify-the-direction-of-the-binding.md)  
- [<span data-ttu-id="cde73-110">Привязка к коллекции и вывод сведений в зависимости от выделенного элемента</span><span class="sxs-lookup"><span data-stu-id="cde73-110">Bind to a Collection and Display Information Based on Selection</span></span>](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
- [<span data-ttu-id="cde73-111">Привязка к перечислению</span><span class="sxs-lookup"><span data-stu-id="cde73-111">Bind to an Enumeration</span></span>](how-to-bind-to-an-enumeration.md)  
- [<span data-ttu-id="cde73-112">Привязка свойств двух элементов управления</span><span class="sxs-lookup"><span data-stu-id="cde73-112">Bind the Properties of Two Controls</span></span>](how-to-bind-the-properties-of-two-controls.md)  
- [<span data-ttu-id="cde73-113">Реализация проверки привязки</span><span class="sxs-lookup"><span data-stu-id="cde73-113">Implement Binding Validation</span></span>](how-to-implement-binding-validation.md)  
- [<span data-ttu-id="cde73-114">Реализация логики проверки для пользовательских объектов</span><span class="sxs-lookup"><span data-stu-id="cde73-114">Implement Validation Logic on Custom Objects</span></span>](how-to-implement-validation-logic-on-custom-objects.md)  
- [<span data-ttu-id="cde73-115">Практическое руководство. Получение объекта привязки из свойства целевого объекта привязки</span><span class="sxs-lookup"><span data-stu-id="cde73-115">Get the Binding Object from a Bound Target Property</span></span>](how-to-get-the-binding-object-from-a-bound-target-property.md)  
- [<span data-ttu-id="cde73-116">Реализация CompositeCollection</span><span class="sxs-lookup"><span data-stu-id="cde73-116">Implement a CompositeCollection</span></span>](how-to-implement-a-compositecollection.md)  
- [<span data-ttu-id="cde73-117">Преобразование привязанных данных</span><span class="sxs-lookup"><span data-stu-id="cde73-117">Convert Bound Data</span></span>](how-to-convert-bound-data.md)  
- [<span data-ttu-id="cde73-118">Создание привязки в коде</span><span class="sxs-lookup"><span data-stu-id="cde73-118">Create a Binding in Code</span></span>](how-to-create-a-binding-in-code.md)  
- [<span data-ttu-id="cde73-119">Получение представления по умолчанию для коллекции данных</span><span class="sxs-lookup"><span data-stu-id="cde73-119">Get the Default View of a Data Collection</span></span>](how-to-get-the-default-view-of-a-data-collection.md)  
- [<span data-ttu-id="cde73-120">Перемещение по объектам в Data CollectionView</span><span class="sxs-lookup"><span data-stu-id="cde73-120">Navigate Through the Objects in a Data CollectionView</span></span>](how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
- [<span data-ttu-id="cde73-121">Фильтрация данных в представлении</span><span class="sxs-lookup"><span data-stu-id="cde73-121">Filter Data in a View</span></span>](how-to-filter-data-in-a-view.md)  
- [<span data-ttu-id="cde73-122">Сортировка данных в представлении</span><span class="sxs-lookup"><span data-stu-id="cde73-122">Sort Data in a View</span></span>](how-to-sort-data-in-a-view.md)  
- [<span data-ttu-id="cde73-123">Сортировка и группировка данных с помощью представления в XAML</span><span class="sxs-lookup"><span data-stu-id="cde73-123">Sort and Group Data Using a View in XAML</span></span>](how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [<span data-ttu-id="cde73-124">Использование шаблона "Основной/подробности" с иерархическими данными</span><span class="sxs-lookup"><span data-stu-id="cde73-124">Use the Master-Detail Pattern with Hierarchical Data</span></span>](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
- [<span data-ttu-id="cde73-125">Использование шаблона "Основной/подробности" с иерархическими XML-данными</span><span class="sxs-lookup"><span data-stu-id="cde73-125">Use the Master-Detail Pattern with Hierarchical XML Data</span></span>](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
- [<span data-ttu-id="cde73-126">Создание значений на основе списка связанных элементов</span><span class="sxs-lookup"><span data-stu-id="cde73-126">Produce a Value Based on a List of Bound Items</span></span>](how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
- [<span data-ttu-id="cde73-127">Реализация уведомления об изменении свойства</span><span class="sxs-lookup"><span data-stu-id="cde73-127">Implement Property Change Notification</span></span>](how-to-implement-property-change-notification.md)  
- [<span data-ttu-id="cde73-128">Создание и привязка ObservableCollection</span><span class="sxs-lookup"><span data-stu-id="cde73-128">Create and Bind to an ObservableCollection</span></span>](how-to-create-and-bind-to-an-observablecollection.md)  
- [<span data-ttu-id="cde73-129">Реализация PriorityBinding</span><span class="sxs-lookup"><span data-stu-id="cde73-129">Implement PriorityBinding</span></span>](how-to-implement-prioritybinding.md)  
- [<span data-ttu-id="cde73-130">Практическое руководство. Привязка к XML-данным с помощью XMLDataProvider и запросов XPath</span><span class="sxs-lookup"><span data-stu-id="cde73-130">Bind to XML Data Using an XMLDataProvider and XPath Queries</span></span>](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
- [<span data-ttu-id="cde73-131">Привязка к XDocument, XElement или LINQ для результатов запросов XML</span><span class="sxs-lookup"><span data-stu-id="cde73-131">Bind to XDocument, XElement, or LINQ for XML Query Results</span></span>](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
- [<span data-ttu-id="cde73-132">Использование пространств имен XML при связывании данных</span><span class="sxs-lookup"><span data-stu-id="cde73-132">Use XML Namespaces in Data Binding</span></span>](how-to-use-xml-namespaces-in-data-binding.md)  
- [<span data-ttu-id="cde73-133">Привязка к источнику данных ADO.NET</span><span class="sxs-lookup"><span data-stu-id="cde73-133">Bind to an ADO.NET Data Source</span></span>](how-to-bind-to-an-ado-net-data-source.md)  
- [<span data-ttu-id="cde73-134">Создание привязки к методу</span><span class="sxs-lookup"><span data-stu-id="cde73-134">Bind to a Method</span></span>](how-to-bind-to-a-method.md)  
- [<span data-ttu-id="cde73-135">Настройка уведомлений обновлений привязок</span><span class="sxs-lookup"><span data-stu-id="cde73-135">Set Up Notification of Binding Updates</span></span>](how-to-set-up-notification-of-binding-updates.md)  
- [<span data-ttu-id="cde73-136">Очистка привязок</span><span class="sxs-lookup"><span data-stu-id="cde73-136">Clear Bindings</span></span>](how-to-clear-bindings.md)  
- [<span data-ttu-id="cde73-137">Поиск элементов, созданных с использованием шаблона DataTemplate</span><span class="sxs-lookup"><span data-stu-id="cde73-137">Find DataTemplate-Generated Elements</span></span>](how-to-find-datatemplate-generated-elements.md)  
- [<span data-ttu-id="cde73-138">Привязка к веб-службе</span><span class="sxs-lookup"><span data-stu-id="cde73-138">Bind to a Web Service</span></span>](how-to-bind-to-a-web-service.md)  
- [<span data-ttu-id="cde73-139">Привязка к результатам запроса LINQ</span><span class="sxs-lookup"><span data-stu-id="cde73-139">Bind to the Results of a LINQ Query</span></span>](how-to-bind-to-the-results-of-a-linq-query.md)  
+## <a name="in-this-section"></a><span data-ttu-id="815d2-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="815d2-104">In This Section</span></span>  
+ [<span data-ttu-id="815d2-105">Создание простой привязки</span><span class="sxs-lookup"><span data-stu-id="815d2-105">Create a Simple Binding</span></span>](how-to-create-a-simple-binding.md)  
+ [<span data-ttu-id="815d2-106">Указание источника привязки</span><span class="sxs-lookup"><span data-stu-id="815d2-106">Specify the Binding Source</span></span>](how-to-specify-the-binding-source.md)  
+ [<span data-ttu-id="815d2-107">Обеспечение доступности данных для привязки в XAML</span><span class="sxs-lookup"><span data-stu-id="815d2-107">Make Data Available for Binding in XAML</span></span>](how-to-make-data-available-for-binding-in-xaml.md)  
+ [<span data-ttu-id="815d2-108">Практическое руководство. Управление обновлением источника из поля TextBox</span><span class="sxs-lookup"><span data-stu-id="815d2-108">Control When the TextBox Text Updates the Source</span></span>](how-to-control-when-the-textbox-text-updates-the-source.md)  
+ [<span data-ttu-id="815d2-109">Указание направления привязки</span><span class="sxs-lookup"><span data-stu-id="815d2-109">Specify the Direction of the Binding</span></span>](how-to-specify-the-direction-of-the-binding.md)  
+ [<span data-ttu-id="815d2-110">Привязка к коллекции и вывод сведений в зависимости от выделенного элемента</span><span class="sxs-lookup"><span data-stu-id="815d2-110">Bind to a Collection and Display Information Based on Selection</span></span>](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
+ [<span data-ttu-id="815d2-111">Привязка к перечислению</span><span class="sxs-lookup"><span data-stu-id="815d2-111">Bind to an Enumeration</span></span>](how-to-bind-to-an-enumeration.md)  
+ [<span data-ttu-id="815d2-112">Привязка свойств двух элементов управления</span><span class="sxs-lookup"><span data-stu-id="815d2-112">Bind the Properties of Two Controls</span></span>](how-to-bind-the-properties-of-two-controls.md)  
+ [<span data-ttu-id="815d2-113">Реализация проверки привязки</span><span class="sxs-lookup"><span data-stu-id="815d2-113">Implement Binding Validation</span></span>](how-to-implement-binding-validation.md)  
+ [<span data-ttu-id="815d2-114">Реализация логики проверки для пользовательских объектов</span><span class="sxs-lookup"><span data-stu-id="815d2-114">Implement Validation Logic on Custom Objects</span></span>](how-to-implement-validation-logic-on-custom-objects.md)  
+ [<span data-ttu-id="815d2-115">Практическое руководство. Получение объекта привязки из свойства целевого объекта привязки</span><span class="sxs-lookup"><span data-stu-id="815d2-115">Get the Binding Object from a Bound Target Property</span></span>](how-to-get-the-binding-object-from-a-bound-target-property.md)  
+ [<span data-ttu-id="815d2-116">Реализация CompositeCollection</span><span class="sxs-lookup"><span data-stu-id="815d2-116">Implement a CompositeCollection</span></span>](how-to-implement-a-compositecollection.md)  
+ [<span data-ttu-id="815d2-117">Преобразование привязанных данных</span><span class="sxs-lookup"><span data-stu-id="815d2-117">Convert Bound Data</span></span>](how-to-convert-bound-data.md)  
+ [<span data-ttu-id="815d2-118">Создание привязки в коде</span><span class="sxs-lookup"><span data-stu-id="815d2-118">Create a Binding in Code</span></span>](how-to-create-a-binding-in-code.md)  
+ [<span data-ttu-id="815d2-119">Получение представления по умолчанию для коллекции данных</span><span class="sxs-lookup"><span data-stu-id="815d2-119">Get the Default View of a Data Collection</span></span>](how-to-get-the-default-view-of-a-data-collection.md)  
+ [<span data-ttu-id="815d2-120">Перемещение по объектам в Data CollectionView</span><span class="sxs-lookup"><span data-stu-id="815d2-120">Navigate Through the Objects in a Data CollectionView</span></span>](how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
+ [<span data-ttu-id="815d2-121">Фильтрация данных в представлении</span><span class="sxs-lookup"><span data-stu-id="815d2-121">Filter Data in a View</span></span>](how-to-filter-data-in-a-view.md)  
+ [<span data-ttu-id="815d2-122">Сортировка данных в представлении</span><span class="sxs-lookup"><span data-stu-id="815d2-122">Sort Data in a View</span></span>](how-to-sort-data-in-a-view.md)  
+ [<span data-ttu-id="815d2-123">Сортировка и группировка данных с помощью представления в XAML</span><span class="sxs-lookup"><span data-stu-id="815d2-123">Sort and Group Data Using a View in XAML</span></span>](how-to-sort-and-group-data-using-a-view-in-xaml.md)  
+ [<span data-ttu-id="815d2-124">Использование шаблона "Основной/подробности" с иерархическими данными</span><span class="sxs-lookup"><span data-stu-id="815d2-124">Use the Master-Detail Pattern with Hierarchical Data</span></span>](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
+ [<span data-ttu-id="815d2-125">Использование шаблона "Основной/подробности" с иерархическими XML-данными</span><span class="sxs-lookup"><span data-stu-id="815d2-125">Use the Master-Detail Pattern with Hierarchical XML Data</span></span>](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
+ [<span data-ttu-id="815d2-126">Создание значений на основе списка связанных элементов</span><span class="sxs-lookup"><span data-stu-id="815d2-126">Produce a Value Based on a List of Bound Items</span></span>](how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
+ [<span data-ttu-id="815d2-127">Реализация уведомления об изменении свойства</span><span class="sxs-lookup"><span data-stu-id="815d2-127">Implement Property Change Notification</span></span>](how-to-implement-property-change-notification.md)  
+ [<span data-ttu-id="815d2-128">Создание и привязка ObservableCollection</span><span class="sxs-lookup"><span data-stu-id="815d2-128">Create and Bind to an ObservableCollection</span></span>](how-to-create-and-bind-to-an-observablecollection.md)  
+ [<span data-ttu-id="815d2-129">Реализация PriorityBinding</span><span class="sxs-lookup"><span data-stu-id="815d2-129">Implement PriorityBinding</span></span>](how-to-implement-prioritybinding.md)  
+ [<span data-ttu-id="815d2-130">Практическое руководство. Привязка к XML-данным с помощью XMLDataProvider и запросов XPath</span><span class="sxs-lookup"><span data-stu-id="815d2-130">Bind to XML Data Using an XMLDataProvider and XPath Queries</span></span>](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
+ [<span data-ttu-id="815d2-131">Привязка к XDocument, XElement или LINQ для результатов запросов XML</span><span class="sxs-lookup"><span data-stu-id="815d2-131">Bind to XDocument, XElement, or LINQ for XML Query Results</span></span>](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
+ [<span data-ttu-id="815d2-132">Использование пространств имен XML при связывании данных</span><span class="sxs-lookup"><span data-stu-id="815d2-132">Use XML Namespaces in Data Binding</span></span>](how-to-use-xml-namespaces-in-data-binding.md)  
+ [<span data-ttu-id="815d2-133">Привязка к источнику данных ADO.NET</span><span class="sxs-lookup"><span data-stu-id="815d2-133">Bind to an ADO.NET Data Source</span></span>](how-to-bind-to-an-ado-net-data-source.md)  
+ [<span data-ttu-id="815d2-134">Создание привязки к методу</span><span class="sxs-lookup"><span data-stu-id="815d2-134">Bind to a Method</span></span>](how-to-bind-to-a-method.md)  
+ [<span data-ttu-id="815d2-135">Настройка уведомлений обновлений привязок</span><span class="sxs-lookup"><span data-stu-id="815d2-135">Set Up Notification of Binding Updates</span></span>](how-to-set-up-notification-of-binding-updates.md)  
+ [<span data-ttu-id="815d2-136">Очистка привязок</span><span class="sxs-lookup"><span data-stu-id="815d2-136">Clear Bindings</span></span>](how-to-clear-bindings.md)  
+ [<span data-ttu-id="815d2-137">Поиск элементов, созданных с использованием шаблона DataTemplate</span><span class="sxs-lookup"><span data-stu-id="815d2-137">Find DataTemplate-Generated Elements</span></span>](how-to-find-datatemplate-generated-elements.md)  
+ [<span data-ttu-id="815d2-138">Привязка к веб-службе</span><span class="sxs-lookup"><span data-stu-id="815d2-138">Bind to a Web Service</span></span>](how-to-bind-to-a-web-service.md)  
+ [<span data-ttu-id="815d2-139">Привязка к результатам запроса LINQ</span><span class="sxs-lookup"><span data-stu-id="815d2-139">Bind to the Results of a LINQ Query</span></span>](how-to-bind-to-the-results-of-a-linq-query.md)  
   
-## <a name="reference"></a><span data-ttu-id="cde73-140">Ссылка</span><span class="sxs-lookup"><span data-stu-id="cde73-140">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="815d2-140">Ссылка</span><span class="sxs-lookup"><span data-stu-id="815d2-140">Reference</span></span>  
  <xref:System.Windows.Data>  
   
  <xref:System.Windows.Data.Binding>  
@@ -63,7 +63,7 @@ ms.locfileid: "57360580"
   
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
-## <a name="related-sections"></a><span data-ttu-id="cde73-141">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="cde73-141">Related Sections</span></span>  
- [<span data-ttu-id="cde73-142">Привязка данных</span><span class="sxs-lookup"><span data-stu-id="cde73-142">Data Binding</span></span>](data-binding-wpf.md)  
+## <a name="related-sections"></a><span data-ttu-id="815d2-141">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="815d2-141">Related Sections</span></span>  
+ [<span data-ttu-id="815d2-142">Привязка данных</span><span class="sxs-lookup"><span data-stu-id="815d2-142">Data Binding</span></span>](data-binding-wpf.md)  
   
- [<span data-ttu-id="cde73-143">Привязка данных</span><span class="sxs-lookup"><span data-stu-id="cde73-143">Data Binding</span></span>](../advanced/optimizing-performance-data-binding.md)
+ [<span data-ttu-id="815d2-143">Привязка данных</span><span class="sxs-lookup"><span data-stu-id="815d2-143">Data Binding</span></span>](../advanced/optimizing-performance-data-binding.md)
