@@ -18,15 +18,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a0ef1e6511bf8e452a336ba6ea02359fe41e07cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996116"
 ---
-# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="b2a36-102">Метод ICorDebugEditAndContinueErrorInfo::GetErrorCode</span><span class="sxs-lookup"><span data-stu-id="b2a36-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
-<span data-ttu-id="b2a36-103">`GetErrorCode` устарел.</span><span class="sxs-lookup"><span data-stu-id="b2a36-103">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="b2a36-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="b2a36-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="3f9b8-102">Метод ICorDebugEditAndContinueErrorInfo::GetErrorCode</span><span class="sxs-lookup"><span data-stu-id="3f9b8-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
+<span data-ttu-id="3f9b8-103">`GetErrorCode` устарел.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-103">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="3f9b8-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="3f9b8-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b2a36-105">См. также</span><span class="sxs-lookup"><span data-stu-id="b2a36-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f9b8-105">См. также</span><span class="sxs-lookup"><span data-stu-id="3f9b8-105">See also</span></span>
 
-- [<span data-ttu-id="b2a36-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="b2a36-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="3f9b8-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="3f9b8-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

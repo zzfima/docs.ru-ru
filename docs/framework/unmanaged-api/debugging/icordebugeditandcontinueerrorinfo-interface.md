@@ -17,15 +17,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7f19b6107d6da19f9799655fa86fc58b95df330d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996080"
 ---
-# <a name="icordebugeditandcontinueerrorinfo-interface"></a><span data-ttu-id="44412-102">Интерфейс ICorDebugEditAndContinueErrorInfo</span><span class="sxs-lookup"><span data-stu-id="44412-102">ICorDebugEditAndContinueErrorInfo Interface</span></span>
-<span data-ttu-id="44412-103">`ICorDebugEditAndContinueErrorInfo` устарел.</span><span class="sxs-lookup"><span data-stu-id="44412-103">`ICorDebugEditAndContinueErrorInfo` is obsolete.</span></span> <span data-ttu-id="44412-104">Не следует использовать данный интерфейс.</span><span class="sxs-lookup"><span data-stu-id="44412-104">Do not use this interface.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfo-interface"></a><span data-ttu-id="d6b50-102">Интерфейс ICorDebugEditAndContinueErrorInfo</span><span class="sxs-lookup"><span data-stu-id="d6b50-102">ICorDebugEditAndContinueErrorInfo Interface</span></span>
+<span data-ttu-id="d6b50-103">`ICorDebugEditAndContinueErrorInfo` устарел.</span><span class="sxs-lookup"><span data-stu-id="d6b50-103">`ICorDebugEditAndContinueErrorInfo` is obsolete.</span></span> <span data-ttu-id="d6b50-104">Не следует использовать данный интерфейс.</span><span class="sxs-lookup"><span data-stu-id="d6b50-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="44412-105">См. также</span><span class="sxs-lookup"><span data-stu-id="44412-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d6b50-105">См. также</span><span class="sxs-lookup"><span data-stu-id="d6b50-105">See also</span></span>
 
-- [<span data-ttu-id="44412-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="44412-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="d6b50-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="d6b50-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

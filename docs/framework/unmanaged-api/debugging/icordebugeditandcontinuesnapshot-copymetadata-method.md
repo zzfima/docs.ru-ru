@@ -18,15 +18,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5dafaef05305a8f4ab4a196690d98486be96d51e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989187"
 ---
-# <a name="icordebugeditandcontinuesnapshotcopymetadata-method"></a><span data-ttu-id="e0ca6-102">Метод ICorDebugEditAndContinueSnapshot::CopyMetaData</span><span class="sxs-lookup"><span data-stu-id="e0ca6-102">ICorDebugEditAndContinueSnapshot::CopyMetaData Method</span></span>
-<span data-ttu-id="e0ca6-103">`CopyMetaData` устарел.</span><span class="sxs-lookup"><span data-stu-id="e0ca6-103">`CopyMetaData` is obsolete.</span></span> <span data-ttu-id="e0ca6-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="e0ca6-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotcopymetadata-method"></a><span data-ttu-id="806e5-102">Метод ICorDebugEditAndContinueSnapshot::CopyMetaData</span><span class="sxs-lookup"><span data-stu-id="806e5-102">ICorDebugEditAndContinueSnapshot::CopyMetaData Method</span></span>
+<span data-ttu-id="806e5-103">`CopyMetaData` устарел.</span><span class="sxs-lookup"><span data-stu-id="806e5-103">`CopyMetaData` is obsolete.</span></span> <span data-ttu-id="806e5-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="806e5-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e0ca6-105">См. также</span><span class="sxs-lookup"><span data-stu-id="e0ca6-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="806e5-105">См. также</span><span class="sxs-lookup"><span data-stu-id="806e5-105">See also</span></span>
 
-- [<span data-ttu-id="e0ca6-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="e0ca6-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="806e5-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="806e5-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

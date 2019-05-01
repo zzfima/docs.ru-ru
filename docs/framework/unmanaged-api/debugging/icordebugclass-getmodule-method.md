@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e96d0d82b08449b4675ec7fd1517317006011ae
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989226"
 ---
-# <a name="icordebugclassgetmodule-method"></a><span data-ttu-id="94773-102">Метод ICorDebugClass::GetModule</span><span class="sxs-lookup"><span data-stu-id="94773-102">ICorDebugClass::GetModule Method</span></span>
-<span data-ttu-id="94773-103">Возвращает модуль, в котором определен этот класс.</span><span class="sxs-lookup"><span data-stu-id="94773-103">Gets the module that defines this class.</span></span>  
+# <a name="icordebugclassgetmodule-method"></a><span data-ttu-id="a55e1-102">Метод ICorDebugClass::GetModule</span><span class="sxs-lookup"><span data-stu-id="a55e1-102">ICorDebugClass::GetModule Method</span></span>
+<span data-ttu-id="a55e1-103">Возвращает модуль, в котором определен этот класс.</span><span class="sxs-lookup"><span data-stu-id="a55e1-103">Gets the module that defines this class.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="94773-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="94773-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a55e1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a55e1-104">Syntax</span></span>  
   
 ```  
 HRESULT GetModule (  
@@ -35,15 +35,15 @@ HRESULT GetModule (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="94773-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="94773-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a55e1-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a55e1-105">Parameters</span></span>  
  `pModule`  
- <span data-ttu-id="94773-106">[out] Указатель на адрес ICorDebugModule объект, представляющий модуль, в котором определен этот класс.</span><span class="sxs-lookup"><span data-stu-id="94773-106">[out] A pointer to the address of an ICorDebugModule object that represents the module in which this class is defined.</span></span>  
+ <span data-ttu-id="a55e1-106">[out] Указатель на адрес ICorDebugModule объект, представляющий модуль, в котором определен этот класс.</span><span class="sxs-lookup"><span data-stu-id="a55e1-106">[out] A pointer to the address of an ICorDebugModule object that represents the module in which this class is defined.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="94773-107">Требования</span><span class="sxs-lookup"><span data-stu-id="94773-107">Requirements</span></span>  
- <span data-ttu-id="94773-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="94773-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a55e1-107">Требования</span><span class="sxs-lookup"><span data-stu-id="a55e1-107">Requirements</span></span>  
+ <span data-ttu-id="a55e1-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a55e1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="94773-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="94773-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a55e1-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a55e1-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="94773-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="94773-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a55e1-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a55e1-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="94773-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="94773-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="a55e1-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a55e1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

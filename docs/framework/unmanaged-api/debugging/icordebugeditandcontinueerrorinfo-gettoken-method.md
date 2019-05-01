@@ -18,15 +18,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ab2a1c0c3f280f115a408adc81a46196eb5a804c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989148"
 ---
-# <a name="icordebugeditandcontinueerrorinfogettoken-method"></a><span data-ttu-id="38d93-102">Метод ICorDebugEditAndContinueErrorInfo::GetToken</span><span class="sxs-lookup"><span data-stu-id="38d93-102">ICorDebugEditAndContinueErrorInfo::GetToken Method</span></span>
-<span data-ttu-id="38d93-103">`GetToken` устарел.</span><span class="sxs-lookup"><span data-stu-id="38d93-103">`GetToken` is obsolete.</span></span> <span data-ttu-id="38d93-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="38d93-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogettoken-method"></a><span data-ttu-id="3f2eb-102">Метод ICorDebugEditAndContinueErrorInfo::GetToken</span><span class="sxs-lookup"><span data-stu-id="3f2eb-102">ICorDebugEditAndContinueErrorInfo::GetToken Method</span></span>
+<span data-ttu-id="3f2eb-103">`GetToken` устарел.</span><span class="sxs-lookup"><span data-stu-id="3f2eb-103">`GetToken` is obsolete.</span></span> <span data-ttu-id="3f2eb-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="3f2eb-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38d93-105">См. также</span><span class="sxs-lookup"><span data-stu-id="38d93-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f2eb-105">См. также</span><span class="sxs-lookup"><span data-stu-id="3f2eb-105">See also</span></span>
 
-- [<span data-ttu-id="38d93-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="38d93-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="3f2eb-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="3f2eb-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

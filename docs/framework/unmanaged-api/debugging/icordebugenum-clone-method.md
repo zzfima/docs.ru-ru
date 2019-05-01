@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5d1226f64df379b5c40304221e9e66eebcdb17b4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989135"
 ---
-# <a name="icordebugenumclone-method"></a><span data-ttu-id="02947-102">Метод ICorDebugEnum::Clone</span><span class="sxs-lookup"><span data-stu-id="02947-102">ICorDebugEnum::Clone Method</span></span>
-<span data-ttu-id="02947-103">Создает копию данного объекта ICorDebugEnum.</span><span class="sxs-lookup"><span data-stu-id="02947-103">Creates a copy of this ICorDebugEnum object.</span></span>  
+# <a name="icordebugenumclone-method"></a><span data-ttu-id="2cdd4-102">Метод ICorDebugEnum::Clone</span><span class="sxs-lookup"><span data-stu-id="2cdd4-102">ICorDebugEnum::Clone Method</span></span>
+<span data-ttu-id="2cdd4-103">Создает копию данного объекта ICorDebugEnum.</span><span class="sxs-lookup"><span data-stu-id="2cdd4-103">Creates a copy of this ICorDebugEnum object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="02947-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="02947-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2cdd4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2cdd4-104">Syntax</span></span>  
   
 ```  
 HRESULT Clone (  
@@ -35,15 +35,15 @@ HRESULT Clone (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="02947-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="02947-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2cdd4-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="2cdd4-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="02947-106">[out] Указатель на адрес `ICorDebugEnum` объект, являющийся копией этого `ICorDebugEnum` объекта.</span><span class="sxs-lookup"><span data-stu-id="02947-106">[out] A pointer to the address of an `ICorDebugEnum` object that is a copy of this `ICorDebugEnum` object.</span></span>  
+ <span data-ttu-id="2cdd4-106">[out] Указатель на адрес `ICorDebugEnum` объект, являющийся копией этого `ICorDebugEnum` объекта.</span><span class="sxs-lookup"><span data-stu-id="2cdd4-106">[out] A pointer to the address of an `ICorDebugEnum` object that is a copy of this `ICorDebugEnum` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="02947-107">Требования</span><span class="sxs-lookup"><span data-stu-id="02947-107">Requirements</span></span>  
- <span data-ttu-id="02947-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="02947-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2cdd4-107">Требования</span><span class="sxs-lookup"><span data-stu-id="2cdd4-107">Requirements</span></span>  
+ <span data-ttu-id="2cdd4-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2cdd4-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="02947-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="02947-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2cdd4-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2cdd4-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="02947-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="02947-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2cdd4-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2cdd4-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="02947-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="02947-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="2cdd4-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2cdd4-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

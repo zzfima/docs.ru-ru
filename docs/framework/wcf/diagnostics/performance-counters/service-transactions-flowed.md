@@ -1,16 +1,16 @@
 ---
-title: 'Служба: количество поступивших транзакций'
+title: 'Служба: Количество поступивших транзакций'
 ms.date: 03/30/2017
 ms.assetid: 7c564d7d-60d3-45a4-a9a1-c78f62ace57f
 ms.openlocfilehash: 0c4c863e5beb9cdacdfcd49ad4ad19cca0edb85d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33472909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998183"
 ---
-# <a name="service-transactions-flowed"></a><span data-ttu-id="14bb4-102">Служба: количество поступивших транзакций</span><span class="sxs-lookup"><span data-stu-id="14bb4-102">Service: Transactions Flowed</span></span>
-<span data-ttu-id="14bb4-103">Имя счетчика: Transactions Flowed.</span><span class="sxs-lookup"><span data-stu-id="14bb4-103">Counter Name: Transactions Flowed.</span></span>  
+# <a name="service-transactions-flowed"></a><span data-ttu-id="b1532-102">Служба: Количество поступивших транзакций</span><span class="sxs-lookup"><span data-stu-id="b1532-102">Service: Transactions Flowed</span></span>
+<span data-ttu-id="b1532-103">Имя счетчика: Количество поступивших транзакций.</span><span class="sxs-lookup"><span data-stu-id="b1532-103">Counter Name: Transactions Flowed.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="14bb4-104">Описание</span><span class="sxs-lookup"><span data-stu-id="14bb4-104">Description</span></span>  
- <span data-ttu-id="14bb4-105">Количество транзакций в операциях для данной службы.</span><span class="sxs-lookup"><span data-stu-id="14bb4-105">Number of transactions flowed to operations in this service.</span></span>
+## <a name="description"></a><span data-ttu-id="b1532-104">Описание</span><span class="sxs-lookup"><span data-stu-id="b1532-104">Description</span></span>  
+ <span data-ttu-id="b1532-105">Количество транзакций в операциях для данной службы.</span><span class="sxs-lookup"><span data-stu-id="b1532-105">Number of transactions flowed to operations in this service.</span></span>

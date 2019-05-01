@@ -9,18 +9,18 @@ helpviewer_keywords:
 - add-ins [WPF], returns a UI
 ms.assetid: c33980e8-36e7-45ce-a485-8c826dd29009
 ms.openlocfilehash: 27eb7acbab7d9c90f0c0c311ef6331a16b7896e8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006659"
 ---
-# <a name="how-to-topics"></a><span data-ttu-id="46436-102">Практические руководства</span><span class="sxs-lookup"><span data-stu-id="46436-102">How-to Topics</span></span>
-<span data-ttu-id="46436-103">В следующих темах Создание надстроек для Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="46436-103">The following topics show how to create Windows Presentation Foundation (WPF) add-ins.</span></span>  
+# <a name="how-to-topics"></a><span data-ttu-id="1ba76-102">Практические руководства</span><span class="sxs-lookup"><span data-stu-id="1ba76-102">How-to Topics</span></span>
+<span data-ttu-id="1ba76-103">В следующих темах Создание надстроек для Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="1ba76-103">The following topics show how to create Windows Presentation Foundation (WPF) add-ins.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="46436-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="46436-104">In This Section</span></span>  
- [<span data-ttu-id="46436-105">Создание надстройки, возвращающей пользовательский интерфейс</span><span class="sxs-lookup"><span data-stu-id="46436-105">Create an Add-In That Returns a UI</span></span>](how-to-create-an-add-in-that-returns-a-ui.md)  
- [<span data-ttu-id="46436-106">Создание надстройки, являющейся пользовательским интерфейсом</span><span class="sxs-lookup"><span data-stu-id="46436-106">Create an Add-In That Is a UI</span></span>](how-to-create-an-add-in-that-is-a-ui.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1ba76-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="1ba76-104">In This Section</span></span>  
+ [<span data-ttu-id="1ba76-105">Создание надстройки, возвращающей пользовательский интерфейс</span><span class="sxs-lookup"><span data-stu-id="1ba76-105">Create an Add-In That Returns a UI</span></span>](how-to-create-an-add-in-that-returns-a-ui.md)  
+ [<span data-ttu-id="1ba76-106">Создание надстройки, являющейся пользовательским интерфейсом</span><span class="sxs-lookup"><span data-stu-id="1ba76-106">Create an Add-In That Is a UI</span></span>](how-to-create-an-add-in-that-is-a-ui.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="46436-107">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="46436-107">Related Sections</span></span>  
- [<span data-ttu-id="46436-108">Общие сведения о надстройках WPF</span><span class="sxs-lookup"><span data-stu-id="46436-108">WPF Add-Ins Overview</span></span>](wpf-add-ins-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="1ba76-107">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="1ba76-107">Related Sections</span></span>  
+ [<span data-ttu-id="1ba76-108">Общие сведения о надстройках WPF</span><span class="sxs-lookup"><span data-stu-id="1ba76-108">WPF Add-Ins Overview</span></span>](wpf-add-ins-overview.md)
