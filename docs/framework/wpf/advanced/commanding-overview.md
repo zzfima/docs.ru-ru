@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
 ms.openlocfilehash: 4071f7f08c2b25a2ec551832f57a2b9a7facc91d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037093"
 ---
 # <a name="commanding-overview"></a>Общие сведения о системе команд
 Система команд <a name="introduction"></a> представляет собой механизм ввода в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], обеспечивающий обработку входных данных на более семантическом уровне по сравнению с вводом устройств. Примеры команд включают операции **Копировать**, **Вырезать** и **Вставить**, доступные во многих приложениях.  
@@ -27,15 +27,15 @@ ms.locfileid: "59139039"
   
  В этом разделе содержатся следующие подразделы.  
   
--   [Что представляют собой команды?](#commands_at_10000_feet)  
+- [Что представляют собой команды?](#commands_at_10000_feet)  
   
--   [Пример простой команды в WPF](#simple_command)  
+- [Пример простой команды в WPF](#simple_command)  
   
--   [Четыре основных понятия в системе команд WPF](#Four_main_Concepts)  
+- [Четыре основных понятия в системе команд WPF](#Four_main_Concepts)  
   
--   [Библиотека команд](#Command_Library)  
+- [Библиотека команд](#Command_Library)  
   
--   [Создание настраиваемых команд](#creating_commands)  
+- [Создание настраиваемых команд](#creating_commands)  
   
 <a name="commands_at_10000_feet"></a>   
 ## <a name="what-are-commands"></a>Что представляют собой команды?  
@@ -60,13 +60,13 @@ ms.locfileid: "59139039"
 ## <a name="four-main-concepts-in-wpf-commanding"></a>Четыре основных понятия в системе команд WPF  
  Модель перенаправляемых команд [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] можно разбить на четыре основных понятия: команда, источник команды, цель команды и привязка команды.  
   
--   *Команда* — это выполняемое действие.  
+- *Команда* — это выполняемое действие.  
   
--   *Источник команды* — это объект, который вызывает команду.  
+- *Источник команды* — это объект, который вызывает команду.  
   
--   *Цель команды* — это объект, для которого выполняется команда.  
+- *Цель команды* — это объект, для которого выполняется команда.  
   
--   *Привязка команды* — это объект, сопоставляющий логику команды с командой.  
+- *Привязка команды* — это объект, сопоставляющий логику команды с командой.  
   
  В предыдущем примере команда <xref:System.Windows.Input.ApplicationCommands.Paste%2A> является командой, <xref:System.Windows.Controls.MenuItem> — источником команды, <xref:System.Windows.Controls.TextBox> — целевым объектом команды, а привязка команды предоставляется элементом управления <xref:System.Windows.Controls.TextBox>.  Следует отметить, что привязка <xref:System.Windows.Input.CommandBinding> не всегда предоставляется элементом управления, который является целевым классом команды.  Довольно часто <xref:System.Windows.Input.CommandBinding> должен создаваться разработчиком приложения, кроме того, <xref:System.Windows.Input.CommandBinding> может быть присоединен к предку целевого объекта команды.  
   
@@ -88,11 +88,11 @@ ms.locfileid: "59139039"
   
  <xref:System.Windows.Input.ICommandSource> предоставляет три свойства — <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> и <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>:  
   
--   <xref:System.Windows.Input.ICommandSource.Command%2A> — это команда, которая будет выполняться при вызове источника команды.  
+- <xref:System.Windows.Input.ICommandSource.Command%2A> — это команда, которая будет выполняться при вызове источника команды.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> — это объект, для которого выполняется команда.  Следует отметить, что в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] свойство <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> для <xref:System.Windows.Input.ICommandSource> применимо, только когда <xref:System.Windows.Input.ICommand> — <xref:System.Windows.Input.RoutedCommand>.  Если для <xref:System.Windows.Input.ICommandSource> задано значение <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>, и соответствующая команда — не <xref:System.Windows.Input.RoutedCommand>, целевой объект команды не учитывается. Если <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> не задан, в качестве целевого объекта будет использоваться элемент с фокусом клавиатуры.  
+- <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> — это объект, для которого выполняется команда.  Следует отметить, что в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] свойство <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> для <xref:System.Windows.Input.ICommandSource> применимо, только когда <xref:System.Windows.Input.ICommand> — <xref:System.Windows.Input.RoutedCommand>.  Если для <xref:System.Windows.Input.ICommandSource> задано значение <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>, и соответствующая команда — не <xref:System.Windows.Input.RoutedCommand>, целевой объект команды не учитывается. Если <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> не задан, в качестве целевого объекта будет использоваться элемент с фокусом клавиатуры.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> — это определяемый пользователем тип данных, который используется для передачи данных обработчикам, реализующим команду.  
+- <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> — это определяемый пользователем тип данных, который используется для передачи данных обработчикам, реализующим команду.  
   
  Классы [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], реализующие <xref:System.Windows.Input.ICommandSource>: <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Documents.Hyperlink> и <xref:System.Windows.Input.InputBinding>.  <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem> и <xref:System.Windows.Documents.Hyperlink> вызывают команду при щелчке, а <xref:System.Windows.Input.InputBinding> вызывает команду при выполнении связанного с ней <xref:System.Windows.Input.InputGesture>.  
   

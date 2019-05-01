@@ -3,11 +3,11 @@ title: Настройка отслеживания рабочего процес
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
 ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052772"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Настройка отслеживания рабочего процесса
 
@@ -52,7 +52,7 @@ instance.Extensions.Add(trackingParticipant);
 
 Рабочий процесс может быть предоставлен как служба WCF при размещении в <xref:System.ServiceModel.Activities.WorkflowServiceHost> узла службы. Класс <xref:System.ServiceModel.Activities.WorkflowServiceHost> является специализированной реализацией класса ServiceHost библиотеки .NET для службы на основе рабочих процессов. В этом разделе описывается настройка отслеживания для службы рабочего процесса [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], выполняющейся в <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Его настройка осуществляется с использованием файла Web.config (для служб, размещаемых на веб-сервере) или файла App.config (для служб, размещаемых в автономном приложении, например, в консольном приложении) посредством определения поведения службы или задания кода путем добавления поведения, связанного с отслеживанием, в коллекцию <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> для узла службы.
 
-Для службы рабочего процесса, размещенной в <xref:System.ServiceModel.WorkflowServiceHost>, можно добавить <xref:System.Activities.Tracking.EtwTrackingParticipant> с использованием элемента <`behavior`> в файле конфигурации, как это показано в следующем примере.
+Для службы рабочего процесса, размещенной в <xref:System.ServiceModel.WorkflowServiceHost>, вы можете добавить <xref:System.Activities.Tracking.EtwTrackingParticipant> с помощью <`behavior`> элемент в файле конфигурации, как показано в следующем примере.
 
 ```xml
 <behaviors>

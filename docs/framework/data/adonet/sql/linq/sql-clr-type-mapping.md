@@ -3,11 +3,11 @@ title: Сопоставление типов SQL-CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037704"
 ---
 # <a name="sql-clr-type-mapping"></a>Сопоставление типов SQL-CLR
 В LINQ to SQL модель данных реляционной базы данных сопоставляется с моделью объектов, выраженной на выбранном языке программирования. При выполнении приложения LINQ to SQL преобразует запросы LINQ модели объектов в код SQL и направляет их в базу данных для выполнения. Когда база данных возвращает результаты, LINQ to SQL преобразует их обратно в объекты, с которыми можно работать на языке программирования.  
@@ -16,23 +16,23 @@ ms.locfileid: "59152494"
   
  В этом разделе обсуждаются следующие вопросы.  
   
--   [Сопоставление типов по умолчанию](#DefaultTypeMapping)  
+- [Сопоставление типов по умолчанию](#DefaultTypeMapping)  
   
--   [Таблица поведения во время выполнения сопоставления типов](#BehaviorMatrix)  
+- [Таблица поведения во время выполнения сопоставления типов](#BehaviorMatrix)  
   
--   [Различия в поведении между CLR и выполнения SQL](#BehaviorDiffs)  
+- [Различия в поведении между CLR и выполнения SQL](#BehaviorDiffs)  
   
--   [Сопоставление перечислений](#EnumMapping)  
+- [Сопоставление перечислений](#EnumMapping)  
   
--   [Сопоставление чисел](#NumericMapping)  
+- [Сопоставление чисел](#NumericMapping)  
   
--   [Сопоставление текста и XML](#TextMapping)  
+- [Сопоставление текста и XML](#TextMapping)  
   
--   [Сопоставление даты и времени](#DateMapping)  
+- [Сопоставление даты и времени](#DateMapping)  
   
--   [Сопоставление двоичных объектов](#BinaryMapping)  
+- [Сопоставление двоичных объектов](#BinaryMapping)  
   
--   [Прочие виды сопоставления](#MiscMapping)  
+- [Прочие виды сопоставления](#MiscMapping)  
   
 <a name="DefaultTypeMapping"></a>   
 ## <a name="default-type-mapping"></a>Сопоставление типов по умолчанию  
@@ -58,21 +58,21 @@ ms.locfileid: "59152494"
   
  Например, ниже представлены некоторые отличия в работе среды CLR и SQL Server.  
   
--   SQL Server применяет для некоторых типов данных порядок, отличный от порядка эквивалентных типов в среде CLR. Например, порядок данных типа `UNIQUEIDENTIFIER` в SQL Server отличается от порядка данных типа <xref:System.Guid?displayProperty=nameWithType> в среде CLR.  
+- SQL Server применяет для некоторых типов данных порядок, отличный от порядка эквивалентных типов в среде CLR. Например, порядок данных типа `UNIQUEIDENTIFIER` в SQL Server отличается от порядка данных типа <xref:System.Guid?displayProperty=nameWithType> в среде CLR.  
   
--   Некоторые операции сравнения строк обрабатываются в SQL Server иначе, чем в среде CLR. Порядок сравнения строк в SQL Server зависит от параметров сортировки на сервере. Дополнительные сведения см. в разделе [работа с параметрами сортировки](https://go.microsoft.com/fwlink/?LinkId=115330) в электронной документации по Microsoft SQL Server.  
+- Некоторые операции сравнения строк обрабатываются в SQL Server иначе, чем в среде CLR. Порядок сравнения строк в SQL Server зависит от параметров сортировки на сервере. Дополнительные сведения см. в разделе [работа с параметрами сортировки](https://go.microsoft.com/fwlink/?LinkId=115330) в электронной документации по Microsoft SQL Server.  
   
--   Для некоторых сопоставленных функций SQL Server может возвращать значения, отличные от аналогичных значений, возвращаемых средой CLR. Например, функции проверки равенства будут возвращать различные результаты, поскольку SQL Server считает равными две строки, различающиеся только конечными пробелами, в то время как с точки зрения среды CLR эти строки не равны.  
+- Для некоторых сопоставленных функций SQL Server может возвращать значения, отличные от аналогичных значений, возвращаемых средой CLR. Например, функции проверки равенства будут возвращать различные результаты, поскольку SQL Server считает равными две строки, различающиеся только конечными пробелами, в то время как с точки зрения среды CLR эти строки не равны.  
   
 <a name="EnumMapping"></a>   
 ## <a name="enum-mapping"></a>Сопоставление перечислений  
  LINQ to SQL поддерживает два способа для сопоставления типа CLR <xref:System.Enum?displayProperty=nameWithType> с типами SQL Server.  
   
--   Сопоставление с числовыми типами SQL (`TINYINT`, `SMALLINT`, `INT`, `BIGINT`).  
+- Сопоставление с числовыми типами SQL (`TINYINT`, `SMALLINT`, `INT`, `BIGINT`).  
   
      При сопоставлении типа <xref:System.Enum?displayProperty=nameWithType> среды CLR с числовым типом SQL, выполняется сопоставление базового целочисленного значения CLR <xref:System.Enum?displayProperty=nameWithType> со значением в столбце базы данных SQL Server. Например, если объект <xref:System.Enum?displayProperty=nameWithType> с именем `DaysOfWeek` содержит элемент с именем `Tue`, базовое целочисленное значение для которого равно 3, то этому элементу сопоставляется значение 3 в базе данных.  
   
--   Сопоставление с текстовыми типами SQL (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`).  
+- Сопоставление с текстовыми типами SQL (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`).  
   
      При сопоставлении типа CLR <xref:System.Enum?displayProperty=nameWithType> с текстовым типом SQL выполняется сопоставление значения в базе данных SQL с именами элементов перечисления CLR <xref:System.Enum?displayProperty=nameWithType>. Например, если объект <xref:System.Enum?displayProperty=nameWithType> с именем `DaysOfWeek` содержит элемент с именем `Tue`, базовое целочисленное значение для которого равно 3, то этому элементу сопоставляется значение `Tue` в базе данных.  
   
@@ -154,13 +154,13 @@ ms.locfileid: "59152494"
 ### <a name="xml-types"></a>Типы XML  
  Тип данных SQL Server `XML` доступен в версиях Microsoft SQL Server 2005 и выше. Тип данных SQL Server `XML` может быть сопоставлен с <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XDocument> или <xref:System.String>. Если в столбце хранятся XML-фрагменты, которые невозможно считать в объект <xref:System.Xml.Linq.XElement>, то столбец необходимо сопоставить с типом <xref:System.String>, чтобы избежать ошибок времени выполнения. К XML-фрагментам, для которых необходимо сопоставление с типом <xref:System.String>, относятся следующие:  
   
--   последовательность XML-элементов;  
+- последовательность XML-элементов;  
   
--   Атрибуты  
+- Атрибуты  
   
--   общие идентификаторы;  
+- общие идентификаторы;  
   
--   Комментарии  
+- Комментарии  
   
  Несмотря на то, что вы можете сопоставить <xref:System.Xml.Linq.XElement> и <xref:System.Xml.Linq.XDocument> для SQL Server, как показано в [матрицу поведения во время выполнения тип сопоставления](#BehaviorMatrix), <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> метод имеет нет сопоставление типов SQL Server по умолчанию для этих типов.  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
 ms.openlocfilehash: 987d6c12262fd6530c6ef6f14cedeec269d3f2f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048120"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Настройка поддержки транзакций WS-Atomic
 В этой теме описывается, как можно настроить поддержку WS-AtomicTransaction (WS-AT) с помощью программы конфигурации WS-AT.  
@@ -106,17 +106,17 @@ ms.locfileid: "59315183"
   
 4. В **значение** поле ввода, введите одно из следующих допустимых значений для указания уровня трассировки, необходимо включить.  
   
--   0: выключено  
+- 0: выключено  
   
--   1: критично  
+- 1: критично  
   
--   3: ошибка. Это значение по умолчанию  
+- 3: ошибка. Это значение по умолчанию  
   
--   7: предупреждение  
+- 7: предупреждение  
   
--   15: информация  
+- 15: информация  
   
--   31: подробно  
+- 31: подробно  
   
 ## <a name="see-also"></a>См. также
 

@@ -3,11 +3,11 @@ title: Пример федерации
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
 ms.openlocfilehash: bc2c28300d9bfc3c30388f8d13e05a23a9f37287
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051916"
 ---
 # <a name="federation-sample"></a>Пример федерации
 В данном примере демонстрируется федеративная безопасность.  
@@ -17,13 +17,13 @@ ms.locfileid: "59769922"
   
  Сценарий состоит из 4 частей:  
   
--   служба BookStore;  
+- служба BookStore;  
   
--   служба маркеров безопасности BookStore;  
+- служба маркеров безопасности BookStore;  
   
--   служба маркеров безопасности HomeRealm;  
+- служба маркеров безопасности HomeRealm;  
   
--   клиент BookStore.  
+- клиент BookStore.  
   
  Служба BookStore поддерживает две операции: `BrowseBooks` и `BuyBook`. Служба позволяет выполнять анонимный доступ к операции `BrowseBooks`, но требует доступ с проверкой подлинности к операции `BuyBooks` . Проверка подлинности принимает форму маркера, выданного службой маркеров безопасности BookStore. Файл конфигурации службы BookStore указывает клиентам на службу маркеров безопасности BookStore с помощью `wsFederationHttpBinding`.  
   

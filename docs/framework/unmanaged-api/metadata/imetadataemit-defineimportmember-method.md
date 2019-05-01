@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 81acda4d395563fc8e0000e38036d1aaa0f14471
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62043226"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>Метод IMetaDataEmit::DefineImportMember
 Создает ссылку к указанному члену типа или модуль, который определен за пределами текущей области и определяет маркер для этой ссылки.  
@@ -72,11 +72,11 @@ HRESULT DefineImportMember (
   
  Как правило, прежде чем использовать `DefineImportMember` метод, необходимо создать, в текущей области, ссылка на тип или ссылка на модуль для родительского класса, интерфейса или модуля целевого элемента. Маркер метаданных для этой ссылки затем передается в `tkParent` аргумент. Необходимо создать ссылку на родительский объект целевого члена, если она будет разрешена позже компилятора или компоновщика. Подведение итогов.  
   
--   Если целевой член является полем или методом, используйте либо [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) или [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) метод, чтобы создать ссылку на тип, в текущей области, для родительский класс члена или родительского интерфейса.  
+- Если целевой член является полем или методом, используйте либо [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) или [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) метод, чтобы создать ссылку на тип, в текущей области, для родительский класс члена или родительского интерфейса.  
   
--   Если целевой член — это глобальная переменная или глобальная функция (то есть не является членом класса или интерфейса), используйте [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) метод для создания ссылки на модуль в текущей области, для родителя элемента модуль.  
+- Если целевой член — это глобальная переменная или глобальная функция (то есть не является членом класса или интерфейса), используйте [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) метод для создания ссылки на модуль в текущей области, для родителя элемента модуль.  
   
--   Если родительский объект целевого члена будет разрешена позже компилятора или компоновщика, то передайте `mdTokenNil` в `tkParent`. Единственный сценарий, в котором применяется при глобальной функции или глобальной переменной импортируется из OBJ-файле, который в конечном счете будет связан с текущим модулем и слияние метаданных.  
+- Если родительский объект целевого члена будет разрешена позже компилятора или компоновщика, то передайте `mdTokenNil` в `tkParent`. Единственный сценарий, в котором применяется при глобальной функции или глобальной переменной импортируется из OBJ-файле, который в конечном счете будет связан с текущим модулем и слияние метаданных.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

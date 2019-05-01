@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fe9bc9aea4ceb0f5b5c03416f43894b482c3294e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044295"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>Метод IMetaDataDispenserEx::GetOption
 Получает значение указанного параметра в текущей области метаданных. Параметр определяет, как обрабатываются вызовы к текущей области метаданных.  
@@ -46,19 +46,19 @@ HRESULT GetOption (
 ## <a name="remarks"></a>Примечания  
  Ниже приведены идентификаторы GUID, которые поддерживаются для этого метода. Описание, см. в разделе [IMetaDataDispenserEx::SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) метод. Если `optionId` находится не в этом списке, этот метод возвращает значение HRESULT `E_INVALIDARG`, указывающее, неверный параметр.  
   
--   MetaDataCheckDuplicatesFor  
+- MetaDataCheckDuplicatesFor  
   
--   MetaDataRefToDefCheck  
+- MetaDataRefToDefCheck  
   
--   MetaDataNotificationForTokenMovement  
+- MetaDataNotificationForTokenMovement  
   
--   MetaDataSetENC  
+- MetaDataSetENC  
   
--   MetaDataErrorIfEmitOutOfOrder  
+- MetaDataErrorIfEmitOutOfOrder  
   
--   MetaDataGenerateTCEAdapters  
+- MetaDataGenerateTCEAdapters  
   
--   MetaDataLinkerOptions  
+- MetaDataLinkerOptions  
   
 ## <a name="requirements"></a>Требования  
  **Платформа:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

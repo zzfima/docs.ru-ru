@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
 ms.openlocfilehash: 7b284a8f085ab7e93651c829ac16e47fb63a8b51
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034480"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Потребление набора данных из веб-службы XML
 Объект <xref:System.Data.DataSet> не имеет привязки к каким-либо источникам, что позволяет частично упростить передачу данных через Интернет. **Набора данных** является «сериализуемые», в том, что он может быть указан в качестве входных данных или выходные данные из XML-веб-служб без дополнительного кода, необходимых для потоковой передачи содержимого **набора данных** из XML-веб-службы к клиенту и обратно. **Набора данных** неявно преобразуется в поток XML с использованием формата DiffGram, отправляемых по сети и затем восстанавливается из потока XML в виде **набора данных** на принимающей стороне. Это обеспечивает очень простой и гибкий метод передачи и получения реляционных данных с помощью веб-служб XML. Дополнительные сведения о формате DiffGram см. в разделе [дельт](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  

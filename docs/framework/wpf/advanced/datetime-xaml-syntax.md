@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DateTime XAML syntax [WPF], format strings for
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
 ms.openlocfilehash: d7fe5f15f79ab068e88c3fb6f7b7cac0986aa636
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052928"
 ---
 # <a name="datetime-xaml-syntax"></a>Синтаксис DateTime XAML
 Некоторые элементы управления, такие как <xref:System.Windows.Controls.Calendar> и <xref:System.Windows.Controls.DatePicker>, имеют свойства, использующие <xref:System.DateTime> типа. Несмотря на то что начальные дата и время для этих элементов управления обычно указываются в коде программной части во время выполнения, их можно указать в коде XAML. Средство синтаксического анализа XAML WPF обрабатывает анализ <xref:System.DateTime> значения с помощью встроенных текстового синтаксиса XAML. В этом разделе описаны особенности <xref:System.DateTime> синтаксис текста XAML.  

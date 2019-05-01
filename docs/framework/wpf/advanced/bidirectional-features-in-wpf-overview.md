@@ -6,11 +6,11 @@ helpviewer_keywords:
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
 ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032023"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Общие сведения о двусторонних возможностях в WPF
 В отличие от других платформ разработки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеет множество функций, поддерживающих быструю разработку двунаправленного содержимого, например, направленного как слева направо и справа налево в одном документе. В то же время [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеет превосходный интерфейс для пользователей, которым необходимы двунаправленные возможности, такие как арабский и иврит, пользователям, говорящим.  
@@ -166,11 +166,11 @@ ms.locfileid: "59079829"
   
  Это свойство задает способ определения регионального стандарта для чисел. Оно принимает одно из трех <xref:System.Windows.Media.NumberCultureSource> значений перечисления.  
   
--   Переопределение: Региональный стандарт для чисел, — это <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> свойство.  
+- Переопределение: Региональный стандарт для чисел, — это <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> свойство.  
   
--   Text: Региональный стандарт для чисел определяется по региональному стандарту текстовой цепочки. В разметке, это было бы `xml:lang`, или его псевдоним `Language` свойство (<xref:System.Windows.FrameworkElement.Language%2A> или <xref:System.Windows.FrameworkContentElement.Language%2A>). Кроме того, он используется по умолчанию для классов, производных от <xref:System.Windows.FrameworkContentElement>. Эти классы включают <xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>, <xref:System.Windows.Documents.Table?displayProperty=nameWithType>, <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType> и т. д.  
+- Text: Региональный стандарт для чисел определяется по региональному стандарту текстовой цепочки. В разметке, это было бы `xml:lang`, или его псевдоним `Language` свойство (<xref:System.Windows.FrameworkElement.Language%2A> или <xref:System.Windows.FrameworkContentElement.Language%2A>). Кроме того, он используется по умолчанию для классов, производных от <xref:System.Windows.FrameworkContentElement>. Эти классы включают <xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>, <xref:System.Windows.Documents.Table?displayProperty=nameWithType>, <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType> и т. д.  
   
--   Пользователь: Региональный стандарт для чисел определяется по региональному стандарту текущего потока. Это свойство имеет значение по умолчанию для всех подклассов <xref:System.Windows.FrameworkElement> например <xref:System.Windows.Controls.Page>, <xref:System.Windows.Window> и <xref:System.Windows.Controls.TextBlock>.  
+- Пользователь: Региональный стандарт для чисел определяется по региональному стандарту текущего потока. Это свойство имеет значение по умолчанию для всех подклассов <xref:System.Windows.FrameworkElement> например <xref:System.Windows.Controls.Page>, <xref:System.Windows.Window> и <xref:System.Windows.Controls.TextBlock>.  
   
  **CultureOverride**.  
   
@@ -180,15 +180,15 @@ ms.locfileid: "59079829"
   
  Это свойство определяет выполняемый тип подстановки чисел. Оно принимает одно из следующих <xref:System.Windows.Media.NumberSubstitutionMethod> значений перечисления.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Метод подстановки определяется на основании региональных параметров чисел <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> свойство. Это значение по умолчанию.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Метод подстановки определяется на основании региональных параметров чисел <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> свойство. Это значение по умолчанию.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Если региональный стандарт для чисел арабский "или" Персидский языка и региональных параметров, он указывает, что цифры зависят от контекста.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Если региональный стандарт для чисел арабский "или" Персидский языка и региональных параметров, он указывает, что цифры зависят от контекста.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.European>: Числа всегда визуализируются как европейские цифры.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.European>: Числа всегда визуализируются как европейские цифры.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>: Числа отображаются с использованием национальных цифр для региональный стандарт для чисел, как указано в региональных параметрах <xref:System.Globalization.CultureInfo.NumberFormat%2A>.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>: Числа отображаются с использованием национальных цифр для региональный стандарт для чисел, как указано в региональных параметрах <xref:System.Globalization.CultureInfo.NumberFormat%2A>.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: Числа отображаются с использованием традиционных цифр для языка и региональных чисел. Для большинства языков и региональных параметров, это так же, как <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>. Тем не менее <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> результатов цифр на римские для некоторых арабских языков, тогда как это значение в арабских цифрах для всех арабских языков.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: Числа отображаются с использованием традиционных цифр для языка и региональных чисел. Для большинства языков и региональных параметров, это так же, как <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>. Тем не менее <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> результатов цифр на римские для некоторых арабских языков, тогда как это значение в арабских цифрах для всех арабских языков.  
   
  О чем говорят эти значения разработчикам двунаправленного содержимого? В большинстве случаев разработчику достаточно только для определения <xref:System.Windows.FlowDirection> и язык каждого текстового [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элемент, например `Language="ar-SA"` и <xref:System.Windows.Media.NumberSubstitution> логики отвечает за отображение чисел в соответствии с правильным [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. В следующем примере показано использование английских и арабских чисел в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложения, работающего в арабской версии [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
   

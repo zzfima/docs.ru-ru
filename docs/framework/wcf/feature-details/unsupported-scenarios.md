@@ -3,11 +3,11 @@ title: Неподдерживаемые сценарии
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050757"
 ---
 # <a name="unsupported-scenarios"></a>Неподдерживаемые сценарии
 По различным причинам Windows Communication Foundation (WCF) не поддерживает некоторые сценарии безопасности. Например [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition не реализует протоколы проверки подлинности SSPI и Kerberos, и поэтому WCF не поддерживает запуск службы с проверкой подлинности Windows на этой платформе. При выполнении WCF под Windows XP Home Edition, поддерживаются другие механизмы проверки подлинности, такие как имя пользователя и пароль и встроенная проверка подлинности HTTP/HTTPS.  
@@ -20,13 +20,13 @@ ms.locfileid: "59178780"
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP и включенные файлы Cookie маркера контекста безопасности  
  WCF не поддерживает олицетворение и <xref:System.InvalidOperationException> возникает исключение при выполнении следующих условий:  
   
--   Операционной системой является [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- Операционной системой является [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Режим проверки подлинности имеет результатом удостоверение Windows.  
+- Режим проверки подлинности имеет результатом удостоверение Windows.  
   
--   Свойству <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> класса <xref:System.ServiceModel.OperationBehaviorAttribute> присваивается значение <xref:System.ServiceModel.ImpersonationOption.Required>.  
+- Свойству <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> класса <xref:System.ServiceModel.OperationBehaviorAttribute> присваивается значение <xref:System.ServiceModel.ImpersonationOption.Required>.  
   
--   Создан маркер контекста безопасности с отслеживанием состояния (SCT) (по умолчанию создание отключено).  
+- Создан маркер контекста безопасности с отслеживанием состояния (SCT) (по умолчанию создание отключено).  
   
  Маркер SCT с отслеживанием состояния создается только с использованием пользовательской привязки. Дополнительные сведения см. в разделе [Как Создайте контекст безопасности маркера для безопасного сеанса](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) В коде маркер включается путем создания элемента привязки безопасности (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> или <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) с помощью метода <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> или <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> и присвоения параметру `requireCancellation` значения `false`. Параметр относится к кэшированию маркера SCT. Задание значения `false` включает функцию маркера SCT с отслеживанием состояния.  
   
@@ -68,18 +68,18 @@ ms.locfileid: "59178780"
   
  Узнать, используется ли в сертификате KSP, можно двумя способами.  
   
--   Сделайте платформозависимый вызов `p/invoke` функции `CertGetCertificateContextProperty` и проверьте свойство `dwProvType` возвращенного объекта `CertGetCertificateContextProperty`.  
+- Сделайте платформозависимый вызов `p/invoke` функции `CertGetCertificateContextProperty` и проверьте свойство `dwProvType` возвращенного объекта `CertGetCertificateContextProperty`.  
   
--   Используйте `certutil` команду из командной строки для запроса сертификатов. Дополнительные сведения см. в разделе [Задачи Certutil для устранения неполадок сертификатов](https://go.microsoft.com/fwlink/?LinkId=120056).  
+- Используйте `certutil` команду из командной строки для запроса сертификатов. Дополнительные сведения см. в разделе [Задачи Certutil для устранения неполадок сертификатов](https://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Сбой безопасности сообщений при использовании олицетворения ASP.NET и режима совместимости ASP.NET  
  WCF не поддерживает следующую комбинацию параметров, так как они могут помешать выполняться проверка подлинности клиента:  
   
--   Включено олицетворение [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Это делается в файле Web.config, задав `impersonate` атрибут <`identity`> элемент `true`.  
+- Включено олицетворение [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Это делается в файле Web.config, задав `impersonate` атрибут <`identity`> элемент `true`.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] режим совместимости можно включить, задав `aspNetCompatibilityEnabled` атрибут [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) для `true`.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] режим совместимости можно включить, задав `aspNetCompatibilityEnabled` атрибут [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) для `true`.  
   
--   Используется режим безопасности сообщения.  
+- Используется режим безопасности сообщения.  
   
  Временное решение - отключить режим совместимости [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Или, если [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] необходим режим совместимости, отключите [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] олицетворения компонентов и вместо этого используйте олицетворение, предоставляемую платформой WCF. Дополнительные сведения см. в разделе [делегирование и олицетворение](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   

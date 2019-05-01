@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
 ms.openlocfilehash: ee7b0b40d74d908dc4f25372273f852662370df0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037135"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Загрузка отложенного содержимого (службы данных WCF)
 По умолчанию [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ограничивает объем данных, возвращаемых запросом. Однако при необходимости из службы данных можно явно загрузить дополнительные данные, включая связанные сущности, разбитые на страницы данные ответа и потоки двоичных данных. Этот раздел описывает загрузку такого отложенного содержимого в приложении.  
@@ -22,14 +22,14 @@ ms.locfileid: "59518010"
 ## <a name="related-entities"></a>Связанные сущности  
  При выполнении запроса возвращаются только сущности в адресованном наборе сущностей. Например, когда запрос к службе данных Northwind возвращает сущности `Customers`, по умолчанию возврат связанных сущностей `Orders` не происходит, несмотря на наличие связи между сущностями `Customers` и `Orders`. Кроме того, если в службе данных включена подкачка, необходимо явно загружать последующие страницы данных из службы. Существует два способа загрузки связанных сущностей.  
   
--   **Безотложная загрузка**: Можно использовать `$expand` параметр запроса для запроса, что запрос будет возвращать сущности, связанные ассоциацией в объект набора, заданного запроса. Для добавления параметра <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> в запрос, отправляемый службе данных, используйте метод <xref:System.Data.Services.Client.DataServiceQuery%601> класса `$expand`. Несколько связанных наборов сущностей можно запросить, разделяя их запятыми, как показывает следующий пример. Все сущности, запрашиваемые в запросе, возвращаются в одном ответе. Следующий пример возвращает сущности `Order_Details` и `Customers` вместе с набором сущностей `Orders`:  
+- **Безотложная загрузка**: Можно использовать `$expand` параметр запроса для запроса, что запрос будет возвращать сущности, связанные ассоциацией в объект набора, заданного запроса. Для добавления параметра <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> в запрос, отправляемый службе данных, используйте метод <xref:System.Data.Services.Client.DataServiceQuery%601> класса `$expand`. Несколько связанных наборов сущностей можно запросить, разделяя их запятыми, как показывает следующий пример. Все сущности, запрашиваемые в запросе, возвращаются в одном ответе. Следующий пример возвращает сущности `Order_Details` и `Customers` вместе с набором сущностей `Orders`:  
   
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#expandorderdetailsspecific)]  
   
      Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ограничивают количество наборов сущностей, которые можно включить в один запрос, с помощью параметра запроса `$expand` двенадцатью наборами.  
   
--   **Явная загрузка**: Можно вызвать <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> метод <xref:System.Data.Services.Client.DataServiceContext> экземпляра для явной загрузки связанных сущностей. При каждом вызове метода <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> создается отдельный запрос к службе данных. Следующий пример явно загружает сущности `Order_Details` для сущности `Orders`:  
+- **Явная загрузка**: Можно вызвать <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> метод <xref:System.Data.Services.Client.DataServiceContext> экземпляра для явной загрузки связанных сущностей. При каждом вызове метода <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> создается отдельный запрос к службе данных. Следующий пример явно загружает сущности `Order_Details` для сущности `Orders`:  
   
      [!code-csharp[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadrelatedorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadrelatedorderdetailsspecific)]  

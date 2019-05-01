@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 80bf9de3eb274bf536b2794ba2ed14e7e9b553cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050055"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>Метод IMetaDataEmit::SetClassLayout
 Макет полей для класса, который был определен во время предыдущего вызова для завершения [метод DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
@@ -56,9 +56,9 @@ HRESULT SetClassLayout (
   
  Тем не менее может потребоваться поля, располагались в порядке их использования неуправляемым кодом. В этом случае выберите либо последовательный или явный макет и вызов `SetClassLayout` для завершения макета полей:  
   
--   Последовательное размещение: Укажите размер пакета. Поле выравнивается в соответствии с его естественному размеру или упаковочный размер, что приводит меньшего размера смещение поля. Задайте `rFieldOffsets` и `ulClassSize` до нуля.  
+- Последовательное размещение: Укажите размер пакета. Поле выравнивается в соответствии с его естественному размеру или упаковочный размер, что приводит меньшего размера смещение поля. Задайте `rFieldOffsets` и `ulClassSize` до нуля.  
   
--   Явное размещение: Задайте смещение каждого поля или размер класса, а также размером уплотнения.  
+- Явное размещение: Задайте смещение каждого поля или размер класса, а также размером уплотнения.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

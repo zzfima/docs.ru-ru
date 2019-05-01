@@ -8,11 +8,11 @@ helpviewer_keywords:
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
 ms.openlocfilehash: 4b0552ab9f565d9118415bc2da2823762f34fe2c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007413"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>Надстройки Firefox для поддержки развертывания приложений .NET
 Включить Windows Presentation Foundation (WPF) подключаемого модуля для Firefox и .NET Framework Assistant для Firefox [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], свободные [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]и приложений ClickOnce для работы с браузером Mozilla Firefox.  
@@ -27,9 +27,9 @@ ms.locfileid: "59111739"
 ## <a name="net-framework-assistant-for-firefox"></a>.NET Framework Assistant для Firefox  
  .NET Framework Assistant для Firefox позволяет выполнять из браузера Firefox автономного приложения ClickOnce. .NET Framework Assistant для Firefox функций идентично в том случае, если он установлен до и после браузер Firefox. При запуске браузера Firefox и [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] будет установлено, Firefox находит и устанавливает .NET Framework Assistant для Firefox. Пользователи могут настраивать .NET Framework Assistant для Firefox, выполнив следующие действия:  
   
--   Запрашивать перед запуском приложения ClickOnce.  
+- Запрашивать перед запуском приложения ClickOnce.  
   
--   Сообщать о всех установленных версий .NET Framework или только о последней версии.  
+- Сообщать о всех установленных версий .NET Framework или только о последней версии.  
   
  .NET Framework Assistant для Firefox входит в состав [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]. Сведения об удалении .NET Framework Assistant для Firefox, см. в разделе [удаление .NET Framework Assistant для Firefox](https://go.microsoft.com/fwlink/?LinkId=177944).  
   

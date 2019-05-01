@@ -8,11 +8,11 @@ helpviewer_keywords:
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
 ms.openlocfilehash: 74055ec3facb7db9145c4c0e969d57da24eccbc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053422"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Совместное использование циклов обработки сообщений между Win32 и WPF
 В этом разделе описывается, как реализовать цикл обработки сообщений для взаимодействия с [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], либо с помощью существующих сообщений раскрытия цикл в <xref:System.Windows.Threading.Dispatcher> или создав цикл обработки отдельных сообщений на [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] сторона кода взаимодействия.  
@@ -29,26 +29,26 @@ ms.locfileid: "59115080"
 ## <a name="writing-message-loops"></a>Написание циклов обработки сообщений  
  Ниже приведен контрольный список <xref:System.Windows.Interop.ComponentDispatcher> членов, которые будет использовать при написании собственного цикла обработки сообщений:  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>: ваш цикл обработки сообщений должен вызывать его, чтобы указать, что поток является модальным.  
+- <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>: ваш цикл обработки сообщений должен вызывать его, чтобы указать, что поток является модальным.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>: ваш цикл обработки сообщений должен вызывать его, чтобы указать, что поток обращается к немодальным.  
+- <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>: ваш цикл обработки сообщений должен вызывать его, чтобы указать, что поток обращается к немодальным.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>: ваш цикл обработки сообщений должен вызывать его, чтобы указать, что <xref:System.Windows.Interop.ComponentDispatcher> должен вызывать <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> событий. <xref:System.Windows.Interop.ComponentDispatcher> не вызовут <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> Если <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A> — `true`, но циклы обработки сообщений, можно вызвать <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A> даже в том случае, если <xref:System.Windows.Interop.ComponentDispatcher> не может отвечать на него в модальном состоянии.  
+- <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>: ваш цикл обработки сообщений должен вызывать его, чтобы указать, что <xref:System.Windows.Interop.ComponentDispatcher> должен вызывать <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> событий. <xref:System.Windows.Interop.ComponentDispatcher> не вызовут <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> Если <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A> — `true`, но циклы обработки сообщений, можно вызвать <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A> даже в том случае, если <xref:System.Windows.Interop.ComponentDispatcher> не может отвечать на него в модальном состоянии.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>: ваш цикл обработки сообщений должен вызывать его, чтобы указать, что доступно новое сообщение. Возвращаемое значение отражает ли прослушиватель для <xref:System.Windows.Interop.ComponentDispatcher> сообщение обработано событие. Если <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A> возвращает `true` (обработано), диспетчер в дальнейшем ничего с сообщением. Если возвращается значение `false`, диспетчер ожидает вызов [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] функция `TranslateMessage`, затем вызвать `DispatchMessage`.  
+- <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>: ваш цикл обработки сообщений должен вызывать его, чтобы указать, что доступно новое сообщение. Возвращаемое значение отражает ли прослушиватель для <xref:System.Windows.Interop.ComponentDispatcher> сообщение обработано событие. Если <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A> возвращает `true` (обработано), диспетчер в дальнейшем ничего с сообщением. Если возвращается значение `false`, диспетчер ожидает вызов [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] функция `TranslateMessage`, затем вызвать `DispatchMessage`.  
   
 ## <a name="using-componentdispatcher-and-existing-message-handling"></a>Использование диспетчера компонента и обработки существующих сообщений  
  Ниже приведен контрольный список <xref:System.Windows.Interop.ComponentDispatcher> членов, которые будет использовать при работе с внутренними запросами [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] цикл обработки сообщений.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>: возвращает ли приложение становится модальным (например, цикл обработки сообщений модальное был отправлен). <xref:System.Windows.Interop.ComponentDispatcher> может отслеживать это состояние, так как класс хранит количество <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A> и <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A> вызовы из цикла обработки сообщений.  
+- <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>: возвращает ли приложение становится модальным (например, цикл обработки сообщений модальное был отправлен). <xref:System.Windows.Interop.ComponentDispatcher> может отслеживать это состояние, так как класс хранит количество <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A> и <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A> вызовы из цикла обработки сообщений.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> и <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> событий выполните стандартные правила для вызова делегата. Делегаты вызываются в неопределенном порядке, и вызываются все делегаты, даже если первый из них помечает сообщение как обработанное.  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> и <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> событий выполните стандартные правила для вызова делегата. Делегаты вызываются в неопределенном порядке, и вызываются все делегаты, даже если первый из них помечает сообщение как обработанное.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>: указывает на соответствующий и эффективное время простоя обработки (нет других ожидающих сообщений для потока). <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> не будет вызываться, если поток является модальным.  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>: указывает на соответствующий и эффективное время простоя обработки (нет других ожидающих сообщений для потока). <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> не будет вызываться, если поток является модальным.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>: вызывается для всех сообщений, обрабатываемых сообщений.  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>: вызывается для всех сообщений, обрабатываемых сообщений.  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>: вызывается для всех сообщений, которые не были обработаны во время <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>.  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>: вызывается для всех сообщений, которые не были обработаны во время <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>.  
   
  Сообщение считается обработанным, если после <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> событий или <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> событий, `handled` параметр, передаваемый по ссылке в данных события является `true`. Обработчики событий должен игнорировать это сообщение, если `handled` является `true`, так как это означает, что другой обработчик обработал сообщение первым. Обработчики событий для обоих событий могут изменить сообщение. Диспетчер должен отправлять измененное сообщение, а не исходное сообщение без изменений. <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> доставляется всем прослушивателям, но архитектурно том, что только окно верхнего уровня, содержащий HWND, с которой сообщения должны вызвать код в ответ на сообщение.  
   

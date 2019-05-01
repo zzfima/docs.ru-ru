@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
 ms.openlocfilehash: 70dda68112d47d3e5a0609a5df7696920477c698
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032868"
 ---
 # <a name="planning-for-application-performance"></a>Планирование производительности приложения
 Успех достижения целей производительности зависит от того, насколько хорошо при разработке стратегии производительности. Планирование является первым этапом разработки любого продукта. В этом разделе описывается несколько очень простых правил для разработки стратегии высокой производительности.  

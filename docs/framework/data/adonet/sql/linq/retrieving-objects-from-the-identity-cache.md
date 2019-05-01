@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
 ms.openlocfilehash: 702d88f844f00b86e64404bd100fd6b3d34971c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033479"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Извлечение объектов из кэша идентификации
 В этом разделе описаны типы запросов LINQ to SQL, которые возвращают объект из кэша идентификаторов, управляемого <xref:System.Data.Linq.DataContext>.  
@@ -24,39 +24,39 @@ ms.locfileid: "59211235"
   
  Чтобы получить объект из кэша идентификаторов, запрос должен иметь одну из следующих общих форм.  
   
--   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`  
+- <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`  
   
--   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`  
+- <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`  
   
  В этих общих формах параметры `Function1`, `Function2` и `predicate` определяются следующим образом.  
   
  Параметр `Function1` может иметь любое из следующих значений.  
   
--   <xref:System.Linq.Queryable.Where%2A>  
+- <xref:System.Linq.Queryable.Where%2A>  
   
--   <xref:System.Linq.Queryable.First%2A>  
+- <xref:System.Linq.Queryable.First%2A>  
   
--   <xref:System.Linq.Queryable.FirstOrDefault%2A>  
+- <xref:System.Linq.Queryable.FirstOrDefault%2A>  
   
--   <xref:System.Linq.Queryable.Single%2A>  
+- <xref:System.Linq.Queryable.Single%2A>  
   
--   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
+- <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
  Параметр `Function2` может иметь любое из следующих значений.  
   
--   <xref:System.Linq.Queryable.First%2A>  
+- <xref:System.Linq.Queryable.First%2A>  
   
--   <xref:System.Linq.Queryable.FirstOrDefault%2A>  
+- <xref:System.Linq.Queryable.FirstOrDefault%2A>  
   
--   <xref:System.Linq.Queryable.Single%2A>  
+- <xref:System.Linq.Queryable.Single%2A>  
   
--   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
+- <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
  Параметр `predicate` должен быть выражением, в котором свойство первичного ключа объекта устанавливается в постоянное значение. Если первичный ключ определен в нескольких свойствах объекта, то в каждом свойстве должно быть задано постоянное значение. Далее представлены примеры формы, которую должен принимать параметр `predicate`.  
   
--   `c => c.PK == constant_value`  
+- `c => c.PK == constant_value`  
   
--   `c => c.PK1 == constant_value1 && c=> c.PK2 == constant_value2`  
+- `c => c.PK1 == constant_value1 && c=> c.PK2 == constant_value2`  
   
 ## <a name="example"></a>Пример  
  В следующем коде приводятся примеры типов запросов LINQ to SQL, которые получают объект из кэша идентификаторов.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - image controls [Windows Forms], about image controls
 ms.assetid: e5befee7-dc29-4888-a7c4-3b177e394112
 ms.openlocfilehash: 54ae01789f972381304480c9faf28d084ac3f1db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012637"
 ---
 # <a name="picturebox-control-overview-windows-forms"></a>Общие сведения об элементе управления PictureBox (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.PictureBox> элемент управления используется для отображения графики в формате точечного рисунка, GIF, JPEG, метафайла или значка.  

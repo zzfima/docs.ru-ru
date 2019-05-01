@@ -19,11 +19,11 @@ helpviewer_keywords:
 - forms [Windows Forms], custom shapes
 ms.assetid: 6e6041e0-8e67-4487-b1e9-e410dbd1ef6c
 ms.openlocfilehash: 03fcbb97db180e71283810e2daeab9be272b9d5d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004384"
 ---
 # <a name="how-to-create-a-shaped-windows-form"></a>Практическое руководство. Создание фигурной формы Windows Forms
 Этот пример создает форму эллипс, размеры.  
@@ -36,7 +36,7 @@ ms.locfileid: "59087259"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   Ссылки на пространства имен <xref:System.Windows.Forms> и <xref:System.Drawing>.  
+- Ссылки на пространства имен <xref:System.Windows.Forms> и <xref:System.Drawing>.  
   
  В этом примере переопределяется <xref:System.Windows.Forms.Control.OnPaint%2A> метод, чтобы изменить форму формы. Чтобы использовать этот код, скопируйте объявление метода, а также код рисования внутри метода.  
   

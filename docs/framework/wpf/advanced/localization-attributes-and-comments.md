@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
 ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62036235"
 ---
 # <a name="localization-attributes-and-comments"></a>Атрибуты и комментарии локализации
 Комментарии локализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] являются свойствами в исходном коде [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], предоставленными разработчиками для обеспечения правил и подсказок при локализации. Комментарии локализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] содержат два набора данных: атрибуты локализуемости и комментарии локализации в свободной форме. Атрибуты локализуемости используются API локализации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для указания того, какие ресурсы должны быть локализованы. Комментарии произвольной формы представляют собой любые сведения, которые автор приложения хочет указать.  
@@ -27,11 +27,11 @@ ms.locfileid: "59301858"
   
 3. Могут быть назначены следующие значения:  
   
-    -   **None** — комментарии и атрибуты остаются внутри сборки, отдельный файл не создается.  
+    - **None** — комментарии и атрибуты остаются внутри сборки, отдельный файл не создается.  
   
-    -   **CommentsOnly** — из сборки выносятся только комментарии и помещаются в отдельном файле LocFile.  
+    - **CommentsOnly** — из сборки выносятся только комментарии и помещаются в отдельном файле LocFile.  
   
-    -   **All** — из сборки выносятся комментарии и атрибуты, которые помещаются в отдельный файл LocFile.  
+    - **All** — из сборки выносятся комментарии и атрибуты, которые помещаются в отдельный файл LocFile.  
   
 4. При извлечении локализуемых ресурсов из [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] атрибуты локализуемости учитываются API локализации [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)].  
   
@@ -74,11 +74,11 @@ ms.locfileid: "59301858"
   
  Существует три типа атрибутов.  
   
--   **Категория**. Этот параметр определяет, должно ли значение изменяться из средства локализатора. См. раздел <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
+- **Категория**. Этот параметр определяет, должно ли значение изменяться из средства локализатора. См. раздел <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
   
--   **Удобочитаемость**. Этот параметр определяет, должно ли средство локализатора читать (и отображать) значение. См. раздел <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
+- **Удобочитаемость**. Этот параметр определяет, должно ли средство локализатора читать (и отображать) значение. См. раздел <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
   
--   **Изменяемость**. Этот параметр определяет, разрешает ли средство локализатора изменять значение. См. раздел <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
+- **Изменяемость**. Этот параметр определяет, разрешает ли средство локализатора изменять значение. См. раздел <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
   
  Эти атрибуты можно указать в любом порядке через пробел. В случае указания дублированных атрибутов последний атрибут переопределяет предыдущие. Например, Localization.Attributes = "Unmodifiable Modifiable" устанавливает параметр Modifiability в значение Modifiable, так как это последнее значение.  
   
