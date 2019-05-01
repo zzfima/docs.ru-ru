@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9b2244ec1be6fc0e5e19fac5adc7ecb38d68a0af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987991"
 ---
-# <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a><span data-ttu-id="332f2-102">Метод ICorDebugNativeFrame::GetLocalMemoryRegisterValue</span><span class="sxs-lookup"><span data-stu-id="332f2-102">ICorDebugNativeFrame::GetLocalMemoryRegisterValue Method</span></span>
-<span data-ttu-id="332f2-103">Получает значение аргумента или локальной переменной, из которых младшее слово и старшее слово хранятся в указанном регистре и расположение в памяти, соответственно, для данного кадра машинного кода.</span><span class="sxs-lookup"><span data-stu-id="332f2-103">Gets the value of an argument or local variable, of which the low word and high word are stored in the specified register and memory location, respectively, for this native frame.</span></span>  
+# <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a><span data-ttu-id="c7aba-102">Метод ICorDebugNativeFrame::GetLocalMemoryRegisterValue</span><span class="sxs-lookup"><span data-stu-id="c7aba-102">ICorDebugNativeFrame::GetLocalMemoryRegisterValue Method</span></span>
+<span data-ttu-id="c7aba-103">Получает значение аргумента или локальной переменной, из которых младшее слово и старшее слово хранятся в указанном регистре и расположение в памяти, соответственно, для данного кадра машинного кода.</span><span class="sxs-lookup"><span data-stu-id="c7aba-103">Gets the value of an argument or local variable, of which the low word and high word are stored in the specified register and memory location, respectively, for this native frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="332f2-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="332f2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c7aba-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c7aba-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalMemoryRegisterValue (  
@@ -39,29 +39,29 @@ HRESULT GetLocalMemoryRegisterValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="332f2-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="332f2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c7aba-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c7aba-105">Parameters</span></span>  
  `highWordAddress`  
- <span data-ttu-id="332f2-106">[in] Объект `CORDB_ADDRESS` значение, указывающее область памяти, содержащий старшее слово значения.</span><span class="sxs-lookup"><span data-stu-id="332f2-106">[in] A `CORDB_ADDRESS` value that specifies the memory location containing the high word of the value.</span></span>  
+ <span data-ttu-id="c7aba-106">[in] Объект `CORDB_ADDRESS` значение, указывающее область памяти, содержащий старшее слово значения.</span><span class="sxs-lookup"><span data-stu-id="c7aba-106">[in] A `CORDB_ADDRESS` value that specifies the memory location containing the high word of the value.</span></span>  
   
  `lowWordRegister`  
- <span data-ttu-id="332f2-107">[in] Значение, указывающее регистр, содержащий младшее слово значение перечисления «CorDebugRegister».</span><span class="sxs-lookup"><span data-stu-id="332f2-107">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the low word of the value.</span></span>  
+ <span data-ttu-id="c7aba-107">[in] Значение, указывающее регистр, содержащий младшее слово значение перечисления «CorDebugRegister».</span><span class="sxs-lookup"><span data-stu-id="c7aba-107">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the low word of the value.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="332f2-108">[in] Целое число, указывающее размер двоичную подпись метаданных которого ссылается `pvSigBlob` параметра.</span><span class="sxs-lookup"><span data-stu-id="332f2-108">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
+ <span data-ttu-id="c7aba-108">[in] Целое число, указывающее размер двоичную подпись метаданных которого ссылается `pvSigBlob` параметра.</span><span class="sxs-lookup"><span data-stu-id="c7aba-108">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="332f2-109">[in] Объект `PCCOR_SIGNATURE` значение, которое указывает на двоичную подпись метаданных типа значения.</span><span class="sxs-lookup"><span data-stu-id="332f2-109">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
+ <span data-ttu-id="c7aba-109">[in] Объект `PCCOR_SIGNATURE` значение, которое указывает на двоичную подпись метаданных типа значения.</span><span class="sxs-lookup"><span data-stu-id="c7aba-109">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="332f2-110">[out] Указатель на адрес объекта «ICorDebugValue», представляющего извлеченное значение, которое хранится в указанном расположении регистра и памяти.</span><span class="sxs-lookup"><span data-stu-id="332f2-110">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified register and memory location.</span></span>  
+ <span data-ttu-id="c7aba-110">[out] Указатель на адрес объекта «ICorDebugValue», представляющего извлеченное значение, которое хранится в указанном расположении регистра и памяти.</span><span class="sxs-lookup"><span data-stu-id="c7aba-110">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified register and memory location.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="332f2-111">Требования</span><span class="sxs-lookup"><span data-stu-id="332f2-111">Requirements</span></span>  
- <span data-ttu-id="332f2-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="332f2-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c7aba-111">Требования</span><span class="sxs-lookup"><span data-stu-id="c7aba-111">Requirements</span></span>  
+ <span data-ttu-id="c7aba-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c7aba-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="332f2-113">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="332f2-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c7aba-113">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c7aba-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="332f2-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="332f2-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c7aba-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c7aba-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="332f2-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="332f2-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c7aba-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c7aba-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="332f2-116">См. также</span><span class="sxs-lookup"><span data-stu-id="332f2-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c7aba-116">См. также</span><span class="sxs-lookup"><span data-stu-id="c7aba-116">See also</span></span>
