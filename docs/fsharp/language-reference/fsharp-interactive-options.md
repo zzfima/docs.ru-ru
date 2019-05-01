@@ -3,11 +3,11 @@ title: Параметры F# Interactive
 description: Дополнительные сведения о параметрах командной строки, поддерживаемые F# Interactive, fsi.exe.
 ms.date: 05/16/2016
 ms.openlocfilehash: cca1ef6671878acb1b837d6590139d5de7b7167d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996805"
 ---
 # <a name="f-interactive-options"></a>Параметры F# Interactive
 

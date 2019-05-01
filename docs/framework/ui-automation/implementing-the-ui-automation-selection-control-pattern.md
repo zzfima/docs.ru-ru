@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
 ms.openlocfilehash: 6b5e0e4e0a14410c23833db6cc90d23e7959ad22
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983272"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>Реализация шаблона элемента управления модели автоматизации пользовательского интерфейса "Выделение"
 > [!NOTE]
@@ -25,16 +25,16 @@ ms.locfileid: "59087729"
 ## <a name="implementation-guidelines-and-conventions"></a>Правила и соглашения реализации  
  При реализации шаблона элемента управления Selection обратите внимание на следующие правила и соглашения.  
   
--   Элементы управления, реализующие <xref:System.Windows.Automation.Provider.ISelectionProvider> , разрешают выбирать один или несколько дочерних элементов. Например, список, представление списка и представление в виде дерева поддерживают множественный выбор, в то время как поле со списком, ползунки и группа переключателей поддерживают единичный выбор.  
+- Элементы управления, реализующие <xref:System.Windows.Automation.Provider.ISelectionProvider> , разрешают выбирать один или несколько дочерних элементов. Например, список, представление списка и представление в виде дерева поддерживают множественный выбор, в то время как поле со списком, ползунки и группа переключателей поддерживают единичный выбор.  
   
--   Элементы управления, имеющие минимальный, максимальный и непрерывный диапазон, такие как элемент управления "Ползунок" для элемента **Объем** , должны реализовывать <xref:System.Windows.Automation.Provider.IRangeValueProvider> вместо <xref:System.Windows.Automation.Provider.ISelectionProvider>.  
+- Элементы управления, имеющие минимальный, максимальный и непрерывный диапазон, такие как элемент управления "Ползунок" для элемента **Объем** , должны реализовывать <xref:System.Windows.Automation.Provider.IRangeValueProvider> вместо <xref:System.Windows.Automation.Provider.ISelectionProvider>.  
   
--   Элементы управления, поддерживающие единичный выбор, которые управляют дочерними элементами, реализующими <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, такие как ползунок **Разрешение экрана** в диалоговом окне **Свойства экрана** или элемент управления "Выбор" для элемента **Палитра цветов** из [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (см. ниже), должны реализовывать <xref:System.Windows.Automation.Provider.ISelectionProvider>; их дочерние элементы должны реализовывать <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> и <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
+- Элементы управления, поддерживающие единичный выбор, которые управляют дочерними элементами, реализующими <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, такие как ползунок **Разрешение экрана** в диалоговом окне **Свойства экрана** или элемент управления "Выбор" для элемента **Палитра цветов** из [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (см. ниже), должны реализовывать <xref:System.Windows.Automation.Provider.ISelectionProvider>; их дочерние элементы должны реализовывать <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> и <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
   
  ![Палитра с отмеченным желтым цветом. ](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Пример сопоставления строки настройки цвета  
   
--   Меню не поддерживают <xref:System.Windows.Automation.SelectionPattern>. Если вы работаете с пунктами меню, включающими графику и текст (такими как элементы **области просмотра** в меню **Вид** в [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)]), и необходимо передать состояние, следует реализовать <xref:System.Windows.Automation.Provider.IToggleProvider>.  
+- Меню не поддерживают <xref:System.Windows.Automation.SelectionPattern>. Если вы работаете с пунктами меню, включающими графику и текст (такими как элементы **области просмотра** в меню **Вид** в [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)]), и необходимо передать состояние, следует реализовать <xref:System.Windows.Automation.Provider.IToggleProvider>.  
   
 <a name="Required_Members_for_ISelectionProvider"></a>   
 ## <a name="required-members-for-iselectionprovider"></a>Обязательные члены для ISelectionProvider  

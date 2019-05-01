@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c5d2539bc732cdc41c7514fd5d81c449ed8f17a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992892"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>Метод ICLRStrongName::StrongNameSignatureGenerationEx
 Создает подпись строгого имени для указанной сборки, в соответствии с заданными флагами.  
@@ -69,9 +69,9 @@ HRESULT StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in] Один или несколько из следующих значений:  
   
--   `SN_SIGN_ALL_FILES` (0x00000001) — повторно вычисляет все хэши для связанных модулей.  
+- `SN_SIGN_ALL_FILES` (0x00000001) — повторно вычисляет все хэши для связанных модулей.  
   
--   `SN_TEST_SIGN` (0x00000002) — пробное подписание сборки.  
+- `SN_TEST_SIGN` (0x00000002) — пробное подписание сборки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).  

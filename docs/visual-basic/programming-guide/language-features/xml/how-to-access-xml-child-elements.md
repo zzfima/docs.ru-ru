@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: 6689eb36-c471-469f-a82d-099ab8197b25
 ms.openlocfilehash: cd1b0db5305c7879d89cfdfff6cd458d6dea14f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973034"
 ---
 # <a name="how-to-access-xml-child-elements-visual-basic"></a>Практическое руководство. Доступа к дочерним XML-элементам (Visual Basic)
 В этом примере показано, как использовать дочернего свойства оси для доступа к все дочерние элементы XML, которые имеют указанное имя элемента XML. В частности, он использует <xref:System.Xml.Linq.XElement.Value%2A> свойство, чтобы получить значение первого элемента в коллекции, `name` возвращает свойство дочерней оси. `name` Child axis-свойство получает все дочерние элементы с именем `phone` в `contact` объекта. В этом примере также используется `phone` свойство дочерней оси для доступа к все дочерние элементы с именем `phone` , содержащихся в `contact` объекта.  
@@ -23,7 +23,7 @@ ms.locfileid: "58836822"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   ссылка на пространство имен <xref:System.Xml.Linq>.  
+- ссылка на пространство имен <xref:System.Xml.Linq>.  
   
 ## <a name="see-also"></a>См. также
 

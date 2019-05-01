@@ -3,11 +3,11 @@ title: Суррогат DataContract
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
 ms.openlocfilehash: a56fbcabfacf146142f7b0c0623325cc8e69c29a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990422"
 ---
 # <a name="datacontract-surrogate"></a>Суррогат DataContract
 В этом образце показано, каким образом такие процессы, как сериализация, десериализация, экспорт и импорт схемы, могут быть настроены при помощи заменяющего класса контракта данных. В этом примере показано, как использовать заменяющий класс в сценарий клиента и сервера, где данные сериализуются и передаются между клиентом Windows Communication Foundation (WCF) и службы.  

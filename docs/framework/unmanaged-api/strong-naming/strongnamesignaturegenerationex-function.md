@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5d60b9a9ae566b5bd686b27b2e09861a8414979
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000237"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>Функция StrongNameSignatureGenerationEx
 Создает подпись строгого имени для указанной сборки, в соответствии с заданными флагами.  
@@ -70,9 +70,9 @@ BOOLEAN StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in] Один или несколько из следующих значений:  
   
--   `SN_SIGN_ALL_FILES` (0x00000001) — повторно вычисляет все хэши для связанных модулей.  
+- `SN_SIGN_ALL_FILES` (0x00000001) — повторно вычисляет все хэши для связанных модулей.  
   
--   `SN_TEST_SIGN` (0x00000002) — пробное подписание сборки.  
+- `SN_TEST_SIGN` (0x00000002) — пробное подписание сборки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  `true` После успешного выполнения; в противном случае `false`.  

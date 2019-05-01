@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b4eeecc22db5786f66b3d484b521989e71817d8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995128"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>Метод ICorDebugManagedCallback2::ChangeConnection
 Уведомляет отладчик о том, что изменился набор задач, связанных с указанным соединением.  
@@ -46,9 +46,9 @@ HRESULT ChangeConnection (
 ## <a name="remarks"></a>Примечания  
  Объект `ChangeConnection` обратного вызова будет запускаться в любом из следующих случаев:  
   
--   Когда отладчик подключается к процессу, который содержит соединения. В этом случае среда выполнения создаст и диспетчеризации [ICorDebugManagedCallback2::CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md) событий и `ChangeConnection` событий для каждого соединения в процессе. Объект `ChangeConnection` событие создается для каждого существующего подключения, независимо от того, это подключение набора задач был изменен с момента его создания.  
+- Когда отладчик подключается к процессу, который содержит соединения. В этом случае среда выполнения создаст и диспетчеризации [ICorDebugManagedCallback2::CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md) событий и `ChangeConnection` событий для каждого соединения в процессе. Объект `ChangeConnection` событие создается для каждого существующего подключения, независимо от того, это подключение набора задач был изменен с момента его создания.  
   
--   Если узел вызывает [ICLRDebugManager::SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) в [API размещения](../../../../docs/framework/unmanaged-api/hosting/index.md).  
+- Если узел вызывает [ICLRDebugManager::SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) в [API размещения](../../../../docs/framework/unmanaged-api/hosting/index.md).  
   
  Отладчик должен просканировать все потоки в процессе, чтобы собрать новые изменения.  
   

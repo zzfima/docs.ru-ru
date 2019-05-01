@@ -16,11 +16,11 @@ ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1297c84acadf0a53b418b06afe806237d374ee25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993165"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>Метод ICLRRuntimeInfo::IsStarted
 Указывает, был ли запущен среды выполнения (то есть ли [метод ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) был вызван и успешно).  

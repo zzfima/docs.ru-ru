@@ -9,11 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
 ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973754"
 ---
 # <a name="tilebrush-overview"></a>Общие сведения о TileBrush
 <xref:System.Windows.Media.TileBrush> объекты обеспечивают высокую степень контроля над закрашивание области с изображением, <xref:System.Windows.Media.Drawing>, или <xref:System.Windows.Media.Visual>. В этом разделе описывается использование <xref:System.Windows.Media.TileBrush> функции позволяют получить больший контроль над тем, как <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, или <xref:System.Windows.Media.VisualBrush> закрашивает область.  
@@ -40,11 +40,11 @@ ms.locfileid: "59125309"
 ## <a name="brush-content"></a>Содержимое кисти  
  Существует три разных типа <xref:System.Windows.Media.TileBrush> и каждый закрашивает различным типом содержимого.  
   
--   Если используется кисть <xref:System.Windows.Media.ImageBrush>, это содержимое является изображением <xref:System.Windows.Media.ImageBrush.ImageSource%2A> свойство определяет содержимое <xref:System.Windows.Media.ImageBrush>.  
+- Если используется кисть <xref:System.Windows.Media.ImageBrush>, это содержимое является изображением <xref:System.Windows.Media.ImageBrush.ImageSource%2A> свойство определяет содержимое <xref:System.Windows.Media.ImageBrush>.  
   
--   Если используется кисть <xref:System.Windows.Media.DrawingBrush>, это содержимое является рисунка. <xref:System.Windows.Media.DrawingBrush.Drawing%2A> Свойство определяет содержимое <xref:System.Windows.Media.DrawingBrush>.  
+- Если используется кисть <xref:System.Windows.Media.DrawingBrush>, это содержимое является рисунка. <xref:System.Windows.Media.DrawingBrush.Drawing%2A> Свойство определяет содержимое <xref:System.Windows.Media.DrawingBrush>.  
   
--   Если используется кисть <xref:System.Windows.Media.VisualBrush>, это содержимое является визуальный элемент. <xref:System.Windows.Media.VisualBrush.Visual%2A> Свойство определяет содержание <xref:System.Windows.Media.VisualBrush>.  
+- Если используется кисть <xref:System.Windows.Media.VisualBrush>, это содержимое является визуальный элемент. <xref:System.Windows.Media.VisualBrush.Visual%2A> Свойство определяет содержание <xref:System.Windows.Media.VisualBrush>.  
   
  Можно указать положение и размеры <xref:System.Windows.Media.TileBrush> содержимого с помощью <xref:System.Windows.Media.TileBrush.Viewbox%2A> свойство, несмотря на то, что довольно часто, чтобы оставить <xref:System.Windows.Media.TileBrush.Viewbox%2A> присвоено значение по умолчанию. По умолчанию <xref:System.Windows.Media.TileBrush.Viewbox%2A> полностью содержит содержимое кисти. Дополнительные сведения о настройке <xref:System.Windows.Controls.Viewbox>, см. в разделе <xref:System.Windows.Controls.Viewbox> страницу свойств.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "59125309"
 ## <a name="the-base-tile"></a>Базовый элемент мозаики  
  Объект <xref:System.Windows.Media.TileBrush> проецирует свое содержимое на базовый элемент мозаики. <xref:System.Windows.Media.TileBrush.Stretch%2A> Свойства элементов управления как <xref:System.Windows.Media.TileBrush> содержимое растягивается для заполнения базового элемента мозаики. <xref:System.Windows.Media.TileBrush.Stretch%2A> Свойство принимает следующие значения, определенные <xref:System.Windows.Media.Stretch> перечисления:  
   
--   <xref:System.Windows.Media.Stretch.None>: Содержимое кисти не растягивается для заполнения плитки.  
+- <xref:System.Windows.Media.Stretch.None>: Содержимое кисти не растягивается для заполнения плитки.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: Содержимое кисти масштабируется по размерам плитки. Поскольку высота и ширина содержимого масштабируются независимо друг от друга, исходные пропорции содержимого могут не сохраняться. То есть содержимое кисти может быть деформировано для полного заполнения выводимого элемента.  
+- <xref:System.Windows.Media.Stretch.Fill>: Содержимое кисти масштабируется по размерам плитки. Поскольку высота и ширина содержимого масштабируются независимо друг от друга, исходные пропорции содержимого могут не сохраняться. То есть содержимое кисти может быть деформировано для полного заполнения выводимого элемента.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: Содержимое кисти масштабируется таким образом, чтобы полностью уместиться внутри фрагмента. Пропорции содержимого сохраняются.  
+- <xref:System.Windows.Media.Stretch.Uniform>: Содержимое кисти масштабируется таким образом, чтобы полностью уместиться внутри фрагмента. Пропорции содержимого сохраняются.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: Содержимое кисти масштабируется таким образом, чтобы полностью заполнить область вывода при этом сохранить исходные пропорции содержимого.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: Содержимое кисти масштабируется таким образом, чтобы полностью заполнить область вывода при этом сохранить исходные пропорции содержимого.  
   
  На следующем рисунке показан другой <xref:System.Windows.Media.TileBrush.Stretch%2A> параметры.  
   
@@ -99,15 +99,15 @@ ms.locfileid: "59125309"
 ### <a name="tiling-behavior"></a>Поведение элементов при заполнении  
  Объект <xref:System.Windows.Media.TileBrush> создает шаблон заполнения, когда его базового фрагмента мозаики не полностью заполняет область вывода и режим заполнения затем <xref:System.Windows.Media.TileMode.None> указан. Когда мозаичной кисти не полностью заполняет область вывода, его <xref:System.Windows.Media.TileBrush.TileMode%2A> свойство указывает, должен ли базовый мозаичный элемент дублироваться для заполнения области вывода, и если да, то как. <xref:System.Windows.Media.TileBrush.TileMode%2A> Свойство принимает следующие значения, определенные <xref:System.Windows.Media.TileMode> перечисления:  
   
--   <xref:System.Windows.Media.TileMode.None>: Только базовый мозаичный элемент рисуется.  
+- <xref:System.Windows.Media.TileMode.None>: Только базовый мозаичный элемент рисуется.  
   
--   <xref:System.Windows.Media.TileMode.Tile>: Базовый мозаичный элемент рисуется, и оставшаяся область заполняется повторами базового элемента мозаики таким образом, правого края одну плитку Примыкает к левой границей следующей и аналогично для верхней и нижней границ.  
+- <xref:System.Windows.Media.TileMode.Tile>: Базовый мозаичный элемент рисуется, и оставшаяся область заполняется повторами базового элемента мозаики таким образом, правого края одну плитку Примыкает к левой границей следующей и аналогично для верхней и нижней границ.  
   
--   <xref:System.Windows.Media.TileMode.FlipX>: Так же, как <xref:System.Windows.Media.TileMode.Tile>, но Чередующиеся столбцы элементов отражаются по горизонтали.  
+- <xref:System.Windows.Media.TileMode.FlipX>: Так же, как <xref:System.Windows.Media.TileMode.Tile>, но Чередующиеся столбцы элементов отражаются по горизонтали.  
   
--   <xref:System.Windows.Media.TileMode.FlipY>: Так же, как <xref:System.Windows.Media.TileMode.Tile>, но чередующиеся строки элементов отражаются по вертикали.  
+- <xref:System.Windows.Media.TileMode.FlipY>: Так же, как <xref:System.Windows.Media.TileMode.Tile>, но чередующиеся строки элементов отражаются по вертикали.  
   
--   <xref:System.Windows.Media.TileMode.FlipXY>: Комбинация <xref:System.Windows.Media.TileMode.FlipX> и <xref:System.Windows.Media.TileMode.FlipY>.  
+- <xref:System.Windows.Media.TileMode.FlipXY>: Комбинация <xref:System.Windows.Media.TileMode.FlipX> и <xref:System.Windows.Media.TileMode.FlipY>.  
   
  На следующем рисунке показаны различные режимы заполнения.  
   

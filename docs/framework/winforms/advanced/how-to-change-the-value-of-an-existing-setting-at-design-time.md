@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], changing
 ms.assetid: 5da91272-ad7e-49e7-9d1f-eb64439a1e4d
 ms.openlocfilehash: 6421171072f72764927b1a449c0257a29e8e82d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004423"
 ---
 # <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Как выполнить: Изменение значения существующего параметра во время разработки
 Visual Studio можно использовать для изменения значений существующих параметров в проекте.  

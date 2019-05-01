@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
 ms.openlocfilehash: d58f25f279bf2baa1caa7744cea94b909f48866f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002070"
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Практическое руководство. Олицетворение клиента в рамках службы
 Олицетворение клиента в службы Windows Communication Foundation (WCF) позволяет службе выполнять действия от имени клиента. В случае действий, для которых предусмотрены проверки списка управления доступом (ACL), таким как доступ к каталогам и файлам на компьютере или доступ к базе данных SQL Server, проверка ACL выполняется с использованием клиентской учетной записи пользователя. В данном разделе представлены основные этапы установки клиентом уровня олицетворения клиента в домене Windows. Рабочий пример см. в разделе [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md). Дополнительные сведения об олицетворении клиента см. в разделе [делегирование и олицетворение](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  

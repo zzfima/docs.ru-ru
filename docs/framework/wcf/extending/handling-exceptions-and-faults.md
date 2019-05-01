@@ -3,11 +3,11 @@ title: Обработка исключений и сбоев
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
 ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991423"
 ---
 # <a name="handling-exceptions-and-faults"></a>Обработка исключений и сбоев
 Исключения используются, чтобы передать сведения об ошибках локально в службе или реализации клиента. С другой стороны, сбои используются, чтобы передать ошибки за пределы службы, например, от сервера клиенту или наоборот. Помимо сбоев каналы транспорта часто используют механизмы, связанные с транспортом, чтобы сообщить об ошибках на транспортном уровне. Например, транспорт HTTP использует коды состояния, такие как «404», чтобы сообщить о несуществующем конечном URL-адресе (отсутствует конечная точка, чтобы вернуть ошибку). Этот документ состоит из трех разделов, в которых содержится руководство для разработчиков пользовательских каналов. В первом разделе содержится руководство о том, когда и как определять и выдавать исключения. Во втором разделе содержится руководство по созданию и использованию ошибок. В третьем разделе разъясняется, как предоставить данные трассировки, которые помогут пользователю созданного канала устранить неполадки в выполняемых приложениях.  
@@ -309,9 +309,9 @@ public class MessageFault
 ## <a name="tracing"></a>Трассировка  
  Платформа .NET Framework обеспечивает механизм для трассировки выполнения программы, который полезен для диагностики приложений в производственной среде или периодических проблем, когда нет возможности использовать отладчик для пошаговой проверки кода. Основные компоненты этого механизма расположены в пространстве имен <xref:System.Diagnostics?displayProperty=nameWithType> и состоят из следующих элементов.  
   
--   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, являющийся источником записываемых данных трассировки, <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, являющийся абстрактным базовым классом для конкретных прослушивателей, которые получают подлежащие трассировке сведения из <xref:System.Diagnostics.TraceSource> и выводят их в назначение, зависящее от прослушивателя. Например, <xref:System.Diagnostics.XmlWriterTraceListener> выводит данные трассировки в XML-файл. Наконец, класс <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> позволяет пользователю управлять детализацией трассировке и обычно задается в конфигурации.  
+- <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, являющийся источником записываемых данных трассировки, <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, являющийся абстрактным базовым классом для конкретных прослушивателей, которые получают подлежащие трассировке сведения из <xref:System.Diagnostics.TraceSource> и выводят их в назначение, зависящее от прослушивателя. Например, <xref:System.Diagnostics.XmlWriterTraceListener> выводит данные трассировки в XML-файл. Наконец, класс <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> позволяет пользователю управлять детализацией трассировке и обычно задается в конфигурации.  
   
--   Помимо основных компонентов, можно использовать [программа Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) для просмотра и поиска WCF выполняет трассировку. Это средство предназначено специально для файлов трассировки создаются WCF и записанных с помощью <xref:System.Diagnostics.XmlWriterTraceListener>. На следующем рисунке показаны различные компоненты, задействованные с трассировке.  
+- Помимо основных компонентов, можно использовать [программа Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) для просмотра и поиска WCF выполняет трассировку. Это средство предназначено специально для файлов трассировки создаются WCF и записанных с помощью <xref:System.Diagnostics.XmlWriterTraceListener>. На следующем рисунке показаны различные компоненты, задействованные с трассировке.  
   
  ![Обработка исключений и сбоев](../../../../docs/framework/wcf/extending/media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
   

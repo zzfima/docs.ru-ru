@@ -25,11 +25,11 @@ helpviewer_keywords:
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
 ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001583"
 ---
 # <a name="input-overview"></a>Общие сведения о входных данных
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Подсистема предоставляет мощный [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] для получения входных данных из широкого спектра устройств, включая мышь, клавиатура, сенсорного ввода и пера. В этом разделе описываются службы, предоставляемые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], и объясняется архитектура систем ввода.
@@ -144,43 +144,43 @@ ms.locfileid: "59320019"
 ### <a name="prerequisites"></a>Предварительные требования
  Для разработки приложений, реагирующих на сенсорный ввод, необходимы следующие компоненты.
 
--   Visual Studio 2010.
+- Visual Studio 2010.
 
--   Windows 7.
+- Windows 7.
 
--   Устройство, которое поддерживает Windows Touch, например сенсорный экран.
+- Устройство, которое поддерживает Windows Touch, например сенсорный экран.
 
 ### <a name="terminology"></a>Терминология
  При обсуждении сенсорного ввода используются следующие термины.
 
--   **Касание** — это тип ввода пользователя, распознаваемый Windows 7. Обычно касание инициируется, когда пользователь прикасается пальцами к сенсорному экрану. Обратите внимание, что такие устройства, как сенсорная панель, обычно используемая в ноутбуках, не поддерживают касание, если подобное устройство просто преобразует положение и движение пальца как ввод с помощью мыши.
+- **Касание** — это тип ввода пользователя, распознаваемый Windows 7. Обычно касание инициируется, когда пользователь прикасается пальцами к сенсорному экрану. Обратите внимание, что такие устройства, как сенсорная панель, обычно используемая в ноутбуках, не поддерживают касание, если подобное устройство просто преобразует положение и движение пальца как ввод с помощью мыши.
 
--   **Мультикасание** — это касание, которое происходит одновременно в нескольких точках. Windows 7 и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживают мультикасание. Всякий раз, когда в документации для [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] идет речь о касании, это относится и мультикасанию.
+- **Мультикасание** — это касание, которое происходит одновременно в нескольких точках. Windows 7 и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживают мультикасание. Всякий раз, когда в документации для [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] идет речь о касании, это относится и мультикасанию.
 
--   **Манипуляция** происходит, когда касание интерпретируется как физическое действие, которое применяется к объекту. В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], события манипуляции интерпретируют ввод как сдвиг, расширение или поворот.
+- **Манипуляция** происходит, когда касание интерпретируется как физическое действие, которое применяется к объекту. В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], события манипуляции интерпретируют ввод как сдвиг, расширение или поворот.
 
--   `touch device` — это устройство для сенсорного ввода, например одним пальцем на сенсорном экране.
+- `touch device` — это устройство для сенсорного ввода, например одним пальцем на сенсорном экране.
 
 ### <a name="controls-that-respond-to-touch"></a>Элементы управления, реагирующие на касания
  Следующие элементы управления можно прокручивать, проводя пальцем по элементу управления, если имеется содержимое, которое находится вне области просмотра.
 
--   <xref:System.Windows.Controls.ComboBox>
+- <xref:System.Windows.Controls.ComboBox>
 
--   <xref:System.Windows.Controls.ContextMenu>
+- <xref:System.Windows.Controls.ContextMenu>
 
--   <xref:System.Windows.Controls.DataGrid>
+- <xref:System.Windows.Controls.DataGrid>
 
--   <xref:System.Windows.Controls.ListBox>
+- <xref:System.Windows.Controls.ListBox>
 
--   <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.ListView>
 
--   <xref:System.Windows.Controls.MenuItem>
+- <xref:System.Windows.Controls.MenuItem>
 
--   <xref:System.Windows.Controls.TextBox>
+- <xref:System.Windows.Controls.TextBox>
 
--   <xref:System.Windows.Controls.ToolBar>
+- <xref:System.Windows.Controls.ToolBar>
 
--   <xref:System.Windows.Controls.TreeView>
+- <xref:System.Windows.Controls.TreeView>
 
  <xref:System.Windows.Controls.ScrollViewer> Определяет <xref:System.Windows.Controls.ScrollViewer.PanningMode%2A?displayProperty=nameWithType> присоединенного свойства, можно указать сдвига включении по горизонтали, вертикали, оба или ни одного. <xref:System.Windows.Controls.ScrollViewer.PanningDeceleration%2A?displayProperty=nameWithType> Свойство определяет, насколько быстро замедляется прокрутка, когда пользователь поднимает палец с сенсорного экрана. <xref:System.Windows.Controls.ScrollViewer.PanningRatio%2A?displayProperty=nameWithType> Присоединенное свойство задает отношение смещения прокрутки к смещению обработки преобразования.
 
@@ -189,25 +189,25 @@ ms.locfileid: "59320019"
 
  Все эти три класса определяют следующие события, которые ведут себя одинаково независимо от определяющего класса.
 
--   <xref:System.Windows.UIElement.TouchDown>
+- <xref:System.Windows.UIElement.TouchDown>
 
--   <xref:System.Windows.UIElement.TouchMove>
+- <xref:System.Windows.UIElement.TouchMove>
 
--   <xref:System.Windows.UIElement.TouchUp>
+- <xref:System.Windows.UIElement.TouchUp>
 
--   <xref:System.Windows.UIElement.TouchEnter>
+- <xref:System.Windows.UIElement.TouchEnter>
 
--   <xref:System.Windows.UIElement.TouchLeave>
+- <xref:System.Windows.UIElement.TouchLeave>
 
--   <xref:System.Windows.UIElement.PreviewTouchDown>
+- <xref:System.Windows.UIElement.PreviewTouchDown>
 
--   <xref:System.Windows.UIElement.PreviewTouchMove>
+- <xref:System.Windows.UIElement.PreviewTouchMove>
 
--   <xref:System.Windows.UIElement.PreviewTouchUp>
+- <xref:System.Windows.UIElement.PreviewTouchUp>
 
--   <xref:System.Windows.UIElement.GotTouchCapture>
+- <xref:System.Windows.UIElement.GotTouchCapture>
 
--   <xref:System.Windows.UIElement.LostTouchCapture>
+- <xref:System.Windows.UIElement.LostTouchCapture>
 
  Как и события клавиатуры и мыши, события сенсорного ввода являются перенаправленными событиями. События нисходящей маршрутизации начинаются с `Preview`, а события восходящей маршрутизации — с `Touch`. Дополнительные сведения о перенаправленных событиях см. в разделе [Общие сведения о перенаправленных событиях](routed-events-overview.md). При обработке этих событий можно получить положение ввода относительно любого элемента, вызвав <xref:System.Windows.Input.TouchEventArgs.GetTouchPoint%2A> или <xref:System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints%2A> метод.
 
@@ -232,11 +232,11 @@ ms.locfileid: "59320019"
 ### <a name="manipulation-events"></a>События манипуляции
  Для случаев, когда приложение позволяет манипулировать объектом <xref:System.Windows.UIElement> класс определяет события манипуляции. В отличие от событий касания, которые сообщают только положение точки касания, события манипуляции сообщают, как можно интерпретировать ввод. Существует три типа манипуляции: сдвиг, расширение и поворот. В следующем списке показывается, как вызываются эти три типа манипуляции.
 
--   Поместите палец на объект и переместите палец по сенсорному экрану, чтобы выполнить сдвиг. Обычно такое действие перемещает объект.
+- Поместите палец на объект и переместите палец по сенсорному экрану, чтобы выполнить сдвиг. Обычно такое действие перемещает объект.
 
--   Поместите два пальца на объект и сведите или разведите их, чтобы выполнить расширение. Обычно такое действие изменяет размеры объекта.
+- Поместите два пальца на объект и сведите или разведите их, чтобы выполнить расширение. Обычно такое действие изменяет размеры объекта.
 
--   Поместите два пальца на объект и поворачивайте их вокруг друг друга, чтобы выполнить действие поворота. Обычно такое действие выполняет циклический сдвиг объекта.
+- Поместите два пальца на объект и поворачивайте их вокруг друг друга, чтобы выполнить действие поворота. Обычно такое действие выполняет циклический сдвиг объекта.
 
  Можно одновременно выполнять несколько типов манипуляций.
 
@@ -246,17 +246,17 @@ ms.locfileid: "59320019"
 
  <xref:System.Windows.UIElement> Определяет следующие события манипуляции.
 
--   <xref:System.Windows.UIElement.ManipulationStarting>
+- <xref:System.Windows.UIElement.ManipulationStarting>
 
--   <xref:System.Windows.UIElement.ManipulationStarted>
+- <xref:System.Windows.UIElement.ManipulationStarted>
 
--   <xref:System.Windows.UIElement.ManipulationDelta>
+- <xref:System.Windows.UIElement.ManipulationDelta>
 
--   <xref:System.Windows.UIElement.ManipulationInertiaStarting>
+- <xref:System.Windows.UIElement.ManipulationInertiaStarting>
 
--   <xref:System.Windows.UIElement.ManipulationCompleted>
+- <xref:System.Windows.UIElement.ManipulationCompleted>
 
--   <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
+- <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
 
  По умолчанию <xref:System.Windows.UIElement> не получает эти события манипуляции. Для получения событий манипуляции на <xref:System.Windows.UIElement>, задайте <xref:System.Windows.UIElement.IsManipulationEnabled%2A?displayProperty=nameWithType> для `true`.
 
@@ -300,13 +300,13 @@ ms.locfileid: "59320019"
 
  Следующий список описывает связь между событиями касания и манипуляции, показанными на предыдущем рисунке.
 
--   Когда первое сенсорное устройство создает <xref:System.Windows.UIElement.TouchDown> событий на <xref:System.Windows.UIElement>, логика манипуляции вызывает <xref:System.Windows.UIElement.CaptureTouch%2A> метод, который создает <xref:System.Windows.UIElement.GotTouchCapture> событий.
+- Когда первое сенсорное устройство создает <xref:System.Windows.UIElement.TouchDown> событий на <xref:System.Windows.UIElement>, логика манипуляции вызывает <xref:System.Windows.UIElement.CaptureTouch%2A> метод, который создает <xref:System.Windows.UIElement.GotTouchCapture> событий.
 
--   Когда <xref:System.Windows.UIElement.GotTouchCapture> происходит, логика манипуляции вызывает <xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType> метод, который создает <xref:System.Windows.UIElement.ManipulationStarting> событий.
+- Когда <xref:System.Windows.UIElement.GotTouchCapture> происходит, логика манипуляции вызывает <xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType> метод, который создает <xref:System.Windows.UIElement.ManipulationStarting> событий.
 
--   Когда <xref:System.Windows.UIElement.TouchMove> событиями, логика манипуляции создает <xref:System.Windows.UIElement.ManipulationDelta> события, происходящие до <xref:System.Windows.UIElement.ManipulationInertiaStarting> событий.
+- Когда <xref:System.Windows.UIElement.TouchMove> событиями, логика манипуляции создает <xref:System.Windows.UIElement.ManipulationDelta> события, происходящие до <xref:System.Windows.UIElement.ManipulationInertiaStarting> событий.
 
--   Когда последнее сенсорное устройство элемент вызывает <xref:System.Windows.UIElement.TouchUp> событий, логика манипуляции создает <xref:System.Windows.UIElement.ManipulationInertiaStarting> событий.
+- Когда последнее сенсорное устройство элемент вызывает <xref:System.Windows.UIElement.TouchUp> событий, логика манипуляции создает <xref:System.Windows.UIElement.ManipulationInertiaStarting> событий.
 
 <a name="focus"></a>
 ## <a name="focus"></a>Фокус

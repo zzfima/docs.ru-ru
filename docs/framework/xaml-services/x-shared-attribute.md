@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
 ms.openlocfilehash: da35f209b632bdf9e4ab2298239a505df69d6048
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982635"
 ---
 # <a name="xshared-attribute"></a>Атрибут x:Shared
 Если задано значение `false`, изменяет поведение извлечения ресурсов WPF, чтобы запросы с атрибутами ресурсов создают новый экземпляр для каждого запроса, а не один и тот же экземпляр для всех запросов.  
@@ -45,9 +45,9 @@ ms.locfileid: "59125747"
   
  В WPF `x:Shared` допустим только при следующих условиях:  
   
--   <xref:System.Windows.ResourceDictionary> , Содержащая элементы с `x:Shared` должен быть скомпилирован. <xref:System.Windows.ResourceDictionary> Не может быть в пределах Свободный XAML или для темы.  
+- <xref:System.Windows.ResourceDictionary> , Содержащая элементы с `x:Shared` должен быть скомпилирован. <xref:System.Windows.ResourceDictionary> Не может быть в пределах Свободный XAML или для темы.  
   
--   <xref:System.Windows.ResourceDictionary> , Содержащий элементы не должны быть вложены в другой <xref:System.Windows.ResourceDictionary>. Например, нельзя использовать `x:Shared` для элементов в <xref:System.Windows.ResourceDictionary> , находится в пределах <xref:System.Windows.Style> , уже <xref:System.Windows.ResourceDictionary> элемента.  
+- <xref:System.Windows.ResourceDictionary> , Содержащий элементы не должны быть вложены в другой <xref:System.Windows.ResourceDictionary>. Например, нельзя использовать `x:Shared` для элементов в <xref:System.Windows.ResourceDictionary> , находится в пределах <xref:System.Windows.Style> , уже <xref:System.Windows.ResourceDictionary> элемента.  
   
 ## <a name="see-also"></a>См. также
 

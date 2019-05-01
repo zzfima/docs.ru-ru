@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f4b4ac1a37c2b3506216499ed0c9f8194949b768
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985651"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>Функция GetRequestedRuntimeVersionForCLSID
 Получает соответствующий информация среды CLR (CLR) версии для класса с указанным `CLSID`.  
@@ -56,9 +56,9 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
  `dwResolutionFlags`  
  [in]  Одно из значений CLSID_RESOLUTION_FLAGS. Поддерживаются следующие значения:  
   
--   CLSID_RESOLUTION_DEFAULT: (0x0) указывает, что следует использовать взаимодействия по умолчанию.  
+- CLSID_RESOLUTION_DEFAULT: (0x0) указывает, что следует использовать взаимодействия по умолчанию.  
   
--   CLSID_RESOLUTION_REGISTERED: (0x1) указывает, следует ли выполнять поиск реестра и должна ли применяться политика оболочек совместимости.  
+- CLSID_RESOLUTION_REGISTERED: (0x1) указывает, следует ли выполнять поиск реестра и должна ли применяться политика оболочек совместимости.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
