@@ -10,11 +10,11 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
 ms.openlocfilehash: 5ccd71d93185f9478f6720419369df713d590c39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053760"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Практическое руководство. Возвращение результата запроса LINQ в виде определенного типа (Visual Basic)
 Language-Integrated Query (LINQ) позволяет легко получить доступ к информации базы данных и выполнения запросов. По умолчанию запросы LINQ возвращают список объектов как анонимный тип. Можно также указать, чтобы запрос возвращал список определенного типа с помощью `Select` предложение.  

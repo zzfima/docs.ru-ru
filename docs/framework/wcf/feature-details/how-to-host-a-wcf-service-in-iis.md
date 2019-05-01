@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
 ms.openlocfilehash: f106ce1bca67f8b88df0835496eea0b3297ac946
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000835"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Практическое руководство. Размещение службы WCF в IIS
 В этом разделе описаны основные шаги для создания службы Windows Communication Foundation (WCF), размещенного в Internet Information Services (IIS). Предполагается, что читатель знаком со службами IIS и может использовать средство управления IIS для создания приложений служб IIS и управления такими приложениями. Дополнительные сведения о службах IIS см. в разделе [Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449). Службы WCF, которая выполняется в среде IIS использует все преимущества функции IIS, такие как перезапуск процессов, бездействует, завершение работы, наблюдение за работоспособностью процессов и активация на основе сообщений. Для реализации этого варианта размещения требуется правильно настроить службу IIS, но не требуется включать в приложение код размещения. Размещение в службах IIS возможно только при использовании транспорта HTTP.  

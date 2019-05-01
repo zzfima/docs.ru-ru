@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
 ms.openlocfilehash: 75e60a3a9b39c0dd63a24a1e71c4823e7cb0bd74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052551"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms
 Служба [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Тем не менее, если имеются существенные преимущества в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] код, он может быть более эффективным, расширение существующего [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] приложения с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , а не переписывание кода с нуля. Распространенный сценарий — при необходимости внедрения одного или нескольких элементов управления, реализованных с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в приложении Windows Forms. Дополнительные сведения о настройке элементов управления WPF, см. в разделе [Настройка элементов управления](../controls/control-customization.md).  
@@ -20,9 +20,9 @@ ms.locfileid: "59322840"
   
  В данном пошаговом руководстве представлены следующие задачи.  
   
--   Реализация составного элемента управления WPF  
+- Реализация составного элемента управления WPF  
   
--   Реализация ведущего приложения Windows Forms  
+- Реализация ведущего приложения Windows Forms  
   
  Полный пример кода для задач, приведенных в этом пошаговом руководстве, см. в разделе [размещение составного элемента управления WPF в Windows Forms образец](https://go.microsoft.com/fwlink/?LinkID=159996).  
   
@@ -54,13 +54,13 @@ ms.locfileid: "59322840"
   
  Проект должен иметь ссылки на перечисленные ниже системные библиотеки DLL. Если какие-либо из этих библиотек DLL не включены по умолчанию, добавьте их в проект.  
   
--   PresentationCore  
+- PresentationCore  
   
--   PresentationFramework  
+- PresentationFramework  
   
--   Система  
+- Система  
   
--   WindowsBase  
+- WindowsBase  
   
 ### <a name="creating-the-user-interface"></a>Создание пользовательского интерфейса  
  [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Для составного элемента управления реализуется с помощью [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Составной элемент управления [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] состоит из пяти <xref:System.Windows.Controls.TextBox> элементов. Каждый <xref:System.Windows.Controls.TextBox> имеет связанный элемент <xref:System.Windows.Controls.TextBlock> элемент, который служит в качестве метки. Существует два <xref:System.Windows.Controls.Button> элементов внизу **ОК** и **отменить**. При нажатии любой кнопки элемент управления создает пользовательское событие для возвращения сведений в ведущее приложение.  
@@ -139,11 +139,11 @@ namespace MyControls
 #### <a name="initializing-the-control"></a>Инициализация элемента управления  
  Приведенный ниже код реализует несколько основных задач:  
   
--   Объявляет частное событие `OnButtonClick`и его связанный делегат `MyControlEventHandler`.  
+- Объявляет частное событие `OnButtonClick`и его связанный делегат `MyControlEventHandler`.  
   
--   создает несколько частных глобальных переменных, хранящих данные пользователя. Эти данные предоставляются через соответствующие свойства;  
+- создает несколько частных глобальных переменных, хранящих данные пользователя. Эти данные предоставляются через соответствующие свойства;  
   
--   Реализует обработчик `Init`, для элемента управления <xref:System.Windows.FrameworkElement.Loaded> событий. Этот обработчик инициализирует глобальные переменные путем присвоения им значений, определенных в файле MyControl1.xaml. Чтобы сделать это, он использует <xref:System.Windows.FrameworkElement.Name%2A> назначенное типичному <xref:System.Windows.Controls.TextBlock> элемент, `nameLabel`, чтобы получить доступ к параметрам свойства этого элемента.  
+- Реализует обработчик `Init`, для элемента управления <xref:System.Windows.FrameworkElement.Loaded> событий. Этот обработчик инициализирует глобальные переменные путем присвоения им значений, определенных в файле MyControl1.xaml. Чтобы сделать это, он использует <xref:System.Windows.FrameworkElement.Name%2A> назначенное типичному <xref:System.Windows.Controls.TextBlock> элемент, `nameLabel`, чтобы получить доступ к параметрам свойства этого элемента.  
   
  Удалите существующий конструктор и добавьте следующий код, чтобы ваши `MyControl1` класса.  
   
@@ -152,11 +152,11 @@ namespace MyControls
 #### <a name="handling-the-buttons-click-events"></a>Обработка событий нажатия кнопки  
  Пользователь указывает, что задача ввода данных завершена, щелкнув пункт **ОК** кнопку или **отменить** кнопки. Обе кнопки используют тот же <xref:System.Windows.Controls.Primitives.ButtonBase.Click> обработчик событий `ButtonClicked`. Обе кнопки имеют имя, `btnOK` или `btnCancel`, который позволяет обработчику определить, какая кнопка была нажата, путем проверки значения `sender` аргумент. Обработчик выполняет следующие действия:  
   
--   Создает `MyControlEventArgs` объект, содержащий данные из <xref:System.Windows.Controls.TextBox> элементов.  
+- Создает `MyControlEventArgs` объект, содержащий данные из <xref:System.Windows.Controls.TextBox> элементов.  
   
--   Если пользователь щелкает **отменить** кнопку наборов `MyControlEventArgs` объекта `IsOK` свойства `false`.  
+- Если пользователь щелкает **отменить** кнопку наборов `MyControlEventArgs` объекта `IsOK` свойства `false`.  
   
--   Вызывает `OnButtonClick` событие, чтобы указать ведущему приложению, что пользователь завершил работу, и передает обратно собранные данные.  
+- Вызывает `OnButtonClick` событие, чтобы указать ведущему приложению, что пользователь завершил работу, и передает обратно собранные данные.  
   
  Добавьте следующий код, чтобы ваши `MyControl1` класса, после того, как `Init` метод.  
   
@@ -209,15 +209,15 @@ namespace MyControls
   
 4. Добавьте ссылки на следующие сборки.  
   
-    -   PresentationCore  
+    - PresentationCore  
   
-    -   PresentationFramework  
+    - PresentationFramework  
   
-    -   System.Xaml  
+    - System.Xaml  
   
-    -   WindowsBase  
+    - WindowsBase  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
 ### <a name="implementing-the-user-interface-for-the-application"></a>Реализация пользовательского интерфейса для приложения  
  Пользовательский интерфейс приложения Windows Forms содержит несколько элементов управления для взаимодействия с составным элементом управления WPF.  
@@ -296,9 +296,9 @@ namespace MyControls
   
  Остальные две строки в `Form1_Load` метод присоединять обработчики к двум событиям элемента управления:  
   
--   `OnButtonClick` — пользовательское событие, инициируемое составным элементом управления, когда пользователь щелкает **ОК** или **отменить** кнопки. Обработайте событие для получения ответа пользователя и сбора всех введенных им данных.  
+- `OnButtonClick` — пользовательское событие, инициируемое составным элементом управления, когда пользователь щелкает **ОК** или **отменить** кнопки. Обработайте событие для получения ответа пользователя и сбора всех введенных им данных.  
   
--   <xref:System.Windows.FrameworkElement.Loaded> — стандартное событие, вызванное объектом [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] когда он находится полностью загружен. Это событие используется здесь потому, что для примера необходима инициализация нескольких глобальных переменных свойствами элемента управления. Во время в формате <xref:System.Windows.Forms.Form.Load> событий, элемент управления не полностью загружен, и по-прежнему установлены эти значения `null`. Необходимо подождать до элемента управления <xref:System.Windows.FrameworkElement.Loaded> событие возникает для доступа к этим свойствам.  
+- <xref:System.Windows.FrameworkElement.Loaded> — стандартное событие, вызванное объектом [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] когда он находится полностью загружен. Это событие используется здесь потому, что для примера необходима инициализация нескольких глобальных переменных свойствами элемента управления. Во время в формате <xref:System.Windows.Forms.Form.Load> событий, элемент управления не полностью загружен, и по-прежнему установлены эти значения `null`. Необходимо подождать до элемента управления <xref:System.Windows.FrameworkElement.Loaded> событие возникает для доступа к этим свойствам.  
   
  <xref:System.Windows.FrameworkElement.Loaded> В приведенном выше коде показан обработчик событий. `OnButtonClick` Обработчик рассматривается в следующем разделе.  
   

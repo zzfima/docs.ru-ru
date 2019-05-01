@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
 ms.openlocfilehash: dfac833cc7517af00d0264fc5d11fc83ae543569
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000809"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Практическое руководство. Регистрация и настройка моникера службы
 Перед использованием моникера службы Windows Communication Foundation (WCF) в рамках приложения COM с типизированным контрактом, необходимо зарегистрировать необходимые типы с атрибутами с помощью COM и настроить приложение COM и моникер в соответствии с требуемую привязку Конфигурация.  
@@ -36,7 +36,7 @@ ms.locfileid: "59313584"
   
 ### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>Настройка приложения COM и моникера с использованием нужной конфигурации привязки  
   
--   Поместите определения привязки (созданные [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) в файле конфигурации приложения созданного клиента) в файле конфигурации клиентского приложения. Например, для исполняемого файла Visual Basic 6.0 с именем CallCenterClient.exe конфигурацию необходимо помещать в файл с именем CallCenterConfig.exe.config в том же каталоге, что и исполняемый файл. Теперь клиентское приложение может использовать моникер. Обратите внимание, что конфигурация привязки не является обязательным, если с помощью одного из стандартных типов, предоставляемых WCF привязок.  
+- Поместите определения привязки (созданные [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) в файле конфигурации приложения созданного клиента) в файле конфигурации клиентского приложения. Например, для исполняемого файла Visual Basic 6.0 с именем CallCenterClient.exe конфигурацию необходимо помещать в файл с именем CallCenterConfig.exe.config в том же каталоге, что и исполняемый файл. Теперь клиентское приложение может использовать моникер. Обратите внимание, что конфигурация привязки не является обязательным, если с помощью одного из стандартных типов, предоставляемых WCF привязок.  
   
      Регистрируется следующий тип.  
   

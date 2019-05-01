@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
 ms.openlocfilehash: ad5a14ed3baab5b25cb1ed15271474580faaf176
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033154"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Использование Автоматизации Пользовательского Интерфейса для автоматизированного тестирования
 > [!NOTE]
@@ -61,15 +61,15 @@ ms.locfileid: "59183980"
 ### <a name="programmatic-access"></a>Программный доступ  
  Программный доступ предоставляет возможность имитировать через код любое взаимодействие, обеспечиваемое традиционным вводом с помощью мыши и клавиатуры. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] обеспечивает программный доступ с помощью пяти следующих компонентов.  
   
--   Дерево [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] упрощает навигацию по структуре [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Это дерево строится из коллекции hWnd. Дополнительные сведения см. в разделе [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
+- Дерево [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] упрощает навигацию по структуре [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Это дерево строится из коллекции hWnd. Дополнительные сведения см. в разделе [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
   
--   Элементы автоматизации — это отдельные компоненты в [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Часто они могут быть более детализированы, чем hWnd. Для получения дополнительной информации см. [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md).  
+- Элементы автоматизации — это отдельные компоненты в [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Часто они могут быть более детализированы, чем hWnd. Для получения дополнительной информации см. [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md).  
   
--   Свойства автоматизации предоставляют определенные сведения об элементах [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] . Дополнительные сведения см. в разделе [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+- Свойства автоматизации предоставляют определенные сведения об элементах [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] . Дополнительные сведения см. в разделе [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
   
--   Шаблоны элементов управления задают определенный аспект функциональности элемента управления; они могут состоять из свойств, методов, событий и сведений о структуре. Для получения дополнительной информации см. [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
+- Шаблоны элементов управления задают определенный аспект функциональности элемента управления; они могут состоять из свойств, методов, событий и сведений о структуре. Для получения дополнительной информации см. [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
--   События автоматизации обеспечивают уведомления и информацию. Для получения дополнительной информации см. [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
+- События автоматизации обеспечивают уведомления и информацию. Для получения дополнительной информации см. [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
 <a name="Key_properties_critical_to_test_automation"></a>   
 ### <a name="key-properties-for-test-automation"></a>Ключевые свойства для автоматизации тестирования  
@@ -103,9 +103,9 @@ ms.locfileid: "59183980"
 ## <a name="related-tools-and-technologies"></a>Связанные инструменты и технологии  
  Существует множество связанных инструментов и технологий, которые поддерживают автоматическое тестирование с помощью [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
--   Inspect.exe — [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)] приложения, который может использоваться для сбора [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] сведения для поставщика и клиента разработки и отладки. Inspect.exe включается в [!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)].  
+- Inspect.exe — [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)] приложения, который может использоваться для сбора [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] сведения для поставщика и клиента разработки и отладки. Inspect.exe включается в [!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)].  
   
--   MSAABridge предоставляет сведения [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] клиентам [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] . Основная цель соединения мостом [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] с [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] заключается в том, чтобы разрешить существующим клиентам [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] возможность взаимодействия с любой платформой, реализующей [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
+- MSAABridge предоставляет сведения [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] клиентам [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] . Основная цель соединения мостом [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] с [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] заключается в том, чтобы разрешить существующим клиентам [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] возможность взаимодействия с любой платформой, реализующей [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
 <a name="Security"></a>   
 ## <a name="security"></a>Безопасность  

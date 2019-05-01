@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
 ms.openlocfilehash: b0d24027f00c4ab4ba49f4948a9f5488a2eff3fd
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054410"
 ---
 # <a name="integer-data-type-visual-basic"></a>Тип данных Integer (Visual Basic)
 Содержит 32-разрядные (4-байтовые) целые числа со знаком в диапазоне от -2 147 483 648 до 2 147 483 647.  
@@ -67,13 +67,13 @@ Dim number = &H_035826I
 
 ## <a name="programming-tips"></a>Советы по программированию
 
--   **Вопросы взаимодействия.** При взаимодействие с компонентами, которые не написаны для платформы .NET Framework, такие как автоматизация или COM-объекты, необходимо помнить, что `Integer` имеет другой размер (16 бит) в других средах. При передаче 16-разрядного аргумента такому компоненту в новом коде Visual Basic следует объявить его как `Short`, а не как `Integer`.  
+- **Вопросы взаимодействия.** При взаимодействие с компонентами, которые не написаны для платформы .NET Framework, такие как автоматизация или COM-объекты, необходимо помнить, что `Integer` имеет другой размер (16 бит) в других средах. При передаче 16-разрядного аргумента такому компоненту в новом коде Visual Basic следует объявить его как `Short`, а не как `Integer`.  
   
--   **Расширяющие.** Тип данных `Integer` можно расширить до `Long`, `Decimal`, `Single` или `Double`. Это означает, что тип `Integer` можно преобразовать в любой из этих типов без возникновения ошибки <xref:System.OverflowException?displayProperty=nameWithType>.  
+- **Расширяющие.** Тип данных `Integer` можно расширить до `Long`, `Decimal`, `Single` или `Double`. Это означает, что тип `Integer` можно преобразовать в любой из этих типов без возникновения ошибки <xref:System.OverflowException?displayProperty=nameWithType>.  
   
--   **Символы типа.** При добавлении к литералу символа типа литерала `I` производится принудительное приведение литерала к типу данных `Integer`. При добавлении символа идентификатора типа `%` к любому идентификатору производится принудительное приведение этого идентификатора к типу `Integer`.  
+- **Символы типа.** При добавлении к литералу символа типа литерала `I` производится принудительное приведение литерала к типу данных `Integer`. При добавлении символа идентификатора типа `%` к любому идентификатору производится принудительное приведение этого идентификатора к типу `Integer`.  
   
--   **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.Int32?displayProperty=nameWithType>.  
+- **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.Int32?displayProperty=nameWithType>.  
   
 ## <a name="range"></a>Диапазон
 

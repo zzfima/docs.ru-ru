@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
 ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972670"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Импорт схемы для создания классов
 Для создания классов из схемы, которые могут использоваться с Windows Communication Foundation (WCF), используйте <xref:System.Runtime.Serialization.XsdDataContractImporter> класса. В данном разделе описывается процесс и параметры импорта.  
@@ -148,13 +148,13 @@ ms.locfileid: "59228592"
   
 ##### <a name="design-considerations"></a>Вопросы проектирования  
   
--   Возможно, будет трудно работать со слабо типизированным XML-представлением напрямую. При работе со схемой, не совместимой с контрактами данных строго типизированным способом, рекомендуется использовать альтернативный модуль сериализации, такой как <xref:System.Xml.Serialization.XmlSerializer>. Дополнительные сведения см. в разделе [с помощью класса XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+- Возможно, будет трудно работать со слабо типизированным XML-представлением напрямую. При работе со схемой, не совместимой с контрактами данных строго типизированным способом, рекомендуется использовать альтернативный модуль сериализации, такой как <xref:System.Xml.Serialization.XmlSerializer>. Дополнительные сведения см. в разделе [с помощью класса XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
--   Некоторые конструкции схемы невозможно импортировать с помощью <xref:System.Runtime.Serialization.XsdDataContractImporter>, даже если свойству <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> присвоено значение `true`. В таких случаях также рекомендуется использовать <xref:System.Xml.Serialization.XmlSerializer>.  
+- Некоторые конструкции схемы невозможно импортировать с помощью <xref:System.Runtime.Serialization.XsdDataContractImporter>, даже если свойству <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> присвоено значение `true`. В таких случаях также рекомендуется использовать <xref:System.Xml.Serialization.XmlSerializer>.  
   
--   Точные конструкции схемы, поддерживаемые одновременно при <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> — `true` или `false` описаны в [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+- Точные конструкции схемы, поддерживаемые одновременно при <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> — `true` или `false` описаны в [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
--   При импорте и экспорте точность схемы для созданных типов <xref:System.Xml.Serialization.IXmlSerializable> не сохраняется. Это значит, что при экспорте схемы из созданных типов и импорте в виде классов исходная схема не возвращается.  
+- При импорте и экспорте точность схемы для созданных типов <xref:System.Xml.Serialization.IXmlSerializable> не сохраняется. Это значит, что при экспорте схемы из созданных типов и импорте в виде классов исходная схема не возвращается.  
   
  Можно сгруппировать параметр <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> и параметр <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A>, описанные выше. В случае типов, которые необходимо создать как реализации <xref:System.Xml.Serialization.IXmlSerializable>, структурная проверка пропускается при использовании возможности <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A>.  
   
@@ -175,9 +175,9 @@ ms.locfileid: "59228592"
 #### <a name="import-options-advanced-options"></a>Параметры импорта. Дополнительные параметры  
  Ниже представлены дополнительные параметры импорта.  
   
--   Свойство <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>. Укажите класс <xref:System.CodeDom.Compiler.CodeDomProvider>, используемый для создания кода для созданных классов. Механизм импорта пытается избежать возможностей, не поддерживаемых классом <xref:System.CodeDom.Compiler.CodeDomProvider>. Если для свойства <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> значение не задано, используется полный набор функций [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] без ограничений.  
+- Свойство <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>. Укажите класс <xref:System.CodeDom.Compiler.CodeDomProvider>, используемый для создания кода для созданных классов. Механизм импорта пытается избежать возможностей, не поддерживаемых классом <xref:System.CodeDom.Compiler.CodeDomProvider>. Если для свойства <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> значение не задано, используется полный набор функций [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] без ограничений.  
   
--   Свойство <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. С помощью этого свойства можно указать реализацию <xref:System.Runtime.Serialization.IDataContractSurrogate>. В реализации <xref:System.Runtime.Serialization.IDataContractSurrogate> настраивается процесс импорта. Дополнительные сведения см. в разделе [суррогаты контрактов данных](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). По умолчанию суррогат не используется.  
+- Свойство <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. С помощью этого свойства можно указать реализацию <xref:System.Runtime.Serialization.IDataContractSurrogate>. В реализации <xref:System.Runtime.Serialization.IDataContractSurrogate> настраивается процесс импорта. Дополнительные сведения см. в разделе [суррогаты контрактов данных](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). По умолчанию суррогат не используется.  
   
 ## <a name="see-also"></a>См. также
 

@@ -3,11 +3,11 @@ title: 'Транспорт: TCP-взаимодействие WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
 ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032732"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Транспорт: TCP-взаимодействие WSE 3.0
 В примере транспорта взаимодействия TCP WSE 3.0 демонстрируется реализация дуплексного сеанса TCP в качестве пользовательского транспорта Windows Communication Foundation (WCF). Также демонстрируется использование расширяемости уровня канала для создания интерфейса по сети с существующими развернутыми системами. Ниже показано, как построить этот пользовательский транспорт WCF:  
@@ -43,16 +43,16 @@ ms.locfileid: "59324218"
   
  Базовый класс `WseTcpDuplexSessionChannel` предполагает, что он получает подключенный сокет. Базовый класс обрабатывает завершение работы сокета. Существуют три места, взаимодействующих с закрытием сокета:  
   
--   OnAbort - закрыть сокет некорректно (жесткое закрытие).  
+- OnAbort - закрыть сокет некорректно (жесткое закрытие).  
   
--   On[Begin]Close - закрыть сокет корректно (мягкое закрытие).  
+- On[Begin]Close - закрыть сокет корректно (мягкое закрытие).  
   
--   session.CloseOutputSession -- завершить работу исходящего потока данных (закрытие наполовину).  
+- session.CloseOutputSession -- завершить работу исходящего потока данных (закрытие наполовину).  
   
 ## <a name="channel-factory"></a>Фабрика каналов  
  Следующий этап создания транспорта TCP - реализация <xref:System.ServiceModel.Channels.IChannelFactory> для каналов клиентов.  
   
--   `WseTcpChannelFactory` является производным от <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. Это фабрика, которая переопределяет `OnCreateChannel` для создания каналов клиентов.  
+- `WseTcpChannelFactory` является производным от <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. Это фабрика, которая переопределяет `OnCreateChannel` для создания каналов клиентов.  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -62,11 +62,11 @@ ms.locfileid: "59324218"
   
  `}`  
   
--   `ClientWseTcpDuplexSessionChannel` Добавляет логику в базовый `WseTcpDuplexSessionChannel` для подключения к серверу TCP в `channel.Open` времени. Сначала имя узла разрешается в IP-адрес, как показано в следующем коде.  
+- `ClientWseTcpDuplexSessionChannel` Добавляет логику в базовый `WseTcpDuplexSessionChannel` для подключения к серверу TCP в `channel.Open` времени. Сначала имя узла разрешается в IP-адрес, как показано в следующем коде.  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
--   Затем имя узла подключается в цикле к первому доступному IP-адресу, как показано в следующем коде.  
+- Затем имя узла подключается в цикле к первому доступному IP-адресу, как показано в следующем коде.  
   
  `IPAddress address = hostEntry.AddressList[i];`  
   
@@ -74,12 +74,12 @@ ms.locfileid: "59324218"
   
  `socket.Connect(new IPEndPoint(address, port));`  
   
--   Как часть контракта канала, все специфичные для домена расширения заключаются в оболочку, как `SocketException` в <xref:System.ServiceModel.CommunicationException>.  
+- Как часть контракта канала, все специфичные для домена расширения заключаются в оболочку, как `SocketException` в <xref:System.ServiceModel.CommunicationException>.  
   
 ## <a name="channel-listener"></a>Прослушиватель канала  
  Следующий этап создания транспорта TCP - реализация <xref:System.ServiceModel.Channels.IChannelListener> для приема каналов сервера.  
   
--   `WseTcpChannelListener` является производным от <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > и переопределяет On [Begin] Open и On [Begin] Close для управления временем существования его прослушивающих сокетов. В OnOpen создается сокет для прослушивания по IP_ANY. Более сложные реализации могут создавать второй сокет для прослушивания также и по IPv6. Они могут также допускать задание IP-адреса в имени узла.  
+- `WseTcpChannelListener` является производным от <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > и переопределяет On [Begin] Open и On [Begin] Close для управления временем существования его прослушивающих сокетов. В OnOpen создается сокет для прослушивания по IP_ANY. Более сложные реализации могут создавать второй сокет для прослушивания также и по IPv6. Они могут также допускать задание IP-адреса в имени узла.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -179,18 +179,18 @@ Symbols:
   
 1. После установки примера `TcpSyncStockService` выполните следующие операции.  
   
-    1.  Откройте `TcpSyncStockService` в Visual Studio (Обратите внимание, что пример TcpSyncStockService устанавливается с WSE 3.0. Он не является частью кода данного примера.).  
+    1. Откройте `TcpSyncStockService` в Visual Studio (Обратите внимание, что пример TcpSyncStockService устанавливается с WSE 3.0. Он не является частью кода данного примера.).  
   
-    2.  Установите проект StockService в качестве проекта для запуска.  
+    2. Установите проект StockService в качестве проекта для запуска.  
   
-    3.  Откройте файл StockService.cs в проекте StockService и закомментируйте атрибут [Policy] класса `StockService`. Таким образом в примере отключается безопасность. Хотя WCF могут взаимодействовать с WSE 3.0 защищенные конечные точки, чтобы сфокусировать данный пример на пользовательском транспорте TCP отключен безопасности.  
+    3. Откройте файл StockService.cs в проекте StockService и закомментируйте атрибут [Policy] класса `StockService`. Таким образом в примере отключается безопасность. Хотя WCF могут взаимодействовать с WSE 3.0 защищенные конечные точки, чтобы сфокусировать данный пример на пользовательском транспорте TCP отключен безопасности.  
   
-    4.  Нажмите клавишу F5, чтобы запустить `TcpSyncStockService`. Служба запускается в новом окне консоли.  
+    4. Нажмите клавишу F5, чтобы запустить `TcpSyncStockService`. Служба запускается в новом окне консоли.  
   
-    5.  Откройте пример транспорта TCP в Visual Studio.  
+    5. Откройте пример транспорта TCP в Visual Studio.  
   
-    6.  Обновите переменную "hostname" в файле TestCode.cs, чтобы она соответствовала имени компьютера, на котором запущена служба `TcpSyncStockService`.  
+    6. Обновите переменную "hostname" в файле TestCode.cs, чтобы она соответствовала имени компьютера, на котором запущена служба `TcpSyncStockService`.  
   
-    7.  Нажмите клавишу F5, чтобы запустить пример транспорта TCP.  
+    7. Нажмите клавишу F5, чтобы запустить пример транспорта TCP.  
   
-    8.  Тестовый клиент транспорта TCP запускается в новой консоли. Клиент запрашивает у службы цены акций и отображает результаты в своем окне консоли.  
+    8. Тестовый клиент транспорта TCP запускается в новой консоли. Клиент запрашивает у службы цены акций и отображает результаты в своем окне консоли.  

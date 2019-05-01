@@ -10,30 +10,30 @@ helpviewer_keywords:
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
 ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054365"
 ---
 # <a name="layout"></a>Макет
 В этом разделе описывается система макета [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Для создания пользовательских интерфейсов в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] важно понимание того, как и когда происходят вычисления макета.  
   
  В этом разделе содержатся следующие подразделы.  
   
--   [Ограничивающие прямоугольники элемента](#LayoutSystem_BoundingBox)  
+- [Ограничивающие прямоугольники элемента](#LayoutSystem_BoundingBox)  
   
--   [Система макета](#LayoutSystem_Overview)  
+- [Система макета](#LayoutSystem_Overview)  
   
--   [Измерение и расположение дочерних элементов](#LayoutSystem_Measure_Arrange)  
+- [Измерение и расположение дочерних элементов](#LayoutSystem_Measure_Arrange)  
   
--   [Элементы панели и пользовательские расширения функциональности макета](#LayoutSystem_PanelsCustom)  
+- [Элементы панели и пользовательские расширения функциональности макета](#LayoutSystem_PanelsCustom)  
   
--   [Вопросы производительности макета](#LayoutSystem_Performance)  
+- [Вопросы производительности макета](#LayoutSystem_Performance)  
   
--   [Субпиксельная отрисовка и округление макета](#LayoutSystem_LayoutRounding)  
+- [Субпиксельная отрисовка и округление макета](#LayoutSystem_LayoutRounding)  
   
--   [Дальнейшие действия](#LayoutSystem_whatsnext)  
+- [Дальнейшие действия](#LayoutSystem_whatsnext)  
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>Ограничивающие прямоугольники элемента  
@@ -120,19 +120,19 @@ ms.locfileid: "59330497"
 ## <a name="layout-performance-considerations"></a>Вопросы производительности макета  
  Макет является рекурсивным процессом. Каждый дочерний элемент в <xref:System.Windows.Controls.Panel.Children%2A> коллекции обрабатываются при каждом вызове системы макета. Это означает, что следует избегать запуска системы макета при отсутствии необходимости. Выполнение приведенных ниже рекомендаций поможет добиться более высокой производительности.  
   
--   Следует учитывать, что определенные изменения значений свойств могут привести к выполнению системой макета рекурсивного обновления.  
+- Следует учитывать, что определенные изменения значений свойств могут привести к выполнению системой макета рекурсивного обновления.  
   
      Свойства зависимостей, значения которых могут привести к инициализации системы макета, помечаются общими флагами. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> и <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> предоставляют полезные указания о том, какое свойство изменяется вызовут рекурсивное обновление системой макета. Как правило, должен иметь любое свойство, которое может повлиять на размер ограничивающего прямоугольника элемента <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> флаг задано значение true. Дополнительные сведения см. в [обзоре свойств зависимостей](dependency-properties-overview.md).  
   
--   По возможности используйте <xref:System.Windows.UIElement.RenderTransform%2A> вместо <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
+- По возможности используйте <xref:System.Windows.UIElement.RenderTransform%2A> вместо <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
      Объект <xref:System.Windows.FrameworkElement.LayoutTransform%2A> может быть очень полезным инструментом для определения содержимого [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Тем не менее, если результат преобразования не влияет на положение других элементов, лучше всего использовать <xref:System.Windows.UIElement.RenderTransform%2A> вместо этого, так как <xref:System.Windows.UIElement.RenderTransform%2A> не вызывает систему макета. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> применяет свое преобразование и вызывает рекурсивное обновление макета для учета нового положения затронутого элемента.  
   
--   Избегайте ненужных вызовов <xref:System.Windows.UIElement.UpdateLayout%2A>.  
+- Избегайте ненужных вызовов <xref:System.Windows.UIElement.UpdateLayout%2A>.  
   
      <xref:System.Windows.UIElement.UpdateLayout%2A> Метод вызывает рекурсивное обновление макета и часто не является обязательным. Если нет уверенности в необходимости обновления, следует предоставить вызов этого метода системе макета.  
   
--   При работе с большим <xref:System.Windows.Controls.Panel.Children%2A> коллекции, рассмотрите возможность использования <xref:System.Windows.Controls.VirtualizingStackPanel> вместо обычного <xref:System.Windows.Controls.StackPanel>.  
+- При работе с большим <xref:System.Windows.Controls.Panel.Children%2A> коллекции, рассмотрите возможность использования <xref:System.Windows.Controls.VirtualizingStackPanel> вместо обычного <xref:System.Windows.Controls.StackPanel>.  
   
      Благодаря виртуализации дочернюю коллекцию <xref:System.Windows.Controls.VirtualizingStackPanel> только сохраняет объекты в памяти, которые в настоящее время находятся внутри элемента ViewPort родительского элемента. В результате этого производительность значительно увеличивается в большинстве сценариев.  
   

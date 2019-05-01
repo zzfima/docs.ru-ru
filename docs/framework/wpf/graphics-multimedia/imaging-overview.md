@@ -22,11 +22,11 @@ helpviewer_keywords:
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
 ms.openlocfilehash: dba2f8b07134560abd77832293ce2a81e55e4875
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053448"
 ---
 # <a name="imaging-overview"></a>Общие сведения об обработке изображений
 В этом разделе содержатся общие сведения о платформе [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. Платформа [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] позволяет разработчикам выполнять отображение, преобразование и форматирование изображений.  
@@ -37,19 +37,19 @@ ms.locfileid: "59209714"
   
  Существует два способа доступа к [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] — управляемый компонент и неуправляемый компонент. Неуправляемый компонент предоставляет следующие возможности.  
   
--   Модель расширяемости для новых или собственных форматов изображений.  
+- Модель расширяемости для новых или собственных форматов изображений.  
   
--   Повышение производительности и безопасности при работе с собственными форматами изображений, включая [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)], [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)], [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)], [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)], [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)], [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] и формат значка (ICO).  
+- Повышение производительности и безопасности при работе с собственными форматами изображений, включая [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)], [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)], [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)], [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)], [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)], [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] и формат значка (ICO).  
   
--   Сохранение изображений с большой глубиной цвета — до 8 бит на канал (32 бита на пиксель).  
+- Сохранение изображений с большой глубиной цвета — до 8 бит на канал (32 бита на пиксель).  
   
--   Неразрушающее масштабирование, обрезка и повороты.  
+- Неразрушающее масштабирование, обрезка и повороты.  
   
--   Упрощенное управление цветом.  
+- Упрощенное управление цветом.  
   
--   Поддержка собственных метаданных в файле.  
+- Поддержка собственных метаданных в файле.  
   
--   Управляемый компонент использует неуправляемую инфраструктуру для обеспечения плавной интеграции изображений с другими функциями [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], такими как [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], анимация и графика. Управляемый компонент также использует преимущества Windows Presentation Foundation (WPF) работы с образами модели расширяемости кодека которая позволяет автоматически распознавать новые форматы изображений в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений.  
+- Управляемый компонент использует неуправляемую инфраструктуру для обеспечения плавной интеграции изображений с другими функциями [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], такими как [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], анимация и графика. Управляемый компонент также использует преимущества Windows Presentation Foundation (WPF) работы с образами модели расширяемости кодека которая позволяет автоматически распознавать новые форматы изображений в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений.  
   
  Большинство управляемых [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] находятся в <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> пространства имен, хотя несколько важных типов, таких как <xref:System.Windows.Media.ImageBrush> и <xref:System.Windows.Media.ImageDrawing> находятся в <xref:System.Windows.Media?displayProperty=nameWithType> пространства имен и <xref:System.Windows.Controls.Image> находится в <xref:System.Windows.Controls?displayProperty=nameWithType> пространства имен.  
   
@@ -132,13 +132,13 @@ ms.locfileid: "59209714"
 #### <a name="stretching-images"></a>Растягивание изображений  
  <xref:System.Windows.Controls.Image.Stretch%2A> Свойство определяет, как изображение растягивается для заполнения его контейнера. <xref:System.Windows.Controls.Image.Stretch%2A> Свойство принимает следующие значения, определенные <xref:System.Windows.Media.Stretch> перечисления:  
   
--   <xref:System.Windows.Media.Stretch.None>: Изображение не растягивается для заполнения области вывода. Если изображение больше, чем область вывода, изображение заполняет область вывода с обрезкой тех частей, которые не входят.  
+- <xref:System.Windows.Media.Stretch.None>: Изображение не растягивается для заполнения области вывода. Если изображение больше, чем область вывода, изображение заполняет область вывода с обрезкой тех частей, которые не входят.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: Изображение масштабируется в соответствии с области вывода. Так как высота и ширина изображения масштабируются независимо друг от друга, исходные пропорции изображения могут не сохраниться. То есть изображение может быть деформировано для полного заполнения контейнера вывода.  
+- <xref:System.Windows.Media.Stretch.Fill>: Изображение масштабируется в соответствии с области вывода. Так как высота и ширина изображения масштабируются независимо друг от друга, исходные пропорции изображения могут не сохраниться. То есть изображение может быть деформировано для полного заполнения контейнера вывода.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: Изображение масштабируется таким образом, чтобы полностью уместиться внутри области вывода. Пропорции изображения сохраняются.  
+- <xref:System.Windows.Media.Stretch.Uniform>: Изображение масштабируется таким образом, чтобы полностью уместиться внутри области вывода. Пропорции изображения сохраняются.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: Изображение масштабируется таким образом, чтобы полностью заполнить область вывода при этом сохранить исходные пропорции изображения.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: Изображение масштабируется таким образом, чтобы полностью заполнить область вывода при этом сохранить исходные пропорции изображения.  
   
  В следующем примере применяется, каждое из доступных <xref:System.Windows.Media.Stretch> перечислений для <xref:System.Windows.Controls.Image>.  
   

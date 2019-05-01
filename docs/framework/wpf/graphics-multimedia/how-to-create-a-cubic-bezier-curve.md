@@ -8,11 +8,11 @@ helpviewer_keywords:
 - cubic Bezier curves [WPF]
 ms.assetid: 450a3a77-7c57-48b0-a008-0f6051add980
 ms.openlocfilehash: 36544abc774b7fe82c2ff47483cfedd6fb13e344
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054631"
 ---
 # <a name="how-to-create-a-cubic-bezier-curve"></a>Практическое руководство. Создание кривой Безье третьего порядка
 В этом примере демонстрируется создание кривой Безье третьего порядка. Создание кривой Безье третьего порядка, используйте <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, и <xref:System.Windows.Media.BezierSegment> классы.  Чтобы отобразить результирующей геометрии, используйте <xref:System.Windows.Shapes.Path> элемент, или использовать их с <xref:System.Windows.Media.GeometryDrawing> или <xref:System.Windows.Media.DrawingContext>. В следующих примерах, соединяющей кривой Безье третьего порядка (10, 100) для (300, 100). Кривая имеет контрольные точки (100, 0) и (200, 200).  

@@ -15,11 +15,11 @@ ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055021"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Ресурсы приложений для библиотек, предназначенных для нескольких платформ
 Можно использовать .NET Framework [переносимой библиотеки классов](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) тип, чтобы убедиться, что ресурсы в библиотеках классов может осуществляться из нескольких платформ проекта. Этот тип проекта доступен в Visual Studio 2012 и нацелена на переносимое подмножество библиотеки классов .NET Framework. Использование [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] гарантирует доступность библиотеки из настольных приложений, приложений Silverlight, Windows Phone и [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
@@ -35,7 +35,7 @@ ms.locfileid: "54641152"
 
  Проект [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] содержит четыре члена <xref:System.Resources.ResourceManager>, перечисленных в представленной ниже таблице. Эти конструкторы и методы позволяют создать экземпляр объекта <xref:System.Resources.ResourceManager> и извлечь строковые ресурсы.
 
-|Член `ResourceManager`|Описание|
+|Член`ResourceManager` |Описание|
 |------------------------------|-----------------|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|Создает экземпляр <xref:System.Resources.ResourceManager> для доступа к именованному файлу ресурсов, найденному в заданной сборке.|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|Создает экземпляр <xref:System.Resources.ResourceManager>, соответствующий указанному типу.|
@@ -61,9 +61,9 @@ ms.locfileid: "54641152"
 |BornLength|12|
 |Hired|Дата приема на работу|
 |HiredLength|12|
-|Идентификатор|Идентификатор|
+|ID|ID|
 |ID.Length|12|
-|Имя|Имя|
+|name|name|
 |NameLength|25|
 |Заголовок|Employee Database|
 
@@ -88,11 +88,11 @@ ms.locfileid: "54641152"
 |-------------------|--------------------|
 |Born|Date de naissance|
 |BornLength|20|
-|Hired|Date embauché|
+|Hired|Дата embauché|
 |HiredLength|16|
-|Идентификатор|Идентификатор|
-|Имя|Nom|
-|Заголовок|Base de données des employés|
+|ID|ID|
+|name|Nom|
+|Заголовок|Базовый de données des employés|
 
  В следующем примере кода показано, как к классу `UILibrary` и его ресурсам можно обращаться из консольного приложения. Для этого требуется добавить в проект консольного приложения ссылку на файл UILIbrary.dll.
 

@@ -3,20 +3,20 @@ title: Руководство по миграции
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
 ms.openlocfilehash: a36108e8c711b9e5d5253b19a9122373fc513855
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009998"
 ---
 # <a name="migration-guidance"></a>Руководство по миграции
 В [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], корпорация Майкрософт выпускает второй основной номер версии Windows Workflow Foundation (WF). [!INCLUDE[wf1](../../../includes/wf1-md.md)] была выпущена в составе [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (она включала типы в пространствах имен System.Workflow.*, которые теперь называются WF3) и улучшена в [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 также является частью [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], но он сосуществует с новой технологией рабочего процесса (типы в System.Activities.\* пространства имен; Далее именуется WF4). При принятии решения об использовании WF4 важно помнить, что управление временем осуществляет пользователь.  
   
--   WF3 представляет собой полностью поддерживаемую часть [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].  
+- WF3 представляет собой полностью поддерживаемую часть [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].  
   
--   Приложения WF3 запускаются в [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] без внесения изменений, при этом они по-прежнему полностью поддерживаются.  
+- Приложения WF3 запускаются в [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] без внесения изменений, при этом они по-прежнему полностью поддерживаются.  
   
--   Можно создавать новые приложения WF3 и существующие приложения можно изменить в Visual Studio 2012 и полностью поддерживаются.  
+- Можно создавать новые приложения WF3 и существующие приложения можно изменить в Visual Studio 2012 и полностью поддерживаются.  
   
  Таким образом, решение .NET Framework 4 связано с решением о переходе на WF4 (System.Activities.*) с WF3 (System.Workflow.\*). В этом разделе приведены ссылки на руководство по миграции в WF, в котором описывается работа с WF3 и WF4.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
 ms.openlocfilehash: 79dc7a3578c395ae8cdf5933e1249441f97071a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053702"
 ---
 # <a name="3-d-graphics-overview"></a>Обзор трехмерной графики
 <a name="introduction"></a> Функциональные возможности [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] позволяют разработчикам рисовать, преобразовывать и анимировать трехмерную графику как в разметке, так и в процедурном коде. Разработчики могут сочетать графику [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] и [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] для создания многофункциональных элементов управления, предоставления сложных визуальных представлений данных или повышения удобства работы с интерфейсом приложения. Поддержка [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] не предполагает предоставления полнофункциональной платформы для создания игр. В этом разделе содержатся общие сведения о функциональных возможностях [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] в графической системе [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -86,11 +86,11 @@ ms.locfileid: "59087993"
   
  Для определения характеристик поверхности модели [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует <xref:System.Windows.Media.Media3D.Material> абстрактного класса. Конкретные подклассы класса Material определяют некоторые характеристики внешнего вида поверхности модели, и каждый из них предоставляет свойство Brush, которому можно передать значение SolidColorBrush, TileBrush или VisualBrush.  
   
--   <xref:System.Windows.Media.Media3D.DiffuseMaterial> Указывает, что кисть будет применена к модели, так, будто была освещена рассеянным светом. Использование класса DiffuseMaterial больше всего напоминает применение кистей непосредственно в моделях [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]; поверхности модели не отражают свет, как блестящие поверхности.  
+- <xref:System.Windows.Media.Media3D.DiffuseMaterial> Указывает, что кисть будет применена к модели, так, будто была освещена рассеянным светом. Использование класса DiffuseMaterial больше всего напоминает применение кистей непосредственно в моделях [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]; поверхности модели не отражают свет, как блестящие поверхности.  
   
--   <xref:System.Windows.Media.Media3D.SpecularMaterial> Указывает, что кисть будет применена к модели, как если бы, если поверхность модели была твердой или блестящей, способной отражать блики. Можно задать степень, в которую текстуры предложит гладкости или «глянца», указав значение для <xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A> свойство.  
+- <xref:System.Windows.Media.Media3D.SpecularMaterial> Указывает, что кисть будет применена к модели, как если бы, если поверхность модели была твердой или блестящей, способной отражать блики. Можно задать степень, в которую текстуры предложит гладкости или «глянца», указав значение для <xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A> свойство.  
   
--   <xref:System.Windows.Media.Media3D.EmissiveMaterial> позволяет указать, что текстура будет применяться, как если бы, если модель излучала свет на цвет кисти. Это не делает модель светящейся; однако это иначе влияет на затенение, чем если бы текстура была создана с помощью класса DiffuseMaterial или SpecularMaterial.  
+- <xref:System.Windows.Media.Media3D.EmissiveMaterial> позволяет указать, что текстура будет применяться, как если бы, если модель излучала свет на цвет кисти. Это не делает модель светящейся; однако это иначе влияет на затенение, чем если бы текстура была создана с помощью класса DiffuseMaterial или SpecularMaterial.  
   
  Для повышения производительности противоположные поверхности объекта <xref:System.Windows.Media.Media3D.GeometryModel3D> (грани, которые невидимы, поскольку они находятся на противоположной стороне модели относительно камеры) удаляются из сцены.  Чтобы указать <xref:System.Windows.Media.Media3D.Material> для применения к противоположной поверхности модели, например плоскости, установите в качестве модели <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> свойство.  
   
@@ -111,13 +111,13 @@ ms.locfileid: "59087993"
   
  Указанные ниже источники света являются производными от базового класса <xref:System.Windows.Media.Media3D.Light>:  
   
--   <xref:System.Windows.Media.Media3D.AmbientLight>: Предоставляет рассеянное освещение, при котором все объекты одинаково, независимо от их расположения или ориентации.  
+- <xref:System.Windows.Media.Media3D.AmbientLight>: Предоставляет рассеянное освещение, при котором все объекты одинаково, независимо от их расположения или ориентации.  
   
--   <xref:System.Windows.Media.Media3D.DirectionalLight>: Создает освещение, аналогичное удаленному источнику света.  Направленные источники света имеют <xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A> указан как объект Vector3D, но без заданного местоположения.  
+- <xref:System.Windows.Media.Media3D.DirectionalLight>: Создает освещение, аналогичное удаленному источнику света.  Направленные источники света имеют <xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A> указан как объект Vector3D, но без заданного местоположения.  
   
--   <xref:System.Windows.Media.Media3D.PointLight>: Создает освещение, аналогичное источника света. Источники света PointLights занимают определенное положение и испускают свет из этого положения. Объекты на сцене освещаются в зависимости от их положения и расстояния относительно источника света. <xref:System.Windows.Media.Media3D.PointLightBase> предоставляет <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> свойство, которое определяет расстояние, далее которого модели не будут освещены светом. Класс PointLight также предоставляет свойства затухания, определяющие интенсивность ослабления источника света в зависимости от расстояния. Можно указать константу, линейную или квадратичную интерполяцию затухания источника света.  
+- <xref:System.Windows.Media.Media3D.PointLight>: Создает освещение, аналогичное источника света. Источники света PointLights занимают определенное положение и испускают свет из этого положения. Объекты на сцене освещаются в зависимости от их положения и расстояния относительно источника света. <xref:System.Windows.Media.Media3D.PointLightBase> предоставляет <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> свойство, которое определяет расстояние, далее которого модели не будут освещены светом. Класс PointLight также предоставляет свойства затухания, определяющие интенсивность ослабления источника света в зависимости от расстояния. Можно указать константу, линейную или квадратичную интерполяцию затухания источника света.  
   
--   <xref:System.Windows.Media.Media3D.SpotLight>: Наследует от <xref:System.Windows.Media.Media3D.PointLight>. Источники света Spotlight освещают сцену подобно источникам света и также имеют расположение и направление. Они проектируют свет в конусообразную область, задается <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> и <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> свойства, заданная в градусах.  
+- <xref:System.Windows.Media.Media3D.SpotLight>: Наследует от <xref:System.Windows.Media.Media3D.PointLight>. Источники света Spotlight освещают сцену подобно источникам света и также имеют расположение и направление. Они проектируют свет в конусообразную область, задается <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> и <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> свойства, заданная в градусах.  
   
  За освещение отвечают <xref:System.Windows.Media.Media3D.Model3D> объектов, поэтому можно преобразовывать и анимировать свойства источников света, включая положение, цвет, направление и диапазон.  
   

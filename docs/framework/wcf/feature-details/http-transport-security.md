@@ -3,11 +3,11 @@ title: Безопасность транспорта HTTP
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
 ms.openlocfilehash: b7415dcc1e6c4a5d47d9e7b6e70a86ab1b898783
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000848"
 ---
 # <a name="http-transport-security"></a>Безопасность транспорта HTTP
 Если в качестве транспорта используется протокол HTTP, безопасность обеспечивается реализацией протокола SSL (Secure Sockets Layer). Протокол SSL широко используется в Интернете для проверки подлинности службы при подключении клиента, а затем и для обеспечения конфиденциальности (шифрования) канала. В этом разделе объясняется, как SSL работает и как это реализуется в Windows Communication Foundation (WCF).  
@@ -31,9 +31,9 @@ ms.locfileid: "59113806"
 ## <a name="implementing-ssl-with-wcf"></a>Реализация SSL с WCF  
  Безопасность транспорта HTTP (или SSL) предоставляется извне WCF. SSL можно реализовать одним из двух способов; при этом выбор способа определяется размещением приложения.  
   
--   Если вы используете Internet Information Services (IIS) в качестве узла WCF, используйте инфраструктуру IIS для настройки службы SSL.  
+- Если вы используете Internet Information Services (IIS) в качестве узла WCF, используйте инфраструктуру IIS для настройки службы SSL.  
   
--   При создании резидентного приложения WCF, можно привязать SSL-сертификат к адресу, с помощью средства HttpCfg.exe.  
+- При создании резидентного приложения WCF, можно привязать SSL-сертификат к адресу, с помощью средства HttpCfg.exe.  
   
 ### <a name="using-iis-for-transport-security"></a>Использование служб IIS для безопасности транспорта  
   

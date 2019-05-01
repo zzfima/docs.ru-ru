@@ -15,11 +15,11 @@ ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c5b74f2608022d48dbd7e63e4ddf6112c333e3f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018761"
 ---
 # <a name="principal-and-identity-objects"></a>Объекты Principal и Identity
 Управляемый код может получить удостоверение или роль участника с помощью <xref:System.Security.Principal.IPrincipal> объект, содержащий ссылку на <xref:System.Security.Principal.IIdentity> объекта. Может быть полезно сравнить объекты Identity и Principal с привычными понятиями, такими как учетные записи пользователей и групп. В большинстве сетевых сред учетные записи пользователей представляют пользователей или программы, а учетные записи групп — определенные категории пользователей и предоставленные им права. Аналогичным образом, объекты Identity в .NET Framework представляют собой пользователей, а роли — членства и контексты безопасности. В .NET Framework объект Principal инкапсулирует объект Identity и роль. Приложения .NET Framework предоставляют права объекту Principal на основании его идентификатора, но чаще на основании его участия в роли.  

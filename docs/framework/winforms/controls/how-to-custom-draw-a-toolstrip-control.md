@@ -17,20 +17,20 @@ helpviewer_keywords:
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
 ms.openlocfilehash: 9b3d6b9391971d4c2d012345b96c2ed64d33a998
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052993"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>Практическое руководство. Пользовательская прорисовка элемента управления ToolStrip
 Элементы управления <xref:System.Windows.Forms.ToolStrip> имеют следующие связанные классы отрисовки:  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer> предоставляет внешний вид и стиль операционной системы;  
+- <xref:System.Windows.Forms.ToolStripSystemRenderer> предоставляет внешний вид и стиль операционной системы;  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> предоставляет внешний вид и стиль Microsoft Office;  
+- <xref:System.Windows.Forms.ToolStripProfessionalRenderer> предоставляет внешний вид и стиль Microsoft Office;  
   
--   <xref:System.Windows.Forms.ToolStripRenderer> является абстрактным базовым классом для двух других классов отрисовки.  
+- <xref:System.Windows.Forms.ToolStripRenderer> является абстрактным базовым классом для двух других классов отрисовки.  
   
  Для настраиваемой отрисовки (также известной как рисование владельцем) элемента управления <xref:System.Windows.Forms.ToolStrip> можно переопределить один из классов отрисовки и изменить перспективу логики отрисовки.  
   
@@ -38,20 +38,20 @@ ms.locfileid: "59311049"
   
 ### <a name="to-switch-between-the-provided-renderers"></a>Переключение между доступными средствами отрисовки  
   
--   Задайте для свойства <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> требуемое значение <xref:System.Windows.Forms.ToolStripRenderMode>.  
+- Задайте для свойства <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> требуемое значение <xref:System.Windows.Forms.ToolStripRenderMode>.  
   
      Для <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> статический режим <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> определяет средство отрисовки для приложения. Другие значения <xref:System.Windows.Forms.ToolStripRenderMode>: <xref:System.Windows.Forms.ToolStripRenderMode.Custom>, <xref:System.Windows.Forms.ToolStripRenderMode.Professional> и <xref:System.Windows.Forms.ToolStripRenderMode.System>.  
   
 ### <a name="to-change-the-microsoft-officestyle-borders-to-straight"></a>Изменение границ в стиле Microsoft Office на прямые  
   
--   Переопределите <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, но не вызывайте базовый класс.  
+- Переопределите <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, но не вызывайте базовый класс.  
   
 > [!NOTE]
 >  Существуют версии этого метода для <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripSystemRenderer> и <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.  
   
 ### <a name="to-change-the-professionalcolortable"></a>Изменение ProfessionalColorTable  
   
--   Переопределите <xref:System.Windows.Forms.ProfessionalColorTable> и измените нужные цвета.  
+- Переопределите <xref:System.Windows.Forms.ProfessionalColorTable> и измените нужные цвета.  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As _  
@@ -115,11 +115,11 @@ ms.locfileid: "59311049"
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a>Отключение цветов в стиле Microsoft Office для всего приложения  
   
--   Присвойте свойству <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> значение `false`.  
+- Присвойте свойству <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> значение `false`.  
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a>Отключение цветов в стиле Microsoft Office для одного элемента управления ToolStrip  
   
--   Используйте код, аналогичный приведенному ниже.  
+- Используйте код, аналогичный приведенному ниже.  
   
     ```vb  
     Dim colorTable As ProfessionalColorTable()  

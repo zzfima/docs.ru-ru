@@ -10,18 +10,18 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating toggle buttons
 ms.assetid: d9c197df-4c65-43f2-beee-b68b52b2befc
 ms.openlocfilehash: e688e9a220e6c82caa2d107589b5ca9a1e59e72b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052165"
 ---
 # <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>Практическое руководство. Создание переключателей в элементах управления ToolStrip
 Когда пользователь щелкает кнопку-переключатель, он отображается углубленным и остается таковым, пока пользователь не щелкнет кнопку еще раз.  
   
 ### <a name="to-create-a-toggling-toolstripbutton"></a>Для создания переключателя ToolStripButton  
   
--   Используйте код, как в следующем примере кода. Этот код предполагает, что форма содержит <xref:System.Windows.Forms.ToolStrip> элемента управления и что его <xref:System.Windows.Forms.ToolStrip.Items%2A> коллекция содержит <xref:System.Windows.Forms.ToolStripButton> вызывается `toolStripButton1`. Также предполагается, что у вас есть обработчик событий, который называется `toolStripButton1_CheckedChanged`.  
+- Используйте код, как в следующем примере кода. Этот код предполагает, что форма содержит <xref:System.Windows.Forms.ToolStrip> элемента управления и что его <xref:System.Windows.Forms.ToolStrip.Items%2A> коллекция содержит <xref:System.Windows.Forms.ToolStripButton> вызывается `toolStripButton1`. Также предполагается, что у вас есть обработчик событий, который называется `toolStripButton1_CheckedChanged`.  
   
     ```vb  
     toolStripButton1.CheckOnClick = True  

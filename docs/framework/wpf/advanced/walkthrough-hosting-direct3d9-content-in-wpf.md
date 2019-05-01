@@ -6,40 +6,40 @@ helpviewer_keywords:
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
 ms.openlocfilehash: 07cfa5bed6e5af131a60a303f0702f18413043e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007132"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Пошаговое руководство. Размещение содержимого Direct3D9 в WPF
 В этом пошаговом руководстве показано, как размещение содержимого Direct3D9 в приложении Windows Presentation Foundation (WPF).  
   
  В руководстве выполняются следующие задачи:  
   
--   Создание проекта WPF для размещения содержимого Direct3D9.  
+- Создание проекта WPF для размещения содержимого Direct3D9.  
   
--   Импорт содержимого Direct3D9.  
+- Импорт содержимого Direct3D9.  
   
--   Отображение содержимого Direct3D9 с помощью <xref:System.Windows.Interop.D3DImage> класса.  
+- Отображение содержимого Direct3D9 с помощью <xref:System.Windows.Interop.D3DImage> класса.  
   
  Когда вы закончите, будет известно о размещении содержимого Direct3D9 в WPF-приложение.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
   
--   Visual Studio.  
+- Visual Studio.  
   
--   DirectX SDK, 9 или более поздней версии.  
+- DirectX SDK, 9 или более поздней версии.  
   
--   Библиотеку DLL, содержащую содержимого Direct3D9 в WPF-совместимом формате. Дополнительные сведения см. в разделе [взаимодействие WPF и Direct3D9](wpf-and-direct3d9-interoperation.md) и [Пошаговое руководство: Создание содержимого Direct3D9 для размещения в WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md).  
+- Библиотеку DLL, содержащую содержимого Direct3D9 в WPF-совместимом формате. Дополнительные сведения см. в разделе [взаимодействие WPF и Direct3D9](wpf-and-direct3d9-interoperation.md) и [Пошаговое руководство: Создание содержимого Direct3D9 для размещения в WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md).  
   
 ## <a name="creating-the-wpf-project"></a>Создание проекта WPF  
  Первым шагом является создание проекта приложения WPF.  
   
 #### <a name="to-create-the-wpf-project"></a>Создание проекта WPF  
   
--   Создание нового проекта приложения WPF в Visual C# с именем `D3DHost`. Дополнительные сведения см. в разделе [Пошаговое руководство: Создание первого классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+- Создание нового проекта приложения WPF в Visual C# с именем `D3DHost`. Дополнительные сведения см. в разделе [Пошаговое руководство: Создание первого классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
      Файл MainWindow.xaml откроется в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   

@@ -3,11 +3,11 @@ title: Практическое руководство. Как указать т
 ms.date: 03/30/2017
 ms.assetid: 2228fdad-7e6a-4b1b-b4d1-79d0198b7c28
 ms.openlocfilehash: 67f23ff06aefbcff4ba7e2eaab63d9b8493b9717
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033674"
 ---
 # <a name="how-to-specify-database-data-types"></a>Практическое руководство. Как указать типы данных базы данных
 Используйте [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> свойство <xref:System.Data.Linq.Mapping.ColumnAttribute> атрибут для задания точного текста, определяющего столбец в объявлении таблицы T-SQL.  

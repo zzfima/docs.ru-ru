@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
 ms.openlocfilehash: 360f19e558f97e1807b329ad18e429fa893bbf86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053162"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Пошаговое руководство. Сопоставление свойств с помощью элемента управления ElementHost
 
@@ -21,13 +21,13 @@ ms.locfileid: "59300922"
 
 В данном пошаговом руководстве представлены следующие задачи.
 
--   Создание проекта.
+- Создание проекта.
 
--   Определение нового сопоставления свойства.
+- Определение нового сопоставления свойства.
 
--   Удаление сопоставления свойства по умолчанию.
+- Удаление сопоставления свойства по умолчанию.
 
--   Расширение сопоставления свойства по умолчанию.
+- Расширение сопоставления свойства по умолчанию.
 
 Полный пример кода для задач, приведенных в этом пошаговом руководстве, см. в разделе [сопоставления свойств с помощью пример элемента управления ElementHost](https://go.microsoft.com/fwlink/?LinkID=160018).
 
@@ -37,7 +37,7 @@ ms.locfileid: "59300922"
 
 Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="creating-the-project"></a>Создание проекта
 
@@ -47,13 +47,13 @@ ms.locfileid: "59300922"
 
 2. В **обозревателе решений**, добавьте ссылки на следующие [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] сборок.
 
-    -   PresentationCore
+    - PresentationCore
 
-    -   PresentationFramework
+    - PresentationFramework
 
-    -   WindowsBase
+    - WindowsBase
 
-    -   WindowsFormsIntegration
+    - WindowsFormsIntegration
 
 3. Скопируйте следующий код в верхнюю часть `Form1` файл кода.
 
@@ -101,7 +101,7 @@ ms.locfileid: "59300922"
 
 ### <a name="to-remove-a-default-property-mapping"></a>Удаление сопоставления свойства по умолчанию
 
--   Скопируйте следующий код в определение `Form1` класса.
+- Скопируйте следующий код в определение `Form1` класса.
 
      [!code-csharp[PropertyMappingWithElementHost#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#13)]
      [!code-vb[PropertyMappingWithElementHost#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]
@@ -114,7 +114,7 @@ ms.locfileid: "59300922"
 
 ### <a name="to-extend-a-default-property-mapping"></a>Расширение сопоставления свойства по умолчанию
 
--   Скопируйте следующий код в определение `Form1` класса.
+- Скопируйте следующий код в определение `Form1` класса.
 
      [!code-csharp[PropertyMappingWithElementHost#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#15)]
      [!code-vb[PropertyMappingWithElementHost#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]
@@ -132,11 +132,11 @@ ms.locfileid: "59300922"
 
      `Form1_Load` Метод обрабатывает <xref:System.Windows.Forms.Form.Load> событий и выполнения следующей инициализации.
 
-    -   Создает [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> элемент.
+    - Создает [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> элемент.
 
-    -   Вызывает методы, ранее определенные в руководстве, для настройки сопоставлений свойств.
+    - Вызывает методы, ранее определенные в руководстве, для настройки сопоставлений свойств.
 
-    -   Присваивает начальные значения сопоставленным свойствам.
+    - Присваивает начальные значения сопоставленным свойствам.
 
 2. Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.
 

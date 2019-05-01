@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
 ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053786"
 ---
 # <a name="visual-basic-language-features"></a>Возможности и элементы языка Visual Basic
 В следующих разделах описываются и обсуждаются основные компоненты Visual Basic, объектно ориентированного языка программирования. После того, как вы подготовите пользовательский интерфейс для вашего приложения с помощью форм и элементов управления, необходимо написать код, определяющий поведение приложения. Как и любой современный язык программирования Visual Basic поддерживает ряд общих конструкций программирования и элементов языка.  

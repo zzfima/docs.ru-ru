@@ -6,26 +6,26 @@ helpviewer_keywords:
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
 ms.openlocfilehash: 586d306d0f375241c9382e1e24cf1af75b990ba9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019163"
 ---
 # <a name="wpf-host-presentationhostexe"></a>Ведущее приложение WPF (PresentationHost.exe)
 Ведущее приложение Windows Presentation Foundation (WPF) (PresentationHost.exe) — это приложение, которое позволяет [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений, размещенных в совместимых браузерах (включая [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] и более поздних версий). По умолчанию узел Windows Presentation Foundation (WPF) регистрируется как оболочка и [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] обработчик для Браузерные [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] содержимое, которое включает в себя:  
   
--   Свободные (нескомпилированные) файлы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (.xaml).  
+- Свободные (нескомпилированные) файлы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (.xaml).  
   
--   [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (.xbap).  
+- [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (.xbap).  
   
  Для файлов этих типов узлов Windows Presentation Foundation (WPF).  
   
--   Запускает зарегистрированный [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] обработчик для размещения содержимого Windows Presentation Foundation (WPF).  
+- Запускает зарегистрированный [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] обработчик для размещения содержимого Windows Presentation Foundation (WPF).  
   
--   Загружает правильные версии требуемых [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и сборок Windows Presentation Foundation (WPF).  
+- Загружает правильные версии требуемых [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и сборок Windows Presentation Foundation (WPF).  
   
--   Обеспечивает наличие соответствующих уровней разрешений для зоны развертывания.  
+- Обеспечивает наличие соответствующих уровней разрешений для зоны развертывания.  
   
  В этом разделе описываются параметры командной строки, которые можно использовать с PresentationHost.exe.  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
 ms.openlocfilehash: e86277c06e515b28bada3331cf4fd63e536319a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053006"
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Практическое руководство. Применение атрибутов к элементам управления Windows Forms
 Для разработки компонентов и элементов управления, которые правильно взаимодействуют со средой разработки и правильно выполнять во время выполнения, необходимо правильно применять атрибуты к классам и членам.  
@@ -75,7 +75,7 @@ ms.locfileid: "59079595"
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
--   Форма, содержащая `AttributesDemoControl` необходима ссылка на `AttributesDemoControl` сборки для сборки.  
+- Форма, содержащая `AttributesDemoControl` необходима ссылка на `AttributesDemoControl` сборки для сборки.  
   
 ## <a name="see-also"></a>См. также
 

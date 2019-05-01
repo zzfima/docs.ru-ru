@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40042
 ms.assetid: 1d6eae29-4ad3-4434-bde4-a53b6051adf5
 ms.openlocfilehash: 39054fb6bf82a344cb38613164cb42968aa632f7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051550"
 ---
 # <a name="type-of-optional-value-for-optional-parameter-parametername-is-not-cls-compliant"></a>Тип необязательного значения для необязательного параметра \<имя_параметра > не является CLS-совместимым
 Процедура помечена как `<CLSCompliant(True)>`, но она объявляет [необязательный](../../../visual-basic/language-reference/modifiers/optional.md) параметр со значением по умолчанию несовместимого типа.  
@@ -21,13 +21,13 @@ ms.locfileid: "55261429"
   
  Следующие типы данных Visual Basic не являются CLS-совместимыми:  
   
--   [Тип данных SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+- [Тип данных SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
--   [Тип данных UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+- [Тип данных UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
   
--   [Тип данных ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+- [Тип данных ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
   
--   [Тип данных UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+- [Тип данных UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
  Когда вы применяете атрибут <xref:System.CLSCompliantAttribute> к программному элементу, вы задаете для параметра `isCompliant` атрибута значение `True` или `False` , чтобы указать на соответствие или несоответствие требованиям. Для этого параметра нет значения по умолчанию, и вы должны предоставить значение.  
   
@@ -39,8 +39,8 @@ ms.locfileid: "55261429"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Если необязательный параметр должен иметь значение по умолчанию этого конкретного типа, удалите <xref:System.CLSCompliantAttribute>. Процедура не может соответствовать CLS.  
+- Если необязательный параметр должен иметь значение по умолчанию этого конкретного типа, удалите <xref:System.CLSCompliantAttribute>. Процедура не может соответствовать CLS.  
   
--   Если процедура должна быть совместимой с CLS, измените тип этого значения по умолчанию на ближайший тип, совместимый с CLS. Например, вместо `UInteger` вы можете использовать `Integer`, если вам не нужен диапазон значений, превышающий 2 147 483 647. Если вам нужен расширенный диапазон, вы можете заменить `UInteger` на `Long`.  
+- Если процедура должна быть совместимой с CLS, измените тип этого значения по умолчанию на ближайший тип, совместимый с CLS. Например, вместо `UInteger` вы можете использовать `Integer`, если вам не нужен диапазон значений, превышающий 2 147 483 647. Если вам нужен расширенный диапазон, вы можете заменить `UInteger` на `Long`.  
   
--   При взаимодействии с объектами службы автоматизации или COM-объектами помните, что длина данных некоторых типов отличается от длины данных в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Например, данные типа `int` часто являются 16-битными в других средах. Если вы принимаете 16-разрядное целое число из таких компонентов, объявите его как `Short` вместо `Integer` в управляемом коде Visual Basic.
+- При взаимодействии с объектами службы автоматизации или COM-объектами помните, что длина данных некоторых типов отличается от длины данных в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Например, данные типа `int` часто являются 16-битными в других средах. Если вы принимаете 16-разрядное целое число из таких компонентов, объявите его как `Short` вместо `Integer` в управляемом коде Visual Basic.

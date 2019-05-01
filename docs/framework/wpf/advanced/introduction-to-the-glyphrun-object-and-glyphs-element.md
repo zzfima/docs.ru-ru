@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
 ms.openlocfilehash: 0e5ec2b89f015c7e061b59fea755eb368f1ac7a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031308"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>Знакомство с объектом GlyphRun и элементом Glyphs
 В этом разделе описывается <xref:System.Windows.Media.GlyphRun> объекта и <xref:System.Windows.Documents.Glyphs> элемент.  
@@ -27,13 +27,13 @@ ms.locfileid: "59341053"
   
 2. Сценарии печати.  
   
-    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] как язык принтера.  
+    - [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] как язык принтера.  
   
-    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
+    - [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
   
-    -   Предыдущие драйверы принтера, вывод из приложений [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] в фиксированный формат.  
+    - Предыдущие драйверы принтера, вывод из приложений [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] в фиксированный формат.  
   
-    -   Формат очереди печати.  
+    - Формат очереди печати.  
   
 3. Представление документов фиксированного формата, включая клиенты предыдущих версий [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] и другие вычислительные устройства.  
   
@@ -67,15 +67,15 @@ ms.locfileid: "59341053"
 ### <a name="indices-property"></a>Свойство Indices  
  <xref:System.Windows.Documents.Glyphs.Indices%2A> Свойство является строкой спецификаций глифа. Если последовательность глифов образует единый кластер, спецификации первого глифа в кластере предшествует спецификация того, сколько глифов и сколько кодовых точек объединяются для формирования кластера. <xref:System.Windows.Documents.Glyphs.Indices%2A> Свойство собирает в одной строке следующие свойства.  
   
--   Индексы глифов  
+- Индексы глифов  
   
--   Дополнительная ширина глифа  
+- Дополнительная ширина глифа  
   
--   Объединение векторов присоединения глифа  
+- Объединение векторов присоединения глифа  
   
--   Сопоставление кластера от кодовых точек к глифам  
+- Сопоставление кластера от кодовых точек к глифам  
   
--   Флаги глифов  
+- Флаги глифов  
   
  Спецификация глифа имеет следующий вид.  
   

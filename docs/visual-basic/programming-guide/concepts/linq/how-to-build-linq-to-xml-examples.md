@@ -3,11 +3,11 @@ title: Практическое руководство. Построение п�
 ms.date: 07/20/2015
 ms.assetid: 565bca7a-ac8b-497f-8d8d-3323b3d7799e
 ms.openlocfilehash: c4c1f04e83eda88eb3d954a71ad5f14c309cda79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054982"
 ---
 # <a name="how-to-build-linq-to-xml-examples-visual-basic"></a>Практическое руководство. Построение примеров LINQ to XML (Visual Basic)
 В разных фрагментах кода и примерах, приведенных в этой документации, используются классы и типы из различных пространств имен. При компиляции кода Visual Basic необходимо указывать соответствующие инструкции `Imports`.  

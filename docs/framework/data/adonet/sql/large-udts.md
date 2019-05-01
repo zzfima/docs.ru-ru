@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
 ms.openlocfilehash: 015ce896e49b3a6a932c36db867271b4ac4c64c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033869"
 ---
 # <a name="large-udts"></a>Большие, определяемые пользователем типы
 Определяемые пользователем типы данных (UDT) позволяют разработчику расширить систему скалярных типов путем сохранения в базе данных SQL Server объектов среды CLR. Определяемые пользователем типы могут содержать несколько элементов в отличие от традиционных псевдонимов типов данных, состоящих из одного системного типа данных SQL Server.  
@@ -49,21 +49,21 @@ ms.locfileid: "59303483"
   
  Следующие методы <xref:System.Data.SqlClient.SqlDataReader> возвращают <xref:System.Data.SqlTypes.SqlBinary> вместо определяемого пользователем типа, если в SQL Server 2005 установлен аргумент `Type System Version`:  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
   
  Следующие методы возвращают массив `Byte[]` вместо определяемого пользователем типа, если в SQL Server 2005 установлен аргумент `Type System Version`:  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetValues%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetValues%2A>  
   
  Обратите внимание, что для текущей версии ADO.NET преобразования не выполняются.  
   

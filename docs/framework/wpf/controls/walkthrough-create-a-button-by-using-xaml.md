@@ -5,11 +5,11 @@ helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
 ms.openlocfilehash: 908a38485c879e3f28399bb7dbc8303afd4505da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024020"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Пошаговое руководство. Создание кнопки с помощью XAML
 Цель этого пошагового руководства — сведения о создании анимированной кнопки для использования в приложении Windows Presentation Foundation (WPF). В этом пошаговом руководстве используется стиль и шаблон для создания ресурса пользовательской кнопки, которая позволяет повторно использовать код и разделять логику от объявления кнопки. В этом пошаговом руководстве приведено полностью в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -421,15 +421,15 @@ ms.locfileid: "59309502"
 ## <a name="summary"></a>Сводка  
  В этом пошаговом руководстве вы выполнили следующие упражнения:  
   
--   Целевые <xref:System.Windows.Style> тип объекта (<xref:System.Windows.Controls.Button>).  
+- Целевые <xref:System.Windows.Style> тип объекта (<xref:System.Windows.Controls.Button>).  
   
--   Управление основными свойствами всего приложения с помощью кнопок на <xref:System.Windows.Style>.  
+- Управление основными свойствами всего приложения с помощью кнопок на <xref:System.Windows.Style>.  
   
--   Созданные ресурсы, такие как градиенты, для использования для значений свойств <xref:System.Windows.Style> методы задания.  
+- Созданные ресурсы, такие как градиенты, для использования для значений свойств <xref:System.Windows.Style> методы задания.  
   
--   Настройка внешнего вида кнопки в всего приложения можно применить шаблон к кнопкам.  
+- Настройка внешнего вида кнопки в всего приложения можно применить шаблон к кнопкам.  
   
--   Настройка поведения для кнопок в ответ на действия пользователя (таких как <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, и <xref:System.Windows.Controls.Primitives.ButtonBase.Click>), которые включены эффекты анимации.  
+- Настройка поведения для кнопок в ответ на действия пользователя (таких как <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, и <xref:System.Windows.Controls.Primitives.ButtonBase.Click>), которые включены эффекты анимации.  
   
 ## <a name="see-also"></a>См. также
 

@@ -3,11 +3,11 @@ title: '>= (Больше или равно) (язык Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 70780ac4-0123-4da8-b731-8af856daffe3
 ms.openlocfilehash: b5a8a834c325cca38e2c106ca3f8ee829dd699b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034155"
 ---
 # <a name="-greater-than-or-equal-to-entity-sql"></a>> = (больше или равно) (язык Entity SQL)
 Сравнивает два выражения и определяет, имеет ли левое выражение значение, большее или равное значению правого выражения.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
 ms.openlocfilehash: de9dce1b3c15070fda268c430ce5da641efef6f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003890"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Практическое руководство. Установка уровня сжатия JPEG
 Вам может потребоваться изменить параметры изображения при сохранении на диск, чтобы уменьшить размер файла или повысить качество изображения. Качество изображения в формате JPEG можно настроить, изменив уровень сжатия. Чтобы указать уровень сжатия при сохранении изображения в формате JPEG, необходимо создать <xref:System.Drawing.Imaging.EncoderParameters> объект и передать его в <xref:System.Drawing.Image.Save%2A> метод <xref:System.Drawing.Image> класса. Инициализировать <xref:System.Drawing.Imaging.EncoderParameters> объекта, чтобы он включал массив, который состоит из одной <xref:System.Drawing.Imaging.EncoderParameter>. При создании <xref:System.Drawing.Imaging.EncoderParameter>, укажите <xref:System.Drawing.Imaging.Encoder.Quality> кодировщик и нужный уровень сжатия.  
@@ -123,11 +123,11 @@ End Function
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   приложение Windows Forms;  
+- приложение Windows Forms;  
   
--   Объект <xref:System.Windows.Forms.PaintEventArgs>, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
+- Объект <xref:System.Windows.Forms.PaintEventArgs>, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
   
--   файл изображения с именем `TestPhoto.jpg`, расположенный в папке **C:\\**.  
+- файл изображения с именем `TestPhoto.jpg`, расположенный в папке **C:\\**.  
   
 ## <a name="see-also"></a>См. также
 

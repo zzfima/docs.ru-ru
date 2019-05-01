@@ -3,11 +3,11 @@ title: Совместимость с ASP.NET
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
 ms.openlocfilehash: 01381dc579f5ae3eadd2f913a0e09d7d259794a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002668"
 ---
 # <a name="aspnet-compatibility"></a>Совместимость с ASP.NET
 В этом примере показано, как включить режим совместимости ASP.NET в Windows Communication Foundation (WCF). Использование служб, работающих в режиме, принимают полное участие в конвейере приложения ASP.NET и осуществлять совместимости с ASP.NET функции ASP.NET, такие как авторизация файла/URL-адрес, состояние сеанса и <xref:System.Web.HttpContext> класса. <xref:System.Web.HttpContext> Класс позволяет получить доступ к файлы cookie, сеансов и других функций ASP.NET. Для этого режима требуется, чтобы привязки использовали транспорт HTTP, а сами службы были размещены в службах IIS.  

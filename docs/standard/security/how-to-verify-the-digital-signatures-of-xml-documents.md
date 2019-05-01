@@ -17,11 +17,11 @@ ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 19537fa3e3e27c3446d22f1f1a8cf2faf472158e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018571"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Практическое руководство. Проверка цифровых подписей XML-документов
 Классы в пространстве имен <xref:System.Security.Cryptography.Xml> можно использовать для проверки XML-данных, подписанных цифровой подписью. Цифровые подписи XML (XMLDSIG) позволяют убедиться, что данные не были изменены после подписания. Дополнительные сведения о стандарте XMLDSIG см. в спецификации консорциума World Wide Web (W3C) в <https://www.w3.org/TR/xmldsig-core/>.
@@ -75,9 +75,9 @@ ms.locfileid: "59307773"
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
--   Чтобы скомпилировать этот пример, необходимо включить ссылку на `System.Security.dll`.  
+- Чтобы скомпилировать этот пример, необходимо включить ссылку на `System.Security.dll`.  
   
--   Включите следующие пространства имен: <xref:System.Xml>, <xref:System.Security.Cryptography> и <xref:System.Security.Cryptography.Xml>.  
+- Включите следующие пространства имен: <xref:System.Xml>, <xref:System.Security.Cryptography> и <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Не следует хранить или передавать закрытый ключ из пары асимметричных ключей в виде обычного текста.  Дополнительные сведения о симметричных и асимметричных криптографических ключах см. в разделе [Создание ключей для шифрования и расшифровки](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  

@@ -10,34 +10,34 @@ helpviewer_keywords:
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
 ms.openlocfilehash: 6485aa9f2094b734f796ff38a33f4e0d3434e004
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053110"
 ---
 # <a name="table-overview"></a>Общие сведения о таблицах
 <xref:System.Windows.Documents.Table> представляет собой элемент уровня блока, который поддерживает представление на основе сетки содержимого документа. Гибкость этого элемента делает его очень полезным, но также и более сложным для понимания и правильного использования.  
   
  В этом разделе содержатся следующие подразделы.  
   
--   [Основные сведения о таблицах](#table_basics)  
+- [Основные сведения о таблицах](#table_basics)  
   
--   [Отличие таблицы от сетки](#table_vs_Grid)  
+- [Отличие таблицы от сетки](#table_vs_Grid)  
   
--   [Основная структура таблицы](#basic_table_structure)  
+- [Основная структура таблицы](#basic_table_structure)  
   
--   [Вложения таблицы](#table_containment)  
+- [Вложения таблицы](#table_containment)  
   
--   [Группирование строк](#row_groupings)  
+- [Группирование строк](#row_groupings)  
   
--   [Приоритет отрисовки фона](#rendering_precedence)  
+- [Приоритет отрисовки фона](#rendering_precedence)  
   
--   [Объединение строк или столбцов](#spanning_rows_or_columns)  
+- [Объединение строк или столбцов](#spanning_rows_or_columns)  
   
--   [Создание таблицы с помощью кода](#building_a_table_with_code)  
+- [Создание таблицы с помощью кода](#building_a_table_with_code)  
   
--   [Связанные разделы] 
+- [Связанные разделы] 
   
 <a name="table_basics"></a>   
 ## <a name="table-basics"></a>Основные сведения о таблицах  
@@ -50,15 +50,15 @@ ms.locfileid: "59317666"
 ### <a name="basic-table-structure"></a>Основная структура таблицы  
  <xref:System.Windows.Documents.Table> предоставляет презентацию основе сетки, состоящий из столбцов (представленный <xref:System.Windows.Documents.TableColumn> элементов) и строк (представленных <xref:System.Windows.Documents.TableRow> элементов). <xref:System.Windows.Documents.TableColumn> элементы не размещайте содержимого; они просто определяют столбцы и их характеристики. <xref:System.Windows.Documents.TableRow> элементы должны размещаться в <xref:System.Windows.Documents.TableRowGroup> элемент, который определяет группирование строк в таблице. <xref:System.Windows.Documents.TableCell> элементы, которые содержат фактическое содержимое, которое должно быть представлено в таблице, должны размещаться в <xref:System.Windows.Documents.TableRow> элемент. <xref:System.Windows.Documents.TableCell> может содержать только элементы, которые являются производными от <xref:System.Windows.Documents.Block>.  Допустимые дочерние элементы для <xref:System.Windows.Documents.TableCell> включают.  
   
--   <xref:System.Windows.Documents.BlockUIContainer>  
+- <xref:System.Windows.Documents.BlockUIContainer>  
   
--   <xref:System.Windows.Documents.List>  
+- <xref:System.Windows.Documents.List>  
   
--   <xref:System.Windows.Documents.Paragraph>  
+- <xref:System.Windows.Documents.Paragraph>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Table>  
+- <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.TableCell> элементы могут не содержать текстовое содержимое. Дополнительные сведения о правилах включения для потока содержимого элементы, такие как <xref:System.Windows.Documents.TableCell>, см. в разделе [Общие](flow-document-overview.md).  
@@ -78,19 +78,19 @@ ms.locfileid: "59317666"
 ### <a name="table-containment"></a>Вложения таблицы  
  <xref:System.Windows.Documents.Table> является производным от <xref:System.Windows.Documents.Block> элемент и следует общим правилам для <xref:System.Windows.Documents.Block> элементов уровня.  Объект <xref:System.Windows.Documents.Table> элемент может содержаться в любом из следующих элементов:  
   
--   <xref:System.Windows.Documents.FlowDocument>  
+- <xref:System.Windows.Documents.FlowDocument>  
   
--   <xref:System.Windows.Documents.TableCell>  
+- <xref:System.Windows.Documents.TableCell>  
   
--   <xref:System.Windows.Controls.ListBoxItem>  
+- <xref:System.Windows.Controls.ListBoxItem>  
   
--   <xref:System.Windows.Controls.ListViewItem>  
+- <xref:System.Windows.Controls.ListViewItem>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Floater>  
+- <xref:System.Windows.Documents.Floater>  
   
--   <xref:System.Windows.Documents.Figure>  
+- <xref:System.Windows.Documents.Figure>  
   
 <a name="row_groupings"></a>   
 ### <a name="row-groupings"></a>Группирование строк  

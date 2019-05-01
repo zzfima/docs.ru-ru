@@ -9,11 +9,11 @@ helpviewer_keywords:
 - shapes [WPF], creating with StreamGeometry class
 ms.assetid: 08f7c8ce-074b-49cd-9aba-cc9592d4ee51
 ms.openlocfilehash: fd191e4cfdfa33c144389d4871a9641e9c811ed3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054579"
 ---
 # <a name="how-to-create-a-shape-using-a-streamgeometry"></a>Практическое руководство. Создание фигуры с помощью объекта StreamGeometry
 <xref:System.Windows.Media.StreamGeometry> — Упрощенная альтернатива <xref:System.Windows.Media.PathGeometry> для создания геометрических фигур. Используйте <xref:System.Windows.Media.StreamGeometry> для описания сложной геометрии, но не требуется поддержка привязки данных, анимации или изменения. Например, из-за своей эффективности <xref:System.Windows.Media.StreamGeometry> класс хорошо подходит для описания графических элементов.  

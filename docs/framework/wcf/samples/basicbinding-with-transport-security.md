@@ -3,11 +3,11 @@ title: BasicBinding с обеспечением безопасности тра�
 ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
 ms.openlocfilehash: bba185cdd9aa61975cbe4e93720f4b3377b475b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002629"
 ---
 # <a name="basicbinding-with-transport-security"></a>BasicBinding с обеспечением безопасности транспорта
 Этот образец демонстрирует использование безопасности транспорта SSL с использованием основной привязки. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующем службу калькулятора.  

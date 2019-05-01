@@ -3,11 +3,11 @@ title: Процедура однократной настройки образц
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
 ms.openlocfilehash: 2b9d84089cdd987f2e2b1e3d23354505520a80f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052109"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Процедура однократной настройки образцов Windows Communication Foundation
 Большинство примеров Windows Communication Foundation (WCF) размещаются в Internet Information Services (IIS) и выполняются из общего виртуального каталога. Эта процедура однократной настройки создает папку на диске; Он также добавляет виртуальный каталог IIS с именем **ServiceModelSamples**.
@@ -48,9 +48,9 @@ ms.locfileid: "59773055"
   
 9. Запустите **Setupvroot.bat** пакетный файл. Выполняются следующие действия.  
   
-    -   В службах IIS создается виртуальный каталог с именем ServiceModelSamples.  
+    - В службах IIS создается виртуальный каталог с именем ServiceModelSamples.  
   
-    -   Создаются новые каталоги диска с именами «%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples» и «%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin».  
+    - Создаются новые каталоги диска с именами «%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples» и «%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin».  
   
      Если вы предпочитаете установить эти каталоги вручную, см. в разделе [виртуального инструкции по настройке каталогов](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md). Чтобы отменить все изменения, произведенные на данном шаге, запустите файл cleanupvroot.bat по окончании использования образцов.  
   
@@ -66,11 +66,11 @@ ms.locfileid: "59773055"
 
 12. Запустите файл Setupcerttool.bat. Этот файл находится в \<путь установки > \WF_WCF_Samples\WCF\Setup\ папки.  Этот скрипт выполнит следующие задачи.
 
-    -   Построит средство FindPrivateKey.
+    - Построит средство FindPrivateKey.
 
-    -   Создаст каталог с именем %ProgramFiles%\ServiceModelSampleTools.
+    - Создаст каталог с именем %ProgramFiles%\ServiceModelSampleTools.
 
-    -   Скопирует в этот каталог новое средство FindPrivateKey.
+    - Скопирует в этот каталог новое средство FindPrivateKey.
 
      Данное средство необходимо для образцов, в которых используются сертификаты и которые размещены в службах IIS.
 
