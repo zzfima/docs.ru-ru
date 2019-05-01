@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bab625b8415183b9cf90c35cba140c4d28095805
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992450"
 ---
-# <a name="imetadataimportenummethods-method"></a><span data-ttu-id="12221-102">Метод IMetaDataImport::EnumMethods</span><span class="sxs-lookup"><span data-stu-id="12221-102">IMetaDataImport::EnumMethods Method</span></span>
-<span data-ttu-id="12221-103">Перечисляет токены MethodDef, представляющие методы указанного типа.</span><span class="sxs-lookup"><span data-stu-id="12221-103">Enumerates MethodDef tokens representing methods of the specified type.</span></span>  
+# <a name="imetadataimportenummethods-method"></a><span data-ttu-id="b9073-102">Метод IMetaDataImport::EnumMethods</span><span class="sxs-lookup"><span data-stu-id="b9073-102">IMetaDataImport::EnumMethods Method</span></span>
+<span data-ttu-id="b9073-103">Перечисляет токены MethodDef, представляющие методы указанного типа.</span><span class="sxs-lookup"><span data-stu-id="b9073-103">Enumerates MethodDef tokens representing methods of the specified type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="12221-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="12221-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b9073-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b9073-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumMethods (  
@@ -39,39 +39,39 @@ HRESULT EnumMethods (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="12221-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="12221-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b9073-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b9073-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="12221-106">[in, out] Указатель на перечислитель.</span><span class="sxs-lookup"><span data-stu-id="12221-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="12221-107">Это должно быть NULL при первом вызове этого метода.</span><span class="sxs-lookup"><span data-stu-id="12221-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="b9073-106">[in, out] Указатель на перечислитель.</span><span class="sxs-lookup"><span data-stu-id="b9073-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="b9073-107">Это должно быть NULL при первом вызове этого метода.</span><span class="sxs-lookup"><span data-stu-id="b9073-107">This must be NULL for the first call of this method.</span></span>  
   
  `cl`  
- <span data-ttu-id="12221-108">[in] Токен TypeDef, представляющий тип с методами для перечисления.</span><span class="sxs-lookup"><span data-stu-id="12221-108">[in] A TypeDef token representing the type with the methods to enumerate.</span></span>  
+ <span data-ttu-id="b9073-108">[in] Токен TypeDef, представляющий тип с методами для перечисления.</span><span class="sxs-lookup"><span data-stu-id="b9073-108">[in] A TypeDef token representing the type with the methods to enumerate.</span></span>  
   
  `rMethods`  
- <span data-ttu-id="12221-109">[out] Массив для хранения токенов MethodDef.</span><span class="sxs-lookup"><span data-stu-id="12221-109">[out] The array to store the MethodDef tokens.</span></span>  
+ <span data-ttu-id="b9073-109">[out] Массив для хранения токенов MethodDef.</span><span class="sxs-lookup"><span data-stu-id="b9073-109">[out] The array to store the MethodDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="12221-110">[in] Максимальный размер MethodDef `rMethods` массива.</span><span class="sxs-lookup"><span data-stu-id="12221-110">[in] The maximum size of the MethodDef `rMethods` array.</span></span>  
+ <span data-ttu-id="b9073-110">[in] Максимальный размер MethodDef `rMethods` массива.</span><span class="sxs-lookup"><span data-stu-id="b9073-110">[in] The maximum size of the MethodDef `rMethods` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="12221-111">[out] Количество токены MethodDef, возвращаемых в `rMethods`.</span><span class="sxs-lookup"><span data-stu-id="12221-111">[out] The number of MethodDef tokens returned in `rMethods`.</span></span>  
+ <span data-ttu-id="b9073-111">[out] Количество токены MethodDef, возвращаемых в `rMethods`.</span><span class="sxs-lookup"><span data-stu-id="b9073-111">[out] The number of MethodDef tokens returned in `rMethods`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="12221-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="12221-112">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b9073-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="b9073-112">Return Value</span></span>  
   
-|<span data-ttu-id="12221-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="12221-113">HRESULT</span></span>|<span data-ttu-id="12221-114">Описание</span><span class="sxs-lookup"><span data-stu-id="12221-114">Description</span></span>|  
+|<span data-ttu-id="b9073-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b9073-113">HRESULT</span></span>|<span data-ttu-id="b9073-114">Описание</span><span class="sxs-lookup"><span data-stu-id="b9073-114">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="12221-115">`EnumMethods` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="12221-115">`EnumMethods` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="12221-116">Существуют маркеры MethodDef для перечисления отсутствуют.</span><span class="sxs-lookup"><span data-stu-id="12221-116">There are no MethodDef tokens to enumerate.</span></span> <span data-ttu-id="12221-117">В этом случае `pcTokens` равно нулю.</span><span class="sxs-lookup"><span data-stu-id="12221-117">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="b9073-115">`EnumMethods` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="b9073-115">`EnumMethods` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="b9073-116">Существуют маркеры MethodDef для перечисления отсутствуют.</span><span class="sxs-lookup"><span data-stu-id="b9073-116">There are no MethodDef tokens to enumerate.</span></span> <span data-ttu-id="b9073-117">В этом случае `pcTokens` равно нулю.</span><span class="sxs-lookup"><span data-stu-id="b9073-117">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="12221-118">Требования</span><span class="sxs-lookup"><span data-stu-id="12221-118">Requirements</span></span>  
- <span data-ttu-id="12221-119">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="12221-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b9073-118">Требования</span><span class="sxs-lookup"><span data-stu-id="b9073-118">Requirements</span></span>  
+ <span data-ttu-id="b9073-119">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b9073-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="12221-120">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="12221-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b9073-120">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b9073-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="12221-121">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="12221-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b9073-121">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b9073-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="12221-122">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="12221-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b9073-122">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b9073-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="12221-123">См. также</span><span class="sxs-lookup"><span data-stu-id="12221-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b9073-123">См. также</span><span class="sxs-lookup"><span data-stu-id="b9073-123">See also</span></span>
 
-- [<span data-ttu-id="12221-124">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="12221-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="12221-125">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="12221-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="b9073-124">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="b9073-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="b9073-125">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="b9073-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
