@@ -3,11 +3,11 @@ title: Хранилище экземпляров рабочих процессо
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
 ms.openlocfilehash: 8314781f46d9cd4eddd06f6be95f8e952feef1b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004631"
 ---
 # <a name="sql-workflow-instance-store"></a>Хранилище экземпляров рабочих процессов SQL
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] поставляется вместе с хранилищем экземпляров рабочего процесса SQL, благодаря чему рабочие процессы могут сохранять сведения о состоянии экземпляров рабочих процессов в базах данных SQL Server 2005 или SQL Server 2008. Эта функция чаще всего реализуется в виде класса <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, являющегося производным от абстрактного класса <xref:System.Runtime.DurableInstancing.InstanceStore> платформы сохраняемости. Компонент хранилища экземпляров рабочего процесса SQL состоит из поставщика сохраняемости SQL, являющегося конкретной реализацией API сохраняемости, используемой ведущим приложением для отправки команд сохраняемости в хранилище.  
@@ -22,19 +22,19 @@ ms.locfileid: "59086576"
   
 ## <a name="in-this-section"></a>В этом разделе  
   
--   [Свойства хранилища экземпляров рабочих процессов SQL](properties-of-sql-workflow-instance-store.md)  
+- [Свойства хранилища экземпляров рабочих процессов SQL](properties-of-sql-workflow-instance-store.md)  
   
--   [Практическое руководство. Включить сохраняемость SQL для рабочих процессов и служб рабочих процессов](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+- [Практическое руководство. Включить сохраняемость SQL для рабочих процессов и служб рабочих процессов](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
--   [Активация экземпляров](instance-activation.md)  
+- [Активация экземпляров](instance-activation.md)  
   
--   [Поддержка запросов](support-for-queries.md)  
+- [Поддержка запросов](support-for-queries.md)  
   
--   [Расширяемость хранилища](store-extensibility.md)  
+- [Расширяемость хранилища](store-extensibility.md)  
   
--   [Безопасность](security.md)  
+- [Безопасность](security.md)  
   
--   [База данных сохраняемости SQL Server](sql-server-persistence-database.md)  
+- [База данных сохраняемости SQL Server](sql-server-persistence-database.md)  
   
 ## <a name="see-also"></a>См. также
 

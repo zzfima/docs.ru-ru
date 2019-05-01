@@ -10,11 +10,11 @@ helpviewer_keywords:
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
 ms.openlocfilehash: cab6c90947eae8abeb9387535eadb2f89e71454a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973094"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Пошаговое руководство. Объявление и вызов событий (Visual Basic)
 В этом пошаговом руководстве демонстрируется объявление и вызов событий для класса с именем `Widget`. После выполнения действий, может потребоваться чтение сопутствующего раздела [Пошаговое руководство: Обработка событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), который показывает, как использовать события из `Widget` объекты, содержащие сведения о состоянии в приложении.  
@@ -44,7 +44,7 @@ ms.locfileid: "59320695"
   
 #### <a name="to-declare-an-event-for-the-widget-class"></a>Для объявления события для класса мини-приложения  
   
--   Используйте `Event` ключевого слова для объявления события в `Widget` класса. Обратите внимание, что событие может иметь `ByVal` и `ByRef` аргументы, как `Widget`в `PercentDone` демонстрирует событий:  
+- Используйте `Event` ключевого слова для объявления события в `Widget` класса. Обратите внимание, что событие может иметь `ByVal` и `ByRef` аргументы, как `Widget`в `PercentDone` демонстрирует событий:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   

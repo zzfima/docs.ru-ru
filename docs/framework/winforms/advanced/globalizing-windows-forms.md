@@ -1,6 +1,6 @@
 ---
 title: Глобализация приложений Windows Forms
-description: В этом разделе представлен список разделов, относящихся к глобализация приложений Windows Forms.
+description: В этом разделе представлен список темы, относящиеся к глобализации приложений Windows Forms.
 ms.date: 06/08/2018
 helpviewer_keywords:
 - Windows Forms, globalization
@@ -10,11 +10,11 @@ helpviewer_keywords:
 - global applications [Windows Forms], creating Windows Forms
 ms.assetid: 72f6cd92-83be-45ec-aa37-9cb8e3ebc3c5
 ms.openlocfilehash: 72bab76245b7b613ed97acec4cc616732c54de0f
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004514"
 ---
 # <a name="globalizing-windows-forms-applications"></a>Глобализация приложений Windows Forms
 
@@ -29,26 +29,26 @@ ms.locfileid: "36208642"
 Объясняется, когда и как выбирать шрифты для отображения международных символов в формах Windows Forms.
 
 [Поддержка двунаправленного письма для приложений Windows Forms](bi-directional-support-for-windows-forms-applications.md)  
-Описание способов создания приложений Windows, поддерживающих двунаправленное (справа налево).
+В этой статье описывается создание приложений на основе Windows, поддерживающие языки с двунаправленным письмом (справа налево).
 
 [Отображение азиатских символов с помощью свойства ImeMode](display-of-asian-characters-with-the-imemode-property.md)  
 Основные сведения о свойстве `ImeMode`, которое применяется для управления типом ввода, поддерживаемого формой или элементом управления Windows Forms.
 
 ## <a name="related-sections"></a>Связанные разделы
 
-- [Глобализация и локализация приложений .NET](../../../standard/globalization-localization/index.md)
+- [Глобализация и локализация приложений .NET](../../../standard/globalization-localization/index.md)
 
-- [Пошаговое руководство. Загрузка вспомогательных сборок по требованию с помощью API развертывания ClickOnce с использованием конструктора](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
+- [Пошаговое руководство: Загрузка вспомогательных сборок по требованию с помощью API развертывания ClickOnce с использованием конструктора](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
 
 - [Локализация приложений ClickOnce](/visualstudio/deployment/localizing-clickonce-applications)
 
-- [Пошаговое руководство. Загрузка вспомогательных сборок по требованию с помощью интерфейса API технологии развертывания ClickOnce](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api)
+- [Пошаговое руководство: Загрузка вспомогательных сборок по требованию с помощью интерфейса API технологии развертывания ClickOnce](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api)
 
-- [Как: задать язык и региональные параметры пользовательского интерфейса для глобализации форм Windows](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/b28bx3bh(v=vs.100))
+- [Практическое руководство. Задайте язык и региональные параметры пользовательского интерфейса для глобализации форм Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/b28bx3bh(v=vs.100))
 
-- [Как: создание зеркальных Windows Forms и элементах управления](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xwbz5ws0(v=vs.100))
+- [Практическое руководство. Создание зеркальной Windows Forms и элементах управления](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xwbz5ws0(v=vs.100))
 
-- [Практическое руководство. Обеспечение поддержки локализации в Windows Forms с помощью элементов управления AutoSize и TableLayoutPanel](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))
+- [Практическое руководство. Поддержки локализации в Windows Forms, с помощью функции AutoSize и элемента управления TableLayoutPanel](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))
 
 - [Пошаговое руководство: Локализация форм Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
 

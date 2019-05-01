@@ -13,11 +13,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
 ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002285"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Рисование с помощью объектов Image, Drawing и Visual
 В этом разделе описывается использование <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, и <xref:System.Windows.Media.VisualBrush> объекты Заливка области с изображением, <xref:System.Windows.Media.Drawing>, или <xref:System.Windows.Media.Visual>.  
@@ -57,15 +57,15 @@ ms.locfileid: "59204202"
   
  Объект <xref:System.Windows.Media.DrawingBrush> закрашивает область с <xref:System.Windows.Media.Drawing> объекта. Объект <xref:System.Windows.Media.Drawing> объект описывает отображаемое содержимое, например фигуру, растровое изображение, видео или строку текста. Различные типы рисунков описывают различные типы содержимого. Ниже приведен список различных типов объектов-рисунков.  
   
--   <xref:System.Windows.Media.GeometryDrawing> — Выводит фигуру.  
+- <xref:System.Windows.Media.GeometryDrawing> — Выводит фигуру.  
   
--   <xref:System.Windows.Media.ImageDrawing> — Выводит изображение.  
+- <xref:System.Windows.Media.ImageDrawing> — Выводит изображение.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> — Выводит текст.  
+- <xref:System.Windows.Media.GlyphRunDrawing> — Выводит текст.  
   
--   <xref:System.Windows.Media.VideoDrawing> — Воспроизводит аудио-или видео.  
+- <xref:System.Windows.Media.VideoDrawing> — Воспроизводит аудио-или видео.  
   
--   <xref:System.Windows.Media.DrawingGroup> — Выводит другие рисунки. Для объединения рисунков в один составной используйте группирование рисунков.  
+- <xref:System.Windows.Media.DrawingGroup> — Выводит другие рисунки. Для объединения рисунков в один составной используйте группирование рисунков.  
   
  Дополнительные сведения о <xref:System.Windows.Media.Drawing> объектов, см. в разделе [Обзор объектов Drawing](drawing-objects-overview.md).  
   
@@ -89,9 +89,9 @@ ms.locfileid: "59204202"
   
  Существует два способа задания <xref:System.Windows.Media.VisualBrush.Visual%2A> содержимое <xref:System.Windows.Media.VisualBrush>.  
   
--   Создайте новый <xref:System.Windows.Media.Visual> и использовать его для задания <xref:System.Windows.Media.VisualBrush.Visual%2A> свойство <xref:System.Windows.Media.VisualBrush>. Например, см. в разделе [пример: Заполнение объекта с помощью Visual](#examplevisualbrush1) в следующем разделе.  
+- Создайте новый <xref:System.Windows.Media.Visual> и использовать его для задания <xref:System.Windows.Media.VisualBrush.Visual%2A> свойство <xref:System.Windows.Media.VisualBrush>. Например, см. в разделе [пример: Заполнение объекта с помощью Visual](#examplevisualbrush1) в следующем разделе.  
   
--   Использовать существующее <xref:System.Windows.Media.Visual>, который создает дубликат изображения целевого объекта <xref:System.Windows.Media.Visual>. Затем можно использовать <xref:System.Windows.Media.VisualBrush> для создания интересных эффектов, например отражения и увеличения. Например, см. в разделе [пример: Создание отражения](#examplevisualbrush2) раздел.  
+- Использовать существующее <xref:System.Windows.Media.Visual>, который создает дубликат изображения целевого объекта <xref:System.Windows.Media.Visual>. Затем можно использовать <xref:System.Windows.Media.VisualBrush> для создания интересных эффектов, например отражения и увеличения. Например, см. в разделе [пример: Создание отражения](#examplevisualbrush2) раздел.  
   
  При определении нового <xref:System.Windows.Media.VisualBrush.Visual%2A> для <xref:System.Windows.Media.VisualBrush> и что <xref:System.Windows.Media.Visual> — <xref:System.Windows.UIElement> (например, панель или элемент управления), система разметки выполняется <xref:System.Windows.UIElement> и его дочерних элементов при <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> свойству `true`. Однако корневой <xref:System.Windows.UIElement> фактически изолирован от остальной части системы: стили и внешний макет не могут перейти эту границу. Таким образом, следует явно указать размер корневого <xref:System.Windows.UIElement>, так как его единственным родительским объектом является <xref:System.Windows.Media.VisualBrush> и таким образом его размер не может автоматически подобран по заполняемой области. Дополнительные сведения о макете в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] см. в разделе [Макет](../advanced/layout.md).  
   

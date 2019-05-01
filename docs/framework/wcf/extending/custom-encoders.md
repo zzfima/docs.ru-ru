@@ -3,11 +3,11 @@ title: Пользовательские кодировщики
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
 ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996909"
 ---
 # <a name="custom-encoders"></a>Пользовательские кодировщики
 В данном разделе рассматривается процесс создания пользовательских кодировщиков.  
@@ -30,11 +30,11 @@ ms.locfileid: "59190578"
   
  WCF предоставляет следующие типы элементов привязки, производный от <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> класса, реализующего текстовое, двоичное кодирование и механизм оптимизации передачи сообщений (MTOM) кодировки:  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: Наиболее широкими возможностями взаимодействия, но наименее эффективный кодировщик для сообщений XML. Веб-служба или клиент веб-службы в общем могут понимать XML в текстовом виде. Однако передача больших блоков двоичных данных в виде текста неэффективна.  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: Наиболее широкими возможностями взаимодействия, но наименее эффективный кодировщик для сообщений XML. Веб-служба или клиент веб-службы в общем могут понимать XML в текстовом виде. Однако передача больших блоков двоичных данных в виде текста неэффективна.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Представляет элемент привязки, задающий кодировку и управление версиями сообщений для сообщений XML в двоичном формате. Это наиболее эффективный параметры кодировки, но наименее подходящий для взаимодействия, так как он поддерживается только конечными точками WCF.  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Представляет элемент привязки, задающий кодировку и управление версиями сообщений для сообщений XML в двоичном формате. Это наиболее эффективный параметры кодировки, но наименее подходящий для взаимодействия, так как он поддерживается только конечными точками WCF.  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Представляет элемент привязки, задающий кодировку и управление версиями сообщений для сообщения с кодировкой механизм оптимизации передачи сообщений (MTOM). MTOM - это эффективный способ передачи двоичных данных в сообщениях WCF. Кодировщик MTOM пытается обеспечить баланс между эффективностью и взаимодействием. Кодирование MTOM передает большую часть XML-данных в текстовой форме, но оптимизирует большие блоки двоичных данных путем передачи их в исходном виде, без преобразования в текст.  
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: Представляет элемент привязки, задающий кодировку и управление версиями сообщений для сообщения с кодировкой механизм оптимизации передачи сообщений (MTOM). MTOM - это эффективный способ передачи двоичных данных в сообщениях WCF. Кодировщик MTOM пытается обеспечить баланс между эффективностью и взаимодействием. Кодирование MTOM передает большую часть XML-данных в текстовой форме, но оптимизирует большие блоки двоичных данных путем передачи их в исходном виде, без преобразования в текст.  
   
  Элемент привязки создает двоичную, MTOM или текстовую фабрику <xref:System.ServiceModel.Channels.MessageEncoderFactory>. Фабрика создает двоичный, MTOM или текстовый экземпляр <xref:System.ServiceModel.Channels.MessageEncoderFactory>. Обычно существует только один экземпляр. Однако при использовании сеансов для каждого сеанса могут предоставляться разные кодировщики. Двоичный кодировщик использует это для координации динамических словарей (см. раздел "Инфраструктура XML").  
   
@@ -69,19 +69,19 @@ ms.locfileid: "59190578"
 ## <a name="writing-your-own-encoder"></a>Запись собственного кодировщика  
  Чтобы реализовать собственный пользовательский кодировщик сообщений, предоставьте пользовательские реализации следующих абстрактных базовых классов.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder>  
+- <xref:System.ServiceModel.Channels.MessageEncoder>  
   
--   <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
   
  Преобразование из хранимого в памяти представления сообщения в представление, которое можно записать в поток, инкапсулировано внутри класса <xref:System.ServiceModel.Channels.MessageEncoder>, который используется в качестве фабрики для средств чтения XML и средств записи XML, поддерживающих определенные типы кодирования XML.  
   
--   Ниже представлены основные методы этого класса, которые необходимо переопределить.  
+- Ниже представлены основные методы этого класса, которые необходимо переопределить.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A>, который принимает объект <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> и записывает его в объект <xref:System.IO.Stream>.  
+- <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A>, который принимает объект <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> и записывает его в объект <xref:System.IO.Stream>.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A>, который принимает объект <xref:System.IO.Stream> и максимальный размер заголовка и возвращает объект <xref:System.ServiceModel.Channels.Message>.  
+- <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A>, который принимает объект <xref:System.IO.Stream> и максимальный размер заголовка и возвращает объект <xref:System.ServiceModel.Channels.Message>.  
   
  Код, записываемый в этих методах, выполняет преобразование между стандартным транспортным протоколом и настроенным кодированием.  
   

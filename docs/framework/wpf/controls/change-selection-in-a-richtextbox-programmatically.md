@@ -9,11 +9,11 @@ helpviewer_keywords:
 - changing selections in a RichTextBox [WPF]
 ms.assetid: f1213205-1ad7-4cd2-b115-460173cc5aa3
 ms.openlocfilehash: b8acfe7cde1fe5dae96cd6324f75c5b146be9ec9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001719"
 ---
 # <a name="change-selection-in-a-richtextbox-programmatically"></a>Изменение выделения в RichTextBox программными средствами
 В этом примере показано, как программно изменить текущее выделение в <xref:System.Windows.Controls.RichTextBox>. Этот параметр аналогичен так, как если бы пользователь выделил содержимое с помощью пользовательского интерфейса.  

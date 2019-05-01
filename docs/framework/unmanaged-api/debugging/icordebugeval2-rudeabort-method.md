@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0aabff090634f1ecdeec5636336ad1fb77b8b81c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988927"
 ---
 # <a name="icordebugeval2rudeabort-method"></a>Метод ICorDebugEval2::RudeAbort
-Прерывает вычисление этим `ICorDebugEval2` в настоящее время выполнения.  
+Прерывает вычисление, `ICorDebugEval2` выполняет.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,13 +34,13 @@ HRESULT RudeAbort ();
 ```  
   
 ## <a name="remarks"></a>Примечания  
- `RudeAbort` Освобождает все блокировки, которые содержит средство оценки, оставляя сеанс отладки в небезопасном состоянии. Этот метод используется с особой осторожностью.  
+ `RudeAbort` Освобождает все блокировки, содержит средство оценки, оставляя сеанс отладки в небезопасном состоянии. Этот метод очень осторожно.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

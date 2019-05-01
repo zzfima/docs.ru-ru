@@ -10,11 +10,11 @@ helpviewer_keywords:
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
 ms.openlocfilehash: 6b178ac6b93205afebb1bea45f1b7e94826cb670
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002174"
 ---
 # <a name="storyboards-overview"></a>Общие сведения о Storyboard
 В этом разделе показано, как использовать <xref:System.Windows.Media.Animation.Storyboard> объектов для создания и применения анимаций. Он описывает, как интерактивно манипулировать <xref:System.Windows.Media.Animation.Storyboard> объектов и описывает синтаксис косвенного выбора свойств.  
@@ -29,11 +29,11 @@ ms.locfileid: "59124843"
   
  Объект <xref:System.Windows.Media.Animation.Storyboard> — это тип временной шкалы контейнера, который содержит сведения для временных шкал, он содержит. Раскадровка может содержать любой тип <xref:System.Windows.Media.Animation.Timeline>, включая другие временные шкалы контейнера и анимации. <xref:System.Windows.Media.Animation.Storyboard> объекты позволяют объединять временные шкалы, которые влияют на различные объекты и свойства в одно дерево временной шкалы, упрощая организацию и управление сложным поведением времени. Например, предположим, что вам необходима кнопка, которая выполняет следующие три действия.  
   
--   Увеличивается и изменяет цвет, когда пользователь выбирает кнопку.  
+- Увеличивается и изменяет цвет, когда пользователь выбирает кнопку.  
   
--   Сжимается, а затем увеличивается до исходного размера, когда пользователь нажимает на кнопку.  
+- Сжимается, а затем увеличивается до исходного размера, когда пользователь нажимает на кнопку.  
   
--   Сжимается и изменяет яркость до 50-процентной прозрачности, если кнопка становится недоступной.  
+- Сжимается и изменяет яркость до 50-процентной прозрачности, если кнопка становится недоступной.  
   
  В этом случае у вас есть несколько наборов анимаций, которые применяются к одному объекту и которые требуется воспроизводить в разное время в зависимости от состояния кнопки. <xref:System.Windows.Media.Animation.Storyboard> объекты позволяют упорядочить анимации и применить их в группах для одного или нескольких объектов.  
   
@@ -43,11 +43,11 @@ ms.locfileid: "59124843"
   
  Например, можно использовать <xref:System.Windows.Media.Animation.Storyboard> для следующих целей:  
   
--   Анимация <xref:System.Windows.Media.SolidColorBrush> (не являющийся элементом платформы), который закрашивает фон кнопки (разновидность <xref:System.Windows.FrameworkElement>),  
+- Анимация <xref:System.Windows.Media.SolidColorBrush> (не являющийся элементом платформы), который закрашивает фон кнопки (разновидность <xref:System.Windows.FrameworkElement>),  
   
--   Анимация <xref:System.Windows.Media.SolidColorBrush> (не являющийся элементом платформы), которая закрашивает заполнения <xref:System.Windows.Media.GeometryDrawing> (не являющийся элементом платформы) отображается с помощью <xref:System.Windows.Controls.Image> (<xref:System.Windows.FrameworkElement>).  
+- Анимация <xref:System.Windows.Media.SolidColorBrush> (не являющийся элементом платформы), которая закрашивает заполнения <xref:System.Windows.Media.GeometryDrawing> (не являющийся элементом платформы) отображается с помощью <xref:System.Windows.Controls.Image> (<xref:System.Windows.FrameworkElement>).  
   
--   В коде, анимация <xref:System.Windows.Media.SolidColorBrush> объявляется с помощью класса, который также содержит <xref:System.Windows.FrameworkElement>, если <xref:System.Windows.Media.SolidColorBrush> зарегистрировано, его имя <xref:System.Windows.FrameworkElement>.  
+- В коде, анимация <xref:System.Windows.Media.SolidColorBrush> объявляется с помощью класса, который также содержит <xref:System.Windows.FrameworkElement>, если <xref:System.Windows.Media.SolidColorBrush> зарегистрировано, его имя <xref:System.Windows.FrameworkElement>.  
   
  Тем не менее, невозможно использовать <xref:System.Windows.Media.Animation.Storyboard> для анимации <xref:System.Windows.Media.SolidColorBrush> , не зарегистрировало его именем <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>, или который не использовался, чтобы задать свойство <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>.  
   
@@ -140,9 +140,9 @@ ms.locfileid: "59124843"
   
  Where  
   
--   *ElementPropertyName* свойство <xref:System.Windows.FrameworkElement> которого <xref:System.Windows.Freezable> используется для задания, и  
+- *ElementPropertyName* свойство <xref:System.Windows.FrameworkElement> которого <xref:System.Windows.Freezable> используется для задания, и  
   
--   *FreezablePropertyName* свойство <xref:System.Windows.Freezable> для анимации.  
+- *FreezablePropertyName* свойство <xref:System.Windows.Freezable> для анимации.  
   
  Ниже показано, как анимировать <xref:System.Windows.Media.SolidColorBrush.Color%2A> из <xref:System.Windows.Media.SolidColorBrush> используемый для задания  
   
@@ -186,9 +186,9 @@ ms.locfileid: "59124843"
   
  Where  
   
--   *OwnerPropertyArrayIndex* — это индекс <xref:System.Windows.DependencyProperty> массив, содержащий идентификатор <xref:System.Windows.FrameworkElement> свойство объекта, <xref:System.Windows.Freezable> используется для задания, и  
+- *OwnerPropertyArrayIndex* — это индекс <xref:System.Windows.DependencyProperty> массив, содержащий идентификатор <xref:System.Windows.FrameworkElement> свойство объекта, <xref:System.Windows.Freezable> используется для задания, и  
   
--   *FreezablePropertyArrayIndex* — это индекс <xref:System.Windows.DependencyProperty> массив, содержащий идентификатор свойства к целевому объекту.  
+- *FreezablePropertyArrayIndex* — это индекс <xref:System.Windows.DependencyProperty> массив, содержащий идентификатор свойства к целевому объекту.  
   
  В следующем примере показан <xref:System.Windows.PropertyPath.Path%2A> , будет сопровождать <xref:System.Windows.PropertyPath.PathParameters%2A> определенный в предыдущем примере.
   
@@ -225,17 +225,17 @@ ms.locfileid: "59124843"
 ## <a name="interactively-controlling-a-storyboard-in-xaml"></a>Интерактивное управление раскадровкой в XAML  
  Чтобы запустить раскадровку [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], использовании <xref:System.Windows.Media.Animation.BeginStoryboard> запуска действия. <xref:System.Windows.Media.Animation.BeginStoryboard> распределяет анимации объектов и свойств и запускает раскадровку. (Дополнительные сведения об этом процессе см. в разделе [анимации и общие сведения о характере системы](animation-and-timing-system-overview.md).) Если вы предоставите <xref:System.Windows.Media.Animation.BeginStoryboard> имя, указав его <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> свойство, можно упростить управляемой раскадровки. Вы можете затем интерактивно управлять раскадровкой после ее запуска. Ниже приведен список действий для управляемой раскадровки, которые используются совместно с триггерами событий для управления раскадровкой.  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>: Приостанавливает раскадровку.  
+- <xref:System.Windows.Media.Animation.PauseStoryboard>: Приостанавливает раскадровку.  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>: Возобновляет приостановленную раскадровку.  
+- <xref:System.Windows.Media.Animation.ResumeStoryboard>: Возобновляет приостановленную раскадровку.  
   
--   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Изменяет скорость раскадровки.  
+- <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Изменяет скорость раскадровки.  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Перемещает раскадровку в конец ее периода заполнения, если он имеется.  
+- <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Перемещает раскадровку в конец ее периода заполнения, если он имеется.  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>: Останавливает раскадровку.  
+- <xref:System.Windows.Media.Animation.StopStoryboard>: Останавливает раскадровку.  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>: Удаляет раскадровку.  
+- <xref:System.Windows.Media.Animation.RemoveStoryboard>: Удаляет раскадровку.  
   
  В следующем примере показано использование действий для интерактивного управления раскадровкой.  
   
@@ -247,17 +247,17 @@ ms.locfileid: "59124843"
   
  В следующем списке приведены методы, которые можно использовать для управления <xref:System.Windows.Media.Animation.Storyboard> после ее запуска:  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Remove%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Remove%2A>  
   
  С помощью этих методов удобен тем, что не нужно создавать <xref:System.Windows.Trigger> или <xref:System.Windows.TriggerAction> объектов; нужна ссылка на управляемый <xref:System.Windows.Media.Animation.Storyboard> требуется работать.  
   
@@ -272,13 +272,13 @@ ms.locfileid: "59124843"
 ## <a name="animate-in-a-style"></a>Анимация с использованием стилей  
  Можно использовать <xref:System.Windows.Media.Animation.Storyboard> объектов для определения анимаций в <xref:System.Windows.Style>. Анимации с помощью <xref:System.Windows.Media.Animation.Storyboard> в <xref:System.Windows.Style> похоже на использование <xref:System.Windows.Media.Animation.Storyboard> в другом месте, со следующими тремя исключениями:  
   
--   Вы не укажете <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>; <xref:System.Windows.Media.Animation.Storyboard> всегда указывает элемент, к которому <xref:System.Windows.Style> применяется. Целевой объект <xref:System.Windows.Freezable> объекты, следует использовать косвенное обращение. Дополнительные сведения о косвенном обращении см. в разделе [косвенное обращение](#pathsyntaxforchangeable) раздел.  
+- Вы не укажете <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>; <xref:System.Windows.Media.Animation.Storyboard> всегда указывает элемент, к которому <xref:System.Windows.Style> применяется. Целевой объект <xref:System.Windows.Freezable> объекты, следует использовать косвенное обращение. Дополнительные сведения о косвенном обращении см. в разделе [косвенное обращение](#pathsyntaxforchangeable) раздел.  
   
--   Нельзя указать <xref:System.Windows.EventTrigger.SourceName%2A> для <xref:System.Windows.EventTrigger> или <xref:System.Windows.Trigger>.  
+- Нельзя указать <xref:System.Windows.EventTrigger.SourceName%2A> для <xref:System.Windows.EventTrigger> или <xref:System.Windows.Trigger>.  
   
--   Нельзя использовать динамический ресурс ссылки или выражения привязки данных для задания <xref:System.Windows.Media.Animation.Storyboard> или значений свойств анимации. Это потому, что весь код внутри <xref:System.Windows.Style> должен быть поточно ориентированными, и система управления должна <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> объектов, чтобы сделать их потокобезопасными. Объект <xref:System.Windows.Media.Animation.Storyboard> нельзя зафиксировать, если его или ее дочерние временные шкалы содержат динамические ресурсы ссылки или выражения привязки данных. Дополнительные сведения о фиксации и других <xref:System.Windows.Freezable> функции, см. в разделе [Freezable Общие сведения об объектах](../advanced/freezable-objects-overview.md).  
+- Нельзя использовать динамический ресурс ссылки или выражения привязки данных для задания <xref:System.Windows.Media.Animation.Storyboard> или значений свойств анимации. Это потому, что весь код внутри <xref:System.Windows.Style> должен быть поточно ориентированными, и система управления должна <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> объектов, чтобы сделать их потокобезопасными. Объект <xref:System.Windows.Media.Animation.Storyboard> нельзя зафиксировать, если его или ее дочерние временные шкалы содержат динамические ресурсы ссылки или выражения привязки данных. Дополнительные сведения о фиксации и других <xref:System.Windows.Freezable> функции, см. в разделе [Freezable Общие сведения об объектах](../advanced/freezable-objects-overview.md).  
   
--   В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], нельзя объявлять обработчики событий для <xref:System.Windows.Media.Animation.Storyboard> или событий анимации.  
+- В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], нельзя объявлять обработчики событий для <xref:System.Windows.Media.Animation.Storyboard> или событий анимации.  
   
  Пример, показывающий, как определить раскадровку в стиле, см. в разделе [анимация с использованием стилей](how-to-animate-in-a-style.md) пример.  
   
@@ -286,13 +286,13 @@ ms.locfileid: "59124843"
 ## <a name="animate-in-a-controltemplate"></a>Анимация в ControlTemplate  
  Можно использовать <xref:System.Windows.Media.Animation.Storyboard> объектов для определения анимаций в <xref:System.Windows.Controls.ControlTemplate>. Анимации с помощью <xref:System.Windows.Media.Animation.Storyboard> в <xref:System.Windows.Controls.ControlTemplate> похоже на использование <xref:System.Windows.Media.Animation.Storyboard> в другом месте, со следующими двумя исключениями:  
   
--   <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> Могут ссылаться только на дочерние объекты <xref:System.Windows.Controls.ControlTemplate>. Если <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> не указан, элемент, в который целевым объектом для анимации <xref:System.Windows.Controls.ControlTemplate> применяется.  
+- <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> Могут ссылаться только на дочерние объекты <xref:System.Windows.Controls.ControlTemplate>. Если <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> не указан, элемент, в который целевым объектом для анимации <xref:System.Windows.Controls.ControlTemplate> применяется.  
   
--   <xref:System.Windows.EventTrigger.SourceName%2A> Для <xref:System.Windows.EventTrigger> или <xref:System.Windows.Trigger> могут ссылаться только на дочерние объекты <xref:System.Windows.Controls.ControlTemplate>.  
+- <xref:System.Windows.EventTrigger.SourceName%2A> Для <xref:System.Windows.EventTrigger> или <xref:System.Windows.Trigger> могут ссылаться только на дочерние объекты <xref:System.Windows.Controls.ControlTemplate>.  
   
--   Нельзя использовать динамический ресурс ссылки или выражения привязки данных для задания <xref:System.Windows.Media.Animation.Storyboard> или значений свойств анимации. Это потому, что весь код внутри <xref:System.Windows.Controls.ControlTemplate> должен быть поточно ориентированными, и система управления должна <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> объектов, чтобы сделать их потокобезопасными. Объект <xref:System.Windows.Media.Animation.Storyboard> нельзя зафиксировать, если его или ее дочерние временные шкалы содержат динамические ресурсы ссылки или выражения привязки данных. Дополнительные сведения о фиксации и других <xref:System.Windows.Freezable> функции, см. в разделе [Freezable Общие сведения об объектах](../advanced/freezable-objects-overview.md).  
+- Нельзя использовать динамический ресурс ссылки или выражения привязки данных для задания <xref:System.Windows.Media.Animation.Storyboard> или значений свойств анимации. Это потому, что весь код внутри <xref:System.Windows.Controls.ControlTemplate> должен быть поточно ориентированными, и система управления должна <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> объектов, чтобы сделать их потокобезопасными. Объект <xref:System.Windows.Media.Animation.Storyboard> нельзя зафиксировать, если его или ее дочерние временные шкалы содержат динамические ресурсы ссылки или выражения привязки данных. Дополнительные сведения о фиксации и других <xref:System.Windows.Freezable> функции, см. в разделе [Freezable Общие сведения об объектах](../advanced/freezable-objects-overview.md).  
   
--   В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], нельзя объявлять обработчики событий для <xref:System.Windows.Media.Animation.Storyboard> или событий анимации.  
+- В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], нельзя объявлять обработчики событий для <xref:System.Windows.Media.Animation.Storyboard> или событий анимации.  
   
  Пример, показывающий, как определить раскадровку в <xref:System.Windows.Controls.ControlTemplate>, см. в разделе [анимация в ControlTemplate](how-to-animate-in-a-controltemplate.md) пример.  
   

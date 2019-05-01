@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
 ms.openlocfilehash: 9f13f9d95c40b964c5eb416c590a5d603d714bac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991020"
 ---
 # <a name="schema-import-and-export"></a>Импорт и экспорт схемы
 Windows Communication Foundation (WCF) включает новый модуль сериализации, <xref:System.Runtime.Serialization.DataContractSerializer>. Объект `DataContractSerializer` осуществляет преобразование объектов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в формат XML и обратно. Помимо собственно сериализатора WCF включает в себя связанную схему импорта и экспорта механизмы схемы. *Схемы* представляет собой формальное, точное и обрабатываемое компьютером описание формата XML, которые создаются сериализатором или с доступом к десериализатор. WCF использует язык определения схемы World Wide Web Consortium (W3C) XML (XSD) в качестве представления схемы, который поддерживает взаимодействие с различных платформ сторонних.  
@@ -33,11 +33,11 @@ Windows Communication Foundation (WCF) включает новый модуль 
   
  Обратите внимание, что созданный тип соответствует ряд проверенных рекомендаций контракта данных (в [рекомендации: Управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)):  
   
--   Тип реализует интерфейс <xref:System.Runtime.Serialization.IExtensibleDataObject>. Дополнительные сведения о создании контрактов данных, обладающих прямой совместимостью, см. в разделе [Контракты данных, совместимые с любыми будущими изменениями](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+- Тип реализует интерфейс <xref:System.Runtime.Serialization.IExtensibleDataObject>. Дополнительные сведения о создании контрактов данных, обладающих прямой совместимостью, см. в разделе [Контракты данных, совместимые с любыми будущими изменениями](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
--   Данные-члены реализованы в виде открытых свойств, скрывающих закрытые поля.  
+- Данные-члены реализованы в виде открытых свойств, скрывающих закрытые поля.  
   
--   Класс является разделяемым, и его можно дополнять без изменения уже созданного кода.  
+- Класс является разделяемым, и его можно дополнять без изменения уже созданного кода.  
   
  Класс <xref:System.Runtime.Serialization.XsdDataContractExporter> позволяет выполнять обратную операцию - принимать типы, сериализуемые с помощью `DataContractSerializer`, и создавать документ схемы XSD.  
   

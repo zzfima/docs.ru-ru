@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 09931dce7afdb7944cf9912b5146e44fda131935
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993282"
 ---
 # <a name="iclrmetahostenumerateinstalledruntimes-method"></a>Метод ICLRMetaHost::EnumerateInstalledRuntimes
 Возвращает перечисление, содержащее допустимый [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) интерфейс для каждой версии среда CLR (CLR), установленного на компьютере.  

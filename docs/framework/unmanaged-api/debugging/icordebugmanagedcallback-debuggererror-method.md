@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd7909b94343b1fb83836f5c369ddc1993f049d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995310"
 ---
 # <a name="icordebugmanagedcallbackdebuggererror-method"></a>Метод ICorDebugManagedCallback::DebuggerError
 Уведомляет отладчик о том, что произошла ошибка при попытке обработать события из общеязыковой среды выполнения (CLR).  

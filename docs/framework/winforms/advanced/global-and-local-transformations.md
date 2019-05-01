@@ -10,11 +10,11 @@ helpviewer_keywords:
 - transformations [Windows Forms], local
 ms.assetid: b601d66d-d572-4f11-9d2e-92f0dc8893f3
 ms.openlocfilehash: e4ed103e781cc2e59d62c11f3233357c77b81cb9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004577"
 ---
 # <a name="global-and-local-transformations"></a>Глобальные и локальные преобразования
 Глобальное преобразование — это преобразование, применяемое к каждому элементу, рисуемой элементом заданного <xref:System.Drawing.Graphics> объекта. Напротив локальное преобразование — это преобразование, применяемое к конкретному элементу для отрисовки.  

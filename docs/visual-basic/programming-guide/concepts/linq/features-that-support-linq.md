@@ -6,11 +6,11 @@ helpviewer_keywords:
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
 ms.openlocfilehash: 155d5c36483accc12d066a5530fea20a563e1498
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977565"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Возможности Visual Basic, поддерживающие LINQ
 Имя [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] относится к технологии в Visual Basic, что для поддержки синтаксиса запроса, так и для других языковых конструкций на языке. С помощью [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], нет необходимости изучать новый язык для запросов к внешнему источнику данных. Выполнять запросы к данным в реляционных базах данных, хранилища XML или объектов с помощью Visual Basic. Такая интеграция возможностей запроса в язык позволяет проверки во время компиляции для синтаксических ошибок и безопасность типов. Такая интеграция также гарантирует, что вы уже известна большая часть нужно знать для написания насыщенных и разнообразных запросов в Visual Basic.  

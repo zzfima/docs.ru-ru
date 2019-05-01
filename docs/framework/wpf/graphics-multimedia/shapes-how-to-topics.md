@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
 ms.openlocfilehash: d304a411a92272315506a08a714ae1a5f9b6a000
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973684"
 ---
 # <a name="shapes-how-to-topics"></a>Разделы практического руководства, посвященные объектам класса Shape
 В подразделах этого раздела демонстрируется использование <xref:System.Windows.Shapes.Shape> объектов для рисования основных фигур на экране.  

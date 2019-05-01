@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d9279808e4ad15b693d06ac8a99dd33a609e5a8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992515"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>Метод IMetaDataEmit::GetSaveSize
 Получает приблизительный двоичный размер сборки и ее метаданные в текущей области.  
@@ -40,11 +40,11 @@ HRESULT GetSaveSize (
  `fSave`  
  [in] Значение [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) перечисление, указывающее, следует ли получить точное или приблизительное размер. Допустимы только три значения: cssAccurate, cssQuick и cssDiscardTransientCAs:  
   
--   cssAccurate возвращает точный размер сохранения, но требует больше времени для вычисления.  
+- cssAccurate возвращает точный размер сохранения, но требует больше времени для вычисления.  
   
--   cssQuick возвращает размер в целях безопасности, но занимает меньше времени, для которого требуется вычислить.  
+- cssQuick возвращает размер в целях безопасности, но занимает меньше времени, для которого требуется вычислить.  
   
--   сообщает cssDiscardTransientCAs `GetSaveSize` , может возникнуть исключение сейчас присваиваются значения настраиваемых атрибутов.  
+- сообщает cssDiscardTransientCAs `GetSaveSize` , может возникнуть исключение сейчас присваиваются значения настраиваемых атрибутов.  
   
  `pdwSaveSize`  
  [out] Указатель на размер, необходимый для сохранения файла.  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
 ms.openlocfilehash: 230c7cb80ce6b8a29f7334ed0f8d297fd829faf9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009088"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Пошаговое руководство. Создание структуры элементов управления Windows Forms с помощью свойств Padding, Margins и AutoSize
 Точное расположение элементов управления на форме является важным для многих приложений. **Конструктор Windows Forms** предоставляет множество средств форматирования для выполнения этой задачи. Три наиболее важными являются <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, и <xref:System.Windows.Forms.Control.AutoSize%2A> свойства, которые присутствуют на все элементы управления Windows Forms.  
@@ -37,13 +37,13 @@ ms.locfileid: "59302469"
   
  В данном пошаговом руководстве представлены следующие задачи.  
   
--   Создание проекта Windows Forms  
+- Создание проекта Windows Forms  
   
--   Установка полей для элементов управления  
+- Установка полей для элементов управления  
   
--   Установка заполнения элементов управления  
+- Установка заполнения элементов управления  
   
--   Автоматического изменения размеров элементов управления  
+- Автоматического изменения размеров элементов управления  
   
  После завершения вы будете понимать роль, которую играют эти важные функции макета.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59302469"
 ## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения данного пошагового руководства требуется:  
   
--   Разрешения, необходимые для создания и выполнения проектов приложений Windows Forms на компьютере, на котором установлена Visual Studio.  
+- Разрешения, необходимые для создания и выполнения проектов приложений Windows Forms на компьютере, на котором установлена Visual Studio.  
   
 ## <a name="creating-the-project"></a>Создание проекта  
  Первым шагом является создание проекта и настройка формы.  
@@ -178,11 +178,11 @@ ms.locfileid: "59302469"
 ## <a name="next-steps"></a>Следующие шаги  
  Существует множество других возможностей компоновки для упорядочивания элементов управления в приложениях Windows Forms. Ниже приведены некоторые сочетания методов, которые можно попробовать.  
   
--   Создайте форму с помощью <xref:System.Windows.Forms.TableLayoutPanel> элемента управления. Дополнительные сведения см. в разделе [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента управления TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md). Попробуйте изменить значения <xref:System.Windows.Forms.TableLayoutPanel> элемента управления <xref:System.Windows.Forms.Control.Padding%2A> свойства, а также <xref:System.Windows.Forms.Control.Margin%2A> свойства дочерних элементов управления.  
+- Создайте форму с помощью <xref:System.Windows.Forms.TableLayoutPanel> элемента управления. Дополнительные сведения см. в разделе [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента управления TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md). Попробуйте изменить значения <xref:System.Windows.Forms.TableLayoutPanel> элемента управления <xref:System.Windows.Forms.Control.Padding%2A> свойства, а также <xref:System.Windows.Forms.Control.Margin%2A> свойства дочерних элементов управления.  
   
--   Повторите ту же эксперимент с помощью <xref:System.Windows.Forms.FlowLayoutPanel> элемента управления. Дополнительные сведения см. в разделе [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
+- Повторите ту же эксперимент с помощью <xref:System.Windows.Forms.FlowLayoutPanel> элемента управления. Дополнительные сведения см. в разделе [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
--   Поэкспериментируйте с закреплением дочерних элементов управления в <xref:System.Windows.Forms.Panel> элемента управления. <xref:System.Windows.Forms.Control.Padding%2A> Свойство является более общей реализацией <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> , а также может удовлетворять самостоятельно это так, поместив дочернего элемента управления <xref:System.Windows.Forms.Panel> управления и задание дочернего элемента управления <xref:System.Windows.Forms.Control.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Fill>. Задайте <xref:System.Windows.Forms.Panel> элемента управления <xref:System.Windows.Forms.Control.Padding%2A> свойство различные значения и Примечание эффект.  
+- Поэкспериментируйте с закреплением дочерних элементов управления в <xref:System.Windows.Forms.Panel> элемента управления. <xref:System.Windows.Forms.Control.Padding%2A> Свойство является более общей реализацией <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> , а также может удовлетворять самостоятельно это так, поместив дочернего элемента управления <xref:System.Windows.Forms.Panel> управления и задание дочернего элемента управления <xref:System.Windows.Forms.Control.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Fill>. Задайте <xref:System.Windows.Forms.Panel> элемента управления <xref:System.Windows.Forms.Control.Padding%2A> свойство различные значения и Примечание эффект.  
   
 ## <a name="see-also"></a>См. также
 

@@ -3,11 +3,11 @@ title: Справочник символов и операторов
 description: Дополнительные сведения о символах и операторах, используемых в F# языка программирования.
 ms.date: 02/11/2019
 ms.openlocfilehash: 11a02792dc949b0a7a0a6e7bb59786c489b3aa9d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982748"
 ---
 # <a name="symbol-and-operator-reference"></a>Справочник символов и операторов
 
@@ -123,12 +123,12 @@ ms.locfileid: "56092947"
 |`as`|Справа|
 |`when`|Правый|
 |<code>&#124;</code> (вертикальная черта)|Слева|
-|`;`|Справа|
+|`;`|Правый|
 |`let`|Неассоциативный|
 |`function`, `fun`, `match`, `try`|Неассоциативный|
 |`if`|Неассоциативный|
-|`->`|Справа|
-|`:=`|Справа|
+|`->`|Правый|
+|`:=`|Правый|
 |`,`|Неассоциативный|
 |`or`, <code>&#124;&#124;</code>|По левому краю|
 |`&`, `&&`|По левому краю|

@@ -3,24 +3,24 @@ title: Поведения безопасности в WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
 ms.openlocfilehash: d1bffef127fe295aa41b1287da1c7104464ae0bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990916"
 ---
 # <a name="security-behaviors-in-wcf"></a>Поведения безопасности в WCF
 В Windows Communication Foundation (WCF), поведения изменяют поведение времени выполнения на уровне службы или на уровне конечной точки. (Дополнительные сведения о поведениях в целом, см. в разделе [указание поведения службы во время выполнения](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Поведения безопасности* позволяют управлять учетными данными, проверкой подлинности, авторизацией и журналами аудита. Поведения можно использовать путем программирования или через конфигурацию. В этом разделе основное внимание уделяется настройке следующих поведений, связанных с функциями безопасности:  
   
--   [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
+- [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
--   [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
+- [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
   
--   [\<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md).  
+- [\<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md).  
   
--   [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
+- [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
   
--   [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md), также позволяющий указывать защищенную конечную точку, в которой клиенты могут обращаться за метаданными.  
+- [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md), также позволяющий указывать защищенную конечную точку, в которой клиенты могут обращаться за метаданными.  
   
 ## <a name="setting-credentials-with-behaviors"></a>Задание учетных данных с помощью поведений  
  Используйте [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) и [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) для задания значений учетных данных для службы или клиента. Необходимость задания учетных данных определяется конфигурацией используемой привязки. Например, если задан режим безопасности `None`, ни клиенты, ни службы не проверяют подлинность друг друга и не требуют учетных данных какого-либо типа.  
@@ -78,9 +78,9 @@ ms.locfileid: "59180067"
   
  Следует использовать [ \<allowedAudienceUris >](../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md) коллекции в федеративном приложении, которое использует *служба маркеров безопасности* (STS), выдающую `SamlSecurityToken` маркеров безопасности. При выпуске маркера безопасности служба STS также может указать универсальный код ресурса (URI) веб-служб, для которых предназначен маркер безопасности, добавив выражение `SamlAudienceRestrictionCondition` к маркеру безопасности. Это позволяет коду `SamlSecurityTokenAuthenticator` для веб-службы получателя проверить, что выданный маркер безопасности предназначен для данной службы, указав на необходимость выполнения соответствующей проверки. Для этого выполните следующие действия.  
   
--   Задайте `audienceUriMode` атрибут [ \<issuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md) для `Always` или `BearerKeyOnly`.  
+- Задайте `audienceUriMode` атрибут [ \<issuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md) для `Always` или `BearerKeyOnly`.  
   
--   Задайте набор допустимых универсальных кодов ресурса (URI), добавив их в данную коллекцию. Чтобы сделать это, вставьте [ \<Добавить >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) для каждого универсального кода Ресурса  
+- Задайте набор допустимых универсальных кодов ресурса (URI), добавив их в данную коллекцию. Чтобы сделать это, вставьте [ \<Добавить >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) для каждого универсального кода Ресурса  
   
  Дополнительные сведения см. в разделе <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   

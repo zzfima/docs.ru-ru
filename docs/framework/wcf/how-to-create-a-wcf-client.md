@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
 ms.openlocfilehash: a16a0ccabfd0f9fbe69db1ea88d4613185f3c1da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002083"
 ---
 # <a name="tutorial-create-a-windows-communication-foundation-client"></a>Учебник. Создание клиента Windows Communication Foundation
 
@@ -47,7 +47,7 @@ ms.locfileid: "59174373"
 
 2. Добавьте ссылку в **GettingStartedClient** проект <xref:System.ServiceModel> сборки: 
 
-    1.  В **обозревателе решений** выберите **ссылки** папке **GettingStartedClient** проекта, а затем выберите **добавить ссылку на** в контекстном меню. 
+    1. В **обозревателе решений** выберите **ссылки** папке **GettingStartedClient** проекта, а затем выберите **добавить ссылку на** в контекстном меню. 
 
     2. В **добавить ссылку** окна в разделе **сборки** в левой части окна выберите **Framework**.
     
