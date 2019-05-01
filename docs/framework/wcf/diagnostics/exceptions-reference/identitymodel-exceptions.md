@@ -3,11 +3,11 @@ title: Исключения IdentityModel
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
 ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998521"
 ---
 # <a name="identitymodel-exceptions"></a>Исключения IdentityModel
 В этом разделе перечислены все исключения, создаваемые IdentityModel.  
@@ -23,7 +23,7 @@ ms.locfileid: "33474874"
 |SAMLAttributeMissingNameAttributeOnRead|"Name" для считываемого атрибута SamlAttribute отсутствует или имеет длину 0.|  
 |UnknownICryptoType|Реализация ICrypto не поддерживается.|  
 |TraceCodeSecurityTokenProviderClosed|Поставщик маркера безопасности закрыт.|  
-|SAMLUnableToLoadAdvice|Не удалось загрузить \<SAML: advice > элемент.|  
+|SAMLUnableToLoadAdvice|Не удалось загрузить \<SAML: advice > элемента.|  
 |SAMLAuthenticationStatementMissingAuthenticationMethodOnRead|Считываемый атрибут "AuthenticationMethod" для оператора SamlAuthenticationStatement отсутствует или имеет длину 0.|  
 |UnsupportedTransformAlgorithm|Неподдерживаемое преобразование или алгоритм канонизации.|  
 |SAMLAudienceRestrictionShouldHaveOneAudience|Условие SamlAudienceRestrictionCondition должно иметь хотя бы одну аудиторию (URI).|  
@@ -67,7 +67,7 @@ ms.locfileid: "33474874"
 |TraceCodeSecurityTokenProviderOpened|Открыт поставщик маркера безопасности.|  
 |PublicKeyNotRSA|Открытый ключ не является ключом RSA.|  
 |InvalidReaderState|Указанное состояние недопустимо для предоставленного средства чтения входных данных.|  
-|UnableToResolveReferenceUriForSignature|Невозможно разрешить указанный в сигнатуре универсальный код ресурса (URI) для вычисления хэш-кода.|  
+|UnableToResolveReferenceUriForSignature|Невозможно разрешить указанный в сигнатуре универсальный код ресурса (URI) для вычисления дайджеста.|  
 |EmptyBase64Attribute|Для имени и пространства имен обязательного атрибута в base64-кодировке найдено пустое значение.|  
 |SAMLSubjectRequiresConfirmationMethodWhenConfirmationDataOrKeyInfoIsSpecified|Конструкция SAML SubjectConfirmation требует использования метода подтверждения Confirmation, если указаны данные Confirmation Data или KeyInfo.|  
 |SAMLAudienceRestrictionShouldHaveOneAudienceOnRead|Считываемое условие SamlAudienceRestrictionCondition должно содержать как минимум одно значение "Audience". Ни одно не найдено.|  
@@ -80,7 +80,7 @@ ms.locfileid: "33474874"
 |SAMLSignatureAlreadyRead|Сигнатура уже прочитана в утверждении SAML.|  
 |AlgorithmAndPrivateKeyMisMatch|Указанный алгоритм и закрытый ключ не соответствуют друг другу.|  
 |EmptyTransformChainNotSupported|Пустая цепочка преобразований не поддерживается.|  
-|SspiWrapperEncryptDecryptAssert1|Sspiwrapper:: Encryptdecrypthelper&#124;«offset» выходит за пределы диапазона.|  
+|SspiWrapperEncryptDecryptAssert1|SSPIWrapper::EncryptDecryptHelper&#124;'offset' is out of range.|  
 |SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper&#124;«size» выходит за пределы диапазона. SecurityTokenManagerCannotCreateAuthenticatorForRequirement=Диспетчер маркера безопасности не может создать структуру проверки подлинности для указанного требования.|  
 |UnableToCreateKeyedHashAlgorithm|Не удалось создать алгоритм KeyedHashAlgorithm из указанного значения для указанного алгоритма сигнатуры.|  
 |SAMLUnableToLoadAssertion|\<SAML: Assertion > не удалось загрузить элемент.|  
@@ -88,7 +88,7 @@ ms.locfileid: "33474874"
 |TraceCodeSecurityIdentityDeterminationSuccess|Для EndpointAddress была определена идентификация.|  
 |UndefinedUseOfPrefixAtElement|У указанного префикса, использованного для элемента, не задано пространство имен.|  
 |TraceCodeSecuritySessionResponderOperationFailure|Сбой операции сеанса безопасности на сервере.|  
-|CannotFindCert|Не удается найти сертификат X.509 с использованием указанных условий поиска: StoreName, StoreLocation, FindType, FindValue.|  
+|CannotFindCert|Не удалось найти сертификат X.509, с помощью указанных условий поиска: StoreName, StoreLocation, FindType, FindValue.|  
 |X509InvalidUsageTime|Указанное время использования сертификата X.509 недопустимо. Время использования выходит за требуемые временные границы NotBefore и NotAfter.|  
 |TraceCodeSecurityIdentityDeterminationFailure|Невозможно определить идентификацию для EndpointAddress.|  
 |AsyncObjectAlreadyEnded|Для данного объекта асинхронного результата уже был вызван метод End.|  
@@ -153,7 +153,7 @@ ms.locfileid: "33474874"
 |SigningTokenHasNoKeys|Указанный маркер подписывания не имеет ключей.|  
 |TraceCodeSecurityIdentityVerificationFailure|Сбой проверки идентификации.|  
 |AESCryptImportKeyFailed|Не удалось импортировать материал ключа.|  
-|FailInitializeSecurityContext|Сбой InitializeSecurityContent. Убедитесь в правильности имени участника-службы.|  
+|FailInitializeSecurityContext|Сбой InitializeSecurityContent. Убедитесь в правильности имени субъекта-службы.|  
 |TraceCodeStreamSecurityUpgradeAccepted|Обновление безопасности потока успешно принято.|  
 |SAMLAuthorityBindingRequiresLocation|Атрибут "Location", указанный для SamlAuthorityBinding, не может иметь значение null или длину 0.|  
 |PublicKeyNotDSA|Открытый ключ не является ключом DSA.|  
@@ -164,7 +164,7 @@ ms.locfileid: "33474874"
 |LengthOfArrayToConvertMustGreaterThanZero|Длина массива для преобразования в целое число должна быть больше 0.|  
 |InvalidAsyncResult|Недопустимый AsyncResult.|  
 |TraceCodeIssuanceTokenProviderRemovedCachedToken|IssuanceTokenProvider удалил маркер службы с истекшим сроком действия.|  
-|IncorrectUserNameFormat|Имя пользователя имеет недопустимый формат. Формат имени пользователя должен быть в формате «имя пользователя "или" домена\\\username ".|  
+|IncorrectUserNameFormat|Имя пользователя имеет недопустимый формат. Имя пользователя должно быть в формате «имя пользователя "или" домен\\\username ".|  
 |TraceCodeExportSecurityChannelBindingEntry|Запуск привязки безопасности ExportChannelBinding.|  
 |UnsupportedInputTypeForTransform|Для преобразования не поддерживается указанный тип входных данных.|  
 |CannotFindDocumentRoot|Невозможно найти корень документа.|  
@@ -227,7 +227,7 @@ ms.locfileid: "33474874"
 |UnableToCreateSignatureDeformatterFromAsymmetricCrypto|Не удалось создать модуль удаления формата сигнатуры для указанного алгоритма из указанного асимметричного шифрования.|  
 |TraceCodeIdentityModelAsyncCallbackThrewException|Асинхронный обратный вызов сгенерировал исключение.|  
 |LengthMustBeGreaterThanZero|Длина этого аргумента должна быть больше 0.|  
-|FoundMultipleCerts|С помощью указанных условий поиска StoreName, StoreLocation, FindType, FindValue найдено несколько сертификатов X.509. Укажите более точное значение.|  
+|FoundMultipleCerts|Найдено несколько сертификатов X.509, с помощью условий поиска: StoreName, StoreLocation, FindType, FindValue. Укажите более точное значение.|  
 |AtLeastOneTransformRequired|Элемент Transforms должен содержать хотя бы одно преобразование.|  
 |SAMLTokenNotSerialized|Утверждение SamlAssertion не может быть сериализовано в XML. Подробнее см. в описании внутреннего исключения.|  
 |TraceCodeSecurityBindingOutgoingMessageSecured|Протокол безопасности обеспечил защиту исходящего сообщения.|  

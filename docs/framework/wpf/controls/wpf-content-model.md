@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
 ms.openlocfilehash: 4f866e0366a7781c287b3ebae7b668c2b296a5cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023942"
 ---
 # <a name="wpf-content-model"></a>Модель содержимого WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] — это презентационная платформа, которая предоставляет множество элементов и типов, схожих с элементами управления, основное предназначение которых — отображение различных типов содержимого. Чтобы определить, какой элемент управления использовать или от какого элемента управления выполнять наследование, вы должны понимать, какие виды объектов лучше всего может отображать конкретный элемент управления.  
@@ -43,45 +43,45 @@ ms.locfileid: "59134612"
 ### <a name="controls-that-contain-a-single-arbitrary-object"></a>Элементы управления, содержащие один произвольный объект  
  <xref:System.Windows.Controls.ContentControl> Класса содержит один элемент произвольного содержимого. Его свойство содержимого — <xref:System.Windows.Controls.ContentControl.Content%2A>. Следующие элементы управления наследуют <xref:System.Windows.Controls.ContentControl> и используют его модель содержимого:  
   
--   <xref:System.Windows.Controls.Button>  
+- <xref:System.Windows.Controls.Button>  
   
--   <xref:System.Windows.Controls.Primitives.ButtonBase>  
+- <xref:System.Windows.Controls.Primitives.ButtonBase>  
   
--   <xref:System.Windows.Controls.CheckBox>  
+- <xref:System.Windows.Controls.CheckBox>  
   
--   <xref:System.Windows.Controls.ComboBoxItem>  
+- <xref:System.Windows.Controls.ComboBoxItem>  
   
--   <xref:System.Windows.Controls.ContentControl>  
+- <xref:System.Windows.Controls.ContentControl>  
   
--   <xref:System.Windows.Controls.Frame>  
+- <xref:System.Windows.Controls.Frame>  
   
--   <xref:System.Windows.Controls.GridViewColumnHeader>  
+- <xref:System.Windows.Controls.GridViewColumnHeader>  
   
--   <xref:System.Windows.Controls.GroupItem>  
+- <xref:System.Windows.Controls.GroupItem>  
   
--   <xref:System.Windows.Controls.Label>  
+- <xref:System.Windows.Controls.Label>  
   
--   <xref:System.Windows.Controls.ListBoxItem>  
+- <xref:System.Windows.Controls.ListBoxItem>  
   
--   <xref:System.Windows.Controls.ListViewItem>  
+- <xref:System.Windows.Controls.ListViewItem>  
   
--   <xref:System.Windows.Navigation.NavigationWindow>  
+- <xref:System.Windows.Navigation.NavigationWindow>  
   
--   <xref:System.Windows.Controls.RadioButton>  
+- <xref:System.Windows.Controls.RadioButton>  
   
--   <xref:System.Windows.Controls.Primitives.RepeatButton>  
+- <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
--   <xref:System.Windows.Controls.ScrollViewer>  
+- <xref:System.Windows.Controls.ScrollViewer>  
   
--   <xref:System.Windows.Controls.Primitives.StatusBarItem>  
+- <xref:System.Windows.Controls.Primitives.StatusBarItem>  
   
--   <xref:System.Windows.Controls.Primitives.ToggleButton>  
+- <xref:System.Windows.Controls.Primitives.ToggleButton>  
   
--   <xref:System.Windows.Controls.ToolTip>  
+- <xref:System.Windows.Controls.ToolTip>  
   
--   <xref:System.Windows.Controls.UserControl>  
+- <xref:System.Windows.Controls.UserControl>  
   
--   <xref:System.Windows.Window>  
+- <xref:System.Windows.Window>  
   
  На следующем рисунке показано четыре кнопки, <xref:System.Windows.Controls.ContentControl.Content%2A> присваивается строка <xref:System.DateTime> объекта, <xref:System.Windows.Shapes.Rectangle>и <xref:System.Windows.Controls.Panel> , содержащий <xref:System.Windows.Shapes.Ellipse> и <xref:System.Windows.Controls.TextBlock>:  
   
@@ -94,11 +94,11 @@ ms.locfileid: "59134612"
   
  Следующие элементы управления наследуют <xref:System.Windows.Controls.HeaderedContentControl> и используют его модель содержимого:  
   
--   <xref:System.Windows.Controls.Expander>  
+- <xref:System.Windows.Controls.Expander>  
   
--   <xref:System.Windows.Controls.GroupBox>  
+- <xref:System.Windows.Controls.GroupBox>  
   
--   <xref:System.Windows.Controls.TabItem>  
+- <xref:System.Windows.Controls.TabItem>  
   
  На следующем рисунке показаны два <xref:System.Windows.Controls.TabItem> объектов. Первый <xref:System.Windows.Controls.TabItem> имеет <xref:System.Windows.UIElement> объектов как <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> и <xref:System.Windows.Controls.ContentControl.Content%2A>. <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> Присваивается <xref:System.Windows.Controls.StackPanel> , содержащий <xref:System.Windows.Shapes.Ellipse> и <xref:System.Windows.Controls.TextBlock>. <xref:System.Windows.Controls.ContentControl.Content%2A> Присваивается <xref:System.Windows.Controls.StackPanel> , содержащий <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Controls.Label>. Второй <xref:System.Windows.Controls.TabItem> имеет строку в <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> и <xref:System.Windows.Controls.TextBlock> в <xref:System.Windows.Controls.ContentControl.Content%2A>.  
   
@@ -111,37 +111,37 @@ ms.locfileid: "59134612"
   
  Следующие элементы управления наследуют <xref:System.Windows.Controls.ItemsControl> и используют его модель содержимого:  
   
--   <xref:System.Windows.Controls.Menu>  
+- <xref:System.Windows.Controls.Menu>  
   
--   <xref:System.Windows.Controls.Primitives.MenuBase>  
+- <xref:System.Windows.Controls.Primitives.MenuBase>  
   
--   <xref:System.Windows.Controls.ContextMenu>  
+- <xref:System.Windows.Controls.ContextMenu>  
   
--   <xref:System.Windows.Controls.ComboBox>  
+- <xref:System.Windows.Controls.ComboBox>  
   
--   <xref:System.Windows.Controls.ItemsControl>  
+- <xref:System.Windows.Controls.ItemsControl>  
   
--   <xref:System.Windows.Controls.ListBox>  
+- <xref:System.Windows.Controls.ListBox>  
   
--   <xref:System.Windows.Controls.ListView>  
+- <xref:System.Windows.Controls.ListView>  
   
--   <xref:System.Windows.Controls.TabControl>  
+- <xref:System.Windows.Controls.TabControl>  
   
--   <xref:System.Windows.Controls.TreeView>  
+- <xref:System.Windows.Controls.TreeView>  
   
--   <xref:System.Windows.Controls.Primitives.Selector>  
+- <xref:System.Windows.Controls.Primitives.Selector>  
   
--   <xref:System.Windows.Controls.Primitives.StatusBar>  
+- <xref:System.Windows.Controls.Primitives.StatusBar>  
   
  На следующем рисунке показано <xref:System.Windows.Controls.ListBox> , содержащий следующие типы элементов:  
   
--   Строка.  
+- Строка.  
   
--   Объект <xref:System.DateTime>.  
+- Объект <xref:System.DateTime>.  
   
--   Объект <xref:System.Windows.UIElement>.  
+- Объект <xref:System.Windows.UIElement>.  
   
--   Объект <xref:System.Windows.Controls.Panel> , содержащий <xref:System.Windows.Shapes.Ellipse> и <xref:System.Windows.Controls.TextBlock>.  
+- Объект <xref:System.Windows.Controls.Panel> , содержащий <xref:System.Windows.Shapes.Ellipse> и <xref:System.Windows.Controls.TextBlock>.  
   
  ![Снимок экрана с ListBox с четырьмя типами содержимого.](./media/wpf-content-model/control-content-model-listbox.png)  
   
@@ -150,11 +150,11 @@ ms.locfileid: "59134612"
   
  Следующие элементы управления наследуют <xref:System.Windows.Controls.HeaderedItemsControl> и используют его модель содержимого:  
   
--   <xref:System.Windows.Controls.MenuItem>  
+- <xref:System.Windows.Controls.MenuItem>  
   
--   <xref:System.Windows.Controls.ToolBar>  
+- <xref:System.Windows.Controls.ToolBar>  
   
--   <xref:System.Windows.Controls.TreeViewItem>  
+- <xref:System.Windows.Controls.TreeViewItem>  
   
 <a name="classes_that_contain_a_collection_of_uielement_objects"></a>   
 ## <a name="classes-that-contain-a-collection-of-uielement-objects"></a>Классы, содержащие коллекцию объектов UIElement  
@@ -162,27 +162,27 @@ ms.locfileid: "59134612"
   
  Следующие классы наследуют от <xref:System.Windows.Controls.Panel> класса и используют его модель содержимого:  
   
--   <xref:System.Windows.Controls.Canvas>  
+- <xref:System.Windows.Controls.Canvas>  
   
--   <xref:System.Windows.Controls.DockPanel>  
+- <xref:System.Windows.Controls.DockPanel>  
   
--   <xref:System.Windows.Controls.Grid>  
+- <xref:System.Windows.Controls.Grid>  
   
--   <xref:System.Windows.Controls.Primitives.TabPanel>  
+- <xref:System.Windows.Controls.Primitives.TabPanel>  
   
--   <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>  
+- <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>  
   
--   <xref:System.Windows.Controls.Primitives.ToolBarPanel>  
+- <xref:System.Windows.Controls.Primitives.ToolBarPanel>  
   
--   <xref:System.Windows.Controls.Primitives.UniformGrid>  
+- <xref:System.Windows.Controls.Primitives.UniformGrid>  
   
--   <xref:System.Windows.Controls.StackPanel>  
+- <xref:System.Windows.Controls.StackPanel>  
   
--   <xref:System.Windows.Controls.VirtualizingPanel>  
+- <xref:System.Windows.Controls.VirtualizingPanel>  
   
--   <xref:System.Windows.Controls.VirtualizingStackPanel>  
+- <xref:System.Windows.Controls.VirtualizingStackPanel>  
   
--   <xref:System.Windows.Controls.WrapPanel>  
+- <xref:System.Windows.Controls.WrapPanel>  
   
  Дополнительные сведения см. в разделе [Общие сведения о панелях](panels-overview.md).  
   
@@ -190,23 +190,23 @@ ms.locfileid: "59134612"
 ## <a name="classes-that-affect-the-appearance-of-a-uielement"></a>Классы, влияющие на внешний вид объекта UIElement  
  <xref:System.Windows.Controls.Decorator> Класс применяет визуальные эффекты или вокруг один дочерний элемент <xref:System.Windows.UIElement>. Его свойство содержимого — <xref:System.Windows.Controls.Decorator.Child%2A>. Следующие классы наследуют от <xref:System.Windows.Controls.Decorator> и используют его модель содержимого:  
   
--   <xref:System.Windows.Documents.AdornerDecorator>  
+- <xref:System.Windows.Documents.AdornerDecorator>  
   
--   <xref:System.Windows.Controls.Border>  
+- <xref:System.Windows.Controls.Border>  
   
--   <xref:System.Windows.Controls.Primitives.BulletDecorator>  
+- <xref:System.Windows.Controls.Primitives.BulletDecorator>  
   
--   <xref:Microsoft.Windows.Themes.ButtonChrome>  
+- <xref:Microsoft.Windows.Themes.ButtonChrome>  
   
--   <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>  
+- <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>  
   
--   <xref:System.Windows.Controls.InkPresenter>  
+- <xref:System.Windows.Controls.InkPresenter>  
   
--   <xref:Microsoft.Windows.Themes.ListBoxChrome>  
+- <xref:Microsoft.Windows.Themes.ListBoxChrome>  
   
--   <xref:Microsoft.Windows.Themes.SystemDropShadowChrome>  
+- <xref:Microsoft.Windows.Themes.SystemDropShadowChrome>  
   
--   <xref:System.Windows.Controls.Viewbox>  
+- <xref:System.Windows.Controls.Viewbox>  
   
  На следующем рисунке показано <xref:System.Windows.Controls.TextBox> с (снабжен) <xref:System.Windows.Controls.Border> вокруг него.  
   

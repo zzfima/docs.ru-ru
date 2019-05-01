@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
 ms.openlocfilehash: 7b02659d96b08c592b25ddf3ef1f99114c3ee269
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013833"
 ---
 # <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>Неявное преобразование из "\<Имя_типа1 >" для "\<имя_типа2 >" при копировании значения параметра «ByRef» "\<имя_параметра >" обратно в соответствующий аргумент.
 Процедура вызывается с [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) аргумента отличается от соответствующего параметра типа.  
@@ -27,9 +27,9 @@ ms.locfileid: "58831765"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   По возможности используйте аргумент вызова того же типа, что и параметр процедуры, поэтому Visual Basic не нужно выполнять никаких преобразований.  
+- По возможности используйте аргумент вызова того же типа, что и параметр процедуры, поэтому Visual Basic не нужно выполнять никаких преобразований.  
   
--   Если необходимо вызвать процедуру с аргументом, тип которого отличается от типа параметра, но не требуется возвращать значение в аргумент вызова, то определите параметр как [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) , а не `ByRef`.  
+- Если необходимо вызвать процедуру с аргументом, тип которого отличается от типа параметра, но не требуется возвращать значение в аргумент вызова, то определите параметр как [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) , а не `ByRef`.  
   
 ## <a name="see-also"></a>См. также
 

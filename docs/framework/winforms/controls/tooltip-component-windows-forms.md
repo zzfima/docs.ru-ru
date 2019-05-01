@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ToolTip component [Windows Forms]
 ms.assetid: 82e71dc3-0159-4f91-9f22-499224f004a0
 ms.openlocfilehash: eb68b614046fc10c4af9d58354125f76e119c782
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009283"
 ---
 # <a name="tooltip-component-windows-forms"></a>Компонент ToolTip (Windows Forms)
 Компонент <xref:System.Windows.Forms.ToolTip> в Windows Forms отображает текст при наведении указателя мыши на элементы управления. Компонент ToolTip можно связать с любым элементом управления. Пример использования этого элемента управления: Для экономии места в форме можно Отображение маленького значка на кнопке и использовать компонент ToolTip для объяснения ее функции.  

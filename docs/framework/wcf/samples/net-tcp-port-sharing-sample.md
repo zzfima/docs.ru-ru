@@ -3,11 +3,11 @@ title: Пример совместного использования порто
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
 ms.openlocfilehash: 8c2819bbf92310ad13067d1e07463717dbffafb9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989733"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Пример совместного использования портов Net.TCP
 Протокол TCP/IP использует 16-разрядное число, называемое номером порта, чтобы различать подключения к разным сетевым приложениям, выполняющимся на одном компьютере. Если приложение ожидает передачи данных через порт, то весь трафик TCP через этот порт перенаправляется данному приложению. Другие приложения не могут одновременно ожидать передачи данных через тот же порт.  

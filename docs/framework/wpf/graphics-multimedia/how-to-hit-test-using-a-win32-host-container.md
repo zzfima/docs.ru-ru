@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Win32 host containers [WPF], hit tests using
 ms.assetid: 9491f7f3-d8ba-4573-a888-2f064d1349dc
 ms.openlocfilehash: ac5cae5bcd94dc8bf80ff95b8971914e1fa5ba2c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025110"
 ---
 # <a name="how-to-hit-test-using-a-win32-host-container"></a>Практическое руководство. Проверка попадания с использованием контейнера узла Win32
 Можно создать визуальные объекты в пределах [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] окно путем предоставления контейнера окна для визуальных объектов. Чтобы обрабатывать события для содержащихся визуальных объектов, выполняется обработка сообщений, переданных в цикл фильтрации сообщений контейнера окна. Ссылаться на [руководства: По размещению визуальных объектов в приложении Win32](tutorial-hosting-visual-objects-in-a-win32-application.md) Дополнительные сведения о способах размещения визуальных объектов в [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] окна.  

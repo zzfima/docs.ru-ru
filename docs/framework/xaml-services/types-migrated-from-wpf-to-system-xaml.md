@@ -7,11 +7,11 @@ helpviewer_keywords:
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
 ms.openlocfilehash: dcfad1c2b2f95783e2b348a3a1111501f958143f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006637"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>Типы, перенесенные из WPF в System.Xaml
 В [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] и [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)], оба [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] и Windows Workflow Foundation содержат реализацию языка XAML. Многие из открытых типов, которые обеспечивают расширение для реализации XAML в WPF, существовали в сборках WindowsBase PresentationCore и PresentationFramework. Аналогично открытые типы, которые обеспечивают расширение для Windows Workflow Foundation XAML существовал в сборке System.Workflow.ComponentModel. В [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]некоторые типы, связанные с XAML, перенесены в сборку System.Xaml. Общая реализация служб языка XAML в .NET Framework поддерживает многие сценарии расширения XAML, которые первоначально определялись реализацией XAML конкретной платформы, а теперь в целом поддерживаются в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] . В этом разделе перечислены перенесенные типы и обсуждаются вопросы, относящиеся к миграции.  
@@ -27,11 +27,11 @@ ms.locfileid: "59116484"
 ### <a name="workflow-xaml-support-types"></a>Типы поддержки XAML рабочего процесса  
  Windows Workflow Foundation также предоставляемые типы поддержки XAML, и во многих случаях они имели идентичные короткие имена эквивалентов в WPF. Ниже приведен список типов поддержки Windows Workflow Foundation XAML:  
   
--   <xref:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute>  
+- <xref:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute>  
   
--   <xref:System.Workflow.ComponentModel.Serialization.RuntimeNamePropertyAttribute>  
+- <xref:System.Workflow.ComponentModel.Serialization.RuntimeNamePropertyAttribute>  
   
--   <xref:System.Workflow.ComponentModel.Serialization.XmlnsPrefixAttribute>  
+- <xref:System.Workflow.ComponentModel.Serialization.XmlnsPrefixAttribute>  
   
  Эти типы поддержки по-прежнему существуют в сборках Windows Workflow Foundation для [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] и по-прежнему может использоваться для конкретных приложений Windows Workflow Foundation; тем не менее, они должны не должны ссылаться приложения и платформы, не используйте Windows Workflow Foundation.  
   
@@ -43,11 +43,11 @@ ms.locfileid: "59116484"
 ## <a name="markupextension-supporting-service-classes"></a>Вспомогательные классы службы MarkupExtension  
  [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] и [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] для WPF предоставляли ряд служб, доступных для реализаций <xref:System.Windows.Markup.MarkupExtension> и <xref:System.ComponentModel.TypeConverter> , для поддержки использования типа или свойства в XAML. Вот эти службы.  
   
--   <xref:System.Windows.Markup.IProvideValueTarget>  
+- <xref:System.Windows.Markup.IProvideValueTarget>  
   
--   <xref:System.Windows.Markup.IUriContext>  
+- <xref:System.Windows.Markup.IUriContext>  
   
--   <xref:System.Windows.Markup.IXamlTypeResolver>  
+- <xref:System.Windows.Markup.IXamlTypeResolver>  
   
 > [!NOTE]
 >  Другая служба из [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] , связанная с расширениями разметки, — это интерфейс <xref:System.Windows.Markup.IReceiveMarkupExtension> . Расширение<xref:System.Windows.Markup.IReceiveMarkupExtension> не было перенесено, и теперь оно помечено как `[Obsolete]` для [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Сценарии, в которых ранее использовался <xref:System.Windows.Markup.IReceiveMarkupExtension> , следует применять обратные вызовы <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> с атрибутами. <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> также помечен как `[Obsolete]`.  
@@ -75,35 +75,35 @@ ms.locfileid: "59116484"
 ## <a name="xaml-related-attributes"></a>Атрибуты, связанные с XAML  
  XAML в WPF содержал несколько атрибутов, которые можно было применять к типам CLR, чтобы указать что-то об их поведении в XAML. Ниже приведен список атрибутов, которые существовали в сборках WPF в [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] и [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]. В [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]они перенесены в System.Xaml.  
   
--   <xref:System.Windows.Markup.AmbientAttribute>  
+- <xref:System.Windows.Markup.AmbientAttribute>  
   
--   <xref:System.Windows.Markup.ContentPropertyAttribute>  
+- <xref:System.Windows.Markup.ContentPropertyAttribute>  
   
--   <xref:System.Windows.Markup.ContentWrapperAttribute>  
+- <xref:System.Windows.Markup.ContentWrapperAttribute>  
   
--   <xref:System.Windows.Markup.DependsOnAttribute>  
+- <xref:System.Windows.Markup.DependsOnAttribute>  
   
--   <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute>  
+- <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute>  
   
--   <xref:System.Windows.Markup.NameScopePropertyAttribute>  
+- <xref:System.Windows.Markup.NameScopePropertyAttribute>  
   
--   <xref:System.Windows.Markup.RootNamespaceAttribute>  
+- <xref:System.Windows.Markup.RootNamespaceAttribute>  
   
--   <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>  
+- <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>  
   
--   <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>  
+- <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>  
   
--   <xref:System.Windows.Markup.ValueSerializerAttribute>  
+- <xref:System.Windows.Markup.ValueSerializerAttribute>  
   
--   <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>  
+- <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>  
   
--   <xref:System.Windows.Markup.XmlLangPropertyAttribute>  
+- <xref:System.Windows.Markup.XmlLangPropertyAttribute>  
   
--   <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute>  
+- <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute>  
   
--   <xref:System.Windows.Markup.XmlnsDefinitionAttribute>  
+- <xref:System.Windows.Markup.XmlnsDefinitionAttribute>  
   
--   <xref:System.Windows.Markup.XmlnsPrefixAttribute>  
+- <xref:System.Windows.Markup.XmlnsPrefixAttribute>  
   
 <a name="miscellaneous_classes"></a>   
 ## <a name="miscellaneous-classes"></a>Различные классы  

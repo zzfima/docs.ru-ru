@@ -6,11 +6,11 @@ helpviewer_keywords:
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
 ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002343"
 ---
 # <a name="timing-behaviors-overview"></a>Общие сведения о характере поведения во времени
 В этом разделе описан характер поведения анимаций и других <xref:System.Windows.Media.Animation.Timeline> объектов.  
@@ -106,9 +106,9 @@ ms.locfileid: "59129601"
   
  В следующем примере создается <xref:System.Windows.Media.Animation.Storyboard> , имеет два дочерних <xref:System.Windows.Media.Animation.DoubleAnimation> объектов. Оба <xref:System.Windows.Media.Animation.DoubleAnimation> объекта анимируют <xref:System.Windows.FrameworkElement.Width%2A> из <xref:System.Windows.Shapes.Rectangle> от 0 до 100. <xref:System.Windows.Shapes.Rectangle> Элементы имеют без анимации <xref:System.Windows.FrameworkElement.Width%2A> со значением 500 [аппаратно-независимых пикселях].  
   
--   <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Свойства первого <xref:System.Windows.Media.Animation.DoubleAnimation> присваивается <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, значение по умолчанию. В результате ширина прямоугольника остается равной 100 после <xref:System.Windows.Media.Animation.DoubleAnimation> заканчивается.  
+- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Свойства первого <xref:System.Windows.Media.Animation.DoubleAnimation> присваивается <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, значение по умолчанию. В результате ширина прямоугольника остается равной 100 после <xref:System.Windows.Media.Animation.DoubleAnimation> заканчивается.  
   
--   <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Свойство второго <xref:System.Windows.Media.Animation.DoubleAnimation> присваивается <xref:System.Windows.Media.Animation.FillBehavior.Stop>. В результате <xref:System.Windows.FrameworkElement.Width%2A> второго <xref:System.Windows.Shapes.Rectangle> устанавливается значение 500 после <xref:System.Windows.Media.Animation.DoubleAnimation> заканчивается.  
+- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Свойство второго <xref:System.Windows.Media.Animation.DoubleAnimation> присваивается <xref:System.Windows.Media.Animation.FillBehavior.Stop>. В результате <xref:System.Windows.FrameworkElement.Width%2A> второго <xref:System.Windows.Shapes.Rectangle> устанавливается значение 500 после <xref:System.Windows.Media.Animation.DoubleAnimation> заканчивается.  
   
  [!code-xaml[animation_ovws_snippet#TBFillBehaviorExample](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbfillbehaviorexample)]  
   
@@ -116,11 +116,11 @@ ms.locfileid: "59129601"
 ## <a name="properties-that-control-the-speed-of-a-timeline"></a>Свойства, которые управляют скоростью временной шкалы  
  <xref:System.Windows.Media.Animation.Timeline> Класс предоставляет три свойства для указания скорости:  
   
--   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> — Указывает соотношение скорости относительно его родительского элемента, скорость течения времени для <xref:System.Windows.Media.Animation.Timeline>. Значения больше единицы увеличения скорости выполнения <xref:System.Windows.Media.Animation.Timeline> и его дочерние <xref:System.Windows.Media.Animation.Timeline> объектов; значения между 0 и 1 — скорость уменьшается. Значение 1 указывает, что <xref:System.Windows.Media.Animation.Timeline> продвижения по тому же тарифу, как его родительский элемент. <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Контейнера временной шкалы влияет на все его дочерние <xref:System.Windows.Media.Animation.Timeline> объекты.  
+- <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> — Указывает соотношение скорости относительно его родительского элемента, скорость течения времени для <xref:System.Windows.Media.Animation.Timeline>. Значения больше единицы увеличения скорости выполнения <xref:System.Windows.Media.Animation.Timeline> и его дочерние <xref:System.Windows.Media.Animation.Timeline> объектов; значения между 0 и 1 — скорость уменьшается. Значение 1 указывает, что <xref:System.Windows.Media.Animation.Timeline> продвижения по тому же тарифу, как его родительский элемент. <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Контейнера временной шкалы влияет на все его дочерние <xref:System.Windows.Media.Animation.Timeline> объекты.  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> — Указывает процент <xref:System.Windows.Media.Animation.Timeline.Duration%2A> временной шкалы, затраченный на ускорение. Пример см. в статье [Практическое руководство. Ускорение или замедление анимации](how-to-accelerate-or-decelerate-an-animation.md). 
+- <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> — Указывает процент <xref:System.Windows.Media.Animation.Timeline.Duration%2A> временной шкалы, затраченный на ускорение. Пример см. в статье [Практическое руководство. Ускорение или замедление анимации](how-to-accelerate-or-decelerate-an-animation.md). 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> — Указывает процент <xref:System.Windows.Media.Animation.Timeline.Duration%2A> временной шкалы, затраченный на замедление. Пример см. в статье [Практическое руководство. Ускорение или замедление анимации](how-to-accelerate-or-decelerate-an-animation.md).  
+- <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> — Указывает процент <xref:System.Windows.Media.Animation.Timeline.Duration%2A> временной шкалы, затраченный на замедление. Пример см. в статье [Практическое руководство. Ускорение или замедление анимации](how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>См. также
 

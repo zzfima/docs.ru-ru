@@ -10,11 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
 ms.openlocfilehash: 247ec4fc11f33587e77c49244b239a574c8f3cfc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012715"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Общие сведения об использовании элементов управления в формах Windows Forms
 В этом разделе описываются основные элементы в приложении Windows Forms и предоставляет простой пример, в котором используются элементы управления и обрабатывает события в приложении Windows Forms.  
@@ -22,9 +22,9 @@ ms.locfileid: "59207361"
 ## <a name="simple-windows-forms-applications"></a>Простой Windows Forms в приложения  
  Как минимум это приложение Windows Forms состоит из следующих элементов:  
   
--   Один или несколько классов, производных от <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
+- Один или несколько классов, производных от <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
   
--   Объект `Main` метода, который вызывает `static` (`shared` в Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> и передает <xref:System.Windows.Forms.Form> экземпляра к нему. <xref:System.Windows.Forms.Application.Run%2A> Метод обрабатывает сообщения из операционной системы для приложения.  
+- Объект `Main` метода, который вызывает `static` (`shared` в Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> и передает <xref:System.Windows.Forms.Form> экземпляра к нему. <xref:System.Windows.Forms.Application.Run%2A> Метод обрабатывает сообщения из операционной системы для приложения.  
   
  В следующем примере кода показаны основные элементы в приложении Windows Forms.  
   

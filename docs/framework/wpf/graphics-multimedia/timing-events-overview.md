@@ -9,11 +9,11 @@ helpviewer_keywords:
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
 ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002395"
 ---
 # <a name="timing-events-overview"></a>Общие сведения о временных событиях
 В этом разделе описываются способы использования пяти временных событий, доступных на <xref:System.Windows.Media.Animation.Timeline> и <xref:System.Windows.Media.Animation.Clock> объектов.  
@@ -23,11 +23,11 @@ ms.locfileid: "59167171"
   
  Существует несколько способов анимирования свойств в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
--   **Использование объектов раскадровки** (разметки и кода): Можно использовать <xref:System.Windows.Media.Animation.Storyboard> упорядочить анимации для одного или нескольких объектов и объектов. Например, см. в разделе [анимация свойства с помощью раскадровки](how-to-animate-a-property-by-using-a-storyboard.md).  
+- **Использование объектов раскадровки** (разметки и кода): Можно использовать <xref:System.Windows.Media.Animation.Storyboard> упорядочить анимации для одного или нескольких объектов и объектов. Например, см. в разделе [анимация свойства с помощью раскадровки](how-to-animate-a-property-by-using-a-storyboard.md).  
   
--   **Использование локальных анимаций** (только в коде): Можно применить <xref:System.Windows.Media.Animation.AnimationTimeline> объекты непосредственно к анимируемым свойствам. Пример см. в разделе [Анимация свойства без использования раскадровки](how-to-animate-a-property-without-using-a-storyboard.md).  
+- **Использование локальных анимаций** (только в коде): Можно применить <xref:System.Windows.Media.Animation.AnimationTimeline> объекты непосредственно к анимируемым свойствам. Пример см. в разделе [Анимация свойства без использования раскадровки](how-to-animate-a-property-without-using-a-storyboard.md).  
   
--   **Использование часов** (только в коде): Кроме того, можно явно управлять созданием часов и самостоятельно распределять часы для анимации.  Например, см. в разделе [Анимирование свойства с помощью AnimationClock](how-to-animate-a-property-by-using-an-animationclock.md).  
+- **Использование часов** (только в коде): Кроме того, можно явно управлять созданием часов и самостоятельно распределять часы для анимации.  Например, см. в разделе [Анимирование свойства с помощью AnimationClock](how-to-animate-a-property-by-using-an-animationclock.md).  
   
  Так как их можно использовать в разметке и коде, в примерах в этом обзоре используются <xref:System.Windows.Media.Animation.Storyboard> объектов. Тем не менее описанные здесь идеи также применяются к другим методам анимирования свойств.  
   

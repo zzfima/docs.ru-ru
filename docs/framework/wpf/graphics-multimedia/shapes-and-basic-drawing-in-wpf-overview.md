@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
 ms.openlocfilehash: 1ce0e661d88b7c4d5719c4f11ef0912c5bacb587
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008362"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>Обзор фигур и базовых средств рисования в приложении WPF
 В этом разделе приводится обзор рисования с помощью <xref:System.Windows.Shapes.Shape> объектов. Объект <xref:System.Windows.Shapes.Shape> — это разновидность <xref:System.Windows.UIElement> , позволяет нарисовать фигуру на экране. Так как они являются элементами пользовательского интерфейса, <xref:System.Windows.Shapes.Shape> объекты могут использоваться внутри <xref:System.Windows.Controls.Panel> элементы и элементы управления.  
@@ -28,13 +28,13 @@ ms.locfileid: "59189138"
 ## <a name="shape-objects"></a>Объекты фигур  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет ряд готовых к использованию <xref:System.Windows.Shapes.Shape> объектов.  Все объекты фигур наследуются от <xref:System.Windows.Shapes.Shape> класса. Доступные объекты фигур включают <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, и <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Shapes.Shape> объекты используют перечисленные ниже общие свойства.  
   
--   <xref:System.Windows.Shapes.Shape.Stroke%2A>: Описывает способ рисования контура фигуры.  
+- <xref:System.Windows.Shapes.Shape.Stroke%2A>: Описывает способ рисования контура фигуры.  
   
--   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: Определяет толщину контура фигуры.  
+- <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: Определяет толщину контура фигуры.  
   
--   <xref:System.Windows.Shapes.Shape.Fill%2A>: Описывает способ рисования внутренней части фигуры.  
+- <xref:System.Windows.Shapes.Shape.Fill%2A>: Описывает способ рисования внутренней части фигуры.  
   
--   Свойства данных, определяющие координаты и вершины, измеряются в аппаратно-независимых пикселях.  
+- Свойства данных, определяющие координаты и вершины, измеряются в аппаратно-независимых пикселях.  
   
  Так как они являются производными от <xref:System.Windows.UIElement>, объекты фигур можно использовать внутри панелей и большинства элементов управления. <xref:System.Windows.Controls.Canvas> Панели особенно хорошо подходит для создания сложных рисунков, так как она поддерживает абсолютное позиционирование дочерних объектов.  
   
@@ -154,13 +154,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  Свойство Stretch принимает одно из следующих значений.  
   
--   <xref:System.Windows.Media.Stretch.None>: <xref:System.Windows.Shapes.Shape> Содержимое объекта не растягивается.  
+- <xref:System.Windows.Media.Stretch.None>: <xref:System.Windows.Shapes.Shape> Содержимое объекта не растягивается.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: <xref:System.Windows.Shapes.Shape> Содержимое объекта растягивается для заполнения пространства макета.  Пропорции не сохраняются.  
+- <xref:System.Windows.Media.Stretch.Fill>: <xref:System.Windows.Shapes.Shape> Содержимое объекта растягивается для заполнения пространства макета.  Пропорции не сохраняются.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: <xref:System.Windows.Shapes.Shape> Содержимое объекта растягивается максимально для заполнения пространства макета с сохранением исходных пропорций.  
+- <xref:System.Windows.Media.Stretch.Uniform>: <xref:System.Windows.Shapes.Shape> Содержимое объекта растягивается максимально для заполнения пространства макета с сохранением исходных пропорций.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: <xref:System.Windows.Shapes.Shape> Содержимое объекта растягивается для полного заполнения пространства макета с сохранением исходных пропорций.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: <xref:System.Windows.Shapes.Shape> Содержимое объекта растягивается для полного заполнения пространства макета с сохранением исходных пропорций.  
   
  Обратите внимание, что, когда <xref:System.Windows.Shapes.Shape> растяжении содержимого объекта <xref:System.Windows.Shapes.Shape> рисования контура объекта после растяжения.  
   
