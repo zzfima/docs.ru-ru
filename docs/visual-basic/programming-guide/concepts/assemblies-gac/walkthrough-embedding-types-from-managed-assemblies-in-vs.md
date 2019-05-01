@@ -1,15 +1,15 @@
 ---
-title: Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio (Visual Basic)
+title: Пошаговое руководство. Embedding Types from Managed Assemblies in Visual Studio (Visual Basic) (Внедрение типов из управляемых сборок в Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 836d035aab06f18c13e3675fbd72c5ab9879a3d2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 18f22a771ab7279f177fe39d8c372a8517056890
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359471"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809137"
 ---
-# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio (Visual Basic)
+# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Пошаговое руководство. Embedding Types from Managed Assemblies in Visual Studio (Visual Basic) (Внедрение типов из управляемых сборок в Visual Studio (Visual Basic)
 
 Внедряя сведения о типе из управляемой сборки со строгим именем, можно свободно объединять типы в приложении, делая версию независимой. Это означает, что в программе можно использовать типы из нескольких версий управляемой библиотеки, т. е. необходимость компилировать каждую версию отдельно отпадает.
 
@@ -209,13 +209,13 @@ ms.locfileid: "57359471"
 
 3. Откройте файл SampleClass.vb. Добавьте в класс SampleClass следующие строки кода.
 
-```vb
-Public Function GetDate() As DateTime Implements ISampleInterface.GetDate
-    Return Now
-End Function
-```
+    ```vb
+    Public Function GetDate() As DateTime Implements ISampleInterface.GetDate
+        Return Now
+    End Function
+    ```
 
-    Save the file.
+    Сохраните файл.
 
 4. Сохраните проект.
 

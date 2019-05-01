@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: f6cd09279cf23d3273e7a4083950a5f42714c8bf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: 3a3df65f0c20cff49f9bd2a8790e8d9ae0032391
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097230"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809569"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Практическое руководство. Привязка к XML-данным с помощью XMLDataProvider и запросов XPath
 В этом примере показано, как выполнить привязку к [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] данных с помощью <xref:System.Windows.Data.XmlDataProvider>.  
@@ -30,19 +30,19 @@ ms.locfileid: "59097230"
   
  <xref:System.Windows.Controls.ListBox> Будут показаны следующие элементы, при запуске этого примера. Это *заголовки* всех элементов в группе *Книги* со значением *Stock*, равным *out*, или значением *Number*, равным 3 или больше или равным 8. Обратите внимание, что не *компакт-диска* элементы возвращаются, потому что <xref:System.Windows.Data.XmlDataProvider.XPath%2A> заданное <xref:System.Windows.Data.XmlDataProvider> указывает, что только *книг* элементы должны предоставляться ему (по существу установки фильтра).  
   
- ![XPath Example](./media/xpathexample.PNG "XPathExample")  
+ ![Снимок экрана примера XPath, отображается название четырех книг.](./media/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries/xpath-example-listbox-details.png)  
   
  В этом примере отображаются названия книг, так как <xref:System.Windows.Data.Binding.XPath%2A> из <xref:System.Windows.Controls.TextBlock> привязки в <xref:System.Windows.DataTemplate> имеет значение "*Title*«. Если вы хотите отображать значение атрибута, например *ISBN*, следует установить для <xref:System.Windows.Data.Binding.XPath%2A> значение "`@ISBN`«.  
   
  Свойства **XPath** в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] обрабатываются методом XmlNode.SelectNodes. Можно изменить запросы **XPath** для получения других результатов. Ниже приведено несколько примеров для <xref:System.Windows.Data.Binding.XPath%2A> запрос к привязанному элементу <xref:System.Windows.Controls.ListBox> из предыдущего примера:  
   
--   `XPath="Book[1]"` возвращает первый элемент книги (XML в действии). Обратите внимание, что индексы **XPath** основаны на 1, а не на 0.  
+- `XPath="Book[1]"` возвращает первый элемент книги (XML в действии). Обратите внимание, что индексы **XPath** основаны на 1, а не на 0.  
   
--   `XPath="Book[@*]"` возвращает все элементы книги с любыми атрибутами.  
+- `XPath="Book[@*]"` возвращает все элементы книги с любыми атрибутами.  
   
--   `XPath="Book[last()-1]"` возвращает второй элемент последней книги ("Знакомство с Microsoft .NET").  
+- `XPath="Book[last()-1]"` возвращает второй элемент последней книги ("Знакомство с Microsoft .NET").  
   
--   `XPath="*[position()>3]"` возвращает все элементы книги, за исключением первых трех.  
+- `XPath="*[position()>3]"` возвращает все элементы книги, за исключением первых трех.  
   
  При запуске **XPath** запрос, он возвращает <xref:System.Xml.XmlNode> или список XmlNodes. <xref:System.Xml.XmlNode> — [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] объектом, то есть можно использовать <xref:System.Windows.Data.Binding.Path%2A> свойство для привязки к [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] свойства. Вернемся к нашему предыдущему примеру еще раз. Если остальная часть примера остается неизменной и вы изменяете <xref:System.Windows.Controls.TextBlock> привязке следующего, будут отображаться имена возвращенных XMLNodes в <xref:System.Windows.Controls.ListBox>. В этом случае все возвращаемые узлы называются "*книги*".  
   

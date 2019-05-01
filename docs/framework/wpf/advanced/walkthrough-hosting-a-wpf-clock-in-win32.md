@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: a13e21281a4bdb365c3a0541d88cd94b6476492e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.openlocfilehash: 4001c34f6673e036bdbf731baed782c6dc0a16b0
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494952"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808039"
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>Пошаговое руководство. Размещение часов WPF в Win32
 
@@ -29,11 +29,11 @@ ms.locfileid: "57494952"
 
 На следующем рисунке показан конечный продукт, который должен получиться в результате выполнения инструкций из этого учебника:
 
-![Диалоговое окно "Свойства даты и времени"](./media/interoparch06.PNG "InteropArch06")
+![Снимок экрана: диалоговое окно Свойства даты и времени.](./media/walkthrough-hosting-a-wpf-clock-in-win32/date-time-properties-dialog.png)
 
-Это диалоговое окно можно воссоздать, создав C++ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] в проекте [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]и использование редактора диалоговых окон для создания следующих:
+Это диалоговое окно можно воссоздать, создав C++ проекта Win32 в Visual Studio и с помощью редактора диалоговых окон для создания следующих:
 
-![Диалоговое окно "Свойства даты и времени"](./media/interoparch07.PNG "InteropArch07")
+![Повторно созданная диалоговое окно Свойства даты и времени](./media/walkthrough-hosting-a-wpf-clock-in-win32/recreated-date-time-properties-dialog.png)
 
 (Необходимо использовать [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] использовать <xref:System.Windows.Interop.HwndSource>, и вам не нужно использовать C++ для написания [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] программы, но это является весьма распространенный способ сделать это и хорошо подходит для пошагового объяснения в учебнике).
 
@@ -229,7 +229,7 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
 
 Результат выглядит следующим образом:
 
-![Диалоговое окно "Свойства даты и времени"](./media/interoparch08.PNG "InteropArch08")
+![Диалоговое окно окончательный результат свойства даты и времени](./media/walkthrough-hosting-a-wpf-clock-in-win32/final-result-date-time-properties-dialog.png)
 
 Чтобы сравнить конечный результат с кодом, сформировавшим этот снимок экрана, см. в разделе [пример взаимодействия часов Win32](https://go.microsoft.com/fwlink/?LinkID=160051).
 

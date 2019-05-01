@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding properties of two controls [WPF]
 - controls [WPF], binding properties of
 ms.assetid: 06318fac-6afd-4c7d-a277-6d7ef50f47bc
-ms.openlocfilehash: 0dd7b817b632758cfca8b5c45d88e333510485f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 332e8e0dfa30ff7aff27c95652f07446baf6511a
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222072"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809521"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>Практическое руководство. Привязка свойств двух элементов управления
 В этом примере показано, как привязать свойство одного экземпляра элемента управления к другому с помощью <xref:System.Windows.Data.Binding.ElementName%2A> свойство.  
@@ -23,9 +23,10 @@ ms.locfileid: "59222072"
   
  После преобразования пример выглядит следующим образом:  
   
- ![Холст с зеленым фоном](./media/databindingbindingdpssample.PNG "DataBindingBindingDPsSample")  
-  
- **Примечание** свойство цели привязки (в этом примере <xref:System.Windows.Controls.Panel.Background%2A> свойство) должно быть свойством зависимостей. Более подробную информацию см. в разделе [Общие сведения о связывании данных](data-binding-overview.md).  
+![Снимок экрана: поле со списком установлен со значением зеленый и зеленый квадратик.](./media/how-to-bind-the-properties-of-two-controls/data-binding-bind-background-canvas.png)
+
+> [!NOTE]
+> Свойство цели привязки (в этом примере <xref:System.Windows.Controls.Panel.Background%2A> свойство) должно быть свойством зависимостей. Более подробную информацию см. в разделе [Общие сведения о связывании данных](data-binding-overview.md).  
   
 ## <a name="see-also"></a>См. также
 

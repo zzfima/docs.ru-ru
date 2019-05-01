@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
 ms.openlocfilehash: 6a546a982b7c000e7fb5304daf7eac95d6da7e92
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990331"
 ---
 # <a name="default-nettcpbinding"></a>Привязка NetTcpBinding по умолчанию
 В этом образце демонстрируется использование привязки <xref:System.ServiceModel.NetTcpBinding>. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующем службу калькулятора. В этом образце служба является резидентной. И клиент, и служба являются консольными приложениями.  
