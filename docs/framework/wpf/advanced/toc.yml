@@ -325,7 +325,7 @@
               href: annotations-overview.md
             - name: Схема примечаний
               href: annotations-schema.md
-        - name: Содержимое нефиксированного формата
+        - name: Размещение содержимого
           href: flow-content.md
           items:
             - name: Общие сведения о документах нефиксированного формата
