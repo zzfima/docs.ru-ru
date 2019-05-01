@@ -3,22 +3,22 @@ title: Пользовательская публикация WSDL
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
 ms.openlocfilehash: 2085c145a58ecaa4ad2dd8ffbd6933b92e735a6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990591"
 ---
 # <a name="custom-wsdl-publication"></a>Пользовательская публикация WSDL
 В данном образце демонстрируются указанные ниже возможности.  
   
--   реализации <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> пользовательского атрибута <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> для экспорта свойств атрибута в виде заметок WSDL;  
+- реализации <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> пользовательского атрибута <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> для экспорта свойств атрибута в виде заметок WSDL;  
   
--   Реализация <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> для импорта пользовательских заметок WSDL.  
+- Реализация <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> для импорта пользовательских заметок WSDL.  
   
--   Реализация <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> и <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> в пользовательском поведении контракта и пользовательском поведении операции соответственно для записи импортированных заметок в виде комментариев в CodeDom для импортированных контракта и операции.  
+- Реализация <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> и <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> в пользовательском поведении контракта и пользовательском поведении операции соответственно для записи импортированных заметок в виде комментариев в CodeDom для импортированных контракта и операции.  
   
--   Используйте <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> для загрузки WSDL, <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> для импорта WSDL с помощью пользовательского импортера WSDL и <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> для создания кода клиента Windows Communication Foundation (WCF) с заметками WSDL как / / / и ''' комментарии в C# и Visual Основные.  
+- Используйте <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> для загрузки WSDL, <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> для импорта WSDL с помощью пользовательского импортера WSDL и <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> для создания кода клиента Windows Communication Foundation (WCF) с заметками WSDL как / / / и ''' комментарии в C# и Visual Основные.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  

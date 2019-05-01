@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 61fce3e06b5245872f7061716e8d995dd5f5043c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984650"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>Метод ICLRMetaHost::RequestRuntimeLoadedNotification
 Предоставляет функцию обратного вызова, которая гарантированно вызывается при первой загрузке версия CLR (CLR), но еще не запущен. Этот метод заменяет [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) функции.  
@@ -49,11 +49,11 @@ HRESULT RequestRuntimeLoadedNotification (
 ## <a name="remarks"></a>Примечания  
  Функция обратного вызова работает следующим образом:  
   
--   Функция обратного вызова вызывается только в том случае, когда среда выполнения загружается в первый раз.  
+- Функция обратного вызова вызывается только в том случае, когда среда выполнения загружается в первый раз.  
   
--   Функция обратного вызова не вызывается для реентерабельных загрузок ту же среду выполнения.  
+- Функция обратного вызова не вызывается для реентерабельных загрузок ту же среду выполнения.  
   
--   Для загрузки среды выполнения не допускающий повторные входы сериализуются вызовы функции обратного вызова.  
+- Для загрузки среды выполнения не допускающий повторные входы сериализуются вызовы функции обратного вызова.  
   
  Функция обратного вызова имеет следующий прототип:  
   
@@ -66,13 +66,13 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  Прототипы функции обратного вызова, следующим образом:  
   
--   `pfnCallbackThreadSet`:  
+- `pfnCallbackThreadSet`:  
   
     ```  
     typedef HRESULT (__stdcall *CallbackThreadSetFnPtr)();  
     ```  
   
--   `pfnCallbackThreadUnset`:  
+- `pfnCallbackThreadUnset`:  
   
     ```  
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
@@ -80,11 +80,11 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  Если основное приложение намеревается загрузить или вызывать другой среды выполнения должен быть загружен в виде реентерабельным, `pfnCallbackThreadSet` и `pfnCallbackThreadUnset` параметры, предоставляемые в обратном вызове, необходимо использовать функцию следующим образом:  
   
--   `pfnCallbackThreadSet` должен вызываться потоком, который может вызвать загрузку среды выполнения, до попытки такой загрузки.  
+- `pfnCallbackThreadSet` должен вызываться потоком, который может вызвать загрузку среды выполнения, до попытки такой загрузки.  
   
--   `pfnCallbackThreadUnset` должен вызываться, когда поток больше не вызывает загрузку среды выполнения (и перед возвратом из начальной обратного вызова).  
+- `pfnCallbackThreadUnset` должен вызываться, когда поток больше не вызывает загрузку среды выполнения (и перед возвратом из начальной обратного вызова).  
   
--   `pfnCallbackThreadSet` и `pfnCallbackThreadUnset` оба являются не допускающий повторные входы.  
+- `pfnCallbackThreadSet` и `pfnCallbackThreadUnset` оба являются не допускающий повторные входы.  
   
 > [!NOTE]
 >  Ведущие приложения не должны вызывать `pfnCallbackThreadSet` и `pfnCallbackThreadUnset` выходит за рамки `pCallbackFunction` параметра.  

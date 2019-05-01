@@ -10,11 +10,11 @@ helpviewer_keywords:
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
 ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981881"
 ---
 # <a name="textelement-content-model-overview"></a>Общие сведения о модели содержимого TextElement
 В этом обзоре модель содержимого описываются поддерживаемом содержимом для <xref:System.Windows.Documents.TextElement>. <xref:System.Windows.Documents.Paragraph> Класс — это разновидность <xref:System.Windows.Documents.TextElement>. Модель содержимого описывает объекты/элементы, которые могут содержаться в других объектах. В этом обзоре представлена модель содержимого для объектов, производных от <xref:System.Windows.Documents.TextElement>. Дополнительные сведения см. в разделе [Общие сведения о документе нефиксированного](flow-document-overview.md).  
@@ -57,11 +57,11 @@ ms.locfileid: "59336191"
 ## <a name="working-with-textelement-content-programmatically"></a>Работа с содержимым TextElement с помощью программных средств  
  Содержание <xref:System.Windows.Documents.TextElement> состоит, коллекций и поэтому программное управление содержимое <xref:System.Windows.Documents.TextElement> объектов выполняется с использованием этих коллекций. Существуют три различные коллекции, используемые <xref:System.Windows.Documents.TextElement> -производные классы:  
   
--   <xref:System.Windows.Documents.InlineCollection>: Представляет коллекцию элементов <xref:System.Windows.Documents.Inline>. <xref:System.Windows.Documents.InlineCollection> определяет допустимое дочернее содержимое элементов <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span> и <xref:System.Windows.Controls.TextBlock>.  
+- <xref:System.Windows.Documents.InlineCollection>: Представляет коллекцию элементов <xref:System.Windows.Documents.Inline>. <xref:System.Windows.Documents.InlineCollection> определяет допустимое дочернее содержимое элементов <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span> и <xref:System.Windows.Controls.TextBlock>.  
   
--   <xref:System.Windows.Documents.BlockCollection>: Представляет коллекцию элементов <xref:System.Windows.Documents.Block>. <xref:System.Windows.Documents.BlockCollection> определяет допустимое дочернее содержимое элементов <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> и <xref:System.Windows.Documents.Figure>.  
+- <xref:System.Windows.Documents.BlockCollection>: Представляет коллекцию элементов <xref:System.Windows.Documents.Block>. <xref:System.Windows.Documents.BlockCollection> определяет допустимое дочернее содержимое элементов <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> и <xref:System.Windows.Documents.Figure>.  
   
--   <xref:System.Windows.Documents.ListItemCollection>: Элемент содержимого потока, который представляет определенный элемент содержимого в виде упорядоченного или неупорядоченного <xref:System.Windows.Documents.List>.  
+- <xref:System.Windows.Documents.ListItemCollection>: Элемент содержимого потока, который представляет определенный элемент содержимого в виде упорядоченного или неупорядоченного <xref:System.Windows.Documents.List>.  
   
  Можно управлять (добавлять или удалять элементы) из этих коллекций с помощью соответствующих свойств **Inlines**, **блоки**, и **ListItems**. Следующие примеры показывают, как управлять содержимым Span с помощью **Inlines** свойство.  
   

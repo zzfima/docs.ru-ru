@@ -13,11 +13,11 @@ helpviewer_keywords:
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
 ms.openlocfilehash: 4fca9231872a268470c9bcfa73e7a0c0a26d300c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981946"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Оптимизация производительности: Двумерная графика и изображения
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет широкий спектр функциональных возможностей двумерной графики и изображений, которые можно оптимизировать для требований приложения. Этот раздел содержит сведения об оптимизации производительности в этих областях.  
@@ -34,13 +34,13 @@ ms.locfileid: "59074993"
   
  Существует четыре типа <xref:System.Windows.Media.Drawing> объектов:  
   
--   <xref:System.Windows.Media.GeometryDrawing> Рисует фигуру.  
+- <xref:System.Windows.Media.GeometryDrawing> Рисует фигуру.  
   
--   <xref:System.Windows.Media.ImageDrawing> Рисует изображение.  
+- <xref:System.Windows.Media.ImageDrawing> Рисует изображение.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> Рисует текст.  
+- <xref:System.Windows.Media.GlyphRunDrawing> Рисует текст.  
   
--   <xref:System.Windows.Media.DrawingGroup> Рисует другие рисунки. Для объединения рисунков в один составной используйте группирование рисунков.  
+- <xref:System.Windows.Media.DrawingGroup> Рисует другие рисунки. Для объединения рисунков в один составной используйте группирование рисунков.  
   
  <xref:System.Windows.Media.GeometryDrawing> Объект используется для отрисовки геометрического содержимого. <xref:System.Windows.Media.Geometry> Класс и конкретные классы, производные от него, такие как <xref:System.Windows.Media.CombinedGeometry>, <xref:System.Windows.Media.EllipseGeometry>, и <xref:System.Windows.Media.PathGeometry>, предоставляют средства для отрисовки двумерной графики, а также предоставляет возможности попадания и поддержки обрезки. Геометрические объекты можно использовать, например, для определения области элемента управления или для определения области усечения, применяемой к изображению. Геометрические объекты могут быть простыми, такими как прямоугольники и круги, или сложными, созданными из двух или более геометрических объектов. Более сложные геометрические области можно создать путем объединения <xref:System.Windows.Media.PathSegment>-производных объектов, таких как <xref:System.Windows.Media.ArcSegment>, <xref:System.Windows.Media.BezierSegment>, и <xref:System.Windows.Media.QuadraticBezierSegment>.  
   
@@ -70,13 +70,13 @@ ms.locfileid: "59074993"
   
  При использовании изображений учитывайте следующие рекомендации, позволяющие повысить производительность.  
   
--   Если в приложении требуется отображение эскизов, рассмотрите возможность создания версий изображений уменьшенного размера. По умолчанию [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] загружает изображение и преобразует его до полного размера. Если требуется только эскиз изображения, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] напрасно преобразует изображение до полного размера, а затем масштабирует его до размера эскиза. Чтобы избежать этой лишней нагрузки, можно либо запросить в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] преобразование изображения в размер эскиза, либо настроить [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для загрузки изображения размера эскиза.  
+- Если в приложении требуется отображение эскизов, рассмотрите возможность создания версий изображений уменьшенного размера. По умолчанию [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] загружает изображение и преобразует его до полного размера. Если требуется только эскиз изображения, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] напрасно преобразует изображение до полного размера, а затем масштабирует его до размера эскиза. Чтобы избежать этой лишней нагрузки, можно либо запросить в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] преобразование изображения в размер эскиза, либо настроить [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для загрузки изображения размера эскиза.  
   
--   Всегда преобразуйте изображение в нужный размер, а не размер по умолчанию. Как упоминалось выше, запросите в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] преобразование изображения в нужный размер, а не в полный размер по умолчанию. Вы уменьшите не только рабочий набор приложения, но также и время ожидания выполнения.  
+- Всегда преобразуйте изображение в нужный размер, а не размер по умолчанию. Как упоминалось выше, запросите в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] преобразование изображения в нужный размер, а не в полный размер по умолчанию. Вы уменьшите не только рабочий набор приложения, но также и время ожидания выполнения.  
   
--   Если это возможно, объединяйте изображения в одно изображение, например диафильм, состоящий из нескольких изображений.  
+- Если это возможно, объединяйте изображения в одно изображение, например диафильм, состоящий из нескольких изображений.  
   
--   Более подробную информацию см. в разделе [Общие сведения об обработке изображений](../graphics-multimedia/imaging-overview.md).  
+- Более подробную информацию см. в разделе [Общие сведения об обработке изображений](../graphics-multimedia/imaging-overview.md).  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
  При анимации масштабирования любого растрового изображения алгоритм повторной дискретизации изображения высокого качества по умолчанию иногда может использовать столько системных ресурсов, чтобы привести к снижению частоты кадров анимации и задержкам. Установив <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> свойство <xref:System.Windows.Media.RenderOptions> объект <xref:System.Windows.Media.BitmapScalingMode.LowQuality> можно создавать более плавную анимацию при масштабировании растрового изображения. <xref:System.Windows.Media.BitmapScalingMode.LowQuality> Указывает режим [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] механизм визуализации для переключения с помощью алгоритма, оптимизированного по качеству алгоритм, оптимизированный по скорости, при обработке изображений.  

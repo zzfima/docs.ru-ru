@@ -9,30 +9,30 @@ helpviewer_keywords:
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
 ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981816"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Пошаговое руководство. Привязка к данным в гибридных приложениях
 Привязка источника данных к элементу управления необходима для предоставления пользователям доступа к базовым данным независимо от используемой [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] или [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. В этом пошаговом руководстве показано, как можно использовать привязку данных в гибридных приложениях, которые включают [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов управления.  
   
  В данном пошаговом руководстве представлены следующие задачи.  
   
--   Создание проекта.  
+- Создание проекта.  
   
--   Определение шаблона данных.  
+- Определение шаблона данных.  
   
--   Задание макета формы.  
+- Задание макета формы.  
   
--   Задание привязок данных.  
+- Задание привязок данных.  
   
--   Отображение данных с помощью взаимодействия.  
+- Отображение данных с помощью взаимодействия.  
   
--   Добавление источника данных в проект.  
+- Добавление источника данных в проект.  
   
--   Подключение к источнику данных.  
+- Подключение к источнику данных.  
   
  Полный пример кода для задач, приведенных в этом пошаговом руководстве, см. в разделе [привязка данных в гибридных приложениях-пример](https://go.microsoft.com/fwlink/?LinkID=159983).  
   
@@ -41,9 +41,9 @@ ms.locfileid: "59300870"
 ## <a name="prerequisites"></a>Предварительные требования  
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
   
--   Visual Studio.  
+- Visual Studio.  
   
--   Доступ к базе данных Northwind на сервере Microsoft SQL Server.  
+- Доступ к базе данных Northwind на сервере Microsoft SQL Server.  
   
 ## <a name="creating-the-project"></a>Создание проекта  
   
@@ -53,9 +53,9 @@ ms.locfileid: "59300870"
   
 2. В обозревателе решений добавьте ссылки на следующие сборки.  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms.  
+    - System.Windows.Forms.  
   
 3. Откройте файл MainWindow.xaml в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
@@ -74,7 +74,7 @@ ms.locfileid: "59300870"
   
 #### <a name="to-define-the-data-template"></a>Чтобы определить шаблон данных, выполните следующие действия.  
   
--   Скопируйте следующий XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
+- Скопируйте следующий XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
   
      [!code-xaml[WPFWithWFAndDatabinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
@@ -83,13 +83,13 @@ ms.locfileid: "59300870"
   
 #### <a name="to-set-up-the-grid-layout"></a>Настройка макета сетки  
   
--   Скопируйте следующий XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
+- Скопируйте следующий XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
   
      [!code-xaml[WPFWithWFAndDatabinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
 #### <a name="to-set-up-the-label-controls"></a>Чтобы настроить элементы управления Label, выполните следующие действия.  
   
--   Скопируйте следующий XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
+- Скопируйте следующий XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
   
      [!code-xaml[WPFWithWFAndDatabinding#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
@@ -100,7 +100,7 @@ ms.locfileid: "59300870"
   
 #### <a name="to-specify-data-bindings"></a>Чтобы задать привязки данных, выполните следующие действия.  
   
--   Скопируйте следующий XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
+- Скопируйте следующий XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
   
      <xref:System.Windows.Data.Binding> Класса привязки <xref:System.Windows.Controls.TextBox> элементов управления к соответствующим полям в базе данных.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "59300870"
   
 #### <a name="to-display-data-in-the-datagridview-control"></a>Чтобы отобразить данные в элементе управления DataGridView, выполните следующие действия.  
   
--   Скопируйте следующий XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
+- Скопируйте следующий XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
   
      [!code-xaml[WPFWithWFAndDatabinding#7](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   

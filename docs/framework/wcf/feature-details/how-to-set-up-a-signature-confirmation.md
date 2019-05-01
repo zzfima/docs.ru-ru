@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
 ms.openlocfilehash: 56e8720a6130d2908fbfb83bd243a54fae9a2406
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972930"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>Практическое руководство. Настройка подтверждения сигнатуры
 *Подтверждение подписи* — это механизм для инициатору сообщения убедиться, что полученный ответ был создан в ответ на исходное сообщение отправителя. Подтверждение подписи определено в спецификации WS-Security 1.1. Если конечная точка поддерживает WS-Security 1.0, использовать подтверждение подписи нельзя.  

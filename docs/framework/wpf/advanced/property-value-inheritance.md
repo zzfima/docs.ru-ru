@@ -7,11 +7,11 @@ helpviewer_keywords:
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
 ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981920"
 ---
 # <a name="property-value-inheritance"></a>Наследование значения свойства
 Наследование значения свойства — это функция системы свойств [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Наследование значения свойства позволяет дочерним элементам в дереве элементов получать значение конкретного свойства из родительских элементов, наследуя это значение, настроенное в ближайшем родительском элементе. Родительский элемент также мог получить свое значение через наследование значения свойства, поэтому система потенциально рекурсивно проходит по элементам к корню страницы. Наследование значения свойства не является стандартным поведением системы свойств. Чтобы свойство инициировало наследование значения свойства для дочерних элементов, оно должно быть установлено с определенным параметром метаданных.  
