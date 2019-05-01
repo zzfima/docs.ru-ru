@@ -18,36 +18,36 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 810875d1b91265fe886ce3cd11970cad7fee122d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041773"
 ---
-# <a name="icorprofilercallbackruntimethreadresumed-method"></a><span data-ttu-id="c1e79-102">Метод ICorProfilerCallback::RuntimeThreadResumed</span><span class="sxs-lookup"><span data-stu-id="c1e79-102">ICorProfilerCallback::RuntimeThreadResumed Method</span></span>
-<span data-ttu-id="c1e79-103">Уведомляет профилировщик о том, что указанный поток возобновлен после приостановки.</span><span class="sxs-lookup"><span data-stu-id="c1e79-103">Notifies the profiler that the specified thread has resumed after being suspended.</span></span>  
+# <a name="icorprofilercallbackruntimethreadresumed-method"></a><span data-ttu-id="65415-102">Метод ICorProfilerCallback::RuntimeThreadResumed</span><span class="sxs-lookup"><span data-stu-id="65415-102">ICorProfilerCallback::RuntimeThreadResumed Method</span></span>
+<span data-ttu-id="65415-103">Уведомляет профилировщик о том, что указанный поток возобновлен после приостановки.</span><span class="sxs-lookup"><span data-stu-id="65415-103">Notifies the profiler that the specified thread has resumed after being suspended.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c1e79-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c1e79-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="65415-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="65415-104">Syntax</span></span>  
   
 ```  
 HRESULT RuntimeThreadResumed(  
     [in] ThreadID threadId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c1e79-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c1e79-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="65415-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="65415-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="c1e79-106">[in] Идентификатор потока, который было возобновлено.</span><span class="sxs-lookup"><span data-stu-id="c1e79-106">[in] The ID of the thread that has been resumed.</span></span>  
+ <span data-ttu-id="65415-106">[in] Идентификатор потока, который было возобновлено.</span><span class="sxs-lookup"><span data-stu-id="65415-106">[in] The ID of the thread that has been resumed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c1e79-107">Требования</span><span class="sxs-lookup"><span data-stu-id="c1e79-107">Requirements</span></span>  
- <span data-ttu-id="c1e79-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c1e79-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="65415-107">Требования</span><span class="sxs-lookup"><span data-stu-id="65415-107">Requirements</span></span>  
+ <span data-ttu-id="65415-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="65415-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c1e79-109">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c1e79-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="65415-109">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="65415-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="c1e79-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c1e79-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="65415-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="65415-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c1e79-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c1e79-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="65415-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="65415-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c1e79-112">См. также</span><span class="sxs-lookup"><span data-stu-id="c1e79-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="65415-112">См. также</span><span class="sxs-lookup"><span data-stu-id="65415-112">See also</span></span>
 
-- [<span data-ttu-id="c1e79-113">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="c1e79-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="c1e79-114">Метод RuntimeThreadSuspended</span><span class="sxs-lookup"><span data-stu-id="c1e79-114">RuntimeThreadSuspended Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)
+- [<span data-ttu-id="65415-113">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="65415-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="65415-114">Метод RuntimeThreadSuspended</span><span class="sxs-lookup"><span data-stu-id="65415-114">RuntimeThreadSuspended Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)

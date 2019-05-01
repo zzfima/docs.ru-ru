@@ -8,24 +8,24 @@ helpviewer_keywords:
 - 'resources [WPF], '
 ms.assetid: 9f986a6d-7cc8-45ac-bb0f-43177a57649d
 ms.openlocfilehash: 8ad776b8ed18d74a6804b0efd8853c7af6efee0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053487"
 ---
-# <a name="resources-how-to-topics"></a><span data-ttu-id="878e7-102">Разделы руководства, посвященные ресурсам</span><span class="sxs-lookup"><span data-stu-id="878e7-102">Resources How-to Topics</span></span>
-<span data-ttu-id="878e7-103">В этом разделе описываются способы использования ресурсов Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="878e7-103">The topics in this section describe how to use Windows Presentation Foundation (WPF) resources.</span></span>  
+# <a name="resources-how-to-topics"></a><span data-ttu-id="33ac9-102">Разделы руководства, посвященные ресурсам</span><span class="sxs-lookup"><span data-stu-id="33ac9-102">Resources How-to Topics</span></span>
+<span data-ttu-id="33ac9-103">В этом разделе описываются способы использования ресурсов Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="33ac9-103">The topics in this section describe how to use Windows Presentation Foundation (WPF) resources.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="878e7-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="878e7-104">In This Section</span></span>  
- [<span data-ttu-id="878e7-105">Определение и создание ссылки на ресурс</span><span class="sxs-lookup"><span data-stu-id="878e7-105">Define and Reference a Resource</span></span>](how-to-define-and-reference-a-resource.md)  
- [<span data-ttu-id="878e7-106">Использование ресурсов приложения</span><span class="sxs-lookup"><span data-stu-id="878e7-106">Use Application Resources</span></span>](how-to-use-application-resources.md)  
- [<span data-ttu-id="878e7-107">Использование SystemFonts</span><span class="sxs-lookup"><span data-stu-id="878e7-107">Use SystemFonts</span></span>](how-to-use-systemfonts.md)  
- [<span data-ttu-id="878e7-108">Использование разделов системных шрифтов</span><span class="sxs-lookup"><span data-stu-id="878e7-108">Use System Fonts Keys</span></span>](how-to-use-system-fonts-keys.md)  
- [<span data-ttu-id="878e7-109">Использование SystemParameters</span><span class="sxs-lookup"><span data-stu-id="878e7-109">Use SystemParameters</span></span>](how-to-use-systemparameters.md)  
- [<span data-ttu-id="878e7-110">Использование разделов системных параметров</span><span class="sxs-lookup"><span data-stu-id="878e7-110">Use System Parameters Keys</span></span>](how-to-use-system-parameters-keys.md)  
+## <a name="in-this-section"></a><span data-ttu-id="33ac9-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="33ac9-104">In This Section</span></span>  
+ [<span data-ttu-id="33ac9-105">Определение и создание ссылки на ресурс</span><span class="sxs-lookup"><span data-stu-id="33ac9-105">Define and Reference a Resource</span></span>](how-to-define-and-reference-a-resource.md)  
+ [<span data-ttu-id="33ac9-106">Использование ресурсов приложения</span><span class="sxs-lookup"><span data-stu-id="33ac9-106">Use Application Resources</span></span>](how-to-use-application-resources.md)  
+ [<span data-ttu-id="33ac9-107">Использование SystemFonts</span><span class="sxs-lookup"><span data-stu-id="33ac9-107">Use SystemFonts</span></span>](how-to-use-systemfonts.md)  
+ [<span data-ttu-id="33ac9-108">Использование разделов системных шрифтов</span><span class="sxs-lookup"><span data-stu-id="33ac9-108">Use System Fonts Keys</span></span>](how-to-use-system-fonts-keys.md)  
+ [<span data-ttu-id="33ac9-109">Использование SystemParameters</span><span class="sxs-lookup"><span data-stu-id="33ac9-109">Use SystemParameters</span></span>](how-to-use-systemparameters.md)  
+ [<span data-ttu-id="33ac9-110">Использование разделов системных параметров</span><span class="sxs-lookup"><span data-stu-id="33ac9-110">Use System Parameters Keys</span></span>](how-to-use-system-parameters-keys.md)  
   
-## <a name="reference"></a><span data-ttu-id="878e7-111">Ссылка</span><span class="sxs-lookup"><span data-stu-id="878e7-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="33ac9-111">Ссылка</span><span class="sxs-lookup"><span data-stu-id="33ac9-111">Reference</span></span>  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
   
  <xref:System.Windows.SystemColors>  
@@ -34,5 +34,5 @@ ms.locfileid: "57356246"
   
  <xref:System.Windows.SystemFonts>  
   
-## <a name="related-sections"></a><span data-ttu-id="878e7-112">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="878e7-112">Related Sections</span></span>  
- [<span data-ttu-id="878e7-113">Ресурсы XAML</span><span class="sxs-lookup"><span data-stu-id="878e7-113">XAML Resources</span></span>](xaml-resources.md)
+## <a name="related-sections"></a><span data-ttu-id="33ac9-112">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="33ac9-112">Related Sections</span></span>  
+ [<span data-ttu-id="33ac9-113">Ресурсы XAML</span><span class="sxs-lookup"><span data-stu-id="33ac9-113">XAML Resources</span></span>](xaml-resources.md)
