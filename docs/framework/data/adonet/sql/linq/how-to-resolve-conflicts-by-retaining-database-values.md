@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
 ms.openlocfilehash: 8440ffe61e254403357970d771aea207a6eb6092
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037666"
 ---
 # <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>Практическое руководство. Как разрешать конфликты параллелизма путем сохранения значений базы данных
 Чтобы согласовать различия между ожидаемыми и фактическими значениями базы данных до повторной отправки изменений, можно воспользоваться <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> для сохранения значений, найденных в базе данных. Текущие значения в объектной модели при этом перезаписываются. Дополнительные сведения см. в разделе [оптимистичный параллелизм: Общие сведения о](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  

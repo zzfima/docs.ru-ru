@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
 ms.openlocfilehash: 598aef3943a53ee6eb97064819c9128de1839f52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055112"
 ---
 # <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>Структура "\<имя_структуры >" должен содержать по крайней мере один экземпляр переменной члена или объявление по крайней мере один экземпляр события, не помечен как «Custom»
 Определение структуры не включает все совместно переменные или обычные события.  
@@ -23,7 +23,7 @@ ms.locfileid: "58813942"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Определите по крайней мере одну переменную или событие, которое не является `Shared`. Если вы определяете только одно событие, он должен быть являющуюся, а также не совместно.  
+- Определите по крайней мере одну переменную или событие, которое не является `Shared`. Если вы определяете только одно событие, он должен быть являющуюся, а также не совместно.  
   
 ## <a name="see-also"></a>См. также
 

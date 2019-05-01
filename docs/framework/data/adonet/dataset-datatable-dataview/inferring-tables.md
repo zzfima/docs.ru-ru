@@ -3,20 +3,20 @@ title: Определение таблиц
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
 ms.openlocfilehash: 2c2a93d413f301dc3006b701e4bc7979a3fa7a1d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034259"
 ---
 # <a name="inferring-tables"></a>Определение таблиц
 При выведении схемы для <xref:System.Data.DataSet> из XML-документа ADO.NET сначала определяет, какой из XML-элементов представляет таблицы. Следующие структуры XML приводятся в таблице для **набора данных** схемы:  
   
--   Элементы с атрибутами.  
+- Элементы с атрибутами.  
   
--   Элементы с дочерними элементами.  
+- Элементы с дочерними элементами.  
   
--   Повторяющиеся элементы.  
+- Повторяющиеся элементы.  
   
 ## <a name="elements-with-attributes"></a>Элементы с атрибутами  
  Элементы с заданными атрибутами приводятся в выведенных таблицах. Например, рассмотрим следующий XML-код:  

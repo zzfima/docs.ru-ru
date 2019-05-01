@@ -1,5 +1,5 @@
 ---
-title: 'Пошаговые руководства: Создание пользовательской анимированной кнопки'
+title: Пошаговые руководства. Создание пользовательской анимированной кнопки
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom animated buttons [WPF]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
 ms.openlocfilehash: 3c601641a0eb1024722b4f449f0ab23e54fe93dd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024473"
 ---
-# <a name="walkthroughs-create-a-custom-animated-button"></a>Пошаговые руководства: Создание пользовательской анимированной кнопки
+# <a name="walkthroughs-create-a-custom-animated-button"></a>Пошаговые руководства. Создание пользовательской анимированной кнопки
 Как предполагает имя, очень удобно для получения насыщенных презентаций опыта создания для клиентов Windows Presentation Foundation (WPF). В этих пошаговых руководствах показано, как настроить внешний вид и поведение кнопки (включая анимацию). Эта настройка выполняется с помощью стиля и шаблона, так что можно применить эта пользовательская кнопка легко к любой кнопке в приложении. На следующем рисунке настраиваемая кнопка вы создадите.  
   
  ![Настраиваемая кнопка, которая будет создан](./media/custom-button-blend-intro.jpg "custom_button_blend_Intro")  

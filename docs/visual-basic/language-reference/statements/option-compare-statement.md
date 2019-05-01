@@ -19,11 +19,11 @@ helpviewer_keywords:
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
 ms.openlocfilehash: e7c1e8e4431b7a653bb3a086589c35921f8001b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024746"
 ---
 # <a name="option-compare-statement"></a>Оператор Option Compare
 Объявляет метод сравнения по умолчанию для использования при сравнении строковых данных.  
@@ -75,7 +75,7 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>Чтобы включить Option Compare в командной строке  
   
--   Включить [дополнительные](../../../visual-basic/reference/command-line-compiler/optioncompare.md) параметр компилятора в **vbc** команды.  
+- Включить [дополнительные](../../../visual-basic/reference/command-line-compiler/optioncompare.md) параметр компилятора в **vbc** команды.  
   
 ## <a name="example"></a>Пример  
  В следующем примере оператор `Option Compare` используется, чтобы задать двоичное сравнение в качестве метода сравнения строк по умолчанию. Чтобы использовать этот код, раскомментируйте оператор `Option Compare Binary` и поместите его в начало файла исходного кода.  

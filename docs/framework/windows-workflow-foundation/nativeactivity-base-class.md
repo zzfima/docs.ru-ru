@@ -3,11 +3,11 @@ title: Базовый класс NativeActivity
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
 ms.openlocfilehash: f718d247e7110b46cdd13038c7c93c1e45612c75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009985"
 ---
 # <a name="nativeactivity-base-class"></a>Базовый класс NativeActivity
 
@@ -16,21 +16,21 @@ ms.locfileid: "59296593"
 ## <a name="using-nativeactivitycontext"></a>Использование NativeActivityContext
  Доступ к функциям среды выполнения рабочего процесса можно получить из метода <xref:System.Activities.NativeActivity.Execute%2A> при помощи элементов параметра `context` типа <xref:System.Activities.NativeActivityContext>. Функции, доступные посредством <xref:System.Activities.NativeActivityContext>:
 
--   Возвращение и задание аргументов и переменных.
+- Возвращение и задание аргументов и переменных.
 
--   Планирование дочерних действий с помощью <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>
+- Планирование дочерних действий с помощью <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>
 
--   Прерывание выполнения действия с помощью <xref:System.Activities.NativeActivityContext.Abort%2A>.
+- Прерывание выполнения действия с помощью <xref:System.Activities.NativeActivityContext.Abort%2A>.
 
--   Отмена выполнения дочернего действия с помощью <xref:System.Activities.NativeActivityContext.CancelChild%2A> и <xref:System.Activities.NativeActivityContext.CancelChildren%2A>.
+- Отмена выполнения дочернего действия с помощью <xref:System.Activities.NativeActivityContext.CancelChild%2A> и <xref:System.Activities.NativeActivityContext.CancelChildren%2A>.
 
--   Получение доступа к закладкам действий при помощи таких методов, как <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>, <xref:System.Activities.NativeActivityContext.RemoveBookmark%2A> и <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A>.
+- Получение доступа к закладкам действий при помощи таких методов, как <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>, <xref:System.Activities.NativeActivityContext.RemoveBookmark%2A> и <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A>.
 
--   Пользовательские функции отслеживания с использованием <xref:System.Activities.CodeActivityContext.Track%2A>.
+- Пользовательские функции отслеживания с использованием <xref:System.Activities.CodeActivityContext.Track%2A>.
 
--   Получение доступа к свойствам выполнения действия и свойствам значений с помощью <xref:System.Activities.CodeActivityContext.GetProperty%2A> и <xref:System.Activities.NativeActivityContext.GetValue%2A>.
+- Получение доступа к свойствам выполнения действия и свойствам значений с помощью <xref:System.Activities.CodeActivityContext.GetProperty%2A> и <xref:System.Activities.NativeActivityContext.GetValue%2A>.
 
--   Планирование задач и функций действий с помощью <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> и <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A>.
+- Планирование задач и функций действий с помощью <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> и <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A>.
 
 ### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>Создание пользовательского действия, которое наследуется от NativeActivity
 

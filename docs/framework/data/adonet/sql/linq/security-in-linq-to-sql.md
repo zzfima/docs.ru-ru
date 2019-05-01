@@ -3,11 +3,11 @@ title: Безопасность в LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
 ms.openlocfilehash: 6af073a86b0feaba2fdcd9facd9474bb334096e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037002"
 ---
 # <a name="security-in-linq-to-sql"></a>Безопасность в LINQ to SQL
 При соединении с базой данных всегда присутствуют риски безопасности. Хотя в LINQ to SQL включены некоторые новые способы работы с данными в SQL Server, он не предоставляет никаких дополнительных механизмов безопасности.  
@@ -25,13 +25,13 @@ ms.locfileid: "59078148"
   
  При отсутствии встроенной безопасности в строке соединения потребуется открытый текст пароля. Ниже приведены лучшие способы обеспечения безопасности строки соединения в порядке возрастания риска.  
   
--   Используйте встроенную безопасность.  
+- Используйте встроенную безопасность.  
   
--   Обезопасить строки соединения с помощью паролей и минимизировать пересылку строк соединения.  
+- Обезопасить строки соединения с помощью паролей и минимизировать пересылку строк соединения.  
   
--   Применяйте класс <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> вместо строки соединения, поскольку он ограничивает длительность просмотра. В LINQ to SQL создать экземпляр класса <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> можно с помощью атрибута <xref:System.Data.SqlClient.SqlConnection>.  
+- Применяйте класс <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> вместо строки соединения, поскольку он ограничивает длительность просмотра. В LINQ to SQL создать экземпляр класса <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> можно с помощью атрибута <xref:System.Data.SqlClient.SqlConnection>.  
   
--   Минимизировать время существования и точек соприкосновения для всех строк соединения.  
+- Минимизировать время существования и точек соприкосновения для всех строк соединения.  
   
 ## <a name="see-also"></a>См. также
 

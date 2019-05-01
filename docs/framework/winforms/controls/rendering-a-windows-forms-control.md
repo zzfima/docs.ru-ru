@@ -11,24 +11,24 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
 ms.openlocfilehash: 8de87e17d1baedccfe18bfded3ccab7ab59f0a09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012481"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Отрисовка элементов управления Windows Forms
 Визуализации — это процесс создания визуального представления на экране пользователя. Windows Forms используется [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (новая Windows графическая библиотека) для подготовки к просмотру. Управляемые классы, предоставляющие доступ к [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] в <xref:System.Drawing?displayProperty=nameWithType> пространства имен и его подпространства имен.  
   
  Следующие элементы участвуют в отрисовке элемента управления.  
   
--   Рисования функциональных возможностях, предоставляемых базовым классом <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+- Рисования функциональных возможностях, предоставляемых базовым классом <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
--   Основные [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] графической библиотеки.  
+- Основные [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] графической библиотеки.  
   
--   Геометрия области рисования.  
+- Геометрия области рисования.  
   
--   Процедура освобождения графических ресурсов.  
+- Процедура освобождения графических ресурсов.  
   
 ## <a name="drawing-functionality-provided-by-control"></a>Функции рисования, обеспечиваемые элементом управления  
  Базовый класс <xref:System.Windows.Forms.Control> предоставляет функциональные возможности рисования посредством его <xref:System.Windows.Forms.Control.Paint> событий. Элемент управления вызывает <xref:System.Windows.Forms.Control.Paint> событие при каждой попытке обновления его отображения. Дополнительные сведения о событиях в .NET Framework, см. в разделе [обработка и вызов событий](../../../standard/events/index.md).  

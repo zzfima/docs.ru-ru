@@ -3,11 +3,11 @@ title: Практическое руководство. Определить, я
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
 ms.openlocfilehash: 47ac7f29509af86819006a4394ca661140b95ab0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022172"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>Практическое руководство. Определить, является ли файл сборкой (Visual Basic)
 Файл является сборкой только в том случае, если он является управляемым и содержит запись сборки в своих метаданных. Дополнительные сведения о сборках и метаданных см. в разделе [Манифест сборки](../../../../framework/app-domains/assembly-manifest.md).  

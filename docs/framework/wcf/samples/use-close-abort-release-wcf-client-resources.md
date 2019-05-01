@@ -1,14 +1,14 @@
 ---
-title: Используйте Close и Abort для освобождения ресурсов клиента WCF
+title: Использование Close и Abort для освобождения ресурсов клиента WCF
 description: Dispose может завершиться ошибкой и вызывать исключения при сбое сети. Что может вызвать нежелательное поведение. Вместо этого используйте Close и Abort для освобождения ресурсов клиента, при сбое сети.
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
 ms.openlocfilehash: 58f828d9cd85806f5f04c349a7de18828ab5f6f2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007582"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>Close и Abort освобождение ресурсов безопасно в том случае, когда были удалены сетевых подключений
 

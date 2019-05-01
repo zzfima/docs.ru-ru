@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: e5ef455a-e049-429c-8005-30c93132fb79
 ms.openlocfilehash: 1a5378665d29e02799dd732d17705e462f40a2b1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009504"
 ---
 # <a name="toolstrip-control-windows-forms"></a>Элемент управления ToolStrip (Windows Forms)
 Элементы управления <xref:System.Windows.Forms.ToolStrip> — это панели инструментов, на которых можно разместить меню, элементы управления и пользовательские элементы управления в приложениях Windows Forms.  
@@ -73,13 +73,13 @@ ms.locfileid: "57721467"
  [Практическое руководство. Практическое](how-to-implement-a-custom-toolstriprenderer.md)  
  Описывается способ настройки внешнего вида элемента управления <xref:System.Windows.Forms.ToolStrip>, который  можно настроить путем реализации класса, производного от <xref:System.Windows.Forms.ToolStripRenderer>.  
   
--   [Практическое руководство. Создать базовый Windows Forms элемента управления ToolStrip со стандартными элементами с помощью конструктора](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
+- [Практическое руководство. Создать базовый Windows Forms элемента управления ToolStrip со стандартными элементами с помощью конструктора](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
   
--   [Практическое руководство. Перемещение элемента ToolStrip из контейнера ToolStripContainer в форму](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
+- [Практическое руководство. Перемещение элемента ToolStrip из контейнера ToolStripContainer в форму](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
   
--   [Пошаговое руководство: Создание профессионально оформленного элемента управления ToolStrip](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
+- [Пошаговое руководство: Создание профессионально оформленного элемента управления ToolStrip](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
   
--   [Пошаговое руководство: Создание формы MDI с помощью слияния меню и элементов управления ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
+- [Пошаговое руководство: Создание формы MDI с помощью слияния меню и элементов управления ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
   
 ## <a name="reference"></a>Ссылка  
  Класс <xref:System.Windows.Forms.ToolStrip>  

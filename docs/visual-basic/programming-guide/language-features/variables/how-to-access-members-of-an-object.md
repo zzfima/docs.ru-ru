@@ -6,11 +6,11 @@ helpviewer_keywords:
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
 ms.openlocfilehash: de00e428cc3d9d7a5688e853b0ff4295fec5b3e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052135"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Практическое руководство. Доступ к членам объекта (Visual Basic)
 При наличии объектную переменную, которая ссылается на объект, часто требуется для работы с членами этого объекта, например методы, свойства, поля и события. Например, когда вы создадите новый <xref:System.Windows.Forms.Form> объекта, может потребоваться задать его <xref:System.Windows.Forms.Control.Text%2A> свойства или вызов его <xref:System.Windows.Forms.Control.Focus%2A> метод.  
@@ -20,7 +20,7 @@ ms.locfileid: "59322762"
   
 #### <a name="to-access-members-of-an-object"></a>Для доступа к членам объекта  
   
--   Оператор доступа к членам (`.`) между именем переменной объекта и имя члена.  
+- Оператор доступа к членам (`.`) между именем переменной объекта и имя члена.  
   
     ```  
     currentText = newForm.Text  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32008
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
 ms.openlocfilehash: c308805f5e73d740ff18a40d95b9cc2576ac95fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013599"
 ---
 # <a name="typename-is-a-delegate-type"></a>"\<typename >" является типом делегата
 "\<typename >" является типом делегата. Конструкция делегата позволяет использовать только одно выражение AddressOf в качестве списка аргументов. Часто выражение AddressOf может использоваться вместо конструкции делегата.  
@@ -27,7 +27,7 @@ ms.locfileid: "58841273"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Использовать единую `AddressOf` выражение в списке аргументов для класса делегата в `New` предложение.  
+- Использовать единую `AddressOf` выражение в списке аргументов для класса делегата в `New` предложение.  
   
 ## <a name="see-also"></a>См. также
 

@@ -3,20 +3,20 @@ title: Операторы последовательности
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
 ms.openlocfilehash: 62cb654922af9df65b0ec9abb67bdc33fda09339
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033440"
 ---
 # <a name="sequence-operators"></a>Операторы последовательности
 В целом, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не поддерживает операторы последовательности, имеющие одно или несколько следующих свойств.  
   
--   Принимают лямбда-выражение с параметром индекса.  
+- Принимают лямбда-выражение с параметром индекса.  
   
--   Основаны на свойствах последовательных строк, например <xref:System.Linq.Queryable.TakeWhile%2A>.  
+- Основаны на свойствах последовательных строк, например <xref:System.Linq.Queryable.TakeWhile%2A>.  
   
--   Основаны на произвольной реализации CLR, например <xref:System.Collections.Generic.IComparer%601>.  
+- Основаны на произвольной реализации CLR, например <xref:System.Collections.Generic.IComparer%601>.  
   
 |Примеры неподдерживаемых операторов|  
 |-----------------------------|  

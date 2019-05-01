@@ -3,11 +3,11 @@ title: Отправка сообщений из приложения Windows Com
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
 ms.openlocfilehash: 1551ab407049e871a9275d148b1c84dc2791ccad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007543"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Отправка сообщений из приложения Windows Communication Foundation в приложение MSMQ
 В этом примере показано, как приложение Windows Communication Foundation (WCF) можно отправлять сообщения приложению очереди сообщений (MSMQ). Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди. Одновременная работа службы и клиента не требуется.
@@ -138,15 +138,15 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
   
 2. При первом запуске служба проверит наличие очереди. Если очередь отсутствует, служба ее создаст. Можно сначала запустить службу, чтобы создать очередь, либо создать ее с помощью диспетчера очередей MSMQ. Чтобы создать очередь в Windows 2008, выполните следующие шаги.  
   
-    1.  Откройте диспетчер серверов в Visual Studio 2012.  
+    1. Откройте диспетчер серверов в Visual Studio 2012.  
   
-    2.  Разверните **функции** вкладки.  
+    2. Разверните **функции** вкладки.  
   
-    3.  Щелкните правой кнопкой мыши **очереди личных сообщений**и выберите **New**, **частную очередь**.  
+    3. Щелкните правой кнопкой мыши **очереди личных сообщений**и выберите **New**, **частную очередь**.  
   
-    4.  Проверьте **транзакционная** поле.  
+    4. Проверьте **транзакционная** поле.  
   
-    5.  Введите `ServiceModelSamplesTransacted` как имя новой очереди.  
+    5. Введите `ServiceModelSamplesTransacted` как имя новой очереди.  
   
 3. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   

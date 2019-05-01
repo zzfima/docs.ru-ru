@@ -10,11 +10,11 @@ helpviewer_keywords:
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
 ms.openlocfilehash: bb972f158496192aa38f10564209bb2781837414
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010038"
 ---
 # <a name="metafiles-in-gdi"></a>Метафайлы в GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет <xref:System.Drawing.Imaging.Metafile> таким образом, чтобы можно было записывать и отображать метафайлы. Метафайл, также называемый векторного изображения, — это образ, который хранится в виде последовательности команд и параметров рисования. Команды и параметры, сохраненные в <xref:System.Drawing.Imaging.Metafile> объекта можно хранить в памяти или сохранить файл или поток.  
@@ -22,11 +22,11 @@ ms.locfileid: "59119864"
 ## <a name="metafile-formats"></a>Метафайлы  
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] позволяет отображать метафайлы, сохраненные в следующих форматах:  
   
--   Метафайл Windows (WMF)  
+- Метафайл Windows (WMF)  
   
--   EMF (Enhanced Metafile —расширенный метафайл)  
+- EMF (Enhanced Metafile —расширенный метафайл)  
   
--   EMF +  
+- EMF +  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] позволяет сохранять метафайлы в форматы EMF и EMF +, но не в формате WMF.  
   

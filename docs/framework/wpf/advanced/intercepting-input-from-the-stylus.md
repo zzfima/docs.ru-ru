@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
 ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031256"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Перехват ввода, осуществляемого пером
 <xref:System.Windows.Input.StylusPlugIns> Архитектура предоставляет механизм для реализации низкоуровневого управления <xref:System.Windows.Input.Stylus> входных данных и создание рукописный ввод <xref:System.Windows.Ink.Stroke> объектов. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Класс предоставляет механизм для реализации пользовательского поведения и применения его к потоку данных, поступающих от устройства пера, для обеспечения оптимальной производительности.  
   
  В этом разделе содержатся следующие подразделы:  
   
--   [Архитектура](#Architecture)  
+- [Архитектура](#Architecture)  
   
--   [Реализация подключаемых модулей пера](#ImplementingStylusPlugins)  
+- [Реализация подключаемых модулей пера](#ImplementingStylusPlugins)  
   
--   [Добавление подключаемого модуля к объекту класса InkCanvas](#AddingYourPluginToAnInkCanvas)  
+- [Добавление подключаемого модуля к объекту класса InkCanvas](#AddingYourPluginToAnInkCanvas)  
   
--   [Заключение](#Conclusion)  
+- [Заключение](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>Архитектура  

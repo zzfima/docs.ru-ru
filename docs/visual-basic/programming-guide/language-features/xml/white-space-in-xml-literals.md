@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
 ms.openlocfilehash: 08be345557d10a528aa03234883eba1b3a31beaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054943"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>Пробелы в XML-литералах (Visual Basic)
 Компилятор Visual Basic включает только символы значащих пробелов из XML-литерала, при создании [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объекта. Незначащие пробелы не включены.  
@@ -18,11 +18,11 @@ ms.locfileid: "58832763"
 ## <a name="significant-and-insignificant-white-space"></a>Значащий и незначащий пробел  
  Пробелы в XML-литералах значимы только в трех областях:  
   
--   Когда они находятся в значении атрибута.  
+- Когда они находятся в значении атрибута.  
   
--   Когда они являются частью содержимого текстового элемента и текст также содержит другие символы.  
+- Когда они являются частью содержимого текстового элемента и текст также содержит другие символы.  
   
--   Когда они находятся во внедренном выражении для текстового содержимого элемента.  
+- Когда они находятся во внедренном выражении для текстового содержимого элемента.  
   
  В противном случае компилятор считает незначащие пробелы и не включает его в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объекта для литерала.  
   

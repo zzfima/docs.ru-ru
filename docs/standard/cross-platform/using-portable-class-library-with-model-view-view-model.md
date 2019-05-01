@@ -12,11 +12,11 @@ ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b48dc67e18411d82f03d29ab244d57575d6d720
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050501"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Использование переносимой библиотеки классов с шаблоном "модель-представление-модель представления"
 Можно использовать .NET Framework [переносимой библиотеки классов](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) реализовать шаблон модель-представление-View Model (MVVM) и совместного использования сборок на нескольких платформах.
@@ -32,27 +32,27 @@ ms.locfileid: "56835789"
 ## <a name="classes-that-support-mvvm"></a>Классы, поддерживающие MVVM
  Отметив [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight или Windows Phone 7.5 для вашей [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] проект, следующие классы доступны для реализации шаблона MVVM:
 
--   Класс <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>
+- Класс <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>
 
--   Класс <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType>
+- Класс <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType>
 
--   Класс <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType>
+- Класс <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType>
 
--   Класс <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType>
+- Класс <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType>
 
--   Класс <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType>
+- Класс <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType>
 
--   Класс <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType>
+- Класс <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType>
 
--   Класс <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType>
+- Класс <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType>
 
--   Класс <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType>
+- Класс <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType>
 
--   Класс <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType>
+- Класс <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType>
 
--   Класс <xref:System.Windows.Input.ICommand?displayProperty=nameWithType>
+- Класс <xref:System.Windows.Input.ICommand?displayProperty=nameWithType>
 
--   Все классы в <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> пространства имен
+- Все классы в <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> пространства имен
 
 ## <a name="implementing-mvvm"></a>Реализации MVVM
  Для реализации MVVM, вы обычно создают модель и модель представления в [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] проекта, так как [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] проект не может ссылаться на проект непереносимые. Модели и модели представления может быть в одном проекте или в виде отдельных проектов. Если вы используете отдельные проекты, добавьте ссылку из проекта модели представления в проект модели.

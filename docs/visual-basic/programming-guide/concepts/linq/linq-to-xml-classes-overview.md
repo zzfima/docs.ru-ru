@@ -3,11 +3,11 @@ title: Обзор LINQ to XML классов (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
 ms.openlocfilehash: bd6990c387da3c687335561d1e13b7ec62fb5b84
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051524"
 ---
 # <a name="linq-to-xml-classes-overview-visual-basic"></a>Обзор LINQ to XML классов (Visual Basic)
 В этом разделе приведен список классов [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] в пространстве имен <xref:System.Xml.Linq> с кратким описанием каждого из них.  
@@ -26,9 +26,9 @@ ms.locfileid: "58822834"
 ### <a name="xcontainer-class"></a>Класс XContainer  
  Класс <xref:System.Xml.Linq.XContainer> является абстрактным базовым классом для всех узлов, которые могут иметь дочерние узлы. Следующие классы происходят от класса <xref:System.Xml.Linq.XContainer>:  
   
--   <xref:System.Xml.Linq.XElement>  
+- <xref:System.Xml.Linq.XElement>  
   
--   <xref:System.Xml.Linq.XDocument>  
+- <xref:System.Xml.Linq.XDocument>  
   
 ### <a name="xdeclaration-class"></a>Класс XDeclaration  
  Класс <xref:System.Xml.Linq.XDeclaration> представляет XML-декларацию. XML-декларация используется для объявления версии XML и кодировки документа. Кроме того, в XML-декларации указывается, является ли данный XML-документ изолированным. Если документ является изолированным, то внешние декларации разметки не используются ни во внешних DTD, ни во внешних сущностях параметров, ссылки на которые имеются во встроенном DTD.  
@@ -55,15 +55,15 @@ ms.locfileid: "58822834"
 ### <a name="xnode-class"></a>Класс XNode  
  Класс <xref:System.Xml.Linq.XNode> является абстрактным классом, который представляет узлы XML-дерева. Следующие классы происходят от класса <xref:System.Xml.Linq.XNode>:  
   
--   <xref:System.Xml.Linq.XText>  
+- <xref:System.Xml.Linq.XText>  
   
--   <xref:System.Xml.Linq.XContainer>  
+- <xref:System.Xml.Linq.XContainer>  
   
--   <xref:System.Xml.Linq.XComment>  
+- <xref:System.Xml.Linq.XComment>  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>  
+- <xref:System.Xml.Linq.XProcessingInstruction>  
   
--   <xref:System.Xml.Linq.XDocumentType>  
+- <xref:System.Xml.Linq.XDocumentType>  
   
 ### <a name="xnodedocumentordercomparer-class"></a>Класс XNodeDocumentOrderComparer  
  Класс <xref:System.Xml.Linq.XNodeDocumentOrderComparer> предоставляет возможность сравнивать узлы по их порядку в документе.  

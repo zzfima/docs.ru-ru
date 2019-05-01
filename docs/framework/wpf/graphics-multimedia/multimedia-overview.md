@@ -6,11 +6,11 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62030379"
 ---
 # <a name="multimedia-overview"></a>Общие сведения о мультимедиа
 Мультимедийные возможности [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] позволяют интегрировать аудио и видео в приложения для расширения возможностей пользователя. В этом разделе представлены мультимедийные возможности [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -37,11 +37,11 @@ ms.locfileid: "59340494"
 ### <a name="independent-mode"></a>Независимый режим  
  В независимом режиме содержимое мультимедиа управляет своим воспроизведением. Независимый режим имеет следующие параметры.  
   
--   Параметр мультимедиа <xref:System.Uri> можно указывать непосредственно.  
+- Параметр мультимедиа <xref:System.Uri> можно указывать непосредственно.  
   
--   Воспроизведением мультимедиа можно управлять напрямую.  
+- Воспроизведением мультимедиа можно управлять напрямую.  
   
--   Параметр мультимедиа <xref:System.Windows.Controls.MediaElement.Position%2A> и <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> свойства можно изменить.  
+- Параметр мультимедиа <xref:System.Windows.Controls.MediaElement.Position%2A> и <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> свойства можно изменить.  
   
  Содержимое мультимедиа загружается, либо присвоив <xref:System.Windows.Controls.MediaElement> объекта <xref:System.Windows.Controls.MediaElement.Source%2A> свойства или путем вызова <xref:System.Windows.Media.MediaPlayer> объекта <xref:System.Windows.Media.MediaPlayer.Open%2A> метод.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "59340494"
 ### <a name="clock-mode"></a>Режим часов  
  В режиме часов <xref:System.Windows.Media.MediaTimeline> управляет воспроизведением мультимедиа. Режим часов имеет следующие характеристики.  
   
--   Параметр мультимедиа <xref:System.Uri> задано косвенно через <xref:System.Windows.Media.MediaTimeline>.  
+- Параметр мультимедиа <xref:System.Uri> задано косвенно через <xref:System.Windows.Media.MediaTimeline>.  
   
--   Воспроизведением мультимедиа можно управлять с помощью часов. Нельзя использовать управляющие методы объекта мультимедиа.  
+- Воспроизведением мультимедиа можно управлять с помощью часов. Нельзя использовать управляющие методы объекта мультимедиа.  
   
--   Содержимое мультимедиа загружается, задав <xref:System.Windows.Media.MediaTimeline> объекта <xref:System.Windows.Media.MediaTimeline.Source%2A> свойством, создания часов по временной шкале и назначением часов объекту мультимедиа. Содержимое мультимедиа загружается таким образом при <xref:System.Windows.Media.MediaTimeline> внутри <xref:System.Windows.Media.Animation.Storyboard> целевых объектов <xref:System.Windows.Controls.MediaElement>.  
+- Содержимое мультимедиа загружается, задав <xref:System.Windows.Media.MediaTimeline> объекта <xref:System.Windows.Media.MediaTimeline.Source%2A> свойством, создания часов по временной шкале и назначением часов объекту мультимедиа. Содержимое мультимедиа загружается таким образом при <xref:System.Windows.Media.MediaTimeline> внутри <xref:System.Windows.Media.Animation.Storyboard> целевых объектов <xref:System.Windows.Controls.MediaElement>.  
   
  Для управления воспроизведением мультимедиа в режиме часов <xref:System.Windows.Media.Animation.ClockController> необходимо использовать управляющие методы. Объект <xref:System.Windows.Media.Animation.ClockController> получается из <xref:System.Windows.Media.Animation.ClockController> свойство <xref:System.Windows.Media.MediaClock>. Если вы попытаетесь использовать управляющие методы элемента <xref:System.Windows.Controls.MediaElement> или <xref:System.Windows.Media.MediaPlayer> объекта в режиме часов <xref:System.InvalidOperationException> будет создано.  
   

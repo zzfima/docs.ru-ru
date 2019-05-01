@@ -10,10 +10,10 @@ helpviewer_keywords:
 ms.assetid: ec3ab522-5fe4-4b4d-a551-bc19e84f4774
 ms.openlocfilehash: 380dabe2468ae3c7d9d7303498823d847a8d119e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009319"
 ---
 # <a name="toolstripprogressbar-control-overview"></a>Общие сведения об элементе управления ToolStripProgressBar
 <xref:System.Windows.Forms.ToolStripProgressBar> Сочетает в себе нависание и подготовки к просмотру функциональные возможности всех <xref:System.Windows.Forms.ToolStrip> элементов управления с его обычные функциональные возможности отслеживания процесса. Объект <xref:System.Windows.Forms.ToolStripProgressBar> наиболее обычно размещается <xref:System.Windows.Forms.StatusStrip>и менее часто с <xref:System.Windows.Forms.ToolStrip>.  

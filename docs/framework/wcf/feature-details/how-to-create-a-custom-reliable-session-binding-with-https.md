@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Создание пользовательской привязки надежного сеанса с использованием HTTPS
+title: Практическое руководство. Создание пользовательской привязки надежного сеанса с использованием HTTPS
 ms.date: 03/30/2017
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
 ms.openlocfilehash: f39325829cf4b548482a6a570a5aa1fd65e61a1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039537"
 ---
-# <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>Как выполнить Создание пользовательской привязки надежного сеанса с использованием HTTPS
+# <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>Практическое руководство. Создание пользовательской привязки надежного сеанса с использованием HTTPS
 
 В этом разделе рассматривается использование механизма обеспечения безопасности транспорта через протокол SSL и надежные сеансы. Для использования надежных сеансов через протокол HTTPS требуется создать пользовательскую привязку, использующую надежный сеанс и транспорт HTTPS. Как разрешить надежный сеанс можно принудительно с помощью кода или декларативно в файле конфигурации. Эта процедура использует файлы конфигурации клиента и службы для разрешения надежного сеанса и [  **\<httpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) элемент.
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
 ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050705"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Использование очередей недоставленных сообщений для обработки сбоев при передаче сообщений
 Сообщения в очереди могут вызвать сбой доставки. Сообщения, во время доставки которых произошел сбой, записываются в очередь недоставленных сообщений. Сбой доставки может быть вызван такими причинами, как сбои сети, удаленная очередь, заполнение очереди, сбой проверки подлинности или сбой доставки по времени.  
@@ -30,18 +30,18 @@ ms.locfileid: "59174620"
   
  Привязка имеет следующие свойства очереди недоставленных писем.  
   
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
   
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
 ## <a name="reading-messages-from-the-dead-letter-queue"></a>Чтение сообщений из очереди недоставленных сообщений  
  Приложение, которое считывает сообщения из очереди недоставленных сообщений-аналогичен службы WCF, которая считывает из очереди приложения, за исключением следующих незначительных отличий:  
   
--   Для чтения сообщений из системной очереди недоставленных транзакционных сообщений универсальный код ресурса (URI) должен иметь вид net.msmq://localhost/system$;DeadXact.  
+- Для чтения сообщений из системной очереди недоставленных транзакционных сообщений универсальный код ресурса (URI) должен иметь вид net.msmq://localhost/system$;DeadXact.  
   
--   Для чтения сообщений из системной очереди недоставленных нетранзакционных сообщений код URI должен иметь вид net.msmq://localhost/system$;DeadLetter.  
+- Для чтения сообщений из системной очереди недоставленных нетранзакционных сообщений код URI должен иметь вид net.msmq://localhost/system$;DeadLetter.  
   
--   Для чтения сообщений из пользовательской очереди недоставленных, код URI должен иметь вид: NET.MSMQ://localhost/Private/\<*custom-dlq-name*> где *custom-dlq-name* имя пользовательского очередь недоставленных сообщений.  
+- Для чтения сообщений из пользовательской очереди недоставленных, код URI должен иметь вид: NET.MSMQ://localhost/Private/\<*custom-dlq-name*> где *custom-dlq-name* имя пользовательского очередь недоставленных сообщений.  
   
  Дополнительные сведения о том, как адрес очереди см. в разделе [конечных точек служб и адресация очереди](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   

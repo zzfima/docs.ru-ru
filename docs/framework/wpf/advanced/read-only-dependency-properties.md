@@ -6,11 +6,11 @@ helpviewer_keywords:
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
 ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053526"
 ---
 # <a name="read-only-dependency-properties"></a>Свойства зависимости "только для чтения"
 В этом разделе описываются свойства зависимостей "только для чтения", включая существующие свойства зависимостей "только для чтения", а также сценарии и методы создания настраиваемого свойства зависимостей "только для чтения".  
@@ -31,11 +31,11 @@ ms.locfileid: "59162427"
   
  Большая часть процесса создания свойства зависимостей "только для чтения" аналогична описанному в разделах [Пользовательские свойства зависимостей](custom-dependency-properties.md) и [Реализация свойства зависимостей](how-to-implement-a-dependency-property.md). Однако есть три важных отличия.  
   
--   При регистрации свойства следует вызвать <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> вместо обычного метода <xref:System.Windows.DependencyProperty.Register%2A> метод для регистрации свойства.  
+- При регистрации свойства следует вызвать <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> вместо обычного метода <xref:System.Windows.DependencyProperty.Register%2A> метод для регистрации свойства.  
   
--   При реализации свойства wrapper [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] убедитесь, что в программе-оболочке нет реализации set, и таким образом, отсутствует несогласованность в состоянии "только для чтения" для открытой программы-оболочки.  
+- При реализации свойства wrapper [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] убедитесь, что в программе-оболочке нет реализации set, и таким образом, отсутствует несогласованность в состоянии "только для чтения" для открытой программы-оболочки.  
   
--   Объект, возвращаемый регистрацией только для чтения — <xref:System.Windows.DependencyPropertyKey> вместо <xref:System.Windows.DependencyProperty>. Необходимо сохранить это поле в качестве члена, но обычно не нужно его делать общим членом для типа.  
+- Объект, возвращаемый регистрацией только для чтения — <xref:System.Windows.DependencyPropertyKey> вместо <xref:System.Windows.DependencyProperty>. Необходимо сохранить это поле в качестве члена, но обычно не нужно его делать общим членом для типа.  
   
  Любое частное поле или значение, заложенное в свойство зависимостей "только для чтения", может быть полностью записываемым с помощью любой выбранной логики. Однако самый простой способ задать свойство либо изначально, либо в составе логики выполнения — это использовать [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] системы свойств, а не обходить систему свойств и настраивать частное резервное поле напрямую. В частности, имеется подпись <xref:System.Windows.DependencyObject.SetValue%2A> , принимающий параметр типа <xref:System.Windows.DependencyPropertyKey>. Как и где это значение программно в логике приложения повлияет на том, как вы можете установить доступ к <xref:System.Windows.DependencyPropertyKey> создается при первой регистрации свойства зависимостей. Если обрабатывать эту логику внутри класса, то можно сделать ее частной. Если необходимо устанавливать ее из других частей сборки, можно сделать ее внутренней. Одним из подходов является вызов <xref:System.Windows.DependencyObject.SetValue%2A> обработчика событий класса для соответствующего события, сообщающего экземпляру класса, хранимого значения свойства необходимо изменить. Другой подход заключается в связывании свойств зависимости с помощью парных <xref:System.Windows.PropertyChangedCallback> и <xref:System.Windows.CoerceValueCallback> обратные вызовы как часть метаданных этих свойств во время регистрации.  
   

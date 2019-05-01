@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65904da9efea90d31960d71ae0da8c81dffeccf1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000471"
 ---
 # <a name="endenumeration-function"></a>Функция EndEnumeration
 
@@ -50,7 +50,7 @@ HRESULT EndEnumeration (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
 |`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |

@@ -3,11 +3,11 @@ title: Пошаговое руководство. Запросы по связя
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
 ms.openlocfilehash: 6bd3255b49676b61a99f8416ab71c217d342e799
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033401"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Пошаговое руководство. Запросы по связям (C#)
 В этом пошаговом руководстве демонстрируется использование [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *ассоциации* для представления связей по внешнему ключу в базе данных.  
@@ -22,18 +22,18 @@ ms.locfileid: "59325375"
 ## <a name="overview"></a>Обзор  
  Данное пошаговое руководство состоит из трех основных задач.  
   
--   Добавление класса сущности, который представляет таблицу "Orders" в базе данных "Northwind".  
+- Добавление класса сущности, который представляет таблицу "Orders" в базе данных "Northwind".  
   
--   Добавление примечаний к классу `Customer`, чтобы расширить связи между классами `Customer` и `Order`.  
+- Добавление примечаний к классу `Customer`, чтобы расширить связи между классами `Customer` и `Order`.  
   
--   Создание и выполнение запроса для тестирования процесса получения сведений о классе `Order` с помощью класса `Customer`.  
+- Создание и выполнение запроса для тестирования процесса получения сведений о классе `Order` с помощью класса `Customer`.  
   
 ## <a name="mapping-relationships-across-tables"></a>Сопоставление связей между таблицами  
  После определения класса `Customer` создайте определение класса сущностей `Order`, включающее следующий код, который указывает, что свойство `Order.Customer` связано как внешний ключ со свойством `Customer.CustomerID`.  
   
 #### <a name="to-add-the-order-entity-class"></a>Добавление класса сущностей "Order"  
   
--   Введите или вставьте следующий код после определения класса `Customer`.  
+- Введите или вставьте следующий код после определения класса `Customer`.  
   
      [!code-csharp[DLinqWalk2CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#1)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "59325375"
   
 #### <a name="to-annotate-the-customer-class"></a>Добавление примечаний к классу "Customer"  
   
--   Введите или вставьте следующий код в класс `Customer`.  
+- Введите или вставьте следующий код в класс `Customer`.  
   
      [!code-csharp[DLinqWalk2CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#2)]  
   

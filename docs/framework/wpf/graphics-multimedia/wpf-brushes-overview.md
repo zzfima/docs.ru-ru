@@ -8,11 +8,11 @@ helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
 ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053097"
 ---
 # <a name="wpf-brushes-overview"></a>Общие сведения о кистях WPF
 Все элементы, видимые на экране отображается, так как они нарисованы кистью. Например кисть используется для описания фона кнопки, основного цвета текста и заливки фигуры. В этом разделе понятия рисования с помощью [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] кисти и приводятся примеры. Кисти позволяют заполнять объекты [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] различными изображениями, начиная с просто сплошного цвета и заканчивая сложными наборами шаблонов и изображений.  
@@ -131,9 +131,9 @@ ms.locfileid: "59132214"
 ## <a name="paint-using-predefined-and-system-brushes"></a>Рисование с помощью готовых и системных кистей  
  Для удобства Windows Presentation Foundation (WPF) предоставляет набор предопределенных, и система кистей, можно использовать для рисования объектов.  
   
--   Список доступных стандартных кистей, см. в разделе <xref:System.Windows.Media.Brushes> класса. Пример, демонстрирующий использование стандартной кисти, см. в разделе [закрасить область сплошным цветом](how-to-paint-an-area-with-a-solid-color.md).  
+- Список доступных стандартных кистей, см. в разделе <xref:System.Windows.Media.Brushes> класса. Пример, демонстрирующий использование стандартной кисти, см. в разделе [закрасить область сплошным цветом](how-to-paint-an-area-with-a-solid-color.md).  
   
--   Список доступных системных кистей, см. в разделе <xref:System.Windows.SystemColors> класса. Например, см. в разделе [Закраска области с помощью системной кисти](how-to-paint-an-area-with-a-system-brush.md).  
+- Список доступных системных кистей, см. в разделе <xref:System.Windows.SystemColors> класса. Например, см. в разделе [Закраска области с помощью системной кисти](how-to-paint-an-area-with-a-system-brush.md).  
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>Общие средства кисти  

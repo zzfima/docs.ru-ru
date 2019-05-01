@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
 ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048053"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Отладка ошибок проверки подлинности Windows
 При использовании в качестве механизма обеспечения безопасности проверки подлинности Windows процессы безопасности обрабатываются интерфейсом поставщика поддержки безопасности SSPI. Когда на уровне SSPI происходят ошибки безопасности, они регистрируются в Windows Communication Foundation (WCF). В этом разделе описаны общие принципы и некоторые вопросы, помогающие диагностировать такие ошибки.  
@@ -45,13 +45,13 @@ ms.locfileid: "59299453"
   
  Здесь четыре типа учетных записей включают:  
   
--   Локальный пользователь: Профиль пользователя только для компьютера. Пример: `MachineName\Administrator` или `MachineName\ProfileName`.  
+- Локальный пользователь: Профиль пользователя только для компьютера. Пример: `MachineName\Administrator` или `MachineName\ProfileName`.  
   
--   Локальная система: Встроенная учетная запись системы на компьютере, который не присоединен к домену.  
+- Локальная система: Встроенная учетная запись системы на компьютере, который не присоединен к домену.  
   
--   Пользователь домена: Учетная запись пользователя в домене Windows. Например, `DomainName\ProfileName`.  
+- Пользователь домена: Учетная запись пользователя в домене Windows. Например, `DomainName\ProfileName`.  
   
--   Компьютер домена: Процесс с удостоверением компьютера, на компьютере, присоединенных к домену Windows. Например, `MachineName\Network Service`.  
+- Компьютер домена: Процесс с удостоверением компьютера, на компьютере, присоединенных к домену Windows. Например, `MachineName\Network Service`.  
   
 > [!NOTE]
 >  Получение учетных данных службы происходит при вызове метода <xref:System.ServiceModel.ICommunicationObject.Open%2A> класса <xref:System.ServiceModel.ServiceHost>. Чтение учетных данных клиента происходит всякий раз, когда клиент отправляет сообщение.  
@@ -85,15 +85,15 @@ ms.locfileid: "59299453"
   
 2. Потребуйте согласования SSPI:  
   
-    1.  если используются стандартные привязки, установите свойство `NegotiateServiceCredential` равным `true`;  
+    1. если используются стандартные привязки, установите свойство `NegotiateServiceCredential` равным `true`;  
   
-    2.  если используются пользовательские привязки, установите атрибут `AuthenticationMode` элемента `Security` равным `SspiNegotiated`.  
+    2. если используются пользовательские привязки, установите атрибут `AuthenticationMode` элемента `Security` равным `SspiNegotiated`.  
   
 3. Потребуйте, чтобы при согласовании SSPI использовался протокол Kerberos, запретив использование NTLM:  
   
-    1.  для этого в коде воспользуйтесь инструкцией: `ChannelFactory.Credentials.Windows.AllowNtlm = false`;  
+    1. для этого в коде воспользуйтесь инструкцией: `ChannelFactory.Credentials.Windows.AllowNtlm = false`;  
   
-    2.  либо в файле конфигурации установите атрибут `allowNtlm` равным `false`. Этот атрибут содержится в [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
+    2. либо в файле конфигурации установите атрибут `allowNtlm` равным `false`. Этот атрибут содержится в [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
   
 ### <a name="ntlm-protocol"></a>Протокол NTLM  
   

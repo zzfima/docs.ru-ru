@@ -7,11 +7,11 @@ helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
 ms.openlocfilehash: ad31d5f58ae3d22ce8760a396b1f9696912dc475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053214"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>Пошаговое руководство. Размещение содержимого WPF в Win32
 Служба [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Однако если вы существенно потратились на код [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], то добавление функциональности [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в ваше приложение может быть более эффективно, чем переписывание исходного кода. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет простой механизм для размещения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержимого в [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] окна.  
@@ -41,13 +41,13 @@ ms.locfileid: "59296112"
   
 4. Обрабатывать [WM_CREATE](/windows/desktop/winmsg/wm-create)уведомления в процедуре окна и выполните следующее:  
   
-    1.  Создайте новый объект <xref:System.Windows.Interop.HwndSource> с родительским окном в качестве его параметра `parent`.  
+    1. Создайте новый объект <xref:System.Windows.Interop.HwndSource> с родительским окном в качестве его параметра `parent`.  
   
-    2.  Создайте экземпляр вашего класса содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+    2. Создайте экземпляр вашего класса содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
-    3.  Назначьте ссылку [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] объект содержимого <xref:System.Windows.Interop.HwndSource.RootVisual%2A> свойство <xref:System.Windows.Interop.HwndSource>.  
+    3. Назначьте ссылку [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] объект содержимого <xref:System.Windows.Interop.HwndSource.RootVisual%2A> свойство <xref:System.Windows.Interop.HwndSource>.  
   
-    4.  Получите HWND для содержимого. Свойство <xref:System.Windows.Interop.HwndSource.Handle%2A> объекта <xref:System.Windows.Interop.HwndSource> содержит дескриптор окна (HWND). Чтобы получить HWND, который можно использовать в неуправляемой части приложения, приведите `Handle.ToPointer()` к HWND.  
+    4. Получите HWND для содержимого. Свойство <xref:System.Windows.Interop.HwndSource.Handle%2A> объекта <xref:System.Windows.Interop.HwndSource> содержит дескриптор окна (HWND). Чтобы получить HWND, который можно использовать в неуправляемой части приложения, приведите `Handle.ToPointer()` к HWND.  
   
 5. Реализуйте управляемый класс, содержащий статическое поле для хранения ссылки на ваше содержимое [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Этот класс позволяет получить ссылку на содержимое [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] из вашего кода [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  
   
@@ -65,13 +65,13 @@ ms.locfileid: "59296112"
  В этом разделе описывается размещение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержимого в базовом [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] приложения. Само содержимое реализуется в [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] как управляемый класс. Большей частью это просто программирование [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ключевые аспекты реализации содержимого рассматриваются в [реализация содержимого WPF](#implementing_the_wpf_page).
 
 <a name="autoNestedSectionsOUTLINE1"></a>
--   [Базовое приложение](#the_basic_application)
+- [Базовое приложение](#the_basic_application)
 
--   [Размещение содержимого WPF](#hosting_the_wpf_page)
+- [Размещение содержимого WPF](#hosting_the_wpf_page)
 
--   [Хранение ссылки на содержимое WPF](#holding_a_reference)
+- [Хранение ссылки на содержимое WPF](#holding_a_reference)
 
--   [Взаимодействие с содержимым WPF](#communicating_with_the_page)
+- [Взаимодействие с содержимым WPF](#communicating_with_the_page)
 
 <a name="the_basic_application"></a>
 ### <a name="the-basic-application"></a>Базовое приложение
@@ -87,11 +87,11 @@ ms.locfileid: "59296112"
 
  Этот шаблон создает базовое приложение [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], включая:
 
--   точку входа для приложения;
+- точку входа для приложения;
 
--   окно со связанной процедурой окна (WndProc);
+- окно со связанной процедурой окна (WndProc);
 
--   Меню с **файл** и **помочь** заголовки. **Файл** меню имеет **выхода** элемента, который закрывает приложение. **Помочь** меню имеет **о** элемента, который запускает простое диалоговое окно.
+- Меню с **файл** и **помочь** заголовки. **Файл** меню имеет **выхода** элемента, который закрывает приложение. **Помочь** меню имеет **о** элемента, который запускает простое диалоговое окно.
 
  Прежде чем приступить к созданию кода для узла [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержимого, необходимо внести два изменения в этот базовый шаблон.
 
@@ -170,11 +170,11 @@ ms.locfileid: "59296112"
  Вы можете размещать и использовать [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержимого без каких-либо знаний о фактической реализации. Если [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержимое было упаковано в отдельную [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)], его можно встроить в любом [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] языка. Ниже приведено краткое пошаговое описание реализации [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)], которая используется в данном примере. Этот подраздел состоит из следующих подразделов.
 
 <a name="autoNestedSectionsOUTLINE2"></a>
--   [Макет](#page_layout)
+- [Макет](#page_layout)
 
--   [Возврат данных в главное окно](#returning_data_to_window)
+- [Возврат данных в главное окно](#returning_data_to_window)
 
--   [Установка свойств WPF](#set_page_properties)
+- [Установка свойств WPF](#set_page_properties)
 
 <a name="page_layout"></a>
 ### <a name="layout"></a>Макет

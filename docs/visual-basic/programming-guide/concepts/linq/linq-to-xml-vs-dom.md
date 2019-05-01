@@ -3,11 +3,11 @@ title: LINQ to XML или DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
 ms.openlocfilehash: 282df577808342a52a70f419b2a7559752103a0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051498"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML или DOM (Visual Basic)
 В этом разделе описываются некоторые основные различия между [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] и текущим преобладающим программным интерфейсом API XML, а именно моделью DOM консорциума W3C.  
@@ -79,11 +79,11 @@ Dim contacts = _
 ## <a name="working-directly-with-xml-elements"></a>Работа непосредственно с XML-элементами  
  При программировании на XML основное внимание обычно уделяется XML-элементам и, возможно, атрибутам. В [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] можно работать с XML-элементами и атрибутами напрямую. Например, можно выполнять следующие действия.  
   
--   Создавать XML-элементы, совсем не используя объект документа. Это упрощает программирование, когда необходимо работать с фрагментами XML-деревьев.  
+- Создавать XML-элементы, совсем не используя объект документа. Это упрощает программирование, когда необходимо работать с фрагментами XML-деревьев.  
   
--   Загружать объекты `T:System.Xml.Linq.XElement` непосредственно из XML-файла.  
+- Загружать объекты `T:System.Xml.Linq.XElement` непосредственно из XML-файла.  
   
--   Сериализовать объекты `T:System.Xml.Linq.XElement` в файл или поток.  
+- Сериализовать объекты `T:System.Xml.Linq.XElement` в файл или поток.  
   
  Сравним это с W3C DOM, где XML-документ используется как логический контейнер для XML-дерева. В DOM XML-узлы, в том числе элементы и атрибуты, должны создаваться в контексте XML-документа. Вот фрагмент кода, предназначенного для создания элемента имени в DOM:  
   

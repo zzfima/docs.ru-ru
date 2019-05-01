@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
 ms.openlocfilehash: f70246d4a4d158815ee9662036eca8edeb891d85
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012897"
 ---
 # <a name="listbox-control-overview-windows-forms"></a>Общие сведения об элементе управления ListBox (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ListBox> элемент управления отображает список, из которого пользователь может выбрать один или несколько элементов. Если общее количество элементов превышает номер, который может быть отображен, полосы прокрутки автоматически добавляется <xref:System.Windows.Forms.ListBox> элемента управления. Когда <xref:System.Windows.Forms.ListBox.MultiColumn%2A> свойству `true`, поле со списком элементы отображаются в нескольких столбцах и горизонтальную полосу прокрутки. Когда <xref:System.Windows.Forms.ListBox.MultiColumn%2A> свойству `false`, поле со списком элементы отображаются в одном столбце и вертикальную полосу прокрутки. Когда <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> присваивается `true`, полоса прокрутки отображается независимо от количества элементов. <xref:System.Windows.Forms.ListBox.SelectionMode%2A> Свойство определяет, сколько элементов списка можно выбрать одновременно.  

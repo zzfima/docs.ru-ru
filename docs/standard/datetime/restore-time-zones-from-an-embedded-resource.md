@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Восстановление часовых поясов из внедренного ресурса
+title: Практическое руководство. Восстановление часовых поясов из внедренного ресурса
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,13 +12,13 @@ ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 71fc4e04c87dfa3b83eabb06361d1da94a512a5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026540"
 ---
-# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Как выполнить Восстановление часовых поясов из внедренного ресурса
+# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Практическое руководство. Восстановление часовых поясов из внедренного ресурса
 
 В этом разделе описывается восстановление часовых поясов, которые были сохранены в файле ресурсов. Сведения и инструкции по сохранению часовых поясов см. в разделе [как: Сохранение часовых поясов во внедренном ресурсе](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md).
 

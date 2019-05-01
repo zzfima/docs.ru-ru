@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 024b1f3f7e08dc21582789de7f3899e8e44d5e39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041838"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>Метод ICorProfilerCallback::RemotingServerSendingReply
 Уведомляет профилировщик, что процесс завершил обработку запроса вызова удаленного метода и собирается передачи ответа по каналу.  
@@ -39,11 +39,11 @@ HRESULT RemotingServerSendingReply(
  `pCookie`  
  [in] Указатель на идентификатор GUID, которое соответствует значение, указанное в [ICorProfilerCallback::RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) в этих условиях:  
   
--   Файлы cookie для GUID удаленного взаимодействия активны.  
+- Файлы cookie для GUID удаленного взаимодействия активны.  
   
--   Каналу удалось передать сообщение.  
+- Каналу удалось передать сообщение.  
   
--   Файлы cookie GUID активны на процесс на стороне клиента.  
+- Файлы cookie GUID активны на процесс на стороне клиента.  
   
  Это позволяет легко создавать пары вызовов удаленного взаимодействия и Создание логического стека вызовов.  
   

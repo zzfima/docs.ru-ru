@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 ms.assetid: 997508f2-87e5-4bec-a78e-9eec8f1fb15b
 ms.openlocfilehash: b9ffe797fef9e063470ef93ce73f881aed80e7f6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012494"
 ---
 # <a name="putting-controls-on-windows-forms"></a>Размещение элементов управления в формах Windows Forms
 Существуют разнообразные элементы управления, которые можно поместить в формах Windows Forms, в зависимости от потребностей приложения.  

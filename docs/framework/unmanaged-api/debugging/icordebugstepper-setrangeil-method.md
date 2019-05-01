@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f9b4ee64022374cb4e1950acceb3f32925b736bb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994296"
 ---
 # <a name="icordebugsteppersetrangeil-method"></a>Метод ICorDebugStepper::SetRangeIL
 Задает значение, указывающее ли вызовы [ICorDebugStepper::StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) передать аргумент, код языка MSIL метода, который является в настоящее время шаг на промежуточном машинному коду или относительно Microsoft значений через.  

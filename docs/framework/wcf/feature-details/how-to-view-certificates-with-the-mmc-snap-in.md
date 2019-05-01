@@ -5,11 +5,11 @@ helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
 ms.openlocfilehash: 69f79b64250ff46524e7b4720d13351774875a3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972735"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Практическое руководство. Просмотр сертификатов с помощью оснастки MMC
 При создании безопасного клиента или службы, можно использовать [сертификат](working-with-certificates.md) как учетные данные. Например, тип учетных данных является сертификат X.509, который вы создадите с <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> метод. 

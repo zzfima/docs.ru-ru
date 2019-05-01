@@ -9,10 +9,10 @@ helpviewer_keywords:
 ms.assetid: 0b9c991e-a9fa-4609-9e1b-caadaef93821
 ms.openlocfilehash: cf4c23f385ba624befdc17c42145d20e184792b9
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009356"
 ---
 # <a name="toolstripstatuslabel-control-overview"></a>Общие сведения об элементе управления ToolStripStatusLabel
 <xref:System.Windows.Forms.ToolStripStatusLabel> Является меткой для <xref:System.Windows.Forms.StatusStrip>. Как и <xref:System.Windows.Forms.Label> или <xref:System.Windows.Forms.ToolStripLabel>, <xref:System.Windows.Forms.ToolStripStatusLabel> предоставляет область отображения недоступную для щелчка для текста и изображений. <xref:System.Windows.Forms.ToolStripStatusLabel> Управляется <xref:System.Windows.Forms.StatusStrip>.  

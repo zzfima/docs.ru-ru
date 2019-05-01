@@ -10,30 +10,30 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051030"
 ---
 # <a name="panels-overview"></a>Общие сведения о панелях
 <xref:System.Windows.Controls.Panel> элементы являются компонентами, которые управляют отображением элементов — их размер и измерения, их положение и расположение их дочернего содержимого. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Предоставляет ряд предопределенных <xref:System.Windows.Controls.Panel> элементы, а также возможность создания пользовательских <xref:System.Windows.Controls.Panel> элементов.  
   
  В этом разделе содержатся следующие подразделы.  
   
--   [Класс Panel](#Panels_view_from_10000_feet)  
+- [Класс Panel](#Panels_view_from_10000_feet)  
   
--   [Общие члены элементов Panel](#Panels_declared_members)  
+- [Общие члены элементов Panel](#Panels_declared_members)  
   
--   [Производные элементы Panel](#Panels_derived_elements)  
+- [Производные элементы Panel](#Panels_derived_elements)  
   
--   [Панели пользовательского интерфейса](#Panels_main_UI_elements)  
+- [Панели пользовательского интерфейса](#Panels_main_UI_elements)  
   
--   [Вложенные элементы Panel](#Panels_nested_panel_elements)  
+- [Вложенные элементы Panel](#Panels_nested_panel_elements)  
   
--   [Пользовательские элементы Panel](#Panels_custom_panel_elements)  
+- [Пользовательские элементы Panel](#Panels_custom_panel_elements)  
   
--   [Поддержка локализации и глобализации](#Panels_global_localization)  
+- [Поддержка локализации и глобализации](#Panels_global_localization)  
   
 <a name="Panels_view_from_10000_feet"></a>   
 ## <a name="the-panel-class"></a>Класс Panel  

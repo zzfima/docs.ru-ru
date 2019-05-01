@@ -17,13 +17,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a1a26db7785a8a378fa541308ecc6aee30fa87ec
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049288"
 ---
-# <a name="delete-function"></a>Удаление функции
+# <a name="delete-function"></a>Функция Delete
 
 Удаляет указанное свойство и все его квалификаторы из определения класса CIM.
 
@@ -54,7 +54,7 @@ HRESULT Delete (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Произошла неизвестная ошибка. |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | Не удается удалить свойство. |

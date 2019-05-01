@@ -6,11 +6,11 @@ helpviewer_keywords:
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
 ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032361"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Кэширование в клиентах автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -64,9 +64,9 @@ ms.locfileid: "59175829"
 ## <a name="retrieving-cached-properties"></a>Получение кэшированных свойств  
  Вы можете получать кэшированные свойства элемента с помощью следующих методов и свойств.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
+- <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
   
  Если запрошенное свойство отсутствует в кэше, возникает исключение.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "59175829"
 ## <a name="retrieving-cached-control-patterns"></a>Получение кэшированных шаблонов элементов управления  
  Вы можете получать кэшированные шаблоны элементов управления элемента с помощью следующих методов и свойств.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
   
  Если шаблон не находится в кэше, <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> вызывает исключение, и метод <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> возвращает значение `false`.  
   

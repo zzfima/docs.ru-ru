@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
 ms.openlocfilehash: 54af7c2f449f8eb289841fb3eca357c6916404aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032699"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>Сопоставления DataAdapter DataTable и DataColumn
 Объект **DataAdapter** содержит коллекцию из нуля или более <xref:System.Data.Common.DataTableMapping> объекты в его **TableMappings** свойство. Объект **DataTableMapping** предоставляет главное сопоставление между данными, возвращенные запросом в источнике данных и <xref:System.Data.DataTable>. **DataTableMapping** может быть передано вместо **DataTable** в **заполнения** метод **DataAdapter**. В следующем примере создается **DataTableMapping** с именем **AuthorsMapping** для **авторы** таблицы.  

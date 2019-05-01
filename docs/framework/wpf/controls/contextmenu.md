@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
 ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053240"
 ---
 # <a name="contextmenu"></a>ContextMenu
 <xref:System.Windows.Controls.ContextMenu> Позволяет элементу управления для отображения <xref:System.Windows.Controls.Menu> , зависящего от контекста элемента управления. Как правило <xref:System.Windows.Controls.ContextMenu> предоставляется в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] через правой кнопкой мыши или клавиатуры кнопки меню.  

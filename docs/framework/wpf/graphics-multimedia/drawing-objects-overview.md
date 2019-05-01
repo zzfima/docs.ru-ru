@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
 ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020481"
 ---
 # <a name="drawing-objects-overview"></a>Обзор объектов Drawing
 В данном разделе представлены <xref:System.Windows.Media.Drawing> объектов и описывает их использование для эффективного рисования фигур, точечных рисунков, текста и мультимедиа. Используйте <xref:System.Windows.Media.Drawing> объектов при создании коллекции картинок, рисовании с помощью <xref:System.Windows.Media.DrawingBrush>, или использовать <xref:System.Windows.Media.Visual> объектов.  
@@ -23,25 +23,25 @@ ms.locfileid: "59325518"
 ## <a name="what-is-a-drawing-object"></a>Что такое объект-рисунок?  
  Объект <xref:System.Windows.Media.Drawing> объект описывает отображаемое содержимое, например фигуру, растровое изображение, видео или строку текста. Различные типы рисунков описывают различные типы содержимого. Ниже приведен список различных типов объектов-рисунков.  
   
--   <xref:System.Windows.Media.GeometryDrawing> — Выводит фигуру.  
+- <xref:System.Windows.Media.GeometryDrawing> — Выводит фигуру.  
   
--   <xref:System.Windows.Media.ImageDrawing> — Выводит изображение.  
+- <xref:System.Windows.Media.ImageDrawing> — Выводит изображение.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> — Выводит текст.  
+- <xref:System.Windows.Media.GlyphRunDrawing> — Выводит текст.  
   
--   <xref:System.Windows.Media.VideoDrawing> — Воспроизводит аудио-или видео.  
+- <xref:System.Windows.Media.VideoDrawing> — Воспроизводит аудио-или видео.  
   
--   <xref:System.Windows.Media.DrawingGroup> — Выводит другие рисунки. Для объединения рисунков в один составной используйте группирование рисунков.  
+- <xref:System.Windows.Media.DrawingGroup> — Выводит другие рисунки. Для объединения рисунков в один составной используйте группирование рисунков.  
   
  <xref:System.Windows.Media.Drawing> объекты являются универсальными. Существует много способов, которые можно использовать <xref:System.Windows.Media.Drawing> объекта.  
   
--   Можно отобразить его как изображение с помощью <xref:System.Windows.Media.DrawingImage> и <xref:System.Windows.Controls.Image> элемента управления.  
+- Можно отобразить его как изображение с помощью <xref:System.Windows.Media.DrawingImage> и <xref:System.Windows.Controls.Image> элемента управления.  
   
--   Вы можете использовать его с <xref:System.Windows.Media.DrawingBrush> для рисования объекта, такие как <xref:System.Windows.Controls.Page.Background%2A> из <xref:System.Windows.Controls.Page>.  
+- Вы можете использовать его с <xref:System.Windows.Media.DrawingBrush> для рисования объекта, такие как <xref:System.Windows.Controls.Page.Background%2A> из <xref:System.Windows.Controls.Page>.  
   
--   Его можно использовать для описания внешнего вида <xref:System.Windows.Media.DrawingVisual>.  
+- Его можно использовать для описания внешнего вида <xref:System.Windows.Media.DrawingVisual>.  
   
--   Его можно использовать для перечисления содержимого <xref:System.Windows.Media.Visual>.  
+- Его можно использовать для перечисления содержимого <xref:System.Windows.Media.Visual>.  
   
  WPF предоставляет другие типы объектов, которые поддерживают рисование фигур, растровых изображений, текста и мультимедиа. Например, можно также использовать <xref:System.Windows.Shapes.Shape> объектов для рисования фигур и <xref:System.Windows.Controls.MediaElement> управления предоставляют еще один способ добавить видео в приложение. Поэтому когда следует использовать <xref:System.Windows.Media.Drawing> объектов? Когда можно пожертвовать возможностями уровня среды ради улучшения производительности или при необходимости <xref:System.Windows.Freezable> функции. Так как <xref:System.Windows.Media.Drawing> объектов не поддерживают [макета](../advanced/layout.md), ввод и режим фокусировки, они обеспечивают выигрыш в производительности, делает их идеальными для описания фона, коллекций картинок и низкоуровневых рисунков с <xref:System.Windows.Media.Visual> объектов.  
   

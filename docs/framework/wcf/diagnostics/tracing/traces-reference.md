@@ -3,11 +3,11 @@ title: Справочные сведения о трассировке
 ms.date: 03/30/2017
 ms.assetid: bd960851-162d-4dcc-8c0c-0ec8f455d56d
 ms.openlocfilehash: f9165cac070b94fcdf9be5b3182a2a7bd91bc451
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039797"
 ---
 # <a name="traces-reference"></a>Справочные сведения о трассировке
 В этом разделе перечислены все трассировки, созданные в Windows Communication Foundation (WCF).  

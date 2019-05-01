@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
 ms.openlocfilehash: 5b330a727c0a4a20de13f43fd2844d0b745e5060
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972683"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Практическое руководство. Использование программы командной строки настройки модели служб COM+
 Выбрав нужный режим размещения, с помощью программы командной строки настройки модели служб COM+ (ComSvcConfig.exe) сконфигурируйте интерфейсы приложения, предоставляемые как веб-службы.  
@@ -33,7 +33,7 @@ ms.locfileid: "59322593"
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>Добавление интерфейса в набор интерфейсов, предоставляемых как веб-службы, с помощью режима размещения COM+  
   
--   Выполните программу ComSvcConfig с параметрами `/install` и `/hosting:complus`, как показано в следующем примере.  
+- Выполните программу ComSvcConfig с параметрами `/install` и `/hosting:complus`, как показано в следующем примере.  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
@@ -49,7 +49,7 @@ ms.locfileid: "59322593"
   
 ### <a name="to-add-only-specific-methods-from-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>Добавление только определенных методов интерфейса в набор интерфейсов, предоставляемых как веб-службы, с помощью режима размещения COM+  
   
--   Запустите программу ComSvcConfig с параметрами `/install` и `/hosting:complus`, явно указав имена требуемых методов, как показано в следующем примере.  
+- Запустите программу ComSvcConfig с параметрами `/install` и `/hosting:complus`, явно указав имена требуемых методов, как показано в следующем примере.  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{Credit,Debit} /hosting:complus /verbose  
@@ -59,7 +59,7 @@ ms.locfileid: "59322593"
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-web-hosting-mode"></a>Добавление интерфейса в набор интерфейсов, предоставляемых как веб-службы, с помощью режима размещения на веб-сервере  
   
--   Выполните программу ComSvcConfig с параметрами `/install` и `/hosting:was`, как показано в следующем примере.  
+- Выполните программу ComSvcConfig с параметрами `/install` и `/hosting:was`, как показано в следующем примере.  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.Warehouse,IStockLevels /hosting:was /webDirectory:root/OnlineWarehouse /mex /verbose  
@@ -73,7 +73,7 @@ ms.locfileid: "59322593"
   
 ### <a name="to-remove-a-web-service-for-a-specified-interface"></a>Удаление веб-службы для указанного интерфейса  
   
--   Выполните программу ComSvcConfig с параметром `/uninstall`, как показано в следующем примере.  
+- Выполните программу ComSvcConfig с параметром `/uninstall`, как показано в следующем примере.  
   
     ```  
     ComSvcConfig.exe /uninstall /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus  
@@ -83,7 +83,7 @@ ms.locfileid: "59322593"
   
 ### <a name="to-list-currently-exposed-interfaces"></a>Вывод списка интерфейсов, предоставляемых в текущий момент  
   
--   Выполните программу ComSvcConfig с параметром `/list`, как показано в следующем примере.  
+- Выполните программу ComSvcConfig с параметром `/list`, как показано в следующем примере.  
   
     ```  
     ComSvcConfig.exe /list  
@@ -93,7 +93,7 @@ ms.locfileid: "59322593"
   
 ### <a name="to-list-specific-currently-exposed-interfaces"></a>Вывод списка определенных интерфейсов, предоставляемых в текущий момент  
   
--   Выполните программу ComSvcConfig с параметром `/list`, как показано в следующем примере.  
+- Выполните программу ComSvcConfig с параметром `/list`, как показано в следующем примере.  
   
     ```  
     ComSvcConfig.exe /list /application:OnlineStore /hosting:complus  
@@ -103,7 +103,7 @@ ms.locfileid: "59322593"
   
 ### <a name="to-display-help-on-the-options-that-can-be-used-with-the-utility"></a>Вывод справки о параметрах, используемых с программой  
   
--   Запустите программу ComSvcConfig с параметром /? как показано в следующем примере.  
+- Запустите программу ComSvcConfig с параметром /? как показано в следующем примере.  
   
     ```  
     ComSvcConfig.exe /?  

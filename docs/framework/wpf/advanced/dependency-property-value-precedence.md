@@ -8,11 +8,11 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010544"
 ---
 # <a name="dependency-property-value-precedence"></a>Приоритет значения свойств зависимостей
 <a name="introduction"></a> В этом разделе рассказывается, как работа системы свойств [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] может повлиять на значение свойства зависимости, и описывается приоритет применения аспектов системы свойств к действительному значению свойства.  
@@ -47,9 +47,9 @@ ms.locfileid: "59315690"
   
 4. **Свойства шаблона TemplatedParent.** Элемент имеет <xref:System.Windows.FrameworkElement.TemplatedParent%2A> если она была создана как часть шаблона ( <xref:System.Windows.Controls.ControlTemplate> или <xref:System.Windows.DataTemplate>). Дополнительные сведения о случаях его применения см. в теме [TemplatedParent](#templatedparent) далее в этом разделе. В шаблоне действует следующий приоритет:  
   
-    1.  Триггеры — с <xref:System.Windows.FrameworkElement.TemplatedParent%2A> шаблона.  
+    1. Триггеры — с <xref:System.Windows.FrameworkElement.TemplatedParent%2A> шаблона.  
   
-    2.  Наборы свойств (обычно через [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] атрибуты) в <xref:System.Windows.FrameworkElement.TemplatedParent%2A> шаблона.  
+    2. Наборы свойств (обычно через [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] атрибуты) в <xref:System.Windows.FrameworkElement.TemplatedParent%2A> шаблона.  
   
 5. **Неявный стиль.** Применяется только к свойству `Style`. Свойство `Style` заполняется любым ресурсом стиля с ключом, соответствующим типу этого элемента. Ресурс стиля должен существовать либо на странице, либо в приложении; поиск ресурса неявного стиля в темах не выполняется.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "59315690"
   
 9. **Стиль (тема) по умолчанию.** Подробные сведения о применении этих стилей и связи стилей тем с шаблонами в стилях тем см. в теме [Стили (темы) по умолчанию](#themestyles) далее в этом разделе. В стиле по умолчанию применяется следующий порядок приоритета:  
   
-    1.  Активные триггеры в тематическом стиле.  
+    1. Активные триггеры в тематическом стиле.  
   
-    2.  Методы задания в тематическом стиле.  
+    2. Методы задания в тематическом стиле.  
   
 10. **Наследование.** Некоторые свойства зависимостей наследуют свои значения от родительского элемента к дочерним элементам, так что их не требуется задавать по отдельности на каждом элементе в приложении. Подробные сведения см. в разделе [Наследование значений свойств](property-value-inheritance.md).  
   
@@ -77,11 +77,11 @@ ms.locfileid: "59315690"
 ## <a name="the-style-property"></a>Свойство стиля  
  Порядок поиска, описанный выше ко всем возможным свойствам зависимостей, кроме одного: <xref:System.Windows.FrameworkElement.Style%2A> свойство. <xref:System.Windows.FrameworkElement.Style%2A> Свойство является уникальным в том, что он стиль невозможно, поэтому элементы приоритета с 5 по 8 не применяются. Кроме того, анимация или приведение <xref:System.Windows.FrameworkElement.Style%2A> не рекомендуется (и анимации <xref:System.Windows.FrameworkElement.Style%2A> потребует использования пользовательского класса анимации). При этом остается три способа <xref:System.Windows.FrameworkElement.Style%2A> свойство может иметь значение:  
   
--   **Явный стиль.** <xref:System.Windows.FrameworkElement.Style%2A> Свойство задается напрямую. В большинстве случаев стиль не определяется внутри объекта, а используется ссылка на стиль как ресурс с применением явного ключа. В этом случае само свойство Style действует как локальное значение с приоритетом 3.  
+- **Явный стиль.** <xref:System.Windows.FrameworkElement.Style%2A> Свойство задается напрямую. В большинстве случаев стиль не определяется внутри объекта, а используется ссылка на стиль как ресурс с применением явного ключа. В этом случае само свойство Style действует как локальное значение с приоритетом 3.  
   
--   **Неявный стиль.** <xref:System.Windows.FrameworkElement.Style%2A> Свойство не задано напрямую. Тем не менее <xref:System.Windows.FrameworkElement.Style%2A> существует на определенном уровне последовательности поиска ресурсов (страницы, приложения) и шифруется с помощью ключа ресурса, который соответствует является стиль, применяемый к типу. В этом случае <xref:System.Windows.FrameworkElement.Style%2A> само свойство действует с приоритетом, определенным в последовательности как элемент 5. Это условие можно обнаружить с помощью <xref:System.Windows.DependencyPropertyHelper> от <xref:System.Windows.FrameworkElement.Style%2A> свойство и ищете <xref:System.Windows.BaseValueSource.ImplicitStyleReference> в результатах.  
+- **Неявный стиль.** <xref:System.Windows.FrameworkElement.Style%2A> Свойство не задано напрямую. Тем не менее <xref:System.Windows.FrameworkElement.Style%2A> существует на определенном уровне последовательности поиска ресурсов (страницы, приложения) и шифруется с помощью ключа ресурса, который соответствует является стиль, применяемый к типу. В этом случае <xref:System.Windows.FrameworkElement.Style%2A> само свойство действует с приоритетом, определенным в последовательности как элемент 5. Это условие можно обнаружить с помощью <xref:System.Windows.DependencyPropertyHelper> от <xref:System.Windows.FrameworkElement.Style%2A> свойство и ищете <xref:System.Windows.BaseValueSource.ImplicitStyleReference> в результатах.  
   
--   **Стиль по умолчанию**, также известный как **стиль темы.** <xref:System.Windows.FrameworkElement.Style%2A> Свойство не задается напрямую, а на самом деле оно считывается как `null` времени выполнения. В этом случае стиль поступает из оценки темы времени выполнения, которая является частью механизма презентации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+- **Стиль по умолчанию**, также известный как **стиль темы.** <xref:System.Windows.FrameworkElement.Style%2A> Свойство не задается напрямую, а на самом деле оно считывается как `null` времени выполнения. В этом случае стиль поступает из оценки темы времени выполнения, которая является частью механизма презентации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  Для неявных стилей не в темах необходимо точное соответствие - `MyButton` `Button`-производный класс не будет неявно использовать стиль для `Button`.  
   

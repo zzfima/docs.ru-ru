@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
 ms.openlocfilehash: b6537faa3be7ee28a934927fc95100a34a64e176
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009491"
 ---
 # <a name="toolstrip-technology-summary"></a>Технологии, положенные в основу работы элемента управления ToolStrip
 В этом разделе содержится сводная информация о системе управления `ToolStrip` и классах, поддерживающих ее использование.  
@@ -25,23 +25,23 @@ ms.locfileid: "59120967"
 ## <a name="background"></a>Фон  
  Панели инструментов с расширенными возможностями, имеющие единообразный и профессиональный вид и поведение, можно создавать с помощью элемента управления `ToolStrip` и связанных с ним классов. Элемент управления `ToolStrip` и классы имеют следующие усовершенствования по сравнению с предыдущими элементами управления.  
   
--   Более согласованная модель событий.  
+- Более согласованная модель событий.  
   
--   Более согласованное поведение во время разработки, есть списки задач и редакторы коллекций элементов.  
+- Более согласованное поведение во время разработки, есть списки задач и редакторы коллекций элементов.  
   
--   Пользовательская отрисовка благодаря классам `ToolStripManager` и `ToolStripRenderer`.  
+- Пользовательская отрисовка благодаря классам `ToolStripManager` и `ToolStripRenderer`.  
   
--   Встроенное нависание (совместное использование горизонтального или вертикального пространства в области инструментов при прикреплении) благодаря классам `ToolStripContainer` и `ToolStripPanel`.  
+- Встроенное нависание (совместное использование горизонтального или вертикального пространства в области инструментов при прикреплении) благодаря классам `ToolStripContainer` и `ToolStripPanel`.  
   
--   Изменение порядка следования элементов с помощью свойства <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> во время разработки и во время выполнения.  
+- Изменение порядка следования элементов с помощью свойства <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> во время разработки и во время выполнения.  
   
--   Перенос элементов в меню области переполнения с помощью свойства <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>.  
+- Перенос элементов в меню области переполнения с помощью свойства <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>.  
   
--   Полностью настраиваемое расположение элемента управления благодаря классам `ToolStripContainer`, `ToolStripPanel` и `ToolStripContentPanel`.  
+- Полностью настраиваемое расположение элемента управления благодаря классам `ToolStripContainer`, `ToolStripPanel` и `ToolStripContentPanel`.  
   
--   Размещение `ToolStrip` с помощью стандартных или пользовательских элементов управления `ToolStripControlHost`.  
+- Размещение `ToolStrip` с помощью стандартных или пользовательских элементов управления `ToolStripControlHost`.  
   
--   Объединение элементов управления `ToolStrip` с помощью `ToolStripPanel`.  
+- Объединение элементов управления `ToolStrip` с помощью `ToolStripPanel`.  
   
  `ToolStrip` — это расширяемый базовый класс для `MenuStrip`, `ContextMenuStrip` и `StatusStrip`. Эти элементы управления являются контейнерами <xref:System.Windows.Forms.ToolStripItem>, которые наследуют общие характеристики поведения и обработки событий, расширяя их таким образом, чтобы каждая реализация использовала ту функциональность, которая для нее подходит. Элементы управления, которые являются производными от <xref:System.Windows.Forms.ToolStripItem>, перечислены в следующей таблице. Базовый класс `ToolStrip` обрабатывает отрисовку, пользовательский ввод и события перетаскивания этих элементов управления.  
   
@@ -63,26 +63,26 @@ ms.locfileid: "59120967"
 ### <a name="task-dialog-boxes"></a>Диалоговые окна задач  
  Если в конструкторе Visual Studio щелкнуть смарт-тег на элементе управления, откроется список задач, обеспечивающий удобный доступ ко многим часто используемым командам.  
   
--   [Диалоговое окно задач MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
+- [Диалоговое окно задач MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
--   [Диалоговое окно задач ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
+- [Диалоговое окно задач ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
   
--   [Диалоговое окно задач ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
+- [Диалоговое окно задач ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
   
--   [Диалоговое окно задач StatusStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
+- [Диалоговое окно задач StatusStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
   
--   [Диалоговое окно задач ToolStripContainer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
+- [Диалоговое окно задач ToolStripContainer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
   
 ### <a name="items-collection-editors"></a>Редакторы коллекций элементов  
  В Visual Studio, щелкнув **изменение элементов** в задаче списке или щелкните правой кнопкой мыши элемент управления и выберите **изменение элементов** в контекстном меню, откроется редактор коллекции для элемента управления. Редакторы коллекций позволяют добавлять, удалять и изменять порядок следования элементов, которые содержит данный элемент управления. Можно также просмотреть и изменить свойства элемента управления и его элементов.  
   
--   [Редактор коллекции элементов MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
+- [Редактор коллекции элементов MenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [Редактор коллекции элементов StatusStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
+- [Редактор коллекции элементов StatusStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
   
--   [Редактор коллекции элементов ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
+- [Редактор коллекции элементов ContextMenuStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
   
--   [Редактор коллекции элементов ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
+- [Редактор коллекции элементов ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
   
 ## <a name="hosting-controls"></a>Размещение элементов управления  
  Класс <xref:System.Windows.Forms.ToolStripControlHost> предоставляет встроенные оболочки для элементов управления <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox> и <xref:System.Windows.Forms.ToolStripProgressBar>. Также в <xref:System.Windows.Forms.ToolStripControlHost> можно разместить любой другой существующий или COM-элемент управления.  

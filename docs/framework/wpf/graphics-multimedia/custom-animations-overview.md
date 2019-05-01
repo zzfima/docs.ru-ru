@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
 ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010154"
 ---
 # <a name="custom-animations-overview"></a>Общие сведения о пользовательской анимации
 В этом разделе описывается, как и когда расширять систему анимации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] путем создания пользовательских ключевых кадров и классов анимации или путем использования покадрового обратного вызова, чтобы пропустить ее.  
@@ -28,11 +28,11 @@ ms.locfileid: "59313948"
 ## <a name="extending-the-animation-system"></a>Расширение системы анимации  
  Существует несколько способов расширения системы анимации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], которые зависят от уровня встроенного функционала, который будет использоваться.  В механизме анимации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеются три основных точки расширяемости.  
   
--   Создание пользовательского объекта ключевого кадра путем наследования от одной из  *\<тип >* классы опорного кадра, например <xref:System.Windows.Media.Animation.DoubleKeyFrame>. Этот подход использует большую часть встроенных функциональных возможностей механизма анимации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+- Создание пользовательского объекта ключевого кадра путем наследования от одной из  *\<тип >* классы опорного кадра, например <xref:System.Windows.Media.Animation.DoubleKeyFrame>. Этот подход использует большую часть встроенных функциональных возможностей механизма анимации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
--   Создание собственного класса анимации путем наследования от <xref:System.Windows.Media.Animation.AnimationTimeline> или один из  *\<тип >* классы AnimationBase.  
+- Создание собственного класса анимации путем наследования от <xref:System.Windows.Media.Animation.AnimationTimeline> или один из  *\<тип >* классы AnimationBase.  
   
--   Использование покадрового обратного вызова для создания анимаций на основе отдельных кадров. Такой подход предусматривает полный обход анимации и систему времени.  
+- Использование покадрового обратного вызова для создания анимаций на основе отдельных кадров. Такой подход предусматривает полный обход анимации и систему времени.  
   
  В следующей таблице описаны некоторые сценарии для расширения системы анимации.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "59313948"
 ## <a name="create-a-custom-key-frame"></a>Создание пользовательского ключевого кадра  
  Создание пользовательского ключевого кадра является простейшим способом расширения системы анимации. Этот подход следует использовать в случае, если требуется другой метод интерполяции для анимации по ключевым кадрам.  Как описано в разделе [Общие сведения об анимации по ключевым кадрам](key-frame-animations-overview.md), в анимации по ключевым кадрам используются объекты ключевых кадров для создания выходных значений. Каждый объект ключевого кадра выполняет три функции:  
   
--   Указывает целевое значение с помощью его <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> свойство.  
+- Указывает целевое значение с помощью его <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> свойство.  
   
--   Указывает время, по которому это значение следует связаться с помощью его <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> свойство.  
+- Указывает время, по которому это значение следует связаться с помощью его <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> свойство.  
   
--   выполняет интерполяцию между значением предыдущего ключевого кадра и собственным значением с помощью метода InterpolateValueCore.  
+- выполняет интерполяцию между значением предыдущего ключевого кадра и собственным значением с помощью метода InterpolateValueCore.  
   
  **Инструкции по реализации**  
   
@@ -87,13 +87,13 @@ ms.locfileid: "59313948"
   
  Являются производными от <xref:System.Windows.Media.Animation.AnimationTimeline> класса и переопределить следующие члены:  
   
--   <xref:System.Windows.Freezable.CreateInstanceCore%2A> — Если новый класс является конкретным, необходимо переопределить <xref:System.Windows.Freezable.CreateInstanceCore%2A> для возврата нового экземпляра класса.  
+- <xref:System.Windows.Freezable.CreateInstanceCore%2A> — Если новый класс является конкретным, необходимо переопределить <xref:System.Windows.Freezable.CreateInstanceCore%2A> для возврата нового экземпляра класса.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> — Переопределите этот метод для возврата текущего значения анимации. Он принимает три параметра: начальное значение, конечное значение по умолчанию и <xref:System.Windows.Media.Animation.AnimationClock>. Используйте <xref:System.Windows.Media.Animation.AnimationClock> для получения текущего времени или ход выполнения анимации. Можно выбрать, какие значения будут использоваться: начальное значение по умолчанию или конечное значение по умолчанию.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> — Переопределите этот метод для возврата текущего значения анимации. Он принимает три параметра: начальное значение, конечное значение по умолчанию и <xref:System.Windows.Media.Animation.AnimationClock>. Используйте <xref:System.Windows.Media.Animation.AnimationClock> для получения текущего времени или ход выполнения анимации. Можно выбрать, какие значения будут использоваться: начальное значение по умолчанию или конечное значение по умолчанию.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> — Нужно переопределить это свойство позволяет указать, использует ли анимация конечное значение по умолчанию, определяемое <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> метод.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> — Нужно переопределить это свойство позволяет указать, использует ли анимация конечное значение по умолчанию, определяемое <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> метод.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> — Нужно переопределить это свойство позволяет указать <xref:System.Type> выходных данных анимации.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> — Нужно переопределить это свойство позволяет указать <xref:System.Type> выходных данных анимации.  
   
  Если класс не использует свойства зависимостей для хранения своих данных или требует дополнительной инициализации после создания, может потребоваться переопределить дополнительные методы. Дополнительные сведения см. в разделе [Общие сведения об объектах класса Freezable](../advanced/freezable-objects-overview.md).  
   

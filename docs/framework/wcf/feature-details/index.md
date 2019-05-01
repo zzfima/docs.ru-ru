@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
 ms.openlocfilehash: c97bd891f0bbb58f8b267296b9b53e00a5486622
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047052"
 ---
 # <a name="wcf-feature-details"></a>Подробные сведения о возможностях WCF
-Windows Communication Foundation (WCF) обеспечивает всеобъемлющий контроль функций отправки сообщений приложения. В подразделах этого раздела подробно описываются имеющиеся возможности. Дополнительные сведения о базовое программирование в разделе [базовое Программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+Windows Communication Foundation (WCF) обеспечивает всеобъемлющий контроль функций отправки сообщений приложения. В подразделах этого раздела подробно описываются имеющиеся возможности. Дополнительные сведения о базовом программировании см. в разделе [базовое Программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  Описывает создание и настройку служб рабочих процессов.  
   
- [Конечные точки: адреса, привязки и контракты](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Конечные точки: Адреса, привязки и контракты](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  Описывает способ контроля нескольких аспектов службы.  
   
  [Передача данных и сериализация](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
@@ -39,7 +39,7 @@ Windows Communication Foundation (WCF) обеспечивает всеобъем
  Объясняет, как создать транзакционные операции с возможностью отката при необходимости.  
   
  [Безопасность](../../../../docs/framework/wcf/feature-details/security.md)  
- Описывает, каким образом безопасности WCF помогает вам создавать приложения, которые имеют конфиденциальности и целостности. Кроме того, в качестве возможностей аудита имеются проверка подлинности и авторизация.  
+ Описывает, как безопасность WCF позволяет создавать приложения, обладающие конфиденциальность и целостность. Кроме того, в качестве возможностей аудита имеются проверка подлинности и авторизация.  
   
  [Одноранговая сеть](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  Подробная информация о способе создания одноранговых служб и клиентов.  
@@ -54,21 +54,21 @@ Windows Communication Foundation (WCF) обеспечивает всеобъем
  Описывает размещение. Служба может размещаться в другом приложении или быть резидентной (размещаться сама в себе).  
   
  [Взаимодействие и интеграция](../../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)  
- Описывает способы использования WCF для расширения существующей логики вместо ее переписывания при наличии существенном изменении логики компонентно ориентированного приложения, размещенного в COM +.  
+ Описывает способы использования WCF для расширения существующей логики вместо ее переписывания при при существенном изменении логики компонентно ориентированного приложения, размещенного на COM +.  
   
  [Модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- Описывает модель программирования WCF Web, позволяет разработчикам предоставлять операции службы WCF в конечные точки не протокола SOAP.  
+ Описывает модель программирования WCF Web, позволяет разработчикам предоставлять операции службы WCF в конечные точки не протокол SOAP.  
   
  [Синдикация WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
  Описывает поддержку простого экспонирования веб-каналов синдикации из службы WCF.  
   
  [Интеграция с AJAX и поддержка JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
- Описывает поддержку для ASP.NET асинхронных скриптов JavaScript и XML (AJAX) и данные формат JavaScript Object Notation (JSON), чтобы службы WCF предоставлять операции клиентам AJAX.  
+ Описывает поддержку для ASP.NET асинхронных скриптов JavaScript и XML (AJAX) и формат данных JavaScript Object Notation (JSON) для разрешения служб WCF предоставлять операции клиентам AJAX.  
   
  [Обнаружение WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
  Описывает поддержку для включения обнаружения служб во время выполнения совместимым способом с помощью протокола WS-Discovery.  
   
- [Маршрутизация](../../../../docs/framework/wcf/feature-details/routing.md)  
+ [Routing](../../../../docs/framework/wcf/feature-details/routing.md)  
  Описывает службу маршрутизации.  
   
 ## <a name="reference"></a>Ссылка  

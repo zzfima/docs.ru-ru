@@ -6,11 +6,11 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], loading XML from files
 ms.assetid: 2b02dcec-4cca-4575-b4ad-89ceb87b984c
 ms.openlocfilehash: 2b9da2062068ef25c5df97ef19b1502999ea78ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052538"
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>Практическое руководство. Загрузить XML из файла, строки или Stream (Visual Basic)
 Можно создать [XML-литералов](../../../../visual-basic/language-reference/xml-literals/index.md) и заполнять их с содержимым из внешнего источника, например файла, строку или поток с помощью нескольких методов. Эти методы представлены в следующих примерах.  
@@ -19,7 +19,7 @@ ms.locfileid: "58832142"
   
 ### <a name="to-load-xml-from-a-file"></a>Загрузить XML из файла  
   
--   Для заполнения XML-литерал, например <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XDocument> объект из файла, используйте `Load` метод. Этот метод может принимать в качестве входных данных путь к файлу, текстовый поток или XML-поток.  
+- Для заполнения XML-литерал, например <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XDocument> объект из файла, используйте `Load` метод. Этот метод может принимать в качестве входных данных путь к файлу, текстовый поток или XML-поток.  
   
      В следующем примере кода показано использование <xref:System.Xml.Linq.XDocument.Load%28System.String%29> способ заполнения <xref:System.Xml.Linq.XDocument> объект с XML из текстового файла.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "58832142"
   
 ### <a name="to-load-xml-from-a-string"></a>Загрузить XML из строки  
   
--   Для заполнения XML-литерал, например <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XDocument> объекта из строки, можно использовать `Parse` метод.  
+- Для заполнения XML-литерал, например <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XDocument> объекта из строки, можно использовать `Parse` метод.  
   
      В следующем примере кода показано использование <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=nameWithType> способ заполнения <xref:System.Xml.Linq.XDocument> объект с XML из строки.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "58832142"
   
 ### <a name="to-load-xml-from-a-stream"></a>Загрузить XML из потока  
   
--   Для заполнения XML-литерал, например <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XDocument> объекта из потока, можно использовать `Load` метод или <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType> метод.  
+- Для заполнения XML-литерал, например <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XDocument> объекта из потока, можно использовать `Load` метод или <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType> метод.  
   
  В следующем примере кода показано использование <xref:System.Xml.Linq.XNode.ReadFrom%2A> способ заполнения <xref:System.Xml.Linq.XDocument> объект с XML из XML-потока.  
   

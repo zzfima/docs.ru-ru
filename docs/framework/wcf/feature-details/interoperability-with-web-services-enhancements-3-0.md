@@ -3,11 +3,11 @@ title: Взаимодействие с расширениями веб-служ�
 ms.date: 03/30/2017
 ms.assetid: e8e589d2-12c6-4794-8a11-1ee90b47dfaa
 ms.openlocfilehash: 19786393a09610b4bd6c593f89beece8b9a0d3f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038666"
 ---
 # <a name="interoperability-with-web-services-enhancements-30"></a>Взаимодействие с расширениями веб-служб 3.0
 Клиенты Windows Communication Foundation (WCF) и службы при уровне линий связи совместимы с Web Services Enhancements 3.0 для Microsoft .NET (WSE) клиентами и службами WCF клиенты и службы настроены для использования версии августа 2004 г. Спецификация WS-Addressing.  

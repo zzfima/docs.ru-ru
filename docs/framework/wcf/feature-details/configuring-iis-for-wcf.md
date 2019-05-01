@@ -3,11 +3,11 @@ title: Настройка IIS 7.0 для Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
 ms.openlocfilehash: 53ba48d47d30bd94ae5544920041cd430526223b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039771"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Настройка IIS 7.0 для Windows Communication Foundation
 
@@ -22,11 +22,11 @@ ms.locfileid: "54710304"
 
  Этот компонент включает следующие подкомпоненты:
 
--   Среда .NET Environment
+- Среда .NET Environment
 
--   Интерфейсы API настройки
+- Интерфейсы API настройки
 
--   Модель процессов
+- Модель процессов
 
  Если вы выберите корневой узел WAS, только **модель процесса** будет выбран по умолчанию. Обратите внимание, что при такой установке устанавливается только служба WAS, поскольку поддержка веб-сервера отсутствует.
 

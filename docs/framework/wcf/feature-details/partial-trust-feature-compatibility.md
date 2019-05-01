@@ -3,11 +3,11 @@ title: Совместимость возможностей частичного 
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
 ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039069"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Совместимость возможностей частичного доверия
 Windows Communication Foundation (WCF) поддерживает ограниченный набор функциональности при работе в среде с частичным доверием. Дополнительные сведения о различных функциях, поддерживаемых при работе с частичным доверием, которые разработаны на базе определенного набора сценариев, см. в разделе [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
@@ -15,20 +15,20 @@ Windows Communication Foundation (WCF) поддерживает ограниче
 ## <a name="minimum-permission-requirements"></a>Минимальные требования к разрешениям  
  WCF поддерживает подмножество функций в приложениях, выполняемых в рамках одного из следующих наборов разрешений со стандартными именами:  
   
--   Разрешения среднего уровня доверия;  
+- Разрешения среднего уровня доверия;  
   
--   Набор разрешений зоны Интернета.  
+- Набор разрешений зоны Интернета.  
   
  Попытка использовать WCF в частично доверенных приложениях с более строгими разрешениями может привести к возникновению исключений безопасности во время выполнения.  
   
 ## <a name="contracts"></a>Контракты  
  При выполнении в частичном доверии контракты зависят от следующих ограничений:  
   
--   Класс службы, реализующий интерфейс `[ServiceContract]` , должен иметь тип `public` и содержать конструктор типа `public` . Если он определяет методы `[OperationContract]` , они должны иметь тип `public`. Если вместо этого он реализует интерфейс `[ServiceContract]` , эти методы реализации могут быть явно заданы или иметь тип `private`при условии, что интерфейс `[ServiceContract]` имеет тип `public`;  
+- Класс службы, реализующий интерфейс `[ServiceContract]` , должен иметь тип `public` и содержать конструктор типа `public` . Если он определяет методы `[OperationContract]` , они должны иметь тип `public`. Если вместо этого он реализует интерфейс `[ServiceContract]` , эти методы реализации могут быть явно заданы или иметь тип `private`при условии, что интерфейс `[ServiceContract]` имеет тип `public`;  
   
--   При использовании атрибута `[ServiceKnownType]` указанный метод должен иметь тип `public`;  
+- При использовании атрибута `[ServiceKnownType]` указанный метод должен иметь тип `public`;  
   
--   Классы`[MessageContract]` и их члены могут иметь тип `public`. Если класс `[MessageContract]` определен в сборке приложения, он может иметь тип `internal` и его члены будут также `internal` .  
+- Классы`[MessageContract]` и их члены могут иметь тип `public`. Если класс `[MessageContract]` определен в сборке приложения, он может иметь тип `internal` и его члены будут также `internal` .  
   
 ## <a name="system-provided-bindings"></a>Привязки, предоставляемые системой  
  Типы <xref:System.ServiceModel.BasicHttpBinding> и <xref:System.ServiceModel.WebHttpBinding> полностью поддерживаются в среде с частичным доверием. Тип <xref:System.ServiceModel.WSHttpBinding> поддерживается только для режима безопасности транспорта.  
@@ -44,11 +44,11 @@ Windows Communication Foundation (WCF) поддерживает ограниче
 ### <a name="encoders"></a>Кодировщики  
  Допускается использование следующих кодировщиков:  
   
--   Текстовый кодировщик (<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>);  
+- Текстовый кодировщик (<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>);  
   
--   Двоичный кодировщик (<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>);  
+- Двоичный кодировщик (<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>);  
   
--   Кодировщик веб-сообщений (<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>).  
+- Кодировщик веб-сообщений (<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>).  
   
  Кодировщики механизма оптимизации передачи сообщений (MTOM) не поддерживаются.  
   
@@ -61,15 +61,15 @@ Windows Communication Foundation (WCF) поддерживает ограниче
 ## <a name="serialization"></a>Сериализация  
  Оба типа <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Xml.Serialization.XmlSerializer> поддерживаются в среде с частичным доверием. При этом использование <xref:System.Runtime.Serialization.DataContractSerializer> зависит от следующих условий.  
   
--   Все сериализуемые типы `[DataContract]` должны иметь тип `public`.  
+- Все сериализуемые типы `[DataContract]` должны иметь тип `public`.  
   
--   Все сериализуемые поля и свойства `[DataMember]` в типе `[DataContract]` должны быть открытыми и доступными для чтения и записи. Сериализация и десериализация [readonly](https://go.microsoft.com/fwlink/?LinkID=98854) поля не поддерживается при выполнении WCF в приложении с частичным доверием.  
+- Все сериализуемые поля и свойства `[DataMember]` в типе `[DataContract]` должны быть открытыми и доступными для чтения и записи. Сериализация и десериализация [readonly](https://go.microsoft.com/fwlink/?LinkID=98854) поля не поддерживается при выполнении WCF в приложении с частичным доверием.  
   
--   Модель программирования `[Serializable]`/ISerializable не поддерживается в среде с частичным доверием.  
+- Модель программирования `[Serializable]`/ISerializable не поддерживается в среде с частичным доверием.  
   
--   Известные типы должны быть заданы в коде или конфигурации уровня компьютера (файл machine.config). По соображениям безопасности известные типы нельзя задавать в конфигурации уровня приложения.  
+- Известные типы должны быть заданы в коде или конфигурации уровня компьютера (файл machine.config). По соображениям безопасности известные типы нельзя задавать в конфигурации уровня приложения.  
   
--   Типы, которые реализуют <xref:System.Runtime.Serialization.IObjectReference> , в среде с частичным доверием вызывают исключение.  
+- Типы, которые реализуют <xref:System.Runtime.Serialization.IObjectReference> , в среде с частичным доверием вызывают исключение.  
   
  Дополнительные сведения о безопасности при использовании [Partial Trust Best Practices](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) в частично доверенном приложении см. в разделе "Сериализация" статьи <xref:System.Runtime.Serialization.DataContractSerializer> .  
   
@@ -88,9 +88,9 @@ Windows Communication Foundation (WCF) поддерживает ограниче
 ## <a name="enabling-common-behaviors-to-run"></a>Включение выполнения общих поведений  
  Поведения службы или конечной точки, не помеченные <xref:System.Security.AllowPartiallyTrustedCallersAttribute> атрибут (APTCA), добавляются к [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) раздел файла конфигурации не запускаются, когда приложение выполняется в режиме частичного доверия среды и исключение не возникает, когда это происходит. Чтобы принудительно запустить общие поведения, необходимо выполнить одно из следующих условий:  
   
--   Пометить общее поведение атрибутом <xref:System.Security.AllowPartiallyTrustedCallersAttribute> , чтобы оно могло выполняться при развертывании в приложении с частичным доверием. Обратите внимание, что на компьютере может быть установлен соответствующий раздел реестра, чтобы на нем не могли выполняться сборки, помеченные атрибутом APTCA. .  
+- Пометить общее поведение атрибутом <xref:System.Security.AllowPartiallyTrustedCallersAttribute> , чтобы оно могло выполняться при развертывании в приложении с частичным доверием. Обратите внимание, что на компьютере может быть установлен соответствующий раздел реестра, чтобы на нем не могли выполняться сборки, помеченные атрибутом APTCA. .  
   
--   Проверить, что при развертывании приложения в качестве приложения с полным доверием, которое не может изменяться пользователям, параметры управления доступом для кода разрешают выполнение приложения в среде с частичным доверием. Если это так, поведение не выполняется и исключение не создается. Чтобы обеспечить это, см. в разделе **levelfinal** использование параметра [Caspol.exe (средство политики безопасности доступа кода)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
+- Проверить, что при развертывании приложения в качестве приложения с полным доверием, которое не может изменяться пользователям, параметры управления доступом для кода разрешают выполнение приложения в среде с частичным доверием. Если это так, поведение не выполняется и исключение не создается. Чтобы обеспечить это, см. в разделе **levelfinal** использование параметра [Caspol.exe (средство политики безопасности доступа кода)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
  Пример общего поведения, см. в разделе [как: Блокировка конечных точек на предприятии](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
@@ -115,25 +115,25 @@ Windows Communication Foundation (WCF) поддерживает ограниче
   
  Поддерживаются следующие источники трассировки:  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.Runtime.Serialization>  
+- <xref:System.Runtime.Serialization>  
   
--   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>и <xref:System.IdentityModel.Tokens>.  
+- <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>и <xref:System.IdentityModel.Tokens>.  
   
  Следующие источники трассировки не поддерживаются:  
   
--   CardSpace  
+- CardSpace  
   
--   <xref:System.IO.Log>  
+- <xref:System.IO.Log>  
 
--   [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
+- [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
   
  Не должны быть заданы следующие члены перечисления <xref:System.Diagnostics.TraceOptions> :  
   
--   <xref:System.Diagnostics.TraceOptions.Callstack?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceOptions.Callstack?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceOptions.ProcessId?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceOptions.ProcessId?displayProperty=nameWithType>  
   
  При использовании трассировки в среде с частичным доверием, убедитесь, что приложение обладает достаточными правами для хранения выходных данных прослушивателя трассировки. Например, при использовании <xref:System.Diagnostics.TextWriterTraceListener> для записи выходных данных трассировки в текстовый файл, убедитесь, что приложение имеет необходимое разрешение FileIOPermission, которое требуется для добавления записей в файл трассировки.  
   
@@ -148,11 +148,11 @@ Windows Communication Foundation (WCF) поддерживает ограниче
   
  При выполнении indifo2 в среде с частичным доверием не включаются следующие дополнительные возможности:  
   
--   инструментирование управления Windows (WMI)  
+- инструментирование управления Windows (WMI)  
   
--   Ведение журнала событий не в полном объеме (см. обсуждение в разделе **Диагностика** );  
+- Ведение журнала событий не в полном объеме (см. обсуждение в разделе **Диагностика** );  
   
--   Счетчики производительности.  
+- Счетчики производительности.  
   
  Использование функций WCF, которые не поддерживаются в среде с частичным доверием может привести исключений во время выполнения.  
   

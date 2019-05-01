@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7dd6829e-79a5-4480-9023-9e588cb0bf2e
 ms.openlocfilehash: fae1513e7a7ead98318d907b220b7510758c9ffe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037613"
 ---
 # <a name="how-to-retrieve-member-conflict-information"></a>Практическое руководство. Как получить сведения о конфликтах элементов
 Класс <xref:System.Data.Linq.MemberChangeConflict> можно использовать для получения сведений об отдельных членах конфликта. В этом же контексте можно предусмотреть пользовательскую обработку конфликта для любого члена. Дополнительные сведения см. в разделе [оптимистичный параллелизм: Общие сведения о](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  

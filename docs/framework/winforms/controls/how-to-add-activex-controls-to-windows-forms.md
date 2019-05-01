@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
 ms.openlocfilehash: 780411949c543a2178de5e7c531bd2202703f27a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011158"
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms
 Хотя в конструкторе Windows Forms оптимизирована для размещения элементов управления Windows Forms, также можно поместить элементы управления ActiveX в формах Windows Forms.  
@@ -26,7 +26,7 @@ ms.locfileid: "59166054"
   
 ### <a name="to-add-an-activex-control-to-your-windows-form"></a>Добавление элемента управления ActiveX в форму Windows  
   
--   Дважды щелкните элемент управления на панели элементов.  
+- Дважды щелкните элемент управления на панели элементов.  
   
      Visual Studio добавляет все ссылки на элемент управления в проекте. Дополнительные сведения о том, что следует учитывать при использовании элементов управления ActiveX в формах Windows Forms, см. в разделе [вопросы размещения элемента управления ActiveX в Windows Forms](considerations-when-hosting-an-activex-control-on-a-windows-form.md).  
   

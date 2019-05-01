@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
 ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007319"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters и XAML
 Этот раздел посвящен цели преобразования типов из строк — одной из основных функций языка XAML. В .NET Framework <xref:System.ComponentModel.TypeConverter> класс служит конкретной цели как часть реализации для управляемого пользовательского класса, который можно использовать в качестве значения свойства в использование атрибута XAML. При написании пользовательского класса, и вы хотите, чтобы экземпляры класса могли использоваться как значения настраиваемого атрибута XAML, может потребоваться применить <xref:System.ComponentModel.TypeConverterAttribute> к классу, написание пользовательского <xref:System.ComponentModel.TypeConverter> класс, или оба.  
@@ -59,13 +59,13 @@ ms.locfileid: "59164994"
   
  <xref:System.ComponentModel.TypeConverter> определены четыре элемента, относящихся к преобразованию в строки для нужд обработки XAML и обратно:  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
   
  Из них является самым важным методом <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>. Этот метод преобразует входную строку к требуемому типу объекта. Строго говоря <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> метод может быть реализован для преобразования более широком диапазоне типов в требуемый конечный тип преобразователя и таким образом обслуживать, выходящим за пределы XAML, таких как поддержка преобразований времени выполнения, но в целях XAML Это только путь кода, который может обрабатывать <xref:System.String> ввод.  
   

@@ -3,11 +3,11 @@ title: Числа с плавающей запятой
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
 ms.openlocfilehash: aae7bd2ea6b5ba7bc9c69b99c93b62ba7a413d59
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033986"
 ---
 # <a name="floating-point-numbers"></a>Числа с плавающей запятой
 В этом разделе описаны некоторые из проблем, с которыми разработчики часто встречаются при работе с числами с плавающей запятой в [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Эти проблемы вызваны способом, которым эти числа хранятся в компьютерах, и не характерны для определенных поставщиков, например <xref:System.Data.SqlClient> или <xref:System.Data.OracleClient>.  

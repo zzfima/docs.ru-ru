@@ -8,11 +8,11 @@ helpviewer_keywords:
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
 ms.openlocfilehash: 3f4dbd6dce0957de3451b1f29c3a67ccd6791045
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053669"
 ---
 # <a name="how-to-sort-an-array-in-visual-basic"></a>Практическое руководство. Сортировка массива в Visual Basic
 В этом примере объявляется массив `String` объектов с именем `zooAnimals`, заполняет его и сортировка по алфавиту.  
@@ -32,16 +32,16 @@ End Sub
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   Доступ к библиотеке Mscorlib.dll и <xref:System> пространства имен.  
+- Доступ к библиотеке Mscorlib.dll и <xref:System> пространства имен.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  При следующих условиях возможно возникновение исключения:  
   
--   Массив пуст (<xref:System.ArgumentNullException> класса)  
+- Массив пуст (<xref:System.ArgumentNullException> класса)  
   
--   Массив является многомерным (<xref:System.RankException> класса)  
+- Массив является многомерным (<xref:System.RankException> класса)  
   
--   Один или несколько элементов массива не реализуют <xref:System.IComparable> интерфейс (<xref:System.InvalidOperationException> класса)  
+- Один или несколько элементов массива не реализуют <xref:System.IComparable> интерфейс (<xref:System.InvalidOperationException> класса)  
   
 ## <a name="see-also"></a>См. также
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Margin property [WPF], setting
 ms.assetid: 70ebee01-6f87-4352-8dd4-402c65eaaed6
 ms.openlocfilehash: 3263810806b6b4bbec15eadfd1f1da3a57d12698
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052369"
 ---
 # <a name="how-to-set-margins-of-elements-and-controls"></a>Практическое руководство. Установка полей для элементов и элементов управления
 В этом примере описывается установка <xref:System.Windows.FrameworkElement.Margin%2A> свойства, путем изменения значения любого существующего свойства для поля в коде. <xref:System.Windows.FrameworkElement.Margin%2A> Свойство является свойством <xref:System.Windows.FrameworkElement> элемент базового и таким образом будет наследоваться различные элементы управления и другие элементы.  

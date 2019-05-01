@@ -10,11 +10,11 @@ helpviewer_keywords:
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
 ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050224"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Оптимизация производительности: Разметка и разработка
 Разработка приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] может повлиять на его производительность в результате создания ненужных служебных данных при вычислении макета и проверки ссылок на объекты. Конструирование объектов, особенно во время выполнения, может повлиять на характеристики производительности приложения.  
@@ -26,25 +26,25 @@ ms.locfileid: "59107072"
   
  Система разметки выполняет два прохода для каждого дочернего члена в коллекции: проход измерений и проход компоновки. Каждый дочерний объект предоставляет свою собственную переопределенную реализацию из <xref:System.Windows.UIElement.Measure%2A> и <xref:System.Windows.UIElement.Arrange%2A> методы, чтобы обеспечить собственное поведение конкретного макета. В самом простом случае макет является рекурсивной системой, в процессе которой программа изменяет размер и расположение элемента и отображает его на экране.  
   
--   Дочерний элемент <xref:System.Windows.UIElement> объект начинает процесс разметки первым, задав его основные измеряемые свойства.  
+- Дочерний элемент <xref:System.Windows.UIElement> объект начинает процесс разметки первым, задав его основные измеряемые свойства.  
   
--   Объекта <xref:System.Windows.FrameworkElement> свойства, относящиеся к размеру, такие как <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, и <xref:System.Windows.FrameworkElement.Margin%2A>, вычисляются.  
+- Объекта <xref:System.Windows.FrameworkElement> свойства, относящиеся к размеру, такие как <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, и <xref:System.Windows.FrameworkElement.Margin%2A>, вычисляются.  
   
--   <xref:System.Windows.Controls.Panel>-применяется специальная логика, такие как <xref:System.Windows.Controls.DockPanel.Dock%2A> свойство <xref:System.Windows.Controls.DockPanel>, или <xref:System.Windows.Controls.StackPanel.Orientation%2A> свойство <xref:System.Windows.Controls.StackPanel>.  
+- <xref:System.Windows.Controls.Panel>-применяется специальная логика, такие как <xref:System.Windows.Controls.DockPanel.Dock%2A> свойство <xref:System.Windows.Controls.DockPanel>, или <xref:System.Windows.Controls.StackPanel.Orientation%2A> свойство <xref:System.Windows.Controls.StackPanel>.  
   
--   Содержимое компонуется или размещается после всех дочерних объектов, которые были измерены.  
+- Содержимое компонуется или размещается после всех дочерних объектов, которые были измерены.  
   
--   На экране отображается коллекция дочерних объектов.  
+- На экране отображается коллекция дочерних объектов.  
   
  Процесс прохода разметки вызывается снова при возникновении любого из следующих событий.  
   
--   Дочерний объект добавляется в коллекцию.  
+- Дочерний объект добавляется в коллекцию.  
   
--   Объект <xref:System.Windows.FrameworkElement.LayoutTransform%2A> применяется к дочернему объекту.  
+- Объект <xref:System.Windows.FrameworkElement.LayoutTransform%2A> применяется к дочернему объекту.  
   
--   <xref:System.Windows.UIElement.UpdateLayout%2A> Метод вызывается для дочернего объекта.  
+- <xref:System.Windows.UIElement.UpdateLayout%2A> Метод вызывается для дочернего объекта.  
   
--   При изменении значения свойства зависимости, которое помечено метаданными, влияющими на проход измерения и компоновки.  
+- При изменении значения свойства зависимости, которое помечено метаданными, влияющими на проход измерения и компоновки.  
   
 ### <a name="use-the-most-efficient-panel-where-possible"></a>Используйте наиболее эффективную панель там, где возможно  
  Сложность прохода разметки непосредственно основана на поведения <xref:System.Windows.Controls.Panel>-используемых элементов, производных. Например <xref:System.Windows.Controls.Grid> или <xref:System.Windows.Controls.StackPanel> элемент управления предоставляет гораздо больше возможностей, чем <xref:System.Windows.Controls.Canvas> элемента управления. Ценой этого значительного увеличения функциональности является увеличение затрат производительности. Тем не менее если не требуется функциональность, <xref:System.Windows.Controls.Grid> предоставляет элемент управления, следует использовать менее затратные варианты, например <xref:System.Windows.Controls.Canvas> или настраиваемую панель.  

@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
 ms.openlocfilehash: 784072ecd133333dec13509d0ac10c69b2161cf8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034402"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Создание таблицы данных из объекта DataView
 После получения данных из источника данных и заполнения данными таблицы <xref:System.Data.DataTable> можно по желанию отсортировать, отфильтровать или другим образом ограничить возвращаемые данные, не извлекая их повторно. Сделать это позволяет класс <xref:System.Data.DataView>. Кроме того, если вам нужно создать новый <xref:System.Data.DataTable> из <xref:System.Data.DataView>, можно использовать <xref:System.Data.DataView.ToTable%2A> метод, чтобы скопировать все строки и столбцы либо подмножество данных в новую <xref:System.Data.DataTable>. Метод <xref:System.Data.DataView.ToTable%2A> имеет перегруженные формы для выполнения следующих действий.  
   
--   Создание таблицы <xref:System.Data.DataTable>, содержащей столбцы, которые являются подмножеством столбцов в представлении <xref:System.Data.DataView>.  
+- Создание таблицы <xref:System.Data.DataTable>, содержащей столбцы, которые являются подмножеством столбцов в представлении <xref:System.Data.DataView>.  
   
--   Создание <xref:System.Data.DataTable> содержащей только уникальные строки из <xref:System.Data.DataView>, аналогично ключевому для ключевого слова DISTINCT в Transact-SQL.  
+- Создание <xref:System.Data.DataTable> содержащей только уникальные строки из <xref:System.Data.DataView>, аналогично ключевому для ключевого слова DISTINCT в Transact-SQL.  
   
 ## <a name="example"></a>Пример  
  В следующем образце консольного приложения создает <xref:System.Data.DataTable> , содержащий данные из **Person.Contact** в таблицу **AdventureWorks** образца базы данных. Затем пример создает отсортированное и отфильтрованное представление <xref:System.Data.DataView> на основе <xref:System.Data.DataTable>. После отображения содержимого таблицы <xref:System.Data.DataTable> и <xref:System.Data.DataView>, создается новая <xref:System.Data.DataTable> из <xref:System.Data.DataView> путем вызова <xref:System.Data.DataView.ToTable%2A> метод, выбрав только подмножество доступных столбцов. Наконец, пример отображает содержимое новой таблицы <xref:System.Data.DataTable>.  

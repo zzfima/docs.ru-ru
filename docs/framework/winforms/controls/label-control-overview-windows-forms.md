@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
 ms.openlocfilehash: cc38b0f3ded9e3c2a5a4146eb6bb474921d1e19f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012867"
 ---
 # <a name="label-control-overview-windows-forms"></a>Общие сведения об элементе управления Label (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Label> элементы управления используются для отображения текста или изображений, которые не может быть изменено пользователем. Они используются для идентификации объектов в форме, чтобы дать описание какие определенный элемент управления будет делать, если нажата, например или для отображения сведений в ответ на событие во время выполнения или процесс в приложении. Например можно использовать метки для добавления описательных заголовков в текстовые поля, списки, поля со списком и т. д. Можно также написать код, который изменяет текст, отображаемый меткой в ответ на события во время выполнения. Например если приложения занимает несколько минут на обработку изменения, можно отобразить сообщение о состоянии обработки в метке.  

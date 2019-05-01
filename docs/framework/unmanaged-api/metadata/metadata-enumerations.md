@@ -9,11 +9,11 @@ ms.assetid: 711ab251-cfdb-4280-aaa6-9bc1b341cdc3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f92b87cc2748a709361ff2c0c8129db5f7fe6046
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62042202"
 ---
 # <a name="metadata-enumerations"></a>Перечисления метаданных
 В этом разделе описываются неуправляемые перечисления, которые использует API метаданных.  
@@ -26,16 +26,16 @@ ms.locfileid: "33460972"
  Содержит значения, описывающие возможности ссылки на сборку.  
   
  [Перечисление CeeSectionAttr](../../../../docs/framework/unmanaged-api/metadata/ceesectionattr-enumeration.md)  
- Предоставляет значения, задающие атрибуты раздела для использования [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) интерфейса.  
+ Предоставляет значения, задающие атрибуты раздела для использования [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) интерфейс.  
   
  [Перечисление CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md)  
  Предоставляет значения для влияния на тип `reloc` инструкции в вызове [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md) метод.  
   
  [Перечисление COINITICOR](../../../../docs/framework/unmanaged-api/metadata/coiniticor-enumeration.md)  
- Указывает константы, используемые [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) при инициализации общеязыковая среда выполнения.  
+ Задает константы, используемые [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) при инициализации среда CLR.  
   
  [Перечисление COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md)  
- Указывает константы, используемые [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) при инициализации общеязыковая среда выполнения.  
+ Задает константы, используемые [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) при инициализации среда CLR.  
   
  [Перечисление CorArgType](../../../../docs/framework/unmanaged-api/metadata/corargtype-enumeration.md)  
  Содержит значения, описывающие собственный тип дескриптора среды выполнения.  
@@ -68,13 +68,13 @@ ms.locfileid: "33460972"
  Содержит значения, описывающие метаданные поля.  
   
  [Перечисление CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)  
- Содержит значения, описывающие тип файла, определенного в вызове [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) метод.  
+ Содержит значения, описывающие тип файла, определенного в вызове к [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) метод.  
   
  [Перечисление CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)  
  Содержит значения, описывающие тип сопоставления файлов, которое возвращается из вызова [IMetaDataInfo::GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) метод.  
   
  [Перечисление CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)  
- Содержит значения, описывающие <xref:System.Type> параметры универсальных типов, использующихся в вызовах для [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md) метод.  
+ Содержит значения, описывающие <xref:System.Type> параметров для универсальных типов, использующихся в вызовах [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md) метод.  
   
  [Перечисление CorImportOptions](../../../../docs/framework/unmanaged-api/metadata/corimportoptions-enumeration.md)  
  Содержит значения флага, управляющие поведением во время импорта сборки за пределы текущей области.  
@@ -134,7 +134,7 @@ ms.locfileid: "33460972"
  Содержит значения, указывающие уровень точности, необходимый при запросе размера операции сохранения.  
   
  [Перечисление CorSerializationType](../../../../docs/framework/unmanaged-api/metadata/corserializationtype-enumeration.md)  
- Содержит значения, описывающие способ сериализации объекта средой CLR. Эти значения обычно соответствуют значениям CorElementType.  
+ Содержит значения, описывающие способ сериализации объекта средой CLR. Как правило, эти значения соответствуют значениям CorElementType.  
   
  [Перечисление CorSetENC](../../../../docs/framework/unmanaged-api/metadata/corsetenc-enumeration.md)  
  Содержит значения, используемые для оказания влияния на поведение во время создания метаданных.  
@@ -152,10 +152,10 @@ ms.locfileid: "33460972"
  Содержит значения, описывающие соглашения о неуправляемых вызовах.  
   
  [Перечисление CorValidatorModuleType](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md)  
- Предоставляет значения, используемые [IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md) интерфейс, чтобы указать тип модуля (PE-файла или OBJ-файл).  
+ Предоставляет значения, используемые [IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md) интерфейса для указания типа модуля (PE-файла или OBJ-файл).  
   
  [Перечисление COUNINITIEE](../../../../docs/framework/unmanaged-api/metadata/couninitiee-enumeration.md)  
- Указывает константы, используемые [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) при инициализации общеязыковая среда выполнения.  
+ Задает константы, используемые [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) при инициализации среда CLR.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

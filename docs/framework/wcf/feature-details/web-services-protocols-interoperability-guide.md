@@ -3,11 +3,11 @@ title: Руководство по взаимодействию по прото�
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
 ms.openlocfilehash: 647212558b6be38e9b30239f7fb71213e6eb7d86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050354"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Руководство по взаимодействию по протоколам веб-служб
 Windows Communication Foundation (WCF) реализует ряд протоколов веб-служб. Многие из этих протоколов предусматривают ряд параметров и точек расширяемости, оставляемых на усмотрение реализующего субъекта. Этот раздел содержит список протоколов веб-служб, реализуемых WCF. В остальных подразделах содержатся подробности о реализации каждого поддерживаемого протокола.  
@@ -76,29 +76,29 @@ Windows Communication Foundation (WCF) реализует ряд протоко�
   
  Классы <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <xref:System.ServiceModel.Description.WsdlExporter>, <xref:System.ServiceModel.Description.WsdlImporter> и <xref:System.ServiceModel.Description.MetadataResolver> обеспечивают поддержку следующих спецификаций метаданных.  
   
--   [Схема XML, часть 1: Структуры, второе издание](https://go.microsoft.com/fwlink/?LinkId=3536)  
+- [Схема XML, часть 1: Структуры, второе издание](https://go.microsoft.com/fwlink/?LinkId=3536)  
   
--   [XML Schema Part 2: Типы данных, второе издание](https://go.microsoft.com/fwlink/?LinkId=40138)  
+- [XML Schema Part 2: Типы данных, второе издание](https://go.microsoft.com/fwlink/?LinkId=40138)  
   
--   [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
+- [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
   
--   [WS-Policy 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
+- [WS-Policy 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
   
--   [WS-Policy 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
+- [WS-Policy 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
   
--   [WS-PolicyAttachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
+- [WS-PolicyAttachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
   
--   [WS-MetadataExchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
+- [WS-MetadataExchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
   
--   [WS-Transfer Get для извлечения метаданных](https://go.microsoft.com/fwlink/?LinkId=96708)  
+- [WS-Transfer Get для извлечения метаданных](https://go.microsoft.com/fwlink/?LinkId=96708)  
   
  Кроме того следующие профили взаимодействия реализуются через WCF:  
   
--   [Basic Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=69313)  
+- [Basic Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=69313)  
   
--   [Простая привязка SOAP 1.0](https://go.microsoft.com/fwlink/?LinkId=96710)  
+- [Простая привязка SOAP 1.0](https://go.microsoft.com/fwlink/?LinkId=96710)  
   
--   [Basic Security Profile 1.0 рабочий черновик](https://go.microsoft.com/fwlink/?LinkId=96711)  
+- [Basic Security Profile 1.0 рабочий черновик](https://go.microsoft.com/fwlink/?LinkId=96711)  
   
 ## <a name="see-also"></a>См. также
 

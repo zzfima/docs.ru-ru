@@ -3,20 +3,20 @@ title: Создание отношений наборов данных из сх
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
 ms.openlocfilehash: 29c0e9ee96c376c6da392692febccbbae3c6a33f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034324"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Создание отношений наборов данных из схемы XML (XSD)
 В <xref:System.Data.DataSet> взаимосвязь между двумя или несколькими столбцами формируется путем создания отношения «родитель-потомок». Существует три способа представления **набора данных** отношения в схему языка определения схемы XML:  
   
--   Задайте вложенные сложные типы.  
+- Задайте вложенные сложные типы.  
   
--   Используйте **msdata: Relationship** заметки.  
+- Используйте **msdata: Relationship** заметки.  
   
--   Укажите **xs: keyref** без **msdata: constraintonly** заметки.  
+- Укажите **xs: keyref** без **msdata: constraintonly** заметки.  
   
 ## <a name="nested-complex-types"></a>Вложенные сложные типы  
  Определения вложенных сложных типов в схеме указывают на связь элементов по модели «родитель-потомок». В следующем фрагменте схемы XML показано, что **OrderDetail** является дочерним элементом элемента **порядок** элемент.  

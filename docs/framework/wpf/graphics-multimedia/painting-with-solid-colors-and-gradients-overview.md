@@ -10,11 +10,11 @@ helpviewer_keywords:
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
 ms.openlocfilehash: 7945660f40e44596fe36a6b9d53223a0e264a064
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009465"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Общие сведения о закраске сплошным цветом и градиентом
 В этом разделе описывается использование <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, и <xref:System.Windows.Media.RadialGradientBrush> объекты для закрашивания сплошным цветом, линейным градиентом и радиальным градиентом.  
@@ -27,15 +27,15 @@ ms.locfileid: "59148308"
 ### <a name="using-a-solidcolorbrush-in-xaml"></a>Использование SolidColorBrush в XAML  
  Чтобы закрасить область сплошным цветом в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], используйте один из следующих вариантов.  
   
--   Выберите стандартную сплошную цветную кисть по имени.  Например, можно задать кнопки <xref:System.Windows.Controls.Control.Background%2A> «Red» или «MediumBlue».  Список других стандартных кистей сплошного цвета, см. в разделе статические свойства класса <xref:System.Windows.Media.Brushes> класса. Пример.  
+- Выберите стандартную сплошную цветную кисть по имени.  Например, можно задать кнопки <xref:System.Windows.Controls.Control.Background%2A> «Red» или «MediumBlue».  Список других стандартных кистей сплошного цвета, см. в разделе статические свойства класса <xref:System.Windows.Media.Brushes> класса. Пример.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
--   Выберите цвет из 32-разрядной цветовой палитры, указав насыщенность красной, зеленой и синей составляющих для смешения в сплошной цвет.  Формат для указания цвета из 32-разрядной палитры — *#rrggbb*, где *rr* — шестнадцатеричное число из двух цифр, представляющее относительное количество красного цвета, *gg* — зеленого, *bb* — синего.  Кроме того, цвет можно указать в формате #*aarrggbb*, где *aa* представляет *альфа-канал*, или прозрачность, цвета. Этот подход позволяет создавать частично прозрачные цвета.  В следующем примере <xref:System.Windows.Controls.Control.Background%2A> из <xref:System.Windows.Controls.Button> присваивается полностью непрозрачному красному, с помощью шестнадцатеричного формата.  
+- Выберите цвет из 32-разрядной цветовой палитры, указав насыщенность красной, зеленой и синей составляющих для смешения в сплошной цвет.  Формат для указания цвета из 32-разрядной палитры — *#rrggbb*, где *rr* — шестнадцатеричное число из двух цифр, представляющее относительное количество красного цвета, *gg* — зеленого, *bb* — синего.  Кроме того, цвет можно указать в формате #*aarrggbb*, где *aa* представляет *альфа-канал*, или прозрачность, цвета. Этот подход позволяет создавать частично прозрачные цвета.  В следующем примере <xref:System.Windows.Controls.Control.Background%2A> из <xref:System.Windows.Controls.Button> присваивается полностью непрозрачному красному, с помощью шестнадцатеричного формата.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
--   Используйте синтаксис тега свойства для описания <xref:System.Windows.Media.SolidColorBrush>. Этот синтаксис требует более подробного описания, но позволяет указать дополнительные параметры, например непрозрачность кисти. В следующем примере <xref:System.Windows.Controls.Control.Background%2A> свойства двух <xref:System.Windows.Controls.Button> элементы задаются равными полностью непрозрачному красному. Цвет первой кисти описан с использованием имени стандартного цвета. Цвет второй кисти описан с помощью шестнадцатеричного формата.  
+- Используйте синтаксис тега свойства для описания <xref:System.Windows.Media.SolidColorBrush>. Этот синтаксис требует более подробного описания, но позволяет указать дополнительные параметры, например непрозрачность кисти. В следующем примере <xref:System.Windows.Controls.Control.Background%2A> свойства двух <xref:System.Windows.Controls.Button> элементы задаются равными полностью непрозрачному красному. Цвет первой кисти описан с использованием имени стандартного цвета. Цвет второй кисти описан с помощью шестнадцатеричного формата.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]  
   
@@ -43,11 +43,11 @@ ms.locfileid: "59148308"
 ### <a name="painting-with-a-solidcolorbrush-in-code"></a>Закрашивание с использованием SolidColorBrush в коде  
  Чтобы закрасить область сплошным цветом в коде, используйте один из следующих вариантов.  
   
--   Используйте одну из стандартных кистей, предоставляемых <xref:System.Windows.Media.Brushes> класса. В следующем примере <xref:System.Windows.Controls.Control.Background%2A> из <xref:System.Windows.Controls.Button> присваивается <xref:System.Windows.Media.Brushes.Red%2A>.  
+- Используйте одну из стандартных кистей, предоставляемых <xref:System.Windows.Media.Brushes> класса. В следующем примере <xref:System.Windows.Controls.Control.Background%2A> из <xref:System.Windows.Controls.Button> присваивается <xref:System.Windows.Media.Brushes.Red%2A>.  
   
      [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedBrush1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedbrush1csharp)]  
   
--   Создание <xref:System.Windows.Media.SolidColorBrush> и задайте его <xref:System.Windows.Media.SolidColorBrush.Color%2A> свойства с помощью <xref:System.Windows.Media.Color> структуры. Можно использовать стандартный цвет в <xref:System.Windows.Media.Colors> класса или создать <xref:System.Windows.Media.Color> с помощью статического <xref:System.Windows.Media.Color.FromArgb%2A> метод.  
+- Создание <xref:System.Windows.Media.SolidColorBrush> и задайте его <xref:System.Windows.Media.SolidColorBrush.Color%2A> свойства с помощью <xref:System.Windows.Media.Color> структуры. Можно использовать стандартный цвет в <xref:System.Windows.Media.Colors> класса или создать <xref:System.Windows.Media.Color> с помощью статического <xref:System.Windows.Media.Color.FromArgb%2A> метод.  
   
      В следующем примере показано, как задать <xref:System.Windows.Media.SolidColorBrush.Color%2A> свойство <xref:System.Windows.Media.SolidColorBrush> с помощью предопределенного цвета.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "59148308"
   
  <xref:System.Windows.Media.GradientStop> Основной строительный блок градиентной кисти.  Ограничение градиента задает <xref:System.Windows.Media.GradientStop.Color%2A> в <xref:System.Windows.Media.GradientStop.Offset%2A> вдоль оси градиента.  
   
--   Ступень градиента <xref:System.Windows.Media.GradientStop.Color%2A> свойство задает цвет градиента. Можно установить цвет с помощью стандартного цвета (предоставляемые <xref:System.Windows.Media.Colors> класс) или путем указания значений ScRGB или ARGB. В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для описания цвета можно также использовать шестнадцатеричный формат. Дополнительные сведения см. в разделе <xref:System.Windows.Media.Color> структуры.  
+- Ступень градиента <xref:System.Windows.Media.GradientStop.Color%2A> свойство задает цвет градиента. Можно установить цвет с помощью стандартного цвета (предоставляемые <xref:System.Windows.Media.Colors> класс) или путем указания значений ScRGB или ARGB. В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для описания цвета можно также использовать шестнадцатеричный формат. Дополнительные сведения см. в разделе <xref:System.Windows.Media.Color> структуры.  
   
--   Ступень градиента <xref:System.Windows.Media.GradientStop.Offset%2A> свойство определяет положение цвета ограничения градиента на оси градиента. Значением offset является <xref:System.Double> , в диапазоне от 0 до 1. Чем ближе значение смещения ограничения градиента к 0, тем ближе цвет находится к началу градиента. Чем ближе значение смещения градиента к 1, тем ближе цвет находится к окончанию градиента.  
+- Ступень градиента <xref:System.Windows.Media.GradientStop.Offset%2A> свойство определяет положение цвета ограничения градиента на оси градиента. Значением offset является <xref:System.Double> , в диапазоне от 0 до 1. Чем ближе значение смещения ограничения градиента к 0, тем ближе цвет находится к началу градиента. Чем ближе значение смещения градиента к 1, тем ближе цвет находится к окончанию градиента.  
   
  Цвет каждой точки между ограничениями градиента подчиняется закону линейной интерполяции как сочетание цветов, заданных двумя ограничивающими положениями градиента. На следующем рисунке показаны ограничения градиента, используемые в предыдущем примере. Кружками отмечены положения ограничений градиента, а пунктирной линией обозначена ось градиента.  
   

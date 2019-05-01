@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
 ms.openlocfilehash: 0bda03d3c01356317fbcc56d44199ff4f9484b5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053942"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 Указывает, что класс может использоваться только в качестве базового класса, и что не удается создать объект непосредственно из него.  
@@ -29,9 +29,9 @@ ms.locfileid: "58816568"
   
 ## <a name="rules"></a>Правила  
   
--   **Контекст объявления.** Можно использовать `MustInherit` только в `Class` инструкции.  
+- **Контекст объявления.** Можно использовать `MustInherit` только в `Class` инструкции.  
   
--   **Комбинированные модификаторы.** Нельзя указать `MustInherit` вместе с `NotInheritable` в одном объявлении.  
+- **Комбинированные модификаторы.** Нельзя указать `MustInherit` вместе с `NotInheritable` в одном объявлении.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано принудительное наследование и переопределение. Базовый класс `shape` определяет переменную `acrossLine`. Классы `circle` и `square` являются производными от `shape`. Они наследуют определение `acrossLine`, но должны определять функцию `area` так, как это вычисление отличается для каждого вида фигуры.  

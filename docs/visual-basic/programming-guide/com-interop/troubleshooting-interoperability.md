@@ -17,11 +17,11 @@ helpviewer_keywords:
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022302"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Устранение неполадок взаимодействия (Visual Basic)
 При взаимодействии между COM и управляемым кодом [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], может появиться один или несколько из следующих распространенных проблем.  
@@ -100,11 +100,11 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ## <a name="vbconinteroperabilitymarshalinganchor10"></a> Проблемы управления ActiveX  
  Большинство элементов управления ActiveX, которые работают с Visual Basic 6.0 работать с Visual Basic .NET без проблем. Большинство исключений — это контейнерные элементы управления или элементы управления, которые визуально содержат другие элементы управления. Ниже приведены некоторые примеры старых элементов управления, которые не работают с помощью Visual Studio:  
   
--   Элемент управления Microsoft Forms 2.0 кадра  
+- Элемент управления Microsoft Forms 2.0 кадра  
   
--   Элемент управления вверх-вниз, также известный как элемент управления "Счетчик"  
+- Элемент управления вверх-вниз, также известный как элемент управления "Счетчик"  
   
--   Шеридан набор вкладок  
+- Шеридан набор вкладок  
   
  Имеется только несколько временных решений проблемы с неподдерживаемыми элементами управления ActiveX. Если вы являетесь владельцем исходного кода, можно перенести существующие элементы управления в Visual Studio. В противном случае можно проверить с поставщиками программного обеспечения для обновления. NET-совместимой версии элементов управления для замены неподдерживаемые элементы управления ActiveX.  
   

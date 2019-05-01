@@ -6,44 +6,44 @@ helpviewer_keywords:
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
 ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020313"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>Новые возможности WPF версии 4.5
 <a name="introduction"></a> Этот раздел содержит сведения о новых и усовершенствованных возможностях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] версии 4.5.  
   
  В этом разделе содержатся следующие подразделы.  
   
--   [Элемент управления ленты](#ribbon_control)  
+- [Элемент управления ленты](#ribbon_control)  
   
--   [Повышение производительности при отображении больших наборов сгруппированных данных](#grouped_virtualization)  
+- [Повышение производительности при отображении больших наборов сгруппированных данных](#grouped_virtualization)  
   
--   [Новые возможности VirtualizingPanel](#VirtualizingPanel)  
+- [Новые возможности VirtualizingPanel](#VirtualizingPanel)  
   
--   [Привязка к статическим свойствам](#static_properties)  
+- [Привязка к статическим свойствам](#static_properties)  
   
--   [Доступ к коллекциям в потоках без пользовательского интерфейса](#xthread_access)  
+- [Доступ к коллекциям в потоках без пользовательского интерфейса](#xthread_access)  
   
--   [Синхронная и асинхронная проверка данных](#INotifyDataErrorInfo)  
+- [Синхронная и асинхронная проверка данных](#INotifyDataErrorInfo)  
   
--   [Автоматическое обновление источника привязки данных](#delay)  
+- [Автоматическое обновление источника привязки данных](#delay)  
   
--   [Привязки к типам, реализующим ICustomTypeProvider](#ICustomTypeProvider)  
+- [Привязки к типам, реализующим ICustomTypeProvider](#ICustomTypeProvider)  
   
--   [Получение сведений о привязке данных из выражения привязки](#binding_state)  
+- [Получение сведений о привязке данных из выражения привязки](#binding_state)  
   
--   [Проверка наличия допустимого объекта DataContext](#DisconnectedSource)  
+- [Проверка наличия допустимого объекта DataContext](#DisconnectedSource)  
   
--   [Изменение расположения данных по мере изменение их значений (формирование данных в реальном времени)](#live_shaping)  
+- [Изменение расположения данных по мере изменение их значений (формирование данных в реальном времени)](#live_shaping)  
   
--   [Улучшенная поддержка установления слабой ссылки на событие](#weak_event_pattern)  
+- [Улучшенная поддержка установления слабой ссылки на событие](#weak_event_pattern)  
   
--   [Новые методы для класса Dispatcher](#async)  
+- [Новые методы для класса Dispatcher](#async)  
   
--   [Расширения разметки для событий](#events_markup_extenions)  
+- [Расширения разметки для событий](#events_markup_extenions)  
   
 <a name="ribbon_control"></a>   
 ## <a name="ribbon-control"></a>Элемент управления ленты  
@@ -64,9 +64,9 @@ ms.locfileid: "59325830"
 ## <a name="binding-to-static-properties"></a>Привязка к статическим свойствам  
  Статические свойства могут служить источником привязки данных. Когда возникает статическое событие, механизм привязки данных распознает изменение в значении подобного свойства.  Например, если класс `SomeClass` определяет статическое свойство с именем `MyProperty`, `SomeClass` может определять статическое событие, которое вызывается при изменении значения `MyProperty`.  Статическое событие может использовать одну из следующих сигнатур.  
   
--   `public static event EventHandler MyPropertyChanged;`  
+- `public static event EventHandler MyPropertyChanged;`  
   
--   `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
+- `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
   
  Обратите внимание, что в первом случае класс предоставляет статическое событие с именем *PropertyName* `Changed` , прошедший <xref:System.EventArgs> обработчику событий.  Во втором случае класс предоставляет статическое событие с именем `StaticPropertyChanged` , прошедший <xref:System.ComponentModel.PropertyChangedEventArgs> обработчику событий. Класс, реализующий статическое свойство, может выдавать уведомления об изменениях в свойства, используя любой из этих методов.  
   

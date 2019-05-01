@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
 ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053136"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Сопоставление свойств Windows Forms и WPF
 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] И [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] технологий есть две модели похожие, но разные свойства. *Сопоставление свойств* поддерживает взаимодействие между этими двумя архитектурами и предоставляет следующие возможности:  
   
--   Упрощает сопоставление изменений соответствующего свойства в среде узла для размещаемого элемента управления или элемента.  
+- Упрощает сопоставление изменений соответствующего свойства в среде узла для размещаемого элемента управления или элемента.  
   
--   Предоставляет значение по умолчанию для сопоставления наиболее часто используемые свойства.  
+- Предоставляет значение по умолчанию для сопоставления наиболее часто используемые свойства.  
   
--   Позволяет легко удалять, переопределять или расширять свойств по умолчанию.  
+- Позволяет легко удалять, переопределять или расширять свойств по умолчанию.  
   
--   Гарантирует, что изменения значений свойств на узле автоматически обнаруживаются и преобразованный в размещенный элемент управления или элемент.  
+- Гарантирует, что изменения значений свойств на узле автоматически обнаруживаются и преобразованный в размещенный элемент управления или элемент.  
   
 > [!NOTE]
 >  События изменения свойств не распространяются вверх размещения элемента управления или элемент иерархии. Преобразование свойства выполняется не в том случае, если локальное значение свойства не будет изменяться из-за прямую настройку, Управление стилями, наследования, привязки данных и другие механизмы, которые изменяют значение свойства.  
@@ -54,66 +54,66 @@ ms.locfileid: "59088825"
 ## <a name="updates-to-parent-properties"></a>Обновление свойств родительского элемента  
  Изменения для большинства свойств родительского вызвать уведомления размещенной дочернему элементу управления. Ниже перечислены свойства, которые не вызывают уведомления при изменении их значений.  
   
--   <xref:System.Windows.Controls.Control.Background%2A>  
+- <xref:System.Windows.Controls.Control.Background%2A>  
   
--   <xref:System.Windows.FrameworkElement.Cursor%2A>  
+- <xref:System.Windows.FrameworkElement.Cursor%2A>  
   
--   <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
+- <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
   
--   <xref:System.Windows.UIElement.Visibility%2A>  
+- <xref:System.Windows.UIElement.Visibility%2A>  
   
  Например, если изменить значение <xref:System.Windows.Controls.Control.Background%2A> свойство <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент, <xref:System.Windows.Forms.Control.BackColor%2A> свойств размещаемого элемента управления остается неизменным.  
   
 ## <a name="property-mapping-with-the-elementhost-control"></a>Сопоставление свойств с помощью элемента управления ElementHost  
  Следующие свойства предоставляют встроенные уведомления об изменении. Не вызывайте <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> метод при сопоставлении этих свойств:  
   
--   AutoSize  
+- AutoSize  
   
--   BackColor  
+- BackColor  
   
--   BackgroundImage  
+- BackgroundImage  
   
--   BackgroundImageLayout  
+- BackgroundImageLayout  
   
--   BindingContext  
+- BindingContext  
   
--   CausesValidation  
+- CausesValidation  
   
--   ContextMenu  
+- ContextMenu  
   
--   ContextMenuStrip  
+- ContextMenuStrip  
   
--   Курсор  
+- Курсор  
   
--   Закрепить  
+- Закрепить  
   
--   Включено  
+- Включено  
   
--   Шрифт  
+- Шрифт  
   
--   ForeColor  
+- ForeColor  
   
--   Расположение  
+- Расположение  
   
--   Поля  
+- Поля  
   
--   Заполнение  
+- Заполнение  
   
--   Родительский  
+- Родительский  
   
--   Region  
+- Region  
   
--   RightToLeft  
+- RightToLeft  
   
--   Размер  
+- Размер  
   
--   TabIndex  
+- TabIndex  
   
--   TabStop  
+- TabStop  
   
--   Текста  
+- Текста  
   
--   Видимый  
+- Видимый  
   
  <xref:System.Windows.Forms.Integration.ElementHost> Управления преобразует значение по умолчанию [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] свойства, чтобы их [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] эквиваленты с помощью следующей таблицы преобразования.  
   

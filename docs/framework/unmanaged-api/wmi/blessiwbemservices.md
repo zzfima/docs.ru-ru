@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 23b72856015d028e50c1e3bfd4a12e0f220291c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049327"
 ---
 # <a name="blessiwbemservices-function"></a>Функция BlessIWbemServices
 Указывает, разрешает ли учетные данные пользователя доступ к указанным [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) класса.   
@@ -65,7 +65,7 @@ HRESULT BlessIWbemServices (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WinError.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | Один или несколько аргументов являются недопустимыми. |
 | `E_POINTER` | 0x80004003 | Свойство `pIWbemServices` имеет значение `null`. | 

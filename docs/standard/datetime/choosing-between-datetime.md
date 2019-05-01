@@ -16,11 +16,11 @@ ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0ed41d7739822d531986d65faa820ab7100c6651
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026566"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Выбор между типами DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo
 
@@ -68,7 +68,7 @@ ms.locfileid: "54600119"
 Кроме случая, когда определенное значение <xref:System.DateTime> представляет время в формате UTC, значение даты и времени часто является неоднозначным или ограниченным в плане возможности переноса. Например, если значение <xref:System.DateTime> представляет местное время, оно является переносимым внутри местного часового пояса (то есть если значение десериализуется в другой системе в том же часовом поясе, оно по-прежнему однозначно определяет конкретный момент времени). За пределами местного часового пояса значение <xref:System.DateTime> может иметь несколько интерпретаций. Если свойство <xref:System.DateTime.Kind%2A> имеет значение <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, значение даты и времени становится еще менее переносимым: в этом случае оно неоднозначно даже в том же часовом поясе и, возможно, даже на том же компьютере, на котором оно было впервые сериализовано. Значение <xref:System.DateTime> однозначно идентифицирует момент времени независимо от времени системы или часового пояса, в котором оно используется, только если это значение представляет время в формате UTC.
 
 > [!IMPORTANT]
-> При сохранении или совместном использовании данных <xref:System.DateTime> следует использовать формат UTC, а для свойства <xref:System.DateTime.Kind%2A> значения <xref:System.DateTime> должно быть задано значение <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.
+> При сохранении или совместном использовании данных <xref:System.DateTime> следует использовать формат UTC, а для свойства <xref:System.DateTime> значения <xref:System.DateTime.Kind%2A> должно быть задано значение <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.
 
 ## <a name="the-datetimeoffset-structure"></a>Структура DateTimeOffset
 

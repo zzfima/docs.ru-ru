@@ -3,11 +3,11 @@ title: Знакомство с интеграцией CLR в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
 ms.openlocfilehash: dc7d19bf361ed5fcda1fd5edf64eeb5e4ce15a71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033882"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Знакомство с интеграцией CLR в SQL Server
 Среда CLR является сердцем платформы Microsoft .NET Framework и предоставляет среду выполнения для всего кода .NET Framework. Код, выполняемый в среде CLR, называется управляемым кодом. Среда CLR предоставляет различные функции и услуги, требуемые для выполнения программы, включая JIT-компиляцию, распределение и управление памятью, соблюдение безопасности типов, обработку исключений, управление потоками и безопасность.  
@@ -20,7 +20,7 @@ ms.locfileid: "59336815"
   
  **Электронная документация по SQL Server**  
   
--   [Обзор интеграции (CLR) среды CLR](https://go.microsoft.com/fwlink/?LinkId=115242)  
+- [Обзор интеграции (CLR) среды CLR](https://go.microsoft.com/fwlink/?LinkId=115242)  
   
 ## <a name="enabling-clr-integration"></a>Включение интеграции со средой CLR  
  Возможность интеграции со средой CLR отключена в Microsoft SQL Server по умолчанию, поэтому ее нужно включить, чтобы использовать объекты, использующие интеграцию со средой CLR. Чтобы включить интеграцию со средой CLR с помощью Transact-SQL, воспользуйтесь параметром `clr enabled` хранимой процедуры `sp_configure`, как показано ниже.  
@@ -38,7 +38,7 @@ GO
   
  **Электронная документация по SQL Server**  
   
--   [Включение интеграции со средой CLR](https://go.microsoft.com/fwlink/?LinkId=115230)  
+- [Включение интеграции со средой CLR](https://go.microsoft.com/fwlink/?LinkId=115230)  
   
 ## <a name="deploying-a-clr-assembly"></a>Развертывание сборки среды CLR  
  После тестирования методов среды CLR и проверки на тестовом сервере их можно установить на рабочие серверы с помощью скриптов развертывания. Скриптов развертывания можно создать вручную или с помощью SQL Server Management Studio. Более подробные сведения см. в электронной документации по SQL Server для используемой версии SQL Server.  
@@ -54,7 +54,7 @@ GO
   
  **Электронная документация по SQL Server**  
   
--   [Безопасность интеграции со средой CLR](https://go.microsoft.com/fwlink/?LinkId=115234)  
+- [Безопасность интеграции со средой CLR](https://go.microsoft.com/fwlink/?LinkId=115234)  
   
 ## <a name="debugging-a-clr-assembly"></a>Отладка сборки CLR  
  В Microsoft SQL Server предоставляется поддержка для отладки кода Transact-SQL и объектов среды CLR в базе данных. Процесс отладки работает с кодом на всех используемых языках: пользователи могут беспрепятственно переходить к коду объектов среды CLR из кода Transact-SQL и наоборот.  
@@ -63,7 +63,7 @@ GO
   
  **Электронная документация по SQL Server**  
   
--   [Отладка объектов баз данных CLR](https://go.microsoft.com/fwlink/?LinkId=115236)  
+- [Отладка объектов баз данных CLR](https://go.microsoft.com/fwlink/?LinkId=115236)  
   
 ## <a name="see-also"></a>См. также
 

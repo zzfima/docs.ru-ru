@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034558"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Настройка параметров и типы данных параметров
 
@@ -52,31 +52,31 @@ ms.locfileid: "53242052"
 |-------------------------|------------|---------------|---------------|--------------|----------------|
 |<xref:System.Boolean>|Boolean|Разряд|Boolean|Разряд|Byte|
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|
-|byte[]|Binary|VarBinary. Это неявное преобразование завершится ошибкой, если массив байтов больше, чем максимальный размер VarBinary, который является более 8000 байт. Для массивов байтов, превышающих 8000 байт, необходимо явно указать <xref:System.Data.SqlDbType>.|VarBinary|Binary|Raw|
+|byte[]|Бинарный|VarBinary. Это неявное преобразование завершится ошибкой, если массив байтов больше, чем максимальный размер VarBinary, который является более 8000 байт. Для массивов байтов, превышающих 8000 байт, необходимо явно указать <xref:System.Data.SqlDbType>.|VarBinary|Бинарный|Raw|
 |<xref:System.Char>| |Вывод типа <xref:System.Data.SqlDbType> из типа char не поддерживается.|Char|Char|Byte|
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|
 |<xref:System.DateTimeOffset>|DateTimeOffset|Тип DateTimeOffset в SQL Server 2008. Вывод типа <xref:System.Data.SqlDbType> из типа DateTimeOffset не поддерживается в версиях SQL Server до SQL Server 2008.|||DateTime|
-|<xref:System.Decimal>|Десятичное число|Десятичное число|Десятичное число|Numeric|Числовой|
+|<xref:System.Decimal>|Десятичное число|Десятичное число|Десятичное число|Numeric|Число|
 |<xref:System.Double>|Double|Float|Double|Double|Double|
 |<xref:System.Single>|Single|Real|Single|Real|Float|
 |<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Raw|
 |<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|
 |<xref:System.Int32>|Int32|Int|Int|Int|Int32|
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Числовой|
-|<xref:System.Object>|Объект|Вариант|Вариант|Вывод типа OdbcType из типа Object не поддерживается.|Blob|
-|<xref:System.String>|Строковое|NVarChar. Это неявное преобразование завершится ошибкой, если строка превышает максимальный размер для типа NVarChar (4000 символов). Для строк длиннее 4000 символов явно установите значение <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|
+|<xref:System.Object>|Object|Вариант|Вариант|Вывод типа OdbcType из типа Object не поддерживается.|Blob|
+|<xref:System.String>|String|NVarChar. Это неявное преобразование завершится ошибкой, если строка превышает максимальный размер для типа NVarChar (4000 символов). Для строк длиннее 4000 символов явно установите значение <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|
 |<xref:System.TimeSpan>|Время|Тип Time в SQL Server 2008. Вывод типа <xref:System.Data.SqlDbType> из типа TimeSpan не поддерживается в версиях SQL Server до SQL Server 2008.|DBTime|Время|DateTime|
 |<xref:System.UInt16>|UInt16|Вывод типа <xref:System.Data.SqlDbType> из типа UInt16 не поддерживается.|UnsignedSmallInt|Int|UInt16|
 |<xref:System.UInt32>|UInt32|Вывод типа <xref:System.Data.SqlDbType> из типа UInt32 не поддерживается.|UnsignedInt|BigInt|UInt32|
-|<xref:System.UInt64>|UInt64|Вывод типа <xref:System.Data.SqlDbType> из типа UInt64 не поддерживается.|UnsignedBigInt|Numeric|Числовой|
+|<xref:System.UInt64>|UInt64|Вывод типа <xref:System.Data.SqlDbType> из типа UInt64 не поддерживается.|UnsignedBigInt|Numeric|Число|
 ||AnsiString|VarChar|VarChar|VarChar|VarChar|
 ||AnsiStringFixedLength|Char|Char|Char|Char|
-||Валюта|Money|Валюта|Вывод типа `OdbcType` из типа `Currency` не поддерживается.|Числовой|
-||Дата|Тип Date в SQL Server 2008. Вывод типа <xref:System.Data.SqlDbType> из типа Date не поддерживается в версиях SQL Server до SQL Server 2008.|DBDate|дата.|DateTime|
+||Валюта|Money|Валюта|Вывод типа `OdbcType` из типа `Currency` не поддерживается.|Число|
+||Дата|Тип Date в SQL Server 2008. Вывод типа <xref:System.Data.SqlDbType> из типа Date не поддерживается в версиях SQL Server до SQL Server 2008.|DBDate|Дата|DateTime|
 ||SByte|Вывод типа <xref:System.Data.SqlDbType> из типа SByte не поддерживается.|TinyInt|Вывод типа `OdbcType` из типа SByte не поддерживается.|SByte|
 ||StringFixedLength|NChar|WChar|NChar|NChar|
 ||Время|Тип Time в SQL Server 2008. Вывод типа <xref:System.Data.SqlDbType> из типа Time не поддерживается в версиях SQL Server до SQL Server 2008.|DBTime|Время|DateTime|
-||VarNumeric|Вывод типа <xref:System.Data.SqlDbType> из типа VarNumeric не поддерживается.|VarNumeric|Вывод типа `OdbcType` из типа VarNumeric не поддерживается.|Числовой|
+||VarNumeric|Вывод типа <xref:System.Data.SqlDbType> из типа VarNumeric не поддерживается.|VarNumeric|Вывод типа `OdbcType` из типа VarNumeric не поддерживается.|Число|
 |определяемый пользователем тип (объект с <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>|Объект или строка в зависимости от поставщика (SqlClient всегда возвращает объект, ODBC всегда возвращает строку, а поставщик данных, управляемый OleDb, может вернуть и то и другое).|SqlDbType.Udt, если присутствует <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> , в противном случае Variant|OleDbType.VarWChar (при значении NULL), в противном случае OleDbType.Variant.|OdbcType.NVarChar|не поддерживается|
 
 > [!NOTE]
@@ -96,7 +96,7 @@ ms.locfileid: "53242052"
 
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>Использование параметров с объектом SqlCommand и хранимой процедуры
 
-Хранимые процедуры дают множество преимуществ в приложениях, управляемых данными. С помощью хранимых процедур операции с базой данных можно инкапсулировать в одну команду, оптимизированную для производительности и обладающую повышенной безопасностью. Хотя хранимые процедуры можно вызывать и с помощью инструкции SQL, указывая в ней имя процедуры и ее аргументы, использование коллекции <xref:System.Data.Common.DbCommand.Parameters%2A> объекта [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] в <xref:System.Data.Common.DbCommand> позволяет более явно задать параметры процедуры, а также обращаться к выходным параметрам и возвращаемым значениям.
+Хранимые процедуры дают множество преимуществ в приложениях, управляемых данными. С помощью хранимых процедур операции с базой данных можно инкапсулировать в одну команду, оптимизированную для производительности и обладающую повышенной безопасностью. Несмотря на то, что хранимая процедура может вызываться путем передачи имени хранимой процедуры, и ее аргументы как инструкции SQL с помощью <xref:System.Data.Common.DbCommand.Parameters%2A> коллекцию [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.Common.DbCommand> объект позволяет более явно задать хранимая параметры процедуры, а также обращаться к выходным параметрам и возвращаемым значениям.
 
 > [!NOTE]
 > Параметризованные инструкции выполняются на сервере с помощью хранимой процедуры `sp_executesql,` которая позволяет повторно использовать планы запросов. Локальные курсоры или переменные в пакете `sp_executesql` недоступны пакету, вызвавшему `sp_executesql`. Изменения в контексте базы данных длятся только до завершения выполнения инструкции `sp_executesql` . Дополнительные сведения см. в разделе [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).

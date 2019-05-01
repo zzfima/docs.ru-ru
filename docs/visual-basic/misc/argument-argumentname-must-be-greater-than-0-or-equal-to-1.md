@@ -5,11 +5,11 @@ f1_keywords:
 - vbrArgument_MinusOneOrGTZero1
 ms.assetid: 22c6bf5f-5194-43ec-8a8c-88f781801927
 ms.openlocfilehash: 789bed10022d38eb9b88cadfdffeb78be444e0fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025188"
 ---
 # <a name="argument-argumentname-must-be-greater-than-0-or-equal-to--1"></a>Аргумент '\<имя_аргумента >' должен быть больше 0 или равен-1
 Значение аргумента меньше 0, но не равно -1.  

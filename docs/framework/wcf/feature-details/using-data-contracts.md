@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
 ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050666"
 ---
 # <a name="using-data-contracts"></a>Использование контрактов данных
 *Контракт данных* - формальное соглашение между службой и клиентом, абстрактно описывающее данные, обмен которыми происходит. Это значит, что для взаимодействия клиент и служба не обязаны совместно использовать одни и те же типы, достаточно совместно использовать одни и те же контракты данных. Контракт данных для каждого параметра и возвращаемого типа четко определяет, какие данные сериализуются (превращаются в XML) для обмена.  
@@ -38,21 +38,21 @@ ms.locfileid: "59129939"
 ### <a name="notes"></a>Примечания  
  Существуют некоторые моменты, которые необходимо учитывать при создании контрактов данных:  
   
--   Атрибут <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> учитывается только при использовании в неотмеченных типах. Сюда входят типы, которые не отмечены ни одним из атрибутов <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.SerializableAttribute>, <xref:System.Runtime.Serialization.CollectionDataContractAttribute>, <xref:System.Runtime.Serialization.EnumMemberAttribute> или отмечены как сериализуемые любыми другими способами (например, <xref:System.Xml.Serialization.IXmlSerializable>).  
+- Атрибут <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> учитывается только при использовании в неотмеченных типах. Сюда входят типы, которые не отмечены ни одним из атрибутов <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.SerializableAttribute>, <xref:System.Runtime.Serialization.CollectionDataContractAttribute>, <xref:System.Runtime.Serialization.EnumMemberAttribute> или отмечены как сериализуемые любыми другими способами (например, <xref:System.Xml.Serialization.IXmlSerializable>).  
   
--   Атрибут <xref:System.Runtime.Serialization.DataMemberAttribute> применим к полям и свойствам.  
+- Атрибут <xref:System.Runtime.Serialization.DataMemberAttribute> применим к полям и свойствам.  
   
--   Уровни доступности членов (внутренний, закрытый, защищенный или открытый) никак не влияют на контракт данных.  
+- Уровни доступности членов (внутренний, закрытый, защищенный или открытый) никак не влияют на контракт данных.  
   
--   Атрибут <xref:System.Runtime.Serialization.DataMemberAttribute> игнорируется, если он применен к статическому члену.  
+- Атрибут <xref:System.Runtime.Serialization.DataMemberAttribute> игнорируется, если он применен к статическому члену.  
   
--   Во время сериализации для членов данных свойств вызывается код property-get, возвращающий значения сериализуемых свойств.  
+- Во время сериализации для членов данных свойств вызывается код property-get, возвращающий значения сериализуемых свойств.  
   
--   Во время сериализации вначале создается неинициализированный объект без вызова каких-либо конструкторов типа. Затем десериализуются все члены данных.  
+- Во время сериализации вначале создается неинициализированный объект без вызова каких-либо конструкторов типа. Затем десериализуются все члены данных.  
   
--   Во время десериализации для членов данных свойств вызывается код property-set, задающий значения сериализуемым свойствам.  
+- Во время десериализации для членов данных свойств вызывается код property-set, задающий значения сериализуемым свойствам.  
   
--   Чтобы контракт данных был допустимым, все его члены данных должны быть сериализуемыми. Полный список сериализуемых типов см. в разделе [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+- Чтобы контракт данных был допустимым, все его члены данных должны быть сериализуемыми. Полный список сериализуемых типов см. в разделе [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
      Универсальные типы обрабатываются таким же образом, как и неуниверсальные. Для универсальных параметров нет особых требований. Например, рассмотрим следующий тип:  
   

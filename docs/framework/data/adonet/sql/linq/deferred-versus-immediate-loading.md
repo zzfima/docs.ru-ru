@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
 ms.openlocfilehash: ae20dbe557c3cf56a273556c24578056843e9af6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032465"
 ---
 # <a name="deferred-versus-immediate-loading"></a>Отложенная и немедленная загрузка
 При запросе объекта фактически извлекается только запрошенный объект. *Связанные* объекты не извлекаются автоматически одновременно. (Дополнительные сведения см. в разделе [выполнение запросов в связях](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Пользователь не может определить, что связанные объекты еще не загружены, поскольку попытка получить к ним доступ приводит к выполнению запроса, который их извлекает.  
@@ -29,9 +29,9 @@ ms.locfileid: "59096996"
   
  Действительно эффективным стал бы способ параллельного извлечения набора связанных объектов. Этот набор является отделенным разделом графа, поэтому пользователь извлекает ровно тот объем данных, который ему необходим. Для этой цели [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предоставляет <xref:System.Data.Linq.DataLoadOptions> позволяющие немедленно загружать область объектной модели. Ниже перечислены используемые методы.  
   
--   Метод <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> для немедленной загрузки данные, связанных с основными целевыми объектами.  
+- Метод <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> для немедленной загрузки данные, связанных с основными целевыми объектами.  
   
--   Метод <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> для фильтрации объектов, извлеченных для определенной связи.  
+- Метод <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> для фильтрации объектов, извлеченных для определенной связи.  
   
 ## <a name="see-also"></a>См. также
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ink [WPF], advanced handling
 ms.assetid: abc8481a-f983-416f-b051-9168ac8b2ba3
 ms.openlocfilehash: 840ab08faebe760a38ef344fd1c41818a838250b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008945"
 ---
 # <a name="advanced-ink-handling"></a>Дополнительная обработка рукописных данных
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Поставляется с <xref:System.Windows.Controls.InkCanvas>, и является элементом, можно поместить в приложение, чтобы немедленно начать сбор и отображение рукописного ввода. Тем не менее если <xref:System.Windows.Controls.InkCanvas> управления не предоставляет необходимый уровень элемента управления, можно использовать элемент управления на более высоком уровне путем настройки своей собственной коллекции рукописного ввода и классы отрисовки рукописного ввода с помощью <xref:System.Windows.Input.StylusPlugIns>.  

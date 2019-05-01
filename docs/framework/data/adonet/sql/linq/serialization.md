@@ -6,35 +6,35 @@ dev_langs:
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
 ms.openlocfilehash: b6778522b5757c0ece899f7465d3ab500038fc49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037041"
 ---
 # <a name="serialization"></a>Сериализация
 В этом разделе описывается [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] возможности сериализации. В приведенных ниже подразделах приводятся сведения о добавлении сериализации в процессе создания кода во время разработки, а также о поведении классов [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] при сериализации во время выполнения.  
   
  Код сериализации можно добавить во время разработки одним из перечисленных ниже методов.  
   
--   В [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], изменить **режим сериализации** свойства **Unidirectional**.  
+- В [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], изменить **режим сериализации** свойства **Unidirectional**.  
   
--   В программе командной строки SQLMetal добавьте **/serialization** параметр. Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+- В программе командной строки SQLMetal добавьте **/serialization** параметр. Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Обзор  
  Код, сгенерированный [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предоставляет возможности отложенной загрузки по умолчанию. Отложенная загрузка - очень удобное средство среднего уровня для прозрачной загрузки данных по требованию. Однако при сериализации с этим средством возникают проблемы, поскольку сериализатор инициирует отложенную загрузку независимо от намерений пользователя. В действительности, при сериализации объекта также сериализуется его транзитивное замыкание для всех исходящих ссылок с отложенной загрузкой.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Возможность сериализации устраняет эту проблему, главным образом с помощью двух механизмов:  
   
--   Режим <xref:System.Data.Linq.DataContext> для выключения отложенной загрузки (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>). Дополнительные сведения см. в разделе <xref:System.Data.Linq.DataContext>.  
+- Режим <xref:System.Data.Linq.DataContext> для выключения отложенной загрузки (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>). Дополнительные сведения см. в разделе <xref:System.Data.Linq.DataContext>.  
   
--   Переключение создания кода на создания атрибутов <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> и <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> в создаваемых классах. Главной темой этого раздела является именно этот аспект, включая поведение классов с отложенной загрузкой при сериализации.  
+- Переключение создания кода на создания атрибутов <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> и <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> в создаваемых классах. Главной темой этого раздела является именно этот аспект, включая поведение классов с отложенной загрузкой при сериализации.  
   
 ### <a name="definitions"></a>Определения  
   
--   *Сериализатор DataContract*: сериализатор, используемый по умолчанию компонентом Windows Communication Framework (WCF) платформы .NET Framework 3.0 или более поздних версий.  
+- *Сериализатор DataContract*: сериализатор, используемый по умолчанию компонентом Windows Communication Framework (WCF) платформы .NET Framework 3.0 или более поздних версий.  
   
--   *Однонаправленная сериализация*: сериализованная версия класса, который содержит только однонаправленное свойство ассоциации (чтобы избежать зацикливания). По соглашению, для сериализации помечается свойство родительской стороны отношения «первичный ключ - внешний ключ». Другая сторона, участвующая в двунаправленном отношении, не сериализуется.  
+- *Однонаправленная сериализация*: сериализованная версия класса, который содержит только однонаправленное свойство ассоциации (чтобы избежать зацикливания). По соглашению, для сериализации помечается свойство родительской стороны отношения «первичный ключ - внешний ключ». Другая сторона, участвующая в двунаправленном отношении, не сериализуется.  
   
      Однонаправленная сериализация является единственным типом сериализации, поддерживаемым технологией [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   

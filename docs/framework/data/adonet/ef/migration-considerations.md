@@ -3,11 +3,11 @@ title: Вопросы миграции (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
 ms.openlocfilehash: b6224dcf883daef7b35ef50b7556fc568e433a46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034038"
 ---
 # <a name="migration-considerations-entity-framework"></a>Вопросы миграции (Entity Framework)
 Платформа [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework предоставляет существующим приложениям ряд преимуществ. Наиболее важным из них является возможность использования концептуальной модели для отделения структур данных, используемых приложением, от схемы в источнике данных. Это позволяет в дальнейшем значительно упростить внесение изменений в модель хранения или сам источник данных, устранив необходимость внесения соответствующих изменений в приложение. Дополнительные сведения о преимуществах использования [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], см. в разделе [Обзор Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) и [модели EDM](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -17,13 +17,13 @@ ms.locfileid: "59310425"
 ## <a name="general-migration-considerations"></a>Общие рекомендации по переносу  
  Следующие соображения относятся к переносу на [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] любых приложений.  
   
--   Любое приложение, использующее [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] начиная с версии 3.5 с пакетом обновления 1 можно перенести на платформу Entity Framework, до тех пор, пока платформу поддерживает поставщик данных для источника данных, используемых приложением.  
+- Любое приложение, использующее [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] начиная с версии 3.5 с пакетом обновления 1 можно перенести на платформу Entity Framework, до тех пор, пока платформу поддерживает поставщик данных для источника данных, используемых приложением.  
   
--   Платформа Entity Framework может поддерживать не все функции поставщика источника данных, даже если поставщик поддерживает платформу Entity Framework.  
+- Платформа Entity Framework может поддерживать не все функции поставщика источника данных, даже если поставщик поддерживает платформу Entity Framework.  
   
--   Большие и сложные приложения не обязательно переносить на платформу Entity Framework сразу и полностью. При этом, однако, те части приложения, которые не используют Entity Framework, будут по-прежнему требовать изменения при изменении источника данных.  
+- Большие и сложные приложения не обязательно переносить на платформу Entity Framework сразу и полностью. При этом, однако, те части приложения, которые не используют Entity Framework, будут по-прежнему требовать изменения при изменении источника данных.  
   
--   Соединение с поставщиком данных, используемое платформой Entity Framework, может быть общим для нескольких частей приложения, поскольку на платформе [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] для доступа к источнику данных служат поставщики данных [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]. Например, поставщик SqlClient используется платформой Entity Framework для доступа к базе данных SQL Server. Дополнительные сведения см. в разделе [поставщик EntityClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
+- Соединение с поставщиком данных, используемое платформой Entity Framework, может быть общим для нескольких частей приложения, поскольку на платформе [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] для доступа к источнику данных служат поставщики данных [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]. Например, поставщик SqlClient используется платформой Entity Framework для доступа к базе данных SQL Server. Дополнительные сведения см. в разделе [поставщик EntityClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="common-migration-tasks"></a>Типичные задачи переноса  
  Путь переноса существующего приложения на платформу [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] зависит как от типа приложения, так и от существующей стратегии доступа к данным. Но при переносе любого существующего приложения на платформу [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] всегда приходится выполнять следующие задачи.  
