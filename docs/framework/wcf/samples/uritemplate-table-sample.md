@@ -3,22 +3,22 @@ title: Пример таблицы UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 5dd1d38f-1989-4c64-820d-821f5a02216a
 ms.openlocfilehash: 4543d4676344d10c3e380c3522a7ca5a6a8d6294
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59293967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006451"
 ---
 # <a name="uritemplate-table-sample"></a>Пример таблицы UriTemplate
 Класс <xref:System.UriTemplateTable> предоставляет структуру ассоциативной таблицы, подобную словарю, для работы с набором экземпляров `UriTemplate`. Конкретные универсальные коды ресурса (URI) могут эффективно сравниваться со всеми шаблонами в таблице, после чего могут извлекаться данные, связанные с совпадающим шаблоном.  
   
  Данный пример демонстрирует следующие ключевые понятия, связанные с классом `UriTemplateTable`:  
   
--   Синтаксис для создания экземпляров `UriTemplateTable`.  
+- Синтаксис для создания экземпляров `UriTemplateTable`.  
   
--   Занесение в `UriTemplateTable` набора пар ключ/значение.  
+- Занесение в `UriTemplateTable` набора пар ключ/значение.  
   
--   Сравнение потенциального универсального кода ресурса (URI) по таблице с использованием <xref:System.UriTemplateTable.MatchSingle%2A>.  
+- Сравнение потенциального универсального кода ресурса (URI) по таблице с использованием <xref:System.UriTemplateTable.MatchSingle%2A>.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   

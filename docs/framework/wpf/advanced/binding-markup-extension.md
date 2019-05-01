@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
 ms.openlocfilehash: 3455c7ccdedb432fc05c7dc9e80f0f7509f4fa0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010687"
 ---
 # <a name="binding-markup-extension"></a>Привязка расширения разметки
 Откладывает значение свойства значением привязкой к данным, создавая объект промежуточного выражения и интерпретируя контекст данных, который применяется к элементу и его привязке во время выполнения.  
@@ -54,55 +54,55 @@ ms.locfileid: "59170317"
   
  Некоторые из этих значений свойств требуют типы объектов, которые не поддерживает собственный тип преобразование из текстового синтаксиса в XAML и таким образом требуется расширения разметки, чтобы задать в качестве значения атрибута. Проверьте в разделе "Использование атрибута XAML" в библиотеке классов .NET Framework для каждого свойства, Дополнительные сведения; Строка, используйте синтаксис атрибута XAML с или без дальнейшего расширения разметки использования является по сути таким же, как значение, указываемое в `Binding` выражения, за исключением, не размещайте кавычки вокруг каждой `bindProp` = `value` в `Binding` выражение.  
   
--   <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>: строка, определяющая группу возможных привязки. Это — это понятие сравнительно сложный привязки; см. в разделе справочника, посвященных <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>.  
+- <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>: строка, определяющая группу возможных привязки. Это — это понятие сравнительно сложный привязки; см. в разделе справочника, посвященных <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>.  
   
--   <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
+- <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
   
--   <xref:System.Windows.Data.Binding.Converter%2A>: можно задать в качестве `bindProp` = `value` строки в выражении, но для этого требуется ссылка на объект для значения, такие как [расширение разметки StaticResource](staticresource-markup-extension.md). В этом случае, значение является экземпляром класса пользовательский преобразователь.  
+- <xref:System.Windows.Data.Binding.Converter%2A>: можно задать в качестве `bindProp` = `value` строки в выражении, но для этого требуется ссылка на объект для значения, такие как [расширение разметки StaticResource](staticresource-markup-extension.md). В этом случае, значение является экземпляром класса пользовательский преобразователь.  
   
--   <xref:System.Windows.Data.Binding.ConverterCulture%2A>: может задаваться в выражение в виде идентификатора на основе стандартов; см. в разделе справки по <xref:System.Windows.Data.Binding.ConverterCulture%2A>.  
+- <xref:System.Windows.Data.Binding.ConverterCulture%2A>: может задаваться в выражение в виде идентификатора на основе стандартов; см. в разделе справки по <xref:System.Windows.Data.Binding.ConverterCulture%2A>.  
   
--   <xref:System.Windows.Data.Binding.ConverterParameter%2A>: можно задать в качестве `bindProp` = `value` строки в выражение, но это зависит от типа параметра, переданного. Если передача ссылочного типа для значения, это использование требуется ссылка на объект, например вложенный [расширение разметки StaticResource](staticresource-markup-extension.md).  
+- <xref:System.Windows.Data.Binding.ConverterParameter%2A>: можно задать в качестве `bindProp` = `value` строки в выражение, но это зависит от типа параметра, переданного. Если передача ссылочного типа для значения, это использование требуется ссылка на объект, например вложенный [расширение разметки StaticResource](staticresource-markup-extension.md).  
   
--   <xref:System.Windows.Data.Binding.ElementName%2A>: взаимно исключают друг друга и <xref:System.Windows.Data.Binding.RelativeSource%2A> и <xref:System.Windows.Data.Binding.Source%2A>; каждый из этих свойств привязки представляет определенную методологию привязки. См. в разделе [Общие сведения о привязке данных](../data/data-binding-overview.md).  
+- <xref:System.Windows.Data.Binding.ElementName%2A>: взаимно исключают друг друга и <xref:System.Windows.Data.Binding.RelativeSource%2A> и <xref:System.Windows.Data.Binding.Source%2A>; каждый из этих свойств привязки представляет определенную методологию привязки. См. в разделе [Общие сведения о привязке данных](../data/data-binding-overview.md).  
   
--   <xref:System.Windows.Data.BindingBase.FallbackValue%2A>: можно задать в качестве `bindProp` = `value` строки в выражение, но это зависит от типа передаваемого значения. Если передача ссылочного типа, требуется ссылка на объект, например вложенный [расширение разметки StaticResource](staticresource-markup-extension.md).  
+- <xref:System.Windows.Data.BindingBase.FallbackValue%2A>: можно задать в качестве `bindProp` = `value` строки в выражение, но это зависит от типа передаваемого значения. Если передача ссылочного типа, требуется ссылка на объект, например вложенный [расширение разметки StaticResource](staticresource-markup-extension.md).  
   
--   <xref:System.Windows.Data.Binding.IsAsync%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
+- <xref:System.Windows.Data.Binding.IsAsync%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
   
--   <xref:System.Windows.Data.Binding.Mode%2A>: *значение* является именем константы из <xref:System.Windows.Data.BindingMode> перечисления. Например, `{Binding Mode=OneWay}`.  
+- <xref:System.Windows.Data.Binding.Mode%2A>: *значение* является именем константы из <xref:System.Windows.Data.BindingMode> перечисления. Например, `{Binding Mode=OneWay}`.  
   
--   <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
+- <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
   
--   <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
+- <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
   
--   <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
+- <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`.  
   
--   <xref:System.Windows.Data.Binding.Path%2A>: строка, описывающая пути в объекте данных или общих объектов модели. Формат предоставляет несколько разных соглашений для обхода объектной модели, который не может быть адекватно описан в этом разделе. См. в разделе [синтаксис PropertyPath XAML](propertypath-xaml-syntax.md).  
+- <xref:System.Windows.Data.Binding.Path%2A>: строка, описывающая пути в объекте данных или общих объектов модели. Формат предоставляет несколько разных соглашений для обхода объектной модели, который не может быть адекватно описан в этом разделе. См. в разделе [синтаксис PropertyPath XAML](propertypath-xaml-syntax.md).  
   
--   <xref:System.Windows.Data.Binding.RelativeSource%2A>: взаимно исключают друг друга и с <xref:System.Windows.Data.Binding.ElementName%2A> и <xref:System.Windows.Data.Binding.Source%2A>; каждый из этих свойств привязки представляет определенную методологию привязки. См. в разделе [Общие сведения о привязке данных](../data/data-binding-overview.md). Требуется вложенный [расширение разметки RelativeSource](relativesource-markupextension.md) использования для указания значения.  
+- <xref:System.Windows.Data.Binding.RelativeSource%2A>: взаимно исключают друг друга и с <xref:System.Windows.Data.Binding.ElementName%2A> и <xref:System.Windows.Data.Binding.Source%2A>; каждый из этих свойств привязки представляет определенную методологию привязки. См. в разделе [Общие сведения о привязке данных](../data/data-binding-overview.md). Требуется вложенный [расширение разметки RelativeSource](relativesource-markupextension.md) использования для указания значения.  
   
--   <xref:System.Windows.Data.Binding.Source%2A>: взаимно исключают друг друга и <xref:System.Windows.Data.Binding.RelativeSource%2A> и <xref:System.Windows.Data.Binding.ElementName%2A>; каждый из этих свойств привязки представляет определенную методологию привязки. См. в разделе [Общие сведения о привязке данных](../data/data-binding-overview.md). Обычно требуется использование вложенного расширения, [расширение разметки StaticResource](staticresource-markup-extension.md) , ссылающийся на источник данных объекта из словаря ресурсов с ключом.  
+- <xref:System.Windows.Data.Binding.Source%2A>: взаимно исключают друг друга и <xref:System.Windows.Data.Binding.RelativeSource%2A> и <xref:System.Windows.Data.Binding.ElementName%2A>; каждый из этих свойств привязки представляет определенную методологию привязки. См. в разделе [Общие сведения о привязке данных](../data/data-binding-overview.md). Обычно требуется использование вложенного расширения, [расширение разметки StaticResource](staticresource-markup-extension.md) , ссылающийся на источник данных объекта из словаря ресурсов с ключом.  
   
--   <xref:System.Windows.Data.BindingBase.StringFormat%2A>: строка, описывающая соглашение формат строки для связанных данных. Это — это понятие сравнительно сложный привязки; см. в разделе справочника, посвященных <xref:System.Windows.Data.BindingBase.StringFormat%2A>.  
+- <xref:System.Windows.Data.BindingBase.StringFormat%2A>: строка, описывающая соглашение формат строки для связанных данных. Это — это понятие сравнительно сложный привязки; см. в разделе справочника, посвященных <xref:System.Windows.Data.BindingBase.StringFormat%2A>.  
   
--   <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>: можно задать в качестве `bindProp` = `value` строки в выражение, но это зависит от типа параметра, переданного. Если передача ссылочного типа для значения, требуется ссылка на объект, например вложенный [расширение разметки StaticResource](staticresource-markup-extension.md).  
+- <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>: можно задать в качестве `bindProp` = `value` строки в выражение, но это зависит от типа параметра, переданного. Если передача ссылочного типа для значения, требуется ссылка на объект, например вложенный [расширение разметки StaticResource](staticresource-markup-extension.md).  
   
--   <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>: *значение* является именем константы из <xref:System.Windows.Data.UpdateSourceTrigger> перечисления. Например, `{Binding UpdateSourceTrigger=LostFocus}`. Потенциально определенные элементы управления имеют разные значения по умолчанию для этого свойства привязки. См. раздел <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
+- <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>: *значение* является именем константы из <xref:System.Windows.Data.UpdateSourceTrigger> перечисления. Например, `{Binding UpdateSourceTrigger=LostFocus}`. Потенциально определенные элементы управления имеют разные значения по умолчанию для этого свойства привязки. См. раздел <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`. См. заметки.  
+- <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`. См. заметки.  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`. См. заметки.  
+- <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>: Логическое значение может быть либо `true` или `false`. Значение по умолчанию — `false`. См. заметки.  
   
--   <xref:System.Windows.Data.Binding.XPath%2A>: строка, описывающая путь в XMLDOM из источника данных XML. См. в разделе [привязка к данным XML с помощью XMLDataProvider и запросов XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
+- <xref:System.Windows.Data.Binding.XPath%2A>: строка, описывающая путь в XMLDOM из источника данных XML. См. в разделе [привязка к данным XML с помощью XMLDataProvider и запросов XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
   
  Ниже приведены свойства <xref:System.Windows.Data.Binding> , нельзя задать с помощью `Binding` расширение разметки /`{Binding}` форма выражения.  
   
--   <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>: это свойство ожидает, что ссылка на реализацию обратного вызова. Обратные вызовы и методы, отличные от обработчиков событий нельзя ссылаться в синтаксисе XAML.  
+- <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>: это свойство ожидает, что ссылка на реализацию обратного вызова. Обратные вызовы и методы, отличные от обработчиков событий нельзя ссылаться в синтаксисе XAML.  
   
--   <xref:System.Windows.Data.Binding.ValidationRules%2A>: свойство принимает базовую коллекцию <xref:System.Windows.Controls.ValidationRule> объектов. Это можно выразить как элемент свойства в <xref:System.Windows.Data.Binding> объект элемента, но имеет не доступны метод разбора атрибута для использования в `Binding` выражение. См. в разделе справочника по <xref:System.Windows.Data.Binding.ValidationRules%2A>.  
+- <xref:System.Windows.Data.Binding.ValidationRules%2A>: свойство принимает базовую коллекцию <xref:System.Windows.Controls.ValidationRule> объектов. Это можно выразить как элемент свойства в <xref:System.Windows.Data.Binding> объект элемента, но имеет не доступны метод разбора атрибута для использования в `Binding` выражение. См. в разделе справочника по <xref:System.Windows.Data.Binding.ValidationRules%2A>.  
   
--   <xref:System.Windows.Data.Binding.XmlNamespaceManager%2A>  
+- <xref:System.Windows.Data.Binding.XmlNamespaceManager%2A>  
   
 ## <a name="remarks"></a>Примечания  
   

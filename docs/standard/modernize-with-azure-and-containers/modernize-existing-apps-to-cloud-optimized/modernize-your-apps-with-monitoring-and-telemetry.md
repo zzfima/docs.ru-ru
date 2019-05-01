@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012119"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Модернизация приложений с помощью мониторинга и данных телеметрии
 
@@ -35,15 +35,15 @@ Application Insights — это расширяемая служба управл
 
 [Решение для мониторинга контейнеров](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) в Log Analytics позволяет просматривать и изменять узлы Docker и контейнерах Windows в одном месте. Решение показывает, какие контейнеры запущенных, какой образ контейнера они работают и где выполняются контейнеры. Можно просмотреть подробные сведения аудита, в том числе команды, используемые с контейнерами. Вы также можете устранять неполадки контейнеров, просматривая и поиск централизованные журналы, без необходимости удаленного просмотра узлов Docker или Windows. Решение позволяет находить контейнеры, которые могут быть искажены и занимает слишком много ресурсов на узле. Кроме того можно просмотреть централизованного ЦП, памяти, хранилища и использования сети и сведения о производительности для контейнеров. На компьютерах под управлением Windows, можно централизовать и сравнивать журналы из Windows Server, Hyper-V и контейнеров Docker. Решение поддерживает следующие оркестраторы контейнеров:
 
--   Docker Swarm
+- Docker Swarm
 
--   DC/OS
+- DC/OS
 
--   Kubernetes
+- Kubernetes
 
--   Service Fabric.
+- Service Fabric.
 
--   Red Hat OpenShift
+- Red Hat OpenShift
 
 Рис. 4-11 показаны связи между разными узлами контейнера и агенты и OMS.
 
@@ -53,45 +53,45 @@ Application Insights — это расширяемая служба управл
 
 Можно использовать решение для мониторинга контейнеров Log Analytics для:
 
--   Просмотреть сведения о всех узлов контейнера в одном месте.
+- Просмотреть сведения о всех узлов контейнера в одном месте.
 
--   Знать, какие контейнеры запущенных, какой образ они работают и где они выполняются.
+- Знать, какие контейнеры запущенных, какой образ они работают и где они выполняются.
 
--   См. журнал аудита для действий в контейнерах.
+- См. журнал аудита для действий в контейнерах.
 
--   Устранение неполадок путем просмотра и поиска централизованные журналы без удаленного входа на узлы Docker.
+- Устранение неполадок путем просмотра и поиска централизованные журналы без удаленного входа на узлы Docker.
 
--   Находить контейнеры, которые могут быть «шумных соседей» и чрезмерное количество ресурсов на узле.
+- Находить контейнеры, которые могут быть «шумных соседей» и чрезмерное количество ресурсов на узле.
 
--   Просмотр централизованного ЦП, памяти, хранилища и использования сети и сведения о производительности для контейнеров.
+- Просмотр централизованного ЦП, памяти, хранилища и использования сети и сведения о производительности для контейнеров.
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Обзор мониторинга в Microsoft Azure**
+- **Обзор мониторинга в Microsoft Azure**
 
 <https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **Что такое Azure Application Insights?**
+- **Что такое Azure Application Insights?**
 
 <https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
--   **Что такое Log Analytics?**
+- **Что такое Log Analytics?**
 
 <https://docs.microsoft.com/azure/log-analytics/log-analytics-overview>
 
--   **Решение для мониторинга контейнеров в Azure Monitor**
+- **Решение для мониторинга контейнеров в Azure Monitor**
 
 <https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
--   **Обзор Azure Monitor**
+- **Обзор Azure Monitor**
 
 <https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **Что такое Operations Management Suite (OMS)?**
+- **Что такое Operations Management Suite (OMS)?**
 
 <https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
 
--   **Отслеживание контейнеров Windows Server в Service Fabric с помощью OMS**
+- **Отслеживание контейнеров Windows Server в Service Fabric с помощью OMS**
 
 <https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 

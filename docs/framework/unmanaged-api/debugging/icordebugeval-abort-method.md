@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 682d6684b6c86485530b9e5283d843f3b2eb7e46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995999"
 ---
 # <a name="icordebugevalabort-method"></a>Метод ICorDebugEval::Abort
-Прерывает этот объект ICorDebugEval в настоящее время выполняет вычисление.  
+Прерывает выполняемое вычисление этого объекта ICorDebugEval выполняющему в настоящий момент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,13 +34,13 @@ HRESULT Abort ();
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Если оценка является вложенной и не является самым последним заданием `Abort` может произойти сбой метода.  
+ Если вычисление является вложенным, и это не самую последнюю из них, `Abort` может произойти сбой метода.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

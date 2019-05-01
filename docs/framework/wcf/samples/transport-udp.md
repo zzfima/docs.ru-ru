@@ -3,11 +3,11 @@ title: 'Транспорт: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
 ms.openlocfilehash: 8d72ab5c7d8c461cd2ce4d4003d449ac9fe7e807
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007725"
 ---
 # <a name="transport-udp"></a>Транспорт: UDP
 Пример транспорта UDP демонстрируется реализация UDP одноадресного и многоадресного как пользовательский транспорт Windows Communication Foundation (WCF). Образец описана процедура, предлагаемая для создания пользовательского транспорта в WCF, с помощью инфраструктуры канала и согласно рекомендации по WCF. Для создания пользовательского транспорта выполните следующие действия.  
@@ -32,15 +32,15 @@ ms.locfileid: "59772015"
 ## <a name="message-exchange-patterns"></a>Шаблоны обмена сообщениями  
  При создании пользовательского транспорта в первую очередь решите, какие шаблоны обмена сообщениями требуются для транспорта. Можно выбирать из трех шаблонов обмена сообщениями.  
   
--   Датаграмма (IInputChannel/IOutputChannel)  
+- Датаграмма (IInputChannel/IOutputChannel)  
   
      При использовании шаблона обмена сообщениями "датаграмма" клиент отправляет сообщения, используя принцип "отправить и забыть". В этом случае требуется внешнее подтверждение успешной доставки. Сообщение может быть потеряно при передаче и может не достичь службы. Если операция отправки успешно выполняется на стороне клиента, это не гарантирует, что удаленная конечная точка получит сообщение. Датаграмма - фундаментальный элемент обмена сообщениями, на основе которого можно строить собственные протоколы, в том числе надежные и безопасные. Каналы датаграмм клиентов реализуют интерфейс <xref:System.ServiceModel.Channels.IOutputChannel>, а каналы датаграмм служб - интерфейс <xref:System.ServiceModel.Channels.IInputChannel>.  
   
--   Запрос-ответ (IRequestChannel/IReplyChannel)  
+- Запрос-ответ (IRequestChannel/IReplyChannel)  
   
      При использовании этого шаблона происходит отправка сообщения и получение ответа. Шаблон состоит из пар «запрос-ответ». Примеры вызовов "запрос-ответ" - удаленные вызовы процедур и запросы GET браузера. Этот шаблон также называют полудуплексным. При использовании этого шаблона обмена сообщениями каналы клиентов реализуют интерфейс <xref:System.ServiceModel.Channels.IRequestChannel>, а каналы служб - интерфейс <xref:System.ServiceModel.Channels.IReplyChannel>.  
   
--   Дуплекс (IDuplexChannel)  
+- Дуплекс (IDuplexChannel)  
   
      Дуплексный шаблон обмена сообщениями позволяет клиенту отправлять произвольное количество сообщений и принимать их в произвольном порядке. Применение дуплексного шаблона похоже на разговор по телефону, когда каждое произносимое слово является сообщением. Поскольку в данном случае принимать и отправлять сообщения могут обе стороны, каналы клиента и службы реализуют интерфейс <xref:System.ServiceModel.Channels.IDuplexChannel>.  
   
@@ -52,17 +52,17 @@ ms.locfileid: "59772015"
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>Жизненный цикл ICommunicationObject и объектов WCF  
  WCF содержит общий конечный автомат, который используется для управления жизненным циклом таких объектов, таких как <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, и <xref:System.ServiceModel.Channels.IChannelListener> , которые используются для обмена данными. Эти объекты взаимодействий могут находиться в пяти состояниях. Эти состояния, приведенные ниже, представлены перечислением <xref:System.ServiceModel.CommunicationState>.  
   
--   Создано: Это состояние <xref:System.ServiceModel.ICommunicationObject> при его первом создании экземпляра. Ввод и вывод в этом состоянии не происходит.  
+- Создано: Это состояние <xref:System.ServiceModel.ICommunicationObject> при его первом создании экземпляра. Ввод и вывод в этом состоянии не происходит.  
   
--   При открытии: Объекты переходят в это состояние при <xref:System.ServiceModel.ICommunicationObject.Open%2A> вызывается. В этот момент свойства перестают быть изменяемыми, и могут начинаться ввод и вывод. Переход в это состояние возможен только из состояния Created.  
+- При открытии: Объекты переходят в это состояние при <xref:System.ServiceModel.ICommunicationObject.Open%2A> вызывается. В этот момент свойства перестают быть изменяемыми, и могут начинаться ввод и вывод. Переход в это состояние возможен только из состояния Created.  
   
--   Открыть: Объекты переходят в это состояние после завершения процесса открытия. Переход в это состояние возможен только из состояния Opening. С этого момента объект полностью пригоден для передачи сообщений.  
+- Открыть: Объекты переходят в это состояние после завершения процесса открытия. Переход в это состояние возможен только из состояния Opening. С этого момента объект полностью пригоден для передачи сообщений.  
   
--   Закрытие: Объекты переходят в это состояние при <xref:System.ServiceModel.ICommunicationObject.Close%2A> вызывается для корректного завершения работы. Переход в это состояние возможен только из состояния Opened.  
+- Закрытие: Объекты переходят в это состояние при <xref:System.ServiceModel.ICommunicationObject.Close%2A> вызывается для корректного завершения работы. Переход в это состояние возможен только из состояния Opened.  
   
--   Закрыто: В поле закрыта объекты состояния больше не используются. В общем случае большинство конфигураций доступны для изучения, но никакие взаимодействия происходить не могут. Это состояние равнозначно удалению.  
+- Закрыто: В поле закрыта объекты состояния больше не используются. В общем случае большинство конфигураций доступны для изучения, но никакие взаимодействия происходить не могут. Это состояние равнозначно удалению.  
   
--   Произошел сбой: В состоянии Faulted объекты доступны для изучения, но не может быть использована. Объекты переходят в это состояние при возникновении неустранимой ошибки. Является переход только из этого состояния в `Closed` состояние.  
+- Произошел сбой: В состоянии Faulted объекты доступны для изучения, но не может быть использована. Объекты переходят в это состояние при возникновении неустранимой ошибки. Является переход только из этого состояния в `Closed` состояние.  
   
  Есть события, возникающие при каждом изменении состояния. <xref:System.ServiceModel.ICommunicationObject.Abort%2A> Метод можно вызвать в любое время и вызывает объект мгновенный переход из текущего состояния в состояние Closed. Вызов <xref:System.ServiceModel.ICommunicationObject.Abort%2A> прекращает любую незаконченную работу.  
   
@@ -70,13 +70,13 @@ ms.locfileid: "59772015"
 ## <a name="channel-factory-and-channel-listener"></a>Фабрика каналов и прослушиватель каналов  
  Следующий этап создания пользовательского транспорта - реализация <xref:System.ServiceModel.Channels.IChannelFactory> для каналов клиентов и <xref:System.ServiceModel.Channels.IChannelListener> для каналов служб. Уровень канала использует шаблон фабрики для создания каналов. WCF предоставляет вспомогательные методы базового класса для этого процесса.  
   
--   Класс <xref:System.ServiceModel.Channels.CommunicationObject> реализует интерфейс <xref:System.ServiceModel.ICommunicationObject> и принудительно создает конечный автомат, описанный ранее на шаге 2. 
+- Класс <xref:System.ServiceModel.Channels.CommunicationObject> реализует интерфейс <xref:System.ServiceModel.ICommunicationObject> и принудительно создает конечный автомат, описанный ранее на шаге 2. 
 
--   <xref:System.ServiceModel.Channels.ChannelManagerBase> Класс реализует <xref:System.ServiceModel.Channels.CommunicationObject> и предоставляет универсальный базовый класс для классов <xref:System.ServiceModel.Channels.ChannelFactoryBase> и <xref:System.ServiceModel.Channels.ChannelListenerBase>. Класс <xref:System.ServiceModel.Channels.ChannelManagerBase> работает совместно с классом <xref:System.ServiceModel.Channels.ChannelBase> - базовым классом, реализующим интерфейс <xref:System.ServiceModel.Channels.IChannel>.  
+- <xref:System.ServiceModel.Channels.ChannelManagerBase> Класс реализует <xref:System.ServiceModel.Channels.CommunicationObject> и предоставляет универсальный базовый класс для классов <xref:System.ServiceModel.Channels.ChannelFactoryBase> и <xref:System.ServiceModel.Channels.ChannelListenerBase>. Класс <xref:System.ServiceModel.Channels.ChannelManagerBase> работает совместно с классом <xref:System.ServiceModel.Channels.ChannelBase> - базовым классом, реализующим интерфейс <xref:System.ServiceModel.Channels.IChannel>.  
   
--   <xref:System.ServiceModel.Channels.ChannelFactoryBase> Класс реализует <xref:System.ServiceModel.Channels.ChannelManagerBase> и <xref:System.ServiceModel.Channels.IChannelFactory> и объединяет `CreateChannel` перегрузки в одну `OnCreateChannel` абстрактный метод.  
+- <xref:System.ServiceModel.Channels.ChannelFactoryBase> Класс реализует <xref:System.ServiceModel.Channels.ChannelManagerBase> и <xref:System.ServiceModel.Channels.IChannelFactory> и объединяет `CreateChannel` перегрузки в одну `OnCreateChannel` абстрактный метод.  
   
--   <xref:System.ServiceModel.Channels.ChannelListenerBase> Класс реализует <xref:System.ServiceModel.Channels.IChannelListener>. Он отвечает за базовое управление состоянием.  
+- <xref:System.ServiceModel.Channels.ChannelListenerBase> Класс реализует <xref:System.ServiceModel.Channels.IChannelListener>. Он отвечает за базовое управление состоянием.  
   
  В этом образце реализация фабрики содержится в UdpChannelFactory.cs, а реализация прослушивателя содержится в UdpChannelListener.cs. Реализации <xref:System.ServiceModel.Channels.IChannel> находятся в UdpOutputChannel.cs и UdpInputChannel.cs.  
   
@@ -255,9 +255,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ## <a name="adding-a-standard-binding"></a>Добавление стандартной привязки  
  Элемент привязки можно использовать двумя следующими способами.  
   
--   Посредством пользовательской привязки: Пользовательская привязка позволяет пользователю создать собственную привязку на основе произвольного набора элементов привязки.  
+- Посредством пользовательской привязки: Пользовательская привязка позволяет пользователю создать собственную привязку на основе произвольного набора элементов привязки.  
   
--   С помощью предусмотренной в составе системы привязки, включающей наш элемент привязки. WCF предоставляет ряд этих привязок, определенных системой, такие как `BasicHttpBinding`, `NetTcpBinding`, и `WsHttpBinding`. Каждая из них связана с четко определенным профилем.  
+- С помощью предусмотренной в составе системы привязки, включающей наш элемент привязки. WCF предоставляет ряд этих привязок, определенных системой, такие как `BasicHttpBinding`, `NetTcpBinding`, и `WsHttpBinding`. Каждая из них связана с четко определенным профилем.  
   
  В этом образце реализуется профиль привязки в `SampleProfileUdpBinding`, производном от <xref:System.ServiceModel.Channels.Binding>. Привязка `SampleProfileUdpBinding` содержит до четырех элементов привязки: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement` и `ReliableSessionBindingElement`.  
   

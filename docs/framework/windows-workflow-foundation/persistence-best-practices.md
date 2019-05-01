@@ -3,11 +3,11 @@ title: Оптимальные методы сохраняемости
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
 ms.openlocfilehash: fdbf61e559efbd978df1c5a46fcbbbbc528ec98a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005632"
 ---
 # <a name="persistence-best-practices"></a>Оптимальные методы сохраняемости
 В настоящем документе приведены лучшие методики по проектированию и настройке рабочих процессов, касающиеся сохраняемости рабочих процессов.  
@@ -26,34 +26,34 @@ ms.locfileid: "43800655"
 ## <a name="configuration-of-scalability-parameters"></a>Настройка параметров масштабируемости  
  Требования к масштабируемости и производительности определяют значения следующих параметров:  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>  
+- <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A>  
+- <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A>  
   
--   <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A>  
+- <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A>  
   
  Эти параметры должны быть заданы следующим образом, согласно текущему сценарию.  
   
-### <a name="scenario-a-small-number-of-workflow-instances-that-require-optimal-response-time"></a>Сценарий. Небольшое количество экземпляров рабочего процесса, которые требуют оптимального времени ответа  
+### <a name="scenario-a-small-number-of-workflow-instances-that-require-optimal-response-time"></a>Сценарий: Небольшое количество экземпляров рабочих процессов, которые требуют оптимального времени ответа  
  В этом сценарии все экземпляры рабочего процесса должны оставаться загруженными, когда они становятся простаивающими. Задайте <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> равным большому значению. Использование этого параметра препятствует перемещению экземпляра рабочего процесса с одного компьютера на другой. Используйте этот параметр, только если соблюдаются одно или несколько из следующих условий.  
   
--   Экземпляр рабочего процесса получает единственное сообщение на протяжении всего времени своего существования.  
+- Экземпляр рабочего процесса получает единственное сообщение на протяжении всего времени своего существования.  
   
--   Все экземпляры рабочего процесса запущены на единственном компьютере  
+- Все экземпляры рабочего процесса запущены на единственном компьютере  
   
--   Все сообщения, полученные экземпляром рабочего процесса, получены одним и тем же компьютером.  
+- Все сообщения, полученные экземпляром рабочего процесса, получены одним и тем же компьютером.  
   
  Используйте действия <xref:System.Activities.Statements.Persist> или задайте <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> равным 0, чтобы включить восстановление применяемого экземпляра рабочего процесса после сбоев узла службы или компьютера.  
   
-### <a name="scenario-workflow-instances-are-idle-for-long-periods-of-time"></a>Сценарий. Экземпляры рабочего процесса простаивают в течение продолжительных промежутков времени  
+### <a name="scenario-workflow-instances-are-idle-for-long-periods-of-time"></a>Сценарий: Экземпляры рабочего процесса простаивают в течение длительных периодов времени  
  В этом сценарии задайте <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> равным 0, чтобы освобождать ресурсы как можно скорее.  
   
-### <a name="scenario-workflow-instances-receive-multiple-messages-in-a-short-period-of-time"></a>Сценарий. Экземпляры рабочих процессов получают множество сообщений за короткий период времени  
+### <a name="scenario-workflow-instances-receive-multiple-messages-in-a-short-period-of-time"></a>Сценарий: Экземпляры рабочих процессов получают множество сообщений за короткий период времени  
  В этом сценарии задайте <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> равным 60 секундам, если эти сообщения получены одним и тем же компьютером. Это предотвращает возникновение быстрой последовательности выгрузок и загрузок экземпляра рабочего процесса. При этом также экземпляр не остается в памяти слишком долго.  
   
  Задайте <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> равным 0 и задайте <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A> равным BasicRetry или AggressiveRetry, если эти сообщения могут быть получены разными компьютерами. Это обеспечивает возможность загрузки экземпляра рабочего процесса другим компьютером.  
   
-### <a name="scenario-workflow-uses-delay-activities-with-short-durations"></a>Сценарий. В рабочем процессе используются действия задержки с краткими продолжительностями  
+### <a name="scenario-workflow-uses-delay-activities-with-short-durations"></a>Сценарий: Рабочий процесс использует действия задержки с краткими Продолжительностями  
  В этом сценарии <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> регулярно опрашивает базу данных сохраняемости на наличие экземпляров, которые должны быть загружены из-за истечения срока действия <xref:System.Activities.Statements.Delay>. Если <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> находит таймер, установка которого должна истечь в следующем интервале опроса, то хранилище экземпляров рабочих процессов SQL сокращает интервал опроса. Следующий опрос затем произойдет сразу после истечения установки таймера. Таким образом, хранилище экземпляров рабочих процессов SQL достигает высокой точности установок таймеров, которые работают дольше по сравнению с продолжительностью интервала опроса, который задан в <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod%2A>. Чтобы обеспечить своевременную обработку более коротких задержек, экземпляр рабочего процесса должен оставаться в памяти в течение по крайней мере одного интервала опроса.  
   
  Задайте <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> равным 0, чтобы записать значение срока действия в базу данных сохраняемости.  

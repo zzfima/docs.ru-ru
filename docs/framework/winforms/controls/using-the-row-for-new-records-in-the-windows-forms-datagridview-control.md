@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
 ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009179"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Использование строки элемента управления DataGridView, предназначенной для ввода новых данных, в Windows Forms
 При использовании <xref:System.Windows.Forms.DataGridView> для редактирования данных в приложении, часто требуется предоставить пользователям возможность добавлять новые строки данных в хранилище данных. <xref:System.Windows.Forms.DataGridView> Элемент управления поддерживает данную функцию, предоставляя строку для новых записей, которая всегда находится в последней строке. Оно помечено символ звездочки (*) в заголовке строки. В следующих разделах рассматриваются некоторые аспекты, следует учитывать при включении программы со строкой для новых записей.  
@@ -29,9 +29,9 @@ ms.locfileid: "59184825"
 ## <a name="the-rows-collection"></a>Набор строк  
  Содержится в строке для новых записей <xref:System.Windows.Forms.DataGridView> элемента управления <xref:System.Windows.Forms.DataGridView.Rows%2A> коллекции но ведет себя по-разному в двух аспектах:  
   
--   Невозможно удалить строки для новых записей из <xref:System.Windows.Forms.DataGridView.Rows%2A> коллекции программным способом. <xref:System.InvalidOperationException> Возникает исключение при попытке такой. Пользователь не может удалять строки для новых записей. <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> Метод не удаляет эту строку из <xref:System.Windows.Forms.DataGridView.Rows%2A> коллекции.  
+- Невозможно удалить строки для новых записей из <xref:System.Windows.Forms.DataGridView.Rows%2A> коллекции программным способом. <xref:System.InvalidOperationException> Возникает исключение при попытке такой. Пользователь не может удалять строки для новых записей. <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> Метод не удаляет эту строку из <xref:System.Windows.Forms.DataGridView.Rows%2A> коллекции.  
   
--   Строка не могут добавляться после строки для новых записей. <xref:System.InvalidOperationException> Возникает при попытке такой. Таким образом, строка для новых записей всегда является последней строкой в <xref:System.Windows.Forms.DataGridView> элемента управления. Методы в <xref:System.Windows.Forms.DataGridViewRowCollection> , которые добавляют строки —<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, и <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— все вызывать методы вставки внутренне при наличии строки для новых записей.  
+- Строка не могут добавляться после строки для новых записей. <xref:System.InvalidOperationException> Возникает при попытке такой. Таким образом, строка для новых записей всегда является последней строкой в <xref:System.Windows.Forms.DataGridView> элемента управления. Методы в <xref:System.Windows.Forms.DataGridViewRowCollection> , которые добавляют строки —<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, и <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— все вызывать методы вставки внутренне при наличии строки для новых записей.  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>Настройка внешнего вида строки для новых записей  
  При создании строки для новых записей, он основан на строки, указанной в <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> свойство. Стили ячеек, которые не указаны для этой строки, наследуются от других свойств. Дополнительные сведения о наследовании стилей ячеек, см. в разделе [стили ячеек элемента управления DataGridView Windows Forms в](cell-styles-in-the-windows-forms-datagridview-control.md).  

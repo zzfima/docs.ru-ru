@@ -5,11 +5,11 @@ helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
 ms.openlocfilehash: 9918f07d9c26c1779a1eedfbc423c31e61659334
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44070125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048747"
 ---
 # <a name="analytic-tracing-overview"></a>Общие сведения об аналитическом отслеживании
 Аналитическая трассировка платформы [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] - это набор высокопроизводительных функций с низкой детализацией, добавляемый к трассировке событий Windows (ETW). Трассировка событий Windows работает на уровне ядра, что значительно снижает издержки операций трассировки. Она эффективно буферизует события режима пользователя и ядра и позволяет динамически включать ведение журнала, при этом не требуется перезагружать службу. После их создания и получения данные трассировки отображаются в журналах событий.  

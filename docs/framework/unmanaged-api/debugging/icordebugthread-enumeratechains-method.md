@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e01f94e9574ebc032bc45490fd88ff92e9104aa3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994049"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>Метод ICorDebugThread::EnumerateChains
 Получает указатель интерфейса на перечислитель ICorDebugChainEnum, содержащий всех цепочек стека в этом объекте ICorDebugThread.  
@@ -42,11 +42,11 @@ HRESULT EnumerateChains (
 ## <a name="remarks"></a>Примечания  
  Цепочка стека представляет физический стек вызова для потока. Следующих обстоятельствах создания цепочки границы стека:  
   
--   Управляемого и неуправляемого или неуправляемого в управляемый переход.  
+- Управляемого и неуправляемого или неуправляемого в управляемый переход.  
   
--   Переключение контекста.  
+- Переключение контекста.  
   
--   Объект отладчика захват пользовательского потока.  
+- Объект отладчика захват пользовательского потока.  
   
  В простом случае для потока, на котором выполняется только управляемый код в одном контексте однозначное соответствие будет существовать между потоками и цепочек стека.  
   

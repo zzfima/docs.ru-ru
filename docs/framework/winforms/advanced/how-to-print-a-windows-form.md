@@ -11,11 +11,11 @@ helpviewer_keywords:
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
 ms.openlocfilehash: 85fb12028687578b76e0f16061deb9b9a4de70e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003981"
 ---
 # <a name="how-to-print-a-windows-form"></a>Практическое руководство. Печать формы Windows Forms
 Как часть процесса разработки обычно требуется распечатать копию в форму Windows. В следующем примере кода показано, как распечатать копию текущей формы с помощью <xref:System.Drawing.Graphics.CopyFromScreen%2A> метод.  
@@ -30,9 +30,9 @@ ms.locfileid: "59121970"
 ## <a name="robust-programming"></a>Отказоустойчивость  
  При следующих условиях возможно возникновение исключения:  
   
--   У вас нет разрешения на доступ к принтеру.  
+- У вас нет разрешения на доступ к принтеру.  
   
--   Нет нет установленных принтеров.  
+- Нет нет установленных принтеров.  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Чтобы запустить этот пример кода, необходимо разрешение на доступ к принтеру, используемые с компьютера.  
