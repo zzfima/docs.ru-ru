@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 249de91483117db6b497fa8eae6f97c3eb0a0587
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045530"
 ---
-# <a name="cormethodattr-enumeration"></a><span data-ttu-id="11058-102">Перечисление CorMethodAttr</span><span class="sxs-lookup"><span data-stu-id="11058-102">CorMethodAttr Enumeration</span></span>
-<span data-ttu-id="11058-103">Содержит значения, описывающие возможности метода.</span><span class="sxs-lookup"><span data-stu-id="11058-103">Contains values that describe the features of a method.</span></span>  
+# <a name="cormethodattr-enumeration"></a><span data-ttu-id="5f840-102">Перечисление CorMethodAttr</span><span class="sxs-lookup"><span data-stu-id="5f840-102">CorMethodAttr Enumeration</span></span>
+<span data-ttu-id="5f840-103">Содержит значения, описывающие возможности метода.</span><span class="sxs-lookup"><span data-stu-id="5f840-103">Contains values that describe the features of a method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="11058-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="11058-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5f840-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5f840-104">Syntax</span></span>  
   
 ```  
 typedef enum CorMethodAttr {  
@@ -64,42 +64,42 @@ typedef enum CorMethodAttr {
 } CorMethodAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="11058-105">Участники</span><span class="sxs-lookup"><span data-stu-id="11058-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="5f840-105">Участники</span><span class="sxs-lookup"><span data-stu-id="5f840-105">Members</span></span>  
   
-|<span data-ttu-id="11058-106">Член</span><span class="sxs-lookup"><span data-stu-id="11058-106">Member</span></span>|<span data-ttu-id="11058-107">Описание</span><span class="sxs-lookup"><span data-stu-id="11058-107">Description</span></span>|  
+|<span data-ttu-id="5f840-106">Член</span><span class="sxs-lookup"><span data-stu-id="5f840-106">Member</span></span>|<span data-ttu-id="5f840-107">Описание</span><span class="sxs-lookup"><span data-stu-id="5f840-107">Description</span></span>|  
 |------------|-----------------|  
-|`mdMemberAccessMask`|<span data-ttu-id="11058-108">Указывает доступ к членам.</span><span class="sxs-lookup"><span data-stu-id="11058-108">Specifies member access.</span></span>|  
-|`mdPrivateScope`|<span data-ttu-id="11058-109">Указывает, что член нельзя ссылаться.</span><span class="sxs-lookup"><span data-stu-id="11058-109">Specifies that the member cannot be referenced.</span></span>|  
-|`mdPrivate`|<span data-ttu-id="11058-110">Указывает, что член доступен только для родительского типа.</span><span class="sxs-lookup"><span data-stu-id="11058-110">Specifies that the member is accessible only by the parent type.</span></span>|  
-|`mdFamANDAssem`|<span data-ttu-id="11058-111">Указывает, что член не доступен для подтипов только в этой сборке.</span><span class="sxs-lookup"><span data-stu-id="11058-111">Specifies that the member is accessible by subtypes only in this assembly.</span></span>|  
-|`mdAssem`|<span data-ttu-id="11058-112">Указывает, что член доступен кем-либо, в сборке.</span><span class="sxs-lookup"><span data-stu-id="11058-112">Specifies that the member is accessibly by anyone in the assembly.</span></span>|  
-|`mdFamily`|<span data-ttu-id="11058-113">Указывает, что элемент доступен только для типа и подтипов.</span><span class="sxs-lookup"><span data-stu-id="11058-113">Specifies that the member is accessible only by type and subtypes.</span></span>|  
-|`mdFamORAssem`|<span data-ttu-id="11058-114">Указывает, что член доступен для производных классов и других типов в его сборке.</span><span class="sxs-lookup"><span data-stu-id="11058-114">Specifies that the member is accessible by derived classes and by other types in its assembly.</span></span>|  
-|`mdPublic`|<span data-ttu-id="11058-115">Указывает, что член доступен для всех типов с доступом к области.</span><span class="sxs-lookup"><span data-stu-id="11058-115">Specifies that the member is accessible by all types with access to the scope.</span></span>|  
-|`mdStatic`|<span data-ttu-id="11058-116">Указывает, что член определен как часть типа, а не как член экземпляра.</span><span class="sxs-lookup"><span data-stu-id="11058-116">Specifies that the member is defined as part of the type rather than as a member of an instance.</span></span>|  
-|`mdFinal`|<span data-ttu-id="11058-117">Указывает, что метод не может быть переопределен.</span><span class="sxs-lookup"><span data-stu-id="11058-117">Specifies that the method cannot be overridden.</span></span>|  
-|`mdVirtual`|<span data-ttu-id="11058-118">Указывает, что метод может быть переопределен.</span><span class="sxs-lookup"><span data-stu-id="11058-118">Specifies that the method can be overridden.</span></span>|  
-|`mdHideBySig`|<span data-ttu-id="11058-119">Указывает, что метод скрывает по имени и подписи, а не просто по имени.</span><span class="sxs-lookup"><span data-stu-id="11058-119">Specifies that the method hides by name and signature, rather than just by name.</span></span>|  
-|`mdVtableLayoutMask`|<span data-ttu-id="11058-120">Задает макет виртуальной таблицы.</span><span class="sxs-lookup"><span data-stu-id="11058-120">Specifies virtual table layout.</span></span>|  
-|`mdReuseSlot`|<span data-ttu-id="11058-121">Указывает, что ячейка, используемая для этого метода в виртуальной таблице быть повторно.</span><span class="sxs-lookup"><span data-stu-id="11058-121">Specifies that the slot used for this method in the virtual table be reused.</span></span> <span data-ttu-id="11058-122">Это значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="11058-122">This is the default.</span></span>|  
-|`mdNewSlot`|<span data-ttu-id="11058-123">Указывает, что метод всегда получает новую ячейку в виртуальной таблице.</span><span class="sxs-lookup"><span data-stu-id="11058-123">Specifies that the method always gets a new slot in the virtual table.</span></span>|  
-|`mdCheckAccessOnOverride`|<span data-ttu-id="11058-124">Указывает, что метод могут быть переопределены те же типы, к которым он является видимым.</span><span class="sxs-lookup"><span data-stu-id="11058-124">Specifies that the method can be overridden by the same types to which it is visible.</span></span>|  
-|`mdAbstract`|<span data-ttu-id="11058-125">Указывает, что метод не реализован.</span><span class="sxs-lookup"><span data-stu-id="11058-125">Specifies that the method is not implemented.</span></span>|  
-|`mdSpecialName`|<span data-ttu-id="11058-126">Указывает, что метод является специальным, и указывает его имя как.</span><span class="sxs-lookup"><span data-stu-id="11058-126">Specifies that the method is special, and that its name describes how.</span></span>|  
-|`mdPinvokeImpl`|<span data-ttu-id="11058-127">Указывает, что реализация метода перенаправляется с помощью PInvoke.</span><span class="sxs-lookup"><span data-stu-id="11058-127">Specifies that the method implementation is forwarded using PInvoke.</span></span>|  
-|`mdUnmanagedExport`|<span data-ttu-id="11058-128">Указывает, что метод является управляемый метод экспорте в неуправляемый код.</span><span class="sxs-lookup"><span data-stu-id="11058-128">Specifies that the method is a managed method exported to unmanaged code.</span></span>|  
-|`mdReservedMask`|<span data-ttu-id="11058-129">Зарезервировано для внутреннего использования средой CLR.</span><span class="sxs-lookup"><span data-stu-id="11058-129">Reserved for internal use by the common language runtime.</span></span>|  
-|`mdRTSpecialName`|<span data-ttu-id="11058-130">Указывает, что среда CLR должна проверять кодировку имени метода.</span><span class="sxs-lookup"><span data-stu-id="11058-130">Specifies that the common language runtime should check the encoding of the method name.</span></span>|  
-|`mdHasSecurity`|<span data-ttu-id="11058-131">Указывает, что метод безопасности, связанные с ней.</span><span class="sxs-lookup"><span data-stu-id="11058-131">Specifies that the method has security associated with it.</span></span>|  
-|`mdRequireSecObject`|<span data-ttu-id="11058-132">Указывает, что метод вызывает другой метод, содержащий код безопасности.</span><span class="sxs-lookup"><span data-stu-id="11058-132">Specifies that the method calls another method containing security code.</span></span>|  
+|`mdMemberAccessMask`|<span data-ttu-id="5f840-108">Указывает доступ к членам.</span><span class="sxs-lookup"><span data-stu-id="5f840-108">Specifies member access.</span></span>|  
+|`mdPrivateScope`|<span data-ttu-id="5f840-109">Указывает, что член нельзя ссылаться.</span><span class="sxs-lookup"><span data-stu-id="5f840-109">Specifies that the member cannot be referenced.</span></span>|  
+|`mdPrivate`|<span data-ttu-id="5f840-110">Указывает, что член доступен только для родительского типа.</span><span class="sxs-lookup"><span data-stu-id="5f840-110">Specifies that the member is accessible only by the parent type.</span></span>|  
+|`mdFamANDAssem`|<span data-ttu-id="5f840-111">Указывает, что член не доступен для подтипов только в этой сборке.</span><span class="sxs-lookup"><span data-stu-id="5f840-111">Specifies that the member is accessible by subtypes only in this assembly.</span></span>|  
+|`mdAssem`|<span data-ttu-id="5f840-112">Указывает, что член доступен кем-либо, в сборке.</span><span class="sxs-lookup"><span data-stu-id="5f840-112">Specifies that the member is accessibly by anyone in the assembly.</span></span>|  
+|`mdFamily`|<span data-ttu-id="5f840-113">Указывает, что элемент доступен только для типа и подтипов.</span><span class="sxs-lookup"><span data-stu-id="5f840-113">Specifies that the member is accessible only by type and subtypes.</span></span>|  
+|`mdFamORAssem`|<span data-ttu-id="5f840-114">Указывает, что член доступен для производных классов и других типов в его сборке.</span><span class="sxs-lookup"><span data-stu-id="5f840-114">Specifies that the member is accessible by derived classes and by other types in its assembly.</span></span>|  
+|`mdPublic`|<span data-ttu-id="5f840-115">Указывает, что член доступен для всех типов с доступом к области.</span><span class="sxs-lookup"><span data-stu-id="5f840-115">Specifies that the member is accessible by all types with access to the scope.</span></span>|  
+|`mdStatic`|<span data-ttu-id="5f840-116">Указывает, что член определен как часть типа, а не как член экземпляра.</span><span class="sxs-lookup"><span data-stu-id="5f840-116">Specifies that the member is defined as part of the type rather than as a member of an instance.</span></span>|  
+|`mdFinal`|<span data-ttu-id="5f840-117">Указывает, что метод не может быть переопределен.</span><span class="sxs-lookup"><span data-stu-id="5f840-117">Specifies that the method cannot be overridden.</span></span>|  
+|`mdVirtual`|<span data-ttu-id="5f840-118">Указывает, что метод может быть переопределен.</span><span class="sxs-lookup"><span data-stu-id="5f840-118">Specifies that the method can be overridden.</span></span>|  
+|`mdHideBySig`|<span data-ttu-id="5f840-119">Указывает, что метод скрывает по имени и подписи, а не просто по имени.</span><span class="sxs-lookup"><span data-stu-id="5f840-119">Specifies that the method hides by name and signature, rather than just by name.</span></span>|  
+|`mdVtableLayoutMask`|<span data-ttu-id="5f840-120">Задает макет виртуальной таблицы.</span><span class="sxs-lookup"><span data-stu-id="5f840-120">Specifies virtual table layout.</span></span>|  
+|`mdReuseSlot`|<span data-ttu-id="5f840-121">Указывает, что ячейка, используемая для этого метода в виртуальной таблице быть повторно.</span><span class="sxs-lookup"><span data-stu-id="5f840-121">Specifies that the slot used for this method in the virtual table be reused.</span></span> <span data-ttu-id="5f840-122">Это значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="5f840-122">This is the default.</span></span>|  
+|`mdNewSlot`|<span data-ttu-id="5f840-123">Указывает, что метод всегда получает новую ячейку в виртуальной таблице.</span><span class="sxs-lookup"><span data-stu-id="5f840-123">Specifies that the method always gets a new slot in the virtual table.</span></span>|  
+|`mdCheckAccessOnOverride`|<span data-ttu-id="5f840-124">Указывает, что метод могут быть переопределены те же типы, к которым он является видимым.</span><span class="sxs-lookup"><span data-stu-id="5f840-124">Specifies that the method can be overridden by the same types to which it is visible.</span></span>|  
+|`mdAbstract`|<span data-ttu-id="5f840-125">Указывает, что метод не реализован.</span><span class="sxs-lookup"><span data-stu-id="5f840-125">Specifies that the method is not implemented.</span></span>|  
+|`mdSpecialName`|<span data-ttu-id="5f840-126">Указывает, что метод является специальным, и указывает его имя как.</span><span class="sxs-lookup"><span data-stu-id="5f840-126">Specifies that the method is special, and that its name describes how.</span></span>|  
+|`mdPinvokeImpl`|<span data-ttu-id="5f840-127">Указывает, что реализация метода перенаправляется с помощью PInvoke.</span><span class="sxs-lookup"><span data-stu-id="5f840-127">Specifies that the method implementation is forwarded using PInvoke.</span></span>|  
+|`mdUnmanagedExport`|<span data-ttu-id="5f840-128">Указывает, что метод является управляемый метод экспорте в неуправляемый код.</span><span class="sxs-lookup"><span data-stu-id="5f840-128">Specifies that the method is a managed method exported to unmanaged code.</span></span>|  
+|`mdReservedMask`|<span data-ttu-id="5f840-129">Зарезервировано для внутреннего использования средой CLR.</span><span class="sxs-lookup"><span data-stu-id="5f840-129">Reserved for internal use by the common language runtime.</span></span>|  
+|`mdRTSpecialName`|<span data-ttu-id="5f840-130">Указывает, что среда CLR должна проверять кодировку имени метода.</span><span class="sxs-lookup"><span data-stu-id="5f840-130">Specifies that the common language runtime should check the encoding of the method name.</span></span>|  
+|`mdHasSecurity`|<span data-ttu-id="5f840-131">Указывает, что метод безопасности, связанные с ней.</span><span class="sxs-lookup"><span data-stu-id="5f840-131">Specifies that the method has security associated with it.</span></span>|  
+|`mdRequireSecObject`|<span data-ttu-id="5f840-132">Указывает, что метод вызывает другой метод, содержащий код безопасности.</span><span class="sxs-lookup"><span data-stu-id="5f840-132">Specifies that the method calls another method containing security code.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="11058-133">Требования</span><span class="sxs-lookup"><span data-stu-id="11058-133">Requirements</span></span>  
- <span data-ttu-id="11058-134">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="11058-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5f840-133">Требования</span><span class="sxs-lookup"><span data-stu-id="5f840-133">Requirements</span></span>  
+ <span data-ttu-id="5f840-134">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5f840-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="11058-135">**Заголовок.** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="11058-135">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="5f840-135">**Заголовок.** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="5f840-135">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="11058-136">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="11058-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5f840-136">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5f840-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="11058-137">См. также</span><span class="sxs-lookup"><span data-stu-id="11058-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5f840-137">См. также</span><span class="sxs-lookup"><span data-stu-id="5f840-137">See also</span></span>
 
-- [<span data-ttu-id="11058-138">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="11058-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="5f840-138">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="5f840-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d8f830ca7e273b65dc9ec77566a02df6c32cd464
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045543"
 ---
-# <a name="corpekind-enumeration"></a><span data-ttu-id="80510-102">Перечисление CorPEKind</span><span class="sxs-lookup"><span data-stu-id="80510-102">CorPEKind Enumeration</span></span>
-<span data-ttu-id="80510-103">Содержит значения, описывающие переносимый исполняемый (PE) файл, возвращенный из вызова [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span><span class="sxs-lookup"><span data-stu-id="80510-103">Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span></span>  
+# <a name="corpekind-enumeration"></a><span data-ttu-id="26ec1-102">Перечисление CorPEKind</span><span class="sxs-lookup"><span data-stu-id="26ec1-102">CorPEKind Enumeration</span></span>
+<span data-ttu-id="26ec1-103">Содержит значения, описывающие переносимый исполняемый (PE) файл, возвращенный из вызова [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span><span class="sxs-lookup"><span data-stu-id="26ec1-103">Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="80510-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="80510-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="26ec1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="26ec1-104">Syntax</span></span>  
   
 ```  
 typedef enum CorPEKind {  
@@ -41,27 +41,27 @@ typedef enum CorPEKind {
 } CorPEKind;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="80510-105">Участники</span><span class="sxs-lookup"><span data-stu-id="80510-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="26ec1-105">Участники</span><span class="sxs-lookup"><span data-stu-id="26ec1-105">Members</span></span>  
   
-|<span data-ttu-id="80510-106">Член</span><span class="sxs-lookup"><span data-stu-id="80510-106">Member</span></span>|<span data-ttu-id="80510-107">Описание</span><span class="sxs-lookup"><span data-stu-id="80510-107">Description</span></span>|  
+|<span data-ttu-id="26ec1-106">Член</span><span class="sxs-lookup"><span data-stu-id="26ec1-106">Member</span></span>|<span data-ttu-id="26ec1-107">Описание</span><span class="sxs-lookup"><span data-stu-id="26ec1-107">Description</span></span>|  
 |------------|-----------------|  
-|`peNot`|<span data-ttu-id="80510-108">Указывает, что это не в PE-файл.</span><span class="sxs-lookup"><span data-stu-id="80510-108">Indicates that this is not a PE file.</span></span>|  
-|`peILOnly`|<span data-ttu-id="80510-109">Указывает, что этот PE-файл содержит только управляемый код.</span><span class="sxs-lookup"><span data-stu-id="80510-109">Indicates that this PE file contains only managed code.</span></span>|  
-|`pe32BitRequired`|<span data-ttu-id="80510-110">Указывает, что этот PE-файл выполняет вызовы Win32.</span><span class="sxs-lookup"><span data-stu-id="80510-110">Indicates that this PE file makes Win32 calls.</span></span>|  
-|`pe32Plus`|<span data-ttu-id="80510-111">Указывает, что этот файл PE запускается в 64-разрядной платформе.</span><span class="sxs-lookup"><span data-stu-id="80510-111">Indicates that this PE file runs on a 64-bit platform.</span></span>|  
-|`pe32Unmanaged`|<span data-ttu-id="80510-112">Указывает, что этот файл PE является машинного кода.</span><span class="sxs-lookup"><span data-stu-id="80510-112">Indicates that this PE file is native code.</span></span>|  
-|<span data-ttu-id="80510-113">pe32BitPreferred</span><span class="sxs-lookup"><span data-stu-id="80510-113">pe32BitPreferred</span></span>|<span data-ttu-id="80510-114">Указывает, что этот файл PE независимый от платформы и должен быть загружен в 32-разрядной среде, является предпочтительным.</span><span class="sxs-lookup"><span data-stu-id="80510-114">Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.</span></span>|  
+|`peNot`|<span data-ttu-id="26ec1-108">Указывает, что это не в PE-файл.</span><span class="sxs-lookup"><span data-stu-id="26ec1-108">Indicates that this is not a PE file.</span></span>|  
+|`peILOnly`|<span data-ttu-id="26ec1-109">Указывает, что этот PE-файл содержит только управляемый код.</span><span class="sxs-lookup"><span data-stu-id="26ec1-109">Indicates that this PE file contains only managed code.</span></span>|  
+|`pe32BitRequired`|<span data-ttu-id="26ec1-110">Указывает, что этот PE-файл выполняет вызовы Win32.</span><span class="sxs-lookup"><span data-stu-id="26ec1-110">Indicates that this PE file makes Win32 calls.</span></span>|  
+|`pe32Plus`|<span data-ttu-id="26ec1-111">Указывает, что этот файл PE запускается в 64-разрядной платформе.</span><span class="sxs-lookup"><span data-stu-id="26ec1-111">Indicates that this PE file runs on a 64-bit platform.</span></span>|  
+|`pe32Unmanaged`|<span data-ttu-id="26ec1-112">Указывает, что этот файл PE является машинного кода.</span><span class="sxs-lookup"><span data-stu-id="26ec1-112">Indicates that this PE file is native code.</span></span>|  
+|<span data-ttu-id="26ec1-113">pe32BitPreferred</span><span class="sxs-lookup"><span data-stu-id="26ec1-113">pe32BitPreferred</span></span>|<span data-ttu-id="26ec1-114">Указывает, что этот файл PE независимый от платформы и должен быть загружен в 32-разрядной среде, является предпочтительным.</span><span class="sxs-lookup"><span data-stu-id="26ec1-114">Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="80510-115">Примечания</span><span class="sxs-lookup"><span data-stu-id="80510-115">Remarks</span></span>  
- <span data-ttu-id="80510-116">Эти значения можно использовать в побитовые сочетания.</span><span class="sxs-lookup"><span data-stu-id="80510-116">These values can be used in bitwise combinations.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="26ec1-115">Примечания</span><span class="sxs-lookup"><span data-stu-id="26ec1-115">Remarks</span></span>  
+ <span data-ttu-id="26ec1-116">Эти значения можно использовать в побитовые сочетания.</span><span class="sxs-lookup"><span data-stu-id="26ec1-116">These values can be used in bitwise combinations.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="80510-117">Требования</span><span class="sxs-lookup"><span data-stu-id="80510-117">Requirements</span></span>  
- <span data-ttu-id="80510-118">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="80510-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="26ec1-117">Требования</span><span class="sxs-lookup"><span data-stu-id="26ec1-117">Requirements</span></span>  
+ <span data-ttu-id="26ec1-118">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="26ec1-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="80510-119">**Заголовок.** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="80510-119">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="26ec1-119">**Заголовок.** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="26ec1-119">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="80510-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80510-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="26ec1-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="26ec1-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="80510-121">См. также</span><span class="sxs-lookup"><span data-stu-id="80510-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="26ec1-121">См. также</span><span class="sxs-lookup"><span data-stu-id="26ec1-121">See also</span></span>
 
-- [<span data-ttu-id="80510-122">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="80510-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="26ec1-122">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="26ec1-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -9,24 +9,24 @@ helpviewer_keywords:
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
 ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053240"
 ---
-# <a name="contextmenu"></a><span data-ttu-id="df3da-102">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="df3da-102">ContextMenu</span></span>
-<span data-ttu-id="df3da-103"><xref:System.Windows.Controls.ContextMenu> Позволяет элементу управления для отображения <xref:System.Windows.Controls.Menu> , зависящего от контекста элемента управления.</span><span class="sxs-lookup"><span data-stu-id="df3da-103">The <xref:System.Windows.Controls.ContextMenu> allows a control to display a <xref:System.Windows.Controls.Menu> that is specific to the context of the control.</span></span> <span data-ttu-id="df3da-104">Как правило <xref:System.Windows.Controls.ContextMenu> предоставляется в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] через правой кнопкой мыши или клавиатуры кнопки меню.</span><span class="sxs-lookup"><span data-stu-id="df3da-104">Typically, the <xref:System.Windows.Controls.ContextMenu> is exposed in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] through the right mouse button or through the keyboard’s menu button.</span></span>  
+# <a name="contextmenu"></a><span data-ttu-id="02421-102">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="02421-102">ContextMenu</span></span>
+<span data-ttu-id="02421-103"><xref:System.Windows.Controls.ContextMenu> Позволяет элементу управления для отображения <xref:System.Windows.Controls.Menu> , зависящего от контекста элемента управления.</span><span class="sxs-lookup"><span data-stu-id="02421-103">The <xref:System.Windows.Controls.ContextMenu> allows a control to display a <xref:System.Windows.Controls.Menu> that is specific to the context of the control.</span></span> <span data-ttu-id="02421-104">Как правило <xref:System.Windows.Controls.ContextMenu> предоставляется в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] через правой кнопкой мыши или клавиатуры кнопки меню.</span><span class="sxs-lookup"><span data-stu-id="02421-104">Typically, the <xref:System.Windows.Controls.ContextMenu> is exposed in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] through the right mouse button or through the keyboard’s menu button.</span></span>  
   
- <span data-ttu-id="df3da-105">На следующем рисунке показана <xref:System.Windows.Controls.ContextMenu> в двух разных состояниях: состояние по умолчанию и открытом состоянии.</span><span class="sxs-lookup"><span data-stu-id="df3da-105">The following figure illustrates a <xref:System.Windows.Controls.ContextMenu> in two different states: the default state and the open state.</span></span> <span data-ttu-id="df3da-106">В состоянии по умолчанию элемент управления свернут.</span><span class="sxs-lookup"><span data-stu-id="df3da-106">In the default state, the control is collapsed.</span></span> <span data-ttu-id="df3da-107">При нажатии правой кнопки мыши родительского элемента меню элемент управления развернут и отображает элементы меню.</span><span class="sxs-lookup"><span data-stu-id="df3da-107">When the right mouse button is pressed over the parent of the menu, the control expands and displays the menu items.</span></span>  
+ <span data-ttu-id="02421-105">На следующем рисунке показана <xref:System.Windows.Controls.ContextMenu> в двух разных состояниях: состояние по умолчанию и открытом состоянии.</span><span class="sxs-lookup"><span data-stu-id="02421-105">The following figure illustrates a <xref:System.Windows.Controls.ContextMenu> in two different states: the default state and the open state.</span></span> <span data-ttu-id="02421-106">В состоянии по умолчанию элемент управления свернут.</span><span class="sxs-lookup"><span data-stu-id="02421-106">In the default state, the control is collapsed.</span></span> <span data-ttu-id="02421-107">При нажатии правой кнопки мыши родительского элемента меню элемент управления развернут и отображает элементы меню.</span><span class="sxs-lookup"><span data-stu-id="02421-107">When the right mouse button is pressed over the parent of the menu, the control expands and displays the menu items.</span></span>  
   
- <span data-ttu-id="df3da-108">![Состояния ContextMenu](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span><span class="sxs-lookup"><span data-stu-id="df3da-108">![ContextMenu states](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span></span>  
-<span data-ttu-id="df3da-109">ContextMenu в различных состояниях</span><span class="sxs-lookup"><span data-stu-id="df3da-109">ContextMenu in different states</span></span>  
+ <span data-ttu-id="02421-108">![Состояния ContextMenu](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span><span class="sxs-lookup"><span data-stu-id="02421-108">![ContextMenu states](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span></span>  
+<span data-ttu-id="02421-109">ContextMenu в различных состояниях</span><span class="sxs-lookup"><span data-stu-id="02421-109">ContextMenu in different states</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="df3da-110">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="df3da-110">In This Section</span></span>  
- [<span data-ttu-id="df3da-111">Общие сведения об элементе ContextMenu</span><span class="sxs-lookup"><span data-stu-id="df3da-111">ContextMenu Overview</span></span>](contextmenu-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="02421-110">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="02421-110">In This Section</span></span>  
+ [<span data-ttu-id="02421-111">Общие сведения об элементе ContextMenu</span><span class="sxs-lookup"><span data-stu-id="02421-111">ContextMenu Overview</span></span>](contextmenu-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="df3da-112">Ссылка</span><span class="sxs-lookup"><span data-stu-id="df3da-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="02421-112">Ссылка</span><span class="sxs-lookup"><span data-stu-id="02421-112">Reference</span></span>  
  <xref:System.Windows.Controls.ContextMenu>  
   
-## <a name="related-sections"></a><span data-ttu-id="df3da-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="df3da-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="02421-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="02421-113">Related Sections</span></span>

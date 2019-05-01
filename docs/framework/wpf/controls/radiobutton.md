@@ -8,21 +8,21 @@ helpviewer_keywords:
 - controls [WPF], RadioButton
 ms.assetid: 6c9ba847-eab7-4bba-9c74-6b56ef72067b
 ms.openlocfilehash: 32db3436b536cd1a27dd79e0e98cdc3e6f21c4c9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024129"
 ---
-# <a name="radiobutton"></a><span data-ttu-id="5831b-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="5831b-102">RadioButton</span></span>
-<span data-ttu-id="5831b-103"><xref:System.Windows.Controls.RadioButton> элементы управления обычно группируются предлагать пользователям выбор одного из нескольких вариантов; можно выбрать только одну кнопку за раз.</span><span class="sxs-lookup"><span data-stu-id="5831b-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
+# <a name="radiobutton"></a><span data-ttu-id="d8494-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="d8494-102">RadioButton</span></span>
+<span data-ttu-id="d8494-103"><xref:System.Windows.Controls.RadioButton> элементы управления обычно группируются предлагать пользователям выбор одного из нескольких вариантов; можно выбрать только одну кнопку за раз.</span><span class="sxs-lookup"><span data-stu-id="d8494-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
   
- <span data-ttu-id="5831b-104">Ниже показан пример <xref:System.Windows.Controls.RadioButton> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5831b-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
+ <span data-ttu-id="d8494-104">Ниже показан пример <xref:System.Windows.Controls.RadioButton> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="d8494-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
   
- <span data-ttu-id="5831b-105">![Переключатель состояния кнопки](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="5831b-105">![Radio button states](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
-<span data-ttu-id="5831b-106">Типичный RadioButton</span><span class="sxs-lookup"><span data-stu-id="5831b-106">Typical RadioButton</span></span>  
+ <span data-ttu-id="d8494-105">![Переключатель состояния кнопки](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="d8494-105">![Radio button states](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
+<span data-ttu-id="d8494-106">Типичный RadioButton</span><span class="sxs-lookup"><span data-stu-id="d8494-106">Typical RadioButton</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="5831b-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="5831b-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d8494-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="d8494-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ToggleButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="5831b-108">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="5831b-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="d8494-108">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="d8494-108">Related Sections</span></span>

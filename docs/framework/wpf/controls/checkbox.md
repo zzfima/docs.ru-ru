@@ -8,24 +8,24 @@ helpviewer_keywords:
 - CheckBox control [WPF]
 ms.assetid: ee701cc2-968b-4683-8f81-3fafd8542700
 ms.openlocfilehash: 42d4d0e232d66c076a2f3ecfb2ae95a41b0557a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052226"
 ---
-# <a name="checkbox"></a><span data-ttu-id="43f16-102">CheckBox</span><span class="sxs-lookup"><span data-stu-id="43f16-102">CheckBox</span></span>
-<span data-ttu-id="43f16-103">Можно использовать <xref:System.Windows.Controls.CheckBox> в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] приложения для представления параметров, которые пользователь может выбрать или очистить.</span><span class="sxs-lookup"><span data-stu-id="43f16-103">You can use a <xref:System.Windows.Controls.CheckBox> in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] of your application to represent options that a user can select or clear.</span></span> <span data-ttu-id="43f16-104">Вы можете использовать один флажок или можно сгруппировать две или несколько флажков.</span><span class="sxs-lookup"><span data-stu-id="43f16-104">You can use a single check box or you can group two or more check boxes.</span></span>  
+# <a name="checkbox"></a><span data-ttu-id="373d2-102">CheckBox</span><span class="sxs-lookup"><span data-stu-id="373d2-102">CheckBox</span></span>
+<span data-ttu-id="373d2-103">Можно использовать <xref:System.Windows.Controls.CheckBox> в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] приложения для представления параметров, которые пользователь может выбрать или очистить.</span><span class="sxs-lookup"><span data-stu-id="373d2-103">You can use a <xref:System.Windows.Controls.CheckBox> in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] of your application to represent options that a user can select or clear.</span></span> <span data-ttu-id="373d2-104">Вы можете использовать один флажок или можно сгруппировать две или несколько флажков.</span><span class="sxs-lookup"><span data-stu-id="373d2-104">You can use a single check box or you can group two or more check boxes.</span></span>  
   
- <span data-ttu-id="43f16-105">На следующем рисунке показан различных состояний элемента <xref:System.Windows.Controls.CheckBox>.</span><span class="sxs-lookup"><span data-stu-id="43f16-105">The following graphic shows the different states of a <xref:System.Windows.Controls.CheckBox>.</span></span>  
+ <span data-ttu-id="373d2-105">На следующем рисунке показан различных состояний элемента <xref:System.Windows.Controls.CheckBox>.</span><span class="sxs-lookup"><span data-stu-id="373d2-105">The following graphic shows the different states of a <xref:System.Windows.Controls.CheckBox>.</span></span>  
   
- <span data-ttu-id="43f16-106">![Состояния CheckBox](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span><span class="sxs-lookup"><span data-stu-id="43f16-106">![CheckBox states](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span></span>  
-<span data-ttu-id="43f16-107">Элементы управления CheckBox в различных состояниях</span><span class="sxs-lookup"><span data-stu-id="43f16-107">CheckBox controls in different states</span></span>  
+ <span data-ttu-id="373d2-106">![Состояния CheckBox](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span><span class="sxs-lookup"><span data-stu-id="373d2-106">![CheckBox states](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span></span>  
+<span data-ttu-id="373d2-107">Элементы управления CheckBox в различных состояниях</span><span class="sxs-lookup"><span data-stu-id="373d2-107">CheckBox controls in different states</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="43f16-108">Ссылка</span><span class="sxs-lookup"><span data-stu-id="43f16-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="373d2-108">Ссылка</span><span class="sxs-lookup"><span data-stu-id="373d2-108">Reference</span></span>  
  <xref:System.Windows.Controls.CheckBox>  
   <xref:System.Windows.Controls.RadioButton>  
   <xref:System.Windows.Controls.Primitives.ButtonBase>  
   <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="43f16-109">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="43f16-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="373d2-109">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="373d2-109">Related Sections</span></span>

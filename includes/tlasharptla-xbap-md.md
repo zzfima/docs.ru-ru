@@ -1,1 +1,9 @@
-<span data-ttu-id="58d13-101">Приложение обозревателя XAML (XBAP)</span><span class="sxs-lookup"><span data-stu-id="58d13-101">XAML browser application (XBAP)</span></span>
+---
+ms.openlocfilehash: 0a4c14c623348422541327c6a6b0e10b24862695
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696568"
+---
+<span data-ttu-id="0a73a-101">Приложение обозревателя XAML (XBAP)</span><span class="sxs-lookup"><span data-stu-id="0a73a-101">XAML browser application (XBAP)</span></span>

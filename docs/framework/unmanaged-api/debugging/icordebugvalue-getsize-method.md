@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 41a9ff2c94c98a5acc930d68e648b0ea577a82c3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986847"
 ---
-# <a name="icordebugvaluegetsize-method"></a><span data-ttu-id="58ba3-102">Метод ICorDebugValue::GetSize</span><span class="sxs-lookup"><span data-stu-id="58ba3-102">ICorDebugValue::GetSize Method</span></span>
-<span data-ttu-id="58ba3-103">Получает размер в байтах объекта «ICorDebugValue».</span><span class="sxs-lookup"><span data-stu-id="58ba3-103">Gets the size, in bytes, of this "ICorDebugValue" object.</span></span>  
+# <a name="icordebugvaluegetsize-method"></a><span data-ttu-id="1ee17-102">Метод ICorDebugValue::GetSize</span><span class="sxs-lookup"><span data-stu-id="1ee17-102">ICorDebugValue::GetSize Method</span></span>
+<span data-ttu-id="1ee17-103">Получает размер в байтах объекта «ICorDebugValue».</span><span class="sxs-lookup"><span data-stu-id="1ee17-103">Gets the size, in bytes, of this "ICorDebugValue" object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="58ba3-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="58ba3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1ee17-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1ee17-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSize (  
@@ -35,24 +35,24 @@ HRESULT GetSize (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="58ba3-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="58ba3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1ee17-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="1ee17-105">Parameters</span></span>  
  `pSize`  
- <span data-ttu-id="58ba3-106">[out] Размер в байтах, значение объекта.</span><span class="sxs-lookup"><span data-stu-id="58ba3-106">[out] The size, in bytes, of this value object.</span></span>  
+ <span data-ttu-id="1ee17-106">[out] Размер в байтах, значение объекта.</span><span class="sxs-lookup"><span data-stu-id="1ee17-106">[out] The size, in bytes, of this value object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="58ba3-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="58ba3-107">Remarks</span></span>  
- <span data-ttu-id="58ba3-108">Если тип значения является ссылочным типом, этот метод возвращает размер указателя, а не размер объекта.</span><span class="sxs-lookup"><span data-stu-id="58ba3-108">If the value's type is a reference type, this method returns the size of the pointer rather than the size of the object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1ee17-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="1ee17-107">Remarks</span></span>  
+ <span data-ttu-id="1ee17-108">Если тип значения является ссылочным типом, этот метод возвращает размер указателя, а не размер объекта.</span><span class="sxs-lookup"><span data-stu-id="1ee17-108">If the value's type is a reference type, this method returns the size of the pointer rather than the size of the object.</span></span>  
   
- <span data-ttu-id="58ba3-109">`ICorDebugValue::GetSize` Возвращает метод `COR_E_OVERFLOW` для объектов, размер которых превышает 4 ГБ на 64-разрядных платформах.</span><span class="sxs-lookup"><span data-stu-id="58ba3-109">The `ICorDebugValue::GetSize` method returns `COR_E_OVERFLOW` for objects that are larger than 4 GB on 64-bit platforms.</span></span> <span data-ttu-id="58ba3-110">Используйте [ICorDebugValue3::GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) метод вместо этого для объектов, размер которых превышает 4 ГБ.</span><span class="sxs-lookup"><span data-stu-id="58ba3-110">Use the [ICorDebugValue3::GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) method instead for objects that are larger than 4 GB.</span></span>  
+ <span data-ttu-id="1ee17-109">`ICorDebugValue::GetSize` Возвращает метод `COR_E_OVERFLOW` для объектов, размер которых превышает 4 ГБ на 64-разрядных платформах.</span><span class="sxs-lookup"><span data-stu-id="1ee17-109">The `ICorDebugValue::GetSize` method returns `COR_E_OVERFLOW` for objects that are larger than 4 GB on 64-bit platforms.</span></span> <span data-ttu-id="1ee17-110">Используйте [ICorDebugValue3::GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) метод вместо этого для объектов, размер которых превышает 4 ГБ.</span><span class="sxs-lookup"><span data-stu-id="1ee17-110">Use the [ICorDebugValue3::GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) method instead for objects that are larger than 4 GB.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="58ba3-111">Требования</span><span class="sxs-lookup"><span data-stu-id="58ba3-111">Requirements</span></span>  
- <span data-ttu-id="58ba3-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="58ba3-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1ee17-111">Требования</span><span class="sxs-lookup"><span data-stu-id="1ee17-111">Requirements</span></span>  
+ <span data-ttu-id="1ee17-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1ee17-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="58ba3-113">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="58ba3-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1ee17-113">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1ee17-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="58ba3-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="58ba3-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1ee17-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1ee17-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="58ba3-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="58ba3-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="1ee17-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1ee17-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="58ba3-116">См. также</span><span class="sxs-lookup"><span data-stu-id="58ba3-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1ee17-116">См. также</span><span class="sxs-lookup"><span data-stu-id="1ee17-116">See also</span></span>
 
-- [<span data-ttu-id="58ba3-117">Метод GetSize64</span><span class="sxs-lookup"><span data-stu-id="58ba3-117">GetSize64 Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)
+- [<span data-ttu-id="1ee17-117">Метод GetSize64</span><span class="sxs-lookup"><span data-stu-id="1ee17-117">GetSize64 Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)

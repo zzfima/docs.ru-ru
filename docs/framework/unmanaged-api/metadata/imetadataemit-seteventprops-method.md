@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: abfa8a3f58d3e9f7c80762c1faf2bc51514d71b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050042"
 ---
-# <a name="imetadataemitseteventprops-method"></a><span data-ttu-id="7f770-102">Метод IMetaDataEmit::SetEventProps</span><span class="sxs-lookup"><span data-stu-id="7f770-102">IMetaDataEmit::SetEventProps Method</span></span>
-<span data-ttu-id="7f770-103">Задает или обновляет указанный компонент события, определенного с помощью предыдущего вызова [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).</span><span class="sxs-lookup"><span data-stu-id="7f770-103">Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).</span></span>  
+# <a name="imetadataemitseteventprops-method"></a><span data-ttu-id="62df6-102">Метод IMetaDataEmit::SetEventProps</span><span class="sxs-lookup"><span data-stu-id="62df6-102">IMetaDataEmit::SetEventProps Method</span></span>
+<span data-ttu-id="62df6-103">Задает или обновляет указанный компонент события, определенного с помощью предыдущего вызова [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).</span><span class="sxs-lookup"><span data-stu-id="62df6-103">Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7f770-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7f770-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="62df6-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="62df6-104">Syntax</span></span>  
   
 ```  
 HRESULT SetEventProps (  
@@ -41,38 +41,38 @@ HRESULT SetEventProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7f770-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="7f770-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="62df6-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="62df6-105">Parameters</span></span>  
  `ev`  
- <span data-ttu-id="7f770-106">[in] Токен события.</span><span class="sxs-lookup"><span data-stu-id="7f770-106">[in] The event token.</span></span>  
+ <span data-ttu-id="62df6-106">[in] Токен события.</span><span class="sxs-lookup"><span data-stu-id="62df6-106">[in] The event token.</span></span>  
   
  `dwEventFlags`  
- <span data-ttu-id="7f770-107">[in] Флаги событий.</span><span class="sxs-lookup"><span data-stu-id="7f770-107">[in] Event flags.</span></span> <span data-ttu-id="7f770-108">Это битовая маска `CorEventAttr` значения.</span><span class="sxs-lookup"><span data-stu-id="7f770-108">This is a bitmask of `CorEventAttr` values.</span></span>  
+ <span data-ttu-id="62df6-107">[in] Флаги событий.</span><span class="sxs-lookup"><span data-stu-id="62df6-107">[in] Event flags.</span></span> <span data-ttu-id="62df6-108">Это битовая маска `CorEventAttr` значения.</span><span class="sxs-lookup"><span data-stu-id="62df6-108">This is a bitmask of `CorEventAttr` values.</span></span>  
   
  `tkEventType`  
- <span data-ttu-id="7f770-109">[in] Токен для класса событий.</span><span class="sxs-lookup"><span data-stu-id="7f770-109">[in] The token for the event class.</span></span> <span data-ttu-id="7f770-110">Это может быть либо `mdTypeDef` или `mdTypeRef` токена.</span><span class="sxs-lookup"><span data-stu-id="7f770-110">This is either a `mdTypeDef` or a `mdTypeRef` token.</span></span>  
+ <span data-ttu-id="62df6-109">[in] Токен для класса событий.</span><span class="sxs-lookup"><span data-stu-id="62df6-109">[in] The token for the event class.</span></span> <span data-ttu-id="62df6-110">Это может быть либо `mdTypeDef` или `mdTypeRef` токена.</span><span class="sxs-lookup"><span data-stu-id="62df6-110">This is either a `mdTypeDef` or a `mdTypeRef` token.</span></span>  
   
  `mdAddOn`  
- <span data-ttu-id="7f770-111">[in] Метод, используемый для подписки на событие, или значение null.</span><span class="sxs-lookup"><span data-stu-id="7f770-111">[in] The method used to subscribe to the event, or null.</span></span>  
+ <span data-ttu-id="62df6-111">[in] Метод, используемый для подписки на событие, или значение null.</span><span class="sxs-lookup"><span data-stu-id="62df6-111">[in] The method used to subscribe to the event, or null.</span></span>  
   
  `mdRemoveOn`  
- <span data-ttu-id="7f770-112">[in] Метод, используемый для отказа от подписки на событие, или значение null.</span><span class="sxs-lookup"><span data-stu-id="7f770-112">[in] The method used to unsubscribe to the event, or null.</span></span>  
+ <span data-ttu-id="62df6-112">[in] Метод, используемый для отказа от подписки на событие, или значение null.</span><span class="sxs-lookup"><span data-stu-id="62df6-112">[in] The method used to unsubscribe to the event, or null.</span></span>  
   
  `mdFire`  
- <span data-ttu-id="7f770-113">[in] Метод, используемый (с помощью производного класса) для вызова события.</span><span class="sxs-lookup"><span data-stu-id="7f770-113">[in] The method used (by a derived class) to raise the event.</span></span>  
+ <span data-ttu-id="62df6-113">[in] Метод, используемый (с помощью производного класса) для вызова события.</span><span class="sxs-lookup"><span data-stu-id="62df6-113">[in] The method used (by a derived class) to raise the event.</span></span>  
   
  `rmdOtherMethods[]`  
- <span data-ttu-id="7f770-114">[in] Массив маркеров для других методов, связанный с событием.</span><span class="sxs-lookup"><span data-stu-id="7f770-114">[in] An array of tokens for other methods associated with the event.</span></span> <span data-ttu-id="7f770-115">Последний элемент массива должен быть `mdMethodDefNil`.</span><span class="sxs-lookup"><span data-stu-id="7f770-115">The last element of the array must be `mdMethodDefNil`.</span></span>  
+ <span data-ttu-id="62df6-114">[in] Массив маркеров для других методов, связанный с событием.</span><span class="sxs-lookup"><span data-stu-id="62df6-114">[in] An array of tokens for other methods associated with the event.</span></span> <span data-ttu-id="62df6-115">Последний элемент массива должен быть `mdMethodDefNil`.</span><span class="sxs-lookup"><span data-stu-id="62df6-115">The last element of the array must be `mdMethodDefNil`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7f770-116">Требования</span><span class="sxs-lookup"><span data-stu-id="7f770-116">Requirements</span></span>  
- <span data-ttu-id="7f770-117">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7f770-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="62df6-116">Требования</span><span class="sxs-lookup"><span data-stu-id="62df6-116">Requirements</span></span>  
+ <span data-ttu-id="62df6-117">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="62df6-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7f770-118">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7f770-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="62df6-118">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="62df6-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7f770-119">**Библиотека:** Используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7f770-119">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="62df6-119">**Библиотека:** Используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="62df6-119">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="7f770-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7f770-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="62df6-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="62df6-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7f770-121">См. также</span><span class="sxs-lookup"><span data-stu-id="7f770-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="62df6-121">См. также</span><span class="sxs-lookup"><span data-stu-id="62df6-121">See also</span></span>
 
-- [<span data-ttu-id="7f770-122">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="7f770-122">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="7f770-123">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="7f770-123">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="62df6-122">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="62df6-122">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="62df6-123">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="62df6-123">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

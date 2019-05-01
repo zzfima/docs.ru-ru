@@ -3,43 +3,43 @@ title: Практическое руководство. Как реализов�
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
 ms.openlocfilehash: b3e0b5cef01998c1e509586ba1fab3924eb7bc0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000913"
 ---
-# <a name="how-to-implement-a-discovery-proxy"></a><span data-ttu-id="c25aa-102">Практическое руководство. Как реализовать прокси-сервер обнаружения</span><span class="sxs-lookup"><span data-stu-id="c25aa-102">How to: Implement a Discovery Proxy</span></span>
-<span data-ttu-id="c25aa-103">В этом разделе приведены сведения о реализации прокси-сервера обнаружения.</span><span class="sxs-lookup"><span data-stu-id="c25aa-103">This topic explains how to implement a discovery proxy.</span></span> <span data-ttu-id="c25aa-104">Дополнительные сведения о функции обнаружения в Windows Communication Foundation (WCF), см. в разделе [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span><span class="sxs-lookup"><span data-stu-id="c25aa-104">For more information about the discovery feature in Windows Communication Foundation (WCF), see [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span></span> <span data-ttu-id="c25aa-105">Прокси-сервер обнаружения реализуется созданием класса, расширяющего абстрактный класс <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span><span class="sxs-lookup"><span data-stu-id="c25aa-105">A discovery proxy can be implemented by creating a class that extends the <xref:System.ServiceModel.Discovery.DiscoveryProxy> abstract class.</span></span> <span data-ttu-id="c25aa-106">В этом образце определены и использованы несколько других вспомогательных классов.</span><span class="sxs-lookup"><span data-stu-id="c25aa-106">There are a number of other support classes defined and used in this sample.</span></span> <span data-ttu-id="c25aa-107">`OnResolveAsyncResult`, `OnFindAsyncResult` и `AsyncResult`.</span><span class="sxs-lookup"><span data-stu-id="c25aa-107">`OnResolveAsyncResult`, `OnFindAsyncResult`, and `AsyncResult`.</span></span> <span data-ttu-id="c25aa-108">Эти классы реализуют интерфейс <xref:System.IAsyncResult>.</span><span class="sxs-lookup"><span data-stu-id="c25aa-108">These classes implement the <xref:System.IAsyncResult> interface.</span></span> <span data-ttu-id="c25aa-109">Дополнительные сведения о <xref:System.IAsyncResult> см. в разделе [интерфейс System.IAsyncResult](xref:System.IAsyncResult).</span><span class="sxs-lookup"><span data-stu-id="c25aa-109">For more information about <xref:System.IAsyncResult> see [System.IAsyncResult interface](xref:System.IAsyncResult).</span></span>
+# <a name="how-to-implement-a-discovery-proxy"></a><span data-ttu-id="16faa-102">Практическое руководство. Как реализовать прокси-сервер обнаружения</span><span class="sxs-lookup"><span data-stu-id="16faa-102">How to: Implement a Discovery Proxy</span></span>
+<span data-ttu-id="16faa-103">В этом разделе приведены сведения о реализации прокси-сервера обнаружения.</span><span class="sxs-lookup"><span data-stu-id="16faa-103">This topic explains how to implement a discovery proxy.</span></span> <span data-ttu-id="16faa-104">Дополнительные сведения о функции обнаружения в Windows Communication Foundation (WCF), см. в разделе [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span><span class="sxs-lookup"><span data-stu-id="16faa-104">For more information about the discovery feature in Windows Communication Foundation (WCF), see [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span></span> <span data-ttu-id="16faa-105">Прокси-сервер обнаружения реализуется созданием класса, расширяющего абстрактный класс <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span><span class="sxs-lookup"><span data-stu-id="16faa-105">A discovery proxy can be implemented by creating a class that extends the <xref:System.ServiceModel.Discovery.DiscoveryProxy> abstract class.</span></span> <span data-ttu-id="16faa-106">В этом образце определены и использованы несколько других вспомогательных классов.</span><span class="sxs-lookup"><span data-stu-id="16faa-106">There are a number of other support classes defined and used in this sample.</span></span> <span data-ttu-id="16faa-107">`OnResolveAsyncResult`, `OnFindAsyncResult` и `AsyncResult`.</span><span class="sxs-lookup"><span data-stu-id="16faa-107">`OnResolveAsyncResult`, `OnFindAsyncResult`, and `AsyncResult`.</span></span> <span data-ttu-id="16faa-108">Эти классы реализуют интерфейс <xref:System.IAsyncResult>.</span><span class="sxs-lookup"><span data-stu-id="16faa-108">These classes implement the <xref:System.IAsyncResult> interface.</span></span> <span data-ttu-id="16faa-109">Дополнительные сведения о <xref:System.IAsyncResult> см. в разделе [интерфейс System.IAsyncResult](xref:System.IAsyncResult).</span><span class="sxs-lookup"><span data-stu-id="16faa-109">For more information about <xref:System.IAsyncResult> see [System.IAsyncResult interface](xref:System.IAsyncResult).</span></span>
 
- <span data-ttu-id="c25aa-110">В данном разделе реализация прокси-сервера обнаружения разделена на три основные части.</span><span class="sxs-lookup"><span data-stu-id="c25aa-110">Implementing a discovery proxy is broken down into three main parts in this topic:</span></span>
+ <span data-ttu-id="16faa-110">В данном разделе реализация прокси-сервера обнаружения разделена на три основные части.</span><span class="sxs-lookup"><span data-stu-id="16faa-110">Implementing a discovery proxy is broken down into three main parts in this topic:</span></span>
 
--   <span data-ttu-id="c25aa-111">Определение класса, который содержит хранилище данных и расширяет абстрактный класс <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span><span class="sxs-lookup"><span data-stu-id="c25aa-111">Define a class that contains a data store and extends the abstract <xref:System.ServiceModel.Discovery.DiscoveryProxy> class.</span></span>
+- <span data-ttu-id="16faa-111">Определение класса, который содержит хранилище данных и расширяет абстрактный класс <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span><span class="sxs-lookup"><span data-stu-id="16faa-111">Define a class that contains a data store and extends the abstract <xref:System.ServiceModel.Discovery.DiscoveryProxy> class.</span></span>
 
--   <span data-ttu-id="c25aa-112">Реализация вспомогательного класса `AsyncResult`.</span><span class="sxs-lookup"><span data-stu-id="c25aa-112">Implement the helper `AsyncResult` class.</span></span>
+- <span data-ttu-id="16faa-112">Реализация вспомогательного класса `AsyncResult`.</span><span class="sxs-lookup"><span data-stu-id="16faa-112">Implement the helper `AsyncResult` class.</span></span>
 
--   <span data-ttu-id="c25aa-113">Размещение прокси-сервера обнаружения.</span><span class="sxs-lookup"><span data-stu-id="c25aa-113">Host the Discovery Proxy.</span></span>
+- <span data-ttu-id="16faa-113">Размещение прокси-сервера обнаружения.</span><span class="sxs-lookup"><span data-stu-id="16faa-113">Host the Discovery Proxy.</span></span>
 
-### <a name="to-create-a-new-console-application-project"></a><span data-ttu-id="c25aa-114">Создание нового проекта консольного приложения</span><span class="sxs-lookup"><span data-stu-id="c25aa-114">To create a new console application project</span></span>
+### <a name="to-create-a-new-console-application-project"></a><span data-ttu-id="16faa-114">Создание нового проекта консольного приложения</span><span class="sxs-lookup"><span data-stu-id="16faa-114">To create a new console application project</span></span>
 
-1. <span data-ttu-id="c25aa-115">Запустите Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="c25aa-115">Start Visual Studio 2012.</span></span>
+1. <span data-ttu-id="16faa-115">Запустите Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="16faa-115">Start Visual Studio 2012.</span></span>
 
-2. <span data-ttu-id="c25aa-116">Создайте новый проект консольного приложения.</span><span class="sxs-lookup"><span data-stu-id="c25aa-116">Create a new console application project.</span></span> <span data-ttu-id="c25aa-117">Задайте имя `DiscoveryProxy` для проекта и имя `DiscoveryProxyExample` для решения.</span><span class="sxs-lookup"><span data-stu-id="c25aa-117">Name the project `DiscoveryProxy` and the name the solution `DiscoveryProxyExample`.</span></span>
+2. <span data-ttu-id="16faa-116">Создайте новый проект консольного приложения.</span><span class="sxs-lookup"><span data-stu-id="16faa-116">Create a new console application project.</span></span> <span data-ttu-id="16faa-117">Задайте имя `DiscoveryProxy` для проекта и имя `DiscoveryProxyExample` для решения.</span><span class="sxs-lookup"><span data-stu-id="16faa-117">Name the project `DiscoveryProxy` and the name the solution `DiscoveryProxyExample`.</span></span>
 
-3. <span data-ttu-id="c25aa-118">Добавьте в проект следующие ссылки</span><span class="sxs-lookup"><span data-stu-id="c25aa-118">Add the following references to the project</span></span>
+3. <span data-ttu-id="16faa-118">Добавьте в проект следующие ссылки</span><span class="sxs-lookup"><span data-stu-id="16faa-118">Add the following references to the project</span></span>
 
-    1.  <span data-ttu-id="c25aa-119">System.ServiceModel.dll</span><span class="sxs-lookup"><span data-stu-id="c25aa-119">System.ServiceModel.dll</span></span>
+    1. <span data-ttu-id="16faa-119">System.ServiceModel.dll</span><span class="sxs-lookup"><span data-stu-id="16faa-119">System.ServiceModel.dll</span></span>
 
-    2.  <span data-ttu-id="c25aa-120">System.Servicemodel.Discovery.dll</span><span class="sxs-lookup"><span data-stu-id="c25aa-120">System.Servicemodel.Discovery.dll</span></span>
+    2. <span data-ttu-id="16faa-120">System.Servicemodel.Discovery.dll</span><span class="sxs-lookup"><span data-stu-id="16faa-120">System.Servicemodel.Discovery.dll</span></span>
 
     > [!CAUTION]
-    >  <span data-ttu-id="c25aa-121">Ссылки должны указывать на версию этих сборок 4.0 или выше.</span><span class="sxs-lookup"><span data-stu-id="c25aa-121">Ensure that you reference version 4.0 or greater of these assemblies.</span></span>
+    >  <span data-ttu-id="16faa-121">Ссылки должны указывать на версию этих сборок 4.0 или выше.</span><span class="sxs-lookup"><span data-stu-id="16faa-121">Ensure that you reference version 4.0 or greater of these assemblies.</span></span>
 
-### <a name="to-implement-the-proxydiscoveryservice-class"></a><span data-ttu-id="c25aa-122">Реализация класса ProxyDiscoveryService</span><span class="sxs-lookup"><span data-stu-id="c25aa-122">To implement the ProxyDiscoveryService class</span></span>
+### <a name="to-implement-the-proxydiscoveryservice-class"></a><span data-ttu-id="16faa-122">Реализация класса ProxyDiscoveryService</span><span class="sxs-lookup"><span data-stu-id="16faa-122">To implement the ProxyDiscoveryService class</span></span>
 
-1. <span data-ttu-id="c25aa-123">Добавьте новый файл кода в проект и назовите его DiscoveryProxy.cs.</span><span class="sxs-lookup"><span data-stu-id="c25aa-123">Add a new code file to your project and name it DiscoveryProxy.cs.</span></span>
+1. <span data-ttu-id="16faa-123">Добавьте новый файл кода в проект и назовите его DiscoveryProxy.cs.</span><span class="sxs-lookup"><span data-stu-id="16faa-123">Add a new code file to your project and name it DiscoveryProxy.cs.</span></span>
 
-2. <span data-ttu-id="c25aa-124">Добавьте следующие операторы `using` в файл DiscoveryProxy.cs.</span><span class="sxs-lookup"><span data-stu-id="c25aa-124">Add the following `using` statements to DiscoveryProxy.cs.</span></span>
+2. <span data-ttu-id="16faa-124">Добавьте следующие операторы `using` в файл DiscoveryProxy.cs.</span><span class="sxs-lookup"><span data-stu-id="16faa-124">Add the following `using` statements to DiscoveryProxy.cs.</span></span>
 
     ```
     using System;
@@ -49,7 +49,7 @@ ms.locfileid: "59321020"
     using System.Xml;
     ```
 
-3. <span data-ttu-id="c25aa-125">Создайте класс `DiscoveryProxyService`, производный от <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span><span class="sxs-lookup"><span data-stu-id="c25aa-125">Derive the `DiscoveryProxyService` from <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span></span> <span data-ttu-id="c25aa-126">Примените атрибут `ServiceBehavior` к классу, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="c25aa-126">Apply the `ServiceBehavior` attribute to the class as shown in the following example.</span></span>
+3. <span data-ttu-id="16faa-125">Создайте класс `DiscoveryProxyService`, производный от <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span><span class="sxs-lookup"><span data-stu-id="16faa-125">Derive the `DiscoveryProxyService` from <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span></span> <span data-ttu-id="16faa-126">Примените атрибут `ServiceBehavior` к классу, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="16faa-126">Apply the `ServiceBehavior` attribute to the class as shown in the following example.</span></span>
 
     ```
     // Implement DiscoveryProxy by extending the DiscoveryProxy class and overriding the abstract methods
@@ -59,14 +59,14 @@ ms.locfileid: "59321020"
     }
     ```
 
-4. <span data-ttu-id="c25aa-127">Определите в пределах класса `DiscoveryProxy` словарь для хранения зарегистрированных служб.</span><span class="sxs-lookup"><span data-stu-id="c25aa-127">Inside the `DiscoveryProxy` class define a dictionary to hold the registered services.</span></span>
+4. <span data-ttu-id="16faa-127">Определите в пределах класса `DiscoveryProxy` словарь для хранения зарегистрированных служб.</span><span class="sxs-lookup"><span data-stu-id="16faa-127">Inside the `DiscoveryProxy` class define a dictionary to hold the registered services.</span></span>
 
     ```
     // Repository to store EndpointDiscoveryMetadata.
     Dictionary<EndpointAddress, EndpointDiscoveryMetadata> onlineServices;
     ```
 
-5. <span data-ttu-id="c25aa-128">Определите конструктор, который инициализирует словарь.</span><span class="sxs-lookup"><span data-stu-id="c25aa-128">Define a constructor that initializes the dictionary.</span></span>
+5. <span data-ttu-id="16faa-128">Определите конструктор, который инициализирует словарь.</span><span class="sxs-lookup"><span data-stu-id="16faa-128">Define a constructor that initializes the dictionary.</span></span>
 
     ```
     public DiscoveryProxyService()
@@ -75,9 +75,9 @@ ms.locfileid: "59321020"
             }
     ```
 
-### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a><span data-ttu-id="c25aa-129">Определение методов для обновления кэша прокси-сервера обнаружения</span><span class="sxs-lookup"><span data-stu-id="c25aa-129">To define the methods used to update the discovery proxy cache</span></span>
+### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a><span data-ttu-id="16faa-129">Определение методов для обновления кэша прокси-сервера обнаружения</span><span class="sxs-lookup"><span data-stu-id="16faa-129">To define the methods used to update the discovery proxy cache</span></span>
 
-1. <span data-ttu-id="c25aa-130">Реализуйте метод `AddOnlineservice` для добавления служб в кэш.</span><span class="sxs-lookup"><span data-stu-id="c25aa-130">Implement the `AddOnlineservice` method to add services to the cache.</span></span> <span data-ttu-id="c25aa-131">Он вызывается каждый раз, когда прокси-сервер получает сообщение объявления.</span><span class="sxs-lookup"><span data-stu-id="c25aa-131">This is called every time the proxy receives an announcement message.</span></span>
+1. <span data-ttu-id="16faa-130">Реализуйте метод `AddOnlineservice` для добавления служб в кэш.</span><span class="sxs-lookup"><span data-stu-id="16faa-130">Implement the `AddOnlineservice` method to add services to the cache.</span></span> <span data-ttu-id="16faa-131">Он вызывается каждый раз, когда прокси-сервер получает сообщение объявления.</span><span class="sxs-lookup"><span data-stu-id="16faa-131">This is called every time the proxy receives an announcement message.</span></span>
 
     ```
     void AddOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -91,7 +91,7 @@ ms.locfileid: "59321020"
             }
     ```
 
-2. <span data-ttu-id="c25aa-132">Реализуйте метод `RemoveOnlineService`, который используется для удаления служб из кэша.</span><span class="sxs-lookup"><span data-stu-id="c25aa-132">Implement the `RemoveOnlineService` method that is used to remove services from the cache.</span></span>
+2. <span data-ttu-id="16faa-132">Реализуйте метод `RemoveOnlineService`, который используется для удаления служб из кэша.</span><span class="sxs-lookup"><span data-stu-id="16faa-132">Implement the `RemoveOnlineService` method that is used to remove services from the cache.</span></span>
 
     ```
     void RemoveOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -108,7 +108,7 @@ ms.locfileid: "59321020"
             }
     ```
 
-3. <span data-ttu-id="c25aa-133">Реализуйте методы `MatchFromOnlineService`, которые выполняют сопоставление службы со службой из словаря.</span><span class="sxs-lookup"><span data-stu-id="c25aa-133">Implement the `MatchFromOnlineService` methods that attempt to match a service with a service in the dictionary.</span></span>
+3. <span data-ttu-id="16faa-133">Реализуйте методы `MatchFromOnlineService`, которые выполняют сопоставление службы со службой из словаря.</span><span class="sxs-lookup"><span data-stu-id="16faa-133">Implement the `MatchFromOnlineService` methods that attempt to match a service with a service in the dictionary.</span></span>
 
     ```
     void MatchFromOnlineService(FindRequestContext findRequestContext)
@@ -144,7 +144,7 @@ ms.locfileid: "59321020"
             }
     ```
 
-4. <span data-ttu-id="c25aa-134">Реализуйте метод `PrintDiscoveryMetadata`, который выводит пользователю на консоль текстовые данные об операциях прокси-сервера обнаружения.</span><span class="sxs-lookup"><span data-stu-id="c25aa-134">Implement the `PrintDiscoveryMetadata` method that provides the user with console text output of what the discovery proxy is doing.</span></span>
+4. <span data-ttu-id="16faa-134">Реализуйте метод `PrintDiscoveryMetadata`, который выводит пользователю на консоль текстовые данные об операциях прокси-сервера обнаружения.</span><span class="sxs-lookup"><span data-stu-id="16faa-134">Implement the `PrintDiscoveryMetadata` method that provides the user with console text output of what the discovery proxy is doing.</span></span>
 
     ```
     void PrintDiscoveryMetadata(EndpointDiscoveryMetadata endpointDiscoveryMetadata, string verb)
@@ -159,7 +159,7 @@ ms.locfileid: "59321020"
             }
     ```
 
-5. <span data-ttu-id="c25aa-135">Добавьте следующие классы AsyncResult в DiscoveryProxyService.</span><span class="sxs-lookup"><span data-stu-id="c25aa-135">Add the following AsyncResult classes to the DiscoveryProxyService.</span></span> <span data-ttu-id="c25aa-136">Эти классы позволяют различать результаты асинхронных операций.</span><span class="sxs-lookup"><span data-stu-id="c25aa-136">These classes are used to differentiate between the different asynchronous operation results.</span></span>
+5. <span data-ttu-id="16faa-135">Добавьте следующие классы AsyncResult в DiscoveryProxyService.</span><span class="sxs-lookup"><span data-stu-id="16faa-135">Add the following AsyncResult classes to the DiscoveryProxyService.</span></span> <span data-ttu-id="16faa-136">Эти классы позволяют различать результаты асинхронных операций.</span><span class="sxs-lookup"><span data-stu-id="16faa-136">These classes are used to differentiate between the different asynchronous operation results.</span></span>
 
     ```
     sealed class OnOnlineAnnouncementAsyncResult : AsyncResult
@@ -223,9 +223,9 @@ ms.locfileid: "59321020"
             }
     ```
 
-### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a><span data-ttu-id="c25aa-137">Определение методов, реализующих функции прокси-сервера обнаружения</span><span class="sxs-lookup"><span data-stu-id="c25aa-137">To define the methods that implement the discovery proxy functionality</span></span>
+### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a><span data-ttu-id="16faa-137">Определение методов, реализующих функции прокси-сервера обнаружения</span><span class="sxs-lookup"><span data-stu-id="16faa-137">To define the methods that implement the discovery proxy functionality</span></span>
 
-1. <span data-ttu-id="c25aa-138">Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="c25aa-138">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c25aa-139">Этот метод вызывается, когда прокси-сервер обнаружения получает оперативное сообщение объявления.</span><span class="sxs-lookup"><span data-stu-id="c25aa-139">This method is called when the discovery proxy receives an online announcement message.</span></span>
+1. <span data-ttu-id="16faa-138">Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="16faa-138">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="16faa-139">Этот метод вызывается, когда прокси-сервер обнаружения получает оперативное сообщение объявления.</span><span class="sxs-lookup"><span data-stu-id="16faa-139">This method is called when the discovery proxy receives an online announcement message.</span></span>
 
     ```
     // OnBeginOnlineAnnouncement method is called when a Hello message is received by the Proxy
@@ -236,7 +236,7 @@ ms.locfileid: "59321020"
             }
     ```
 
-2. <span data-ttu-id="c25aa-140">Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="c25aa-140">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c25aa-141">Этот метод вызывается, когда прокси-сервер обнаружения завершает обработку сообщения объявления.</span><span class="sxs-lookup"><span data-stu-id="c25aa-141">This method is called when the discovery proxy finishes processing an announcement message.</span></span>
+2. <span data-ttu-id="16faa-140">Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="16faa-140">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="16faa-141">Этот метод вызывается, когда прокси-сервер обнаружения завершает обработку сообщения объявления.</span><span class="sxs-lookup"><span data-stu-id="16faa-141">This method is called when the discovery proxy finishes processing an announcement message.</span></span>
 
     ```
     protected override void OnEndOnlineAnnouncement(IAsyncResult result)
@@ -245,7 +245,7 @@ ms.locfileid: "59321020"
             }
     ```
 
-3. <span data-ttu-id="c25aa-142">Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="c25aa-142">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c25aa-143">Этот метод вызывается вместе с получением прокси-сервером обнаружения автономного сообщение объявления.</span><span class="sxs-lookup"><span data-stu-id="c25aa-143">This method is called with the discovery proxy receives an offline announcement message.</span></span>
+3. <span data-ttu-id="16faa-142">Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="16faa-142">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="16faa-143">Этот метод вызывается вместе с получением прокси-сервером обнаружения автономного сообщение объявления.</span><span class="sxs-lookup"><span data-stu-id="16faa-143">This method is called with the discovery proxy receives an offline announcement message.</span></span>
 
     ```
     // OnBeginOfflineAnnouncement method is called when a Bye message is received by the Proxy
@@ -256,7 +256,7 @@ ms.locfileid: "59321020"
             }
     ```
 
-4. <span data-ttu-id="c25aa-144">Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="c25aa-144">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c25aa-145">Этот метод вызывается, когда прокси-сервер обнаружения завершает обработку автономного сообщения объявления.</span><span class="sxs-lookup"><span data-stu-id="c25aa-145">This method is called when the discovery proxy finishes processing an offline announcement message.</span></span>
+4. <span data-ttu-id="16faa-144">Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="16faa-144">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="16faa-145">Этот метод вызывается, когда прокси-сервер обнаружения завершает обработку автономного сообщения объявления.</span><span class="sxs-lookup"><span data-stu-id="16faa-145">This method is called when the discovery proxy finishes processing an offline announcement message.</span></span>
 
     ```
     protected override void OnEndOfflineAnnouncement(IAsyncResult result)
@@ -265,7 +265,7 @@ ms.locfileid: "59321020"
             }
     ```
 
-5. <span data-ttu-id="c25aa-146">Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="c25aa-146">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c25aa-147">Этот метод вызывается, когда прокси-сервер обнаружения получает запрос поиска.</span><span class="sxs-lookup"><span data-stu-id="c25aa-147">This method is called when the discovery proxy receives a find request.</span></span>
+5. <span data-ttu-id="16faa-146">Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="16faa-146">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="16faa-147">Этот метод вызывается, когда прокси-сервер обнаружения получает запрос поиска.</span><span class="sxs-lookup"><span data-stu-id="16faa-147">This method is called when the discovery proxy receives a find request.</span></span>
 
     ```
     // OnBeginFind method is called when a Probe request message is received by the Proxy
@@ -284,7 +284,7 @@ ms.locfileid: "59321020"
     }
     ```
 
-6. <span data-ttu-id="c25aa-148">Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="c25aa-148">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c25aa-149">Этот метод вызывается, когда прокси-сервер обнаружения завершает обработку запроса поиска.</span><span class="sxs-lookup"><span data-stu-id="c25aa-149">This method is called when the discovery proxy finishes processing a find request.</span></span>
+6. <span data-ttu-id="16faa-148">Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="16faa-148">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="16faa-149">Этот метод вызывается, когда прокси-сервер обнаружения завершает обработку запроса поиска.</span><span class="sxs-lookup"><span data-stu-id="16faa-149">This method is called when the discovery proxy finishes processing a find request.</span></span>
 
     ```
     protected override void OnEndFind(IAsyncResult result)
@@ -293,7 +293,7 @@ ms.locfileid: "59321020"
             }
     ```
 
-7. <span data-ttu-id="c25aa-150">Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="c25aa-150">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c25aa-151">Этот метод вызывается, когда прокси-сервер обнаружения получает сообщение разрешения.</span><span class="sxs-lookup"><span data-stu-id="c25aa-151">This method is called when the discovery proxy receives a resolve message.</span></span>
+7. <span data-ttu-id="16faa-150">Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="16faa-150">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="16faa-151">Этот метод вызывается, когда прокси-сервер обнаружения получает сообщение разрешения.</span><span class="sxs-lookup"><span data-stu-id="16faa-151">This method is called when the discovery proxy receives a resolve message.</span></span>
 
     ```
     // OnBeginFind method is called when a Resolve request message is received by the Proxy
@@ -310,7 +310,7 @@ ms.locfileid: "59321020"
     }
     ```
 
-8. <span data-ttu-id="c25aa-152">Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="c25aa-152">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c25aa-153">Этот метод вызывается, когда прокси-сервер обнаружения завершает обработку сообщения разрешения.</span><span class="sxs-lookup"><span data-stu-id="c25aa-153">This method is called when the discovery proxy finishes processing a resolve message.</span></span>
+8. <span data-ttu-id="16faa-152">Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="16faa-152">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="16faa-153">Этот метод вызывается, когда прокси-сервер обнаружения завершает обработку сообщения разрешения.</span><span class="sxs-lookup"><span data-stu-id="16faa-153">This method is called when the discovery proxy finishes processing a resolve message.</span></span>
 
     ```
     protected override EndpointDiscoveryMetadata OnEndResolve(IAsyncResult result)
@@ -319,22 +319,22 @@ ms.locfileid: "59321020"
     }
     ```
 
- <span data-ttu-id="c25aa-154">Методы OnBegin.</span><span class="sxs-lookup"><span data-stu-id="c25aa-154">The OnBegin..</span></span> <span data-ttu-id="c25aa-155">/ OnEnd…</span><span class="sxs-lookup"><span data-stu-id="c25aa-155">/ OnEnd..</span></span> <span data-ttu-id="c25aa-156">обеспечивают логику для последующих операций обнаружения.</span><span class="sxs-lookup"><span data-stu-id="c25aa-156">methods provide the logic for the subsequent discovery operations.</span></span> <span data-ttu-id="c25aa-157">Например, методы <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> и <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> реализуют для прокси-сервера обнаружения логику поиска.</span><span class="sxs-lookup"><span data-stu-id="c25aa-157">For example the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> and <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> methods implement the find logic for discovery proxy.</span></span> <span data-ttu-id="c25aa-158">Когда прокси-сервер обнаружения получает сообщение зонда, эти методы вызываются для отправки ответа клиенту.</span><span class="sxs-lookup"><span data-stu-id="c25aa-158">When the discovery proxy receives a probe message these methods are executed to send a response back to the client.</span></span> <span data-ttu-id="c25aa-159">При необходимости логику поиска можно изменить. Например, можно включить в состав операции поиска поиск по пользовательской области путем анализа XML-метаданных, определяемых алгоритмами или приложениями.</span><span class="sxs-lookup"><span data-stu-id="c25aa-159">You may modify the find logic as you wish, for example you can incorporate custom scope matching by algorithms or application specific XML metadata parsing as part of your find operation.</span></span>
+ <span data-ttu-id="16faa-154">Методы OnBegin.</span><span class="sxs-lookup"><span data-stu-id="16faa-154">The OnBegin..</span></span> <span data-ttu-id="16faa-155">/ OnEnd…</span><span class="sxs-lookup"><span data-stu-id="16faa-155">/ OnEnd..</span></span> <span data-ttu-id="16faa-156">обеспечивают логику для последующих операций обнаружения.</span><span class="sxs-lookup"><span data-stu-id="16faa-156">methods provide the logic for the subsequent discovery operations.</span></span> <span data-ttu-id="16faa-157">Например, методы <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> и <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> реализуют для прокси-сервера обнаружения логику поиска.</span><span class="sxs-lookup"><span data-stu-id="16faa-157">For example the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> and <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> methods implement the find logic for discovery proxy.</span></span> <span data-ttu-id="16faa-158">Когда прокси-сервер обнаружения получает сообщение зонда, эти методы вызываются для отправки ответа клиенту.</span><span class="sxs-lookup"><span data-stu-id="16faa-158">When the discovery proxy receives a probe message these methods are executed to send a response back to the client.</span></span> <span data-ttu-id="16faa-159">При необходимости логику поиска можно изменить. Например, можно включить в состав операции поиска поиск по пользовательской области путем анализа XML-метаданных, определяемых алгоритмами или приложениями.</span><span class="sxs-lookup"><span data-stu-id="16faa-159">You may modify the find logic as you wish, for example you can incorporate custom scope matching by algorithms or application specific XML metadata parsing as part of your find operation.</span></span>
 
-### <a name="to-implement-the-asyncresult-class"></a><span data-ttu-id="c25aa-160">Реализация класса AsyncResult</span><span class="sxs-lookup"><span data-stu-id="c25aa-160">To implement the AsyncResult class</span></span>
+### <a name="to-implement-the-asyncresult-class"></a><span data-ttu-id="16faa-160">Реализация класса AsyncResult</span><span class="sxs-lookup"><span data-stu-id="16faa-160">To implement the AsyncResult class</span></span>
 
-1. <span data-ttu-id="c25aa-161">Определите абстрактный базовый класс AsyncResult. Различные классы асинхронных результатов будут производными от него.</span><span class="sxs-lookup"><span data-stu-id="c25aa-161">Define the abstract base class AsyncResult which is used to derive the various async result classes.</span></span>
+1. <span data-ttu-id="16faa-161">Определите абстрактный базовый класс AsyncResult. Различные классы асинхронных результатов будут производными от него.</span><span class="sxs-lookup"><span data-stu-id="16faa-161">Define the abstract base class AsyncResult which is used to derive the various async result classes.</span></span>
 
-2. <span data-ttu-id="c25aa-162">Создайте новый файл кода с именем AsyncResult.cs.</span><span class="sxs-lookup"><span data-stu-id="c25aa-162">Create a new code file called AsyncResult.cs.</span></span>
+2. <span data-ttu-id="16faa-162">Создайте новый файл кода с именем AsyncResult.cs.</span><span class="sxs-lookup"><span data-stu-id="16faa-162">Create a new code file called AsyncResult.cs.</span></span>
 
-3. <span data-ttu-id="c25aa-163">Добавьте в файл AsyncResult.cs следующие операторы `using`.</span><span class="sxs-lookup"><span data-stu-id="c25aa-163">Add the following `using` statements to AsyncResult.cs.</span></span>
+3. <span data-ttu-id="16faa-163">Добавьте в файл AsyncResult.cs следующие операторы `using`.</span><span class="sxs-lookup"><span data-stu-id="16faa-163">Add the following `using` statements to AsyncResult.cs.</span></span>
 
     ```
     using System;
     using System.Threading;
     ```
 
-4. <span data-ttu-id="c25aa-164">Добавьте следующий класс AsyncResult.</span><span class="sxs-lookup"><span data-stu-id="c25aa-164">Add the following AsyncResult class.</span></span>
+4. <span data-ttu-id="16faa-164">Добавьте следующий класс AsyncResult.</span><span class="sxs-lookup"><span data-stu-id="16faa-164">Add the following AsyncResult class.</span></span>
 
     ```
     abstract class AsyncResult : IAsyncResult
@@ -485,11 +485,11 @@ ms.locfileid: "59321020"
         }
     ```
 
-### <a name="to-host-the-discoveryproxy"></a><span data-ttu-id="c25aa-165">Размещение прокси-сервера обнаружения</span><span class="sxs-lookup"><span data-stu-id="c25aa-165">To host the DiscoveryProxy</span></span>
+### <a name="to-host-the-discoveryproxy"></a><span data-ttu-id="16faa-165">Размещение прокси-сервера обнаружения</span><span class="sxs-lookup"><span data-stu-id="16faa-165">To host the DiscoveryProxy</span></span>
 
-1. <span data-ttu-id="c25aa-166">Откройте файл Program.cs в проекте DiscoveryProxyExample.</span><span class="sxs-lookup"><span data-stu-id="c25aa-166">Open the Program.cs file in the DiscoveryProxyExample project.</span></span>
+1. <span data-ttu-id="16faa-166">Откройте файл Program.cs в проекте DiscoveryProxyExample.</span><span class="sxs-lookup"><span data-stu-id="16faa-166">Open the Program.cs file in the DiscoveryProxyExample project.</span></span>
 
-2. <span data-ttu-id="c25aa-167">Добавьте следующие инструкции `using`.</span><span class="sxs-lookup"><span data-stu-id="c25aa-167">Add the following `using` statements.</span></span>
+2. <span data-ttu-id="16faa-167">Добавьте следующие инструкции `using`.</span><span class="sxs-lookup"><span data-stu-id="16faa-167">Add the following `using` statements.</span></span>
 
     ```
     using System;
@@ -497,7 +497,7 @@ ms.locfileid: "59321020"
     using System.ServiceModel.Discovery;
     ```
 
-3. <span data-ttu-id="c25aa-168">В метод `Main()` добавьте следующий код.</span><span class="sxs-lookup"><span data-stu-id="c25aa-168">Within the `Main()` method, add the following code.</span></span> <span data-ttu-id="c25aa-169">Он создает экземпляр класса `DiscoveryProxy`.</span><span class="sxs-lookup"><span data-stu-id="c25aa-169">This creates an instance of the `DiscoveryProxy` class.</span></span>
+3. <span data-ttu-id="16faa-168">В метод `Main()` добавьте следующий код.</span><span class="sxs-lookup"><span data-stu-id="16faa-168">Within the `Main()` method, add the following code.</span></span> <span data-ttu-id="16faa-169">Он создает экземпляр класса `DiscoveryProxy`.</span><span class="sxs-lookup"><span data-stu-id="16faa-169">This creates an instance of the `DiscoveryProxy` class.</span></span>
 
     ```
     Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");
@@ -507,7 +507,7 @@ ms.locfileid: "59321020"
                 ServiceHost proxyServiceHost = new ServiceHost(new DiscoveryProxyService());
     ```
 
-4. <span data-ttu-id="c25aa-170">Затем добавьте следующий код, который добавляет конечную точку обнаружения и конечную точку объявления.</span><span class="sxs-lookup"><span data-stu-id="c25aa-170">Next add the following code to add a discovery endpoint and an announcement endpoint.</span></span>
+4. <span data-ttu-id="16faa-170">Затем добавьте следующий код, который добавляет конечную точку обнаружения и конечную точку объявления.</span><span class="sxs-lookup"><span data-stu-id="16faa-170">Next add the following code to add a discovery endpoint and an announcement endpoint.</span></span>
 
     ```
     try
@@ -548,10 +548,10 @@ ms.locfileid: "59321020"
               }
     ```
 
- <span data-ttu-id="c25aa-171">Реализация прокси-сервера обнаружения завершена.</span><span class="sxs-lookup"><span data-stu-id="c25aa-171">You have completed implementing the discovery proxy.</span></span> <span data-ttu-id="c25aa-172">Перейдите к [как: Реализовать Обнаружимую службу, которая регистрируется на прокси-сервер обнаружения](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).</span><span class="sxs-lookup"><span data-stu-id="c25aa-172">Continue on to [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).</span></span>
+ <span data-ttu-id="16faa-171">Реализация прокси-сервера обнаружения завершена.</span><span class="sxs-lookup"><span data-stu-id="16faa-171">You have completed implementing the discovery proxy.</span></span> <span data-ttu-id="16faa-172">Перейдите к [как: Реализовать Обнаружимую службу, которая регистрируется на прокси-сервер обнаружения](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).</span><span class="sxs-lookup"><span data-stu-id="16faa-172">Continue on to [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="c25aa-173">Пример</span><span class="sxs-lookup"><span data-stu-id="c25aa-173">Example</span></span>
- <span data-ttu-id="c25aa-174">Далее приведен полный код, используемый в этом подразделе.</span><span class="sxs-lookup"><span data-stu-id="c25aa-174">This is the full listing of the code used in this topic.</span></span>
+## <a name="example"></a><span data-ttu-id="16faa-173">Пример</span><span class="sxs-lookup"><span data-stu-id="16faa-173">Example</span></span>
+ <span data-ttu-id="16faa-174">Далее приведен полный код, используемый в этом подразделе.</span><span class="sxs-lookup"><span data-stu-id="16faa-174">This is the full listing of the code used in this topic.</span></span>
 
 ```
 // DiscoveryProxy.cs
@@ -977,9 +977,9 @@ namespace Microsoft.Samples.Discovery
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="c25aa-175">См. также</span><span class="sxs-lookup"><span data-stu-id="c25aa-175">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="16faa-175">См. также</span><span class="sxs-lookup"><span data-stu-id="16faa-175">See also</span></span>
 
-- [<span data-ttu-id="c25aa-176">Общие сведения об обнаружении WCF</span><span class="sxs-lookup"><span data-stu-id="c25aa-176">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [<span data-ttu-id="c25aa-177">Практическое руководство. Реализовать Обнаружимую службу, которая регистрируется на прокси-сервера обнаружения</span><span class="sxs-lookup"><span data-stu-id="c25aa-177">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [<span data-ttu-id="c25aa-178">Практическое руководство. Реализовать клиентское приложение, которое использует прокси-сервер обнаружения для поиска службы</span><span class="sxs-lookup"><span data-stu-id="c25aa-178">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
-- [<span data-ttu-id="c25aa-179">Практическое руководство. Проверить прокси-сервер обнаружения</span><span class="sxs-lookup"><span data-stu-id="c25aa-179">How to: Test the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+- [<span data-ttu-id="16faa-176">Общие сведения об обнаружении WCF</span><span class="sxs-lookup"><span data-stu-id="16faa-176">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [<span data-ttu-id="16faa-177">Практическое руководство. Реализовать Обнаружимую службу, которая регистрируется на прокси-сервера обнаружения</span><span class="sxs-lookup"><span data-stu-id="16faa-177">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [<span data-ttu-id="16faa-178">Практическое руководство. Реализовать клиентское приложение, которое использует прокси-сервер обнаружения для поиска службы</span><span class="sxs-lookup"><span data-stu-id="16faa-178">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [<span data-ttu-id="16faa-179">Практическое руководство. Проверить прокси-сервер обнаружения</span><span class="sxs-lookup"><span data-stu-id="16faa-179">How to: Test the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

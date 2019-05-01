@@ -11,23 +11,23 @@ ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3c821177ca897e617885425217ac0b6659b5ea6e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018558"
 ---
-# <a name="securing-state-data"></a><span data-ttu-id="32b42-102">Обеспечение безопасности данных</span><span class="sxs-lookup"><span data-stu-id="32b42-102">Securing State Data</span></span>
-<span data-ttu-id="32b42-103">Приложения, работающие с конфиденциальными данными или принимающие любые решения по организации безопасности, должны сохранять эти данные под своим непосредственным управлением и не должны позволять потенциально вредоносному коду напрямую получать доступ к данным.</span><span class="sxs-lookup"><span data-stu-id="32b42-103">Applications that handle sensitive data or make any kind of security decisions need to keep that data under their own control and cannot allow other potentially malicious code to access the data directly.</span></span> <span data-ttu-id="32b42-104">Лучшим способом защиты данных в памяти является объявление этих данных как закрытых или внутренних переменных (с областью, ограниченной той же сборкой).</span><span class="sxs-lookup"><span data-stu-id="32b42-104">The best way to protect data in memory is to declare the data as private or internal (with scope limited to the same assembly) variables.</span></span> <span data-ttu-id="32b42-105">Однако не следует забывать, что даже к этим данным применяются права доступа.</span><span class="sxs-lookup"><span data-stu-id="32b42-105">However, even this data is subject to access you should be aware of:</span></span>  
+# <a name="securing-state-data"></a><span data-ttu-id="24eab-102">Обеспечение безопасности данных</span><span class="sxs-lookup"><span data-stu-id="24eab-102">Securing State Data</span></span>
+<span data-ttu-id="24eab-103">Приложения, работающие с конфиденциальными данными или принимающие любые решения по организации безопасности, должны сохранять эти данные под своим непосредственным управлением и не должны позволять потенциально вредоносному коду напрямую получать доступ к данным.</span><span class="sxs-lookup"><span data-stu-id="24eab-103">Applications that handle sensitive data or make any kind of security decisions need to keep that data under their own control and cannot allow other potentially malicious code to access the data directly.</span></span> <span data-ttu-id="24eab-104">Лучшим способом защиты данных в памяти является объявление этих данных как закрытых или внутренних переменных (с областью, ограниченной той же сборкой).</span><span class="sxs-lookup"><span data-stu-id="24eab-104">The best way to protect data in memory is to declare the data as private or internal (with scope limited to the same assembly) variables.</span></span> <span data-ttu-id="24eab-105">Однако не следует забывать, что даже к этим данным применяются права доступа.</span><span class="sxs-lookup"><span data-stu-id="24eab-105">However, even this data is subject to access you should be aware of:</span></span>  
   
--   <span data-ttu-id="32b42-106">С помощью механизмов отражения код с высоким доверием, способный ссылаться на ваш объект, может получать и устанавливать закрытые члены.</span><span class="sxs-lookup"><span data-stu-id="32b42-106">Using reflection mechanisms, highly trusted code that can reference your object can get and set private members.</span></span>  
+- <span data-ttu-id="24eab-106">С помощью механизмов отражения код с высоким доверием, способный ссылаться на ваш объект, может получать и устанавливать закрытые члены.</span><span class="sxs-lookup"><span data-stu-id="24eab-106">Using reflection mechanisms, highly trusted code that can reference your object can get and set private members.</span></span>  
   
--   <span data-ttu-id="32b42-107">С помощью сериализации код с высоким доверием может эффективно получать и устанавливать закрытые члены, если он имеет доступ к соответствующим данным в сериализованной форме объекта.</span><span class="sxs-lookup"><span data-stu-id="32b42-107">Using serialization, highly trusted code can effectively get and set private members if it can access the corresponding data in the serialized form of the object.</span></span>  
+- <span data-ttu-id="24eab-107">С помощью сериализации код с высоким доверием может эффективно получать и устанавливать закрытые члены, если он имеет доступ к соответствующим данным в сериализованной форме объекта.</span><span class="sxs-lookup"><span data-stu-id="24eab-107">Using serialization, highly trusted code can effectively get and set private members if it can access the corresponding data in the serialized form of the object.</span></span>  
   
--   <span data-ttu-id="32b42-108">Эти данные могут считываться в режиме отладки.</span><span class="sxs-lookup"><span data-stu-id="32b42-108">Under debugging, this data can be read.</span></span>  
+- <span data-ttu-id="24eab-108">Эти данные могут считываться в режиме отладки.</span><span class="sxs-lookup"><span data-stu-id="24eab-108">Under debugging, this data can be read.</span></span>  
   
- <span data-ttu-id="32b42-109">Убедитесь, что ни один из ваших собственных методов или свойств не предоставляет непреднамеренно эти значения.</span><span class="sxs-lookup"><span data-stu-id="32b42-109">Make sure none of your own methods or properties exposes these values unintentionally.</span></span>  
+ <span data-ttu-id="24eab-109">Убедитесь, что ни один из ваших собственных методов или свойств не предоставляет непреднамеренно эти значения.</span><span class="sxs-lookup"><span data-stu-id="24eab-109">Make sure none of your own methods or properties exposes these values unintentionally.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="32b42-110">См. также</span><span class="sxs-lookup"><span data-stu-id="32b42-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24eab-110">См. также</span><span class="sxs-lookup"><span data-stu-id="24eab-110">See also</span></span>
 
-- [<span data-ttu-id="32b42-111">Правила написания безопасного кода</span><span class="sxs-lookup"><span data-stu-id="32b42-111">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)
+- [<span data-ttu-id="24eab-111">Правила написания безопасного кода</span><span class="sxs-lookup"><span data-stu-id="24eab-111">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)

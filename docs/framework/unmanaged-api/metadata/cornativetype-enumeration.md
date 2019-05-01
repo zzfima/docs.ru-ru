@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bf62000fd4ec5c8f3dea3fa7d560b3f9ead33fa7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045473"
 ---
-# <a name="cornativetype-enumeration"></a><span data-ttu-id="523b7-102">Перечисление CorNativeType</span><span class="sxs-lookup"><span data-stu-id="523b7-102">CorNativeType Enumeration</span></span>
-<span data-ttu-id="523b7-103">Содержит значения, описывающие собственные неуправляемые типы.</span><span class="sxs-lookup"><span data-stu-id="523b7-103">Contains values that describe native unmanaged types.</span></span>  
+# <a name="cornativetype-enumeration"></a><span data-ttu-id="a924a-102">Перечисление CorNativeType</span><span class="sxs-lookup"><span data-stu-id="a924a-102">CorNativeType Enumeration</span></span>
+<span data-ttu-id="a924a-103">Содержит значения, описывающие собственные неуправляемые типы.</span><span class="sxs-lookup"><span data-stu-id="a924a-103">Contains values that describe native unmanaged types.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="523b7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="523b7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a924a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a924a-104">Syntax</span></span>  
   
 ```  
 typedef enum CorNativeType {  
@@ -87,66 +87,66 @@ typedef enum CorNativeType {
 } CorNativeType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="523b7-105">Участники</span><span class="sxs-lookup"><span data-stu-id="523b7-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="a924a-105">Участники</span><span class="sxs-lookup"><span data-stu-id="a924a-105">Members</span></span>  
   
-|<span data-ttu-id="523b7-106">Член</span><span class="sxs-lookup"><span data-stu-id="523b7-106">Member</span></span>|<span data-ttu-id="523b7-107">Описание</span><span class="sxs-lookup"><span data-stu-id="523b7-107">Description</span></span>|  
+|<span data-ttu-id="a924a-106">Член</span><span class="sxs-lookup"><span data-stu-id="a924a-106">Member</span></span>|<span data-ttu-id="a924a-107">Описание</span><span class="sxs-lookup"><span data-stu-id="a924a-107">Description</span></span>|  
 |------------|-----------------|  
-|`NATIVE_TYPE_END`|<span data-ttu-id="523b7-108">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="523b7-108">Obsolete.</span></span>|  
-|`NATIVE_TYPE_VOID`|<span data-ttu-id="523b7-109">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="523b7-109">Obsolete.</span></span>|  
-|`NATIVE_TYPE_BOOLEAN`|<span data-ttu-id="523b7-110">4-байтовое логическое значение, где значение TRUE, ненулевое значение и значение FALSE, равно нулю.</span><span class="sxs-lookup"><span data-stu-id="523b7-110">A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.</span></span>|  
-|`NATIVE_TYPE_I1`|<span data-ttu-id="523b7-111">8-разрядное целое число со знаком.</span><span class="sxs-lookup"><span data-stu-id="523b7-111">A signed 8-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U1`|<span data-ttu-id="523b7-112">8-разрядное целочисленное значение без знака.</span><span class="sxs-lookup"><span data-stu-id="523b7-112">An unsigned 8-bit integer value.</span></span>|  
-|`NATIVE_TYPE_I2`|<span data-ttu-id="523b7-113">16-разрядное целое число со знаком.</span><span class="sxs-lookup"><span data-stu-id="523b7-113">A signed 16-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U2`|<span data-ttu-id="523b7-114">16-разрядное целочисленное значение без знака.</span><span class="sxs-lookup"><span data-stu-id="523b7-114">An unsigned 16-bit integer value.</span></span>|  
-|`NATIVE_TYPE_I4`|<span data-ttu-id="523b7-115">32-разрядное целое значение со знаком.</span><span class="sxs-lookup"><span data-stu-id="523b7-115">A signed 32-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U4`|<span data-ttu-id="523b7-116">32-разрядное целое значение без знака.</span><span class="sxs-lookup"><span data-stu-id="523b7-116">An unsigned 32-bit integer value.</span></span>|  
-|`NATIVE_TYPE_I8`|<span data-ttu-id="523b7-117">Значение 64-битового знакового целого числа.</span><span class="sxs-lookup"><span data-stu-id="523b7-117">A signed 64-bit integer value.</span></span>|  
-|`NATIVE_TYPE_U8`|<span data-ttu-id="523b7-118">64-разрядное целочисленное значение без знака.</span><span class="sxs-lookup"><span data-stu-id="523b7-118">An unsigned 64-bit integer value.</span></span>|  
-|`NATIVE_TYPE_R4`|<span data-ttu-id="523b7-119">4-байтовое числовое значение с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="523b7-119">A 4-byte floating-point numeric value.</span></span>|  
-|`NATIVE_TYPE_R8`|<span data-ttu-id="523b7-120">8-байтное числовое значение с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="523b7-120">An 8-byte floating-point numeric value.</span></span>|  
-|`NATIVE_TYPE_SYSCHAR`|<span data-ttu-id="523b7-121">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="523b7-121">Obsolete.</span></span>|  
-|`NATIVE_TYPE_VARIANT`|<span data-ttu-id="523b7-122">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="523b7-122">Obsolete.</span></span>|  
-|`NATIVE_TYPE_CURRENCY`|<span data-ttu-id="523b7-123">Числовой тип COM, который соответствует управляемого <xref:System.Decimal> типа.</span><span class="sxs-lookup"><span data-stu-id="523b7-123">A numeric COM type that corresponds to the managed <xref:System.Decimal> type.</span></span>|  
-|`NATIVE_TYPE_PTR`|<span data-ttu-id="523b7-124">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="523b7-124">Obsolete.</span></span>|  
-|`NATIVE_TYPE_DECIMAL`|<span data-ttu-id="523b7-125">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="523b7-125">Obsolete.</span></span>|  
-|`NATIVE_TYPE_DATE`|<span data-ttu-id="523b7-126">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="523b7-126">Obsolete.</span></span>|  
-|`NATIVE_TYPE_BSTR`|<span data-ttu-id="523b7-127">COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="523b7-127">COM Interop.</span></span>|  
-|`NATIVE_TYPE_LPSTR`|<span data-ttu-id="523b7-128">Строковое значение LPSTR.</span><span class="sxs-lookup"><span data-stu-id="523b7-128">An LPSTR string value.</span></span>|  
-|`NATIVE_TYPE_LPWSTR`|<span data-ttu-id="523b7-129">Строковое значение LPWSTR.</span><span class="sxs-lookup"><span data-stu-id="523b7-129">An LPWSTR string value.</span></span>|  
-|`NATIVE_TYPE_LPTSTR`|<span data-ttu-id="523b7-130">Строковое значение LPTSTR.</span><span class="sxs-lookup"><span data-stu-id="523b7-130">An LPTSTR string value.</span></span>|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|<span data-ttu-id="523b7-131">Фиксированное, системный строковое значение.</span><span class="sxs-lookup"><span data-stu-id="523b7-131">A fixed, system-defined string value.</span></span>|  
-|`NATIVE_TYPE_OBJECTREF`|<span data-ttu-id="523b7-132">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="523b7-132">Obsolete.</span></span>|  
-|`NATIVE_TYPE_IUNKNOWN`|<span data-ttu-id="523b7-133">COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="523b7-133">COM Interop.</span></span>|  
-|`NATIVE_TYPE_IDISPATCH`|<span data-ttu-id="523b7-134">COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="523b7-134">COM Interop.</span></span>|  
-|`NATIVE_TYPE_STRUCT`|<span data-ttu-id="523b7-135">Значение собственной структуры.</span><span class="sxs-lookup"><span data-stu-id="523b7-135">A native structure value.</span></span>|  
-|`NATIVE_TYPE_INTF`|<span data-ttu-id="523b7-136">COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="523b7-136">COM Interop.</span></span>|  
-|`NATIVE_TYPE_SAFEARRAY`|<span data-ttu-id="523b7-137">COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="523b7-137">COM Interop.</span></span>|  
-|`NATIVE_TYPE_FIXEDARRAY`|<span data-ttu-id="523b7-138">Значение массива фиксированной длины.</span><span class="sxs-lookup"><span data-stu-id="523b7-138">A fixed-length array value.</span></span>|  
-|`NATIVE_TYPE_INT`|<span data-ttu-id="523b7-139">Собственный 16-разрядное целое число со знаком.</span><span class="sxs-lookup"><span data-stu-id="523b7-139">A native 16-bit signed integer value.</span></span>|  
-|`NATIVE_TYPE_UINT`|<span data-ttu-id="523b7-140">Значение собственного 16-разрядное целое число без знака.</span><span class="sxs-lookup"><span data-stu-id="523b7-140">A native 16-bit unsigned integer value.</span></span>|  
-|`NATIVE_TYPE_NESTEDSTRUCT`|<span data-ttu-id="523b7-141">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="523b7-141">Obsolete.</span></span><br /><br /> <span data-ttu-id="523b7-142">Используйте NATIVE_TYPE_STRUCT.</span><span class="sxs-lookup"><span data-stu-id="523b7-142">Use NATIVE_TYPE_STRUCT.</span></span>|  
-|`NATIVE_TYPE_BYVALSTR`|<span data-ttu-id="523b7-143">COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="523b7-143">COM Interop.</span></span>|  
-|`NATIVE_TYPE_ANSIBSTR`|<span data-ttu-id="523b7-144">COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="523b7-144">COM Interop.</span></span>|  
-|`NATIVE_TYPE_TBSTR`|<span data-ttu-id="523b7-145">COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="523b7-145">COM Interop.</span></span><br /><br /> <span data-ttu-id="523b7-146">Выберите BSTR или ANSIBSTR в зависимости от платформы.</span><span class="sxs-lookup"><span data-stu-id="523b7-146">Select BSTR or ANSIBSTR depending on the platform.</span></span>|  
-|`NATIVE_TYPE_VARIANTBOOL`|<span data-ttu-id="523b7-147">2-байтовое логическое значение, где значение TRUE — -1, а FALSE равно нулю.</span><span class="sxs-lookup"><span data-stu-id="523b7-147">A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.</span></span>|  
-|`NATIVE_TYPE_FUNC`|<span data-ttu-id="523b7-148">Указатель функции.</span><span class="sxs-lookup"><span data-stu-id="523b7-148">A function pointer.</span></span>|  
-|`NATIVE_TYPE_ASANY`|<span data-ttu-id="523b7-149">Ссылка на машинный тип.</span><span class="sxs-lookup"><span data-stu-id="523b7-149">A reference to any native type.</span></span>|  
-|`NATIVE_TYPE_ARRAY`|<span data-ttu-id="523b7-150">Ссылка на массив с членами незаданного типа.</span><span class="sxs-lookup"><span data-stu-id="523b7-150">A reference to an array with members of an unspecified type.</span></span>|  
-|`NATIVE_TYPE_LPSTRUCT`|<span data-ttu-id="523b7-151">Указатель на структуру 32-разрядное целое число.</span><span class="sxs-lookup"><span data-stu-id="523b7-151">A 32-bit integer pointer to a structure.</span></span>|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|<span data-ttu-id="523b7-152">Собственный тип настраиваемого модуля маршалинга.</span><span class="sxs-lookup"><span data-stu-id="523b7-152">A custom marshaler native type.</span></span><br /><br /> <span data-ttu-id="523b7-153">Это следует указать строку в следующем формате: «Имя/0Custom упаковщик собственный тип типа имя/0Optional cookie/0» или «{собственного введите GUID} / упаковщик 0Custom введите имя/0Optional файл cookie или 0 "</span><span class="sxs-lookup"><span data-stu-id="523b7-153">This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"</span></span>|  
-|`NATIVE_TYPE_ERROR`|<span data-ttu-id="523b7-154">COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="523b7-154">COM Interop.</span></span><br /><br /> <span data-ttu-id="523b7-155">С помощью ELEMENT_TYPE_I4 этот тип сопоставляется VT_HRESULT.</span><span class="sxs-lookup"><span data-stu-id="523b7-155">With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.</span></span>|  
-|`NATIVE_TYPE_IINSPECTABLE`|<span data-ttu-id="523b7-156">Собственный `IInspectable` типа.</span><span class="sxs-lookup"><span data-stu-id="523b7-156">A native `IInspectable` type.</span></span>|  
-|`NATIVE_TYPE_HSTRING`|<span data-ttu-id="523b7-157">Собственный `HString`.</span><span class="sxs-lookup"><span data-stu-id="523b7-157">A native `HString`.</span></span>|  
-|`NATIVE_TYPE_MAX`|<span data-ttu-id="523b7-158">Недопустимое значение.</span><span class="sxs-lookup"><span data-stu-id="523b7-158">An invalid value.</span></span>|  
+|`NATIVE_TYPE_END`|<span data-ttu-id="a924a-108">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="a924a-108">Obsolete.</span></span>|  
+|`NATIVE_TYPE_VOID`|<span data-ttu-id="a924a-109">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="a924a-109">Obsolete.</span></span>|  
+|`NATIVE_TYPE_BOOLEAN`|<span data-ttu-id="a924a-110">4-байтовое логическое значение, где значение TRUE, ненулевое значение и значение FALSE, равно нулю.</span><span class="sxs-lookup"><span data-stu-id="a924a-110">A 4-byte Boolean value, where TRUE is non-zero and FALSE is zero.</span></span>|  
+|`NATIVE_TYPE_I1`|<span data-ttu-id="a924a-111">8-разрядное целое число со знаком.</span><span class="sxs-lookup"><span data-stu-id="a924a-111">A signed 8-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U1`|<span data-ttu-id="a924a-112">8-разрядное целочисленное значение без знака.</span><span class="sxs-lookup"><span data-stu-id="a924a-112">An unsigned 8-bit integer value.</span></span>|  
+|`NATIVE_TYPE_I2`|<span data-ttu-id="a924a-113">16-разрядное целое число со знаком.</span><span class="sxs-lookup"><span data-stu-id="a924a-113">A signed 16-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U2`|<span data-ttu-id="a924a-114">16-разрядное целочисленное значение без знака.</span><span class="sxs-lookup"><span data-stu-id="a924a-114">An unsigned 16-bit integer value.</span></span>|  
+|`NATIVE_TYPE_I4`|<span data-ttu-id="a924a-115">32-разрядное целое значение со знаком.</span><span class="sxs-lookup"><span data-stu-id="a924a-115">A signed 32-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U4`|<span data-ttu-id="a924a-116">32-разрядное целое значение без знака.</span><span class="sxs-lookup"><span data-stu-id="a924a-116">An unsigned 32-bit integer value.</span></span>|  
+|`NATIVE_TYPE_I8`|<span data-ttu-id="a924a-117">Значение 64-битового знакового целого числа.</span><span class="sxs-lookup"><span data-stu-id="a924a-117">A signed 64-bit integer value.</span></span>|  
+|`NATIVE_TYPE_U8`|<span data-ttu-id="a924a-118">64-разрядное целочисленное значение без знака.</span><span class="sxs-lookup"><span data-stu-id="a924a-118">An unsigned 64-bit integer value.</span></span>|  
+|`NATIVE_TYPE_R4`|<span data-ttu-id="a924a-119">4-байтовое числовое значение с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="a924a-119">A 4-byte floating-point numeric value.</span></span>|  
+|`NATIVE_TYPE_R8`|<span data-ttu-id="a924a-120">8-байтное числовое значение с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="a924a-120">An 8-byte floating-point numeric value.</span></span>|  
+|`NATIVE_TYPE_SYSCHAR`|<span data-ttu-id="a924a-121">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="a924a-121">Obsolete.</span></span>|  
+|`NATIVE_TYPE_VARIANT`|<span data-ttu-id="a924a-122">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="a924a-122">Obsolete.</span></span>|  
+|`NATIVE_TYPE_CURRENCY`|<span data-ttu-id="a924a-123">Числовой тип COM, который соответствует управляемого <xref:System.Decimal> типа.</span><span class="sxs-lookup"><span data-stu-id="a924a-123">A numeric COM type that corresponds to the managed <xref:System.Decimal> type.</span></span>|  
+|`NATIVE_TYPE_PTR`|<span data-ttu-id="a924a-124">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="a924a-124">Obsolete.</span></span>|  
+|`NATIVE_TYPE_DECIMAL`|<span data-ttu-id="a924a-125">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="a924a-125">Obsolete.</span></span>|  
+|`NATIVE_TYPE_DATE`|<span data-ttu-id="a924a-126">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="a924a-126">Obsolete.</span></span>|  
+|`NATIVE_TYPE_BSTR`|<span data-ttu-id="a924a-127">COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="a924a-127">COM Interop.</span></span>|  
+|`NATIVE_TYPE_LPSTR`|<span data-ttu-id="a924a-128">Строковое значение LPSTR.</span><span class="sxs-lookup"><span data-stu-id="a924a-128">An LPSTR string value.</span></span>|  
+|`NATIVE_TYPE_LPWSTR`|<span data-ttu-id="a924a-129">Строковое значение LPWSTR.</span><span class="sxs-lookup"><span data-stu-id="a924a-129">An LPWSTR string value.</span></span>|  
+|`NATIVE_TYPE_LPTSTR`|<span data-ttu-id="a924a-130">Строковое значение LPTSTR.</span><span class="sxs-lookup"><span data-stu-id="a924a-130">An LPTSTR string value.</span></span>|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|<span data-ttu-id="a924a-131">Фиксированное, системный строковое значение.</span><span class="sxs-lookup"><span data-stu-id="a924a-131">A fixed, system-defined string value.</span></span>|  
+|`NATIVE_TYPE_OBJECTREF`|<span data-ttu-id="a924a-132">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="a924a-132">Obsolete.</span></span>|  
+|`NATIVE_TYPE_IUNKNOWN`|<span data-ttu-id="a924a-133">COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="a924a-133">COM Interop.</span></span>|  
+|`NATIVE_TYPE_IDISPATCH`|<span data-ttu-id="a924a-134">COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="a924a-134">COM Interop.</span></span>|  
+|`NATIVE_TYPE_STRUCT`|<span data-ttu-id="a924a-135">Значение собственной структуры.</span><span class="sxs-lookup"><span data-stu-id="a924a-135">A native structure value.</span></span>|  
+|`NATIVE_TYPE_INTF`|<span data-ttu-id="a924a-136">COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="a924a-136">COM Interop.</span></span>|  
+|`NATIVE_TYPE_SAFEARRAY`|<span data-ttu-id="a924a-137">COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="a924a-137">COM Interop.</span></span>|  
+|`NATIVE_TYPE_FIXEDARRAY`|<span data-ttu-id="a924a-138">Значение массива фиксированной длины.</span><span class="sxs-lookup"><span data-stu-id="a924a-138">A fixed-length array value.</span></span>|  
+|`NATIVE_TYPE_INT`|<span data-ttu-id="a924a-139">Собственный 16-разрядное целое число со знаком.</span><span class="sxs-lookup"><span data-stu-id="a924a-139">A native 16-bit signed integer value.</span></span>|  
+|`NATIVE_TYPE_UINT`|<span data-ttu-id="a924a-140">Значение собственного 16-разрядное целое число без знака.</span><span class="sxs-lookup"><span data-stu-id="a924a-140">A native 16-bit unsigned integer value.</span></span>|  
+|`NATIVE_TYPE_NESTEDSTRUCT`|<span data-ttu-id="a924a-141">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="a924a-141">Obsolete.</span></span><br /><br /> <span data-ttu-id="a924a-142">Используйте NATIVE_TYPE_STRUCT.</span><span class="sxs-lookup"><span data-stu-id="a924a-142">Use NATIVE_TYPE_STRUCT.</span></span>|  
+|`NATIVE_TYPE_BYVALSTR`|<span data-ttu-id="a924a-143">COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="a924a-143">COM Interop.</span></span>|  
+|`NATIVE_TYPE_ANSIBSTR`|<span data-ttu-id="a924a-144">COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="a924a-144">COM Interop.</span></span>|  
+|`NATIVE_TYPE_TBSTR`|<span data-ttu-id="a924a-145">COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="a924a-145">COM Interop.</span></span><br /><br /> <span data-ttu-id="a924a-146">Выберите BSTR или ANSIBSTR в зависимости от платформы.</span><span class="sxs-lookup"><span data-stu-id="a924a-146">Select BSTR or ANSIBSTR depending on the platform.</span></span>|  
+|`NATIVE_TYPE_VARIANTBOOL`|<span data-ttu-id="a924a-147">2-байтовое логическое значение, где значение TRUE — -1, а FALSE равно нулю.</span><span class="sxs-lookup"><span data-stu-id="a924a-147">A 2-byte Boolean value, where TRUE is -1 and FALSE is zero.</span></span>|  
+|`NATIVE_TYPE_FUNC`|<span data-ttu-id="a924a-148">Указатель функции.</span><span class="sxs-lookup"><span data-stu-id="a924a-148">A function pointer.</span></span>|  
+|`NATIVE_TYPE_ASANY`|<span data-ttu-id="a924a-149">Ссылка на машинный тип.</span><span class="sxs-lookup"><span data-stu-id="a924a-149">A reference to any native type.</span></span>|  
+|`NATIVE_TYPE_ARRAY`|<span data-ttu-id="a924a-150">Ссылка на массив с членами незаданного типа.</span><span class="sxs-lookup"><span data-stu-id="a924a-150">A reference to an array with members of an unspecified type.</span></span>|  
+|`NATIVE_TYPE_LPSTRUCT`|<span data-ttu-id="a924a-151">Указатель на структуру 32-разрядное целое число.</span><span class="sxs-lookup"><span data-stu-id="a924a-151">A 32-bit integer pointer to a structure.</span></span>|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|<span data-ttu-id="a924a-152">Собственный тип настраиваемого модуля маршалинга.</span><span class="sxs-lookup"><span data-stu-id="a924a-152">A custom marshaler native type.</span></span><br /><br /> <span data-ttu-id="a924a-153">Это следует указать строку в следующем формате: «Имя/0Custom упаковщик собственный тип типа имя/0Optional cookie/0» или «{собственного введите GUID} / упаковщик 0Custom введите имя/0Optional файл cookie или 0 "</span><span class="sxs-lookup"><span data-stu-id="a924a-153">This must be followed by a string of the following format: "Native type name/0Custom marshaler type name/0Optional cookie/0" or "{Native type GUID}/0Custom marshaler type name/0Optional cookie/0"</span></span>|  
+|`NATIVE_TYPE_ERROR`|<span data-ttu-id="a924a-154">COM-взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="a924a-154">COM Interop.</span></span><br /><br /> <span data-ttu-id="a924a-155">С помощью ELEMENT_TYPE_I4 этот тип сопоставляется VT_HRESULT.</span><span class="sxs-lookup"><span data-stu-id="a924a-155">With ELEMENT_TYPE_I4 this type maps to VT_HRESULT.</span></span>|  
+|`NATIVE_TYPE_IINSPECTABLE`|<span data-ttu-id="a924a-156">Собственный `IInspectable` типа.</span><span class="sxs-lookup"><span data-stu-id="a924a-156">A native `IInspectable` type.</span></span>|  
+|`NATIVE_TYPE_HSTRING`|<span data-ttu-id="a924a-157">Собственный `HString`.</span><span class="sxs-lookup"><span data-stu-id="a924a-157">A native `HString`.</span></span>|  
+|`NATIVE_TYPE_MAX`|<span data-ttu-id="a924a-158">Недопустимое значение.</span><span class="sxs-lookup"><span data-stu-id="a924a-158">An invalid value.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="523b7-159">Требования</span><span class="sxs-lookup"><span data-stu-id="523b7-159">Requirements</span></span>  
- <span data-ttu-id="523b7-160">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="523b7-160">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a924a-159">Требования</span><span class="sxs-lookup"><span data-stu-id="a924a-159">Requirements</span></span>  
+ <span data-ttu-id="a924a-160">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a924a-160">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="523b7-161">**Заголовок.** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="523b7-161">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="a924a-161">**Заголовок.** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="a924a-161">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="523b7-162">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="523b7-162">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a924a-162">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a924a-162">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="523b7-163">См. также</span><span class="sxs-lookup"><span data-stu-id="523b7-163">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a924a-163">См. также</span><span class="sxs-lookup"><span data-stu-id="a924a-163">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.UnmanagedType>
-- [<span data-ttu-id="523b7-164">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="523b7-164">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="a924a-164">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="a924a-164">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

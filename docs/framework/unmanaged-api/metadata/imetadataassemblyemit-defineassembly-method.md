@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b95a583aec87e3ba3e247d1ef800302b62657837
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044828"
 ---
-# <a name="imetadataassemblyemitdefineassembly-method"></a><span data-ttu-id="10c00-102">Метод IMetaDataAssemblyEmit::DefineAssembly</span><span class="sxs-lookup"><span data-stu-id="10c00-102">IMetaDataAssemblyEmit::DefineAssembly Method</span></span>
-<span data-ttu-id="10c00-103">Создает `Assembly` структуры содержащие метаданные для указанной сборки и возвращает связанный токен метаданных.</span><span class="sxs-lookup"><span data-stu-id="10c00-103">Creates an `Assembly` structure containing metadata for the specified assembly and returns the associated metadata token.</span></span>  
+# <a name="imetadataassemblyemitdefineassembly-method"></a><span data-ttu-id="80a32-102">Метод IMetaDataAssemblyEmit::DefineAssembly</span><span class="sxs-lookup"><span data-stu-id="80a32-102">IMetaDataAssemblyEmit::DefineAssembly Method</span></span>
+<span data-ttu-id="80a32-103">Создает `Assembly` структуры содержащие метаданные для указанной сборки и возвращает связанный токен метаданных.</span><span class="sxs-lookup"><span data-stu-id="80a32-103">Creates an `Assembly` structure containing metadata for the specified assembly and returns the associated metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="10c00-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="10c00-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80a32-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="80a32-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineAssembly (  
@@ -41,40 +41,40 @@ HRESULT DefineAssembly (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="10c00-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="10c00-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="80a32-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="80a32-105">Parameters</span></span>  
  `pbPublicKey`  
- <span data-ttu-id="10c00-106">[in] Открытый ключ, который идентифицирует издателя сборки, или значение NULL, если сборка не имеет строгого имени.</span><span class="sxs-lookup"><span data-stu-id="10c00-106">[in] The public key that identifies the publisher of the assembly, or NULL if the assembly is not strongly named.</span></span>  
+ <span data-ttu-id="80a32-106">[in] Открытый ключ, который идентифицирует издателя сборки, или значение NULL, если сборка не имеет строгого имени.</span><span class="sxs-lookup"><span data-stu-id="80a32-106">[in] The public key that identifies the publisher of the assembly, or NULL if the assembly is not strongly named.</span></span>  
   
  `cbPublicKey`  
- <span data-ttu-id="10c00-107">[in] Размер в байтах `pbPublicKey`.</span><span class="sxs-lookup"><span data-stu-id="10c00-107">[in] The size in bytes of `pbPublicKey`.</span></span>  
+ <span data-ttu-id="80a32-107">[in] Размер в байтах `pbPublicKey`.</span><span class="sxs-lookup"><span data-stu-id="80a32-107">[in] The size in bytes of `pbPublicKey`.</span></span>  
   
  `uHashAlgId`  
- <span data-ttu-id="10c00-108">[in] Идентификатор алгоритма хэширования, используемый для шифрования файлов в сборке, или значение NULL для задания алгоритма SHA-1.</span><span class="sxs-lookup"><span data-stu-id="10c00-108">[in] The identifier of the hashing algorithm to use to encrypt the files in the assembly, or NULL to specify the SHA-1 algorithm.</span></span>  
+ <span data-ttu-id="80a32-108">[in] Идентификатор алгоритма хэширования, используемый для шифрования файлов в сборке, или значение NULL для задания алгоритма SHA-1.</span><span class="sxs-lookup"><span data-stu-id="80a32-108">[in] The identifier of the hashing algorithm to use to encrypt the files in the assembly, or NULL to specify the SHA-1 algorithm.</span></span>  
   
  `szName`  
- <span data-ttu-id="10c00-109">[in] Понятное текстовое имя сборки.</span><span class="sxs-lookup"><span data-stu-id="10c00-109">[in] The human-readable text name of the assembly.</span></span> <span data-ttu-id="10c00-110">Это значение не должна превышать 1024 символа.</span><span class="sxs-lookup"><span data-stu-id="10c00-110">This value must not exceed 1024 characters.</span></span>  
+ <span data-ttu-id="80a32-109">[in] Понятное текстовое имя сборки.</span><span class="sxs-lookup"><span data-stu-id="80a32-109">[in] The human-readable text name of the assembly.</span></span> <span data-ttu-id="80a32-110">Это значение не должна превышать 1024 символа.</span><span class="sxs-lookup"><span data-stu-id="80a32-110">This value must not exceed 1024 characters.</span></span>  
   
  `pMetaData`  
- <span data-ttu-id="10c00-111">[in] Указатель на экземпляр ASSEMBLYMETADATA, содержащий сведения о версии, платформы и языковой стандарт для сборки.</span><span class="sxs-lookup"><span data-stu-id="10c00-111">[in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.</span></span>  
+ <span data-ttu-id="80a32-111">[in] Указатель на экземпляр ASSEMBLYMETADATA, содержащий сведения о версии, платформы и языковой стандарт для сборки.</span><span class="sxs-lookup"><span data-stu-id="80a32-111">[in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.</span></span>  
   
  `dwAssemblyFlags`  
- <span data-ttu-id="10c00-112">[in] Сочетание [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) значения, описывающие возможности сборки.</span><span class="sxs-lookup"><span data-stu-id="10c00-112">[in] A combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that describe features of the assembly.</span></span>  
+ <span data-ttu-id="80a32-112">[in] Сочетание [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) значения, описывающие возможности сборки.</span><span class="sxs-lookup"><span data-stu-id="80a32-112">[in] A combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that describe features of the assembly.</span></span>  
   
  `pmda`  
- <span data-ttu-id="10c00-113">[out] Указатель на токен метаданных.</span><span class="sxs-lookup"><span data-stu-id="10c00-113">[out] A pointer to the metadata token.</span></span>  
+ <span data-ttu-id="80a32-113">[out] Указатель на токен метаданных.</span><span class="sxs-lookup"><span data-stu-id="80a32-113">[out] A pointer to the metadata token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="10c00-114">Примечания</span><span class="sxs-lookup"><span data-stu-id="10c00-114">Remarks</span></span>  
- <span data-ttu-id="10c00-115">Только один `Assembly` структуру метаданных можно определить в манифесте.</span><span class="sxs-lookup"><span data-stu-id="10c00-115">Only one `Assembly` metadata structure can be defined within a manifest.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="80a32-114">Примечания</span><span class="sxs-lookup"><span data-stu-id="80a32-114">Remarks</span></span>  
+ <span data-ttu-id="80a32-115">Только один `Assembly` структуру метаданных можно определить в манифесте.</span><span class="sxs-lookup"><span data-stu-id="80a32-115">Only one `Assembly` metadata structure can be defined within a manifest.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="10c00-116">Требования</span><span class="sxs-lookup"><span data-stu-id="10c00-116">Requirements</span></span>  
- <span data-ttu-id="10c00-117">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="10c00-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="80a32-116">Требования</span><span class="sxs-lookup"><span data-stu-id="80a32-116">Requirements</span></span>  
+ <span data-ttu-id="80a32-117">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="80a32-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="10c00-118">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="10c00-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="80a32-118">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="80a32-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="10c00-119">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="10c00-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="80a32-119">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="80a32-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="10c00-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10c00-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="80a32-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80a32-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10c00-121">См. также</span><span class="sxs-lookup"><span data-stu-id="10c00-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="80a32-121">См. также</span><span class="sxs-lookup"><span data-stu-id="80a32-121">See also</span></span>
 
-- [<span data-ttu-id="10c00-122">Интерфейс IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="10c00-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="80a32-122">Интерфейс IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="80a32-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
