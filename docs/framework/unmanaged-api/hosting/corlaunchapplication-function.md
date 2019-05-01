@@ -18,18 +18,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4c997ab107ba3ceb7773bc9235b9c9dcd4d97df8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985794"
 ---
-# <a name="corlaunchapplication-function"></a><span data-ttu-id="24501-102">Функция CorLaunchApplication</span><span class="sxs-lookup"><span data-stu-id="24501-102">CorLaunchApplication Function</span></span>
-<span data-ttu-id="24501-103">Запускает приложение по указанному сетевому пути, используя заданные манифесты и другие данные приложения.</span><span class="sxs-lookup"><span data-stu-id="24501-103">Starts the application at the specified network path, using the specified manifests and other application data.</span></span>  
+# <a name="corlaunchapplication-function"></a><span data-ttu-id="85195-102">Функция CorLaunchApplication</span><span class="sxs-lookup"><span data-stu-id="85195-102">CorLaunchApplication Function</span></span>
+<span data-ttu-id="85195-103">Запускает приложение по указанному сетевому пути, используя заданные манифесты и другие данные приложения.</span><span class="sxs-lookup"><span data-stu-id="85195-103">Starts the application at the specified network path, using the specified manifests and other application data.</span></span>  
   
- <span data-ttu-id="24501-104">Эта функция устарели в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="24501-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="85195-104">Эта функция устарели в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="85195-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="24501-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="24501-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="85195-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="85195-105">Syntax</span></span>  
   
 ```  
 HRESULT CorLaunchApplication (  
@@ -43,37 +43,37 @@ HRESULT CorLaunchApplication (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="24501-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="24501-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="85195-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="85195-106">Parameters</span></span>  
  `dwClickOnceHost`  
- <span data-ttu-id="24501-107">[in] Значение [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) перечисление, указывающее тип узла, которое запускает приложение.</span><span class="sxs-lookup"><span data-stu-id="24501-107">[in] A value of the [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) enumeration that specifies the type of host that is launching the application.</span></span>  
+ <span data-ttu-id="85195-107">[in] Значение [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) перечисление, указывающее тип узла, которое запускает приложение.</span><span class="sxs-lookup"><span data-stu-id="85195-107">[in] A value of the [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) enumeration that specifies the type of host that is launching the application.</span></span>  
   
  `pwzAppFullName`  
- <span data-ttu-id="24501-108">[in] Полное имя приложения, запускаемый.</span><span class="sxs-lookup"><span data-stu-id="24501-108">[in] The full name of the application that is being launched.</span></span>  
+ <span data-ttu-id="85195-108">[in] Полное имя приложения, запускаемый.</span><span class="sxs-lookup"><span data-stu-id="85195-108">[in] The full name of the application that is being launched.</span></span>  
   
  `dwManifestPaths`  
- <span data-ttu-id="24501-109">[in] Количество путей манифестов для приложения.</span><span class="sxs-lookup"><span data-stu-id="24501-109">[in] The number of manifest paths for the application.</span></span>  
+ <span data-ttu-id="85195-109">[in] Количество путей манифестов для приложения.</span><span class="sxs-lookup"><span data-stu-id="85195-109">[in] The number of manifest paths for the application.</span></span>  
   
  `ppwzManifestPaths`  
- <span data-ttu-id="24501-110">[in] Массив строк, каждый из которых указывает путь к манифесту приложения, запускаемый.</span><span class="sxs-lookup"><span data-stu-id="24501-110">[in] An array of strings, each of which specifies a path to a manifest for the application that is being launched.</span></span>  
+ <span data-ttu-id="85195-110">[in] Массив строк, каждый из которых указывает путь к манифесту приложения, запускаемый.</span><span class="sxs-lookup"><span data-stu-id="85195-110">[in] An array of strings, each of which specifies a path to a manifest for the application that is being launched.</span></span>  
   
  `dwActivationData`  
- <span data-ttu-id="24501-111">[in] Число элементов данных активации для приложения, запускаемый.</span><span class="sxs-lookup"><span data-stu-id="24501-111">[in] The number of activation data items for the application that is being launched.</span></span>  
+ <span data-ttu-id="85195-111">[in] Число элементов данных активации для приложения, запускаемый.</span><span class="sxs-lookup"><span data-stu-id="85195-111">[in] The number of activation data items for the application that is being launched.</span></span>  
   
  `ppwzActivationData`  
- <span data-ttu-id="24501-112">[in] Массив строк, каждый из которых представляет элемент данных активации для приложения, запускаемый.</span><span class="sxs-lookup"><span data-stu-id="24501-112">[in] An array of strings, each of which is an activation data item for the application that is being launched.</span></span>  
+ <span data-ttu-id="85195-112">[in] Массив строк, каждый из которых представляет элемент данных активации для приложения, запускаемый.</span><span class="sxs-lookup"><span data-stu-id="85195-112">[in] An array of strings, each of which is an activation data item for the application that is being launched.</span></span>  
   
  `lpProcessInformation`  
- <span data-ttu-id="24501-113">[out] Указатель на сведения о процессе, в котором было загружено приложение.</span><span class="sxs-lookup"><span data-stu-id="24501-113">[out] A pointer to information about the process in which the application has been loaded.</span></span>  
+ <span data-ttu-id="85195-113">[out] Указатель на сведения о процессе, в котором было загружено приложение.</span><span class="sxs-lookup"><span data-stu-id="85195-113">[out] A pointer to information about the process in which the application has been loaded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="24501-114">Требования</span><span class="sxs-lookup"><span data-stu-id="24501-114">Requirements</span></span>  
- <span data-ttu-id="24501-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="24501-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="85195-114">Требования</span><span class="sxs-lookup"><span data-stu-id="85195-114">Requirements</span></span>  
+ <span data-ttu-id="85195-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="85195-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="24501-116">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="24501-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="85195-116">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="85195-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="24501-117">**Библиотека:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="24501-117">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="85195-117">**Библиотека:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="85195-117">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="24501-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="24501-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="85195-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="85195-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="24501-119">См. также</span><span class="sxs-lookup"><span data-stu-id="24501-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="85195-119">См. также</span><span class="sxs-lookup"><span data-stu-id="85195-119">See also</span></span>
 
-- [<span data-ttu-id="24501-120">Устаревшие функции размещения CLR</span><span class="sxs-lookup"><span data-stu-id="24501-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="85195-120">Устаревшие функции размещения CLR</span><span class="sxs-lookup"><span data-stu-id="85195-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

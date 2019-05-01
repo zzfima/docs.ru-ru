@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 48650a370f7d15724e20850e9d3b47dc8215f960
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989499"
 ---
-# <a name="icordebugchaingetreason-method"></a><span data-ttu-id="9a125-102">Метод ICorDebugChain::GetReason</span><span class="sxs-lookup"><span data-stu-id="9a125-102">ICorDebugChain::GetReason Method</span></span>
-<span data-ttu-id="9a125-103">Получает причину происхождения этой цепочки вызовов.</span><span class="sxs-lookup"><span data-stu-id="9a125-103">Gets the reason for the genesis of this calling chain.</span></span>  
+# <a name="icordebugchaingetreason-method"></a><span data-ttu-id="957f5-102">Метод ICorDebugChain::GetReason</span><span class="sxs-lookup"><span data-stu-id="957f5-102">ICorDebugChain::GetReason Method</span></span>
+<span data-ttu-id="957f5-103">Получает причину происхождения этой цепочки вызовов.</span><span class="sxs-lookup"><span data-stu-id="957f5-103">Gets the reason for the genesis of this calling chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a125-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9a125-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="957f5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="957f5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetReason (  
@@ -35,15 +35,15 @@ HRESULT GetReason (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9a125-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9a125-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="957f5-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="957f5-105">Parameters</span></span>  
  `pReason`  
- <span data-ttu-id="9a125-106">[out] Указатель на значение (побитовое сочетание) CorDebugChainReason перечисления, указывающее причину происхождения этой цепочки вызовов.</span><span class="sxs-lookup"><span data-stu-id="9a125-106">[out] A pointer to a value (a bitwise combination) of the CorDebugChainReason enumeration that indicates the reason for the genesis of this calling chain.</span></span>  
+ <span data-ttu-id="957f5-106">[out] Указатель на значение (побитовое сочетание) CorDebugChainReason перечисления, указывающее причину происхождения этой цепочки вызовов.</span><span class="sxs-lookup"><span data-stu-id="957f5-106">[out] A pointer to a value (a bitwise combination) of the CorDebugChainReason enumeration that indicates the reason for the genesis of this calling chain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9a125-107">Требования</span><span class="sxs-lookup"><span data-stu-id="9a125-107">Requirements</span></span>  
- <span data-ttu-id="9a125-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9a125-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="957f5-107">Требования</span><span class="sxs-lookup"><span data-stu-id="957f5-107">Requirements</span></span>  
+ <span data-ttu-id="957f5-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="957f5-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9a125-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9a125-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="957f5-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="957f5-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9a125-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9a125-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="957f5-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="957f5-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9a125-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a125-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="957f5-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="957f5-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
