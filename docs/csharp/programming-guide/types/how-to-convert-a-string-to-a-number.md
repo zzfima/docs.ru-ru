@@ -1,5 +1,5 @@
 ---
-title: Как выполнить  Руководство по программированию на C#. Преобразование строки в число
+title: Практическое руководство. Преобразование строки в число (руководство по программированию на C#)
 ms.custom: seodec18
 ms.date: 02/11/2019
 helpviewer_keywords:
@@ -15,7 +15,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 02/13/2019
 ms.locfileid: "56219338"
 ---
-# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Как выполнить  Руководство по программированию на C#. Преобразование строки в число
+# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Практическое руководство. Преобразование строки в число (руководство по программированию на C#)
 
 Вы можете преобразовывать [строку](../../../csharp/language-reference/keywords/string.md) в число с помощью вызова метода `Parse` или `TryParse`, который можно найти в различных числовых типах (`int`, `long`, `double` и т. д.), или используя методы в классе <xref:System.Convert?displayProperty=nameWithType>.  
   
