@@ -2,12 +2,12 @@
 title: Создание ролей приложений в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: f836fd239eca30d0a1f4a667cddc844446d1d951
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7934c58f837cd5a4b01f823701025190be3dfe6d
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878024"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910709"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Создание ролей приложений в SQL Server
 Роли приложения предоставляют возможность назначать разрешения приложению, а не ролям базы данных или пользователям. Пользователи могут соединиться с базой данных, активировать роль приложения и воспользоваться разрешениями, предоставленными приложению. Разрешения, предоставленные роли приложения, действуют в течение всего соединения.  

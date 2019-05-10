@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 275041372bd5e7da5dd0b32dc0a3d70a38bd0dcd
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937646"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063776"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Практическое руководство. Создание эскизов изображений
 Эскиз — это компактная версия образа. Можно создать изображение эскиза путем вызова <xref:System.Drawing.Image.GetThumbnailImage%2A> метод <xref:System.Drawing.Image> объекта.  
@@ -21,9 +21,9 @@ ms.locfileid: "61937646"
 ## <a name="example"></a>Пример  
  В следующем примере создается <xref:System.Drawing.Image> объект из JPG-файла. Исходное изображение имеет 640 пикселей в ширину и высоту 479 пикселей. Код создает эскиз с 100 пикселей в ширину и высоту 100 пикселей.  
   
- На следующем рисунке эскиз.  
+ На следующем рисунке показан эскиз:  
   
- ![Эскиз](./media/thumbnail1.png "Thumbnail1")  
+ ![Снимок экрана, показывающий эскиз выходных данных.](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
   
 > [!NOTE]
 >  В этом примере метод обратного вызова является объявлен, но никогда не используется. Это поддерживается всеми версиями GDI +.  

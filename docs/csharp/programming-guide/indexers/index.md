@@ -8,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 5ab0a5e524979110c355391cf800cc82e6d6244f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43cc051eda8c3458d3dc5c529b52104bcd9b807a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680166"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596127"
 ---
 # <a name="indexers-c-programming-guide"></a>Индексаторы (Руководство по программированию в C#)
 
@@ -40,29 +40,29 @@ ms.locfileid: "61680166"
   
 ## <a name="indexers-overview"></a>Общие сведения об индексаторах  
   
--   Индексаторы позволяют индексировать объекты так же, как и массивы.  
+- Индексаторы позволяют индексировать объекты так же, как и массивы.  
   
--   Метод доступа `get` возвращает значение. Метод доступа `set` назначает значение.  
+- Метод доступа `get` возвращает значение. Метод доступа `set` назначает значение.  
   
--   Ключевое слово [this](../../../csharp/language-reference/keywords/this.md) используется для определения индексаторов.  
+- Ключевое слово [this](../../../csharp/language-reference/keywords/this.md) используется для определения индексаторов.  
   
--   Ключевое слово [value`set` используется для определения значения, присваиваемого индексатором ](../../../csharp/language-reference/keywords/value.md).  
+- Ключевое слово [value`set` используется для определения значения, присваиваемого индексатором ](../../../csharp/language-reference/keywords/value.md).  
   
--   Индексаторы не нужно индексировать по целому значению; пользователь может определить конкретный механизм поиска на свое усмотрение.  
+- Индексаторы не нужно индексировать по целому значению; пользователь может определить конкретный механизм поиска на свое усмотрение.  
   
--   Индексаторы могут быть перегружены.  
+- Индексаторы могут быть перегружены.  
   
--   Индексаторы могут иметь более одного формального параметра, например при доступе к двумерному массиву.  
+- Индексаторы могут иметь более одного формального параметра, например при доступе к двумерному массиву.  
   
 ## <a name="BKMK_RelatedSections"></a> Связанные разделы  
   
--   [Использование индексаторов](../../../csharp/programming-guide/indexers/using-indexers.md)  
+- [Использование индексаторов](../../../csharp/programming-guide/indexers/using-indexers.md)  
   
--   [Индексаторы в интерфейсах](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+- [Индексаторы в интерфейсах](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
   
--   [Сравнение свойств и индексаторов](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Сравнение свойств и индексаторов](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [Ограничение доступности методов доступа](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Ограничение доступности методов доступа](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
 

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 825da3a09f8b8013ffecaedfee0dce2362c8a7b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d6e5b74e508f55ec8e94b09960e496ff21936228
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598978"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586973"
 ---
 # <a name="functionenter2-function"></a>Функция FunctionEnter2
 Уведомляет профилировщик о том, что элемент управления передается в функцию и предоставляет информацию о стеке кадра и аргументов функции. Эта функция заменяет [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) функции.  

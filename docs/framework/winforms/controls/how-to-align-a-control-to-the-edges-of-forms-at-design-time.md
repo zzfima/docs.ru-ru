@@ -5,42 +5,40 @@ helpviewer_keywords:
 - custom controls [Windows Forms], docking using designer
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-ms.openlocfilehash: 8ca6fd64edbd73301fd298f42c3d4d97d021888a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b08e01eb9adb984a32a8fc435cf1f3b93b159a14
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331868"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65210372"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>Практическое руководство. Выравнивание элементов управления по границам формы во время выполнения
-Чтобы выровнять по границе формы, задав элемент управления <xref:System.Windows.Forms.Control.Dock%2A>. Это свойство определяет, в каком месте формы будет размещаться элемент управления. Свойство <xref:System.Windows.Forms.Control.Dock%2A> может принимать указанные ниже значения.  
-  
-|Параметр|Влияние на элемент управления|  
-|-------------|----------------------------|  
-|<xref:System.Windows.Forms.DockStyle.Bottom>|Фиксирует элемент управления у нижнего края формы.|  
-|<xref:System.Windows.Forms.DockStyle.Fill>|Заполняет все свободное пространство формы.|  
-|<xref:System.Windows.Forms.DockStyle.Left>|Фиксирует элемент управления у левого края формы.|  
-|<xref:System.Windows.Forms.DockStyle.None>|Не фиксирует элемент нигде; он отображается в расположении, указанном путем его <xref:System.Windows.Forms.Control.Location%2A>.|  
-|<xref:System.Windows.Forms.DockStyle.Right>|Фиксирует элемент управления у правого края формы.|  
-|<xref:System.Windows.Forms.DockStyle.Top>|Фиксирует элемент управления у верхнего края формы.|  
-  
- Эти значения можно также задать в коде. Дополнительные сведения см. в разделе [Как Выравнивание элементов управления по границам формы](how-to-align-a-control-to-the-edges-of-forms.md).  
-  
-> [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-set-the-dock-property-for-your-control-at-design-time"></a>Чтобы задать свойства Dock для элемента управления во время разработки  
-  
-1. В конструкторе Windows Forms выберите элемент управления.  
-  
-2. В **свойства** окно, щелкните в раскрывающемся поле рядом с <xref:System.Windows.Forms.Control.Dock%2A> свойство.  
-  
-     Графический интерфейс с шестью возможными <xref:System.Windows.Forms.Control.Dock%2A> параметров отображается.  
-  
-3. Выберите соответствующий параметр.  
-  
-4. Элемент управления будет зафиксировано в отношении, определенном с помощью параметра.  
-  
+
+Чтобы выровнять по границе формы, задав значение элемента управления <xref:System.Windows.Forms.Control.Dock%2A> свойство. Это свойство определяет, в каком месте формы будет размещаться элемент управления. Свойство <xref:System.Windows.Forms.Control.Dock%2A> может принимать указанные ниже значения.
+
+|Параметр|Влияние на элемент управления|
+|-------------|----------------------------|
+|<xref:System.Windows.Forms.DockStyle.Bottom>|Фиксирует элемент управления у нижнего края формы.|
+|<xref:System.Windows.Forms.DockStyle.Fill>|Заполняет все свободное пространство формы.|
+|<xref:System.Windows.Forms.DockStyle.Left>|Фиксирует элемент управления у левого края формы.|
+|<xref:System.Windows.Forms.DockStyle.None>|Не фиксирует элемент нигде; он отображается в расположении, указанном путем его <xref:System.Windows.Forms.Control.Location%2A>.|
+|<xref:System.Windows.Forms.DockStyle.Right>|Фиксирует элемент управления у правого края формы.|
+|<xref:System.Windows.Forms.DockStyle.Top>|Фиксирует элемент управления у верхнего края формы.|
+
+Эти значения можно также задать в коде. Дополнительные сведения см. в разделе [Как Выравнивание элементов управления по границам формы](how-to-align-a-control-to-the-edges-of-forms.md).
+
+## <a name="set-the-dock-property-for-your-control-at-design-time"></a>Задание свойства Dock для элемента управления во время разработки
+
+1. В конструкторе Windows Forms в Visual Studio выберите элемент управления.
+
+2. В **свойства** окно, щелкните в раскрывающемся поле рядом с <xref:System.Windows.Forms.Control.Dock%2A> свойство.
+
+     Графический интерфейс с шестью возможными <xref:System.Windows.Forms.Control.Dock%2A> параметров отображается.
+
+3. Выберите соответствующий параметр.
+
+4. Элемент управления будет зафиксировано в отношении, определенном с помощью параметра.
+
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>

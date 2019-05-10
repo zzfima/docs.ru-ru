@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: bbc77c0074b35a95140b35d71e89c51ad8abac62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5eee8b4b046bd4d3f9c71b692f4bac3dd6bcea2c
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800182"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211781"
 ---
 # <a name="windows-forms-overview"></a>Общие сведения о Windows Forms
 
@@ -32,7 +32,7 @@ ms.locfileid: "61800182"
 
  В состав Windows Forms входят многофункциональные элементы пользовательского интерфейса, позволяющие воссоздавать возможности таких сложных приложений, как Microsoft Office. Используя элементы управления <xref:System.Windows.Forms.ToolStrip> и <xref:System.Windows.Forms.MenuStrip>, можно создавать панели инструментов и меню, содержащие текст и рисунки, подменю и другие элементы управления, такие как текстовые поля и поля со списками.
 
- С помощью Visual Studio и перетаскивать **конструктор Windows Forms**, можно легко создавать приложения Windows Forms. Достаточно выделить элемент управления курсором и поместить его в нужное место на форме. Для преодоления трудностей, связанных с выравниванием элементов управления, конструктор предоставляет такие средства, как линии сетки и линии привязки. С помощью Visual Studio или компиляции из командной строки, можно использовать <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> и <xref:System.Windows.Forms.SplitContainer> элементы управления для создания сложных макетов форм за меньшее время.
+ С помощью перетаскивания и вставки **конструктор Windows Forms** в Visual Studio можно легко создавать приложения Windows Forms. Достаточно выделить элемент управления курсором и поместить его в нужное место на форме. Для преодоления трудностей, связанных с выравниванием элементов управления, конструктор предоставляет такие средства, как линии сетки и линии привязки. С помощью Visual Studio или компиляции из командной строки, можно использовать <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> и <xref:System.Windows.Forms.SplitContainer> элементы управления для создания сложных макетов форм за меньшее время.
 
  Наконец, если нужно создать свои собственные элементы пользовательского интерфейса, пространство имен <xref:System.Drawing> содержит широкий набор классов, необходимых для отрисовки линий, кругов и других фигур непосредственно на форме.
 

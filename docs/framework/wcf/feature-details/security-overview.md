@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5e2b81a3ca7ab2c266218c3e32d22e0ebf67bf6a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748542"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586770"
 ---
 # <a name="security-overview"></a>Общие сведения о безопасности
 Windows Communication Foundation (WCF) — это SOAP на базе сообщений Распределенная платформа программирования, а защита сообщений между клиентами и службами — важно для защиты данных. WCF предоставляет универсальный и гибкую платформу для безопасного обмена сообщениями на основе существующей инфраструктуры безопасности и общепризнанных стандартов безопасности для сообщений SOAP.  
