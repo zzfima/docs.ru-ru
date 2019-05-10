@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 32a947529027fbf89d3c3e7148fd932f0e54fe70
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785038"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652016"
 ---
 # <a name="designing-service-contracts"></a>Создание контрактов служб
 Этот раздел описывает, что такое контракты служб, как они определяются, какие операции доступны (также описаны последствия обмена сообщениями, на которых они основаны), какие типы данных используются; кроме того, он содержит ответы на другие вопросы, которые помогут при разработке операций, удовлетворяющих требованиям вашего сценария.  

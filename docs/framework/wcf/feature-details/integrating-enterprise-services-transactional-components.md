@@ -2,12 +2,12 @@
 title: Интеграция транзакционных компонентов служб Enterprise Services
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 33e09eab1d7ad24dc234cfff21e352611e0b2ef9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 682bf5b92a5e01391766d614e955954019a4ce8d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047039"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638674"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Интеграция транзакционных компонентов служб Enterprise Services
 Windows Communication Foundation (WCF) обеспечивает автоматический механизм интеграции со службами Enterprise Services (см. в разделе [интеграция с приложениями COM +](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Однако для разработки служб, которые внутренне используют транзакционные компоненты, размещенные внутри служб Enterprise Services, может потребоваться гибкость. Поскольку возможность транзакций WCF построена на <xref:System.Transactions> инфраструктуры, процесс интеграции служб Enterprise Services с помощью WCF уже имеется у задания взаимодействия между <xref:System.Transactions> и Enterprise Services, как описано в [Взаимодействие с транзакциями COM + Enterprise Services и](https://go.microsoft.com/fwlink/?LinkId=94949).  

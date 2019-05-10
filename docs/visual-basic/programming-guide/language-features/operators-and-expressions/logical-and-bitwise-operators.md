@@ -21,12 +21,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: ac47b6d7fa4861d18646a23f442caccc4062852f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 23f3758527b787551ad83cbd4e19076b788c9dd8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864499"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649697"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Логические и побитовые операторы в Visual Basic
 Логические операторы сравнения `Boolean` выражения и возвращают `Boolean` результат. `And`, `Or`, `AndAlso`, `OrElse`, И `Xor` операторы *двоичных* так, как они принимают два операнда, тогда как `Not` оператор *унарный* так как он принимает один операнд. Некоторые из этих операторов можно также выполнять побитовые логические операции над целыми значениями.  

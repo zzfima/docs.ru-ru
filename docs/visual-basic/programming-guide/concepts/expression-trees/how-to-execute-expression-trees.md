@@ -2,12 +2,12 @@
 title: Практическое руководство. Выполнение деревьев выражений (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-ms.openlocfilehash: cccb0b301e1da6d82c616d56604ad46dfde83e2a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d7e0f5f6687ffb4293209a29279ca16361e7424e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787183"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642334"
 ---
 # <a name="how-to-execute-expression-trees-visual-basic"></a>Практическое руководство. Выполнение деревьев выражений (Visual Basic)
 В этом разделе показано, как выполнить дерево выражения. В результате выполнения дерева выражения может возвращаться значение или просто выполняться действие, такое как вызов метода.  

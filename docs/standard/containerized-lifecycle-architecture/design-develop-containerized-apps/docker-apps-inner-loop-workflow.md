@@ -4,12 +4,12 @@ description: Дополнительные сведения «внутренне�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dda75e120b0f17a591fadc22944c78d1174ca156
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050567"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664375"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Рабочий процесс внутреннего цикла разработки для приложений Docker
 
@@ -21,11 +21,11 @@ ms.locfileid: "62050567"
 
 Контейнер или экземпляр образа Docker будет содержать следующие компоненты:
 
--   Выбранная операционная система (например, дистрибутив Linux или Windows)
+- Выбранная операционная система (например, дистрибутив Linux или Windows)
 
 - Файлы, добавленные разработчиком (например, двоичные файлы приложения)
 
--   Конфигурации (например, параметры среды и зависимости)
+- Конфигурации (например, параметры среды и зависимости)
 
 - Инструкции для того, какие процессы с Docker
 
@@ -115,7 +115,7 @@ ms.locfileid: "62050567"
 
 ```Dockerfile
 # Base Docker image to use  
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.1
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
   
 # Set the Working Directory and files to be copied to the image  
 ARG source  
@@ -129,7 +129,7 @@ EXPOSE 80
 ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 ```
 
-В этом случае образ основан на версии 2.1 официального образа ASP.NET Core Docker (мультиархитектурного для Linux и Windows), согласно строке `FROM mcr.microsoft.com/dotnet/core/aspnet:2.1`. (Дополнительные сведения об этом см. в разделе [образ Docker ASP.NET Core](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) страницы и [образ Docker .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/) страницы).
+В этом случае образ основан на версии 2.2 официального образа ASP.NET Core Docker (мультиархитектурного для Linux и Windows), согласно строке `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2`. (Дополнительные сведения об этом см. в разделе [образ Docker ASP.NET Core](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) страницы и [образ Docker .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/) страницы).
 
 В DockerFile можно также указать Docker прослушивать TCP-порт, который будет использоваться во время выполнения (например, порт 80).
 

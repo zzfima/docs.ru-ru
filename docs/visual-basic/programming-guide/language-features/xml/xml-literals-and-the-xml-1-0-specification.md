@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
-ms.openlocfilehash: 4cc64bc5469b86a35a9dc45e09fa8fc9260fdcad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e00812ccf463342502eef96c91d62ba63223424f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761719"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639863"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>XML-литералы и спецификация XML 1.0 (Visual Basic)
 Синтаксис XML-литералов в Visual Basic поддерживает большую часть спецификации языка (XML) 1.0. Дополнительные сведения о спецификации XML 1.0, см. в разделе [языка (XML) 1.0](https://www.w3.org/TR/xml) на веб-узле W3C.  

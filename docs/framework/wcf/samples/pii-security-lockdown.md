@@ -2,12 +2,12 @@
 title: Блокировка безопасности PII
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 13ed280e9b7de2b205e0878761dbf97e168f06d3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 18095845db094f0911578816e6bacdb7f3776156
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989655"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664785"
 ---
 # <a name="pii-security-lockdown"></a>Блокировка безопасности PII
 В этом примере показано, как управлять некоторыми возможностями безопасности службы Windows Communication Foundation (WCF) по:  
