@@ -2,12 +2,12 @@
 title: Использование моникера WCF с клиентами COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 14907dd3df66478e8f84b7735a84dd500855448b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 827ea3295bc052f7272eeff241ece10caf5a9704
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051615"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624258"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Использование моникера WCF с клиентами COM
 В этом образце демонстрируется использование моникера службы Windows Communication Foundation (WCF) для интеграции веб-служб в средах разработки на основе COM, таких как Microsoft Office Visual Basic for Applications (Office VBA) или Visual Basic 6.0. Этот образец содержит клиент сервера скриптов Windows (VBS), поддерживающую библиотеку клиента (DLL) и библиотеку службы (DLL), размещенные службами IIS. Служба представляет собой службу калькулятора, а клиент COM вызывает для службы математические операции (сложение, вычитание, умножение и деление). Действия клиента отображаются в окнах сообщений.  

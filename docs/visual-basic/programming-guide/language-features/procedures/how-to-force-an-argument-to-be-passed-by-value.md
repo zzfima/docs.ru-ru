@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 497ae11b858b7d164ba3b5607ff2109254a154de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 540271c414ac295c419533a4622657d60d123796
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863627"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665391"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Практическое руководство. Принудительная аргумента передаваться по значению (Visual Basic)
 Объявление процедуры определяет механизм передачи. Если параметр объявлен [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic и ожидает передачи соответствующего аргумента по ссылке. Это позволяет процедуре для изменения значения элемента программирования, в аргументе в вызывающем коде. Если вы хотите защитить основные элементы от таких изменений, можно переопределить `ByRef` механизм передачи в процедуре вызовите, заключив имя аргумента в скобки. Эти скобки являются дополнением к круглым скобкам, содержащим список аргументов в вызове.  

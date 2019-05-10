@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4a247bdb90780a22d90bf338eef52830c82907fb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785857"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630684"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Практическое руководство. Применение фонового потока для поиска файлов
 <xref:System.ComponentModel.BackgroundWorker> Компонент заменяет и расширяет его функциональные возможности <xref:System.Threading> пространства имен, однако <xref:System.Threading> пространство имен сохраняется для обратной совместимости и использования в будущем, если выбран. Дополнительные сведения см. в разделе [Общие сведения о компоненте BackgroundWorker](backgroundworker-component-overview.md).  

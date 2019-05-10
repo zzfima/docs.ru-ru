@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 76fd6ad954b2cf004c6fdfcf51ef0c619e8c3892
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787859"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662783"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement
 Windows Communication Foundation (WCF) включает в себя несколько предоставляемых системой привязок, которые можно настроить, но не предоставляют полную гибкость при настройке все параметры безопасности, которые поддерживает WCF. В этом разделе описывается создание пользовательской привязки непосредственно из отдельных элементов привязки с рассмотрением некоторых из параметров безопасности, которые могут быть заданы при создании такой привязки. Дополнительные сведения о создании пользовательских привязок см. в разделе [расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md).  

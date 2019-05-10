@@ -2,12 +2,12 @@
 title: Управление параллелизмом с помощью класса DependentTransaction
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: b06470ed76c15208f019874db8573d0ed4778d33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 62cbb8825171628b29a5519ca9e3ae31c2058a03
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793644"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662964"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>Управление параллелизмом с помощью класса DependentTransaction
 Объект <xref:System.Transactions.Transaction> создается с помощью метода <xref:System.Transactions.Transaction.DependentClone%2A>. Его единственная цель — гарантировать невозможность фиксации транзакции, пока некоторые фрагменты кода (например рабочий поток) еще выполняют операции над транзакцией. Когда операции в рамках клонированной транзакции завершены и готовы к фиксации, создателю транзакции может быть передано соответствующее уведомление с помощью метода <xref:System.Transactions.DependentTransaction.Complete%2A>. Это позволяет сохранить согласованность и правильность данных.  

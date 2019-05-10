@@ -3,12 +3,12 @@ title: Авторизация на основе утверждений с исп
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0c99053610c8df9b6825c773a09cb1330d1e22f4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792838"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650451"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Авторизация на основе утверждений с использованием WIF
 В приложении с проверяющей стороной авторизация определяет, к каким ресурсам имеет доступ удостоверение, прошедшее проверку подлинности, и какие операции ему разрешается выполнять по отношению к данным ресурсам. Неправильная или слабая авторизация приводит к утечке информации и хищению данных. В этом разделе представлены допустимые подходы к внедрению авторизации для веб-приложений и служб ASP.NET, учитывающих утверждения, при помощи Windows Identity Foundation (WIF) и одной из служб маркеров безопасности (STS), например службы контроля доступа (ACS) Microsoft Azure.  

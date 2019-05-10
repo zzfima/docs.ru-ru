@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8092289d6adc6a017999d14dc7439323a7fc0d37
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788834"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751004"
 ---
 # <a name="structured-navigation-overview"></a>Общие сведения о структурной навигации
 Содержимое, которое может размещаться в [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, или <xref:System.Windows.Navigation.NavigationWindow> состоит из страниц, которые могут быть идентифицированы пакетом [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] и просматриваться с помощью гиперссылок. Структура страниц и способы навигации по ним с помощью гиперссылок называется топологией навигации. Такая топология подходит для различных типов приложений, особенно тех, в которых необходим переход по документам. В таких приложениях пользователь может перемещаться с одной страницы на другую даже при отсутствии связи между ними.  

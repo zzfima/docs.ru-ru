@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-ms.openlocfilehash: a46942188fd417b46ba4feb44d436800e1362098
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d4a4e1eee5dc60e330a5425d5075c7e5b8c44127
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764651"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666345"
 ---
 # <a name="wpf-xaml-namescopes"></a>Области видимости имен XAML в WPF
 Области имен XAML — это понятие, которое идентифицирует объекты, определенные в XAML. Имена из области имен XAML можно использовать для установления связей между именами объектов, определенными в XAML, и эквивалентными им экземплярами из дерева объектов. Области имен XAML в управляемом коде [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], как правило, создаются при загрузке отдельных корневых страниц XAML для приложения XAML. Области видимости имен XAML как программируемые объекты определяются <xref:System.Windows.Markup.INameScope> и реализуются также посредством практического класса <xref:System.Windows.NameScope>.  

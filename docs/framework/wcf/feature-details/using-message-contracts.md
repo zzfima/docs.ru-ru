@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 829bdda3f3302d8d3c41e704dc8caf88720d1ebc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932799"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637594"
 ---
 # <a name="using-message-contracts"></a>Использование контрактов сообщений
 Обычно при создании приложений Windows Communication Foundation (WCF), разработчики особое внимание структур данных и вопросам сериализации и не обязательно вынужденными обращаться с этой структурой сообщений, в которых передаются данные. Для таких приложений создание контрактов данных для параметров или возвращаемых значений представляет собой достаточно простую задачу. (Дополнительные сведения см. в разделе [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  

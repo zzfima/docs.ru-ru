@@ -2,12 +2,12 @@
 title: Архитектура и разработка
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 20edf6e2546830fd9fa764a2936987c573b8283a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606858"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64632030"
 ---
 # <a name="architecture-and-design"></a>Архитектура и разработка
 Модуль создания SQL в [образец поставщика](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) реализуется в виде посетителя в дереве выражения, представляющем дерево команд. Создание кода выполняется за один проход по дереву выражения.  

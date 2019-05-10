@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 53ec7122a3601a2da53513f25a546a08c2aa4307
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774612"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64631552"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Практическое руководство. Вызов определенных моделью функций как методов объектов
 В данном разделе описывается, как вызвать определяемую в модели функцию в качестве метода для объекта <xref:System.Data.Objects.ObjectContext> или в качестве статического метода для пользовательского класса. Объект *определяемой моделью функции* — это функция, которая определена в концептуальной модели. В данном разделе показываются процедуры вызова этих функций напрямую, а не с помощью запросов LINQ to Entities. Сведения о вызов определенных моделью функций в LINQ для запросов сущностей, см. в разделе [как: Вызов определенных моделью функций в запросах](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 42980aa4691d8ecb9868336ecb270c9ad937b5a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4b351b2a69d2829b67c80839f3257fa8e218b55d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876113"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660640"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Обновление службы данных (службы данных WCF)
 При использовании [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиентскую библиотеку для использования [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала, эта библиотека преобразует записи из канала в экземпляры классов клиентской службы данных. Эти классы службы данных отслеживаются с помощью объекта <xref:System.Data.Services.Client.DataServiceContext>, которому принадлежит объект <xref:System.Data.Services.Client.DataServiceQuery%601>. Клиент отслеживает изменения сущностей, указанных с помощью методов объекта <xref:System.Data.Services.Client.DataServiceContext>. Эти методы позволяют клиенту отслеживать добавленные и удаленные сущности, а также изменения, вносимые в значения свойств или в связи между экземплярами сущностей. При вызове метода <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> отслеженные изменения отправляются назад в службу данных в виде операций, основанных на REST.  

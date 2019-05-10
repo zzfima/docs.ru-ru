@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 2815757bf9b00375f763673f18180bfbf51a165a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: aba41d707426f29c2bcd626dbbe13d16d9e1b1f7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779227"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624511"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Практическое руководство. Асинхронный вызов операций службы WCF
 В этом разделе описано, каким образом клиент может асинхронно обратиться к операции службы. Служба в этом разделе реализует интерфейс `ICalculator`. Клиент может асинхронно вызывать операции этого интерфейса с помощью управляемой событиями модели асинхронного вызова. (Дополнительные сведения об управляемой событиями модели асинхронного вызова см. в разделе [многопоточное программирование с использованием асинхронной модели на основе событий](https://go.microsoft.com/fwlink/?LinkId=248184)). Пример, в котором демонстрируется реализация асинхронной операции в службе, см. в разделе [как: Реализация асинхронной операции службы](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Дополнительные сведения о синхронных и асинхронных операциях см. в разделе [синхронные и асинхронные операции](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  

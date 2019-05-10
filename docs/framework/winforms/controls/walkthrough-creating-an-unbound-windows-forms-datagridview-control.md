@@ -11,12 +11,12 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-ms.openlocfilehash: 99561490786f3f3569f272138001ea5ad8937410
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ba821b461434cb7a5247d2962a161a1c171bbd14
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792266"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651456"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Пошаговое руководство. Создание не связанного с данными элемента управления DataGridView в Windows Forms
 Часто можно показать табличные данные, полученные не из базы данных. Например можно отображать содержимое двухмерный массив строк. <xref:System.Windows.Forms.DataGridView> Класс обеспечивает удобный и настраиваемый способ отображения данных без привязки к источнику данных. В этом пошаговом руководстве показано, как для заполнения <xref:System.Windows.Forms.DataGridView> управлять добавлением и удалением строк в режиме «свободный». По умолчанию пользователь может добавлять новые строки. Чтобы запретить добавление строк, задайте <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> свойство `false`.  

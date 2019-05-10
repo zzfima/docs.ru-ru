@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b753fcffbdaa1cc9ba960a774077457dd0263e0a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007392"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621364"
 ---
 # <a name="the-ink-threading-model"></a>Потоковая модель рукописного ввода
 Одним из преимуществ рукописного ввода на планшетном ПК является, что его сходство с записи с помощью регулярного пера и бумаги.  В этой ситуации планшетное перо получать входные данные гораздо быстрее мыши и отображает рукописные данные как записи пользователя.  Поток пользовательского интерфейса (UI) приложения недостаточно для сбора данных пера и отрисовка рукописных данных, так как он может быть заблокирован.  Чтобы устранить эту проблему, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложение использует два дополнительных потока, когда пользователь осуществляет рукописный ввод.  
