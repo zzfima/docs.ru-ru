@@ -3,12 +3,12 @@ title: Обзор модуля аутентификации WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: c64bbfc868268fea77d2d17317bfea43aa413b3f
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.openlocfilehash: f4dc63272c47dc0cd9eaa15986e4369d9d689b64
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63808264"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592364"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Обзор модуля аутентификации WSFederation
 Windows Identity Foundation (WIF) поддерживает федеративную проверку подлинности в приложениях ASP.NET с помощью модуля проверки подлинности WS-Federated (WS-FAM). В этом разделе объясняются принципы работы федеративной проверки подлинности и способы ее применения.  
