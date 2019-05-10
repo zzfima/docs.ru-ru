@@ -14,71 +14,71 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: 568927eb4759c214311ad34a5b45e28094dd80be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 95505fd593881ff27418c69550952d072b4e3949
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013534"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628862"
 ---
-# <a name="operator-precedence-in-visual-basic"></a><span data-ttu-id="fc6a7-102">Порядок применения операторов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fc6a7-102">Operator Precedence in Visual Basic</span></span>
-<span data-ttu-id="fc6a7-103">Если в выражении несколько операций, каждая часть вычисляется и разрешить в заранее определенном порядке вызывается *порядок применения операторов*.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-103">When several operations occur in an expression, each part is evaluated and resolved in a predetermined order called *operator precedence*.</span></span>  
+# <a name="operator-precedence-in-visual-basic"></a><span data-ttu-id="ce11e-102">Порядок применения операторов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ce11e-102">Operator Precedence in Visual Basic</span></span>
+<span data-ttu-id="ce11e-103">Если в выражении несколько операций, каждая часть вычисляется и разрешить в заранее определенном порядке вызывается *порядок применения операторов*.</span><span class="sxs-lookup"><span data-stu-id="ce11e-103">When several operations occur in an expression, each part is evaluated and resolved in a predetermined order called *operator precedence*.</span></span>  
   
-## <a name="precedence-rules"></a><span data-ttu-id="fc6a7-104">Правила приоритета</span><span class="sxs-lookup"><span data-stu-id="fc6a7-104">Precedence Rules</span></span>  
- <span data-ttu-id="fc6a7-105">Если выражения содержат операторы из более чем одной категории, они вычисляются по следующим правилам:</span><span class="sxs-lookup"><span data-stu-id="fc6a7-105">When expressions contain operators from more than one category, they are evaluated according to the following rules:</span></span>  
+## <a name="precedence-rules"></a><span data-ttu-id="ce11e-104">Правила приоритета</span><span class="sxs-lookup"><span data-stu-id="ce11e-104">Precedence Rules</span></span>  
+ <span data-ttu-id="ce11e-105">Если выражения содержат операторы из более чем одной категории, они вычисляются по следующим правилам:</span><span class="sxs-lookup"><span data-stu-id="ce11e-105">When expressions contain operators from more than one category, they are evaluated according to the following rules:</span></span>  
   
-- <span data-ttu-id="fc6a7-106">Арифметические операторы и операторы объединения имеют порядок приоритета, описанный в следующем разделе, и все имеют более высокий приоритет, чем сравнения, логические и побитовые операторы.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-106">The arithmetic and concatenation operators have the order of precedence described in the following section, and all have greater precedence than the comparison, logical, and bitwise operators.</span></span>  
+- <span data-ttu-id="ce11e-106">Арифметические операторы и операторы объединения имеют порядок приоритета, описанный в следующем разделе, и все имеют более высокий приоритет, чем сравнения, логические и побитовые операторы.</span><span class="sxs-lookup"><span data-stu-id="ce11e-106">The arithmetic and concatenation operators have the order of precedence described in the following section, and all have greater precedence than the comparison, logical, and bitwise operators.</span></span>  
   
-- <span data-ttu-id="fc6a7-107">Все операторы сравнения имеют равный приоритет и более высокий приоритет, чем логические и побитовые операторы, но более низкий приоритет, чем арифметические операторы и операторы объединения.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-107">All comparison operators have equal precedence, and all have greater precedence than the logical and bitwise operators, but lower precedence than the arithmetic and concatenation operators.</span></span>  
+- <span data-ttu-id="ce11e-107">Все операторы сравнения имеют равный приоритет и более высокий приоритет, чем логические и побитовые операторы, но более низкий приоритет, чем арифметические операторы и операторы объединения.</span><span class="sxs-lookup"><span data-stu-id="ce11e-107">All comparison operators have equal precedence, and all have greater precedence than the logical and bitwise operators, but lower precedence than the arithmetic and concatenation operators.</span></span>  
   
-- <span data-ttu-id="fc6a7-108">Логические и побитовые операторы имеют порядок приоритета, описанный в следующем разделе, и все имеют более низкий приоритет, чем арифметические операции, объединения и операторы сравнения.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-108">The logical and bitwise operators have the order of precedence described in the following section, and all have lower precedence than the arithmetic, concatenation, and comparison operators.</span></span>  
+- <span data-ttu-id="ce11e-108">Логические и побитовые операторы имеют порядок приоритета, описанный в следующем разделе, и все имеют более низкий приоритет, чем арифметические операции, объединения и операторы сравнения.</span><span class="sxs-lookup"><span data-stu-id="ce11e-108">The logical and bitwise operators have the order of precedence described in the following section, and all have lower precedence than the arithmetic, concatenation, and comparison operators.</span></span>  
   
-- <span data-ttu-id="fc6a7-109">Операторы с одинаковым приоритетом выполняются в порядке слева направо в порядке, в котором они появляются в выражении.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-109">Operators with equal precedence are evaluated left to right in the order in which they appear in the expression.</span></span>  
+- <span data-ttu-id="ce11e-109">Операторы с одинаковым приоритетом выполняются в порядке слева направо в порядке, в котором они появляются в выражении.</span><span class="sxs-lookup"><span data-stu-id="ce11e-109">Operators with equal precedence are evaluated left to right in the order in which they appear in the expression.</span></span>  
   
-## <a name="precedence-order"></a><span data-ttu-id="fc6a7-110">Порядок приоритета</span><span class="sxs-lookup"><span data-stu-id="fc6a7-110">Precedence Order</span></span>  
- <span data-ttu-id="fc6a7-111">Операторы выполняются в следующем порядке:</span><span class="sxs-lookup"><span data-stu-id="fc6a7-111">Operators are evaluated in the following order of precedence:</span></span>  
+## <a name="precedence-order"></a><span data-ttu-id="ce11e-110">Порядок приоритета</span><span class="sxs-lookup"><span data-stu-id="ce11e-110">Precedence Order</span></span>  
+ <span data-ttu-id="ce11e-111">Операторы выполняются в следующем порядке:</span><span class="sxs-lookup"><span data-stu-id="ce11e-111">Operators are evaluated in the following order of precedence:</span></span>  
   
-### <a name="await-operator"></a><span data-ttu-id="fc6a7-112">Оператор Await</span><span class="sxs-lookup"><span data-stu-id="fc6a7-112">Await Operator</span></span>  
- <span data-ttu-id="fc6a7-113">Await</span><span class="sxs-lookup"><span data-stu-id="fc6a7-113">Await</span></span>  
+### <a name="await-operator"></a><span data-ttu-id="ce11e-112">Оператор Await</span><span class="sxs-lookup"><span data-stu-id="ce11e-112">Await Operator</span></span>  
+ <span data-ttu-id="ce11e-113">Await</span><span class="sxs-lookup"><span data-stu-id="ce11e-113">Await</span></span>  
   
-### <a name="arithmetic-and-concatenation-operators"></a><span data-ttu-id="fc6a7-114">Арифметические и операторы объединения</span><span class="sxs-lookup"><span data-stu-id="fc6a7-114">Arithmetic and Concatenation Operators</span></span>  
- <span data-ttu-id="fc6a7-115">Возведение в степень (`^`)</span><span class="sxs-lookup"><span data-stu-id="fc6a7-115">Exponentiation (`^`)</span></span>  
+### <a name="arithmetic-and-concatenation-operators"></a><span data-ttu-id="ce11e-114">Арифметические и операторы объединения</span><span class="sxs-lookup"><span data-stu-id="ce11e-114">Arithmetic and Concatenation Operators</span></span>  
+ <span data-ttu-id="ce11e-115">Возведение в степень (`^`)</span><span class="sxs-lookup"><span data-stu-id="ce11e-115">Exponentiation (`^`)</span></span>  
   
- <span data-ttu-id="fc6a7-116">Унарный и минус (`+`, `–`)</span><span class="sxs-lookup"><span data-stu-id="fc6a7-116">Unary identity and negation (`+`, `–`)</span></span>  
+ <span data-ttu-id="ce11e-116">Унарный и минус (`+`, `–`)</span><span class="sxs-lookup"><span data-stu-id="ce11e-116">Unary identity and negation (`+`, `–`)</span></span>  
   
- <span data-ttu-id="fc6a7-117">Умножение и деление с плавающей запятой (`*`, `/`)</span><span class="sxs-lookup"><span data-stu-id="fc6a7-117">Multiplication and floating-point division (`*`, `/`)</span></span>  
+ <span data-ttu-id="ce11e-117">Умножение и деление с плавающей запятой (`*`, `/`)</span><span class="sxs-lookup"><span data-stu-id="ce11e-117">Multiplication and floating-point division (`*`, `/`)</span></span>  
   
- <span data-ttu-id="fc6a7-118">Целочисленное деление (`\`)</span><span class="sxs-lookup"><span data-stu-id="fc6a7-118">Integer division (`\`)</span></span>  
+ <span data-ttu-id="ce11e-118">Целочисленное деление (`\`)</span><span class="sxs-lookup"><span data-stu-id="ce11e-118">Integer division (`\`)</span></span>  
   
- <span data-ttu-id="fc6a7-119">Арифметический модуль (`Mod`)</span><span class="sxs-lookup"><span data-stu-id="fc6a7-119">Modulus arithmetic (`Mod`)</span></span>  
+ <span data-ttu-id="ce11e-119">Арифметический модуль (`Mod`)</span><span class="sxs-lookup"><span data-stu-id="ce11e-119">Modulus arithmetic (`Mod`)</span></span>  
   
- <span data-ttu-id="fc6a7-120">Сложение и вычитание (`+`, `–`)</span><span class="sxs-lookup"><span data-stu-id="fc6a7-120">Addition and subtraction (`+`, `–`)</span></span>  
+ <span data-ttu-id="ce11e-120">Сложение и вычитание (`+`, `–`)</span><span class="sxs-lookup"><span data-stu-id="ce11e-120">Addition and subtraction (`+`, `–`)</span></span>  
   
- <span data-ttu-id="fc6a7-121">Объединение строк (`&`)</span><span class="sxs-lookup"><span data-stu-id="fc6a7-121">String concatenation (`&`)</span></span>  
+ <span data-ttu-id="ce11e-121">Объединение строк (`&`)</span><span class="sxs-lookup"><span data-stu-id="ce11e-121">String concatenation (`&`)</span></span>  
   
- <span data-ttu-id="fc6a7-122">Сдвиг битов арифметические (`<<`, `>>`)</span><span class="sxs-lookup"><span data-stu-id="fc6a7-122">Arithmetic bit shift (`<<`, `>>`)</span></span>  
+ <span data-ttu-id="ce11e-122">Сдвиг битов арифметические (`<<`, `>>`)</span><span class="sxs-lookup"><span data-stu-id="ce11e-122">Arithmetic bit shift (`<<`, `>>`)</span></span>  
   
-### <a name="comparison-operators"></a><span data-ttu-id="fc6a7-123">Операторы сравнения</span><span class="sxs-lookup"><span data-stu-id="fc6a7-123">Comparison Operators</span></span>  
- <span data-ttu-id="fc6a7-124">Все операторы сравнения (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`... `Is`)</span><span class="sxs-lookup"><span data-stu-id="fc6a7-124">All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)</span></span>  
+### <a name="comparison-operators"></a><span data-ttu-id="ce11e-123">Операторы сравнения</span><span class="sxs-lookup"><span data-stu-id="ce11e-123">Comparison Operators</span></span>  
+ <span data-ttu-id="ce11e-124">Все операторы сравнения (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`... `Is`)</span><span class="sxs-lookup"><span data-stu-id="ce11e-124">All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)</span></span>  
   
-### <a name="logical-and-bitwise-operators"></a><span data-ttu-id="fc6a7-125">Логические и побитовые операторы</span><span class="sxs-lookup"><span data-stu-id="fc6a7-125">Logical and Bitwise Operators</span></span>  
- <span data-ttu-id="fc6a7-126">Отрицание (`Not`)</span><span class="sxs-lookup"><span data-stu-id="fc6a7-126">Negation (`Not`)</span></span>  
+### <a name="logical-and-bitwise-operators"></a><span data-ttu-id="ce11e-125">Логические и побитовые операторы</span><span class="sxs-lookup"><span data-stu-id="ce11e-125">Logical and Bitwise Operators</span></span>  
+ <span data-ttu-id="ce11e-126">Отрицание (`Not`)</span><span class="sxs-lookup"><span data-stu-id="ce11e-126">Negation (`Not`)</span></span>  
   
- <span data-ttu-id="fc6a7-127">Совместно (`And`, `AndAlso`)</span><span class="sxs-lookup"><span data-stu-id="fc6a7-127">Conjunction (`And`, `AndAlso`)</span></span>  
+ <span data-ttu-id="ce11e-127">Совместно (`And`, `AndAlso`)</span><span class="sxs-lookup"><span data-stu-id="ce11e-127">Conjunction (`And`, `AndAlso`)</span></span>  
   
- <span data-ttu-id="fc6a7-128">Дизъюнкции (`Or`, `OrElse`)</span><span class="sxs-lookup"><span data-stu-id="fc6a7-128">Inclusive disjunction (`Or`, `OrElse`)</span></span>  
+ <span data-ttu-id="ce11e-128">Дизъюнкции (`Or`, `OrElse`)</span><span class="sxs-lookup"><span data-stu-id="ce11e-128">Inclusive disjunction (`Or`, `OrElse`)</span></span>  
   
- <span data-ttu-id="fc6a7-129">Исключающего логического сложения (`Xor`)</span><span class="sxs-lookup"><span data-stu-id="fc6a7-129">Exclusive disjunction (`Xor`)</span></span>  
+ <span data-ttu-id="ce11e-129">Исключающего логического сложения (`Xor`)</span><span class="sxs-lookup"><span data-stu-id="ce11e-129">Exclusive disjunction (`Xor`)</span></span>  
   
-### <a name="comments"></a><span data-ttu-id="fc6a7-130">Комментарии</span><span class="sxs-lookup"><span data-stu-id="fc6a7-130">Comments</span></span>  
- <span data-ttu-id="fc6a7-131">`=` Оператор имеет только оператор сравнения на равенство, не оператор присваивания.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-131">The `=` operator is only the equality comparison operator, not the assignment operator.</span></span>  
+### <a name="comments"></a><span data-ttu-id="ce11e-130">Комментарии</span><span class="sxs-lookup"><span data-stu-id="ce11e-130">Comments</span></span>  
+ <span data-ttu-id="ce11e-131">`=` Оператор имеет только оператор сравнения на равенство, не оператор присваивания.</span><span class="sxs-lookup"><span data-stu-id="ce11e-131">The `=` operator is only the equality comparison operator, not the assignment operator.</span></span>  
   
- <span data-ttu-id="fc6a7-132">Оператор объединения строк (`&`) не является арифметический оператор, но в приоритете группируется с арифметическими операторами.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-132">The string concatenation operator (`&`) is not an arithmetic operator, but in precedence it is grouped with the arithmetic operators.</span></span>  
+ <span data-ttu-id="ce11e-132">Оператор объединения строк (`&`) не является арифметический оператор, но в приоритете группируется с арифметическими операторами.</span><span class="sxs-lookup"><span data-stu-id="ce11e-132">The string concatenation operator (`&`) is not an arithmetic operator, but in precedence it is grouped with the arithmetic operators.</span></span>  
   
- <span data-ttu-id="fc6a7-133">`Is` И `IsNot` операторы, операторы сравнения объекта ссылки.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-133">The `Is` and `IsNot` operators are object reference comparison operators.</span></span> <span data-ttu-id="fc6a7-134">Они не выполняют сравнение значений двух объектов; они проверяют только определить, ссылаются ли две объектные переменные на один и тот же экземпляр объекта.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-134">They do not compare the values of two objects; they check only to determine whether two object variables refer to the same object instance.</span></span>  
+ <span data-ttu-id="ce11e-133">`Is` И `IsNot` операторы, операторы сравнения объекта ссылки.</span><span class="sxs-lookup"><span data-stu-id="ce11e-133">The `Is` and `IsNot` operators are object reference comparison operators.</span></span> <span data-ttu-id="ce11e-134">Они не выполняют сравнение значений двух объектов; они проверяют только определить, ссылаются ли две объектные переменные на один и тот же экземпляр объекта.</span><span class="sxs-lookup"><span data-stu-id="ce11e-134">They do not compare the values of two objects; they check only to determine whether two object variables refer to the same object instance.</span></span>  
   
-## <a name="associativity"></a><span data-ttu-id="fc6a7-135">Ассоциативность</span><span class="sxs-lookup"><span data-stu-id="fc6a7-135">Associativity</span></span>  
- <span data-ttu-id="fc6a7-136">Когда операторы с одинаковым приоритетом появляются вместе в выражении, например, умножение и деление, компилятор вычисляет каждую операцию по порядку слева направо.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-136">When operators of equal precedence appear together in an expression, for example multiplication and division, the compiler evaluates each operation as it encounters it from left to right.</span></span> <span data-ttu-id="fc6a7-137">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-137">The following example illustrates this.</span></span>  
+## <a name="associativity"></a><span data-ttu-id="ce11e-135">Ассоциативность</span><span class="sxs-lookup"><span data-stu-id="ce11e-135">Associativity</span></span>  
+ <span data-ttu-id="ce11e-136">Когда операторы с одинаковым приоритетом появляются вместе в выражении, например, умножение и деление, компилятор вычисляет каждую операцию по порядку слева направо.</span><span class="sxs-lookup"><span data-stu-id="ce11e-136">When operators of equal precedence appear together in an expression, for example multiplication and division, the compiler evaluates each operation as it encounters it from left to right.</span></span> <span data-ttu-id="ce11e-137">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="ce11e-137">The following example illustrates this.</span></span>  
   
 ```  
 Dim n1 As Integer = 96 / 8 / 4  
@@ -86,12 +86,12 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)  
 ```  
   
- <span data-ttu-id="fc6a7-138">Для первого выражения деления 96 / 8 (что приводит к 12), а затем деления 12 / 4, что приводит к трем.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-138">The first expression evaluates the division 96 / 8 (which results in 12) and then the division 12 / 4, which results in three.</span></span> <span data-ttu-id="fc6a7-139">Так как компилятор вычисляет операции для `n1` слева направо, вычисление зависит от того, порядок явно указывается для `n2`.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-139">Because the compiler evaluates the operations for `n1` from left to right, the evaluation is the same when that order is explicitly indicated for `n2`.</span></span> <span data-ttu-id="fc6a7-140">Оба `n1` и `n2` имеют результат 3.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-140">Both `n1` and `n2` have a result of three.</span></span> <span data-ttu-id="fc6a7-141">Напротив `n3` имеет результат 48, так как круглые скобки заставляют компилятор может вычислить 8 / 4 первый.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-141">By contrast, `n3` has a result of 48, because the parentheses force the compiler to evaluate 8 / 4 first.</span></span>  
+ <span data-ttu-id="ce11e-138">Для первого выражения деления 96 / 8 (что приводит к 12), а затем деления 12 / 4, что приводит к трем.</span><span class="sxs-lookup"><span data-stu-id="ce11e-138">The first expression evaluates the division 96 / 8 (which results in 12) and then the division 12 / 4, which results in three.</span></span> <span data-ttu-id="ce11e-139">Так как компилятор вычисляет операции для `n1` слева направо, вычисление зависит от того, порядок явно указывается для `n2`.</span><span class="sxs-lookup"><span data-stu-id="ce11e-139">Because the compiler evaluates the operations for `n1` from left to right, the evaluation is the same when that order is explicitly indicated for `n2`.</span></span> <span data-ttu-id="ce11e-140">Оба `n1` и `n2` имеют результат 3.</span><span class="sxs-lookup"><span data-stu-id="ce11e-140">Both `n1` and `n2` have a result of three.</span></span> <span data-ttu-id="ce11e-141">Напротив `n3` имеет результат 48, так как круглые скобки заставляют компилятор может вычислить 8 / 4 первый.</span><span class="sxs-lookup"><span data-stu-id="ce11e-141">By contrast, `n3` has a result of 48, because the parentheses force the compiler to evaluate 8 / 4 first.</span></span>  
   
- <span data-ttu-id="fc6a7-142">Из-за этого поведения, операторы, называются *левую ассоциативность* в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-142">Because of this behavior, operators are said to be *left associative* in Visual Basic.</span></span>  
+ <span data-ttu-id="ce11e-142">Из-за этого поведения, операторы, называются *левую ассоциативность* в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="ce11e-142">Because of this behavior, operators are said to be *left associative* in Visual Basic.</span></span>  
   
-## <a name="overriding-precedence-and-associativity"></a><span data-ttu-id="fc6a7-143">Переопределение приоритет и ассоциативность операторов</span><span class="sxs-lookup"><span data-stu-id="fc6a7-143">Overriding Precedence and Associativity</span></span>  
- <span data-ttu-id="fc6a7-144">Можно использовать скобки для принудительного выполнения некоторых частей выражения раньше других.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-144">You can use parentheses to force some parts of an expression to be evaluated before others.</span></span> <span data-ttu-id="fc6a7-145">Это можно переопределить очередность и ассоциативность слева.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-145">This can override both the order of precedence and the left associativity.</span></span> <span data-ttu-id="fc6a7-146">Visual Basic всегда выполняет операции, которые заключаются в скобки, прежде чем за их пределами.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-146">Visual Basic always performs operations that are enclosed in parentheses before those outside.</span></span> <span data-ttu-id="fc6a7-147">Тем не менее в скобки, он поддерживает обычный приоритет и ассоциативность операторов, если вы не используете круглые скобки в круглых скобках.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-147">However, within parentheses, it maintains ordinary precedence and associativity, unless you use parentheses within the parentheses.</span></span> <span data-ttu-id="fc6a7-148">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="fc6a7-148">The following example illustrates this.</span></span>  
+## <a name="overriding-precedence-and-associativity"></a><span data-ttu-id="ce11e-143">Переопределение приоритет и ассоциативность операторов</span><span class="sxs-lookup"><span data-stu-id="ce11e-143">Overriding Precedence and Associativity</span></span>  
+ <span data-ttu-id="ce11e-144">Можно использовать скобки для принудительного выполнения некоторых частей выражения раньше других.</span><span class="sxs-lookup"><span data-stu-id="ce11e-144">You can use parentheses to force some parts of an expression to be evaluated before others.</span></span> <span data-ttu-id="ce11e-145">Это можно переопределить очередность и ассоциативность слева.</span><span class="sxs-lookup"><span data-stu-id="ce11e-145">This can override both the order of precedence and the left associativity.</span></span> <span data-ttu-id="ce11e-146">Visual Basic всегда выполняет операции, которые заключаются в скобки, прежде чем за их пределами.</span><span class="sxs-lookup"><span data-stu-id="ce11e-146">Visual Basic always performs operations that are enclosed in parentheses before those outside.</span></span> <span data-ttu-id="ce11e-147">Тем не менее в скобки, он поддерживает обычный приоритет и ассоциативность операторов, если вы не используете круглые скобки в круглых скобках.</span><span class="sxs-lookup"><span data-stu-id="ce11e-147">However, within parentheses, it maintains ordinary precedence and associativity, unless you use parentheses within the parentheses.</span></span> <span data-ttu-id="ce11e-148">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="ce11e-148">The following example illustrates this.</span></span>  
   
 ```  
 Dim a, b, c, d, e, f, g As Double  
@@ -111,13 +111,13 @@ g = (a - (b + c)) / (d * e)
 ' The preceding line sets g to 0.5.  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fc6a7-149">См. также</span><span class="sxs-lookup"><span data-stu-id="fc6a7-149">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ce11e-149">См. также</span><span class="sxs-lookup"><span data-stu-id="ce11e-149">See also</span></span>
 
-- [<span data-ttu-id="fc6a7-150">Оператор =</span><span class="sxs-lookup"><span data-stu-id="fc6a7-150">= Operator</span></span>](../../../visual-basic/language-reference/operators/assignment-operator.md)
-- [<span data-ttu-id="fc6a7-151">Оператор Is</span><span class="sxs-lookup"><span data-stu-id="fc6a7-151">Is Operator</span></span>](../../../visual-basic/language-reference/operators/is-operator.md)
-- [<span data-ttu-id="fc6a7-152">Оператор IsNot</span><span class="sxs-lookup"><span data-stu-id="fc6a7-152">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [<span data-ttu-id="fc6a7-153">Оператор Like</span><span class="sxs-lookup"><span data-stu-id="fc6a7-153">Like Operator</span></span>](../../../visual-basic/language-reference/operators/like-operator.md)
-- [<span data-ttu-id="fc6a7-154">Оператор TypeOf</span><span class="sxs-lookup"><span data-stu-id="fc6a7-154">TypeOf Operator</span></span>](../../../visual-basic/language-reference/operators/typeof-operator.md)
-- [<span data-ttu-id="fc6a7-155">Оператор Await</span><span class="sxs-lookup"><span data-stu-id="fc6a7-155">Await Operator</span></span>](../../../visual-basic/language-reference/operators/await-operator.md)
-- [<span data-ttu-id="fc6a7-156">Список операторов, сгруппированных по функциональному назначению</span><span class="sxs-lookup"><span data-stu-id="fc6a7-156">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="fc6a7-157">Операторы и выражения</span><span class="sxs-lookup"><span data-stu-id="fc6a7-157">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [<span data-ttu-id="ce11e-150">Оператор =</span><span class="sxs-lookup"><span data-stu-id="ce11e-150">= Operator</span></span>](../../../visual-basic/language-reference/operators/assignment-operator.md)
+- [<span data-ttu-id="ce11e-151">Оператор Is</span><span class="sxs-lookup"><span data-stu-id="ce11e-151">Is Operator</span></span>](../../../visual-basic/language-reference/operators/is-operator.md)
+- [<span data-ttu-id="ce11e-152">Оператор IsNot</span><span class="sxs-lookup"><span data-stu-id="ce11e-152">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [<span data-ttu-id="ce11e-153">Оператор Like</span><span class="sxs-lookup"><span data-stu-id="ce11e-153">Like Operator</span></span>](../../../visual-basic/language-reference/operators/like-operator.md)
+- [<span data-ttu-id="ce11e-154">Оператор TypeOf</span><span class="sxs-lookup"><span data-stu-id="ce11e-154">TypeOf Operator</span></span>](../../../visual-basic/language-reference/operators/typeof-operator.md)
+- [<span data-ttu-id="ce11e-155">Оператор Await</span><span class="sxs-lookup"><span data-stu-id="ce11e-155">Await Operator</span></span>](../../../visual-basic/language-reference/operators/await-operator.md)
+- [<span data-ttu-id="ce11e-156">Список операторов, сгруппированных по функциональному назначению</span><span class="sxs-lookup"><span data-stu-id="ce11e-156">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="ce11e-157">Операторы и выражения</span><span class="sxs-lookup"><span data-stu-id="ce11e-157">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
