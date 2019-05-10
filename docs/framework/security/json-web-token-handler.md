@@ -2,12 +2,12 @@
 title: Обработчик веб-токенов JSON
 ms.date: 03/30/2017
 ms.assetid: 9968f12e-e05d-4e6a-9b65-6896c0e31ab1
-ms.openlocfilehash: 27c01a3d0ce0f2891b00ad28526d4753b9be4ce0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5ffaaaebd87c63b784a749f8998d43d14fe768e1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790134"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641113"
 ---
 # <a name="json-web-token-handler"></a>Обработчик веб-токенов JSON
 Расширение обработчика веб-токенов JSON для Windows Identity Foundation позволяет создавать и проверять веб-токены JSON (JWT) в ваших приложениях. Обработчик токена JWT можно настроить для запуска в конвейере WIF, как и другие встроенные обработчики токенов безопасности, однако данный обработчик также можно использовать независимо для выполнения проверки токенов в облегченных версиях приложений. Обработчик токенов JWT особенно эффективен при использовании схемы токенов носителя OAuth 2.0, например аутентификации в Microsoft Azure Active Directory.  

@@ -2,12 +2,12 @@
 title: Раскрытие информации
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: b42faeb4043302e5e70379cc4e1de3cb8bd96af4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ef660262925260ab5181829c38e32fd2c78b44e4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972605"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638685"
 ---
 # <a name="information-disclosure"></a>Раскрытие информации
 Раскрытие информации позволяет злоумышленнику получить ценную информацию о системе. Следовательно, всегда обращайте внимание на то, какая информация раскрывается, и может ли ее использовать злоумышленник. Далее перечислены возможные атаки, связанные с раскрытием информации, и способы устранения рисков.  
