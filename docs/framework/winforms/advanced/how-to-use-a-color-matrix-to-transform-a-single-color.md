@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 78fc498b0689026fb74ec0c422948c1879495560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9cff13cabb0cd496ee4e628664e4b92bd9e60808
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954832"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063719"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Практическое руководство. Использование матрицы цветов для преобразования отдельного цвета
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет <xref:System.Drawing.Image> и <xref:System.Drawing.Bitmap> классы для хранения и управления изображениями. <xref:System.Drawing.Image> и <xref:System.Drawing.Bitmap> объекты хранят цвет каждого пикселя как 32-разрядное число: 8 бит на красный, зеленый, синий и альфа-канала. Каждый из четырех компонентов является число от 0 до 255, где 0 соответствует нулевой интенсивности, а 255 — наибольшей интенсивности. Альфа-компонент определяет прозрачность цвета: 0 является полностью прозрачным, а 255 — полностью непрозрачный.  
@@ -32,13 +32,13 @@ ms.locfileid: "61954832"
   
  Следующие Перемножение матриц выполнит эти два преобразования в указанном порядке.  
   
- ![Перекрашивание](./media/recoloring01.gif "recoloring01")  
+ ![Снимок экрана умножения матрицы преобразования.](./media/how-to-use-a-color-matrix-to-transform-a-single-color/multiplication-color-matrix.gif)
   
  Элементы матрицы цветов индексируются (начинающийся с нуля), строк и столбцов. Например запись в пятой строке и третьем столбце матрицы M обозначается M [4] [2].  
   
  5 × 5 единичной матрицей (показано на следующем рисунке) имеет единицы на диагонали и размерностью. При умножении вектора на единичную матрицу, цвет не изменяется. Начать с единичной матрицы и внесите небольшое изменение, которое формирует нужные преобразования — удобный способ создания матрицы преобразования цветов.  
   
- ![Перекрашивание](./media/recoloring02.gif "recoloring02")  
+ ![Снимок экрана матрицу 5 x 5 удостоверений для преобразования цветов.](./media/how-to-use-a-color-matrix-to-transform-a-single-color/5x5-identity-matrix-color-transformation.gif)  
   
  Более подробное описание матрицы и преобразований, см. в разделе [системы координат и преобразования](coordinate-systems-and-transformations.md).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "61954832"
   
  Ниже показан исходное изображение в левой части и преобразованные изображения справа.  
   
- ![Цвета](./media/colortrans1.png "colortrans1")  
+ ![Сиреневый квадрат в левой части и сиреневый квадрат справа.](./media/how-to-use-a-color-matrix-to-transform-a-single-color/color-transformation.png)  
   
  В следующем примере код выполняет указанные ниже действия для выполнения гамме:  
   

@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
-ms.openlocfilehash: 2b45a4629474c394c8e49c41a7a98fc1181e124b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0903aac366426e8b4d271ae4bfaa54c79a198e5c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077177"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583750"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>Сравнение объектов DataRow (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] определяет различные операторы для работы с наборами, позволяющие сравнивать элементы и определять их равенство. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] предоставляет следующие операторы для работы с наборами:  
   
--   <xref:System.Linq.Enumerable.Distinct%2A>  
+- <xref:System.Linq.Enumerable.Distinct%2A>  
   
--   <xref:System.Linq.Enumerable.Union%2A>  
+- <xref:System.Linq.Enumerable.Union%2A>  
   
--   <xref:System.Linq.Enumerable.Intersect%2A>  
+- <xref:System.Linq.Enumerable.Intersect%2A>  
   
--   <xref:System.Linq.Enumerable.Except%2A>  
+- <xref:System.Linq.Enumerable.Except%2A>  
   
  Эти операторы сравнивают элементы путем вызова методов <xref:System.Collections.Generic.IEqualityComparer%601.GetHashCode%2A> и <xref:System.Collections.Generic.IEqualityComparer%601.Equals%2A> для каждой коллекции элементов. Для объектов <xref:System.Data.DataRow> эти операторы выполняют ссылочное сравнение, которое в общем случае не является идеальным для операторов наборов, выполняющихся над табличными данными. Для операторов наборов обычно требуется определить, являются ли равными значения элементов, а не ссылки на элементы. Поэтому в <xref:System.Data.DataRowComparer> был добавлен класс [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Этот класс можно использовать для сравнения значений в строках.  
   

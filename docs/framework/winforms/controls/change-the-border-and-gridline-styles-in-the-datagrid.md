@@ -11,12 +11,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], changing border styles
 - DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
-ms.openlocfilehash: d24adb98c339f911d6bea0312bce4d4b4f198a61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7e68bb2f6a3bff0a0a5ff7f8011c2642c141eaf3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939013"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593445"
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Изменение внешнего вида границ и линий сетки элемента управления DataGridView в Windows Forms
 С помощью <xref:System.Windows.Forms.DataGridView> элемента управления, можно настроить внешний вид границы и линии сетки, чтобы улучшить взаимодействие с пользователем элемента управления. Можно изменить цвет линий сетки и стиль границы элемента управления, помимо стили границ для ячеек в элементе управления. Также можно применить различные стили границ для обычным ячейкам, ячейкам заголовков строк и ячеек заголовков столбцов.  

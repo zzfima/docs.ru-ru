@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 972efa150d560e74f0e7daadf18688ac12b9fbf3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775873"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583647"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Настройка приложений с использованием файлов конфигурации
 Среда .NET Framework предоставляет разработчикам и администраторам возможность управления и гибкой настройки способа выполнения приложений с помощью файлов конфигурации. Файлы конфигурации имеют формат XML, и при необходимости их можно изменять. Администратор может контролировать, к каким из защищенных ресурсов может осуществлять доступ приложение, какие оно будет использовать версии сборок и где расположены удаленные объекты и приложения. Разработчики могут задавать параметры в файлах конфигурации, устраняя необходимость в перекомпиляции приложения при каждом изменении той или иной установки. В этом разделе рассказывается, какие параметры могут быть настроены и для чего может потребоваться настройка приложения.  

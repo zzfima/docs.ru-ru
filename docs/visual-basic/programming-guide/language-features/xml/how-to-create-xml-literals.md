@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: 836ec4390e7675effe57c75c79768272d66925a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 991f10b00082bb4eb2b54f10c1b85cdc2c9009d2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775912"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598542"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>Практическое руководство. Создание XML-литералов (Visual Basic)
 XML документ, фрагмент или элемент можно создать непосредственно в коде с помощью XML-литерала. В примерах в этом разделе показано, как создать элемент XML, содержит три дочерних элемента и способ создания XML-документа.  

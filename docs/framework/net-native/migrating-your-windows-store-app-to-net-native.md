@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1d14e4ad45a4d5805187b993f2fc622a16dac09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4e4d3d7bc574dd27aaea0d43ee6f507dd0c413f2
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867112"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063820"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Миграция приложения для магазина Windows в машинный код .NET
 .NET native обеспечивает статическую компиляцию приложений в Windows Store или на компьютере разработчика. В отличие от динамической компиляции, выполняемой JIT-компилятором для приложений магазина Windows или [Генератором машинных образов (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) на устройстве. Несмотря на различия, .NET Native пытается поддерживать совместимость с [.NET для Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29). В большинстве случаев вещи, которые работают в приложениях .NET для Windows Store также работать с .NET Native.  Тем не менее в некоторых случаях могут произойти изменения поведения. В этом документе рассматриваются различия между стандартных приложениях .NET для Windows Store и .NET Native в следующих областях:  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-ms.openlocfilehash: ad7b8737a63028e533cadfa6db56b063eb943f22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a906db44a548361df2822efa24d1dd1849cb5a24
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954930"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063736"
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>Практическое руководство. Мозаичное заполнение фигуры заданным изображением
 Так же, как плиток можно поместить рядом друг с другом пола, прямоугольные изображения можно поместить рядом друг с другом заполнить фигуру. Для мозаичного внутренней части фигуры, используйте кисть текстуры. При построении <xref:System.Drawing.TextureBrush> объекта, один из аргументов, передать конструктору <xref:System.Drawing.Image> объекта. При использовании текстуры кисть для закрашивания внутренней части фигуры, фигура заполняется повторяющиеся копии этого образа.  
@@ -26,11 +26,11 @@ ms.locfileid: "61954930"
   
 - В этом примере используется на следующем рисунке 75 × 75 для мозаичного заполнения прямоугольника размером 200 × 200.  
   
- ![Плитка 1](./media/tile1.gif "tile1")  
+ ![Изображение плитки, отображаются красным дома и дерева.](./media/how-to-tile-a-shape-with-an-image/rectangle-tile-200x200.gif)  
   
 - Ниже показано, как выполняется мозаичное заполнение прямоугольника с изображением. Обратите внимание, что все плитки же ориентацию; нет в зеркального отражения.  
   
- ![Плитки 2](./media/tile2.gif "tile2")  
+ ![Прямоугольника мозаикой заливка, выполненная с помощью образа, используя ту же ориентацию для всех элементов мозаики.](./media/how-to-tile-a-shape-with-an-image/rectangle-tiled-image-no-flip.gif)  
   
  [!code-csharp[System.Drawing.UsingABrush#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.UsingABrush#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#31)]  
@@ -39,7 +39,7 @@ ms.locfileid: "61954930"
   
 - В этом примере используется одно изображение размером 75 × 75 для заполнения прямоугольника размером 200 × 200. Режим переноса присваивается переворачивание изображения по горизонтали. Ниже показано, как выполняется мозаичное заполнение прямоугольника с изображением. Обратите внимание на то, что при переходе от одного элемента к другому в данной строке, является перевернуть изображение по горизонтали.  
   
- ![Плитку 3](./media/tile3.gif "tile3")  
+ ![Прямоугольника мозаикой заливка, выполненная с помощью образа, отражаются по горизонтали.](./media/how-to-tile-a-shape-with-an-image/rectangle-tiled-image-horizontal-flip.gif)  
   
  [!code-csharp[System.Drawing.UsingABrush#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.UsingABrush#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#32)]  
@@ -55,7 +55,7 @@ ms.locfileid: "61954930"
   
 - В этом примере используется одно изображение размером 75 × 75 для мозаичного заполнения прямоугольника размером 200 × 200. Режим переноса присваивается переворачивание изображения по горизонтали и вертикали. Ниже показано, как выполняется мозаичное заполнение прямоугольник в изображении. Обратите внимание, что при переходе от одного элемента к другому в данной строке, является перевернуть изображение по горизонтали, а при переходе от элемента к другому в указанном столбце, изображение отражаются по вертикали.  
   
- ![Плитку 5](./media/tile5.gif "tile5")  
+ ![Прямоугольника мозаикой заливка, выполненная с изображением перевернуто по горизонтали и вертикали.](./media/how-to-tile-a-shape-with-an-image/rectangle-tiled-image-horizontal-vertical-flip.gif)  
   
  [!code-csharp[System.Drawing.UsingABrush#34](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#34)]
  [!code-vb[System.Drawing.UsingABrush#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  

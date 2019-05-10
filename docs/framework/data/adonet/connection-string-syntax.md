@@ -2,12 +2,12 @@
 title: Синтаксис строки подключения
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4ec2b8a0a478f59ca66f8699e7846004a3a409cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608025"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583600"
 ---
 # <a name="connection-string-syntax"></a>Синтаксис строки подключения
 Каждый поставщик данных платформы .NET Framework имеет объект `Connection`, наследующий из <xref:System.Data.Common.DbConnection>, а также из свойства <xref:System.Data.Common.DbConnection.ConnectionString%2A>, зависящего от поставщика. Конкретный синтаксис строки подключения для каждого поставщика приведен в его свойстве `ConnectionString`. В следующей таблице представлен список четырех поставщиков данных, поставляемых в составе платформы .NET Framework.  

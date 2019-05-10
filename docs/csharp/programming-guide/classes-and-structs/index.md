@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 7b85940f8ce64139d056497a8007379f1658010d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c26b8deb6036c13a9a61d8929b4cabba5f3ef67
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646336"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584541"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Классы и структуры (Руководство по программированию в C#)
 Классы и структуры являются двумя основными конструкциями системы общих типов CTS, используемой в платформе .NET Framework. Оба они являются структурами данных, которые инкапсулируют набор данных и поведений в одной логической сущности. Данные и поведение являются *членами* класса или структуры. К ним относятся методы, свойства, события и другие элементы, которые описаны далее в этой статье.  
@@ -44,25 +44,25 @@ ms.locfileid: "61646336"
 ### <a name="members"></a>Участники  
  Все методы, поля, константы, свойства и события должны объявляться внутри типа. Совокупно они называются *членами* типа. В C# не существует глобальных переменных или методов, как в некоторых других языках. Даже точка входа программы, то есть метод `Main`, должна объявляться внутри класса или структуры. Ниже приведен полный список возможных членов, которые можно объявить в классе или структуре.  
   
--   [Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)  
   
--   [Константы](../../../csharp/programming-guide/classes-and-structs/constants.md)  
+- [Константы](../../../csharp/programming-guide/classes-and-structs/constants.md)  
   
--   [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)  
   
--   [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)  
   
--   [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [События](../../../csharp/programming-guide/events/index.md)  
+- [События](../../../csharp/programming-guide/events/index.md)  
   
--   [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
--   [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
+- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
   
--   [Инструкции](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Инструкции](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
--   [Вложенные типы](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+- [Вложенные типы](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
   
 ### <a name="accessibility"></a>Специальные возможности  
  Некоторые методы и свойства специально предназначены для того, чтобы их вызов или доступ к ним осуществлялся из *клиентского кода*, то есть из кода за пределами этого класса или структуры. Другие методы и свойства могут использоваться только в самом классе или структуре. Важно ограничить доступность кода так, чтобы только нужные элементы клиентского кода получали к нему доступ. Уровень доступности для типов и их членов вы можете задать с помощью модификаторов доступа [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md), [private](../../../csharp/language-reference/keywords/private.md) и [private protected](../../../csharp/language-reference/keywords/private-protected.md). По умолчанию используется режим доступа `private`. Дополнительные сведения см. в статье [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  

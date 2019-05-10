@@ -8,12 +8,12 @@ helpviewer_keywords:
 - regions [Windows Forms], clipping
 - regions [Windows Forms], restricting drawing surface
 ms.assetid: 43d121b4-e14c-4901-b25c-2d6c25ba4e29
-ms.openlocfilehash: cf60b32df805a49f8da2760332dc32e34209f6dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e62be137b36a2f369c02151466154f6b3bab090b
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954516"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063841"
 ---
 # <a name="how-to-use-clipping-with-a-region"></a>Практическое руководство. Обрезка изображения по границам области обрезки
 Одно из свойств объекта <xref:System.Drawing.Graphics> класс является отсеченную область. Все операции рисования, выполняемые заданного <xref:System.Drawing.Graphics> объекта будет ограничен отсеченную область объекта, <xref:System.Drawing.Graphics> объекта. Можно задать отсеченную область, вызвав <xref:System.Drawing.Graphics.SetClip%2A> метод.  
@@ -21,9 +21,9 @@ ms.locfileid: "61954516"
 ## <a name="example"></a>Пример  
  В следующем примере создается путь, состоящий из одного многоугольника. Затем код создает область, на основе этого пути. Область передается <xref:System.Drawing.Graphics.SetClip%2A> метод <xref:System.Drawing.Graphics> рисовании объекта и затем две строки.  
   
- Ниже показан усеченные строки.  
+ На следующем рисунке показан усеченные строки:  
   
- ![Клипов](./media/clip1.png "clip1")  
+ ![Снимок экрана, показывающий усеченные строки.](./media/how-to-use-clipping-with-a-region/clipped-strings-polygon.png)  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.MiscLegacyTopics#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#41)]  

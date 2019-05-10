@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: 95bc9beed9965bad32118dfafa4a5aa76902ca10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7baf358d9cdabe8cadf6b297a1d0d63d64282525
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607830"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583544"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Создание объекта DataView (LINQ to DataSet)
 Объект <xref:System.Data.DataView> в контексте [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] можно создать двумя способами. Можно создать объект <xref:System.Data.DataView> на основе запроса [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] к таблице <xref:System.Data.DataTable> или на основе типизированной или нетипизированной таблицы <xref:System.Data.DataTable>. В обоих случаях вы создадите <xref:System.Data.DataView> с помощью одного из <xref:System.Data.DataTableExtensions.AsDataView%2A> методы расширения; <xref:System.Data.DataView> не напрямую создать в [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] контекста.  
