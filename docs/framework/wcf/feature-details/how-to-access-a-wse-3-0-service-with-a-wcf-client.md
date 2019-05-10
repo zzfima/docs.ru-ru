@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 83507a95dbc4bc7499b94a516f569703f21a2726
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e191bc6c75c8c04e2cdf32d80673c32499b5736d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855131"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613117"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Практическое руководство. Доступ к WSE 3.0 службы с помощью клиента WCF
 Клиенты Windows Communication Foundation (WCF) — уровне линий связи совместимы с Web Services Enhancements (WSE) 3.0 для служб Microsoft .NET, если WCF клиенты настроены для использования версии спецификации WS-Addressing от августа 2004 г. Тем не менее, службы WSE 3.0 не поддерживают протокол exchange (MEX) метаданных, поэтому при использовании [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания класса клиента WCF, не применяются параметры безопасности в созданный Клиент WCF. Таким образом, необходимо указать параметры безопасности, служба WSE 3.0 требует после создания клиента WCF.  

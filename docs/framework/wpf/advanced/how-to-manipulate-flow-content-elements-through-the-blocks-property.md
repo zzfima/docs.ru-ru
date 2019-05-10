@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [WPF], Blocks [WPF], manipulating flow content elements
 - Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
-ms.openlocfilehash: e0e1e1333a54946f3bdf474e353de0301eb42447
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3ca05590bd1adf7f9c486382a08cb334b4731ac9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942835"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614604"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Практическое руководство. Управление элементами потокового содержимого с помощью свойства Blocks
 Эти примеры демонстрируют некоторые из наиболее распространенных операций, которые могут выполняться над элементами потокового содержимого через **блоки** свойство. Это свойство используется для добавления и удаления элементов из <xref:System.Windows.Documents.BlockCollection>. Элементы содержимого на поток, эта функция **блоки** свойства включают:  

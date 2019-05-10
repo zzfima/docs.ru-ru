@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: 65a1e34d5b078c49bf59c2d9787812940c9a7494
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b3d0f5c77ebf8527e4854d4edf12d6fa8a4b5f0c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340403"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614632"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Практическое руководство. Обработка события ContextMenuOpening
 <xref:System.Windows.FrameworkElement.ContextMenuOpening> Событие может быть обработано в приложении, либо для корректировки существующего контекстного меню перед для отображения или подавления меню, которое будет отображаться в противном случае, задав <xref:System.Windows.RoutedEventArgs.Handled%2A> свойства `true` в данных события. Типичной причиной для параметра <xref:System.Windows.RoutedEventArgs.Handled%2A> для `true` событий данных — замена меню полностью новый <xref:System.Windows.Controls.ContextMenu> объекта, который иногда требует отмены операции и запуска нового открытия. Если создать обработчики для <xref:System.Windows.FrameworkElement.ContextMenuOpening> событий, следует иметь в виду проблемы синхронизации между <xref:System.Windows.Controls.ContextMenu> control и служба, которая отвечает за открытие и позиционирование контекстных меню для элементов управления в целом. В этом разделе показаны некоторые методы кода для различных скриптов открытия контекстного меню и показан случай, где ошибки синхронизации вступает в действие.  
   
  Существует несколько сценариев для обработки <xref:System.Windows.FrameworkElement.ContextMenuOpening> событий:  
   
--   Настройка пунктов меню перед отображением.  
+- Настройка пунктов меню перед отображением.  
   
--   Замена всего меню перед отображением.  
+- Замена всего меню перед отображением.  
   
--   Полностью подавление любых существующих контекстных меню и отсутствие отображения контекстного меню.  
+- Полностью подавление любых существующих контекстных меню и отсутствие отображения контекстного меню.  
   
 ## <a name="example"></a>Пример  
   

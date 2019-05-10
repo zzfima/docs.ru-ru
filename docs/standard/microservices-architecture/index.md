@@ -4,12 +4,12 @@ description: 'Микрослужбы .NET: архитектура контей�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 8497f5cbd15fae6e289791393ea779833be27be6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1b36f5a6ddc2176e344dfe2a216429190dcc1dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61818319"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615144"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Микрослужбы .NET: Архитектура контейнерных приложений .NET
 
@@ -57,7 +57,7 @@ Docker становится стандартом де-факто в област
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Containerized Docker Application Lifecycle with Microsoft Platform and Tools** (Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт) (электронная книга, доступная для скачивания)  
+- **Containerized Docker Application Lifecycle with Microsoft Platform and Tools** (Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт) (электронная книга, доступная для скачивания)  
     <https://aka.ms/dockerlifecycleebook>
 
 ## <a name="who-should-use-this-guide"></a>Кому необходимо это руководство

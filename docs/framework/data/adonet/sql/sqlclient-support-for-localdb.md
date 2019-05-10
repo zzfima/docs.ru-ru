@@ -2,12 +2,12 @@
 title: Поддержка SqlClient LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 416945964af7fda5ed5aaab2f5aae1bbc8928556
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 23fe0d19ad31c0b09e1a12b5ea25e45a973a14f4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670057"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645831"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Поддержка SqlClient LocalDB
 Начиная с SQL Server с рабочим названием Denali, облегченная версия SQL Server, называемая LocalDB, будут доступны. В этом разделе описывается, как установить подключение к базе данных LocalDB.  

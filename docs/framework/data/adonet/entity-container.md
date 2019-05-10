@@ -2,12 +2,12 @@
 title: контейнер сущностей
 ms.date: 03/30/2017
 ms.assetid: 16e80405-2c75-42fc-b0e4-b1df53b1c584
-ms.openlocfilehash: 4a629a800df63c67dc17d3fc1531a9862861e9c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 58642c6cc794f931387ac7a76dd64d368957f14b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667254"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586959"
 ---
 # <a name="entity-container"></a>контейнер сущностей
 *Контейнер сущностей* — это логическая группа из [наборы сущностей](../../../../docs/framework/data/adonet/entity-set.md), [наборы ассоциаций](../../../../docs/framework/data/adonet/association-set.md), и [функции imports](../../../../docs/framework/data/adonet/model-declared-function.md).  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 26488b76608aa46b56285581e7368bf24f8b1be7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b86684bab6c552102af7486b2c9ab49ea703a175
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912409"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627308"
 ---
 # <a name="controls-by-category"></a>Категории элементов управления
 Элементы управления Windows Presentation Foundation (WPF) могут быть логически сгруппированы в несколько категорий. Эти категории можно использовать для выбора соответствующего элемента управления для сценария, что поможет увидеть, какие элементы управления имеют схожие шаблоны использования или функциональные возможности.  

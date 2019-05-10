@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35aec3a311680e398d9f2bba94bf4c9a274c8a04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5657e55856845404c5f8f063bd69d51614a234c9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873825"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614285"
 ---
 # <a name="trace-listeners"></a>Прослушиватели трассировки
 При использовании классов **Trace**, **Debug** и <xref:System.Diagnostics.TraceSource> необходимо обеспечить механизм сбора и записи отправляемых сообщений. Сообщения трассировки получаются *прослушивателями*. В задачу прослушивателя входит сбор, хранение и маршрутизация сообщений трассировки. Прослушиватели направляют выходные данные трассировки соответствующему целевому объекту, например, в журнал событий, окно или текстовый файл.  

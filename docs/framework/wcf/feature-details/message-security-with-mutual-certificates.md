@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 8fc8d6d4a63b7a752fb8c26991d904761fdcebdd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 263ec73af7f4a6f52c4570e17cd140b6afb53601
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923073"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637838"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Безопасность сообщений с использованием взаимных сертификатов
 В следующем сценарии показаны службы Windows Communication Foundation (WCF) и клиента, защищенный с помощью режима безопасности сообщений. Проверка подлинности клиента и службы выполняется с помощью сертификатов.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: 62642651516274a27c44abfc19e94dc529690ea9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 202b83116666283564ef99dd0a4a7395192cedb3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699556"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622890"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>Практическое руководство. Настройка клиента WCF для взаимодействия со службами WSE 3.0
 Клиенты Windows Communication Foundation (WCF) являются уровне линий связи совместимы с Web Services Enhancements 3.0 для служб Microsoft .NET (WSE), если WCF клиенты настроены для использования версии спецификации WS-Addressing от августа 2004 г.  

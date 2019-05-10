@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-ms.openlocfilehash: 9c532858ba3b93d427e5c0455f953db2499ebd6a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 364d3924d9db2c85959c1e41011c6d659823774c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918883"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614833"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Типы, поддерживаемые сериализатором контракта данных
 Windows Communication Foundation (WCF) использует <xref:System.Runtime.Serialization.DataContractSerializer> как модуля сериализации по умолчанию для преобразования данных в XML и преобразовать XML обратно в данные. Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> предназначен для сериализации типов *контрактов данных* . Однако поддерживаются и многие другие типы, которые можно рассматривать как неявные контракты данных. Полный список сериализуемых типов приведен ниже.  

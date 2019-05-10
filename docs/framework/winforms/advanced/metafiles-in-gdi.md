@@ -9,12 +9,12 @@ helpviewer_keywords:
 - GDI+, metafiles
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
-ms.openlocfilehash: bb972f158496192aa38f10564209bb2781837414
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f46c24b699aa49db2bc4b8467ce96a125602acec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010038"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645742"
 ---
 # <a name="metafiles-in-gdi"></a>Метафайлы в GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет <xref:System.Drawing.Imaging.Metafile> таким образом, чтобы можно было записывать и отображать метафайлы. Метафайл, также называемый векторного изображения, — это образ, который хранится в виде последовательности команд и параметров рисования. Команды и параметры, сохраненные в <xref:System.Drawing.Imaging.Metafile> объекта можно хранить в памяти или сохранить файл или поток.  

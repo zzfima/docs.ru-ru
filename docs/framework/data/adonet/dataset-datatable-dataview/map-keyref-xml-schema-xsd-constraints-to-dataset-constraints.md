@@ -2,12 +2,12 @@
 title: Сопоставление ограничений XML-схемы (XSD) keyref с ограничениями набора данных
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4cc4cb530b7252f35469fd4bb43bf6da9c1a3e24
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607505"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604021"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Сопоставление ограничений XML-схемы (XSD) keyref с ограничениями набора данных
 **Keyref** элемент позволяет устанавливать ссылки между элементами внутри документа. Это похоже на связь по внешнему ключу в реляционной базе данных. Если в схеме **keyref** элемент преобразуется в процессе сопоставления схемы для соответствующего ограничения внешнего ключа на столбцы в таблицах <xref:System.Data.DataSet>. По умолчанию **keyref** элемент также формирует связь с **ParentTable**, **ChildTable**, **ParentColumn**и  **ChildColumn** свойства, указанными в этой связи.  

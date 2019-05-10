@@ -2,12 +2,12 @@
 title: Управление приостановленным экземпляром
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: ace4d2baef8f6b030790deaa5b1c20bb4b0cd30d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c23d2dfd48ecb57a3fb418734c916586178986e9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785909"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622422"
 ---
 # <a name="suspended-instance-management"></a>Управление приостановленным экземпляром
 Этот образец демонстрирует управление экземплярами рабочего процесса, которые были приостановлены.  Действием по умолчанию для поведения <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> является `AbandonAndSuspend`. Это означает, что по умолчанию при появлении необработанных исключений, сформированных экземпляром рабочего процесса, который размещен на узле <xref:System.ServiceModel.WorkflowServiceHost>, экземпляр удаляется из памяти (отбрасывается) и устойчивая/сохраненная версия экземпляра отмечается как приостановленная. Приостановленный экземпляр рабочего процесса не будет в состоянии выполняться до отмены приостановки.

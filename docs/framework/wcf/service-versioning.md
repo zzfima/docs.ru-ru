@@ -2,12 +2,12 @@
 title: Управление версиями службы
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 27d54cdf6f49bd9433f43290c97706af81d98b6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6b72558be4a367505ff18f10406785bc21fddd2c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949790"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606003"
 ---
 # <a name="service-versioning"></a>Управление версиями службы
 После первоначального развертывания служб и, возможно, несколько раз на протяжении времени их существования возникает потребность в изменении этих служб (и предоставляемых ими конечных точек). Причин тому немало: изменяющиеся потребности бизнеса, требования информационных технологий или необходимость решить какие-либо другие проблемы. В результате каждого изменения создается новая версия службы. В этом разделе объясняется, как управление версиями в Windows Communication Foundation (WCF).  

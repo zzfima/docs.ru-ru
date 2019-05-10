@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-ms.openlocfilehash: b17ddcb22f3e1b7dc181e977a0227db5490b66fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 07e1bb4bcdcaa99635db293f23e5ecb689b6063e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003916"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621336"
 ---
 # <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Практическое руководство. Печать многостраничных текстовых файлов в Windows Forms
 В приложениях Windows очень часто используется печать текста. Класс <xref:System.Drawing.Graphics> предоставляет методы для рисования объектов (графических или текстовых) на таких устройствах, как экран или принтер.  
