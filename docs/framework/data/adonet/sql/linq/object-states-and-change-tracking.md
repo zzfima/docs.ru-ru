@@ -2,12 +2,12 @@
 title: Состояния объектов и отслеживание изменений
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 704c5271f71c3709bbf48cf6a5af0a60828e6244
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794398"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610098"
 ---
 # <a name="object-states-and-change-tracking"></a>Состояния объектов и отслеживание изменений
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объекты всегда участвовать в некоторых *состояние*. Например, когда [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создает объект, объект находится в состоянии `Unchanged`. Объект, создаваемый пользователем неизвестен <xref:System.Data.Linq.DataContext> и находится в `Untracked` состояние. После успешного выполнения <xref:System.Data.Linq.DataContext.SubmitChanges%2A> все объекты, известные [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], находятся в состоянии `Unchanged`. (Единственное исключение представляют объекты, успешно удаленные из базы данных, находящиеся в состоянии `Deleted` и не используемые в экземпляре <xref:System.Data.Linq.DataContext>.)  

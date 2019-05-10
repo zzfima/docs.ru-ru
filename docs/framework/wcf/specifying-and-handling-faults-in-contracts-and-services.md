@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b9d6a4e2bb6b7e5c750ff7dad92934c4337c0083
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006409"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64605949"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Задание и обработка сбоев в контрактах и службах
 Приложения Windows Communication Foundation (WCF) обрабатывают ошибки, сопоставляя объекты управляемых исключений с ошибок SOAP и объекты сбоя SOAP с объектами управляемых исключений. В подразделах этого раздела описывается, как разрабатывать контракты, чтобы представлять ошибки в виде пользовательских ошибок SOAP, как возвращать эти ошибки в реализации службы, и как клиенты могут перехватывать такие ошибки.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: KrzysztofCwalina
-ms.openlocfilehash: 9a4cf94ca7fcada7dfc0886422b373abc807a0fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e0da4cd747846921d170d9c07d6f1fb91dbd4ed7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966482"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615257"
 ---
 # <a name="capitalization-conventions"></a>Соглашения о написании прописными буквами
 Рекомендации в этой главе размещать простой метод с помощью варианта, когда применяется последовательно, делать идентификаторы для типов, членов и параметров, удобном для чтения.  

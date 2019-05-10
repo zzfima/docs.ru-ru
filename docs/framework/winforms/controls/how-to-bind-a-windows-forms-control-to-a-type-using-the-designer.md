@@ -6,12 +6,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-ms.openlocfilehash: b298efb0494994659673f9bf9893b667f7eb0f8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: daddbee9aa5eff55bf12a5d8c53ad59001a0c308
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761394"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64612454"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Практическое руководство. Привязка элемента управления Windows Forms к типу с помощью конструктора
 При создании элементов управления, взаимодействующих с данными, иногда бывает нужно привязать элемент управления к типу, а не к объекту. Обычно подобная ситуация возникает на этапе разработки, когда данные недоступны, однако нужно, чтобы элементы управления с привязкой к данным отображали данные из открытого интерфейса типа. Ниже описано, как создать новый <xref:System.Windows.Forms.BindingSource> то есть связанного с типом, а затем привязать одно из свойств типа к <xref:System.Windows.Forms.TextBox.Text%2A> свойство <xref:System.Windows.Forms.TextBox>.  

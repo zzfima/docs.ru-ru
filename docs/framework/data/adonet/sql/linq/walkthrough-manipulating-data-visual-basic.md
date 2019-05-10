@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 0b013cff36fc9063f30aaa4356e9e8249dd960d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 0dd70eb5d3b3ad56a8597ce0658a296a03d5f4a7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306499"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64618050"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>Пошаговое руководство. Обработка данных (Visual Basic)
 В данном руководстве представлен основной и полный сценарий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] по добавлению, изменению и удалению данных в базе данных. Для добавления клиента, изменения его имени и удаления заказа следует использовать копию учебной базы данных Northwind.  
@@ -21,13 +21,13 @@ ms.locfileid: "59306499"
 ## <a name="prerequisites"></a>Предварительные требования  
  Необходимо выполнить следующие требования.  
   
--   Для хранения файлов используется выделенная папка ("c:\linqtest2"). Прежде чем приступить к выполнению задач, создайте такую папку.  
+- Для хранения файлов используется выделенная папка ("c:\linqtest2"). Прежде чем приступить к выполнению задач, создайте такую папку.  
   
--   Наличие учебной базы данных Northwind.  
+- Наличие учебной базы данных Northwind.  
   
      Если база данных не установлена на компьютере разработчика, загрузите ее с веб-узла Центра загрузки Майкрософт. Инструкции см. в разделе [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). После загрузки базы данных скопируйте файл northwnd.mdf в папку c:\linqtest2.  
   
--   Наличие файла кода Visual Basic, созданного из базы данных "Борей".  
+- Наличие файла кода Visual Basic, созданного из базы данных "Борей".  
   
      Его можно создать либо помощью оператора [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], либо с помощью средства SQLMetal. Данное пошаговое руководство было написано с использованием средства SQLMetal со следующей командной строкой:  
   
@@ -38,17 +38,17 @@ ms.locfileid: "59306499"
 ## <a name="overview"></a>Обзор  
  Данное пошаговое руководство состоит из шести основных задач.  
   
--   Создание [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] решения в Visual Studio.  
+- Создание [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] решения в Visual Studio.  
   
--   Добавление файла кода базы данных в проект.  
+- Добавление файла кода базы данных в проект.  
   
--   Создание нового объекта клиента.  
+- Создание нового объекта клиента.  
   
--   Изменение контактного имени клиента.  
+- Изменение контактного имени клиента.  
   
--   Удаление заказа.  
+- Удаление заказа.  
   
--   Отправка внесенных изменений в базу данных Northwind.  
+- Отправка внесенных изменений в базу данных Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Создание решения LINQ to SQL  
  В первой задаче создается решение Visual Studio, содержащее ссылки, необходимые для построения и запуска [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] проекта.  
@@ -136,7 +136,7 @@ ms.locfileid: "59306499"
   
 #### <a name="to-change-the-name-of-a-customer"></a>Изменение имени клиента  
   
--   Добавьте следующий код перед `Console.ReadLine()`:  
+- Добавьте следующий код перед `Console.ReadLine()`:  
   
      [!code-vb[DLinqWalk3VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#4)]  
   
@@ -147,7 +147,7 @@ ms.locfileid: "59306499"
   
 #### <a name="to-delete-a-row"></a>Удаление строки  
   
--   Добавьте следующий код перед `Console.ReadLine()`.  
+- Добавьте следующий код перед `Console.ReadLine()`.  
   
      [!code-vb[DLinqWalk3VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#5)]  
   

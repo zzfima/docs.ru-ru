@@ -2,12 +2,12 @@
 title: Размещение в приложении службы Windows
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: 8e50c39955f9ab72dfa1d52cbc37ab90f1ab0a8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b5167e61bd825ce56905149237dae05ebb44b134
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855963"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613311"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Размещение в приложении службы Windows
 Службы Windows (ранее называвшиеся службами Windows NT) обеспечивают модель процессов, особенно подходящую для приложений, которые должны существовать в длительно исполняемом файле и не отображают никакой формы пользовательского интерфейса. Временем существования процессов приложений служб Windows управляет диспетчер служб, который позволяет запускать, останавливать и приостанавливать приложения служб Windows. Можно настроить процесс службы Windows для автоматического запуска при запуске компьютера, сделав его подходящей средой размещения для приложений «always on». Дополнительные сведения о приложениях служб Windows, см. в разделе [приложений служб Windows](https://go.microsoft.com/fwlink/?LinkId=89450).  

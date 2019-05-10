@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fea5c656cf5e793ca0717cf3ef60016128a942be
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971955"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617296"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Определение пользовательских типов для использования со службами XAML .NET Framework
 При определении пользовательских типов, которые являются бизнес-объектов или типов, которые не зависят от конкретных платформ, существуют определенные рекомендации для XAML, необходимо выполнить. При выполнении этих рекомендаций, служб XAML .NET Framework и средства чтения XAML и записи XAML может обнаружить характеристики XAML пользовательского типа и предоставить ему соответствующее представление в потоке узлов XAML использование системы типов XAML. В этом разделе описываются рекомендации для определения типов, определения членов и типов или элементов с атрибутами среды CLR.  

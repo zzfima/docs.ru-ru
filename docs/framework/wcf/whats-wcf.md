@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: a2d0ef1e70c88133d5f9c3d2ffe8dafa4983cfd9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e4d05d803cccf9a76c6229903cb1d322a42b11e6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904554"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613037"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Что такое Windows Communication Foundation
 Windows Communication Foundation (WCF) — это платформа для построения сервисноориентированных приложений. С помощью WCF, можно отправлять данные как асинхронные сообщения из одной конечной точки службы в другую. Конечная точка службы может входить в постоянно доступную службу, размещаемую в IIS, или представлять службу, размещаемую в приложении. Конечная точка может быть клиентом службы, которая запрашивает данные от конечной точки службы. Сообщения могут представлять одиночный символ или одно слово, отправляемое в формате XML, или иметь вид сложного потока двоичных данных. Далее представлено несколько образцов сценариев.

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], accessibility
 - accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-ms.openlocfilehash: 0f589f37d79c9ec8d55153aac4c846726a379055
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3067c90978e6ebd680d10c1c4f9db131f19c9e44
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948025"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614746"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Определение сведений, связанных со специальными возможностями, для элементов управления в Windows Forms
 Специальные возможности — это специализированные программы и устройства, помогающие людям с ограниченными возможностями эффективнее использовать компьютеры. Примеры: средства чтения с экрана для слепых и служебные программы голосового ввода для людей, использующих голосовые команды вместо мыши и клавиатуры. Специальные возможности взаимодействуют со свойствами специальных возможностей, представленными элементами управления Windows Forms. К этим свойствам относятся следующие.  

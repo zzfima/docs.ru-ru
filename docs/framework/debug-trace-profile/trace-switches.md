@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85a1a017197826717280f53995ed98f26f1d80bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 16ef27b7d1a36121976cbb026f81984a8b84d1fe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873864"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614337"
 ---
 # <a name="trace-switches"></a>Переключатели трассировки
 Переключатели трассировки позволяют включать, отключать и фильтровать выходные данные трассировки. Они являются объектами, которые существуют в коде и могут настраиваться извне с помощью файла конфигурации. В .NET Framework существует три типа переключателей трассировки: класс <xref:System.Diagnostics.BooleanSwitch> , класс <xref:System.Diagnostics.TraceSwitch> и класс <xref:System.Diagnostics.SourceSwitch> . Класс <xref:System.Diagnostics.BooleanSwitch> действует как переключатель, включая или отключая различные операторы трассировки. Классы <xref:System.Diagnostics.TraceSwitch> и <xref:System.Diagnostics.SourceSwitch> позволяют включать переключатель трассировки для определенного уровня трассировки, чтобы отображались сообщения <xref:System.Diagnostics.Trace> или <xref:System.Diagnostics.TraceSource> , заданные для данного уровня и всех уровней ниже него. Если этот переключатель отключить, то сообщения трассировки не будут отображаться. Все эти классы являются производными от абстрактного (**MustInherit**) класса **Switch**, как и следует переключателям, разработанным пользователями.  
