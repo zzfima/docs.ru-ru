@@ -14,12 +14,12 @@ helpviewer_keywords:
 - DynamicRenderer objects [WPF]
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-ms.openlocfilehash: 105a44f90c1c654a21fc8920a149ad63b2dabc99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bd9fef806434b4ae064161eba11ad113fab07784
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928723"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627389"
 ---
 # <a name="creating-an-ink-input-control"></a>Создание элемента управления рукописным вводом
 Вы можете создать пользовательский элемент управления, динамически и статически отображает рукописные данные. То есть отрисовку рукописных фрагментов, как пользователь рисует штрих, вызывая рукописный ввод «поток» от планшетного пера и отображения рукописного ввода после него добавляется к элементу управления, либо с помощью пера, вставленный из буфера обмена, или загрузить из файла. Для динамического отображения рукописного ввода, необходимо использовать элемент управления <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Для статического отображения рукописного ввода, необходимо переопределить методы событий пера (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, и <xref:System.Windows.UIElement.OnStylusUp%2A>) для сбора <xref:System.Windows.Input.StylusPoint> данные, создавать штрихи и добавить их в <xref:System.Windows.Controls.InkPresenter> (отображает рукописные данные в элементе управления).  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: 011bca07890e706b86f2a0b1dbf11acf77058548
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b29585eabcc2549876f4b50e6b6e55a7f8ef2eee
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762492"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621339"
 ---
 # <a name="one-way-services"></a>Односторонние службы
 По умолчанию операция службы выполняется по шаблону "запрос-ответ". В соответствии с шаблоном "запрос-ответ" клиент ждет ответного сообщения, даже если операция службы представлена в коде в виде метода `void`. В случае односторонних операций передается только одно сообщение. Получатель не отправляет ответное сообщение, а отправитель не ожидает получения этого сообщения.  

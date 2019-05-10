@@ -3,13 +3,13 @@ title: 'Бессерверные приложения: Архитектура, �
 description: Руководство по бессерверной архитектуре. Узнайте, когда, почему и как реализовать бессерверную архитектуру (в отличие от инфраструктуры как услуги [IaaS] или платформы как услуги [PaaS]) в корпоративных приложениях.
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 6/26/2018
-ms.openlocfilehash: a44af1fc76b54ec9be0d8e3b3ba2e54f3e3b220b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.date: 06/26/2018
+ms.openlocfilehash: 148a79e39c047897719e4f97efd84676b1b92636
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054215"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062695"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Бессерверные приложения: Архитектура, шаблоны и реализация в Azure
 

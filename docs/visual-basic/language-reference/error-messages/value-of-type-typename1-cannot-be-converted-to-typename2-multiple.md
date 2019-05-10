@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: 58b334eb5e6db443bcfaba72729d59cb1d798e70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7371cbd4fef4abced95744071ff222b40e160e3e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766822"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620313"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>Значение типа "\<Имя_типа1 >" нельзя преобразовать в "\<имя_типа2 >" (множественные ссылки на файл)
 Значение типа "\<Имя_типа1 >" нельзя преобразовать в "\<имя_типа2 >". Несоответствие типов может быть вызвана смешением ссылки на файл "\<путь_к_файлу1 >" в проекте "\<имя_проекта1 >" с помощью ссылки на файл "\<путь_к_файлу2 >" в проекте "\<имя_проекта2 >". Если обе сборки идентичны, попробуйте заменить эти ссылки так, чтобы они ссылались из одного места.  

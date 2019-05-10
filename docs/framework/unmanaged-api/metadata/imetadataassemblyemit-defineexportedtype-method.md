@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e89fda72371f197efeeeef8f31ec396c334cfcb2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5702fac139ba602828bb8722a1e3e25d6f1c58f6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122035"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625440"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>Метод IMetaDataAssemblyEmit::DefineExportedType
 Создает структуру `ExportedType`, содержащую метаданные для указанного экспортированного типа, и возвращает связанный токен метаданных.  
@@ -46,13 +46,13 @@ HRESULT DefineExportedType (
  `tkImplementation`  
  [in] Токен, указав, где реализуется экспортированный тип. Ниже приведены допустимые значения и их связанные значения.  
   
--   `mdFile` Тип реализуется в другой файл в этой сборке.  
+- `mdFile` Тип реализуется в другой файл в этой сборке.  
   
--   `mdAssemblyRef` Тип реализуется в другой сборке.  
+- `mdAssemblyRef` Тип реализуется в другой сборке.  
   
--   `mdExportedTYpe` Тип является вложенным в другой тип.  
+- `mdExportedTYpe` Тип является вложенным в другой тип.  
   
--   `mdFileNil` Тип находится в тот же файл манифеста и не является вложенным типом.  
+- `mdFileNil` Тип находится в тот же файл манифеста и не является вложенным типом.  
   
  `tkTypeDef`  
  [in] Токен метаданных, указывающий тип для экспорта. Это значение вводится в `TypeDef` таблицы в файл, который реализует тип элемента и используется только в том случае, если этот файл находится в этой сборке.  

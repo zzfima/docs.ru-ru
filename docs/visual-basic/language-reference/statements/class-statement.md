@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: 68401571645d77a41b827c13b3cfc3674076e218
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7fbf2b15105a9fdcda5c7f6653753a4da54b394b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945045"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622346"
 ---
 # <a name="class-statement-visual-basic"></a>Оператор Class (Visual Basic)
 Объявляет имя класса и вводит определение переменных, свойств, событий и процедур, которые включаются в класс.  

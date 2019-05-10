@@ -2,12 +2,12 @@
 title: Практическое руководство. Как реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: 31c89aeed2577c5dd11ae59ee4a4d692210e5f37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 053ace300610cd4129c4541f4e2658ac8d09da85
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856496"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626987"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Практическое руководство. Как реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения
 Данный раздел является вторым из четырех разделов, в которых обсуждается реализация прокси-сервера обнаружения. В предыдущем разделе [как: Реализовать прокси-сервер обнаружения](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), реализации прокси-сервера обнаружения. В этом разделе, создание службы WCF, которая отправляет сообщения объявления (`Hello` и `Bye`) прокси-сервер обнаружения, вызывая ее регистрацию и отмену регистрации прокси-сервера обнаружения.

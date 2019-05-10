@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: bb87879fdf584a439e09839bf4321b85e7dd6a43
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f4857d410b16c3bbcb2129cec0d753a1c3d7a726
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602449"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469493"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Расширение модели приложения Visual Basic
 Можно добавить функциональность в модель приложения путем переопределения `Overridable` членами <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> класса. Этот метод позволяет настроить поведение модели приложения и добавить вызовы собственных методов, как приложение запускается и завершает работу.  
@@ -76,10 +76,10 @@ ms.locfileid: "64602449"
   
  Если приложение является приложением одним экземпляром, и приложение уже выполняется, последующий экземпляр приложения вызывает <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A> метод на исходный экземпляр приложения, а затем завершает работу.  
  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> Конструктор вызывает <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> свойство, чтобы определить, какой механизм отрисовки текста для форм приложения. По умолчанию <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> возвращает `False`, указывающее, что использовать механизм отрисовки текста GDI, который используется по умолчанию в [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]. Можно переопределить <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> возвращаемое свойство `True`, который указывает, что использовать механизм отрисовки текста GDI +, который используется по умолчанию в Visual Basic .NET 2002 и Visual Basic .NET 2003.  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> Конструктор вызывает <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> свойство, чтобы определить, какой механизм отрисовки текста для форм приложения. По умолчанию <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> возвращает `False`, указывающее, что использовать механизм отрисовки текста GDI, используется по умолчанию в Visual Basic 2005 и более поздних версий. Можно переопределить <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> возвращаемое свойство `True`, который указывает, что использовать механизм отрисовки текста GDI +, который используется по умолчанию в Visual Basic .NET 2002 и Visual Basic .NET 2003.  
   
 ## <a name="configuring-the-application"></a>Настройка приложения  
- Как часть модели приложения Visual Basic <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> класс предоставляет защищенные свойства для настройки приложения. Эти свойства должны быть установлены в конструкторе реализующего класса.  
+ Как часть модели приложения Visual Basic <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> класс предоставляет защищенные свойства для настройки приложения. Эти свойства должны быть установлены в конструкторе реализующего класса.  
   
  В проекте Windows Forms по умолчанию **конструктор проектов** создает код для задания свойств с параметрами конструктора. Свойства используются только в том случае, при запуске приложения; Задание их после запуска приложения не влияет.  
   

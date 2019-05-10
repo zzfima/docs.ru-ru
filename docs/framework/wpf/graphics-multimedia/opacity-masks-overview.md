@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 84525e58487ce9b0bc26f77ff8dbced734bc90a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3ee02eca9719f4ffa3ee0c165ad2541c9ffd085e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008477"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625261"
 ---
 # <a name="opacity-masks-overview"></a>Общие сведения о масках непрозрачности
 Маски непрозрачности позволяют делать части элемента или визуального элемента прозрачными или частично прозрачными. Для создания маски непрозрачности, применить <xref:System.Windows.Media.Brush> для <xref:System.Windows.UIElement.OpacityMask%2A> свойства элемента или <xref:System.Windows.Media.Visual>.  Кисть сопоставляется с элементом или визуальным элементом, а значение непрозрачности каждого пикселя кисти используется для определения результирующей непрозрачности каждого соответствующего пикселя элемента или визуального элемента.  

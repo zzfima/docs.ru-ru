@@ -2,12 +2,12 @@
 title: Для режима открытия файла не было задано правильное значение
 ms.date: 07/20/2015
 ms.assetid: 969541f6-9ff6-4804-ba61-0d17370060ef
-ms.openlocfilehash: 28ee1776d0b99d1a960414edd975ced4f4d85402
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e6dfae9b9bbe374b6779ea32a4653b6fbb81d89d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024850"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624896"
 ---
 # <a name="files-open-mode-wasnt-set-to-a-valid-value"></a>Для режима открытия файла не было задано правильное значение
 Значение, указанное для режима открытия файла, недопустимо. В следующей таблице показаны допустимые значения перечисления <xref:Microsoft.VisualBasic.OpenMode> .  

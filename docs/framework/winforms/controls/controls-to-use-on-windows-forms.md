@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 11790e14ed1fde9a42e642400161cfb92bf33293
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a05ddd714e85491d29aa5de574b4cdc36165c224
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011766"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469517"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Элементы управления для использования в формах Windows Forms
 Ниже приведен алфавитный список элементов управления и компонентов, используемых в формах Windows Forms. Помимо элементов управления Windows Forms, описанных в этом разделе, в формы Windows Forms можно добавлять элементы управления ActiveX и пользовательские элементы управления. Если вам не удается найти нужный элемент управления в этом списке, вы можете создать свой собственный. См. раздел [Создание элементов управления Windows Forms во время разработки](developing-windows-forms-controls-at-design-time.md). Дополнительные сведения о выборе необходимого элемента управления см. в разделе [Функциональная классификация элементов управления Windows Forms](windows-forms-controls-by-function.md).  
@@ -229,7 +229,7 @@ ms.locfileid: "62011766"
  Ссылки на разделы с инструкциями, рекомендации по выбору создаваемого элемента управления, а также другие сведения о создании собственных элементов управления.  
   
  [Сравнение элементов управления и программируемых объектов в разных языках и библиотеках](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
- Содержит таблицу, в которой элементы управления Visual Basic 6.0 сопоставляются с соответствующими элементами управления в [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)]. Обратите внимание, что элементы управления теперь являются классами в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ Предоставляет таблицу, которая сопоставляет элементы управления Visual Basic 6.0 с соответствующими элементами управления в Visual Basic. Обратите внимание на то, что элементы управления теперь являются классами в .NET Framework.  
   
  [Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms](how-to-add-activex-controls-to-windows-forms.md)  
  В этой статье описывается использование элементов управления ActiveX в формах Windows Forms.

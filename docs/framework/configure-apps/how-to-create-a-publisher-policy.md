@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b37b00cfbeee10f217d1dbe1c754c50b65e31de9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344667"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625868"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Практическое руководство. Создание политики издателя
 Поставщики сборок можно указать, что приложения должны использовать более новой версии сборки, включая файл политики издателя с обновленной сборкой. Файл политики издателя указывает перенаправление сборки и параметры базы кода и используется тот же формат, что и файл конфигурации приложения. Файл политики издателя компилируется в сборку и помещен в глобальном кэше сборок.  
@@ -57,15 +57,15 @@ ms.locfileid: "59344667"
   
      В этой команде:  
   
-    -   *PublisherPolicyFile* аргумента — имя файла политики издателя.  
+    - *PublisherPolicyFile* аргумента — имя файла политики издателя.  
   
-    -   *PublisherPolicyAssemblyFile* аргумента — имя сборки политики издателя, полученный в результате этой команды. Имя файла сборки должны иметь формат:  
+    - *PublisherPolicyAssemblyFile* аргумента — имя сборки политики издателя, полученный в результате этой команды. Имя файла сборки должны иметь формат:  
   
          **политика.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
-    -   *KeyPairFile* аргумента — имя файла, содержащего пару ключей. Необходимо подписать сборку и сборки политики издателя ту же пару ключей.  
+    - *KeyPairFile* аргумента — имя файла, содержащего пару ключей. Необходимо подписать сборку и сборки политики издателя ту же пару ключей.  
   
-    -   *ProcessorArchitecture* аргумент определяет платформы, являющейся целевой для сборки с конкретного процессора.  
+    - *ProcessorArchitecture* аргумент определяет платформы, являющейся целевой для сборки с конкретного процессора.  
   
         > [!NOTE]
         >  Возможность использования на архитектуру процессора является новым в .NET Framework версии 2.0.  

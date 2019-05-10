@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: ace1b40b25bd12ff7092459e468a90f382434bf4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0984028e0a09c9939f68ae64be8c401182b57274
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938766"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622915"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Относящиеся к XAML атрибуты среды CLR для пользовательских типов и библиотек
 В этом разделе описаны наиболее распространенные атрибуты среды выполнения (CLR) языка, определенных службами XAML платформы .NET Framework. Здесь также описываются другие атрибуты CLR, которые определены в .NET Framework, которые используются связанные с XAML для приложения к сборкам и типам. Присвоение атрибутов сборки, типы или члены этих атрибутов CLR предоставляет о системе типов XAML, связанные с типами. Информация предоставляется потребителю XAML, использующий служб XAML .NET Framework для обработки в потоке узлов XAML напрямую или через выделенные средства чтения XAML и записи XAML.  

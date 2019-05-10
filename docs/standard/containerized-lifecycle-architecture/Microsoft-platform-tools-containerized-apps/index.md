@@ -4,12 +4,12 @@ description: Ознакомьтесь с предложениями корпор
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 8536703a520434c0e393c5f46005c2ac02d5d849
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cdaac06ffd907783c7ebe9b62ecd726158a02484
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934669"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664392"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Общие сведения о платформе и средствах Майкрософт для контейнерных приложений
 
@@ -31,7 +31,7 @@ ms.locfileid: "61934669"
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Платформа для приложений Docker   | • Microsoft Visual Studio и Visual Studio Code<br /> • .NET<br /> • Служба контейнеров Microsoft Azure<br /> • Azure Service Fabric<br /> • Реестр контейнеров Azure<br /> | • Любой редактор кода (например, Sublime)<br /> • Любой язык (Node.js, Java, Go и т. д.)<br /> • Любой оркестратор и планировщик<br /> • Любой реестр Docker<br /> |
 | DevOps для приложений Docker     | • Службы azure DevOps<br /> • Microsoft Team Foundation Server<br /> • Служба контейнеров Azure<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion и т. д.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI и т. д.<br /> • Локальный Docker Datacenter, Docker Swarm, ОС/ЦОД Mesos, Kubernetes и т. д.<br /> |
-| Управление и мониторинг  | • Operations Management Suite<br /> • Applications Insights<br /> | • Marathon, Chronos и т. д.<br />
+| Управление и мониторинг  | • Azure Monitor | • Marathon, Chronos и т. д.<br />|
 
 Платформа Майкрософт и средства для контейнерных приложений Docker, как определено в таблице 3-1, включают следующие компоненты.
 

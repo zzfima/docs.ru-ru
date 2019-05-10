@@ -8,12 +8,12 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: 0327c497025630747e526503556f4a1705948850
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8ff2a3a4e9249b324dac9b244cab68ae8f8e1cab
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022393"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624837"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Практическое руководство. Ссылаться на COM-объекты из Visual Basic
 В Visual Basic Добавление ссылок на COM-объекты, имеющие библиотеки типов необходимо создать сборку взаимодействия для COM-библиотеки. Ссылки на члены объекта COM направляются в сборку взаимодействия и затем перенаправляется на фактический объект COM. Ответы от COM-объекта направляются в сборку взаимодействия и пересылаются в вашей [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложения.  
