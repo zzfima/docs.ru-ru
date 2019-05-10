@@ -7,44 +7,44 @@ f1_keywords:
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-ms.openlocfilehash: 8dbf510d7c6ee80e2dcd2f9d2552bc870413cbab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ff51bb27847a92b07ce6275a8ddee4789e865f08
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801482"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642804"
 ---
-# <a name="expression-cannot-be-used-as-a-type-constraint"></a><span data-ttu-id="981d2-102">"\<выражение >" не может использоваться в качестве ограничения типа</span><span class="sxs-lookup"><span data-stu-id="981d2-102">'\<expression>' cannot be used as a type constraint</span></span>
-<span data-ttu-id="981d2-103">Список ограничений включает выражение, которое не представляет допустимое ограничение для параметра типа.</span><span class="sxs-lookup"><span data-stu-id="981d2-103">A constraint list includes an expression that does not represent a valid constraint on a type parameter.</span></span>  
+# <a name="expression-cannot-be-used-as-a-type-constraint"></a><span data-ttu-id="abb39-102">"\<выражение >" не может использоваться в качестве ограничения типа</span><span class="sxs-lookup"><span data-stu-id="abb39-102">'\<expression>' cannot be used as a type constraint</span></span>
+<span data-ttu-id="abb39-103">Список ограничений включает выражение, которое не представляет допустимое ограничение для параметра типа.</span><span class="sxs-lookup"><span data-stu-id="abb39-103">A constraint list includes an expression that does not represent a valid constraint on a type parameter.</span></span>  
   
- <span data-ttu-id="981d2-104">Список ограничений назначает требования на тип аргумента, передаваемого параметру типа.</span><span class="sxs-lookup"><span data-stu-id="981d2-104">A constraint list imposes requirements on the type argument passed to the type parameter.</span></span> <span data-ttu-id="981d2-105">Вы можете указать приведенные ниже требования в любой комбинации.</span><span class="sxs-lookup"><span data-stu-id="981d2-105">You can specify the following requirements in any combination:</span></span>  
+ <span data-ttu-id="abb39-104">Список ограничений назначает требования на тип аргумента, передаваемого параметру типа.</span><span class="sxs-lookup"><span data-stu-id="abb39-104">A constraint list imposes requirements on the type argument passed to the type parameter.</span></span> <span data-ttu-id="abb39-105">Вы можете указать приведенные ниже требования в любой комбинации.</span><span class="sxs-lookup"><span data-stu-id="abb39-105">You can specify the following requirements in any combination:</span></span>  
   
-- <span data-ttu-id="981d2-106">Аргумент типа должен реализовывать один или несколько интерфейсов</span><span class="sxs-lookup"><span data-stu-id="981d2-106">The type argument must implement one or more interfaces</span></span>  
+- <span data-ttu-id="abb39-106">Аргумент типа должен реализовывать один или несколько интерфейсов</span><span class="sxs-lookup"><span data-stu-id="abb39-106">The type argument must implement one or more interfaces</span></span>  
   
-- <span data-ttu-id="981d2-107">Аргумент типа должен наследовать не более чем от одного класса</span><span class="sxs-lookup"><span data-stu-id="981d2-107">The type argument must inherit from at most one class</span></span>  
+- <span data-ttu-id="abb39-107">Аргумент типа должен наследовать не более чем от одного класса</span><span class="sxs-lookup"><span data-stu-id="abb39-107">The type argument must inherit from at most one class</span></span>  
   
-- <span data-ttu-id="981d2-108">Аргумент типа должен предоставлять конструктор без параметров, к которому создающий код может получить доступ (включая ограничение `New` ).</span><span class="sxs-lookup"><span data-stu-id="981d2-108">The type argument must expose a parameterless constructor that the creating code can access (include the `New` constraint)</span></span>  
+- <span data-ttu-id="abb39-108">Аргумент типа должен предоставлять конструктор без параметров, к которому создающий код может получить доступ (включая ограничение `New` ).</span><span class="sxs-lookup"><span data-stu-id="abb39-108">The type argument must expose a parameterless constructor that the creating code can access (include the `New` constraint)</span></span>  
   
- <span data-ttu-id="981d2-109">Если не включать определенный класс или интерфейс в список ограничений, то можно наложить более общее требование, указав одно из приведенных ниже ограничений.</span><span class="sxs-lookup"><span data-stu-id="981d2-109">If you do not include any specific class or interface in the constraint list, you can impose a more general requirement by specifying one of the following:</span></span>  
+ <span data-ttu-id="abb39-109">Если не включать определенный класс или интерфейс в список ограничений, то можно наложить более общее требование, указав одно из приведенных ниже ограничений.</span><span class="sxs-lookup"><span data-stu-id="abb39-109">If you do not include any specific class or interface in the constraint list, you can impose a more general requirement by specifying one of the following:</span></span>  
   
-- <span data-ttu-id="981d2-110">Аргумент типа должен быть типом значения (включая ограничение `Structure` ).</span><span class="sxs-lookup"><span data-stu-id="981d2-110">The type argument must be a value type (include the `Structure` constraint)</span></span>  
+- <span data-ttu-id="abb39-110">Аргумент типа должен быть типом значения (включая ограничение `Structure` ).</span><span class="sxs-lookup"><span data-stu-id="abb39-110">The type argument must be a value type (include the `Structure` constraint)</span></span>  
   
-- <span data-ttu-id="981d2-111">Аргумент типа должен быть ссылочным типом (включая ограничение `Class` ).</span><span class="sxs-lookup"><span data-stu-id="981d2-111">The type argument must be a reference type (include the `Class` constraint)</span></span>  
+- <span data-ttu-id="abb39-111">Аргумент типа должен быть ссылочным типом (включая ограничение `Class` ).</span><span class="sxs-lookup"><span data-stu-id="abb39-111">The type argument must be a reference type (include the `Class` constraint)</span></span>  
   
- <span data-ttu-id="981d2-112">Нельзя указывать оба ограничения, `Structure` и `Class` , для одного и того же параметра типа, а также нельзя указывать какое-либо из них более одного раза.</span><span class="sxs-lookup"><span data-stu-id="981d2-112">You cannot specify both `Structure` and `Class` for the same type parameter, and you cannot specify either one more than once.</span></span>  
+ <span data-ttu-id="abb39-112">Нельзя указывать оба ограничения, `Structure` и `Class` , для одного и того же параметра типа, а также нельзя указывать какое-либо из них более одного раза.</span><span class="sxs-lookup"><span data-stu-id="abb39-112">You cannot specify both `Structure` and `Class` for the same type parameter, and you cannot specify either one more than once.</span></span>  
   
- <span data-ttu-id="981d2-113">**Идентификатор ошибки:** BC32061</span><span class="sxs-lookup"><span data-stu-id="981d2-113">**Error ID:** BC32061</span></span>  
+ <span data-ttu-id="abb39-113">**Идентификатор ошибки:** BC32061</span><span class="sxs-lookup"><span data-stu-id="abb39-113">**Error ID:** BC32061</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="981d2-114">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="981d2-114">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="abb39-114">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="abb39-114">To correct this error</span></span>  
   
-- <span data-ttu-id="981d2-115">Проверьте правильность написания выражения и его элементов.</span><span class="sxs-lookup"><span data-stu-id="981d2-115">Verify that the expression and its elements are spelled correctly.</span></span>  
+- <span data-ttu-id="abb39-115">Проверьте правильность написания выражения и его элементов.</span><span class="sxs-lookup"><span data-stu-id="abb39-115">Verify that the expression and its elements are spelled correctly.</span></span>  
   
-- <span data-ttu-id="981d2-116">Если выражение не соответствует требованиям предыдущего списка, удалите его из списка ограничений.</span><span class="sxs-lookup"><span data-stu-id="981d2-116">If the expression does not qualify for the preceding list of requirements, remove it from the constraint list.</span></span>  
+- <span data-ttu-id="abb39-116">Если выражение не соответствует требованиям предыдущего списка, удалите его из списка ограничений.</span><span class="sxs-lookup"><span data-stu-id="abb39-116">If the expression does not qualify for the preceding list of requirements, remove it from the constraint list.</span></span>  
   
-- <span data-ttu-id="981d2-117">Если выражение ссылается на интерфейс или класс, убедитесь, что у компилятора есть доступ к этому интерфейсу или классу.</span><span class="sxs-lookup"><span data-stu-id="981d2-117">If the expression refers to an interface or class, verify that the compiler has access to that interface or class.</span></span> <span data-ttu-id="981d2-118">Возможно, вам потребуется проверить его имя и добавить ссылку в проект.</span><span class="sxs-lookup"><span data-stu-id="981d2-118">You might need to qualify its name, and you might need to add a reference to your project.</span></span> <span data-ttu-id="981d2-119">Дополнительные сведения см. в разделе «Ссылки на проекты» в [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span><span class="sxs-lookup"><span data-stu-id="981d2-119">For more information, see "References to Projects" in [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
+- <span data-ttu-id="abb39-117">Если выражение ссылается на интерфейс или класс, убедитесь, что у компилятора есть доступ к этому интерфейсу или классу.</span><span class="sxs-lookup"><span data-stu-id="abb39-117">If the expression refers to an interface or class, verify that the compiler has access to that interface or class.</span></span> <span data-ttu-id="abb39-118">Возможно, вам потребуется проверить его имя и добавить ссылку в проект.</span><span class="sxs-lookup"><span data-stu-id="abb39-118">You might need to qualify its name, and you might need to add a reference to your project.</span></span> <span data-ttu-id="abb39-119">Дополнительные сведения см. в разделе «Ссылки на проекты» в [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span><span class="sxs-lookup"><span data-stu-id="abb39-119">For more information, see "References to Projects" in [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="981d2-120">См. также</span><span class="sxs-lookup"><span data-stu-id="981d2-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="abb39-120">См. также</span><span class="sxs-lookup"><span data-stu-id="abb39-120">See also</span></span>
 
-- [<span data-ttu-id="981d2-121">Generic Types in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="981d2-121">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [<span data-ttu-id="981d2-122">Value Types and Reference Types</span><span class="sxs-lookup"><span data-stu-id="981d2-122">Value Types and Reference Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [<span data-ttu-id="981d2-123">Ссылки на объявленные элементы</span><span class="sxs-lookup"><span data-stu-id="981d2-123">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [<span data-ttu-id="abb39-121">Generic Types in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="abb39-121">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [<span data-ttu-id="abb39-122">Value Types and Reference Types</span><span class="sxs-lookup"><span data-stu-id="abb39-122">Value Types and Reference Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [<span data-ttu-id="abb39-123">Ссылки на объявленные элементы</span><span class="sxs-lookup"><span data-stu-id="abb39-123">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
