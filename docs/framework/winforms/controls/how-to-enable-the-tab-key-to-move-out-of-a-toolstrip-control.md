@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TAB key [Windows Forms], enabling
 - ToolStrip control [Windows Forms], moving from
 ms.assetid: 40f9e88b-09a3-428e-8da8-c00bb65079c6
-ms.openlocfilehash: d4de7345a4e3ce122c4e1fc0a92f09b447204eb6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7fee9f685b9a9b402cbfe9c265669f7905434986
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941431"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64609841"
 ---
 # <a name="how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control"></a>Практическое руководство. Выход из элемента управления ToolStrip с помощью клавиши TAB
 Используйте следующую процедуру, чтобы пользователь мог нажать клавишу TAB для перемещения из <xref:System.Windows.Forms.ToolStrip> к следующему элементу управления в последовательности табуляции.  
