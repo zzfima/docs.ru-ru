@@ -14,8 +14,6 @@
           href: foreground-and-background-threads.md
         - name: Управляемые и неуправляемые потоки в Windows
           href: managed-and-unmanaged-threading-in-windows.md
-        - name: 'Метод Thread.Suspend, сборка мусора и безопасные точки'
-          href: thread-suspend-garbage-collection-and-safe-points.md
         - name: Локальное хранилище потока. Статические поля потока и области данных
           href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
     - name: Использование потоков и работа с потоками
@@ -34,13 +32,13 @@
           items:
             - name: Согласованная отмена потоков
               href: canceling-threads-cooperatively.md
-            - name: Как выполнить Прослушивание запросов на отмену посредством опросов
+            - name: Практическое руководство. Прослушивание запросов на отмену посредством опросов
               href: how-to-listen-for-cancellation-requests-by-polling.md
-            - name: Как выполнить Регистрация обратных вызовов для запросов на отмену
+            - name: Практическое руководство. Регистрация обратных вызовов для запросов на отмену
               href: how-to-register-callbacks-for-cancellation-requests.md
-            - name: 'Как выполнить Прослушивание запросов на отмену, содержащих дескрипторы ожидания'
+            - name: 'Практическое руководство. Прослушивание запросов на отмену, содержащих дескрипторы ожидания'
               href: how-to-listen-for-cancellation-requests-that-have-wait-handles.md
-            - name: Как выполнить Прослушивание нескольких запросов на отмену
+            - name: Практическое руководство. Прослушивание нескольких запросов на отмену
               href: how-to-listen-for-multiple-cancellation-requests.md
     - name: Рекомендации по работе с потоками
       href: managed-threading-best-practices.md
@@ -64,17 +62,17 @@
         - name: Барьер
           href: barrier.md
           items:
-            - name: Как выполнить Синхронизация параллельных операций с барьером
+            - name: Практическое руководство. Синхронизация параллельных операций с барьером
               href: how-to-synchronize-concurrent-operations-with-a-barrier.md
         - name: SpinLock
           href: spinlock.md
           items:
-            - name: Как выполнить SpinLock и низкоуровневая синхронизация
+            - name: Практическое руководство. SpinLock и низкоуровневая синхронизация
               href: how-to-use-spinlock-for-low-level-synchronization.md
-            - name: Как выполнить Включение режима отслеживания потоков в SpinLock
+            - name: Практическое руководство. Включение режима отслеживания потоков в SpinLock
               href: how-to-enable-thread-tracking-mode-in-spinlock.md
         - name: SpinWait
           href: spinwait.md
           items:
-            - name: Как выполнить Использование объекта SpinWait для реализации двухэтапной операции ожидания
+            - name: Практическое руководство. Использование объекта SpinWait для реализации двухэтапной операции ожидания
               href: how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md
