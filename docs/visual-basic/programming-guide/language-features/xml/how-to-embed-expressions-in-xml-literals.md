@@ -5,29 +5,29 @@ helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: 31e79a8787978ffab2e35cd2827b80a8f1ed843e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ca80ac666e8676e4e58a9741b00125c0126570fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61861365"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598377"
 ---
-# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a><span data-ttu-id="f9ecc-102">Практическое руководство. Внедрить выражения в XML-литералах (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f9ecc-102">How to: Embed Expressions in XML Literals (Visual Basic)</span></span>
-<span data-ttu-id="f9ecc-103">XML-литералов можно объединить с внедренными выражениями для создания документа XML, фрагмент или элемент, содержащий содержимое, созданное во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="f9ecc-103">You can combine XML literals with embedded expressions to create an XML document, fragment, or element that contains content created at run time.</span></span> <span data-ttu-id="f9ecc-104">Следующие примеры демонстрируют, как использовать внедренные выражения для заполнения содержимого элемента, атрибутов и имена элементов во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="f9ecc-104">The following examples demonstrate how to use embedded expressions to populate element content, attributes, and element names at run time.</span></span>  
+# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a><span data-ttu-id="a2468-102">Практическое руководство. Внедрить выражения в XML-литералах (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a2468-102">How to: Embed Expressions in XML Literals (Visual Basic)</span></span>
+<span data-ttu-id="a2468-103">XML-литералов можно объединить с внедренными выражениями для создания документа XML, фрагмент или элемент, содержащий содержимое, созданное во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="a2468-103">You can combine XML literals with embedded expressions to create an XML document, fragment, or element that contains content created at run time.</span></span> <span data-ttu-id="a2468-104">Следующие примеры демонстрируют, как использовать внедренные выражения для заполнения содержимого элемента, атрибутов и имена элементов во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="a2468-104">The following examples demonstrate how to use embedded expressions to populate element content, attributes, and element names at run time.</span></span>  
   
- <span data-ttu-id="f9ecc-105">Для внедренного выражения используется синтаксис `<%=` `exp` `%>`, который является такой же синтаксис, [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] использует.</span><span class="sxs-lookup"><span data-stu-id="f9ecc-105">The syntax for an embedded expression is `<%=` `exp` `%>`, which is the same syntax that [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] uses.</span></span> <span data-ttu-id="f9ecc-106">Дополнительные сведения см. в разделе [встроенные выражения в XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).</span><span class="sxs-lookup"><span data-stu-id="f9ecc-106">For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).</span></span>  
+ <span data-ttu-id="a2468-105">Для внедренного выражения используется синтаксис `<%=` `exp` `%>`, который является такой же синтаксис, [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] использует.</span><span class="sxs-lookup"><span data-stu-id="a2468-105">The syntax for an embedded expression is `<%=` `exp` `%>`, which is the same syntax that [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] uses.</span></span> <span data-ttu-id="a2468-106">Дополнительные сведения см. в разделе [встроенные выражения в XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).</span><span class="sxs-lookup"><span data-stu-id="a2468-106">For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).</span></span>  
   
- <span data-ttu-id="f9ecc-107">Можно также использовать [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API-интерфейсы для создания [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объектов.</span><span class="sxs-lookup"><span data-stu-id="f9ecc-107">You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects.</span></span> <span data-ttu-id="f9ecc-108">Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="f9ecc-108">For more information, see <xref:System.Xml.Linq.XElement>.</span></span>  
+ <span data-ttu-id="a2468-107">Можно также использовать [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API-интерфейсы для создания [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объектов.</span><span class="sxs-lookup"><span data-stu-id="a2468-107">You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects.</span></span> <span data-ttu-id="a2468-108">Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="a2468-108">For more information, see <xref:System.Xml.Linq.XElement>.</span></span>  
   
-## <a name="procedures"></a><span data-ttu-id="f9ecc-109">Процедуры</span><span class="sxs-lookup"><span data-stu-id="f9ecc-109">Procedures</span></span>  
+## <a name="procedures"></a><span data-ttu-id="a2468-109">Процедуры</span><span class="sxs-lookup"><span data-stu-id="a2468-109">Procedures</span></span>  
   
-#### <a name="to-insert-text-as-element-content"></a><span data-ttu-id="f9ecc-110">Для вставки текста в качестве содержимого элемента</span><span class="sxs-lookup"><span data-stu-id="f9ecc-110">To insert text as element content</span></span>  
+#### <a name="to-insert-text-as-element-content"></a><span data-ttu-id="a2468-110">Для вставки текста в качестве содержимого элемента</span><span class="sxs-lookup"><span data-stu-id="a2468-110">To insert text as element content</span></span>  
   
-- <span data-ttu-id="f9ecc-111">В следующем примере показано, как вставить текст, содержащийся в `contactName` переменной между открывающей и закрывающей имен элементов.</span><span class="sxs-lookup"><span data-stu-id="f9ecc-111">The following example shows how to insert the text that is contained in the `contactName` variable between the opening and closing name elements.</span></span>  
+- <span data-ttu-id="a2468-111">В следующем примере показано, как вставить текст, содержащийся в `contactName` переменной между открывающей и закрывающей имен элементов.</span><span class="sxs-lookup"><span data-stu-id="a2468-111">The following example shows how to insert the text that is contained in the `contactName` variable between the opening and closing name elements.</span></span>  
   
      [!code-vb[VbXMLSamples#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#39)]  
   
-     <span data-ttu-id="f9ecc-112">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="f9ecc-112">This example produces the following output:</span></span>  
+     <span data-ttu-id="a2468-112">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="a2468-112">This example produces the following output:</span></span>  
   
     ```xml  
     <contact>  
@@ -35,13 +35,13 @@ ms.locfileid: "61861365"
     </contact>  
     ```  
   
-#### <a name="to-insert-text-as-an-attribute-value"></a><span data-ttu-id="f9ecc-113">Для вставки текста в качестве значения атрибута</span><span class="sxs-lookup"><span data-stu-id="f9ecc-113">To insert text as an attribute value</span></span>  
+#### <a name="to-insert-text-as-an-attribute-value"></a><span data-ttu-id="a2468-113">Для вставки текста в качестве значения атрибута</span><span class="sxs-lookup"><span data-stu-id="a2468-113">To insert text as an attribute value</span></span>  
   
-- <span data-ttu-id="f9ecc-114">В следующем примере показано, как вставить текст, содержащийся в `phoneType` переменной в качестве значения `type` атрибута.</span><span class="sxs-lookup"><span data-stu-id="f9ecc-114">The following example shows how to insert the text that is contained in the `phoneType` variable as the value of the `type` attribute.</span></span>  
+- <span data-ttu-id="a2468-114">В следующем примере показано, как вставить текст, содержащийся в `phoneType` переменной в качестве значения `type` атрибута.</span><span class="sxs-lookup"><span data-stu-id="a2468-114">The following example shows how to insert the text that is contained in the `phoneType` variable as the value of the `type` attribute.</span></span>  
   
      [!code-vb[VbXMLSamples#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#40)]  
   
-     <span data-ttu-id="f9ecc-115">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="f9ecc-115">This example produces the following output:</span></span>  
+     <span data-ttu-id="a2468-115">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="a2468-115">This example produces the following output:</span></span>  
   
     ```xml  
     <contact>  
@@ -49,15 +49,15 @@ ms.locfileid: "61861365"
     </contact>  
     ```  
   
-#### <a name="to-insert-text-for-an-element-name"></a><span data-ttu-id="f9ecc-116">Для вставки текста для имени элемента</span><span class="sxs-lookup"><span data-stu-id="f9ecc-116">To insert text for an element name</span></span>  
+#### <a name="to-insert-text-for-an-element-name"></a><span data-ttu-id="a2468-116">Для вставки текста для имени элемента</span><span class="sxs-lookup"><span data-stu-id="a2468-116">To insert text for an element name</span></span>  
   
-- <span data-ttu-id="f9ecc-117">В следующем примере показано, как вставить текст, содержащийся в `elementName` переменной в качестве имени элемента.</span><span class="sxs-lookup"><span data-stu-id="f9ecc-117">The following example shows how to insert the text that is contained in the `elementName` variable as the name of an element.</span></span>  
+- <span data-ttu-id="a2468-117">В следующем примере показано, как вставить текст, содержащийся в `elementName` переменной в качестве имени элемента.</span><span class="sxs-lookup"><span data-stu-id="a2468-117">The following example shows how to insert the text that is contained in the `elementName` variable as the name of an element.</span></span>  
   
-     <span data-ttu-id="f9ecc-118">При создании элементов при использовании этого метода, необходимо закрыть их с помощью \</ > тег.</span><span class="sxs-lookup"><span data-stu-id="f9ecc-118">When creating elements by using this technique, you must close them with the \</> tag.</span></span>  
+     <span data-ttu-id="a2468-118">При создании элементов при использовании этого метода, необходимо закрыть их с помощью \</ > тег.</span><span class="sxs-lookup"><span data-stu-id="a2468-118">When creating elements by using this technique, you must close them with the \</> tag.</span></span>  
   
      [!code-vb[VbXMLSamples#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#41)]  
   
-     <span data-ttu-id="f9ecc-119">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="f9ecc-119">This example produces the following output:</span></span>  
+     <span data-ttu-id="a2468-119">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="a2468-119">This example produces the following output:</span></span>  
   
     ```xml  
     <contact>  
@@ -65,9 +65,9 @@ ms.locfileid: "61861365"
     </contact>  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="f9ecc-120">См. также</span><span class="sxs-lookup"><span data-stu-id="f9ecc-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a2468-120">См. также</span><span class="sxs-lookup"><span data-stu-id="a2468-120">See also</span></span>
 
-- [<span data-ttu-id="f9ecc-121">Практическое руководство. Создание XML-литералов</span><span class="sxs-lookup"><span data-stu-id="f9ecc-121">How to: Create XML Literals</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)
-- [<span data-ttu-id="f9ecc-122">Встроенные выражения в XML</span><span class="sxs-lookup"><span data-stu-id="f9ecc-122">Embedded Expressions in XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
-- [<span data-ttu-id="f9ecc-123">Создание XML в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f9ecc-123">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [<span data-ttu-id="f9ecc-124">XML</span><span class="sxs-lookup"><span data-stu-id="f9ecc-124">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [<span data-ttu-id="a2468-121">Практическое руководство. Создание XML-литералов</span><span class="sxs-lookup"><span data-stu-id="a2468-121">How to: Create XML Literals</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)
+- [<span data-ttu-id="a2468-122">Встроенные выражения в XML</span><span class="sxs-lookup"><span data-stu-id="a2468-122">Embedded Expressions in XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [<span data-ttu-id="a2468-123">Создание XML в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a2468-123">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [<span data-ttu-id="a2468-124">XML</span><span class="sxs-lookup"><span data-stu-id="a2468-124">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
