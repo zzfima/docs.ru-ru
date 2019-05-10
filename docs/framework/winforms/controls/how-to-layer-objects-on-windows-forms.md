@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 8d0abbf0f71ac176d17261a0ae863938c575bdaf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6000adeffcc991557e046461f93fec24e1262f54
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941080"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651677"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Практическое руководство. Многоуровневое расположение объектов в формах Windows Forms
 При создании сложного пользовательского интерфейса, или работать с формой многодокументного интерфейса (MDI), часто требуется слоя элементы управления и дочерние формы для создания более сложных интерфейсов пользователя (UI). Чтобы переместить и хранить список элементов управления и окон в контексте группы, управлять z порядком. *Z-порядок* является видимое расположение элементов управления на форме вдоль оси z формы (глубина). Окно, в верхней части z порядок перекрывает все остальные окна. Все остальные окна перекрывают окно в нижней части z порядка.  

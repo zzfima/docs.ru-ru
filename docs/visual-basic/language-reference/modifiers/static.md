@@ -7,12 +7,12 @@ helpviewer_keywords:
 - static modifier
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
-ms.openlocfilehash: de4f67fc5b60de48383a8ca886cff02b03830318
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f1031fe005a2fc264b50116b8ea3311dc7065dbc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781190"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647645"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
 Указывает, что один или несколько объявленных локальных переменных по-прежнему существует и сохранять свои последние значения после завершения процедуры, в котором они объявлены.  

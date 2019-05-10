@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: caf9a66e8c42fb80955539aa9d3eb32179309004
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b77e0bf52e20ce5bd8f1c0deecfc822e9f910675
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929692"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648377"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Протоколы веб-служб, поддерживаемые предоставляемыми системой привязками
 Windows Communication Foundation (WCF) предназначено для взаимодействия с веб-службами, поддерживающими набор спецификаций, называемых спецификациями веб-служб. Чтобы упростить конфигурацию службы для рекомендации по взаимодействию, WCF представляет три с возможностью взаимодействия предоставляемых системой привязок: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, и <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Для обеспечения взаимодействия с организация для продвижения из структурированных сведения стандартов OASIS-стандартов, WCF включает в себя одну привязку с возможностью системных: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Для публикации метаданных WCF включает в себя два с возможностью взаимодействия предоставляемых системой привязок: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) и [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). В этом разделе перечислены спецификации, поддерживаемые предоставляемыми системой привязками с возможностью взаимодействия.  

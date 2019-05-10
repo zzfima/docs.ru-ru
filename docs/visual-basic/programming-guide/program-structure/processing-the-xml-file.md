@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: a10255be140c7c86a435cca98cec5df7df82ffee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: efd9711f93478b1ecc2ded7b57fa45f38286eeb5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955497"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651215"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Обработка XML-файла (Visual Basic)
 Компилятор создает строку идентификатора для каждой конструкции в коде, помеченной для создания документации. (Сведения о том, как для маркировки кода, см. в разделе [теги для комментариев XML](../../../visual-basic/language-reference/xmldoc/index.md).) Строка идентификатора однозначно определяет конструкцию. Программы обработки XML-файле можно использовать строку идентификатора для идентификации соответствующего [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] элементу метаданных или отражения.  

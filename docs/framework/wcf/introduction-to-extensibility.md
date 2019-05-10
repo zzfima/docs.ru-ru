@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-ms.openlocfilehash: 8d7b9c811c557b10160c2581a59f5ebf72882bfd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8ac605b562531329333b5f05e081d89de55d8cd2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928613"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645426"
 ---
 # <a name="introduction-to-extensibility"></a>Введение в расширяемость
 Модель приложения Windows Communication Foundation (WCF) призвана решить большей части связанных с обменом данных потребностей любого распределенного приложения. Однако всегда существуют сценарии, которые модель приложений по умолчанию и предоставленные системой реализации не поддерживают. Модель расширяемости WCF предназначен для поддержки пользовательских сценариев, предоставляя возможность изменять поведение системы на всех уровнях, вплоть до замены модели приложений целиком. В этом разделе кратко рассматриваются различные области расширения и даются ссылки на дополнительные сведения о каждой из них.  

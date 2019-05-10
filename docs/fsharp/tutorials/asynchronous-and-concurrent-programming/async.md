@@ -3,11 +3,11 @@ title: Асинхронное программирование
 description: Узнайте, как F# асинхронного программирования можно выполнить посредством модель языка программирования, простой в использовании и естественный язык.
 ms.date: 06/20/2016
 ms.openlocfilehash: 8cd7d7bcecabe8ea2c33a4787fe9ebbadd67fe67
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63808224"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753592"
 ---
 # <a name="async-programming-in-f"></a>Асинхронное программирование на языке f #\#
 

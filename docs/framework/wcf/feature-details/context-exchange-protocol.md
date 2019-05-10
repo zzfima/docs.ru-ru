@@ -2,12 +2,12 @@
 title: Протокол обмена контекстом
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: a6bc0ac45282d94a6aea8dbbdb5a7d34163c692e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cb6e52b5622316cfaa9c56b26c3aac6764c71cca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857354"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651112"
 ---
 # <a name="context-exchange-protocol"></a>Протокол обмена контекстом
 В этом разделе описывается протокол обмена контекстом, представленных в выпуске Windows Communication Foundation (WCF) .NET Framework версии 3.5. Этот протокол позволяет клиентскому каналу принимать контекст, предоставленный службой, и применять его ко всем последующим запросам, поступающим в эту службу через тот же экземпляр клиентского канала. Для распространения контекста между сервером и клиентом реализация протокола обмена контекстом можно использовать один из двух механизмов: Файлы cookie HTTP или заголовок SOAP.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - contracts [WCF]
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
-ms.openlocfilehash: 0443e5b37e637351d6491c37ec443c93636460a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 839f7790a5dd300313931672c60e7826af39aeea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857627"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651092"
 ---
 # <a name="contracts"></a>Контракты
 В этом разделе показано, как определить и реализовать контракты службы Windows Communication Foundation (WCF). Контракт службы указывает, какую информацию конечная точка передает во внешний мир. На более конкретном уровне, это выписка о наборе специальных сообщений, объединенных в такие базовые шаблоны обмена сообщениями (MEP), как запрос/ответ, односторонний обмен и дуплексный обмен. Если контракт службы является логически связанным набором обмена сообщениями, операция службы - это обмен одним сообщением. Например, операция `Hello` явно должна явно принять одно сообщение (к примеру, вызывающая сторона может объявить приветствие) и может вернуть или не вернуть сообщение (в зависимости от характера операции).  

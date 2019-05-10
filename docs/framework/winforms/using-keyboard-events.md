@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dc404a73d5de96c69e4241b818965fe2bef22a50
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966923"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655646"
 ---
 # <a name="using-keyboard-events"></a>Использование событий клавиатуры
 В большинстве программ Windows Forms для обработки ввода с клавиатуры используются события клавиатуры. В этом разделе содержится обзор событий клавиатуры, включая сведения об использовании каждого события и данные, которые предоставляются для каждого события.  Также см. в разделе [Обзор обработчиков событий (Windows Forms)](event-handlers-overview-windows-forms.md) и [Общие сведения о событиях (Windows Forms)](events-overview-windows-forms.md).  

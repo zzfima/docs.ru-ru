@@ -2,12 +2,12 @@
 title: Расширяемость узла службы рабочих процессов
 ms.date: 03/30/2017
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
-ms.openlocfilehash: e37a33643fb58d93be953720303cd069e72a690e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4f1f67feb728cb2236f84c88ff223058d34990dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929796"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648372"
 ---
 # <a name="workflow-service-host-extensibility"></a>Расширяемость узла службы рабочих процессов
 Платформа [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] содержит класс <xref:System.ServiceModel.Activities.WorkflowServiceHost> для размещения служб рабочих процессов. Этот класс используется при размещении служб рабочих процессов в управляемом приложении или службе Windows. Этот класс также используется при размещении службы рабочего процесса в службах IIS или службе активации Windows (WAS). Класс <xref:System.ServiceModel.Activities.WorkflowServiceHost> обеспечивает точки расширения, которые дают возможность добавлять пользовательские расширения, изменять неактивное поведение и размещать рабочие процессы, не относящиеся к службе (то есть те, которые не используют обмен сообщениями).  

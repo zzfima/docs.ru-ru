@@ -2,12 +2,12 @@
 title: Создание пользовательских действий управления потоком
 ms.date: 03/30/2017
 ms.assetid: 27f409f6-2d1d-4cfb-9765-93eb2ad667d5
-ms.openlocfilehash: 2be47281335066def5c1d267cd709db5a8ff1187
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f457e6f8cefd7183ca20cb449adf1ac15d7bde79
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774066"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647148"
 ---
 # <a name="creating-custom-flow-control-activities"></a>Создание пользовательских действий управления потоком
 .NET Framework содержит различные действия управления потоком, которые работают так же, чтобы абстрактные программные структуры (такие как <xref:System.Activities.Statements.Flowchart>) или стандартные программные инструкции (такие как <xref:System.Activities.Statements.If>). В этом разделе обсуждается архитектура одного из образцов проектов, [ForEach неуниверсальные](./samples/non-generic-foreach.md).  
