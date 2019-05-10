@@ -3,12 +3,12 @@ title: 'Как выполнить: Включение обнаружения в�
 ms.date: 03/30/2017
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
-ms.openlocfilehash: a357f153d61b6a8e1e105639bd68647dabdc26f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0149bf424751a0c95337743b02465629826d9686
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940482"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625849"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>Как выполнить: Включение обнаружения воспроизведения маркеров
 ## <a name="applies-to"></a>Применение  

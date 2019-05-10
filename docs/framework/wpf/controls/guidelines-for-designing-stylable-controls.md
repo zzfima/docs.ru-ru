@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 756cc821b1a9fe20741e390a1fe6e84d12cc6363
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 99644be4a275c1de7f4b89ca23368a26a8b76f5b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009972"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614543"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Рекомендации по разработке элементов управления с возможностью использования стилей
 В этом документе содержатся рекомендации по разработке элементов управления, стили и шаблоны которых можно с легкостью изменять. Эти рекомендации являются результатом продолжительного периода проб и ошибок при работе над стилями тем оформления для встроенного набора элементов управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Было выяснено, что успешное изменение стилей зависит как от хорошо спроектированной объектной модели, так и самого стиля. Данный документ предназначен именно для разработчиков элементов управления, а не для разработчиков стилей.  
