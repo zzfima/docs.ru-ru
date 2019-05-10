@@ -3,41 +3,41 @@ title: Создать службу WCF с поддержкой AJAX и клие�
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
 ms.openlocfilehash: 06fa3a9d0151f3b4b865c421f9960854ef471377
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63807888"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754602"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a><span data-ttu-id="6208d-102">Практическое руководство. Создать службу WCF с поддержкой AJAX и клиента ASP.NET, обращающегося к службе</span><span class="sxs-lookup"><span data-stu-id="6208d-102">How to: Create an AJAX-Enabled WCF Service and an ASP.NET Client that Accesses the Service</span></span>
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a><span data-ttu-id="d716b-102">Практическое руководство. Создать службу WCF с поддержкой AJAX и клиента ASP.NET, обращающегося к службе</span><span class="sxs-lookup"><span data-stu-id="d716b-102">How to: Create an AJAX-Enabled WCF Service and an ASP.NET Client that Accesses the Service</span></span>
 
-<span data-ttu-id="6208d-103">В этом разделе показано, как использовать Visual Studio для создания службы с поддержкой AJAX Windows Communication Foundation (WCF) и клиента ASP.NET, который обращается к службе.</span><span class="sxs-lookup"><span data-stu-id="6208d-103">This topic shows how to use Visual Studio to create an AJAX-enabled Windows Communication Foundation (WCF) service and an ASP.NET client that accesses the service.</span></span>
+<span data-ttu-id="d716b-103">В этом разделе показано, как использовать Visual Studio для создания службы с поддержкой AJAX Windows Communication Foundation (WCF) и клиента ASP.NET, который обращается к службе.</span><span class="sxs-lookup"><span data-stu-id="d716b-103">This topic shows how to use Visual Studio to create an AJAX-enabled Windows Communication Foundation (WCF) service and an ASP.NET client that accesses the service.</span></span>
 
-## <a name="create-an-aspnet-web-app"></a><span data-ttu-id="6208d-104">Создание веб-приложения ASP.NET</span><span class="sxs-lookup"><span data-stu-id="6208d-104">Create an ASP.NET web app</span></span>
+## <a name="create-an-aspnet-web-app"></a><span data-ttu-id="d716b-104">Создание веб-приложения ASP.NET</span><span class="sxs-lookup"><span data-stu-id="d716b-104">Create an ASP.NET web app</span></span>
 
-1. <span data-ttu-id="6208d-105">Запустите Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="6208d-105">Open Visual Studio.</span></span>
+1. <span data-ttu-id="d716b-105">Запустите Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="d716b-105">Open Visual Studio.</span></span>
 
-1. <span data-ttu-id="6208d-106">Из **файл** меню, выберите **New** > **проекта**</span><span class="sxs-lookup"><span data-stu-id="6208d-106">From the **File** menu, select **New** > **Project**</span></span>
+1. <span data-ttu-id="d716b-106">Из **файл** меню, выберите **New** > **проекта**</span><span class="sxs-lookup"><span data-stu-id="d716b-106">From the **File** menu, select **New** > **Project**</span></span>
 
-1. <span data-ttu-id="6208d-107">В **новый проект** диалоговом окне разверните **установленные** > **Visual C#** > **Web** категории, а затем Выберите **веб-приложение ASP.NET (.NET Framework)**.</span><span class="sxs-lookup"><span data-stu-id="6208d-107">In the **New Project** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select **ASP.NET Web Application (.NET Framework)**.</span></span>
+1. <span data-ttu-id="d716b-107">В **новый проект** диалоговом окне разверните **установленные** > **Visual C#** > **Web** категории, а затем Выберите **веб-приложение ASP.NET (.NET Framework)**.</span><span class="sxs-lookup"><span data-stu-id="d716b-107">In the **New Project** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select **ASP.NET Web Application (.NET Framework)**.</span></span>
 
-1. <span data-ttu-id="6208d-108">Назовите проект **SandwichServices** и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="6208d-108">Name the Project **SandwichServices** and click **OK**.</span></span>
+1. <span data-ttu-id="d716b-108">Назовите проект **SandwichServices** и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="d716b-108">Name the Project **SandwichServices** and click **OK**.</span></span>
 
-1. <span data-ttu-id="6208d-109">В **новое веб-приложение ASP.NET** диалоговом окне выберите **пустой** , а затем выберите **ОК**.</span><span class="sxs-lookup"><span data-stu-id="6208d-109">In the **New ASP.NET Web Application** dialog, select **Empty** and then select **OK**.</span></span>
+1. <span data-ttu-id="d716b-109">В **новое веб-приложение ASP.NET** диалоговом окне выберите **пустой** , а затем выберите **ОК**.</span><span class="sxs-lookup"><span data-stu-id="d716b-109">In the **New ASP.NET Web Application** dialog, select **Empty** and then select **OK**.</span></span>
 
    ![ASP.NET web app тип диалогового окна в Visual Studio](media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
 
-## <a name="add-a-web-form"></a><span data-ttu-id="6208d-111">Добавление веб-формы</span><span class="sxs-lookup"><span data-stu-id="6208d-111">Add a web form</span></span>
+## <a name="add-a-web-form"></a><span data-ttu-id="d716b-111">Добавление веб-формы</span><span class="sxs-lookup"><span data-stu-id="d716b-111">Add a web form</span></span>
 
-1. <span data-ttu-id="6208d-112">Щелкните правой кнопкой мыши проект SandwichServices в **обозревателе решений** и выберите **добавить** > **новый элемент**.</span><span class="sxs-lookup"><span data-stu-id="6208d-112">Right-click the SandwichServices project in **Solution Explorer** and select **Add** > **New Item**.</span></span>
+1. <span data-ttu-id="d716b-112">Щелкните правой кнопкой мыши проект SandwichServices в **обозревателе решений** и выберите **добавить** > **новый элемент**.</span><span class="sxs-lookup"><span data-stu-id="d716b-112">Right-click the SandwichServices project in **Solution Explorer** and select **Add** > **New Item**.</span></span>
 
-1. <span data-ttu-id="6208d-113">В **Добавление нового элемента** диалоговом окне разверните **установленные** > **Visual C#** > **Web** категории, а затем Выберите **веб-формы** шаблона.</span><span class="sxs-lookup"><span data-stu-id="6208d-113">In the **Add New Item** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select the **Web Form** template.</span></span>
+1. <span data-ttu-id="d716b-113">В **Добавление нового элемента** диалоговом окне разверните **установленные** > **Visual C#** > **Web** категории, а затем Выберите **веб-формы** шаблона.</span><span class="sxs-lookup"><span data-stu-id="d716b-113">In the **Add New Item** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select the **Web Form** template.</span></span>
 
-1. <span data-ttu-id="6208d-114">Примите имя по умолчанию (**WebForm1**), а затем выберите **добавить**.</span><span class="sxs-lookup"><span data-stu-id="6208d-114">Accept the default name (**WebForm1**), and then select **Add**.</span></span>
+1. <span data-ttu-id="d716b-114">Примите имя по умолчанию (**WebForm1**), а затем выберите **добавить**.</span><span class="sxs-lookup"><span data-stu-id="d716b-114">Accept the default name (**WebForm1**), and then select **Add**.</span></span>
 
-   <span data-ttu-id="6208d-115">*WebForm1.aspx* открывается в **источника** представления.</span><span class="sxs-lookup"><span data-stu-id="6208d-115">*WebForm1.aspx* opens in **Source** view.</span></span>
+   <span data-ttu-id="d716b-115">*WebForm1.aspx* открывается в **источника** представления.</span><span class="sxs-lookup"><span data-stu-id="d716b-115">*WebForm1.aspx* opens in **Source** view.</span></span>
 
-1. <span data-ttu-id="6208d-116">Добавьте следующую разметку внутри  **\<текст >** теги:</span><span class="sxs-lookup"><span data-stu-id="6208d-116">Add the following markup inside the **\<body>** tags:</span></span>
+1. <span data-ttu-id="d716b-116">Добавьте следующую разметку внутри  **\<текст >** теги:</span><span class="sxs-lookup"><span data-stu-id="d716b-116">Add the following markup inside the **\<body>** tags:</span></span>
 
    ```html
    <input type="button" value="Price of 3 sandwiches" onclick="Calculate()"/>
@@ -45,19 +45,19 @@ ms.locfileid: "63807888"
    <span id="additionResult"></span>
    ```
 
-## <a name="create-an-ajax-enabled-wcf-service"></a><span data-ttu-id="6208d-117">Создание службы WCF с поддержкой AJAX</span><span class="sxs-lookup"><span data-stu-id="6208d-117">Create an AJAX-enabled WCF service</span></span>
+## <a name="create-an-ajax-enabled-wcf-service"></a><span data-ttu-id="d716b-117">Создание службы WCF с поддержкой AJAX</span><span class="sxs-lookup"><span data-stu-id="d716b-117">Create an AJAX-enabled WCF service</span></span>
 
-1. <span data-ttu-id="6208d-118">Щелкните правой кнопкой мыши проект SandwichServices в **обозревателе решений** и выберите **добавить** > **новый элемент**.</span><span class="sxs-lookup"><span data-stu-id="6208d-118">Right-click the SandwichServices project in **Solution Explorer** and select **Add** > **New Item**.</span></span>
+1. <span data-ttu-id="d716b-118">Щелкните правой кнопкой мыши проект SandwichServices в **обозревателе решений** и выберите **добавить** > **новый элемент**.</span><span class="sxs-lookup"><span data-stu-id="d716b-118">Right-click the SandwichServices project in **Solution Explorer** and select **Add** > **New Item**.</span></span>
 
-1. <span data-ttu-id="6208d-119">В **Добавление нового элемента** диалоговом окне разверните **установленные** > **Visual C#** > **Web** категории, а затем Выберите **службы WCF (с поддержкой AJAX)** шаблона.</span><span class="sxs-lookup"><span data-stu-id="6208d-119">In the **Add New Item** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select the **WCF Service (AJAX-enabled)** template.</span></span>
+1. <span data-ttu-id="d716b-119">В **Добавление нового элемента** диалоговом окне разверните **установленные** > **Visual C#** > **Web** категории, а затем Выберите **службы WCF (с поддержкой AJAX)** шаблона.</span><span class="sxs-lookup"><span data-stu-id="d716b-119">In the **Add New Item** dialog, expand the **Installed** > **Visual C#** > **Web** category, and then select the **WCF Service (AJAX-enabled)** template.</span></span>
 
    ![Шаблон (с поддержкой AJAX) элемента службы WCF в Visual Studio](media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
 
-1. <span data-ttu-id="6208d-121">Назовите службу **CostService** , а затем выберите **добавить**.</span><span class="sxs-lookup"><span data-stu-id="6208d-121">Name the service **CostService** and then select **Add**.</span></span>
+1. <span data-ttu-id="d716b-121">Назовите службу **CostService** , а затем выберите **добавить**.</span><span class="sxs-lookup"><span data-stu-id="d716b-121">Name the service **CostService** and then select **Add**.</span></span>
 
-   <span data-ttu-id="6208d-122">*CostService.svc.cs* откроется в редакторе.</span><span class="sxs-lookup"><span data-stu-id="6208d-122">*CostService.svc.cs* opens in the editor.</span></span>
+   <span data-ttu-id="d716b-122">*CostService.svc.cs* откроется в редакторе.</span><span class="sxs-lookup"><span data-stu-id="d716b-122">*CostService.svc.cs* opens in the editor.</span></span>
 
-1. <span data-ttu-id="6208d-123">Реализация операции службы.</span><span class="sxs-lookup"><span data-stu-id="6208d-123">Implement the operation in the service.</span></span> <span data-ttu-id="6208d-124">Добавьте следующий метод к классу CostService для расчета стоимости количества сандвича:</span><span class="sxs-lookup"><span data-stu-id="6208d-124">Add the following method to the CostService class to calculate the cost of a quantity of sandwiches:</span></span>
+1. <span data-ttu-id="d716b-123">Реализация операции службы.</span><span class="sxs-lookup"><span data-stu-id="d716b-123">Implement the operation in the service.</span></span> <span data-ttu-id="d716b-124">Добавьте следующий метод к классу CostService для расчета стоимости количества сандвича:</span><span class="sxs-lookup"><span data-stu-id="d716b-124">Add the following method to the CostService class to calculate the cost of a quantity of sandwiches:</span></span>
 
     ```csharp
     [OperationContract]
@@ -67,15 +67,15 @@ ms.locfileid: "63807888"
     }
     ```
 
-## <a name="configure-the-client-to-access-the-service"></a><span data-ttu-id="6208d-125">Настройка клиента для доступа к службе</span><span class="sxs-lookup"><span data-stu-id="6208d-125">Configure the client to access the service</span></span>
+## <a name="configure-the-client-to-access-the-service"></a><span data-ttu-id="d716b-125">Настройка клиента для доступа к службе</span><span class="sxs-lookup"><span data-stu-id="d716b-125">Configure the client to access the service</span></span>
 
-1. <span data-ttu-id="6208d-126">Откройте *WebForm1.aspx* файл и выберите **разработки** представления.</span><span class="sxs-lookup"><span data-stu-id="6208d-126">Open the *WebForm1.aspx* file and select the **Design** view.</span></span>
+1. <span data-ttu-id="d716b-126">Откройте *WebForm1.aspx* файл и выберите **разработки** представления.</span><span class="sxs-lookup"><span data-stu-id="d716b-126">Open the *WebForm1.aspx* file and select the **Design** view.</span></span>
 
-2. <span data-ttu-id="6208d-127">Из **представление** меню, выберите **элементов**.</span><span class="sxs-lookup"><span data-stu-id="6208d-127">From the **View** menu, select **Toolbox**.</span></span>
+2. <span data-ttu-id="d716b-127">Из **представление** меню, выберите **элементов**.</span><span class="sxs-lookup"><span data-stu-id="d716b-127">From the **View** menu, select **Toolbox**.</span></span>
 
-3. <span data-ttu-id="6208d-128">Разверните **расширения AJAX** узел и перетащите **ScriptManager** на форму.</span><span class="sxs-lookup"><span data-stu-id="6208d-128">Expand the **AJAX Extensions** node and drag and drop a **ScriptManager** onto the form.</span></span>
+3. <span data-ttu-id="d716b-128">Разверните **расширения AJAX** узел и перетащите **ScriptManager** на форму.</span><span class="sxs-lookup"><span data-stu-id="d716b-128">Expand the **AJAX Extensions** node and drag and drop a **ScriptManager** onto the form.</span></span>
 
-4. <span data-ttu-id="6208d-129">Вернитесь в **источника** Просмотр, добавьте следующий код между  **\<ScriptManager >** теги, чтобы указать путь к службе WCF:</span><span class="sxs-lookup"><span data-stu-id="6208d-129">Back in the **Source** view, add the following code between the **\<ScriptManager>** tags to specify the path to the WCF service:</span></span>
+4. <span data-ttu-id="d716b-129">Вернитесь в **источника** Просмотр, добавьте следующий код между  **\<ScriptManager >** теги, чтобы указать путь к службе WCF:</span><span class="sxs-lookup"><span data-stu-id="d716b-129">Back in the **Source** view, add the following code between the **\<ScriptManager>** tags to specify the path to the WCF service:</span></span>
 
     ```xml
     <Services>
@@ -83,7 +83,7 @@ ms.locfileid: "63807888"
     </Services>
     ```
 
-5. <span data-ttu-id="6208d-130">Добавьте код для функции Javascript `Calculate()`.</span><span class="sxs-lookup"><span data-stu-id="6208d-130">Add the code for the Javascript function `Calculate()`.</span></span> <span data-ttu-id="6208d-131">Поместите следующий код в **head** раздел веб-формы:</span><span class="sxs-lookup"><span data-stu-id="6208d-131">Place the following code in the **head** section of the web form:</span></span>
+5. <span data-ttu-id="d716b-130">Добавьте код для функции Javascript `Calculate()`.</span><span class="sxs-lookup"><span data-stu-id="d716b-130">Add the code for the Javascript function `Calculate()`.</span></span> <span data-ttu-id="d716b-131">Поместите следующий код в **head** раздел веб-формы:</span><span class="sxs-lookup"><span data-stu-id="d716b-131">Place the following code in the **head** section of the web form:</span></span>
 
     ```html
     <script type="text/javascript">
@@ -100,15 +100,15 @@ ms.locfileid: "63807888"
     </script>
     ```
 
-   <span data-ttu-id="6208d-132">Этот код вызывает метод CostService для расчета цены за три сандвича и отображает результат в диапазон, который называется **additionResult**.</span><span class="sxs-lookup"><span data-stu-id="6208d-132">This code calls the method of CostService to calculate the price for three sandwiches, and then displays the result in the span called **additionResult**.</span></span>
+   <span data-ttu-id="d716b-132">Этот код вызывает метод CostService для расчета цены за три сандвича и отображает результат в диапазон, который называется **additionResult**.</span><span class="sxs-lookup"><span data-stu-id="d716b-132">This code calls the method of CostService to calculate the price for three sandwiches, and then displays the result in the span called **additionResult**.</span></span>
 
-## <a name="run-the-program"></a><span data-ttu-id="6208d-133">Запуск программы</span><span class="sxs-lookup"><span data-stu-id="6208d-133">Run the program</span></span>
+## <a name="run-the-program"></a><span data-ttu-id="d716b-133">Запуск программы</span><span class="sxs-lookup"><span data-stu-id="d716b-133">Run the program</span></span>
 
-<span data-ttu-id="6208d-134">Убедитесь, что *WebForm1.aspx* имеет фокус и нажмите клавишу **запустить** кнопку для запуска веб-клиента.</span><span class="sxs-lookup"><span data-stu-id="6208d-134">Make sure that *WebForm1.aspx* has focus, and then press **Start** button to launch the web client.</span></span> <span data-ttu-id="6208d-135">Кнопка имеет зеленый треугольник и говорит нечто вроде **IIS Express (Microsoft Edge)**.</span><span class="sxs-lookup"><span data-stu-id="6208d-135">The button has a green triangle and says something like **IIS Express (Microsoft Edge)**.</span></span> <span data-ttu-id="6208d-136">Или можно нажать клавишу **F5**.</span><span class="sxs-lookup"><span data-stu-id="6208d-136">Or, you can press **F5**.</span></span> <span data-ttu-id="6208d-137">Нажмите кнопку **цены 3 сандвича** кнопку, чтобы создать ожидаемый результат «3,75».</span><span class="sxs-lookup"><span data-stu-id="6208d-137">Click the **Price of 3 sandwiches** button to generate the expected output of "3.75".</span></span>
+<span data-ttu-id="d716b-134">Убедитесь, что *WebForm1.aspx* имеет фокус и нажмите клавишу **запустить** кнопку для запуска веб-клиента.</span><span class="sxs-lookup"><span data-stu-id="d716b-134">Make sure that *WebForm1.aspx* has focus, and then press **Start** button to launch the web client.</span></span> <span data-ttu-id="d716b-135">Кнопка имеет зеленый треугольник и говорит нечто вроде **IIS Express (Microsoft Edge)**.</span><span class="sxs-lookup"><span data-stu-id="d716b-135">The button has a green triangle and says something like **IIS Express (Microsoft Edge)**.</span></span> <span data-ttu-id="d716b-136">Или можно нажать клавишу **F5**.</span><span class="sxs-lookup"><span data-stu-id="d716b-136">Or, you can press **F5**.</span></span> <span data-ttu-id="d716b-137">Нажмите кнопку **цены 3 сандвича** кнопку, чтобы создать ожидаемый результат «3,75».</span><span class="sxs-lookup"><span data-stu-id="d716b-137">Click the **Price of 3 sandwiches** button to generate the expected output of "3.75".</span></span>
 
-## <a name="example-code"></a><span data-ttu-id="6208d-138">пример кода</span><span class="sxs-lookup"><span data-stu-id="6208d-138">Example code</span></span>
+## <a name="example-code"></a><span data-ttu-id="d716b-138">пример кода</span><span class="sxs-lookup"><span data-stu-id="d716b-138">Example code</span></span>
 
-<span data-ttu-id="6208d-139">Ниже приведен полный код в *CostService.svc.cs* файла:</span><span class="sxs-lookup"><span data-stu-id="6208d-139">Following is the full code in the *CostService.svc.cs* file :</span></span>
+<span data-ttu-id="d716b-139">Ниже приведен полный код в *CostService.svc.cs* файла:</span><span class="sxs-lookup"><span data-stu-id="d716b-139">Following is the full code in the *CostService.svc.cs* file :</span></span>
 
 ```csharp
 using System.ServiceModel;
@@ -129,7 +129,7 @@ namespace SandwichServices
 }
 ```
 
-<span data-ttu-id="6208d-140">Ниже приведен полный набор *WebForm1.aspx* страницы:</span><span class="sxs-lookup"><span data-stu-id="6208d-140">Following is the full contents of the *WebForm1.aspx* page:</span></span>
+<span data-ttu-id="d716b-140">Ниже приведен полный набор *WebForm1.aspx* страницы:</span><span class="sxs-lookup"><span data-stu-id="d716b-140">Following is the full contents of the *WebForm1.aspx* page:</span></span>
 
 ```aspx-csharp
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SandwichServices.WebForm1" %>
