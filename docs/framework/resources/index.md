@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86efc3a9d9eab5c1529804769af413dd88e71f1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aabf2ad437ee8a50614ca27978aa0a031f5d7e55
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792905"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592235"
 ---
 # <a name="resources-in-net-apps"></a>Ресурсы в приложениях .NET
 Практически любое высококачественное приложение должно использовать ресурсы. Ресурс представляет собой любые неисполняемые данные, которые логически развертываются вместе с приложением. Ресурсы могут отображаться в приложении в виде сообщений об ошибках либо как часть интерфейса пользователя. Ресурсы могут содержать данные различных видов, включая символьные строки, изображения и объекты. (Для записи сохраняемых объектов в файл ресурсов объекты должны быть сериализуемыми.) Благодаря хранению данных в файле ресурсов сами данные можно изменять без перекомпиляции всего приложения. Это также позволяет хранить данные в одном месте и исключает необходимость в использовании жестко закодированных данных, которые хранятся в нескольких местах.  
@@ -43,23 +43,23 @@ ms.locfileid: "61792905"
 ## <a name="retrieving-resources"></a>Извлечение ресурсов  
  Приложение во время выполнения загружает соответствующие локализованные ресурсы отдельно для каждого потока на основе языка и региональных параметров, которые заданы свойством <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>. Значение этого свойства формируется следующим образом:  
   
--   Присвоением свойству <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> объекта <xref:System.Globalization.CultureInfo>, который представляет локализованные значения языка и региональных параметров.  
+- Присвоением свойству <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> объекта <xref:System.Globalization.CultureInfo>, который представляет локализованные значения языка и региональных параметров.  
   
--   Если язык и региональные параметры не заданы явным образом, соответствующие значения по умолчанию для пользовательского интерфейса каждого потока извлекаются из свойства <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>.  
+- Если язык и региональные параметры не заданы явным образом, соответствующие значения по умолчанию для пользовательского интерфейса каждого потока извлекаются из свойства <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>.  
   
--   Если язык и региональные параметры по умолчанию для пользовательского интерфейса в потоке не заданы явным образом, применяются язык и региональные параметры текущего пользователя на локальном компьютере. В реализациях .NET на базе Windows для этого вызывается Windows-функция [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage).  
+- Если язык и региональные параметры по умолчанию для пользовательского интерфейса в потоке не заданы явным образом, применяются язык и региональные параметры текущего пользователя на локальном компьютере. В реализациях .NET на базе Windows для этого вызывается Windows-функция [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage).  
   
  Дополнительные сведения об указании языка и региональных параметров для пользовательского интерфейса см. в разделах справки <xref:System.Globalization.CultureInfo> и <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>.  
   
  Ресурсы для текущего или определенного языка и региональных параметров пользовательского интерфейса можно получить с помощью класса <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Хотя для получения ресурсов чаще всего используется класс <xref:System.Resources.ResourceManager>, пространство имен <xref:System.Resources?displayProperty=nameWithType> содержит дополнительные типы, которые можно использовать для получения ресурсов. Сюда входит следующее.  
   
--   Класс <xref:System.Resources.ResourceReader>, который позволяет перечислять ресурсы, встроенные в сборку или хранящиеся в отдельном двоичном RESOURCES-файле. Это удобно, когда точные имена ресурсов, доступных во время выполнения, неизвестны.  
+- Класс <xref:System.Resources.ResourceReader>, который позволяет перечислять ресурсы, встроенные в сборку или хранящиеся в отдельном двоичном RESOURCES-файле. Это удобно, когда точные имена ресурсов, доступных во время выполнения, неизвестны.  
   
--   Класс <xref:System.Resources.ResXResourceReader>, который позволяет получать ресурсы из XML-файла (.resx).  
+- Класс <xref:System.Resources.ResXResourceReader>, который позволяет получать ресурсы из XML-файла (.resx).  
   
--   Класс <xref:System.Resources.ResourceSet>, который позволяет получать ресурсы для конкретного языка и региональных параметров без учета правил отката. Ресурсы могут храниться в сборке или отдельном двоичном RESOURCES-файле. Можно также разработать реализацию <xref:System.Resources.IResourceReader>, которая позволит использовать класс <xref:System.Resources.ResourceSet> для извлечения ресурсов из другого источника.  
+- Класс <xref:System.Resources.ResourceSet>, который позволяет получать ресурсы для конкретного языка и региональных параметров без учета правил отката. Ресурсы могут храниться в сборке или отдельном двоичном RESOURCES-файле. Можно также разработать реализацию <xref:System.Resources.IResourceReader>, которая позволит использовать класс <xref:System.Resources.ResourceSet> для извлечения ресурсов из другого источника.  
   
--   Класс <xref:System.Resources.ResXResourceSet>, который позволяет получить в память все элементы из XML-файла ресурсов.  
+- Класс <xref:System.Resources.ResXResourceSet>, который позволяет получить в память все элементы из XML-файла ресурсов.  
   
 ## <a name="see-also"></a>См. также
 

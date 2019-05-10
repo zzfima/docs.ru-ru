@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: fa69a03d160e7079f532e8e00245a7af3f3a8999
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: faab42a7a2f7dda12f32a65890b795abfe0d11ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710879"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608721"
 ---
 # <a name="delegates-c-programming-guide"></a>Делегаты (Руководство по программированию на C#)
 [Делегат](../../../csharp/language-reference/keywords/delegate.md) — это тип, который представляет ссылки на методы с определенным списком параметров и типом возвращаемого значения. При создании экземпляра делегата этот экземпляр можно связать с любым методом с совместимой сигнатурой и типом возвращаемого значения. Метод можно вызвать (активировать) с помощью экземпляра делегата.  
@@ -30,33 +30,33 @@ ms.locfileid: "61710879"
 ## <a name="delegates-overview"></a>Общие сведения о делегатах  
  Делегаты имеют следующие свойства.  
   
--   Делегаты подобны указателям на функции в C++, но являются полностью объектно-ориентированными и, в отличие от указателей C++ на функции-члены, инкапсулируют экземпляр объекта вместе с методом.
+- Делегаты подобны указателям на функции в C++, но являются полностью объектно-ориентированными и, в отличие от указателей C++ на функции-члены, инкапсулируют экземпляр объекта вместе с методом.
   
--   Делегаты допускают передачу методов в качестве параметров.  
+- Делегаты допускают передачу методов в качестве параметров.  
   
--   Делегаты можно использовать для определения методов обратного вызова.  
+- Делегаты можно использовать для определения методов обратного вызова.  
   
--   Делегаты можно связывать друг с другом; например, при появлении одного события можно вызывать несколько методов.  
+- Делегаты можно связывать друг с другом; например, при появлении одного события можно вызывать несколько методов.  
   
--   Точное соответствие методов типу делегата не требуется. Дополнительные сведения см. в разделе [Использование вариативности в делегатах](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md).  
+- Точное соответствие методов типу делегата не требуется. Дополнительные сведения см. в разделе [Использование вариативности в делегатах](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md).  
   
--   В C# версии 2.0 введена концепция [анонимных методов](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md), которые позволяют передавать блоки кода в виде параметров вместо использования отдельно определенного метода. В C# 3.0 для краткой записи встроенных блоков кода введены лямбда-выражения. В результате компиляции как анонимных методов, так и лямбда-выражений (в определенном контексте) получаются типы делегатов. В настоящее время эти возможности называются анонимными возможностями. Дополнительные сведения о лямбда-выражениях см. в разделе [Анонимные функции](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
+- В C# версии 2.0 введена концепция [анонимных методов](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md), которые позволяют передавать блоки кода в виде параметров вместо использования отдельно определенного метода. В C# 3.0 для краткой записи встроенных блоков кода введены лямбда-выражения. В результате компиляции как анонимных методов, так и лямбда-выражений (в определенном контексте) получаются типы делегатов. В настоящее время эти возможности называются анонимными возможностями. Дополнительные сведения о лямбда-выражениях см. в разделе [Анонимные функции](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
--   [Использование делегатов](../../../csharp/programming-guide/delegates/using-delegates.md)  
+- [Использование делегатов](../../../csharp/programming-guide/delegates/using-delegates.md)  
   
--   [Использование делегатов вместо интерфейсов (руководство по программированию на C#)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
+- [Использование делегатов вместо интерфейсов (руководство по программированию на C#)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
--   [Делегаты с именованными методами и делегаты с анонимными методами](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
+- [Делегаты с именованными методами и делегаты с анонимными методами](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
   
--   [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+- [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
   
--   [Использование расхождения в делегатах](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)  
+- [Использование расхождения в делегатах](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
--   [Практическое руководство. Объединение делегатов (многоадресные делегаты)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
+- [Практическое руководство. Объединение делегатов (многоадресные делегаты)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
   
--   [Практическое руководство. Объявление, создание и использование делегата](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
+- [Практическое руководство. Объявление, создание и использование делегата](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
 
 ## <a name="c-language-specification"></a>Спецификация языка C#  
 

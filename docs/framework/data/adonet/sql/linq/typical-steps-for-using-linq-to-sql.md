@@ -2,12 +2,12 @@
 title: Стандартная последовательность действий при использовании LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0c472fcac0e664e17c1869ba7ffc61ed2b802e8e
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876982"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063001"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Стандартная последовательность действий при использовании LINQ to SQL
 Чтобы реализовать приложение [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], выполните действия, описанные в этом разделе. Обратите внимание, что многие их этих действий являются необязательными. В большинстве случаев можно использовать объектную модель в состоянии, установленном по умолчанию.  
@@ -55,7 +55,7 @@ ms.locfileid: "61876982"
 ## <a name="using-the-object-model"></a>Использование модели объектов  
  На следующем рисунке показана связь между разработчиком и данными в двухуровневом сценарии. Для других сценариев см. в разделе [N-уровневые и удаленные приложения и LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md).  
   
- ![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")  
+ ![Снимок экрана, показывающий объектной модели Linq.](./media/the-linq-to-sql-object-model/linq-object-model-two-tier.png)  
   
  После создания объектной модели описание запросов на получение сведений и управление данными осуществляется в рамках этой модели. Все операции выполняются в терминах объектов и свойство объектной модели, а не в терминах строк и столбцов базы данных. Работа непосредственно с базой данных не осуществляется.  
   

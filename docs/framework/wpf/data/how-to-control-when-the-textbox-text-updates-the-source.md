@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f7770db59c346f0981dd89a9995f11e41d17a1d
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052005"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063492"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Практическое руководство. Управление обновлением источника из поля TextBox
 В этом разделе описывается использование <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> свойство, чтобы управлять временем обновлений источника привязки. В этом разделе используются <xref:System.Windows.Controls.TextBox> элемента управления в качестве примера.  
@@ -28,7 +28,7 @@ ms.locfileid: "62052005"
   
  В результате <xref:System.Windows.Controls.TextBlock> отображается тот же текст (поскольку источник изменяется), который пользователь вводит текст в <xref:System.Windows.Controls.TextBox>, как показано на следующем снимке экрана примера:  
   
- ![Снимок экрана примера привязки простых данных](./media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
+ ![Снимок экрана с простой привязкой данных.](./media/how-to-control-when-the-textbox-text-updates-the-source/data-binding-simple-binding-sample.png)  
   
  Если у вас есть диалоговое окно или редактируемая пользователем форма и требуется отложить обновление источника, пока пользователь не завершит редактирование поля и нажимает кнопку «ОК», можно задать <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> значение привязки в <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, как показано в следующем примере:  
   
