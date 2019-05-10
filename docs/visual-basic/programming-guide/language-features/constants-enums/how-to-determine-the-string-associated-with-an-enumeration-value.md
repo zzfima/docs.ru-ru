@@ -6,30 +6,30 @@ helpviewer_keywords:
 - strings [Visual Basic], enumeration values
 - values [Visual Basic], enumeration members
 ms.assetid: 9253e7c8-579c-49a2-8f26-392b20ea99eb
-ms.openlocfilehash: 4fa04fa621347ae961975bfb636734e6c9df39fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 25c55c14507c67b9bdd8606cb85afd55f9a748fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906806"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610532"
 ---
-# <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a><span data-ttu-id="77840-102">Практическое руководство. Определение строки, связанной со значением из перечисления (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="77840-102">How to: Determine the String Associated with an Enumeration Value (Visual Basic)</span></span>
-<span data-ttu-id="77840-103"><xref:System.Enum.GetValues%2A> И <xref:System.Enum.GetNames%2A> методы позволяют определить строки и значения, связанные с членами перечисления.</span><span class="sxs-lookup"><span data-stu-id="77840-103">The <xref:System.Enum.GetValues%2A> and <xref:System.Enum.GetNames%2A> methods allow you to determine the strings and values associated with enumeration members.</span></span>  
+# <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a><span data-ttu-id="b813f-102">Практическое руководство. Определение строки, связанной со значением из перечисления (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b813f-102">How to: Determine the String Associated with an Enumeration Value (Visual Basic)</span></span>
+<span data-ttu-id="b813f-103"><xref:System.Enum.GetValues%2A> И <xref:System.Enum.GetNames%2A> методы позволяют определить строки и значения, связанные с членами перечисления.</span><span class="sxs-lookup"><span data-stu-id="b813f-103">The <xref:System.Enum.GetValues%2A> and <xref:System.Enum.GetNames%2A> methods allow you to determine the strings and values associated with enumeration members.</span></span>  
   
-### <a name="to-determine-the-string-associated-with-an-enumeration"></a><span data-ttu-id="77840-104">Чтобы определить строки, связанной с перечислением</span><span class="sxs-lookup"><span data-stu-id="77840-104">To determine the string associated with an enumeration</span></span>  
+### <a name="to-determine-the-string-associated-with-an-enumeration"></a><span data-ttu-id="b813f-104">Чтобы определить строки, связанной с перечислением</span><span class="sxs-lookup"><span data-stu-id="b813f-104">To determine the string associated with an enumeration</span></span>  
   
-- <span data-ttu-id="77840-105">Используйте <xref:System.Enum.GetNames%2A> метод для извлечения строки, связанные с членами перечисления.</span><span class="sxs-lookup"><span data-stu-id="77840-105">Use the <xref:System.Enum.GetNames%2A> method to retrieve the strings associated with the enumeration members.</span></span> <span data-ttu-id="77840-106">В этом примере объявляется перечисление, `flavorEnum`, затем использует <xref:System.Enum.GetNames%2A> метод для отображения строк, связанных с каждым элементом.</span><span class="sxs-lookup"><span data-stu-id="77840-106">This example declares an enumeration, `flavorEnum`, then uses the <xref:System.Enum.GetNames%2A> method to display the strings associated with each member.</span></span>  
+- <span data-ttu-id="b813f-105">Используйте <xref:System.Enum.GetNames%2A> метод для извлечения строки, связанные с членами перечисления.</span><span class="sxs-lookup"><span data-stu-id="b813f-105">Use the <xref:System.Enum.GetNames%2A> method to retrieve the strings associated with the enumeration members.</span></span> <span data-ttu-id="b813f-106">В этом примере объявляется перечисление, `flavorEnum`, затем использует <xref:System.Enum.GetNames%2A> метод для отображения строк, связанных с каждым элементом.</span><span class="sxs-lookup"><span data-stu-id="b813f-106">This example declares an enumeration, `flavorEnum`, then uses the <xref:System.Enum.GetNames%2A> method to display the strings associated with each member.</span></span>  
   
      [!code-vb[VbEnumsTask#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="77840-107">См. также</span><span class="sxs-lookup"><span data-stu-id="77840-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b813f-107">См. также</span><span class="sxs-lookup"><span data-stu-id="b813f-107">See also</span></span>
 
 - <xref:System.Enum.GetValues%2A>
 - <xref:System.Enum.GetNames%2A>
 - <xref:System.Enum>
-- [<span data-ttu-id="77840-108">Практическое руководство. Объявления перечисления</span><span class="sxs-lookup"><span data-stu-id="77840-108">How to: Declare an Enumeration</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
-- [<span data-ttu-id="77840-109">Практическое руководство. Ссылка на член перечисления</span><span class="sxs-lookup"><span data-stu-id="77840-109">How to: Refer to an Enumeration Member</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
-- [<span data-ttu-id="77840-110">Перечисления и уточнение имен</span><span class="sxs-lookup"><span data-stu-id="77840-110">Enumerations and Name Qualification</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [<span data-ttu-id="77840-111">Практическое руководство. Перебор элементов перечисления в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="77840-111">How to: Iterate Through An Enumeration in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
-- [<span data-ttu-id="77840-112">Когда следует использовать перечисление</span><span class="sxs-lookup"><span data-stu-id="77840-112">When to Use an Enumeration</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
-- [<span data-ttu-id="77840-113">Оператор Enum</span><span class="sxs-lookup"><span data-stu-id="77840-113">Enum Statement</span></span>](../../../../visual-basic/language-reference/statements/enum-statement.md)
+- [<span data-ttu-id="b813f-108">Практическое руководство. Объявления перечисления</span><span class="sxs-lookup"><span data-stu-id="b813f-108">How to: Declare an Enumeration</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [<span data-ttu-id="b813f-109">Практическое руководство. Ссылка на член перечисления</span><span class="sxs-lookup"><span data-stu-id="b813f-109">How to: Refer to an Enumeration Member</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
+- [<span data-ttu-id="b813f-110">Перечисления и уточнение имен</span><span class="sxs-lookup"><span data-stu-id="b813f-110">Enumerations and Name Qualification</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
+- [<span data-ttu-id="b813f-111">Практическое руководство. Перебор элементов перечисления в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b813f-111">How to: Iterate Through An Enumeration in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
+- [<span data-ttu-id="b813f-112">Когда следует использовать перечисление</span><span class="sxs-lookup"><span data-stu-id="b813f-112">When to Use an Enumeration</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
+- [<span data-ttu-id="b813f-113">Оператор Enum</span><span class="sxs-lookup"><span data-stu-id="b813f-113">Enum Statement</span></span>](../../../../visual-basic/language-reference/statements/enum-statement.md)
