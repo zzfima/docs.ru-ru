@@ -2,12 +2,12 @@
 title: Практическое руководство. Как проверять DBML-файлы и внешние файлы сопоставлений
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 83a26f22495c849aa00143ca36b63fa147120c28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 9e80f41e05fb78b7a6c1ef9ce47ef611cfe3e57d
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310243"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910643"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Практическое руководство. Как проверять DBML-файлы и внешние файлы сопоставлений
 После внесения изменений во внешние файлы сопоставлений и DBML-файлы их необходимо проверить на соответствие определениям схемы. В этом разделе предоставляет пользователям Visual Studio, сделав для реализации процесса проверки.  
@@ -30,9 +30,9 @@ ms.locfileid: "59310243"
   
 5. Отметьте определение схемы, соответствующее выполняемой задаче.  
   
-    -   Для проверки DBML-файла используется определение схемы DbmlSchema.xsd. Дополнительные сведения см. в разделе [создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+    - Для проверки DBML-файла используется определение схемы DbmlSchema.xsd. Дополнительные сведения см. в разделе [создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
-    -   Для проверки внешнего XML-файла сопоставлений используется определение схемы LinqToSqlMapping.xsd. Дополнительные сведения см. в разделе [внешнего сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+    - Для проверки внешнего XML-файла сопоставлений используется определение схемы LinqToSqlMapping.xsd. Дополнительные сведения см. в разделе [внешнего сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 6. В **используйте** столбец нужной строки определения схемы, щелкните, чтобы открыть окно раскрывающегося списка и нажмите кнопку **использовать эту схему**.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "59310243"
   
 1. Найдите раздел справки, который содержит определение схемы. Инструкции по выбору определения схемы см. ранее в этом разделе.  
   
-    -   DBML-файлы, см. в разделе [создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+    - DBML-файлы, см. в разделе [создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
-    -   Файлы внешнего сопоставления см. в разделе [внешнего сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+    - Файлы внешнего сопоставления см. в разделе [внешнего сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 2. Нажмите кнопку **Копировать код** для копирования в файл кода в буфер обмена.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - displaying option buttons [Windows Forms], MenuStrip [Windows Forms]
 - option buttons [Windows Forms], displaying in MenuStrip
 ms.assetid: 8b596af2-9ff8-4f7b-93d7-cba830e167f4
-ms.openlocfilehash: e764c7e181870d8faf6157cacc13164977ce2e3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2ee8f75725fada624e7075c51e111b970acc80b5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013430"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610111"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Практическое руководство. Отображение переключателей в элементе управления MenuStrip (Windows Forms)
 Похожи переключателей, также известный как переключатели, флажки, за исключением того, что пользователи могут выбрать только один раз. Несмотря на то что по умолчанию <xref:System.Windows.Forms.ToolStripMenuItem> класс не предоставляет поведение переключателей, класс обеспечивает поведение "флажок", которое можно настроить для реализации поведения переключателей для пунктов меню в <xref:System.Windows.Forms.MenuStrip> элемента управления.  
