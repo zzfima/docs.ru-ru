@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: dfcc11c78ffc408de71c88e2c1c7b0522ffe3732
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.openlocfilehash: 6372f9cb4c332eb77cd70a9b0786eff005216516
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63808315"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642885"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Стратегия безопасности WPF — безопасность платформы
 Хотя Windows Presentation Foundation (WPF) предоставляет широкий набор служб безопасности, предусмотрена также возможность средства безопасности базовой платформы, включая операционную систему, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], и [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Эти уровни объединяются для обеспечения в [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] надежной модели безопасности с глубокой защитой, которая пытается исключить любые точки сбоя, как показано на следующем рисунке.  

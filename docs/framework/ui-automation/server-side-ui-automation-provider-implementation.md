@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 3b3e69d1c52b98822a4cf3b75de74466e1dc68f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f888923736d384af2c6d955a126bacacb16113af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033201"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651153"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера
 > [!NOTE]
@@ -106,7 +106,7 @@ ms.locfileid: "62033201"
 >   
 >  Для поставщиков, размещенных в элементе управления <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> , должен возвращаться [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] . В этом случае поставщику окна по умолчанию может не удастся получить правильное значение.  
 >   
->   <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> обычно предоставляется поставщиком главного окна. Например, если пользовательский элемент управления является производным от <xref:System.Windows.Forms.Control>, имя будет производным от свойства `Text` элемента управления.  
+>  <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> обычно предоставляется поставщиком главного окна. Например, если пользовательский элемент управления является производным от <xref:System.Windows.Forms.Control>, имя будет производным от свойства `Text` элемента управления.  
   
  Пример кода см. в разделе [Return Properties from a UI Automation Provider](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md).  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 05e61a33005cd0458c5bcdde758f3b1a9cc3869c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929601"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637266"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Основные понятия Windows Communication Foundation
 В этом документе показано высокоуровневое представление архитектуры Windows Communication Foundation (WCF). В нем приводится объяснение ключевых понятий и их взаимосвязь. Инструкции по созданию простейшей версии службы WCF и клиента, см. в разделе [Приступая к работе](../../../docs/framework/wcf/getting-started-tutorial.md). Научиться программированию WCF, см. в разделе [базовое Программирование WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  

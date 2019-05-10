@@ -2,12 +2,12 @@
 title: Рабочие процессы конечного автомата
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d7f6f2686399d8eabbbc70de11697f3aca61fc8e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004677"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665330"
 ---
 # <a name="state-machine-workflows"></a>Рабочие процессы конечного автомата
 Конечный автомат - широко известный принцип разработки программ. Действие <xref:System.Activities.Statements.StateMachine>, а также <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition> и другие действия могут использоваться для сборки программ рабочего процесса конечных автоматов. В этом разделе представлены общие сведения о создании рабочих процессов конечного автомата.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: 4d7bb6eef398746a4bd2dc4dbf3d526da1c1e0f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 31593fa8b0cc2670b9d59b8cd61ae66efd219269
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014223"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659754"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Расширение пространства имен My в Visual Basic
 `My` Пространства имен в Visual Basic предоставляет свойства и методы, которые позволяют легко воспользоваться преимуществами мощной платформы .NET Framework. `My` Пространство имен упрощает типовых задач программирования, часто уменьшая трудной задачей для одной строки кода. Кроме того `My` пространства имен является полностью расширяемым, таким образом, чтобы можно было настроить поведение `My` и добавлять новые службы в его иерархию для адаптации к потребностям конкретного приложения. В этом разделе обсуждается настройка существующих членов `My` пространства имен и добавить пользовательские классы для `My` пространства имен.  

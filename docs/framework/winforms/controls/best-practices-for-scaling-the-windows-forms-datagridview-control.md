@@ -9,12 +9,12 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-ms.openlocfilehash: 76ac31e9082216d0024160c51a7495855eee5601
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 234d29470d9b1c810e23c082a032d9a880b65fbd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011701"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64635000"
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Масштабирование элемента управления DataGridView в Windows Forms
 <xref:System.Windows.Forms.DataGridView> Управления предназначен для обеспечения максимальной масштабируемости. Если требуется для отображения больших объемов данных, необходимо следовать рекомендациям, приведенным в этом разделе, чтобы избежать использования большого объема памяти или замедления работы пользовательский интерфейс (UI). В этом разделе обсуждаются следующие вопросы:  

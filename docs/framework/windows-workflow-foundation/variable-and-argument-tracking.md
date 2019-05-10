@@ -2,12 +2,12 @@
 title: Отслеживание переменной и аргумента
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: 7062e44a18cfd4b07cc63f4b490c08fbbfeeb8a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 75ec8124200b146965214d161d0e6f246888542c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755523"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64640982"
 ---
 # <a name="variable-and-argument-tracking"></a>Отслеживание переменной и аргумента
 При отслеживании выполнения рабочего процесса часто бывает полезно извлекать данные. Это обеспечивает дополнительный контекст при доступе к последующему выполнению записи отслеживания. В [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] можно извлекать любую видимую переменную или аргумент, находящиеся в рамках области любого действия в рабочем процессе, при помощи отслеживания. Профили отслеживания упрощают извлечение данных.  
