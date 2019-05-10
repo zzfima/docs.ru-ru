@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d93c55cec3d35fd4208a4a8a7c9b235dd10fb9ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 82d81be7a9e0843dfe382767de582f93371acb4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59156173"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584492"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>Метод IMetaDataEmit::DefineTypeRefByName
 Получает маркер метаданных для типа, который определен в заданной области, которая выходит за пределы текущей области.  
@@ -41,15 +41,15 @@ HRESULT DefineTypeRefByName (
  `tkResolutionScope`  
  [in] Токен, определяющий область разрешения. Допустимы следующие типы токенов:  
   
--   `mdModuleRef`, если тип определен в той же сборке, в котором определен вызывающий объект.  
+- `mdModuleRef`, если тип определен в той же сборке, в котором определен вызывающий объект.  
   
--   `mdAssemblyRef`, если тип определен в сборке, отличной от той, в котором определен вызывающий объект.  
+- `mdAssemblyRef`, если тип определен в сборке, отличной от той, в котором определен вызывающий объект.  
   
--   `mdTypeRef`, если тип является вложенным типом.  
+- `mdTypeRef`, если тип является вложенным типом.  
   
--   `mdModule`, если тип определен в том же модуле, в котором определен вызывающий объект.  
+- `mdModule`, если тип определен в том же модуле, в котором определен вызывающий объект.  
   
--   Значение NULL, если тип определен глобально.  
+- Значение NULL, если тип определен глобально.  
   
  `szName`  
  [in] Имя типа целевого объекта в формате Юникод.  

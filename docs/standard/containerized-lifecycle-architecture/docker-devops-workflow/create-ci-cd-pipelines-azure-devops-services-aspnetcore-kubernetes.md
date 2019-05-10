@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 2cd769ce9013a8521c53f36b44ea260ceccd48b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e11c9ec61ea7d5131595f01ce76b5bb810bb70c0
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795381"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063303"
 ---
 # <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Создание конвейеров CI/CD в службах Azure DevOps для приложения .NET Core 2.0 в контейнерах и развертывание в кластер Kubernetes
 
@@ -21,7 +21,7 @@ ms.locfileid: "61795381"
 
 Это важно обратить внимание, что два конвейера, сборки/непрерывной Интеграции и выпуска и непрерывной Доставки, подключены через реестр Docker (Docker Hub или реестра контейнеров Azure). Реестр Docker является одним из основных различий по сравнению с традиционной процесс Непрерывной интеграции и без Docker.
 
-Как показано на рисунке 5-13, первый этап заключается в конвейер сборки и CI. В службах DevOps Azure можно создать конвейеры Непрерывной сборки, на которые будет скомпилировать код, создание образов Docker и отправки их в реестр Docker, например Docker Hub или реестра контейнеров Azure.
+Как показано на рисунке 5-13, первый этап заключается в конвейер сборки и CI. В службах DevOps Azure можно создать конвейеры непрерывной сборки/Интеграции, которые будет скомпилировать код, создание образов Docker и отправки их в реестр Docker, например Docker Hub или реестра контейнеров Azure.
 
 ![Представление обозревателя Azure DevOps, определение задач процесса сборки.](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
 

@@ -2,12 +2,12 @@
 title: Выбор типа учетных данных
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 20c070e9351219a649735ac404231cf6f265d814
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748812"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586133"
 ---
 # <a name="selecting-a-credential-type"></a>Выбор типа учетных данных
 *Учетные данные* — это данные, Windows Communication Foundation (WCF) использует для подтверждения заявленной идентификации или возможностей. Например, паспорт - это документ, выданный властями, в котором содержатся учетные данные, подтверждающие гражданство страны или региона. В WCF учетные данные могут принимать различные формы, например маркеры имен пользователей и сертификаты X.509. В этом разделе рассматриваются учетные данные, как они используются в WCF и способ выбора правильных учетных данных для вашего приложения.  

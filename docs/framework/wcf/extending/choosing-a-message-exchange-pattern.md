@@ -2,12 +2,12 @@
 title: Выбор шаблона обмена сообщениями
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 98788fb89fc68dc1220d9bf8d9ad89df5ca69e6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2d39164944207d73fdfe418a30326fb40462db72
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922867"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664913"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Выбор шаблона обмена сообщениями
 Является первым шагом в создании пользовательского транспорта необходимо решить, какие *шаблоны обмена сообщениями* (или MEP) требуются для разрабатываемого канала. В этом разделе описаны возможные варианты и различные требования. Это первая задача в списке задач разработки канала, описанные в [каналы развивающихся](../../../../docs/framework/wcf/extending/developing-channels.md).  
