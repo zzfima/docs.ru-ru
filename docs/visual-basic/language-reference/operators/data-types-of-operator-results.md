@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1169a30f25db6084b8d232c0696991b040e7ea59
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778564"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662536"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Типы данных результатов оператора (Visual Basic)
 Visual Basic определяет тип данных результата операции на основе типов данных операндов. В некоторых случаях это может быть типом данных с диапазоном больше, чем один из операндов.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 382d2aeff98b7d48dbae07dadb04ed644c3f4449
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: baf65340e390c7439e8639e334819fb0bf60f952
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856825"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662625"
 ---
 # <a name="federation"></a>Федерация
 В этом разделе приведен краткий обзор концепции федеративной безопасности. Здесь также описываются поддержка развертывания архитектур федеративной безопасности Windows Communication Foundation (WCF). Образец приложения, демонстрирующий федерацию, см. в разделе [пример федерации](../../../../docs/framework/wcf/samples/federation-sample.md).  
