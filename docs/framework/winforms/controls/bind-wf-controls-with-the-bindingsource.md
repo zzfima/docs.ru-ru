@@ -6,12 +6,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: a4f87303954494e8e32d32e68fb3f1244f25680a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f8c268c816975fa9b00725d317365c147312b950
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011726"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593459"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Практическое руководство. Связывание элементов управления Windows Forms с компонентом BindingSource с помощью конструктора
 После добавления элементов управления в форму и определения пользовательского интерфейса для вашего приложения, можно привязать элементы управления к источнику данных, чтобы во время выполнения, пользователи могут изменять и сохранять данные, связанные с приложением.  

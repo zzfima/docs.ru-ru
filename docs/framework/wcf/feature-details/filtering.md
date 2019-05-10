@@ -2,12 +2,12 @@
 title: Фильтрация
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 7051e69f6a38d536251c26365a634d4ffbc46f1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 46716d1a96da6ddc729992b546be56c2aec0bf5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856704"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593493"
 ---
 # <a name="filtering"></a>Фильтрация
 Windows Communication Foundation (WCF) система фильтрации можно использовать декларативные фильтры для сопоставления сообщений и принятия операционных решений. Фильтры можно использовать для определения того, что делать с сообщением, основываясь на проверке части сообщения. Процесс организации очереди, например, может использовать запрос XPath 1.0 для проверки элемента приоритета заданного заголовка, чтобы определить, требуется ли переместить сообщение вперед по очереди.  

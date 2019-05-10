@@ -2,12 +2,12 @@
 title: ключ сущности
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 1484a73450d5a435f795f18f122c7fe8494cf197
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bf8ab7ffacd7565e408e4851ed0f1ef4636b5d80
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879192"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599648"
 ---
 # <a name="entity-key"></a>ключ сущности
 *Ключ сущности* — [свойство](../../../../docs/framework/data/adonet/property.md) или набор свойств [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) , которые используются для определения удостоверения. Свойства, составляющие ключ сущности, выбираются во время разработки. Значения свойств ключа сущности должны уникально определять экземпляр типа сущности внутри [набор сущностей](../../../../docs/framework/data/adonet/entity-set.md) во время выполнения. Свойства, составляющие ключ сущности, должны гарантировать уникальность экземпляра набора сущностей.  
