@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 70cd08a9d7d03cec4e946d2acb806dbecfe774f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f290629e50d7d791119298059277ba73d8e73eb
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011565"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211203"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Пошаговое руководство. Создание элемента управления Windows Forms, в котором используются преимущества функций Visual Studio, применяемых во время разработки
 
@@ -68,17 +68,13 @@ ms.locfileid: "62011565"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Для выполнения данного пошагового руководства требуется:
-
-- Разрешения, необходимые для создания и выполнения проектов приложений Windows Forms на компьютере, на котором установлена Visual Studio.
+Для выполнения этого пошагового руководства, вам потребуется Visual Studio.
 
 ## <a name="creating-the-project"></a>Создание проекта
 
 Первым шагом является создание проекта приложения. Этот проект будет использован для построения приложения, на котором размещается пользовательский элемент управления.
 
-### <a name="to-create-the-project"></a>Создание проекта
-
-- Создайте проект приложения Windows Forms с именем «MarqueeControlTest» (**файл** > **New** > **проекта**  >   **Visual C#** или **Visual Basic** > **классический рабочий стол** > **Windows Forms Application**).
+Откройте Visual Studio и создайте проект приложения Windows Forms с именем «MarqueeControlTest» (**файл** > **New** > **проекта**  >  **Visual C#**  или **Visual Basic** > **классический рабочий стол** > **Windows Forms Application**).
 
 ## <a name="creating-a-control-library-project"></a>Создание проекта библиотеки элементов управления
 

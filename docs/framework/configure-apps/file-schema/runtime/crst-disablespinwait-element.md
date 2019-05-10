@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cde26250db0b3d11c51a18b7ebd378953ae0958
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f89f0558c11e229fef2ca3cd619e3c033f12c858
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704834"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754677"
 ---
 # <a name="crstdisablespinwait-element"></a>\<Crst_DisableSpinWait > элемент
 
-Указывает, следует ли отключить спин ожидает критический раздел, если состязаний. \ 
+Указывает, следует ли отключить спин ожидает критический раздел, если состязаний.  
   
  \<configuration>  
 \<Среда выполнения >  
@@ -36,14 +36,14 @@ ms.locfileid: "61704834"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|**включен**|Указывает, включена ли спин ожидание критических секций, когда они являются состязаний.|  
+|**включен**|Указывает, отключен ли спин ожидание критических секций, если они являются состязаний.|  
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|1|Ожидание управления "Счетчик" включен.|  
-|0|Ожидание управления "Счетчик" отключено. Это значение по умолчанию|  
+|1|Отключите ожидания спин, если не удается получить критический раздел.|  
+|0|Не отключайте спин ожидания, когда не удается получить критический раздел. Это значение по умолчанию.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: caaf641f919c10751f59df8972af9d95fa930d88
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800130"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655577"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Проверка введенных пользователем данных в Windows Forms
 Когда пользователи вводят данные в приложение, может потребоваться убедитесь, что данные действителен, прежде чем приложение использует их. Вам может потребоваться, что некоторые текстовые поля не быть нулевой длины, что были отформатированы как номер телефона или другой тип данных, или что строка содержит небезопасных знаков, которые могут использоваться для нарушения безопасности базы данных. Windows Forms предоставляет несколько способов для проверки входных данных в приложении.  
