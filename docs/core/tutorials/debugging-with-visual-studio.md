@@ -3,16 +3,16 @@ title: Отладка приложения .NET Core Hello World в Visual Studi
 description: Узнайте, как выполнить отладку приложения Hello World, написанного на C# или Visual Basic, в Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 4c6a9fe46e29addf53319adf2351af3a7af05119
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610721"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063059"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Отладка приложения .NET Core Hello World на C# или Visual с помощью Visual Studio 2017
 
-Изучая руководство [Создание приложения Hello World на C# с помощью .NET Core в Visual Studio 2017](with-visual-studio.md) или [Создание приложения Hello World на Visual Basic с помощью .NET Core в Visual Studio 2017](vb-with-visual-studio.md), вы создали и запустили простое консольное приложение. После создания и компиляции приложения можно приступить к тестированию. Visual Studio включает широкий набор инструментальных средств, которые можно использовать для тестирования приложений и устранения неполадок.
+Изучая руководство [Создание приложения Hello World на C# с помощью .NET Core в Visual Studio 2017](with-visual-studio.md) или [Создание приложения Hello World на Visual Basic с помощью .NET Core в Visual Studio 2017](vb-with-visual-studio.md), вы создали и запустили простое консольное приложение. После создания и компиляции приложения можно приступить к тестированию. Visual Studio включает широкий набор инструментальных средств, которые можно использовать для тестирования приложений и устранения неполадок. 
 
 ## <a name="debugging-in-debug-mode"></a>Отладка в режиме отладки
 
