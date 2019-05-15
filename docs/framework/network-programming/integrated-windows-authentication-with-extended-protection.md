@@ -2,12 +2,12 @@
 title: Встроенная аутентификация Windows с расширенной защитой
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 672737471c7c73e7ddd03d26d00d30cff3e23ec4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325726"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647410"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Встроенная аутентификация Windows с расширенной защитой
 Были добавлены улучшения, которые влияют на обработку встроенной проверки подлинности Windows в <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> и связанных классах в <xref:System.Net> и соответствующих пространствах имен. Была добавлена поддержка расширенной защиты для повышения безопасности.  
@@ -39,21 +39,21 @@ ms.locfileid: "59325726"
   
  Сведения о привязке службы свидетельствуют о намерении клиента проверить подлинность для конкретной конечной точки службы. Эти сведения передаются от клиента на сервер с помощью следующих свойств:  
   
--   Значение имени субъекта-службы должно быть доступно на сервере, выполняющем проверку подлинности клиента, в виде открытого текста.  
+- Значение имени субъекта-службы должно быть доступно на сервере, выполняющем проверку подлинности клиента, в виде открытого текста.  
   
--   Значение имени субъекта-службы является открытым.  
+- Значение имени субъекта-службы является открытым.  
   
--   Имя субъекта-службы должно быть криптографически защищено во время передачи, чтобы его было невозможно вставить, удалить или изменить с помощью атаки "человек посередине".  
+- Имя субъекта-службы должно быть криптографически защищено во время передачи, чтобы его было невозможно вставить, удалить или изменить с помощью атаки "человек посередине".  
   
  Маркер привязки канала — это свойство внешнего безопасного канала (например, TLS), которое используется для привязки этого канала к обмену данными во внутреннем канале, проверку подлинности которого выполнил клиент. Маркер привязки канала должен иметь следующие свойства (эти свойства также определяются в стандарте RFC 5056, принятом IETF):  
   
--   При наличии внешнего канала значение маркера привязки канала должно определять внешний канал или конечную точку сервера. Маркер привязки канала должен быть получен обеими сторонами обмена (клиентской и серверной) независимо друг от друга.  
+- При наличии внешнего канала значение маркера привязки канала должно определять внешний канал или конечную точку сервера. Маркер привязки канала должен быть получен обеими сторонами обмена (клиентской и серверной) независимо друг от друга.  
   
--   Злоумышленник не должен иметь возможность повлиять на значение маркера привязки канала.  
+- Злоумышленник не должен иметь возможность повлиять на значение маркера привязки канала.  
   
--   Конфиденциальность маркера привязки канала не гарантируется. Однако это не означает, что значение привязки службы и сведения о привязке канала могут быть доступны кому-то, кроме сервера, выполняющего проверку подлинности, так как протокол, посредством которого передается маркер привязки канала, может шифровать этот маркер.  
+- Конфиденциальность маркера привязки канала не гарантируется. Однако это не означает, что значение привязки службы и сведения о привязке канала могут быть доступны кому-то, кроме сервера, выполняющего проверку подлинности, так как протокол, посредством которого передается маркер привязки канала, может шифровать этот маркер.  
   
--   Целостность маркера привязки канала должна быть криптографически защищена во время передачи, чтобы его значение было невозможно вставить, удалить или изменить с помощью атаки "человек посередине".  
+- Целостность маркера привязки канала должна быть криптографически защищена во время передачи, чтобы его значение было невозможно вставить, удалить или изменить с помощью атаки "человек посередине".  
   
  Привязка канала выполняется клиентом, который передает имя субъекта-службы и маркер привязки канала на сервер в защищенном режиме. Сервер проверяет сведения о привязке канала в соответствии со своей политикой и отклоняет попытки проверки подлинности, целевым объектом которых он не является. Таким образом, два каналы становятся криптографически связанными друг с другом.  
   
@@ -72,37 +72,37 @@ ms.locfileid: "59325726"
   
  Класс <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>, содержащий следующие элементы:  
   
--   Свойство <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A>, которое указывает, поддерживает ли операционная система встроенную проверку подлинности Windows с расширенной защитой.  
+- Свойство <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A>, которое указывает, поддерживает ли операционная система встроенную проверку подлинности Windows с расширенной защитой.  
   
--   Значение <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement>, указывающее, когда следует применять расширенную политику защиты.  
+- Значение <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement>, указывающее, когда следует применять расширенную политику защиты.  
   
--   Значение <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario>, которое указывает сценарий развертывания. Это влияет на проверку расширенной защиты.  
+- Значение <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario>, которое указывает сценарий развертывания. Это влияет на проверку расширенной защиты.  
   
--   Необязательный объект <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection>, содержащий пользовательский список имен субъектов-служб, который используется для проверки имени субъекта-службы, предоставленного клиентом в виде целевого объекта проверки подлинности.  
+- Необязательный объект <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection>, содержащий пользовательский список имен субъектов-служб, который используется для проверки имени субъекта-службы, предоставленного клиентом в виде целевого объекта проверки подлинности.  
   
--   Необязательный объект <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding>, содержащий пользовательскую привязку канала, используемую при проверке. Этот сценарий не является наиболее распространенным.  
+- Необязательный объект <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding>, содержащий пользовательскую привязку канала, используемую при проверке. Этот сценарий не является наиболее распространенным.  
   
  Пространство имен <xref:System.Security.Authentication.ExtendedProtection.Configuration> обеспечивает поддержку настройки проверки подлинности для приложений с использованием расширенной защиты.  
   
  В существующем пространстве имен <xref:System.Net> были изменены некоторые функции для поддержки расширенной защиты. К этим изменениям относятся следующие:  
   
--   В пространство имен <xref:System.Net> добавлен новый класс <xref:System.Net.TransportContext>, который представляет контекст транспорта.  
+- В пространство имен <xref:System.Net> добавлен новый класс <xref:System.Net.TransportContext>, который представляет контекст транспорта.  
   
--   В класс <xref:System.Net.HttpWebRequest> добавлены новые перегрузки методов <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> и <xref:System.Net.HttpWebRequest.GetRequestStream%2A>, которые позволяют получить <xref:System.Net.TransportContext> для поддержки расширенной защиты клиентских приложений.  
+- В класс <xref:System.Net.HttpWebRequest> добавлены новые перегрузки методов <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> и <xref:System.Net.HttpWebRequest.GetRequestStream%2A>, которые позволяют получить <xref:System.Net.TransportContext> для поддержки расширенной защиты клиентских приложений.  
   
--   Дополнения к классам <xref:System.Net.HttpListener> и <xref:System.Net.HttpListenerRequest> для поддержки серверных приложений.  
+- Дополнения к классам <xref:System.Net.HttpListener> и <xref:System.Net.HttpListenerRequest> для поддержки серверных приложений.  
   
  Была изменена функция для поддержки расширенной защиты для клиентских приложений SMTP в существующем пространстве имен <xref:System.Net.Mail>:  
   
--   Свойство <xref:System.Net.Mail.SmtpClient.TargetName%2A> в классе <xref:System.Net.Mail.SmtpClient>, которое представляет имя участника-службы, используемое для проверки подлинности при использовании расширенной защиты для клиентских приложений SMTP.  
+- Свойство <xref:System.Net.Mail.SmtpClient.TargetName%2A> в классе <xref:System.Net.Mail.SmtpClient>, которое представляет имя участника-службы, используемое для проверки подлинности при использовании расширенной защиты для клиентских приложений SMTP.  
   
  В существующем пространстве имен <xref:System.Net.Security> были изменены некоторые функции для поддержки расширенной защиты. К этим изменениям относятся следующие:  
   
--   В класс <xref:System.Net.Security.NegotiateStream> добавлены новые перегрузки методов <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> и <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A>, которые позволяют передавать маркер привязки канала для поддержки расширенной защиты клиентских приложений.  
+- В класс <xref:System.Net.Security.NegotiateStream> добавлены новые перегрузки методов <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> и <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A>, которые позволяют передавать маркер привязки канала для поддержки расширенной защиты клиентских приложений.  
   
--   В класс <xref:System.Net.Security.NegotiateStream> добавлены новые перегрузки методов <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> и <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A>, которые позволяют передавать <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> для поддержки расширенной защиты серверных приложений.  
+- В класс <xref:System.Net.Security.NegotiateStream> добавлены новые перегрузки методов <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> и <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A>, которые позволяют передавать <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> для поддержки расширенной защиты серверных приложений.  
   
--   Новое свойство <xref:System.Net.Security.SslStream.TransportContext%2A> в классе <xref:System.Net.Security.SslStream> для поддержки расширенной защиты клиентских и серверных приложений.  
+- Новое свойство <xref:System.Net.Security.SslStream.TransportContext%2A> в классе <xref:System.Net.Security.SslStream> для поддержки расширенной защиты клиентских и серверных приложений.  
   
  В пространство имен <xref:System.Net.Security> добавлено свойство <xref:System.Net.Configuration.SmtpNetworkElement> для поддержки настройки расширенной защиты для клиентов SMTP.  
   

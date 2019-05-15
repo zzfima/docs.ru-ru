@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: a8593c5dce30fc71750515ccedb4fc9cce9a4868
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e78616acc56e75dd06445f7a569ab94e65e20cc0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652113"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592225"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Общие сведения о привязках Windows Communication Foundation
 Привязки-это объекты, которые используются для указания сведений о связи, необходимые для подключения к конечной точке службы Windows Communication Foundation (WCF). Каждая конечная точка в службе WCF требует точного задания привязки. В этом разделе описаны типы сведений о связи, определяемых привязками, элементы привязки, какие привязки включены в WCF, и как можно указать привязку для конечной точки.  
@@ -36,9 +36,9 @@ ms.locfileid: "64652113"
   
 - <xref:System.ServiceModel.WSHttpBinding>: Привязку с возможностью подходит для подключения к конечным точкам, соответствующим WS-* протоколы.  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>: Использует [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] для подключения к другим конечным точкам WCF на одном компьютере.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Использует .NET Framework для подключения к другим конечным точкам WCF на одном компьютере.  
   
-- <xref:System.ServiceModel.NetMsmqBinding>: Использует [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] для создания подключений очередей сообщений с другими конечными точками WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Использует .NET Framework для создания в очередь сообщений соединения с другими конечными точками WCF.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: Эта привязка обеспечивает повышение производительности по сравнению с привязками HTTP и идеально подходит для использования в локальной сети.
   

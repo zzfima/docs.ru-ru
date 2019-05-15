@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Настройка трассировки сети
+title: Практическое руководство. Настройка трассировки сети
 ms.date: 03/30/2017
 helpviewer_keywords:
 - formatting [.NET Framework], network tracing
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: cc08faba7edede3dd527b7c05fe47f6408e18a04
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2c2c2718d79ce9aa4fed343cf368bbf541e493d0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151558"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613713"
 ---
-# <a name="how-to-configure-network-tracing"></a>Как выполнить Настройка трассировки сети
+# <a name="how-to-configure-network-tracing"></a>Практическое руководство. Настройка трассировки сети
 Файл конфигурации приложения или компьютера содержит параметры, которые определяют формат и содержимое данных трассировки сети. Перед выполнением этой процедуры убедитесь, что трассировка включена. Сведения о том, как включить трассировку сети, см. в разделе [Включение трассировки сети](../../../docs/framework/network-programming/enabling-network-tracing.md).  
   
  Файл конфигурации компьютера (machine.config) хранится в папке %Windir%\Microsoft.NET\Framework в каталоге, в который установлена ОС Windows. В папках %Windir%\Microsoft.NET\Framework находятся отдельные файлы machine.config для каждой версии .NET Framework, установленной на компьютере (например, C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config или C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config).  
@@ -27,7 +27,7 @@ ms.locfileid: "59151558"
   
 ### <a name="to-configure-network-tracing"></a>Настройка трассировки сети  
   
--   Добавьте следующие строки в соответствующий файл конфигурации. Значения этих параметров описаны в приведенных ниже таблицах.  
+- Добавьте следующие строки в соответствующий файл конфигурации. Значения этих параметров описаны в приведенных ниже таблицах.  
   
     ```xml  
     <configuration>  

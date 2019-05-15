@@ -10,15 +10,15 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: b97ce0e4ce32e272ff884240b566c1c1c0e0d271
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4dbccfc881e777309394aed9711a93b8a25315be
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614662"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592604"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Отрисовка элементов управления с применением визуальных стилей
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] обеспечивает поддержку для отрисовки элементов управления и других элементов пользовательского интерфейса Windows с использованием стилей оформления в операционных системах, поддерживающих их. В этом разделе описано несколько уровней поддержки в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для отрисовки элементов управления и других элементов пользовательского интерфейса с учетом текущего стиля оформления операционной системы.  
+.NET Framework обеспечивает поддержку для отрисовки элементов управления и других Windows элементы интерфейса (UI), с использованием стилей оформления в операционных системах, которые их поддерживают. В этом разделе описано несколько уровней поддержки в .NET Framework для отрисовки элементов управления и других элементов пользовательского интерфейса с учетом текущего визуального стиля операционной системы.  
   
 ## <a name="rendering-classes-for-common-controls"></a>Классы отрисовки для общих элементов управления  
  Отрисовкой элемента управления называется рисование пользовательского интерфейса для элемента управления. Пространство имен <xref:System.Windows.Forms?displayProperty=nameWithType> предоставляет класс <xref:System.Windows.Forms.ControlPaint> для отрисовки некоторых общих элементов управления Windows Forms. Однако этот класс рисует элементы управления в классическом стиле Windows, что может затруднять обеспечение согласованности пользовательского интерфейса при рисовании пользовательских элементов управления в приложениях с включенными стилями оформления.  
@@ -61,7 +61,7 @@ ms.locfileid: "64614662"
  Дополнительные сведения об использовании <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> и <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, см. в разделе [как: Элемент визуального стиля отрисовки](how-to-render-a-visual-style-element.md).  
   
 ## <a name="enabling-visual-styles"></a>Включение стилей оформления  
- Чтобы включить стили оформления для приложения, написанного для [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.0, программистам следует включить манифест приложения, указывающий, что для рисования элементов управления будет использоваться ComCtl32.dll версии 6 или более поздней. Приложения, созданные на базе [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.1 или более поздней, могут использовать метод <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> класса <xref:System.Windows.Forms.Application> .  
+ Чтобы включить визуальные стили для приложения, написанного для платформы .NET Framework версии 1.0, программистам следует включить манифест приложения, которое указывает, что для рисования элементов управления будет использоваться ComCtl32.dll версии 6 или более поздней версии. Приложения, созданные с помощью .NET Framework версии 1.1 или более поздней, могут использовать <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> метод <xref:System.Windows.Forms.Application> класса.  
   
 ## <a name="checking-for-visual-styles-support"></a>Проверка поддержки стилей оформления  
  Свойство <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> класса <xref:System.Windows.Forms.Application> указывает, будет ли текущее приложение рисовать элементы управления с помощью стилей оформления. При рисовании пользовательского элемента управления можно проверить значение <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> , чтобы определить, следует ли учитывать стили оформления при отрисовке элемента управления. В следующей таблице перечислены четыре условия, которые должны выполняться, чтобы <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> возвратил `true`.  

@@ -1,23 +1,23 @@
 ---
-title: Как выполнить Переименование файла в Visual Basic
+title: Практическое руководство. Переименование файла в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: b86797018e1471590fd4c89848921e696afbc819
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2bc3e19968362993528c166ca6ec7a7fbbec1993
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814159"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623237"
 ---
-# <a name="how-to-rename-a-file-in-visual-basic"></a>Как выполнить Переименование файла в Visual Basic
+# <a name="how-to-rename-a-file-in-visual-basic"></a>Практическое руководство. Переименование файла в Visual Basic
 Метод `RenameFile` объекта `My.Computer.FileSystem` можно использовать, чтобы переименовать файл, указав текущее расположение, имя файла и новое имя файла. Этот метод нельзя использовать для перемещения файла. Для перемещения и переименования файла используется метод `MoveFile`.  
   
 ### <a name="to-rename-a-file"></a>Переименование файла  
   
--   Используйте метод `My.Computer.FileSystem.RenameFile`, чтобы переименовать файл. В этом примере переименовывается файл с именем `Test.txt` в `SecondTest.txt`.  
+- Используйте метод `My.Computer.FileSystem.RenameFile`, чтобы переименовать файл. В этом примере переименовывается файл с именем `Test.txt` в `SecondTest.txt`.  
   
      [!code-vb[VbVbcnMyFileSystem#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#9)]  
   
@@ -26,25 +26,25 @@ ms.locfileid: "58814159"
 ## <a name="robust-programming"></a>Отказоустойчивость  
  При следующих условиях возможно возникновение исключения:  
   
--   Путь является недопустимым, так как он представляет собой строку нулевой длины (пустую строку), либо содержит только пробелы, либо содержит недопустимые знаки, либо представляет собой путь к устройству (начинается с символов \\\\.\\) (<xref:System.ArgumentException>).  
+- Путь является недопустимым, так как он представляет собой строку нулевой длины (пустую строку), либо содержит только пробелы, либо содержит недопустимые знаки, либо представляет собой путь к устройству (начинается с символов \\\\.\\) (<xref:System.ArgumentException>).  
   
--   `newName` содержит сведения о пути (<xref:System.ArgumentException>).  
+- `newName` содержит сведения о пути (<xref:System.ArgumentException>).  
   
--   Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).  
+- Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Параметр`newName` имеет значение `Nothing` или является пустой строкой (<xref:System.ArgumentNullException>).  
+- Параметр`newName` имеет значение `Nothing` или является пустой строкой (<xref:System.ArgumentNullException>).  
   
--   Исходный файл является недопустимым или не существует (<xref:System.IO.FileNotFoundException>).  
+- Исходный файл является недопустимым или не существует (<xref:System.IO.FileNotFoundException>).  
   
--   Имеется существующий файл или каталог с именем, указанным в `newName` (<xref:System.IO.IOException>).  
+- Имеется существующий файл или каталог с именем, указанным в `newName` (<xref:System.IO.IOException>).  
   
--   Длина пути превышает максимальную длину, определенную в системе (<xref:System.IO.PathTooLongException>).  
+- Длина пути превышает максимальную длину, определенную в системе (<xref:System.IO.PathTooLongException>).  
   
--   Имя файла или каталога в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).  
+- Имя файла или каталога в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).  
   
--   У пользователя отсутствуют необходимые разрешения на просмотр пути (<xref:System.Security.SecurityException>).  
+- У пользователя отсутствуют необходимые разрешения на просмотр пути (<xref:System.Security.SecurityException>).  
   
--   У пользователя отсутствует необходимое разрешение (<xref:System.UnauthorizedAccessException>).  
+- У пользователя отсутствует необходимое разрешение (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>См. также
 

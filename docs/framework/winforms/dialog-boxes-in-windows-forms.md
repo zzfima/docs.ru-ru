@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Windows Forms dialog boxes
 - dialogs [Windows Forms], using in Windows Forms
 ms.assetid: d43d022b-451b-490d-9386-dc79d98fbf8a
-ms.openlocfilehash: e9fc4500ef11249b84e5cba99d4a890fb472ef3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba40ec42d78199bc59d63a2a1d92fb3655388ad5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967080"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592294"
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Диалоговые окна в Windows Forms
-Диалоговые окна используются для взаимодействия с пользователем и получения информации. Проще говоря, диалоговое окно представляет собой форму со значением ее свойства перечисления <xref:System.Windows.Forms.FormBorderStyle>, установленным в `FixedDialog`. Можно создать собственные пользовательские диалоговые окна с помощью конструктора Windows Forms в Visual Studio. Для настройки диалоговых окон под конкретные потребности можно добавить элементы управления, такие как `Label`, `Textbox` и `Button`. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Также включает стандартные диалоговые окна, такие как **Открытие файла** и окна сообщений, которые можно адаптировать для собственных приложений. Дополнительные сведения см. в разделе [диалоговых элементов управления и компонентов](./controls/dialog-box-controls-and-components-windows-forms.md).  
+Диалоговые окна используются для взаимодействия с пользователем и получения информации. Проще говоря, диалоговое окно представляет собой форму со значением ее свойства перечисления <xref:System.Windows.Forms.FormBorderStyle>, установленным в `FixedDialog`. Можно создать собственные пользовательские диалоговые окна с помощью конструктора Windows Forms в Visual Studio. Для настройки диалоговых окон под конкретные потребности можно добавить элементы управления, такие как `Label`, `Textbox` и `Button`. .NET Framework также включает стандартные диалоговые окна, такие как **Открытие файла** и окна сообщений, которые можно адаптировать для собственных приложений. Дополнительные сведения см. в разделе [диалоговых элементов управления и компонентов](./controls/dialog-box-controls-and-components-windows-forms.md).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Отображение диалоговых окон для Windows Forms](how-to-display-dialog-boxes-for-windows-forms.md)  

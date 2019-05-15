@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 33cfcb765b93309d365a85e679107405a55a91f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8197dfc877842be824a5b10c742ef4fb7792858
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858043"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592745"
 ---
 # <a name="duplex-services"></a>Дуплексные службы
 
@@ -87,10 +87,10 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 ```
 
 > [!WARNING]
-> Дуплексная модель не выполняет автоматического обнаружения закрытия службой или клиентом своего канала. Поэтому в случае неожиданного завершения работы клиента по умолчанию служба не будет уведомлена. Клиенты и службы могут реализовать собственный протокол для уведомления друг друга по усмотрению.
+> Дуплексная модель не выполняет автоматического обнаружения закрытия службой или клиентом своего канала. Поэтому если неожиданного завершения работы клиента, по умолчанию служба не уведомляется, или если неожиданного завершения работы службы, клиент не будет уведомлен. Клиенты и службы могут реализовать собственный протокол для уведомления друг друга по усмотрению. Дополнительные сведения об обработке ошибок см. в разделе [обработка ошибок WCF](../wcf-error-handling.md)
 
 ## <a name="see-also"></a>См. также
 
-- [Дуплекс](../../../../docs/framework/wcf/samples/duplex.md)
-- [Указание поведения клиента во время выполнения](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [Практическое руководство. Создание фабрики каналов и использовать его для создания каналов и управления ими](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [Дуплекс](../samples/duplex.md)
+- [Указание поведения клиента во время выполнения](../specifying-client-run-time-behavior.md)
+- [Практическое руководство. Создание фабрики каналов и использовать его для создания каналов и управления ими](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

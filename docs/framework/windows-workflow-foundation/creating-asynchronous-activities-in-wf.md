@@ -2,12 +2,12 @@
 title: Создание асинхронных действий в WF
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 5d8659ee57f9bb576cd7066652a294717811432f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b990631d6efdb4644274c8a4606af07495b1979c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945890"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592970"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Создание асинхронных действий в WF
 Класс <xref:System.Activities.AsyncCodeActivity> предоставляет авторам действий базовый класс, обеспечивающий реализацию логики асинхронного выполнения в производных от него действиях. Это особенно полезно для пользовательских действий, которые должны выполнять работу асинхронно, не останавливая поток расписания рабочих процессов и не блокируя другие действия, которые могут выполняться параллельно. В данном разделе приводятся общие сведения о процессе создания пользовательских асинхронных действий с использованием <xref:System.Activities.AsyncCodeActivity>.  
@@ -31,7 +31,7 @@ ms.locfileid: "61945890"
  [!code-csharp[CFX_ActivityExample#10](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#10)]  
   
 ### <a name="invoking-asynchronous-methods-on-a-class"></a>Вызов асинхронных методов в классе  
- Многие классы в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] обеспечивают асинхронное функционирование. Такой функциональностью можно асинхронно воспользоваться с помощью действий, основанных на <xref:System.Activities.AsyncCodeActivity>. В следующем примере создается действие, асинхронно создает файл с помощью <xref:System.IO.FileStream> класса.  
+ Многие классы в .NET Framework обеспечивают асинхронное функционирование и эта функция может вызываться асинхронно с помощью <xref:System.Activities.AsyncCodeActivity> действия на основе. В следующем примере создается действие, асинхронно создает файл с помощью <xref:System.IO.FileStream> класса.  
   
  [!code-csharp[CFX_ActivityExample#12](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#12)]  
   

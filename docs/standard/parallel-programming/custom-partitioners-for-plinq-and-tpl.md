@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73c745fbbdb66777b50478623d969c125f92474b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d08be327d4c6bf6dd1add3c7ea40ed491619a9ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698895"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625619"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Пользовательские разделители для PLINQ и TPL
 Одним из основных шагов при распараллеливании операции над источником данных является *секционирование* источника, чтобы несколько потоков могли параллельно обращаться к нескольким секциям. PLINQ и библиотека параллельных задач (TPL) предоставляют стандартные средства секционирования, которые прозрачно работают при создании параллельного запроса или цикла <xref:System.Threading.Tasks.Parallel.ForEach%2A>. Для более сложных сценариев вы можете подключить собственное средство секционирования.  
@@ -100,25 +100,25 @@ ms.locfileid: "54698895"
 ### <a name="contract-for-partitioners"></a>Контракт для средств секционирования  
  Если вы реализуете пользовательское средство секционирования, придерживайтесь следующих рекомендаций для корректного взаимодействия с PLINQ и <xref:System.Threading.Tasks.Parallel.ForEach%2A> в TPL:  
   
--   Если <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> вызывается с аргументом `partitionsCount`, значение которого равно нулю или меньше, создавайте исключение <xref:System.ArgumentOutOfRangeException>. Несмотря на то, что PLINQ и TPL никогда не передают для `partitionCount` значение 0, мы рекомендуем подстраховаться от такой ситуации.  
+- Если <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> вызывается с аргументом `partitionsCount`, значение которого равно нулю или меньше, создавайте исключение <xref:System.ArgumentOutOfRangeException>. Несмотря на то, что PLINQ и TPL никогда не передают для `partitionCount` значение 0, мы рекомендуем подстраховаться от такой ситуации.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> и <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> должны всегда возвращать число секций (`partitionsCount`). Если у средства секционирования недостаточно данных, чтобы создать требуемое число секций, метод должен возвращать пустой перечислитель для всех остальных секций. В противном случае PLINQ и TPL создадут исключение <xref:System.InvalidOperationException>.  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> и <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> должны всегда возвращать число секций (`partitionsCount`). Если у средства секционирования недостаточно данных, чтобы создать требуемое число секций, метод должен возвращать пустой перечислитель для всех остальных секций. В противном случае PLINQ и TPL создадут исключение <xref:System.InvalidOperationException>.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A> и <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> никогда не должны возвращать `null` (`Nothing` в Visual Basic). В противном случае PLINQ и (или) TPL создадут исключение <xref:System.InvalidOperationException>.  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A> и <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> никогда не должны возвращать `null` (`Nothing` в Visual Basic). В противном случае PLINQ и (или) TPL создадут исключение <xref:System.InvalidOperationException>.  
   
--   Методы, которые возвращают секции, должны всегда возвращать секции, которые способны полностью и однозначно перечислить данные из источника. Не допускайте дублирования или пропуска элементов в источнике данных, если такое поведение не требуется от средства секционирования для конкретных целей. Если вы не будете соблюдать это правило, может быть нарушен порядок выходных данных.  
+- Методы, которые возвращают секции, должны всегда возвращать секции, которые способны полностью и однозначно перечислить данные из источника. Не допускайте дублирования или пропуска элементов в источнике данных, если такое поведение не требуется от средства секционирования для конкретных целей. Если вы не будете соблюдать это правило, может быть нарушен порядок выходных данных.  
   
--   Следующие методы получения логических значений должны всегда точно возвращать следующие значения, чтобы не нарушать порядок выходных данных:  
+- Следующие методы получения логических значений должны всегда точно возвращать следующие значения, чтобы не нарушать порядок выходных данных:  
   
-    -   `KeysOrderedInEachPartition`: Каждая секция возвращает элементы в порядке увеличения индексов ключа.  
+    - `KeysOrderedInEachPartition`: Каждая секция возвращает элементы в порядке увеличения индексов ключа.  
   
-    -   `KeysOrderedAcrossPartitions`: Для всех возвращаемых секций соблюдается условие, что все индексы ключа в секции *i* выше, чем все индексы ключа в секции *i*-1.  
+    - `KeysOrderedAcrossPartitions`: Для всех возвращаемых секций соблюдается условие, что все индексы ключа в секции *i* выше, чем все индексы ключа в секции *i*-1.  
   
-    -   `KeysNormalized`: Все индексы ключа возрастают монотонно и без промежутков, начиная с нуля.  
+    - `KeysNormalized`: Все индексы ключа возрастают монотонно и без промежутков, начиная с нуля.  
   
--   Все индексы должны быть уникальными. Не допускается повторение индексов. Если вы не будете соблюдать это правило, может быть нарушен порядок выходных данных.  
+- Все индексы должны быть уникальными. Не допускается повторение индексов. Если вы не будете соблюдать это правило, может быть нарушен порядок выходных данных.  
   
--   Все индексы должны быть неотрицательными. Если это правило не соблюдается, PLINQ и (или) TPL могут создавать исключения.  
+- Все индексы должны быть неотрицательными. Если это правило не соблюдается, PLINQ и (или) TPL могут создавать исключения.  
   
 ## <a name="see-also"></a>См. также
 

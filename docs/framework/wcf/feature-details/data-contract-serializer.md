@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, data
 - DataContractSerializer
 ms.assetid: 3d64837e-0a0c-4cc8-90ff-a5c6f313c63a
-ms.openlocfilehash: eba12a38ee852dcdc08f27bc9e3cb02332fd7071
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1c773fbe90e7a45ea2a2718f9bde0aa9e9b67d6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857107"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592566"
 ---
 # <a name="data-contract-serializer"></a>Сериализатор контракта данных
 В инфраструктуре Windows Communication Foundation (WCF) используются <xref:System.Runtime.Serialization.DataContractSerializer> класс в качестве сериализатора по умолчанию. В подразделах этого раздела представлены дополнительные сведения об использовании этого класса в качестве автономного сериализатора.  
@@ -21,7 +21,7 @@ ms.locfileid: "61857107"
  Подробное описание использования класса <xref:System.Runtime.Serialization.DataContractSerializer> для сериализации графов объектов и десериализации документов XML в объекты.  
   
  [Импорт и экспорт схемы](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
- Пояснения о том, как создавать схему языка определения схемы XML (XSD) из класса [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] или как создавать код из документа схемы XSD.  
+ Здесь объясняется, как создавать схему языка определения схемы XML из классов .NET Framework или создание кода из документа схемы XSD.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

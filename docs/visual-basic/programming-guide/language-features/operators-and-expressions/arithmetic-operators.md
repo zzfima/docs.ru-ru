@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 9f1d77ac27def556d94fac12dbde2f36d5b139de
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a1854e35e32a31dbf531e6705a7968434dd02e44
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649760"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593238"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Арифметические операторы в Visual Basic
 Арифметические операторы используются для выполнения многих известных арифметических операций, включая вычисление числовых значений, представленных литералы, переменные, другие выражения, функции и вызовы свойства и константы. Также классифицируются с арифметическими операторами являются операторы поразрядного сдвига, которые работают на уровне отдельных битов операндов и сдвиг их битовых шаблонов влево или вправо.  
@@ -51,7 +51,7 @@ ms.locfileid: "64649760"
  [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
 ### <a name="attempted-division-by-zero"></a>Попытка деления на ноль  
- Деление на ноль приводит к разным результатам в зависимости от используемых типов данных. В виде раздельных целочисленных значений (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] вызывает <xref:System.DivideByZeroException> исключение. В операции деления с `Decimal` или `Single` тип данных, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] также выдает <xref:System.DivideByZeroException> исключение.  
+ Деление на ноль приводит к разным результатам в зависимости от используемых типов данных. В виде раздельных целочисленных значений (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), .NET Framework выдает <xref:System.DivideByZeroException> исключение. В операции деления с `Decimal` или `Single` тип данных .NET Framework также выдает <xref:System.DivideByZeroException> исключение.  
   
  В с плавающей запятой виде раздельных значений с использованием `Double` тип данных, исключение не создается, и результатом является член класса, представляющий <xref:System.Double.NaN>, <xref:System.Double.PositiveInfinity>, или <xref:System.Double.NegativeInfinity>в зависимости от делимое. В следующей таблице перечислены различные результаты попытки деления `Double` значение деления на ноль.  
   

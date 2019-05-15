@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6209df7d226d7e3acb938801d1fb77afbe1249b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3afbffcbbaa5e8398a9ab10c762e60305cfc164b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322413"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615237"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList для параметров таблицы стилей и объектов расширения
 Класс <xref:System.Xml.Xsl.XsltArgumentList> содержит параметры языка XSLT и объекты расширения XSLT. При передаче в метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> эти параметры и объекты расширения могут вызываться из таблиц стилей.  
@@ -25,13 +25,13 @@ ms.locfileid: "59322413"
   
  Далее перечислены преимущества передачи объектов по сравнению с использованием внедренного скрипта.  
   
--   Обеспечивает улучшенную инкапсуляцию и повторное использование классов.  
+- Обеспечивает улучшенную инкапсуляцию и повторное использование классов.  
   
--   Уменьшает размер и улучшает обслуживание таблиц стилей.  
+- Уменьшает размер и улучшает обслуживание таблиц стилей.  
   
--   Поддерживает вызов методов из классов, принадлежащих пространствам имен, не определенным в наборе поддерживаемых пространств имен <xref:System>.  
+- Поддерживает вызов методов из классов, принадлежащих пространствам имен, не определенным в наборе поддерживаемых пространств имен <xref:System>.  
   
--   Поддерживает передачу фрагментов результирующего дерева в таблицу стилей с помощью <xref:System.Xml.XPath.XPathNodeIterator>.  
+- Поддерживает передачу фрагментов результирующего дерева в таблицу стилей с помощью <xref:System.Xml.XPath.XPathNodeIterator>.  
   
 ## <a name="xslt-style-sheet-parameters"></a>Параметры таблицы стилей XSLT  
  Параметры XSLT добавляются в <xref:System.Xml.Xsl.XsltArgumentList> с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>. В это время с объектом параметра связываются полное имя и URI-код пространства имен.  

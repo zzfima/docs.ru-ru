@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d921c13765f5d61ce9822df0b4059b2cf93a6f6d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6939c215633be10e487f9cd5bd25856c0c611921
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744093"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623668"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Извлечение информации, сохраненной в атрибуте
 Извлечение пользовательских атрибутов не представляет никакой сложности. Сначала объявите экземпляр атрибута, который вам нужно получить. Затем вызовите метод <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>, чтобы инициализировать новый атрибут тем значением, которое вы хотите получить. После инициализации нового атрибута обращайтесь к его свойствам, чтобы получить значения.  
@@ -28,11 +28,11 @@ ms.locfileid: "54744093"
   
  В этом разделе описываются следующие способы извлечения атрибутов.  
   
--   [Извлечение единственного экземпляра атрибута](#cpconretrievingsingleinstanceofattribute)  
+- [Извлечение единственного экземпляра атрибута](#cpconretrievingsingleinstanceofattribute)  
   
--   [Извлечение нескольких экземпляров атрибута, применяемых к одной области](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
+- [Извлечение нескольких экземпляров атрибута, применяемых к одной области](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
   
--   [Извлечение нескольких экземпляров атрибута, применяемых к разным областям](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
+- [Извлечение нескольких экземпляров атрибута, применяемых к разным областям](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
 <a name="cpconretrievingsingleinstanceofattribute"></a>   
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>Извлечение единственного экземпляра атрибута  

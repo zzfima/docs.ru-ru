@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 3d4aa5e60ab9bb134716bddcf90b6fc6b07c2ea0
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: e392f6b2e57bebf1ab916bc6142aebbc8f341db2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656158"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615317"
 ---
 # <a name="delegates-and-lambdas"></a>Делегаты и лямбда-выражения
 
@@ -46,9 +46,9 @@ public class Program
 
 Чтобы упростить процесс разработки, платформа .NET содержит набор типов делегата, которые программисты могут повторно использовать, не создавая новые. Это `Func<>`, `Action<>` и `Predicate<>`, которые можно использовать в различных участках API-интерфейсов .NET без необходимости определения новых типов делегата. Безусловно между ними существуют некоторые различия, которые легко определить по сигнатурам. Это связано с их назначением:
 
-*   `Action<>` применяется, когда требуется выполнить действие с использованием аргументов делегата.
-*   `Func<>` обычно используется при наличии преобразования, то есть когда требуется преобразовать аргументы делегата в другой результат. Хорошим примером этого являются проекции.
-*   `Predicate<>` используется, когда требуется определить, удовлетворяет ли аргумент условию делегата. Его также можно записать в виде `Func<T, bool>`.
+* `Action<>` применяется, когда требуется выполнить действие с использованием аргументов делегата.
+* `Func<>` обычно используется при наличии преобразования, то есть когда требуется преобразовать аргументы делегата в другой результат. Хорошим примером этого являются проекции.
+* `Predicate<>` используется, когда требуется определить, удовлетворяет ли аргумент условию делегата. Его также можно записать в виде `Func<T, bool>`.
 
 Теперь можно обратиться к приведенному выше примеру и переписать его, используя делегат `Func<>` вместо пользовательского типа. При этом работа программы не изменится.
 
@@ -155,10 +155,10 @@ public MainWindow()
 }
 ```
 
-В этом контексте оператор `+=` используется для подписки на [событие](../../docs/csharp/language-reference/keywords/event.md). Дополнительные сведения см. в статье [Практическое руководство. Подписка и отмена подписки на события](../../docs/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)
+В этом контексте оператор `+=` используется для подписки на [событие](../../docs/csharp/language-reference/keywords/event.md). Дополнительные сведения см. в разделе [Практическое руководство. Подписка и отмена подписки на события](../../docs/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
 ## <a name="further-reading-and-resources"></a>Дополнительные сведения и ресурсы
 
-*   [Делегаты](../../docs/csharp/programming-guide/delegates/index.md)
-*   [Анонимные функции](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
-*   [Лямбда-выражения](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+* [Делегаты](../../docs/csharp/programming-guide/delegates/index.md)
+* [Анонимные функции](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+* [Лямбда-выражения](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

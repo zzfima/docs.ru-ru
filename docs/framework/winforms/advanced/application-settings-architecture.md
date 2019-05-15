@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: c9cb40cb318bd044cb9204ba2ed384b41b475d57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625775"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592779"
 ---
 # <a name="application-settings-architecture"></a>Архитектура параметров приложения
 В этом разделе описываются принципы работы архитектуры параметров приложения и рассматриваются дополнительные возможности архитектуры, такие как сгруппированные параметры и ключи параметров.  
@@ -44,7 +44,7 @@ ms.locfileid: "64625775"
 ## <a name="settings-persistence"></a>Сохраняемость параметров  
  <xref:System.Configuration.ApplicationSettingsBase> Класс не сохраняемость или загрузку параметров; это выполняет поставщик параметров, а класс, производный от <xref:System.Configuration.SettingsProvider>. Если класс, производный от <xref:System.Configuration.ApplicationSettingsBase> не указывает поставщика параметров посредством <xref:System.Configuration.SettingsProviderAttribute>, а затем поставщика по умолчанию, <xref:System.Configuration.LocalFileSettingsProvider>, используется.  
   
- Система конфигурации, которая была первоначально выпущена с [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], поддерживает предоставление статических данных конфигурации приложения через файл machine.config локального компьютера или в файле `app.`exe.config, развертываемого вместе с приложением. <xref:System.Configuration.LocalFileSettingsProvider> Класс расширяет эту встроенную поддержку одним из следующих способов:  
+ Система конфигурации, которая была первоначально выпущена с .NET Framework поддерживает предоставление статических данных конфигурации приложения через файл machine.config локального компьютера или в `app.`файл exe.config, развертываемого вместе с приложение. <xref:System.Configuration.LocalFileSettingsProvider> Класс расширяет эту встроенную поддержку одним из следующих способов:  
   
 - Параметры области приложения могут храниться в файле machine.config или `app.`exe.config. Файл machine.config всегда предназначен только для чтения, тогда как `app`.exe.config для большинства приложений рекомендуется использовать только для чтения с точки зрения безопасности.  
   

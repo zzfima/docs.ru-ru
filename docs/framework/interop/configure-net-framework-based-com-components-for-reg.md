@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
+title: Практическое руководство. Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea62f7dc5c47f52f94567857427e7add929b8b1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c8f78e926835e86fdc20da5e4e1bc66c4b6ab1a2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336581"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625454"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Как выполнить Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Практическое руководство. Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
 Активация компонентов на основе платформы .NET Framework без регистрации осуществляется лишь немного сложнее, чем для COM-компонентов. При установке требуются два манифеста:  
   
--   Для определения управляемого компонента в COM-приложениях используется манифест приложения в стиле Win32.  
+- Для определения управляемого компонента в COM-приложениях используется манифест приложения в стиле Win32.  
   
--   Компоненты на основе платформы .NET Framework используют манифест компонента для получения необходимых для активации сведений во время выполнения.  
+- Компоненты на основе платформы .NET Framework используют манифест компонента для получения необходимых для активации сведений во время выполнения.  
   
  В этом разделе описывается, как связать манифест приложения с приложением, манифест компонента с компонентом и внедрить манифест компонента в сборку.  
   

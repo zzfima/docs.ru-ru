@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: eb1ba14bbcfe4e561fa575b9802126fab59d31fc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 52b92048fa845725ce46740e36b96ed55af67c30
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968040"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644735"
 ---
 # <a name="linq-language-integrated-query"></a>Встроенный язык запросов LINQ
 
@@ -103,15 +103,15 @@ var filteredItems = from item in myItems
 
 Ответом будет **Да**, если...
 
-*   в существующей базе кода уже используется синтаксис запроса;
-*   необходимо ограничить переменные в запросах из-за сложности;
-*   вы предпочитаете синтаксис запросов, который не отвлекает внимание от базы кода.
+* в существующей базе кода уже используется синтаксис запроса;
+* необходимо ограничить переменные в запросах из-за сложности;
+* вы предпочитаете синтаксис запросов, который не отвлекает внимание от базы кода.
 
 Ответом будет **Нет**, если...
 
-*   в существующей базе кода уже используется синтаксис API;
-*   нет необходимости ограничивать переменные в запросах;
-*   вы предпочитаете использовать синтаксис API, который не отвлекает внимание от базы кода.
+* в существующей базе кода уже используется синтаксис API;
+* нет необходимости ограничивать переменные в запросах;
+* вы предпочитаете использовать синтаксис API, который не отвлекает внимание от базы кода.
 
 ## <a name="essential-samples"></a>Основные примеры
 
@@ -119,7 +119,7 @@ var filteredItems = from item in myItems
 
 Далее приводится краткая демонстрация некоторых важных частей LINQ. Она не является исчерпывающий, так как LINQ предоставляет гораздо больше возможностей, чем показано здесь.
 
-*   Совершенно необходимые компоненты — `Where`, `Select` и `Aggregate`:
+* Совершенно необходимые компоненты — `Where`, `Select` и `Aggregate`:
 
 ```csharp
 // Filtering a list
@@ -142,14 +142,14 @@ int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```
 
-*   Спрямление списка списков:
+* Спрямление списка списков:
 
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 ```
 
-*   Объединение двух наборов (с пользовательским блоком сравнения):
+* Объединение двух наборов (с пользовательским блоком сравнения):
 
 ```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
@@ -184,7 +184,7 @@ public class DogHairLengthComparer : IEqualityComparer<Dog>
 var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthComparer());
 ```
 
-*   Пересечение двух наборов:
+* Пересечение двух наборов:
 
 ```csharp
 // Gets the volunteers who spend share time with two humane societies.
@@ -192,7 +192,7 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
 ```
 
-*   Упорядочение:
+* Упорядочение:
 
 ```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
@@ -201,7 +201,7 @@ var results = DirectionsProcessor.GetDirections(start, end)
               .ThenBy(direction => direction.EstimatedTime);
 ```
 
-*   И, наконец, расширенный пример: определение равенства значений свойств двух экземпляров одного типа (взят и изменен на основе [этой записи на сайте StackOverflow](https://stackoverflow.com/a/844855)):
+* И, наконец, расширенный пример: определение равенства значений свойств двух экземпляров одного типа (взят и изменен на основе [этой записи на сайте StackOverflow](https://stackoverflow.com/a/844855)):
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -252,6 +252,6 @@ public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> fa
 
 ## <a name="further-resources"></a>Дополнительные ресурсы:
 
-*   [101 пример по LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-*   [LINQPad](https://www.linqpad.net/) — среда и механизм запросов к базе данных для C#/F#/VB
-*   [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/) — электронная книга с информацией по реализации LINQ to Objects
+* [101 пример по LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+* [LINQPad](https://www.linqpad.net/) — среда и механизм запросов к базе данных для C#/F#/VB
+* [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/) — электронная книга с информацией по реализации LINQ to Objects

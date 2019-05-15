@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: 98702f2fb8f912b9503f3ccdad74e61ef097f617
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e2dbbd63be07a19c6e05c7ec8f94bdcd8f50c902
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600893"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586314"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Расширяющие и сужающие преобразования (Visual Basic)
 Важным аспектом при преобразовании типа, является ли результат преобразования находится в диапазоне конечного типа данных.  
@@ -93,7 +93,7 @@ ms.locfileid: "64600893"
   
 - <xref:System.OverflowException> — (только для целых типов) если преобразованное значение слишком велико для целевого типа  
   
- Если класс или структура определяет [функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md) в качестве оператора преобразования, или из этого класса или структуры, который `CType` может создавать любое исключение, он рассматривается соответствующим. Кроме того, что `CType` может вызывать функции языка Visual Basic или [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] методы, которые в свою очередь, могут вызвать ряд исключений.  
+ Если класс или структура определяет [функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md) в качестве оператора преобразования, или из этого класса или структуры, который `CType` может создавать любое исключение, он рассматривается соответствующим. Кроме того, что `CType` может вызывать функции языка Visual Basic или методы платформы .NET Framework, которые в свою очередь, могут вызвать ряд исключений.  
   
 ## <a name="changes-during-reference-type-conversions"></a>Изменения во время преобразования ссылочных типов  
  Преобразование из *ссылочный тип* копирует только указатель на значение. Само значение не копируется и не изменяется. Единственное, что можно изменить тип данных переменной, содержащей указатель. В следующем примере тип данных преобразуется из производного класса в его базовый класс, но которые обе переменные теперь указывают на объект не изменяется.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 81727adbf985986a71cc9f9e2d42a1de0cb1fd76
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8ac62809b1269ae810f026c003c7611b3ec548c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608546"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593322"
 ---
 # <a name="configuring-wcf-services"></a>Настройка служб WCF
 
@@ -22,7 +22,7 @@ ms.locfileid: "61608546"
  Начиная с [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF поставляется новая модель конфигурации по умолчанию, которая упрощает требования к конфигурации WCF. Если вы не укажете любой конфигурации WCF для конкретной службы, среда выполнения автоматически настраивает службы с помощью конечных точек по умолчанию, привязках и поведениях.  
   
  [Настройка служб с использованием файлов конфигурации](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- Служба Windows Communication Foundation (WCF) — можно настроить с помощью [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] технологии конфигурации. Чаще всего элементы XML добавляются в файл Web.config для сайта Internet Information Services (IIS), на котором размещена служба WCF. Эти элементы позволяют изменять данные, такие как адреса конечных точек (фактические адреса, используемые для взаимодействия со службой), по схеме компьютер-компьютер.  
+ Службы Windows Communication Foundation (WCF) может настраиваться с помощью технологии конфигурации .NET Framework. Чаще всего элементы XML добавляются в файл Web.config для сайта Internet Information Services (IIS), на котором размещена служба WCF. Эти элементы позволяют изменять данные, такие как адреса конечных точек (фактические адреса, используемые для взаимодействия со службой), по схеме компьютер-компьютер.  
   
  [Привязки](../../../docs/framework/wcf/bindings.md)  
  Кроме того WCF включает в себя несколько предоставляемых системой распространенные конфигурации в виде привязок, которые позволяют быстро выбирать основные возможности для взаимодействие клиента и службы, такие как транспорты, безопасность и сообщение, используемое кодировки.  

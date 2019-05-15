@@ -4,12 +4,12 @@ description: Сведения о взаимодействии с компоне�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 29aacc9210b4103f379b7776c36fc3c29b9e6dec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b01ea9c17db6da32755309d9c1c2359cecaa1155
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973567"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062710"
 ---
 # <a name="native-interoperability"></a>Взаимодействие на уровне машинного кода
 
@@ -29,5 +29,5 @@ ms.locfileid: "61973567"
 ## <a name="see-also"></a>См. также
 
 - [Вызов неуправляемого кода (P/Invoke)](pinvoke.md)
-- [Маршалинг типов](type-marshalling.md)
+- [Маршалинг типов](type-marshaling.md)
 - [Рекомендации по использованию взаимодействия на уровне машинного кода](best-practices.md)

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - printing [Windows Forms], security
 - security [Windows Forms], printing
 ms.assetid: 48fd36ac-872f-4de0-902a-e52969cd4367
-ms.openlocfilehash: 5ee170980ed02d90606c774e2a7055f047292e33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0387a82f142fb32912dad1370d6ac0c784e8894
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801807"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592643"
 ---
 # <a name="more-secure-printing-in-windows-forms"></a>Более безопасная печать в Windows Forms
-Приложения Windows Forms часто предусмотрена возможность печати. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Использует <xref:System.Drawing.Printing.PrintingPermission> класс для управления доступом к возможностям печати и связанный <xref:System.Drawing.Printing.PrintingPermissionLevel> значение перечисления, указывающее уровень доступа. По умолчанию она разрешена по умолчанию в зонах локальной интрасети и Интернета; Тем не менее в обоих зон ограничено уровень доступа. Ли приложение может начать печать, требует взаимодействия с пользователем, или не зависит значение разрешения, предоставленные приложению. По умолчанию в зону локальной интрасети получает <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> доступа и в зону интрасети получает <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> доступа.  
+Приложения Windows Forms часто предусмотрена возможность печати. Платформа .NET Framework использует <xref:System.Drawing.Printing.PrintingPermission> класс для управления доступом к возможностям печати и связанный <xref:System.Drawing.Printing.PrintingPermissionLevel> значение перечисления, указывающее уровень доступа. По умолчанию она разрешена по умолчанию в зонах локальной интрасети и Интернета; Тем не менее в обоих зон ограничено уровень доступа. Ли приложение может начать печать, требует взаимодействия с пользователем, или не зависит значение разрешения, предоставленные приложению. По умолчанию в зону локальной интрасети получает <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> доступа и в зону интрасети получает <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> доступа.  
   
  В следующей таблице показаны функциональные возможности, доступные в каждой печати уровень разрешений.  
   
