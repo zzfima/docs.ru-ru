@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8c9fe05049feff6e15c765212b72e35265fd844
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 90e9dbbd43751412c25dd5ca4dae2d503139db69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345434"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634552"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Строки настраиваемых форматов даты и времени
 
@@ -348,11 +348,11 @@ ms.locfileid: "59345434"
 
 Настраиваемый описатель формата "K" представляет данные о часовом поясе значения даты и времени. При использовании этого описателя формата со значениями <xref:System.DateTime> результирующая строка определяется значением свойства <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>:
 
--   Для местного часового пояса (свойства <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> со значением <xref:System.DateTimeKind.Local?displayProperty=nameWithType>) этот описатель равнозначен описателю "zzz" и формирует результирующую строку, содержащую локальное смещение от универсального времени (UTC), например "-07:00".
+- Для местного часового пояса (свойства <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> со значением <xref:System.DateTimeKind.Local?displayProperty=nameWithType>) этот описатель равнозначен описателю "zzz" и формирует результирующую строку, содержащую локальное смещение от универсального времени (UTC), например "-07:00".
 
--   Для времени UTC (свойства <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> со значением <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) результирующая строка содержит знак "Z", указывающий дату в формате UTC.
+- Для времени UTC (свойства <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> со значением <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) результирующая строка содержит знак "Z", указывающий дату в формате UTC.
 
--   Для времени в неопределенном часовом поясе (времени, свойство <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> которого имеет значение <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>) результат равен <xref:System.String.Empty?displayProperty=nameWithType>.
+- Для времени в неопределенном часовом поясе (времени, свойство <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> которого имеет значение <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>) результат равен <xref:System.String.Empty?displayProperty=nameWithType>.
 
 Для значений <xref:System.DateTimeOffset> описатель формата K равнозначен описателю формата zz, который формирует результирующую строку, содержащую смещение значения от времени UTC в виде <xref:System.DateTimeOffset>.
 

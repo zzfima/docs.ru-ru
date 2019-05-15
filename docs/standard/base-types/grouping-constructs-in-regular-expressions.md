@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2aa7c35ebc06fb67d9cf6216233d2bed65ae76ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16776e83c8bae6cc82329a8f709fd9d1d7cab145
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645903"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634344"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Конструкции группировки в регулярных выражениях
 Конструкции группирования отображают части выражений регулярных выражений и захватывают части строки входной строки. Конструкции группирования можно использовать в следующих целях.  
   
--   Сопоставление с частью выражения, которая повторяется во входной строке.  
+- Сопоставление с частью выражения, которая повторяется во входной строке.  
   
--   Применение квантификатору к части выражения с несколькими языковыми элементами регулярных выражений. Дополнительные сведения о квантификаторах см. в разделе [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+- Применение квантификатору к части выражения с несколькими языковыми элементами регулярных выражений. Дополнительные сведения о квантификаторах см. в разделе [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
--   Добавление в строку части выражения, которая возвращается методами <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> и <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> .  
+- Добавление в строку части выражения, которая возвращается методами <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> и <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> .  
   
--   Извлечение отдельных частей выражения из свойства <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> и обработка их по отдельности от всего текста.  
+- Извлечение отдельных частей выражения из свойства <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> и обработка их по отдельности от всего текста.  
   
  В следующей таблице перечислены конструкции группирования, поддерживаемые механизмом регулярных выражений .NET, с указанием, выполняют ли они захват выражений.  
   
@@ -63,13 +63,13 @@ ms.locfileid: "54645903"
   
  Доступ к захватываемым группам можно получить четырьмя способами:  
   
--   Используя конструкцию обратной ссылки в регулярном выражении. Сопоставленная часть выражения указывается в том же регулярном выражении с помощью синтаксиса `\`*number*, где *number* — это порядковый номер выделенной части выражения.  
+- Используя конструкцию обратной ссылки в регулярном выражении. Сопоставленная часть выражения указывается в том же регулярном выражении с помощью синтаксиса `\`*number*, где *number* — это порядковый номер выделенной части выражения.  
   
--   Используя именованную конструкцию обратной ссылки в регулярном выражении. Сопоставленная часть выражения указывается в том же регулярном выражении с помощью синтаксиса `\k<`*name*`>`, где *name* — это имя захватываемой группы, или `\k<`*number*`>`, где *number* — это порядковый номер захватываемой группы. Имя захватываемой группы по умолчанию совпадает с ее порядковым номером. Дополнительные сведения см. в разделе [Именованные сопоставляемые части выражения](#named_matched_subexpression) далее в этой статье.  
+- Используя именованную конструкцию обратной ссылки в регулярном выражении. Сопоставленная часть выражения указывается в том же регулярном выражении с помощью синтаксиса `\k<`*name*`>`, где *name* — это имя захватываемой группы, или `\k<`*number*`>`, где *number* — это порядковый номер захватываемой группы. Имя захватываемой группы по умолчанию совпадает с ее порядковым номером. Дополнительные сведения см. в разделе [Именованные сопоставляемые части выражения](#named_matched_subexpression) далее в этой статье.  
   
--   Используя последовательность замены `$`*number* в вызове метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> или <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , где *number* — это порядковый номер выделенной части выражения.  
+- Используя последовательность замены `$`*number* в вызове метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> или <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , где *number* — это порядковый номер выделенной части выражения.  
   
--   Программным способом, используя объект <xref:System.Text.RegularExpressions.GroupCollection> , возвращаемый свойством <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . Член коллекции в нулевой позиции представляет все сопоставление регулярного выражения. Каждый последующий член представляет сопоставленную часть выражения. Дополнительные сведения см. в разделе [Grouping Constructs and Regular Expression Objects](#Objects) .  
+- Программным способом, используя объект <xref:System.Text.RegularExpressions.GroupCollection> , возвращаемый свойством <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . Член коллекции в нулевой позиции представляет все сопоставление регулярного выражения. Каждый последующий член представляет сопоставленную часть выражения. Дополнительные сведения см. в разделе [Grouping Constructs and Regular Expression Objects](#Objects) .  
   
  В следующем примере показано регулярное выражение, которое определяет повторяющиеся слова в тексте. Две захватываемые группы шаблона регулярного выражения представляют два экземпляра повторяющегося слова. Второй экземпляр выделяется для определения его начальной позиции во входной строке.  
   
@@ -112,17 +112,17 @@ ms.locfileid: "54645903"
   
  Доступ к именованным захватываемым группам можно получить следующими способами:  
   
--   Используя именованную конструкцию обратной ссылки в регулярном выражении. Сопоставленная часть выражения указывается в том же регулярном выражении с помощью синтаксиса `\k<`*name*`>`, где *name* — это имя захватываемой части выражения.  
+- Используя именованную конструкцию обратной ссылки в регулярном выражении. Сопоставленная часть выражения указывается в том же регулярном выражении с помощью синтаксиса `\k<`*name*`>`, где *name* — это имя захватываемой части выражения.  
   
--   Используя конструкцию обратной ссылки в регулярном выражении. Сопоставленная часть выражения указывается в том же регулярном выражении с помощью синтаксиса `\`*number*, где *number* — это порядковый номер выделенной части выражения. Именованные сопоставленные части выражения нумеруются последовательно слева направо после сопоставленных частей выражения.  
+- Используя конструкцию обратной ссылки в регулярном выражении. Сопоставленная часть выражения указывается в том же регулярном выражении с помощью синтаксиса `\`*number*, где *number* — это порядковый номер выделенной части выражения. Именованные сопоставленные части выражения нумеруются последовательно слева направо после сопоставленных частей выражения.  
   
--   Используя последовательность замены `${`*name*`}` в вызове метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> или <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , где *name* — это имя захватываемой части выражения.  
+- Используя последовательность замены `${`*name*`}` в вызове метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> или <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , где *name* — это имя захватываемой части выражения.  
   
--   Используя последовательность замены `$`*число* в вызове метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> или <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>, где *число* обозначает порядковый номер захваченной части выражения.  
+- Используя последовательность замены `$`*число* в вызове метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> или <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>, где *число* обозначает порядковый номер захваченной части выражения.  
   
--   Программным способом, используя объект <xref:System.Text.RegularExpressions.GroupCollection> , возвращаемый свойством <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . Член коллекции в нулевой позиции представляет все сопоставление регулярного выражения. Каждый последующий член представляет сопоставленную часть выражения. Именованные захватываемые группы хранятся в коллекции после нумерованных захватываемых групп.  
+- Программным способом, используя объект <xref:System.Text.RegularExpressions.GroupCollection> , возвращаемый свойством <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . Член коллекции в нулевой позиции представляет все сопоставление регулярного выражения. Каждый последующий член представляет сопоставленную часть выражения. Именованные захватываемые группы хранятся в коллекции после нумерованных захватываемых групп.  
   
--   Программно, передавая имя части выражения индексатору объекта <xref:System.Text.RegularExpressions.GroupCollection> (в C#) или свойству <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> (в Visual Basic).  
+- Программно, передавая имя части выражения индексатору объекта <xref:System.Text.RegularExpressions.GroupCollection> (в C#) или свойству <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> (в Visual Basic).  
   
  В простом шаблоне регулярного выражения показано, как нумерованные (безымянные) и именованные группы можно указывать программно или с помощью языка регулярных выражений. Регулярное выражение `((?<One>abc)\d+)?(?<Two>xyz)(.*)` формирует следующие захватываемые группы по номеру и имени. Первая захватываемая группа (с номером 0) всегда указывает на весь шаблон.  
   
@@ -446,11 +446,11 @@ ms.locfileid: "54645903"
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>Конструкции группирования и объекты регулярных выражений  
  Подстроки, сопоставляемые захватываемой группой регулярного выражения, представлены объектами <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> , которые можно извлечь из объекта <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> , возвращаемого свойством <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . Объект <xref:System.Text.RegularExpressions.GroupCollection> заполняется следующим образом:  
   
--   Первый объект <xref:System.Text.RegularExpressions.Group> в коллекции (объект с нулевым индексом) представляет все сопоставление.  
+- Первый объект <xref:System.Text.RegularExpressions.Group> в коллекции (объект с нулевым индексом) представляет все сопоставление.  
   
--   Следующий набор объектов <xref:System.Text.RegularExpressions.Group> представляет неименованные (нумерованные) захватываемые группы. Они указываются в том порядке, в котором они определены в регулярном выражении, слева направо. Значения индекса этих групп лежат в диапазоне от 1 до числа неименованных захватываемых групп в коллекции. (Индекс определенной группы эквивалентен нумерованной обратной ссылке. Дополнительные сведения об обратных ссылках см. в разделе [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)  
+- Следующий набор объектов <xref:System.Text.RegularExpressions.Group> представляет неименованные (нумерованные) захватываемые группы. Они указываются в том порядке, в котором они определены в регулярном выражении, слева направо. Значения индекса этих групп лежат в диапазоне от 1 до числа неименованных захватываемых групп в коллекции. (Индекс определенной группы эквивалентен нумерованной обратной ссылке. Дополнительные сведения об обратных ссылках см. в разделе [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)  
   
--   Последний набор объектов <xref:System.Text.RegularExpressions.Group> представляет именованные захватываемые группы. Они указываются в том порядке, в котором они определены в регулярном выражении, слева направо. Значение индекса первой именованной захватываемой группы на единицу больше индекса, последней неименованной захватываемой группы. Если в регулярном выражении нет неименованных захватываемых групп, индекс первой именованной захватываемой группы равен единице.  
+- Последний набор объектов <xref:System.Text.RegularExpressions.Group> представляет именованные захватываемые группы. Они указываются в том порядке, в котором они определены в регулярном выражении, слева направо. Значение индекса первой именованной захватываемой группы на единицу больше индекса, последней неименованной захватываемой группы. Если в регулярном выражении нет неименованных захватываемых групп, индекс первой именованной захватываемой группы равен единице.  
   
  Если к захватываемой группе применяется квантификатор, соответствующие свойства <xref:System.Text.RegularExpressions.Group> , <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>и <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>объекта <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> отражают последнюю подстроку, выделяемую захватываемой группой. Вы можете получить полный набор подстрок, выделяемые группами с квантификаторами, из объекта <xref:System.Text.RegularExpressions.CaptureCollection> , возвращаемого свойством <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> .  
   

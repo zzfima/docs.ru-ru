@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b44ff3f460d2f33903f7f083cd1bb59c7bf83e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ddb6a5534eb7ef2dc823ac05e03d3b2d3d0cee7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648707"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623961"
 ---
 # <a name="order-preservation-in-plinq"></a>Сохранение порядка в PLINQ
 PLINQ предназначен для повышения производительности при сохранении правильности вычислений. Запрос должен выполняться как можно быстрее, но всегда давать правильные результаты. В некоторых случаях для правильных расчетов нужно соблюдать порядок исходной последовательности, но упорядочение может требовать больших вычислительных ресурсов. Поэтому по умолчанию PLINQ не сохраняет порядок исходной последовательности. В этом PLINQ похож на [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], но отличается от LINQ to Objects, который строго сохраняет порядок.  
@@ -44,25 +44,25 @@ PLINQ предназначен для повышения производите�
 ## <a name="query-operators-and-ordering"></a>Операторы запросов и упорядочение  
  Следующие операторы запроса налагают сохранение порядка на все последующие операции запроса, пока не встретится вызов <xref:System.Linq.ParallelEnumerable.AsUnordered%2A>.  
   
--   <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  
+- <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>  
+- <xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.ThenBy%2A>  
+- <xref:System.Linq.ParallelEnumerable.ThenBy%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>  
+- <xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>  
   
  Следующие операторы запроса PLINQ в некоторых случаях требуют упорядочения исходных последовательностей для получения правильных результатов.  
   
--   <xref:System.Linq.ParallelEnumerable.Reverse%2A>  
+- <xref:System.Linq.ParallelEnumerable.Reverse%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>  
+- <xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.TakeWhile%2A>  
+- <xref:System.Linq.ParallelEnumerable.TakeWhile%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.SkipWhile%2A>  
+- <xref:System.Linq.ParallelEnumerable.SkipWhile%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.Zip%2A>  
+- <xref:System.Linq.ParallelEnumerable.Zip%2A>  
   
  Некоторые операторы запроса PLINQ ведут себя по-разному для упорядоченной и неупорядоченной исходной последовательности. Все они перечислены в следующей таблице.  
   

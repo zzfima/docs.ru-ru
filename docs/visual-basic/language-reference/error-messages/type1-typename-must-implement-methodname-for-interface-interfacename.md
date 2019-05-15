@@ -1,5 +1,5 @@
 ---
-title: <type1>"<typename>«должен реализовывать»<methodname>«для интерфейса»<interfacename>"
+title: <type1>'<typename>«должен реализовывать»<methodname>«для интерфейса»<interfacename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30149
@@ -14,7 +14,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62013612"
 ---
-# <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<тип1 > "\<typename >" должен реализовывать "\<имя_метода >" для интерфейса "\<имя_интерфейса >"
+# <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<тип1 > '\<typename >' должен реализовывать '\<имя_метода >' для интерфейса '\<имя_интерфейса >'
 Класс или структура объявляет о реализации интерфейса, но не реализует процедуры, определенные в интерфейсе. Каждый член интерфейса должен быть реализован.  
   
  **Идентификатор ошибки:** BC30149  

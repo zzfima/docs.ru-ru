@@ -1,16 +1,16 @@
 ---
-title: Руководство по ML.NET. Использование .NET в машинном обучении
+title: Практические руководства по ML.NET
 description: Узнайте, как выполнять конкретные задачи, которые помогут вам в создании специализированных решений на базе искусственного интеллекта и машинного обучения и интеграции их в свои .NET-приложения.
 ms.custom: seodec18
 ms.date: 03/01/2019
-ms.openlocfilehash: c8d1258629f777cd8bced47e4b956c9cf100a682
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83188e65ccd02e6928cb4b87577105a75ee96245
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650405"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649149"
 ---
-# <a name="net-machine-learning-how-to-guides---mlnet"></a>Руководство по ML.NET. Использование .NET в машинном обучении
+# <a name="net-machine-learning-how-to-guides"></a>Практические руководства по использованию .NET в машинном обучении 
 
 В практическом руководстве по ML.NET в разделе с инструкциями содержатся ответы на часто задаваемые вопросы. В некоторых случаях для облегчения поиска статьи могут быть указаны в нескольких разделах.
 

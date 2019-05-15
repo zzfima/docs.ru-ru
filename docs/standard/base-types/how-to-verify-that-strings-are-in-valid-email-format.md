@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Проверка строк на соответствие формату электронной почты
+title: Практическое руководство. Проверка строк на соответствие формату электронной почты
 ms.date: 12/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78210f9f007060551130812fcb5a9cd5b4728adc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ddd8b0e7965ca734865e83373af2f7ee45d62c05
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58890505"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633442"
 ---
-# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Как выполнить Проверка строк на соответствие формату электронной почты
+# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Практическое руководство. Проверка строк на соответствие формату электронной почты
 В следующем примере регулярное выражение используется, чтобы проверить, имеет ли строка допустимый формат адреса электронной почты.  
 
 ## <a name="example"></a>Пример  
@@ -91,9 +91,9 @@ vbc /t:library RegexUtilities.vb
   
  Предположим, что создана библиотека классов с именем RegexUtilities.dll, которая включает регулярное выражение проверки электронной почты. Вы можете скомпилировать этот пример одним из следующих способов.  
   
--   В Visual Studio путем создания консольного приложения и добавлении в проект ссылки на RegexUtilities.dll.  
+- В Visual Studio путем создания консольного приложения и добавлении в проект ссылки на RegexUtilities.dll.  
   
--   Из командной строки путем копирования и вставки исходного кода в текстовый файл и его компиляции с помощью команды, аналогичной следующей (предполагается, что имя файла исходного кода — Example.cs или Example.vb):  
+- Из командной строки путем копирования и вставки исходного кода в текстовый файл и его компиляции с помощью команды, аналогичной следующей (предполагается, что имя файла исходного кода — Example.cs или Example.vb):  
   
     ```csharp  
     csc Example.cs /r:RegexUtilities.dll  

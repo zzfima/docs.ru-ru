@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84da3e1e896397b4e5dacec9d7dd0eeeed96d1c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7fefbfd33788ea84a8daf9dfbab452802ffd50d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690843"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650742"
 ---
 # <a name="task-cancellation"></a>Отмена задач
 Классы <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> поддерживают отмену с помощью токенов отмены в .NET Framework. См. дополнительные сведения об [отмене в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md). В классах задач отмена включает взаимодействие между пользовательским делегатом, который представляет операцию отмены, и кодом, который запросил отмену.  Успешная отмена включает запрашивающий код, вызывающий метод <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> , и пользовательский делегат, своевременно завершающий операцию. Операцию можно завершить одним из следующих способов.  
   
--   Путем простого возврата из делегата. Во многих сценариях этого достаточно, однако экземпляр задачи, отмененный таким образом, переходит в состояние <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> , а не в состояние <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> .  
+- Путем простого возврата из делегата. Во многих сценариях этого достаточно, однако экземпляр задачи, отмененный таким образом, переходит в состояние <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> , а не в состояние <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> .  
   
--   Путем создания исключения <xref:System.OperationCanceledException> и его передачи в токен, на котором была запрошена отмена. Предпочтительным способом сделать это является использование метода <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> . Задача, отмененная таким образом, переходит в состояние Canceled, которое вызывающий код может использовать для проверки того, что задача ответила на запрос на отмену.  
+- Путем создания исключения <xref:System.OperationCanceledException> и его передачи в токен, на котором была запрошена отмена. Предпочтительным способом сделать это является использование метода <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> . Задача, отмененная таким образом, переходит в состояние Canceled, которое вызывающий код может использовать для проверки того, что задача ответила на запрос на отмену.  
   
  В следующем примере показан базовый шаблон для отмены задачи, вызвавшей исключение. Обратите внимание, что токен передается пользовательскому делегату и самому экземпляру задачи.  
   

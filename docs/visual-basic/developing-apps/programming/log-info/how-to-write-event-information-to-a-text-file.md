@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Запись сведений о событиях в текстовый файл (Visual Basic)
+title: Практическое руководство. Запись сведений о событиях в текстовый файл (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs [Visual Studio], writing event information
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: e696ccb7327197c2f3a2468d30085dc6d390e034
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f9abf99a06437f08c65eca69e54760e44a217023
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312723"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665756"
 ---
-# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Как выполнить Запись сведений о событиях в текстовый файл (Visual Basic)
+# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Практическое руководство. Запись сведений о событиях в текстовый файл (Visual Basic)
 Объекты `My.Application.Log` и `My.Log` можно использовать для записи в журнал информации о событиях, происходящих в приложении. В этом примере показано использование метода `My.Application.Log.WriteEntry` для записи данных трассировки в файл журнала.  
   
 ### <a name="to-add-and-configure-the-file-log-listener"></a>Добавление и настройка прослушивателя файлового журнала  
@@ -24,11 +24,11 @@ ms.locfileid: "59312723"
   
      Если файл app.config отсутствует, выполните указанные ниже действия.  
   
-    1.  В меню **Проект** выберите пункт **Добавить новый элемент**.  
+    1. В меню **Проект** выберите пункт **Добавить новый элемент**.  
   
-    2.  В диалоговом окне **Добавление нового элемента** выберите элемент **Файл конфигурации приложения**.  
+    2. В диалоговом окне **Добавление нового элемента** выберите элемент **Файл конфигурации приложения**.  
   
-    3.  Нажмите кнопку **Добавить**.  
+    3. Нажмите кнопку **Добавить**.  
   
 2. Найдите раздел `<listeners>` в файле конфигурации приложения.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59312723"
   
 ### <a name="to-write-event-information-to-the-file-log"></a>Запись информации о событии в файловый журнал  
   
--   Для записи сведений в файловый журнал используйте метод `My.Application.Log.WriteEntry` или `My.Application.Log.WriteException`. Дополнительные сведения см. в разделе [Как Запись сообщений в журнал](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) и [Практическое руководство. Исключения журналов](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
+- Для записи сведений в файловый журнал используйте метод `My.Application.Log.WriteEntry` или `My.Application.Log.WriteException`. Дополнительные сведения см. в разделе [Практическое руководство. Запись сообщений в журнал](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) и [Практическое руководство. Исключения журналов](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
   
      После настройки прослушивателя файлового журнала для сборки он получает все сообщения, которые записываются объектом `My.Application.Log` из этой сборки.  
   

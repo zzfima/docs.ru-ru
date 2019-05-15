@@ -2,12 +2,12 @@
 title: Поддержка международного кода ресурса в System.Uri
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-ms.openlocfilehash: 589c49859592cba55cb5110fe65fdc49e451f478
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f78fff250aae177b5f0360e77a1c41a2f2bb0527
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230789"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647338"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>Поддержка международного кода ресурса в System.Uri
 Класс <xref:System.Uri?displayProperty=nameWithType> был расширен за счет поддержки международного идентификатора ресурса (IRI) и международных доменных имен (IDN). Эти улучшения доступны в .NET Framework 3.5, 3.0 с пакетом обновления 1 (SP1) и 2.0 с пакетом обновления 1 (SP1).  
@@ -15,11 +15,11 @@ ms.locfileid: "59230789"
 ## <a name="iri-and-idn-support"></a>Поддержка IRI и IDN  
  Веб-адреса обычно выражаются с помощью унифицированных идентификаторов ресурса (URI), которые состоят из очень ограниченного набора символов:  
   
--   буквы верхнего и нижнего регистра английского алфавита в кодировке ASCII;  
+- буквы верхнего и нижнего регистра английского алфавита в кодировке ASCII;  
   
--   цифры от 0 до 9;  
+- цифры от 0 до 9;  
   
--   небольшое количество других символов ASCII.  
+- небольшое количество других символов ASCII.  
   
  Спецификации URI документально зафиксированы в стандартах RFC 2396 и RFC 3986, опубликованных IETF.  
   

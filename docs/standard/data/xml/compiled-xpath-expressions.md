@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1716488f6e072b09469dfbe5cc8fb4965e5db44c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a75534bdfb1eef5902d3cd5071b4f5b4bfba8caa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605263"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647956"
 ---
 # <a name="compiled-xpath-expressions"></a>Скомпилированные выражения XPath
 Объект <xref:System.Xml.XPath.XPathExpression> представляет скомпилированный запрос XPath, возвращаемый либо статическим методом <xref:System.Xml.XPath.XPathExpression.Compile%2A> класса <xref:System.Xml.XPath.XPathExpression>, либо методом <xref:System.Xml.XPath.XPathNavigator.Compile%2A> класса <xref:System.Xml.XPath.XPathNavigator>.  
@@ -25,15 +25,15 @@ ms.locfileid: "54605263"
   
  Скомпилированный объект <xref:System.Xml.XPath.XPathExpression> можно использовать как входной аргумент для следующих методов класса <xref:System.Xml.XPath.XPathNavigator> в зависимости от типа, возвращаемого запросом XPath.  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Matches%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Matches%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
  В следующей таблице описаны возвращаемые типы W3C XPath и их эквиваленты в платформе Microsoft .NET Framework, а также методы, с которыми можно использовать объект <xref:System.Xml.XPath.XPathExpression> в зависимости от возвращаемого им типа.  
   
@@ -50,21 +50,21 @@ ms.locfileid: "54605263"
 ### <a name="the-returntype-property"></a>Свойство ReturnType  
  После компиляции запроса XPath в объект <xref:System.Xml.XPath.XPathExpression> можно использовать свойство <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> объекта <xref:System.Xml.XPath.XPathExpression>, чтобы определить возвращаемый тип запроса XPath.  
   
- Свойство <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> возвращает одно из следующих значений перечисления <xref:System.Xml.XPath.XPathResultType>, представляющего типы возвращаемого значения W3C XPath.  
+ Свойство <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> возвращает одно из следующих значений перечисления <xref:System.Xml.XPath.XPathResultType>, представляющего возвращаемые типы W3C XPath.  
   
--   <xref:System.Xml.XPath.XPathResultType.Any>  
+- <xref:System.Xml.XPath.XPathResultType.Any>  
   
--   <xref:System.Xml.XPath.XPathResultType.Boolean>  
+- <xref:System.Xml.XPath.XPathResultType.Boolean>  
   
--   <xref:System.Xml.XPath.XPathResultType.Error>  
+- <xref:System.Xml.XPath.XPathResultType.Error>  
   
--   <xref:System.Xml.XPath.XPathResultType.Navigator>  
+- <xref:System.Xml.XPath.XPathResultType.Navigator>  
   
--   <xref:System.Xml.XPath.XPathResultType.NodeSet>  
+- <xref:System.Xml.XPath.XPathResultType.NodeSet>  
   
--   <xref:System.Xml.XPath.XPathResultType.Number>  
+- <xref:System.Xml.XPath.XPathResultType.Number>  
   
--   <xref:System.Xml.XPath.XPathResultType.String>  
+- <xref:System.Xml.XPath.XPathResultType.String>  
   
  В следующем примере используется объект <xref:System.Xml.XPath.XPathExpression>, чтобы вернуть число и набор узлов из файла `books.xml`. Свойство <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> каждого объекта <xref:System.Xml.XPath.XPathExpression>, а также результаты методов <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> и <xref:System.Xml.XPath.XPathNavigator.Select%2A> записываются в консоль.  
   

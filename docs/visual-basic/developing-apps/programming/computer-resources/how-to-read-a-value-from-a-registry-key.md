@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Чтение значения из раздела реестра в Visual Basic
+title: Практическое руководство. Чтение значения из раздела реестра в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry keys [Visual Basic], determining if a value exists in
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - registry keys [Visual Basic], reading from
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
-ms.openlocfilehash: bc71dd2e3a78454236b2f6f30c2d51aa596e5b8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 36183290a1ffdf4216eb845625aa38d63739eff6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840189"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662751"
 ---
-# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Как выполнить Чтение значения из раздела реестра в Visual Basic
+# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Практическое руководство. Чтение значения из раздела реестра в Visual Basic
 Для чтения значений из реестра Windows можно использовать метод `GetValue` объекта `My.Computer.Registry`.  
   
  Если раздел (в данном случае "Software\MyApp") не существует, возникает исключение. Если `ValueName` (в данном случае "Name") не существует, возвращается `Nothing`.  
@@ -26,7 +26,7 @@ ms.locfileid: "58840189"
   
 ### <a name="to-read-a-value-from-a-registry-key"></a>Чтение значения из раздела реестра  
   
--   Для чтения значения из раздела реестра используйте метод `GetValue`, указав путь и имя. В следующем примере считывается значение `Name` из раздела `HKEY_CURRENT_USER\Software\MyApp`, после чего оно отображается в окне сообщения.  
+- Для чтения значения из раздела реестра используйте метод `GetValue`, указав путь и имя. В следующем примере считывается значение `Name` из раздела `HKEY_CURRENT_USER\Software\MyApp`, после чего оно отображается в окне сообщения.  
   
      [!code-vb[VbResourceTasks#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#4)]  
   
@@ -34,7 +34,7 @@ ms.locfileid: "58840189"
   
 ### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>Определение наличия значения в разделе реестра  
   
--   Чтобы получить значение, используйте метод `GetValue`. В следующем коде проверяется наличие значения и возвращается сообщение, если значение отсутствует.  
+- Чтобы получить значение, используйте метод `GetValue`. В следующем коде проверяется наличие значения и возвращается сообщение, если значение отсутствует.  
   
      [!code-vb[VbResourceTasks#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#12)]  
   
@@ -43,11 +43,11 @@ ms.locfileid: "58840189"
   
  При следующих условиях возможно возникновение исключения:  
   
--   Имя ключа имеет значение `Nothing` (<xref:System.ArgumentNullException>).  
+- Имя ключа имеет значение `Nothing` (<xref:System.ArgumentNullException>).  
   
--   У пользователя нет разрешений на создание разделов реестра (<xref:System.Security.SecurityException>).  
+- У пользователя нет разрешений на создание разделов реестра (<xref:System.Security.SecurityException>).  
   
--   Имя ключа превышает ограничение в 255 символов (<xref:System.ArgumentException>).  
+- Имя ключа превышает ограничение в 255 символов (<xref:System.ArgumentException>).  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Для запуска этого процесса сборке нужен уровень привилегий, предоставляемый классом <xref:System.Security.Permissions.RegistryPermission>. Если процесс выполняется в контексте с частичным доверием, он может сгенерировать исключение из-за недостатка привилегий. Аналогичным образом пользователь должен иметь правильные ACL для создания и записи параметров. Например, локальное приложение, имеющее разрешение на доступ к коду, может не иметь разрешения операционной системы. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../../../framework/misc/code-access-security-basics.md).  

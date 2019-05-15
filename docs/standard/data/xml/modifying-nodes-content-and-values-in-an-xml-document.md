@@ -5,25 +5,25 @@ ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee45d983483d907b2a1e8b9e5ee12841e5c89c91
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 976c34d72f9fcc89193658e50727a0ad365f2dd8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208586"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647886"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Изменение узлов, содержимого и значений в XML-документе
 Существует множество способов изменения узлов и содержимого в документе. Можно выполнить следующие действия.  
   
--   изменять значение узлов с помощью свойства <xref:System.Xml.XmlNode.Value%2A>;  
+- изменять значение узлов с помощью свойства <xref:System.Xml.XmlNode.Value%2A>;  
   
--   изменять набор узлов в целом, заменяя узлы новыми. Это делается с помощью свойства <xref:System.Xml.XmlNode.InnerXml%2A>;  
+- изменять набор узлов в целом, заменяя узлы новыми. Это делается с помощью свойства <xref:System.Xml.XmlNode.InnerXml%2A>;  
   
--   заменять существующие узлы новыми с помощью метода <xref:System.Xml.XmlNode.RemoveChild%2A>;  
+- заменять существующие узлы новыми с помощью метода <xref:System.Xml.XmlNode.RemoveChild%2A>;  
   
--   добавлять в узлы дополнительные символы, наследующие от класса <xref:System.Xml.XmlCharacterData>, используя методы <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A> или <xref:System.Xml.XmlCharacterData.ReplaceData%2A>;  
+- добавлять в узлы дополнительные символы, наследующие от класса <xref:System.Xml.XmlCharacterData>, используя методы <xref:System.Xml.XmlCharacterData.AppendData%2A>, <xref:System.Xml.XmlCharacterData.InsertData%2A> или <xref:System.Xml.XmlCharacterData.ReplaceData%2A>;  
   
--   изменять содержимое путем удаления диапазона символов с помощью метода <xref:System.Xml.XmlCharacterData.DeleteData%2A> для типов узлов, наследующих от <xref:System.Xml.XmlCharacterData>.  
+- изменять содержимое путем удаления диапазона символов с помощью метода <xref:System.Xml.XmlCharacterData.DeleteData%2A> для типов узлов, наследующих от <xref:System.Xml.XmlCharacterData>.  
   
  Изменить значение узла можно с помощью простого приема `node.Value = "new value";`. В следующей таблице перечислены типы узлов, в которых работает эта строка кода, и указано, какие данные изменяются для этого типа узла.  
   

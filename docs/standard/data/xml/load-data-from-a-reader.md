@@ -5,23 +5,23 @@ ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 55756092f086de47c4b2acb8f147ca3ab231abe1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e4b789a23b790757ce2dfaa82b6eaec7fdaf3cb3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44207230"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647872"
 ---
 # <a name="load-data-from-a-reader"></a>Загрузка данных из модуля чтения
 Если XML-документ загружен с помощью метода <xref:System.Xml.XmlDocument.Load%2A> и параметра <xref:System.Xml.XmlReader>, его поведение отличается от поведения загруженных данных других форматов. Если модуль чтения находится в начальном состоянии, метод <xref:System.Xml.XmlDocument.Load%2A> получает все его содержимое и строит модель XML DOM на основе всех данных модуля чтения.  
   
  Если модуль чтения уже позиционирован на одном из узлов документа и передается методу <xref:System.Xml.XmlDocument.Load%2A>, то метод <xref:System.Xml.XmlDocument.Load%2A> пытается считать текущий узел и все его одноуровневые элементы вплоть до закрывающего тега, закрывающего текущую глубину в памяти. Успех попытки метода <xref:System.Xml.XmlDocument.Load%2A> зависит от узла, на котором находится модуль чтения при попытке загрузки, когда метод <xref:System.Xml.XmlDocument.Load%2A> проверяет, что XML-документ из модуля чтения правильного формата. Если XML-документ неправильного формата, метод <xref:System.Xml.XmlDocument.Load%2A> вызывает исключение. Например, следующий набор узлов содержит два корневых элемента, XML-документ неправильного формата, и метод <xref:System.Xml.XmlDocument.Load%2A> вызывает исключение.  
   
--   Узел Comment, за которым следует узел Element, еще один узел Element и узел EndElement.  
+- Узел Comment, за которым следует узел Element, еще один узел Element и узел EndElement.  
   
  Следующий набор узлов создает неполную модель DOM, поскольку отсутствует корневой элемент.  
   
--   Узел Comment, за которым следует узел ProcessingInstruction, еще один узел Comment и узел EndElement.  
+- Узел Comment, за которым следует узел ProcessingInstruction, еще один узел Comment и узел EndElement.  
   
  В этом случае исключения не возникает, и данные загружаются. В верхнюю часть этих узлов можно добавить корневой элемент и создать XML-документ правильного формата, который можно сохранить без ошибки.  
   

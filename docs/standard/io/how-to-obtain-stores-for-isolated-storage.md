@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Получение хранилищ для изолированного хранения
+title: Практическое руководство. Получение хранилищ для изолированного хранения
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0968443af28e2d403b08a1af50846e7a1369db49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ef65356d84016462941850ef9b9d6210debc62c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524576"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622693"
 ---
-# <a name="how-to-obtain-stores-for-isolated-storage"></a>Как выполнить Получение хранилищ для изолированного хранения
+# <a name="how-to-obtain-stores-for-isolated-storage"></a>Практическое руководство. Получение хранилищ для изолированного хранения
 Изолированное хранилище предоставляет виртуальную файловую систему в секции данных. Класс <xref:System.IO.IsolatedStorage.IsolatedStorageFile> предоставляет ряд методов для взаимодействия с изолированным хранилищем. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> содержит три статических метода, позволяющих создать и получить хранилище:  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> возвращает хранилище, изолированное по пользователю и сборке.  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> возвращает хранилище, изолированное по пользователю и сборке.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> возвращает хранилище, изолированное по домену и сборке.  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> возвращает хранилище, изолированное по домену и сборке.  
   
      Хранилище, полученное любым из этих двух методов, принадлежит коду, из которого они вызваны.  
   
--   Статический метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> возвращает изолированное хранилище, которое определяется комбинацией переданных параметров области.  
+- Статический метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> возвращает изолированное хранилище, которое определяется комбинацией переданных параметров области.  
   
  Следующий код возвращает хранилище, изолированное по пользователю, сборке и домену.  
   

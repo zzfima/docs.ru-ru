@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Преобразование числовых данных, введенных пользователем в веб-элементах управления, в числа
+title: Практическое руководство. Преобразование числовых данных, введенных пользователем в веб-элементах управления, в числа
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f732f5bf61ed65fe7e62d110494d874262e30fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 29141cb43d914dd3781e9307b6a553361152a645
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296164"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634175"
 ---
-# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Как выполнить Преобразование числовых данных, введенных пользователем в веб-элементах управления, в числа
+# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Практическое руководство. Преобразование числовых данных, введенных пользователем в веб-элементах управления, в числа
 Веб-страницы могут отображаться в любой части света, а значит пользователи будут вводить числовые данные в элемент управления <xref:System.Web.UI.WebControls.TextBox> в самых разных форматах. Поэтому очень важно правильно определить язык и региональные параметры каждого посетителя веб-страницы. Тогда вы сможете применить соглашения о форматировании, соответствующие языку и региональным параметрам пользователя, при синтаксическом анализе вводимых данных.  
   
 ### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>Преобразование входных данных из элемента управления Web TextBox в числовое значение  
@@ -35,9 +35,9 @@ ms.locfileid: "59296164"
   
 4. Вызовите метод `TryParse` или `Parse` для числового типа, в который вы хотите преобразовать пользовательские данные. Используйте перегрузку метода `TryParse` или `Parse` с параметром `provider` и передайте в него один из следующих объектов:  
   
-    -   объект <xref:System.Globalization.CultureInfo>, созданный на шаге 3;  
+    - объект <xref:System.Globalization.CultureInfo>, созданный на шаге 3;  
   
-    -   объект <xref:System.Globalization.NumberFormatInfo> из свойства <xref:System.Globalization.CultureInfo.NumberFormat%2A> объекта <xref:System.Globalization.CultureInfo>, созданного на шаге 3.  
+    - объект <xref:System.Globalization.NumberFormatInfo> из свойства <xref:System.Globalization.CultureInfo.NumberFormat%2A> объекта <xref:System.Globalization.CultureInfo>, созданного на шаге 3.  
   
 5. Если преобразование завершается сбоем, повторите шаги 2–4 поочередно для каждого из остальных элементов в массиве строк, полученных в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A>.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "59296164"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Чтобы скомпилировать код, скопируйте его в файл кода программной части [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], заменив этим текстом весь существующий код. Веб страница [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] должна содержать следующие элементы управления:  
   
--   элемент управления <xref:System.Web.UI.WebControls.Label>, который не указан в коде (для его свойства <xref:System.Web.UI.WebControls.TextBox.Text%2A> задайте значение "Введите число:");  
+- элемент управления <xref:System.Web.UI.WebControls.Label>, который не указан в коде (для его свойства <xref:System.Web.UI.WebControls.TextBox.Text%2A> задайте значение "Введите число:");  
   
--   элемент управления <xref:System.Web.UI.WebControls.TextBox> с именем `NumericString`;  
+- элемент управления <xref:System.Web.UI.WebControls.TextBox> с именем `NumericString`;  
   
--   элемент управления <xref:System.Web.UI.WebControls.Button> с именем `OKButton`; (для его свойства <xref:System.Web.UI.WebControls.Button.Text%2A> задайте значение "ОК").  
+- элемент управления <xref:System.Web.UI.WebControls.Button> с именем `OKButton`; (для его свойства <xref:System.Web.UI.WebControls.Button.Text%2A> задайте значение "ОК").  
   
  Замените имя класса `NumericUserInput` именем класса, которое определено в атрибуте `Inherits` директивы `Page` страницы [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Замените имя ссылки на объект `NumericInput` именем, которое определено в атрибуте `id` тега `form` страницы [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
   
