@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 8092289d6adc6a017999d14dc7439323a7fc0d37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a0da874c74562822d521d4a44782d9372cd62f90
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751004"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588655"
 ---
 # <a name="structured-navigation-overview"></a>Общие сведения о структурной навигации
 Содержимое, которое может размещаться в [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, или <xref:System.Windows.Navigation.NavigationWindow> состоит из страниц, которые могут быть идентифицированы пакетом [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] и просматриваться с помощью гиперссылок. Структура страниц и способы навигации по ним с помощью гиперссылок называется топологией навигации. Такая топология подходит для различных типов приложений, особенно тех, в которых необходим переход по документам. В таких приложениях пользователь может перемещаться с одной страницы на другую даже при отсутствии связи между ними.  
@@ -70,7 +70,7 @@ ms.locfileid: "64751004"
   
  Объявление <xref:System.Windows.Navigation.PageFunction%601> похоже на объявление <xref:System.Windows.Controls.Page> с добавлением аргументов типа. Как видно из примера кода, аргументы типа указаны и в разметке [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] с помощью атрибута `x:TypeArguments`, и в коде программной части с помощью стандартного синтаксиса аргумента универсального типа.  
   
- Не нужно использовать только классы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в качестве аргументов типа. Объект <xref:System.Windows.Navigation.PageFunction%601> может быть вызван для сбора данных отдельного домена, которые абстрагированы как пользовательский тип. Ниже показано, как использовать пользовательский тип в качестве аргумента типа для <xref:System.Windows.Navigation.PageFunction%601>.  
+ Не нужно использовать только классы .NET Framework в качестве аргументов типа. Объект <xref:System.Windows.Navigation.PageFunction%601> может быть вызван для сбора данных отдельного домена, которые абстрагированы как пользовательский тип. Ниже показано, как использовать пользовательский тип в качестве аргумента типа для <xref:System.Windows.Navigation.PageFunction%601>.  
   
  [!code-csharp[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomType.cs#customtypecode1)]
  [!code-vb[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomType.vb#customtypecode1)]  

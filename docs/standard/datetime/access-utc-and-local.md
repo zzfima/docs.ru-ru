@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c10c07c08a4e676cf3c84a5722814eaed85f74a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d36b5ff4912b09101694dd0e83291053260f0bf9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026618"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586428"
 ---
 # <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Практическое руководство. Доступ к предварительно определенным объектам UTC и объектам местных часовых поясов
 
@@ -50,8 +50,6 @@ ms.locfileid: "62026618"
 ## <a name="compiling-the-code"></a>Компиляция кода
 
 Для этого примера требуются:
-
-* Чтобы добавить в проект ссылку на библиотеку System.Core.dll.
 
 * Что <xref:System> импорт пространства имен с помощью `using` инструкции (обязательно в коде C#).
 

@@ -2,12 +2,12 @@
 title: Инструкции по размещению в службах IIS
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
-ms.openlocfilehash: a537f37132e5014901d415cd96bc72a55ae0b750
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92ee270426dbb7fdd166964c1b10e37f280e28f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600254"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591880"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Инструкции по размещению в службах IIS
 Для выполнения примеров, размещаемых в службах IIS, следует убедиться, что службы IIS правильно установлены и запущены.  
@@ -163,7 +163,7 @@ ms.locfileid: "64600254"
 4. Должна появиться веб-страница с текстом "Здравствуй, мир!".  
   
 > [!NOTE]
->  При каждой установке новой версии [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] необходимо повторно регистрировать aspnet_isapi как расширение веб-службы для IIS. Чтобы сделать это, выполните команду `aspnet_regiis –I –enable`.  
+>  Каждый раз при установке новой версии платформы .NET Framework, вам необходимо повторно регистрировать aspnet_isapi как расширение веб-службы для служб IIS. Чтобы сделать это, выполните команду `aspnet_regiis –I –enable`.  
   
 ## <a name="sample-code"></a>Пример кода  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 2064c21d3ec0cd29ed5c41a2f4ba2fd8870926b0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b13d8266d0702d831a0f5ebb3a9586864fe22ccb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618208"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586527"
 ---
 # <a name="-link-visual-basic"></a>-связь (Visual Basic)
 Дает компилятору указание сделать всю информацию о типах COM из указанных сборок доступной компилируемому проекту.  
@@ -55,7 +55,7 @@ ms.locfileid: "64618208"
   
  Используйте [- libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) для указания каталога, в котором находится один или несколько ссылок на сборки.  
   
- Как и [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) параметр компилятора `-link` компилятор использует файл ответов Vbc.rsp, который ссылается на часто используемые [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] сборок. Используйте [- noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) параметр компилятора, если требуется запретить компилятору использовать файл Vbc.rsp.  
+ Как и [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) параметр компилятора `-link` компилятор использует файл ответов Vbc.rsp, который ссылается на часто используемые сборки .NET Framework. Используйте [- noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) параметр компилятора, если требуется запретить компилятору использовать файл Vbc.rsp.  
   
  Краткой формой `-link` является `-l`.  
   

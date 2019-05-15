@@ -2,19 +2,19 @@
 title: Взаимодействие с приложениями POX
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-ms.openlocfilehash: b7fdb4e16bce52025515ced065d0f48cffb7fa3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17b85ab41589a130e950cd52c759305cc17e92b7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046896"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591046"
 ---
 # <a name="interoperability-with-pox-applications"></a>Взаимодействие с приложениями POX
 
 «Plain Old XML» (POX) приложения взаимодействуют путем обмена необработанными сообщениями HTTP, которые содержат только данные приложения XML, не заключенные в конверт SOAP. Windows Communication Foundation (WCF) может предоставить службы и клиенты, использующие сообщения POX. В службе WCF можно использовать для реализации служб, предоставляющих конечные точки для клиентов, таких как веб-браузеры и языки сценариев, которые отправляют и принимают сообщения POX. На стороне клиента можно использовать модель программирования WCF для реализации клиентов, взаимодействующих со службами, основанными на POX.  
   
 > [!NOTE]
-> Данный документ первоначально был написан для [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0.  В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.5 имеется встроенная поддержка приложений POX. Дополнительные сведения см. в разделе [модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
+> В этом документе, первоначально был написан для .NET Framework 3.0.  .NET framework 3.5 имеется встроенная поддержка для работы с приложениями POX. Дополнительные сведения см. в разделе [модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
   
 ## <a name="pox-programming-with-wcf"></a>Программирование POX с использованием WCF
 

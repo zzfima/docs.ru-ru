@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: e267c0c4d1d3e8f986348863d933c984f686b33b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92430f23b3d4d6237d0b6ec606ce2cb9b945f6f8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973346"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590028"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Вызов свойства или метода с помощью строкового имени (Visual Basic)
 В большинстве случаев доступ к свойствам и методам объекта во время разработки и написать код для их обработки. Однако в некоторых случаях может не известно, какие свойства и методы объекта заранее или необходима гибкость конечному пользователю для указания свойств или выполнения методов во время выполнения.  
@@ -31,7 +31,7 @@ ms.locfileid: "61973346"
   
  Первый аргумент, *объект*, принимает имя объекта, будет действовать. *Имя_процедуры* аргумент принимает строку, которая содержит имя метода или свойства вызываемой процедуры. *CallType* аргумент принимает константу, представляющую тип процедуры для вызова: метод (`Microsoft.VisualBasic.CallType.Method`), свойства, считываемого (`Microsoft.VisualBasic.CallType.Get`), или свойство, которому присвоен (`Microsoft.VisualBasic.CallType.Set`). *Аргументы* аргументом, который не является обязательным, принимает массив объектов типа `Object` , содержащий все аргументы процедуры.  
   
- Можно использовать `CallByName` с классами в текущем решении, но чаще всего используется для доступа к COM-объектов или объектов из [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] сборки.  
+ Можно использовать `CallByName` с классами в текущем решении, но чаще всего используется для доступа к COM-объектов или объектов из сборок платформы .NET Framework.  
   
  Предположим, что добавьте ссылку на сборку, содержащую класс с именем `MathClass`, который имеет новую функцию с именем `SquareRoot`, как показано в следующем коде:  
   

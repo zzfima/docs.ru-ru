@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: fc8e55d8f3824ca11c575479863491d7f949efa3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 02f3224a8069fd091833bb09744389592c769818
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665845"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592503"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Общие сведения о Windows Forms и неуправляемых приложениях
 Приложения и элементы управления Windows Forms могут взаимодействовать с неуправляемыми приложениями, но с некоторыми оговорками. В следующих разделах описываются сценарии и конфигурации, которые поддерживаются и не поддерживаются элементами управления и приложениями Windows Forms.  
@@ -47,13 +47,13 @@ ms.locfileid: "64665845"
  Цикл обработки сообщений приложения является внутренним циклом программы, который получает сообщения из очереди сообщений потока, преобразует их и отправляет приложению для обработки. Архитектура цикла обработки сообщений для формы Windows Forms отличается от архитектуры, используемой в более ранних приложениях, таких как приложения Visual Basic 6.0 и приложения MFC. Сообщения окна, которые отправляются в цикл обработки сообщений, могут обрабатываться не так, как ожидает форма Windows Forms. Таким образом, может наблюдаться неожиданное поведение. Могут не работать некоторые сочетания клавиш и некоторые действия мыши, а также могут не возникать некоторые события.  
   
 ## <a name="resolving-interoperability-issues"></a>Устранение проблем взаимодействия  
- Эти проблемы можно устранить путем отображения формы в цикле обработки сообщений [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , который создается с помощью метода <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> .  
+ Эти проблемы можно устранить путем отображения формы в цикле обработки сообщений .NET Framework, которые созданы с помощью <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> метод.  
   
  Чтобы исправить работу формы Windows Forms из клиентского приложения COM, необходимо запустить его в цикле обработки сообщений Windows Forms. Для этого воспользуйтесь одним из перечисленных ниже подходов.  
   
-- Используйте метод <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> для отображения Windows Form. Дополнительные сведения см. в разделе [Как Поддержка COM-взаимодействия путем отображения формы Windows Forms с помощью метода ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md).  
+- Используйте метод <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> для отображения Windows Form. Дополнительные сведения см. в разделе [Практическое руководство. Поддержка COM-взаимодействия путем отображения формы Windows Forms с помощью метода ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md).  
   
-- Запускайте каждую форму Windows Forms в новом потоке. Дополнительные сведения см. в разделе [Как Поддержка COM-взаимодействия путем отображения каждой формы Windows Forms в отдельном потоке](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
+- Запускайте каждую форму Windows Forms в новом потоке. Дополнительные сведения см. в разделе [Практическое руководство. Поддержка COM-взаимодействия путем отображения каждой формы Windows Forms в отдельном потоке](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="see-also"></a>См. также
 

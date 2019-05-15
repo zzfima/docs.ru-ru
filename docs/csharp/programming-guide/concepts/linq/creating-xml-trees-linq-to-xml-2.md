@@ -2,12 +2,12 @@
 title: Создание деревьев XML в C# (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 3bac7b62d04c9690cdd08d1993b64db33c4e6ab8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00f528bca00b2c2316d949ceb3b6c4bba2499146
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503174"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597661"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>Создание деревьев XML на языке C# (LINQ to XML)
 В этом разделе размещены сведения о создании XML-деревьев при помощи языка C#.  
@@ -50,17 +50,17 @@ XElement contacts =
   
  Параметр `content` чрезвычайно гибок. Он поддерживает любой тип объекта, который является действительным дочерним объектом <xref:System.Xml.Linq.XElement>. К различным типам объектов, передающимся в этом параметре, применимы следующие правила.  
   
--   Строка добавляется как текстовое содержимое.  
+- Строка добавляется как текстовое содержимое.  
   
--   <xref:System.Xml.Linq.XElement> добавляется к дочернему элементу.  
+- <xref:System.Xml.Linq.XElement> добавляется к дочернему элементу.  
   
--   <xref:System.Xml.Linq.XAttribute> добавляется как атрибут.  
+- <xref:System.Xml.Linq.XAttribute> добавляется как атрибут.  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment> или <xref:System.Xml.Linq.XText> добавляется в качестве дочернего содержимого.  
+- <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment> или <xref:System.Xml.Linq.XText> добавляется в качестве дочернего содержимого.  
   
--   <xref:System.Collections.IEnumerable> перечисляется, и эти правила рекурсивно применяются к результатам.  
+- <xref:System.Collections.IEnumerable> перечисляется, и эти правила рекурсивно применяются к результатам.  
   
--   Для любого другого типа вызывается метод `ToString`, при этом результат добавляется как текстовое содержимое.  
+- Для любого другого типа вызывается метод `ToString`, при этом результат добавляется как текстовое содержимое.  
   
 ### <a name="creating-an-xelement-with-content"></a>Создание элемента XElement с содержимым  
  Можно создать <xref:System.Xml.Linq.XElement> с простым содержимым при помощи одного вызова метода. Чтобы это сделать, укажите содержимое в качестве второго параметра следующим образом:  

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 97e917d568b31860979e54598350d1ae7a6fdb25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 465f1d8141f51de179dbb4e963a8fcac8c09fa33
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022315"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592694"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Пошаговое руководство. Создание объектов COM с помощью Visual Basic
-При создании новых приложений или компонентов, лучше всего создать сборок платформы .NET Framework. Тем не менее Visual Basic также позволяет легко предоставить доступ к компоненту .NET Framework для модели COM. Это позволяет создавать новые компоненты для более ранних пакетов приложений, требующих COM-компонентов. В этом пошаговом руководстве демонстрируется использование Visual Basic для предоставления [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] объектов в виде COM-объектов, как с и без шаблона COM-класса.  
+При создании новых приложений или компонентов, лучше всего создать сборок платформы .NET Framework. Тем не менее Visual Basic также позволяет легко предоставить доступ к компоненту .NET Framework для модели COM. Это позволяет создавать новые компоненты для более ранних пакетов приложений, требующих COM-компонентов. В этом пошаговом руководстве демонстрируется использование Visual Basic для предоставления объектов .NET Framework в виде COM-объектов, как с и без шаблона COM-класса.  
   
  Самый простой способ предоставлять COM-объекты — с помощью шаблона COM-класса. Шаблон класса COM создает новый класс и затем настраивает проект для создания на уровне класса и взаимодействие как объект COM и зарегистрируйте его с операционной системой.  
   

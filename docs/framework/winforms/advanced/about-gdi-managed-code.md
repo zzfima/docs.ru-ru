@@ -6,17 +6,17 @@ helpviewer_keywords:
 - GDI+
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
-ms.openlocfilehash: b1676189582596ad69981b330ffb081539e949da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c7632933e29a59c1db46f84360e271f27edf8b8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960957"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588614"
 ---
 # <a name="about-gdi-managed-code"></a>Управляемый код GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] — это часть операционной системы Windows, предоставляющая возможности создания векторных изображений, рисования и оформления. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] улучшает [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (интерфейс графических устройств, входящий в состав более ранних версий Windows) путем добавления новых возможностей и оптимизации существующих.  
   
- Интерфейс классов управляемого кода [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] (набор оболочек) является частью [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] — среды для сборки, развертывания и запуска веб-служб XML и других приложений.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Интерфейс управляемых классов (набор оболочек) является частью .NET Framework, среды для сборки, развертывания и запуска веб-служб XML и других приложений.  
   
  Этот раздел содержит сведения об API-интерфейсе [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] для программистов, использующих управляемый код.  
   
