@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da1c9f25052bb2354b435cd28b7ff55d4a754ed1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a7701f887410aa263483e52a5dd65a09d1444aa6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584004"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589874"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Неупорядоченное извлечение узлов по имени или индексу
 Класс **XmlNamedNodeMap** описан в спецификации консорциума W3C как NamedNodeMap. Он нужен для обработки неупорядоченного набора узлов с возможностью ссылаться на узлы по их именам и индексам. Единственный способ доступа к классу **XmlNamedNodeMap** — возврат **XmlNamedNodeMap** через метод или свойство. Есть три метода или свойства, возвращающих класс **XmlNamedNodeMap**:  
   
--   XmlElement.Attributes;  
+- XmlElement.Attributes;  
   
--   XmlDocumentType.Entities;  
+- XmlDocumentType.Entities;  
   
--   XmlDocumentType.Notations.  
+- XmlDocumentType.Notations.  
   
  Например, свойство **XmlDocumentType.Entities** получает коллекцию узлов **XmlEntity**, указанных в декларации типа документа. Эта коллекция возвращается как **XmlNamedNodeMap**. Можно выполнить итерацию по коллекции с помощью свойства **Count** и отобразить данные о сущности. Пример выполнения итерации по **XmlNamedNodeMap** см. в описании <xref:System.Xml.XmlDocumentType.Entities%2A>.  
   

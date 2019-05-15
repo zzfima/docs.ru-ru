@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: da4aabbd0529ee239dacd2dff7c7825d41110b44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5db3d759daec273a29dccfeff9879d0edcc9a269
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835171"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595019"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Упаковка-преобразование и распаковка-преобразование (Руководство по программированию на C#)
 Упаковка представляет собой процесс преобразования [типа значения](../../../csharp/language-reference/keywords/value-types.md) в тип `object` или в любой другой тип интерфейса, реализуемый этим типом значения. Когда тип значения упаковывается средой CLR, она создает оболочку значения внутри System.Object и сохраняет ее в управляемой куче. Операция распаковки извлекает тип значения из объекта. Упаковка является неявной; распаковка является явной. Понятия упаковки и распаковки лежат в основе единой системы типов C#, в которой значение любого типа можно рассматривать как объект.  
@@ -63,9 +63,9 @@ ms.locfileid: "58835171"
 ## <a name="unboxing"></a>Распаковка  
  Распаковка является явным преобразованием из типа `object` в [тип значения](../../../csharp/language-reference/keywords/value-types.md) или из типа интерфейса в тип значения, реализующего этот интерфейс. Операция распаковки состоит из следующих действий:  
   
--   проверка экземпляра объекта на то, что он является упакованным значением заданного типа значения;  
+- проверка экземпляра объекта на то, что он является упакованным значением заданного типа значения;  
   
--   копирование значения из экземпляра в переменную типа значения.  
+- копирование значения из экземпляра в переменную типа значения.  
   
  В следующем коде показаны операции по упаковке и распаковке.  
   
@@ -108,9 +108,9 @@ int j = (int) o;
 ## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения:  
   
--   [Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)  
   
--   [Типы значений](../../../csharp/language-reference/keywords/value-types.md)  
+- [Типы значений](../../../csharp/language-reference/keywords/value-types.md)  
   
 ## <a name="see-also"></a>См. также
 
