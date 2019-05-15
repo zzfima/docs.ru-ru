@@ -5,14 +5,13 @@
       href: casting-and-type-conversions.md
     - name: Упаковка–преобразование и распаковка–преобразование
       href: boxing-and-unboxing.md
+    - name: Практическое руководство. Преобразование массива байтов в значение типа int
+      href: how-to-convert-a-byte-array-to-an-int.md
+    - name: Практическое руководство. Преобразование строки в число
+      href: how-to-convert-a-string-to-a-number.md
+    - name: Практическое руководство. Преобразование из шестнадцатеричных строк в числовые типы
+      href: how-to-convert-between-hexadecimal-strings-and-numeric-types.md
     - name: Использование типа dynamic
       href: using-type-dynamic.md
-      items:
-        - name: 'Пошаговое руководство. Создание и использование динамических объектов (C# и Visual Basic)'
-          href: walkthrough-creating-and-using-dynamic-objects.md
-    - name: Как выполнить Преобразование массива байтов в значение типа int
-      href: how-to-convert-a-byte-array-to-an-int.md
-    - name: Как выполнить Преобразование строки в число
-      href: how-to-convert-a-string-to-a-number.md
-    - name: Как выполнить Преобразование из шестнадцатеричных строк в числовые типы
-      href: how-to-convert-between-hexadecimal-strings-and-numeric-types.md
+    - name: 'Пошаговое руководство. Создание и использование динамических объектов (C# и Visual Basic)'
+      href: walkthrough-creating-and-using-dynamic-objects.md

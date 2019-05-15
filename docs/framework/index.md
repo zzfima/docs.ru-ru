@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6e21d2514ad357c906885750d9320575bdb75b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d93dea42dbb854d8d52bd5cf3e54d1ce0d892d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643937"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635529"
 ---
 # <a name="net-framework-guide"></a>Руководство по .NET Framework
 
@@ -28,7 +28,7 @@ ms.locfileid: "61643937"
 
 Общие сведения о платформе .NET Framework для пользователей и разработчиков см. в разделе [Начало работы](./get-started/index.md). См. [обзорные сведения](./get-started/overview.md) об архитектуре и основных возможностях платформы .NET Framework.
 
-Платформу .NET Framework можно использовать с Docker и [контейнерами Windows](/virtualization/windowscontainers/about/). Сведения о том, как запускать приложения в контейнерах Docker, см. в статье [Развертывание приложений .NET Framework с помощью Docker](./docker/index.md).
+Платформу .NET Framework можно использовать с Docker и [контейнерами Windows](/virtualization/windowscontainers/about/).
 
 ## <a name="installation"></a>Установка
 
@@ -51,9 +51,6 @@ ms.locfileid: "61643937"
 
 * [Руководство по миграции](./migration-guide/index.md)  
 Здесь содержатся ресурсы и список изменений, которые нужно учитывать при миграции приложения на новую версию платформы .NET Framework.
-
-* [Руководство по Docker в .NET Framework](./docker/index.md)  
-Здесь содержатся ресурсы для запуска приложений .NET Framework с помощью Docker с использованием Контейнеров Windows.
 
 * [Руководство по разработке](./development-guide.md)  
 Здесь содержится руководство по всем ключевым технологическим областям и задачам для разработки приложений, включая создание, настройку, отладку, безопасность и развертывание приложений, а также сведения о динамическом программировании, взаимодействии, расширении среды, управлении памятью и работе с потоками.

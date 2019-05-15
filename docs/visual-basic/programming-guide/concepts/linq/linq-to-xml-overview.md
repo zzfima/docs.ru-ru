@@ -2,12 +2,12 @@
 title: Обзор LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
-ms.openlocfilehash: 0de0180b9863bbc709dad6bec1f6ad4dd5876978
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b4b40acaaf3787e67e4d6efb1efb1ecd4f117427
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610724"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586321"
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>Обзор LINQ to XML (Visual Basic)
 XML широко используется для форматирования данных в целом ряде контекстов. Примеры XML можно обнаружить в веб-среде, в файлах конфигурации, в файлах Microsoft Office Word и в базах данных.  
@@ -20,7 +20,7 @@ XML широко используется для форматирования д
  Профессиональные разработчики могут с помощью [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] существенно повысить производительность своего труда. Используя [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], они могут сократить объемы необходимого кода и сделать его более выразительным, более компактным и более мощным. Они могут одновременно использовать выражения запросов из нескольких доменов данных.  
   
 ## <a name="what-is-linq-to-xml"></a>Что такое LINQ to XML?  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] - это оснащенный средствами LINQ и встроенный в память программный интерфейс XML, позволяющий работать с XML-файлами внутри языков программирования [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] языки программирования с поддержкой LINQ, находящееся в памяти интерфейсом программирования XML, позволяет работать с XML из .NET Framework.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] подобен модели DOM в том отношении, что загружает XML-документ в память. К такому документу можно направить запрос, его можно изменить, а после изменения его можно сохранить в файле или сериализовать и передать через Интернет. Но между [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] и моделью DOM существуют отличия: Он предоставляет модель объектов, легкую и простую в работе, и в нем используются преимущества функций языка в Visual Basic.  
   

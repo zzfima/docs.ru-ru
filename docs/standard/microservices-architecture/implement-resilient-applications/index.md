@@ -1,15 +1,13 @@
 ---
 title: Реализация устойчивых приложений
 description: Сведения об устойчивости — основном понятии в архитектуре микрослужб. Вам необходимо знать, как правильно обрабатывать возникающие временные сбои.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: 00724509ba6e027ef73f72bfb6f85b8ec0aa9d25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 766349e72389f848b0a741b020707cc7acf3410d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61977721"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639854"
 ---
 # <a name="implement-resilient-applications"></a>Реализация устойчивых приложений
 

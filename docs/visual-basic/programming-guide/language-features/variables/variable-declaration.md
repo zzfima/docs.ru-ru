@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: a4c9ae12f2ec30d471c6e73af17567547e4dc421
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4706f306e8db252b35148f8e6a0f8c42122f5482
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598435"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583386"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Объявление переменной в Visual Basic
 Можно объявить переменную, чтобы указать ее имя и характеристики. Оператор объявления переменных — [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Определить характеристики переменной, ее расположение и содержимое.  
@@ -48,7 +48,7 @@ ms.locfileid: "64598435"
   
 - Тип объекта или класса, определенного в приложении или в другом приложении  
   
-- Объект [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] класс, например <xref:System.Windows.Forms.Label> или <xref:System.Windows.Forms.TextBox>  
+- Класс .NET Framework, например <xref:System.Windows.Forms.Label> или <xref:System.Windows.Forms.TextBox>  
   
 - Тип интерфейса, такие как <xref:System.IComparable> или <xref:System.IDisposable>  
   

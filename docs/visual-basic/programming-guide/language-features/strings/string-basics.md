@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 9d2d3c82f5512bc1e37e3b05086fbd364ee12298
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f1f6b98d7db510373f2729fab2a6e0ad993ea086
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938337"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591382"
 ---
 # <a name="string-basics-in-visual-basic"></a>Основы работы со строками в Visual Basic
 Тип данных `String` представляет последовательность символов (каждый из которых, в свою очередь, представляет экземпляр типа данных `Char`). В этом разделе представлены основные понятия строк в Visual Basic.  
@@ -50,7 +50,7 @@ World]]></xml>.Value
 ```  
   
 ## <a name="characters-in-strings"></a>Символы в строках  
- Строку можно представить как последовательность значений `Char`. При этом тип `String` имеет встроенные функции, которые позволяют работать со строками, как с массивами. Как и все массивы в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], строки — это массивы с индексацией с нуля. К определенному символу в строке можно обратиться с помощью свойства `Chars`, которое предоставляет механизм доступа к символу по позиции, в которой он отображается в строке. Пример:  
+ Строку можно представить как последовательность значений `Char`. При этом тип `String` имеет встроенные функции, которые позволяют работать со строками, как с массивами. Как и все массивы в .NET Framework они являются массивами (с нуля). К определенному символу в строке можно обратиться с помощью свойства `Chars`, которое предоставляет механизм доступа к символу по позиции, в которой он отображается в строке. Пример:  
   
  [!code-vb[VbVbalrStrings#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#67)]  
   

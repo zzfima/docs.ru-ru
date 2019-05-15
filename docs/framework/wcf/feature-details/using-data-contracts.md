@@ -9,18 +9,18 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-ms.openlocfilehash: 0f33bdc006c6b965ba60257637f3cef182555d7d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3fd22cc0842c51b331905369915bd055235680c4
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637724"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592186"
 ---
 # <a name="using-data-contracts"></a>Использование контрактов данных
 *Контракт данных* - формальное соглашение между службой и клиентом, абстрактно описывающее данные, обмен которыми происходит. Это значит, что для взаимодействия клиент и служба не обязаны совместно использовать одни и те же типы, достаточно совместно использовать одни и те же контракты данных. Контракт данных для каждого параметра и возвращаемого типа четко определяет, какие данные сериализуются (превращаются в XML) для обмена.  
   
 ## <a name="data-contract-basics"></a>Основные сведения о контрактах данных  
- Windows Communication Foundation (WCF) использует механизм сериализации, называемый сериализатором контракта данных по умолчанию для сериализации и десериализации данных (преобразования в XML и обратно). Все типы-примитивы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , такие как integer и string, а также некоторые типы, которые обрабатываются как примитивы, такие как <xref:System.DateTime> и <xref:System.Xml.XmlElement>, могут быть сериализованы без дополнительной обработки и считаются типами, которые по умолчанию содержат контракты данных. Многие типы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] также содержат контракты данных. Полный список сериализуемых типов см. в разделе [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Windows Communication Foundation (WCF) использует механизм сериализации, называемый сериализатором контракта данных по умолчанию для сериализации и десериализации данных (преобразования в XML и обратно). Все простые типы .NET Framework, такие как Integer и String, а также определенные типы, которые обрабатываются как примитивы, такие как <xref:System.DateTime> и <xref:System.Xml.XmlElement>, могут быть сериализованы без дополнительной обработки и рассматриваются как имеющие контракты данных по умолчанию. Многие типы .NET Framework также содержат контракты данных. Полный список сериализуемых типов см. в разделе [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
  Для сериализации новых созданных сложных типов необходимо определить контракты данных. По умолчанию <xref:System.Runtime.Serialization.DataContractSerializer> определяет контракт данных и сериализует все открытые типы. Все открытые свойства чтения/записи и поля типа сериализуются. Можно исключать члены из сериализации с помощью <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>. Также можно явно создавать контракт данных с помощью атрибутов <xref:System.Runtime.Serialization.DataContractAttribute> и <xref:System.Runtime.Serialization.DataMemberAttribute> . Обычно это делается с помощью применения атрибута <xref:System.Runtime.Serialization.DataContractAttribute> к типу. Данный атрибут может быть применен к классам, структурам и перечислениям. После этого необходимо применить атрибут <xref:System.Runtime.Serialization.DataMemberAttribute> к каждому члену типа контракта данных, чтобы указать, что он является *членом данных*, который необходимо сериализовать. Дополнительные сведения см. в разделе [сериализуемых типов](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   

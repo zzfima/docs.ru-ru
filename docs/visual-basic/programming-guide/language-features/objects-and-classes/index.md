@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: ec5825dacaf67ee2544302f4f95a1b341ecf1bf7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 216de8f70e0ad6856bf5d708347a7e5f852fe4c6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753614"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591565"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Объекты и классы Visual Basic
 
@@ -176,7 +176,7 @@ safetyTimer.Start()
 
 Объекты позволяют один раз объявить переменную или процедуру, а затем использовать ее везде, где потребуется. Например, если в приложении вам нужно средство проверки орфографии, то для него потребуется определить все необходимые переменные и служебные функции. Создав специальный класс для средства проверки орфографии, вы сможете использовать его снова в других приложениях, просто добавив ссылку на скомпилированную сборку. Более того, вы можете сэкономить время и силы, взяв готовый класс проверки орфографии, созданный ранее кем-то другим.
 
-[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] предлагает много доступных для свободного использования компонентов. В следующем примере используется класс <xref:System.TimeZone> в пространстве имен <xref:System>. Члены класса <xref:System.TimeZone> позволяют получить сведения о часовом поясе, выбранном на компьютере.
+.NET Framework предоставляет многие примеры компонентов, которые доступны для использования. В следующем примере используется класс <xref:System.TimeZone> в пространстве имен <xref:System>. Члены класса <xref:System.TimeZone> позволяют получить сведения о часовом поясе, выбранном на компьютере.
 
 ```vb
 Public Sub examineTimeZone()

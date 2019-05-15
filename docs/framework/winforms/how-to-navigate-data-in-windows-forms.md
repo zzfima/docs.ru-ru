@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 452aacab4580a3b07168daa6b7c03740dc98620b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801716"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583744"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Практическое руководство. Навигация по набору данных, отображаемых в форме Windows Forms
 Самый простой способ перемещения по записям в источнике данных в приложении Windows, является привязка <xref:System.Windows.Forms.BindingSource> компонент источника данных, а затем привязать элементы управления к <xref:System.Windows.Forms.BindingSource>. Затем можно использовать встроенные методы навигации на <xref:System.Windows.Forms.BindingSource> таких <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> и <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. С помощью этих методов настроит <xref:System.Windows.Forms.BindingSource.Position%2A> и <xref:System.Windows.Forms.BindingSource.Current%2A> свойства <xref:System.Windows.Forms.BindingSource> соответствующим образом. Можно также найти элемент и задать его в качестве текущего элемента, задав <xref:System.Windows.Forms.BindingSource.Position%2A> свойство.  
@@ -26,7 +26,7 @@ ms.locfileid: "61801716"
 1. Задайте <xref:System.Windows.Forms.BindingSource.Position%2A> свойство <xref:System.Windows.Forms.BindingSource> связанных данных в позиции записи, чтобы перейти к. В следующем примере демонстрируется использование <xref:System.Windows.Forms.BindingSource.MoveNext%2A> метод <xref:System.Windows.Forms.BindingSource> для увеличения значения <xref:System.Windows.Forms.BindingSource.Position%2A> свойство при `nextButton` нажатии. <xref:System.Windows.Forms.BindingSource> Связан с `Customers` набора данных `Northwind`.  
   
     > [!NOTE]
-    >  Установка <xref:System.Windows.Forms.BindingSource.Position%2A> значение за пределами первой или последней записи не приведет к ошибке, как [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] не позволит вам задать положение значения, выходящего за границы списка. Если важно знать, достигнута ли первой или последней записи приложения, добавьте логику для проверки превышения количества элементов данных.  
+    >  Параметр <xref:System.Windows.Forms.BindingSource.Position%2A> значение за пределами первой или последней записи не приведет к ошибке, поскольку платформа .NET Framework не позволяют задать положение значения, выходящего за границы списка. Если важно знать, достигнута ли первой или последней записи приложения, добавьте логику для проверки превышения количества элементов данных.  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.NavigatingData#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  

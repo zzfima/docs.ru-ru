@@ -9,12 +9,12 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: d7c3bcba8e62d62904ed778a48d0e8ae6738ce00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b64c55b73a9c835ded0d7c81ff36329b8d6a8bc9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794006"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586540"
 ---
 # <a name="-netcf"></a>-netcf
 
@@ -28,7 +28,7 @@ ms.locfileid: "61794006"
 
 ## <a name="remarks"></a>Примечания
 
-`-netcf` Компилятору Visual Basic к целевому объекту [!INCLUDE[Compact](~/includes/compact-md.md)] вместо полной [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Функциональные возможности языка, которая присутствует только в полной [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] отключена.
+`-netcf` Компилятору Visual Basic к целевому объекту [!INCLUDE[Compact](~/includes/compact-md.md)] вместо полной версии платформы .NET Framework. Функциональные возможности языка, которая присутствует только в полной версии платформы .NET Framework отключен.
 
 `-netcf` Параметр предназначен для использования с [- sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Языковые возможности, отключенные по `-netcf` являются те же функции языка, не представленным в файлах `-sdkpath`.
 

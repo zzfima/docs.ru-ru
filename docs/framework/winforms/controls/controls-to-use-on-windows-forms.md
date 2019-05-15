@@ -5,22 +5,22 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: a05ddd714e85491d29aa5de574b4cdc36165c224
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 3d8e6d37a5c27eac6af303819fb50b28acd225c6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469517"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589044"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Элементы управления для использования в формах Windows Forms
 Ниже приведен алфавитный список элементов управления и компонентов, используемых в формах Windows Forms. Помимо элементов управления Windows Forms, описанных в этом разделе, в формы Windows Forms можно добавлять элементы управления ActiveX и пользовательские элементы управления. Если вам не удается найти нужный элемент управления в этом списке, вы можете создать свой собственный. См. раздел [Создание элементов управления Windows Forms во время разработки](developing-windows-forms-controls-at-design-time.md). Дополнительные сведения о выборе необходимого элемента управления см. в разделе [Функциональная классификация элементов управления Windows Forms](windows-forms-controls-by-function.md).  
   
 > [!NOTE]
->  Элементы управления Visual Basic основаны на классах, предоставляемых [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+>  Элементы управления Visual Basic основаны на классах, предоставляемых платформой .NET Framework.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Функциональная классификация элементов управления Windows Forms](windows-forms-controls-by-function.md)  
- Список и описание элементов управления Windows Forms на основе [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ Перечисляются и описываются элементы управления Windows Forms, на основе .NET Framework.  
   
  [Элементы управления со встроенной поддержкой рисования владельцем](controls-with-built-in-owner-drawing-support.md)  
  Описание возможностей изменения аспектов внешнего вида элемента управления, которые недоступны через свойства.  
@@ -168,7 +168,7 @@ ms.locfileid: "65469517"
  Позволяет пользователю изменять размер закрепленного элемента управления.  
   
  [Элемент управления Splitter](splitter-control-windows-forms.md)  
- Позволяет пользователю изменять размер закрепленного элемента управления ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.x).  
+ Позволяет пользователю изменять размер закрепленного элемента управления (версии .NET Framework 1.x).  
   
  [Элемент управления StatusBar](statusbar-control-windows-forms.md)  
  Отображает сведения о состоянии элемента управления, который находится в фокусе. Хотя <xref:System.Windows.Forms.StatusStrip> заменяет и расширяет элемент управления <xref:System.Windows.Forms.StatusBar> предыдущих версий, <xref:System.Windows.Forms.StatusBar> сохраняется для обеспечения обратной совместимости и использования в будущем при его выборе.  

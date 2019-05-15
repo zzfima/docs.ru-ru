@@ -1,15 +1,13 @@
 ---
 title: Микрослужбы .NET. Архитектура контейнерных приложений .NET
 description: 'Микрослужбы .NET: архитектура контейнерных приложений .NET | Микрослужбы — это модульные службы, развертываемые независимо друг от друга. Контейнеры Docker (для Linux и Windows) упрощают развертывание и тестирование путем объединения службы и ее зависимостей в единый модуль, запускаемый в изолированной среде.'
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: e1b36f5a6ddc2176e344dfe2a216429190dcc1dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bbd72b02ae446bbd0df31889679023d3b5040db8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615144"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644411"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Микрослужбы .NET: Архитектура контейнерных приложений .NET
 

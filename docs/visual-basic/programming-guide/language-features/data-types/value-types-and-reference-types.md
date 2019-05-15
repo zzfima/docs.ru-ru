@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: f823d9e80eb644487eab1ed84345dd8bdc10efc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 541fe9f176a6210372b58753254692142f086992
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600944"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589818"
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
 В Visual Basic типы данных реализованы на основе их классификации. Типы данных Visual Basic могут быть классифицированы в соответствии с ли переменная определенного типа хранит собственные данные или указатель на данные. Если он хранит собственные данные *тип значения*; если он содержит указатель на данные в другом месте в памяти, это *ссылочный тип*.  
@@ -46,7 +46,7 @@ ms.locfileid: "64600944"
   
 - Делегаты  
   
- Класс является *ссылочный тип*. По этой причине ссылочные типы, такие как `Object` и `String` поддерживаются [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] классы. Обратите внимание на то, что каждый массив является ссылочным типом, даже если его члены являются типами значений.  
+ Класс является *ссылочный тип*. По этой причине ссылочные типы, такие как `Object` и `String` поддерживаются классами .NET Framework. Обратите внимание на то, что каждый массив является ссылочным типом, даже если его члены являются типами значений.  
   
  Так как каждый ссылочный тип представляет собой соответствующий класс .NET Framework, необходимо использовать [оператор New](../../../../visual-basic/language-reference/operators/new-operator.md) ключевое слово для его инициализации. Следующая инструкция инициализирует массив.  
   
