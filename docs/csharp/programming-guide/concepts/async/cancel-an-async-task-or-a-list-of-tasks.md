@@ -2,51 +2,51 @@
 title: Отмена асинхронной задачи или списка задач (C#)
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 01557bf80f40d4197d29ab05cfb4838f5d993a82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 05ddb2c76a16ed4f79d795510434aa3abb5615d7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295748"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583375"
 ---
-# <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a><span data-ttu-id="edfda-102">Отмена асинхронной задачи или списка задач в C#</span><span class="sxs-lookup"><span data-stu-id="edfda-102">Cancel an async task or a list of tasks (C#)</span></span>
+# <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a><span data-ttu-id="1c70d-102">Отмена асинхронной задачи или списка задач в C#</span><span class="sxs-lookup"><span data-stu-id="1c70d-102">Cancel an async task or a list of tasks (C#)</span></span>
 
-<span data-ttu-id="edfda-103">Вы можете настроить кнопку, которая позволит отменить асинхронное приложение в случае, если вы не захотите дожидаться его завершения.</span><span class="sxs-lookup"><span data-stu-id="edfda-103">You can set up a button that you can use to cancel an async application if you don't want to wait for it to finish.</span></span> <span data-ttu-id="edfda-104">Выполнив код в приведенных ниже примерах, вы сможете добавить в приложение кнопку отмены, загружающую содержимое одного веб-сайта или список веб-сайтов.</span><span class="sxs-lookup"><span data-stu-id="edfda-104">By following the examples in this topic, you can add a cancellation button to an application that downloads the contents of one website or a list of websites.</span></span>
+<span data-ttu-id="1c70d-103">Вы можете настроить кнопку, которая позволит отменить асинхронное приложение в случае, если вы не захотите дожидаться его завершения.</span><span class="sxs-lookup"><span data-stu-id="1c70d-103">You can set up a button that you can use to cancel an async application if you don't want to wait for it to finish.</span></span> <span data-ttu-id="1c70d-104">Выполнив код в приведенных ниже примерах, вы сможете добавить в приложение кнопку отмены, загружающую содержимое одного веб-сайта или список веб-сайтов.</span><span class="sxs-lookup"><span data-stu-id="1c70d-104">By following the examples in this topic, you can add a cancellation button to an application that downloads the contents of one website or a list of websites.</span></span>
 
-<span data-ttu-id="edfda-105">В этих примерах используется пользовательский интерфейс, описанный в разделе [Настройка асинхронного приложения (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md).</span><span class="sxs-lookup"><span data-stu-id="edfda-105">The examples use the UI that [Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) describes.</span></span>
+<span data-ttu-id="1c70d-105">В этих примерах используется пользовательский интерфейс, описанный в разделе [Настройка асинхронного приложения (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md).</span><span class="sxs-lookup"><span data-stu-id="1c70d-105">The examples use the UI that [Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) describes.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="edfda-106">Для выполнения примеров необходимо, чтобы на компьютере были установлены Visual Studio 2012 или более поздняя версия и .NET Framework 4.5 или более поздняя версия.</span><span class="sxs-lookup"><span data-stu-id="edfda-106">To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>
+> <span data-ttu-id="1c70d-106">Для выполнения примеров необходимо, чтобы на компьютере были установлены Visual Studio 2012 или более поздняя версия и .NET Framework 4.5 или более поздняя версия.</span><span class="sxs-lookup"><span data-stu-id="1c70d-106">To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>
 
-## <a name="cancel-a-task"></a><span data-ttu-id="edfda-107">Отмена задачи</span><span class="sxs-lookup"><span data-stu-id="edfda-107">Cancel a task</span></span>
+## <a name="cancel-a-task"></a><span data-ttu-id="1c70d-107">Отмена задачи</span><span class="sxs-lookup"><span data-stu-id="1c70d-107">Cancel a task</span></span>
 
-<span data-ttu-id="edfda-108">Код в первом примере связывает кнопку **Отмена** с отдельной задачей загрузки.</span><span class="sxs-lookup"><span data-stu-id="edfda-108">The first example associates the **Cancel** button with a single download task.</span></span> <span data-ttu-id="edfda-109">Если нажать эту кнопку, когда приложение загружает содержимое, загрузка будет отменена.</span><span class="sxs-lookup"><span data-stu-id="edfda-109">If you choose the button while the application is downloading content, the download is canceled.</span></span>
+<span data-ttu-id="1c70d-108">Код в первом примере связывает кнопку **Отмена** с отдельной задачей загрузки.</span><span class="sxs-lookup"><span data-stu-id="1c70d-108">The first example associates the **Cancel** button with a single download task.</span></span> <span data-ttu-id="1c70d-109">Если нажать эту кнопку, когда приложение загружает содержимое, загрузка будет отменена.</span><span class="sxs-lookup"><span data-stu-id="1c70d-109">If you choose the button while the application is downloading content, the download is canceled.</span></span>
 
-### <a name="download-the-example"></a><span data-ttu-id="edfda-110">Скачивание примера</span><span class="sxs-lookup"><span data-stu-id="edfda-110">Download the example</span></span>
+### <a name="download-the-example"></a><span data-ttu-id="1c70d-110">Скачивание примера</span><span class="sxs-lookup"><span data-stu-id="1c70d-110">Download the example</span></span>
 
-<span data-ttu-id="edfda-111">Скачать полный проект Windows Presentation Foundation (WPF) можно со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea). Затем выполните следующие шаги.</span><span class="sxs-lookup"><span data-stu-id="edfda-111">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>
+<span data-ttu-id="1c70d-111">Скачать полный проект Windows Presentation Foundation (WPF) можно со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea). Затем выполните следующие шаги.</span><span class="sxs-lookup"><span data-stu-id="1c70d-111">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>
 
-1. <span data-ttu-id="edfda-112">Распакуйте загруженный файл, а затем запустите Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="edfda-112">Decompress the file that you downloaded, and then start Visual Studio.</span></span>
+1. <span data-ttu-id="1c70d-112">Распакуйте загруженный файл, а затем запустите Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="1c70d-112">Decompress the file that you downloaded, and then start Visual Studio.</span></span>
 
-2. <span data-ttu-id="edfda-113">В строке меню выберите **Файл** > **Открыть** > **Решение или проект**.</span><span class="sxs-lookup"><span data-stu-id="edfda-113">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
+2. <span data-ttu-id="1c70d-113">В строке меню выберите **Файл** > **Открыть** > **Решение или проект**.</span><span class="sxs-lookup"><span data-stu-id="1c70d-113">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
 
-3. <span data-ttu-id="edfda-114">В диалоговом окне **Открытие проекта** откройте папку с примером кода, который вы распаковали, а затем откройте файл решения (SLN) для AsyncFineTuningCS.</span><span class="sxs-lookup"><span data-stu-id="edfda-114">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningCS.</span></span>
+3. <span data-ttu-id="1c70d-114">В диалоговом окне **Открытие проекта** откройте папку с примером кода, который вы распаковали, а затем откройте файл решения (SLN) для AsyncFineTuningCS.</span><span class="sxs-lookup"><span data-stu-id="1c70d-114">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningCS.</span></span>
 
-4. <span data-ttu-id="edfda-115">В **обозревателе решений** откройте контекстное меню проекта **CancelATask** и выберите команду **Назначить запускаемым проектом**.</span><span class="sxs-lookup"><span data-stu-id="edfda-115">In **Solution Explorer**, open the shortcut menu for the **CancelATask** project, and then choose **Set as StartUp Project**.</span></span>
+4. <span data-ttu-id="1c70d-115">В **обозревателе решений** откройте контекстное меню проекта **CancelATask** и выберите команду **Назначить запускаемым проектом**.</span><span class="sxs-lookup"><span data-stu-id="1c70d-115">In **Solution Explorer**, open the shortcut menu for the **CancelATask** project, and then choose **Set as StartUp Project**.</span></span>
 
-5. <span data-ttu-id="edfda-116">Нажмите клавишу **F5**, чтобы запустить проект (или нажмите клавиши **Ctrl**+**F5**, чтобы запустить проект без отладки).</span><span class="sxs-lookup"><span data-stu-id="edfda-116">Choose the **F5** key to run the project (or, press **Ctrl**+**F5** to run the project without debugging it).</span></span>
+5. <span data-ttu-id="1c70d-116">Нажмите клавишу **F5**, чтобы запустить проект (или нажмите клавиши **Ctrl**+**F5**, чтобы запустить проект без отладки).</span><span class="sxs-lookup"><span data-stu-id="1c70d-116">Choose the **F5** key to run the project (or, press **Ctrl**+**F5** to run the project without debugging it).</span></span>
 
 > [!TIP]
-> <span data-ttu-id="edfda-117">Если не хотите скачивать проект, можете просмотреть файл MainWindow.xaml.cs в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="edfda-117">If you don't want to download the project, you can review the MainWindow.xaml.cs files at the end of this topic.</span></span>
+> <span data-ttu-id="1c70d-117">Если не хотите скачивать проект, можете просмотреть файл MainWindow.xaml.cs в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="1c70d-117">If you don't want to download the project, you can review the MainWindow.xaml.cs files at the end of this topic.</span></span>
 
-### <a name="build-the-example"></a><span data-ttu-id="edfda-118">Сборка примера</span><span class="sxs-lookup"><span data-stu-id="edfda-118">Build the example</span></span>
- <span data-ttu-id="edfda-119">Следующие изменения добавляют кнопку **Отмена** в приложение, загружающее веб-сайт.</span><span class="sxs-lookup"><span data-stu-id="edfda-119">The following changes add a **Cancel** button to an application that downloads a website.</span></span> <span data-ttu-id="edfda-120">Если вы не хотите загружать или собирать пример, просмотрите конечный результат в разделе "Завершенные примеры" в конце раздела.</span><span class="sxs-lookup"><span data-stu-id="edfda-120">If you don't want to download or build the example, you can review the final product in the "Complete Examples" section at the end of this topic.</span></span> <span data-ttu-id="edfda-121">Звездочками отмечены изменения в коде.</span><span class="sxs-lookup"><span data-stu-id="edfda-121">Asterisks mark the changes in the code.</span></span>
+### <a name="build-the-example"></a><span data-ttu-id="1c70d-118">Сборка примера</span><span class="sxs-lookup"><span data-stu-id="1c70d-118">Build the example</span></span>
+ <span data-ttu-id="1c70d-119">Следующие изменения добавляют кнопку **Отмена** в приложение, загружающее веб-сайт.</span><span class="sxs-lookup"><span data-stu-id="1c70d-119">The following changes add a **Cancel** button to an application that downloads a website.</span></span> <span data-ttu-id="1c70d-120">Если вы не хотите загружать или собирать пример, просмотрите конечный результат в разделе "Завершенные примеры" в конце раздела.</span><span class="sxs-lookup"><span data-stu-id="1c70d-120">If you don't want to download or build the example, you can review the final product in the "Complete Examples" section at the end of this topic.</span></span> <span data-ttu-id="1c70d-121">Звездочками отмечены изменения в коде.</span><span class="sxs-lookup"><span data-stu-id="1c70d-121">Asterisks mark the changes in the code.</span></span>
 
- <span data-ttu-id="edfda-122">Для самостоятельной сборки примера шаг за шагом выполните инструкции в разделе "Загрузка примера", но в качестве **запускаемого проекта** выберите проект **StarterCode**, а не **CancelATask**.</span><span class="sxs-lookup"><span data-stu-id="edfda-122">To build the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **StarterCode** as the **StartUp Project** instead of **CancelATask**.</span></span>
+ <span data-ttu-id="1c70d-122">Для самостоятельной сборки примера шаг за шагом выполните инструкции в разделе "Загрузка примера", но в качестве **запускаемого проекта** выберите проект **StarterCode**, а не **CancelATask**.</span><span class="sxs-lookup"><span data-stu-id="1c70d-122">To build the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **StarterCode** as the **StartUp Project** instead of **CancelATask**.</span></span>
 
- <span data-ttu-id="edfda-123">Внесите в файл MainWindow.xaml.cs проекта указанные ниже изменения.</span><span class="sxs-lookup"><span data-stu-id="edfda-123">Then add the following changes to the MainWindow.xaml.cs file of that project.</span></span>
+ <span data-ttu-id="1c70d-123">Внесите в файл MainWindow.xaml.cs проекта указанные ниже изменения.</span><span class="sxs-lookup"><span data-stu-id="1c70d-123">Then add the following changes to the MainWindow.xaml.cs file of that project.</span></span>
 
-1. <span data-ttu-id="edfda-124">Объявите переменную `CancellationTokenSource`, `cts`, которая находится в области действия всех методов, имеющих к ней доступ.</span><span class="sxs-lookup"><span data-stu-id="edfda-124">Declare a `CancellationTokenSource` variable, `cts`, that’s in scope for all methods that access it.</span></span>
+1. <span data-ttu-id="1c70d-124">Объявите переменную `CancellationTokenSource`, `cts`, которая находится в области действия всех методов, имеющих к ней доступ.</span><span class="sxs-lookup"><span data-stu-id="1c70d-124">Declare a `CancellationTokenSource` variable, `cts`, that’s in scope for all methods that access it.</span></span>
 
     ```csharp
     public partial class MainWindow : Window
@@ -55,7 +55,7 @@ ms.locfileid: "59295748"
         CancellationTokenSource cts;
     ```
 
-2. <span data-ttu-id="edfda-125">Добавьте следующий обработчик событий для кнопки **Отмена**.</span><span class="sxs-lookup"><span data-stu-id="edfda-125">Add the following event handler for the **Cancel** button.</span></span> <span data-ttu-id="edfda-126">Этот обработчик событий использует метод <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> для отправки уведомления в `cts` при запросе отмены пользователем.</span><span class="sxs-lookup"><span data-stu-id="edfda-126">The event handler uses the <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> method to notify `cts` when the user requests cancellation.</span></span>
+2. <span data-ttu-id="1c70d-125">Добавьте следующий обработчик событий для кнопки **Отмена**.</span><span class="sxs-lookup"><span data-stu-id="1c70d-125">Add the following event handler for the **Cancel** button.</span></span> <span data-ttu-id="1c70d-126">Этот обработчик событий использует метод <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> для отправки уведомления в `cts` при запросе отмены пользователем.</span><span class="sxs-lookup"><span data-stu-id="1c70d-126">The event handler uses the <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> method to notify `cts` when the user requests cancellation.</span></span>
 
     ```csharp
     // ***Add an event handler for the Cancel button.
@@ -68,16 +68,16 @@ ms.locfileid: "59295748"
     }
     ```
 
-3. <span data-ttu-id="edfda-127">Внесите в обработчик событий указанные ниже изменения для кнопки **Пуск**, `startButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="edfda-127">Make the following changes in the event handler for the **Start** button, `startButton_Click`.</span></span>
+3. <span data-ttu-id="1c70d-127">Внесите в обработчик событий указанные ниже изменения для кнопки **Пуск**, `startButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="1c70d-127">Make the following changes in the event handler for the **Start** button, `startButton_Click`.</span></span>
 
-    -   <span data-ttu-id="edfda-128">Создайте экземпляр `CancellationTokenSource`, `cts`.</span><span class="sxs-lookup"><span data-stu-id="edfda-128">Instantiate the `CancellationTokenSource`, `cts`.</span></span>
+    - <span data-ttu-id="1c70d-128">Создайте экземпляр `CancellationTokenSource`, `cts`.</span><span class="sxs-lookup"><span data-stu-id="1c70d-128">Instantiate the `CancellationTokenSource`, `cts`.</span></span>
 
         ```csharp
         // ***Instantiate the CancellationTokenSource.
         cts = new CancellationTokenSource();
         ```
 
-    -   <span data-ttu-id="edfda-129">В вызове `AccessTheWebAsync`, который скачивает содержимое заданного веб-сайта, отправьте свойство <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> объекта `cts` в качестве аргумента.</span><span class="sxs-lookup"><span data-stu-id="edfda-129">In the call to `AccessTheWebAsync`, which downloads the contents of a specified website, send the <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> property of `cts` as an argument.</span></span> <span data-ttu-id="edfda-130">Если запрашивается отмена, свойство `Token` распространяет сообщение.</span><span class="sxs-lookup"><span data-stu-id="edfda-130">The `Token` property propagates the message if cancellation is requested.</span></span> <span data-ttu-id="edfda-131">Добавьте блок catch, который отображает сообщение в случае, если пользователь решает отменить операцию загрузки.</span><span class="sxs-lookup"><span data-stu-id="edfda-131">Add a catch block that displays a message if the user chooses to cancel the download operation.</span></span> <span data-ttu-id="edfda-132">Эти изменения показаны в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="edfda-132">The following code shows the changes.</span></span>
+    - <span data-ttu-id="1c70d-129">В вызове `AccessTheWebAsync`, который скачивает содержимое заданного веб-сайта, отправьте свойство <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> объекта `cts` в качестве аргумента.</span><span class="sxs-lookup"><span data-stu-id="1c70d-129">In the call to `AccessTheWebAsync`, which downloads the contents of a specified website, send the <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> property of `cts` as an argument.</span></span> <span data-ttu-id="1c70d-130">Если запрашивается отмена, свойство `Token` распространяет сообщение.</span><span class="sxs-lookup"><span data-stu-id="1c70d-130">The `Token` property propagates the message if cancellation is requested.</span></span> <span data-ttu-id="1c70d-131">Добавьте блок catch, который отображает сообщение в случае, если пользователь решает отменить операцию загрузки.</span><span class="sxs-lookup"><span data-stu-id="1c70d-131">Add a catch block that displays a message if the user chooses to cancel the download operation.</span></span> <span data-ttu-id="1c70d-132">Эти изменения показаны в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="1c70d-132">The following code shows the changes.</span></span>
 
         ```csharp
         try
@@ -97,9 +97,9 @@ ms.locfileid: "59295748"
         }
         ```
 
-4. <span data-ttu-id="edfda-133">В `AccessTheWebAsync` используйте перегрузку <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> метода `GetAsync` в типе <xref:System.Net.Http.HttpClient> для скачивания содержимого веб-сайта.</span><span class="sxs-lookup"><span data-stu-id="edfda-133">In `AccessTheWebAsync`, use the  <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> overload of the `GetAsync` method in the <xref:System.Net.Http.HttpClient> type to download the contents of a website.</span></span> <span data-ttu-id="edfda-134">Передайте `ct` параметр <xref:System.Threading.CancellationToken> метода `AccessTheWebAsync` в качестве второго аргумента.</span><span class="sxs-lookup"><span data-stu-id="edfda-134">Pass `ct`, the <xref:System.Threading.CancellationToken> parameter of `AccessTheWebAsync`, as the second argument.</span></span> <span data-ttu-id="edfda-135">Благодаря токену, если пользователь нажмет кнопку **Отмена**, будет выведено соответствующее сообщение.</span><span class="sxs-lookup"><span data-stu-id="edfda-135">The token carries the message if the user chooses the **Cancel** button.</span></span>
+4. <span data-ttu-id="1c70d-133">В `AccessTheWebAsync` используйте перегрузку <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> метода `GetAsync` в типе <xref:System.Net.Http.HttpClient> для скачивания содержимого веб-сайта.</span><span class="sxs-lookup"><span data-stu-id="1c70d-133">In `AccessTheWebAsync`, use the  <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> overload of the `GetAsync` method in the <xref:System.Net.Http.HttpClient> type to download the contents of a website.</span></span> <span data-ttu-id="1c70d-134">Передайте `ct` параметр <xref:System.Threading.CancellationToken> метода `AccessTheWebAsync` в качестве второго аргумента.</span><span class="sxs-lookup"><span data-stu-id="1c70d-134">Pass `ct`, the <xref:System.Threading.CancellationToken> parameter of `AccessTheWebAsync`, as the second argument.</span></span> <span data-ttu-id="1c70d-135">Благодаря токену, если пользователь нажмет кнопку **Отмена**, будет выведено соответствующее сообщение.</span><span class="sxs-lookup"><span data-stu-id="1c70d-135">The token carries the message if the user chooses the **Cancel** button.</span></span>
 
-     <span data-ttu-id="edfda-136">Эти изменения в `AccessTheWebAsync` показаны в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="edfda-136">The following code shows the changes in `AccessTheWebAsync`.</span></span>
+     <span data-ttu-id="1c70d-136">Эти изменения в `AccessTheWebAsync` показаны в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="1c70d-136">The following code shows the changes in `AccessTheWebAsync`.</span></span>
 
     ```csharp
     // ***Provide a parameter for the CancellationToken.
@@ -124,47 +124,47 @@ ms.locfileid: "59295748"
     }
     ```
 
-5. <span data-ttu-id="edfda-137">Если программа не отменяется, она выдает представленный ниже результат.</span><span class="sxs-lookup"><span data-stu-id="edfda-137">If you don’t cancel the program, it produces the following output.</span></span>
+5. <span data-ttu-id="1c70d-137">Если программа не отменяется, она выдает представленный ниже результат.</span><span class="sxs-lookup"><span data-stu-id="1c70d-137">If you don’t cancel the program, it produces the following output.</span></span>
 
     ```text
     Ready to download.
     Length of the downloaded string: 158125.
     ```
 
-     <span data-ttu-id="edfda-138">Если вы нажмете кнопку **Отмена**, прежде чем программа завершит загрузку содержимого, будет выдан представленный ниже результат.</span><span class="sxs-lookup"><span data-stu-id="edfda-138">If you choose the **Cancel** button before the program finishes downloading the content, the program produces the following output.</span></span>
+     <span data-ttu-id="1c70d-138">Если вы нажмете кнопку **Отмена**, прежде чем программа завершит загрузку содержимого, будет выдан представленный ниже результат.</span><span class="sxs-lookup"><span data-stu-id="1c70d-138">If you choose the **Cancel** button before the program finishes downloading the content, the program produces the following output.</span></span>
 
     ```text
     Ready to download.
     Download canceled.
     ```
 
-## <a name="cancel-a-list-of-tasks"></a><span data-ttu-id="edfda-139">Отмена списка задач</span><span class="sxs-lookup"><span data-stu-id="edfda-139">Cancel a list of tasks</span></span>
+## <a name="cancel-a-list-of-tasks"></a><span data-ttu-id="1c70d-139">Отмена списка задач</span><span class="sxs-lookup"><span data-stu-id="1c70d-139">Cancel a list of tasks</span></span>
 
-<span data-ttu-id="edfda-140">Вы можете расширить предыдущий пример до отмены сразу нескольких задач, связав с каждой из них один и тот же экземпляр `CancellationTokenSource`.</span><span class="sxs-lookup"><span data-stu-id="edfda-140">You can extend the previous example to cancel many tasks by associating the same `CancellationTokenSource` instance with each task.</span></span> <span data-ttu-id="edfda-141">В этом случае кнопка **Отмена** отменяет сразу все незавершенные задачи.</span><span class="sxs-lookup"><span data-stu-id="edfda-141">If you choose the **Cancel** button, you cancel all tasks that aren’t yet complete.</span></span>
+<span data-ttu-id="1c70d-140">Вы можете расширить предыдущий пример до отмены сразу нескольких задач, связав с каждой из них один и тот же экземпляр `CancellationTokenSource`.</span><span class="sxs-lookup"><span data-stu-id="1c70d-140">You can extend the previous example to cancel many tasks by associating the same `CancellationTokenSource` instance with each task.</span></span> <span data-ttu-id="1c70d-141">В этом случае кнопка **Отмена** отменяет сразу все незавершенные задачи.</span><span class="sxs-lookup"><span data-stu-id="1c70d-141">If you choose the **Cancel** button, you cancel all tasks that aren’t yet complete.</span></span>
 
-### <a name="download-the-example"></a><span data-ttu-id="edfda-142">Скачивание примера</span><span class="sxs-lookup"><span data-stu-id="edfda-142">Download the example</span></span>
+### <a name="download-the-example"></a><span data-ttu-id="1c70d-142">Скачивание примера</span><span class="sxs-lookup"><span data-stu-id="1c70d-142">Download the example</span></span>
 
-<span data-ttu-id="edfda-143">Скачать полный проект Windows Presentation Foundation (WPF) можно со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea). Затем выполните следующие шаги.</span><span class="sxs-lookup"><span data-stu-id="edfda-143">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>
+<span data-ttu-id="1c70d-143">Скачать полный проект Windows Presentation Foundation (WPF) можно со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea). Затем выполните следующие шаги.</span><span class="sxs-lookup"><span data-stu-id="1c70d-143">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>
 
-1. <span data-ttu-id="edfda-144">Распакуйте загруженный файл, а затем запустите Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="edfda-144">Decompress the file that you downloaded, and then start Visual Studio.</span></span>
+1. <span data-ttu-id="1c70d-144">Распакуйте загруженный файл, а затем запустите Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="1c70d-144">Decompress the file that you downloaded, and then start Visual Studio.</span></span>
 
-2. <span data-ttu-id="edfda-145">В строке меню выберите **Файл** > **Открыть** > **Решение или проект**.</span><span class="sxs-lookup"><span data-stu-id="edfda-145">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
+2. <span data-ttu-id="1c70d-145">В строке меню выберите **Файл** > **Открыть** > **Решение или проект**.</span><span class="sxs-lookup"><span data-stu-id="1c70d-145">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
 
-3. <span data-ttu-id="edfda-146">В диалоговом окне **Открытие проекта** откройте папку с примером кода, который вы распаковали, а затем откройте файл решения (SLN) для AsyncFineTuningCS.</span><span class="sxs-lookup"><span data-stu-id="edfda-146">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningCS.</span></span>
+3. <span data-ttu-id="1c70d-146">В диалоговом окне **Открытие проекта** откройте папку с примером кода, который вы распаковали, а затем откройте файл решения (SLN) для AsyncFineTuningCS.</span><span class="sxs-lookup"><span data-stu-id="1c70d-146">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningCS.</span></span>
 
-4. <span data-ttu-id="edfda-147">В **обозревателе решений** откройте контекстное меню проекта **CancelAListOfTasks** и выберите команду **Назначить запускаемым проектом**.</span><span class="sxs-lookup"><span data-stu-id="edfda-147">In **Solution Explorer**, open the shortcut menu for the **CancelAListOfTasks** project, and then choose **Set as StartUp Project**.</span></span>
+4. <span data-ttu-id="1c70d-147">В **обозревателе решений** откройте контекстное меню проекта **CancelAListOfTasks** и выберите команду **Назначить запускаемым проектом**.</span><span class="sxs-lookup"><span data-stu-id="1c70d-147">In **Solution Explorer**, open the shortcut menu for the **CancelAListOfTasks** project, and then choose **Set as StartUp Project**.</span></span>
 
-5. <span data-ttu-id="edfda-148">Нажмите клавишу **F5**, чтобы запустить проект.</span><span class="sxs-lookup"><span data-stu-id="edfda-148">Choose the **F5** key to run the project.</span></span>
+5. <span data-ttu-id="1c70d-148">Нажмите клавишу **F5**, чтобы запустить проект.</span><span class="sxs-lookup"><span data-stu-id="1c70d-148">Choose the **F5** key to run the project.</span></span>
 
-     <span data-ttu-id="edfda-149">Нажмите клавиши **CTRL**+**F5**, чтобы запустить проект без отладки.</span><span class="sxs-lookup"><span data-stu-id="edfda-149">Choose the **Ctrl**+**F5** keys to run the project without debugging it.</span></span>
+     <span data-ttu-id="1c70d-149">Нажмите клавиши **CTRL**+**F5**, чтобы запустить проект без отладки.</span><span class="sxs-lookup"><span data-stu-id="1c70d-149">Choose the **Ctrl**+**F5** keys to run the project without debugging it.</span></span>
 
-<span data-ttu-id="edfda-150">Если не хотите скачивать проект, можете просмотреть файл MainWindow.xaml.cs в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="edfda-150">If you don't want to download the project, you can review the MainWindow.xaml.cs files at the end of this topic.</span></span>
+<span data-ttu-id="1c70d-150">Если не хотите скачивать проект, можете просмотреть файл MainWindow.xaml.cs в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="1c70d-150">If you don't want to download the project, you can review the MainWindow.xaml.cs files at the end of this topic.</span></span>
 
-### <a name="build-the-example"></a><span data-ttu-id="edfda-151">Сборка примера</span><span class="sxs-lookup"><span data-stu-id="edfda-151">Build the example</span></span>
+### <a name="build-the-example"></a><span data-ttu-id="1c70d-151">Сборка примера</span><span class="sxs-lookup"><span data-stu-id="1c70d-151">Build the example</span></span>
 
-<span data-ttu-id="edfda-152">Для самостоятельного построения примера шаг за шагом выполните инструкции в разделе "Загрузка примера", но выберите **CancelATask** как **запускаемый проект**.</span><span class="sxs-lookup"><span data-stu-id="edfda-152">To extend the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **CancelATask** as the **StartUp Project**.</span></span> <span data-ttu-id="edfda-153">Добавьте в проект указанные ниже изменения.</span><span class="sxs-lookup"><span data-stu-id="edfda-153">Add the following changes to that project.</span></span> <span data-ttu-id="edfda-154">Звездочками отмечены изменения в программе.</span><span class="sxs-lookup"><span data-stu-id="edfda-154">Asterisks mark the changes in the program.</span></span>
+<span data-ttu-id="1c70d-152">Для самостоятельного построения примера шаг за шагом выполните инструкции в разделе "Загрузка примера", но выберите **CancelATask** как **запускаемый проект**.</span><span class="sxs-lookup"><span data-stu-id="1c70d-152">To extend the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **CancelATask** as the **StartUp Project**.</span></span> <span data-ttu-id="1c70d-153">Добавьте в проект указанные ниже изменения.</span><span class="sxs-lookup"><span data-stu-id="1c70d-153">Add the following changes to that project.</span></span> <span data-ttu-id="1c70d-154">Звездочками отмечены изменения в программе.</span><span class="sxs-lookup"><span data-stu-id="1c70d-154">Asterisks mark the changes in the program.</span></span>
 
-1. <span data-ttu-id="edfda-155">Добавьте метод для создания списка веб-адресов.</span><span class="sxs-lookup"><span data-stu-id="edfda-155">Add a method to create a list of web addresses.</span></span>
+1. <span data-ttu-id="1c70d-155">Добавьте метод для создания списка веб-адресов.</span><span class="sxs-lookup"><span data-stu-id="1c70d-155">Add a method to create a list of web addresses.</span></span>
 
     ```csharp
     // ***Add a method that creates a list of web addresses.
@@ -184,14 +184,14 @@ ms.locfileid: "59295748"
     }
     ```
 
-2. <span data-ttu-id="edfda-156">Вызовите метод в `AccessTheWebAsync`.</span><span class="sxs-lookup"><span data-stu-id="edfda-156">Call the method in `AccessTheWebAsync`.</span></span>
+2. <span data-ttu-id="1c70d-156">Вызовите метод в `AccessTheWebAsync`.</span><span class="sxs-lookup"><span data-stu-id="1c70d-156">Call the method in `AccessTheWebAsync`.</span></span>
 
     ```csharp
     // ***Call SetUpURLList to make a list of web addresses.
     List<string> urlList = SetUpURLList();
     ```
 
-3. <span data-ttu-id="edfda-157">Добавьте в `AccessTheWebAsync` следующий цикл для обработки каждого веб-адреса в списке.</span><span class="sxs-lookup"><span data-stu-id="edfda-157">Add the following loop in `AccessTheWebAsync` to process each web address in the list.</span></span>
+3. <span data-ttu-id="1c70d-157">Добавьте в `AccessTheWebAsync` следующий цикл для обработки каждого веб-адреса в списке.</span><span class="sxs-lookup"><span data-stu-id="1c70d-157">Add the following loop in `AccessTheWebAsync` to process each web address in the list.</span></span>
 
     ```csharp
     // ***Add a loop to process the list of web addresses.
@@ -210,19 +210,19 @@ ms.locfileid: "59295748"
     }
     ```
 
-4. <span data-ttu-id="edfda-158">Поскольку `AccessTheWebAsync` отображает длину, метод не должен ничего возвращать.</span><span class="sxs-lookup"><span data-stu-id="edfda-158">Because `AccessTheWebAsync` displays the lengths, the method doesn't need to return anything.</span></span> <span data-ttu-id="edfda-159">Удалите инструкцию return и измените тип возвращаемого значения на <xref:System.Threading.Tasks.Task> вместо <xref:System.Threading.Tasks.Task%601>.</span><span class="sxs-lookup"><span data-stu-id="edfda-159">Remove the return statement, and change the return type of the method to <xref:System.Threading.Tasks.Task> instead of <xref:System.Threading.Tasks.Task%601>.</span></span>
+4. <span data-ttu-id="1c70d-158">Поскольку `AccessTheWebAsync` отображает длину, метод не должен ничего возвращать.</span><span class="sxs-lookup"><span data-stu-id="1c70d-158">Because `AccessTheWebAsync` displays the lengths, the method doesn't need to return anything.</span></span> <span data-ttu-id="1c70d-159">Удалите инструкцию return и измените тип возвращаемого значения на <xref:System.Threading.Tasks.Task> вместо <xref:System.Threading.Tasks.Task%601>.</span><span class="sxs-lookup"><span data-stu-id="1c70d-159">Remove the return statement, and change the return type of the method to <xref:System.Threading.Tasks.Task> instead of <xref:System.Threading.Tasks.Task%601>.</span></span>
 
     ```csharp
     async Task AccessTheWebAsync(CancellationToken ct)
     ```
 
-     <span data-ttu-id="edfda-160">Вызовите метод из `startButton_Click`, используя не выражение, а оператор.</span><span class="sxs-lookup"><span data-stu-id="edfda-160">Call the method from `startButton_Click` by using a statement instead of an expression.</span></span>
+     <span data-ttu-id="1c70d-160">Вызовите метод из `startButton_Click`, используя не выражение, а оператор.</span><span class="sxs-lookup"><span data-stu-id="1c70d-160">Call the method from `startButton_Click` by using a statement instead of an expression.</span></span>
 
     ```csharp
     await AccessTheWebAsync(cts.Token);
     ```
 
-5. <span data-ttu-id="edfda-161">Если программа не отменяется, она выдает представленный ниже результат.</span><span class="sxs-lookup"><span data-stu-id="edfda-161">If you don’t cancel the program, it produces the following output.</span></span>
+5. <span data-ttu-id="1c70d-161">Если программа не отменяется, она выдает представленный ниже результат.</span><span class="sxs-lookup"><span data-stu-id="1c70d-161">If you don’t cancel the program, it produces the following output.</span></span>
 
     ```text
     Length of the downloaded string: 35939.
@@ -242,7 +242,7 @@ ms.locfileid: "59295748"
     Downloads complete.
     ```
 
-     <span data-ttu-id="edfda-162">При нажатии кнопки **Отмена** до завершения загрузки выходные данные будут включать объем данных, загруженных до отмены.</span><span class="sxs-lookup"><span data-stu-id="edfda-162">If you choose the **Cancel** button before the downloads are complete, the output contains the lengths of the downloads that completed before the cancellation.</span></span>
+     <span data-ttu-id="1c70d-162">При нажатии кнопки **Отмена** до завершения загрузки выходные данные будут включать объем данных, загруженных до отмены.</span><span class="sxs-lookup"><span data-stu-id="1c70d-162">If you choose the **Cancel** button before the downloads are complete, the output contains the lengths of the downloads that completed before the cancellation.</span></span>
 
     ```text
     Length of the downloaded string: 35939.
@@ -254,15 +254,15 @@ ms.locfileid: "59295748"
     Downloads canceled.
     ```
 
-## <a name="complete-examples"></a><span data-ttu-id="edfda-163">Полные примеры</span><span class="sxs-lookup"><span data-stu-id="edfda-163">Complete examples</span></span>
+## <a name="complete-examples"></a><span data-ttu-id="1c70d-163">Полные примеры</span><span class="sxs-lookup"><span data-stu-id="1c70d-163">Complete examples</span></span>
 
-<span data-ttu-id="edfda-164">Следующие разделы содержат код каждого из приведенных выше примеров.</span><span class="sxs-lookup"><span data-stu-id="edfda-164">The following sections contain the code for each of the previous examples.</span></span> <span data-ttu-id="edfda-165">Обратите внимание на то, что необходимо добавить ссылку для <xref:System.Net.Http>.</span><span class="sxs-lookup"><span data-stu-id="edfda-165">Notice that you must add a reference for <xref:System.Net.Http>.</span></span>
+<span data-ttu-id="1c70d-164">Следующие разделы содержат код каждого из приведенных выше примеров.</span><span class="sxs-lookup"><span data-stu-id="1c70d-164">The following sections contain the code for each of the previous examples.</span></span> <span data-ttu-id="1c70d-165">Обратите внимание на то, что необходимо добавить ссылку для <xref:System.Net.Http>.</span><span class="sxs-lookup"><span data-stu-id="1c70d-165">Notice that you must add a reference for <xref:System.Net.Http>.</span></span>
 
-<span data-ttu-id="edfda-166">Вы можете скачать проект из статьи c [примером использования async. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span><span class="sxs-lookup"><span data-stu-id="edfda-166">You can download the projects from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span></span>
+<span data-ttu-id="1c70d-166">Вы можете скачать проект из статьи c [примером использования async. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span><span class="sxs-lookup"><span data-stu-id="1c70d-166">You can download the projects from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span></span>
 
-### <a name="example---cancel-a-task"></a><span data-ttu-id="edfda-167">Пример отмены задачи</span><span class="sxs-lookup"><span data-stu-id="edfda-167">Example - Cancel a task</span></span>
+### <a name="example---cancel-a-task"></a><span data-ttu-id="1c70d-167">Пример отмены задачи</span><span class="sxs-lookup"><span data-stu-id="1c70d-167">Example - Cancel a task</span></span>
 
-<span data-ttu-id="edfda-168">Приведенный ниже код представляет собой полный файл MainWindow.xaml.cs, демонстрирующий отмену отдельной задачи.</span><span class="sxs-lookup"><span data-stu-id="edfda-168">The following code is the complete MainWindow.xaml.cs file for the example that cancels a single task.</span></span>
+<span data-ttu-id="1c70d-168">Приведенный ниже код представляет собой полный файл MainWindow.xaml.cs, демонстрирующий отмену отдельной задачи.</span><span class="sxs-lookup"><span data-stu-id="1c70d-168">The following code is the complete MainWindow.xaml.cs file for the example that cancels a single task.</span></span>
 
 ```csharp
 using System;
@@ -371,9 +371,9 @@ namespace CancelATask
 }
 ```
 
-### <a name="example---cancel-a-list-of-tasks"></a><span data-ttu-id="edfda-169">Примеры отмены списка задач</span><span class="sxs-lookup"><span data-stu-id="edfda-169">Example - Cancel a list of tasks</span></span>
+### <a name="example---cancel-a-list-of-tasks"></a><span data-ttu-id="1c70d-169">Примеры отмены списка задач</span><span class="sxs-lookup"><span data-stu-id="1c70d-169">Example - Cancel a list of tasks</span></span>
 
-<span data-ttu-id="edfda-170">Приведенный ниже код представляет собой полный файл MainWindow.xaml.cs, демонстрирующий отмену списка задач.</span><span class="sxs-lookup"><span data-stu-id="edfda-170">The following code is the complete MainWindow.xaml.cs file for the example that cancels a list of tasks.</span></span>
+<span data-ttu-id="1c70d-170">Приведенный ниже код представляет собой полный файл MainWindow.xaml.cs, демонстрирующий отмену списка задач.</span><span class="sxs-lookup"><span data-stu-id="1c70d-170">The following code is the complete MainWindow.xaml.cs file for the example that cancels a list of tasks.</span></span>
 
 ```csharp
 using System;
@@ -517,10 +517,10 @@ namespace CancelAListOfTasks
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="edfda-171">См. также</span><span class="sxs-lookup"><span data-stu-id="edfda-171">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c70d-171">См. также</span><span class="sxs-lookup"><span data-stu-id="1c70d-171">See also</span></span>
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
-- [<span data-ttu-id="edfda-172">Асинхронное программирование с использованием ключевых слов async и await (C#)</span><span class="sxs-lookup"><span data-stu-id="edfda-172">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)
-- <span data-ttu-id="edfda-173">[Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Тонкая настройка асинхронного приложения в C#)</span><span class="sxs-lookup"><span data-stu-id="edfda-173">[Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)</span></span>
-- [<span data-ttu-id="edfda-174">Пример использования Async. Настройка приложения</span><span class="sxs-lookup"><span data-stu-id="edfda-174">Async Sample: Fine Tuning Your Application</span></span>](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [<span data-ttu-id="1c70d-172">Асинхронное программирование с использованием ключевых слов async и await (C#)</span><span class="sxs-lookup"><span data-stu-id="1c70d-172">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)
+- <span data-ttu-id="1c70d-173">[Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Тонкая настройка асинхронного приложения в C#)</span><span class="sxs-lookup"><span data-stu-id="1c70d-173">[Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)</span></span>
+- [<span data-ttu-id="1c70d-174">Пример использования Async. Настройка приложения</span><span class="sxs-lookup"><span data-stu-id="1c70d-174">Async Sample: Fine Tuning Your Application</span></span>](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
