@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], rotating
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
-ms.openlocfilehash: 241d2824fc2d87a0505eb6e790c865bfa7d8ef90
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d251a223fca50eebc3a959ea694242992c4a1dbe
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967381"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590312"
 ---
 # <a name="how-to-rotate-colors"></a>Практическое руководство. Циклический сдвиг цветов
 Поворот в четырехмерный цветовом пространстве сложно представить. Мы можно упростить, если договориться сохранять один из компонентов цвета неизменным. Предположим, что требуется сохранить альфа-компонент, составляет 1 (полностью непрозрачный). Затем мы можете визуализировать трехмерное цветовое пространство с осями красного, зеленого и синего, как показано на следующем рисунке.  
@@ -45,7 +45,7 @@ ms.locfileid: "61967381"
  [!code-vb[System.Drawing.RotateColors#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром обработчика события <xref:System.Windows.Forms.Control.Paint>. Замените `RotationInput.bmp` в вашей системе путь и имя файла изображения.  
+ Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий. Замените `RotationInput.bmp` в вашей системе путь и имя файла изображения.  
   
 ## <a name="see-also"></a>См. также
 

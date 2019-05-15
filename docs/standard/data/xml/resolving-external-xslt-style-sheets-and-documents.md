@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91d4e5bf3846dc2859c519227c0dee2c9d36343c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31143e17eec097cc67dff0cfffeb628f8a0b2127
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609464"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590076"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Разрешение внешних таблиц стилей XSLT и документов
 В некоторых случаях в процессе преобразования может потребоваться разрешение внешних ресурсов.  
@@ -20,11 +20,11 @@ ms.locfileid: "54609464"
   
  В некоторых случаях в процессе преобразования может потребоваться разрешение внешних ресурсов.  
   
--   При использовании метода <xref:System.Xml.Xsl.XslTransform.Load%2A>, чтобы обнаружить внешнюю таблицу стилей.  
+- При использовании метода <xref:System.Xml.Xsl.XslTransform.Load%2A>, чтобы обнаружить внешнюю таблицу стилей.  
   
--   При использовании метода <xref:System.Xml.Xsl.XslTransform.Load%2A>, чтобы разрешить любые элементы `<xsl:include>` или `<xsl:import>`, обнаруженные в таблице стилей.  
+- При использовании метода <xref:System.Xml.Xsl.XslTransform.Load%2A>, чтобы разрешить любые элементы `<xsl:include>` или `<xsl:import>`, обнаруженные в таблице стилей.  
   
--   При использовании метода <xref:System.Xml.Xsl.XslTransform.Transform%2A>, чтобы разрешить любые функции `document()`.  
+- При использовании метода <xref:System.Xml.Xsl.XslTransform.Transform%2A>, чтобы разрешить любые функции `document()`.  
   
 ## <a name="using-the-xmlresolver-class"></a>Использование класса XmlResolver  
  Если для проверки подлинности требуется доступ к сетевому ресурсу, используйте методы <xref:System.Xml.Xsl.XslTransform.Load%2A> с параметром <xref:System.Xml.XmlResolver>, чтобы передать объект <xref:System.Xml.XmlResolver> с набором необходимых свойств учетных данных.  

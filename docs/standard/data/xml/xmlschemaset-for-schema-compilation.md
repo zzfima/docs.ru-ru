@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e56680a74bc6800242ff56d27bcf179ee372df74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 742f031961a24475d67718c595431e36bfca8c22
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579593"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615370"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>XmlSchemaSet для компиляции схемы
 Описывает класс <xref:System.Xml.Schema.XmlSchemaSet>, который представляет собой кэш, в котором можно хранить и проверять схемы XSD.  
@@ -37,9 +37,9 @@ ms.locfileid: "54579593"
 ## <a name="migrating-to-the-xmlschemaset"></a>Переход на класс XmlSchemaSet  
  В следующем примере кода даны инструкции по переходу на новый класс <xref:System.Xml.Schema.XmlSchemaSet> с устаревшего класса <xref:System.Xml.Schema.XmlSchemaCollection>. В примере кода показаны следующие важные различия между двумя классами.  
   
--   В отличие от метода <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> класса <xref:System.Xml.Schema.XmlSchemaCollection>, при вызове метода <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> класса <xref:System.Xml.Schema.XmlSchemaSet> схемы не компилируются. В примере кода явно вызывается метод <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> класса <xref:System.Xml.Schema.XmlSchemaSet>.  
+- В отличие от метода <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> класса <xref:System.Xml.Schema.XmlSchemaCollection>, при вызове метода <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> класса <xref:System.Xml.Schema.XmlSchemaSet> схемы не компилируются. В примере кода явно вызывается метод <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> класса <xref:System.Xml.Schema.XmlSchemaSet>.  
   
--   Для итераций по классу <xref:System.Xml.Schema.XmlSchemaSet> необходимо использовать свойство <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> класса <xref:System.Xml.Schema.XmlSchemaSet>.  
+- Для итераций по классу <xref:System.Xml.Schema.XmlSchemaSet> необходимо использовать свойство <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> класса <xref:System.Xml.Schema.XmlSchemaSet>.  
   
  Пример устаревшего кода с классом <xref:System.Xml.Schema.XmlSchemaCollection>.  
   

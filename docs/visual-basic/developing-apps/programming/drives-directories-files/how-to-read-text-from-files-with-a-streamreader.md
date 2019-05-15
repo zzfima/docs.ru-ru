@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Чтение текста из файлов с помощью StreamReader (Visual Basic)
+title: Практическое руководство. Чтение текста из файлов с помощью StreamReader (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - reading files [Visual Basic], text
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - reading text from files [Visual Basic]
 - files [Visual Basic], reading
 ms.assetid: 384033c6-18f9-4d59-9610-36371226558f
-ms.openlocfilehash: d05590b3c36070c91b6d5e50defd71df133fb7d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5631b402743a7be19428d15f55fbaa78b5b90668
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824979"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623357"
 ---
-# <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>Как выполнить Чтение текста из файлов с помощью StreamReader (Visual Basic)
+# <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>Практическое руководство. Чтение текста из файлов с помощью StreamReader (Visual Basic)
 Объект `My.Computer.FileSystem` предоставляет методы для открытия <xref:System.IO.TextReader> и <xref:System.IO.TextWriter>. Методы `OpenTextFileWriter` и `OpenTextFileReader` являются дополнительными методами и отображаются в IntelliSense, только если выбрана вкладка **Все**.  
   
 ### <a name="to-read-a-line-from-a-file-with-a-text-reader"></a>Чтение строки из файла с помощью средства чтения текста  
   
--   Используйте `OpenTextFileReader` метод, чтобы открыть <xref:System.IO.TextReader>, указав файл. В этом примере открывается файл с именем `testfile.txt`, считывается строка из него и отображается в окне сообщения.  
+- Используйте `OpenTextFileReader` метод, чтобы открыть <xref:System.IO.TextReader>, указав файл. В этом примере открывается файл с именем `testfile.txt`, считывается строка из него и отображается в окне сообщения.  
   
      [!code-vb[VbFileIORead#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#1)]  
   

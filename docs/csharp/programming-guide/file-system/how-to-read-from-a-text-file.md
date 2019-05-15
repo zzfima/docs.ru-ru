@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Руководство по программированию на C#. Чтение из текстового файла
+title: Практическое руководство. Руководство по программированию на C#. Чтение из текстового файла
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 560453a81124a3ee52a2ffd794ddac026c7394a5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 236e730eaae0bc73c715e9b1c2c71d6c870d78e3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978024"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608538"
 ---
-# <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Чтение из текстового файла
+# <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Чтение из текстового файла
 В этом примере считывается содержимое текстового файла с помощью статических методов <xref:System.IO.File.ReadAllText%2A> и <xref:System.IO.File.ReadAllLines%2A> из класса <xref:System.IO.File?displayProperty=nameWithType>.  
   
  Пример использования <xref:System.IO.StreamReader> см. в практическом руководстве по [ построчному чтению текстового файла](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "56978024"
 ## <a name="robust-programming"></a>Отказоустойчивость  
  При следующих условиях возможно возникновение исключения:  
   
--   Файл не существует или не существует в указанном месте. Проверьте правильность написания имени файла и путь к нему.  
+- Файл не существует или не существует в указанном месте. Проверьте правильность написания имени файла и путь к нему.  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Не следует полагаться на имя файла, чтобы определить содержимое файла. Например, файл `myFile.cs` может вовсе не быть исходным файлом C#.  

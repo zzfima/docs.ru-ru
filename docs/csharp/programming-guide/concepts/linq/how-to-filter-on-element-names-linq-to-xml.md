@@ -1,21 +1,21 @@
 ---
-title: Как выполнить Фильтрация по именам элементов (LINQ to XML) (C#)
+title: Практическое руководство. Фильтрация по именам элементов (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
-ms.openlocfilehash: 586c371fdd014eee6eb21563214d9e26a0e264fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20aeae636df35fa156bb7dd1019dd65bcd9e8532
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540784"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597091"
 ---
-# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>Как выполнить Фильтрация по именам элементов (LINQ to XML) (C#)
+# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>Практическое руководство. Фильтрация по именам элементов (LINQ to XML) (C#)
 При вызове одного из методов, возвращающих коллекцию <xref:System.Collections.Generic.IEnumerable%601> элементов <xref:System.Xml.Linq.XElement>, можно осуществить фильтрацию по именам элементов.  
   
 ## <a name="example"></a>Пример  
  В этом примере показано получение отфильтрованной коллекции потомков, в которой содержатся только потомки с указанным именем.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  
@@ -35,19 +35,19 @@ ProductName:Baby Monitor
   
  В других методах, возвращающих коллекции <xref:System.Collections.Generic.IEnumerable%601> элементов <xref:System.Xml.Linq.XElement>, заложен тот же принцип. Их сигнатуры подобны <xref:System.Xml.Linq.XContainer.Elements%2A> и <xref:System.Xml.Linq.XContainer.Descendants%2A>. Ниже следует полный список методов, имеющих аналогичные сигнатурам методов:  
   
--   <xref:System.Xml.Linq.XNode.Ancestors%2A>  
+- <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
--   <xref:System.Xml.Linq.XContainer.Descendants%2A>  
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
   
--   <xref:System.Xml.Linq.XContainer.Elements%2A>  
+- <xref:System.Xml.Linq.XContainer.Elements%2A>  
   
--   <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
+- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
   
--   <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>  
+- <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>  
   
--   <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>  
+- <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>  
   
--   <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
+- <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
   
 ## <a name="example"></a>Пример  
  Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен. Дополнительные сведения см. в разделе [Работа с пространствами имен XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  

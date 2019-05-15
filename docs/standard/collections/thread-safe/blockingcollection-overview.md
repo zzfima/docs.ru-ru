@@ -10,35 +10,35 @@ helpviewer_keywords:
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abf6f193f97319db0cdff7e2a33846cdf011fbdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07dbffff9f3d93a33fa458fb9c2f16e64aeaf977
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674002"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664550"
 ---
 # <a name="blockingcollection-overview"></a>Общие сведения о коллекции BlockingCollection
 <xref:System.Collections.Concurrent.BlockingCollection%601> — это потокобезопасный класс коллекции, обеспечивающий следующие возможности:  
   
--   реализует шаблон "производитель-получатель";  
+- реализует шаблон "производитель-получатель";  
   
--   поддерживает параллельное добавление и извлечение элементов из нескольких потоков;  
+- поддерживает параллельное добавление и извлечение элементов из нескольких потоков;  
   
--   допускает указание максимальной емкости;  
+- допускает указание максимальной емкости;  
   
--   поддерживает операции вставки и удаления, блокирующиеся при опустошении или заполнении коллекции;  
+- поддерживает операции вставки и удаления, блокирующиеся при опустошении или заполнении коллекции;  
   
--   поддерживает условные операции вставки и удалении, не блокирующиеся или блокирующиеся лишь на определенное время;  
+- поддерживает условные операции вставки и удалении, не блокирующиеся или блокирующиеся лишь на определенное время;  
   
--   инкапсулирует все типы коллекций, реализующие интерфейс <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>;  
+- инкапсулирует все типы коллекций, реализующие интерфейс <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>;  
   
--   поддерживает отмену с помощью токенов отмены;  
+- поддерживает отмену с помощью токенов отмены;  
   
--   поддерживает два вида перечисления с помощью оператора `foreach` (`For Each` в Visual Basic):  
+- поддерживает два вида перечисления с помощью оператора `foreach` (`For Each` в Visual Basic):  
   
-    1.  перечисление "только для чтения";  
+    1. перечисление "только для чтения";  
   
-    2.  перечисление, при котором элементы по мере перечисления удаляются.  
+    2. перечисление, при котором элементы по мере перечисления удаляются.  
   
 ## <a name="bounding-and-blocking-support"></a>Поддержка границ и блокировки  
  <xref:System.Collections.Concurrent.BlockingCollection%601> поддерживает границы и блокировку. Поддержка границ означает возможность задать максимальную емкость коллекции. Границы важны в ряде сценариев, поскольку они позволяют контролировать максимальный размер коллекции в памяти, предотвращая ситуации, в которых потоки-создатели слишком сильно обгоняют потоки-потребители.  
@@ -72,13 +72,13 @@ Dim bc = New BlockingCollection(Of String)(New ConcurrentBag(Of String()), 1000)
 BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag<string>(), 1000 );  
 ```  
   
- Дополнительные сведения см. в разделе [Как Добавление функций границы и блокировки в коллекцию](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md).  
+ Дополнительные сведения см. в разделе [Практическое руководство. Добавление функций границы и блокировки в коллекцию](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md).  
   
 ## <a name="ienumerable-support"></a>Поддержка интерфейса IEnumerable  
- <xref:System.Collections.Concurrent.BlockingCollection%601> предоставляет метод <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A>, позволяющий потребителям использовать оператор `foreach` (`For Each` в Visual Basic) для удаления элементов коллекции до тех пор, пока коллекция не будет исчерпана (то есть достигнет состояния, в котором коллекция пуста и новые элементы не будут добавляться). Дополнительные сведения см. в разделе [Как Использование оператора ForEach для удаления элементов в коллекции BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).  
+ <xref:System.Collections.Concurrent.BlockingCollection%601> предоставляет метод <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A>, позволяющий потребителям использовать оператор `foreach` (`For Each` в Visual Basic) для удаления элементов коллекции до тех пор, пока коллекция не будет исчерпана (то есть достигнет состояния, в котором коллекция пуста и новые элементы не будут добавляться). Дополнительные сведения см. в разделе [Практическое руководство. Использование оператора ForEach для удаления элементов в коллекции BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).  
   
 ## <a name="using-many-blockingcollections-as-one"></a>Использование нескольких коллекций BlockingCollection в качестве одной коллекции  
- В сценариях, где потребителю необходимо одновременно извлекать элементы из нескольких коллекций, можно создавать массивы <xref:System.Collections.Concurrent.BlockingCollection%601> и использовать такие статические методы, как <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> и <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A>, позволяющие добавлять и извлекать элементы любой коллекции в массиве. Если одна из коллекций заблокирована, метод немедленно переходит к другой, пока не найдет коллекцию, способную выполнить операцию. Дополнительные сведения см. в разделе [Как Использование массивов для блокировки коллекций в конвейере](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md).  
+ В сценариях, где потребителю необходимо одновременно извлекать элементы из нескольких коллекций, можно создавать массивы <xref:System.Collections.Concurrent.BlockingCollection%601> и использовать такие статические методы, как <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> и <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A>, позволяющие добавлять и извлекать элементы любой коллекции в массиве. Если одна из коллекций заблокирована, метод немедленно переходит к другой, пока не найдет коллекцию, способную выполнить операцию. Дополнительные сведения см. в разделе [Практическое руководство. Использование массивов для блокировки коллекций в конвейере](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md).  
   
 ## <a name="see-also"></a>См. также
 

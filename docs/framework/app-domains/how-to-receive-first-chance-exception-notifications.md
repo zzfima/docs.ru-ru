@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Получение уведомлений о первом этапе обработки исключений
+title: Практическое руководство. Получение уведомлений о первом этапе обработки исключений
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6f70b4c67de892c3b66a0099dae9f618a99b3f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3009bf9eb24c44cedc4021f3d09f1707ae2e40d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770494"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593596"
 ---
-# <a name="how-to-receive-first-chance-exception-notifications"></a>Как выполнить Получение уведомлений о первом этапе обработки исключений
+# <a name="how-to-receive-first-chance-exception-notifications"></a>Практическое руководство. Получение уведомлений о первом этапе обработки исключений
 Событие <xref:System.AppDomain.FirstChanceException> класса <xref:System.AppDomain> позволяет получать уведомления о порождении исключений до того, как среда CLR начнет искать обработчики исключений.
 
  Событие возникает на уровне домена приложения. Поток выполнения может проходить несколько доменов приложения, поэтому необработанное в одном домене исключение может быть обработано в другом домене. Уведомление происходит во всех доменах приложения, добавивших обработчик для этого события, пока исключение не будет обработано.
@@ -100,7 +100,7 @@ ms.locfileid: "59770494"
 
 ## <a name="compiling-the-code"></a>Компиляция кода
 
--   Этот пример представляет собой приложение командной строки. Чтобы скомпилировать и выполнить этот код в Visual Studio, добавьте код на C# `Console.ReadLine();` (в Visual Basic — `Console.ReadLine()`) в конец метода `Main()`, чтобы предотвратить закрытие командного окна до того, как вы успеете прочитать выходные данные.
+- Этот пример представляет собой приложение командной строки. Чтобы скомпилировать и выполнить этот код в Visual Studio, добавьте код на C# `Console.ReadLine();` (в Visual Basic — `Console.ReadLine()`) в конец метода `Main()`, чтобы предотвратить закрытие командного окна до того, как вы успеете прочитать выходные данные.
 
 ## <a name="see-also"></a>См. также
 

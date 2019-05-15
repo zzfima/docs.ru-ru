@@ -19,12 +19,12 @@ ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: f0e42c0032dc6f9dac0895a29db9de79547c0a49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85e971d3464b6f2a073288e7f8b5406563598f79
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675376"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634757"
 ---
 # <a name="anchors-in-regular-expressions"></a>Привязки в регулярных выражениях
 <a name="top"></a> Привязки (или атомарные утверждения нулевой ширины) указывают положение в строке, где должно быть найдено соответствие. При использовании привязки в выражении поиска обработчик регулярных выражений не проходит по строке и не потребляет символы; он ищет соответствия только в заданном местоположении. Например, `^` указывает, что соответствие должно начаться в начале строки. Таким образом, регулярное выражение `^http:` находит соответствие для http, только если этот элемент находится в начале строки. В таблице ниже перечислены привязки, поддерживаемые регулярными выражениями в .NET.  
@@ -46,9 +46,9 @@ ms.locfileid: "54675376"
   
  В следующем примере используется привязка `^` в регулярном выражении, которое извлекает сведения о годах, в течение которых существовали некоторые профессиональные бейсбольные команды. В примере вызывается две перегрузки метода <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> .  
   
--   При вызове перегрузки <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29> удается найти только первую подстроку в строке ввода, которая соответствует шаблону регулярного выражения.  
+- При вызове перегрузки <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29> удается найти только первую подстроку в строке ввода, которая соответствует шаблону регулярного выражения.  
   
--   Вызов перегрузки <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> с параметром `options` , имеющим значение <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> , позволяет найти все пять подстрок.  
+- Вызов перегрузки <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> с параметром `options` , имеющим значение <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> , позволяет найти все пять подстрок.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/startofstring1.cs#1)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring1.vb#1)]  

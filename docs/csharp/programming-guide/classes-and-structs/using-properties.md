@@ -7,12 +7,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: f10f9aa17adf9a03b9b8905245983bdd9d865e39
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6a929957a0bb512ae4af503ad4b80c9d081764dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200394"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582966"
 ---
 # <a name="using-properties-c-programming-guide"></a>Использование свойств (Руководство по программированию в C#)
 Свойства сочетают в себе возможности полей и методов. Пользователю объекта свойство представляется как поле, и для доступа к нему применяется тот же синтаксис. При реализации класса свойство представляется в виде одного или двух блоков кода для методов доступа [get](../../../csharp/language-reference/keywords/get.md) и (или) [set](../../../csharp/language-reference/keywords/set.md). Блок кода для метода доступа `get` выполняется только при считывании свойства, а для метода `set` — при присвоении свойству нового значения. Свойство без метода доступа `set` доступно только для чтения. Свойство без метода доступа `get` доступно только для записи. Свойство, для которого определены оба этих метода, доступно для чтения и записи.  
@@ -85,11 +85,11 @@ ms.locfileid: "57200394"
   
  На что следует обратить внимание в предыдущем примере:  
   
--   Свойство `Name` в производном классе скрывает свойство `Name` базового класса. В таком случае в объявлении свойства в производном классе используется модификатор `new`:  
+- Свойство `Name` в производном классе скрывает свойство `Name` базового класса. В таком случае в объявлении свойства в производном классе используется модификатор `new`:  
   
      [!code-csharp[csProgGuideProperties#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#4)]  
   
--   Для доступа к скрытому свойству в базовом классе используется приведение `(Employee)`:  
+- Для доступа к скрытому свойству в базовом классе используется приведение `(Employee)`:  
   
      [!code-csharp[csProgGuideProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#5)]  
   

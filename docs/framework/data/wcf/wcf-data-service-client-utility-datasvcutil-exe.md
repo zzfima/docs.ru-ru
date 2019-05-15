@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: 06bf058fe51c59b6619a296ab3d6093224ab8937
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf812f45e4a4090becd8dfafe035d39d1d851860
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660529"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583641"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>Служебная программа клиента служб данных WCF (DataSvcUtil.exe)
 
@@ -25,7 +25,7 @@ DataSvcUtil.exe представляет собой программу кома�
 
 Дополнительные сведения см. в разделе [Как Создание клиентских классов службы данных вручную](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).
 
-Программа DataSvcUtil.exe установлена в каталоге [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Во многих случаях этот файл находится в *C:\Windows\Microsoft.NET\Framework\v4.0*. Для 64-разрядных системах она находится в *C:\Windows\Microsoft.NET\Framework64\v4.0*. Также можно открыть средство DataSvcUtil.exe из командной строки разработчика для Visual Studio.
+Программа DataSvcUtil.exe установлена в каталоге .NET Framework. Во многих случаях этот файл находится в *C:\Windows\Microsoft.NET\Framework\v4.0*. Для 64-разрядных системах она находится в *C:\Windows\Microsoft.NET\Framework64\v4.0*. Также можно открыть средство DataSvcUtil.exe из командной строки разработчика для Visual Studio.
 
 ## <a name="syntax"></a>Синтаксис
 

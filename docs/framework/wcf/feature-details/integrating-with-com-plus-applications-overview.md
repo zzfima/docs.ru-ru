@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: fbe27403920d8c85665e585ca461602131574038
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fbe1617aa8ade89258bb7f4b46180b5e18805e3a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638637"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590549"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Общие сведения об интеграции с приложениями COM+
 Windows Communication Foundation (WCF) предоставляет среду с широкими возможностями для создания распределенных приложений. Если вы уже используете логики компонентно ориентированного приложения, размещенного на COM +, WCF можно использовать для расширения существующей логики вместо ее переписывания. Стандартный сценарий - предоставление доступа существующему приложению COM+ или бизнес-логике Enterprise Services службы через веб-службы.  
@@ -49,7 +49,7 @@ Windows Communication Foundation (WCF) предоставляет среду с 
   
 - интерфейсы, которые передают в качестве параметров ссылки на объекты; ограниченный подход к передаче ссылок на объекты описан в разделе "Ограниченная поддержка ссылок на объекты";  
   
-- интерфейсы, которые передают типы, несовместимые с преобразованиями COM-взаимодействия [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)];  
+- Интерфейсы, которые передают типы, которые не совместимы с преобразованиями взаимодействие .NET Framework COM.  
   
 - интерфейсы приложений, для которых при размещении в COM+ включено объединение приложений в пул;  
   

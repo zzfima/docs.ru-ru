@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cc9d592bc2030cdd17e7f87d7c5ac458dc01106
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 145e6b8891735c904aa98a36ccfd27958bdf788d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124817"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648619"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Маршалинг делегата как метода обратного вызова
 В этом примере показан способ передачи делегатов в неуправляемую функцию, ожидающую указатели на функции. Делегат — это класс, который может содержать ссылку на метод. Делегат эквивалентен типобезопасному указателю на функцию или функции обратного вызова.
@@ -26,13 +26,13 @@ ms.locfileid: "59124817"
 
 В примере обратного вызова используются следующие неуправляемые функции со своими первоначальными объявлениями:
 
--   `TestCallBack` экспортируется из PinvokeLib.dll.
+- `TestCallBack` экспортируется из PinvokeLib.dll.
 
     ```cpp
     void TestCallBack(FPTR pf, int value);
     ```
 
--   `TestCallBack2` экспортируется из PinvokeLib.dll.
+- `TestCallBack2` экспортируется из PinvokeLib.dll.
 
     ```cpp
     void TestCallBack2(FPTR2 pf2, char* value);

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7eb79aaf1f207d8d5ec175f32dc9a47170d604f8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 87ea2cbb46aca87af15b2c12321322c1b048df56
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479702"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625597"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Структуры данных для параллельного программирования
 На платформе .NET Framework версии 4 появились несколько новых типов для параллельного программирования, включая набор классов параллельных коллекций, упрощенные примитивы синхронизации и типы отложенной инициализации. Эти типы можно использовать с любым кодом многопоточного приложения, включая библиотеку параллельных задач и PLINQ.  
@@ -48,9 +48,9 @@ ms.locfileid: "55479702"
   
  Дополнительные сведения:  
   
--   [Практическое руководство. SpinLock и низкоуровневая синхронизация](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+- [Практическое руководство. SpinLock и низкоуровневая синхронизация](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
--   [Практическое руководство. Синхронизация параллельных операций с барьером](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
+- [Практическое руководство. Синхронизация параллельных операций с барьером](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
 ## <a name="lazy-initialization-classes"></a>Классы отложенной инициализации  
  При использовании отложенной инициализации память выделяется объекту только в тот момент, когда она нужна. Отложенная инициализация позволяет повысить производительность, равномерно распределяя процессы выделения объектов на вест период существования программы. Чтобы включить отложенную инициализацию для любого пользовательского типа, упакуйте в него тип <xref:System.Lazy%601>.  

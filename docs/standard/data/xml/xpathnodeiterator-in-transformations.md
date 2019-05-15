@@ -8,23 +8,23 @@ dev_langs:
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f71d409729707f4af93fd7f8d5b82a99404579b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b191114731b63916d1bc9ecca4eee01f83c4fa48
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836057"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615337"
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>XPathNodeIterator в преобразованиях
 Класс <xref:System.Xml.XPath.XPathNodeIterator> обеспечивает методы перебора набора узлов, созданного в результате выполнения запроса XPath или в результате преобразования фрагмента результирующего дерева в набор узлов с помощью метода node-set. Класс <xref:System.Xml.XPath.XPathNodeIterator> дает возможность перебирать узлы внутри этого набора узлов. По получении набора узлов класс <xref:System.Xml.XPath.XPathNodeIterator> предоставляет однопроходные курсоры только для чтения к выделенному набору узлов. Набор узлов создается в порядке расположения узлов в документе, поэтому вызов этого метода приводит к переходу на следующий узел документа. Класс <xref:System.Xml.XPath.XPathNodeIterator> не выполняет построение дерева узлов для всех узлов набора. Вместо этого он предоставляет окно данных размером в один узел, в котором при переходе от одного элемента дерева к другому отображается базовый узел, на который указывает итератор. Методы и свойства класса <xref:System.Xml.XPath.XPathNodeIterator> дают возможность получать сведения из текущего узла. Список доступных методов и свойств см. здесь: <xref:System.Windows.Forms.ToolBar>.  
   
  Поскольку <xref:System.Xml.XPath.XPathNodeIterator> перемещается по набору узлов, созданному в ходе выполнения запроса Xpath, и при этом движется только вперед, перемещение осуществляется с использованием метода <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A>. При использовании этого метода возвращаемое значение имеет тип `Boolean`. Значение `true` возвращается при перемещении к следующему выделенному узлу, а значение `false` - если выделенных узлов больше нет. При возвращении значения `true` доступны свойства, перечисленные в следующем списке:  
   
--   <xref:System.Xml.XPath.XPathNodeIterator.Current%2A>  
+- <xref:System.Xml.XPath.XPathNodeIterator.Current%2A>  
   
--   <xref:System.Xml.XPath.XPathNodeIterator.CurrentPosition%2A>  
+- <xref:System.Xml.XPath.XPathNodeIterator.CurrentPosition%2A>  
   
--   <xref:System.Xml.XPath.XPathNodeIterator.Count%2A>  
+- <xref:System.Xml.XPath.XPathNodeIterator.Count%2A>  
   
  Если набор узлов просматривается впервые, для размещения <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> на первом узле выделенного набора необходимо вызвать метод <xref:System.Xml.XPath.XPathNodeIterator>. Это дает возможность написать цикл while.  
   

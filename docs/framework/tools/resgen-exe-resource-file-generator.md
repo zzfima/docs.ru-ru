@@ -17,27 +17,27 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2cb07389ad68985362993e76f82e58d2a59e237
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bb2aabfd083a71d8d083d08e9bc7e2a7ad065e7f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178884"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623293"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (генератор файлов ресурсов)
 Генератор файлов ресурсов (Resgen.exe) преобразует текстовые файлы (TXT или RESTEXT) и файлы ресурсов на основе XML (RESX) в двоичные файлы среды CLR (RESOURCES), которые можно внедрить в двоичный исполняемый файл среды выполнения или вспомогательную сборку. (См. раздел [Создание файлов ресурсов](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
   
  Программа Resgen.exe представляет собой универсальную служебную программу для преобразования ресурсов, которая выполняет следующие задачи.  
   
--   Преобразование TXT-файлов и RESTEXT-файлов в файлы RESOURCES или RESX. (Формат RESTEXT-файлов идентичен формату TXT-файлов. Однако с помощью расширения RESTEXT легче идентифицировать текстовые файлы, содержащие определения ресурсов.)  
+- Преобразование TXT-файлов и RESTEXT-файлов в файлы RESOURCES или RESX. (Формат RESTEXT-файлов идентичен формату TXT-файлов. Однако с помощью расширения RESTEXT легче идентифицировать текстовые файлы, содержащие определения ресурсов.)  
   
--   Преобразование RESOURCES-файлов в RESX-файлы или текстовые файлы.  
+- Преобразование RESOURCES-файлов в RESX-файлы или текстовые файлы.  
   
--   Преобразование RESX-файлов в RESOURCES-файлы или текстовые файлы.  
+- Преобразование RESX-файлов в RESOURCES-файлы или текстовые файлы.  
   
--   Извлекает строковые ресурсы из сборки в RESW-файл, который пригоден для использования в приложении [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+- Извлекает строковые ресурсы из сборки в RESW-файл, который пригоден для использования в приложении [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
--   Создает класс со строгой типизацией, который предоставляет доступ к ресурсам с отдельными именами и экземпляру <xref:System.Resources.ResourceManager>.  
+- Создает класс со строгой типизацией, который предоставляет доступ к ресурсам с отдельными именами и экземпляру <xref:System.Resources.ResourceManager>.  
   
  В случае любого сбоя программа Resgen.exe возвращается значение "–1".  
   
@@ -116,17 +116,17 @@ resgen filename.extension [outputDirectory]
 ## <a name="performing-specific-resgenexe-tasks"></a>Выполнение конкретных задач Resgen.exe  
  Программу Resgen.exe можно использовать разными способами: компилировать файл ресурсов на основе текста или XML в двоичный файл, выполнять преобразование файлов в разные форматы, создавать класс, который образует оболочку для функциональных возможностей <xref:System.Resources.ResourceManager> и предоставляет доступ к ресурсам. В данном разделе представлены подробные сведения по каждой задаче.  
   
--   [Компиляция ресурсов в двоичный файл](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
+- [Компиляция ресурсов в двоичный файл](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
   
--   [Преобразование типов файлов ресурсов](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
+- [Преобразование типов файлов ресурсов](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
   
--   [Компиляция или преобразование нескольких файлов](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
+- [Компиляция или преобразование нескольких файлов](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
   
--   [Экспорт ресурсов в RESW-файл](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
+- [Экспорт ресурсов в RESW-файл](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
   
--   [Условная компиляция ресурсов](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
+- [Условная компиляция ресурсов](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
   
--   [Создание класса ресурсов со строгой типизацией](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
+- [Создание класса ресурсов со строгой типизацией](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
   
 <a name="Compiling"></a>   
 ### <a name="compiling-resources-into-a-binary-file"></a>Компиляция ресурсов в двоичный файл  
@@ -170,13 +170,13 @@ resgen Resources.resx Resources.resources
 ### <a name="converting-between-resource-file-types"></a>Преобразование типов файлов ресурсов  
  Помимо компиляции файлов ресурсов на основе текста или XML в двоичные файлы ресурсов программа Resgen.exe может преобразовать любой поддерживаемый тип файлов в другой. Это означает, что программа может выполнить следующие преобразования.  
   
--   TXT-файлы и RESTEXT-файлы в RESX-файлы.  
+- TXT-файлы и RESTEXT-файлы в RESX-файлы.  
   
--   RESX-файлы в TXT-файлы и RESTEXT-файлы.  
+- RESX-файлы в TXT-файлы и RESTEXT-файлы.  
   
--   RESOURCES-файлы в TXT-файлы и RESTEXT-файлы.  
+- RESOURCES-файлы в TXT-файлы и RESTEXT-файлы.  
   
--   RESOURCES-файлы в RESX-файлы.  
+- RESOURCES-файлы в RESX-файлы.  
   
  Синтаксис аналогичен синтаксису, который показан в предыдущем разделе.  
   
@@ -315,13 +315,13 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  Класс ресурсов со строгой типизацией включает в себя следующие элементы.  
   
--   Конструктор без параметров, который можно использовать создания экземпляра класс ресурсов со строгой типизацией.  
+- Конструктор без параметров, который можно использовать создания экземпляра класс ресурсов со строгой типизацией.  
   
--   Свойство `static` (C#) или `Shared` (Visual Basic) и свойство `ResourceManager` только для чтения, которое возвращает экземпляр <xref:System.Resources.ResourceManager>, который управляет ресурсом со строгой типизацией.  
+- Свойство `static` (C#) или `Shared` (Visual Basic) и свойство `ResourceManager` только для чтения, которое возвращает экземпляр <xref:System.Resources.ResourceManager>, который управляет ресурсом со строгой типизацией.  
   
--   Статическое свойство `Culture`, с помощью которого можно задать язык и региональные параметры, используемые для извлечения ресурсов. По умолчанию его значение равно `null`, то есть для пользовательского интерфейса используются текущий язык и региональные параметры.  
+- Статическое свойство `Culture`, с помощью которого можно задать язык и региональные параметры, используемые для извлечения ресурсов. По умолчанию его значение равно `null`, то есть для пользовательского интерфейса используются текущий язык и региональные параметры.  
   
--   Одно свойство `static` (C#) или `Shared` (Visual Basic) и свойство только для чтения для каждого ресурса в RESOURCES-файле. Имя свойства является именем ресурса.  
+- Одно свойство `static` (C#) или `Shared` (Visual Basic) и свойство только для чтения для каждого ресурса в RESOURCES-файле. Имя свойства является именем ресурса.  
   
  Например, при выполнении следующей команды выполняется компиляция файла ресурсов с именем "StringResources.txt" в "StringResources.resources" и создается класс с именем `StringResources` в файле исходного кода Visual Basic с именем "StringResources.vb", который можно использовать для доступа к диспетчеру ресурсов.  
   

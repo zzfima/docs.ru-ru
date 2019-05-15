@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2717655ac73cac6635aba563f008feb460a5f788
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7609c88b088b9386201f5ac5725d16f4c5f11071
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074525"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591385"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Вопросы безопасности в порождаемом отражении
 Платформа [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] предоставляет три способа создания кода MSIL, с каждым из которых связаны определенные вопросы безопасности.  
   
--   [Динамические сборки](#Dynamic_Assemblies)  
+- [Динамические сборки](#Dynamic_Assemblies)  
   
--   [Анонимно размещенные динамические методы](#Anonymously_Hosted_Dynamic_Methods)  
+- [Анонимно размещенные динамические методы](#Anonymously_Hosted_Dynamic_Methods)  
   
--   [Динамические методы, связанные с существующими сборками](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
+- [Динамические методы, связанные с существующими сборками](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
   
  Независимо от способа создания динамического кода для его выполнения необходимы все разрешения, которые требуются типам и методам, используемым этим кодом.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "59074525"
 ### <a name="generating-dynamic-assemblies-from-partially-trusted-code"></a>Создание динамических сборок из частично доверенного кода  
  Рассмотрим условия, в которых сборка с разрешениями на доступ к Интернету может создавать временную динамическую сборку и выполнять ее код.  
   
--   Динамическая сборка использует только открытые типы и члены других сборок.  
+- Динамическая сборка использует только открытые типы и члены других сборок.  
   
--   Разрешения, необходимые для этих типов и членов, включаются в набор прав сборки с частичным доверием.  
+- Разрешения, необходимые для этих типов и членов, включаются в набор прав сборки с частичным доверием.  
   
--   Сборка не сохраняется на диск.  
+- Сборка не сохраняется на диск.  
   
--   Отладочные символы не создаются (наборы разрешений `Internet` и `LocalIntranet` не включают необходимые разрешения).  
+- Отладочные символы не создаются (наборы разрешений `Internet` и `LocalIntranet` не включают необходимые разрешения).  
   
 <a name="Anonymously_Hosted_Dynamic_Methods"></a>   
 ## <a name="anonymously-hosted-dynamic-methods"></a>Анонимно размещенные динамические методы  
@@ -70,9 +70,9 @@ ms.locfileid: "59074525"
   
  Если домен приложения допускает такое поведение, анонимно размещенные динамические методы могут пропускать проверки видимости JIT-компилятора, однако действует следующее ограничение: закрытые типы и члены, к которым получает доступ анонимно размещенный динамический метод, должны находиться в сборках, наборы прав которых идентичны набору прав порождающего стека вызовов или являются его подмножествами. Эта ограниченная возможность пропускать проверки видимости JIT доступна, если домен приложения предоставляет разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
--   Если метод использует только открытые типы и члены, во время его создания никакие разрешения не требуются.  
+- Если метод использует только открытые типы и члены, во время его создания никакие разрешения не требуются.  
   
--   Если вы указываете, что проверки видимости JIT следует пропустить, требование, предъявляемое при создании метода, включает разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> и набор прав сборки, содержащей закрытый член, к которому осуществляется доступ.  
+- Если вы указываете, что проверки видимости JIT следует пропустить, требование, предъявляемое при создании метода, включает разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> и набор прав сборки, содержащей закрытый член, к которому осуществляется доступ.  
   
  Так как учитывается набор прав закрытого члена, частично доверенный код, которому предоставлено разрешение <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, не может повысить свои привилегии путем выполнения закрытых членов доверенных сборок.  
   
@@ -85,9 +85,9 @@ ms.locfileid: "59074525"
 ### <a name="generating-anonymously-hosted-dynamic-methods-from-partially-trusted-code"></a>Создание анонимно размещенных динамических методов из частично доверенного кода  
  Рассмотрим условия, в которых сборка с разрешениями на доступ к Интернету может создавать анонимно размещенный динамический метод и выполнять его.  
   
--   Динамический метод использует только открытые типы и члены. Если его набор прав включает <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, он может использовать закрытые типы и члены любой сборки, набор прав которой идентичен набору прав порождающей сборки или является его подмножеством.  
+- Динамический метод использует только открытые типы и члены. Если его набор прав включает <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, он может использовать закрытые типы и члены любой сборки, набор прав которой идентичен набору прав порождающей сборки или является его подмножеством.  
   
--   Разрешения, необходимые всем типам и членам, используемым динамическим методом, включены в набор прав сборки с частичным доверием.  
+- Разрешения, необходимые всем типам и членам, используемым динамическим методом, включены в набор прав сборки с частичным доверием.  
   
 > [!NOTE]
 >  Динамические методы не поддерживают отладочные символы.  
@@ -96,21 +96,21 @@ ms.locfileid: "59074525"
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>Динамические методы, связанные с существующими сборками  
  Чтобы связать динамический метод с типом или модулем в существующей сборке, используйте любой из конструкторов <xref:System.Reflection.Emit.DynamicMethod>, который указывает связанный тип или модуль. Разрешения, необходимые для вызова этих конструкторов, могут быть разными, так как при связывании динамического метода с существующим типом или модулем он получает доступ к закрытым типам и членам.  
   
--   Динамический метод, связанный с типом, имеет доступ ко всем членам этого типа, даже к закрытым, а также ко всем внутренним типам и членам в сборке, содержащей связанный тип.  
+- Динамический метод, связанный с типом, имеет доступ ко всем членам этого типа, даже к закрытым, а также ко всем внутренним типам и членам в сборке, содержащей связанный тип.  
   
--   Динамический метод, связанный с модулем, имеет доступ ко всем типам и членам `internal` (`Friend` в Visual Basic, `assembly` в метаданных среды CLR) в модуле.  
+- Динамический метод, связанный с модулем, имеет доступ ко всем типам и членам `internal` (`Friend` в Visual Basic, `assembly` в метаданных среды CLR) в модуле.  
   
  Кроме того, можно использовать конструктор, который задает возможность пропускать проверки видимости JIT-компилятора. Это позволяет динамическому методу получать доступ ко всем типам и членам во всех сборках независимо от уровня доступа.  
   
  Разрешения, необходимые конструктору, зависят от уровня доступа, который вы намерены предоставить динамическому методу.  
   
--   Если метод использует только открытые типы и члены и вы связываете его со своим собственным типом или модулем, никакие разрешения не требуются.  
+- Если метод использует только открытые типы и члены и вы связываете его со своим собственным типом или модулем, никакие разрешения не требуются.  
   
--   Если вы указываете, что проверки видимости JIT-компилятора следует пропустить, конструктору требуется разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>.  
+- Если вы указываете, что проверки видимости JIT-компилятора следует пропустить, конструктору требуется разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>.  
   
--   Если динамический метод связывается с другим типом, даже с типом из вашей собственной сборки, конструктору требуется разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> и разрешение <xref:System.Security.Permissions.SecurityPermission> с флагом <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
+- Если динамический метод связывается с другим типом, даже с типом из вашей собственной сборки, конструктору требуется разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> и разрешение <xref:System.Security.Permissions.SecurityPermission> с флагом <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
   
--   Если динамический метод связывается с типом или модулем в другой сборке, конструктору требуется разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> и набор прав сборки, содержащей этот модуль. Таким образом, стек вызовов должен включать все разрешения из набора прав целевого модуля, а также разрешение <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
+- Если динамический метод связывается с типом или модулем в другой сборке, конструктору требуется разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> и набор прав сборки, содержащей этот модуль. Таким образом, стек вызовов должен включать все разрешения из набора прав целевого модуля, а также разрешение <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
     > [!NOTE]
     >  В целях обратной совместимости, если не удается удовлетворить потребность в целевом наборе прав и разрешении <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, конструктору требуется разрешение <xref:System.Security.Permissions.SecurityPermission> с флагом <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
@@ -126,13 +126,13 @@ ms.locfileid: "59074525"
   
  Рассмотрим условия, в которых сборка с разрешениями на доступ к Интернету может создавать динамический метод и выполнять его.  
   
--   Либо динамический метод связан с порождающим его модулем или типом, либо его набор прав включает <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> и он связан с модулем в сборке, набор прав которой идентичен набору прав порождающей сборки или является его подмножеством.  
+- Либо динамический метод связан с порождающим его модулем или типом, либо его набор прав включает <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> и он связан с модулем в сборке, набор прав которой идентичен набору прав порождающей сборки или является его подмножеством.  
   
--   Динамический метод использует только открытые типы и члены. Если его набор прав включает <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> и он связан с модулем в сборке, набор прав которой идентичен набору прав порождающей сборки или является его подмножеством, он может использовать типы и члены, помеченные как `internal` (`Friend` в Visual Basic, `assembly` в метаданных среды CLR) в связанном модуле.  
+- Динамический метод использует только открытые типы и члены. Если его набор прав включает <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> и он связан с модулем в сборке, набор прав которой идентичен набору прав порождающей сборки или является его подмножеством, он может использовать типы и члены, помеченные как `internal` (`Friend` в Visual Basic, `assembly` в метаданных среды CLR) в связанном модуле.  
   
--   Разрешения, необходимые всем типам и членам, используемым динамическим методом, включены в набор прав сборки с частичным доверием.  
+- Разрешения, необходимые всем типам и членам, используемым динамическим методом, включены в набор прав сборки с частичным доверием.  
   
--   Динамический метод не пропускает проверки видимости JIT-компилятора.  
+- Динамический метод не пропускает проверки видимости JIT-компилятора.  
   
 > [!NOTE]
 >  Динамические методы не поддерживают отладочные символы.  

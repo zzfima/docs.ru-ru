@@ -1,29 +1,29 @@
 ---
-title: Как выполнить Руководство по программированию на C#. Получение сведений о файлах, папках и дисках
+title: Практическое руководство. Руководство по программированию на C#. Получение сведений о файлах, папках и дисках
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: e2315f5bfdca05da79e5ee4d897cd06dba6f1ed1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ecf07a11b92dccee888fb8113b6f3e2f333cf591
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966168"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595325"
 ---
-# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Получение сведений о файлах, папках и дисках
+# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Получение сведений о файлах, папках и дисках
 В платформе .NET Framework доступ к сведениям о файловой системе можно получить, используя следующие классы:  
   
--   <xref:System.IO.FileInfo?displayProperty=nameWithType>  
+- <xref:System.IO.FileInfo?displayProperty=nameWithType>  
   
--   <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>  
+- <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>  
   
--   <xref:System.IO.DriveInfo?displayProperty=nameWithType>  
+- <xref:System.IO.DriveInfo?displayProperty=nameWithType>  
   
--   <xref:System.IO.Directory?displayProperty=nameWithType>  
+- <xref:System.IO.Directory?displayProperty=nameWithType>  
   
--   <xref:System.IO.File?displayProperty=nameWithType>  
+- <xref:System.IO.File?displayProperty=nameWithType>  
   
  Классы <xref:System.IO.FileInfo> и <xref:System.IO.DirectoryInfo> представляют файл или каталог и содержат свойства, представляющие многие атрибуты файла, поддерживаемые файловой системой NTFS. Они также содержат методы для открытия, закрытия, перемещения и удаления файлов и папок. Экземпляры этих классов можно создать, передав в конструктор строку, представляющую имя файла, папки или диска.  
   
@@ -43,13 +43,13 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
 ## <a name="robust-programming"></a>Отказоустойчивость  
  При обработке заданных пользователем строк, определяющих пути, необходимо также обрабатывать исключения для следующих условий:  
   
--   Неверное имя файла. Например, оно содержит недопустимые символы или состоит из одних пробелов.  
+- Неверное имя файла. Например, оно содержит недопустимые символы или состоит из одних пробелов.  
   
--   Имя файла имеет значение NULL.  
+- Имя файла имеет значение NULL.  
   
--   Имя файла больше максимальной длины, определенной системой.  
+- Имя файла больше максимальной длины, определенной системой.  
   
--   Имя файла содержит двоеточие (:).  
+- Имя файла содержит двоеточие (:).  
   
  Если у приложения недостаточно прав для чтения указанного файла, метод `Exists` возвратит значение `false` независимо от существования указанного пути. Исключений этот метод не вызывает.  
   

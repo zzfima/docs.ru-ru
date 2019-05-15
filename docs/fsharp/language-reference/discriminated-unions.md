@@ -2,12 +2,12 @@
 title: Размеченные объединения
 description: Сведения об использовании F# размеченные объединения.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9d3f423d068df1c43791919b0d71ca82304ae85e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 27fb9205f3f216adc435483fd1dcc839a6e13e03
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766031"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557960"
 ---
 # <a name="discriminated-unions"></a>Размеченные объединения
 
@@ -80,7 +80,7 @@ let getShapeHeight shape =
     | Prism(height = h) -> h
 ```
 
-Обычно идентификаторы варианта могут использоваться без указания имени объединения. Если вы хотите использовать имя, чтобы всегда уточняться именем объединения, можно применить [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15) к определению типа объединения атрибут.
+Обычно идентификаторы варианта могут использоваться без указания имени объединения. Если вы хотите использовать имя, чтобы всегда уточняться именем объединения, можно применить [RequireQualifiedAccess](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-[fsharp]) к определению типа объединения атрибут.
 
 ### <a name="unwrapping-discriminated-unions"></a>Распаковки размеченные объединения
 

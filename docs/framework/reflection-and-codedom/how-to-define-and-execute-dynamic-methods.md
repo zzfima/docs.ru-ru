@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Определение и выполнение динамических методов
+title: Практическое руководство. Определение и выполнение динамических методов
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17bc7c417980c0850788f082ebb6e810fd0c53d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 883eb60197b79e0ddebf5e48438c81e29f609549
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333305"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591700"
 ---
-# <a name="how-to-define-and-execute-dynamic-methods"></a>Как выполнить Определение и выполнение динамических методов
+# <a name="how-to-define-and-execute-dynamic-methods"></a>Практическое руководство. Определение и выполнение динамических методов
 В следующих процедурах показаны способы определения и выполнения простого динамического метода и динамического метода, привязанного к экземпляру класса. Дополнительные сведения о динамических методах см. в описании класса <xref:System.Reflection.Emit.DynamicMethod> и в разделе [Сценарии динамических методов порождаемого отражения](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>Определение и выполнение динамического метода  
@@ -116,11 +116,11 @@ ms.locfileid: "59333305"
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
--   Код содержит операторы C# `using` (`Imports` в Visual Basic), необходимые для компиляции.  
+- Код содержит операторы C# `using` (`Imports` в Visual Basic), необходимые для компиляции.  
   
--   Дополнительные ссылки на сборки не требуются.  
+- Дополнительные ссылки на сборки не требуются.  
   
--   Скомпилируйте код из командной строки с помощью команд csc.exe, vbc.exe или cl.exe. Для компиляции кода в Visual Studio поместите его в шаблон проекта консольного приложения.  
+- Скомпилируйте код из командной строки с помощью команд csc.exe, vbc.exe или cl.exe. Для компиляции кода в Visual Studio поместите его в шаблон проекта консольного приложения.  
   
 ## <a name="see-also"></a>См. также
 

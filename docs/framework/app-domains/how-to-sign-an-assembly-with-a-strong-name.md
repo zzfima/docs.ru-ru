@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Подписание сборки строгим именем
+title: Практическое руководство. Подписание сборки строгим именем
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5580b6d8af7319397ad7eb6416941c2be0dcdb76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 458b18ad34cfff6ab136408ab8e8b2e7953b35cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303437"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593567"
 ---
-# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Как выполнить Подписание сборки строгим именем
+# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Практическое руководство. Подписание сборки строгим именем
 Существует несколько способов подписать сборку строгим именем:  
   
--   С использованием **Подписывание** в диалоговом окне **Свойства** проекта в Visual Studio. Это самый простой и удобный способ подписать сборку строгим именем.  
+- С использованием **Подписывание** в диалоговом окне **Свойства** проекта в Visual Studio. Это самый простой и удобный способ подписать сборку строгим именем.  
   
--   С использованием [компоновщика сборок (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) , который связывает модуль кода .NET Framework (NETMODULE-файл) с файлом ключа.  
+- С использованием [компоновщика сборок (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) , который связывает модуль кода .NET Framework (NETMODULE-файл) с файлом ключа.  
   
--   С использованием атрибутов сборки, позволяющих вставить в код данные строгого имени. Можно использовать либо <xref:System.Reflection.AssemblyKeyFileAttribute> , либо <xref:System.Reflection.AssemblyKeyNameAttribute> в зависимости от того, где находится используемый файл ключа.  
+- С использованием атрибутов сборки, позволяющих вставить в код данные строгого имени. Можно использовать либо <xref:System.Reflection.AssemblyKeyFileAttribute> , либо <xref:System.Reflection.AssemblyKeyNameAttribute> в зависимости от того, где находится используемый файл ключа.  
   
--   С использованием параметров компилятора.  
+- С использованием параметров компилятора.  
   
  Для подписи сборки строгим именем необходимо иметь пару ключей шифрования. Дополнительные сведения о создании пары ключей см. в разделе [Практическое руководство. Создание пары открытого и закрытого ключей](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59303437"
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Создание и подпись сборки строгим именем с помощью компоновщика сборок  
   
--   В [командной строке разработчика для Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md) введите следующую команду:  
+- В [командной строке разработчика для Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md) введите следующую команду:  
   
      **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
   
@@ -90,7 +90,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 ### <a name="to-sign-an-assembly-with-a-strong-name-by-using-the-compiler"></a>Подпись сборки строгим именем с использованием компилятора  
   
--   Компилируйте файлы исходного кода с помощью параметра компилятора `/keyfile` или `/delaysign` в C# и Visual Basic либо параметра компоновщика `/KEYFILE` или `/DELAYSIGN` в C++. После имени параметра добавьте двоеточие и имя файла ключей. При использовании компиляторов, работающих в режиме командной строки, можно скопировать файл ключей в каталог, содержащий файлы исходного кода.  
+- Компилируйте файлы исходного кода с помощью параметра компилятора `/keyfile` или `/delaysign` в C# и Visual Basic либо параметра компоновщика `/KEYFILE` или `/DELAYSIGN` в C++. После имени параметра добавьте двоеточие и имя файла ключей. При использовании компиляторов, работающих в режиме командной строки, можно скопировать файл ключей в каталог, содержащий файлы исходного кода.  
   
      Подробные сведения об отложенной подписи см. в разделе [Delay Signing an Assembly](../../../docs/framework/app-domains/delay-sign-assembly.md).  
   

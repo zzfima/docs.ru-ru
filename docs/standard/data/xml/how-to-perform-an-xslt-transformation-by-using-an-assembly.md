@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Выполнение XSLT-преобразования с помощью сборки
+title: Практическое руководство. Выполнение XSLT-преобразования с помощью сборки
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,19 +8,19 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dcf869d77882810d063532b2cf0c8139be163b7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 596ea34dce17d21a151007cad3ebb0ccb615d136
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345408"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590414"
 ---
-# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Как выполнить Выполнение XSLT-преобразования с помощью сборки
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Практическое руководство. Выполнение XSLT-преобразования с помощью сборки
 XSLT-компилятор (xsltc.exe) компилирует таблицы стилей XSLT и создает сборку. Сборку можно передать непосредственно методу <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.  
   
 ### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>Копирование XML-файлов и XSLT-файлов на локальный компьютер  
   
--   Скопируйте XSLT-файл на локальный компьютер и переименуйте его в Transform.xsl.  
+- Скопируйте XSLT-файл на локальный компьютер и переименуйте его в Transform.xsl.  
   
     ```xml  
     <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -87,7 +87,7 @@ XSLT-компилятор (xsltc.exe) компилирует таблицы ст
     </xsl:stylesheet>  
     ```  
   
--   Скопируйте XML-файл на локальный компьютер и переименуйте его в `books.xml`.  
+- Скопируйте XML-файл на локальный компьютер и переименуйте его в `books.xml`.  
   
     ```xml  
     <?xml version="1.0"?>  

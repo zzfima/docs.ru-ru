@@ -4,12 +4,12 @@ description: Сведения о примерах и руководствах д
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba0d7e4163a1c4afe08ea3f871c2bccc2335ac48
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61950856"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469470"
 ---
 # <a name="net-samples-and-tutorials"></a>Примеры и руководства .NET
 
@@ -60,6 +60,10 @@ ms.locfileid: "61950856"
 **Примеры LINQ**
 
 В этой серии примеров демонстрируются многие функции встроенного языка запросов (LINQ). [Готовый пример](https://github.com/dotnet/samples/tree/master/core/linq/csharp) доступен в репозитории dotnet/samples на сайте GitHub.
+
+**Пример управляемого COM-сервера**
+
+В примере [COM-сервера](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) показано создание управляемого COM-сервера и его глобальная регистрация.
 
 **Пример Microsoft Office PIA**
 

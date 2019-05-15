@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 694d2be51d025ab054caf19e4aa2900216ad5b2e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0f56e27b2ae9a32385aa9a44db631d2909023206
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47205030"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647845"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Параметры вывода в классе XslCompiledTransform
 В этом разделе рассматриваются доступные параметры вывода XSLT. Параметры вывода можно указать в таблице стилей или методе <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
@@ -40,7 +40,7 @@ ms.locfileid: "47205030"
  В следующем списке описаны типы вывода, доступные в команде <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
 #### <a name="xmlwriter"></a>XmlWriter  
- Класс <xref:System.Xml.XmlWriter> записывает потоки или файлы XML. С помощью класса <xref:System.Xml.XmlWriter> можно указать функции, поддерживающие объект <xref:System.Xml.XmlWriterSettings>, включая параметры вывода. Класс <xref:System.Xml.XmlWriter> представляет собой неотъемлемую часть платформы <xref:System.Xml>. Используйте этот тип вывода для передачи выходных результатов в другой процесс XML.  
+ Класс <xref:System.Xml.XmlWriter> записывает потоки или файлы XML. С помощью класса <xref:System.Xml.XmlWriter> можно указать возможности, поддерживающие объект <xref:System.Xml.XmlWriterSettings>, включая параметры вывода. Класс <xref:System.Xml.XmlWriter> представляет собой неотъемлемую часть платформы <xref:System.Xml>. Используйте этот тип вывода для передачи выходных результатов в другой процесс XML.  
   
 #### <a name="string"></a>String  
  Используйте этот тип вывода, чтобы указать URI выходного файла.  
@@ -55,7 +55,7 @@ ms.locfileid: "47205030"
   
 ## <a name="notes"></a>Примечания  
   
--   При записи пустых тегов между последним символом имени элемента и обратной косой чертой записывается пробел, например `<myElement />`. Это позволяет правильно отобразить сформированные HTML-страницы в старых браузерах.  
+- При записи пустых тегов между последним символом имени элемента и обратной косой чертой записывается пробел, например `<myElement />`. Это позволяет правильно отобразить сформированные HTML-страницы в старых браузерах.  
   
 ## <a name="see-also"></a>См. также
 

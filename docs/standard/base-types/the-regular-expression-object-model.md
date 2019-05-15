@@ -37,27 +37,27 @@ helpviewer_keywords:
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1dc0570bedb1e7dbe02994b7df943609a42ca092
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea31dc154d5df2b0058af4c04035d096d5e850c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535312"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664664"
 ---
 # <a name="the-regular-expression-object-model"></a>Объектная модель регулярных выражений
 <a name="introduction"></a> В этом разделе описывается объектная модель, используемая при работе с регулярными выражениями в .NET. Он содержит следующие подразделы:  
   
--   [Механизм регулярных выражений](#Engine)  
+- [Механизм регулярных выражений](#Engine)  
   
--   [Объекты MatchCollection и Match](#Match_and_MCollection)  
+- [Объекты MatchCollection и Match](#Match_and_MCollection)  
   
--   [Коллекция Group](#GroupCollection)  
+- [Коллекция Group](#GroupCollection)  
   
--   [Захватываемая группа](#the_captured_group)  
+- [Захватываемая группа](#the_captured_group)  
   
--   [Коллекция Capture](#CaptureCollection)  
+- [Коллекция Capture](#CaptureCollection)  
   
--   [Отдельный захват](#the_individual_capture)  
+- [Отдельный захват](#the_individual_capture)  
   
 <a name="Engine"></a>   
 ## <a name="the-regular-expression-engine"></a>Механизм регулярных выражений  
@@ -65,21 +65,21 @@ ms.locfileid: "54535312"
   
  Вы можете использовать механизм регулярных выражений одним из двух способов:  
   
--   Вызывая статичные методы класса <xref:System.Text.RegularExpressions.Regex>. Параметры метода включают в себя входную строку и шаблон регулярного выражения. Механизм регулярных выражений кэширует регулярные выражения, которые используются в вызовах статичных методов, чтобы повторные вызовы статичных методов регулярных выражений, применяющие одно и то же регулярное выражение, выполнялись относительно быстро.  
+- Вызывая статичные методы класса <xref:System.Text.RegularExpressions.Regex>. Параметры метода включают в себя входную строку и шаблон регулярного выражения. Механизм регулярных выражений кэширует регулярные выражения, которые используются в вызовах статичных методов, чтобы повторные вызовы статичных методов регулярных выражений, применяющие одно и то же регулярное выражение, выполнялись относительно быстро.  
   
--   Создавая экземпляр объекта <xref:System.Text.RegularExpressions.Regex>, передавая регулярное выражение конструктору класса. В этом случае объект <xref:System.Text.RegularExpressions.Regex> не изменяется (доступен только для чтения) и представляет механизм регулярных выражений, который тесно связана с одним регулярным выражением. Так как регулярные выражения, используемые экземплярами <xref:System.Text.RegularExpressions.Regex>, не кэшируются, не следует создавать экземпляр объекта <xref:System.Text.RegularExpressions.Regex> несколько раз с одним и тем же регулярным выражением.  
+- Создавая экземпляр объекта <xref:System.Text.RegularExpressions.Regex>, передавая регулярное выражение конструктору класса. В этом случае объект <xref:System.Text.RegularExpressions.Regex> не изменяется (доступен только для чтения) и представляет механизм регулярных выражений, который тесно связана с одним регулярным выражением. Так как регулярные выражения, используемые экземплярами <xref:System.Text.RegularExpressions.Regex>, не кэшируются, не следует создавать экземпляр объекта <xref:System.Text.RegularExpressions.Regex> несколько раз с одним и тем же регулярным выражением.  
   
  Вы можете вызывать методы класса <xref:System.Text.RegularExpressions.Regex>, чтобы выполнить следующие операции:  
   
--   определить, соответствует ли строка шаблону регулярного выражения;  
+- определить, соответствует ли строка шаблону регулярного выражения;  
   
--   извлечь одно сопоставление или первое сопоставление;  
+- извлечь одно сопоставление или первое сопоставление;  
   
--   извлечь все сопоставления;  
+- извлечь все сопоставления;  
   
--   заменить сопоставленную подстроку;  
+- заменить сопоставленную подстроку;  
   
--   разделить одну строку на массив строк.  
+- разделить одну строку на массив строк.  
   
  Эти операции описаны в следующих разделах.  
   
@@ -180,14 +180,14 @@ ms.locfileid: "54535312"
 ### <a name="the-match"></a>Класс Match  
  Класс <xref:System.Text.RegularExpressions.Match> представляет результат одного сопоставления регулярного выражения. Доступ к объектам <xref:System.Text.RegularExpressions.Match> можно получить двумя способами:  
   
--   Извлекая их из объекта <xref:System.Text.RegularExpressions.MatchCollection>, который возвращается методом <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>. Для извлечения отдельных объектов <xref:System.Text.RegularExpressions.Match> выполните итерацию коллекции, воспользовавшись конструкцией `foreach` (в C#) или `For Each`...`Next` (в Visual Basic), либо используйте свойство <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> для извлечения конкретного объекта <xref:System.Text.RegularExpressions.Match> по индексу или по имени. Вы также можете получить отдельные объекты <xref:System.Text.RegularExpressions.Match> из коллекции, циклически проходя по коллекции по индексу (от нуля до числа объектов в коллекции минус 1). Однако этот метод не использует отложенные вычисления, так как он обращается к свойству <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>.  
+- Извлекая их из объекта <xref:System.Text.RegularExpressions.MatchCollection>, который возвращается методом <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>. Для извлечения отдельных объектов <xref:System.Text.RegularExpressions.Match> выполните итерацию коллекции, воспользовавшись конструкцией `foreach` (в C#) или `For Each`...`Next` (в Visual Basic), либо используйте свойство <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> для извлечения конкретного объекта <xref:System.Text.RegularExpressions.Match> по индексу или по имени. Вы также можете получить отдельные объекты <xref:System.Text.RegularExpressions.Match> из коллекции, циклически проходя по коллекции по индексу (от нуля до числа объектов в коллекции минус 1). Однако этот метод не использует отложенные вычисления, так как он обращается к свойству <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>.  
   
      Следующий пример извлекает отдельные объекты <xref:System.Text.RegularExpressions.Match> из объекта <xref:System.Text.RegularExpressions.MatchCollection>, циклически перебирая коллекцию с помощью конструкции `foreach` или `For Each`...`Next`. Регулярное выражение просто сопоставляет строку "abc" во входной строке.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/match2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/match2.vb#7)]  
   
--   Вызывая метод <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType>, который возвращает объект <xref:System.Text.RegularExpressions.Match>, представляющий первое соответствие в строке или ее части. Вы можете определить, найдено ли соответствие, получив значение свойства `Match.Success`. Чтобы извлечь объекты <xref:System.Text.RegularExpressions.Match>, представляющие последующие соответствия, вызывайте метод <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType>, пока свойство `Success` полученного объекта <xref:System.Text.RegularExpressions.Match> не будет иметь значение `false`.  
+- Вызывая метод <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType>, который возвращает объект <xref:System.Text.RegularExpressions.Match>, представляющий первое соответствие в строке или ее части. Вы можете определить, найдено ли соответствие, получив значение свойства `Match.Success`. Чтобы извлечь объекты <xref:System.Text.RegularExpressions.Match>, представляющие последующие соответствия, вызывайте метод <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType>, пока свойство `Success` полученного объекта <xref:System.Text.RegularExpressions.Match> не будет иметь значение `false`.  
   
      Следующий пример использует методы <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType> и <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> для сопоставления строки "abc" во входной строке.  
   
@@ -196,9 +196,9 @@ ms.locfileid: "54535312"
   
  Два свойства класса <xref:System.Text.RegularExpressions.Match> возвращают объекты коллекции:  
   
--   Свойство <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> возвращает объект <xref:System.Text.RegularExpressions.GroupCollection>, который содержит сведения о подстроках, соответствующих захватываемым группам в шаблоне регулярного выражения.  
+- Свойство <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> возвращает объект <xref:System.Text.RegularExpressions.GroupCollection>, который содержит сведения о подстроках, соответствующих захватываемым группам в шаблоне регулярного выражения.  
   
--   Свойство `Match.Captures` возвращает объект <xref:System.Text.RegularExpressions.CaptureCollection> с ограниченным применением. Коллекция не заполняется для объекта <xref:System.Text.RegularExpressions.Match>, свойство `Success` которого имеет значение `false`. В противном случае она содержит один объект <xref:System.Text.RegularExpressions.Capture>, содержащий такие же данные, что и объект <xref:System.Text.RegularExpressions.Match>.  
+- Свойство `Match.Captures` возвращает объект <xref:System.Text.RegularExpressions.CaptureCollection> с ограниченным применением. Коллекция не заполняется для объекта <xref:System.Text.RegularExpressions.Match>, свойство `Success` которого имеет значение `false`. В противном случае она содержит один объект <xref:System.Text.RegularExpressions.Capture>, содержащий такие же данные, что и объект <xref:System.Text.RegularExpressions.Match>.  
   
  Дополнительные сведения об этих объектах см. в разделах [Коллекция Group](#GroupCollection) и [Коллекция Capture](#CaptureCollection) далее в этой статье.  
   
@@ -206,9 +206,9 @@ ms.locfileid: "54535312"
   
  Класс <xref:System.Text.RegularExpressions.Match> также содержит два метода сопоставления шаблона:  
   
--   Метод <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> ищет совпадение после соответствия, представленного текущим объектом <xref:System.Text.RegularExpressions.Match>, и возвращает объект <xref:System.Text.RegularExpressions.Match>, представляющий соответствие.  
+- Метод <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> ищет совпадение после соответствия, представленного текущим объектом <xref:System.Text.RegularExpressions.Match>, и возвращает объект <xref:System.Text.RegularExpressions.Match>, представляющий соответствие.  
   
--   Метод <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> выполняет указанную замену в сопоставленной строке и возвращает результат.  
+- Метод <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> выполняет указанную замену в сопоставленной строке и возвращает результат.  
   
  В следующем примере метод <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> используется для добавления символа $ и пробела перед каждым числом из двух дробных разрядов.  
   
@@ -288,7 +288,7 @@ ms.locfileid: "54535312"
   
  Применение квантификаторов к группе (см. раздел [Квантификаторы](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) изменяет связь одного выделения в захватываемой группе двумя способами:  
   
--   Если квантификатор `*` или `*?` (который указывает ноль или больше соответствий) применен к группе, во входной строке может отсутствовать соответствие захватываемой группе. Если выделенного текста нет, свойства объекта <xref:System.Text.RegularExpressions.Group> задаются, как показано в следующей таблице.  
+- Если квантификатор `*` или `*?` (который указывает ноль или больше соответствий) применен к группе, во входной строке может отсутствовать соответствие захватываемой группе. Если выделенного текста нет, свойства объекта <xref:System.Text.RegularExpressions.Group> задаются, как показано в следующей таблице.  
   
     |Свойство объекта Group|Значение|  
     |--------------------|-----------|  
@@ -301,7 +301,7 @@ ms.locfileid: "54535312"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
   
--   Квантификаторы могут сопоставлять множество вхождений шаблона, заданного захватываемой группой. В этом случае свойства `Value` и `Length` объекта <xref:System.Text.RegularExpressions.Group> содержат сведения только о последней выделенной подстроке. Например, следующее регулярное выражение сопоставляет предложение, заканчивающееся на точку. Оно использует две конструкции группировки: первая выделяет отдельные слова вместе с пробелом, вторая выделяет отдельные слова. Как видно из результата выполнения примера, хотя регулярное выражение успешно выделяет все предложение, вторая захватываемая группа выделяет только последнее слово.  
+- Квантификаторы могут сопоставлять множество вхождений шаблона, заданного захватываемой группой. В этом случае свойства `Value` и `Length` объекта <xref:System.Text.RegularExpressions.Group> содержат сведения только о последней выделенной подстроке. Например, следующее регулярное выражение сопоставляет предложение, заканчивающееся на точку. Оно использует две конструкции группировки: первая выделяет отдельные слова вместе с пробелом, вторая выделяет отдельные слова. Как видно из результата выполнения примера, хотя регулярное выражение успешно выделяет все предложение, вторая захватываемая группа выделяет только последнее слово.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
@@ -312,9 +312,9 @@ ms.locfileid: "54535312"
 ## <a name="the-capture-collection"></a>Коллекция Capture  
  Объект <xref:System.Text.RegularExpressions.Group> содержит сведения только о последнем выделении. Однако весь набор выделений, созданный захватываемой группой, по-прежнему доступен из объекта <xref:System.Text.RegularExpressions.CaptureCollection>, возвращаемого свойством <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>. Каждый член коллекции — это объект <xref:System.Text.RegularExpressions.Capture>, представляющий выделение этой захватываемой группы в порядке захвата (и, следовательно, в порядке сопоставления выделенных строк слева направо во входной строке). Вы можете извлечь отдельные объекты <xref:System.Text.RegularExpressions.Capture> из коллекции одним из двух способов:  
   
--   циклически перебирая коллекцию с помощью конструкции `foreach` (для C#) или `For Each` (для Visual Basic);  
+- циклически перебирая коллекцию с помощью конструкции `foreach` (для C#) или `For Each` (для Visual Basic);  
   
--   используя свойство <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A?displayProperty=nameWithType> для извлечения определенного объекта по индексу. Свойство <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A> — это свойство по умолчанию (для Visual Basic) индексатор (для C#) класса <xref:System.Text.RegularExpressions.CaptureCollection>.  
+- используя свойство <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A?displayProperty=nameWithType> для извлечения определенного объекта по индексу. Свойство <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A> — это свойство по умолчанию (для Visual Basic) индексатор (для C#) класса <xref:System.Text.RegularExpressions.CaptureCollection>.  
   
  Если квантификатор не применен к захватываемой группе, объект <xref:System.Text.RegularExpressions.CaptureCollection> содержит один объект <xref:System.Text.RegularExpressions.Capture>, который не представляет особого интереса, так как он содержит сведения о том же соответствии, что и объект <xref:System.Text.RegularExpressions.Group>. Если к захватываемой группе применен квантификатор, объект <xref:System.Text.RegularExpressions.CaptureCollection> содержит все выделения захватываемой группы, а последний член коллекции представляет то же выделение, что и объект <xref:System.Text.RegularExpressions.Group>.  
   

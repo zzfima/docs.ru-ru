@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 459f83ee52d0ab6421fe7be4a597d8e5174b4fd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0cb0b78396731a9b8e127430cd06a9e71812d4fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331303"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593030"
 ---
 # <a name="-out-c-compiler-options"></a>-out (параметры компилятора C#)
 Параметр **-out** задает имя выходного файла.  
@@ -35,9 +35,9 @@ ms.locfileid: "59331303"
   
  Если имя выходного файла не указано:  
   
--   EXE-файлу будет присвоено имя файла исходного кода, который содержит метод **Main**.  
+- EXE-файлу будет присвоено имя файла исходного кода, который содержит метод **Main**.  
   
--   DLL-файлы и NETMODULE-файлы берут имя из первого файла исходного кода.  
+- DLL-файлы и NETMODULE-файлы берут имя из первого файла исходного кода.  
   
  Файл исходного кода, используемый для компиляции одного выходного файла, не может использоваться в рамках той же компиляции для создания другого выходного файла.  
   
