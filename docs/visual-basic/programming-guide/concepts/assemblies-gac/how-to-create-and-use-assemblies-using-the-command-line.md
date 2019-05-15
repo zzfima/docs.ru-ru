@@ -2,25 +2,25 @@
 title: Практическое руководство. Создание и использование сборок с помощью командной строки (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-ms.openlocfilehash: d58109dfbb03b752f4a46f895fa1093e4f37df71
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a30d4b3ea203a8b4d3ba621fc7b0310477ddf10d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624769"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592683"
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a><span data-ttu-id="42c70-102">Практическое руководство. Создание и использование сборок с помощью командной строки (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="42c70-102">How to: Create and Use Assemblies Using the Command Line (Visual Basic)</span></span>
-<span data-ttu-id="42c70-103">Сборка (или библиотека динамической компоновки (DLL)) связывается с программой во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="42c70-103">An assembly, or a dynamic linking library (DLL), is linked to your program at run time.</span></span> <span data-ttu-id="42c70-104">Сборка и использование библиотеки DLL рассматривается в следующем сценарии:</span><span class="sxs-lookup"><span data-stu-id="42c70-104">To demonstrate building and using a DLL, consider the following scenario:</span></span>  
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a><span data-ttu-id="c3340-102">Практическое руководство. Создание и использование сборок с помощью командной строки (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c3340-102">How to: Create and Use Assemblies Using the Command Line (Visual Basic)</span></span>
+<span data-ttu-id="c3340-103">Сборка (или библиотека динамической компоновки (DLL)) связывается с программой во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="c3340-103">An assembly, or a dynamic linking library (DLL), is linked to your program at run time.</span></span> <span data-ttu-id="c3340-104">Сборка и использование библиотеки DLL рассматривается в следующем сценарии:</span><span class="sxs-lookup"><span data-stu-id="c3340-104">To demonstrate building and using a DLL, consider the following scenario:</span></span>  
   
-- <span data-ttu-id="42c70-105">`MathLibrary.DLL`: Файл библиотеки с методами, вызываемыми во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="42c70-105">`MathLibrary.DLL`: The library file that contains the methods to be called at run time.</span></span> <span data-ttu-id="42c70-106">В этом примере библиотека DLL содержит два метода: `Add` и `Multiply`.</span><span class="sxs-lookup"><span data-stu-id="42c70-106">In this example, the DLL contains two methods, `Add` and `Multiply`.</span></span>  
+- <span data-ttu-id="c3340-105">`MathLibrary.DLL`: Файл библиотеки с методами, вызываемыми во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="c3340-105">`MathLibrary.DLL`: The library file that contains the methods to be called at run time.</span></span> <span data-ttu-id="c3340-106">В этом примере библиотека DLL содержит два метода: `Add` и `Multiply`.</span><span class="sxs-lookup"><span data-stu-id="c3340-106">In this example, the DLL contains two methods, `Add` and `Multiply`.</span></span>  
   
-- <span data-ttu-id="42c70-107">`Add`: Исходный файл с методом `Add`.</span><span class="sxs-lookup"><span data-stu-id="42c70-107">`Add`: The source file that contains the method `Add`.</span></span> <span data-ttu-id="42c70-108">Он возвращает сумму своих параметров.</span><span class="sxs-lookup"><span data-stu-id="42c70-108">It returns the sum of its parameters.</span></span> <span data-ttu-id="42c70-109">Класс `AddClass` с методом `Add` является членом пространства имен `UtilityMethods`.</span><span class="sxs-lookup"><span data-stu-id="42c70-109">The class `AddClass` that contains the method `Add` is a member of the namespace `UtilityMethods`.</span></span>  
+- <span data-ttu-id="c3340-107">`Add`: Исходный файл с методом `Add`.</span><span class="sxs-lookup"><span data-stu-id="c3340-107">`Add`: The source file that contains the method `Add`.</span></span> <span data-ttu-id="c3340-108">Он возвращает сумму своих параметров.</span><span class="sxs-lookup"><span data-stu-id="c3340-108">It returns the sum of its parameters.</span></span> <span data-ttu-id="c3340-109">Класс `AddClass` с методом `Add` является членом пространства имен `UtilityMethods`.</span><span class="sxs-lookup"><span data-stu-id="c3340-109">The class `AddClass` that contains the method `Add` is a member of the namespace `UtilityMethods`.</span></span>  
   
-- <span data-ttu-id="42c70-110">`Mult`: Исходный код, содержащий метод `Multiply`.</span><span class="sxs-lookup"><span data-stu-id="42c70-110">`Mult`: The source code that contains the method `Multiply`.</span></span> <span data-ttu-id="42c70-111">Он возвращает результат своих параметров.</span><span class="sxs-lookup"><span data-stu-id="42c70-111">It returns the product of its parameters.</span></span> <span data-ttu-id="42c70-112">Класс `MultiplyClass` с методом `Multiply` также является членом пространства имен `UtilityMethods`.</span><span class="sxs-lookup"><span data-stu-id="42c70-112">The class `MultiplyClass` that contains the method `Multiply` is also a member of the namespace `UtilityMethods`.</span></span>  
+- <span data-ttu-id="c3340-110">`Mult`: Исходный код, содержащий метод `Multiply`.</span><span class="sxs-lookup"><span data-stu-id="c3340-110">`Mult`: The source code that contains the method `Multiply`.</span></span> <span data-ttu-id="c3340-111">Он возвращает результат своих параметров.</span><span class="sxs-lookup"><span data-stu-id="c3340-111">It returns the product of its parameters.</span></span> <span data-ttu-id="c3340-112">Класс `MultiplyClass` с методом `Multiply` также является членом пространства имен `UtilityMethods`.</span><span class="sxs-lookup"><span data-stu-id="c3340-112">The class `MultiplyClass` that contains the method `Multiply` is also a member of the namespace `UtilityMethods`.</span></span>  
   
-- <span data-ttu-id="42c70-113">`TestCode`: Файл с методом `Main`.</span><span class="sxs-lookup"><span data-stu-id="42c70-113">`TestCode`: The file that contains the `Main` method.</span></span> <span data-ttu-id="42c70-114">Он использует методы в DLL-файле для вычисления суммы и результата аргументов времени выполнения.</span><span class="sxs-lookup"><span data-stu-id="42c70-114">It uses the methods in the DLL file to calculate the sum and the product of the run-time arguments.</span></span>  
+- <span data-ttu-id="c3340-113">`TestCode`: Файл с методом `Main`.</span><span class="sxs-lookup"><span data-stu-id="c3340-113">`TestCode`: The file that contains the `Main` method.</span></span> <span data-ttu-id="c3340-114">Он использует методы в DLL-файле для вычисления суммы и результата аргументов времени выполнения.</span><span class="sxs-lookup"><span data-stu-id="c3340-114">It uses the methods in the DLL file to calculate the sum and the product of the run-time arguments.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="42c70-115">Пример</span><span class="sxs-lookup"><span data-stu-id="42c70-115">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c3340-115">Пример</span><span class="sxs-lookup"><span data-stu-id="c3340-115">Example</span></span>  
   
 ```vb  
 ' File: Add.vb   
@@ -79,46 +79,27 @@ End Module
 ' 1234 * 5678 = 7006652  
 ```  
   
- <span data-ttu-id="42c70-116">Этот файл содержит алгоритм, использующий методы DLL `Add` и `Multiply`.</span><span class="sxs-lookup"><span data-stu-id="42c70-116">This file contains the algorithm that uses the DLL methods, `Add` and `Multiply`.</span></span> <span data-ttu-id="42c70-117">Алгоритм начинается с разбора аргументов, введенных в командной строке: `num1` и `num2`.</span><span class="sxs-lookup"><span data-stu-id="42c70-117">It starts with parsing the arguments entered from the command line, `num1` and `num2`.</span></span> <span data-ttu-id="42c70-118">Затем он вычисляет сумму с помощью метода `Add` в классе `AddClass` и результат с помощью метода `Multiply` в классе `MultiplyClass`.</span><span class="sxs-lookup"><span data-stu-id="42c70-118">Then it calculates the sum by using the `Add` method on the `AddClass` class, and the product by using the `Multiply` method on the `MultiplyClass` class.</span></span>  
+ <span data-ttu-id="c3340-116">Этот файл содержит алгоритм, использующий методы DLL `Add` и `Multiply`.</span><span class="sxs-lookup"><span data-stu-id="c3340-116">This file contains the algorithm that uses the DLL methods, `Add` and `Multiply`.</span></span> <span data-ttu-id="c3340-117">Алгоритм начинается с разбора аргументов, введенных в командной строке: `num1` и `num2`.</span><span class="sxs-lookup"><span data-stu-id="c3340-117">It starts with parsing the arguments entered from the command line, `num1` and `num2`.</span></span> <span data-ttu-id="c3340-118">Затем он вычисляет сумму с помощью метода `Add` в классе `AddClass` и результат с помощью метода `Multiply` в классе `MultiplyClass`.</span><span class="sxs-lookup"><span data-stu-id="c3340-118">Then it calculates the sum by using the `Add` method on the `AddClass` class, and the product by using the `Multiply` method on the `MultiplyClass` class.</span></span>  
   
- <span data-ttu-id="42c70-119">Обратите внимание, что `Imports` инструкции в начале файла позволяет использовать неполные имена классов для ссылки на методы DLL во время компиляции, следующим образом:</span><span class="sxs-lookup"><span data-stu-id="42c70-119">Notice that the  `Imports` statement at the beginning of the file enables you to use the unqualified class names to reference the DLL methods at compile time, as follows:</span></span>  
+ <span data-ttu-id="c3340-119">Обратите внимание, что `Imports` инструкции в начале файла позволяет использовать неполные имена классов для ссылки на методы DLL во время компиляции, следующим образом:</span><span class="sxs-lookup"><span data-stu-id="c3340-119">Notice that the  `Imports` statement at the beginning of the file enables you to use the unqualified class names to reference the DLL methods at compile time, as follows:</span></span>  
   
 ```vb  
 MultiplyClass.Multiply(num1, num2)  
 ```  
   
- <span data-ttu-id="42c70-120">В противном случае потребуется использовать полные имена, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="42c70-120">Otherwise, you have to use the fully qualified names, as follows:</span></span>  
+ <span data-ttu-id="c3340-120">В противном случае потребуется использовать полные имена, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="c3340-120">Otherwise, you have to use the fully qualified names, as follows:</span></span>  
   
 ```vb  
 UtilityMethods.MultiplyClass.Multiply(num1, num2)  
 ```  
   
-## <a name="execution"></a><span data-ttu-id="42c70-121">Выполнение</span><span class="sxs-lookup"><span data-stu-id="42c70-121">Execution</span></span>  
- <span data-ttu-id="42c70-122">Для запуска программы введите имя EXE-файла и два числа, как показано далее.</span><span class="sxs-lookup"><span data-stu-id="42c70-122">To run the program, enter the name of the EXE file, followed by two numbers, as follows:</span></span>  
+## <a name="execution"></a><span data-ttu-id="c3340-121">Выполнение</span><span class="sxs-lookup"><span data-stu-id="c3340-121">Execution</span></span>  
+ <span data-ttu-id="c3340-122">Для запуска программы введите имя EXE-файла и два числа, как показано далее.</span><span class="sxs-lookup"><span data-stu-id="c3340-122">To run the program, enter the name of the EXE file, followed by two numbers, as follows:</span></span>  
   
  `TestCode 1234 5678`  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="42c70-123">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="42c70-123">Compiling the Code</span></span>  
- <span data-ttu-id="42c70-124">Чтобы выполнить сборку файла `MathLibrary.DLL`, скомпилируйте два файла, `Add` и `Mult`, с помощью следующей командной строки:</span><span class="sxs-lookup"><span data-stu-id="42c70-124">To build the file `MathLibrary.DLL`, compile the two files `Add` and `Mult` by using the following command line.</span></span>  
-  
-```console  
-vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
-```  
-  
- <span data-ttu-id="42c70-125">[-Target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) параметр компилятора предписывает компилятору создать библиотеку DLL вместо exe-файла.</span><span class="sxs-lookup"><span data-stu-id="42c70-125">The [-target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) compiler option tells the compiler to output a DLL instead of an EXE file.</span></span> <span data-ttu-id="42c70-126">[-Out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) параметр компилятора, за которым следует имя файла используется для указания имени файла библиотеки DLL.</span><span class="sxs-lookup"><span data-stu-id="42c70-126">The [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) compiler option followed by a file name is used to specify the DLL file name.</span></span> <span data-ttu-id="42c70-127">В противном случае компилятор использует первый файл (`Add.vb`) в качестве имени библиотеки DLL.</span><span class="sxs-lookup"><span data-stu-id="42c70-127">Otherwise, the compiler uses the first file (`Add.vb`) as the name of the DLL.</span></span>  
-  
- <span data-ttu-id="42c70-128">Для сборки исполняемого файла `TestCode.exe` служит следующая строка команд:</span><span class="sxs-lookup"><span data-stu-id="42c70-128">To build the executable file, `TestCode.exe`, use the following command line:</span></span>  
-  
-```console  
-vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  
-```  
-  
- <span data-ttu-id="42c70-129">**-Out** параметр компилятора предписывает компилятору создать exe-файл и задает имя выходного файла (`TestCode.exe`).</span><span class="sxs-lookup"><span data-stu-id="42c70-129">The **-out** compiler option tells the compiler to output an EXE file and specifies the name of the output file (`TestCode.exe`).</span></span> <span data-ttu-id="42c70-130">Этот параметр компилятора является необязательным.</span><span class="sxs-lookup"><span data-stu-id="42c70-130">This compiler option is optional.</span></span> <span data-ttu-id="42c70-131">[-Ссылке (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) параметр компилятора указывает DLL-файл или файлы, используемые этой программой.</span><span class="sxs-lookup"><span data-stu-id="42c70-131">The [-reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) compiler option specifies the DLL file or files that this program uses.</span></span>  
-  
- <span data-ttu-id="42c70-132">Дополнительные сведения о построении из командной строки см. в разделе и [построение из командной строки](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).</span><span class="sxs-lookup"><span data-stu-id="42c70-132">For more information about building from the command line, see  and [Building from the Command Line](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="42c70-133">См. также</span><span class="sxs-lookup"><span data-stu-id="42c70-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3340-123">См. также</span><span class="sxs-lookup"><span data-stu-id="c3340-123">See also</span></span>
 
-- [<span data-ttu-id="42c70-134">Основные понятия программирования</span><span class="sxs-lookup"><span data-stu-id="42c70-134">Programming Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)
-- [<span data-ttu-id="42c70-135">Сборки в .NET</span><span class="sxs-lookup"><span data-stu-id="42c70-135">Assemblies in .NET</span></span>](../../../../standard/assembly/index.md)
-- [<span data-ttu-id="42c70-136">Создание класса, содержащего функции DLL</span><span class="sxs-lookup"><span data-stu-id="42c70-136">Creating a Class to Hold DLL Functions</span></span>](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
+- [<span data-ttu-id="c3340-124">Основные понятия программирования</span><span class="sxs-lookup"><span data-stu-id="c3340-124">Programming Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)
+- [<span data-ttu-id="c3340-125">Сборки в .NET</span><span class="sxs-lookup"><span data-stu-id="c3340-125">Assemblies in .NET</span></span>](../../../../standard/assembly/index.md)
+- [<span data-ttu-id="c3340-126">Создание класса, содержащего функции DLL</span><span class="sxs-lookup"><span data-stu-id="c3340-126">Creating a Class to Hold DLL Functions</span></span>](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
