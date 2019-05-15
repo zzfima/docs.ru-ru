@@ -1,1 +1,9 @@
-<span data-ttu-id="bf5ae-101">ASP.NET</span><span class="sxs-lookup"><span data-stu-id="bf5ae-101">ASP.NET</span></span>
+---
+ms.openlocfilehash: ae5d635bbdab43d256103ed46377d63a5ddfaf2b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671781"
+---
+<span data-ttu-id="bcbc0-101">ASP.NET</span><span class="sxs-lookup"><span data-stu-id="bcbc0-101">ASP.NET</span></span>
