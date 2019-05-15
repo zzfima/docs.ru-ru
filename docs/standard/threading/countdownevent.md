@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d3825ef73a6ec312ff51d1bddf5360f3de6cc69
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 3f25ffb16fa5feb382bb42c737440317cfb777b1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758928"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666320"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> представляет собой примитив синхронизации, снимающий блокировку потоков в состоянии ожидания после определенного числа сигналов. <xref:System.Threading.CountdownEvent> предназначен для таких ситуаций, в которых он может заменить вызовы <xref:System.Threading.ManualResetEvent> или <xref:System.Threading.ManualResetEventSlim> с ручным уменьшением значения переменной перед подачей сигнала о событии. Например, в алгоритме ветвления и соединения вы можете создать <xref:System.Threading.CountdownEvent> со значением 5 для счетчика сигналов, а затем запустить пять рабочих элементов в пуле потоков, каждый из которых будет вызывать <xref:System.Threading.CountdownEvent.Signal%2A> после завершения работы. Каждый вызов <xref:System.Threading.CountdownEvent.Signal%2A> уменьшает значение счетчика на 1. В основном потоке вызов <xref:System.Threading.CountdownEvent.Wait%2A> блокируется до тех пор, пока значение счетчика не достигнет нуля.  
@@ -25,13 +25,13 @@ ms.locfileid: "55758928"
   
  <xref:System.Threading.CountdownEvent> предоставляет следующие дополнительные возможности:  
   
--   Операцию ожидания можно отменить с помощью маркеров отмены.  
+- Операцию ожидания можно отменить с помощью маркеров отмены.  
   
--   Значение счетчика можно увеличивать после создания экземпляра.  
+- Значение счетчика можно увеличивать после создания экземпляра.  
   
--   Экземпляры можно использовать повторно после того, как <xref:System.Threading.CountdownEvent.Wait%2A> завершает работу и вызывает метод <xref:System.Threading.CountdownEvent.Reset%2A>.  
+- Экземпляры можно использовать повторно после того, как <xref:System.Threading.CountdownEvent.Wait%2A> завершает работу и вызывает метод <xref:System.Threading.CountdownEvent.Reset%2A>.  
   
--   Экземпляры поддерживают <xref:System.Threading.WaitHandle> для интеграции с другими API синхронизации платформы .NET Framework, например <xref:System.Threading.WaitHandle.WaitAll%2A>.  
+- Экземпляры поддерживают <xref:System.Threading.WaitHandle> для интеграции с другими API синхронизации платформы .NET Framework, например <xref:System.Threading.WaitHandle.WaitAll%2A>.  
   
 ## <a name="basic-usage"></a>Основное использование  
  В следующем примере демонстрируется применение рабочих элементов <xref:System.Threading.CountdownEvent> и <xref:System.Threading.ThreadPool>.  

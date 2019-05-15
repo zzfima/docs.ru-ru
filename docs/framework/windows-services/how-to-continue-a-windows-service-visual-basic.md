@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Возобновление выполнения службы Windows (Visual Basic)
+title: Практическое руководство. Возобновление выполнения службы Windows (Visual Basic)
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
 author: ghogen
-ms.openlocfilehash: 160d1b5f0604cff96549c9d94dc5d8ddc7e39f09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 514cc8177bc5968c9d6e92eec07a03a8a7855bd3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217163"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649388"
 ---
-# <a name="how-to-continue-a-windows-service-visual-basic"></a>Как выполнить Возобновление выполнения службы Windows (Visual Basic)
+# <a name="how-to-continue-a-windows-service-visual-basic"></a>Практическое руководство. Возобновление выполнения службы Windows (Visual Basic)
 В этом примере для возобновления работы службы администрирования IIS на локальном компьютере используется компонент <xref:System.ServiceProcess.ServiceController>.  
   
 ## <a name="example"></a>Пример  
@@ -29,9 +29,9 @@ ms.locfileid: "59217163"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   Ссылка в проекте на System.serviceprocess.dll.  
+- Ссылка в проекте на System.serviceprocess.dll.  
   
--   Доступ к членам пространства имен <xref:System.ServiceProcess>. Добавьте оператор `Imports`, если в коде не используются полные имена членов. Дополнительные сведения см. в статье [Оператор Imports (пространство имен .NET и тип)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Доступ к членам пространства имен <xref:System.ServiceProcess>. Добавьте оператор `Imports`, если в коде не используются полные имена членов. Дополнительные сведения см. в статье [Оператор Imports (пространство имен .NET и тип)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  Свойство <xref:System.ServiceProcess.ServiceController.MachineName%2A> класса <xref:System.ServiceProcess.ServiceController> — это по умолчанию локальный компьютер. Чтобы указать ссылку на службы Windows на другом компьютере, укажите в свойстве <xref:System.ServiceProcess.ServiceController.MachineName%2A> имя другого компьютера.  
@@ -40,9 +40,9 @@ ms.locfileid: "59217163"
   
  При следующих условиях возможно возникновение исключения:  
   
--   Не удалось возобновить работу службы. (<xref:System.InvalidOperationException>)  
+- Не удалось возобновить работу службы. (<xref:System.InvalidOperationException>)  
   
--   Произошла ошибка при обращении к API-интерфейсу системы. (<xref:System.ComponentModel.Win32Exception>)  
+- Произошла ошибка при обращении к API-интерфейсу системы. (<xref:System.ComponentModel.Win32Exception>)  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Чтобы ограничить управление службами на компьютере, с помощью перечисления <xref:System.ServiceProcess.ServiceControllerPermissionAccess> настройте в классе <xref:System.ServiceProcess.ServiceControllerPermission> необходимые разрешения.  

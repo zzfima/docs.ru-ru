@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 35ef113acffbebdcd4cb585970e575f17959f75b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8d30b7b98648e36a3008ac015f9560620f77b363
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518036"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751817"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Учебник. Создание приложения службы Windows
 
@@ -32,13 +32,13 @@ ms.locfileid: "59518036"
 
    > [!NOTE]
    > Если вы не видите здесь шаблон **Служба Windows**, попробуйте установить рабочую нагрузку **Разработка классических приложений .NET**.
-   >  
+   >
    > В диалоговом окне **Новый проект** выберите ссылку **Открыть установщик Visual Studio**. Выберите рабочую нагрузку **Разработка классических приложений .NET** и нажмите кнопку **Изменить**.
 
 3. В поле **Имя** введите *MyNewService*, а затем нажмите кнопку **ОК**.
 
    Откроется вкладка **Проект** (**Service1.cs [Проект]** или **Service1.vb [Проект]**).
-   
+
    Этот шаблон проекта содержит класс компонента с именем `Service1`, наследуемый от <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. В нем собран основной служебный код, в том числе код для запуска службы.
 
 ## <a name="rename-the-service"></a>Переименование службы
@@ -53,11 +53,11 @@ ms.locfileid: "59518036"
 
     ![Запрос на переименование](media/windows-service-rename.png "Запрос на переименование службы Windows")
 
-2. На вкладке **Проект** выберите в контекстном меню пункт **Свойства**. В окне **Свойства** измените значение **ServiceName** на *MyNewService*.
+3. На вкладке **Проект** выберите в контекстном меню пункт **Свойства**. В окне **Свойства** измените значение **ServiceName** на *MyNewService*.
 
     ![Свойства службы](media/windows-service-properties.png "Свойства службы Windows")
 
-3. В меню **Файл** выберите команду **Сохранить все**.
+4. В меню **Файл** выберите команду **Сохранить все**.
 
 ## <a name="add-features-to-the-service"></a>Добавление компонентов в службу
 
@@ -97,7 +97,7 @@ ms.locfileid: "59518036"
 
 #### <a name="polling"></a>Опрос
 
-Так как приложение службы предполагает длительное время выполнения, оно обычно опрашивает или отслеживает систему. Отслеживание настраивается в методе <xref:System.ServiceProcess.ServiceBase.OnStart%2A>. После начала работы службы метод `OnStart` должен возвращать управление операционной системе, чтобы она не блокировалась. 
+Так как приложение службы предполагает длительное время выполнения, оно обычно опрашивает или отслеживает систему. Отслеживание настраивается в методе <xref:System.ServiceProcess.ServiceBase.OnStart%2A>. После начала работы службы метод `OnStart` должен возвращать управление операционной системе, чтобы она не блокировалась.
 
 Для создания простого механизма опроса используйте компонент <xref:System.Timers.Timer?displayProperty=nameWithType>. Таймер через определенные интервалы времени генерирует событие <xref:System.Timers.Timer.Elapsed>, при возникновении которых служба может выполнять отслеживание. Компонент <xref:System.Timers.Timer> используется следующим образом:
 
@@ -173,7 +173,7 @@ ms.locfileid: "59518036"
 
 ### <a name="define-other-actions-for-the-service"></a>Определение других действий для службы
 
-Вы можете переопределить методы <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> и <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>, добавив дополнительные процессы обработки. 
+Вы можете переопределить методы <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> и <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>, добавив дополнительные процессы обработки.
 
 Следующий код показывает, как можно переопределить метод <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> в классе `MyNewService`:
 
@@ -182,7 +182,7 @@ ms.locfileid: "59518036"
 
 ## <a name="set-service-status"></a>Установка состояния службы
 
-Службы сообщают о своем состоянии [диспетчеру служб](/windows/desktop/Services/service-control-manager), чтобы пользователь мог определить, работает ли служба правильно. По умолчанию служба, которая наследуется от <xref:System.ServiceProcess.ServiceBase>, сообщает ограниченный набор состояний, включая SERVICE_STOPPED, SERVICE_PAUSED и SERVICE_RUNNING. Если служба запускается не сразу, полезно обеспечить сообщение состояния SERVICE_START_PENDING. 
+Службы сообщают о своем состоянии [диспетчеру служб](/windows/desktop/Services/service-control-manager), чтобы пользователь мог определить, работает ли служба правильно. По умолчанию служба, которая наследуется от <xref:System.ServiceProcess.ServiceBase>, сообщает ограниченный набор состояний, включая SERVICE_STOPPED, SERVICE_PAUSED и SERVICE_RUNNING. Если служба запускается не сразу, полезно обеспечить сообщение состояния SERVICE_START_PENDING.
 
 Состояния ERVICE_START_PENDING и SERVICE_STOP_PENDING можно реализовать путем добавления кода, вызывающего функцию Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus).
 
@@ -319,7 +319,7 @@ ms.locfileid: "59518036"
 
     ' Update the service state to Stopped.
     serviceStatus.dwCurrentState = ServiceState.SERVICE_STOPPED
-    SetServiceStatus(Me.ServiceHandle, serviceStatus)    
+    SetServiceStatus(Me.ServiceHandle, serviceStatus)
     ```
 
 ## <a name="add-installers-to-the-service"></a>Добавление установщиков в службу
@@ -332,27 +332,27 @@ ms.locfileid: "59518036"
 
      По умолчанию Visual Studio добавляет в проект класс компонента `ProjectInstaller`, содержащий два установщика. Они предназначены для установки службы и связанного со службой процесса.
 
-4. В представлении **Конструктор** для **ProjectInstaller** выберите **serviceInstaller1** для проекта Visual C# или **ServiceInstaller1** для проекта Visual Basic. Затем в контекстном меню выберите пункт **Свойства**.
+3. В представлении **Конструктор** для **ProjectInstaller** выберите **serviceInstaller1** для проекта Visual C# или **ServiceInstaller1** для проекта Visual Basic. Затем в контекстном меню выберите пункт **Свойства**.
 
-5. Убедитесь в том, что в окне **Свойства** свойство <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> имеет значение **MyNewService**.
+4. Убедитесь в том, что в окне **Свойства** свойство <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> имеет значение **MyNewService**.
 
-6. Введите для свойства <xref:System.ServiceProcess.ServiceInstaller.Description%2A> какой нибудь текст, например *Пример службы*. 
+5. Введите для свойства <xref:System.ServiceProcess.ServiceInstaller.Description%2A> какой нибудь текст, например *Пример службы*.
 
      Этот текст отображается в столбце **Описание** в окне **Службы** и помогает пользователю понять, для чего служба нужна.
 
     ![Описание службы в окне "Службы".](media/windows-service-description.png "Описание службы")
 
-7. Введите текст для свойства <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A>, например *Отображаемое имя MyNewService*. 
+6. Введите текст для свойства <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A>, например *Отображаемое имя MyNewService*.
 
      Этот текст отображается в столбце **Отображаемое имя** в окне **Службы**. Это имя может отличаться от значения свойства <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A>, которое представляет собой имя, используемое в системе (например, когда вы запускаете службу с помощью команды `net start`).
 
-8. Выберите для свойства <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> значение <xref:System.ServiceProcess.ServiceStartMode.Automatic> в раскрывающемся списке.
+7. Выберите для свойства <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> значение <xref:System.ServiceProcess.ServiceStartMode.Automatic> в раскрывающемся списке.
 
-9. В итоге окно **Свойства** должно выглядеть так:
+8. В итоге окно **Свойства** должно выглядеть так:
 
      ![Свойства установщика для службы Windows](media/windows-service-installer-properties.png "Свойства установщика службы Windows")
 
-9. В представлении **Конструктор** для **ProjectInstaller** выберите **serviceProcessInstaller1** для проекта Visual C# или **ServiceProcessInstaller1** для проекта Visual Basic. Затем в контекстном меню выберите пункт **Свойства**. Выберите для свойства <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> значение <xref:System.ServiceProcess.ServiceAccount.LocalSystem> в раскрывающемся списке. 
+9. В представлении **Конструктор** для **ProjectInstaller** выберите **serviceProcessInstaller1** для проекта Visual C# или **ServiceProcessInstaller1** для проекта Visual Basic. Затем в контекстном меню выберите пункт **Свойства**. Выберите для свойства <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> значение <xref:System.ServiceProcess.ServiceAccount.LocalSystem> в раскрывающемся списке.
 
      Это позволит установить и запускать службу от имени локальной системной учетной записи.
 
@@ -364,7 +364,7 @@ ms.locfileid: "59518036"
 ## <a name="optional-set-startup-parameters"></a>Установка параметров запуска (необязательно)
 
 > [!NOTE]
-> Прежде чем добавлять параметры запуска, решите, является ли это наилучшим способом передачи информации в службу. Хотя параметры запуска просты для использования и синтаксического анализа и пользователи могут легко их переопределять, для пользователей их поиск и применение могут оказаться затрудненными (без документации). Как правило, если вашей службе требуется всего несколько параметров запуска, то следует использовать реестр или файл конфигурации. 
+> Прежде чем добавлять параметры запуска, решите, является ли это наилучшим способом передачи информации в службу. Хотя параметры запуска просты для использования и синтаксического анализа и пользователи могут легко их переопределять, для пользователей их поиск и применение могут оказаться затрудненными (без документации). Как правило, если вашей службе требуется всего несколько параметров запуска, то следует использовать реестр или файл конфигурации.
 
 Служба Windows может принимать аргументы командной строки или параметры запуска. При добавлении кода в параметры запуска процесса пользователь может запускать службу со своими собственными специальными параметрами из окна свойств службы. Однако эти параметры запуска не сохраняются при следующем запуске службы. Задать постоянные параметры запуска можно в реестре.
 
@@ -480,16 +480,16 @@ ms.locfileid: "59518036"
     installutil MyNewService.exe
     ```
 
-    Если служба установлена успешно, команда сообщит об успешном выполнении. 
+    Если служба установлена успешно, команда сообщит об успешном выполнении.
 
     Если система не может найти файл *installutil.exe*, убедитесь в том, что он есть на вашем компьютере. Это средство устанавливается вместе с платформой .NET Framework в папке *%windir%\Microsoft.NET\Framework[64]\\&lt;версия платформы&gt;*. Например, для 64-разрядной версии по умолчанию используется путь *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
 
-    Если процесс **installutil.exe** завершается сбоем, найдите причину в журнале установки. По умолчанию журнал находится в той же папке, что и исполняемый файл службы. Установка может завершиться сбоем по указанным ниже причинам. 
+    Если процесс **installutil.exe** завершается сбоем, найдите причину в журнале установки. По умолчанию журнал находится в той же папке, что и исполняемый файл службы. Установка может завершиться сбоем по указанным ниже причинам.
     - Класс <xref:System.ComponentModel.RunInstallerAttribute> отсутствует в классе `ProjectInstaller`.
-    -  Значение атрибута отличается от `true`. 
+    - Значение атрибута отличается от `true`.
     - Класс `ProjectInstaller` не определен как `public`.
 
-Дополнительные сведения см. в разделе [Как Установка и удаление служб](how-to-install-and-uninstall-services.md).
+Дополнительные сведения см. в разделе [Практическое руководство. Установка и удаление служб](how-to-install-and-uninstall-services.md).
 
 ## <a name="start-and-run-the-service"></a>Запуск и выполнение службы
 
@@ -520,7 +520,7 @@ ms.locfileid: "59518036"
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
-Если приложение службы Windows вам больше не нужно, его можно удалить. 
+Если приложение службы Windows вам больше не нужно, его можно удалить.
 
 1. Откройте **Командную строку разработчика Visual Studio** с учетными данными администратора.
 
@@ -532,7 +532,7 @@ ms.locfileid: "59518036"
     installutil.exe /u MyNewService.exe
     ```
 
-   Если служба удалена успешно, команда сообщит об этом. Дополнительные сведения см. в разделе [Как Установка и удаление служб](how-to-install-and-uninstall-services.md).
+   Если служба удалена успешно, команда сообщит об этом. Дополнительные сведения см. в разделе [Практическое руководство. Установка и удаление служб](how-to-install-and-uninstall-services.md).
 
 ## <a name="next-steps"></a>Следующие шаги
 

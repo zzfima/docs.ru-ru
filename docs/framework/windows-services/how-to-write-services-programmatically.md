@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание службы программным способом
+title: Практическое руководство. Создание службы программным способом
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: baa7655481c24ebe96b76a0accbff63b6965a021
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e709db257c839dc7e583412a87af6d25b80de969
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328430"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591431"
 ---
-# <a name="how-to-write-services-programmatically"></a>Как выполнить Создание службы программным способом
+# <a name="how-to-write-services-programmatically"></a>Практическое руководство. Создание службы программным способом
 Если вы решили не использовать шаблон проекта "Служба Windows", для создания собственной службы вам придется настроить наследование и другие элементы инфраструктуры самостоятельно. Создавая службу программным способом, вам необходимо выполнить несколько действий, которые в случае с шаблоном выполняются автоматически.  
   
--   Для класса службы необходимо настроить наследование от класса <xref:System.ServiceProcess.ServiceBase>.  
+- Для класса службы необходимо настроить наследование от класса <xref:System.ServiceProcess.ServiceBase>.  
   
--   Для проекта службы необходимо создать метод `Main`, который определяет запускаемые службы и вызывает для них метод <xref:System.ServiceProcess.ServiceBase.Run%2A>.  
+- Для проекта службы необходимо создать метод `Main`, который определяет запускаемые службы и вызывает для них метод <xref:System.ServiceProcess.ServiceBase.Run%2A>.  
   
--   Необходимо переопределить процедуры <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и <xref:System.ServiceProcess.ServiceBase.OnStop%2A> и добавить код, который они должны выполнять.  
+- Необходимо переопределить процедуры <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и <xref:System.ServiceProcess.ServiceBase.OnStop%2A> и добавить код, который они должны выполнять.  
   
 ### <a name="to-write-a-service-programmatically"></a>Создание службы программным способом  
   
 1. Создайте пустой проект, а затем создайте ссылку на необходимые пространства имен.  
   
-    1.  В окне **Обозреватель решений** щелкните правой кнопкой мыши узел **Ссылки** и выберите пункт **Добавить ссылку**.  
+    1. В окне **Обозреватель решений** щелкните правой кнопкой мыши узел **Ссылки** и выберите пункт **Добавить ссылку**.  
   
-    2.  На вкладке **.NET Framework** найдите **System.dll** и щелкните **Выбрать**.  
+    2. На вкладке **.NET Framework** найдите **System.dll** и щелкните **Выбрать**.  
   
-    3.  Найдите **System.ServiceProcess.dll** и щелкните **Выбрать**.  
+    3. Найдите **System.ServiceProcess.dll** и щелкните **Выбрать**.  
   
-    4.  Нажмите кнопку **ОК**.  
+    4. Нажмите кнопку **ОК**.  
   
 2. Добавьте класс и настройте для него наследование от <xref:System.ServiceProcess.ServiceBase>.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "59328430"
   
 6. Переопределите все прочие методы, для которых нужно задать определенную обработку, и напишите код, благодаря которому служба будет понимать, что нужно делать в каждом случае.  
   
-7. Добавить установщики, необходимые для приложения службы. Дополнительные сведения см. в разделе [Как Добавление установщиков в приложение-службу](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+7. Добавить установщики, необходимые для приложения службы. Дополнительные сведения см. в разделе [Практическое руководство. Добавление установщиков в приложение-службу](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 8. Скомпилируйте проект, выбрав в меню **Сборка** пункт **Собрать решение**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59328430"
   
 9. Создайте проект установки и настраиваемые действия для установки службы. Пример см. в разделе [Пошаговое руководство. Создание приложения служб Windows в конструкторе компонентов](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
   
-10. Установите службу. Дополнительные сведения см. в разделе [Как Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+10. Установите службу. Дополнительные сведения см. в разделе [Практическое руководство. Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
 ## <a name="see-also"></a>См. также
 

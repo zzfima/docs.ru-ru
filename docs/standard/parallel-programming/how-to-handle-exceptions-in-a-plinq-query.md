@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Обработка исключений в запросе PLINQ
+title: Практическое руководство. Обработка исключений в запросе PLINQ
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b1a72a2b2443b419ea4f4b036664fb5f8932096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef107ae0dceb7ee937b21d65cba92cbcf6a9a96c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554248"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629001"
 ---
-# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Как выполнить Обработка исключений в запросе PLINQ
+# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Практическое руководство. Обработка исключений в запросе PLINQ
 В первом примере в этой статье показано, как правильно обрабатывать исключение <xref:System.AggregateException?displayProperty=nameWithType>, создаваемое при выполнении запроса PLINQ. Во втором примере показано, как разместить блоки try-catch в делегатах, то есть максимально близко к точке, в которой будет создано исключение. Этот подход позволит перехватить исключение сразу после создания, и при удачных обстоятельствах продолжить выполнение запроса. Если исключения могут всплывать обратно в присоединяемый поток, запрос может продолжить обработку некоторых элементов после создания исключения.  
   
  В некоторых случаях, когда PLINQ прибегает к последовательному выполнению, возникающие исключения могут распространяться напрямую, без оболочки <xref:System.AggregateException>. Кроме того, <xref:System.Threading.ThreadAbortException> всегда распространяются напрямую.  
@@ -43,7 +43,7 @@ ms.locfileid: "54554248"
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
--   Чтобы скомпилировать и запустить эти примеры, скопируйте их в пример данных для PLINQ и вызовите этот метод из Main.  
+- Чтобы скомпилировать и запустить эти примеры, скопируйте их в пример данных для PLINQ и вызовите этот метод из Main.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  Не перехватывайте исключение, если не знаете, как его обрабатывать, чтобы не нарушить состояние программы.  

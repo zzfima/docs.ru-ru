@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e932b3af0b952fa88d33df453917cb11c3ceed33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2b8866d3a1922988518dfe2857c98d4725cc464
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517764"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664562"
 ---
 # <a name="sorted-collection-types"></a>Отсортированные типы коллекций
 Класс <xref:System.Collections.SortedList?displayProperty=nameWithType>, универсальный класс <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> и универсальный класс <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> похожи на класс <xref:System.Collections.Hashtable> и универсальный класс <xref:System.Collections.Generic.Dictionary%602> в том, что они реализуют интерфейс <xref:System.Collections.IDictionary>, но сортировка элементов в них осуществляется по ключу. Кроме того, в них отсутствует возможность вставки O(1) и извлечения характеристик хэш-таблиц. Эти три класса имеют ряд схожих свойств:  
   
--   Все три класса реализуют интерфейс <xref:System.Collections.IDictionary?displayProperty=nameWithType>. Два универсальных класса также реализуют универсальный интерфейс <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>.  
+- Все три класса реализуют интерфейс <xref:System.Collections.IDictionary?displayProperty=nameWithType>. Два универсальных класса также реализуют универсальный интерфейс <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>.  
   
--   Каждый элемент является парой ключ-значение для перечисления.  
+- Каждый элемент является парой ключ-значение для перечисления.  
   
     > [!NOTE]
     >  Неуниверсальный класс <xref:System.Collections.SortedList> возвращает при перечислении объекты <xref:System.Collections.DictionaryEntry>, несмотря на то, что два универсальных типа возвращают объекты <xref:System.Collections.Generic.KeyValuePair%602>.  
   
--   Элементы сортируются в соответствии с реализацией <xref:System.Collections.IComparer?displayProperty=nameWithType> (для неуниверсального класса <xref:System.Collections.SortedList>) или с реализацией <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> (для двух универсальных классов).  
+- Элементы сортируются в соответствии с реализацией <xref:System.Collections.IComparer?displayProperty=nameWithType> (для неуниверсального класса <xref:System.Collections.SortedList>) или с реализацией <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> (для двух универсальных классов).  
   
--   Каждый класс предоставляет свойства, которые возвращают коллекции, содержащие только ключи или только значения.  
+- Каждый класс предоставляет свойства, которые возвращают коллекции, содержащие только ключи или только значения.  
   
  В таблице ниже перечислены некоторые отличия между двумя классами отсортированных списков и классом <xref:System.Collections.Generic.SortedDictionary%602>.  
   

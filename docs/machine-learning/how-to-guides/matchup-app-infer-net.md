@@ -1,21 +1,16 @@
 ---
 title: Создание приложения со списком матчей с помощью Infer.NET и вероятностного программирования
 description: Узнайте, как использовать вероятностное программирование и Infer.NET для создания приложения со списком матчей на основе упрощенной версии TrueSkill.
-ms.date: 03/05/2019
+ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 06538ec9de26f5aeabe474fbcae69f0a313c8d32
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 85cb3753ae19e7ca64002eb7c26b44b6f7d41e4f
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679142"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211424"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Создание приложения со списком матчей с помощью Infer.NET и вероятностного программирования
-
-> [!NOTE]
-> В этом разделе описано, как использовать платформу ML.NET, которая сейчас доступна в режиме предварительной версии. Этот материал может быть изменен. Дополнительные сведения см. в [обзоре ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
-
-Сейчас в этих инструкциях и примере используется **ML.NET версии 0.10**. Дополнительные сведения см. в заметках о выпуске в [репозитории GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Это руководство содержит сведения о вероятностном программировании с использованием Infer.NET. Вероятностное программирование — это метод машинного обучения, который позволяет выражать пользовательские модели в виде компьютерных программ. Он позволяет включить в модель знания о предметной области и делает систему машинного обучения более логичной и понятной. Также он поддерживает оперативный вывод, то есть обучение по мере поступления новых данных. Infer.NET используется в нескольких продуктах корпорации Майкрософт, например Azure, Xbox и Bing.
 

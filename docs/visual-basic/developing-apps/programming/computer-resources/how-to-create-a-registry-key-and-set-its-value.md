@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание раздела реестра и задание его значения в Visual Basic
+title: Практическое руководство. Создание раздела реестра и задание его значения в Visual Basic
 ms.date: 07/20/2015
 f1_keywords:
 - RegistryKey.CreateSubKey
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 0cadff8b44c60041e2664b1d3b70830209014301
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5c286c240c405fc2d01b267bb4395701ec091c8a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312623"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620685"
 ---
-# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Как выполнить Создание раздела реестра и задание его значения в Visual Basic
+# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Практическое руководство. Создание раздела реестра и задание его значения в Visual Basic
 Метод `CreateSubKey` объекта `My.Computer.Registry` можно использовать для создания раздела реестра.  
   
 ## <a name="procedure"></a>Процедура  
   
 #### <a name="to-create-a-registry-key"></a>Создание раздела реестра  
   
--   Используйте метод `CreateSubKey`, задав куст, в который нужно поместить раздел, а также имя раздела. Параметр `Subkey` нечувствителен к регистру. В этом примере создается раздел реестра `MyTestKey` в HKEY_CURRENT_USER.  
+- Используйте метод `CreateSubKey`, задав куст, в который нужно поместить раздел, а также имя раздела. Параметр `Subkey` нечувствителен к регистру. В этом примере создается раздел реестра `MyTestKey` в HKEY_CURRENT_USER.  
   
      [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
@@ -57,15 +57,15 @@ ms.locfileid: "59312623"
   
  При следующих условиях возможно возникновение исключения:  
   
--   Имя ключа имеет значение `Nothing` (<xref:System.ArgumentNullException>).  
+- Имя ключа имеет значение `Nothing` (<xref:System.ArgumentNullException>).  
   
--   У пользователя нет разрешения на создание разделов реестра (<xref:System.Security.SecurityException>).  
+- У пользователя нет разрешения на создание разделов реестра (<xref:System.Security.SecurityException>).  
   
--   Имя ключа превышает ограничение в 255 символов (<xref:System.ArgumentException>).  
+- Имя ключа превышает ограничение в 255 символов (<xref:System.ArgumentException>).  
   
--   Раздел является закрытым (<xref:System.IO.IOException>).  
+- Раздел является закрытым (<xref:System.IO.IOException>).  
   
--   Раздел реестра доступен только для чтения (<xref:System.UnauthorizedAccessException>).  
+- Раздел реестра доступен только для чтения (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Для запуска этого процесса сборке нужен уровень привилегий, предоставляемый классом <xref:System.Security.Permissions.RegistryPermission>. Если процесс выполняется в контексте с частичным доверием, он может сгенерировать исключение из-за недостатка привилегий. Аналогичным образом пользователь должен иметь правильные ACL для создания и записи параметров. Например, локальное приложение, имеющее разрешение на доступ к коду, может не иметь разрешения операционной системы. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../../../framework/misc/code-access-security-basics.md).  

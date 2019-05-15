@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Оптимизация производительности асинхронных процедур с использованием метода Task.WhenAll (C#)
+title: Практическое руководство. Оптимизация производительности асинхронных процедур с использованием метода Task.WhenAll (C#)
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: 9710e5f31b9d01c5151b548c1b642293122d44b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8e1f617040bd902ab53500fbfeeafff35677280a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297958"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583424"
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Как выполнить Оптимизация производительности асинхронных процедур с использованием метода Task.WhenAll (C#)
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Практическое руководство. Оптимизация производительности асинхронных процедур с использованием метода Task.WhenAll (C#)
 Можно повысить производительность асинхронного решения, которое описывается в разделе [Пошаговое руководство. Доступ к Интернету с помощью модификатора Async и оператора Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md), с помощью метода <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Этот метод асинхронно ожидает несколько асинхронных операций, которые представлены в виде коллекции задач.  
   
  Как вы могли заметить в этом пошаговом руководстве, веб-сайты загружаются с разной скоростью. Иногда один из веб-сайтов работает слишком медленно, что задерживает все остальные загрузки. Во время работы асинхронных программ, созданных в этом пошаговом руководстве, программу можно с легкостью завершить, если нет необходимости в ожидании, но было бы лучше начать все загрузки одновременно и дать возможность более быстрым загрузкам продолжаться без ожидания более медленных.  
@@ -25,9 +25,9 @@ ms.locfileid: "59297958"
   
 1. Добавьте метод `ProcessURLAsync` в первое приложение, которое разрабатывается в статье [Пошаговое руководство. Доступ к Интернету с помощью модификатора Async и оператора Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Если вы скачали код со страницы [Примеры кода от разработчиков](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), откройте проект AsyncWalkthrough, а затем добавьте `ProcessURLAsync` в файл MainWindow.xaml.cs.  
+    - Если вы скачали код со страницы [Примеры кода от разработчиков](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), откройте проект AsyncWalkthrough, а затем добавьте `ProcessURLAsync` в файл MainWindow.xaml.cs.  
   
-    -   Если вы разработали код, выполнив пошаговое руководство, добавьте `ProcessURLAsync` в приложение, которое включает метод `GetURLContentsAsync`. Файл MainWindow.xaml.cs для этого приложения — это первый пример в разделе "Полный код примеров из пошагового руководства".  
+    - Если вы разработали код, выполнив пошаговое руководство, добавьте `ProcessURLAsync` в приложение, которое включает метод `GetURLContentsAsync`. Файл MainWindow.xaml.cs для этого приложения — это первый пример в разделе "Полный код примеров из пошагового руководства".  
   
      Метод `ProcessURLAsync` объединяет действия в теле цикла `foreach` в `SumPageSizesAsync` в исходном пошаговом руководстве. Метод асинхронно скачивает содержимое указанного веб-сайта в виде массива байтов и затем отображает и возвращает длину массива байтов.  
   
@@ -97,9 +97,9 @@ ms.locfileid: "59297958"
   
 1. Добавьте следующую версию метода `ProcessURLAsync` во второе приложение, которое разрабатывается в статье [Пошаговое руководство. Доступ к Интернету с помощью модификатора Async и оператора Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Если вы скачали код со страницы [Примеры кода от разработчиков](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), откройте проект AsyncWalkthrough_HttpClient, а затем добавьте `ProcessURLAsync` в файл MainWindow.xaml.cs.  
+    - Если вы скачали код со страницы [Примеры кода от разработчиков](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), откройте проект AsyncWalkthrough_HttpClient, а затем добавьте `ProcessURLAsync` в файл MainWindow.xaml.cs.  
   
-    -   Если вы разработали код, выполнив пошаговое руководство, добавьте `ProcessURLAsync` в приложение, которое использует метод `HttpClient.GetByteArrayAsync`. Файл MainWindow.xaml.cs для этого приложения  — это второй пример в разделе "Полный код примеров из пошагового руководства".  
+    - Если вы разработали код, выполнив пошаговое руководство, добавьте `ProcessURLAsync` в приложение, которое использует метод `HttpClient.GetByteArrayAsync`. Файл MainWindow.xaml.cs для этого приложения  — это второй пример в разделе "Полный код примеров из пошагового руководства".  
   
      Метод `ProcessURLAsync` объединяет действия в теле цикла `foreach` в `SumPageSizesAsync` в исходном пошаговом руководстве. Метод асинхронно скачивает содержимое указанного веб-сайта в виде массива байтов и затем отображает и возвращает длину массива байтов.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "59297958"
   
 ### <a name="to-test-the-taskwhenall-solutions"></a>Тестирование решений Task.WhenAll  
   
--   Для любого из решений нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Запуск**. Полученный вывод должен напоминать вывод из асинхронных решений в статье [Пошаговое руководство. Доступ к Интернету с помощью модификатора Async и оператора Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Тем не менее обратите внимание, что веб-сайты каждый раз отображаются в другом порядке.  
+- Для любого из решений нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Запуск**. Полученный вывод должен напоминать вывод из асинхронных решений в статье [Пошаговое руководство. Доступ к Интернету с помощью модификатора Async и оператора Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Тем не менее обратите внимание, что веб-сайты каждый раз отображаются в другом порядке.  
   
 ## <a name="example"></a>Пример  
  В следующем коде показано расширение для проекта, использующее метод `GetURLContentsAsync` для скачивания содержимого из Интернета.  

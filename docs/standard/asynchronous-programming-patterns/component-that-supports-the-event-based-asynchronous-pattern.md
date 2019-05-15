@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Реализация компонента, поддерживающего асинхронную модель на основе событий
+title: Практическое руководство. Реализация компонента, поддерживающего асинхронную модель на основе событий
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: da6f21ba452c5c0413881759879cca371507a290
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bc19ee687b26025d3da4d66888902395b863f046
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334293"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628913"
 ---
-# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Как выполнить Реализация компонента, поддерживающего асинхронную модель на основе событий
+# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Практическое руководство. Реализация компонента, поддерживающего асинхронную модель на основе событий
 Если вы создаете класс и некоторые операции этого класса могут привести к значительным задержкам, подумайте о том, чтобы реализовать для этого класса асинхронные функции с помощью [асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
  В этом руководстве мы покажем, как создать компонент, реализующий асинхронную модель на основе событий. Для такой реализации применяются вспомогательные классы из пространства имен <xref:System.ComponentModel?displayProperty=nameWithType>, что обеспечивает правильную работу компонента для приложений любой модели, включая [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], консольные приложения и приложения Windows Forms. Также этот компонент можно создать на основе элемента управления <xref:System.Windows.Forms.PropertyGrid> и пользовательских конструкторов.  
@@ -34,19 +34,19 @@ ms.locfileid: "59334293"
   
  В данном пошаговом руководстве представлены следующие задачи.  
   
--   создание компонента;  
+- создание компонента;  
   
--   определение открытых асинхронных событий и делегатов;  
+- определение открытых асинхронных событий и делегатов;  
   
--   определение закрытых делегатов;  
+- определение закрытых делегатов;  
   
--   реализация открытых событий;  
+- реализация открытых событий;  
   
--   реализация метода завершения;  
+- реализация метода завершения;  
   
--   реализация рабочих методов;  
+- реализация рабочих методов;  
   
--   реализация методов запуска и отмены.  
+- реализация методов запуска и отмены.  
   
  Чтобы скопировать код из этого раздела единым блоком, см. раздел [Практическое руководство. Реализация клиента асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "59334293"
   
 #### <a name="to-create-the-component"></a>Создание компонента  
   
--   Создайте класс `PrimeNumberCalculator`, производный от <xref:System.ComponentModel.Component>.  
+- Создайте класс `PrimeNumberCalculator`, производный от <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Определение открытых асинхронных событий и делегатов  
  Этот компонент взаимодействует с клиентами с помощью событий. Событие _имя_метода_**Completed** предупреждает клиенты о завершении асинхронной задачи, а событие _имя_метода_**ProgressChanged** информирует клиенты о ходе выполнения асинхронной задачи.  
@@ -87,7 +87,7 @@ ms.locfileid: "59334293"
   
 #### <a name="to-test-your-component"></a>Проверка компонента  
   
--   Скомпилируйте компонент.  
+- Скомпилируйте компонент.  
   
      Вы увидите два предупреждения компилятора.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "59334293"
   
 #### <a name="to-complete-an-asynchronous-operation"></a>Для завершения асинхронной операции сделайте следующее.  
   
--   Реализуйте метод завершения. Он принимает шесть параметров, на основании которых заполняет класс `CalculatePrimeCompletedEventArgs` и возвращает их клиенту через `CalculatePrimeCompletedEventHandler` для этого клиента. Он также удаляет маркер идентификатора задачи из внутренней коллекции, после чего завершает срок существования асинхронной операции с помощью вызова <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>. <xref:System.ComponentModel.AsyncOperation> маршалирует вызов в поток или контекст, соответствующий модели приложения.  
+- Реализуйте метод завершения. Он принимает шесть параметров, на основании которых заполняет класс `CalculatePrimeCompletedEventArgs` и возвращает их клиенту через `CalculatePrimeCompletedEventHandler` для этого клиента. Он также удаляет маркер идентификатора задачи из внутренней коллекции, после чего завершает срок существования асинхронной операции с помощью вызова <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>. <xref:System.ComponentModel.AsyncOperation> маршалирует вызов в поток или контекст, соответствующий модели приложения.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#26)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#26)]  
@@ -158,7 +158,7 @@ ms.locfileid: "59334293"
   
 #### <a name="to-test-your-component"></a>Проверка компонента  
   
--   Скомпилируйте компонент.  
+- Скомпилируйте компонент.  
   
      Вы увидите одно предупреждение компилятора:  
   
@@ -212,7 +212,7 @@ ms.locfileid: "59334293"
   
 #### <a name="to-test-your-component"></a>Проверка компонента  
   
--   Скомпилируйте компонент.  
+- Скомпилируйте компонент.  
   
      Теперь осталось создать только методы `CalculatePrimeAsync` и `CancelAsync`для запуска и отмены асинхронных операций.  
   
@@ -238,7 +238,7 @@ ms.locfileid: "59334293"
   
 #### <a name="to-test-your-component"></a>Проверка компонента  
   
--   Скомпилируйте компонент.  
+- Скомпилируйте компонент.  
   
  Итак, компонент `PrimeNumberCalculator` полностью готов к использованию.  
   

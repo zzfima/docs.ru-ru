@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 9d187d4f-c76e-4223-a670-cc290783ce47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef2b5b200f95cdfac9b08a33c328c1dfb797e59e
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 79078b16f0d56c40a3dcfeabaaed9b5cbb7753a0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537778"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589850"
 ---
 # <a name="xml-document-object-model-dom-hierarchy"></a>Иерархия модели объектов (DOM) XML-документа
 Следующая иллюстрация показывает иерархию классов для модели XML DOM с именем W3C в скобках наряду с именем класса, где это уместно.  
@@ -20,13 +20,13 @@ ms.locfileid: "46537778"
   
  Следующие классы не наследуют от класса **XmlNode**:  
   
--   **XmlImplementation**  
+- **XmlImplementation**  
   
--   **XmlNamedNodeMap**  
+- **XmlNamedNodeMap**  
   
--   **XmlNodeList**  
+- **XmlNodeList**  
   
--   **XmlNodeChangedEventArgs**  
+- **XmlNodeChangedEventArgs**  
   
  Класс **XmlImplementation** используется для создания XML-документа. Дополнительные сведения см. в статье [Создание XML-документа](../../../../docs/standard/data/xml/xml-document-creation.md).  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce1855027e89f21d96e6cf761afcaaabb9b5138f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b39f91c5fabcfb5d7929a645b438b5db77f70956
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648223"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644921"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Приостановка и прерывание потоков
 
@@ -45,9 +45,9 @@ ms.locfileid: "54648223"
   
  Если ожидание является управляемым, методы <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> и <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> незамедлительно выводят поток из спящего режима. Если ожидание является неуправляемым (как, например, вызов неуправляемого кода функции Win32 [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject)), то методы <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> и <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> не могут управлять потоком, пока он не вернется в управляемый код или не вызовет управляемый код. В управляемом коде это поведение выглядит следующим образом:  
   
--   <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> выводит поток из состояния ожидания, в котором он может находиться, и приводит к созданию исключения <xref:System.Threading.ThreadInterruptedException> в целевом потоке.  
+- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> выводит поток из состояния ожидания, в котором он может находиться, и приводит к созданию исключения <xref:System.Threading.ThreadInterruptedException> в целевом потоке.  
   
--   <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> выводит поток из состояния ожидания, в котором он может находиться, и приводит к созданию исключения <xref:System.Threading.ThreadAbortException> в этом потоке. Подробнее см. в разделе [Уничтожение потоков](../../../docs/standard/threading/destroying-threads.md).  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> выводит поток из состояния ожидания, в котором он может находиться, и приводит к созданию исключения <xref:System.Threading.ThreadAbortException> в этом потоке. Подробнее см. в разделе [Уничтожение потоков](../../../docs/standard/threading/destroying-threads.md).  
   
 ## <a name="see-also"></a>См. также
 

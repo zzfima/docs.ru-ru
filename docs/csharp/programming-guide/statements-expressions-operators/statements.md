@@ -6,12 +6,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 232368d2b019b8c265bbb48bd197776f9e03a132
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6dcf5a69be7817351a9e250506ba51471918a772
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971511"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608134"
 ---
 # <a name="statements-c-programming-guide"></a>Инструкции (Руководство по программированию на C#)
 Действия программы выражаются в инструкциях. В общие действия включено объявление переменных, присвоение значений, вызов методов, проход по коллекциям и ветвление на один или другой блок кода, в зависимости от заданного условия. Порядок выполнения инструкций в программе называется потоком управления или потоком выполнения. Поток управления может отличаться при каждом запуске программы, в зависимости от реакции программы на входные данные, которые она получает во время выполнения.  
@@ -83,11 +83,11 @@ ms.locfileid: "56971511"
   
 ## <a name="related-sections"></a>Связанные разделы  
   
--   [Ключевые слова инструкций](../../../csharp/language-reference/keywords/statement-keywords.md)  
+- [Ключевые слова инструкций](../../../csharp/language-reference/keywords/statement-keywords.md)  
   
--   [Выражения](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
+- [Выражения](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
   
--   [Инструкции](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Инструкции](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Отображение сведений о локализованной дате и времени для веб-пользователей
+title: Практическое руководство. Отображение сведений о локализованной дате и времени для веб-пользователей
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -15,14 +15,14 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b6bb41ad3743e19ae3f6ded48dd491542926010d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320162"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633874"
 ---
-# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Как выполнить Отображение сведений о локализованной дате и времени для веб-пользователей
+# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Практическое руководство. Отображение сведений о локализованной дате и времени для веб-пользователей
 Веб-страницы могут отображаться в любой точке мира, поэтому в операциях синтаксического анализа и форматирования значений даты и времени при взаимодействии с пользователем не должен использоваться формат по умолчанию (который обычно определяется форматом языка и региональных параметров, установленным для веб-сервера). Вместо этого при обработке строк даты и времени, вводимых пользователем, веб-формы должны выполнять их синтаксический анализ с учетом значений языка и региональных параметров, установленных для пользователя. Аналогичным образом, отображать данные даты и времени для пользователя следует в формате, соответствующем языку и региональным параметрам пользователя. В настоящем разделе показано, как это делается.  
   
 ## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Синтаксический анализ строк даты и времени, вводимых пользователем  
@@ -35,9 +35,9 @@ ms.locfileid: "59320162"
   
 4. Вызовите метод `TryParse` или `Parse` для типа <xref:System.DateTime> или <xref:System.DateTimeOffset>, чтобы выполнить преобразование. Используйте перегрузку метода `TryParse` или `Parse` с параметром `provider` и передайте в него один из следующих объектов:  
   
-    -   объект <xref:System.Globalization.CultureInfo>, созданный на шаге 3;  
+    - объект <xref:System.Globalization.CultureInfo>, созданный на шаге 3;  
   
-    -   объект <xref:System.Globalization.DateTimeFormatInfo> из свойства <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> объекта <xref:System.Globalization.CultureInfo>, созданного на шаге 3.  
+    - объект <xref:System.Globalization.DateTimeFormatInfo> из свойства <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> объекта <xref:System.Globalization.CultureInfo>, созданного на шаге 3.  
   
 5. Если преобразование завершается сбоем, повторите шаги 2–4 поочередно для каждого из остальных элементов в массиве строк, полученных в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A>.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "59320162"
   
 10. Вызовите метод <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> или <xref:System.DateTime.TryParse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%2CSystem.DateTime%40%29?displayProperty=nameWithType>, чтобы преобразовать дату и время из запроса пользователя в значение <xref:System.DateTime>. Используйте перегрузку метода с параметром `provider` и передайте в него один из следующих объектов:  
   
-    -   объект <xref:System.Globalization.CultureInfo>, созданный на шаге 8;  
+    - объект <xref:System.Globalization.CultureInfo>, созданный на шаге 8;  
   
-    -   объект <xref:System.Globalization.DateTimeFormatInfo> из свойства <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> объекта <xref:System.Globalization.CultureInfo>, созданного на шаге 8.  
+    - объект <xref:System.Globalization.DateTimeFormatInfo> из свойства <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> объекта <xref:System.Globalization.CultureInfo>, созданного на шаге 8.  
   
 11. Если операция синтаксического анализа на шаге 10 завершится сбоем, перейдите к шагу 13. В противном случае вызовите метод <xref:System.UInt32.Parse%28System.String%29?displayProperty=nameWithType>, чтобы преобразовать строковое представление сдвига часового пояса пользователя в целое число.  
   
@@ -100,13 +100,13 @@ ms.locfileid: "59320162"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Чтобы скомпилировать этот код, создайте веб-страницу [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] без кода программной части. Затем скопируйте наш пример на эту веб-страницу, заменив им весь существующий код. Веб страница [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] должна содержать следующие элементы управления:  
   
--   элемент управления <xref:System.Web.UI.WebControls.Label>, который не указан в коде (для его свойства <xref:System.Web.UI.WebControls.TextBox.Text%2A> задайте значение "Введите число:");  
+- элемент управления <xref:System.Web.UI.WebControls.Label>, который не указан в коде (для его свойства <xref:System.Web.UI.WebControls.TextBox.Text%2A> задайте значение "Введите число:");  
   
--   элемент управления <xref:System.Web.UI.WebControls.TextBox> с именем `DateString`;  
+- элемент управления <xref:System.Web.UI.WebControls.TextBox> с именем `DateString`;  
   
--   элемент управления <xref:System.Web.UI.WebControls.Button> с именем `OKButton`; (для его свойства <xref:System.Web.UI.WebControls.Button.Text%2A> задайте значение "ОК").  
+- элемент управления <xref:System.Web.UI.WebControls.Button> с именем `OKButton`; (для его свойства <xref:System.Web.UI.WebControls.Button.Text%2A> задайте значение "ОК").  
   
--   элемент управления <xref:System.Web.UI.WebControls.HiddenField> с именем `DateInfo`;  
+- элемент управления <xref:System.Web.UI.WebControls.HiddenField> с именем `DateInfo`;  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Чтобы пользователи не могли внедрять скрипты в поток HTML, никогда не передавайте введенные данные напрямую в ответе сервера. Всегда шифруйте ответ с помощью метода <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType>.  

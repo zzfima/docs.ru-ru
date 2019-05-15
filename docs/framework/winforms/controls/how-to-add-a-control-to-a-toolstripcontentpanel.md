@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - ToolStripContentPanel [Windows Forms], adding controls
 ms.assetid: fa410960-bf1a-42fc-80e8-f2e27fb3dbb8
-ms.openlocfilehash: 4fbc97502431b681a77d58a112344287f582ff0f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 99b6b8615a16715caaf95109cfbba3ba389946fa
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624137"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591356"
 ---
 # <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a>Практическое руководство. Добавление элемента управления на панель, представленную компонентом ToolStripContentPanel
 Можно программно добавить один или несколько элементов для <xref:System.Windows.Forms.ToolStripContentPanel>.  
@@ -27,8 +27,6 @@ ms.locfileid: "64624137"
  Для этого примера кода требуются:  
   
 - ссылки на сборки System, System.Drawing и System.Windows.Forms.  
-  
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.
   
 ## <a name="see-also"></a>См. также
 

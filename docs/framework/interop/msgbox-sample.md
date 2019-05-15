@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b88a07115871e48a7981bbb868ff2ef4ce8cf85
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0c4100bb3bafdfe141dc746a64ebd8172ebe3bce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127703"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648591"
 ---
 # <a name="msgbox-sample"></a>Пример MsgBox
 В этом примере демонстрируется, как передавать строковые типы по значению в качестве параметров ввода и когда следует использовать поля <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> и <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>.  
   
  В примере используются следующие неуправляемые функции, показанные с исходными объявлениями:  
   
--   **MessageBox** экспортируется из User32.dll.  
+- **MessageBox** экспортируется из User32.dll.  
   
     ```  
     int MessageBox(HWND hWnd, LPCTSTR lpText, LPCTSTR lpCaption,   

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Отключение функции пропуска строгих имен
+title: Практическое руководство. Отключение функции пропуска строгих имен
 ms.date: 03/30/2017
 helpviewer_keywords:
 - strong-name bypass feature
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86fc35ae20211bd32a21d60b7313074361aef671
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 20b482ee94446ffa863697d8c25276658a4bb122
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296177"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593618"
 ---
-# <a name="how-to-disable-the-strong-name-bypass-feature"></a>Как выполнить Отключение функции пропуска строгих имен
+# <a name="how-to-disable-the-strong-name-bypass-feature"></a>Практическое руководство. Отключение функции пропуска строгих имен
 Начиная с версии .NET Framework 3.5 с пакетом обновления 1 (SP1), подписи строгого имени не проходили проверку при загрузке сборки в объект <xref:System.AppDomain> с полным доверием, например в `MyComputer` по умолчанию для зоны <xref:System.AppDomain>. Это называется возможностью обхода строгих имен. В среде с полным доверием всегда успешно обрабатываются запросы <xref:System.Security.Permissions.StrongNameIdentityPermission> для подписанных сборок с полным доверием независимо от их подписи. Единственное исключение связано с тем, что сборка должна иметь полное доверие, потому что полное доверие имеет ее зона. Так как в этом случае наличие строгого имени не является решающим фактором, смысла в проверке подписи нет. Пропуск проверки подписей строгого имени позволяет значительно повысить производительность приложения.  
   
  Функция пропуска применяется ко всем сборкам с полным доверием, если у них нет отложенных подписей и они загружены в любой домен <xref:System.AppDomain> с полным доверием из каталога, заданным свойством <xref:System.AppDomainSetup.ApplicationBase%2A>.  
@@ -28,9 +28,9 @@ ms.locfileid: "59296177"
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>Отключение функции обхода строгих имен для всех приложений  
   
--   На 32-разрядных компьютерах в разделе HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework системного реестра создайте запись DWORD со значением 0 и именем `AllowStrongNameBypass`.  
+- На 32-разрядных компьютерах в разделе HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework системного реестра создайте запись DWORD со значением 0 и именем `AllowStrongNameBypass`.  
   
--   На 64-разрядных компьютерах в разделах системного реестра HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework и HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework создать запись типа DWORD со значением 0 с именем `AllowStrongNameBypass`.  
+- На 64-разрядных компьютерах в разделах системного реестра HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework и HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework создать запись типа DWORD со значением 0 с именем `AllowStrongNameBypass`.  
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>Отключение функции обхода строгих имен для отдельного приложения  
   

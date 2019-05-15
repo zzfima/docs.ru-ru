@@ -2,12 +2,12 @@
 title: Общие сведения о классе XDocument (C#)
 ms.date: 07/20/2015
 ms.assetid: 63305603-ab54-49fc-84e4-f76eecc59549
-ms.openlocfilehash: e3ef7d66cb9759bd71e69c1a0db3614a02f785b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a2b2e7490116cfd7ff3cff783a4a3a985a39d0a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604205"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595339"
 ---
 # <a name="xdocument-class-overview-c"></a>Общие сведения о классе XDocument (C#)
 В этом разделе представлен класс <xref:System.Xml.Linq.XDocument>.  
@@ -22,15 +22,15 @@ ms.locfileid: "54604205"
 ## <a name="components-of-xdocument"></a>Компоненты XDocument  
  Документ <xref:System.Xml.Linq.XDocument> может включать в себя следующие элементы:  
   
--   Один объект <xref:System.Xml.Linq.XDeclaration>. <xref:System.Xml.Linq.XDeclaration> позволяет указать соответствующие части XML-объявления: версию XML, кодировку документа, а также то, является ли этот XML-документ изолированным.  
+- Один объект <xref:System.Xml.Linq.XDeclaration>. <xref:System.Xml.Linq.XDeclaration> позволяет указать соответствующие части XML-объявления: версию XML, кодировку документа, а также то, является ли этот XML-документ изолированным.  
   
--   Один объект <xref:System.Xml.Linq.XElement>. Это корневой узел XML-документа.  
+- Один объект <xref:System.Xml.Linq.XElement>. Это корневой узел XML-документа.  
   
--   Любое количество объектов <xref:System.Xml.Linq.XProcessingInstruction>. Инструкция по обработке передает сведения в приложение, обрабатывающее XML-код.  
+- Любое количество объектов <xref:System.Xml.Linq.XProcessingInstruction>. Инструкция по обработке передает сведения в приложение, обрабатывающее XML-код.  
   
--   Любое количество объектов <xref:System.Xml.Linq.XComment>. Комментарии и корневой элемент находятся на одном уровне. Объект <xref:System.Xml.Linq.XComment> не может быть первым аргументом в списке, так как XML-документ не может начинаться с комментария.  
+- Любое количество объектов <xref:System.Xml.Linq.XComment>. Комментарии и корневой элемент находятся на одном уровне. Объект <xref:System.Xml.Linq.XComment> не может быть первым аргументом в списке, так как XML-документ не может начинаться с комментария.  
   
--   Один тип документа <xref:System.Xml.Linq.XDocumentType> для DTD.  
+- Один тип документа <xref:System.Xml.Linq.XDocumentType> для DTD.  
   
  При сериализации документа <xref:System.Xml.Linq.XDocument>, даже если значением декларации `XDocument.Declaration` является `null`, выходные данные будут иметь XML-декларацию, если для свойства `Writer.Settings.OmitXmlDeclaration` автор указал значение `false` (применяется по умолчанию).  
   

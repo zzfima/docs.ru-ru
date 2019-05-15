@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7bda02e1862740e6a6328835367a6a5e9929033
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bd1ced48847739318f22ec77b17a83a36fd36ee0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328313"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647767"
 ---
 # <a name="memory-mapped-files"></a>Сопоставленные в памяти файлы
 Отображаемый в память файл содержит содержимое файла в виртуальной памяти. Отображение файла в области памяти позволяет приложению, содержащему несколько процессов, взаимодействовать с файлом путем чтения этой памяти и записи в нее. Начиная с версии [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] вы можете использовать управляемый код для доступа к отображенным в память файлам тем же способом, что и собственные функции Windows. Описание этого механизма можно найти на странице [Managing Memory-Mapped Files](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)) (Управление отображенными в память файлами).  
   
  Есть два типа отображенных в память файлов:  
   
--   Постоянные отображенные в память файлы.  
+- Постоянные отображенные в память файлы.  
   
      В контексте отображения в память постоянными называются файлы, сопоставленные с исходным файлом на диске. Когда последний процесс завершит работу с таким файлом, все данные сохраняются в исходный файл на диске. Такие отображенные в память файлы удобны для работы с очень большими исходными файлами.  
   
--   Непостоянные отображенные в память файлы.  
+- Непостоянные отображенные в память файлы.  
   
      Непостоянными называются отображенные в память файлы, которые не сопоставлены с файлом на диске. Когда последний процесс закончит работу с таким файлом, данные не сохраняются, а файл удаляется при сборке мусора. Такие файлы позволяют создать общую область памяти для межпроцессного взаимодействия (IPC).  
   
@@ -64,11 +64,11 @@ ms.locfileid: "59328313"
 ### <a name="security"></a>Безопасность  
  При создании отображенного в память файла вы можете применить к нему права доступа. Для этого используйте следующие методы, которые принимают в качестве параметра перечисление <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess>:  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
   
  Вы можете указать права доступа для открытия существующего отображенного в память файла, используя методы <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A>, которые принимают <xref:System.IO.MemoryMappedFiles.MemoryMappedFileRights> в качестве параметра.  
   

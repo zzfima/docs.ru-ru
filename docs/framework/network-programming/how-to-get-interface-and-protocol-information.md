@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
-ms.openlocfilehash: fec8fd294c0408bfb16df1c5cfa1f3a96c1f28ee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e70afa6b3633a5868491e421c7e8e44bf9f3e895
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202622"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624579"
 ---
 # <a name="how-to-get-interface-and-protocol-information"></a>Практическое руководство. Получение информации об интерфейсах и протоколах
 В этом примере показано, как считать статистику TCP сетевого интерфейса.  
@@ -72,4 +72,4 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   Ссылки на пространство имен **System.Net**.
+- Ссылки на пространство имен **System.Net**.

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fabd95d8fee6f6d8590036001ce2b0c7c23b12da
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298426"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589851"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Проверка XML-документа в DOM
 По умолчанию класс <xref:System.Xml.XmlDocument> не сверяет код XML в модели DOM ни с данными схемы XSD, ни c определением типа документа (DTD). Код XML проверяется только на правильность формата.  
@@ -56,9 +56,9 @@ ms.locfileid: "59298426"
   
  При проверке XML-данных в процессе их загрузки в модель DOM примите во внимание следующее.  
   
--   В приведенном выше примере в случае обнаружения недействительного типа всегда вызывается обработчик событий <xref:System.Xml.XmlReaderSettings.ValidationEventHandler>. Если обработчик события <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> не установлен на проверяющий <xref:System.Xml.XmlReader>, при вызове <xref:System.Xml.Schema.XmlSchemaValidationException> возникает исключение <xref:System.Xml.XmlDocument.Load%2A>, когда какой-либо тип атрибута или элемента не совпадает с соответствующим типом, указанным в проверяющей схеме.  
+- В приведенном выше примере в случае обнаружения недействительного типа всегда вызывается обработчик событий <xref:System.Xml.XmlReaderSettings.ValidationEventHandler>. Если обработчик события <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> не установлен на проверяющий <xref:System.Xml.XmlReader>, при вызове <xref:System.Xml.Schema.XmlSchemaValidationException> возникает исключение <xref:System.Xml.XmlDocument.Load%2A>, когда какой-либо тип атрибута или элемента не совпадает с соответствующим типом, указанным в проверяющей схеме.  
   
--   Когда XML-документ загружается в объект <xref:System.Xml.XmlDocument> с ассоциированной схемой, которая определяет принимаемые по умолчанию значения, объект <xref:System.Xml.XmlDocument> рассматривает эти используемые по умолчанию значения так, как если бы они были указаны в документе XML. Это означает, что свойство <xref:System.Xml.XmlReader.IsEmptyElement%2A> всегда возвращает значение `false` для элемента, который получил значение по умолчанию из схемы. Даже если в XML-документ элемент был записан как пустой.  
+- Когда XML-документ загружается в объект <xref:System.Xml.XmlDocument> с ассоциированной схемой, которая определяет принимаемые по умолчанию значения, объект <xref:System.Xml.XmlDocument> рассматривает эти используемые по умолчанию значения так, как если бы они были указаны в документе XML. Это означает, что свойство <xref:System.Xml.XmlReader.IsEmptyElement%2A> всегда возвращает значение `false` для элемента, который получил значение по умолчанию из схемы. Даже если в XML-документ элемент был записан как пустой.  
   
 ## <a name="validating-an-xml-document-in-the-dom"></a>Проверка XML-документа в DOM  
  Метод <xref:System.Xml.XmlDocument.Validate%2A> класса <xref:System.Xml.XmlDocument> сверяет XML-данные, загружаемые в модель DOM, со схемами, содержащимися в свойстве <xref:System.Xml.XmlDocument> объекта <xref:System.Xml.XmlDocument.Schemas%2A>. После успешной проверки применяются настройки схемы по умолчанию, текстовые значения по необходимости преобразуются в атомарные, а сведения о типах ассоциируются с проверенными информационными элементами. В результате типизированные XML-данные заменяют ранее не типизированные XML-данные.  

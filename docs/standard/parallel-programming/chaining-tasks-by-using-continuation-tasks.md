@@ -10,33 +10,33 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b924f281a2a543ff98e9ae681a6100150898f240
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1f88308dcea250c02d9c6cd7f326570f8bc0133c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219910"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630115"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Создание цепочки задач с помощью задач продолжения
 В асинхронном программировании при завершении одной асинхронной операции принято вызывать вторую операцию и передавать в нее данные. В большинстве случаев непрерывность достигается с помощью методов обратного вызова. В библиотеке параллельных задач эта функциональность обеспечивается *задачами продолжения*. Задача продолжения (также называемая просто продолжением) — это асинхронная задача, вызываемая другой задачей, которая называется *предшествующей*, при завершении этой предшествующей задачи.  
   
  Хотя продолжения относительно легко использовать, они представляют собой мощный и гибкий инструмент. Например, с их помощью можно выполнять следующее.  
   
--   Передавать данные из предшествующей задачи в продолжение.  
+- Передавать данные из предшествующей задачи в продолжение.  
   
--   Указывать точные условия, при которых продолжение будет вызываться или не будет вызываться.  
+- Указывать точные условия, при которых продолжение будет вызываться или не будет вызываться.  
   
--   Отменять продолжение перед его запуском либо совместно с его выполнением.  
+- Отменять продолжение перед его запуском либо совместно с его выполнением.  
   
--   Определять подсказки, как должно планироваться продолжение.  
+- Определять подсказки, как должно планироваться продолжение.  
   
--   Вызывать несколько продолжений из одной и той же предшествующей задачи.  
+- Вызывать несколько продолжений из одной и той же предшествующей задачи.  
   
--   Вызывать одно продолжение по завершении всех или одной из нескольких предшествующих задач.  
+- Вызывать одно продолжение по завершении всех или одной из нескольких предшествующих задач.  
   
--   Прикреплять продолжения одно после другого до любой произвольной длины.  
+- Прикреплять продолжения одно после другого до любой произвольной длины.  
   
--   Использовать продолжение для обработки исключений, вызванных предшествующей задачей.  
+- Использовать продолжение для обработки исключений, вызванных предшествующей задачей.  
   
 ## <a name="about-continuations"></a>О продолжениях  
  Продолжение — это задача, созданная в состоянии <xref:System.Threading.Tasks.TaskStatus.WaitingForActivation> . Она активируется автоматически при завершении предшествующей задачи или задач. Вызов <xref:System.Threading.Tasks.Task.Start%2A?displayProperty=nameWithType> в продолжении в пользовательском коде вызывает исключение <xref:System.InvalidOperationException?displayProperty=nameWithType> .  
@@ -85,11 +85,11 @@ ms.locfileid: "56219910"
 ## <a name="canceling-a-continuation"></a>Отмена продолжения  
  Свойство <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> продолжения устанавливается в значение <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> в следующих ситуациях.  
   
--   В ответ на запрос отмены вызывается исключение <xref:System.OperationCanceledException> . Как и в любой другой задаче, если исключение содержит тот же токен, что и переданный в продолжение, то он рассматривается как подтверждение совместной отмены.  
+- В ответ на запрос отмены вызывается исключение <xref:System.OperationCanceledException> . Как и в любой другой задаче, если исключение содержит тот же токен, что и переданный в продолжение, то он рассматривается как подтверждение совместной отмены.  
   
--   Продолжение передает объект <xref:System.Threading.CancellationToken?displayProperty=nameWithType> , свойство <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> которого имеет значение `true`. В этом случае продолжение не запускается и переходит в состояние <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> .  
+- Продолжение передает объект <xref:System.Threading.CancellationToken?displayProperty=nameWithType> , свойство <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> которого имеет значение `true`. В этом случае продолжение не запускается и переходит в состояние <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> .  
   
--   Продолжение никогда не запускается, поскольку условие, заданное его аргументом <xref:System.Threading.Tasks.TaskContinuationOptions> , не выполнено. Например, если предшествующая задача переходит в состояние <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> , ее продолжение, которое передало параметр <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> , не будет выполняться, но перейдет в состояние <xref:System.Threading.Tasks.TaskStatus.Canceled> .  
+- Продолжение никогда не запускается, поскольку условие, заданное его аргументом <xref:System.Threading.Tasks.TaskContinuationOptions> , не выполнено. Например, если предшествующая задача переходит в состояние <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> , ее продолжение, которое передало параметр <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> , не будет выполняться, но перейдет в состояние <xref:System.Threading.Tasks.TaskStatus.Canceled> .  
   
  Если задача и ее продолжение представляют две части одной логической операции, вы можете передать один и тот же токен отмены в обе задачи, как показано в следующем примере. В нем имеется предшествующая задача, создающая список целых чисел, кратных 33, который передается в продолжение. Продолжение, в свою очередь, отображает этот список. И предшествующая задача, и продолжение регулярно приостанавливаются на произвольные периоды времени. Кроме того, используется объект <xref:System.Threading.Timer?displayProperty=nameWithType> для выполнения метода `Elapsed` после пятисекундного времени ожидания. В этом примере вызывается метод <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType>, который приводит к тому, что текущая выполняющаяся задача вызывает метод <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A?displayProperty=nameWithType>. В зависимости от длительности произвольно создаваемых пауз метод <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> вызывается при выполнении либо предшествующей задачи, либо ее продолжения. Если предшествующая задача отменена, продолжение не запустится. Если предшествующая задача не отменена, токен еще можно использовать для отмены продолжения.  
   
@@ -133,12 +133,12 @@ ms.locfileid: "56219910"
 ## <a name="handling-exceptions-thrown-from-continuations"></a>Обработка исключений, вызванных из продолжений  
  Отношение предшествующей задачи и продолжения не является связью типа «родитель — потомок». Исключения, вызванные продолжениями, не распространяются в предшествующую задачу. Таким образом, следует обрабатывать вызванные продолжениями исключения так, как они обрабатываются в любой другой задаче, следующим образом.  
   
--   Для ожидания продолжения можно использовать метод <xref:System.Threading.Tasks.Task.Wait%2A>, <xref:System.Threading.Tasks.Task.WaitAll%2A>, или <xref:System.Threading.Tasks.Task.WaitAny%2A> , либо его универсальный эквивалент. Вы можете ожидать предшествующую задачу и ее продолжение в одном операторе `try` , как показано в следующем примере.  
+- Для ожидания продолжения можно использовать метод <xref:System.Threading.Tasks.Task.Wait%2A>, <xref:System.Threading.Tasks.Task.WaitAll%2A>, или <xref:System.Threading.Tasks.Task.WaitAny%2A> , либо его универсальный эквивалент. Вы можете ожидать предшествующую задачу и ее продолжение в одном операторе `try` , как показано в следующем примере.  
   
      [!code-csharp[TPL_Continuations#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception1.cs#6)]
      [!code-vb[TPL_Continuations#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception1.vb#6)]  
   
--   Для наблюдения за свойством <xref:System.Threading.Tasks.Task.Exception%2A> первого продолжения можно использовать второе продолжение. В следующем примере задача пытается выполнить чтение в несуществующем файле. Затем продолжение отображает сведения об исключении в предшествующей задаче.  
+- Для наблюдения за свойством <xref:System.Threading.Tasks.Task.Exception%2A> первого продолжения можно использовать второе продолжение. В следующем примере задача пытается выполнить чтение в несуществующем файле. Затем продолжение отображает сведения об исключении в предшествующей задаче.  
   
      [!code-csharp[TPL_Continuations#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#4)]
      [!code-vb[TPL_Continuations#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#4)]  
@@ -150,7 +150,7 @@ ms.locfileid: "56219910"
   
      Дополнительные сведения см. в разделе [Обработка исключений](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
   
--   Если продолжение является присоединенной дочерней задачей, созданной с использованием параметра <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> , его исключения будут распространяться родительской задачей обратно в вызывающий поток, как и в случае любой другой присоединенной дочерней задачи. Дополнительные сведения см. в разделе [Присоединенные и отсоединенные дочерние задачи](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
+- Если продолжение является присоединенной дочерней задачей, созданной с использованием параметра <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> , его исключения будут распространяться родительской задачей обратно в вызывающий поток, как и в случае любой другой присоединенной дочерней задачи. Дополнительные сведения см. в разделе [Присоединенные и отсоединенные дочерние задачи](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   
 ## <a name="see-also"></a>См. также
 

@@ -4,12 +4,12 @@ description: Сведения о рабочем процессе для разр
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: f23a2352d86d5c77d2f05af2a2452fb3c944e049
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 3d2a57c7dda722bcc39895b41c35a3a29ddd17e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613373"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751456"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Рабочий процесс разработки для приложений Docker
 
@@ -181,7 +181,7 @@ Dockerfile похож на пакетный сценарий. Он похож н
  5  FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
- 8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks … 
+ 8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks …
  9  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.Extensions.HealthChecks …
 10  COPY src/BuildingBlocks/EventBus/IntegrationEventLogEF/ …
 11  COPY src/BuildingBlocks/EventBus/EventBus/EventBus.csproj …
@@ -206,6 +206,7 @@ Dockerfile похож на пакетный сценарий. Он похож н
 
 И вот подробности, по одной строке:
 
+<!-- markdownlint-disable MD029-->
 1. Начнем этап с небольшого базового образа времени выполнения, назвав его **base**.
 2. Создайте в образе каталог **/app**.
 3. Откройте порт **80**.
@@ -226,6 +227,7 @@ Dockerfile похож на пакетный сценарий. Он похож н
 26. Измените текущий каталог на **/app**.
 27. Скопируйте каталог **/app** c этапа **publish** в текущий каталог
 28. Определите команду, которая будет выполняться при запуске контейнера.
+<!-- markdownlint-enable MD029-->
 
 Теперь давайте рассмотрим некоторые оптимизации для повышения производительности всего процесса; в случае eShopOnContainers сборка полного решения в контейнерах Linux занимает около 22 минут или более.
 
@@ -233,7 +235,7 @@ Dockerfile похож на пакетный сценарий. Он похож н
 
 Таким образом, давайте сосредоточимся на этапе **build**; строки 5–6 практически одинаковы, но строки 7–17 отличаются для каждой службы из eShopOnContainers, поэтому они должны выполняться каждый раз, но если изменить строки 7–16 на следующие:
 
-```
+```Dockerfile
 COPY . .
 ```
 
@@ -245,7 +247,7 @@ COPY . .
 
 Следующая значительная оптимизация касается команды `restore`, выполняемой в строке 17; она также отличается для каждой службы eShopOnContainers. Если вы измените эту строку так:
 
-```console
+```Dockerfile
 RUN dotnet restore
 ```
 
@@ -253,13 +255,13 @@ RUN dotnet restore
 
 Тем не менее `dotnet restore` запускается, только если в папке есть лишь один файл проекта или решения, поэтому решения этой задачи немного сложнее. Если не вдаваться в подробности, все обстоит так:
 
-1) Добавьте приведенные ниже строки в **.dockerignore**:
+1. Добавьте приведенные ниже строки в **.dockerignore**:
 
    - `*.sln` для игнорирования всех файлов решения в главном дереве папок
 
    - `!eShopOnContainers-ServicesAndWebApps.sln`, чтобы включить только этот файл решения.
 
-2) Включите аргумент `/ignoreprojectextensions:.dcproj` в `dotnet restore`, чтобы он также игнорировал проект docker-compose и восстанавливал только пакеты для решения eShopOnContainers-ServicesAndWebApps.
+2. Включите аргумент `/ignoreprojectextensions:.dcproj` в `dotnet restore`, чтобы он также игнорировал проект docker-compose и восстанавливал только пакеты для решения eShopOnContainers-ServicesAndWebApps.
 
 Для окончательной оптимизации отметим, что строка 20 является избыточной, так как строка 23 также собирает приложение и следует, по сути, сразу после строки 20, поэтому можно убрать еще одну времязатратную команду.
 
@@ -542,7 +544,7 @@ services:
 - **Стив Ласкер (Steve Lasker). Разработка для Docker на .NET в Visual Studio 2017** \
   <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
-## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Использование команд PowerShell в DockerFile для настройки контейнеров Windows 
+## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Использование команд PowerShell в DockerFile для настройки контейнеров Windows
 
 [Контейнеры Windows](https://docs.microsoft.com/virtualization/windowscontainers/about/index) позволяют преобразовывать существующие приложения Windows в образы Docker и развертывать их с помощью тех же средств, что и остальную часть экосистемы Docker. Чтобы использовать контейнеры Windows, выполните команды PowerShell в Dockerfile, как показано в следующем примере:
 

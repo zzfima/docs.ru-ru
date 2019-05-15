@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14dc09ff8ceaa5e754c2a8ee64846fbcac55e37f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 12415c6d461f3c8040aaa407edf9567633c5b108
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221105"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591566"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (средство диспетчера сертификатов)
 Диспетчер сертификатов (Certmgr.exe) предназначен для управления сертификатами, списками доверия сертификатов (CTL) и списками отзыва сертификатов (CRL).  
@@ -75,13 +75,13 @@ ms.locfileid: "59221105"
 ## <a name="remarks"></a>Примечания  
  Основные функции программы Certmgr.exe.  
   
--   Отображение сведений о сертификатах, CTL и CRL на консоли.  
+- Отображение сведений о сертификатах, CTL и CRL на консоли.  
   
--   Добавляет сертификаты, CTL и CRL в хранилище сертификатов.  
+- Добавляет сертификаты, CTL и CRL в хранилище сертификатов.  
   
--   Удаляет сертификаты, CTL и CRL из хранилища сертификатов.  
+- Удаляет сертификаты, CTL и CRL из хранилища сертификатов.  
   
--   Сохраняет в файл сертификат X.509, CTL или CRL из хранилища сертификатов.  
+- Сохраняет в файл сертификат X.509, CTL или CRL из хранилища сертификатов.  
   
  Программа Certmgr.exe работает с двумя типами хранилищ сертификатов: системным и **StoreFile**. Указывать тип хранилища необязательно, поскольку программа Cedrtmgr.exe может автоматически определить тип хранилища и выполнить соответствующие действия.  
   

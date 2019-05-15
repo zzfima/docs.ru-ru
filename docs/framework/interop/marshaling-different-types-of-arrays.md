@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cafb15f691daa8d0d0e6c1ebab3cb89f7c811612
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fadccdf35429babce6e101d336c9ea1de150b276
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095104"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648595"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Маршалинг различных типов массивов
 Массив является ссылочным типом в управляемом коде, содержащим один или несколько элементов одного и того же типа. Несмотря на то, что массивы являются ссылочными типами, они передаются в неуправляемые функции в виде параметров In. Это поведение не согласуется со способом передачи управляемых массивов в управляемые объекты в виде параметров In/Out. Подробнее см. в разделе [Копирование и закрепление](copying-and-pinning.md).  
@@ -34,53 +34,53 @@ ms.locfileid: "59095104"
 ## <a name="example"></a>Пример  
  В этом примере показаны способы передачи массивов следующих типов:  
   
--   массив целых чисел по значению;  
+- массив целых чисел по значению;  
   
--   массив целых чисел, размер которого может быть изменен, по ссылке;  
+- массив целых чисел, размер которого может быть изменен, по ссылке;  
   
--   многомерный массив (матрица) целых чисел по значению;  
+- многомерный массив (матрица) целых чисел по значению;  
   
--   массив строк по значению;  
+- массив строк по значению;  
   
--   массив структур с целыми числами;  
+- массив структур с целыми числами;  
   
--   массив структур со строками.  
+- массив структур со строками.  
   
  Если маршалинг массива по ссылке не выполняется явным образом, то по умолчанию он осуществляется в виде параметра In. Это поведение можно изменить, применив явным образом атрибуты <xref:System.Runtime.InteropServices.InAttribute> и <xref:System.Runtime.InteropServices.OutAttribute> .  
   
  В этом примере используются перечисленные ниже неуправляемые функции, показанные со своими исходными объявлениями.  
   
--   Функция**TestArrayOfInts** , экспортированная из PinvokeLib.dll.  
+- Функция**TestArrayOfInts** , экспортированная из PinvokeLib.dll.  
   
     ```  
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
--   Функция**TestRefArrayOfInts** , экспортированная из PinvokeLib.dll.  
+- Функция**TestRefArrayOfInts** , экспортированная из PinvokeLib.dll.  
   
     ```  
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
--   Функция**TestMatrixOfInts** , экспортированная из PinvokeLib.dll.  
+- Функция**TestMatrixOfInts** , экспортированная из PinvokeLib.dll.  
   
     ```  
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
--   Функция**TestArrayOfStrings** , экспортированная из PinvokeLib.dll.  
+- Функция**TestArrayOfStrings** , экспортированная из PinvokeLib.dll.  
   
     ```  
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
--   Функция**TestArrayOfStructs** , экспортированная из PinvokeLib.dll.  
+- Функция**TestArrayOfStructs** , экспортированная из PinvokeLib.dll.  
   
     ```  
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
--   Функция**TestArrayOfStructs2** , экспортированная из PinvokeLib.dll.  
+- Функция**TestArrayOfStructs2** , экспортированная из PinvokeLib.dll.  
   
     ```  
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  

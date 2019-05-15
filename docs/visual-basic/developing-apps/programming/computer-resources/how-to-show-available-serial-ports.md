@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Отображение доступных последовательных портов в Visual Basic
+title: Практическое руководство. Отображение доступных последовательных портов в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports, availability
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
-ms.openlocfilehash: 57b3a33fecb6128a10ce903fd26724de98acb8c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d6b092b499af2003e8a43987677b13741c362b1b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834651"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662711"
 ---
-# <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Как выполнить Отображение доступных последовательных портов в Visual Basic
+# <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Практическое руководство. Отображение доступных последовательных портов в Visual Basic
 В этом разделе описывается использование объекта `My.Computer.Ports` для отображения доступных последовательных портов компьютера в Visual Basic.  
   
  Чтобы дать пользователю возможность выбрать используемый порт, имена последовательных портов отображаются в элементе управления <xref:System.Windows.Forms.ListBox>.  
@@ -31,11 +31,11 @@ ms.locfileid: "58834651"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   Ссылка проекта на System.Windows.Forms.dll.  
+- Ссылка проекта на System.Windows.Forms.dll.  
   
--   Доступ к членам пространства имен <xref:System.Windows.Forms>. Добавьте оператор `Imports`, если в коде не используются полные имена членов. Дополнительные сведения см. в статье [Оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Доступ к членам пространства имен <xref:System.Windows.Forms>. Добавьте оператор `Imports`, если в коде не используются полные имена членов. Дополнительные сведения см. в статье [Оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
--   Ваша форма должна включать элемент управления <xref:System.Windows.Forms.ListBox> с именем `ListBox1`.  
+- Ваша форма должна включать элемент управления <xref:System.Windows.Forms.ListBox> с именем `ListBox1`.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  Необязательно использовать элемент управления <xref:System.Windows.Forms.ListBox> для отображения имен доступных последовательных портов. Вместо него можно использовать <xref:System.Windows.Forms.ComboBox> или другой элемент управления. Если приложение не требует реакции от пользователя, можно использовать для отображения информации элемент управления <xref:System.Windows.Forms.TextBox>.  

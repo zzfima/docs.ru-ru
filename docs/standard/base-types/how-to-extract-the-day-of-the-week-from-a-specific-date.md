@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Извлечение дня недели из конкретной даты
+title: Практическое руководство. Извлечение дня недели из конкретной даты
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -24,14 +24,14 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c665cb590a090c546d50f780477c254344914a2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8012d2898e9722d1cfb93f5c9dcacce291fe6e78
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327767"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633903"
 ---
-# <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Как выполнить Извлечение дня недели из конкретной даты
+# <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Практическое руководство. Извлечение дня недели из конкретной даты
 Платформа .NET Framework упрощает определение дня недели и отображение локализованного дня для определенной даты. Значение перечисления, которое указывает день недели, соответствующий определенной дате, можно получить из свойства <xref:System.DateTime.DayOfWeek%2A> или <xref:System.DateTimeOffset.DayOfWeek%2A>. Напротив, получение названия дня недели — это операция форматирования, которую можно выполнить с помощью метода форматирования, например метода `ToString` значения даты и времени или метода <xref:System.String.Format%2A?displayProperty=nameWithType>. В этом разделе показано, как выполнить эти операции форматирования.  
   
 ### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a>Извлечение числа, обозначающего день недели, из определенной даты  
@@ -53,12 +53,12 @@ ms.locfileid: "59327767"
   
 2. Вы можете извлечь сокращенное название дня недели для текущих или заданных региональных параметров:  
   
-    1.  Чтобы извлечь сокращенное название дня недели для текущих региональных параметров, вызовите метод <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> значения даты и времени или метод экземпляра <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> и передайте строку "ddd" в параметре `format`. В следующем примере показано использование метода <xref:System.DateTime.ToString%28System.String%29>.  
+    1. Чтобы извлечь сокращенное название дня недели для текущих региональных параметров, вызовите метод <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> значения даты и времени или метод экземпляра <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> и передайте строку "ddd" в параметре `format`. В следующем примере показано использование метода <xref:System.DateTime.ToString%28System.String%29>.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname1.cs#1)]
          [!code-vb[Formatting.Howto.WeekdayName#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname1.vb#1)]  
   
-    2.  Чтобы извлечь сокращенное название дня недели для заданных региональных параметров, вызовите метод <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> значения даты и времени или метод экземпляра <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>. Передайте строку "ddd" в параметре `format`. Передайте объект <xref:System.Globalization.CultureInfo> или <xref:System.Globalization.DateTimeFormatInfo>, представляющий региональные параметры, для которых требуется получить название дня недели, в параметре `provider`. В следующем коде показан вызов метода <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> с использованием объекта <xref:System.Globalization.CultureInfo>, представляющего региональные параметры fr-FR.  
+    2. Чтобы извлечь сокращенное название дня недели для заданных региональных параметров, вызовите метод <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> значения даты и времени или метод экземпляра <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>. Передайте строку "ddd" в параметре `format`. Передайте объект <xref:System.Globalization.CultureInfo> или <xref:System.Globalization.DateTimeFormatInfo>, представляющий региональные параметры, для которых требуется получить название дня недели, в параметре `provider`. В следующем коде показан вызов метода <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> с использованием объекта <xref:System.Globalization.CultureInfo>, представляющего региональные параметры fr-FR.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname2.cs#2)]
          [!code-vb[Formatting.Howto.WeekdayName#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname2.vb#2)]  
@@ -69,12 +69,12 @@ ms.locfileid: "59327767"
   
 2. Вы можете извлечь полное название дня недели для текущих или заданных региональных параметров:  
   
-    1.  Чтобы извлечь полное название дня недели для текущих региональных параметров, вызовите метод <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> значения даты и времени или метод экземпляра <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> и передайте строку "dddd" в параметре `format`. В следующем примере показано использование метода <xref:System.DateTime.ToString%28System.String%29>.  
+    1. Чтобы извлечь полное название дня недели для текущих региональных параметров, вызовите метод <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> значения даты и времени или метод экземпляра <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> и передайте строку "dddd" в параметре `format`. В следующем примере показано использование метода <xref:System.DateTime.ToString%28System.String%29>.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname4.cs#4)]
          [!code-vb[Formatting.Howto.WeekdayName#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname4.vb#4)]  
   
-    2.  Чтобы извлечь полное название дня недели для заданных региональных параметров, вызовите метод <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> значения даты и времени или метод экземпляра <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>. Передайте строку "dddd" в параметре `format`. Передайте объект <xref:System.Globalization.CultureInfo> или <xref:System.Globalization.DateTimeFormatInfo>, представляющий региональные параметры, для которых требуется получить название дня недели, в параметре `provider`. В следующем коде показан вызов метода <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> с использованием объекта <xref:System.Globalization.CultureInfo>, представляющего региональные параметры es-ES.  
+    2. Чтобы извлечь полное название дня недели для заданных региональных параметров, вызовите метод <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> значения даты и времени или метод экземпляра <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>. Передайте строку "dddd" в параметре `format`. Передайте объект <xref:System.Globalization.CultureInfo> или <xref:System.Globalization.DateTimeFormatInfo>, представляющий региональные параметры, для которых требуется получить название дня недели, в параметре `provider`. В следующем коде показан вызов метода <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> с использованием объекта <xref:System.Globalization.CultureInfo>, представляющего региональные параметры es-ES.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname5.cs#5)]
          [!code-vb[Formatting.Howto.WeekdayName#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname5.vb#5)]  
@@ -87,9 +87,9 @@ ms.locfileid: "59327767"
   
  Отдельные языки могут предоставлять возможности, дублирующие или дополняющие функции [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Например, Visual Basic предоставляет две такие функции:  
   
--   `Weekday`, которая возвращает число, обозначающее день недели для определенной даты. Функция считает порядковое значение первого дня недели равным 1, а свойство <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> — равным 0.  
+- `Weekday`, которая возвращает число, обозначающее день недели для определенной даты. Функция считает порядковое значение первого дня недели равным 1, а свойство <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> — равным 0.  
   
--   `WeekdayName`, которая возвращает название дня недели для текущих региональных параметров, которое соответствует определенному номеру дня недели.  
+- `WeekdayName`, которая возвращает название дня недели для текущих региональных параметров, которое соответствует определенному номеру дня недели.  
   
  В следующем примере показано использование функций `Weekday` и `WeekdayName` Visual Basic.  
   

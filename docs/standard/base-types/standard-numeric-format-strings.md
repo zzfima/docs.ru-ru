@@ -18,20 +18,20 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a11a9d18999bc7741e12af16d43fba8c03318da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6d11e16f58b6da24d7df0ccd97c1d54050004ae1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979969"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664652"
 ---
 # <a name="standard-numeric-format-strings"></a>Строки стандартных числовых форматов
 
 Строки стандартных числовых форматов служат для форматирования стандартных числовых типов. Строка стандартных числовых форматов использует формат `Axx`, где:  
   
--   `A` — это один буквенный символ, который называют *описателем формата*. Любая строка числового формата, содержащая более одной буквы, включая пробелы, интерпретируется как строка настраиваемого числового формата. Дополнительные сведения см. в разделе [Строки настраиваемых числовых форматов](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+- `A` — это один буквенный символ, который называют *описателем формата*. Любая строка числового формата, содержащая более одной буквы, включая пробелы, интерпретируется как строка настраиваемого числового формата. Дополнительные сведения см. в разделе [Строки настраиваемых числовых форматов](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
--   `xx` — это необязательное целое число, которое называют *описателем точности*. Спецификатор точности находится в диапазоне от 0 до 99 и влияет на число цифр в результате. Описатель точности управляет количеством цифр в строковом представлении числа. Он не округляет само число. Для выполнения операции округления используйте метод <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> или <xref:System.Math.Round%2A?displayProperty=nameWithType>.  
+- `xx` — это необязательное целое число, которое называют *описателем точности*. Спецификатор точности находится в диапазоне от 0 до 99 и влияет на число цифр в результате. Описатель точности управляет количеством цифр в строковом представлении числа. Он не округляет само число. Для выполнения операции округления используйте метод <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> или <xref:System.Math.Round%2A?displayProperty=nameWithType>.  
   
     Когда *указатель точности* ограничивает число цифр дробной части в итоговой строке, числа в итоговых строках округляются до представимого результата, ближайшего к бесконечно точному. Если имеются два одинаково близких представимых результата:
     - **В .NET Framework и .NET Core вплоть до версии 2.0** среда выполнения выбирает результат с большей наименее значащей цифрой (то есть с использованием <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
@@ -73,13 +73,13 @@ ms.locfileid: "56979969"
 
 Строку стандартного числового формата можно использовать для определения форматирования числового значения одним из двух следующих способов:  
   
--   Ее можно передать перегруженному методу `ToString`, у которого есть параметр `format`. В следующем примере осуществляется форматирование числового значения в качестве строки со значением валюты для текущего языка и региональных параметров (en-US).  
+- Ее можно передать перегруженному методу `ToString`, у которого есть параметр `format`. В следующем примере осуществляется форматирование числового значения в качестве строки со значением валюты для текущего языка и региональных параметров (en-US).  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
--   Эту строку можно передать в качестве аргумента `formatString` в элемент форматирования, используемый с методами <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> и <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [Составное форматирование](../../../docs/standard/base-types/composite-formatting.md). В следующем примере элемент форматирования используется для вставки значения валюты в строку.  
+- Эту строку можно передать в качестве аргумента `formatString` в элемент форматирования, используемый с методами <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> и <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [Составное форматирование](../../../docs/standard/base-types/composite-formatting.md). В следующем примере элемент форматирования используется для вставки значения валюты в строку.  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
@@ -91,7 +91,7 @@ ms.locfileid: "56979969"
      [!code-csharp-interactive[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
   
--   Его можно предоставить в виде аргумента `formatString` в элементе интерполированного выражения интерполированной строки. Дополнительные сведения см. в разделе [Интерполяция строк](../../csharp/language-reference/tokens/interpolated.md) справочника по C# или разделе [Интерполяция строк](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) справочника по Visual Basic.  
+- Его можно предоставить в виде аргумента `formatString` в элементе интерполированного выражения интерполированной строки. Дополнительные сведения см. в разделе [Интерполяция строк](../../csharp/language-reference/tokens/interpolated.md) справочника по C# или разделе [Интерполяция строк](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) справочника по Visual Basic.  
   
  В приведенных ниже разделах содержится подробная информация о всех строках стандартных числовых форматов.  
   

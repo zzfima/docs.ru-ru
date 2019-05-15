@@ -14,19 +14,19 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 735fedc5869ab82d49ef4d9068c67302bf825e2e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346110"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634684"
 ---
 # <a name="character-encoding-in-net"></a>Кодировка символов в .NET
 Символы — это абстрактные сущности, которые могут быть представлены различными способами. Кодировка — это система, где с каждым символом поддерживаемого набора символов сопоставляется значение, представляющее этот символ. Например, азбука Морзе — это кодировка, в которой каждому символу латинского алфавита соответствует набор точек и тире, которые можно передавать с помощью телеграфа. Компьютерная кодировка — это система, где с каждым символом поддерживаемого набора символов сопоставлено числовое значение, представляющее этот символ. Кодировка состоит из двух компонентов:  
   
--   кодировщик, преобразующий последовательность символов в последовательность числовых значений (байтов);  
+- кодировщик, преобразующий последовательность символов в последовательность числовых значений (байтов);  
   
--   декодер, преобразующий последовательность байтов в последовательность символов.  
+- декодер, преобразующий последовательность байтов в последовательность символов.  
   
  Кодировка описывает правила, по которым работают кодировщик и декодер. Например, класс <xref:System.Text.UTF8Encoding> описывает правила кодирования и декодирования для формата UTF-8, в котором используется от одного до четырех байтов для представления одного символа Юникода. В процессе кодирования и декодирования также может выполняться проверка. Например, класс <xref:System.Text.UnicodeEncoding> предназначен для проверки допустимости пар, составляемых всеми символами-заместителями. (Пара символов-заместителей состоит из символа с кодовой точкой в диапазоне от U+D800 до U+DBFF и символа с кодовой точкой в диапазоне от U+DC00 до U+DFFF.)  Резервная стратегия определяет, как кодировщик обрабатывает недопустимые символы или как декодер обрабатывает недопустимые байты.  
   
@@ -37,27 +37,27 @@ ms.locfileid: "59346110"
   
  В этом разделе:  
   
--   [Кодировки в .NET](../../../docs/standard/base-types/character-encoding.md#Encodings)  
+- [Кодировки в .NET](../../../docs/standard/base-types/character-encoding.md#Encodings)  
   
--   [Выбор класса кодировки](../../../docs/standard/base-types/character-encoding.md#Selecting)  
+- [Выбор класса кодировки](../../../docs/standard/base-types/character-encoding.md#Selecting)  
   
--   [Использование объекта кодировки](../../../docs/standard/base-types/character-encoding.md#Using)  
+- [Использование объекта кодировки](../../../docs/standard/base-types/character-encoding.md#Using)  
   
--   [Выбор резервной стратегии](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
+- [Выбор резервной стратегии](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
   
--   [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom)  
+- [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom)  
   
 <a name="Encodings"></a>   
 ## <a name="encodings-in-net"></a>Кодировки в .NET  
  Все классы кодировок в .NET наследуют от абстрактного класса <xref:System.Text.Encoding?displayProperty=nameWithType>, который определяет общую для всех кодировок функциональность. Для доступа к отдельным объектам кодировок, реализованным в .NET, можно сделать следующее:  
   
--   Используйте статические свойства класса <xref:System.Text.Encoding>, которые возвращают объекты, представляющие стандартные кодировки символов .NET (ASCII, UTF-7, UTF-8, UTF-16 и UTF-32). Например, свойство <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> возвращает объект <xref:System.Text.UnicodeEncoding> . Каждый объект использует резервную стратегию замены для обработки строк, которые он не может закодировать, и байтов, которые не может декодировать. (Дополнительные сведения см. в разделе [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) .)  
+- Используйте статические свойства класса <xref:System.Text.Encoding>, которые возвращают объекты, представляющие стандартные кодировки символов .NET (ASCII, UTF-7, UTF-8, UTF-16 и UTF-32). Например, свойство <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> возвращает объект <xref:System.Text.UnicodeEncoding> . Каждый объект использует резервную стратегию замены для обработки строк, которые он не может закодировать, и байтов, которые не может декодировать. (Дополнительные сведения см. в разделе [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) .)  
   
--   Вызвать конструктор класса кодировки. Таким образом могут быть созданы объекты для кодировок ASCII, UTF-7, UTF-8, UTF-16 и UTF-32. По умолчанию каждый объект использует резервную стратегию замены для обработки строк, которые он не может закодировать, и байтов, которые он не может декодировать, но вы можете указать, чтобы вместо этого создавалось исключение. (Дополнительные сведения см. в разделах [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) и [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) .)  
+- Вызвать конструктор класса кодировки. Таким образом могут быть созданы объекты для кодировок ASCII, UTF-7, UTF-8, UTF-16 и UTF-32. По умолчанию каждый объект использует резервную стратегию замены для обработки строк, которые он не может закодировать, и байтов, которые он не может декодировать, но вы можете указать, чтобы вместо этого создавалось исключение. (Дополнительные сведения см. в разделах [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) и [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) .)  
   
--   Вызвать конструктор <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> и передать ему целое число, представляющее кодировку. Объекты стандартных кодировок используют резервные стратегии замены, а объекты кодовых страниц и двухбайтовых кодировок (DBCS) используют резервную стратегию наилучшего соответствия для обработки строк, которые не удается закодировать, или байтов, которые не удается декодировать. (Дополнительные сведения см. в разделе [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit) .)  
+- Вызвать конструктор <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> и передать ему целое число, представляющее кодировку. Объекты стандартных кодировок используют резервные стратегии замены, а объекты кодовых страниц и двухбайтовых кодировок (DBCS) используют резервную стратегию наилучшего соответствия для обработки строк, которые не удается закодировать, или байтов, которые не удается декодировать. (Дополнительные сведения см. в разделе [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit) .)  
   
--   Вызовите метод <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType>, возвращающий любую стандартную кодировку, кодовую страницу или кодировку DBCS, доступную в .NET. Перегрузки позволяют задать резервный объект как для кодировщика, так и для декодера.  
+- Вызовите метод <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType>, возвращающий любую стандартную кодировку, кодовую страницу или кодировку DBCS, доступную в .NET. Перегрузки позволяют задать резервный объект как для кодировщика, так и для декодера.  
   
 > [!NOTE]
 >  В стандарте Юникода каждому символу в каждом поддерживаемом символьном наборе присваивается кодовая точка (номер) и имя. Например, символ "A" представляется кодовой точкой U+0041 и именем LATIN CAPITAL LETTER A. Кодировки UTF определяют способы кодирования кодовой точки в виде последовательности из одного или нескольких байтов. Схема кодировки Юникод упрощает разработку международных приложений, так как позволяет представлять символы любых наборов символов в единой кодировке. Разработчикам приложений больше не нужно сохранять данные о схеме кодировки, которая использовалась для представления символов конкретного языка или системы письма. Передача данных между системами, использующими различные языки, может происходить без искажений.  
@@ -87,17 +87,17 @@ ms.locfileid: "59346110"
   
  Если вы планируете использовать кодировку ASCII (<xref:System.Text.ASCIIEncoding>), выберите вместо нее <xref:System.Text.UTF8Encoding> . Эти две кодировки идентичны для набора символов ASCII, но <xref:System.Text.UTF8Encoding> имеет указанные ниже преимущества.  
   
--   Она может представлять любой символ Юникода, тогда как <xref:System.Text.ASCIIEncoding> поддерживает только символы Юникода в диапазоне от U+0000 до U+007F.  
+- Она может представлять любой символ Юникода, тогда как <xref:System.Text.ASCIIEncoding> поддерживает только символы Юникода в диапазоне от U+0000 до U+007F.  
   
--   Она обеспечивает обнаружение ошибок и более высокий уровень безопасности.  
+- Она обеспечивает обнаружение ошибок и более высокий уровень безопасности.  
   
--   Она настроена для максимально быстрой работы и должна быть быстрее любых других кодировок. Даже для содержимого, имеющего только формат ASCII, выполнение операций с помощью <xref:System.Text.UTF8Encoding> происходит быстрее, чем с помощью <xref:System.Text.ASCIIEncoding>.  
+- Она настроена для максимально быстрой работы и должна быть быстрее любых других кодировок. Даже для содержимого, имеющего только формат ASCII, выполнение операций с помощью <xref:System.Text.UTF8Encoding> происходит быстрее, чем с помощью <xref:System.Text.ASCIIEncoding>.  
   
  Кодировку <xref:System.Text.ASCIIEncoding> рекомендуется использовать только для приложений прежних версий. Однако даже для приложений прежних версий <xref:System.Text.UTF8Encoding> может быть предпочтительнее по указанным ниже причинам (при параметрах по умолчанию).  
   
--   Если содержимое приложения включает символы не только в формате ASCII, при кодировании с помощью <xref:System.Text.ASCIIEncoding>каждый символ, не относящийся к ASCII, кодируется как знак вопроса (?). При последующем декодировании эти данные утрачиваются.  
+- Если содержимое приложения включает символы не только в формате ASCII, при кодировании с помощью <xref:System.Text.ASCIIEncoding>каждый символ, не относящийся к ASCII, кодируется как знак вопроса (?). При последующем декодировании эти данные утрачиваются.  
   
--   Если содержимое приложения включает символы не только в формате ASCII, при кодировании с помощью <xref:System.Text.UTF8Encoding>представление символов в формате ASCII дает непригодный для чтения результат. Однако при последующем декодировании данных с помощью декодера UTF-8 обработка данных выполняется успешно.  
+- Если содержимое приложения включает символы не только в формате ASCII, при кодировании с помощью <xref:System.Text.UTF8Encoding>представление символов в формате ASCII дает непригодный для чтения результат. Однако при последующем декодировании данных с помощью декодера UTF-8 обработка данных выполняется успешно.  
   
  В веб-приложении символы, отправленные клиенту в ответ на веб-запрос, должны отражать кодировку, используемую в клиенте. Как правило, требуется задать для свойства <xref:System.Web.HttpResponse.ContentEncoding%2A?displayProperty=nameWithType> значение, возвращаемое свойством <xref:System.Web.HttpRequest.ContentEncoding%2A?displayProperty=nameWithType> , для отображения текста в той кодировке, которую ожидает пользователь.  
   
@@ -130,11 +130,11 @@ ms.locfileid: "59346110"
 ## <a name="choosing-a-fallback-strategy"></a>Выбор резервной стратегии  
  Когда метод пытается закодировать или декодировать символ, но не находит сопоставления, он должен использовать резервную стратегию, определяющую, как должно обрабатываться отсутствие сопоставления. Существует три типа резервных стратегий:  
   
--   Best-Fit Fallback  
+- Best-Fit Fallback  
   
--   Replacement Fallback  
+- Replacement Fallback  
   
--   Exception Fallback  
+- Exception Fallback  
   
 > [!IMPORTANT]
 >  При операциях кодирования наиболее часто проблемы возникают, когда символ Юникода не удается сопоставить с определенной кодировкой кодовой страницы. При операциях декодирования наиболее часто проблемы возникают, когда недопустимую последовательность байтов не удается преобразовать в допустимые символы Юникода. Поэтому необходимо знать, какую резервную стратегию использует определенный объект кодировки. По возможности при создании экземпляра объекта следует указывать резервную стратегию, используемую объектом кодировки.  
@@ -195,9 +195,9 @@ ms.locfileid: "59346110"
   
  Объекты <xref:System.Text.EncoderFallbackException> и <xref:System.Text.DecoderFallbackException> предоставляют следующую информацию о состоянии, вызвавшем исключение:  
   
--   Объект <xref:System.Text.EncoderFallbackException> включает метод <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A> , указывающий, представляют ли символы (или символ), которые не удается закодировать, неизвестную замещающую пару (тогда метод возвращает значение `true`) или неизвестный отдельный символ (тогда метод возвращает значение `false`). Символы замещающей пары доступны в свойствах <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> и <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType> . Неизвестный отдельный символ доступен в свойстве <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType> . Свойство <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> указывает позицию первого символа, который не удалось закодировать, в строке.  
+- Объект <xref:System.Text.EncoderFallbackException> включает метод <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A> , указывающий, представляют ли символы (или символ), которые не удается закодировать, неизвестную замещающую пару (тогда метод возвращает значение `true`) или неизвестный отдельный символ (тогда метод возвращает значение `false`). Символы замещающей пары доступны в свойствах <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> и <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType> . Неизвестный отдельный символ доступен в свойстве <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType> . Свойство <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> указывает позицию первого символа, который не удалось закодировать, в строке.  
   
--   Объект <xref:System.Text.DecoderFallbackException> включает свойство <xref:System.Text.DecoderFallbackException.BytesUnknown%2A> , возвращающее массив байтов, которые не удается декодировать. Свойство <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=nameWithType> указывает начальную позицию неизвестных байтов.  
+- Объект <xref:System.Text.DecoderFallbackException> включает свойство <xref:System.Text.DecoderFallbackException.BytesUnknown%2A> , возвращающее массив байтов, которые не удается декодировать. Свойство <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=nameWithType> указывает начальную позицию неизвестных байтов.  
   
  Несмотря на то что объекты <xref:System.Text.EncoderFallbackException> и <xref:System.Text.DecoderFallbackException> предоставляют достаточно подробную диагностическую информацию об исключении, они не предоставляют доступ к буферу кодирования или декодирования. Поэтому они не позволяют заменять или исправлять недопустимые данные в методе кодирования или декодирования.  
   
@@ -205,13 +205,13 @@ ms.locfileid: "59346110"
 ## <a name="implementing-a-custom-fallback-strategy"></a>Implementing a Custom Fallback Strategy  
  Помимо встроенной стратегии наилучшего соответствия, реализованной кодовыми страницами, платформа .NET содержит следующие классы для реализации резервной стратегии:  
   
--   — классы <xref:System.Text.EncoderReplacementFallback> и <xref:System.Text.EncoderReplacementFallbackBuffer> можно использовать для замены символов в операциях кодирования;  
+- — классы <xref:System.Text.EncoderReplacementFallback> и <xref:System.Text.EncoderReplacementFallbackBuffer> можно использовать для замены символов в операциях кодирования;  
   
--   — классы <xref:System.Text.DecoderReplacementFallback> и <xref:System.Text.DecoderReplacementFallbackBuffer> можно использовать для замены символов в операциях декодирования;  
+- — классы <xref:System.Text.DecoderReplacementFallback> и <xref:System.Text.DecoderReplacementFallbackBuffer> можно использовать для замены символов в операциях декодирования;  
   
--   — классы <xref:System.Text.EncoderExceptionFallback> и <xref:System.Text.EncoderExceptionFallbackBuffer> можно использовать для создания исключения <xref:System.Text.EncoderFallbackException> , когда символ не удается закодировать;  
+- — классы <xref:System.Text.EncoderExceptionFallback> и <xref:System.Text.EncoderExceptionFallbackBuffer> можно использовать для создания исключения <xref:System.Text.EncoderFallbackException> , когда символ не удается закодировать;  
   
--   — классы <xref:System.Text.DecoderExceptionFallback> и <xref:System.Text.DecoderExceptionFallbackBuffer> можно использовать для создания исключения <xref:System.Text.DecoderFallbackException> , когда символ не удается декодировать.  
+- — классы <xref:System.Text.DecoderExceptionFallback> и <xref:System.Text.DecoderExceptionFallbackBuffer> можно использовать для создания исключения <xref:System.Text.DecoderFallbackException> , когда символ не удается декодировать.  
   
  Кроме того, можно реализовать пользовательское решение, использующее резервную стратегию наилучшего соответствия или стратегию исключения, выполнив указанные ниже действия.  
   
@@ -226,24 +226,24 @@ ms.locfileid: "59346110"
   
  При создании пользовательской резервной стратегии для кодировщика или декодера необходимо реализовать следующие члены:  
   
--   — свойство <xref:System.Text.EncoderFallback.MaxCharCount%2A?displayProperty=nameWithType> или <xref:System.Text.DecoderFallback.MaxCharCount%2A?displayProperty=nameWithType> , возвращающее максимально возможное число символов, которое может использоваться для замены одного символа в стратегиях наилучшего соответствия, замены или исключения. Для пользовательской резервной стратегии исключения его значение равно нулю.  
+- — свойство <xref:System.Text.EncoderFallback.MaxCharCount%2A?displayProperty=nameWithType> или <xref:System.Text.DecoderFallback.MaxCharCount%2A?displayProperty=nameWithType> , возвращающее максимально возможное число символов, которое может использоваться для замены одного символа в стратегиях наилучшего соответствия, замены или исключения. Для пользовательской резервной стратегии исключения его значение равно нулю.  
   
--   Метод <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> или <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> , возвращающий пользовательскую реализацию <xref:System.Text.EncoderFallbackBuffer> или <xref:System.Text.DecoderFallbackBuffer> . Метод вызывается кодировщиком, когда он встречает первый символ, который не удается закодировать, или декодером, когда он встречает первый байт, который не удается декодировать.  
+- Метод <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> или <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> , возвращающий пользовательскую реализацию <xref:System.Text.EncoderFallbackBuffer> или <xref:System.Text.DecoderFallbackBuffer> . Метод вызывается кодировщиком, когда он встречает первый символ, который не удается закодировать, или декодером, когда он встречает первый байт, который не удается декодировать.  
   
 ### <a name="deriving-from-encoderfallbackbuffer-or-decoderfallbackbuffer"></a>Наследование от класса EncoderFallbackBuffer или класса DecoderFallbackBuffer  
  Для реализации пользовательской резервной стратегии необходимо также создать класс, наследующий от <xref:System.Text.EncoderFallbackBuffer> для операций кодирования и от класса <xref:System.Text.DecoderFallbackBuffer> для операций декодирования. Экземпляры этих классов возвращаются методом <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A> классов <xref:System.Text.EncoderFallback> и <xref:System.Text.DecoderFallback> . Метод <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> вызывается кодировщиком, когда он встречает первый символ, который не удается закодировать, а метод <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> вызывается декодером, когда он встречает один или несколько байтов, которые не удается декодировать. Классы <xref:System.Text.EncoderFallbackBuffer> и <xref:System.Text.DecoderFallbackBuffer> предоставляют реализацию резервной стратегии. Каждый экземпляр представляет буфер, содержащий символы резервной стратегии, которые заменят символ, который не удалось закодировать, или последовательность байтов, которую не удалось декодировать.  
   
  При создании пользовательской резервной стратегии для кодировщика или декодера необходимо реализовать следующие члены:  
   
--   метод <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> или <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> . Метод<xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> вызывается кодировщиком, чтобы предоставить резервный буфер со сведениями о символе, который не удается кодировать. Так как символ, который требуется закодировать, может быть замещающей парой, этот метод перегружается. Одной перегрузке передается символ, который нужно закодировать, и его индекс в строке. Второй перегрузке передаются верхний и нижний замещающий знаки и их индекс в строке. Метод <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> вызывается декодером, чтобы предоставить резервный буфер со сведениями о байтах, которые не удается декодировать. Этому методу передается массив байтов, которые не удалось декодировать, а также индекс первого байта. Метод резервной стратегии должен возвращать значение `true` , если резервный буфер может предоставить наилучшим образом соответствующий или замещающий символ (или символы); в противном случае он должен возвращать значение `false`. При использовании стратегии исключения метод резервной стратегии должен создавать исключение.  
+- метод <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> или <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> . Метод<xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> вызывается кодировщиком, чтобы предоставить резервный буфер со сведениями о символе, который не удается кодировать. Так как символ, который требуется закодировать, может быть замещающей парой, этот метод перегружается. Одной перегрузке передается символ, который нужно закодировать, и его индекс в строке. Второй перегрузке передаются верхний и нижний замещающий знаки и их индекс в строке. Метод <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> вызывается декодером, чтобы предоставить резервный буфер со сведениями о байтах, которые не удается декодировать. Этому методу передается массив байтов, которые не удалось декодировать, а также индекс первого байта. Метод резервной стратегии должен возвращать значение `true` , если резервный буфер может предоставить наилучшим образом соответствующий или замещающий символ (или символы); в противном случае он должен возвращать значение `false`. При использовании стратегии исключения метод резервной стратегии должен создавать исключение.  
   
--   Метод <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> или <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> , который вызывается кодировщиком или декодером многократно для получения следующего символа из резервного буфера. После возврата всех резервных символов метод должен вернуть символ U+0000.  
+- Метод <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> или <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> , который вызывается кодировщиком или декодером многократно для получения следующего символа из резервного буфера. После возврата всех резервных символов метод должен вернуть символ U+0000.  
   
--   Свойство <xref:System.Text.EncoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> или <xref:System.Text.DecoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> , которое возвращает количество символов, оставшихся в резервном буфере.  
+- Свойство <xref:System.Text.EncoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> или <xref:System.Text.DecoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> , которое возвращает количество символов, оставшихся в резервном буфере.  
   
--   Метод <xref:System.Text.EncoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> или <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> , который перемещает текущую позицию в резервном буфере к предыдущему символу.  
+- Метод <xref:System.Text.EncoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> или <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> , который перемещает текущую позицию в резервном буфере к предыдущему символу.  
   
--   Метод <xref:System.Text.EncoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> или <xref:System.Text.DecoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> , повторно инициализирующий резервный буфер.  
+- Метод <xref:System.Text.EncoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> или <xref:System.Text.DecoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> , повторно инициализирующий резервный буфер.  
   
  Если реализована резервная стратегия наилучшего соответствия или замены, классы, унаследованные от <xref:System.Text.EncoderFallbackBuffer> и <xref:System.Text.DecoderFallbackBuffer> , также имеют два закрытых поля экземпляра: точное число символов в буфере и индекс в буфере следующего символа, который нужно вернуть.  
   

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd3b1cacc73743622aaaad72bfd4edb26dc26390
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f2be5881a7f663b13dd13ffc0e0faf88afd7efc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740480"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647964"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Навигация по узлам атрибутов и пространств имен с помощью XPathNavigator
 Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет два набора методов навигации. Методы первого набора, описанные в руководстве по [навигации в наборах узлов с помощью XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md), используются для навигации в *наборах узлов* в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument>. Методы второго набора, рассматриваемые в этом разделе, используются для навигации в *узлах атрибутов и пространств имен* в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument>.  
@@ -22,11 +22,11 @@ ms.locfileid: "54740480"
   
  Ниже перечислены методы перемещения по атрибутам класса <xref:System.Xml.XPath.XPathNavigator>.  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A>  
   
  Если текущий узел является элементом, то можно с помощью свойства <xref:System.Xml.XPath.XPathNavigator.HasAttributes%2A> определить, существуют ли атрибуты, связанные с этим элементом. Если известно, что элемент имеет атрибуты, к этим атрибутам можно обратиться с помощью нескольких методов. Чтобы получить один атрибут из элемента, используйте метод <xref:System.Xml.XPath.XPathNavigator.GetAttribute%2A>. Для перемещения <xref:System.Xml.XPath.XPathNavigator> к определенному атрибуту используйте метод <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A>. Кроме того, можно осуществить перебор всех атрибутов элемента с помощью метода <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A>, после чего выполняется несколько вызовов метода <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A>.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "54740480"
   
  Ниже перечислены методы перемещения по пространствам имен класса <xref:System.Xml.XPath.XPathNavigator>.  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>  
   
  В XML-документе всегда имеется по меньшей мере один узел пространства имен в области для любого элемента. Это узел пространства имен с префиксом `xml` и URI-кодом пространства имен `http://www.w3.org/XML/1998/namespace`. Чтобы получить URI-код пространства имен в области с указанным префиксом, используйте метод <xref:System.Xml.XPath.XPathNavigator.GetNamespace%2A>. Для перемещения объекта <xref:System.Xml.XPath.XPathNavigator> к определенному узлу пространства имен используйте метод <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A>. Кроме того, можно осуществить перебор всех узлов пространств имен в области для элемента с помощью метода <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>, после чего выполняется несколько вызовов метода <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>.  
   
@@ -66,11 +66,11 @@ ms.locfileid: "54740480"
   
  Последовательность пространств имен (пространство имен, в котором располагается объект<xref:System.Xml.XPath.XPathNavigator> после вызова метода <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> и ряда вызовов метода <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>) имеет следующий вид.  
   
--   При позиционировании на `element2`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` и `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
+- При позиционировании на `element2`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` и `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
   
--   При позиционировании на `element1`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` и `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
+- При позиционировании на `element1`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` и `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
   
--   При позиционировании на `root`: `xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
+- При позиционировании на `root`: `xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
   
 > [!NOTE]
 >  Класс <xref:System.Xml.XPath.XPathNavigator> возвращает узлы пространства имен в обратном порядке документа. Поэтому <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> существенно перемещается к последнему узлу пространства имен в текущей области видимости.  
@@ -87,11 +87,11 @@ ms.locfileid: "54740480"
   
  При размещении на объекте `child2` последовательность пространств имен (пространство имен, в котором располагается объект <xref:System.Xml.XPath.XPathNavigator> после вызова метода <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> и ряда вызовов метода <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>) имеет следующий вид.  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope.All>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"`, `xmlns="http://www.contoso.com"` и `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
+- <xref:System.Xml.XPath.XPathNamespaceScope.All>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"`, `xmlns="http://www.contoso.com"` и `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"` и `xmlns="http://www.contoso.com"`.  
+- <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"` и `xmlns="http://www.contoso.com"`.  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`.  
+- <xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`.  
   
 > [!NOTE]
 >  Класс <xref:System.Xml.XPath.XPathNavigator> возвращает узлы пространства имен в обратном порядке документа. Поэтому <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> существенно перемещается к последнему узлу пространства имен в текущей области видимости.  

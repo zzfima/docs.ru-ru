@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ba1ded1757d71a2b7839ae8b45489da53763b8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73440f2ed689bdad56bb1f05025f826da9c409e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603616"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633325"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Синтаксический анализ числовых строк в .NET
 Все числовые типы имеют два статических метода синтаксического анализа — `Parse` и `TryParse`, которые можно использовать для преобразования строкового представления числа в числовой тип. Эти методы позволяют анализировать строки, которые были созданы с помощью строк формата, описанных в разделах [Строки стандартных числовых форматов](../../../docs/standard/base-types/standard-numeric-format-strings.md) и [Строки настраиваемых числовых форматов](../../../docs/standard/base-types/custom-numeric-format-strings.md). По умолчанию методы `Parse` и `TryParse` могут успешно преобразовывать строки, содержащие целые десятичные числа, только в целочисленные значения. Они могут успешно преобразовывать строки, содержащие целые и дробные десятичные числа, разделители групп и десятичные разделители, в значения с плавающей запятой. Если операцию выполнить не удалось, метод `Parse` создает исключение, а метод `TryParse` возвращает значение `false`.  
@@ -28,9 +28,9 @@ ms.locfileid: "54603616"
   
  Поставщик формата представлен реализацией интерфейса <xref:System.IFormatProvider>. Этот интерфейс содержит только один элемент — метод <xref:System.IFormatProvider.GetFormat%2A>, единственным параметром которого является объект <xref:System.Type>, представляющий тип для форматирования. Этот метод возвращает объект, предоставляющий сведения о форматировании. .NET поддерживает следующие две реализации <xref:System.IFormatProvider> для синтаксического анализа числовых строк:  
   
--   объект <xref:System.Globalization.CultureInfo>, у которого метод <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> возвращает объект <xref:System.Globalization.NumberFormatInfo>, предоставляющий сведения о форматировании, связанные с языком и региональными параметрами;  
+- объект <xref:System.Globalization.CultureInfo>, у которого метод <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> возвращает объект <xref:System.Globalization.NumberFormatInfo>, предоставляющий сведения о форматировании, связанные с языком и региональными параметрами;  
   
--   объект <xref:System.Globalization.NumberFormatInfo>, у которого метод <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> возвращает сам этот объект.  
+- объект <xref:System.Globalization.NumberFormatInfo>, у которого метод <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> возвращает сам этот объект.  
   
  В следующем примере код пытается преобразовать каждую строку массива в значение <xref:System.Double>. Сначала предпринимается попытка выполнить анализ строки с помощью поставщика формата, отражающего правила для языка и региональных параметров "Английский (США)". Если эта операция создает исключение <xref:System.FormatException>, предпринимается попытка выполнить синтаксический анализ строки на основе поставщика формата для языка и региональных параметров "Французский (Франция)".  
   

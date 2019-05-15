@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 224e4f3db31e4818833eb8411f44f547538534fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a941c99e1d22a71dc6d94e73f5402716f41e3a81
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517257"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647914"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>Вставка XML-данных с помощью XPathNavigator
 Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет набор методов для вставки в XML-документ одноуровневых узлов, дочерних узлов и узлов атрибутов. Для использования этих методов необходимо сделать редактируемым объект <xref:System.Xml.XPath.XPathNavigator>, то есть установить для свойства <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> значение `true`.  
@@ -29,13 +29,13 @@ ms.locfileid: "54517257"
 ### <a name="inserting-sibling-nodes"></a>Вставка одноуровневых узлов  
  Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет следующие методы для вставки одноуровневых узлов.  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
   
  Эти методы вставляют одноуровневые узлы до и после узла, на котором располагается объект <xref:System.Xml.XPath.XPathNavigator>.  
   
@@ -58,13 +58,13 @@ ms.locfileid: "54517257"
 ### <a name="inserting-child-nodes"></a>Вставка дочерних узлов  
  Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет следующие методы для вставки дочерних узлов.  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
   
  Эти методы вставляют дочерние узлы в конец и в начало списка дочерних узлов того узла, на котором в текущий момент располагается объект <xref:System.Xml.XPath.XPathNavigator>.  
   
@@ -87,9 +87,9 @@ ms.locfileid: "54517257"
 ### <a name="inserting-attribute-nodes"></a>Вставка узлов атрибутов  
  Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет следующие методы для вставки узлов атрибутов.  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
   
  Эти методы вставляют узлы атрибутов в узел элемента, на котором в текущий момент находится объект <xref:System.Xml.XPath.XPathNavigator>. Метод <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A> создает узел атрибута для элемента узла, на котором в текущий момент располагается объект <xref:System.Xml.XPath.XPathNavigator>, используя в качестве параметров префикс пространства имен, локальное имя, URI-код пространства имен и указанное значение. Метод <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> возвращает объект <xref:System.Xml.XmlWriter>, используемый для вставки узлов атрибутов.  
   
@@ -227,26 +227,26 @@ navigator.SetTypedValue(DateTime.Now);
   
  Ниже перечислены возможные конфликты пространства имен.  
   
--   Если существует пространство имен в контексте объекта <xref:System.Xml.XmlReader>, где префикс сопоставления URI-кода пространства имен не содержится в контексте объекта <xref:System.Xml.XPath.XPathNavigator>, то к вновь добавленному узлу добавляется новая декларация пространства имен.  
+- Если существует пространство имен в контексте объекта <xref:System.Xml.XmlReader>, где префикс сопоставления URI-кода пространства имен не содержится в контексте объекта <xref:System.Xml.XPath.XPathNavigator>, то к вновь добавленному узлу добавляется новая декларация пространства имен.  
   
--   Если один и тот же URI-код пространства имен находится как в контексте объекта <xref:System.Xml.XmlReader>, так и в контексте объекта <xref:System.Xml.XPath.XPathNavigator>, но префиксы в различных контекстах различаются, то к вновь добавленному узлу добавляется декларация нового пространства имен, а префикс и URI-код пространства имен берутся из объекта <xref:System.Xml.XmlReader>.  
+- Если один и тот же URI-код пространства имен находится как в контексте объекта <xref:System.Xml.XmlReader>, так и в контексте объекта <xref:System.Xml.XPath.XPathNavigator>, но префиксы в различных контекстах различаются, то к вновь добавленному узлу добавляется декларация нового пространства имен, а префикс и URI-код пространства имен берутся из объекта <xref:System.Xml.XmlReader>.  
   
--   Если один и тот же префикс пространства имен находится как в контексте объекта <xref:System.Xml.XmlReader>, так и в контексте объекта <xref:System.Xml.XPath.XPathNavigator>, но в контекстах ему сопоставлены различные URI-коды пространств имен, то к вновь добавленному узлу добавляется декларация нового пространства имен, а префикс и URI-код пространства имен берутся из объекта <xref:System.Xml.XmlReader>.  
+- Если один и тот же префикс пространства имен находится как в контексте объекта <xref:System.Xml.XmlReader>, так и в контексте объекта <xref:System.Xml.XPath.XPathNavigator>, но в контекстах ему сопоставлены различные URI-коды пространств имен, то к вновь добавленному узлу добавляется декларация нового пространства имен, а префикс и URI-код пространства имен берутся из объекта <xref:System.Xml.XmlReader>.  
   
--   Если и префикс, и URI-код пространства имен в обоих контекстах объекта <xref:System.Xml.XmlReader> и объекта <xref:System.Xml.XPath.XPathNavigator> одинаковы, то к вновь добавленному узлу декларация нового пространства имен не добавляется.  
+- Если и префикс, и URI-код пространства имен в обоих контекстах объекта <xref:System.Xml.XmlReader> и объекта <xref:System.Xml.XPath.XPathNavigator> одинаковы, то к вновь добавленному узлу декларация нового пространства имен не добавляется.  
   
 > [!NOTE]
 >  Приведенное выше описание применимо также к декларациям пространства имен с пустой строкой `string` в качестве префикса (например, декларация пространства имен по умолчанию).  
   
  Ниже перечислены возможные конфликты деклараций `xml:lang`.  
   
--   Если атрибут `xml:lang` существует в контексте объекта <xref:System.Xml.XmlReader>, но отсутствует в контексте объекта <xref:System.Xml.XPath.XPathNavigator>, то к вновь добавленному узлу добавляется атрибут `xml:lang`, значение которого берется из объекта <xref:System.Xml.XmlReader>.  
+- Если атрибут `xml:lang` существует в контексте объекта <xref:System.Xml.XmlReader>, но отсутствует в контексте объекта <xref:System.Xml.XPath.XPathNavigator>, то к вновь добавленному узлу добавляется атрибут `xml:lang`, значение которого берется из объекта <xref:System.Xml.XmlReader>.  
   
--   Если атрибут `xml:lang` существует в контексте обоих объектов, <xref:System.Xml.XmlReader> и <xref:System.Xml.XPath.XPathNavigator>, но его значения там различаются, то к вновь добавленному узлу добавляется атрибут `xml:lang`, значение которого берется из объекта <xref:System.Xml.XmlReader>.  
+- Если атрибут `xml:lang` существует в контексте обоих объектов, <xref:System.Xml.XmlReader> и <xref:System.Xml.XPath.XPathNavigator>, но его значения там различаются, то к вновь добавленному узлу добавляется атрибут `xml:lang`, значение которого берется из объекта <xref:System.Xml.XmlReader>.  
   
--   Если атрибут `xml:lang` существует в контексте обоих объектов, <xref:System.Xml.XmlReader> и <xref:System.Xml.XPath.XPathNavigator>, с одинаковыми значениями, то к вновь добавленному узлу новый атрибут `xml:lang` не добавляется.  
+- Если атрибут `xml:lang` существует в контексте обоих объектов, <xref:System.Xml.XmlReader> и <xref:System.Xml.XPath.XPathNavigator>, с одинаковыми значениями, то к вновь добавленному узлу новый атрибут `xml:lang` не добавляется.  
   
--   Если атрибут `xml:lang` существует в контексте объекта <xref:System.Xml.XPath.XPathNavigator>, но не существует в контексте объекта <xref:System.Xml.XmlReader>, то к вновь добавленному узлу вообще не добавляется атрибут `xml:lang`.  
+- Если атрибут `xml:lang` существует в контексте объекта <xref:System.Xml.XPath.XPathNavigator>, но не существует в контексте объекта <xref:System.Xml.XmlReader>, то к вновь добавленному узлу вообще не добавляется атрибут `xml:lang`.  
   
 ## <a name="inserting-nodes-with-xmlwriter"></a>Вставка узлов с помощью класса XmlWriter  
  Методы, используемые для вставки одноуровневых узлов, дочерних узлов и узлов атрибутов, которые описаны в разделе «Вставка узлов и атрибутов», перегружены. Методы <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>, <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>, <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>, <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> и <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> класса <xref:System.Xml.XPath.XPathNavigator> возвращают объект <xref:System.Xml.XmlWriter>, используемый для вставки узлов.  
@@ -271,11 +271,11 @@ navigator.SetTypedValue(DateTime.Now);
   
  При использовании нескольких объектов <xref:System.Xml.XmlWriter> важно учесть следующие замечания.  
   
--   XML-фрагменты, созданные с помощью объекта <xref:System.Xml.XmlWriter>, добавляются в XML-документ при вызове метода <xref:System.Xml.XmlWriter.Close%2A> для каждого объекта <xref:System.Xml.XmlWriter>. До этого момента объект <xref:System.Xml.XmlWriter> записывает данные в отсоединенный фрагмент. Если операция выполняется на открытом XML-документе, то все фрагменты, записываемые объектом <xref:System.Xml.XmlWriter>, не затрагиваются до вызова метода <xref:System.Xml.XmlWriter.Close%2A>.  
+- XML-фрагменты, созданные с помощью объекта <xref:System.Xml.XmlWriter>, добавляются в XML-документ при вызове метода <xref:System.Xml.XmlWriter.Close%2A> для каждого объекта <xref:System.Xml.XmlWriter>. До этого момента объект <xref:System.Xml.XmlWriter> записывает данные в отсоединенный фрагмент. Если операция выполняется на открытом XML-документе, то все фрагменты, записываемые объектом <xref:System.Xml.XmlWriter>, не затрагиваются до вызова метода <xref:System.Xml.XmlWriter.Close%2A>.  
   
--   Если на определенном поддереве XML существует открытый объект <xref:System.Xml.XmlWriter>, и поддерево удаляется, то объект <xref:System.Xml.XmlWriter> все равно может добавляться к поддереву. Просто это поддерево становится удаленным фрагментом.  
+- Если на определенном поддереве XML существует открытый объект <xref:System.Xml.XmlWriter>, и поддерево удаляется, то объект <xref:System.Xml.XmlWriter> все равно может добавляться к поддереву. Просто это поддерево становится удаленным фрагментом.  
   
--   Если в одном XML-документе одновременно открыто несколько объектов <xref:System.Xml.XmlWriter>, то они добавляются в XML-документ в порядке закрытия объектов <xref:System.Xml.XmlWriter>, а не в порядке их открытия.  
+- Если в одном XML-документе одновременно открыто несколько объектов <xref:System.Xml.XmlWriter>, то они добавляются в XML-документ в порядке закрытия объектов <xref:System.Xml.XmlWriter>, а не в порядке их открытия.  
   
  В следующем примере создается объект <xref:System.Xml.XmlDocument>, создается объект <xref:System.Xml.XPath.XPathNavigator>, а потом используется объект <xref:System.Xml.XmlWriter>, возвращаемый методом <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>, чтобы создать структуру первой книги в файле `books.xml`. Затем файл `book.xml` сохраняется.  
   

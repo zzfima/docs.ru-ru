@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ca01234bf7adaca1337053bbc2bbba0731be3cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c4c56712460d772426a2d8d6d328cba9bb03373d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132045"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648663"
 ---
 # <a name="identifying-functions-in-dlls"></a>Идентификация функций в библиотеках DLL
 Идентификатор функции DLL состоит из следующих элементов:  
   
--   Имя функции или порядковый номер  
+- Имя функции или порядковый номер  
   
--   Имя файла DLL, в котором находится реализация  
+- Имя файла DLL, в котором находится реализация  
   
  Например, при указании функции **MessageBox** в библиотеке User32.dll определяется функция (**MessageBox**) и ее расположение (User32.dll, User32 или user32). Программный интерфейс Microsoft Windows (API Windows) может содержать две версии для каждой функции, обрабатывающей символы и строки: версию ANSI для однобайтовых символов и версию Юникода для двухбайтовых символов. Если кодировка не указана, она определяется полем <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> (по умолчанию ANSI). Некоторые функции могут иметь более двух версий.  
   

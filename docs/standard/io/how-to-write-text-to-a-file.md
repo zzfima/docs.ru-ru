@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Запись текста в файл
+title: Практическое руководство. Запись текста в файл
 ms.date: 01/04/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 93d87dc98284fad6b8159f681f7d99ce460d60d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59b33c24c2821d0aef17f5feb67c1178810b939e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524199"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647787"
 ---
-# <a name="how-to-write-text-to-a-file"></a>Как выполнить Запись текста в файл
+# <a name="how-to-write-text-to-a-file"></a>Практическое руководство. Запись текста в файл
 В этом разделе показаны различные способы записи текста в файл для приложения .NET. 
 
 Для записи текста в файл обычно используются следующие классы и методы.  
   
--   <xref:System.IO.StreamWriter> содержит методы для синхронной (<xref:System.IO.StreamWriter.Write%2A> или <xref:System.IO.TextWriter.WriteLine%2A>) или асинхронной (<xref:System.IO.StreamWriter.WriteAsync%2A> и <xref:System.IO.StreamWriter.WriteLineAsync%2A>) записи в файл.  
+- <xref:System.IO.StreamWriter> содержит методы для синхронной (<xref:System.IO.StreamWriter.Write%2A> или <xref:System.IO.TextWriter.WriteLine%2A>) или асинхронной (<xref:System.IO.StreamWriter.WriteAsync%2A> и <xref:System.IO.StreamWriter.WriteLineAsync%2A>) записи в файл.  
   
--   <xref:System.IO.File> предоставляет статические методы для записи текста в файл, такие как <xref:System.IO.File.WriteAllLines%2A> и <xref:System.IO.File.WriteAllText%2A>, или для добавления текста в файл (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> или <xref:System.IO.File.AppendText%2A>).  
+- <xref:System.IO.File> предоставляет статические методы для записи текста в файл, такие как <xref:System.IO.File.WriteAllLines%2A> и <xref:System.IO.File.WriteAllText%2A>, или для добавления текста в файл (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> или <xref:System.IO.File.AppendText%2A>).  
   
 - <xref:System.IO.Path> предназначен для использования со строками, содержащими сведения о пути к файлу или каталогу. Он содержит метод <xref:System.IO.Path.Combine%2A>; в .NET Core 2.1 и более поздних версиях также есть методы <xref:System.IO.Path.Join%2A> и <xref:System.IO.Path.TryJoin%2A>, которые позволяют объединять строки для создания пути к файлу или каталогу.
 
