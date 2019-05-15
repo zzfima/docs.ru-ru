@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: e12769eca2d3c963e2d7a19e50c67814bcff3152
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0464d87aef3d4e88d9340af2ac1db93c13ba26e2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625374"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592661"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Практическое руководство. Создание надстройки, являющейся пользовательским интерфейсом
 В этом примере показано, как создать надстройку, Windows Presentation Foundation (WPF), размещаемый в автономное приложение WPF.  
@@ -81,7 +81,7 @@ ms.locfileid: "64625374"
   
 <a name="HostApp"></a>   
 ## <a name="implementing-the-host-application"></a>Реализация ведущего приложения  
- Адаптер на стороне узла и созданного представления узла, ведущее приложение может использовать [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в модели надстройки, чтобы открыть конвейер и получить серверное представление надстройки. Эти действия показаны в следующем коде.  
+ Адаптер на стороне узла и созданного представления узла ведущее приложение может использовать модель надстроек платформы .NET Framework, чтобы открыть конвейер и получить серверное представление надстройки. Эти действия показаны в следующем коде.  
 
  Ведущее приложение использует типичный код модели надстроек платформы .NET Framework для активации надстройки, которая неявным образом возвращает представление главного приложения ведущим приложением. Ведущее приложение затем отображает представление главного приложения (который является <xref:System.Windows.Controls.UserControl>) из <xref:System.Windows.Controls.Grid>.  
   

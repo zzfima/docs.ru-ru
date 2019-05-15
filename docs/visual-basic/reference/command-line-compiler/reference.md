@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: a205682bb15b5d25ba0a2df895533d3443a41409
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2394a23ddd59d09ce53c78fc4486fc5bae9e8516
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663466"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583359"
 ---
 # <a name="-reference-visual-basic"></a>-ссылке (Visual Basic)
 Указывает компилятору сделать сведения о типе в указанных сборках доступными для компилируемого проекта.  
@@ -46,7 +46,7 @@ ms.locfileid: "64663466"
   
  Для компилятора распознавать тип в сборке (не в модуле) он должен иметь возможность разрешать типы. Как это можно сделать одним из примеров является определение экземпляра типа. Другие способы доступны для разрешения имен типов в сборки для компилятора. Например при наследовании из типа в сборке, имя типа затем становится известно компилятору.  
   
- Файл ответов Vbc.rsp, который ссылается на часто используемые [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] сборки, используется по умолчанию. Использовать `-noconfig` запретить компилятору использовать файл Vbc.rsp.  
+ Файл ответов Vbc.rsp, которая ссылается на часто используемые сборки .NET Framework, используется по умолчанию. Использовать `-noconfig` запретить компилятору использовать файл Vbc.rsp.  
   
  Краткой формой `-reference` является `/r`.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: b1d99b0c5241a99ba7f621faff7c39d20776b2ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d653761236cae580eb78a35f9697764f600ec6ee
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496261"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583113"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Использование ключевых слов "Override" и "New" (Руководство по программированию в C#)
 В C# метод в производном классе может иметь то же имя, что и метод в базовом классе. Можно задать способ взаимодействия методов, воспользовавшись ключевыми словами [new](../../../csharp/language-reference/keywords/new.md) и [override](../../../csharp/language-reference/keywords/override.md). Модификатор `override` *разворачивает* метод базового класса, а модификатор `new` *скрывает* его. Эта разница показана в примере в этой статье.  
@@ -39,11 +39,11 @@ class DerivedClass : BaseClass
   
  В методе `Main` объявите переменные `bc`, `dc` и `bcdc`.  
   
--   Параметр `bc` имеет тип `BaseClass` и его значение — тип `BaseClass`.  
+- Параметр `bc` имеет тип `BaseClass` и его значение — тип `BaseClass`.  
   
--   Параметр `dc` имеет тип `DerivedClass` и его значение — тип `DerivedClass`.  
+- Параметр `dc` имеет тип `DerivedClass` и его значение — тип `DerivedClass`.  
   
--   Параметр `bcdc` имеет тип `BaseClass` и его значение — тип `DerivedClass`. Это переменная, на которую следует обратить внимание.  
+- Параметр `bcdc` имеет тип `BaseClass` и его значение — тип `DerivedClass`. Это переменная, на которую следует обратить внимание.  
   
  Поскольку `bc` и `bcdc` имеют тип `BaseClass`, они могут только напрямую обращаться к методу `Method1` (если не используется приведение). Переменная `dc` может обращаться к `Method1` и `Method2`. Эти связи показаны в следующем коде.  
   

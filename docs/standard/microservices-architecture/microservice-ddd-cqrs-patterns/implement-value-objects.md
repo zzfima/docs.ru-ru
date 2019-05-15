@@ -1,15 +1,13 @@
 ---
 title: Реализация объектов значений
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Знакомство с возможностями и параметрами для реализации объектов значений с использованием новых функций Entity Framework.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 64ffd600468124439986b0d1949dc048ef245c78
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: bd165ac2511476a5041e7d09126647546c632ba6
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611384"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063069"
 ---
 # <a name="implement-value-objects"></a>Реализация объектов значений
 
@@ -324,7 +322,7 @@ public class Address
 - **Сложные типы и (или) объекты значений**. Обсуждение в репозитории сервиса GitHub для EF Core (вкладка "Issues" (Вопросы)) \
   <https://github.com/aspnet/EntityFramework/issues/246>
 
-- **ValueObject.cs.** Базовый класс объекта значений в eShopOnContainers.**  \
+- **ValueObject.cs.** Базовый класс объекта значений в eShopOnContainers. \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs>
 
 - **Класс Address.** Пример класса объекта значений в eShopOnContainers. \

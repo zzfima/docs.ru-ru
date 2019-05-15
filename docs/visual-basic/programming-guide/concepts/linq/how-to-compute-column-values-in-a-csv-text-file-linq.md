@@ -2,12 +2,12 @@
 title: Практическое руководство. Вычисление значений столбцов в текстовом CSV-файле (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: b226d981dd0cd61789e88ab06e602dd619f3f6c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21f4e6445824a6664b5eaa7ff793ee925aa06cef
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855026"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593001"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Практическое руководство. Вычисление значений столбцов в текстовом CSV-файле (LINQ) (Visual Basic)
 В этом примере демонстрируется выполнение статистических вычислений, таких как сумма, среднее, минимальное и максимальное для столбцов в CSV-файле. Приведенные в примере принципы могут применяться к другим типам структурированного текста.  
@@ -143,7 +143,7 @@ End Class
  Запрос работает с использованием метода <xref:System.String.Split%2A> для преобразования каждой строки текста в массив. Каждый элемент массива представляет столбец. И наконец, текст в каждом столбце преобразуется в свое числовое представление. Если файл является файлом с разделением знаками табуляции, просто измените аргумент в методе `Split` на `\t`.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивой `Imports` для пространства имен System.Linq.  
+Создайте проект консольного приложения VB.NET, с помощью `Imports` оператор для пространства имен System.Linq.
   
 ## <a name="see-also"></a>См. также
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: d815311a89ba09ade7e3092ca4eeab67cbe20bd0
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: b689bb7299d541708db7ae786bff62a1007608e5
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211266"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557892"
 ---
 # <a name="walkthrough-style-wpf-content"></a>Пошаговое руководство. Стиль содержимого WPF
 
@@ -42,7 +42,7 @@ ms.locfileid: "65211266"
 
 1. Добавьте в решение новый проект WPF <xref:System.Windows.Controls.UserControl>. Используйте имя по умолчанию для этого типа элемента управления (`UserControl1.xaml`). Дополнительные сведения см. в разделе [Пошаговое руководство: Создание нового содержимого WPF в формах Windows Forms во время разработки](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).
 
-2. Убедитесь в том, что элемент `UserControl1` выбран в представлении конструирования. Дополнительные сведения см. в разделе [Как Выберите и перемещать элементы в области конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).
+2. Убедитесь в том, что элемент `UserControl1` выбран в представлении конструирования. Дополнительные сведения см. в разделе [Практическое руководство. Выберите и перемещать элементы в области конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).
 
 3. В **свойства** окна, установите для параметра <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> свойства `200`.
 
@@ -58,15 +58,15 @@ ms.locfileid: "65211266"
 
 1. Откройте `Form1` в конструкторе Windows Forms.
 
-2. В **элементов**, дважды щелкните `UserControl1` для создания экземпляра `UserControl1` в форме.
+1. В **элементов**, дважды щелкните `UserControl1` для создания экземпляра `UserControl1` в форме.
 
      Экземпляр `UserControl1` размещается в новом элементе управления <xref:System.Windows.Forms.Integration.ElementHost> с именем `elementHost1`.
 
-3. В панели смарт-тега для `elementHost1`, нажмите кнопку **редактировать содержимое** из раскрывающегося списка.
+1. В панели смарт-тега для `elementHost1`, нажмите кнопку **редактировать содержимое** из раскрывающегося списка.
 
      `UserControl1` откроется в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
 
-4. В представлении XAML вставьте следующий код XAML после открывающего тега `<UserControl>` .
+1. В представлении XAML вставьте следующий код XAML после открывающего тега `<UserControl>` .
 
      Этот код XAML создает градиент с контрастной градиентной границей. При нажатии на элемент управления градиенты изменяются, формируя образ нажатой кнопки. Более подробную информацию см. в разделе [Стилизация и использование шаблонов](../../wpf/controls/styling-and-templating.md).
 
@@ -118,7 +118,7 @@ ms.locfileid: "65211266"
    </UserControl.Resources>
    ```
 
-4. Примените стиль `SimpleButton`, определенный на предыдущем шаге, к кнопке "Отмена", вставив следующий код XAML в `<Button>` тег кнопки "Отмена".
+1. Примените стиль `SimpleButton`, определенный на предыдущем шаге, к кнопке "Отмена", вставив следующий код XAML в `<Button>` тег кнопки "Отмена".
 
    ```xaml
    Style="{StaticResource SimpleButton}
@@ -131,15 +131,15 @@ ms.locfileid: "65211266"
                 Style="{StaticResource SimpleButton}">Cancel</Button>
    ```
 
-5. Выполните построение проекта.
+1. Выполните построение проекта.
 
-6. Откройте `Form1` в конструкторе Windows Forms.
+1. Откройте `Form1` в конструкторе Windows Forms.
 
-7. Новый стиль применяется для элемента управления button.
+1. Новый стиль применяется для элемента управления button.
 
-8. Из **Отладка** меню, выберите **начать отладку** для запуска приложения.
+1. Из **Отладка** меню, выберите **начать отладку** для запуска приложения.
 
-9. Нажмите кнопки OK и Отмена и просмотрите  различия.
+1. Нажмите кнопки OK и Отмена и просмотрите  различия.
 
 ## <a name="see-also"></a>См. также
 

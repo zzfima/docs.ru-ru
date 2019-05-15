@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 13d8d68140b68652b5e059ae9fb106f32142f698
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e51d999d5fcaf8180b4ea5189a3db9b6143a57db
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876867"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582718"
 ---
 # <a name="sql-clr-type-mismatches"></a>Несоответствия типов SQL-CLR
 
@@ -39,7 +39,7 @@ Select DateOfBirth From Customer Where CustomerId = @id
   - **TimeSpan**. Этот тип представляет различие между двумя значениями `DateTime` и не соответствует типу `timestamp` SQL Server. В некоторых случаях тип CLR <xref:System.TimeSpan?displayProperty=nameWithType> может также сопоставляться с типом `TIME` SQL Server. Назначение типа SQL Server `TIME` состоит только в том, чтобы представлять положительные значения менее суток. Диапазон типа CLR <xref:System.TimeSpan> значительно шире.
 
   > [!NOTE]
-  > Связанные с SQL Server [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] типы в <xref:System.Data.SqlTypes> не включаются в это сравнение.
+  > Типы .NET Framework для конкретного сервера SQL в <xref:System.Data.SqlTypes> не включаются в это сравнение.
 
 - Несоответствия в SQL Server.
 
@@ -167,7 +167,7 @@ Where Col1 = Col2
 
   - Свободное преобразование в `AND` / `OR` операторов может привести к непредвиденным ошибкам, если C# выражение зависит от второго операнда, основанного на результат вычисления первого операнда.
 
-- Функция `Round()` имеет разные семантики в среде [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] и в T-SQL.
+- `Round()` функция имеет различную семантику в .NET Framework и в T-SQL.
 
 - Начальный индекс для строк в CLR равен нулю, а в SQL - 1. Поэтому для каждой функции с индексом необходимо преобразование индекса.
 
@@ -194,7 +194,7 @@ Where Col1 = Col2
 [!code-csharp[DLinqMismatch#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#5)]
 [!code-vb[DLinqMismatch#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#5)]
 
-- SQL выполняет симметричное арифметическое округление, тогда как [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] использует банковское округление. Дополнительные сведения см. в статье 196652 базы знаний.
+- SQL выполняет симметричное арифметическое округление, тогда как платформа .NET Framework использует банковское округление. Дополнительные сведения см. в статье 196652 базы знаний.
 
 - По умолчанию для распространенных языков символьно-строковые сравнения в SQL не зависят от регистра. В Visual Basic и C# сравнения выполняются с учетом регистра. Например `s == "Food"` (`s = "Food"` в Visual Basic) и `s == "Food"` могут выдавать различные результаты, если `s` является `food`.
 

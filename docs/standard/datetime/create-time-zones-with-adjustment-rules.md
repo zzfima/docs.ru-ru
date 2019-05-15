@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83905c97f37a0e49f6219da47e2f640ecfb8edfb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: face995dbd5ba4b0b12e80bcef10a90b46c093ff
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61901731"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586408"
 ---
 # <a name="how-to-create-time-zones-with-adjustment-rules"></a>Практическое руководство. Создание часовых поясов с правилами коррекции
 
@@ -85,8 +85,6 @@ ms.locfileid: "61901731"
 ## <a name="compiling-the-code"></a>Компиляция кода
 
 Для этого примера требуются:
-
-* Чтобы добавить в проект ссылку на библиотеку System.Core.dll.
 
 * Что импортируется следующие пространства имен:
 

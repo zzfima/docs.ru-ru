@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdc9d6e954c75ccfeea15ec163bc81e7a3ab8ab7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 479307a0bdee162103f798e5f852cd20f259811e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300701"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607687"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Создание и использование сборок со строгими именами
 
@@ -36,9 +36,9 @@ ms.locfileid: "59300701"
 
 1. Сборка A создается со строгим именем с помощью одного из следующих методов.
 
-    -   Использование среды разработки, поддерживающей создание строгих имен, например Visual Studio.
+    - Использование среды разработки, поддерживающей создание строгих имен, например Visual Studio.
 
-    -   Создание пары ключей шифрования с использованием [Программы строгих имен (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) и назначение этой пары ключей сборке с использованием компилятора командной строки или [компоновщика сборок (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Пакет средств разработки Windows SDK предоставляет оба инструмента: Sn.exe и Al.exe.
+    - Создание пары ключей шифрования с использованием [Программы строгих имен (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) и назначение этой пары ключей сборке с использованием компилятора командной строки или [компоновщика сборок (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Пакет средств разработки Windows SDK предоставляет оба инструмента: Sn.exe и Al.exe.
 
 2. Среда разработки или средство подписывает хэш файла, содержащего манифест сборки, закрытым ключом разработчика. Эта цифровая подпись хранится в переносимом исполняемом файле (PE), который содержит манифест сборки А.
 
@@ -55,13 +55,13 @@ ms.locfileid: "59300701"
 
 Функция обхода применима к любой сборке, подписанной со строгим именем и имеющей следующие характеристики.
 
--   Полное доверие без доказательства <xref:System.Security.Policy.StrongName> (например, при наличии доказательства зоны `MyComputer`).
+- Полное доверие без доказательства <xref:System.Security.Policy.StrongName> (например, при наличии доказательства зоны `MyComputer`).
 
--   Загрузка в домен <xref:System.AppDomain> с полным доверием.
+- Загрузка в домен <xref:System.AppDomain> с полным доверием.
 
--   Загрузка из расположения со свойством <xref:System.AppDomainSetup.ApplicationBase%2A> домена <xref:System.AppDomain>.
+- Загрузка из расположения со свойством <xref:System.AppDomainSetup.ApplicationBase%2A> домена <xref:System.AppDomain>.
 
--   Подпись осуществлена без задержки.
+- Подпись осуществлена без задержки.
 
 Эту возможность можно отключить для отдельных приложений или для компьютера. См. практическое руководство по [ Отключение функции пропуска строгих имен](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)
 

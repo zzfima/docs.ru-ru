@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: bca11c0c1828513077985aa11553ec5c0ad52a27
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 4886103f7f0246eaacd12c3f12d50a055e650959
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910793"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582674"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Размещение служб данных (службы данных WCF)
 С помощью служб данных WCF, можно создать службу, предоставляющую данные в виде [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала. Эта служба данных определена в качестве класса, наследуемого от <xref:System.Data.Services.DataService%601>. Этот класс предоставляет функциональность, необходимую для обработки сообщения запроса, выполнения обновлений в источнике данных и создания ответных сообщений, требует OData. Тем не менее службы данных невозможно привязать к и прослушивать входящие запросы HTTP к сетевому сокету. Реализацию этой обязательной функциональности служба данных возлагает на размещающий компонент.
@@ -58,7 +58,7 @@ ms.locfileid: "64910793"
  Поскольку служба данных работает аналогично службе WCF, она интегрируется с [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и соответствует модели веб-программирования WCF. Дополнительные сведения см. в разделе [службы WCF и ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) и [модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
 
 ## <a name="self-hosted-wcf-services"></a>Резидентные службы WCF
- Так как он включает в себя реализацию WCF, WCF Data Services поддерживают размещения службы данных в качестве службы WCF на собственном сервере. Служба может быть резидентно размещена в любом приложении [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], например в консольном приложении. Класс <xref:System.Data.Services.DataServiceHost>, наследуемый от <xref:System.ServiceModel.Web.WebServiceHost>, используется для создания экземпляров службы данных по определенному адресу.
+ Так как он включает в себя реализацию WCF, WCF Data Services поддерживают размещения службы данных в качестве службы WCF на собственном сервере. Службы могут быть размещены в любом приложении .NET Framework, например в консольном приложении. Класс <xref:System.Data.Services.DataServiceHost>, наследуемый от <xref:System.ServiceModel.Web.WebServiceHost>, используется для создания экземпляров службы данных по определенному адресу.
 
  Резидентное размещение можно использовать для разработки и тестирования, поскольку оно упрощает развертывание и диагностику службы. Однако этот тип размещения не обеспечивает дополнительные функции размещения и управления, обеспечиваемые [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] или службами IIS. Дополнительные сведения см. в разделе [размещение в приложении управляемых](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).
 

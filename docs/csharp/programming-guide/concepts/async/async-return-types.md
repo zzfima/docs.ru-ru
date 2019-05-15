@@ -2,19 +2,19 @@
 title: Асинхронные типы возвращаемых значений (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: c2a15b87e97dea43c37f720856be2892ad6966a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 327168e3ac77ab1ed7c9841d592781c704839660
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368185"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599785"
 ---
 # <a name="async-return-types-c"></a>Асинхронные типы возвращаемых значений (C#)
 Асинхронные методы могут иметь следующие типы возвращаемых значений:
 
 - <xref:System.Threading.Tasks.Task%601> для асинхронного метода, возвращающего значение. 
  
--  <xref:System.Threading.Tasks.Task> для асинхронного метода, который выполняет операцию, но не возвращает значение.
+- <xref:System.Threading.Tasks.Task> для асинхронного метода, который выполняет операцию, но не возвращает значение.
 
 - `void` для обработчика событий. 
 

@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: 17e16cec34b381cdfe46e1066c3219a93c3780e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: df969a634c84a7bccb048542cb768c920203e423
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216396"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599283"
 ---
 # <a name="service-application-programming-architecture"></a>Программная архитектура приложений служб
 В основе приложений-служб Windows лежит класс, наследуемый от класса <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Вы можете переопределить методы из этого класса и определить функции для них, чтобы настроить поведение службы.  
   
  Ниже перечислены основные классы, используемые при создании службы:  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> — вы можете переопределить методы из класса <xref:System.ServiceProcess.ServiceBase> при создании службы и определить код, чтобы обозначить функции службы в этом наследуемом классе.  
+- <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> — вы можете переопределить методы из класса <xref:System.ServiceProcess.ServiceBase> при создании службы и определить код, чтобы обозначить функции службы в этом наследуемом классе.  
   
--   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> и <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> — эти классы можно использовать для установки и удаления службы.  
+- <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> и <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> — эти классы можно использовать для установки и удаления службы.  
   
  Кроме того, класс с именем <xref:System.ServiceProcess.ServiceController> можно использовать для управления самой службой. Этот класс не используется при создании службы, но может использоваться для ее запуска и остановки, а также передачи команд и возврата последовательностей перечислений.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "59216396"
   
  Есть несколько других свойств и методов, которые представляют интерес. Сюда входит следующее.  
   
--   Метод <xref:System.ServiceProcess.ServiceBase.Run%2A> в классе <xref:System.ServiceProcess.ServiceBase>. Это главная точка входа для службы. При создании службы с помощью шаблона служб Windows код вставляется в метод `Main` приложения для запуска этой службы. Этот код выглядит так:  
+- Метод <xref:System.ServiceProcess.ServiceBase.Run%2A> в классе <xref:System.ServiceProcess.ServiceBase>. Это главная точка входа для службы. При создании службы с помощью шаблона служб Windows код вставляется в метод `Main` приложения для запуска этой службы. Этот код выглядит так:  
   
      [!code-csharp[VbRadconService#6](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#6)]
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
@@ -59,7 +59,7 @@ ms.locfileid: "59216396"
     > [!NOTE]
     >  В этих примерах используется массив типа <xref:System.ServiceProcess.ServiceBase>. В него можно добавить каждую службу, которую содержит приложение, а затем запустить все службы одновременно. Если создается только одна служба, вы можете не использовать массив, а просто объявить и запустить новый объект, наследуемый от <xref:System.ServiceProcess.ServiceBase>. Пример см. в статье [Практическое руководство. Создание служб программным способом](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
   
--   Наборы свойств в классе <xref:System.ServiceProcess.ServiceBase>. Они определяют, какие методы могут вызываться в службе. Например, если свойству <xref:System.ServiceProcess.ServiceBase.CanStop%2A> задать значение `true`, в службе можно вызвать метод <xref:System.ServiceProcess.ServiceBase.OnStop%2A>. Если свойству <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> задать значение `true`, в службе можно вызвать методы <xref:System.ServiceProcess.ServiceBase.OnPause%2A> и <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>. Если одному из этих свойств задать значение `true`, необходимо переопределить и реализовать обработку для соответствующих методов.  
+- Наборы свойств в классе <xref:System.ServiceProcess.ServiceBase>. Они определяют, какие методы могут вызываться в службе. Например, если свойству <xref:System.ServiceProcess.ServiceBase.CanStop%2A> задать значение `true`, в службе можно вызвать метод <xref:System.ServiceProcess.ServiceBase.OnStop%2A>. Если свойству <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> задать значение `true`, в службе можно вызвать методы <xref:System.ServiceProcess.ServiceBase.OnPause%2A> и <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>. Если одному из этих свойств задать значение `true`, необходимо переопределить и реализовать обработку для соответствующих методов.  
   
     > [!NOTE]
     >  Используемая служба должна переопределять хотя бы <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и <xref:System.ServiceProcess.ServiceBase.OnStop%2A>.  

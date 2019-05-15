@@ -16,24 +16,24 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 792741dc4df7b65ddef124615032c06a7ff1bcb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbd8d901f018d95b8a1f5c81c813853838c4a4cd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050465"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586295"
 ---
 # <a name="namespaces-in-visual-basic"></a>Пространства имен в Visual Basic
 Пространства имен упорядочивают объекты, определенные в сборке. Сборки могут содержать несколько пространств имен, которые, в свою очередь, могут содержать другие пространства имен. Пространства имен предотвращают неоднозначность и упрощают ссылки при использовании больших групп объектов, таких как библиотеки классов.  
   
- Например, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] определяет класс <xref:System.Windows.Forms.ListBox> в пространстве имен <xref:System.Windows.Forms?displayProperty=nameWithType> . В следующем фрагменте кода показано, как объявить переменную, используя полное имя для этого класса:  
+ Например, платформа .NET Framework определяет <xref:System.Windows.Forms.ListBox> в класс <xref:System.Windows.Forms?displayProperty=nameWithType> пространства имен. В следующем фрагменте кода показано, как объявить переменную, используя полное имя для этого класса:  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>Предотвращение конфликтов имен  
- Пространства имен[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] помогают решить проблему, которую иногда называют *загрязнением пространства имен*, при которой у разработчика библиотеки классов возникают трудности, связанные с использованием аналогичных имен в другой библиотеке. Такие конфликты с существующими компонентами иногда называют *конфликтами имен*.  
+ Пространства имен .NET framework решить проблему, иногда называют *загрязнением пространства имен*, при которой у разработчика библиотеки классов с использованием аналогичных имен в другой библиотеке. Такие конфликты с существующими компонентами иногда называют *конфликтами имен*.  
   
- Например, если вы создаете новый класс `ListBox`, то можете использовать его внутри проекта без уточнения. Однако если вы захотите использовать в том же проекте класс [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> , потребуется использовать полную ссылку, чтобы сделать ссылку уникальной. Если ссылка не является уникальным, Visual Basic выводит сообщение об ошибке о том, что имя является неоднозначным. В примере кода ниже показано, как объявить эти объекты:  
+ Например, если вы создаете новый класс `ListBox`, то можете использовать его внутри проекта без уточнения. Тем не менее если вы хотите использовать .NET Framework <xref:System.Windows.Forms.ListBox> класс в том же проекте, необходимо использовать полную ссылку, чтобы сделать ссылку уникальной. Если ссылка не является уникальным, Visual Basic выводит сообщение об ошибке о том, что имя является неоднозначным. В примере кода ниже показано, как объявить эти объекты:  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   

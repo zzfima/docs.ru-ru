@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Руководство по программированию на C#. Подписка и отмена подписки на события
+title: Практическое руководство. Руководство по программированию на C#. Подписка и отмена подписки на события
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 56c236e2e061b473f0b188b24d3ebdd98e013aa8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306603"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595993"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Подписка и отмена подписки на события
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Подписка и отмена подписки на события
 Необходимость подписки на событие, опубликованное другим классом, может возникнуть, когда требуется написать пользовательский код, вызываемый при инициировании такого события. Например, можно подписаться на событие кнопки `click`, чтобы приложение выполняло некоторое действие при нажатии пользователем кнопки.  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Подписка на события в интегрированной среде разработки Visual Studio  
@@ -70,11 +70,11 @@ ms.locfileid: "59306603"
     }  
     ```  
   
-     Дополнительные сведения см. в разделе [Как Руководство по программированию на C#. Использование лямбда-выражений вне LINQ](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).  
+     Дополнительные сведения см. в разделе [Практическое руководство. Руководство по программированию на C#. Использование лямбда-выражений вне LINQ](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).  
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>Подписка на события с помощью анонимного метода  
   
--   Если не нужно будет позже отменять подписку на событие, можно использовать оператор присваивания сложения (`+=`) для прикрепления к событию анонимного метода. В следующем примере предположим, что объект с именем `publisher` имеет событие с именем `RaiseCustomEvent` и что класс `CustomEventArgs` также был определен и содержит некие относящиеся к событию сведения. Обратите внимание на то, что классу подписчика требуется ссылка на `publisher`, чтобы подписаться на его события.  
+- Если не нужно будет позже отменять подписку на событие, можно использовать оператор присваивания сложения (`+=`) для прикрепления к событию анонимного метода. В следующем примере предположим, что объект с именем `publisher` имеет событие с именем `RaiseCustomEvent` и что класс `CustomEventArgs` также был определен и содержит некие относящиеся к событию сведения. Обратите внимание на то, что классу подписчика требуется ссылка на `publisher`, чтобы подписаться на его события.  
   
     ```csharp
     publisher.RaiseCustomEvent += delegate(object o, CustomEventArgs e)  
@@ -91,7 +91,7 @@ ms.locfileid: "59306603"
   
 #### <a name="to-unsubscribe-from-an-event"></a>Отмена подписки на событие  
   
--   Чтобы отменить подписку на событие, воспользуйтесь оператором присваивания вычитания (`-=`).  
+- Чтобы отменить подписку на событие, воспользуйтесь оператором присваивания вычитания (`-=`).  
   
     ```csharp
     publisher.RaiseCustomEvent -= HandleCustomEvent;  

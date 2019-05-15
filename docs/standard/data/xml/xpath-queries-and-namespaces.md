@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f35725f5e1a08f2fcb1d6bc87765f50308c963f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0704e78a0e7fbf3987b3bc75bb46e135f00110e9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566324"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615353"
 ---
 # <a name="xpath-queries-and-namespaces"></a>Запросы XPath и пространства имен
 Запросы XPath учитывают наличие пространств имен в XML-документе и могут использовать префиксы пространств имен для дополнения имен элементов и атрибутов. Добавление префикса пространства имен к именам элементов и атрибутов ограничивает набор узлов, возвращаемых запросом XPath, лишь теми узлами, которые принадлежат к определенному пространству имен.  
@@ -25,17 +25,17 @@ ms.locfileid: "54566324"
   
  Объект <xref:System.Xml.XmlNamespaceManager> можно использовать в запросе любым из следующих способов.  
   
--   Объект <xref:System.Xml.XmlNamespaceManager> связывается с существующим объектом <xref:System.Xml.XPath.XPathExpression> с помощью метода <xref:System.Xml.XPath.XPathExpression.SetContext%2A> объекта <xref:System.Xml.XPath.XPathExpression>. Также можно скомпилировать новый объект <xref:System.Xml.XPath.XPathExpression> с помощью статического метода <xref:System.Xml.XPath.XPathExpression.Compile%2A>, который принимает в качестве параметров строку, представляющую выражение XPath, и объект <xref:System.Xml.XmlNamespaceManager>, а затем возвращает новый объект <xref:System.Xml.XPath.XPathExpression>.  
+- Объект <xref:System.Xml.XmlNamespaceManager> связывается с существующим объектом <xref:System.Xml.XPath.XPathExpression> с помощью метода <xref:System.Xml.XPath.XPathExpression.SetContext%2A> объекта <xref:System.Xml.XPath.XPathExpression>. Также можно скомпилировать новый объект <xref:System.Xml.XPath.XPathExpression> с помощью статического метода <xref:System.Xml.XPath.XPathExpression.Compile%2A>, который принимает в качестве параметров строку, представляющую выражение XPath, и объект <xref:System.Xml.XmlNamespaceManager>, а затем возвращает новый объект <xref:System.Xml.XPath.XPathExpression>.  
   
--   Сам объект <xref:System.Xml.XmlNamespaceManager> передается в качестве параметра методу класса <xref:System.Xml.XPath.XPathNavigator> вместе со строкой, представляющей выражение XPath.  
+- Сам объект <xref:System.Xml.XmlNamespaceManager> передается в качестве параметра методу класса <xref:System.Xml.XPath.XPathNavigator> вместе со строкой, представляющей выражение XPath.  
   
  Далее представлены методы класса <xref:System.Xml.XPath.XPathNavigator>, которые принимают в качестве параметра объект, производный от интерфейса <xref:System.Xml.IXmlNamespaceResolver>.  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
 ### <a name="the-default-namespace"></a>Пространство имен по умолчанию  
  В следующем XML-документе используется пространство имен по умолчанию с пустым префиксом, чтобы объявить пространство имен `http://www.contoso.com/books`.  

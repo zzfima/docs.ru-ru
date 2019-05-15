@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 8e793fc130252caf91d9b1c15b41beba1cc8ae1f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f8d399859e4f861158ab74db9ed410aec280dbe2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587621"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586674"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Типы перечислений в контрактах данных
 Перечисления могут быть выражены в модели контракта данных. В этом разделе представлено несколько примеров, иллюстрирующих использование модели программирования.  
@@ -39,7 +39,7 @@ ms.locfileid: "64587621"
   
  Например, на отправляющей стороне можно использовать `CarConditionEnum`, а `CarConditionWithNumbers` - на получающей. Хотя отправляющая сторона использует для `Used` значение "1", а получающая сторона - "20", представлением XML для обеих сторон является `<condition>Used</condition>`.  
   
- Для включения в контракт данных необходимо применить атрибут <xref:System.Runtime.Serialization.EnumMemberAttribute>. В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] всегда можно применить к перечислению специальное значение 0 (нуль), которое, кроме того, является значением по умолчанию для любого перечисления. Однако даже это специальное нулевое значение не удастся сериализовать, если оно не помечено атрибутом <xref:System.Runtime.Serialization.EnumMemberAttribute>.  
+ Для включения в контракт данных необходимо применить атрибут <xref:System.Runtime.Serialization.EnumMemberAttribute>. В .NET Framework всегда можно применить специальное значение 0 (ноль) для перечисления, который также является значением по умолчанию для любого перечисления. Однако даже это специальное нулевое значение не удастся сериализовать, если оно не помечено атрибутом <xref:System.Runtime.Serialization.EnumMemberAttribute>.  
   
  Существует два исключения из этого правила.  
   

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdd43f7079563be6b1377f743a84625429ba4f16
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 97e2e54c534b30c3c514c9102ded0050fc154b75
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411698"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589793"
 ---
 # <a name="xml-schema-object-model-overview"></a>Общие сведения об модели объектов XML-схемы
 Модель SOM в Microsoft .NET Framework является богатым по возможностям API, позволяющим создавать, изменять и проверять схемы программным путем. Модель SOM работает в документах схемы XML так же, как модель DOM работает в XML-документах. Документы схемы XML - это допустимые XML-файлы, которые после загрузки в память делают осмысленными утверждения о структуре и правильности других XML-документов, соответствующих этой схеме.  
@@ -19,17 +19,17 @@ ms.locfileid: "58411698"
   
  Ниже представлены способы, с помощью которых API модели SOM в платформе .NET Framework позволяет создавать, изменять и проверять схемы.  
   
--   Загрузка допустимых схем из файлов и сохранение их в файл.  
+- Загрузка допустимых схем из файлов и сохранение их в файл.  
   
--   Создание в памяти схем, использующих классы со строгой типизацией.  
+- Создание в памяти схем, использующих классы со строгой типизацией.  
   
--   Взаимодействие с классом <xref:System.Xml.Schema.XmlSchemaSet> для кэширования, компиляции и получения схем.  
+- Взаимодействие с классом <xref:System.Xml.Schema.XmlSchemaSet> для кэширования, компиляции и получения схем.  
   
--   Взаимодействие с методом <xref:System.Xml.XmlReader.Create%2A> класса <xref:System.Xml.XmlReader> для проверки соответствия экземпляров XML-документов схемам.  
+- Взаимодействие с методом <xref:System.Xml.XmlReader.Create%2A> класса <xref:System.Xml.XmlReader> для проверки соответствия экземпляров XML-документов схемам.  
   
--   Построение редакторов для создания и обслуживания схем.  
+- Построение редакторов для создания и обслуживания схем.  
   
--   Динамическое изменение схемы, которую можно скомпилировать и сохранить для использования в проверке экземпляров XML-документов.  
+- Динамическое изменение схемы, которую можно скомпилировать и сохранить для использования в проверке экземпляров XML-документов.  
   
 ## <a name="the-schema-object-model"></a>Модель SOM  
  Модель SOM состоит из широкого набора классов в пространстве имен <xref:System.Xml.Schema?displayProperty=nameWithType>, соответствующих элементам схемы XML. Например, элемент `<xsd:schema>...</xsd:schema>` сопоставляется с классом <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType>, а все данные, содержащиеся в элементе `<xsd:schema/>`, можно представить с помощью класса <xref:System.Xml.Schema.XmlSchema>. Точно так же элементы `<xsd:element>...</xsd:element>` и `<xsd:attribute>...</xsd:attribute>` сопоставляются с классами <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> и <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType> соответственно. Это сопоставление выполняется для всех элементов схемы XML, создающих модели XML SOM в пространстве имен <xref:System.Xml.Schema>, как показано на следующей схеме.  

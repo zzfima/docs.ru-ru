@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 7d39840f3b12df621a0e8d5fae5725065c295e59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9e4768b598f6046ffb7a0ac014d8594eac40309f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361269"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593058"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (параметры компилятора C#)
 Указывает сборку, к неоткрытым типам которой может обращаться .netmodule.  
@@ -31,11 +31,11 @@ ms.locfileid: "57361269"
 ## <a name="remarks"></a>Примечания  
  Параметр **-moduleassemblyname** нужно использовать при сборке модуля NETMODULE и выполнении следующий условий:  
   
--   .netmodule требуется доступ к неоткрытым типам в существующей сборке.  
+- .netmodule требуется доступ к неоткрытым типам в существующей сборке.  
   
--   Известно имя сборки, в которой будет создан .netmodule.  
+- Известно имя сборки, в которой будет создан .netmodule.  
   
--   Существующая сборка предоставила дружественной сборке доступ к сборке, в которую будет встроен .netmodule.  
+- Существующая сборка предоставила дружественной сборке доступ к сборке, в которую будет встроен .netmodule.  
   
  Дополнительные сведения о сборке NETMODULE см. в разделе [-target:module (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
   

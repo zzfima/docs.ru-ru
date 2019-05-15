@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0258edb552b53130e7df47df6ccefa9b30def843
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e72e091d9b120042254df5de323169f6f67c61d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306343"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616060"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (управляемое средство профильной оптимизации)
 
@@ -102,9 +102,9 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 ## <a name="using-mpgoexe-from-visual-studio"></a>Запуск Mpgo.exe в Visual Studio  
  Можно выполнять Mpgo.exe в Visual Studio (см. статью [Практическое руководство. Указание событий сборки (C#)](/visualstudio/ide/how-to-specify-build-events-csharp)) со следующими ограничениями:  
   
--   Нельзя использовать заключенные в кавычки пути с обратными косыми чертами, поскольку они по умолчанию они используются в макросах Visual Studio. (Например, `–OutDir "C:\Output Folder\"` является недопустимым.) Чтобы обойти это ограничение, используйте альтернативную запись. (Например, используйте `-OutDir "$(OutDir)\"`.)  
+- Нельзя использовать заключенные в кавычки пути с обратными косыми чертами, поскольку они по умолчанию они используются в макросах Visual Studio. (Например, `–OutDir "C:\Output Folder\"` является недопустимым.) Чтобы обойти это ограничение, используйте альтернативную запись. (Например, используйте `-OutDir "$(OutDir)\"`.)  
   
--   По умолчанию Mpgo.exe не находится на пути сборки Visual Studio. Необходимо либо добавить путь в Visual Studio, либо указать полный путь в командной строке средства. В Visual Studio в событиях после сборки можно использовать как параметр `–Scenario`, так и параметр `–Import`. Однако, как правило, один раз в командной строке разработчика для Visual Studio используется параметр `–Scenario`, а затем для обновления оптимизированных сборок после каждой сборки используется параметр `–Import`. Пример: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
+- По умолчанию Mpgo.exe не находится на пути сборки Visual Studio. Необходимо либо добавить путь в Visual Studio, либо указать полный путь в командной строке средства. В Visual Studio в событиях после сборки можно использовать как параметр `–Scenario`, так и параметр `–Import`. Однако, как правило, один раз в командной строке разработчика для Visual Studio используется параметр `–Scenario`, а затем для обновления оптимизированных сборок после каждой сборки используется параметр `–Import`. Пример: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
   
 <a name="samples"></a>   
 ## <a name="examples"></a>Примеры  

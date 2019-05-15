@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f2e2fd6f46a430424e6010adbe0662b5bd3db7ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121107"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622653"
 ---
 # <a name="weak-references"></a>Слабые ссылки
 Сборщик мусора не может собрать объект, используемый приложением, пока код приложения взаимодействует с этим объектом. Говорят, что приложение имеет строгую ссылку на объект.  
@@ -33,11 +33,11 @@ ms.locfileid: "49121107"
 ## <a name="short-and-long-weak-references"></a>Краткие и длинные слабые ссылки  
  Можно создать краткую слабую ссылку или длинную слабую ссылку:  
   
--   Short  
+- Short  
   
      Назначением краткой ссылки становится `null`, если объект удален сборщиком мусора. Сама по себе слабая ссылка является управляемым объектом и подлежит сборке мусора, как и любые другие управляемые объекты.  Краткая слабая ссылка является конструктором по умолчанию для <xref:System.WeakReference>.  
   
--   Long  
+- Long  
   
      Длинная слабая ссылка сохраняется после вызова метода <xref:System.Object.Finalize%2A> объекта. Это позволяет повторно создавать объект, однако состояние объекта остается непредсказуемым. Чтобы использовать длинную ссылку, укажите значение `true` в конструкторе <xref:System.WeakReference>.  
   

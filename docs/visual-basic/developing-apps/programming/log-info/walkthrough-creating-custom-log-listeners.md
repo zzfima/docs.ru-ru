@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 07c13d22235f1198188d26122c137db1d91e64e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 50eb1bc1588602bf562efc31b0f4dd01bc29cad0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342464"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593333"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Пошаговое руководство. Создание пользовательских прослушивателей журнала (Visual Basic)
 В этом пошаговом руководстве демонстрируется создание пользовательского прослушивателя журнала и его настройка на прослушивание выходных данных объекта `My.Application.Log`.  
@@ -20,7 +20,7 @@ ms.locfileid: "59342464"
   
 #### <a name="to-create-the-listener"></a>Создание прослушивателя  
   
--   В приложении создайте класс с именем `SimpleListener`, который наследует от класса <xref:System.Diagnostics.TraceListener>.  
+- В приложении создайте класс с именем `SimpleListener`, который наследует от класса <xref:System.Diagnostics.TraceListener>.  
   
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]  
   
@@ -64,7 +64,7 @@ ms.locfileid: "59342464"
   
 #### <a name="to-determine-the-strong-name-of-the-listener"></a>Определение строгого имени прослушивателя  
   
--   В следующем коде показано, как определить строгое имя типа для `SimpleListener`.  
+- В следующем коде показано, как определить строгое имя типа для `SimpleListener`.  
   
      [!code-vb[VbVbalrMyApplicationLog#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#17)]  
   
@@ -80,11 +80,11 @@ ms.locfileid: "59342464"
   
      Если есть файл app.config:  
   
-    1.  В меню **Проект** выберите пункт **Добавить новый элемент**.  
+    1. В меню **Проект** выберите пункт **Добавить новый элемент**.  
   
-    2.  В диалоговом окне **Добавление нового элемента** выберите элемент **Файл конфигурации приложения**.  
+    2. В диалоговом окне **Добавление нового элемента** выберите элемент **Файл конфигурации приложения**.  
   
-    3.  Нажмите кнопку **Добавить**.  
+    3. Нажмите кнопку **Добавить**.  
   
 2. Найдите раздел `<listeners>` в разделе `<source>` с атрибутом `name` , равным DefaultSource, в разделе `<sources>` . Раздел `<sources>` находится в разделе `<system.diagnostics>` в разделе `<configuration>` верхнего уровня.  
   

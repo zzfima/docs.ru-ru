@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Чтение из двоичного файла в Visual Basic
+title: Практическое руководство. Чтение из двоичного файла в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - binary files [Visual Basic], reading from
@@ -7,44 +7,44 @@ helpviewer_keywords:
 - ReadAllBytes method [Visual Basic], reading from binary files
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
-ms.openlocfilehash: 88c9952818f6cb94db7b2da7ad44aa0da0eb43d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 72e9361193a5b099841d989e842ff36662cf690d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825057"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623721"
 ---
-# <a name="how-to-read-from-binary-files-in-visual-basic"></a>Как выполнить Чтение из двоичного файла в Visual Basic
+# <a name="how-to-read-from-binary-files-in-visual-basic"></a>Практическое руководство. Чтение из двоичного файла в Visual Basic
 Объект `My.Computer.FileSystem` предоставляет метод `ReadAllBytes` для чтения данных из двоичных файлов.  
   
 ### <a name="to-read-from-a-binary-file"></a>Чтение данных из двоичного файла  
   
--   Используйте метод `ReadAllBytes`, который возвращает содержимое файла в виде массива байтов. В этом примере производится чтение данных из файла `C:/Documents and Settings/selfportrait.jpg`.  
+- Используйте метод `ReadAllBytes`, который возвращает содержимое файла в виде массива байтов. В этом примере производится чтение данных из файла `C:/Documents and Settings/selfportrait.jpg`.  
   
      [!code-vb[VbVbcnMyFileSystem#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#78)]  
   
--   При работе с большими двоичными файлами можно использовать метод <xref:System.IO.FileStream.Read%2A> объекта <xref:System.IO.FileStream>, чтобы за раз считывать из файла только заданный объем данных. Затем можно ограничить объем файла, загружаемый в память во время каждой операции чтения. В следующем примере кода показано копирование файла, причем вызывающий объект задает, какая часть файла помещается в память при выполнении каждой операции чтения.  
+- При работе с большими двоичными файлами можно использовать метод <xref:System.IO.FileStream.Read%2A> объекта <xref:System.IO.FileStream>, чтобы за раз считывать из файла только заданный объем данных. Затем можно ограничить объем файла, загружаемый в память во время каждой операции чтения. В следующем примере кода показано копирование файла, причем вызывающий объект задает, какая часть файла помещается в память при выполнении каждой операции чтения.  
   
      [!code-vb[VbVbcnMyFileSystem#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#91)]  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  Исключение может возникнуть в следующих случаях:  
   
--   Путь является недопустимым, поскольку путь представляет собой строку нулевой длины (пустую строку), либо содержит только пробелы, либо содержит недопустимые знаки, либо представляет собой путь к устройству (<xref:System.ArgumentException>).  
+- Путь является недопустимым, поскольку путь представляет собой строку нулевой длины (пустую строку), либо содержит только пробелы, либо содержит недопустимые знаки, либо представляет собой путь к устройству (<xref:System.ArgumentException>).  
   
--   Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).  
+- Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Файл не существует (<xref:System.IO.FileNotFoundException>).  
+- Файл не существует (<xref:System.IO.FileNotFoundException>).  
   
--   Файл уже используется другим процессом или возникла ошибка ввода-вывода (<xref:System.IO.IOException>).  
+- Файл уже используется другим процессом или возникла ошибка ввода-вывода (<xref:System.IO.IOException>).  
   
--   Длина пути превышает максимальную длину, определенную в системе (<xref:System.IO.PathTooLongException>).  
+- Длина пути превышает максимальную длину, определенную в системе (<xref:System.IO.PathTooLongException>).  
   
--   Имя файла или каталога в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).  
+- Имя файла или каталога в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).  
   
--   Не хватает памяти для записи строки в буфер (<xref:System.OutOfMemoryException>).  
+- Не хватает памяти для записи строки в буфер (<xref:System.OutOfMemoryException>).  
   
--   У пользователя отсутствуют необходимые разрешения на просмотр пути (<xref:System.Security.SecurityException>).  
+- У пользователя отсутствуют необходимые разрешения на просмотр пути (<xref:System.Security.SecurityException>).  
   
  По имени файла не всегда можно с уверенностью судить о его содержимом. Например, файл с именем Form1.vb может вовсе не быть исходным файлом Visual Basic.  
   

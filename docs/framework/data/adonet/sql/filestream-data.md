@@ -2,12 +2,12 @@
 title: Данные FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 1dea5d1e2f40c44e8f24bdbc9742288429d9933a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8521a9de3037ae759b0b0ea5bcbe84830f8629e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032491"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582712"
 ---
 # <a name="filestream-data"></a>Данные FILESTREAM
 
@@ -20,7 +20,7 @@ ms.locfileid: "62032491"
 
 ## <a name="sqlclient-support-for-filestream"></a>Поддержка атрибута FILESTREAM в SqlClient
 
-[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Поставщик данных для SQL Server, <xref:System.Data.SqlClient>, поддерживает чтение и запись данных FILESTREAM с помощью <xref:System.Data.SqlTypes.SqlFileStream> класс, определенный в <xref:System.Data.SqlTypes> пространства имен. Класс `SqlFileStream` является производным от класса <xref:System.IO.Stream>, который содержит методы для чтения и записи потоков данных. При чтении из потока данные передаются в структуру данных, например в массив байтов. При записи данные передаются из структуры данных в поток.
+Поставщик данных .NET Framework для SQL Server, <xref:System.Data.SqlClient>, поддерживает чтение и запись данных FILESTREAM с помощью <xref:System.Data.SqlTypes.SqlFileStream> класс, определенный в <xref:System.Data.SqlTypes> пространства имен. Класс `SqlFileStream` является производным от класса <xref:System.IO.Stream>, который содержит методы для чтения и записи потоков данных. При чтении из потока данные передаются в структуру данных, например в массив байтов. При записи данные передаются из структуры данных в поток.
 
 ### <a name="creating-the-sql-server-table"></a>Создание таблицы SQL Server
 

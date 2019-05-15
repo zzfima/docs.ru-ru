@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: c761a4a866aed3f8d42b28cdc8a360cd4923a7fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 14565c3e73618a4290166d89f0ae6c2c9150f3b3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616672"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586191"
 ---
 # <a name="caching-in-net-framework-applications"></a>Кэширование в приложениях платформы .NET Framework
 Кэширование позволяет хранить данные в памяти для быстрого доступа. При повторном доступе к данным приложения могут получать их из кэша вместо извлечения из исходного источника. Это может повысить производительность и масштабируемость. Кроме того, кэширование обеспечивает доступность данных при временной недоступности источника данных.  
@@ -19,7 +19,7 @@ ms.locfileid: "64616672"
  Платформа .NET Framework предоставляет возможность кэширования, которую можно использовать для улучшения производительности и масштабируемости как серверных, так и клиентских приложений Windows, включая ASP.NET.  
   
 > [!NOTE]
->  В [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] и более ранних версиях с помощью ASP.NET предоставлялась реализация кэша в памяти в пространстве имен <xref:System.Web.Caching>. В предыдущих версиях [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] кэширование было доступно только в пространстве имен <xref:System.Web> и поэтому требовало зависимости от классов ASP.NET. В платформе .NET Framework 4 пространство имен <xref:System.Runtime.Caching> содержит интерфейсы API, предназначенные как для веб-приложений, так и для приложений, не связанных с Интернетом.  
+>  В [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] и более ранних версиях с помощью ASP.NET предоставлялась реализация кэша в памяти в пространстве имен <xref:System.Web.Caching>. В предыдущих версиях .NET Framework, кэширование было доступно только в <xref:System.Web> пространства имен и поэтому требовало зависимости от классов ASP.NET. В платформе .NET Framework 4 пространство имен <xref:System.Runtime.Caching> содержит интерфейсы API, предназначенные как для веб-приложений, так и для приложений, не связанных с Интернетом.  
   
 ## <a name="caching-data"></a>Кэширование данных  
  Информацию можно кэшировать с помощью классов в пространстве имен <xref:System.Runtime.Caching>. Классы кэширования в нем предоставляют перечисленные ниже возможности.  
