@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 697cd40482aee73fd150359acb710ffc258c3df2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82898e80f5acb2cb0dcab65390701efc8d48115b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908678"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586573"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Практическое руководство. Перечисление присутствующих на компьютере часовых поясов
 
@@ -62,8 +62,6 @@ ms.locfileid: "61908678"
 ## <a name="compiling-the-code"></a>Компиляция кода
 
 Для этого примера требуются:
-
-* Чтобы добавить в проект ссылку на библиотеку System.Core.dll.
 
 * Что импортируется следующие пространства имен:
 

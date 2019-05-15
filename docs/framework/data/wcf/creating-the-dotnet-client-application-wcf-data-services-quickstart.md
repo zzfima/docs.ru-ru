@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 19506d051442dc841a28c14f212addf66af71cf5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 50e8d24698bd8451b90da05ffe52b473a13b3a20
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750827"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583607"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Создание клиентского приложения .NET Framework (краткое руководство по службам данных WCF)
 
@@ -84,7 +84,7 @@ ms.locfileid: "64750827"
 
 Вы успешно создали клиентское приложение, обращающееся к образцу веб-канала Northwind OData. Вы также завершили краткое руководство по службам данных WCF!
 
-Дополнительные сведения о доступе к OData потока из [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] приложения, см. в разделе [клиентскую библиотеку служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).
+Дополнительные сведения о доступе к OData потока из приложения .NET Framework, см. в разделе [клиентскую библиотеку служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).
 
 ## <a name="see-also"></a>См. также
 

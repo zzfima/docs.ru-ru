@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: c498ae0a9d39240e715e6ba66e57c5e1d3ebbfbc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7301d52cf2c55394f731a8b7af5427e5fa66ba88
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610419"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591958"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Влияние языка и региональных параметров на строки в Visual Basic
 Эта страница справки описывается, как Visual Basic использует язык и региональные параметры для выполнения преобразования строк и сравнения.  
@@ -38,7 +38,7 @@ ms.locfileid: "64610419"
 ## <a name="using-a-specific-culture"></a>С помощью определенного языка и региональных параметров  
  Представьте себе, что вы разрабатываете приложение, которое отправляет дату (представлен в виде строки) на веб-службу. В этом случае приложение должно использовать определенные язык и региональные параметры для преобразования строк. Чтобы проиллюстрировать, почему, рассмотрим использование даты <xref:System.DateTime.ToString> метод: Если приложение использует этот метод для форматирования даты 4 июля 2005 г., возвращается значение «7/4/2005 12:00:00 AM» при запуске с английского языка США (en US), но возвращает «04.07.2005 00:00:00 "при запуске с культурой немецкий (de-DE).  
   
- Если вам нужно выполнить преобразование строк в формате конкретного языка и региональных параметров, следует использовать `CultureInfo` класс, который встроен в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Вы можете создать новую `CultureInfo` объект для определенного языка и региональных параметров, передав имя культуры <xref:System.Globalization.CultureInfo.%23ctor%2A> конструктор. Имена поддерживаемых языка и региональных параметров, перечислены в <xref:System.Globalization.CultureInfo> класс страницы справки.  
+ Если вам нужно выполнить преобразование строк в формате конкретного языка и региональных параметров, следует использовать `CultureInfo` класс, который встроен в .NET Framework. Вы можете создать новую `CultureInfo` объект для определенного языка и региональных параметров, передав имя культуры <xref:System.Globalization.CultureInfo.%23ctor%2A> конструктор. Имена поддерживаемых языка и региональных параметров, перечислены в <xref:System.Globalization.CultureInfo> класс страницы справки.  
   
  Кроме того, можно получить экземпляр *инвариантного языка и региональных параметров* из <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> свойство. Инвариантный язык и региональные параметры основан на английский язык и региональные параметры, но существуют некоторые различия. К примеру инвариантного языка и региональных параметров указывает 24-часовом формате, а не 12-часовом формате.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "64610419"
   
  [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
- Можно также использовать [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] партнер `StrComp` функции <xref:System.String.Compare%2A?displayProperty=nameWithType> метод. Это статический перегруженный метод базового строкового класса. В следующем примере показано, как используется этот метод:  
+ Можно также использовать партнер в .NET Framework `StrComp` функции <xref:System.String.Compare%2A?displayProperty=nameWithType> метод. Это статический перегруженный метод базового строкового класса. В следующем примере показано, как используется этот метод:  
   
  [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   

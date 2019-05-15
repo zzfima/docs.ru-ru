@@ -2,12 +2,12 @@
 title: Сериализуемые типы
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: df00623ba45b356561d4d80d970fdf36ee6a377f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0913d523e93505934b1cf231284e356baba5ded3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586136"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591670"
 ---
 # <a name="serializable-types"></a>Сериализуемые типы
 По умолчанию <xref:System.Runtime.Serialization.DataContractSerializer> сериализует все открытые типы. Все открытые свойства чтения/записи и поля типа сериализуются.  
@@ -36,7 +36,7 @@ ms.locfileid: "64586136"
 - Чтобы исключить из процесса сериализации открытые члены, свойства или поля, применяйте к таким членам атрибут <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>.  
   
 ## <a name="inheritance"></a>Наследование  
- Неотмеченные типы (типы без атрибута <xref:System.Runtime.Serialization.DataContractAttribute>) могут наследоваться от типов, имеющих этот атрибут. В то же время обратное невозможно: типы с атрибутом от неотмеченных типов наследоваться не могут. Это правило применяется главным образом для обеспечения обратной совместимости с кодом, написанным в более ранних версиях [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ Неотмеченные типы (типы без атрибута <xref:System.Runtime.Serialization.DataContractAttribute>) могут наследоваться от типов, имеющих этот атрибут. В то же время обратное невозможно: типы с атрибутом от неотмеченных типов наследоваться не могут. Это правило применяется главным образом для обеспечения обратной совместимости с кодом, написанным в более ранних версиях .NET Framework.  
   
 ## <a name="see-also"></a>См. также
 

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 65dfe906276912b5f6dc8d49af6a2662e3a09157
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630773"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591203"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Пошаговое руководство. Кэширование данных приложения WPF
 Кэширование позволяет хранить данные в памяти для быстрого доступа. При повторном доступе к данным приложения могут получать их из кэша вместо извлечения из исходного источника. Это может повысить производительность и масштабируемость. Кроме того, кэширование обеспечивает доступность данных при временной недоступности источника данных.
 
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Предоставляет классы, которые позволяют использовать кэширование в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] приложений. Эти классы находятся в папке <xref:System.Runtime.Caching> пространства имен.
+ .NET Framework предоставляет классы, которые позволяют использовать кэширование в приложениях .NET Framework. Эти классы находятся в папке <xref:System.Runtime.Caching> пространства имен.
 
 > [!NOTE]
->  <xref:System.Runtime.Caching> Пространство имен впервые появилось в [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Это пространство имен обеспечивает кэширование доступен для всех [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] приложений. В предыдущих версиях [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] кэширование было доступно только в пространстве имен <xref:System.Web> и поэтому требовало зависимости от классов ASP.NET.
+>  <xref:System.Runtime.Caching> Пространство имен впервые появилось в [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Это пространство имен обеспечивает кэширование доступно для всех приложений .NET Framework. В предыдущих версиях .NET Framework, кэширование было доступно только в <xref:System.Web> пространства имен и поэтому требовало зависимости от классов ASP.NET.
 
- В этом пошаговом руководстве показано, как использовать функции кэширования, которая доступна в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] как часть [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложения. В этом пошаговом руководстве кэшировать содержимое текстового файла.
+ В этом пошаговом руководстве показано, как использовать функции кэширования, которая доступна в .NET Framework как часть [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложения. В этом пошаговом руководстве кэшировать содержимое текстового файла.
 
  В данном пошаговом руководстве представлены следующие задачи:
 
@@ -67,7 +67,7 @@ ms.locfileid: "64630773"
 4. В **новый проект** выберите **приложение WPF**.
 
     > [!NOTE]
-    >  Если вы не видите **приложение WPF** шаблона, убедитесь, что вы используете версию [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] поддерживает WPF. В **новый проект** выберите [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] из списка.
+    >  Если вы не видите **приложение WPF** шаблона, убедитесь, что вы используете версию .NET Framework, которая поддерживает WPF. В **новый проект** выберите [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] из списка.
 
 5. В **имя** текстовое поле, введите имя для проекта. Например, можно ввести **WPFCaching**.
 

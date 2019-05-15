@@ -2,12 +2,12 @@
 title: Повторное размещение конструктора
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: c67bdc5715a95e3f4252fc9ab0c7b151ddddc6cf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 26878be2aec03f83c5ec0d65e415f75691601d0a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583713"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588666"
 ---
 # <a name="designer-rehosting"></a>Повторное размещение конструктора
 Повторное размещение конструктора представляет собой обычный сценарий, предусматривающий размещение поля визуальной разработки рабочего процесса в пользовательском приложении. Наиболее привычным приложением размещения является Visual Studio, однако в целом ряде сценариев может быть полезным отображение конструктора рабочих процессов в приложении.  
@@ -40,7 +40,7 @@ ms.locfileid: "64583713"
 </Grid>  
 ```  
   
- Затем в образце создается конструктор и связываются его первичные представления <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> и <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> с соответствующим контейнером в пользовательском интерфейсе. В следующем примере есть несколько дополнительных строк кода, которые заслуживают более подробного объяснения. Вызов <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> необходим для связи конструкторов действий по умолчанию для действий, поставляемых с [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> вызывается для передачи элемента WF, подлежащего редактированию. Наконец, в область пользовательского интерфейса помещаются <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (первичное полотно) и <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (таблица свойств).  
+ Затем в образце создается конструктор и связываются его первичные представления <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> и <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> с соответствующим контейнером в пользовательском интерфейсе. В следующем примере есть несколько дополнительных строк кода, которые заслуживают более подробного объяснения. <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> Вызов является обязательным для связи конструкторов действий по умолчанию для действий, поставлявшихся с .NET Framework. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> вызывается для передачи элемента WF, подлежащего редактированию. Наконец, в область пользовательского интерфейса помещаются <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (первичное полотно) и <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (таблица свойств).  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: 56fef77448f3523732e755f57e8cdabe6ad71379
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cba90119fa6f26946e72ce097074f275178ff33b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327650"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593335"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Пошаговое руководство. Изменение места записи информации для My.Application.Log (Visual Basic)
 Объекты `My.Application.Log` и `My.Log` можно использовать для записи в журнал информации о событиях, происходящих в приложении. В этом пошаговом руководстве показано, как переопределить параметры по умолчанию и настроить объект `Log` на запись в другие прослушиватели журналов.  
@@ -28,11 +28,11 @@ ms.locfileid: "59327650"
   
      Если файл app.config отсутствует, выполните указанные ниже действия.  
   
-    1.  В меню **Проект** выберите пункт **Добавить новый элемент**.  
+    1. В меню **Проект** выберите пункт **Добавить новый элемент**.  
   
-    2.  В диалоговом окне **Добавление нового элемента** выберите элемент **Файл конфигурации приложения**.  
+    2. В диалоговом окне **Добавление нового элемента** выберите элемент **Файл конфигурации приложения**.  
   
-    3.  Нажмите кнопку **Добавить**.  
+    3. Нажмите кнопку **Добавить**.  
   
 2. Найдите раздел `<listeners>` в разделе `<source>` с атрибутом `name` , равным DefaultSource, в разделе `<sources>` . Раздел `<sources>` находится в разделе `<system.diagnostics>` в разделе `<configuration>` верхнего уровня.  
   
@@ -153,13 +153,13 @@ ms.locfileid: "59327650"
   
      Вот некоторые типы, которые можно использовать:  
   
-    -   прослушиватель <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>, который записывает данные в файловый журнал;  
+    - прослушиватель <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>, который записывает данные в файловый журнал;  
   
-    -   прослушиватель <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>, который записывает информацию в журнал событий компьютера, указанный в параметре `initializeData`;  
+    - прослушиватель <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>, который записывает информацию в журнал событий компьютера, указанный в параметре `initializeData`;  
   
-    -   прослушиватели <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> и <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>, которые записывают данные в файл, указанный в параметре `initializeData`;  
+    - прослушиватели <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> и <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>, которые записывают данные в файл, указанный в параметре `initializeData`;  
   
-    -   прослушиватель <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>, который выводит данные в консоль командной строки.  
+    - прослушиватель <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>, который выводит данные в консоль командной строки.  
   
      Сведения о том, куда записывают информацию другие типы прослушивателей журналов, приведены в документации по этим типам.  
   

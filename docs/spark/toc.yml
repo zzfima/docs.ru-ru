@@ -1,0 +1,23 @@
+- name: Руководство по.NET для Apache Spark
+  href: index.yml
+- name: Обзор
+  expanded: true
+  items:
+    - name: Что такое .NET для Apache Spark?
+      href: what-is-apache-spark-dotnet.md
+- name: Учебники
+  items:
+    - name: Начало работы
+      href: tutorials/get-started.md
+- name: Ссылка
+  items:
+    - name: Справочник по интерфейсам API
+      href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'
+- name: Ресурсы
+  items:
+    - name: Обзор ресурсов
+      href: resources/index.md
+    - name: GitHub
+      href: 'https://github.com/dotnet/spark'
+    - name: Stack Overflow
+      href: 'https://stackoverflow.com/questions/tagged/spark-dotnet'

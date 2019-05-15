@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: ce92705d22edfc832e894dd2feaafcd11088bf26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8668ee115a3babbdf1ef549a418187d2c5e26b8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772025"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583418"
 ---
 # <a name="oracle-and-adonet"></a>Oracle и ADO.NET
 > [!NOTE]
 >  Типы в пространстве имен <xref:System.Data.OracleClient> считаются устаревшими. Эти типы по-прежнему поддерживаются в платформе .NET Framework текущей версии, однако будут удалены в следующем выпуске. Корпорация Майкрософт рекомендует использовать поставщик Oracle, предоставляемый сторонними разработчиками.  
   
- В этом разделе описаны функции и правила работы, характерные для поставщика данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle.  
+ В этом разделе описывает возможности и варианты поведения, характерные для поставщика данных .NET Framework для Oracle.  
   
- Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle обеспечивает доступ к базе данных Oracle, используя интерфейс Oracle Call (OCI), поставляемый в пакете клиентского программного обеспечения Oracle. Функциональные возможности поставщика данных должен быть аналогичен [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] поставщики данных для SQL Server, OLE DB и ODBC.  
+ Поставщик данных .NET Framework для Oracle обеспечивает доступ к базе данных Oracle, используя интерфейс вызова Oracle (OCI), предоставленный клиентского программного обеспечения Oracle. Функциональные возможности поставщика данных должна быть аналогична поставщиков данных .NET Framework для SQL Server, OLE DB и ODBC.  
   
- Чтобы использовать поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle, приложение должно содержать ссылку на пространство имен <xref:System.Data.OracleClient> следующим образом:   
+ Чтобы использовать поставщик данных .NET Framework для Oracle, приложение должно ссылаться <xref:System.Data.OracleClient> пространства имен следующим образом:  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -38,7 +38,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Требования к системе](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
- Содержит требования к использованию поставщика данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle и описывает многие проблемы, которые необходимо учитывать при его использовании.  
+ Описывает требования для использования поставщика данных .NET Framework для Oracle и ряд вопросов, которые следует учитывать при его использовании.  
   
  [BFILE в Oracle](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  Описывает класс <xref:System.Data.OracleClient.OracleBFile>, который используется для работы с типом данных Oracle BFILE.  

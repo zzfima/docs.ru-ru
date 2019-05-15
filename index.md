@@ -6,12 +6,12 @@ title: Документация по .NET
 description: Сведения об использовании .NET для создания различных приложений на любой платформе с помощью C#, Visual Basic и F#. Ознакомьтесь со справочником по API, образцами кода, учебниками и другими материалами.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: c1e60b9a9b642542c543da2520906b59a59ddff5
-ms.sourcegitcommit: bad2d2f2311cc689130f15a7500060f446c8d8c7
+ms.openlocfilehash: 7cf46b0c4d88b7657a5c82c7aa0ae30655c9d5ce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65188813"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589987"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -253,7 +253,7 @@ ms.locfileid: "65188813"
                                                 <h3><a href="/dotnet/spark">Руководство по .NET для Apache Spark</a></h3>
                                                 <p><a href="/dotnet/spark/tutorials">Учебники</a></p>
                                                 <p><a href="/dotnet/spark/resources">Ресурсы</a></p>
-                                                <p><a href="/dotnet/api?view=spark-dotnet">Справочник по API .NET для Apache Spark</a></p>
+                                                <p><a href="/dotnet/api/?view=spark-dotnet">Справочник по API .NET для Apache Spark</a></p>
                                             </div>
                                         </div>
                                     </div>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c0fcf9bd1c1e8df19458f681497b77348279915
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3dec3cea200f388a904296542776a02d838b3e19
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914850"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063865"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Новые возможности .NET Framework
 
@@ -35,7 +35,7 @@ ms.locfileid: "61914850"
 Данная статья не содержит исчерпывающей информации обо всех новых возможностях и может быть изменена. Общие сведения о .NET Framework см. в разделе [Начало работы с .NET Framework](../get-started/index.md). Поддерживаемые платформы см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md). Ссылки для загрузки и инструкции по установке см. в разделе [Руководство по установке](../install/guide-for-developers.md).
 
 > [!NOTE]
-> Команда .NET Framework также выпускает компоненты в виде внештатных выпусков совместно с NuGet для расширения поддержки и реализации новых возможностей (таких как неизменяемые коллекции и векторные типы с поддержкой SIMD). Дополнительные сведения см. в разделах [Дополнительные библиотеки классов и интерфейсы API](../additional-apis/index.md) и [.NET Framework и внештатные выпуски](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md). См. [полный список пакетов NuGet](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/) для .NET Framework или подпишитесь на [наш веб-канал](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).
+> Команда .NET Framework также выпускает компоненты в виде внештатных выпусков совместно с NuGet для расширения поддержки и введения новых возможностей (таких как неизменяемые коллекции и векторные типы с поддержкой SIMD). Дополнительные сведения см. в разделах [Дополнительные библиотеки классов и интерфейсы API](../additional-apis/index.md) и [.NET Framework и внештатные выпуски](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md). См. [полный список пакетов NuGet](https://www.nuget.org/profiles/dotnetframework) для .NET Framework.
 
 <a name="v48" />
 
@@ -115,6 +115,17 @@ ms.locfileid: "61914850"
      healthBehavior = new ServiceHealthBehavior();
   }
    host.Description.Behaviors.Add(healthBehavior);
+  ```
+
+  ```vb
+  Dim host As New ServiceHost(GetType(Service1),
+              New Uri("http://contoso:81/Service1"))
+  Dim healthBehavior As ServiceHealthBehavior = 
+     host.Description.Behaviors.Find(Of ServiceHealthBehavior)()
+  If healthBehavior Is Nothing Then
+     healthBehavior = New ServiceHealthBehavior()
+  End If
+  host.Description.Behaviors.Add(healthBehavior) 
   ```
 
 - С помощью файла конфигурации. Например:
@@ -551,6 +562,15 @@ public class StaticResourceResolvedEventArgs : EventArgs
 }
 ```
 
+```vb
+Public Class StaticResourceResolvedEvcentArgs : Inherits EventArgs
+   Public ReadOnly Property TargetObject As Object
+   Public ReadOnly Property TargetProperty As Object
+   Public ReadOnly Property ResourceDictionary As ResourceDictionary
+   Public ReadOnly Property ResourceKey As Object
+End Class
+```
+
 Событие не происходит (и метод доступа `add` игнорируется), если не включен класс  <xref:System.Windows.Diagnostics.VisualDiagnostics> и не задана переменная среды [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) .
 
 #### <a name="clickonce"></a>ClickOnce
@@ -840,6 +860,13 @@ public interface ISessionStateModule : IHttpModule {
     void ReleaseSessionState(HttpContext context);
     Task ReleaseSessionStateAsync(HttpContext context);
 }
+```
+
+```vb
+Public Interface ISessionStateModule : Inherits IHttpModule
+   Sub ReleaseSessionState(context As HttpContext)
+   Function ReleaseSessionStateAsync(context As HttpContext) As Task
+End Interface
 ```
 
  Кроме того, класс <xref:System.Web.SessionState.SessionStateUtility> включает два новых метода (<xref:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly%2A> и <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired%2A>), которые можно использоваться для поддержки асинхронных операций.
@@ -1515,6 +1542,10 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
         AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", true);
         ```
 
+        ```vb
+        AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", True)
+        ```
+
          Библиотека должна проверить, объявил ли потребитель значение параметра, а затем выполнить соответствующие действия.
 
         ```csharp
@@ -1526,15 +1557,31 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
            // A false value implies the latest behavior.
         }
 
-           // The library can use the value of shouldThrow to throw exceptions or not.
-           if (shouldThrow)
-           {
-              // old code
-           }
-           else {
-              // new code
-           }
+        // The library can use the value of shouldThrow to throw exceptions or not.
+        if (shouldThrow)
+        {
+           // old code
         }
+        else 
+        {
+           // new code
+        }
+        ```
+
+        ```vb
+        If Not AppContext.TryGetSwitch("Switch.AmazingLib.ThrowOnException", shouldThrow) Then
+           ' This is the case where the switch value was not set by the application.
+           ' The library can choose to get the value of shouldThrow by other means.
+           ' If no overrides nor default values are specified, the value should be 'false'.
+           ' A false value implies the latest behavior.
+        End If
+
+        ' The library can use the value of shouldThrow to throw exceptions or not.
+        If shouldThrow Then
+           ' old code
+        Else 
+           ' new code
+        End If
         ```
 
          Рекомендуется использовать согласованный формат параметров, так как они представляют собой формальный контракт, предоставляемый библиотекой. Ниже приведены два очевидных формата:
@@ -1783,6 +1830,14 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
                                               EnlistmentOptions enlistmentOptions)
     ```
 
+    ```vb
+    <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name:="FullTrust")>
+    public Function PromoteAndEnlistDurable(GresourceManagerIdentifier As Guid,
+                                            promotableNotification As IPromotableSinglePhaseNotification,
+                                            enlistmentNotification As ISinglePhaseNotification,
+                                            enlistmentOptions As EnlistmentOptions) As Enlistment
+    ```
+
      Метод может использоваться зачислением, ранее созданным <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> в ответ на метод <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType>. Он запрашивает у `System.Transactions` повышение уровня транзакции до транзакции MSDTC и "преобразование" зачисления, допускающего повышение уровня, в зачисление устойчивых ресурсов. После успешного завершения этого метода `System.Transactions` больше не будет ссылаться на интерфейс <xref:System.Transactions.IPromotableSinglePhaseNotification>, и все будущие уведомления будут поступать в предоставленном интерфейсе <xref:System.Transactions.ISinglePhaseNotification>. Рассматриваемое зачисление должно работать как зачисление устойчивых ресурсов, поддерживая ведение журнала транзакций и восстановления. Подробные сведения см. в разделе <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>. Кроме того, зачисление должно поддерживать <xref:System.Transactions.ISinglePhaseNotification>.  Этот метод может вызываться *только* во время обработки вызова <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType>. Если это не так, создается исключение <xref:System.Transactions.TransactionException>.
 
 <a name="v451" />
@@ -1809,7 +1864,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 Новые функции и улучшения базовых классов в .NET Framework 4.5.1 включают следующее:
 
-- Автоматическая переадресация привязки для сборок. Начиная с Visual Studio 2013 при компиляции приложения для [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] в файл конфигурации приложения может добавляться переадресация привязок, если приложение или его компоненты ссылаются на несколько версий одной сборки. Включить эту функцию также можно для проектов, предназначенных для более ранних версий платформы .NET Framework. Дополнительные сведения см. в разделе [Как Включение и отключение автоматического перенаправления привязки](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+- Автоматическая переадресация привязки для сборок. Начиная с Visual Studio 2013 при компиляции приложения для [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] в файл конфигурации приложения может добавляться переадресация привязок, если приложение или его компоненты ссылаются на несколько версий одной сборки. Включить эту функцию также можно для проектов, предназначенных для более ранних версий платформы .NET Framework. Дополнительные сведения см. в разделе [Практическое руководство. Включение и отключение автоматического перенаправления привязки](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 - Возможность сбора диагностической информации, чтобы помочь разработчикам повысить производительность серверных и облачных приложений. Дополнительные сведения см. в описании методов <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> и <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> класса <xref:System.Diagnostics.Tracing.EventSource>.
 

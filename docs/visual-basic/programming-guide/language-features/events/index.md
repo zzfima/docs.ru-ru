@@ -5,12 +5,12 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 5986923b10700b1795886c24343a4b45e6bff46e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76d074d2870a2d7efa62516b5868cdd7faaacd79
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616702"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586704"
 ---
 # <a name="events-visual-basic"></a>События (Visual Basic)
 Хотя в проект Visual Studio можно представить как набор процедур, выполняемых в определенной последовательности, на самом деле, большинство программ управляются событиями, то есть поток выполнения определяется внешними воздействиями, называемыми *события*.  
@@ -104,6 +104,6 @@ ms.locfileid: "64616702"
 |[Практическое руководство. Объявление пользовательских событий для предотвращения блокировки](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Показывает, как определить пользовательское событие, которое позволяет асинхронно вызывать обработчики событий.|  
 |[Практическое руководство. Объявление пользовательских событий для экономии памяти](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Показывает, как определить пользовательское событие, которое использует память только при обработке события.|  
 |[Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Перечисляет распространенные проблемы, возникающие для обработчиков событий в наследуемых компонентах.|  
-|[События](../../../../standard/events/index.md)|Предоставляет обзор модели событий в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
+|[События](../../../../standard/events/index.md)|Обзор модели событий .NET Framework.|  
 |[Создание обработчиков событий в Windows Forms](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Описывает, как работать с событиями, связанными с объектами Windows Forms.|  
 |[Делегаты](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Предоставляет обзор делегатов в Visual Basic.|

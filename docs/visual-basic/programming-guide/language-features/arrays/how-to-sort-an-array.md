@@ -7,12 +7,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], sorting
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-ms.openlocfilehash: 3c701d1b65d31315ba931cca729e465ba7d766b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 680f488a98d6e7e31b3d077843514fd12f75481c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620873"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586439"
 ---
 # <a name="how-to-sort-an-array-in-visual-basic"></a>Практическое руководство. Сортировка массива в Visual Basic
 В этом примере объявляется массив `String` объектов с именем `zooAnimals`, заполняет его и сортировка по алфавиту.  
@@ -32,7 +32,7 @@ End Sub
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
-- Доступ к библиотеке Mscorlib.dll и <xref:System> пространства имен.  
+- Доступ к <xref:System> пространства имен.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  При следующих условиях возможно возникновение исключения:  
