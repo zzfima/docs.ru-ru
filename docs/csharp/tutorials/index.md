@@ -2,12 +2,12 @@
 title: Учебники по C#
 description: Эти руководства расскажут о возможностях языка C# и научат вас создавать на нем программы.
 ms.date: 10/25/2018
-ms.openlocfilehash: 72f159311397a0f4891709c16a4a6ecc937b5952
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c2dd00505afbf4d8bc3f213a2f87751fe452f253
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755773"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557167"
 ---
 # <a name="c-tutorials"></a>Учебники по C#
 

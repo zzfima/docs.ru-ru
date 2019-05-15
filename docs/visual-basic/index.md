@@ -4,12 +4,12 @@ ms.date: 03/28/2018
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
-ms.openlocfilehash: b10c520c1940b150566ab5766ca5afd2e0f03e08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13b887d6d01d3dc0f2018539a5893b261a3f5de3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797089"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590400"
 ---
 # <a name="visual-basic-guide"></a>Руководство по Visual Basic
 
@@ -37,7 +37,7 @@ Visual Basic предназначен для эффективного созда
 Содержит сведения о языке Visual Basic и компиляторе.  
 
 [Разработка приложений в Visual Basic](../visual-basic/developing-apps/index.md)\
-Затрагивает многие аспекты разработки в Visual Basic, такие как безопасность, обработка исключений и использование библиотеки классов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].
+Затрагивает многие аспекты разработки на Visual Basic, такие как безопасность, обработка исключений и использование библиотеки классов .NET Framework.
 
 [COM-взаимодействие](../visual-basic/programming-guide/com-interop/index.md)\
 Рассматривает проблемы взаимодействия, связанные с созданием и использованием объектов модели COM в Visual Basic.  
@@ -54,4 +54,4 @@ Visual Basic предназначен для эффективного созда
 Ссылки на разделы об основах Visual Studio.  
   
 [Браузер API .NET](../../api/index.md)\
-Содержит вводные данные о библиотеке классов, интерфейсах и типах значений, включенных в Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK.
+Содержит вводные данные о библиотеке классов, интерфейсах и типах значений, включенных в пакет SDK для Microsoft .NET Framework.

@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a8792698d78b37fa42721f0ad82c0e0d3f7c8dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8170dd2e2941be3a73f7a4fd8c37d4fb2ef96235
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622812"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592248"
 ---
 # <a name="generics-in-net"></a>Универсальные шаблоны в .NET
 
@@ -119,7 +119,7 @@ ms.locfileid: "64622812"
   
  Ниже перечислены некоторые ограничения универсальных шаблонов.  
   
-- Универсальные типы могут быть наследованы от большинства базовых классов, таких как <xref:System.MarshalByRefObject> (а ограничения могут использоваться для обеспечения того, чтобы параметры универсальных типов наследовались от базовых классов, таких как <xref:System.MarshalByRefObject>). Тем не менее, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] не поддерживает контекстно-связанные универсальные типы. Универсальный тип может быть производным от <xref:System.ContextBoundObject>, но при попытке создать экземпляр этого типа будет создано исключение <xref:System.TypeLoadException>.  
+- Универсальные типы могут быть наследованы от большинства базовых классов, таких как <xref:System.MarshalByRefObject> (а ограничения могут использоваться для обеспечения того, чтобы параметры универсальных типов наследовались от базовых классов, таких как <xref:System.MarshalByRefObject>). Тем не менее, .NET Framework не поддерживает контекстно-связанные универсальные типы. Универсальный тип может быть производным от <xref:System.ContextBoundObject>, но при попытке создать экземпляр этого типа будет создано исключение <xref:System.TypeLoadException>.  
   
 - Перечисления не могут иметь параметров универсального типа. Перечисление может быть универсальным только случайно (например, если оно является вложенным в универсальный тип, который определен с помощью Visual Basic, C# или C++). Дополнительные сведения см. в подразделе "Перечисления" раздела [Common Type System](../../../docs/standard/base-types/common-type-system.md).  
   
