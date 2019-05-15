@@ -1,54 +1,54 @@
 ---
-title: Как выполнить Поиск файлов по конкретному шаблону в Visual Basic
+title: Практическое руководство. Поиск файлов по конкретному шаблону в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], finding
 - pattern matching
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
-ms.openlocfilehash: e4d40c4ad3a694b3f7e830604edf94d90cb4c395
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 29b66c52f2f9ac022784c5704c47893aed264c42
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825330"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629062"
 ---
-# <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a><span data-ttu-id="12041-102">Как выполнить Поиск файлов по конкретному шаблону в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="12041-102">How to: Find Files with a Specific Pattern in Visual Basic</span></span>
-<span data-ttu-id="12041-103">Метод <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> возвращает доступную только для чтения коллекцию строк, представляющих имена путей для файлов.</span><span class="sxs-lookup"><span data-stu-id="12041-103">The <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> method returns a read-only collection of strings representing the path names for the files.</span></span> <span data-ttu-id="12041-104">Для указания определенного шаблона можно использовать параметр `wildCards` .</span><span class="sxs-lookup"><span data-stu-id="12041-104">You can use the `wildCards` parameter to specify a specific pattern.</span></span> <span data-ttu-id="12041-105">Если требуется включить подкаталоги в поиск, присвойте параметру `searchType` значение `SearchOption.SearchAllSubDirectories`.</span><span class="sxs-lookup"><span data-stu-id="12041-105">If you would like to include subdirectories in the search, set the `searchType` parameter to `SearchOption.SearchAllSubDirectories`.</span></span>  
+# <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a><span data-ttu-id="a245c-102">Практическое руководство. Поиск файлов по конкретному шаблону в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a245c-102">How to: Find Files with a Specific Pattern in Visual Basic</span></span>
+<span data-ttu-id="a245c-103">Метод <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> возвращает доступную только для чтения коллекцию строк, представляющих имена путей для файлов.</span><span class="sxs-lookup"><span data-stu-id="a245c-103">The <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> method returns a read-only collection of strings representing the path names for the files.</span></span> <span data-ttu-id="a245c-104">Для указания определенного шаблона можно использовать параметр `wildCards` .</span><span class="sxs-lookup"><span data-stu-id="a245c-104">You can use the `wildCards` parameter to specify a specific pattern.</span></span> <span data-ttu-id="a245c-105">Если требуется включить подкаталоги в поиск, присвойте параметру `searchType` значение `SearchOption.SearchAllSubDirectories`.</span><span class="sxs-lookup"><span data-stu-id="a245c-105">If you would like to include subdirectories in the search, set the `searchType` parameter to `SearchOption.SearchAllSubDirectories`.</span></span>  
   
- <span data-ttu-id="12041-106">Если файлы, соответствующие указанному шаблону, не найдены, возвращается пустая коллекция.</span><span class="sxs-lookup"><span data-stu-id="12041-106">An empty collection is returned if no files matching the specified pattern are found.</span></span>  
+ <span data-ttu-id="a245c-106">Если файлы, соответствующие указанному шаблону, не найдены, возвращается пустая коллекция.</span><span class="sxs-lookup"><span data-stu-id="a245c-106">An empty collection is returned if no files matching the specified pattern are found.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="12041-107">Сведения о возврате списка файлов с помощью класса `DirectoryInfo` пространства имен `System.IO` см. в разделе <xref:System.IO.DirectoryInfo.GetFiles%2A>.</span><span class="sxs-lookup"><span data-stu-id="12041-107">For information about returning a file list by using the `DirectoryInfo` class of the `System.IO` namespace, see <xref:System.IO.DirectoryInfo.GetFiles%2A>.</span></span>  
+>  <span data-ttu-id="a245c-107">Сведения о возврате списка файлов с помощью класса `DirectoryInfo` пространства имен `System.IO` см. в разделе <xref:System.IO.DirectoryInfo.GetFiles%2A>.</span><span class="sxs-lookup"><span data-stu-id="a245c-107">For information about returning a file list by using the `DirectoryInfo` class of the `System.IO` namespace, see <xref:System.IO.DirectoryInfo.GetFiles%2A>.</span></span>  
   
-### <a name="to-find-files-with-a-specified-pattern"></a><span data-ttu-id="12041-108">Поиск файлов по конкретному шаблону</span><span class="sxs-lookup"><span data-stu-id="12041-108">To find files with a specified pattern</span></span>  
+### <a name="to-find-files-with-a-specified-pattern"></a><span data-ttu-id="a245c-108">Поиск файлов по конкретному шаблону</span><span class="sxs-lookup"><span data-stu-id="a245c-108">To find files with a specified pattern</span></span>  
   
--   <span data-ttu-id="12041-109">Используйте метод `GetFiles`, указав имя и путь к каталогу, в котором требуется выполнить поиск, и шаблон.</span><span class="sxs-lookup"><span data-stu-id="12041-109">Use the `GetFiles` method, supplying the name and path of the directory you want to search and specifying the pattern.</span></span> <span data-ttu-id="12041-110">В следующем примере возвращаются все файлы с расширением `.dll`, имеющиеся в каталоге, и добавляются в `ListBox1`.</span><span class="sxs-lookup"><span data-stu-id="12041-110">The following example returns all files with the extension `.dll` in the directory and adds them to `ListBox1`.</span></span>  
+- <span data-ttu-id="a245c-109">Используйте метод `GetFiles`, указав имя и путь к каталогу, в котором требуется выполнить поиск, и шаблон.</span><span class="sxs-lookup"><span data-stu-id="a245c-109">Use the `GetFiles` method, supplying the name and path of the directory you want to search and specifying the pattern.</span></span> <span data-ttu-id="a245c-110">В следующем примере возвращаются все файлы с расширением `.dll`, имеющиеся в каталоге, и добавляются в `ListBox1`.</span><span class="sxs-lookup"><span data-stu-id="a245c-110">The following example returns all files with the extension `.dll` in the directory and adds them to `ListBox1`.</span></span>  
   
      [!code-vb[VbFileIOMisc#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#4)]  
   
-## <a name="net-framework-security"></a><span data-ttu-id="12041-111">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="12041-111">.NET Framework Security</span></span>  
- <span data-ttu-id="12041-112">При следующих условиях возможно возникновение исключения:</span><span class="sxs-lookup"><span data-stu-id="12041-112">The following conditions may cause an exception:</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="a245c-111">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="a245c-111">.NET Framework Security</span></span>  
+ <span data-ttu-id="a245c-112">При следующих условиях возможно возникновение исключения:</span><span class="sxs-lookup"><span data-stu-id="a245c-112">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="12041-113">Путь является недопустимым, так как он представляет собой строку нулевой длины (пустую строку), либо содержит только пробелы, либо содержит недопустимые знаки, либо представляет собой путь к устройству (начинается с символов \\\\.\\) (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="12041-113">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
+- <span data-ttu-id="a245c-113">Путь является недопустимым, так как он представляет собой строку нулевой длины (пустую строку), либо содержит только пробелы, либо содержит недопустимые знаки, либо представляет собой путь к устройству (начинается с символов \\\\.\\) (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="a245c-113">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
   
--   <span data-ttu-id="12041-114">Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="12041-114">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
+- <span data-ttu-id="a245c-114">Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="a245c-114">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   <span data-ttu-id="12041-115">`directory` не существует (<xref:System.IO.DirectoryNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="12041-115">`directory` does not exist (<xref:System.IO.DirectoryNotFoundException>).</span></span>  
+- <span data-ttu-id="a245c-115">`directory` не существует (<xref:System.IO.DirectoryNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="a245c-115">`directory` does not exist (<xref:System.IO.DirectoryNotFoundException>).</span></span>  
   
--   <span data-ttu-id="12041-116">`directory` указывает на существующий файл (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="12041-116">`directory` points to an existing file (<xref:System.IO.IOException>).</span></span>  
+- <span data-ttu-id="a245c-116">`directory` указывает на существующий файл (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="a245c-116">`directory` points to an existing file (<xref:System.IO.IOException>).</span></span>  
   
--   <span data-ttu-id="12041-117">Длина пути превышает максимальную длину, определенную в системе (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="12041-117">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
+- <span data-ttu-id="a245c-117">Длина пути превышает максимальную длину, определенную в системе (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="a245c-117">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   <span data-ttu-id="12041-118">Имя файла или папки в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="12041-118">A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
+- <span data-ttu-id="a245c-118">Имя файла или папки в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="a245c-118">A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
   
--   <span data-ttu-id="12041-119">У пользователя отсутствуют необходимые разрешения на просмотр пути (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="12041-119">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
+- <span data-ttu-id="a245c-119">У пользователя отсутствуют необходимые разрешения на просмотр пути (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="a245c-119">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
   
--   <span data-ttu-id="12041-120">У пользователя отсутствуют необходимые разрешения (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="12041-120">The user lacks necessary permissions (<xref:System.UnauthorizedAccessException>).</span></span>  
+- <span data-ttu-id="a245c-120">У пользователя отсутствуют необходимые разрешения (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="a245c-120">The user lacks necessary permissions (<xref:System.UnauthorizedAccessException>).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="12041-121">См. также</span><span class="sxs-lookup"><span data-stu-id="12041-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a245c-121">См. также</span><span class="sxs-lookup"><span data-stu-id="a245c-121">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
-- [<span data-ttu-id="12041-122">Практическое руководство. Поиск подкаталогов по заданному шаблону</span><span class="sxs-lookup"><span data-stu-id="12041-122">How to: Find Subdirectories with a Specific Pattern</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
-- [<span data-ttu-id="12041-123">Устранение неполадок. Чтение из текстовых файлов и запись в такие файлы</span><span class="sxs-lookup"><span data-stu-id="12041-123">Troubleshooting: Reading from and Writing to Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
-- [<span data-ttu-id="12041-124">Практическое руководство. Получение коллекции содержащихся в каталоге файлов</span><span class="sxs-lookup"><span data-stu-id="12041-124">How to: Get the Collection of Files in a Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [<span data-ttu-id="a245c-122">Практическое руководство. Поиск подкаталогов по заданному шаблону</span><span class="sxs-lookup"><span data-stu-id="a245c-122">How to: Find Subdirectories with a Specific Pattern</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
+- [<span data-ttu-id="a245c-123">Устранение неполадок. Чтение из текстовых файлов и запись в такие файлы</span><span class="sxs-lookup"><span data-stu-id="a245c-123">Troubleshooting: Reading from and Writing to Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [<span data-ttu-id="a245c-124">Практическое руководство. Получение коллекции содержащихся в каталоге файлов</span><span class="sxs-lookup"><span data-stu-id="a245c-124">How to: Get the Collection of Files in a Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
