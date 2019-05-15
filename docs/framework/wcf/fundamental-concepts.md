@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 05e61a33005cd0458c5bcdde758f3b1a9cc3869c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 429e019d87800c9487f73ebf37c4d7870835b323
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637266"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591948"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Основные понятия Windows Communication Foundation
 В этом документе показано высокоуровневое представление архитектуры Windows Communication Foundation (WCF). В нем приводится объяснение ключевых понятий и их взаимосвязь. Инструкции по созданию простейшей версии службы WCF и клиента, см. в разделе [Приступая к работе](../../../docs/framework/wcf/getting-started-tutorial.md). Научиться программированию WCF, см. в разделе [базовое Программирование WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -126,7 +126,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Конкретная реализация элемента привязки. Привязка представляет собой конфигурацию, а канал является реализацией, связанной с этой конфигурацией. Следовательно, с каждым элементом привязки связан канал. Каналы, собранные в стек друг на другом, образуют конкретную реализацию привязки: стек каналов.  
   
  клиент WCF  
- Конструкция «клиент-приложение», предоставляющая доступ к операциям службы в виде методов (на выбранном языке программирования [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], например Visual Basic или Visual C#). Каждое приложение может содержать клиента WCF, включая приложение, содержащее службу. Следовательно, можно создать службу, содержащую клиентов WCF других служб.  
+ Клиентское приложение конструкцию, предоставляющую операции службы в виде методов (в .NET Framework, язык по своему усмотрению, например Visual Basic или Visual C#). Каждое приложение может содержать клиента WCF, включая приложение, содержащее службу. Следовательно, можно создать службу, содержащую клиентов WCF других служб.  
   
  Клиент WCF может создаваться автоматически с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) и нацеливания его на работающую службу, публикующую метаданные.  
   

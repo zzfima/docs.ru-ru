@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], setting sizing modes
 - DataGridView control [Windows Forms], sizing modes
 ms.assetid: e9ad15e6-b4bb-44aa-a767-3738e9db1651
-ms.openlocfilehash: 542fda99aa16b6687b3b820bd5ff1a42ff99632a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76d71a7c3c37f53854cf4fd9c6d8300831572d51
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620802"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591628"
 ---
 # <a name="how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control"></a>Практическое руководство. Режимы изменения размеров элемента управления DataGridView в Windows Forms
 Следующие процедуры демонстрируют некоторые распространенные сценарии для настройки или комбинирования параметров изменения размеров, доступных для элемента управления <xref:System.Windows.Forms.DataGridView> и для определенных столбцов в элементе управления.  
@@ -55,8 +55,6 @@ ms.locfileid: "64620802"
  Для этого примера требуются:  
   
 - ссылки на сборки System и System.Windows.Forms;  
-  
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
 

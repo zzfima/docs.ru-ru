@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 851be5bdf4a3adced724dc2df33657a84226270d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 837022cf1675097af5ebce63441cad1ce63eaabb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906962"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591100"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Устранение неполадок, связанных с типами данных (Visual Basic)
 Этой странице перечислены некоторые общие проблемы, которые могут возникнуть при выполнении операций над встроенными типами данных.  
@@ -66,7 +66,7 @@ ms.locfileid: "61906962"
  Обратите внимание, что недостаточно для объявления `decimalRemainder` как `Decimal`. Также необходимо принудительно литералы в `Decimal`, или они используют `Double` по умолчанию и `decimalRemainder` получает то же значение неточные, что `doubleRemainder`.  
   
 ## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Логический тип не выполняет преобразование в числовой тип точно  
- [Тип данных Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) значения не хранятся в виде чисел, и хранимые значения не предназначены как эквивалент чисел. Для совместимости с предыдущими версиями Visual Basic предоставляет ключевые слова преобразований ([функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`, и так далее) для преобразования между `Boolean` числовые типы. Тем не менее, других языках эти преобразования иногда выполняются по-разному, как [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] методы.  
+ [Тип данных Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) значения не хранятся в виде чисел, и хранимые значения не предназначены как эквивалент чисел. Для совместимости с предыдущими версиями Visual Basic предоставляет ключевые слова преобразований ([функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`, и так далее) для преобразования между `Boolean` числовые типы. Тем не менее, других языках эти преобразования иногда выполняются по-разному, как и методы платформы .NET Framework.  
   
  Никогда не следует писать код, основанный на эквивалентных числовых значений для `True` и `False`. Когда это возможно, следует ограничить использование `Boolean` переменные с логическими значениями, для которых они предназначены. Если требуется смешать `Boolean` и числовые значения, убедитесь, что вы понимаете метод преобразования, который выбран.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "61906962"
 ## <a name="string-conversion-fails-at-run-time"></a>Не удается преобразовать строку во время выполнения  
  [Строковый тип данных](../../../../visual-basic/language-reference/data-types/string-data-type.md) участвует в очень мало расширяющие преобразования. `String` расширяется только до себя и `Object`и только `Char` и `Char()` ( `Char` массива) расширяющего преобразования к `String`. Это обусловлено `String` переменных и констант, которые может содержать значения, которые не могут содержать другие типы данных.  
   
- Если переключатель проверки типа ([оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) является `On`, компилятор запрещает все неявные сужающие преобразования. Это включает те включающие `String`. Код по-прежнему можно использовать ключевые слова преобразований например `CStr` и [функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md), которые направляют [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] предпринимается попытка преобразования.  
+ Если переключатель проверки типа ([оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) является `On`, компилятор запрещает все неявные сужающие преобразования. Это включает те включающие `String`. Код по-прежнему можно использовать ключевые слова преобразований например `CStr` и [функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md), которой прямой .NET Framework для попытку преобразования.  
   
 > [!NOTE]
 >  Ошибка сужающего преобразования отбрасывается при преобразовании из элементов в `For Each…Next` коллекции для управляющей переменной цикла. Дополнительные сведения и примеры см. в разделе «Сужающие преобразования» в [для каждого... Следующий оператор](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  

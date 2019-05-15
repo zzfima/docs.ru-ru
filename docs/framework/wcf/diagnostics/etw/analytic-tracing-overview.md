@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: 9918f07d9c26c1779a1eedfbc423c31e61659334
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8241485d75932cd0b8be85d231897b0bc199f0a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048747"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592114"
 ---
 # <a name="analytic-tracing-overview"></a>Общие сведения об аналитическом отслеживании
 Аналитическая трассировка платформы [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] - это набор высокопроизводительных функций с низкой детализацией, добавляемый к трассировке событий Windows (ETW). Трассировка событий Windows работает на уровне ядра, что значительно снижает издержки операций трассировки. Она эффективно буферизует события режима пользователя и ядра и позволяет динамически включать ведение журнала, при этом не требуется перезагружать службу. После их создания и получения данные трассировки отображаются в журналах событий.  
@@ -47,4 +47,4 @@ ms.locfileid: "62048747"
  Дополнительные сведения о том, как включить трассировку потока сообщений см. в разделе [Configuring Message Flow Tracing](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
   
 ### <a name="keywords"></a>Ключевые слова  
- Ключевые слова используются, чтобы фильтровать сообщения трассировки и определять, какой компонент [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] создал данное событие. Дополнительные сведения см. в разделе [динамически Включение аналитической трассировки](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).
+ Ключевые слова используются для фильтрации сообщений трассировки и определите, какой компонент платформы .NET Framework создано данное событие. Дополнительные сведения см. в разделе [динамически Включение аналитической трассировки](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).

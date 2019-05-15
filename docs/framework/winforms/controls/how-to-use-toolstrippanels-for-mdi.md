@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ToolStripPanel control [Windows Forms], using for MDI
 - toolbars [Windows Forms], using for MDI
 ms.assetid: d6b884fc-0846-465f-83c3-5dc0fe93b00f
-ms.openlocfilehash: 2dfab5bb6e31454f97407502971f305794e01d7a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9bc64af92fbff26798d1cffede983cbab7ba13da
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622356"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591550"
 ---
 # <a name="how-to-use-toolstrippanels-for-mdi"></a>Практическое руководство. Использование элементов управления ToolStripPanel при создании форм MDI
 <xref:System.Windows.Forms.ToolStripPanel> обеспечивает гибкость для приложений многодокументного интерфейса (MDI) с помощью метода <xref:System.Windows.Forms.ToolStripPanel.Join%2A>.  
@@ -29,8 +29,6 @@ ms.locfileid: "64622356"
  Для этого примера требуются:  
   
 - ссылки на сборки System.Design, System.Drawing и System.Windows.Forms.  
-  
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
 

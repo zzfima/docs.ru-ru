@@ -2,12 +2,12 @@
 title: Пример сериализации слабо типизированных данных JSON
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9be679b26e395e8fed0938567184a2e5d4a8f07
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006360"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589216"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Пример сериализации слабо типизированных данных JSON
 При сериализации пользовательского типа в заданный формат передачи или при десериализации формата передачи в пользовательский тип заданный пользовательский тип должен быть доступен как службе, так и клиенту. Обычно для этого к пользовательским типам применяется атрибут <xref:System.Runtime.Serialization.DataContractAttribute> , а к их членам применяется атрибут <xref:System.Runtime.Serialization.DataMemberAttribute> . Этот механизм также применим при работе с объектами JavaScript Object Notation (JSON), как описано в разделе [как: Сериализация и десериализация данных JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
@@ -58,7 +58,7 @@ ms.locfileid: "62006360"
   
  Эта задача может быть громоздкой, особенно если клиент должен обрабатывать более одного типа объектов JSON.  
   
- Тип `JsonObject` в этом образце является слабо типизированным представлением объекта JSON. `JsonObject` использует естественное сопоставление между объектами JSON и словарями [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] и сопоставление между массивами JSON и массивами [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . В следующем примере кода демонстрируется тип `JsonObject` .  
+ Тип `JsonObject` в этом образце является слабо типизированным представлением объекта JSON. `JsonObject` использует естественное сопоставление между объектами JSON и словарей .NET Framework и сопоставление между массивами JSON и массивами .NET Framework. В следующем примере кода демонстрируется тип `JsonObject` .  
   
 ```  
 // Instantiation of JsonObject json omitted  

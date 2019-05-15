@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: 344f9856c1f3b1483bfda6f36a7e025ff2e5c78d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f9eb45e9b96ccb97938c7396d177ccedbea329e6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593419"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590368"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Установка режимов заполнения для столбцов элемента управления DataGridView в Windows Forms
 В режиме заполнения столбцов элемент управления <xref:System.Windows.Forms.DataGridView> автоматически изменяет размер своих столбцов, чтобы они полностью заполняли доступную область отображения по ширине. Элемент управления не отображает горизонтальную полосу прокрутки, за исключением случаев, когда необходимо сохранить ширину каждого столбца равной или большей, чем значение его свойства <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
@@ -59,8 +59,6 @@ ms.locfileid: "64593419"
  Для этого примера требуются:  
   
 - ссылки на сборки System, System.Drawing и System.Windows.Forms.  
-  
-- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
 

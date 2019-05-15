@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: b0758cf1381b5a6e24067fdd64288d0f7e2b0d5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7458caee29d576d8a9d38f01027c106d39a1daf2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637172"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591931"
 ---
 # <a name="guide-to-the-documentation"></a>Руководство по работе с документацией
 Представляет собой руководство по документации по Windows Communication Foundation (WCF). Документы, на которые указывают ссылки - это рекомендуемые отправные точки, сгруппированные по интересам и уровням подготовки.  
@@ -46,7 +46,7 @@ ms.locfileid: "64637172"
   
 - Чтобы создать службу, которая взаимодействует с клиентами ASP.NET, см. в разделе [как: Настройка службы WCF для взаимодействия с клиентами службы веб-ASP.NET](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md).  
   
-- Интеграция с [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] удаленного взаимодействия приведено в [перенос приложений удаленного взаимодействия .NET на платформу WCF](../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md).  
+- Интеграция с помощью удаленного взаимодействия .NET Framework описан в [перенос приложений удаленного взаимодействия .NET на платформу WCF](../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md).  
   
 - Чтобы интегрировать существующее приложение COM + с WCF службой или клиентом, см. в разделе [интеграция Обзор приложений COM +](../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md).  
   
