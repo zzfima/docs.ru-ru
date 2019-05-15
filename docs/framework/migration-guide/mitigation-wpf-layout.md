@@ -4,40 +4,40 @@ ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f81af76ed305fb614202c240e449adc62b310933
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c261a025548b2d22f6df3051dbcdb637723d4324
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189941"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599472"
 ---
-# <a name="mitigation-wpf-layout"></a><span data-ttu-id="cc945-102">Устранение рисков. Макет WPF</span><span class="sxs-lookup"><span data-stu-id="cc945-102">Mitigation: WPF Layout</span></span>
-<span data-ttu-id="cc945-103">Макет элементов управления WPF может немного изменяться.</span><span class="sxs-lookup"><span data-stu-id="cc945-103">The layout of WPF controls can change slightly.</span></span>  
+# <a name="mitigation-wpf-layout"></a><span data-ttu-id="9e1ce-102">Устранение рисков. Макет WPF</span><span class="sxs-lookup"><span data-stu-id="9e1ce-102">Mitigation: WPF Layout</span></span>
+<span data-ttu-id="9e1ce-103">Макет элементов управления WPF может немного изменяться.</span><span class="sxs-lookup"><span data-stu-id="9e1ce-103">The layout of WPF controls can change slightly.</span></span>  
   
-## <a name="impact"></a><span data-ttu-id="cc945-104">Последствия</span><span class="sxs-lookup"><span data-stu-id="cc945-104">Impact</span></span>  
- <span data-ttu-id="cc945-105">В результате этого изменения:</span><span class="sxs-lookup"><span data-stu-id="cc945-105">As a result of this change:</span></span>  
+## <a name="impact"></a><span data-ttu-id="9e1ce-104">Последствия</span><span class="sxs-lookup"><span data-stu-id="9e1ce-104">Impact</span></span>  
+ <span data-ttu-id="9e1ce-105">В результате этого изменения:</span><span class="sxs-lookup"><span data-stu-id="9e1ce-105">As a result of this change:</span></span>  
   
--   <span data-ttu-id="cc945-106">ширина или высота элементов может увеличиться или уменьшиться максимум на один пиксель;</span><span class="sxs-lookup"><span data-stu-id="cc945-106">The width or height of elements may grow or shrink by at most one pixel.</span></span>  
+- <span data-ttu-id="9e1ce-106">ширина или высота элементов может увеличиться или уменьшиться максимум на один пиксель;</span><span class="sxs-lookup"><span data-stu-id="9e1ce-106">The width or height of elements may grow or shrink by at most one pixel.</span></span>  
   
--   <span data-ttu-id="cc945-107">расположение объекта может измениться максимум на один пиксель;</span><span class="sxs-lookup"><span data-stu-id="cc945-107">The placement of an object can move by at most one pixel.</span></span>  
+- <span data-ttu-id="9e1ce-107">расположение объекта может измениться максимум на один пиксель;</span><span class="sxs-lookup"><span data-stu-id="9e1ce-107">The placement of an object can move by at most one pixel.</span></span>  
   
--   <span data-ttu-id="cc945-108">выровненные по центру элементы могут сместиться по вертикали или горизонтали максимум на один пиксель.</span><span class="sxs-lookup"><span data-stu-id="cc945-108">Centered elements can be vertically or horizontally off center by at most one pixel.</span></span>  
+- <span data-ttu-id="9e1ce-108">выровненные по центру элементы могут сместиться по вертикали или горизонтали максимум на один пиксель.</span><span class="sxs-lookup"><span data-stu-id="9e1ce-108">Centered elements can be vertically or horizontally off center by at most one pixel.</span></span>  
   
- <span data-ttu-id="cc945-109">По умолчанию новый макет включен только для приложений, предназначенных для .NET Framework 4.6.</span><span class="sxs-lookup"><span data-stu-id="cc945-109">By default, this new layout is enabled only for apps that target the .NET Framework 4.6.</span></span>  
+ <span data-ttu-id="9e1ce-109">По умолчанию новый макет включен только для приложений, предназначенных для .NET Framework 4.6.</span><span class="sxs-lookup"><span data-stu-id="9e1ce-109">By default, this new layout is enabled only for apps that target the .NET Framework 4.6.</span></span>  
   
-## <a name="mitigation"></a><span data-ttu-id="cc945-110">Устранение рисков</span><span class="sxs-lookup"><span data-stu-id="cc945-110">Mitigation</span></span>  
- <span data-ttu-id="cc945-111">Поскольку это изменение, как правило, приводит к устранению обрезки правых или нижних элементов управления WPF при высоком разрешении, для приложений, предназначенных для более ранних версий .NET Framework, но выполняющихся в .NET Framework 4.6, можно выбрать это новое поведение, добавив следующую строку в раздел `<runtime>` файла app.config.</span><span class="sxs-lookup"><span data-stu-id="cc945-111">Since this modification tends to eliminate clipping of the right or bottom of WPF controls at high DPIs, apps that target earlier versions of the .NET Framework but are running on the .NET Framework 4.6 can opt into this new behavior by adding the following line to the `<runtime>` section of the app.config file:</span></span>  
+## <a name="mitigation"></a><span data-ttu-id="9e1ce-110">Устранение рисков</span><span class="sxs-lookup"><span data-stu-id="9e1ce-110">Mitigation</span></span>  
+ <span data-ttu-id="9e1ce-111">Поскольку это изменение, как правило, приводит к устранению обрезки правых или нижних элементов управления WPF при высоком разрешении, для приложений, предназначенных для более ранних версий .NET Framework, но выполняющихся в .NET Framework 4.6, можно выбрать это новое поведение, добавив следующую строку в раздел `<runtime>` файла app.config.</span><span class="sxs-lookup"><span data-stu-id="9e1ce-111">Since this modification tends to eliminate clipping of the right or bottom of WPF controls at high DPIs, apps that target earlier versions of the .NET Framework but are running on the .NET Framework 4.6 can opt into this new behavior by adding the following line to the `<runtime>` section of the app.config file:</span></span>  
   
 ```xml  
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=false" />  
 ```  
   
- <span data-ttu-id="cc945-112">Для приложений, предназначенных для .NET Framework 4.6, для которых требуется задать отрисовку элементов управления WPF с помощью прежнего алгоритма макета, можно добавить следующую строку в раздел `<runtime>` файла app.config.</span><span class="sxs-lookup"><span data-stu-id="cc945-112">Apps that target the .NET Framework 4.6 but want WPF controls to render using the previous layout algorithm can do so by adding the following line to the  `<runtime>` section of the app.config file:</span></span>  
+ <span data-ttu-id="9e1ce-112">Для приложений, предназначенных для .NET Framework 4.6, для которых требуется задать отрисовку элементов управления WPF с помощью прежнего алгоритма макета, можно добавить следующую строку в раздел `<runtime>` файла app.config.</span><span class="sxs-lookup"><span data-stu-id="9e1ce-112">Apps that target the .NET Framework 4.6 but want WPF controls to render using the previous layout algorithm can do so by adding the following line to the  `<runtime>` section of the app.config file:</span></span>  
   
 ```xml  
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=true" />  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cc945-113">См. также</span><span class="sxs-lookup"><span data-stu-id="cc945-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9e1ce-113">См. также</span><span class="sxs-lookup"><span data-stu-id="9e1ce-113">See also</span></span>
 
-- [<span data-ttu-id="cc945-114">Изменение целевой платформы</span><span class="sxs-lookup"><span data-stu-id="cc945-114">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+- [<span data-ttu-id="9e1ce-114">Изменение целевой платформы</span><span class="sxs-lookup"><span data-stu-id="9e1ce-114">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
