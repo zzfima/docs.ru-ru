@@ -11,21 +11,21 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 50ad01376f3de9cda26f6b00e2d32fc8d3dabdcd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5145b013db1a86ef1b3128ab1c4495dddaaaf987
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169719"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624638"
 ---
 # <a name="enabling-network-tracing"></a>Включение сетевой трассировки
 Трассировка сети предоставляет доступ к сведениям о вызовах методов и о сетевом трафике, созданном управляемым приложением. Чтобы включить трассировку сети в приложении, выполните следующие действия:  
   
--   Скомпилируйте код с включенной трассировкой. См. практическое руководство по [ Условная компиляция с использованием атрибутов Trace и Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).  
+- Скомпилируйте код с включенной трассировкой. См. практическое руководство по [ Условная компиляция с использованием атрибутов Trace и Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).  
   
--   Укажите назначение для выходных данных трассировки.  
+- Укажите назначение для выходных данных трассировки.  
   
--   Настройте поведение трассировки сети. См. практическое руководство по [ Настройка трассировки сети](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).  
+- Настройте поведение трассировки сети. См. практическое руководство по [ Настройка трассировки сети](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).  
   
  Чаще всего в качестве назначений для трассировки сети (прослушивателей трассировки) выступают прослушиватели по умолчанию и файлы журнала.  
   

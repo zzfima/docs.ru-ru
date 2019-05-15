@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f6cb2d387e3b979ed0d4407e17287fb93fa0a20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2736c4758cbaaeda902b43aeea55611a21ea38ba
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678347"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623810"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Взаимодействие с другими асинхронными шаблонами и типами
 В .NET Framework 1.0 появился шаблон <xref:System.IAsyncResult> , также известный как [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)или шаблон `Begin/End` .  В .NET Framework 2.0 добавлен [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  Начиная с платформы .NET Framework 4 [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) заменяет APM и EAP, но при этом предоставляет возможность легко строить процедуры миграции с более ранних шаблонов.  
   
  В этом разделе.  
   
--   [Задачи и APM](#APM) ([от APM к TAP](#ApmToTap) или [от TAP к APM](#TapToApm))  
+- [Задачи и APM](#APM) ([от APM к TAP](#ApmToTap) или [от TAP к APM](#TapToApm))  
   
--   [Задачи и EAP](#EAP)  
+- [Задачи и EAP](#EAP)  
   
--   [Задачи и дескрипторы ожидания](#WaitHandles) ([от дескрипторов ожидания к TAP](#WHToTap) или [от TAP к дескрипторам ожидания](#TapToWH))  
+- [Задачи и дескрипторы ожидания](#WaitHandles) ([от дескрипторов ожидания к TAP](#WHToTap) или [от TAP к дескрипторам ожидания](#TapToWH))  
   
 <a name="APM"></a>   
 ## <a name="tasks-and-the-asynchronous-programming-model-apm"></a>Задачи и асинхронная модель программирования (APM)  

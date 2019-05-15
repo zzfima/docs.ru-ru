@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8898f76971b6088fa8ca831961ea7f12e1ab4e6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909278"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588830"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>Технологическая сводка по элементам управления DataGridView (Windows Forms)
 В этом разделе содержится сводная информация о системе управления `DataGridView` и классах, поддерживающих ее использование.  
@@ -29,9 +29,9 @@ ms.locfileid: "61909278"
  `BindingSource`  
   
 ## <a name="background"></a>Фон  
- Конструкторы пользовательского интерфейса (UI) часто найти необходимые для отображения табличных данных пользователям. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Предоставляет несколько способов отображения данных в виде таблицы или сетки. `DataGridView` Управления представляет собой новейшее развитие этой технологии для приложений Windows Forms.  
+ Конструкторы пользовательского интерфейса (UI) часто найти необходимые для отображения табличных данных пользователям. .NET Framework предоставляет несколько способов отображения данных в виде таблицы или сетки. `DataGridView` Управления представляет собой новейшее развитие этой технологии для приложений Windows Forms.  
   
- `DataGridView` Элемент управления может отображать строки данных из хранилища данных. Поддерживаются различные типы хранилищ данных. Хранилище данных может содержать простые, нетипизированные данные, такие как одномерный массив, или он может содержать типизированных данных, таких как <xref:System.Data.DataSet>. Дополнительные сведения см. в разделе [Как Привязка данных к Windows Forms элемента управления DataGridView](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
+ `DataGridView` Элемент управления может отображать строки данных из хранилища данных. Поддерживаются различные типы хранилищ данных. Хранилище данных может содержать простые, нетипизированные данные, такие как одномерный массив, или он может содержать типизированных данных, таких как <xref:System.Data.DataSet>. Дополнительные сведения см. в разделе [Практическое руководство. Привязка данных к Windows Forms элемента управления DataGridView](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   
  Элемент управления `DataGridView` предоставляет мощный и гибкий способ отображения данных в табличном формате. Элемент управления можно использовать для отображения представлений небольшого и очень больших наборов данных только для чтения или редактирования.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "61909278"
   
  Вы можете реализовать `IDataGridViewEditingCell` интерфейс в производная ячейка класс и создать тип ячейки, которые функции редактирования, но не размещен элемент управления в режиме редактирования. Чтобы создать элемент управления, который можно разместить в ячейке в режиме редактирования, можно реализовать `IDataGridViewEditingControl` интерфейса в классе, производных от <xref:System.Windows.Forms.Control>.  
   
- Дополнительные сведения см. в разделе [Как Ячеек и столбцов в Windows Forms элемента управления DataGridView с видом и поведением](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md) и [как: Ведущие элементы управления в формах Windows Forms ячеек элемента управления DataGridView](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+ Дополнительные сведения см. в разделе [Практическое руководство. Ячеек и столбцов в Windows Forms элемента управления DataGridView с видом и поведением](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md) и [как: Ведущие элементы управления в формах Windows Forms ячеек элемента управления DataGridView](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
 ## <a name="datagridview-classes-at-a-glance"></a>Классы DataGridView с первого взгляда  
  <xref:System.Windows.Forms>  

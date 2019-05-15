@@ -9,12 +9,12 @@ helpviewer_keywords:
 - colors [Windows Forms], customizing in ToolStrip controls [Windows Forms]
 - ToolStrip control [Windows Forms], custom colors
 ms.assetid: e2752fe2-1afb-489e-ab96-b7805acd96bc
-ms.openlocfilehash: 971fc8478e6ff2b5745a950daa2f04bfc8d00322
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6719156d0ab6d1e53cd0bd8f16f306577589fb40
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666393"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592841"
 ---
 # <a name="how-to-customize-colors-in-toolstrip-applications"></a>Практическое руководство. Настройка цветов в приложениях, в которых используется элемент управления ToolStrip
 Внешний вид <xref:System.Windows.Forms.ToolStrip> можно настроить с помощью класса <xref:System.Windows.Forms.ToolStripProfessionalRenderer> для использования пользовательских цветов.  
@@ -29,8 +29,6 @@ ms.locfileid: "64666393"
  Для этого примера требуются:  
   
 - ссылки на сборки System.Design, System.Drawing и System.Windows.Forms.  
-  
- Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
 

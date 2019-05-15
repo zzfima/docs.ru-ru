@@ -2,12 +2,12 @@
 title: Практическое руководство. Создание и использование сборок с помощью командной строки (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-ms.openlocfilehash: d58109dfbb03b752f4a46f895fa1093e4f37df71
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a30d4b3ea203a8b4d3ba621fc7b0310477ddf10d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624769"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592683"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Практическое руководство. Создание и использование сборок с помощью командной строки (Visual Basic)
 Сборка (или библиотека динамической компоновки (DLL)) связывается с программой во время выполнения. Сборка и использование библиотеки DLL рассматривается в следующем сценарии:  
@@ -97,25 +97,6 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
  Для запуска программы введите имя EXE-файла и два числа, как показано далее.  
   
  `TestCode 1234 5678`  
-  
-## <a name="compiling-the-code"></a>Компиляция кода  
- Чтобы выполнить сборку файла `MathLibrary.DLL`, скомпилируйте два файла, `Add` и `Mult`, с помощью следующей командной строки:  
-  
-```console  
-vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
-```  
-  
- [-Target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) параметр компилятора предписывает компилятору создать библиотеку DLL вместо exe-файла. [-Out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) параметр компилятора, за которым следует имя файла используется для указания имени файла библиотеки DLL. В противном случае компилятор использует первый файл (`Add.vb`) в качестве имени библиотеки DLL.  
-  
- Для сборки исполняемого файла `TestCode.exe` служит следующая строка команд:  
-  
-```console  
-vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  
-```  
-  
- **-Out** параметр компилятора предписывает компилятору создать exe-файл и задает имя выходного файла (`TestCode.exe`). Этот параметр компилятора является необязательным. [-Ссылке (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) параметр компилятора указывает DLL-файл или файлы, используемые этой программой.  
-  
- Дополнительные сведения о построении из командной строки см. в разделе и [построение из командной строки](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
 ## <a name="see-also"></a>См. также
 

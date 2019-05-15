@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: ce019e97e54781976736dd5bd6e6d7e134322f65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2eb6d8f8bb7886e4615438e463aeea3c3825662
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916868"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582630"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Выполнение запросов к службе данных (службы данных WCF)
 
-Клиентская библиотека служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяет выполнять запросы службы данных, используя знакомые шаблоны программирования [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], включая использование языка LINQ. Клиентская библиотека преобразует запрос, определенный на клиенте как экземпляр класса <xref:System.Data.Services.Client.DataServiceQuery%601>, в сообщение запроса HTTP GET. Библиотека получает ответное сообщение и преобразует его в экземпляры классов клиентской службы данных. Эти классы отслеживаются с помощью <xref:System.Data.Services.Client.DataServiceContext>, которому принадлежит объект <xref:System.Data.Services.Client.DataServiceQuery%601>.
+Клиентская библиотека служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяет выполнять запросы службы данных, используя знакомые шаблоны программирования .NET Framework, включая использование языка LINQ. Клиентская библиотека преобразует запрос, определенный на клиенте как экземпляр класса <xref:System.Data.Services.Client.DataServiceQuery%601>, в сообщение запроса HTTP GET. Библиотека получает ответное сообщение и преобразует его в экземпляры классов клиентской службы данных. Эти классы отслеживаются с помощью <xref:System.Data.Services.Client.DataServiceContext>, которому принадлежит объект <xref:System.Data.Services.Client.DataServiceQuery%601>.
 
 ## <a name="data-service-queries"></a>Запросы к службе данных
 
 Универсальный класс <xref:System.Data.Services.Client.DataServiceQuery%601> представляет запрос, который возвращает коллекцию, включающую ноль или больше экземпляров типа сущности. Запрос к службе данных всегда относится к контексту существующей службы данных. Этот контекст поддерживает URI службы и сведения о метаданных, необходимые для создания и выполнения запроса.
 
-При использовании **Add Service Reference** диалогового окна, чтобы добавить службу данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-создается на основе клиентское приложение, класс контейнера сущностей, который наследует от <xref:System.Data.Services.Client.DataServiceContext> класса. Этот класс включает свойства, возвращаемые типизированными экземплярами <xref:System.Data.Services.Client.DataServiceQuery%601>. Для каждого набора сущностей, предоставляемого службой данных, имеется одно свойство. Эти свойства облегчают создание экземпляра типизированного объекта <xref:System.Data.Services.Client.DataServiceQuery%601>.
+При использовании **Add Service Reference** создается диалоговое окно, чтобы добавить службу данных в приложение клиента на основе .NET Framework, класс контейнера сущностей, который наследует от <xref:System.Data.Services.Client.DataServiceContext> класса. Этот класс включает свойства, возвращаемые типизированными экземплярами <xref:System.Data.Services.Client.DataServiceQuery%601>. Для каждого набора сущностей, предоставляемого службой данных, имеется одно свойство. Эти свойства облегчают создание экземпляра типизированного объекта <xref:System.Data.Services.Client.DataServiceQuery%601>.
 
 Запрос выполняется в следующих сценариях.
 
@@ -43,7 +43,7 @@ ms.locfileid: "61916868"
 [!code-csharp[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomersspecific)]
 [!code-vb[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomersspecific)]
 
-Дополнительные сведения см. в разделе [Как Выполнение запросов к службе данных](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md).
+Дополнительные сведения см. в разделе [Практическое руководство. Выполнение запросов к службе данных](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md).
 
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Клиента поддерживает запросы для объектов с поздним связыванием, например при использовании *динамическое* введите C#. Тем не менее в силу влияния на производительность для службы данных необходимо всегда составлять строго типизированные запросы. Тип <xref:System.Tuple> и динамические объекты не поддерживаются клиентом.
 
@@ -77,7 +77,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 [!code-csharp[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#orderwithfilter)]
 [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#orderwithfilter)]
 
-Можно последовательно вызывать метод <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>, чтобы сконструировать сложные выражения запроса. Дополнительные сведения см. в разделе [Как Добавление параметров запроса к запросу службы данных](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md).
+Можно последовательно вызывать метод <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>, чтобы сконструировать сложные выражения запроса. Дополнительные сведения см. в разделе [Практическое руководство. Добавление параметров запроса к запросу службы данных](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md).
 
 Параметры запроса предоставляют другой способ выражения синтаксических компонентов запроса LINQ. Дополнительные сведения см. в разделе [рекомендации по LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md).
 
@@ -129,7 +129,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 В некоторых сценариях полезно знать общее число сущностей в наборе сущностей, а не только число, возвращаемое запросом. Вызовите метод <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> по отношению к объекту <xref:System.Data.Services.Client.DataServiceQuery%601> для запроса, чтобы этот общий итог подсчета сущностей в наборе возвращался с результатом запроса. В этом случае свойство <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> возвращаемого объекта <xref:System.Data.Services.Client.QueryOperationResponse%601> возвращает общее количество сущностей в наборе.
 
-Можно также получить только общее число сущностей в наборе либо как значение типа <xref:System.Int32>, либо как значение типа <xref:System.Int64>, вызвав метод <xref:System.Linq.Enumerable.Count%2A> или <xref:System.Linq.Enumerable.LongCount%2A> соответственно. Если вызываются эти методы, объект <xref:System.Data.Services.Client.QueryOperationResponse%601> не возвращается, при этом возвращается только значение подсчета. Дополнительные сведения см. в разделе [Как Определения количества сущностей, возвращаемых запросом](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md).
+Можно также получить только общее число сущностей в наборе либо как значение типа <xref:System.Int32>, либо как значение типа <xref:System.Int64>, вызвав метод <xref:System.Linq.Enumerable.Count%2A> или <xref:System.Linq.Enumerable.LongCount%2A> соответственно. Если вызываются эти методы, объект <xref:System.Data.Services.Client.QueryOperationResponse%601> не возвращается, при этом возвращается только значение подсчета. Дополнительные сведения см. в разделе [Практическое руководство. Определения количества сущностей, возвращаемых запросом](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md).
 
 ## <a name="in-this-section"></a>В этом разделе
 

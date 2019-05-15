@@ -2,12 +2,12 @@
 title: Практическое руководство. Запрос общего числа байтов в наборе папок (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-ms.openlocfilehash: 9aa098ddca2e3ad300913b207c9db5a4976eded7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e69acbd42e703cdaca1d91f4597c980e6fd8508
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051407"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593266"
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Практическое руководство. Запрос общего числа байтов в наборе папок (LINQ) (Visual Basic)
 В этом примере показано, как получить общее число байтов, используемое всеми файлами в указанной папке и всех ее вложенных папках.  
@@ -72,7 +72,7 @@ End Module
  Для получения длины файла запрос вызывает отдельный метод. Это необходимо для обработки возможных исключений, которые могут возникнуть из-за удаления файла в другом потоке после создания объекта <xref:System.IO.FileInfo> вызовом `GetFiles`. Даже если объект <xref:System.IO.FileInfo> уже создан, может возникнуть исключение, так как объект <xref:System.IO.FileInfo> будет пытаться обновить свойство <xref:System.IO.FileInfo.Length%2A>, используя самую последнюю длину при первом обращении к свойству. При помещении этой операции в блок try-catch вне запроса будет выполнено правило исключения использования в запросах операций, которые могут вызвать побочные эффекты. В целом необходимо соблюдать осторожность при перехвате исключений, чтобы убедиться, что приложение не остается в неизвестном состоянии.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, предназначенный для .NET Framework версии 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
+Создайте проект консольного приложения VB.NET, с помощью `Imports` оператор для пространства имен System.Linq.
   
 ## <a name="see-also"></a>См. также
 

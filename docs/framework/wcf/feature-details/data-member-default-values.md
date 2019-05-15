@@ -8,15 +8,15 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: f92fc78aa7645abb742fdb38c360ac6641b1591d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fb9ad627df640e56b5250a2fdd15f5ac0d52df79
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627057"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592592"
 ---
 # <a name="data-member-default-values"></a>Значения членов данных по умолчанию
-В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], типы имеют концепцию *значения по умолчанию*. Например, любой ссылочный тип имеет значение по умолчанию `null`, а значением по умолчанию для целого типа является ноль. Иногда требуется исключить член данных из сериализованных данных, если для него задано значение по умолчанию. Так как этот член имеет значение по умолчанию, нет необходимости сериализовывать фактическое значение; это повышает производительность.  
+В .NET Framework типы имеют концепцию *значения по умолчанию*. Например, любой ссылочный тип имеет значение по умолчанию `null`, а значением по умолчанию для целого типа является ноль. Иногда требуется исключить член данных из сериализованных данных, если для него задано значение по умолчанию. Так как этот член имеет значение по умолчанию, нет необходимости сериализовывать фактическое значение; это повышает производительность.  
   
  Чтобы исключить член из сериализованных данных, задайте для свойства <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> атрибута <xref:System.Runtime.Serialization.DataMemberAttribute> значение `false` (по умолчанию задано значение `true`).  
   
