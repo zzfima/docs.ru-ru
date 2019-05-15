@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Удаление раздела реестра в Visual Basic
+title: Практическое руководство. Удаление раздела реестра в Visual Basic
 ms.date: 07/20/2015
 f1_keywords:
 - vb.DeleteSetting
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - registry [Visual Basic], deleting keys
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
-ms.openlocfilehash: fdb61fee8a790000c53b6c9a0188999bc0cb09ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2e0c8990fcc55bc4208b1c23690ff748b7167002
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840337"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662769"
 ---
-# <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Как выполнить Удаление раздела реестра в Visual Basic
+# <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Практическое руководство. Удаление раздела реестра в Visual Basic
 Методы <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> и <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> можно использовать для удаления разделов реестра.  
   
 ## <a name="procedure"></a>Процедура  
   
 #### <a name="to-delete-a-registry-key"></a>Удаление раздела реестра  
   
--   Для удаления раздела реестра используйте метод `DeleteSubKey`. В этом примере удаляется раздел Software/TestApp в кусте CurrentUser. Можно изменить его в коде на подходящую строку или запросить значение для этого раздела у пользователя.  
+- Для удаления раздела реестра используйте метод `DeleteSubKey`. В этом примере удаляется раздел Software/TestApp в кусте CurrentUser. Можно изменить его в коде на подходящую строку или запросить значение для этого раздела у пользователя.  
   
      [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
@@ -34,20 +34,19 @@ ms.locfileid: "58840337"
   
  При следующих условиях возможно возникновение исключения:  
   
--   Имя раздела — `Nothing` (<xref:System.ArgumentNullException>).  
+- Имя раздела — `Nothing` (<xref:System.ArgumentNullException>).  
   
--   У пользователя нет разрешений на удаление разделов реестра (<xref:System.Security.SecurityException>).  
+- У пользователя нет разрешений на удаление разделов реестра (<xref:System.Security.SecurityException>).  
   
--   Имя раздела превышает ограничение в 255 символов (<xref:System.ArgumentException>).  
+- Имя раздела превышает ограничение в 255 символов (<xref:System.ArgumentException>).  
   
--   Раздел реестра доступен только для чтения (<xref:System.UnauthorizedAccessException>).  
+- Раздел реестра доступен только для чтения (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Обращение к реестру невозможно, если не предоставлены достаточные разрешения времени выполнения (<xref:System.Security.Permissions.RegistryPermission>) или у пользователя нет надлежащих прав доступа (определенных списками управления доступом) для создания или записи параметров. Например, локальное приложение, имеющее разрешение на доступ к коду, может не иметь разрешения операционной системы.  
   
 ## <a name="see-also"></a>См. также
 
-- <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - <xref:Microsoft.Win32.RegistryKey>
 - [Безопасность и реестр](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)

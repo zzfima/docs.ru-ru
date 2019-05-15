@@ -2,12 +2,12 @@
 title: Пример связывания запросов (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: b77de6b1e5bd81ac70165640aecf0d4ce89be03d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8564a2ece7dc09bd3330dc9bdad31689408089cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677364"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598553"
 ---
 # <a name="chaining-queries-example-c"></a>Пример связывания запросов (C#)
 Этот пример основан на предыдущем примере и показывает, что происходит при соединении в цепочку двух запросов, использующих отложенное выполнение и отложенное вычисление.  
@@ -84,7 +84,7 @@ Main: str >GHI!!!<
   
  Следующий раздел учебника иллюстрирует промежуточную материализацию:  
   
--   [Промежуточная материализация (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
+- [Промежуточная материализация (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
   
 ## <a name="see-also"></a>См. также
 

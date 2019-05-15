@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74469948ffe4045e6d367f1f60b8e66dc2a7810d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 64df7a4dc859c5d4035dd640a011a813348a0334
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109802"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650494"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Извлечение ресурсов в приложениях для настольных систем
 При работе с локализованными ресурсами в классических приложениях .NET Framework желательно упаковывать ресурсы для нейтральной или стандартной комбинации языка и региональных параметров в основную сборку и создавать отдельную вспомогательную сборку для каждого языка или каждой комбинации языка и региональных параметров, поддерживаемых вашим приложением. Затем можно использовать класс <xref:System.Resources.ResourceManager> для доступа к именованным ресурсам, как описано в следующем разделе. Если вы решили не внедрять ресурсы в основную и вспомогательные сборки, можно обратиться к двоичным файлам RESOURCES напрямую, как описано в разделе [Извлечение ресурсов из файлов RESOURCES](#from_file) далее в этой статье.  Сведения об извлечении ресурсов в приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] см. на странице [Создание и извлечение ресурсов в приложениях для Магазина Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674) в центре разработки для Windows.  
@@ -34,9 +34,9 @@ ms.locfileid: "59109802"
 ## <a name="retrieving-resources-from-assemblies"></a>Извлечение ресурсов из сборок  
  Класс <xref:System.Resources.ResourceManager> предоставляет доступ к ресурсам во время выполнения. Вы можете использовать метод <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> для извлечения строковых ресурсов и метод <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> или <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> для извлечения нестроковых ресурсов. Каждый метод имеет две перегрузки:  
   
--   Перегрузка, единственным параметром которой является строка с именем ресурса. Метод пытается извлечь этот ресурс для языка и региональных параметров текущего потока. Дополнительные сведения см. в описании методов <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>и <xref:System.Resources.ResourceManager.GetStream%28System.String%29> .  
+- Перегрузка, единственным параметром которой является строка с именем ресурса. Метод пытается извлечь этот ресурс для языка и региональных параметров текущего потока. Дополнительные сведения см. в описании методов <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>и <xref:System.Resources.ResourceManager.GetStream%28System.String%29> .  
   
--   Перегрузка, имеющая два параметра: строка с именем ресурса, а также объект <xref:System.Globalization.CultureInfo> , представляющий язык и региональные параметры, для которых требуется извлечь ресурс. Если не удается найти набор ресурсов для данной комбинации языка и региональных параметров, диспетчер ресурсов использует резервные правила для получения соответствующего ресурса. Дополнительные сведения см. в описании методов <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>и <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> .  
+- Перегрузка, имеющая два параметра: строка с именем ресурса, а также объект <xref:System.Globalization.CultureInfo> , представляющий язык и региональные параметры, для которых требуется извлечь ресурс. Если не удается найти набор ресурсов для данной комбинации языка и региональных параметров, диспетчер ресурсов использует резервные правила для получения соответствующего ресурса. Дополнительные сведения см. в описании методов <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>и <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> .  
   
  Диспетчер ресурсов использует процесс резервных ресурсов, чтобы управлять тем, как приложение извлекает ресурсы, связанные с языком и региональными параметрами. Дополнительные сведения см. в разделе "Процесс использования резервных ресурсов" статьи [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Сведения о создании экземпляра объекта <xref:System.Resources.ResourceManager> см. в разделе "Создание экземпляров объекта ResourceManager" статьи о классе <xref:System.Resources.ResourceManager> .  
   

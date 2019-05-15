@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Значения даты и времени кругового пути
+title: Практическое руководство. Значения даты и времени кругового пути
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0aef9a1c81172cda9b6df4574edb331e0ed137ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9eb9eabe006dd10b0c36d0fb477637a519853ef2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340611"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633832"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>Как выполнить Значения даты и времени кругового пути
+# <a name="how-to-round-trip-date-and-time-values"></a>Практическое руководство. Значения даты и времени кругового пути
 Во многих приложениях значение даты и времени предназначено для однозначного определения одного момента времени. В этой статье показано, как правильно сохранять и восстанавливать значения <xref:System.DateTime> и <xref:System.DateTimeOffset>, а также значения времени с информацией о часовом поясе, чтобы восстановленное значение определяло то же время, что и сохраненное значение.  
   
 ### <a name="to-round-trip-a-datetime-value"></a>Выполнение цикла обработки значения DateTime  
@@ -83,21 +83,21 @@ ms.locfileid: "59340611"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этих примеров требуются:  
   
--   Импорт следующих пространств имен с помощью операторов C# `using` или операторов Visual Basic `Imports`:  
+- Импорт следующих пространств имен с помощью операторов C# `using` или операторов Visual Basic `Imports`:  
   
-    -   <xref:System> (только для C#);  
+    - <xref:System> (только для C#);  
   
-    -   <xref:System.Globalization?displayProperty=nameWithType>.  
+    - <xref:System.Globalization?displayProperty=nameWithType>.  
   
-    -   <xref:System.IO?displayProperty=nameWithType>.  
+    - <xref:System.IO?displayProperty=nameWithType>.  
   
-    -   <xref:System.Runtime.Serialization?displayProperty=nameWithType>.  
+    - <xref:System.Runtime.Serialization?displayProperty=nameWithType>.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
+    - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
   
--   Ссылка на библиотеку System.Core.dll.  
+- Ссылка на библиотеку System.Core.dll.  
   
--   Все примеры кода, кроме класса `DateInTimeZone`, нужно включить в класс или модуль Visual Basic, упаковать в методы и вызывать из метода `Main`.  
+- Все примеры кода, кроме класса `DateInTimeZone`, нужно включить в класс или модуль Visual Basic, упаковать в методы и вызывать из метода `Main`.  
   
 ## <a name="see-also"></a>См. также
 

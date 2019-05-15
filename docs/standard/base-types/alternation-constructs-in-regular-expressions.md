@@ -18,21 +18,21 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 6d9761d2e9904e865e7f6a17526327e1b04a1597
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 756d63be456dce10ca9e95963ed25602e6f4aec1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142935"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634777"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Конструкции изменения в регулярных выражениях
 <a name="top"></a> Конструкции изменения модифицируют регулярное выражение, включая сопоставление по принципу «либо/или» или условное сопоставление. Платформа .NET поддерживает три указанные далее конструкции изменения.  
   
--   [Сопоставление шаблонов с помощью |](#Either_Or)  
+- [Сопоставление шаблонов с помощью |](#Either_Or)  
   
--   [Условное сопоставление (?(expression) yes|no)](#Conditional_Expr)  
+- [Условное сопоставление (?(expression) yes|no)](#Conditional_Expr)  
   
--   [Условное сопоставление на основе действительной захватываемой группы](#Conditional_Group)  
+- [Условное сопоставление на основе действительной захватываемой группы](#Conditional_Group)  
   
 <a name="Either_Or"></a>   
 ## <a name="pattern-matching-with-124"></a>Сопоставление шаблонов с помощью |  
@@ -120,7 +120,7 @@ ms.locfileid: "53142935"
   
  Возможные интерпретации шаблона регулярного выражения `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` показаны в следующей таблице.  
   
-|Шаблон|Описание:|  
+|Шаблон|Описание|  
 |-------------|-----------------|  
 |`\b`|Начало на границе слова.|  
 |`(?<n2>\d{2}-)?`|Сопоставьте нулевое или единичное вхождение двух цифр с дефисом. Установка для группы имени `n2`.|  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: c4122237cccc154d9dc9034ea047f5f44a4b1134
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 665fdd3d19008e7725983ea621a64514238639ce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545745"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599959"
 ---
 # <a name="objects-c-programming-guide"></a>Объекты (Руководство по программированию на C#)
 Определение класса или структуры подобно чертежу, на котором указаны действия, выполняемые типом. В сущности, объект является блоком памяти, выделенной и настроенной в соответствии с чертежом. Программа может создать множество объектов одного класса. Объекты также называют экземплярами. Они могут храниться либо в именованной переменной, либо в массиве или коллекции. Клиентский код — это код, использующий эти переменные для вызова методов и доступа к открытым свойствам объекта. В объектно-ориентированном языке, таком как C#, стандартная программа состоит из нескольких динамически взаимодействующих объектов.  
@@ -38,28 +38,28 @@ ms.locfileid: "58545745"
 ## <a name="object-identity-vs-value-equality"></a>Идентификация объектов и равенство значений  
  Сравнивая два объекта на предмет равенства, сначала необходимо определить, нужно ли узнать, представляют ли две переменные один объект в памяти или значения одного или нескольких их полей являются равными. Если вы планируете сравнить значения, следует решить, являются ли объекты экземплярами типов значений (структурами) или ссылочными типами (классами, делегатами, массивами).  
   
--   Чтобы определить, ссылаются ли два экземпляра класса на одно расположение в памяти (то есть имеют одинаковый *идентификатор*), воспользуйтесь статическим методом <xref:System.Object.Equals%2A>. (<xref:System.Object?displayProperty=nameWithType> является неявным базовым классом для всех типов значений и ссылочных типов, включая структуры и классы, определенные пользователем.)  
+- Чтобы определить, ссылаются ли два экземпляра класса на одно расположение в памяти (то есть имеют одинаковый *идентификатор*), воспользуйтесь статическим методом <xref:System.Object.Equals%2A>. (<xref:System.Object?displayProperty=nameWithType> является неявным базовым классом для всех типов значений и ссылочных типов, включая структуры и классы, определенные пользователем.)  
   
--   Чтобы определить, имеют ли поля экземпляра в двух экземплярах структуры одинаковые значения, воспользуйтесь методом <xref:System.ValueType.Equals%2A?displayProperty=nameWithType>. Так как все структуры неявно наследуются от <xref:System.ValueType?displayProperty=nameWithType>, метод можно вызвать непосредственно в объекте, как показано в следующем примере:  
+- Чтобы определить, имеют ли поля экземпляра в двух экземплярах структуры одинаковые значения, воспользуйтесь методом <xref:System.ValueType.Equals%2A?displayProperty=nameWithType>. Так как все структуры неявно наследуются от <xref:System.ValueType?displayProperty=nameWithType>, метод можно вызвать непосредственно в объекте, как показано в следующем примере:  
   
  [!code-csharp[csProgGuideStatements#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#32)]  
   
  В реализации <xref:System.ValueType?displayProperty=nameWithType> `Equals` используется отражение, так как необходимо определить поля, имеющиеся в любой структуре. При создании собственных структур переопределите метод `Equals` для предоставления эффективного алгоритма равенства, соответствующего вашему типу.  
   
--   Чтобы определить, равны ли значения полей в двух экземплярах класса, можно воспользоваться методом <xref:System.Object.Equals%2A> или [оператором ==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-). Однако их следует использовать, только если они переопределены или перегружены классом с целью предоставления пользовательского определение равенства для объектов этого типа. Класс может также реализовывать интерфейс <xref:System.IEquatable%601> или интерфейс <xref:System.Collections.Generic.IEqualityComparer%601>. Оба интерфейса предоставляют методы, которые можно использовать для проверки равенства значений. При создании собственных классов, переопределяющих `Equals`, следуйте рекомендациям из [практического руководства по определению равенства значений для типа](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) и раздела <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
+- Чтобы определить, равны ли значения полей в двух экземплярах класса, можно воспользоваться методом <xref:System.Object.Equals%2A> или [оператором ==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-). Однако их следует использовать, только если они переопределены или перегружены классом с целью предоставления пользовательского определение равенства для объектов этого типа. Класс может также реализовывать интерфейс <xref:System.IEquatable%601> или интерфейс <xref:System.Collections.Generic.IEqualityComparer%601>. Оба интерфейса предоставляют методы, которые можно использовать для проверки равенства значений. При создании собственных классов, переопределяющих `Equals`, следуйте рекомендациям из [практического руководства по определению равенства значений для типа](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) и раздела <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения:  
   
--   [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)  
   
--   [Структуры](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [Структуры](../../../csharp/programming-guide/classes-and-structs/structs.md)  
   
--   [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
--   [События](../../../csharp/programming-guide/events/index.md)  
+- [События](../../../csharp/programming-guide/events/index.md)  
   
 ## <a name="see-also"></a>См. также
 

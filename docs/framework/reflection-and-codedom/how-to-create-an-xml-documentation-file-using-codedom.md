@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание XML-файла документации с использованием CodeDOM
+title: Практическое руководство. Создание XML-файла документации с использованием CodeDOM
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4088fe35d919cd579ed9f9a6275db8bb88300fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9ae041ae278dc6f2423a679dab8982f4ccc35620
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297529"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592497"
 ---
-# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Как выполнить Создание XML-файла документации с использованием CodeDOM
+# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Практическое руководство. Создание XML-файла документации с использованием CodeDOM
 CodeDOM можно использовать для создания кода, создающего XML-документацию. Этот процесс предполагает создание графа CodeDOM, содержащего комментарии XML-документации, создание кода, а также компиляцию созданного кода с параметром компилятора, при выборе которого в итоге создается XML-документация.  
   
 ### <a name="to-create-a-codedom-graph-that-contains-xml-documentation-comments"></a>Создание графа CodeDOM, содержащего комментарии XML-документации  
@@ -77,7 +77,7 @@ CodeDOM можно использовать для создания кода, с
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
--   Для выполнения этого кода должно быть установлено разрешение `FullTrust`.  
+- Для выполнения этого кода должно быть установлено разрешение `FullTrust`.  
   
 ## <a name="see-also"></a>См. также
 

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Копирование файлов в каталог с использованием шаблона в Visual Basic
+title: Практическое руководство. Копирование файлов в каталог с использованием шаблона в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.FileSystem.CopyFile method, copying files [Visual Basic]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
-ms.openlocfilehash: 437a7058abd9ae167fcde15d4bddbe69bc64b7e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 15bec7c9604b243c586b393d71007b02917d3a6e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310776"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628944"
 ---
-# <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Как выполнить Копирование файлов в каталог с использованием шаблона в Visual Basic
+# <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Практическое руководство. Копирование файлов в каталог с использованием шаблона в Visual Basic
 Метод <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> возвращает доступную только для чтения коллекцию строк, представляющих имена путей для файлов. Для указания определенного шаблона можно использовать параметр `wildCards` .  
   
  Если соответствующие файлы не найдены, возвращается пустая коллекция.  
@@ -43,19 +43,19 @@ ms.locfileid: "59310776"
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  При следующих условиях возможно возникновение исключения:  
   
--   Путь является недопустимым, так как он представляет собой строку нулевой длины (пустую строку), либо содержит только пробелы, либо содержит недопустимые знаки, либо представляет собой путь к устройству (начинается с символов \\\\.\\) (<xref:System.ArgumentException>).  
+- Путь является недопустимым, так как он представляет собой строку нулевой длины (пустую строку), либо содержит только пробелы, либо содержит недопустимые знаки, либо представляет собой путь к устройству (начинается с символов \\\\.\\) (<xref:System.ArgumentException>).  
   
--   Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).  
+- Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Каталог не существует (<xref:System.IO.DirectoryNotFoundException>).  
+- Каталог не существует (<xref:System.IO.DirectoryNotFoundException>).  
   
--   Каталог указывает на существующий файл (<xref:System.IO.IOException>).  
+- Каталог указывает на существующий файл (<xref:System.IO.IOException>).  
   
--   Длина пути превышает максимальную длину, определенную в системе (<xref:System.IO.PathTooLongException>).  
+- Длина пути превышает максимальную длину, определенную в системе (<xref:System.IO.PathTooLongException>).  
   
--   Имя файла или каталога в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).  
+- Имя файла или каталога в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).  
   
--   У пользователя отсутствуют необходимые разрешения на просмотр пути (<xref:System.Security.SecurityException>). У пользователя отсутствуют необходимые разрешения (<xref:System.UnauthorizedAccessException>).  
+- У пользователя отсутствуют необходимые разрешения на просмотр пути (<xref:System.Security.SecurityException>). У пользователя отсутствуют необходимые разрешения (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>См. также
 

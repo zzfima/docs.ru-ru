@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Запрос веб-страницы и получение результатов в виде потока
+title: Практическое руководство. Запрос веб-страницы и получение результатов в виде потока
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d32b7f35-29d8-4fb7-ad71-d219edc5e359
-ms.openlocfilehash: 23c094f0a3f528750c9589dbc99a0ada86236967
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 74cb739d381c0b1422d9277be8c3c338a46f8fba
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097204"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647422"
 ---
-# <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a>Как выполнить Запрос веб-страницы и получение результатов в виде потока
+# <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a>Практическое руководство. Запрос веб-страницы и получение результатов в виде потока
 В этом примере показано, как запросить веб-страницу и получить результаты в виде потока.  
   
 ## <a name="example"></a>Пример  
@@ -34,7 +34,7 @@ response.Close()
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   Ссылки на пространства имен <xref:System.IO> и <xref:System.Net>.  
+- Ссылки на пространства имен <xref:System.IO> и <xref:System.Net>.  
   
 ## <a name="see-also"></a>См. также
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8d0574c7e0910a658f1dc80d8394f55b472c31a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314013"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634555"
 ---
 # <a name="composite-formatting"></a>Составное форматирование
 
@@ -126,11 +126,11 @@ ms.locfileid: "59314013"
   
 3. Если значение реализует интерфейс <xref:System.IFormattable>, вызывается метод <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> этого интерфейса. Методу передается значение *formatString* (при его наличии в элементе форматирования) или значение `null` (в случае его отсутствия). Аргумент <xref:System.IFormatProvider> определяется следующим образом:  
   
-    -   Для числового значения, если вызывается метод составного форматирования с аргументом <xref:System.IFormatProvider>, не равным null, то среда выполнения запрашивает объект <xref:System.Globalization.NumberFormatInfo> из метода <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. Если не удалось предоставить объект, если аргумент имеет значение `null` или метод составного форматирования не имеет параметра <xref:System.IFormatProvider>, то используется объект <xref:System.Globalization.NumberFormatInfo> для языка и региональных параметров текущего потока.  
+    - Для числового значения, если вызывается метод составного форматирования с аргументом <xref:System.IFormatProvider>, не равным null, то среда выполнения запрашивает объект <xref:System.Globalization.NumberFormatInfo> из метода <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. Если не удалось предоставить объект, если аргумент имеет значение `null` или метод составного форматирования не имеет параметра <xref:System.IFormatProvider>, то используется объект <xref:System.Globalization.NumberFormatInfo> для языка и региональных параметров текущего потока.  
   
-    -   Для значения даты и времени, если вызывается метод составного форматирования с аргументом <xref:System.IFormatProvider>, не равным null, то среда выполнения запрашивает объект <xref:System.Globalization.DateTimeFormatInfo> из метода <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. Если не удалось предоставить объект, если аргумент имеет значение `null` или метод составного форматирования не имеет параметра <xref:System.IFormatProvider>, то используется объект <xref:System.Globalization.DateTimeFormatInfo> для языка и региональных параметров текущего потока.  
+    - Для значения даты и времени, если вызывается метод составного форматирования с аргументом <xref:System.IFormatProvider>, не равным null, то среда выполнения запрашивает объект <xref:System.Globalization.DateTimeFormatInfo> из метода <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. Если не удалось предоставить объект, если аргумент имеет значение `null` или метод составного форматирования не имеет параметра <xref:System.IFormatProvider>, то используется объект <xref:System.Globalization.DateTimeFormatInfo> для языка и региональных параметров текущего потока.  
   
-    -   Для объектов других типов, если метод составного форматирования вызывается с аргументом <xref:System.IFormatProvider>, то его значение передается непосредственно в реализацию <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>. В противном случае `null` передается в реализацию <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  
+    - Для объектов других типов, если метод составного форматирования вызывается с аргументом <xref:System.IFormatProvider>, то его значение передается непосредственно в реализацию <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>. В противном случае `null` передается в реализацию <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  
   
 4. Вызывается метод `ToString` без параметров, который переопределяет <xref:System.Object.ToString?displayProperty=nameWithType> или наследует поведение базового класса. В этом случае строка формата, указанная в компоненте *formatString* в элементе форматирования (при его наличии), игнорируется.  
   
