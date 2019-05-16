@@ -2,12 +2,12 @@
 title: Сопоставление JSON и XML.
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: 075f85887f99708dd1f3479bf0b036203886af71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef5eaac8fc75149ac518ce322808a84bbab5506b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918779"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636437"
 ---
 # <a name="mapping-between-json-and-xml"></a>Сопоставление JSON и XML.
 Модули чтения и записи, создаваемые фабрикой <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>, обеспечивают интерфейс API XML к содержимому в формате JavaScript Object Notation (JSON, объектной нотации JavaScript). Формат JSON предусматривает кодирование данных с использованием подмножества объектных литералов JavaScript. Модули чтения и записи, создаваемые этой фабрикой также используются при содержимое JSON отправленных или полученных приложений Windows Communication Foundation (WCF), с помощью <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> или <xref:System.ServiceModel.WebHttpBinding>.

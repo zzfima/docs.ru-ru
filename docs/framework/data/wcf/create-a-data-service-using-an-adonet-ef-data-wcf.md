@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: b2adf4fe0d510f65db5bded715f084a4d7e016b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9b2c1077cf3323a7d5b69bee6dff7e6f9611818
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935776"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634129"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Практическое руководство. Создание службы данных с использованием источника данных ADO.NET Entity Framework (службы данных WCF)
 
 Службы данных WCF предоставляет данные сущности в виде службы данных. Эти данные сущностей предоставляются [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], если источником данных является реляционная база данных. В этом разделе показано, как создать [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-на основе модели данных в Visual Studio веб-приложения, основанную на существующей базы данных и использовать эту модель данных для создания новой службы данных.
 
-[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Также предоставляет средство командной строки, позволяющее создать [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] модели за пределами проекта Visual Studio. Дополнительные сведения см. в разделе [Как Использование EdmGen.exe для создания файлов модели и сопоставления](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).
+[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Также предоставляет средство командной строки, позволяющее создать [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] модели за пределами проекта Visual Studio. Дополнительные сведения см. в разделе [Практическое руководство. Использование EdmGen.exe для создания файлов модели и сопоставления](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).
 
 ## <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>Добавление модели Entity Framework на основе существующей базы данных в существующее веб-приложение
 

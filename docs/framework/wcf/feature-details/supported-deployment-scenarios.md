@@ -2,12 +2,12 @@
 title: Поддерживаемые сценарии развертывания - WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: c9b56bfd95717202d4ffade443cb88d1884a453d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f1a95e5448d2cc8f1ac472c3b1735f58460e2be6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050796"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639132"
 ---
 # <a name="supported-deployment-scenarios"></a>Поддерживаемые сценарии развертывания
 
@@ -35,7 +35,7 @@ WCF поддерживает подмножество функций в прил
 
 Службы рабочего процесса требуют наличия разрешений полного доверия, их невозможно использовать в частично доверенных приложениях.
 
-Дополнительные сведения см. в разделе [Как Использование среднего уровня доверия в ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=84603).
+Дополнительные сведения см. в разделе [Практическое руководство. Использование среднего уровня доверия в ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=84603).
 
 ## <a name="partial-trust-on-the-client"></a>Частичное доверие на клиенте
 

@@ -2,12 +2,12 @@
 title: 'Циклы: выражение while...do'
 description: См. в разделе как while... сделать выражение используется для выполнения итерации (в цикле), пока заданное условие теста истинно.
 ms.date: 05/16/2016
-ms.openlocfilehash: d2a77e0bfefe3b6b026012e6b2938ba670326bcf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5823ace27348ff4d4397a726bf2254f8fa0ee09b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904024"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641833"
 ---
 # <a name="loops-whiledo-expression"></a>Циклы: выражение while...do
 

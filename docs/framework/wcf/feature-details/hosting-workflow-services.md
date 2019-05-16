@@ -2,12 +2,12 @@
 title: Размещение службы рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: dbb5e9b687a735376d720b83607fc67350cd429f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 07e4f7779c06e6c95b45d59bcdd0890fb5a9cf55
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613327"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636143"
 ---
 # <a name="hosting-workflow-services"></a>Размещение службы рабочего процесса
 Для обработки входящих сообщений служба рабочих процессов должна быть размещена. Службы рабочих процессов используют инфраструктуру обмена сообщениями WCF и поэтому также требуют размещения. Подобно службам WCF службы рабочего процесса могут размещаться в любом управляемом приложении, в группе Internet Information Services (IIS), или в Windows процесса активации Services (WAS). Кроме того службы рабочего процесса могут размещаться в фабрике приложений Windows Server. Дополнительные сведения о Windows Server App Fabric см. в разделе [документации по Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric Hosting Features](https://go.microsoft.com/fwlink/?LinkId=196494), и [основы размещения AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495). Дополнительные сведения о различных способах размещения WCF служб см. в разделе [размещение служб](../../../../docs/framework/wcf/hosting-services.md).

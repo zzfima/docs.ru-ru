@@ -1,15 +1,13 @@
 ---
 title: Обзор пошаговых руководств и технических описаний по началу работы
 description: Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows | Пошаговые руководства и Технический обзор работы
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 2202e2f972951e4074ed1941f0a0cfe352ab4b85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f5c1ca2b78d27b275845ada72d252450761f5091
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012417"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638969"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Обзор пошаговых руководств и технических описаний по началу работы
 

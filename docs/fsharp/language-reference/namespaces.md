@@ -2,12 +2,12 @@
 title: Пространства имен
 description: Узнайте, как F# пространства имен позволяет упорядочить код по областям соответствующей функциональности, предоставляя возможность присоединить имя к группированию элементов программы.
 ms.date: 12/08/2018
-ms.openlocfilehash: 526d7a07e4804751811c15fa91b0c74c1954d591
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b315d654dad0d36e3584564ad027c68fb3c94cce
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666395"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645270"
 ---
 # <a name="namespaces"></a>Пространства имен
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: 245dae4af7103b7fffa6b567f83a6f10504f9473
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fddb59fc32feabf708e209ac4a5e78a14585fa66
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609698"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637551"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Практическое руководство. Форматирование элемента управления DataGrid в формах Windows Forms с помощью конструктора
 
@@ -33,7 +33,7 @@ ms.locfileid: "64609698"
   
  На первом этапе форматирования сетки данных, можно задать свойства <xref:System.Windows.Forms.DataGrid> сам. Эти параметры цветов и форматирования составляют основу, из которого затем можно внести изменения в зависимости от данных таблиц и столбцов, отображаемых.  
   
- Следующая процедура требуется **приложения Windows** проекта с формой, содержащей <xref:System.Windows.Forms.DataGrid> элемента управления. Сведения о настройке такого проекта см. в разделе [как: Создайте проект приложения Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) и [как: Добавление элементов управления в Windows Forms](how-to-add-controls-to-windows-forms.md). В Visual Studio 2005 <xref:System.Windows.Forms.DataGrid> элемент управления отсутствует в **элементов** по умолчанию. Дополнительные сведения см. в разделе [Как Добавление элементов на панель инструментов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).  
+ Следующая процедура требуется **приложения Windows** проекта с формой, содержащей <xref:System.Windows.Forms.DataGrid> элемента управления. Сведения о настройке такого проекта см. в разделе [как: Создайте проект приложения Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) и [как: Добавление элементов управления в Windows Forms](how-to-add-controls-to-windows-forms.md). В Visual Studio 2005 <xref:System.Windows.Forms.DataGrid> элемент управления отсутствует в **элементов** по умолчанию. Дополнительные сведения см. в разделе [Практическое руководство. Добавление элементов на панель инструментов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).  
   
 > [!NOTE]
 >  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -73,7 +73,7 @@ ms.locfileid: "64609698"
     > [!NOTE]
     >  При настройке цветов элементов управления, это можно сделать элемент управления недоступен из-за выбор неудачных цветов (например, красный и зеленый). Использование цветов, доступных на **системных цветов** палитры модулей, чтобы избежать этой проблемы.
 
-     Следующая процедура требуется <xref:System.Windows.Forms.DataGrid> элемент управления привязан к таблице данных. Дополнительные сведения см. в разделе [Как Привязка элемента управления DataGrid в Windows Forms к источнику данных](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).
+     Следующая процедура требуется <xref:System.Windows.Forms.DataGrid> элемент управления привязан к таблице данных. Дополнительные сведения см. в разделе [Практическое руководство. Привязка элемента управления DataGrid в Windows Forms к источнику данных](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).
 
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a>Если требуется задать стиль таблицы и столбца таблицы данных во время разработки
 

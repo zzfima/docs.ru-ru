@@ -3,12 +3,12 @@ title: Копирование и обновление выражений зап�
 description: Вы можете научиться писать «копировать и обновить записи выражение» копирует существующих записей, обновления полей и возвращает обновленной записи.
 author: ChrSteinert
 ms.date: 06/04/2016
-ms.openlocfilehash: 5f9b13ebf6c456aff73872b7522d7670c068dd88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7657b0295c9437890baea258295f9e9ab10073dd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766055"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645583"
 ---
 # <a name="copy-and-update-record-expressions"></a>Копирование и обновление выражений записей
 
