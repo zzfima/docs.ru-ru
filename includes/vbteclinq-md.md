@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 667a4c437c43ca4427c06a7c18f482d831ef30ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c51854bfa3ff84994e8b619b1227ccdc42253d9f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701546"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633229"
 ---
-<span data-ttu-id="5e398-101">LINQ</span><span class="sxs-lookup"><span data-stu-id="5e398-101">LINQ</span></span>
+<span data-ttu-id="2cf7c-101">LINQ</span><span class="sxs-lookup"><span data-stu-id="2cf7c-101">LINQ</span></span>

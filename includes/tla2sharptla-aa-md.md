@@ -1,1 +1,9 @@
-<span data-ttu-id="e4525-101">Active Accessibility</span><span class="sxs-lookup"><span data-stu-id="e4525-101">Active Accessibility</span></span>
+---
+ms.openlocfilehash: e7d24ebd9010ae72b29d82b5ddc4df316d6a1a96
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65669096"
+---
+<span data-ttu-id="3a597-101">Active Accessibility</span><span class="sxs-lookup"><span data-stu-id="3a597-101">Active Accessibility</span></span>

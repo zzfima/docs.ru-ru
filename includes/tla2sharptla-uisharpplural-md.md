@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 8cd70ee7a5cc24f3b779942cb0a1ba81b6934817
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fca57010a5b3decffd947726f98875a45b80156
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786165"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671251"
 ---
-<span data-ttu-id="2b804-101">Пользовательские интерфейсы</span><span class="sxs-lookup"><span data-stu-id="2b804-101">UIs</span></span>
+<span data-ttu-id="4dbe3-101">Пользовательские интерфейсы</span><span class="sxs-lookup"><span data-stu-id="4dbe3-101">UIs</span></span>

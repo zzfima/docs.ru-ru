@@ -1,1 +1,9 @@
-<span data-ttu-id="bf2d5-101">Microsoft Build Engine (MSBuild)</span><span class="sxs-lookup"><span data-stu-id="bf2d5-101">Microsoft build engine (MSBuild)</span></span>
+---
+ms.openlocfilehash: 86e3bd6b00a75cb2ef55ee4974450d37d9bff0e7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671098"
+---
+<span data-ttu-id="fed46-101">Microsoft Build Engine (MSBuild)</span><span class="sxs-lookup"><span data-stu-id="fed46-101">Microsoft build engine (MSBuild)</span></span>
