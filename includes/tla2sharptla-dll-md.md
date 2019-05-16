@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 3508842bf9fb8d593a096c9d3872cc797fab996b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 172e98c3fc59ef9c023181815047a9035d2433ec
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007250"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672127"
 ---
-<span data-ttu-id="ace57-101">DLL</span><span class="sxs-lookup"><span data-stu-id="ace57-101">DLL</span></span>
+<span data-ttu-id="e41f6-101">DLL</span><span class="sxs-lookup"><span data-stu-id="e41f6-101">DLL</span></span>

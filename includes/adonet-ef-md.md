@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 17859dbc6021f8f7bc9bb92456aff90e86ace784
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: daca11bf927260ee7362f122d1537598d6a49e0e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667275"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634121"
 ---
-<span data-ttu-id="4e1ee-101">Entity Framework</span><span class="sxs-lookup"><span data-stu-id="4e1ee-101">Entity Framework</span></span>
+<span data-ttu-id="2101b-101">Entity Framework</span><span class="sxs-lookup"><span data-stu-id="2101b-101">Entity Framework</span></span>

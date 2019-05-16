@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: e11027802ee98aa64fcae93194be81fc102dbd84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53d0f3e2af5798d2c553551ffdfe4d7a00f98a16
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723903"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671851"
 ---
-<span data-ttu-id="2c962-101">Проигрыватель Windows Media (Microsoft)</span><span class="sxs-lookup"><span data-stu-id="2c962-101">Microsoft Windows Media Player</span></span>
+<span data-ttu-id="44e6e-101">Проигрыватель Windows Media (Microsoft)</span><span class="sxs-lookup"><span data-stu-id="44e6e-101">Microsoft Windows Media Player</span></span>

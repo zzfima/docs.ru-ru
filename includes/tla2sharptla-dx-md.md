@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 01f5dfe65e3b3c4b20e46d997653b845fa54fa49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 81c05fafed15d907b39ffa4d25c3e93810c2196e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773145"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65670049"
 ---
-<span data-ttu-id="ca48d-101">DirectX</span><span class="sxs-lookup"><span data-stu-id="ca48d-101">DirectX</span></span>
+<span data-ttu-id="f833e-101">DirectX</span><span class="sxs-lookup"><span data-stu-id="f833e-101">DirectX</span></span>
