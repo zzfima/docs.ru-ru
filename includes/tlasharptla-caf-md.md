@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: ac30929f9de43d30e0361be0220e05d2cc5658c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3cc8ddffbbdfeebf526b82149322326c6bf75728
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777355"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672364"
 ---
-<span data-ttu-id="7f1a3-101">Microsoft Annotations Framework</span><span class="sxs-lookup"><span data-stu-id="7f1a3-101">Microsoft Annotations Framework</span></span>
+<span data-ttu-id="d02c4-101">Microsoft Annotations Framework</span><span class="sxs-lookup"><span data-stu-id="d02c4-101">Microsoft Annotations Framework</span></span>

@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 550a0919746f217dacbdc6de5f28416182096510
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cc08c7a498873f3af4f7936bc85c9d220388f77c
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757038"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671625"
 ---
-<span data-ttu-id="a0d4a-101">Приложение браузера XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="a0d4a-101">XAML Browser Application (WPF)</span></span>
+<span data-ttu-id="09d68-101">Приложение браузера XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="09d68-101">XAML Browser Application (WPF)</span></span>
