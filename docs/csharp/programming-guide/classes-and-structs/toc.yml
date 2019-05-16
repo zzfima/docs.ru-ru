@@ -6,90 +6,93 @@
     - name: Объекты
       href: objects.md
     - name: Структуры
-      href: structs.md
       items:
+        - name: Обзор
+          href: structs.md
         - name: Использование структур
           href: using-structs.md
     - name: Наследование
       href: inheritance.md
     - name: Полиморфизм
-      href: polymorphism.md
       items:
+        - name: Обзор
+          href: polymorphism.md
         - name: Управление версиями с помощью ключевых слов Override и New
           href: versioning-with-the-override-and-new-keywords.md
         - name: Использование ключевых слов Override и New
           href: knowing-when-to-use-override-and-new-keywords.md
-        - name: Как выполнить Переопределение метода ToString
+        - name: Практическое руководство. Переопределение метода ToString
           href: how-to-override-the-tostring-method.md
-    - name: Абстрактные и запечатанные классы и члены классов
-      href: abstract-and-sealed-classes-and-class-members.md
-      items:
-        - name: Как выполнить Определение абстрактных свойств
-          href: how-to-define-abstract-properties.md
-    - name: Статические классы и члены статических классов
-      href: static-classes-and-static-class-members.md
     - name: Участники
-      href: members.md
-    - name: Модификаторы доступа
-      href: access-modifiers.md
-    - name: Поля
-      href: fields.md
-    - name: Константы
-      href: constants.md
       items:
-        - name: 'Как выполнить Определение констант в C#'
+        - name: Обзор участников
+          href: members.md
+        - name: Абстрактные и запечатанные классы и члены классов
+          href: abstract-and-sealed-classes-and-class-members.md
+        - name: Статические классы и члены статических классов
+          href: static-classes-and-static-class-members.md
+        - name: Модификаторы доступа
+          href: access-modifiers.md
+        - name: Поля
+          href: fields.md
+        - name: Константы
+          href: constants.md
+        - name: Практическое руководство. Определение абстрактных свойств
+          href: how-to-define-abstract-properties.md
+        - name: 'Практическое руководство. Определение констант в C#'
           href: how-to-define-constants.md
     - name: Свойства
-      href: properties.md
       items:
+        - name: Общие сведения о свойствах
+          href: properties.md
         - name: Использование свойств
           href: using-properties.md
         - name: Свойства интерфейса
           href: interface-properties.md
         - name: Ограничение доступности методов доступа
           href: restricting-accessor-accessibility.md
-        - name: Как выполнить Объявление и использование свойств чтения и записи
+        - name: Практическое руководство. Объявление и использование свойств чтения и записи
           href: how-to-declare-and-use-read-write-properties.md
         - name: Автоматически реализуемые свойства
           href: auto-implemented-properties.md
-        - name: Как выполнить Реализации облегченного класса с автоматически реализуемыми свойствами
+        - name: Практическое руководство. Реализации облегченного класса с автоматически реализуемыми свойствами
           href: how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
     - name: Методы
-      href: methods.md
       items:
+        - name: Обзор методов
+          href: methods.md
         - name: Локальные функции
           href: local-functions.md
         - name: Возвращаемые ссылочные значения и ссылочные локальные переменные
           href: ref-returns.md
-        - name: Передача параметров
-          href: passing-parameters.md
+        - name: Параметры
           items:
+            - name: Передача параметров
+              href: passing-parameters.md
             - name: Передача параметров типа значения
               href: passing-value-type-parameters.md
             - name: Передача параметров ссылочного типа
               href: passing-reference-type-parameters.md
-            - name: Как выполнить Определение различия между передачей структуры и ссылки класса в метод
+            - name: Практическое руководство. Определение различия между передачей структуры и ссылки класса в метод
               href: how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
         - name: Неявно типизированные локальные переменные
           href: implicitly-typed-local-variables.md
-          items:
-            - name: Как выполнить Использование явно введенных локальных переменных и массивов в выражении запроса
-              href: how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
+        - name: Практическое руководство. Использование явно введенных локальных переменных и массивов в выражении запроса
+          href: how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
         - name: Методы расширения
           href: extension-methods.md
-          items:
-            - name: Как выполнить Реализация и вызов пользовательского метода расширения
-              href: how-to-implement-and-call-a-custom-extension-method.md
-            - name: Как выполнить Создание нового метода для перечисления
-              href: how-to-create-a-new-method-for-an-enumeration.md
+        - name: Практическое руководство. Реализация и вызов пользовательского метода расширения
+          href: how-to-implement-and-call-a-custom-extension-method.md
+        - name: Практическое руководство. Создание нового метода для перечисления
+          href: how-to-create-a-new-method-for-an-enumeration.md
         - name: Именованные и необязательные аргументы
           href: named-and-optional-arguments.md
-          items:
-            - name: Как выполнить Использование именованных и необязательных аргументов в программировании приложений Office
-              href: how-to-use-named-and-optional-arguments-in-office-programming.md
+        - name: Практическое руководство. Использование именованных и необязательных аргументов в программировании приложений Office
+          href: how-to-use-named-and-optional-arguments-in-office-programming.md
     - name: Конструкторы
-      href: constructors.md
       items:
+        - name: Обзор конструкторов
+          href: constructors.md
         - name: Использование конструкторов
           href: using-constructors.md
         - name: Конструкторы экземпляров
@@ -98,23 +101,21 @@
           href: private-constructors.md
         - name: Статические конструкторы
           href: static-constructors.md
-        - name: Как выполнить Создание конструктора копий
+        - name: Практическое руководство. Создание конструктора копий
           href: how-to-write-a-copy-constructor.md
     - name: Методы завершения
       href: destructors.md
     - name: Инициализаторы объектов и коллекций
       href: object-and-collection-initializers.md
-      items:
-        - name: Как выполнить Инициализация объектов с помощью инициализатора объектов
-          href: how-to-initialize-objects-by-using-an-object-initializer.md
-        - name: Как выполнить Инициализация словаря с помощью инициализатора коллекций
-          href: how-to-initialize-a-dictionary-with-a-collection-initializer.md
+    - name: Практическое руководство. Инициализация объектов с помощью инициализатора объектов
+      href: how-to-initialize-objects-by-using-an-object-initializer.md
+    - name: Практическое руководство. Инициализация словаря с помощью инициализатора коллекций
+      href: how-to-initialize-a-dictionary-with-a-collection-initializer.md
     - name: Вложенные типы
       href: nested-types.md
     - name: Разделяемые классы и методы
       href: partial-classes-and-methods.md
     - name: Анонимные типы
       href: anonymous-types.md
-      items:
-        - name: Как выполнить Возвращение подмножества свойств элементов в запросе
-          href: how-to-return-subsets-of-element-properties-in-a-query.md
+    - name: Практическое руководство. Возвращение подмножества свойств элементов в запросе
+      href: how-to-return-subsets-of-element-properties-in-a-query.md
