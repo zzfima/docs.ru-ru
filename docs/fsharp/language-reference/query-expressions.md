@@ -2,12 +2,12 @@
 title: Выражения запросов
 description: Дополнительные сведения о поддержке выражения запроса LINQ в F# языка программирования.
 ms.date: 05/16/2016
-ms.openlocfilehash: 3e5be7f81d7e15953142186be3aca64e68ded2a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc077bfbe25f88104e89508ef6283a5bc42eddbd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795518"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645347"
 ---
 # <a name="query-expressions"></a>Выражения запросов
 

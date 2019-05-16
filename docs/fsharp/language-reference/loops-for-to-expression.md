@@ -2,12 +2,12 @@
 title: Циклы. Выражение for...to
 description: См. в разделе как F# for... выражение используется для итерации в цикле по диапазону значений переменной цикла.
 ms.date: 05/16/2016
-ms.openlocfilehash: 041e98fa4bcc140aa3cd699f6ed35bf52c8b4175
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b7bb9bac659ddf1d457be1ce17e90a2593666de
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904037"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645237"
 ---
 # <a name="loops-forto-expression"></a>Циклы. Выражение for...to
 

@@ -2,12 +2,12 @@
 title: Что такоеF#
 description: Дополнительные сведения о том, что F# язык программирования — и что F# аналогичен программирования. Дополнительные сведения о расширенных типов данных, функции и как они работают вместе.
 ms.date: 08/03/2018
-ms.openlocfilehash: ea82147e4e6d3c980fb224eeafd805c7ed53f8f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d5b0de9828aa91857d3961bf7d40c02c344adaa
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756342"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641572"
 ---
 # <a name="what-is-f"></a>Что такое F\#
 

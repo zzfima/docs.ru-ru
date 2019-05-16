@@ -4,12 +4,12 @@ description: Запрос на Вытягивание устойчивых фу�
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 8be499a24e2c5a94132ce07241e17f675e8a1274
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 18e13c5355490ef4a019ceda459114bdb6bfd539
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940963"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638808"
 ---
 # <a name="orchestration-patterns"></a>Шаблоны оркестрации
 

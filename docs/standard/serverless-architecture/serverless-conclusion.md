@@ -4,12 +4,12 @@ description: Независимая предоставляет множеств�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 6f4951dc85f739b92e56e84d0bd0262166181bd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae9fc47bf07a7e28688942b856b4743ae7aadc36
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62015048"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643546"
 ---
 # <a name="conclusion"></a>Заключение
 

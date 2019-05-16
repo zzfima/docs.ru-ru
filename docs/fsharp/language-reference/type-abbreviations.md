@@ -2,12 +2,12 @@
 title: Сокращенные обозначения типов
 description: Дополнительные сведения о F# введите сокращения для предоставления более значимое имя для типа, чтобы сделать код более удобным для чтения.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0deaef789367aad413e5a537bf7164034e1275c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2930db1dcaa66741900bc91937aa1fd2f006c5f8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683344"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641686"
 ---
 # <a name="type-abbreviations"></a>Сокращенные обозначения типов
 

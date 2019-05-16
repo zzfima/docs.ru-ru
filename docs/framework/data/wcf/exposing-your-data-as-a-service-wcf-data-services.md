@@ -6,20 +6,20 @@ helpviewer_keywords:
 - getting started, WCF Data Services
 - WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
-ms.openlocfilehash: 3c0763f21940831f401194356dc25b0d99c8d6f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d774db264a02d8d6c752f55344ec1ab6645c0bb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765639"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633648"
 ---
 # <a name="expose-your-data-as-a-service-wcf-data-services"></a>Предоставления данных как услуга (службы данных WCF)
 
 Службы WCF Data Services интегрируется с Visual Studio, чтобы можно было упрощая определение служб для предоставления данных как [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов. Создание службы данных, предоставляющего канал OData включает в себя следующие основные шаги:
 
-1. **Определение модели данных.** Службы WCF Data Services изначально поддерживают модели данных, которые основаны на [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md). Дополнительные сведения см. в разделе [Как Создание службы данных с использованием источника данных ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).
+1. **Определение модели данных.** Службы WCF Data Services изначально поддерживают модели данных, которые основаны на [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md). Дополнительные сведения см. в разделе [Практическое руководство. Создание службы данных с использованием источника данных ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).
 
-     Службы WCF Data Services поддерживают также модели данных, на основании объекта (CLR) среды CLR, возвращающих экземпляр <xref:System.Linq.IQueryable%601> интерфейс. Это позволяет развертывать службы данных на основе списков, массивов и коллекций .NET Framework. Для поддержки создания, обновления и удаления элементов этих структур данных необходимо также реализовать интерфейс <xref:System.Data.Services.IUpdatable>. Дополнительные сведения см. в разделе [Как Создание службы данных с помощью поставщика отражения](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).
+     Службы WCF Data Services поддерживают также модели данных, на основании объекта (CLR) среды CLR, возвращающих экземпляр <xref:System.Linq.IQueryable%601> интерфейс. Это позволяет развертывать службы данных на основе списков, массивов и коллекций .NET Framework. Для поддержки создания, обновления и удаления элементов этих структур данных необходимо также реализовать интерфейс <xref:System.Data.Services.IUpdatable>. Дополнительные сведения см. в разделе [Практическое руководство. Создание службы данных с помощью поставщика отражения](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).
 
      Для более сложных сценариев службы данных WCF включает в себя набор поставщиков, которые позволяют определить модель данных на основе типов данных с поздним связыванием. Дополнительные сведения см. в разделе [специализированные поставщики служб данных](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).
 

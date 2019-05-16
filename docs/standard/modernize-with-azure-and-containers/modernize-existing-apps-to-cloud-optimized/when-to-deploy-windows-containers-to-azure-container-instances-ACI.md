@@ -1,15 +1,13 @@
 ---
 title: Когда следует развертывать контейнеры Windows экземпляры контейнеров Azure (ACI)
 description: Модернизация существующих приложений .NET с помощью облака Azure и Windows контейнерах | Когда следует развертывать контейнеры Windows экземпляры контейнеров Azure (ACI)
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 03ee7c8b65e1a92dcc7fd40b44e9ba081f571487
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9bfa0688d07bd04964a1b28f688f125b5bcd2299
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011987"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638928"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Когда следует развертывать контейнеры Windows экземпляры контейнеров Azure (ACI)
 

@@ -2,12 +2,12 @@
 title: Внешние функции
 description: Дополнительные сведения о F# языковая поддержка для вызова функций в машинном коде.
 ms.date: 05/16/2016
-ms.openlocfilehash: 86ea78844fb812361233f8360c377465d83be203
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73e38d8942bfc8ddb3c51d126d7678e84903326b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934632"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642045"
 ---
 # <a name="external-functions"></a>Внешние функции
 

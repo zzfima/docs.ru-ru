@@ -1,15 +1,13 @@
 ---
 title: Действия в рабочем процессе внешнего цикла DevOps для приложения Docker
 description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: e11c9ec61ea7d5131595f01ce76b5bb810bb70c0
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 9fdc5acfd375e4f2266859f061ef1c854286b914
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063303"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644987"
 ---
 # <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Создание конвейеров CI/CD в службах Azure DevOps для приложения .NET Core 2.0 в контейнерах и развертывание в кластер Kubernetes
 

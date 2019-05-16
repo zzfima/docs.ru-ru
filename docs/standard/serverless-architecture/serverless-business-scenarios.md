@@ -4,12 +4,12 @@ description: Учитесь бессерверные вычисления с п�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 177fb1d7f79a0067ab185e520778b593d4b8eaf6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: adc4e1f3249cd72c423430ad4cb5dbb8eea8baf9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017270"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638826"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Бессерверные сценарии и варианты использования для бизнеса
 

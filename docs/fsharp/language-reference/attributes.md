@@ -2,12 +2,12 @@
 title: Атрибуты
 description: Узнайте, как F# атрибуты позволяют применять к программным конструкциям метаданные.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6e80bc4e32ee4ff5ff132270bde8e2fd018369e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fed4c549b95d6d3701ab81cf5d62add411c16038
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703209"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642026"
 ---
 # <a name="attributes"></a>Атрибуты
 
