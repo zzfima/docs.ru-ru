@@ -1,1 +1,0 @@
-<span data-ttu-id="99b91-101">Пакет SDK 1.7 для планшетных ПК</span><span class="sxs-lookup"><span data-stu-id="99b91-101">Tablet PC SDK 1.7</span></span>
