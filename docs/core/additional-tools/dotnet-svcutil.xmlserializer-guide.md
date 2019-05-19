@@ -3,29 +3,29 @@ title: Использование dotnet-svcutil.xmlserializer в .NET Core
 description: Узнайте, как использовать пакет NuGet `dotnet-svcutil.xmlserializer`, чтобы предварительно генерировать сборку сериализации для проектов .NET Core.
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: f5ffed47079a3ee122c7784d0c61c4d40461ba26
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 375a5ad5660658431c0d327e55513024823a6eee
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235544"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632203"
 ---
-# <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a><span data-ttu-id="7743b-103">Использование dotnet-svcutil.xmlserializer в .NET Core</span><span class="sxs-lookup"><span data-stu-id="7743b-103">Using dotnet-svcutil.xmlserializer on .NET Core</span></span>
+# <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a><span data-ttu-id="393c0-103">Использование dotnet-svcutil.xmlserializer в .NET Core</span><span class="sxs-lookup"><span data-stu-id="393c0-103">Using dotnet-svcutil.xmlserializer on .NET Core</span></span>
 
-<span data-ttu-id="7743b-104">Пакет NuGet `dotnet-svcutil.xmlserializer` может предварительно генерировать сборку сериализации для проектов .NET Core.</span><span class="sxs-lookup"><span data-stu-id="7743b-104">The `dotnet-svcutil.xmlserializer` NuGet package can pre-generate a serialization assembly for .NET Core projects.</span></span> <span data-ttu-id="7743b-105">Он предварительно генерирует код сериализации C# для типов в клиентском приложении, которые используются в контракте службы WCF и которые можно сериализовать с помощью XmlSerializer.</span><span class="sxs-lookup"><span data-stu-id="7743b-105">It pre-generates C# serialization code for the types in the client application that are used by the WCF Service Contract and that can be serialized by the XmlSerializer.</span></span> <span data-ttu-id="7743b-106">Это улучшает начальную производительность сериализации XML при сериализации или десериализации объектов этих типов.</span><span class="sxs-lookup"><span data-stu-id="7743b-106">This improves the startup performance of XML serialization when serializing or deserializing objects of those types.</span></span>
+<span data-ttu-id="393c0-104">Пакет NuGet `dotnet-svcutil.xmlserializer` может предварительно генерировать сборку сериализации для проектов .NET Core.</span><span class="sxs-lookup"><span data-stu-id="393c0-104">The `dotnet-svcutil.xmlserializer` NuGet package can pre-generate a serialization assembly for .NET Core projects.</span></span> <span data-ttu-id="393c0-105">Он предварительно генерирует код сериализации C# для типов в клиентском приложении, которые используются в контракте службы WCF и которые можно сериализовать с помощью XmlSerializer.</span><span class="sxs-lookup"><span data-stu-id="393c0-105">It pre-generates C# serialization code for the types in the client application that are used by the WCF Service Contract and that can be serialized by the XmlSerializer.</span></span> <span data-ttu-id="393c0-106">Это улучшает начальную производительность сериализации XML при сериализации или десериализации объектов этих типов.</span><span class="sxs-lookup"><span data-stu-id="393c0-106">This improves the startup performance of XML serialization when serializing or deserializing objects of those types.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="7743b-107">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="7743b-107">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="393c0-107">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="393c0-107">Prerequisites</span></span>
 
-* <span data-ttu-id="7743b-108">[пакет SDK для .NET Core 2.1](https://www.microsoft.com/net/download) или более поздней версии;</span><span class="sxs-lookup"><span data-stu-id="7743b-108">[.NET Core 2.1 SDK](https://www.microsoft.com/net/download) or later</span></span>
-* <span data-ttu-id="7743b-109">Любой редактор кода</span><span class="sxs-lookup"><span data-stu-id="7743b-109">Your favorite code editor</span></span>
+* <span data-ttu-id="393c0-108">[пакет SDK для .NET Core 2.1](https://www.microsoft.com/net/download) или более поздней версии;</span><span class="sxs-lookup"><span data-stu-id="393c0-108">[.NET Core 2.1 SDK](https://www.microsoft.com/net/download) or later</span></span>
+* <span data-ttu-id="393c0-109">Любой редактор кода</span><span class="sxs-lookup"><span data-stu-id="393c0-109">Your favorite code editor</span></span>
 
-<span data-ttu-id="7743b-110">Вы можете использовать команду `dotnet --info`, чтобы проверить, какие версии пакета SDK и среды выполнения для .NET Core уже установлены.</span><span class="sxs-lookup"><span data-stu-id="7743b-110">You can use the command `dotnet --info` to check which versions of .NET Core SDK and runtime you already have installed.</span></span>
+<span data-ttu-id="393c0-110">Вы можете использовать команду `dotnet --info`, чтобы проверить, какие версии пакета SDK и среды выполнения для .NET Core уже установлены.</span><span class="sxs-lookup"><span data-stu-id="393c0-110">You can use the command `dotnet --info` to check which versions of .NET Core SDK and runtime you already have installed.</span></span>
 
-## <a name="getting-started"></a><span data-ttu-id="7743b-111">Начало работы</span><span class="sxs-lookup"><span data-stu-id="7743b-111">Getting started</span></span>
+## <a name="getting-started"></a><span data-ttu-id="393c0-111">Начало работы</span><span class="sxs-lookup"><span data-stu-id="393c0-111">Getting started</span></span>
 
-<span data-ttu-id="7743b-112">Чтобы использовать `dotnet-svcutil.xmlserializer` в консольном приложении .NET Core, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="7743b-112">To use `dotnet-svcutil.xmlserializer` in a .NET Core console application:</span></span>
+<span data-ttu-id="393c0-112">Чтобы использовать `dotnet-svcutil.xmlserializer` в консольном приложении .NET Core, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="393c0-112">To use `dotnet-svcutil.xmlserializer` in a .NET Core console application:</span></span>
 
-1. <span data-ttu-id="7743b-113">Создайте службу WCF с именем MyWCFService с помощью шаблона по умолчанию "Приложение WCF-службы" в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7743b-113">Create a WCF Service named 'MyWCFService' using the default template 'WCF Service Application' in .NET Framework.</span></span> <span data-ttu-id="7743b-114">Добавьте атрибут `[XmlSerializerFormat]` в метод службы.</span><span class="sxs-lookup"><span data-stu-id="7743b-114">Add `[XmlSerializerFormat]` attribute on the service method like the following:</span></span>
+1. <span data-ttu-id="393c0-113">Создайте службу WCF с именем MyWCFService с помощью шаблона по умолчанию "Приложение WCF-службы" в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="393c0-113">Create a WCF Service named 'MyWCFService' using the default template 'WCF Service Application' in .NET Framework.</span></span> <span data-ttu-id="393c0-114">Добавьте атрибут `[XmlSerializerFormat]` в метод службы.</span><span class="sxs-lookup"><span data-stu-id="393c0-114">Add `[XmlSerializerFormat]` attribute on the service method like the following:</span></span>
 
    ```csharp
     [ServiceContract]
@@ -37,25 +37,25 @@ ms.locfileid: "53235544"
     }
     ```
 
-2. <span data-ttu-id="7743b-115">Для этого создайте консольное приложение .NET Core как клиентское приложение WCF, ориентированное на .NET Core 2.1 или более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="7743b-115">Create a .NET Core console application as WCF client application that targets at .NET Core 2.1 or later versions.</span></span> <span data-ttu-id="7743b-116">Например, с помощью приведенной ниже команды создайте приложение с именем MyWCFClient.</span><span class="sxs-lookup"><span data-stu-id="7743b-116">For example, create an app named 'MyWCFClient' with the following command:</span></span>
+2. <span data-ttu-id="393c0-115">Для этого создайте консольное приложение .NET Core как клиентское приложение WCF, ориентированное на .NET Core 2.1 или более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="393c0-115">Create a .NET Core console application as WCF client application that targets at .NET Core 2.1 or later versions.</span></span> <span data-ttu-id="393c0-116">Например, с помощью приведенной ниже команды создайте приложение с именем MyWCFClient.</span><span class="sxs-lookup"><span data-stu-id="393c0-116">For example, create an app named 'MyWCFClient' with the following command:</span></span>
 
     ```console
     dotnet new console --name MyWCFClient
     ```
 
-    <span data-ttu-id="7743b-117">Чтобы убедиться, что проект предназначен для .NET Core 2.1 или более поздней версии, в файле проекта проверьте XML-элемент `TargetFramework`.</span><span class="sxs-lookup"><span data-stu-id="7743b-117">To ensure your project is targeting .NET Core 2.1 or later, inspect the `TargetFramework` XML element in your project file:</span></span>
+    <span data-ttu-id="393c0-117">Чтобы убедиться, что проект предназначен для .NET Core 2.1 или более поздней версии, в файле проекта проверьте XML-элемент `TargetFramework`.</span><span class="sxs-lookup"><span data-stu-id="393c0-117">To ensure your project is targeting .NET Core 2.1 or later, inspect the `TargetFramework` XML element in your project file:</span></span>
 
     ```xml
     <TargetFramework>netcoreapp2.1</TargetFramework>
     ```
 
-3. <span data-ttu-id="7743b-118">Добавьте ссылку на пакет в `System.ServiceModel.Http`, выполнив приведенную ниже команду.</span><span class="sxs-lookup"><span data-stu-id="7743b-118">Add a package reference to `System.ServiceModel.Http` by running the following command:</span></span>
+3. <span data-ttu-id="393c0-118">Добавьте ссылку на пакет в `System.ServiceModel.Http`, выполнив приведенную ниже команду.</span><span class="sxs-lookup"><span data-stu-id="393c0-118">Add a package reference to `System.ServiceModel.Http` by running the following command:</span></span>
 
     ```console
     dotnet add package System.ServiceModel.Http
     ```
 
-4. <span data-ttu-id="7743b-119">Добавьте код клиента WCF:</span><span class="sxs-lookup"><span data-stu-id="7743b-119">Add the WCF Client code:</span></span>
+4. <span data-ttu-id="393c0-119">Добавьте код клиента WCF:</span><span class="sxs-lookup"><span data-stu-id="393c0-119">Add the WCF Client code:</span></span>
 
     ```csharp
     using System.ServiceModel;
@@ -82,13 +82,13 @@ ms.locfileid: "53235544"
     }
     ```
 
-5. <span data-ttu-id="7743b-120">Добавьте ссылку на пакет `dotnet-svcutil.xmlserializer`, выполнив приведенную ниже команду.</span><span class="sxs-lookup"><span data-stu-id="7743b-120">Add a reference to the `dotnet-svcutil.xmlserializer` package by running the following command:</span></span>
+5. <span data-ttu-id="393c0-120">Добавьте ссылку на пакет `dotnet-svcutil.xmlserializer`, выполнив приведенную ниже команду.</span><span class="sxs-lookup"><span data-stu-id="393c0-120">Add a reference to the `dotnet-svcutil.xmlserializer` package by running the following command:</span></span>
   
     ```console
     dotnet add package dotnet-svcutil.xmlserializer
     ```
 
-    <span data-ttu-id="7743b-121">При выполнении команды следует добавить запись в файл проекта, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="7743b-121">Running the command should add an entry to your project file similar to this:</span></span>
+    <span data-ttu-id="393c0-121">При выполнении команды следует добавить запись в файл проекта, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="393c0-121">Running the command should add an entry to your project file similar to this:</span></span>
   
     ```xml
     <ItemGroup>
@@ -96,6 +96,6 @@ ms.locfileid: "53235544"
     </ItemGroup>
     ```
 
-6. <span data-ttu-id="7743b-122">Выполните сборку приложения с помощью команды `dotnet build`.</span><span class="sxs-lookup"><span data-stu-id="7743b-122">Build the application by running `dotnet build`.</span></span> <span data-ttu-id="7743b-123">Если все пройдет успешно, в папке выходных данных генерируется сборка с именем *MyWCFClient.XmlSerializers.dll*.</span><span class="sxs-lookup"><span data-stu-id="7743b-123">If everything succeeds, an assembly named *MyWCFClient.XmlSerializers.dll* is generated in the output folder.</span></span> <span data-ttu-id="7743b-124">В выходных данных сборки будут отображаться предупреждения, если создание сборки средством завершилось сбоем.</span><span class="sxs-lookup"><span data-stu-id="7743b-124">If the tool failed to generate the assembly, you'll see warnings in the build output.</span></span>
+6. <span data-ttu-id="393c0-122">Выполните сборку приложения с помощью команды `dotnet build`.</span><span class="sxs-lookup"><span data-stu-id="393c0-122">Build the application by running `dotnet build`.</span></span> <span data-ttu-id="393c0-123">Если все пройдет успешно, в папке выходных данных генерируется сборка с именем *MyWCFClient.XmlSerializers.dll*.</span><span class="sxs-lookup"><span data-stu-id="393c0-123">If everything succeeds, an assembly named *MyWCFClient.XmlSerializers.dll* is generated in the output folder.</span></span> <span data-ttu-id="393c0-124">В выходных данных сборки будут отображаться предупреждения, если создание сборки средством завершилось сбоем.</span><span class="sxs-lookup"><span data-stu-id="393c0-124">If the tool failed to generate the assembly, you'll see warnings in the build output.</span></span>
 
-7. <span data-ttu-id="7743b-125">Например, перейдя к `http://localhost:2561/Service1.svc` в браузере, запустите службу WCF.</span><span class="sxs-lookup"><span data-stu-id="7743b-125">Start the WCF service by, for example, running `http://localhost:2561/Service1.svc` in the browser.</span></span> <span data-ttu-id="7743b-126">Затем запустите клиентское приложение,которое будет автоматически загружать и использовать предварительно созданные сериализаторы в среде выполнения.</span><span class="sxs-lookup"><span data-stu-id="7743b-126">Then start the client application, and it will automatically load and use the pre-generated serializers at runtime.</span></span>
+7. <span data-ttu-id="393c0-125">Например, перейдя к `http://localhost:2561/Service1.svc` в браузере, запустите службу WCF.</span><span class="sxs-lookup"><span data-stu-id="393c0-125">Start the WCF service by, for example, running `http://localhost:2561/Service1.svc` in the browser.</span></span> <span data-ttu-id="393c0-126">Затем запустите клиентское приложение,которое будет автоматически загружать и использовать предварительно созданные сериализаторы в среде выполнения.</span><span class="sxs-lookup"><span data-stu-id="393c0-126">Then start the client application, and it will automatically load and use the pre-generated serializers at runtime.</span></span>
