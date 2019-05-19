@@ -3,9 +3,7 @@
   items:
     - name: Аргументы командной строки
       href: command-line-arguments.md
-    - name: Как выполнить Отображение аргументов командной строки
+    - name: Практическое руководство. Отображение аргументов командной строки
       href: how-to-display-command-line-arguments.md
-    - name: Как выполнить Доступ к аргументам командной строки с помощью оператора foreach
-      href: how-to-access-command-line-arguments-using-foreach.md
     - name: 'Значения, возвращаемые методом main()'
       href: main-return-values.md
