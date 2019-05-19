@@ -2,12 +2,12 @@
 title: Команда dotnet list reference
 description: Команду dotnet list reference удобно использовать для перечисления ссылок между проектами.
 ms.date: 12/03/2018
-ms.openlocfilehash: d22ea27f8e8f6b94d763e44a6d8644f814663797
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: c0b88c4a0af4469d7ddc9e0a9368bb1b2d9d20b6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169837"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632413"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 

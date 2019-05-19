@@ -3,12 +3,12 @@ title: Команда dotnet nuget delete
 description: Команда dotnet-nuget-delete удаляет пакет с сервера или из списка.
 author: karann-msft
 ms.date: 12/04/2018
-ms.openlocfilehash: a657fa273ca6b5229a1713fbcaf003217a59fd7f
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: e1362413aa6458674518d68340634741994b34a3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612632"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632056"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 

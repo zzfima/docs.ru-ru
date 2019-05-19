@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 3f3f60f9752b9bd36d76387102c202d88b39c3ca
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671679"
+---
 | .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|
 | .NET Core                  | 1.0    | 1.0    | 1.0   | 1.0   | 1.0   | 1.0                | 1.0                | 2.0                 |
@@ -16,7 +24,7 @@
 - Столбцы представляют версии .NET Standard. Каждая ячейка заголовка содержит ссылку на документ, который показывает, какие интерфейсы API добавлены в соответствующей версии .NET Standard.
 - Строки представляют различные реализации .NET.
 - Номер версии в каждой ячейке обозначает *минимальную* версию реализации, которая потребуется для работы с соответствующей версией .NET Standard.
-- На сайте [Версии .NET Standard](https://immo.landwerth.net/netstandard-versions/#) доступна интерактивная таблица.
+- На сайте [Версии .NET Standard](https://dotnet.microsoft.com/platform/dotnet-standard#versions) доступна интерактивная таблица.
 
 [1.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.0.md
 [1.1]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.1.md
