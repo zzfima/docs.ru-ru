@@ -2,12 +2,12 @@
 title: Поддержка новых возможностей Workflow Foundation 4.5 во вновь размещенном конструкторе рабочих процессов
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8807506866ef0f5d73065958f1102460ebcc5e9f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669841"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876526"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Поддержка новых возможностей Workflow Foundation 4.5 во вновь размещенном конструкторе рабочих процессов
 Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] появилось множество новых возможностей, в том числе некоторые улучшения работы конструктора рабочих процессов. В этом разделе подробно описываются те возможности, которые поддерживаются в повторно размещенном конструкторе, и те, которые в настоящее время не поддерживаются.
@@ -37,25 +37,25 @@ Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45
 
  На следующем снимке экрана показано контекстное меню конструктора переменных и аргументов.
 
- ![Переменных и аргументов контекстное меню конструктора](./media/designercontextmenu.png "DesignerContextMenu")
+ ![Контекстное меню конструктора переменных и аргументов](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>Автоматическое окружение с последовательностью
  Поскольку рабочий процесс или некоторые действия с контейнерами (например, <xref:System.Activities.Statements.NoPersistScope>) могут содержать только одно действие с текстом, при добавлении второго действия разработчик должен удалить первое действие, добавить действие <xref:System.Activities.Statements.Sequence>, а затем добавить оба действия в действие последовательности. Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], при добавлении второго действия в область конструктора автоматически создается действие `Sequence`, включающее оба действия. Эта возможность поддерживается в повторно размещенном конструкторе.
 
  На следующем снимке экрана показано действие `WriteLine` в `Body` для `NoPersistScope`.
 
- ![Автоматическое&#45;заключить расположение сброса](./media/autosurround1.png "AutoSurround1")
+ ![Действия WriteLine в тело действия NoPersistScope.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-write-line-activity.png)
 
  На следующем снимке экрана показано автоматически созданное действие `Sequence` в `Body`, когда второй объект `WriteLine` сбрасывается ниже первого.
 
- ![Автоматически созданное действие sequence](./media/autosurround2.png "AutoSurround2")
+ ![Автоматически созданные последовательность в теле NoPersistScope.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-sequence-activity.png)
 
 ### <a name="pan-mode"></a>Панорамный режим
  Для упрощения навигации по большому рабочему процессу в конструкторе можно включить панорамный режим, позволяющий разработчику перетаскивать мышью видимую часть рабочего процесса и не использовать полосы прокрутки. Кнопка для активации панорамного режима находится в правом нижнем углу конструктора. Эта возможность поддерживается в повторно размещенном конструкторе.
 
  На следующем снимке экрана показана кнопка панорамирования, расположенная в правом нижнем углу конструктора рабочих процессов.
 
- ![Кнопка панорамирования в конструкторе рабочих процессов](./media/panbutton.png "PanButton")
+ ![Кнопка панорамирования, выделенным в конструкторе рабочих процессов.](./media/wf-features-in-the-rehosted-workflow-designer/pan-button-workflow-designer.png)
 
  Панорамирование в конструкторе рабочих процессов возможно также с помощью средней кнопки мыши или клавиши пробела.
 
@@ -69,7 +69,7 @@ Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45
 
  На следующем снимке экрана завершенного рабочего процесса из [Приступая к работе](getting-started-tutorial.md) показано представление структуры с помощью последовательного рабочего процесса.
 
- ![Режим в конструкторе рабочих процессов структуры](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+ ![Снимок экрана: представление структуры с помощью последовательного рабочего процесса в Visual Studio](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Дополнительные возможности управления видимостью панели оболочки и элементов заголовка
  В повторно размещенном конструкторе некоторые из стандартных элементов управления пользовательского интерфейса могут не иметь значения для заданного рабочего процесса и могут быть отключены. В [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] эта настройка поддерживается только панелью оболочки в нижней части конструктора. В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] видимость элементов заголовка оболочки в верхней части конструктора можно настроить, задав для <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> соответствующее значение <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility>.
@@ -79,23 +79,23 @@ Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45
 
  На следующем снимке экрана показаны точки присоединения, которые появляются при перетаскивании действия из области элементов.
 
- ![Начальный узел блок-схема, с точками автоматического соединения](./media/autoconnect1.png "Autoconnect1")
+ ![Блок-схема начала узла отображение точки автоматического соединения](./media/wf-features-in-the-rehosted-workflow-designer/auto-connect-points-start-node.png)
 
  Действия можно также перетаскивать на соединения между узлами блок-схемы и состояниями для автоматической вставки узла между двумя другими узлами. На следующем снимке экрана показана выделенная соединительная линия, на которую можно перетаскивать действия из области элементов.
 
- ![Автоматическое&#45;дескриптор для действий сброса вставить](./media/autoinsert.png "автоматически вставить")
+ ![Ручка автоматической вставки для действий сброса](./media/wf-features-in-the-rehosted-workflow-designer/auto-insert-connecting-line.png)
 
  Автоматическое соединение и автоматическая вставка поддерживаются в повторно размещенном конструкторе.
 
 ### <a name="designer-annotations"></a>Заметки конструктора
  Для упрощения разработки крупных рабочих процессов конструктор теперь поддерживает добавление заметок, помогающих отслеживать процесс проектирования. Заметки можно добавлять к действиям, состояниям, узлам блок-схемы, переменным и аргументам. На следующем снимке экрана показано контекстное меню, которое используется для добавления заметок к конструктору.
 
- ![Контекстное меню примечания](./media/annotationdialog.png "annotationdialog")
+ ![Снимок экрана с меню для добавления примечаний.](./media/wf-features-in-the-rehosted-workflow-designer/designer-annotations-context-menu.png)
 
  Заметки конструктора поддерживаются в повторно размещенном конструкторе.
 
 ### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>Определение и использование объектов ActivityDelegate в конструкторе
- Действия в [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] использовали объекты <xref:System.Activities.ActivityDelegate> для представления точек выполнения, где другие части рабочего процесса могли взаимодействовать с выполнением рабочего процесса, но использование этих точек выполнения обычно требовало большого объема кода. В этом выпуске разработчики могут определять и использовать делегаты действий с помощью конструктора рабочих процессов. Дополнительные сведения см. в разделе [Как Определение и использование делегатов действий в конструкторе рабочих процессов](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).
+ Действия в [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] использовали объекты <xref:System.Activities.ActivityDelegate> для представления точек выполнения, где другие части рабочего процесса могли взаимодействовать с выполнением рабочего процесса, но использование этих точек выполнения обычно требовало большого объема кода. В этом выпуске разработчики могут определять и использовать делегаты действий с помощью конструктора рабочих процессов. Дополнительные сведения см. в разделе [Практическое руководство. Определение и использование делегатов действий в конструкторе рабочих процессов](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).
 
  Делегаты действий поддерживаются в повторно размещенном конструкторе.
 
@@ -134,7 +134,7 @@ Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45
   
  На следующем рисунке показан рабочего процесса конечного автомата завершенное состояние из [Приступая к работе](getting-started-tutorial.md) шаг [как: Создание рабочего процесса конечного автомата](how-to-create-a-state-machine-workflow.md).  
   
- ![Завершения рабочего процесса конечного автомата](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![Рисунок, показывающий рабочего процесса конечного автомата завершенное состояние.](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
   
  Дополнительные сведения о создании рабочих процессов конечного автомата состояния см. в разделе [автоматов](state-machine-workflows.md). Рабочие процессы конечного автомата поддерживаются в повторно размещенном конструкторе.  
   

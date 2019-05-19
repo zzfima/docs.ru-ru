@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [Windows Forms], event handlers
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
-ms.openlocfilehash: 329060e0c53178a9320be9a7cdff492d69917782
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: e90e1d6643a30c1d2f4438e77317a2348b07fd71
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211245"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882415"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Создание обработчиков событий в Windows Forms
 
@@ -41,7 +41,7 @@ ms.locfileid: "65211245"
 ## <a name="related-sections"></a>Связанные разделы
 
  [События](../../standard/events/index.md)\
- Содержит ссылки на разделы по обработке и порождению событий с помощью [!INCLUDE [dnprdnshort](../../../includes/dnprdnshort-md.md)\].
+ Содержит ссылки на разделы по обработке и порождению событий с помощью .NET Framework.
 
  [Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)\
  Представляет распространенные проблемы, возникающие у обработчиков событий в наследуемых компонентах.

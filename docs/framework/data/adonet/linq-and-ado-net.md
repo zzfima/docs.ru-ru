@@ -2,12 +2,12 @@
 title: LINQ и ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: 79d6c52656e545c07260f3a97b089c238a74db3c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 312eb4b1c0512ca1244daec5bcda3ed864c3646d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583522"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878331"
 ---
 # <a name="linq-and-adonet"></a>LINQ и ADO.NET
 В настоящее время многие разработчики бизнес-приложений должны использовать два (или более) языка программирования: язык высокого уровня для бизнес-логики и презентации уровней (например, Visual C# или Visual Basic) и язык запросов для взаимодействия с базой данных (такие как [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Для эффективной работы разработчик должен хорошо владеть несколькими языками, кроме того, возникают несоответствия между языками в среде разработки. Например, приложение, которое использует API для доступа к данным, чтобы выполнить запрос к базе данных, указывает запрос как строковый литерал в кавычках. Такая строка запроса не читается компилятором и не проверяется на наличие синтаксических ошибок или наличие используемых строк или столбцов. Нет проверки соответствия типов параметров запроса и технологии `IntelliSense`.  
@@ -27,7 +27,7 @@ ms.locfileid: "65583522"
  В следующих подразделах приведены дополнительные сведения о технологиях [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] и [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)].  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- <xref:System.Data.DataSet> является важнейшим и широко используемым элементом модели программирования с кэшированием данных, на основе которой построен [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Технология [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] позволяет разработчикам создавать более функциональные запросы к <xref:System.Data.DataSet> с помощью механизма формирования запросов, который поддерживается для множества других источников данных. Дополнительные сведения см. в разделе [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
+ <xref:System.Data.DataSet> — Это ключевой элемент модели автономного программирования, который выполняется на основе ADO.NET и широко используется. Технология [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] позволяет разработчикам создавать более функциональные запросы к <xref:System.Data.DataSet> с помощью механизма формирования запросов, который поддерживается для множества других источников данных. Дополнительные сведения см. в разделе [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
 ## <a name="linq-to-sql"></a>LINQ to SQL  
  [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] - удобный инструмент для разработчиков, которым необязательно сопоставление с концептуальной моделью. Использование [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] дает возможность напрямую использовать модель программирования [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] с существующей схемой базы данных. [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] Разработчики могут создавать классы .NET Framework, которые представляют данные. Вместо сопоставления с концептуальной моделью эти созданные классы указывают напрямую на таблицы базы данных, представления, хранимые процедуры и определяемые пользователем функции.  

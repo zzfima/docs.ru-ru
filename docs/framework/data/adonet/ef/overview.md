@@ -2,12 +2,12 @@
 title: Общие сведения об Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: d63e60c90e71593821c38830bc11d767e582619a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c79055adc2be12a5806fe5e8ff129b6ecd3d76f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634277"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880031"
 ---
 # <a name="entity-framework-overview"></a>Общие сведения об Entity Framework
 
@@ -49,7 +49,7 @@ ms.locfileid: "65634277"
 
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Независимый от хранилища диалект SQL, который работает непосредственно с сущностями в концептуальной модели, которая поддерживает [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] основные понятия. [!INCLUDE[esql](../../../../../includes/esql-md.md)] используется, и с запросами объектов и запросы, которые выполняются с помощью поставщика EntityClient. Дополнительные сведения см. в разделе [Общие сведения об Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
 
-Платформа [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] включает в себя поставщик данных EntityClient. Поставщик управляет соединениями, переводит запросы сущностей в запросы, зависящие от источника данных, и возвращает модуль чтения данных, который используется [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] для материализации данных сущности в виде объектов. Если материализация объектов не требуется, поставщик EntityClient может использоваться как обычная [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] поставщика данных, позволяя приложениям выполнять [!INCLUDE[esql](../../../../../includes/esql-md.md)] запросы и использовать средство чтения возвращаемых данных только для чтения. Дополнительные сведения см. в разделе [поставщик EntityClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
+Платформа [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] включает в себя поставщик данных EntityClient. Поставщик управляет соединениями, переводит запросы сущностей в запросы, зависящие от источника данных, и возвращает модуль чтения данных, который используется [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] для материализации данных сущности в виде объектов. Если материализация объектов не требуется, поставщик EntityClient может также использоваться как стандартный поставщик данных ADO.NET, который позволяет приложениям выполнять запросы [!INCLUDE[esql](../../../../../includes/esql-md.md)] и получать предназначенные только для чтения данные, возвращаемые модулем чтения данных. Дополнительные сведения см. в разделе [поставщик EntityClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
 
 На следующей схеме показана архитектура доступа к данным [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]:
 
@@ -59,7 +59,7 @@ ms.locfileid: "65634277"
 
 ## <a name="data-providers"></a>Поставщики данных
 
-Поставщик `EntityClient` расширяет модель поставщика [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] путем доступа к данным в терминах сущностей и связей концептуальной модели. Выполняет запросы на языке [!INCLUDE[esql](../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../includes/esql-md.md)] представляет базовый язык запросов, с помощью которого `EntityClient` обменивается данными с базой данных. Дополнительные сведения см. в разделе [поставщик EntityClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
+`EntityClient` Поставщик является расширением доступ к данным в терминах сущностей и связей концептуальной модели поставщика ADO.NET. Выполняет запросы на языке [!INCLUDE[esql](../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../includes/esql-md.md)] представляет базовый язык запросов, с помощью которого `EntityClient` обменивается данными с базой данных. Дополнительные сведения см. в разделе [поставщик EntityClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
 
 Приложение [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] включает обновленный поставщик данных SqlClient, который поддерживает канонические деревья команд. Дополнительные сведения см. в разделе [SqlClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md).
 

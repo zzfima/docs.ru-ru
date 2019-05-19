@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 7fb3398ec325cd8b483ef7a222c8dd392a4e72b7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d1635d0eccf0886577eafe2ab11126093defac2b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656007"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875990"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Указание поведения службы во время выполнения
 После создания ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) и реализации ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)) контракта службы можно переходить к настройке рабочего поведения для среды выполнения службы. В этом разделе рассматриваются предоставляемые системой поведения служб и операций, а также указывается, где можно найти дополнительные сведения по созданию новых поведений. Хотя некоторые поведения применяются как атрибуты, многие поведения применяются с помощью файла конфигурации приложения или программно. Дополнительные сведения о настройке приложения службы, см. в разделе [Настройка служб](../../../docs/framework/wcf/configuring-services.md).  
@@ -77,7 +77,7 @@ ms.locfileid: "64656007"
 ### <a name="service-behaviors"></a>Поведения служб  
  Следующие поведения работают на уровне служб.  
   
-- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Применяется к службе WCF, чтобы указать, можно ли запустить эту службу [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] режим совместимости.  
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Применяется к службе WCF для указания того, можно ли запустить эту службу в режиме совместимости ASP.NET.  
   
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Управляет тем, как служба авторизует запросы клиентов.  
   

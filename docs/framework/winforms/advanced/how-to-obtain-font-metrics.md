@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: 438be2ffbff5c4f88ccfef4cad63dbfc71d132d5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75177b609f14d335aa57aba77d647827f50a8692
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648261"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881855"
 ---
 # <a name="how-to-obtain-font-metrics"></a>Практическое руководство. Получение метрик шрифтов
 <xref:System.Drawing.FontFamily> Класс предоставляет следующие методы для получения различных метрик для определенного семейства/style сочетания:  
@@ -28,22 +28,22 @@ ms.locfileid: "64648261"
   
  Между номерами, возвращаемыми этими методами, в единицах измерения конструктора, поэтому они не зависят от размера и единиц измерения конкретного <xref:System.Drawing.Font> объекта.  
   
- На следующем рисунке различные метрики.  
+ На следующем рисунке показан различные метрики:
   
- ![Текст шрифтов](./media/fontstext7a.png "fontstext7A")  
+ ![Illustration of font metrics: ascent, descent, and line spacing.](./media/how-to-obtain-font-metrics/various-font-metrics.png)  
   
 ## <a name="example"></a>Пример  
  В следующем примере отображается метрики для семейства шрифтов Arial обычного стиля. Код также создает <xref:System.Drawing.Font> объект (в зависимости от семейства шрифтов Arial) с размером 16 пикселей и отображаются метрики (в пикселях) для этой конкретной <xref:System.Drawing.Font> объекта.  
   
- Ниже показан результат выполнения примера кода.  
+ На следующем рисунке показан результат выполнения примера кода:
   
- ![Fonts Text](./media/csfontstext8.png "csFontsText8")  
+ ![Пример выходных данных кода шрифт Arial метрик.](./media/how-to-obtain-font-metrics/example-output-code-arial-font.png)  
   
  Обратите внимание, первые две строки выходных данных на предыдущем рисунке. <xref:System.Drawing.Font> Объект возвращает размер 16 и <xref:System.Drawing.FontFamily> объект возвращает em, равный 2048. Эти два числа (16 и 2048 бит) являются основой для преобразования между единицах измерения конструктора и единиц (в данном случае это пиксели) <xref:System.Drawing.Font> объекта.  
   
  Например можно преобразовать единицах измерения конструктора верхнего выносного элемента в пиксели следующим образом:  
   
- ![Fonts Text](./media/fontstext9.png "FontsText9")  
+ ![Формула, показывающий преобразование из единицах измерения конструктора в пикселях](./media/how-to-obtain-font-metrics/convert-font-units-example.png)  
   
  Следующий код располагает текст по вертикали, задав <xref:System.Drawing.PointF.Y%2A> данными-членом <xref:System.Drawing.PointF> объекта. Координата по оси y будет увеличена путем `font.Height` для каждой новой строки текста. <xref:System.Drawing.Font.Height%2A> Свойство <xref:System.Drawing.Font> объект возвращает межстрочный интервал (в пикселях) для этой конкретной <xref:System.Drawing.Font> объекта. В данном случае возвращаемое значение <xref:System.Drawing.Font.Height%2A> равно 19. Обратите внимание на то, что это то же самое, как число (округленный в целое число), получаемому при преобразовании метрики межстрочного интервала в пикселях.  
   

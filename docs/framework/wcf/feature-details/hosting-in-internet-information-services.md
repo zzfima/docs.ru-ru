@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 4d522fb377fd117800ef4d7d754d513a3d919a35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d881a75e95bc3c3eef1df651b380210ff51ea3ce
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656048"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877509"
 ---
 # <a name="hosting-in-internet-information-services"></a>Размещение в службах IIS
-Один из вариантов размещения служб Windows Communication Foundation (WCF) — внутри приложения Internet Information Services (IIS). Эта модель размещения похожа на модель, используемую [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и веб-службами ASP.NET (ASMX).  
+Один из вариантов размещения служб Windows Communication Foundation (WCF) — внутри приложения Internet Information Services (IIS). Эта модель размещения похожа на модель, используемые ASP.NET и веб-служб ASP.NET Web services (ASMX).  
   
 ## <a name="versions-of-iis"></a>Версии IIS  
  WCF можно размещать в следующих версиях IIS в следующих операционных системах:  
@@ -28,11 +28,11 @@ ms.locfileid: "64656048"
 ## <a name="benefits-of-iis-hosting"></a>Преимущества размещения в IIS  
  Размещение служб WCF в IIS имеет несколько преимуществ:  
   
-- Службы WCF, размещенные в IIS развертываются и управляются как любой другой тип приложения IIS, включая [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложений и ASMX.  
+- Службы WCF, размещенные в IIS развертываются и управляются как любой другой тип приложения IIS, включая приложения ASP.NET и ASMX.  
   
 - службы IIS предоставляют функции активации процессов, управления работоспособностью и перезапуска процессов, что позволяет повысить надежность приложений;  
   
-- Как и [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], службы WCF, размещенные в [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] можно воспользоваться преимуществами [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] модели совместного размещения, где несколько приложений, которые находятся в одном рабочем процессе для плотности и масштабируемости сервера улучшенные.  
+- Как ASP.NET службы WCF, размещенные в ASP.NET использовать преимущества модели совместного размещения ASP.NET когда несколько приложений располагаются в одном рабочем процессе для плотности и масштабируемости сервера улучшенные.  
   
 - Службы WCF, размещенные в IIS использовать ту же модель динамической компиляции, что [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)], что упрощает разработку и развертывание размещенных служб.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "64656048"
   
 - Убедитесь, что службы IIS, ASP.NET, WCF и компонента активации WCF HTTP службы правильно установлен и зарегистрирован.  
   
-- Создание нового приложения IIS или повторное использование существующего приложения [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] .  
+- Создание нового приложения IIS или повторно использовать существующее приложение ASP.NET.  
   
 - Создание SVC-файла для службы WCF.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "64656048"
  Описание каждого из этих задач, см. в разделе [развертывание службы WCF, Internet Information Services-Hosted](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   
 ## <a name="wcf-services-and-aspnet"></a>Службы WCF и ASP.NET  
- Службы WCF могут быть либо side-by-side с размещенной [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] или в [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] режим совместимости, в котором службы могут воспользоваться всеми преимуществами функций, предоставляемых [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] платформы веб-приложений. Описание этих возможностей, см. в разделе [службы WCF и ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
+ Службы WCF могут быть размещенного либо side-by-side с ASP.NET или в режиме совместимости ASP.NET, в котором службы могут воспользоваться всеми преимуществами функций, предоставляемых платформой ASP.NET Web application. Описание этих возможностей, см. в разделе [службы WCF и ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
   
 ## <a name="see-also"></a>См. также
 

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 6b6e77dea17d71b74c2c06534fd3a941e3e867a8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 83fd5ab1cfe7f48999dd2765405f58543eeb743a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592551"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882207"
 ---
 # <a name="data-transfer-architectural-overview"></a>Общие сведения об архитектуре передачи данных
 Windows Communication Foundation (WCF) может рассматриваться как инфраструктуру обмена сообщениями. где происходит получение, обработка и направление сообщений в пользовательский код для дальнейших действий или создание сообщений из данных, предоставленных пользовательским кодом, и доставка этих сообщений по назначению. В данном разделе, предназначенном для опытных программистов, описывается архитектура для обработки сообщений и данных, которые в них содержатся. Упрощенное изложение практических аспектов отправки и получения данных приводится в разделе [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -268,7 +268,7 @@ Windows Communication Foundation (WCF) может рассматриваться
   
  WCF поддерживает две технологии сериализации «стандартной» для сериализации и десериализации параметров и частей сообщений: <xref:System.Runtime.Serialization.DataContractSerializer> и `XmlSerializer`. Более того, можно создать настраиваемые сериализаторы. Тем не менее другие части WCF (например, универсальный `GetBody` сериализация ошибок метод или SOAP) может быть ограничен для использования только <xref:System.Runtime.Serialization.XmlObjectSerializer> подклассы (<xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.NetDataContractSerializer>, но не <xref:System.Xml.Serialization.XmlSerializer>), или даже может быть жестко запрограммированы для использования только <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- `XmlSerializer` представляет собой модуль сериализации, используемый в веб-службах [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . Новый модуль сериализации `DataContractSerializer` , совместимый с новой моделью программирования на основе контрактов данных. `DataContractSerializer` выбирается по умолчанию, однако можно выбрать `XmlSerializer` для отдельных операций с помощью атрибута <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> .  
+ `XmlSerializer` — Это механизм сериализации, используемый в веб-службы ASP.NET. Новый модуль сериализации `DataContractSerializer` , совместимый с новой моделью программирования на основе контрактов данных. `DataContractSerializer` выбирается по умолчанию, однако можно выбрать `XmlSerializer` для отдельных операций с помощью атрибута <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> .  
   
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> и <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> - это поведения операции, ответственные за подключение модулей форматирования сообщений для `DataContractSerializer` и `XmlSerializer`соответственно. Фактически, поведение <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> может работать с любым сериализатором, наследуемым от <xref:System.Runtime.Serialization.XmlObjectSerializer>, включая <xref:System.Runtime.Serialization.NetDataContractSerializer> (подробное описание см. в разделе "Использование автономной сериализации"). Поведение вызывает одну из перегрузок виртуального метода `CreateSerializer` для получения сериализатора. Для подключения иного сериализатора необходимо создать новый подкласс <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> и переопределить обе перегрузки метода `CreateSerializer` .  
   

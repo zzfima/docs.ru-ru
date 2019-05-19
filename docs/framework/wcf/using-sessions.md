@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: fc0bfec95e625c1433636fbe5e0fdb6cc1112b14
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c19aa7200cfc938a1de7b788a58ba18f76634d9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645158"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881475"
 ---
 # <a name="using-sessions"></a>Использование сеансов
-В приложениях Windows Communication Foundation (WCF) *сеанса* объединяет группу сообщений в диалоге. Сеансы WCF отличаются от объектов сеансов, имеющихся в [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] приложений, поддерживают другие поведения, а также управляются разными способами. В этом разделе описаны возможности, обеспечиваемые сеансами в WCF, приложений и их использование.  
+В приложениях Windows Communication Foundation (WCF) *сеанса* объединяет группу сообщений в диалоге. Сеансов WCF отличаются от объектов сеансов, имеющихся в приложениях ASP.NET, поддерживают различные поведения, а также управляются разными способами. В этом разделе описаны возможности, обеспечиваемые сеансами в WCF, приложений и их использование.  
   
 ## <a name="sessions-in-windows-communication-foundation-applications"></a>Сеансы в приложениях Windows Communication Foundation  
  Если в контракте службы указано, что для него требуется сеанс, это означает, что все вызовы (т. е. обмен сообщениями, на котором он основан) должны быть частью одного диалога. Если в контракте указано, что сеансы для него разрешены, но не требуются, клиенты могут подключаться, создавая сеанс или не создавая его. Если сеанс завершен и по его каналу отправляется сообщение, выдается исключение.  
@@ -30,13 +30,13 @@ ms.locfileid: "64645158"
   
 - Нет общего хранилища данных, связанного с сеансом WCF.  
   
- Если вы знакомы с <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> в класс [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] приложения и функциональные возможности она предоставляет, можно отметить следующие различия между его сеансами и сеансами WCF:  
+ Если вы знакомы с <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> класс в приложениях ASP.NET и функциональные возможности она предоставляет, можно отметить следующие различия между его сеансами и сеансами WCF:  
   
-- Сеансы[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] всегда инициируются сервером.  
+- Сеансы ASP.NET являются всегда инициированного сервером.  
   
-- Сеансы[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] явным образом неупорядочены.  
+- Сеансы ASP.NET явным образом неупорядочены.  
   
-- Сеансы[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] обеспечивают общий механизм хранения данных для запросов.  
+- Сеансы ASP.NET обеспечивают общий механизм хранения данных для запросов.  
   
  В этом разделе описываются следующие функции и операции:  
   

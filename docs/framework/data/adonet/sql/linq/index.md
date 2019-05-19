@@ -2,12 +2,12 @@
 title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: ef95a7cebb527b01c15d124227664823fcbbaa23
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4a44bd3f55cf6c21bb785ff70bca80e2c003cd18
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582780"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878266"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] входит в состав .NET Framework версии 3.5, предоставляющим инфраструктуру времени выполнения для управления реляционными данными как объектами.  
@@ -45,7 +45,7 @@ ms.locfileid: "65582780"
  Описывает [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] технологии для пользователей Visual Basic.  
   
  [LINQ и ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- Ссылки на портал [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)].  
+ Ссылки на портал ADO.NET.  
   
  [Пошаговые руководства LINQ to SQL](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))  
  Содержит список пошаговых руководств, доступных для [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -54,4 +54,4 @@ ms.locfileid: "65582780"
  Содержит инструкции по загрузке примеров баз данных, используемых в документации.  
   
  [Обзор управления LinqDataSource Web Server](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
- Описывает, каким образом элемент управления <xref:System.Web.UI.WebControls.LinqDataSource> предоставляет [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] для веб-разработчиков посредством архитектуры элементов управления источниками данных [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)].
+ Описывает способ <xref:System.Web.UI.WebControls.LinqDataSource> управления предоставляет [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] для веб-разработчиков посредством архитектуры элементов управления источником данных ASP.NET.

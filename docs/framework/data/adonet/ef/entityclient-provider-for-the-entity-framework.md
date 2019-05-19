@@ -2,18 +2,18 @@
 title: Поставщик EntityClient для Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: 268608c82070e60007bc09f97a775918e0d950f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 17f18753cc64bce5901c9f57181a8c08733f0cfc
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583698"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878794"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Поставщик EntityClient для Entity Framework
 Поставщик EntityClient - это поставщик данных, используемый приложениями платформы Entity Framework для доступа к данным, описанным в концептуальной модели. Сведения о концептуальной модели, см. в разделе [моделирования и сопоставления](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). В EntityClient для доступа к источнику данных используются другие поставщики данных .NET Framework. Например, в EntityClient используется поставщик данных .NET Framework для SQL Server (SqlClient) при доступе к базе данных SQL Server. Сведения о поставщике SqlClient см. в разделе [SqlClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). Поставщик EntityClient реализован в пространстве имен <xref:System.Data.EntityClient>.  
   
 ## <a name="managing-connections"></a>Управление подключениями  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Построен на основе конкретного хранилища [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] поставщики данных, предоставляя <xref:System.Data.EntityClient.EntityConnection> к базовому поставщику данных и реляционной базы данных. Для создания <xref:System.Data.EntityClient.EntityConnection> объекта, необходимо указать ссылку на набор метаданных, содержащий необходимые модели и сопоставления, а также строку подключения и имя поставщика данных. После <xref:System.Data.EntityClient.EntityConnection> находится в месте, сущностям может осуществляться через классы, сформированные из концептуальной модели.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Строится на основе поставщиков данных ADO.NET для конкретного хранилища, предоставляя <xref:System.Data.EntityClient.EntityConnection> к базовому поставщику данных и реляционной базы данных. Для создания <xref:System.Data.EntityClient.EntityConnection> объекта, необходимо указать ссылку на набор метаданных, содержащий необходимые модели и сопоставления, а также строку подключения и имя поставщика данных. После <xref:System.Data.EntityClient.EntityConnection> находится в месте, сущностям может осуществляться через классы, сформированные из концептуальной модели.  
   
  Строку соединения можно задать в файле app.config.  
   

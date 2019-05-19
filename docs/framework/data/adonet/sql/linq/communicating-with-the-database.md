@@ -2,12 +2,12 @@
 title: Установка связи с базой данных
 ms.date: 03/30/2017
 ms.assetid: 659d9817-bcaa-457f-9639-169394177274
-ms.openlocfilehash: d767bbe706b4fc9efb00031fddf8f6bd3369b485
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7713d3cec874267ef5aea070593ca4c113eb1a34
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032413"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882075"
 ---
 # <a name="communicating-with-the-database"></a>Установка связи с базой данных
 В темах этого раздела описываются некоторые основные аспекты по установке и поддержке подключения к базе данных.  
@@ -20,7 +20,7 @@ ms.locfileid: "62032413"
  Содержит сведения по использованию <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> для отправки команд языка SQL.  
   
  [Практическое руководство. Повторное использование соединения между командой ADO.NET и DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)  
- Содержит примеры использования существующих подключений [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] в приложении [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ Примеры того, как использовать существующее соединение ADO.NET в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] приложения.  
   
 ## <a name="see-also"></a>См. также
 

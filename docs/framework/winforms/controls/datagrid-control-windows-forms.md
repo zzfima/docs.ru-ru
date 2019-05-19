@@ -8,18 +8,18 @@ helpviewer_keywords:
 - displaying data [Windows Forms], on forms
 - data [Windows Forms], displaying on Windows Forms
 ms.assetid: 1d9d5683-43d2-42dd-b6c3-e43f4cf0de99
-ms.openlocfilehash: 5f8fcd21802c52d61d354c5ba85d665bd17237db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a69605901eef7366c7a9ff9930e5f4ec6cece23
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011389"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878776"
 ---
 # <a name="datagrid-control-windows-forms"></a>Элемент управления DataGrid (Windows Forms)
 > [!NOTE]
 >  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления `DataGrid` и расширяет его функциональные возможности; однако при необходимости элемент управления `DataGrid` можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Элемент управления Windows Forms `DataGrid` предоставляет пользовательский интерфейс для наборов данных [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], отображения табличных данных и включения обновлений в источник данных.  
+ Windows Forms `DataGrid` управления предоставляет пользовательский интерфейс для наборов данных ADO.NET, отображения табличных данных и включении обновления к источнику данных.  
   
  Когда элементу управления `DataGrid` присвоен допустимый источник данных, этот элемент автоматически заполняется и создаются столбцы и строки, исходя из формы данных. Элемент управления `DataGrid` можно использовать для отображения одной таблицы или иерархических связей между набором таблиц.  
   
@@ -34,10 +34,10 @@ ms.locfileid: "62011389"
  Описание программного добавления таблиц и столбцов в элемент управления `DataGrid`.  
   
  [Практическое руководство. Привязка элемента управления DataGrid в Windows Forms к источнику данных с помощью конструктора](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)  
- Описание привязки набора данных [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] к элементу управления `DataGrid` с помощью конструктора.  
+ Описание привязки набора данных ADO.NET для `DataGrid` управления с помощью конструктора.  
   
  [Практическое руководство. Привязка элемента управления DataGrid в Windows Forms к источнику данных](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
- Описание привязки набора данных [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] к элементу управления `DataGrid`.  
+ Описание привязки набора данных ADO.NET для `DataGrid` элемента управления.  
   
  [Практическое руководство. Изменение данных, отображаемых в элементе управления DataGrid Windows Forms во время выполнения](change-displayed-data-at-run-time-wf-datagrid-control.md)  
  Описание программного изменения данных в элементе управления `DataGrid`.  

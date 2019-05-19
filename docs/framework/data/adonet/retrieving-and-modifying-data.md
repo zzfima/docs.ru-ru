@@ -2,12 +2,12 @@
 title: Извлечение и изменение данных в ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5ac8fbd2a53d2670471c1ef5e59508f582ed944
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033921"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881436"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Извлечение и изменение данных в ADO.NET
 Основной функцией любого приложения базы данных является соединение с источником данных и извлечение данных, которые он содержит. Поставщики данных .NET Framework для ADO.NET служат в качестве моста между приложением и источником данных, что позволяет вам выполнять команды и извлечение данных с помощью **DataReader** или **DataAdapter** . Ключевой функцией любого приложения базы данных является возможность обновления данных, хранимых в базе данных. В ADO.NET обновление данных включает использование **DataAdapter** и <xref:System.Data.DataSet>, и **команда** объекты должны быть удалены и он может включать использование транзакций.  
@@ -53,7 +53,7 @@ ms.locfileid: "62033921"
  Описываются счетчики производительности, доступные для `SqlClient` и `OracleClient`.  
   
  [Асинхронное программирование](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
- Описывает поддержку [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] для асинхронного программирования.  
+ Описывает поддержку асинхронного программирования в ADO.NET.  
   
  [Поддержка потоковой передачи SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
  Описывается порядок написания приложений, потоковая передача данных из SQL Server без необходимости его полной загрузки в память.  

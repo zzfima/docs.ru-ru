@@ -2,12 +2,12 @@
 title: Рабочие процессы конечного автомата
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: d7f6f2686399d8eabbbc70de11697f3aca61fc8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d3c6f4f815f16ec4878b9aa70bd3a69c862d7800
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665330"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876132"
 ---
 # <a name="state-machine-workflows"></a>Рабочие процессы конечного автомата
 Конечный автомат - широко известный принцип разработки программ. Действие <xref:System.Activities.Statements.StateMachine>, а также <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition> и другие действия могут использоваться для сборки программ рабочего процесса конечных автоматов. В этом разделе представлены общие сведения о создании рабочих процессов конечного автомата.  
@@ -23,14 +23,14 @@ ms.locfileid: "64665330"
   
  В ходе создания рабочего процесса конечного автомата состояния добавляются к действию <xref:System.Activities.Statements.StateMachine>, а переходы используются для управления переключением между состояниями. Следующий снимок экрана, из [Приступая к работе](getting-started-tutorial.md) шаг [как: Создание конечного автомата](how-to-create-a-state-machine-workflow.md), показывает автомата с тремя состояниями и тремя переходами. **Инициализировать целевой объект** -исходное состояние и представляющее первое состояние в рабочем процессе. Это обозначается линией, ведущей к нему из **запустить** узла. Конечное состояние в рабочем процессе называется **FinalState**и представляет тот момент, в котором рабочий процесс завершается.  
   
- ![Завершения рабочего процесса конечного автомата](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![Рисунок, показывающий рабочего процесса конечного автомата завершенное состояние.](./media/state-machine-workflows/complete-state-machine-workflow.jpg)  
   
  Рабочий процесс конечного автомата должен содержать только одно начальное состояние и хотя бы одно конечное состояние. Каждое состояние, отличное от конечного, должно иметь по крайней мере один переход. В следующих разделах описывается создание и настройка состояний и переходов.  
   
 ## <a name="creating-and-configuring-states"></a>Создание и настройка состояний  
  <xref:System.Activities.Statements.State> представляет состояние, в котором может находиться конечный автомат. Чтобы добавить <xref:System.Activities.Statements.State> в рабочий процесс, перетащите **состояние** конструктор из **конечный автомат** раздел **элементов** и сбросьте его в <xref:System.Activities.Statements.StateMachine> действие на [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] поверхности.  
   
- ![WF4 Состояние действия машиной](./media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
+ ![Снимок экрана раздела конечный автомат панели элементов.](./media/state-machine-workflows/state-machine-section-toolbox.jpg)  
   
  Чтобы настроить состояние как **начальное состояние**, щелкните правой кнопкой мыши состояние и выберите **задать как начальное состояние**. Кроме того, если нет текущего начальное состояние, начальное состояние может быть назначено путем перетаскивания линии от **запустить** узел в верхней части рабочего процесса в нужное состояние. Когда <xref:System.Activities.Statements.StateMachine> действия сбрасывается в конструкторе рабочих процессов, он предварительно настроен с именем начальным состоянием **State1**. Рабочий процесс конечного автомата должен содержать только одно начальное состояние.  
   

@@ -2,12 +2,12 @@
 title: Процедура однократной настройки образцов Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: a34c2ee7cb98c6120e23114674712de0ba5b8162
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f55f994d1fd2d8af8ba15aa159d1bab84cc72d15
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664824"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876710"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Процедура однократной настройки образцов Windows Communication Foundation
 Большинство примеров Windows Communication Foundation (WCF) размещаются в Internet Information Services (IIS) и выполняются из общего виртуального каталога. Эта процедура однократной настройки создает папку на диске; Он также добавляет виртуальный каталог IIS с именем **ServiceModelSamples**.
@@ -19,7 +19,7 @@ ms.locfileid: "64664824"
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Однократно настраиваемая процедура для образцов WCF  
   
-1. Убедитесь, что [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] установлена. Дополнительные сведения о настройке [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], см. в разделе [инструкции по размещению сведения службы IIS](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
+1. Убедитесь, что установлен ASP.NET. Дополнительные сведения о настройке ASP.NET см. в разделе [инструкции по размещению сведения службы IIS](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
   
 2. Убедитесь, что установлена платформа [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]. Найдите для версии 4.0 (или более поздней версии): **\Windows\Microsoft.NET\Framework**  
   

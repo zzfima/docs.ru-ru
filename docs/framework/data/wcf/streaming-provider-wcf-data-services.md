@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 19571f3102039176ed4d8fab46a7f8229cbfecbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eff4ee3cb8502645d3b6d9a8986c9c410fe73f1a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875541"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877588"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Потоковый поставщик (службы WCF Data Services)
 
@@ -88,7 +88,7 @@ ms.locfileid: "61875541"
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Включение больших двоичных потоков в среде размещения
 
-При создании службы данных в веб-приложении [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] для реализации протокола HTTP используется Windows Communication Foundation (WCF). По умолчанию WCF устанавливает для HTTP-сообщений максимальный размер в 65 КБ. Чтобы иметь возможность направлять большие потоки двоичных данных в службу данных и из нее, необходимо также настроить веб-приложение, включив возможность использования больших двоичных файлов и потоков для передачи. Для этого добавьте к элементу `<configuration />` файла Web.config приложения следующее.
+При создании службы данных в веб-приложения ASP.NET, Windows Communication Foundation (WCF) используется для предоставления реализации протокола HTTP. По умолчанию WCF устанавливает для HTTP-сообщений максимальный размер в 65 КБ. Чтобы иметь возможность направлять большие потоки двоичных данных в службу данных и из нее, необходимо также настроить веб-приложение, включив возможность использования больших двоичных файлов и потоков для передачи. Для этого добавьте к элементу `<configuration />` файла Web.config приложения следующее.
 
 > [!NOTE]
 > Необходимо использовать <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> режим передачи, чтобы обеспечить потоковую передачу и отсутствие буферизации WCF двоичные данные в сообщениях запроса и ответа.
@@ -125,7 +125,7 @@ ms.locfileid: "61875541"
 
 - При реализации методов <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> или <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> необходимо использовать значения eTag и Content-Type, предоставляемые в качестве параметров метода. Не устанавливайте заголовки eTag или Content-Type в реализации поставщика <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.
 
-- По умолчанию клиент отправляет большие двоичные потоки, используя фрагментированный HTTP Transfer-Encoding. Так как [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server не поддерживает данный тип кодировки, нельзя использовать этот веб-сервер для размещения потоковой службы данных, предназначенной для приема больших двоичных потоков. Дополнительные сведения о [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server, см. в разделе [веб-серверов в Visual Studio для веб-проектов ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
+- По умолчанию клиент отправляет большие двоичные потоки, используя фрагментированный HTTP Transfer-Encoding. Поскольку ASP.NET Development Server не поддерживает данный тип кодировки, нельзя использовать этот веб-сервер для размещения потоковой службы данных, предназначенной для приема больших двоичных потоков. Дополнительные сведения о сервере разработки ASP.NET см. в разделе [веб-серверов в Visual Studio для веб-проектов ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
 
 <a name="versioning"></a>
 

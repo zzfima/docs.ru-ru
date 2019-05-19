@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-ms.openlocfilehash: c49e810b830ecb7327f400d9ef183f4db9c7d736
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 88905f0ef735aef742c0279ac86b640d8a9b9b0e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584567"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877366"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>Заполнение набора данных с помощью адаптера данных DataAdapter
-[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet> Является оперативной памяти представлением данных, обеспечивающим согласованную реляционную программную модель, независимую источника данных. Набор данных `DataSet` представляет собой полную совокупность данных, которая включает таблицы, ограничения и связи между таблицами. Набор данных `DataSet` является независимым от источника данных, поэтому `DataSet` может включать данные, локальные по отношению к приложению, а также данные из нескольких источников данных. Управление взаимодействием с существующими источниками данных осуществляется с помощью `DataAdapter`.  
+ADO.NET <xref:System.Data.DataSet> является оперативной памяти представлением данных, обеспечивающим согласованную реляционную программную модель, независимую источника данных. Набор данных `DataSet` представляет собой полную совокупность данных, которая включает таблицы, ограничения и связи между таблицами. Набор данных `DataSet` является независимым от источника данных, поэтому `DataSet` может включать данные, локальные по отношению к приложению, а также данные из нескольких источников данных. Управление взаимодействием с существующими источниками данных осуществляется с помощью `DataAdapter`.  
   
  Свойство `SelectCommand` объекта `DataAdapter` представляет собой объект `Command` , получающий данные из источника данных. Свойства `InsertCommand`, `UpdateCommand`и `DeleteCommand` , принадлежащие `DataAdapter` , являются объектами `Command` , которые управляют обновлением данных в источнике данных в соответствии с изменениями данных в `DataSet`. Эти свойства описаны более подробно в [обновление источников данных с объектами DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
   
@@ -120,7 +120,7 @@ foreach (DataRow pRow in customerOrders.Tables["Customers"].Rows)
 ## <a name="sql-server-decimal-type"></a>Тип decimal SQL Server  
  По умолчанию `DataSet` хранит данные с помощью типов данных .NET Framework. Для большинства приложений благодаря этому появляется удобный способ представления сведений об источнике данных. Однако данное представление может вызвать проблему, если типом данных в источнике данных является применяемый в SQL Server тип decimal или numeric. .NET Framework `decimal` тип данных допускает максимум 28 значащих цифр, тогда как SQL Server `decimal` тип данных допускает 38 значащих цифр. Если во время операции `SqlDataAdapter` `Fill` определяет, что точность поля `decimal` SQL Server больше 28 символов, текущая строка не добавляется в `DataTable`. Вместо этого происходит событие `FillError` , которое позволяет определить, произойдет ли потеря точности, и предпринять соответствующие действия. Дополнительные сведения о `FillError` событий, см. в разделе [обработка событий DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md). Для получения значения типа `decimal` SQL Server можно также использовать объект <xref:System.Data.SqlClient.SqlDataReader> и вызывать метод <xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A> .  
   
- В[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 появилась расширенная поддержка <xref:System.Data.SqlTypes> в `DataSet`. Дополнительные сведения см. в разделе [SqlTypes and the DataSet](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md).  
+ ADO.NET 2.0 появилась расширенная поддержка <xref:System.Data.SqlTypes> в `DataSet`. Дополнительные сведения см. в разделе [SqlTypes and the DataSet](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md).  
   
 ## <a name="ole-db-chapters"></a>Разделы OLE DB  
  Иерархические наборы строк, или разделы (тип `DBTYPE_HCHAPTER` в OLE DB, тип `adChapter` в ADO), могут использоваться для заполнения содержимого `DataSet`. Когда <xref:System.Data.OleDb.OleDbDataAdapter> во время операции `Fill` обнаруживает столбец, разбитый на разделы, для этого столбца создается `DataTable` , данная таблица заполняется столбцами и строками из раздела. Таблице, созданной для разбитого на разделы столбца, присваивается имя, состоящее из имени родительской таблицы и имени разбитого на разделы столбца, в форме «*ParentTableNameChapteredColumnName*». Если в наборе данных `DataSet` уже содержится таблица, имя которой согласуется с именем разбитого на разделы столбца, то данными раздела заполняется текущая таблица. Если в существующей таблице нет столбца, совпадающего со столбцом, содержащимся в разделе, то добавляется новый столбец.  

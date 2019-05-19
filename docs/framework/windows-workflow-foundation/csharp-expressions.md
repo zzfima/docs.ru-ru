@@ -2,12 +2,12 @@
 title: Выражения C#
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: 23c5ee0e0d1408f19e87615008ee95266176d27b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c50f6a2a8dfb69b914fb4fa84c028f9d65c00cfa
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650960"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882080"
 ---
 # <a name="c-expressions"></a>Выражения C#
 Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], выражения C# поддерживаются в Windows Workflow Foundation (WF). Новые проекты рабочих процессов C#, созданные в Visual Studio 2012, предназначенных [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] использование выражений C# и проекты рабочих процессов Visual Basic используют выражения Visual Basic. Существующие проекты рабочих процессов [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], использующих выражения Visual Basic, поддерживаются, и их можно перенести в [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] независимо от языка проекта. В этом разделе приведены общие сведения о выражениях на языке C# в [!INCLUDE[wf1](../../../includes/wf1-md.md)].
@@ -31,7 +31,7 @@ ms.locfileid: "64650960"
 ### <a name="WFDesigner"></a> Выражения на языке C# в конструкторе рабочих процессов
  Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], выражения C# поддерживаются в Windows Workflow Foundation (WF). Проекты рабочих процессов C#, созданные в Visual Studio 2012, предназначенных [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] использовать выражения C#, а проекты рабочих процессов Visual Basic используют выражения Visual Basic. Чтобы указать нужное выражение C#, введите его в поле, помеченное **введите выражение C#**. Эта метка отображается в окне свойств при выборе действия в конструкторе или при работе в конструкторе рабочих процессов. В следующем примере два действия `WriteLine` содержатся в `Sequence` внутри `NoPersistScope`.
 
- ![Автоматически созданное действие sequence](./media/autosurround2.png "AutoSurround2")
+ ![Снимок экрана, показывающий действие автоматически созданную последовательность.](./media/csharp-expressions/auto-surround-sequence-activity.png)
 
 > [!NOTE]
 >  Выражения C# поддерживаются только в Visual Studio и не поддерживаются в повторно размещенном конструкторе рабочих процессов. Дополнительные сведения о новых функциях WF45, поддерживаются в повторно размещенном конструкторе, см. в разделе [Поддержка новых функций Workflow Foundation 4.5 в конструкторе рабочих процессов, повторно размещенными](wf-features-in-the-rehosted-workflow-designer.md).

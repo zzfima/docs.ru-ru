@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 8b709de728726b7695b987c48574d2a70a1bc27e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef38bacfd129033aab41f5f516b96b95fac7913f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765678"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879998"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Разработка и развертывание службы WCF Data Services
 
@@ -38,18 +38,18 @@ ms.locfileid: "61765678"
 
 ### <a name="choose-a-development-web-server"></a>Выберите веб-сервера разработки
 
-При разработке службы данных WCF в качестве [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения или [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-сайта с помощью Visual Studio 2015, вы увидите список веб-серверов, на котором работает служба данных во время разработки. Следующие веб-серверы интеграции с Visual Studio, чтобы упростить тестирование и отладку служб данных на локальном компьютере.
+При разработке службы данных WCF как приложение ASP.NET или веб-сайта ASP.NET с помощью Visual Studio 2015, вы увидите список веб-серверов, на котором работает служба данных во время разработки. Следующие веб-серверы интеграции с Visual Studio, чтобы упростить тестирование и отладку служб данных на локальном компьютере.
 
 1. **Локальный сервер служб IIS**
 
-     При создании службы данных, которая является приложением [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] или веб-узлом [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , работающим на базе служб IIS, рекомендуется разрабатывать и тестировать службу данных с помощью IIS на локальном компьютере. Запуск службы данных в IIS упрощает трассировку HTTP-запросов во время отладки. Это также позволяет заранее определить необходимые права, которые требуются службам IIS для доступа к файлам, базам данных и другим ресурсам для службы данных. Чтобы запустить службу данных в службах IIS, необходимо проверить наличие, что службы IIS и Windows Communication Foundation (WCF) установлены и настроены правильно и предоставить доступ к учетным записям служб IIS в файловой системе и баз данных. Дополнительные сведения см. в разделе [Как Разработке службы данных WCF, выполняющегося на сервере IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
+     При создании службы данных, приложение ASP.NET или веб-узла ASP.NET, работающей на Internet Information Services (IIS), рекомендуется разрабатывать и тестировать службу данных с помощью служб IIS на локальном компьютере. Запуск службы данных в IIS упрощает трассировку HTTP-запросов во время отладки. Это также позволяет заранее определить необходимые права, которые требуются службам IIS для доступа к файлам, базам данных и другим ресурсам для службы данных. Чтобы запустить службу данных в службах IIS, необходимо проверить наличие, что службы IIS и Windows Communication Foundation (WCF) установлены и настроены правильно и предоставить доступ к учетным записям служб IIS в файловой системе и баз данных. Дополнительные сведения см. в разделе [Практическое руководство. Разработке службы данных WCF, выполняющегося на сервере IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
 
     > [!NOTE]
     > Необходимо запустить Visual Studio с правами администратора, чтобы позволить среде разработки настроить локальный сервер IIS.
 
 2. **Сервер разработки Visual Studio**
 
-     Visual Studio включает в себя встроенный веб-сервер Visual Studio Development Server, который является сервером по умолчанию для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] проектов. Этот веб-сервер предназначен для запуска проектов [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] на локальном компьютере во время разработки. [Краткое руководство по службам данных WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) показано, как создать службу данных, которая выполняется в Visual Studio Development Server.
+     Visual Studio включает в себя встроенный веб-сервер Visual Studio Development Server, который является сервером по умолчанию для проектов ASP.NET. Этот веб-сервер предназначен для запуска проектов ASP.NET на локальном компьютере во время разработки. [Краткое руководство по службам данных WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) показано, как создать службу данных, которая выполняется в Visual Studio Development Server.
 
      Вы должны помнить о следующих ограничениях при разработке службы данных с помощью Visual Studio Development Server:
 
@@ -82,9 +82,9 @@ ms.locfileid: "61765678"
 
 - При отладке службы данных, можно получить дополнительные сведения об ошибке из службы данных, чем во время простой операции. Дополнительные сведения об ошибках можно получить из службы данных, установив свойство <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> в <xref:System.Data.Services.DataServiceConfiguration> значение `true` , а свойство <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> атрибута <xref:System.ServiceModel.Description.ServiceDebugBehavior> класса службы данных — в значение `true`. Дополнительные сведения см. в публикации [Debugging WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=201868). Можно также включить трассировку в WCF для просмотра исключений, созданных в уровень обмена сообщениями HTTP. Для получения дополнительной информации см. [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).
 
-- Службы данных обычно разрабатывается как [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] проект приложения, но вы также можете создать службу данных как [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] проекта веб-сайта в Visual Studio. Сведения о различиях между двумя типами проектов см. в разделе [проектами веб-приложения веб-сайта в Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
+- Службы данных обычно разрабатывается как проект приложения ASP.NET, но вы можно также создать службу данных как проект ASP.NET Web site в Visual Studio. Сведения о различиях между двумя типами проектов см. в разделе [проектами веб-приложения веб-сайта в Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
 
-- При создании службы данных с помощью **Добавление нового элемента** диалоговое окно в Visual Studio, службы данных управляется [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] в службах IIS. Несмотря на то что [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и IIS используются для размещения службы данных по умолчанию, поддерживаются и другие варианты размещения. Дополнительные сведения см. в разделе [размещение служб данных](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).
+- При создании службы данных с помощью **Добавление нового элемента** диалоговое окно в Visual Studio, службы данных управляется ASP.NET в IIS. Несмотря на то ASP.NET и IIS, узла по умолчанию для службы данных поддерживаются другие варианты размещения. Дополнительные сведения см. в разделе [размещение служб данных](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).
 
 ## <a name="deploy-wcf-data-services"></a>Развертывания служб данных WCF
 
@@ -92,7 +92,7 @@ ms.locfileid: "61765678"
 
 - **Веб-сервер, размещенный в службах IIS**
 
-    Если служба данных разрабатывается как проект [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , то его можно развернуть на веб-сервере IIS с помощью стандартной процедуры развертывания [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] .  Visual Studio предоставляет следующие технологии развертывания для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], в зависимости от типа объекта [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , на котором размещена служба данных, при развертывании проекта.
+    Когда служба данных разрабатывается как проект ASP.NET, его можно развернуть на веб-сервер IIS с помощью стандартных процессов развертывания ASP.NET.  Visual Studio предоставляет следующие технологии развертывания для ASP.NET, в зависимости от типа проекта ASP.NET, на котором размещена служба данных, при развертывании.
 
   - **Технологии развертывания для веб-приложений ASP.NET**
 
@@ -108,10 +108,10 @@ ms.locfileid: "61765678"
 
     - [Пошаговое руководство: Развертывание веб-приложения ASP.NET с помощью XCOPY](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
 
-     Дополнительные сведения о вариантах развертывания для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения, см. в разделе [Обзор веб-развертывания для Visual Studio и ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110)).
+     Дополнительные сведения о вариантах развертывания для приложения ASP.NET см. в разделе [Обзор веб-развертывания для Visual Studio и ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110)).
 
     > [!TIP]
-    > Прежде чем пытаться выполнить развертывание службы данных в IIS, обязательно протестируйте развертывание на веб-сервере, где работают службы IIS. Дополнительные сведения см. в разделе [Как Разработке службы данных WCF, выполняющегося на сервере IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
+    > Прежде чем пытаться выполнить развертывание службы данных в IIS, обязательно протестируйте развертывание на веб-сервере, где работают службы IIS. Дополнительные сведения см. в разделе [Практическое руководство. Разработке службы данных WCF, выполняющегося на сервере IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
 
 - **Microsoft Azure**
 
@@ -121,7 +121,7 @@ ms.locfileid: "61765678"
 
 При разработке службы данных необходимо учитывать следующее:
 
-- При развертывании службы данных, использующей поставщика [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] для доступа к базе данных SQL Server, можно также распространить структуры данных, данные или и то и другое. Visual Studio может автоматически создавать скрипты (SQL-файлы) для этого в целевой базе данных, и эти скрипты могут быть включены в пакет развертывания веб- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения. Дополнительные сведения см. в разделе [Как Развертывание базы данных для проекта веб-приложения](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)). Для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-сайта, это можно сделать помощью **мастер публикации баз данных** в Visual Studio. Дополнительные сведения см. в разделе [публикации базы данных SQL](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
+- При развертывании службы данных, использующей поставщика [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] для доступа к базе данных SQL Server, можно также распространить структуры данных, данные или и то и другое. Visual Studio может автоматически создавать скрипты (SQL-файлы) для этого в целевой базе данных, и эти скрипты могут быть включены в пакет веб-развертывания приложения ASP.NET. Дополнительные сведения см. в разделе [Практическое руководство. Развертывание базы данных для проекта веб-приложения](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)). Для веб-сайта ASP.NET, это можно сделать с помощью **мастер публикации баз данных** в Visual Studio. Дополнительные сведения см. в разделе [публикации базы данных SQL](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
 - Поскольку службы данных WCF включает в себя базовую реализацию WCF, можно использовать Windows Server AppFabric для наблюдения за службой данных, развернутой в службах IIS, под управлением Windows Server. Дополнительные сведения об использовании Windows Server AppFabric для наблюдения за службами данных см. в публикации [Tracking WCF Data Services with Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=202005).
 

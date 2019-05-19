@@ -2,12 +2,12 @@
 title: Процесс найма
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 87e49613214a6a608bd8e22dc9470250c90e220a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 685798ceab5e14169af6bdf16ce30a0f6548dc8c
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622485"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881895"
 ---
 # <a name="hiring-process"></a>Процесс найма
 Этот образец демонстрирует, как реализовать бизнес-процесс, используя действия обмена сообщениями и два рабочих процесса, размещенные как службы рабочих процессов. Эти рабочие процессы входят в ИT-инфраструктуру вымышленной компании Contoso, Inc.  
@@ -126,7 +126,7 @@ ms.locfileid: "64622485"
 |Устойчивые таймеры|`ResumeRequestService` использует устойчивые таймеры для определения продолжительности публикации вакансии (по истечении времени ожидания вакансия закрывается).|ResumeRequestService|  
 |Транзакции|<xref:System.Activities.Statements.TransactionScope> используется для обеспечения согласованности данных в рамках выполнения нескольких действий (при получении нового резюме).|ResumeRequestService|  
 |Транзакции|Участник настраиваемой сохраняемости (`HiringRequestPersistenceParticipant`) и участник настраиваемого отслеживания (`HistoryFileTrackingParticipant`) используют одну и ту же транзакцию.|HiringRequestService|  
-|Использование [!INCLUDE[wf1](../../../../includes/wf1-md.md)] в приложениях [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].|Доступ к рабочим процессам осуществляется из двух приложений [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].|InternalClient / CareersWebSite|  
+|С помощью [!INCLUDE[wf1](../../../../includes/wf1-md.md)] в приложениях ASP.NET.|Рабочим процессам осуществляется из двух приложений ASP.NET.|InternalClient / CareersWebSite|  
   
 ## <a name="data-storage"></a>Хранилище данных  
  Данные хранятся в базе данных SQL Server `ContosoHR` (скрипт для создания этой базы данных находится в папке `DbSetup`). Экземпляры рабочего процесса хранятся в базе данных SQL Server `InstanceStore` (скрипт для создания хранилища экземпляров является частью распространения [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]).  

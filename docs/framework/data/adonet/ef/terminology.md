@@ -2,12 +2,12 @@
 title: Терминология платформы Entity Framework
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 9272740bef21dbe8b28bd6e58354a342fb799002
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f78545102823b19cc65b100f2b270ae71c1bd077
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583533"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877482"
 ---
 # <a name="entity-framework-terminology"></a>Терминология платформы Entity Framework
 В этом разделе определены термины, которые часто встречаются в [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] документации. Даны ссылки на соответствующие разделы, содержащие дополнительные сведения.  
@@ -30,7 +30,7 @@ ms.locfileid: "65583533"
 |EDMX-файл|XML-файл, содержащий концептуальную модель (на языке CSDL), модель хранения (на языке SSDL) и сопоставления между ними (на языке MSL). EDMX-файл создается средствами работы с моделью [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]. Дополнительные сведения см. в разделе [Обзор файла .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).|  
 |end|Сущность, участвующая в ассоциации.<br /><br /> Дополнительные сведения см. в разделе [элемент End (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl) и [ассоциации](../../../../../docs/framework/data/adonet/association-end.md).|  
 |сущность|Концепция в области приложения, по которой определен тип данных.<br /><br /> Дополнительные сведения см. в разделе [элемент EntityType (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl) и [тип сущности](../../../../../docs/framework/data/adonet/entity-type.md).|  
-|EntityClient|Независимый от хранилища поставщик данных [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)], содержащий такие классы, как `EntityConnection`, `EntityCommand` и `EntityDataReader`. Работает с [!INCLUDE[esql](../../../../../includes/esql-md.md)] и подключается к зависящим от хранилища [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] поставщиков данных, таких как `SqlClient`.<br /><br /> Дополнительные сведения см. в разделе [поставщик EntityClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).|  
+|EntityClient|Независимый от хранилища поставщик данных ADO.NET, который содержит классы, такие как `EntityConnection`, `EntityCommand`, и `EntityDataReader`. Работает с [!INCLUDE[esql](../../../../../includes/esql-md.md)] и подключается к хранилища конкретных поставщиков данных ADO.NET, такие как `SqlClient`.<br /><br /> Дополнительные сведения см. в разделе [поставщик EntityClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).|  
 |контейнер сущностей|Задает наборы сущностей и наборы ассоциаций, которые будут реализованы в заданном пространстве имен.<br /><br /> Дополнительные сведения см. в разделе [элемент EntityContainer (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitycontainer-element-csdl) и [контейнер сущностей](../../../../../docs/framework/data/adonet/entity-container.md).|  
 |Модель EDM|Набор понятий, описывающих структуру данных (например, сущности и отношения) независимо от формы ее хранения.<br /><br /> Дополнительные сведения см. в разделе [модели EDM](../../../../../docs/framework/data/adonet/entity-data-model.md).|  
 |Entity Framework|Набор технологий, который поддерживает разработку приложений, связанных с обработкой данных, позволяя программистам работать с концептуальными моделями, сопоставленными логическим схемам в источниках данных.<br /><br /> Дополнительные сведения см. в разделе [Обзор Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md).|  

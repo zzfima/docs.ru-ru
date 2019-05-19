@@ -1,14 +1,14 @@
 ---
-title: Начало работы с хранилищем BLOB-объектов Azure с использованиемF#
+title: Начало работы с хранилищем BLOB-объектов Azure с помощью языка F#
 description: Store неструктурированных данных в облаке в хранилище BLOB-объектов Azure.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d020c2cd9a11db1cd4b7a60113e1be03655f763
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982518"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880036"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Начало работы с хранилищем BLOB-объектов Azure, с помощью F\#
 
@@ -196,8 +196,8 @@ Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/
 
 Каждый большой двоичный объект в службе хранилища Azure должны находиться в контейнере. Контейнер составляет часть имени BLOB-объектов. Например `mydata` имя контейнера в этих URI BLOB-образец объектов:
 
-    https://storagesample.blob.core.windows.net/mydata/blob1.txt
-    https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
+- https://storagesample.blob.core.windows.net/mydata/blob1.txt
+- https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
 
 Имя контейнера должно быть допустимым DNS-именем, удовлетворяющие следующим правилам именования:
 

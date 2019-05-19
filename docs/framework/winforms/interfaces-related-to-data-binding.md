@@ -12,16 +12,16 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 1609fbd8cbb24d6f2c10fbc3a235f01a451eb0fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 591b76ca6b5cd3a9180487c79293d5fc3b7991af
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754073"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882348"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Интерфейсы, относящиеся к привязке данных
 
-С помощью [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] можно создать различные структуры данных в соответствии с требованиями привязки приложения и данных, с которыми приходится работать. Можно создать собственные классы, которые предоставляют или используют данные в Windows Forms. Такие объекты могут предоставлять функциональные возможности и обеспечивать сложность различного уровня, такие как базовая привязка данных, поддержка на этапе разработки, проверка ошибок, уведомление об изменениях или даже поддержка структурированного отката изменений, внесенных в сами данные.
+С помощью ADO.NET можно создать различные структуры данных в соответствии с требованиями привязки приложения и данные, которыми вы работаете. Можно создать собственные классы, которые предоставляют или используют данные в Windows Forms. Такие объекты могут предоставлять функциональные возможности и обеспечивать сложность различного уровня, такие как базовая привязка данных, поддержка на этапе разработки, проверка ошибок, уведомление об изменениях или даже поддержка структурированного отката изменений, внесенных в сами данные.
 
 ## <a name="consumers-of-data-binding-interfaces"></a>Потребители интерфейсов привязки данных
 
@@ -82,7 +82,7 @@ ms.locfileid: "64754073"
 
 - <xref:System.Collections.IEnumerable> Интерфейс
 
-  Класс, реализующий <xref:System.Collections.IEnumerable> интерфейс, обычно используется в [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Поддержка Windows Forms для этого интерфейса можно получить только через <xref:System.Windows.Forms.BindingSource> компонента.
+  Класс, реализующий <xref:System.Collections.IEnumerable> интерфейс, обычно используется в ASP.NET. Поддержка Windows Forms для этого интерфейса можно получить только через <xref:System.Windows.Forms.BindingSource> компонента.
 
   > [!NOTE]
   > <xref:System.Windows.Forms.BindingSource> Компонент копирует все <xref:System.Collections.IEnumerable> элементы в отдельном списке исключительно для привязки.

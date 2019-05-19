@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 89d9517a92155f569a15c5272bcecc1c8f427f1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b914509656d3ce67d62dcd23cebdcc3b74278d72
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013157"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882007"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Практическое руководство. Установка изображения, отображаемого элементом управления Windows Forms, с помощью конструктора
 Несколько элементов управления Windows Forms можно отображать изображения. Изображение может быть значок, поясняющий назначение элемента управления, такие как значок диска на кнопку, обозначающая **Сохранить** команды. Кроме того значок может быть фоновое изображение для предоставления необходимого внешнего вида элемента управления.  
@@ -26,7 +26,7 @@ ms.locfileid: "62013157"
   
 1. В **свойства** выберите **изображение** или **BackgroundImage** свойство элемента управления, нажмите кнопку с многоточием ()  
   
-     ![Снимок экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")  
+     ![Кнопка с многоточием (...) в окне свойств Visual Studio.](./media/visual-studio-ellipsis-button.png))  
   
      ) для отображения **Выбор ресурса** диалоговое окно.  
   

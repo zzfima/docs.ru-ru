@@ -2,12 +2,12 @@
 title: Поддерживаемые сценарии развертывания - WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: f1a95e5448d2cc8f1ac472c3b1735f58460e2be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639132"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881062"
 ---
 # <a name="supported-deployment-scenarios"></a>Поддерживаемые сценарии развертывания
 
@@ -27,7 +27,7 @@ WCF поддерживает подмножество функций в прил
 
 ## <a name="partial-trust-on-the-server"></a>Частичное доверие на сервере
 
-Многие коммерческие поставщики услуг размещения веб-приложений [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] требуют, чтобы выполняемые на их серверах приложения запускались с набором разрешений среднего уровня доверия [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] . Службы WCF могут работать в таких средах, если они используют <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, или <xref:System.ServiceModel.WSHttpBinding> безопасности транспортного уровня.
+Многие коммерческие поставщики веб-приложения ASP.NET службы размещения требует запуска приложений, работающих на своих серверах [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] набором разрешений среднего уровня доверия. Службы WCF могут работать в таких средах, если они используют <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, или <xref:System.ServiceModel.WSHttpBinding> безопасности транспортного уровня.
 
 Службы WCF, работающие в со средним уровнем доверия, средах размещения, также может служить службы среднего уровня, отправляя сообщения на другие серверы в ответ на клиентские запросы. На сервере поддерживаются промежуточные сценарии, если среда размещения предоставила приложению соответствующее разрешение <xref:System.Net.WebPermission> на отправку исходящих запросов на требуемый сервер.
 

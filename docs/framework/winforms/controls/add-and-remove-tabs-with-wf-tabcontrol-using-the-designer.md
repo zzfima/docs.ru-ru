@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-ms.openlocfilehash: 10550416a75592133b69c2807f1da2cca25e8707
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 560bb35bf9685abbc40bc7b87a4490752c546ea4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665833"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880638"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Практическое руководство. Добавление и удаление вкладок с использованием элемента управления TabControl в формах Windows Forms с помощью конструктора
 При размещении <xref:System.Windows.Forms.TabControl> элемента управления в форме, он содержит две вкладки по умолчанию. Можно добавить или удалить вкладки с помощью конструктора.  
@@ -29,7 +29,7 @@ ms.locfileid: "64665833"
   
      -или-  
   
-     В **свойства** окно, нажмите кнопку **кнопку с многоточием** кнопки (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.TabControl.TabPages%2A> свойства, чтобы открыть **редактор коллекции TabPage**. Нажмите кнопку **добавить** или **удалить** кнопки.  
+     В **свойства** окно, нажмите кнопку **кнопку с многоточием** кнопки (![кнопку с многоточием (...) в окне свойств Visual Studio.](./media/visual-studio-ellipsis-button.png)) рядом с полем <xref:System.Windows.Forms.TabControl.TabPages%2A> свойство Чтобы открыть **редактор коллекции TabPage**. Нажмите кнопку **добавить** или **удалить** кнопки.  
   
 ## <a name="see-also"></a>См. также
 

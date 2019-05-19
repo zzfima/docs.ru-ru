@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 5e530b475745a3df7482b9ea4276f004d13ec055
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b248e9b250ce18f05a2bf57b80af8fbcebb4f811
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642455"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880605"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>Практическое руководство. Добавление таблиц и столбцов в элемент управления DataGrid в формах Windows Forms с помощью конструктора
 
@@ -27,9 +27,9 @@ ms.locfileid: "61642455"
   
 ### <a name="to-add-a-table-to-the-datagrid-control-in-the-designer"></a>Чтобы добавить таблицу в элемент управления DataGrid в конструкторе  
   
-1. Для отображения данных в таблице, необходимо сначала привязать <xref:System.Windows.Forms.DataGrid> элемента управления к набору данных. Дополнительные сведения см. в разделе [Как Привязка элемента управления DataGrid в Windows Forms к источнику данных с помощью конструктора](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).  
+1. Для отображения данных в таблице, необходимо сначала привязать <xref:System.Windows.Forms.DataGrid> элемента управления к набору данных. Дополнительные сведения см. в разделе [Практическое руководство. Привязка элемента управления DataGrid в Windows Forms к источнику данных с помощью конструктора](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).  
   
-2. Выберите <xref:System.Windows.Forms.DataGrid> элемента управления <xref:System.Windows.Forms.DataGrid.TableStyles%2A> свойства в окне «Свойства» и затем нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем свойство отображения **редактор коллекции DataGridTableStyle**.  
+2.  Выберите <xref:System.Windows.Forms.DataGrid> элемента управления <xref:System.Windows.Forms.DataGrid.TableStyles%2A> свойства в окне «Свойства» и затем нажмите кнопку с многоточием (![кнопку с многоточием (...) в окне свойств Visual Studio.](./media/visual-studio-ellipsis-button.png)) рядом со свойством для отображения **Редактор коллекции DataGridTableStyle**.  
   
 3. В редакторе коллекции щелкните **добавить** Вставляемый стиль таблицы.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "61642455"
   
 ### <a name="to-add-a-column-to-the-datagrid-control-in-the-designer"></a>Чтобы добавить столбец в элемент управления DataGrid в конструкторе  
   
-1. В **члены** поле **редактор коллекции DataGridTableStyle**, выберите требуемый стиль таблицы. В **свойства** редактора коллекции, выберите <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> коллекции, а затем нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png " vbEllipsesButton")) рядом со свойством для отображения **редактор коллекции DataGridColumnStyle**.  
+1.  В **члены** поле **редактор коллекции DataGridTableStyle**, выберите требуемый стиль таблицы. В **свойства** редактора коллекции, выберите <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> коллекции, а затем нажмите кнопку с многоточием (![кнопку с многоточием (...) в окне свойств Visual Studio.](./media/visual-studio-ellipsis-button.png)) рядом с полем свойство отображения **редактор коллекции DataGridColumnStyle**.  
   
 2. В редакторе коллекции щелкните **добавить** для вставки стиль столбца или щелкните стрелку вниз рядом с полем **добавить** для указания типа столбца.  
   

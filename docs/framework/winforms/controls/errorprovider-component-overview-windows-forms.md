@@ -8,15 +8,15 @@ helpviewer_keywords:
 - error messages [Windows Forms], displaying
 - ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
-ms.openlocfilehash: 485e7a17073d72618b9599113179cddde748e697
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2a97ab80cde00a47bbdf6830bdba325e1c9f3ef
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972027"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880963"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>Общие сведения о компоненте ErrorProvider (Windows Forms)
-Windows Forms [ErrorProvider](errorprovider-component-windows-forms.md) компонент используется для проверки пользовательского ввода в форме или элементе управления. Обычно используется в сочетании с проверка вводимых пользователем данных в форме или отображение ошибок в наборе данных. Поставщик ошибка — лучшую альтернативу по сравнению с сообщением об ошибке в окне сообщения, так как после закрытия окно сообщения, сообщение об ошибке больше не отображается. <xref:System.Windows.Forms.ErrorProvider> Компонент отображает значок ошибки (![значок ErrorProvider](./media/vberrorprovidericon.gif "vbErrorProviderIcon")) рядом с соответствующим элементом управления, например при наведении пользователем указателя мыши на текстовое поле значок ошибки появляется ToolTip, отображающий строку сообщения об ошибке.  
+Windows Forms [ErrorProvider](errorprovider-component-windows-forms.md) компонент используется для проверки пользовательского ввода в форме или элементе управления. Обычно используется в сочетании с проверка вводимых пользователем данных в форме или отображение ошибок в наборе данных. Поставщик ошибка — лучшую альтернативу по сравнению с сообщением об ошибке в окне сообщения, так как после закрытия окно сообщения, сообщение об ошибке больше не отображается. <xref:System.Windows.Forms.ErrorProvider> Компонент отображает значок ошибки (![белым восклицательным знаком внутри красного круга.](./media/errorprovider-component-overview-windows-forms/vb-error-provider-icon.gif)) рядом с соответствующим элементом управления, например текстовое поле; при наведении указателя мыши на значок ошибки появляется подсказка, Отображение строку сообщения об ошибке.  
   
 ## <a name="key-properties"></a>Ключевые свойства  
  <xref:System.Windows.Forms.ErrorProvider> Ключевые свойства компонента — <xref:System.Windows.Forms.ErrorProvider.DataSource%2A>, <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>, и <xref:System.Windows.Forms.ErrorProvider.Icon%2A>. При использовании <xref:System.Windows.Forms.ErrorProvider> компонент с привязкой к данным элементы управления, <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> свойство должно быть присвоено подходящего контейнера (как правило, форма Windows) в порядке для компонента, чтобы отобразить значок ошибки в форме. При добавлении компонента в конструкторе <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> свойству форме; при добавлении элемента управления в коде, необходимо установить его самостоятельно.  

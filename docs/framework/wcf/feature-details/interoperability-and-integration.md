@@ -2,12 +2,12 @@
 title: Взаимодействие и интеграция
 ms.date: 03/30/2017
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-ms.openlocfilehash: 2410c52e99f3498d8dbd6ec66a5abe0e169f4b91
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8b4113d7545ab4e478b49c07681298d9ee942309
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591224"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875976"
 ---
 # <a name="interoperability-and-integration"></a>Взаимодействие и интеграция
 В этом разделе описывается взаимодействие и интеграция с Windows Communication Foundation (WCF).  
@@ -32,16 +32,16 @@ ms.locfileid: "65591224"
  В этой статье описывается перенос веб-WSE 3.0 службы к службе WCF.  
   
  [Взаимодействие с веб-службами ASP.NET](../../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)  
- Описывает, как WCF могут взаимодействовать с [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-службы.  
+ Описывает, как WCF могут взаимодействовать с веб-служб ASP.NET.  
   
  [Миграция веб-служб ASP.NET на платформу WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- Описывается перенос [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-службы к службе WCF.  
+ В этой статье описывается перенос веб-службы ASP.NET в службе WCF.  
   
  [Миграция веб-служб ASP.NET на платформу WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- Описывается перенос [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-службы к службе WCF.  
+ В этой статье описывается перенос веб-службы ASP.NET в службе WCF.  
   
  [Миграция веб-служб ASP.NET на платформу WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
- Описывается перенос [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-службы к службе WCF.  
+ В этой статье описывается перенос веб-службы ASP.NET в службе WCF.  
   
  [Взаимодействие с приложениями POX](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md)  
  Описывает, как WCF предоставляет службы и клиенты, использующие сообщения «Plain Old XML» (POX).  

@@ -2,12 +2,12 @@
 title: Безопасность поведений
 ms.date: 03/30/2017
 ms.assetid: 19710ae3-f197-4d28-ba9d-52e465006819
-ms.openlocfilehash: f5fd9cdb5fa0a84a151bc00ba63f1f5e89530629
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ecb7337876cf4fe85d84e7a73a82a7520ee37e5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955109"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880142"
 ---
 # <a name="behavior-security"></a>Безопасность поведений
 В этом разделе приведены образцы, демонстрирующие настройку безопасности для поведения служб.  
@@ -17,7 +17,7 @@ ms.locfileid: "61955109"
  Этот образец демонстрирует, как использовать <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> для включения аудита событий безопасности во время выполнения операций службы.  
   
  [Поставщик членства и ролей](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)  
- В этом образце показано, как служба может с помощью поставщиков членства и ролей [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] выполнять проверку подлинности и авторизацию клиентов.  
+ В этом примере демонстрируется, как служба может использовать ASP.NET поставщиков членства и ролей для проверки подлинности и авторизации клиентов.  
   
  [Авторизация доступа к операциям службы](../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
  В этом образце демонстрируется использование [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) возможности, обеспечивающие использование <xref:System.Security.Permissions.PrincipalPermissionAttribute> атрибут для авторизации доступа к операциям службы.  

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: 161edd2cb3afeb6ba8b10455a1c3a2c43b90dac1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8852a3daa3cd3891d5053cc1fffe19fa310125de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949673"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880722"
 ---
 # <a name="objects-visual-basic"></a>Объекты (Visual Basic)
 В этом разделе приводятся ссылки на другие разделы, содержащие описание объектов времени выполнения Visual Basic и таблицы процедур, свойств и событий их элементов.  
@@ -37,9 +37,9 @@ ms.locfileid: "61949673"
 |`My.Computer.Registry` (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)|Включает свойства и методы для управления реестром.|  
 |[Объект My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)|Предлагает свойства для доступа к экземпляру каждой формы Windows Forms, объявленной в текущем проекте.|  
 |`My.Log` (<xref:Microsoft.VisualBasic.Logging.AspLog>)|Включает свойство и методы для записи сведений о событиях и исключениях в прослушивателе журнала для веб-приложений.|  
-|[Объект My.Request](../../../visual-basic/language-reference/objects/my-request-object.md)|Возвращает объект <xref:System.Web.HttpRequest> для запрашиваемой страницы. Объект `My.Request` содержит сведения о текущем HTTP-запросе.<br /><br /> Объект `My.Request` доступен только для приложений [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].|  
+|[Объект My.Request](../../../visual-basic/language-reference/objects/my-request-object.md)|Возвращает объект <xref:System.Web.HttpRequest> для запрашиваемой страницы. Объект `My.Request` содержит сведения о текущем HTTP-запросе.<br /><br /> Объект `My.Request` доступен только для приложений ASP.NET.|  
 |[Объект My.Resources](../../../visual-basic/language-reference/objects/my-resources-object.md)|Содержит свойства и классы для доступа к ресурсам приложения.|  
-|[Объект My.Response](../../../visual-basic/language-reference/objects/my-response-object.md)|Возвращает объект <xref:System.Web.HttpResponse>, связанный с <xref:System.Web.UI.Page>. Этот объект позволяет отправлять клиенту данные HTTP-ответа и содержит сведения об этом ответе.<br /><br /> Объект `My.Response` доступен только для приложений [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].|  
+|[Объект My.Response](../../../visual-basic/language-reference/objects/my-response-object.md)|Возвращает объект <xref:System.Web.HttpResponse>, связанный с <xref:System.Web.UI.Page>. Этот объект позволяет отправлять клиенту данные HTTP-ответа и содержит сведения об этом ответе.<br /><br /> Объект `My.Response` доступен только для приложений ASP.NET.|  
 |[Объект My.Settings](../../../visual-basic/language-reference/objects/my-settings-object.md)|Включает свойства и методы для доступа к параметрам приложения.|  
 |`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|Предоставляет доступ к сведениям о текущем пользователе.|  
 |[Объект My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)|Предлагает свойства для создания экземпляров каждой веб-службы, на которую ссылается текущий проект, а также для доступа к этим экземплярам.|  

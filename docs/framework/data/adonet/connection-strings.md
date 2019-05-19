@@ -2,12 +2,12 @@
 title: Строки подключения в ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 1197335f3ba2a09b6e7303d31bc32383d1fd3436
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b7cb0ab061da8364a9fecc3868ba9aaf7501577
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032768"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881159"
 ---
 # <a name="connection-strings-in-adonet"></a>Строки подключения в ADO.NET
 
@@ -17,24 +17,32 @@ ms.locfileid: "62032768"
 
 Строка подключения — список разделенных точкой с запятой пар ключ/значение параметра:
 
-    keyword1=value; keyword2=value;
+```
+keyword1=value; keyword2=value;
+```
 
 Ключевые слова не учитывают регистр. Значения, тем не менее, могут быть с учетом регистра, в зависимости от источника данных. Ключевые слова и значения могут содержать [пробельных символов](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Начальные и конечные пробелы пропускается в ключевые слова и не заключаться в кавычки значения.
 
 Если значение содержит точку с запятой, [управляющие символы Юникода](https://en.wikipedia.org/wiki/Unicode_control_characters), или начальные или конечные пробелы, то он должен быть заключен в одинарные или двойные кавычки. Пример:
 
-    Keyword=" whitespace  ";
-    Keyword='special;character';
+```
+Keyword=" whitespace  ";
+Keyword='special;character';
+```
 
 Внешний символ может не произойти в значении, он помещает. Таким образом значение, содержащее одинарные кавычки могут быть заключены только в двойные кавычки и наоборот:
 
-    Keyword='double"quotation;mark';
-    Keyword="single'quotation;mark";
+```
+Keyword='double"quotation;mark';
+Keyword="single'quotation;mark";
+```
 
 Сами кавычки, а также знак равенства не требуют escape-преобразование, поэтому в следующей строке подключения являются допустимыми:
 
-    Keyword=no "escaping" 'required';
-    Keyword=a=b=c
+```
+Keyword=no "escaping" 'required';
+Keyword=a=b=c
+```
 
 Так как каждое значение считывается до следующей точки с запятой или конца строки, в последнем примере значение `a=b=c`, и окончательный точка с запятой является необязательным.
 

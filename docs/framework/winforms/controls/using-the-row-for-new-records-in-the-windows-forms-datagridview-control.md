@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: ace4b1c32ac30c54b56e2adbbbbf6af0450a4740
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b28a8a8fc2d75f80a14447008c850de63e4e04b3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651538"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882435"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Использование строки элемента управления DataGridView, предназначенной для ввода новых данных, в Windows Forms
 При использовании <xref:System.Windows.Forms.DataGridView> для редактирования данных в приложении, часто требуется предоставить пользователям возможность добавлять новые строки данных в хранилище данных. <xref:System.Windows.Forms.DataGridView> Элемент управления поддерживает данную функцию, предоставляя строку для новых записей, которая всегда находится в последней строке. Оно помечено символ звездочки (*) в заголовке строки. В следующих разделах рассматриваются некоторые аспекты, следует учитывать при включении программы со строкой для новых записей.  
@@ -24,7 +24,7 @@ ms.locfileid: "64651538"
 ## <a name="populating-the-row-for-new-records-with-default-data"></a>Заполнение строки для новых записей с данными по умолчанию  
  Когда пользователь выбирает строку для новых записей как текущую строку, <xref:System.Windows.Forms.DataGridView> управления вызывает <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> событий.  
   
- Это событие предоставляет доступ к новому <xref:System.Windows.Forms.DataGridViewRow> и позволяет заполнить новую строку с данными по умолчанию. Дополнительные сведения см. в разделе [Как Определение значения по умолчанию для новых строк в элементе управления DataGridView Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)  
+ Это событие предоставляет доступ к новому <xref:System.Windows.Forms.DataGridViewRow> и позволяет заполнить новую строку с данными по умолчанию. Дополнительные сведения см. в разделе [Практическое руководство. Определение значения по умолчанию для новых строк в элементе управления DataGridView Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)  
   
 ## <a name="the-rows-collection"></a>Набор строк  
  Содержится в строке для новых записей <xref:System.Windows.Forms.DataGridView> элемента управления <xref:System.Windows.Forms.DataGridView.Rows%2A> коллекции но ведет себя по-разному в двух аспектах:  
@@ -47,7 +47,7 @@ ms.locfileid: "64651538"
 ## <a name="sorting"></a>Сортировка  
  В несвязанном режиме новые записи всегда добавляются в конец <xref:System.Windows.Forms.DataGridView> даже если пользователь отсортировал содержание <xref:System.Windows.Forms.DataGridView>. Пользователю будет необходимо повторно применить сортировку для сортировки строк в нужное положение; Это поведение похоже, <xref:System.Windows.Forms.ListView> элемента управления.  
   
- В данных связанном и виртуальном режимах результат вставки при применении сортировки будет зависеть от реализации модели данных. Для [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], строки немедленно упорядочить в правильном положении.  
+ В данных связанном и виртуальном режимах результат вставки при применении сортировки будет зависеть от реализации модели данных. Для ADO.NET строки немедленно упорядочить в правильном положении.  
   
 ## <a name="other-notes-on-the-row-for-new-records"></a>Другие примечания к строке для новых записей  
  Невозможно задать <xref:System.Windows.Forms.DataGridViewRow.Visible%2A> свойства этой строки для `false`. <xref:System.InvalidOperationException> Возникает при попытке такой.  

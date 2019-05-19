@@ -2,12 +2,12 @@
 title: Неподдерживаемые сценарии
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 48ed292b3bb22ae4966680805a74b40b249d8a32
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637763"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878738"
 ---
 # <a name="unsupported-scenarios"></a>Неподдерживаемые сценарии
 По различным причинам Windows Communication Foundation (WCF) не поддерживает некоторые сценарии безопасности. Например [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition не реализует протоколы проверки подлинности SSPI и Kerberos, и поэтому WCF не поддерживает запуск службы с проверкой подлинности Windows на этой платформе. При выполнении WCF под Windows XP Home Edition, поддерживаются другие механизмы проверки подлинности, такие как имя пользователя и пароль и встроенная проверка подлинности HTTP/HTTPS.  
@@ -28,7 +28,7 @@ ms.locfileid: "64637763"
   
 - Создан маркер контекста безопасности с отслеживанием состояния (SCT) (по умолчанию создание отключено).  
   
- Маркер SCT с отслеживанием состояния создается только с использованием пользовательской привязки. Дополнительные сведения см. в разделе [Как Создайте контекст безопасности маркера для безопасного сеанса](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) В коде маркер включается путем создания элемента привязки безопасности (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> или <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) с помощью метода <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> или <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> и присвоения параметру `requireCancellation` значения `false`. Параметр относится к кэшированию маркера SCT. Задание значения `false` включает функцию маркера SCT с отслеживанием состояния.  
+ Маркер SCT с отслеживанием состояния создается только с использованием пользовательской привязки. Дополнительные сведения см. в разделе [Практическое руководство. Создайте контекст безопасности маркера для безопасного сеанса](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) В коде маркер включается путем создания элемента привязки безопасности (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> или <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) с помощью метода <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> или <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> и присвоения параметру `requireCancellation` значения `false`. Параметр относится к кэшированию маркера SCT. Задание значения `false` включает функцию маркера SCT с отслеживанием состояния.  
   
  Кроме того, в конфигурации, маркер включается путем создания <`customBinding`>, добавив <`security`> и задав `authenticationMode` атрибут SecureConversation и `requireSecurityContextCancellation` атрибут `true`.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "64637763"
 >  Эти требования зависят от конкретной ситуации. Например, метод <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> создает элемент привязки, который имеет результатом удостоверение Windows, однако не устанавливает маркер SCT. Поэтому его можно использовать с параметром `Required` в ОС [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ### <a name="possible-aspnet-conflict"></a>Возможный конфликт ASP.NET  
- WCF и [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] можно включать и отключать олицетворение. Когда [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] размещает приложения WCF, может возникнуть конфликт между WCF и [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] параметры конфигурации. В случае конфликта WCF параметра имеет приоритет, если <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> свойству <xref:System.ServiceModel.ImpersonationOption.NotAllowed>в этом случае [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приоритет имеет параметр олицетворения.  
+ WCF и ASP.NET можно как включать и отключать олицетворение. Когда ASP.NET размещает приложение WCF, может возникнуть конфликт между параметрами конфигурации WCF и ASP.NET. В случае конфликта WCF параметра имеет приоритет, если <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> свойству <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, в этом случае параметр олицетворения ASP.NET имеет приоритет.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Возможный сбой загрузки сборки при олицетворении  
  Если олицетворенный контекст не имеет прав доступа для загрузки сборки и если это первая попытка загрузки этой сборки в среде CLR для этого домена приложения, в <xref:System.AppDomain> кэшируется ошибка. Последующие попытки загрузки сборки (или сборок) также окажутся неудачными, даже если олицетворение отменено, а восстановленный контекст имеет права доступа для загрузки сборки. Это обусловлено тем, что в среде CLR не производится повторная попытка загрузки после изменения контекста пользователя. Для восстановления после сбоя необходимо повторно запустить домен приложения.  
@@ -75,13 +75,13 @@ ms.locfileid: "64637763"
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Сбой безопасности сообщений при использовании олицетворения ASP.NET и режима совместимости ASP.NET  
  WCF не поддерживает следующую комбинацию параметров, так как они могут помешать выполняться проверка подлинности клиента:  
   
-- Включено олицетворение [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Это делается в файле Web.config, задав `impersonate` атрибут <`identity`> элемент `true`.  
+- Включено олицетворение ASP.NET. Это делается в файле Web.config, задав `impersonate` атрибут <`identity`> элемент `true`.  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] режим совместимости можно включить, задав `aspNetCompatibilityEnabled` атрибут [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) для `true`.  
+- Режим совместимости с ASP.NET можно включить, задав `aspNetCompatibilityEnabled` атрибут [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) для `true`.  
   
 - Используется режим безопасности сообщения.  
   
- Временное решение - отключить режим совместимости [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Или, если [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] необходим режим совместимости, отключите [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] олицетворения компонентов и вместо этого используйте олицетворение, предоставляемую платформой WCF. Дополнительные сведения см. в разделе [делегирование и олицетворение](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Обходным путем является для отключения режима совместимости ASP.NET. Или, если требуется режим совместимости с ASP.NET, отключить возможность олицетворения ASP.NET и вместо этого используйте олицетворение, предоставляемую платформой WCF. Дополнительные сведения см. в разделе [делегирование и олицетворение](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="ipv6-literal-address-failure"></a>Ошибка литерального адреса IPv6  
  Если клиент и служба находятся на одном компьютере, а для службы используются литеральные адреса IPv6, происходит сбой запросов безопасности.  

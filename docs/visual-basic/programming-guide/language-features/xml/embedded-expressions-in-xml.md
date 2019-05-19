@@ -8,15 +8,15 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: 2b22cccbd24671a74ed9819d1613ffe5a7e072a8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ef8ac62d9d969ce4463931d69b0302376ca0ccc4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598390"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881549"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Встроенные выражения в XML (Visual Basic)
-Внедренные выражения позволяют создавать XML-литералов, которые содержат выражения, которые вычисляются во время выполнения. Для внедренного выражения используется синтаксис `<%=` `expression` `%>`, которая используется, и как синтаксис, используемый в [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
+Внедренные выражения позволяют создавать XML-литералов, которые содержат выражения, которые вычисляются во время выполнения. Для внедренного выражения используется синтаксис `<%=` `expression` `%>`, который является таким же, как синтаксис, используемый в ASP.NET.  
   
  Например созданием XML-элемент литерала, объединяющий встроенные выражения с содержимым текста.  
   

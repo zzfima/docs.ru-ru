@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 7c9442635bb193c13ca30fd1e271631a43b33e55
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e1e9ce761baa77ea06b3d66aa5b296a186f054b4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589014"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878866"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Общие сведения об элементе управления DataGrid (Windows Forms)
 > [!NOTE]
@@ -53,7 +53,7 @@ ms.locfileid: "65589014"
   
  Если данные в привязанном наборе данных обновляются посредством какого-либо механизма, элемент управления <xref:System.Windows.Forms.DataGrid> отражает изменения. Если в сетке данных и его стили таблиц и столбцов `ReadOnly` свойству присвоено `false`, можно обновлять в наборе данных с помощью <xref:System.Windows.Forms.DataGrid> элемента управления.  
   
- В элементе управления <xref:System.Windows.Forms.DataGrid> на определенный момент времени может отображаться только одна таблица. Если между таблицами определено отношение "родительская-дочерняя", пользователь может перемещаться между связанными таблицами для выбора таблицы, которая будет отображаться в элементе управления <xref:System.Windows.Forms.DataGrid>. Сведения о привязке <xref:System.Windows.Forms.DataGrid> управления [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] источника данных во время разработки или во время выполнения, см. в разделе [как: Привязка элемента управления DataGrid в Windows Forms к источнику данных](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+ В элементе управления <xref:System.Windows.Forms.DataGrid> на определенный момент времени может отображаться только одна таблица. Если между таблицами определено отношение "родительская-дочерняя", пользователь может перемещаться между связанными таблицами для выбора таблицы, которая будет отображаться в элементе управления <xref:System.Windows.Forms.DataGrid>. Сведения о привязке <xref:System.Windows.Forms.DataGrid> управления к источнику данных ADO.NET, во время разработки или во время выполнения, см. в разделе [как: Привязка элемента управления DataGrid в Windows Forms к источнику данных](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
  Источники данных, допустимые для <xref:System.Windows.Forms.DataGrid>, включают следующие:  
   

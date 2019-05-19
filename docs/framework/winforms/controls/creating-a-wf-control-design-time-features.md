@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 9f290629e50d7d791119298059277ba73d8e73eb
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 4d741beffa5649d1d1593ba3dbb7a1918b669b80
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211203"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882322"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Пошаговое руководство. Создание элемента управления Windows Forms, в котором используются преимущества функций Visual Studio, применяемых во время разработки
 
@@ -59,7 +59,7 @@ ms.locfileid: "65211203"
 
 Когда вы закончите, пользовательский элемент управления будет выглядеть примерно следующим образом:
 
-![Порядок MarqueeControl](./media/demomarqueecontrol.gif "DemoMarqueeControl")
+![Приложение, указанное бегущей строки, о том, текст и кнопки Start и Stop.](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
 Полный пример кода, см. в разделе [как: Создание элемента управления Windows Forms, используются преимущества функций разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).
 
@@ -84,11 +84,11 @@ ms.locfileid: "65211203"
 
 1. Добавьте проект библиотеки элементов управления Windows Forms в решение. Назовите проект «MarqueeControlLibrary.»
 
-2. С помощью **обозревателе решений**, удалите элемент управления проекта по умолчанию, удаляя исходный файл с именем «UserControl1.cs» или «UserControl1.vb» в зависимости от выбранного языка. Дополнительные сведения см. в разделе [Как Удалить, удаление и исключить элементы](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).
+2. С помощью **обозревателе решений**, удалите элемент управления проекта по умолчанию, удаляя исходный файл с именем «UserControl1.cs» или «UserControl1.vb» в зависимости от выбранного языка. Дополнительные сведения см. в разделе [Практическое руководство. Удалить, удаление и исключить элементы](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).
 
 3. Добавьте новый <xref:System.Windows.Forms.UserControl> элемент `MarqueeControlLibrary` проекта. Предоставить новый исходный файл базовым именем «MarqueeControl.»
 
-4. С помощью **обозревателе решений**, создайте новую папку в `MarqueeControlLibrary` проекта. Дополнительные сведения см. в разделе [Как Добавление новых элементов проекта](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)). Назовите новую папку «Design».
+4. С помощью **обозревателе решений**, создайте новую папку в `MarqueeControlLibrary` проекта. Дополнительные сведения см. в разделе [Практическое руководство. Добавление новых элементов проекта](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)). Назовите новую папку «Design».
 
 5. Щелкните правой кнопкой мыши **разработки** папку и добавьте новый класс. Присвойте файлу источника, базовым именем «MarqueeControlRootDesigner.»
 
@@ -178,7 +178,7 @@ using MarqueeControlLibrary;
 
 2. В диалоговом окне «Страницы свойств MarqueeControlLibrary» выберите **Отладка** страницы.
 
-3. В **действие при запуске** выберите **запуск внешней программы**. Вы будете отладка отдельного экземпляра Visual Studio, поэтому нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) чтобы перейти в интегрированной среде разработки Visual Studio. Имя исполняемого файла — devenv.exe, и если вы установили в расположение по умолчанию, его путь — 9.0\Common7\IDE\devenv.exe %programfiles%\Microsoft Visual Studio.
+3. В **действие при запуске** выберите **запуск внешней программы**. Вы будете отладка отдельного экземпляра Visual Studio, поэтому нажмите кнопку с многоточием (![кнопку с многоточием (...) в окне свойств Visual Studio.](./media/visual-studio-ellipsis-button.png)) чтобы перейти в интегрированной среде разработки Visual Studio. Имя исполняемого файла — devenv.exe, и если вы установили в расположение по умолчанию, его путь — 9.0\Common7\IDE\devenv.exe %programfiles%\Microsoft Visual Studio.
 
 4. Нажмите кнопку ОК, чтобы закрыть диалоговое окно.
 
@@ -485,7 +485,7 @@ using MarqueeControlLibrary;
 
 ## <a name="creating-a-custom-uitypeeditor"></a>Создание пользовательского редактора UITypeEditor
 
-При создании пользовательского взаимодействия во время разработки для пользователей, часто желательно изменить взаимодействие с окном свойств. Это можно сделать, создав <xref:System.Drawing.Design.UITypeEditor>. Дополнительные сведения см. в разделе [Как Создание редактора типов пользовательского интерфейса](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fd3kt7d5(v=vs.120)).
+При создании пользовательского взаимодействия во время разработки для пользователей, часто желательно изменить взаимодействие с окном свойств. Это можно сделать, создав <xref:System.Drawing.Design.UITypeEditor>. Дополнительные сведения см. в разделе [Практическое руководство. Создание редактора типов пользовательского интерфейса](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fd3kt7d5(v=vs.120)).
 
 `MarqueeBorder` Элемент управления предоставляет несколько свойств в окне «Свойства». Два из этих свойств `MarqueeSpinDirection` и `MarqueeLightShape` , представлены перечислениями. Чтобы проиллюстрировать использование редактора типов пользовательского интерфейса, `MarqueeLightShape` свойство будет иметь сопоставленный <xref:System.Drawing.Design.UITypeEditor> класса.
 
@@ -639,7 +639,7 @@ private void stopButton_Click(object sender, System.EventArgs e)
 
 - Дальнейшая настройка поведения во время разработки. Попробуйте затенить больше свойств, чем <xref:System.Windows.Forms.Control.Enabled%2A> и <xref:System.Windows.Forms.Control.Visible%2A>, и можно добавить новые свойства. Добавьте новые команды конструктора для упрощения общих задач, таких как закрепление дочерних элементов управления.
 
-- Лицензии `MarqueeControl`. Дополнительные сведения см. в разделе [Как Лицензирование компонентов и элементов управления](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120)).
+- Лицензии `MarqueeControl`. Дополнительные сведения см. в разделе [Практическое руководство. Лицензирование компонентов и элементов управления](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120)).
 
 - Контролировать порядок сериализации элементов управления и способ создания кода для них. Дополнительные сведения см. в разделе [динамического кода Создание и компиляция исходного](../../reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).
 

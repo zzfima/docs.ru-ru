@@ -11,12 +11,12 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: c8321f98b25026e32e7c69f7029f2c589d0567f7
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 1f1412f03f912c0142b08d5ad8581e421252cfb3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211604"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882360"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Пошаговое руководство. Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute
 
@@ -66,7 +66,7 @@ ms.locfileid: "65211604"
 
 8. Нажмите клавишу **F5** построение проекта и запустить элемент управления **тестовом контейнере элементов управления**.
 
-9. Найти `Strings` свойство в <xref:System.Windows.Forms.PropertyGrid> из **тестовом контейнере элементов управления**. Нажмите кнопку `Strings` свойство, нажмите кнопку обзора (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) кнопку, чтобы открыть **редактор коллекции строк**.
+9. Найти `Strings` свойство в <xref:System.Windows.Forms.PropertyGrid> из **тестовом контейнере элементов управления**. Нажмите кнопку `Strings` свойство, нажмите кнопку обзора (![кнопку с многоточием (...) в окне свойств Visual Studio.](./media/visual-studio-ellipsis-button.png)) кнопку, чтобы открыть **редактор коллекции строк**.
 
 10. Введите несколько строк в **редактор коллекции строк**. Разделяйте их, нажав клавишу **ввод** ключа в конце каждой строки. Нажмите кнопку **ОК** при завершении.
 
@@ -85,7 +85,7 @@ ms.locfileid: "65211604"
 
 3. Место `SerializationDemoControl` в форме.
 
-4. Найти `Strings` свойство в **свойства** окна. Нажмите кнопку `Strings` свойство, нажмите кнопку обзора (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) кнопку, чтобы открыть **редактор коллекции строк**.
+4. Найти `Strings` свойство в **свойства** окна. Нажмите кнопку `Strings` свойство, нажмите кнопку обзора (![кнопку с многоточием (...) в окне свойств Visual Studio.](./media/visual-studio-ellipsis-button.png)) кнопку, чтобы открыть **редактор коллекции строк**.
 
 5. Введите несколько строк в **редактор коллекции строк**. Разделяйте их, нажав клавишу ВВОД в конце каждой строки. Нажмите кнопку **ОК** при завершении.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: f20ffcf356aa0493b1e2356746d9ad7b27d9a1aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49d11556d3703331b4cdf5bf83a69f6b15bca8ed
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876204"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881995"
 ---
 # <a name="quickstart-wcf-data-services"></a>Краткое руководство (службы данных WCF)
 
@@ -34,7 +34,7 @@ ms.locfileid: "61876204"
 
  [Создание службы данных](../../../../docs/framework/data/wcf/creating-the-data-service.md)
 
- Определите приложение [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , определите модель данных, создайте службу данных и включите доступ к ресурсам.
+ Определите приложение ASP.NET, определите модель данных, создайте службу данных и включите доступ к ресурсам.
 
  [Доступ к службе из веб-браузер](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 

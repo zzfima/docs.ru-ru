@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 9f72d6d560f82d7d80036f07ec865d78a4ab9955
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d36c51a3346d7d2c2aa4b7b526d590770463826e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606402"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882447"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel
 В некоторых приложениях требуется форма, макет которой изменяется надлежащим образом при изменении размера формы или содержимого. Если необходим динамический макет и вы не хотите обрабатывать события <xref:System.Windows.Forms.Control.Layout> явно в коде, рассмотрите возможность использования панели макета.  
@@ -54,7 +54,7 @@ ms.locfileid: "64606402"
   
 #### <a name="to-create-the-project"></a>Создание проекта  
   
-1. Создайте проект приложения Windows с именем «TableLayoutPanelExample». Дополнительные сведения см. в разделе [Как Создайте проект приложения Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) .  
+1. Создайте проект приложения Windows с именем «TableLayoutPanelExample». Дополнительные сведения см. в разделе [Практическое руководство. Создайте проект приложения Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) .  
   
 2. Выберите форму в **Windows** **конструктора**.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "64606402"
   
 1. Выберите <xref:System.Windows.Forms.TableLayoutPanel> контролировать **конструктор Windows Forms**.  
   
-2. В **свойства** открытых окон <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> коллекции, нажав кнопку с многоточием (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) кнопку рядом с полем **столбцы** запись.  
+2.  В **свойства** открытых окон <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> коллекции, нажав кнопку с многоточием (![кнопку с многоточием (...) в окне свойств Visual Studio.](./media/visual-studio-ellipsis-button.png)) рядом с пунктом  **Столбцы** запись.  
   
 3. Выберите первый столбец и измените значение его <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> свойства <xref:System.Windows.Forms.SizeType.AutoSize>. Нажмите кнопку **ОК** чтобы принять изменение. Обратите внимание, что ширина первого столбца уменьшается в соответствии с <xref:System.Windows.Forms.Button> элемента управления. Обратите внимание на то, что ширина столбца не является изменяемым размером.  
   
