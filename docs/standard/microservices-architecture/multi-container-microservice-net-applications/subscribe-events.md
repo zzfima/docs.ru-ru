@@ -1,15 +1,13 @@
 ---
 title: Подписка на события
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Общие сведения о публикации событий интеграции и подписке на них.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 962d12c054bed3b2623283e17f83b8466ab2811b
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: ff165f6bba7940b99ef9712049191e356b893897
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613282"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639706"
 ---
 # <a name="subscribing-to-events"></a>Подписка на события
 

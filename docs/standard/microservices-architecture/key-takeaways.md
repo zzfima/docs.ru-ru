@@ -1,15 +1,13 @@
 ---
 title: Главные выводы
 description: Главные выводы приведены в руководстве по микрослужбам .NET, где описана архитектура контейнерных приложений .NET. Там вы можете ознакомиться с общими проблемами, связанными с использованием архитектуры микрослужб, включая преимущества и недостатки, шаблоны проектирования и разработки DDD, а также вопросы обеспечения устойчивости, безопасности и использования оркестраторов.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 90babf9a32d1e139216cbc8eb1c629401b8e83e3
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 3b8b7be9b3903c64221cba7c6abdb1e38f5d944f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362123"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639699"
 ---
 # <a name="key-takeaways"></a>Главные выводы
 

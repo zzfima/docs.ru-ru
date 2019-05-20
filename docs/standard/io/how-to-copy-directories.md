@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Копирование каталогов
+title: Практическое руководство. Копирование каталогов
 ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 57e2b61fb8fef37234dc10885752f92e5f9b1330
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a7fa901d887701e0fa41a0887b363adec07dba2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671074"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644626"
 ---
-# <a name="how-to-copy-directories"></a>Как выполнить Копирование каталогов
+# <a name="how-to-copy-directories"></a>Практическое руководство. Копирование каталогов
 В этом разделе демонстрируется использование классов ввода-вывода для синхронного копирования содержимого каталога в другое место. 
 
 Пример асинхронного копирования файлов см. в разделе [Асинхронный файловый ввод-вывод](../../../docs/standard/io/asynchronous-file-i-o.md). 

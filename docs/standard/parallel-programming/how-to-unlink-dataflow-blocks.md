@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Удаление связей с блоками потоков данных
+title: Практическое руководство. Удаление связей с блоками потоков данных
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93705653169b5efce3e3a062b7490abc4ea39c30
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 989220141e4af5d64c3994479949547136843ff5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223121"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591993"
 ---
-# <a name="how-to-unlink-dataflow-blocks"></a>Как выполнить Удаление связей с блоками потоков данных
+# <a name="how-to-unlink-dataflow-blocks"></a>Практическое руководство. Удаление связей с блоками потоков данных
 В этом документе описан способ отсоединения целевого блока потока данных от его источника.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -34,17 +34,6 @@ ms.locfileid: "54223121"
   
  Чтобы оставшиеся вызовы `TrySolution` могли завершиться после вычисления значения одним из них, метод `TrySolution` принимает объект <xref:System.Threading.CancellationToken>, который отменяется после возврата вызова `ReceiveFromAny(T)`. Метод <xref:System.Threading.SpinWait.SpinUntil%2A> возвращает результат, когда объект <xref:System.Threading.CancellationToken> отменяется.  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
- Скопируйте код примера и вставьте его в проект Visual Studio или в файл с именем `DataflowReceiveAny.cs` (`DataflowReceiveAny.vb` для Visual Basic), затем выполните в окне командной строки разработчика для Visual Studio следующую команду.  
-  
- Visual C#  
-  
- **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReceiveAny.cs**  
-  
- Visual Basic  
-  
- **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReceiveAny.vb**  
-
 ## <a name="see-also"></a>См. также
 
 - [Поток данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

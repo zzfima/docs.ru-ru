@@ -1,15 +1,13 @@
 ---
 title: Реализация модели предметной области микрослужбы с помощью .NET Core
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Сведения о реализации модели предметной области, ориентированной на DDD.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: eb07f11e4c123ed04232e41d5d50d4ef59b76bbd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b2ad62c2a16dd3993b9624ec14f0070e934ac2de
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621224"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639774"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Реализация модели предметной области микрослужбы с помощью .NET Core
 

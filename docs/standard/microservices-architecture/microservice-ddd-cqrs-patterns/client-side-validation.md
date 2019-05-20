@@ -1,15 +1,13 @@
 ---
 title: Проверка на стороне клиента (проверка на уровнях представления)
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Ключевые понятия проверки на стороне клиента.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: ddf53456f9356817d28cd0bfa75df3296fb5d722
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 4e72dcafafc3144a75afe1fd23a4a779f5667459
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612619"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644840"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Проверка на стороне клиента (проверка на уровнях представления)
 

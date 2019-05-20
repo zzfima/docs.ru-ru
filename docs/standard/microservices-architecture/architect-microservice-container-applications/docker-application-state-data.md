@@ -1,15 +1,13 @@
 ---
 title: Состояние и данные в приложениях Docker
 description: Управление состоянием и данными в приложениях Docker. Экземпляры микрослужбы являются невосстановимыми, но к ДАННЫМ ЭТО НЕ ОТНОСИТСЯ. Рассмотрим, как решить эту задачу с помощью микрослужб.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 70c3cee8c5fd1e63f2ff869f49b1fb02ab8f59dd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9d7b0ff0e73267c6b80be2f1c956c3b4eae140e2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152660"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641369"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Состояние и данные в приложениях Docker
 

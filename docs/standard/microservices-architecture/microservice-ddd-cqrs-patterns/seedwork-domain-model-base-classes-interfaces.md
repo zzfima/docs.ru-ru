@@ -1,15 +1,13 @@
 ---
 title: Seedwork (многократно используемые базовые классы и интерфейсы для модели предметной области)
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Использование концепции seedwork в качестве отправной точки для запуска реализации для модели предметной области, ориентированной на DDD.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: bea2dbbc926f351179d11eaacd0dbb89fe036b12
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 298f79383e477df0cfeeaada5c4657a9274b3df3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611072"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639490"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (многократно используемые базовые классы и интерфейсы для модели предметной области)
 
