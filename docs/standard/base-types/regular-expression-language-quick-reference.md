@@ -17,10 +17,10 @@ ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 053df7eeba10938f1d1d749e856f64d179d471d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 05/15/2019
 ms.locfileid: "64664676"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Элементы языка регулярных выражений — краткий справочник
@@ -158,7 +158,7 @@ ms.locfileid: "64664676"
 |`${` *имя* `}`|Замещает часть строки, соответствующую именованной группе *имя*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|  
 |`$$`|Подставляет литерал "$".|`\b(\d+)\s?USD`|`$$$1`|`"103 USD"`|`"$103"`|  
 |`$&`|Замещает копией полного соответствия.|`\$?\d*\.?\d+`|`**$&**`|`"$1.30"`|`"**$1.30**"`|  
-|``$` `` | Замещает весь текст входной строки до соответствия. | `B+`|``$` ``|`"AABBCC"`|`"AAAACC"`|  
+|``$` ``|Замещает весь текст входной строки до соответствия.|`B+`|``$` ``|`"AABBCC"`|`"AAAACC"`|  
 |`$'`|Замещает весь текст входной строки после соответствия.|`B+`|`$'`|`"AABBCC"`|`"AACCCC"`|  
 |`$+`|Замещает последнюю захваченную группу.|`B+(C+)`|`$+`|`"AABBCCDD"`|`"AACCDD"`|  
 |`$_`|Замещает всю входную строку.|`B+`|`$_`|`"AABBCC"`|`"AAAABBCCCC"`|  
