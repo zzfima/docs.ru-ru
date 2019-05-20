@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 949760026bc965fbb9a94d1f40eb0996a1ce7e92
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41070b5d51f0b613d7a6bbbc72b24a8c1793964d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592397"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586113"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Практическое руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения
 Сведения об универсальных типах получаются аналогично сведениям о других типах: путем изучения объекта <xref:System.Type>, который представляет универсальный тип. Принципиальная разница заключается в том, что универсальный тип имеет список объектов <xref:System.Type>, представляющих его параметры универсального типа. В первой процедуре данного раздела изучаются универсальные типы.  
@@ -114,14 +114,6 @@ ms.locfileid: "64592397"
  [!code-cpp[HowToGeneric#1](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#1)]
  [!code-csharp[HowToGeneric#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#1)]
  [!code-vb[HowToGeneric#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#1)]  
-  
-## <a name="compiling-the-code"></a>Компиляция кода  
-  
-- Код содержит операторы C# `using` (`Imports` в Visual Basic), необходимые для компиляции.  
-  
-- Дополнительные ссылки на сборки не требуются.  
-  
-- Скомпилируйте код из командной строки с помощью команд csc.exe, vbc.exe или cl.exe. Для компиляции кода в Visual Studio поместите его в шаблон проекта консольного приложения.  
   
 ## <a name="see-also"></a>См. также
 

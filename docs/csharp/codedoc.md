@@ -3,12 +3,12 @@ title: Документирование кода с помощью XML-комм�
 description: Сведения о том, как документировать код с использованием комментариев XML-документации и создавать XML-файл документации во время компиляции.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 956598d7c8193f70e094fcb578c041b8972b9b0c
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 17a6beabf7e8a917c461dae4d92f1cfbb0d9de71
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063141"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633738"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Документирование кода с помощью XML-комментариев
 
@@ -222,5 +222,5 @@ ms.locfileid: "65063141"
 
 ## <a name="see-also"></a>См. также
 
-- [Комментарии к XML-документации (руководство по программированию на C#)](programming-guide/xmldoc/xml-documentation-comments.md)
+- [Комментарии к XML-документации (руководство по программированию на C#)](programming-guide/xmldoc/index.md)
 - [Рекомендуемые теги для комментариев документации (руководство по программированию на C#)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

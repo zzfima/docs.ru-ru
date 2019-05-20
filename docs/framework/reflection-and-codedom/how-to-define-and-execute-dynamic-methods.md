@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 883eb60197b79e0ddebf5e48438c81e29f609549
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19f1cc3708d2d552da3d94bc6b490ebaa2ece657
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591700"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586169"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Практическое руководство. Определение и выполнение динамических методов
 В следующих процедурах показаны способы определения и выполнения простого динамического метода и динамического метода, привязанного к экземпляру класса. Дополнительные сведения о динамических методах см. в описании класса <xref:System.Reflection.Emit.DynamicMethod> и в разделе [Сценарии динамических методов порождаемого отражения](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
@@ -113,14 +113,6 @@ ms.locfileid: "64591700"
  [!code-cpp[DynamicMethodHowTo#1](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#1)]
  [!code-csharp[DynamicMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#1)]
  [!code-vb[DynamicMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#1)]  
-  
-## <a name="compiling-the-code"></a>Компиляция кода  
-  
-- Код содержит операторы C# `using` (`Imports` в Visual Basic), необходимые для компиляции.  
-  
-- Дополнительные ссылки на сборки не требуются.  
-  
-- Скомпилируйте код из командной строки с помощью команд csc.exe, vbc.exe или cl.exe. Для компиляции кода в Visual Studio поместите его в шаблон проекта консольного приложения.  
   
 ## <a name="see-also"></a>См. также
 

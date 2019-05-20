@@ -2,12 +2,12 @@
 title: Соображения относительно версии и обновления для разработчиков на C#
 description: Добавление в библиотеку новых компонентов языка может повлиять на код, который использует эту библиотеку.
 ms.date: 09/19/2018
-ms.openlocfilehash: 56685422e2c73dcca25acbdccb3a77a8de9df775
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3ffe2f6fd64a391fddf28233dccb022c95851884
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199935"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634492"
 ---
 # <a name="version-and-update-considerations-for-c-developers"></a>Соображения относительно версии и обновления для разработчиков на C#
 

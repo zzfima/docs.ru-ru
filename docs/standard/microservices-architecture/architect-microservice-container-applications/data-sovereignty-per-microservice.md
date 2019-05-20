@@ -1,15 +1,13 @@
 ---
 title: Владение данными в каждой микрослужбе
 description: Владение данными в каждой микрослужбе является одним из ключевых моментов микрослужб. Каждая микрослужба должна быть единственным владельцем своей базы данных. Другие микрослужбы не должны иметь к ней доступ. Разумеется, все экземпляры микрослужбы подключаются к одной и той же базе данных высокой доступности.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 1b0b1fbb72f759eb337c0c1a9c465cc4088d8eff
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: ccb12451cd7cd44938e09d171eb29e614786f469
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611241"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644451"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Владение данными в каждой микрослужбе
 

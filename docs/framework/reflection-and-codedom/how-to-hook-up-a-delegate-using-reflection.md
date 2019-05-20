@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bc4b4df6829f5b86dff400c5cd7cbd3d86f5507
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a4640e776cc76ef56227858f6a4aa04e77ecbbdc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591533"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586000"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Практическое руководство. Подключение делегата с помощью отражения
 При использовании отражения для загрузки и запуска сборок невозможно использовать функциональные возможности языка, такие как оператор C# `+=` или [оператор AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) в Visual Basic. В следующих процедурах показано, как подключить существующий метод к событию посредством получения всех необходимых типов через отражение и как создать динамический метод с помощью порожденного отражения и подключить этот метод к событию.  
@@ -104,14 +104,6 @@ ms.locfileid: "64591533"
  [!code-cpp[HookUpDelegate#1](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#1)]
  [!code-csharp[HookUpDelegate#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#1)]
  [!code-vb[HookUpDelegate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#1)]  
-  
-## <a name="compiling-the-code"></a>Компиляция кода  
-  
-- Код содержит операторы C# `using` (`Imports` в Visual Basic), необходимые для компиляции.  
-  
-- Отсутствует необходимость в дополнительных ссылках на сборки в целях компиляции из командной строки. В Visual Studio необходимо добавить ссылку в System.Windows.Forms.dll, так как этот пример является приложением консоли.  
-  
-- Скомпилируйте код из командной строки с помощью команд csc.exe, vbc.exe или cl.exe. Для компиляции кода в Visual Studio поместите его в шаблон проекта консольного приложения.  
   
 ## <a name="see-also"></a>См. также
 

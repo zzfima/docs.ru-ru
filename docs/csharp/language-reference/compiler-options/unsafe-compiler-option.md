@@ -7,15 +7,16 @@ helpviewer_keywords:
 - -unsafe compiler option [C#]
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
-ms.openlocfilehash: 4cfd7c82bc2cbf816164b235642c0647eeb7e5b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 146299fda103567b111c66400c17edf36addd843
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337335"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877992"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe (параметры компилятора C#)
-Параметр **-unsafe** разрешает компилировать код, в котором используется ключевое слово [unsafe](../../../csharp/language-reference/keywords/unsafe.md).  
+
+Параметр **-unsafe** разрешает компилировать код, в котором используется ключевое слово [unsafe](../keywords/unsafe.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -23,8 +24,9 @@ ms.locfileid: "59337335"
 -unsafe  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [Небезопасный код и указатели](../../../csharp/programming-guide/unsafe-code-pointers/index.md).  
+## <a name="remarks"></a>Примечания
+
+Дополнительные сведения см. в разделе [Небезопасный код и указатели](../../programming-guide/unsafe-code-pointers/index.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
@@ -46,8 +48,9 @@ ms.locfileid: "59337335"
 
  Дополнительные сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>.  
   
-## <a name="example"></a>Пример  
- Скомпилируйте `in.cs` для небезопасного режима:  
+## <a name="example"></a>Пример
+
+Скомпилируйте `in.cs` для небезопасного режима:  
   
 ```console  
 csc -unsafe in.cs  
@@ -55,5 +58,5 @@ csc -unsafe in.cs
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Параметры компилятора C# ](index.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

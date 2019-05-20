@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Объединение содержимого из файлов разных форматов (LINQ) (C#)
+title: Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: ca340e82e33d9b3ec212f69cb73efafb3c6abc0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dd7287abce7fca803dd87d23f1f58151cf4ec2f5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328820"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585747"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Как выполнить Объединение содержимого из файлов разных форматов (LINQ) (C#)
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)
 
 В этом примере показано, как объединить данные из двух файлов с разделителями-запятыми, которые имеют общее значение, используемое в качестве совпадающего ключа. Этот способ может оказаться полезным, если необходимо объединить данные из двух электронных таблиц или из электронной таблицы и файла, имеющего другой формат, в новый файл. Можно изменить пример для обработки любого типа структурированного текста.  
   
@@ -124,14 +124,6 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="compiling-the-code"></a>Компиляция кода
-
-Создайте и скомпилируйте проект, который ориентирован на один из следующих вариантов:
-
-- Платформа .NET Framework версии 3.5 со ссылкой на библиотеку System.Core.dll.
-- .NET Framework версии 4.0 или более поздней.
-- .NET Core версии 1.0 или более поздней.
-  
 ## <a name="see-also"></a>См. также
 
 - [LINQ и строки (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

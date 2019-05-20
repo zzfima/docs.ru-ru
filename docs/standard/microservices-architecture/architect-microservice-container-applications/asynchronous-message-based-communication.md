@@ -1,15 +1,13 @@
 ---
 title: Асинхронное взаимодействие на основе сообщений
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Асинхронная связь на основе сообщений является основным понятием в архитектуре микрослужб, так как это лучший способ обеспечить независимость микрослужб друг от друга и при этом синхронизировать их.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 105daed3bca03571caea92fdbd1d6c6f56b24fef
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 65bd0cd2b316fe7011ad8e878852547ee5949f09
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59614081"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641378"
 ---
 # <a name="asynchronous-message-based-communication"></a>Асинхронное взаимодействие на основе сообщений
 

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Запись и чтение сообщений в блоке потока данных
+title: Практическое руководство. Запись и чтение сообщений в блоке потока данных
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 638cd917bdb40fa5bbf1cb02857c71a0127d0e3f
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 564f5f880f32dbab1387d03f30082e1972c3f353
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221158"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591973"
 ---
-# <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Как выполнить Запись и чтение сообщений в блоке потока данных
+# <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Практическое руководство. Запись и чтение сообщений в блоке потока данных
 В этом документе описываются способы использования библиотеки потоков данных TPL для записи сообщений в блок потока данных и считывания сообщений из него. Библиотека потоков данных TPL предоставляет как синхронные, так и асинхронные методы для записи сообщений в блок потока данных и чтения сообщений из него. В этом документе используется класс <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType>. Класс <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> помещает сообщения в буфер и работает и в качестве источника сообщений, и как адресат сообщения.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -50,17 +50,6 @@ ms.locfileid: "54221158"
   
  [!code-csharp[TPLDataflow_ReadWrite#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_readwrite/cs/dataflowreadwrite.cs#1)]
  [!code-vb[TPLDataflow_ReadWrite#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#1)]  
-  
-## <a name="compiling-the-code"></a>Компиляция кода  
- Скопируйте код примера и вставьте его в проект Visual Studio или в файл с именем `DataflowReadWrite.cs` (`DataflowReadWrite.vb` для Visual Basic), затем выполните в окне командной строки разработчика для Visual Studio следующую команду.  
-  
- Visual C#  
-  
- **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.cs**  
-  
- Visual Basic  
-  
- **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.vb**  
   
 ## <a name="next-steps"></a>Следующие шаги  
  В этом примере показано, как считывать и записывать в блок сообщений напрямую. Можно также подключить блоки потока данных для создания *конвейеров*, которые являются линейными последовательностями блоков потока данных, или *сетей*, являющихся графами блоков потоков данных. Конвейеры или сети асинхронно распространяют исходные данные целевым объектам, когда данные становятся доступны. Пример создания базового конвейера потока данных см. в разделе [Пошаговое руководство. Создание конвейера потока данных](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md). Пример создания более сложной сети потока данных см. в разделе [Пошаговое руководство. Использование потока данных в приложении Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)  

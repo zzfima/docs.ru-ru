@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Указание степени параллелизма в блоке потока данных
+title: Практическое руководство. Указание степени параллелизма в блоке потока данных
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: e4088541-ee05-40db-95f5-147cfe62fde7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78459e6cc2b40c9f3b821e4c4b53aec0c2f543db
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 4395f6f8b59cca7b092a9d4d5d44c079244a29ef
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222767"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592008"
 ---
-# <a name="how-to-specify-the-degree-of-parallelism-in-a-dataflow-block"></a>Как выполнить Указание степени параллелизма в блоке потока данных
+# <a name="how-to-specify-the-degree-of-parallelism-in-a-dataflow-block"></a>Практическое руководство. Указание степени параллелизма в блоке потока данных
 В этом документе описывается, как задать свойство <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A?displayProperty=nameWithType>, чтобы позволить блоку выполнения потока данных обрабатывать более одного сообщения единовременно. Это удобно при наличии блока потока данных, который выполняет длительное вычисление и может получить выгоду от обработки сообщений параллельным образом. В этом примере используется класс <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType> для параллельного выполнения нескольких операций потока данных; однако можно задать максимальную степень параллелизма в любом из предопределенных типов блоков выполнения, предоставляемых библиотекой потоков данных: <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType>.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -29,17 +29,6 @@ ms.locfileid: "54222767"
   
  [!code-csharp[TPLDataflow_DegreeOfParallelism#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_degreeofparallelism/cs/dataflowdegreeofparallelism.cs#1)]
  [!code-vb[TPLDataflow_DegreeOfParallelism#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_degreeofparallelism/vb/dataflowdegreeofparallelism.vb#1)]  
-  
-## <a name="compiling-the-code"></a>Компиляция кода  
- Скопируйте код примера и вставьте его в проект Visual Studio или в файл с именем `DataflowDegreeOfParallelism.cs` (`DataflowDegreeOfParallelism.vb` для Visual Basic), затем выполните в окне командной строки разработчика для Visual Studio следующую команду.  
-  
- Visual C#  
-  
- **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowDegreeOfParallelism.cs**  
-  
- Visual Basic  
-  
- **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowDegreeOfParallelism.vb**  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  По умолчанию все предопределенные блоки потока данных распространяют сообщения в том порядке, в котором они их получают.  Хотя при указании максимальной степени параллелизма больше 1 несколько сообщений обрабатываются одновременно, они по-прежнему распространяются в порядке, в котором были получены.  

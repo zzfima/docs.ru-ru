@@ -1,15 +1,13 @@
 ---
 title: Использование классов перечисления вместо типов перечисления
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Сведения о том, как можно использовать классы перечисления вместо перечислений для преодоления некоторых ограничений последних.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: d2d4b191ed4cb8f2f8b9b0a34fe99e65d4596a72
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 02d5fcef580f71b6f8c4af6d88095e24b0bd3462
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613568"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644478"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Использование классов перечисления вместо типов перечисления
 

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-ms.openlocfilehash: bfa81bc926b4fe81455cecb88bc55f4dcd69268e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b08f9dbf8137e483bd38a4f396732191598532cf
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977842"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635224"
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>Арифметические операции с указателями (руководство по программированию на C#)
 В этом разделе рассматривается использование арифметических операторов `+` и `-` для управления указателями.  
@@ -40,9 +40,8 @@ ms.locfileid: "56977842"
 
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [Небезопасный код и указатели](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
-- [Выражения указателей](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
 - [Операторы в C#](../../../csharp/language-reference/operators/index.md)
-- [Обработка указателей](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)
+- [Обработка указателей](../../../csharp/programming-guide/unsafe-code-pointers/how-to-increment-and-decrement-pointers.md)
 - [Типы указателей](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Типы](../../../csharp/language-reference/keywords/types.md)
 - [unsafe](../../../csharp/language-reference/keywords/unsafe.md)

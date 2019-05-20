@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: daebcf210dfa484c49f52635bb5c3c8f74c8a88a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2bf8610a1e2ad11d12acd55c69fbb98d078f7cc9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591728"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586144"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Практическое руководство. Определение универсального метода с порождаемым отражением
 В первой процедуре показано, как создать простой универсальный метод с двумя типами параметров и как применить ограничения класса, интерфейса, а также особые ограничения параметров типа.  
@@ -161,14 +161,6 @@ ms.locfileid: "64591728"
   
  [!code-csharp[GenericMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#1)]
  [!code-vb[GenericMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#1)]  
-  
-## <a name="compiling-the-code"></a>Компиляция кода  
-  
-- Код содержит операторы C# `using` (`Imports` в Visual Basic), необходимые для компиляции.  
-  
-- Дополнительные ссылки на сборки не требуются.  
-  
-- Скомпилируйте код из командной строки с помощью команд csc.exe, vbc.exe или cl.exe. Для компиляции кода в Visual Studio поместите его в шаблон проекта консольного приложения.  
   
 ## <a name="see-also"></a>См. также
 

@@ -1,15 +1,13 @@
 ---
 title: Реализация прикладного уровня микрослужб с помощью веб-интерфейсов API
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Сведения о внедрении зависимостей и шаблонах медиатора, а также их реализации на прикладном уровне веб-API.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 376b4eca99ed60a54831aa37099108692d8bac6d
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: c8447cfcd3155a873d61ee9287f58774392c279d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612164"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640812"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Реализация прикладного уровня для микрослужб с помощью веб-API
 

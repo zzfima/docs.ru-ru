@@ -1,15 +1,13 @@
 ---
 title: Использование HttpClientFactory для реализации устойчивых HTTP-запросов
 description: Узнайте, как использовать фабрику HttpClientFactory, доступную в .NET Core, начиная с версии 2.1, для создания экземпляров `HttpClient`, чтобы облегчить их применение в ваших приложениях.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: a55181e787b5c94e13d3945a5d97a12fed61e927
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 68c841a6ba69a94eff420233124cf00fec506502
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465936"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639837"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Использование HttpClientFactory для реализации устойчивых HTTP-запросов
 

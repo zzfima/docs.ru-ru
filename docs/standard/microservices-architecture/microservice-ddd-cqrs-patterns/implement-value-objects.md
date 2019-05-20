@@ -2,12 +2,12 @@
 title: Реализация объектов значений
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Знакомство с возможностями и параметрами для реализации объектов значений с использованием новых функций Entity Framework.
 ms.date: 10/08/2018
-ms.openlocfilehash: bd165ac2511476a5041e7d09126647546c632ba6
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 850d571ffb92f2d200e24430a9611fb13b64e635
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063069"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644295"
 ---
 # <a name="implement-value-objects"></a>Реализация объектов значений
 

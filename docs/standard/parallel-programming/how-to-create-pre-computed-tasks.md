@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание предварительно вычисленных задач
+title: Практическое руководство. Создание предварительно вычисленных задач
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa95eccfa39073bb8ccb3cb9c49e099ac1f90ab1
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 5e68465b6fae39089600457414e7f2a2328f725b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222108"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593122"
 ---
-# <a name="how-to-create-pre-computed-tasks"></a>Как выполнить Создание предварительно вычисленных задач
+# <a name="how-to-create-pre-computed-tasks"></a>Практическое руководство. Создание предварительно вычисленных задач
 В этом документе описывается способ использования метода <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> для получения результатов асинхронных операций загрузки, удерживаемых в кэше. Метод <xref:System.Threading.Tasks.Task.FromResult%2A> возвращает завершенный объект <xref:System.Threading.Tasks.Task%601>, содержащий предоставленное значение как свойство <xref:System.Threading.Tasks.Task%601.Result%2A>. Этот метод полезен тогда, когда выполняется асинхронная операция, возвращающая объект <xref:System.Threading.Tasks.Task%601>, и результат этого объекта <xref:System.Threading.Tasks.Task%601> уже вычислен.  
   
 ## <a name="example"></a>Пример  
@@ -27,19 +27,6 @@ ms.locfileid: "54222108"
  [!code-vb[TPL_CachedDownloads#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_cacheddownloads/vb/cacheddownloads.vb#1)]  
   
  В этом примере вычисляется время, необходимое для загрузки нескольких строк дважды. Второй набор операций загрузки должен занимать меньше времени, чем первый набор, поскольку результаты хранятся в кэше. Метод <xref:System.Threading.Tasks.Task.FromResult%2A> позволяет методу `DownloadStringAsync` создавать объекты <xref:System.Threading.Tasks.Task%601>, которые содержат эти предварительно вычисленные результаты.  
-  
-## <a name="compiling-the-code"></a>Компиляция кода  
- Скопируйте код примера и вставьте его в проект Visual Studio или в файл с именем `CachedDownloads.cs` (`CachedDownloads.vb` для Visual Basic), затем выполните в окне командной строки разработчика для Visual Studio следующую команду.  
-  
- Visual C#  
-  
- **csc.exe CachedDownloads.cs**  
-  
- Visual Basic  
-  
- **vbc.exe CachedDownloads.vb**  
-  
-## <a name="robust-programming"></a>Отказоустойчивость  
   
 ## <a name="see-also"></a>См. также
 

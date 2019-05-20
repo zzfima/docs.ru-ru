@@ -1,15 +1,13 @@
 ---
 title: Официальные .NET-образы Docker
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Официальные .NET-образы Docker
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 8babdfa91eeb903faac06af8b15e3f09aad98f2e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: b184e8f3606da8448a06a1cad90688958ecbce3a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920757"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644347"
 ---
 # <a name="official-net-docker-images"></a>Официальные .NET-образы Docker
 

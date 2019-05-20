@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Настройка приложения для включения поддержки .NET Framework версии 4 и выше
+title: Практическое руководство. Настройка приложения для включения поддержки .NET Framework версии 4 и выше
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring apps to support .NET Framework
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40c19dc21bb2262ca1f23573cb89f764e4cd2627
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 186297c050d81eca130b751c46303083ff025f22
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221327"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636109"
 ---
-# <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>Как выполнить Настройка приложения для включения поддержки .NET Framework версии 4 и выше
+# <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>Практическое руководство. Настройка приложения для включения поддержки .NET Framework версии 4 и выше
 
 Все приложения, которые размещают в себе среду CLR, должны запускать или *активировать* среду CLR для выполнения управляемого кода. Как правило, приложение .NET Framework запускается в той версии среды CLR, в которой оно было собрано, однако для приложений для настольных систем это поведение можно изменить с помощью файла конфигурации приложения (иногда называемого файлом app.config). Однако, для приложений Магазина Windows или приложений Windows Phone, изменить предусмотренное по умолчанию поведение активации с помощью файла конфигурации приложения невозможно. В этой статье поясняется, как разрешить приложению для настольных систем запускаться в другой версии .NET Framework, а также приводятся примеры нацеливания на версию 4 или более позднюю.
 

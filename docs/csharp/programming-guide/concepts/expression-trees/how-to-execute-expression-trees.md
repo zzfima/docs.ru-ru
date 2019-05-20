@@ -2,12 +2,12 @@
 title: Практическое руководство. Выполнение деревьев выражений (C#)
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: 034a391a21e685a6ceb8342bb1738ff34381cebb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: acf841194ef0990d2eb00481454c89088f4616c8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598043"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586139"
 ---
 # <a name="how-to-execute-expression-trees-c"></a>Практическое руководство. Выполнение деревьев выражений (C#)
 В этом разделе показано, как выполнить дерево выражения. В результате выполнения дерева выражения может возвращаться значение или просто выполняться действие, такое как вызов метода.  
@@ -43,8 +43,6 @@ Console.WriteLine(result);
 ```  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
-  
-- Добавьте в проект ссылку на библиотеку System.Core.dll, если такая ссылка отсутствует.  
   
 - Включите пространство имен System.Linq.Expressions.  
   

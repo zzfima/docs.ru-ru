@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Заполнение коллекций объектов из нескольких источников (LINQ) (C#)
+title: Практическое руководство. Заполнение коллекций объектов из нескольких источников (LINQ) (C#)
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: a40ff5ddcf606b0de8a1f41d96523526dc849462
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0789dee28cc2be5e72d2f99e2265e0181e351d8a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571341"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584389"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Как выполнить Заполнение коллекций объектов из нескольких источников (LINQ) (C#)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Практическое руководство. Заполнение коллекций объектов из нескольких источников (LINQ) (C#)
 
 В этом примере показано, как объединить данные из разных источников в последовательность новых типов.
 
@@ -138,14 +138,6 @@ foreach (var student in queryNamesScores2)
         student.First, student.Last, student.ExamScores.Average());
 }
 ```
-
-## <a name="compiling-the-code"></a>Компиляция кода
-
-Создайте и скомпилируйте проект, который ориентирован на один из следующих вариантов:
-
-- Платформа .NET Framework версии 3.5 со ссылкой на библиотеку System.Core.dll.
-- .NET Framework версии 4.0 или более поздней.
-- .NET Core версии 1.0 или более поздней.
 
 ## <a name="see-also"></a>См. также
 

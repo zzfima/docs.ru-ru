@@ -1,15 +1,13 @@
 ---
 title: События предметной области. Проектирование и реализация
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Подробный обзор событий предметной области, ключевая концепция для установления связи между агрегатами.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 353e50de65f21930ebe0bef9e239e1e333403676
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5f7084ef638a1d04e0050eab447cb8903c973f45
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612047"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875938"
 ---
 # <a name="domain-events-design-and-implementation"></a>События предметной области: проектирование и реализация
 
@@ -347,7 +345,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Грег Янг (Greg Young). Что такое событие предметной области?** \
-  <http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/>
+  <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf#page=25>
 
 - **Ян Стенберг (Jan Stenberg). События предметной области и итоговая согласованность** \
   <https://www.infoq.com/news/2015/09/domain-events-consistency>

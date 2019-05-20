@@ -1,15 +1,13 @@
 ---
 title: Проектирование микрослужбы, ориентированной на DDD
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Понимание структуры микрослужбы заказа, ориентированной на DDD, и ее прикладных уровней.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5c56e497ffb6466840d034458daaebf9fe0c8f03
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 303f8909d12dddef93b20604a00b9ea8e8493ee5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611488"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639672"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Проектирование микрослужбы, ориентированной на DDD
 

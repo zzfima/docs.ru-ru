@@ -8,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 29c36bd0494879b66674cf3a3c404fdaf3908f59
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2d7f50952a485c09e74462f3ad731d710b8f9198
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323815"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584257"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Практическое руководство. Использование вызова неуправляемого кода для воспроизведения звукового файла (Руководство по программированию на C#)
 В следующем примере кода C# показано, как использовать службы вызова неуправляемого кода для воспроизведения звуковых WAV-файлов в операционной системе Windows.  
@@ -29,8 +29,6 @@ ms.locfileid: "59323815"
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
-### <a name="to-compile-the-code"></a>Компиляция кода  
-  
 1. Создайте новый проект приложения Windows на C# в Visual Studio и назовите его **WinSound**.  
   
 2. Скопируйте указанный выше код и вставьте его поверх содержимого файла `Form1.cs`.  
@@ -40,9 +38,6 @@ ms.locfileid: "59323815"
      [!code-csharp[csProgGuideInterop#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#4)]  
   
 4. Скомпилируйте и запустите код.  
-  
-## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- Дополнительные сведения см. в разделе [Безопасность в .NET](../../../standard/security/index.md).  
   
 ## <a name="see-also"></a>См. также
 

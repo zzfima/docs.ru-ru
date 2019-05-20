@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8e5a3cb79187d6434585560e9c128e03fe8003b7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 2abbe121879e5f47fbce9a82d2afbf52cbef4ba9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679376"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636629"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Ошибки инициализации платформы .NET Framework: управление пользовательской средой
 
@@ -89,7 +89,7 @@ Windows предоставляет функцию [SetErrorMode](https://go.micr
 
 В случае установки .NET Framework 3.5 пользователи могут запускать на своих компьютерах с [!INCLUDE[win8](../../../includes/win8-md.md)] приложения, которые зависят от платформ .NET Framework 2.0, 3.0 или 3.5. Они также могут запускать приложения платформы .NET Framework 1.0 и 1.1, если эти приложения не настроены явным образом для запуска только на платформе .NET Framework 1.0 или 1.1. См. раздел [Миграция с платформы .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md).
 
-Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], ведение журналов активации среды CLR было улучшено для включения записи журнала, которые записывают, когда и почему было отображено сообщение об ошибке инициализации. Дополнительные сведения см. в разделе [Как Отладка проблем при активации среды CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).
+Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], ведение журналов активации среды CLR было улучшено для включения записи журнала, которые записывают, когда и почему было отображено сообщение об ошибке инициализации. Дополнительные сведения см. в разделе [Практическое руководство. Отладка проблем при активации среды CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).
 
 ## <a name="see-also"></a>См. также
 

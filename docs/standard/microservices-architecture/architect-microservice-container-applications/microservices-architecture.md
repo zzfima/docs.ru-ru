@@ -1,15 +1,13 @@
 ---
 title: Архитектура микрослужб
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Архитектура микрослужб с высоты птичьего полета.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 10d00ddc6255e6897bed3e826becff9aa8397e4e
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 3cf2a94140042d3cf76b5b63fe4e98638c56dbfe
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611917"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644851"
 ---
 # <a name="microservices-architecture"></a>Архитектура микрослужб
 

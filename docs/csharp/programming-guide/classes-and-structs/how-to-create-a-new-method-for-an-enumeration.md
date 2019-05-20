@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Руководство по программированию на C#. Создание метода для перечисления
+title: Практическое руководство. Руководство по программированию на C#. Создание метода для перечисления
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - extension methods [C#], for enums
 - enum extensibility [C#]
 ms.assetid: 100106f9-1e54-462c-8ebe-3892fe23b6eb
-ms.openlocfilehash: ebd0433efda43c65ea6d9494a8ec25e8263f5b43
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2ca388d19c0e4e1b098076caa5baa0a83cc0dd4c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968131"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585884"
 ---
-# <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Создание метода для перечисления
+# <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Создание метода для перечисления
 Методы расширения позволяют добавить функциональные возможности, характерные для определенного типа перечисления.  
   
 ## <a name="example"></a>Пример  
@@ -23,9 +23,6 @@ ms.locfileid: "56968131"
  [!code-csharp[csProgGuideExtensionMethods#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#2)]  
   
  Обратите внимание на то, что класс `Extensions` также содержит статическую переменную, которая обновляется динамически, а возвращаемое значение метода расширения отражает текущее значение этой переменной. Это показывает, что в фоновом режиме методы расширения вызываются непосредственно для статического класса, в котором они определены.  
-  
-## <a name="compiling-the-code"></a>Компиляция кода  
- Чтобы выполнить этот код, скопируйте и вставьте его в проект консольного приложения Visual C#, созданный в Visual Studio. По умолчанию этот проект предназначен для версии 3.5 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] и содержит ссылку на библиотеку System.Core.dll и директиву `using` для пространства имен System.Linq. Если один или несколько из этих обязательных компонентов отсутствуют в проекте, их можно добавить вручную.  
   
 ## <a name="see-also"></a>См. также
 

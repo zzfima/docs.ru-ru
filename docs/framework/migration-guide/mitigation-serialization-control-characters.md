@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e065d458-a128-44f2-9f17-66af9d5be954
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3355841298e039652eb81918eac98186c1a1f833
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e7e316f874a2b559cb3fe9d64a9ec7cf25addbe5
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182129"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557766"
 ---
 # <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>Устранение рисков. Сериализация управляющих символов с помощью DataContractJsonSerializer
 
@@ -27,8 +27,6 @@ ms.locfileid: "59182129"
 Для приложений, предназначенных для версий платформы .NET Framework, начиная с .NET Framework 4.7, сериализация таких управляющих символов совместима с ECMAScript версий 6 и 8. Это касается следующих API-интерфейсов:
 
 - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> 
-- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A>
-- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A>
 
 ## <a name="mitigation"></a>Устранение рисков
 

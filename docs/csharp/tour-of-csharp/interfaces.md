@@ -3,14 +3,14 @@ title: Интерфейсы в C#. Краткий обзор языка C#
 description: Интерфейсы определяют контракты, которые реализуются в типах C#
 ms.date: 08/10/2016
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-ms.openlocfilehash: bfc6b59a411ff2ddb3331a8bdf24c0ae3d611273
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 240ddfb321c5a89c8aada4353845915d0e242ae0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144121"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634553"
 ---
-# <a name="interfaces"></a>Интерфейсы
+# <a name="interfaces"></a>интерфейсов,
 
 ***Интерфейс*** определяет контракт, который может быть реализован классами и структурами. Интерфейс может содержать методы, свойства, события и индексаторы. Интерфейс не предоставляет реализацию членов, которые в нем определены. Он лишь перечисляет члены, которые должны быть определены в классах или структурах, реализующих этот интерфейс.
 

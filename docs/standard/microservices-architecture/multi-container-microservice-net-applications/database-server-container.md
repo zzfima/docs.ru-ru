@@ -1,15 +1,13 @@
 ---
 title: Использование сервера баз данных, работающего в качестве контейнера
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Использование сервера баз данных, работающего в качестве контейнера? Только для разработки! Давайте поймем, почему.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: c993f962d84ca3fc859ab704489300192536ee74
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5fd92a28a09cab041225c4c817a10f5ecfedc038
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611280"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639731"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Использование сервера баз данных, работающего в качестве контейнера
 

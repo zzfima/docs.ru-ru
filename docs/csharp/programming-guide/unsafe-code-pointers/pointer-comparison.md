@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], comparison
 ms.assetid: fcafd514-7405-4deb-8490-cc58efda5495
-ms.openlocfilehash: 5185bd5e1686858452efcc7c89e2c1977e094386
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 25bc1c7b701c36d2daf1918986eb6a8e56980990
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969210"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635138"
 ---
 # <a name="pointer-comparison-c-programming-guide"></a>Сравнение указателей (Руководство по программированию в C#)
 Для сравнения указателей любого типа можно применять следующие операторы:  
@@ -32,9 +32,8 @@ ms.locfileid: "56969210"
 ## <a name="see-also"></a>См. также
 
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Выражения указателей](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
 - [Операторы в C#](../../../csharp/language-reference/operators/index.md)
-- [Обработка указателей](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)
+- [Обработка указателей](../../../csharp/programming-guide/unsafe-code-pointers/how-to-increment-and-decrement-pointers.md)
 - [Типы указателей](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Типы](../../../csharp/language-reference/keywords/types.md)
 - [unsafe](../../../csharp/language-reference/keywords/unsafe.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: a6d07b6c288ebbe24c9cf5c531ef333946855f82
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 963be5273389ebbdb3458d41b0658de0d94bb2cd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204721"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634797"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>Рекомендуемые теги для комментариев документации (Руководство по программированию на C#)
 Компилятор C# обрабатывает комментарии документации в коде и форматирует их в виде XML-файла, имя которого задается с помощью параметра командной строки **/doc**. Для создания окончательной документации на основе сгенерированного компилятором файла можно создать пользовательское средство или применить такие средства, как [DocFX](https://dotnet.github.io/docfx/) или [Sandcastle](https://github.com/EWSoftware/SHFB).  
@@ -47,4 +47,4 @@ ms.locfileid: "55204721"
 
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [/doc (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [Комментарии XML-документации](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [Комментарии XML-документации](../../../csharp/programming-guide/xmldoc/index.md)

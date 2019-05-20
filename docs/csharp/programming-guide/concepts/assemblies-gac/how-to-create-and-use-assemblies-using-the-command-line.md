@@ -2,12 +2,12 @@
 title: Практическое руководство. Создание и использование сборок с помощью командной строки (C#)
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 76243034b4291142efa5ac78c21f65333e1378e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 12d23816b740816bd357c3c2ac57583f31bf3cb3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599870"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586038"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Практическое руководство. Создание и использование сборок с помощью командной строки (C#)
 Сборка (или библиотека динамической компоновки (DLL)) связывается с программой во время выполнения. Сборка и использование библиотеки DLL рассматривается в следующем сценарии:  
@@ -102,25 +102,6 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2);
  Для запуска программы введите имя EXE-файла и два числа, как показано далее.  
   
  `TestCode 1234 5678`  
-  
-## <a name="compiling-the-code"></a>Компиляция кода  
- Чтобы выполнить сборку файла `MathLibrary.DLL`, скомпилируйте два файла, `Add` и `Mult`, с помощью следующей командной строки:  
-  
-```csharp  
-csc /target:library /out:MathLibrary.DLL Add.cs Mult.cs  
-```  
-  
- Параметр компилятора [/target:library](../../../../csharp/language-reference/compiler-options/target-library-compiler-option.md) предписывает компилятору создать библиотеку DLL вместо EXE-файла. Параметр компилятора [/out](../../../../csharp/language-reference/compiler-options/out-compiler-option.md) с именем файла используется для указания имени DLL-файла. В противном случае компилятор использует первый файл (`Add.cs`) в качестве имени библиотеки DLL.  
-  
- Для сборки исполняемого файла `TestCode.exe` служит следующая строка команд:  
-  
-```csharp  
-csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs  
-```  
-  
- Параметр компилятора **/out** предписывает компилятору создать EXE-файл и задает имя выходного файла (`TestCode.exe`). Этот параметр компилятора является необязательным. Параметр компилятора [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md) указывает DLL-файл или файлы, используемые этой программой. Дополнительные сведения см. в разделе [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
-  
- Дополнительные сведения о сборке с помощью командной строки см. в разделе [Сборка из командной строки с помощью csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
 ## <a name="see-also"></a>См. также
 

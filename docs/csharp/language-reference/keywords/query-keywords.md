@@ -6,12 +6,12 @@ helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: e5010c7e9f3550c79c86c6cab4579a0fb15eef10
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: dde621395f407cd64e047ddfe8c6539e976b3061
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239489"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633014"
 ---
 # <a name="query-keywords-c-reference"></a>Ключевые слова запроса (Справочник по C#)
 
@@ -19,7 +19,7 @@ ms.locfileid: "53239489"
 
 ## <a name="in-this-section"></a>Содержание раздела
 
-|Предложение|Описание:|
+|Предложение|Описание|
 |------------|-----------------|
 |[from](from-clause.md)|Задает источник данных и переменную диапазона (аналогично переменной итерации).|
 |[where](where-clause.md)|Фильтрует элементы источника на основе одного или нескольких логических выражений, разделенных операторами логического И и ИЛИ (`&&` или <code>&#124;&#124;</code>).|

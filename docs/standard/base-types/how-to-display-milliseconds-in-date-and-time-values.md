@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Отображение миллисекунд в значениях даты и времени
+title: Практическое руководство. Отображение миллисекунд в значениях даты и времени
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3950b7a8cf107fc06240f56e5f95eca4e6882251
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 97ea5c7389cf30f7f58c944c95e095ebe4146192
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314936"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590590"
 ---
-# <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Как выполнить Отображение миллисекунд в значениях даты и времени
+# <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Практическое руководство. Отображение миллисекунд в значениях даты и времени
 Стандартные методы форматирования даты и времени, например <xref:System.DateTime.ToString?displayProperty=nameWithType>, поддерживают часы, минуты и секунды, но не миллисекунды. В этом разделе показано, как включить компонент миллисекунд даты и времени в форматированные строки даты и времени.  
   
 ### <a name="to-display-the-millisecond-component-of-a-datetime-value"></a>Отображение компонента миллисекунд для значения DateTime  
@@ -50,9 +50,6 @@ ms.locfileid: "59314936"
   
 > [!NOTE]
 >  Существует возможность отображать малые дробные части секунды, например десятитысячные или стотысячные доли секунды. Однако эти значения могут не иметь смысла. Точность значений даты и времени зависит от разрешения системных часов. В операционных системах Windows NT, начиная с версии 3.5, и [!INCLUDE[windowsver](../../../includes/windowsver-md.md)], разрешение часов приблизительно соответствует 10–15 миллисекундам.  
-  
-## <a name="compiling-the-code"></a>Компиляция кода  
- Скомпилируйте код из командной строки с помощью команд csc.exe или vb.exe. Для компиляции кода в Visual Studio поместите его в шаблон проекта консольного приложения.  
   
 ## <a name="see-also"></a>См. также
 
