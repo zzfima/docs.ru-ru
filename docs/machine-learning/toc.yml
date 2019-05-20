@@ -11,13 +11,13 @@
       href: tutorials/index.md
     - name: Анализ тональности (двоичная классификация)
       href: tutorials/sentiment-analysis.md
-    - name: Классификация проблем (мультиклассовая классификация)
+    - name: Классификация заявок на поддержку (мультиклассовая классификация)
       href: tutorials/github-issue-classification.md
-    - name: Прогнозирование цен (регрессия)
+    - name: Прогноз цен (регрессия)
       href: tutorials/taxi-fare.md
-    - name: Ирисы Фишера (кластеризация)
+    - name: Классификация цветов ириса (кластеризация к-средних)
       href: tutorials/iris-clustering.md
-    - name: Рекомендация фильмов к просмотру (рекомендация)
+    - name: Рекомендации фильмов (матричная факторизация)
       href: tutorials/movie-recommmendation.md
     - name: Классификация изображений (передача обучения)
       href: tutorials/image-classification.md
