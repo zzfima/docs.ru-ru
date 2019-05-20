@@ -9,6 +9,12 @@
   items:
     - name: Начало работы
       href: tutorials/get-started.md
+    - name: Развертывание в Azure HDInsight
+      href: tutorials/hdinsight-deployment.md
+    - name: Развертывание в AWS EMR Spark
+      href: tutorials/amazon-emr-spark-deployment.md
+    - name: Развертывание в Databricks
+      href: tutorials/databricks-deployment.md
 - name: Ссылка
   items:
     - name: Справочник по интерфейсам API

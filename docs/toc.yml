@@ -496,11 +496,13 @@
     - name: Приступая к работе
       href: csharp/getting-started/
     - name: Учебники
-      href: csharp/tutorials/index.md
       items:
-        - name: 'Знакомство с C#'
-          href: csharp/tutorials/intro-to-csharp/index.md
+        - name: Обзор
+          href: csharp/tutorials/index.md
+        - name: 'Введение в программирование на C#'
           items:
+            - name: Выберите первый урок
+              href: csharp/tutorials/intro-to-csharp/index.md
             - name: 'Здравствуй, мир'
               href: csharp/tutorials/intro-to-csharp/hello-world.yml
             - name: 'Числа в C#'
@@ -510,8 +512,9 @@
             - name: Коллекции списков
               href: csharp/tutorials/intro-to-csharp/list-collection.yml
             - name: Работа в локальной среде
-              href: csharp/tutorials/intro-to-csharp/local-environment.md
               items:
+                - name: Настройка среды
+                  href: csharp/tutorials/intro-to-csharp/local-environment.md
                 - name: 'Числа в C#'
                   href: csharp/tutorials/intro-to-csharp/numbers-in-csharp-local.md
                 - name: Ветви и циклы
@@ -609,7 +612,6 @@
         - name: Итераторы
           href: csharp/iterators.md
         - name: Делегаты и события
-          href: csharp/delegates-events.md
           items:
             - name: Общие сведения о делегатах
               href: csharp/delegates-overview.md
@@ -636,8 +638,9 @@
         - name: Написание безопасного и эффективного кода
           href: csharp/write-safe-efficient-code.md
         - name: Деревья выражений
-          href: csharp/expression-trees.md
           items:
+            - name: Введение в деревья выражений
+              href: csharp/expression-trees.md
             - name: Описание деревьев выражений
               href: csharp/expression-trees-explained.md
             - name: 'Типы платформ, поддерживающие деревья выражений'
@@ -659,8 +662,9 @@
         - name: Управление версиями
           href: csharp/versioning.md
     - name: 'Практические руководства по языку C#'
-      href: csharp/how-to/index.md
       items:
+        - name: Указатель раздела
+          href: csharp/how-to/index.md
         - name: Синтаксический анализ строк с помощью `String.Split`
           href: csharp/how-to/parse-strings-using-split.md
         - name: Объединение строк
