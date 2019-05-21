@@ -8,36 +8,37 @@ helpviewer_keywords:
 - rows [Windows Forms], alternating
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
-ms.openlocfilehash: 0e5714663a0873cb275d2909028a7d791be76fcf
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: fea160e62939a27521592201cd47615975b7733f
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882224"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959401"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>Практическое руководство. Установка стилей для чередующихся строк в элементе управления DataGridView формы Windows Forms с помощью конструктора
-Данные в таблицах часто представлены в виде подобном бухгалтерским книгам: в чередующихся строках используется разный цвет фона. Такой формат позволяет проще определять, какие ячейки находятся в какой строке, что особенно удобно в широких таблицах со множеством столбцов.  
-  
- С помощью элемента управления <xref:System.Windows.Forms.DataGridView> можно указать полные сведения о стиле для чередующихся строк. Характеристики стиля, как цвет и шрифт, а также цвет фона, можно использовать для различения чередующихся строк. Дополнительные сведения см. в разделе [стили ячеек элемента управления DataGridView Windows Forms в](cell-styles-in-the-windows-forms-datagridview-control.md).  
-  
- Следующая процедура требуется **приложения Windows** проекта с формой, содержащей <xref:System.Windows.Forms.DataGridView> элемента управления. Сведения о настройке такого проекта см. в разделе [как: Создайте проект приложения Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) и [как: Добавление элементов управления в Windows Forms](how-to-add-controls-to-windows-forms.md).  
-  
+
+Данные в таблицах часто представлены в виде подобном бухгалтерским книгам: в чередующихся строках используется разный цвет фона. Такой формат позволяет проще определять, какие ячейки находятся в какой строке, что особенно удобно в широких таблицах со множеством столбцов.
+
+С помощью элемента управления <xref:System.Windows.Forms.DataGridView> можно указать полные сведения о стиле для чередующихся строк. Характеристики стиля, как цвет и шрифт, а также цвет фона, можно использовать для различения чередующихся строк. Дополнительные сведения см. в разделе [стили ячеек элемента управления DataGridView Windows Forms в](cell-styles-in-the-windows-forms-datagridview-control.md).
+
+Следующая процедура требуется **приложения Windows** проекта с формой, содержащей <xref:System.Windows.Forms.DataGridView> элемента управления. Сведения о настройке такого проекта см. в разделе [как: Создайте проект приложения Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) и [как: Добавление элементов управления в Windows Forms](how-to-add-controls-to-windows-forms.md).
+
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="define-styles-for-alternating-rows"></a>Определение стилей для чередующихся строк  
-  
-1. Выберите <xref:System.Windows.Forms.DataGridView> управления в конструкторе.  
-  
-2.  В **свойства** окно, нажмите кнопку с многоточием (![кнопку с многоточием (...) в окне свойств Visual Studio.](./media/visual-studio-ellipsis-button.png)) рядом с полем <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> свойство.  
-  
-3. В **построителя CellStyle** диалоговом окне определения стиля, устанавливая свойства и использовать **предварительной версии** панели, чтобы подтвердить выбранные параметры. Для каждой строки, отображаемый в элементе управления, начиная со второй используются стили вами.  
-  
-4. Чтобы определить стили для оставшихся строк, повторите шаги 2 и 3. Использование <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> свойство.  
-  
+> Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+
+### <a name="define-styles-for-alternating-rows"></a>Определение стилей для чередующихся строк
+
+1. Выберите <xref:System.Windows.Forms.DataGridView> управления в конструкторе.
+
+2. В **свойства** окно, нажмите кнопку с многоточием (![кнопку с многоточием (...) в окне свойств Visual Studio.](./media/visual-studio-ellipsis-button.png)) рядом с полем <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> свойство.
+
+3. В **построителя CellStyle** диалоговом окне определения стиля, устанавливая свойства и использовать **предварительной версии** панели, чтобы подтвердить выбранные параметры. Для каждой строки, отображаемый в элементе управления, начиная со второй используются стили вами.
+
+4. Чтобы определить стили для оставшихся строк, повторите шаги 2 и 3. Использование <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> свойство.
+
     > [!NOTE]
-    >  Для отображения ячеек с помощью стилей, унаследованные от различных свойств. Дополнительные сведения о наследовании стилей см. в разделе [стили ячеек элемента управления DataGridView Windows Forms в](cell-styles-in-the-windows-forms-datagridview-control.md).  
-  
+    > Для отображения ячеек с помощью стилей, унаследованные от различных свойств. Дополнительные сведения о наследовании стилей см. в разделе [стили ячеек элемента управления DataGridView Windows Forms в](cell-styles-in-the-windows-forms-datagridview-control.md).
+
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.DataGridView>

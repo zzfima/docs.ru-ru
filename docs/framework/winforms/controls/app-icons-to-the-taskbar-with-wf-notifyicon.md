@@ -13,64 +13,65 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 2d7fb1dfbdfb7cf9be33fc8c9711b4fbdc3efc2d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 05b6f300afea4671c1a847b116b378514ecb8b56
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880554"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959505"
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Практическое руководство. Добавление значков приложения на панель задач с помощью компонента NotifyIcon в Windows Forms
-Windows Forms <xref:System.Windows.Forms.NotifyIcon> компонент отображает один значок в области уведомлений панели задач. Чтобы отобразить несколько значков в области состояния, необходимо иметь несколько <xref:System.Windows.Forms.NotifyIcon> компонентов в форме. Чтобы задать значок, отображаемый для элемента управления, используйте <xref:System.Windows.Forms.NotifyIcon.Icon%2A> свойство. Можно также написать код <xref:System.Windows.Forms.NotifyIcon.DoubleClick> обработчик событий, так что-то происходит, когда пользователь дважды щелкает значок. Например вы можете создать диалоговое окно отображается для пользователя настроить фоновый процесс, представленный этим значком.  
-  
+
+Windows Forms <xref:System.Windows.Forms.NotifyIcon> компонент отображает один значок в области уведомлений панели задач. Чтобы отобразить несколько значков в области состояния, необходимо иметь несколько <xref:System.Windows.Forms.NotifyIcon> компонентов в форме. Чтобы задать значок, отображаемый для элемента управления, используйте <xref:System.Windows.Forms.NotifyIcon.Icon%2A> свойство. Можно также написать код <xref:System.Windows.Forms.NotifyIcon.DoubleClick> обработчик событий, так что-то происходит, когда пользователь дважды щелкает значок. Например вы можете создать диалоговое окно отображается для пользователя настроить фоновый процесс, представленный этим значком.
+
 > [!NOTE]
->  <xref:System.Windows.Forms.NotifyIcon> Компонент используется только, чтобы оповестить пользователей о возникших на действие или событие, или произошло изменение в состоянии какого-либо рода. Следует использовать меню, панелей инструментов и других элементов пользовательского интерфейса для стандартное взаимодействие с приложениями.  
-  
-### <a name="to-set-the-icon"></a>Чтобы задать значок  
-  
-1.  Присвойте значение <xref:System.Windows.Forms.NotifyIcon.Icon%2A> свойства. Значение должно быть типа `System.Drawing.Icon` и может быть загружена из ICO-файл. Файл значка можно указать в коде или нажав кнопку с многоточием (![кнопку с многоточием (...) в окне свойств Visual Studio.](./media/visual-studio-ellipsis-button.png)) рядом с полем <xref:System.Windows.Forms.NotifyIcon.Icon%2A> свойство в **свойства** окно, а затем выбрав файл в **откройте** диалоговое окно, которое отображается.  
-  
-2. Задайте для свойства <xref:System.Windows.Forms.NotifyIcon.Visible%2A> значение `true`.  
-  
-3. Задайте <xref:System.Windows.Forms.NotifyIcon.Text%2A> свойство соответствующую строку всплывающей подсказки.  
-  
-     В следующем примере кода, задайте путь — расположение значка **Мои документы** папки. Это расположение используется в том случае, так как можно предположить, что большинство компьютеров под управлением ОС Windows будет включать эту папку. Эта папка также позволяет уровень доступа к минимальным системе безопасно запускать приложение. В следующем примере требуется форма с <xref:System.Windows.Forms.NotifyIcon> управления уже добавлен. Он также требуется файл значка с именем `Icon.ico`.  
-  
-    ```vb  
-    ' You should replace the bold icon in the sample below  
-    ' with an icon of your own choosing.  
-    NotifyIcon1.Icon = New _   
-       System.Drawing.Icon(System.Environment.GetFolderPath _  
-       (System.Environment.SpecialFolder.Personal) _  
-       & "\Icon.ico")  
-    NotifyIcon1.Visible = True  
-    NotifyIcon1.Text = "Antivirus program"  
-    ```  
-  
-    ```csharp  
-    // You should replace the bold icon in the sample below  
-    // with an icon of your own choosing.  
-    // Note the escape character used (@) when specifying the path.  
-    notifyIcon1.Icon =   
-       new System.Drawing.Icon (System.Environment.GetFolderPath  
-       (System.Environment.SpecialFolder.Personal)  
-       + @"\Icon.ico");  
-    notifyIcon1.Visible = true;  
-    notifyIcon1.Text = "Antivirus program";  
-    ```  
-  
-    ```cpp  
-    // You should replace the bold icon in the sample below  
-    // with an icon of your own choosing.  
-    notifyIcon1->Icon = gcnew   
-       System::Drawing::Icon(String::Concat  
-       (System::Environment::GetFolderPath  
-       (System::Environment::SpecialFolder::Personal),  
-       "\\Icon.ico"));  
-    notifyIcon1->Visible = true;  
-    notifyIcon1->Text = "Antivirus program";  
-    ```  
-  
+> <xref:System.Windows.Forms.NotifyIcon> Компонент используется только, чтобы оповестить пользователей о возникших на действие или событие, или произошло изменение в состоянии какого-либо рода. Следует использовать меню, панелей инструментов и других элементов пользовательского интерфейса для стандартное взаимодействие с приложениями.
+
+### <a name="to-set-the-icon"></a>Чтобы задать значок
+
+1. Присвойте значение <xref:System.Windows.Forms.NotifyIcon.Icon%2A> свойства. Значение должно быть типа `System.Drawing.Icon` и может быть загружена из ICO-файл. Файл значка можно указать в коде или нажав кнопку с многоточием (![кнопку с многоточием (...) в окне свойств Visual Studio.](./media/visual-studio-ellipsis-button.png)) рядом с полем <xref:System.Windows.Forms.NotifyIcon.Icon%2A> свойство в **свойства** окно, а затем выбрав файл в **откройте** диалоговое окно, которое отображается.
+
+2. Задайте для свойства <xref:System.Windows.Forms.NotifyIcon.Visible%2A> значение `true`.
+
+3. Задайте <xref:System.Windows.Forms.NotifyIcon.Text%2A> свойство соответствующую строку всплывающей подсказки.
+
+     В следующем примере кода, задайте путь — расположение значка **Мои документы** папки. Это расположение используется в том случае, так как можно предположить, что большинство компьютеров под управлением ОС Windows будет включать эту папку. Эта папка также позволяет уровень доступа к минимальным системе безопасно запускать приложение. В следующем примере требуется форма с <xref:System.Windows.Forms.NotifyIcon> управления уже добавлен. Он также требуется файл значка с именем `Icon.ico`.
+
+    ```vb
+    ' You should replace the bold icon in the sample below
+    ' with an icon of your own choosing.
+    NotifyIcon1.Icon = New _
+       System.Drawing.Icon(System.Environment.GetFolderPath _
+       (System.Environment.SpecialFolder.Personal) _
+       & "\Icon.ico")
+    NotifyIcon1.Visible = True
+    NotifyIcon1.Text = "Antivirus program"
+    ```
+
+    ```csharp
+    // You should replace the bold icon in the sample below
+    // with an icon of your own choosing.
+    // Note the escape character used (@) when specifying the path.
+    notifyIcon1.Icon =
+       new System.Drawing.Icon (System.Environment.GetFolderPath
+       (System.Environment.SpecialFolder.Personal)
+       + @"\Icon.ico");
+    notifyIcon1.Visible = true;
+    notifyIcon1.Text = "Antivirus program";
+    ```
+
+    ```cpp
+    // You should replace the bold icon in the sample below
+    // with an icon of your own choosing.
+    notifyIcon1->Icon = gcnew
+       System::Drawing::Icon(String::Concat
+       (System::Environment::GetFolderPath
+       (System::Environment::SpecialFolder::Personal),
+       "\\Icon.ico"));
+    notifyIcon1->Visible = true;
+    notifyIcon1->Text = "Antivirus program";
+    ```
+
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.NotifyIcon>

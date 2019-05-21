@@ -2,15 +2,15 @@
 title: Защита приложений одноранговых каналов
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
-ms.openlocfilehash: 8fbad019270851a32d932c33d6fd401cea2b3515
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b52e0476ce6ac54a2e4a3a8cfceb112d662186b
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603325"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959883"
 ---
 # <a name="securing-peer-channel-applications"></a>Защита приложений одноранговых каналов
-Как и другие привязки в [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], привязка `NetPeerTcpBinding` имеет включенную по умолчанию безопасность и предлагает безопасность как на основе транспорта, так и на основе сообщения (или оба типа безопасности). В данном разделе обсуждаются два этих типа безопасности. Тип безопасности задается тегом режима безопасности в спецификации привязки (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
+Как и другие привязки в разделе WinFX, `NetPeerTcpBinding` включена по умолчанию безопасность и предлагает и безопасности на основе транспорта и сообщений (или оба). В данном разделе обсуждаются два этих типа безопасности. Тип безопасности задается тегом режима безопасности в спецификации привязки (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
   
 ## <a name="transport-based-security"></a>Безопасность на базе транспорта  
  Одноранговый канал поддерживает два типа учетных данных для проверки подлинности, обеспечивающие безопасность транспорта; оба типа требуют настройки свойства `ClientCredentialSettings.Peer` в связанной фабрике каналов `ChannelFactory`.  

@@ -2,15 +2,15 @@
 title: Протокол надежного обмена сообщениями, версия 1.0
 ms.date: 03/30/2017
 ms.assetid: a5509a5c-de24-4bc2-9a48-19138055dcce
-ms.openlocfilehash: 857bbbf9ffa1311c38cfc007e0cdc6bde06d6284
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db4761efb34e7436ae54819b8e5056c732bd2fab
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617568"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959945"
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Протокол надежного обмена сообщениями, версия 1.0
-В этом разделе рассматриваются сведения о реализации Windows Communication Foundation (WCF) для протокола WS-Reliable Messaging protocol февраля 2005 г. (версия 1.0), необходимые для взаимодействия с использованием транспорта HTTP. WCF соблюдена спецификация WS-Reliable Messaging с определенными ограничениями и пояснениями, описанными далее в этом разделе. Обратите внимание, что протокол WS-ReliableMessaging версии 1.0 реализуется начиная с версии [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+В этом разделе рассматриваются сведения о реализации Windows Communication Foundation (WCF) для протокола WS-Reliable Messaging protocol февраля 2005 г. (версия 1.0), необходимые для взаимодействия с использованием транспорта HTTP. WCF соблюдена спецификация WS-Reliable Messaging с определенными ограничениями и пояснениями, описанными далее в этом разделе. Обратите внимание на то, что протокол WS-ReliableMessaging версии 1.0 реализуется начиная с WinFX.  
   
  WS-Reliable Messaging от февраля 2005 протокола реализован в WCF, <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.  
   

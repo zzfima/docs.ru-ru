@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 96607a1c744b928b340fe33c2b57a25a59f306dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 953df285d1a439cd8a1a95358915a7a50e98552a
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635265"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960103"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Практическое руководство. Установка и настройка компонентов активации WCF
 В этом разделе описываются шаги, необходимые для настройки службы активации Windows (WAS) на [!INCLUDE[wv](../../../../includes/wv-md.md)] для размещения Windows Communication Foundation (WCF) служб, которые не поддерживают связь по протоколу HTTP сетевые протоколы. Настройка предполагает следующие шаги.  
@@ -28,7 +28,7 @@ ms.locfileid: "64635265"
   
 3. На **задачи** меню, щелкните **или отключение компонентов Windows включить**.  
   
-4. Найдите узел [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], затем выберите и разверните его.  
+4. Найдите узел WinFX, выберите и разверните его.  
   
 5. Выберите **компонентов активации WCF не-Http** поле и сохранить настройки.  
   

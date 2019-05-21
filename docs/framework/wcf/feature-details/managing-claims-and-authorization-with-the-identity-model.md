@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 9341ff8bfb2aec4eb7274d444fca4497fa66f210
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 74cf55ba617eee193bcf1d2454f7e26ce0ba78cb
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875556"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960113"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Управление утверждениями и авторизацией с помощью модели удостоверения
 Авторизация - это процесс определения сущностей, имеющих право изменять, просматривать компьютерный ресурс или получать доступ к нему. Например, в организации только менеджерам может быть разрешен доступ к файлам их сотрудников. Windows Communication Foundation (WCF) поддерживает два механизма выполнения авторизации. Первый механизм позволяет управлять авторизацией с помощью существующих конструкций среды CLR. Второй — модель на основе утверждений, называется *модели удостоверения*. WCF использует модель удостоверения для создания утверждений из входящих сообщений; Классы модели удостоверения можно расширить для поддержки новых типов утверждений для пользовательских схем авторизации. В этом разделе приводятся общие сведения об основных принципах программирования возможности "Модель удостоверения", а также перечисляются наиболее важные классы, используемые этой возможностью.  
@@ -93,7 +93,6 @@ ms.locfileid: "65875556"
  ![Наборы утверждений в иерархии.](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
  Несколько наборов утверждений может иметь тот же издающий набор утверждений, как показано на следующем рисунке:
- 
   
  ![Несколько наборов заявок с тот же издающий набор утверждений.](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   
