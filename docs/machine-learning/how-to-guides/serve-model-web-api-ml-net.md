@@ -1,221 +1,205 @@
 ---
-title: Использование модели машинного обучения в веб-API ASP.NET Core
+title: Развертывание модели в веб-API ASP.NET Core
 description: Использование модели машинного обучения ML.NET для анализа тональности через Интернет с помощью веб-API ASP.NET Core
-ms.date: 03/05/2019
+ms.date: 05/03/2019
+author: luisquintanilla
+ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: af51ccaac263202fc34d36e746722d2da46404f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f8b8f74f752aeb243d4a2987929bd28ddc5f7d5a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321239"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641084"
 ---
-# <a name="how-to-serve-machine-learning-model-through-aspnet-core-web-api"></a><span data-ttu-id="78c56-103">Руководство. Использование модели машинного обучения с помощью веб-API ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="78c56-103">How-To: Serve Machine Learning Model Through ASP.NET Core Web API</span></span>
+# <a name="deploy-a-model-in-an-aspnet-core-web-api"></a><span data-ttu-id="a9ae4-103">Развертывание модели в веб-API ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="a9ae4-103">Deploy a model in an ASP.NET Core Web API</span></span>
 
-<span data-ttu-id="78c56-104">В этом руководстве показано, как использовать предварительно созданную модель машинного обучения ML.NET через интернет с помощью веб-API ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="78c56-104">This how-to shows how to serve a pre-built ML.NET machine learning model to the web using an ASP.NET Core Web API.</span></span> <span data-ttu-id="78c56-105">Таким образом, пользователи смогут получать доступ к API для прогнозирования с помощью стандартных методов HTTP.</span><span class="sxs-lookup"><span data-stu-id="78c56-105">By doing so it allows for users to access the API for prediction purposes via standard HTTP methods.</span></span>
+<span data-ttu-id="a9ae4-104">Узнайте, как использовать предварительно обученную модель машинного обучения ML.NET через интернет с помощью веб-API ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-104">Learn how to serve a pre-trained ML.NET machine learning model on the web using an ASP.NET Core Web API.</span></span> <span data-ttu-id="a9ae4-105">Обслуживание модели через веб-API позволяет формировать прогнозы с помощью стандартных методов HTTP.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-105">Serving a model over a web API enables predictions via standard HTTP methods.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="78c56-106">В этом разделе описано, как использовать платформу ML.NET, которая сейчас доступна в режиме предварительной версии. Этот материал может быть изменен.</span><span class="sxs-lookup"><span data-stu-id="78c56-106">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="78c56-107">Дополнительные сведения см. в [обзоре ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="78c56-107">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
+> <span data-ttu-id="a9ae4-106">Расширение службы `PredictionEnginePool` сейчас доступно в предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-106">`PredictionEnginePool` service extension is currently in preview.</span></span>
 
-<span data-ttu-id="78c56-108">Сейчас в этих инструкциях и примере используется **ML.NET версии 0.10**.</span><span class="sxs-lookup"><span data-stu-id="78c56-108">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="78c56-109">Дополнительные сведения см. в заметках о выпуске в [репозитории GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span><span class="sxs-lookup"><span data-stu-id="78c56-109">For more information, see the release notes at the [dotnet/machinelearning github repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="a9ae4-107">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="a9ae4-107">Prerequisites</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="78c56-110">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="78c56-110">Prerequisites</span></span>
+- <span data-ttu-id="a9ae4-108">[Visual Studio 2017 15.6 или более поздней версии](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core".</span><span class="sxs-lookup"><span data-stu-id="a9ae4-108">[Visual Studio 2017 15.6 or later](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) with the ".NET Core cross-platform development" workload installed.</span></span>
+- <span data-ttu-id="a9ae4-109">PowerShell.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-109">Powershell.</span></span>
+- <span data-ttu-id="a9ae4-110">Предварительно обученная модель.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-110">Pre-trained model.</span></span> <span data-ttu-id="a9ae4-111">Используйте [учебник по анализу тональности ML.NET](../tutorials/sentiment-analysis.md), чтобы создать собственную модель, или скачайте эту [предварительно обученную модель машинного обучения для анализа тональности](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)</span><span class="sxs-lookup"><span data-stu-id="a9ae4-111">Use the [ML.NET Sentiment Analysis tutorial](../tutorials/sentiment-analysis.md) to build your own model or download this [pre-trained sentiment analysis machine learning model](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)</span></span>
 
-- <span data-ttu-id="78c56-111">[Visual Studio 2017 15.6 или более поздней версии](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core".</span><span class="sxs-lookup"><span data-stu-id="78c56-111">[Visual Studio 2017 15.6 or later](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) with the ".NET Core cross-platform development" workload installed.</span></span>
-- <span data-ttu-id="78c56-112">PowerShell.</span><span class="sxs-lookup"><span data-stu-id="78c56-112">Powershell.</span></span>
-- <span data-ttu-id="78c56-113">Предварительно обученная модель.</span><span class="sxs-lookup"><span data-stu-id="78c56-113">Pre-trained model.</span></span>
-    - <span data-ttu-id="78c56-114">Используйте [руководство по анализу тональности ML.NET](../tutorials/sentiment-analysis.md), чтобы создать собственную модель.</span><span class="sxs-lookup"><span data-stu-id="78c56-114">Use the [ML.NET Sentiment Analysis tutorial](../tutorials/sentiment-analysis.md) to build your own model.</span></span>
-    - <span data-ttu-id="78c56-115">Скачайте эту [предварительно обученную модель машинного обучения для анализа тональности](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip).</span><span class="sxs-lookup"><span data-stu-id="78c56-115">Download this [pre-trained sentiment analysis machine learning model](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)</span></span>
+## <a name="create-aspnet-core-web-api-project"></a><span data-ttu-id="a9ae4-112">Создание проекта веб-API ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="a9ae4-112">Create ASP.NET Core Web API project</span></span>
 
-## <a name="create-aspnet-core-web-api-project"></a><span data-ttu-id="78c56-116">Создание проекта веб-API ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="78c56-116">Create ASP.NET Core Web API Project</span></span>
+1. <span data-ttu-id="a9ae4-113">Откройте Visual Studio 2017.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-113">Open Visual Studio 2017.</span></span> <span data-ttu-id="a9ae4-114">В меню выберите **Файл > Новый > Проект**.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-114">Select **File > New > Project** from the menu bar.</span></span> <span data-ttu-id="a9ae4-115">В диалоговом окне "Новый проект" щелкните узел **Visual C#**, а затем — **Веб**.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-115">In the New Project dialog, select the **Visual C#** node followed by the **Web** node.</span></span> <span data-ttu-id="a9ae4-116">Затем, выберите шаблон проекта **Веб-приложение ASP.NET Core**.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-116">Then select the **ASP.NET Core Web Application** project template.</span></span> <span data-ttu-id="a9ae4-117">В текстовое поле **Имя** введите SentimentAnalysisWebAPI и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-117">In the **Name** text box, type "SentimentAnalysisWebAPI" and then select the **OK** button.</span></span>
 
-1. <span data-ttu-id="78c56-117">Откройте Visual Studio 2017.</span><span class="sxs-lookup"><span data-stu-id="78c56-117">Open Visual Studio 2017.</span></span> <span data-ttu-id="78c56-118">В меню выберите **Файл > Новый > Проект**.</span><span class="sxs-lookup"><span data-stu-id="78c56-118">Select **File > New > Project** from the menu bar.</span></span> <span data-ttu-id="78c56-119">В диалоговом окне "Новый проект" щелкните узел **Visual C#**, а затем — **Веб**.</span><span class="sxs-lookup"><span data-stu-id="78c56-119">In the New Project dialog, select the **Visual C#** node followed by the **Web** node.</span></span> <span data-ttu-id="78c56-120">Затем, выберите шаблон проекта **Веб-приложение ASP.NET Core**.</span><span class="sxs-lookup"><span data-stu-id="78c56-120">Then select the **ASP.NET Core Web Application** project template.</span></span> <span data-ttu-id="78c56-121">В текстовое поле **Имя** введите SentimentAnalysisWebAPI и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="78c56-121">In the **Name** text box, type "SentimentAnalysisWebAPI" and then select the **OK** button.</span></span>
-1. <span data-ttu-id="78c56-122">В окне с разными типами проектов ASP.NET Core выберите **API** и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="78c56-122">In the window that displays the different types of ASP.NET Core Projects, select **API** and the select the **OK** button.</span></span>
-1. <span data-ttu-id="78c56-123">Создайте каталог с именем *MLModels* в папке проекта, чтобы сохранить предварительно созданные файлы модели машинного обучения:</span><span class="sxs-lookup"><span data-stu-id="78c56-123">Create a directory named *MLModels* in your project to save your pre-built machine learning model files:</span></span>
+1. <span data-ttu-id="a9ae4-118">В окне с разными типами проектов ASP.NET Core выберите **API** и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-118">In the window that displays the different types of ASP.NET Core Projects, select **API** and the select the **OK** button.</span></span>
 
-    <span data-ttu-id="78c56-124">В обозревателе решений щелкните проект правой кнопкой мыши и выберите "Добавить" > "Новая папка".</span><span class="sxs-lookup"><span data-stu-id="78c56-124">In Solution Explorer, right-click on your project and select Add > New Folder.</span></span> <span data-ttu-id="78c56-125">Введите MLModels и нажмите клавишу ВВОД.</span><span class="sxs-lookup"><span data-stu-id="78c56-125">Type "MLModels" and hit Enter.</span></span>
+1. <span data-ttu-id="a9ae4-119">Создайте каталог с именем *MLModels* в папке проекта, чтобы сохранить предварительно созданные файлы модели машинного обучения:</span><span class="sxs-lookup"><span data-stu-id="a9ae4-119">Create a directory named *MLModels* in your project to save your pre-built machine learning model files:</span></span>
 
-1. <span data-ttu-id="78c56-126">Установите **пакет NuGet для Microsoft.ML**:</span><span class="sxs-lookup"><span data-stu-id="78c56-126">Install the **Microsoft.ML NuGet Package**:</span></span>
+    <span data-ttu-id="a9ae4-120">В обозревателе решений щелкните проект правой кнопкой мыши и выберите "Добавить" > "Новая папка".</span><span class="sxs-lookup"><span data-stu-id="a9ae4-120">In Solution Explorer, right-click on your project and select Add > New Folder.</span></span> <span data-ttu-id="a9ae4-121">Введите MLModels и нажмите клавишу ВВОД.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-121">Type "MLModels" and hit Enter.</span></span>
 
-    <span data-ttu-id="78c56-127">В обозревателе решений щелкните проект правой кнопкой мыши и выберите **Управление пакетами NuGet**.</span><span class="sxs-lookup"><span data-stu-id="78c56-127">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="78c56-128">Выберите nuget.org в качестве источника пакетов, перейдите на вкладку "Обзор", выполните поиск по фразе **Microsoft.ML**, выберите из списка этот пакет и нажмите кнопку "Установить".</span><span class="sxs-lookup"><span data-stu-id="78c56-128">Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.ML**, select that package in the list, and select the Install button.</span></span> <span data-ttu-id="78c56-129">Нажмите кнопку **ОК** в диалоговом окне **Предварительный просмотр изменений**. Затем нажмите кнопку **Принимаю** в диалоговом окне "Принятие условий лицензионного соглашения", если вы согласны с условиями лицензионного соглашения для выбранных пакетов.</span><span class="sxs-lookup"><span data-stu-id="78c56-129">Select the **OK** button on the **Preview Changes** dialog and then select the **I Accept** button on the License Acceptance dialog if you agree with the license terms for the packages listed.</span></span>
+1. <span data-ttu-id="a9ae4-122">Установите **пакет NuGet для Microsoft.ML**:</span><span class="sxs-lookup"><span data-stu-id="a9ae4-122">Install the **Microsoft.ML NuGet Package**:</span></span>
 
-### <a name="add-model-to-aspnet-core-web-api-project"></a><span data-ttu-id="78c56-130">Добавление модели в проект веб-API ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="78c56-130">Add Model to ASP.NET Core Web API Project</span></span>
+    <span data-ttu-id="a9ae4-123">В обозревателе решений щелкните проект правой кнопкой мыши и выберите **Управление пакетами NuGet**.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-123">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="a9ae4-124">Выберите nuget.org в качестве источника пакетов, перейдите на вкладку "Обзор", выполните поиск по фразе **Microsoft.ML**, выберите из списка этот пакет и нажмите кнопку "Установить".</span><span class="sxs-lookup"><span data-stu-id="a9ae4-124">Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.ML**, select that package in the list, and select the Install button.</span></span> <span data-ttu-id="a9ae4-125">Нажмите кнопку **ОК** в диалоговом окне **Предварительный просмотр изменений**. Затем нажмите кнопку **Принимаю** в диалоговом окне "Принятие условий лицензионного соглашения", если вы согласны с условиями лицензионного соглашения для выбранных пакетов.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-125">Select the **OK** button on the **Preview Changes** dialog and then select the **I Accept** button on the License Acceptance dialog if you agree with the license terms for the packages listed.</span></span>
 
-1. <span data-ttu-id="78c56-131">Скопируйте предварительно созданную модель в каталог *MLModels*.</span><span class="sxs-lookup"><span data-stu-id="78c56-131">Copy your pre-built model to the *MLModels* directory</span></span>
-1. <span data-ttu-id="78c56-132">В обозревателе решений щелкните правой кнопкой мыши ZIP-файл модели и выберите пункт "Свойства".</span><span class="sxs-lookup"><span data-stu-id="78c56-132">In Solution Explorer, right-click the model zip file and select Properties.</span></span> <span data-ttu-id="78c56-133">В разделе "Дополнительно" для параметра "Копировать в выходной каталог" установите значение "Копировать более позднюю версию".</span><span class="sxs-lookup"><span data-stu-id="78c56-133">Under Advanced, change the value of Copy to Output Directory to Copy if newer.</span></span>
+1. <span data-ttu-id="a9ae4-126">Установите **пакет NuGet для Microsoft.Extensions.ML**:</span><span class="sxs-lookup"><span data-stu-id="a9ae4-126">Install the **Microsoft.Extensions.ML Nuget Package**:</span></span>
 
-## <a name="build-data-models"></a><span data-ttu-id="78c56-134">Создание моделей данных</span><span class="sxs-lookup"><span data-stu-id="78c56-134">Build Data Models</span></span>
+    <span data-ttu-id="a9ae4-127">В обозревателе решений щелкните проект правой кнопкой мыши и выберите **Управление пакетами NuGet**.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-127">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="a9ae4-128">Выберите nuget.org в качестве источника пакетов, перейдите на вкладку "Обзор", выполните поиск по фразе **Microsoft.Extensions.ML**, выберите из списка этот пакет и нажмите кнопку "Установить".</span><span class="sxs-lookup"><span data-stu-id="a9ae4-128">Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.Extensions.ML**, select that package in the list, and select the Install button.</span></span> <span data-ttu-id="a9ae4-129">Нажмите кнопку **ОК** в диалоговом окне **Предварительный просмотр изменений**. Затем нажмите кнопку **Принимаю** в диалоговом окне "Принятие условий лицензионного соглашения", если вы согласны с условиями лицензионного соглашения для выбранных пакетов.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-129">Select the **OK** button on the **Preview Changes** dialog and then select the **I Accept** button on the License Acceptance dialog if you agree with the license terms for the packages listed.</span></span>
 
-<span data-ttu-id="78c56-135">Вам потребуется создать несколько классов для входных данных и прогнозов.</span><span class="sxs-lookup"><span data-stu-id="78c56-135">You need to create some classes for your input data and predictions.</span></span> <span data-ttu-id="78c56-136">Добавьте в проект новый класс:</span><span class="sxs-lookup"><span data-stu-id="78c56-136">Add a new class to your project:</span></span>
+### <a name="add-model-to-aspnet-core-web-api-project"></a><span data-ttu-id="a9ae4-130">Добавление модели в проект веб-API ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="a9ae4-130">Add model to ASP.NET Core Web API project</span></span>
 
-1. <span data-ttu-id="78c56-137">Создайте каталог с именем *DataModels* в папке проекта, чтобы сохранить в нем модели данных:</span><span class="sxs-lookup"><span data-stu-id="78c56-137">Create a directory named *DataModels* in your project to save your data models:</span></span>
+1. <span data-ttu-id="a9ae4-131">Скопируйте предварительно созданную модель в каталог *MLModels*.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-131">Copy your pre-built model to the *MLModels* directory</span></span>
+1. <span data-ttu-id="a9ae4-132">В обозревателе решений щелкните правой кнопкой мыши ZIP-файл модели и выберите пункт "Свойства".</span><span class="sxs-lookup"><span data-stu-id="a9ae4-132">In Solution Explorer, right-click the model zip file and select Properties.</span></span> <span data-ttu-id="a9ae4-133">В разделе "Дополнительно" для параметра "Копировать в выходной каталог" установите значение "Копировать более позднюю версию".</span><span class="sxs-lookup"><span data-stu-id="a9ae4-133">Under Advanced, change the value of Copy to Output Directory to Copy if newer.</span></span>
 
-    <span data-ttu-id="78c56-138">В обозревателе решений щелкните проект правой кнопкой мыши и выберите "Добавить" > "Новая папка".</span><span class="sxs-lookup"><span data-stu-id="78c56-138">In Solution Explorer, right-click on your project and select Add > New Folder.</span></span> <span data-ttu-id="78c56-139">Введите DataModels и нажмите клавишу **ВВОД**.</span><span class="sxs-lookup"><span data-stu-id="78c56-139">Type "DataModels" and hit **Enter**.</span></span>
+## <a name="create-data-models"></a><span data-ttu-id="a9ae4-134">Создание моделей данных</span><span class="sxs-lookup"><span data-stu-id="a9ae4-134">Create data models</span></span>
 
-2. <span data-ttu-id="78c56-140">В обозревателе решений щелкните правой кнопкой мыши папку *DataModels* и выберите "Добавить" > "Новый элемент".</span><span class="sxs-lookup"><span data-stu-id="78c56-140">In Solution Explorer, right-click the *DataModels* directory, and then select Add > New Item.</span></span>
-3. <span data-ttu-id="78c56-141">В диалоговом окне **Добавление нового элемента** выберите **Класс** и измените значение поля **Имя** на *SentimentData.cs*.</span><span class="sxs-lookup"><span data-stu-id="78c56-141">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *SentimentData.cs*.</span></span> <span data-ttu-id="78c56-142">Теперь нажмите кнопку **Добавить**.</span><span class="sxs-lookup"><span data-stu-id="78c56-142">Then, select the **Add** button.</span></span> <span data-ttu-id="78c56-143">Файл *SentimentData.cs* откроется в редакторе кода.</span><span class="sxs-lookup"><span data-stu-id="78c56-143">The *SentimentData.cs* file opens in the code editor.</span></span> <span data-ttu-id="78c56-144">Добавьте в начало файла *SentimentData.cs* следующий оператор using:</span><span class="sxs-lookup"><span data-stu-id="78c56-144">Add the following using statement to the top of *SentimentData.cs*:</span></span>
+<span data-ttu-id="a9ae4-135">Вам потребуется создать несколько классов для входных данных и прогнозов.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-135">You need to create some classes for your input data and predictions.</span></span> <span data-ttu-id="a9ae4-136">Добавьте в проект новый класс:</span><span class="sxs-lookup"><span data-stu-id="a9ae4-136">Add a new class to your project:</span></span>
 
-```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.ML.Data;
-```
+1. <span data-ttu-id="a9ae4-137">Создайте каталог с именем *DataModels* в папке проекта, чтобы сохранить в нем модели данных:</span><span class="sxs-lookup"><span data-stu-id="a9ae4-137">Create a directory named *DataModels* in your project to save your data models:</span></span>
 
-<span data-ttu-id="78c56-145">Удалите из файла **SentimentData.cs** существующее определение класса и добавьте следующий код:</span><span class="sxs-lookup"><span data-stu-id="78c56-145">Remove the existing class definition and add the following code to the **SentimentData.cs** file:</span></span>
+    <span data-ttu-id="a9ae4-138">В обозревателе решений щелкните проект правой кнопкой мыши и выберите "Добавить" > "Новая папка".</span><span class="sxs-lookup"><span data-stu-id="a9ae4-138">In Solution Explorer, right-click on your project and select Add > New Folder.</span></span> <span data-ttu-id="a9ae4-139">Введите DataModels и нажмите клавишу **ВВОД**.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-139">Type "DataModels" and hit **Enter**.</span></span>
 
-```csharp
-public class SentimentData
-{
-    [LoadColumn(0)]
-    public bool Label { get; set; }
-    [LoadColumn(1)]
-    public string Text { get; set; }   
-}
-```
+2. <span data-ttu-id="a9ae4-140">В обозревателе решений щелкните правой кнопкой мыши папку *DataModels* и выберите "Добавить" > "Новый элемент".</span><span class="sxs-lookup"><span data-stu-id="a9ae4-140">In Solution Explorer, right-click the *DataModels* directory, and then select Add > New Item.</span></span>
+3. <span data-ttu-id="a9ae4-141">В диалоговом окне **Добавление нового элемента** выберите **Класс** и измените значение поля **Имя** на *SentimentData.cs*.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-141">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *SentimentData.cs*.</span></span> <span data-ttu-id="a9ae4-142">Теперь нажмите кнопку **Добавить**.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-142">Then, select the **Add** button.</span></span> <span data-ttu-id="a9ae4-143">Файл *SentimentData.cs* откроется в редакторе кода.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-143">The *SentimentData.cs* file opens in the code editor.</span></span> <span data-ttu-id="a9ae4-144">Добавьте в начало файла *SentimentData.cs* следующий оператор using:</span><span class="sxs-lookup"><span data-stu-id="a9ae4-144">Add the following using statement to the top of *SentimentData.cs*:</span></span>
 
-4. <span data-ttu-id="78c56-146">В обозревателе решений щелкните правой кнопкой мыши папку *DataModels* и выберите **Добавить > Новый элемент**.</span><span class="sxs-lookup"><span data-stu-id="78c56-146">In Solution Explorer, right-click the *DataModels* directory, and then select **Add > New Item**.</span></span>
-5. <span data-ttu-id="78c56-147">В диалоговом окне **Добавление нового элемента** выберите **Класс** и измените значение поля **Имя** на *SentimentPrediction.cs*.</span><span class="sxs-lookup"><span data-stu-id="78c56-147">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *SentimentPrediction.cs*.</span></span> <span data-ttu-id="78c56-148">Теперь нажмите кнопку "Добавить".</span><span class="sxs-lookup"><span data-stu-id="78c56-148">Then, select the Add button.</span></span> <span data-ttu-id="78c56-149">В редакторе кода откроется файл *SentimentPrediction.cs*.</span><span class="sxs-lookup"><span data-stu-id="78c56-149">The *SentimentPrediction.cs* file opens in the code editor.</span></span> <span data-ttu-id="78c56-150">Добавьте в начало файла *SentimentPrediction.cs* следующий оператор using:</span><span class="sxs-lookup"><span data-stu-id="78c56-150">Add the following using statement to the top of *SentimentPrediction.cs*:</span></span>
-
-```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.ML.Data;
-```
-
-<span data-ttu-id="78c56-151">Удалите из файла *SentimentPrediction.cs* существующее определение класса и добавьте следующий код:</span><span class="sxs-lookup"><span data-stu-id="78c56-151">Remove the existing class definition and add the following code to the *SentimentPrediction.cs* file:</span></span>
-
-```csharp
-public class SentimentPrediction
-{
-    [ColumnName("PredictedLabel")]
-    public bool Prediction { get; set; }
-}
-```
-
-## <a name="register-predictionengine-for-use-in-application"></a><span data-ttu-id="78c56-152">Регистрация класса PredictionEngine для использования в приложении</span><span class="sxs-lookup"><span data-stu-id="78c56-152">Register PredictionEngine for Use in Application</span></span>
-
-<span data-ttu-id="78c56-153">Чтобы сделать один прогноз, можно использовать класс `PredictionEngine`.</span><span class="sxs-lookup"><span data-stu-id="78c56-153">To make a single prediction, you can use `PredictionEngine`.</span></span> <span data-ttu-id="78c56-154">Для использования класса `PredictionEngine` в приложении вам нужно будет создавать его каждый раз, когда это необходимо.</span><span class="sxs-lookup"><span data-stu-id="78c56-154">In order to use `PredictionEngine` in your application you will have to create it every time it is needed.</span></span> <span data-ttu-id="78c56-155">В этом случае рекомендуется внедрить зависимости ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="78c56-155">In that case, a best practice to consider is ASP.NET Core dependency injection.</span></span>
-
-<span data-ttu-id="78c56-156">См. дополнительные сведения о [внедрении зависимостей в ASP.NET Core](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).</span><span class="sxs-lookup"><span data-stu-id="78c56-156">The following link provides more information if you want to learn about [dependency injection](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).</span></span>
-
-1. <span data-ttu-id="78c56-157">Откройте класс *Startup.cs* и добавьте в начало файла следующий оператор using:</span><span class="sxs-lookup"><span data-stu-id="78c56-157">Open the *Startup.cs* class and add the following using statement to the top of the file:</span></span>
-
-```csharp
-using System.IO;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.ML;
-using Microsoft.ML.Core.Data;
-using SentimentAnalysisWebAPI.DataModels;
-```
-
-2. <span data-ttu-id="78c56-158">Добавьте в метод *ConfigureServices* следующие строки кода:</span><span class="sxs-lookup"><span data-stu-id="78c56-158">Add the following lines of code to the *ConfigureServices* method:</span></span>
-
-```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-    services.AddScoped<MLContext>();
-    services.AddScoped<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
+    ```csharp
+    using Microsoft.ML.Data;
+    ```
+    
+    <span data-ttu-id="a9ae4-145">Удалите из файла **SentimentData.cs** существующее определение класса и добавьте следующий код:</span><span class="sxs-lookup"><span data-stu-id="a9ae4-145">Remove the existing class definition and add the following code to the **SentimentData.cs** file:</span></span>
+    
+    ```csharp
+    public class SentimentData
     {
-        MLContext mlContext = ctx.GetRequiredService<MLContext>();
-        string modelFilePathName = "MLModels/sentiment_model.zip";
+        [LoadColumn(0)]
+        public string SentimentText;
 
-        //Load model from file
-        ITransformer model;
-        using (var stream = File.OpenRead(modelFilePathName))
-        {
-            model = mlContext.Model.Load(stream);
-        }
+        [LoadColumn(1)]
+        [ColumnName("Label")]
+        public bool Sentiment;
+    }
+    ```
 
-        // Return prediction engine
-        return model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
-    });
-}
-```
+4. <span data-ttu-id="a9ae4-146">В обозревателе решений щелкните правой кнопкой мыши папку *DataModels* и выберите **Добавить > Новый элемент**.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-146">In Solution Explorer, right-click the *DataModels* directory, and then select **Add > New Item**.</span></span>
+5. <span data-ttu-id="a9ae4-147">В диалоговом окне **Добавление нового элемента** выберите **Класс** и измените значение поля **Имя** на *SentimentPrediction.cs*.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-147">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *SentimentPrediction.cs*.</span></span> <span data-ttu-id="a9ae4-148">Теперь нажмите кнопку "Добавить".</span><span class="sxs-lookup"><span data-stu-id="a9ae4-148">Then, select the Add button.</span></span> <span data-ttu-id="a9ae4-149">В редакторе кода откроется файл *SentimentPrediction.cs*.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-149">The *SentimentPrediction.cs* file opens in the code editor.</span></span> <span data-ttu-id="a9ae4-150">Добавьте в начало файла *SentimentPrediction.cs* следующий оператор using:</span><span class="sxs-lookup"><span data-stu-id="a9ae4-150">Add the following using statement to the top of *SentimentPrediction.cs*:</span></span>
+
+    ```csharp
+    using Microsoft.ML.Data;
+    ```
+    
+    <span data-ttu-id="a9ae4-151">Удалите из файла *SentimentPrediction.cs* существующее определение класса и добавьте следующий код:</span><span class="sxs-lookup"><span data-stu-id="a9ae4-151">Remove the existing class definition and add the following code to the *SentimentPrediction.cs* file:</span></span>
+    
+    ```csharp
+    public class SentimentPrediction : SentimentData
+    {
+
+        [ColumnName("PredictedLabel")]
+        public bool Prediction { get; set; }
+
+        public float Probability { get; set; }
+
+        public float Score { get; set; }
+    }
+    ```
+
+    <span data-ttu-id="a9ae4-152">Тип`SentimentPrediction` наследуется от типа `SentimentData`.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-152">`SentimentPrediction` inherits from `SentimentData`.</span></span> <span data-ttu-id="a9ae4-153">Это упрощает просмотр исходных данных в свойстве `SentimentText`, а также выходных данных модели.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-153">This makes it easier to see the original data in the `SentimentText` property along with the output generated by the model.</span></span> 
+
+## <a name="register-predictionenginepool-for-use-in-the-application"></a><span data-ttu-id="a9ae4-154">Регистрация класса PredictionEnginePool для использования в приложении</span><span class="sxs-lookup"><span data-stu-id="a9ae4-154">Register PredictionEnginePool for use in the application</span></span>
+
+<span data-ttu-id="a9ae4-155">Чтобы сделать один прогноз, можно использовать [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602).</span><span class="sxs-lookup"><span data-stu-id="a9ae4-155">To make a single prediction, use [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602).</span></span> <span data-ttu-id="a9ae4-156">Чтобы использовать [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) в приложении, следует создать его при необходимости.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-156">In order to use [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) in your application you must create it when it's needed.</span></span> <span data-ttu-id="a9ae4-157">В этом случае рекомендуется внедрить зависимости.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-157">In that case, a best practice to consider is dependency injection.</span></span>
+
+<span data-ttu-id="a9ae4-158">См. дополнительные сведения о [внедрении зависимостей в ASP.NET Core](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).</span><span class="sxs-lookup"><span data-stu-id="a9ae4-158">The following link provides more information if you want to learn about [dependency injection in ASP.NET Core](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).</span></span>
+
+1. <span data-ttu-id="a9ae4-159">Откройте класс *Startup.cs* и добавьте в начало файла следующий оператор using:</span><span class="sxs-lookup"><span data-stu-id="a9ae4-159">Open the *Startup.cs* class and add the following using statement to the top of the file:</span></span>
+
+    ```csharp
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.ML;
+    using SentimentAnalysisWebAPI.DataModels;
+    ```
+
+2. <span data-ttu-id="a9ae4-160">Добавьте в метод *ConfigureServices* следующий код:</span><span class="sxs-lookup"><span data-stu-id="a9ae4-160">Add the following code to the *ConfigureServices* method:</span></span>
+
+    ```csharp
+    public void ConfigureServices(IServiceCollection services)
+    {
+        services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+        services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
+            .FromFile("MLModels/sentiment_model.zip");
+    }
+    ```
+
+<span data-ttu-id="a9ae4-161">Вкратце, этот код инициализирует объекты и службы автоматически по запросу приложения, вместо того, чтобы вы делали это вручную.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-161">At a high level, this code initializes the objects and services automatically when requested by the application instead of having to manually do it.</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="78c56-159">`PredictionEngine` не является потокобезопасным.</span><span class="sxs-lookup"><span data-stu-id="78c56-159">`PredictionEngine` is not thread-safe.</span></span> <span data-ttu-id="78c56-160">Чтобы ограничить затраты на создание объекта, можно сделать время существования службы *регулируемым*.</span><span class="sxs-lookup"><span data-stu-id="78c56-160">A way that you can limit the cost of creating the object is by making its service lifetime *Scoped*.</span></span> <span data-ttu-id="78c56-161">*Регулируемые* объекты остаются неизменными в пределах одного запроса, но в разных запросах используются разные объекты.</span><span class="sxs-lookup"><span data-stu-id="78c56-161">*Scoped* objects are the same within a request but different across requests.</span></span> <span data-ttu-id="78c56-162">Дополнительные сведения о времени существования службы см. [здесь](/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1#service-lifetimes).</span><span class="sxs-lookup"><span data-stu-id="78c56-162">Visit the following link to learn more about [service lifetimes](/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1#service-lifetimes).</span></span>
+> <span data-ttu-id="a9ae4-162">[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) не является потокобезопасным.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-162">[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) is not thread-safe.</span></span> <span data-ttu-id="a9ae4-163">Для повышения производительности и безопасности потока используйте службу `PredictionEnginePool`, которая создает [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) из объектов `PredictionEngine` для использования приложений.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-163">For improved performance and thread safety, use the `PredictionEnginePool` service, which creates an [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) of `PredictionEngine` objects for application use.</span></span> <span data-ttu-id="a9ae4-164">Прочтите следующую запись блога, чтобы узнать о [создании и использовании пулов объектов `PredictionEngine` в ASP.NET Core](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/).</span><span class="sxs-lookup"><span data-stu-id="a9ae4-164">Read the following blog post to learn more about [creating and using `PredictionEngine` object pools in ASP.NET Core](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/).</span></span>  
 
-<span data-ttu-id="78c56-163">Вкратце, этот код инициализирует объекты и службы автоматически по запросу приложения, вместо того, чтобы вы делали это вручную.</span><span class="sxs-lookup"><span data-stu-id="78c56-163">At a high level, this code initializes the objects and services automatically when requested by the application instead of having to manually do it.</span></span>
+## <a name="create-predict-controller"></a><span data-ttu-id="a9ae4-165">Создание контроллера прогнозирования</span><span class="sxs-lookup"><span data-stu-id="a9ae4-165">Create Predict controller</span></span>
 
-## <a name="create-predict-controller"></a><span data-ttu-id="78c56-164">Создание контроллера прогнозирования</span><span class="sxs-lookup"><span data-stu-id="78c56-164">Create Predict Controller</span></span>
+<span data-ttu-id="a9ae4-166">Для обработки входящих HTTP-запросов создайте контроллер.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-166">To process your incoming HTTP requests, create a controller.</span></span>
 
-<span data-ttu-id="78c56-165">Для обработки входящих HTTP-запросов необходимо создать контроллер.</span><span class="sxs-lookup"><span data-stu-id="78c56-165">To process your incoming HTTP requests, you need to create a controller.</span></span>
+1. <span data-ttu-id="a9ae4-167">В обозревателе решений щелкните правой кнопкой мыши папку *Контроллеры* и выберите **Добавить > Контроллер**.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-167">In Solution Explorer, right-click the *Controllers* directory, and then select **Add > Controller**.</span></span>
+1. <span data-ttu-id="a9ae4-168">В диалоговом окне **Добавление нового элемента** щелкните **Пустой контроллер API** и нажмите **Добавить**.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-168">In the **Add New Item** dialog box, select **API Controller Empty** and select **Add**.</span></span>
+1. <span data-ttu-id="a9ae4-169">В запросе измените поле **Имя контроллера** на *PredictController.cs*.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-169">In the prompt change the **Controller Name** field to *PredictController.cs*.</span></span> <span data-ttu-id="a9ae4-170">Теперь нажмите кнопку "Добавить".</span><span class="sxs-lookup"><span data-stu-id="a9ae4-170">Then, select the Add button.</span></span> <span data-ttu-id="a9ae4-171">Файл *PredictController.cs* откроется в редакторе кода.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-171">The *PredictController.cs* file opens in the code editor.</span></span> <span data-ttu-id="a9ae4-172">Добавьте в начало файла *PredictController.cs* следующий оператор using.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-172">Add the following using statement to the top of *PredictController.cs*:</span></span>
 
-1. <span data-ttu-id="78c56-166">В обозревателе решений щелкните правой кнопкой мыши папку *Контроллеры* и выберите **Добавить > Контроллер**.</span><span class="sxs-lookup"><span data-stu-id="78c56-166">In Solution Explorer, right-click the *Controllers* directory, and then select **Add > Controller**.</span></span>
-1. <span data-ttu-id="78c56-167">В диалоговом окне **Добавление нового элемента** щелкните **Пустой контроллер API** и нажмите **Добавить**.</span><span class="sxs-lookup"><span data-stu-id="78c56-167">In the **Add New Item** dialog box, select **API Controller Empty** and select **Add**.</span></span>
-1. <span data-ttu-id="78c56-168">В запросе измените поле **Имя контроллера** на *PredictController.cs*.</span><span class="sxs-lookup"><span data-stu-id="78c56-168">In the prompt change the **Controller Name** field to *PredictController.cs*.</span></span> <span data-ttu-id="78c56-169">Теперь нажмите кнопку "Добавить".</span><span class="sxs-lookup"><span data-stu-id="78c56-169">Then, select the Add button.</span></span> <span data-ttu-id="78c56-170">Файл *PredictController.cs* откроется в редакторе кода.</span><span class="sxs-lookup"><span data-stu-id="78c56-170">The *PredictController.cs* file opens in the code editor.</span></span> <span data-ttu-id="78c56-171">Добавьте в начало файла *PredictController.cs* следующий оператор using.</span><span class="sxs-lookup"><span data-stu-id="78c56-171">Add the following using statement to the top of *PredictController.cs*:</span></span>
+    ```csharp
+    using System;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.ML;
+    using SentimentAnalysisWebAPI.DataModels;
+    ```
 
-```csharp
-using System;
-using Microsoft.AspNetCore.Mvc;
-using SentimentAnalysisWebAPI.DataModels;
-using Microsoft.ML;
-```
-
-<span data-ttu-id="78c56-172">Удалите из файла *PredictController.cs* существующее определение класса и добавьте следующий код:</span><span class="sxs-lookup"><span data-stu-id="78c56-172">Remove the existing class definition and add the following code to the *PredictController.cs* file:</span></span>
-
-```csharp
-public class PredictController : ControllerBase
-{
+    <span data-ttu-id="a9ae4-173">Удалите из файла *PredictController.cs* существующее определение класса и добавьте следующий код:</span><span class="sxs-lookup"><span data-stu-id="a9ae4-173">Remove the existing class definition and add the following code to the *PredictController.cs* file:</span></span>
     
-    private readonly PredictionEngine<SentimentData,SentimentPrediction> _predictionEngine;
-
-    public PredictController(PredictionEngine<SentimentData, SentimentPrediction> predictionEngine)
+    ```csharp
+    public class PredictController : ControllerBase
     {
-        _predictionEngine = predictionEngine; //Define prediction engine
-    }
+        private readonly PredictionEnginePool<SentimentData, SentimentPrediction> _predictionEnginePool;
 
-    [HttpPost]
-    public ActionResult<string> Post([FromBody]SentimentData input)
-    {
-        if(!ModelState.IsValid)
+        public PredictController(PredictionEnginePool<SentimentData,SentimentPrediction> predictionEnginePool)
         {
-            return BadRequest();
+            _predictionEnginePool = predictionEnginePool;
         }
 
-        // Make a prediction
-        SentimentPrediction prediction = _predictionEngine.Predict(input);
+        [HttpPost]
+        public ActionResult<string> Post([FromBody] SentimentData input)
+        {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
 
-        //If prediction is true then it is toxic. If it is false, the it is not.
-        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+            SentimentPrediction prediction = _predictionEnginePool.Predict(input);
 
-        return Ok(isToxic);
+            string sentiment = Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative";
+
+            return Ok(sentiment);
+        }
     }
+    ```
+
+<span data-ttu-id="a9ae4-174">Этот код назначает класс `PredictionEnginePool`, передав его в конструктор контроллера, который можно получить путем внедрения зависимостей.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-174">This code assigns the `PredictionEnginePool` by passing it to the controller's constructor which you get via dependency injection.</span></span> <span data-ttu-id="a9ae4-175">После этого метод `Post` контроллера `Predict` использует `PredictionEnginePool` для создания прогнозов. Он возвращает результаты пользователю при успешном выполнении запроса.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-175">Then, the `Predict` controller's `Post` method uses the `PredictionEnginePool` to make predictions and return the results back to the user if successful.</span></span>
+
+## <a name="test-web-api-locally"></a><span data-ttu-id="a9ae4-176">Тестирование веб-API на локальном компьютере</span><span class="sxs-lookup"><span data-stu-id="a9ae4-176">Test web API locally</span></span>
+
+<span data-ttu-id="a9ae4-177">Завершив настройку параметров, протестируйте приложение:</span><span class="sxs-lookup"><span data-stu-id="a9ae4-177">Once everything is set up, it's time to test the application.</span></span>
+
+1. <span data-ttu-id="a9ae4-178">Запустите приложение.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-178">Run the application.</span></span>
+1. <span data-ttu-id="a9ae4-179">Откройте PowerShell и введите следующий код, где PORT — это порт, через который приложение ожидает передачи денных.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-179">Open Powershell and enter the following code where PORT is the port your application is listening on.</span></span>
+
+    ```powershell
+    Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{Text="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
+    ```
+
+    <span data-ttu-id="a9ae4-180">В случае успешного выполнения результат должен выглядеть, как показано ниже:</span><span class="sxs-lookup"><span data-stu-id="a9ae4-180">If successful, the output should look similar to the text below:</span></span>
     
-}
-```
+    ```powershell
+    Negative
+    ```
 
-<span data-ttu-id="78c56-173">Так мы назначим класс `PredictionEngine`, передав его в конструктор контроллера, который можно получить путем внедрения зависимостей.</span><span class="sxs-lookup"><span data-stu-id="78c56-173">This is assigning the `PredictionEngine` by passing it to the controller's constructor which you get via dependency injection.</span></span> <span data-ttu-id="78c56-174">Затем в методе POST этого контроллера класс `PredictionEngine` используется для создания прогнозов. Он возвращает результаты пользователю при успешном выполнении запроса.</span><span class="sxs-lookup"><span data-stu-id="78c56-174">Then, in the POST method of this controller the `PredictionEngine` is being used to make predictions and return the results back to the user if successful.</span></span>
+<span data-ttu-id="a9ae4-181">Поздравляем!</span><span class="sxs-lookup"><span data-stu-id="a9ae4-181">Congratulations!</span></span> <span data-ttu-id="a9ae4-182">Вы успешно использовали модель для прогнозирования через Интернет с помощью веб-API ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="a9ae4-182">You have successfully served your model to make predictions over the internet using an ASP.NET Core Web API.</span></span>
 
-## <a name="test-web-api-locally"></a><span data-ttu-id="78c56-175">Тестирование веб-API на локальном компьютере</span><span class="sxs-lookup"><span data-stu-id="78c56-175">Test Web API Locally</span></span>
+## <a name="next-steps"></a><span data-ttu-id="a9ae4-183">Следующие шаги</span><span class="sxs-lookup"><span data-stu-id="a9ae4-183">Next Steps</span></span>
 
-<span data-ttu-id="78c56-176">Завершив настройку параметров, протестируйте приложение:</span><span class="sxs-lookup"><span data-stu-id="78c56-176">Once everything is set up, it's time to test the application.</span></span>
-
-1. <span data-ttu-id="78c56-177">Запустите приложение.</span><span class="sxs-lookup"><span data-stu-id="78c56-177">Run the application.</span></span>
-1. <span data-ttu-id="78c56-178">Откройте PowerShell и введите следующий код, где PORT — это порт, через который приложение ожидает передачи денных.</span><span class="sxs-lookup"><span data-stu-id="78c56-178">Open Powershell and enter the following code where PORT is the port your application is listening on.</span></span>
-
-```powershell
-Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{Text="This is a very rude movie"} | ConvertTo-Json) -ContentType "application/json"
-```
-
-<span data-ttu-id="78c56-179">В случае успешного выполнения результат должен выглядеть, как показано ниже:</span><span class="sxs-lookup"><span data-stu-id="78c56-179">If successful, the output should look similar to the text below:</span></span>
-
-```powershell
-Toxic
-```
-
-<span data-ttu-id="78c56-180">Поздравляем!</span><span class="sxs-lookup"><span data-stu-id="78c56-180">Congratulations!</span></span> <span data-ttu-id="78c56-181">Вы успешно использовали модель для прогнозирования через Интернет с помощью API ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="78c56-181">You have successfully served your model to make predictions over the internet using an ASP.NET Core API.</span></span>
-
-## <a name="next-steps"></a><span data-ttu-id="78c56-182">Следующие шаги</span><span class="sxs-lookup"><span data-stu-id="78c56-182">Next Steps</span></span>
-
-- [<span data-ttu-id="78c56-183">Развертывание в Azure</span><span class="sxs-lookup"><span data-stu-id="78c56-183">Deploy to Azure</span></span>](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.1#deploy-the-app-to-azure)
+- [<span data-ttu-id="a9ae4-184">Развертывание в Azure</span><span class="sxs-lookup"><span data-stu-id="a9ae4-184">Deploy to Azure</span></span>](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.1#deploy-the-app-to-azure)
