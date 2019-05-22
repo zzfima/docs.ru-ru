@@ -12,36 +12,36 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64615495"
 ---
 # <a name="bitmap-effects-overview"></a>Общие сведения об эффектах для точечных рисунков
-Растровые эффекты позволяют конструкторам и разработчикам применять визуальные эффекты к просмотру содержимого Windows Presentation Foundation (WPF). Например, растровые эффекты позволяют легко применить <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> эффект или эффект размытия для изображения или кнопки.  
+Растровые эффекты позволяют дизайнерам и разработчикам применять визуальные эффекты к содержимому, отображаемому в Windows Presentation Foundation (WPF). Например, растровые эффекты позволяют легко применить эффект <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> или эффект размытия к изображению или кнопке.
   
 > [!IMPORTANT]
->  В [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] или более поздней версии, <xref:System.Windows.Media.Effects.BitmapEffect> класс является устаревшим. Если вы попытаетесь использовать <xref:System.Windows.Media.Effects.BitmapEffect> класса, будет вызвано исключение устаревшего. Неустаревшая альтернатива для <xref:System.Windows.Media.Effects.BitmapEffect> класс является <xref:System.Windows.Media.Effects.Effect> класса. В большинстве случаев <xref:System.Windows.Media.Effects.Effect> класс значительно быстрее.  
+>  В [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] и более поздних версиях класс <xref:System.Windows.Media.Effects.BitmapEffect> является устаревшим. Если вы попытаетесь использовать класс <xref:System.Windows.Media.Effects.BitmapEffect>, будет выдано соответствующее исключение. Современной альтернативой для класса <xref:System.Windows.Media.Effects.BitmapEffect> является класс <xref:System.Windows.Media.Effects.Effect>. В большинстве случаев класс <xref:System.Windows.Media.Effects.Effect> работает значительно быстрее.
 
 <a name="wpf_effects"></a>   
 ## <a name="wpf-bitmap-effects"></a>Растровые эффекты WPF  
- Эффекты для точечных рисунков (<xref:System.Windows.Media.Effects.BitmapEffect> объекта) — это простой пикселей операции обработки. Растровый эффект принимает <xref:System.Windows.Media.Imaging.BitmapSource> как входных данных и выдает новый <xref:System.Windows.Media.Imaging.BitmapSource> после применения эффекта, например размытия или тени. Каждый растровый эффект обеспечивает свойства, которые могут управлять свойствами фильтра, такими как <xref:System.Windows.Media.Effects.BlurBitmapEffect.Radius%2A> из <xref:System.Windows.Media.Effects.BlurBitmapEffect>.  
+ Эффекты для точечных рисунков (объект <xref:System.Windows.Media.Effects.BitmapEffect>) — это простые операции обработки пикселей. Такой эффект принимает в качестве входных данных <xref:System.Windows.Media.Imaging.BitmapSource> и выдает новый объект <xref:System.Windows.Media.Imaging.BitmapSource> после применения эффекта, например размытия или тени. Каждый эффект предоставляет свойства, которые могут управлять свойствами фильтра, например <xref:System.Windows.Media.Effects.BlurBitmapEffect.Radius%2A> у <xref:System.Windows.Media.Effects.BlurBitmapEffect>.
   
- Как особый случай в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], эффекты могут задаваться как свойства в реальном времени <xref:System.Windows.Media.Visual> объекты, такие как <xref:System.Windows.Controls.Button> или <xref:System.Windows.Controls.TextBox>. Обработка пикселей применяется и отображается во время выполнения. В этом случае во время подготовки к просмотру <xref:System.Windows.Media.Visual> автоматически преобразуется в его <xref:System.Windows.Media.Imaging.BitmapSource> эквивалентное и передается в качестве входных данных для <xref:System.Windows.Media.Effects.BitmapEffect>. Выходные данные заменяют <xref:System.Windows.Media.Visual> поведение отрисовки по умолчанию для объекта. Вот почему <xref:System.Windows.Media.Effects.BitmapEffect> объектов заставляют визуальные для подготовки к просмотру в программном обеспечении только т. е. без аппаратного ускорения на визуальных элементах при применении эффектов.  
+ Как особый случай, в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] эффекты могут задаваться как свойства объектов <xref:System.Windows.Media.Visual>, отображаемых в реальном времени, например <xref:System.Windows.Controls.Button> или <xref:System.Windows.Controls.TextBox>. Обработка пикселей применяется и отрисовывается во время выполнения. В этом случае во время отрисовки <xref:System.Windows.Media.Visual> автоматически преобразуется в эквивалентный объект <xref:System.Windows.Media.Imaging.BitmapSource> и передается в качестве входных данных в <xref:System.Windows.Media.Effects.BitmapEffect>. Выходные данные заменяют поведение отрисовки по умолчанию для объекта <xref:System.Windows.Media.Visual>. По этой причине объекты <xref:System.Windows.Media.Effects.BitmapEffect> заставляют визуальные элементы использовать только программный режим отрисовки, т. е. без аппаратного ускорения, при применении к ним эффектов.
   
-- <xref:System.Windows.Media.Effects.BlurBitmapEffect> имитирует объект, который отображается вне в фокусе.  
+- <xref:System.Windows.Media.Effects.BlurBitmapEffect> имитирует объект, который отображается не в фокусе.  
   
-- <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect> Создает цветное свечение по периметру объекта.  
+- <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect> создает цветное свечение по периметру объекта.  
   
 - <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> создает тень позади объекта.  
   
-- <xref:System.Windows.Media.Effects.BevelBitmapEffect> Создает Рельеф, поднимающий поверхность изображения в соответствии с указанной кривой.  
+- <xref:System.Windows.Media.Effects.BevelBitmapEffect> создает рельеф, поднимающий поверхность изображения в соответствии с указанной кривой.  
   
-- <xref:System.Windows.Media.Effects.EmbossBitmapEffect> Создает рельефа <xref:System.Windows.Media.Visual> впечатление глубины и текстуры от искусственного источника света.  
+- <xref:System.Windows.Media.Effects.EmbossBitmapEffect> создает отображение элементов рельефа <xref:System.Windows.Media.Visual>, дающее впечатление глубины и текстуры освещения от искусственного источника света. 
   
 > [!NOTE]
->  Растровые эффекты [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] отрисовываются в программном режиме. Любой объект, который применяет эффект, будет также отрисован в программном режиме. Производительность наиболее снижается при использовании растровых эффектов на больших визуальных объектах или при анимации свойств растрового эффекта. Это не означает, что не следует вовсе использовать растровые эффекты, но следует соблюдать осторожность и выполнять тщательное тестирование, чтобы убедиться, что пользователи получат то, что вы ожидаете.  
+>  Эффекты для точечных рисунков [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] отрисовываются в программном режиме. Любой объект, который применяет эффект, будет также отрисован в программном режиме. Производительность снижается в наибольшей степени при использовании эффектов на больших визуальных элементах или при анимации свойств эффекта. Это не означает, что использовать эффекты для точечных рисунков таким образом не следует, но нужно соблюдать осторожность и выполнять тщательное тестирование, чтобы пользователи получали именно то, что вы ожидаете.
   
 > [!NOTE]
 >  Растровые эффекты [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] не поддерживают выполнение при частичном доверии. Для использования растровых эффектов приложение должно иметь разрешения полного доверия.  
   
 <a name="applyeffects"></a>   
 ## <a name="how-to-apply-an-effect"></a>Применение эффекта  
- <xref:System.Windows.Media.Effects.BitmapEffect> является свойством <xref:System.Windows.Media.Visual>. Поэтому применение эффектов к визуальным элементам, такие как <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Image>, <xref:System.Windows.Media.DrawingVisual>, или <xref:System.Windows.UIElement>, так же просто, как задание свойства. <xref:System.Windows.UIElement.BitmapEffect%2A> можно задать единое <xref:System.Windows.Media.Effects.BitmapEffect> объект или несколько эффектов можно объединить в цепочку с помощью <xref:System.Windows.Media.Effects.BitmapEffectGroup> объекта.  
+ <xref:System.Windows.Media.Effects.BitmapEffect> является свойством <xref:System.Windows.Media.Visual>. Поэтому применение эффектов к визуальным элементам, например <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Image>, <xref:System.Windows.Media.DrawingVisual> или <xref:System.Windows.UIElement>, так же просто, как задание свойства. <xref:System.Windows.UIElement.BitmapEffect%2A> можно присвоить единственный объект <xref:System.Windows.Media.Effects.BitmapEffect>, или можно объединить несколько эффектов в цепочку с помощью объекта <xref:System.Windows.Media.Effects.BitmapEffectGroup>.
   
  Следующий пример демонстрирует применение <xref:System.Windows.Media.Effects.BitmapEffect> в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
@@ -52,7 +52,7 @@ ms.locfileid: "64615495"
  [!code-csharp[EffectsGallery_snip#CodeBehindBlurCodeBehindExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/EffectsGallery_snip/CSharp/blurcodebehindexample.xaml.cs#codebehindblurcodebehindexampleinline)]  
   
 > [!NOTE]
->  Когда <xref:System.Windows.Media.Effects.BitmapEffect> применяется к контейнеру макета, такие как <xref:System.Windows.Controls.DockPanel> или <xref:System.Windows.Controls.Canvas>, эффект применяется к визуальному дереву элемента или визуального элемента, включая все его дочерние элементы.  
+>  Когда <xref:System.Windows.Media.Effects.BitmapEffect> применяется к контейнеру макета, например <xref:System.Windows.Controls.DockPanel> или <xref:System.Windows.Controls.Canvas>, эффект применяется к визуальному дереву элемента или визуального элемента, включая все его дочерние элементы.  
   
 <a name="customeffects"></a>   
 ## <a name="creating-custom-effects"></a>Создание пользовательских эффектов  
