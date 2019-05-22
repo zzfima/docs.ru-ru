@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: f7f1ed2fbca4ab8892cb6c439ae8841fa8828bf0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22ffdfcc1068dd546c8c07a481c9e21fb1faab80
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008971"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003731"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Практическое руководство. Создание связанного элемента управления и форматирование отображаемых данных
 С помощью привязки данных Windows Forms можно форматировать данные, отображаемые в элементе управления с привязкой к данным с помощью **форматирование и дополнительная привязка** диалоговое окно.  
@@ -27,7 +27,7 @@ ms.locfileid: "62008971"
   
 2. Выберите элемент управления в форме и откройте окно "Свойства".  
   
-3. Разверните **(DataBindings)** свойства, а затем в **(Дополнительно)** нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](./media/vbellipsesbutton.png " vbEllipsesButton")) для отображения **форматирование и дополнительная привязка** диалоговое окно, имеющая полный список свойств этого элемента управления.  
+3.  Разверните **(DataBindings)** свойства, а затем в **(Дополнительно)** нажмите кнопку с многоточием (![кнопку с многоточием (...) в окне свойств Visual Studio.](./media/how-to-create-a-bound-control-and-format-the-displayed-data/visual-studio-ellipsis-button.png)) для отображения **форматирование и дополнительная привязка** диалоговое окно, имеющая полный список свойств этого элемента управления.  
   
 4. Выберите свойство, чтобы привязать и нажмите кнопку **привязки** стрелку.  
   

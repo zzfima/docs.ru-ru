@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 894895331c2444a8e52a09e3de9d5a47daa87e5d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: cc7a0991ae308f1c61026e946021d22da9a4bc3b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092960"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583534"
 ---
 # <a name="net-framework-development-guide"></a>Руководство по разработке для .NET Framework
 В этом разделе поясняются способы создания, настройки, отладки, защиты и развертывания приложений .NET Framework. В этом разделе также приводятся сведения о технологических областях, таких как динамическое программирование, взаимодействие, расширяемость, управление памятью и потоки.  
@@ -67,7 +67,7 @@ ms.locfileid: "56092960"
  
 ## <a name="reference"></a>Ссылка  
  [Библиотека классов .NET Framework](/dotnet/api/?view=netframework-4.7)  
- Здесь приводится синтаксис, примеры кода и сведения по использованию для всех классов, содержащихся в пространствах имен [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ Предоставляет синтаксис, примеры кода и сведения об использовании для каждого класса, содержащегося в пространствах имен .NET Framework.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Начало работы](../../docs/framework/get-started/index.md)  

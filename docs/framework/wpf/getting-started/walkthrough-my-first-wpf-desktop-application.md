@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 9d0abd18b2242ab21e8a915caac1ff9e3216acd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c3440ddf6cdae6b24bcf1059ab2c76d8fb957263
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617276"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003855"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Пошаговое руководство. Создание классического приложения WPF
 
@@ -45,9 +45,9 @@ ms.locfileid: "64617276"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- Visual Studio 2017 или более поздней версии
+- Visual Studio 2017 или более поздней версии (в этой статье используется Visual Studio 2019 г.)
 
-   Дополнительные сведения об установке последней версии Visual Studio, см. в разделе [установка Visual Studio](/visualstudio/install/install-visual-studio). В этой статье используется Visual Studio 2019.
+   Дополнительные сведения об установке последней версии Visual Studio, см. в разделе [установка Visual Studio](/visualstudio/install/install-visual-studio).
 
 ## <a name="create-the-application-project"></a>Создание проекта приложения
 
@@ -55,23 +55,21 @@ ms.locfileid: "64617276"
 
 1. Создание нового проекта приложения WPF в Visual Basic или Visual C# с именем **`ExpenseIt`**:
 
-   1. Откройте Visual Studio и выберите **файл** > **New** > **проекта**.
+   1. Откройте Visual Studio и выберите **создайте новый проект** под **приступить к работе** меню.
 
       **Создайте новый проект** откроется диалоговое окно.
 
-      ![Создать диалоговое окно нового проекта](./media/gettingstartedfigure0a.png)
-
    2. В **языка** раскрывающемся списке выберите либо **C#** или **Visual Basic**.
-
+      
    3. Выберите **приложение WPF (.NET Framework)** шаблона, а затем выберите **Далее**. 
+     
+      ![Создать диалоговое окно нового проекта](./media/walkthrough-my-first-wpf-desktop-application/create-new-project-dialog.png)
     
-   4. Выберите **создайте новый проект**.
-
       **Настроить новый проект** откроется диалоговое окно.
 
-      ![Настройте диалоговое окно нового проекта](./media/gettingstartedfigure0c.png)
+   4. Введите имя проекта **`ExpenseIt`** , а затем выберите **создать**.
 
-   5. Введите имя проекта **`ExpenseIt`** , а затем выберите **создать**.
+      ![Настройте диалоговое окно нового проекта](./media/walkthrough-my-first-wpf-desktop-application/configure-new-project-dialog.png)
 
       Visual Studio создаст проект и открывает конструктор для окна приложения по умолчанию с именем **MainWindow.xaml**.
 
@@ -224,7 +222,7 @@ ms.locfileid: "64617276"
 
     На следующем рисунке показано приложение с помощью <xref:System.Windows.Navigation.NavigationWindow> кнопки:
 
-    ![Снимок экрана примера ExpenseIt](./media/gettingstartedfigure1.png)
+    ![Приложение, выполнив сборку и запустите его.](./media/walkthrough-my-first-wpf-desktop-application/build-run-application.png)
 
 2. Закройте приложение, чтобы вернуться в Visual Studio.
 
@@ -290,9 +288,7 @@ ms.locfileid: "64617276"
 
     На следующем рисунке показано элементы управления, что вы создали:
 
-    ![Снимок экрана примера ExpenseIt](./media/gettingstartedfigure2.png)
-
-3. Закройте приложение, чтобы вернуться в Visual Studio.
+![Снимок экрана примера ExpenseIt, отображение списка имен](./media/walkthrough-my-first-wpf-desktop-application/add-application-controls.png)
 
 ## <a name="add-an-image-and-a-title"></a>Добавить изображение и заголовок
 
@@ -326,11 +322,11 @@ ms.locfileid: "64617276"
 
 На следующем рисунке показано только что добавленную результаты:
 
-![Снимок экрана примера ExpenseIt](./media/gettingstartedfigure3.png)
+![Пример ExpenseIt снимок экрана, показывающий новый образ фона и заголовок страницы](./media/walkthrough-my-first-wpf-desktop-application/add-application-image-title.png)
 
 ## <a name="add-code-to-handle-events"></a>Добавьте код для обработки событий
 
-1. В *`ExpenseItHome.xaml`*, добавьте <xref:System.Windows.Controls.Primitives.ButtonBase.Click> в обработчике событий <xref:System.Windows.Controls.Button> элемент. Дополнительные сведения см. в разделе [Как Создание простого обработчика событий](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100)).
+1. В *`ExpenseItHome.xaml`*, добавьте <xref:System.Windows.Controls.Primitives.ButtonBase.Click> в обработчике событий <xref:System.Windows.Controls.Button> элемент. Дополнительные сведения см. в разделе [Практическое руководство. Создание простого обработчика событий](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100)).
 
     [!code-xaml[ExpenseIt#15](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -361,7 +357,7 @@ ms.locfileid: "64617276"
 
 На следующем рисунке показан элементы пользовательского интерфейса, добавленные *ExpenseReportPage.xaml*.
 
-![Снимок экрана примера ExpenseIt](./media/gettingstartedfigure4.png)
+![ExpenseIt образец снимок экрана пользовательского интерфейса для страницы ExpenseReportPage только что создали.](./media/walkthrough-my-first-wpf-desktop-application/create-application-ui.png)
 
 ## <a name="style-controls"></a>Определение стиля элементов управления
 
@@ -405,7 +401,7 @@ ms.locfileid: "64617276"
 
 6. Выполните сборку и запуск приложения. Внешний вид окна совпадает с ранее.
 
-    ![Снимок экрана примера ExpenseIt](./media/gettingstartedfigure4.png)
+    ![Снимок экрана примера ExpenseIt в таком же виде, как и в предыдущем разделе.](./media/walkthrough-my-first-wpf-desktop-application/create-application-ui.png)
 
 7. Закройте приложение, чтобы вернуться в Visual Studio.
 
@@ -473,7 +469,7 @@ ms.locfileid: "64617276"
 
 На следующем рисунке показан обе страницы `ExpenseIt` приложения с помощью элементов управления, макет, стили, привязку данных и примененными шаблонами данных:
 
-![Снимки экрана примера ExpenseIt](./media/gettingstartedfigure5.png)
+![Обе страницы приложения в список имен и отчет о расходах.](./media/walkthrough-my-first-wpf-desktop-application/application-data-templates.png)
 
 > [!NOTE]
 > В этом примере демонстрируется конкретная функциональная возможность WPF и не выполните все рекомендации по безопасности, локализации и специальных возможностей. Исчерпывающая информация о WPF и рекомендации по разработке приложений .NET см. в следующих разделах:

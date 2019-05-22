@@ -1,21 +1,21 @@
 ---
-title: Использование ML.NET в сценарии рекомендации фильмов
-description: Узнайте, как использовать ML.NET в сценарии рекомендации фильмов пользователям.
+title: Учебник. Создание приложения для рекомендации фильмов
+description: В этом руководстве показано, как построить приложение для рекомендации фильмов с помощью ML.NET в консольном проекте .NET Core. Используется C# и Visual Studio 2019.
 author: briacht
 ms.author: johalex
-ms.date: 03/08/2019
+ms.date: 05/06/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: bdc49f42e520f11ef63de873f0d30d11ba4b2366
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5d459d8b28298250f3b815e33ff4d85ac54f79c2
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612281"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063369"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>Учебник. Создание системы рекомендации фильмов с помощью ML.NET
 
-В этом практическом руководстве демонстрируется создание системы рекомендации фильмов на основе ML.NET в консольном приложении .NET Core на языке C# с помощью Visual Studio 2017.
+В этом руководстве показано, как построить приложение для рекомендации фильмов с помощью ML.NET в консольном проекте .NET Core. Используется C# и Visual Studio 2019.
 
 В этом руководстве вы узнаете, как:
 > [!div class="checklist"]
@@ -24,11 +24,6 @@ ms.locfileid: "59612281"
 > * создать и обучить модель;
 > * оценить модель;
 > * развернуть и использовать модель.
-
-> [!NOTE]
-> В этом разделе описано, как использовать платформу ML.NET, которая сейчас доступна в режиме предварительной версии. Этот материал может быть изменен. Дополнительные сведения см. в [обзоре ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
-
-Сейчас в этом руководстве и соответствующем примере используется **ML.NET версии 0.11**. Дополнительные сведения см. в заметках о выпуске в [репозитории GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Исходный код для этого руководства можно найти в репозитории [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation).
 
@@ -61,10 +56,7 @@ ms.locfileid: "59612281"
 
 3. Установите пакеты NuGet **Microsoft.ML** и **Microsoft.ML.Recommender**:
 
-    В **обозревателе решений** щелкните проект правой кнопкой мыши и выберите **Управление пакетами NuGet**. Выберите nuget.org в качестве источника пакетов, перейдите на вкладку **Обзор**, выполните поиск по фразе **Microsoft.ML**, выберите из списка этот пакет и нажмите кнопку **Установить**. Нажмите кнопку **ОК** в диалоговом окне **Предварительный просмотр изменений**, а затем нажмите кнопку **Принимаю** в диалоговом окне **Принятие условий лицензионного соглашения**, если вы согласны с указанными условиями лицензионного соглашения для выбранных пакетов. Повторите эти действия для пакета **Microsoft.ML.Recommender**.
-
-    > [!NOTE]
-    > В этом руководстве используются версии пакетов **Microsoft.ML 0.11.0** и **Microsoft.ML.Recommender 0.11.0**.
+    В **обозревателе решений** щелкните проект правой кнопкой мыши и выберите **Управление пакетами NuGet**. Выберите в качестве источника пакет nuget.org, на вкладке **Обзор** найдите **Microsoft.ML** и выберите пакет **1.0.0** в списке, а затем нажмите кнопку **Установить**. Нажмите кнопку **ОК** в диалоговом окне **Предварительный просмотр изменений**, а затем нажмите кнопку **Принимаю** в диалоговом окне **Принятие условий лицензионного соглашения**, если вы согласны с указанными условиями лицензионного соглашения для выбранных пакетов. Повторите эти шаги для **Microsoft.ML.Recommender v0.12.0**.
 
 4. Добавьте следующие операторы `using` в начало файла *Program.cs*:
 
@@ -175,7 +167,7 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 
 ## <a name="build-and-train-your-model"></a>Создание и обучение модели
 
-В ML.NET есть три основных понятия: [данные](../basic-concepts-model-training-in-mldotnet.md#data), [преобразователи](../basic-concepts-model-training-in-mldotnet.md#transformer) и [средства оценки](../basic-concepts-model-training-in-mldotnet.md#estimator).
+В ML.NET есть три основных понятия: [данные](../resources/glossary.md#data), [преобразователи](../resources/glossary.md#transformer) и [средства оценки](../resources/glossary.md#estimator).
 
 Алгоритмам машинного обучения требуются данные в определенном формате. Преобразователи (`Transformers`) приводят данные к совместимому формату.
 

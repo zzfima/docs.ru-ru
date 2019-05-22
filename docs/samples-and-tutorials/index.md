@@ -4,12 +4,12 @@ description: Сведения о примерах и руководствах д
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: ba0d7e4163a1c4afe08ea3f871c2bccc2335ac48
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: ea5bedc9bd58ca0661524d7edf999e21037e0063
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469470"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960293"
 ---
 # <a name="net-samples-and-tutorials"></a>Примеры и руководства .NET
 
@@ -63,7 +63,7 @@ ms.locfileid: "65469470"
 
 **Пример управляемого COM-сервера**
 
-В примере [COM-сервера](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) показано создание управляемого COM-сервера и его глобальная регистрация.
+В примере [COM-сервера](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) показано создание управляемого COM-сервера, его глобальная регистрация и использование через RegFree COM.
 
 **Пример Microsoft Office PIA**
 

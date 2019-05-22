@@ -4,28 +4,29 @@ ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - synchronization, threads
-- threading [.NET Framework], synchronizing threads
+- threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b973e9eb795ef2f5bd69b4ec67c1c194f043a9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c83e7abbd9f9425fab70325f7a77abb0f672bd15
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644771"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638762"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Синхронизация данных для многопоточности
+
 Если несколько потоков могут вызывать свойства и методы отдельного объекта, эти вызовы важно синхронизировать. В противном случае поток может прерваться действиями другого потока, а объект может остаться в недопустимом состоянии. Класс, члены которого защищены от подобных прерываний, называется потокобезопасным.  
   
- CLR предоставляет несколько способов синхронизации доступа к экземпляру и статическим членам:  
+.NET предоставляет несколько способов синхронизации доступа к экземпляру и статическим членам:  
   
 - Синхронизированные области кода. Используя класс <xref:System.Threading.Monitor> или поддержку компилятора для этого класса, можно синхронизировать только тот блок кода, которому эту требуется, повысив тем самым производительность.  
   
-- Синхронизация вручную. Вы можете использовать объекты синхронизации, предоставляемые библиотекой классов .NET Framework. См. статью [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md), в которой обсуждается класс <xref:System.Threading.Monitor>.  
+- Синхронизация вручную. Вы можете использовать объекты синхронизации, предоставляемые библиотекой классов .NET. См. статью [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md), в которой обсуждается класс <xref:System.Threading.Monitor>.  
   
-- Синхронизированные контексты. Вы можете использовать <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> для реализации простой автоматической синхронизации для объектов <xref:System.ContextBoundObject>.  
+- Синхронизированные контексты. Для приложений .NET Framework и Xamarin вы можете использовать <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> для реализации простой автоматической синхронизации для объектов <xref:System.ContextBoundObject>.  
   
 - Классы коллекции в пространстве имен <xref:System.Collections.Concurrent?displayProperty=nameWithType>. Эти классы предоставляют встроенные синхронизированные операции добавления и удаления. Дополнительные сведения см. в разделе [Потокобезопасные коллекции](../../../docs/standard/collections/thread-safe/index.md).  
   
@@ -42,7 +43,7 @@ ms.locfileid: "64644771"
  По умолчанию для объектов. Любой поток может получить доступ к любому методу или полю в любое время. Одновременно обращаться к этим объектам может только один поток.  
   
 ## <a name="manual-synchronization"></a>Синхронизация вручную  
- Библиотека классов .NET Framework предоставляет ряд классов для синхронизации потоков. См. раздел [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+ Библиотека классов .NET предоставляет ряд классов для синхронизации потоков. См. раздел [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
   
 ## <a name="synchronized-code-regions"></a>Синхронизированные области кода  
  Класс <xref:System.Threading.Monitor> или ключевое слово компилятора можно использовать для синхронизации блоков кода, методов экземпляров и статических методов. Синхронизированные статические поля не поддерживаются.  
@@ -52,7 +53,7 @@ ms.locfileid: "64644771"
 > [!NOTE]
 >  Инструкции `lock` И `SyncLock` реализуются с помощью <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> и <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>, чтобы в синхронизованной области с ними можно было использовать другие методы <xref:System.Threading.Monitor>.  
   
- Метод можно также оформить с помощью **MethodImplAttribute** и **MethodImplOptions.Synchronized**, которые действуют точно так же, как **Monitor** или одно из ключевых слов компилятора, блокируя все тело метода.  
+ Метод можно также оформить с помощью <xref:System.Runtime.CompilerServices.MethodImplAttribute> со значением <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType>, который действует точно так же, как <xref:System.Threading.Monitor> или одно из ключевых слов компилятора, блокируя все тело метода.  
   
  С помощью <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> можно вывести поток из операций блокировки, таких как ожидание доступа к синхронизированной области кода. **Thread.Interrupt** также используется для вывода потоков из таких операций, как <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>.  
   
@@ -65,7 +66,8 @@ ms.locfileid: "64644771"
  В обоих случаях, если в коде блока возникает исключение, блокировка, введенная оператором **lock** или **SyncLock**, автоматически снимается. Компиляторы C# и Visual Basic выдают блок **try**/**finally** с **Monitor.Enter** в начале оператора try и **Monitor.Exit** в блоке **finally**. Если исключение возникает в блоке **lock** или **SyncLock**, запускается обработчик **finally**, позволяющий выполнить очистку.  
   
 ## <a name="synchronized-context"></a>Синхронизированные контексты  
- **SynchronizationAttribute** можно использовать в любом объекте **ContextBoundObject** для синхронизации всех методов и полей экземпляра. Блокировка распространяется на все объекты с одним и тем же контекстным доменом. К методам и полям могут обращаться сразу несколько потоков, но только по одному за раз.  
+ 
+Только в приложениях .NET Framework и Xamarin можно использовать <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> на любом <xref:System.ContextBoundObject> для синхронизации всех методов и полей экземпляра. Блокировка распространяется на все объекты с одним и тем же контекстным доменом. К методам и полям могут обращаться сразу несколько потоков, но только по одному за раз.  
   
 ## <a name="see-also"></a>См. также
 

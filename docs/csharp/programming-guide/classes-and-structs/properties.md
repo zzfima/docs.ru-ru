@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 473109100c14f26d0e31b9f57513997044c5b2f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7374b77526a31c2c508516d5a3cb7cc3e29339a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676826"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583075"
 ---
 # <a name="properties-c-programming-guide"></a>Свойства (Руководство по программированию в C#)
 
@@ -54,21 +54,21 @@ ms.locfileid: "54676826"
 
 В некоторых случаях свойство `get` и методы доступа `set` просто присваивают значение резервному полю или извлекают значение из него без включения дополнительной логики. С помощью автоматически реализуемых свойств можно упростить код, в то время как компилятор C# будет прозрачно предоставлять вам резервное поле. 
 
-Если у свойства есть методы доступа `get` и `set`, они оба должны быть автоматически реализованы. Автоматически реализуемое свойство определяется с помощью ключевых слов `get` и `set` без указания какой-либо реализации. Следующий пример аналогичен предыдущему, за исключением того, что `Name` и `Price` являются автоматически реализуемыми свойствами. Обратите внимание, что в примере также удаляется параметризованный конструктор, поэтому теперь объекты `SaleItem` инициализируются с помощью вызова конструктора по умолчанию и [инициализатора объекта](object-and-collection-initializers.md).
+Если у свойства есть методы доступа `get` и `set`, они оба должны быть автоматически реализованы. Автоматически реализуемое свойство определяется с помощью ключевых слов `get` и `set` без указания какой-либо реализации. Следующий пример аналогичен предыдущему, за исключением того, что `Name` и `Price` являются автоматически реализуемыми свойствами. Обратите внимание на то, что в этом примере также удаляется параметризованный конструктор, что позволяет инициализировать объекты `SaleItem`, вызывая конструктор без параметров и [инициализатор объекта](object-and-collection-initializers.md).
 
   [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 
 ## <a name="related-sections"></a>Связанные разделы  
   
--   [Использование свойств](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Использование свойств](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
   
--   [Свойства интерфейса](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [Свойства интерфейса](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   
--   [Сравнение свойств и индексаторов](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Сравнение свойств и индексаторов](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [Ограничение доступности методов доступа](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Ограничение доступности методов доступа](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
--   [Автоматически реализуемые свойства](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [Автоматически реализуемые свойства](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
 

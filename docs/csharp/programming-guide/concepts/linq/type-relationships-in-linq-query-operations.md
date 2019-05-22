@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: b95699430a05ef9d81c705b05d04b4ab06e7abc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3b8ae80ff17ea2cf12c3d78c092dd3233ac0751d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307656"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755955"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Отношения между типами в операциях запросов LINQ (C#)
 Для эффективного написания запросов следует понимать, как типы переменных связаны друг с другом в полной операции запроса. Понимание этих связей облегчит усвоение примеров [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] и примеров кода в документации. Более того, можно будет представить, что происходит в фоновом режиме при неявном типизировании переменных с помощью `var`.  
@@ -29,7 +29,7 @@ ms.locfileid: "59307656"
 ## <a name="queries-that-do-not-transform-the-source-data"></a>Запросы, не выполняющие преобразование исходных данных  
  На следующем рисунке показана операция запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects, не выполняющая преобразование данных. Источник содержит последовательность строк, результат запроса также является последовательностью строк.  
   
- ![Отношения между типами данных в запросе LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_flow1.png "LINQ_flow1")  
+ ![Схема, показывающая отношения между типами данных в запросе LINQ.](./media/type-relationships-in-linq-query-operations/linq-query-data-type-relation.png)  
   
 1. Аргумент типа источника данных определяет тип переменной диапазона.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "59307656"
 ## <a name="queries-that-transform-the-source-data"></a>Запросы, выполняющие преобразование исходных данных  
  На следующем рисунке показана операция запроса [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], выполняющая простое преобразование данных. В качестве входных данных запрос получает последовательность объектов `Customer` и выбирает в результате только свойство `Name`. Поскольку `Name` является строкой, запрос формирует последовательность строк в качестве выходных данных.  
   
- ![Запрос, преобразующий тип данных](../../../../csharp/programming-guide/concepts/linq/media/linq_flow2.png "LINQ_flow2")  
+ ![Схема, показывающая запрос, преобразующий тип данных.](./media/type-relationships-in-linq-query-operations/linq-query-transform-data-type.png)  
   
 1. Аргумент типа источника данных определяет тип переменной диапазона.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "59307656"
   
  На следующем рисунке показано немного более сложное преобразование. Оператор `select` возвращает анонимный тип, захватывающий только два члена исходного объекта `Customer`.  
   
- ![Запрос, преобразующий тип данных](../../../../csharp/programming-guide/concepts/linq/media/linq_flow3.png "LINQ_flow3")  
+ ![Схема, показывающая более сложный запрос, преобразующий тип данных.](./media/type-relationships-in-linq-query-operations/linq-complex-query-transform-data-type.png)  
   
 1. Аргумент типа источника данных всегда является типом переменной диапазона в запросе.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59307656"
 ## <a name="letting-the-compiler-infer-type-information"></a>Разрешение компилятору определять сведения о типе  
  Несмотря на то, что необходимо обладать знаниями об отношениях типов в операции запроса, существует возможность передачи выполнения всех действий компилятору. Ключевое слово [var](../../../../csharp/language-reference/keywords/var.md) можно использовать для любой локальной переменной в операции запроса. Следующий рисунок похож на пример 2, рассмотренный выше. Однако компилятор предоставляет строгий тип для каждой переменной в операции запроса.  
   
- ![Тип потока с неявным вводом](../../../../csharp/programming-guide/concepts/linq/media/linq_flow4.png "LINQ_flow4")  
+ ![Схема, показывающая поток для типа с неявной типизацией.](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
   
  Дополнительные сведения о `var` см. в разделе [Неявно типизированные локальные переменные](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   

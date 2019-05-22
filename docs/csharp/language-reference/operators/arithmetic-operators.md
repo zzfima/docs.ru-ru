@@ -27,19 +27,19 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 94c266c3e44f87d8c8503bcf15789723116460df
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301130"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753810"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Арифметические операторы (справочник по C#)
 
 Следующие операторы выполняют арифметические операции с числовыми типами:
 
-- Унарные операторы [`++` (инкремент)](#increment-operator-), [`--` (декремент)](#decrement-operator---), [`+` (плюс)](#unary-plus-and-minus-operators) и [`-` (минус)](#unary-plus-and-minus-operators).
-- Бинарные операторы [`*` (умножение)](#multiplication-operator-), [`/` (деление)](#division-operator-), [`%` (остаток)](#remainder-operator-), [`+` (сложение)](#addition-operator-) и [`-` (вычитание)](#subtraction-operator--).
+- унарные — [`++` (приращение)](#increment-operator-), [`--` (уменьшение)](#decrement-operator---), [`+` (плюс)](#unary-plus-and-minus-operators) и [`-` (минус)](#unary-plus-and-minus-operators);
+- бинарные — [`*` (умножение)](#multiplication-operator-), [`/` (деление)](#division-operator-), [`%` (остаток от деления)](#remainder-operator-), [`+` (сложение)](#addition-operator-) и [`-` (вычитание)](#subtraction-operator--).
 
 Эти операторы поддерживают все [целочисленные](../keywords/integral-types-table.md) типы и типы с [плавающей запятой](../keywords/floating-point-types-table.md).
 
@@ -163,23 +163,6 @@ ms.locfileid: "59301130"
 
 Кроме того, оператор `-` можно использовать для удаления делегатов. Дополнительные сведения см. в статье [Оператор `-`](subtraction-operator.md).
 
-## <a name="operator-precedence-and-associativity"></a>Приоритет и ассоциативность операторов
-
-В следующем списке перечислены арифметические операторы в порядке убывания приоритета:
-
-- Постфиксные операторы инкремента `x++` и декремента `x--`.
-- Префиксные операторы инкремента `++x` и декремента `--x` и унарные операторы `+` и `-`.
-- Мультипликативные операторы `*`, `/` и `%`.
-- Аддитивные операторы `+` и `-`.
-
-Бинарные арифметические операторы имеют левую ассоциативность. То есть операторы с одинаковым приоритетом вычисляются в направлении слева направо.
-
-Порядок вычисления, определяемый приоритетом и ассоциативностью операторов, можно изменить с помощью скобок (`()`).
-
-[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
-
-Полный список операторов C#, упорядоченных по уровню приоритета, см. в статье [Операторы C#](index.md).
-
 ## <a name="compound-assignment"></a>Составное присваивание
 
 Для бинарного оператора `op` выражение составного присваивания в форме
@@ -200,7 +183,28 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
 
+Из-за [восходящих приведений](~/_csharplang/spec/expressions.md#numeric-promotions) результат операции `op` может быть невозможно неявно преобразовать в тип `T` из `x`. В этом случае, если `op` является заранее определенным оператором и результат операции может явно преобразовываться в тип `T` из `x`, выражение составного присваивания в форме `x op= y` эквивалентно `x = (T)(x op y)` за исключением того, что `x` вычисляется только один раз. В следующем примере продемонстрировано такое поведение.
+
+[!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
+
 Вы также можете использовать операторы `+=` и `-=` для подписки и отмены подписки на [события](../keywords/event.md). Дополнительные сведения см. в разделе [Практическое руководство. Подписка и отмена подписки на события](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+
+## <a name="operator-precedence-and-associativity"></a>Приоритет и ассоциативность операторов
+
+В следующем списке перечислены арифметические операторы в порядке убывания приоритета:
+
+- Постфиксный инкремент `x++` и декремент `x--`
+- Префиксный инкремент `++x` и декремент `--x`, унарные операторы `+` и `-`
+- Мультипликативные операторы `*`, `/`, и `%`
+- Аддитивные операторы `+` и `-`
+
+Бинарные арифметические операторы имеют левую ассоциативность. То есть операторы с одинаковым приоритетом вычисляются в направлении слева направо.
+
+Порядок вычисления, определяемый приоритетом и ассоциативностью операторов, можно изменить с помощью скобок (`()`).
+
+[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
+
+Полный список операторов C#, упорядоченных по уровню приоритета, см. в статье [Операторы C#](index.md).
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>Арифметическое переполнение и деление на нуль
 
@@ -256,6 +260,7 @@ x = x op y
 - [Оператор вычитания](~/_csharplang/spec/expressions.md#subtraction-operator)
 - [Составное присваивание](~/_csharplang/spec/expressions.md#compound-assignment)
 - [Операторы checked и unchecked](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
+- [Восходящие приведения числовых типов](~/_csharplang/spec/expressions.md#numeric-promotions)
 
 ## <a name="see-also"></a>См. также
 

@@ -3,12 +3,12 @@ title: Интерполяция строк в C#
 description: Узнайте, как включить форматированные результаты выражения в строку результатов в C# с интерполяцией строк.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 5a66ba9215579a459b543a24ece338ffbbfd9aea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 068a30bdcb96140787a38e9ae52f9c62d8a57c96
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920718"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063245"
 ---
 # <a name="string-interpolation-in-c"></a>Интерполяция строк на C\#
 
@@ -30,9 +30,7 @@ ms.locfileid: "58920718"
 {<interpolatedExpression>}
 ```
 
-Во время компиляции интерполированная строка обычно преобразуется в вызов метода <xref:System.String.Format%2A?displayProperty=nameWithType>. Так вы сможете использовать все возможности функции [составного форматирования строки](../../standard/base-types/composite-formatting.md) при работе с интерполированными строками.
-
-Компилятор может заменить <xref:System.String.Format%2A?displayProperty=nameWithType> на <xref:System.String.Concat%2A?displayProperty=nameWithType>, если проанализированное поведение будет эквивалентно объединению.
+Интерполированные строки поддерживают все возможности [составного форматирования строк](../../standard/base-types/composite-formatting.md). Это делает их более удобочитаемыми по сравнению с использованием метода <xref:System.String.Format%2A?displayProperty=nameWithType>.
 
 ## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>Как указать строку формата для интерполированного выражения
 

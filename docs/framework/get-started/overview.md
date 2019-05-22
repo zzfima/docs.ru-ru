@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4aad615df6db5a29b9af21b585ea2b0dfbdedf4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: f50a469327a06eabdb6a80821203f2222dcd2921
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093688"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878033"
 ---
 # <a name="overview-of-the-net-framework"></a>Общие сведения о платформе .NET Framework
 
@@ -45,7 +45,7 @@ ms.locfileid: "56093688"
 
 На следующем рисунке демонстрируется взаимосвязь среды CLR и библиотеки классов с пользовательскими приложениями и всей системой. На рисунке также показано, как управляемый код работает в пределах более широкой архитектуры.
 
-![Управляемый код внутри большей архитектуры](../../../docs/framework/get-started/media/circle.gif "круг")Платформа .NET Framework в контексте
+![Снимок экрана, показывающий, как управляемый код работает в пределах более широкой архитектуры.](./media/overview/language-runtime-class-library-relationship.gif)
 
 В следующих разделах приводится более подробное описание основных возможностей платформы .NET Framework.
 

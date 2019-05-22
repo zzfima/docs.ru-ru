@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c4a4ba28116965db1d4dfdef3cdfb0496aad123
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 81995d8003a9bb78f6a97ca7eadca94a2136c8a7
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557922"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960016"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Новые возможности .NET Framework
 
@@ -1399,7 +1399,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 ## <a name="whats-new-in-net-2015"></a>Новые возможности .NET 2015
 
-В .NET 2015 представлены [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] и .NET Core. Некоторые функции применяются к обеим версиям, а другие — только к [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] или только к [!INCLUDE[net_core](../../../includes/net-core-md.md)].
+В .NET 2015 представлены [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] и .NET Core. Некоторые функции применяются к обеим версиям, а другие — только к [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] или только к .NET Core.
 
 - **ASP.NET Core**
 
@@ -1747,11 +1747,11 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 - **Поддержка кодировок кодовых страниц**
 
-     [!INCLUDE[net_core](../../../includes/net-core-md.md)] в первую очередь поддерживает кодировки Юникод и по умолчанию предоставляет ограниченную поддержку для кодировок кодовых страниц. Вы можете добавить поддержку кодировок кодовых страниц, доступных в .NET Framework, но не поддерживаемых в [!INCLUDE[net_core](../../../includes/net-core-md.md)], зарегистрировав эти кодировки в методе <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Для получения дополнительной информации см. <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
+     .NET Core в первую очередь поддерживает кодировки Юникод и по умолчанию предоставляет ограниченную поддержку для кодировок кодовых страниц. Вы можете добавить поддержку кодировок кодовых страниц, доступных в .NET Framework, но не поддерживаемых в .NET Core, зарегистрировав эти кодировки в методе <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Для получения дополнительной информации см. <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
 - **.NET Native**
 
-     Приложения Windows для Windows 10, ориентированные на [!INCLUDE[net_core](../../../includes/net-core-md.md)] и написанные на языке C# или Visual Basic, могут воспользоваться преимуществами новой технологии, компилирующей приложения в машинный код, а не в IL-код. Они создают приложения, которым присуща более быстрая загрузка и время выполнения. Дополнительные сведения см. в разделе [Компиляция приложений с помощью .NET Native](../net-native/index.md). Общие сведения о .NET Native и рассмотрение отличий такой компиляции от компиляции JIT и NGEN, а также ее влияние на код см. в разделе [.NET Native и компиляция](../net-native/net-native-and-compilation.md).
+     Приложения Windows для Windows 10, ориентированные на .NET Core и написанные на языке C# или Visual Basic, могут использовать новую технологию компиляции приложения в машинный код вместо кода IL. Они создают приложения, которым присуща более быстрая загрузка и время выполнения. Дополнительные сведения см. в разделе [Компиляция приложений с помощью .NET Native](../net-native/index.md). Общие сведения о .NET Native и рассмотрение отличий такой компиляции от компиляции JIT и NGEN, а также ее влияние на код см. в разделе [.NET Native и компиляция](../net-native/net-native-and-compilation.md).
 
      Приложения по умолчанию компилируются в машинный код при компиляции в Visual Studio 2015 и более поздних версиях. Дополнительные сведения см. в разделе [Начало работы с .NET Native](../net-native/getting-started-with-net-native.md).
 

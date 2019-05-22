@@ -10,31 +10,31 @@ helpviewer_keywords:
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 57f274d55ba5723ce8e0b51a7a39e98e95855e28
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702950"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64653925"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>Библиотека параллельных задач и традиционное асинхронное программирование .NET Framework
 Платформа .NET Framework предоставляет следующие две стандартные модели для выполнения асинхронных операций ввода-вывода и вычислений.  
   
--   Асинхронная модель программирования (APM), в которой асинхронные операции представляются с помощью пары методов Begin и End, таких как <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> и <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>.  
+- Асинхронная модель программирования (APM), в которой асинхронные операции представляются с помощью пары методов Begin и End, таких как <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> и <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>.  
   
--   Асинхронная модель на основе событий (EAP), в которой асинхронные операции представлены с помощью пары метода и события, называемых *имя_операции*Async и *имя_операции*Completed, например, <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> и <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (Модель EAP появилась в .NET Framework версии 2.0.)  
+- Асинхронная модель на основе событий (EAP), в которой асинхронные операции представлены с помощью пары метода и события, называемых *имя_операции*Async и *имя_операции*Completed, например, <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> и <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (Модель EAP появилась в .NET Framework версии 2.0.)  
   
  Библиотека параллельных задач (TPL) может использоваться различными способами вместе с любой из асинхронных моделей. Вы можете предоставлять операции APM и EAP как задачи для пользователей библиотеки или предоставлять модели APM, но использовать объекты задач для их внутренней реализации. В обоих случаях с помощью объектов задач можно упростить код и использовать преимущества следующих полезных функций.  
   
--   Регистрация обратных вызовов в форме продолжений задачи в любое время после запуска задачи.  
+- Регистрация обратных вызовов в форме продолжений задачи в любое время после запуска задачи.  
   
--   Согласование нескольких операций, которые выполняются в ответ на метод `Begin_` с помощью методов <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> и <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> или методов <xref:System.Threading.Tasks.Task.WaitAll%2A> или <xref:System.Threading.Tasks.Task.WaitAny%2A>.  
+- Согласование нескольких операций, которые выполняются в ответ на метод `Begin_` с помощью методов <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> и <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> или методов <xref:System.Threading.Tasks.Task.WaitAll%2A> или <xref:System.Threading.Tasks.Task.WaitAny%2A>.  
   
--   Инкапсуляция асинхронных операций ввода-вывода и вычислений в одном и том же объекте задачи.  
+- Инкапсуляция асинхронных операций ввода-вывода и вычислений в одном и том же объекте задачи.  
   
--   Мониторинг состояния объекта задачи.  
+- Мониторинг состояния объекта задачи.  
   
--   Маршалирование состояния операции в объекте задачи с помощью <xref:System.Threading.Tasks.TaskCompletionSource%601>.  
+- Маршалирование состояния операции в объекте задачи с помощью <xref:System.Threading.Tasks.TaskCompletionSource%601>.  
   
 ## <a name="wrapping-apm-operations-in-a-task"></a>Включение операций APM в задачу  
  Оба класса <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType> и <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> предоставляют несколько перегрузок методов <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A?displayProperty=nameWithType> и <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType>, которые позволяют инкапсулировать пару методов Begin и End APM в одном экземпляре <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>. Различные перегрузки размещают все пары методов Begin и End, имеющие от нуля до трех входных параметров.  
@@ -50,13 +50,13 @@ ms.locfileid: "46702950"
   
  Первый параметр является делегатом <xref:System.Func%606>, который соответствует сигнатуре метода <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType>. Второй параметр — это делегат <xref:System.Func%602>, который принимает <xref:System.IAsyncResult> и возвращает `TResult`. Поскольку метод <xref:System.IO.FileStream.EndRead%2A> возвращает целое число, компилятор выводит тип `TResult` как <xref:System.Int32> и тип задачи как <xref:System.Threading.Tasks.Task>. Последние четыре параметра идентичны параметрам в методе <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType>:  
   
--   буфер для хранения файлов данных;  
+- буфер для хранения файлов данных;  
   
--   смещение в буфере, с которого начинается запись;  
+- смещение в буфере, с которого начинается запись;  
   
--   максимальный объем данных для чтения из файла;  
+- максимальный объем данных для чтения из файла;  
   
--   дополнительный объект, который хранит пользовательские данные состояния для передачи в обратный вызов.  
+- дополнительный объект, который хранит пользовательские данные состояния для передачи в обратный вызов.  
   
 ### <a name="using-continuewith-for-the-callback-functionality"></a>Использование ContinueWith для функциональности обратного вызова  
  Если требуется доступ к данным в файле, а не просто количество байтов, метода <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> недостаточно. Вместо него используйте <xref:System.Threading.Tasks.Task>, чье свойство `Result` содержит данные файла. Это можно сделать, добавив продолжение в исходную задачу. Продолжение выполняет работу, которая обычно выполняется делегатом <xref:System.AsyncCallback>. Оно вызывается, когда завершается предшествующая задача и заполняется буфер данных. (Объект <xref:System.IO.FileStream> должен быть закрыт перед возвратом.)  
@@ -104,7 +104,7 @@ ms.locfileid: "46702950"
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- Более полный пример, включающий дополнительную обработку исключений и показывающий, как вызывать этот метод из клиентского кода, см. в руководстве по [созданию шаблонов оболочки EAP в задаче](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
+ Более полный пример, включающий дополнительную обработку исключений и показывающий, как вызывать этот метод из клиентского кода, см. в разделе [Как создавать оболочки шаблонов EAP в задаче](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
   
  Следует помнить, что любая задача, созданная объектом <xref:System.Threading.Tasks.TaskCompletionSource%601>, будет запущена этим TaskCompletionSource, и, таким образом, пользовательский код не должен вызывать метод Start в этой задаче.  
   

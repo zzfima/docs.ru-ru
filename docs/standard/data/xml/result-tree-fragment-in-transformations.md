@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4835536dd3ae815fbe7e50582b94caefb1fc9082
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb130c17fa7b2a5d02f55a2944be386bc1bb334c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683824"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750713"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Фрагмент дерева результатов в преобразованиях
 
@@ -35,7 +35,7 @@ ms.locfileid: "54683824"
 
 Для элемента `variable` также существует несколько способов задания значения. Можно задать его, возвратив содержимое из выражения XPath в атрибуте `select` или присвоив ему содержимое текста шаблона.
 
-Если значение для элемента `parameter` или `variable` присваивается с помощью выражения XPath, будет возвращен один из четырех основных типов XPath: логический, строковый, числовой или набор узлов. Если значение задается с помощью непустого текста шаблона, то возвращается тип данных, который отличается от типов данных XPath и представляет собой фрагмент результирующего дерева.
+Для элементов `parameter` и `variable`, если значение назначается с помощью выражения XPath, будет возвращен один из четырех основных типов XPath: логическое значение, строка, число или набор узлов. Если значение задается с помощью непустого текста шаблона, то возвращается тип данных, который отличается от типов данных XPath и представляет собой фрагмент результирующего дерева.
 
 Если переменная привязана к фрагменту результирующего дерева, а не к одному из четырех основных типов данных XPath, то это единственный случай, когда запрос XPath возвращает тип, отличный от четырех типов объектов XPath. Фрагменты результирующего дерева и аспекты их работы описаны в [спецификации консорциума W3C](https://www.w3.org/TR/xslt-10/), в разделах с [11.1 Result Tree Fragments](https://www.w3.org/TR/xslt-10/#section-Result-Tree-Fragments) (Фрагменты результирующего дерева) по [11.6 Passing Parameters to Templates](https://www.w3.org/TR/xslt-10/#section-Passing-Parameters-to-Templates) (Передача параметров в шаблоны). Кроме того, в разделе [1 Introduction](https://www.w3.org/TR/xslt-10/#section-Introduction) (Введение) описано, каким образом шаблоны могут содержать элементы из пространства имен XSLT, которые возвращают или создают фрагменты результирующего дерева.
 
@@ -194,7 +194,6 @@ ms.locfileid: "54683824"
 
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Xml.XPath.XPathNodeIterator>
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [XSLT-преобразования с помощью класса XslTransform](xslt-transformations-with-the-xsltransform-class.md)
 - [Реализация классом XslTransform XSLT-процессора](xsltransform-class-implements-the-xslt-processor.md)

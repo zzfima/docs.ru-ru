@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Вычисление значений столбцов в текстовом CSV-файле (LINQ) (C#)
+title: Практическое руководство. Вычисление значений столбцов в текстовом CSV-файле (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 0a1b42bf941fa65f053be4931ddfbbbdf1223a48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 07fb81b474bd967d73dc9ff6a08e0c67e6ec0122
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309372"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585800"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Как выполнить Вычисление значений столбцов в текстовом CSV-файле (LINQ) (C#)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Практическое руководство. Вычисление значений столбцов в текстовом CSV-файле (LINQ) (C#)
 В этом примере демонстрируется выполнение статистических вычислений, таких как сумма, среднее, минимальное и максимальное для столбцов в CSV-файле. Приведенные в примере принципы могут применяться к другим типам структурированного текста.  
   
 ### <a name="to-create-the-source-file"></a>Создание исходного файла  
@@ -159,7 +159,7 @@ class SumColumns
  Запрос работает с использованием метода <xref:System.String.Split%2A> для преобразования каждой строки текста в массив. Каждый элемент массива представляет столбец. И наконец, текст в каждом столбце преобразуется в свое числовое представление. Если файл является файлом с разделением знаками табуляции, просто измените аргумент в методе `Split` на `\t`.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.  
+ Создайте проект консольного приложения C# с директивами `using` для пространств имен System.Linq и System.IO.  
   
 ## <a name="see-also"></a>См. также
 

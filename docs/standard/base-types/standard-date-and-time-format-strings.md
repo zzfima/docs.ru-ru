@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 874501ac6dc4ea0ea1c0c97cdd2b802dfdb6bbb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6939efa608f4887dfdb00abe8292bec841929440
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532201"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664641"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Строки стандартных форматов даты и времени
 Строка стандартного формата даты и времени использует один описатель формата для определения текстового представления значения даты и времени. Любая строка формата даты и времени, содержащая более одного символа, включая пробел, интерпретируется как строка настраиваемого формата даты и времени. Дополнительные сведения см. в разделе [Строки настраиваемых форматов даты и времени](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Строку стандартного или пользовательского формата можно использовать двумя способами:  
   
--   Для определения строки, являющейся результатом операции форматирования.  
+- Для определения строки, являющейся результатом операции форматирования.  
   
--   Для определения текстового представления значения даты и времени, которое можно преобразовать в значение <xref:System.DateTime> или <xref:System.DateTimeOffset> с помощью операции синтаксического анализа.  
+- Для определения текстового представления значения даты и времени, которое можно преобразовать в значение <xref:System.DateTime> или <xref:System.DateTimeOffset> с помощью операции синтаксического анализа.  
 
 > [!TIP]
 >  Вы можете загрузить [служебную программу форматирования](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)— приложение, позволяющее применять строки формата к значениям даты и времени и числовым значениям и отображающее результирующую строку.  
@@ -48,7 +48,7 @@ ms.locfileid: "54532201"
 |"g"|Общий шаблон даты и времени (короткий шаблон времени).<br /><br /> Дополнительная информация: [Описатель общего формата даты и краткого формата времени ("g")](#GeneralDateShortTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45 (zh-CN)|  
 |"G"|Общий шаблон даты и времени (полный шаблон времени).<br /><br /> Дополнительная информация: [Описатель общего формата даты и полного формата времени ("G")](#GeneralDateLongTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45:30 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45:30 (zh-CN)|  
 |"M", "m"|Шаблон дней месяца.<br /><br /> Дополнительная информация: [Описатель формата месяца ("M", "m")](#MonthDay).|2009-06-15T13:45:30 -> June 15 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15. juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> 15 Juni (id-ID)|  
-|"O", "o"|Шаблон обратного преобразования даты и времени.<br /><br /> Дополнительная информация: [Описатель формата обратного преобразования ("O", "o")](#Roundtrip).|Значения типа <xref:System.DateTime>:<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Local) --> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) --> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified) --> 2009-06-15T13:45:30.0000000<br /><br /> Значения типа <xref:System.DateTimeOffset>:<br /><br /> 2009-06-15T13:45:30-07:00 --> 2009-06-15T13:45:30.0000000-07:00|  
+|"O", "o"|Шаблон обратного преобразования даты и времени.<br /><br /> Дополнительная информация: [Описатель формата обратного преобразования ("O", "o")](#Roundtrip).|Значения <xref:System.DateTime>:<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Local) --> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) --> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified) --> 2009-06-15T13:45:30.0000000<br /><br /> Значения <xref:System.DateTimeOffset>:<br /><br /> 2009-06-15T13:45:30-07:00 --> 2009-06-15T13:45:30.0000000-07:00|  
 |"R", "r"|Шаблон RFC1123.<br /><br /> Дополнительная информация: [Описатель формата RFC1123 ("R", "r")](#RFC1123).|2009-06-15T13:45:30 -> Mon, 15 Jun 2009 20:45:30 GMT|  
 |"s"|Сортируемый шаблон времени и даты.<br /><br /> Дополнительная информация: [Описатель сортируемого формата ("s")](#Sortable).|2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30|  
 |"t"|Короткий шаблон времени.<br /><br /> Дополнительная информация: [Описатель короткого формата времени ("t")](#ShortTime).|2009-06-15T13:45:30 -> 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45 م (ar-EG)|  
@@ -63,17 +63,17 @@ ms.locfileid: "54532201"
   
  Если строка стандартного формата в операции форматирования сопоставлена со строкой пользовательского формата для определенных региональных параметров, то приложение может определить конкретные региональные параметры, для которых строки пользовательского формата используются одним из следующих способов:  
   
--   Можно использовать региональные параметры по умолчанию (или текущие). Следующий пример отображает дату в формате короткой даты, соответствующем текущим региональным параметрам. В этом случае текущими региональными параметрами являются en-US.  
+- Можно использовать региональные параметры по умолчанию (или текущие). Следующий пример отображает дату в формате короткой даты, соответствующем текущим региональным параметрам. В этом случае текущими региональными параметрами являются en-US.  
   
      [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
      [!code-vb[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#1)]  
   
--   Можно передать объект <xref:System.Globalization.CultureInfo>, представляющий язык и региональные параметры, соответствующее которым форматирование будет использоваться методом с параметром <xref:System.IFormatProvider>. Следующий пример отображает дату в формате короткой даты, соответствующем региональным параметрам pt-BR.  
+- Можно передать объект <xref:System.Globalization.CultureInfo>, представляющий язык и региональные параметры, соответствующее которым форматирование будет использоваться методом с параметром <xref:System.IFormatProvider>. Следующий пример отображает дату в формате короткой даты, соответствующем региональным параметрам pt-BR.  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
--   Можно передать объект <xref:System.Globalization.DateTimeFormatInfo>, предоставляющий данные форматирования методу с параметром <xref:System.IFormatProvider>. В следующем примере дата отображается с помощью короткого формата даты из объекта <xref:System.Globalization.DateTimeFormatInfo>, соответствующего региональным параметрам hr-HR.  
+- Можно передать объект <xref:System.Globalization.DateTimeFormatInfo>, предоставляющий данные форматирования методу с параметром <xref:System.IFormatProvider>. В следующем примере дата отображается с помощью короткого формата даты из объекта <xref:System.Globalization.DateTimeFormatInfo>, соответствующего региональным параметрам hr-HR.  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
@@ -249,11 +249,11 @@ ms.locfileid: "54532201"
   
  Описатель формата обратного преобразования O или o (и строка настраиваемого формата "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK") использует преимущества ISO 8601, а именно три способа представления сведений о часовом поясе для сохранения свойства <xref:System.DateTime.Kind%2A> значений <xref:System.DateTime>:  
   
--   Компонент часового пояса значений даты и времени типа <xref:System.DateTimeKind.Local?displayProperty=nameWithType> — это смещение от часового пояса от UTC (например, +01:00, -07:00). Все значения <xref:System.DateTimeOffset> также представлены в этом формате.  
+- Компонент часового пояса значений даты и времени типа <xref:System.DateTimeKind.Local?displayProperty=nameWithType> — это смещение от часового пояса от UTC (например, +01:00, -07:00). Все значения <xref:System.DateTimeOffset> также представлены в этом формате.  
   
--   Компонент часового пояса значений даты и времени типа <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> использует символ "Z" (т. е. нулевое смещение) для представления часового пояса UTC.  
+- Компонент часового пояса значений даты и времени типа <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> использует символ "Z" (т. е. нулевое смещение) для представления часового пояса UTC.  
   
--   Значения даты и времени типа <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> не содержат сведения о часовом поясе.  
+- Значения даты и времени типа <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> не содержат сведения о часовом поясе.  
   
  Так как стандартный описатель формата "O" и "o" соответствует международному стандарту, операция форматирования или синтаксического анализа, использующая описатель, всегда использует инвариантный региональный параметр и григорианский календарь.  
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7609c88b088b9386201f5ac5725d16f4c5f11071
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6adbe4e5c82d5f886fcffd5ab272a337c377395
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591385"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586124"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Вопросы безопасности в порождаемом отражении
-Платформа [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] предоставляет три способа создания кода MSIL, с каждым из которых связаны определенные вопросы безопасности.  
+Платформа .NET Framework предоставляет три способа создания промежуточного языка Майкрософт (MSIL), каждый из которых имеет собственные вопросы безопасности:  
   
 - [Динамические сборки](#Dynamic_Assemblies)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "64591385"
  Независимо от способа создания динамического кода для его выполнения необходимы все разрешения, которые требуются типам и методам, используемым этим кодом.  
   
 > [!NOTE]
->  Разрешения, необходимые для отражения и порождения кода, изменялись в последующих выпусках [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Подробнее см. в подразделе [Сведения о версиях](#Version_Information) далее в этом разделе.  
+>  Разрешения, необходимые для отражения и порождения кода, были изменены в последующих выпусках .NET Framework. Подробнее см. в подразделе [Сведения о версиях](#Version_Information) далее в этом разделе.  
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>Динамические сборки  
@@ -141,17 +141,17 @@ ms.locfileid: "64591385"
 ## <a name="version-information"></a>Сведения о версии  
  Начиная с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] политика безопасности на уровне компьютера больше не используется, и механизмом обеспечения безопасности по умолчанию становится прозрачность безопасности. См. раздел [Изменения системы безопасности](../../../docs/framework/security/security-changes.md).  
   
- Начиная с [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> больше не требуется при порождении динамических сборок и динамических методов. Этот флаг необходим во всех предыдущих версиях [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ Начиная с [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> больше не требуется при порождении динамических сборок и динамических методов. Этот флаг необходим во всех более ранних версиях платформы .NET Framework.  
   
 > [!NOTE]
->  Разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> включается по умолчанию в именованные наборы разрешений `FullTrust` и `LocalIntranet`, но не в набор разрешений `Internet`. Таким образом, в более ранних версиях [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] библиотеку с разрешениями на доступ к Интернету можно использовать только в том случае, если она выполняет метод <xref:System.Security.PermissionSet.Assert%2A> для <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Такие библиотеки требуют тщательной проверки безопасности, так как ошибки в коде могут стать причиной уязвимости. Платформа [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] позволяет создавать код в сценариях частичного доверия без предъявления каких-либо требований к безопасности, так как создание кода по сути не является привилегированной операцией. То есть созданный код имеет не больше разрешений, чем породившая его сборка. Это позволяет библиотекам, порождающим код, сохранять прозрачность для системы безопасности, что устраняет необходимость в утверждении перечисления <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> и упрощает задачу написания безопасной библиотеки.  
+>  Разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> включается по умолчанию в именованные наборы разрешений `FullTrust` и `LocalIntranet`, но не в набор разрешений `Internet`. Таким образом, в более ранних версиях платформы .NET Framework библиотеку можно использовать с разрешениями на доступ к Интернету только в том случае, если она выполняет <xref:System.Security.PermissionSet.Assert%2A> для <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Такие библиотеки требуют тщательной проверки безопасности, так как ошибки в коде могут стать причиной уязвимости. Платформа [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] позволяет создавать код в сценариях частичного доверия без предъявления каких-либо требований к безопасности, так как создание кода по сути не является привилегированной операцией. То есть созданный код имеет не больше разрешений, чем породившая его сборка. Это позволяет библиотекам, порождающим код, сохранять прозрачность для системы безопасности, что устраняет необходимость в утверждении перечисления <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> и упрощает задачу написания безопасной библиотеки.  
   
- Кроме того, в [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] появился флаг <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> для доступа к закрытым типам и членам из частично доверенных динамических методов. В более ранних версиях [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] для динамических методов, обращающихся к закрытым типам и членам, требовался флаг <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>. Это разрешение ни в коем случае нельзя предоставлять коду с частичным доверием.  
+ Кроме того, в [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] появился флаг <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> для доступа к закрытым типам и членам из частично доверенных динамических методов. Более ранние версии платформы .NET Framework требуют флаг <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> для динамических методов, которые обращаются к закрытым типам и членам; это разрешение, которое никогда не должно предоставляться частично доверенному коду.  
   
  Наконец, в [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] появились анонимно размещенные методы.  
   
 ### <a name="obtaining-information-on-types-and-members"></a>Получение сведений о типах и членах  
- Начиная с [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] для получения сведений о закрытых типах и членах никакие разрешения не требуются. Для получения сведений, необходимых для порождения динамических методов, используется отражение. Например, объекты <xref:System.Reflection.MethodInfo> используются для порождения вызовов метода. В более ранних версиях [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] для этого требовалось разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [Соображения о безопасности для отражения](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  
+ Начиная с [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] для получения сведений о закрытых типах и членах никакие разрешения не требуются. Для получения сведений, необходимых для порождения динамических методов, используется отражение. Например, объекты <xref:System.Reflection.MethodInfo> используются для порождения вызовов метода. Более ранние версии платформы .NET Framework требуют <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [Соображения о безопасности для отражения](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  
   
 ## <a name="see-also"></a>См. также
 

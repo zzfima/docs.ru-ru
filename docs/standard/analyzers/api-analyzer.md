@@ -3,14 +3,14 @@ title: Анализатор .NET API
 description: Узнайте, как анализатор .NET API помогает выявлять устаревшие интерфейсы API и проблемы с совместимостью платформ.
 author: oliag
 ms.author: mairaw
-ms.date: 05/31/2018
+ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 84dd0717725f3538f9c9b2e3b5573f1385e549ac
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 892fb5cc9fba3434b0884c88b97f784d58093303
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680273"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063345"
 ---
 # <a name="net-api-analyzer"></a>Анализатор .NET API
 
@@ -23,7 +23,7 @@ ms.locfileid: "57680273"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-* Visual Studio 2017 или Visual Studio для Mac (любые версии).
+* Visual Studio 2017 и более поздние версии или Visual Studio для Mac (любые версии).
 
 ## <a name="discovering-deprecated-apis"></a>Обнаружение устаревших API-интерфейсов
 
@@ -98,6 +98,7 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 * Использование API .NET Standard, которые создают исключение <xref:System.PlatformNotSupportedException> (PC001).
 * Использование API .NET Standard, которые не поддерживаются платформой .NET Framework 4.6.1 (PC002).
 * Использование собственных API, которые не существуют в универсальной платформе Windows (PC003).
+* Использование API-интерфейсов Delegate.BeginInvoke и EndInvoke (PC004).
 * Использование API, которые помечены как устаревшие (DEXXXX).
 
 ## <a name="ci-machine"></a>Компьютер CI

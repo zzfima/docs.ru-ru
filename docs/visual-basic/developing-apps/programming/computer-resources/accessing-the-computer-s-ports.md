@@ -5,12 +5,12 @@ helpviewer_keywords:
 - serial ports
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
-ms.openlocfilehash: e3ca5193db9dbcb4674680884a6372e6383c0852
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7788e08c1257ff900b08ef6b8d26d3fe42ad9116
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289033"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589328"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>Доступ к портам компьютера (Visual Basic)
 Объект `My.Computer.Ports` предоставляет свойство и метод для доступа к последовательным портам компьютера.  
@@ -29,7 +29,7 @@ ms.locfileid: "55289033"
  Демонстрация получения строки из последовательного порта компьютера.  
   
  [Операции с портами в .NET Framework](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
- Описание использования [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] при выполнении операций с портами.  
+ Описание использования .NET Framework при выполнении операций с портами.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:Microsoft.VisualBasic.Devices.Ports>  

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Преобразование между потоками .NET Framework и потоками среды выполнения Windows (только в Windows)
+title: Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows (только в Windows)
 ms.date: 01/14/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0cf5b621be7532239b67bfe970302f27eca3ea2a
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 22cf168c660349bda16c59aec4824e3283430807
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835139"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877941"
 ---
-# <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Как выполнить Преобразование между потоками .NET Framework и потоками среды выполнения Windows (только в Windows)
+# <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows (только в Windows)
 
 .NET Framework для приложений UWP — это подмножество полной платформы .NET Framework. Из-за требований к безопасности и другим аспектам в приложениях UWP нельзя использовать полный набор API платформы .NET Framework для открытия и чтения файлов. Дополнительные сведения см. в статье [Обзор .NET для приложений UWP](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Однако может потребоваться использовать API платформы .NET Framework для других операций обработки потока. Для работы с потоками вы можете выполнить преобразование между типом потока .NET Framework, таким как <xref:System.IO.MemoryStream> или <xref:System.IO.FileStream>, и потоком среды выполнения Windows, таким как <xref:Windows.Storage.Streams.IInputStream>, <xref:Windows.Storage.Streams.IOutputStream> или <xref:Windows.Storage.Streams.IRandomAccessStream>.
 
@@ -51,7 +51,7 @@ ms.locfileid: "56835139"
   
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsOutputStream%2A?displayProperty=nameWithType> преобразует управляемый поток в .NET для приложений UWP в поток вывода в среде выполнения Windows.
   
-- [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) преобразует управляемый поток .NET для приложений UWP в поток с прямым доступом, который можно использовать для чтения и записи в среде выполнения Windows.
+- <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A?displayProperty=nameWithType> преобразует управляемый поток .NET для приложений UWP в поток с прямым доступом, который можно использовать для чтения и записи в среде выполнения Windows.
 
 При преобразовании потока .NET Framework в поток среды выполнения Windows возможности преобразованного потока зависят от исходного потока. Например, если исходный поток поддерживает чтение и запись, можно вызвать метод <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A?displayProperty=nameWithType> для преобразования потока, после чего будет возвращен тип `IRandomAccessStream`. `IRandomAccessStream` реализует `IInputStream` и `IOutputStream` и поддерживает чтение и запись.
 
@@ -59,7 +59,7 @@ ms.locfileid: "56835139"
 
 ## <a name="example-convert-net-framework-to-windows-runtime-random-access-stream"></a>Пример Преобразование потока .NET Framework в поток среды выполнения Windows с прямым доступом
 
-Чтобы преобразовать поток .NET Framework в поток среды выполнения Windows с прямым доступом, используйте метод [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md), как показано в следующем примере:
+Чтобы преобразовать поток .NET Framework в поток среды выполнения Windows с прямым доступом, используйте метод <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A>, как показано в следующем примере:
 
 > [!IMPORTANT]
 > Убедитесь, что используемый вами поток .NET Framework поддерживает поиск, или скопируйте его в поток, поддерживающий поиск. Чтобы это определить, используйте свойство <xref:System.IO.Stream.CanSeek%2A?displayProperty=nameWithType> .

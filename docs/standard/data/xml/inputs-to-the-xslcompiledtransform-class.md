@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: beb351ac365694ac909b793bf19adb9fbb8c0274
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e5240ee24a2f017e37b057c9fb74e551927b8bee
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835978"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590171"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>Входные данные для класса XslCompiledTransform
 Метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> принимает три входных типа для документа источника: объект, реализующий интерфейс <xref:System.Xml.XPath.IXPathNavigable>, объект <xref:System.Xml.XmlReader>, который считывает документ источника, и строку URI.  
@@ -24,14 +24,14 @@ ms.locfileid: "48835978"
 ## <a name="ixpathnavigable-interface"></a>Интерфейс IXPathNavigable  
  Интерфейс <xref:System.Xml.XPath.IXPathNavigable> реализован в классах <xref:System.Xml.XmlNode> и <xref:System.Xml.XPath.XPathDocument>. Эти классы представляют хранящийся в памяти кэш XML-данных.  
   
--   Класс <xref:System.Xml.XmlNode> основан на модели W3C DOM и позволяет вносить изменения.  
+- Класс <xref:System.Xml.XmlNode> основан на модели W3C DOM и позволяет вносить изменения.  
   
--   Класс <xref:System.Xml.XPath.XPathDocument> представляет собой доступное только для чтения хранилище данных на основе модели данных XPath. Класс <xref:System.Xml.XPath.XPathDocument> рекомендуется для обработки XSLT. Он обеспечивает более высокую производительность по сравнению с классом <xref:System.Xml.XmlNode>.  
+- Класс <xref:System.Xml.XPath.XPathDocument> представляет собой доступное только для чтения хранилище данных на основе модели данных XPath. Класс <xref:System.Xml.XPath.XPathDocument> рекомендуется для обработки XSLT. Он обеспечивает более высокую производительность по сравнению с классом <xref:System.Xml.XmlNode>.  
   
 > [!NOTE]
->  Преобразования применяются к документу в целом. Иными словами, если передать узел, отличный от корневого узла документа, это не помешает процессу преобразования обратиться ко всем узлам загружаемого документа. Чтобы преобразовать фрагмент узла, необходимо создать объект, содержащий только фрагмент этого узла, и передать его методу <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>. См. дополнительные сведения о [преобразовании фрагментов узлов](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md).  
+>  Преобразования применяются к документу в целом. Иными словами, если передать узел, отличный от корневого узла документа, это не помешает процессу преобразования обратиться ко всем узлам загружаемого документа. Чтобы преобразовать фрагмент узла, необходимо создать объект, содержащий только фрагмент этого узла, и передать его методу <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>. Дополнительные сведения см. в разделе [Практическое руководство. Преобразование фрагмента узла](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md).  
   
- В следующем примере метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> используется для преобразования файла books.xml в books.html с помощью таблицы стилей transform.xsl. Файлы books.xml и transform.xsl можно найти в руководстве по [преобразованию XSLT с использованием сборки](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
+ В следующем примере метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> используется для преобразования файла books.xml в books.html с помощью таблицы стилей transform.xsl. Файлы books.xml и transform.xsl можно найти в этом разделе: [Практическое руководство. XSLT-преобразование с помощью сборки](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
   
  [!code-csharp[XslCompiledTransform.Transform2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#1)]
  [!code-vb[XslCompiledTransform.Transform2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#1)]  
@@ -39,7 +39,7 @@ ms.locfileid: "48835978"
 ## <a name="xmlreader-object"></a>Объект XmlReader  
  Метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> загружает из текущего узла объекта <xref:System.Xml.XmlReader> всех его потомков. Это позволяет использовать фрагмент документа в качестве контекстного документа. После возвращения метода <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> объект <xref:System.Xml.XmlReader> позиционируется на следующем узле за контекстным документом. По достижении конца документа объект <xref:System.Xml.XmlReader> позиционируется в конец файла (EOF).  
   
- В следующем примере метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> используется для преобразования файла books.xml в books.html с помощью таблицы стилей transform.xsl. Файлы books.xml и transform.xsl можно найти в руководстве по [преобразованию XSLT с использованием сборки](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
+ В следующем примере метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> используется для преобразования файла books.xml в books.html с помощью таблицы стилей transform.xsl. Файлы books.xml и transform.xsl можно найти в этом разделе: [Практическое руководство. XSLT-преобразование с помощью сборки](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
   
  [!code-csharp[XslCompiledTransform.Transform2#2](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#2)]
  [!code-vb[XslCompiledTransform.Transform2#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#2)]  
@@ -47,7 +47,7 @@ ms.locfileid: "48835978"
 ## <a name="string-uri"></a>Строковые URI  
  Можно также указать URI исходного документа в виде входных данных XSLT. Для разрешения URI используется объект <xref:System.Xml.XmlResolver>. Чтобы использовать объект <xref:System.Xml.XmlResolver>, нужно передать его методу <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>. Если объект <xref:System.Xml.XmlResolver> не указан, метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> использует объект <xref:System.Xml.XmlUrlResolver> по умолчанию без учетных данных.  
   
- В следующем примере метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> используется для преобразования файла books.xml в books.html с помощью таблицы стилей transform.xsl. Файлы books.xml и transform.xsl можно найти в руководстве по [преобразованию XSLT с использованием сборки](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
+ В следующем примере метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> используется для преобразования файла books.xml в books.html с помощью таблицы стилей transform.xsl. Файлы books.xml и transform.xsl можно найти в этом разделе: [Практическое руководство. XSLT-преобразование с помощью сборки](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
   
  [!code-csharp[XslCompiledTransform.Transform2#3](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#3)]
  [!code-vb[XslCompiledTransform.Transform2#3](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#3)]  

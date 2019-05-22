@@ -2,19 +2,19 @@
 title: Группирование данных (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 079f346435e2f21b7c46b528d68f917f5532db66
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a85babc43f673711fe1bdfa5cec1836a5073c785
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583224"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753916"
 ---
 # <a name="grouping-data-c"></a>Группирование данных (C#)
 Группированием называют операцию объединения данных в группы таким образом, чтобы у элементов в каждой группе был общий атрибут.  
   
  На следующем рисунке показаны результаты операции группирования последовательности символов. Ключ для каждой группы — это символ.  
   
- ![Операции группирования LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")  
+ ![Схема, показывающая операцию группирования LINQ.](./media/grouping-data/linq-group-operation.png)  
   
  Далее перечислены методы стандартных операторов запроса, которые группируют элементы данных.  
   

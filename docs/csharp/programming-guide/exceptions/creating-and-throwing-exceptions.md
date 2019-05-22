@@ -8,31 +8,31 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 2a15fade1beb8f3da0d9b6f48a216dda81e669fd
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: e569742943e121faeae340512544956b674da083
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202695"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595359"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Создание и генерация исключений (Руководство по программированию C#)
 Исключения позволяют обозначить, что во время выполнения программы произошла ошибка. Объекты исключений, описывающие ошибку, создаются и затем *вызываются* с помощью ключевого слова [throw](../../../csharp/language-reference/keywords/throw.md). Далее среда выполнения ищет наиболее совместимый обработчик исключений.  
   
  Программисты должны вызывать исключения при выполнении одного или нескольких из перечисленных ниже условий.  
   
--   Метод не способен выполнить свои функции.  
+- Метод не способен выполнить свои функции.  
   
      Например, если значение параметра метода является недопустимым:  
   
      [!code-csharp[csProgGuideExceptions#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#12)]  
   
--   На основе состояния объекта выполнен неправильный вызов объекта.  
+- На основе состояния объекта выполнен неправильный вызов объекта.  
   
      В качестве примера можно привести попытку записи в файл, доступный только для чтения. В случаях, когда состояние объекта не допускает выполнения операции, вызывается экземпляр <xref:System.InvalidOperationException> или объекта на основе наследования этого класса. Ниже приведен пример метода, который вызывает объект <xref:System.InvalidOperationException>:  
   
      [!code-csharp[csProgGuideExceptions#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#13)]  
   
--   Когда аргумент метода вызывает исключение.  
+- Когда аргумент метода вызывает исключение.  
   
      В этом случае должно быть перехвачено исходное исключение и создан экземпляр <xref:System.ArgumentException>. Исходное исключение должно передаваться конструктору <xref:System.ArgumentException> в качестве параметра <xref:System.Exception.InnerException%2A>:  
   
@@ -47,16 +47,16 @@ ms.locfileid: "57202695"
 ## <a name="things-to-avoid-when-throwing-exceptions"></a>Чего следует избегать при вызове исключений  
  Ниже приводятся рекомендации по тому, чего следует избегать при вызове исключений.  
   
--   Исключения не рекомендуется использовать для изменения потока программы в рамках обычного выполнения. Исключения следует использовать только для сообщения о состояниях ошибки и их обработки.  
+- Исключения не рекомендуется использовать для изменения потока программы в рамках обычного выполнения. Исключения следует использовать только для сообщения о состояниях ошибки и их обработки.  
   
--   Исключения должны генерироваться, а не возвращаться в качестве возвращаемого значения или параметра.  
+- Исключения должны генерироваться, а не возвращаться в качестве возвращаемого значения или параметра.  
   
--   Не следует вызывать <xref:System.Exception?displayProperty=nameWithType>, <xref:System.SystemException?displayProperty=nameWithType>, <xref:System.NullReferenceException?displayProperty=nameWithType> или <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> из собственного исходного кода намеренно.  
+- Не следует вызывать <xref:System.Exception?displayProperty=nameWithType>, <xref:System.SystemException?displayProperty=nameWithType>, <xref:System.NullReferenceException?displayProperty=nameWithType> или <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> из собственного исходного кода намеренно.  
   
--   Не рекомендуется создавать исключения, которые могут вызываться в режиме отладки, а не в режиме выпуска. Чтобы определить ошибки времени выполнения на этапе разработки, используйте Debug Assert.  
+- Не рекомендуется создавать исключения, которые могут вызываться в режиме отладки, а не в режиме выпуска. Чтобы определить ошибки времени выполнения на этапе разработки, используйте Debug Assert.  
   
 ## <a name="defining-exception-classes"></a>Определение классов исключений  
- Программы могут вызывать предопределенный класс исключений в пространстве имен <xref:System> (кроме указанных ранее случаев) или создавать собственные классы исключений путем наследования от <xref:System.Exception>. Производные классы должны определять по крайней мере четыре конструктора: один конструктор по умолчанию, один конструктор, задающий свойство сообщения, и еще один, задающий свойства <xref:System.Exception.Message%2A> и <xref:System.Exception.InnerException%2A>. Четвертый конструктор служит для сериализации исключения. Новые классы исключений должны быть сериализуемыми. Например:  
+ Программы могут вызывать предопределенный класс исключений в пространстве имен <xref:System> (кроме указанных ранее случаев) или создавать собственные классы исключений путем наследования от <xref:System.Exception>. Производные классы должны определять по крайней мере четыре конструктора: один конструктор без параметров, один конструктор, задающий свойство сообщения, и еще один, задающий свойства <xref:System.Exception.Message%2A> и <xref:System.Exception.InnerException%2A>. Четвертый конструктор служит для сериализации исключения. Новые классы исключений должны быть сериализуемыми. Например:  
   
  [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  
   

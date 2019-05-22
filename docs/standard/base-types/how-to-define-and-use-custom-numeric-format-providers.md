@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37c9140db390c55c9cab4e8a3203287d2dd12725
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b3898caa90c695ae681c2d9b20abbba57a2a9f61
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634237"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590468"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Практическое руководство. Определение и использование настраиваемых поставщиков числовых форматов
-Платформа [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] дает широкие возможности контроля над строковым представлением числовых значений. Эта платформа поддерживает указанные далее возможности для настройки форматов числовых значений.  
+.NET Framework обеспечивает расширенный контроль над строковым представлением числовых значений. Эта платформа поддерживает указанные далее возможности для настройки форматов числовых значений.  
   
 - Строки стандартных числовых форматов, которые предоставляют стандартный набор форматов для преобразования чисел в их строковое представление. Вы можете использовать их с любым методом числового форматирования, например <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> с параметром `format`. Дополнительные сведения см. в статье [Строки стандартных числовых форматов](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
@@ -33,7 +33,7 @@ ms.locfileid: "64634237"
   
 - Настраиваемые объекты <xref:System.Globalization.CultureInfo> и <xref:System.Globalization.NumberFormatInfo>, которые определяют символы и шаблоны форматирования для отображения строковых представлений числовых значений. Вы можете использовать их с любым методом числового форматирования, например <xref:System.Int32.ToString%2A> с параметром `provider`. Как правило, параметр `provider` используется для указания форматирования, зависящего от языка и региональных параметров.  
   
- В некоторых случаях (например, когда приложению необходимо отобразить отформатированный номер учетной записи, идентификационный номер или почтовый индекс) эти три метода неприменимы. Также [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] позволяет определить объект форматирования, который не является объектом <xref:System.Globalization.CultureInfo> или <xref:System.Globalization.NumberFormatInfo>, для определения порядка форматирования числовых значений. Этот раздел содержит пошаговые инструкции по реализации таких объектов и пример форматирования телефонных номеров.  
+ В некоторых случаях (например, когда приложению необходимо отобразить отформатированный номер учетной записи, идентификационный номер или почтовый индекс) эти три метода неприменимы. Также .NET Framework позволяет определить объект форматирования, который не является объектом <xref:System.Globalization.CultureInfo> или <xref:System.Globalization.NumberFormatInfo>, для определения порядка форматирования числовых значений. Этот раздел содержит пошаговые инструкции по реализации таких объектов и пример форматирования телефонных номеров.  
   
 ### <a name="to-define-a-custom-format-provider"></a>Определение поставщика пользовательского формата  
   
@@ -87,9 +87,6 @@ ms.locfileid: "64634237"
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
  В нашем примере метод, который реализует <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>, будет использоваться как метод обратного вызова для метода <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>. Это значит, что он должен проверить параметр `formatProvider` на наличие ссылки на текущий объект `TelephoneFormatter`. Тем не менее, метод можно также вызвать непосредственно из кода. В этом случае вы можете использовать параметр `formatProvider` для предоставления объекта <xref:System.Globalization.CultureInfo> или <xref:System.Globalization.NumberFormatInfo> со сведениями о форматировании для выбранного языка и региональных параметров.  
-  
-## <a name="compiling-the-code"></a>Компиляция кода  
- Скомпилируйте код из командной строки с помощью команд csc.exe или vb.exe. Для компиляции кода в Visual Studio поместите его в шаблон проекта консольного приложения.  
   
 ## <a name="see-also"></a>См. также
 

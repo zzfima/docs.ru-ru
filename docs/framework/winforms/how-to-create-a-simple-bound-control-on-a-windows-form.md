@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: fc59e6d5e71bfc69dea0bfc5098a1fa14c97d4b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79b31e61f4c7739a20765c9484db6a8cfd04b01b
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008958"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003764"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Практическое руководство. Создание элемента управления с простой привязкой в форме Windows Forms
 С помощью *простая привязка*, одному элементу данных, таких как значение столбца из таблицы набора данных, можно отобразить в элементе управления. Вы можете простую привязку любого свойства элемента управления к значению данных.  
@@ -28,7 +28,7 @@ ms.locfileid: "62008958"
   
      Чаще всего привязанного свойства отображаются под **(DataBindings)** свойство. Например, для большинства элементов управления **текст** наиболее часто связано свойство.  
   
-4. Если свойство для привязки не является одним из часто используемых свойств, нажмите кнопку **кнопку с многоточием** кнопки (![экрана VisualStudioEllipsesButton](./media/vbellipsesbutton.png "vbEllipsesButton") ) в **(Дополнительно)** окна для отображения **форматирование и дополнительная привязка** диалоговое окно с полным списком свойств для этого элемента управления.  
+4.  Если свойство для привязки не является одним из часто используемых свойств, нажмите кнопку **кнопку с многоточием** кнопки (![кнопку с многоточием (...) в окне свойств Visual Studio.](./media/how-to-create-a-simple-bound-control-on-a-windows-form/visual-studio-ellipsis-button.png)) в **() "Дополнительно")** окна для отображения **форматирование и дополнительная привязка** диалоговое окно с полным списком свойств для этого элемента управления.  
   
 5. Выберите свойство для привязки и щелкните стрелку раскрывающегося списка под полем **привязки**.  
   

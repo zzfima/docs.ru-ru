@@ -2,12 +2,12 @@
 title: Команда dotnet add package
 description: Команду dotnet list package удобно использовать для получения списка ссылок на пакеты для проекта или решения.
 ms.date: 04/09/2019
-ms.openlocfilehash: bc38b94201f85ed4b22e11722ef5cabcb6fbf040
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 88ef3302a955eadc4167384312e4eb721dd496fb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481576"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631769"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -15,7 +15,7 @@ ms.locfileid: "59481576"
 
 ## <a name="name"></a>name
 
-`dotnet list package` — выводит список ссылок на пакеты для проекта или решения.
+`dotnet list package` — перечисляет ссылки на пакет для проекта или решения.
 
 ## <a name="synopsis"></a>Краткий обзор
 

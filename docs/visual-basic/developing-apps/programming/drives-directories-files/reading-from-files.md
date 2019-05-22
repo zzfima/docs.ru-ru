@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-ms.openlocfilehash: cfb22fea6d2be4c1cf78efbc63b2e2342bcac49c
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: f81ee980d861ac0eb41df9c41b3966512589af12
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959499"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593368"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Чтение из файлов в Visual Basic
 В этом руководстве рассказывается, как выполнять задачи, связанные с чтением из файлов.  
@@ -60,8 +60,8 @@ ms.locfileid: "37959499"
  [Анализ текстовых файлов с помощью объекта TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
  Содержит общие сведения о чтении текстовых файлов с помощью объекта `TextFieldParser`.  
   
- [Пошаговое руководство. Операции с файлами и каталогами в Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ [Пошаговое руководство: Операции с файлами и каталогами в Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Объясняет, как использовать функцию `My` с файлами и каталогами.  
   
- [Пошаговое руководство. Управление файлами с помощью методов .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Объясняет, как использовать методы [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] с файлами и каталогами.
+ [Пошаговое руководство: Управление файлами с помощью методов .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ Объясняет, как использовать методы .NET Framework с файлами и каталогами.

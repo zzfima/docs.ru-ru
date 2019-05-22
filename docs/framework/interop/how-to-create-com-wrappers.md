@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание оболочек COM
+title: Практическое руководство. Создание оболочек COM
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c26c84ece1231a4e118144c163fa3e9c7619301
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b0e34785fce3cd88bfe4fe4b075ba34b8d22bff4
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324137"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469660"
 ---
-# <a name="how-to-create-com-wrappers"></a>Как выполнить Создание оболочек COM
+# <a name="how-to-create-com-wrappers"></a>Практическое руководство. Создание оболочек COM
 
 Программы-оболочки модели COM можно создавать с использованием функций Visual Studio 2005 или средств платформы .NET Framework (Tlbimp.exe и Regasm.exe). Оба метода позволяют создать два типа программ-оболочек COM:
 
--   [Вызываемая оболочка времени выполнения](../../../docs/framework/interop/runtime-callable-wrapper.md) из библиотеки типов для выполнения COM-объектов в управляемом коде.
+- [Вызываемая оболочка времени выполнения](../../../docs/framework/interop/runtime-callable-wrapper.md) из библиотеки типов для выполнения COM-объектов в управляемом коде.
 
--   [Вызываемая оболочка COM](../../../docs/framework/interop/com-callable-wrapper.md) с соответствующими параметрами реестра для выполнения управляемого объекта в собственном приложении.
+- [Вызываемая оболочка COM](../../../docs/framework/interop/com-callable-wrapper.md) с соответствующими параметрами реестра для выполнения управляемого объекта в собственном приложении.
 
 В Visual Studio 2005 оболочку COM можно добавить в проект в виде ссылки.
 
@@ -38,14 +38,14 @@ ms.locfileid: "59324137"
 
      Обратите внимание, что в **обозревателе решений** в папку ссылок проекта добавляется COM-компонент.
 
-Теперь можно написать код для доступа к COM-объекту. Сначала можно объявить объект, например с помощью оператора `Imports` для [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] или `Using` для [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)].
+Теперь можно написать код для доступа к COM-объекту. Сначала можно объявить объект, например с помощью оператора `Imports` для Visual Basic или оператора `Using` для C#.
 
 > [!NOTE]
 > При программировании компонентов Microsoft Office сначала необходимо установить [основные сборки взаимодействия Microsoft Office](https://go.microsoft.com/fwlink/?LinkId=50479) из Центра загрузки Майкрософт. На шаге 4 выберите последнюю доступную версию библиотеки объектов для нужного продукта Office, например **библиотеку объектов Microsoft Word 11.0**.  
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Создание вызываемой оболочки времени выполнения с использованием средств платформы .NET Framework  
   
--   Запустите средство [Tlbimp.exe (программа экспорта библиотек типов)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).  
+- Запустите средство [Tlbimp.exe (программа экспорта библиотек типов)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).  
   
  Это средство создает сборку, которая содержит метаданные времени выполнения для типов, определенных в исходной библиотеке типов.  
   

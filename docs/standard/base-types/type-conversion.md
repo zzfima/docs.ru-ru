@@ -26,37 +26,37 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04ed4dcaab8d39d8a34cadef8285ea8307f198c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea32efaad24f171b7d5ebfa457834b35edbddf4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659765"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664617"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Преобразование типов в .NET Framework
 <a name="top"></a> У каждого значения есть соответствующий тип, который определяет такие атрибуты, как объем памяти, которая выделяется значению, диапазон возможных значений и доступные члены типа. Многие значения можно выразить несколькими типами. Например, число 4 можно выразить как целое число или как число с плавающей запятой. Преобразование типа создает значение нового типа, эквивалентное значению старого типа, но при этом не обязательно сохраняется идентичность (или точные значения) первоначального объекта.  
   
  Платформа .NET Framework автоматически поддерживает указанные далее преобразования.  
   
--   Преобразование из производного класса в базовый класс. Это означает, например, что экземпляр любого класса или структуры может быть преобразован в экземпляр <xref:System.Object>.  Для этого преобразования не требуется оператор приведения или преобразования.  
+- Преобразование из производного класса в базовый класс. Это означает, например, что экземпляр любого класса или структуры может быть преобразован в экземпляр <xref:System.Object>.  Для этого преобразования не требуется оператор приведения или преобразования.  
   
--   Преобразование из базового класса обратно в исходный производный класс. В C# для этого преобразования требуется оператор приведения. В Visual Basic требуется оператор `CType`, если `Option Strict` включен.  
+- Преобразование из базового класса обратно в исходный производный класс. В C# для этого преобразования требуется оператор приведения. В Visual Basic требуется оператор `CType`, если `Option Strict` включен.  
   
--   Преобразование из типа, реализующего интерфейс, в объект интерфейса, представляющий этот интерфейс. Для этого преобразования не требуется оператор приведения или преобразования.  
+- Преобразование из типа, реализующего интерфейс, в объект интерфейса, представляющий этот интерфейс. Для этого преобразования не требуется оператор приведения или преобразования.  
   
--   Преобразование из объекта интерфейса обратно в исходный тип, который реализует этот интерфейс.  В C# для этого преобразования требуется оператор приведения. В Visual Basic требуется оператор `CType`, если `Option Strict` включен.  
+- Преобразование из объекта интерфейса обратно в исходный тип, который реализует этот интерфейс.  В C# для этого преобразования требуется оператор приведения. В Visual Basic требуется оператор `CType`, если `Option Strict` включен.  
   
  Помимо этих автоматических преобразований [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] предоставляет несколько возможностей для поддержки преобразования пользовательского типа. В число этих требований входят следующие:  
   
--   Оператор `Implicit`, определяющий доступные расширяющие преобразования между типами. Дополнительные сведения см. в разделе [Неявные преобразования с помощью оператора Implicit](#implicit_conversion_with_the_implicit_operator).  
+- Оператор `Implicit`, определяющий доступные расширяющие преобразования между типами. Дополнительные сведения см. в разделе [Неявные преобразования с помощью оператора Implicit](#implicit_conversion_with_the_implicit_operator).  
   
--   Оператор `Explicit`, определяющий доступные сужающие преобразования между типами. Дополнительные сведения см. в разделе [Явные преобразования с помощью оператора Explicit](#explicit_conversion_with_the_explicit_operator).  
+- Оператор `Explicit`, определяющий доступные сужающие преобразования между типами. Дополнительные сведения см. в разделе [Явные преобразования с помощью оператора Explicit](#explicit_conversion_with_the_explicit_operator).  
   
--   Интерфейс <xref:System.IConvertible>, определяющий преобразования в каждый из базовых типов данных платформы .NET Framework. Дополнительные сведения см. в разделе [Интерфейс IConvertible](#the_iconvertible_interface).  
+- Интерфейс <xref:System.IConvertible>, определяющий преобразования в каждый из базовых типов данных платформы .NET Framework. Дополнительные сведения см. в разделе [Интерфейс IConvertible](#the_iconvertible_interface).  
   
--   Класс <xref:System.Convert>, предоставляющий набор методов, реализующих методы интерфейса <xref:System.IConvertible>. Дополнительные сведения см. в разделе [Класс Convert](#Convert).  
+- Класс <xref:System.Convert>, предоставляющий набор методов, реализующих методы интерфейса <xref:System.IConvertible>. Дополнительные сведения см. в разделе [Класс Convert](#Convert).  
   
--   Класс <xref:System.ComponentModel.TypeConverter>, являющийся базовым классом, который может быть расширен для поддержки преобразования указанного типа в любой другой тип. Дополнительные сведения см. в разделе [Класс TypeConverter](#the_typeconverter_class).  
+- Класс <xref:System.ComponentModel.TypeConverter>, являющийся базовым классом, который может быть расширен для поддержки преобразования указанного типа в любой другой тип. Дополнительные сведения см. в разделе [Класс TypeConverter](#the_typeconverter_class).  
   
 <a name="implicit_conversion_with_the_implicit_operator"></a>   
 ## <a name="implicit-conversion-with-the-implicit-operator"></a>Неявное преобразование с помощью оператора Implicit  
@@ -97,7 +97,7 @@ ms.locfileid: "54659765"
 |<xref:System.UInt32>|Значение <xref:System.UInt32.MaxValue?displayProperty=nameWithType> больше значения <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
 |<xref:System.UInt64>|Значение <xref:System.UInt64.MaxValue?displayProperty=nameWithType> больше значения <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
   
- Для обработки таких сужающих преобразований [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] позволяет типам определять оператор `Explicit`. Компиляторы отдельных языков могут реализовывать этот оператор, используя свой собственный синтаксис или вызывая член класса <xref:System.Convert> для преобразования. (Дополнительные сведения о классе <xref:System.Convert> см. в разделе [Класс Convert](#Convert) далее в этом разделе.) В следующем примере показано использование функций языка для обработки явного преобразования этих потенциально выходящих за пределы диапазона целочисленных значений в значения <xref:System.Int32>.  
+ Для обработки таких сужающих преобразований [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] позволяет типам определять оператор `Explicit`. Компиляторы отдельных языков могут реализовывать этот оператор, используя свой собственный синтаксис или вызывая член класса <xref:System.Convert> для преобразования. (Дополнительные сведения о <xref:System.Convert> см. в разделе [Класс Convert](#Convert) далее в этом разделе.) Следующий пример иллюстрирует использование функций языка для обработки явного преобразования этих потенциально выходящих из диапазона целочисленных значений в значения <xref:System.Int32>.  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -129,11 +129,11 @@ ms.locfileid: "54659765"
 ## <a name="the-iconvertible-interface"></a>Интерфейс IConvertible  
  Для поддержки преобразования любого типа в базовый тип среды CLR [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] предоставляет интерфейс <xref:System.IConvertible>. Реализующий тип должен предоставить следующее:  
   
--   Метод, возвращающий объект <xref:System.TypeCode> реализующего типа.  
+- Метод, возвращающий объект <xref:System.TypeCode> реализующего типа.  
   
--   Метод для преобразования реализующего типа в каждый из базовых типов среды CLR (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double> и т. д.).  
+- Метод для преобразования реализующего типа в каждый из базовых типов среды CLR (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double> и т. д.).  
   
--   Универсальный метод преобразования экземпляра реализующего типа в другой заданный тип. Неподдерживаемые преобразования должны порождать исключение <xref:System.InvalidCastException>.  
+- Универсальный метод преобразования экземпляра реализующего типа в другой заданный тип. Неподдерживаемые преобразования должны порождать исключение <xref:System.InvalidCastException>.  
   
  Все базовые типы среды CLR (т. е. <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.String>, <xref:System.UInt16>, <xref:System.UInt32> и <xref:System.UInt64>), а также типы <xref:System.DBNull> и <xref:System.Enum> реализуют интерфейс <xref:System.IConvertible>. Тем не менее это явные реализации интерфейса; метод преобразования можно вызвать только посредством переменной интерфейса <xref:System.IConvertible>, как показано в следующем примере. В этом примере показано преобразование значения <xref:System.Int32> в эквивалентное значение <xref:System.Char>.  
   

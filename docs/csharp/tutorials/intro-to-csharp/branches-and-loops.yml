@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Коллекция списка
-  ms.openlocfilehash: 62cc52e22406c6c19dad6cc800078e0d8f34f0d6
-  ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+  ms.openlocfilehash: aa6e91af175d1d3a3dcad7086c3a8205d45f438a
+  ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 04/18/2019
-  ms.locfileid: "59427530"
+  ms.lasthandoff: 05/06/2019
+  ms.locfileid: "65063849"
 items:
 - durationInMinutes: 1
   content: >
@@ -218,7 +218,7 @@ items:
     > Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии. При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).
 - title: Поздравляем!
   content: >-
-    Вы ознакомились с интерактивный руководством по ветвям и циклам. Вы можете выбрать ссылку **Интерполированные строки** ниже, чтобы запустить следующее интерактивное руководство, либо посетить [сайт .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial), чтобы скачать пакет SDK для .NET Core, создать проект на своем компьютере и продолжить написание кода. На шаге "Продолжение обучения" вы вернетесь к этим учебникам.
+    Вы ознакомились с интерактивный руководством по ветвям и циклам. Можно щелкнуть ссылку **Коллекция списков** ниже для запуска интерактивного учебника либо посетить [сайт .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) для скачивания пакета SDK для .NET Core, создать проект на своем компьютере и продолжить работу над ним. На шаге "Продолжение обучения" вы вернетесь к этим учебникам.
 
 
     Дополнительные сведения об этих понятиях см. в следующих разделах:

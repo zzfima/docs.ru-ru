@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 47c79b8d716be6c247be3ec66c9ef00fbc021973
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739466"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586265"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Пошаговые руководства для Visual Basic
 В пошаговых руководствах содержатся инструкции по выполнению стандартных сценариев, что делает их удобным инструментом для начала изучения продукта в целом или его отдельных возможностей.  
@@ -72,7 +72,7 @@ ms.locfileid: "55739466"
  В этом пошаговом руководстве описывается использование функций Visual Basic для определения сведений о файле, поиска строки в файле и записи в файл.  
   
  [Управление файлами с помощью методов .NET Framework](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- В этом пошаговом руководстве описывается использование методов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] для определения сведений о файле, поиска строки в файле и записи в файл.  
+ В этом пошаговом руководстве описывается использование методов .NET Framework для определения сведений о файле, поиска строки в файле и записи в файл.  
   
  [Сохранение объекта в Visual Basic](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  В этом пошаговом руководстве описывается создание простого объекта и сохранение его данных в файл.  

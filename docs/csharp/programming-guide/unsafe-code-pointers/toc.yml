@@ -9,23 +9,5 @@
           href: pointer-types.md
         - name: Преобразования указателей
           href: pointer-conversions.md
-        - name: Выражения указателей
-          items:
-            - name: Практическое руководство. Получение значения переменной указателя
-              href: how-to-obtain-the-value-of-a-pointer-variable.md
-            - name: Практическое руководство. Получение адреса переменной
-              href: how-to-obtain-the-address-of-a-variable.md
-            - name: Практическое руководство. Доступ к члену с использованием указателя
-              href: how-to-access-a-member-with-a-pointer.md
-            - name: Практическое руководство. Доступ к элементу массива с использованием указателя
-              href: how-to-access-an-array-element-with-a-pointer.md
-            - name: Обработка указателей
-              items:
-                - name: Практическое руководство. Увеличение и уменьшение указателей
-                  href: how-to-increment-and-decrement-pointers.md
-                - name: Арифметические операции над указателями
-                  href: arithmetic-operations-on-pointers.md
-                - name: Сравнение указателей
-                  href: pointer-comparison.md
         - name: Практическое руководство. Использование указателей для копирования массива байтов
           href: how-to-use-pointers-to-copy-an-array-of-bytes.md

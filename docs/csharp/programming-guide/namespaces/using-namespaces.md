@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 510a8dd2721e9c709444c065a8df25b0e5526c08
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c5bede7475fdbee3f3524984a9be97b95b44817d
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965557"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452685"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Использование пространств имен (Руководство по программированию в C#)
 Пространства имен часто используются в программировании на C# двумя способами. Первый способ — платформа .NET Framework использует пространства имен для упорядочения множества ее классов. Второй способ — объявление собственных пространств имен поможет вам контролировать область имен классов и методов в более крупных проектах.  
@@ -39,7 +39,7 @@ ms.locfileid: "56965557"
  [!code-csharp[csProgGuideNamespaces#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#7)]  
   
 ## <a name="using-namespaces-to-control-scope"></a>Использование пространств имен для управления областью действия  
- Область действия объявляется с помощью ключевого слова `namespace`. Определяя области действия в проекте, вы можете упорядочивать код и создавать уникальные на глобальном уровне типы. В следующем примере класс `SampleClass` определяется в двух пространствах имен, одно из которых вложено в другое. [. Для определения конкретного вызываемого метода используется оператор ](../../../csharp/language-reference/operators/member-access-operator.md).  
+ Область действия объявляется с помощью ключевого слова `namespace`. Определяя области действия в проекте, вы можете упорядочивать код и создавать уникальные на глобальном уровне типы. В следующем примере класс `SampleClass` определяется в двух пространствах имен, одно из которых вложено в другое. [Оператор доступа к членам `.`](../../language-reference/operators/member-access-operators.md#member-access-operator-) используется для отличения вызываемого метода.  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -52,13 +52,13 @@ ms.locfileid: "56965557"
   
  В предыдущем фрагменте кода:  
   
--   Пространство имен `N1` является членом глобального пространства имен. Его полное имя: `N1`.  
+- Пространство имен `N1` является членом глобального пространства имен. Его полное имя: `N1`.  
   
--   Пространство имен `N2` является членом пространства имен `N1`. Его полное имя: `N1.N2`.  
+- Пространство имен `N2` является членом пространства имен `N1`. Его полное имя: `N1.N2`.  
   
--   Класс `C1` является членом пространства имен `N1`. Его полное имя: `N1.C1`.  
+- Класс `C1` является членом пространства имен `N1`. Его полное имя: `N1.C1`.  
   
--   В этом коде имя класса `C2` используется два раза. Тем не менее полные имена являются уникальными. Первый экземпляр `C2` объявляется в классе `C1`. Соответственно, его полное имя: `N1.C1.C2`. Второй экземпляр `C2` объявляется в пространстве имен `N2`. Соответственно, его полное имя: `N1.N2.C2`.  
+- В этом коде имя класса `C2` используется два раза. Тем не менее полные имена являются уникальными. Первый экземпляр `C2` объявляется в классе `C1`. Соответственно, его полное имя: `N1.C1.C2`. Второй экземпляр `C2` объявляется в пространстве имен `N2`. Соответственно, его полное имя: `N1.N2.C2`.  
   
  Используя представленный выше фрагмент кода, вы можете добавить новый элемент класса `C3` в пространство имен `N1.N2`, как показано выше:  
   
@@ -93,6 +93,6 @@ ms.locfileid: "56965557"
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [Пространства имен](../../../csharp/programming-guide/namespaces/index.md)
 - [Ключевые слова, используемые для пространств имен](../../../csharp/language-reference/keywords/namespace-keywords.md)
-- [. Оператор](../../../csharp/language-reference/operators/member-access-operator.md)
+- [. Оператор](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
 - [:: Оператор](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

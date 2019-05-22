@@ -2,18 +2,18 @@
 title: Руководство по программированию (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
-ms.openlocfilehash: d71fb2d0365199bf89b0cfbd05b614ebd7634219
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8141d915b4262bdb66b0b2d9acc4c549956cdbec
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494006"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585786"
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>Руководство по программированию (LINQ to XML) (C#)
 Этот раздел содержит теоретические и практические сведения о программировании при помощи [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="who-should-read-this-documentation"></a>Кому необходимо ознакомиться с этой документацией  
- Эта документация предназначена для разработчиков, знакомых с языком C# и некоторыми основными аспектами [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+ Эта документация предназначена для разработчиков, знакомых с языком C# и некоторыми основными аспектами .NET Framework.  
   
  Цель этой документации — упростить работу с [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] для любых разработчиков. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] позволяет упростить программирование XML. Чтобы использовать это средство, не обязательно быть высокопрофессиональным разработчиком.  
   

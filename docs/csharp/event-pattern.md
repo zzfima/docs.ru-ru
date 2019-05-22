@@ -3,12 +3,12 @@ title: Стандартные шаблоны событий .NET
 description: Сведения о шаблонах событий .NET, а также о создании источников стандартных событий, подписке на такие события и их обработке в коде.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 11755b4754b15070869adf12d5be409af99035d4
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: cd1ead318529d1afc5b27ff8710cebcaae9b7bc3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201252"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062966"
 ---
 # <a name="standard-net-event-patterns"></a>Стандартные шаблоны событий .NET
 

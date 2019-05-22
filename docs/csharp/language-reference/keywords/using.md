@@ -8,18 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
-ms.openlocfilehash: 07563d32b176832966ab50942cda2b0b26b80e44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: efde313c0a1dabee45de4fd7d580a3aff5139928
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137973"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633821"
 ---
 # <a name="using-c-reference"></a>using (справочник по C#)
 
 Ключевое слово `using` имеет три основных применения:
-- [Инструкция using](using-statement.md) определяет область, по завершении которой объект удаляется. 
-- [Директива](using-directive.md) using создает псевдоним для пространства имен или импортирует типы, определенные в других пространствах имен. 
+
+- [Инструкция using](using-statement.md) определяет область, по завершении которой объект удаляется.
+- [Директива using](using-directive.md) создает псевдоним для пространства имен или импортирует типы, определенные в других пространствах имен.
 - [Директива using static](using-static.md) импортирует элементы из одного класса.
 
 ## <a name="see-also"></a>См. также

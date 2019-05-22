@@ -2,12 +2,12 @@
 title: Дополнения к формату CSPROJ для .NET Core
 description: Различия между существующими файлами и файлами CSPROJ .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 89f0bbab1f9887295a68ffc6434340f1c6f10d5d
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 9c1f084af68010632cbe595858b2f242d37af598
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611098"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631807"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Дополнения к формату CSPROJ для .NET Core
 
@@ -125,11 +125,13 @@ ms.locfileid: "59611098"
 
 ### <a name="sdk-attribute"></a>Атрибут Sdk
 
-Корневой элемент `<Project>` файла *CSPROJ* имеет новый атрибут `Sdk`. `Sdk` определяет, какой пакет SDK будет использоваться проектом. Пакет SDK, согласно описанию в [документе о слоях](cli-msbuild-architecture.md), является набором [задач](/visualstudio/msbuild/msbuild-tasks) и [целевых объектов](/visualstudio/msbuild/msbuild-targets) MSBuild, способным выполнять сборку кода .NET Core. Мы предоставляем три основных пакета SDK с инструментами для .NET Core:
+Корневой элемент `<Project>` файла *CSPROJ* имеет новый атрибут `Sdk`. `Sdk` определяет, какой пакет SDK будет использоваться проектом. Пакет SDK, согласно описанию в [документе о слоях](cli-msbuild-architecture.md), является набором [задач](/visualstudio/msbuild/msbuild-tasks) и [целевых объектов](/visualstudio/msbuild/msbuild-targets) MSBuild, способным выполнять сборку кода .NET Core. При использовании предварительной версии .NET Core 3.0 доступно три основных пакета SDK со средствами .NET Core и два дополнительных пакета SDK:
 
 1. пакет SDK для .NET Core с идентификатором `Microsoft.NET.Sdk`;
 2. веб-пакет SDK для .NET Core с идентификатором `Microsoft.NET.Sdk.Web`.
 3. пакет SDK для библиотеки классов Razor для .NET Core с идентификатором `Microsoft.NET.Sdk.Razor`.
+4. Служба рабочей роли .NET Core с идентификатором `Microsoft.NET.Sdk.Worker` (предварительная версия .NET Core 3.0)
+5. .NET Core WinForms и WPF с идентификатором `Microsoft.NET.Sdk.WindowsDesktop` (предварительная версия .NET Core 3.0)
 
 Чтобы использовать инструменты и выполнять сборку кода .NET Core, в качестве значения атрибута `Sdk` в элементе `<Project>` нужно задать один из этих идентификаторов.
 

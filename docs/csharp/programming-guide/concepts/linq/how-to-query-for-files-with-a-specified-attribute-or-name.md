@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Запрос файлов с указанным атрибутом или именем (C#)
+title: Практическое руководство. Запрос файлов с указанным атрибутом или именем (C#)
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: e600899251fe08884088275307f4311f3b9787cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94642ff500cb065ffcb28d6099c3f9f50d43d124
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564163"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584323"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Как выполнить Запрос файлов с указанным атрибутом или именем (C#)
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Практическое руководство. Запрос файлов с указанным атрибутом или именем (C#)
 В этом примере показано, как обнаружить все файлы с указанным расширением (например, TXT) в заданном дереве каталогов. Кроме того, он показывает, как обнаружить самый новый или самый старый файл в дереве, используя время создания.  
   
 ## <a name="example"></a>Пример  
@@ -64,7 +64,7 @@ class FindFileByExtension
 ```  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.  
+  Создайте проект консольного приложения C# с директивами `using` для пространств имен System.Linq и System.IO.
   
 ## <a name="see-also"></a>См. также
 

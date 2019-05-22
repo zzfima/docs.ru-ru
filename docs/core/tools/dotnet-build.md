@@ -1,17 +1,21 @@
 ---
 title: Команда dotnet build
 description: Команда dotnet build выполняет сборку проекта и всех его зависимостей.
-ms.date: 12/04/2018
-ms.openlocfilehash: 6a701ee371221c780a878e64b996df95f709371f
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.date: 04/24/2019
+ms.openlocfilehash: 2e58bace8055ba793bf7a6ca3a51eb20aa689768
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612697"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755220"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
+**Эта статья относится к ✓** SDK для .NET Core 1.x и более поздних версий
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -19,25 +23,12 @@ ms.locfileid: "59612697"
 
 ## <a name="synopsis"></a>Краткий обзор
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
-dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
-    [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
+    [--no-incremental] [--nologo] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```
-dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
-    [-r|--runtime] [-v|--verbosity] [--version-suffix]
-
-dotnet build [-h|--help]
-```
-
----
 
 ## <a name="description"></a>Описание
 
@@ -45,7 +36,7 @@ dotnet build [-h|--help]
 
 Если проект имеет зависимости от сторонних компонентов, таких как библиотеки из NuGet, они разрешаются из кэша NuGet и недоступны в выходных данных сборки проекта. Учитывая это, продукт `dotnet build` не готов к переносу на другой компьютер для выполнения. Это отличается от поведения в .NET Framework, где сборка исполняемого проекта (приложения) создает выходные данные, которые можно запустить на любом компьютере с установленной платформой .NET Framework. Чтобы обеспечить аналогичное поведение в .NET Core, необходимо использовать команду [dotnet publish](dotnet-publish.md). Дополнительные сведения см. в разделе [Развертывание приложений .NET Core](../deploying/index.md).
 
-Для сборки нужен файл *project.assets.json*, содержащий список зависимостей приложения. Он создается при выполнении команды [`dotnet restore`](dotnet-restore.md). Без файла ресурсов инструментарий не способен разрешать базовые сборки, что приводит к ошибкам. При использовании пакета SDK для .NET Core 1.x необходимо было явным образом выполнять команду `dotnet restore` перед выполнением `dotnet build`. Начиная с версии SDK для .NET Core 2.0 команда `dotnet restore` выполняется автоматически при выполнении `dotnet build`. Чтобы отключить неявное восстановление при выполнении команды сборки, можно передать параметр `--no-restore`.
+Для сборки нужен файл *project.assets.json*, содержащий список зависимостей приложения. Он создается при выполнении команды [`dotnet restore`](dotnet-restore.md). В отсутствие файла ресурсов инструментарий не может разрешать доступ к ссылочным сборкам, что приводит к ошибкам. При использовании пакета SDK для .NET Core 1.x необходимо было явным образом выполнять команду `dotnet restore` перед выполнением `dotnet build`. Начиная с версии SDK для .NET Core 2.0 команда `dotnet restore` выполняется автоматически при выполнении `dotnet build`. Чтобы отключить неявное восстановление при выполнении команды сборки, можно передать параметр `--no-restore`.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -71,11 +62,9 @@ dotnet build [-h|--help]
 
 `PROJECT | SOLUTION`
 
-Файл проекта или решения для сборки. Если файл проекта или решения не указан, MSBuild ищет в текущем рабочем каталоге файл с расширением, заканчивающимся на *PROJ* или *SLN*, и использует его.
+Файл проекта или решения для сборки. Если файл проекта или решения не указан, MSBuild ищет текущий рабочий каталог для файла с расширением, которое заканчивается либо на *proj*, либо на *sln*, и использует этот файл.
 
 ## <a name="options"></a>Параметры
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`-c|--configuration {Debug|Release}`**
 
@@ -87,11 +76,15 @@ dotnet build [-h|--help]
 
 * **`--force`**
 
-  Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Указание этого флага дает тот же результат, что удаление файла *project.assets.json*.
+  Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Указание этого флага дает тот же результат, что удаление файла *project.assets.json*. Доступно, начиная с пакета SDK для .NET Core 2.0.
 
 * **`-h|--help`**
 
   Выводит краткую справку по команде.
+
+* **`--interactive`**
+
+  Позволяет команде остановиться и дождаться, пока пользователь выполнит действие или введет данные. Например, чтобы завершить проверку подлинности. Доступно, начиная с пакета SDK для .NET Core 3.0.
 
 * **`--no-dependencies`**
 
@@ -101,9 +94,13 @@ dotnet build [-h|--help]
 
   Помечает сборку как небезопасную для добавочной сборки. Этот флаг отключает инкрементную компиляцию и запускает принудительную полную перестройку схемы зависимостей проекта.
 
+* **`--no-logo`**
+
+  Скрывает загрузочный баннер или сообщение об авторских правах. Доступно, начиная с пакета SDK для .NET Core 3.0.
+
 * **`--no-restore`**
 
-  Во время сборки не выполняется неявное восстановление.
+  Во время сборки не выполняется неявное восстановление. Доступно, начиная с пакета SDK для .NET Core 2.0.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -115,51 +112,11 @@ dotnet build [-h|--help]
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
+  Задает уровень детализации MSBuild. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`. Значение по умолчанию — `minimal`.
 
 * **`--version-suffix <VERSION_SUFFIX>`**
 
-  Определяет суффикс версии для звездочки (`*`) в поле версия файла проекта. Формат соответствует рекомендациям в отношении версий NuGet.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`-c|--configuration {Debug|Release}`**
-
-  Определяет конфигурацию сборки. Значение по умолчанию — `Debug`.
-
-* **`-f|--framework <FRAMEWORK>`**
-
-  Выполняет компиляцию для конкретной [платформы](../../standard/frameworks.md). Платформа должна быть определена в [файле проекта](csproj.md).
-
-* **`-h|--help`**
-
-  Выводит краткую справку по команде.
-
-* **`--no-dependencies`**
-
-  Межпроектные (P2P) ссылки игнорируются, и выполняется сборка только указанного корневого проекта.
-
-* **`--no-incremental`**
-
-  Помечает сборку как небезопасную для добавочной сборки. Этот флаг отключает инкрементную компиляцию и запускает принудительную полную перестройку схемы зависимостей проекта.
-
-* **`-o|--output <OUTPUT_DIRECTORY>`**
-
-  Каталог, в который будут помещаться собранные двоичные файлы. При указании этого параметра также необходимо определить `--framework`.
-
-* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
-
-  Указывает целевую среду выполнения. Список идентификаторов сред выполнения (RID) см. в [каталоге RID](../rid-catalog.md).
-
-* **`-v|--verbosity <LEVEL>`**
-
-  Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
-
-* **`--version-suffix <VERSION_SUFFIX>`**
-
-  Определяет суффикс версии для звездочки (`*`) в поле версия файла проекта. Формат соответствует рекомендациям в отношении версий NuGet.
-
----
+  Задает значение свойства `$(VersionSuffix)`, которое используется при сборке проекта. Работает, только если свойство `$(Version)` не задано. После этого параметру `$(Version)` присваиваются значения `$(VersionPrefix)` и `$(VersionSuffix)`, разделенные дефисом.
 
 ## <a name="examples"></a>Примеры
 
@@ -175,10 +132,10 @@ dotnet build [-h|--help]
   dotnet build --configuration Release
   ```
 
-* Сборка проекта и его зависимостей для определенной среды выполнения (в этом примере это Ubuntu 16.04):
+* Сборка проекта и его зависимостей для конкретной среды выполнения (в данном примере Ubuntu 18.04):
 
   ```console
-  dotnet build --runtime ubuntu.16.04-x64
+  dotnet build --runtime ubuntu.18.04-x64
   ```
 
 * Выполните сборку проекта и используйте указанный источник пакета NuGet во время операции восстановления (пакет SDK для .NET Core 2.0 и более поздних версий).

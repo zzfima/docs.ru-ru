@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: aea2715211ad03b763aae9cadc32e97d0e06d09e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 26e1fd4231964be5448229a6b3c7d90c0ba64499
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628835"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882515"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Рекомендации по реализации асинхронной модели, основанной на событиях
 Асинхронная модель на основе событий является эффективным средством для обеспечения асинхронной работы в классах на базе привычной семантики делегатов и событий. Чтобы внедрить асинхронную модель на основе событий, необходимо выполнить определенные требования относительно поведения. В следующих разделах описываются требования и рекомендации, которые следует учитывать при реализации класса, поддерживающего асинхронную модель на основе событий.  
@@ -118,7 +118,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - Перехватывайте любые исключения, возникающие в асинхронной операции, и назначайте их в качестве значения свойства <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType>.  
   
 ### <a name="threading-and-contexts"></a>Потоки и контексты  
- Для правильной работы вашего класса крайне важно, чтобы обработчики событий клиента вызывались в правильном потоке или контексте для заданной модели приложения, включая приложения Windows Forms и [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Доступно два важных вспомогательных класса, позволяющих проверить, правильно ли себя ведет ваш асинхронный класс при любой модели приложения: <xref:System.ComponentModel.AsyncOperation> и <xref:System.ComponentModel.AsyncOperationManager>.  
+ Для правильной работы вашего класса крайне важно, чтобы обработчики событий клиента вызывались в правильном потоке или контексте для заданной модели приложения, включая приложения Windows Forms и ASP.NET. Доступно два важных вспомогательных класса, позволяющих проверить, правильно ли себя ведет ваш асинхронный класс при любой модели приложения: <xref:System.ComponentModel.AsyncOperation> и <xref:System.ComponentModel.AsyncOperationManager>.  
   
  <xref:System.ComponentModel.AsyncOperationManager> предоставляет один метод <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, который возвращает <xref:System.ComponentModel.AsyncOperation>. Метод <em>имя_метода</em>**Async** вызывает <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, а класс использует возвращенное значение <xref:System.ComponentModel.AsyncOperation>, чтобы отследить время существования асинхронной задачи.  
   

@@ -1,15 +1,15 @@
 ---
-title: Задачи машинного обучения. Использование ML.NET
+title: Задачи машинного обучения
 description: Изучите возможности задач машинного обучения и связанных задач, поддерживаемых в ML.NET.
 ms.custom: seodec18
-ms.date: 04/12/2019
+ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: bfed9cf12f8d539c4327549e5305415ce096e022
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: ed6361fdcbca11c100ee5cae4ca76e152ddfba11
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613165"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063543"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Задачи машинного обучения в ML.NET
 
@@ -28,22 +28,36 @@ ms.locfileid: "59613165"
 
 Дополнительные сведения см. в [статье о двоичной классификации](https://en.wikipedia.org/wiki/Binary_classification) в Википедии.
 
-### <a name="binary-classification-training-algorithms"></a>Алгоритмы обучения двоичной классификации
+### <a name="binary-classification-trainers"></a>Алгоритмы обучения двоичной классификации
 
 Вы можете обучить модель двоичной классификации, используя следующие алгоритмы:
 
 * <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.PriorTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer>
-* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer> 
+* <xref:Microsoft.ML.Trainers.PriorTrainer> 
+* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
+
+### <a name="binary-classification-inputs-and-outputs"></a>Входные и выходные данные двоичной классификации
+
+Для получения наилучших результатов обучения двоичной классификации обучающие данные должны быть сбалансированы (т. е. число положительных и отрицательных обучающих данных должно быть одинаковым). Отсутствующие значения необходимо обработать до обучения.
+
+Входные данные столбца меток должны иметь тип <xref:System.Boolean>.
+Входные данные столбца функций должны быть вектором <xref:System.Single> фиксированного размера.
+
+Эти алгоритмы обучения выводят приведенные ниже столбцы.
+
+| Имя выходного столбца | Тип столбца | Описание|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Необработанная оценка, рассчитанная моделью.|
+| `PredictedLabel` | <xref:System.Boolean> | Прогнозируемая метка, зависящая от знака оценки. Отрицательная оценка соответствует значению `false`, а положительная — значению `true`.|
 
 ## <a name="multiclass-classification"></a>Многоклассовая классификация
 
@@ -58,17 +72,29 @@ ms.locfileid: "59613165"
 >[!NOTE]
 >В рамках стратегии one-vs.-rest обновляется любой [алгоритм обучения двоичной классификации](#binary-classification) для работы с многоклассовыми наборами данных. Дополнительные сведения см. в статье (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest) в Википедии.
 
-### <a name="multiclass-classification-training-algorithms"></a>Алгоритмы обучения многоклассовой классификации
+### <a name="multiclass-classification-trainers"></a>Алгоритмы обучения многоклассовой классификации
 
 Вы можете обучить модель многоклассовой классификации, используя следующие алгоритмы:
 
-* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer>
-* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
+* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer> 
+
+### <a name="multiclass-classification-inputs-and-outputs"></a>Входные и выходные данные многоклассовой классификации
+
+Входные данные столбца меток должны иметь тип [key](xref:Microsoft.ML.Data.KeyDataViewType).
+Столбец функций должен быть вектором <xref:System.Single> фиксированного размера.
+
+Этот алгоритм обучения выводит приведенные ниже данные.
+
+| Имя выходных данных | Тип | Описание|
+| -- | -- | -- |
+| `Score` | Вектор <xref:System.Single> | Оценки всех классов. Более высокое значение означает большую вероятность попадания в связанный класс. Если i-й элемент имеет самое большое значение, индекс прогнозируемой метки будет равен i. Обратите внимание, что индекс i отсчитывается от нуля. |
+| `PredictedLabel` | Тип [key](xref:Microsoft.ML.Data.KeyDataViewType) | Индекс прогнозируемой метки. Если его значение равно i, фактическая метка будет i-й категорией во входном типе метки с ключевым значением. |
 
 ## <a name="regression"></a>Регрессия
 
@@ -78,19 +104,29 @@ ms.locfileid: "59613165"
 * прогнозирование будущей цены акций на основе исторических данных и текущих тенденций рынка;
 * прогнозирование продаж товара в зависимости от рекламного бюджета.
 
-### <a name="regression-training-algorithms"></a>Алгоритмы обучения регрессии
+### <a name="regression-trainers"></a>Алгоритмы обучения регрессии
 
 Вы можете обучить модель регрессии, используя следующие алгоритмы:
 
+* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.OlsTrainer>
+* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer> 
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.OlsTrainer>
-* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer>
-* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
 * <xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>
-* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
+
+### <a name="regression-inputs-and-outputs"></a>Входные и выходные данные регрессии
+
+Входные данные столбца меток должны иметь тип <xref:System.Single>.
+
+Алгоритмы обучения для этой задачи выводят приведенные ниже данные.
+
+| Имя выходных данных | Тип | Описание|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Необработанное оценка, спрогнозированная моделью. |
 
 ## <a name="clustering"></a>Кластеризация
 
@@ -100,11 +136,22 @@ ms.locfileid: "59613165"
 * определение сегментов и демографических характеристик для клиентов, чтобы создавать целевые рекламные кампании;
 * определение категорий запасов по параметрам производства.
 
-### <a name="clustering-training-algorithms"></a>Алгоритмы обучения кластеризации
+### <a name="clustering-trainer"></a>Алгоритм обучения кластеризации
 
 Вы можете обучить модель кластеризации, используя следующие алгоритмы:
 
-* <xref:Microsoft.ML.Trainers.KMeansTrainer>
+* <xref:Microsoft.ML.Trainers.KMeansTrainer> 
+
+### <a name="clustering-inputs-and-outputs"></a>Входные и выходные данные кластеризации
+
+Входные данные функций должны иметь тип <xref:System.Single>. Метки не требуются.
+
+Этот алгоритм обучения выводит приведенные ниже данные.
+
+| Имя выходных данных | Тип | Описание|
+| -- | -- | -- |
+| `Score` | Вектор <xref:System.Single> | Расстояния от указанной точки данных до центроидов всех кластеров. |
+| `PredictedLabel` | Тип [key](xref:Microsoft.ML.Data.KeyDataViewType) | Индекс ближайшего кластера, спрогнозированный моделью. |
 
 ## <a name="anomaly-detection"></a>Обнаружение аномалий
 
@@ -121,11 +168,21 @@ ms.locfileid: "59613165"
 
 Так как аномалии по определению довольно-таки редкие события, со сборкой репрезентативной выборки данных, используемых для моделирования, могут быть трудности. Алгоритмы, включенные в эту категорию, специально разработаны для решения основных проблем разработки и обучения моделей с использованием несбалансированных наборов данных.
 
-### <a name="anomaly-detection-training-algorithms"></a>Алгоритмы обучения обнаружению аномалий
+### <a name="anomaly-detection-trainer"></a>Алгоритм обучения обнаружению аномалий
 
 Вы можете обучить модель обнаружения аномалий, используя следующие алгоритмы:
 
 * <xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>
+
+### <a name="anomaly-detection-inputs-and-outputs"></a>Входные и выходные данные обнаружения аномалий
+
+Входные данные функций должны быть вектором <xref:System.Single> фиксированного размера.
+
+Этот алгоритм обучения выводит приведенные ниже данные.
+
+| Имя выходных данных | Тип | Описание|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Неотрицательная неограниченная оценка, вычисленная моделью обнаружения аномалий |
 
 ## <a name="ranking"></a>Ранжирование
 
@@ -135,8 +192,20 @@ ms.locfileid: "59613165"
 
 Вы можете обучить модель ранжирования, используя следующие алгоритмы:
 
-* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>
 * <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer> 
+
+### <a name="ranking-input-and-outputs"></a>Входные и выходные данные ранжирования
+
+Входные данные метки должны иметь тип [key](xref:Microsoft.ML.Data.KeyDataViewType) или <xref:System.Single>. Значение метки определяет релевантность, где более высокие значения означают более высокую степень релевантности. Если метка имеет тип [key](xref:Microsoft.ML.Data.KeyDataViewType), индексом ключа будет значение релевантности, где наименьший индекс является минимально релевантным. Если метка имеет тип <xref:System.Single>, более высокие значения означают более высокую степень релевантности.
+
+Данные должны быть вектором <xref:System.Single> фиксированного размера, а входной столбец группы строк должен иметь тип [key](xref:Microsoft.ML.Data.KeyDataViewType).
+
+Этот алгоритм обучения выводит приведенные ниже данные.
+
+| Имя выходных данных | Тип | Описание|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Неограниченная оценка, вычисленная моделью для определения прогноза |
 
 ## <a name="recommendation"></a>Рекомендация
 

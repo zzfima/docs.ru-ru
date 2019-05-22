@@ -1,23 +1,23 @@
 ---
-title: Как выполнить Руководство по программированию на C#. Итерация дерева каталогов
+title: Практическое руководство. Руководство по программированию на C#. Итерация дерева каталогов
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 29f52728f0bfa9e78253fc2b39583e89f53198d6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 070b409a7d1cc755451414d24ca2fa6002638dc0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976334"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585789"
 ---
-# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Итерация дерева каталогов
+# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Итерация дерева каталогов
 Под фразой "итерация дерева каталога" подразумевается доступ к каждому файлу в каждом вложенном подкаталоге в заданной корневой папке на любую глубину. Необязательно открывать каждый файл. Можно просто извлечь имя файла или подкаталога в виде значения `string` или получить дополнительную информацию в форме объекта <xref:System.IO.FileInfo?displayProperty=nameWithType> или <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  В Windows термины "каталог" и "папка" являются взаимозаменяемыми. В большинстве документации и в текстах пользовательского интерфейса используется термин "папка", но в библиотеке классов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] используется термин "каталог".  
+>  В Windows термины "каталог" и "папка" являются взаимозаменяемыми. В большей части документации и текста пользовательского интерфейса используется термин "папка", но библиотека классов .NET Framework использует термин "каталог".  
   
  В простейшем случае, когда точно известно, что имеются права доступа ко всем каталогам в указанном корне, можно использовать флаг `System.IO.SearchOption.AllDirectories`. Этот флаг возвращает все вложенные подкаталоги, соответствующие заданному шаблону. В приведенном ниже примере показано, как использовать этот флаг.  
   

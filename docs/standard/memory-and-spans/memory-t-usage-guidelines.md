@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e942b3f6f6572c05d42a0267f98e6c876a113616
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: 728f360d2e8f93ebdf2b17fec39477b95ed11357
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504344"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063281"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Рекомендации по использованию структур Memory\<T> и Span\<T>
 
@@ -86,7 +86,7 @@ class Program
 
 - Экземпляр <xref:System.Buffers.IMemoryOwner%601> ссылается на метод `Main`, поэтому метод `Main` является владельцем буфера.
 
-- Методы `WriteInt32ToBuffer` и `DisplayBufferToConsole` принимают xref:System.Memory%601 > как общедоступный API. Таким образом, они являются объектами-получателями буфера, выступая в этой роли поочередно.
+- Методы `WriteInt32ToBuffer` и `DisplayBufferToConsole` принимают <xref:System.Memory%601> как общедоступный API-интерфейс. Таким образом, они являются объектами-получателями буфера, выступая в этой роли поочередно.
 
 При этом метод `WriteInt32ToBuffer` позволяет выполнить запись значения в буфер, а метод `DisplayBufferToConsole` — нет. Чтобы отобразить этот факт, последний мог бы принять аргумент типа <xref:System.ReadOnlyMemory%601>. Дополнительную информацию о <xref:System.ReadOnlyMemory%601> см. в разделе [Правило 2. Используйте ReadOnlySpan\<T> или ReadOnlyMemory\<T>, если буфер должен быть доступен только для чтения](#rule-2).
 
@@ -116,7 +116,7 @@ class Program
 
 **Правило 1. Для синхронных API по возможности используйте Span\<T> вместо Memory\<T> в качестве параметра**
 
-Структура <xref:System.Span%601> более эффективна, чем <xref:System.Memory%601>, и обеспечивает больше возможностей по работе со смежными буферами памяти. <xref:System.Span%601> также обеспечивает лучшую производительность, чем <xref:System.Memory%601>>. Наконец, вы можете использовать свойство <xref:System.Memory%601.Span?displayProperty=nameWithType> для преобразования экземпляра <xref:System.Memory%601> в <xref:System.Span%601>, тогда как нельзя преобразовать Span\<T > в Memory\<T>. Поэтому, если у вызывающих объектов есть экземпляр <xref:System.Memory%601>, они в любом случае смогут вызвать методы с помощью параметров <xref:System.Span%601>.
+Структура <xref:System.Span%601> более эффективна, чем <xref:System.Memory%601>, и обеспечивает больше возможностей по работе со смежными буферами памяти. <xref:System.Span%601> также обеспечивает лучшую производительность, чем <xref:System.Memory%601>. Наконец, вы можете использовать свойство <xref:System.Memory%601.Span?displayProperty=nameWithType> для преобразования экземпляра <xref:System.Memory%601> в <xref:System.Span%601>, тогда как нельзя преобразовать Span\<T > в Memory\<T>. Поэтому, если у вызывающих объектов есть экземпляр <xref:System.Memory%601>, они в любом случае смогут вызвать методы с помощью параметров <xref:System.Span%601>.
 
 Использование параметра типа <xref:System.Span%601> вместо типа <xref:System.Memory%601> также помогает выполнить правильную реализацию метода использования. Вам нужно обеспечить автоматические проверки времени компиляции, гарантирующие, что доступ к буферу осуществляется только в период его аренды методом (подробнее об этом далее).
 
@@ -246,7 +246,7 @@ class Person
 
 **Правило 9. Если вы создаете оболочку для синхронного метода p/invoke, API должен принимать Span\<T> в качестве параметра.**
 
-В соответствии с правилом 1, <xref:System.Span%601> — это тот тип, который обычно следует использовать для синхронных API. Вы можете закрепить экземпляры <xref:System.Span%601>\<T> с помощью ключевого слова [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md), как показано в следующем примере.
+В соответствии с правилом 1, <xref:System.Span%601> — это тот тип, который обычно следует использовать для синхронных API. Вы можете закрепить экземпляры <xref:System.Span%601> с помощью ключевого слова [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md), как показано в следующем примере.
 
 ```csharp
 using System.Runtime.InteropServices;

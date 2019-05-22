@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: de621b26334bbc9679ba7e48a9d5a0cbaec67eab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b666c915506872930b16c1c5890de24e9cbe4f7a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427322"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880570"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Справочник по C#. Логические операторы
 
@@ -47,7 +47,7 @@ ms.locfileid: "59427322"
 - Бинарные [`&` (логическое И)](#logical-and-operator-), [`|` (логическое ИЛИ)](#logical-or-operator-), а также [`^` (логическое исключающее ИЛИ)](#logical-exclusive-or-operator-) операторы. Эти операторы всегда обрабатывают оба операнда.
 - Бинарные [`&&` (условное логическое И)](#conditional-logical-and-operator-) и [`||` (условное логическое ИЛИ)](#conditional-logical-or-operator-) операторы. Эти операторы вычисляют второй операнд, только если это необходимо.
 
-Для операндов типа [integral](../keywords/integral-types-table.md) операторы `&`, `|` и `^` выполняют побитовые логические операции.
+Для операндов [целочисленных](../keywords/integral-types-table.md) типов операторы `&`, `|` и `^` выполняют побитовые логические операции. Дополнительные сведения см. в разделе [Побитовые операторы и операторы сдвига](bitwise-and-shift-operators.md).
 
 ## <a name="logical-negation-operator-"></a>Оператор логического отрицания !
 
@@ -67,7 +67,7 @@ ms.locfileid: "59427322"
 
 [Условный оператор логического И](#conditional-logical-and-operator-) `&&` также вычисляет логическое И для своих операндов, но он не вычисляет второй операнд, если первый операнд имеет значение `false`.
 
-Для операндов оператор типа integral оператор `&` выполняет [побитовое вычисление логического И](and-operator.md#integer-logical-bitwise-and-operator). Унарный оператор `&` является оператором [AddressOf](and-operator.md#unary-address-of-operator).
+Для операндов целочисленного типа оператор `&` вычисляет [побитовое логическое И](bitwise-and-shift-operators.md#logical-and-operator-) своих операндов. Унарный оператор `&` является оператором [AddressOf](pointer-related-operators.md#address-of-operator-).
 
 ## <a name="logical-exclusive-or-operator-"></a>Оператор логического исключения ИЛИ ^
 
@@ -75,7 +75,7 @@ ms.locfileid: "59427322"
 
 [!code-csharp-interactive[logical exclusive OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Xor)]
 
-Для операндов типа integral оператор `^` выполняет [побитовое вычисление исключающего логического ИЛИ](xor-operator.md).
+Для операндов целочисленного типа оператор `^` вычисляет [побитовое логическое исключающее ИЛИ](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) своих операндов.
 
 ## <a name="logical-or-operator-"></a>Оператор логического ИЛИ |
 
@@ -89,7 +89,7 @@ ms.locfileid: "59427322"
 
 [Условный оператор логического ИЛИ](#conditional-logical-or-operator-) `||` также вычисляет логическое ИЛИ для своих операндов, но не вычисляет второй операнд, если первый операнд имеет значение `true`.
 
-Для операндов типа integral оператор `|` выполняет [побитовое вычисление логического ИЛИ](or-operator.md).
+Для операндов целочисленного типа оператор `|` вычисляет [побитовое логическое ИЛИ](bitwise-and-shift-operators.md#logical-or-operator-) своих операндов.
 
 ## <a name="conditional-logical-and-operator-ampamp"></a>Условный оператор логического И &amp;&amp;
 
@@ -187,9 +187,11 @@ x = x op y
 - [Оператор логического отрицания](~/_csharplang/spec/expressions.md#logical-negation-operator)
 - [Логические операторы](~/_csharplang/spec/expressions.md#logical-operators)
 - [Условные логические операторы](~/_csharplang/spec/expressions.md#conditional-logical-operators)
+- [Составное присваивание](~/_csharplang/spec/expressions.md#compound-assignment)
 
 ## <a name="see-also"></a>См. также
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Операторы в C#](index.md)
+- [Побитовые операторы и операторы сдвига](bitwise-and-shift-operators.md)

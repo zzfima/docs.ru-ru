@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34d134d0d7ba1d131ded8d8a6eee818b84c86508
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788002"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003748"
 ---
 # <a name="clr-etw-providers"></a>Поставщики ETW среды CLR
 В общеязыковой среде выполнения (CLR) представлены два поставщика: поставщик среды выполнения и поставщик очистки.  
   
  Поставщик среды выполнения вызывает события в зависимости от того, какие ключевые слова (категории событий) активированы. Например, с помощью ключевого слова `LoaderKeyword` можно активировать сбор событий загрузчика.  
   
- События трассировки событий Windows (ETW) записываются в файл с расширением ETL, который затем при необходимости может быть преобразован в файлы значений, разделенных запятыми (CSV). Дополнительные сведения о преобразовании ETL-файлов в файлы с расширением CSV см. в разделе [Контроль ведения журнала .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
+ События трассировки для Windows (ETW) записываются в файл с расширением ETL-файл, который может позже быть преобразован в файлы с разделителями-запятыми (.csv) при необходимости. Дополнительные сведения о преобразовании ETL-файлов в файлы с расширением CSV см. в разделе [Контроль ведения журнала .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
   
 ## <a name="the-runtime-provider"></a>Поставщик среды выполнения  
  Поставщик среды выполнения является основным поставщиком трассировки событий Windows в среде CLR.  

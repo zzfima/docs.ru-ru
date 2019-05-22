@@ -1,17 +1,21 @@
 ---
 title: Команда dotnet add package
 description: Команду dotnet add package удобно использовать для добавления ссылки на пакет NuGet в проект.
-ms.date: 12/04/2018
-ms.openlocfilehash: 159b208feafb82e267629ea47dcef02d6b575055
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 04/24/2019
+ms.openlocfilehash: 79059e062368fc9c4b6b8cb31740fdf13ea2b9ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170006"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751408"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
+**Эта статья относится к ✓** SDK для .NET Core 1.x и более поздних версий
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -78,11 +82,11 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 * **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  Восстанавливает пакет в указанный каталог.
+  Каталог, в который нужно восстановить пакеты.
 
 * **`-s|--source <SOURCE>`**
 
-  Указывает конкретный источник пакета NuGet во время операции восстановления.
+  Источник пакета NuGet для использования в ходе операции восстановления.
 
 * **`-v|--version <VERSION>`**
 

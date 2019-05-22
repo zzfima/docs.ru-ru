@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05812d7bdda33f6fa06a6aae7129d1dc73144e37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aadb478b507cdd5d2828a2d224fbca1dc32b21b3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751897"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586453"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>Реализация классом XslTransform XSLT-процессора
 
 > [!NOTE]
 > Класс <xref:System.Xml.Xsl.XslTransform> в версии [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] устарел. Можно выполнять XSLT-преобразование, используя класс <xref:System.Xml.Xsl.XslCompiledTransform>. См. дополнительные сведения об [использовании класса XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) и [миграции из класса XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).
 
-Класс <xref:System.Xml.Xsl.XslTransform> является XSLT-процессором, реализующим рекомендации по XSL-преобразованиям (XSLT) версии 1.0. Метод <xref:System.Xml.Xsl.XslTransform.Load%2A> находит и считывает таблицы стилей, а метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> преобразует исходный документ. В качестве исходного документа для метода <xref:System.Xml.XPath.IXPathNavigable> может служить любое хранилище, реализующее интерфейс <xref:System.Xml.Xsl.XslTransform>. Платформа [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в настоящее время реализует интерфейс <xref:System.Xml.XPath.IXPathNavigable> в классах <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument> и <xref:System.Xml.XPath.XPathDocument>, поэтому все они могут использоваться в качестве источника документов для преобразования.
+Класс <xref:System.Xml.Xsl.XslTransform> является XSLT-процессором, реализующим рекомендации по XSL-преобразованиям (XSLT) версии 1.0. Метод <xref:System.Xml.Xsl.XslTransform.Load%2A> находит и считывает таблицы стилей, а метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> преобразует исходный документ. В качестве исходного документа для метода <xref:System.Xml.XPath.IXPathNavigable> может служить любое хранилище, реализующее интерфейс <xref:System.Xml.Xsl.XslTransform>. Платформа .NET Framework в настоящее время реализует интерфейс <xref:System.Xml.XPath.IXPathNavigable> в классах <xref:System.Xml.XmlDocument> <xref:System.Xml.XmlDataDocument> и <xref:System.Xml.XPath.XPathDocument>, поэтому все они могут использоваться в качестве источника документов для преобразования.
 
-Объект <xref:System.Xml.Xsl.XslTransform> в платформе [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] поддерживает только спецификацию XSLT 1.0, определенную со следующим пространством имен:
+Объект <xref:System.Xml.Xsl.XslTransform> в платформе .NET Framework поддерживает только спецификацию XSLT 1.0, определенную со следующим пространством имен:
 
 ```xml
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
@@ -213,7 +213,7 @@ print_root.xsl
 
 ## <a name="migration-of-xslt-from-net-framework-version-10-to-net-framework-version-11"></a>Миграция XSLT с платформы .NET Framework версии 1.0 на платформу .NET Framework версии 1.1
 
-В следующей таблице показаны устаревшие методы платформы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.0 и новые методы платформы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.1 для метода <xref:System.Xml.Xsl.XslTransform.Load%2A>. Новые методы позволяют ограничить разрешения таблицы стилей, указывая свидетельство.
+В следующей таблице показаны устаревшие методы платформы .NET Framework версии 1.0 и новые методы платформы .NET Framework версии 1.1 для метода <xref:System.Xml.Xsl.XslTransform.Load%2A>. Новые методы позволяют ограничить разрешения таблицы стилей, указывая свидетельство.
 
 |Устаревшие методы Load платформы .NET Framework версии 1.0|Заменяющие их методы Load платформы .NET Framework версии 1.1|
 |------------------------------------------------------|---------------------------------------------------------|
@@ -235,7 +235,7 @@ print_root.xsl
 |Void Transform(IXPathNavigable input, XsltArgumentList args, Stream output)|Void Transform(IXPathNavigable input, XsltArgumentList args, Stream output, XmlResolver resolver)|
 |Void Transform(String input, String output);|Void Transform(String input, String output, XmlResolver resolver);|
 
-Свойство <xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> устарело в платформе [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.1. Используйте вместо него новые перегрузки <xref:System.Xml.Xsl.XslTransform.Transform%2A>, принимающие объект <xref:System.Xml.XmlResolver>.
+Свойство <xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> в платформе .NET Framework версии 1.1 является устаревшим. Используйте вместо него новые перегрузки <xref:System.Xml.Xsl.XslTransform.Transform%2A>, принимающие объект <xref:System.Xml.XmlResolver>.
 
 ## <a name="see-also"></a>См. также
 

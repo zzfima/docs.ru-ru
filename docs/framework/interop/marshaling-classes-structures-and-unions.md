@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2411b69dac6ef8945336a4c4e014cbf6687f702a
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113728"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469729"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Маршалинг классов, структур и объединений
 Классы и структуры в .NET Framework похожи. И те и другие могут иметь поля, свойства и события. Они также могут иметь статические и нестатические методы. Примечательным отличием является то, что структуры являются типами значений, а классы — ссылочными типами.  
@@ -50,19 +50,19 @@ ms.locfileid: "59113728"
   
  В примере используются следующие неуправляемые функции, показанные с исходными объявлениями:  
   
--   функция **TestStructInStruct**, экспортированная из PinvokeLib.dll;  
+- функция **TestStructInStruct**, экспортированная из PinvokeLib.dll;  
   
     ```  
     int TestStructInStruct(MYPERSON2* pPerson2);  
     ```  
   
--   функция **TestStructInStruct3**, экспортированная из PinvokeLib.dll;  
+- функция **TestStructInStruct3**, экспортированная из PinvokeLib.dll;  
   
     ```  
     void TestStructInStruct3(MYPERSON3 person3);  
     ```  
   
--   функция **TestArrayInStruct**, экспортированная из PinvokeLib.dll.  
+- функция **TestArrayInStruct**, экспортированная из PinvokeLib.dll.  
   
     ```  
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
@@ -98,23 +98,23 @@ typedef struct _MYARRAYSTRUCT
   
  Управляемые структуры `MyPerson`, `MyPerson2`, `MyPerson3` и `MyArrayStruct` обладают следующими характеристиками:  
   
--   Структура `MyPerson` содержит только члены-строки. Поле [CharSet](specifying-a-character-set.md) задает формат строк ANSI при передаче строки в неуправляемую функцию.  
+- Структура `MyPerson` содержит только члены-строки. Поле [CharSet](specifying-a-character-set.md) задает формат строк ANSI при передаче строки в неуправляемую функцию.  
   
--   `MyPerson2` содержит указатель **IntPtr** на структуру `MyPerson`. Тип **IntPtr** заменяет исходный указатель на неуправляемую структуру, так как приложения .NET Framework не используют указатели, если код не помечен как **небезопасный**.  
+- `MyPerson2` содержит указатель **IntPtr** на структуру `MyPerson`. Тип **IntPtr** заменяет исходный указатель на неуправляемую структуру, так как приложения .NET Framework не используют указатели, если код не помечен как **небезопасный**.  
   
--   Структура `MyPerson3` содержит структуру `MyPerson` в качестве внедренной. Внедренную структуру можно выровнять путем помещения ее элементов прямо в основную структуру, или ее можно оставить внедренной, как показано в примере.  
+- Структура `MyPerson3` содержит структуру `MyPerson` в качестве внедренной. Внедренную структуру можно выровнять путем помещения ее элементов прямо в основную структуру, или ее можно оставить внедренной, как показано в примере.  
   
--   Структура `MyArrayStruct` содержит массив целочисленных значений. Атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute> задает для перечисления <xref:System.Runtime.InteropServices.UnmanagedType> значение **ByValArray**, которое используется для указания количества элементов в массиве.  
+- Структура `MyArrayStruct` содержит массив целочисленных значений. Атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute> задает для перечисления <xref:System.Runtime.InteropServices.UnmanagedType> значение **ByValArray**, которое используется для указания количества элементов в массиве.  
   
  Для всех структур в этом примере применяется атрибут <xref:System.Runtime.InteropServices.StructLayoutAttribute>, гарантирующий последовательное размещение элементов в памяти в порядке их появления.  
   
  Класс `LibWrap` содержит управляемые прототипы методов `TestStructInStruct`, `TestStructInStruct3` и `TestArrayInStruct`, вызываемые классом `App`. Каждый прототип объявляет один параметр указанным ниже способом.  
   
--   `TestStructInStruct` объявляет в качестве своего параметра ссылку на тип `MyPerson2`.  
+- `TestStructInStruct` объявляет в качестве своего параметра ссылку на тип `MyPerson2`.  
   
--   `TestStructInStruct3` в качестве своего параметра объявляет тип `MyPerson3` и передает параметр по значению.  
+- `TestStructInStruct3` в качестве своего параметра объявляет тип `MyPerson3` и передает параметр по значению.  
   
--   `TestArrayInStruct` объявляет в качестве своего параметра ссылку на тип `MyArrayStruct`.  
+- `TestArrayInStruct` объявляет в качестве своего параметра ссылку на тип `MyArrayStruct`.  
   
  Структуры, выступающие в роли аргументов методов, передаются по значению, если параметр не содержит ключевого слова **ref** (**ByRef** в Visual Basic). Например, метод `TestStructInStruct` передает в неуправляемый код ссылку (значение адреса) на объект типа `MyPerson2`. Для работы со структурой, на которую указывает `MyPerson2`, в примере с помощью методов <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A?displayProperty=nameWithType> и <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> создается буфер заданного размера и возвращается его адрес. Далее в неуправляемый буфер копируется содержимое управляемой структуры. Наконец, используются метод <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A?displayProperty=nameWithType> для маршалинга данных из неуправляемого буфера в управляемый объект и метод <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A?displayProperty=nameWithType> для освобождения неуправляемого блока памяти.  
   
@@ -133,7 +133,7 @@ typedef struct _MYARRAYSTRUCT
   
  В примере FindFile используются следующие неуправляемые функции, показанные с исходными объявлениями:  
   
--   функция **FindFirstFile**, экспортированная из Kernel32.dll.  
+- функция **FindFirstFile**, экспортированная из Kernel32.dll.  
   
     ```  
     HANDLE FindFirstFile(LPCTSTR lpFileName, LPWIN32_FIND_DATA lpFindFileData);  
@@ -176,7 +176,7 @@ typedef struct _WIN32_FIND_DATA
   
  В примере используются следующие неуправляемые функции, показанные с исходными объявлениями:  
   
--   функция **TestUnion**, экспортированная из PinvokeLib.dll.  
+- функция **TestUnion**, экспортированная из PinvokeLib.dll.  
   
     ```  
     void TestUnion(MYUNION u, int type);  
@@ -219,7 +219,7 @@ union MYUNION2
   
  В примере используется следующая неуправляемая функция, показанная с исходным объявлением:  
   
--   функция **GetSystemTime**, экспортированная из Kernel32.dll.  
+- функция **GetSystemTime**, экспортированная из Kernel32.dll.  
   
     ```  
     VOID GetSystemTime(LPSYSTEMTIME lpSystemTime);  
@@ -266,17 +266,17 @@ typedef struct _MYSTRSTRUCT2
   
  Класс `MyStruct` содержит строковый объект из символов ANSI. Поле <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> определяет формат ANSI. `MyUnsafeStruct` — это структура, содержащая тип <xref:System.IntPtr> вместо строки.  
   
- Класс `LibWrap` содержит перегруженный метод прототипа `TestOutArrayOfStructs`. Если в качестве параметра метод объявляет указатель, класс должен быть помечен зарезервированным словом `unsafe`. Так как в [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] нельзя использовать небезопасный код, перегруженный метод, модификатор unsafe и структура `MyUnsafeStruct` оказываются ненужными.  
+ Класс `LibWrap` содержит перегруженный метод прототипа `TestOutArrayOfStructs`. Если в качестве параметра метод объявляет указатель, класс должен быть помечен зарезервированным словом `unsafe`. Так как Visual Basic не может использовать небезопасный код, перегруженный метод, модификатор unsafe и структуры `MyUnsafeStruct` не нужны.  
   
  Класс `App` реализует метод `UsingMarshaling`, который выполняет все задачи, необходимые для передачи массива. Чтобы указать, что данные передаются от вызываемого объекта к вызывающему, массив помечается зарезервированным словом `out` (`ByRef` в Visual Basic). Реализация использует следующие методы класса <xref:System.Runtime.InteropServices.Marshal>:  
   
--   метод <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> для маршалинга данных из неуправляемого буфера в управляемый объект;  
+- метод <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> для маршалинга данных из неуправляемого буфера в управляемый объект;  
   
--   метод <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> для освобождения памяти, зарезервированной для строк структуры;  
+- метод <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> для освобождения памяти, зарезервированной для строк структуры;  
   
--   метод <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> для освобождения памяти, зарезервированной для массива.  
+- метод <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> для освобождения памяти, зарезервированной для массива.  
   
- Как упоминалось выше, в C# разрешено использовать небезопасный код, а в [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] — нет. В примере кода C# `UsingUnsafePointer` является альтернативной реализацией метода, в которой для обратной передачи массива, содержащего структуру `MyUnsafeStruct`, вместо класса <xref:System.Runtime.InteropServices.Marshal> используются указатели.  
+ Как упоминалось ранее, C# допускает небезопасный код, который Visual Basic не поддерживает. В примере кода C# `UsingUnsafePointer` является альтернативной реализацией метода, в которой для обратной передачи массива, содержащего структуру `MyUnsafeStruct`, вместо класса <xref:System.Runtime.InteropServices.Marshal> используются указатели.  
   
 ### <a name="declaring-prototypes"></a>Объявление прототипов  
  [!code-cpp[Conceptual.Interop.Marshaling#20](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/outarrayofstructs.cpp#20)]

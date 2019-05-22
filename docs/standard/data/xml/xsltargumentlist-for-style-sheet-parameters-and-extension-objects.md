@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3afbffcbbaa5e8398a9ab10c762e60305cfc164b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 11cf0b694d75836ad903edeafc79a55ec4612b45
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615237"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586461"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList для параметров таблицы стилей и объектов расширения
 Класс <xref:System.Xml.Xsl.XsltArgumentList> содержит параметры языка XSLT и объекты расширения XSLT. При передаче в метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> эти параметры и объекты расширения могут вызываться из таблиц стилей.  
@@ -36,7 +36,7 @@ ms.locfileid: "64615237"
 ## <a name="xslt-style-sheet-parameters"></a>Параметры таблицы стилей XSLT  
  Параметры XSLT добавляются в <xref:System.Xml.Xsl.XsltArgumentList> с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>. В это время с объектом параметра связываются полное имя и URI-код пространства имен.  
   
- Объект параметра должен соответствовать типу W3C. В следующей таблице показано соответствие типов W3C и классов (типов) [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Также показано, является ли тип W3C типом XPath или типом XSLT.  
+ Объект параметра должен соответствовать типу W3C. В следующей таблице показано соответствие типов W3C и классов (типов) .NET Framework. Также показано, является ли тип W3C типом XPath или типом XSLT.  
   
 |Тип W3C|Эквивалентный класс (тип) .NET Framework|Тип XPath или тип XSLT|  
 |--------------|----------------------------------------------|-----------------------------|  

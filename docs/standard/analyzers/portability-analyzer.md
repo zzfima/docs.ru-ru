@@ -1,15 +1,15 @@
 ---
 title: Анализатор переносимости .NET
 description: Сведения о том, как применять анализатор переносимости .NET для оценки переносимости кода в разных реализациях .NET, включая .NET Core, .NET Standard, UWP и Xamarin.
-ms.date: 07/26/2017
+ms.date: 04/26/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: bd92e39a7b53e2807aff687f6dfbf71be34a506d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7de6aa72b2d30c3e54d2ddf9a2d951688571d654
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717652"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063447"
 ---
 # <a name="the-net-portability-analyzer"></a>Анализатор переносимости .NET
 
@@ -19,28 +19,28 @@ ms.locfileid: "57717652"
 
 * [.NET Core](../../core/index.md). Имеет модульную архитектуру, использует сценарии параллельного выполнения и поддерживает работу на различных платформах. Принцип параллелизма позволяет внедрять новые версии .NET Core, не нарушая функционирования других приложений.
 * [ASP.NET Core](/aspnet/core): представляет собой современную веб-платформу, созданную на основе .NET Core и в связи с этим предоставляющую разработчикам те же преимущества.
-* [Универсальная платформа Windows](https://devblogs.microsoft.com/dotnet/net-native-performance/). Способствует повышению производительности приложений из Магазина Windows, работающих на компьютерах с архитектурой x64 и ARM, за счет статический компиляции .NET Native. 
+* [Универсальная платформа Windows](/uwp). Способствует повышению производительности приложений из Магазина Windows, работающих на компьютерах с архитектурой x64 и ARM, за счет статический компиляции .NET Native. 
 * Платформа .NET Core и ее расширения. Включает API .NET Core наряду с другими API в экосистеме .NET, такие как WCF, ASP.NET Core, FSharp и Azure.
 * Платформа .NET Standard и ее расширения. Включает API .NET Standard наряду с другими API в экосистеме .NET, такие как WCF, ASP.NET Core, FSharp и Azure.
 
-## <a name="how-to-use-portability-analyzer"></a>Как использовать анализатор переносимости
+## <a name="how-to-use-the-portability-analyzer"></a>Как использовать анализатор переносимости
 
-Чтобы начать пользоваться анализатором переносимости .NET, скачайте и установите расширение из [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Оно работает в Visual Studio 2015 и Visual Studio 2017. Его можно настроить в Visual Studio, выбрав **Анализировать** > **Portability Analyzer Settings** (Параметры анализатора переносимости) и указав целевые платформы.
+Чтобы начать пользоваться анализатором переносимости .NET, скачайте и установите расширение из [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Оно работает в Visual Studio 2017 и более поздних версиях. Его можно настроить в Visual Studio, выбрав **Анализировать** > **Portability Analyzer Settings** (Параметры анализатора переносимости) и указав целевые платформы.
 
 ![Снимок экрана анализатора переносимости](./media/portability-analyzer/portability-screenshot.png)
 
 Чтобы проанализировать весь проект, щелкните его правой кнопкой мыши в **обозревателе решений** и выберите пункт **Analyze Assembly Portability** (Анализировать переносимость сборки). Или в меню **Анализ** выберите **Анализировать переносимость сборки**. После этого выберите исполняемый файл или DLL-файл проекта.
 
-![Обозреватель решений переносимости](./media/portability-analyzer/portability-solution-explorer.png)
+![Анализатор переносимости из обозревателя решений](./media/portability-analyzer/portability-solution-explorer.png)
 
 После выполнения анализа вы увидите отчет о переносимости .NET. В списке отображаются только типы, которые не поддерживаются целевой платформой. Рекомендации можно просмотреть на вкладке **Сообщения** в области **Список ошибок**. С вкладки **Сообщения** можно также напрямую перейти к проблемным областям.
 
 ![Отчет о переносимости](./media/portability-analyzer/portability-report.png)
 
-Не хотите использовать Visual Studio? Вы также можете запустить анализатор переносимости из командной строки. Просто скачайте [API анализатора переносимости](https://www.microsoft.com/download/details.aspx?id=42678).
+Если вы не хотите использовать Visual Studio, можно использовать анализатор переносимости из командной строки. Просто скачайте анализатор переносимости API из репозитория [Microsoft/dotnet-apiport](https://github.com/Microsoft/dotnet-apiport/releases).
 
-*   Для анализа текущего каталога выполните следующую команду: `\...\ApiPort.exe analyze -f .`.
-*   Для анализа заданного списка DLL-файлов выполните следующую команду: `\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`.
+* Для анализа текущего каталога выполните следующую команду: `\...\ApiPort.exe analyze -f .`.
+* Для анализа заданного списка DLL-файлов выполните следующую команду: `\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`.
 
 Отчет о переносимости .NET сохраняется в файле Excel (*XLSX*) в текущем каталоге. Дополнительные сведения указаны на вкладке **Details** (Подробности) в книге Excel.
 

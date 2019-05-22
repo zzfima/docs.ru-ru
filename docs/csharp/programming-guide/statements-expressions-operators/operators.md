@@ -1,18 +1,18 @@
 ---
 title: Руководство по программированию на C#. Операторы
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 04/30/2019
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fd10999066f599d819ef188e09028c64c6a5e9e6
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307478"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064045"
 ---
 # <a name="operators-c-programming-guide"></a>Операторы (Руководство по программированию на C#)
 
@@ -26,108 +26,19 @@ ms.locfileid: "59307478"
   
  [!code-csharp[csProgGuideStatements#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#6)]  
   
-## <a name="operators-evaluation-and-operator-precedence"></a>Операторы, вычисление выражений и приоритет операторов
+Операнд может быть допустимым выражением, представляющим собой код любой длины, а также может содержать любое число вложенных выражений. В выражении, содержащем несколько операторов, порядок применения операторов определяется *приоритетом операторов*, *ассоциативностью* и скобками.  
 
- Операнд может быть допустимым выражением, представляющим собой код любой длины, а также может содержать любое число вложенных выражений. В выражении, содержащем несколько операторов, порядок применения операторов определяется *приоритетом операторов*, *ассоциативностью* и скобками.  
+## <a name="operator-precedence"></a>Приоритет операторов
   
- Каждый оператор имеет определенный приоритет. В выражении, содержащем несколько операторов с разными уровнями приоритета, порядок вычисления операторов определяется их приоритетом. Например, в следующем операторе переменной `n1`присваивается значение 3.  
-  
- `n1 = 11 - 2 * 4;`  
-  
- Сначала выполняется умножение, так как оно имеет приоритет над вычитанием.  
-  
- В следующей таблице операторы разделены на категории на основе типа выполняемых операций. Категории указаны в порядке приоритета.  
-  
- **Основные операторы**  
-  
-|Выражение|Описание|  
-|----------------|-----------------|  
-|x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|Доступ к членам<br /><br /> Условный доступ к членам|  
-|f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|Вызов метода и делегата|  
-|a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)<br /><br /> a?[x]|Доступ к массиву и индексатору<br /><br /> Условный доступ к массиву и индексатору|  
-|x[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)|Постфиксный инкремент|  
-|x[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)|Постфиксный декремент|  
-|[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)|Создание объекта и делегата|  
-|`new` T(...){...}|Создание объекта с инициализатором. См. раздел [Инициализаторы объектов и коллекций](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).|  
-|`new` {...}|Анонимный инициализатор объекта. См. раздел [Анонимные типы](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).|  
-|`new` T[...]|Создание массива. См. раздел [Массивы](../../../csharp/programming-guide/arrays/index.md).|  
-|[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)|Получение объекта System.Type для T|  
-|[checked](../../../csharp/language-reference/keywords/checked.md)(x)|Вычисление выражения в проверенном контексте|  
-|[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)|Вычисление выражения в непроверенном контексте|  
-|[default](../../../csharp/language-reference/keywords/default.md) (T)|Получение значения по умолчанию для типа T|  
-|[delegate](../../../csharp/language-reference/keywords/delegate.md) {}|Анонимная функция (анонимный метод)|  
-  
- **Унарные операторы**  
-  
-|Выражение|Описание|  
-|----------------|-----------------|  
-|[+](../../../csharp/language-reference/operators/addition-operator.md)x|идентификации|  
-|[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Отрицание|  
-|[\!](../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)x|Логическое отрицание|  
-|[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Поразрядное отрицание|  
-|[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|Префиксный инкремент|  
-|[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|Префиксный декремент|  
-|[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|Явное преобразование x в тип T|  
-  
- **Мультипликативные операторы**  
-  
-|Выражение|Описание|  
-|----------------|-----------------|  
-|[*](../../../csharp/language-reference/operators/arithmetic-operators.md#multiplication-operator-)|Умножение|  
-|[/](../../../csharp/language-reference/operators/arithmetic-operators.md#division-operator-)|Деление|  
-|[%](../../../csharp/language-reference/operators/arithmetic-operators.md#remainder-operator-)|Остаток|  
-  
- **Аддитивные операторы**  
-  
-|Выражение|Описание|  
-|----------------|-----------------|  
-|x [+](../../../csharp/language-reference/operators/addition-operator.md) y|Сложение, объединение строк, объединение делегатов|  
-|x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y|Вычитание, удаление делегатов|  
-  
- **Операторы сдвига**  
-  
-|Выражение|Описание|  
-|----------------|-----------------|  
-|x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|Сдвиг влево|  
-|x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|Сдвиг вправо|  
-  
- **Относительные операторы и операторы типов**  
-  
-|Выражение|Описание|  
-|----------------|-----------------|  
-|x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y|Меньше|  
-|x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y|Больше|  
-|x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y|Меньше или равно|  
-|x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y|Больше или равно|  
-|x [is](../../../csharp/language-reference/keywords/is.md) T|Возвращает значение true, если x относится к типу T, в противном случае возвращает значение false|  
-|x [as](../../../csharp/language-reference/keywords/as.md) T|Возвращает x типа T или значение NULL, если x не относится к типу T|  
-  
- **Операторы равенства**  
-  
-|Выражение|Описание|  
-|----------------|-----------------|  
-|x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|Равно|  
-|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Не равно|  
-  
- **Логические, условные операторы и NULL-операторы**  
-  
-|Категория|Выражение|Описание|  
-|--------------|----------------|-----------------|  
-|Логическое И|x [&](../../../csharp/language-reference/operators/and-operator.md) y|Поразрядное И для операндов целочисленного типа, логическое И для операндов логического типа|  
-|Логическое исключающее ИЛИ|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|Поразрядное исключающее ИЛИ для операндов целочисленного типа, логическое исключающее ИЛИ для операндов логического типа|  
-|Логическое ИЛИ|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|Поразрядное ИЛИ для операндов целочисленного типа, логическое ИЛИ для операндов логического типа|  
-|Условное И|x [&&](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|Равно y, только если x имеет значение true|  
-|Условное ИЛИ|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|Равно y, только если x имеет значение false|  
-|Объединение со значением NULL|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) Y|Равно y, если x имеет значение NULL, в противном случае равно x|  
-|Условие|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|Равно y, если x имеет значение true, и z, если x имеет значение false|  
-  
- **Операторы присваивания и анонимные операторы**  
-  
-|Выражение|Описание|  
-|----------------|-----------------|  
-|[=](../../../csharp/language-reference/operators/assignment-operator.md)|Назначение|  
-|x op= y|Составное присваивание. Поддерживает следующие операторы: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [/=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [%=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md).|  
-|(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|Анонимная функция (лямбда-выражение)|  
+Каждый оператор имеет определенный приоритет. В выражении, содержащем несколько операторов с разными уровнями приоритета, порядок вычисления операторов определяется их приоритетом. Например, следующий оператор назначает 3 в `n1`:
+
+```csharp
+n1 = 11 - 2 * 4;
+```
+
+Сначала выполняется умножение, так как оно имеет приоритет над вычитанием.
+
+Полный список операторов C#, упорядоченных по уровню приоритета, см. в статье [Операторы C#](../../language-reference/operators/index.md).
   
 ## <a name="associativity"></a>Ассоциативность
 
@@ -169,13 +80,11 @@ a = (b = c);
   
 ## <a name="operator-overloading"></a>Перегрузка операторов
 
- Поведение операторов для пользовательских классов и структур можно изменить. Такой процесс называется *перегрузкой операторов*. Дополнительные сведения см. в разделе [Перегружаемые операторы](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) и в статье о ключевом слове [operator](../../../csharp/language-reference/keywords/operator.md).  
-  
-## <a name="related-sections"></a>Связанные разделы
-
- Дополнительные сведения см. в разделах [Ключевые слова операторов](../../../csharp/language-reference/keywords/operator-keywords.md) и [Операторы C#](../../../csharp/language-reference/operators/index.md).  
+Можно задать поведение определенных операторов для пользовательских классов и структур. Такой процесс называется *перегрузкой операторов*. Дополнительные сведения см. в разделе [Перегружаемые операторы](overloadable-operators.md) и статье про ключевое слово [operator](../../language-reference/keywords/operator.md).
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Инструкции, выражения и операторы](../../../csharp/programming-guide/statements-expressions-operators/index.md)
+- [Руководство по программированию на C#](../index.md)
+- [Инструкции, выражения и операторы](index.md)
+- [Операторы в C#](../../language-reference/operators/index.md)
+- [Ключевые слова операторов](../../language-reference/keywords/operator-keywords.md)

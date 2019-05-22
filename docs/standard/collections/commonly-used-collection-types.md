@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77740f86265db86c998af25e6e9ed4c20a7014e6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: c21a1303cd67f5f5de42241f4d5ada929e68bf2c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835750"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589889"
 ---
 # <a name="commonly-used-collection-types"></a>Часто используемые типы коллекций
 Типы коллекций — это распространенные виды коллекций данных, такие как хэш-таблицы, очереди, стеки, контейнеры, словари и списки.  
@@ -36,10 +36,10 @@ ms.locfileid: "56835750"
   
 |Заголовок|Описание|  
 |-----------|-----------------|  
-|[Коллекции и структуры данных](../../../docs/standard/collections/index.md)|Описание различных типов коллекций, доступных в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], в том числе стеков, очередей, списков, массивов и словарей.|  
+|[Коллекции и структуры данных](../../../docs/standard/collections/index.md)|Описание различных типов коллекций, доступных в .NET Framework, в том числе стеков, очередей, списков, массивов и библиотек.|  
 |[Типы коллекций Hashtable и Dictionary](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Описание возможностей универсальных и неуниверсальных типов словарей на основе хэша.|  
 |[Отсортированные типы коллекций](../../../docs/standard/collections/sorted-collection-types.md)|Описание классов, которые предоставляют функции сортировки списков и наборов.|  
-|[Универсальные шаблоны](../../../docs/standard/generics/index.md)|Описание универсальных функций, в том числе универсальных коллекций, делегатов и интерфейсов, предоставляемых платформой [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Ссылки на документацию по C#, Visual Basic и Visual C++, а также на вспомогательные технологии, такие как Reflection.|  
+|[Универсальные шаблоны](../../../docs/standard/generics/index.md)|Описание возможности универсальных шаблонов, в том числе универсальных коллекций, делегатов и интерфейсов, предоставляемых платформой .NET Framework. Ссылки на документацию по C#, Visual Basic и Visual C++, а также на вспомогательные технологии, такие как Reflection.|  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Collections?displayProperty=nameWithType>  

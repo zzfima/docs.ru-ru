@@ -1,15 +1,13 @@
 ---
 title: Применение подходов CQRS и CQS в микрослужбе DDD в eShopOnContainers
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Реализация CQRS в микрослужбе заказов в eShopOnContainers.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fc8c27c25fb6d07207586eb65d5ac9cc543bcc1a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 0380e759595e8a159e89f858a5ced4dacfa4e9b4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613204"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875911"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Применение подходов CQRS и CQS в микрослужбе DDD в eShopOnContainers
 
@@ -19,7 +17,7 @@ ms.locfileid: "59613204"
 
 Следовательно, вы можете использовать для чтения другую модель данных, отличающуюся от модели предметной области записи транзакционной логики, хотя микрослужбы размещения заказов используют ту же базу данных. Следовательно, такой подход CQRS является упрощенным.
 
-С другой стороны, команды, которые инициируют транзакции и обновления данных, изменяют состояние в системе. При использовании команд необходимо соблюдать осторожность, имея дело со сложными и постоянно меняющимися бизнес-правилами. Это наиболее подходящее место для применения методов DDD, чтобы получить наилучшим образом смоделированную систему.
+С другой стороны, команды, которые инициируют транзакции и обновления данных, изменяют состояние в системе. При использовании команд необходимо соблюдать осторожность, имея дело со сложными и постоянно меняющимися бизнес-правилами. Здесь стоит применять методику DDD, чтобы наилучшим образом смоделировать систему.
 
 Шаблоны DDD, представленные в настоящем руководстве, не должны применяться универсально. Они вводят в ваш проект ограничения. Эти ограничения обеспечивают такие преимущества, как повышение качества с течением времени, особенно в командах и другом коде, который изменяет состояние системы. Однако эти ограничения увеличивают сложность с минимумом преимуществ для чтения и запросов данных.
 
@@ -46,20 +44,11 @@ ms.locfileid: "59613204"
 - **Мартин Фоулер (Martin Fowler). CQRS** \
   <https://martinfowler.com/bliki/CQRS.html>
 
-- **Грег Янг (Greg Young). CQS и CQRS** \
-  <http://codebetter.com/gregyoung/2009/08/13/command-query-separation/>
-
 - **Грег Янг (Greg Young). Документы по CQRS**  \
-  [https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
-
-- **Грег Янг (Greg Young). CQRS, пользовательские интерфейсы на основе задач и источники событий** \
-  <http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/>
+  <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf>
 
 - **Уди Дахан (Udi Dahan). Пояснения к CQRS** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
-
-- **Источники событий (ES)** \
-  <http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/>
 
 >[!div class="step-by-step"]
 >[Назад](apply-simplified-microservice-cqrs-ddd-patterns.md)

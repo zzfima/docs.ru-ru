@@ -1,13 +1,13 @@
 ---
 title: Команда dotnet new
 description: Команда dotnet new создает проекты .NET Core на основе указанного шаблона.
-ms.date: 10/24/2018
-ms.openlocfilehash: 5177c920fee6fa946d2bf5d96644f26309ed0a99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.date: 05/06/2019
+ms.openlocfilehash: f8bc8cb59ae6e421f4e9bd05925376399939056d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516152"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878317"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -19,11 +19,18 @@ ms.locfileid: "54516152"
 
 ## <a name="synopsis"></a>Краткий обзор
 
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22).
+
+```console
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output] [-u|--uninstall] [Template options]
+dotnet new <TEMPLATE> [-l|--list] [--type]
+dotnet new [-h|--help]
+```
+
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```console
-dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output]
-    [-u|--uninstall] [Template options]
+dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
@@ -59,78 +66,162 @@ dotnet new [-h|--help]
 
 Шаблон для создания экземпляров при вызове команды. Каждый шаблон может иметь отдельные параметры, доступные для передачи. Дополнительные сведения см. в разделе [Параметры шаблона](#template-options).
 
+Если значение `TEMPLATE` не в точности совпадает с текстом в столбце **Шаблоны** или **Короткое имя**, для этих двух столбцов выполняется поиск совпадений в подстроках.
+
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22).
+
+Команда содержит список шаблонов по умолчанию. Используйте `dotnet new -l`, чтобы получить список доступных шаблонов. В следующей таблице показаны шаблоны, которые устанавливаются вместе с пакетом SDK для .NET Core 2.2.100. Язык по умолчанию для шаблона указан внутри квадратных скобок.
+
+| Шаблоны                                    | Краткое имя        | Язык     | Теги                                  |
+|----------------------------------------------|-------------------|--------------|---------------------------------------|
+| Консольное приложение                          | `console`         | [C#], F#, VB | Общее/консоль                        |
+| Библиотека классов                                | `classlib`        | [C#], F#, VB | Общее/библиотека                        |
+| Проект модульного теста                            | `mstest`          | [C#], F#, VB | Тест/MSTest                           |
+| Тестовый проект NUnit 3                         | `nunit`           | [C#], F#, VB | Тест/NUnit                            |
+| Элемент теста NUnit 3                            | `nunit-test`      | [C#], F#, VB | Тест/NUnit                            |
+| Тестовый проект xUnit                           | `xunit`           | [C#], F#, VB | Тест/xUnit                            |
+| Страница Razor                                   | `page`            | [C#]         | Веб/ASP.NET                           |
+| MVC ViewImports                              | `viewimports`     | [C#]         | Веб/ASP.NET                           |
+| MVC ViewStart                                | `viewstart`       | [C#]         | Веб/ASP.NET                           |
+| Пустой ASP.NET Core                           | `web`             | [C#], F#     | Веб/пусто                             |
+| Веб-приложение ASP.NET Core (Model-View-Controller) | `mvc`             | [C#], F#     | Веб/MVC                               |
+| Веб-приложение ASP.NET Core                         | `webapp`, `razor` | [C#]         | Веб/MVC и Razor Pages                   |
+| ASP.NET Core с Angular                    | `angular`         | [C#]         | MVC/Веб/SPA                           |
+| ASP.NET Core с React.js                   | `react`           | [C#]         | MVC/Веб/SPA                           |
+| ASP.NET Core с React.js и Redux         | `reactredux`      | [C#]         | MVC/Веб/SPA                           |
+| Библиотека классов Razor                          | `razorclasslib`   | [C#]         | Веб/Razor/Библиотека/Библиотека классов Razor |
+| Веб-API ASP.NET Core                         | `webapi`          | [C#], F#     | Веб/веб-API                            |
+| Файл global.json                             | `globaljson`      |              | Config                                |
+| Конфигурация NuGet                                 | `nugetconfig`     |              | Config                                |
+| Веб-конфигурация                                   | `webconfig`       |              | Config                                |
+| Файл решения                                | `sln`             |              | Решение                              |
+
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 Команда содержит список шаблонов по умолчанию. Используйте `dotnet new -l`, чтобы получить список доступных шаблонов. В приведенной ниже таблице представлены шаблоны, которые устанавливаются вместе с пакетом SDK для .NET Core 2.1.300. Язык по умолчанию для шаблона указан внутри квадратных скобок.
 
-|Описание шаблона                          | Имя шаблона    | Языки     |
-|----------------------------------------------|------------------|---------------|
-| Консольное приложение                          | `console`        | [C#], F#, VB  |
-| Библиотека классов                                | `classlib`       | [C#], F#, VB  |
-| Проект модульного теста                            | `mstest`         | [C#], F#, VB  |
-| Проект теста xUnit                           | `xunit`          | [C#], F#, VB  |
-| Проект теста NUnit                           | `nunit`          | [C#], F#, VB  |
-| Страница Razor                                   | `page`           | [C#]          |
-| MVC ViewImports                              | `viewimports`    | [C#]          |
-| MVC ViewStart                                | `viewstart`      | [C#]          |
-| Пустой ASP.NET Core                           | `web`            | [C#], F#      |
-| Веб-приложение ASP.NET Core (Model-View-Controller) | `mvc`            | [C#], F#      |
-| Веб-приложение ASP.NET Core                         | `razor`, `webapp`| [C#]          |
-| ASP.NET Core с Angular                    | `angular`        | [C#]          |
-| ASP.NET Core с React.js                   | `react`          | [C#]          |
-| ASP.NET Core с React.js и Redux         | `reactredux`     | [C#]          |
-| Веб-API ASP.NET Core                         | `webapi`         | [C#], F#      |
-| Библиотека классов Razor                          | `razorclasslib`  | [C#]          |
-| Файл global.json                             | `globaljson`     |               |
-| Конфигурация NuGet                                 | `nugetconfig`    |               |
-| Веб-конфигурация                                   | `webconfig`      |               |
-| Файл решения                                | `sln`            |               |
+| Шаблоны                                    | Краткое имя      | Язык     | Теги                                  |
+|----------------------------------------------|-----------------|--------------|---------------------------------------|
+| Консольное приложение                          | `console`       | [C#], F#, VB | Общее/консоль                        |
+| Библиотека классов                                | `classlib`      | [C#], F#, VB | Общее/библиотека                        |
+| Проект модульного теста                            | `mstest`        | [C#], F#, VB | Тест/MSTest                           |
+| Тестовый проект xUnit                           | `xunit`         | [C#], F#, VB | Тест/xUnit                            |
+| Страница Razor                                   | `page`          | [C#]         | Веб/ASP.NET                           |
+| MVC ViewImports                              | `viewimports`   | [C#]         | Веб/ASP.NET                           |
+| MVC ViewStart                                | `viewstart`     | [C#]         | Веб/ASP.NET                           |
+| Пустой ASP.NET Core                           | `web`           | [C#], F#     | Веб/пусто                             |
+| Веб-приложение ASP.NET Core (Model-View-Controller) | `mvc`           | [C#], F#     | Веб/MVC                               |
+| Веб-приложение ASP.NET Core                         | `razor`         | [C#]         | Веб/MVC и Razor Pages                   |
+| ASP.NET Core с Angular                    | `angular`       | [C#]         | MVC/Веб/SPA                           |
+| ASP.NET Core с React.js                   | `react`         | [C#]         | MVC/Веб/SPA                           |
+| ASP.NET Core с React.js и Redux         | `reactredux`    | [C#]         | MVC/Веб/SPA                           | 
+| Библиотека классов Razor                          | `razorclasslib` | [C#]         | Веб/Razor/Библиотека/Библиотека классов Razor |
+| Веб-API ASP.NET Core                         | `webapi`        | [C#], F#     | Веб/веб-API                            |
+| Файл global.json                             | `globaljson`    |              | Config                                |
+| Конфигурация NuGet                                 | `nugetconfig`   |              | Config                                |
+| Веб-конфигурация                                   | `webconfig`     |              | Config                                |
+| Файл решения                                | `sln`           |              | Решение                              |
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-Команда содержит список шаблонов по умолчанию. Используйте `dotnet new -l`, чтобы получить список доступных шаблонов. В приведенной ниже таблице представлены шаблоны, которые устанавливаются вместе с пакетом SDK для .NET Core 2.0. Язык по умолчанию для шаблона указан внутри квадратных скобок.
+Команда содержит список шаблонов по умолчанию. Используйте `dotnet new -l`, чтобы получить список доступных шаблонов. В следующей таблице показаны шаблоны, которые устанавливаются с пакетом SDK для .NET Core 2.0.0. Язык по умолчанию для шаблона указан внутри квадратных скобок.
 
-|Описание шаблона                          | Имя шаблона | Языки     |
-|----------------------------------------------|---------------|---------------|
-| Консольное приложение                          | `console`     | [C#], F#, VB  |
-| Библиотека классов                                | `classlib`    | [C#], F#, VB  |
-| Проект модульного теста                            | `mstest`      | [C#], F#, VB  |
-| Проект теста xUnit                           | `xunit`       | [C#], F#, VB  |
-| Пустой ASP.NET Core                           | `web`         | [C#], F#      |
-| Веб-приложение ASP.NET Core (Model-View-Controller) | `mvc`         | [C#], F#      |
-| Веб-приложение ASP.NET Core                         | `razor`       | [C#]          |
-| ASP.NET Core с Angular                    | `angular`     | [C#]          |
-| ASP.NET Core с React.js                   | `react`       | [C#]          |
-| ASP.NET Core с React.js и Redux         | `reactredux`  | [C#]          |
-| Веб-API ASP.NET Core                         | `webapi`      | [C#], F#      |
-| Файл global.json                             | `globaljson`  |               |
-| Конфигурация NuGet                                 | `nugetconfig` |               |
-| Веб-конфигурация                                   | `webconfig`   |               |
-| Файл решения                                | `sln`         |               |
-| Страница Razor                                   | `page`        |               |
-| MVC ViewImports                              | `viewimports` |               |
-| MVC ViewStart                                | `viewstart`   |               |
+| Шаблоны                                    | Краткое имя    | Язык     | Теги                |
+|----------------------------------------------|---------------|--------------|---------------------|
+| Консольное приложение                          | `console`     | [C#], F#, VB | Общее/консоль      |
+| Библиотека классов                                | `classlib`    | [C#], F#, VB | Общее/библиотека      |
+| Проект модульного теста                            | `mstest`      | [C#], F#, VB | Тест/MSTest         |
+| Тестовый проект xUnit                           | `xunit`       | [C#], F#, VB | Тест/xUnit          |
+| Пустой ASP.NET Core                           | `web`         | [C#], F#     | Веб/пусто           |
+| Веб-приложение ASP.NET Core (Model-View-Controller) | `mvc`         | [C#], F#     | Веб/MVC             |
+| Веб-приложение ASP.NET Core                         | `razor`       | [C#]         | Веб/MVC и Razor Pages |
+| ASP.NET Core с Angular                    | `angular`     | [C#]         | MVC/Веб/SPA         |
+| ASP.NET Core с React.js                   | `react`       | [C#]         | MVC/Веб/SPA         |
+| ASP.NET Core с React.js и Redux         | `reactredux`  | [C#]         | MVC/Веб/SPA         |
+| Веб-API ASP.NET Core                         | `webapi`      | [C#], F#     | Веб/веб-API          |
+| Файл global.json                             | `globaljson`  |              | Config              |
+| Конфигурация NuGet                                 | `nugetconfig` |              | Config              |
+| Веб-конфигурация                                   | `webconfig`   |              | Config              |
+| Файл решения                                | `sln`         |              | Решение            |
+| Страница Razor                                   | `page`        |              | Веб/ASP.NET         |
+| MVC ViewImports                              | `viewimports` |              | Веб/ASP.NET         |
+| MVC ViewStart                                | `viewstart`   |              | Веб/ASP.NET         |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-Команда содержит список шаблонов по умолчанию. Используйте `dotnet new -all`, чтобы получить список доступных шаблонов. В приведенной ниже таблице представлены шаблоны, которые устанавливаются вместе с пакетом SDK для .NET Core 1.x. Язык по умолчанию для шаблона указан внутри квадратных скобок.
+Команда содержит список шаблонов по умолчанию. Используйте `dotnet new -all`, чтобы получить список доступных шаблонов. В следующей таблице показаны шаблоны, которые устанавливаются с пакетом SDK для .NET Core 1.0.1. Язык по умолчанию для шаблона указан внутри квадратных скобок.
 
-|Описание шаблона  | Имя шаблона | Языки |
-|----------------------|---------------|-----------|
-| Консольное приложение  | `console`     | [C#], F#  |
-| Библиотека классов        | `classlib`    | [C#], F#  |
-| Проект модульного теста    | `mstest`      | [C#], F#  |
-| Проект теста xUnit   | `xunit`       | [C#], F#  |
-| Пустой ASP.NET Core   | `web`         | [C#]      |
-| Веб-приложение ASP.NET Core | `mvc`         | [C#], F#  |
-| Веб-API ASP.NET Core | `webapi`      | [C#]      |
-| Конфигурация NuGet         | `nugetconfig` |           |
-| Веб-конфигурация           | `webconfig`   |           |
-| Файл решения        | `sln`         |           |
+| Шаблоны            | Краткое имя    | Язык | Теги           |
+|----------------------|---------------|----------|----------------|
+| Консольное приложение  | `console`     | [C#], F# | Общее/консоль |
+| Библиотека классов        | `classlib`    | [C#], F# | Общее/библиотека |
+| Проект модульного теста    | `mstest`      | [C#], F# | Тест/MSTest    |
+| Тестовый проект xUnit   | `xunit`       | [C#], F# | Тест/xUnit     |
+| Пустой ASP.NET Core   | `web`         | [C#]     | Веб/пусто      |
+| Веб-приложение ASP.NET Core | `mvc`         | [C#], F# | Веб/MVC        |
+| Веб-API ASP.NET Core | `webapi`      | [C#]     | Веб/веб-API     |
+| Конфигурация NuGet         | `nugetconfig` |          | Config         |
+| Веб-конфигурация           | `webconfig`   |          | Config         |
+| Файл решения        | `sln`         |          | Решение       |
 
 ---
 
 ## <a name="options"></a>Параметры
+
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22).
+
+`--dry-run`
+
+Отображает сводку того, что произойдет, если выполнить команду и это приведет к созданию шаблона.
+
+`--force`
+
+Принудительное создание содержимого, даже если при этом изменяются существующие файлы. Это требуется, когда выходной каталог уже содержит проект.
+
+`-h|--help`
+
+Распечатывает справку для команды. Его можно вызвать для самой команды `dotnet new` или для любого шаблона, например `dotnet new mvc --help`.
+
+`-i|--install <PATH|NUGET_ID>`
+
+Устанавливает исходный пакет или пакет шаблона из указанного пути `PATH` или по указанному идентификатору `NUGET_ID`. Если вы хотите установить предварительную версию пакета шаблонов, необходимо указать версию в формате `<package-name>::<package-version>`. По умолчанию `dotnet new` передает \* для версии, что указывает на последнюю стабильную версию пакета. См. пример в разделе [Примеры](#examples).
+
+Сведения о создании пользовательских шаблонов см. в статье [Пользовательские шаблоны для команды dotnet new](custom-templates.md).
+
+`-l|--list`
+
+Перечисляет шаблоны с указанным именем. При вызове для команды `dotnet new` перечисляет возможные шаблоны, доступные для заданного каталога. Например, если каталог уже содержит проект, он не будет перечислять все шаблоны проекта.
+
+`-lang|--language {C#|F#|VB}`
+
+Язык создаваемого шаблона. Допустимый язык зависит от шаблона (см. значения по умолчанию в разделе об [аргументах](#arguments)). Не является допустимым для некоторых шаблонов.
+
+> [!NOTE]
+> Некоторые оболочки интерпретируют `#` как специальный символ. В таких случаях необходимо заключить значение параметра языка в символы, например `dotnet new console -lang "F#"`.
+
+`-n|--name <OUTPUT_NAME>`
+
+Имя создаваемых выходных данных. Если имя не указано, используется имя текущего каталога.
+
+`--nuget-source`
+
+Задает источник пакетов NuGet для использования во время установки.
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+Расположение, в котором размещаются созданные выходные данные. Значением по умолчанию является текущий каталог.
+
+`--type`
+
+Фильтрует шаблоны по доступным типам. Предопределенные значения: "project", "item" или "other".
+
+`-u|--uninstall <PATH|NUGET_ID>`
+
+Удаляет исходный пакет или пакет шаблона по указанному пути `PATH` или идентификатору `NUGET_ID`. При исключении значения `<PATH|NUGET_ID>` отображаются все установленные пакеты шаблонов и связанные с ними шаблоны.
+
+> [!NOTE]
+> Чтобы удалить шаблон с помощью `PATH`, вам необходимо указать полный путь. Например, *C:/Users/\<ПОЛЬЗОВАТЕЛЬ>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* будет работать, а *./GarciaSoftware.ConsoleTemplate.CSharp* — нет.
+> Кроме того, путь к шаблону не должен содержать конечную косую черту закрытия каталога.
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -266,15 +357,149 @@ dotnet new [-h|--help]
 
 Каждый шаблон проекта может содержать дополнительные доступные параметры. Основные шаблоны имеют следующие дополнительные параметры:
 
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22).
+
+**Консоль**
+
+`--langVersion <VERSION_NUMBER>` — задает свойство `LangVersion` в созданном файле проекта. Например, вам требуется `--langVersion 7.3`, чтобы использовать C# 7.3. Не поддерживается для F#.
+
+`--no-restore` — во время создания проекта не выполняется неявное восстановление.
+
+**angular, react, reactredux**
+
+`--exclude-launch-settings` — исключает файл *launchSettings.json* из создаваемого шаблона.
+
+`--no-restore` — во время создания проекта не выполняется неявное восстановление.
+
+`--no-https` — проекту не требуется HTTPS. Этот параметр применяется, только если `IndividualAuth` или `OrganizationalAuth` не используются.
+
+**razorclasslib**
+
+`--no-restore` — во время создания проекта не выполняется неявное восстановление.
+
+**classlib**
+
+`-f|--framework <FRAMEWORK>` — указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp2.2` для создания библиотеки классов .NET Core или `netstandard2.0` для создания стандартной библиотеки классов .NET. Значение по умолчанию — `netstandard2.0`.
+
+`--langVersion <VERSION_NUMBER>` — задает свойство `LangVersion` в созданном файле проекта. Например, вам требуется `--langVersion 7.3`, чтобы использовать C# 7.3. Не поддерживается для F#.
+
+`--no-restore` — во время создания проекта не выполняется неявное восстановление.
+
+**mstest, xunit**
+
+`-p|--enable-pack` — включает упаковку проекта с помощью команды [dotnet pack](dotnet-pack.md).
+
+`--no-restore` — во время создания проекта не выполняется неявное восстановление.
+
+**nunit**
+
+`-f|--framework <FRAMEWORK>` — указывает целевую [платформу](../../standard/frameworks.md). Значение по умолчанию — `netcoreapp2.1`.
+
+`-p|--enable-pack` — включает упаковку проекта с помощью команды [dotnet pack](dotnet-pack.md).
+
+`--no-restore` — во время создания проекта не выполняется неявное восстановление.
+
+**page**
+
+`-na|--namespace <NAMESPACE_NAME>` — пространство имен для сформированного кода. Значение по умолчанию — `MyApp.Namespace`.
+
+`-np|--no-pagemodel` — создает страницу без PageModel.
+
+**viewimports**
+
+`-na|--namespace <NAMESPACE_NAME>` — пространство имен для сформированного кода. Значение по умолчанию — `MyApp.Namespace`.
+
+**web**
+
+`--exclude-launch-settings` — исключает файл *launchSettings.json* из создаваемого шаблона.
+
+`--no-restore` — во время создания проекта не выполняется неявное восстановление.
+
+`--no-https` — проекту не требуется HTTPS. Этот параметр применяется, только если `IndividualAuth` или `OrganizationalAuth` не используются.
+
+**mvc, webapp**
+
+`-au|--auth <AUTHENTICATION_TYPE>` — тип проверки подлинности. Допустимые значения:
+
+- `None` — без проверки подлинности (по умолчанию).
+- `Individual` — индивидуальная проверка подлинности.
+- `IndividualB2C` — индивидуальная проверка подлинности с помощью Azure AD B2C.
+- `SingleOrg` — проверка подлинности организации для отдельного клиента.
+- `MultiOrg` — проверка подлинности организации для нескольких клиентов.
+- `Windows` — проверка подлинности Windows.
+
+`--aad-b2c-instance <INSTANCE>` — экземпляр Azure Active Directory B2C, к которому выполняется подключение. Используется с проверкой подлинности `IndividualB2C`. Значение по умолчанию — `https://login.microsoftonline.com/tfp/`.
+
+`-ssp|--susi-policy-id <ID>` — идентификатор политики входа и регистрации для этого проекта. Используется с проверкой подлинности `IndividualB2C`.
+
+`-rp|--reset-password-policy-id <ID>` — идентификатор политики сброса паролей для этого проекта. Используется с проверкой подлинности `IndividualB2C`.
+
+`-ep|--edit-profile-policy-id <ID>` — идентификатор политики изменения профилей для этого проекта. Используется с проверкой подлинности `IndividualB2C`.
+
+`--aad-instance <INSTANCE>` — экземпляр Azure Active Directory, к которому выполняется подключение. Используется с проверкой подлинности `SingleOrg` или `MultiOrg`. Значение по умолчанию — `https://login.microsoftonline.com/`.
+
+`--client-id <ID>` — идентификатор клиента для этого проекта. Используется с проверкой подлинности `IndividualB2C`, `SingleOrg` или `MultiOrg`. Значение по умолчанию — `11111111-1111-1111-11111111111111111`.
+
+`--domain <DOMAIN>` — домен клиента каталога. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `qualified.domain.name`.
+
+`--tenant-id <ID>` — идентификатор TenantId каталога, к которому устанавливается подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `22222222-2222-2222-2222-222222222222`.
+
+`--callback-path <PATH>` — путь запроса по базовому пути кода URI перенаправления для приложения. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `/signin-oidc`.
+
+`-r|--org-read-access` — предоставляет приложению доступ к каталогу для чтения. Применяется только при проверке подлинности `SingleOrg` или `MultiOrg`.
+
+`--exclude-launch-settings` — исключает файл *launchSettings.json* из создаваемого шаблона.
+
+`--no-https` — проекту не требуется HTTPS. `app.UseHsts` и `app.UseHttpsRedirection` не добавляются к `Startup.Configure`. Этот параметр применяется, только если `Individual`, `IndividualB2C`, `SingleOrg` или `MultiOrg` не используются.
+
+`-uld|--use-local-db` — указывает, что вместо SQLite следует использовать LocalDB. Применяется только при проверке подлинности `Individual` или `IndividualB2C`.
+
+`--no-restore` — во время создания проекта не выполняется неявное восстановление.
+
+**webapi**
+
+`-au|--auth <AUTHENTICATION_TYPE>` — тип проверки подлинности. Допустимые значения:
+
+- `None` — без проверки подлинности (по умолчанию).
+- `IndividualB2C` — индивидуальная проверка подлинности с помощью Azure AD B2C.
+- `SingleOrg` — проверка подлинности организации для отдельного клиента.
+- `Windows` — проверка подлинности Windows.
+
+`--aad-b2c-instance <INSTANCE>` — экземпляр Azure Active Directory B2C, к которому выполняется подключение. Используется с проверкой подлинности `IndividualB2C`. Значение по умолчанию — `https://login.microsoftonline.com/tfp/`.
+
+`-ssp|--susi-policy-id <ID>` — идентификатор политики входа и регистрации для этого проекта. Используется с проверкой подлинности `IndividualB2C`.
+
+`--aad-instance <INSTANCE>` — экземпляр Azure Active Directory, к которому выполняется подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `https://login.microsoftonline.com/`.
+
+`--client-id <ID>` — идентификатор клиента для этого проекта. Используется с проверкой подлинности `IndividualB2C` или `SingleOrg`. Значение по умолчанию — `11111111-1111-1111-11111111111111111`.
+
+`--domain <DOMAIN>` — домен клиента каталога. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `qualified.domain.name`.
+
+`--tenant-id <ID>` — идентификатор TenantId каталога, к которому устанавливается подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `22222222-2222-2222-2222-222222222222`.
+
+`-r|--org-read-access` — предоставляет приложению доступ к каталогу для чтения. Применяется только при проверке подлинности `SingleOrg` или `MultiOrg`.
+
+`--exclude-launch-settings` — исключает файл *launchSettings.json* из создаваемого шаблона.
+
+`--no-https` — проекту не требуется HTTPS. `app.UseHsts` и `app.UseHttpsRedirection` не добавляются к `Startup.Configure`. Этот параметр применяется, только если `Individual`, `IndividualB2C`, `SingleOrg` или `MultiOrg` не используются.
+
+`-uld|--use-local-db` — указывает, что вместо SQLite следует использовать LocalDB. Применяется только при проверке подлинности `Individual` или `IndividualB2C`.
+
+`--no-restore` — во время создания проекта не выполняется неявное восстановление.
+
+**globaljson**
+
+`--sdk-version <VERSION_NUMBER>` — задает версию пакета SDK для .NET Core, используемую в файле *global.json*.
+
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 **console, angular, react, reactredux, razorclasslib**
 
-  `--no-restore` — во время создания проекта не выполняется неявное восстановление.
+`--no-restore` — во время создания проекта не выполняется неявное восстановление.
 
 **classlib**
 
-`-f|--framework <FRAMEWORK>` — указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp2.0` для создания библиотеки классов .NET Core или `netstandard2.0` для создания стандартной библиотеки классов .NET. Значение по умолчанию — `netstandard2.0`.
+`-f|--framework <FRAMEWORK>` — указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp2.1` для создания библиотеки классов .NET Core или `netstandard2.0` для создания стандартной библиотеки классов .NET. Значение по умолчанию — `netstandard2.0`.
 
 `--no-restore` — во время создания проекта не выполняется неявное восстановление.
 
@@ -370,19 +595,19 @@ dotnet new [-h|--help]
 
 **page**
 
-`-na|--namespace <NAMESPACE_NAME>` — пространство имен созданного кода. Значение по умолчанию — `MyApp.Namespace`.
+`-na|--namespace <NAMESPACE_NAME>` — пространство имен для сформированного кода. Значение по умолчанию — `MyApp.Namespace`.
 
 `-np|--no-pagemodel` — создает страницу без PageModel.
 
 **viewimports**
 
-`-na|--namespace <NAMESPACE_NAME>` — пространство имен созданного кода. Значение по умолчанию — `MyApp.Namespace`.
+`-na|--namespace <NAMESPACE_NAME>` — пространство имен для сформированного кода. Значение по умолчанию — `MyApp.Namespace`.
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 **console, angular, react, reactredux**
 
-  `--no-restore` — во время создания проекта не выполняется неявное восстановление.
+`--no-restore` — во время создания проекта не выполняется неявное восстановление.
 
 **classlib**
 
@@ -488,23 +713,27 @@ dotnet new [-h|--help]
 
 **console, xunit, mstest, web, webapi**
 
-`-f|--framework` — указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp1.0` или `netcoreapp1.1`. Значение по умолчанию — `netcoreapp1.0`.
+`-f|--framework <FRAMEWORK>` — указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp1.0` или `netcoreapp1.1`. Значение по умолчанию — `netcoreapp1.0`.
 
 **classlib**
 
-`-f|--framework` — указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp1.0`, `netcoreapp1.1` или с `netstandard1.0` по `netstandard1.6`. Значение по умолчанию — `netstandard1.4`.
+`-f|--framework <FRAMEWORK>` — указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp1.0`, `netcoreapp1.1` или с `netstandard1.0` по `netstandard1.6`. Значение по умолчанию — `netstandard1.4`.
 
 **mvc**
 
-`-f|--framework` — указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp1.0` или `netcoreapp1.1`. Значение по умолчанию — `netcoreapp1.0`.
+`-f|--framework <FRAMEWORK>` — указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp1.0` или `netcoreapp1.1`. Значение по умолчанию — `netcoreapp1.0`.
 
-`-au|--auth` — тип проверки подлинности. Значения: `None` или `Individual`. Значение по умолчанию — `None`.
+`-au|--auth <AUTHENTICATION_TYPE>` — тип проверки подлинности. Значения: `None` или `Individual`. Значение по умолчанию — `None`.
 
 `-uld|--use-local-db` — указывает, следует ли использовать LocalDB вместо SQLite. Значения: `true` или `false`. Значение по умолчанию — `false`.
 
 ---
 
 ## <a name="examples"></a>Примеры
+
+Создайте проект консольного приложения на C#, указав имя шаблона:
+
+`dotnet new "Console Application"`
 
 Создание проекта консольного приложения F# в текущем каталоге:
 
@@ -514,17 +743,25 @@ dotnet new [-h|--help]
 
 `dotnet new classlib -lang VB -o MyLibrary`
 
-Создание проекта приложения ASP.NET Core C# MVC в текущем каталоге без проверки подлинности:
+Создайте новый проект MVC ASP.NET Core C# в текущем каталоге без проверки подлинности:
 
 `dotnet new mvc -au None`
 
-Создание нового приложения xUnit:
+Создайте новый проект xUnit:
 
 `dotnet new xunit`
 
 Перечислите все шаблоны, доступные для MVC:
 
 `dotnet new mvc -l`
+
+Список всех шаблонов, соответствующих подстроке *we*. Точное совпадение не найдено, поэтому сравнение подстрок выполняется по короткому имени и столбцам имен.
+
+`dotnet new we -l`
+
+Попытайтесь вызвать шаблон, соответствующий *ng*. Если точное совпадение не найдено, выведите шаблоны с частичным совпадением.
+
+`dotnet new ng`
 
 Установите версию 2.0 шаблонов одностраничного приложения для ASP.NET Core (параметр команды доступен в .NET Core SDK 1.1 и более поздних версиях):
 

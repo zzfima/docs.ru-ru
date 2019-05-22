@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34f0002554320f99d961d03e9eebd8d0f774f1f6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ef6b73d683d43b2a33628db13fa592c7f02199a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591502"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585981"
 ---
 # <a name="security-considerations-for-reflection"></a>Соображения о безопасности для отражения
 Отражение дает возможность получать информацию о типах и членах, а также обращаться к членам (то есть вызывать методы и конструкторы для получения и задания значений свойств, добавления и удаления обработчиков событий и т. д.). Использование отражения для получения информации о типах и членах не ограничено. В любом коде отражение можно использовать для выполнения следующих задач:  
@@ -88,7 +88,7 @@ ms.locfileid: "64591502"
   
 - Сборка A может использовать отражение для доступа к закрытым членам сборки B, так как набор прав сборки B не включает какие-либо разрешения, которые не предоставлены сборке A.  
   
-- Сборка A не может использовать отражение для доступа к закрытым членам сборок [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], таких как mscorlib.dll, так как сборка mscorlib.dll является полностью доверенной и поэтому обладает разрешениями, которые не были предоставлены сборке A. Когда управление доступом для кода обращается к стеку во время выполнения, выдается исключение <xref:System.MemberAccessException>.  
+- Сборка A не может использовать отражение для доступа к закрытым членам сборок платформы .NET Framework, таких как mscorlib.dll, так как mscorlib.dll является полностью доверенной и поэтому обладает разрешениями, которые не были предоставлены сборке A. Возникает исключение <xref:System.MemberAccessException>, когда управление доступом для кода выполняет обход стека в среде выполнения.  
   
 ## <a name="serialization"></a>Сериализация  
  Что касается сериализации, разрешение <xref:System.Security.Permissions.SecurityPermission> с флагом <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> предоставляет возможность получать и задавать члены сериализуемых типов независимо от доступности. Это разрешение позволяет коду обнаруживать и изменять закрытое состояние экземпляра. (Помимо наличия соответствующих разрешений тип должен быть [помечен](../../../docs/standard/attributes/applying-attributes.md) как сериализуемый в метаданных.)  
@@ -100,7 +100,7 @@ ms.locfileid: "64591502"
   
 - Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] прозрачный код не может использовать отражение для доступа к членам, критическим с точки зрения безопасности.  
   
-- В [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] появился флаг <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>. В более ранних версиях [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] флаг <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> требуется для кода, который использует отражение для доступа к закрытым членам. Это разрешение, которое ни в коем случае нельзя предоставлять коду с частичным доверием.  
+- В [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] появился флаг <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>. Более ранние версии платформы .NET Framework требуют флаг <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> для кода, который использует отражение для доступа к закрытым членам. Это разрешение, которое ни в коем случае нельзя предоставлять коду с частичным доверием.  
   
 - Начиная с версии [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] использование отражения для получения сведений о закрытых типах и членах не требует никаких разрешений. В более ранних версиях для этого требовалось разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>.  
   
