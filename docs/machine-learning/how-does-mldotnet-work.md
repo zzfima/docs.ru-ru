@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: ea5797cb8f2fd0654d9facb636bc857eeb8e5aad
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: a4573575805ad45d251a900f304b8cb01654a39b
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063694"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65558003"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Что такое ML.NET и принципы работы этой системы
 
@@ -190,7 +190,7 @@ ML.NET позволяет добавлять в приложения .NET маш
         .Append(mlContext.Regression.Trainers.Sdca(labelColumnName: "Price", maximumNumberOfIterations: 100);
 ```
 
-В представленном ниже фрагменте кода `Concatenate` и `Sdca` — это методы из каталога. Каждый из них создает объект [IEstimator](xref:Microsoft.ML.IEstimator`1), который добавляется в конвейер.
+В представленном ниже фрагменте кода `Concatenate` и `Sdca` — это методы из каталога. Каждый из них создает объект [IEstimator](xref:Microsoft.ML.IEstimator%601), который добавляется в конвейер.
 
 Этот этап включает только создание объектов. Выполнение не происходит.
 

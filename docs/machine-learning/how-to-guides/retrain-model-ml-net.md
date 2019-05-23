@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 552698c02a7846db588822fa68d094dece160ea0
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2f8f8c035166612aabede8a512485bdf296c5655
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063571"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557908"
 ---
 # <a name="re-train-a-model"></a>Повторное обучение модели
 
@@ -51,7 +51,7 @@ ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchem
 
 ## <a name="extract-pre-trained-model-parameters"></a>Извлечение параметров обученной ранее модели
 
-Загрузив модель, извлеките параметры модели через свойство [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) обученной ранее модели. Обученная ранее модель была обучена с использованием модели линейной регрессии [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer), которая создает [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer`1), а тот, в свою очередь, выводит [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters). Эти параметры модели линейной регрессии содержат смещение и вес или коэффициенты обученной модели. Данные значения станут отправной точкой для переобученной модели.
+Загрузив модель, извлеките параметры модели через свойство [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) обученной ранее модели. Обученная ранее модель была обучена с использованием модели линейной регрессии [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer), которая создает [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601), а тот, в свою очередь, выводит [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters). Эти параметры модели линейной регрессии содержат смещение и вес или коэффициенты обученной модели. Данные значения станут отправной точкой для переобученной модели.
 
 ```csharp
 // Extract trained model parameters

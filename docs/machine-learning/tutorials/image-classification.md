@@ -4,12 +4,12 @@ description: Узнайте, как создать пользовательск�
 ms.date: 05/06/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f7fddc2d6c60a719090af36b7fe91919bfbd115c
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: e248c5ae73281ed6cd492592ba4a51791db75aa2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063619"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593424"
 ---
 # <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>Учебник. Создание специализированного классификатора ML.NET с помощью TensorFlow
 

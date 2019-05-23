@@ -2,12 +2,12 @@
 title: Проектирование проверок на уровне модели предметной области
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Ключевые понятия проверок на уровне модели предметной области.
 ms.date: 10/08/2018
-ms.openlocfilehash: 75d227c0cc3d5ae20614d816b528d93709ccdfcf
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 1d3196d2130df33969ed231bccfe0fc6f0af2ad8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063021"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639576"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Проектирование проверок на уровне модели предметной области
 
