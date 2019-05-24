@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Руководство по программированию на C#. Переопределение метода ToString
+title: Практическое руководство. Переопределение метода ToString (руководство по программированию на C#)
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,7 +13,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294981"
 ---
-# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Переопределение метода ToString
+# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Практическое руководство. Переопределение метода ToString (руководство по программированию на C#)
 Каждый класс или структура в языке C# неявно наследует класс <xref:System.Object>. Поэтому каждый объект в языке C# получает метод <xref:System.Object.ToString%2A>, который возвращает строковое представление данного объекта. Например, все переменные типа `int` имеют метод `ToString`, который позволяет им возвращать их содержимое в виде строки:  
   
  [!code-csharp[csProgGuideInheritance#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#37)]  
