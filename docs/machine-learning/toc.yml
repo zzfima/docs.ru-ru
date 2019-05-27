@@ -14,7 +14,7 @@
     - name: Классификация заявок на поддержку (мультиклассовая классификация)
       href: tutorials/github-issue-classification.md
     - name: Прогноз цен (регрессия)
-      href: tutorials/taxi-fare.md
+      href: tutorials/predict-prices.md
     - name: Классификация цветов ириса (кластеризация к-средних)
       href: tutorials/iris-clustering.md
     - name: Рекомендации фильмов (матричная факторизация)
