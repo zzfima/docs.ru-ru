@@ -4,12 +4,12 @@ description: Узнайте о функциях телеметрии в инте
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 49ebd6c9e1b77c85d891b8c9fb8cbd5c66b478a9
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 94c66267dfeec4b70ba4dd1fc47518eb0e01509a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065547"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053579"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Сбор данных телеметрии интерфейсом командной строки ML.NET
 
@@ -42,15 +42,17 @@ ms.locfileid: "65065547"
 
 Средство собирает следующие данные:
 
-- вызываемые команды, такие как `auto-train`;
+- вызванная команда, например `auto-train`;
+- используемые имена параметров командной строки (например, dataset-name, label-column-name, ml-task, output-path, max-exploration-time, verbosity);
 - хэшированный MAC-адрес: криптографически (SHA256) анонимный и уникальный идентификатор компьютера;
 - метка времени вызова;
-- состоящий из трех октетов IP-адрес, используемый для определения географического местоположения;
+- состоящий из трех октетов IP-адрес (не полный IP-адрес), используемый для определения географического местоположения;
 - имена всех используемых аргументов и параметров, кроме клиентских значений, таких как строки;
+- имя файла хэшированного набора данных;
+- контейнер размера файла набора данных;
 - операционная система и ее версия;
-- значение параметра --ml-task: категориальные значения, такие как `regression`, `binary-classification` и `multiclass-classification`;
-- [логарифмический округленный](https://en.wikipedia.org/wiki/Rounding#Rounding_to_a_specified_power) размер файла набора данных (ближайшая степень числа 2)
-- `ExitCode` команды;
+- значение параметра --task: категориальные значения, такие как `regression`, `binary-classification` и `multiclass-classification`;
+- версия CLI ML.NET (например, 0.3.27703.4).
 
 Данные отправляются по защищенному протоколу на серверы Майкрософт с помощью технологии [Azure Application Insights](https://azure.microsoft.com/services/application-insights/), хранятся в режиме ограниченного доступа и используются в защищенных системах [хранилища Azure](https://azure.microsoft.com/services/storage/) с соблюдением строгих мер безопасности.
 
@@ -73,5 +75,5 @@ ms.locfileid: "65065547"
 ## <a name="see-also"></a>См. также
 - [Справочник по интерфейсу командной строки ML.NET](../reference/ml-net-cli-reference.md)
 - [Условия лицензии на программное обеспечение Майкрософт: библиотека Microsoft .NET](https://aka.ms/dotnet-core-eula)
-- [Конфиденциальность в корпорации Майкрософт](https://www.microsoft.com/en-us/trustcenter/privacy/)
-- [Заявление о конфиденциальности Майкрософт](https://privacy.microsoft.com/en-us/privacystatement)
+- [Конфиденциальность в корпорации Майкрософт](https://www.microsoft.com/trustcenter/privacy/)
+- [Заявление о конфиденциальности Майкрософт](https://privacy.microsoft.com/privacystatement)

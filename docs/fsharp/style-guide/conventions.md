@@ -1,15 +1,15 @@
 ---
-title: F#соглашения о написании кода
+title: Соглашения о написании кода на F#
 description: Дополнительные общие рекомендации и способы, при написании F# кода.
 ms.date: 05/14/2018
-ms.openlocfilehash: 1ef016184180eb8d233295e8985903e07693ad26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b292d0a844a4d9efc79aa865b054b4af2cb68c4
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902139"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052799"
 ---
-# <a name="f-coding-conventions"></a>F#соглашения о написании кода
+# <a name="f-coding-conventions"></a>Соглашения о написании кода на F#
 
 Из опыта работы с большими формулируются следующим соглашениям F# базы кода. [Хорошее пять принципов F# кода](index.md#five-principles-of-good-f-code) являются основой каждой рекомендации. Они связаны с [ F# рекомендации по проектированию компонентов](component-design-guidelines.md), но подходят для любого F# кода, не только компонентов, таких как библиотеки.
 
@@ -611,7 +611,7 @@ F#имеет полную поддержку для объектов и объе
 
 ## <a name="type-abbreviations"></a>Сокращенные обозначения типов
 
-[Аббревиатуры типов](../language-reference/type-abbreviations.md) являются удобным способом для назначения метки для другого типа, например сигнатуру функции или более сложного типа. Например, следующий псевдоним присваивает метки что необходимо для определения вычислений с [CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/), глубокого обучения библиотеки:
+[Аббревиатуры типов](../language-reference/type-abbreviations.md) являются удобным способом для назначения метки для другого типа, например сигнатуру функции или более сложного типа. Например, следующий псевдоним присваивает метки что необходимо для определения вычислений с [CNTK](https://docs.microsoft.com/cognitive-toolkit/), глубокого обучения библиотеки:
 
 ```fsharp
 open CNTK

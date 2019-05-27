@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: fbc92c03da69dd452f35e5b4e00cd4a9ca17e252
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 8965231307da84fd555b181440978adbea7e7244
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211184"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052831"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Практическое руководство. Создание дочерних форм MDI
 
@@ -34,7 +34,7 @@ ms.locfileid: "65211184"
 
 4. В **обозревателе решений**, щелкните правой кнопкой мыши проект, выберите пункт **добавить**, а затем выберите **Добавление нового элемента**.
 
-5. В **Добавление нового элемента** выберите **формы Windows** (в Visual Basic или Visual C#) или **приложение Windows Forms (.NET)** (в [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) из  **Шаблоны** области. В **имя** окне имя формы **Form2**. Нажмите кнопку **откройте** кнопку, чтобы добавить форму в проект.
+5. В **Добавление нового элемента** выберите **формы Windows** (в Visual Basic или Visual C#) или **приложение Windows Forms (.NET)** (в визуальном элементе C++) из **Шаблоны** области. В **имя** окне имя формы **Form2**. Нажмите кнопку **откройте** кнопку, чтобы добавить форму в проект.
 
     > [!NOTE]
     > Дочерняя форма MDI, созданная на этом этапе, является стандартной формой Windows Forms. Таким образом, у нее есть свойство <xref:System.Windows.Forms.Form.Opacity%2A>, которое позволяет управлять прозрачностью формы. Однако свойство <xref:System.Windows.Forms.Form.Opacity%2A> предназначено для окон верхнего уровня. Его не следует использовать в дочерних формах MDI, иначе могут возникнуть проблемы с рисованием.

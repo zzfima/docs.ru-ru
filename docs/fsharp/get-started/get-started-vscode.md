@@ -2,12 +2,12 @@
 title: Начало работы с F# в Visual Studio Code
 description: Сведения об использовании F# с Visual Studio Code и Ionide suite подключаемого модуля.
 ms.date: 12/23/2018
-ms.openlocfilehash: 7c2ecab14b3351d441249e7fc7cb3188a4ee7eba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9d5ed4008f657f956ee7a5611a2f5fdd8e5b44a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949550"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051877"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Начало работы с F# в Visual Studio Code
 
@@ -16,7 +16,7 @@ ms.locfileid: "61949550"
 Чтобы начать, убедитесь, что у вас есть [ F# и правильно установлен подключаемый модуль Ionide](install-fsharp.md#install-f-with-visual-studio-code).
 
 > [!NOTE]
-> Ionide создаст .NET Framework F# проекты, не .NET core, имеющих проблемы совместимости между различными платформами. Если вы используете на **Linux** или **OSX**, более простой способ приступить к работе является использование [средства командной строки](https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line).
+> Ionide создаст .NET Framework F# проекты, не .NET core, имеющих проблемы совместимости между различными платформами. Если вы используете на **Linux** или **OSX**, более простой способ приступить к работе является использование [средства командной строки](get-started-command-line.md).
 
 ## <a name="creating-your-first-project-with-ionide"></a>Создание первого проекта с помощью Ionide
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d20ce0f09309c84dcbeb016e0f17c37fe338dd9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7726164e998ea917c8f539b5768aa7e3f1ae12c
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504097"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053201"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Сравнение строк без учета языка и региональных параметров
 По умолчанию метод <xref:System.String.Compare%2A?displayProperty=nameWithType> выполняет сравнение с учетом языка и региона и регистра символов. Этот метод также содержит несколько перегрузок, которые предоставляют параметр `culture`, позволяющий задать используемый язык и региональные параметры, и параметр `comparisonType`, позволяющий указать используемые правила сравнения. При вызове этих методов вместо перегрузки по умолчанию удаляется любая неопределенность в отношении правил, используемых при вызове конкретного метода, и четко определяется, учитываются ли при конкретном сравнении язык и региональные параметры.  
@@ -39,7 +39,7 @@ ms.locfileid: "54504097"
  [!code-csharp[Conceptual.Strings.CultureInsensitiveComparison#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.cultureinsensitivecomparison/cs/cultureinsensitive1.cs#1)]
  [!code-vb[Conceptual.Strings.CultureInsensitiveComparison#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.cultureinsensitivecomparison/vb/cultureinsensitive1.vb#1)]  
 
-Можно скачать [таблицы коэффициентов сортировки](https://www.microsoft.com/en-us/download/details.aspx?id=10921) — набор текстовых файлов, которые содержат сведения о весовых коэффициентах символов, используемых в операциях сортировки и сравнения для операционных систем Windows, а также [таблицу параметров сортировки по умолчанию для элементов Юникод](https://www.unicode.org/Public/UCA/latest/allkeys.txt) — таблицу весовых коэффициентов сортировки для Linux и macOS.
+Можно скачать [таблицы коэффициентов сортировки](https://www.microsoft.com/download/details.aspx?id=10921) — набор текстовых файлов, которые содержат сведения о весовых коэффициентах символов, используемых в операциях сортировки и сравнения для операционных систем Windows, а также [таблицу параметров сортировки по умолчанию для элементов Юникод](https://www.unicode.org/Public/UCA/latest/allkeys.txt) — таблицу весовых коэффициентов сортировки для Linux и macOS.
 
 ## <a name="see-also"></a>См. также
 

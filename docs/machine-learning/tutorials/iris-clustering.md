@@ -1,19 +1,19 @@
 ---
-title: Категоризация цветов ириса с использованием модели кластеризации
+title: Учебник. Классификация цветов ириса — кластеризация k-средних
 description: Сведения об использовании ML.NET при кластеризации
 author: pkulikov
 ms.author: johalex
-ms.date: 05/02/2019
+ms.date: 05/16/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18
-ms.openlocfilehash: 7070189e289e8e18ba0d122d2411a9064182e2b1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.custom: mvc, seodec18, title-hack-0516
+ms.openlocfilehash: 208e97419faee097db8e187081f2910b71ca2e35
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063555"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882276"
 ---
-# <a name="tutorial-categorize-iris-flowers-using-a-clustering-model-with-mlnet"></a>Учебник. Категоризация цветов ириса с использованием модели кластеризации в ML.NET
+# <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Учебник. Категоризация цветов ириса с использованием кластеризации k-средних в ML.NET
 
 В этом руководстве описано, как с помощью ML.NET создать [модель кластеризации](../resources/tasks.md#clustering) для [набора данных ирисов](https://en.wikipedia.org/wiki/Iris_flower_data_set).
 

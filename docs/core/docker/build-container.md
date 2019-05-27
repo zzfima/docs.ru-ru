@@ -4,12 +4,12 @@ description: Из этого руководства вы узнаете, как 
 ms.date: 04/10/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a96f96bd91976b0966fb7e8d0c8fb6fb7842cfe3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2ea9e9bc2614e62fe6ec0d59e39d42c2e32a80a1
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631865"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051805"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Учебник. Контейнеризация приложения .NET Core
 
@@ -410,6 +410,6 @@ docker rmi mcr.microsoft.com/dotnet/core/runtime:2.2
 ## <a name="next-steps"></a>Следующие шаги
 
 * [Изучите руководство по микрослужбам ASP.NET Core.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
-* [Узнайте больше о службах Azure, которые поддерживают контейнеры.](https://azure.microsoft.com/en-us/overview/containers/)
+* [Узнайте больше о службах Azure, которые поддерживают контейнеры.](https://azure.microsoft.com/overview/containers/)
 * [Ознакомьтесь с командами Dockerfile.](https://docs.docker.com/engine/reference/builder/)
 * [Изучите инструменты Visual Studio для контейнеров](/visualstudio/containers/overview)

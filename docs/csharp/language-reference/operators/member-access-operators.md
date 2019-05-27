@@ -24,14 +24,14 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 921d69e3deb7e5bb5115eb723727462839af9b6b
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: a76c2855196b229918ee0a6a7d2a4dc66d87d059
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452896"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881047"
 ---
-# <a name="member-access-operators"></a>Операторы доступа к членам
+# <a name="member-access-operators-c-reference"></a>Операторы доступа к членам (справочник по C#)
 
 При доступе к члену типа можно использовать следующие операторы:
 
@@ -88,7 +88,7 @@ ms.locfileid: "65452896"
 
 ### <a name="other-usages-of-"></a>Другие данные об использовании []
 
-Дополнительные сведения см. в [практическом руководстве по доступу к элементу массива с использованием указателя](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).
+Сведения о доступе к элементу указателя см. в разделе, посвященном [оператору доступа к элементу указателя []](pointer-related-operators.md#pointer-element-access-operator-), статьи [Операторы, связанные с указателем](pointer-related-operators.md).
 
 Кроме того, с помощью квадратных скобок можно указывать [атрибуты](../../programming-guide/concepts/attributes/index.md).
 

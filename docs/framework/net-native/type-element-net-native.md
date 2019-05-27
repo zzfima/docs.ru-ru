@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a92e6627ba937b10b183a833a005792f0a51f921
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d5541cc34f8967916e4896fd5f9be82edcb332f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033129"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051996"
 ---
 # <a name="type-element-net-native"></a>\<Тип > элемент (машинный код .NET)
 Применяет политику выполнения для конкретного типа, например класса или структуры.  
@@ -102,7 +102,7 @@ ms.locfileid: "62033129"
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
- Поскольку метаданные для класса <xref:System.Collections.Generic.List%601> не добавляются автоматически цепочкой инструментов [!INCLUDE[net_native](../../../includes/net-native-md.md)], в примере возникает ошибка отображения запрошенного элемента данных во время выполнения. Для обеспечения необходимыми метаданными, добавьте следующий элемент `<Type>` в файл директивы среды выполнения. Обратите внимание, что поскольку мы предоставляем родительский элемент [<Namespace\>](../../../docs/framework/net-native/namespace-element-net-native.md), нам не требуется указывать полное имя в элементе `<Type>`.  
+ Поскольку метаданные для <xref:System.Collections.Generic.List%601> класса не добавляются автоматически цепочкой инструментов .NET Native, в примере возникает ошибка отображения запрошенного элемента данных во время выполнения. Для обеспечения необходимыми метаданными, добавьте следующий элемент `<Type>` в файл директивы среды выполнения. Обратите внимание, что поскольку мы предоставляем родительский элемент [<Namespace\>](../../../docs/framework/net-native/namespace-element-net-native.md), нам не требуется указывать полное имя в элементе `<Type>`.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -120,7 +120,7 @@ ms.locfileid: "62033129"
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   
- Поскольку метаданные для объекта <xref:System.String> недоступны, вызов метода <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> приводит к исключению <xref:System.NullReferenceException> во время выполнения при компиляции с цепочкой инструментов [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Чтобы избежать исключений и предоставить необходимые метаданные, добавьте следующий элемент `<Type>` элемент в файл директив среды выполнения:  
+ Поскольку метаданные для <xref:System.String> объект недоступен, вызов <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> вызывает метод <xref:System.NullReferenceException> исключение при запуске времени при компиляции с помощью цепочки инструментов .NET Native. Чтобы избежать исключений и предоставить необходимые метаданные, добавьте следующий элемент `<Type>` элемент в файл директив среды выполнения:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

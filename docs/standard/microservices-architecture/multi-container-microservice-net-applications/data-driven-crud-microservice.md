@@ -2,12 +2,12 @@
 title: Создание простой микрослужбы CRUD на основе данных
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Общие сведения о создании простой микрослужбы CRUD (управляемой данными) в контексте приложения для микрослужб.
 ms.date: 01/07/2019
-ms.openlocfilehash: 5dd7154fc81c7d0c3fb78bce662ea822f2392a10
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 53aba727c8dae35df8b34bc1558c0cc390fe2014
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644424"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053569"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Создание простой микрослужбы CRUD на основе данных
 
@@ -321,7 +321,7 @@ public class CatalogController : ControllerBase
 
 - [AutoRest](https://github.com/Azure/AutoRest). Вы можете автоматически создавать клиентские классы .NET для вызова Swagger. Этот инструмент можно использовать из CLI, и он также интегрируется с Visual Studio для упрощения использования через графический интерфейс пользователя.
 
-- [Microsoft Flow](https://flow.microsoft.com/en-us/). Вы можете автоматически [использовать и интегрировать свои API](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) в высокоуровневый процесс Microsoft Flow без каких-либо навыков программирования.
+- [Microsoft Flow](https://flow.microsoft.com/). Вы можете автоматически [использовать и интегрировать свои API](https://flow.microsoft.com/blog/integrating-custom-api/) в высокоуровневый процесс Microsoft Flow без каких-либо навыков программирования.
 
 - [Microsoft PowerApps](https://powerapps.microsoft.com/). Вы можете автоматически использовать свои API из [мобильных приложений PowerApps](https://powerapps.microsoft.com/blog/register-and-use-custom-apis-in-powerapps/), созданных с помощью [PowerApps Studio](https://powerapps.microsoft.com/build-powerapps/), без каких-либо навыков программирования.
 

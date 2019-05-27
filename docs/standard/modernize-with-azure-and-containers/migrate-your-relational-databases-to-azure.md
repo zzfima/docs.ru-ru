@@ -2,12 +2,12 @@
 title: Миграция реляционных баз данных в azure
 description: Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows | Миграция реляционных баз данных в azure
 ms.date: 04/28/2018
-ms.openlocfilehash: 1c09172f0948551edfe059be6f43d7a02278203d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3d4f03e61144bb6a442a50916d7fd024d38ec611
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638894"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051924"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Миграция реляционных баз данных в azure
 
@@ -81,7 +81,7 @@ ms.locfileid: "65638894"
 
 Один из вариантов миграции является перемещение исходной реляционной системе управления базой данных (RDBMS), включая Oracle, IBM DB2, MySQL, PostgreSQL или SQL Server, аналогично серверу, на котором выполняется на виртуальной Машине Azure. При наличии существующих приложений, которым требуется быстрый миграции в облако с минимальными изменениями или без изменений вообще прямого перехода на IaaS в облаке может быть честным параметр. Может оказаться лучшим способом, чтобы воспользоваться преимуществами облачной среды, но это, вероятно, самый быстрый начальный путь.
 
-В настоящее время Microsoft Azure поддерживает до [331 различных серверов баз данных](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all) развернутых как ВМ IaaS. К ним относятся популярных реляционной СУБД, таких как SQL Server, Oracle, MySQL, PostgreSQL и IBM DB2 и многих других баз данных NoSQL как MongoDB, Cassandra, DataStax, MariaDB и Cloudera.
+В настоящее время Microsoft Azure поддерживает до [331 различных серверов баз данных](https://azuremarketplace.microsoft.com/marketplace/apps/category/databases?page=1&subcategories=databases-all) развернутых как ВМ IaaS. К ним относятся популярных реляционной СУБД, таких как SQL Server, Oracle, MySQL, PostgreSQL и IBM DB2 и многих других баз данных NoSQL как MongoDB, Cassandra, DataStax, MariaDB и Cloudera.
 
 > [!NOTE]
 > Несмотря на то, что перемещение в реляционной СУБД на виртуальных машинах Azure может быть самый быстрый способ переноса данных в облако (так как это IaaS), этот подход требует значительных вложений в ИТ-отделов (Администраторы баз данных и ИТ-специалистов). Корпоративных групп должны иметь возможность создавать и настраивать высокую доступность, аварийное восстановление и установка исправлений SQL Server. Этот контекст также требуется настраиваемая среда со всеми правами администратора.

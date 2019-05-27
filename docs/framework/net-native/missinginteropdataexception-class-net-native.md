@@ -7,22 +7,22 @@ dev_langs:
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31208a63caaf9158f12742f1547b0e1e2781de4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 803709c97309f9766b6a441f5521cdcd7504862f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866890"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052498"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>Класс MissingInteropDataException (машинный код .NET)
-**Приложения .NET для Windows 10, [!INCLUDE[net_native](../../../includes/net-native-md.md)] только**   
+**.NET для приложений Windows для Windows 10, только машинный код .NET**  
   
  Исключение, которое возникает, когда вызывается ручной метод маршалинга, но не найдены метаданные для типа в ходе статического анализа или в файле директив среды выполнения.  
   
  **Пространство имен:** System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
->  Класс `MissingInteropDataException` предназначен исключительно для внутреннего использования цепочкой инструментов [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Он не предназначен для использования в стороннем коде. Вам также не следует обрабатывать исключение в коде своего приложения. Вместо этого вы устраняете исключение, добавляя записи в [файл директив среды выполнения](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Дополнительные сведения см. в разделе "Примечания".  
+>  `MissingInteropDataException` Класс предназначен исключительно для внутреннего использования цепочкой инструментов .NET Native. Он не предназначен для использования в стороннем коде. Вам также не следует обрабатывать исключение в коде своего приложения. Вместо этого вы устраняете исключение, добавляя записи в [файл директив среды выполнения](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Дополнительные сведения см. в разделе "Примечания".  
   
 ## <a name="syntax"></a>Синтаксис  
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
@@ -34,7 +34,7 @@ ms.locfileid: "61866890"
   
 |Конструктор|Описание|  
 |-----------------|-----------------|  
-|`public MissingInteropDataException(String resourceId, Type pertinentType)`|Инициализирует новый экземпляр класса `MissingInteropDataException` с использованием идентификатора системного сообщения, описывающего ошибку и тип, данные которого отсутствуют. Этот конструктор предназначен только для внутреннего использования цепочки инструментов [!INCLUDE[net_native](../../../includes/net-native-md.md)].|  
+|`public MissingInteropDataException(String resourceId, Type pertinentType)`|Инициализирует новый экземпляр класса `MissingInteropDataException` с использованием идентификатора системного сообщения, описывающего ошибку и тип, данные которого отсутствуют. Этот конструктор предназначен для внутреннего использования цепочки инструментов .NET Native только.|  
   
 ## <a name="properties"></a>Свойства  
   

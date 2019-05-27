@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed276d8026201af94a0259c4258d5c50fa67c0f3
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026488"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053244"
 ---
 # <a name="working-with-calendars"></a>Работа с календарями
 
@@ -141,7 +141,7 @@ ms.locfileid: "62026488"
 >  Эра Reiwa, новая эра <xref:System.Globalization.JapaneseCalendar> и <xref:System.Globalization.JapaneseLunisolarCalendar>, начинается с 1 мая 2019 г. Это изменение затрагивает все приложения, использующие эти календари. Ознакомьтесь со следующими статьями, Дополнительные сведения:
 > - [Обработка новой эре японского календаря в .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), который Документирует, добавленных в .NET для поддержки календарей с несколько эр и рекомендации для использования при обработке нескольких эры календарей.
 > - [Подготовка приложения для изменения японской эры](/windows/uwp/design/globalizing/japanese-era-change), который предоставляет данные для тестирования приложений на Windows для обеспечения их готовность к работе изменение эры.
-> - [Сводка по новой японской эры обновления для .NET Framework](https://support.microsoft.com/en-us/help/4477957/new-japanese-era-updates-for-net-framework), перечисляя обновлениях платформы .NET Framework для отдельных версий Windows, которые связаны с новой эры японского календаря, заметок новые возможности .NET Framework для поддержки нескольких эры и включает в себя следует обратить внимание на в тестировании приложений.
+> - [Сводка по новой японской эры обновления для .NET Framework](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework), перечисляя обновлениях платформы .NET Framework для отдельных версий Windows, которые связаны с новой эры японского календаря, заметок новые возможности .NET Framework для поддержки нескольких эры и включает в себя следует обратить внимание на в тестировании приложений.
 
 Эру в большинстве календарей обозначает период очень много времени. Например, по григорианскому календарю, текущей эры охватывает более чем двумя тысячелетий. Для <xref:System.Globalization.JapaneseCalendar> и <xref:System.Globalization.JapaneseLunisolarCalendar>, два календари, поддерживающих несколько эр, это не так. Период reign императора соответствует эру. Поддержка несколько эр, особенно в том случае, если верхний предел текущей эры неизвестно, создает особые проблемы. 
 

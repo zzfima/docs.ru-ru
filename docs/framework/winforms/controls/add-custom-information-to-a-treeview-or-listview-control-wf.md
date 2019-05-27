@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 9e2942e11ed10dffcfad8f0329295827b7f0d4d8
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 5f51744878da526147dd742e98117e8e87c94e20
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452741"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052241"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или ListView (Windows Forms)
 В Windows Forms можно создать производный узел <xref:System.Windows.Forms.TreeView> управления или производный элемент в <xref:System.Windows.Forms.ListView> элемента управления. Наследование позволяет добавлять любые необходимые поля, а также пользовательские методы и конструкторы для их обработки. Эту возможность можно использовать для присоединения объекта Customer к каждому узлу дерева или элементу списка. Приведенные ниже примеры предназначены для <xref:System.Windows.Forms.TreeView> элемента управления, но тот же подход можно использовать для <xref:System.Windows.Forms.ListView> элемента управления.  
@@ -100,7 +100,7 @@ ms.locfileid: "65452741"
        "\\TextFile.txt")));  
     ```  
   
-2. Если передается узел дерева, и он введен как <xref:System.Windows.Forms.TreeNode> класса, а затем будет необходимо выполнить приведение к своему производному классу. Приведение представляет собой явное преобразование из одного типа объекта в другой. Дополнительные сведения о приведении см. в разделе [явные и неявные преобразования](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [приведение и преобразование типов](~/docs/csharp/programming-guide/types/casting-and-type-conversions.md) (Visual C#), или [оператор Cast: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) .  
+2. Если передается узел дерева, и он введен как <xref:System.Windows.Forms.TreeNode> класса, а затем будет необходимо выполнить приведение к своему производному классу. Приведение представляет собой явное преобразование из одного типа объекта в другой. Дополнительные сведения о приведении см. в разделе [явные и неявные преобразования](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [приведение и преобразование типов](~/docs/csharp/programming-guide/types/casting-and-type-conversions.md) (Visual C#), или [оператор Cast: ()](/cpp/cpp/cast-operator-parens) () Visual C++).  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  

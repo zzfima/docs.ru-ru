@@ -4,12 +4,12 @@ ms.date: 04/08/2019
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 86705a4f8daa327c442ac6c53c9b44c5b5c5c2ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bfdbbc19bb9ed72bc50ebeeac114241ccd47c25
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857367"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053415"
 ---
 # <a name="configuring-http-and-https"></a>Настройка HTTP и HTTPS
 
@@ -57,7 +57,7 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 
 При работе с привязкой <xref:System.ServiceModel.WSDualHttpBinding> клиентское соединение использует значения по умолчанию, совместимые с резервированием пространства имен и брандмауэром Windows. При необходимости настроить базовый адрес клиента для двустороннего соединения, необходимо, кроме того, настроить эти параметры HTTP в клиенте так, чтобы они соответствовали новому адресу.
 
-API сервера HTTP имеет некоторые дополнительные параметры конфигурации, которые не доступны через HttpCfg. Эти параметры сохраняются в реестре и применяются ко всем приложениям, выполняемым в системах, которые используют API HTTP-сервера. Сведения об этих параметрах см. в разделе [параметры реестра Http.sys для IIS](https://support.microsoft.com/en-us/help/820129/http-sys-registry-settings-for-windows). Большинство пользователей не нужно изменять эти параметры.
+API сервера HTTP имеет некоторые дополнительные параметры конфигурации, которые не доступны через HttpCfg. Эти параметры сохраняются в реестре и применяются ко всем приложениям, выполняемым в системах, которые используют API HTTP-сервера. Сведения об этих параметрах см. в разделе [параметры реестра Http.sys для IIS](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows). Большинство пользователей не нужно изменять эти параметры.
 
 ## <a name="see-also"></a>См. также
 

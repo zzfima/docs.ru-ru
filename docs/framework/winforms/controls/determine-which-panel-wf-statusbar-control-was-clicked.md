@@ -13,12 +13,12 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: 1c28f8eaba5c35f762d6fc57ebbddbbb71769c81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a659de62965d17e965eee2f750337a08ae1801e0
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972319"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053723"
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Практическое руководство. Идентификация панели элемента управления StatusBar, которую щелкнул пользователь, в Windows Forms
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "61972319"
   
 ### <a name="to-determine-which-panel-was-clicked"></a>Чтобы определить, какая панель была выбрана  
   
-1. В <xref:System.Windows.Forms.StatusBar.PanelClick> обработчик событий, используйте `Select Case` (в Visual Basic) или `switch case` (Visual C# или [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) инструкцию, чтобы определить, какая панель была нажата, путем проверки индекса выбранной панели в аргументах события.  
+1. В <xref:System.Windows.Forms.StatusBar.PanelClick> обработчик событий, используйте `Select Case` (в Visual Basic) или `switch case` (Visual C# или визуальным элементом C++) инструкцию, чтобы определить, какая панель была нажата, путем проверки индекса выбранной панели в аргументах события.  
   
      В следующем примере кода необходимо наличие, в форме из <xref:System.Windows.Forms.StatusBar> управления `StatusBar1`и два <xref:System.Windows.Forms.StatusBarPanel> объектов, `StatusBarPanel1` и `StatusBarPanel2`.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "61972319"
        }  
     ```  
   
-     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) поместите следующий код в конструктор формы для регистрации обработчика событий.  
+     (Visual C#, Visual C++) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.statusBar1.PanelClick += new   

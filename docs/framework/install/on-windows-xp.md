@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: a92286d23b5adee268b4635fbbdec0f5c052e1db
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b246c75896d00ad2c91ded106682e8cdd817d9d1
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636449"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052687"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Установка .NET Framework в Windows XP и Windows Server 2003
 
@@ -21,7 +21,7 @@ ms.locfileid: "65636449"
 
 ![Не удалось запустить это приложение.](./media/this-application-could-not-be-started.png)
 
-Эти инструкции помогут вам установить необходимые версии .NET Framework. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) является самой новой версией. Она не поддерживается в Windows XP и Windows Server 2003. Она входит в состав [обновления Windows 10 за май 2019 г.](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update)
+Эти инструкции помогут вам установить необходимые версии .NET Framework. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) является самой новой версией. Она не поддерживается в Windows XP и Windows Server 2003. Она входит в состав [обновления Windows 10 за май 2019 г.](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 

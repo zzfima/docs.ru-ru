@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 304c2ed354c2b3bfe6333550810dde6c779f2e21
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e106709c7410b289e7aab2b5cf924466f2eeb501
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663441"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959939"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Устаревшие типы в платформе .NET Framework
 <a name="introduction"></a>В таблицах этой статьи перечислены типы, которые являются устаревшими в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Они сгруппированы по сборкам. Используйте следующие ссылки для просмотра списка устаревших типов и рекомендованных альтернатив в каждой сборке. Поскольку эти типы считаются устаревшими, все их члены также являются устаревшими. Список дополнительных устаревших членов в библиотеке классов платформы .NET Framework см. в разделе [Устаревшие члены](obsolete-members.md).
@@ -512,8 +512,8 @@ ms.locfileid: "64663441"
 
 |Тип|Сообщение|
 |----------|-------------|
-|<xref:System.Activities.Statements.Interop>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br />Типы Workflow Foundation 3.0 являются устаревшими. Вместо них используйте типы Workflow 4.0 из <xref:System.Activities>\*.|
-|<xref:System.Activities.Tracking.InteropTrackingRecord>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br />Типы Workflow Foundation 3.0 являются устаревшими. Вместо них используйте типы Workflow 4.0 из <xref:System.Activities>\*.|
+|<xref:System.Activities.Statements.Interop?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br />Типы Workflow Foundation 3.0 являются устаревшими. Вместо них используйте типы Workflow 4.0 из <xref:System.Activities>\*.|
+|<xref:System.Activities.Tracking.InteropTrackingRecord?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br />Типы Workflow Foundation 3.0 являются устаревшими. Вместо них используйте типы Workflow 4.0 из <xref:System.Activities>\*.|
 |Все типы в пространстве имен <xref:System.Workflow.Runtime>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|
 |Все типы в пространстве имен <xref:System.Workflow.Runtime.Configuration>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|
 |Все типы в пространстве имен <xref:System.Workflow.Runtime.DebugEngine>, кроме <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|

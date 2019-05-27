@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 136ad9992ea94b027f095f47df0388408029f24e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a93009e66d63aa7d9c3b60951d43eafa3c351a63
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638919"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053265"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Рекомендации по размещению веб-приложений ASP.NET Core в Azure
 
@@ -44,7 +44,7 @@ ms.locfileid: "65638919"
 
 - Интеграция Visual Studio.
 
-- Поддержка контейнеров Windows и Linux с помощью [веб-приложения для контейнеров](https://azure.microsoft.com/en-us/services/app-service/containers/).
+- Поддержка контейнеров Windows и Linux с помощью [веб-приложения для контейнеров](https://azure.microsoft.com/services/app-service/containers/).
 
 Служба приложений Azure оптимально подходит для большинства веб-приложений. Функции развертывания и управления интегрированы в платформу, обеспечивается возможность быстрого масштабирования сайтов для обработки больших объемов трафика, а встроенные компоненты балансировки нагрузки и диспетчера трафика позволяют гарантировать высокий уровень доступности. Вы можете перенести существующий сайт в службу приложений Azure с помощью средства миграции в Интернете, использовать специальное приложение с открытым исходным кодом из коллекции веб-приложений, а также создать новый сайт с помощью удобных для вас средств и платформы. С помощью функции веб-заданий вы можете с легкостью реализовать фоновую обработку заданий в своем веб-приложении службы приложений.
 
@@ -101,7 +101,7 @@ Azure предлагает широкий спектр вариантов хра
   <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
 - Веб-приложение для контейнеров\
-  <https://azure.microsoft.com/en-us/services/app-service/containers/>
+  <https://azure.microsoft.com/services/app-service/containers/>
 
 - Общие сведения о службе контейнеров Azure (AKS)\
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>

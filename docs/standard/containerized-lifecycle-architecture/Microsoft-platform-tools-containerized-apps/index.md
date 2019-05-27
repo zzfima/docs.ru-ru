@@ -2,12 +2,12 @@
 title: Общие сведения о платформе и средствах Майкрософт для контейнерных приложений
 description: Ознакомьтесь с предложениями корпорации Microsoft для поддержки жизненного цикла приложений Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 9e7e821370b98fbda9af0ea69c13eaeab2f35acf
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6907528a5d7ff354a312e7575531b9c608cb479f
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644905"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195594"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Общие сведения о платформе и средствах Майкрософт для контейнерных приложений
 
@@ -27,8 +27,8 @@ ms.locfileid: "65644905"
 
 | Узел | Технологии Майкрософт | Сторонние — подключаемые к Azure |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
-| Платформа для приложений Docker   | • Microsoft Visual Studio и Visual Studio Code<br /> • .NET<br /> • Служба контейнеров Microsoft Azure<br /> • Azure Service Fabric<br /> • Реестр контейнеров Azure<br /> | • Любой редактор кода (например, Sublime)<br /> • Любой язык (Node.js, Java, Go и т. д.)<br /> • Любой оркестратор и планировщик<br /> • Любой реестр Docker<br /> |
-| DevOps для приложений Docker     | • Службы azure DevOps<br /> • Microsoft Team Foundation Server<br /> • Служба контейнеров Azure<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion и т. д.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI и т. д.<br /> • Локальный Docker Datacenter, Docker Swarm, ОС/ЦОД Mesos, Kubernetes и т. д.<br /> |
+| Платформа для приложений Docker   | • Microsoft Visual Studio и Visual Studio Code<br /> • .NET<br /> • Microsoft Azure служба Kubernetes (AKS)<br /> • Azure Service Fabric<br /> • Реестр контейнеров Azure<br /> | • Любой редактор кода (например, Sublime)<br /> • Любой язык (Node.js, Java, Go и т. д.)<br /> • Любой оркестратор и планировщик<br /> • Любой реестр Docker<br /> |
+| DevOps для приложений Docker     | • Службы azure DevOps<br /> • Microsoft Team Foundation Server<br /> • Служба azure Kubernetes (AKS)<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion и т. д.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI и т. д.<br /> • Локальный Docker Datacenter, Docker Swarm, ОС/ЦОД Mesos, Kubernetes и т. д.<br /> |
 | Управление и мониторинг  | • Azure Monitor | • Marathon, Chronos и т. д.<br />|
 
 Платформа Майкрософт и средства для контейнерных приложений Docker, как определено в таблице 3-1, включают следующие компоненты.
@@ -37,7 +37,7 @@ ms.locfileid: "65644905"
 
 - **DevOps для приложений Docker** разработчики, создающие приложения Docker могут использовать [служб Azure DevOps](https://azure.microsoft.com/services/devops/) или любые другие продукты независимых производителей, как Jenkins, чтобы выстроить циклом комплексное автоматизированного приложения Управление Жизненным циклом.
 
-  С помощью служб Azure DevOps, разработчики могут создавать, ориентированный на контейнер DevOps для быстрого итеративного процесса, который охватывает исходного кода управления из любого места (DevOps Azure Services-Git, GitHub, любой удаленный репозиторий Git или Subversion), непрерывной интеграции (CI) , внутренние модульные тесты, тесты интеграции между ними container или службы, непрерывную доставку (CD) и управления выпусками (RM). Разработчики также могут автоматизировать выпуски приложений Docker в службу контейнеров Azure, как в средах разработки, так и в средах промежуточного хранения и производства.
+  С помощью служб Azure DevOps, разработчики могут создавать, ориентированный на контейнер DevOps для быстрого итеративного процесса, который охватывает исходного кода управления из любого места (DevOps Azure Services-Git, GitHub, любой удаленный репозиторий Git или Subversion), непрерывной интеграции (CI) , внутренние модульные тесты, тесты интеграции между ними container или службы, непрерывную доставку (CD) и управления выпусками (RM). Разработчики также могут автоматизировать выпуски приложений Docker в Azure Kubernetes Service (AKS), от разработки к промежуточной и рабочей сред.
 
 - **Управление и мониторинг** ИТ могут управлять и отслеживать рабочими приложениями и службами несколькими способами, интеграция обеих перспектив в работе.
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 531b9b6ae62b34f78f13ff6cd1784a2823584ed6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0776db4d045a8e52521859b9126583558bc5b51
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620783"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586361"
 ---
 # <a name="cancellation-in-managed-threads"></a>Отмена в управляемых потоках
 В [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] введена новая универсальная модель совместной отмены асинхронных или долго выполняющихся синхронных операций. Эта модель построена на простом объекте, называемом токеном отмены. Объект, который вызывает одну или несколько отменяемых операций, например, путем создания новых потоков или задач, передает этот токен в каждую операцию. Операция, в свою очередь, передает копии этого токена в другие операции. Некоторое время спустя объект, создавший токен, может использовать его для запроса остановки выполнения операции. Запрос на отмену может создавать только запрашивающий объект, и каждый прослушиватель должен обнаружить этот запрос, чтобы правильно и своевременно отреагировать на него.  
@@ -60,7 +60,7 @@ ms.locfileid: "64620783"
 |<xref:System.Threading.CancellationToken>|Простой тип значения, передаваемый одному или нескольким прослушивателям, обычно в виде параметра метода. Прослушиватели отслеживают значение свойства `IsCancellationRequested` токена посредством опроса, обратного вызова или дескриптора ожидания.|  
 |<xref:System.OperationCanceledException>|Перегрузки конструктора этого исключения принимают <xref:System.Threading.CancellationToken> в качестве параметра. Прослушиватели могут также создавать это исключение для проверки источника отмены и уведомления остальных прослушивателей об ответе на запрос отмены.|  
   
- Новая модель отмены интегрирована в несколько типов [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Наиболее важные из них — <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> и <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>. Мы рекомендуем использовать именно эту новую модель отмены в коде всех новых библиотек и приложений.  
+ Новая модель отмены интегрирована в несколько типов .NET Framework. Наиболее важные из них — <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> и <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>. Мы рекомендуем использовать именно эту новую модель отмены в коде всех новых библиотек и приложений.  
   
 ## <a name="code-example"></a>Пример кода  
  В примере ниже запрашивающий объект создает объект <xref:System.Threading.CancellationTokenSource>, а затем передает его свойство <xref:System.Threading.CancellationTokenSource.Token%2A> в отменяемую операцию. Операция, получающая запрос, отслеживает значение свойства <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> токена путем опроса. Когда свойство принимает значение `true`, прослушиватель может завершить операцию любым приемлемым способом. В этом примере просто выполняется выход из метода. Во многих случаях этого достаточно.  

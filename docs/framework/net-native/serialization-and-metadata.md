@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e7a8e6509cea5f9035e3b8544aa37aa99681822
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c1ee70c2701492acd331e5faed849ff0b2e8b559
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650316"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052380"
 ---
 # <a name="serialization-and-metadata"></a>Сериализация и метаданные
 Если ваше приложение сериализует и десериализует объекты, может потребоваться добавить записи в файл директив среды выполнения (. rd.xml) файл, чтобы гарантировать наличие необходимых метаданных во время выполнения. Существует две категории сериализаторов, и каждый требует различной обработки в файла директив среды выполнения:  
@@ -39,10 +39,10 @@ ms.locfileid: "64650316"
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
- Компилятор [!INCLUDE[net_native](../../../includes/net-native-md.md)] автоматически будет обрабатывать этот код.  
+ Компилятор .NET Native автоматически будет обрабатывать этот код.  
   
 ### <a name="typeof-used-outside-the-constructor"></a>TypeOf, использованный за пределами конструктора  
- Если вызвать конструктор этих классов сериализации и использовать ключевое слово C# [typeof](~/docs/csharp/language-reference/keywords/typeof.md) за пределами выражения, предоставленного для параметра <xref:System.Type> конструктора, как в следующем коде, компилятор [!INCLUDE[net_native](../../../includes/net-native-md.md)] не может разрешить тип:  
+ Если вызвать конструктор этих классов сериализации и использовать C# [typeof](~/docs/csharp/language-reference/keywords/typeof.md) ключевое слово, за пределами выражения, предоставленного в конструктор <xref:System.Type> параметра, как показано в следующем коде, компилятор машинного кода .NET невозможно разрешить тип:  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -52,7 +52,7 @@ ms.locfileid: "64650316"
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- Аналогичным образом, если вызвать конструктор <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> и предоставить массив дополнительных объектов <xref:System.Type> для сериализации, как показано в следующем коде, компилятору [!INCLUDE[net_native](../../../includes/net-native-md.md)] не удается разрешить эти типы.  
+ Аналогично Если вызвать конструктор, такие как <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> и предоставить массив дополнительных <xref:System.Type> объектов для сериализации, так как в следующем коде, компилятор .NET Native не может разрешить эти типы.  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
