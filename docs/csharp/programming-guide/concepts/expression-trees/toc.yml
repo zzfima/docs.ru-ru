@@ -1,11 +1,13 @@
 - name: Деревья выражений
   href: index.md
   items:
-    - name: Как выполнить Выполнение деревьев выражений
+    - name: Практическое руководство. Выполнение деревьев выражений
       href: how-to-execute-expression-trees.md
-    - name: Как выполнить Изменение деревьев выражений
+    - name: Практическое руководство. Изменение деревьев выражений
       href: how-to-modify-expression-trees.md
-    - name: Как выполнить Использование деревьев выражений для построения динамических запросов
+    - name: Практическое руководство. Использование деревьев выражений для построения динамических запросов
       href: how-to-use-expression-trees-to-build-dynamic-queries.md
     - name: Отладка деревьев выражений в Visual Studio
       href: debugging-expression-trees-in-visual-studio.md
+    - name: Синтаксис DebugView
+      href: debugview-syntax.md
