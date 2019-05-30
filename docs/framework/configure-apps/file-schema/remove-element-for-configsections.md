@@ -7,54 +7,54 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 9ceffd3194c7df41f12ac6cd6b589602965b4920
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c0173879c692588cc2e15f0b14a5687bb0404fb
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674315"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300677"
 ---
-# <a name="remove-element-for-configsections"></a><span data-ttu-id="11f15-102">\<Удалить > элемент для \<configSections ></span><span class="sxs-lookup"><span data-stu-id="11f15-102">\<remove> element for \<configSections></span></span>
+# <a name="remove-element-for-configsections"></a><span data-ttu-id="fed64-102">\<Удалить > элемент для \<configSections ></span><span class="sxs-lookup"><span data-stu-id="fed64-102">\<remove> element for \<configSections></span></span>
 
-<span data-ttu-id="11f15-103">Удаляет предварительно определенный раздел или группу разделов.</span><span class="sxs-lookup"><span data-stu-id="11f15-103">Removes a predefined section or section group.</span></span>
+<span data-ttu-id="fed64-103">Удаляет предварительно определенный раздел или группу разделов.</span><span class="sxs-lookup"><span data-stu-id="fed64-103">Removes a predefined section or section group.</span></span>
 
-<span data-ttu-id="11f15-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="11f15-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="11f15-105">&nbsp;&nbsp;[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="11f15-105">&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span></span>  
-<span data-ttu-id="11f15-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<Удалить >**</span><span class="sxs-lookup"><span data-stu-id="11f15-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
+<span data-ttu-id="fed64-104">[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="fed64-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="fed64-105">&nbsp;&nbsp;[ **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="fed64-105">&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span></span>  
+<span data-ttu-id="fed64-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<Удалить >**</span><span class="sxs-lookup"><span data-stu-id="fed64-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="11f15-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="11f15-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="fed64-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fed64-107">Syntax</span></span>
 
 ```xml
 <remove name="section name or section group name" />
 ```
 
-## <a name="attribute"></a><span data-ttu-id="11f15-108">Атрибут</span><span class="sxs-lookup"><span data-stu-id="11f15-108">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="fed64-108">Атрибут</span><span class="sxs-lookup"><span data-stu-id="fed64-108">Attribute</span></span>
 
-|           | <span data-ttu-id="11f15-109">Описание</span><span class="sxs-lookup"><span data-stu-id="11f15-109">Description</span></span> |
+|           | <span data-ttu-id="fed64-109">Описание</span><span class="sxs-lookup"><span data-stu-id="fed64-109">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="11f15-110">**name**</span><span class="sxs-lookup"><span data-stu-id="11f15-110">**name**</span></span>  | <span data-ttu-id="11f15-111">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="11f15-111">Required attribute.</span></span><br><br><span data-ttu-id="11f15-112">Задает имя раздела или группы разделов.</span><span class="sxs-lookup"><span data-stu-id="11f15-112">Specifies the name of the section or section group to remove.</span></span> |
+| <span data-ttu-id="fed64-110">**name**</span><span class="sxs-lookup"><span data-stu-id="fed64-110">**name**</span></span>  | <span data-ttu-id="fed64-111">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="fed64-111">Required attribute.</span></span><br><br><span data-ttu-id="fed64-112">Задает имя раздела или группы разделов.</span><span class="sxs-lookup"><span data-stu-id="fed64-112">Specifies the name of the section or section group to remove.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="11f15-113">Родительский элемент</span><span class="sxs-lookup"><span data-stu-id="11f15-113">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="fed64-113">Родительский элемент</span><span class="sxs-lookup"><span data-stu-id="fed64-113">Parent element</span></span>
 
-|     | <span data-ttu-id="11f15-114">Описание</span><span class="sxs-lookup"><span data-stu-id="11f15-114">Description</span></span> |
+|     | <span data-ttu-id="fed64-114">Описание</span><span class="sxs-lookup"><span data-stu-id="fed64-114">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="11f15-115">**\<configSections >** элемент</span><span class="sxs-lookup"><span data-stu-id="11f15-115">**\<configSections>** Element</span></span>](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | <span data-ttu-id="11f15-116">Содержит раздел конфигурации и пространства имен объявления.</span><span class="sxs-lookup"><span data-stu-id="11f15-116">Contains configuration section and namespace declarations.</span></span> |
+| [<span data-ttu-id="fed64-115"> *\*\<configSections >** элемент</span><span class="sxs-lookup"><span data-stu-id="fed64-115">**\<configSections>** Element</span></span>](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | <span data-ttu-id="fed64-116">Содержит раздел конфигурации и пространства имен объявления.</span><span class="sxs-lookup"><span data-stu-id="fed64-116">Contains configuration section and namespace declarations.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="11f15-117">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="11f15-117">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="fed64-117">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="fed64-117">Child elements</span></span>
 
-<span data-ttu-id="11f15-118">None</span><span class="sxs-lookup"><span data-stu-id="11f15-118">None</span></span>
+<span data-ttu-id="fed64-118">None</span><span class="sxs-lookup"><span data-stu-id="fed64-118">None</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="11f15-119">Примечания</span><span class="sxs-lookup"><span data-stu-id="11f15-119">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="fed64-119">Примечания</span><span class="sxs-lookup"><span data-stu-id="fed64-119">Remarks</span></span>
 
-<span data-ttu-id="11f15-120">Можно использовать  **\<удалить >** элемент нужно удалить разделы и группы разделов из приложения, которые были определены на более высоком уровне в иерархии файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="11f15-120">You can use the **\<remove>** element to remove sections and section groups from your application that were defined at a higher level in the configuration file hierarchy.</span></span>
+<span data-ttu-id="fed64-120">Можно использовать  **\<удалить >** элемент нужно удалить разделы и группы разделов из приложения, которые были определены на более высоком уровне в иерархии файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="fed64-120">You can use the **\<remove>** element to remove sections and section groups from your application that were defined at a higher level in the configuration file hierarchy.</span></span>
 
-## <a name="example"></a><span data-ttu-id="11f15-121">Пример</span><span class="sxs-lookup"><span data-stu-id="11f15-121">Example</span></span>
+## <a name="example"></a><span data-ttu-id="fed64-121">Пример</span><span class="sxs-lookup"><span data-stu-id="fed64-121">Example</span></span>
 
-<span data-ttu-id="11f15-122">В следующем примере показано, как использовать  **\<удалить >** элемент в файле конфигурации приложения для удаления раздела, ранее определенные в файле конфигурации компьютера.</span><span class="sxs-lookup"><span data-stu-id="11f15-122">The following example shows how to use the **\<remove>** element in an application configuration file to remove a section previously defined in the machine configuration file.</span></span>
+<span data-ttu-id="fed64-122">В следующем примере показано, как использовать  **\<удалить >** элемент в файле конфигурации приложения для удаления раздела, ранее определенные в файле конфигурации компьютера.</span><span class="sxs-lookup"><span data-stu-id="fed64-122">The following example shows how to use the **\<remove>** element in an application configuration file to remove a section previously defined in the machine configuration file.</span></span>
 
-<span data-ttu-id="11f15-123">В коде следующего файла конфигурации компьютера объявляет разделе  **\<sampleSection >**:</span><span class="sxs-lookup"><span data-stu-id="11f15-123">The following machine configuration file code declares the section **\<sampleSection>**:</span></span>
+<span data-ttu-id="fed64-123">В коде следующего файла конфигурации компьютера объявляет разделе  **\<sampleSection >** :</span><span class="sxs-lookup"><span data-stu-id="fed64-123">The following machine configuration file code declares the section **\<sampleSection>**:</span></span>
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ ms.locfileid: "61674315"
 </configuration>
 ```
 
-<span data-ttu-id="11f15-124">В коде следующего файла конфигурации приложения удаляет  **\<sampleSection >** раздел.</span><span class="sxs-lookup"><span data-stu-id="11f15-124">The following application configuration file code removes the **\<sampleSection>** section.</span></span> <span data-ttu-id="11f15-125">После удаления приложения не удается получить параметры в  **\<sampleSection >**.</span><span class="sxs-lookup"><span data-stu-id="11f15-125">After removal, the application cannot retrieve the settings in **\<sampleSection>**.</span></span>
+<span data-ttu-id="fed64-124">В коде следующего файла конфигурации приложения удаляет  **\<sampleSection >** раздел.</span><span class="sxs-lookup"><span data-stu-id="fed64-124">The following application configuration file code removes the **\<sampleSection>** section.</span></span> <span data-ttu-id="fed64-125">После удаления приложения не удается получить параметры в  **\<sampleSection >** .</span><span class="sxs-lookup"><span data-stu-id="fed64-125">After removal, the application cannot retrieve the settings in **\<sampleSection>**.</span></span>
 
 ```xml
 <!-- Application configuration file -->
@@ -80,10 +80,10 @@ ms.locfileid: "61674315"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="11f15-126">файл конфигурации</span><span class="sxs-lookup"><span data-stu-id="11f15-126">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="fed64-126">файл конфигурации</span><span class="sxs-lookup"><span data-stu-id="fed64-126">Configuration file</span></span>
 
-<span data-ttu-id="11f15-127">Этот элемент может использоваться в файле конфигурации приложения, файл конфигурации компьютера (*Machine.config*), и *Web.config* файлы, которые не на уровне каталога приложения.</span><span class="sxs-lookup"><span data-stu-id="11f15-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="fed64-127">Этот элемент может использоваться в файле конфигурации приложения, файл конфигурации компьютера (*Machine.config*), и *Web.config* файлы, которые не на уровне каталога приложения.</span><span class="sxs-lookup"><span data-stu-id="fed64-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="11f15-128">См. также</span><span class="sxs-lookup"><span data-stu-id="11f15-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fed64-128">См. также</span><span class="sxs-lookup"><span data-stu-id="fed64-128">See also</span></span>
 
-- [<span data-ttu-id="11f15-129">Схема файла конфигурации для .NET Framework</span><span class="sxs-lookup"><span data-stu-id="11f15-129">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="fed64-129">Схема файла конфигурации для .NET Framework</span><span class="sxs-lookup"><span data-stu-id="fed64-129">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
