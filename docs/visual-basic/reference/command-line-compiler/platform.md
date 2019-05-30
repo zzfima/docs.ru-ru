@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 5c01136564d64d5b2f1f56d311a6b7eadf1742f0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eb5513c6d8e4085e1b3f69de1d36a007fa27271e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633080"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380303"
 ---
 # <a name="-platform-visual-basic"></a>-platform (Visual Basic)
 Указывает, на какой версии платформы среды CLR может запускаться выходной файл.  
@@ -31,7 +31,7 @@ ms.locfileid: "64633080"
 |`Itanium`|Компилирует сбору для запуска в 64-разрядной среде CLR на компьютере с процессором Itanium.|  
 |`arm`|Компилирует сбору для запуска на компьютере с процессором ARM.|  
 |`anycpu`|Компилирует сбору для запуска на любой платформе. Приложение будет выполняться как 32-разрядное приложение в 32-разрядных версиях Windows и как 64-разрядное приложение в 64-разрядных версиях Windows. Этот флаг — значение по умолчанию.|  
-|`anycpu32bitpreferred`|Компилирует сбору для запуска на любой платформе. Приложение будет выполняться как 32-разрядное приложение в 32-разрядных и 64-разрядных версиях Windows. Этот флаг действителен только для исполняемых файлов (.EXE), для него требуется [!INCLUDE[net_v45](~/includes/net-v45-md.md)].|  
+|`anycpu32bitpreferred`|Компилирует сбору для запуска на любой платформе. Приложение будет выполняться как 32-разрядное приложение в 32-разрядных и 64-разрядных версиях Windows. Этот флаг допустим только для исполняемых файлов (. (EXE) и требует наличия .NET Framework 4.5.|  
   
 ## <a name="remarks"></a>Примечания  
  Используйте параметр `-platform`, чтобы указать процессор назначения для выходного файла.  

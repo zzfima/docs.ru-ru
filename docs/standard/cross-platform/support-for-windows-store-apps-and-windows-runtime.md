@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb2b082393656e84cedb293c3f3857e6680ed2ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 45e28ebb9319447f2e1ae98f1de883f90840720f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664341"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378300"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Поддержка приложений для Магазина Windows и среды выполнения Windows в .NET Framework
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] поддерживает несколько способов разработки программного обеспечения для [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Эти способы можно разделить на три категории.
+.NET Framework 4.5 поддерживает несколько способов разработки программного обеспечения [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Эти способы можно разделить на три категории.
 
 - Разработка [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] приложений с помощью элементов управления XAML, как описано в разделе [приложений стратегии для Windows Store, с помощью C# или Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10)), [как tos (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10)), и [Обзор приложений .NET для Windows Store ](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
@@ -127,7 +127,7 @@ ms.locfileid: "64664341"
 - Типы в компоненте могут наследовать от типов [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Элементы управления могут наследовать от простых типов элементов управления в <xref:Windows.UI.Xaml.Controls.Primitives> пространства имен или от более оформленных элементов управления, такие как <xref:Windows.UI.Xaml.Controls.Button>.
 
     > [!IMPORTANT]
-    >  Начиная с версий [!INCLUDE[win8](../../../includes/win8-md.md)] и [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], все открытые типы в управляемом компоненте [!INCLUDE[wrt](../../../includes/wrt-md.md)] необходимо запечатывать. Тип в другом компоненте [!INCLUDE[wrt](../../../includes/wrt-md.md)] не может быть производным от них. Если необходимо предоставить полиморфное расширения функциональности в компоненте, можно создать интерфейс и реализовать его в полиморфных типах.
+    >  Начиная с [!INCLUDE[win8](../../../includes/win8-md.md)] и .NET Framework 4.5, все открытые типы в управляемом [!INCLUDE[wrt](../../../includes/wrt-md.md)] компонент должен быть запечатан. Тип в другом компоненте [!INCLUDE[wrt](../../../includes/wrt-md.md)] не может быть производным от них. Если необходимо предоставить полиморфное расширения функциональности в компоненте, можно создать интерфейс и реализовать его в полиморфных типах.
 
 - Все типы параметров и возвращаемых значений открытых типов в компоненте должны быть типами [!INCLUDE[wrt](../../../includes/wrt-md.md)] (включая типы [!INCLUDE[wrt](../../../includes/wrt-md.md)], которые определяет компонент).
 
