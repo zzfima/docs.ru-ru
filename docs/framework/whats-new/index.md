@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d064e2377e39f673d47ce497ebd6c96e9f3c1cd0
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 8a9c9072c5565cf322bbf6a913255542fb46cb93
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251058"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378553"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Новые возможности .NET Framework
 
@@ -1200,7 +1200,7 @@ AppContext.SetSwitch(disableCngCertificates, False)
 
 **Поддержка выражений C# и IntelliSense в повторно размещаемом конструкторе WF**
 
-Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], WF поддерживает выражения C# в конструкторе Visual Studio и рабочих процессах кода. Повторно размещаемый конструктор рабочих процессов является ключевой возможностью WF, позволяющей размещать конструкторы рабочих процессов в приложении вне среды Visual Studio (например, в WPF).  Windows Workflow Foundation поддерживает выражения C# и IntelliSense в повторно размещаемом конструкторе рабочих процессов. Дополнительные сведения см. в [блоге по Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
+Начиная с .NET Framework 4.5 WF поддерживает выражения C# в конструкторе Visual Studio и рабочих процессах кода. Повторно размещаемый конструктор рабочих процессов является ключевой возможностью WF, позволяющей размещать конструкторы рабочих процессов в приложении вне среды Visual Studio (например, в WPF).  Windows Workflow Foundation поддерживает выражения C# и IntelliSense в повторно размещаемом конструкторе рабочих процессов. Дополнительные сведения см. в [блоге по Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
 
 `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` В версиях .NET Framework до версии 4.6.2 в случае перестроения проекта рабочего процесса из Visual Studio происходит нарушение работы IntelliSense конструктора WF. Несмотря на успешное построение проекта, типы рабочих процессов отсутствуют в конструкторе, и в окне **Список ошибок** отображаются предупреждения из IntelliSense о недостающих типах рабочего процесса. В .NET Framework 4.6.2 эта проблема решена и IntelliSense работает.
 
@@ -1399,7 +1399,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 ## <a name="whats-new-in-net-2015"></a>Новые возможности .NET 2015
 
-В .NET 2015 представлены [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] и .NET Core. Некоторые функции применяются к обеим версиям, а другие — только к [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] или только к .NET Core.
+.NET 2015 включает .NET Framework 4.6 и .NET Core. Некоторые функции применяются к обеим версиям, а некоторые только к .NET Framework 4.6 или .NET Core.
 
 - **ASP.NET Core**
 
@@ -1417,7 +1417,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
     - **Привязка модели поддерживает методы, возвращающие задачи**
 
-         В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] в ASP.NET добавлена функция привязки модели, которая обеспечивает расширяемый, ориентированный на код подход к операциям с данными CRUD на страницах веб-форм и пользовательских элементов управления. Система привязки модели теперь поддерживает возвращающие <xref:System.Threading.Tasks.Task> методы привязки модели. Эта функция позволяет разработчикам веб-форм сочетать преимущества масштабируемости асинхронного программирования с простотой системы привязки данных при использовании более новых версий моделей ORM, включая Entity Framework.
+         В версии .NET Framework 4.5 в ASP.NET добавлена функция привязки модели, которая обеспечивает расширяемый, ориентированный на код подход к операциям с данными CRUD на страницах веб-форм и пользовательских элементов управления. Система привязки модели теперь поддерживает возвращающие <xref:System.Threading.Tasks.Task> методы привязки модели. Эта функция позволяет разработчикам веб-форм сочетать преимущества масштабируемости асинхронного программирования с простотой системы привязки данных при использовании более новых версий моделей ORM, включая Entity Framework.
 
          Асинхронная привязка модели управляется параметром конфигурации `aspnet:EnableAsyncModelBinding`.
 
@@ -1427,7 +1427,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
         </appSettings>
         ```
 
-         Для приложений, предназначенных для [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], по умолчанию установлено значение `true`. Для приложений, выполняющихся в [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], предназначенных для более ранних версий .NET Framework, значение по умолчанию — `false`. Включить этот режим можно, задав для параметра конфигурации значение `true`.
+         Для приложений, предназначенных для .NET Framework 4.6, по умолчанию используется значение `true`. Для приложений, выполняющихся в .NET Framework 4.6, но предназначенных для более ранних версий .NET Framework, по умолчанию используется значение `false`. Включить этот режим можно, задав для параметра конфигурации значение `true`.
 
     - **Поддержка HTTP/2 (Windows 10)**
 
@@ -1452,7 +1452,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
     - **Алгоритм случайного хэширования строк**
 
-         В .NET Framework 4.5 добавлен [алгоритм случайного хэширования строк](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md). Однако он не поддерживается ASP.NET, так как некоторые компоненты ASP.NET зависят от стабильного хэш-кода. В [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] алгоритмы случайного хэширования строк теперь поддерживаются. Чтобы включить эту функцию, используйте параметр конфигурации `aspnet:UseRandomizedStringHashAlgorithm`.
+         В .NET Framework 4.5 добавлен [алгоритм случайного хэширования строк](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md). Однако он не поддерживается ASP.NET, так как некоторые компоненты ASP.NET зависят от стабильного хэш-кода. В .NET Framework 4.6 теперь поддерживаются алгоритмы случайного хэширования строк. Чтобы включить эту функцию, используйте параметр конфигурации `aspnet:UseRandomizedStringHashAlgorithm`.
 
         ```xml
         <appSettings>
@@ -1476,7 +1476,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 - **Изменения библиотеки с базовым классом**
 
-     В [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] были добавлены многие новые API, расширив число важных сценариев. Внесены следующие изменения и дополнения.
+     В .NET Framework 4.6 были добавлены многие новые API для поддержки важных сценариев. Внесены следующие изменения и дополнения.
 
     - **Реализации IReadOnlyCollection\<T>**
 
@@ -1592,7 +1592,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
     - **Изменения асинхронной модели на основе задач**
 
-         Для приложений, предназначенных для [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], объекты <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> наследуют язык и региональные параметры, а также язык и региональные параметры интерфейса пользователя вызывающего потока. Поведение приложений на предыдущих версиях платформы .NET Framework или без определенной версии .NET Framework не затрагивается. Дополнительные сведения см. в подразделе "Язык и региональные параметры в асинхронных операциях на основе задач" раздела, посвященного классу <xref:System.Globalization.CultureInfo>.
+         Для приложений, предназначенных для .NET Framework 4.6, объекты <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> наследуют язык и региональные параметры, а также язык и региональные параметры интерфейса пользователя вызывающего потока. Поведение приложений на предыдущих версиях платформы .NET Framework или без определенной версии .NET Framework не затрагивается. Дополнительные сведения см. в подразделе "Язык и региональные параметры в асинхронных операциях на основе задач" раздела, посвященного классу <xref:System.Globalization.CultureInfo>.
 
          Класс <xref:System.Threading.AsyncLocal%601?displayProperty=nameWithType> позволяет представлять внешние данные, локальные для данного асинхронного потока управления, такие как метод `async`. Его можно использовать для сохранения данных в разных потоках. Кроме того, можно определить метод обратного вызова, который получает уведомление при каждом изменении внешних данных из-за явного изменения свойства <xref:System.Threading.AsyncLocal%601.Value%2A?displayProperty=nameWithType> или из-за перехода контекста в потоке.
 
@@ -1624,7 +1624,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
     - **Усовершенствования HDPI**
 
-         Более эффективная поддержка HDPI в WPF в [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. В округление макетов внесены изменения для снижения числа вхождений обрезки в элементах управления с границами. По умолчанию эта функция включена, только если для атрибута <xref:System.Runtime.Versioning.TargetFrameworkAttribute> задано значение .NET 4.6.  Для приложений, которые предназначены для более ранних версий платформы, но выполняются в [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], можно выбрать новое поведение, добавив следующую строку в раздел [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) файла app.config:
+         В .NET Framework 4.6 улучшена поддержка HDPI в WPF. В округление макетов внесены изменения для снижения числа вхождений обрезки в элементах управления с границами. По умолчанию эта функция включена, только если для атрибута <xref:System.Runtime.Versioning.TargetFrameworkAttribute> задано значение .NET 4.6.  Для приложений, которые предназначены для более ранних версий платформы, но выполняются в .NET Framework 4.6, новое поведение можно активировать отдельно, добавив следующую строку в раздел [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) файла app.config:
 
         ```xml
         <AppContextSwitchOverrides
@@ -1642,11 +1642,11 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
     - **Улучшено касание**
 
-         Проблема с касанием, приводившим к непредсказуемому поведению, о которой сообщает клиент на веб-сайте [Connect](https://connect.microsoft.com/VisualStudio/feedback/details/903760/), была разрешена в [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Пороговое значение двойного касания для приложений Магазина Windows и приложений WPF теперь одинаково в Windows 8.1 и более поздних версий.
+         В .NET Framework 4.6 решена проблема с касанием, приводившим к непредсказуемому поведению, о которой сообщает клиент на веб-сайте [Connect](https://connect.microsoft.com/VisualStudio/feedback/details/903760/). Пороговое значение двойного касания для приложений Магазина Windows и приложений WPF теперь одинаково в Windows 8.1 и более поздних версий.
 
     - **Поддержка прозрачных дочерних окон**
 
-         WPF в [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] поддерживает прозрачные дочерние окна в Windows 8.1 и более поздних версий. Это позволяет создавать непрямоугольные и прозрачные дочерние окна в окнах верхнего уровня. Чтобы включить эту функцию, необходимо задать для свойства <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> значение `true`.
+         WPF в .NET Framework 4.6 поддерживает прозрачные дочерние окна в Windows 8.1 и более поздних версий. Это позволяет создавать непрямоугольные и прозрачные дочерние окна в окнах верхнего уровня. Чтобы включить эту функцию, необходимо задать для свойства <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> значение `true`.
 
 - **Windows Communication Foundation (WCF)**
 
@@ -1719,7 +1719,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
          Windows 10 включает новый алгоритм сетевых подключений с высокой масштабируемостью, который повышает эффективность использования ресурсов компьютера путем повторного использования локальных портов для исходящих TCP-подключений. .NET Framework 4.6 поддерживает новый алгоритм, который позволяет приложениям .NET использовать преимущества нового поведения. В предыдущих версиях Windows существовало искусственно заданное ограничение числа параллельных подключений (обычно 16 384, размер динамического диапазона портов по умолчанию), которое могло ограничивать масштабируемость службы, вызывая нехватку портов при высокой загрузке.
 
-         В [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] добавлены два новых API, которые обеспечивают повторное использование портов и эффективно снимают ограничение параллельных подключений в 64 000.
+         В .NET Framework 4.6 добавлены два новых API, которые обеспечивают повторное использование портов и эффективно снимают ограничение на 64 000 одновременных подключения.
 
         - Значение перечисления <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType>.
 
@@ -1735,7 +1735,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 - **Изменение размеров элементов управления Windows Forms.**
 
-     Эта функция была расширена в [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] и включает типы <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> и <xref:System.Windows.Forms.ToolStripSplitButton>, а также прямоугольник, указанный свойством <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A>, используемым при рисовании <xref:System.Drawing.Design.UITypeEditor>.
+     Эта функция была расширена в .NET Framework 4.6 и включает типы <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> и <xref:System.Windows.Forms.ToolStripSplitButton>, а также прямоугольник, указанный свойством <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A>, используемым при рисовании <xref:System.Drawing.Design.UITypeEditor>.
 
      Это функция, включаемая пользователем. Чтобы ее включить, задайте для элемента `EnableWindowsFormsHighDpiAutoResizing` в файле конфигурации приложения (app.config) значение `true`:
 
@@ -1864,7 +1864,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 Новые функции и улучшения базовых классов в .NET Framework 4.5.1 включают следующее:
 
-- Автоматическая переадресация привязки для сборок. Начиная с Visual Studio 2013 при компиляции приложения для [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] в файл конфигурации приложения может добавляться переадресация привязок, если приложение или его компоненты ссылаются на несколько версий одной сборки. Включить эту функцию также можно для проектов, предназначенных для более ранних версий платформы .NET Framework. Дополнительные сведения см. в разделе [Практическое руководство. Включение и отключение автоматического перенаправления привязки](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+- Автоматическая переадресация привязки для сборок. Начиная с версии Visual Studio 2013 при компиляции приложения, ориентированного на .NET Framework 4.5.1, в файл конфигурации приложения можно добавить переадресации привязок, если приложение или его компоненты ссылаются на несколько версий одной и той же сборки. Включить эту функцию также можно для проектов, предназначенных для более ранних версий платформы .NET Framework. Дополнительные сведения см. в разделе [Практическое руководство. Включение и отключение автоматического перенаправления привязки](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 - Возможность сбора диагностической информации, чтобы помочь разработчикам повысить производительность серверных и облачных приложений. Дополнительные сведения см. в описании методов <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> и <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> класса <xref:System.Diagnostics.Tracing.EventSource>.
 
@@ -1912,7 +1912,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 - Поддержка массивов, размер которых превышает 2 ГБ, на 64-разрядных платформах. Эту функцию можно включить в файле конфигурации приложения. См. описание [элемента \<gcAllowVeryLargeObjects>](../configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md), в котором также перечислены другие ограничения на размер объекта и размер массива.
 
-- Улучшенная производительность благодаря фоновой сборке мусора для серверов. При использовании серверной сборки мусора в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] фоновая сборка мусора включается автоматически. Сведения см. в разделе "Фоновая сборка мусора сервера" статьи [Основы сборки мусора](../../standard/garbage-collection/fundamentals.md).
+- Улучшенная производительность благодаря фоновой сборке мусора для серверов. Если вы используете серверную сборку мусора в .NET Framework 4.5, фоновая сборка мусора включается автоматически. Сведения см. в разделе "Фоновая сборка мусора сервера" статьи [Основы сборки мусора](../../standard/garbage-collection/fundamentals.md).
 
 - Фоновая компиляция по требованию (JIT), которая доступна по выбору на многоядерных процессорах для повышения производительности приложения. См. раздел <xref:System.Runtime.ProfileOptimization>.
 
@@ -1940,7 +1940,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 ### <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
-В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] в Managed Extensibility Framework (MEF) предусмотрены следующие новые возможности:
+В .NET Framework 4.5 для Managed Extensibility Framework (MEF) предоставлены следующие новые возможности.
 
 - Поддержка универсальных типов.
 
@@ -1954,13 +1954,13 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 ### <a name="asynchronous-file-operations"></a>Асинхронные операции с файлами
 
-В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] в языки C# и Visual Basic были добавлены новые асинхронные возможности. Эти возможности представляют собой модель на основе задач для выполнения асинхронных операций. Для использования этой новой модели используйте асинхронные методы в классах ввода-вывода. См. раздел [Асинхронные операции файлового ввода-вывода](../../standard/io/asynchronous-file-i-o.md).
+В .NET Framework 4.5 добавлены новые асинхронные возможности в языки C# и Visual Basic. Эти возможности представляют собой модель на основе задач для выполнения асинхронных операций. Для использования этой новой модели используйте асинхронные методы в классах ввода-вывода. См. раздел [Асинхронные операции файлового ввода-вывода](../../standard/io/asynchronous-file-i-o.md).
 
 <a name="tools" />
 
 ### <a name="tools"></a>Инструменты
 
-В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] генератор файлов ресурсов (Resgen.exe) позволяет создать RESW-файл для использования в приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] из RESOURCES-файла, внедренного в сборку .NET Framework. Дополнительные сведения см. в разделе [Resgen.exe (генератор файлов ресурсов)](../tools/resgen-exe-resource-file-generator.md).
+В .NET Framework 4.5 генератор файлов ресурсов (Resgen.exe) позволяет преобразовать файл RESOURCES, внедренный в сборку .NET Framework, в файл RESW, который можно использовать в приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Дополнительные сведения см. в разделе [Resgen.exe (генератор файлов ресурсов)](../tools/resgen-exe-resource-file-generator.md).
 
 Средство управляемой оптимизации с использованием профиля (Mpgo.exe) позволяет сократить время запуска приложения, улучшить использование памяти (размер рабочего множества) и пропускную способность путем оптимизации сборок машинных образов. Этот инструмент командной строки формирует данные профилирования для сборок машинного образа приложения. См. раздел [Mpgo.exe (инструмент управляемой оптимизации с использованием профиля)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Начиная с Visual Studio 2013 вы можете использовать Mpgo.exe для оптимизации классических приложений и приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
 
@@ -1968,7 +1968,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 ### <a name="parallel-computing"></a>Параллельные вычисления
 
-В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] предусмотрено несколько новых возможностей и усовершенствований для параллельных вычислений. К ним относятся повышение производительности, повышение управляемости, улучшенная поддержка асинхронного программирования, новая библиотека потоков данных и улучшенная поддержка параллельной отладки и анализа производительности. См. запись [Новые возможности параллелизма в .NET 4.5](https://go.microsoft.com/fwlink/?LinkId=235061) в блоге, посвященном параллельному программированию в .NET.
+В .NET Framework 4.5 предусмотрено несколько новых возможностей и усовершенствований для параллельных вычислений. К ним относятся повышение производительности, повышение управляемости, улучшенная поддержка асинхронного программирования, новая библиотека потоков данных и улучшенная поддержка параллельной отладки и анализа производительности. См. запись [Новые возможности параллелизма в .NET 4.5](https://go.microsoft.com/fwlink/?LinkId=235061) в блоге, посвященном параллельному программированию в .NET.
 
 <a name="web" />
 
@@ -1982,11 +1982,11 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 ### <a name="networking-a-namenetworking-"></a>Сеть <a name="networking" />
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] предоставляет новый интерфейс программирования для приложений HTTP. Дополнительные сведения см. в описании новых пространств имен <xref:System.Net.Http?displayProperty=nameWithType> и <xref:System.Net.Http.Headers?displayProperty=nameWithType>.
+.NET Framework 4.5 предоставляет новый интерфейс программирования для приложений HTTP. Дополнительные сведения см. в описании новых пространств имен <xref:System.Net.Http?displayProperty=nameWithType> и <xref:System.Net.Http.Headers?displayProperty=nameWithType>.
 
 Также предусмотрена поддержка нового интерфейса программирования для приема и взаимодействия с соединением WebSocket с помощью существующего класса <xref:System.Net.HttpListener> и связанных с ним классов. Дополнительные сведения см. в описании нового пространства имен <xref:System.Net.WebSockets> и класса <xref:System.Net.HttpListener>.
 
-Кроме того, в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] предусмотрены следующие усовершенствования в плане сетевого взаимодействия:
+Кроме того, в .NET Framework 4.5 улучшено сетевое взаимодействие.
 
 - RFC-совместимая поддержка URI. Дополнительные сведения см. в описании <xref:System.Uri> и соответствующих классов.
 
@@ -2002,7 +2002,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
-В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Windows Presentation Foundation (WPF) содержит изменения и усовершенствования в следующих областях:
+В .NET Framework 4.5 для Windows Presentation Foundation (WPF) добавлены изменения и усовершенствования в следующих областях.
 
 - Новый элемент управления <xref:System.Windows.Controls.Ribbon.Ribbon>, позволяющий реализовать пользовательский интерфейс в виде ленты, на которой размещаются панель быстрого доступа, меню приложения и вкладки.
 
@@ -2026,7 +2026,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 ### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
 
-В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] были добавлены следующие возможности, чтобы упростить создание и обслуживание приложений Windows Communication Foundation (WCF):
+В .NET Framework 4.5 добавлены следующие возможности, чтобы упростить создание и обслуживание приложений Windows Communication Foundation (WCF).
 
 - Упрощение создаваемых файлов конфигурации.
 
@@ -2068,9 +2068,9 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 ### <a name="windows-workflow-foundation-wf"></a>Windows Workflow Foundation (WF)
 
-В Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] было добавлено несколько новых возможностей, в том числе следующие:
+В .NET Framework 4.5 для Windows Workflow Foundation (WF) добавлено несколько новых возможностей, в том числе следующие.
 
-- Рабочие процессы конечного автомата, впервые добавленные в .NET Framework 4.0.1 ([обновление 1 для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=215092)). В это обновление вошло несколько новых классов и действий, позволивших разработчикам создавать рабочие процессы конечного автомата. В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] эти классы и действия были обновлены и теперь включают в себя следующие возможности:
+- Рабочие процессы конечного автомата, впервые добавленные в .NET Framework 4.0.1 ([обновление 1 для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=215092)). В это обновление вошло несколько новых классов и действий, позволивших разработчикам создавать рабочие процессы конечного автомата. В .NET Framework 4.5 эти классы и действия были обновлены и теперь включают в себя следующие возможности.
 
     - Возможность установки точек останова на состояниях.
 
@@ -2122,7 +2122,7 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
 
-Приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] разрабатываются для конкретных форм-факторов и в полной мере используют возможности операционной системы Windows. Подмножество [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] или 4.5.1 доступно для разработки приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] для Windows с использованием C# или Visual Basic. Это подмножество называется [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] и рассматривается в [обзорной статье](https://go.microsoft.com/fwlink/?LinkId=228491) в Центре разработки для Windows.
+Приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] разрабатываются для конкретных форм-факторов и в полной мере используют возможности операционной системы Windows. Предоставляется подмножество .NET Framework 4.5 или 4.5.1 для разработки приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] для Windows с использованием C# или Visual Basic. Это подмножество называется [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] и рассматривается в [обзорной статье](https://go.microsoft.com/fwlink/?LinkId=228491) в Центре разработки для Windows.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Переносимые библиотеки классов <a name="portable" />
 
