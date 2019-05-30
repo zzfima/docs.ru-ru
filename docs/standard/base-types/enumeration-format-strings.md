@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4f2a8fc10d2aad6b2d43bf128697e86aa73c411
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: be2e5dbe0d02bcec8974a1e52c0dce107d3bf46b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644633"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052851"
 ---
 # <a name="enumeration-format-strings"></a>Строки форматов перечисления
 
@@ -48,7 +48,7 @@ ms.locfileid: "65644633"
 
 ## <a name="x-or-x"></a>X или x
 
-Отображает элемент перечисления в виде шестнадцатеричного значения. При необходимости значение дополняется начальными нулями, чтобы оно состояло как минимум из восьми знаков. В следующем примере показан описатель формата X.
+Отображает элемент перечисления в виде шестнадцатеричного значения. Значение представлено с обязательным начальным нулем, чтобы обеспечить в строке результата наличие двух символов для каждого байта в [базовом числовом типе](xref:System.Enum.GetUnderlyingType%2A), который принадлежит к типу перечисления. В следующем примере показан описатель формата X. В примере <xref:System.ConsoleColor> и <xref:System.IO.FileAttributes> имеют базовый тип <xref:System.Int32> (32-разрядное (4-байтовое) целое число), который выводит 8-символьную строку результата.
 
 [!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]      
 [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]

@@ -2,12 +2,12 @@
 title: Обзор языка F#
 description: Изучите некоторые из ключевых особенностей языке этого учебника с образцами кода F#.
 ms.date: 11/06/2018
-ms.openlocfilehash: 4b3ec7fd2c42712440ea7d7045c560ab20390b45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64394342777003b33dd77028739fb7209b9f3c86
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61901735"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301257"
 ---
 # <a name="tour-of-f"></a>Обзор языка F\#
 
@@ -17,7 +17,7 @@ ms.locfileid: "61901735"
 
 ## <a name="executing-the-code-online"></a>Выполнение кода в интерактивном режиме
 
-Если у вас нет F# установлен на компьютере, можно выполнить все примеров в Интернете с помощью [Fable REPL](https://fable.io/repl/). Fable представляет собой диалект F# , выполняемый непосредственно в браузере. Чтобы просмотреть образцы, выполните в REPL, извлечь **примеры > Дополнительные сведения > Обзор F#**  в строке меню слева Fable среду REPL.
+Если у вас нет F# установлен на вашем компьютере, вы можете выполнять все образцы в браузере с [попробуйте F# на WebAssembly](https://tryfsharp.fsbolero.io/). Fable представляет собой диалект F# , выполняемый непосредственно в браузере. Чтобы просмотреть образцы, выполните в REPL, извлечь **примеры > Дополнительные сведения > Обзор F#**  в строке меню слева Fable среду REPL.
 
 ## <a name="functions-and-modules"></a>Функций и модулей
 

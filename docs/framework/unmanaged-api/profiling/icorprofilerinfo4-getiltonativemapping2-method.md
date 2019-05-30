@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b625b2962c829e7c0692a61d8f5561818f7ebf1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b59fe76bd6d8d5887ac825e844e89e85677e2d7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000523"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380351"
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a>Метод ICorProfilerInfo4::GetILToNativeMapping2
 Получает сопоставление из смещений MSIL в собственные смещения для кода, содержащегося в версии указанной функции, перекомпилированной с помощью JIT-компилятора.  
@@ -44,7 +44,7 @@ HRESULT GetILToNativeMapping(
  [in] Идентификатор функции, которая содержит код.  
   
  `pReJitId`  
- [in] Идентификатор функции, перекомпилированной с помощью JIT-компилятора. Удостоверение должно быть равно нулю в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+ [in] Идентификатор функции, перекомпилированной с помощью JIT-компилятора. Удостоверение должно равняться нулю в .NET Framework 4.5.  
   
  `cMap`  
  [in] Максимальный размер массива `map`.  
@@ -59,7 +59,7 @@ HRESULT GetILToNativeMapping(
  `GetILToNativeMapping2` аналогичен [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) метода, за исключением того, что он позволяет профилировщику указывать идентификатор перекомпилированной функции в будущих выпусках.  
   
 > [!NOTE]
->  [ICorProfilerFunctionControl::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) метод не реализован в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], поэтому функции, которые были перекомпиляции JIT не могут иметь сопоставление IL-машинный код, который отличается от изначально скомпилирована функция. Таким образом, в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] метод `GetILToNativeMapping2` не может вызываться с ненулевым идентификатором функции, перекомпилированной с помощью JIT-компилятора.  
+>  [ICorProfilerFunctionControl::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) метод не реализуется в .NET Framework 4.5, поэтому функции, которые были перекомпиляции JIT не могут иметь сопоставление IL-машинный код, который отличается от изначально скомпилирована функция. Таким образом `GetILToNativeMapping2` не может вызываться с ненулевым Идентификатором перекомпиляции JIT в .NET Framework 4.5.  
   
  Метод `GetILToNativeMapping2` возвращает массив структур `COR_DEBUG_IL_TO_NATIVE_MAP`. Для передачи, что определенные диапазоны собственных инструкций соответствуют специальным областям кода (например, прологу), запись в массиве может иметь его `ilOffset` полю присвоено значение [CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) перечисление.  
   

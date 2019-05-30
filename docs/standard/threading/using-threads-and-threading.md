@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15f3aa8d2cd7c21fa2b77660cd668d211f8376a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d23a12ff92202ace69cb80ff59d6afcb5d8f8243
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690622"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960383"
 ---
 # <a name="using-threads-and-threading"></a>Использование потоков и работа с потоками
 
@@ -24,19 +24,19 @@ ms.locfileid: "54690622"
 > [!NOTE]
 > Если требуется больший контроль над поведением потоков приложения, можно управлять потоками самостоятельно. Но начиная с .NET Framework 4 многопоточное программирование значительно упростилось благодаря классам <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md), новым классам параллельных коллекций из пространства имен <xref:System.Collections.Concurrent?displayProperty=nameWithType> и новой модели программирования, которая вместо потоков использует концепцию задач. Дополнительные сведения см. в статье [Параллельное программирование в .NET](../parallel-programming/index.md) и [Библиотека параллельных задач (TPL)](../parallel-programming/task-parallel-library-tpl.md).
 
-## <a name="how-to-create-and-start-a-new-thread"></a>Как выполнить Создание и запуск нового потока
+## <a name="how-to-create-and-start-a-new-thread"></a>Практическое руководство. Создание и запуск нового потока
 
 Чтобы создать поток, создайте новый экземпляр класса <xref:System.Threading.Thread?displayProperty=nameWithType> и укажите в конструкторе имя метода, который должен выполняться в новом потоке. Чтобы запустить созданный поток, вызовите метод <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>. Дополнительные сведения и примеры см. в статье [Создание потоков и передача данных во время запуска](creating-threads-and-passing-data-at-start-time.md) и справочнике по API <xref:System.Threading.Thread>.
 
-## <a name="how-to-stop-a-thread"></a>Как выполнить Остановка потока
+## <a name="how-to-stop-a-thread"></a>Практическое руководство. Остановка потока
 
 Чтобы прервать выполнение потока, используйте метод <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Этот метод вызывает <xref:System.Threading.ThreadAbortException> в потоке, для которого был вызван. Дополнительные сведения см. в разделе [Уничтожение потоков](destroying-threads.md).
 
-Начиная с .NET Framework 4 вы можете использовать <xref:System.Threading.CancellationToken?displayProperty=nameWithType> для совместной отмены потока. Дополнительные сведения см. в разделе [Совместная отмена потоков](canceling-threads-cooperatively.md).
+Начиная с .NET Framework 4 вы можете использовать <xref:System.Threading.CancellationToken?displayProperty=nameWithType> для совместной отмены потока. Подробные сведения см. в статье [Отмена в управляемых потоках](cancellation-in-managed-threads.md).
 
 Используйте метод <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, чтобы вызывающий поток ждал завершения потока, для которого был вызван метод.
 
-## <a name="how-to-pause-or-interrupt-a-thread"></a>Как выполнить Приостановка или прерывание потока
+## <a name="how-to-pause-or-interrupt-a-thread"></a>Практическое руководство. Приостановка или прерывание потока
 
 Используйте метод <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>, чтобы приостановить текущий поток на определенное время. Заблокированный поток можно прервать путем вызова метода <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [Приостановка и прерывание потоков](pausing-and-resuming-threads.md).
 

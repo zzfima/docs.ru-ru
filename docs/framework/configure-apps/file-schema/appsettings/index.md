@@ -7,35 +7,35 @@ helpviewer_keywords:
 - Windows Forms, app settings schema
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 548d93e5447c06480629658b13b673aa3d15fc86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd836f9ebd4d22ad6542c1fadc204b1ea67d1c26
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705471"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300771"
 ---
 # <a name="app-settings-schema"></a>Схема параметров приложения
 
 Содержит пользовательские параметры приложения, такие как пути к файлам, URL-адреса XML-веб-служб и другие сведения о пользовательской конфигурации приложения.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md)
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md)
 
 | Элемент | Описание |
 | ------- | ----------- |
-| [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Содержит теги **\<add>**, **\<clear>** и **\<remove>**, управляющие параметрами приложения. Имеет необязательный атрибут **file**. |
-| [**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Определяет параметр. Дочерний элемент **\<appSettings>**. Обязательные атрибуты — **key** и **value**. |
-| [**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Удаляет все параметры. Дочерний элемент **\<appSettings>**. Не имеет атрибутов. |
-| [**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | Удаляет параметр. Дочерний элемент **\<appSettings>**. Требуется атрибут **key**. |
+| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Содержит теги **\<add>** , **\<clear>** и **\<remove>** , управляющие параметрами приложения. Имеет необязательный атрибут **file**. |
+| [ **\<add>** ](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Определяет параметр. Дочерний элемент **\<appSettings>** . Обязательные атрибуты — **key** и **value**. |
+| [ **\<clear>** ](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Удаляет все параметры. Дочерний элемент **\<appSettings>** . Не имеет атрибутов. |
+| [ **\<remove>** ](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | Удаляет параметр. Дочерний элемент **\<appSettings>** . Требуется атрибут **key**. |
 
 ## <a name="appsettings-element"></a>Элемент \<appSettings>
 
-Этот элемент содержит теги **\<add>**, **\<clear>** и **\<remove>**, управляющие параметрами приложения. Определяет необязательный атрибут для **file**.
+Этот элемент содержит теги **\<add>** , **\<clear>** и **\<remove>** , управляющие параметрами приложения. Определяет необязательный атрибут для **file**.
 
 ## <a name="add-element"></a>Элемент \<add>
 
@@ -43,7 +43,7 @@ ms.locfileid: "61705471"
 
 ## <a name="clear-element"></a>Элемент \<clear>
 
-Удаляет все ссылки на унаследованные пользовательские параметры приложения, разрешая только ссылки, добавленные с помощью элементов **\<add>** после элемента **\<clear>**. Атрибуты не определяются.
+Удаляет все ссылки на унаследованные пользовательские параметры приложения, разрешая только ссылки, добавленные с помощью элементов **\<add>** после элемента **\<clear>** . Атрибуты не определяются.
 
 ## <a name="remove-element"></a>Элемент \<remove>
 

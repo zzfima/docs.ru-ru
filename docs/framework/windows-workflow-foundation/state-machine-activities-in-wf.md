@@ -2,15 +2,15 @@
 title: Действия конечного автомата в WF
 ms.date: 03/30/2017
 ms.assetid: 93312eaf-07e0-4a55-b4f7-4cdbbc4dee2d
-ms.openlocfilehash: 5aee2a7cb078d9d62c9296f7dda9f28ff812a88a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64af2698c878066464e2ca3f32d4522d99999aec
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004605"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378050"
 ---
 # <a name="state-machine-activities-in-wf"></a>Действия конечного автомата в WF
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] предусматривает несколько системных действий и конструкторов действий для создания рабочих процессов конечного автомата.  
+.NET framework 4.5 предоставляет несколько предоставляемых системой действий и конструкторов действий для создания рабочих процессов конечного автомата состояния.  
   
 |||  
 |-|-|  

@@ -17,6 +17,7 @@ helpviewer_keywords:
 - indexer operator [C#]
 - '[] operator [C#]'
 - null-conditional operators [C#]
+- Elvis operator [C#]
 - ?. operator [C#]
 - ?[] operator [C#]
 - invocation operator [C#]
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: a76c2855196b229918ee0a6a7d2a4dc66d87d059
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: eec70f5446eec11fa4e241b86eed4ed8d6146f85
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881047"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195782"
 ---
 # <a name="member-access-operators-c-reference"></a>Операторы доступа к членам (справочник по C#)
 
@@ -99,7 +100,7 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>NULL-условные операторы: ?. и ?[]
 
-В C# 6 и более поздних версий доступен null-условный оператор доступа к членам, `?.`, или доступа к элементам, `?[]`, который дает доступ к операнду только в том случае, если он имеет значение, отличное от NULL. Если операнд имеет значение `null`, результатом применения оператора является `null`.
+В C# 6 и более поздних версий доступен null-условный оператор доступа к членам, `?.`, или доступа к элементам, `?[]`, который дает доступ к операнду только в том случае, если он имеет значение, отличное от NULL. Если операнд имеет значение `null`, результатом применения оператора является `null`. Null-условный оператор доступа к элементу `?.` также называется элвис-оператором.
 
 Операторы с условием NULL предусматривают сокращенную обработку. Таким образом, если одна из операций в цепочке условных операций доступа к члену и операций индексирования возвращает значение `null`, то выполнение остальной части цепочки прекращается. В следующем примере `B` вычисляется только в том случае, если `A` принимает значение `null`, а `C` вычисляется только в том случае, если `A` или `B` принимает значение `null`.
 

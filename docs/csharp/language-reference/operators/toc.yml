@@ -1,4 +1,4 @@
-- name: 'Операторы C#'
+- name: 'Операторы в C#'
   href: index.md
   items:
     - name: Арифметические операторы
@@ -24,21 +24,20 @@
       displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
     - name: Оператор ()
       href: invocation-operator.md
-    - name: ':: Оператор'
+    - name: 'Оператор ::'
       href: namespace-alias-qualifer.md
-    - name: + Оператор
+    - name: + Операторы +=
       href: addition-operator.md
-    - name: '- Оператор'
+      displayName: 'string concatenation, delegate combination, event subscription'
+    - name: '- оператор'
       href: subtraction-operator.md
-    - name: Оператор =
+    - name: = - оператор
       href: assignment-operator.md
-    - name: '?: Оператор'
+    - name: 'Оператор ?:'
       href: conditional-operator.md
-    - name: Оператор +=
-      href: addition-assignment-operator.md
     - name: Оператор -=
       href: subtraction-assignment-operator.md
-    - name: '?? Оператор'
+    - name: '?? оператор'
       href: null-coalescing-operator.md
     - name: Оператор =>
       href: lambda-operator.md

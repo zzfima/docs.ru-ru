@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: a40dd4addfaf8a505cf334876192f0b2ccf66a09
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 58317c26f87034991c817d0d7221d810657ca332
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452394"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003713"
 ---
 # <a name="-operator-c-reference"></a>?: Оператор (ссылка C#)
 
@@ -43,13 +43,12 @@ a ? b : c ? d : e
 a ? b : (c ? d : e)
 ```
 
-В качестве мнемонического приема, который поможет запомнить, как вычисляется этот оператор, можно использовать следующий вопрос:
-
-```text
-is this condition true ? yes : no
-```
-
-где часть фразы до "?" выступает в качестве вопроса для предыдущего выражения, а последующая часть фразы является логическим ответом на этот вопрос.
+> [!TIP]
+> Вы можете использовать следующий мнемонический прием, чтобы запомнить, как оценивается условный оператор:
+>
+> ```text
+> is this condition true ? yes : no
+> ```
 
 В следующем примере иллюстрируется использование условного оператора:
 

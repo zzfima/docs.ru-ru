@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 6c979483497ff640be7d1126d63ce95130f6c02b
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: cb1ef5f52b9ee0407cbd7a0634e8a7c58906d635
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633755"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195562"
 ---
 # <a name="best-practices-for-exceptions"></a>Лучшие методики обработки исключений
 
@@ -54,7 +54,9 @@ ms.locfileid: "58633755"
 [!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
 [!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]
 
-Другой способ устранения исключений заключается в том, что для наиболее общих и часто встречающихся ошибок следует возвращать значение `null`. Такие ошибки могут относиться к обычному потоку управления. Возвращая значение `null` в таких случаях, можно сократить влияние на производительность приложения.
+Другой способ устранения исключений заключается в том, что для наиболее общих и часто встречающихся ошибок следует возвращать значение NULL (или значение по умолчанию). Такие ошибки могут относиться к обычному потоку управления. Возвращая значение NULL (или значение по умолчанию) в таких случаях, можно уменьшить влияние на производительность приложения.
+
+При выборе допускающего значение null типа<T> или значения по умолчанию в качестве индикатора ошибки учитывайте особенности приложения. При использовании `Nullable<Guid>` `default` принимает значение `null`, а не `Guid.Empty`. В некоторых случаях добавление `Nullable<T>` помогает более точно определить, присутствует или отсутствует значение. Но в определенных ситуациях добавление `Nullable<T>` может привести к созданию лишних необязательных случаев для проверки, что повышает вероятность ошибки. 
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Выдача исключений вместо возврата кода ошибки
 

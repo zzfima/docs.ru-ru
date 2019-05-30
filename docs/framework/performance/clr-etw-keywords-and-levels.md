@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9a9061503ae4bf68903f35eb7624deed2f34c9b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 519429da275c852ea193e95fe651cc73efc0736a
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616603"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378685"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Ключевые слова и уровни среды CLR (трассировка событий Windows)
 <a name="top"></a> События трассировки событий Windows можно отфильтровать по категории и уровню. [Ключевые слова событий трассировки событий Windows в среде CLR](#keywords) обеспечивают фильтрацию событий по категории. Они используются в различных сочетаниях для поставщиков среды выполнения и очистки. [Уровни событий](#levels) определяются флагами.  
@@ -52,7 +52,7 @@ ms.locfileid: "64616603"
 |`ContentionKeyword`|0x00004000|Включает сбор [событий состязания](../../../docs/framework/performance/contention-etw-events.md).|  
 |`ExceptionKeyword`|0x00008000|Включает сбор [событий исключений](../../../docs/framework/performance/exception-thrown-v1-etw-event.md).|  
 |`ThreadingKeyword`|0x00010000|Включает сбор [событий пула потоков](../../../docs/framework/performance/thread-pool-etw-events.md).|  
-|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|(Доступно в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и более поздних версиях). Подавляет ключевое слово `NGenKeyword`, обладающее высокими издержками, и запрещает создание событий для методов, входящих в состав модулей NGen. Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], средства профилирования должны использовать `OverrideAndSuppressNGenEventsKeyword` и `NGenKeyword` для подавления создания событий для методов модулей NGen. Это позволяет средству профилирования использовать более эффективные базы данных программы NGen для получения сведений о методах модулей NGen. Среда CLR в .NET Framework 4 и более ранних версиях не поддерживает создание баз данных программы NGen. В более ранних версиях среда CLR не распознает `OverrideAndSuppressNGenEventsKeyword` и обрабатывает `NGenKeyword` , создавая события для методов модулей NGen.|  
+|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|(Доступен в .NET Framework 4.5 и более поздних версий). Подавляет ключевое слово `NGenKeyword`, обладающее высокими издержками, и запрещает создание событий для методов, входящих в состав модулей NGen. Начиная с .NET Framework 4.5, средства профилирования должны использовать `OverrideAndSuppressNGenEventsKeyword` и `NGenKeyword` для подавления создания событий для методов модулей NGen. Это позволяет средству профилирования использовать более эффективные базы данных программы NGen для получения сведений о методах модулей NGen. Среда CLR в .NET Framework 4 и более ранних версиях не поддерживает создание баз данных программы NGen. В более ранних версиях среда CLR не распознает `OverrideAndSuppressNGenEventsKeyword` и обрабатывает `NGenKeyword` , создавая события для методов модулей NGen.|  
 |`PerfTrackKeyWord`|0x2000000|Включает сбор событий `ModuleLoad` и `ModuleRange` .|  
 |`StackKeyword`|0x40000000|Включает сбор [событий трассировки стека](../../../docs/framework/performance/stack-etw-event.md)среды CLR.|  
   
@@ -71,7 +71,7 @@ ms.locfileid: "64616603"
 |`EndRundownKeyword`|0x00000100|Включает перечисление состояния системы во время очистки завершения.|  
 |`AppDomainResourceManagementRundownKeyword`|0x00000800|Включает сбор событий для отслеживания ресурсов на уровне <xref:System.AppDomain> при использовании с ключевыми словами `StartRundownKeyword` или `EndRundownKeyword`.|  
 |`ThreadingKeyword`|0x00010000|Включает сбор событий пула потоков.|  
-|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|(Доступно в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и более поздних версиях). Подавляет ключевое слово `NGenRundownKeyword`, обладающее высокими издержками, и запрещает создание событий для методов, входящих в состав модулей NGen. Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], средства профилирования должны использовать `OverrideAndSuppressNGenEventsRundownKeyword` и `NGenRundownKeyword` для подавления создания событий для методов модулей NGen. Это позволяет средству профилирования использовать более эффективные базы данных программы NGen для получения сведений о методах модулей NGen. Среда CLR в .NET Framework 4 и более ранних версиях не поддерживает создание баз данных программы NGen. В более ранних версиях среда CLR не распознает `OverrideAndSuppressNGenEventsRundownKeyword` и обрабатывает `NGenRundownKeyword` , создавая события для методов модулей NGen.|  
+|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|(Доступен в .NET Framework 4.5 и более поздних версий). Подавляет ключевое слово `NGenRundownKeyword`, обладающее высокими издержками, и запрещает создание событий для методов, входящих в состав модулей NGen. Начиная с .NET Framework 4.5, средства профилирования должны использовать `OverrideAndSuppressNGenEventsRundownKeyword` и `NGenRundownKeyword` для подавления создания событий для методов модулей NGen. Это позволяет средству профилирования использовать более эффективные базы данных программы NGen для получения сведений о методах модулей NGen. Среда CLR в .NET Framework 4 и более ранних версиях не поддерживает создание баз данных программы NGen. В более ранних версиях среда CLR не распознает `OverrideAndSuppressNGenEventsRundownKeyword` и обрабатывает `NGenRundownKeyword` , создавая события для методов модулей NGen.|  
 |`PerfTrackKeyWord`|0x2000000|Включает сбор событий `ModuleDCStart`, `ModuleDCEnd`, `ModuleRangeDCStart`и `ModuleRangeDCEnd` .|  
   
  [К началу](#top)  

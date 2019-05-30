@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 07ef96862c04b8245d8365c3d3b419d227e824c4
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c1f891314a2490d6dbf22977ea5a5f69533b330d
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876948"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300323"
 ---
 # <a name="c-operators"></a>Операторы в C#
 
@@ -95,9 +95,9 @@ C# предоставляет ряд стандартных операторов
 
 [*x](pointer-related-operators.md#pointer-indirection-operator-) — косвенное обращение к указателю или разыменование.
 
-[Оператор true](../keywords/true-false-operators.md) — возвращает [логическое](../keywords/bool.md) значение `true`, указывая, что операнд имеет значение true.
+[Оператор true](true-false-operators.md) — возвращает [логическое](../keywords/bool.md) значение `true`, указывая, что операнд имеет значение true.
 
-[Оператор false](../keywords/true-false-operators.md) — возвращает [логическое](../keywords/bool.md) значение `true`, указывая, что операнд имеет значение false.
+[Оператор false](true-false-operators.md) — возвращает [логическое](../keywords/bool.md) значение `true`, указывая, что операнд имеет значение false.
 
 ## <a name="multiplicative-operators"></a>Мультипликативные операторы
 
@@ -197,9 +197,9 @@ C# предоставляет ряд стандартных операторов
 
 [x = y](assignment-operator.md) — назначение.
 
-[x += y](addition-assignment-operator.md) — инкремент. Добавьте значение `y` к значению `x`, сохраните результат в `x` и возвратите новое значение. Если `x` назначает `event`, то `y` должен быть соответствующей функцией, которую C# добавляет в качестве обработчика событий.
+[x += y](arithmetic-operators.md#compound-assignment) — инкремент. Добавьте значение `y` к значению `x`, сохраните результат в `x` и возвратите новое значение. Если `x` назначает [событие](../keywords/event.md), то `y` должен быть соответствующим методом, который C# добавляет в качестве обработчика событий.
 
-[x -= y](subtraction-assignment-operator.md) — декремент. Вычтите значение `y` из значения `x`, сохраните результат в `x` и возвратите новое значение. Если `x` назначает `event`, то `y` должен быть соответствующей функцией, которую C# удаляет в качестве обработчика событий.
+[x -= y](arithmetic-operators.md#compound-assignment) — декремент. Вычтите значение `y` из значения `x`, сохраните результат в `x` и возвратите новое значение. Если `x` назначает [событие](../keywords/event.md), то `y` должен быть соответствующим методом, который C# удаляет в качестве обработчика событий.
 
 [x *= y](arithmetic-operators.md#compound-assignment) — назначение с умножением. Умножьте значение `y` на значение `x`, сохраните результат в `x` и возвратите новое значение.
 

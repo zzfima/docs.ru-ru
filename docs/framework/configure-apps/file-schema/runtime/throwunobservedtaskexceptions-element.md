@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 416a00eb6966a9c5f83427182d9a12c4bbb20810
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b47c4d07fc0ee0cdaf53fe3c8199fb37dcb6c1b1
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592648"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377890"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > элемент
 Определяет, будут ли необработанные исключения задачи завершать выполняющийся процесс.  
@@ -63,9 +63,9 @@ ms.locfileid: "64592648"
   
  В [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], по по умолчанию, если <xref:System.Threading.Tasks.Task> , имеет непредвиденное исключение удаляется сборщиком мусора, метод завершения создает исключение и завершает процесс. Завершение процесса определяется временем мусора и финализация.  
   
- Чтобы облегчить разработчикам писать асинхронный код, основанный на задачах, [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] изменяет это поведение по умолчанию для исключений без наблюдения. Ненаблюдаемые исключения по-прежнему вызывать <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> событие, но по умолчанию не завершает процесс. Вместо этого исключение игнорируется после события, независимо от того, обнаруживает ли обработчик событий, исключение.  
+ Чтобы облегчить разработчикам писать асинхронный код, основанный на задачах, .NET Framework 4.5 изменяет это поведение по умолчанию для исключений без наблюдения. Ненаблюдаемые исключения по-прежнему вызывать <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> событие, но по умолчанию не завершает процесс. Вместо этого исключение игнорируется после события, независимо от того, обнаруживает ли обработчик событий, исключение.  
   
- В [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], можно использовать [ \<ThrowUnobservedTaskExceptions > элемент](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) в файле конфигурации приложения для включения [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] поведение возникновения исключения.  
+ В .NET Framework 4.5, можно использовать [ \<ThrowUnobservedTaskExceptions > элемент](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) в файле конфигурации приложения для включения [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] поведение возникновения исключения.  
   
  Можно также указать поведение исключений в одном из следующих способов:  
   

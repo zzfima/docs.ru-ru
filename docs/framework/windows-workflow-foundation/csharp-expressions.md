@@ -2,15 +2,15 @@
 title: Выражения C#
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: c50f6a2a8dfb69b914fb4fa84c028f9d65c00cfa
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7e29c4cacf97c729a07fa8d234e7c12006418027
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882080"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378416"
 ---
 # <a name="c-expressions"></a>Выражения C#
-Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], выражения C# поддерживаются в Windows Workflow Foundation (WF). Новые проекты рабочих процессов C#, созданные в Visual Studio 2012, предназначенных [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] использование выражений C# и проекты рабочих процессов Visual Basic используют выражения Visual Basic. Существующие проекты рабочих процессов [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], использующих выражения Visual Basic, поддерживаются, и их можно перенести в [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] независимо от языка проекта. В этом разделе приведены общие сведения о выражениях на языке C# в [!INCLUDE[wf1](../../../includes/wf1-md.md)].
+Начиная с .NET Framework 4.5, C# выражения поддерживаются в Windows Workflow Foundation (WF). Новый C# проектов рабочих процессов, созданных в Visual Studio 2012, предназначенных для использования .NET Framework 4.5 C# выражения и проекты рабочих процессов Visual Basic используют выражения Visual Basic. Существующие проекты рабочих процессов [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], использующих выражения Visual Basic, поддерживаются, и их можно перенести в [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] независимо от языка проекта. В этом разделе приведены общие сведения о выражениях на языке C# в [!INCLUDE[wf1](../../../includes/wf1-md.md)].
 
 ## <a name="using-c-expressions-in-workflows"></a>Выражения на языке C# в рабочих процессах
 
@@ -29,7 +29,7 @@ ms.locfileid: "65882080"
 - [Выражения на языке C# в службах рабочих процессов XAMLX](csharp-expressions.md#WFServices)
 
 ### <a name="WFDesigner"></a> Выражения на языке C# в конструкторе рабочих процессов
- Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], выражения C# поддерживаются в Windows Workflow Foundation (WF). Проекты рабочих процессов C#, созданные в Visual Studio 2012, предназначенных [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] использовать выражения C#, а проекты рабочих процессов Visual Basic используют выражения Visual Basic. Чтобы указать нужное выражение C#, введите его в поле, помеченное **введите выражение C#**. Эта метка отображается в окне свойств при выборе действия в конструкторе или при работе в конструкторе рабочих процессов. В следующем примере два действия `WriteLine` содержатся в `Sequence` внутри `NoPersistScope`.
+ Начиная с .NET Framework 4.5, C# выражения поддерживаются в Windows Workflow Foundation (WF). C#проекты рабочих процессов, созданных в Visual Studio 2012, предназначенных для использования .NET Framework 4.5 C# выражения, а проекты рабочих процессов Visual Basic используют выражения Visual Basic. Чтобы указать нужное выражение C#, введите его в поле, помеченное **введите выражение C#** . Эта метка отображается в окне свойств при выборе действия в конструкторе или при работе в конструкторе рабочих процессов. В следующем примере два действия `WriteLine` содержатся в `Sequence` внутри `NoPersistScope`.
 
  ![Снимок экрана, показывающий действие автоматически созданную последовательность.](./media/csharp-expressions/auto-surround-sequence-activity.png)
 

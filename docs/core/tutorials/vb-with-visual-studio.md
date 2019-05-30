@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: faa801d8ded90b1a0f68eac1824e60ee6ba468a4
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 32e2acedb0f837703fb716c45887672494f8d40f
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612684"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959269"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Создание приложения Hello World на Visual Basic с помощью пакета SDK для .NET Core в Visual Studio 2017
 
@@ -28,7 +28,7 @@ ms.locfileid: "59612684"
 
 Для начала создадим простое консольное приложение Hello World. Выполните следующие действия.
 
-1. Запустите Visual Studio 2017. Выберите **Файл** > **Создать** > **Проект** в меню. В диалоговом окне *Новый проект* * выберите узел **Visual Basic**, а затем — узел **.NET Core**. Выберите шаблон проекта **Консольное приложение (.NET Core)**. В текстовом поле **Имя** введите "HelloWorld". Нажмите кнопку **OK**.
+1. Запустите Visual Studio 2017. Выберите **Файл** > **Создать** > **Проект** в меню. В диалоговом окне *Новый проект* * выберите узел **Visual Basic**, а затем — узел **.NET Core**. Выберите шаблон проекта **Консольное приложение (.NET Core)** . В текстовом поле **Имя** введите "HelloWorld". Нажмите кнопку **OK**.
 
    ![Диалоговое окно создания проекта, в котором выбран шаблон проекта консольного приложения](./media/vb-with-visual-studio/visual-studio-new-project.png)
 
@@ -63,7 +63,7 @@ ms.locfileid: "59612684"
 
    [!code-vb[GettingStarted#1](../../../samples/snippets/core/tutorials/vb-with-visual-studio/helloworld.vb#1)]
 
-   Этот код заменяет существующие операторы <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, <xref:System.Console.Write%2A?displayProperty=nameWithType> и <xref:System.Console.ReadKey%2A?displayProperty=nameWithType>.
+   Этот код заменяет содержимое метода `Main`.
 
    ![Файл программы Visual Studio с обновленным методом Main](./media/vb-with-visual-studio/visual-basic-code-window.png)
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], data model
 ms.assetid: d5752e51-cfc9-4499-af71-53b6daae9879
-ms.openlocfilehash: 9b6a6b572bafc3a13c5c15e29527644b1c1a16ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c001d2a7a388b46e277b23a527c8792bcdcebfeb
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945864"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378141"
 ---
 # <a name="windows-workflow-foundation-data-model"></a>Модель данных Windows Workflow Foundation
 Модель данных Windows Workflow Foundation состоит из трех понятий: переменные, аргументы и выражения. Переменные представляют хранилище данных, а аргументы представляют поток данных в действие и из действия. Аргументы привязываются (им присваивается значение) с помощью выражений, которые могут ссылаться на переменные.  
@@ -22,7 +22,7 @@ ms.locfileid: "61945864"
  Описывает выражения и способ их использования в разработке рабочих процессов.  
   
  [Выражения C#](csharp-expressions.md)  
- Описывает выражения на языке C# в рабочих процессах, появившиеся в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
+ Описывает C# выражений в рабочих процессах, появившиеся в .NET Framework 4.5.  
   
  [Свойства и аргументы](properties-vs-arguments.md)  
  Содержит сведения о том, как выбрать тип входных данных для действия.  

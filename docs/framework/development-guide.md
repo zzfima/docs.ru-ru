@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc7a0991ae308f1c61026e946021d22da9a4bc3b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 032958c24e03025fc3fc3eee2aae40bdd4491e7b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583534"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052737"
 ---
 # <a name="net-framework-development-guide"></a>Руководство по разработке для .NET Framework
 В этом разделе поясняются способы создания, настройки, отладки, защиты и развертывания приложений .NET Framework. В этом разделе также приводятся сведения о технологических областях, таких как динамическое программирование, взаимодействие, расширяемость, управление памятью и потоки.  
@@ -48,7 +48,7 @@ ms.locfileid: "65583534"
  Здесь поясняется, как можно использовать файлы конфигурации для изменения параметров без необходимости повторной компиляции приложений .NET Framework.  
   
  [Компиляция приложений с помощью машинного кода .NET](../../docs/framework/net-native/index.md)  
- Здесь поясняется, как можно использовать[!INCLUDE[net_native](../../includes/net-native-md.md)] технологию предварительной компиляции для построения и развертывания приложений для Магазина Windows. [!INCLUDE[net_native](../../includes/net-native-md.md)] компилирует приложения, написанные с помощью управляемого кода (C#) и адаптирующие .NET Framework к машинному коду.  
+ Здесь поясняется, как можно использовать технологию предварительной компиляции .NET Native для сборки и развертывания приложений Магазина Windows. .NET Native компилирует приложения, написанные с помощью управляемого кода (C#) и адаптирующие .NET Framework к машинному коду.  
   
  [Безопасность](../../docs/standard/security/index.md)  
  Сведения о классах и службах .NET Framework, предназначенных для упрощения разработки безопасных приложений.  

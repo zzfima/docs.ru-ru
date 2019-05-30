@@ -2,20 +2,20 @@
 title: Новые возможности в ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 90ac3ffe9bae892bf20ad874e5634a3a045f776d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 77a7aa5721a83bf7bc8d3e3cbf57a77c56267062
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877434"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379989"
 ---
 # <a name="whats-new-in-adonet"></a>Новые возможности в ADO.NET
 
-Ниже перечислены новые возможности в ADO.NET в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+Следующие функции появились в ADO.NET в платформе .NET Framework 4.5.
 
 ## <a name="sqlclient-data-provider"></a>Поставщик данных SqlClient
 
-Следующие функции являются новыми в поставщике данных .NET Framework для SQL Server в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:
+Следующие функции, добавленные в поставщике данных .NET Framework для SQL Server в .NET Framework 4.5.
 
 - Ключевые слова строки подключения ConnectRetryCount и ConnectRetryInterval (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) позволяют управлять возможностью устойчивости бездействующего соединения.
 
@@ -51,7 +51,7 @@ ms.locfileid: "65877434"
 
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework
 
-В [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] добавлены новые интерфейсы API, которые позволяют реализовывать новые сценарии при работе с бета-версией платформы Entity Framework 5.0. Дополнительные сведения об улучшениях и функциях, добавленных в Entity Framework 5.0 см. в разделах: [Новые возможности](https://go.microsoft.com/fwlink/?LinkID=251106) и [Entity Framework выпуски и управление версиями](https://go.microsoft.com/fwlink/?LinkId=234899).
+.NET Framework 4.5 добавлены новые интерфейсы API, поддержки новых сценариев, при работе с Entity Framework 5.0. Дополнительные сведения об улучшениях и функциях, добавленных в Entity Framework 5.0 см. в разделах: [Новые возможности](https://go.microsoft.com/fwlink/?LinkID=251106) и [Entity Framework выпуски и управление версиями](https://go.microsoft.com/fwlink/?LinkId=234899).
 
 ## <a name="see-also"></a>См. также
 

@@ -2,12 +2,12 @@
 title: Поддержка SqlClient для высокого уровня доступности, аварийного восстановления
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: a2cc63cb0b9118da6eb3c381e853165f800fe61f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 9b928be56ac09ec707a45829c862e606b68b717c
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645923"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251171"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Поддержка SqlClient для высокого уровня доступности, аварийного восстановления
 В данном разделе рассматривается поддержка групп доступности AlwaysOn (высокая доступность, аварийное восстановление) в SqlClient, которая появилась в [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)].  Группы доступности AlwaysOn появились в SQL Server 2012. Дополнительные сведения о группах доступности AlwaysOn см. в разделе электронной документации по SQL Server.  
@@ -32,7 +32,7 @@ ms.locfileid: "64645923"
 2. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
->  Установка `MultiSubnetFailover` для `true` не обязательно с [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)] или более поздней версии.
+>  Установка `MultiSubnetFailover` для `true` не требуется .NET Framework 4.6.1 или более поздних версий.
   
 ## <a name="connecting-with-multisubnetfailover"></a>Соединение с MultiSubnetFailover  
  Всегда указывайте `MultiSubnetFailover=True` при подключении к прослушивателю группы доступности SQL Server 2012 или экземпляром отказоустойчивого кластера SQL Server 2012. `MultiSubnetFailover` обеспечивает ускоренную отработку отказа для всех групп доступности или экземпляра отказоустойчивого кластера в SQL Server 2012 и значительно сократить время отработки отказа для топологий AlwaysOn с одной или несколькими подсетями. Во время отработки отказа в топологии с несколькими подсетями клиент будет пытаться установить соединения параллельно. Во время отработки отказа в топологии с одной подсетью клиент будет агрессивно пытаться восстановить соединение TCP.  

@@ -7,21 +7,21 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: dcdf8d0f11ae65353da08bba1f8d2fe5ab415c6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8f85be2efe972fc45230855d18649a89f2fbd61
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705562"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300821"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<appSettings > элемент для \<configuration >
 
 Содержит пользовательские параметры приложения. Это раздел стандартные конфигурации, предоставляемые платформой .NET Framework.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<appSettings >**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp; **\<appSettings >**
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,15 +41,15 @@ ms.locfileid: "61705562"
 
 |     | Описание |
 | --- | ----------- |
-| [**\<Конфигурация >** элемент](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework. |
+| [ **\<Конфигурация >** элемент](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
 |     | Описание |
 | --- | ----------- |
-| [**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Добавляет пользовательский параметр приложения. |
-| [**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Удаляет все ранее определенные параметры приложения. |
-| [**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | Удаляет ранее определенный параметр приложения. |
+| [ **\<add>** ](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Добавляет пользовательский параметр приложения. |
+| [ **\<clear>** ](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Удаляет все ранее определенные параметры приложения. |
+| [ **\<remove>** ](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | Удаляет ранее определенный параметр приложения. |
 
 ## <a name="remarks"></a>Примечания
 
@@ -57,7 +57,7 @@ ms.locfileid: "61705562"
 
 Можно использовать **файл** атрибут в  **\<appSettings >** элемент *Web.config* и файлах конфигурации приложения. Этот атрибут задает файл конфигурации, предоставляющий дополнительные параметры или переопределяющий параметры, указанные в  **\<appSettings >** элемент. **Файл** атрибут может использоваться в сценариев управления версиями team development, например когда пользователь хочет переопределить параметры проекта, указанный в файле конфигурации приложения.
 
-Файлы конфигурации, заданные **файл** атрибут должен иметь корневой узел **\<appSettings >** вместо **\<конфигурации >**.
+Файлы конфигурации, заданные **файл** атрибут должен иметь корневой узел **\<appSettings >** вместо **\<конфигурации >** .
 
 ## <a name="example"></a>Пример
 
