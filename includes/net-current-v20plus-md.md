@@ -6,4 +6,4 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65629875"
 ---
-<span data-ttu-id="2680f-101">Доступно с версии 2.0</span><span class="sxs-lookup"><span data-stu-id="2680f-101">Available since 2.0</span></span>
+<span data-ttu-id="bd50b-101">Доступно с версии 2.0</span><span class="sxs-lookup"><span data-stu-id="bd50b-101">Available since 2.0</span></span>
