@@ -1,6 +1,7 @@
 - name: Ковариация и контрвариация
-  href: index.md
   items:
+    - name: Обзор
+      href: index.md
     - name: Вариативность в универсальных интерфейсах
       href: variance-in-generic-interfaces.md
       items:

@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8170dd2e2941be3a73f7a4fd8c37d4fb2ef96235
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4e13689e0c8324781b86ae7b9568cb441a31ec70
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592248"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423951"
 ---
 # <a name="generics-in-net"></a>Универсальные шаблоны в .NET
 
@@ -148,7 +148,7 @@ ms.locfileid: "65592248"
   
  Среда CLR предоставляет новые коды операций и префиксы для поддержки универсальных типов в языке MSIL, включая <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained>и <xref:System.Reflection.Emit.OpCodes.Readonly>.  
   
- В языках Visual C++, C# и Visual Basic обеспечивается полноценная поддержка определения и использования универсальных шаблонов. Дополнительные сведения о поддержке языков см. в статьях [Универсальные типы в Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md), [Введение в универсальные шаблоны](~/docs/csharp/programming-guide/generics/introduction-to-generics.md) и [Обзор универсальных типов в Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp).  
+ В языках Visual C++, C# и Visual Basic обеспечивается полноценная поддержка определения и использования универсальных шаблонов. Дополнительные сведения о поддержке языков см. в статьях [Универсальные типы в Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md), [Введение в универсальные шаблоны](~/docs/csharp/programming-guide/generics/index.md) и [Обзор универсальных типов в Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp).  
   
  [К началу](#top)  
   
@@ -171,7 +171,7 @@ ms.locfileid: "65592248"
 |[Когда следует использовать универсальные коллекции](../../../docs/standard/collections/when-to-use-generic-collections.md)|Описание общих правил для определения ситуаций, когда следует использовать универсальные типы коллекций.|  
 |[Практическое руководство. Определение универсального типа с порождаемым отражением](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Описание способов создания динамических сборок, содержащих универсальные типы и методы.|  
 |[Generic Types in Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|Описание универсальных шаблонов для пользователей Visual Basic, включая практические руководства об использовании и определении универсальных типов.|  
-|[Введение в универсальные шаблоны](~/docs/csharp/programming-guide/generics/introduction-to-generics.md)|Общие сведения об определении и использовании универсальных типов для пользователей C#.|  
+|[Введение в универсальные шаблоны](~/docs/csharp/programming-guide/generics/index.md)|Общие сведения об определении и использовании универсальных типов для пользователей C#.|  
 |[Обзор универсальных типов в Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Описание универсальных шаблонов для пользователей C++, включая описание различий между шаблонами и универсальными шаблонами.|  
   
 <a name="reference"></a>   
