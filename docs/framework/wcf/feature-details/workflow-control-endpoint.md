@@ -2,18 +2,18 @@
 title: Конечная точка элемента управления рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-ms.openlocfilehash: 40fec2902598daed178e070b02c1067c308507c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 781a7cefaeeb8cd9cd21298471c59de2e7815244
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929718"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424019"
 ---
 # <a name="workflow-control-endpoint"></a>Конечная точка элемента управления рабочего процесса
 Конечная точка управления рабочим процессом позволяет разработчику вызывать операции удаленного управления экземплярами рабочего процесса, размещенные с помощью <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Эта функция может быть использована для программного выполнения таких операций управления, как приостановка, возобновление и завершение.  
   
 > [!WARNING]
->  Если конечная точка управления рабочим процессом используется в транзакции, а управляемый рабочий процесс содержит действие <xref:System.Activities.Statements.Persist>, экземпляр рабочего процесса «зависнет» до истечения срока ожидания транзакции.  
+>  Если с помощью конечной точки управления рабочего процесса в транзакции, а также контролируемого рабочий процесс содержит <xref:System.Activities.Statements.Persist> действия экземпляра рабочего процесса будет заблокирован до истечения времени ожидания транзакции.  
   
 ## <a name="workflow-instance-management"></a>Управление экземплярами рабочего процесса  
  Платформа [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] включает новый контракт <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. Этот контракт определяет последовательность операций управления, которые дают возможность удаленно управлять экземплярами рабочего процесса, размещенными в <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> - это стандартная конечная точка, которая обеспечивает реализацию контракта <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. <xref:System.ServiceModel.Activities.WorkflowControlClient> - класс, который используется для отправки управляющих операций конечной точке <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>.  

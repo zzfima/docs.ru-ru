@@ -2,12 +2,12 @@
 title: Новые возможности Windows Workflow Foundation в .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: fb9604061fd6ccd7909a2d5b26675a1b637f2b4d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9bf836abaa568b3df2080500d8d2357e604dff60
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380141"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423984"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Новые возможности Windows Workflow Foundation в .NET 4.5
 
@@ -200,7 +200,7 @@ Windows Workflow Foundation (WF) в .NET Framework 4.5 содержит множ
 
 ### <a name="BKMK_DesignTimeValidation"></a> Фоновая проверка во время разработки
 
-В [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] рабочие процессы проверялись в виде процесса в основном режиме, что потенциально могло привести к «зависанию» пользовательского интерфейса во время сложных или длительных процессов проверки. Теперь проверка рабочего процесса выполняется в фоновом потоке, поэтому пользовательский интерфейс не блокируется.
+В [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], рабочие процессы проверялись процесса переднего плана, что потенциально может заблокировать пользовательского интерфейса во время сложных или длительных процессов проверки. Теперь проверка рабочего процесса выполняется в фоновом потоке, поэтому пользовательский интерфейс не блокируется.
 
 ### <a name="BKMK_ViewState"></a> Состояние просмотра в отдельном расположении в файлах XAML
 

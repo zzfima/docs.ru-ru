@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 426429eefd038008340a956ab3fa3cba21906c84
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6dea344d5af24ba2f5bb4aa4064a4f876408380
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627027"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423888"
 ---
 # <a name="denial-of-service"></a>Отказ в обслуживании
 Если система перегружена так, что не удается обрабатывать сообщения, или сообщения обрабатываются слишком медленно, происходит отказ в обслуживании.  
@@ -46,8 +46,8 @@ ms.locfileid: "64627027"
   
  Для решения этой проблемы задайте свойству <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> значение `true` и используйте свойства средства «Просмотр событий» для управления поведением аудита. Дополнительные сведения о средстве просмотра событий для просмотра и управления журналами событий см. в разделе [средство просмотра событий](https://go.microsoft.com/fwlink/?LinkId=186123). Дополнительные сведения см. в разделе [аудит](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
-## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Недопустимые реализации интерфейса IAuthorizationPolicy могут привести к зависанию службы  
- Вызов метода <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> неверной реализации интерфейса <xref:System.IdentityModel.Policy.IAuthorizationPolicy> может вызвать зависание службы.  
+## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Недопустимые реализации IAuthorizationPolicy могут привести к перестать отвечать на запросы службы  
+ Вызов <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> метод неверной реализации <xref:System.IdentityModel.Policy.IAuthorizationPolicy> интерфейс может привести к служба перестанет отвечать на запросы.  
   
  Устранение рисков. Используйте только полностью доверенный код. Это значит, следует использовать только тот код, который вы написали и испытали сами, или код от надежного поставщика. Не следует разрешать подключение к коду ненадежных расширений <xref:System.IdentityModel.Policy.IAuthorizationPolicy> без их тщательной проверки. Это относится ко всем расширениям, используемым при реализации службы. WCF не различает код приложения и внешний код, подключаемый в использующихся точках расширения.  
   
