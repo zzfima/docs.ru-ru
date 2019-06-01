@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c3970823557d1d1b24405fd4b390b81006533a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3da3e48f898797849a5304c4884b648f47a26dd
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868905"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456571"
 ---
 # <a name="security-transparent-code-level-2"></a>Прозрачный с точки зрения безопасности код, уровень 2
 
@@ -58,7 +58,7 @@ ms.locfileid: "61868905"
 
 ## <a name="usage-examples-and-behaviors"></a>Примеры использования и поведение
 
-Чтобы указать правила [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (прозрачность уровня 2), используйте для сборки следующую заметку:
+Чтобы задать правила .NET Framework 4 (прозрачность уровня 2), используйте следующую заметку для сборки:
 
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level2)]
@@ -70,7 +70,7 @@ ms.locfileid: "61868905"
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
 ```
 
-Если сборка не содержит заметок, то по умолчанию используются правила [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Тем не менее, рекомендуется использовать <xref:System.Security.SecurityRulesAttribute> вместо атрибута зависимостей по умолчанию.
+Если сборка не содержит заметок, по умолчанию используются правила .NET Framework 4. Тем не менее, рекомендуется использовать <xref:System.Security.SecurityRulesAttribute> вместо атрибута зависимостей по умолчанию.
 
 ### <a name="assembly-wide-annotation"></a>Заметка на уровне сборки
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: ea42710f7963f485675279f25623f26bfd5d4f48
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1c0ee38037e79fc93a4318fc5309f61c9060213c
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582949"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457094"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>Надстройки Firefox для поддержки развертывания приложений .NET
 Включить Windows Presentation Foundation (WPF) подключаемого модуля для Firefox и .NET Framework Assistant для Firefox [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], свободные [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]и приложений ClickOnce для работы с браузером Mozilla Firefox.  
@@ -22,7 +22,7 @@ ms.locfileid: "64582949"
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Подключаемый модуль для Firefox устанавливается вместе с [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]. Windows 7 включает [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], но не включает [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] подключаемого модуля для Firefox. Не удается установить [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] подключаемого модуля для Firefox в Windows 7.  
   
- [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] Не включает [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] подключаемого модуля для Firefox. Тем не менее если оба [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] и [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] являются установки подключаемого модуля WPF для Firefox устанавливается вместе с [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]. Таким образом [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] приложений будет работать, поскольку ведущее приложение WPF загрузит правильную версию платформы. Дополнительные сведения см. в разделе [ведущее приложение WPF (PresentationHost.exe)](wpf-host-presentationhost-exe.md).  
+ .NET Framework 4 не включает [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] подключаемого модуля для Firefox. Тем не менее если оба [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] и установлены .NET Framework 4, входящую в состав подключаемого модуля WPF для Firefox [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]. Таким образом приложений .NET Framework 4 будет работать, поскольку ведущее приложение WPF загрузит правильную версию платформы. Дополнительные сведения см. в разделе [ведущее приложение WPF (PresentationHost.exe)](wpf-host-presentationhost-exe.md).  
   
 ## <a name="net-framework-assistant-for-firefox"></a>.NET Framework Assistant для Firefox  
  .NET Framework Assistant для Firefox позволяет выполнять из браузера Firefox автономного приложения ClickOnce. .NET Framework Assistant для Firefox функций идентично в том случае, если он установлен до и после браузер Firefox. При запуске браузера Firefox и [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] будет установлено, Firefox находит и устанавливает .NET Framework Assistant для Firefox. Пользователи могут настраивать .NET Framework Assistant для Firefox, выполнив следующие действия:  

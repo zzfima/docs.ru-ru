@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1297c84acadf0a53b418b06afe806237d374ee25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b09c509c3e0ba941a34f60ff522117ff30d83caf
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993165"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457391"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>Метод ICLRRuntimeInfo::IsStarted
 Указывает, был ли запущен среды выполнения (то есть ли [метод ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) был вызван и успешно).  
@@ -49,7 +49,7 @@ HRESULT IsStarted(
 |E_NOTIMPL|Более ранняя, чем версия среды CLR, версию среды выполнения (CLR) CLR [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].|  
   
 ## <a name="remarks"></a>Примечания  
- Этот метод не работает с CLR версии более ранней, чем версия среды CLR, [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+ Этот метод не работает с CLR версии более ранней, чем версия среды CLR в .NET Framework 4.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

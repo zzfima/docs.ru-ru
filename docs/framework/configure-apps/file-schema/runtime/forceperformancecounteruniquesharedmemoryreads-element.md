@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d4a205f643c844b2fe77d3aa5211b4bc1f322fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e9073e48141bc6895d00c773c2d3d2cfeb260f6
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674264"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456462"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads > элемент
 Указывает, использует ли файл PerfCounter.dll параметр реестра CategoryOptions в приложении .NET Framework версии 1.1, чтобы определить, следует ли загружать данные счетчиков производительности из общей памяти конкретной категории или глобальной памяти.  
@@ -55,11 +55,11 @@ enabled="true|false"/>
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
 ## <a name="remarks"></a>Примечания  
- В версиях .NET Framework, выпущенных до [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], предоставивших версию PerfCounter.dll, который был загружен в среду выполнения, который был загружен в процессе. Если компьютер имеет оба в .NET Framework версии 1.1 и [!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)] установки приложения .NET Framework 1.1 будет загрузки версии .NET Framework 1.1 PerfCounter.dll. Начиная с [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], загружается последняя установленная версия PerfCounter.dll. Это означает, что приложения .NET Framework 1.1 загрузит [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] версию PerfCounter.dll Если [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] устанавливается на компьютере.  
+ В версиях .NET Framework, выпущенных до [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], предоставивших версию PerfCounter.dll, который был загружен в среду выполнения, который был загружен в процессе. Если компьютер имеет оба в .NET Framework версии 1.1 и [!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)] установки приложения .NET Framework 1.1 будет загрузки версии .NET Framework 1.1 PerfCounter.dll. Начиная с .NET Framework 4, загружается последняя установленная версия PerfCounter.dll. Это означает, что приложения .NET Framework 1.1 загрузит PerfCounter.dll версии .NET Framework 4, если .NET Framework 4 установлена на компьютере.  
   
- Начиная с [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], проверяет при использовании счетчиков производительности, PerfCounter.dll параметр реестра для каждого поставщика, чтобы определить, следует ли чтение из общей памяти конкретной категории или глобальной общей памяти. .NET Framework 1.1 PerfCounter.dll не поддерживает эту запись реестра, так как он не учитывает общей памяти конкретной категории; он считывает из глобальную общую память.  
+ Начиная с .NET Framework 4, при использовании счетчиков производительности, PerfCounter.dll проверяет запись реестра CategoryOptions для каждого поставщика, чтобы определить, следует ли чтение из общей памяти конкретной категории или глобальной общей памяти. .NET Framework 1.1 PerfCounter.dll не поддерживает эту запись реестра, так как он не учитывает общей памяти конкретной категории; он считывает из глобальную общую память.  
   
- Для обеспечения обратной совместимости [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] PerfCounter.dll не проверяет запись реестра CategoryOptions при работе в приложении .NET Framework 1.1. Он просто использует глобальную общую память, так же, как .NET Framework 1.1 PerfCounter.dll. Тем не менее, можно указать [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] PerfCounter.dll для проверки параметра реестра, включив `<forcePerformanceCounterUniqueSharedMemoryReads>` элемент.  
+ Для обеспечения обратной совместимости .NET Framework 4 PerfCounter.dll не проверяет запись реестра CategoryOptions при работе в приложении .NET Framework 1.1. Он просто использует глобальную общую память, так же, как .NET Framework 1.1 PerfCounter.dll. Тем не менее, вы можете сообщить о .NET Framework 4 PerfCounter.dll для проверки параметра реестра, включив `<forcePerformanceCounterUniqueSharedMemoryReads>` элемент.  
   
 > [!NOTE]
 >  Включение `<forcePerformanceCounterUniqueSharedMemoryReads>` элемент не гарантирует, что будет использоваться общей памяти конкретной категории. Параметр включен для `true` только вызывает PerfCounter.dll параметр реестра CategoryOptions ссылок. Параметр по умолчанию является использование общей памяти конкретной категории; Тем не менее можно изменить параметр, чтобы указать, что следует использовать глобальную общую память.  

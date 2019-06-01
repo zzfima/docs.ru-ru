@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 403bd881f6e6349a91fc952a80441b0cec0c08fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f03d9481a2af3edebe83df5b1b725b7290d30d00
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662246"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457540"
 ---
 # <a name="xaml-overview-wpf"></a>Обзор XAML (WPF)
 В этом разделе описаны возможности языка XAML и показано, как использовать язык XAML для написания приложений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. В частности, в этом разделе описывается реализация XAML в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Сам язык XAML — это более широкое понятие языка, чем [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -307,7 +307,7 @@ ms.locfileid: "64662246"
 ## <a name="xaml-security"></a>Безопасность XAML  
  XAML — это язык разметки, непосредственно представляющий создание и выполнение объекта. Таким образом, элементы, созданные в XAML, имеют такие же возможности взаимодействия с системными ресурсами (например, сетевой доступ и операции ввода-вывода файловой системы), как и эквивалентный созданный код.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] платформы безопасности [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]. Это означает, что содержимое [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], работающее в зоне Интернет, сократило разрешения исполнения. "Свободный XAML" (страницы некомпилированного XAML, интерпретируемые во время загрузки средства просмотра XAML) и [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] обычно выполняются в этой Интернет-зоне и используют один набор разрешений.  Однако XAML, загруженный в полностью доверенное приложение, имеет такой же доступ к системным ресурсам, как ведущее приложение. Дополнительные сведения см. в разделе [Безопасность частичного доверия в WPF](../wpf-partial-trust-security.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает платформу .NET Framework 4 безопасности [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]. Это означает, что содержимое [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], работающее в зоне Интернет, сократило разрешения исполнения. "Свободный XAML" (страницы некомпилированного XAML, интерпретируемые во время загрузки средства просмотра XAML) и [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] обычно выполняются в этой Интернет-зоне и используют один набор разрешений.  Однако XAML, загруженный в полностью доверенное приложение, имеет такой же доступ к системным ресурсам, как ведущее приложение. Дополнительные сведения см. в разделе [Безопасность частичного доверия в WPF](../wpf-partial-trust-security.md).  
   
 <a name="loading_xaml_from_code"></a>   
 ## <a name="loading-xaml-from-code"></a>Загрузка XAML из кода  

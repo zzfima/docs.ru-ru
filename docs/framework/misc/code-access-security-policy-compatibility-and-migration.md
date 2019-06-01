@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d9281e52de43391a92262f85084715ccabd5515
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868918"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456651"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Совместимость политики разграничения доступа кода и ее миграция
 
@@ -22,7 +22,7 @@ ms.locfileid: "61868918"
 
 Избежать появления таких предупреждений и ошибок можно следующими способами:
 
-- [Миграция](#migration) для [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] замена устаревших вызовов.
+- [Миграция](#migration) на .NET Framework 4 для замены для устаревших вызовов.
 
    \- или -
 
@@ -114,7 +114,7 @@ ms.locfileid: "61868918"
 
 ### <a name="determining-an-assemblys-trust-level"></a>Определение уровня доверия сборки
 
-Политика разграничения доступа кода часто используется для определения набора разрешений или уровня доверия, предоставляемых сборке или домену приложения. Платформа [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] предоставляет следующие полезные свойства, не требующие разрешения политики безопасности:
+Политика разграничения доступа кода часто используется для определения набора разрешений или уровня доверия, предоставляемых сборке или домену приложения. .NET Framework 4 предоставляет следующие полезные свойства, не требующие разрешения политики безопасности:
 
 - <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>
 
@@ -126,15 +126,15 @@ ms.locfileid: "61868918"
 
 ### <a name="application-domain-sandboxing"></a>Изолирование домена приложения
 
-Метод <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType>, как правило, используется для изолирования сборок в домене приложений. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Предоставляет члены, которые не нужно использовать <xref:System.Security.Policy.PolicyLevel> для этой цели. Дополнительные сведения см. в разделе [Как Выполнение не вполне безопасного кода в изолированной среде](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
+Метод <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType>, как правило, используется для изолирования сборок в домене приложений. .NET Framework 4 предоставляет члены, которые не нужно использовать <xref:System.Security.Policy.PolicyLevel> для этой цели. Дополнительные сведения см. в разделе [Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
 
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>Определение безопасного или приемлемого набора разрешений для частично доверенного кода
 
-Основным приложениям часто требуется определить разрешения, подходящие для изоляции кода, запускаемого из этих приложений. Прежде чем [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], политика разграничения доступа кода предоставляет способ это сделать с помощью <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> метод. Вместо этого [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] предоставляет <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> метод, который возвращает безопасный стандартный набор разрешений для предоставленного свидетельства.
+Основным приложениям часто требуется определить разрешения, подходящие для изоляции кода, запускаемого из этих приложений. Прежде чем .NET Framework 4, политика разграничения доступа кода предоставляет способ это сделать с помощью <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> метод. Вместо этого .NET Framework 4 предоставляет <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> метод, который возвращает безопасный стандартный набор разрешений для предоставленного свидетельства.
 
 ### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Сценарии не "песочницы": Перегрузки для загрузки сборок
 
-Перегруженные методы загрузки сборок применяются, если вместо изоляции сборки в "песочнице" необходимо использовать параметры, которые недоступны иначе. Начиная с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], перегрузки нагрузки сборки, не требующие <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> объект в качестве параметра, например, <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, реализовать этот сценарий.
+Перегруженные методы загрузки сборок применяются, если вместо изоляции сборки в "песочнице" необходимо использовать параметры, которые недоступны иначе. Начиная с .NET Framework 4, перегрузки, которые не требуют загрузки сборки <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> объект в качестве параметра, например, <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, реализовать этот сценарий.
 
 Чтобы поместить сборку в изолированную среду, воспользуйтесь перегрузкой <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType>.
 

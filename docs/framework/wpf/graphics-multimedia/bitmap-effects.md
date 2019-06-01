@@ -9,18 +9,18 @@ helpviewer_keywords:
 - bitmap images [WPF]
 - images [WPF], bitmap
 ms.assetid: be180b56-ca6e-4da3-a839-f6b0bf482f7d
-ms.openlocfilehash: eb81644bc69edcd1465cf43224eb6af369b5fb3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86e42b5d2fcd5bcb23489bd03a6daf8255d0725f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010232"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457528"
 ---
 # <a name="bitmap-effects"></a>Эффекты для точечных рисунков
 В этом разделе описываются способы применения эффектов к растровым изображениям с помощью [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 > [!IMPORTANT]
->  В [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] или более поздней версии, <xref:System.Windows.Media.Effects.BitmapEffect> класс является устаревшим. Если вы попытаетесь использовать <xref:System.Windows.Media.Effects.BitmapEffect> класса, будет вызвано исключение устаревшего. Неустаревшая альтернатива для <xref:System.Windows.Media.Effects.BitmapEffect> класс является <xref:System.Windows.Media.Effects.Effect> класса. В большинстве случаев <xref:System.Windows.Media.Effects.Effect> класс значительно быстрее.  
+>  В .NET Framework 4 или более поздней версии <xref:System.Windows.Media.Effects.BitmapEffect> класс является устаревшим. Если вы попытаетесь использовать класс <xref:System.Windows.Media.Effects.BitmapEffect>, будет выдано соответствующее исключение. Современной альтернативой для класса <xref:System.Windows.Media.Effects.BitmapEffect> является класс <xref:System.Windows.Media.Effects.Effect>. В большинстве случаев класс <xref:System.Windows.Media.Effects.Effect> работает значительно быстрее.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об эффектах для точечных рисунков](bitmap-effects-overview.md)  

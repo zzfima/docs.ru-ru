@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32aee404891bfad1aed2abc9ad84e43bcd002df5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 310aec9b180b37b7e5f34c4594fd61747ef02d39
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765327"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457046"
 ---
 # <a name="loadlibraryshim-function"></a>Функция LoadLibraryShim
 Загружает указанную версию библиотеки DLL, включенный в распространяемый пакет .NET Framework.  
@@ -45,7 +45,7 @@ HRESULT LoadLibraryShim (
  [in] Нулем строка, представляющая имя библиотеки DLL, загружаемых из библиотеки .NET Framework.  
   
  `szVersion`  
- [in] Нулем строка, представляющая версию библиотеки DLL для загрузки. Если `szVersion` имеет значение null, версии, для загрузки выбрана последняя версия указанной библиотеки DLL, которая меньше, чем версии 4. То есть учитываются все версии, равно или больше, чем версии 4, если `szVersion` имеет значение null, и если установлена не версия ниже версии 4, библиотеки DLL не загружается. Это позволяет обеспечить эту установку [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] не влияет на существующие приложения или компоненты. См. в записи [In-Proc SxS и быстрого запуска миграции](https://go.microsoft.com/fwlink/?LinkId=200329) в блоге группы CLR.  
+ [in] Нулем строка, представляющая версию библиотеки DLL для загрузки. Если `szVersion` имеет значение null, версии, для загрузки выбрана последняя версия указанной библиотеки DLL, которая меньше, чем версии 4. То есть учитываются все версии, равно или больше, чем версии 4, если `szVersion` имеет значение null, и если установлена не версия ниже версии 4, библиотеки DLL не загружается. Это гарантирует, что установка платформы .NET Framework 4 не влияет на существующие приложения или компоненты. См. в записи [In-Proc SxS и быстрого запуска миграции](https://go.microsoft.com/fwlink/?LinkId=200329) в блоге группы CLR.  
   
  `pvReserved`  
  Зарезервировано для будущего использования.  

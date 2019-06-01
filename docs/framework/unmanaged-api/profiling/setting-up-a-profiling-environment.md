@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af68041cd016b457c449c283601bd5a0d4258c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfad184e30ec94c8add265db2ef8131d0d34396f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666049"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457226"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Установка профилирующей среды
 > [!NOTE]
@@ -37,10 +37,10 @@ ms.locfileid: "64666049"
  Чтобы выполнить профилирование приложения среды CLR, необходимо задать переменные среды COR_ENABLE_PROFILING и COR_PROFILER перед запуском приложения. Кроме того, необходимо убедиться, что DLL профилировщика зарегистрирована.  
   
 > [!NOTE]
->  Начиная с [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] регистрировать профилировщики не обязательно.  
+>  Начиная с .NET Framework 4, профилировщики не должны быть зарегистрированы.  
   
 > [!NOTE]
->  Для использования профилировщиками .NET Framework версий 2.0, 3.0 и 3.5 в [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] и более поздних версий, необходимо задать переменную среды COMPLUS_ProfAPI_ProfilerCompatibilitySetting.  
+>  Для использования профилировщиками .NET Framework версий 2.0, 3.0 и 3.5 в .NET Framework 4 и более поздних версий, необходимо задать переменную среды COMPLUS_ProfAPI_ProfilerCompatibilitySetting.  
   
 ## <a name="environment-variable-scope"></a>Область действия переменных среды.  
  Способ установки переменных среды COR_ENABLE_PROFILING и COR_PROFILER будет определять их области действия. Вы можете установить эти переменные одним из следующих способов.  

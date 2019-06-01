@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 08a13a57-dc49-488d-b937-31e3051fda97
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8bb5d93c91de857ebbee63009cad73fba7e1d284
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ea65c06871d9762fa6daac229a568594b4c4479
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758253"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457476"
 ---
 # <a name="profiling-global-static-functions"></a>Глобальные статические функции профилирования
 В этом разделе описываются неуправляемые функции API, которые использует API профилирования.  
@@ -35,13 +35,13 @@ ms.locfileid: "61758253"
  Уведомляет профилировщик о заданному идентификатору функции может быть альтернативный идентификатор для использования в [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), и [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) обратные вызовы для этой функции. Также позволяет профилировщику указать, желает ли он получать обратные вызовы для этой функции  
   
  [Функция FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- Уведомляет профилировщик о том, что элемент управления передается в функцию и предоставляет информацию о стеке кадра и аргументов функции. Не рекомендуется в [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+ Уведомляет профилировщик о том, что элемент управления передается в функцию и предоставляет информацию о стеке кадра и аргументов функции. Рекомендуется использовать в .NET Framework 4.  
   
  [Функция FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
- Уведомляет профилировщик, что функция должна возвращать вызывающей стороне и предоставляет сведения о стека кадра и функция возвращаемое значение. Не рекомендуется в [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+ Уведомляет профилировщик, что функция должна возвращать вызывающей стороне и предоставляет сведения о стека кадра и функция возвращаемое значение. Рекомендуется использовать в .NET Framework 4.  
   
  [Функция FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
- Уведомляет профилировщик, что текущей выполняемой функции собирается выполнить вызов с префиксом tail в другую функцию и предоставляет сведения о кадре стека. Не рекомендуется в [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+ Уведомляет профилировщик, что текущей выполняемой функции собирается выполнить вызов с префиксом tail в другую функцию и предоставляет сведения о кадре стека. Рекомендуется использовать в .NET Framework 4.  
   
  [Функция StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)  
  Предоставляет сведения о каждого управляемого кадра и каждом запуске неуправляемых фреймов в стеке во время стека, который инициируется профилировщик [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) метод.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfd241056947fbf1daf48b84ff41e3f74ff7b8de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6aef46db47f881d6a15cc1e58d46219a80194b0
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674290"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456455"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > элемент
 Указывает, что при операциях сравнения строк среда выполнения должна использовать устаревший порядок сортировки.  
@@ -57,7 +57,7 @@ ms.locfileid: "61674290"
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
   
 ## <a name="remarks"></a>Примечания  
- Поскольку сравнения строк, сортировки и операций регистр выполняется с <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> в класс [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] соответствуют стандарту Unicode 5.1, результаты методы сравнения строк, таких как <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> и <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> может отличаться от предыдущих версий платформы .NET Framework. Если приложение зависит от устаревшего поведения, можно восстановить правила сравнения и сортировки строк, используемые в [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] и более ранних версиях, включив в файл конфигурации приложения элемент `<CompatSortNLSVersion>`.  
+ Поскольку сравнения строк, сортировки и операций регистр выполняется с <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> классов в платформе .NET Framework 4 соответствуют стандарту Unicode 5.1, результаты методы сравнения строк такие как <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> и <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> может отличаться от предыдущих версий платформы .NET Framework. Если приложение зависит от устаревшего поведения, можно восстановить правила сравнения и сортировки строк, используемые в [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] и более ранних версиях, включив в файл конфигурации приложения элемент `<CompatSortNLSVersion>`.  
   
 > [!IMPORTANT]
 >  Для восстановления устаревших правил сравнения и сортировки строк также требуется, чтобы в локальной системе была доступна библиотека динамической компоновки sort00001000.dll.  
@@ -70,7 +70,7 @@ ms.locfileid: "61674290"
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- При запуске примера в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] отображаются следующие выходные данные.  
+ При запуске примера в .NET Framework 4, отображается следующий результат.  
   
 ```  
 sta follows a in the sort order.  
@@ -82,7 +82,7 @@ sta follows a in the sort order.
 sta equals a in the sort order.  
 ```  
   
- Однако если в каталог примера добавить представленный ниже файл конфигурации и запустить пример в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], выходные данные будут идентичны данным, созданным примером при его запуске в [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
+ Тем не менее, если добавить следующий файл конфигурации в каталог примеров и затем запустить пример в .NET Framework 4, выходные данные идентичны данным, созданным примером при его запуске в [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
   
 ```xml  
 <?xml version ="1.0"?>  

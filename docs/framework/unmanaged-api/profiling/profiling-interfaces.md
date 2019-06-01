@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 059fadc5607e76b871083682136fda542ae9bacf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d97960a43e1d7ce625d96755a7c597a0425d0911
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758201"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457458"
 ---
 # <a name="profiling-interfaces"></a>Профилирующие интерфейсы
 В этом разделе описываются неуправляемые интерфейсы, позволяющие профилировать программу, выполняемую в среде CLR.  
@@ -65,7 +65,7 @@ ms.locfileid: "61758201"
  Расширяет интерфейс `ICorProfilerInfo` методами, поддерживаемыми платформой .NET Framework 2.0 и более поздних версий.  
   
  [Интерфейс ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- Расширяет интерфейс `ICorProfilerInfo2` методами, поддерживаемыми платформой [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] и более поздних версий.  
+ Расширяет `ICorProfilerInfo2` интерфейса с помощью методов, поддерживаемых в .NET Framework 4 и более поздних версий.  
   
  [Интерфейс ICorProfilerInfo4](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
  Предоставляет методы, которые используются профилировщиками кода для взаимодействия со средой CLR с целью управления отслеживанием событий и для запроса сведений.  

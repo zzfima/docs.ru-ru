@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 703b8381-43db-4a4d-9faa-cca39302d922
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03839a2c6e52f9d2dcdd2e0941ff4fdbeb8a3a17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80404e65263aa4ad245a8c8213630a4736bd7b11
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789666"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456882"
 ---
 # <a name="clr-hosting-interfaces"></a>Интерфейсы размещения CLR
 В этом разделе описываются интерфейсы, которые неуправляемые узлы могут использовать для интеграции общеязыковой среды выполнения (CLR) в свои приложения. Сведения относятся к .NET Framework версии 2.0 и более поздних версий. Эти интерфейсы позволяют узлу управлять многих других аспектов среды выполнения, чем это было возможно в версиях 1.0 и 1.1 и обеспечивают более тесную интеграцию среды CLR и модели выполнения основного приложения.  
@@ -191,4 +191,4 @@ ms.locfileid: "61789666"
  Содержит разделы, описывающие интерфейсы размещения, предоставляемые в .NET Framework версий 1.0 и 1.1.  
   
  [Интерфейсы размещения CLR, добавленные в версиях .NET Framework 4 и 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- Содержит разделы, описывающие интерфейсы размещения, предоставляемые в [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].
+ Содержит разделы, описывающие интерфейсы размещения, предоставляемые в .NET Framework 4.

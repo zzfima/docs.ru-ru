@@ -9,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: cc55809ecaffa4cab4fa4336f9f7f5c06debde2d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c6bf4c6b262bc9066277a683d5eda67ada6f4d08
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634201"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456214"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime > элемент
 
@@ -22,7 +22,7 @@ ms.locfileid: "65634201"
 
 [\<configuration>](../configuration-element.md)  
 &nbsp;&nbsp;[\<Startup >](../startup/startup-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime >**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<supportedRuntime >**  
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,7 +41,7 @@ ms.locfileid: "65634201"
 
 Если  **\<supportedRuntime >** элемент отсутствует в файле конфигурации приложения, используется версия среды выполнения, используемый для построения приложения.
 
- **\<SupportedRuntime >** элемент должен использоваться всеми приложениями, собранными с применением версии 1.1 или более поздней версии среды выполнения. Приложения, созданные для поддержки только версии 1.0 среды выполнения, должны использовать [ \<requiredRuntime >](../startup/requiredruntime-element.md) элемент.
+**\<SupportedRuntime>** элемент должен использоваться всеми приложениями, собранными с применением версии 1.1 или более поздней версии среды выполнения. Приложения, созданные для поддержки только версии 1.0 среды выполнения, должны использовать [ \<requiredRuntime >](../startup/requiredruntime-element.md) элемент.
 
 > [!NOTE]
 > Если вы используете [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) функции для указания файла конфигурации, необходимо использовать `<requiredRuntime>` элемент для всех версий среды выполнения. `<supportedRuntime>` Элемент учитывается при использовании [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "65634201"
 Если  **\<supportedRuntime >** элемент с `sku` атрибут присутствует в файле конфигурации и установленной версии .NET Framework является нижнем, а затем указанного поддерживаемой версии приложения не удается выполнить, а вместо них отображается сообщение с предложением установить поддерживаемую версию. В противном случае приложение пытается запустить на все установленные версии, но оно может вести себя неожиданно Если это не полностью совместимы с этой версии. (Для совместимости различия между версиями .NET Framework, см. в разделе [совместимость приложений в .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/application-compatibility).) Поэтому рекомендуется включить этот элемент в файле конфигурации приложения для упрощения диагностики ошибок. (Файл конфигурации, автоматически создается средой Visual Studio при создании нового проекта уже содержит его.)
   
 > [!NOTE]
-> Если приложение использует устаревшие активации пути, такие как [функция CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), и нужно, чтобы эти пути для активации версии 4 среды CLR вместо более ранней версии, или если приложение создано с помощью [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], но имеет зависимость от сборки смешанного режима, созданных с помощью более ранней версии платформы .NET Framework, недостаточно для указания [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] в список поддерживаемых сред выполнения. Кроме того, в [ \<startup > элемент](../startup/startup-element.md) в файле конфигурации необходимо задать `useLegacyV2RuntimeActivationPolicy` атрибут `true`. Однако при установке для этого атрибута значения `true` все компоненты, собранные с более ранними версиями .NET Framework, будут работать с использованием [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], а не сред выполнения, с которыми они были собраны.
+> Если приложение использует устаревшие активации пути, такие как [функция CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), и нужно, чтобы эти пути для активации версии 4 среды CLR вместо более ранней версии, или если приложение создано с помощью .NET Framework 4, но имеет зависимость от сборки смешанного режима, созданных с помощью более ранней версии платформы .NET Framework, недостаточно для указания в списке поддерживаемых сред выполнения .NET Framework 4. Кроме того, в [ \<startup > элемент](../startup/startup-element.md) в файле конфигурации необходимо задать `useLegacyV2RuntimeActivationPolicy` атрибут `true`. Тем не менее, установка для данного атрибута `true` означает, что все компоненты, созданные в более ранних версиях платформы .NET Framework выполняются с помощью .NET Framework 4 вместо сред выполнения, они были построены.
 
 Приложения рекомендуется тестировать со всеми версиями .NET Framework, в которых они могут работать.
 

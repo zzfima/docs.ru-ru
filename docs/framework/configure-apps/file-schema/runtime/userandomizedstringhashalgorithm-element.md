@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a51b9fb485da605effbad0e81b8baf5e05e382a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91983a0910b272e621783f0fdb68242ddbd20f03
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675095"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456182"
 ---
 # <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm > элемент
 Определяет, вычисляет ли среда CLR хэш-коды для строк на основе доменов приложения.  
@@ -58,7 +58,7 @@ ms.locfileid: "61675095"
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
   
 ## <a name="remarks"></a>Примечания  
- По умолчанию <xref:System.StringComparer> класс и <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> метод использования один алгоритм хэширования, который создает последовательный хэш-код между доменами приложений. Это эквивалентно параметр `enabled` атрибут `<UseRandomizedStringHashAlgorithm>` элемент `0`. Это алгоритм хэширования, используемый в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
+ По умолчанию <xref:System.StringComparer> класс и <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> метод использования один алгоритм хэширования, который создает последовательный хэш-код между доменами приложений. Это эквивалентно параметр `enabled` атрибут `<UseRandomizedStringHashAlgorithm>` элемент `0`. Это алгоритм хэширования, используемый в .NET Framework 4.  
   
  <xref:System.StringComparer> Класс и <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> метод можно также использовать другой алгоритм хэширования, который вычисляет хэш-коды для каждого домена приложения. В результате хэш-коды для эквивалентных строк будут отличаться в разных доменах приложений. Это функция в; Чтобы воспользоваться его преимуществами, необходимо задать `enabled` атрибут `<UseRandomizedStringHashAlgorithm>` элемент `1`.  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c8508b4ba7d6ac6e25fdcc70fb8162b8908e8fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa256fe95013494488ff52258186763fab7a85c9
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592863"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456656"
 ---
 # <a name="code-access-security"></a>Управление доступом для кода
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -67,7 +67,7 @@ ms.locfileid: "64592863"
 |Заголовок|Описание|  
 |-----------|-----------------|  
 |[Основы управления доступом для кода](../../../docs/framework/misc/code-access-security-basics.md)|Описывается управление доступом для кода и распространенные способы его использования.|  
-|[Прозрачный с точки зрения безопасности код, уровень 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|Описывается модель прозрачности с точки зрения безопасности в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].|  
+|[Прозрачный с точки зрения безопасности код, уровень 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|Описание модели прозрачности безопасности в .NET Framework 4.|  
 |[Использование библиотек из частично доверенного кода](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|Описывается, как предоставить доступ к библиотекам и использовать их из неуправляемого код.|  
 |[Основные понятия безопасности](../../../docs/standard/security/key-security-concepts.md)|Обзор многих ключевых терминов и принципов, используемых в системе безопасности .NET Framework.|  
 |[Безопасность на основе ролей](../../../docs/standard/security/role-based-security.md)|Описывается использование безопасности на основе ролей.|  

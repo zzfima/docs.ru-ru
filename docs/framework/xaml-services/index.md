@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: 9c75f6add000b2055bcbf13a7fcdf635bd707947
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c99e44c7d373d050113687753d4f18eca27e0de5
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663240"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457395"
 ---
 # <a name="xaml-services"></a>Службы XAML
-В этом разделе описываются возможности набора технологий, известный как .NET Framework XAML служб. Большинство служб и интерфейсов API, описанных находятся в сборке System.Xaml, который является сборкой, обусловленные появлением [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] набор сборок .NET core. Службы включают в себя средства чтения и записи, классы схемы и поддержка схемы, фабрики, классов, встроенную поддержку для языка XAML и другие возможности языка XAML с атрибутами.  
+В этом разделе описываются возможности набора технологий, известный как .NET Framework XAML служб. Большинство служб и интерфейсов API, описанных находятся в сборке System.Xaml, которая впервые появилась с набором основных сборок .NET, .NET Framework 4. Службы включают в себя средства чтения и записи, классы схемы и поддержка схемы, фабрики, классов, встроенную поддержку для языка XAML и другие возможности языка XAML с атрибутами.  
   
 ## <a name="about-this-documentation"></a>О данном документе  
  Основная документация для служб XAML .NET Framework предполагается, что у вас есть опыт разработки в язык XAML и его применения к конкретной платформе, например [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] или Windows Workflow Foundation или средство определенной технологии область, например возможностей настройки построения в <xref:Microsoft.Build.Framework.XamlTypes>. Эта документация не пытается объяснить основы XAML как языка разметки XAML синтаксическая терминология и других вводный материал. Вместо этого эта документация посвящена специально с использованием служб XAML платформы .NET Framework, доступных в библиотеке сборки System.Xaml. Большинство этих интерфейсов API предназначены для сценариев интеграции языка XAML и расширяемости. Это может включать любое из следующих:  
