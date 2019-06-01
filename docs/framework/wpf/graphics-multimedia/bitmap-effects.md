@@ -9,28 +9,28 @@ helpviewer_keywords:
 - bitmap images [WPF]
 - images [WPF], bitmap
 ms.assetid: be180b56-ca6e-4da3-a839-f6b0bf482f7d
-ms.openlocfilehash: eb81644bc69edcd1465cf43224eb6af369b5fb3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86e42b5d2fcd5bcb23489bd03a6daf8255d0725f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010232"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457528"
 ---
-# <a name="bitmap-effects"></a><span data-ttu-id="d78fd-102">Эффекты для точечных рисунков</span><span class="sxs-lookup"><span data-stu-id="d78fd-102">Bitmap Effects</span></span>
-<span data-ttu-id="d78fd-103">В этом разделе описываются способы применения эффектов к растровым изображениям с помощью [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d78fd-103">The topics in this section describe how to apply visual effects to bitmap images using [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="bitmap-effects"></a><span data-ttu-id="4271c-102">Эффекты для точечных рисунков</span><span class="sxs-lookup"><span data-stu-id="4271c-102">Bitmap Effects</span></span>
+<span data-ttu-id="4271c-103">В этом разделе описываются способы применения эффектов к растровым изображениям с помощью [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4271c-103">The topics in this section describe how to apply visual effects to bitmap images using [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="d78fd-104">В [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] или более поздней версии, <xref:System.Windows.Media.Effects.BitmapEffect> класс является устаревшим.</span><span class="sxs-lookup"><span data-stu-id="d78fd-104">In the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] or later, the <xref:System.Windows.Media.Effects.BitmapEffect> class is obsolete.</span></span> <span data-ttu-id="d78fd-105">Если вы попытаетесь использовать <xref:System.Windows.Media.Effects.BitmapEffect> класса, будет вызвано исключение устаревшего.</span><span class="sxs-lookup"><span data-stu-id="d78fd-105">If you try to use the <xref:System.Windows.Media.Effects.BitmapEffect> class, you will get an obsolete exception.</span></span> <span data-ttu-id="d78fd-106">Неустаревшая альтернатива для <xref:System.Windows.Media.Effects.BitmapEffect> класс является <xref:System.Windows.Media.Effects.Effect> класса.</span><span class="sxs-lookup"><span data-stu-id="d78fd-106">The non-obsolete alternative to the <xref:System.Windows.Media.Effects.BitmapEffect> class is the <xref:System.Windows.Media.Effects.Effect> class.</span></span> <span data-ttu-id="d78fd-107">В большинстве случаев <xref:System.Windows.Media.Effects.Effect> класс значительно быстрее.</span><span class="sxs-lookup"><span data-stu-id="d78fd-107">In most situations, the <xref:System.Windows.Media.Effects.Effect> class is significantly faster.</span></span>  
+>  <span data-ttu-id="4271c-104">В .NET Framework 4 или более поздней версии <xref:System.Windows.Media.Effects.BitmapEffect> класс является устаревшим.</span><span class="sxs-lookup"><span data-stu-id="4271c-104">In the .NET Framework 4 or later, the <xref:System.Windows.Media.Effects.BitmapEffect> class is obsolete.</span></span> <span data-ttu-id="4271c-105">Если вы попытаетесь использовать класс <xref:System.Windows.Media.Effects.BitmapEffect>, будет выдано соответствующее исключение.</span><span class="sxs-lookup"><span data-stu-id="4271c-105">If you try to use the <xref:System.Windows.Media.Effects.BitmapEffect> class, you will get an obsolete exception.</span></span> <span data-ttu-id="4271c-106">Современной альтернативой для класса <xref:System.Windows.Media.Effects.BitmapEffect> является класс <xref:System.Windows.Media.Effects.Effect>.</span><span class="sxs-lookup"><span data-stu-id="4271c-106">The non-obsolete alternative to the <xref:System.Windows.Media.Effects.BitmapEffect> class is the <xref:System.Windows.Media.Effects.Effect> class.</span></span> <span data-ttu-id="4271c-107">В большинстве случаев класс <xref:System.Windows.Media.Effects.Effect> работает значительно быстрее.</span><span class="sxs-lookup"><span data-stu-id="4271c-107">In most situations, the <xref:System.Windows.Media.Effects.Effect> class is significantly faster.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d78fd-108">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="d78fd-108">In This Section</span></span>  
- [<span data-ttu-id="d78fd-109">Общие сведения об эффектах для точечных рисунков</span><span class="sxs-lookup"><span data-stu-id="d78fd-109">Bitmap Effects Overview</span></span>](bitmap-effects-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4271c-108">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="4271c-108">In This Section</span></span>  
+ [<span data-ttu-id="4271c-109">Общие сведения об эффектах для точечных рисунков</span><span class="sxs-lookup"><span data-stu-id="4271c-109">Bitmap Effects Overview</span></span>](bitmap-effects-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="d78fd-110">Ссылка</span><span class="sxs-lookup"><span data-stu-id="d78fd-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4271c-110">Ссылка</span><span class="sxs-lookup"><span data-stu-id="4271c-110">Reference</span></span>  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
   
  <xref:System.Windows.Media.Effects>  
   
-## <a name="related-sections"></a><span data-ttu-id="d78fd-111">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="d78fd-111">Related Sections</span></span>  
- [<span data-ttu-id="d78fd-112">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="d78fd-112">Graphics and Multimedia</span></span>](index.md)  
+## <a name="related-sections"></a><span data-ttu-id="4271c-111">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="4271c-111">Related Sections</span></span>  
+ [<span data-ttu-id="4271c-112">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="4271c-112">Graphics and Multimedia</span></span>](index.md)  
   
- [<span data-ttu-id="d78fd-113">Общие сведения об обработке изображений</span><span class="sxs-lookup"><span data-stu-id="d78fd-113">Imaging Overview</span></span>](imaging-overview.md)
+ [<span data-ttu-id="4271c-113">Общие сведения об обработке изображений</span><span class="sxs-lookup"><span data-stu-id="4271c-113">Imaging Overview</span></span>](imaging-overview.md)
