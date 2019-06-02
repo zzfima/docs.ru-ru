@@ -1,15 +1,15 @@
 ---
 title: Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac
 description: Этот раздел описывает, как сборку решения .NET Core, включающего многоразовую библиотеку и модульное тестирование.
-author: guardrex
+author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: be0aebb1ac700de07a52c4c50383f45d1191b7f6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 44ade71a257f5c4fdcb8da9b572adf7133448fb8
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327754"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300147"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac
 
@@ -25,7 +25,7 @@ Visual Studio для Mac предоставляет полнофункциона
 ## <a name="prerequisites"></a>Предварительные требования
 
 - OpenSSL (если запущено .NET Core 1.1). См. раздел с перечислением [необходимых компонентов для .NET Core в Mac](../macos-prerequisites.md).
-- [Пакет SDK для .NET Core 1.1 или более поздней версии](https://www.microsoft.com/net/core#macos)
+- [Пакет SDK для .NET Core 1.1.или более поздней версии](https://www.microsoft.com/net/core#macos).
 - [Visual Studio 2017 для Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
 Дополнительные сведения о необходимых компонентах см. в разделе [Необходимые компоненты для .NET Core на Mac](../../core/macos-prerequisites.md). Полный список требований к Visual Studio 2017 для Mac см. в статье [Требования к системе Visual Studio 2017 для Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
@@ -164,7 +164,7 @@ Visual Studio для Mac предоставляет полнофункциона
 
    [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp/Program.cs)]
 
-1. Чтобы запустить приложение в окне консоли вместо интегрированной среды разработки, щелкните правой кнопкой мыши проект `WordCounterApp`, выберите пункт **Параметры** и откройте узел **По умолчанию** в области **Конфигурации**. Установите флажок **Выполнить во внешней консоли**. Оставьте флажок **Приостановить вывод на консоль** установленным. Этот параметр приводит к отображению приложения в окне консоли, чтобы вы могли ввести входные данные для операторов `Console.ReadLine`. Если оставить приложение выполняться в интегрированной среде разработки, то отображаются только выходные данные операторов `Console.WriteLine`. `Console.ReadLine` — операторы не работают на панели **Выходные данные приложения** интегрированной среды разработки.
+1. Чтобы запустить приложение в окне консоли вместо интегрированной среды разработки, щелкните правой кнопкой мыши проект `WordCounterApp`, выберите пункт **Параметры** и откройте узел **По умолчанию** в области **Конфигурации**. Установите флажок **Выполнить во внешней консоли**. Оставьте флажок **Приостановить вывод на консоль** установленным. Этот параметр приводит к отображению приложения в окне консоли, чтобы вы могли ввести входные данные для операторов `Console.ReadLine`. Если оставить приложение выполняться в интегрированной среде разработки, то отображаются только выходные данные операторов `Console.WriteLine`. Операторы `Console.ReadLine` не работают на панели **Вывод приложения** интегрированной среды разработки.
 
    ![Окно параметров проекта в Visual Studio для Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-project-options.png)
 

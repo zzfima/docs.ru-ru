@@ -1,14 +1,14 @@
 ---
 title: Пользовательские шаблоны для команды dotnet new
 description: Сведения о пользовательских шаблонах для проектов или файлов .NET любых типов.
-author: guardrex
+author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: e37fb692640c25d7a91904b0802f97ebfab75851
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 6ce53cab308ed404974e4d736e735bc82ac04fe6
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679064"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66299919"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Пользовательские шаблоны для команды dotnet new
 
@@ -85,7 +85,7 @@ dotnet new -l
 | **\<authors>**     | string | Разделенный запятыми список авторов пакетов, совпадающих с именами профилей на сайте nuget.org. Авторы отображаются в коллекции NuGet на сайте nuget.org и используются для перекрестных ссылок на пакеты тех же авторов. |
 | **\<description>** | string | Подробное описание пакета для отображения пользовательского интерфейса. |
 | **\<id>**          | string | Идентификатор пакета без учета регистра, который должен быть уникальным в пределах сайта nuget.org или иной коллекции, в которой будет находиться пакет. Идентификаторы не должны содержать пробелов или символов, которые недопустимы в URL-адресах, и в них должны соблюдаться общие правила касательно пространств имен .NET. Инструкции см. в разделе [Выбор уникального идентификатора пакета и задание номера версии](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number). |
-| **\<packageType>** | string | Поместите этот элемент внутри элемента **\<packageTypes>** среди элементов **\<metadata>**. Присвойте атрибуту `name` элемента **\<packageType>** значение `Template`. |
+| **\<packageType>** | string | Поместите этот элемент внутри элемента **\<packageTypes>** среди элементов **\<metadata>** . Присвойте атрибуту `name` элемента **\<packageType>** значение `Template`. |
 | **\<version>**     | string | Версия пакета, указываемая согласно шаблону основной_номер.дополнительный_номер.исправление. Номер версии может включать в себя суффикс предварительной версии, как описано в разделе, посвященном [предварительным версиям](/nuget/create-packages/prerelease-packages#semantic-versioning). |
 
 Полную схему файла *NUSPEC* см. в [справочнике по NUSPEC](/nuget/schema/nuspec). Пример файла *NUSPEC* для шаблона приведен в учебнике по [созданию пользовательского шаблона для команды dotnet new](~/docs/core/tutorials/create-custom-template.md).
