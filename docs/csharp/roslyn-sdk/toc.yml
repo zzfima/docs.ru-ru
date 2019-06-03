@@ -1,6 +1,8 @@
 - name: Пакет SDK для платформы компилятора .NET (API-интерфейсы Roslyn)
   href: index.md
   items:
+    - name: Обзор
+      href: index.md
     - name: Сведения о модели SDK для .NET Compiler Platform
       href: compiler-api-model.md
     - name: Работа с синтаксисом

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 1ff8db25fd76be6eb77355322d497d61096400aa
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 25f6fb5e8780611a6ca7396873d0a33684b65a48
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219338"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301374"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Практическое руководство. Преобразование строки в число (руководство по программированию на C#)
 
@@ -21,7 +21,7 @@ ms.locfileid: "56219338"
   
  Если имеется строка, то немного эффективнее и проще вызвать метод `TryParse` (например, [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) или метод `Parse` (например, [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)).  Использование метода <xref:System.Convert> более удобно для общих объектов, реализующих <xref:System.IConvertible>.  
   
- Вы можете использовать методы `Parse` или `TryParse` в числовом типе, который предположительно содержит строка, таком как тип <xref:System.Int32?displayProperty=nameWithType>.  Метод <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> использует <xref:System.Int32.Parse%2A> внутри себя.  Метод `Parse` возвращает преобразованное число; метод `TryParse` возвращает значение <xref:System.Boolean>, которое указывает, успешно ли выполнено преобразование, и возвращает преобразованное число в [параметр`out`](../../../csharp/language-reference/keywords/out.md). Если строка имеет недопустимый формат, `Parse` создает исключение, а `TryParse` возвращает значение [false](../../../csharp/language-reference/keywords/false.md). В случае сбоя операции синтаксического анализа при вызове метода `Parse` вы всегда должны использовать обработку исключений, чтобы перехватить <xref:System.FormatException>.  
+ Вы можете использовать методы `Parse` или `TryParse` в числовом типе, который предположительно содержит строка, таком как тип <xref:System.Int32?displayProperty=nameWithType>.  Метод <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> использует <xref:System.Int32.Parse%2A> внутри себя.  Метод `Parse` возвращает преобразованное число; метод `TryParse` возвращает значение <xref:System.Boolean>, которое указывает, успешно ли выполнено преобразование, и возвращает преобразованное число в [параметр`out`](../../../csharp/language-reference/keywords/out.md). Если строка имеет недопустимый формат, `Parse` создает исключение, а `TryParse` возвращает значение [false](../../../csharp/language-reference/keywords/false-literal.md). В случае сбоя операции синтаксического анализа при вызове метода `Parse` вы всегда должны использовать обработку исключений, чтобы перехватить <xref:System.FormatException>.  
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>Вызов методов Parse и TryParse
 

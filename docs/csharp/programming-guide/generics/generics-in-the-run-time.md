@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: d45d64d608c117ef5f1477ac55a39c192374d7ed
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c739ae9b9804ffcb27d6bdc969bf7b5c0fe90512
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981482"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423336"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Универсальные типы во время выполнения (Руководство по программированию в C#)
 Универсальный тип или метод, компилируемый на языке MSIL, будет содержать метаданные, определяющие наличие в нем параметров типа. Способ использования MSIL для универсального типа зависит от того, является ли предоставленный параметр типа ссылочным типом или типом значения.  
@@ -51,5 +51,5 @@ ms.locfileid: "56981482"
 
 - <xref:System.Collections.Generic>
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/index.md)
 - [Универсальные шаблоны](~/docs/standard/generics/index.md)

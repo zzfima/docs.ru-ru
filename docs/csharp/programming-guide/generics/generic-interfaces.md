@@ -6,17 +6,17 @@ helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-ms.openlocfilehash: 09b8200d19b6f94cab423dbe4001fbeda83aa06f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7fc79874c8e1ff24c38d288d3f6708e2851419e3
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974241"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423476"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>Универсальные интерфейсы. (Руководство по программированию на C#)
 Часто требуется определить интерфейсы для универсальных классов коллекций или для универсальных классов, представляющих элементы коллекции. Для универсальных классов предпочтительнее использовать универсальные интерфейсы, такие как <xref:System.IComparable%601>, вместо <xref:System.IComparable>, поскольку это позволяет избежать выполнения операция упаковки-преобразования и распаковки-преобразования для типов значений. В библиотеке классов .NET Framework в пространстве имен <xref:System.Collections.Generic> определяется несколько универсальных интерфейсов для работы с классами коллекций.  
   
- Если интерфейс задан в качестве ограничения для параметра типа, можно использовать только типы, реализующие такой интерфейс. В следующем примере кода демонстрируется класс `SortedList<T>`, который является производным от класса `GenericList<T>`. Дополнительные сведения см. в разделе [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md). `SortedList<T>` добавляет ограничение `where T : IComparable<T>`. Это позволяет методу `BubbleSort` в `SortedList<T>` использовать универсальный метод <xref:System.IComparable%601.CompareTo%2A> в отношении элементов списка. В этом примере элементы списка относятся к простому классу `Person`, который реализует `IComparable<Person>`.  
+ Если интерфейс задан в качестве ограничения для параметра типа, можно использовать только типы, реализующие такой интерфейс. В следующем примере кода демонстрируется класс `SortedList<T>`, который является производным от класса `GenericList<T>`. Дополнительные сведения см. в разделе [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/index.md). `SortedList<T>` добавляет ограничение `where T : IComparable<T>`. Это позволяет методу `BubbleSort` в `SortedList<T>` использовать универсальный метод <xref:System.IComparable%601.CompareTo%2A> в отношении элементов списка. В этом примере элементы списка относятся к простому классу `Person`, который реализует `IComparable<Person>`.  
   
  [!code-csharp[csProgGuideGenerics#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics2.cs#29)]  
   
@@ -47,6 +47,6 @@ ms.locfileid: "56974241"
 ## <a name="see-also"></a>См. также
 
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/index.md)
 - [interface](../../../csharp/language-reference/keywords/interface.md)
 - [Универсальные шаблоны](~/docs/standard/generics/index.md)

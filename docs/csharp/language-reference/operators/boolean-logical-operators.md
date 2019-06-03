@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: b666c915506872930b16c1c5890de24e9cbe4f7a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3ac3479de0bd3c95256741a8b3075f2e5786b65c
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880570"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300102"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Справочник по C#. Логические операторы
 
@@ -178,7 +178,7 @@ x = x op y
 
 Определяемый пользователем тип может [перегружать](../keywords/operator.md) операторы `!`, `&`, `|` и `^`. При перегрузке бинарного оператора соответствующий оператор составного присваивания также неявно перегружается. Определяемый пользователем тип не может перегружать оператор составного присваивания явным образом.
 
-Определяемый пользователем тип не может перегружать условные логические операторы `&&` и `||`. При этом, если определяемый пользователем тип каким-либо образом перегружает операторы [true и false](../keywords/true-false-operators.md) и операторы `&` и `|`, операция `&&` или `||` может быть применена для операндов этого типа. Дополнительные сведения см. в разделе [Пользовательские условные логические операторы](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) в [Спецификации языка C#](~/_csharplang/spec/introduction.md).
+Определяемый пользователем тип не может перегружать условные логические операторы `&&` и `||`. При этом, если определяемый пользователем тип каким-либо образом перегружает операторы [true и false](true-false-operators.md) и операторы `&` и `|`, операция `&&` или `||` может быть применена для операндов этого типа. Дополнительные сведения см. в разделе [Пользовательские условные логические операторы](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) в [Спецификации языка C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 

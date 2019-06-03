@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: f938e49267faad8aebbf4c22fc921f305d160123
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: df921ecc670bf12411dc8b0d828d6c19bb0a1aec
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633441"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422744"
 ---
 # <a name="namespace-c-reference"></a>namespace (Справочник по C#)
 
@@ -71,6 +71,5 @@ ms.locfileid: "65633441"
 - [Справочник по C#](../../language-reference/index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Ключевые слова в C#](index.md)
-- [Ключевые слова, используемые для пространств имен](namespace-keywords.md)
 - [using](using-directive.md)
 - [using static](using-static.md)

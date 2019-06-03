@@ -2,11 +2,11 @@
   href: index.md
   items:
     - name: Типы
-      href: types.md
       items:
         - name: Типы значений
-          href: value-types.md
           items:
+            - name: Характеристики типов значений
+              href: value-types.md
             - name: bool
               href: bool.md
             - name: byte
@@ -17,7 +17,7 @@
               href: decimal.md
             - name: double
               href: double.md
-            - name: перечисление
+            - name: enum
               href: enum.md
             - name: float
               href: float.md
@@ -29,7 +29,7 @@
               href: sbyte.md
             - name: short
               href: short.md
-            - name: структура
+            - name: struct
               href: struct.md
             - name: uint
               href: uint.md
@@ -38,8 +38,9 @@
             - name: ushort
               href: ushort.md
         - name: Ссылочные типы
-          href: reference-types.md
           items:
+            - name: Характеристики ссылочных типов
+              href: reference-types.md
             - name: класс
               href: class.md
             - name: делегат
@@ -57,7 +58,6 @@
         - name: var
           href: var.md
         - name: Справочные таблицы по типам
-          href: reference-tables-for-types.md
           items:
             - name: Таблица встроенных типов
               href: built-in-types-table.md
@@ -76,11 +76,11 @@
             - name: Таблица форматирования числовых результатов
               href: formatting-numeric-results-table.md
     - name: Модификаторы
-      href: modifiers.md
       items:
         - name: Модификаторы доступа
-          href: access-modifiers.md
           items:
+            - name: Краткий справочник
+              href: access-modifiers.md
             - name: Уровни доступности
               href: accessibility-levels.md
             - name: Домен доступности
@@ -128,17 +128,16 @@
         - name: volatile
           href: volatile.md
     - name: Ключевые слова операторов
-      href: statement-keywords.md
       items:
+        - name: Категории операторов
+          href: statement-keywords.md
         - name: Операторы выбора
-          href: selection-statements.md
           items:
             - name: if-else
               href: if-else.md
             - name: switch
               href: switch.md
         - name: Операторы итерации
-          href: iteration-statements.md
           items:
             - name: do
               href: do.md
@@ -149,7 +148,6 @@
             - name: while
               href: while.md
         - name: Операторы перехода
-          href: jump-statements.md
           items:
             - name: break
               href: break.md
@@ -160,7 +158,6 @@
             - name: return
               href: return.md
         - name: Операторы обработки исключений
-          href: exception-handling-statements.md
           items:
             - name: throw
               href: throw.md
@@ -171,8 +168,9 @@
             - name: try-catch-finally
               href: try-catch-finally.md
         - name: Операторы checked и unchecked
-          href: checked-and-unchecked.md
           items:
+            - name: Обзор
+              href: checked-and-unchecked.md
             - name: checked
               href: checked.md
             - name: unchecked
@@ -182,8 +180,9 @@
         - name: Оператор lock
           href: lock-statement.md
     - name: Параметры методов
-      href: method-parameters.md
       items:
+        - name: Передача параметров
+          href: method-parameters.md
         - name: params
           href: params.md
         - name: in (модификатор параметров)
@@ -193,13 +192,13 @@
         - name: out (модификатор параметров)
           href: out-parameter-modifier.md
     - name: 'Ключевые слова, используемые для пространств имен'
-      href: namespace-keywords.md
       items:
         - name: namespace
           href: namespace.md
         - name: using
-          href: using.md
           items:
+            - name: Контексты для using
+              href: using.md
             - name: Директива using
               href: using-directive.md
             - name: Директива using static
@@ -209,7 +208,6 @@
         - name: Псевдоним extern
           href: extern-alias.md
     - name: Ключевые слова операторов
-      href: operator-keywords.md
       items:
         - name: as
           href: as.md
@@ -218,8 +216,9 @@
         - name: является
           href: is.md
         - name: new
-          href: new.md
           items:
+            - name: 'Оператор, модификатор и ограничение new'
+              href: new.md
             - name: Оператор new
               href: new-operator.md
             - name: Модификатор new
@@ -235,7 +234,6 @@
         - name: nameof
           href: nameof.md
     - name: Ключевые слова преобразований
-      href: conversion-keywords.md
       items:
         - name: explicit
           href: explicit.md
@@ -244,14 +242,12 @@
         - name: оператор
           href: operator.md
     - name: Ключевые слова доступа
-      href: access-keywords.md
       items:
         - name: базовые
           href: base.md
         - name: this
           href: this.md
     - name: Ключевые слова литералов
-      href: literal-keywords.md
       items:
         - name: 'null'
           href: null.md
@@ -262,8 +258,9 @@
         - name: default
           href: default.md
     - name: Контекстные ключевые слова
-      href: contextual-keywords.md
       items:
+        - name: Краткий справочник
+          href: contextual-keywords.md
         - name: add
           href: add.md
         - name: get
@@ -287,8 +284,9 @@
         - name: yield
           href: yield.md
     - name: Ключевые слова запроса
-      href: query-keywords.md
       items:
+        - name: Краткий справочник
+          href: query-keywords.md
         - name: Предложение from
           href: from-clause.md
         - name: Предложение where

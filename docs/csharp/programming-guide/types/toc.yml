@@ -1,6 +1,7 @@
 - name: Типы
-  href: index.md
   items:
+    - name: Использование и определение типов
+      href: index.md
     - name: Приведение и преобразование типов
       href: casting-and-type-conversions.md
     - name: Упаковка–преобразование и распаковка–преобразование

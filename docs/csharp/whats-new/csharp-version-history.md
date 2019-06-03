@@ -3,12 +3,12 @@ title: История языка C# (руководство по C#)
 description: На что был похож этот язык в ранних версиях и во что он превратился сейчас?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 351e4de01a7c3c50cb815a99f0bde546848a9e51
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303366"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423239"
 ---
 # <a name="the-history-of-c"></a>История языка C\#
 
@@ -45,7 +45,6 @@ ms.locfileid: "59303366"
 - [Выражения](../programming-guide/statements-expressions-operators/expressions.md)
 - [Операторы](../programming-guide/statements-expressions-operators/statements.md)
 - [Атрибуты](../programming-guide/concepts/attributes/index.md)
-- [Литералы](../language-reference/keywords/literal-keywords.md)
 
 ## <a name="c-version-12"></a>Версия для C# 1.2
 
@@ -174,4 +173,4 @@ C# версии 3.0 был выпущен в конце 2007 года вмест
 
 Но при этом сфера применения C# продолжает расширяться. Теперь .NET Core подходит для любой операционной системы, а также уверенно движется в направлении облачных технологий и портативности.  Очевидно, что разработчики активно занимаются этими новыми возможностями наравне с добавлением новых функций.
 
-_Статья_ [_изначально опубликована в блоге NDepend_](https://blog.ndepend.com/c-versions-look-language-history/)_, с разрешения Эрика Дитриха (Erik Dietrich) и Патрика Смачиа (Patrick Smacchia)._
+_Статья_ [_изначально опубликована в блоге NDepend_](https://blog.ndepend.com/c-versions-look-language-history/) _, с разрешения Эрика Дитриха (Erik Dietrich) и Патрика Смачиа (Patrick Smacchia)._

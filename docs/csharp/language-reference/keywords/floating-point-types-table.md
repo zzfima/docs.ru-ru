@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ranges of floating-point types [C#]
 - types [C#], floating-point types
 ms.assetid: da886cc5-e01e-4f62-b3ec-6428c8f7a102
-ms.openlocfilehash: de14541be0e1247b99d6f000a69544b5f601ef8f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6dcab8e546ef12ebec5f8b57c66458172fc6f5d0
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753770"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422332"
 ---
 # <a name="floating-point-types-table-c-reference"></a>Таблица типов с плавающей запятой (справочник по C#)
 
@@ -30,7 +30,6 @@ ms.locfileid: "64753770"
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Ключевые слова в C#](index.md)
-- [Справочные таблицы по типам](reference-tables-for-types.md)
 - [Таблица целых типов](integral-types-table.md)
 - [Таблица значений по умолчанию](default-values-table.md)
 - [Таблица форматирования числовых результатов](formatting-numeric-results-table.md)

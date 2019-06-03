@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: fd10999066f599d819ef188e09028c64c6a5e9e6
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 60e7f7c25b525c6db856731bd16c1c0e60efe6d6
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65064045"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422925"
 ---
 # <a name="operators-c-programming-guide"></a>Операторы (Руководство по программированию на C#)
 
@@ -87,4 +87,3 @@ a = (b = c);
 - [Руководство по программированию на C#](../index.md)
 - [Инструкции, выражения и операторы](index.md)
 - [Операторы в C#](../../language-reference/operators/index.md)
-- [Ключевые слова операторов](../../language-reference/keywords/operator-keywords.md)

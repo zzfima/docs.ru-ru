@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], vs. C++ templates
 ms.assetid: 1da6beeb-d4a4-4da0-87b7-0cfbe04920b7
-ms.openlocfilehash: 13ecd6c0d613199210610c1c094ae1bdabaa71a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8151d426d1f0d3da5a5ce5fe795635348efd9696
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608466"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423523"
 ---
 # <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>Различия между шаблонами языка C++ и универсальными шаблонами языка C# (Руководство по программированию в C#)
 Универсальные шаблоны C# и шаблоны C++ — это возможности языков программирования, обеспечивающие поддержку параметризированных типов. Однако между ними существует немало различий. На уровне синтаксиса универсальные шаблоны C# представляют собой более простой способ работы с параметризованными типами без сложностей, связанных с шаблонами C++. Кроме того, C# не пытается предоставить все функции, предоставляемые шаблонами C++. На уровне реализации основное различие заключается в том, что замена универсальных типов C# осуществляется во время выполнения, а значит для объектов, экземпляры которых при этом создаются, сохраняются данные об универсальных типах. Дополнительные сведения см. в разделе [Универсальные типы во время выполнения](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
@@ -36,5 +36,5 @@ ms.locfileid: "64608466"
 ## <a name="see-also"></a>См. также
 
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/index.md)
 - [Шаблоны](/cpp/cpp/templates-cpp)

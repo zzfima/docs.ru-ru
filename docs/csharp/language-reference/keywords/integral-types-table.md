@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: 7f8e4a9dabb3e24293ae7fcc724e8787dd6d4cf5
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: b4a3a46ba98c0c621b747284ce39e03d68a5b62d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396790"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421732"
 ---
 # <a name="integral-types-table-c-reference"></a>Таблица целочисленных типов (справочник по C#)
 
@@ -43,7 +43,6 @@ ms.locfileid: "53396790"
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Ключевые слова в C#](index.md)
-- [Справочные таблицы по типам](reference-tables-for-types.md)
 - [Таблица типов с плавающей запятой](floating-point-types-table.md)
 - [Таблица значений по умолчанию](default-values-table.md)
 - [Таблица форматирования числовых результатов](formatting-numeric-results-table.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 8a33b466bbe75b84d6cd28ebd6f4fc57695aa420
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: d2ecd566731c3d2d472034ecb6412432af24c847
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452441"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422051"
 ---
 # <a name="extern-alias-c-reference"></a>Псевдоним extern (Справочник по C#)
 Иногда может потребоваться сослаться на две версии сборок, которые имеют одинаковые полные имена типов. Например, если необходимо использовать две или более версии сборки в одном приложении. Используя внешний псевдоним сборки, пространства имен для каждой сборки можно перенести внутрь пространств имен корневого уровня с именованием по псевдониму, что позволяет использовать их в одном файле.  
@@ -46,6 +46,5 @@ ms.locfileid: "65452441"
 - [Справочник по C#](../../../csharp/language-reference/index.md)
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
-- [Ключевые слова, используемые для пространств имен](../../../csharp/language-reference/keywords/namespace-keywords.md)
 - [:: Оператор](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [/reference (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)

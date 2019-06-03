@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: fae0cedfe8bf675dceb9cb9d5835d923cae8b4ab
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bd8c52cd798496a4df3086411dfe3be6241fbff5
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235635"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422342"
 ---
 # <a name="built-in-types-table-c-reference"></a>Таблица встроенных типов (Справочник по C#)
 
@@ -66,7 +66,6 @@ Console.WriteLine(doubleType.FullName);
 - [Справочник по C#](../../../csharp/language-reference/index.md)
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [Ключевые слова в C#](index.md)
-- [Справочные таблицы по типам](reference-tables-for-types.md)
 - [Типы значений](value-types.md)
 - [Ссылочные типы](reference-types.md)
 - [Таблица значений по умолчанию](default-values-table.md)

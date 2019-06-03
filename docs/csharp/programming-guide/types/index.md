@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 23aae1a41a19689bd5ad4e29f19c8cff704e742c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c971a2d5d7caeb030cf504c44be8c8123decc3fc
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61709697"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423408"
 ---
 # <a name="types-c-programming-guide"></a>Типы (Руководство по программированию на C#)
 
@@ -64,7 +64,7 @@ C# является строго типизированным языком. Ка
 
 ## <a name="built-in-types"></a>Встроенные типы
 
-C# предоставляет стандартный набор встроенных числовых типов для представления целых чисел, значений с плавающей запятой, логических выражений, текстовых символов, десятичных значений и других типов данных. Также существуют встроенные типы `string` и `object`. Они доступны для использования в любой программе C#. Дополнительные сведения о встроенных типах см. в [Справочных таблицах по типам](../../../csharp/language-reference/keywords/reference-tables-for-types.md).
+C# предоставляет стандартный набор встроенных числовых типов для представления целых чисел, значений с плавающей запятой, логических выражений, текстовых символов, десятичных значений и других типов данных. Также существуют встроенные типы `string` и `object`. Они доступны для использования в любой программе C#. Дополнительные сведения о встроенных типах см. в [Справочных таблицах по встроенным типам](../../../csharp/language-reference/keywords/built-in-types-table.md).
 
 ## <a name="custom-types"></a>Пользовательские типы
 

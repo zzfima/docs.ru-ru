@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
-ms.openlocfilehash: efde313c0a1dabee45de4fd7d580a3aff5139928
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 02dac1bfe3420abd474867dcc18f70aadc7aeff4
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633821"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422133"
 ---
 # <a name="using-c-reference"></a>using (справочник по C#)
 
@@ -28,6 +28,5 @@ ms.locfileid: "65633821"
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Ключевые слова в C#](index.md)
-- [Ключевые слова, используемые для пространств имен](namespace-keywords.md)
 - [Пространства имен](../../programming-guide/namespaces/index.md)
 - [extern](extern.md)
