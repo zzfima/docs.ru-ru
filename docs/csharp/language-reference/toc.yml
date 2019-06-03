@@ -1,6 +1,7 @@
 - name: Справочник по языку
-  href: index.md
   items:
+    - name: "Справочник по языку\_C#"
+      href: index.md
     - name: Настройка версии языка
       href: configure-language-version.md
     - name: 'Ключевые слова в C#'

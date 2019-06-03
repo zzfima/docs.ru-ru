@@ -5,38 +5,39 @@
       href: statements.md
     - name: Выражения
       href: expressions.md
-      items:
-        - name: 'Элементы, воплощающие выражение'
-          href: expression-bodied-members.md
+    - name: 'Элементы, воплощающие выражение'
+      href: expression-bodied-members.md
     - name: Операторы
       href: operators.md
     - name: Анонимные функции
-      href: anonymous-functions.md
       items:
+        - name: Обзор
+          href: anonymous-functions.md
         - name: Лямбда-выражения
           href: lambda-expressions.md
-          items:
-            - name: Как выполнить Использование лямбда-выражений в запросах
-              href: how-to-use-lambda-expressions-in-a-query.md
-            - name: Как выполнить Использование лямбда-выражений вне LINQ
-              href: how-to-use-lambda-expressions-outside-linq.md
+        - name: Практическое руководство. Использование лямбда-выражений в запросах
+          href: how-to-use-lambda-expressions-in-a-query.md
+        - name: Практическое руководство. Использование лямбда-выражений вне LINQ
+          href: how-to-use-lambda-expressions-outside-linq.md
         - name: Анонимные методы
           href: anonymous-methods.md
     - name: Перегружаемые операторы
       href: overloadable-operators.md
     - name: Операторы преобразования
-      href: conversion-operators.md
       items:
+        - name: Общие сведения о преобразованиях
+          href: conversion-operators.md
         - name: Использование операторов преобразования
           href: using-conversion-operators.md
-        - name: Как выполнить Реализация определяемых пользователем преобразований между структурами
+        - name: Практическое руководство. Реализация определяемых пользователем преобразований между структурами
           href: how-to-implement-user-defined-conversions-between-structs.md
     - name: Выражения значения по умолчанию
       href: default-value-expressions.md
-    - name: Сравнения на равенство
-      href: equality-comparisons.md
+    - name: Равенства и сравнения на равенство
       items:
-        - name: Как выполнить Определение равенства значений для типа
+        - name: Сравнения на равенство
+          href: equality-comparisons.md
+        - name: Практическое руководство. Определение равенства значений для типа
           href: how-to-define-value-equality-for-a-type.md
-        - name: Как выполнить Проверка на ссылочное равенство (идентичность)
+        - name: Практическое руководство. Проверка на ссылочное равенство (идентичность)
           href: how-to-test-for-reference-equality-identity.md
