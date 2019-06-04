@@ -3,13 +3,13 @@ title: Технологии .NET Framework, недоступные в .NET Core
 description: Узнайте о технологиях .NET Framework, недоступных в .NET Core
 author: cartermp
 ms.author: mairaw
-ms.date: 12/07/2018
-ms.openlocfilehash: be55cd1d1c67b0542c8474d1b2e47f6752f658a2
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.date: 04/30/2019
+ms.openlocfilehash: 9485f331856fde3b6836709e8983c2babe094c5b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185809"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456087"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Технологии .NET Framework, недоступные в .NET Core
 
@@ -42,6 +42,10 @@ ms.locfileid: "58185809"
 Аналогично CAS, прозрачность безопасности позволяет декларативно отделить изолированный код от кода, критически важного с точки зрения безопасности, но [больше не поддерживается как ограничение безопасности](~/docs/framework/misc/security-transparent-code.md). Эта функция часто используется в Silverlight. 
 
 Чтобы свести к минимуму требуемый набор прав, применяйте ограничения безопасности, предусмотренные в операционной системе, например виртуализацию, контейнеры или учетные записи пользователей.
+
+## <a name="systementerpriseservices"></a>System.EnterpriseServices
+
+Платформа .NET Core не поддерживает System.EnterpiseServices (COM+).
 
 >[!div class="step-by-step"]
 >[Вперед](third-party-deps.md)
