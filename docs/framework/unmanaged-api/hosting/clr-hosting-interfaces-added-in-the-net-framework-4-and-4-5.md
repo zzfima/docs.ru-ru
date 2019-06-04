@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aceb0179c6ee52699370480041af62262eff6bc2
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 89d71b3dfa71438b72fe622a491141364db25f52
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456930"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490654"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>Интерфейсы размещения CLR, добавленные в версиях .NET Framework 4 и 4.5
-В этом разделе описываются интерфейсы, которые неуправляемые узлы могут использовать для интеграции общеязыковой среды выполнения (CLR) в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], .NET Framework 4.5 и более поздних версий в свои приложения. Эти интерфейсы предоставляют методы для узла, для настройки и загрузки среды выполнения в процесс.  
+В этом разделе описываются интерфейсы, которые неуправляемые узлы можно использовать для интеграции общеязыковой среды выполнения (CLR) в .NET Framework 4, .NET Framework 4.5 и более поздних версий в свои приложения. Эти интерфейсы предоставляют методы для узла, для настройки и загрузки среды выполнения в процесс.  
   
  Все интерфейсы размещения, начиная с .NET Framework 4, имеют следующие характеристики:  
   

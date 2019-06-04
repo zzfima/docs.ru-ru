@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b09c509c3e0ba941a34f60ff522117ff30d83caf
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 432de909e1b8166f6d8923889382d9408fb6c62d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457391"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490261"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>Метод ICLRRuntimeInfo::IsStarted
 Указывает, был ли запущен среды выполнения (то есть ли [метод ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) был вызван и успешно).  
@@ -46,7 +46,7 @@ HRESULT IsStarted(
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_NOTIMPL|Более ранняя, чем версия среды CLR, версию среды выполнения (CLR) CLR [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].|  
+|E_NOTIMPL|В версии среды выполнения (CLR) более ранняя, чем версия среды CLR в .NET Framework 4.|  
   
 ## <a name="remarks"></a>Примечания  
  Этот метод не работает с CLR версии более ранней, чем версия среды CLR в .NET Framework 4.  

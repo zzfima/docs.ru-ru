@@ -41,16 +41,16 @@ ms.locfileid: "61705419"
 
 |     | Описание |
 | --- | ----------- |
-| [**\<assemblyBinding >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Определяет политику привязки сборок на уровне конфигурации.|
-| [**\<Startup >** параметры схемы](~/docs/framework/configure-apps/file-schema/startup/index.md) | Все элементы в схеме параметров запуска. |
-| [**\<Среда выполнения >** параметры схемы](~/docs/framework/configure-apps/file-schema/runtime/index.md) | Все элементы в схеме параметров среды выполнения. |
-| [**\<System.Runtime.Remoting >** параметры схемы](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) | Все элементы в схеме параметров удаленного взаимодействия. |
-| [**\<system.Net >** параметры схемы](~/docs/framework/configure-apps/file-schema/network/index.md) | Все элементы в схеме параметров сети. |
-| [**\<cryptographySettings >** параметры схемы](~/docs/framework/configure-apps/file-schema/cryptography/index.md) | Все элементы в схеме параметров криптографии. |
-| [**\<Конфигурация >** Схема разделов](~/docs/framework/configure-apps/file-schema/configuration-sections-schema.md) | Все элементы в схеме параметров раздела конфигурации. |
+| [ **\<assemblyBinding >** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Определяет политику привязки сборок на уровне конфигурации.|
+| [ **\<Startup >** параметры схемы](~/docs/framework/configure-apps/file-schema/startup/index.md) | Все элементы в схеме параметров запуска. |
+| [ **\<Среда выполнения >** параметры схемы](~/docs/framework/configure-apps/file-schema/runtime/index.md) | Все элементы в схеме параметров среды выполнения. |
+| [ **\<System.Runtime.Remoting >** параметры схемы](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) | Все элементы в схеме параметров удаленного взаимодействия. |
+| [ **\<system.Net >** параметры схемы](~/docs/framework/configure-apps/file-schema/network/index.md) | Все элементы в схеме параметров сети. |
+| [ **\<cryptographySettings >** параметры схемы](~/docs/framework/configure-apps/file-schema/cryptography/index.md) | Все элементы в схеме параметров криптографии. |
+| [ **\<Конфигурация >** Схема разделов](~/docs/framework/configure-apps/file-schema/configuration-sections-schema.md) | Все элементы в схеме параметров раздела конфигурации. |
 | [Схема параметров трассировки и отладки](~/docs/framework/configure-apps/file-schema/trace-debug/index.md) | Все элементы в схеме параметров трассировки и отладки. |
 | [Схема параметров конфигурации ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) | Все элементы схемы конфигурации ASP.NET, в том числе элементы настройки веб-сайтов ASP.NET и приложений. Используется в *Web.config* файлов. |
-| [**\<веб-службы >** параметры схемы](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) | Все элементы в схеме параметров веб-служб. |
+| [ **\<веб-службы >** параметры схемы](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) | Все элементы в схеме параметров веб-служб. |
 | [Схема веб-параметров](~/docs/framework/configure-apps/file-schema/web/index.md) | Все элементы схемы веб-параметров, в том числе элементы настройки способов работы ASP.NET с ведущими приложениями, такими как службы IIS. Используется в *aspnet.config* файлов. |
 
 ## <a name="remarks"></a>Примечания
