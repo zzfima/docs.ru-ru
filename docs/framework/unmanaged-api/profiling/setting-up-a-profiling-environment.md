@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dfad184e30ec94c8add265db2ef8131d0d34396f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: cc5171b135facfbbe901b38a19fef9e9d47699b5
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457226"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490714"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Установка профилирующей среды
 > [!NOTE]
->  В профилирование в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] внесены существенные изменения.  
+>  Произошли существенные изменения в профилирование в .NET Framework 4.  
   
  При запуске управляемого процесса (приложения или службы) он загружает среду CLR. При инициализации среды CLR она оценивает следующие две переменные среды, чтобы решить, следует ли подключить процесс к профилировщику.  
   

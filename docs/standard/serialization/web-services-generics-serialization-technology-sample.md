@@ -2,12 +2,12 @@
 title: Образец технологии сериализации универсальных шаблонов веб-служб
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-ms.openlocfilehash: 6549dc1c3d428a5fb74fe0212549ef3f3f6510d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4aa9c21fa2bafce16e93a5d2479b17946dba41b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018056"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490757"
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Образец технологии сериализации универсальных шаблонов веб-служб
 [Скачать образец](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -32,7 +32,7 @@ ms.locfileid: "62018056"
 > [!NOTE]
 >  Для построения образца необходимы следующие действия.  
   
-1. Откройте [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] и перейдите в подкаталог \CS.  
+1. Откройте проводник и перейдите в подкаталог \CS.  
   
 2. Щелкните правой кнопкой мыши значок подкаталога GenericsService и выберите пункт **Общий доступ и безопасность**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62018056"
   
 1. Откройте оснастку управления **Службы IIS** и разверните узел **Веб-сайты**.  
   
-2. Левой кнопкой мыши щелкните **Веб-сайт по умолчанию**, выберите **Создать**, а затем — **Виртуальный каталог?**, чтобы создать **мастер создания виртуального каталога**.  
+2. Левой кнопкой мыши щелкните **Веб-сайт по умолчанию**, выберите **Создать**, а затем — **Виртуальный каталог?** , чтобы создать **мастер создания виртуального каталога**.  
   
 3. Нажмите кнопку **Далее**, введите открытый псевдоним для виртуального каталога и нажмите кнопку **Далее**.  
   

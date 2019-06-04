@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e9073e48141bc6895d00c773c2d3d2cfeb260f6
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 26fed0a10b9a25f25a580c7ac9a468cbedeb3671
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456462"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489469"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads > элемент
 Указывает, использует ли файл PerfCounter.dll параметр реестра CategoryOptions в приложении .NET Framework версии 1.1, чтобы определить, следует ли загружать данные счетчиков производительности из общей памяти конкретной категории или глобальной памяти.  
@@ -55,7 +55,7 @@ enabled="true|false"/>
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
 ## <a name="remarks"></a>Примечания  
- В версиях .NET Framework, выпущенных до [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], предоставивших версию PerfCounter.dll, который был загружен в среду выполнения, который был загружен в процессе. Если компьютер имеет оба в .NET Framework версии 1.1 и [!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)] установки приложения .NET Framework 1.1 будет загрузки версии .NET Framework 1.1 PerfCounter.dll. Начиная с .NET Framework 4, загружается последняя установленная версия PerfCounter.dll. Это означает, что приложения .NET Framework 1.1 загрузит PerfCounter.dll версии .NET Framework 4, если .NET Framework 4 установлена на компьютере.  
+ В версиях .NET Framework до .NET Framework 4 версия PerfCounter.dll, который был загружен предоставивших в среду выполнения, который был загружен в процессе. Если компьютер имеет оба в .NET Framework версии 1.1 и [!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)] установки приложения .NET Framework 1.1 будет загрузки версии .NET Framework 1.1 PerfCounter.dll. Начиная с .NET Framework 4, загружается последняя установленная версия PerfCounter.dll. Это означает, что приложения .NET Framework 1.1 загрузит PerfCounter.dll версии .NET Framework 4, если .NET Framework 4 установлена на компьютере.  
   
  Начиная с .NET Framework 4, при использовании счетчиков производительности, PerfCounter.dll проверяет запись реестра CategoryOptions для каждого поставщика, чтобы определить, следует ли чтение из общей памяти конкретной категории или глобальной общей памяти. .NET Framework 1.1 PerfCounter.dll не поддерживает эту запись реестра, так как он не учитывает общей памяти конкретной категории; он считывает из глобальную общую память.  
   

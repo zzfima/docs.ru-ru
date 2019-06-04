@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 79264687b3a031fcf02ce65a907c7f21e216fbc9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41f29673622fa7918238dd014b97ee3cf0766257
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622753"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486207"
 ---
 # <a name="xtypearguments-directive"></a>Директива x:TypeArguments
 Передает аргументы типов ограничений универсального в конструктор универсального типа.  
@@ -79,7 +79,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 <my:BusinessObject x:TypeArguments="x:String,x:Int32"/>  
 ```  
   
- В WPF и при нацеливании на [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], можно использовать возможности XAML 2009 вместе с `x:TypeArguments` , но только для свободного XAML (XAML, который не является компилированной разметкой). Скомпилированный с разметкой XAML и форма BAML кода XAML в настоящее время не поддерживают ключевые слова и компоненты XAML 2009. Если вы необходимости компиляции разметки XAML, нужно следовать ограничениям, указанным в разделе «XAML 2006 и универсального XAML способы использования WPF».  
+ В WPF и при нацеливании на .NET Framework 4, можно использовать возможности XAML 2009 вместе с `x:TypeArguments` , но только для свободного XAML (XAML, который не является компилированной разметкой). Скомпилированный с разметкой XAML и форма BAML кода XAML в настоящее время не поддерживают ключевые слова и компоненты XAML 2009. Если вы необходимости компиляции разметки XAML, нужно следовать ограничениям, указанным в разделе «XAML 2006 и универсального XAML способы использования WPF».  
   
 ## <a name="see-also"></a>См. также
 

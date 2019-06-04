@@ -2,12 +2,12 @@
 title: Данные FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: f8521a9de3037ae759b0b0ea5bcbe84830f8629e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4edd03a38f8f5df6cb4fb9c2446f966dfe601564
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582712"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490074"
 ---
 # <a name="filestream-data"></a>Данные FILESTREAM
 
@@ -16,7 +16,7 @@ ms.locfileid: "65582712"
 > [!NOTE]
 > Для работы с данными FILESTREAM через SqlClient необходимо установить .NET Framework 3.5 с пакетом обновления 1 (SP1) или более поздней версии.
 
-При указании для столбца varbinary(max) атрибута FILESTREAM сервер SQL Server сохраняет данные не в файле базы данных, а в файловой системе NTFS на локальном компьютере. Хотя эти данные хранятся отдельно, для работы с ними можно использовать те же инструкции [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], что и для данных varbinary(max), хранящихся в базе данных.
+При указании для столбца varbinary(max) атрибута FILESTREAM сервер SQL Server сохраняет данные не в файле базы данных, а в файловой системе NTFS на локальном компьютере. Хотя эти данные хранятся отдельно, для работы с ними можно использовать те же инструкции Transact-SQL, что и для данных varbinary(max), хранящихся в базе данных.
 
 ## <a name="sqlclient-support-for-filestream"></a>Поддержка атрибута FILESTREAM в SqlClient
 
@@ -24,7 +24,7 @@ ms.locfileid: "65582712"
 
 ### <a name="creating-the-sql-server-table"></a>Создание таблицы SQL Server
 
-Приведенная ниже инструкция [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] создает таблицу employees и вставляет в нее строку данных. После включения атрибута FILESTREAM эту таблицу можно использовать в приведенных ниже примерах кода. Ссылки на ресурсы в электронной документации по SQL Server приведены в конце этого раздела.
+Приведенная ниже инструкция Transact-SQL создает таблицу employees и вставляет в нее строку данных. После включения атрибута FILESTREAM эту таблицу можно использовать в приведенных ниже примерах кода. Ссылки на ресурсы в электронной документации по SQL Server приведены в конце этого раздела.
 
 ```sql
 CREATE TABLE employees

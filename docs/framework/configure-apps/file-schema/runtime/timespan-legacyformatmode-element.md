@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38adde3cd51a96f0e15ed5a0c539e088f2d3b480
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31e2a075f9202439cd62c81a06528b20c4971656
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701636"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489346"
 ---
 # <a name="timespanlegacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > элемент
 Определяет, сохраняет ли среда выполнения устаревшее поведение в операциях с форматирования <xref:System.TimeSpan?displayProperty=nameWithType> значения.  
@@ -58,7 +58,7 @@ ms.locfileid: "61701636"
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
   
 ## <a name="remarks"></a>Примечания  
- Начиная с [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], <xref:System.TimeSpan?displayProperty=nameWithType> структура реализует <xref:System.IFormattable> интерфейс и поддерживает операций со строками формата стандартные и настраиваемые форматирования. Если метод синтаксического анализа встречается описатель неподдерживаемый формат или строка формата, он выдает <xref:System.FormatException>.  
+ Начиная с .NET Framework 4, <xref:System.TimeSpan?displayProperty=nameWithType> структура реализует <xref:System.IFormattable> интерфейс и поддерживает операций со строками формата стандартные и настраиваемые форматирования. Если метод синтаксического анализа встречается описатель неподдерживаемый формат или строка формата, он выдает <xref:System.FormatException>.  
   
  В предыдущих версиях .NET Framework <xref:System.TimeSpan> структуры не реализовал <xref:System.IFormattable> и не поддерживает строки формата. Тем не менее, многие разработчики ошибочно полагают, что <xref:System.TimeSpan> поддерживали набор строк формата, которые использовались в [составного форматирования операций](../../../../../docs/standard/base-types/composite-formatting.md) с помощью методов, таких как <xref:System.String.Format%2A?displayProperty=nameWithType>. Как правило если тип реализует <xref:System.IFormattable> и поддерживает формат строки, вызовы методов форматирования с неподдерживаемый формат строки обычно throw <xref:System.FormatException>. Тем не менее так как <xref:System.TimeSpan> не реализовал <xref:System.IFormattable>, среда выполнения, игнорируется строка форматирования и вместо этого вызов <xref:System.TimeSpan.ToString?displayProperty=nameWithType> метод. Это означает, что, несмотря на то, что строки формата не оказывает никакого влияния на операции форматирования, их наличие не привели к <xref:System.FormatException>.  
   
@@ -76,13 +76,13 @@ ms.locfileid: "61701636"
 12:30:45  
 ```  
   
- Они сильно отличаются от выходных данных, получаемых при выполнении примера в [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] или более поздней версии:  
+ Они сильно отличаются от выходных данных при выполнении примера на .NET Framework 4 или более поздней версии:  
   
 ```  
 Invalid Format  
 ```  
   
- Однако если в каталог примера добавить представленный ниже файл конфигурации и запустить пример в [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] или более поздней версии, выходные данные будут идентичны данным, созданным примером при его запуске в [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
+ Тем не менее, если добавить следующий файл конфигурации в каталог примеров и затем запустить пример в .NET Framework 4 или более поздней версии, выходные данные идентичны данным, созданным примером при его запуске в [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
   
 ```xml  
 <?xml version ="1.0"?>  

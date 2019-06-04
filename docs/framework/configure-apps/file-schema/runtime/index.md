@@ -2,12 +2,18 @@
 title: Схема параметров среды выполнения
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - schema runtime settings
-  - 'configuration schema [.NET Framework], runtime settings'
-  - runtime settings schema
+- schema runtime settings
+- configuration schema [.NET Framework], runtime settings
+- runtime settings schema
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: caef2a1d1230f020389c6b86015702075b9fc582
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489454"
 ---
 # <a name="runtime-settings-schema"></a>Схема параметров среды выполнения
 Параметры среды выполнения используются средой CLR для настройки приложений, предназначенных для .NET Framework.  
@@ -115,7 +121,7 @@ ms.author: ronpet
 |[\<relativeBindForResources>](../../../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md)|Оптимизирует поиск вспомогательных сборок.|  
 |[\<remove>](../../../../../docs/framework/configure-apps/file-schema/runtime/remove-element-for-namedcaches.md)|Удаляет элемент именованного кэша из коллекции `namedCaches` для кэша памяти.|  
 |[\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)|Содержит сведения о привязке сборок и поведении при сборке мусора.|  
-|[\<shadowCopyTimeStampVerification>](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|Указывает, использует ли теневое копирование поведение при запуске по умолчанию, представленное в [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], или возвращается к поведению при запуске, используемому в предыдущих версиях .NET Framework.|  
+|[\<shadowCopyTimeStampVerification>](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|Указывает, использует ли теневое копирование поведение при запуске по умолчанию, представленные в .NET Framework 4, или возвращается к поведению более ранних версий платформы .NET Framework при запуске.|  
 |[\<supportPortability>](../../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)|Указывает, что приложение может ссылаться на ту же сборку в двух различных реализациях .NET Framework, отключая поведение по умолчанию, которое рассматривает сборки как эквивалент для переносимости приложения.|  
 |[\<system.runtime.caching>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|Указывает сведения о конфигурации кэша объектов в памяти, используемого по умолчанию.|  
 |[<Thread_UseAllCpuGroups>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)|Указывает, распределяет ли среда выполнения управляемые потоки во всех группах ЦП.|  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8733e11aba30ebea30fc71a5350f76dfd041eb4
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 6191ee2169a85725f0367763874e60c0ceb1d7a4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456412"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489432"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > элемент
 Указывает, допускает ли среда CLR управляемому коду перехватывать нарушения прав доступа и другие исключения поврежденного состояния.  
@@ -56,7 +56,7 @@ ms.locfileid: "66456412"
 ## <a name="remarks"></a>Примечания  
  В .NET Framework версии 3.5 и более ранних версий среда CLR может управляемого кода для перехвата исключений, которые были вызваны поврежденных состояний процесса. Нарушение прав доступа является примером исключения этого типа.  
   
- Начиная с [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], управляемый код больше не перехватывает исключения в этих типов `catch` блоков. Тем не менее можно переопределить это изменение и продолжить обработку исключений поврежденного состояния двумя способами:  
+ Начиная с .NET Framework 4, управляемый код больше не перехватывает исключения в этих типов `catch` блоков. Тем не менее можно переопределить это изменение и продолжить обработку исключений поврежденного состояния двумя способами:  
   
 - Задайте `<legacyCorruptedStateExceptionsPolicy>` элемента `enabled` атрибут `true`. Этот параметр конфигурации применяется целиком к процессу и влияет на все методы.  
   

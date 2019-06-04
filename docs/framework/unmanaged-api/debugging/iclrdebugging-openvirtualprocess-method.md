@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a313ea62455067fb36b94d942b0ce21589677e3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d530f37c979a1ecddf2cb3895234aab2f7556b88
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698165"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489627"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>Метод ICLRDebugging::OpenVirtualProcess
 Получает интерфейс ICorDebugProcess, соответствующий общий язык среды выполнения (CLR) модуль загружается в процесс.  
@@ -78,7 +78,7 @@ HRESULT OpenVirtualProcess(
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) обратный вызов возвращает ошибку, или не поддерживает допустимый дескриптор.|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` не реализует необходимые интерфейсы целевых данных для этой версии среды выполнения.|  
 |CORDBG_E_NOT_CLR|Указанный модуль не является модулем CLR. Данный HRESULT также возвращается, если не удается обнаружить модуль среды CLR, поскольку память повреждена, модуль не доступен или более поздней, чем версия оболочки версию среды CLR.|  
-|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Эта версия среды выполнения не поддерживает данную модель отладки. В настоящее время эта модель отладки не поддерживается версиями CLR до [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. `pwszVersion` Выходные данные по-прежнему установлено правильное значение после данной ошибки.|  
+|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Эта версия среды выполнения не поддерживает данную модель отладки. В настоящее время эта модель отладки не поддерживается версиями CLR до .NET Framework 4. `pwszVersion` Выходные данные по-прежнему установлено правильное значение после данной ошибки.|  
 |CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|Версия среды CLR больше, чем версии, которую этот отладчик утверждений для поддержки. `pwszVersion` Выходные данные по-прежнему установлено правильное значение после данной ошибки.|  
 |E_NO_INTERFACE|`riidProcess` Интерфейс недоступен.|  
 |CORDBG_E_UNSUPPORTED_VERSION_STRUCT|`CLR_DEBUGGING_VERSION` Структура не является распознанным значением `wStructVersion`. В настоящее время единственным допустимым значением является 0.|  

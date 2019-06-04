@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71cc69eba17de8465cc7999f334c724e4ec14e7d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad0ae023215eeb1f42f9351369ee77d41d537b88
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705003"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487728"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring > элемент
 Указывает среде собирать статистику для всех доменов приложений в процессе за весь период его существования.  
@@ -59,7 +59,7 @@ ms.locfileid: "61705003"
   
  Чтобы включить мониторинг из управляемого кода, используйте <xref:System.AppDomain.MonitoringIsEnabled%2A> свойство.  
   
- Этот элемент конфигурации доступен только в [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] и более поздних версий.  
+ Этот элемент конфигурации, доступны только в .NET Framework 4 и более поздних версий.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как включить отслеживание ресурсов домена приложения.  

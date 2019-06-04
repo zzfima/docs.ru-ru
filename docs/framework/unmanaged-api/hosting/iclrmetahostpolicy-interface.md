@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93507ac72b79210dc3a267fea39a6a7b2874916a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 426d77114d3deeff94c39e2f5fc1f2e56e753641
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638701"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490274"
 ---
 # <a name="iclrmetahostpolicy-interface"></a>Интерфейс ICLRMetaHostPolicy
 Предоставляет [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) метод, который возвращает указатель на общий интерфейс языка среды CLR на основе критериев политики, управляемой сборки, версии и файла конфигурации.  
@@ -44,7 +44,7 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHostPolicy,
 > [!NOTE]
 >  Этот интерфейс не были фактически загрузить или активировать среды CLR, а просто возвращает предпочтительную версию среды CLR на основе доступных версий, установленных или загруженных.  
   
- [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Интерфейс API размещения консолидирует политики, благодаря чему узлы с конкретными потребностями может использовать основные функциональные возможности без возникновения непреднамеренных издержек. Например многие из экспортов библиотек MSCorEE.dll привязывается к определенной среде CLR, несмотря на то, что метод может логически не требовать его. [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) перечисление предоставляет политики привязки, которые являются общими для большинства узлов.  
+ Интерфейс API размещения платформы .NET Framework 4 консолидирует политики, благодаря чему узлы с конкретными потребностями может использовать основные функциональные возможности без возникновения непреднамеренных издержек. Например многие из экспортов библиотек MSCorEE.dll привязывается к определенной среде CLR, несмотря на то, что метод может логически не требовать его. [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) перечисление предоставляет политики привязки, которые являются общими для большинства узлов.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

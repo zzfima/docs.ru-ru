@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF class library [WPF]
 - Windows Presentation Foundation class library [WPF]
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
-ms.openlocfilehash: 5cef189a947bcbab96b22f33251971f5794e156e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1c806147d1dfb30bfd9fa73102ed4b65c776671a
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591317"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489597"
 ---
 # <a name="class-library-wpf"></a>Библиотека классов (WPF)
 Следующие ссылки указывают на пространства имен, содержащие [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)].  
@@ -124,7 +124,7 @@ ms.locfileid: "64591317"
 - <xref:UIAutomationClientsideProviders>  
   
 ## <a name="xaml-support-in-net-4"></a>Поддержка XAML в .NET Framework 4  
- Следующие пространства имен содержат типы из сборки System.Xaml. System.Xaml предоставляет поддержка common language XAML для платформ, например WPF, которые созданы на [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].  
+ Следующие пространства имен содержат типы из сборки System.Xaml. System.Xaml предоставляет поддержка common language XAML для платформ, например WPF, построенных на .NET Framework 4.  
   
 - <xref:System.Windows.Markup> (общий)  
   

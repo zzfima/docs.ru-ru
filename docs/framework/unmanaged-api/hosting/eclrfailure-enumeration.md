@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19dacae05766566521f563d0d24980c01dfb7a0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb19f950122f7b0db66830e9ed5dff44ccd370c2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796154"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490436"
 ---
 # <a name="eclrfailure-enumeration"></a>Перечисление EClrFailure
 Описывает набор сбоев, для которых узел может задать действия политики.  
@@ -49,7 +49,7 @@ typedef enum {
 |`FAIL_FatalRuntime`|Среда CLR (CLR) больше не может выполнять управляемый код в процессе. Исходя из этого вызовов любого размещения функций возвращают значение HRESULT значение HOST_E_CLRNOTAVAILABLE.|  
 |`FAIL_OrphanedLock`|Поток не удалось снять блокировку возврата <xref:System.AppDomain> объекта. Узел не удается задать удалось вызвать прерывание потока.|  
 |`FAIL_StackOverflow`|Произошло переполнение стека.|  
-|`FAIL_AccessViolation`|Была предпринята попытка чтения или записи в защищенную память. Не поддерживается в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].|  
+|`FAIL_AccessViolation`|Была предпринята попытка чтения или записи в защищенную память. Не поддерживается в .NET Framework 4.|  
 |`FAIL_CodeContract`|Сбой кода контракта. См. в разделе [Code Contracts](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
   
 ## <a name="remarks"></a>Примечания  

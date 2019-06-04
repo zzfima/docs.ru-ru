@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27c8c1cac68aca1c40826ff549d62d9636d9b0c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c96d5aea150c0dbb55889e9fc26417e7803a155
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704912"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487664"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager > элемент
 Указывает, отключено ли поведение по умолчанию, которое разрешает хост-приложению среды выполнения переопределять параметры конфигурации для домена приложения.  
@@ -40,7 +40,7 @@ ms.locfileid: "61704912"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|0|Не отключайте возможность переопределения параметров Fusion. Это поведение по умолчанию, начиная с [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|0|Не отключайте возможность переопределения параметров Fusion. Это поведение по умолчанию, начиная с .NET Framework 4.|  
 |1|Отключите возможность переопределения параметров Fusion. При этом восстанавливается поведение более ранних версий платформы .NET Framework.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
@@ -54,7 +54,7 @@ ms.locfileid: "61704912"
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
 ## <a name="remarks"></a>Примечания  
- Начиная с [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], поведение по умолчанию — разрешить <xref:System.AppDomainManager> объекта для переопределения параметров конфигурации с помощью <xref:System.AppDomainSetup.ConfigurationFile%2A> свойство или <xref:System.AppDomainSetup.SetConfigurationBytes%2A> метод <xref:System.AppDomainSetup> объекта, который передается в реализацию из <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> метода в подкласс элементов <xref:System.AppDomainManager>. Для домена приложения по умолчанию можно изменить параметры переопределяют параметры, которые были заданы в файле конфигурации приложения. Для других доменов приложений, они переопределяют параметры конфигурации, которые были переданы <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> или <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> метод.  
+ Начиная с .NET Framework 4, поведение по умолчанию — разрешить <xref:System.AppDomainManager> объекта для переопределения параметров конфигурации с помощью <xref:System.AppDomainSetup.ConfigurationFile%2A> свойство или <xref:System.AppDomainSetup.SetConfigurationBytes%2A> метод <xref:System.AppDomainSetup> объекта, который передается в реализацию из <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> метода в подкласс элементов <xref:System.AppDomainManager>. Для домена приложения по умолчанию можно изменить параметры переопределяют параметры, которые были заданы в файле конфигурации приложения. Для других доменов приложений, они переопределяют параметры конфигурации, которые были переданы <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> или <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> метод.  
   
  Можно передать новую информацию о конфигурации, или передать значение null (`Nothing` в Visual Basic) для исключения сведений о конфигурации, который был передан.  
   

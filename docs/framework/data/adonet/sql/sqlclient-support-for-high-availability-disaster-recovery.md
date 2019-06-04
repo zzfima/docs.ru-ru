@@ -2,12 +2,12 @@
 title: Поддержка SqlClient для высокого уровня доступности, аварийного восстановления
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: b01db93c51c6d975c9cc951f08b64c5ffd6c1de4
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: aa4c716dc1b27d50620777613e698ca6dbab31d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380008"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487637"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Поддержка SqlClient для высокого уровня доступности, аварийного восстановления
 В этом разделе рассматриваются (добавлена в .NET Framework 4.5) поддержка SqlClient для высокого уровня доступности и аварийного восстановления — группы доступности AlwaysOn.  Группы доступности AlwaysOn появились в SQL Server 2012. Дополнительные сведения о группах доступности AlwaysOn см. в разделе электронной документации по SQL Server.  
@@ -79,7 +79,7 @@ ms.locfileid: "66380008"
   
  Ключевое слово `ApplicationIntent` не работает с базами данных прежних версий, доступными только для чтения.  
   
- База данных может разрешить или запретить рабочие нагрузки для чтения на целевой базе данных в режиме AlwaysOn. (Это выполняется с помощью предложения `ALLOW_CONNECTIONS` инструкций `PRIMARY_ROLE` и `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)].)  
+ База данных может разрешить или запретить рабочие нагрузки для чтения на целевой базе данных в режиме AlwaysOn. (Это делается с помощью `ALLOW_CONNECTIONS` предложении `PRIMARY_ROLE` и `SECONDARY_ROLE`инструкций Transact-SQL.)  
   
  Ключевое слово `ApplicationIntent` служит для включения маршрутизации только для чтения.  
   

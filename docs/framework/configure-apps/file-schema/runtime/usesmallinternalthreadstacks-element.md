@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f098065cc005c59ec558ffa1f95202715624e7d
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 70113d98c5a4ab41700f6c9842dba89e2b49c297
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456116"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489327"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > элемент
 Запросы, что сокращает общеязыковой среды выполнения (CLR) используют путем указания явных размеров стека при создании определенных потоков, используемых для внутренних целей, вместо размер стека по умолчанию для этих потоков.  
@@ -41,7 +41,7 @@ ms.locfileid: "66456116"
 |Значение|Описание|  
 |-----------|-----------------|  
 |true|Запросите явных размеров стека.|  
-|False|Используйте размер стека по умолчанию. Это значение по умолчанию для [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|False|Используйте размер стека по умолчанию. Это значение по умолчанию для .NET Framework 4.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  

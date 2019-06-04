@@ -2,12 +2,12 @@
 title: 'Транспорт: Пользовательские транзакции по UDP-пример'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: ff53890da73d81165da6b0e845360424ec869a87
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a7b0c4e9ea73fa952710f2b415082b56062dad0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637127"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483100"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Транспорт: Пользовательские транзакции по UDP-пример
 Этот образец основан на [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) пример в Windows Communication Foundation (WCF)[расширяемость транспорта](../../../../docs/framework/wcf/samples/transport-extensibility.md). Он расширяет пример транспорта UDP за счет поддержки пользовательского потока транзакций и иллюстрирует использование свойства <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
@@ -178,7 +178,7 @@ if (transaction != null)
   
 1. Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2. Текущий образец следует выполнять так же, как [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца. Для его запуска запустите службу с UdpTestService.exe. В случае использования [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] службу необходимо запустить с более высоким уровнем привилегий. Чтобы сделать это, щелкните правой кнопкой мыши UdpTestService.exe в [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] и нажмите кнопку **Запуск от имени администратора**.  
+2. Текущий образец следует выполнять так же, как [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца. Для его запуска запустите службу с UdpTestService.exe. В случае использования [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] службу необходимо запустить с более высоким уровнем привилегий. Чтобы сделать это, щелкните правой кнопкой мыши UdpTestService.exe в проводнике и нажмите кнопку **Запуск от имени администратора**.  
   
 3. Получатся следующие результаты.  
   

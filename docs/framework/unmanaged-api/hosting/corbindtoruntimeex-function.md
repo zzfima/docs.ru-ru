@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1e812445c931d45163fefdc4406b27a1fbd5d82
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b45efb634ca9b88768d6e30884085f28ad17b7c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634840"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490587"
 ---
 # <a name="corbindtoruntimeex-function"></a>Функция CorBindToRuntimeEx
 Позволяет неуправляемым основным приложениям загружать в процесс общеязыковой среды выполнения (CLR). [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) и `CorBindToRuntimeEx` функции выполняют та же операция, но `CorBindToRuntimeEx` функция позволяет задавать флаги для определения поведения этой СРЕДЫ.  
   
- Эта функция устарели в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Эта функция является устаревшим в .NET Framework 4.  
   
  Эта функция принимает набор параметров, которые позволяют ведущему приложению сделайте следующее:  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 848c56773c0ff2986f0bec3e82a08a3d0dd35434
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 868c5f0742fa4dc963539fd70414752092156c64
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456475"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489414"
 ---
 # <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy > элемент
 Указывает, использует ли среда выполнения устаревшую политику разграничения доступа кода.  
@@ -55,11 +55,11 @@ ms.locfileid: "66456475"
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
   
 ## <a name="remarks"></a>Примечания  
- В .NET Framework версии 3.5 и более ранних версий политика разграничения доступа кода настроена на срабатывание всегда. В [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], необходимо включить политику CAS.  
+ В .NET Framework версии 3.5 и более ранних версий политика разграничения доступа кода настроена на срабатывание всегда. В .NET Framework 4 должна быть включена политика разграничения доступа кода.  
   
  Политика разграничения доступа кода зависит от версии. Необходимо заново определить пользовательские политики разграничения доступа кода, которые существуют в более ранних версиях платформы .NET Framework в .NET Framework 4.  
   
- Применение `<NetFx40_LegacySecurityPolicy>` элемент [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] сборки не влияет на [прозрачный с точки зрения безопасности код](../../../../../docs/framework/misc/security-transparent-code.md); по-прежнему применяются правила прозрачности.  
+ Применение `<NetFx40_LegacySecurityPolicy>` сборкой .NET Framework 4 не влияет на [прозрачный с точки зрения безопасности код](../../../../../docs/framework/misc/security-transparent-code.md); по-прежнему применяются правила прозрачности.  
   
 > [!IMPORTANT]
 >  Применение `<NetFx40_LegacySecurityPolicy>` элемента может привести к снижению производительности для сборки образов в машинном коде, созданные [генератором машинных образов (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) , которые не установлены в [глобальный кэш сборок ](../../../../../docs/framework/app-domains/gac.md). На снижение производительности связано с невозможностью среды выполнения загружать сборки как образы в машинном коде при применении атрибута, что приводит к их загруженных сборок как just-in-time.  

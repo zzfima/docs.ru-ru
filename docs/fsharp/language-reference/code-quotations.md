@@ -2,12 +2,12 @@
 title: Цитирование кода
 description: Дополнительные сведения о F# Цитирование кода, — функцию языка, позволяет создавать и работать с F# программного кода выражения.
 ms.date: 05/16/2016
-ms.openlocfilehash: 464df5e3fafa683c93fd5fb6e94d24c229903491
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5523d54a271ad1c53c6de85f37f261e0ecf6cced
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642002"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490793"
 ---
 # <a name="code-quotations"></a>Цитирование кода
 
@@ -39,9 +39,7 @@ ms.locfileid: "65642002"
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet502.fs)]
 
-Чтобы использовать Цитирование кода, необходимо добавить объявление импорта (с помощью `open` ключевое слово), открывает [Microsoft.FSharp.Quotations](https://msdn.microsoft.com/library/e9ce8a3a-e00c-4190-bad5-cce52ee089b2) пространства имен.
-
-F# PowerPack обеспечивает поддержку для вычисления и выполнения F# объекты выражений.
+Чтобы evalutate F# предложений, необходимо использовать [ F# вычислителя предложения](https://github.com/fsprojects/FSharp.Quotations.Evaluator). Он обеспечивает поддержку для вычисления и выполнения F# объекты выражений.
 
 ## <a name="expr-type"></a>Тип expr
 

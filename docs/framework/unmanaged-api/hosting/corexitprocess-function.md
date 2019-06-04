@@ -20,17 +20,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b95625cfe17b36c0244e6780a08dcf50ce50763d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a28b33f80299ae6fce34f9de66b6f7f1bc70ef6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985820"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490569"
 ---
 # <a name="corexitprocess-function"></a>Функция CorExitProcess
 Завершает работу текущего неуправляемого процесса.  
   
- Эта функция устарели в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Используйте [ICLRMetaHost::ExitProcess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) метод вместо этого.  
+ Эта функция является устаревшим в .NET Framework 4. Используйте [ICLRMetaHost::ExitProcess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) метод вместо этого.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,7 +47,7 @@ void STDMETHODCALLTYPE CorExitProcess (
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Начиная с версии [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], `CorExitProcess` выходит из каждой запущенной среды выполнения в процессе, а не только среды выполнения, к которому привязан интерфейсов API прежних версий.  
+>  Начиная с .NET Framework 4, `CorExitProcess` выходит из каждой запущенной среды выполнения в процессе, а не только среды выполнения, к которому привязан интерфейсов API прежних версий.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

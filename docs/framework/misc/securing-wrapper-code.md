@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4adfa5d592514c9a91c93095e7199f4b425b712
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: abbc817142ab6906a04b4dc053693f87109922dc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596639"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487899"
 ---
 # <a name="securing-wrapper-code"></a>Безопасность кода программы-оболочки
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -76,7 +76,7 @@ ms.locfileid: "64596639"
 - [LinkDemand](../../../docs/framework/misc/link-demands.md) происходит во время компиляции just-in-time (JIT) и проверяет только непосредственный вызывающий объект. Эта проверка безопасности не проверяет вызывающий объект вызывающего объекта. После того как эта проверка пройдена, никакие дополнительные проверки не выполняются, независимо от того, сколько раз вызывающий объект может выполнять вызов. Однако эта проверка не обеспечивает защиту от атак с заманиванием. С помощью **LinkDemand**, любой код, прошедший проверку и может ссылаться на ваш код может нарушить безопасность, позволив вредоносному коду осуществлять вызовы с использованием доверенного кода. Таким образом, не используйте **LinkDemand** Если не все возможные слабые места могут быть полностью защищены.  
   
     > [!NOTE]
-    >  В [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], требования связывания были заменены <xref:System.Security.SecurityCriticalAttribute> атрибут в <xref:System.Security.SecurityRuleSet.Level2> сборок. <xref:System.Security.SecurityCriticalAttribute> Эквивалентен требованию связывания для полного доверия; Однако оно также влияет на правила наследования. Дополнительные сведения об этом изменении см. в разделе [прозрачный с точки зрения безопасности код, уровень 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
+    >  В .NET Framework 4, требования связывания были заменены <xref:System.Security.SecurityCriticalAttribute> атрибут в <xref:System.Security.SecurityRuleSet.Level2> сборок. <xref:System.Security.SecurityCriticalAttribute> Эквивалентен требованию связывания для полного доверия; Однако оно также влияет на правила наследования. Дополнительные сведения об этом изменении см. в разделе [прозрачный с точки зрения безопасности код, уровень 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
   
  Дополнительные меры предосторожности, необходимые при использовании **LinkDemand** должны программироваться в индивидуальном порядке; система безопасности, может помочь с их применением. Любая ошибка приводит к возникновению уязвимости в системе безопасности. Любой авторизованный код, использующий ваш код, должен отвечать за реализацию дополнительных мер защиты, выполняя следующие действия.  
   

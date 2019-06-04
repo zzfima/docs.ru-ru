@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03a17e8f30c15e98a350ef558cc1cb6ddf65cade
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cbe9e81f0e8bef36b780878844512a36a5148fec
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584510"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489356"
 ---
 # <a name="systemruntimecaching-element-cache-settings"></a>\<System.Runtime.Caching > (параметры кэша)
 Обеспечивает настройку реализации <xref:System.Runtime.Caching.ObjectCache> в памяти по умолчанию посредством записи `memoryCache` в файле конфигурации.  
@@ -51,7 +51,7 @@ ms.locfileid: "65584510"
  Классы в этом пространстве имен предоставляют способ использования средств кэширования, например таких, которые имеются в ASP.NET, но без зависимости от сборки `System.Web` . Для получения дополнительной информации см. [Caching in .NET Framework Applications](../../../../../docs/framework/performance/caching-in-net-framework-applications.md).  
   
 > [!NOTE]
->  Функции кэширования вывода и типы в пространстве имен <xref:System.Runtime.Caching> являются новыми в [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].  
+>  Функции кэширования вывода и типы в <xref:System.Runtime.Caching> пространство имен впервые появились в .NET Framework 4.  
   
 ## <a name="example"></a>Пример  
  В следующем примере кода показано, как настроить кэш, основанный на классе <xref:System.Runtime.Caching.MemoryCache> . В примере показано, как построить экземпляр записи `namedCaches` для кэша памяти. В качестве имени кэша задано имя записи кэша по умолчанию посредством задания для атрибута `name` значения "default".  

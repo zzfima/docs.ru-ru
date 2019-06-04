@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aa13d26ac11ed624caa4c9704325f2d604418bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 19cd74f0e2550ec91cb56e70cf34a03bd84fc60e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705055"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487748"
 ---
 # <a name="appdomainmanagertype-element"></a>\<appDomainManagerType > элемент
 Указывает тип, который служит диспетчером домена приложения для домена приложения, используемого по умолчанию.  
@@ -58,7 +58,7 @@ ms.locfileid: "61705055"
   
  Формат типа и пространство имен — это тот же формат, который используется для <xref:System.Type.FullName%2A?displayProperty=nameWithType> свойство.  
   
- Этот элемент конфигурации доступен только в [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] и более поздних версий.  
+ Этот элемент конфигурации, доступны только в .NET Framework 4 и более поздних версий.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как указать, что диспетчер домена приложения для домена приложения по умолчанию процесса `MyMgr` введите `AdMgrExample` сборки.  

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7308f37ee96b4efe83aeb198586f7364fdcf9ccc
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 37551d2b43e5343ca27da69c08d522c176b2caa7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457149"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489639"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>Перечисление CorDebugInterfaceVersion
 Указывает интерфейс, версию платформы .NET Framework или версию платформы .NET Framework, в которой был представлен интерфейс.  
@@ -235,7 +235,7 @@ typedef enum CorDebugInterfaceVersion {
   
 - Платформы .NET Framework версий 3.0 и 3.5 используют существующие интерфейсы платформы .NET Framework версии 2.0 и не вводят никаких новых интерфейсов.  
   
-- [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Используются разные версии интерфейсов. Например, и `ICorDebugThread3`, и `ICorDebugThread4` отображаются как третья и четвертая версии интерфейса `ICorDebugThread`. .NET Framework 4 также вводит первую версию `ICorDebugStackWalk` интерфейс и вторую версию `ICorDebugNativeFrame` интерфейс (`ICorDebugNativeFrame2`).  
+- .NET Framework 4 используются разные версии интерфейсов. Например, и `ICorDebugThread3`, и `ICorDebugThread4` отображаются как третья и четвертая версии интерфейса `ICorDebugThread`. .NET Framework 4 также вводит первую версию `ICorDebugStackWalk` интерфейс и вторую версию `ICorDebugNativeFrame` интерфейс (`ICorDebugNativeFrame2`).  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

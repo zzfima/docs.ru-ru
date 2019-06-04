@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456651"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487983"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Совместимость политики разграничения доступа кода и ее миграция
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-Политика разграничения доступа кода (CAS) является устаревшей в [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. В результате могут возникать предупреждения компиляции и исключения среды выполнения при вызове устаревших типов политик и членов [явно](#explicit_use) или [неявно](#implicit_use) (через другие типы и члены).
+Часть политики разграничения доступа кода (CAS) становится устаревшим в .NET Framework 4. В результате могут возникать предупреждения компиляции и исключения среды выполнения при вызове устаревших типов политик и членов [явно](#explicit_use) или [неявно](#implicit_use) (через другие типы и члены).
 
 Избежать появления таких предупреждений и ошибок можно следующими способами:
 

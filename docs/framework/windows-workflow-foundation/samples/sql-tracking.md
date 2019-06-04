@@ -2,12 +2,12 @@
 title: Отслеживание SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: f3c48b40e2d3d7dec2b9008b3de738f9b2983610
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b69336e9a6fd0d3cf91c2a187412638d08490eea
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785922"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491081"
 ---
 # <a name="sql-tracking"></a>Отслеживание SQL
 Этот образец показывает, как создать настраиваемый участник отслеживания SQL, который вносит записи отслеживания в базу данных SQL. Windows Workflow Foundation (WF) предоставляет отслеживание для обеспечения видимости выполнения экземпляра рабочего процесса рабочего процесса. Среда выполнения отслеживания выдает записи отслеживания рабочего процесса в ходе его выполнения. Дополнительные сведения об отслеживании рабочего процесса см. в разделе [отслеживание и трассировка рабочих процессов](../workflow-tracking-and-tracing.md).
@@ -35,7 +35,7 @@ ms.locfileid: "61785922"
   
      Примером адреса WSDL локальной службы является `http://localhost:65193/StockPriceService.xamlx?wsdl`.  
   
-8. С помощью [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] запустите клиент тестирования WCF (WcfTestClient.exe). Этот файл размещается в каталоге Microsoft Visual Studio 10.0\Common7\IDE.  
+8. С помощью проводника, запустите тестовый клиент WCF (WcfTestClient.exe). Этот файл размещается в каталоге Microsoft Visual Studio 10.0\Common7\IDE.  
   
 9. В тестовом клиенте WCF выберите **файл** меню и выберите **добавить службу**. Вставьте в текстовое поле адрес локальной службы. Нажмите кнопку **ОК** чтобы закрыть диалоговое окно.  
   

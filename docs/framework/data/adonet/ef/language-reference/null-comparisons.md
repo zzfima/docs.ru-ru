@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: a9e519fb8b2ca021d66adb23659d83efc571afae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3bbb55ec65df1af776779682d307a67034e34b3
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760432"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489900"
 ---
 # <a name="null-comparisons"></a>Сравнения NULL
 Значение `null` в источнике данных указывает на то, что это значение неизвестно. В запросах [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] можно реализовать проверку наличия значений NULL так, чтобы определенные вычисления или сравнения выполнялись только для строк с допустимыми данными, не содержащими значений NULL. Впрочем, null-семантика среды CLR может отличаться от null-семантики источника данных. В большинстве баз данных для выполнения сравнений со значением Null используется трехзначная логика. То есть сравнения со значением null не равен значению `true` или `false`, он возвращает `unknown`. Часто речь идет о реализациях Null ANSI, но так бывает не всегда.  
   
- По умолчанию в SQL Server сравнение «Null равняется Null» возвращает значение Null. В следующем примере строки, где параметр `ShipDate` имеет значение NULL, исключаются из результирующего набора, и инструкция [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] возвращает 0 строк.  
+ По умолчанию в SQL Server сравнение «Null равняется Null» возвращает значение Null. В следующем примере строки где `ShipDate` имеет значение null, исключаются из результирующего набора, и инструкцию Transact-SQL возвратит 0 строк.  
   
 ```  
 -- Find order details and orders with no ship date.  

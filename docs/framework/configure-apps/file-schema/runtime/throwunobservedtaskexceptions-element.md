@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb6cfc8e1c3f0409d99d31efa0a645476b47e45e
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 9647297bf976d26a97be0da8807d607789e8a065
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456250"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489571"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > элемент
 Определяет, будут ли необработанные исключения задачи завершать выполняющийся процесс.  
@@ -61,7 +61,7 @@ ms.locfileid: "66456250"
 ## <a name="remarks"></a>Примечания  
  Если возникает исключение, с которым связан <xref:System.Threading.Tasks.Task> не было соблюдено, существует не <xref:System.Threading.Tasks.Task.Wait%2A> операции, родительский не подключен и <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> свойство не было считано, будет считаться непредвиденное исключение задачи.  
   
- В [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], по по умолчанию, если <xref:System.Threading.Tasks.Task> , имеет непредвиденное исключение удаляется сборщиком мусора, метод завершения создает исключение и завершает процесс. Завершение процесса определяется временем мусора и финализация.  
+ В .NET Framework 4, по умолчанию если <xref:System.Threading.Tasks.Task> , имеет непредвиденное исключение удаляется сборщиком мусора, метод завершения создает исключение и завершает процесс. Завершение процесса определяется временем мусора и финализация.  
   
  Чтобы облегчить разработчикам писать асинхронный код, основанный на задачах, .NET Framework 4.5 изменяет это поведение по умолчанию для исключений без наблюдения. Ненаблюдаемые исключения по-прежнему вызывать <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> событие, но по умолчанию не завершает процесс. Вместо этого исключение игнорируется после события, независимо от того, обнаруживает ли обработчик событий, исключение.  
   
