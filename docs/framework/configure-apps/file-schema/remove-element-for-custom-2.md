@@ -16,45 +16,45 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 05/29/2019
 ms.locfileid: "66300696"
 ---
-# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a><span data-ttu-id="f5cb2-102">\<Удалить > элемент для NameValueSectionHandler и DictionarySectionHandler</span><span class="sxs-lookup"><span data-stu-id="f5cb2-102">\<remove> element for NameValueSectionHandler and DictionarySectionHandler</span></span>
+# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a><span data-ttu-id="845f7-102">\<Удалить > элемент для NameValueSectionHandler и DictionarySectionHandler</span><span class="sxs-lookup"><span data-stu-id="845f7-102">\<remove> element for NameValueSectionHandler and DictionarySectionHandler</span></span>
 
-<span data-ttu-id="f5cb2-103">Удаляет ранее определенный параметр.</span><span class="sxs-lookup"><span data-stu-id="f5cb2-103">Removes a previously defined setting.</span></span>
+<span data-ttu-id="845f7-103">Удаляет ранее определенный параметр.</span><span class="sxs-lookup"><span data-stu-id="845f7-103">Removes a previously defined setting.</span></span>
 
-<span data-ttu-id="f5cb2-104">[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="f5cb2-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="f5cb2-105">&nbsp;&nbsp;[ **\<параметра sectionName >** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span><span class="sxs-lookup"><span data-stu-id="f5cb2-105">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span></span>  
-<span data-ttu-id="f5cb2-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<Удалить >**</span><span class="sxs-lookup"><span data-stu-id="f5cb2-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
+<span data-ttu-id="845f7-104">[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="845f7-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="845f7-105">&nbsp;&nbsp;[ **\<параметра sectionName >** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span><span class="sxs-lookup"><span data-stu-id="845f7-105">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span></span>  
+<span data-ttu-id="845f7-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<Удалить >**</span><span class="sxs-lookup"><span data-stu-id="845f7-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="f5cb2-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f5cb2-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="845f7-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="845f7-107">Syntax</span></span>
 
 ```xml
 <add remove="key" />
 ```
 
-## <a name="attribute"></a><span data-ttu-id="f5cb2-108">Атрибут</span><span class="sxs-lookup"><span data-stu-id="f5cb2-108">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="845f7-108">Атрибут</span><span class="sxs-lookup"><span data-stu-id="845f7-108">Attribute</span></span>
 
-|           | <span data-ttu-id="f5cb2-109">Описание</span><span class="sxs-lookup"><span data-stu-id="f5cb2-109">Description</span></span> |
+|           | <span data-ttu-id="845f7-109">Описание</span><span class="sxs-lookup"><span data-stu-id="845f7-109">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="f5cb2-110">**key**</span><span class="sxs-lookup"><span data-stu-id="f5cb2-110">**key**</span></span>   | <span data-ttu-id="f5cb2-111">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="f5cb2-111">Required attribute.</span></span><br><br><span data-ttu-id="f5cb2-112">Указывает имя параметра для удаления.</span><span class="sxs-lookup"><span data-stu-id="f5cb2-112">Specifies the name of the setting to remove.</span></span> |
+| <span data-ttu-id="845f7-110">**key**</span><span class="sxs-lookup"><span data-stu-id="845f7-110">**key**</span></span>   | <span data-ttu-id="845f7-111">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="845f7-111">Required attribute.</span></span><br><br><span data-ttu-id="845f7-112">Указывает имя параметра для удаления.</span><span class="sxs-lookup"><span data-stu-id="845f7-112">Specifies the name of the setting to remove.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="f5cb2-113">Родительский элемент</span><span class="sxs-lookup"><span data-stu-id="f5cb2-113">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="845f7-113">Родительский элемент</span><span class="sxs-lookup"><span data-stu-id="845f7-113">Parent element</span></span>
 
-| <span data-ttu-id="f5cb2-114">Элемент</span><span class="sxs-lookup"><span data-stu-id="f5cb2-114">Element</span></span> | <span data-ttu-id="f5cb2-115">Описание</span><span class="sxs-lookup"><span data-stu-id="f5cb2-115">Description</span></span> |
+| <span data-ttu-id="845f7-114">Элемент</span><span class="sxs-lookup"><span data-stu-id="845f7-114">Element</span></span> | <span data-ttu-id="845f7-115">Описание</span><span class="sxs-lookup"><span data-stu-id="845f7-115">Description</span></span> |
 | ------- | ------------|
-| [<span data-ttu-id="f5cb2-116"> *\*\<параметра sectionName >** элемент</span><span class="sxs-lookup"><span data-stu-id="f5cb2-116">**\<sectionName>** Element</span></span>](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | <span data-ttu-id="f5cb2-117">Определяет параметры для пользовательских разделов конфигурации, использующие <xref:System.Configuration.NameValueSectionHandler> и <xref:System.Configuration.DictionarySectionHandler> классы.</span><span class="sxs-lookup"><span data-stu-id="f5cb2-117">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span> |
+| [<span data-ttu-id="845f7-116"> *\*\<параметра sectionName >** элемент</span><span class="sxs-lookup"><span data-stu-id="845f7-116">**\<sectionName>** Element</span></span>](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | <span data-ttu-id="845f7-117">Определяет параметры для пользовательских разделов конфигурации, использующие <xref:System.Configuration.NameValueSectionHandler> и <xref:System.Configuration.DictionarySectionHandler> классы.</span><span class="sxs-lookup"><span data-stu-id="845f7-117">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="f5cb2-118">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="f5cb2-118">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="845f7-118">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="845f7-118">Child elements</span></span>
 
-<span data-ttu-id="f5cb2-119">None</span><span class="sxs-lookup"><span data-stu-id="f5cb2-119">None</span></span>
+<span data-ttu-id="845f7-119">None</span><span class="sxs-lookup"><span data-stu-id="845f7-119">None</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="f5cb2-120">Примечания</span><span class="sxs-lookup"><span data-stu-id="f5cb2-120">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="845f7-120">Примечания</span><span class="sxs-lookup"><span data-stu-id="845f7-120">Remarks</span></span>
 
-<span data-ttu-id="f5cb2-121">Можно использовать  **\<удалить >** элемент для удаления параметров из приложения, которые были определены на более высоком уровне в иерархии файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="f5cb2-121">You can use the **\<remove>** element to remove settings from your application that were defined at a higher level in the configuration file hierarchy.</span></span>
+<span data-ttu-id="845f7-121">Можно использовать  **\<удалить >** элемент для удаления параметров из приложения, которые были определены на более высоком уровне в иерархии файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="845f7-121">You can use the **\<remove>** element to remove settings from your application that were defined at a higher level in the configuration file hierarchy.</span></span>
 
-## <a name="example"></a><span data-ttu-id="f5cb2-122">Пример</span><span class="sxs-lookup"><span data-stu-id="f5cb2-122">Example</span></span>
+## <a name="example"></a><span data-ttu-id="845f7-122">Пример</span><span class="sxs-lookup"><span data-stu-id="845f7-122">Example</span></span>
 
-<span data-ttu-id="f5cb2-123">В следующем примере показано, как использовать  **\<удалить >** элемент в файле конфигурации приложения для удаления параметров, определенных ранее в файле конфигурации компьютера.</span><span class="sxs-lookup"><span data-stu-id="f5cb2-123">The following example shows how to use the **\<remove>** element in an application configuration file to remove settings previously defined in the machine configuration file.</span></span>
+<span data-ttu-id="845f7-123">В следующем примере показано, как использовать  **\<удалить >** элемент в файле конфигурации приложения для удаления параметров, определенных ранее в файле конфигурации компьютера.</span><span class="sxs-lookup"><span data-stu-id="845f7-123">The following example shows how to use the **\<remove>** element in an application configuration file to remove settings previously defined in the machine configuration file.</span></span>
 
-<span data-ttu-id="f5cb2-124">В коде следующего файла конфигурации компьютера объявляет разделе  **\<mySection >** и добавляет два параметра `key1` и `key2`, к нему:</span><span class="sxs-lookup"><span data-stu-id="f5cb2-124">The following machine configuration file code declares the section **\<mySection>** and adds two settings, `key1` and `key2`, to it:</span></span>
+<span data-ttu-id="845f7-124">В коде следующего файла конфигурации компьютера объявляет разделе  **\<mySection >** и добавляет два параметра `key1` и `key2`, к нему:</span><span class="sxs-lookup"><span data-stu-id="845f7-124">The following machine configuration file code declares the section **\<mySection>** and adds two settings, `key1` and `key2`, to it:</span></span>
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ ms.locfileid: "66300696"
 </configuration>
 ```
 
-<span data-ttu-id="f5cb2-125">В коде следующего файла конфигурации приложения удаляет `key2` Azure с помощью  **\<mySection >** :</span><span class="sxs-lookup"><span data-stu-id="f5cb2-125">The following application configuration file code removes the `key2` setting from **\<mySection>**:</span></span>
+<span data-ttu-id="845f7-125">В коде следующего файла конфигурации приложения удаляет `key2` Azure с помощью  **\<mySection >** :</span><span class="sxs-lookup"><span data-stu-id="845f7-125">The following application configuration file code removes the `key2` setting from **\<mySection>**:</span></span>
 
 ```xml
 <!--Application configuration file -->
@@ -80,10 +80,10 @@ ms.locfileid: "66300696"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="f5cb2-126">файл конфигурации</span><span class="sxs-lookup"><span data-stu-id="f5cb2-126">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="845f7-126">файл конфигурации</span><span class="sxs-lookup"><span data-stu-id="845f7-126">Configuration file</span></span>
 
-<span data-ttu-id="f5cb2-127">Этот элемент может использоваться в файле конфигурации приложения, файл конфигурации компьютера (*Machine.config*), и *Web.config* файлы, которые не на уровне каталога приложения.</span><span class="sxs-lookup"><span data-stu-id="f5cb2-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="845f7-127">Этот элемент может использоваться в файле конфигурации приложения, файл конфигурации компьютера (*Machine.config*), и *Web.config* файлы, которые не на уровне каталога приложения.</span><span class="sxs-lookup"><span data-stu-id="845f7-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f5cb2-128">См. также</span><span class="sxs-lookup"><span data-stu-id="f5cb2-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="845f7-128">См. также</span><span class="sxs-lookup"><span data-stu-id="845f7-128">See also</span></span>
 
-- [<span data-ttu-id="f5cb2-129">Схема файла конфигурации для .NET Framework</span><span class="sxs-lookup"><span data-stu-id="f5cb2-129">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="845f7-129">Схема файла конфигурации для .NET Framework</span><span class="sxs-lookup"><span data-stu-id="845f7-129">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
