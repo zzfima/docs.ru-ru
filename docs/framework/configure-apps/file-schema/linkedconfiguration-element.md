@@ -22,9 +22,9 @@ ms.locfileid: "61674653"
 
 Указание файла конфигурации, который следует включить.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<assemblyBinding >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration >**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<assemblyBinding >** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<linkedConfiguration >**
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -42,7 +42,7 @@ ms.locfileid: "61674653"
 
 |     | Описание |
 | --- | ----------- |
-| [**\<assemblyBinding >** элемент](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Определяет политику привязки сборок на уровне конфигурации. |
+| [ **\<assemblyBinding >** элемент](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Определяет политику привязки сборок на уровне конфигурации. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
@@ -50,10 +50,10 @@ None
 
 ## <a name="remarks"></a>Примечания
 
- **\<LinkedConfiguration >** элемент упрощает обслуживание сборки компонентов. Если один или несколько приложений используют сборку, которая имеет файл конфигурации, которая находится в хорошо известного расположения, можно использовать файлы конфигурации приложений, использующих сборку  **\<linkedConfiguration >** элемент для включения файла конфигурации сборки, вместо того чтобы включать сведения о конфигурации напрямую. При обслуживании сборки компонентов, обновление общего файла конфигурации предоставляет обновленные сведения о конфигурации для всех приложений, использующих сборку.
+**\<LinkedConfiguration >** элемент упрощает обслуживание сборки компонентов. Если один или несколько приложений используют сборку, которая имеет файл конфигурации, которая находится в хорошо известного расположения, можно использовать файлы конфигурации приложений, использующих сборку  **\<linkedConfiguration >** элемент для включения файла конфигурации сборки, вместо того чтобы включать сведения о конфигурации напрямую. При обслуживании сборки компонентов, обновление общего файла конфигурации предоставляет обновленные сведения о конфигурации для всех приложений, использующих сборку.
 
 > [!NOTE]
->  **\<LinkedConfiguration >** элемент не поддерживается для приложений с манифестами side-by-side Windows.
+> **\<LinkedConfiguration >** элемент не поддерживается для приложений с манифестами side-by-side Windows.
 
 Следующие правила определяют использование связанных файлов конфигурации:
 
@@ -65,7 +65,7 @@ None
 
 - Все связанные файлы конфигурации объединяются в один файл, аналогично поведению `#include` директив в C/C++.
 
--  **\<LinkedConfiguration >** элемент допускается только в файлах конфигурации приложения; он игнорируется в *Machine.config*.
+- **\<LinkedConfiguration >** элемент допускается только в файлах конфигурации приложения; он игнорируется в *Machine.config*.
 
 - Циклические ссылки обнаружены и удалены. То есть если  **\<linkedConfiguration >** элементы из ряда файлов конфигурации образуют цикл, цикл обнаруживается остановлена.
 
@@ -83,5 +83,5 @@ None
 
 ## <a name="see-also"></a>См. также
 
-- [**\<assemblyBinding >** элемент](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
+- [ **\<assemblyBinding >** элемент](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
 - [Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

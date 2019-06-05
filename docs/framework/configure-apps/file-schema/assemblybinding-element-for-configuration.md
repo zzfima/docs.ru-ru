@@ -18,8 +18,8 @@ ms.locfileid: "61674835"
 
 Определяет политику привязки сборок на уровне конфигурации.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<assemblyBinding >**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp; **\<assemblyBinding >**
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,20 +39,20 @@ ms.locfileid: "61674835"
 
 |     | Описание |
 | --- | ----------- |
-| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework. |
+| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework. |
 
 ## <a name="child-element"></a>Дочерний элемент
 
 |     | Описание |
 | --- | ----------- |
-| [**\<linkedConfiguration >**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | Указание файла конфигурации, который следует включить. |
+| [ **\<linkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | Указание файла конфигурации, который следует включить. |
 
 ## <a name="remarks"></a>Примечания
 
 [  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) элемент упрощает управление сборки компонентов, позволяя файлы конфигурации в файлах конфигурации приложения, чтобы включить сборку хорошо известного расположения, а не дублировать параметры конфигурации сборки.
 
 > [!NOTE]
->  **\<LinkedConfiguration >** элемент не поддерживается для приложений с манифестами side-by-side Windows.
+> **\<LinkedConfiguration >** элемент не поддерживается для приложений с манифестами side-by-side Windows.
 
 ## <a name="example"></a>Пример
 
