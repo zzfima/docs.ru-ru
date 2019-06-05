@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a785401f0477131e6ebf0e9c04ce6d0b0b4d4f5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dfc55bcd97a6c1d68d4ce900b19ace7356d6ee92
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517542"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378572"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (дизассемблер IL)
 
@@ -69,7 +69,7 @@ ildasm [options] [PEfilename] [options]
 |**/classlist**|Включает список классов, определенных в этом модуле.|
 |**/forward**|Использует прямое объявление класса.|
 |**/headers**|Включает сведения заголовка файла в выходные данные.|
-|**/item:** `class`[**::** `member`[`(sig`]]|В зависимости от заданных аргументов выполняет дизассемблирование:<br /><br /> дизассемблируется указанный `class`;<br />дизассемблируется указанный член `member` этого класса `class`;<br />дизассемблируется член `member` класса `class` с указанной сигнатурой `sig`. Формат `sig` выглядит следующим образом:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Примечание.** В .NET Framework версий 1.0 и 1.1 за атрибутом `sig` должна следовать закрывающая скобка: `(sig)`. В .NET Framework 2.0 и последующих версиях закрывающая скобка должна быть опущена: `(sig`.|
+|**/item:** `class`[ **::** `member`[`(sig`]]|В зависимости от заданных аргументов выполняет дизассемблирование:<br /><br /> дизассемблируется указанный `class`;<br />дизассемблируется указанный член `member` этого класса `class`;<br />дизассемблируется член `member` класса `class` с указанной сигнатурой `sig`. Формат `sig` выглядит следующим образом:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Примечание.** В .NET Framework версий 1.0 и 1.1 за атрибутом `sig` должна следовать закрывающая скобка: `(sig)`. В .NET Framework 2.0 и последующих версиях закрывающая скобка должна быть опущена: `(sig`.|
 |**/noil**|Подавляет вывод кода сборки IL.|
 |**/stats**|Включает статистику по образу.|
 |**/typelist**|Создает полный список типов, чтобы сохранить упорядочение типов в круговом пути.|
@@ -111,7 +111,7 @@ ildasm [options] [PEfilename] [options]
 
 ## <a name="version-information"></a>Сведения о версии
 
-Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] программа *Ildasm.exe* обрабатывает нераспознанный маршалинговый объект BLOB (большой двоичный объект), отображая необработанное двоичное содержимое. В следующем примере показано, как отображается маршалинговый объект BLOB, созданный программой C#:
+Начиная с .NET Framework 4.5 программа *Ildasm.exe* обрабатывает нераспознанный маршалинговый объект BLOB (большой двоичный объект), отображая необработанное двоичное содержимое. В следующем примере показано, как отображается маршалинговый объект BLOB, созданный программой C#:
 
 ```csharp
 public void Test([MarshalAs((short)70)] int test) { }
@@ -122,7 +122,7 @@ public void Test([MarshalAs((short)70)] int test) { }
 .method public hidebysig instance void Test(int32  marshal({ 46 }) test) cil managed
 ```
 
-Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] программа *Ildasm.exe* отображает атрибуты, применяемые к реализации интерфейса, как показано в следующем фрагменте выходных данных *Ildasm.exe*:
+Начиная с .NET Framework 4.5 программа *Ildasm.exe* отображает атрибуты, применяемые к реализации интерфейса, как показано в следующем фрагменте выходных данных *Ildasm.exe*:
 
 ```
 .class public auto ansi beforefieldinit MyClass

@@ -2,12 +2,12 @@
 title: Реализация повторных попыток вызова HTTP с экспоненциальной выдержкой с помощью библиотеки Polly
 description: Узнайте, как обрабатывать сбои HTTP-запросов с помощью Polly и HttpClientFactory.
 ms.date: 01/07/2019
-ms.openlocfilehash: 9ffb0d918dc2efdc41d6c2db2e2141d14061b687
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: aa500b5525eff9f0bbf91bf98de8945f7c84704f
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053105"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301479"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Реализация повторных попыток вызова HTTP с экспоненциальной выдержкой с помощью HttpClientFactory и политик Polly
 
@@ -69,16 +69,16 @@ Policy
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-- **Шаблон повтора**\
+- **Шаблон повтора**  
   [https://docs.microsoft.com/azure/architecture/patterns/retry](/azure/architecture/patterns/retry)
 
-- **Использование Polly и HttpClientFactory**\
+- **Использование Polly и HttpClientFactory**  
   <https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory>
 
-- **Polly (библиотека для обеспечения отказоустойчивости .NET и обработки временных сбоев)** \
+- **Polly (библиотека для обеспечения отказоустойчивости .NET и обработки временных сбоев)**  
   <https://github.com/App-vNext/Polly>
 
-- **Марк Брукер (Marc Brooker). Колебания. Оптимизация с помощью случайности**\
+- **Марк Брукер (Marc Brooker). Колебания. Оптимизация с помощью случайности**  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
 
 >[!div class="step-by-step"]

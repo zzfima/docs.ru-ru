@@ -1,36 +1,31 @@
 ---
-title: + Оператор. Справочник по C#
+title: + и += (операторы) — справочник по C#
 ms.custom: seodec18
-ms.date: 10/22/2018
+ms.date: 05/24/2019
 f1_keywords:
 - +_CSharpKeyword
+- +=_CSharpKeyword
 helpviewer_keywords:
-- + operator [C#]
-- concatenation operator [C#]
 - addition operator [C#]
+- concatenation operator [C#]
+- delegate combination [C#]
+- + operator [C#]
+- addition assignment operator [C#]
+- event subscription [C#]
+- += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 0f04ba837f9c03107acd0b2174cbd07c14a8c213
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: d03743bad47c60925462d027d18445047ebc0fc9
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504474"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300117"
 ---
-# <a name="-operator-c-reference"></a>Оператор + (справочник по C#)
+# <a name="-and--operators-c-reference"></a>+ и += (операторы) (справочник по C#)
 
-Оператор `+` поддерживается в двух формах: унарный оператор сложения или бинарный оператор сложения.
+Оператор `+` поддерживается встроенными числовыми типами, типом [string](../keywords/string.md) и типами [delegate](../keywords/delegate.md).
 
-## <a name="unary-plus-operator"></a>Оператор унарного сложения
-
-Унарный оператор `+` возвращает значение полученного операнда. Он поддерживается всеми числовыми типами данных.
-
-## <a name="numeric-addition"></a>Арифметическое сложение
-
-Для числовых типов оператор `+` вычисляет сумму двух операндов:
-
-[!code-csharp-interactive[numeric addition](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddNumerics)]
-
-Дополнительные сведения об арифметических операторах см. в разделе [Арифметические операторы](arithmetic-operators.md).
+Сведения об арифметическом операторе `+` см. в разделе [Операторы унарного плюса и минуса](arithmetic-operators.md#unary-plus-and-minus-operators) и [Оператор сложения +](arithmetic-operators.md#addition-operator-) в статье [Арифметические операторы](arithmetic-operators.md).
 
 ## <a name="string-concatenation"></a>Объединение строк
 
@@ -44,15 +39,37 @@ ms.locfileid: "58504474"
 
 ## <a name="delegate-combination"></a>Объединение делегатов
 
-Для типов [делегата](../keywords/delegate.md) оператор `+` возвращает новый экземпляр делегата, при вызове которого вызывается сначала первый, а затем второй операнд. Если какой-либо из операндов имеет значение `null`, оператор `+` возвращает значение другого операнда (это тоже может быть `null`). Следующий пример демонстрирует объединение делегатов с помощью оператора `+`:
+Для операндов того же типа [delegate](../keywords/delegate.md) оператор `+` возвращает новый экземпляр делегата, при вызове которого вызывается сначала первый, а затем второй операнд. Если какой-либо из операндов имеет значение `null`, оператор `+` возвращает значение другого операнда (это тоже может быть `null`). Следующий пример демонстрирует объединение делегатов с помощью оператора `+`:
 
 [!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
 
 См. дополнительные сведения о [типах делегатов](../../programming-guide/delegates/index.md).
 
+## <a name="addition-assignment-operator-"></a>Оператор присваивания сложения (+=)
+
+Выражение, использующее оператор `+=`, такое как
+
+```csharp
+x += y
+```
+
+эквивалентно
+
+```csharp
+x = x + y
+```
+
+за исключением того, что `x` вычисляется только один раз.
+  
+В следующем примере иллюстрируется использование оператора `+=`.
+
+[!code-csharp-interactive[+= examples](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddAndAssign)]
+
+Можно также использовать оператор `+=`, который позволяет указать метод обработчика событий при подписке на [событие](../keywords/event.md). Дополнительные сведения см. в разделе [Практическое руководство. Подписка и отмена подписки на события](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+
 ## <a name="operator-overloadability"></a>Возможность перегрузки оператора
 
-Пользовательские типы могут [перегружать](../keywords/operator.md) унарный и бинарный операторы `+`. При перегрузке бинарного оператора `+` неявно перегружается и соответствующий [оператор присвоения сложения](addition-assignment-operator.md) `+=`.
+Определяемый пользователем тип может [перегружать](../keywords/operator.md) оператор `+`. При перегрузке бинарного оператора `+` неявно перегружается и соответствующий оператор `+=`. Определяемый пользователем тип не может перегружать оператор `+=` явным образом.
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
@@ -66,4 +83,7 @@ ms.locfileid: "58504474"
 - [Интерполяция строк](../tokens/interpolated.md)
 - [Практическое руководство. Сцепка нескольких строк](../../how-to/concatenate-multiple-strings.md)
 - [Делегаты](../../programming-guide/delegates/index.md)
+- [События](../../programming-guide/events/index.md)
 - [Инструкции checked и unchecked](../keywords/checked-and-unchecked.md)
+- [Арифметические операторы](arithmetic-operators.md)
+- [Операторы - и -=](subtraction-operator.md)

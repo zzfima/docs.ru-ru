@@ -6,18 +6,18 @@ ms.date: 08/23/2018
 helpviewer_keywords:
 - constructors [C#], return values
 - keywords [C#], new
-- default constructor [C#]
+- parameterless constructor [C#]
 - defaults [C#]
 - value types [C#], initializing
 - variables [C#], value types
-- constructors [C#], default constructor
-- types [C#], default constructor return values
-ms.openlocfilehash: 19e9e4f94ab573f2313c185a08192d89103b98fd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+- constructors [C#], parameterless constructor
+- types [C#], parameterless constructor return values
+ms.openlocfilehash: 4fc9a35f69540e047a97c21788015ca8e54068a0
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237042"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422030"
 ---
 # <a name="default-values-table-c-reference"></a>Таблица значений по умолчанию (справочник по C#)
 
@@ -57,7 +57,7 @@ int a = default(int);
 int a = default;
 ```
 
-Также можно использовать конструктор по умолчанию или неявный конструктор по умолчанию, чтобы получить значение по умолчанию для типа значения, как показано в следующем примере. Дополнительные сведения о конструкторах см. в статье [Конструкторы](../../programming-guide/classes-and-structs/constructors.md).
+Также можно использовать конструктор без параметров или неявный конструктор без параметров, чтобы получить значение по умолчанию для типа значения, как показано в следующем примере. Дополнительные сведения о конструкторах см. в статье [Конструкторы](../../programming-guide/classes-and-structs/constructors.md).
 
 ```csharp
 int a = new int();
@@ -70,7 +70,6 @@ int a = new int();
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Ключевые слова в C#](index.md)
-- [Справочные таблицы по типам](reference-tables-for-types.md)
 - [Типы значений](value-types.md)
 - [Таблица типов значений](value-types-table.md)
 - [Таблица встроенных типов](built-in-types-table.md)

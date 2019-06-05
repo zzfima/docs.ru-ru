@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da29bd6bc53b59f1f20e2272a8293b49e230bff0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 996ea7802473817594420a108470f7604170482e
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622869"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456807"
 ---
 # <a name="garbage-collection-and-performance"></a>Сборка мусора и производительность
 <a name="top"></a> В этом разделе описаны вопросы, связанные со сборкой мусора и использованием памяти. Здесь рассматриваются проблемы, относящиеся к управляемой куче, и объясняется, как свести к минимуму влияние сборки мусора на работу приложений. Для каждого аспекта приводятся ссылки на процедуры, которые можно использовать для анализа проблем.  
@@ -61,7 +61,7 @@ ms.locfileid: "64622869"
  Профилировщики могут предоставлять исчерпывающую информацию. Однако сложные профилировщики потенциально могут менять поведение приложения.  
   
 ### <a name="application-domain-resource-monitoring"></a>Отслеживание ресурсов домена приложения  
- Начиная с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], функция отслеживания ресурсов домена приложения (ARM) позволяет узлам отслеживать загрузку ЦП и использование памяти доменом приложения. Дополнительные сведения см. в разделе [Отслеживание ресурсов домена приложения](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).  
+ Начиная с .NET Framework 4 функция отслеживания ресурсов домена приложения (ARM) позволяет узлам отслеживать загрузку ЦП и использование памяти доменом приложения. Дополнительные сведения см. в разделе [Отслеживание ресурсов домена приложения](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).  
   
  [К началу](#top)  
   

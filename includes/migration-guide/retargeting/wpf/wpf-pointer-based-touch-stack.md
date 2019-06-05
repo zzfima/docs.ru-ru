@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3463b6c45952aab0023e40921739e84eb51ca001
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bb3d7c1afa9e506ffc7c6d068c48428d1e66ccb6
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804922"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379457"
 ---
 ### <a name="wpf-pointer-based-touch-stack"></a>Стек сенсорного управления WPF на основе указателя
 

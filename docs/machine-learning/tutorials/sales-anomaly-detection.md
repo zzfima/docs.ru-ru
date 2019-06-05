@@ -1,15 +1,15 @@
 ---
 title: Использование ML.NET в сценарии обнаружения аномалий по продажам
 description: Узнайте, как использовать ML.NET в сценарии обнаружения аномалий при продаже продукта, чтобы понять, как анализировать данные на предмет пиковых аномалий и точек изменений для принятия соответствующих мер.
-ms.date: 05/06/2019
+ms.date: 05/29/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 39e812facccfa75d1643704f8960a387a70c94bc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d31765aa4ff2a0be9c4f140f33de1f5678fc7612
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641149"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423942"
 ---
 # <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>Учебник. Использование ML.NET для обнаружения аномалий при продаже продукта 
 
@@ -173,7 +173,7 @@ static void DetectSpike(MLContext mlContext, int docSize, IDataView productSales
 
 [!code-csharp[AddSpikeTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddSpikeTrainer)]
 
-Обучите модель на основе данных `productSales` и получите обученную модель, добавив в метод `DetectSpike()` следующие строки кода:
+Обучите модель на основе данных `productSales`, добавив следующую строку кода в метод `DetectSpike()`:
 
 [!code-csharp[TrainModel1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel1)]
 
@@ -283,7 +283,7 @@ static void DetectChangepoint(MLContext mlContext, int docSize, IDataView produc
 
 [!code-csharp[AddChangepointTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddChangepointTrainer)]
 
-Как и ранее, обучите модель на основе данных `productSales` и получите обученную модель, добавив в метод `DetectChangePoint()` следующие строки кода:
+Как и раньше, обучите модель на основе данных `productSales`, добавив следующую строку кода в метод `DetectChangePoint()`:
 
 [!code-csharp[TrainModel2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel2)]
 

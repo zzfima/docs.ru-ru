@@ -1,40 +1,80 @@
 ---
-title: '- Справочник по C#. Оператор -'
+title: '- и -= (операторы) – справочник по C#'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 05/27/2019
 f1_keywords:
 - -_CSharpKeyword
+- -=_CSharpKeyword
 helpviewer_keywords:
+- subtraction operator [C#]
+- delegate removal [C#]
 - '- operator [C#]'
-- subtraction operator (-) [C#]
+- subtraction assignment operator [C#]
+- event unsubscription [C#]
+- -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 920981addd5c779c9ad1c666ef45e1de5cd23408
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9f43a863de69122e251204668af2ea989fcc993c
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633005"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300092"
 ---
-# <a name="--operator-c-reference"></a>Справочник по C#. Оператор -
+# <a name="--and---operators-c-reference"></a>- и -= (операторы) (справочник по C#)
 
-Оператор `-` может функционировать как унарный или как бинарный оператор.
+Оператор `-` поддерживается встроенными числовыми типами и типами [delegate](../keywords/delegate.md).
 
-## <a name="remarks"></a>Примечания
+Сведения об арифметическом операторе `-` см. в разделе [Операторы унарного плюса и минуса](arithmetic-operators.md#unary-plus-and-minus-operators) и [Оператор вычитания -](arithmetic-operators.md#subtraction-operator--) в статье [Арифметические операторы](arithmetic-operators.md).
 
-Унарные операторы `-` предварительно определены для всех числовых типов. Результатом использования унарного оператора `-` для числового типа является числовое отрицание операнда.
+## <a name="delegate-removal"></a>Удаление делегатов
 
-Бинарные операторы `-`, предопределенные для всех числовых типов и типов перечисления, обеспечивают вычитание второго операнда из первого.
+Для операндов одного и того же типа [delegate](../keywords/delegate.md) оператор `-` возвращает экземпляр делегата, который вычисляется следующим образом:
 
-Для типов делегатов также используется бинарный оператор `-`, который выполняет удаление делегатов.
+- Если оба операнда не равны NULL и список вызовов второго операнда является соответствующим подсписком списка вызовов первого операнда, результатом операции является новый список вызовов, который получается путем удаления записей второго операнда из списка вызовов первого операнда. Если список второго операнда соответствует нескольким смежным подспискам в списке первого операнда, удаляется только крайний правый совпадающий подсписок. Если удаление приводит к пустому списку, возвращается `null`.
+- Если список вызовов второго операнда не является соответствующим смежным подсписком списка вызовов первого операнда, результатом операции является первый операнд.
+- Если первый операнд — `null`, результатом операции является `null`. Если второй операнд — `null`, результатом операции является первый операнд.
 
-Пользовательские типы могут перегружать унарный оператор `-` и бинарный оператор `-`. См. дополнительные о [ключевом слове operator](../keywords/operator.md).
+В следующем примере показано, как операция `-` выполняет удаление делегатов:
 
-## <a name="example"></a>Пример
+[!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
 
-[!code-csharp[csRefOperators#40](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#40)]
+## <a name="subtraction-assignment-operator--"></a>Оператор присваивания вычитания (-=)
+
+Выражение, использующее оператор `-=`, такое как
+
+```csharp
+x -= y
+```
+
+эквивалентно
+
+```csharp
+x = x - y
+```
+
+за исключением того, что `x` вычисляется только один раз.
+  
+В следующем примере иллюстрируется использование оператора `-=`.
+
+[!code-csharp-interactive[-= examples](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#SubtractAndAssign)]
+
+Можно также использовать оператор `-=`, который позволяет указать метод обработчика событий для удаления при отмене подписки на [событие](../keywords/event.md). Дополнительные сведения см. в разделе [Практическое руководство. Подписка и отмена подписки на события](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+
+## <a name="operator-overloadability"></a>Возможность перегрузки оператора
+
+Определяемый пользователем тип может [перегружать](../keywords/operator.md) оператор `-`. При перегрузке бинарного оператора `-` неявно перегружается и соответствующий оператор `-=`. Определяемый пользователем тип не может перегружать оператор `-=` явным образом.
+
+## <a name="c-language-specification"></a>Спецификация языка C#
+
+Дополнительные сведения см. в разделе [Оператор унарного минуса](~/_csharplang/spec/expressions.md#unary-minus-operator) и [Оператор вычитания](~/_csharplang/spec/expressions.md#subtraction-operator) в [спецификации языка C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>См. также
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Операторы в C#](index.md)
+- [Делегаты](../../programming-guide/delegates/index.md)
+- [События](../../programming-guide/events/index.md)
+- [Инструкции checked и unchecked](../keywords/checked-and-unchecked.md)
+- [Арифметические операторы](arithmetic-operators.md)
+- [Операторы + и +=](addition-operator.md)

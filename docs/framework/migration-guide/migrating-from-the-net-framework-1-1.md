@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c683ce454e4db36367cb097371427d27dc4c555
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c43e17edf5795874d8b92db659f07e8f6ec3c30a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636347"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457245"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>Миграция из .NET Framework 1.1
 
@@ -62,10 +62,10 @@ ms.locfileid: "65636347"
 
 - В документе[Изменения в .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkID=186989) перечислены различия между [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] и [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)].
 
-- В документе о [проблемах при миграции на .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) перечислены различия между [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] и [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].
+- В документе о [проблемах при миграции на .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) перечислены различия между [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] и .NET Framework 4.
 
 ## <a name="obsolete-types-and-members"></a>Устаревшие типы и члены
 
 Нерекомендуемые типы и члены несколько по-разному влияют на перенацеленные и перекомпилированные приложения. Устаревший тип или член не будет влиять на перенацеленное приложение, если он физически не удален из его сборки. При перекомпиляции приложения, в котором используются устаревшие типы или члены, обычно появляется предупреждение компилятора, а не ошибка. Однако в некоторых случаях при такой перекомпиляции возникает ошибка компилятора, и код, в котором используется устаревший тип или член, не компилируется успешно. В этом случае перед перекомпиляцией приложения необходимо переписать исходный код, в котором вызывается устаревший тип или член. Дополнительные сведения об устаревших типах и членах см. в статье [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md).
 
-Чтобы оценить влияние типов и членов, не рекомендованных к использованию после выпуска [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], см. статью [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md). Просмотрите списки устаревших типов и членов для [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] и [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].
+Чтобы оценить влияние типов и членов, не рекомендованных к использованию после выпуска [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], см. статью [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md). Просмотрите списки устаревших типов и членов для [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] и .NET Framework 4.

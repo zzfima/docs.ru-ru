@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2abbe121879e5f47fbce9a82d2afbf52cbef4ba9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 28e9aab575876d425112c08b59b9cfc44a8c09a7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636629"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379939"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Ошибки инициализации платформы .NET Framework: управление пользовательской средой
 
@@ -75,21 +75,21 @@ Windows предоставляет функцию [SetErrorMode](https://go.micr
 |--------------|-----------------|--------------------------|------------------------------------|
 |Узел управляемых EXE-файлов|Запускает управляемые EXE-файлы.|Отображается в случае отсутствия версии платформы .NET Framework|Нет|
 |Узел управляемого COM|Загружает управляемые компоненты COM в процесс.|Отображается в случае отсутствия версии платформы .NET Framework|Да, установив флаг SEM_FAILCRITICALERRORS|
-|Узел ClickOnce|Запускает приложения ClickOnce.|Отображается в случае отсутствия версии платформы .NET Framework, начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Нет|
-|Узел XBAP|Запускает приложения WPF XBAP.|Отображается в случае отсутствия версии платформы .NET Framework, начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|Нет|
+|Узел ClickOnce|Запускает приложения ClickOnce.|Отображается в случае отсутствия версии платформы .NET Framework начиная с .NET Framework 4.5|Нет|
+|Узел XBAP|Запускает приложения WPF XBAP.|Отображается в случае отсутствия версии платформы .NET Framework начиная с .NET Framework 4.5|Нет|
 
 ## <a name="windows-8-behavior-and-ui"></a>Поведение и пользовательский интерфейс Windows 8
 
-Система активации CLR обеспечивает такое же поведение и пользовательского интерфейса в [!INCLUDE[win8](../../../includes/win8-md.md)], как и в других версиях операционной системы Windows, за исключением случаев возникновения проблем при загрузке CLR 2.0. В [!INCLUDE[win8](../../../includes/win8-md.md)] входит платформа [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], использующая среду CLR 4.5. Но [!INCLUDE[win8](../../../includes/win8-md.md)] не включает в себя .NET Framework 2.0, 3.0 или 3.5, где используется среда CLR 2.0. В результате приложения, зависящие от среды CLR 2.0, по умолчанию не будут работать в [!INCLUDE[win8](../../../includes/win8-md.md)]. Вместо этого выводится следующее диалоговое окно, позволяющее установить платформу .NET Framework 3.5. Пользователи также могут включить платформу .NET Framework 3.5 из панели управления. Обе возможности рассматриваются в статье [Установка платформы .NET Framework 3.5 в Windows 10, Windows 8.1 и Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md).
+Система активации CLR обеспечивает такое же поведение и пользовательского интерфейса в [!INCLUDE[win8](../../../includes/win8-md.md)], как и в других версиях операционной системы Windows, за исключением случаев возникновения проблем при загрузке CLR 2.0. [!INCLUDE[win8](../../../includes/win8-md.md)] включает в себя .NET Framework 4.5, использующий среду CLR 4.5. Но [!INCLUDE[win8](../../../includes/win8-md.md)] не включает в себя .NET Framework 2.0, 3.0 или 3.5, где используется среда CLR 2.0. В результате приложения, зависящие от среды CLR 2.0, по умолчанию не будут работать в [!INCLUDE[win8](../../../includes/win8-md.md)]. Вместо этого выводится следующее диалоговое окно, позволяющее установить платформу .NET Framework 3.5. Пользователи также могут включить платформу .NET Framework 3.5 из панели управления. Обе возможности рассматриваются в статье [Установка платформы .NET Framework 3.5 в Windows 10, Windows 8.1 и Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md).
 
 ![Диалоговое окно для установки версии 3.5 в Windows 8](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "Запрос на установку .NET Framework 3.5 по запросу")
 
 > [!NOTE]
-> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] заменяет .NET Framework 4 (среда CLR 4) на компьютере пользователя. Поэтому приложения платформы .NET Framework версии 4 без проблем выполняются в [!INCLUDE[win8](../../../includes/win8-md.md)] без отображения этого диалогового окна.
+> .NET Framework 4.5 заменяет .NET Framework 4 (среда CLR 4) на компьютере пользователя. Поэтому приложения платформы .NET Framework версии 4 без проблем выполняются в [!INCLUDE[win8](../../../includes/win8-md.md)] без отображения этого диалогового окна.
 
 В случае установки .NET Framework 3.5 пользователи могут запускать на своих компьютерах с [!INCLUDE[win8](../../../includes/win8-md.md)] приложения, которые зависят от платформ .NET Framework 2.0, 3.0 или 3.5. Они также могут запускать приложения платформы .NET Framework 1.0 и 1.1, если эти приложения не настроены явным образом для запуска только на платформе .NET Framework 1.0 или 1.1. См. раздел [Миграция с платформы .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md).
 
-Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], ведение журналов активации среды CLR было улучшено для включения записи журнала, которые записывают, когда и почему было отображено сообщение об ошибке инициализации. Дополнительные сведения см. в разделе [Практическое руководство. Отладка проблем при активации среды CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).
+Начиная с .NET Framework 4.5 ведение журналов активации среды CLR было улучшено для включения записей журнала, которые регистрируют, когда и почему было отображено сообщение об ошибке инициализации. Дополнительные сведения см. в разделе [Практическое руководство. Отладка проблем при активации среды CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).
 
 ## <a name="see-also"></a>См. также
 

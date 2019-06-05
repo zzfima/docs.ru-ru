@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9cad5b24af86afdb1f3894dc124362fed732e93
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0e836329527740d490bc3ad96cd62d56bc0b7b3e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628888"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377741"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Использование асинхронного шаблона, основанного на задачах
 
 При работе асинхронными операциями с использованием асинхронного шаблона, основанного на задачах, можно использовать обратные вызовы для реализации неблокирующего ожидания.  Для задач это достигается с помощью таких методов, как <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. Поддержка асинхронных операций на основе языка скрывает обратные вызовы, разрешая асинхронным операциям находиться в режиме ожидания в нормальном потоке управления, а код, созданный компилятором, предоставляет поддержку на том же уровне API.
 
 ## <a name="suspending-execution-with-await"></a>Приостановление выполнения с помощью Await
- Начиная с версии [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], для асинхронного ожидания объектов <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> можно использовать ключевое слово [await](~/docs/csharp/language-reference/keywords/await.md) (в C#) и [оператор Await](~/docs/visual-basic/language-reference/operators/await-operator.md) (в Visual Basic). Когда вы ожидаете <xref:System.Threading.Tasks.Task>, выражение `await` имеет тип `void`. Когда вы ожидаете <xref:System.Threading.Tasks.Task%601>, выражение `await` имеет тип `TResult`. Выражение `await` должно находиться в теле асинхронного метода. Дополнительные сведения о поддержке языков C# и Visual Basic в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] см. в спецификациях языка C# и Visual Basic.
+ Начиная с версии .NET Framework 4.5 для асинхронного ожидания объектов <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> можно использовать ключевое слово [await](~/docs/csharp/language-reference/keywords/await.md) (в C#) и [оператор Await](~/docs/visual-basic/language-reference/operators/await-operator.md) (в Visual Basic). Когда вы ожидаете <xref:System.Threading.Tasks.Task>, выражение `await` имеет тип `void`. Когда вы ожидаете <xref:System.Threading.Tasks.Task%601>, выражение `await` имеет тип `TResult`. Выражение `await` должно находиться в теле асинхронного метода. Дополнительные сведения о поддержке языков C# и Visual Basic в .NET Framework 4.5 см. в спецификациях языка C# и Visual Basic.
 
  На самом деле функция ожидания реализуется с помощью установки обратного вызова для задачи с помощью продолжения.  Этот обратный вызов возобновляет асинхронный методы в точке остановки. При возобновлении асинхронного метода, если ожидаемая операция была завершена успешно и имела тип <xref:System.Threading.Tasks.Task%601>, возвращается ее значение `TResult`.  Если ожидаемая операция <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601> завершилась с состоянием <xref:System.Threading.Tasks.TaskStatus.Canceled>, создается исключение <xref:System.OperationCanceledException>.  Если ожидаемая операция <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601> завершилась с состоянием <xref:System.Threading.Tasks.TaskStatus.Faulted>, создается вызвавшее эту проблему исключение. `Task` может завершиться с ошибкой из-за нескольких исключений, но распространяется только одно из этих исключений. Тем не менее, свойство <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> возвращает исключение <xref:System.AggregateException> с полным списком ошибок.
 
@@ -833,7 +833,7 @@ private static void Produce(int data)
 ```
 
 > [!NOTE]
-> Пространство имен <xref:System.Threading.Tasks.Dataflow> доступно в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] через **NuGet**. Чтобы установить сборку, которая содержит пространство имен <xref:System.Threading.Tasks.Dataflow>, откройте проект в Visual Studio, в меню "Проект" выберите пункт **Управление пакетами NuGet** и найдите в Интернете пакет Microsoft.Tpl.Dataflow.
+> Пространство имен <xref:System.Threading.Tasks.Dataflow> доступно в .NET Framework 4.5 через **NuGet**. Чтобы установить сборку, которая содержит пространство имен <xref:System.Threading.Tasks.Dataflow>, откройте проект в Visual Studio, в меню "Проект" выберите пункт **Управление пакетами NuGet** и найдите в Интернете пакет Microsoft.Tpl.Dataflow.
 
 ## <a name="see-also"></a>См. также
 

@@ -3,12 +3,12 @@ title: Интерполяция строк в C#
 description: Узнайте, как включить форматированные результаты выражения в строку результатов в C# с интерполяцией строк.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 068a30bdcb96140787a38e9ae52f9c62d8a57c96
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2990298821fddc8a69430a4cf4bb5e3dd9df314d
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063245"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251030"
 ---
 # <a name="string-interpolation-in-c"></a>Интерполяция строк на C\#
 
@@ -27,17 +27,17 @@ ms.locfileid: "65063245"
 Как показано в примере, можно включить выражение в интерполированную строку, заключив его в фигурные скобки:
 
 ```
-{<interpolatedExpression>}
+{<interpolationExpression>}
 ```
 
 Интерполированные строки поддерживают все возможности [составного форматирования строк](../../standard/base-types/composite-formatting.md). Это делает их более удобочитаемыми по сравнению с использованием метода <xref:System.String.Format%2A?displayProperty=nameWithType>.
 
-## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>Как указать строку формата для интерполированного выражения
+## <a name="how-to-specify-a-format-string-for-an-interpolation-expression"></a>Как указать строку формата для выражения интерполяции
 
-Задайте строку формата, которая поддерживается типом результата выражения, указав ее после интерполированного выражения через двоеточие:
+Задайте строку формата, которая поддерживается типом результата выражения, указав ее после выражения интерполяции через двоеточие:
 
 ```
-{<interpolatedExpression>:<formatString>}
+{<interpolationExpression>:<formatString>}
 ```
 
 В следующем примере показано, как задать стандартные и настраиваемые строки формата для выражений, возвращающих дату и время или числовые результаты:
@@ -46,12 +46,12 @@ ms.locfileid: "65063245"
 
 Дополнительные сведения см. в разделе [Компонент строки формата](../../standard/base-types/composite-formatting.md#format-string-component) в статье [Составное форматирование](../../standard/base-types/composite-formatting.md). Этот раздел содержит ссылки на разделы, описывающие стандартные и настраиваемые строки формата, поддерживаемые базовыми типами .NET.
 
-## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a>Управление шириной поля и выравниванием в форматированных интерполированных выражениях
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolation-expression"></a>Управление шириной поля и выравниванием в форматированных выражениях интерполяции
 
-Задайте минимальную ширину поля и выравнивание форматированного результата выражения, указав константное выражение после интерполированного выражения через запятую:
+Задайте минимальную ширину поля и выравнивание форматированного результата выражения, указав константное выражение после выражения интерполяции через запятую:
 
 ```
-{<interpolatedExpression>,<alignment>}
+{<interpolationExpression>,<alignment>}
 ```
 
 Если значение *alignment* положительное, форматированное выражение будет выровнено по правому краю, а если отрицательное — по левому.
@@ -59,7 +59,7 @@ ms.locfileid: "65063245"
 Если вам нужно задать и выравнивание, и строку формата, начните с компонента выравнивания:
 
 ```
-{<interpolatedExpression>,<alignment>:<formatString>}
+{<interpolationExpression>,<alignment>:<formatString>}
 ```
 
 В следующем примере показано, как задать выравнивание. Текстовые поля разграничены символом вертикальной черты ("|"):
@@ -82,9 +82,9 @@ ms.locfileid: "65063245"
 
 [!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
 
-## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a>Как использовать троичный условный оператор `?:` в интерполированном выражении
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolation-expression"></a>Как использовать троичный условный оператор `?:` в выражении интерполяции
 
-Двоеточие (:) имеет особое значение в элементе интерполированного выражения. Чтобы использовать [условный оператор](../language-reference/operators/conditional-operator.md) в выражении, заключите это выражение в скобки, как показано в следующем примере:
+Двоеточие (:) имеет особое значение в элементе выражения интерполяции. Чтобы использовать [условный оператор](../language-reference/operators/conditional-operator.md) в выражении, заключите это выражение в скобки, как показано в следующем примере:
 
 [!code-csharp-interactive[conditional operator example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#5)]
 

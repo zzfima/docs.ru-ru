@@ -1,7 +1,7 @@
 ---
 title: Рекомендации по использованию строк в .NET
 description: Узнайте, как эффективно использовать строки в приложениях .NET.
-ms.date: 09/13/2018
+ms.date: 05/01/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 82fdcae2887cf5a3428a0c874b43d9770f35afcf
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 68bcc9321d5a97620d0e8d24befbd24f4f350f94
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052996"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250821"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Рекомендации по использованию строк в .NET
 <a name="top"></a> .NET предоставляет широкие возможности для разработки локализованных и глобализованных приложений и позволяет легко применять правила для текущего или какого-то определенного языка и региональных параметров при выполнении типичных операций, таких как сортировка и отображение строк. Однако сортировка и сравнение строк не всегда выполняется с учетом языка и региональных параметров. Например, строки, которые используются внутри приложения, как правило, должны обрабатываться одинаково независимо от выбранного языка и региональных параметров. Если независимые от языка и региональных параметров строковые данные, такие как теги XML, теги HTML, имена пользователей, пути к файлам и имена системных объектов, интерпретируются как зависимые от языка и региональных параметров, в коде приложения могут возникать незначительные ошибки, может наблюдаться низкая производительность, а в некоторых случаях и проблемы безопасности.  
@@ -69,7 +69,7 @@ ms.locfileid: "66052996"
   
 - Используйте методы <xref:System.String.Compare%2A?displayProperty=nameWithType> и <xref:System.String.CompareTo%2A?displayProperty=nameWithType> для сортировки строк, но не для проверки их равенства.  
   
-- Используйте форматирование с учетом языка и региональных параметров для отображения нестроковых данных, например чисел и дат, в пользовательском интерфейсе. Для сохранения нестроковых данных в строковой форме используйте форматирование инвариантного языка и региональных параметров.  
+- Используйте форматирование с учетом языка и региональных параметров для отображения нестроковых данных, например чисел и дат, в пользовательском интерфейсе. Для сохранения нестроковых данных в строковой форме используйте форматирование [инвариантного языка и региональных параметров](xref:System.Globalization.CultureInfo.InvariantCulture).  
   
  При использовании строк избегайте следующих действий.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66052996"
 > [!NOTE]
 > Можно скачать [таблицы коэффициентов сортировки](https://www.microsoft.com/download/details.aspx?id=10921) — набор текстовых файлов, которые содержат сведения о весовых коэффициентах символов, используемых в операциях сортировки и сравнения для операционных систем Windows, а также последнюю версию [таблицы параметров сортировки по умолчанию для элементов Юникод](https://www.unicode.org/Public/UCA/latest/allkeys.txt) — таблицу весовых коэффициентов сортировки для Linux и macOS. Конкретная версия таблицы коэффициентов сортировки в Linux и macOS зависит от установленной в системе версии библиотек [International Components for Unicode](http://site.icu-project.org/) (ICU). Сведения о версиях ICU и реализуемых в них версиях Юникода см. на странице [Downloading ICU](http://site.icu-project.org/download) (Скачивание ICU).
 
- Однако оценка двух строк на равенство или порядок сортировки не дает единственно верного результата; результат также зависит от критериев, используемых для сравнения строк. В частности, операции сравнения строк, которые являются порядковыми или основаны на правилах учета регистра или сортировки текущего языка и региональных параметров или инвариантного языка и региональных параметров (независимые от языкового стандарта региональные параметры на основе английского языка), могут давать разные результаты.  
+ Однако оценка двух строк на равенство или порядок сортировки не дает единственно верного результата; результат также зависит от критериев, используемых для сравнения строк. В частности, операции сравнения строк, которые являются порядковыми или основаны на правилах учета регистра или сортировки текущего языка и региональных параметров или [инвариантного языка и региональных параметров](xref:System.Globalization.CultureInfo.InvariantCulture) (независимые от языкового стандарта региональные параметры на основе английского языка), могут давать разные результаты.  
 
 Кроме того, операции сравнения, которые выполняются в разных версиях .NET или с помощью .NET в разных операционных системах либо в разных версиях операционной системы, могут возвращать разные результаты. Дополнительные сведения см. в разделе [Строки и стандарт Юникода](xref:System.String#Unicode). 
 
@@ -348,10 +348,36 @@ ms.locfileid: "66052996"
  [К началу](#top)  
   
 <a name="Formatted"></a>   
-## <a name="displaying-and-persisting-formatted-data"></a>Отображение и сохранение форматированных данных  
- При отображении нестроковых данных, например чисел, дат и времени, пользователям следует форматировать их с использованием параметров языка и региональных параметров пользователя. По умолчанию метод <xref:System.String.Format%2A?displayProperty=nameWithType> и методы `ToString` числовых типов и типов даты и времени используют текущий язык потока для операций форматирования. Чтобы явно указать, что метод форматирования должен использовать текущий язык и региональные параметры, можно вызвать перегрузку метода форматирования, который имеет параметр `provider` , например <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> или <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>, и передать ему свойство <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> .  
-  
- Нестроковые данные можно сохранить в виде двоичных или форматированных данных. Если решено сохранять данные в виде форматированных, нужно вызвать перегрузку метода форматирования, которая включает параметр `provider` , и передать ей свойство <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> . Инвариантный язык и региональные параметры предоставляют согласованный формат для форматированных данных независимо от языка, региональных параметров и компьютера. Напротив, сохранение форматированных данных с использованием языков и региональных параметров, отличающихся от инвариантных, имеет ряд ограничений.  
+## <a name="displaying-and-persisting-formatted-data"></a>Отображение и сохранение форматированных данных
+
+При отображении нестроковых данных, например чисел, дат и времени, пользователям следует форматировать их с использованием параметров языка и региональных параметров пользователя. По умолчанию все следующие объекты используют текущий язык и региональные параметры потока в операциях форматирования:
+
+- Интерполированные строки, поддерживаемые компиляторами [C#](../../csharp/language-reference/tokens/interpolated.md) и [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
+
+- Строковые операции объединения, использующие операторы объединения [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) или [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ) или вызывающие метод <xref:System.String.Concat%2A?displayProperty=nameWithType> напрямую.
+
+- метод <xref:System.String.Format%2A?displayProperty=nameWithType> ;
+
+- Методы `ToString` числовых типов, а также типы даты и времени.
+
+Чтобы явно указать, что строка должна форматироваться с помощью правил заданного языка и региональных параметров или [инвариантного языка и региональных параметров](xref:System.Globalization.CultureInfo.InvariantCulture), можно сделать следующее:
+
+- При использовании методов <xref:System.String.Format%2A?displayProperty=nameWithType> и `ToString` вызовите перегрузку с параметром `provider`, например <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> или <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>, и передайте ему свойство <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>, экземпляр <xref:System.Globalization.CultureInfo>, представляющий требуемый язык и региональные параметры, или свойство <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType>.  
+
+- Для объединения строк не позволяйте компилятору выполнять неявные преобразования. Вместо этого выполните явное преобразование путем вызова перегрузки `ToString` с параметром `provider`. Например, компилятор неявно использует текущий язык и региональные параметры при преобразовании значения <xref:System.Double> в строку в следующем коде C#:
+
+  [!code-csharp[Implicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#1)]
+
+  Вместо этого можно явно указать язык и региональные параметры, соглашения о форматировании которых используются в преобразовании, вызвав метод <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType>, как показано в следующем коде C#:
+
+  [!code-csharp[Explicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#2)]
+
+- Для интерполяции строк вместо назначения интерполированной строки экземпляру <xref:System.String> назначьте его <xref:System.FormattableString>. Затем можно вызвать его метод <xref:System.FormattableString.ToString?displayProperty=nameWithType>, чтобы создать результирующую строку, отражающую правила для текущего языка и региональных параметров, либо можно вызвать метод <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType>, чтобы создать результирующую строку, отражающую правила для указанного языка и региональных параметров. Также можно передать форматируемую строку статическому методу <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType>, чтобы создать результирующую строку, отражающую правила для инвариантного языка и региональных параметров. Этот подход показан в приведенном ниже примере. (Выходные данные примера отражают текущий язык и региональные параметры en-US.)
+
+  [!code-csharp[String interpolation](~/samples/snippets/standard/base-types/string-practices/cs/formattable.cs)]
+  [!code-vb[String interpolation](~/samples/snippets/standard/base-types/string-practices/vb/formattable.vb)]
+
+Нестроковые данные можно сохранить в виде двоичных или форматированных данных. Если решено сохранять данные в виде форматированных, нужно вызвать перегрузку метода форматирования, которая включает параметр `provider` , и передать ей свойство <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> . Инвариантный язык и региональные параметры предоставляют согласованный формат для форматированных данных независимо от языка, региональных параметров и компьютера. Напротив, сохранение форматированных данных с использованием языков и региональных параметров, отличающихся от инвариантных, имеет ряд ограничений.  
   
 - Данные, вероятно, станут недоступными для использования после извлечения в системе с другим языком либо если пользователь текущей системы сменит текущий язык и попытается извлечь данные.  
   
@@ -366,7 +392,7 @@ ms.locfileid: "66052996"
   
  Однако если заменить свойство <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> на <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> в вызовах методов <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> и <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, хранимые данные даты и времени восстанавливаются успешно, как показано ниже.  
   
-```  
+```console  
 06.05.1758 21:26  
 05.05.1818 07:19  
 22.04.1870 23:54  

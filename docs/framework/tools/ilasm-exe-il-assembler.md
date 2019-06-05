@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b73a98542dfc6fa68e79655bc5538cf005e4636
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fa95755142b5ea3999cca127c868bc878da516e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492594"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378584"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (ассемблер IL)
 
@@ -58,7 +58,7 @@ ilasm [options] filename [[options]filename...]
 |**/include:** `includePath`|Задает путь для поиска файлов, включенных с помощью команды `#include`.|
 |**/itanium**|Задает Intel Itanium в качестве целевого процессора.<br /><br /> Если разрядность образа не задана, в качестве значения по умолчанию используется **/pe64**.|
 |**/key:** `keyFile`|Компилирует файл `filename` со строгой подписью с помощью закрытого ключа в `keyFile`.|
-|**/key:** @`keySource`|Компилирует файл `filename` со строгой подписью с помощью закрытого ключа, созданного в `keySource`.|
+|**/key:**  @`keySource`|Компилирует файл `filename` со строгой подписью с помощью закрытого ключа, созданного в `keySource`.|
 |**/listing**|Создает файл списка со стандартными выходными данными. Если этот параметр не задан, файл списка не создается.<br /><br /> Этот параметр не поддерживается в .NET Framework 2.0 и более поздних версиях.|
 |**/mdv:** `versionString`|Задает строку версии метаданных.|
 |**/msv:** `major`.`minor`|Задает версию потока метаданных, где `major` и `minor` являются целыми числами.|
@@ -108,7 +108,7 @@ ilasm [options] filename [[options]filename...]
 
 ## <a name="version-information"></a>Сведения о версии
 
-Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], к реализации интерфейса можно добавить свой атрибут с помощью кода, похожего на следующий.
+Начиная с .NET Framework 4.5 к реализации интерфейса можно добавить свой атрибут с помощью кода, похожего на следующий:
 
 ```
 .class interface public abstract auto ansi IMyInterface
@@ -128,7 +128,7 @@ ilasm [options] filename [[options]filename...]
       …
 ```
 
-Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], можно указать произвольный большой двоичный объект маршала (BLOB) с помощью необработанного двоичного представления, как показано в следующем коде.
+Начиная с .NET Framework 4.5 можно указать произвольный большой двоичный объект (BLOB) маршала с помощью необработанного двоичного представления, как показано в следующем коде:
 
 ```
 .method public hidebysig abstract virtual

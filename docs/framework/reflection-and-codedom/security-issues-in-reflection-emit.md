@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6adbe4e5c82d5f886fcffd5ab272a337c377395
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5ca4a087b60e6cb857ec78273dad099e5e5da07a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586124"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457302"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Вопросы безопасности в порождаемом отражении
 Платформа .NET Framework предоставляет три способа создания промежуточного языка Майкрософт (MSIL), каждый из которых имеет собственные вопросы безопасности:  
@@ -78,7 +78,7 @@ ms.locfileid: "65586124"
   
  Как и для любого другого порожденного кода, для выполнения этого динамического метода необходимы те же разрешения, которые требуются методам, используемым этим динамическим методом.  
   
- Системная сборка, в которой размещаются анонимно размещенные динамические методы, использует модель прозрачности <xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType>, то есть модель, которая использовалась в .NET Framework до версии [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+ Системная сборка, в которой размещаются анонимно размещенные динамические методы, использует модель прозрачности <xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType>, то есть модель, которая применялась в .NET Framework до версии .NET Framework 4.  
   
  Дополнительные сведения см. в описании класса <xref:System.Reflection.Emit.DynamicMethod>.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "65586124"
   
 <a name="Version_Information"></a>   
 ## <a name="version-information"></a>Сведения о версии  
- Начиная с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] политика безопасности на уровне компьютера больше не используется, и механизмом обеспечения безопасности по умолчанию становится прозрачность безопасности. См. раздел [Изменения системы безопасности](../../../docs/framework/security/security-changes.md).  
+ Начиная с .NET Framework 4 политика безопасности на уровне компьютера больше не используется, и механизмом обеспечения безопасности по умолчанию становится прозрачность безопасности. См. раздел [Изменения системы безопасности](../../../docs/framework/security/security-changes.md).  
   
  Начиная с [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> больше не требуется при порождении динамических сборок и динамических методов. Этот флаг необходим во всех более ранних версиях платформы .NET Framework.  
   

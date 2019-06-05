@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 479307a0bdee162103f798e5f852cd20f259811e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 629a59cd28e58e4b08805e3bb742d12e9cacbebd
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607687"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377883"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Создание и использование сборок со строгими именами
 
@@ -71,7 +71,7 @@ ms.locfileid: "64607687"
 |-----------|-----------------|
 |[Практическое руководство. Создание пары открытого и закрытого ключей](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Описывает способ создания пары криптографических ключей для подписи сборки.|
 |[Практическое руководство. Подписание сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Описывает способ создания сборки со строгим именем.|
-|[Усовершенствованное строгое именование](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Описывает усовершенствования в использовании строгих имен в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|
+|[Усовершенствованное строгое именование](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Описывает усовершенствования в использовании строгих имен в .NET Framework 4.5.|
 |[Практическое руководство. Ссылка на сборку со строгим именем](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|Содержит инструкции по созданию ссылок на типы или ресурсы в сборке со строгим именем во время компиляции или выполнения.|
 |[Практическое руководство. Отключение функции пропуска строгих имен](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Содержит инструкции по отключению возможности обхода проверки подписей строгих имен. Эту возможность можно отключить для всех приложений или только для некоторых из них.|
 |[Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)|Содержит обзор однофайловых и многофайловых сборок.|

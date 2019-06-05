@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e425394df0d04ffbb4cde41c83a9efe3c5b4abe0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 011bb2d7a1a700ba4daf86d96d825373e353f57e
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481266"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457429"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (генератор образов в машинном коде)
 
@@ -139,7 +139,7 @@ ngen /? | /help
 > [!CAUTION]
 > Не запускайте программу NGen.exe в сборках с неполным доверием. Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], программа NGen.exe компилирует сборки с полным доверием, и политика разграничения доступа кода (CAS) больше не вычисляется.
 
-Начиная с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], образы в машинном коде, созданные с помощью NGen.exe, нельзя загружать в приложения, выполняющиеся в режиме частичного доверия. Вместо этого вызывается JIT-компилятор.
+Начиная с .NET Framework 4 образы в машинном коде, созданные с помощью NGen.exe, нельзя загружать в приложения, выполняющиеся в режиме частичного доверия. Вместо этого вызывается JIT-компилятор.
 
 Программа Ngen.exe создает образы в машинном коде для сборки, указанной аргументом `assemblyname`, для действия `install` и всех его зависимостей. Зависимости определяются по ссылкам в манифесте сборки. Единственный сценарий, в котором необходимо задавать зависимость отдельно, — это когда приложение загружает зависимость с помощью отражения, например путем вызова метода <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.
 

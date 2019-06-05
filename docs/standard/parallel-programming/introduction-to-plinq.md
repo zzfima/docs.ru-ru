@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 670ed89754aa9b4d2052bb1186e0139618190cd6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d41a88b7a9197a19a131cbda078297a96acdabfb
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676893"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457492"
 ---
 # <a name="introduction-to-plinq"></a>Введение в PLINQ
 
@@ -64,7 +64,7 @@ Parallel LINQ (PLINQ) является параллельной реализац
 
 ## <a name="execution-modes"></a>Режимы выполнения
 
-По умолчанию PLINQ является консервативным. Во время выполнения инфраструктура PLINQ анализирует общую структуру запроса. Если параллелизация может ускорить выполнение запроса, PLINQ разбивает исходную последовательность на задачи, которые выполняются одновременно. Если параллелизовать запрос небезопасно, PLINQ просто выполняет его последовательно. Если PLINQ может выбирать между потенциально затратным параллельным алгоритмом или нетребовательным последовательным алгоритмом, по умолчанию он выбирает алгоритм последовательной обработки. Метод <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> и перечисление <xref:System.Linq.ParallelExecutionMode?displayProperty=nameWithType> позволяют указать, что PLINQ следует выбрать параллельный алгоритм. Это пригодится в том случае, если тестирование и измерение показали, что в параллельном режиме определенный запрос будет выполнять быстрее. Дополнительные сведения см. в разделе [Как Задание режима выполнения в PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).
+По умолчанию PLINQ является консервативным. Во время выполнения инфраструктура PLINQ анализирует общую структуру запроса. Если параллелизация может ускорить выполнение запроса, PLINQ разбивает исходную последовательность на задачи, которые выполняются одновременно. Если параллелизовать запрос небезопасно, PLINQ просто выполняет его последовательно. Если PLINQ может выбирать между потенциально затратным параллельным алгоритмом или нетребовательным последовательным алгоритмом, по умолчанию он выбирает алгоритм последовательной обработки. Метод <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> и перечисление <xref:System.Linq.ParallelExecutionMode?displayProperty=nameWithType> позволяют указать, что PLINQ следует выбрать параллельный алгоритм. Это пригодится в том случае, если тестирование и измерение показали, что в параллельном режиме определенный запрос будет выполнять быстрее. Дополнительные сведения см. в разделе [Практическое руководство. Задание режима выполнения в PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).
 
 ## <a name="degree-of-parallelism"></a>Степень параллелизма
 
@@ -88,7 +88,7 @@ Parallel LINQ (PLINQ) является параллельной реализац
 
 ## <a name="parallel-vs-sequential-queries"></a>Сравнение параллельных и последовательных запросов
 
-Некоторые операции требуют, чтобы исходные данные доставлялись последовательно. При необходимости операторы запроса <xref:System.Linq.ParallelEnumerable> автоматически переходят в последовательный режим. Для пользовательских операторов запроса и делегатов, которые требуют последовательного выполнения, PLINQ предоставляет метод <xref:System.Linq.ParallelEnumerable.AsSequential%2A>. При использовании метода <xref:System.Linq.ParallelEnumerable.AsSequential%2A> все операторы, содержащиеся в запросе, будут выполняться последовательно вплоть до следующего вызова <xref:System.Linq.ParallelEnumerable.AsParallel%2A>. Дополнительные сведения см. в разделе [Как Объединение параллельных и последовательных запросов LINQ](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md).
+Некоторые операции требуют, чтобы исходные данные доставлялись последовательно. При необходимости операторы запроса <xref:System.Linq.ParallelEnumerable> автоматически переходят в последовательный режим. Для пользовательских операторов запроса и делегатов, которые требуют последовательного выполнения, PLINQ предоставляет метод <xref:System.Linq.ParallelEnumerable.AsSequential%2A>. При использовании метода <xref:System.Linq.ParallelEnumerable.AsSequential%2A> все операторы, содержащиеся в запросе, будут выполняться последовательно вплоть до следующего вызова <xref:System.Linq.ParallelEnumerable.AsParallel%2A>. Дополнительные сведения см. в разделе [Практическое руководство. Объединение параллельных и последовательных запросов LINQ](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md).
 
 ## <a name="options-for-merging-query-results"></a>Параметры для слияния результатов запроса
 
@@ -107,11 +107,11 @@ Parallel LINQ (PLINQ) является параллельной реализац
 
 ## <a name="cancellation"></a>Отмена
 
-PLINQ интегрирован с типами отмены в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. (Дополнительные сведения см. в разделе [Отмена в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md).) Это значит, что в отличие от последовательных запросов LINQ to Objects запросы PLINQ можно отменять. Чтобы создать запрос PLINQ с возможностью отмены, примените в запросе оператор <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> и предоставьте ему экземпляр <xref:System.Threading.CancellationToken> в качестве аргумента. Когда свойство <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> для маркера примет значение TRUE, PLINQ заметит это и остановит обработку всех потоков, а затем создаст исключение <xref:System.OperationCanceledException>.
+PLINQ интегрирован с типами отмены в .NET Framework 4. (Дополнительные сведения см. в разделе [Отмена в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md).) Это значит, что в отличие от последовательных запросов LINQ to Objects запросы PLINQ можно отменять. Чтобы создать запрос PLINQ с возможностью отмены, примените в запросе оператор <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> и предоставьте ему экземпляр <xref:System.Threading.CancellationToken> в качестве аргумента. Когда свойство <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> для маркера примет значение TRUE, PLINQ заметит это и остановит обработку всех потоков, а затем создаст исключение <xref:System.OperationCanceledException>.
 
 Существует вероятность, что запрос PLINQ продолжит обработку некоторых элементов после того, как будет задан маркер отмены.
 
-Для повышения скорости реагирования можно также отвечать на запросы отмены в пользовательских делегатах, выполняемых долгое время. Дополнительные сведения см. в разделе [Как Отмена запроса PLINQ](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).
+Для повышения скорости реагирования можно также отвечать на запросы отмены в пользовательских делегатах, выполняемых долгое время. Дополнительные сведения см. в разделе [Практическое руководство. Отмена запроса PLINQ](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).
 
 ## <a name="exceptions"></a>Исключения
 
@@ -119,7 +119,7 @@ PLINQ интегрирован с типами отмены в [!INCLUDE[net_v40
 
 Если исключения могут всплывать обратно в присоединяемый поток, запрос может продолжить обработку некоторых элементов после создания исключения.
 
-Дополнительные сведения см. в разделе [Как Обработка исключений в запросе PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).
+Дополнительные сведения см. в разделе [Практическое руководство. Обработка исключений в запросе PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).
 
 ## <a name="custom-partitioners"></a>Пользовательские разделители
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3d45ed4f9bfb2c59bf2c01b373e919255c17e41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ad78c37dda00e0b52ec8e84b8c996ee3dca09a5
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592868"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378671"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Версии и зависимости платформы .NET Framework
 В каждую версию платформы .NET Framework входит среда CLR, библиотеки базовых классов и другие управляемые библиотеки. В этом разделе описаны основные особенности различных версий платформы .NET Framework, приведены сведения о базовых версиях среды CLR и соответствующих средах разработки, а также указаны версии, устанавливаемые системой Windows.  
@@ -56,7 +56,7 @@ ms.locfileid: "64592868"
 ## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>Выбор целевой платформы и запуск приложений .NET Framework для версии 4.5 и более поздних  
  .NET Framework 4.5 — это обновление на месте, которое заменяет .NET Framework 4 на компьютере; аналогично .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 и 4.8 — это обновления на месте для .NET Framework 4.5. Это означает, что они используют ту же версию среды выполнения, но версии сборок обновлены и содержат новые типы и члены. После установки одного из этих обновлений приложения .NET Framework 4, .NET Framework 4.5, .NET Framework 4.6 или .NET Framework 4.7 должны продолжать работу без повторной компиляции. Однако обратное неверно. Не рекомендуется запускать приложения, предназначенные для более поздней версии .NET Framework, в более ранней версии .NET Framework. Например, не рекомендуется запускать приложение, предназначенное для .NET Framework 4.6, на .NET Framework 4.5. Применяются следующие правила.  
   
-- В Visual Studio можно выбрать .NET Framework 4.5 в качестве целевой платформы для проекта (при этом задается свойство <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType>), чтобы скомпилировать проект как сборку или исполняемый файл .NET Framework 4.5. Эту сборку или исполняемый файл можно использовать на любом компьютере, где установлена платформа [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 или 4.8.  
+- В Visual Studio можно выбрать .NET Framework 4.5 в качестве целевой платформы для проекта (при этом задается свойство <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType>), чтобы скомпилировать проект как сборку или исполняемый файл .NET Framework 4.5. Эту сборку или исполняемый файл можно использовать на любом компьютере, где установлена платформа .NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 или 4.8.  
   
 - В Visual Studio можно выбрать .NET Framework 4.5.1 в качестве целевой платформы для проекта (при этом задается свойство <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType>), чтобы скомпилировать проект как сборку или исполняемый файл .NET Framework 4.5.1. Эту сборку или исполняемый файл следует запускать только на компьютерах с установленной платформой .NET Framework 4.5.1 или более поздней версией. Исполняемый файл с целевой платформой .NET Framework 4.5.1 будет заблокирован для выполнения на компьютере, где установлена только более ранняя версия .NET Framework, например .NET Framework 4.5, и пользователю будет предложено установить .NET Framework 4.5.1. Кроме того, сборки .NET Framework 4.5.1 не должны вызываться из приложения, предназначенного для более ранней версии .NET Framework, такой как .NET Framework 4.5.  
   
@@ -74,9 +74,9 @@ ms.locfileid: "64592868"
   
 - Если у вас отсутствует опыт работы с .NET Framework, [ознакомьтесь](../../../docs/framework/get-started/overview.md) с общими сведениями об этой платформе, основными понятиями и ключевыми функциями.  
   
-- Сведения о новых функциях и улучшениях в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и ее доработанных выпусках см. в разделе [Новые возможности в .NET Framework](../../../docs/framework/whats-new/index.md).  
+- Сведения о новых функциях и улучшениях в .NET Framework 4.5 и ее доработанных выпусках см. в разделе [Новые возможности в .NET Framework](../../../docs/framework/whats-new/index.md).  
   
-- Сведения о миграции приложения с платформы .NET Framework 4 на [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и ее доработанные выпуски см. в [руководстве по миграции](index.md).  
+- Сведения о миграции приложения с платформы .NET Framework 4 на .NET Framework 4.5 и ее доработанные выпуски см. в [руководстве по миграции](index.md).  
   
 - Сведения о том, как определить, какие версии и обновления установлены на компьютере, см. в разделах [Практическое руководство. Практическое руководство. Определение установленных версий платформы .NET Framework](how-to-determine-which-versions-are-installed.md) и [Практическое руководство. Определение установленных обновлений и исправлений безопасности платформы .NET Framework](how-to-determine-which-net-framework-updates-are-installed.md).  
   
