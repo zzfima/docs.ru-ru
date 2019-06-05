@@ -2,418 +2,449 @@
 title: Архитектура и разработка
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 20edf6e2546830fd9fa764a2936987c573b8283a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f58fb521aa0d9f389dab8c061f40e41b779c743
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64632030"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690237"
 ---
 # <a name="architecture-and-design"></a>Архитектура и разработка
-Модуль создания SQL в [образец поставщика](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) реализуется в виде посетителя в дереве выражения, представляющем дерево команд. Создание кода выполняется за один проход по дереву выражения.  
-  
- Узлы дерева обрабатываются в порядке снизу вверх. Во-первых создается создается промежуточная структура: SqlSelectStatement или SqlBuilder, обе реализации isqlfragment. он. Затем из этой структуры создается строковая инструкция SQL. Промежуточная структура создается по двум причинам.  
-  
-- С логической точки зрения инструкция SQL SELECT заполняется не по порядку. Узлы, участвующие в предложении FROM, обходятся раньше, чем узлы, участвующие в предложениях WHERE, GROUP BY и ORDER BY.  
-  
-- Для переименования псевдонимов необходимо определить все используемые псевдонимы, чтобы избежать конфликтов во время переименования. Чтобы определить варианты переименования в SqlBuilder, используйте объекты Symbol для представления столбцов-кандидатов на переименование.  
-  
- ![Схема](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
-  
- На первом этапе во время обхода дерева выражения группируются в объекты SqlSelectStatement, а соединения и псевдонимы соединений преобразуются в плоские. На этом проходе объекты Symbol представляют столбцы или входные псевдонимы, которые можно переименовать.  
-  
- На втором этапе во время создания фактической строки происходит переименование псевдонимов.  
-  
-## <a name="data-structures"></a>Структуры данных  
- В этом разделе рассматриваются типы, используемые в [образец поставщика](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) , используемой для построения инструкции SQL.  
-  
-### <a name="isqlfragment"></a>ISqlFragment  
- В этом разделе описаны классы, в которых реализован интерфейс ISqlFragment. Он выполняет две функции.  
-  
-- Общий тип возвращаемого значения для всех методов посетителя.  
-  
-- Предоставляет метод для записи окончательной строки SQL.  
-  
-```  
-internal interface ISqlFragment {  
-   void WriteSql(SqlWriter writer, SqlGenerator sqlGenerator);  
-}  
-```  
-  
-#### <a name="sqlbuilder"></a>SqlBuilder  
- SqlBuilder - это устройство сбора окончательной строки SQL, аналогичное StringBuilder. Оно состоит из строк, которые составляют окончательную строку SQL, вместе с объектами ISqlFragment, которые можно преобразовать в строки.  
-  
-```  
-internal sealed class SqlBuilder : ISqlFragment {  
-   public void Append(object s)  
-   public void AppendLine()  
-   public bool IsEmpty  
-}  
-```  
-  
-#### <a name="sqlselectstatement"></a>SqlSelectStatement  
- SqlSelectStatement представляет каноническую инструкцию SQL SELECT фигуры «SELECT... ОТ.. WHERE... ГРУППИРОВАТЬ ПО... УПОРЯДОЧИТЬ ПО».  
-  
- Каждое из предложений SQL представляется объектом StringBuilder. Кроме того, он отслеживает, указано ли ключевое слово Distinct и является ли инструкция самой верхней. Если это не так, то предложение ORDER BY не указывается, однако оно указывается, если инструкция также содержит предложение TOP.  
-  
- FromExtents содержит список входных данных для инструкции SELECT. Обычно это только один элемент. Инструкции SELECT для соединений могут временно иметь несколько элементов.  
-  
- Если инструкция SELECT создается узлом соединения, то в SqlSelectStatement ведется список всех экстентов, которые были преобразованы в плоские в соединении в AllJoinExtents. OuterExtents представляет внешние ссылки SqlSelectStatement и используется для переименования входных псевдонимов.  
-  
-```  
-internal sealed class SqlSelectStatement : ISqlFragment {  
-   internal bool IsDistinct { get, set };  
-   internal bool IsTopMost  
-  
-   internal List<Symbol> AllJoinExtents { get, set };  
-   internal List<Symbol> FromExtents { get};  
-   internal Dictionary<Symbol, bool> OuterExtents { get};  
-  
-   internal TopClause Top { get, set };  
-  
-   internal SqlBuilder Select {get};  
-   internal SqlBuilder From  
-   internal SqlBuilder Where  
-   internal SqlBuilder GroupBy  
-   public SqlBuilder OrderBy  
-}  
-```  
-  
-#### <a name="topclause"></a>TopClause  
- TopClause представляет выражение TOP в SqlSelectStatement. Свойство TopCount показывает, сколько нужно выбрать строк TOP.  Если WithTies имеет значение true, то TopClause построено из DbLimitExpession.  
-  
-```  
-class TopClause : ISqlFragment {  
-   internal bool WithTies {get}  
-   internal ISqlFragment TopCount {get}  
-   internal TopClause(ISqlFragment topCount, bool withTies)  
-   internal TopClause(int topCount, bool withTies)  
-}  
-```  
-  
-### <a name="symbols"></a>Символы  
- Классы, связанные с Symbol, и таблица символов выполняют переименование входных псевдонимов, преобразование псевдонимов соединений в плоские и переименование псевдонимов столбцов.  
-  
- Класс Symbol представляет экстент, вложенную инструкцию SELECT или столбец. Он используется вместо фактического псевдонима, что позволяет переименовать его после использования, а также передает дополнительные сведения о представляемом артефакте (например, типе).  
-  
-```  
-class Symbol : ISqlFragment {  
-   internal Dictionary<string, Symbol> Columns {get}  
-   internal bool NeedsRenaming {get, set}  
-   internal bool IsUnnest {get, set}   //not used  
-  
-   public string Name{get}  
-   public string NewName {get,set}  
-   internal TypeUsage Type {get, set}  
-  
-   public Symbol(string name, TypeUsage type)  
-}  
-```  
-  
- В объекте Name хранится исходный псевдоним для представляемого экстента, вложенной инструкции SELECT или столбца.  
-  
- В объекте NewName хранится псевдоним, который будет использоваться в инструкции SQL SELECT. Вначале значение устанавливается равным Name и изменяется только в случае необходимости при создании окончательного строкового запроса.  
-  
- Объект Type используется только для символов, представляющих экстенты и вложенные инструкции SELECT.  
-  
-#### <a name="symbolpair"></a>SymbolPair  
- Класс SymbolPair отвечает за преобразование записей в плоские.  
-  
- Рассмотрим выражение свойства D(v, "j3.j2.j1.a.x"), где v обозначает VarRef, j1, j2, j3 - соединения, a - экстент, а x - столбец.  
-  
- Это выражение нужно преобразовать в {j'}.{x'}. Исходное поле представляет самую внешнюю SqlStatement, представляющую выражение соединения (например, j2). Это всегда символ соединения. Поле столбца перемещается от одного символа соединения к другому, пока не останавливается на символе, который не относится к соединению. Оно возвращается при обходе DbPropertyExpression, но никогда не добавляется в SqlBuilder.  
-  
-```  
-class SymbolPair : ISqlFragment {  
-   public Symbol Source;  
-   public Symbol Column;  
-   public SymbolPair(Symbol source, Symbol column)  
-}  
-```  
-  
-#### <a name="joinsymbol"></a>JoinSymbol  
- Символ соединения - это объект Symbol, представляющий вложенную инструкцию SELECT с соединением или входом соединения.  
-  
-```  
-internal sealed class JoinSymbol : Symbol {  
-   internal List<Symbol> ColumnList {get, set}  
-   internal List<Symbol> ExtentList {get}  
-   internal List<Symbol> FlattenedExtentList {get, set}  
-   internal Dictionary<string, Symbol> NameToExtent {get}  
-   internal bool IsNestedJoin {get, set}  
-  
-   public JoinSymbol(string name, TypeUsage type, List<Symbol> extents)  
-}  
-```  
-  
- ColumnList представляет список столбцов в предложении SELECT, если этот символ представляет инструкцию SQL SELECT. ExtentList - это список экстентов в предложении SELECT. Если соединение содержит несколько плоских экстентов на верхнем уровне, то FlattenedExtentList отслеживает эти экстенты, чтобы обеспечить правильное переименование псевдонимов экстентов.  
-  
- NameToExtent использует все экстенты из ExtentList в качестве словаря. IsNestedJoin используется для определения типа JoinSymbol: обычный символ соединения или символ, для которого существует соответствующая SqlSelectStatement.  
-  
- Все списки задаются ровно один раз, а затем используются для уточняющих запросов и для перечисления.  
-  
-#### <a name="symboltable"></a>SymbolTable  
- SymbolTable используется для разрешения имен переменных в объекты Symbol. SymbolTable реализуется в виде стека с новой записью для каждой области. Поиск в уточняющих запросах ведется по стеку сверху вниз, пока не будет найдена запись.  
-  
-```  
-internal sealed class SymbolTable {  
-   internal void EnterScope()  
-   internal void ExitScope()  
-   internal void Add(string name, Symbol value)  
-   internal Symbol Lookup(string name)  
-}  
-```  
-  
- Для каждого экземпляра модуля создания SQL существует только одна SymbolTable. Для каждого реляционного узла выполняется вход и выход из области. Все символы в ранних областях видны поздним областям, если они не скрыты другими символами с таким же именем.  
-  
-### <a name="global-state-for-the-visitor"></a>Глобальное состояние для посетителя  
- Чтобы упростить переименование псевдонимов и столбцов, ведите список всех имен столбцов (AllColumnNames) и псевдонимов экстентов (AllExtentNames), которые использованы в первом проходе по дереву запроса.  Таблица символов разрешает имена переменных в объекты Symbol. IsVarRefSingle используется только для проверки и не является безусловно необходимым.  
-  
- Два стека, используемые посредством CurrentSelectStatement и IsParentAJoin, служат для передачи параметров от родительских узлов в дочерние, поскольку схема посетителя не позволяет передавать параметры.  
-  
-```  
-internal Dictionary<string, int> AllExtentNames {get}  
-internal Dictionary<string, int> AllColumnNames {get}  
-SymbolTable symbolTable = new SymbolTable();  
-bool isVarRefSingle = false;  
-  
-Stack<SqlSelectStatement> selectStatementStack;  
-private SqlSelectStatement CurrentSelectStatement{get}  
-  
-Stack<bool> isParentAJoinStack;  
-private bool IsParentAJoin{get}  
-```  
-  
-## <a name="common-scenarios"></a>Стандартные сценарии  
- В этом разделе описаны распространенные сценарии использования поставщика.  
-  
-### <a name="grouping-expression-nodes-into-sql-statements"></a>Группирование узлов выражения в инструкции SQL  
- Объект SqlSelectStatement создается, когда при обходе дерева снизу вверх встречается первый реляционный узел (обычно экстент DbScanExpression). Чтобы создать инструкцию SQL SELECT с минимально возможным количеством вложенных запросов, объедините максимальное число родительских узлов в этой SqlSelectStatement.  
-  
- Метод IsCompatible определяет, можно ли добавить заданный (реляционный) узел в текущую SqlSelectStatement (возвращенную при обходе входных данных), или нужно запустить новую инструкцию. Решение зависит от узлов, которые уже входят в SqlSelectStatement (и в свою очередь зависят от узлов, располагавшихся под заданным).  
-  
- Обычно, если предложения инструкции SQL вычисляются после предложений, где узлы, планируемые к объединению, не пусты, то узел нельзя добавить в текущую инструкцию. Например, если следующий узел является фильтром, то его можно включить в текущую SqlSelectStatement, только если выполняются следующие условия.  
-  
-- Список SELECT пуст. Если список SELECT не пуст, значит он создан узлом, предшествующим фильтру, и предикат может ссылаться на столбцы, созданные этим списком SELECT.  
-  
-- Предложение GROUPBY пусто. Если предложение GROUPBY не пусто, то добавление фильтра соответствует фильтрации перед группирования, а такой порядок недопустим.  
-  
-- Предложение TOP пусто. Если предложение TOP не пусто, то добавление фильтра соответствует фильтрации перед операцией TOP, а такой порядок недопустим.  
-  
- Эти ограничения не применяются к нереляционным узлам, таким как DbConstantExpression, а также к арифметическим выражениям, которые всегда включаются в существующую SqlSelectStatement.  
-  
- Кроме того, после достижение корневого элемента дерева соединения (узла соединения, для которого отсутствует родительский узел), запускается новая SqlSelectStatement. В эту SqlSelectStatement объединяются все дочерние узлы соединения с левой стороны.  
-  
- Когда запускается новая SqlSelectStatement, а текущая инструкция добавляется во входные данные, может понадобиться завершить текущую SqlSelectStatement путем добавления столбцов проекции (предложение SELECT), если она еще не существует. Это выполняется методом AddDefaultColumns, который проверяет FromExtents в SqlSelectStatement и добавляет все столбцы из списка экстентов, представленного FromExtents, которые попадают в область в список проецируемых столбцов. Эта операция необходима, поскольку на данном этапе неизвестно, на какие столбцы ссылаются другие узлы. Операцию можно оптимизировать так, чтобы проецировать только те столбцы, которые можно использовать в дальнейшем.  
-  
-### <a name="join-flattening"></a>Преобразование соединений в плоские  
- Свойство IsParentAJoin позволяет определить, можно ли преобразовать заданное соединение в плоское. В частности, IsParentAJoin возвращает значение `true` только для дочернего элемента с левой стороны соединения и для каждого DbScanExpression, которое является непосредственным входом соединения, и в этом случае дочерний узел использует ту же SqlSelectStatement, которую затем будет использовать родительский узел. Дополнительные сведения см. в разделе «Выражения соединения».  
-  
-### <a name="input-alias-redirecting"></a>Перенаправление входных псевдонимов  
- Перенаправление входных псевдонимов реализуется с помощью таблицы символов.  
-  
- Чтобы объяснить, перенаправление входных псевдонимов, см. в первом примере в [создания SQL из деревьев команд. рекомендации по](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md).  Символ «a» нужно перенаправить на символ «b» в проекции.  
-  
- Когда создается объект SqlSelectStatement, экстент, который является входом узла, помещается в свойство From объекта SqlSelectStatement. Символ (< symbol_b >) создается на основании имени входной привязки («b»), чтобы представить этот экстент, а «AS» + < symbol_b > добавляется в предложение From.  Символ также добавляется в свойство FromExtents.  
-  
- Символ также добавляется в таблицу символов, чтобы связать имя входной привязки к нему («b», < symbol_b >).  
-  
- Если эта SqlSelectStatement используется в следующем узле, то этот узел добавляет запись в таблицу символов, чтобы связать имя входной привязки с данным символом. В нашем примере DbProjectExpression с именем входной привязки «a» будет использовать SqlSelectStatement и добавьте («,» \< symbol_b >) в таблицу.  
-  
- Когда выражения ссылаются на имя входной привязки узла, который использует SqlSelectStatement, такая ссылка разрешается в нужный перенаправленный символ по таблице символов. Когда символ «» из «a.x» разрешается при обходе DbVariableReferenceExpression, представляющего «», он будет разрешаться в символ < symbol_b >.  
-  
-### <a name="join-alias-flattening"></a>Преобразование псевдонимов соединений в плоские  
- Преобразование псевдонимов соединений в плоские выполняется при обходе DbPropertyExpression, как описано в разделе «DbPropertyExpression».  
-  
-### <a name="column-name-and-extent-alias-renaming"></a>Переименование столбцов и псевдонимов экстентов  
- Имя столбца и переименование псевдонимов экстентов будет исправлено с помощью символов, вместо которых подставляются только с псевдонимами на втором этапе создания, описанные в разделе второй этап формирования SQL: Создание строковой команды.  
-  
-## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Первый этап формирования SQL: Обход дерева выражения  
- В этом разделе описывается первый этап формирования SQL, на котором выполняется обход выражения, представляющего запрос, и создается промежуточная структура: SqlSelectStatement или SqlBuilder.  
-  
- В этом разделе описываются правила обхода различных категорий узлов выражения и данные, относящиеся к обходу различных типов выражения.  
-  
-### <a name="relational-non-join-nodes"></a>Реляционные узлы (не связанные с соединением)  
- Следующие типы выражений поддерживают узлы, не связанные с соединением:  
-  
-- DbDistinctExpression  
-  
-- DbFilterExpression  
-  
-- DbGroupByExpression  
-  
-- DbLimitExpession  
-  
-- DbProjectExpression  
-  
-- DbSkipExpression  
-  
-- DbSortExpression  
-  
- Обход этих узлов выполняется по следующей схеме:  
-  
-1. Обход реляционного входа и получение результирующей SqlSelectStatement. Входом реляционного узла может быть один из следующих объектов:  
-  
-    - Реляционный узел, включающий экстент (например, DbScanExpression). При обходе такого узла возвращается SqlSelectStatement.  
-  
-    - Выражение операции с наборами (например, UNION ALL). Результат необходимо заключить в квадратные скобки и поместить в предложение FROM новой SqlSelectStatement.  
-  
-2. Проверьте, можно ли добавить текущий узел в SqlSelectStatement, созданную по входным данным. Это описано в разделе «Выражение группирования в инструкции SQL». Если добавление невозможно,  
-  
-    - удалите из стека текущий объект SqlSelectStatement.  
-  
-    - Создайте новый объект SqlSelectStatement и добавьте удаленный из стека объект SqlSelectStatement в качестве предложения FROM нового объекта SqlSelectStatement.  
-  
-    - Поместите новый объект на верх стека.  
-  
-3. Перенаправьте входную привязку выражения к правильному символу из входа. Эти сведения хранятся в объекте SqlSelectStatement.  
-  
-4. Добавьте новую область SymbolTable.  
-  
-5. Выполните обход части выражения, не связанной с входом (например, проекция и предикат).  
-  
-6. Удалите из стека все объекты, добавленные в глобальные стеки.  
-  
- Для DbSkipExpression отсутствуют прямой эквивалент в SQL. Логическим образом он преобразуется в:  
-  
-```  
-SELECT Y.x1, Y.x2, ..., Y.xn  
-FROM (  
-   SELECT X.x1, X.x2, ..., X.xn, row_number() OVER (ORDER BY sk1, sk2, ...) AS [row_number]   
-   FROM input as X   
-   ) as Y  
-WHERE Y.[row_number] > count   
-ORDER BY sk1, sk2, ...  
-```  
-  
-### <a name="join-expressions"></a>Выражения соединения  
- Следующие выражения считаются выражениями соединения и обрабатываются методом VisitJoinExpression одинаковым образом:  
-  
-- DbApplyExpression  
-  
-- DbJoinExpression  
-  
-- DbCrossJoinExpression  
-  
- Далее перечислены этапы обхода.  
-  
- Сначала, перед обходом дочерних элементов, вызывается метод IsParentAJoin, чтобы определить, является ли узел соединения дочерним элементом соединения с левой стороны. Если этот метод возвращает значение false, запускается новая SqlSelectStatement. С этой точки зрения обход соединений выполняется иначе, чем остальных узлов, поскольку родительский элемент (узел соединения) создает SqlSelectStatement, которую могут использовать дочерние элементы.  
-  
- Затем поочередно обрабатываются входы. Для каждого входа выполняются следующие действия.  
-  
-1. Обход входа.  
-  
-2. Дополнительная обработка результатов обхода входа путем вызова метода ProcessJoinInputResult, который отвечает за ведение таблицы символов после обхода дочернего элемента выражения соединения и возможное завершение SqlSelectStatement, созданной дочерним элементом. Результатом дочернего элемента может быть один из следующих объектов:  
-  
-    - Объект SqlSelectStatement, отличный от объекта, в который будет добавлен родительский элемент. В этом случае может понадобиться завершить инструкцию, добавив столбцы по умолчанию. Если вход представлял соединение, необходимо создать новый символ соединения. В противном случае создайте обычный символ.  
-  
-    - Экстент (например, DbScanExpression). В этом случае он просто добавляется в список входов родительской SqlSelectStatement.  
-  
-    - Объект, отличный от SqlSelectStatement. В этом случае он заключается в квадратные скобки.  
-  
-    - Объект SqlSelectStatement, в который добавляется родительский элемент. В этом случае символы из списка FromExtents необходимо заменить единичным новым JoinSymbol, который представляет сразу все символы.  
-  
-    - В первых трех случаях вызывается метод AddFromSymbol для добавления предложения AS и обновления таблицы символов.  
-  
- Затем выполняется обход условия соединения (если таковое присутствует).  
-  
-### <a name="set-operations"></a>Операции над множествами  
- Операции с наборами DbUnionAllExpression, DbExceptExpression и DbIntersectExpression обрабатываются методом VisitSetOpExpression. Он создает SqlBuilder формы  
-  
-```xml  
-<leftSqlSelectStatement> <setOp> <rightSqlSelectStatement>  
-```  
-  
- Где \<leftSqlSelectStatement > и \<rightSqlSelectStatement > представляют объекты Sqlselectstatement, полученные в результате обхода каждого из входов, и \<setOp > — соответствующая операция (UNION ALL для примера).  
-  
-### <a name="dbscanexpression"></a>DbScanExpression  
- Если обход выполняется в контексте соединения (в качестве входа соединения, которое является левым дочерним элементом другого соединения), то DbScanExpression возвращает SqlBuilder с целевым кодом SQL для соответствующей цели (определяющий запрос, таблицу или представление). В противном случае создается новый объект SqlSelectStatement с набором полей FROM в соответствии с целью.  
-  
-### <a name="dbvariablereferenceexpression"></a>DbVariableReferenceExpression  
- При обходе DbVariableReferenceExpression возвращается объект Symbol, соответствующей этому выражению со ссылкой на переменную на основе уточняющего запроса в таблице символов.  
-  
-### <a name="dbpropertyexpression"></a>DbPropertyExpression  
- Преобразование псевдонимов соединения в плоские определяется и обрабатывается при обходе DbPropertyExpression.  
-  
- Сначала выполняется обход свойства Instance, и результатом является объект Symbol, JoinSymbol или SymbolPair. Эти три случая обрабатываются следующим образом.  
-  
-- Если возвращается JoinSymbol, то его свойство NameToExtent содержит символ для нужного свойства. Если символ соединения представляет вложенное соединения, то возвращается новая пара символов с символом соединения для отслеживания символа, который будет использоваться в качестве псевдонима экземпляра, и символом, представляющим фактическое свойство для дальнейшего разрешения.  
-  
-- Если возвращается SymbolPair, в которой часть Column является символом соединения, то снова возвращается символ соединения, однако теперь свойство столбца обновляется и указывает на свойство, представляемое текущим выражением свойства. В противном случае возвращается SqlBuilder с источником SymbolPair в качестве псевдонима и символом для текущего свойства в качестве столбца.  
-  
-- Если возвращается объект Symbol, то метод Visit возвращает объект SqlBuilder с этим экземпляром в качестве псевдонима и именем свойства в качестве имени столбца.  
-  
-### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
- Если DbNewInstanceExpression используется в качестве свойства Projection объекта DbProjectExpression, то создается список аргументов с разделителями-запятыми, представляющий проецируемые столбцы.  
-  
- Если DbNewInstanceExpression имеет тип возвращаемого значения коллекции и определяет новую коллекцию выражений, предоставляемых в качестве аргументов, то следующие три случая обрабатываются отдельно.  
-  
-- Если единственным аргументом DbNewInstanceExpression является DbElementExpression, он преобразуется следующим образом:  
-  
-    ```  
-    NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X  
-    ```  
-  
- Если DbNewInstanceExpression не имеет аргументов (представляет пустую таблицу), то DbNewInstanceExpression преобразуется в следующее выражение:  
-  
-```  
-SELECT CAST(NULL AS <primitiveType>) as X  
-FROM (SELECT 1) AS Y WHERE 1=0  
-```  
-  
- В противном случае DbNewInstanceExpression выстраивает лестницу аргументов UNION ALL.  
-  
-```  
-SELECT <visit-result-arg1> as X  
-UNION ALL SELECT <visit-result-arg2> as X  
-UNION ALL …  
-UNION ALL SELECT <visit-result-argN> as X  
-```  
-  
-### <a name="dbfunctionexpression"></a>DbFunctionExpression  
- Канонические и встроенные функции обрабатываются одинаково: если требуется специальная обработка (например, преобразование TRIM(string) в LTRIM(RTRIM(string))), то вызывается нужный обработчик. В противном случае такие функции преобразуются в формат Имя_функции(аргумент1, аргумент2, ..., аргументN).  
-  
- Словари используются для отслеживания функций, которым требуется специальная обработка, и соответствующих обработчиков.  
-  
- Определяемые пользователем функции преобразуются в формат Имя_пространства_имен.Имя_функции(аргумент1, аргумент2, ..., аргументN).  
-  
-### <a name="dbelementexpression"></a>DbElementExpression  
- Метод, выполняющий обход DbElementExpression, вызывается, только если DbElementExpression представляет скалярный вложенный запрос. Поэтому DbElementExpression преобразуется в законченную SqlSelectStatement и заключается в квадратные скобки.  
-  
-### <a name="dbquantifierexpression"></a>DbQuantifierExpression  
- В зависимости от типа выражения (любой или все) DbQuantifierExpression преобразуется следующим образом:  
-  
-```  
-Any(input, x) => Exists(Filter(input,x))  
-All(input, x) => Not Exists(Filter(input, not(x))  
-```  
-  
-### <a name="dbnotexpression"></a>DbNotExpression  
- В некоторых случаях можно свернуть преобразование DbNotExpression с входным выражением. Пример:  
-  
-```  
-Not(IsNull(a)) =>  "a IS NOT NULL"  
-Not(All(input, x) => Not (Not Exists(Filter(input, not(x))) => Exists(Filter(input, not(x))  
-```  
-  
- Второе свертывание выполняется, поскольку поставщик неэффективным образом преобразует DbQuantifierExpression типа «все». Поэтому платформа Entity Framework не может выполнить упрощение.  
-  
-### <a name="dbisemptyexpression"></a>DbIsEmptyExpression  
- DbIsEmptyExpression преобразуется следующим образом:  
-  
-```  
-IsEmpty(inut) = Not Exists(input)  
-```  
-  
-## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Второй этап формирования SQL: Создание строковой команды  
- При создании строковой команды SQL объект SqlSelectStatement создает фактические псевдонимы для символов, чтобы решить задачу переименования столбцов и псевдонимов экстентов.  
-  
- Переименование псевдонимов экстентов происходит при записи объекта SqlSelectStatement в строку. Сначала создайте список всех псевдонимов, используемых внешними экстентами. Каждый символ в списке FromExtents (или AllJoinExtents, если его значение отлично от null) проходит переименование, если он вызывает конфликт с любым из внешних экстентов. Если требуется переименование, то исключается конфликт с экстентами, собранными в AllExtentNames.  
-  
- Переименование столбцов происходит при записи объекта Symbol в строку. Метод AddDefaultColumns на первом этапе определяет необходимость переименования каждого символа столбца. На втором этапе выполняется только переименование. Это гарантирует, что созданное имя не вызывает конфликт с именами, используемыми в AllColumnNames  
-  
- Для создания уникальных имен для столбцов и для псевдонимов экстентов используйте формат < existing_name >, где n — наименьший из еще не использованных псевдонимов. Наличие глобального списка всех псевдонимов усиливает потребность в каскадном переименовании.  
-  
+
+Модуль создания SQL в [образец поставщика](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) реализуется в виде посетителя в дереве выражения, представляющем дерево команд. Создание кода выполняется за один проход по дереву выражения.
+
+Узлы дерева обрабатываются в порядке снизу вверх. Во-первых создается создается промежуточная структура: SqlSelectStatement или SqlBuilder, обе реализации isqlfragment. он. Затем из этой структуры создается строковая инструкция SQL. Промежуточная структура создается по двум причинам.
+
+- С логической точки зрения инструкция SQL SELECT заполняется не по порядку. Узлы, участвующие в предложении FROM, обходятся раньше, чем узлы, участвующие в предложениях WHERE, GROUP BY и ORDER BY.
+
+- Для переименования псевдонимов необходимо определить все используемые псевдонимы, чтобы избежать конфликтов во время переименования. Чтобы определить варианты переименования в SqlBuilder, используйте объекты Symbol для представления столбцов-кандидатов на переименование.
+
+![Схема](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")
+
+На первом этапе во время обхода дерева выражения группируются в объекты SqlSelectStatement, а соединения и псевдонимы соединений преобразуются в плоские. На этом проходе объекты Symbol представляют столбцы или входные псевдонимы, которые можно переименовать.
+
+На втором этапе во время создания фактической строки происходит переименование псевдонимов.
+
+## <a name="data-structures"></a>Структуры данных
+
+В этом разделе рассматриваются типы, используемые в [образец поставщика](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) , используемой для построения инструкции SQL.
+
+### <a name="isqlfragment"></a>ISqlFragment
+
+В этом разделе описаны классы, в которых реализован интерфейс ISqlFragment. Он выполняет две функции.
+
+- Общий тип возвращаемого значения для всех методов посетителя.
+
+- Предоставляет метод для записи окончательной строки SQL.
+
+```csharp
+internal interface ISqlFragment {
+   void WriteSql(SqlWriter writer, SqlGenerator sqlGenerator);
+}
+```
+
+#### <a name="sqlbuilder"></a>SqlBuilder
+
+SqlBuilder - это устройство сбора окончательной строки SQL, аналогичное StringBuilder. Оно состоит из строк, которые составляют окончательную строку SQL, вместе с объектами ISqlFragment, которые можно преобразовать в строки.
+
+```csharp
+internal sealed class SqlBuilder : ISqlFragment {
+   public void Append(object s)
+   public void AppendLine()
+   public bool IsEmpty
+}
+```
+
+#### <a name="sqlselectstatement"></a>SqlSelectStatement
+
+SqlSelectStatement представляет каноническую инструкцию SQL SELECT фигуры «SELECT... ОТ.. WHERE... ГРУППИРОВАТЬ ПО... УПОРЯДОЧИТЬ ПО».
+
+Каждое из предложений SQL представляется объектом StringBuilder. Кроме того, он отслеживает, указано ли ключевое слово Distinct и является ли инструкция самой верхней. Если это не так, то предложение ORDER BY не указывается, однако оно указывается, если инструкция также содержит предложение TOP.
+
+FromExtents содержит список входных данных для инструкции SELECT. Обычно это только один элемент. Инструкции SELECT для соединений могут временно иметь несколько элементов.
+
+Если инструкция SELECT создается узлом соединения, то в SqlSelectStatement ведется список всех экстентов, которые были преобразованы в плоские в соединении в AllJoinExtents. OuterExtents представляет внешние ссылки SqlSelectStatement и используется для переименования входных псевдонимов.
+
+```csharp
+internal sealed class SqlSelectStatement : ISqlFragment {
+   internal bool IsDistinct { get, set };
+   internal bool IsTopMost
+
+   internal List<Symbol> AllJoinExtents { get, set };
+   internal List<Symbol> FromExtents { get};
+   internal Dictionary<Symbol, bool> OuterExtents { get};
+
+   internal TopClause Top { get, set };
+
+   internal SqlBuilder Select {get};
+   internal SqlBuilder From
+   internal SqlBuilder Where
+   internal SqlBuilder GroupBy
+   public SqlBuilder OrderBy
+}
+```
+
+#### <a name="topclause"></a>TopClause
+
+TopClause представляет выражение TOP в SqlSelectStatement. Свойство TopCount показывает, сколько нужно выбрать строк TOP.  Если WithTies имеет значение true, то TopClause построено из DbLimitExpression.
+
+```csharp
+class TopClause : ISqlFragment {
+   internal bool WithTies {get}
+   internal ISqlFragment TopCount {get}
+   internal TopClause(ISqlFragment topCount, bool withTies)
+   internal TopClause(int topCount, bool withTies)
+}
+```
+
+### <a name="symbols"></a>Символы
+
+Классы, связанные с Symbol, и таблица символов выполняют переименование входных псевдонимов, преобразование псевдонимов соединений в плоские и переименование псевдонимов столбцов.
+
+Класс Symbol представляет экстент, вложенную инструкцию SELECT или столбец. Он используется вместо фактического псевдонима, что позволяет переименовать его после использования, а также передает дополнительные сведения о представляемом артефакте (например, типе).
+
+```csharp
+class Symbol : ISqlFragment {
+   internal Dictionary<string, Symbol> Columns {get}
+   internal bool NeedsRenaming {get, set}
+   internal bool IsUnnest {get, set}   //not used
+
+   public string Name{get}
+   public string NewName {get,set}
+   internal TypeUsage Type {get, set}
+
+   public Symbol(string name, TypeUsage type)
+}
+```
+
+В объекте Name хранится исходный псевдоним для представляемого экстента, вложенной инструкции SELECT или столбца.
+
+В объекте NewName хранится псевдоним, который будет использоваться в инструкции SQL SELECT. Вначале значение устанавливается равным Name и изменяется только в случае необходимости при создании окончательного строкового запроса.
+
+Объект Type используется только для символов, представляющих экстенты и вложенные инструкции SELECT.
+
+#### <a name="symbolpair"></a>SymbolPair
+
+Класс SymbolPair отвечает за преобразование записей в плоские.
+
+Рассмотрим выражение свойства D(v, "j3.j2.j1.a.x"), где v обозначает VarRef, j1, j2, j3 - соединения, a - экстент, а x - столбец.
+
+Это выражение нужно преобразовать в {j'}.{x'}. Исходное поле представляет самую внешнюю SqlStatement, представляющую выражение соединения (например, j2). Это всегда символ соединения. Поле столбца перемещается от одного символа соединения к другому, пока не останавливается на символе, который не относится к соединению. Оно возвращается при обходе DbPropertyExpression, но никогда не добавляется в SqlBuilder.
+
+```csharp
+class SymbolPair : ISqlFragment {
+   public Symbol Source;
+   public Symbol Column;
+   public SymbolPair(Symbol source, Symbol column)
+}
+```
+
+#### <a name="joinsymbol"></a>JoinSymbol
+
+Символ соединения - это объект Symbol, представляющий вложенную инструкцию SELECT с соединением или входом соединения.
+
+```csharp
+internal sealed class JoinSymbol : Symbol {
+   internal List<Symbol> ColumnList {get, set}
+   internal List<Symbol> ExtentList {get}
+   internal List<Symbol> FlattenedExtentList {get, set}
+   internal Dictionary<string, Symbol> NameToExtent {get}
+   internal bool IsNestedJoin {get, set}
+
+   public JoinSymbol(string name, TypeUsage type, List<Symbol> extents)
+}
+```
+
+ColumnList представляет список столбцов в предложении SELECT, если этот символ представляет инструкцию SQL SELECT. ExtentList - это список экстентов в предложении SELECT. Если соединение содержит несколько плоских экстентов на верхнем уровне, то FlattenedExtentList отслеживает эти экстенты, чтобы обеспечить правильное переименование псевдонимов экстентов.
+
+NameToExtent использует все экстенты из ExtentList в качестве словаря. IsNestedJoin используется для определения типа JoinSymbol: обычный символ соединения или символ, для которого существует соответствующая SqlSelectStatement.
+
+Все списки задаются ровно один раз, а затем используются для уточняющих запросов и для перечисления.
+
+#### <a name="symboltable"></a>SymbolTable
+
+SymbolTable используется для разрешения имен переменных в объекты Symbol. SymbolTable реализуется в виде стека с новой записью для каждой области. Поиск в уточняющих запросах ведется по стеку сверху вниз, пока не будет найдена запись.
+
+```csharp
+internal sealed class SymbolTable {
+   internal void EnterScope()
+   internal void ExitScope()
+   internal void Add(string name, Symbol value)
+   internal Symbol Lookup(string name)
+}
+```
+
+Для каждого экземпляра модуля создания SQL существует только одна SymbolTable. Для каждого реляционного узла выполняется вход и выход из области. Все символы в ранних областях видны поздним областям, если они не скрыты другими символами с таким же именем.
+
+### <a name="global-state-for-the-visitor"></a>Глобальное состояние для посетителя
+
+Чтобы упростить переименование псевдонимов и столбцов, ведите список всех имен столбцов (AllColumnNames) и псевдонимов экстентов (AllExtentNames), которые использованы в первом проходе по дереву запроса.  Таблица символов разрешает имена переменных в объекты Symbol. IsVarRefSingle используется только для проверки и не является безусловно необходимым.
+
+Два стека, используемые посредством CurrentSelectStatement и IsParentAJoin, служат для передачи параметров от родительских узлов в дочерние, поскольку схема посетителя не позволяет передавать параметры.
+
+```csharp
+internal Dictionary<string, int> AllExtentNames {get}
+internal Dictionary<string, int> AllColumnNames {get}
+SymbolTable symbolTable = new SymbolTable();
+bool isVarRefSingle = false;
+
+Stack<SqlSelectStatement> selectStatementStack;
+private SqlSelectStatement CurrentSelectStatement{get}
+
+Stack<bool> isParentAJoinStack;
+private bool IsParentAJoin{get}
+```
+
+## <a name="common-scenarios"></a>Стандартные сценарии
+
+В этом разделе описаны распространенные сценарии использования поставщика.
+
+### <a name="grouping-expression-nodes-into-sql-statements"></a>Группирование узлов выражения в инструкции SQL
+
+Объект SqlSelectStatement создается, когда при обходе дерева снизу вверх встречается первый реляционный узел (обычно экстент DbScanExpression). Чтобы создать инструкцию SQL SELECT с минимально возможным количеством вложенных запросов, объедините максимальное число родительских узлов в этой SqlSelectStatement.
+
+Метод IsCompatible определяет, можно ли добавить заданный (реляционный) узел в текущую SqlSelectStatement (возвращенную при обходе входных данных), или нужно запустить новую инструкцию. Решение зависит от узлов, которые уже входят в SqlSelectStatement (и в свою очередь зависят от узлов, располагавшихся под заданным).
+
+Обычно, если предложения инструкции SQL вычисляются после предложений, где узлы, планируемые к объединению, не пусты, то узел нельзя добавить в текущую инструкцию. Например, если следующий узел является фильтром, то его можно включить в текущую SqlSelectStatement, только если выполняются следующие условия.
+
+- Список SELECT пуст. Если список SELECT не пуст, значит он создан узлом, предшествующим фильтру, и предикат может ссылаться на столбцы, созданные этим списком SELECT.
+
+- Предложение GROUPBY пусто. Если предложение GROUPBY не пусто, то добавление фильтра соответствует фильтрации перед группирования, а такой порядок недопустим.
+
+- Предложение TOP пусто. Если предложение TOP не пусто, то добавление фильтра соответствует фильтрации перед операцией TOP, а такой порядок недопустим.
+
+Эти ограничения не применяются к нереляционным узлам, таким как DbConstantExpression, а также к арифметическим выражениям, которые всегда включаются в существующую SqlSelectStatement.
+
+Кроме того, после достижение корневого элемента дерева соединения (узла соединения, для которого отсутствует родительский узел), запускается новая SqlSelectStatement. В эту SqlSelectStatement объединяются все дочерние узлы соединения с левой стороны.
+
+Когда запускается новая SqlSelectStatement, а текущая инструкция добавляется во входные данные, может понадобиться завершить текущую SqlSelectStatement путем добавления столбцов проекции (предложение SELECT), если она еще не существует. Это выполняется методом AddDefaultColumns, который проверяет FromExtents в SqlSelectStatement и добавляет все столбцы из списка экстентов, представленного FromExtents, которые попадают в область в список проецируемых столбцов. Эта операция необходима, поскольку на данном этапе неизвестно, на какие столбцы ссылаются другие узлы. Операцию можно оптимизировать так, чтобы проецировать только те столбцы, которые можно использовать в дальнейшем.
+
+### <a name="join-flattening"></a>Преобразование соединений в плоские
+
+Свойство IsParentAJoin позволяет определить, можно ли преобразовать заданное соединение в плоское. В частности, IsParentAJoin возвращает значение `true` только для дочернего элемента с левой стороны соединения и для каждого DbScanExpression, которое является непосредственным входом соединения, и в этом случае дочерний узел использует ту же SqlSelectStatement, которую затем будет использовать родительский узел. Дополнительные сведения см. в разделе «Выражения соединения».
+
+### <a name="input-alias-redirecting"></a>Перенаправление входных псевдонимов
+
+Перенаправление входных псевдонимов реализуется с помощью таблицы символов.
+
+Чтобы объяснить, перенаправление входных псевдонимов, см. в первом примере в [создания SQL из деревьев команд. рекомендации по](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md).  Символ «a» нужно перенаправить на символ «b» в проекции.
+
+Когда создается объект SqlSelectStatement, экстент, который является входом узла, помещается в свойство From объекта SqlSelectStatement. Символ (\<symbol_b >) создается на основании имени входной привязки («b»), чтобы представить этот экстент, а «AS» + \<symbol_b > добавляется в предложение From.  Символ также добавляется в свойство FromExtents.
+
+Символ также добавляется в таблицу символов, чтобы связать с ним имя входной привязки («b», \<symbol_b >).
+
+Если эта SqlSelectStatement используется в следующем узле, то этот узел добавляет запись в таблицу символов, чтобы связать имя входной привязки с данным символом. В нашем примере DbProjectExpression с именем входной привязки «a» будет использовать SqlSelectStatement и добавьте («,» \< symbol_b >) в таблицу.
+
+Когда выражения ссылаются на имя входной привязки узла, который использует SqlSelectStatement, такая ссылка разрешается в нужный перенаправленный символ по таблице символов. Когда символ «» из «a.x» разрешается при обходе DbVariableReferenceExpression, представляющего «», он будет разрешаться в символ \<symbol_b >.
+
+### <a name="join-alias-flattening"></a>Преобразование псевдонимов соединений в плоские
+
+Преобразование псевдонимов соединений в плоские выполняется при обходе DbPropertyExpression, как описано в разделе «DbPropertyExpression».
+
+### <a name="column-name-and-extent-alias-renaming"></a>Переименование столбцов и псевдонимов экстентов
+
+Имя столбца и переименование псевдонимов экстентов будет исправлено с помощью символов, вместо которых подставляются только с псевдонимами на втором этапе создания, описанные в разделе второй этап формирования SQL: Создание строковой команды.
+
+## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Первый этап формирования SQL: Обход дерева выражения
+
+В этом разделе описывается первый этап формирования SQL, на котором выполняется обход выражения, представляющего запрос, и создается промежуточная структура: SqlSelectStatement или SqlBuilder.
+
+В этом разделе описываются правила обхода различных категорий узлов выражения и данные, относящиеся к обходу различных типов выражения.
+
+### <a name="relational-non-join-nodes"></a>Реляционные узлы (не связанные с соединением)
+
+Следующие типы выражений поддерживают узлы, не связанные с соединением:
+
+- DbDistinctExpression
+
+- DbFilterExpression
+
+- DbGroupByExpression
+
+- DbLimitExpression
+
+- DbProjectExpression
+
+- DbSkipExpression
+
+- DbSortExpression
+
+Обход этих узлов выполняется по следующей схеме:
+
+1. Обход реляционного входа и получение результирующей SqlSelectStatement. Входом реляционного узла может быть один из следующих объектов:
+
+    - Реляционный узел, включающий экстент (например, DbScanExpression). При обходе такого узла возвращается SqlSelectStatement.
+
+    - Выражение операции с наборами (например, UNION ALL). Результат необходимо заключить в квадратные скобки и поместить в предложение FROM новой SqlSelectStatement.
+
+2. Проверьте, можно ли добавить текущий узел в SqlSelectStatement, созданную по входным данным. Это описано в разделе «Выражение группирования в инструкции SQL». Если добавление невозможно,
+
+    - удалите из стека текущий объект SqlSelectStatement.
+
+    - Создайте новый объект SqlSelectStatement и добавьте удаленный из стека объект SqlSelectStatement в качестве предложения FROM нового объекта SqlSelectStatement.
+
+    - Поместите новый объект на верх стека.
+
+3. Перенаправьте входную привязку выражения к правильному символу из входа. Эти сведения хранятся в объекте SqlSelectStatement.
+
+4. Добавьте новую область SymbolTable.
+
+5. Выполните обход части выражения, не связанной с входом (например, проекция и предикат).
+
+6. Удалите из стека все объекты, добавленные в глобальные стеки.
+
+ Для DbSkipExpression отсутствуют прямой эквивалент в SQL. Логическим образом он преобразуется в:
+
+```sql
+SELECT Y.x1, Y.x2, ..., Y.xn
+FROM (
+   SELECT X.x1, X.x2, ..., X.xn, row_number() OVER (ORDER BY sk1, sk2, ...) AS [row_number]
+   FROM input as X
+   ) as Y
+WHERE Y.[row_number] > count
+ORDER BY sk1, sk2, ...
+```
+
+### <a name="join-expressions"></a>Выражения соединения
+
+Следующие выражения считаются выражениями соединения и обрабатываются методом VisitJoinExpression одинаковым образом:
+
+- DbApplyExpression
+
+- DbJoinExpression
+
+- DbCrossJoinExpression
+
+Далее перечислены этапы обхода.
+
+Сначала, перед обходом дочерних элементов, вызывается метод IsParentAJoin, чтобы определить, является ли узел соединения дочерним элементом соединения с левой стороны. Если этот метод возвращает значение false, запускается новая SqlSelectStatement. С этой точки зрения обход соединений выполняется иначе, чем остальных узлов, поскольку родительский элемент (узел соединения) создает SqlSelectStatement, которую могут использовать дочерние элементы.
+
+Затем поочередно обрабатываются входы. Для каждого входа выполняются следующие действия.
+
+1. Обход входа.
+
+2. Дополнительная обработка результатов обхода входа путем вызова метода ProcessJoinInputResult, который отвечает за ведение таблицы символов после обхода дочернего элемента выражения соединения и возможное завершение SqlSelectStatement, созданной дочерним элементом. Результатом дочернего элемента может быть один из следующих объектов:
+
+    - Объект SqlSelectStatement, отличный от объекта, в который будет добавлен родительский элемент. В этом случае может понадобиться завершить инструкцию, добавив столбцы по умолчанию. Если вход представлял соединение, необходимо создать новый символ соединения. В противном случае создайте обычный символ.
+
+    - Экстент (например, DbScanExpression). В этом случае он просто добавляется в список входов родительской SqlSelectStatement.
+
+    - Объект, отличный от SqlSelectStatement. В этом случае он заключается в квадратные скобки.
+
+    - Объект SqlSelectStatement, в который добавляется родительский элемент. В этом случае символы из списка FromExtents необходимо заменить единичным новым JoinSymbol, который представляет сразу все символы.
+
+    - В первых трех случаях вызывается метод AddFromSymbol для добавления предложения AS и обновления таблицы символов.
+
+Затем выполняется обход условия соединения (если таковое присутствует).
+
+### <a name="set-operations"></a>Операции над множествами
+
+Операции с наборами DbUnionAllExpression, DbExceptExpression и DbIntersectExpression обрабатываются методом VisitSetOpExpression. Он создает SqlBuilder формы
+
+```xml
+<leftSqlSelectStatement> <setOp> <rightSqlSelectStatement>
+```
+
+Где \<leftSqlSelectStatement > и \<rightSqlSelectStatement > представляют объекты Sqlselectstatement, полученные в результате обхода каждого из входов, и \<setOp > — соответствующая операция (UNION ALL для примера).
+
+### <a name="dbscanexpression"></a>DbScanExpression
+
+Если обход выполняется в контексте соединения (в качестве входа соединения, которое является левым дочерним элементом другого соединения), то DbScanExpression возвращает SqlBuilder с целевым кодом SQL для соответствующей цели (определяющий запрос, таблицу или представление). В противном случае создается новый объект SqlSelectStatement с набором полей FROM в соответствии с целью.
+
+### <a name="dbvariablereferenceexpression"></a>DbVariableReferenceExpression
+
+При обходе DbVariableReferenceExpression возвращается объект Symbol, соответствующей этому выражению со ссылкой на переменную на основе уточняющего запроса в таблице символов.
+
+### <a name="dbpropertyexpression"></a>DbPropertyExpression
+
+Преобразование псевдонимов соединения в плоские определяется и обрабатывается при обходе DbPropertyExpression.
+
+Сначала выполняется обход свойства Instance, и результатом является объект Symbol, JoinSymbol или SymbolPair. Эти три случая обрабатываются следующим образом.
+
+- Если возвращается JoinSymbol, то его свойство NameToExtent содержит символ для нужного свойства. Если символ соединения представляет вложенное соединения, то возвращается новая пара символов с символом соединения для отслеживания символа, который будет использоваться в качестве псевдонима экземпляра, и символом, представляющим фактическое свойство для дальнейшего разрешения.
+
+- Если возвращается SymbolPair, в которой часть Column является символом соединения, то снова возвращается символ соединения, однако теперь свойство столбца обновляется и указывает на свойство, представляемое текущим выражением свойства. В противном случае возвращается SqlBuilder с источником SymbolPair в качестве псевдонима и символом для текущего свойства в качестве столбца.
+
+- Если возвращается объект Symbol, то метод Visit возвращает объект SqlBuilder с этим экземпляром в качестве псевдонима и именем свойства в качестве имени столбца.
+
+### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression
+
+Если DbNewInstanceExpression используется в качестве свойства Projection объекта DbProjectExpression, то создается список аргументов с разделителями-запятыми, представляющий проецируемые столбцы.
+
+Если DbNewInstanceExpression имеет тип возвращаемого значения коллекции и определяет новую коллекцию выражений, предоставляемых в качестве аргументов, то следующие три случая обрабатываются отдельно.
+
+- Если единственным аргументом DbNewInstanceExpression является DbElementExpression, он преобразуется следующим образом:
+
+    ```
+    NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X
+    ```
+
+Если DbNewInstanceExpression не имеет аргументов (представляет пустую таблицу), то DbNewInstanceExpression преобразуется в следующее выражение:
+
+```sql
+SELECT CAST(NULL AS <primitiveType>) as X
+FROM (SELECT 1) AS Y WHERE 1=0
+```
+
+В противном случае DbNewInstanceExpression выстраивает лестницу аргументов UNION ALL.
+
+```sql
+SELECT <visit-result-arg1> as X
+UNION ALL SELECT <visit-result-arg2> as X
+UNION ALL …
+UNION ALL SELECT <visit-result-argN> as X
+```
+
+### <a name="dbfunctionexpression"></a>DbFunctionExpression
+
+Канонические и встроенные функции обрабатываются одинаково: если требуется специальная обработка (например, преобразование TRIM(string) в LTRIM(RTRIM(string))), то вызывается нужный обработчик. В противном случае такие функции преобразуются в формат Имя_функции(аргумент1, аргумент2, ..., аргументN).
+
+Словари используются для отслеживания функций, которым требуется специальная обработка, и соответствующих обработчиков.
+
+Определяемые пользователем функции преобразуются в формат Имя_пространства_имен.имя_функции (аргумент1, аргумент2,..., аргументn).
+
+### <a name="dbelementexpression"></a>DbElementExpression
+
+Метод, выполняющий обход DbElementExpression, вызывается, только если DbElementExpression представляет скалярный вложенный запрос. Поэтому DbElementExpression преобразуется в законченную SqlSelectStatement и заключается в квадратные скобки.
+
+### <a name="dbquantifierexpression"></a>DbQuantifierExpression
+
+В зависимости от типа выражения (любой или все) DbQuantifierExpression преобразуется следующим образом:
+
+```
+Any(input, x) => Exists(Filter(input,x))
+All(input, x) => Not Exists(Filter(input, not(x))
+```
+
+### <a name="dbnotexpression"></a>DbNotExpression
+
+В некоторых случаях можно свернуть преобразование DbNotExpression с входным выражением. Пример:
+
+```
+Not(IsNull(a)) =>  "a IS NOT NULL"
+Not(All(input, x) => Not (Not Exists(Filter(input, not(x))) => Exists(Filter(input, not(x))
+```
+
+Второе свертывание выполняется, поскольку поставщик неэффективным образом преобразует DbQuantifierExpression типа «все». Поэтому платформа Entity Framework не может выполнить упрощение.
+
+### <a name="dbisemptyexpression"></a>DbIsEmptyExpression
+
+DbIsEmptyExpression преобразуется следующим образом:
+
+```
+IsEmpty(inut) = Not Exists(input)
+```
+
+## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Второй этап формирования SQL: Создание строковой команды
+
+При создании строковой команды SQL объект SqlSelectStatement создает фактические псевдонимы для символов, чтобы решить задачу переименования столбцов и псевдонимов экстентов.
+
+Переименование псевдонимов экстентов происходит при записи объекта SqlSelectStatement в строку. Сначала создайте список всех псевдонимов, используемых внешними экстентами. Каждый символ в списке FromExtents (или AllJoinExtents, если его значение отлично от null) проходит переименование, если он вызывает конфликт с любым из внешних экстентов. Если требуется переименование, то исключается конфликт с экстентами, собранными в AllExtentNames.
+
+Переименование столбцов происходит при записи объекта Symbol в строку. Метод AddDefaultColumns на первом этапе определяет необходимость переименования каждого символа столбца. На втором этапе выполняется только переименование. Это гарантирует, что созданное имя не вызывает конфликт с именами, используемыми в AllColumnNames
+
+Для создания уникальных имен для столбцов и для псевдонимов экстентов используйте \<existing_name > формат, где n — наименьший из еще не использованных псевдонимов. Наличие глобального списка всех псевдонимов усиливает потребность в каскадном переименовании.
+
 ## <a name="see-also"></a>См. также
 
 - [Создание кода SQL в образце поставщика](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

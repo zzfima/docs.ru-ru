@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3dcd46f1158814b836c7491cf1ed3ac468122ad
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777134"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689328"
 ---
 # <a name="application-startup-time"></a>Время запуска приложения
 Время, необходимое для запуска WPF-приложения, может сильно варьироваться. В этом разделе описаны различные способы, позволяющие сократить воспринимаемое и фактическое время запуска приложений Windows Presentation Foundation (WPF).  
@@ -81,7 +81,7 @@ ms.locfileid: "61777134"
   
  Вы можете установить сертификат CA на клиентский компьютер или не использовать Authenticode, когда это возможно. Если вашему приложению не требуется свидетельство издателя, платить за проверку подписи вам не нужно.  
   
- Начиная с версии [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], конфигурация включает параметр, позволяющий отключить проверку Authenticode. Для этого добавьте в файл конфигурации app.exe следующий параметр.  
+ Начиная с версии .NET Framework 3.5, имеется параметр конфигурации, позволяющий отключить проверку Authenticode. Для этого добавьте в файл конфигурации app.exe следующий параметр.  
   
 ```xml  
 <configuration>  

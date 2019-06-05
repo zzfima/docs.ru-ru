@@ -1,6 +1,6 @@
 ---
 title: Синтаксис, используемый свойством DebugView (Visual Basic)
-description: Описание синтаксиса, используемого свойством DebugView для получения строкового представления деревьев выражений
+description: В этой статье описывается специальный синтаксис, используемый свойством DebugView для получения строкового представления деревьев выражений.
 author: zspitz
 ms.author: wiwagn
 ms.date: 05/22/2019
@@ -8,18 +8,18 @@ ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: 1b2a1164f02208cc7578820d8f8ed3bc145fb5b8
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: ae2c75607f7b9cdc40fc5c163ce533f0472ab454
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196534"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689536"
 ---
-# <a name="debugview-syntax"></a>Синтаксис `DebugView` 
+# <a name="debugview-syntax"></a>Синтаксис `DebugView`
 
-`DebugView` Свойство (доступно только в том случае, при отладке) предоставляет визуализации строка деревьев выражений. Большую часть синтаксиса достаточно прост для понимания; в следующих разделах описываются особые случаи.
+Свойство `DebugView` (доступно только при отладке) предоставляет строковое представление деревьев выражений. Большая часть синтаксиса достаточно проста для понимания; особые случаи описаны в разделах ниже.
 
-Каждый пример сопровождается типа блока комментария, содержащее `DebugView`. 
+Каждый пример сопровождается типа блока комментария, содержащее `DebugView`.
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
@@ -47,13 +47,13 @@ Dim numParam As ParameterExpression = Expression.Parameter(GetType(Integer))
 
 Для некоторых числовых типов суффикс добавляется к значению:
 
-| Тип | Ключевое слово | Суффикс |  
+| Тип | Ключевое слово | Суффикс |
 |--|--|--|
 | <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | U |
 | <xref:System.Int64> | [Long](../../../language-reference/data-types/long-data-type.md) | L |
 | <xref:System.UInt64> | [ULong](../../../language-reference/data-types/ulong-data-type.md) | UL |
 | <xref:System.Double> | [Double](../../../language-reference/data-types/double-data-type.md) | D |
-| <xref:System.Single> | [Single](../../../language-reference/data-types/single-data-type.md) | C | 
+| <xref:System.Single> | [Single](../../../language-reference/data-types/single-data-type.md) | C |
 | <xref:System.Decimal> | [Decimal](../../../language-reference/data-types/decimal-data-type.md) | M |
 
 ### <a name="examples"></a>Примеры
@@ -74,7 +74,7 @@ Dim expr As ConstantExpression = Expression.Constant(num)
 
 ## <a name="blockexpression"></a>BlockExpression
 
-Если тип <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> объекта отличается от типа последнего выражения в блоке, то тип отображается в угловые скобки (`<` и `>`). В противном случае тип объекта <xref:System.Linq.Expressions.BlockExpression> не отображается.
+Если тип объекта <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> отличается от типа последнего выражения в блоке, то тип отображается в угловых скобках (`<` и `>`). В противном случае тип объекта <xref:System.Linq.Expressions.BlockExpression> не отображается.
 
 ### <a name="examples"></a>Примеры
 
@@ -87,7 +87,7 @@ Dim block As BlockExpression = Expression.Block(Expression.Constant("test"))
 '
 
 Dim block As BlockExpression = Expression.Block(
-    GetType(Object), 
+    GetType(Object),
     Expression.Constant("test")
 )
 '
@@ -154,7 +154,7 @@ Dim label1 As BlockExpression = Expression.Block(
 
 Dim target As LabelTarget = Expression.Label()
 Dim block As BlockExpression = Expression.Block(
-    Expression.Goto(target), 
+    Expression.Goto(target),
     Expression.Label(target)
 )
 '
@@ -168,7 +168,7 @@ Dim block As BlockExpression = Expression.Block(
 
 ## <a name="checked-operators"></a>Проверяемые операторы
 
-Проверяемые операторы отображаются с `#` символа перед оператором. Например, проверяемый оператор сложения отображается как `#+`.
+Проверяемые операторы отображаются с символом `#` перед оператором. Например, проверяемый оператор сложения отображается как `#+`.
 
 ### <a name="examples"></a>Примеры
 

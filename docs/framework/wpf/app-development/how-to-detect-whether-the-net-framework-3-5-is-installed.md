@@ -7,21 +7,21 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: 7c373d9fd5934be98735cd814dafb35ed81fddfe
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 69dfa0eb8d9ad9b780d258a874d255484f270cfe
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592628"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690432"
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Практическое руководство. Проверка наличия установленной платформы .NET Framework 3.5
-Прежде чем развертывать приложения Windows Presentation Foundation (WPF) в системе, предназначенного [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], необходимо сначала убедиться, [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] присутствует среды выполнения. В этом разделе содержится скрипт, написанный на языке HTML/JavaScript, администраторы могут использовать для определения ли [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] присутствует в системе.  
+Прежде чем развертывать приложения Windows Presentation Foundation (WPF) в системе, ориентированном на .NET Framework 3.5, их необходимо сначала убедиться, что среда выполнения .NET Framework 3.5 присутствует. В этом разделе предоставляет скрипты, написанные на HTML/JavaScript, администраторы могут использовать для определения наличия .NET Framework 3.5 в системе.  
   
 > [!NOTE]
 >  Дополнительные сведения об установке, развертывании и обнаружении .NET Framework, см. в разделе [установка .NET Framework для разработчиков](../../install/guide-for-developers.md).  
   
 ## <a name="example"></a>Пример  
- Когда [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] является установки MSI-ФАЙЛ добавляет «CLR.NET» и номер версии строки UserAgent. Пример скрипта, внедренных в простую HTML-страницу. В скрипте выполняется поиск строки UserAgent, чтобы определить ли [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] устанавливается и отображается сообщение о состоянии по результатам поиска.  
+ При установке .NET Framework 3.5, MSI-ФАЙЛ добавляет строки UserAgent «CLR.NET» и номер версии. Пример скрипта, внедренных в простую HTML-страницу. Сценарий выполняет поиск строки UserAgent, чтобы определить, установлен ли .NET Framework 3.5 и отображается сообщение о состоянии по результатам поиска.  
   
 > [!NOTE]
 >  Этот сценарий предназначен для Internet Explorer. Другие браузеры могут не включать сведения о .NET CLR в строки UserAgent.  

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa05fe1e170a0285df73d179ef39db6301059ac8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1f773b6f7d0b8b4e0b8647b7086d8782d1afbb93
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490950"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690534"
 ---
 # <a name="cryptographic-services"></a>службы шифрования
 
@@ -266,7 +266,7 @@ RSA допускает как шифрование, так и подписыва
 
 ## <a name="clickonce-manifests"></a>Манифесты ClickOnce
 
-В [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]перечисленные ниже криптографические классы используются для проверки и получения сведений о подписях манифестов для приложений, которые развертываются с применением [технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).
+В .NET Framework 3.5, перечисленные ниже криптографические классы позволяют проверки и получения сведений о подписях манифестов для приложений, развернутых с помощью [технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment):
 
 - Класс <xref:System.Security.Cryptography.ManifestSignatureInformation> получает сведения о подписи манифеста при использовании перегрузок его метода <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> .
 
@@ -290,7 +290,7 @@ RSA допускает как шифрование, так и подписыва
 
 ## <a name="suite-b-support"></a>Поддержка пакета Suite B
 
-Платформа [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] поддерживает набор криптографических алгоритмов Suite B, опубликованных Агентством национальной безопасности США (NSA). Дополнительные сведения о шифровании по стандарту Suite B см. в документе [NSA Suite B Cryptography Fact Sheet](https://www.nsa.gov/what-we-do/information-assurance/).
+.NET Framework 3.5 поддерживает набора Suite B алгоритмов шифрования, опубликованных агентством национальной безопасности (NSA). Дополнительные сведения о шифровании по стандарту Suite B см. в документе [NSA Suite B Cryptography Fact Sheet](https://www.nsa.gov/what-we-do/information-assurance/).
 
 В набор входят перечисленные ниже алгоритмы.
 
@@ -314,7 +314,7 @@ RSA допускает как шифрование, так и подписыва
 
 Класс <xref:System.Security.Cryptography.CngKey> используется для множества дополнительных операций, включая открытие, создание, удаление и экспорт ключей. Он также предоставляет доступ к базовому дескриптору ключа, используемому при непосредственном вызове собственных функций.
 
-Платформа [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] также включает множество вспомогательных классов CNG, некоторые из которых приведены ниже.
+.NET Framework 3.5 также включает множество вспомогательных классов CNG, например следующие:
 
 - <xref:System.Security.Cryptography.CngProvider> поддерживает поставщика хранилища ключей.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 15e693f716d02e6f7ef8b666ddf51a8bd352f642
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487983"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690279"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Совместимость политики разграничения доступа кода и ее миграция
 
@@ -26,7 +26,7 @@ ms.locfileid: "66487983"
 
    \- или -
 
-- С помощью [элемент конфигурации < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) принять политику разграничения доступа кода прежних версий.
+- С помощью [ \<NetFx40_LegacySecurityPolicy > элемент конфигурации](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) принять политику разграничения доступа кода прежних версий.
 
 В этом разделе содержатся следующие подразделы.
 
@@ -142,7 +142,7 @@ ms.locfileid: "66487983"
 
 ## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Совместимость: Параметр политики разграничения доступа кода прежних версий
 
-[Элемент конфигурации < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) позволяет указать, что процесс или библиотека использует политику разграничения доступа кода прежних версий. При включении этого элемента политика и перегруженные объекты свидетельств будут работать как в предыдущих версиях платформы.
+[ \<NetFx40_LegacySecurityPolicy > элемент конфигурации](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) позволяет указать, что процесс или библиотека использует политику разграничения доступа кода прежних версий. При включении этого элемента политика и перегруженные объекты свидетельств будут работать как в предыдущих версиях платформы.
 
 > [!NOTE]
 > Поведение политики разграничения доступа кода определяется для каждой версии среды выполнения, поэтому изменение этой политики для одной версии среды выполнения не повлияет на ее поведение в других версиях.

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6aef46db47f881d6a15cc1e58d46219a80194b0
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: b426eaaa2dab4d54ea4c82483c079428f3bfac57
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456455"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689908"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > элемент
 Указывает, что при операциях сравнения строк среда выполнения должна использовать устаревший порядок сортировки.  
@@ -44,7 +44,7 @@ ms.locfileid: "66456455"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|4096|Код языка, представляющий альтернативный порядок сортировки. В этом случае 4096 представляет порядок сортировки [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] и более ранних версий.|  
+|4096|Код языка, представляющий альтернативный порядок сортировки. В этом случае 4096 представляет порядок сортировки для .NET Framework 3.5 и более ранних версий.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
@@ -57,7 +57,7 @@ ms.locfileid: "66456455"
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
   
 ## <a name="remarks"></a>Примечания  
- Поскольку сравнения строк, сортировки и операций регистр выполняется с <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> классов в платформе .NET Framework 4 соответствуют стандарту Unicode 5.1, результаты методы сравнения строк такие как <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> и <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> может отличаться от предыдущих версий платформы .NET Framework. Если приложение зависит от устаревшего поведения, можно восстановить правила сравнения и сортировки строк, используемые в [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] и более ранних версиях, включив в файл конфигурации приложения элемент `<CompatSortNLSVersion>`.  
+ Поскольку сравнения строк, сортировки и операций регистр выполняется с <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> классов в платформе .NET Framework 4 соответствуют стандарту Unicode 5.1, результаты методы сравнения строк такие как <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> и <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> может отличаться от предыдущих версий платформы .NET Framework. Если ваше приложение зависит от устаревшее поведение, вы можете восстановить, сравнение и сортировка строк правил, используемых в .NET Framework 3.5 и более ранних версий, включая `<CompatSortNLSVersion>` элемент в файле конфигурации приложения.  
   
 > [!IMPORTANT]
 >  Для восстановления устаревших правил сравнения и сортировки строк также требуется, чтобы в локальной системе была доступна библиотека динамической компоновки sort00001000.dll.  
@@ -76,13 +76,13 @@ ms.locfileid: "66456455"
 sta follows a in the sort order.  
 ```  
   
- Они полностью отличаются от выходных данных, отображаемых при запуске примера в [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
+ Это полностью отличаются от выходных данных, которое отображается при запуске примера в .NET Framework 3.5.  
   
 ```  
 sta equals a in the sort order.  
 ```  
   
- Тем не менее, если добавить следующий файл конфигурации в каталог примеров и затем запустить пример в .NET Framework 4, выходные данные идентичны данным, созданным примером при его запуске в [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
+ Тем не менее если добавить следующий файл конфигурации в каталог примеров и затем запустить пример в .NET Framework 4, выходные данные идентичны данным, созданным примером при его запуске в .NET Framework 3.5.  
   
 ```xml  
 <?xml version ="1.0"?>  
