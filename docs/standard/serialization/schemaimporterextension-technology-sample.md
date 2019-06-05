@@ -2,12 +2,12 @@
 title: Образец технологии SchemaImporterExtension
 ms.date: 03/30/2017
 ms.assetid: 3f5eb78f-0ef6-433a-b095-3a63b1ce0bc9
-ms.openlocfilehash: 5027897bcf62e52dae5aab6090c01518a92636dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d63461425fd0b3366d39892512577b0dd706de13
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028308"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490863"
 ---
 # <a name="schemaimporterextension-technology-sample"></a>Образец технологии SchemaImporterExtension
 [Скачать образец](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/SchemaImporterExtension.zip.exe)  
@@ -22,7 +22,7 @@ ms.locfileid: "62028308"
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Сборка образца с использованием Visual Studio  
   
-1. Откройте [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] и перейдите к вложенной папке для данного образца, соответствующей выбранному языку.  
+1. Откройте проводник и перейдите к одной из примера, соответствующей выбранному языку.  
   
 2. Дважды щелкните значок OrderSchemaImporterExtension.sln, чтобы открыть файл в Visual Studio.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62028308"
   
 1. С помощью командной строки перейдите в каталог, содержащий новый исполняемый файл.  
   
-2. В командной строке введите **[exe имя]**.  
+2. В командной строке введите **[exe имя]** .  
   
 ## <a name="remarks"></a>Примечания  
  Дополнительные сведения о создании примера двоичного файла и шагах по его регистрации см. в комментариях в файле исходного кода и файле build.proj.  
