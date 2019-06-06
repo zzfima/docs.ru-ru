@@ -20,12 +20,12 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 88e8bfadf34aecb207b1d2858eacf40338363599
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 289b6997a4d17463072418fbf17f5f99874f4988
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634732"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378170"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Поиск с возвратом в регулярных выражениях
 <a name="top"></a> Поиск с возвратом происходит, если шаблон регулярного выражения содержит переменные [квантификаторы](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) или [конструкции изменения](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), и обработчик регулярных выражений возвращается в предыдущее сохраненное состояние, чтобы продолжить поиск совпадения. В поиске с возвратом заключена сила регулярных выражений. Благодаря ему выражения могут быть мощными и гибкими, а также совпадать со сложными шаблонами. С другой стороны, эти возможности дорого обходятся. Часто именно поиск с возвратом существенно снижает производительность обработчика регулярных выражений. К счастью, разработчик может управлять работой обработчика регулярных выражений и тем, как он использует поиск с возвратом. В этом разделе описано, как функционирует поиск с возвратом, и как им можно управлять.  
@@ -130,7 +130,7 @@ ms.locfileid: "64634732"
   
 <a name="Timeout"></a>   
 ### <a name="defining-a-time-out-interval"></a>Определение интервала времени ожидания  
- Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], можно задавать значение времени ожидания, которое равняется значению самого длинного интервала, необходимого обработчику регулярных выражений для выполнения поиска до первого совпадения, пока он не приостановит попытки найти соответствие и не вызовет исключение <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> . Чтобы задать интервал ожидания, укажите значение <xref:System.TimeSpan> в конструкторе <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> регулярных выражений экземпляра. Кроме того, каждый статический метод сравнения с шаблоном имеет перегруженную версию с параметром <xref:System.TimeSpan> , который позволяет указать значение времени ожидания. По умолчанию интервал времени ожидания задается в <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> и время ожидания обработчика регулярных выражений не истекает.  
+ Начиная с .NET Framework 4.5 можно задавать значение времени ожидания, которое равняется значению самого длинного интервала, необходимого обработчику регулярных выражений для выполнения поиска до первого совпадения, пока он не приостановит попытки найти соответствие и не вызовет исключение <xref:System.Text.RegularExpressions.RegexMatchTimeoutException>. Чтобы задать интервал ожидания, укажите значение <xref:System.TimeSpan> в конструкторе <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> регулярных выражений экземпляра. Кроме того, каждый статический метод сравнения с шаблоном имеет перегруженную версию с параметром <xref:System.TimeSpan> , который позволяет указать значение времени ожидания. По умолчанию интервал времени ожидания задается в <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> и время ожидания обработчика регулярных выражений не истекает.  
   
 > [!IMPORTANT]
 >  Рекомендуется всегда устанавливать интервал времени ожидания, если регулярное выражение использует поиск с возвратом.  
