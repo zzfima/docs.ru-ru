@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: d1cc6043afb7f795bb1208d2cf333aeca321462f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 6d859f5f341eaf7c86573077ec56eab7b4cd7bb8
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457369"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722556"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Преобразователи типов или расширения разметки для XAML
 Преобразователи типов и расширения разметки — это два метода, используемых системами типов XAML и средствами записи XAML для создания компонентов графа объектов. Хотя они обладают общими характеристиками, преобразователи типов и расширения разметки представляются по-разному в потоке узлов XAML. В этой документации преобразователи типов, расширения разметки и аналогичные конструкции иногда называются преобразователями значений.  
@@ -45,7 +45,7 @@ ms.locfileid: "66457369"
  Дополнительные сведения о реализации шаблона расширения разметки для XAML см. в разделе [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
 > [!NOTE]
->  Типы <xref:System.Windows.Markup.MarkupExtension> и <xref:System.Windows.Markup.ValueSerializer> находятся в пространстве имен <xref:System.Windows.Markup> , а не в <xref:System.Xaml> . Это не означает, что эти типы относятся к технологии WPF или Windows Forms, которые заполняют пространства имен CLR, которые содержат строку `Windows`. <xref:System.Windows.Markup.MarkupExtension> и <xref:System.Windows.Markup.ValueSerializer> находятся в сборке System.Xaml и не зависят от конкретной платформы. Эти типы существовали в пространстве имен среды CLR для [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] и остаются в пространстве имен среды CLR в .NET Framework 4 для предотвращения повреждения ссылок в существующих проектах WPF. Для получения дополнительной информации см. [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md).  
+>  Типы <xref:System.Windows.Markup.MarkupExtension> и <xref:System.Windows.Markup.ValueSerializer> находятся в пространстве имен <xref:System.Windows.Markup> , а не в <xref:System.Xaml> . Это не означает, что эти типы относятся к технологии WPF или Windows Forms, которые заполняют пространства имен CLR, которые содержат строку `Windows`. <xref:System.Windows.Markup.MarkupExtension> и <xref:System.Windows.Markup.ValueSerializer> находятся в сборке System.Xaml и не зависят от конкретной платформы. Эти типы существовали в пространстве имен среды CLR для .NET Framework 3.0 и остаются в пространстве имен среды CLR в .NET Framework 4 для предотвращения повреждения ссылок в существующих проектах WPF. Для получения дополнительной информации см. [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md).  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>Сериализаторы значений  
