@@ -2,12 +2,12 @@
 title: Технологии Майкрософт в оптимизированную для облачных приложений
 description: Модернизация существующих приложений .NET с помощью облака Azure и Windows контейнерах | Технологии Майкрософт в оптимизированную для облачных приложений
 ms.date: 04/28/2018
-ms.openlocfilehash: ebdbc7bb3a5f51f8408b69a5e13f03f424eae242
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 915aa99d2331c5b9c46eabef3335fb809baa9370
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639033"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758635"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>Технологии Майкрософт в оптимизированную для облачных приложений
 
@@ -17,7 +17,7 @@ ms.locfileid: "65639033"
 
 - **Среда выполнения**: Этот уровень предоставляет среду для запуска приложения. Если вы используете контейнеры, этот уровень обычно основан на [подсистема Docker](https://docs.docker.com/engine/), работающей на узлах Linux или на узлах Windows. ([Контейнеры Windows](https://docs.microsoft.com/virtualization/windowscontainers/about/) поддерживаются начиная с Windows Server 2016. Контейнеры Windows отлично подходит для существующих приложений .NET Framework, под управлением Windows).
 
-- **Управляемые облака**: При выборе параметра управляемой облачной можно избежать затрат и сложности, управлении и поддержке базовой инфраструктурой, виртуальными машинами, исправлений ОС и конфигурацию сети. Если вы решили перенос с помощью IaaS, вы отвечаете все эти задачи и сопутствующие затраты. В параметре управляемой облачной управлять только приложениям и службам, разрабатываемым. Поставщик облачных служб обычно управляет всем остальным. Примеры управляемых облачных служб в Azure [базы данных SQL Azure](https://azure.microsoft.com/services/sql-database), [кэша Redis для Azure](https://azure.microsoft.com/services/cache/), [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/), [хранилища Azure](https://azure.microsoft.com/services/storage/), [База данных azure для MySQL](https://azure.microsoft.com/services/mysql/), [база данных Azure для PostgreSQL](https://azure.microsoft.com/services/postgresql/), [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)и управляемых служб вычислений, таких как [масштабирования виртуальных Машин Задает](https://azure.microsoft.com/services/virtual-machine-scale-sets/), [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/), [службе приложений Azure](https://azure.microsoft.com/services/app-service/), и [службе Azure Kubernetes](https://azure.microsoft.com/services/container-service/).
+- **Управляемые облака**: При выборе параметра управляемой облачной можно избежать затрат и сложности, управлении и поддержке базовой инфраструктурой, виртуальными машинами, исправлений ОС и конфигурацию сети. Если вы решили перенос с помощью IaaS, вы отвечаете все эти задачи и сопутствующие затраты. В параметре управляемой облачной управлять только приложениям и службам, разрабатываемым. Поставщик облачных служб обычно управляет всем остальным. Примеры управляемых облачных служб в Azure [базы данных SQL Azure](https://azure.microsoft.com/services/sql-database), [кэша Redis для Azure](https://azure.microsoft.com/services/cache/), [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/), [хранилища Azure](https://azure.microsoft.com/services/storage/), [База данных azure для MySQL](https://azure.microsoft.com/services/mysql/), [база данных Azure для PostgreSQL](https://azure.microsoft.com/services/postgresql/), [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)и управляемых служб вычислений, таких как [масштабирования виртуальных Машин Задает](https://azure.microsoft.com/services/virtual-machine-scale-sets/), [службе приложений Azure](https://azure.microsoft.com/services/app-service/), и [службе Azure Kubernetes](https://azure.microsoft.com/services/container-service/).
 
 - **Разработка приложений**: При создании приложений, которые выполняются в контейнерах можно выбрать из множества языков. Это руководство посвящено [.NET](https://www.microsoft.com/net), но вы можете разрабатывать приложения на основе контейнера с помощью других языков, таких как Node.js, Python, Spring/Java, или вернуться.
 
@@ -27,7 +27,7 @@ ms.locfileid: "65639033"
 
 - **Жизненный цикл приложения**: [Службы Azure DevOps](https://azure.microsoft.com/services/devops/) и другие средства, как Jenkins, являются серверы построения автоматизации, которые помогут вам реализовать конвейеров CI/CD, включая управление выпусками.
 
-Далее разделы этой главы и пошаговые руководства, связана именно с сведения о на уровне среды выполнения (контейнеры Windows). Рекомендации описаны способы, вы можете развернуть контейнеры Windows в Windows Server 2016 (и более поздних версиях) виртуальные машины и экземпляры контейнеров Azure. Здесь также рассматриваются более сложные платформ PaaS, таких как службы приложений Azure и оркестраторе, таком как Azure Service Fabric и служба Azure Kubernetes.
+Далее разделы этой главы и пошаговые руководства, связана именно с сведения о на уровне среды выполнения (контейнеры Windows). Рекомендации описаны способы, вы можете развернуть контейнеры Windows в Windows Server 2016 (и более поздних версиях) виртуальные машины и экземпляры контейнеров Azure. Здесь также рассматриваются более сложные платформ PaaS, таких как службы приложений Azure и оркестраторе, таком как службе Azure Kubernetes.
 
 ## <a name="monolithic-applications-can-be-cloud-optimized"></a>Монолитные приложения *можно* быть оптимизация для облака
 

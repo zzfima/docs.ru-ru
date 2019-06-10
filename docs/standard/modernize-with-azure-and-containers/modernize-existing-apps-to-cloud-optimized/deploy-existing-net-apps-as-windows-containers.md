@@ -2,12 +2,12 @@
 title: Развертывание существующих приложений .NET в качестве контейнеров Windows
 description: Модернизация существующих приложений .NET с помощью облака Azure и Windows контейнерах | Развертывание существующих приложений .NET в качестве контейнеров Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: 77d10867573765a7e86a9827825e1313de7a3035
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ba9af3fc3a5bf285830bb873fa6a5da8390dc6b4
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643743"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758844"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Развертывание существующих приложений .NET в качестве контейнеров Windows
 
@@ -153,7 +153,6 @@ ms.locfileid: "65643743"
 
 - **служба приложений Azure**;
 - **Служба Azure Kubernetes (AKS и ACS)**
-- **Azure Service Fabric** 
 - **Пакетная служба Azure** 
 
 Затем реестр контейнеров Azure — это реестр высокой масштабируемой контейнера, размещенных в Azure, который можно использовать из всех предыдущих продуктов при регистрации и развертывания ваших образов настраиваемого контейнера.

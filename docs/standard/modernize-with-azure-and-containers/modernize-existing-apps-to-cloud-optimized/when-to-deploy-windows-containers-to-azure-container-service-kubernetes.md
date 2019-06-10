@@ -2,12 +2,12 @@
 title: Когда следует развертывать контейнеры Windows в службе контейнеров Azure (то есть Kubernetes)
 description: Модернизация существующих приложений .NET с помощью облака Azure и Windows контейнерах | Когда следует развертывать контейнеры Windows в службе контейнеров Azure (то есть Kubernetes)
 ms.date: 04/30/2018
-ms.openlocfilehash: 921767b52f2b0d80f2d31d972b65ac7551d2f7c5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 903082deba635dd0dfc22d0186fbc589f8d05b92
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643574"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758563"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Когда следует развертывать контейнеры Windows в службе контейнеров Azure (то есть Kubernetes)
 
@@ -22,5 +22,5 @@ ms.locfileid: "65643574"
 Важное примечание. Evolved и «дополнительные PaaS» версия ACS (службы контейнеров Azure) для Kubernetes — AKS (служба Azure Kubernetes), однако контейнеры Windows по-прежнему не поддерживаются Q2 2018 года, но скоро будет поддерживать.
 
 >[!div class="step-by-step"]
->[Назад](when-to-deploy-windows-containers-to-service-fabric.md)
+>[Назад](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)
 >[Вперед](choosing-azure-compute-options-for-container-based-applications.md)

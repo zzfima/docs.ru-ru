@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 0f06ca2251ae1bf9bd5e199562eff116614e7117
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09c51341a2b81c21804bcca3b244bbebdb7342b6
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973844"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758773"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>Известные GUID папок для пользовательских размещений, отображаемых в диалоговом окне открытия или сохранения файла
-Использовании <xref:System.Guid> для указания [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] известную папку при добавлении папок в <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> коллекции. Известные GUID папок не учитывается регистр и определены в файле KnownFolders.h в [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
+Использовании <xref:System.Guid> для указания [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] известную папку при добавлении папок в <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> коллекции. Известные GUID папок не учитывается регистр и определяются в файле KnownFolders.h в пакете SDK для Windows.  
   
 > [!NOTE]
 >  В некоторых случаях известную папку добавляемого <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> не будет отображаться в **Избранные ссылки** области. Например если указанная известная папка отсутствует на компьютере, на котором выполняется приложение, известную папку не указывается.  

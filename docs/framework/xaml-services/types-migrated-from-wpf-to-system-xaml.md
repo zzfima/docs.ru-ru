@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: ea8ab81b192e0e8cb40988cb67cce08a7d9dab82
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: 37433768c1bca3c013fb1e505d55bd7295f34933
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722576"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758024"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>Типы, перенесенные из WPF в System.Xaml
-В .NET Framework 3.5 и [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)], оба [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] и Windows Workflow Foundation содержат реализацию языка XAML. Многие из открытых типов, которые обеспечивают расширение для реализации XAML в WPF, существовали в сборках WindowsBase PresentationCore и PresentationFramework. Аналогично открытые типы, которые обеспечивают расширение для Windows Workflow Foundation XAML существовал в сборке System.Workflow.ComponentModel. В .NET Framework 4 некоторые типы, связанные с XAML, перенесены в сборку System.Xaml. Общая реализация .NET Framework служб языка XAML поддерживает многие сценарии расширения XAML, которые первоначально определялись реализацией XAML конкретной платформы но теперь являются частью общей поддержке языка .NET Framework 4 XAML. В этом разделе перечислены перенесенные типы и обсуждаются вопросы, относящиеся к миграции.  
+В .NET Framework 3.5 и .NET Framework 3.0 оба [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] и Windows Workflow Foundation содержат реализацию языка XAML. Многие из открытых типов, которые обеспечивают расширение для реализации XAML в WPF, существовали в сборках WindowsBase PresentationCore и PresentationFramework. Аналогично открытые типы, которые обеспечивают расширение для Windows Workflow Foundation XAML существовал в сборке System.Workflow.ComponentModel. В .NET Framework 4 некоторые типы, связанные с XAML, перенесены в сборку System.Xaml. Общая реализация .NET Framework служб языка XAML поддерживает многие сценарии расширения XAML, которые первоначально определялись реализацией XAML конкретной платформы но теперь являются частью общей поддержке языка .NET Framework 4 XAML. В этом разделе перечислены перенесенные типы и обсуждаются вопросы, относящиеся к миграции.  
   
 <a name="assemblies_and_namespaces"></a>   
 ## <a name="assemblies-and-namespaces"></a>Сборки и пространства имен  

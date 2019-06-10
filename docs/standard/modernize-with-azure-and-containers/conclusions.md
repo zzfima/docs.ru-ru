@@ -2,12 +2,12 @@
 title: Выводы
 description: Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows | Заключение
 ms.date: 10/26/2017
-ms.openlocfilehash: c6f56e312c052f3ea87e62d36a1ae6846a4b8735
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c5d4a3d504e7d62f74cf74e7b3f53f44f4b9b152
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643766"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758881"
 ---
 # <a name="conclusions"></a>Выводы
 
@@ -15,7 +15,7 @@ ms.locfileid: "65643766"
 
 - Контейнер Docker превращается в стандартную единицу развертывания любого серверного приложения или службы.
 
-- В рабочей среде следует использовать оркестратора (например, Service Fabric или Kubernetes) для размещения масштабируемых приложений на основе контейнеров Windows.
+- В рабочей среде следует использовать оркестратора (например, Kubernetes) для размещения масштабируемых приложений на основе контейнеров Windows.
 
 - Виртуальные машины Azure, разместить контейнеры являются быстрый и простой способ создания небольших сред разработки и тестирования в облаке.
 
