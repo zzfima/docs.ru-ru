@@ -2,12 +2,12 @@
 title: Сериализация в файлы и объекты TextWriters и XmlWriters1
 ms.date: 07/20/2015
 ms.assetid: bd3ea6f7-895b-4ff4-a625-fe2bb55b1886
-ms.openlocfilehash: bfbb0376823159c2026140c4382f321a563d92de
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: c74dc7f429e4ae27f08f7acb6b3a6c39161aac71
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680221"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483550"
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>Сериализация в файлы и объекты TextWriters и XmlWriters
 
@@ -33,4 +33,4 @@ XML-деревья можно сериализовать для <xref:System.IO.
 
 ## <a name="see-also"></a>См. также
 
-- [Сериализация XML-деревьев (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [Сериализация XML-деревьев (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

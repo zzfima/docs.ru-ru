@@ -2,12 +2,12 @@
 title: Сравнение функционального Процедурное программирование (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fc64e39c-a487-4882-9169-da4de97917d9
-ms.openlocfilehash: 4c538011ce38708978f8b0f4866af3b3b4195a19
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f713e54cefed5b1fcf8c29cd88aa7587a737327
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597151"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486946"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>Сравнение функционального Процедурное программирование (LINQ to XML) (C#)
 XML-приложения имеют самые разнообразные типы.  
@@ -38,8 +38,8 @@ XML-приложения имеют самые разнообразные тип
   
  Сравнение этих двух подходов см. в разделе [Сравнение изменения XML-дерева в памяти с функциональным построением (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md).  
   
- Инструкции по написанию функциональных преобразований см. в разделе [Чистые функциональные преобразования XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ Инструкции по написанию функциональных преобразований см. в разделе [Чистые функциональные преобразования XML (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения о программировании LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [Общие сведения о программировании LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

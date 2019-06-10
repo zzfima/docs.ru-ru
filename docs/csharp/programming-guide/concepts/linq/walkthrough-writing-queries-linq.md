@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 345acd17a6357f71f5c047475a4494a1fa793a58
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 083c1e4b6ab8c25956ffcf2288ac32d940f23bc2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595792"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483218"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Пошаговое руководство. Написание запросов на C# (LINQ)
 В этом пошаговом руководстве описываются возможности C#, предназначенные для написания выражений запросов LINQ.  
@@ -30,7 +30,7 @@ ms.locfileid: "64595792"
   
      Откроется диалоговое окно **Новый проект** .  
   
-3. Последовательно разверните узлы **Установленные**, **Шаблоны** и **Visual C#**, а затем выберите **Консольное приложение**.  
+3. Последовательно разверните узлы **Установленные**, **Шаблоны** и **Visual C#** , а затем выберите **Консольное приложение**.  
   
 4. В текстовое поле **Имя** введите другое имя или примите имя по умолчанию и нажмите кнопку **ОК**.  
   
@@ -178,12 +178,11 @@ ms.locfileid: "64595792"
   
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
+ [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)  
   
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
   
 ## <a name="see-also"></a>См. также
 
 - [LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-- [Приступая к работе с LINQ в C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)

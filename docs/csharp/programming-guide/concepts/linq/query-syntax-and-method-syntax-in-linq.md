@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 1d6bd14a88f22bfa961ee28f0014b1f89ccb28b5
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: e3fced818a257cb0bde166b0dd98c59c3b41e8ac
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654046"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484100"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Синтаксис запросов и синтаксис методов в LINQ (C#)
 Большинство запросов в вводной документации к LINQ ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) написано с использованием декларативного синтаксиса запросов LINQ. Однако синтаксис запроса должен быть преобразован в вызовы методов для среды CLR .NET, когда код компилируется. Эти вызовы метода вызывают стандартные операторы запросов, которые имеют такие имена, как `Where`, `Select`, `GroupBy`, `Join`, `Max` и `Average`. Вместо синтаксиса запросов для их вызова можно использовать синтаксис методов.  
@@ -41,7 +41,3 @@ ms.locfileid: "58654046"
   
 ## <a name="composability-of-queries"></a>Совместимость запросов  
  Обратите внимание на то, что в представленном выше примере кода метод `OrderBy` вызывается с помощью оператора точки при вызове `Where`. `Where` создает отфильтрованную последовательность, а затем `Orderby` ее сортирует. Поскольку запросы возвращают `IEnumerable`, объедините их в синтаксис метода, собрав вызовы методов в цепочку. Компилятор выполняет это действие в фоновом режиме, когда вы пишете запросы, используя синтаксис запросов. А поскольку в переменной запроса результаты запроса не сохраняются, его можно в любое время изменить или использовать как базу для нового запроса даже после выполнения.  
-  
-## <a name="see-also"></a>См. также
-
-- [Приступая к работе с LINQ в C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

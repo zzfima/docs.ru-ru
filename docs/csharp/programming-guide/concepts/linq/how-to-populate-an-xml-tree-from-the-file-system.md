@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Заполнение дерева XML из файловой системы (C#)
+title: Практическое руководство. Заполнение дерева XML из файловой системы (C#)
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: 664994dad75871a5b70f2c132df67d1658808c32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc3850c943ebac8980abbff0933413538823d21d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705814"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485170"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Как выполнить Заполнение дерева XML из файловой системы (C#)
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Практическое руководство. Заполнение дерева XML из файловой системы (C#)
 Распространенным и полезным применением XML-деревьев является использование их в качестве иерархической структуры для хранения данных с именем и значением. Можно заполнить дерево XML-данными, распределенными внутри иерархии, после чего выполнять по нему запросы, преобразования и, если необходимо, сериализацию. В следующем сценарии многие виды семантических конструкций, присущих XML, например пространства имен и обработка пробельных символов, неважны. Вместо этого XML-дерево используется как небольшая иерархическая база данных для одного пользователя, которая находится в памяти.  
   
 ## <a name="example"></a>Пример  
@@ -115,7 +115,3 @@ class Program
 ------  
 Total File Size:59089  
 ```  
-  
-## <a name="see-also"></a>См. также
-
-- [Дополнительные способы создания запросов (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -1,22 +1,22 @@
 ---
-title: Как выполнить Отладка пустых наборов результатов запроса (C#)
+title: Практическое руководство. Отладка пустых наборов результатов запроса (C#)
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: d77a92acf54420b5add3bb9ae8b3f0b8c5448d18
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ba82e37ef4f57c78e7ba66676ba90312c2a9400f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357915"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485762"
 ---
-# <a name="how-to-debug-empty-query-results-sets-c"></a>Как выполнить Отладка пустых наборов результатов запроса (C#)
+# <a name="how-to-debug-empty-query-results-sets-c"></a>Практическое руководство. Отладка пустых наборов результатов запроса (C#)
 Одной из наиболее типичных проблем при запросах к XML-деревьям является то, что, если XML-дерево содержит пространство имен по умолчанию, разработчик иногда пишет запрос так, как если бы XML-код не располагался в пространстве имен.  
   
  Первый набор примеров в данном разделе показывает типичный способ загрузки XML в пространстве имен по умолчанию и неправильного запроса к нему.  
   
  Второй набор примеров показывает необходимые исправления для запроса XML в пространстве имен.  
   
- Дополнительные сведения см. в разделе [Работа с пространствами имен XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Дополнительные сведения см. в разделе [Работа с пространствами имен XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).  
   
 ## <a name="example"></a>Пример  
  Этот пример показывает создание XML в пространстве имен, а также запрос, возвращающий пустой результирующий набор.  
@@ -81,7 +81,3 @@ Result set follows:
 3  
 End of result set  
 ```  
-  
-## <a name="see-also"></a>См. также
-
-- [Базовые запросы (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Потоковая передача фрагментов XML с доступом к сведениям заголовка (C#)
+title: Практическое руководство. Потоковая передача фрагментов XML с доступом к сведениям заголовка (C#)
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
-ms.openlocfilehash: a7e590dcc70dcdb4ea7d5681d623c63f194e0d4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ecf20134c0d5897418c7667908f80511a962871
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655573"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484841"
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Как выполнить Потоковая передача фрагментов XML с доступом к сведениям заголовка (C#)
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Практическое руководство. Потоковая передача фрагментов XML с доступом к сведениям заголовка (C#)
 Иногда приходится считывать достаточно большие XML-файлы и разрабатывать приложения таким образом, чтобы объем памяти, используемой этим приложением, был прогнозируемым. Если попытаться заполнить XML-дерево большим XML-файлом, используемый объем памяти будет пропорционален размеру файла, то есть излишним. Поэтому следует вместо этого использовать потоки.  
   
- Одна из возможностей состоит в том, чтобы разработать приложение с использованием метода <xref:System.Xml.XmlReader>. При этом для запроса XML-дерева можно использовать метод [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. В этом случае можно написать собственный пользовательский метод оси. Дополнительные сведения см. в разделе [Как Написание метода оси LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ Одна из возможностей состоит в том, чтобы разработать приложение с использованием метода <xref:System.Xml.XmlReader>. При этом для запроса XML-дерева можно использовать метод [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. В этом случае можно написать собственный пользовательский метод оси. Дополнительные сведения см. в разделе [Практическое руководство. Написание метода оси LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
   
  Чтобы написать собственный метод оси, нужно написать небольшой метод, который использует метод <xref:System.Xml.XmlReader> для считывания узлов, до тех пор пока не достигнет одного из интересующих вас узлов. Затем метод вызывает метод <xref:System.Xml.Linq.XNode.ReadFrom%2A>, который читает из объекта <xref:System.Xml.XmlReader> и создает экземпляр фрагмента XML. Затем он выдает фрагмент с помощью ключевого слова `yield return` методу, который выполняет перечисление по пользовательскому методу оси. После этого можно написать запросы в LINQ на основе пользовательского метода оси.  
   
@@ -166,6 +166,3 @@ static void Main(string[] args)
 </Root>  
 ```  
   
-## <a name="see-also"></a>См. также
-
-- [Расширенные методы программирования LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

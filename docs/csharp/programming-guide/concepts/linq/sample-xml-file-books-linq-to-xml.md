@@ -1,15 +1,15 @@
 ---
-title: 'Образец XML-файла: сведения о книгах (LINQ to XML)'
+title: 'Пример XML-файла: книги (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: b75ab1a2-fb76-4df9-bd01-c45ec22a29ef
-ms.openlocfilehash: 9072c7e741525156719a5b6d65a8c3a6991c67ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2e3971119812862fc9c059ea947dc46cf7fe1ad
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692445"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483813"
 ---
-# <a name="sample-xml-file-books-linq-to-xml"></a>Образец XML-файла: сведения о книгах (LINQ to XML)
+# <a name="sample-xml-file-books-linq-to-xml"></a>Пример XML-файла: книги (LINQ to XML)
 Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Этот файл содержит сведения о книгах.  
   
 ## <a name="booksxml"></a>books.xml  
@@ -38,7 +38,3 @@ ms.locfileid: "54692445"
    </Book>  
 </Catalog>  
 ```  
-  
-## <a name="see-also"></a>См. также
-
-- [Примеры XML-документов (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 2b599906082cabceeb8d97ec737b6fa39fed6825
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 891acd56939a2cff8eb377512a8a516f8a189034
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584411"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487427"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ и универсальные типы (C#)
 Запросы [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] основаны на универсальных типах, которые впервые появились в версии 2.0 платформы .NET Framework. Для того чтобы приступить к написанию запросов, не требуется глубокое знание универсальных типов. Тем не менее необходимо понимание двух основных принципов.  
@@ -38,5 +38,4 @@ ms.locfileid: "65584411"
   
 ## <a name="see-also"></a>См. также
 
-- [Приступая к работе с LINQ в C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Универсальные шаблоны](../../../../csharp/programming-guide/generics/index.md)

@@ -2,12 +2,12 @@
 title: Сохранение пробелов при сериализации3
 ms.date: 07/20/2015
 ms.assetid: 0c4f8b98-483b-4cf8-86be-fa146eef90dc
-ms.openlocfilehash: 2f1e59728dc353a86421c9071710aba23c8f7f6f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d357d40c13a66a152b3c8bb5f61e3a3374c4055
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608727"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484073"
 ---
 # <a name="preserving-white-space-while-serializing"></a>Сохранение пробелов при сериализации
 В этом разделе описывается управление пробелами при сериализации XML-дерева.  
@@ -30,7 +30,3 @@ ms.locfileid: "64608727"
  Если метод не берет объект <xref:System.Xml.Linq.SaveOptions> в качестве аргумента, то этот метод отформатирует (расставит отступы) сериализованный XML. В этом случае все незначащие пробелы в XML-дереве удаляются.  
   
  Если метод берет объект <xref:System.Xml.Linq.SaveOptions> в качестве аргумента, то можно указать, что этот метод не должен форматировать (расставлять отступы) сериализованный XML. В этом случае все незначащие пробелы в XML-дереве сохраняются.  
-  
-## <a name="see-also"></a>См. также
-
-- [Сериализация XML-деревьев (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)

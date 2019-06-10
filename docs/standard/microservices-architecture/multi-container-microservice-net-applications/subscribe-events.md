@@ -2,12 +2,12 @@
 title: Подписка на события
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Общие сведения о публикации событий интеграции и подписке на них.
 ms.date: 10/02/2018
-ms.openlocfilehash: ff165f6bba7940b99ef9712049191e356b893897
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c0eaacce51b186191431bf827bb84d3a2d2b7b1f
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639706"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722668"
 ---
 # <a name="subscribing-to-events"></a>Подписка на события
 
@@ -322,7 +322,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
-- **Ветвление eShopOnContainers с использованием NServiceBus (Particular Software)** \
+- **Ветвление eShopOnContainers с использованием NServiceBus (Particular Software)**  \
     <https://go.particular.net/eShopOnContainers>
 
 - **Обмен сообщениями на основе событий** \
@@ -370,7 +370,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 - **Рик Сейлинг (Rick Saling). Теорема CAP: почему в случае с облачными средами и Интернетом все иначе** \
     <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
-- **Эрик Брюер (Eric Brewer). CAP двенадцать лет спустя: Как изменились "правила"** \
+- **Эрик Брюер (Eric Brewer). CAP двенадцать лет спустя: Как изменились "правила"**  \
     <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>
 
 - **Служебная шина Azure. Обмен сообщениями через брокер: обнаружение повторений**  \
@@ -378,12 +378,6 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 - **Руководство по обеспечению надежности** (документация RabbitMQ) \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
-
-- **Служебная шина Azure. Обмен сообщениями через брокер: обнаружение повторений** \
-    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
-
-- **Руководство по обеспечению надежности** (документация RabbitMQ) \
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)
 
 > [!div class="step-by-step"]
 > [Назад](rabbitmq-event-bus-development-test-environment.md)

@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Поиск одноуровневых узлов (XPath-LINQ to XML) (C#)
+title: Практическое руководство. Поиск одноуровневых узлов (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: b71bf1123461e4b0c0db5024eac3330bcf666ecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d225b30b8bfcae09c5824d974e194f8a06ddfc86
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646768"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485391"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Как выполнить Поиск одноуровневых узлов (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Практическое руководство. Поиск одноуровневых узлов (XPath-LINQ to XML) (C#)
 Допустим, что требуется найти все одноуровневые элементы с указанным именем. Полученная в результате коллекция может содержать контекстный узел, если этот контекстный узел также имеет указанное имя.  
   
  Выражение XPath:  
@@ -73,7 +73,3 @@ Results are identical
       of the world.</Description>  
 </Book>  
 ```  
-  
-## <a name="see-also"></a>См. также
-
-- [LINQ to XML для пользователей XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

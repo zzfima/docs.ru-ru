@@ -1,15 +1,15 @@
 ---
-title: 'Образец XML-файла: Несколько заказов на покупку в пространстве имен2'
+title: 'Пример XML-файла: Несколько заказов на покупку в пространстве имен2'
 ms.date: 07/20/2015
 ms.assetid: 595024f2-374a-4615-acb5-64fa1600f377
-ms.openlocfilehash: 2d5985fbfae543a6123d523a2caf4ec9ffc99a13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05eb5dd7e6a73b03b693375441eb14f533105894
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600158"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483707"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Образец XML-файла: несколько заказов на покупку в пространстве имен
+# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Пример XML-файла: несколько заказов на покупку в пространстве имен
 Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Этот файл содержит несколько заказов на покупку. XML располагается в пространстве имен.  
   
 ## <a name="purchaseordersinnamespacexml"></a>PurchaseOrdersInNamespace.xml  
@@ -108,7 +108,4 @@ ms.locfileid: "54600158"
   </aw:PurchaseOrder>  
 </aw:PurchaseOrders>  
 ```  
-  
-## <a name="see-also"></a>См. также
-
-- [Примеры XML-документов (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+ 

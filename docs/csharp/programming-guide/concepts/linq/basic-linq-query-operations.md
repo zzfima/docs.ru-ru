@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: b8884f2ae230a92f48e93d9b5408ff241f874f92
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4200b3bfc14918b46c16b8f6a1007624c6c23f70
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968196"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486292"
 ---
 # <a name="basic-linq-query-operations-c"></a>Основные операции запросов LINQ (C#)
 В этом разделе содержится краткое описание выражений запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] и некоторые типичные операции, выполняемые в запросе. Более подробные сведения приводятся в следующих разделах:  
@@ -44,7 +44,7 @@ ms.locfileid: "56968196"
  Переменная диапазона схожа с переменной итерации в цикле `foreach` за исключением того, что в выражении запроса не происходит фактической итерации. При выполнении запроса переменная диапазона будет использоваться как ссылка на каждый последующий элемент в `customers`. Так как компилятор может определить тип `cust`, нет необходимости указывать его в явном виде. Дополнительные переменные диапазона могут быть введены предложением `let`. Дополнительные сведения см. в разделе [Предложение let](../../../../csharp/language-reference/keywords/let-clause.md).  
   
 > [!NOTE]
->  Для неуниверсальных источников данных, таких как <xref:System.Collections.ArrayList>, переменная диапазона должна быть явно типизирована. Дополнительные сведения см. в разделе [Как Выполнение запроса к ArrayList с помощью LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md) и [Предложение from](../../../../csharp/language-reference/keywords/from-clause.md).  
+>  Для неуниверсальных источников данных, таких как <xref:System.Collections.ArrayList>, переменная диапазона должна быть явно типизирована. Дополнительные сведения см. в разделе [Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md) и [Предложение from](../../../../csharp/language-reference/keywords/from-clause.md).  
   
 ## <a name="filtering"></a>Фильтрация  
  По-видимому, одной из наиболее распространенных операций с запросом является применение фильтра в форме логического выражения. Фильтр приводит к возвращению запросом только тех элементов, для которых выражение является истинным. Результат вырабатывается с использованием предложения `where`. Фильтр фактически указывает элементы для исключения из исходной последовательности. В приведенном ниже примере возвращаются только те элементы `customers`, которые находятся в Лондоне.  
@@ -101,7 +101,6 @@ from order in Customer.Orders...
   
 ## <a name="see-also"></a>См. также
 
-- [Приступая к работе с LINQ в C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
 - [Пошаговое руководство: Написание запросов на C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
 - [Ключевые слова запроса (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
