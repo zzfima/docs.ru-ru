@@ -1,15 +1,15 @@
 ---
-title: F#рекомендации по форматированию кода
+title: Рекомендации по форматированию кода F#
 description: Дополнительные сведения, касающиеся форматирования F# кода.
 ms.date: 02/08/2019
-ms.openlocfilehash: ce07bd800984ec082a522bc62cb487f786fa0510
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: bfec950395312eac7e837abf8694a4381d5ca82f
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063590"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816181"
 ---
-# <a name="f-code-formatting-guidelines"></a>F#рекомендации по форматированию кода
+# <a name="f-code-formatting-guidelines"></a>Рекомендации по форматированию кода F#
 
 В этой статье приведены инструкции по форматированию кода, чтобы ваши F# код:
 
@@ -836,14 +836,14 @@ type MyRecord =
 
 ## <a name="formatting-literals"></a>Форматирование литералы
 
-[F#литералы](../language-reference/literals.md) с помощью `Literal` атрибут следует поместить атрибут на отдельной строке и использовать именования camelCase:
+[F#литералы](../language-reference/literals.md) с помощью `Literal` атрибут следует поместить атрибут на отдельной строке и использовать PascalCase именования:
 
 ```fsharp
 [<Literal>]
-let path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let Path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let myUrl = "www.mywebsitethatiamworkingwith.com"
+let MyUrl = "www.mywebsitethatiamworkingwith.com"
 ```
 
 Избегайте размещения в той же строке, что значение атрибута.
