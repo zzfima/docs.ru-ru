@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Поиск всех узлов в пространстве имен (C#)
+title: Практическое руководство. Поиск всех узлов в пространстве имен (C#)
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: 3d9a2780a5241bdc535938cb182441418346755f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d94a6c517a76e8ed91f20a17e798ad3806a34a70
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524654"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486814"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a><span data-ttu-id="53b14-102">Как выполнить Поиск всех узлов в пространстве имен (C#)</span><span class="sxs-lookup"><span data-stu-id="53b14-102">How to: Find All Nodes in a Namespace (C#)</span></span>
-<span data-ttu-id="53b14-103">Для поиска всех узлов в отдельном пространстве имен можно применить к нему фильтр по каждому элементу или атрибуту.</span><span class="sxs-lookup"><span data-stu-id="53b14-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a><span data-ttu-id="52d27-102">Практическое руководство. Поиск всех узлов в пространстве имен (C#)</span><span class="sxs-lookup"><span data-stu-id="52d27-102">How to: Find All Nodes in a Namespace (C#)</span></span>
+<span data-ttu-id="52d27-103">Для поиска всех узлов в отдельном пространстве имен можно применить к нему фильтр по каждому элементу или атрибуту.</span><span class="sxs-lookup"><span data-stu-id="52d27-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="53b14-104">Пример</span><span class="sxs-lookup"><span data-stu-id="53b14-104">Example</span></span>  
- <span data-ttu-id="53b14-105">В следующем примере создается XML-дерево с двумя пространствами имен.</span><span class="sxs-lookup"><span data-stu-id="53b14-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="53b14-106">Затем в нем выполняется итерация по дереву и печать имен всех элементов и атрибутов в одном из этих пространств имен.</span><span class="sxs-lookup"><span data-stu-id="53b14-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
+## <a name="example"></a><span data-ttu-id="52d27-104">Пример</span><span class="sxs-lookup"><span data-stu-id="52d27-104">Example</span></span>  
+ <span data-ttu-id="52d27-105">В следующем примере создается XML-дерево с двумя пространствами имен.</span><span class="sxs-lookup"><span data-stu-id="52d27-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="52d27-106">Затем в нем выполняется итерация по дереву и печать имен всех элементов и атрибутов в одном из этих пространств имен.</span><span class="sxs-lookup"><span data-stu-id="52d27-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
   
 ```csharp  
 string markup = @"<aw:Root xmlns:aw='http://www.adventure-works.com' xmlns:fc='www.fourthcoffee.com'>  
@@ -35,7 +35,7 @@ foreach (XElement el in awElements)
     Console.WriteLine(el.Name.ToString());  
 ```  
   
- <span data-ttu-id="53b14-107">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="53b14-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="52d27-107">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="52d27-107">This code produces the following output:</span></span>  
   
 ```  
 Nodes in the http://www.adventure-works.com namespace  
@@ -43,10 +43,10 @@ Nodes in the http://www.adventure-works.com namespace
 {http://www.adventure-works.com}GrandChild2  
 ```  
   
-## <a name="example"></a><span data-ttu-id="53b14-108">Пример</span><span class="sxs-lookup"><span data-stu-id="53b14-108">Example</span></span>  
- <span data-ttu-id="53b14-109">Для доступа к XML-файлу применяется следующий запрос, содержащий заказы на покупку в двух разных пространствах имен.</span><span class="sxs-lookup"><span data-stu-id="53b14-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="53b14-110">В запросе создается новое дерево с элементами одного из пространств имен.</span><span class="sxs-lookup"><span data-stu-id="53b14-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
+## <a name="example"></a><span data-ttu-id="52d27-108">Пример</span><span class="sxs-lookup"><span data-stu-id="52d27-108">Example</span></span>  
+ <span data-ttu-id="52d27-109">Для доступа к XML-файлу применяется следующий запрос, содержащий заказы на покупку в двух разных пространствах имен.</span><span class="sxs-lookup"><span data-stu-id="52d27-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="52d27-110">В запросе создается новое дерево с элементами одного из пространств имен.</span><span class="sxs-lookup"><span data-stu-id="52d27-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
   
- <span data-ttu-id="53b14-111">В этом примере используется следующий XML-документ: [Пример XML-файла. Консолидированные заказы на покупку](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span><span class="sxs-lookup"><span data-stu-id="53b14-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span></span>  
+ <span data-ttu-id="52d27-111">В этом примере используется следующий XML-документ: [Пример XML-файла. Консолидированные заказы на покупку](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span><span class="sxs-lookup"><span data-stu-id="52d27-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span></span>  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  
@@ -59,7 +59,7 @@ XElement newTree = new XElement("Root",
 Console.WriteLine(newTree);  
 ```  
   
- <span data-ttu-id="53b14-112">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="53b14-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="52d27-112">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="52d27-112">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -94,7 +94,3 @@ Console.WriteLine(newTree);
   </aw:PurchaseOrder>  
 </Root>  
 ```  
-  
-## <a name="see-also"></a><span data-ttu-id="53b14-113">См. также</span><span class="sxs-lookup"><span data-stu-id="53b14-113">See also</span></span>
-
-- [<span data-ttu-id="53b14-114">Базовые запросы (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="53b14-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

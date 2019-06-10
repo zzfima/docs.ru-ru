@@ -1,27 +1,27 @@
 ---
-title: Как выполнить Поиск связанных элементов (XPath-LINQ to XML) (C#)
+title: Практическое руководство. Поиск связанных элементов (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 0463be7cabca088a1a5a200b9e8648914f16e7f5
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a4260012899527662638a037fa4616a7a0d6f875
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57843343"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486739"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="f3c13-102">Как выполнить Поиск связанных элементов (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="f3c13-102">How to: Find Related Elements (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="f3c13-103">В этом разделе показано, как возвращать элемент, выбирая атрибут, обращение к которому осуществляется с помощью значения другого элемента.</span><span class="sxs-lookup"><span data-stu-id="f3c13-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="ff868-102">Практическое руководство. Поиск связанных элементов (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="ff868-102">How to: Find Related Elements (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="ff868-103">В этом разделе показано, как возвращать элемент, выбирая атрибут, обращение к которому осуществляется с помощью значения другого элемента.</span><span class="sxs-lookup"><span data-stu-id="ff868-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  
   
- <span data-ttu-id="f3c13-104">Выражение XPath:</span><span class="sxs-lookup"><span data-stu-id="f3c13-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="ff868-104">Выражение XPath:</span><span class="sxs-lookup"><span data-stu-id="ff868-104">The XPath expression is:</span></span>  
   
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
-## <a name="example"></a><span data-ttu-id="f3c13-105">Пример</span><span class="sxs-lookup"><span data-stu-id="f3c13-105">Example</span></span>  
- <span data-ttu-id="f3c13-106">В этом примере обнаруживается 12-й элемент `Order`, а затем определяется клиент, сделавший этот заказ.</span><span class="sxs-lookup"><span data-stu-id="f3c13-106">This example finds the 12th `Order` element, and then finds the customer for that order.</span></span>  
+## <a name="example"></a><span data-ttu-id="ff868-105">Пример</span><span class="sxs-lookup"><span data-stu-id="ff868-105">Example</span></span>  
+ <span data-ttu-id="ff868-106">В этом примере обнаруживается 12-й элемент `Order`, а затем определяется клиент, сделавший этот заказ.</span><span class="sxs-lookup"><span data-stu-id="ff868-106">This example finds the 12th `Order` element, and then finds the customer for that order.</span></span>  
   
- <span data-ttu-id="f3c13-107">Обратите внимание, что индексирование в списках .NET начинается с нуля.</span><span class="sxs-lookup"><span data-stu-id="f3c13-107">Note that indexing into a list in .NET is 'zero' based.</span></span> <span data-ttu-id="f3c13-108">Индексирование в коллекции узлов в предикате XPath начинается с единицы.</span><span class="sxs-lookup"><span data-stu-id="f3c13-108">Indexing into a collection of nodes in an XPath predicate is 'one' based.</span></span> <span data-ttu-id="f3c13-109">Данное различие находит отражение в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="f3c13-109">This example reflects this difference.</span></span>  
+ <span data-ttu-id="ff868-107">Обратите внимание, что индексирование в списках .NET начинается с нуля.</span><span class="sxs-lookup"><span data-stu-id="ff868-107">Note that indexing into a list in .NET is 'zero' based.</span></span> <span data-ttu-id="ff868-108">Индексирование в коллекции узлов в предикате XPath начинается с единицы.</span><span class="sxs-lookup"><span data-stu-id="ff868-108">Indexing into a collection of nodes in an XPath predicate is 'one' based.</span></span> <span data-ttu-id="ff868-109">Данное различие находит отражение в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="ff868-109">This example reflects this difference.</span></span>  
   
- <span data-ttu-id="f3c13-110">В этом примере используется следующий XML-документ: [Пример XML-файла. Заказчики и заказы (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="f3c13-110">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
+ <span data-ttu-id="ff868-110">В этом примере используется следующий XML-документ: [Пример XML-файла. Заказчики и заказы (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="ff868-110">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  
@@ -64,7 +64,7 @@ else
 Console.WriteLine(customer1);  
 ```  
   
- <span data-ttu-id="f3c13-111">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="f3c13-111">This example produces the following output:</span></span>  
+ <span data-ttu-id="ff868-111">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="ff868-111">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -83,7 +83,4 @@ Results are identical
   </FullAddress>  
 </Customer>  
 ```  
-  
-## <a name="see-also"></a><span data-ttu-id="f3c13-112">См. также</span><span class="sxs-lookup"><span data-stu-id="f3c13-112">See also</span></span>
-
-- [<span data-ttu-id="f3c13-113">LINQ to XML для пользователей XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="f3c13-113">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+ 

@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Анализ строки (C#)
+title: Практическое руководство. Анализ строки (C#)
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: c4d26f534c718d69c84a30b11de22249b241e084
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8039e22a3ba1e37818064fafca7c404b57f39021
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629791"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485285"
 ---
-# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="de345-102">Как выполнить Анализ строки (C#)</span><span class="sxs-lookup"><span data-stu-id="de345-102">How to: Parse a String (C#)</span></span>
-<span data-ttu-id="de345-103">В этом разделе демонстрируется анализ строки для создания XML-дерева в C#.</span><span class="sxs-lookup"><span data-stu-id="de345-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>  
+# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="18ff5-102">Практическое руководство. Анализ строки (C#)</span><span class="sxs-lookup"><span data-stu-id="18ff5-102">How to: Parse a String (C#)</span></span>
+<span data-ttu-id="18ff5-103">В этом разделе демонстрируется анализ строки для создания XML-дерева в C#.</span><span class="sxs-lookup"><span data-stu-id="18ff5-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="de345-104">Пример</span><span class="sxs-lookup"><span data-stu-id="de345-104">Example</span></span>  
- <span data-ttu-id="de345-105">В следующем коде C# показано, как выполнять синтаксический анализ строки.</span><span class="sxs-lookup"><span data-stu-id="de345-105">The following C# code shows how to parse a string.</span></span>  
+## <a name="example"></a><span data-ttu-id="18ff5-104">Пример</span><span class="sxs-lookup"><span data-stu-id="18ff5-104">Example</span></span>  
+ <span data-ttu-id="18ff5-105">В следующем коде C# показано, как выполнять синтаксический анализ строки.</span><span class="sxs-lookup"><span data-stu-id="18ff5-105">The following C# code shows how to parse a string.</span></span>  
   
 ```csharp  
 XElement contacts = XElement.Parse(  
@@ -44,7 +44,3 @@ XElement contacts = XElement.Parse(
     </Contacts>");  
 Console.WriteLine(contacts);  
 ```  
-  
-## <a name="see-also"></a><span data-ttu-id="de345-106">См. также</span><span class="sxs-lookup"><span data-stu-id="de345-106">See also</span></span>
-
-- [<span data-ttu-id="de345-107">Анализ XML (C#)</span><span class="sxs-lookup"><span data-stu-id="de345-107">Parsing XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

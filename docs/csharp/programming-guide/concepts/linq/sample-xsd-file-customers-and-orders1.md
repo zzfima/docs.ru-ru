@@ -2,19 +2,19 @@
 title: 'Образец XSD-файла: Заказчики и заказы1'
 ms.date: 07/20/2015
 ms.assetid: ef9911a3-7ac4-44fd-b36e-a0c0ad0a157d
-ms.openlocfilehash: 9738070ce1b8bf5c0bf8ed4ba75e8d1a248efd53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59b5d116d1e89267ba36066e2de644dee0bf514c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524628"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487212"
 ---
-# <a name="sample-xsd-file-customers-and-orders"></a><span data-ttu-id="1d77c-102">Образец XSD-файла: заказчики и заказы</span><span class="sxs-lookup"><span data-stu-id="1d77c-102">Sample XSD File: Customers and Orders</span></span>
-<span data-ttu-id="1d77c-103">Следующий файл XSD используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1d77c-103">The following XSD file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="1d77c-104">Этот файл содержит определение схемы для статьи [Пример XML-файла. Заказчики и заказы (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="1d77c-104">This file contains a schema definition for the [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span> <span data-ttu-id="1d77c-105">В схеме используются функции XSD `xs:key` и `xs:keyref` для определения того, что атрибут `CustomerID` элемента `Customer` является ключом, а также для установления связей между элементом `CustomerID` в каждом элементе `Order` и атрибутом `CustomerID` в каждом элементе `Customer`.</span><span class="sxs-lookup"><span data-stu-id="1d77c-105">The schema uses the `xs:key` and `xs:keyref` features of XSD to establish that the `CustomerID` attribute of the `Customer` element is a key, and to establish a relationship between the `CustomerID` element in each `Order` element and the `CustomerID` attribute in each `Customer` element.</span></span>  
+# <a name="sample-xsd-file-customers-and-orders"></a><span data-ttu-id="55136-102">Образец XSD-файла: заказчики и заказы</span><span class="sxs-lookup"><span data-stu-id="55136-102">Sample XSD File: Customers and Orders</span></span>
+<span data-ttu-id="55136-103">Следующий файл XSD используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="55136-103">The following XSD file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="55136-104">Этот файл содержит определение схемы для статьи [Пример XML-файла. Заказчики и заказы (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="55136-104">This file contains a schema definition for the [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span> <span data-ttu-id="55136-105">В схеме используются функции XSD `xs:key` и `xs:keyref` для определения того, что атрибут `CustomerID` элемента `Customer` является ключом, а также для установления связей между элементом `CustomerID` в каждом элементе `Order` и атрибутом `CustomerID` в каждом элементе `Customer`.</span><span class="sxs-lookup"><span data-stu-id="55136-105">The schema uses the `xs:key` and `xs:keyref` features of XSD to establish that the `CustomerID` attribute of the `Customer` element is a key, and to establish a relationship between the `CustomerID` element in each `Order` element and the `CustomerID` attribute in each `Customer` element.</span></span>  
   
- <span data-ttu-id="1d77c-106">Пример написания запросов LINQ с использованием преимущества такой связи в предложении `Join` см. в разделе [Практическое руководство. Объединение двух коллекций (C#) (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="1d77c-106">For an example of writing LINQ queries that take advantage of this relationship using the `Join` clause, see [How to: Join Two Collections (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="55136-106">Пример написания запросов LINQ с использованием преимущества такой связи в предложении `Join` см. в разделе [Практическое руководство. Объединение двух коллекций (C#) (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="55136-106">For an example of writing LINQ queries that take advantage of this relationship using the `Join` clause, see [How to: Join Two Collections (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span></span>  
   
-## <a name="customersordersxsd"></a><span data-ttu-id="1d77c-107">CustomersOrders.xsd</span><span class="sxs-lookup"><span data-stu-id="1d77c-107">CustomersOrders.xsd</span></span>  
+## <a name="customersordersxsd"></a><span data-ttu-id="55136-107">CustomersOrders.xsd</span><span class="sxs-lookup"><span data-stu-id="55136-107">CustomersOrders.xsd</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -92,7 +92,4 @@ ms.locfileid: "54524628"
   </xs:complexType>  
 </xs:schema>  
 ```  
-  
-## <a name="see-also"></a><span data-ttu-id="1d77c-108">См. также</span><span class="sxs-lookup"><span data-stu-id="1d77c-108">See also</span></span>
-
-- [<span data-ttu-id="1d77c-109">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="1d77c-109">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+ 
