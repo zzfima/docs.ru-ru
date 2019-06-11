@@ -1,9 +1,9 @@
-- name: 'интерфейсов,'
+- name: Интерфейсы
   href: index.md
   items:
     - name: Явная реализация интерфейса
       href: explicit-interface-implementation.md
-    - name: Как выполнить Явная реализация элементов интерфейса
+    - name: 'Практическое руководство. Явная реализация членов интерфейса'
       href: how-to-explicitly-implement-interface-members.md
-    - name: Как выполнить Явная реализация элементов двух интерфейсов
+    - name: 'Практическое руководство. Явная реализация членов двух интерфейсов'
       href: how-to-explicitly-implement-members-of-two-interfaces.md
