@@ -13,7 +13,7 @@
       href: types/
     - name: Классы и структуры
       href: classes-and-structs/
-    - name: 'интерфейсов,'
+    - name: Интерфейсы
       href: interfaces/
     - name: Типы перечисления
       href: enumeration-types.md
@@ -35,7 +35,7 @@
       href: nullable-types/
     - name: Небезопасный код и указатели
       href: unsafe-code-pointers/
-    - name: Комментарии к XML-документации
+    - name: Комментарии XML-документации
       href: xmldoc/
     - name: Исключения и обработка исключений
       href: exceptions/
