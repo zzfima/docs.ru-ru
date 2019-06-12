@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Руководство по программированию на C#. Явная реализация членов двух интерфейсов
+title: Как выполнить явную реализацию членов двух интерфейсов (руководство по программированию на C#)
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,7 +13,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57200914"
 ---
-# <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Явная реализация членов двух интерфейсов
+# <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>Как выполнить явную реализацию членов двух интерфейсов (руководство по программированию на C#)
 Явная реализация [интерфейсов](../../../csharp/language-reference/keywords/interface.md) позволяет разработчику реализовать два интерфейса с одинаковыми именами членов и создать отдельные реализации каждого члена интерфейса. В этом примере размеры поля выводятся в метрической и английской системе мер. [Класс](../../../csharp/language-reference/keywords/class.md) Box реализует два интерфейса (IEnglishDimensions и IMetricDimensions), представляющие соответствующие системы мер. В обоих интерфейсах представлены члены с одинаковыми именами: Length и Width.  
   
 ## <a name="example"></a>Пример  
