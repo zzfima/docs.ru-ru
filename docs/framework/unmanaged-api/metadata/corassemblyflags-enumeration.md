@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eca4b66a3f7c1a96bb06827dde477f34cb904ba3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43bfec471fbcfc481e178f6610e0318e9538ee34
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906247"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025768"
 ---
 # <a name="corassemblyflags-enumeration"></a>Перечисление CorAssemblyFlags
 Содержит значения, которые описывают метаданные, применяемые к компиляции сборки.  
@@ -76,7 +76,7 @@ typedef enum CorAssemblyFlags {
 |`afRetargetable`|Указывает, что сборка может быть перенацелена во время выполнения на сборку от другого издателя.|  
 |`afContentType_Mask`|Маска, которая описывает тип содержимого.|  
 |`afContentType_Default`|Указывает тип содержимого по умолчанию.|  
-|`afContentType_WindowsRuntime`|Указывает [!INCLUDE[wrt](../../../../includes/wrt-md.md)] тип содержимого.|  
+|`afContentType_WindowsRuntime`|Указывает тип содержимого среды выполнения Windows.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

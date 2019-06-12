@@ -2,12 +2,12 @@
 title: Развертывание службы WCF, размещенной в IIS
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 99ed9ce5304717073057f6712a2b96d910d43bea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a41615ab096f3aa4f1ee94defd775248d0df4d2e
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858327"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025736"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Развертывание службы WCF, размещенной в IIS
 
@@ -41,7 +41,7 @@ ms.locfileid: "61858327"
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Создание нового приложения служб IIS или повторное использование существующего приложения ASP.NET
 
-Размещенные в IIS службы WCF должны размещаться внутри приложения IIS. Можно создать новое приложение IIS для размещения служб WCF исключительно. Кроме того, можно развернуть службу WCF в существующие приложения, в котором уже размещено [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] содержимого (например, страницы ASPX и веб-службы ASP.NET [ASMX]). Дополнительные сведения об этих параметрах см. в разделе «Размещение WCF Side-by-Side с ASP.NET» и «Размещение служб WCF в режиме совместимости с ASP.NET» разделы в [службы WCF и ASP.NET](wcf-services-and-aspnet.md).
+Размещенные в IIS службы WCF должны размещаться внутри приложения IIS. Можно создать новое приложение IIS для размещения служб WCF исключительно. Кроме того можно развернуть службу WCF в существующие приложения, в котором уже размещено содержимое ASP.NET 2.0 (например, страницы ASPX и веб-службы ASP.NET [ASMX]). Дополнительные сведения об этих параметрах см. в разделе «Размещение WCF Side-by-Side с ASP.NET» и «Размещение служб WCF в режиме совместимости с ASP.NET» разделы в [службы WCF и ASP.NET](wcf-services-and-aspnet.md).
 
 Обратите внимание, что [!INCLUDE[iis601](../../../../includes/iis601-md.md)] и более поздние версии периодически перезагружают изолированное приложение объектно-ориентированного программирования. Значение по умолчанию — 1740 минут. Максимальное поддерживаемое значение - 71582 минуты. Этот перезапуск можно отключить. Дополнительные сведения об этом свойстве см. в разделе [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
 
@@ -65,7 +65,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>Развертывание реализации службы в приложение IIS
 
-Службы WCF, размещенные в IIS использовать ту же модель динамической компиляции, что [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]. Как и в случае с ASP.NET, можно развернуть код реализации для служб WCF, размещенной в IIS несколькими способами в разных расположениях следующим образом:
+Службы WCF, размещенные в IIS используют одну и ту же модель динамической компиляции в ASP.NET 2.0. Как и в случае с ASP.NET, можно развернуть код реализации для служб WCF, размещенной в IIS несколькими способами в разных расположениях следующим образом:
 
 - В виде предкомпилированного DLL-файла, расположенного в глобальном кэше сборок или в каталоге \bin приложения. Предкомпилированные двоичные файлы не обновляются, пока не будет развернута новая версия библиотеки классов.
 
@@ -73,7 +73,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 
 - Как нескомпилированные код помещен непосредственно в SVC-файла. Код реализации может быть также размещен в SVC-файле службы после \@Директива ServiceHost. Любые изменения во встроенном коде приводят к перезапуску и повторной компиляции приложения при получении следующего запроса.
 
-Дополнительные сведения о [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] модели компиляции см. в разделе [Общие сведения о компиляции ASP.NET](https://go.microsoft.com/fwlink/?LinkId=94773).
+Дополнительные сведения о модели компиляции ASP.NET 2.0, см. в разделе [Общие сведения о компиляции ASP.NET](https://go.microsoft.com/fwlink/?LinkId=94773).
 
 ## <a name="configure-the-wcf-service"></a>Настройка службы WCF
 

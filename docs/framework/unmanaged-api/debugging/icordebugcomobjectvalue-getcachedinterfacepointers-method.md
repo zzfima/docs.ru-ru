@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da0e62250dbef9be93ccee7020e23c3f83e85592
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a77e7f20aba1908a63d77b4ccada7fabacf55f7
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749908"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025848"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>Метод ICorDebugComObjectValue::GetCachedInterfacePointers
 Возвращает интерфейс необработанные указатели, кэшируются на текущем вызываемой оболочки времени выполнения (RCW).  
@@ -37,7 +37,7 @@ HRESULT GetCachedInterfacePointers(
   
 ## <a name="parameters"></a>Параметры  
  `bIInspectableOnly`  
- [in] Значение, указывающее, является ли этот метод возвращает только [!INCLUDE[wrt](../../../../includes/wrt-md.md)] интерфейсы (`IInspectable` интерфейсы) или все интерфейсами COM, кэшируемых вызываемой оболочки времени выполнения (RCW).  
+ [in] Значение, указывающее, является ли этот метод возвращает только интерфейсы среды выполнения Windows (`IInspectable` интерфейсы) или все интерфейсами COM, кэшируемых вызываемой оболочки времени выполнения (RCW).  
   
  `celt`  
  [in] Количество объектов, чьи адреса должны быть получены.  

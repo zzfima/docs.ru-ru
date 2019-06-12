@@ -2,17 +2,17 @@
 title: Взаимодействие с веб-службами ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: c1b027eda315a76778e772235dc5f66e03c9d83e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: f2f1a8fd2bf34ff61784f2dcb88c0669585da573
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875549"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026022"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>Взаимодействие с веб-службами ASP.NET
 Можно достичь взаимодействия между веб-служб ASP.NET и Windows Communication Foundation (WCF) веб-служб, гарантируя, что служб, реализуемых используя обе технологии соответствующими требованиям WS-I Basic Profile 1.1 спецификации. Веб-службы ASP.NET, соответствующие спецификации WS-I Basic Profile 1.1, могут взаимодействовать с клиентами WCF с помощью привязки, предоставляемой системой WCF, <xref:System.ServiceModel.BasicHttpBinding>.  
   
- Используйте имеющуюся в [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] возможность добавления атрибутов <xref:System.Web.Services.WebService> и <xref:System.Web.Services.WebMethodAttribute> в интерфейс, а не в класс, и создания класса для реализации интерфейса, как показано в следующем примере кода.  
+ Использование ASP.NET 2.0 возможность добавления <xref:System.Web.Services.WebService> и <xref:System.Web.Services.WebMethodAttribute> атрибуты интерфейса, а не к классу и написания класса для реализации интерфейса, как показано в следующем примере кода.  
   
 ```  
 [WebService]  

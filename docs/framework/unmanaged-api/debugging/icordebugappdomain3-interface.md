@@ -16,25 +16,25 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c141ca9a8e1c74015883f45cb2eaa9183bb3d89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 256fd900fa73948b4ca42ac6b6f21f145effc461
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922295"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025893"
 ---
 # <a name="icordebugappdomain3-interface"></a>Интерфейс ICorDebugAppDomain3
-Предоставляет методы для получения сведений об управляемых представлений [!INCLUDE[wrt](../../../../includes/wrt-md.md)] типов, в настоящий момент загружены в домен приложения. Этот интерфейс является расширением ICorDebugAppDomain и ICorDebugAppDomain2 интерфейсов.  
+Предоставляет методы для получения сведений об управляемых представления типов среды выполнения Windows, загруженные в домен приложения. Этот интерфейс является расширением ICorDebugAppDomain и ICorDebugAppDomain2 интерфейсов.  
   
 ## <a name="methods"></a>Методы  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[ICorDebugAppDomain3::GetCachedWinRTTypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|Получает перечислитель для всех кэшированных [!INCLUDE[wrt](../../../../includes/wrt-md.md)] типов.|  
-|[ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|Получает перечислитель для кэшированных [!INCLUDE[wrt](../../../../includes/wrt-md.md)] типов в домене приложения, по их идентификаторам интерфейс.|  
+|[ICorDebugAppDomain3::GetCachedWinRTTypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|Получает перечислитель для всех кэшированных типов среды выполнения Windows.|  
+|[ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|Возвращает перечислитель для кэшированных типов среды выполнения Windows в домене приложения, на основе их идентификаторов интерфейса.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот интерфейс предназначен для использования с помощью отладчика в сочетании с вызовом функции оценки `M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`. Когда этот метод извлекает идентификаторы интерфейса, поддерживаемых [!INCLUDE[wrt](../../../../includes/wrt-md.md)] объекта сервера, отладчик может использовать методы, определенные в этом интерфейсе, чтобы сопоставить их с управляемых типов, которые соответствуют эти интерфейсы.  
+ Этот интерфейс предназначен для использования с помощью отладчика в сочетании с вызовом функции оценки `M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`. Когда этот метод извлекает идентификаторы интерфейса, поддерживаемого объектом среды выполнения Windows server, отладчик может использовать методы, определенные в этом интерфейсе для сопоставления их с управляемых типов, которые соответствуют эти интерфейсы.  
   
  Чтобы получить экземпляр этого интерфейса, выполните `QueryInterface` на экземпляр интерфейса ICorDebugAppDomain или ICorDebugAppDomain2.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "61922295"
 >  Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+ **Платформы:** Среда выполнения Windows  
   
  **Заголовок.** CorDebug.idl, CorDebug.h  
   

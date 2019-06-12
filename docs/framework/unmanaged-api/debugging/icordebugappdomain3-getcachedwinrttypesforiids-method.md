@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed1d7ad95b7c8474121994d0f54557c1c36cb531
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 95c84f7f40db0096b26ec448f8f229cdbfe3afb1
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917380"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025904"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>Метод ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs
-Получает перечислитель для кэшированных [!INCLUDE[wrt](../../../../includes/wrt-md.md)] типов в домене приложения, по их идентификаторам интерфейс.  
+Возвращает перечислитель для кэшированных типов среды выполнения Windows в домене приложения, на основе их идентификаторов интерфейса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,16 +42,16 @@ HRESULT GetCachedWinRTTypesForIIDs (
  [in] Количество требуемых типов.  
   
  `iidsToResolve`  
- [in] Указатель на массив, содержащий идентификаторы интерфейса, соответствующие управляемые представления [!INCLUDE[wrt](../../../../includes/wrt-md.md)] типы должны быть получены.  
+ [in] Указатель на массив, содержащий идентификаторы интерфейса, соответствующие управляемые представления типов среды выполнения Windows требуется получить.  
   
  `ppTypesEnum`  
- [out] Указатель на адрес объекта интерфейса «ICorDebugTypeEnum», который позволяет использовать кэшированный перечисления управляемых представлений [!INCLUDE[wrt](../../../../includes/wrt-md.md)] типы, полученные на основе идентификаторов интерфейса в `iidsToResolve`.  
+ [out] Получить указатель на адрес объекта интерфейса «ICorDebugTypeEnum», который позволяет использовать перечисления кэшированного представления управляемых типов среды выполнения Windows, на основе идентификаторов интерфейса в `iidsToResolve`.  
   
 ## <a name="remarks"></a>Примечания  
  При сбое метода для получения сведений для определенного интерфейса идентификатора, соответствующая запись в коллекции «ICorDebugTypeEnum» будет иметь тип `ELEMENT_TYPE_END` ошибок из-за проблем извлечения данных, или `ELEMENT_TYPE_VOID` для Неизвестный интерфейс идентификаторы.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+ **Платформы:** Среда выполнения Windows  
   
  **Заголовок.** CorDebug.idl, CorDebug.h  
   

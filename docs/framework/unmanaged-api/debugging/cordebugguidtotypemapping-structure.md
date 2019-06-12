@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dc7093edaf12e801a1e1adc52b0be823ff92b91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38e1b19d6340f559e6f8b7e0f7bc042a10df16c3
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651810"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025998"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>Структура CorDebugGuidToTypeMapping
-Maps [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID для соответствующего объекта ICorDebugType.  
+Сопоставляет GUID среды выполнения Windows для соответствующего объекта ICorDebugType.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,11 +41,11 @@ typedef struct CorDebugGuidToTypeMapping {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`iid`|Идентификатор GUID для кэшированного [!INCLUDE[wrt](../../../../includes/wrt-md.md)] типа.|  
+|`iid`|Идентификатор GUID кэшируемый тип среды выполнения Windows.|  
 |`pType`|Указатель на объект ICorDebugType, предоставляющий сведения о кэшируемый тип.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)].  
+ **Платформы:** Среда выполнения Windows.  
   
  **Заголовок.** CorDebug.idl, CorDebug.h  
   

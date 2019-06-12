@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: b6297c26-7624-4431-8af4-14112d07bcd5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d939063aaefb00d4db3de604df0dbd1b2175bf95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff589285d81a3febf887bba976b62a9ae4a573c8
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698425"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025942"
 ---
 # <a name="debugging-interfaces"></a>Интерфейсы отладки
 В этом разделе описываются неуправляемые интерфейсы отладки, управляющие отладкой программы, выполняемой в среде CLR.  
@@ -53,7 +53,7 @@ ms.locfileid: "61698425"
  Предоставляет методы для работы с массивами, указателями, указателями функций и типами ByRef. Этот интерфейс является расширением интерфейса `ICorDebugAppDomain`.  
   
  [Интерфейс ICorDebugAppDomain3](icordebugappdomain3-interface.md)\
- Предоставляет методы для работы с типами [!INCLUDE[wrt](../../../../includes/wrt-md.md)] в домене приложения. Этот интерфейс является расширением интерфейса `ICorDebugAppDomain` и `ICorDebugAppDomain2`.  
+ Предоставляет методы для работы с типами среды выполнения Windows в домене приложения. Этот интерфейс является расширением интерфейса `ICorDebugAppDomain` и `ICorDebugAppDomain2`.  
   
  [Интерфейс ICorDebugAppDomain4](icordebugappdomain4-interface.md)\
  Логически расширяет [ICorDebugAppDomain](icordebugappdomain-interface.md) интерфейса для получения управляемого объекта из вызываемой оболочки COM.  

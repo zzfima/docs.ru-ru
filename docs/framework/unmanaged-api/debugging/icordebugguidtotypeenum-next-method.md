@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f48c142b2b3742d01a8f796f11d5c9174529a041
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 160ddbf9be8eb9f3b99d159aa8b36a22b58a9f55
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774573"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025810"
 ---
 # <a name="icordebugguidtotypeenumnext-method"></a>Метод ICorDebugGuidToTypeEnum::Next
 Возвращает заданное число [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) экземпляров, которые сопоставляют идентификаторов GUID, чтобы сведения о типе.  
@@ -42,7 +42,7 @@ HRESULT Next(
  [in] Число получаемых объектов сопоставления типа GUID.  
   
  `values`  
- [out] Массив указателей, каждый из которых указывает [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) объекта, сопоставляющего [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID для соответствующего объекта ICorDebugType.  
+ [out] Массив указателей, каждый из которых указывает [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) объект, сопоставляемый соответствующего объекта ICorDebugType GUID среды выполнения Windows.  
   
  `pceltFetched`  
  [out] Указатель на число [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) объектов, фактически возвращенных в `values`.  
@@ -50,7 +50,7 @@ HRESULT Next(
 ## <a name="remarks"></a>Примечания  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+ **Платформы:** Среда выполнения Windows  
   
  **Заголовок.** CorDebug.idl, CorDebug.h  
   

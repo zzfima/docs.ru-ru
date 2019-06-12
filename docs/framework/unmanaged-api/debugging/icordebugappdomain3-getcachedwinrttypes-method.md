@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73a08e83d67c973294938a030b95b906aec6be6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7e2685d17f3dd32db295f926fc19121d29e1752
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962608"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025914"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypes-method"></a>Метод ICorDebugAppDomain3::GetCachedWinRTTypes
-Получает перечислитель для всех кэшированных [!INCLUDE[wrt](../../../../includes/wrt-md.md)] типов.  
+Получает перечислитель для всех кэшированных типов среды выполнения Windows.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,10 +37,10 @@ HRESULT GetCachedWinRTTypes (
   
 ## <a name="parameters"></a>Параметры  
  `ppGuidToTypeEnum`  
- [out] Указатель на [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md) объект интерфейса, который может перечислить управляемого представления [!INCLUDE[wrt](../../../../includes/wrt-md.md)] типов, загруженных в домене приложения.  
+ [out] Указатель на [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md) объект интерфейса, который можно перечислить представления управляемых типов среды выполнения Windows в настоящее время загружен в домене приложения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+ **Платформы:** Среда выполнения Windows  
   
  **Заголовок.** CorDebug.idl, CorDebug.h  
   

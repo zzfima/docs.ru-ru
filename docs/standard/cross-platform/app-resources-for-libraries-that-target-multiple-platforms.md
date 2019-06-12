@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c95c77d0b2e2b68750891431822e2637e5e88f9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055021"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025573"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Ресурсы приложений для библиотек, предназначенных для нескольких платформ
 Можно использовать .NET Framework [переносимой библиотеки классов](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) тип, чтобы убедиться, что ресурсы в библиотеках классов может осуществляться из нескольких платформ проекта. Этот тип проекта доступен в Visual Studio 2012 и нацелена на переносимое подмножество библиотеки классов .NET Framework. Использование [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] гарантирует доступность библиотеки из настольных приложений, приложений Silverlight, Windows Phone и [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
@@ -35,7 +35,7 @@ ms.locfileid: "62055021"
 
  Проект [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] содержит четыре члена <xref:System.Resources.ResourceManager>, перечисленных в представленной ниже таблице. Эти конструкторы и методы позволяют создать экземпляр объекта <xref:System.Resources.ResourceManager> и извлечь строковые ресурсы.
 
-|Член`ResourceManager` |Описание|
+|Член`ResourceManager`|Описание|
 |------------------------------|-----------------|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|Создает экземпляр <xref:System.Resources.ResourceManager> для доступа к именованному файлу ресурсов, найденному в заданной сборке.|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|Создает экземпляр <xref:System.Resources.ResourceManager>, соответствующий указанному типу.|
@@ -47,9 +47,9 @@ ms.locfileid: "62055021"
 ## <a name="the-includenetportableincludesnet-portable-mdmd-and-windows-store-apps"></a>[!INCLUDE[net_portable](../../../includes/net-portable-md.md)] и приложения для Магазина Windows
  В проектах [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] ресурсы хранятся в файлах с расширением RESX, которые затем компилируются в файлы с расширением RESOURCES и встраиваются в основную или вспомогательные сборки во время компиляции. Приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], с другой стороны, требуют, чтобы ресурсы хранились в файлах с расширением RESW, которые затем компилируются в единый файл индекса ресурсов пакета (PRI). Однако несмотря на несовместимые форматы файлов, [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] будет работать в приложении [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
 
- Чтобы использовать библиотеку классов из приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], добавьте ссылку на него в проекте приложения для Магазина Windows. Visual Studio прозрачно извлечет ресурсы из сборки в файл RESW и использует его для создания файла PRI, из которого [!INCLUDE[wrt](../../../includes/wrt-md.md)] может извлекать ресурсы. Во время выполнения [!INCLUDE[wrt](../../../includes/wrt-md.md)] выполняет код в [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], но извлекает ресурсы переносимой библиотеки классов из файла PRI.
+ Чтобы использовать библиотеку классов из приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], добавьте ссылку на него в проекте приложения для Магазина Windows. Visual Studio прозрачно извлечет ресурсы из сборки в resw-файл и использовать его для создания файла PRI, из которого среда выполнения Windows может извлекать ресурсы. Во время выполнения, среда выполнения Windows выполняет код в вашей [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], но извлекает ресурсы переносимой библиотеки классов из файла PRI.
 
- Если проект [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] содержит локализованные ресурсы, то для их развертывания используется модель "звезда" так же, как и для библиотеки в настольном приложении. Для использования основного файла ресурсов и любых локализованных файлов ресурсов в приложении [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] следует добавить ссылку на основную сборку. Во время компиляции Visual Studio извлекает ресурсы из основного файла ресурсов и всех локализованных файлов ресурсов в отдельные файлы RESW. Затем Visual Studio компилирует файлы RESW в единый файл PRI, к которому [!INCLUDE[wrt](../../../includes/wrt-md.md)] обращается во время выполнения.
+ Если проект [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] содержит локализованные ресурсы, то для их развертывания используется модель "звезда" так же, как и для библиотеки в настольном приложении. Для использования основного файла ресурсов и любых локализованных файлов ресурсов в приложении [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] следует добавить ссылку на основную сборку. Во время компиляции Visual Studio извлекает ресурсы из основного файла ресурсов и всех локализованных файлов ресурсов в отдельные файлы RESW. Он компилирует файлы resw в единый файл PRI, который обращается к среде выполнения Windows во время выполнения.
 
 <a name="NonLoc"></a>
 ## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>Пример Нелокализованное [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
