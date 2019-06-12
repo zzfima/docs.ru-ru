@@ -2,12 +2,12 @@
 title: Рекомендации по форматированию кода F#
 description: Дополнительные сведения, касающиеся форматирования F# кода.
 ms.date: 02/08/2019
-ms.openlocfilehash: bfec950395312eac7e837abf8694a4381d5ca82f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 8be5337d3f593c7e5a2f32cb7231cb7f759fb509
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816181"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833906"
 ---
 # <a name="f-code-formatting-guidelines"></a>Рекомендации по форматированию кода F#
 
@@ -290,12 +290,13 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Используйте синтаксис префикс для универсальных типов (`Foo<T>`) предпочтение постфиксный синтаксис (`T Foo`)
 
-F#наследует стиль постфиксного ML именования универсальных типов (например, `int list`) а также префикс стиля .NET (например, `list<int>`). Предпочитаете в стиле .NET, за исключением четырех определенных типов:
+F#наследует стиль постфиксного ML именования универсальных типов (например, `int list`) а также префикс стиля .NET (например, `list<int>`). Предпочитаете в стиле .NET, за исключением пять определенных типов:
 
 1. Для F# списки, используйте в постфиксной форме: `int list` вместо `list<int>`.
 2. Для F# параметрах, используется в постфиксной форме: `int option` вместо `option<int>`.
-3. Для F# массивы, используемое имя синтаксические `int[]` вместо `int array` или `array<int>`.
-4. Ссылочные ячейки, используйте `int ref` вместо `ref<int>` или `Ref<int>`.
+3. Для F# параметры значений, используйте в постфиксной форме: `int voption` вместо `voption<int>`.
+4. Для F# массивы, используемое имя синтаксические `int[]` вместо `int array` или `array<int>`.
+5. Ссылочные ячейки, используйте `int ref` вместо `ref<int>` или `Ref<int>`.
 
 Для всех других типов используйте форму префикс.
 

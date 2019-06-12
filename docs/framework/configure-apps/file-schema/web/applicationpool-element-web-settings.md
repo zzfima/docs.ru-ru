@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: f0486e9faf70e7d5d147cfef996edcdaa8846963
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 629eb482768e4ed2b3d70ee3d27157b502eeb72b
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456289"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832718"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<пул приложений > элемент (веб-параметры)
 Задает параметры конфигурации, которые используются платформой ASP.NET для управления поведением всего процесса, когда приложение ASP.NET выполняется в режиме интеграции с [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздней версии.  
@@ -70,7 +70,7 @@ ms.locfileid: "66456289"
   
 - [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] работает в режиме интеграции с.  
   
-- Приложение использует [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] или более поздней версии.  
+- Приложение использует .NET Framework 3.5 SP1 или более поздней версии.  
   
  В примере значения являются значениями по умолчанию.  
   

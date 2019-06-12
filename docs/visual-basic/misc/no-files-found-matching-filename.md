@@ -1,5 +1,5 @@
 ---
-title: Не удалось найти файлы сопоставления "<filename>"
+title: Не удалось найти файлы сопоставления '<filename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrKILL_NoFilesFound1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62023615"
 ---
-# <a name="no-files-found-matching-filename"></a>Не удалось найти файлы сопоставления "\<имя_файла >"
+# <a name="no-files-found-matching-filename"></a>Не удалось найти файлы сопоставления '\<имя_файла >'
 Указано неверное имя файла или файл не существует.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

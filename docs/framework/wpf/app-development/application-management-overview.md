@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: c4629b18a207f1146f97327088fabf5f85a31892
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c36de23a6a49e684330fc0f47fc46bd86c55e767
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623316"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834067"
 ---
 # <a name="application-management-overview"></a>Общие сведения об управлении приложением
 Все приложения имеют тенденцию совместно использовать общий набор функциональных возможностей, который применяется к реализации приложения и управлению им. В этом разделе представлен обзор функциональных возможностей в <xref:System.Windows.Application> класс для создания и управления приложениями.  
@@ -127,7 +127,7 @@ ms.locfileid: "64623316"
 
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>Заставка  
- Начиная с версии [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], можно указать изображение, которое может использоваться в заставке или *экран-заставка*. <xref:System.Windows.SplashScreen> Класс позволяет легко отобразить заставку во время загрузки приложения. <xref:System.Windows.SplashScreen> Окно создается и отображается перед <xref:System.Windows.Application.Run%2A> вызывается. Дополнительные сведения см. в разделе [время запуска приложения](../advanced/application-startup-time.md) и [Добавление в WPF-приложение экрана-заставки](how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ Начиная с .NET Framework 3.5 SP1, можно задать изображение для использования в заставке или *экран-заставка*. <xref:System.Windows.SplashScreen> Класс позволяет легко отобразить заставку во время загрузки приложения. <xref:System.Windows.SplashScreen> Окно создается и отображается перед <xref:System.Windows.Application.Run%2A> вызывается. Дополнительные сведения см. в разделе [время запуска приложения](../advanced/application-startup-time.md) и [Добавление в WPF-приложение экрана-заставки](how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
 <a name="Starting_an_Application"></a>   
 ### <a name="starting-an-application"></a>Запуск приложения  
