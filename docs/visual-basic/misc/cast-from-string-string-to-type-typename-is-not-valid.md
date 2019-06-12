@@ -1,5 +1,5 @@
 ---
-title: Преобразование из строки &quot; <string> &quot; к типу "<typename>" является недопустимым
+title: Преобразование из строки &quot; <string> &quot; к типу '<typename>' является недопустимым
 ms.date: 07/20/2015
 f1_keywords:
 - vbrInvalidCast_FromStringTo
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61941665"
 ---
-# <a name="cast-from-string-quotstringquot-to-type-typename-is-not-valid"></a>Преобразование из строки &quot; \<строка >&quot; к типу "\<typename >" является недопустимым
+# <a name="cast-from-string-quotstringquot-to-type-typename-is-not-valid"></a>Преобразование из строки &quot; \<строка >&quot; к типу '\<typename >' является недопустимым
 Предпринята попытка недопустимого преобразования строковой переменной в другой тип.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

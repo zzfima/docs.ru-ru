@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: e018048df70470e349f06ac80e7a597cd742dac5
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 39f4548bfe9e505c1369a0de8262560070fd6221
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690515"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833911"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>Надстройки Firefox для поддержки развертывания приложений .NET
 Включить Windows Presentation Foundation (WPF) подключаемого модуля для Firefox и .NET Framework Assistant для Firefox [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], свободные [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]и приложений ClickOnce для работы с браузером Mozilla Firefox.  
@@ -25,13 +25,13 @@ ms.locfileid: "66690515"
  .NET Framework 4 не включает [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] подключаемого модуля для Firefox. Тем не менее если установлены .NET Framework 4 и .NET Framework 3.5, подключаемого модуля WPF для Firefox устанавливается с .NET Framework 3.5. Таким образом приложений .NET Framework 4 будет работать, поскольку ведущее приложение WPF загрузит правильную версию платформы. Дополнительные сведения см. в разделе [ведущее приложение WPF (PresentationHost.exe)](wpf-host-presentationhost-exe.md).  
   
 ## <a name="net-framework-assistant-for-firefox"></a>.NET Framework Assistant для Firefox  
- .NET Framework Assistant для Firefox позволяет выполнять из браузера Firefox автономного приложения ClickOnce. .NET Framework Assistant для Firefox функций идентично в том случае, если он установлен до и после браузер Firefox. При запуске браузера Firefox и [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] будет установлено, Firefox находит и устанавливает .NET Framework Assistant для Firefox. Пользователи могут настраивать .NET Framework Assistant для Firefox, выполнив следующие действия:  
+ .NET Framework Assistant для Firefox позволяет выполнять из браузера Firefox автономного приложения ClickOnce. .NET Framework Assistant для Firefox функций идентично в том случае, если он установлен до и после браузер Firefox. Когда запускается браузер Firefox и установить .NET Framework 3.5 SP1, Firefox находит и устанавливает .NET Framework Assistant для Firefox. Пользователи могут настраивать .NET Framework Assistant для Firefox, выполнив следующие действия:  
   
 - Запрашивать перед запуском приложения ClickOnce.  
   
 - Сообщать о всех установленных версий .NET Framework или только о последней версии.  
   
- .NET Framework Assistant для Firefox входит в состав [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]. Сведения об удалении .NET Framework Assistant для Firefox, см. в разделе [удаление .NET Framework Assistant для Firefox](https://go.microsoft.com/fwlink/?LinkId=177944).  
+ .NET Framework Assistant для Firefox входит в состав .NET Framework 3.5 SP1. Сведения об удалении .NET Framework Assistant для Firefox, см. в разделе [удаление .NET Framework Assistant для Firefox](https://go.microsoft.com/fwlink/?LinkId=177944).  
   
 ## <a name="see-also"></a>См. также
 

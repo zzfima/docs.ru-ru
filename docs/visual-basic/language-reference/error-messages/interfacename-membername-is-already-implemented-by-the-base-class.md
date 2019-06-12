@@ -1,5 +1,5 @@
 ---
-title: "'<interfacename>. <membername>«уже реализован базовым классом»<baseclassname>\". Повторная реализация <type> предполагается, что"
+title: "'<interfacename>. <membername>«уже реализован базовым классом»<baseclassname>'. Повторная реализация <type> предполагается, что"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42015
@@ -14,7 +14,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64593321"
 ---
-# <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a>"\<имя_интерфейса >. \<имя_члена > "уже реализован базовым классом\<имя_базового_класса >". Повторная реализация \<тип > предполагается, что
+# <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a>'\<имя_интерфейса >. \<имя_члена > 'уже реализован базовым классом\<имя_базового_класса >'. Повторная реализация \<тип > предполагается, что
 Свойство, процедура или событие в производном классе использует `Implements` предложение, задающее элемент интерфейса, который уже реализован в базовом классе.  
   
  Производный класс может повторно реализовать элемент интерфейса, который реализован его базовым классом. Это не та же переопределяющая реализация базового класса. Для получения дополнительной информации см. [Implements](../../../visual-basic/language-reference/statements/implements-clause.md).  

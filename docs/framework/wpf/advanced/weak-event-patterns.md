@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 92d0a61c2bbf9cc668b969c3e1420914b9f9f150
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c5bae64fbbeddedd905e5df0b5789542e29f2f1
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650773"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833932"
 ---
 # <a name="weak-event-patterns"></a>Шаблоны слабых событий
 В приложениях возможно, что обработчики, присоединенные к источникам событий, не будут уничтожены в соответствии с объектом прослушиватель, который присоединил обработчик к источнику. Это может привести к утечке памяти. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] представляет шаблон, который может использоваться для решения этой проблемы путем предоставления выделенного класса диспетчера для конкретных событий и реализации интерфейса прослушивателей для данного события. Этот шаблон разработки называется *шаблоне слабых событий*.  
@@ -71,7 +71,7 @@ ms.locfileid: "64650773"
      Аналогично Если ваш код использует следующий шаблон для отмены подписки на событие:  
   
     ```  
-    source.SomeEvent -= new SomeEventEventHandler(OnSome);  
+    source.SomeEvent -= new SomeEventEventHandler(OnSomeEvent);  
     ```  
   
      Измените его на следующий шаблон:  

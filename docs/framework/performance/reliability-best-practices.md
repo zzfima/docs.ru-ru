@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b46404ee791855301611c1d883f26514b9b9d2f
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949231"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833804"
 ---
 # <a name="reliability-best-practices"></a>Рекомендации по обеспечению надежности
 
@@ -265,7 +265,7 @@ public static MyClass SingletonProperty
 
 ### <a name="avoid-unmanaged-memory-if-possible"></a>По возможности избегайте работы с неуправляемой памятью
 
-Как и в случае с дескрипторами операционной системы, при работе с неуправляемой памятью возможны утечки.  Если возможно, попробуйте использовать память в стеке с помощью [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md) или закрепленного управляемого объекта, например [оператора fixed](~/docs/csharp/language-reference/keywords/fixed-statement.md) или <xref:System.Runtime.InteropServices.GCHandle> с использованием byte[].  В конечном итоге, они будут очищены с помощью <xref:System.GC>.  Тем не менее, если вам необходимо выделить неуправляемую память, рекомендуется заключать операции выделения памяти в класс, который является производным от <xref:System.Runtime.InteropServices.SafeHandle>.
+Как и в случае с дескрипторами операционной системы, при работе с неуправляемой памятью возможны утечки. Если возможно, попробуйте использовать память в стеке с помощью [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) или закрепленного управляемого объекта, например [оператора fixed](~/docs/csharp/language-reference/keywords/fixed-statement.md) или <xref:System.Runtime.InteropServices.GCHandle> с использованием byte[]. В конечном итоге, они будут очищены с помощью <xref:System.GC>. Тем не менее, если вам необходимо выделить неуправляемую память, рекомендуется заключать операции выделения памяти в класс, который является производным от <xref:System.Runtime.InteropServices.SafeHandle>.
 
 Обратите внимание, что <xref:System.Runtime.InteropServices.SafeHandle> не подходит как минимум в одном случае.  Для вызовов методов COM, которые выделяют или высвобождают память, чаще всего одна библиотека DLL выделяет память с помощью `CoTaskMemAlloc`, после чего другая библиотека DLL высвобождает эту память, используя `CoTaskMemFree`.  В таких случаях использовать <xref:System.Runtime.InteropServices.SafeHandle> не следует, поскольку это приведет к попытке привязать срок существования неуправляемой памяти к сроку существования <xref:System.Runtime.InteropServices.SafeHandle>, тогда как он должен управляться другой библиотекой DLL.
 

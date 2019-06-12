@@ -9,18 +9,18 @@ helpviewer_keywords:
 - pipeline processing
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76a5c32660c8a08ef34c40f8f4ee9430e5ead5c8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0ada6003cd6d1cd19036c42a3d0d976e18568f3a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644282"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833972"
 ---
 # <a name="memory--and-span-related-types"></a>Типы, связанные с памятью и диапазонами
 
 Начиная с .NET Core 2.1, .NET включает ряд взаимосвязанных типов, представляющих непрерывную область строго типизированной произвольной памяти. Сюда входит следующее.
 
-- <xref:System.Span%601?displayProperty=nameWithType> — тип, используемый для доступа к непрерывной области памяти. В основе экземпляра <xref:System.Span%601> может быть массив типа `T`, <xref:System.String>, буфер, выделенный с помощью [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md), или указатель на неуправляемую память. Так как выделение выполняется в стеке, существует ряд ограничений. Например, поле в классе не может иметь тип <xref:System.Span%601>, а диапазон нельзя использовать в асинхронных операциях.
+- <xref:System.Span%601?displayProperty=nameWithType> — тип, используемый для доступа к непрерывной области памяти. В основе экземпляра <xref:System.Span%601> может быть массив типа `T`, <xref:System.String>, буфер, выделенный с помощью [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md), или указатель на неуправляемую память. Так как выделение выполняется в стеке, существует ряд ограничений. Например, поле в классе не может иметь тип <xref:System.Span%601>, а диапазон нельзя использовать в асинхронных операциях.
 
 - <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> — неизменяемая версия структуры <xref:System.Span%601>.
 

@@ -2,12 +2,12 @@
 title: Выбор вычислительных платформ Azure для контейнерных приложений
 description: Модернизация существующих приложений .NET с помощью облака Azure и Windows контейнерах | Выбор платформ вычислений Azure для приложений на основе контейнера
 ms.date: 05/04/2018
-ms.openlocfilehash: d91cd279402dc24beb5f766c06cb85ac8d74f482
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 64ae542e006bf7a5d7a0be08fe1cff9770552a77
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758828"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833855"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Выбор вычислительных платформ Azure для контейнерных приложений
 
@@ -17,8 +17,7 @@ ms.locfileid: "66758828"
 
 - **Одного монолитного приложения:** Выберите службу приложений Azure
 - **N-уровневого приложения:** Выберите оркестраторы, такие как служба Azure Kubernetes (AKS) или службы приложений, если у вас есть один или несколько серверных служб
-- **Микрослужбы Linux:** Выберите AKS и Kubernetes
-- **Микрослужбы Windows:** Выбор веб-приложения Azure для контейнеров
+- **Микрослужбы:** Выбор AKS или веб-приложения Azure для контейнеров
 - **Бессерверные функции & обработчики событий:** Выбор функций Azure
 - **Широкомасштабную пакетную:** Выберите пакетная служба Azure
 

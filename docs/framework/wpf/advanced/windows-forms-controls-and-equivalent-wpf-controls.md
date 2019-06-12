@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Windows Forms [WPF], WPF interoperation
 - interoperability [WPF], Windows Forms
 ms.assetid: 8a157e6b-8054-46db-a5cf-a78966acc7a1
-ms.openlocfilehash: abfcb9f5398a6a8d264985543df585bea93a0446
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: acb8095b32364f1e22330f22df60085016bdc664
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669307"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834030"
 ---
 # <a name="windows-forms-controls-and-equivalent-wpf-controls"></a>Элементы управления Windows Forms и эквивалентные элементы управления WPF
 Многие [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления имеют эквивалентные [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов управления, однако некоторые [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы не имеют эквивалентов в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. В этом разделе сравниваются типы элементов управления, предоставляемые эти две технологии.  
   
- Вы всегда можете использовать взаимодействие для размещения элементов управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], которые не имеют эквивалентов, в ваших [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложениях.   
+ Вы всегда можете использовать взаимодействие для размещения элементов управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], которые не имеют эквивалентов, в ваших [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложениях.  
   
  В следующей таблице показаны элементы управления и компоненты [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], для которых имеются элементы эквивалентной функциональности в[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   
@@ -51,7 +51,7 @@ ms.locfileid: "61669307"
 |<xref:System.Windows.Forms.MonthCalendar>|<xref:System.Windows.Controls.Calendar>||  
 |<xref:System.Windows.Forms.NotifyIcon>|Эквивалент отсутствует.||  
 |<xref:System.Windows.Forms.NumericUpDown>|<xref:System.Windows.Controls.TextBox> с двумя элементами управления <xref:System.Windows.Controls.Primitives.RepeatButton>||  
-|<xref:System.Windows.Forms.OpenFileDialog>|<xref:Microsoft.Win32.OpenFileDialog>|<xref:Microsoft.Win32.OpenFileDialog>Класс [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] оболочка[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] для элемента управления |  
+|<xref:System.Windows.Forms.OpenFileDialog>|<xref:Microsoft.Win32.OpenFileDialog>|<xref:Microsoft.Win32.OpenFileDialog>Класс [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] оболочка[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] для элемента управления|  
 |<xref:System.Windows.Forms.PageSetupDialog>|Эквивалент отсутствует.||  
 |<xref:System.Windows.Forms.Panel>|<xref:System.Windows.Controls.Canvas>||  
 |<xref:System.Windows.Forms.PictureBox>|<xref:System.Windows.Controls.Image>||  
@@ -63,7 +63,7 @@ ms.locfileid: "61669307"
 |<xref:System.Windows.Forms.PropertyGrid>|Эквивалент отсутствует.||  
 |<xref:System.Windows.Forms.RadioButton>|<xref:System.Windows.Controls.RadioButton>||  
 |<xref:System.Windows.Forms.RichTextBox>|<xref:System.Windows.Controls.RichTextBox>||  
-|<xref:System.Windows.Forms.SaveFileDialog>|<xref:Microsoft.Win32.SaveFileDialog>|<xref:Microsoft.Win32.SaveFileDialog>Класс [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] оболочка[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] для элемента управления |  
+|<xref:System.Windows.Forms.SaveFileDialog>|<xref:Microsoft.Win32.SaveFileDialog>|<xref:Microsoft.Win32.SaveFileDialog>Класс [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] оболочка[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] для элемента управления|  
 |<xref:System.Windows.Forms.ScrollableControl>|<xref:System.Windows.Controls.ScrollViewer>||  
 |<xref:System.Media.SoundPlayer>|<xref:System.Windows.Media.MediaPlayer>||  
 |<xref:System.Windows.Forms.SplitContainer>|<xref:System.Windows.Controls.GridSplitter>||  
@@ -82,7 +82,7 @@ ms.locfileid: "61669307"
 |<xref:System.Windows.Forms.TreeView>|<xref:System.Windows.Controls.TreeView>||  
 |<xref:System.Windows.Forms.UserControl>|<xref:System.Windows.Controls.UserControl>||  
 |<xref:System.Windows.Forms.VScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>|Прокрутка встроена в контейнерные элементы управления.|  
-|<xref:System.Windows.Forms.WebBrowser>|<xref:System.Windows.Controls.Frame>, <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType>|<xref:System.Windows.Controls.Frame> Управления может разместить HTML-страницы.<br /><br /> Начиная с версии [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType> управления может разместить HTML-страницы, а также обратных <xref:System.Windows.Controls.Frame> элемента управления.|  
+|<xref:System.Windows.Forms.WebBrowser>|<xref:System.Windows.Controls.Frame>, <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType>|<xref:System.Windows.Controls.Frame> Управления может разместить HTML-страницы.<br /><br /> Начиная с .NET Framework 3.5 SP1, <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType> управления может разместить HTML-страницы, а также обратных <xref:System.Windows.Controls.Frame> элемента управления.|  
   
 ## <a name="see-also"></a>См. также
 

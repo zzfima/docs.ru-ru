@@ -1,5 +1,5 @@
 ---
-title: Аргумент "<argumentname>" является недопустимым для массива
+title: Аргумент '<argumentname>' является недопустимым для массива
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidRank1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64659954"
 ---
-# <a name="argument-argumentname-is-not-valid-for-the-array"></a>Аргумент "\<имя_аргумента >" является недопустимым для массива
+# <a name="argument-argumentname-is-not-valid-for-the-array"></a>Аргумент '\<имя_аргумента >' является недопустимым для массива
 Массив содержит аргумент, который недопустим.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

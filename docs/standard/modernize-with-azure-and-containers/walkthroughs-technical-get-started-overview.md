@@ -2,12 +2,12 @@
 title: Обзор пошаговых руководств и технических описаний по началу работы
 description: Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows | Пошаговые руководства и Технический обзор работы
 ms.date: 04/28/2018
-ms.openlocfilehash: 0b0dbae999e31150a55368d669f718eea0925d51
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 1ae6f3c1e739184356b97fa96e74bab402bf1d2a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758784"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832950"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Обзор пошаговых руководств и технических описаний по началу работы
 
@@ -132,7 +132,7 @@ ms.locfileid: "66758784"
 
 ### <a name="technical-walkthrough-availability"></a>Доступность техническим руководством
 
-Полной технической руководство доступно в репозитории GitHub eShopModernizing вики-сайте: <https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
+Полной технической руководство доступно в репозитории GitHub eShopModernizing вики-сайте: <https://github.com/dotnet-architecture/eShopModernizing/wiki/06.-Deploying-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
 ### <a name="overview"></a>Обзор
 
@@ -178,7 +178,7 @@ Azure в настоящее время предоставляет виртуал
 
 Это содержимое более подробный обзор на вики-сайте GitHub:
 
-<https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/06.-Deploying-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
 ## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>Пошаговое руководство 4. Развертывание приложений на базе контейнеров Windows в экземпляры контейнеров Azure (ACI)
 
@@ -216,7 +216,7 @@ Azure в настоящее время предоставляет виртуал
 
 Это содержимое более подробный обзор на вики-сайте GitHub:
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)TBD)
+[https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances))
 
 ## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>Пошаговое руководство. 5. Развертывание приложений на базе контейнеров Windows в Kubernetes в службе контейнеров Azure
 
@@ -224,7 +224,7 @@ Azure в настоящее время предоставляет виртуал
 
 Полной технической руководство доступно в репозитории GitHub eShopModernizing вики-сайте:
 
-<https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
 ### <a name="overview"></a>Обзор
 
@@ -276,7 +276,35 @@ Azure в настоящее время предоставляет виртуал
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Это содержимое более подробный обзор на вики-сайте GitHub: <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
+Это содержимое более подробный обзор на вики-сайте GitHub: <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
+
+## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-app-service-for-containers"></a>Пошаговое руководство. 6. Развертывание приложений на базе контейнеров Windows в службе приложений Azure для контейнеров
+
+### <a name="technical-walkthrough-availability"></a>Доступность техническим руководством
+
+Полной технической руководство доступно в репозитории GitHub eShopModernizing вики-сайте:
+
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/Deploy-Windows-Container-to-Azure-App-Service>
+
+### <a name="overview"></a>Обзор
+
+Простое контейнерное приложение, использующее контейнеры Windows можно легко развернуть в службе приложений Azure для контейнеров. Это рекомендуемый подход для большинства приложений на основе контейнеров Windows.
+
+### <a name="goals"></a>Цели
+
+В этом пошаговом руководстве предназначена для того, чтобы узнать, как развернуть приложение на основе контейнера Windows в службе приложений Azure для контейнеров из реестра (Docker Hub или реестра контейнеров Azure).
+
+### <a name="scenario"></a>Сценарий
+
+![Развертывание приложения на базе контейнеров Windows в службе приложений Azure для контейнеров](./media/image5-11.png)
+
+### <a name="benefits"></a>Преимущества
+
+Развертывание в службе приложений Azure для контейнеров предлагает преимущества контейнеров, пару преимущества PaaS службы приложений Azure. Службы приложений можно легко масштабировать в горизонтальном и вертикальном направлениях и можно настроить на автоматическое масштабирование для соответствия меняющимся требованиям. Обновления могут быть выполнены с нулевым временем простоя и легко настроить также конфигурацию непрерывное развертывание из реестра.
+
+## <a name="next-steps"></a>Следующие шаги
+
+Это содержимое более подробный обзор на вики-сайте GitHub: <https://github.com/dotnet-architecture/eShopModernizing/wiki/Deploy-Windows-Container-to-Azure-App-Service>
 
 > [!div class="step-by-step"]
 > [Назад](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)

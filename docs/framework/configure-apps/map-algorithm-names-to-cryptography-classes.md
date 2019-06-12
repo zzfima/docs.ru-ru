@@ -7,15 +7,15 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 9e4154923b2bb0abfe48e7a530497c3d5bf28d91
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c76f80273d37f838ca52efd3b8f8c028b76a4d30
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583736"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832685"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Отображение имен алгоритмов на криптографические классы
-Существует четыре способа создания криптографического объекта с помощью [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
+Существует четыре способа, разработчик может создать криптографического объекта с помощью Windows Software Development Kit (SDK):  
   
 - Создание объекта с помощью **новый** оператор.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "64583736"
   
 - Создание объекта, реализующего класс алгоритмов шифрования (например, симметричный блочный шифр) путем вызова **создать** метод на абстрактный класс для этого типа алгоритма (такие как <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
   
- Например предположим, что разработчику нужно вычислить хэш SHA1 набора байтов. <xref:System.Security.Cryptography> Пространство имен содержит две реализации алгоритма SHA1, одну реализацию полностью управляемыми и тот, который создает оболочку для CryptoAPI. Разработчик может выбрать для создания экземпляра конкретной реализации SHA1 (такие как <xref:System.Security.Cryptography.SHA1Managed>) путем вызова **новый** оператор. Тем не менее, если он не имеет значения, какой класс, среда CLR загружает до тех пор, пока этот класс реализует хэш-алгоритм SHA1, разработчик может создать объект путем вызова <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> метод. Этот метод вызывает метод **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")**, который должен возвращать реализацию алгоритма хэширования SHA1.  
+ Например предположим, что разработчику нужно вычислить хэш SHA1 набора байтов. <xref:System.Security.Cryptography> Пространство имен содержит две реализации алгоритма SHA1, одну реализацию полностью управляемыми и тот, который создает оболочку для CryptoAPI. Разработчик может выбрать для создания экземпляра конкретной реализации SHA1 (такие как <xref:System.Security.Cryptography.SHA1Managed>) путем вызова **новый** оператор. Тем не менее, если он не имеет значения, какой класс, среда CLR загружает до тех пор, пока этот класс реализует хэш-алгоритм SHA1, разработчик может создать объект путем вызова <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> метод. Этот метод вызывает метод **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")** , который должен возвращать реализацию алгоритма хэширования SHA1.  
   
  Разработчик также может вызвать **System.Security.Cryptography.CryptoConfig.CreateFromName("SHA1")** так, как по умолчанию конфигурации шифрования включает в себя короткие имена для алгоритмов, в .NET Framework.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "64583736"
 ## <a name="mapping-algorithm-names-in-configuration-files"></a>Отображение имен алгоритмов в файлах конфигурации  
  По умолчанию среда выполнения возвращает <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> объекта для всех четырех сценариев. Тем не менее администратор компьютера можно изменить тип объекта, которое возвращают методы в последних двух сценариях. Чтобы сделать это, необходимо сопоставить с понятным именем алгоритма к классу, который вы хотите использовать в файле конфигурации компьютера (Machine.config).  
   
- В следующем примере показано, как настроить среду выполнения, чтобы **System.Security.Cryptography.SHA1.Create**, **System.Security.CryptoConfig.CreateFromName("SHA1")**, и  **System.Security.Cryptography.HashAlgorithm.Create** возвращают `MySHA1HashClass` объекта.  
+ В следующем примере показано, как настроить среду выполнения, чтобы **System.Security.Cryptography.SHA1.Create**, **System.Security.CryptoConfig.CreateFromName("SHA1")** , и  **System.Security.Cryptography.HashAlgorithm.Create** возвращают `MySHA1HashClass` объекта.  
   
 ```xml  
 <configuration>  

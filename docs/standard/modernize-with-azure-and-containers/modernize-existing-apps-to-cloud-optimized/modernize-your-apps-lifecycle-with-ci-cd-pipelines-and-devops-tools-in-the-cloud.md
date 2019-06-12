@@ -2,12 +2,12 @@
 title: Модернизация жизненного цикла приложений с помощью конвейеров непрерывной интеграции и непрерывного развертывания и средств DevOps в облаке
 description: Модернизация существующих приложений .NET с помощью облака Azure и Windows контейнерах | Модернизация жизненного цикла приложений с помощью конвейеров непрерывной Интеграции и Развертывания и инструменты DevOps в облаке
 ms.date: 04/30/2018
-ms.openlocfilehash: cc991bba5df3a9cd972d9a172c1a8f1035ce8c58
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: fb4bfab4a891e9c8a73867f18cb8249775f9b7b9
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758648"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833956"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Модернизация жизненного цикла приложений с помощью конвейеров непрерывной интеграции и непрерывного развертывания и средств DevOps в облаке
 
@@ -17,7 +17,7 @@ ms.locfileid: "66758648"
 
 Службы Azure DevOps поддерживают непрерывную интеграцию и развертывание многоконтейнерных приложений для широкого спектра сред с помощью официальной задачи развертывания служб Azure DevOps:
 
-- [Развертывание автономных виртуальных Машин узла Docker](https://docs.microsoft.com/azure/devops/build-release/apps/cd/deploy-docker-windowsvm) (Linux или Windows Server 2016 или более поздней версии)
+- [Развертывание в веб-приложение Azure для контейнеров](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-docker-webapp?view=azure-devops)
 
 - [Развертывание в службе контейнеров Azure — Kubernetes](https://docs.microsoft.com/azure/devops/build-release/apps/cd/azure/deploy-container-kubernetes)
 
