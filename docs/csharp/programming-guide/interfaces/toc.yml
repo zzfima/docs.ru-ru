@@ -3,7 +3,7 @@
   items:
     - name: Явная реализация интерфейса
       href: explicit-interface-implementation.md
-    - name: 'Практическое руководство. Явная реализация членов интерфейса'
+    - name: Как выполнить явную реализацию членов интерфейса
       href: how-to-explicitly-implement-interface-members.md
-    - name: 'Практическое руководство. Явная реализация членов двух интерфейсов'
+    - name: Как выполнить явную реализацию членов двух интерфейсов
       href: how-to-explicitly-implement-members-of-two-interfaces.md
