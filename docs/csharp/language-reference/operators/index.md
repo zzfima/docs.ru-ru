@@ -1,5 +1,5 @@
 ---
-title: Операторы в C#
+title: Операторы C# — справочник по C#
 ms.date: 04/30/2019
 f1_keywords:
 - cs.operators
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: c6b83779a630c6d797968d79635793e229751f93
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 98f73ed958f8b43cd4fea700a478cf3337ea68db
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833274"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025136"
 ---
-# <a name="c-operators"></a>Операторы в C#
+# <a name="c-operators-c-reference"></a>Операторы C# (справочник по C#)
 
 C# предоставляет ряд стандартных операторов, поддерживаемых встроенными типами. Например [арифметические операторы](arithmetic-operators.md) выполняют арифметические операции с операндами встроенных числовых типов, а [логические операторы](boolean-logical-operators.md) выполняют логические операции с операндами [bool](../keywords/bool.md).
 
@@ -221,8 +221,6 @@ C# предоставляет ряд стандартных операторов
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)
-- [Руководство по программированию на C#](../../programming-guide/index.md)
-- [C#](../../index.md)
+- [справочник по C#](../index.md)
+- [Инструкции](../../programming-guide/statements-expressions-operators/operators.md)
 - [Перегружаемые операторы](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
-- [Ключевые слова в C#](../keywords/index.md)

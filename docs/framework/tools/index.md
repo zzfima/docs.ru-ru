@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 81110736651db9fe00b116c3abbbdaa8d3670bee
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 995aeca60d462c96f951411aff9fcb2c772169d1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456099"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489648"
 ---
 # <a name="net-framework-tools"></a>Инструменты .NET Framework
 Назначение средств .NET Framework состоит в том, чтобы облегчить создание, развертывание и администрирование приложений и компонентов, предназначенных для .NET Framework.  
@@ -36,7 +36,7 @@ ms.locfileid: "66456099"
  Преобразует определения типов для элемента управления ActiveX из библиотеки типов COM в элемент управления Windows Forms.  
   
  [Caspol.exe (средство настройки политики управления доступом для кода)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
- Позволяют просматривать и настраивать политику безопасности на уровне политики компьютера, пользователя и предприятия. В [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] и более поздних версиях эта программа не влияет на политику разграничения доступа кода, если только для элемента [\<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) не задано значение `true`. Дополнительные сведения см. в разделе [Изменения системы безопасности](../../../docs/framework/security/security-changes.md).  
+ Позволяют просматривать и настраивать политику безопасности на уровне политики компьютера, пользователя и предприятия. В .NET Framework 4 и более поздних версиях это средство не влияет на политику управления доступом для кода, если только для элемента [\<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) не задано значение `true`. Дополнительные сведения см. в разделе [Изменения системы безопасности](../../../docs/framework/security/security-changes.md).  
   
  [Cert2spc.exe (средство проверки сертификата издателя программного обеспечения)](../../../docs/framework/tools/cert2spc-exe-software-publisher-certificate-test-tool.md)  
  Создает сертификат издателя программного обеспечения (SPC) из одного или более сертификатов X.509. Этот инструмент предназначен только для тестирования.  

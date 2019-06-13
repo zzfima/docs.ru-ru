@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45f3e8533bf7400566304ddb0fdd9d8e5a9b4280
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 2ee08e9ca243ac086a0b75892bf9258246e8fd7c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456134"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490672"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Строгое именование (справочник по управляемым API)
 API строгого именования позволяет клиенту администрировать подписание сборок строгим именем.  
@@ -23,7 +23,7 @@ API строгого именования позволяет клиенту а�
 ## <a name="in-this-section"></a>В этом разделе  
   
 > [!NOTE]
->  Все эти функции являются нерекомендуемыми начиная с [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Рекомендуемые альтернативы см. в интерфейсе [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md).  
+>  Все эти функции являются нерекомендуемыми начиная с .NET Framework 4. Рекомендуемые альтернативы см. в интерфейсе [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md).  
   
  [Функция GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfile-function.md)  
  Получает хэш указанного файла сборки с помощью указанного хэш-алгоритма. Является нерекомендуемым начиная с версии .NET Framework 4.  

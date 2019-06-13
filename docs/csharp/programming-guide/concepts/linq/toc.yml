@@ -1,10 +1,8 @@
 - name: LINQ
-  href: index.md
   items:
-    - name: Введение в LINQ
-      href: introduction-to-linq.md
+    - name: Обзор
+      href: index.md
     - name: 'Приступая к работе с LINQ в C#'
-      href: getting-started-with-linq.md
       items:
         - name: Введение в запросы LINQ
           href: introduction-to-linq-queries.md
@@ -23,8 +21,9 @@
         - name: 'Пошаговое руководство. Написание запросов на C# (LINQ)'
           href: walkthrough-writing-queries-linq.md
     - name: Общие сведения о стандартных операторах запросов
-      href: standard-query-operators-overview.md
       items:
+        - name: Обзор
+          href: standard-query-operators-overview.md
         - name: Синтаксис выражений запроса для стандартных операторов запроса
           href: query-expression-syntax-for-standard-query-operators.md
         - name: Классификация стандартных операторов запросов по способу выполнения
@@ -58,66 +57,66 @@
         - name: Операции агрегирования
           href: aggregation-operations.md
     - name: LINQ to Objects
-      href: linq-to-objects.md
       items:
+        - name: Обзор
+          href: linq-to-objects.md
         - name: LINQ и строки
           href: linq-and-strings.md
+        - name: Статьи с пошаговыми инструкциями
           items:
-            - name: Как выполнить Подсчет вхождений слова в строке (LINQ)
+            - name: Практическое руководство. Подсчет вхождений слова в строке (LINQ)
               href: how-to-count-occurrences-of-a-word-in-a-string-linq.md
-            - name: 'Как выполнить Запрос к предложениям, содержащим указанный набор слов (LINQ)'
+            - name: 'Практическое руководство. Запрос к предложениям, содержащим указанный набор слов (LINQ)'
               href: how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md
-            - name: Как выполнить Запрос символов в строке (LINQ)
+            - name: Практическое руководство. Запрос символов в строке (LINQ)
               href: how-to-query-for-characters-in-a-string-linq.md
-            - name: Как выполнить Объединение запросов LINQ с помощью регулярных выражений
+            - name: Практическое руководство. Объединение запросов LINQ с помощью регулярных выражений
               href: how-to-combine-linq-queries-with-regular-expressions.md
-            - name: Как выполнить Нахождение разности множеств между двумя списками (LINQ)
+            - name: Практическое руководство. Нахождение разности множеств между двумя списками (LINQ)
               href: how-to-find-the-set-difference-between-two-lists-linq.md
-            - name: Как выполнить Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ)
+            - name: Практическое руководство. Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ)
               href: how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md
-            - name: Как выполнить Изменение порядка полей файла с разделителями (LINQ)
+            - name: Практическое руководство. Изменение порядка полей файла с разделителями (LINQ)
               href: how-to-reorder-the-fields-of-a-delimited-file-linq.md
-            - name: Как выполнить Объединение и сравнение коллекций строк (LINQ)
+            - name: Практическое руководство. Объединение и сравнение коллекций строк (LINQ)
               href: how-to-combine-and-compare-string-collections-linq.md
-            - name: Как выполнить Заполнение коллекций объектов из нескольких источников (LINQ)
+            - name: Практическое руководство. Заполнение коллекций объектов из нескольких источников (LINQ)
               href: how-to-populate-object-collections-from-multiple-sources-linq.md
-            - name: Как выполнить Разделение файла на несколько файлов с помощью групп (LINQ)
+            - name: Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ)
               href: how-to-split-a-file-into-many-files-by-using-groups-linq.md
-            - name: Как выполнить Объединение содержимого из файлов разных форматов (LINQ)
+            - name: Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ)
               href: how-to-join-content-from-dissimilar-files-linq.md
-            - name: Как выполнить Вычисление значений столбцов в текстовом CSV-файле (LINQ)
+            - name: Практическое руководство. Вычисление значений столбцов в текстовом CSV-файле (LINQ)
               href: how-to-compute-column-values-in-a-csv-text-file-linq.md
         - name: LINQ и отражение
           href: linq-and-reflection.md
-          items:
-            - name: Как выполнить Запрос к метаданным сборки при помощи отражения (LINQ)
-              href: how-to-query-an-assembly-s-metadata-with-reflection-linq.md
+        - name: Практическое руководство. Запрос к метаданным сборки при помощи отражения (LINQ)
+          href: how-to-query-an-assembly-s-metadata-with-reflection-linq.md
         - name: LINQ и каталоги файлов
-          href: linq-and-file-directories.md
           items:
-            - name: Как выполнить Запрос файлов с указанным атрибутом или именем
+            - name: Обзор
+              href: linq-and-file-directories.md
+            - name: Практическое руководство. Запрос файлов с указанным атрибутом или именем
               href: how-to-query-for-files-with-a-specified-attribute-or-name.md
-            - name: Как выполнить Группировка файлов по расширению (LINQ)
+            - name: Практическое руководство. Группировка файлов по расширению (LINQ)
               href: how-to-group-files-by-extension-linq.md
-            - name: Как выполнить Запрос общего числа байтов в наборе папок (LINQ)
+            - name: Практическое руководство. Запрос общего числа байтов в наборе папок (LINQ)
               href: how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md
-            - name: Как выполнить Сравнение содержимого двух папок (LINQ)
+            - name: Практическое руководство. Сравнение содержимого двух папок (LINQ)
               href: how-to-compare-the-contents-of-two-folders-linq.md
-            - name: Как выполнить Запрос самого большого файла или файлов в дереве папок (LINQ)
+            - name: Практическое руководство. Запрос самого большого файла или файлов в дереве папок (LINQ)
               href: how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md
-            - name: Как выполнить Запрос повторяющихся файлов в дереве папок (LINQ)
+            - name: Практическое руководство. Запрос повторяющихся файлов в дереве папок (LINQ)
               href: how-to-query-for-duplicate-files-in-a-directory-tree-linq.md
-            - name: Как выполнить Запрос содержимого файлов в папке (LINQ)
+            - name: Практическое руководство. Запрос содержимого файлов в папке (LINQ)
               href: how-to-query-the-contents-of-files-in-a-folder-lin.md
-        - name: Как выполнить Выполнение запроса к ArrayList с помощью LINQ
+        - name: Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ
           href: how-to-query-an-arraylist-with-linq.md
-        - name: Как выполнить Добавление настраиваемых методов для запросов LINQ
+        - name: Практическое руководство. Добавление настраиваемых методов для запросов LINQ
           href: how-to-add-custom-methods-for-linq-queries.md
     - name: LINQ to XML
-      href: linq-to-xml.md
       items:
         - name: Начало работы (LINQ to XML)
-          href: getting-started-linq-to-xml.md
           items:
             - name: Общие сведения о LINQ to XML
               href: linq-to-xml-overview.md
@@ -126,10 +125,8 @@
             - name: LINQ to XML или Другие XML-технологии
               href: linq-to-xml-vs-other-xml-technologies.md
         - name: Руководство по программированию (LINQ to XML)
-          href: programming-guide-linq-to-xml.md
           items:
             - name: Общие сведения о программировании в LINQ to XML
-              href: linq-to-xml-programming-overview.md
               items:
                 - name: Сравнение функционального и процедурного программирования (LINQ to XML)
                   href: functional-vs-procedural-programming-linq-to-xml.md
@@ -141,51 +138,47 @@
                   href: xattribute-class-overview.md
                 - name: Общие сведения о классе XDocument
                   href: xdocument-class-overview.md
-                - name: Как выполнить Сборка примеров LINQ to XML
+                - name: Практическое руководство. Сборка примеров LINQ to XML
                   href: how-to-build-linq-to-xml-examples.md
-            - name: Создание деревьев XML
-              href: creating-xml-trees.md
+            - name: Деревья XML
               items:
                 - name: Функциональная сборка (LINQ to XML)
                   href: functional-construction-linq-to-xml.md
                 - name: 'Создание деревьев XML в C# (LINQ to XML)'
                   href: creating-xml-trees-linq-to-xml-2.md
                 - name: Анализ XML
-                  href: parsing-xml.md
                   items:
-                    - name: Как выполнить Анализ строки
+                    - name: Практическое руководство. Анализ строки
                       href: how-to-parse-a-string.md
-                    - name: Как выполнить Загрузка XML из файла
+                    - name: Практическое руководство. Загрузка XML из файла
                       href: how-to-load-xml-from-a-file.md
                     - name: Сохранение пробелов при загрузке и анализе XML
                       href: preserving-white-space-while-loading-or-parsing-xml1.md
-                    - name: Как выполнить Перехват ошибок анализа
+                    - name: Практическое руководство. Перехват ошибок анализа
                       href: how-to-catch-parsing-errors.md
-                    - name: Как выполнить Создание дерева из XmlReader
+                    - name: Практическое руководство. Создание дерева из XmlReader
                       href: how-to-create-a-tree-from-an-xmlreader.md
-                    - name: Как выполнить Потоковая передача фрагментов XML из XmlReader
+                    - name: Практическое руководство. Потоковая передача фрагментов XML из XmlReader
                       href: how-to-stream-xml-fragments-from-an-xmlreader.md
-                - name: "Как выполнить Заполнение дерева XML с помощью XmlWriter (LINQ\_to\_XML)"
+                - name: "Практическое руководство. Заполнение дерева XML с помощью XmlWriter (LINQ\_to\_XML)"
                   href: how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml.md
-                - name: "Как выполнить Проверка с использованием XSD (LINQ\_to\_XML)"
+                - name: "Практическое руководство. Проверка с использованием XSD (LINQ\_to\_XML)"
                   href: how-to-validate-using-xsd-linq-to-xml.md
                 - name: Допустимое содержимое объектов XElement и XDocument
                   href: valid-content-of-xelement-and-xdocument-objects3.md
             - name: Работа с пространствами имен XML
-              href: working-with-xml-namespaces.md
               items:
                 - name: Обзор пространств имен (LINQ to XML)
                   href: namespaces-overview-linq-to-xml.md
-                - name: "Как выполнить Создание документа с пространствами имен (LINQ\_to\_XML)"
+                - name: "Практическое руководство. Создание документа с пространствами имен (LINQ\_to\_XML)"
                   href: how-to-create-a-document-with-namespaces-linq-to-xml.md
-                - name: "Как выполнить Управление префиксами пространств имен (LINQ\_to\_XML)"
+                - name: "Практическое руководство. Управление префиксами пространств имен (LINQ\_to\_XML)"
                   href: how-to-control-namespace-prefixes-linq-to-xml.md
                 - name: 'Области пространств имен по умолчанию в C#'
                   href: scope-of-default-namespaces.md
-                - name: Как выполнить Создание запросов к XML в пространствах имен
+                - name: Практическое руководство. Создание запросов к XML в пространствах имен
                   href: how-to-write-queries-on-xml-in-namespaces.md
             - name: Сериализация деревьев XML
-              href: serializing-xml-trees.md
               items:
                 - name: Сохранение пробелов при сериализации
                   href: preserving-white-space-while-serializing.md
@@ -196,155 +189,158 @@
                 - name: Сериализация в XmlReader (вызов XSLT)
                   href: serializing-to-an-xmlreader-invoking-xslt.md
             - name: Оси LINQ to XML
-              href: linq-to-xml-axes.md
               items:
                 - name: Общие сведения об осях LINQ to XML
                   href: linq-to-xml-axes-overview.md
-                - name: "Как выполнить Извлечение коллекции элементов (LINQ\_to\_XML)"
+                - name: "Практическое руководство. Извлечение коллекции элементов (LINQ\_to\_XML)"
                   href: how-to-retrieve-a-collection-of-elements-linq-to-xml.md
-                - name: "Как выполнить Извлечение значений элемента (LINQ\_to\_XML)"
+                - name: "Практическое руководство. Извлечение значений элемента (LINQ\_to\_XML)"
                   href: how-to-retrieve-the-value-of-an-element-linq-to-xml.md
-                - name: "Как выполнить Фильтрация по именам элементов (LINQ\_to\_XML)"
+                - name: "Практическое руководство. Фильтрация по именам элементов (LINQ\_to\_XML)"
                   href: how-to-filter-on-element-names-linq-to-xml.md
-                - name: "Как выполнить Связанные вызовы метода оси (LINQ\_to\_XML)"
+                - name: "Практическое руководство. Связанные вызовы метода оси (LINQ\_to\_XML)"
                   href: how-to-chain-axis-method-calls-linq-to-xml.md
-                - name: "Как выполнить Извлечение одного дочернего элемента (LINQ\_to\_XML)"
+                - name: "Практическое руководство. Извлечение одного дочернего элемента (LINQ\_to\_XML)"
                   href: how-to-retrieve-a-single-child-element-linq-to-xml.md
-                - name: "Как выполнить Извлечение коллекции атрибутов (LINQ\_to\_XML)"
+                - name: "Практическое руководство. Извлечение коллекции атрибутов (LINQ\_to\_XML)"
                   href: how-to-retrieve-a-collection-of-attributes-linq-to-xml.md
-                - name: "Как выполнить Извлечение одного атрибута (LINQ\_to\_XML)"
+                - name: "Практическое руководство. Извлечение одного атрибута (LINQ\_to\_XML)"
                   href: how-to-retrieve-a-single-attribute-linq-to-xml.md
-                - name: Как выполнить Извлечение значения атрибута (LINQ to XML)
+                - name: Практическое руководство. Извлечение значения атрибута (LINQ to XML)
                   href: how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md
-                - name: Как выполнить Извлечение поверхностного значения элемента
+                - name: Практическое руководство. Извлечение поверхностного значения элемента
                   href: how-to-retrieve-the-shallow-value-of-an-element.md
             - name: Выполнение запросов деревьям XML
-              href: querying-xml-trees.md
               items:
                 - name: Базовые запросы (LINQ to XML)
-                  href: basic-queries-linq-to-xml.md
                   items:
-                    - name: Как выполнить Поиск элементов с определенным атрибутом
+                    - name: Практическое руководство. Поиск элементов с определенным атрибутом
                       href: how-to-find-an-element-with-a-specific-attribute.md
-                    - name: Как выполнить Поиск элементов с определенным дочерним элементом
+                    - name: Практическое руководство. Поиск элементов с определенным дочерним элементом
                       href: how-to-find-an-element-with-a-specific-child-element.md
                     - name: Сравнение запросов к XML-документам и запросов к XElement
                       href: querying-an-xdocument-vs-querying-an-xelement.md
-                    - name: Как выполнить Поиск потомков с определенным именем элемента
+                    - name: Практическое руководство. Поиск потомков с определенным именем элемента
                       href: how-to-find-descendants-with-a-specific-element-name.md
-                    - name: Как выполнить Поиск одного потомка с помощью метода потомков
+                    - name: Практическое руководство. Поиск одного потомка с помощью метода потомков
                       href: how-to-find-a-single-descendant-using-the-descendants-method.md
-                    - name: Как выполнить Создание запросов со сложной фильтрацией
+                    - name: Практическое руководство. Создание запросов со сложной фильтрацией
                       href: how-to-write-queries-with-complex-filtering.md
-                    - name: Как выполнить Фильтрация по необязательному элементу
+                    - name: Практическое руководство. Фильтрация по необязательному элементу
                       href: how-to-filter-on-an-optional-element.md
-                    - name: Как выполнить Поиск всех узлов в пространстве имен
+                    - name: Практическое руководство. Поиск всех узлов в пространстве имен
                       href: how-to-find-all-nodes-in-a-namespace.md
-                    - name: Как выполнить Сортировка элементов
+                    - name: Практическое руководство. Сортировка элементов
                       href: how-to-sort-elements.md
-                    - name: Как выполнить Сортировка элементов по нескольким ключам
+                    - name: Практическое руководство. Сортировка элементов по нескольким ключам
                       href: how-to-sort-elements-on-multiple-keys.md
-                    - name: Как выполнить Вычисление промежуточных значений
+                    - name: Практическое руководство. Вычисление промежуточных значений
                       href: how-to-calculate-intermediate-values.md
-                    - name: 'Как выполнить Написание запроса, ищущего элементы на основании контекста'
+                    - name: 'Практическое руководство. Написание запроса, ищущего элементы на основании контекста'
                       href: how-to-write-a-query-that-finds-elements-based-on-context.md
-                    - name: Как выполнить Отладка пустых наборов результатов запроса
+                    - name: Практическое руководство. Отладка пустых наборов результатов запроса
                       href: how-to-debug-empty-query-results-sets.md
                 - name: Проекции и преобразования (LINQ to XML)
-                  href: projections-and-transformations-linq-to-xml.md
                   items:
-                    - name: Как выполнить Работа со словарями с помощью LINQ to XML
+                    - name: Практическое руководство. Работа со словарями с помощью LINQ to XML
                       href: how-to-work-with-dictionaries-using-linq-to-xml.md
-                    - name: Как выполнить Преобразование формы дерева XML
+                    - name: Практическое руководство. Преобразование формы дерева XML
                       href: how-to-transform-the-shape-of-an-xml-tree.md
-                    - name: Как выполнить Управление типом проекции
+                    - name: Практическое руководство. Управление типом проекции
                       href: how-to-control-the-type-of-a-projection.md
-                    - name: Как выполнить Проецирование нового типа (LINQ to XML)
+                    - name: Практическое руководство. Проецирование нового типа (LINQ to XML)
                       href: how-to-project-a-new-type-linq-to-xml.md
-                    - name: Как выполнить Проецирование графа объекта
+                    - name: Практическое руководство. Проецирование графа объекта
                       href: how-to-project-an-object-graph.md
-                    - name: Как выполнить Проецирование анонимного типа
+                    - name: Практическое руководство. Проецирование анонимного типа
                       href: how-to-project-an-anonymous-type.md
-                    - name: Как выполнить Создание текстовых файлов из XML
+                    - name: Практическое руководство. Создание текстовых файлов из XML
                       href: how-to-generate-text-files-from-xml.md
-                    - name: Как выполнить Создание XML из CSV-файлов
+                    - name: Практическое руководство. Создание XML из CSV-файлов
                       href: how-to-generate-xml-from-csv-files.md
                 - name: Дополнительные способы создания запросов (LINQ to XML)
-                  href: advanced-query-techniques-linq-to-xml.md
                   items:
-                    - name: "Как выполнить Объединение двух коллекций (LINQ\_to\_XML)"
+                    - name: "Практическое руководство. Объединение двух коллекций (LINQ\_to\_XML)"
                       href: how-to-join-two-collections-linq-to-xml.md
-                    - name: Как выполнить Создание иерархии с помощью группировки
+                    - name: Практическое руководство. Создание иерархии с помощью группировки
                       href: how-to-create-hierarchy-using-grouping.md
-                    - name: Как выполнить Запрос LINQ to XML с использованием XPath
+                    - name: Практическое руководство. Запрос LINQ to XML с использованием XPath
                       href: how-to-query-linq-to-xml-using-xpath.md
-                    - name: Как выполнить Написание метода оси LINQ to XML
+                    - name: Практическое руководство. Написание метода оси LINQ to XML
                       href: how-to-write-a-linq-to-xml-axis-method.md
-                    - name: Как выполнить Как выполнять потоковые преобразования текста в XML
+                    - name: Практическое руководство. Как выполнять потоковые преобразования текста в XML
                       href: how-to-perform-streaming-transformations-of-text-to-xml.md
-                    - name: Как выполнить Перечисление всех узлов в дереве
+                    - name: Практическое руководство. Перечисление всех узлов в дереве
                       href: how-to-list-all-nodes-in-a-tree.md
-                    - name: Как выполнить Извлечение абзацев из документа в формате Office Open XML
+                    - name: Практическое руководство. Извлечение абзацев из документа в формате Office Open XML
                       href: how-to-retrieve-paragraphs-from-an-office-open-xml-document.md
-                    - name: Как выполнить Изменение документа в формате Office Open XML
+                    - name: Практическое руководство. Изменение документа в формате Office Open XML
                       href: how-to-modify-an-office-open-xml-document.md
-                    - name: Как выполнить Заполнение дерева XML из файловой системы
+                    - name: Практическое руководство. Заполнение дерева XML из файловой системы
                       href: how-to-populate-an-xml-tree-from-the-file-system.md
                 - name: LINQ to XML для пользователей XPath
-                  href: linq-to-xml-for-xpath-users.md
                   items:
                     - name: Сравнительные характеристики XPath и LINQ to XML
                       href: comparison-of-xpath-and-linq-to-xml.md
-                    - name: Как выполнить Поиск дочернего элемента (XPath-LINQ to XML)
+                    - name: Практическое руководство. Поиск дочернего элемента (XPath-LINQ to XML)
                       href: how-to-find-a-child-element-xpath-linq-to-xml.md
-                    - name: Как выполнить Поиск списка дочерних элементов (XPath-LINQ to XML)
+                    - name: Практическое руководство. Поиск списка дочерних элементов (XPath-LINQ to XML)
                       href: how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md
-                    - name: Как выполнить Поиск корневого элемента (XPath-LINQ to XML)
+                    - name: Практическое руководство. Поиск корневого элемента (XPath-LINQ to XML)
                       href: how-to-find-the-root-element-xpath-linq-to-xml.md
-                    - name: Как выполнить Поиск элементов-потомков (XPath-LINQ to XML)
+                    - name: Практическое руководство. Поиск элементов-потомков (XPath-LINQ to XML)
                       href: how-to-find-descendant-elements-xpath-linq-to-xml.md
-                    - name: Как выполнить Фильтрация по атрибуту (XPath-LINQ to XML)
+                    - name: Практическое руководство. Фильтрация по атрибуту (XPath-LINQ to XML)
                       href: how-to-filter-on-an-attribute-xpath-linq-to-xml.md
-                    - name: Как выполнить Поиск связанных элементов (XPath-LINQ to XML)
+                    - name: Практическое руководство. Поиск связанных элементов (XPath-LINQ to XML)
                       href: how-to-find-related-elements-xpath-linq-to-xml.md
-                    - name: Как выполнить Поиск элементов в пространстве имен (XPath-LINQ to XML)
+                    - name: Практическое руководство. Поиск элементов в пространстве имен (XPath-LINQ to XML)
                       href: how-to-find-elements-in-a-namespace-xpath-linq-to-xml.md
-                    - name: Как выполнить Поиск предшествующих элементов того же уровня (XPath-LINQ to XML)
+                    - name: Практическое руководство. Поиск предшествующих элементов того же уровня (XPath-LINQ to XML)
                       href: how-to-find-preceding-siblings-xpath-linq-to-xml.md
-                    - name: Как выполнить Поиск потомков дочернего элемента (XPath-LINQ to XML)
+                    - name: Практическое руководство. Поиск потомков дочернего элемента (XPath-LINQ to XML)
                       href: how-to-find-descendants-of-a-child-element-xpath-linq-to-xml.md
-                    - name: Как выполнить Поиск объединения двух путей расположения (XPath-LINQ to XML)
+                    - name: Практическое руководство. Поиск объединения двух путей расположения (XPath-LINQ to XML)
                       href: how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml.md
-                    - name: Как выполнить Поиск одноуровневых узлов (XPath-LINQ to XML)
+                    - name: Практическое руководство. Поиск одноуровневых узлов (XPath-LINQ to XML)
                       href: how-to-find-sibling-nodes-xpath-linq-to-xml.md
-                    - name: Как выполнить Поиск атрибута родительского элемента (XPath-LINQ to XML)
+                    - name: Практическое руководство. Поиск атрибута родительского элемента (XPath-LINQ to XML)
                       href: how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md
-                    - name: Как выполнить Поиск атрибутов элементов того же уровня с определенным именем (XPath-LINQ to XML)
+                    - name: Практическое руководство. Поиск атрибутов элементов того же уровня с определенным именем (XPath-LINQ to XML)
                       href: how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml.md
-                    - name: Как выполнить Поиск элементов с определенным атрибутом (XPath-LINQ to XML)
+                    - name: Практическое руководство. Поиск элементов с определенным атрибутом (XPath-LINQ to XML)
                       href: how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml.md
-                    - name: Как выполнить Поиск дочерних элементов по положению (XPath-LINQ to XML)
+                    - name: Практическое руководство. Поиск дочерних элементов по положению (XPath-LINQ to XML)
                       href: how-to-find-child-elements-based-on-position-xpath-linq-to-xml.md
-                    - name: Как выполнить Поиск ближайшего предшествующего элемента того же уровня (XPath-LINQ to XML)
+                    - name: Практическое руководство. Поиск ближайшего предшествующего элемента того же уровня (XPath-LINQ to XML)
                       href: how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md
                 - name: Чистые функциональные преобразования XML
-                  href: pure-functional-transformations-of-xml.md
                   items:
                     - name: Введение в чистые функциональные преобразования
                       href: introduction-to-pure-functional-transformations.md
-                      items:
-                        - name: Основные принципы и терминология (функциональное преобразование)
-                          href: concepts-and-terminology-functional-transformation.md
-                        - name: Сравнение функционального и Командное программирование
-                          href: functional-programming-vs-imperative-programming.md
-                        - name: Рефакторинг в чистые функции
-                          href: refactoring-into-pure-functions.md
-                        - name: Применимость функциональных преобразований
-                          href: applicability-of-functional-transformation.md
-                        - name: Функциональное преобразование XML
-                          href: functional-transformation-of-xml.md
+                    - name: Основные принципы и терминология (функциональное преобразование)
+                      href: concepts-and-terminology-functional-transformation.md
+                    - name: Сравнение функционального и Командное программирование
+                      href: functional-programming-vs-imperative-programming.md
+                    - name: Рефакторинг в чистые функции
+                      href: refactoring-into-pure-functions.md
+                    - name: Применимость функциональных преобразований
+                      href: applicability-of-functional-transformation.md
+                    - name: Функциональное преобразование XML
+                      href: functional-transformation-of-xml.md
                     - name: Учебник. Объединение запросов в цепочки
-                      href: tutorial-chaining-queries-together.md
+                      items:
+                        - name: Отложенное выполнение и отложенное вычисление в LINQ to XML
+                          href: deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
+                        - name: Пример отложенного выполнения
+                          href: deferred-execution-example.md
+                        - name: Пример связывания запросов
+                          href: chaining-queries-example.md
+                        - name: Промежуточная материализация
+                          href: intermediate-materialization.md
+                        - name: Связывание стандартных операторов запросов
+                          href: chaining-standard-query-operators-together.md
+                    - name: Учебник. Объединение запросов в цепочки
                       items:
                         - name: Отложенное выполнение и отложенное вычисление в LINQ to XML
                           href: deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
@@ -357,7 +353,6 @@
                         - name: Связывание стандартных операторов запросов
                           href: chaining-standard-query-operators-together.md
                     - name: Учебник. Обработка содержимого документа WordprocessingML
-                      href: tutorial-manipulating-content-in-a-wordprocessingml-document.md
                       items:
                         - name: Форма документов WordprocessingML
                           href: shape-of-wordprocessingml-documents.md
@@ -378,7 +373,6 @@
                         - name: Поиск текста в документах Word
                           href: finding-text-in-word-documents.md
                         - name: Сведения о документах WordprocessingML в формате Office Open XML
-                          href: details-of-office-open-xml-wordprocessingml-documents.md
                           items:
                             - name: Документ WordprocessingML со стилями
                               href: wordprocessingml-document-with-styles.md
@@ -387,7 +381,6 @@
                             - name: 'Пример, выводящий части документа в формате Office Open XML'
                               href: example-that-outputs-office-open-xml-document-parts.md
             - name: Изменение деревьев XML (LINQ to XML)
-              href: modifying-xml-trees-linq-to-xml.md
               items:
                 - name: Сравнение изменения XML-дерева в памяти с Функциональная сборка (LINQ to XML)
                   href: in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md
@@ -399,10 +392,9 @@
                   href: removing-elements-attributes-and-nodes-from-an-xml-tree.md
                 - name: Обслуживание пар "имя — значение"
                   href: maintaining-name-value-pairs.md
-                - name: Как выполнить Изменение пространства имен для всего дерева XML
+                - name: Практическое руководство. Изменение пространства имен для всего дерева XML
                   href: how-to-change-the-namespace-for-an-entire-xml-tree.md
             - name: Производительность (LINQ to XML)
-              href: performance-linq-to-xml.md
               items:
                 - name: Производительность связанных запросов (LINQ to XML)
                   href: performance-of-chained-queries-linq-to-xml.md
@@ -413,7 +405,6 @@
                 - name: Статически скомпилированные запросы (LINQ to XML)
                   href: statically-compiled-queries-linq-to-xml.md
             - name: Сложные методы программирования в LINQ to XML
-              href: advanced-linq-to-xml-programming.md
               items:
                 - name: Примечания LINQ to XML
                   href: linq-to-xml-annotations.md
@@ -423,27 +414,25 @@
                   href: programming-with-nodes.md
                 - name: Ошибки смешанного декларативного и императивного кода (LINQ to XML)
                   href: mixed-declarative-code-imperative-code-bugs-linq-to-xml.md
-                - name: Как выполнить Потоковая передача фрагментов XML с доступом к сведениям заголовка
+                - name: Практическое руководство. Потоковая передача фрагментов XML с доступом к сведениям заголовка
                   href: how-to-stream-xml-fragments-with-access-to-header-information.md
-                - name: Как выполнить Выполнение потокового преобразования крупных XML-документов
+                - name: Практическое руководство. Выполнение потокового преобразования крупных XML-документов
                   href: how-to-perform-streaming-transform-of-large-xml-documents.md
-                - name: Как выполнить Чтение и запись закодированного документа
+                - name: Практическое руководство. Чтение и запись закодированного документа
                   href: how-to-read-and-write-an-encoded-document.md
                 - name: Использование XSLT для преобразования дерева XML
                   href: using-xslt-to-transform-an-xml-tree.md
-                - name: "Как выполнить Использование заметок для преобразования деревьев LINQ\_to\_XML в стиль XSLT"
+                - name: "Практическое руководство. Использование заметок для преобразования деревьев LINQ\_to\_XML в стиль XSLT"
                   href: how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md
                 - name: 'Сериализация графов объектов, содержащих объекты XElement'
-                  href: serializing-object-graphs-that-contain-xelement-objects.md
                   items:
-                    - name: Как выполнить Сериализация с использованием XmlSerializer
+                    - name: Практическое руководство. Сериализация с использованием XmlSerializer
                       href: how-to-serialize-using-xmlserializer.md
-                    - name: Как выполнить Сериализация с использованием DataContractSerializer
+                    - name: Практическое руководство. Сериализация с использованием DataContractSerializer
                       href: how-to-serialize-using-datacontractserializer.md
             - name: Безопасность LINQ to XML
               href: linq-to-xml-security.md
             - name: Примеры XML-документов (LINQ to XML)
-              href: sample-xml-documents-linq-to-xml.md
               items:
                 - name: "Пример XML-файла: типичный заказ на покупку (LINQ\_to\_XML)"
                   href: sample-xml-file-typical-purchase-order-linq-to-xml-1.md

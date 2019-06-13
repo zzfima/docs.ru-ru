@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8d95a347237b15dfa55586bb15fe605bd5c7a94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3b3dcc3b96e12f89508f4d2708c5ab083516dba
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947125"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025499"
 ---
 # <a name="file-and-stream-io"></a>Файловый и потоковый ввод-вывод
 
@@ -147,7 +147,7 @@ ms.locfileid: "61947125"
 
 Следует отметить некоторые важные различия в использовании операций ввода-вывода для приложений в стиле [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]:
 
-- Специальные типы, относящиеся к операциям с файлами, такие как <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> и <xref:System.IO.DirectoryInfo>, не включены в [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Вместо этого используйте типы в пространстве имен <xref:Windows.Storage?displayProperty=nameWithType> из [!INCLUDE[wrt](../../../includes/wrt-md.md)], например <xref:Windows.Storage.StorageFile> и <xref:Windows.Storage.StorageFolder>.
+- Специальные типы, относящиеся к операциям с файлами, такие как <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> и <xref:System.IO.DirectoryInfo>, не включены в [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Вместо этого используйте типы в пространстве имен <xref:Windows.Storage?displayProperty=nameWithType> среды выполнения Windows, например <xref:Windows.Storage.StorageFile> и <xref:Windows.Storage.StorageFolder>.
 
 - Изолированное хранилище недоступно; вместо этого используйте [данные приложения](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).
 
@@ -155,13 +155,13 @@ ms.locfileid: "61947125"
 
 - Типы сжатия на основе пути <xref:System.IO.Compression.ZipFile> и <xref:System.IO.Compression.ZipFileExtensions> недоступны. Вместо этого используйте типы в пространстве имен <xref:Windows.Storage.Compression?displayProperty=nameWithType>.
 
-При необходимости можно осуществлять преобразование между потоками .NET Framework и потоками среды выполнения Windows. Дополнительные сведения см. в разделе [Как Преобразование между потоками .NET Framework и потоками среды выполнения Windows](how-to-convert-between-dotnet-streams-and-winrt-streams.md) или <xref:System.IO.WindowsRuntimeStreamExtensions>.
+При необходимости можно осуществлять преобразование между потоками .NET Framework и потоками среды выполнения Windows. Дополнительные сведения см. в разделе [Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows](how-to-convert-between-dotnet-streams-and-winrt-streams.md) или <xref:System.IO.WindowsRuntimeStreamExtensions>.
 
 Дополнительные сведения об операциях ввода-вывода в приложении [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]: [Краткое руководство. Чтение и запись файлов](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).
 
 ## <a name="io-and-security"></a>Ввод-вывод и безопасность
 
-При использовании классов в пространстве имен <xref:System.IO?displayProperty=nameWithType> необходимо выполнить требования безопасности операционной системы, такие как списки управления доступом для контроля доступа к файлам и каталогам. Это требование дополняет остальные требования <xref:System.Security.Permissions.FileIOPermission>. Списками управления доступом можно управлять программно. Дополнительные сведения см. в разделе [Как Добавление или удаление записей списка управления доступом](how-to-add-or-remove-access-control-list-entries.md).
+При использовании классов в пространстве имен <xref:System.IO?displayProperty=nameWithType> необходимо выполнить требования безопасности операционной системы, такие как списки управления доступом для контроля доступа к файлам и каталогам. Это требование дополняет остальные требования <xref:System.Security.Permissions.FileIOPermission>. Списками управления доступом можно управлять программно. Дополнительные сведения см. в разделе [Практическое руководство. Добавление или удаление записей списка управления доступом](how-to-add-or-remove-access-control-list-entries.md).
 
 По умолчанию политика безопасности не позволяет обращаться к файлам на компьютере пользователя через Интернет или из приложений интрасети. Поэтому при составлении кода не используйте классы ввода-вывода, которым нужен путь к физическому файлу, загружаемому через Интернет или интрасеть. Вместо этого используйте [изолированное хранилище](isolated-storage.md) для обычных приложений .NET Framework или [данные приложения](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) для приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
 

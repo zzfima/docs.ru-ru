@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4c9e85b2a884f6f348d801a27b7f362bd0236b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16e20214981bb5c0f96b26f34be99026aac19266
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644055"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690190"
 ---
 # <a name="get-started-with-the-net-framework"></a>Начало работы с .NET Framework
 
@@ -53,7 +53,7 @@ ms.locfileid: "61644055"
 
 - Если приложение зависит от конкретной версии платформы .NET Framework, то его работа может быть нарушена в случае удаления этой версии.
 
-- В некоторых версиях платформы .NET Framework существуют локальные обновления на более ранние версии. Например, [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] представляет собой обновление на месте для версии 2.0, а .NET Framework 4.8 — обновление на месте для версий с 4 по 4.7.2. Дополнительные сведения см. в разделе [Платформа.NET Framework: версии и зависимости](../migration-guide/versions-and-dependencies.md).
+- В некоторых версиях платформы .NET Framework существуют локальные обновления на более ранние версии. Например, .NET Framework 3.5 представляет собой обновление на месте для версии 2.0, а .NET Framework 4.8 — обновление на месте для версий с 4 по 4.7.2. Дополнительные сведения см. в разделе [Платформа.NET Framework: версии и зависимости](../migration-guide/versions-and-dependencies.md).
 
 Если вы решите удалить платформу .NET Framework в версии Windows, предшествующей Windows 8, всегда используйте для удаления средство **Программы и компоненты**. Никогда не удаляйте версию платформы .NET Framework вручную. В ОС Windows 8 и более поздних версий .NET Framework представляет собой компонент операционной системы, который нельзя удалить отдельно.
 

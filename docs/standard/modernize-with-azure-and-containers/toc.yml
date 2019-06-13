@@ -24,8 +24,6 @@
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md
         - name: "Когда следует развертывать контейнеры Windows в экземплярах контейнеров Azure\_(ACI)"
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-instances-ACI.md
-        - name: Когда следует развернуть контейнеры Windows в Service Fabric
-          href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-service-fabric.md
         - name: "Когда следует развертывать контейнеры Windows в службе контейнеров Azure\_(ACS-Kubernetes)"
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md
         - name: Выбор вычислительных платформ Azure для контейнерных приложений
