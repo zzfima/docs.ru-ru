@@ -18,7 +18,7 @@
     - name: Классификация цветов ириса (кластеризация к-средних)
       href: tutorials/iris-clustering.md
     - name: Рекомендации фильмов (матричная факторизация)
-      href: tutorials/movie-recommmendation.md
+      href: tutorials/movie-recommendation.md
     - name: Классификация изображений (передача обучения)
       href: tutorials/image-classification.md
     - name: Анализ продаж продукта (обнаружение аномалий)
