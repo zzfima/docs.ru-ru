@@ -40,7 +40,7 @@ ms.locfileid: "66300806"
 
 |     | <span data-ttu-id="bf675-114">Описание</span><span class="sxs-lookup"><span data-stu-id="bf675-114">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="bf675-115"> *\*\<configSections >** элемент</span><span class="sxs-lookup"><span data-stu-id="bf675-115">**\<configSections>** Element</span></span>](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | <span data-ttu-id="bf675-116">Содержит раздел конфигурации и пространства имен объявления.</span><span class="sxs-lookup"><span data-stu-id="bf675-116">Contains configuration section and namespace declarations.</span></span> |
+| [<span data-ttu-id="bf675-115"> **\<configSections >** элемент</span><span class="sxs-lookup"><span data-stu-id="bf675-115">**\<configSections>** Element</span></span>](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | <span data-ttu-id="bf675-116">Содержит раздел конфигурации и пространства имен объявления.</span><span class="sxs-lookup"><span data-stu-id="bf675-116">Contains configuration section and namespace declarations.</span></span> |
 
 ## <a name="child-elements"></a><span data-ttu-id="bf675-117">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="bf675-117">Child elements</span></span>
 
