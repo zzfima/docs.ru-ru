@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 728f360d2e8f93ebdf2b17fec39477b95ed11357
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 380c0eef137eb5142c30e63f5446f5d60723087a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063281"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834048"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Рекомендации по использованию структур Memory\<T> и Span\<T>
 
@@ -138,7 +138,7 @@ void DisplayBufferToConsole(ReadOnlyMemory<char> buffer);
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-Метод `DisplayBufferToConsole` теперь работает с практически всеми возможными типами буфера: `T[]`, блоком памяти, выделяемым с помощью ключевого слова [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md) и т. д. Ему даже можно непосредственно передать <xref:System.String>!
+Метод `DisplayBufferToConsole` теперь работает с практически всеми возможными типами буфера: `T[]`, блоком памяти, выделяемым с помощью ключевого слова [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) и т. д. Ему даже можно непосредственно передать <xref:System.String>!
 
 **Правило 3. Если метод принимает Memory\<T> и возвращает `void`, вам не следует использовать экземпляр Memory\<T> после возврата метода**
 
