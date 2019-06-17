@@ -1,15 +1,15 @@
 - name: События
   href: index.md
   items:
-    - name: Как выполнить Подписка и отмена подписки на события
+    - name: Практическое руководство. Подписка и отмена подписки на события
       href: how-to-subscribe-to-and-unsubscribe-from-events.md
-    - name: Как выполнить Публикация событий в соответствии с рекомендациями по .NET Framework
+    - name: Как публиковать события в соответствии с рекомендациями по .NET Framework
       href: how-to-publish-events-that-conform-to-net-framework-guidelines.md
-    - name: Как выполнить Создание событий базового класса в производных классах
+    - name: Как создавать события базового класса в производных классах
       href: how-to-raise-base-class-events-in-derived-classes.md
-    - name: Как выполнить Реализация событий интерфейса
+    - name: Как реализовать события интерфейса
       href: how-to-implement-interface-events.md
-    - name: Как выполнить Использование словаря для хранения экземпляров событий
+    - name: Как использовать словарь для хранения экземпляров событий
       href: how-to-use-a-dictionary-to-store-event-instances.md
-    - name: Как выполнить Реализация пользовательских методов доступа к событиям
+    - name: Как реализовать пользовательские методы доступа к событиям
       href: how-to-implement-custom-event-accessors.md
