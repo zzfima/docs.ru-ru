@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 556181d32f0539b4a9e24cb1a898b4ccc3788f4e
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 0b70545c2252d6e8b82d6f4d57522ac4bb2481d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66250878"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490872"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Классы символов в регулярных выражениях
 
@@ -51,7 +51,7 @@ ms.locfileid: "66250878"
  Платформа .NET поддерживает выражения вычитания в классах знаков, которые позволяют в результате исключения одного класса знаков из другого класса знаков определить набор знаков. Дополнительные сведения см. в разделе [Вычитание класса знаков](#CharacterClassSubtraction).  
   
 > [!NOTE]
->  Классы символов, которые сопоставляют символы по категориям, например [\w](#WordCharacter), для соответствия символов слов или [\p{}](#CategoryOrBlock) для соответствия категории Юникод, используют класс <xref:System.Globalization.CharUnicodeInfo> для получения сведений о категориях символов.  Начиная с .NET Framework 4.6.2 категории символов основаны на [Стандарте Юникода, версия 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). В версиях с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] по .NET Framework 4.6.1 они основаны на [Стандарте Юникода, версия 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
+>  Классы символов, которые сопоставляют символы по категориям, например [\w](#WordCharacter), для соответствия символов слов или [\p{}](#CategoryOrBlock) для соответствия категории Юникод, используют класс <xref:System.Globalization.CharUnicodeInfo> для получения сведений о категориях символов.  Начиная с .NET Framework 4.6.2 категории символов основаны на [Стандарте Юникода, версия 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). В версиях .NET Framework с 4 по 4.6.1 они основаны на [Стандарте Юникода, версия 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Положительная группа символов: [ ]  
@@ -452,7 +452,7 @@ ms.locfileid: "66250878"
 |0250 - 02AF|`IsIPAExtensions`|  
 |02B0 - 02FF|`IsSpacingModifierLetters`|  
 |0300 - 036F|`IsCombiningDiacriticalMarks`|  
-|0370 - 03FF|`IsGreek`<br /><br /> - или -<br /><br /> `IsGreekandCoptic`|  
+|0370 - 03FF|`IsGreek`<br /><br /> \- или -<br /><br /> `IsGreekandCoptic`|  
 |0400 - 04FF|`IsCyrillic`|  
 |0500 - 052F|`IsCyrillicSupplement`|  
 |0530 - 058F|`IsArmenian`|  
@@ -496,7 +496,7 @@ ms.locfileid: "66250878"
 |2000 - 206F|`IsGeneralPunctuation`|  
 |2070 - 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 - 20CF|`IsCurrencySymbols`|  
-|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> - или -<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> \- или -<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 - 214F|`IsLetterlikeSymbols`|  
 |2150 - 218F|`IsNumberForms`|  
 |2190 - 21FF|`IsArrows`|  
