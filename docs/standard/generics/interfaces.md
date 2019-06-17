@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3085812f2467c1e73d94335530441d6bb12db6af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9570578e8ae4397f060805b891f86d7d4f273cd4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613809"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487043"
 ---
 # <a name="generic-interfaces"></a>Универсальные интерфейсы
 В этом разделе приводится обзор универсальных интерфейсов, которые предоставляют общие функциональные возможности для различных семейств универсальных типов.  
@@ -24,10 +24,10 @@ ms.locfileid: "54613809"
  Универсальные интерфейсы — это типобезопасные аналоги неуниверсальных интерфейсов, предназначенные для сортировки и сравнения на равенство, а также для реализации функциональности, совместно используемой универсальными коллекциями.  
   
 > [!NOTE]
->  Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] параметры типов нескольких универсальных интерфейсов помечены как ковариантные или контравариантные, что обеспечивает дополнительную гибкость при назначении и использовании типов, реализующих эти интерфейсы. См. раздел [Ковариация и контрвариация](../../../docs/standard/generics/covariance-and-contravariance.md).  
+>  Начиная с .NET Framework 4, параметры типов нескольких универсальных интерфейсов помечены как ковариантные или контравариантные, что обеспечивает дополнительную гибкость при назначении и использовании типов, реализующих эти интерфейсы. См. раздел [Ковариация и контрвариация](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
 ### <a name="equality-and-ordering-comparisons"></a>Упорядочение и сравнение на равенство  
- В пространстве имен <xref:System> универсальные интерфейсы <xref:System.IComparable%601?displayProperty=nameWithType> и <xref:System.IEquatable%601?displayProperty=nameWithType>, как и их неуниверсальные аналоги, определяют методы для упорядочения и сравнения на равенство соответственно. Типы реализуют эти интерфейсы для предоставления возможности выполнения таких сравнений.  
+ В пространстве имен <xref:System> универсальные интерфейсы <xref:System.IComparable%601?displayProperty=nameWithType> и <xref:System.IEquatable%601?displayProperty=nameWithType>, как и их неуниверсальные аналоги, определяют методы для упорядочения и сравнения на равенство соответственно. Типы реализуют эти интерфейсы для предоставления способности выполнять такие сравнения.  
   
  В пространстве имен <xref:System.Collections.Generic> универсальные интерфейсы <xref:System.Collections.Generic.IComparer%601> и <xref:System.Collections.Generic.IEqualityComparer%601> позволяют определить операции упорядочения или сравнения на равенство для типов, которые не реализуют универсальный интерфейс <xref:System.IComparable%601?displayProperty=nameWithType> или <xref:System.IEquatable%601?displayProperty=nameWithType>. Кроме того, они позволяют переопределить эти отношения для типов, реализующих эти интерфейсы. Эти интерфейсы используются методами и конструкторами многих универсальных классов коллекций. Например, можно передать универсальный объект <xref:System.Collections.Generic.IComparer%601> в конструктор класса <xref:System.Collections.Generic.SortedDictionary%602>, чтобы указать порядок сортировки для типа, который не реализует универсальный интерфейс <xref:System.IComparable%601?displayProperty=nameWithType>. Предусмотрены перегрузки универсального статического метода <xref:System.Array.Sort%2A?displayProperty=nameWithType> и метода экземпляра <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> для сортировки массивов и списков с помощью реализаций универсального интерфейса <xref:System.Collections.Generic.IComparer%601>.  
   

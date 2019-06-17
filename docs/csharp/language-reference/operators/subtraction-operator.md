@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 9f43a863de69122e251204668af2ea989fcc993c
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: aae10f8b03a16e55f0b26981f17585c8790e00c1
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300092"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816082"
 ---
 # <a name="--and---operators-c-reference"></a>- и -= (операторы) (справочник по C#)
 
@@ -31,12 +31,22 @@ ms.locfileid: "66300092"
 Для операндов одного и того же типа [delegate](../keywords/delegate.md) оператор `-` возвращает экземпляр делегата, который вычисляется следующим образом:
 
 - Если оба операнда не равны NULL и список вызовов второго операнда является соответствующим подсписком списка вызовов первого операнда, результатом операции является новый список вызовов, который получается путем удаления записей второго операнда из списка вызовов первого операнда. Если список второго операнда соответствует нескольким смежным подспискам в списке первого операнда, удаляется только крайний правый совпадающий подсписок. Если удаление приводит к пустому списку, возвращается `null`.
-- Если список вызовов второго операнда не является соответствующим смежным подсписком списка вызовов первого операнда, результатом операции является первый операнд.
+
+  [!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
+
+- Если список вызовов второго операнда не является соответствующим смежным подсписком списка вызовов первого операнда, результатом операции является первый операнд. Так, удаление делегата, который не является частью многоадресного делегата, ни к чему не приводит и многоадресный делегат никак не меняется.
+
+  [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
+
+  В предыдущем примере также показано, что во время удаления делегата сравниваются его экземпляры. Например, делегаты, созданные в результате оценки идентичных [лямбда-выражений](../../programming-guide/statements-expressions-operators/lambda-expressions.md) не будут равны. Дополнительные сведения о равенстве делегатов см. в разделе об [операторах равенства делегатов](~/_csharplang/spec/expressions.md#delegate-equality-operators) в [спецификации языка C#](../language-specification/index.md).
+
 - Если первый операнд — `null`, результатом операции является `null`. Если второй операнд — `null`, результатом операции является первый операнд.
 
-В следующем примере показано, как операция `-` выполняет удаление делегатов:
+  [!code-csharp-interactive[delegate removal and null](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
 
-[!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
+Объединить делегаты можно с помощью [оператора `+`](addition-operator.md#delegate-combination).
+
+См. дополнительные сведения о [типах делегатов](../../programming-guide/delegates/index.md).
 
 ## <a name="subtraction-assignment-operator--"></a>Оператор присваивания вычитания (-=)
 
@@ -66,7 +76,7 @@ x = x - y
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
-Дополнительные сведения см. в разделе [Оператор унарного минуса](~/_csharplang/spec/expressions.md#unary-minus-operator) и [Оператор вычитания](~/_csharplang/spec/expressions.md#subtraction-operator) в [спецификации языка C#](../language-specification/index.md).
+Дополнительные сведения см. в разделе [Оператор унарного минуса](~/_csharplang/spec/expressions.md#unary-minus-operator) и [Оператор вычитания](~/_csharplang/spec/expressions.md#subtraction-operator) в [спецификации языка C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>См. также
 

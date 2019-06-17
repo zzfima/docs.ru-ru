@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f461490529f626cfc442d817840b9c2e64df4c19
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7238edb35e7fd69c0161adbc3b80b122575bbf75
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585879"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690309"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Пошаговое руководство. Выпуск кода в сценариях частичного доверия
 При порождении отражения для полного или частичного доверия используется одинаковый набор интерфейсов API, но для некоторых функциональных возможностей требуются особые разрешения в коде с частичным доверием. Кроме того, в порождении отражения имеется функциональная возможность, анонимно размещенные динамические методы, которые предназначены для использования при частичном доверии и в прозрачных с точки зрения безопасности сборках.  
   
 > [!NOTE]
->  В версиях, предшествовавших [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)], для порождения кода требовалось разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>. Это разрешение включено по умолчанию в именованные наборы разрешений `FullTrust` и `Intranet`, но отсутствует в наборе разрешений `Internet`. Поэтому библиотека может использоваться при частичном доверии, только если у нее был атрибут <xref:System.Security.SecurityCriticalAttribute> и она выполнила метод <xref:System.Security.PermissionSet.Assert%2A> для <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Такие библиотеки требуют тщательной проверки безопасности, так как ошибки в коде могут стать причиной уязвимости. Платформа [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] позволяет создавать код в сценариях частичного доверия без предъявления каких-либо требований к безопасности, так как создание кода по сути не является привилегированной операцией. То есть созданный код имеет не больше разрешений, чем породившая его сборка. Это позволяет библиотекам порождать код, прозрачный с точки зрения безопасности, и устраняет необходимость в подтверждении <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, что упрощает задачу написания безопасной библиотеки, так как тщательная проверка безопасности не нужна.  
+>  В версиях, предшествовавших .NET Framework 3.5, для порождения кода требовалось разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>. Это разрешение включено по умолчанию в именованные наборы разрешений `FullTrust` и `Intranet`, но отсутствует в наборе разрешений `Internet`. Поэтому библиотека может использоваться при частичном доверии, только если у нее был атрибут <xref:System.Security.SecurityCriticalAttribute> и она выполнила метод <xref:System.Security.PermissionSet.Assert%2A> для <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Такие библиотеки требуют тщательной проверки безопасности, так как ошибки в коде могут стать причиной уязвимости. Платформа .NET Framework 3.5 позволяет создавать код в сценариях частичного доверия без предъявления каких-либо требований к безопасности, так как создание кода по сути не является привилегированной операцией. То есть созданный код имеет не больше разрешений, чем породившая его сборка. Это позволяет библиотекам порождать код, прозрачный с точки зрения безопасности, и устраняет необходимость в подтверждении <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, что упрощает задачу написания безопасной библиотеки, так как тщательная проверка безопасности не нужна.  
   
  В данном пошаговом руководстве рассмотрены следующие задачи:  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TextFieldParser class, aboutTextFieldParser class
 - TextFieldParser class
 ms.assetid: d44bd2b0-7dfc-410b-a48b-534c1e97460b
-ms.openlocfilehash: 15eb5a30cf73f118dd4ad3a8d2194c8190d9c706
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da5f9058efcbd70c5c76bb1307c126a14861ffc7
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054852"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041778"
 ---
 # <a name="textfieldparser-object"></a>TextFieldParser Object
 Предоставляет методы и свойства для анализа структурированных текстовых файлов.  
@@ -32,4 +32,4 @@ Public Class TextFieldParser
   
  **Класс:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
   
- **Сборка:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]
+ **Сборка:** Visual Basic (библиотека времени выполнения, в Microsoft.VisualBasic.dll)

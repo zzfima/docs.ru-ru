@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf0244060d3c5dfa39c220fc2d699a5f2f1fef9e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4369ce9c9ce82ecdbf11d76f3b043778b8374d8b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636186"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489756"
 ---
 # <a name="compiling-an-interop-project"></a>Компиляция проекта, использующего взаимодействие
 
@@ -24,7 +24,7 @@ ms.locfileid: "65636186"
 
  Ссылки на сборки взаимодействия можно использовать двумя способами:
 
-- С помощью встроенных типов взаимодействия. Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] и Visual Studio 2010 можно дать указание компилятору внедрять сведения о типах из сборки взаимодействия в исполняемый файл. Это рекомендуемая методика.
+- С помощью встроенных типов взаимодействия. Начиная с .NET Framework 4 и Visual Studio 2010, можно указать компилятору внедрять сведения о типах из сборки взаимодействия в исполняемый файл. Это рекомендуемая методика.
 
 - Развертывание сборок взаимодействия. Можно создать стандартную ссылку на сборку взаимодействия. В этом случае сборки взаимодействия должны быть развернуты вместе с приложением.
 

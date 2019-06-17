@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e836329527740d490bc3ad96cd62d56bc0b7b3e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 0d5798b8067bde8b711982bfe4f78d66fe1521c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377741"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490833"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Использование асинхронного шаблона, основанного на задачах
 
@@ -64,7 +64,7 @@ await someTask.ConfigureAwait(continueOnCapturedContext:false);
 ```
 
 ## <a name="canceling-an-asynchronous-operation"></a>Отмена асинхронной операции
- Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], методы TAP, которые поддерживают отмену, предоставляют по крайней мере одну перегрузку, которая принимает маркер отмены (объект <xref:System.Threading.CancellationToken>).
+ Начиная с .NET Framework 4, методы TAP, которые поддерживают отмену, предоставляют по крайней мере одну перегрузку, которая принимает маркер отмены (объект <xref:System.Threading.CancellationToken>).
 
  Маркер отмены создается с помощью источника маркеров отмены (объект <xref:System.Threading.CancellationTokenSource>).  Свойство <xref:System.Threading.CancellationTokenSource.Token%2A> источника возвращает маркер отмены, который будет передаваться при вызове метода <xref:System.Threading.CancellationTokenSource.Cancel%2A> источника.  Например, если вы хотите скачать одну веб-страницу и при этом иметь возможность отменить операцию, создайте объект <xref:System.Threading.CancellationTokenSource>, передайте его маркер методу TAP и вызовите метод источника <xref:System.Threading.CancellationTokenSource.Cancel%2A>, когда нужно будет отменить операцию.
 

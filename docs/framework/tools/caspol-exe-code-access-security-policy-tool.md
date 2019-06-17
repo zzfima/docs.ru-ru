@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2a0e8d95595d663585639c47be34262f7452e94
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: ccb1d78f939d2faf90013392fc60d5597bc3922e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457407"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489676"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (средство настройки политики управления доступом для кода)
 Программа для настройки политики разграничения доступа кода (Caspol.exe) позволяет пользователям и администраторам изменять политику безопасности на уровне компьютера, пользователя и предприятия.  
   
 > [!IMPORTANT]
->  Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], программа Caspol.exe не влияет на политику CAS, если для элемента [\<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) не задано значение `true`. Все параметры, отображаемые или изменяемые программой CasPol.exe, будут влиять только на приложения, для которых явно задано использование политики CAS. Дополнительные сведения см. в разделе [Изменения системы безопасности](../../../docs/framework/security/security-changes.md).  
+>  Начиная с .NET Framework 4, программа Caspol.exe не влияет на политику CAS, если для элемента [\<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) не задано значение `true`. Все параметры, отображаемые или изменяемые программой CasPol.exe, будут влиять только на приложения, для которых явно задано использование политики CAS. Дополнительные сведения см. в разделе [Изменения системы безопасности](../../../docs/framework/security/security-changes.md).  
   
 > [!NOTE]
 >  На 64-разрядных компьютерах присутствуют и 64-разрядная, и 32-разрядная версии политики безопасности. Чтобы проверить возможность применения политики к 32-разрядным и 64-разрядным приложениям, запустите 32-разрядную и 64-разрядную версии программы Caspol.exe.  
@@ -86,8 +86,8 @@ caspol [options]
 |**-allcode**|Задает весь код. Дополнительные сведения об этом условии членства см. в разделе <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>.|  
 |**-appdir**|Задает каталог приложения. Если в качестве условия членства задано **-appdir**, URL-свидетельство кода сравнивается со свидетельством каталога приложения этого кода. Если значения свидетельств совпадают, условие членства выполнено. Дополнительные сведения об этом условии членства см. в разделе <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>.|  
 |**-custom**  *xmlfile*|Добавляет настраиваемое условие членства. Обязательный аргумент *xmlfile* задает XML-файл, содержащий XML-сериализацию настраиваемого условия членства.|  
-|**-hash** *hashAlg* { **-hex** *hashValue* &#124; **-file** *assembly_file*}|Задает код с указанным хэшем сборки. Чтобы использовать хэш в качестве условия членства в группе кода, укажите значение хэша или файл сборки. Дополнительные сведения об этом условии членства см. в разделе <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>.|  
-|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string*}|Задает код указанного издателя программного обеспечения, определенного файлом сертификата, подписью файла или шестнадцатеричным представлением сертификата X509. Дополнительные сведения об этом условии членства см. в разделе <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
+|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file*}|Задает код с указанным хэшем сборки. Чтобы использовать хэш в качестве условия членства в группе кода, укажите значение хэша или файл сборки. Дополнительные сведения об этом условии членства см. в разделе <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>.|  
+|**-pub** {**-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string*}|Задает код указанного издателя программного обеспечения, определенного файлом сертификата, подписью файла или шестнадцатеричным представлением сертификата X509. Дополнительные сведения об этом условии членства см. в разделе <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
 |**-site** *website*|Задает код с указанным исходным веб-сайтом. Например:<br /><br /> `-site** www.proseware.com`<br /><br /> Дополнительные сведения об этом условии членства см. в разделе <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
 |**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Задает код с указанным строгим именем (определяется по имени файла), имя сборки в виде строкового значения и версию сборки в формате *основная*.*вспомогательная*.*сборка*.*редакция*. Например:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Дополнительные сведения об этом условии членства см. в разделе <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  
 |**-url** *URL*|Задает код, полученный с указанного URL-адреса. URL-адрес должен включать протокол, например `http://` или `ftp://`. При необходимости задать несколько сборок с определенного URL-адреса используется подстановочный знак (\*). **Примечание.**  Так как URL-адрес можно указать с помощью разных имен, применение URL-адреса в качестве условия членства нельзя считать безопасным способом идентификации кода. Там, где это возможно, используйте условие членства строгого имени, условие членства издателя или условие членства хэша. <br /><br /> Дополнительные сведения об этом условии членства см. в разделе <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  

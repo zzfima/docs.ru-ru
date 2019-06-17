@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bf7424c8aa2ae816340f6fa641e5c79a56ae0dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3e67861a32d5863e4c1b4d9b147c507c1bb54c39
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834131"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491097"
 ---
 # <a name="standard-timespan-format-strings"></a>Строки стандартного формата TimeSpan
 <a name="Top"></a> Строка стандартного формата <xref:System.TimeSpan> использует один описатель формата для определения текстового представления значения <xref:System.TimeSpan>, получаемого после выполнения операции форматирования. Любая строка формата, содержащая более одной буквы, включая пробелы, интерпретируется как строка настраиваемого формата <xref:System.TimeSpan>. Дополнительные сведения см. в разделе [Строки настраиваемого формата TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "58834131"
 |*ss*|Количество секунд в диапазоне от "0" до "59".|  
 |*fffffff*|Необязательная доля секунды.  Это значение может входит в диапазон от "0000001» (от одной десятимиллионной секунды) до "9999999" (до 9 999 999 десятимиллионных секунды).|  
   
- В отличие от описателей формата "g" и "G" описатель формата "c" не учитывает язык и региональные параметры. Он создает строковое представление значения <xref:System.TimeSpan>, которое является инвариантным и общим для всех предыдущих версий платформы .NET Framework до выхода [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. c — это строка формата <xref:System.TimeSpan> по умолчанию. Метод <xref:System.TimeSpan.ToString?displayProperty=nameWithType> форматирует значение временного интервала с помощью строки формата c.  
+ В отличие от описателей формата "g" и "G" описатель формата "c" не учитывает язык и региональные параметры. Он создает строковое представление значения <xref:System.TimeSpan>, которое является инвариантным и общим для всех предыдущих версий платформы .NET Framework до выхода .NET Framework 4. c — это строка формата <xref:System.TimeSpan> по умолчанию. Метод <xref:System.TimeSpan.ToString?displayProperty=nameWithType> форматирует значение временного интервала с помощью строки формата c.  
   
 > [!NOTE]
 >  <xref:System.TimeSpan> также поддерживает строки стандартного формата "t" и "T", которые идентичны поведению строки стандартного формата "c".  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0776db4d045a8e52521859b9126583558bc5b51
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: bdf8d41a99328a8c8fd31eca974e52082abb7e79
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586361"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490790"
 ---
 # <a name="cancellation-in-managed-threads"></a>Отмена в управляемых потоках
-В [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] введена новая универсальная модель совместной отмены асинхронных или долго выполняющихся синхронных операций. Эта модель построена на простом объекте, называемом токеном отмены. Объект, который вызывает одну или несколько отменяемых операций, например, путем создания новых потоков или задач, передает этот токен в каждую операцию. Операция, в свою очередь, передает копии этого токена в другие операции. Некоторое время спустя объект, создавший токен, может использовать его для запроса остановки выполнения операции. Запрос на отмену может создавать только запрашивающий объект, и каждый прослушиватель должен обнаружить этот запрос, чтобы правильно и своевременно отреагировать на него.  
+В .NET Framework 4 введена новая универсальная модель совместной отмены асинхронных или долго выполняющихся синхронных операций. Эта модель построена на простом объекте, называемом токеном отмены. Объект, который вызывает одну или несколько отменяемых операций, например, путем создания новых потоков или задач, передает этот токен в каждую операцию. Операция, в свою очередь, передает копии этого токена в другие операции. Некоторое время спустя объект, создавший токен, может использовать его для запроса остановки выполнения операции. Запрос на отмену может создавать только запрашивающий объект, и каждый прослушиватель должен обнаружить этот запрос, чтобы правильно и своевременно отреагировать на него.  
   
  Общая схема реализации модели совместной отмены выглядит следующим образом:  
   
@@ -122,7 +122,7 @@ ms.locfileid: "65586361"
  [!code-csharp[Cancellation#5](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex9.cs#5)]
  [!code-vb[Cancellation#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex9.vb#5)]  
   
- В новом коде, предназначенном для [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], классы <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> и <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> обеспечивают поддержку новой инфраструктуры отмены в методах `Wait`. Вы можете передать этому методу <xref:System.Threading.CancellationToken>, и тогда это событие активируется и создает исключение <xref:System.OperationCanceledException>, когда поступает запрос на отмену.  
+ В новом коде, предназначенном для .NET Framework 4, классы <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> и <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> обеспечивают поддержку новой инфраструктуры отмены в методах `Wait`. Вы можете передать этому методу <xref:System.Threading.CancellationToken>, и тогда это событие активируется и создает исключение <xref:System.OperationCanceledException>, когда поступает запрос на отмену.  
   
  [!code-csharp[Cancellation#6](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#6)]
  [!code-vb[Cancellation#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#6)]  

@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Объединение двух коллекций (LINQ to XML) (C#)
+title: Практическое руководство. Объединение двух коллекций (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
-ms.openlocfilehash: fb158427afd59caea5eecdad29fa0a68686f6381
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 893966f3b803b92efbc89a65870623f10195c85f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543660"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485380"
 ---
-# <a name="how-to-join-two-collections-linq-to-xml-c"></a>Как выполнить Объединение двух коллекций (LINQ to XML) (C#)
+# <a name="how-to-join-two-collections-linq-to-xml-c"></a>Практическое руководство. Объединение двух коллекций (LINQ to XML) (C#)
 Элемент или атрибут в XML-документе может иногда относиться к другому элементу или атрибуту. Например, XML-документ из раздела [Пример XML-файла. Заказчики и заказы (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md) содержит список заказчиков и список заказов. Каждый элемент `Customer` содержит атрибут `CustomerID`. Каждый элемент `Order` содержит элемент `CustomerID`. Элемент `CustomerID` для каждого заказа ссылается на атрибут `CustomerID`, присвоенный также и клиенту.  
   
  Раздел [Пример XSD-файла. Заказчики и заказы](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md) содержит XSD-файл, с помощью которого можно проверить этот документ. Здесь используются функции XSD `xs:key` и `xs:keyref` для установления того, что атрибут `CustomerID` элемента `Customer` является ключом, а также для установления связи между элементом `CustomerID` каждого из элементов `Order` и атрибутом `CustomerID` каждого из элементов `Customer`.  
@@ -123,7 +123,3 @@ Attempting to validate, custOrdDoc validated
   </Order>  
 </Root>  
 ```  
-  
-## <a name="see-also"></a>См. также
-
-- [Дополнительные способы создания запросов (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

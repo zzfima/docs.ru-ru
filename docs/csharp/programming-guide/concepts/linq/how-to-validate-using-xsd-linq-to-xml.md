@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Проверка с использованием XSD (LINQ to XML) (C#)
+title: Практическое руководство. Проверка с использованием XSD (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: eea274380cd9b1a601059c12ee7bf654dff10437
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99ff764c5e5ae51720d257bcb2ff0bb8e2591243
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604292"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484764"
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>Как выполнить Проверка с использованием XSD (LINQ to XML) (C#)
+# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>Практическое руководство. Проверка с использованием XSD (LINQ to XML) (C#)
 Пространство имен <xref:System.Xml.Schema> содержит методы расширения, облегчающие проверку правильности XML-дерева по XSD-файлу. Дополнительные сведения см. в документации метода <xref:System.Xml.Schema.Extensions.Validate%2A>.  
   
 ## <a name="example"></a>Пример  
@@ -123,4 +123,4 @@ custOrdDoc did not validate
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Xml.Schema.Extensions.Validate%2A>
-- [Создание деревьев XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Создание деревьев XML (C#)](creating-xml-trees-linq-to-xml-2.md)

@@ -4,12 +4,12 @@ description: Сведения о выборе алгоритма ML.NET для �
 author: natke
 ms.topic: overview
 ms.date: 04/20/1029
-ms.openlocfilehash: d1c637437a7b285f2b66b597d616fcf39248697f
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 89c3c612d79f02d58a16070feadb645b081dd3e3
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557777"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722636"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Выбор алгоритма ML.NET
 

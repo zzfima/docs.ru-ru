@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 996ea7802473817594420a108470f7604170482e
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 23c1bf7412f18674e87896949e0b57ff8bd60d14
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456807"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489585"
 ---
 # <a name="garbage-collection-and-performance"></a>Сборка мусора и производительность
 <a name="top"></a> В этом разделе описаны вопросы, связанные со сборкой мусора и использованием памяти. Здесь рассматриваются проблемы, относящиеся к управляемой куче, и объясняется, как свести к минимуму влияние сборки мусора на работу приложений. Для каждого аспекта приводятся ссылки на процедуры, которые можно использовать для анализа проблем.  
@@ -44,7 +44,7 @@ ms.locfileid: "66456807"
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>События сборки мусора (трассировка событий Windows)  
- Трассировка событий Windows (ETW) — это система трассировки, дополняющая поддержку профилирования и отладки в .NET Framework. Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], [события ETW для сборки мусора](../../../docs/framework/performance/garbage-collection-etw-events.md) собирают полезные сведения для анализа управляемой кучи с точки зрения статистики. Например, событие `GCStart_V1`, которое вызывается перед началом сборки мусора, предоставляет следующие сведения:  
+ Трассировка событий Windows (ETW) — это система трассировки, дополняющая поддержку профилирования и отладки в .NET Framework. Начиная с .NET Framework 4, [события ETW для сборки мусора](../../../docs/framework/performance/garbage-collection-etw-events.md) собирают полезные сведения для анализа управляемой кучи с точки зрения статистики. Например, событие `GCStart_V1`, которое вызывается перед началом сборки мусора, предоставляет следующие сведения:  
   
 - собираемое поколение объектов;  
   

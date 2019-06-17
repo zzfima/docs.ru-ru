@@ -1,5 +1,5 @@
 ---
-title: + и += (операторы) — справочник по C#
+title: + и += (операторы). Справочник по C#
 ms.custom: seodec18
 ms.date: 05/24/2019
 f1_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: d03743bad47c60925462d027d18445047ebc0fc9
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 14e62d53fca16212fae374b2627d1e96cbbca6ac
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300117"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025315"
 ---
-# <a name="-and--operators-c-reference"></a>+ и += (операторы) (справочник по C#)
+# <a name="-and--operators-c-reference"></a>Операторы + и +=. Справочник по C#
 
 Оператор `+` поддерживается встроенными числовыми типами, типом [string](../keywords/string.md) и типами [delegate](../keywords/delegate.md).
 
@@ -31,17 +31,19 @@ ms.locfileid: "66300117"
 
 Если один или оба операнда имеют тип [string](../keywords/string.md), оператор `+` сцепляет строковые представления этих операндов.
 
-[!code-csharp-interactive[string concatenation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddStrings)]
+[!code-csharp-interactive[string concatenation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddStrings)]
 
 В C#, начиная с версии 6, реализован более удобный способ форматирования строк, который называется [интерполяция строк](../tokens/interpolated.md):
 
-[!code-csharp-interactive[string interpolation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#UseStringInterpolation)]
+[!code-csharp-interactive[string interpolation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#UseStringInterpolation)]
 
 ## <a name="delegate-combination"></a>Объединение делегатов
 
 Для операндов того же типа [delegate](../keywords/delegate.md) оператор `+` возвращает новый экземпляр делегата, при вызове которого вызывается сначала первый, а затем второй операнд. Если какой-либо из операндов имеет значение `null`, оператор `+` возвращает значение другого операнда (это тоже может быть `null`). Следующий пример демонстрирует объединение делегатов с помощью оператора `+`:
 
-[!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
+[!code-csharp-interactive[delegate combination](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
+
+Для удаления делегатов используйте [оператор `-`](subtraction-operator.md#delegate-removal).
 
 См. дополнительные сведения о [типах делегатов](../../programming-guide/delegates/index.md).
 
@@ -63,7 +65,7 @@ x = x + y
   
 В следующем примере иллюстрируется использование оператора `+=`.
 
-[!code-csharp-interactive[+= examples](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddAndAssign)]
+[!code-csharp-interactive[+= examples](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddAndAssign)]
 
 Можно также использовать оператор `+=`, который позволяет указать метод обработчика событий при подписке на [событие](../keywords/event.md). Дополнительные сведения см. в разделе [Практическое руководство. Подписка и отмена подписки на события](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
@@ -73,17 +75,15 @@ x = x + y
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
-См. дополнительные сведения об [унарном операторе сложение](~/_csharplang/spec/expressions.md#unary-plus-operator) и [операторе сложения](~/_csharplang/spec/expressions.md#addition-operator) в [спецификации языка C#](../language-specification/index.md).
+См. дополнительные сведения об [унарном операторе сложение](~/_csharplang/spec/expressions.md#unary-plus-operator) и [операторе сложения](~/_csharplang/spec/expressions.md#addition-operator) в [спецификации языка C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)
-- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
 - [Интерполяция строк](../tokens/interpolated.md)
 - [Практическое руководство. Сцепка нескольких строк](../../how-to/concatenate-multiple-strings.md)
 - [Делегаты](../../programming-guide/delegates/index.md)
 - [События](../../programming-guide/events/index.md)
-- [Инструкции checked и unchecked](../keywords/checked-and-unchecked.md)
 - [Арифметические операторы](arithmetic-operators.md)
 - [Операторы - и -=](subtraction-operator.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d2b8866d3a1922988518dfe2857c98d4725cc464
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 96841d23da342fdb4da6c7d53420d6c3319f75c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664562"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491013"
 ---
 # <a name="sorted-collection-types"></a>Отсортированные типы коллекций
 Класс <xref:System.Collections.SortedList?displayProperty=nameWithType>, универсальный класс <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> и универсальный класс <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> похожи на класс <xref:System.Collections.Hashtable> и универсальный класс <xref:System.Collections.Generic.Dictionary%602> в том, что они реализуют интерфейс <xref:System.Collections.IDictionary>, но сортировка элементов в них осуществляется по ключу. Кроме того, в них отсутствует возможность вставки O(1) и извлечения характеристик хэш-таблиц. Эти три класса имеют ряд схожих свойств:  
@@ -46,7 +46,7 @@ ms.locfileid: "64664562"
 > [!NOTE]
 >  Для значений, содержащих собственные ключи (например, записи о сотрудниках, содержащие идентификационный номер сотрудника), вы можете создать коллекцию с ключами, имеющую некоторые характеристики списка и некоторые характеристики словаря. Для этого необходимо создать производный класс от универсального класса <xref:System.Collections.ObjectModel.KeyedCollection%602>.  
   
- Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], класс <xref:System.Collections.Generic.SortedSet%601> предоставляет самобалансируемое дерево, в котором после операций вставки, удаления или поиска данные сохраняются в отсортированном порядке. Этот класс и класс <xref:System.Collections.Generic.HashSet%601> реализуют интерфейс <xref:System.Collections.Generic.ISet%601>.  
+ Начиная с .NET Framework 4, класс <xref:System.Collections.Generic.SortedSet%601> предоставляет самобалансируемое дерево, в котором после операций вставки, удаления или поиска данные сохраняются в отсортированном порядке. Этот класс и класс <xref:System.Collections.Generic.HashSet%601> реализуют интерфейс <xref:System.Collections.Generic.ISet%601>.  
   
 ## <a name="see-also"></a>См. также
 

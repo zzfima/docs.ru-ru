@@ -3,12 +3,12 @@ title: Команда auto-train в программе командной стр
 description: Обзор, примеры и справочник по командам auto-train в программе командной строки ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 28eb56eb018e3d1cc76f300ee78c298af77c9b91
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: ce5994f392c492e80676b9e65ce54fe010cf03ab
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557943"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722601"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>Команда auto-train в интерфейсе командной строки ML.NET
 
@@ -228,7 +228,7 @@ ms.locfileid: "65557943"
 
 `--max-exploration-time | -x` (строка)
 
-По умолчанию максимальное время исследования составляет 10 секунд.
+По умолчанию максимальное время исследования составляет 30 минут.
 
 Этот аргумент задает максимальное время (в секундах) для процесса изучения различных учителей и конфигураций. Заданное время может быть превышено, если указанное время слишком мало (скажем, 2 секунды) для одной итерации. В этом случае фактическое время — это время, необходимое для создания одной модели конфигурации в одной итерации.
 

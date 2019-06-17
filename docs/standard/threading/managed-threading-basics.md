@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7241dfb7e31ed2f83bf7af0ecc6bf0d97363b999
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: a47946ab8eb26045e641c44642bfe7a026269f3d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960369"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486339"
 ---
 # <a name="managed-threading-basics"></a>Основы управляемых потоков
 
@@ -24,7 +24,7 @@ ms.locfileid: "65960369"
  Остальные темы этого раздела посвящены дополнительным возможностям, включая взаимодействие управляемых потоков с операционной системой Windows.  
   
 > [!NOTE]
->  На платформе [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] библиотека параллельных задач и PLINQ предоставляют интерфейсы API для поддержки параллелизма задач и данных в многопоточных программах. Дополнительные сведения см. в разделе [Параллельное программирование](../../../docs/standard/parallel-programming/index.md).  
+>  На платформе .NET Framework 4, библиотека параллельных задач и PLINQ предоставляют интерфейсы API для поддержки параллелизма задач и данных в многопоточных программах. Дополнительные сведения см. в разделе [Параллельное программирование](../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>Содержание раздела
 

@@ -1,45 +1,66 @@
 ---
 title: ?? Справочник по C#. Оператор -
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 06/07/2019
 f1_keywords:
 - ??_CSharpKeyword
 helpviewer_keywords:
-- coalesce operator [C#]
+- null-coalescing operator [C#]
 - ?? operator [C#]
-- conditional-AND operator (&&) [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: e1e981f9ec6a87f6e7de1900008520cde8e46095
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8ca97261b348b7813ab179abbc1f2c5f535966a1
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633948"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816010"
 ---
 # <a name="-operator-c-reference"></a>?? operator (Справочник по C#)
 
-Оператор `??` называется оператором объединения со значением NULL.  Он возвращает левый операнд, если этот операнд не имеет значение NULL; в противном случае возвращается правый операнд.
+Оператор объединения с NULL `??` возвращает значение своего операнда слева, если его значение не равно `null`. В противном случае он вычисляет операнд справа и возвращает его результат. Оператор `??` не выполняет оценку своего операнда справа, если его операнд слева имеет значение, отличное от NULL.
 
-## <a name="remarks"></a>Примечания
+Оператор объединения с NULL имеет правую ассоциативность, то есть выражение формы
 
-Тип, допускающий значение NULL, может представлять значение из домена типа или иметь неопределенное значение (в последнем случае значение равно NULL). Синтаксические возможности оператора `??` можно использовать для возврата соответствующего значения (правого операнда), если тип левого операнда допускает значение NULL и левый операнд имеет значение NULL. Если без использования оператора `??` попытаться присвоить тип, допускающий значение NULL, типу, не допускающему такое значение, то во время компиляции появится ошибка. Если используется приведение типов и допускающий значение NULL тип в данный момент не определен, будет создано исключение `InvalidOperationException`.
+```csharp
+a ?? b ?? c
+```
 
-Дополнительные сведения см. в разделе [Nullable Types](../../programming-guide/nullable-types/index.md) (Типы, допускающие значение NULL).
+вычисляется как
 
-Результат ?? Оператор не считается константой, даже если оба его аргумента являются константами.
+```csharp
+a ?? (b ?? c)
+```
 
-## <a name="example"></a>Пример
+Оператор `??` может быть полезен в таких случаях:
 
-[!code-csharp[csRefOperators#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#53)]
+- В выражениях с [NULL-условными операторами ?. и ?[]](member-access-operators.md#null-conditional-operators--and-) можно использовать оператор объединения с NULL, чтобы задать альтернативное выражение для оценки на случай, если результат выражения с NULL-условной операцией будет равен `null`.
+
+  [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
+
+- При работе с [типами, допускающими значение NULL](../../programming-guide/nullable-types/index.md), и если нужно указать значение базового типа значения, используйте оператор объединения с NULL для указания значения, возвращаемого в том случае, если значение типа, допускающего значение NULL, равно `null`.
+
+  [!code-csharp-interactive[with nullable types](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullableTypes)]
+
+  Используйте метод <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>, если значение, которое будет использоваться, когда значение типа, допускающего значение NULL, равно `null`, должно быть значением по умолчанию базового типа.
+
+- Начиная с C# 7.0 можно сократить код проверки аргументов, используя [выражение `throw`](../keywords/throw.md#the-throw-expression) в качестве правого операнда оператора объединения с NULL:
+
+  [!code-csharp[with throw expression](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithThrowExpression)]
+
+  В предыдущем примере также демонстрируются способы определения свойства с помощью [членов, заданных выражениями](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
+
+## <a name="operator-overloadability"></a>Возможность перегрузки оператора
+
+Оператор объединения с NULL перегружать нельзя.
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
-Дополнительные сведения см. в разделе [Оператор объединения со значением NULL](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) в [Спецификации языка C#](../language-specification/index.md). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
+Дополнительные сведения см. в разделе об [операторе объединения со значением NULL](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) в [спецификации языка C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>См. также
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Операторы в C#](index.md)
-- [Типы, допускающие значения NULL](../../programming-guide/nullable-types/index.md)
-- [Что означает термин "расширенные"?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+- [Операторы ?. и ?[]](member-access-operators.md#null-conditional-operators--and-)
+- [Оператор ?](conditional-operator.md)

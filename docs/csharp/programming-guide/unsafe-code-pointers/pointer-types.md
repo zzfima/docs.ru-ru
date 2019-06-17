@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 7f04cfbac72008332a429c4e0ad8bd3f4e60cc83
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3183f8434dd8a6bc8182e2257d0ab3c7e7c014c4
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880329"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833439"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Типы указателей (Руководство по программированию на C#)
 
@@ -45,7 +45,7 @@ int *p1, *p2, *p3;   // Invalid in C#
 
 Значением переменной-указателя типа `myType*` является адрес переменной типа `myType`. Ниже приведены примеры объявлений типов указателей.
 
-|Пример|Описание|
+|Пример|ОПИСАНИЕ|
 |-------------|-----------------|
 |`int* p`|`p` — указатель на целое число.|
 |`int** p`|`p` — указатель на указатель на целое число.|
@@ -82,7 +82,7 @@ int* myVariable;
 |`++` и `--`|Увеличение и уменьшение указателей.|
 |`+` и `-`|Арифметические действия с указателем.|
 |`==`, `!=`, `<`, `>`, `<=` и `>=`|Сравнение указателей.|
-|[Оператор `stackalloc`](../../language-reference/keywords/stackalloc.md)|Выделение памяти в стеке.|
+|[Оператор `stackalloc`](../../language-reference/operators/stackalloc.md)|Выделение памяти в стеке.|
 |[Инструкция `fixed`](../../language-reference/keywords/fixed-statement.md)|Временная фиксация переменной, чтобы можно было найти ее адрес.|
 
 Дополнительные сведения об операторах, связанных с указателем, см. в разделе [Операторы, связанные с указателем](../../language-reference/operators/pointer-related-operators.md).

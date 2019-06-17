@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ed4533c934120c3400ddba68e65bc82aabc9370
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 350cc91a2d423bc40cc44466e679db769daac1d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456770"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486970"
 ---
 # <a name="resolving-assembly-loads"></a>разрешение загрузки сборок
 В .NET Framework имеется событие <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> для приложений, требующих дополнительного управления загрузкой сборок. Обрабатывая это событие, приложение может загружать сборку в контекст загрузки не из каталогов, где обычно осуществляется поиск, выбирать, какую из версий сборки загрузить, создавать динамическую сборку и возвращать ее и многое другое. В этом разделе описывается использование события <xref:System.AppDomain.AssemblyResolve>.  
@@ -52,7 +52,7 @@ ms.locfileid: "66456770"
 > [!NOTE]
 >  Обработчик должен загружать сборку в контекст, из которого ведется загрузка, в контекст загрузки или без контекста. Если обработчик загружает сборку в контекст только для отражения с помощью метода <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> или <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType>, попытка загрузки, вызвавшая событие <xref:System.AppDomain.AssemblyResolve>, завершается неудачно.  
   
- Ответственность за возврат подходящей сборки лежит на обработчике событий. Обработчик может обработать отображаемое имя запрошенной сборки, передав значение свойства <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> в конструктор <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29>. Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], обработчик может использовать свойство <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> для определения, находится ли текущий запрос в зависимости от другой сборки. Эта информация может помочь найти сборку, которая удовлетворит зависимость.  
+ Ответственность за возврат подходящей сборки лежит на обработчике событий. Обработчик может обработать отображаемое имя запрошенной сборки, передав значение свойства <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> в конструктор <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29>. Начиная с .NET Framework 4, обработчик может использовать свойство <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> для определения, находится ли текущий запрос в зависимости от другой сборки. Эта информация может помочь найти сборку, которая удовлетворит зависимость.  
   
  Обработчик событий может вернуть версию сборки, отличную от запрошенной.  
   

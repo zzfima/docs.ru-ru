@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f25ffb16fa5feb382bb42c737440317cfb777b1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b996b60a08a55b1d8e86878974be4887ea2684f8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666320"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490828"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> представляет собой примитив синхронизации, снимающий блокировку потоков в состоянии ожидания после определенного числа сигналов. <xref:System.Threading.CountdownEvent> предназначен для таких ситуаций, в которых он может заменить вызовы <xref:System.Threading.ManualResetEvent> или <xref:System.Threading.ManualResetEventSlim> с ручным уменьшением значения переменной перед подачей сигнала о событии. Например, в алгоритме ветвления и соединения вы можете создать <xref:System.Threading.CountdownEvent> со значением 5 для счетчика сигналов, а затем запустить пять рабочих элементов в пуле потоков, каждый из которых будет вызывать <xref:System.Threading.CountdownEvent.Signal%2A> после завершения работы. Каждый вызов <xref:System.Threading.CountdownEvent.Signal%2A> уменьшает значение счетчика на 1. В основном потоке вызов <xref:System.Threading.CountdownEvent.Wait%2A> блокируется до тех пор, пока значение счетчика не достигнет нуля.  
@@ -40,7 +40,7 @@ ms.locfileid: "64666320"
  [!code-vb[CDS_CountdownEvent#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/module1.vb#01)]  
   
 ## <a name="countdownevent-with-cancellation"></a>CountdownEvent с возможностью отмены  
- В примере ниже показано, как отменить операцию ожидания для <xref:System.Threading.CountdownEvent> с помощью маркера отмены. Базовый шаблон соответствует универсальной модели отмены, которая применяется с версии [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Дополнительные сведения см. в статье [Отмена в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md).  
+ В примере ниже показано, как отменить операцию ожидания для <xref:System.Threading.CountdownEvent> с помощью маркера отмены. Базовый шаблон соответствует универсальной модели отмены, которая применяется на платформе .NET Framework 4. См. дополнительные сведения об [отмене в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md).  
   
  [!code-csharp[CDS_CountdownEvent#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_countdownevent/cs/countdownevent.cs#02)]
  [!code-vb[CDS_CountdownEvent#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/canceleventwait.vb#02)]  

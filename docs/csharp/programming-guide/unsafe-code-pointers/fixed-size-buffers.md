@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 7c83b4819975f63c6fc19e5c4783603f37d2a885
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bfd9f3f559e4780b910a2e5a3430b08a2183ee3
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700615"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833503"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Буферы фиксированного размера (Руководство по программированию на C#)
 
@@ -40,7 +40,7 @@ private fixed char name[30];
 Еще одним распространенным массивом фиксированного размера является массив [bool](../../language-reference/keywords/bool.md). Элементы в массиве `bool` всегда имеют размер в один байт. Массивы `bool` не подходят для создания битовых массивов или буферов.
 
 > [!NOTE]
-> За исключением памяти, созданной с помощью [stackalloc](../../language-reference/keywords/stackalloc.md), компилятор C# и среда CLR не выполняют проверку переполнения буфера безопасности. Как и при работе с любым небезопасным кодом, следует проявлять осторожность.
+> За исключением памяти, созданной с помощью [stackalloc](../../language-reference/operators/stackalloc.md), компилятор C# и среда CLR не выполняют проверку переполнения буфера безопасности. Как и при работе с любым небезопасным кодом, следует проявлять осторожность.
 
 Небезопасные буферы отличаются от обычных массивов указанными ниже особенностями.
 
