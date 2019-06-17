@@ -36,7 +36,7 @@ ms.locfileid: "66301157"
 
 |     | <span data-ttu-id="f3345-110">Описание</span><span class="sxs-lookup"><span data-stu-id="f3345-110">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="f3345-111"> *\*\<configuration>** </span><span class="sxs-lookup"><span data-stu-id="f3345-111">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="f3345-112">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f3345-112">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
+| [<span data-ttu-id="f3345-111"> **\<configuration>** </span><span class="sxs-lookup"><span data-stu-id="f3345-111">**\<configuration>**</span></span>](~/docs/framework/configure-apps/file-schema/configuration-element.md) | <span data-ttu-id="f3345-112">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f3345-112">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
 
 ## <a name="child-elements"></a><span data-ttu-id="f3345-113">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="f3345-113">Child elements</span></span>
 
