@@ -1,7 +1,7 @@
 - name: События
   href: index.md
   items:
-    - name: 'Практическое руководство. Подписка и отмена подписки на события'
+    - name: Практическое руководство. Подписка и отмена подписки на события
       href: how-to-subscribe-to-and-unsubscribe-from-events.md
     - name: Как публиковать события в соответствии с рекомендациями по .NET Framework
       href: how-to-publish-events-that-conform-to-net-framework-guidelines.md
