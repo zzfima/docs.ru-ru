@@ -1,16 +1,16 @@
 ---
 title: Обучение и оценка модели
-description: Узнайте, как обучать и оценивать модели машинного обучения в ML.NET
-ms.date: 05/03/2019
+description: Узнайте, как создавать модели машинного обучения, извлекать изученные параметры и измерять производительность с помощью ML.NET. Несмотря на то что код в этом примере обучает модель регрессии, те же принципы действуют и в большинстве других алгоритмов.
+ms.date: 06/11/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to
-ms.openlocfilehash: 3a3f1f672ed078754162dc377cf5c239d206b715
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.custom: mvc, how-to, title-hack-0612
+ms.openlocfilehash: b7799d19f5ad51ce509cc6872d9053cad1158552
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557853"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025592"
 ---
 # <a name="train-and-evaluate-a-model"></a>Обучение и оценка модели
 

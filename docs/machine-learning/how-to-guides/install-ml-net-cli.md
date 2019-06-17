@@ -3,12 +3,12 @@ title: Установка средства ML.NET CLI
 description: Обзор и установка средства ML.NET CLI.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 9560aa846a1aefabadbd7d4faf8bd306ba72e0de
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 4888acd10570318ef53dc4b1a5a4ff5d8dc0c99b
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557860"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832935"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Установка средства ML.NET CLI
 
@@ -34,7 +34,7 @@ ms.locfileid: "65557860"
 В примере ниже показано, как установить ML.NET CLI в расположении веб-канала NuGet по умолчанию.
 
 ```console
-> dotnet tool install -g mlnet
+dotnet tool install -g mlnet
 ```
 
 Если не удается установить средство (то есть оно недоступно в режиме по умолчанию веб-канала NuGet), отображаются сообщения об ошибках. Убедитесь, что установлены флажки для нужных веб-каналов.
@@ -49,7 +49,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 Можно проверить успешность установки, введя следующую команду:
 
 ```console
-> mlnet
+mlnet
 ```
 
 Вы увидите справку для команд, доступных для средства mlnet, например для команды auto-train.
@@ -59,13 +59,13 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 Если вам необходимо установить предварительную или конкретную версию средства, можно указать [платформу](../../standard/frameworks.md), используя следующий формат:
 
 ```console
-> dotnet tool install -g mlnet --framework <FRAMEWORK>
+dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 Вы также можете проверить, был ли пакет установлен правильно, введя следующую команду:
 
 ```console
-> dotnet tool list -g
+dotnet tool list -g
 ```
 
 ## <a name="uninstall-the-cli-package"></a>Удаление пакета интерфейса командной строки
@@ -73,7 +73,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 Введите следующую команду, чтобы удалить пакет с локального компьютера:
 
 ```console
-> dotnet tool uninstall mlnet -g
+dotnet tool uninstall mlnet -g
 ```
 
 ## <a name="update-the-cli-package"></a>Обновление пакета интерфейса командной строки
@@ -81,7 +81,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 Введите следующую команду, чтобы обновить пакет на локальном компьютере:
 
 ```console
-> dotnet tool update -g mlnet
+dotnet tool update -g mlnet
 ```
 
 ## <a name="set-up-cli-suggestions-tab-based-auto-completion"></a>Настройка предложений CLI (автозавершение по нажатию TAB)
@@ -101,7 +101,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 1. Установите глобальное средство `dotnet-suggest`, запустив следующую команду:
 
     ```console
-    > dotnet tool install dotnet-suggest -g
+    dotnet tool install dotnet-suggest -g
     ```
 
 2. Добавьте соответствующую оболочку совместимости к профилю оболочки. Может потребоваться создать файл профиля оболочки. Скрипт оболочки совместимости перенаправит запрос завершения из оболочки в средство `dotnet-suggest`, которое делегирует его в соответствующее `System.CommandLine`-приложение.
@@ -111,7 +111,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
     * Для PowerShell следует добавить содержимое [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) в свой профиль PowerShell. Ожидаемый путь к профилю PowerShell можно получить, выполнив следующую команду в консоли:
 
     ```console
-    > echo $profile
+    echo $profile
     ``` 
 
 (В других оболочках [найдите](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22) или откройте [соответствующее обращение](https://github.com/dotnet/System.CommandLine/issues).)
