@@ -2,12 +2,12 @@
 title: Идентификаторы Source Line, File и Path
 description: Узнайте, как воспользоваться встроенным F# значений идентификаторов, которые дадут возможность доступа к источнику строка номером, каталогу и имя файла в коде.
 ms.date: 05/16/2016
-ms.openlocfilehash: 4b145fe1fe20e3d7f868558e33bab26204fb0125
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f2048aed9ef75037b43cd091a749e3d6bbaf9a3
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663626"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152055"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>Идентификаторы Source Line, File и Path
 
@@ -31,7 +31,7 @@ __SOURCE_FILE__
 |---------------------|-----------|
 |`__LINE__`|Вычисляет значение текущей строки, учитывая `#line` директивы.|
 |`__SOURCE_DIRECTORY__`|Находит текущий полный путь к исходному каталогу, учитывая `#line` директивы.|
-|`__SOURCE_FILE__`|Вычисляет текущее имя исходного файла и пути, учитывая `#line` директивы.|
+|`__SOURCE_FILE__`|Принимает значение текущее имя исходного файла без пути, учитывая `#line` директивы.|
 
 Дополнительные сведения о `#line` директив, см. в разделе [директивы компилятора](compiler-directives.md).
 
@@ -46,7 +46,7 @@ __SOURCE_FILE__
 ```
 Line: 4
 Source Directory: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo
-Source File: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo\Program.fs
+Source File: Program.fs
 ```
 
 ## <a name="see-also"></a>См. также

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: cafc742474d6f7b46fbfb73374a59a350812a2a5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d62c3480db56b5cbf22c1f3f6ff59ab220a48b09
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639103"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152039"
 ---
 # <a name="operator-procedures-visual-basic"></a>Процедуры операторов (Visual Basic)
 Процедура оператора — это последовательность операторов Visual Basic, которые определяют поведение стандартного оператора (такие как `*`, `<>`, или `And`) для класса или структуры, которые вы определили. Это также называется *перегрузка операторов*.  
@@ -43,13 +43,15 @@ ms.locfileid: "64639103"
   
 ## <a name="declaration-syntax"></a>Синтаксис объявления  
  Ниже приведен синтаксис объявления процедуры оператора:  
+ 
+ ```vb 
+ Public Shared [Widening | Narrowing] Operator operatorsymbol ( operand1 [,  operand2 ]) As datatype  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *символ_оператора* `(` *операнд1*`[,`*операнд2* `]) As` *тип данных*  
+ ' Statements of the operator procedure.
   
- `' Statements of the operator procedure.`  
-  
- `End Operator`  
-  
+ End Operator
+ ```
+ 
  Использовании `Widening` или `Narrowing` ключевое слово только в операторе преобразования типа. Символ оператора является всегда [функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md) для оператора преобразования типа.  
   
  Объявите два операнда, чтобы определить бинарный оператор, и объявите один операнд, чтобы определить унарный оператор, включая оператор преобразования типа. Все операнды должны быть объявлены `ByVal`.  
