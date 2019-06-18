@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e830c3d77b9e112d94d74e255aff6add54433ca8
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: d22046393b22683b961f5da7a5623f5dfa6a702e
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689891"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170034"
 ---
 # <a name="runtime-settings-schema"></a>Схема параметров среды выполнения
 
@@ -95,7 +95,7 @@ ms.locfileid: "66689891"
 |[\<CompatSortNLSVersion>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|Указывает, что при операциях сравнения строк среда выполнения должна использовать устаревший режим сортировки.|
 |[\<dependentAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|Инкапсулирует политику привязки и расположение каждой сборки.|
 |[\<developmentMode>](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|Указывает, выполняет ли среда поиск сборок в каталогах, указанных в переменной среды DEVPATH.|
-|[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|Указывает, отключено ли кэширование сбоев привязки ошибок (что является поведением по умолчанию в [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)]).|
+|[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|Указывает, отключено ли кэширование ошибок привязки, которая является поведением по умолчанию в .NET Framework 2.0.|
 |[\<disableCommitThreadStack>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|Указывает, фиксируется ли весь стек потоков при запуске потока.|
 |[\<disableFusionUpdatesFromADManager>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablefusionupdatesfromadmanager-element.md)|Указывает, отключено ли поведение по умолчанию, которое разрешает хост-приложению среды выполнения переопределять параметры конфигурации для домена приложения.|
 |[\<EnableAmPmParseAdjustment>](../../../../../docs/framework/configure-apps/file-schema/runtime/enableampmparseadjustment-element.md)|Определяет, используют ли методы анализа даты и времени скорректированной набор правил для анализа строк даты, содержащих только день, месяц, час и указатель AM/PM.|

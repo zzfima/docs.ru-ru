@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 03d3a0c6026761fcdbc45472f2bbb7ac593f4394
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4d035dd6611909c9a6b67662d17f80057dc33386
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004475"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169955"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>Практическое руководство. Добавление данных в буфер обмена
 <xref:System.Windows.Forms.Clipboard> Класс предоставляет методы, которые можно использовать для взаимодействия с функцией буфер обмена операционной системы Windows. Многие приложения используют буфер обмена в качестве временного хранилища данных. Например текстовые редакторы использовать буфер обмена во время операций вырезания и вставки. Буфер обмена также полезен для передачи данных из одного приложения в другое.  
@@ -24,7 +24,7 @@ ms.locfileid: "62004475"
   
  Чтобы добавить данные в буфер обмена в одном или нескольких форматах, используйте <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> метод. Этот метод можно передать любой объект, но для добавления данных в нескольких форматах, необходимо добавить данные отдельный объект, предназначенный для работы с несколькими форматами. Как правило, вы добавите данные <xref:System.Windows.Forms.DataObject>, но вы можете использовать любой тип, реализующий <xref:System.Windows.Forms.IDataObject> интерфейс.  
   
- В [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], можно добавить данные непосредственно в буфер обмена с помощью новых методов, позволяющих упростить основные задачи в буфер обмена. Эти методы можно используйте при работе с данными в виде единого, такие как текст.  
+ В .NET Framework 2.0 можно добавить данные непосредственно в буфер обмена с помощью новых методов, позволяющих упростить основные задачи в буфер обмена. Эти методы можно используйте при работе с данными в виде единого, такие как текст.  
   
 > [!NOTE]
 >  Все приложения Windows используют буфер обмена. Таким образом содержимое могут меняться при переходе в другое приложение.  
@@ -35,14 +35,14 @@ ms.locfileid: "62004475"
   
 ### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>Для добавления данных в буфер обмена в одном общем формате  
   
-1. Используйте <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, или <xref:System.Windows.Forms.Clipboard.SetText%2A> метод. Эти методы доступны только в [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Используйте <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, или <xref:System.Windows.Forms.Clipboard.SetText%2A> метод. Эти методы доступны только в .NET Framework 2.0.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a>Для добавления данных в буфер обмена в пользовательском формате  
   
-1. Используйте <xref:System.Windows.Forms.Clipboard.SetData%2A> метод с именем пользовательского формата. Этот метод доступен только в [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Используйте <xref:System.Windows.Forms.Clipboard.SetData%2A> метод с именем пользовательского формата. Этот метод доступен только в .NET Framework 2.0.  
   
      Можно также использовать имена стандартных форматов с <xref:System.Windows.Forms.Clipboard.SetData%2A> метод. Дополнительные сведения см. в разделе <xref:System.Windows.Forms.DataFormats>.  
   

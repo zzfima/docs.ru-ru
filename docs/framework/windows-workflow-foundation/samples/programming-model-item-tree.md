@@ -2,12 +2,12 @@
 title: Программирование дерева элементов модели
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: 1aaa1aa9922a7f57138782effe9492ec84198c8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59c1f0c3722d6e68a9f629504f5012377dbacc5f
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004976"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170072"
 ---
 # <a name="programming-model-item-tree"></a>Программирование дерева элементов модели
 В этом примере демонстрируется переход <xref:System.Activities.Presentation.Model.ModelItem> дерева, используя привязку декларативных данных из представления дерева Windows Presentation Foundation (WPF).
@@ -33,7 +33,7 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 2. Постройте решение, выбрав **построить решение** из **построения** меню.
 
-3. Нажмите клавишу F5 для запуска приложения. Будет показана форма [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)].
+3. Нажмите клавишу F5 для запуска приложения. Затем отображается форма WPF.
 
 4. Нажмите кнопку **загрузить WF** кнопку, чтобы загрузить <xref:System.Activities.Presentation.Model.ModelItem> и привязать его к представлении в виде дерева.
 

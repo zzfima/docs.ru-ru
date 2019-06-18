@@ -9,17 +9,17 @@ helpviewer_keywords:
 - configuration files [ASP.NET]
 - configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
-ms.openlocfilehash: 1f0241b65c915dd5703ceea97dd5b07f88832003
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fbc28bb7b871cc245d0fe477ea8e15c147549bb
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698491"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170022"
 ---
 # <a name="web-settings-schema"></a>Схема веб-параметров
 Веб-параметры определяют настройки ЦП и настройки ASP.NET на уровне выполнения, которые относятся к поведению процессов, управляемых уровнем размещения ASP.NET. Эти параметры отличаются от параметров типа домена приложения, которые задаются в файле Web.config приложения ASP.NET.  
   
- Веб-параметры содержатся в файлах Aspnet.config, которые находятся в папках установки версий .NET Framework. Например, файл Aspnet.config для [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] находится в следующей папке:  
+ Веб-параметры содержатся в файлах Aspnet.config, которые находятся в папках установки версий .NET Framework. Например файл Aspnet.config для .NET Framework 2.0 находится в следующей папке:  
   
  `C:\Windows\Microsoft.NET\Framework\v2.0.50727\`  
   

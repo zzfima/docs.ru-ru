@@ -2,12 +2,12 @@
 title: Расширяемость сетки свойств - пример WF
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-ms.openlocfilehash: d22b6e21fbf2d5deb4d47fce683553378e990000
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 1cc8b8b34d6236e263f95439da84994e35d627ed
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637687"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170355"
 ---
 # <a name="property-grid-extensibility"></a>Расширяемость сетки свойств
 
@@ -69,7 +69,7 @@ ms.locfileid: "65637687"
 
 1. Создает тип, производный от <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor>.
 
-2. В конструкторе значение <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> задается при помощи шаблона данных [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]. Значение может быть создано в XAML, однако в этом образце оно создается с помощью кода.
+2. Наборы <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> значение в конструкторе с помощью шаблона данных WPF. Значение может быть создано в XAML, однако в этом образце оно создается с помощью кода.
 
 3. Шаблон данных имеет контекст данных значения <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> для элемента, отображаемого в сетке свойств. В следующем коде значение привязывается к свойству `Value`. Важно также добавить кнопку <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> для обеспечения возможности вызова диалогового окна в файле FilePickerEditor.cs.
 

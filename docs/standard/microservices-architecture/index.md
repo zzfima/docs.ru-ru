@@ -2,18 +2,18 @@
 title: Микрослужбы .NET. Архитектура контейнерных приложений .NET
 description: 'Микрослужбы .NET: архитектура контейнерных приложений .NET | Микрослужбы — это модульные службы, развертываемые независимо друг от друга. Контейнеры Docker (для Linux и Windows) упрощают развертывание и тестирование путем объединения службы и ее зависимостей в единый модуль, запускаемый в изолированной среде.'
 ms.date: 01/07/2019
-ms.openlocfilehash: f1abeca8bb7eba615545a88862b20b2711b218fd
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: fe69dcec58ae1d1eed23a49fadbee378ec129990
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690638"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152017"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Микрослужбы .NET: Архитектура контейнерных приложений .NET
 
 ![Обложка книги](./media/cover-small.png)
 
-**Издание v2.2.00** — обновлено с учетом ASP.NET Core 2.2.
+**ВЫПУСК v2.2** — обновлен до ASP.NET Core 2.2
 
 В этом руководстве приводятся общие сведения о разработке приложений на основе микрослужб и управлении ими с помощью контейнеров. В нем рассматриваются подходы к проектированию и реализации архитектуры с помощью .NET Core и контейнеров Docker. 
 
@@ -162,7 +162,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-© Корпорация Майкрософт (Microsoft Corporation), 2018.
+© Корпорация Майкрософт (Microsoft Corporation), 2019.
 
 Все права защищены. Запрещается полное или частичное воспроизведение или передача настоящей книги в любом виде или любыми средствами без письменного разрешения издателя.
 
