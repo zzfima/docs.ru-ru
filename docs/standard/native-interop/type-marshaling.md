@@ -4,12 +4,12 @@ description: Из этой статьи вы узнаете, как платфо
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: cb18a7607a3d99907401543b4d37995a956a3920
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2cb8898b52b4b4afba1184a886e16c9f7f68f03a
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065967"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041781"
 ---
 # <a name="type-marshaling"></a>Маршалинг типов
 
@@ -79,6 +79,20 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 | `System.Runtime.InteropServices.HandleRef` | `void*` |
 
 Если эти значения по умолчанию вам не подходят, вы можете настроить маршалинг параметров. В статье о [маршалинге параметров](customize-parameter-marshaling.md) описана настройка маршалинга различных типов параметров.
+
+## <a name="default-marshaling-in-com-scenarios"></a>Маршалинг в сценариях COM по умолчанию
+
+При вызове методов в объектах COM в .NET среда выполнения .NET изменяет правила маршалинга по умолчанию в соответствии с общей семантикой COM. В следующей таблице перечислены правила, которые среда выполнения .NET использует в сценариях COM:
+
+| Тип .NET | Собственный тип (вызовы метода COM) |
+|-----------|--------------------------------|
+| `bool`    | `VARIANT_BOOL`                 |
+| `StringBuilder` | `LPWSTR`                 |
+| `string`  | `BSTR`                         |
+| Тип делегатов | `_Delegate*` в .NET Framework. Не разрешены в .NET Core. |
+| `System.Drawing.Color` | `OLECOLOR`        |
+| Массив .NET | `SAFEARRAY`                   |
+| `string[]` | `SAFEARRAY` `BSTR`        |
 
 ## <a name="marshaling-classes-and-structs"></a>Маршалинг классов и структур
 

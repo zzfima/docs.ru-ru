@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbe7a2c4e920021c925a13ae8873124bfdb6fd67
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 79ec24d16b43bd8e1312b3425e618adf163edd24
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441948"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834022"
 ---
 # <a name="localization"></a>Локализация
 
@@ -31,7 +31,7 @@ ms.locfileid: "56441948"
 
 Для каждой локализованной версии приложения добавьте новую вспомогательную сборку, которая содержит локализованный блок пользовательского интерфейса, учитывающий все требования целевого языка и региональных параметров. Блок кода должен оставаться одинаковым для всех языков и региональных параметров. Объединение локализованной версии блока пользовательского интерфейса с блоком кода создает новую локализованную версию приложения.
 
-В пакете [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] предоставляется редактор ресурсов Windows Forms (Winres.exe), позволяющий быстро локализовать ресурсы Windows Forms для целевых языков и региональных параметров. Сведения об использовании этого инструмента см. в статье [Winres.exe (редактор ресурсов Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).
+В пакете средств разработки (SDK) Windows предоставляется редактор ресурсов Windows Forms (Winres.exe), позволяющий быстро локализовать ресурсы Windows Forms для целевых языков и региональных параметров. Сведения об использовании этого инструмента см. в статье [Winres.exe (редактор ресурсов Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).
 
 ## <a name="see-also"></a>См. также
 
