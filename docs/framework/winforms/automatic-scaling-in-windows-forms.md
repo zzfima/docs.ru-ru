@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: cacda830a2501dcd127248955848d207d80bbe2c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f8afece073076b9ae94faaba8477f2a13e11b295
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636974"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268083"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Автоматическое масштабирование в Windows Forms
 
@@ -48,7 +48,7 @@ ms.locfileid: "65636974"
 
 - Он не совместим с новыми диспетчерами макетов, появившиеся в .NET Framework версии 2.0, такие как <xref:System.Windows.Forms.FlowLayoutPanel> и <xref:System.Windows.Forms.TableLayoutPanel>.
 
-- Механизм не поддерживает масштабирование непосредственно на основе разрешения экрана, необходимое для совместимости с [!INCLUDE[compact](../../../includes/compact-md.md)].
+- Он не поддерживает масштабирование непосредственно на основе разрешения отображения, которая необходима для совместимости с .NET Compact Framework.
 
 Несмотря на то, что этот механизм сохранился в .NET Framework версии 2.0 для обеспечения обратной совместимости, он был заменен более надежный механизм масштабирования, описанным далее. Как следствие, методы <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> и некоторые перегрузки <xref:System.Windows.Forms.Control.Scale%2A> помечены как устаревшие.
 
@@ -63,7 +63,7 @@ ms.locfileid: "65636974"
 
 - Класс <xref:System.Windows.Forms.Control> также имеет несколько новых членов, которые позволяют ему участвовать в масштабировании и поддерживать смешанное масштабирование в одной и той же форме. В частности, члены <xref:System.Windows.Forms.Control.Scale%2A>, <xref:System.Windows.Forms.Control.ScaleChildren%2A> и <xref:System.Windows.Forms.Control.GetScaledBounds%2A> поддерживают масштабирование.
 
-- В дополнение к поддержке системного шрифта была добавлена поддержка масштабирования на основе разрешения экрана в соответствии со значениями перечисления <xref:System.Windows.Forms.AutoScaleMode>. Этот режим обеспечивает совместимость с автоматическим масштабированием, поддерживаемым [!INCLUDE[compact](../../../includes/compact-md.md)], что упрощает миграцию приложений.
+- В дополнение к поддержке системного шрифта была добавлена поддержка масштабирования на основе разрешения экрана в соответствии со значениями перечисления <xref:System.Windows.Forms.AutoScaleMode>. Этот режим обеспечивает совместимость с автоматическим масштабированием, поддерживаемые платформой .NET Compact Framework, что упрощает миграцию приложений.
 
 - В реализацию автоматического масштабирования была добавлена совместимость с диспетчерами макетов, такими как <xref:System.Windows.Forms.FlowLayoutPanel> и <xref:System.Windows.Forms.TableLayoutPanel>.
 

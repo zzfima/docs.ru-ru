@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 333bfb539fc375fd8f2dd170a187002fcf81ea2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b945edca8bd739e6f122ed8b3e950508ecc28510
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649769"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268166"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Параметры компилятора Visual Basic, упорядоченные по категориям
 Компилятор командной строки Visual Basic предоставляется в качестве альтернативы компиляции программ из Интегрированной среды разработки Visual Studio. Ниже приведен список параметров компилятора командной строки Visual Basic, отсортированных по функциональной категории.  
@@ -33,13 +33,13 @@ ms.locfileid: "61649769"
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Задает выравнивание размеров выходного файла.|  
 |[-optimize](../../../visual-basic/reference/command-line-compiler/optimize.md)|Включает или отключает оптимизацию.|  
   
-## <a name="output-files"></a>Выходные файлы  
+## <a name="output-files"></a>выходные файлы  
   
 |Параметр|Цель|  
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Сведение документирующих комментариев в XML-файл.|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Указывает компилятору на необходимость вывода сборки, чье двоичное содержимое идентично в разных компиляциях, если входные данные идентичны.|
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Задает для компилятора целевой объект [!INCLUDE[Compact](~/includes/compact-md.md)].|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Задает компилятору предназначенных для .NET Compact Framework.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Задает выходной файл.|  
 |[/refonly](refonly-compiler-option.md)|Выводит только базовая сборка.|
 |[/refout](refout-compiler-option.md)|Указывает выходной путь для ссылочной сборки.|

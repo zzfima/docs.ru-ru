@@ -2,12 +2,12 @@
 title: Выберите языковую версию Visual Basic
 description: Настройте компилятор выполнять проверку синтаксиса, с помощью определенной версией компилятора.
 ms.date: 05/24/2018
-ms.openlocfilehash: 3b6d8055dbf64f2a5c38f46b6d66794fc48a1cea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4768d59a37d168b2883396f1dea4d0c1a0ff4ca7
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797037"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268267"
 ---
 # <a name="select-the-visual-basic-language-version"></a>Выберите языковую версию Visual Basic
 
@@ -44,6 +44,7 @@ ms.locfileid: "61797037"
 |15|Компилятор принимает только синтаксис, включенные в Visual Basic 15.0 или более раннюю.|
 |15.3|Компилятор принимает только синтаксис, включенные в Visual Basic 15.3 или более раннюю.|
 |15.5|Компилятор принимает только синтаксис, включенные в Visual Basic 15.5 или более раннюю.|
+|15.8|Компилятор принимает только синтаксис, включенные в Visual Basic 15.8 или ниже.|
 |latest|Компилятор допускает использование любого допустимого синтаксиса языка, который он может поддерживать.|
 
 В специальных строках `default` и `latest` будет указана соответственно последняя основная и дополнительная версия языка, установленная на компьютере сборки.
