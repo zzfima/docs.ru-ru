@@ -2,18 +2,18 @@
 title: Архитектура ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 13f65d0a2daf3b477a9b29c4de84fb359c946201
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 282f18cc7d379dffc410a0c62dc3b3e66e0a44f6
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877254"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267971"
 ---
 # <a name="adonet-architecture"></a>Архитектура ADO.NET
 Обработка данных традиционно полагалась в основном на двухуровневую модель, основанную на сетевом соединении. Так как при обработке данных все больше используется многоуровневая архитектура, программисты переходят на метод, не использующий подключение, чтобы обеспечить лучшую масштабируемость для их приложений.  
   
 ## <a name="adonet-components"></a>Компоненты ADO.NET  
- Двумя основными компонентами [!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)] для доступа и обработки данных поставщиков данных .NET Framework и <xref:System.Data.DataSet>.  
+ Поставщики данных .NET Framework являются двумя основными компонентами ADO.NET для доступа и обработки данных и <xref:System.Data.DataSet>.  
   
 ### <a name="net-framework-data-providers"></a>Поставщики данных .NET Framework  
  Поставщиками данных .NET Framework являются компоненты, которые специально сконструированы для обработки данных и быстрого, однопроходного доступа к данным только для чтения. Объект `Connection` обеспечивает обмен данными с источником данных. Объект `Command` позволяет обращаться к командам базы данных для возврата данных, изменения данных, выполнения хранимых процедур и передачи или получения сведений о параметрах. `DataReader` обеспечивает высокопроизводительный поток данных из источника данных. Наконец, `DataAdapter` предоставляет мост между объектом `DataSet` и источником данных. `DataAdapter` использует объекты `Command` для выполнения команд SQL на источнике данных для загрузки `DataSet` с данными и согласования изменений данных, выполненных в `DataSet`, вновь с источником данных. Дополнительные сведения см. в разделе [поставщики данных .NET Framework](../../../../docs/framework/data/adonet/data-providers.md) и [получение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md).  

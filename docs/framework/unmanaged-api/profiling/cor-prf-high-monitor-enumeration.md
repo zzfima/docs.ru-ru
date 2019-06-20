@@ -4,12 +4,12 @@ ms.date: 04/10/2018
 ms.assetid: 3ba543d8-15e5-4322-b6e7-1ebfc92ed7dd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e365dff7c56ddca1d05f2e16605078ef46e4e2af
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: b29fc50e4bda23053c239292956f9b2cd0c628a3
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251156"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268078"
 ---
 # <a name="corprfhighmonitor-enumeration"></a>Перечисление COR_PRF_HIGH_MONITOR
 [Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]  
@@ -18,16 +18,23 @@ ms.locfileid: "66251156"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```
 typedef enum {  
     COR_PRF_HIGH_MONITOR_NONE                     = 0x00000000,  
     COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES          = 0x00000001,  
-    COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED        = 0x00000002,     
-    COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS = 0x00000004,    
+    COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED        = 0x00000002,
+    COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS = 0x00000004,
+    COR_PRF_HIGH_DISABLE_TIERED_COMPILATION       = 0x00000008,
+    COR_PRF_HIGH_BASIC_GC                         = 0x00000010,
+    COR_PRF_HIGH_MONITOR_GC_MOVED_OBJECTS         = 0x00000020,
+    COR_PRF_HIGH_MONITOR_LARGEOBJECT_ALLOCATED    = 0x00000040,
     COR_PRF_HIGH_REQUIRE_PROFILE_IMAGE            = 0,  
     COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH           = COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED | 
-                                                    COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS,  
-    COR_PRF_HIGH_MONITOR_IMMUTABLE                = 0  
+                                                    COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS |
+                                                    COR_PRF_HIGH_BASIC_GC |
+                                                    COR_PRF_HIGH_MONITOR_GC_MOVED_OBJECTS |
+                                                    COR_PRF_HIGH_MONITOR_LARGEOBJECT_ALLOCATED,  
+    COR_PRF_HIGH_MONITOR_IMMUTABLE                = COR_PRF_HIGH_DISABLE_TIERED_COMPILATION  
 } COR_PRF_HIGH_MONITOR;  
 ```  
   
@@ -38,7 +45,11 @@ typedef enum {
 |`COR_PRF_HIGH_MONITOR_NONE`|Флаги не установлены.|  
 |`COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES`|Элементы управления [ICorProfilerCallback6::GetAssemblyReference](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) обратный вызов для добавления ссылки на сборки во время обхода замыкания сборки среды CLR.|  
 |`COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED`|Элементы управления [ICorProfilerCallback7::ModuleInMemorySymbolsUpdated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md) обратный вызов для обновления в поток символ, связанный с модулем в памяти.|  
-|`COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`|Элементы управления [ICorProfilerCallback9::DynamicMethodUnloaded](icorprofilercallback9-dynamicmethodunloaded-method.md) обратного вызова, указывающий, когда динамический метод был мусора собираются и выгрузки. <br/> [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]|   
+|`COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`|Элементы управления [ICorProfilerCallback9::DynamicMethodUnloaded](icorprofilercallback9-dynamicmethodunloaded-method.md) обратного вызова, указывающий, когда динамический метод был мусора собираются и выгрузки. <br/> [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]|
+|`COR_PRF_HIGH_DISABLE_TIERED_COMPILATION`|.NET core 3.0 и более поздних версий: Отключает [многоуровневые компиляции](../../../core/whats-new/dotnet-core-3-0.md) для профилировщиков.|
+|`COR_PRF_HIGH_BASIC_GC`|.NET core 3.0 и более поздних версий: Предоставляет упрощенную GC, параметр профилирования по сравнению с [ `COR_PRF_MONITOR_GC` ](cor-prf-monitor-enumeration.md). Управляет только [GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md), [GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md), и [GetGenerationBounds](icorprofilerinfo2-getgenerationbounds-method.md) обратные вызовы. В отличие от `COR_PRF_MONITOR_GC` флаг, `COR_PRF_HIGH_BASIC_GC` не отключает параллельную сборку мусора.|
+|`COR_PRF_HIGH_MONITOR_GC_MOVED_OBJECTS`|.NET core 3.0 и более поздних версий: Позволяет [MovedReferences](icorprofilercallback-movedreferences-method.md) и [MovedReferences2](icorprofilercallback4-movedreferences2-method.md) обратные вызовы для сжатия глобальных каталогов.|
+|`COR_PRF_HIGH_MONITOR_LARGEOBJECT_ALLOCATED`|.NET core 3.0 и более поздних версий: Аналогичную [ `COR_PRF_MONITOR_OBJECT_ALLOCATED` ](cor-prf-monitor-enumeration.md), но содержит сведения о выделения объектов для Large Object Heap (LOH) только.|
 |`COR_PRF_HIGH_REQUIRE_PROFILE_IMAGE`|Представляет все флаги `COR_PRF_HIGH_MONITOR`, для которых необходимы улучшенные профилировщиком изображения. Он соответствует `COR_PRF_REQUIRE_PROFILE_IMAGE` флаг в [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) перечисления.|  
 |`COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH`|Представляет все флаги `COR_PRF_HIGH_MONITOR`, которые могут быть установлены после присоединения профилировщика к выполняющемуся приложению.|  
 |`COR_PRF_HIGH_MONITOR_IMMUTABLE`|Представляет все флаги `COR_PRF_HIGH_MONITOR`, которые могут быть установлены только во время инициализации. Попытка изменить какой-нибудь из этих флагов в другом месте вызовет значение `HRESULT`, указывающее на сбой.|  
