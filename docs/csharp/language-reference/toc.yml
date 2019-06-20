@@ -24,7 +24,7 @@
                   href: keywords/decimal.md
                 - name: double
                   href: keywords/double.md
-                - name: перечисление
+                - name: enum
                   href: keywords/enum.md
                 - name: float
                   href: keywords/float.md
@@ -36,7 +36,7 @@
                   href: keywords/sbyte.md
                 - name: short
                   href: keywords/short.md
-                - name: структура
+                - name: struct
                   href: keywords/struct.md
                 - name: uint
                   href: keywords/uint.md
@@ -48,13 +48,13 @@
               items:
                 - name: Характеристики ссылочных типов
                   href: keywords/reference-types.md
-                - name: класс
+                - name: class
                   href: keywords/class.md
-                - name: делегат
+                - name: delegate
                   href: keywords/delegate.md
                 - name: dynamic
                   href: keywords/dynamic.md
-                - name: интерфейс
+                - name: interface
                   href: keywords/interface.md
                 - name: object
                   href: keywords/object.md
@@ -112,7 +112,7 @@
               href: keywords/async.md
             - name: const
               href: keywords/const.md
-            - name: событие
+            - name: event
               href: keywords/event.md
             - name: extern
               href: keywords/extern.md
@@ -126,11 +126,11 @@
               href: keywords/readonly.md
             - name: sealed
               href: keywords/sealed.md
-            - name: статический
+            - name: static
               href: keywords/static.md
             - name: unsafe
               href: keywords/unsafe.md
-            - name: виртуальный
+            - name: virtual
               href: keywords/virtual.md
             - name: volatile
               href: keywords/volatile.md
@@ -220,7 +220,7 @@
               href: keywords/as.md
             - name: await
               href: keywords/await.md
-            - name: является
+            - name: is
               href: keywords/is.md
             - name: new
               items:
@@ -248,7 +248,7 @@
               href: keywords/operator.md
         - name: Ключевые слова доступа
           items:
-            - name: базовые
+            - name: base
               href: keywords/base.md
             - name: this
               href: keywords/this.md
@@ -258,7 +258,7 @@
               href: keywords/null.md
             - name: 'true'
               href: keywords/true-literal.md
-            - name: 'False'
+            - name: 'false'
               href: keywords/false-literal.md
             - name: default
               href: keywords/default.md
@@ -308,17 +308,17 @@
               href: keywords/join-clause.md
             - name: Предложение let
               href: keywords/let-clause.md
-            - name: по возрастанию
+            - name: ascending
               href: keywords/ascending.md
-            - name: по убыванию
+            - name: descending
               href: keywords/descending.md
-            - name: вкл.
+            - name: 'on'
               href: keywords/on.md
             - name: equals
               href: keywords/equals.md
             - name: by
               href: keywords/by.md
-            - name: в
+            - name: in
               href: keywords/in.md
     - name: 'Операторы в C#'
       items:
