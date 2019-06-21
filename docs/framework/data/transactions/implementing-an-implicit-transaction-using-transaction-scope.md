@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: e9e5e09bdde82c7b818fd47275bdbfeda5850682
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f45019ccc54056371954965e105e309fd41d9ffd
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645754"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306212"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Реализация неявной транзакции с использованием области транзакции
 Класс <xref:System.Transactions.TransactionScope> предоставляет простой способ пометки блока кода как участвующего в транзакции без необходимости взаимодействия с самой транзакцией. Область транзакции может автоматически выбирать внешнюю транзакцию и управлять ей. В целях обеспечения простоты использования и эффективности при разработке транзакционного приложения рекомендуется использовать класс <xref:System.Transactions.TransactionScope>.  
@@ -124,7 +124,9 @@ using(TransactionScope scope1 = new TransactionScope())
  В примере показан блок кода без внешней транзакции, создающий новую область (`scope1`) со значением <xref:System.Transactions.TransactionScopeOption.Required>. Область `scope1` является корневой, поскольку она создает новую транзакцию (транзакцию A) и делает ее внешней транзакцией. `Scope1` затем создает три дополнительных объекта с разными <xref:System.Transactions.TransactionScopeOption> значение. Например, объект `scope2` создается со значением <xref:System.Transactions.TransactionScopeOption.Required>; поскольку существует внешняя транзакция, этот объект присоединяется к первой транзакции, созданной объектом `scope1`. Обратите внимание, что `scope3` является корневой областью новой транзакции, а `scope4` не имеет внешней транзакции.  
   
  Несмотря на то что значение по умолчанию <xref:System.Transactions.TransactionScopeOption> является наиболее часто используемым значением перечисления <xref:System.Transactions.TransactionScopeOption.Required>, каждое из остальных значений имеет свое уникальное назначение.  
-  
+
+### <a name="non-transactional-code-inside-a-transaction-scope"></a>Нетранзакционный код внутри области транзакции
+
  <xref:System.Transactions.TransactionScopeOption.Suppress> полезно, когда требуется сохранить операции, выполняемые в разделе кода и не хотите прерывать внешнюю транзакцию в случае сбоя операции. (например, если требуется выполнить операции аудита или ведения журнала либо опубликовать события для подписчиков независимо от результата завершения внешней транзакции [фиксация или откат]). Это значение позволяет использовать раздел кода, не относящийся к транзакции, внутри области транзакции, как показано в следующем примере.  
   
 ```csharp  

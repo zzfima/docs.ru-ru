@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 78286cde925a4583a3610ce100d23e16adcefe49
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7dd93e5aa44effcf9fc41598e41f6f612a209c86
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878077"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307145"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Практическое руководство. Создание службы данных с использованием источника данных ADO.NET Entity Framework (службы данных WCF)
 
@@ -26,7 +26,7 @@ ms.locfileid: "65878077"
 
 3. Введите имя модели и нажмите кнопку **добавить**.
 
-     Отображается первая страница мастера [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)].
+     Открывается первая страница мастера моделей EDM.
 
 4. В **Выбор содержимого модели** выберите **создать из базы данных**. Затем нажмите кнопку **Далее**.
 

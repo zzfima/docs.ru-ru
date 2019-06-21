@@ -2,12 +2,12 @@
 title: Устранение неполадок
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: ebcfec475d20492f5ce1f971163544d9faa52223
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b34336871d599b72e548e2db90487c17377ba66
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613758"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307187"
 ---
 # <a name="troubleshooting"></a>Устранение неполадок
 В данном материале представлен ряд проблем, которые могут возникнуть в приложениях [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], и даны рекомендации, как их избежать или, по крайней мере, снизить их негативное влияние.  
@@ -37,12 +37,12 @@ ms.locfileid: "64613758"
   
  В противном случае возникнет исключение <xref:System.Data.SqlClient.SqlException>.  
   
- Дополнительные сведения см. в разделе [Как Удаление строк из базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+ Дополнительные сведения см. в разделе [Практическое руководство. Удаление строк из базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
   
 ## <a name="expression-not-queryable"></a>Выражение, не подходящее для запроса  
  Если вы получаете «выражение [выражение] не поддерживает запросы; Возможно, отсутствует ссылка на сборку?» Ошибка, убедитесь, что из следующих:  
   
-- Приложение предназначено для выполнения в [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].  
+- Приложение предназначено .NET Compact Framework 3.5.  
   
 - Наличие ссылки на `System.Core.dll` и `System.Data.Linq.dll`.  
   

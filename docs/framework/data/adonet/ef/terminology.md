@@ -2,12 +2,12 @@
 title: Терминология платформы Entity Framework
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: f78545102823b19cc65b100f2b270ae71c1bd077
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 53a6888d0b32cfeb73e7254dc0778274fe6cd0eb
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877482"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306339"
 ---
 # <a name="entity-framework-terminology"></a>Терминология платформы Entity Framework
 В этом разделе определены термины, которые часто встречаются в [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] документации. Даны ссылки на соответствующие разделы, содержащие дополнительные сведения.  
@@ -27,7 +27,7 @@ ms.locfileid: "65877482"
 |параллельность|Позволяет нескольким пользователям одновременно обращаться и изменять совместно используемые данные. По умолчанию в платформе [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] реализуется модель оптимистичного параллелизма.|  
 |направление|Указывает асимметричную природу некоторых сопоставлений. Направление указывается с помощью атрибутов `FromRole` и `ToRole` элемента `NavigationProperty` или `ReferentialConstraint` в схеме.<br /><br /> Дополнительные сведения см. в разделе [элемент NavigationProperty (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#navigationproperty-element-csdl) и [свойство навигации](../../../../../docs/framework/data/adonet/navigation-property.md).|  
 |безотлагательная загрузка|Процесс загрузки конкретного набора связанных между собой объектов вместе с объектами, которые были запрошены явным образом.|  
-|EDMX-файл|XML-файл, содержащий концептуальную модель (на языке CSDL), модель хранения (на языке SSDL) и сопоставления между ними (на языке MSL). EDMX-файл создается средствами работы с моделью [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]. Дополнительные сведения см. в разделе [Обзор файла .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).|  
+|EDMX-файл|XML-файл, содержащий концептуальную модель (на языке CSDL), модель хранения (на языке SSDL) и сопоставления между ними (на языке MSL). EDMX-файл создается с моделью EDM. Дополнительные сведения см. в разделе [Обзор файла .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).|  
 |end|Сущность, участвующая в ассоциации.<br /><br /> Дополнительные сведения см. в разделе [элемент End (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl) и [ассоциации](../../../../../docs/framework/data/adonet/association-end.md).|  
 |сущность|Концепция в области приложения, по которой определен тип данных.<br /><br /> Дополнительные сведения см. в разделе [элемент EntityType (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl) и [тип сущности](../../../../../docs/framework/data/adonet/entity-type.md).|  
 |EntityClient|Независимый от хранилища поставщик данных ADO.NET, который содержит классы, такие как `EntityConnection`, `EntityCommand`, и `EntityDataReader`. Работает с [!INCLUDE[esql](../../../../../includes/esql-md.md)] и подключается к хранилища конкретных поставщиков данных ADO.NET, такие как `SqlClient`.<br /><br /> Дополнительные сведения см. в разделе [поставщик EntityClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).|  
