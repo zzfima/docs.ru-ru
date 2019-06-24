@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 413a04d6ccdfff4b9cbf937821683ab7f7b37361
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b4217221cc5199b9d8904be1ca3073878378b4e9
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208128"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268181"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Синтаксический анализ строк даты и времени в .NET
 
@@ -65,14 +65,14 @@ ms.locfileid: "59208128"
 
 Кроме того, вы можете явно определить язык и региональные параметры, соглашения о форматировании для которых используются при анализе строки. Укажите один из стандартных объектов <xref:System.Globalization.DateTimeFormatInfo>, возвращенных свойством <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>. В приведенном ниже примере поставщик формата используется для анализа строки на немецком языке в <xref:System.DateTime>. Для представления языка и региональных параметров `de-DE` создается <xref:System.Globalization.CultureInfo>. Этот объект `CultureInfo` обеспечивает успешный анализ определенной строки. Это устраняет необходимость задания каких-либо параметров в <xref:System.Threading.Thread.CurrentCulture> потока <xref:System.Threading.Thread.CurrentThread>.  
   
-[!code-csharp-interactive[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
+[!code-csharp[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
 [!code-vb[Parsing.DateAndTime#2](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#2)]
 
 Для указания поставщиков пользовательских форматов можно использовать перегрузки метода <xref:System.DateTime.Parse%2A>. Но такой метод не поддерживает анализ нестандартных форматов. Вместо этого используйте метод <xref:System.DateTime.ParseExact%2A> для анализа даты и времени, выраженных в нестандартном формате.  
 
 <a name="styles-example"></a>В приведенном ниже примере перечисление <xref:System.Globalization.DateTimeStyles> указывает, что текущие значения даты и времени не нужно добавлять в <xref:System.DateTime> для неуказанных полей.  
 
-[!code-csharp-interactive[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
+[!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
 [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#3)]
  
 ## <a name="parseexact"></a>ParseExact
@@ -81,7 +81,7 @@ ms.locfileid: "59208128"
 
 В приведенном ниже примере в метод <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> передается переназначенный для анализа строковый объект. Затем следует описатель формата, который сопровождается объектом <xref:System.Globalization.CultureInfo>. С помощью этого метода <xref:System.DateTime.ParseExact%2A> можно анализировать только строки, соответствующие шаблону полной даты для языка и региональных параметров `en-US`.  
 
-[!code-csharp-interactive[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
+[!code-csharp[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
 [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#4)]
 
 При каждой перегрузке методов <xref:System.DateTime.Parse%2A> и <xref:System.DateTime.ParseExact%2A> также используется параметр <xref:System.IFormatProvider>, который предоставляет сведения о языке и региональных параметрах для форматирования строки. Этот объект <xref:System.IFormatProvider> является объектом <xref:System.Globalization.CultureInfo>, который представляет стандартные язык и региональные параметры, или объектом <xref:System.Globalization.DateTimeFormatInfo>, возвращаемым в свойстве <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  Кроме того, в методе <xref:System.DateTime.ParseExact%2A> используется дополнительная строка или аргумент массива строк для определения одного или нескольких настраиваемых форматов даты и времени.  

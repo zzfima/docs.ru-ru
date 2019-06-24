@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90e9dbbd43751412c25dd5ca4dae2d503139db69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b4d7cd61a771f1c9658b5bc98ec85259da1c77f9
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634552"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268226"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Строки настраиваемых форматов даты и времени
 
@@ -41,12 +41,12 @@ ms.locfileid: "64634552"
 
 В операциях синтаксического анализа пользовательские строки формата даты и времени можно использовать с методами <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> и <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType>. Чтобы операция синтаксического анализа прошла успешно, эти методы требуют, чтобы входная строка строго соответствовала конкретному шаблону. В следующем примере демонстрируется вызов метода <xref:System.DateTimeOffset.ParseExact%28System.String%2CSystem.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> для анализа даты, которая должна включать в себя указание дня, месяца и года из двух цифр.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#18](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
+[!code-csharp[Formatting.DateAndTime.Custom#18](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
 [!code-vb[Formatting.DateAndTime.Custom#18](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandparsing1.vb#18)]
 
 В следующей таблице приведены настраиваемые описатели формата даты и времени с примерами строк, формируемых каждым описателем формата. По умолчанию результирующие строки отражают соглашения о форматировании для языка и региональных параметров en-US. Если конкретный описатель формата создает локализованную строку, то в примере также указываются язык и региональные параметры, для которых применяется полученная строка. Дополнительные сведения об использовании настраиваемых строк формата даты и времени см. в подразделе [Примечания](#notes).
 
-| Описатель формата | Описание | Примеры |
+| Описатель формата | ОПИСАНИЕ | Примеры |
 | ---------------------- | ----------------- | -------------- |
 |"d"|День месяца, в диапазоне от 1 до 31.<br /><br /> Дополнительная информация: [Настраиваемый описатель формата "d"](#dSpecifier).|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|
 |"dd"|День месяца, в диапазоне от 01 до 31.<br /><br /> Дополнительная информация: [Настраиваемый описатель формата "dd"](#ddSpecifier).|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|
@@ -509,7 +509,7 @@ ms.locfileid: "64634552"
 
 В следующем примере настраиваемый описатель формата "yy" используется в строке настраиваемого формата.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
+[!code-csharp[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
 [!code-vb[Formatting.DateAndTime.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
 
 [К таблице](#table)
@@ -638,7 +638,7 @@ ms.locfileid: "64634552"
 
 В следующем примере литеральные символы "PST" (стандартное тихоокеанское время) и "PDT" (тихоокеанское летнее время) представляют в строке формата местный часовой пояс. Обратите внимание, что строка включена в результирующую строку и строка, которая включает строку местного часового пояса зоны местного времени, успешно проходит синтаксический анализ.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#20](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx1.cs#20)]
+[!code-csharp[Formatting.DateAndTime.Custom#20](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx1.cs#20)]
 [!code-vb[Formatting.DateAndTime.Custom#20](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx1.vb#20)]
 
 Указать необходимость интерпретации символов как литеральных, а не как зарезервированных, для их последующего включения в результирующую строку или успешного анализа во входной строке можно двумя способами.
@@ -647,12 +647,12 @@ ms.locfileid: "64634552"
 
 В следующем примере литеральные символы "pst" (стандартное тихоокеанское время) представляют в строке формата местный часовой пояс. Поскольку "s" и "t" представляют собой строки настраиваемых форматов даты и времени, перед ними необходимо поставить знак обратной косой черты, чтобы интерпретировать их как символьные литералы.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#21](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
+[!code-csharp[Formatting.DateAndTime.Custom#21](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
 [!code-vb[Formatting.DateAndTime.Custom#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx2.vb#21)]
 
 - Путем заключения всей литеральной строки в двойные или одинарные кавычки. Следующий пример аналогичен предыдущему, за исключением того, что "pst" заключается в кавычки, чтобы указать, что вся строка с разделителями должна интерпретироваться как символьные литералы.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
+[!code-csharp[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
 [!code-vb[Formatting.DateAndTime.Custom#22](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
 ## <a name="notes"></a>Примечания

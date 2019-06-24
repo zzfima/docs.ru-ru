@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6939efa608f4887dfdb00abe8292bec841929440
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ddf4b84d44abb353cb9a5e025291690fb14b9461
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664641"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267916"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Строки стандартных форматов даты и времени
 Строка стандартного формата даты и времени использует один описатель формата для определения текстового представления значения даты и времени. Любая строка формата даты и времени, содержащая более одного символа, включая пробел, интерпретируется как строка настраиваемого формата даты и времени. Дополнительные сведения см. в разделе [Строки настраиваемых форматов даты и времени](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Строку стандартного или пользовательского формата можно использовать двумя способами:  
@@ -39,7 +39,7 @@ ms.locfileid: "64664641"
 
 <a name="table"></a> В следующей таблице описаны спецификаторы стандартных форматов даты и времени. Если не указано иное, то описатель стандартного формата даты и времени выдает одинаковое строковое представление независимо от того, используется ли он со значением <xref:System.DateTime> или со значением <xref:System.DateTimeOffset>. Дополнительные сведения об использовании стандартных строк формата даты и времени см. в подразделе [Примечания](#Notes).  
   
-|Описатель формата|Описание|Примеры|  
+|Описатель формата|ОПИСАНИЕ|Примеры|  
 |----------------------|-----------------|--------------|  
 |"d"|Короткий шаблон даты.<br /><br /> Дополнительные сведения см. в подразделе [Описатель короткого формата даты (d)](#ShortDate).|2009-06-15T13:45:30 -> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> 2009/06/15 (ja-JP)|  
 |"D"|Полный шаблон даты.<br /><br /> Дополнительные сведения см. в подразделе [Описатель полного формата даты (D)](#LongDate).|2009-06-15T13:45:30 -> Monday, June 15, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> Montag, 15. Juni 2009 (de-DE)|  
@@ -92,7 +92,7 @@ ms.locfileid: "64664641"
   
  Строки стандартного формата также можно использовать в операциях синтаксического анализа с методами <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> и <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, которые требуют для успешного выполнения операции синтаксического анализа, чтобы входная строка строго соответствовала определенному шаблону. Многие строки стандартного формата сопоставляются с несколькими строками пользовательского формата, поэтому значение даты и времени может быть представлено в разных форматах, при этом операция синтаксического анализа пройдет успешно. Определить одну или несколько строк пользовательского формата, соответствующих строке стандартного формата, можно, вызвав метод <xref:System.Globalization.DateTimeFormatInfo.GetAllDateTimePatterns%28System.Char%29?displayProperty=nameWithType>. В следующем примере показаны строки пользовательского формата, сопоставленные со строкой стандартного формата "d" (шаблон короткого формата даты).  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
+ [!code-csharp[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
  [!code-vb[Formatting.DateAndTime.Standard#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/stdandparsing1.vb#17)]  
   
  В следующих разделах представлены описатели стандартных форматов для значений <xref:System.DateTime> и <xref:System.DateTimeOffset>.  
@@ -103,7 +103,7 @@ ms.locfileid: "64664641"
   
  В следующей таблице представлены свойства объекта <xref:System.Globalization.DateTimeFormatInfo>, обеспечивающие управление форматированием возвращаемой строки.  
   
-|Свойство.|Описание|  
+|Свойство.|ОПИСАНИЕ|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Определяет общий формат результирующей строки.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A>|Определяет строку, разделяющую компоненты даты — год, месяц и день.|  
@@ -121,7 +121,7 @@ ms.locfileid: "64664641"
   
  В следующей таблице представлены свойства объекта <xref:System.Globalization.DateTimeFormatInfo>, обеспечивающие управление форматированием возвращаемой строки.  
   
-|Свойство.|Описание|  
+|Свойство.|ОПИСАНИЕ|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|Определяет общий формат результирующей строки.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Определяет переведенные названия дней, которые могут входить в результирующую строку.|  
@@ -140,7 +140,7 @@ ms.locfileid: "64664641"
   
  Форматирование результирующей строки определяется сведениями о форматировании в указанном объекте <xref:System.Globalization.DateTimeFormatInfo>. В следующей таблице представлены свойства объекта <xref:System.Globalization.DateTimeFormatInfo>, обеспечивающие управление форматированием возвращаемой строки. Настраиваемый описатель формата, возвращаемый свойствами <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> и <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> некоторых языков и региональных параметров, может использовать не все свойства.  
   
-|Свойство.|Описание|  
+|Свойство.|ОПИСАНИЕ|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|Определяет формат компонента даты результирующей строки.|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Определяет формат компонента времени результирующей строки.|  
@@ -163,7 +163,7 @@ ms.locfileid: "64664641"
   
  В следующей таблице представлены свойства объекта <xref:System.Globalization.DateTimeFormatInfo>, обеспечивающие управление форматированием возвращаемой строки. Описатель настраиваемого формата, возвращаемый свойством <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> некоторых языков и региональных параметров, может использовать не все свойства.  
   
-|Свойство.|Описание|  
+|Свойство.|ОПИСАНИЕ|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|Определяет общий формат результирующей строки.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Определяет переведенные названия дней, которые могут входить в результирующую строку.|  
@@ -185,7 +185,7 @@ ms.locfileid: "64664641"
   
  Форматирование результирующей строки определяется сведениями о форматировании в указанном объекте <xref:System.Globalization.DateTimeFormatInfo>. В следующей таблице представлены свойства объекта <xref:System.Globalization.DateTimeFormatInfo>, обеспечивающие управление форматированием возвращаемой строки. Описатель настраиваемого формата, возвращаемый свойствами <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> и <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> некоторых языков и региональных параметров, может использовать не все свойства.  
   
-|Свойство.|Описание|  
+|Свойство.|ОПИСАНИЕ|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Определяет формат компонента даты результирующей строки.|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Определяет формат компонента времени результирующей строки.|  
@@ -207,7 +207,7 @@ ms.locfileid: "64664641"
   
  Форматирование результирующей строки определяется сведениями о форматировании в указанном объекте <xref:System.Globalization.DateTimeFormatInfo>. В следующей таблице представлены свойства объекта <xref:System.Globalization.DateTimeFormatInfo>, обеспечивающие управление форматированием возвращаемой строки. Описатель настраиваемого формата, возвращаемый свойствами <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> и <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> некоторых языков и региональных параметров, может использовать не все свойства.  
   
-|Свойство.|Описание|  
+|Свойство.|ОПИСАНИЕ|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Определяет формат компонента даты результирующей строки.|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Определяет формат компонента времени результирующей строки.|  
@@ -229,7 +229,7 @@ ms.locfileid: "64664641"
   
  В следующей таблице представлены свойства объекта <xref:System.Globalization.DateTimeFormatInfo>, обеспечивающие управление форматированием возвращаемой строки.  
   
-|Свойство.|Описание|  
+|Свойство.|ОПИСАНИЕ|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|Определяет общий формат результирующей строки.|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Определяет переведенные названия месяцев, которые могут входить в результирующую строку.|  
@@ -261,7 +261,7 @@ ms.locfileid: "64664641"
   
  В следующем примере используется описатель формата "o" для отображения ряда значений <xref:System.DateTime> и <xref:System.DateTimeOffset> на компьютере в тихоокеанском стандартном часовом поясе США.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
+ [!code-csharp[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]  
   
  В следующем примере описатель формата "o" используется для создания форматированной строки, а затем для восстановления первоначальных значений даты и времени путем вызова метода `Parse`.  
@@ -277,7 +277,7 @@ ms.locfileid: "64664641"
   
  Результирующая строка обусловлена следующими свойствами объекта <xref:System.Globalization.DateTimeFormatInfo>, возвращаемого свойством <xref:System.Globalization.DateTimeFormatInfo.InvariantInfo%2A?displayProperty=nameWithType>, представляющим инвариант языка и региональных параметров.  
   
-|Свойство.|Описание|  
+|Свойство.|ОПИСАНИЕ|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|Определяет формат результирующей строки.|  
 |<xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A>|Определяет сокращенные названия дней, которые могут входить в результирующую строку.|  
@@ -313,7 +313,7 @@ ms.locfileid: "64664641"
   
  Форматирование результирующей строки определяется сведениями о форматировании в указанном объекте <xref:System.Globalization.DateTimeFormatInfo>. В следующей таблице представлены свойства объекта <xref:System.Globalization.DateTimeFormatInfo>, обеспечивающие управление форматированием возвращаемой строки. Описатель настраиваемого формата, возвращаемый свойством <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> некоторых языков и региональных параметров, может использовать не все свойства.  
   
-|Свойство.|Описание|  
+|Свойство.|ОПИСАНИЕ|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Определяет формат компонента времени результирующей строки.|  
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Определяет строку, разделяющую компоненты времени — часы, минуты и секунды.|  
@@ -333,7 +333,7 @@ ms.locfileid: "64664641"
   
  В следующей таблице представлены свойства объекта <xref:System.Globalization.DateTimeFormatInfo>, обеспечивающие управление форматированием возвращаемой строки. Описатель настраиваемого формата, возвращаемый свойством <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> некоторых языков и региональных параметров, может использовать не все свойства.  
   
-|Свойство.|Описание|  
+|Свойство.|ОПИСАНИЕ|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Определяет формат компонента времени результирующей строки.|  
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Определяет строку, разделяющую компоненты времени — часы, минуты и секунды.|  
@@ -366,7 +366,7 @@ ms.locfileid: "64664641"
   
  В следующей таблице представлены свойства объекта <xref:System.Globalization.DateTimeFormatInfo>, обеспечивающие управление форматированием возвращаемой строки. Описатель настраиваемого формата, возвращаемый свойством <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> некоторых языков и региональных параметров, может использовать не все свойства.  
   
-|Свойство.|Описание|  
+|Свойство.|ОПИСАНИЕ|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|Определяет общий формат результирующей строки.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Определяет переведенные названия дней, которые могут входить в результирующую строку.|  
@@ -390,7 +390,7 @@ ms.locfileid: "64664641"
   
  В следующей таблице представлены свойства объекта <xref:System.Globalization.DateTimeFormatInfo>, обеспечивающие управление форматированием возвращаемой строки.  
   
-|Свойство.|Описание|  
+|Свойство.|ОПИСАНИЕ|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A>|Определяет общий формат результирующей строки.|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Определяет переведенные названия месяцев, которые могут входить в результирующую строку.|  

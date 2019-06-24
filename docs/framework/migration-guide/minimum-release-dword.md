@@ -1,6 +1,6 @@
 ---
 title: Минимальные значения параметра DWORD "Release" для любых версий .NET Framework
-ms.date: 04/02/2019
+ms.date: 04/18/2019
 ms.custom: updateeachrelease
 helpviewer_keywords:
 - versions, determining for .NET Framework
@@ -8,16 +8,18 @@ helpviewer_keywords:
 - .NET Framework, minimum version value
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6476539d704da171dc6bc1849bcabc21058cdc7e
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: cc5808229e0d3f467b886f6572bc767d5f1dd0ab
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055387"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170473"
 ---
 # <a name="the-minimum-values-of-the-release-dword-for-net-framework-45-and-later-versions"></a>Минимальные значения Release DWORD для .NET Framework 4.5 и более поздних версий.
 
 В приведенной ниже таблице перечислены минимальные значения параметра **Release** для каждой версии .NET Framework. Эта таблица используется для определения, выполняется ли приложение в определенной версии .NET Framework независимо от платформы.
+
+[!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
 |Версия платформы .NET Framework|Значение DWORD "Release"|
 |--------------------------------|-------------|
@@ -30,3 +32,4 @@ ms.locfileid: "59055387"
 |.NET Framework 4.7|460798|
 |.NET Framework 4.7.1|461308|
 |.NET Framework 4.7.2|461808|
+|.NET Framework 4.8|528040|
