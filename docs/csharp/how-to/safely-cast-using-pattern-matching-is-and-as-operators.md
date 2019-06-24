@@ -6,28 +6,26 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 4e0eb53a44a6348d0f5154a0a08222da90985864
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2e81628930afaca62a8614df8ca0f458238c23d6
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149319"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306354"
 ---
-# <a name="how-to-safely-cast-by-using-pattern-matching-is-and-as-operators"></a>Практическое руководство. Безопасное приведение с помощью сопоставления шаблонов и операторы is и as
+# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Практическое руководство. Безопасное приведение с помощью сопоставления шаблонов и операторы is и as
 
-В связи с полиморфизмом объектов переменная типа базового класса может содержать производный [тип](../programming-guide/types/index.md). Для доступа к членам экземпляра производного типа необходимо [привести](../programming-guide/types/casting-and-type-conversions.md) значение обратно к производному типу. Однако приведение создает риск возникновения исключения <xref:System.InvalidCastException>. C# предоставляет операторы [сопоставления шаблонов](../pattern-matching.md), которые выполняют приведение условно только в случае успеха. C# также предоставляет операторы [is](../language-reference/keywords/is.md) и [as](../language-reference/keywords/as.md) для проверки определенного типа значения.
-
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
+В связи с полиморфизмом объектов переменная типа базового класса может содержать производный [тип](../programming-guide/types/index.md). Для доступа к членам экземпляра производного типа необходимо [привести](../programming-guide/types/casting-and-type-conversions.md) значение обратно к производному типу. Однако приведение создает риск возникновения исключения <xref:System.InvalidCastException>. C# предоставляет операторы [сопоставления шаблонов](../pattern-matching.md), которые выполняют приведение условно только в случае успеха. C# также предоставляет операторы [is](../language-reference/operators/type-testing-and-conversion-operators.md#is-operator) и [as](../language-reference/operators/type-testing-and-conversion-operators.md#as-operator) для проверки определенного типа значения.
 
 В следующем коде показан оператор сопоставления шаблонов `is`. Он содержит методы, которые проверяют аргумент метода, чтобы определить, является ли он одним из возможных наборов производных типов.
 
-[!code-csharp-interactive[Pattern matching is statement](../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs#PatternMatchingIs)]
+[!code-csharp[Pattern matching is statement](../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs#PatternMatchingIs)]
 
 В предыдущем примере показано несколько возможностей синтаксиса сопоставления шаблонов. Операторы `if (a is Mammal m)` и `if (o is Mammal m)` объединяют проверку с назначением инициализации. Назначение происходит, только если проверка пройдет успешно. Переменная `m` действует только во внедренном операторе `if`, где она назначена. Вы не сможете получить доступ к `m` позже в этом же методе. Попробуйте сделать это в интерактивном окне.
 
 Вы можете использовать тот же синтаксис для проверки наличия значения у [типа, допускающего значение null](../programming-guide/nullable-types/index.md), как показано в следующем примере кода.
 
-[!code-csharp-interactive[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
+[!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
 
 В предыдущем примере показаны другие возможности сопоставления шаблонов для использования с преобразованиями. Вы можете проверить переменную для шаблона со значением NULL путем проверки конкретно значения `null`. Если значение переменной в среде выполнения равно `null`, оператор `is`, проверяющий тип, всегда возвращает `false`. Оператор сопоставления шаблонов `is` не принимает тип, допускающий значение NULL, например `int?` или `Nullable<int>`, но вы можете выполнить проверку для любого другого типа значения.
 
@@ -35,7 +33,7 @@ ms.locfileid: "53149319"
 
 Если вы хотите проверить, принадлежит ли переменная определенному типу, но не хотите назначать новую переменную, используйте операторы `is` и `as` для ссылочных типов и типов, допускающих значение NULL. Ниже показано, как использовать операторы `is` и `as`, которые были частью языка C# до того, как было введено сопоставление шаблонов для проверки принадлежности переменной к определенному типу.
 
-[!code-csharp-interactive[testing variable types with the is and as statements](../../../samples/snippets/csharp/how-to/safelycast/asandis/Program.cs#IsAndAs)]
+[!code-csharp[testing variable types with the is and as statements](../../../samples/snippets/csharp/how-to/safelycast/asandis/Program.cs#IsAndAs)]
 
 Как видно при сравнении этого кода с кодом сопоставления шаблонов, синтаксис сопоставления шаблонов предоставляет более надежные функции, поскольку сочетает в себе проверку и назначение в одном операторе. Используйте синтаксис сопоставления шаблонов во всех подходящих случаях.
 

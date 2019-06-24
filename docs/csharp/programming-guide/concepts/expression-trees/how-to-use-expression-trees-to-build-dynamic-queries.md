@@ -2,12 +2,12 @@
 title: Практическое руководство. Использование деревьев выражений для построения динамических запросов (C#)
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 33dbca31af3c088f4cd4af830c690cf9cdaea657
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: dc8ff7504464e05ce19df3f0dfe907476a17413a
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586098"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170330"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Практическое руководство. Использование деревьев выражений для построения динамических запросов (C#)
 В LINQ деревья выражений используются для представления структурированных запросов к источникам данных, которые реализуют интерфейс <xref:System.Linq.IQueryable%601>. Например, поставщик LINQ реализует интерфейс <xref:System.Linq.IQueryable%601> для выполнения запросов к реляционным хранилищам данных. Компилятор C# компилирует запросы к таким источникам данных в код, который строит дерево выражения во время выполнения. Поставщик запросов может переходить по структуре данных дерева выражения и преобразовать ее в язык запросов, соответствующий источнику данных.  
@@ -19,7 +19,10 @@ ms.locfileid: "65586098"
 ## <a name="example"></a>Пример  
  В следующем примере показано использование деревьев выражений для создания запроса к источнику данных `IQueryable` и его выполнения. В коде создается дерево выражения для представления следующего запроса:  
   
- `companies.Where(company => (company.ToLower() == "coho winery" || company.Length > 16)).OrderBy(company => company)`  
+ ```csharp
+ companies.Where(company => (company.ToLower() == "coho winery" || company.Length > 16))
+          .OrderBy(company => company)
+ ```
   
  Фабричные методы в пространстве имен <xref:System.Linq.Expressions> используются для создания деревьев выражений, представляющих общий запрос. Выражения, которые представляют вызовы методов стандартных операторов запросов, ссылаются на реализации <xref:System.Linq.Queryable> этих методов. Итоговое дерево выражения передается в реализацию <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> поставщика источника данных `IQueryable` для создания исполняемого запроса типа `IQueryable`. Результаты получаются путем перечисления переменной запроса.  
   
