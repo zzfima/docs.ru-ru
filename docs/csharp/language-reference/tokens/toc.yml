@@ -1,7 +1,0 @@
-- name: 'Специальные символы в C#'
-  href: index.md
-  items:
-    - name: $ — интерполяция строк
-      href: interpolated.md
-    - name: '@ — буквальный идентификатор'
-      href: verbatim.md
