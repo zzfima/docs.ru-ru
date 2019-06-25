@@ -2,12 +2,12 @@
 title: 'Пользовательский кодировщик сообщений: кодировщик сжатия'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 6ada1cdeee02eb747f9f85abc9c99602d5f26b72
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 32ca96987a86c04c227f8bb0d680f647898dfccf
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878462"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348430"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Пользовательский кодировщик сообщений: кодировщик сжатия
 В этом примере показано, как реализовать пользовательский кодировщик с помощью платформы Windows Communication Foundation (WCF).  
@@ -222,7 +222,7 @@ binding.Namespace = "http://tempuri.org/bindings";
   
  Хотя этого может быть достаточно для большинства пользовательских сценариев, поддержка конфигурации с помощью файлов критически важно, если служба будет размещена в Интернете. Для поддержки сценариев с размещением в Интернете необходимо разработать пользовательский обработчик конфигурации, позволяющий настраивать пользовательский элемент привязки в файле.  
   
- Пользовательский обработчик для элемента привязки можно построить на основе системы конфигурации, предоставляемой [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]. Обработчик конфигурации для элемента привязки должен наследовать от класса <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Свойство `BindingElementType` используется для информирования системы конфигурации о типе элемента привязки, который следует создать для этого раздела. Все аспекты элемента `BindingElement`, допускающие установку, должны быть представлены как свойства класса, производного от <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Класс <xref:System.Configuration.ConfigurationPropertyAttribute> помогает при сопоставлении атрибутов элемента конфигурации со свойствами и задании значений по умолчанию в случае отсутствия атрибута. После того как значения из конфигурации загружены и применены к свойствам, вызывается метод <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A>, который преобразует свойства в конкретный экземпляр элемента привязки. Метод <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A> используется для преобразования свойств класса, производного от класса <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>, в значения, задаваемые в новом созданном элементе привязки.  
+ Вы можете создать обработчик для элемента привязки на основе конфигурации системы. Обработчик конфигурации для элемента привязки должен наследовать от класса <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType> Информирует систему конфигурации типа элемента привязки, чтобы создать для этого раздела. Все аспекты элемента `BindingElement`, допускающие установку, должны быть представлены как свойства класса, производного от <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. <xref:System.Configuration.ConfigurationPropertyAttribute> Помогает в сопоставлении атрибутов элемента конфигурации со свойствами и задании значений по умолчанию, если атрибуты отсутствуют. После того как значения из конфигурации загружены и применены к свойствам, вызывается метод <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType>, который преобразует свойства в конкретный экземпляр элемента привязки. <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType> Метод используется для преобразования свойств на <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> производного класса в значения, который нужно задать в только что созданного элемента привязки.  
   
  В следующем образце кода показана реализация класса `GZipMessageEncodingElement`.  
   

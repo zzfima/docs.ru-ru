@@ -12,12 +12,12 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: 1869a5c274b3308e718ca550e8e43ff6a72d4b5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 25803bd772832cd22e855f530d10a3f3639c180c
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611856"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348446"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Оптимизация производительности: Двумерная графика и изображения
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет широкий спектр функциональных возможностей двумерной графики и изображений, которые можно оптимизировать для требований приложения. Этот раздел содержит сведения об оптимизации производительности в этих областях.  
@@ -52,7 +52,7 @@ ms.locfileid: "64611856"
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>Объекты StreamGeometry  
- <xref:System.Windows.Media.StreamGeometry> Объект — это Упрощенная альтернатива <xref:System.Windows.Media.PathGeometry> для создания геометрических фигур. Используйте <xref:System.Windows.Media.StreamGeometry> для описания сложной геометрии. <xref:System.Windows.Media.StreamGeometry> оптимизирован для обработки большого количества <xref:System.Windows.Media.PathGeometry> объектов и выполняется быстрее по сравнению с использованием нескольких отдельных <xref:System.Windows.Media.PathGeometry> объектов.  
+ <xref:System.Windows.Media.StreamGeometry> Объекта является упрощенной альтернативой для <xref:System.Windows.Media.PathGeometry> для создания геометрических фигур. Используйте <xref:System.Windows.Media.StreamGeometry> для описания сложной геометрии. <xref:System.Windows.Media.StreamGeometry> оптимизирован для обработки большого количества <xref:System.Windows.Media.PathGeometry> объектов и выполняется быстрее по сравнению с использованием нескольких отдельных <xref:System.Windows.Media.PathGeometry> объектов.  
   
  В следующем примере синтаксис атрибутов для создания треугольного <xref:System.Windows.Media.StreamGeometry> в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   

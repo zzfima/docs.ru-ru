@@ -12,18 +12,18 @@ helpviewer_keywords:
 - icons [Windows Forms], setting for TreeView control
 - tree nodes in TreeView control [Windows Forms], icons
 ms.assetid: c14ddcc0-e5a6-4c21-a2d5-6799fd491781
-ms.openlocfilehash: eb2d75b7c18aa2e65c5e90749852383eea7985b3
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c7c801242c7d5958cce9826a5f60d13a0b257add
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880680"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348057"
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>Практическое руководство. Определение значков для элемента управления TreeView в Windows Forms
 Windows Forms <xref:System.Windows.Forms.TreeView> элемент управления может отображать значки рядом с каждым узлом. Значки располагаются непосредственно слева от текста узла. Чтобы отобразить эти значки, необходимо связать представлении в виде дерева с <xref:System.Windows.Forms.ImageList> элемента управления. Дополнительные сведения о списках изображений, см. в разделе [компонента ImageList](imagelist-component-windows-forms.md) и [как: Добавление и удаление изображений с помощью Windows Forms компонента ImageList](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
   
 > [!NOTE]
->  Ошибка в Microsoft .NET Framework версии 1.1 предотвращает появление на образы <xref:System.Windows.Forms.TreeView> узлы, когда приложение вызывает <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>. Чтобы обойти эту ошибку, вызовите <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType> в вашей `Main` метод сразу после вызова <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>. Эта ошибка исправлена в [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+>  Ошибка в Microsoft .NET Framework версии 1.1 предотвращает появление на образы <xref:System.Windows.Forms.TreeView> узлы, когда приложение вызывает <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>. Чтобы обойти эту ошибку, вызовите <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType> в вашей `Main` метод сразу после вызова <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>. Эта ошибка исправлена в .NET Framework 2.0.  
   
 ### <a name="to-display-images-in-a-tree-view"></a>Для отображения изображений в виде дерева  
   

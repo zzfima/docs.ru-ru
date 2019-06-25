@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 4d035dd6611909c9a6b67662d17f80057dc33386
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 06ce64de5e2a6b4aa299b9ad9c41982b7c1924c7
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169955"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348274"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>Практическое руководство. Добавление данных в буфер обмена
 <xref:System.Windows.Forms.Clipboard> Класс предоставляет методы, которые можно использовать для взаимодействия с функцией буфер обмена операционной системы Windows. Многие приложения используют буфер обмена в качестве временного хранилища данных. Например текстовые редакторы использовать буфер обмена во время операций вырезания и вставки. Буфер обмена также полезен для передачи данных из одного приложения в другое.  
@@ -53,7 +53,7 @@ ms.locfileid: "67169955"
   
 ### <a name="to-add-data-to-the-clipboard-in-multiple-formats"></a>Для добавления данных в буфер обмена в нескольких форматах  
   
-1. Используйте <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> метод и передать <xref:System.Windows.Forms.DataObject> , содержащий нужные данные. Этот метод следует использовать для добавления данных в буфер обмена для версий более ранних, чем [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+1. Используйте <xref:System.Windows.Forms.Clipboard.SetDataObject%2A?displayProperty=nameWithType> метод и передать <xref:System.Windows.Forms.DataObject> , содержащий нужные данные. Этот метод необходимо использовать для добавления данных в буфер обмена для версий более ранних, чем .NET Framework 2.0.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  
