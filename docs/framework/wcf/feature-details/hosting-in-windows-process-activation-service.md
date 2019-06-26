@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: baa931b64e64c9c2f73ac07424b2cfd1868e725b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eeac535eac95b19889d0d8d74115bcddc3a15224
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613296"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402354"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Размещение в службе активации процессов Windows
-Служба активации процессов Windows (WAS) управляет активацией и временем существования рабочих процессов, содержащих приложения, размещения служб Windows Communication Foundation (WCF). Модель процесса WAS обобщает модель процесса [!INCLUDE[iis601](../../../../includes/iis601-md.md)] для HTTP-сервера путем устранения зависимости от HTTP. Это позволяет службам WCF использовать как HTTP, так и отличные от HTTP протоколы, такие как Net.TCP, в среде размещения, которая поддерживает активацию на основе сообщений и предоставляет возможность размещать большое количество приложений на данном компьютере.  
+Служба активации процессов Windows (WAS) управляет активацией и временем существования рабочих процессов, содержащих приложения, размещения служб Windows Communication Foundation (WCF). Модель процесса WAS обобщает модель процесса IIS 6.0 для HTTP-сервера, устраняя зависимость от HTTP. Это позволяет службам WCF использовать как HTTP, так и отличные от HTTP протоколы, такие как Net.TCP, в среде размещения, которая поддерживает активацию на основе сообщений и предоставляет возможность размещать большое количество приложений на данном компьютере.  
   
  Дополнительные сведения о создании службы WCF, которая выполняется в среде размещения WAS, см. в разделе [как: Размещение службы WCF в WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   

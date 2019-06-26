@@ -2,12 +2,12 @@
 title: Программа регистрации служб WorkFlow (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: da377e865258169bdca16cfb0db3f8612d4e0f0d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 211af75c04dfe971228bc1710fbe1fc4d7aaee60
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613064"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402473"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Программа регистрации служб WorkFlow (WFServicesReg.exe)
 Средство регистрации служб Workflow Services (WFServicesReg.exe) - это автономное средство, которое можно использовать для добавления, удаления или восстановления элементов конфигурации для служб Windows Workflow Foundation.  
@@ -56,7 +56,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  Средство также регистрирует карты скриптов и обработчики XOML и RULES в метабазе IIS.  
   
- На компьютерах под управлением [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] и [!INCLUDE[wxp](../../../includes/wxp-md.md)] (IIS 5.1 и [!INCLUDE[iis601](../../../includes/iis601-md.md)]) регистрируется один набор карт скриптов XOML и RULES.  
+ На [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] и [!INCLUDE[wxp](../../../includes/wxp-md.md)] машины регистрируются (IIS 5.1 и IIS 6.0), один набор карт скриптов XOML и Rules.  
   
  На 64-разрядных компьютерах средство регистрирует карты скриптов режима WOW, если включен переключатель `Enable32BitAppOnWin64`, или собственные 64-разрядные карты скриптов, если переключатель `Enable32BitAppOnWin64` отключен.  
   

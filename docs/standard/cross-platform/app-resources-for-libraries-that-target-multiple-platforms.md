@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c95c77d0b2e2b68750891431822e2637e5e88f9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: ba4546397adcfcf6142b41482f574cf86607a6b9
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025573"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402117"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Ресурсы приложений для библиотек, предназначенных для нескольких платформ
 Можно использовать .NET Framework [переносимой библиотеки классов](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) тип, чтобы убедиться, что ресурсы в библиотеках классов может осуществляться из нескольких платформ проекта. Этот тип проекта доступен в Visual Studio 2012 и нацелена на переносимое подмножество библиотеки классов .NET Framework. Использование [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] гарантирует доступность библиотеки из настольных приложений, приложений Silverlight, Windows Phone и [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
@@ -72,12 +72,12 @@ ms.locfileid: "67025573"
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]
 
- В следующем примере кода показано, как к классу `UILibrary` и его ресурсам можно обращаться из консольного приложения. Для этого требуется добавить в проект консольного приложения ссылку на файл UILIbrary.dll.
+ В следующем примере кода показано, как к классу `UILibrary` и его ресурсам можно обращаться из консольного приложения. Он требует ссылку на файл UILibrary.dll добавляемый проект консольного приложения.
 
  [!code-csharp[Conceptual.Resources.Portable#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program.cs#2)]
  [!code-vb[Conceptual.Resources.Portable#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module1.vb#2)]
 
- В следующем примере кода показано, как к классу `UILibrary` и его ресурсам можно обращаться из приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Для этого требуется добавить в проект приложения для Магазина Windows ссылку на файл UILIbrary.dll.
+ В следующем примере кода показано, как к классу `UILibrary` и его ресурсам можно обращаться из приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Он требует ссылку на файл UILibrary.dll для добавления в проект приложения Windows Store.
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
@@ -94,12 +94,12 @@ ms.locfileid: "67025573"
 |name|Nom|
 |Заголовок|Базовый de données des employés|
 
- В следующем примере кода показано, как к классу `UILibrary` и его ресурсам можно обращаться из консольного приложения. Для этого требуется добавить в проект консольного приложения ссылку на файл UILIbrary.dll.
+ В следующем примере кода показано, как к классу `UILibrary` и его ресурсам можно обращаться из консольного приложения. Он требует ссылку на файл UILibrary.dll добавляемый проект консольного приложения.
 
  [!code-csharp[Conceptual.Resources.Portable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program2.cs#3)]
  [!code-vb[Conceptual.Resources.Portable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module2.vb#3)]
 
- В следующем примере кода показано, как к классу `UILibrary` и его ресурсам можно обращаться из приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Для этого требуется добавить в проект приложения для Магазина Windows ссылку на файл UILIbrary.dll. В коде используется статическое свойство `ApplicationLanguages.PrimaryLanguageOverride`, чтобы в качестве предпочтительного языка приложения указать французский язык.
+ В следующем примере кода показано, как к классу `UILibrary` и его ресурсам можно обращаться из приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Он требует ссылку на файл UILibrary.dll для добавления в проект приложения Windows Store. В коде используется статическое свойство `ApplicationLanguages.PrimaryLanguageOverride`, чтобы в качестве предпочтительного языка приложения указать французский язык.
 
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  

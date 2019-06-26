@@ -2,12 +2,12 @@
 title: Развертывание службы WCF, размещенной в IIS
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: a41615ab096f3aa4f1ee94defd775248d0df4d2e
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025736"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402301"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Развертывание службы WCF, размещенной в IIS
 
@@ -43,7 +43,7 @@ ms.locfileid: "67025736"
 
 Размещенные в IIS службы WCF должны размещаться внутри приложения IIS. Можно создать новое приложение IIS для размещения служб WCF исключительно. Кроме того можно развернуть службу WCF в существующие приложения, в котором уже размещено содержимое ASP.NET 2.0 (например, страницы ASPX и веб-службы ASP.NET [ASMX]). Дополнительные сведения об этих параметрах см. в разделе «Размещение WCF Side-by-Side с ASP.NET» и «Размещение служб WCF в режиме совместимости с ASP.NET» разделы в [службы WCF и ASP.NET](wcf-services-and-aspnet.md).
 
-Обратите внимание, что [!INCLUDE[iis601](../../../../includes/iis601-md.md)] и более поздние версии периодически перезагружают изолированное приложение объектно-ориентированного программирования. Значение по умолчанию — 1740 минут. Максимальное поддерживаемое значение - 71582 минуты. Этот перезапуск можно отключить. Дополнительные сведения об этом свойстве см. в разделе [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
+Обратите внимание на то, что IIS 6.0 и более поздние версии периодически перезагружают изолированное объектно ориентированного программирования приложение. Значение по умолчанию — 1740 минут. Максимальное поддерживаемое значение - 71582 минуты. Этот перезапуск можно отключить. Дополнительные сведения об этом свойстве см. в разделе [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>Создание SVC-файла для службы WCF
 
@@ -103,7 +103,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 
 ### <a name="available-transports"></a>Доступные типы транспорта
 
-Службы WCF, размещенные в IIS 5.1 и [!INCLUDE[iis601](../../../../includes/iis601-md.md)] ограничены с помощью протокола HTTP для взаимодействия. В этих платформах IIS настройка размещенной службы на использование привязки, отличной от HTTP, приводит к ошибке во время активации службы. Для [!INCLUDE[iisver](../../../../includes/iisver-md.md)]поддерживается транспорт HTTP, Net.TCP, Net.Pipe, Net.MSMQ и msmq.formatname для обратной совместимости с существующими приложениями MSMQ.
+Службы WCF, размещенных в IIS 5.1 и IIS 6.0, ограничены с помощью протокола HTTP для взаимодействия. В этих платформах IIS настройка размещенной службы на использование привязки, отличной от HTTP, приводит к ошибке во время активации службы. Для [!INCLUDE[iisver](../../../../includes/iisver-md.md)]поддерживается транспорт HTTP, Net.TCP, Net.Pipe, Net.MSMQ и msmq.formatname для обратной совместимости с существующими приложениями MSMQ.
 
 ### <a name="http-transport-security"></a>Безопасность транспорта HTTP
 
