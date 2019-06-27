@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e193d6a51c3d4f1d81e3b74b1474d0e7cdcfca53
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61678508"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398114"
 ---
 # <a name="strings-c-programming-guide"></a>Строки (Руководство по программированию на C#)
 Строка — это объект типа <xref:System.String>, значением которого является текст. Внутри программы текст хранится в виде упорядоченной коллекции объектов <xref:System.Char> только для чтения. В конце строки C# нет нуль-символов. Поэтому строка C# может содержать любое число внедренных нуль-символов ('\0'). Свойство <xref:System.String.Length%2A> строки соответствует числу содержащихся в ней объектов `Char`, но не числу символов Юникода. Для доступа к отдельным кодовым точкам Юникода в строке используйте объект <xref:System.Globalization.StringInfo>.  
@@ -24,7 +24,7 @@ ms.locfileid: "61678508"
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
- Обратите внимание, что вы не используете оператор [new](../../../csharp/language-reference/keywords/new-operator.md) для создания объекта строки, за исключением случаев инициализации строки с помощью массива символов.  
+ Обратите внимание, что вы не используете оператор [new](../../../csharp/language-reference/operators/new-operator.md) для создания объекта строки, за исключением случаев инициализации строки с помощью массива символов.  
   
  Инициализируйте строку с константным значением <xref:System.String.Empty> для создания нового объекта <xref:System.String>, строка которого имеет нулевую длину. Представлением строкового литерала строки с нулевой длиной является "". Если вы инициализируете строки со значением <xref:System.String.Empty> вместо [NULL](../../../csharp/language-reference/keywords/null.md), вы снизите вероятность появления исключения <xref:System.NullReferenceException>. Используйте статический метод <xref:System.String.IsNullOrEmpty%28System.String%29>, чтобы проверить значение строки, прежде чем пытаться получить к ней доступ.  
   
@@ -126,7 +126,7 @@ string s = String.Empty;
   
 ## <a name="related-topics"></a>См. также  
   
-|Раздел|Описание|  
+|Раздел|ОПИСАНИЕ|  
 |-----------|-----------------|  
 |[Практическое руководство. Изменение содержимого строки](../../how-to/modify-string-contents.md)|Описание методов преобразования строк и изменения их содержимого.|  
 |[Практическое руководство. Сравнение строк](../../how-to/compare-strings.md)|Рассказывает, как строки сравниваются по языку, региональным параметрам и порядку.|  

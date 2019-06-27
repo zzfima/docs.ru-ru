@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], bindings
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
-ms.openlocfilehash: e69cd500c50e9d76824d0e438a1af86f3a722c52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a29bb9136be2e3bb07776741282a321ef4ee8f2
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857692"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402098"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Привязки Windows Communication Foundation
 Windows Communication Foundation (WCF) отделяет способ записи программное обеспечение для работы приложения от способа его взаимодействия с другим программным обеспечением. Привязки используются для указания транспорта, кодировки и данных протокола, требуемых для связи клиентов и служб. Привязки WCF используются для создания базового описания конечной точки, поэтому большая часть деталей привязки должны быть согласованы взаимодействующих сторон. Самым простым способом является использование клиентами службы той же привязки, которую использует конечная точка службы. Дополнительные сведения о том, как это сделать, см. в разделе [с помощью привязок для настройки служб и клиентов](~/docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  

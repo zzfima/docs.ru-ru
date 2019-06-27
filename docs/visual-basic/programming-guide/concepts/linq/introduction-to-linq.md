@@ -2,12 +2,12 @@
 title: Введение в LINQ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
-ms.openlocfilehash: 95c1d99604ba9f87e34b5bb423d42bf97c0cd29e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c42cf73dce91bfb4da1b886613635532460f0e6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648802"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402413"
 ---
 # <a name="introduction-to-linq-visual-basic"></a>Введение в LINQ (Visual Basic)
 LINQ (Language-Integrated Query) — это новая возможность, появившаяся в .NET Framework версии 3.5, которая соединяет мир объектов с миром данных.  
@@ -20,7 +20,7 @@ LINQ (Language-Integrated Query) — это новая возможность, 
   
  На приведенном ниже рисунке показан частично выполненный запрос LINQ к базе данных SQL Server в C# и Visual Basic с полной проверкой типов и поддержкой IntelliSense.  
   
- ![Схема, shwos запрос LINQ с Intellisense.](./media/introduction-to-linq/linq-query-intellisense.png)  
+ ![Схема, показывающая запрос LINQ с Intellisense.](./media/introduction-to-linq/linq-query-intellisense.png)  
   
 ## <a name="next-steps"></a>Следующие шаги  
  Чтобы получить дополнительные сведения о LINQ, начните с ознакомления с некоторыми основным понятиями в разделе Приступая к работе [Приступая к работе с LINQ в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md), а затем ознакомиться с документацией по технологии LINQ, в которой вы являетесь Вы заинтересованы:  

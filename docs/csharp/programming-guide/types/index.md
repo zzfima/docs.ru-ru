@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: c971a2d5d7caeb030cf504c44be8c8123decc3fc
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 796dbb012426cdaea7828afeea4fba15f57095c6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423408"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398099"
 ---
 # <a name="types-c-programming-guide"></a>Типы (Руководство по программированию на C#)
 
@@ -120,13 +120,13 @@ char c = 'Z';
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
-Константа `System.IO.FileMode.Create` имеет значение 2. Поскольку имена намного лучше воспринимаются человеком при изучении исходного кода, мы рекомендуем всегда использовать перечисления вместо литеральных числовых констант. Для получения дополнительной информации см. <xref:System.IO.FileMode?displayProperty=nameWithType>.
+Константа `System.IO.FileMode.Create` имеет значение 2. Поскольку имена намного лучше воспринимаются человеком при изучении исходного кода, мы рекомендуем всегда использовать перечисления вместо литеральных числовых констант. Дополнительные сведения можно найти по адресу: <xref:System.IO.FileMode?displayProperty=nameWithType>.
 
 Все перечисления наследуют от <xref:System.Enum?displayProperty=nameWithType>, который наследует от <xref:System.ValueType?displayProperty=nameWithType>. К перечислениям применимы все те же правила, что к структурам. Дополнительные сведения см. в статье [Enumeration Types](../../../csharp/programming-guide/enumeration-types.md) (Типы перечислений).
 
 ### <a name="reference-types"></a>Ссылочные типы
 
-Тип, который определен как [класс](../../../csharp/language-reference/keywords/class.md), [делегат](../../../csharp/language-reference/keywords/delegate.md), массив или [интерфейс](../../../csharp/language-reference/keywords/interface.md), называется *ссылочным типом*. Когда во время выполнения вы объявляете переменную ссылочного типа, такая переменная будет содержать значение [NULL](../../../csharp/language-reference/keywords/null.md), пока вы явным образом не создадите объект с помощью оператора [new](../../../csharp/language-reference/keywords/new.md) или не назначите его объекту, созданному в другом месте, используя `new`, как показано в следующем примере:
+Тип, который определен как [класс](../../../csharp/language-reference/keywords/class.md), [делегат](../../../csharp/language-reference/keywords/delegate.md), массив или [интерфейс](../../../csharp/language-reference/keywords/interface.md), называется *ссылочным типом*. Когда во время выполнения вы объявляете переменную ссылочного типа, такая переменная будет содержать значение [NULL](../../../csharp/language-reference/keywords/null.md), пока вы явным образом не создадите объект с помощью оператора [new](../../../csharp/language-reference/operators/new-operator.md) или не назначите его объекту, созданному в другом месте, используя `new`, как показано в следующем примере:
 
 ```csharp
 MyClass mc = new MyClass();
