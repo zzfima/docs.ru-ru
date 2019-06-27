@@ -4,4 +4,6 @@
     - name: 'Использование типов, допускающих значение NULL'
       href: using-nullable-types.md
     - name: 'Практическое руководство. Идентификация типа, допускающего значение NULL'
+
       href: how-to-identify-a-nullable-type.md
+

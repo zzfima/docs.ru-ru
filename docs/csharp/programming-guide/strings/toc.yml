@@ -1,5 +1,6 @@
 - name: Строки
   href: index.md
   items:
-    - name: 'Практическое руководство. Как определить, представляет ли строка числовое значение'
+
+   - name: Практическое руководство. Как определить, представляет ли строка числовое значение
       href: how-to-determine-whether-a-string-represents-a-numeric-value.md
