@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-ms.openlocfilehash: 9993a7ecb61d9a45d88162fdef488e79b155540c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6212fd911bd5b255347459a1b5a7b2f46e31963e
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586854"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425087"
 ---
 # <a name="security-protocols"></a>Протоколы безопасности
 Протоколы WS-Security предоставляют механизмы обеспечения безопасности веб-служб, охватывающие все существующие требования к безопасности обмена сообщениями на предприятии. В этом разделе подробно описано, Windows Communication Foundation (WCF) (реализованный в <xref:System.ServiceModel.Channels.SecurityBindingElement>) для следующих протоколов ws-security.  
@@ -131,7 +131,7 @@ ms.locfileid: "64586854"
  WCF поддерживает профили маркеров WSS SAML 1.0 и 1.1 для маркеров SAML 1.1. Возможна реализация других версий форматов маркеров SAML.  
   
 ### <a name="15-security-context-token"></a>1.5 Маркер контекста безопасности  
- WCF поддерживает маркера контекста безопасности (SCT) появился в спецификации WS-SecureCoversation. Маркер контекста безопасности служит для представления контекста безопасности, установленного в спецификации SecureConversation, а также протоколов двоичного согласования TLS и SSPI, описываемых ниже.  
+ WCF поддерживает маркера контекста безопасности (SCT) в WS-SecureConversation. Маркер контекста безопасности служит для представления контекста безопасности, установленного в спецификации SecureConversation, а также протоколов двоичного согласования TLS и SSPI, описываемых ниже.  
   
 ## <a name="2-common-message-security-parameters"></a>2. Общие параметры безопасности сообщений  
   

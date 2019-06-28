@@ -2,12 +2,12 @@
 title: Пользовательский маркер
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 862b4b26295ef3e90064b27ecd753e9b541471a7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 11b89f6d4f2800f079ba6576801b39c85324f6e0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650213"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425070"
 ---
 # <a name="custom-token"></a>Пользовательский маркер
 В этом примере демонстрируется добавление пользовательской реализации маркера в приложение Windows Communication Foundation (WCF). В этом примере маркер `CreditCardToken` используется для безопасной передачи информации о кредитных картах клиента в службу. Маркер передается в заголовок сообщения WS-Security, подписывается и шифруется с помощью симметричного элемента привязки безопасности вместе с телом и другими заголовками сообщения. Это полезно в случаях, когда встроенных маркеров недостаточно. В этом образце показано, как предоставить пользовательский маркер безопасности службы вместо того, чтобы использовать встроенные маркеры. Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ".
@@ -251,7 +251,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 
  В этом образце поставщик маркеров используется только на стороне клиента, а структура проверки подлинности только на стороне службы, поскольку маркер кредитной карты требуется передать только в направлении от клиента к службе.
 
- Функции на стороне клиента находятся в классах `CreditCardClientCrendentials`, `CreditCardClientCredentialsSecurityTokenManager` и `CreditCardTokenProvider`.
+ Функции на стороне клиента находятся в классах `CreditCardClientCredentials`, `CreditCardClientCredentialsSecurityTokenManager` и `CreditCardTokenProvider`.
 
  Функции на стороне службы находятся в классах `CreditCardServiceCredentials`, `CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` и `CreditCardTokenAuthorizationPolicy`.
 

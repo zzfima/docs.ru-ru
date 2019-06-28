@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <clear> element for <namedCaches>
 - clear element for <namedCaches>
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
-ms.openlocfilehash: eb0a50919e163a795abc70d132bd45f1d05192ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e563f8f27538e70ba90465fc28d300754509f7a4
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674172"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423320"
 ---
 # <a name="clear-element-for-namedcaches"></a>\<Очистить > элемент для \<namedCaches >
 Очищает все `namedCache` записей в `namedCaches` коллекции для кэша памяти.  
@@ -24,7 +24,7 @@ ms.locfileid: "61674172"
   
 ```xml  
 <namedCaches>  
-    <clear name="default" />  
+    <clear name="Default" />  
     <!-- child elements -->  
  </namedCaches>  
 ```  

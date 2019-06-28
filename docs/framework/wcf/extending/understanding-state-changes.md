@@ -2,12 +2,12 @@
 title: Основные сведения об изменении состояния
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 5bfee392053d9f3fd529d68b533a046e53f20dd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 858da2a88c17920910c05966bb3b211d754fb278
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771622"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424767"
 ---
 # <a name="understanding-state-changes"></a>Основные сведения об изменении состояния
 В данном разделе рассматриваются состояния и переходы каналов, а также типы, используемые для структуризации каналов, и способы их реализации.  
@@ -28,7 +28,7 @@ ms.locfileid: "61771622"
   
  Каждый объект <xref:System.ServiceModel.ICommunicationObject> запускается в состоянии Created. В этом состоянии приложение может настраивать объект с помощью изменения его свойств. После того как объект находится в состоянии, отличном от Created, он считается неизменяемым.  
   
- ![Канал transitition состояние](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
+ ![Переход состояния канала](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 Рис. 1. Конечный автомат ICommunicationObject.  
   
  Windows Communication Foundation (WCF) предоставляет абстрактный базовый класс с именем <xref:System.ServiceModel.Channels.CommunicationObject> , реализующий <xref:System.ServiceModel.ICommunicationObject> и конечный автомат каналов. Ниже приведена схема изменившегося состояния, относящаяся к <xref:System.ServiceModel.Channels.CommunicationObject>. Кроме конечного автомата <xref:System.ServiceModel.ICommunicationObject>, на схеме также показано время, когда вызываются дополнительные методы <xref:System.ServiceModel.Channels.CommunicationObject>.  

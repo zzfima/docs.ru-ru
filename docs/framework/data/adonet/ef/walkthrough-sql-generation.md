@@ -2,12 +2,12 @@
 title: Пошаговое руководство. Создание SQL
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 380ab80a577fa103c33328047cd24cce6be5cb6e
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 5d8723c6a6d1ab12a2ba1f0f2f7cd5e09e82bfad
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690343"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422766"
 ---
 # <a name="walkthrough-sql-generation"></a>Пошаговое руководство. Создание SQL
 
@@ -128,7 +128,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
 
 ![Схема](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")
 
-Следующее значение false передается в стек IsParentAJoin, и обрабатывается условие соединения Var(Extent1).CategoryID == Var(Extent2).CategoryID. Var(Extenent1) разрешается в \<symbol_Extent1 > после поиска в таблице символов. Поскольку экземпляр разрешается в простой символ как результат обработки Var(Extent1). CategoryID, SqlBuilder с \<symbol1 >.» Возвращается CategoryID». Схожим образом обрабатывается другая сторона сравнения, результат посещения условия соединения добавляется к предложению FROM инструкции SelectStatement1, а из стека IsParentAJoin удаляется значение false.
+Следующее значение false передается в стек IsParentAJoin, и обрабатывается условие соединения Var(Extent1).CategoryID == Var(Extent2).CategoryID. Var(Extent1) разрешается в \<symbol_Extent1 > после поиска в таблице символов. Поскольку экземпляр разрешается в простой символ как результат обработки Var(Extent1). CategoryID, SqlBuilder с \<symbol1 >.» Возвращается CategoryID». Схожим образом обрабатывается другая сторона сравнения, результат посещения условия соединения добавляется к предложению FROM инструкции SelectStatement1, а из стека IsParentAJoin удаляется значение false.
 
 На этом обработка Join1 завершается, а область удаляется из символьной таблицы.
 

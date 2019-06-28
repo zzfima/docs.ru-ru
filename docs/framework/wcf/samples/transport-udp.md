@@ -2,12 +2,12 @@
 title: 'Транспорт: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 12981e970706c5fc1d954c237309f12c85320c75
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ae4bf22f452035d10ecba6bcf93bf580ab7f5f8
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617375"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422165"
 ---
 # <a name="transport-udp"></a>Транспорт: UDP
 Пример транспорта UDP демонстрируется реализация UDP одноадресного и многоадресного как пользовательский транспорт Windows Communication Foundation (WCF). Образец описана процедура, предлагаемая для создания пользовательского транспорта в WCF, с помощью инфраструктуры канала и согласно рекомендации по WCF. Для создания пользовательского транспорта выполните следующие действия.  
@@ -446,7 +446,7 @@ Press <ENTER> to terminate the service and exit...
  Для восстановления кода клиента и конфигурации с помощью Svcutil.exe запустите приложение службы и выполните следующий файл Svcutil.exe из корневого каталога образца.  
   
 ```console
-svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
+svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
 ```  
   
  Обратите внимание, что Svcutil.exe не создает конфигурацию расширения привязки для `SampleProfileUdpBinding`, поэтому ее нужно добавить вручную.  

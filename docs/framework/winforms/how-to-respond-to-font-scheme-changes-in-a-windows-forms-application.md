@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 6aad851770fb886de5d5c00b544ac6eac2857e42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fd7f99b35730cf867bfad5da24bc3f223e9a0f8
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801859"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425330"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Практическое руководство. Реагирование на изменения схемы шрифтов в приложениях Windows Forms
 В операционных системах Windows пользователь может изменить параметры шрифта во всей системе, чтобы проверить шрифт по умолчанию отображаются, больше или меньше. Изменение этих параметров шрифта важно для пользователей с нарушениями зрения и требуют более длинный тип для чтения текста на экране компьютера. Вы можете настроить приложение Windows Forms реагировать на эти изменения путем увеличения или уменьшения размера формы и все содержащиеся в нем текст при каждом изменении шрифтовой схемы. Если требуется, чтобы формы в соответствии с изменениями в размерах шрифта динамически, можно добавить код в форму.  
@@ -21,7 +21,7 @@ ms.locfileid: "61801859"
   
 ### <a name="to-use-the-desktop-font-and-respond-to-font-scheme-changes"></a>Чтобы использовать шрифт рабочего стола и реагировать на изменения схемы шрифтов  
   
-1. Создайте форму и добавьте элементы управления к нему. Дополнительные сведения см. в разделе [Как Создание приложения Windows Forms из командной строки](how-to-create-a-windows-forms-application-from-the-command-line.md) и [элементы управления для использования в формах Windows Forms](./controls/controls-to-use-on-windows-forms.md).  
+1. Создайте форму и добавьте элементы управления к нему. Дополнительные сведения см. в разделе [Практическое руководство. Создание приложения Windows Forms из командной строки](how-to-create-a-windows-forms-application-from-the-command-line.md) и [элементы управления для использования в формах Windows Forms](./controls/controls-to-use-on-windows-forms.md).  
   
 2. Добавьте ссылку на <xref:Microsoft.Win32> пространства имен в код.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "61801859"
  [!code-csharp[WinFormsAutoScaling#1](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
  [!code-vb[WinFormsAutoScaling#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
   
- Конструктор в этом примере код содержит вызов `InitializeComponent`, который определяется при создании нового проекта Windows Forms в Visual Studio. Удалите эту строку кода, при создании приложения в командной строке.  
+ Конструктор в этом примере кода содержит вызов `InitializeComponent`, который определяется при создании нового проекта Windows Forms в Visual Studio. Удалите эту строку кода, при создании приложения в командной строке.  
   
 ## <a name="see-also"></a>См. также
 

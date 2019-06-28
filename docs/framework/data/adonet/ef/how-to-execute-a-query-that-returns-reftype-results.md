@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7dbbfbcd-93f5-4546-9dbf-e5fa290b69fa
-ms.openlocfilehash: f3f1e11d3211140abb02733de4b5b46ac93cf769
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6924cac18775737cee73a0505a9635123c11e77d
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607951"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422685"
 ---
 # <a name="how-to-execute-a-query-that-returns-reftype-results"></a>Практическое руководство. Выполнение запроса, возвращающего результаты RefType
 В этом подразделе показано выполнение команды для концептуальной модели с помощью объекта <xref:System.Data.EntityClient.EntityCommand>, а также получение результатов <xref:System.Data.Metadata.Edm.RefType> с помощью <xref:System.Data.EntityClient.EntityDataReader>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Выполнение кода в этом примере  
   
-1. Добавить [модели AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) в проект и настроить проект для использования [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Дополнительные сведения см. в разделе [Как Использовать мастер моделей EDM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
+1. Добавить [модели AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) в проект и настроить проект для использования [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Дополнительные сведения см. в разделе [Практическое руководство. Использовать мастер моделей EDM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 2. На странице кода приложения добавьте следующие инструкции `using` (`Imports` в Visual Basic):  
   
@@ -25,7 +25,7 @@ ms.locfileid: "61607951"
      [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]  
   
 ## <a name="example"></a>Пример  
- В этом примере выполняется запрос, который возвращает результаты <xref:System.Data.Metadata.Edm.RefType>. Если следующий запрос передан в качестве аргумента функции `ExectueRefTypeQuery`, то функция возвращает ссылку на сущность:  
+ В этом примере выполняется запрос, который возвращает результаты <xref:System.Data.Metadata.Edm.RefType>. Если следующий запрос передан в качестве аргумента функции `ExecuteRefTypeQuery`, то функция возвращает ссылку на сущность:  
   
  [!code-csharp[DP EntityServices Concepts 2#REF2](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#ref2)]  
   

@@ -2,12 +2,12 @@
 title: Практическое руководство. Настройка служб WCF для взаимодействия с клиентами WSE 3.0
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 1c5a5e4e92eedb21e3405370e59344d3b861d1dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5034744059e7ed87d4f8b41c6ae89d1af1bf0f56
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619166"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425391"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Практическое руководство. Настройка служб WCF для взаимодействия с клиентами WSE 3.0
 Службы Windows Communication Foundation (WCF) совместимы на уровне линий связи с Web Services Enhancements 3.0 для клиентов Microsoft .NET (WSE) при настройке службы WCF для использования версии спецификации WS-Addressing от августа 2004 г.  
@@ -24,7 +24,7 @@ ms.locfileid: "64619166"
   
     3. Укажите режим проверки подлинности и версию спецификации WS-Security, которые используются для защиты сообщений, совместимых с WSE 3.0, добавив дочерний элемент [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) для [ \<привязки >](../../../../docs/framework/misc/binding.md).  
   
-         Чтобы задать режим проверки подлинности, задайте `authenicationMode` атрибут [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Режим проверки подлинности примерно соответствует готовому к использованию утверждению безопасности в WSE 3.0. В следующей таблице сопоставлены режимы проверки подлинности в WCF для утверждения готовое к использованию безопасности в WSE 3.0.  
+         Чтобы задать режим проверки подлинности, задайте `authenticationMode` атрибут [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Режим проверки подлинности примерно соответствует готовому к использованию утверждению безопасности в WSE 3.0. В следующей таблице сопоставлены режимы проверки подлинности в WCF для утверждения готовое к использованию безопасности в WSE 3.0.  
   
         |Режим проверки подлинности WCF|Готовое к использованию утверждение безопасности WSE 3.0|  
         |-----------------------------|----------------------------------------|  

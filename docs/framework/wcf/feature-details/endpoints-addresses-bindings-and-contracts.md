@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: 3d345cfa3169e22e7c5e85cd1c7d11c2feef4f5f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d224535bb266d0a3673359388c6c211103df7374
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665960"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424849"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Конечные точки: адреса, привязки и контракты
 Весь обмен данными со службой Windows Communication Foundation (WCF) осуществляется через *конечные точки* службы. Конечные точки предоставляют клиентам доступ к функциональным возможностям службы WCF.  
@@ -61,10 +61,10 @@ ms.locfileid: "64665960"
   
      Дополнительные сведения об определении контракта см. в разделе [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
-- Поведения. Поведения конечных точек можно использовать для настройки локального поведения конечной точки службы. Поведения конечной точки выполняют это путем участия в процессе построения WCFruntime. Примером поведения является свойство <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>, позволяющее указывать отличный от адреса SOAP или WSDL адрес прослушивания. Дополнительные сведения см. в разделе [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
+- Поведения. Поведения конечных точек можно использовать для настройки локального поведения конечной точки службы. Поведения конечной точки выполняют это путем участия в процессе создания среды выполнения WCF. Примером поведения является свойство <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>, позволяющее указывать отличный от адреса SOAP или WSDL адрес прослушивания. Дополнительные сведения см. в разделе [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
   
 ## <a name="defining-endpoints"></a>Определение конечных точек  
- Адрес конечной точки службы можно задать императивно с помощью кода или декларативно с помощью конфигурации. Дополнительные сведения см. в разделе [Как Создать конечную точку службы в конфигурации](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) и [как: Создать конечную точку службы в коде](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
+ Адрес конечной точки службы можно задать императивно с помощью кода или декларативно с помощью конфигурации. Дополнительные сведения см. в разделе [Практическое руководство. Создать конечную точку службы в конфигурации](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) и [как: Создать конечную точку службы в коде](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  В данном разделе объясняется назначение привязок, конечных точек и адресов; показано, как конфигурировать привязку и конечную точку, и демонстрируется, как использовать поведение `ClientVia` и свойство `ListenUri`.  

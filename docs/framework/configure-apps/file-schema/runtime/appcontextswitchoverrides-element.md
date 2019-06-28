@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04f31748fd53fe3281102fcadcc1e56ea3cc1109
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 39060d503a006ab292818b58a6fa71f44dee68a0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307092"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423333"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > элемент
 Определяет один или несколько коммутаторов, используемых классом <xref:System.AppContext> для предоставления механизма отказа от новых функциональных возможностей.  
@@ -99,7 +99,7 @@ ms.locfileid: "67307092"
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Элементы управления ли значение [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) свойство [IntPtr](xref:System.IntPtr) что представляет область памяти окна обработки, или это дескриптор окна (HWND). Дополнительные сведения см. в разделе [Устранение рисков. CspParameters.ParentWindowHandle ожидает HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value). |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|Управляет ли использование управляемых криптографических классов в вызывает исключение режим FIPS <xref:System.Security.Cryptography.CryptographicException> (`true`) или полагается на реализацию системных библиотек (`false`).|.NET Framework 4.8|
 |`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|Определяет, является ли значение по умолчанию для некоторых операций SignedCMS SHA1 или SHA256.<br>Из-за конфликта с SHA1 корпорация Майкрософт рекомендует использовать SHA256.|.NET Framework 4.7.1|
-|`Switch.System.Security.Cryptography.X509Certificates.`<br/>`ECDsaCertificateExtensions.UseLegacyPublicKeyReader`|Элементы управления ли <xref:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey%2A?displayProperty=nameWithtype> метод правильно обрабатывает все именованные кривых, поддерживаемый операционной системой (`false`) или возвращается к поведению предыдущих версий.|.NET Framework 4.8|
+|`Switch.System.Security.Cryptography.X509Certificates.`<br/>`ECDsaCertificateExtensions.UseLegacyPublicKeyReader`|Элементы управления ли <xref:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey%2A?displayProperty=nameWithType> метод правильно обрабатывает все именованные кривых, поддерживаемый операционной системой (`false`) или возвращается к поведению предыдущих версий.|.NET Framework 4.8|
 |`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|Определяет, является ли значение по умолчанию для некоторых операций SignedXML SHA1 или SHA256.<br>Из-за конфликта с SHA1 корпорация Майкрософт рекомендует использовать SHA256.|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Определяет, является ли `TransportWithMessageCredential` режим безопасности разрешает сообщения с неподписанным заголовком «to». Это параметр согласием. Дополнительные сведения см. в разделе [изменения среды выполнения в .NET Framework 4.6.1](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf).|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|Элементы управления ли <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> конструктор вызывает <xref:System.ArgumentException> Если один из элементов является `null`.|.NET Framework 4.7.1| 
@@ -118,7 +118,7 @@ ms.locfileid: "67307092"
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Определяет, применяется ли Windows Presentation Foundation старый алгоритм (`true`) или новый алгоритм (`false`) в выделении пространства для \*-столбцов. Дополнительные сведения см. в разделе [Устранение рисков. Выделение пространства элемента управления сетки для столбцов со звездочкой](../../../migration-guide/retargeting/4.6.2-4.7.md#wpf-grid-allocation-of-space-to-star-columns). |.NET Framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|События изменения ли селектора или вкладку управления всегда обновляет значение своего свойства выбранное значение перед порождением выделение элементов управления.|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Text.`<br/>`UseAdornerForTextboxSelectionRendering`|Определяет, доступен ли выбор на основе не графический элемент отрисовки для <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.PasswordBox> элементы управления для предотвращения перекрыто текст (`false`), текст выводится только в слое графических элементов или (`true`).|.NET Framework 4.7.2|
-|`Switch.System.Windows.Data.Binding.`<br/>`IListIndexerHidesCustomIndexer`|Указывает, используются ли пользовательский интерфейс IList индексаторы неправильно (`false`) или правильно (`true`) по <xref:System.Windows.Data.Binding?displayProperty=nameWithtype> класса.|.NET Framework 4.8|
+|`Switch.System.Windows.Data.Binding.`<br/>`IListIndexerHidesCustomIndexer`|Указывает, используются ли пользовательский интерфейс IList индексаторы неправильно (`false`) или правильно (`true`) по <xref:System.Windows.Data.Binding?displayProperty=nameWithType> класса.|.NET Framework 4.8|
 |`Switch.System.Windows.DoNotScaleForDpiChanges`|Определяет, происходят ли изменения DPI в системе (значение `false`) или для каждого монитора (значение `true`).|.NET Framework 4.6.2|
 |`Switch.System.Windows.`<br/>`DoNotUsePresentationDpiCapabilityTier2OrGreater`|Элементы управления ли увеличение размера элементов управления в <xref:System.Windows.Interop.HwndHost?displayProperty=nameWithType> отключены, когда WPF выполняется в режиме учитывать для каждого монитора (`true`) или включена (`false`).|.NET Framework 4.8|
 |`Switch.System.Windows.Forms.`<br/>`DomainUpDown.UseLegacyScrolling`|Определяет, должен ли разработчик особым образом обрабатывать <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> действие, если присутствует текст элемента управления. `true` для обработки <xref:System.Windows.Forms.DomainUpDown.UpButton> действия; `false` для <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> и <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType> действия должны быть правильно синхронизированы.|.NET Framework 4.7.2|

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38db390b8fad9cd36dacf33f9647b0272eddc4a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c52c9bf37e67e4d26867d2b3754945e86e2bf609
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616407"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422414"
 ---
 # <a name="interop-etw-events"></a>События взаимодействия (трассировка событий Windows)
 <a name="top"></a> С помощью событий взаимодействия регистрируются сведения о создании заглушек и кэшировании MSIL.  
@@ -43,7 +43,7 @@ ms.locfileid: "64616407"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|Идентификатор модуля.|  
 |StubMethodID|win:UInt64|Идентификатор метода-заглушки.|  
-|StubFlags|win:UInt64|Флаги для заглушки:<br /><br /> 0x1 — обратное взаимодействие;<br /><br /> 0x2 — COM-взаимодействие;<br /><br /> 0x4 — заглушка, созданная программой NGen.exe;<br /><br /> 0x8 — делегат;<br /><br /> 0x10 — переменный аргумент;<br /><br /> 0x20 — неуправляемый вызываемый метод.|  
+|StubFlags|win:UInt64|Флаги для заглушки:<br /><br /> 0x1 — обратное взаимодействие;<br /><br /> 0x2 — COM-взаимодействие;<br /><br /> 0x4 — заглушка, созданная программой NGen.exe;<br /><br /> 0x8 — делегат;<br /><br /> 0x10 — переменный аргумент.<br /><br /> 0x20 — неуправляемый вызываемый метод.|  
 |ManagedInteropMethodToken|win:UInt32|Токен управляемого метода взаимодействия.|  
 |ManagedInteropMethodNameSpace|win:UnicodeString|Пространство имен управляемого метода взаимодействия.|  
 |ManagedInteropMethodName|win:UnicodeString|Имя управляемого метода взаимодействия.|  

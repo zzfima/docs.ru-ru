@@ -2,12 +2,12 @@
 title: Элемент <messageSenderAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: 410fffd541926b9a2e75c04d26a2a1e08a262939
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 804c280bcdb0fecc87f71121b7d95b5fd0268de9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764092"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423121"
 ---
 # <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication > элемент
 Задает параметры проверки подлинности для одноранговых отправителей сообщений.  
@@ -38,10 +38,10 @@ ms.locfileid: "61764092"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|customCertificateValidatorType|Тип и сборка, используемые для проверки пользовательского типа. Этот атрибут должен быть задан, когда `certificateValidationMode` имеет значение `Custom`.|  
-|certifcateValidationMode|Задает один из трех режимов для проверки учетных данных. Если свойству присвоено значение `Custom`, также необходимо указать свойство `customCertificateValidator`.|  
-|revocationMode|Один из режимов, используемых для проверки списков отозванных сертификатов (CRL).|  
-|trustedStoreLocation|Одно из двух местоположений системного хранилища: `LocalMachine` или `CurrentUser`. Данное значение используется при согласовании сертификата службы для клиента. Выполнение проверки **доверенные лица** хранения в указанном местоположении хранилища.|  
+|`customCertificateValidatorType`|Тип и сборка, используемые для проверки пользовательского типа. Этот атрибут должен быть задан, когда `certificateValidationMode` имеет значение `Custom`.|  
+|`certificateValidationMode`|Задает один из трех режимов для проверки учетных данных. Если свойству присвоено значение `Custom`, также необходимо указать свойство `customCertificateValidator`.|  
+|`revocationMode`|Один из режимов, используемых для проверки списков отозванных сертификатов (CRL).|  
+|`trustedStoreLocation`|Одно из двух местоположений системного хранилища: `LocalMachine` или `CurrentUser`. Данное значение используется при согласовании сертификата службы для клиента. Выполнение проверки **доверенные лица** хранения в указанном местоположении хранилища.|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>Атрибут customCertificateValidatorType  
   
