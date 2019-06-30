@@ -1,13 +1,13 @@
 ---
 title: Команда dotnet clean
 description: Команда dotnet clean очищает текущий каталог.
-ms.date: 04/14/2019
-ms.openlocfilehash: fa19f1b041e4031082f928135395a5f06ce702e9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 36630c046ff8f1ad8d513b4e64cfb74a8625776b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631824"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422018"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -24,11 +24,12 @@ ms.locfileid: "65631824"
 ## <a name="synopsis"></a>Краткий обзор
 
 ```
-dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+    [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
-## <a name="description"></a>Описание
+## <a name="description"></a>ОПИСАНИЕ
 
 Команда `dotnet clean` очищает выходные данные предыдущей сборки. Она реализуется как [целевой объект MSBuild](/visualstudio/msbuild/msbuild-targets), поэтому при выполнении команды проект получает оценку. Очищаются только выходные данные, созданные во время сборки. Очищаются папки с промежуточными (*obj*) и окончательными выходными данными (*bin*).
 
@@ -55,6 +56,10 @@ dotnet clean [-h|--help]
 * **`--interactive`**
 
   Позволяет команде остановиться и дождаться, пока пользователь выполнит действие или введет данные. Например, чтобы завершить проверку подлинности. Доступно, начиная с пакета SDK для .NET Core 3.0.
+
+* **`--nologo`**
+
+  Скрывает загрузочный баннер или сообщение об авторских правах. Доступно, начиная с пакета SDK для .NET Core 3.0.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 

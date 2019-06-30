@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 352599d60a42a034b3d6647b1fe8f1cbf2f4572d
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 32593465c1a161aa1293b7b233539fa930c7e1d8
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612008"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402206"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Тестирование библиотеки .NET Standard с помощью .NET Core в Visual Studio 2017
 
@@ -26,7 +26,7 @@ ms.locfileid: "59612008"
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. В **обозревателе решений** откройте контекстное меню для узла решения **ClassLibraryProjects** и выберите **Добавить** > **Новый проект**.
 
-1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual C#**. Выберите узел **.NET Core**, а затем — шаблон проекта **Проект теста MSTest (.NET Core)**. В текстовом поле **Имя** введите имя проекта StringLibraryTest. Нажмите кнопку **ОК**, чтобы создать проект модульного теста.
+1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual C#** . Выберите узел **.NET Core**, а затем — шаблон проекта **Проект теста MSTest (.NET Core)** . В текстовом поле **Имя** введите имя проекта StringLibraryTest. Нажмите кнопку **ОК**, чтобы создать проект модульного теста.
 
    ![Диалоговое окно "Добавление нового проекта", в котором отображается проект модульного теста (C#)](./media/testing-library-with-visual-studio/create-new-test-project.png)
 
@@ -55,7 +55,7 @@ ms.locfileid: "59612008"
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. В **обозревателе решений** откройте контекстное меню для узла решения **ClassLibraryProjects** и выберите **Добавить** > **Новый проект**.
 
-1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual Basic**. Выберите узел **.NET Core**, а затем — шаблон проекта **Проект теста MSTest (.NET Core)**. В текстовом поле **Имя** введите имя проекта StringLibraryTest. Нажмите кнопку **ОК**, чтобы создать проект модульного теста.
+1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual Basic**. Выберите узел **.NET Core**, а затем — шаблон проекта **Проект теста MSTest (.NET Core)** . В текстовом поле **Имя** введите имя проекта StringLibraryTest. Нажмите кнопку **ОК**, чтобы создать проект модульного теста.
 
    ![Диалоговое окно "Добавление нового проекта", в котором отображается проект модульного теста (Visual Basic)](./media/testing-library-with-visual-studio/vb-create-new-test-project.png)
 
@@ -68,7 +68,7 @@ ms.locfileid: "59612008"
 
    Исходный код, созданный шаблоном модульного теста, выполняет следующие действия.
 
-   * Он импортирует пространство имен [Microsoft.VisualStudio.TestTools.UnitTesting]<xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=namewithType>, которое содержит типы, используемые для модульного тестирования.
+   * Он импортирует пространство имен <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, которое содержит типы, используемые для модульного тестирования.
 
    * Он применяет атрибут <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>) к классу `UnitTest1`. При запуске модульного теста автоматически выполняются все методы теста в классе теста, помеченные атрибутом <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute>.
 
