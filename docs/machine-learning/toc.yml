@@ -80,6 +80,14 @@
   items:
     - name: Обзор
       href: automl-overview.md
+    - name: Построитель моделей
+      items:
+        - name: Что собой представляет построитель моделей?
+          href: automate-training-with-model-builder.md
+        - name: Установить построитель моделей
+          href: how-to-guides/install-model-builder.md
+        - name: Прогнозирование цен с помощью построителя моделей
+          href: tutorials/predict-prices-with-model-builder.md
     - name: CLI ML.NET
       items:
         - name: Установка CLI

@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 05/16/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 208e97419faee097db8e187081f2910b71ca2e35
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 965408a180245712ceda2c3c17bdf42755af1c2c
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882276"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402458"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Учебник. Категоризация цветов ириса с использованием кластеризации k-средних в ML.NET
 
@@ -41,7 +41,7 @@ ms.locfileid: "65882276"
 
 ## <a name="create-a-console-application"></a>Создание консольного приложения
 
-1. Запустите Visual Studio. Выберите **Файл** > **Создать** > **Проект** в меню. В диалоговом окне **Новый проект** выберите узел **Visual C#**, а затем — узел **.NET Core**. Выберите шаблон проекта **Консольное приложение (.NET Core)**. В текстовом поле **Имя** введите "IrisFlowerClustering", а затем нажмите кнопку **OK**.
+1. Запустите Visual Studio. Выберите **Файл** > **Создать** > **Проект** в меню. В диалоговом окне **Новый проект** выберите узел **Visual C#** , а затем — узел **.NET Core**. Выберите шаблон проекта **Консольное приложение (.NET Core)** . В текстовом поле **Имя** введите "IrisFlowerClustering", а затем нажмите кнопку **OK**.
 
 1. Создайте каталог с именем *Data* в папке проекта, чтобы хранить в нем наборы данных и файлы модели:
 

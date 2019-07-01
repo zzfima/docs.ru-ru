@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 3e4fed8ddde007eb9ce233eea942d6c052f0f2c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1e825efcb2a352c823391fb0dad3d566189da001
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615180"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425540"
 ---
 # <a name="framework-libraries"></a>Библиотеки платформы
 
@@ -28,11 +28,11 @@ ms.locfileid: "64615180"
 .NET включает набор типов-примитивов, которые (в разной степени) используются во всех приложениях. Эти типы содержат данные, например числа, строки, байты и произвольные объекты. Язык C# содержит ключевые слова для таких типов. Ниже приведен некоторый набор этих типов с соответствующими ключевыми словами C#.
 
 * <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/keywords/object.md)) — исходный базовый класс в системе типов CLR. Это корень иерархии типов.
-* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/keywords/short.md)) — 16-разрядный целочисленный тип со знаком. Также имеется и <xref:System.UInt16> без знака.
-* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/keywords/int.md)) — 32-разрядный целочисленный тип со знаком. Также имеется и [UInt32](../csharp/language-reference/keywords/uint.md) без знака.
+* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/builtin-types/integral-numeric-types.md)) — 16-разрядный целочисленный тип со знаком. Также имеется и <xref:System.UInt16> без знака.
+* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md)) — 32-разрядный целочисленный тип со знаком. Также имеется и [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md) без знака.
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/keywords/float.md)) — 32-разрядный тип с плавающей запятой.
 * <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/keywords/decimal.md)) — 128-разрядный десятичный тип.
-* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/keywords/byte.md)) — 8-разрядное целое число без знака, которое представляет байт памяти.
+* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)) — 8-разрядное целое число без знака, которое представляет байт памяти.
 * <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)) — логический тип, представляющий `true` или `false`.
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)) — 16-разрядный числовой тип, который представляет символ в Юникоде.
 * <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/keywords/string.md)) — представляет набор символов. Отличается от `char[]`, но позволяет индексировать по каждому отдельному `char` в `string`.

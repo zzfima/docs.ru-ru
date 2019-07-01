@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 960394bd61f9e9163fe93c4324bf708d50ec3e08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5257d1d677246cdd6d826cd71ed3ffe116d2a4a6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481461"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424125"
 ---
 # <a name="switch-c-reference"></a>switch (справочник по C#)
 
@@ -46,7 +46,7 @@ ms.locfileid: "59481461"
 - [char](char.md);
 - [string](string.md);
 - [bool](bool.md);
-- целочисленное значение, например [int](int.md) или [long](long.md);
+- целочисленное значение, например [int](../builtin-types/integral-numeric-types.md) или [long](../builtin-types/integral-numeric-types.md);
 - значение [enum](enum.md).
 
 Начиная с C# 7.0 выражение соответствия может быть любым выражением, отличным от NULL.
@@ -121,7 +121,7 @@ switch (caseSwitch)
 здесь *constant* — это значение для проверки. Значением *constant* может быть любое из следующих константных выражений:
 
 - литерал [bool](bool.md), `true` или `false`;
-- любой целочисленный тип, такой как [int](int.md), [long](long.md) или [byte](byte.md);
+- любой целочисленный тип, такой как [int](../builtin-types/integral-numeric-types.md), [long](../builtin-types/integral-numeric-types.md) или [byte](../builtin-types/integral-numeric-types.md);
 - имя объявленной переменной `const`;
 - константа перечисления;
 - литерал [char](char.md);

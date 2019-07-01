@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 9bce692c767169536d762a36ea2b9343655680c7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a7cd450fbc2e0a5acd32675ab2c6b46dc2c92757
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583064"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398369"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Полиморфизм (Руководство по программированию на C#)
 Полиморфизм часто называется третьим столпом объектно-ориентированного программирования после инкапсуляции и наследования. Полиморфизм — слово греческого происхождения, означающее "многообразие форм" и имеющее несколько аспектов.  
@@ -54,7 +54,7 @@ ms.locfileid: "64583064"
  Виртуальные методы и свойства позволяют производным классам расширять базовый класс без необходимости использовать реализацию базового класса метода. Дополнительные сведения см. в разделе [Управление версиями с помощью ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md). Еще одну возможность определения метода или набора методов, реализация которых оставлена производным классам, дает интерфейс. Дополнительные сведения см. в разделе [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md).  
   
 ### <a name="hiding-base-class-members-with-new-members"></a>Сокрытие членов базового класса новыми членами  
- Если вам нужно, чтобы производный член имел такое же имя, как и член в базовом классе, но вы не хотите, чтобы он участвовал в виртуальном вызове, используйте ключевое слово [new](../../../csharp/language-reference/keywords/new.md). Ключевое слово `new` вставляется перед типом возвращаемого значения замещаемого члена класса. Примером является следующий код:  
+ Если вам нужно, чтобы производный член имел такое же имя, как и член в базовом классе, но вы не хотите, чтобы он участвовал в виртуальном вызове, используйте ключевое слово [new](../../../csharp/language-reference/keywords/new-modifier.md). Ключевое слово `new` вставляется перед типом возвращаемого значения замещаемого члена класса. Примером является следующий код:  
   
  [!code-csharp[csProgGuideInheritance#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#18)]  
   

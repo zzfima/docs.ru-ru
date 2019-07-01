@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: ec6040081d44a389bd42bb50cdd81ac0634abf91
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b5097df8ee559f11bc29c12570e938965e6a9a5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583123"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398076"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Практическое руководство. Управление версиями с помощью ключевых слов "Override" и "New" (Руководство по программированию в C#)
 Язык C# построен таким образом, что управление версиями [базовых](../../../csharp/language-reference/keywords/base.md) и производных классов в различных библиотеках может включать сохранение и расширение обратной совместимости. Это означает, например, то, что C# полностью поддерживает введение в базовый [класс](../../../csharp/language-reference/keywords/class.md) нового члена с таким же именем, как у члена производного класса, и никакое непредвиденное поведение при этом не возникает. Кроме того, это значит, что класс должен прямо указывать, в каких случаях метод будет перезаписывать унаследованный метод, а в каких он будет становиться новым методом, скрывающим одноименный унаследованный метод.  
@@ -20,7 +20,7 @@ ms.locfileid: "64583123"
   
 - Метод базового класса должен быть определен как [виртуальный](../../../csharp/language-reference/keywords/virtual.md).  
   
-- Если методу в производном классе не предшествуют ключевые слова [new](../../../csharp/language-reference/keywords/new.md) или [override](../../../csharp/language-reference/keywords/override.md), компилятор выдаст предупреждение, а метод будет вести себя так, как если бы имелось ключевое слово `new`.  
+- Если методу в производном классе не предшествуют ключевые слова [new](../../../csharp/language-reference/keywords/new-modifier.md) или [override](../../../csharp/language-reference/keywords/override.md), компилятор выдаст предупреждение, а метод будет вести себя так, как если бы имелось ключевое слово `new`.  
   
 - Если методу в производном классе предшествует ключевое слово `new`, он определяется как независимый от метода в базовом классе.  
   

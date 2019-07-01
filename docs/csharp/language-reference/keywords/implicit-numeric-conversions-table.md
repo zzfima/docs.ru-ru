@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 703f60f48e1e569e0ffcab66ff7ccc91d4a49514
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 9c3efe1dbea355e8bc00ef44e08efcc9d0e0bdca
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093558"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424168"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Таблица неявных числовых преобразований (Справочник по C#)
 
@@ -21,20 +21,20 @@ ms.locfileid: "56093558"
   
 |Исходный тип|Кому|  
 |----------|--------|  
-|[sbyte](sbyte.md)|`short`, `int`, `long`, `float`, `double` или `decimal`|  
-|[byte](byte.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`|  
+|[sbyte](../builtin-types/integral-numeric-types.md)|`short`, `int`, `long`, `float`, `double` или `decimal`|  
+|[byte](../builtin-types/integral-numeric-types.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`|  
 |[char](char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`|  
-|[short](short.md)|`int`, `long`, `float`, `double` или `decimal`|  
-|[ushort](ushort.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`|  
-|[int](int.md)|`long`, `float`, `double` или `decimal`|  
-|[uint](uint.md)|`long`, `ulong`, `float`, `double` или `decimal`|  
-|[long](long.md)|`float`, `double`или `decimal`|  
-|[ulong](ulong.md)|`float`, `double`или `decimal`|  
+|[short](../builtin-types/integral-numeric-types.md)|`int`, `long`, `float`, `double` или `decimal`|  
+|[ushort](../builtin-types/integral-numeric-types.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`|  
+|[int](../builtin-types/integral-numeric-types.md)|`long`, `float`, `double` или `decimal`|  
+|[uint](../builtin-types/integral-numeric-types.md)|`long`, `ulong`, `float`, `double` или `decimal`|  
+|[long](../builtin-types/integral-numeric-types.md)|`float`, `double`или `decimal`|  
+|[ulong](../builtin-types/integral-numeric-types.md)|`float`, `double`или `decimal`|  
 |[float](float.md)|`double`|  
   
 ## <a name="remarks"></a>Примечания  
 
-- Любой [целочисленный тип](integral-types-table.md) неявно преобразуется к любому [типу с плавающей запятой](floating-point-types-table.md).
+- Любой [целочисленный тип](../builtin-types/integral-numeric-types.md) неявно преобразуется к любому [типу с плавающей запятой](floating-point-types-table.md).
 
 - При преобразовании из `int`, `uint`, `long` или `ulong` в `float` и из `long` или `ulong` в `double` может быть потеряна точность, но не величина.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "56093558"
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
-- [Таблица целых типов](integral-types-table.md)
+- [Целочисленные типы](../builtin-types/integral-numeric-types.md)
 - [Таблица типов с плавающей запятой](floating-point-types-table.md)
 - [Таблица встроенных типов](built-in-types-table.md)
 - [Таблица явных числовых преобразований](explicit-numeric-conversions-table.md)

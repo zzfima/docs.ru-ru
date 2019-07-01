@@ -7,17 +7,17 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 4cea68e76c17e5393ab7213f457c0875cdc5b53b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad19099242a3bedbb7283219dfd7733db13231ec
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596710"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398590"
 ---
 # <a name="classes-c-programming-guide"></a>Классы (Руководство по программированию на C#)
 
 ## <a name="reference-types"></a>Ссылочные типы  
-Тип, который определен как [класс](../../../csharp/language-reference/keywords/class.md), является *ссылочным типом*. Когда во время выполнения вы объявляете переменную ссылочного типа, такая переменная будет содержать значение [NULL](../../../csharp/language-reference/keywords/null.md), пока вы явным образом не создадите экземпляр класса с помощью оператора [new](../../../csharp/language-reference/keywords/new.md) или не назначите его объекту совместимого типа, созданному в другом месте, как показано в следующем примере:
+Тип, который определен как [класс](../../../csharp/language-reference/keywords/class.md), является *ссылочным типом*. Когда во время выполнения вы объявляете переменную ссылочного типа, такая переменная будет содержать значение [NULL](../../../csharp/language-reference/keywords/null.md), пока вы явным образом не создадите экземпляр класса с помощью оператора [new](../../../csharp/language-reference/operators/new-operator.md) или не назначите его объекту совместимого типа, созданному в другом месте, как показано в следующем примере:
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -47,7 +47,7 @@ MyClass mc2 = mc;
 
 Несмотря на то, что они иногда взаимозаменяемы, класс и объект — разные вещи. Класс определяет тип объекта, но не является объектом. Объект — это конкретная сущность, основанная на классе, которую иногда называют экземпляром класса.  
   
- Объекты можно создавать с помощью ключевого слова [new](../../language-reference/keywords/new.md), за которым следует имя класса, на котором будет основан объект, например следующим образом:  
+ Объекты можно создавать с помощью ключевого слова [new](../../language-reference/operators/new-operator.md), за которым следует имя класса, на котором будет основан объект, например следующим образом:  
 
  ```csharp
  Customer object1 = new Customer();

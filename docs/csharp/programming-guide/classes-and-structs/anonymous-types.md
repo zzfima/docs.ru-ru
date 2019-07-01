@@ -6,17 +6,18 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 165793155aabac23245b352959be3188b0a5a6e5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7d8bdc5ceef5d82e4bc7e13ee932985cae6c2c10
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971173"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398543"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Анонимные типы (Руководство по программированию в C#)
+
 Анонимные типы позволяют легко инкапсулировать свойства только для чтения в один объект без необходимости предварительного определения типа. Имя типа создается компилятором и недоступно на уровне исходного кода. Тип каждого свойства выводится компилятором.  
   
- Анонимные типы создаются с помощью оператора [new](../../../csharp/language-reference/keywords/new.md) и инициализатора объекта. Дополнительные сведения об инициализаторах объектов см. в статье [Инициализаторы объектов и коллекций](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
+ Анонимные типы создаются с помощью оператора [new](../../../csharp/language-reference/operators/new-operator.md) и инициализатора объекта. Дополнительные сведения об инициализаторах объектов см. в статье [Инициализаторы объектов и коллекций](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   
  В следующем примере показан анонимный тип, инициализированный с помощью двух свойств — `Amount` и `Message`.  
   

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Использование именованных каналов для сетевого взаимодействия между процессами
+title: Практическое руководство. Использование именованных каналов для сетевого взаимодействия между процессами
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - multiple connections via named pipes
 - network communications [.NET Framework], named pipes
 - impersonation [.NET Framework], named pipes
-- full duplex communcation [.NET Framework], named pipes
+- full duplex communication [.NET Framework], named pipes
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 608991878b49bf0bafe9ebf90dbfc8eaec69e0e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddd862480a5977a4bada17945e10a25753b44de4
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698873"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402493"
 ---
-# <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Как выполнить Использование именованных каналов для сетевого взаимодействия между процессами
+# <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Практическое руководство. Использование именованных каналов для сетевого взаимодействия между процессами
 Именованные каналы обеспечивают межпроцессное взаимодействие между сервером канала и одним или несколькими клиентами канала. Они предоставляют больше функциональных возможностей, чем анонимные каналы, которые обеспечивают межпроцессное взаимодействие на локальном компьютере. Именованные каналы поддерживают полную дуплексную связь по сети и несколько экземпляров сервера, связь на основе сообщений и олицетворение клиента, позволяющее подключающимся процессам использовать собственные наборы разрешений на удаленных серверах.  
   
  Для реализации именованных каналов используются классы <xref:System.IO.Pipes.NamedPipeServerStream> и <xref:System.IO.Pipes.NamedPipeClientStream>.  

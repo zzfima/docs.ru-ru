@@ -3,12 +3,12 @@ title: Руководства по ML.NET
 description: Наши руководства по ML.NET помогут вам научиться создавать специализированные решения на базе искусственного интеллекта и интегрировать их в свои .NET-приложения.
 ms.custom: seodec18
 ms.date: 04/05/2019
-ms.openlocfilehash: 3f14f463dcdb74beb1605626216acd52dd3f6e9a
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: 4530e62a0ac8991f6ece37a0ad9909a4c4d08fe7
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722331"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401660"
 ---
 # <a name="mlnet-tutorials"></a>Руководства по ML.NET 
 

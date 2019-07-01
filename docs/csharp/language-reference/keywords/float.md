@@ -9,12 +9,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 6bf8043b97d23fdb91ca5798ed46cdea783bad7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db0139f2000c1bc2c5a13a3a542164201e73f0fb
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514141"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424212"
 ---
 # <a name="float-c-reference"></a>float (Справочник по C#)
 
@@ -56,7 +56,7 @@ float x = 3.5F;
 
 ## <a name="example"></a>Пример
 
-В следующем примере [int](int.md), [short](short.md) и `float` включены в математическое выражение и дают результат `float`. (Помните, что `float` — это псевдоним для типа <xref:System.Single?displayProperty=nameWithType>.) Обратите внимание, что в выражении нет типа [double](double.md).
+В следующем примере [int](../builtin-types/integral-numeric-types.md), [short](../builtin-types/integral-numeric-types.md) и `float` включены в математическое выражение и дают результат `float`. (Помните, что `float` — это псевдоним для типа <xref:System.Single?displayProperty=nameWithType>.) Обратите внимание, что в выражении нет типа [double](double.md).
 
 [!code-csharp[csrefKeywordsTypes#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#13)]
 
@@ -71,7 +71,7 @@ float x = 3.5F;
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Приведение и преобразование типов](../../programming-guide/types/casting-and-type-conversions.md)
 - [Ключевые слова в C#](index.md)
-- [Таблица целых типов](integral-types-table.md)
+- [Целочисленные типы](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [Таблица встроенных типов](built-in-types-table.md)
 - [Таблица неявных числовых преобразований](implicit-numeric-conversions-table.md)
 - [Таблица явных числовых преобразований](explicit-numeric-conversions-table.md)

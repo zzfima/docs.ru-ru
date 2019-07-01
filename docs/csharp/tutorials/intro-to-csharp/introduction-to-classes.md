@@ -3,12 +3,12 @@ title: Классы и объекты. Вводное руководство п�
 description: Создайте свою первую программу на C# и ознакомьтесь с основными понятиями объектно-ориентированного программирования
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 6b4c135b7adf96de3a234cde02485a1e84fc9fd3
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 0932ae8a9d3facd4b2a8469664922f163fe4c679
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204786"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397828"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Сведения об использовании классов и объектов в объектно-ориентированном программировании
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-Конструкторы вызываются при создании объекта с помощью [`new`](../../language-reference/keywords/new.md). Замените строку `Console.WriteLine("Hello World!");` в файле ***program.cs*** следующей строкой (замените `<name>` своим именем):
+Конструкторы вызываются при создании объекта с помощью [`new`](../../language-reference/operators/new-operator.md). Замените строку `Console.WriteLine("Hello World!");` в файле ***program.cs*** следующей строкой (замените `<name>` своим именем):
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
