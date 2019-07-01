@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: <span data-ttu-id="bb6a4-101">Управление целыми числами и числами с плавающей запятой в C#</span><span class="sxs-lookup"><span data-stu-id="bb6a4-101">Manipulate integral and floating point numbers in C#</span></span>
+title: <span data-ttu-id="b6c15-101">Управление целыми числами и числами с плавающей запятой в C#</span><span class="sxs-lookup"><span data-stu-id="b6c15-101">Manipulate integral and floating point numbers in C#</span></span>
 metadata:
   title: Числа в C#. Интерактивное вводное руководство по C#
   description: В этом руководстве о числовых типах в C# для интерактивного изучения используется браузер. Вы напишете код C# и сможете просмотреть результаты его компиляции и выполнения непосредственно в браузере.
@@ -8,23 +8,23 @@ metadata:
   ms.date: 08/24/2018
   level: Beginner
   nextTutorialHref: branches-and-loops.yml
-  nextTutorialTitle: <span data-ttu-id="bb6a4-105">Ветви и циклы в C#</span><span class="sxs-lookup"><span data-stu-id="bb6a4-105">Branches and loops in C#</span></span>
+  nextTutorialTitle: <span data-ttu-id="b6c15-105">Ветви и циклы в C#</span><span class="sxs-lookup"><span data-stu-id="b6c15-105">Branches and loops in C#</span></span>
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 1475941e0b0169566307f016d68ef3c3cb0b907c
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  ms.openlocfilehash: 047914aad8d5d38c1bf5c00f71be50f54b7124f6
+  ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54029740"
+  ms.lasthandoff: 06/28/2019
+  ms.locfileid: "67423392"
 items:
 - durationInMinutes: 1
   content: >
-    <span data-ttu-id="bb6a4-106">Это руководство поможет в интерактивном изучении числовых типов в C#. С помощью браузера вы напишете код на C# и сможете просмотреть результаты его компиляции и выполнения.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-106">This tutorial teaches you about the numeric types in C# interactively, using your browser to write C# and see the results of compiling and running your code.</span></span> <span data-ttu-id="bb6a4-107">Руководство содержит ряд уроков, в которых рассматриваются числа и математические операции в C#.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-107">It contains a series of lessons that explore numbers and math operations in C#.</span></span> <span data-ttu-id="bb6a4-108">В рамках этих занятий вы ознакомитесь с основами языка C#.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-108">These lessons teach you the fundamentals of the C# language.</span></span>
-- title: <span data-ttu-id="bb6a4-109">Вычисления с целыми числами</span><span class="sxs-lookup"><span data-stu-id="bb6a4-109">Explore integer math</span></span>
+    <span data-ttu-id="b6c15-106">Это руководство поможет в интерактивном изучении числовых типов в C#. С помощью браузера вы напишете код на C# и сможете просмотреть результаты его компиляции и выполнения.</span><span class="sxs-lookup"><span data-stu-id="b6c15-106">This tutorial teaches you about the numeric types in C# interactively, using your browser to write C# and see the results of compiling and running your code.</span></span> <span data-ttu-id="b6c15-107">Руководство содержит ряд уроков, в которых рассматриваются числа и математические операции в C#.</span><span class="sxs-lookup"><span data-stu-id="b6c15-107">It contains a series of lessons that explore numbers and math operations in C#.</span></span> <span data-ttu-id="b6c15-108">В рамках этих занятий вы ознакомитесь с основами языка C#.</span><span class="sxs-lookup"><span data-stu-id="b6c15-108">These lessons teach you the fundamentals of the C# language.</span></span>
+- title: <span data-ttu-id="b6c15-109">Вычисления с целыми числами</span><span class="sxs-lookup"><span data-stu-id="b6c15-109">Explore integer math</span></span>
   durationInMinutes: 4
   content: >
-    <span data-ttu-id="bb6a4-110">Запустите приведенный ниже код в интерактивном окне.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-110">Run the following code in the interactive window.</span></span> <span data-ttu-id="bb6a4-111">Для этого введите следующий блок кода в интерактивном окне и нажмите кнопку **Выполнить**:</span><span class="sxs-lookup"><span data-stu-id="bb6a4-111">To do that, type the following code block in the interactive window and click the **Run** button:</span></span>
+    <span data-ttu-id="b6c15-110">Запустите приведенный ниже код в интерактивном окне.</span><span class="sxs-lookup"><span data-stu-id="b6c15-110">Run the following code in the interactive window.</span></span> <span data-ttu-id="b6c15-111">Для этого введите следующий блок кода в интерактивном окне и нажмите кнопку **Выполнить**:</span><span class="sxs-lookup"><span data-stu-id="b6c15-111">To do that, type the following code block in the interactive window and click the **Run** button:</span></span>
 
 
     ```csharp
@@ -40,25 +40,25 @@ items:
     ```
 
 
-    <span data-ttu-id="bb6a4-112">Вы увидели одну из основных математических операций с целыми числами.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-112">You've just seen one of the fundamental math operations with integers.</span></span> <span data-ttu-id="bb6a4-113">Тип `int` представляет **целое** положительное или отрицательное число.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-113">The `int` type represents an **integer**, a positive or negative whole number.</span></span> <span data-ttu-id="bb6a4-114">Для сложения используйте символ `+`.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-114">You use the `+` symbol for addition.</span></span> <span data-ttu-id="bb6a4-115">Другие стандартные математические операции с целыми числами включают:</span><span class="sxs-lookup"><span data-stu-id="bb6a4-115">Other common mathematical operations for integers include:</span></span>
+    <span data-ttu-id="b6c15-112">Вы увидели одну из основных математических операций с целыми числами.</span><span class="sxs-lookup"><span data-stu-id="b6c15-112">You've just seen one of the fundamental math operations with integers.</span></span> <span data-ttu-id="b6c15-113">Тип `int` представляет **целое** положительное или отрицательное число.</span><span class="sxs-lookup"><span data-stu-id="b6c15-113">The `int` type represents an **integer**, a positive or negative whole number.</span></span> <span data-ttu-id="b6c15-114">Для сложения используйте символ `+`.</span><span class="sxs-lookup"><span data-stu-id="b6c15-114">You use the `+` symbol for addition.</span></span> <span data-ttu-id="b6c15-115">Другие стандартные математические операции с целыми числами включают:</span><span class="sxs-lookup"><span data-stu-id="b6c15-115">Other common mathematical operations for integers include:</span></span>
 
 
-    - <span data-ttu-id="bb6a4-116">`-` — вычитание;</span><span class="sxs-lookup"><span data-stu-id="bb6a4-116">`-` for subtraction</span></span>
+    - <span data-ttu-id="b6c15-116">`-` — вычитание;</span><span class="sxs-lookup"><span data-stu-id="b6c15-116">`-` for subtraction</span></span>
 
-    - <span data-ttu-id="bb6a4-117">`*` — умножение;</span><span class="sxs-lookup"><span data-stu-id="bb6a4-117">`*` for multiplication</span></span>
+    - <span data-ttu-id="b6c15-117">`*` — умножение;</span><span class="sxs-lookup"><span data-stu-id="b6c15-117">`*` for multiplication</span></span>
 
-    - <span data-ttu-id="bb6a4-118">`/` — деление.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-118">`/` for division</span></span>
+    - <span data-ttu-id="b6c15-118">`/` — деление.</span><span class="sxs-lookup"><span data-stu-id="b6c15-118">`/` for division</span></span>
 
 
     > [!TIP]
 
-    > <span data-ttu-id="bb6a4-119">Вы можете изучить их самостоятельно с помощью этого интерактивного руководства. Для этого нужно изменить написанный код в интерактивном окне.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-119">Throughout this interactive tutorial, you can explore on your own by modifying the code you've written in the interactive window.</span></span> <span data-ttu-id="bb6a4-120">Это руководство содержит примеры, которые вы можете повторить на каждом этапе.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-120">This tutorial provides examples that you can try at each step.</span></span>
+    > <span data-ttu-id="b6c15-119">Вы можете изучить их самостоятельно с помощью этого интерактивного руководства. Для этого нужно изменить написанный код в интерактивном окне.</span><span class="sxs-lookup"><span data-stu-id="b6c15-119">Throughout this interactive tutorial, you can explore on your own by modifying the code you've written in the interactive window.</span></span> <span data-ttu-id="b6c15-120">Это руководство содержит примеры, которые вы можете повторить на каждом этапе.</span><span class="sxs-lookup"><span data-stu-id="b6c15-120">This tutorial provides examples that you can try at each step.</span></span>
 
 
-    <span data-ttu-id="bb6a4-121">Начните с ознакомления с различными операциями.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-121">Start by exploring those different operations.</span></span> <span data-ttu-id="bb6a4-122">Измените третью строку, чтобы попробовать выполнить каждую операцию.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-122">Modify the third line to try each of these operations.</span></span> <span data-ttu-id="bb6a4-123">После каждого изменения нажимайте кнопку **Выполнить**.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-123">After each edit, click the **Run** button.</span></span>
+    <span data-ttu-id="b6c15-121">Начните с ознакомления с различными операциями.</span><span class="sxs-lookup"><span data-stu-id="b6c15-121">Start by exploring those different operations.</span></span> <span data-ttu-id="b6c15-122">Измените третью строку, чтобы попробовать выполнить каждую операцию.</span><span class="sxs-lookup"><span data-stu-id="b6c15-122">Modify the third line to try each of these operations.</span></span> <span data-ttu-id="b6c15-123">После каждого изменения нажимайте кнопку **Выполнить**.</span><span class="sxs-lookup"><span data-stu-id="b6c15-123">After each edit, click the **Run** button.</span></span>
 
 
-    <span data-ttu-id="bb6a4-124">Вычитание:</span><span class="sxs-lookup"><span data-stu-id="bb6a4-124">Subtraction:</span></span>
+    <span data-ttu-id="b6c15-124">Вычитание:</span><span class="sxs-lookup"><span data-stu-id="b6c15-124">Subtraction:</span></span>
 
 
     ```csharp
@@ -68,7 +68,7 @@ items:
     ```
 
 
-    <span data-ttu-id="bb6a4-125">Умножение:</span><span class="sxs-lookup"><span data-stu-id="bb6a4-125">Multiplication:</span></span>
+    <span data-ttu-id="b6c15-125">Умножение:</span><span class="sxs-lookup"><span data-stu-id="b6c15-125">Multiplication:</span></span>
 
 
     ```csharp
@@ -78,7 +78,7 @@ items:
     ```
 
 
-    <span data-ttu-id="bb6a4-126">Деление:</span><span class="sxs-lookup"><span data-stu-id="bb6a4-126">Division:</span></span>
+    <span data-ttu-id="b6c15-126">Деление:</span><span class="sxs-lookup"><span data-stu-id="b6c15-126">Division:</span></span>
 
 
     ```csharp
@@ -88,27 +88,27 @@ items:
     ```
 
 
-    <span data-ttu-id="bb6a4-127">Можно также поэкспериментировать, выполнив несколько математических операций в одной строке.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-127">You can also experiment by performing multiple mathematics operations in the same line, if you'd like.</span></span>
+    <span data-ttu-id="b6c15-127">Можно также поэкспериментировать, выполнив несколько математических операций в одной строке.</span><span class="sxs-lookup"><span data-stu-id="b6c15-127">You can also experiment by performing multiple mathematics operations in the same line, if you'd like.</span></span>
 
 
     > [!TIP]
 
-    > <span data-ttu-id="bb6a4-128">Вероятнее всего, при изучении C# (как и любого другого языка программирования) вы будете допускать ошибки в коде.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-128">As you explore C# (or any programming language), you'll make mistakes when you write code.</span></span> <span data-ttu-id="bb6a4-129">**Компилятор** найдет эти ошибки и сообщит вам о них.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-129">The **compiler** will find those errors and report them to you.</span></span> <span data-ttu-id="bb6a4-130">Если результат содержит сообщения об ошибках, внимательно просмотрите пример кода и код в интерактивном окне, чтобы понять, что нужно исправить.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-130">When the output contains error messages, look closely at the example code, and the code in the interactive window to see what to fix.</span></span>
+    > <span data-ttu-id="b6c15-128">Вероятнее всего, при изучении C# (как и любого другого языка программирования) вы будете допускать ошибки в коде.</span><span class="sxs-lookup"><span data-stu-id="b6c15-128">As you explore C# (or any programming language), you'll make mistakes when you write code.</span></span> <span data-ttu-id="b6c15-129">**Компилятор** найдет эти ошибки и сообщит вам о них.</span><span class="sxs-lookup"><span data-stu-id="b6c15-129">The **compiler** will find those errors and report them to you.</span></span> <span data-ttu-id="b6c15-130">Если результат содержит сообщения об ошибках, внимательно просмотрите пример кода и код в интерактивном окне, чтобы понять, что нужно исправить.</span><span class="sxs-lookup"><span data-stu-id="b6c15-130">When the output contains error messages, look closely at the example code, and the code in the interactive window to see what to fix.</span></span>
 
-    > <span data-ttu-id="bb6a4-131">Это упражнение поможет вам изучить структуру кода C#.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-131">That exercise will help you learn the structure of C# code.</span></span>
+    > <span data-ttu-id="b6c15-131">Это упражнение поможет вам изучить структуру кода C#.</span><span class="sxs-lookup"><span data-stu-id="b6c15-131">That exercise will help you learn the structure of C# code.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="bb6a4-132">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-132">This online coding experience is in preview mode.</span></span> <span data-ttu-id="bb6a4-133">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="bb6a4-133">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="bb6a4-134">Изучение порядка операций</span><span class="sxs-lookup"><span data-stu-id="bb6a4-134">Explore order of operations</span></span>
+    > <span data-ttu-id="b6c15-132">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="b6c15-132">This online coding experience is in preview mode.</span></span> <span data-ttu-id="b6c15-133">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="b6c15-133">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="b6c15-134">Изучение порядка операций</span><span class="sxs-lookup"><span data-stu-id="b6c15-134">Explore order of operations</span></span>
   durationInMinutes: 7
   content: >
-    <span data-ttu-id="bb6a4-135">Язык C# определяет приоритет математических операций в соответствии с правилами математики.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-135">The C# language defines the precedence of different mathematics operations with rules consistent with the rules you learned in mathematics.</span></span>
+    <span data-ttu-id="b6c15-135">Язык C# определяет приоритет математических операций в соответствии с правилами математики.</span><span class="sxs-lookup"><span data-stu-id="b6c15-135">The C# language defines the precedence of different mathematics operations with rules consistent with the rules you learned in mathematics.</span></span>
 
-    <span data-ttu-id="bb6a4-136">Умножение и деление имеют приоритет над сложением и вычитанием.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-136">Multiplication and division take precedence over addition and subtraction.</span></span>
+    <span data-ttu-id="b6c15-136">Умножение и деление имеют приоритет над сложением и вычитанием.</span><span class="sxs-lookup"><span data-stu-id="b6c15-136">Multiplication and division take precedence over addition and subtraction.</span></span>
 
-    <span data-ttu-id="bb6a4-137">Убедитесь в этом, запустив следующий код в интерактивном окне:</span><span class="sxs-lookup"><span data-stu-id="bb6a4-137">Explore that by running the following code in the interactive window:</span></span>
+    <span data-ttu-id="b6c15-137">Убедитесь в этом, запустив следующий код в интерактивном окне:</span><span class="sxs-lookup"><span data-stu-id="b6c15-137">Explore that by running the following code in the interactive window:</span></span>
 
 
     ```csharp
@@ -126,10 +126,10 @@ items:
     ```
 
 
-    <span data-ttu-id="bb6a4-138">В выходных данных видно, что умножение выполняется раньше сложения.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-138">The output demonstrates that the multiplication is performed before the addition.</span></span>
+    <span data-ttu-id="b6c15-138">В выходных данных видно, что умножение выполняется раньше сложения.</span><span class="sxs-lookup"><span data-stu-id="b6c15-138">The output demonstrates that the multiplication is performed before the addition.</span></span>
 
 
-    <span data-ttu-id="bb6a4-139">Можно применить другую последовательность операций. Для этого операции, которые должны выполняться первыми, нужно заключить в скобки:</span><span class="sxs-lookup"><span data-stu-id="bb6a4-139">You can force a different order of operation by adding parentheses around the operation or operations you want performed first:</span></span>
+    <span data-ttu-id="b6c15-139">Можно применить другую последовательность операций. Для этого операции, которые должны выполняться первыми, нужно заключить в скобки:</span><span class="sxs-lookup"><span data-stu-id="b6c15-139">You can force a different order of operation by adding parentheses around the operation or operations you want performed first:</span></span>
 
 
     ```csharp
@@ -147,7 +147,7 @@ items:
     ```
 
 
-    <span data-ttu-id="bb6a4-140">Поэкспериментируйте, объединяя различные операции.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-140">Explore more by combining many different operations.</span></span> <span data-ttu-id="bb6a4-141">Замените четвертую строку примерно таким кодом:</span><span class="sxs-lookup"><span data-stu-id="bb6a4-141">Replace the fourth line above with something like this:</span></span>
+    <span data-ttu-id="b6c15-140">Поэкспериментируйте, объединяя различные операции.</span><span class="sxs-lookup"><span data-stu-id="b6c15-140">Explore more by combining many different operations.</span></span> <span data-ttu-id="b6c15-141">Замените четвертую строку примерно таким кодом:</span><span class="sxs-lookup"><span data-stu-id="b6c15-141">Replace the fourth line above with something like this:</span></span>
 
 
     ```csharp
@@ -157,10 +157,10 @@ items:
     ```
 
 
-    <span data-ttu-id="bb6a4-142">Возможно, вы заметили интересное поведение целых чисел.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-142">You may have noticed an interesting behavior for integers.</span></span> <span data-ttu-id="bb6a4-143">Деление целых чисел всегда дает результат в виде целого числа, даже если ожидаемый результат содержит десятичную или дробную часть.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-143">Integer division always produces an integer result, even when you'd expect the result to include a decimal or fractional portion.</span></span>
+    <span data-ttu-id="b6c15-142">Возможно, вы заметили интересное поведение целых чисел.</span><span class="sxs-lookup"><span data-stu-id="b6c15-142">You may have noticed an interesting behavior for integers.</span></span> <span data-ttu-id="b6c15-143">Деление целых чисел всегда дает результат в виде целого числа, даже если ожидаемый результат содержит десятичную или дробную часть.</span><span class="sxs-lookup"><span data-stu-id="b6c15-143">Integer division always produces an integer result, even when you'd expect the result to include a decimal or fractional portion.</span></span>
 
 
-    <span data-ttu-id="bb6a4-144">Если вы еще не видели пример такого поведения, выполните следующий код:</span><span class="sxs-lookup"><span data-stu-id="bb6a4-144">If you haven't seen this behavior, try the following:</span></span>
+    <span data-ttu-id="b6c15-144">Если вы еще не видели пример такого поведения, выполните следующий код:</span><span class="sxs-lookup"><span data-stu-id="b6c15-144">If you haven't seen this behavior, try the following:</span></span>
 
 
     ```csharp
@@ -178,18 +178,18 @@ items:
     ```
 
 
-    <span data-ttu-id="bb6a4-145">Нажмите кнопку **Выполнить**, чтобы просмотреть результаты.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-145">Click **Run** again to see the results.</span></span>
+    <span data-ttu-id="b6c15-145">Нажмите кнопку **Выполнить**, чтобы просмотреть результаты.</span><span class="sxs-lookup"><span data-stu-id="b6c15-145">Click **Run** again to see the results.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="bb6a4-146">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-146">This online coding experience is in preview mode.</span></span> <span data-ttu-id="bb6a4-147">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="bb6a4-147">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="bb6a4-148">Изучение точности и ограничений для целых чисел</span><span class="sxs-lookup"><span data-stu-id="bb6a4-148">Explore integer precision and limits</span></span>
+    > <span data-ttu-id="b6c15-146">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="b6c15-146">This online coding experience is in preview mode.</span></span> <span data-ttu-id="b6c15-147">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="b6c15-147">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="b6c15-148">Изучение точности и ограничений для целых чисел</span><span class="sxs-lookup"><span data-stu-id="b6c15-148">Explore integer precision and limits</span></span>
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="bb6a4-149">В последнем примере вы увидели, что при делении целых чисел результат усекается.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-149">That last sample showed you that integer division truncates the result.</span></span>
+    <span data-ttu-id="b6c15-149">В последнем примере вы увидели, что при делении целых чисел результат усекается.</span><span class="sxs-lookup"><span data-stu-id="b6c15-149">That last sample showed you that integer division truncates the result.</span></span>
 
-    <span data-ttu-id="bb6a4-150">Вы можете получить **остаток** с помощью оператора **остатка от деления**, который обозначается символом `%`:</span><span class="sxs-lookup"><span data-stu-id="bb6a4-150">You can get the **remainder** by using the **modulo** operator, the `%` character:</span></span>
+    <span data-ttu-id="b6c15-150">Вы можете получить **остаток** с помощью оператора **остатка от деления**, который обозначается символом `%`:</span><span class="sxs-lookup"><span data-stu-id="b6c15-150">You can get the **remainder** by using the **modulo** operator, the `%` character:</span></span>
 
 
     ```csharp
@@ -211,7 +211,7 @@ items:
     ```
 
 
-    <span data-ttu-id="bb6a4-151">Тип целых чисел C# характеризуется еще одним отличием от математических целых: тип `int` имеет минимальные и максимальные ограничения.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-151">The C# integer type differs from mathematical integers in one other way: the `int` type has minimum and maximum limits.</span></span> <span data-ttu-id="bb6a4-152">Выполните этот код в интерактивном окне, чтобы увидеть ограничения:</span><span class="sxs-lookup"><span data-stu-id="bb6a4-152">Run this code in the interactive window to see those limits:</span></span>
+    <span data-ttu-id="b6c15-151">Тип целых чисел C# характеризуется еще одним отличием от математических целых: тип `int` имеет минимальные и максимальные ограничения.</span><span class="sxs-lookup"><span data-stu-id="b6c15-151">The C# integer type differs from mathematical integers in one other way: the `int` type has minimum and maximum limits.</span></span> <span data-ttu-id="b6c15-152">Выполните этот код в интерактивном окне, чтобы увидеть ограничения:</span><span class="sxs-lookup"><span data-stu-id="b6c15-152">Run this code in the interactive window to see those limits:</span></span>
 
 
     ```csharp
@@ -225,7 +225,7 @@ items:
     ```
 
 
-    <span data-ttu-id="bb6a4-153">Если при вычислении выводится значение вне этих пределов, возникает условие **потери значимости** или **переполнения**.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-153">If a calculation produces a value that exceeds those limits, you have an **underflow** or **overflow** condition.</span></span> <span data-ttu-id="bb6a4-154">Ответ должен находиться в диапазоне от минимального до максимального значения.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-154">The answer appears to wrap from one limit to the other.</span></span> <span data-ttu-id="bb6a4-155">Добавьте эти две строки в интерактивное окно, чтобы увидеть пример:</span><span class="sxs-lookup"><span data-stu-id="bb6a4-155">Add these two lines to the interactive window to see an example:</span></span>
+    <span data-ttu-id="b6c15-153">Если при вычислении выводится значение вне этих пределов, возникает условие **потери значимости** или **переполнения**.</span><span class="sxs-lookup"><span data-stu-id="b6c15-153">If a calculation produces a value that exceeds those limits, you have an **underflow** or **overflow** condition.</span></span> <span data-ttu-id="b6c15-154">Ответ должен находиться в диапазоне от минимального до максимального значения.</span><span class="sxs-lookup"><span data-stu-id="b6c15-154">The answer appears to wrap from one limit to the other.</span></span> <span data-ttu-id="b6c15-155">Добавьте эти две строки в интерактивное окно, чтобы увидеть пример:</span><span class="sxs-lookup"><span data-stu-id="b6c15-155">Add these two lines to the interactive window to see an example:</span></span>
 
 
     ```csharp
@@ -237,25 +237,25 @@ items:
     ```
 
 
-    <span data-ttu-id="bb6a4-156">Обратите внимание, что ответ очень близок к минимальному целому числу (отрицательное значение).</span><span class="sxs-lookup"><span data-stu-id="bb6a4-156">Notice that the answer is very close to the minimum (negative) integer.</span></span> <span data-ttu-id="bb6a4-157">Он совпадает со значением `min + 2`.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-157">It's the same as `min + 2`.</span></span>
+    <span data-ttu-id="b6c15-156">Обратите внимание, что ответ очень близок к минимальному целому числу (отрицательное значение).</span><span class="sxs-lookup"><span data-stu-id="b6c15-156">Notice that the answer is very close to the minimum (negative) integer.</span></span> <span data-ttu-id="b6c15-157">Он совпадает со значением `min + 2`.</span><span class="sxs-lookup"><span data-stu-id="b6c15-157">It's the same as `min + 2`.</span></span>
 
-    <span data-ttu-id="bb6a4-158">Оператор сложения **вызвал переполнение** допустимых значений для целых чисел.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-158">The addition operation **overflowed** the allowed values for integers.</span></span>
+    <span data-ttu-id="b6c15-158">Оператор сложения **вызвал переполнение** допустимых значений для целых чисел.</span><span class="sxs-lookup"><span data-stu-id="b6c15-158">The addition operation **overflowed** the allowed values for integers.</span></span>
 
-    <span data-ttu-id="bb6a4-159">Ответ является очень большим отрицательным числом, так как переполнение покрывает диапазон от наибольшего целого числа до наименьшего.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-159">The answer is a very large negative number because an overflow "wraps around" from the largest possible integer value to the smallest.</span></span>
+    <span data-ttu-id="b6c15-159">Ответ является очень большим отрицательным числом, так как переполнение покрывает диапазон от наибольшего целого числа до наименьшего.</span><span class="sxs-lookup"><span data-stu-id="b6c15-159">The answer is a very large negative number because an overflow "wraps around" from the largest possible integer value to the smallest.</span></span>
 
 
-    <span data-ttu-id="bb6a4-160">Существуют другие числовые типы с различными ограничениями и точностью, которые можно использовать, если тип `int` не соответствует вашим требованиям.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-160">There are other numeric types with different limits and precision that you would use when the `int` type doesn't meet your needs.</span></span> <span data-ttu-id="bb6a4-161">Рассмотрим их.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-161">Let's explore those next.</span></span>
+    <span data-ttu-id="b6c15-160">Существуют другие числовые типы с различными ограничениями и точностью, которые можно использовать, если тип `int` не соответствует вашим требованиям.</span><span class="sxs-lookup"><span data-stu-id="b6c15-160">There are other numeric types with different limits and precision that you would use when the `int` type doesn't meet your needs.</span></span> <span data-ttu-id="b6c15-161">Рассмотрим их.</span><span class="sxs-lookup"><span data-stu-id="b6c15-161">Let's explore those next.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="bb6a4-162">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-162">This online coding experience is in preview mode.</span></span> <span data-ttu-id="bb6a4-163">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="bb6a4-163">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="bb6a4-164">Работа с типом double</span><span class="sxs-lookup"><span data-stu-id="bb6a4-164">Work with the double type</span></span>
+    > <span data-ttu-id="b6c15-162">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="b6c15-162">This online coding experience is in preview mode.</span></span> <span data-ttu-id="b6c15-163">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="b6c15-163">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="b6c15-164">Работа с типом double</span><span class="sxs-lookup"><span data-stu-id="b6c15-164">Work with the double type</span></span>
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="bb6a4-165">Числовой тип `double` представляет число с плавающей запятой двойной точности.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-165">The `double` numeric type represents a double-precision floating point number.</span></span> <span data-ttu-id="bb6a4-166">Эти термины могут быть новыми для вас.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-166">Those terms may be new to you.</span></span> <span data-ttu-id="bb6a4-167">Число **с плавающей запятой** можно использовать для представления нецелых чисел, которые могут быть очень большими или малыми.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-167">A **floating point** number is useful to represent non-integral numbers that may be very large or small in magnitude.</span></span> <span data-ttu-id="bb6a4-168">**Двойная точность** означает, что для хранения этих чисел используется большая точность, чем **одиночная**.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-168">**Double-precision** means that these numbers are stored using greater precision than **single-precision**.</span></span> <span data-ttu-id="bb6a4-169">На современных компьютерах числа с двойной точностью используется чаще, чем с одиночной.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-169">On modern computers, it is more common to use double precision than single precision numbers.</span></span>
+    <span data-ttu-id="b6c15-165">Числовой тип `double` представляет число с плавающей запятой двойной точности.</span><span class="sxs-lookup"><span data-stu-id="b6c15-165">The `double` numeric type represents a double-precision floating point number.</span></span> <span data-ttu-id="b6c15-166">Эти термины могут быть новыми для вас.</span><span class="sxs-lookup"><span data-stu-id="b6c15-166">Those terms may be new to you.</span></span> <span data-ttu-id="b6c15-167">Число **с плавающей запятой** можно использовать для представления нецелых чисел, которые могут быть очень большими или малыми.</span><span class="sxs-lookup"><span data-stu-id="b6c15-167">A **floating point** number is useful to represent non-integral numbers that may be very large or small in magnitude.</span></span> <span data-ttu-id="b6c15-168">**Двойная точность** означает, что для хранения этих чисел используется большая точность, чем **одиночная**.</span><span class="sxs-lookup"><span data-stu-id="b6c15-168">**Double-precision** means that these numbers are stored using greater precision than **single-precision**.</span></span> <span data-ttu-id="b6c15-169">На современных компьютерах числа с двойной точностью используется чаще, чем с одиночной.</span><span class="sxs-lookup"><span data-stu-id="b6c15-169">On modern computers, it is more common to use double precision than single precision numbers.</span></span>
 
-    <span data-ttu-id="bb6a4-170">Рассмотрим их.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-170">Let's explore.</span></span> <span data-ttu-id="bb6a4-171">Запустите следующий код в интерактивном окне и посмотрите на результат:</span><span class="sxs-lookup"><span data-stu-id="bb6a4-171">Try the following code in the interactive window and see the result:</span></span>
+    <span data-ttu-id="b6c15-170">Рассмотрим их.</span><span class="sxs-lookup"><span data-stu-id="b6c15-170">Let's explore.</span></span> <span data-ttu-id="b6c15-171">Запустите следующий код в интерактивном окне и посмотрите на результат:</span><span class="sxs-lookup"><span data-stu-id="b6c15-171">Try the following code in the interactive window and see the result:</span></span>
 
 
     ```csharp
@@ -273,7 +273,7 @@ items:
     ```
 
 
-    <span data-ttu-id="bb6a4-172">Обратите внимание, что ответ включает десятичную долю частного.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-172">Notice that the answer includes the decimal portion of the quotient.</span></span> <span data-ttu-id="bb6a4-173">Попробуйте более сложное выражение с типом double:</span><span class="sxs-lookup"><span data-stu-id="bb6a4-173">Try a slightly more complicated expression with doubles:</span></span>
+    <span data-ttu-id="b6c15-172">Обратите внимание, что ответ включает десятичную долю частного.</span><span class="sxs-lookup"><span data-stu-id="b6c15-172">Notice that the answer includes the decimal portion of the quotient.</span></span> <span data-ttu-id="b6c15-173">Попробуйте более сложное выражение с типом double:</span><span class="sxs-lookup"><span data-stu-id="b6c15-173">Try a slightly more complicated expression with doubles:</span></span>
 
 
     ```csharp
@@ -291,7 +291,7 @@ items:
     ```
 
 
-    <span data-ttu-id="bb6a4-174">Диапазон значений типа double гораздо больше, чем диапазон значений целых чисел.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-174">The range of a double value is much greater than integer values.</span></span> <span data-ttu-id="bb6a4-175">Запустите этот код в интерактивном окне:</span><span class="sxs-lookup"><span data-stu-id="bb6a4-175">Try the following code in the interactive window:</span></span>
+    <span data-ttu-id="b6c15-174">Диапазон значений типа double гораздо больше, чем диапазон значений целых чисел.</span><span class="sxs-lookup"><span data-stu-id="b6c15-174">The range of a double value is much greater than integer values.</span></span> <span data-ttu-id="b6c15-175">Запустите этот код в интерактивном окне:</span><span class="sxs-lookup"><span data-stu-id="b6c15-175">Try the following code in the interactive window:</span></span>
 
 
     ```csharp
@@ -305,10 +305,10 @@ items:
     ```
 
 
-    <span data-ttu-id="bb6a4-176">Значения выводятся в экспоненциальном представлении.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-176">These values are printed out in scientific notation.</span></span> <span data-ttu-id="bb6a4-177">Число слева от символа `E` является значащим.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-177">The number to the left of the `E` is the significand.</span></span> <span data-ttu-id="bb6a4-178">Число справа — это показатель степени, который равен 10.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-178">The number to the right is the exponent, as a power of 10.</span></span>
+    <span data-ttu-id="b6c15-176">Значения выводятся в экспоненциальном представлении.</span><span class="sxs-lookup"><span data-stu-id="b6c15-176">These values are printed out in scientific notation.</span></span> <span data-ttu-id="b6c15-177">Число слева от символа `E` является значащим.</span><span class="sxs-lookup"><span data-stu-id="b6c15-177">The number to the left of the `E` is the significand.</span></span> <span data-ttu-id="b6c15-178">Число справа — это показатель степени, который равен 10.</span><span class="sxs-lookup"><span data-stu-id="b6c15-178">The number to the right is the exponent, as a power of 10.</span></span>
 
 
-    <span data-ttu-id="bb6a4-179">Так же, как десятичные числа в математике, значения double в C# могут содержать ошибки округления.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-179">Just like decimal numbers in math, doubles in C# can have rounding errors.</span></span> <span data-ttu-id="bb6a4-180">Выполните этот код:</span><span class="sxs-lookup"><span data-stu-id="bb6a4-180">Try this code:</span></span>
+    <span data-ttu-id="b6c15-179">Так же, как десятичные числа в математике, значения double в C# могут содержать ошибки округления.</span><span class="sxs-lookup"><span data-stu-id="b6c15-179">Just like decimal numbers in math, doubles in C# can have rounding errors.</span></span> <span data-ttu-id="b6c15-180">Выполните этот код:</span><span class="sxs-lookup"><span data-stu-id="b6c15-180">Try this code:</span></span>
 
 
     ```csharp
@@ -320,22 +320,22 @@ items:
     ```
 
 
-    <span data-ttu-id="bb6a4-181">Вы знаете, что периодическая десятичная дробь `0.3` не равняется `1/3`.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-181">You know that `0.3` repeating is not exactly the same as `1/3`.</span></span>
+    <span data-ttu-id="b6c15-181">Вы знаете, что периодическая десятичная дробь `0.3` не равняется `1/3`.</span><span class="sxs-lookup"><span data-stu-id="b6c15-181">You know that `0.3` repeating is not exactly the same as `1/3`.</span></span>
 
 
-    <span data-ttu-id="bb6a4-182">***Задача***</span><span class="sxs-lookup"><span data-stu-id="bb6a4-182">***Challenge***</span></span>
+    <span data-ttu-id="b6c15-182">***Задача***</span><span class="sxs-lookup"><span data-stu-id="b6c15-182">***Challenge***</span></span>
 
 
-    <span data-ttu-id="bb6a4-183">Выполните другие вычисления с большими числами, малыми числами, умножением и делением с помощью типа `double`.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-183">Try other calculations with large numbers, small numbers, multiplication and division using the `double` type.</span></span>  <span data-ttu-id="bb6a4-184">Попробуйте выполнить более сложные вычисления.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-184">Try more complicated calculations.</span></span>
+    <span data-ttu-id="b6c15-183">Выполните другие вычисления с большими числами, малыми числами, умножением и делением с помощью типа `double`.</span><span class="sxs-lookup"><span data-stu-id="b6c15-183">Try other calculations with large numbers, small numbers, multiplication and division using the `double` type.</span></span>  <span data-ttu-id="b6c15-184">Попробуйте выполнить более сложные вычисления.</span><span class="sxs-lookup"><span data-stu-id="b6c15-184">Try more complicated calculations.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="bb6a4-185">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-185">This online coding experience is in preview mode.</span></span> <span data-ttu-id="bb6a4-186">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="bb6a4-186">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="bb6a4-187">Работа с типами с фиксированной запятой</span><span class="sxs-lookup"><span data-stu-id="bb6a4-187">Work with fixed point types</span></span>
+    > <span data-ttu-id="b6c15-185">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="b6c15-185">This online coding experience is in preview mode.</span></span> <span data-ttu-id="b6c15-186">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="b6c15-186">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="b6c15-187">Работа с типами с фиксированной запятой</span><span class="sxs-lookup"><span data-stu-id="b6c15-187">Work with fixed point types</span></span>
   durationInMinutes: 8
   content: >
-    <span data-ttu-id="bb6a4-188">Вы уже ознакомились с базовыми числовыми типами в C# — целыми числами и числами типа double.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-188">You've seen the basic numeric types in C#: integers and doubles.</span></span>  <span data-ttu-id="bb6a4-189">Осталось изучить еще один тип: `decimal`.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-189">There is one other type to learn: the `decimal` type.</span></span> <span data-ttu-id="bb6a4-190">Тип `decimal` имеет меньший диапазон, но большую точность, чем `double`.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-190">The `decimal` type has a smaller range but greater precision than `double`.</span></span> <span data-ttu-id="bb6a4-191">Термин **фиксированная запятая** означает, что десятичный (или двоичный) разделитель не перемещается.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-191">The term **fixed point** means that the decimal point (or binary point) doesn't move.</span></span> <span data-ttu-id="bb6a4-192">Например:</span><span class="sxs-lookup"><span data-stu-id="bb6a4-192">Let's take a look:</span></span>
+    <span data-ttu-id="b6c15-188">Вы уже ознакомились с базовыми числовыми типами в C# — целыми числами и числами типа double.</span><span class="sxs-lookup"><span data-stu-id="b6c15-188">You've seen the basic numeric types in C#: integers and doubles.</span></span>  <span data-ttu-id="b6c15-189">Осталось изучить еще один тип: `decimal`.</span><span class="sxs-lookup"><span data-stu-id="b6c15-189">There is one other type to learn: the `decimal` type.</span></span> <span data-ttu-id="b6c15-190">Тип `decimal` имеет меньший диапазон, но большую точность, чем `double`.</span><span class="sxs-lookup"><span data-stu-id="b6c15-190">The `decimal` type has a smaller range but greater precision than `double`.</span></span> <span data-ttu-id="b6c15-191">Термин **фиксированная запятая** означает, что десятичный (или двоичный) разделитель не перемещается.</span><span class="sxs-lookup"><span data-stu-id="b6c15-191">The term **fixed point** means that the decimal point (or binary point) doesn't move.</span></span> <span data-ttu-id="b6c15-192">Например:</span><span class="sxs-lookup"><span data-stu-id="b6c15-192">Let's take a look:</span></span>
 
 
     ```csharp
@@ -349,7 +349,7 @@ items:
     ```
 
 
-    <span data-ttu-id="bb6a4-193">Обратите внимание, что диапазон меньше, чем для типа `double`.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-193">Notice that the range is smaller than the `double` type.</span></span> <span data-ttu-id="bb6a4-194">Вы можете убедиться в повышении точности при использовании типа decimal, выполнив следующий код:</span><span class="sxs-lookup"><span data-stu-id="bb6a4-194">You can see the greater precision with the decimal type by trying the following code:</span></span>
+    <span data-ttu-id="b6c15-193">Обратите внимание, что диапазон меньше, чем для типа `double`.</span><span class="sxs-lookup"><span data-stu-id="b6c15-193">Notice that the range is smaller than the `double` type.</span></span> <span data-ttu-id="b6c15-194">Вы можете убедиться в повышении точности при использовании типа decimal, выполнив следующий код:</span><span class="sxs-lookup"><span data-stu-id="b6c15-194">You can see the greater precision with the decimal type by trying the following code:</span></span>
 
 
     ```csharp
@@ -370,28 +370,28 @@ items:
     ```
 
 
-    <span data-ttu-id="bb6a4-195">Суффикс `M` возле чисел указывает, что для константы должен использоваться тип `decimal`.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-195">The `M` suffix on the numbers is how you indicate that a constant should use the `decimal` type.</span></span>
+    <span data-ttu-id="b6c15-195">Суффикс `M` возле чисел указывает, что для константы должен использоваться тип `decimal`.</span><span class="sxs-lookup"><span data-stu-id="b6c15-195">The `M` suffix on the numbers is how you indicate that a constant should use the `decimal` type.</span></span>
 
 
-    <span data-ttu-id="bb6a4-196">Обратите внимание, что при вычислении с использованием типа decimal справа от запятой содержится больше цифр.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-196">Notice that the math using the decimal type has more digits to the right of the decimal point.</span></span>
+    <span data-ttu-id="b6c15-196">Обратите внимание, что при вычислении с использованием типа decimal справа от запятой содержится больше цифр.</span><span class="sxs-lookup"><span data-stu-id="b6c15-196">Notice that the math using the decimal type has more digits to the right of the decimal point.</span></span>
 
 
-    <span data-ttu-id="bb6a4-197">***Задача***</span><span class="sxs-lookup"><span data-stu-id="bb6a4-197">***Challenge***</span></span>
+    <span data-ttu-id="b6c15-197">***Задача***</span><span class="sxs-lookup"><span data-stu-id="b6c15-197">***Challenge***</span></span>
 
 
-    <span data-ttu-id="bb6a4-198">Теперь, когда вы ознакомились с разными числовыми типами, напишите код, который позволяет вычислить площадь круга с радиусом 2,50 см.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-198">Now that you've seen the different numeric types, write code that calculates the area of a circle whose radius is 2.50 centimeters.</span></span> <span data-ttu-id="bb6a4-199">Помните, что площадь круга равна квадрату радиуса, умноженному на число пи.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-199">Remember that the area of a circle is the radius squared multiplied by PI.</span></span> <span data-ttu-id="bb6a4-200">Подсказка: в .NET есть константа пи <xref:System.Math.PI?displayProperty=nameWithType>, которую можно использовать.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-200">One hint: .NET contains a constant for PI, <xref:System.Math.PI?displayProperty=nameWithType> that you can use for that value.</span></span>
+    <span data-ttu-id="b6c15-198">Теперь, когда вы ознакомились с разными числовыми типами, напишите код, который позволяет вычислить площадь круга с радиусом 2,50 см.</span><span class="sxs-lookup"><span data-stu-id="b6c15-198">Now that you've seen the different numeric types, write code that calculates the area of a circle whose radius is 2.50 centimeters.</span></span> <span data-ttu-id="b6c15-199">Помните, что площадь круга равна квадрату радиуса, умноженному на число пи.</span><span class="sxs-lookup"><span data-stu-id="b6c15-199">Remember that the area of a circle is the radius squared multiplied by PI.</span></span> <span data-ttu-id="b6c15-200">Подсказка: в .NET есть константа пи <xref:System.Math.PI?displayProperty=nameWithType>, которую можно использовать.</span><span class="sxs-lookup"><span data-stu-id="b6c15-200">One hint: .NET contains a constant for PI, <xref:System.Math.PI?displayProperty=nameWithType> that you can use for that value.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="bb6a4-201">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-201">This online coding experience is in preview mode.</span></span> <span data-ttu-id="bb6a4-202">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="bb6a4-202">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+    > <span data-ttu-id="b6c15-201">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="b6c15-201">This online coding experience is in preview mode.</span></span> <span data-ttu-id="b6c15-202">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="b6c15-202">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
 
 
-    <span data-ttu-id="bb6a4-203">Вы должны получить ответ от 19 до 20.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-203">You should get an answer between 19 and 20.</span></span>
-- title: <span data-ttu-id="bb6a4-204">Выполнение задачи</span><span class="sxs-lookup"><span data-stu-id="bb6a4-204">Complete challenge</span></span>
+    <span data-ttu-id="b6c15-203">Вы должны получить ответ от 19 до 20.</span><span class="sxs-lookup"><span data-stu-id="b6c15-203">You should get an answer between 19 and 20.</span></span>
+- title: <span data-ttu-id="b6c15-204">Выполнение задачи</span><span class="sxs-lookup"><span data-stu-id="b6c15-204">Complete challenge</span></span>
   durationInMinutes: 1
   content: >
-    <span data-ttu-id="bb6a4-205">В результате получилось нечто подобное?</span><span class="sxs-lookup"><span data-stu-id="bb6a4-205">Did you come up with something like this?</span></span>
+    <span data-ttu-id="b6c15-205">В результате получилось нечто подобное?</span><span class="sxs-lookup"><span data-stu-id="b6c15-205">Did you come up with something like this?</span></span>
 
 
     ```csharp
@@ -405,25 +405,25 @@ items:
     ```
 
 
-    <span data-ttu-id="bb6a4-206">При желании поэкспериментируйте с другими формулами.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-206">Try some other formulas if you'd like.</span></span>
+    <span data-ttu-id="b6c15-206">При желании поэкспериментируйте с другими формулами.</span><span class="sxs-lookup"><span data-stu-id="b6c15-206">Try some other formulas if you'd like.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="bb6a4-207">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-207">This online coding experience is in preview mode.</span></span> <span data-ttu-id="bb6a4-208">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="bb6a4-208">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+    > <span data-ttu-id="b6c15-207">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="b6c15-207">This online coding experience is in preview mode.</span></span> <span data-ttu-id="b6c15-208">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="b6c15-208">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
 - content: >-
-    <span data-ttu-id="bb6a4-209">Вы выполнили все задачи в интерактивном руководстве "Числа в C#".</span><span class="sxs-lookup"><span data-stu-id="bb6a4-209">You've completed the "Numbers in C#" interactive tutorial.</span></span> <span data-ttu-id="bb6a4-210">Вы можете выбрать ссылку **Ветви и циклы** ниже, чтобы запустить следующее интерактивное руководство, либо посетить [сайт .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial), чтобы скачать пакет SDK для .NET Core, создать проект на своем компьютере и продолжить написание кода.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-210">You can click the **Branches and Loops** link below to start the next interactive tutorial, or you can visit the [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="bb6a4-211">На шаге "Продолжение обучения" вы вернетесь к этим учебникам.</span><span class="sxs-lookup"><span data-stu-id="bb6a4-211">The "Keep Learning" step brings you back to these tutorials.</span></span>
+    <span data-ttu-id="b6c15-209">Вы выполнили все задачи в интерактивном руководстве "Числа в C#".</span><span class="sxs-lookup"><span data-stu-id="b6c15-209">You've completed the "Numbers in C#" interactive tutorial.</span></span> <span data-ttu-id="b6c15-210">Вы можете выбрать ссылку **Ветви и циклы** ниже, чтобы запустить следующее интерактивное руководство, либо посетить [сайт .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial), чтобы скачать пакет SDK для .NET Core, создать проект на своем компьютере и продолжить написание кода.</span><span class="sxs-lookup"><span data-stu-id="b6c15-210">You can click the **Branches and Loops** link below to start the next interactive tutorial, or you can visit the [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="b6c15-211">На шаге "Продолжение обучения" вы вернетесь к этим учебникам.</span><span class="sxs-lookup"><span data-stu-id="b6c15-211">The "Keep Learning" step brings you back to these tutorials.</span></span>
 
 
-    <span data-ttu-id="bb6a4-212">Дополнительные сведения о числах в C# см. в следующих статьях:</span><span class="sxs-lookup"><span data-stu-id="bb6a4-212">You can learn more about numbers in C# in the following topics:</span></span>
+    <span data-ttu-id="b6c15-212">Дополнительные сведения о числах в C# см. в следующих статьях:</span><span class="sxs-lookup"><span data-stu-id="b6c15-212">You can learn more about numbers in C# in the following topics:</span></span>
 
 
-    - [<span data-ttu-id="bb6a4-213">Таблица целых типов</span><span class="sxs-lookup"><span data-stu-id="bb6a4-213">Integral Types Table</span></span>](../../language-reference/keywords/integral-types-table.md)
+    - [<span data-ttu-id="b6c15-213">Целочисленные типы</span><span class="sxs-lookup"><span data-stu-id="b6c15-213">Integral types</span></span>](../../language-reference/builtin-types/integral-numeric-types.md)
 
-    - [<span data-ttu-id="bb6a4-214">Таблица типов с плавающей запятой</span><span class="sxs-lookup"><span data-stu-id="bb6a4-214">Floating-Point Types Table</span></span>](../../language-reference/keywords/floating-point-types-table.md)
+    - [<span data-ttu-id="b6c15-214">Таблица типов с плавающей запятой</span><span class="sxs-lookup"><span data-stu-id="b6c15-214">Floating-Point Types Table</span></span>](../../language-reference/keywords/floating-point-types-table.md)
 
-    - [<span data-ttu-id="bb6a4-215">Таблица встроенных типов</span><span class="sxs-lookup"><span data-stu-id="bb6a4-215">Built-In Types Table</span></span>](../../language-reference/keywords/built-in-types-table.md)
+    - [<span data-ttu-id="b6c15-215">Таблица встроенных типов</span><span class="sxs-lookup"><span data-stu-id="b6c15-215">Built-In Types Table</span></span>](../../language-reference/keywords/built-in-types-table.md)
 
-    - [<span data-ttu-id="bb6a4-216">Таблица неявных числовых преобразований</span><span class="sxs-lookup"><span data-stu-id="bb6a4-216">Implicit Numeric Conversions Table</span></span>](../../language-reference/keywords/implicit-numeric-conversions-table.md)
+    - [<span data-ttu-id="b6c15-216">Таблица неявных числовых преобразований</span><span class="sxs-lookup"><span data-stu-id="b6c15-216">Implicit Numeric Conversions Table</span></span>](../../language-reference/keywords/implicit-numeric-conversions-table.md)
 
-    - [<span data-ttu-id="bb6a4-217">Таблица явных числовых преобразований</span><span class="sxs-lookup"><span data-stu-id="bb6a4-217">Explicit Numeric Conversions Table</span></span>](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+    - [<span data-ttu-id="b6c15-217">Таблица явных числовых преобразований</span><span class="sxs-lookup"><span data-stu-id="b6c15-217">Explicit Numeric Conversions Table</span></span>](../../language-reference/keywords/explicit-numeric-conversions-table.md)
