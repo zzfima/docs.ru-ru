@@ -2,12 +2,12 @@
 title: Безопасность транспорта HTTP
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 386c24a9b51be56bf5a8195123e573cfced6392f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 456df42848c009dcf42022ac674a1d27e5b33972
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402310"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487022"
 ---
 # <a name="http-transport-security"></a>Безопасность транспорта HTTP
 Если в качестве транспорта используется протокол HTTP, безопасность обеспечивается реализацией протокола SSL (Secure Sockets Layer). Протокол SSL широко используется в Интернете для проверки подлинности службы при подключении клиента, а затем и для обеспечения конфиденциальности (шифрования) канала. В этом разделе объясняется, как SSL работает и как это реализуется в Windows Communication Foundation (WCF).  
@@ -38,9 +38,9 @@ ms.locfileid: "67402310"
 ### <a name="using-iis-for-transport-security"></a>Использование служб IIS для безопасности транспорта  
   
 #### <a name="iis-70"></a>IIS 7.0  
- Чтобы настроить [!INCLUDE[iisver](../../../../includes/iisver-md.md)] качестве надежного узла (с использованием SSL), см. в разделе [бета-версия IIS 7.0: Настройка SSL в IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88600).  
+ Чтобы настроить IIS 7.0 в качестве надежного узла (с использованием SSL), см. в разделе [Настройка SSL в IIS 7.0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771438(v=ws.10)).  
   
- Настройка сертификатов для использования с [!INCLUDE[iisver](../../../../includes/iisver-md.md)], см. в разделе [бета-версия IIS 7.0: Настройка сертификатов сервера в IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595).  
+Чтобы настроить сертификаты для использования с IIS 7.0, см. в разделе [Настройка сертификатов сервера в IIS 7.0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
   
 #### <a name="iis-60"></a>IIS 6,0  
  Чтобы настроить IIS 6.0 в качестве надежного узла (с использованием SSL), см. в разделе [Настройка SSL](https://go.microsoft.com/fwlink/?LinkId=88601).  

@@ -2,12 +2,12 @@
 title: Активация MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 925148c4bd084f843f125ab9e851a5404bbe4b89
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43d6cde7a9342b57933cd3e7475bd4412da86d92
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664811"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487557"
 ---
 # <a name="msmq-activation"></a>Активация MSMQ
 Этот образец демонстрирует размещение приложений в службе активации Windows (WAS), которые считываются из очереди сообщений. В этом примере используется `netMsmqBinding` и основан на [Двусторонняя связь](../../../../docs/framework/wcf/samples/two-way-communication.md) образца. В данном случае служба представляет собой приложение, размещенное на веб-сервере, а клиент - резидентное приложение, выводящее данные в окно консоли для наблюдения за состоянием размещенных заказов на покупку.  
@@ -215,7 +215,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1. Убедитесь, что установлены службы [!INCLUDE[iisver](../../../../includes/iisver-md.md)], которые необходимы для активации WAS.  
+1. Убедитесь, что установлен IIS 7.0, так как это требуется для активации WAS.  
   
 2. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Кроме того необходимо установить компоненты не HTTP Активация WCF:  
   
@@ -249,7 +249,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
      Для удобства следующие действия выполняются в пакетном файле AddMsmqSiteBinding.cmd, расположенном в каталоге образца.  
   
-    1. Для поддержки активации net.msmq сначала необходимо привязать веб-узел по умолчанию к протоколу net.msmq. Это можно сделать программой appcmd.exe, которая устанавливается в наборе средств управления [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. В командной строке с повышенными привилегиями (с правами администратора) выполните следующую команду.  
+    1. Для поддержки активации net.msmq сначала необходимо привязать веб-узел по умолчанию к протоколу net.msmq. Сделать это позволяет файл Appcmd.exe, который устанавливается с помощью набора инструментов управления IIS 7.0. В командной строке с повышенными привилегиями (с правами администратора) выполните следующую команду.  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   

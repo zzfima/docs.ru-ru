@@ -2,12 +2,12 @@
 title: Совместимость с ASP.NET
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 01381dc579f5ae3eadd2f913a0e09d7d259794a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01329769b74c8a5841b5a2024d3ed674c108be1c
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002668"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487658"
 ---
 # <a name="aspnet-compatibility"></a>Совместимость с ASP.NET
 В этом примере показано, как включить режим совместимости ASP.NET в Windows Communication Foundation (WCF). Использование служб, работающих в режиме, принимают полное участие в конвейере приложения ASP.NET и осуществлять совместимости с ASP.NET функции ASP.NET, такие как авторизация файла/URL-адрес, состояние сеанса и <xref:System.Web.HttpContext> класса. <xref:System.Web.HttpContext> Класс позволяет получить доступ к файлы cookie, сеансов и других функций ASP.NET. Для этого режима требуется, чтобы привязки использовали транспорт HTTP, а сами службы были размещены в службах IIS.  
@@ -123,7 +123,7 @@ Press <ENTER> to terminate client.
   
 2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. После построения решения запустите файл Setup.bat, чтобы настроить приложение ServiceModelSamples в службах [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. Теперь каталог ServiceModelSamples должен представляться как приложение [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  
+3. После решения построено, запустите файл Setup.bat, чтобы настроить приложение ServiceModelSamples в IIS 7.0. Теперь каталог ServiceModelSamples должен представляться как приложение IIS 7.0.  
   
 4. Чтобы запустить образец в конфигурации с одной или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   

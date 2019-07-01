@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing
 ms.date: 03/30/2017
 ms.assetid: 10ef3876-6f8e-4d4e-8444-f47847b64795
-ms.openlocfilehash: f5d74d73cc43b500d3920ca03905f4eb7543619a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93354fbdd0c1726280526ca07a8b3dd1c57c8a25
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779747"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486767"
 ---
 # <a name="microsofttransactionstransactionbridgedurableparticipantreplaywhilepreparing"></a>Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing
 Служба протокола WS-AT получила ответное сообщение от постоянного участника, который не ответил на подготовительное сообщение. Поэтому транзакция была прервана.  
@@ -15,8 +15,9 @@ ms.locfileid: "61779747"
 ## <a name="description"></a>Описание  
  Трассируется, если ответное сообщение получается, пока постоянный участник находится в состоянии подготовки. Это недопустимое сообщение для данного состояния, поэтому транзакция прерывается.  
   
-## <a name="troubleshooting"></a>Устранение неполадок  
- Получение этого сообщения об ошибке может указывать на то, что постоянный участник (включая подчиненные диспетчеры транзакций) был восстановлен после ошибки, однако ему не известен точный результат транзакции, и он запросил ее состояние.  
+## <a name="troubleshooting"></a>Устранение неполадок
+
+Такая ошибка может указывать, что постоянный участник (включая подчиненные диспетчеры транзакций) был восстановлен после сбоя; Тем не менее результат транзакции не известен и запрашивает его состояние.  
   
 ## <a name="see-also"></a>См. также
 

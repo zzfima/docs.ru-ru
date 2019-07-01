@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 12296fbd503a7e9f1866f407964a5e223d1afadd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 58dcfacba302ef3b85a8bc7b24b17f2435115594
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650333"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486651"
 ---
 # <a name="bindings-and-security"></a>Привязки и безопасность
 Предоставляемые системой привязки, включенные с помощью Windows Communication Foundation (WCF) позволяют быстро программировании приложений WCF. За одним исключением, во всех привязках включена схема безопасности по умолчанию. Этот раздел поможет выбрать привязку, соответствующую требованиям к безопасности.  
@@ -210,7 +210,7 @@ ms.locfileid: "64650333"
 |NTLM|Проверка подлинности NTLM (NT LAN Manager).|  
 |Windows|Проверка подлинности Windows.|  
 |Сертификат|Проверка подлинности производится с использованием сертификата.|  
-|IssuedToken|Позволяет службе потребовать, чтобы проверка подлинности клиента производилась с помощью маркера, выданного службой маркеров безопасности или [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Дополнительные сведения см. в разделе [Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|IssuedToken|Позволяет службе запрашивать проверку подлинности клиента с помощью маркера, выданного службой маркеров безопасности или CardSpace. Дополнительные сведения см. в разделе [Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="message-client-credentials-in-bindings"></a>Учетные данные клиента в привязках в режиме Message  
  В приведенной ниже таблице перечислены типы учетных данных клиента, доступные при использовании привязки в режиме безопасности Message.  

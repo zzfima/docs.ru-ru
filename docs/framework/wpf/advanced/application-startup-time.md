@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 321aad14d17d6ef6fe0b7c112f8f694dd1c767d6
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 8bdd70a6eaea8aff196e2156d88460a6d24b5d3f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832691"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487177"
 ---
 # <a name="application-startup-time"></a>Время запуска приложения
 Время, необходимое для запуска WPF-приложения, может сильно варьироваться. В этом разделе описаны различные способы, позволяющие сократить воспринимаемое и фактическое время запуска приложений Windows Presentation Foundation (WPF).  
@@ -65,7 +65,7 @@ ms.locfileid: "66832691"
  Одновременное присутствие модулей Ngen и JIT может вызвать противоположный эффект. Это связано с тем, что при этом требуется загрузка mscorjit.dll, а когда JIT-компилятор работает с вашим кодом и считывает метаданные сборок, происходит обращение к многим страницам в образах Ngen.  
   
 ### <a name="ngen-and-clickonce"></a>NGen и ClickOnce  
- Время загрузки вашего приложения может также зависеть от выбранного способа его развертывания. Развертывание приложений [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] не поддерживает Ngen. Если вы решите использовать Ngen.exe для своего приложения, выберите другой механизм развертывания, например установщик Windows.  
+ Время загрузки вашего приложения может также зависеть от выбранного способа его развертывания. Развертывание приложений ClickOnce не поддерживает Ngen. Если вы решите использовать Ngen.exe для своего приложения, выберите другой механизм развертывания, например установщик Windows.  
   
  См. дополнительные сведения о [файле Ngen.exe (генераторе образов в машинном коде)](../../tools/ngen-exe-native-image-generator.md).  
   
@@ -112,9 +112,9 @@ ms.locfileid: "66832691"
  Если необходимо использовать <xref:System.Xml.Serialization.XmlSerializer> класс, вы может повысить производительность, можно создать предварительную сборку сериализации.  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>Настройка технологии ClickOnce на проверку обновлений после запуска  
- Если приложение использует [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], запретите подключение к сети при запуске, настроив [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] на проверку наличия обновлений на сайте развертывания после запуска приложения.  
+ Если приложение использует ClickOnce, запретите подключение к сети при запуске, настроив ClickOnce, чтобы проверить наличие обновлений на сайте развертывания после запуска приложения.  
   
- Если используется модель приложения браузера XAML (XBAP), обратите внимание на то, что [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] проверяет наличие обновлений на сайте развертывания, даже если XBAP уже присутствует в кэше [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]. Для получения дополнительной информации см. [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).  
+ Если вы используете модель приложения (XBAP) браузера XAML, имейте в виду, что ClickOnce проверяет наличие обновлений на сайте развертывания, даже если XBAP уже присутствует в кэше ClickOnce. Для получения дополнительной информации см. [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 ## <a name="configure-the-presentationfontcache-service-to-start-automatically"></a>Настройка автоматического запуска службы PresentationFontCache  
  Первым WPF-приложением, которое загружается после перезагрузки, является служба PresentationFontCache. Служба кэширует системные шрифты, делает их более доступными и повышает общую производительность. Поскольку с запуском службы, а также с некоторыми управляемыми средами связаны временные задержки, службу можно настроить на автоматический запуск при перезагрузке системы.  

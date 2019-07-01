@@ -2,12 +2,12 @@
 title: Пользовательский узел службы
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: d2eebd502fa02d01ac86cf88f336b72829a6116f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c2a1fc1b398a3a9efcd0c824ca041a790448dd3
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990669"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487649"
 ---
 # <a name="custom-service-host"></a>Пользовательский узел службы
 Этот образец показывает, как применять пользовательский производный класс для класса <xref:System.ServiceModel.ServiceHost>, чтобы изменять поведение службы во время выполнения. Такой подход обеспечивает поддерживающую повторное использование альтернативу настройке большого числа служб одинаковым образом. Кроме того, в этом примере демонстрируется, как с помощью класса <xref:System.ServiceModel.Activation.ServiceHostFactory> применять пользовательский объект ServiceHost в среде размещения IIS или службы активации Windows (WAS).  
@@ -168,11 +168,11 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
   
 2. Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. После построения решения запустите файл Setup.bat, чтобы настроить приложение ServiceModelSamples в службах [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. Теперь каталог ServiceModelSamples должен представляться как приложение [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  
+3. После решения построено, запустите файл Setup.bat, чтобы настроить приложение ServiceModelSamples в IIS 7.0. Теперь каталог ServiceModelSamples должен представляться как приложение IIS 7.0.  
   
 4. Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5. Чтобы удалить приложение [!INCLUDE[iisver](../../../../includes/iisver-md.md)], выполните файл Cleanup.bat.  
+5. Чтобы удалить приложение IIS 7.0, запустите файл Cleanup.bat.  
   
 ## <a name="see-also"></a>См. также
 

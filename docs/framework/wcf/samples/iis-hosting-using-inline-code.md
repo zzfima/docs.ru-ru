@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: 8e401d6ce73c036188d13f40c1293abd1f0de58c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a96e00adbe12365220a58d93edf9dc965825d07e
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781476"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487588"
 ---
 # <a name="iis-hosting-using-inline-code"></a>Размещение в службах IIS с использованием встроенного кода
 
@@ -92,7 +92,7 @@ Press <ENTER> to terminate client.
 
 2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-3. После построения решения запустите файл setup.bat, чтобы настроить приложение ServiceModelSamples в службах [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. Теперь каталог ServiceModelSamples должен представляться как приложение [!INCLUDE[iisver](../../../../includes/iisver-md.md)].
+3. После решения построено, запустите файл setup.bat, чтобы настроить приложение ServiceModelSamples в IIS 7.0. Теперь каталог ServiceModelSamples должен представляться как приложение IIS 7.0.
 
 4. Чтобы запустить образец в конфигурации с одной или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Например о том, как создать клиентское приложение, которое можно вызывать эту службу, см. в разделе [как: Создание клиента](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).
 

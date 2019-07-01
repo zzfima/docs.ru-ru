@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: a049bbe22d29f02acbc7889bb5d5010ec44f9d15
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 717abc8f54669a5ca814a61827a0865215204e1b
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876222"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487355"
 ---
 # <a name="application-settings-architecture"></a>Архитектура параметров приложения
 В этом разделе описываются принципы работы архитектуры параметров приложения и рассматриваются дополнительные возможности архитектуры, такие как сгруппированные параметры и ключи параметров.  
@@ -109,16 +109,16 @@ ms.locfileid: "65876222"
  При реализации собственного класса параметров можно использовать <xref:System.Configuration.SettingsSerializeAsAttribute> чтобы отметить параметр для настраиваемой или двоичной сериализации с помощью <xref:System.Configuration.SettingsSerializeAs> перечисления. Дополнительные сведения о создании собственных классов параметров в коде, см. в разделе [как: Создание параметров приложения](how-to-create-application-settings.md).  
   
 ### <a name="settings-file-locations"></a>Расположение файлов параметров  
- Расположение файлов `app`.exe.config и *user*.config зависит от способа установки приложения. Для приложения на базе Windows Forms, скопировать на локальном компьютере `app`. exe.config будет находиться в той же папке, что базовый каталог основного исполняемого файла приложения, и *пользователя*.config будет находиться в расположение которого задается <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> свойство. Для приложения, установленного с помощью [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], оба этих файла будут находиться в каталоге данных [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] в каталоге %InstallRoot%\Documents and Settings\\*имя_пользователя*\Local Settings.  
+ Расположение файлов `app`.exe.config и *user*.config зависит от способа установки приложения. Для приложения на базе Windows Forms, скопировать на локальном компьютере `app`. exe.config будет находиться в той же папке, что базовый каталог основного исполняемого файла приложения, и *пользователя*.config будет находиться в расположение которого задается <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> свойство. Для приложения, установленного с помощью ClickOnce, оба файла будет находиться в каталоге %InstallRoot%\Documents ClickOnce данные и параметры\\*username*\Local Settings.  
   
- Место хранения этих файлов будет другим, если пользователь включил перемещаемые профили, что позволит ему определять разные настройки Windows и приложения в случае использования им других компьютеров в домене. В этом случае для приложений [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] и не [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] их файлы `app`.exe.config и *user*.config будут находиться в каталоге %InstallRoot%\Documents and Settings\\*имя_пользователя*\Application Data.  
+ Место хранения этих файлов будет другим, если пользователь включил перемещаемые профили, что позволит ему определять разные настройки Windows и приложения в случае использования им других компьютеров в домене. В этом случае будет иметь ClickOnce-приложений и приложений не ClickOnce их `app`. exe.config и *пользователя*файлы .config хранится в папке %InstallRoot%\Documents and Settings\\  *имя пользователя*\Application Data.  
   
- Дополнительные сведения о том, как параметры приложения работают с новой технологией развертывания, см. в разделе [ClickOnce и параметры приложения](/visualstudio/deployment/clickonce-and-application-settings). Дополнительные сведения о каталоге данных [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] см. в разделе [Доступ к локальным и удаленным данным в приложениях ClickOnce](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications).  
+ Дополнительные сведения о том, как параметры приложения работают с новой технологией развертывания, см. в разделе [ClickOnce и параметры приложения](/visualstudio/deployment/clickonce-and-application-settings). Дополнительные сведения о каталоге данных ClickOnce см. в разделе [доступ к локальным и удаленным данным в приложениях ClickOnce](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications).  
   
 ## <a name="application-settings-and-security"></a>Параметры приложения и безопасность  
  Параметры приложения предназначены для работы в режиме частичного доверия, то есть в среде с ограниченным доступом, которая используется по умолчанию для приложений Windows Forms, размещенных в Интернете или интрасети. Для использования параметров приложения с поставщиком параметров по умолчанию специальные разрешения, выходящие за рамки частичного доверия, не нужны.  
   
- При использовании параметров приложения в приложении[!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] файл `user`.config хранится в каталоге данных [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]. Размер файла `user`.config приложения не может превышать квоту каталога данных, заданную в [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]. Дополнительные сведения см. в разделе [ClickOnce и параметры приложения](/visualstudio/deployment/clickonce-and-application-settings).  
+ При использовании параметров приложения в приложении ClickOnce `user`config-файл хранится в каталоге данных ClickOnce. Размер приложения `user`config-файл не может превышать квоту каталога данных, задайте с помощью ClickOnce. Дополнительные сведения см. в разделе [ClickOnce и параметры приложения](/visualstudio/deployment/clickonce-and-application-settings).  
   
 ## <a name="custom-settings-providers"></a>Поставщики пользовательских настроек  
  В архитектуре параметров приложений, есть слабую связь между параметрами приложения класс-оболочку, производный от <xref:System.Configuration.ApplicationSettingsBase>, и связанный поставщик параметров или поставщиков, производный от <xref:System.Configuration.SettingsProvider>. Эта связь определяется только <xref:System.Configuration.SettingsProviderAttribute> применен к классу-оболочке или его отдельным свойствам. Если параметры, поставщик явно не указано, поставщик по умолчанию, <xref:System.Configuration.LocalFileSettingsProvider>, используется. В результате такая архитектура позволяет создавать и использовать поставщиков настраиваемых параметров.  

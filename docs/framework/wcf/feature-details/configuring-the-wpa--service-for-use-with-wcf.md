@@ -2,12 +2,12 @@
 title: Настройка службы активации процессов Windows для использования с Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 9fead93fcb8982f4f69af5d4bb401aa731bf887f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ab62bda5e579bcd80a7403d9af3a7e7f9836647
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654569"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487005"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Настройка службы активации процессов Windows для использования с Windows Communication Foundation
 В этом разделе описываются шаги, необходимые для настройки службы активации Windows (WAS) в [!INCLUDE[wv](../../../../includes/wv-md.md)] для размещения Windows Communication Foundation (WCF) служб, которые не поддерживают связь по протоколу HTTP сетевые протоколы. Настройка предполагает следующие шаги.  
@@ -23,7 +23,7 @@ ms.locfileid: "64654569"
 ## <a name="configuring-a-site-with-non-http-bindings"></a>Настройка узла с привязками протоколов, отличных от HTTP  
  Для использования в сочетании со службой WAS привязки к протоколу, отличному от HTTP, необходимо добавить привязку узла в конфигурацию WAS. Хранилищем конфигурации для службы WAS является файл applicationHost.config, находящийся в каталоге %windir%\system32\inetsrv\config. Это хранилище конфигурации используется и службой WAS, и службами IIS 7.0.  
   
- applicationHost.config представляет собой текстовый XML-файл, который можно открыть в любом стандартном текстовом редакторе, таком как Блокнот. Тем не менее, для добавления привязок узла к отличным от HTTP протоколам рекомендуется использовать программу настройки [!INCLUDE[iisver](../../../../includes/iisver-md.md)] из командной строки (appcmd.exe).  
+ applicationHost.config представляет собой текстовый XML-файл, который можно открыть в любом стандартном текстовом редакторе, таком как Блокнот. Однако средство командной строки настройки IIS 7.0 (appcmd.exe) является предпочтительным способом для добавления привязки сайта, отличные от HTTP.  
   
  Следующая команда добавляет в веб-узел по умолчанию привязку узла к протоколу net.tcp с помощью команды appcmd.exe (вводится как одна строка).  
   
@@ -89,7 +89,7 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
 [InvalidOperationException: The protocol 'net.tcp' does not have an implementation of HostedTransportConfiguration type registered.]   System.ServiceModel.AsyncResult.End(IAsyncResult result) +15778592   System.ServiceModel.Activation.HostedHttpRequestAsyncResult.End(IAsyncResult result) +15698937   System.ServiceModel.Activation.HostedHttpRequestAsyncResult.ExecuteSynchronous(HttpApplication context, Boolean flowContext) +265   System.ServiceModel.Activation.HttpModule.ProcessRequest(Object sender, EventArgs e) +227   System.Web.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +80   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +171  
 ```  
   
- Если появилось это сообщение об ошибке, убедитесь, что установлены и правильно настроены службы WAS для активации по протоколу, отличному от HTTP. Дополнительные сведения см. в разделе [Как Установка и настройка компонентов активации WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
+ Если появилось это сообщение об ошибке, убедитесь, что установлены и правильно настроены службы WAS для активации по протоколу, отличному от HTTP. Дополнительные сведения см. в разделе [Практическое руководство. Установка и настройка компонентов активации WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
 ## <a name="building-a-wcf-service-that-uses-was-for-non-http-activation"></a>Построение службы WCF, использующей WAS для активации по протоколу, отличному от HTTP  
  После выполнения действия по установке и настройке WAS (см. в разделе [как: Установка и настройка компонентов активации WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)), Настройка службы для использования WAS для активации производится аналогично настройке службы, размещенной в IIS.  

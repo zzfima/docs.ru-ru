@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 08e85828451ba6c66b13ff31e3d6c106871b8154
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 71bf50bdcf058e94981dc5df4731b5d32dcc2069
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875889"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487207"
 ---
 # <a name="windows-forms-overview"></a>Общие сведения о Windows Forms
 
@@ -72,21 +72,21 @@ ms.locfileid: "65875889"
 
 ### <a name="deploy-apps-to-client-computers"></a>Развертывание приложений на клиентских компьютерах
 
-После создания приложения необходимо отправить его пользователям, чтобы они могли установить и запустить его на своих клиентских компьютерах. При использовании [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] технологии, можно развернуть приложения в Visual Studio с помощью нескольких щелчков и предоставить пользователям URL-адрес приложения в Интернете. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] управляет всеми элементами и зависимостями в приложении и обеспечивает его правильную установку на клиентском компьютере.
+После создания приложения необходимо отправить его пользователям, чтобы они могли установить и запустить его на своих клиентских компьютерах. При использовании технологии ClickOnce, можно развернуть приложения в Visual Studio с помощью нескольких щелчков и предоставить пользователям URL-адрес приложения в Интернете. ClickOnce управляет всеми элементами и зависимостями в приложении и гарантирует, что приложение правильно установлено на клиентском компьютере.
 
-Приложения [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] можно настроить так, чтобы они работали только при подключении к сети или как в сетевом, так и в автономном режиме. Если вы указываете, что приложение должно поддерживать работу в автономном режиме, то технология [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] добавляет ссылку на приложение в меню **Пуск** пользователя. Пользователь может открыть приложение без использования URL-адреса.
+ClickOnce-приложений можно настроить для запуска только в том случае, если он подключен к сети или в обоих и вне сети. Если вы указываете, что приложение должно поддерживать работу в автономном режиме, ClickOnce добавляет ссылку на приложение в пользователя **запустить** меню. Пользователь может открыть приложение без использования URL-адреса.
 
-Когда вы обновляете приложение, на веб-сервере публикуется новый манифест развертывания и новая копия приложения. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] обнаруживает доступное обновление и обновляет пользовательскую установку. Для обновления старых сборок написание специального кода не требуется.
+Когда вы обновляете приложение, на веб-сервере публикуется новый манифест развертывания и новая копия приложения. ClickOnce обнаружит, что доступно обновление и обновить установку пользователя; для обновления старых сборок требуется специального кода.
 
 #### <a name="deploy-clickonce-apps"></a>Развертывание приложений ClickOnce
 
-Общие сведения о [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] можно найти в разделе [Развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Пошаговые инструкции по использованию этих возможностей можно найти в приведенных ниже разделах справки.
+Полное введение в технологии ClickOnce, см. в разделе [развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Пошаговые инструкции по использованию этих возможностей можно найти в приведенных ниже разделах справки.
 
 |Описание|Раздел справки|
 |-----------------|----------------|
-|Развертывание приложения с помощью [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Практическое руководство. Публикация приложения ClickOnce с помощью мастера публикации](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Пошаговое руководство: Развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
-|Обновление развертывания [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Практическое руководство. Управление обновлениями для ClickOnce-приложения](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
-|Управление безопасностью с помощью [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Практическое руководство. Включение параметров безопасности ClickOnce-приложений](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
+|Развертывание приложения с помощью ClickOnce|[Практическое руководство. Публикация приложения ClickOnce с помощью мастера публикации](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Пошаговое руководство: Развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
+|Обновление развертывания ClickOnce|[Практическое руководство. Управление обновлениями для ClickOnce-приложения](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
+|Управление безопасностью с помощью ClickOnce|[Практическое руководство. Включение параметров безопасности ClickOnce-приложений](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
 
 ### <a name="other-controls-and-features"></a>Другие элементы управления и функции
 

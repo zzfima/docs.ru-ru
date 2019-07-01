@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: 9a02a912c170bfc4d997f1d8a0fe4f4d5bedb147
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5a9864184e92c3c6bbcf6a613fd1092238181a93
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665813"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487306"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Доступ к фреймам с использованием управляемой объектной модели HTML-документов
 Некоторые HTML-документы состоят из *кадров*, или windows, которые могут содержать другие документы HTML. Использование фреймов упрощает создание HTML-страниц, в которых одна или несколько частей страницы остаются статичными, например панель навигации, а в остальных фреймах содержимое постоянно изменяется.  
@@ -36,7 +36,7 @@ ms.locfileid: "64665813"
 ## <a name="frames-and-security"></a>Фреймы и безопасность  
  Доступ к фреймам усложняется тем фактом, что управляемая модель HTML DOM реализует меры безопасности, называемые *сценария безопасности между рамками*. Если документ содержит `FRAMESET` с двумя или более `FRAME` в различных доменах, эти `FRAME` не смогут взаимодействовать друг с другом. Другими словами `FRAME` , отображает содержимое с веб-сайт не может получить доступ к `FRAME` , на котором размещается сторонний сайт например `http://www.adatum.com/`. Безопасность реализуется на уровне класса <xref:System.Windows.Forms.HtmlWindow>. Можно получать общие сведения о размещении другого веб-сайта в `FRAME`, например его URL-адрес, но невозможно получить доступ к его <xref:System.Windows.Forms.HtmlWindow.Document%2A>, изменить размер или расположение `FRAME` или `IFRAME`, в которых он размещен.  
   
- Это правило также применяется к окнам, которые можно открыть с помощью методов <xref:System.Windows.Forms.HtmlWindow.Open%2A> и <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>. Если открываемое окно относится к другому домену, отличающемуся от домена страницы, размещенной в элементе управления <xref:System.Windows.Forms.WebBrowser>, то перемещение окна или доступ к его содержимому невозможны. Эти ограничения также применяются принудительно при использовании элемента управления <xref:System.Windows.Forms.WebBrowser> для отображения веб-сайта, который отличается от веб-сайта, на котором развернуто приложение Windows Forms. Если используется технология развертывания [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] для установки приложения с веб-сайта A и используется <xref:System.Windows.Forms.WebBrowser> для отображения веб-сайта Б, то доступ к данным веб-сайта Б будет отсутствовать.  
+ Это правило также применяется к окнам, которые можно открыть с помощью методов <xref:System.Windows.Forms.HtmlWindow.Open%2A> и <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>. Если открываемое окно относится к другому домену, отличающемуся от домена страницы, размещенной в элементе управления <xref:System.Windows.Forms.WebBrowser>, то перемещение окна или доступ к его содержимому невозможны. Эти ограничения также применяются принудительно при использовании элемента управления <xref:System.Windows.Forms.WebBrowser> для отображения веб-сайта, который отличается от веб-сайта, на котором развернуто приложение Windows Forms. Если вы используете технологию развертывания ClickOnce для установки приложения с веб-сайта A, и использовании <xref:System.Windows.Forms.WebBrowser> для отображения веб-сайта Б, нельзя возможность доступа к веб-сайта Б.  
   
 ## <a name="see-also"></a>См. также
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: 687398e47ad95e3234c29571eeeac0c9d2d83a39
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: b9a43c5f5141e364ab9aac1cfdff577a8fb8a161
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832786"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486683"
 ---
 # <a name="systemweb-element-web-settings"></a>\<System.Web > элемент (веб-параметры)
 Содержит сведения об управлении поведению процессов, используемые уровнем размещения ASP.NET.  
@@ -47,7 +47,7 @@ ms.locfileid: "66832786"
 |[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Указывает корневой элемент в любом файле конфигурации, который используется среда CLR и приложениями .NET Framework.|  
   
 ## <a name="remarks"></a>Примечания  
- `system.web` Элемента и его дочерних `applicationPool` элемента были добавлены в .NET Framework, начиная с .NET Framework 3.5 SP1. При запуске [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздних версий в интегрированном режиме это сочетание элементов позволяет настроить, как ASP.NET управляет потоками и как помещает запросы в очередь, когда ASP.NET размещен в пуле приложений IIS. При запуске [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздних версий в классическом режиме или режиме ISAPI, эти параметры игнорируются.  
+ `system.web` Элемента и его дочерних `applicationPool` элемента были добавлены в .NET Framework, начиная с .NET Framework 3.5 SP1. При работе в режиме интеграции с IIS 7.0 или более поздних версий это сочетание элементов позволяет настроить, как ASP.NET управляет потоками и как помещает запросы в очередь, когда ASP.NET размещен в пуле приложений IIS. При запуске IIS 7.0 или более поздних версий в классическом режиме или режиме ISAPI эти параметры игнорируются.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как настроить поведение всего процесса ASP.NET в файле aspnet.config, когда ASP.NET размещен в пуле приложений IIS. В примере предполагается, что службы IIS выполняются в интегрированном режиме, и что приложение использует .NET Framework 3.5 SP1 или более поздней версии. Это происходит в версиях .NET Framework более ранней, чем .NET Framework 3.5 SP1. В примере значения являются значениями по умолчанию.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 0374e63191f5f81891a0c7c78c5e739ac5ec7984
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2a195dc6583d5a0a72bd08b66f8933f4002e879a
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624165"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487274"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>Практическое руководство. Доступ к управляемой объектной модели HTML-документов
 Получить доступ к управляемой объектной модели HTML-документа (DOM) можно из двух типов приложений.  
@@ -30,7 +30,7 @@ ms.locfileid: "64624165"
 
 ### <a name="to-access-dom-from-a-usercontrol-hosted-in-internet-explorer"></a>Доступ к DOM из элемента управления UserControl, размещенного в Internet Explorer  
   
-1. Создайте собственный пользовательский класс, производный от класса <xref:System.Windows.Forms.UserControl>. Дополнительные сведения см. в разделе [Как Создание составных элементов управления](how-to-author-composite-controls.md).  
+1. Создайте собственный пользовательский класс, производный от класса <xref:System.Windows.Forms.UserControl>. Дополнительные сведения см. в разделе [Практическое руководство. Создание составных элементов управления](how-to-author-composite-controls.md).  
   
 2. Поместите в обработчик события загрузки для <xref:System.Windows.Forms.UserControl> следующий код:  
   
@@ -43,7 +43,7 @@ ms.locfileid: "64624165"
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
   
-1. Для получения доступа к управляемому HTML DOM приложение или <xref:System.Windows.Forms.UserControl> потребуют полного доверия. Если приложение Windows Forms развертывается с помощью [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], можно запросить полное доверие, используя повышение уровня разрешения или развертывание доверенных приложений (см. раздел [Защита приложений ClickOnce](/visualstudio/deployment/securing-clickonce-applications)).  
+1. Для получения доступа к управляемому HTML DOM приложение или <xref:System.Windows.Forms.UserControl> потребуют полного доверия. Если вы развертываете в приложении Windows Forms, с помощью ClickOnce, можно запросить полное доверие, используя повышение уровня разрешения или развертывание доверенных приложений; см. в разделе [защита приложений ClickOnce](/visualstudio/deployment/securing-clickonce-applications) подробные сведения.  
   
 ## <a name="see-also"></a>См. также
 

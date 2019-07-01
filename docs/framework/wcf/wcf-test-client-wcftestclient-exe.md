@@ -2,12 +2,12 @@
 title: Тестовый клиент WCF (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: ee40ca7a07729cac284ef8c634d63d673be3fbd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9044dc2479e8e0a31a6152321231ee1936b74351
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613079"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487452"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Тестовый клиент WCF (WcfTestClient.exe)
 Тестовый клиент Windows Communication Foundation (WCF) (WcfTestClient.exe) — это средство с графическим Интерфейсом, позволяющий пользователю вводить тестовые параметры, отправлять их в службу и просматривать ответную службы. Он предоставляет удобный способ тестирования в сочетании с узла службы WCF служб.  
@@ -154,7 +154,7 @@ ms.locfileid: "64613079"
   
 - Транзакция.  
   
-- Безопасность: [!INCLUDE[infocard](../../../includes/infocard-md.md)], сертификат, имя пользователя/пароль.  
+- Безопасность: CardSpace, сертификат и имя пользователя и пароль.  
   
 - Привязки: WSFederationbinding, любые контекстные привязки и привязка Https, WebHttpbinding (поддержка ответных сообщений Json).  
   

@@ -2,12 +2,12 @@
 title: Объектная модель программирования WCF Web HTTP
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: f8bda6292506b64057dee006fa59b7723fa406b2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2401a8a051ed4dcd386c7794a2197672709ea423
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648411"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487693"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Объектная модель программирования WCF Web HTTP
 Модель программирования HTTP WCF WEB позволяет разработчикам предоставлять веб-службы Windows Communication Foundation (WCF) службам через базовые HTTP-запросы, не требуя использования SOAP. WCF модель программирования WEB HTTP построена на основе существующей модели расширяемости WCF. Она определяет следующие классы.  
@@ -97,7 +97,7 @@ ms.locfileid: "64648411"
  Модель программирования HTTP WCF WEB не использует сообщения SOAP и поэтому не поддерживает WS-* протоколы. Тем не менее один контракт можно представить двумя различными конечными точками, одна из которых будет использовать протокол SOAP, а другая не будет. См. практическое руководство по [ Предоставление контрактов SOAP и веб-клиентам](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) пример.  
   
 ## <a name="security"></a>Безопасность  
- Поскольку модель программирования HTTP WCF WEB не поддерживает WS-* протоколы, единственным способом защиты веб-службы, построенных на основе модели программирования WCF WEB HTTP является предоставление доступа к ней с помощью протокола SSL. Дополнительные сведения о настройке SSL с [!INCLUDE[iisver](../../../../includes/iisver-md.md)] см. в разделе [реализация SSL-сертификата в IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
+ Поскольку модель программирования HTTP WCF WEB не поддерживает WS-* протоколы, единственным способом защиты веб-службы, построенных на основе модели программирования WCF WEB HTTP является предоставление доступа к ней с помощью протокола SSL. Дополнительные сведения о настройке SSL с IIS 7.0 см. в разделе [реализация SSL-сертификата в IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>См. также
 

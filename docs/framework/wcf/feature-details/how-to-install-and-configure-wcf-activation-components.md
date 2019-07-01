@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 953df285d1a439cd8a1a95358915a7a50e98552a
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 1141bd8344887990ddd8646eba9d25c5d9a4287d
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960103"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487050"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Практическое руководство. Установка и настройка компонентов активации WCF
 В этом разделе описываются шаги, необходимые для настройки службы активации Windows (WAS) на [!INCLUDE[wv](../../../../includes/wv-md.md)] для размещения Windows Communication Foundation (WCF) служб, которые не поддерживают связь по протоколу HTTP сетевые протоколы. Настройка предполагает следующие шаги.  
@@ -34,7 +34,7 @@ ms.locfileid: "65960103"
   
 ### <a name="to-configure-the-was-to-support-tcp-activation"></a>Настройка WAS на поддержку протокола TCP  
   
-1. Для поддержки активации по net.tcp веб-узел по умолчанию необходимо сначала привязать к порту net.tcp. Сделать это позволяет файл Appcmd.exe, который устанавливается с помощью набора инструментов управления [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. В окне командной строки с правами администратора выполните следующую команду.  
+1. Для поддержки активации по net.tcp веб-узел по умолчанию необходимо сначала привязать к порту net.tcp. Это можно сделать с помощью Appcmd.exe, который устанавливается с помощью набора средств управления IIS 7.0. В окне командной строки с правами администратора выполните следующую команду.  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  

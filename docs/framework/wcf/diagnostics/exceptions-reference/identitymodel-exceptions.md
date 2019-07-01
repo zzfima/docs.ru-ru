@@ -2,12 +2,12 @@
 title: Исключения IdentityModel
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b8af2620b6179ce4cff59d7f9871377f06ffe5f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998521"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486666"
 ---
 # <a name="identitymodel-exceptions"></a>Исключения IdentityModel
 В этом разделе перечислены все исключения, создаваемые IdentityModel.  
@@ -100,11 +100,11 @@ ms.locfileid: "61998521"
 |SAMLAssertionMissingMajorVersionAttributeOnRead|Значение MajorVersion для считываемого утверждения SamlAssertion отсутствует или имеет длину 0.|  
 |SamlAttributeClaimRightShouldBePossessProperty|Данный конструктор SamlAttribute требует, чтобы параметр Right утверждения Claim имел значение System.IdentityModel.Claims.Rights.PossessProperty.|  
 |AuthorizationPolicyEvaluated|Политика с указанным ИД оценена.|  
-|SAMLUnableToLoadCondtions|\<SAML: Conditions > не удалось загрузить элемент.|  
+|SAMLUnableToLoadCondtions<!-- the misspelling here is deliberate. -->|\<SAML: Conditions > не удалось загрузить элемент.|  
 |AESKeyLengthNotSupported|Ключ указанной длины не поддерживается. Поддерживаются только 128-, 192- и 256-разрядные ключи.|  
 |UserNameCannotBeEmpty|Имя пользователя не может быть пустым.|  
 |AlgorithmAndPublicKeyMisMatch|Указанный алгоритм и открытый ключ не соответствуют друг другу.|  
-|SAMLUnableToLoadCondtion|\<SAML: Conditions > не удалось загрузить элемент.|  
+|SAMLUnableToLoadCondtion<!-- the misspelling here is deliberate. -->|\<SAML: Conditions > не удалось загрузить элемент.|  
 |SamlAssertionMissingSigningCredentials|SigningCredentials не заданы в SamlAssertion. Утверждения SamlAssertion должны быть подписаны, для продолжения задайте допустимые учетные данные SigningCredentials в утверждении SamlAssertion.|  
 |SspiPayloadNotEncrypted|Двоичные данные не зашифрованы с контекстом безопасности SSPI.|  
 |SAMLAuthorizationDecisionShouldHaveOneActionOnRead|Считываемый оператор SamlAuthorizationDecisionStatement не содержит ни одного действия SamlAction.|  

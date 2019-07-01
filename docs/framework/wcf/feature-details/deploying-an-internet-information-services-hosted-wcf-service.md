@@ -2,12 +2,12 @@
 title: Развертывание службы WCF, размещенной в IIS
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: fcfad4c6cd7ffb0bf1233bab842b57a10bcc7f87
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402301"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486919"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Развертывание службы WCF, размещенной в IIS
 
@@ -103,7 +103,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 
 ### <a name="available-transports"></a>Доступные типы транспорта
 
-Службы WCF, размещенных в IIS 5.1 и IIS 6.0, ограничены с помощью протокола HTTP для взаимодействия. В этих платформах IIS настройка размещенной службы на использование привязки, отличной от HTTP, приводит к ошибке во время активации службы. Для [!INCLUDE[iisver](../../../../includes/iisver-md.md)]поддерживается транспорт HTTP, Net.TCP, Net.Pipe, Net.MSMQ и msmq.formatname для обратной совместимости с существующими приложениями MSMQ.
+Службы WCF, размещенных в IIS 5.1 и IIS 6.0, ограничены с помощью протокола HTTP для взаимодействия. В этих платформах IIS настройка размещенной службы на использование привязки, отличной от HTTP, приводит к ошибке во время активации службы. Для IIS 7.0 поддерживаемых транспортов включают HTTP, Net.TCP, Net.Pipe, Net.MSMQ и msmq.formatname для обратной совместимости с существующими приложениями MSMQ.
 
 ### <a name="http-transport-security"></a>Безопасность транспорта HTTP
 

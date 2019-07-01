@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 19ffe7e3fb0de9b377279d9cd274f998a104c6b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8de673fae16da8189589e20b6d9a66b96e1823ba
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047819"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487110"
 ---
 # <a name="how-to-create-a-federated-client"></a>Практическое руководство. Создание федеративного клиента
 В Windows Communication Foundation (WCF), создание клиента для *федеративной службы* состоит из трех основных этапов:  
@@ -39,7 +39,7 @@ ms.locfileid: "62047819"
   
 4. Проверьте все дополнительные [ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) элементы внутри закомментированного out <`alternativeIssuedTokenParameters`> элемента. Если при использовании средства Svcutil.exe для создания конфигурации для федеративной службы эта федеративная служба или любая промежуточная служба маркеров безопасности указывает не адрес издателя, а адрес метаданных для службы маркеров безопасности с несколькими конечными точками, получающийся файл конфигурации ссылается на первую конечную точку. Дополнительные конечные точки присутствуют в файле конфигурации в виде закомментированных <`alternativeIssuedTokenParameters`> элементы.  
   
-     Определить, является ли один из них <`issuedTokenParameters`> является более предпочтительным, чем уже имеющийся в конфигурации. Например, может быть предпочтительно выполнять проверку подлинности клиента в службе маркеров безопасности с использованием маркера [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Windows, а не с помощью пары "имя пользователя-пароль".  
+     Определить, является ли один из них <`issuedTokenParameters`> является более предпочтительным, чем уже имеющийся в конфигурации. Например клиент может предпочтительно выполнять проверку подлинности в службе маркеров безопасности с помощью маркера Windows CardSpace, а не имя пользователя и пароль.  
   
     > [!NOTE]
     >  Если перед началом взаимодействия со службой необходимо пройти через несколько служб маркеров безопасности, промежуточная служба маркеров безопасности может направить клиента в неправильную службу маркеров безопасности. Убедитесь, что конечная точка для службы маркеров безопасности в [ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) является ожидаемой службой маркеров безопасности и не неизвестной службой маркеров безопасности.  
@@ -158,7 +158,7 @@ ms.locfileid: "62047819"
  Если требуется задать сертификаты службы для взаимодействия с любыми службами маркеров безопасности (обычно в связи с тем, что не используется согласование сертификатов), их можно задать с помощью свойства <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> класса <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>. Метод <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A> принимает в качестве параметров <xref:System.Uri> и <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>. Указанный сертификат используется при взаимодействии с конечными точками по указанному универсальному коду ресурса (URI). В качестве альтернативы можно с помощью метода <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> добавить сертификат в коллекцию, возвращаемую свойством <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>.  
   
 > [!NOTE]
->  Концепция сертификатов клиента, область действия которых ограничена только определенным универсальным кодом ресурса (URI), применима только к приложениям, производящим исходящие вызовы служб, предоставляющих конечные точки по этим универсальным кодам ресурса (URI). Он неприменим к сертификатам, которые используются для подписывания изданных маркеров, таких как настроенные на сервере в коллекции, возвращаемой <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> из <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> класса. Дополнительные сведения см. в разделе [Как Настройка учетных данных службы федерации](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+>  Концепция сертификатов клиента, область действия которых ограничена только определенным универсальным кодом ресурса (URI), применима только к приложениям, производящим исходящие вызовы служб, предоставляющих конечные точки по этим универсальным кодам ресурса (URI). Он неприменим к сертификатам, которые используются для подписывания изданных маркеров, таких как настроенные на сервере в коллекции, возвращаемой <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> из <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> класса. Дополнительные сведения см. в разделе [Практическое руководство. Настройка учетных данных службы федерации](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 ## <a name="see-also"></a>См. также
 

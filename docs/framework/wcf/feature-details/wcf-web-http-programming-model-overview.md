@@ -2,12 +2,12 @@
 title: Общие сведения о модели программирования WCF Web HTTP
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: a5438857114fba890aac78565ef128bfc5ea95f0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d4908eb75324d4316ea615d1a0acc286750752e7
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613047"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487718"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Общие сведения о модели программирования WCF Web HTTP
 Модель программирования WEB HTTP Windows Communication Foundation (WCF) предоставляет основные элементы, необходимые для построения служб WEB HTTP с помощью WCF. Службы WCF WEB HTTP, предназначены для доступа со стороны широкого диапазона возможных клиентов, включая веб-браузеры и имеют следующие уникальные требования:  
@@ -138,7 +138,7 @@ interface ICustomer
  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] обеспечивает поддержку данных JSON (AJAX), а также RSS-каналов (включая ATOM и RSS). Дополнительные сведения об этих функциях см. в разделе [WCF Web HTTP форматирование](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[Общие сведения о синдикации WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) и [интеграция с AJAX и поддержка JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>Модель программирования WCF WEB HTTP и безопасность  
- Поскольку модель программирования WCF WEB HTTP не поддерживает WS-* протоколы, единственным способом защиты службы WCF WEB HTTP является предоставление доступа к ней по протоколу HTTPS, с помощью протокола SSL. Дополнительные сведения о настройке SSL с [!INCLUDE[iisver](../../../../includes/iisver-md.md)], см. в разделе [реализация SSL-сертификата в IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
+ Поскольку модель программирования WCF WEB HTTP не поддерживает WS-* протоколы, единственным способом защиты службы WCF WEB HTTP является предоставление доступа к ней по протоколу HTTPS, с помощью протокола SSL. Дополнительные сведения о настройке SSL с IIS 7.0 см. в разделе [реализация SSL-сертификата в IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>Устранение неполадок в модели программирования WCF WEB HTTP  
  Когда службы WCF WEB HTTP вызываются с помощью <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> для создания канала, <xref:System.ServiceModel.Description.WebHttpBehavior> использует адрес <xref:System.ServiceModel.EndpointAddress>, заданный в файле конфигурации, даже в случае, когда в <xref:System.ServiceModel.EndpointAddress> передается другой <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.  

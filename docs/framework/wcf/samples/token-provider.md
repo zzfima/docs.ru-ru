@@ -2,15 +2,15 @@
 title: Поставщик маркеров
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: f4316e459666dd434da5ec77694d079d9ca5639f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b3f56ed46507d68092268c3202cee6234fda7b42
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622950"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487471"
 ---
 # <a name="token-provider"></a>Поставщик маркеров
-В этом образце показано, как реализовать пользовательский поставщик маркеров. Поставщик маркеров в Windows Communication Foundation (WCF) используется для передачи учетных данных в инфраструктуру безопасности. Поставщик токенов осуществляет общую проверку цели и выдает соответствующие учетные данные, чтобы инфраструктура безопасности смогла обеспечить защиту сообщения. WCF поставляется с поставщиком токенов учетных данных по умолчанию. WCF поставляется с [!INCLUDE[infocard](../../../../includes/infocard-md.md)] поставщик маркеров. Пользовательские поставщики маркеров полезны в следующих случаях:
+В этом образце показано, как реализовать пользовательский поставщик маркеров. Поставщик маркеров в Windows Communication Foundation (WCF) используется для передачи учетных данных в инфраструктуру безопасности. Поставщик токенов осуществляет общую проверку цели и выдает соответствующие учетные данные, чтобы инфраструктура безопасности смогла обеспечить защиту сообщения. WCF поставляется с поставщиком токенов учетных данных по умолчанию. WCF также поставляется с поставщиком маркеров CardSpace. Пользовательские поставщики маркеров полезны в следующих случаях:
 
 - если используется хранилище учетных данных с которым эти поставщики не работают;
 
@@ -115,7 +115,7 @@ ms.locfileid: "64622950"
 
      Для выполнения этой задачи пользовательский поставщик маркеров наследует класс <xref:System.IdentityModel.Selectors.SecurityTokenProvider> и переопределяет метод <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29>. Этот метод создает и возвращает новый маркер `UserNameSecurityToken`.
 
-    ```
+    ```csharp
     protected override SecurityToken GetTokenCore(TimeSpan timeout)
     {
         // obtain username and password from the user using console window
@@ -132,7 +132,7 @@ ms.locfileid: "64622950"
 
      Класс <xref:System.IdentityModel.Selectors.SecurityTokenManager> используется для создания объекта <xref:System.IdentityModel.Selectors.SecurityTokenProvider> для конкретного конструктора <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>, который передается в него в методе `CreateSecurityTokenProvider`. Диспетчер маркеров безопасности также используется для создания структур проверки подлинности маркеров и сериализатора маркеров. В этом образце они не представлены. В данном образце пользовательский диспетчер маркеров безопасности наследуется от класса <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> и переопределяет метод `CreateSecurityTokenProvider`, возвращающий пользовательский поставщик маркеров, когда переданные требования маркера указывают на запрос пользовательского поставщика.
 
-    ```
+    ```csharp
     public class MyUserNameSecurityTokenManager : ClientCredentialsSecurityTokenManager
     {
         MyUserNameClientCredentials myUserNameClientCredentials;
@@ -163,7 +163,7 @@ ms.locfileid: "64622950"
 
      Класс учетных данных клиента используется для представления учетных данных, которые сконфигурированы для прокси клиента, и создает диспетчер маркеров безопасности, который используется для получения структур проверки подлинности маркеров, поставщиков маркеров и сериализаторов маркеров.
 
-    ```
+    ```csharp
     public class MyUserNameClientCredentials : ClientCredentials
     {
         public MyUserNameClientCredentials()
@@ -188,7 +188,7 @@ ms.locfileid: "64622950"
 
      Чтобы клиент мог использовать пользовательские учетные данные клиента, образец удаляет класс учетных данных клиента по умолчанию и предоставляет новый класс учетных данных клиента.
 
-    ```
+    ```csharp
     static void Main()
     {
         // ...
@@ -204,7 +204,7 @@ ms.locfileid: "64622950"
 
  На стороне службы для вывода информации о вызывающем модуле можно использовать свойство <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>, как показано в следующем примере кода. Свойство <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> содержит информацию об утверждениях о текущем вызывающем модуле.
 
-```
+```csharp
 static void DisplayIdentityInformation()
 {
     Console.WriteLine("\t\tSecurity context identity  :  {0}",

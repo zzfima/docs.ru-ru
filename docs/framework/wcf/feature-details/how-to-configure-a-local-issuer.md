@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 46dbb39a31a1ef256bef0f5b7e1bbc41ce1eca3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98d4c01bf2b84a6379eca5d0e1d5dbee68dc7cdd
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779305"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487140"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Практическое руководство. Настройка локального издателя
 В этом разделе описано, как настроить клиент на использование локального издателя для выданных маркеров.  
@@ -23,7 +23,7 @@ ms.locfileid: "61779305"
  Windows Communication Foundation (WCF) локальный издатель используется в случаях, когда адрес издателя федеративной привязки `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` или `null`. В этих случаях необходимо настроить объект <xref:System.ServiceModel.Description.ClientCredentials> с использованием адреса локального издателя и привязки, с помощью которой будет осуществляться взаимодействие с этим издателем.  
   
 > [!NOTE]
->  Если <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> свойство `ClientCredentials` имеет значение `true`, адрес локального издателя не указан, а адрес издателя, задаваемый по [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) или другие Федеративная привязка является `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`, `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`, или `null`, затем Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] используется издатель.  
+>  Если <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> свойство `ClientCredentials` имеет значение `true`, адрес локального издателя не указан, а адрес издателя, задаваемый по [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) или другие Федеративная привязка является `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`, `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`, или `null`, то используется поставщик Windows CardSpace.  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>Настройка локального издателя в коде  
   

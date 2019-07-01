@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: d1f43a5b7a539c89a753d168fbf0e05ca4118f58
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: dd3385d6459199d56f74abfb1b8e0e218a2adf78
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347989"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487793"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Основы разработки приложений Windows Forms (Visual Basic)
 Важной частью Visual Basic является возможность создания приложений Windows Forms, локально работающих на компьютерах пользователей. Чтобы создать приложение и пользовательский интерфейс, с помощью Windows Forms можно использовать Visual Studio. В приложении Windows Forms основано на классах из <xref:System.Windows.Forms> пространства имен.  
@@ -71,19 +71,19 @@ ms.locfileid: "67347989"
 |Использование окна "Источники данных"|[Пошаговое руководство: Отображение данных на форме Windows](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>Развертывание приложений на клиентских компьютерах  
- После написания приложения, его необходимо отправить пользователям, чтобы их можно установить и запустить его на своих клиентских компьютерах. С помощью [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] технологии, можно развернуть приложения в Visual Studio с помощью нескольких щелчков и предоставлять пользователям URL-адрес приложения в Интернете. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] управляет всеми элементами и зависимостями в приложении и гарантирует, что приложение правильно установлен на клиентском компьютере.  
+ После написания приложения, его необходимо отправить пользователям, чтобы их можно установить и запустить его на своих клиентских компьютерах. С помощью технологии ClickOnce, можно развертывать приложения в Visual Studio с помощью нескольких щелчков и предоставить пользователям URL-адрес приложения в Интернете. Управляет всеми элементами и зависимостями в приложении ClickOnce и гарантирует, что приложение правильно установлен на клиентском компьютере.  
   
- Приложения [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] можно настроить так, чтобы они работали только при подключении к сети или как в сетевом, так и в автономном режиме. При указании, что приложение должно поддерживать работу в автономном режиме, [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] добавляет ссылку на приложение в пользователя **запустить** меню, таким образом, пользователь может открыть его без использования URL-адрес.  
+ ClickOnce-приложений можно настроить для запуска только в том случае, если он подключен к сети или в обоих и вне сети. Если вы указываете, что приложение должно поддерживать работу в автономном режиме, ClickOnce добавляет ссылку на приложение в пользователя **запустить** меню, таким образом, пользователь может открыть его без использования URL-адрес.  
   
- Когда вы обновляете приложение, на веб-сервере публикуется новый манифест развертывания и новая копия приложения. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] обнаруживает, что обновление доступно и обновляет пользовательскую установку. для обновления старых сборок требуется специального кода.  
+ Когда вы обновляете приложение, на веб-сервере публикуется новый манифест развертывания и новая копия приложения. Технологии ClickOnce обнаруживается, что обновление доступно и обновляет пользовательскую установку. для обновления старых сборок требуется специального кода.  
   
- Общие сведения о [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] можно найти в разделе [Развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Пошаговые инструкции по использованию этих функций см. в следующих разделах справки:  
+ Полное введение в технологии ClickOnce, см. в разделе [развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Пошаговые инструкции по использованию этих функций см. в следующих разделах справки:  
   
 |Кому|См.|  
 |--------|---------|  
-|Развертывание ресурсов с использованием [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Практическое руководство. Публикация приложения ClickOnce с помощью мастера публикации](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Пошаговое руководство: Развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
-|Обновление [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] развертывания|[Практическое руководство. Управление обновлениями для ClickOnce-приложения](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|Управление безопасностью с помощью [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Практическое руководство. Включение параметров безопасности ClickOnce-приложений](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|Развертывание приложения с помощью ClickOnce|[Практическое руководство. Публикация приложения ClickOnce с помощью мастера публикации](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Пошаговое руководство: Развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|Обновление развертывания ClickOnce|[Практическое руководство. Управление обновлениями для ClickOnce-приложения](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
+|Управление безопасностью с помощью ClickOnce|[Практическое руководство. Включение параметров безопасности ClickOnce-приложений](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>Другие элементы управления и возможности  
  В Windows Forms имеется множество других возможностей, которые упрощают и ускоряют реализацию общих задач, таких как создание диалоговых окон, печать, добавление справки и документации, а также локализация приложений на различных языках. Кроме того Windows Forms использует надежную систему безопасности платформы .NET Framework, позволяя создавать более надежные приложения клиентов.  
