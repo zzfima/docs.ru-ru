@@ -2,12 +2,12 @@
 title: Наборы данных ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 29aba76731c4170c8af3c913a06e78e89ce3a08d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: da6fb7bbe82e37787615518fa74a0d84bf95758f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877227"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504269"
 ---
 # <a name="adonet-datasets"></a>Наборы данных ADO.NET
 <xref:System.Data.DataSet> Является центральным элементом поддержки разъединенных распределенных сценариев данных в ADO.NET. **Набора данных** является оперативной памяти представлением данных, обеспечивающим согласованную реляционную программную модель независимо от источника данных. Он может использоваться с несколькими различными источниками данных, XML-данными или для управления данными, локальными по отношению к приложению. **Набора данных** представляет полный набор данных, включая связанные таблицы, ограничения и связи между таблицами. На следующем рисунке показано **набора данных** объектной модели.  
@@ -41,7 +41,7 @@ ms.locfileid: "65877227"
  **Набора данных**, **DataTable**, и **DataColumn** все имеют **ExtendedProperties** свойство. **ExtendedProperties** — **PropertyCollection** которых можно размещать пользовательские сведения, например инструкцию SELECT, который был использован для формирования результирующего набора, или время, когда данные были созданы. **ExtendedProperties** сохраняемое коллекции сведения схемы для **набора данных**.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] предоставляет возможности выполнения запросов LINQ к кэшированным данным, хранящимся в объекте DataSet. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] использует стандартный [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] синтаксис и обеспечивает проверку синтаксиса во время компиляции, статическую типизацию и поддержку технологии IntelliSense при использовании Visual Studio IDE.  
+ LINQ to DataSet предоставляет встроенные в язык возможности выполнения запросов к кэшированным данным, хранящимся в объекте DataSet. LINQ to DataSet использует стандарт [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] синтаксис и обеспечивает проверку синтаксиса во время компиляции, статическую типизацию и поддержку технологии IntelliSense при использовании Visual Studio IDE.  
   
  Дополнительные сведения см. в разделе [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   

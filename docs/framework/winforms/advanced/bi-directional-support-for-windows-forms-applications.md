@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2811674ad8d870062e3a0c67dbd21e6550f6c48d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d69de3265fa0954f640c8a2f08ba85c106320f3e
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655663"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506224"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Поддержка двунаправленного письма для приложений Windows Forms
 Visual Studio можно использовать для создания приложений на основе Windows, которые поддерживают такие языки (справа налево), такие как арабский и иврит. Сюда входят стандартные формы, диалоговые окна, MDI-формы и все элементы управления, с которыми можно работать в этих формах, то есть все объекты в пространстве имен <xref:System.Windows.Forms.Control>.  
@@ -82,7 +82,7 @@ Visual Studio можно использовать для создания при
  Windows Forms поддерживает Юникод, поэтому можно включить любой набор символов при создании приложений с двунаправленным письмом. Однако не все элементы управления Windows Forms поддерживают Юникод во всех платформах. Дополнительные сведения см. в разделе [Кодировка и глобализация Windows Forms](encoding-and-windows-forms-globalization.md).  
   
 ## <a name="gdi"></a>GDI+  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] можно использовать для рисования текста с порядком чтения справа налево. Метод <xref:System.Drawing.Graphics.DrawString%2A>, используемый для отрисовки текста, поддерживает параметр `StringFormat`, который можно задать для члена <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> перечисления <xref:System.Drawing.StringFormatFlags>, чтобы обратить точку начала координат для текста.  
+ GDI + можно использовать для рисования текста с порядком чтения справа налево. Метод <xref:System.Drawing.Graphics.DrawString%2A>, используемый для отрисовки текста, поддерживает параметр `StringFormat`, который можно задать для члена <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> перечисления <xref:System.Drawing.StringFormatFlags>, чтобы обратить точку начала координат для текста.  
   
 ## <a name="common-dialog-boxes"></a>Общие диалоговые окна  
  Служебные программы, такие как диалоговое окно открытия файла, находятся под управлением Windows. Они наследуют элементы языка от операционной системы. При использовании версии Windows с нужными параметрами языка эти диалоговые окна будут правильно работать с двунаправленным письмом.  

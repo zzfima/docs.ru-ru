@@ -2,12 +2,12 @@
 title: Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: 030ef4549bc820cab66d33fa81c205158c09fff9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 0d8810da424b0759dcfba882efe462514a14145a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026094"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505957"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)
 
@@ -39,7 +39,7 @@ Visual Studio 2012 вводит упрощенный подход асинхро
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a> Методы Async проще создавать
 
-В Visual Basic основой асинхронного программирования являются ключевые слова [Async](../../../../visual-basic/language-reference/modifiers/async.md) и [Await](../../../../visual-basic/language-reference/modifiers/async.md). Они позволяют использовать ресурсы платформы .NET Framework или среды выполнения Windows для создания асинхронных методов, и это почти так же просто, как создавать синхронные методы. Методы, которые определяются с помощью ключевых слов `Async` и `Await`, называются асинхронными методами.
+В Visual Basic основой асинхронного программирования являются ключевые слова [Async](../../../../visual-basic/language-reference/modifiers/async.md) и [Await](../../../../visual-basic/language-reference/operators/await-operator.md). Они позволяют использовать ресурсы платформы .NET Framework или среды выполнения Windows для создания асинхронных методов, и это почти так же просто, как создавать синхронные методы. Методы, которые определяются с помощью ключевых слов `Async` и `Await`, называются асинхронными методами.
 
 Ниже приводится пример асинхронного метода. Почти все элементы кода должны быть вам знакомы. Комментарии указывают на возможности, добавляемые для создания асинхронности.
 

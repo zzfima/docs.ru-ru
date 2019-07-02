@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: b25de14267bc31ad0ac5e3f51d4cd964b5a0535f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88abd0e5b7f56702c7a7009842253d3ca552d01f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607340"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504201"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Создание таблицы данных из запроса (LINQ to DataSet)
 Объект <xref:System.Data.DataTable> часто используется для привязки данных. Метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> принимает результаты запроса и копирует данные в <xref:System.Data.DataTable>, которую в дальнейшем можно использовать для привязки данных. После выполнения операций с данными происходит слияние нового объекта <xref:System.Data.DataTable> с исходным объектом <xref:System.Data.DataTable>.  
   
  Метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> использует для создания объекта <xref:System.Data.DataTable> на основе запроса следующий процесс.  
   
-1. Метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> клонирует объект <xref:System.Data.DataTable> из исходной таблицы (объект <xref:System.Data.DataTable>, реализующий интерфейс <xref:System.Linq.IQueryable%601>). Источник <xref:System.Collections.IEnumerable> обычно создается из выражения [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] или запроса метода.  
+1. Метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> клонирует объект <xref:System.Data.DataTable> из исходной таблицы (объект <xref:System.Data.DataTable>, реализующий интерфейс <xref:System.Linq.IQueryable%601>). <xref:System.Collections.IEnumerable> Источника обычно создается из LINQ запрос к набору данных выражения или метода.  
   
 2. Схема клонированного объекта <xref:System.Data.DataTable> строится на основе столбцов первого перечисленного объекта <xref:System.Data.DataRow> в исходной таблице, а клонированной таблице присваивается имя исходной таблицы с добавлением слова «query».  
   

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - GDI+, using in managed code
 - drawing [Windows Forms]
 ms.assetid: 362532c5-1a06-4257-bdc8-723461009ede
-ms.openlocfilehash: 08f87436ade62bb54295b012a1c24dc177ea9667
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e110203605c31f90f71c949f81c18ebf464d52eb
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938181"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505540"
 ---
 # <a name="graphics-and-drawing-in-windows-forms"></a>Объекты Graphics и Drawing в Windows Forms
-Среда CLR использует расширенную реализацию интерфейса графических устройств Windows ([!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]) под названием [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. С помощью [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] можно создавать графические элементы, рисовать текст и управлять графическими изображениями как объектами. Интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] отличается высоким быстродействием и удобен в использовании. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] можно использовать для отрисовки графических изображений в формах и элементах управления Windows Forms. Хотя [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] нельзя использовать непосредственно в веб-формах, графические изображения можно выводить через элемент управления веб-сервера Image.  
+Среда CLR использует расширенную реализацию из Windows графических устройств интерфейса (GDI) вызывается GDI +. С помощью GDI + Создание графических объектов, рисовать текст и управлять графическими изображениями как объектами. GDI + разработана для обеспечения производительности и удобства использования. GDI + можно использовать для отрисовки графических изображений в Windows Forms и элементах управления. Несмотря на то, что нельзя использовать GDI + непосредственно на веб-форм, можно отобразить графические изображения через элемент управления веб-сервера Image.  
   
- В этом разделе описаны основы программирования с использованием [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Хотя он не является полным справочником, в нем содержатся сведения об объектах <xref:System.Drawing.Graphics>, <xref:System.Drawing.Pen>, <xref:System.Drawing.Brush> и <xref:System.Drawing.Color> и способах выполнения таких задач, как рисование фигур, создание текста, отображение рисунков. Дополнительные сведения см. в разделе [GDI + ссылку](/windows/desktop/gdiplus/-gdiplus-class-gdi-reference).  
+ В этом разделе вы найдете описаны основы программирования GDI +. Хотя он не является полным справочником, в нем содержатся сведения об объектах <xref:System.Drawing.Graphics>, <xref:System.Drawing.Pen>, <xref:System.Drawing.Brush> и <xref:System.Drawing.Color> и способах выполнения таких задач, как рисование фигур, создание текста, отображение рисунков. Дополнительные сведения см. в разделе [GDI + ссылку](/windows/desktop/gdiplus/-gdiplus-class-gdi-reference).  
   
  Если вы хотите немедленно приступить к работе, см. статью [Приступая к программированию графики](getting-started-with-graphics-programming.md). Она содержит разделы, посвященные использованию кода для рисования линий, фигур, текста и других элементов в формах Windows Forms.  
   
@@ -26,23 +26,23 @@ ms.locfileid: "61938181"
  Общие сведения об управляемых классах, связанных с графикой.  
   
  [Управляемый код GDI+](about-gdi-managed-code.md)  
- Сведения об управляемых классах [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Сведения об управляемых классах GDI +.  
   
  [Использование управляемых графических классов](using-managed-graphics-classes.md)  
- Демонстрируется выполнение различных задач с помощью управляемых классов [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Демонстрирует, как для завершения различных задач с помощью GDI + управляемые классы.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Drawing>  
- Доступ к основным графическим функциям [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Предоставляет доступ к основным графическим функциям GDI +.  
   
  <xref:System.Drawing.Drawing2D>  
  Расширенные функциональные возможности для создания двухмерной и векторной графики.  
   
  <xref:System.Drawing.Imaging>  
- Расширенный набор графических функций [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Предоставляет расширенный набор графических функций GDI +.  
   
  <xref:System.Drawing.Text>  
- Расширенный набор типографических функций [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Классы в этом пространстве имен позволяют создавать и использовать коллекции шрифтов.  
+ Предоставляет расширенный набор типографических функций GDI +. Классы в этом пространстве имен позволяют создавать и использовать коллекции шрифтов.  
   
  <xref:System.Drawing.Printing>  
  Функции печати.  

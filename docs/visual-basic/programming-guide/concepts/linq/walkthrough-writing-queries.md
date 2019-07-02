@@ -7,17 +7,17 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: daf4ef0032ef8bfcce02ec925cc957abdecb3643
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: f3671b7071cc30f5fae0dbd85677987f441d846f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910700"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505991"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Пошаговое руководство. Написание запросов в Visual Basic
 В этом пошаговом руководстве показано, как можно использовать возможности языка Visual Basic для написания [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] выражений запросов. В примере демонстрируются способы создания запросов к списку объектов Student, как выполнять запросы и об их изменении. Запросы включают в себя несколько функций, включая инициализаторы объектов, вывод локального типа и анонимные типы.  
   
- После выполнения данного пошагового руководства, можно переходить на образцы кода и документации к конкретному [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] поставщика, которые вас интересуют. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Поставщики включают [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+ После выполнения данного пошагового руководства, можно переходить на образцы кода и документации к конкретному [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] поставщика, которые вас интересуют. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Поставщики включают [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet, и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="create-a-project"></a>Создание проекта  
   
