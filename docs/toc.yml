@@ -194,6 +194,12 @@
           href: core/whats-new/dotnet-core-2-1.md
         - name: "Новые возможности .NET Core\_2.0"
           href: core/whats-new/dotnet-core-2-0.md
+    - name: Совместимость приложений
+      items:
+        - name: Оценка критических изменений
+          href: core/compatibility/index.md
+        - name: Категории критических изменений
+          href: core/compatibility/categories.md
     - name: Учебники
       href: core/tutorials/index.md
       items:
@@ -2227,7 +2233,7 @@
               href: visual-basic/language-reference/error-messages/value-of-type-typename1-cannot-be-converted-to-typename2.md
             - name: Значение типа <typename1> невозможно преобразовать в <typename2> (Множественные ссылки на файл)
               href: visual-basic/language-reference/error-messages/value-of-type-typename1-cannot-be-converted-to-typename2-multiple.md
-            - name: 'Невозможно преобразовать значение типа  в '
+            - name: Невозможно преобразовать значение типа  в
               href: visual-basic/language-reference/error-messages/value-of-type-type1-cannot-be-converted-to-type2.md
             - name: Переменная <variablename> скрывает содержащуюся в блоке переменную
               href: visual-basic/language-reference/error-messages/variable-variablename-hides-a-variable-in-an-enclosing-block.md
