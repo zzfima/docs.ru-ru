@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 98f73ed958f8b43cd4fea700a478cf3337ea68db
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 7d8ee9be8f399bca0aace61d344b19094c9518b0
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025136"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401467"
 ---
 # <a name="c-operators-c-reference"></a>Операторы C# (справочник по C#)
 
@@ -51,9 +51,9 @@ C# предоставляет ряд стандартных операторов
 
 [x--](arithmetic-operators.md#decrement-operator---) — постфиксный декремент. Возвращает значение x и затем обновляет расположение хранения значением x, которое уменьшено на единицу (обычно вычитается целочисленное значение 1).
 
-[new](../keywords/new-operator.md) – создание экземпляра типа.
+[new](new-operator.md) – создание экземпляра типа.
 
-[typeof](../keywords/typeof.md) — возвращает объект <xref:System.Type>, представляющий операнд.
+[typeof](type-testing-and-conversion-operators.md#typeof-operator) — возвращает объект <xref:System.Type>, представляющий операнд.
 
 [checked](../keywords/checked.md) — включает проверку на переполнение при выполнении операций с целыми числами.
 
@@ -87,7 +87,7 @@ C# предоставляет ряд стандартных операторов
 
 [--x](arithmetic-operators.md#decrement-operator---) — префиксный декремент. Возвращает значение x после обновления расположения хранения значением x, которое уменьшено на единицу (обычно вычитается целочисленное значение 1).
 
-[(T)x](invocation-operator.md) — приведение типов.
+[(T)x](type-testing-and-conversion-operators.md#cast-operator-) — приведение типов.
 
 [await`Task` — ожидание выполнения ](../keywords/await.md).
 
@@ -137,9 +137,9 @@ C# предоставляет ряд стандартных операторов
 
 [x >= y](comparison-operators.md#greater-than-or-equal-operator-) – больше или равно.
 
-[is](../keywords/is.md) — совместимость типов. Возвращает значение true, если вычисленный левый операнд может быть приведен к типу, указанному в правом операнде (статический тип).
+[is](type-testing-and-conversion-operators.md#is-operator) — совместимость типов. Возвращает значение `true`, если вычисленный левый операнд может быть приведен к типу, заданному правым операндом.
 
-[as](../keywords/as.md) — преобразование типов. Возвращает левый операнд, приведенный к типу, заданному правым операндом (статический тип), но `as` возвращает `null`, где `(T)x` вызывает исключение.
+[as](type-testing-and-conversion-operators.md#as-operator) — преобразование типов. Возвращает левый операнд, приведенный к типу, заданному правым операндом, но `as` возвращает `null`, где `(T)x` вызывает исключение.
 
 ## <a name="equality-operators"></a>Операторы равенства
 
@@ -171,13 +171,13 @@ C# предоставляет ряд стандартных операторов
 
 Этот оператор имеет более высокий приоритет по сравнению со следующим разделом и более низкий приоритет по сравнению с предыдущим.
 
-[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) — логическое И. Если первый операнд имеет значение false, то C# не вычисляет второй операнд.
+[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) — логическое И. Если `x` имеет значение `false`, тогда `y` не вычисляется.
 
 ## <a name="conditional-or-operator"></a>Условный оператор ИЛИ
 
 Этот оператор имеет более высокий приоритет по сравнению со следующим разделом и более низкий приоритет по сравнению с предыдущим.
 
-[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) — логическое ИЛИ. Если первый операнд имеет значение true, то C# не вычисляет второй операнд.
+[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) — логическое ИЛИ. Если `x` имеет значение `true`, тогда `y` не вычисляется.
 
 ## <a name="null-coalescing-operator"></a>Оператор объединения с NULL
 
