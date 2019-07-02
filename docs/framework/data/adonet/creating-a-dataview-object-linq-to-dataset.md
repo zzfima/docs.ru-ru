@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: 7baf358d9cdabe8cadf6b297a1d0d63d64282525
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd39b40864703b6bb24c2cc6590787562f3f4f98
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583544"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504151"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Создание объекта DataView (LINQ to DataSet)
-Объект <xref:System.Data.DataView> в контексте [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] можно создать двумя способами. Можно создать объект <xref:System.Data.DataView> на основе запроса [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] к таблице <xref:System.Data.DataTable> или на основе типизированной или нетипизированной таблицы <xref:System.Data.DataTable>. В обоих случаях вы создадите <xref:System.Data.DataView> с помощью одного из <xref:System.Data.DataTableExtensions.AsDataView%2A> методы расширения; <xref:System.Data.DataView> не напрямую создать в [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] контекста.  
+Существует два способа создания <xref:System.Data.DataView> в LINQ to DataSet контекста. Можно создать <xref:System.Data.DataView> из LINQ для запросов набора данных к <xref:System.Data.DataTable>, или ее можно создать из типизированного или нетипизированного <xref:System.Data.DataTable>. В обоих случаях вы создадите <xref:System.Data.DataView> с помощью одного из <xref:System.Data.DataTableExtensions.AsDataView%2A> методы расширения; <xref:System.Data.DataView> не напрямую создать в LINQ to DataSet контекста.  
   
  После создания объекта <xref:System.Data.DataView> его можно привязать к элементу управления в пользовательском интерфейсе приложения Windows Forms или ASP.NET либо изменить параметры фильтрации и сортировки.  
   
@@ -22,10 +22,10 @@ ms.locfileid: "64583544"
  Дополнительные сведения о фильтрации и сортировке с <xref:System.Data.DataView>, см. в разделе [фильтрации с использованием объекта DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) и [сортировка с использованием объекта DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md).  
   
 ## <a name="creating-dataview-from-a-linq-to-dataset-query"></a>Создание объекта DataView на основе запроса LINQ to DataSet  
- Объект <xref:System.Data.DataView> можно создать на основе результатов запроса [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], которые являются проекцией объектов <xref:System.Data.DataRow>. Созданный объект <xref:System.Data.DataView> наследует сведения о фильтрации и сортировке из запроса, на основе которого он был создан.  
+ Объект <xref:System.Data.DataView> объект может быть создан в результате выполнения LINQ запрос к набору данных, где результаты являются проекцией <xref:System.Data.DataRow> объектов. Созданный объект <xref:System.Data.DataView> наследует сведения о фильтрации и сортировке из запроса, на основе которого он был создан.  
   
 > [!NOTE]
->    В большинстве случаев выражение, используемое для фильтрации и сортировки, не должно иметь побочных эффектов и должно быть детерминированным. Также эти выражения не должны содержать логику, зависящую от заданного количества выполнений, так как операции фильтрации и сортировки могут выполняться любое количество раз.  
+>   В большинстве случаев выражение, используемое для фильтрации и сортировки, не должно иметь побочных эффектов и должно быть детерминированным. Также эти выражения не должны содержать логику, зависящую от заданного количества выполнений, так как операции фильтрации и сортировки могут выполняться любое количество раз.  
   
  Не поддерживается создание объектов <xref:System.Data.DataView> на основе запросов, возвращающих анонимные типы, или запросов, содержащих операции соединения.  
   
@@ -45,18 +45,18 @@ ms.locfileid: "64583544"
   
 - <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
   
- Обратите внимание, что при <xref:System.Data.DataView> создается на основе [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] запроса <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A> метод должен быть завершающим методом, вызываемым в запросе. Это показано в следующем примере, который создает <xref:System.Data.DataView> online заказов, отсортированных по сумме заказа:  
+ Обратите внимание, что при <xref:System.Data.DataView> создается на основе LINQ для запроса к набору данных <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A> метод должен быть завершающим методом, вызываемым в запросе. Это показано в следующем примере, который создает <xref:System.Data.DataView> online заказов, отсортированных по сумме заказа:  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquery1)]
  [!code-vb[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquery1)]  
   
- Можно также использовать строковые <xref:System.Data.DataView.RowFilter%2A> и <xref:System.Data.DataView.Sort%2A> свойства для сортировки и фильтрации <xref:System.Data.DataView> после его создания на основе запроса. Обратите внимание, что при этом сведения о сортировке и фильтрации, унаследованные из запроса, будут удалены. В следующем примере показано создание объекта <xref:System.Data.DataView> на основе запроса [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], выполняющего фильтрацию по фамилиям, начинающимся с буквы «С». Строковое свойство <xref:System.Data.DataView.Sort%2A> задает сортировку по фамилиям в возрастающем порядке, а затем по именам в убывающем порядке:  
+ Можно также использовать строковые <xref:System.Data.DataView.RowFilter%2A> и <xref:System.Data.DataView.Sort%2A> свойства для сортировки и фильтрации <xref:System.Data.DataView> после его создания на основе запроса. Обратите внимание, что при этом сведения о сортировке и фильтрации, унаследованные из запроса, будут удалены. В следующем примере создается <xref:System.Data.DataView> с LINQ для запроса набора данных, выполняющего фильтрацию по фамилии, начинающиеся с помощью элемента ". Строковое свойство <xref:System.Data.DataView.Sort%2A> задает сортировку по фамилиям в возрастающем порядке, а затем по именам в убывающем порядке:  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquerystringsort)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquerystringsort)]  
   
 ## <a name="creating-a-dataview-from-a-datatable"></a>Создание объекта DataView на основе DataTable  
- В дополнение к, создаваемая из [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] запроса, <xref:System.Data.DataView> объект может быть создан из <xref:System.Data.DataTable> с помощью <xref:System.Data.DataTableExtensions.AsDataView%2A> метод.  
+ В дополнение к, созданные из LINQ для запроса набора данных, <xref:System.Data.DataView> объект может быть создан из <xref:System.Data.DataTable> с помощью <xref:System.Data.DataTableExtensions.AsDataView%2A> метод.  
   
  В следующем примере объект <xref:System.Data.DataView> создается на основе таблицы SalesOrderDetail и становится источником данных для объекта <xref:System.Windows.Forms.BindingSource>. Этот объект выступает в роли посредника для элемента управления <xref:System.Windows.Forms.DataGridView>.  
   

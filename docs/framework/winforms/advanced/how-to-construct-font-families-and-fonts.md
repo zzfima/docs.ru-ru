@@ -8,15 +8,15 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-ms.openlocfilehash: d3c4b5b4293b62cfec0f8471f90be673854e9009
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2d609525858c7a8ff77c0b86900b4fc7d6b4e39a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590364"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505942"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Практическое руководство. Разработка шрифтов и их семейств
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Группирует шрифты с тем же шрифт, но различные стили в семейства шрифтов. Например семейство шрифтов Arial содержит следующие шрифты:  
+GDI + группирует шрифты с тем же шрифт, но различные стили в семейства шрифтов. Например семейство шрифтов Arial содержит следующие шрифты:  
   
 - Arial обычного  
   
@@ -26,7 +26,7 @@ ms.locfileid: "65590364"
   
 - Arial полужирный курсив  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] используются четыре стиля для формирования семейств шрифтов: обычный, полужирный, курсив и полужирный курсив. Прилагательные, такие как *сузить* и *округленное* не учитываются стили; вместо этого они являются частью имя семейства. Например Arial Narrow является семейством шрифтов со следующими членами:  
+ GDI + используются четыре стиля для формирования семейств шрифтов: обычный, полужирный, курсив и полужирный курсив. Прилагательные, такие как *сузить* и *округленное* не учитываются стили; вместо этого они являются частью имя семейства. Например Arial Narrow является семейством шрифтов со следующими членами:  
   
 - Arial обычного узкий  
   
@@ -36,7 +36,7 @@ ms.locfileid: "65590364"
   
 - Arial узкий полужирный курсив  
   
- Прежде чем можно рисовать текст с [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], необходимо создать <xref:System.Drawing.FontFamily> объекта и <xref:System.Drawing.Font> объекта. <xref:System.Drawing.FontFamily> Объект определяет гарнитуру (например, Arial) и <xref:System.Drawing.Font> объект определяет размер, стиль и единиц.  
+ Прежде чем можно рисовать текст с использованием GDI +, необходимо создать <xref:System.Drawing.FontFamily> объекта и <xref:System.Drawing.Font> объекта. <xref:System.Drawing.FontFamily> Объект определяет гарнитуру (например, Arial) и <xref:System.Drawing.Font> объект определяет размер, стиль и единиц.  
   
 ## <a name="example"></a>Пример  
  В следующем примере создается обычного начертания шрифта Arial с размером 16 пикселей. В следующем коде, первый аргумент, переданный <xref:System.Drawing.Font.%23ctor%2A> конструктор является <xref:System.Drawing.FontFamily> объекта. Второй аргумент задает размер шрифта, измеряемая в единицах, идентифицируемый четвертый аргумент. Третий параметр указывает стиль.  

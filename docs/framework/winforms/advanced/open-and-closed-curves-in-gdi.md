@@ -10,12 +10,12 @@ helpviewer_keywords:
 - curves [Windows Forms], drawing
 - curves
 ms.assetid: 08d2cc9a-dc9d-4eed-bcbb-2c8e2ca5d3ae
-ms.openlocfilehash: 33a8954296a7e63637ad5e210fb30fba1a3fdd53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06afdc4549f7c3c9b0636e5c7052dcca87a153f1
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641480"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505449"
 ---
 # <a name="open-and-closed-curves-in-gdi"></a>Замкнутые и незамкнутые кривые в GDI+
 На следующем рисунке показано две кривые: открытая и закрытая.  
@@ -23,7 +23,7 @@ ms.locfileid: "61641480"
  ![Замкнутые и незамкнутые кривые](./media/aboutgdip02-art24.gif "Aboutgdip02_art24")  
   
 ## <a name="managed-interface-for-curves"></a>Управляемый интерфейс для кривых  
- Замкнутых кривых есть внутренняя область, поэтому могут заполняться с помощью кисти. <xref:System.Drawing.Graphics> В класс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет следующие методы для заполнения замкнутые фигуры и кривых: <xref:System.Drawing.Graphics.FillRectangle%2A>, <xref:System.Drawing.Graphics.FillEllipse%2A>, <xref:System.Drawing.Graphics.FillPie%2A>, <xref:System.Drawing.Graphics.FillPolygon%2A>, <xref:System.Drawing.Graphics.FillClosedCurve%2A>, <xref:System.Drawing.Graphics.FillPath%2A>, и <xref:System.Drawing.Graphics.FillRegion%2A>. При вызове одного из этих методов, необходимо передать тип кисти (<xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, или <xref:System.Drawing.Drawing2D.PathGradientBrush>) в качестве аргумента.  
+ Замкнутых кривых есть внутренняя область, поэтому могут заполняться с помощью кисти. <xref:System.Drawing.Graphics> Класс в GDI + предоставляет следующие методы для заполнения замкнутые фигуры и кривых: <xref:System.Drawing.Graphics.FillRectangle%2A>, <xref:System.Drawing.Graphics.FillEllipse%2A>, <xref:System.Drawing.Graphics.FillPie%2A>, <xref:System.Drawing.Graphics.FillPolygon%2A>, <xref:System.Drawing.Graphics.FillClosedCurve%2A>, <xref:System.Drawing.Graphics.FillPath%2A>, и <xref:System.Drawing.Graphics.FillRegion%2A>. При вызове одного из этих методов, необходимо передать тип кисти (<xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, или <xref:System.Drawing.Drawing2D.PathGradientBrush>) в качестве аргумента.  
   
  <xref:System.Drawing.Graphics.FillPie%2A> Метод является дополнением к <xref:System.Drawing.Graphics.DrawArc%2A> метод. Так же, как <xref:System.Drawing.Graphics.DrawArc%2A> метод рисует части контура эллипса, <xref:System.Drawing.Graphics.FillPie%2A> метод заполняет часть внутреннюю часть эллипса. В следующем примере рисуется дуга и заполняет внутреннюю часть эллипса соответствующей части:  
   

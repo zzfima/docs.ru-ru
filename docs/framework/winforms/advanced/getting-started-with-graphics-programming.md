@@ -7,15 +7,15 @@ helpviewer_keywords:
 - examples [Windows Forms], graphics
 - drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
-ms.openlocfilehash: f19a0e87c140a3fde8c43acc546ae11ea3b62d33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2a330324085f1a73418cd535f83f2b73e9721c0
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747697"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67503940"
 ---
 # <a name="getting-started-with-graphics-programming"></a>Приступая к программированию графики
-В этом разделе показано, как приступить к использованию [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] в приложении Windows Forms. В следующих темах инструкции по решению некоторых [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] задач, таких как рисование и заливка фигур и текста.  
+В этом разделе показано, как приступить к работе с помощью GDI + в приложении Windows Forms. В следующих темах способы выполнения нескольких задач GDI + таких как рисование и заливка фигур и текста.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Создание объектов Graphics для рисования](how-to-create-graphics-objects-for-drawing.md)  

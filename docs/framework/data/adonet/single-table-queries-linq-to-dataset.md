@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 00b0773ba66ad8e0acfdccb37964030a9cacff52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87a2f6853136b4b3e622968327bde01c9862bfdf
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664172"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504630"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Запросы к одной таблице (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] запросы работают с источниками данных, которые реализуют <xref:System.Collections.Generic.IEnumerable%601> интерфейс или <xref:System.Linq.IQueryable%601> интерфейс. <xref:System.Data.DataTable> Класс не реализует никакого интерфейса, поэтому необходимо вызвать <xref:System.Data.DataTableExtensions.AsEnumerable%2A> метод, если вы хотите использовать <xref:System.Data.DataTable> в качестве источника `From` предложении [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] запроса.  
@@ -20,7 +20,7 @@ ms.locfileid: "61664172"
  [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
  [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
   
- Запрос локальной переменной инициализирован выражением запроса, которое работает с одной или несколькими источниками данных, применяя один или несколько операторов запросов, либо из стандартных операторов запроса, или в случае [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], операторы, характерные для <xref:System.Data.DataSet>класса. Выражение запроса в предыдущем примере использует два стандартных оператора запроса: `Where` и `Select`.  
+ Запрос локальной переменной инициализирован выражением запроса, которое работает с одной или несколькими источниками данных, применяя один или несколько операторов запросов, либо из стандартных операторов запроса, или в случае LINQ to DataSet, операторы, характерные для <xref:System.Data.DataSet>класса. Выражение запроса в предыдущем примере использует два стандартных оператора запроса: `Where` и `Select`.  
   
  Предложение `Where` фильтрует последовательность на основе состояния. В данном случае переменная `OnlineOrderFlag` установлена в `true`. Оператор `Select` назначает и возвращает перечислимый объект, который перехватывает параметры, передаваемые оператору. В предыдущем примере анонимный тип создан с тремя свойствами: `SalesOrderID`, `OrderDate`, `SalesOrderNumber`. Этим трем свойствам присвоены значения из столбцов `SalesOrderID`, `OrderDate` и `SalesOrderNumber` таблицы `SalesOrderHeader`.  
   

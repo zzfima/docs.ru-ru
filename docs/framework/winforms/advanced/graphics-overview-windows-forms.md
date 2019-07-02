@@ -8,41 +8,41 @@ helpviewer_keywords:
 - GDI+, Windows Forms
 - graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-ms.openlocfilehash: fce756fc9c6a22372bd849c8bd60f0e416f3031e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e14d60e5b77fab8490c373ad76ee2d829aad7c74
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938194"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505389"
 ---
 # <a name="graphics-overview-windows-forms"></a>Общие сведения о графике (Windows Forms)
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] является интерфейса графических устройств, позволяющий программистам создавать аппаратно независимые приложения. В службах [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] , предоставляются с помощью набора управляемых классов.  
+GDI + является интерфейса графических устройств, позволяющий программистам создавать аппаратно независимые приложения. Службы GDI +, предоставляются с помощью набора управляемых классов.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Обзор графических возможностей](overview-of-graphics.md)  
- Предоставляет общие сведения о [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Предоставляет общие сведения о GDI +.  
   
  [Три категории графических служб](three-categories-of-graphics-services.md)  
- Описание трех категорий, составляющих программирование с использованием [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Описание трех категорий, составляющих программирование с использованием GDI +.  
   
  [Структура графического интерфейса](structure-of-the-graphics-interface.md)  
- Описывает интерфейс управляемого класса [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Описывает интерфейс управляемых классов GDI +.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Drawing>  
- Доступ к основным графическим функциям [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Предоставляет доступ к основным графическим функциям GDI +.  
   
  <xref:System.Drawing.Drawing2D>  
  Расширенные функциональные возможности для создания двухмерной и векторной графики.  
   
  <xref:System.Drawing.Imaging>  
- Расширенный набор графических функций [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Предоставляет расширенный набор графических функций GDI +.  
   
  <xref:System.Drawing.Text>  
- Расширенный набор типографических функций [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Предоставляет расширенный набор типографических функций GDI +.  
   
  <xref:System.Drawing.Printing>  
  Предоставляет службы, связанные с печатью.  
   
  <xref:System.Windows.Forms.TextRenderer>  
- Предоставляет [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] текст рисования и измерение функциональные возможности.
+ Предоставляет Рисование текста GDI и измерение функциональные возможности.

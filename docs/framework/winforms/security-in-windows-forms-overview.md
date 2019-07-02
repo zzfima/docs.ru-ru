@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 471ed75a922ab8a7df18f2e4a3ccd89ede171248
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 88301663a78bb7d6f31c23bb03409ca44a2e55a9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487266"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506163"
 ---
 # <a name="security-in-windows-forms-overview"></a>Общие сведения о безопасности в Windows Forms
 
@@ -77,7 +77,7 @@ ms.locfileid: "67487266"
 
 Выбор технологии зависит от среды развертывания. Подробнее см. в разделе [Выбор стратегии развертывания ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-По умолчанию ClickOnce-приложений, развернутых с помощью Visual Studio или средства .NET Framework SDK (Mage.exe и MageUI.exe) настроены для запуска на клиентском компьютере с полным доверием. При развертывании приложения с помощью частичного доверия или с помощью только некоторых дополнительных разрешений необходимо изменить эту настройку по умолчанию. Это можно сделать с помощью Visual Studio или .NET Framework SDK средства MageUI.exe при настройке развертывания. Дополнительные сведения об использовании MageUI.exe см. пошаговое руководство: Развертывание приложения ClickOnce из командной строки.  Также см. раздел [Как Установка пользовательских разрешений для ClickOnce-приложения](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) или [как: Установка пользовательских разрешений для ClickOnce-приложения](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
+По умолчанию ClickOnce-приложений, развернутых с помощью Visual Studio или средства .NET Framework SDK (Mage.exe и MageUI.exe) настроены для запуска на клиентском компьютере с полным доверием. При развертывании приложения с помощью частичного доверия или с помощью только некоторых дополнительных разрешений необходимо изменить эту настройку по умолчанию. Это можно сделать с помощью Visual Studio или .NET Framework SDK средства MageUI.exe при настройке развертывания. Дополнительные сведения об использовании MageUI.exe см. в разделе [Пошаговое руководство: Развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  Также см. раздел [Как Установка пользовательских разрешений для ClickOnce-приложения](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) или [как: Установка пользовательских разрешений для ClickOnce-приложения](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
 Дополнительные сведения об аспектах безопасности ClickOnce и повышении уровня разрешений см. в разделе [защита приложений ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Подробнее о развертывании доверенных приложений см. в разделе [Общие сведения о развертывании доверенных приложений](/visualstudio/deployment/trusted-application-deployment-overview).
 

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 8dc1ad41cf8067bea5b811ca126ad29f5a600f69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2184a8d7d7f24b8f631818608ab4bcdb89857c7
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004365"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506036"
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>Практическое руководство. Рисование пользовательских пунктирных линий
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет несколько стили штрихов, которые перечислены в <xref:System.Drawing.Drawing2D.DashStyle> перечисления. Если эти стандартные штриха не соответствуют вашим потребностям, можно создать пользовательские штриха.  
+GDI + предоставляет несколько стили штрихов, которые перечислены в <xref:System.Drawing.Drawing2D.DashStyle> перечисления. Если эти стандартные штриха не соответствуют вашим потребностям, можно создать пользовательские штриха.  
   
 ## <a name="example"></a>Пример  
  Рисование пользовательских пунктирных линий, поместите длины штрихов и промежутков в массиве и назначить массив в качестве значения <xref:System.Drawing.Pen.DashPattern%2A> свойство <xref:System.Drawing.Pen> объекта. В следующем примере рисуется пользовательских пунктирных линий на основе массива `{5, 2, 15, 4}`. Если элементы массива умножить на ширину пера, 5, вы получаете `{25, 10, 75, 20}`. Отображаемые дефисы альтернативный длиной от 25 до 75, и пробелы альтернативные длиной от 10 до 20.  

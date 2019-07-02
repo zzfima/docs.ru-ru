@@ -8,15 +8,15 @@ helpviewer_keywords:
 - open figures [Windows Forms], filling
 - figures [Windows Forms], filling
 ms.assetid: 5a36b0e4-f1f4-46c0-a85a-22ae98491950
-ms.openlocfilehash: addcf959e429974b9306353abb743bb2bb3114e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ecea7d3edb0c3e25fb4e69ff12b88019e530021
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781439"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506076"
 ---
 # <a name="how-to-fill-open-figures"></a>Практическое руководство. Заливка открытых фигур
-Вы можете указать путь, передав <xref:System.Drawing.Drawing2D.GraphicsPath> объект <xref:System.Drawing.Graphics.FillPath%2A> метод. <xref:System.Drawing.Graphics.FillPath%2A> Метод заполняет пути в соответствии с режимом заполнения (чередование или поворот), заданных в настоящее время для пути. Если путь содержит незамкнутые фигуры, путь будет заполнено так, как если бы эти цифры были закрыты. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] замыкает фигуру рисования прямую линию от его конечной точки до ее начала.  
+Вы можете указать путь, передав <xref:System.Drawing.Drawing2D.GraphicsPath> объект <xref:System.Drawing.Graphics.FillPath%2A> метод. <xref:System.Drawing.Graphics.FillPath%2A> Метод заполняет пути в соответствии с режимом заполнения (чередование или поворот), заданных в настоящее время для пути. Если путь содержит незамкнутые фигуры, путь будет заполнено так, как если бы эти цифры были закрыты. GDI + замыкает фигуру рисования прямую линию от его конечной точки до ее начала.  
   
 ## <a name="example"></a>Пример  
  В следующем примере создается путь, который имеет один незамкнутую фигуру (дугу) и одну замкнутую фигуру (эллипс). <xref:System.Drawing.Graphics.FillPath%2A> Метод заливку пути в соответствии с режимом заполнения по умолчанию, который является <xref:System.Drawing.Drawing2D.FillMode.Alternate>.  

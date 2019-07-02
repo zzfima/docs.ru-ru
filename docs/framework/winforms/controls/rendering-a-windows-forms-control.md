@@ -10,21 +10,21 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-ms.openlocfilehash: 9641b6906bc2acaa525aed6df57f189d39317d35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76506e504fdaca83fee502111dbadab5cb41d9b9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614676"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506177"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Отрисовка элементов управления Windows Forms
-Визуализации — это процесс создания визуального представления на экране пользователя. Windows Forms используется [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (новая Windows графическая библиотека) для подготовки к просмотру. Управляемые классы, предоставляющие доступ к [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] в <xref:System.Drawing?displayProperty=nameWithType> пространства имен и его подпространства имен.  
+Визуализации — это процесс создания визуального представления на экране пользователя. Windows Forms использует GDI (новая Windows графическая библиотека) для подготовки к просмотру. Управляемые классы, обеспечивающие доступ к GDI находятся в <xref:System.Drawing?displayProperty=nameWithType> пространства имен и его подпространства имен.  
   
  Следующие элементы участвуют в отрисовке элемента управления.  
   
 - Рисования функциональных возможностях, предоставляемых базовым классом <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
-- Основные [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] графической библиотеки.  
+- Реквизиты графической библиотеки GDI.  
   
 - Геометрия области рисования.  
   
@@ -61,7 +61,7 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics> — Это управляемый класс, инкапсулирующий функциональность рисования, как описано в разделе, [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] далее в этом разделе. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Является экземпляром класса <xref:System.Drawing.Rectangle> структурировать и определяет доступные области, в котором можно нарисовать элемент управления. Разработчик элемента управления можно рассчитать <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> с помощью <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> свойства элемента управления, как описано в описании геометрии далее в этом разделе.  
+ <xref:System.Drawing.Graphics> — управляемый класс, инкапсулирующий функциональность рисования, как описано в разделе GDI, далее в этом разделе. <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Является экземпляром класса <xref:System.Drawing.Rectangle> структурировать и определяет доступные области, в котором можно нарисовать элемент управления. Разработчик элемента управления можно рассчитать <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> с помощью <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> свойства элемента управления, как описано в описании геометрии далее в этом разделе.  
   
  Элемент управления должен предоставить логику отрисовки путем переопределения <xref:System.Windows.Forms.Control.OnPaint%2A> метод, который наследует от <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A> Получает доступ к графический объект и прямоугольника для рисования с помощью <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> и <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> свойства <xref:System.Windows.Forms.PaintEventArgs> переданным ему экземпляром.  
   
@@ -93,7 +93,7 @@ protected virtual void OnPaintBackground(PaintEventArgs pevent);
  Хотя <xref:System.Windows.Forms.Control.OnPaintBackground%2A> имеет аналогичное номенклатуру и принимает того же аргумента как `OnPaint` метода <xref:System.Windows.Forms.Control.OnPaintBackground%2A> не является методом значение true, событие. Существует не `PaintBackground` событий и <xref:System.Windows.Forms.Control.OnPaintBackground%2A> вызывает делегаты событий. При переопределении метода <xref:System.Windows.Forms.Control.OnPaintBackground%2A> метода производного класса не требуется для вызова <xref:System.Windows.Forms.Control.OnPaintBackground%2A> метод базового класса.  
   
 ## <a name="gdi-basics"></a>Основные сведения о GDI +  
- <xref:System.Drawing.Graphics> Класс предоставляет методы для рисования различных фигур, таких как круги, треугольники, дуги и эллипсы, а также методы для отображения текста. <xref:System.Drawing?displayProperty=nameWithType> Пространство имен и его подпространства имен содержат классы, инкапсулирующие графические элементы, такие как фигуры (круги, прямоугольники, дуги и другие), цвета, шрифты, кистей и т. д. Дополнительные сведения о [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)], см. в разделе [использование управляемых графических классов](../advanced/using-managed-graphics-classes.md). Основы [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] также описаны в [как: Создание элемента управления Windows Forms, показывающего прогресс](how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ <xref:System.Drawing.Graphics> Класс предоставляет методы для рисования различных фигур, таких как круги, треугольники, дуги и эллипсы, а также методы для отображения текста. <xref:System.Drawing?displayProperty=nameWithType> Пространство имен и его подпространства имен содержат классы, инкапсулирующие графические элементы, такие как фигуры (круги, прямоугольники, дуги и другие), цвета, шрифты, кистей и т. д. Дополнительные сведения о GDI см. в разделе [использование управляемых графических классов](../advanced/using-managed-graphics-classes.md). Основы GDI также описаны в [как: Создание элемента управления Windows Forms, показывающего прогресс](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 ## <a name="geometry-of-the-drawing-region"></a>Геометрия области рисования  
  <xref:System.Windows.Forms.Control.ClientRectangle%2A> Свойства элемента управления задает прямоугольную область, доступную для элемента управления на экране пользователя, хотя <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> свойство <xref:System.Windows.Forms.PaintEventArgs> задает область, которая фактически закрашивается. (Помните, что рисование выполняется в <xref:System.Windows.Forms.Control.Paint> событие метода, принимающего <xref:System.Windows.Forms.PaintEventArgs> экземпляр в качестве аргумента). Элемент управления может потребоваться рисовать только часть ее доступной области, как в случае изменения отображения элемента управления при небольшом разделе. В этих случаях разработчик элемента управления следует вычислять фактическое прямоугольника для рисования и передать его <xref:System.Windows.Forms.Control.Invalidate%2A>. Перегруженные версии <xref:System.Windows.Forms.Control.Invalidate%2A> , принимающих <xref:System.Drawing.Rectangle> или <xref:System.Drawing.Region> в качестве аргумента, используют этот аргумент для создания <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> свойство <xref:System.Windows.Forms.PaintEventArgs>.  

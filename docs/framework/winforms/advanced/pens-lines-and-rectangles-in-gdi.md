@@ -17,15 +17,15 @@ helpviewer_keywords:
 - examples [Windows Forms], GDI+
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06d2351ffa7d7f009d7b049f4689df7038b4d202
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641403"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505351"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>Перья, линии и прямоугольники в GDI+
-Чтобы нарисовать линии с [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] необходимо создать <xref:System.Drawing.Graphics> объекта и <xref:System.Drawing.Pen> объекта. <xref:System.Drawing.Graphics> Объект предоставляет методы, которые фактически выполняют рисование, и <xref:System.Drawing.Pen> объект сохраняет атрибуты, такие как цвет, ширину и стиль.  
+Чтобы нарисовать линии с помощью GDI +, необходимо создать <xref:System.Drawing.Graphics> объекта и <xref:System.Drawing.Pen> объекта. <xref:System.Drawing.Graphics> Объект предоставляет методы, которые фактически выполняют рисование, и <xref:System.Drawing.Pen> объект сохраняет атрибуты, такие как цвет, ширину и стиль.  
   
 ## <a name="drawing-a-line"></a>Рисование линии  
  Чтобы нарисовать линию, вызовите <xref:System.Drawing.Graphics.DrawLine%2A> метод <xref:System.Drawing.Graphics> объекта. <xref:System.Drawing.Pen> Объект передается в качестве одного из аргументов <xref:System.Drawing.Graphics.DrawLine%2A> метод. В следующем примере рисуется линию из точки (4, 2) в точку ("12", "6"):  
@@ -55,7 +55,7 @@ ms.locfileid: "61641403"
  ![Строки](./media/aboutgdip02-art04.gif "Aboutgdip02_art04")  
   
 ## <a name="drawing-a-rectangle"></a>Рисование прямоугольника  
- Рисование прямоугольников с [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] похоже на рисование линий. Чтобы нарисовать прямоугольник, вам потребуется <xref:System.Drawing.Graphics> объекта и <xref:System.Drawing.Pen> объекта. <xref:System.Drawing.Graphics> Предоставляет <xref:System.Drawing.Graphics.DrawRectangle%2A> метод и <xref:System.Drawing.Pen> объект сохраняет атрибуты, такие как толщины и цвета. <xref:System.Drawing.Pen> Объект передается в качестве одного из аргументов <xref:System.Drawing.Graphics.DrawRectangle%2A> метод. В следующем примере рисуется прямоугольник с его верхнего левого угла в (100, 50), ширины 80, а высота — 40:  
+ Рисование прямоугольников с помощью GDI + похоже на рисование линий. Чтобы нарисовать прямоугольник, вам потребуется <xref:System.Drawing.Graphics> объекта и <xref:System.Drawing.Pen> объекта. <xref:System.Drawing.Graphics> Предоставляет <xref:System.Drawing.Graphics.DrawRectangle%2A> метод и <xref:System.Drawing.Pen> объект сохраняет атрибуты, такие как толщины и цвета. <xref:System.Drawing.Pen> Объект передается в качестве одного из аргументов <xref:System.Drawing.Graphics.DrawRectangle%2A> метод. В следующем примере рисуется прямоугольник с его верхнего левого угла в (100, 50), ширины 80, а высота — 40:  
   
  [!code-csharp[LinesCurvesAndShapes#45](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#45)]
  [!code-vb[LinesCurvesAndShapes#45](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#45)]  

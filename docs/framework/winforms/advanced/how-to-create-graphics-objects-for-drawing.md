@@ -10,15 +10,15 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: aa4c3e3cd21d702927b3784254184a9cd329f121
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee57b0409d7bb7574c965ff098e7f86c8332536d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643361"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505502"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Практическое руководство. Создание графических объектов для рисования
-Перед тем как рисовать линии и фигуры, отображать текст или изображения и управлять ими с помощью [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], необходимо создать объект <xref:System.Drawing.Graphics>. <xref:System.Drawing.Graphics> представляет поверхность для рисования [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] и является объектом, который используется для создания графических изображений.  
+Перед Рисование линий и фигур, отображения текста или отображения и управления ими с помощью GDI +, необходимо создать <xref:System.Drawing.Graphics> объекта. <xref:System.Drawing.Graphics> Объект представляет поверхность рисования GDI + и является объектом, который используется для создания графических изображений.  
   
  Работа с графикой состоит из двух этапов:  
   
@@ -33,11 +33,11 @@ ms.locfileid: "64643361"
   
 - Получите ссылку на объект Graphics как часть <xref:System.Windows.Forms.PaintEventArgs> в событии <xref:System.Windows.Forms.Control.Paint>  формы или элемента управления. Это обычный способ получения ссылки на объект Graphics при создании кода рисования для элемента управления. Аналогичным образом можно получить объект Graphics как свойство <xref:System.Drawing.Printing.PrintPageEventArgs> при обработке события <xref:System.Drawing.Printing.PrintDocument.PrintPage> для <xref:System.Drawing.Printing.PrintDocument>.  
   
-     - или -  
+     \- или -  
   
 - Вызовите метод <xref:System.Windows.Forms.Control.CreateGraphics%2A> элемента управления или формы, чтобы получить ссылку на <xref:System.Drawing.Graphics>, представляющий поверхность рисования объекта формы или элемента управления. Используйте этот метод, чтобы рисовать на уже существующей форме или элементе управления.  
   
-     - или -  
+     \- или -  
   
 - Создайте объект <xref:System.Drawing.Graphics> из любого объекта, который наследует от <xref:System.Drawing.Image>. Этот подход полезен в тех случаях, когда нужно изменить уже существующий образ.  
   

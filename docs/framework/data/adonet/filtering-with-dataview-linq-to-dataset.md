@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: b41b95ba06f031dc45c0267432d0d6afb7f3a7d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1af8863dd22b5ebb3a2c87009b9c51d5ec25bb89
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645688"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504839"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Фильтрация с использованием объекта DataView (LINQ to DataSet)
 Возможность фильтрации данных на основе заданных критериев и их предоставление клиенту с помощью элемента управления в пользовательском интерфейсе - это важный аспект привязки данных. Объект <xref:System.Data.DataView> реализует несколько способов фильтрации и возвращения подмножеств строк данных, отвечающих определенным критериям фильтрации. В дополнение к строковому возможности фильтрации <xref:System.Data.DataView> также предоставляет возможность использования [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] выражения для критериям фильтрации. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] выражения позволяют выполнять гораздо более сложные и мощные операции фильтрации, чем строковые фильтрации.  
   
  Существует два способа фильтрации данных с помощью объекта <xref:System.Data.DataView>.  
   
-- Создайте объект <xref:System.Data.DataView> на основе запроса [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] с предложением WHERE.  
+- Создание <xref:System.Data.DataView> из запроса LINQ to DataSet с Where предложение.  
   
 - Используйте существующие возможности фильтрации на основе строк, предоставляемые объектом <xref:System.Data.DataView>.  
   
 ## <a name="creating-dataview-from-a-query-with-filtering-information"></a>Создание объекта DataView на основе запроса с данными фильтрации  
- Объект <xref:System.Data.DataView> можно создать с помощью запроса [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Если запрос содержит предложение `Where`, объект <xref:System.Data.DataView> будет создан с учетом данных фильтрации из этого запроса. Выражение в предложении `Where` используется для определения того, какие строки данных будут включены в объект <xref:System.Data.DataView>, и является основой для фильтра.  
+ Объект <xref:System.Data.DataView> объект может быть создан из LINQ запрос к набору данных. Если запрос содержит предложение `Where`, объект <xref:System.Data.DataView> будет создан с учетом данных фильтрации из этого запроса. Выражение в предложении `Where` используется для определения того, какие строки данных будут включены в объект <xref:System.Data.DataView>, и является основой для фильтра.  
   
  Фильтрация на основе выражений является более сложной и мощной, чем более простая фильтрация на основе строк. Фильтры на основе строк и выражений взаимно исключают друг друга. Если фильтрация на основе строк <xref:System.Data.DataView.RowFilter%2A> задается после создания объекта <xref:System.Data.DataView> на основе запроса, выводимый из запроса фильтр на основе выражений очищается.  
   
@@ -59,14 +59,14 @@ ms.locfileid: "64645688"
  [!code-vb[DP DataView Samples#SoundEx](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#soundex)]  
   
 ## <a name="using-the-rowfilter-property"></a>Использование свойства RowFilter  
- Существующая функция <xref:System.Data.DataView> фильтрации на основе строк также работает и в контексте [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Дополнительные сведения о строковых <xref:System.Data.DataView.RowFilter%2A> фильтрации, см. в разделе [Сортировка и фильтрация данных](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+ Существующие строковые фильтрации функциональные возможности <xref:System.Data.DataView> по-прежнему работает в LINQ to DataSet контекста. Дополнительные сведения о строковых <xref:System.Data.DataView.RowFilter%2A> фильтрации, см. в разделе [Сортировка и фильтрация данных](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
  В следующем примере объект <xref:System.Data.DataView> создается на основе таблицы Contact, а затем устанавливается свойство <xref:System.Data.DataView.RowFilter%2A> для возврата строк, содержащих контакты с фамилией «Zhu».  
   
  [!code-csharp[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvrowfilter)]
  [!code-vb[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvrowfilter)]  
   
- После создания объекта <xref:System.Data.DataView> на основе таблицы <xref:System.Data.DataTable> или запроса [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] можно с помощью свойства <xref:System.Data.DataView.RowFilter%2A> указать подмножество строк на основе значений их столбцов. Фильтры на основе строк и выражений взаимно исключают друг друга. Установка <xref:System.Data.DataView.RowFilter%2A> свойство очистит критерий фильтра, созданный из [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] запросов и критерий фильтра не может быть сброшен.  
+ После <xref:System.Data.DataView> была создана из <xref:System.Data.DataTable> или LINQ запрос к набору данных, можно использовать <xref:System.Data.DataView.RowFilter%2A> свойство для задания подмножеств строк на основании значений столбцов. Фильтры на основе строк и выражений взаимно исключают друг друга. Параметр <xref:System.Data.DataView.RowFilter%2A> свойство очистит критерий фильтра, созданный из LINQ запрос к набору данных, и критерий фильтра не может быть сброшен.  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywheresetrowfilter)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywheresetrowfilter)]  

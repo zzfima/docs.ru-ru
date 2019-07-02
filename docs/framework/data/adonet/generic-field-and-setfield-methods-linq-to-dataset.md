@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1883365f-9d6c-4ccb-9187-df309f47706d
-ms.openlocfilehash: 9a2913de6534612455c14858f6baffea8ef78976
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 1b2c7434543bb2574c59eaec126a621121dd7cef
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347482"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504796"
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>Универсальные методы Field и SetField (LINQ to DataSet)
-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Предоставляет методы расширения для <xref:System.Data.DataRow> класс для доступа к значениям столбцов: <xref:System.Data.DataRowExtensions.Field%2A> метод и <xref:System.Data.DataRowExtensions.SetField%2A> метод. Эти методы обеспечивают разработчикам более простой доступ к значениям столбцов, особенно это касается значений NULL. <xref:System.Data.DataSet> Использует <xref:System.DBNull.Value?displayProperty=nameWithType> для представления значения null, тогда как [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] использует <xref:System.Nullable> и <xref:System.Nullable%601> типов. С помощью существующего метода доступа столбцов в <xref:System.Data.DataRow> требует приведения возвращаемого объекта к соответствующему типу. Если определенное поле в <xref:System.Data.DataRow> может иметь значение null, необходимо явно проверить значение null, так как возврат <xref:System.DBNull.Value?displayProperty=nameWithType> и неявном приведении его к другому типу возникает исключение <xref:System.InvalidCastException>. В следующем примере если <xref:System.Data.DataRow.IsNull%2A?displayProperty=nameWithType> метод не использовался, чтобы проверить значение null, будет создано исключение, если индексатор возвращает <xref:System.DBNull.Value?displayProperty=nameWithType> и пытается привести его к <xref:System.String>.  
+LINQ to DataSet предоставляет методы расширения для <xref:System.Data.DataRow> класс для доступа к значениям столбцов: <xref:System.Data.DataRowExtensions.Field%2A> метод и <xref:System.Data.DataRowExtensions.SetField%2A> метод. Эти методы обеспечивают разработчикам более простой доступ к значениям столбцов, особенно это касается значений NULL. <xref:System.Data.DataSet> Использует <xref:System.DBNull.Value?displayProperty=nameWithType> для представления значения null, тогда как [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] использует <xref:System.Nullable> и <xref:System.Nullable%601> типов. С помощью существующего метода доступа столбцов в <xref:System.Data.DataRow> требует приведения возвращаемого объекта к соответствующему типу. Если определенное поле в <xref:System.Data.DataRow> может иметь значение null, необходимо явно проверить значение null, так как возврат <xref:System.DBNull.Value?displayProperty=nameWithType> и неявном приведении его к другому типу возникает исключение <xref:System.InvalidCastException>. В следующем примере если <xref:System.Data.DataRow.IsNull%2A?displayProperty=nameWithType> метод не использовался, чтобы проверить значение null, будет создано исключение, если индексатор возвращает <xref:System.DBNull.Value?displayProperty=nameWithType> и пытается привести его к <xref:System.String>.  
   
  [!code-csharp[DP LINQ to DataSet Examples#WhereIsNull](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#whereisnull)]
  [!code-vb[DP LINQ to DataSet Examples#WhereIsNull](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#whereisnull)]  

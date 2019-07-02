@@ -8,12 +8,12 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: 1aa3030d9daea57bb9b8970baa78f8117a07bd1a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0bb7293a5423004a13cf98b79bba0a6c411a7c97
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624195"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505514"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Практическое руководство. Создание частной коллекции шрифтов
 <xref:System.Drawing.Text.PrivateFontCollection> Класс наследует от <xref:System.Drawing.Text.FontCollection> абстрактного базового класса. Можно использовать <xref:System.Drawing.Text.PrivateFontCollection> объект для сохранения набора шрифты, специально для вашего приложения. Частной коллекции может включать установленных системных шрифтов, а также шрифты, которые не были установлены на компьютере. Чтобы добавить файл шрифта частной коллекции, вызовите <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> метод <xref:System.Drawing.Text.PrivateFontCollection> объекта.  
@@ -41,9 +41,9 @@ ms.locfileid: "64624195"
   
  ![Снимок экрана: текст в различные шрифты.](./media/how-to-create-a-private-font-collection/various-fonts-text-output.png)  
   
- Arial.tff (который был добавлен в частную коллекцию шрифтов в следующем примере кода) — это файл шрифта Arial обычного стиля. Обратите внимание, что выходные данные программы показано несколько доступные стили, кроме обычных шрифт Arial семейства. Это потому, что [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] может имитировать полужирный, курсив и полужирный курсив обычного начертания. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Можно также создавать, зачеркивание и подчеркивание обычного начертания.  
+ Arial.tff (который был добавлен в частную коллекцию шрифтов в следующем примере кода) — это файл шрифта Arial обычного стиля. Обратите внимание, что выходные данные программы показано несколько доступные стили, кроме обычных шрифт Arial семейства. Том, что GDI + может имитировать полужирный, курсив и полужирный курсив обычного начертания. GDI + также позволяет создавать зачеркивание и подчеркивание обычного начертания.  
   
- Аналогичным образом [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] можно имитировать полужирным курсивом стиль из полужирный стиль или курсивное начертание. Выходные данные программы показано, что полужирным курсивом стиля для семейства раз несмотря на то, что TimesBd.tff (Times New Roman, полужирный) является единственным файлом раз в коллекции.  
+ Аналогичным образом GDI + можно смоделировать полужирным курсивом стиль из полужирный стиль или курсивное начертание. Выходные данные программы показано, что полужирным курсивом стиля для семейства раз несмотря на то, что TimesBd.tff (Times New Roman, полужирный) является единственным файлом раз в коллекции.  
   
  [!code-csharp[System.Drawing.FontsAndText#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#51)]
  [!code-vb[System.Drawing.FontsAndText#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  

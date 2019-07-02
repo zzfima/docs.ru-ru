@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: 92aaeabfc12e964ac294fbd69998c4671fc8763c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e3c48aec830cdc3ccceb8683f93e3a99ee6364e2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582601"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506197"
 ---
 # <a name="overriding-the-onpaint-method"></a>Переопределение метода OnPaint
 Основные шаги для переопределения любого события, определенные в .NET Framework, идентичны и обобщены в следующем списке.  
@@ -82,7 +82,7 @@ public class PaintEventArgs : EventArgs {
 }  
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Указывает на прямоугольник для рисования и <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> свойство ссылается на <xref:System.Drawing.Graphics> объекта. Классы в <xref:System.Drawing?displayProperty=nameWithType> управляются пространство имен классов, предоставляющих доступ к функциям [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], новая графическая библиотека Windows. <xref:System.Drawing.Graphics> Объект имеет методы для рисования точек, строк, линий, дуг, кнопку с многоточием и многих других форм.  
+ <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Указывает на прямоугольник для рисования и <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> свойство ссылается на <xref:System.Drawing.Graphics> объекта. Классы в <xref:System.Drawing?displayProperty=nameWithType> управляются пространство имен классов, предоставляющих доступ к набору функций GDI +, новой библиотеки графики Windows. <xref:System.Drawing.Graphics> Объект имеет методы для рисования точек, строк, линий, дуг, кнопку с многоточием и многих других форм.  
   
  Элемент управления вызывает его <xref:System.Windows.Forms.Control.OnPaint%2A> метод всякий раз, когда ему необходимо изменить его визуального отображения. Этот метод в свою очередь вызывает <xref:System.Windows.Forms.Control.Paint> событий.  
   

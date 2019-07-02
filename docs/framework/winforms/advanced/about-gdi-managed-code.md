@@ -6,19 +6,19 @@ helpviewer_keywords:
 - GDI+
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
-ms.openlocfilehash: 4c7632933e29a59c1db46f84360e271f27edf8b8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 73d1759aec3abe2e3e9c371f949cf051930d103c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588614"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506131"
 ---
 # <a name="about-gdi-managed-code"></a>Управляемый код GDI+
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] — это часть операционной системы Windows, предоставляющая возможности создания векторных изображений, рисования и оформления. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] улучшает [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (интерфейс графических устройств, входящий в состав более ранних версий Windows) путем добавления новых возможностей и оптимизации существующих.  
+GDI + — это часть операционной системы Windows, предоставляющий двухмерной векторной графики, рисунков и оформления. GDI + расширяет GDI (интерфейс графических устройств входит в состав более ранних версиях Windows) путем добавления новых возможностей и оптимизации существующих.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Интерфейс управляемых классов (набор оболочек) является частью .NET Framework, среды для сборки, развертывания и запуска веб-служб XML и других приложений.  
+ GDI + интерфейс управляемых классов (набор оболочек) является частью .NET Framework, среды для сборки, развертывания и запуска веб-служб XML и других приложений.  
   
- Этот раздел содержит сведения об API-интерфейсе [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] для программистов, использующих управляемый код.  
+ Этот раздел содержит сведения об API-Интерфейсе GDI + для программистов, использующих управляемый код.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Линии, кривые и фигуры](lines-curves-and-shapes.md)  
@@ -28,7 +28,7 @@ ms.locfileid: "65588614"
  Описывает доступные типы изображений и способы работы с ними.  
   
  [Системы координат и преобразования](coordinate-systems-and-transformations.md)  
- Описывает , как выполнять преобразование графики с помощью [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Описывает, как выполнять преобразование графики с GDI +.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  

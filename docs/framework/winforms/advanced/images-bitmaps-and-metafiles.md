@@ -7,12 +7,12 @@ helpviewer_keywords:
 - images [Windows Forms], about images
 - Windows Forms, images
 ms.assetid: 7152b45b-a55c-49bc-8c78-ae002a844f71
-ms.openlocfilehash: 2ce19642b37946db7a172e61004688059dba61db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f50d21f4793efb497eb5b030d96a7dc3ab54a04
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003942"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505699"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile
 `Image` — это абстрактный базовый класс, содержащий методы для работы с растровыми изображениями (точечными рисунками) и векторными изображениями (метафайлами). Классы `Bitmap` и <xref:System.Drawing.Imaging.Metafile> унаследованы от класса `Image`. Класс `Bitmap` расширяет возможности класса `Image` за счет дополнительных методов для загрузки, сохранения и использования растровых изображений. Класс <xref:System.Drawing.Imaging.Metafile> расширяет возможности класса `Image` за счет дополнительных методов для записи и анализа векторных изображений.  
@@ -22,7 +22,7 @@ ms.locfileid: "62003942"
  Описываются различные форматы изображений.  
   
  [Метафайлы в GDI+](metafiles-in-gdi.md)  
- Описывается поддержка метафайлов в [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Обсуждение поддержки GDI + метафайлов.  
   
  [Рисование, позиционирование и клонирование изображений в GDI+](drawing-positioning-and-cloning-images-in-gdi.md)  
  Описываются методы, которые служат для рисования векторных и растровых изображений в управляемом коде.  

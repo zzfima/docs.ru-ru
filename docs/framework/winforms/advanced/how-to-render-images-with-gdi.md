@@ -9,15 +9,15 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
-ms.openlocfilehash: e038da545bb3f56cc757710bcaa93aa2c86bfa67
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da637152737510847830e885fdcd065ab92f16b3
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967119"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505757"
 ---
 # <a name="how-to-render-images-with-gdi"></a>Практическое руководство. Отрисовка изображений с использованием GDI+
-Для вывода изображений, которые существуют в виде файлов в приложениях, можно использовать [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Это сделать, создав новый объект <xref:System.Drawing.Image> класс (такие как <xref:System.Drawing.Bitmap>), создавая <xref:System.Drawing.Graphics> объекта, который ссылается на поверхность рисования, вы хотите использовать и вызов <xref:System.Drawing.Graphics.DrawImage%2A> метод <xref:System.Drawing.Graphics> объекта. Изображение будет выведено на поверхность для рисования, представленную классом Graphics. Можно создавать и редактировать файлы изображений во время разработки с помощью редактора изображений и отображать их во время выполнения, используя [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Дополнительные сведения см. в разделе [Редактор изображений для значков](/cpp/windows/image-editor-for-icons).  
+GDI + можно использовать для вывода изображений, которые существуют в виде файлов в ваших приложениях. Это сделать, создав новый объект <xref:System.Drawing.Image> класс (такие как <xref:System.Drawing.Bitmap>), создавая <xref:System.Drawing.Graphics> объекта, который ссылается на поверхность рисования, вы хотите использовать и вызов <xref:System.Drawing.Graphics.DrawImage%2A> метод <xref:System.Drawing.Graphics> объекта. Изображение будет выведено на поверхность для рисования, представленную классом Graphics. Можно использовать редактор изображений для создания и редактирования файлов изображений во время разработки и визуализировать их с помощью GDI + во время выполнения. Дополнительные сведения см. в разделе [Редактор изображений для значков](/cpp/windows/image-editor-for-icons).  
   
 ### <a name="to-render-an-image-with-gdi"></a>Вывод изображения с помощью GDI+  
   
@@ -47,7 +47,7 @@ ms.locfileid: "61967119"
           (System::Environment::SpecialFolder::MyPictures));  
     ```  
   
-2. Создание <xref:System.Drawing.Graphics> , представляющий поверхность рисования, вы хотите использовать. Дополнительные сведения см. в разделе [Как Создание объектов Graphics для рисования](how-to-create-graphics-objects-for-drawing.md).  
+2. Создание <xref:System.Drawing.Graphics> , представляющий поверхность рисования, вы хотите использовать. Дополнительные сведения см. в разделе [Практическое руководство. Создание объектов Graphics для рисования](how-to-create-graphics-objects-for-drawing.md).  
   
     ```vb  
     ' Creates a Graphics object that represents the drawing surface of   
