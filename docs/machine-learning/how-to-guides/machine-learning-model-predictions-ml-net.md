@@ -1,24 +1,24 @@
 ---
 title: Прогнозирование с помощью обученной модели
 description: Сведения о прогнозировании с помощью обученной модели
-ms.date: 05/03/2019
+ms.date: 06/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: dac3b3bfa68776975a2e5e762f46db16e39d61fb
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: ef2b22ff220d1fce1ec43f26c7d51f7e551e038d
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065607"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307399"
 ---
-# <a name="make-predictions-with-a-trained-model"></a><span data-ttu-id="5793a-103">Прогнозирование с помощью обученной модели</span><span class="sxs-lookup"><span data-stu-id="5793a-103">Make predictions with a trained model</span></span>
+# <a name="make-predictions-with-a-trained-model"></a><span data-ttu-id="8f6b7-103">Прогнозирование с помощью обученной модели</span><span class="sxs-lookup"><span data-stu-id="8f6b7-103">Make predictions with a trained model</span></span>
 
-<span data-ttu-id="5793a-104">Сведения об использовании обученной модели для прогнозирования</span><span class="sxs-lookup"><span data-stu-id="5793a-104">Learn how to use a trained model to make predictions</span></span>
+<span data-ttu-id="8f6b7-104">Сведения об использовании обученной модели для прогнозирования</span><span class="sxs-lookup"><span data-stu-id="8f6b7-104">Learn how to use a trained model to make predictions</span></span>
 
-## <a name="create-data-models"></a><span data-ttu-id="5793a-105">Создание моделей данных</span><span class="sxs-lookup"><span data-stu-id="5793a-105">Create data models</span></span>
+## <a name="create-data-models"></a><span data-ttu-id="8f6b7-105">Создание моделей данных</span><span class="sxs-lookup"><span data-stu-id="8f6b7-105">Create data models</span></span>
 
-### <a name="input-data"></a><span data-ttu-id="5793a-106">Входные данные</span><span class="sxs-lookup"><span data-stu-id="5793a-106">Input data</span></span>
+### <a name="input-data"></a><span data-ttu-id="8f6b7-106">Входные данные</span><span class="sxs-lookup"><span data-stu-id="8f6b7-106">Input data</span></span>
 
 ```csharp
 public class HousingData
@@ -36,11 +36,11 @@ public class HousingData
 }
 ```
 
-### <a name="output-data"></a><span data-ttu-id="5793a-107">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="5793a-107">Output data</span></span>
+### <a name="output-data"></a><span data-ttu-id="8f6b7-107">Выходные данные</span><span class="sxs-lookup"><span data-stu-id="8f6b7-107">Output data</span></span>
 
-<span data-ttu-id="5793a-108">Как в случае с именами входных столбцов `Features` и `Label`, ML.NET использует имена по умолчанию для столбцов прогнозируемых значений, создаваемых моделью.</span><span class="sxs-lookup"><span data-stu-id="5793a-108">Like the `Features` and `Label` input column names, ML.NET has default names for the predicted value columns produced by a model.</span></span> <span data-ttu-id="5793a-109">Имя может отличаться в зависимости от задачи.</span><span class="sxs-lookup"><span data-stu-id="5793a-109">Depending on the task the name may differ.</span></span>
+<span data-ttu-id="8f6b7-108">Как в случае с именами входных столбцов `Features` и `Label`, ML.NET использует имена по умолчанию для столбцов прогнозируемых значений, создаваемых моделью.</span><span class="sxs-lookup"><span data-stu-id="8f6b7-108">Like the `Features` and `Label` input column names, ML.NET has default names for the predicted value columns produced by a model.</span></span> <span data-ttu-id="8f6b7-109">Имя может отличаться в зависимости от задачи.</span><span class="sxs-lookup"><span data-stu-id="8f6b7-109">Depending on the task the name may differ.</span></span>
 
-<span data-ttu-id="5793a-110">Так как в этом примере используется алгоритм линейной регрессии, имя по умолчанию выходного столбца имеет значение `Score`, которое определяется атрибутом [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) в свойстве `PredictedPrice`.</span><span class="sxs-lookup"><span data-stu-id="5793a-110">Because the algorithm used in this sample is a linear regression algorithm, the default name of the output column is `Score` which is defined by the [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) attribute on the `PredictedPrice` property.</span></span>
+<span data-ttu-id="8f6b7-110">Так как в этом примере используется алгоритм линейной регрессии, имя по умолчанию выходного столбца имеет значение `Score`, которое определяется атрибутом [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) в свойстве `PredictedPrice`.</span><span class="sxs-lookup"><span data-stu-id="8f6b7-110">Because the algorithm used in this sample is a linear regression algorithm, the default name of the output column is `Score` which is defined by the [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) attribute on the `PredictedPrice` property.</span></span>
 
 ```csharp
 class HousingPrediction : HousingData
@@ -50,11 +50,11 @@ class HousingPrediction : HousingData
 }
 ```
 
-<span data-ttu-id="5793a-111">Модель данных `HousingPrediction` наследует от `HousingData`, чтобы упростить процесс визуализации исходных входных данных, а также выходных данных модели.</span><span class="sxs-lookup"><span data-stu-id="5793a-111">The `HousingPrediction` data model inherits from `HousingData` to make it easy to visualize the original input data along with the output generated by the model.</span></span>  
+<span data-ttu-id="8f6b7-111">Модель данных `HousingPrediction` наследует от `HousingData`, чтобы упростить процесс визуализации исходных входных данных, а также выходных данных модели.</span><span class="sxs-lookup"><span data-stu-id="8f6b7-111">The `HousingPrediction` data model inherits from `HousingData` to make it easy to visualize the original input data along with the output generated by the model.</span></span>  
 
-## <a name="set-up-a-prediction-pipeline"></a><span data-ttu-id="5793a-112">Настройка конвейера прогнозирования</span><span class="sxs-lookup"><span data-stu-id="5793a-112">Set up a prediction pipeline</span></span>
+## <a name="set-up-a-prediction-pipeline"></a><span data-ttu-id="8f6b7-112">Настройка конвейера прогнозирования</span><span class="sxs-lookup"><span data-stu-id="8f6b7-112">Set up a prediction pipeline</span></span>
 
-<span data-ttu-id="5793a-113">Выполняется ли отдельный или пакетный прогноз, конвейер прогнозирования нужно загрузить в приложение.</span><span class="sxs-lookup"><span data-stu-id="5793a-113">Whether making a single or batch prediction, the prediction pipeline needs to be loaded into the application.</span></span> <span data-ttu-id="5793a-114">Этот конвейер содержит как преобразования для предварительной обработки данных, так и обученную модель.</span><span class="sxs-lookup"><span data-stu-id="5793a-114">This pipeline contains both the data pre-processing transformations as well as the trained model.</span></span> <span data-ttu-id="5793a-115">Приведенный ниже фрагмент кода загружает конвейер прогнозирования из файла с именем `model.zip`.</span><span class="sxs-lookup"><span data-stu-id="5793a-115">The code snippet below loads the prediction pipeline from a file named `model.zip`.</span></span>
+<span data-ttu-id="8f6b7-113">Выполняется ли отдельный или пакетный прогноз, конвейер прогнозирования нужно загрузить в приложение.</span><span class="sxs-lookup"><span data-stu-id="8f6b7-113">Whether making a single or batch prediction, the prediction pipeline needs to be loaded into the application.</span></span> <span data-ttu-id="8f6b7-114">Этот конвейер содержит как преобразования для предварительной обработки данных, так и обученную модель.</span><span class="sxs-lookup"><span data-stu-id="8f6b7-114">This pipeline contains both the data pre-processing transformations as well as the trained model.</span></span> <span data-ttu-id="8f6b7-115">Приведенный ниже фрагмент кода загружает конвейер прогнозирования из файла с именем `model.zip`.</span><span class="sxs-lookup"><span data-stu-id="8f6b7-115">The code snippet below loads the prediction pipeline from a file named `model.zip`.</span></span>
 
 ```csharp
 //Create MLContext 
@@ -65,16 +65,16 @@ DataViewSchema predictionPipelineSchema;
 ITransformer predictionPipeline = mlContext.Model.Load("model.zip", out predictionPipelineSchema);
 ```
 
-## <a name="single-prediction"></a><span data-ttu-id="5793a-116">Отдельный прогноз</span><span class="sxs-lookup"><span data-stu-id="5793a-116">Single prediction</span></span>
+## <a name="single-prediction"></a><span data-ttu-id="8f6b7-116">Отдельный прогноз</span><span class="sxs-lookup"><span data-stu-id="8f6b7-116">Single prediction</span></span>
 
-<span data-ttu-id="5793a-117">Чтобы создать отдельный прогноз, создайте [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) с помощью загруженного конвейера прогнозирования.</span><span class="sxs-lookup"><span data-stu-id="5793a-117">To make a single prediction, create a [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) using the loaded prediction pipeline.</span></span>
+<span data-ttu-id="8f6b7-117">Чтобы создать отдельный прогноз, создайте [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) с помощью загруженного конвейера прогнозирования.</span><span class="sxs-lookup"><span data-stu-id="8f6b7-117">To make a single prediction, create a [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) using the loaded prediction pipeline.</span></span>
 
 ```csharp
 // Create PredictionEngines
 PredictionEngine<HousingData, HousingPrediction> predictionEngine = mlContext.Model.CreatePredictionEngine<HousingData, HousingPrediction>(predictionPipeline);
 ```
 
-<span data-ttu-id="5793a-118">Затем с помощью метода [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) передайте входные данные как параметр.</span><span class="sxs-lookup"><span data-stu-id="5793a-118">Then, use the [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) method and pass in your input data as a parameter.</span></span> <span data-ttu-id="5793a-119">Обратите внимание, что для использования метода [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) не нужно, чтобы входные данные были [`IDataView`](xref:Microsoft.ML.IDataView).</span><span class="sxs-lookup"><span data-stu-id="5793a-119">Notice that using the [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) method does not require the input to be an [`IDataView`](xref:Microsoft.ML.IDataView)).</span></span> <span data-ttu-id="5793a-120">Это обусловлено тем, что он беспрепятственно осуществляет внутреннюю обработку типов входных данных, чтобы вы могли передать объект типа входных данных.</span><span class="sxs-lookup"><span data-stu-id="5793a-120">This is because it conveniently internalizes the input data type manipulation so you can pass in an object of the input data type.</span></span> <span data-ttu-id="5793a-121">Кроме того, так как `CurrentPrice` является целью или меткой, которую вы пытаетесь спрогнозировать с помощью новых данных, предполагается, что на данный момент значения для него нет.</span><span class="sxs-lookup"><span data-stu-id="5793a-121">Additionally, since `CurrentPrice` is the target or label you're trying to predict using new data, it's assumed there is no value for it at the moment.</span></span>
+<span data-ttu-id="8f6b7-118">Затем с помощью метода [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) передайте входные данные как параметр.</span><span class="sxs-lookup"><span data-stu-id="8f6b7-118">Then, use the [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) method and pass in your input data as a parameter.</span></span> <span data-ttu-id="8f6b7-119">Обратите внимание, что для использования метода [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) не нужно, чтобы входные данные были [`IDataView`](xref:Microsoft.ML.IDataView).</span><span class="sxs-lookup"><span data-stu-id="8f6b7-119">Notice that using the [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) method does not require the input to be an [`IDataView`](xref:Microsoft.ML.IDataView)).</span></span> <span data-ttu-id="8f6b7-120">Это обусловлено тем, что он беспрепятственно осуществляет внутреннюю обработку типов входных данных, чтобы вы могли передать объект типа входных данных.</span><span class="sxs-lookup"><span data-stu-id="8f6b7-120">This is because it conveniently internalizes the input data type manipulation so you can pass in an object of the input data type.</span></span> <span data-ttu-id="8f6b7-121">Кроме того, так как `CurrentPrice` является целью или меткой, которую вы пытаетесь спрогнозировать с помощью новых данных, предполагается, что на данный момент значения для него нет.</span><span class="sxs-lookup"><span data-stu-id="8f6b7-121">Additionally, since `CurrentPrice` is the target or label you're trying to predict using new data, it's assumed there is no value for it at the moment.</span></span>
 
 ```csharp
 // Input Data
@@ -88,11 +88,11 @@ HousingData inputData = new HousingData
 HousingPrediction prediction = predictionEngine.Predict(inputData);
 ```
 
-<span data-ttu-id="5793a-122">При обращении к свойству `Score` объекта `prediction` вы должны получить значение, аналогичное `150079`.</span><span class="sxs-lookup"><span data-stu-id="5793a-122">If you access the `Score` property of the `prediction` object, you should get a value similar to `150079`.</span></span>
+<span data-ttu-id="8f6b7-122">При обращении к свойству `Score` объекта `prediction` вы должны получить значение, аналогичное `150079`.</span><span class="sxs-lookup"><span data-stu-id="8f6b7-122">If you access the `Score` property of the `prediction` object, you should get a value similar to `150079`.</span></span>
 
-## <a name="batch-prediction"></a><span data-ttu-id="5793a-123">Пакетный прогноз</span><span class="sxs-lookup"><span data-stu-id="5793a-123">Batch prediction</span></span>
+## <a name="batch-prediction"></a><span data-ttu-id="8f6b7-123">Пакетный прогноз</span><span class="sxs-lookup"><span data-stu-id="8f6b7-123">Batch prediction</span></span>
 
-<span data-ttu-id="5793a-124">Получив следующие данные, загрузите их в [`IDataView`](xref:Microsoft.ML.IDataView).</span><span class="sxs-lookup"><span data-stu-id="5793a-124">Given the following data, load it into an [`IDataView`](xref:Microsoft.ML.IDataView).</span></span> <span data-ttu-id="5793a-125">Так как `CurrentPrice` является целью или меткой, которую вы пытаетесь спрогнозировать с помощью новых данных, предполагается, что на данный момент значения для него нет.</span><span class="sxs-lookup"><span data-stu-id="5793a-125">Because `CurrentPrice` is the target or label you're trying to predict using new data, it's assumed there is no value for it at the moment.</span></span>
+<span data-ttu-id="8f6b7-124">Получив следующие данные, загрузите их в [`IDataView`](xref:Microsoft.ML.IDataView).</span><span class="sxs-lookup"><span data-stu-id="8f6b7-124">Given the following data, load it into an [`IDataView`](xref:Microsoft.ML.IDataView).</span></span> <span data-ttu-id="8f6b7-125">В этом случае имя [`IDataView`](xref:Microsoft.ML.IDataView) — `inputData`.</span><span class="sxs-lookup"><span data-stu-id="8f6b7-125">In this case, the name of the [`IDataView`](xref:Microsoft.ML.IDataView) is `inputData`.</span></span> <span data-ttu-id="8f6b7-126">Так как `CurrentPrice` является целью или меткой, которую вы пытаетесь спрогнозировать с помощью новых данных, предполагается, что на данный момент значения для него нет.</span><span class="sxs-lookup"><span data-stu-id="8f6b7-126">Because `CurrentPrice` is the target or label you're trying to predict using new data, it's assumed there is no value for it at the moment.</span></span>
 
 ```csharp
 // Actual data
@@ -116,24 +116,24 @@ HousingData[] housingData = new HousingData[]
 };
 ```
 
-<span data-ttu-id="5793a-126">Затем воспользуйтесь методом [`Transform`](xref:Microsoft.ML.ITransformer.Transform*), чтобы применить преобразования данных и сформировать прогнозы.</span><span class="sxs-lookup"><span data-stu-id="5793a-126">Then, use the [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) method to apply the data transformations and generate predictions.</span></span>
+<span data-ttu-id="8f6b7-127">Затем воспользуйтесь методом [`Transform`](xref:Microsoft.ML.ITransformer.Transform*), чтобы применить преобразования данных и сформировать прогнозы.</span><span class="sxs-lookup"><span data-stu-id="8f6b7-127">Then, use the [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) method to apply the data transformations and generate predictions.</span></span>
 
 ```csharp
 // Predicted Data
 IDataView predictions = predictionPipeline.Transform(inputData);
 ```
 
-<span data-ttu-id="5793a-127">Проверьте прогнозируемые значения с помощью метода [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*).</span><span class="sxs-lookup"><span data-stu-id="5793a-127">Inspect the predicted values by using the [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) method.</span></span>
+<span data-ttu-id="8f6b7-128">Проверьте прогнозируемые значения с помощью метода [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*).</span><span class="sxs-lookup"><span data-stu-id="8f6b7-128">Inspect the predicted values by using the [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) method.</span></span>
 
 ```csharp
 // Get Predictions
 float[] scoreColumn = predictions.GetColumn<float>("Score").ToArray();
 ```
 
-<span data-ttu-id="5793a-128">Прогнозируемые значения в столбце оценки должны выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="5793a-128">The predicted values in the score column should look like the following:</span></span>
+<span data-ttu-id="8f6b7-129">Прогнозируемые значения в столбце оценки должны выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="8f6b7-129">The predicted values in the score column should look like the following:</span></span>
 
-| <span data-ttu-id="5793a-129">Наблюдение</span><span class="sxs-lookup"><span data-stu-id="5793a-129">Observation</span></span> | <span data-ttu-id="5793a-130">Прогноз</span><span class="sxs-lookup"><span data-stu-id="5793a-130">Prediction</span></span> |
+| <span data-ttu-id="8f6b7-130">Наблюдение</span><span class="sxs-lookup"><span data-stu-id="8f6b7-130">Observation</span></span> | <span data-ttu-id="8f6b7-131">Прогноз</span><span class="sxs-lookup"><span data-stu-id="8f6b7-131">Prediction</span></span> |
 |---|---|
-| <span data-ttu-id="5793a-131">1</span><span class="sxs-lookup"><span data-stu-id="5793a-131">1</span></span> | <span data-ttu-id="5793a-132">144 638,2</span><span class="sxs-lookup"><span data-stu-id="5793a-132">144638.2</span></span> |
-| <span data-ttu-id="5793a-133">2</span><span class="sxs-lookup"><span data-stu-id="5793a-133">2</span></span> | <span data-ttu-id="5793a-134">150 079,4</span><span class="sxs-lookup"><span data-stu-id="5793a-134">150079.4</span></span> |
-| <span data-ttu-id="5793a-135">3</span><span class="sxs-lookup"><span data-stu-id="5793a-135">3</span></span> | <span data-ttu-id="5793a-136">107 789,8</span><span class="sxs-lookup"><span data-stu-id="5793a-136">107789.8</span></span> |
+| <span data-ttu-id="8f6b7-132">1</span><span class="sxs-lookup"><span data-stu-id="8f6b7-132">1</span></span> | <span data-ttu-id="8f6b7-133">144 638,2</span><span class="sxs-lookup"><span data-stu-id="8f6b7-133">144638.2</span></span> |
+| <span data-ttu-id="8f6b7-134">2</span><span class="sxs-lookup"><span data-stu-id="8f6b7-134">2</span></span> | <span data-ttu-id="8f6b7-135">150 079,4</span><span class="sxs-lookup"><span data-stu-id="8f6b7-135">150079.4</span></span> |
+| <span data-ttu-id="8f6b7-136">3</span><span class="sxs-lookup"><span data-stu-id="8f6b7-136">3</span></span> | <span data-ttu-id="8f6b7-137">107 789,8</span><span class="sxs-lookup"><span data-stu-id="8f6b7-137">107789.8</span></span> |
