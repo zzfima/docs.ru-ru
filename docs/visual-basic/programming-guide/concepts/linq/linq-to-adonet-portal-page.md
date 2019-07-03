@@ -2,12 +2,12 @@
 title: LINQ to ADO.NET (Страница портала)
 ms.date: 07/20/2015
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
-ms.openlocfilehash: 5783e45f666779e6cfecd611f1e2a34dae5e7df9
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 850e154b40e69cc655ee1b59161351b0b2898033
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506003"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539385"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (Страница портала)
 LINQ to ADO.NET позволяет запрашивать любой перечисляемый объект, в ADO.NET с помощью [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] модель программирования.  
@@ -15,7 +15,7 @@ LINQ to ADO.NET позволяет запрашивать любой переч�
 > [!NOTE]
 >  LINQ to ADO.NET документации находится в разделе ADO.NET пакета SDK для .NET Framework: [LINQ и ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).
   
- Существуют три отдельные технологии ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]: LINQ to DataSet, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], и [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. LINQ to DataSet предоставляет расширенные и оптимизированные запросы к <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] позволяет непосредственно запрашивать схемы баз данных SQL Server, и [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] позволяет выполнять запросы к модели EDM.  
+ Существуют три отдельные технологии ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]: LINQ to DataSet, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]и LINQ to Entities. LINQ to DataSet предоставляет расширенные и оптимизированные запросы к <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] включает возможность запрашивать непосредственно схемы базы данных SQL Server и LINQ to Entities позволяет выполнять запросы к модели EDM.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  <xref:System.Data.DataSet> является одним из наиболее широко используемых компонентов в ADO.NET и ключевым элементом модели автономного программирования, на основе которой создан ADO.NET. Несмотря на все это, объект <xref:System.Data.DataSet> имеет ограниченные возможности запросов.  
@@ -32,7 +32,7 @@ LINQ to ADO.NET позволяет запрашивать любой переч�
  Дополнительные сведения см. в разделе [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md).  
   
 ## <a name="linq-to-entities"></a>LINQ to Entities  
- Через модель EDM реляционные данные представлены в виде объектов в среде .NET. Благодаря этому поддержка [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] эффективно реализуется на уровне объектов, что позволяет составлять запросы баз данных на языке, используемом для сборки бизнес-логики. Эта функция называется [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. Дополнительные сведения см. в разделе [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md).  
+ В модели EDM реляционные данные представлены в виде объектов в среде .NET. Благодаря этому поддержка [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] эффективно реализуется на уровне объектов, что позволяет составлять запросы баз данных на языке, используемом для сборки бизнес-логики. Эта возможность называется LINQ to Entities. Дополнительные сведения см. в разделе [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md).  
   
 ## <a name="see-also"></a>См. также
 

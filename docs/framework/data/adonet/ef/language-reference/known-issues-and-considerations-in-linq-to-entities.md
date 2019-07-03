@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 303e46e79786ce7f062db4a1a3ffb6c321169af8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e84319c60534c3ecf154c3f58973bcc429a73842
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631286"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539826"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities: рекомендации и известные проблемы
-Этот раздел содержит сведения об известных проблемах, относящихся к запросам [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  
+Этот раздел содержит сведения об известных проблемах, с помощью LINQ для запросов сущностей.  
   
 - [Запросы LINQ, которые нельзя кэшировать](#LINQQueriesThatAreNotCached)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "64631286"
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>Целые числа без знака не поддерживаются  
- Указание целых чисел без знака в запросах [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] не поддерживается, так как [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] не поддерживает этот тип данных. Если указать целое число без знака, <xref:System.ArgumentException> исключение во время преобразования выражения запроса, как показано в следующем примере. В этом примере производится запрос заказа с идентификатором 48000.  
+ Указание беззнаковый целочисленный тип в запросе LINQ to Entities не поддерживается, так как [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] не поддерживает целые числа без знака. Если указать целое число без знака, <xref:System.ArgumentException> исключение во время преобразования выражения запроса, как показано в следующем примере. В этом примере производится запрос заказа с идентификатором 48000.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  

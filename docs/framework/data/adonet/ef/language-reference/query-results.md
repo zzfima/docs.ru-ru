@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
-ms.openlocfilehash: 98dbb0185de88c6fd69c6daf1540e997c14cc9e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 165fb1524daa781c29037bf1c9cb2b3013504177
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641428"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539743"
 ---
 # <a name="query-results"></a>Результаты запроса
-После преобразования запроса [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] в деревья команд и последующего выполнения результаты запроса обычно возвращаются в одной из следующих форм.  
+После запроса LINQ to Entities преобразуются в деревья команд и выполнена, результаты запроса обычно возвращаются в одной из следующих:  
   
 - Коллекция из нуля или большего числа типизированных объектов сущностей или проекция сложных типов в концептуальной модели.  
   

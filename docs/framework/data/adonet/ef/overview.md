@@ -2,12 +2,12 @@
 title: Общие сведения об Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: e6c96326991c6f883ad670393bb5c2691f8ad29e
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 498d0478dc94048a69c393151d3ff8a752706e1c
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307345"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539471"
 ---
 # <a name="entity-framework-overview"></a>Общие сведения об Entity Framework
 
@@ -45,7 +45,7 @@ ms.locfileid: "67307345"
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] — это не просто еще одно средство объектно-реляционного сопоставления. Она предоставляет приложениям возможность чтения и изменения данных, представленных в виде сущностей и связей в концептуальной модели. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] использует данные в модели и файлах сопоставления для преобразования запросов объектов к типам сущностей, представленным в концептуальной модели, в запросы, зависящие от источника данных. Результаты запросов преобразуются в объекты, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] управляет. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Предоставляет следующие способы выполнения запросов к концептуальной модели и возврата объектов:
 
-- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Обеспечивает поддержку Language-Integrated Query (LINQ) для выполнения запросов к типам сущностей, которые определены в концептуальной модели. Дополнительные сведения см. в разделе [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
+- LINQ to Entities. Обеспечивает поддержку Language-Integrated Query (LINQ) для выполнения запросов к типам сущностей, которые определены в концептуальной модели. Дополнительные сведения см. в разделе [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
 
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Независимый от хранилища диалект SQL, который работает непосредственно с сущностями в концептуальной модели и поддерживает основные понятия модели EDM. [!INCLUDE[esql](../../../../../includes/esql-md.md)] используется, и с запросами объектов и запросы, которые выполняются с помощью поставщика EntityClient. Дополнительные сведения см. в разделе [Общие сведения об Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
 

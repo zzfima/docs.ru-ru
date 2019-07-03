@@ -2,12 +2,12 @@
 title: Вопросы безопасности (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 66f8a9217a007ed1faf975638dfa8148e2f1c5ba
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: cf42787d7cc67d80f43a08b5fa71161fee20f5c3
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307304"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539838"
 ---
 # <a name="security-considerations-entity-framework"></a>Вопросы безопасности (Entity Framework)
 В этом разделе приводятся сведения по безопасности, связанные с разработкой, развертыванием и запуском приложений [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Кроме того, необходимо следовать рекомендации по созданию безопасных приложений .NET Framework. Дополнительные сведения см. в разделе [Общие сведения о безопасности](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -100,9 +100,9 @@ ms.locfileid: "67307304"
   
      Запросы [!INCLUDE[esql](../../../../../includes/esql-md.md)] принимают параметры во всех случаях, где допускаются литералы. Необходимо использовать параметризованные запросы, а не внедрять литералы, полученные от внешних агентов, непосредственно в запрос. Также можно использовать [методы построителя запросов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) для безопасного создания Entity SQL.  
   
-- Атаки путем внедрения кода [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]:  
+- LINQ к Entities атаки путем внедрения кода:  
   
-     Хотя в [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] допустима композиция запросов, она выполняется через API объектной модели. В отличие от запросов [!INCLUDE[esql](../../../../../includes/esql-md.md)] запросы [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] не строятся с помощью манипулирования строками или объединения строк, поэтому не подвержены обычным атакам путем внедрения кода SQL.  
+     Несмотря на то, что в LINQ to Entities допустима композиция запросов, она выполняется через API объектной модели. В отличие от [!INCLUDE[esql](../../../../../includes/esql-md.md)] запросы, запросы LINQ to Entities не строятся с помощью манипулирования строками или объединения строк, и не подвержены обычным атакам путем внедрения кода SQL.  
   
 #### <a name="prevent-very-large-result-sets"></a>Предотвращение создания очень больших результирующих наборов  
  Слишком большой результирующий набор может вызвать завершение работы клиентской системы, если клиент выполняет операции, для которых потребность в ресурсах пропорциональна размеру результирующего набора. Непредвиденное появление больших результирующих наборов может происходить при следующих условиях:  
@@ -113,7 +113,7 @@ ms.locfileid: "67307304"
   
 - во вложенных запросах [!INCLUDE[esql](../../../../../includes/esql-md.md)].  
   
- Принимая ввод от пользователя, необходимо убедиться в том, что входные данные не могут привести к созданию слишком больших результирующих наборов, которые не сможет обработать система. Можно также использовать <xref:System.Linq.Queryable.Take%2A> метод в [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] или [ограничение](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) оператор в [!INCLUDE[esql](../../../../../includes/esql-md.md)] для ограничения размера результирующего набора.  
+ Принимая ввод от пользователя, необходимо убедиться в том, что входные данные не могут привести к созданию слишком больших результирующих наборов, которые не сможет обработать система. Можно также использовать <xref:System.Linq.Queryable.Take%2A> метод в LINQ to Entities или [ограничение](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) оператор в [!INCLUDE[esql](../../../../../includes/esql-md.md)] для ограничения размера результирующего набора.  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>Старайтесь не возвращать результаты IQueryable, если методы доступны потенциально ненадежным вызывающим объектам.  
  Старайтесь не возвращать типы <xref:System.Linq.IQueryable%601> из методов, которые доступны потенциально ненадежным вызывающим объектам, по следующим причинам.  

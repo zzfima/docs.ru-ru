@@ -3,12 +3,12 @@ title: Пользовательские шаблоны для команды dot
 description: Сведения о пользовательских шаблонах для проектов или файлов .NET любых типов.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: d7e9c549ff132deb4682ba81ab5ff354d6cc1522
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 738c6b07f77bdbf6fd946253f95c8691e4172f31
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169632"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410347"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Пользовательские шаблоны для команды dotnet new
 
@@ -100,7 +100,7 @@ dotnet new --list
 01. Добавляется параметр `<PackageType>` со значением `Template`.
 01. Добавляется параметр `<PackageVersion>` со значением допустимой [версии NuGet](/nuget/reference/package-versioning).
 01. Добавляется параметр `<PackageId>` со значением уникального идентификатора. Этот идентификатор используется для удаления пакета шаблона, а также в веб-каналах NuGet для регистрации пакета шаблонов.
-01. Нужно задать параметры для универсальных метаданных: `<Title>`, `<Authors>`, `<Description>` и `<Tags>`.
+01. Нужно задать параметры для универсальных метаданных: `<Title>`, `<Authors>`, `<Description>` и `<PackageTags>`.
 01. Нужно задать параметр `<TargetFramework>`, даже если не используется созданный процессом шаблона двоичный файл. В приведенном ниже примере он имеет значение `netstandard2.0`.
 
 Пакет шаблонов в формате пакета NuGet *.nupkg* ожидает, что все шаблоны будут сохранены в папке *content* внутри пакета. Есть еще несколько параметров, которые нужно добавить в файл *.csproj*, чтобы созданный файл *.nupkg* можно было установить как пакет шаблонов:
@@ -125,7 +125,7 @@ dotnet new --list
     <Title>AdatumCorporation Templates</Title>
     <Authors>Me</Authors>
     <Description>Templates to use when creating an application for Adatum Corporation.</Description>
-    <Tags>dotnet-new;templates;contoso</Tags>
+    <PackageTags>dotnet-new;templates;contoso</PackageTags>
     <TargetFramework>netstandard2.0</TargetFramework>
 
     <IncludeContentInPack>true</IncludeContentInPack>

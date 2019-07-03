@@ -2,12 +2,12 @@
 title: Терминология платформы Entity Framework
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 53a6888d0b32cfeb73e7254dc0778274fe6cd0eb
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: bc3712628d308629208af893e8fdee16cbba1e93
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306339"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539881"
 ---
 # <a name="entity-framework-terminology"></a>Терминология платформы Entity Framework
 В этом разделе определены термины, которые часто встречаются в [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] документации. Даны ссылки на соответствующие разделы, содержащие дополнительные сведения.  
@@ -44,7 +44,7 @@ ms.locfileid: "67306339"
 |независимое сопоставление|Сопоставленение между сущностями, представляемое и отслеживаемое независимым объектом.|  
 |клавиша|Атрибут типа сущности, который указывает, какое свойство или набор свойств используется для определения уникальных экземпляров типа сущности. Представлен на уровне объектов классом <xref:System.Data.EntityKey>.<br /><br /> Дополнительные сведения см. в разделе [элемент Key (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#key-element-csdl) и [ключ сущности](../../../../../docs/framework/data/adonet/entity-key.md).|  
 |отложенная загрузка|Когда запрос возвращает объекты, связанные объекты не загружаются. Вместо этого они загружаются автоматически, когда производится доступ к свойству навигации.|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Синтаксис запроса, который определяет набор операторов запросов, которые позволяют выполнять операции обхода, фильтрации и проекции, выражаемые прямым, декларативным способом в Visual C# и Visual Basic.<br /><br /> Дополнительные сведения см. в разделе [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
+|LINQ to Entities|Синтаксис запроса, который определяет набор операторов запросов, которые позволяют выполнять операции обхода, фильтрации и проекции, выражаемые прямым, декларативным способом в Visual C# и Visual Basic.<br /><br /> Дополнительные сведения см. в разделе [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
 |сопоставление|Спецификация соответствий между элементами в концептуальной модели и элементами в модели хранения.<br /><br /> Дополнительные сведения см. в разделе [спецификация MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
 |MSL-файл|XML-файл, содержащий сопоставление концептуальной модели и модели хранения, описанное на языке MSL.|  
 |MSL (язык определения соответствий)|Основанный на XML язык, используемый для сопоставления элементов, определенных в концептуальной модели, элементам в модели хранилища.<br /><br /> Дополнительные сведения см. в разделе [спецификация MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
