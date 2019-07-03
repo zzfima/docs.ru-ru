@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b9070a12-1094-44d6-bb87-a23b50bcb0af
-ms.openlocfilehash: 8b6b6c5b9d7157b1279f23770b1d223635252685
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16091f90d700dd62df0870eaf74ad46c716785d3
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651835"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504619"
 ---
 # <a name="querying-the-datarowview-collection-in-a-dataview"></a>Запрос к коллекции DataRowView в объекте DataView
-Представление <xref:System.Data.DataView> обеспечивает доступ к перечисляемой коллекции объектов <xref:System.Data.DataRowView>. Объект <xref:System.Data.DataRowView> предоставляет пользовательское представление объекта <xref:System.Data.DataRow> и отображает конкретную версию этого объекта <xref:System.Data.DataRow> в элементе управления. В элементе управления, например <xref:System.Data.DataRow>, можно отобразить только одну версию объекта <xref:System.Windows.Forms.DataGridView>. Доступ к объекту <xref:System.Data.DataRow>, представляемому объектом <xref:System.Data.DataRowView>, можно получить через свойство <xref:System.Data.DataRowView.Row%2A> объекта <xref:System.Data.DataRowView>. При просмотре значений с помощью объекта <xref:System.Data.DataRowView> свойство <xref:System.Data.DataView.RowStateFilter%2A> определяет, какая версия строки базового объекта <xref:System.Data.DataRow> отображается. Сведения о доступе к различным версиям строк с помощью <xref:System.Data.DataRow>, см. в разделе [строки состояния и версии строк](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md). Так как коллекция <xref:System.Data.DataRowView> объектами, предоставляемыми <xref:System.Data.DataView> является перечислимой, можно использовать [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] для запросов к ней.  
+Представление <xref:System.Data.DataView> обеспечивает доступ к перечисляемой коллекции объектов <xref:System.Data.DataRowView>. Объект <xref:System.Data.DataRowView> предоставляет пользовательское представление объекта <xref:System.Data.DataRow> и отображает конкретную версию этого объекта <xref:System.Data.DataRow> в элементе управления. В элементе управления, например <xref:System.Data.DataRow>, можно отобразить только одну версию объекта <xref:System.Windows.Forms.DataGridView>. Доступ к объекту <xref:System.Data.DataRow>, представляемому объектом <xref:System.Data.DataRowView>, можно получить через свойство <xref:System.Data.DataRowView.Row%2A> объекта <xref:System.Data.DataRowView>. При просмотре значений с помощью объекта <xref:System.Data.DataRowView> свойство <xref:System.Data.DataView.RowStateFilter%2A> определяет, какая версия строки базового объекта <xref:System.Data.DataRow> отображается. Сведения о доступе к различным версиям строк с помощью <xref:System.Data.DataRow>, см. в разделе [строки состояния и версии строк](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md). Так как коллекция <xref:System.Data.DataRowView> объектами, предоставляемыми <xref:System.Data.DataView> является перечислимой, можно использовать LINQ to DataSet для запроса над ней.  
   
  В следующем примере выполняется запрос к таблице `Product` для вывода продуктов красного цвета и на основе этого запроса создается таблица. Объект <xref:System.Data.DataView> создается из этой таблицы, а свойство <xref:System.Data.DataView.RowStateFilter%2A> задается для фильтрации удаленных и измененных строк. Затем объект <xref:System.Data.DataView> используется в качестве источника для запроса LINQ, а объекты <xref:System.Data.DataRowView>, которые были изменены и удалены, привязываются к элементу управления <xref:System.Windows.Forms.DataGridView>.  
   

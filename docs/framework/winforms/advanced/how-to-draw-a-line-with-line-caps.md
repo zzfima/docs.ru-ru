@@ -10,15 +10,15 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-ms.openlocfilehash: 682474120cbeeeb4cb83b69188a5a125228279d3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34abfc86e980a24ebb835cfd88d2522f8372c68d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631635"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506020"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>Практическое руководство. Рисование линий с наконечниками
-Можно нарисовать начала и конца строки в одну из нескольких фигур, называемых наконечниками. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] поддерживает несколько отрезков, например циклический, квадрат, ромб и стрелки с наконечником.  
+Можно нарисовать начала и конца строки в одну из нескольких фигур, называемых наконечниками. GDI + поддерживает несколько отрезков, например циклический, квадрат, ромб и стрелки с наконечником.  
   
 ## <a name="example"></a>Пример  
  Можно указать отрезков в начале строки (начала штриха), в конец строки (конечного элемента) или дефисы пунктирной линии (штриховой наконечник).  
