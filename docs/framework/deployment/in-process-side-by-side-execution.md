@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 89dfe697f49e8144d15586cc9c1075f69d1f3a07
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: b7964b2a59c67380d7f19077c01efa0a4a636cff
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816051"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170518"
 ---
 # <a name="in-process-side-by-side-execution"></a>Внутрипроцессное параллельное выполнение
 Начиная с .NET Framework 4, разработчики могут использовать внутрипроцессное параллельное размещение для запуска нескольких версий среды CLR в одном процессе. Управляемые COM-компоненты по умолчанию выполняются в той версии платформы .NET Framework, в которой они были созданы, вне зависимости от загруженной для процесса версии .NET Framework.  
@@ -56,7 +56,7 @@ ms.locfileid: "66816051"
   
      Необходимые действия: в этой ситуации не следует предпринимать никаких действий. COM-компоненты будут выполняться в той версии платформы .NET Framework, в которой они были зарегистрированы.  
   
-- **Сценарий 2**. Управляемое приложение, созданное в .NET Framework 2.0 с пакетом обновления 1 (SP1), желательно запустить в [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], но допустимо и в .NET Framework 4, если версия 2.0 отсутствует.  
+- **Сценарий 2**. Управляемое приложение, созданное в .NET Framework 2.0 с пакетом обновления 1 (SP1), можно запустить .NET Framework 4, если версия 2 отсутствует.  
   
      Установленные версии платформы .NET Framework. Более ранняя версия .NET Framework и .NET Framework 4.  
   

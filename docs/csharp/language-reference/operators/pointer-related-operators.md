@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 6196cb52cb1b42b3354bc7f8836a171397d0af1e
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 50243f148f37f5f33f0c69ddd896549e7aea9462
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758100"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025107"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Операторы, связанные с указателем (справочник по C#)
 
@@ -40,7 +40,7 @@ ms.locfileid: "66758100"
 Сведения о типах указателей см. в разделе [Типы указателей](../../programming-guide/unsafe-code-pointers/pointer-types.md).
 
 > [!NOTE]
-> Все операции с указателями требуют [небезопасный](../keywords/unsafe.md) контекст. Код, содержащий небезопасные блоки, должен компилироваться с параметром компилятора [`-unsafe`](../compiler-options/unsafe-compiler-option.md).
+> Для всех операций с указателями требуется [небезопасный](../keywords/unsafe.md) контекст. Код, содержащий небезопасные блоки, должен компилироваться с параметром компилятора [`-unsafe`](../compiler-options/unsafe-compiler-option.md).
 
 ## <a name="address-of-operator-amp"></a>Оператор address-of &amp;
 
@@ -96,7 +96,7 @@ x->y
 
 [!code-csharp[pointer element access](~/samples/csharp/language-reference/operators/PointerOperators.cs#ElementAccess)]
 
-В примере используется [оператор `stackalloc`](../keywords/stackalloc.md) для выделения блока памяти в стеке.
+В примере используется [оператор `stackalloc`](stackalloc.md) для выделения блока памяти в стеке.
 
 > [!NOTE]
 > Оператор доступа к элементу указателя не проверяет ошибки за пределами области.
@@ -187,11 +187,10 @@ x->y
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)
-- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
 - [Типы указателей](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [Ключевое слово `unsafe`](../keywords/unsafe.md)
-- [Ключевое слово `fixed`](../keywords/fixed-statement.md)
-- [Оператор `stackalloc`](../keywords/stackalloc.md)
-- [Оператор `sizeof`](../keywords/sizeof.md)
+- [Ключевое слово unsafe](../keywords/unsafe.md)
+- [Ключевое слово fixed](../keywords/fixed-statement.md)
+- [Оператор stackalloc](stackalloc.md)
+- [Оператор sizeof](../keywords/sizeof.md)

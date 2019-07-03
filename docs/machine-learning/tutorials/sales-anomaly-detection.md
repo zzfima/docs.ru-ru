@@ -1,19 +1,19 @@
 ---
-title: Использование ML.NET в сценарии обнаружения аномалий по продажам
-description: Узнайте, как использовать ML.NET в сценарии обнаружения аномалий при продаже продукта, чтобы понять, как анализировать данные на предмет пиковых аномалий и точек изменений для принятия соответствующих мер.
-ms.date: 05/29/2019
+title: Учебник. Обнаружение аномалий в данных о продажах товаров
+description: Узнайте, как создать приложение для обнаружения аномалий в данных о продажах товаров. В этом руководстве в Visual Studio 2019 с помощью C# создается консольное приложение .NET Core.
+ms.date: 06/11/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: e092aea66ca9f439cf97c1ebee83097def0f520b
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.custom: mvc, title-hack-0612
+ms.openlocfilehash: 3e3e368ed3bcb35e7e2c8bdf08abe71afd4ae87c
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758797"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306231"
 ---
-# <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>Учебник. Использование ML.NET для обнаружения аномалий при продаже продукта 
+# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Учебник. Обнаружение аномалий в данных о продажах товаров с помощью ML.NET
 
-В этом практическом руководстве демонстрируется использование ML.NET для обнаружения аномалий при продаже продукта и принятия соответствующих мер в консольном приложении .NET Core на языке C# с помощью Visual Studio 2019. 
+Узнайте, как создать приложение для обнаружения аномалий в данных о продажах товаров. В этом руководстве в Visual Studio с помощью C# создается консольное приложение .NET Core.
 
 В этом руководстве вы узнаете, как:
 > [!div class="checklist"]

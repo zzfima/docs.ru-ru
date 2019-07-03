@@ -1,5 +1,5 @@
 ---
-title: ?? Справочник по C#. Оператор -
+title: ?? Оператор -. Справочник по C#
 ms.custom: seodec18
 ms.date: 06/07/2019
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - null-coalescing operator [C#]
 - ?? operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 8ca97261b348b7813ab179abbc1f2c5f535966a1
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: a19b5558da36ffb11dabd1b9bec419a3623a0f17
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816010"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024989"
 ---
-# <a name="-operator-c-reference"></a>?? operator (Справочник по C#)
+# <a name="-operator-c-reference"></a>?? Оператор - (справочник по C#)
 
 Оператор объединения с NULL `??` возвращает значение своего операнда слева, если его значение не равно `null`. В противном случае он вычисляет операнд справа и возвращает его результат. Оператор `??` не выполняет оценку своего операнда справа, если его операнд слева имеет значение, отличное от NULL.
 
@@ -59,8 +59,7 @@ a ?? (b ?? c)
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)
-- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
 - [Операторы ?. и ?[]](member-access-operators.md#null-conditional-operators--and-)
 - [Оператор ?](conditional-operator.md)

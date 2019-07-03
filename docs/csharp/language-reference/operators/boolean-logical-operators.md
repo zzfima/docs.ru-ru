@@ -1,5 +1,5 @@
 ---
-title: Справочник по C#. Логические операторы
+title: Логические операторы. Справочник по C#
 description: Узнайте об операторах C#, которые выполняют такие логические операции, как отрицание, конъюнкция (И), а также инклюзивная и эксклюзивная дизъюнкция (ИЛИ), с использованием соответствующих операндов.
 ms.date: 04/08/2019
 author: pkulikov
@@ -32,14 +32,14 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: d94552d9a1acfdd63b9694810e724c4347e615e7
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 37fe329026c16043abb20f8a9f030d877469951d
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758275"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025225"
 ---
-# <a name="boolean-logical-operators-c-reference"></a>Справочник по C#. Логические операторы
+# <a name="boolean-logical-operators-c-reference"></a>Логические операторы (справочник по C#)
 
 Следующие операторы выполняют логические операции с использованием [логических](../keywords/bool.md) операндов:
 
@@ -191,7 +191,6 @@ x = x op y
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)
-- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
 - [Побитовые операторы и операторы сдвига](bitwise-and-shift-operators.md)

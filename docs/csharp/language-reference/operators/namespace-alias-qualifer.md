@@ -1,5 +1,5 @@
 ---
-title: 'Справочник по C#. Оператор ::'
+title: Оператор ::. Справочник по C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - 'namespaces [C#], :: operator'
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 0b456ed3ce9965ef389d8ce40167afa4ac33da18
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: c494e8dbb18f44ce5520b21800a21d3feb03da59
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422526"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025075"
 ---
-# <a name="-operator-c-reference"></a>Справочник по C#. Оператор ::
+# <a name="-operator-c-reference"></a>Оператор :: (справочник по C#)
 
 Квалификатор псевдонима пространства имен (`::`) служит для поиска идентификаторов. Он всегда размещается между двумя идентификаторами, как показано в следующем примере.
 
@@ -45,8 +45,7 @@ var numbers = new Col::List<int> { 1, 2, 3 };
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)
-- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
 - [Оператор .](member-access-operators.md#member-access-operator-)
 - [Псевдоним extern](../keywords/extern-alias.md)

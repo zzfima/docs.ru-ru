@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a00828eba91e4fea41e8b6a6da8953fc399387e3
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 01cdcbb93fde0d2d2f1c800613d9709da0d695f6
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378498"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026002"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (средство экспорта метаданных среды выполнения Windows)
-Программа экспорта метаданных (Winmdexp.exe) [!INCLUDE[wrt](../../../includes/wrt-md.md)] преобразует модуль .NET Framework в файл, содержащий метаданные [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Несмотря на то что сборки .NET Framework и файлы метаданных [!INCLUDE[wrt](../../../includes/wrt-md.md)] используют один и тот же физический формат, существуют различия в содержимом таблиц метаданных, то есть сборки .NET Framework невозможно автоматически использовать как компоненты [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Процесс преобразования модуля .NET Framework в компонент [!INCLUDE[wrt](../../../includes/wrt-md.md)] называется *экспортированием*. В .NET Framework 4.5 и .NET Framework 4.5.1 конечный файл метаданных Windows (WINMD) содержит и метаданные, и реализацию.  
+Программа экспорта метаданных среды выполнения Windows (Winmdexp.exe) преобразует модуль .NET Framework в файл, содержащий метаданные среды выполнения Windows. Несмотря на то что сборки .NET Framework и файлы метаданных среды выполнения Windows используют один и тот же физический формат, существуют различия в содержимом таблиц метаданных, то есть сборки .NET Framework невозможно без преобразования использовать как компоненты среды выполнения Windows. Процесс преобразования модуля .NET Framework в компонент среды выполнения Windows называется *экспортированием*. В .NET Framework 4.5 и .NET Framework 4.5.1 конечный файл метаданных Windows (WINMD) содержит и метаданные, и реализацию.  
   
- При использовании шаблона **Компонент [!INCLUDE[wrt](../../../includes/wrt-md.md)]** из **Microsoft Store** для C# и Visual Basic в Visual Studio 2013 или Visual Studio 2012 компилятор должен создать WINMDOBJ-файл, а на последующих этапах сборки вызывается программа Winmdexp.exe, чтобы экспортировать WINMDOBJ-файл в WINMD-файл. Это рекомендуемый способ создания компонента [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Если над процессом построения требуется больший контроль по сравнению со средой Visual Studio, программу Winmdexp.exe следует вызывать напрямую.  
+ При использовании шаблона **Компонент среды выполнения Windows** из **Microsoft Store** для C# и Visual Basic в Visual Studio 2013 или Visual Studio 2012 компилятор создает WINMDOBJ-файл, а на последующих этапах сборки вызывается программа Winmdexp.exe, чтобы экспортировать WINMDOBJ-файл в WINMD-файл. Это рекомендуемый способ создания компонента среды выполнения Windows. Если над процессом построения требуется больший контроль по сравнению со средой Visual Studio, программу Winmdexp.exe следует вызывать напрямую.  
   
  Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -31,7 +31,7 @@ winmdexp [options] winmdmodule
   
 ## <a name="parameters"></a>Параметры  
   
-|Аргумент или параметр|Описание|  
+|Аргумент или параметр|ОПИСАНИЕ|  
 |------------------------|-----------------|  
 |`winmdmodule`|Задает экспортируемый модуль (WINMDOBJ). Допускается только один модуль. Чтобы создать этот модуль, следует использовать параметр компилятора `/target` с целевым объектом `winmdobj`. См. статью [/target:winmdobj (параметры компилятора C#)](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) или [/target (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md).|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Задает выходной файл документации XML, который создаст программа Winmdexp.exe. В .NET Framework 4.5 выходной файл совпадает со входным файлом XML документации.|  
@@ -46,9 +46,9 @@ winmdexp [options] winmdmodule
 |**@** `responsefile`|Задает файл ответа (RSP), содержащий параметры (и при необходимости — `winmdmodule`). Каждая строка в файле `responsefile` должна содержать один аргумент или параметр.|  
   
 ## <a name="remarks"></a>Примечания  
- Программа Winmdexp.exe не предназначена для преобразования произвольной сборки .NET Framework в WINMD-файл. Для ее работы требуется модуль, который скомпилирован с параметром `/target:winmdobj`, и использование дополнительных ограничений. Наиболее важным ограничением является то, что все типы, которые отображаются в рабочей области API сборки, должны быть типами [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Дополнительные сведения см. в разделе "Объявление типов в компонентах среды выполнения Windows" статьи [Создание компонентов среды выполнения Windows на языках C# и Visual Basic](https://go.microsoft.com/fwlink/p/?LinkID=238313) в Центре разработки для Windows.  
+ Программа Winmdexp.exe не предназначена для преобразования произвольной сборки .NET Framework в WINMD-файл. Для ее работы требуется модуль, который скомпилирован с параметром `/target:winmdobj`, и использование дополнительных ограничений. Наиболее важным ограничением является то, что все типы, которые отображаются в рабочей области API сборки, должны быть типами среды выполнения Windows. Дополнительные сведения см. в разделе "Объявление типов в компонентах среды выполнения Windows" статьи [Создание компонентов среды выполнения Windows на языках C# и Visual Basic](https://go.microsoft.com/fwlink/p/?LinkID=238313) в Центре разработки для Windows.  
   
- Платформа .NET Framework упрощает программирование в [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] и делает его более естественным при создании приложений [!INCLUDE[wrt](../../../includes/wrt-md.md)] или компонентов [!INCLUDE[wrt](../../../includes/wrt-md.md)] на C# или Visual Basic. Это рассматривается в статье [Поддержка платформы .NET Framework для приложений Магазина Windows и среды выполнения Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md). Во время разработки некоторые часто используемые типы [!INCLUDE[wrt](../../../includes/wrt-md.md)] сопоставляются с типами .NET Framework. Программа Winmdexp.exe позволяет упростить такой процесс и создает рабочую область API, в которой используются соответствующие типы [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Например, типы, полученные из интерфейса <xref:System.Collections.Generic.IList%601>, сопоставляются с типами, полученными из интерфейса [!INCLUDE[wrt](../../../includes/wrt-md.md)][IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132).  
+ Платформа .NET Framework упрощает программирование в среде выполнения Windows и делает его более естественным при создании приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] или компонентов среды выполнения Windows на C# или Visual Basic. Это рассматривается в статье [Поддержка платформы .NET Framework для приложений Магазина Windows и среды выполнения Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md). Во время разработки некоторые часто используемые типы среды выполнения Windows сопоставляются с типами .NET Framework. Программа Winmdexp.exe позволяет упростить такой процесс и создает рабочую область API, в которой используются соответствующие типы среды выполнения Windows. Например, типы, полученные из интерфейса <xref:System.Collections.Generic.IList%601>, сопоставляются с типами, полученными из интерфейса Windows Runtime[IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132).  
   
 ## <a name="see-also"></a>См. также
 

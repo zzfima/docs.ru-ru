@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: b7240295f154277e722f38e99beb221c1c4d9a34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77ecab9738afd7ff5cfd4f8ef0cd0e49a302eb27
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522002"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025415"
 ---
 # <a name="c-walkthroughs"></a>Пошаговые руководства по C#
 В пошаговых руководствах содержатся инструкции по выполнению стандартных сценариев, что делает их удобным инструментом для начала изучения продукта в целом или его отдельных возможностей.  
@@ -24,7 +24,7 @@ ms.locfileid: "54522002"
  Демонстрирует создание асинхронных решений с помощью ключевых слов [Async](../csharp/language-reference/keywords/async.md) и [Await](../csharp/language-reference/keywords/await.md).  
   
  [Создание компонента среды выполнения Windows на C# или в Visual Basic и его вызов из JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
- Описание процесса создания типа [!INCLUDE[wrt](~/includes/wrt-md.md)], его упаковки в компонент [!INCLUDE[wrt](~/includes/wrt-md.md)] и последующего вызова компонента из приложения [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)], разработанного для Windows с помощью JavaScript.  
+ Описание процесса создания типа среды выполнения Windows, его упаковки в компонент среды выполнения Windows и последующего вызова компонента из приложения [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)], разработанного для Windows с помощью JavaScript.  
   
  [Программирование для Office (C# и Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
  Описание процесса создания книги Excel и документа Word с помощью C# и Visual Basic.  

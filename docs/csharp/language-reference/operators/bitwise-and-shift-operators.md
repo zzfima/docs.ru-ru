@@ -1,5 +1,5 @@
 ---
-title: Побитовые операторы и операторы сдвига — справочник по C#
+title: Побитовые операторы и операторы сдвига. Справочник по C#
 description: Дополнительные сведения об операторах C#, которые выполняют побитовые логические операции или операции сдвига с операндами целочисленного типа.
 ms.date: 04/18/2019
 author: pkulikov
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: bf42a53a89676f457d3d2df8d193a83299c3e4cc
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 4a495fb5ce353bcb4f7ccda975dfc74ba711db79
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758374"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025243"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Побитовые операторы и операторы сдвига (справочник по C#)
 
@@ -194,7 +194,6 @@ x = x op y
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)
-- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
 - [Логические операторы](boolean-logical-operators.md)

@@ -1,16 +1,16 @@
 ---
 title: Прогнозирование с помощью обученной модели
 description: Сведения о прогнозировании с помощью обученной модели
-ms.date: 05/03/2019
+ms.date: 06/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: dac3b3bfa68776975a2e5e762f46db16e39d61fb
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: ef2b22ff220d1fce1ec43f26c7d51f7e551e038d
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065607"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307399"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>Прогнозирование с помощью обученной модели
 
@@ -92,7 +92,7 @@ HousingPrediction prediction = predictionEngine.Predict(inputData);
 
 ## <a name="batch-prediction"></a>Пакетный прогноз
 
-Получив следующие данные, загрузите их в [`IDataView`](xref:Microsoft.ML.IDataView). Так как `CurrentPrice` является целью или меткой, которую вы пытаетесь спрогнозировать с помощью новых данных, предполагается, что на данный момент значения для него нет.
+Получив следующие данные, загрузите их в [`IDataView`](xref:Microsoft.ML.IDataView). В этом случае имя [`IDataView`](xref:Microsoft.ML.IDataView) — `inputData`. Так как `CurrentPrice` является целью или меткой, которую вы пытаетесь спрогнозировать с помощью новых данных, предполагается, что на данный момент значения для него нет.
 
 ```csharp
 // Actual data

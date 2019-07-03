@@ -8,17 +8,17 @@ dev_langs:
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aadb478b507cdd5d2828a2d224fbca1dc32b21b3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7c36ff35622ae5c9cddf4ffd1ebd0a60feb348a8
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586453"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170892"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>Реализация классом XslTransform XSLT-процессора
 
 > [!NOTE]
-> Класс <xref:System.Xml.Xsl.XslTransform> в версии [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] устарел. Можно выполнять XSLT-преобразование, используя класс <xref:System.Xml.Xsl.XslCompiledTransform>. См. дополнительные сведения об [использовании класса XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) и [миграции из класса XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).
+> Класс <xref:System.Xml.Xsl.XslTransform> явлется устаревшим в версии .NET Framework 2.0. Можно выполнять XSLT-преобразование, используя класс <xref:System.Xml.Xsl.XslCompiledTransform>. См. дополнительные сведения об [использовании класса XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) и [миграции из класса XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).
 
 Класс <xref:System.Xml.Xsl.XslTransform> является XSLT-процессором, реализующим рекомендации по XSL-преобразованиям (XSLT) версии 1.0. Метод <xref:System.Xml.Xsl.XslTransform.Load%2A> находит и считывает таблицы стилей, а метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> преобразует исходный документ. В качестве исходного документа для метода <xref:System.Xml.XPath.IXPathNavigable> может служить любое хранилище, реализующее интерфейс <xref:System.Xml.Xsl.XslTransform>. Платформа .NET Framework в настоящее время реализует интерфейс <xref:System.Xml.XPath.IXPathNavigable> в классах <xref:System.Xml.XmlDocument> <xref:System.Xml.XmlDataDocument> и <xref:System.Xml.XPath.XPathDocument>, поэтому все они могут использоваться в качестве источника документов для преобразования.
 

@@ -1,5 +1,5 @@
 ---
-title: Операторы сравнения — справочник по C#
+title: Операторы сравнения. Справочник по C#
 description: Дополнительные сведения об операторах сравнения C#, которые можно использовать для проверки очередности числовых значений.
 ms.date: 04/25/2019
 author: pkulikov
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 3b123ea1ae57735cdcb763087f12c30b8008dc11
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 7d8a6b7f5bf83719f96009c301867056da755822
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758196"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025219"
 ---
 # <a name="comparison-operators-c-reference"></a>Операторы сравнения (справочник по C#)
 
@@ -73,8 +73,7 @@ ms.locfileid: "66758196"
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)
-- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
 - <xref:System.IComparable%601?displayProperty=nameWithType>
 - [Операторы равенства](equality-operators.md)

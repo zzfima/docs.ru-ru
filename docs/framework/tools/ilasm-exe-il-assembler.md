@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fa95755142b5ea3999cca127c868bc878da516e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 78a601e8b2da4fda0951c1d4f7b565753f0ca03a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378584"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833891"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (ассемблер IL)
 
@@ -36,11 +36,11 @@ ilasm [options] filename [[options]filename...]
 
 ## <a name="parameters"></a>Параметры
 
-| Аргумент | Описание |
+| Аргумент | ОПИСАНИЕ |
 | -------- | ----------- |
 |`filename`|Имя исходного файла с расширением IL. В этом файле содержатся директивы объявления метаданных и символические инструкции IL. Программа *Ilasm.exe* может создать один PE-файл из нескольких исходных файлов, для чего следует указать несколько аргументов исходных файлов. **Примечание.** Убедитесь, что последняя строка кода в исходном IL-файле имеет либо конечный пробел, либо символ конца строки.|
 
-| Параметр | Описание |
+| Параметр | ОПИСАНИЕ |
 | ------ | ----------- |
 |**/32bitpreferred**|Создает предпочтительно 32-разрядный образ (PE32).|
 |**/alignment:** `integer`|Параметр `integer` задает значение "FileAlignment" в необязательном заголовке NT. Если в файле указана IL-директива ALIGNMENT, этот параметр ее переопределяет.|
@@ -104,7 +104,7 @@ ilasm [options] filename [[options]filename...]
 > [!NOTE]
 > Программа *Ildasm.exe* работает только с файлами, расположенными на жестком диске. Программа не обрабатывает файлы, установленные в глобальном кэше сборок.
 
-Дополнительные сведения о грамматике IL см. в файле "asmparse.grammar" в разделе [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
+Дополнительные сведения о грамматике IL см. в файле asmparse.grammar в пакете средств разработки программного обеспечения для Windows.
 
 ## <a name="version-information"></a>Сведения о версии
 
@@ -137,7 +137,7 @@ ilasm [options] filename [[options]filename...]
         Test(object A_1) cil managed
 ```
 
-Дополнительные сведения о грамматике IL см. в файле "asmparse.grammar" в разделе [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
+Дополнительные сведения о грамматике IL см. в файле asmparse.grammar в пакете средств разработки программного обеспечения для Windows.
 
 ## <a name="examples"></a>Примеры
 

@@ -5,12 +5,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 05/03/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: 461a00c6ecc1d9a8b9caaca79f9d7905d2bb7528
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: abf43260a438c9b1febffc77cf39e7328e0377ee
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063460"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268248"
 ---
 # <a name="prepare-data"></a>Подготовка данных
 
@@ -124,7 +124,7 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-Нормализуйте данные с помощью метода минимакса [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*).
+Нормализация может применяться к столбцам с одинарными числовыми значениями, а также к векторам. Нормализуйте данные в столбце `Price` методом минимакса, используя метод [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*).
 
 ```csharp
 // Define min-max estimator
@@ -294,7 +294,7 @@ var textEstimator = mlContext.Transforms.Text.NormalizeText("Description")
 
 **Исходный текст: This is a good product**
 
-|Transform | Описание | Результат
+|Transform | ОПИСАНИЕ | Результат
 |--|--|--|
 |1. NormalizeText | Преобразует все буквы в строчные по умолчанию. | this is a good product
 |2. TokenizeWords | Разделяет строку на отдельные слова. | ["this","is","a","good","product"]

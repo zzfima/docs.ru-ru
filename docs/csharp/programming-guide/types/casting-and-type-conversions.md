@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: bfcad2669c5ae34605c142f9834c52b4b84c36ae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cd989b47c87ef32371b45650d531bd8cbeb85032
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608097"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306956"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Руководство по программированию на C#. Приведение и преобразование типов
 
@@ -30,7 +30,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Неявные преобразования**. Специальный синтаксис не требуется, так как преобразование является строго типизированным и данные не будут потеряны. Примеры включают преобразования из меньших в большие целочисленные типы и преобразования из производных классов в базовые классы.  
   
-- **Явные преобразования (приведения)**. Для явных преобразований требуется оператор приведения. Приведение требуется, если в ходе преобразования данные могут быть утрачены или преобразование может завершиться сбоем по другим причинам.  Типичными примерами являются числовое преобразование в тип с меньшей точностью или меньшим диапазоном и преобразование экземпляра базового класса в производный класс.  
+- **Явные преобразования (приведения)** . Для явных преобразований требуется оператор приведения. Приведение требуется, если в ходе преобразования данные могут быть утрачены или преобразование может завершиться сбоем по другим причинам.  Типичными примерами являются числовое преобразование в тип с меньшей точностью или меньшим диапазоном и преобразование экземпляра базового класса в производный класс.  
   
 - **Пользовательские преобразования**. Такие преобразования выполняются специальными методами, которые можно определить для включения явных и неявных преобразований между пользовательскими типами без связи "базовый класс — производный класс". Дополнительные сведения см. в разделе [Операторы преобразования](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md).  
   
@@ -83,7 +83,7 @@ Giraffe g2 = (Giraffe) a;
   
  [!code-csharp[csProgGuideTypes#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#41)]  
   
- C# предоставляет операторы [is](../../../csharp/language-reference/keywords/is.md) и [as](../../../csharp/language-reference/keywords/as.md), чтобы можно было проверить совместимость перед фактическим выполнением приведения. Дополнительные сведения см. в разделе [Практическое руководство. безопасному приведению с помощью сопоставления шаблонов, а также операторов as и is](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
+ C# предоставляет оператор [is](../../language-reference/operators/type-testing-and-conversion-operators.md#is-operator), чтобы можно было проверить совместимость перед фактическим выполнением приведения. Дополнительные сведения см. в статье [Практическое руководство. Безопасное приведение с помощью сопоставления шаблонов и операторы is и as](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
@@ -93,7 +93,7 @@ Giraffe g2 = (Giraffe) a;
 
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [Типы](../../../csharp/programming-guide/types/index.md)
-- [Оператор ()](../../../csharp/language-reference/operators/invocation-operator.md)
+- [Оператор ()](../../../csharp/language-reference/operators/type-testing-and-conversion-operators.md#cast-operator-)
 - [explicit](../../../csharp/language-reference/keywords/explicit.md)
 - [implicit](../../../csharp/language-reference/keywords/implicit.md)
 - [Операторы преобразования](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)

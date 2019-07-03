@@ -10,12 +10,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 90691ae0d9de35831b7b3119493e4e9cd81720e6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 24f7401538eb1eeb675e6c3de265688780d6b91a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236317"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424195"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Таблица явных числовых преобразований (Справочник по C#)
 
@@ -23,14 +23,14 @@ ms.locfileid: "53236317"
 
 |Исходный тип|Кому|  
 |----------|--------|  
-|[sbyte](sbyte.md)|`byte`, `ushort`, `uint`, `ulong` или `char`|  
-|[byte](byte.md)|`sbyte` или `char`|  
-|[short](short.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong` или `char`|  
-|[ushort](ushort.md)|`sbyte`, `byte`, `short` или `char`|  
-|[int](int.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong` или `char`|  
-|[uint](uint.md)|`sbyte`, `byte`, `short`, `ushort`, `int` или `char`|  
-|[long](long.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong` или `char`|  
-|[ulong](ulong.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long` или `char`|  
+|[sbyte](../builtin-types/integral-numeric-types.md)|`byte`, `ushort`, `uint`, `ulong` или `char`|  
+|[byte](../builtin-types/integral-numeric-types.md)|`sbyte` или `char`|  
+|[short](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong` или `char`|  
+|[ushort](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short` или `char`|  
+|[int](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong` или `char`|  
+|[uint](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int` или `char`|  
+|[long](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong` или `char`|  
+|[ulong](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long` или `char`|  
 |[char](char.md)|`sbyte`, `byte`или `short`|  
 |[float](float.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char` или `decimal`|  
 |[double](double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` или `decimal`|  
@@ -66,11 +66,10 @@ ms.locfileid: "53236317"
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)
-- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [справочник по C#](../index.md)
 - [Приведение и преобразование типов](../../programming-guide/types/casting-and-type-conversions.md)
-- [Оператор ()](../operators/invocation-operator.md)
-- [Таблица целых типов](integral-types-table.md)
+- [Оператор ()](../operators/type-testing-and-conversion-operators.md#cast-operator-)
+- [Целочисленные типы](../builtin-types/integral-numeric-types.md)
 - [Таблица типов с плавающей запятой](floating-point-types-table.md)
 - [Таблица встроенных типов](built-in-types-table.md)
 - [Таблица неявных числовых преобразований](implicit-numeric-conversions-table.md)

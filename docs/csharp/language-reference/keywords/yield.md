@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: 60ee4b8c5ac3a572fd352140c968a8ec8f3a084a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3e5bb96357293c42d4bd2161756260fd849cc099
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632989"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267791"
 ---
 # <a name="yield-c-reference"></a>yield (справочник по C#)
 
@@ -30,7 +30,7 @@ yield break;
 
 Оператор `yield return` используется для возврата каждого элемента по одному.
 
-Метод итератора используется путем применения оператора [foreach](foreach-in.md) или запроса LINQ. Каждая итерация цикла `foreach` вызывает метод итератора. При достижении в методе итератора оператора `yield return` возвращается `expression` и сохраняется текущее расположение в коде. При следующем вызове функции итератора выполнение возобновляется с этого места.
+Последовательность, которая возвращается после выполнения метода итератора, можно использовать с помощью оператора [foreach](foreach-in.md) или запроса LINQ. Каждая итерация цикла `foreach` вызывает метод итератора. При достижении в методе итератора оператора `yield return` возвращается `expression` и сохраняется текущее расположение в коде. При следующем вызове функции итератора выполнение возобновляется с этого места.
 
 Для завершения итерации можно использовать оператор `yield break`.
 

@@ -1,5 +1,5 @@
 ---
-title: '- и -= (операторы) – справочник по C#'
+title: '- Операторы - и -=. Справочник по C#'
 ms.custom: seodec18
 ms.date: 05/27/2019
 f1_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: aae10f8b03a16e55f0b26981f17585c8790e00c1
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 8e93b1d66a375f1f0af104e2a5dd6dfcbb39428d
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816082"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024910"
 ---
-# <a name="--and---operators-c-reference"></a>- и -= (операторы) (справочник по C#)
+# <a name="--and---operators-c-reference"></a>Операторы - и -= (справочник по C#)
 
 Оператор `-` поддерживается встроенными числовыми типами и типами [delegate](../keywords/delegate.md).
 
@@ -80,11 +80,9 @@ x = x - y
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)
-- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
 - [Делегаты](../../programming-guide/delegates/index.md)
 - [События](../../programming-guide/events/index.md)
-- [Инструкции checked и unchecked](../keywords/checked-and-unchecked.md)
 - [Арифметические операторы](arithmetic-operators.md)
 - [Операторы + и +=](addition-operator.md)

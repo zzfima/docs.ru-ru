@@ -1,20 +1,20 @@
 ---
-title: Справочник по C#. Оператор =
+title: Оператор = — справочник по C#
 ms.custom: seodec18
-ms.date: 11/26/2018
+ms.date: 06/21/2019
 f1_keywords:
 - =_CSharpKeyword
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 85182acb84ea79cb00a9edb315c3954f440305f4
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: ef9c9bab5c1cebb06edf934254507180e2197349
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758363"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306567"
 ---
-# <a name="-operator-c-reference"></a>Оператор = (Справочник по C#)
+# <a name="-operator-c-reference"></a>Оператор = (справочник по C#)
 
 Оператор присваивания `=` назначает значение расположенного в правой части операнда переменной, [свойству](../../programming-guide/classes-and-structs/properties.md) или элементу [индексатора](../../../csharp/programming-guide/indexers/index.md), которые указаны в операнде слева. Результатом выражения присваивания является значение, назначенное расположенному слева операнду. Расположенный справа операнд должен иметь тот же тип, что и операнд слева, либо же допускать неявное преобразование в этот тип.
 
@@ -30,19 +30,37 @@ a = b = c
 a = (b = c)
 ```
 
-В следующем примере показано использование оператора присваивания для назначения значений локальной переменной, свойству и элементу индексатора:
+В следующем примере показано использование оператора присваивания с локальной переменной, свойством и элементом индексатора в качестве левого операнда:
 
-[!code-csharp-interactive[assignment operator](~/samples/csharp/language-reference/operators/AssignmentExamples.cs#Assignments)]
+[!code-csharp-interactive[simple assignment](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#Simple)]
 
 ## <a name="ref-assignment-operator"></a>Ссылочный оператор присваивания
 
 Начиная с C# 7.3, вы можете использовать ссылочный оператор присваивания `= ref`, чтобы переназначить [ссылочную локальную переменную](../keywords/ref.md#ref-locals) или [ссылочную локальную переменную только для чтения](../keywords/ref.md#ref-readonly-locals). В следующем примере иллюстрируется использование ссылочного оператора присваивания:
 
-[!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentExamples.cs#RefAssignment)]
+[!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#RefAssignment)]
 
-В случае ссылочного оператора присваивания тип левого и правого операнда должен быть одинаковым.
+В случае ссылочного оператора присваивания тип левого и правого операндов должен быть одинаковым.
 
-Дополнительные сведения см. в [примечании к предлагаемой функции](../../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md).
+Дополнительные сведения см. в [примечании к предлагаемой функции](~/_csharplang/proposals/csharp-7.3/ref-local-reassignment.md).
+
+## <a name="compound-assignment"></a>Составное присваивание
+
+Для бинарного оператора `op` выражение составного присваивания в форме
+
+```csharp
+x op= y
+```
+
+эквивалентно
+
+```csharp
+x = x op y
+```
+
+за исключением того, что `x` вычисляется только один раз.
+
+Составное присваивание поддерживается [арифметическими](arithmetic-operators.md#compound-assignment), [логическими](boolean-logical-operators.md#compound-assignment), [побитовыми логическими операторами и операторами смещения](bitwise-and-shift-operators.md#compound-assignment).
 
 ## <a name="operator-overloadability"></a>Возможность перегрузки оператора
 
@@ -50,11 +68,10 @@ a = (b = c)
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
-Дополнительные сведения см. в разделе [Простое присваивание](~/_csharplang/spec/expressions.md#simple-assignment) в статье о [спецификации языка C#](../language-specification/index.md).
+Подробные сведения см. в разделе [Assignment operators](~/_csharplang/spec/expressions.md#assignment-operators) (Операторы присваивания) в [спецификации языка C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)
-- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
 - [Ключевое слово ref](../keywords/ref.md)
