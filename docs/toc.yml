@@ -302,8 +302,9 @@
     - name: Обзор пакета SDK для .NET Core
       href: core/sdk.md
     - name: Средства интерфейса командной строки .NET Core
-      href: core/tools/index.md
       items:
+        - name: "Обзор .NET Core\_CLI"
+          href: core/tools/index.md
         - name: Телеметрия
           href: core/tools/telemetry.md
         - name: Глобальные инструменты
@@ -311,6 +312,8 @@
           items:
             - name: Создание глобального инструмента
               href: core/tools/global-tools-how-to-create.md
+        - name: Повышенные права доступа
+          href: core/tools/elevated-access.md
         - name: Модель расширяемости
           href: core/tools/extensibility.md
         - name: Непрерывная интеграция
@@ -530,8 +533,6 @@
                   href: csharp/tutorials/intro-to-csharp/introduction-to-classes.md
         - name: "Обзор C#\_6"
           href: csharp/tutorials/exploration/csharp-6.yml
-        - name: "Обзор C#\_7.0"
-          href: csharp/tutorials/exploration/csharp-7.yml
         - name: Интерполяция строк. Интерактивное руководство
           href: csharp/tutorials/exploration/interpolated-strings.yml
         - name: Интерполяция строк. В вашей среде
