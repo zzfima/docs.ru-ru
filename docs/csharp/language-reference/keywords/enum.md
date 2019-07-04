@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 768d8da320022a686f2ecfe5222880eccacee7dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6af1f7f23447f9f1379ac6d223e198a4a2ea5645
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727642"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424242"
 ---
 # <a name="enum-c-reference"></a>enum (Справочник по C#)
 
@@ -35,13 +35,12 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 В этом перечислении последовательность элементов принудительно начинается с `1` вместо `0`. Тем не менее рекомендуется включать константу, которая имеет значение "0". Дополнительные сведения см. в разделе [Типы перечислений](../../programming-guide/enumeration-types.md).
 
-Каждый тип перечисления имеет базовый тип, который может быть любым целочисленным типом за исключением [char](char.md). Базовым типом перечисления элементов по умолчанию является [int](int.md). Чтобы объявить перечисление другого целого типа, например [byte](byte.md), используется двоеточие после идентификатора, за которым следует тип, как показано в следующем примере.
+Каждый тип перечисления имеет базовый тип, который может быть любым [целочисленным типом](../builtin-types/integral-numeric-types.md). Тип [char](char.md) не может быть базовым типом перечисления. Базовым типом перечисления элементов по умолчанию является [int](../builtin-types/integral-numeric-types.md). Чтобы объявить перечисление другого целого типа, например [byte](../builtin-types/integral-numeric-types.md), используется двоеточие после идентификатора, за которым следует тип, как показано в следующем примере.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-Утвержденные типы для перечисления: [byte](byte.md), [sbyte](sbyte.md), [short](short.md), [ushort](ushort.md), [int](int.md), [uint](uint.md), [long](long.md) и [ulong](ulong.md).
 
 Переменной типа "перечисление" может быть присвоено любое значение в диапазоне базового типа. Эти значения не ограничиваются именованными константами.
 
@@ -50,7 +49,7 @@ enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 > [!NOTE]
 > Перечислитель не может содержать пробелы в имени.
 
-Базовый тип указывает, какой объем хранилища выделяется для каждого перечислителя. Тем не менее необходимо явное приведение, чтобы преобразовывать из типа `enum` в целочисленный тип. Например, следующий оператор назначает перечислитель `Sun` для переменной типа [int](int.md) с помощью приведения, чтобы преобразовать `enum` в `int`.
+Базовый тип указывает, какой объем хранилища выделяется для каждого перечислителя. Тем не менее необходимо явное приведение, чтобы преобразовывать из типа `enum` в целочисленный тип. Например, следующий оператор назначает перечислитель `Sun` для переменной типа [int](../builtin-types/integral-numeric-types.md) с помощью приведения, чтобы преобразовать `enum` в `int`.
 
 ```csharp
 int x = (int)Day.Sun;
@@ -101,7 +100,7 @@ int x = (int)Day.Sun;
 - [Справочник по C#](../index.md)
 - [Типы перечисления](../../programming-guide/enumeration-types.md)
 - [Ключевые слова в C#](index.md)
-- [Таблица целых типов](integral-types-table.md)
+- [Целочисленные типы](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [Таблица встроенных типов](built-in-types-table.md)
 - [Таблица неявных числовых преобразований](implicit-numeric-conversions-table.md)
 - [Таблица явных числовых преобразований](explicit-numeric-conversions-table.md)

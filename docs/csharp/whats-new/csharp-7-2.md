@@ -2,12 +2,12 @@
 title: Новые возможности C# 7.2
 description: Обзор новых возможностей в C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: b8b2be68aac3cba92e0dbd74dfe4ee3cbbef0e88
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 79402c9b569cb6848aaf240d83ba71338d525b35
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185354"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347416"
 ---
 # <a name="whats-new-in-c-72"></a>Новые возможности C# 7.2
 
@@ -30,6 +30,13 @@ ms.locfileid: "58185354"
   - Модификатор доступа `private protected` разрешает доступ для производных классов в одной сборке.
 * [Условные выражения`ref` ](#conditional-ref-expressions)
   - Результат условного выражения `?:` теперь может быть ссылкой.
+
+В оставшейся части этой статьи представлены общие сведения об этих функциях. Каждая функция сопровождается обоснованием. Вы изучите синтаксис Эти функции можно изучить в своей среде с помощью глобального средства `dotnet try`.
+
+1. Установите глобальное средство [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
+1. Клонируйте репозиторий [dotnet/try-samples](https://github.com/dotnet/try-samples).
+1. Для репозитория *try-samples* установите в качестве текущего каталога подкаталог *csharp7*.
+1. Запустите `dotnet try`.
 
 ## <a name="safe-efficient-code-enhancements"></a>Улучшения для написания безопасного и эффективного кода
 

@@ -4,12 +4,12 @@ description: В этом руководстве показано, как исп�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: c1e6fed2293b7447384a657e720fb847f2fa041f
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: a39ed5b320f16004f4ddcb35a7fcee5869b97137
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195896"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397803"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Создание форматированных строк с помощью интерполяции
 
@@ -54,7 +54,7 @@ Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 public Vegetable(string name) => Name = name;
 ```
 
-Затем создайте экземпляр класса `Vegetable` с именем `item`. Для этого воспользуйтесь [ключевым словом`new`](../../language-reference/keywords/new-operator.md) и укажите параметр имени для конструктора `Vegetable`.
+Затем создайте экземпляр класса `Vegetable` с именем `item`. Для этого воспользуйтесь [оператором `new`](../../language-reference/operators/new-operator.md) и укажите имя для конструктора `Vegetable`.
 
 ```csharp
 var item = new Vegetable("eggplant");

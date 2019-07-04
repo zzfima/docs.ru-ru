@@ -2,12 +2,12 @@
 title: Дополнения к формату CSPROJ для .NET Core
 description: Различия между существующими файлами и файлами CSPROJ .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 9c1f084af68010632cbe595858b2f242d37af598
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a9b1caf6068a7161258a6825ed16894ac41b3be7
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631807"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397537"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Дополнения к формату CSPROJ для .NET Core
 
@@ -250,7 +250,7 @@ ms.locfileid: "65631807"
 
 Подробное описание пакета для отображения пользовательского интерфейса.
 
-### <a name="description"></a>Описание
+### <a name="description"></a>ОПИСАНИЕ
 
 Подробное описание сборки. Если `PackageDescription` не указывать, это свойство также будет использоваться в качестве описания пакета.
 
@@ -308,7 +308,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
 
-URL-адрес лицензии, применимой к пакету. (_Отмечено как нерекомендуемое начиная с Visual Studio версии 15.9.4, пакета SDK для .NET 2.1.502 и 2.2.101._)
+URL-адрес лицензии, применимой к пакету. (_Отмечено как нерекомендуемое начиная с Visual Studio версии 15.9.4, пакета SDK для .NET 2.1.502 и 2.2.101._ )
 
 ### <a name="packageiconurl"></a>PackageIconUrl
 

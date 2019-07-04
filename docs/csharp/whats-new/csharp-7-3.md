@@ -2,12 +2,12 @@
 title: Что нового в C# 7.3
 description: Обзор новых возможностей в C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: aca5c1b82253c02eccf24af1e5c45d0203d0b1b8
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 768070ead2b180d5f4491ac87be6c248c39e9944
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832713"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397782"
 ---
 # <a name="whats-new-in-c-73"></a>Что нового в C# 7.3
 
@@ -34,7 +34,12 @@ ms.locfileid: "66832713"
 - `-publicsign` позволяет включить подписывание сборок как программного обеспечения с открытым кодом;
 - `-pathmap` позволяет предоставить сопоставление для исходных каталогов.
 
-В оставшейся части этой статьи представлены дополнительные сведения и ссылки по каждому из перечисленных улучшений.
+В оставшейся части этой статьи представлены дополнительные сведения и ссылки по каждому из перечисленных улучшений. Эти функции можно изучить в своей среде с помощью глобального средства `dotnet try`:
+
+1. Установите глобальное средство [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
+1. Клонируйте репозиторий [dotnet/try-samples](https://github.com/dotnet/try-samples).
+1. Для репозитория *try-samples* установите в качестве текущего каталога подкаталог *csharp7*.
+1. Запустите `dotnet try`.
 
 ## <a name="enabling-more-efficient-safe-code"></a>Повышение эффективности безопасного кода
 
