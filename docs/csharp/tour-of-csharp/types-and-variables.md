@@ -3,12 +3,12 @@ title: Типы и переменные в C#. Краткий обзор язы�
 description: Сведения о типах и об объявлении переменных в C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 5623b4a1e85508ea7206df2c73b7aaffcbc3fbb1
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a3f31eca296265c1e7f0c14a9540e267a2165ec1
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881978"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423445"
 ---
 # <a name="types-and-variables"></a>Типы и переменные
 
@@ -37,11 +37,11 @@ ms.locfileid: "65881978"
     * Исходный базовым классом для всех типов: `object`
     * Строки Юникода: `string`
     * Пользовательские типы в формате `class C {...}`
-  - [Типы интерфейса][InterfaceTypes]
+  - [Типы интерфейсов][InterfaceTypes]
     * Пользовательские типы в формате `interface I {...}`
   - [Типы массивов][ArrayTypes]
     * Одно- и многомерные, например, `int[]` и `int[,]`
-  - [Тип делегатов][DelegateTypes]
+  - [Типы делегатов][DelegateTypes]
     * Пользовательские типы в формате `delegate int D(...)`
 
 [ValueTypes]: ../language-reference/keywords/value-types-table.md
@@ -55,7 +55,7 @@ ms.locfileid: "65881978"
 [DelegateTypes]: ../language-reference/keywords/delegate.md
 [ArrayTypes]: ../programming-guide/arrays/index.md
 
-Дополнительные сведения о числовых типах см. в разделе [Таблица целочисленных типов](../language-reference/keywords/integral-types-table.md) и [Таблица типов с плавающей запятой](../language-reference/keywords/floating-point-types-table.md).
+Дополнительные сведения о числовых типах см. в разделах [Целочисленные типы](../language-reference/builtin-types/integral-numeric-types.md) и [Таблица типов с плавающей запятой](../language-reference/keywords/floating-point-types-table.md).
 
 Тип `bool` в C# используется для представления логических значений, которые могут иметь значение `true` или `false`.
 

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Отправка данных с помощью класса WebRequest
+title: Практическое руководство. Отправка данных с помощью класса WebRequest
 ms.date: 03/25/2019
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: 3878a94debc7066cb8ace3b119d95d3b76d91610
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2dcc9e70f51c3c96cbc3af238fed21021ff7ae2c
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322879"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347360"
 ---
-# <a name="how-to-send-data-by-using-the-webrequest-class"></a>Как выполнить Отправка данных с помощью класса WebRequest
+# <a name="how-to-send-data-by-using-the-webrequest-class"></a>Практическое руководство. Отправка данных с помощью класса WebRequest
 В следующей процедуре описаны действия для отправки данных на сервер. Эта процедура обычно используется для отправки данных на веб-страницу. 
   
 ## <a name="to-send-data-to-a-host-server"></a>Отправка данных на сервер узла  
@@ -31,7 +31,7 @@ ms.locfileid: "59322879"
     ```  
   
     > [!NOTE]
-    > Платформа .NET Framework предоставляет связанные с определенным протоколом классы, производные от классов <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse>, для URI, которые начинаются с *http:*, *https:*, *ftp:* и *file:*.
+    > Платформа .NET Framework предоставляет связанные с определенным протоколом классы, производные от классов <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse>, для URI, которые начинаются с *http:* , *https:* , *ftp:* и *file:* .
     Если нужно задать или считать связанные с определенным протоколом свойства, следует привести объект <xref:System.Net.WebRequest> или <xref:System.Net.WebResponse> к типу объекта, связанному с определенным протоколом. Дополнительные сведения см. в разделе [Программирование подключаемых протоколов](programming-pluggable-protocols.md). 
   
 2. Укажите все необходимые значения свойств в объекте `WebRequest`. Например, чтобы включить проверку подлинности, установите для свойства <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> значение экземпляра класса <xref:System.Net.NetworkCredential>:
@@ -80,8 +80,8 @@ ms.locfileid: "59322879"
     Stream dataStream = request.GetRequestStream();  
     ```  
   
-    ```vb  
-    Stream dataStream = request.GetRequestStream()  
+    ```vb
+    Dim dataStream As Stream = request.GetRequestStream()  
     ```  
   
 7. Запишите данные в объект <xref:System.IO.Stream>, возвращенный методом `GetRequestStream`. Например:
@@ -148,7 +148,7 @@ ms.locfileid: "59322879"
   
 ## <a name="example"></a>Пример  
   
-В следующем примере кода показана отправка данных на веб-сервер и считывание данных в ответе:  
+В следующем примере показана отправка данных на веб-сервер и считывание данных в ответе:  
 
 [!code-csharp[SendDataUsingWebRequest](../../../samples/snippets/csharp/VS_Snippets_Network/SendDataUsingWebRequest/cs/WebRequestPostExample.cs)]
 [!code-vb[SendDataUsingWebRequest](../../../samples/snippets/visualbasic/VS_Snippets_Network/SendDataUsingWebRequest/vb/WebRequestPostExample.vb)]

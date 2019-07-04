@@ -4,22 +4,22 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 2fdbeb2b77e88f144bc541d01ee2e904f8a84678
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f9d898756b6b17ae69d1af7dd747c20a26d88417
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832532"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347999"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)
 В приведенных ниже таблицах перечислены классы, обычно используемые для файлового ввода-вывода в .NET Framework. Они разделены на классы файлового ввода-вывода, классы для создания потоков и классы для чтения и записи в поток.  
   
- Документацию по [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] и более полный список см. в разделе [Общие сведения о библиотеке классов](../../../../standard/class-library-overview.md).  
+Более полный список см. в разделе [Общие сведения о библиотеке классов](../../../../standard/class-library-overview.md).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Основные классы ввода-вывода для файлов, каталогов и дисков  
  В приведенной ниже таблице перечислены и описаны основные классы, используемые для файлового ввода-вывода.  
   
-|Класс|Описание|  
+|Класс|ОПИСАНИЕ|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|Предоставляет статические методы для создания, перемещения и перечисления в каталогах и подкаталогах.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Предоставляет методы экземпляра для создания, перемещения и перечисления в каталогах и подкаталогах.|  
@@ -36,7 +36,7 @@ ms.locfileid: "58832532"
 ## <a name="classes-used-to-create-streams"></a>Классы, используемые для создания потоков  
  В приведенной ниже таблице перечислены и описаны основные классы, используемые для создания потоков.  
   
-|Класс|Описание|  
+|Класс|ОПИСАНИЕ|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Добавляет уровень буферизации в операциях чтения и записи в другие потоки.|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|Поддерживает произвольный доступ к файлам с помощью метода <xref:System.IO.FileStream.Seek%2A>. <xref:System.IO.FileStream> по умолчанию открывает файлы синхронно, но поддерживает и асинхронные операции.|  

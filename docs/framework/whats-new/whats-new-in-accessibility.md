@@ -1,7 +1,7 @@
 ---
 title: Улучшения специальных возможностей в .NET Framework
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 04/18/2019
 dev_langs:
 - csharp
 - vb
@@ -9,29 +9,30 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59fe1a5492b34d2aef88e81b86307498e3a5dc2c
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 19d9752e1c7cfbc0a7c85e7cf8053c09c5baca7a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612294"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425580"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Улучшения специальных возможностей в .NET Framework
 
-Платформа .NET Framework ориентирована на то, чтобы сделать приложения более доступными для ваших пользователей. Специальные возможности позволяют приложению предоставлять соответствующую функциональность пользователям технологий с поддержкой специальных возможностей. Начиная с .NET Framework 4.7.1, платформа .NET Framework включает большое число улучшений специальных возможностей, позволяющих разработчикам создавать доступные приложения.
+Платформа .NET Framework ориентирована на то, чтобы сделать приложения более доступными для ваших пользователей. Специальные возможности позволяют приложению предоставлять соответствующую функциональность пользователям технологий с поддержкой специальных возможностей. Начиная с .NET Framework 4.7.1 платформа .NET Framework включает большое число улучшений специальных возможностей, позволяющих разработчикам создавать доступные приложения.
 
 ## <a name="accessibility-switches"></a>Переключатель специальных возможностей
 
-Вы можете включить в приложении функции специальных возможностей, если оно предназначено для .NET Framework 4.7 или более ранней версии, но выполняется на платформе .NET Framework 4.7.1 или более поздней версии. Вы также можете настроить в приложении использование компонентов прежних версий (и не использовать преимущества функций специальных возможностей), если оно предназначен для .NET Framework 4.7.1 или более поздней версии. У каждой версии платформы .NET Framework с функциями специальных возможностей есть специальный переключатель, который можно добавить в элемент [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) в разделе [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) файла конфигурации приложения. Ниже приведены поддерживаемые переключатели:
+Вы можете включить в приложении функции специальных возможностей, если оно предназначено для .NET Framework 4.7 или более ранней версии, но выполняется на платформе .NET Framework 4.7.1 или более поздней версии. Вы также можете настроить в приложении использование компонентов прежних версий (и не использовать преимущества функций специальных возможностей), если оно предназначено для .NET Framework 4.7.1 или более поздней версии. У каждой версии платформы .NET Framework с функциями специальных возможностей есть специальный переключатель, который можно добавить в элемент [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) в разделе [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) файла конфигурации приложения. Ниже приведены поддерживаемые переключатели:
 
 |Версия|Параметр|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
+|.NET Framework 4.8|"Switch.UseLegacyAccessibilityFeatures.3"|
 
 ### <a name="taking-advantage-of-accessibility-enhancements"></a>Использование преимуществ усовершенствованных специальных возможностей
 
-Новые специальные возможности включены по умолчанию для приложений, ориентированных на .NET Framework 4.7.1 или более поздней версии. Кроме того, приложения, которые ориентированы на более раннюю версию .NET Framework, но работают на платформе .NET Framework 4.7.1 или более поздней версии, могут явно отказаться от устаревших вариантов специальных возможностей (и тем самым согласиться на использование улучшений специальных возможностей). Для этого добавьте следующие переключатели в элемент [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) в разделе [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) файла конфигурации приложения и установите для них значение `false`. В следующем примере показано, как принять усовершенствованные специальные возможности, представленные в .NET Framework 4.7.1:
+Новые специальные возможности включены по умолчанию для приложений, предназначенных для .NET Framework 4.7.1 или более поздней версии. Кроме того, приложения, которые предназначены для более ранней версии .NET Framework, но работают на платформе .NET Framework 4.7.1 или более поздней версии, могут явно отказаться от устаревших вариантов специальных возможностей (и тем самым согласиться на использование улучшений специальных возможностей). Для этого добавьте параметры в элемент [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) в разделе [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) файла конфигурации приложения и установите для них значение `false`. В следующем примере показано, как принять усовершенствованные специальные возможности, представленные в .NET Framework 4.7.1:
 
 ```xml
 <runtime>
@@ -40,12 +41,21 @@ ms.locfileid: "59612294"
 </runtime>
 ```
 
-Если вы решили включить функции специальных возможностей из более поздней версии .NET Framework, необходимо явным образом включить эти функции из более ранних версий платформы .NET Framework. Для использования в приложении усовершенствованных специальных возможностей из .NET Framework 4.7.1 и 4.7.2 требуется следующий элемент [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md):
+Если вы решили включить функции специальных возможностей из более поздней версии .NET Framework, необходимо явным образом включить эти функции из более ранних версий платформы .NET Framework. Для использования в приложении усовершенствованных специальных возможностей из .NET Framework 4.7.1 и 4.7.2 требуется следующий элемент [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md):
 
 ```xml
 <runtime>
     <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true|false;key2=true|false  -->
     <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
+</runtime>
+```
+
+Для использования в приложении усовершенствованных специальных возможностей из .NET Framework 4.7.1, 4.7.2 и 4.8 требуется следующий элемент [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md):
+
+```xml
+<runtime>
+    <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true|false;key2=true|false  -->
+    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false" />
 </runtime>
 ```
 
@@ -60,9 +70,260 @@ ms.locfileid: "59612294"
 </runtime>
 ```
 
-## <a name="whats-new-in-accessibility-in-the-net-framework-472"></a>Улучшения специальных возможностей в .NET Framework 4.7.2
+## <a name="whats-new-in-accessibility-in-net-framework-48"></a>Улучшения специальных возможностей в .NET Framework 4.8
 
-.NET Framework 4.7.2 включает новые функции специальных возможностей в следующих областях:
+Платформа .NET Framework 4.8 включает новые функции специальных возможностей в следующих областях:
+
+- [Windows Forms](#winforms48)
+
+- [Windows Presentation Foundation (WPF)](#wpf48)
+
+- [Конструктор рабочих процессов Windows Workflow Foundation (WF)](#wf48)
+
+<a name="winforms48" />
+
+### <a name="windows-forms"></a>Windows Forms
+
+В .NET Framework 4.8 ко многим часто используемым элементам управления Windows Forms добавлена поддержка динамических областей и событий уведомлений. Кроме того, добавлена поддержка подсказок при переходе к элементам управления с помощью клавиатуры.
+
+**Поддержка динамических областей для элементов управления типа Label и StatusStrip в модели автоматизации пользовательского интерфейса Microsoft Windows**
+
+Динамические области в модели автоматизации пользовательского интерфейса Microsoft Windows позволяют разработчикам приложений уведомлять средства чтения с экрана об изменении текста в элементах управления, который находятся не там, где пользователь работает в настоящее время. Например, это полезно в случае с элементом управления <xref:System.Windows.Forms.StatusStrip>, в котором отображается состояние подключения. Разработчику может быть необходимо уведомить средство чтения с экрана об изменении состояния, например утере подключения.
+
+Начиная с .NET Framework 4.8 динамические области в модели автоматизации пользовательского интерфейса Microsoft Windows реализованы для элементов управления Windows Forms <xref:System.Windows.Forms.Label> и <xref:System.Windows.Forms.StatusStrip>. Например, в следующем коде динамическая область используется в элементе управления <xref:System.Windows.Forms.Label> с именем `label1`:
+
+```csharp
+public Form1()
+{
+   InitializeComponent();
+   label1.AutomationLiveSetting = AutomationLiveSetting.Polite;
+}
+
+…
+Label1.Text = “Ready!”;
+```
+
+Экранный диктор произносит "Готово" независимо от того, с каким элементом в приложении взаимодействует пользователь.
+
+Вы также можете реализовать <xref:System.Windows.Forms.UserControl> как динамическую область:
+
+```csharp
+using System;
+using System.Windows.Forms;
+using System.Windows.Forms.Automation;
+
+namespace WindowsFormsApplication
+{
+   public partial class UserControl1 : UserControl, IAutomationLiveRegion
+   {
+      public UserControl1()
+      {
+         InitializeComponent();
+      }
+
+      public AutomationLiveSetting AutomationLiveSetting { get; set; }
+      private AutomationLiveSetting IAutomationLiveRegion.GetLiveSetting()
+      {
+         return this.AutomationLiveSetting;
+      }
+
+      protected override void OnTextChanged(EventArgs e)
+      {
+         base.OnTextChanged(e);
+         AutomationNotifications.UiaRaiseLiveRegionChangedEvent(this.AccessibilityObject);
+      }
+   }
+}
+```
+
+**События уведомлений в модели автоматизации пользовательского интерфейса Microsoft Windows**
+
+Событие уведомления модели автоматизации пользовательского интерфейса Microsoft Windows, появившееся в Windows 10 Fall Creators Update, позволяет приложению создавать событие модели автоматизации пользовательского интерфейса, вследствие которого экранный диктор произносит текст, предоставленный с событием, причем соответствующий элемент управления в пользовательском интерфейсе не требуется. В некоторых случаях это очень простой способ радикально улучшить доступность приложения. Он также может быть полезен для уведомления о ходе выполнения длительного процесса. Дополнительные сведения о событиях уведомлений в модели автоматизации пользовательского интерфейса Microsoft Windows см. в записи блога [Can your desktop app leverage the new UI Notification event?](https://blogs.msdn.microsoft.com/winuiautomation/2017/11/08/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need/) (Может ли ваше классическое приложение использовать новое событие уведомления пользовательского интерфейса?).
+
+В следующем примере создается [событие уведомления](xref:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification%2A):
+
+```csharp
+MethodInfo raiseMethod = typeof(AccessibleObject).GetMethod("RaiseAutomationNotification");
+if (raiseMethod != null) {
+   raiseMethod.Invoke(progressBar1.AccessibilityObject, new object[3] {/*Other*/ 4, /*All*/ 2, "The progress is 50%." });
+}
+```
+
+**Подсказки при доступе с клавиатуры**
+
+В приложениях для платформы .NET Framework 4.7.2 и более ранних версий [подсказка](xref:System.Windows.Forms.ToolTip) элемента управления всплывает только при наведении на элемент указателя мыши. Начиная с .NET Framework 4.8 подсказка также может всплывать, когда пользователь переводит фокус на элемент управления с помощью клавиши TAB или клавиш со стрелками с клавишами-модификаторами или без них. Для данного улучшения специальных возможностей требуется дополнительный [параметр AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md):
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+   <startup>
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1"/>
+   </startup>
+   <runtime>
+      <!-- AppContextSwitchOverrides values are in the form of 'key1=true|false;key2=true|false  -->
+      <!-- Please note that disabling Switch.UseLegacyAccessibilityFeatures, Switch.UseLegacyAccessibilityFeatures.2 and Switch.UseLegacyAccessibilityFeatures.3 is required to disable Switch.System.Windows.Forms.UseLegacyToolTipDisplay -->
+      <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false;Switch.System.Windows.Forms.UseLegacyToolTipDisplay=false"/>
+   </runtime>
+</configuration>
+```
+
+На изображении ниже показана подсказка, появляющаяся, когда пользователь выбирает кнопку с помощью клавиатуры.
+
+![Подсказка, появляющаяся, когда пользователь переходит к кнопке с помощью клавиатуры](media/tooltip.png)
+
+<a name="wpf48" />
+
+### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
+
+Начиная с .NET Framework 4.8 в WPF внесен ряд улучшений специальных возможностей.
+
+**Экранные дикторы больше не объявляют элементы с состоянием видимости Collapsed или Hidden**
+
+Свернутые или скрытые элементы больше не объявляются средством чтения с экрана. Если элементы, свойство Visibility которых имеет значение <xref:System.Windows.Visibility.Collapsed?displayProperty=nameWithType> или <xref:System.Windows.Visibility.Hidden?displayProperty=nameWithType>, объявляются средством чтения с экрана, пользователь может получать неправильное представление о пользовательском интерфейсе. Начиная с .NET Framework 4.8 в WPF свернутые или скрытые элементы больше не включаются в представление элементов управления дерева UIAutomation, поэтому средства чтения с экрана больше не могут объявлять их.
+
+**Свойство SelectionTextBrush для выделения текста без использования декоративного элемента**
+
+В .NET Framework 4.7.2 в WPF появилась возможность отрисовывать выделение текста в <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.PasswordBox> без использования слоя декоративных элементов. В таком случае цвет переднего плана выделенного текста определялся свойством <xref:System.Windows.SystemColors.HighlightTextBrush?displayProperty=nameWithType>.
+
+В .NET Framework 4.8 добавлено новое свойство `SelectionTextBrush`, которое позволяет разработчикам выбирать кисть для текста, выделенного без использования декоративного элемента. Это свойство работает только для элементов управления, производных от <xref:System.Windows.Controls.Primitives.TextBoxBase>, и элемента управления <xref:System.Windows.Controls.PasswordBox> в приложениях WPF с включенным выделением текста без использования декоративного элемента. Оно не поддерживается элементом управления <xref:System.Windows.Controls.RichTextBox>. Если выделение текста без использования декоративного элемента не включено, это свойство игнорируется.
+
+Чтобы использовать это свойство, просто добавьте его в код XAML и примените соответствующую кисть или привязку. В итоге выделенный текст выглядит так:
+
+![Подсказка, появляющаяся, когда пользователь переходит к кнопке с помощью клавиатуры](media/selectiontextbrush-property.png)
+
+Свойства `SelectionBrush` и `SelectionTextBrush` можно использовать вместе, чтобы получить любую требуемую комбинацию цветов фона и переднего плана.
+
+**Поддержка свойства ControllerFor в модели автоматизации пользовательского интерфейса Microsoft Windows**
+
+Свойство `ControllerFor` в модели автоматизации пользовательского интерфейса Microsoft Windows возвращает массив элементов автоматизации, которые управляются элементом автоматизации, поддерживающим это свойство. Это свойство обычно используется для специальной возможности автозаполнения. Свойство `ControllerFor` применяется, когда элемент автоматизации влияет на одну или несколько частей пользовательского интерфейса приложения или рабочего стола. В противном случае влияние работы элемента управления сложно связать с элементами пользовательского интерфейса. Эта возможность позволяет элементам управления предоставлять значение для свойства `ControllerFor`.
+
+В .NET Framework 4.8 появился новый виртуальный метод <xref:System.Windows.Automation.Peers.AutomationPeer.GetControlledPeersCore?displayProperty=nameWithType?displayProperty=nameWithType>. Чтобы предоставить значение для свойства `ControllerFor`, просто переопределите этот метод так, чтобы он возвращал `List<AutomationPeer>` для элементов управления, которыми управляет данный объект <xref:System.Windows.Automation.Peers.AutomationPeer>:
+
+```csharp
+public class AutoSuggestTextBox: TextBox
+{
+   protected override AutomationPeer OnCreateAutomationPeer()
+   {
+      return new AutoSuggestTextBoxAutomationPeer(this);
+   }
+
+   public ListBox SuggestionListBox;
+}
+
+internal class AutoSuggestTextBoxAutomationPeer : TextBoxAutomationPeer
+{
+   public AutoSuggestTextBoxAutomationPeer(AutoSuggestTextBox owner) : base(owner)
+   {
+   }
+
+   protected override List<AutomationPeer> GetControlledPeersCore()
+   {
+      List<AutomationPeer> controlledPeers = new List<AutomationPeer>();
+      AutoSuggestTextBox owner = Owner as AutoSuggestTextBox;
+      controlledPeers.Add(UIElementAutomationPeer.CreatePeerForElement(owner.SuggestionListBox));
+      return controlledPeers;
+   }
+}
+```
+
+**Подсказки при доступе с клавиатуры**
+
+В .NET Framework 4.7.2 и более ранних версиях подсказки отображались только при наведении указателя мыши на элемент управления. В .NET Framework 4.8 они также появляются при наведении фокуса с помощью клавиатуры, в том числе с помощью сочетаний клавиш.
+
+Для использования этой возможности приложение должно быть предназначено для .NET Framework 4.8 или согласиться на ее использование с помощью параметров [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `Switch.UseLegacyAccessibilityFeatures.3` и `Switch.UseLegacyToolTipDisplay`. Вот пример файла конфигурации приложения:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+   <startup>
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+   </startup>
+   <runtime>
+      <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false;Switch.UseLegacyToolTipDisplay=false" />
+   </runtime>
+</configuration>
+```
+
+После включения этой возможности подсказки будут появляться при наведении фокуса с помощью клавиатуры для всех элементов управления, имеющих подсказки. Подсказка может пропадать через некоторое время или при смене фокуса. Пользователи также могут скрывать подсказки вручную с помощью нового сочетания клавиш CTRL+SHIFT+F10. После закрытия подсказки ее можно отобразить снова с помощью этого же сочетания клавиш.
+
+> [!NOTE]
+> [Подсказки на ленте](xref:System.Windows.Controls.Ribbon.RibbonToolTip) для элементов управления <xref:System.Windows.Controls.Ribbon.Ribbon> не появляются при наведении фокуса с помощью клавиатуры. Они отображаются только при использовании сочетания клавиш.
+
+**Добавлена поддержка свойств SizeOfSet и PositionInSet в модели автоматизации пользовательского интерфейса Microsoft Windows**
+
+В Windows 10 появились два новых свойства модели автоматизации пользовательского интерфейса Microsoft Windows: `SizeOfSet` и `PositionInSet`. Они используются приложениями для указания количества элементов в наборе. Клиентские приложения модели автоматизации пользовательского интерфейса Microsoft Windows, такие как средства чтения с экрана, могут запрашивать эти свойства, чтобы точно представлять пользовательский интерфейс приложения.
+
+Начиная с .NET Framework 4.8 приложения WPF предоставляют доступ к этим двум свойствам модели автоматизации пользовательского интерфейса Microsoft Windows. Это можно сделать двумя способами:
+
+- С помощью свойств зависимостей.
+
+   В WPF добавлены два новых свойства зависимостей: <xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> и <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType>. Разработчик может задавать их значения с помощью XAML:
+
+   ```xaml
+   <Button AutomationProperties.SizeOfSet="3"
+     AutomationProperties.PositionInSet="1">Button 1</Button>
+
+   <Button AutomationProperties.SizeOfSet="3"
+     AutomationProperties.PositionInSet="2">Button 2</Button>
+
+   <Button AutomationProperties.SizeOfSet="3"
+     AutomationProperties.PositionInSet="3">Button 3</Button>
+   ```
+
+- Путем переопределения виртуальных методов AutomationPeer.
+
+   В класс AutomationPeer добавлены виртуальные методы <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> и <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore>. Разработчик может указывать значения для `SizeOfSet` и `PositionInSet`, переопределяя эти методы, как показано в следующем примере:
+
+   ```csharp
+   public class MyButtonAutomationPeer : ButtonAutomationPeer
+   {
+      protected override int GetSizeOfSetCore()
+      {
+         // Call into your own logic to provide a value for SizeOfSet
+         return CalculateSizeOfSet();
+      }
+
+      protected override int GetPositionInSetCore()
+      {
+         // Call into your own logic to provide a value for PositionInSet
+         return CalculatePositionInSet();
+      }
+   }
+   ```
+
+Кроме того, элементы в экземплярах <xref:System.Windows.Controls.ItemsControl> предоставляют значения для этих свойств автоматически. Разработчику делать это не требуется. Если экземпляр <xref:System.Windows.Controls.ItemsControl> сгруппирован, коллекция групп представлена как набор. Каждая группа считается отдельным набором, а каждый элемент в группе указывает свое положение в ней, а также размер группы. Виртуализация не влияет на автоматически задаваемые значения. Даже если элемент не реализован, он по-прежнему учитывается при определении общего размера набора и влияет на положение других элементов в наборе.
+
+Значения предоставляются автоматически, только если приложение предназначено для .NET Framework 4.8. Если приложение предназначено для более ранних версий .NET Framework, можно задать [параметр AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `Switch.UseLegacyAccessibilityFeatures.3`, как показано в следующем файле App.config:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+   <startup>
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+   </startup>
+   <runtime>
+      <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false" />
+   </runtime>
+</configuration>
+```
+
+<a name="wf48" />
+
+### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Конструктор рабочих процессов Windows Workflow Foundation (WF)
+
+В конструктор рабочих процессов в .NET Framework 4.8 внесены указанные ниже изменения.
+
+- Улучшены метки case FlowSwitch при использовании экранного диктора.
+
+- Улучшены описания кнопок при использовании экранного диктора.
+
+- Пользователи, работающие с темами высокой контрастности, обратят внимание на улучшение видимости конструктора рабочих процессов и его элементов управления, в том числе повышение контрастности между элементами, а также более заметные поля выбора для элементов, находящихся в фокусе.
+
+Если приложение предназначено для .NET Framework 4.7.2 или более ранней версии, эти улучшения можно активировать отдельно, установив [параметр AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `Switch.UseLegacyAccessibilityFeatures.3` в значение `false` в файле конфигурации приложения. Дополнительные сведения см. в разделе [Использование преимуществ усовершенствованных специальных возможностей](#taking-advantage-of-accessibility-enhancements) этой статьи.
+
+## <a name="whats-new-in-accessibility-in-net-framework-472"></a>Улучшения специальных возможностей в .NET Framework 4.7.2
+
+Платформа .NET Framework 4.7.2 включает новые функции специальных возможностей в следующих областях:
 
 - [Windows Forms](#winforms472)
 
@@ -88,7 +349,7 @@ ms.locfileid: "59612294"
 
 **Усовершенствования экранного диктора**
 
-Начиная с .NET Framework 4.7.2 усовершенствована поддержка экранного диктора:
+Начиная с .NET Framework 4.7.2 усовершенствована поддержка экранного диктора:
 
 - Он сообщает значение свойства <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> при объявлении текста <xref:System.Windows.Forms.ToolStripMenuItem>.
 
@@ -100,7 +361,7 @@ ms.locfileid: "59612294"
 
 **Усовершенствования DataGridView**
 
-Начиная с .NET Framework 4.7.2 элемент управления <xref:System.Windows.Forms.DataGridView> вносит следующие улучшения специальных возможностей:
+Начиная с .NET Framework 4.7.2 элемент управления <xref:System.Windows.Forms.DataGridView> вносит следующие улучшения специальных возможностей:
 
 - Строки можно сортировать с помощью клавиатуры. Пользователь может нажать клавишу F3, чтобы выполнить сортировку по текущему столбцу.
 
@@ -128,19 +389,19 @@ ms.locfileid: "59612294"
 
 **Изменения элементов управления CheckBox и RadioButton**
 
-В .NET Framework 4.7.1 и более ранних версий элементы управления <xref:System.Windows.Controls.CheckBox?displayProperty=nameWIthType> и <xref:System.Windows.Controls.RadioButton?displayProperty=nameWIthType> WPF имеют несогласованные и (в классической теме и теме высокой контрастности) неправильные визуальные элементы фокуса.  Это происходит в случаях, когда для элементов управления не задано какое-либо содержимое.  Это может затруднять переход между темами и отображение визуального элемента фокуса.
+В .NET Framework 4.7.1 и более ранних версий элементы управления <xref:System.Windows.Controls.CheckBox?displayProperty=nameWIthType> и <xref:System.Windows.Controls.RadioButton?displayProperty=nameWIthType> WPF имеют несогласованные и (в классической теме и теме высокой контрастности) неправильные визуальные элементы фокуса.  Это происходит в случаях, когда для элементов управления не задано какое-либо содержимое.  Это может затруднять переход между темами и отображение визуального элемента фокуса.
 
-В .NET Framework 4.7.2 эти визуальные элементы стали более согласованными в разных темах и более видимыми в классической и контрастной темах.
+В .NET Framework 4.7.2 эти визуальные элементы стали более согласованными в разных темах и более видимыми в классической и контрастной темах.
 
 **Элементы управления WinForms, размещенные в приложении WPF**
 
-При использовании элемента управления WinForms, размещенного в приложении WPF в .NET Framework 4.7.1 и более ранних версий, пользователи не могли выйти из слоя WinForms с помощью клавиши табуляции, если первый или последний элемент управления в слое был элементом управления <xref:System.Windows.Forms.Integration.ElementHost> WPF. В .NET Framework 4.7.2 пользователи теперь могут выйти из слоя WinForms с помощью клавиши табуляции.
+При использовании элемента управления WinForms, размещенного в приложении WPF в .NET Framework 4.7.1 и более ранних версий, пользователи не могли выйти из слоя WinForms с помощью клавиши табуляции, если первый или последний элемент управления в слое был элементом управления <xref:System.Windows.Forms.Integration.ElementHost> WPF. В .NET Framework 4.7.2 пользователи теперь могут выйти из слоя WinForms с помощью клавиши табуляции.
 
 Однако автоматизированные приложения, которые зависят от постоянного нахождения фокуса в слое WinForms, могут работать некорректно.
 
-## <a name="whats-new-in-accessibility-in-the-net-framework-471"></a>Улучшения специальных возможностей в .NET Framework 4.7.1
+## <a name="whats-new-in-accessibility-in-net-framework-471"></a>Улучшения специальных возможностей в .NET Framework 4.7.1
 
-.NET Framework 4.7.1 включает новые специальные возможности в следующих областях:
+Платформа .NET Framework 4.7.1 включает новые функции специальных возможностей в следующих областях:
 
 - [Windows Presentation Foundation (WPF)](#wpf471)
 
@@ -158,15 +419,15 @@ ms.locfileid: "59612294"
 
 **Улучшения средств чтения с экрана**
 
-Если включены улучшения специальных возможностей, .NET Framework 4.7.1 содержит следующие усовершенствования, касающиеся средств чтения с экрана:
+Если включены улучшения специальных возможностей, .NET Framework 4.7.1 содержит следующие усовершенствования, касающиеся средств чтения с экрана:
 
-- В .NET Framework 4.7 и более ранних версий элементы управления <xref:System.Windows.Controls.Expander> объявлялись средствами чтения с экрана как кнопки. Начиная с .NET Framework 4.7.1, они правильно объявляются как развертываемые/свертываемые группы.
+- В .NET Framework 4.7 и более ранних версий элементы управления <xref:System.Windows.Controls.Expander> объявлялись средствами чтения с экрана как кнопки. Начиная с .NET Framework 4.7.1 они правильно объявляются как развертываемые и свертываемые группы.
 
-- В .NET Framework 4.7 и более ранних версий элементы управления <xref:System.Windows.Controls.DataGridCell> объявлялись средствами чтения с экрана как настраиваемые. Начиная с .NET Framework 4.7.1, они правильно объявляются как ячейка сетки данных (локализованная).
+- В .NET Framework 4.7 и более ранних версий элементы управления <xref:System.Windows.Controls.DataGridCell> объявлялись средствами чтения с экрана как пользовательские. Начиная с .NET Framework 4.7.1 они правильно объявляются как ячейка сетки данных (локализованная).
 
-- Начиная с .NET Framework 4.7.1, средства чтения с экрана объявляют имя изменяемого <xref:System.Windows.Controls.ComboBox>.
+- Начиная с .NET Framework 4.7.1 средства чтения с экрана объявляют имя изменяемого <xref:System.Windows.Controls.ComboBox>.
 
-- В .NET Framework 4.7 и более ранних версий элементы управления <xref:System.Windows.Controls.PasswordBox> объявлялись как "в представлении нет элементов" или имели иное неправильное поведение. Начиная с .NET Framework 4.7.1, эта проблема устранена.
+- В .NET Framework 4.7 и более ранних версий элементы управления <xref:System.Windows.Controls.PasswordBox> объявлялись как "в представлении нет элементов" или имели иное неправильное поведение. Начиная с .NET Framework 4.7.1 эта проблема устранена.
 
 **Поддержка динамических областей автоматизации пользовательского интерфейса**
 
@@ -213,7 +474,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **Высокая контрастность**
 
-Начиная с .NET Framework 4.7.1, внесены улучшения в функции высокой контрастности для различных элементов управления WPF. Теперь они видны, когда задана тема <xref:System.Windows.SystemParameters.HighContrast%2A>. Сюда входит следующее.
+Начиная с .NET Framework 4.7.1 внесены улучшения в функции высокой контрастности для различных элементов управления WPF. Теперь они видны, когда задана тема <xref:System.Windows.SystemParameters.HighContrast%2A>. Сюда входит следующее.
 
 - Элемент управления <xref:System.Windows.Controls.Expander>
 
@@ -241,7 +502,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - Элемент управления <xref:System.Windows.Controls.ComboBox>
 
-    Начиная с .NET Framework 4.7.1, граница отключенного элемента управления <xref:System.Windows.Controls.ComboBox> имеет цвет отключенного текста. Например:
+    Начиная с .NET Framework 4.7.1 граница отключенного элемента управления <xref:System.Windows.Controls.ComboBox> имеет цвет отключенного текста. Например:
 
     До: 
 
@@ -261,7 +522,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
     ![Цвета темы для кнопок после внесения улучшений](media/button-themes-after.png) 
 
-    Наконец, в .NET Framework 4.7 и более ранних версий установка стиля элемента управления <xref:System.Windows.Controls.ComboBox> в значение `Toolbar.ComboBoxStyleKey` приводила к тому, что стрелка раскрывающегося списка была невидимой. Начиная с .NET Framework 4.7.1, эта проблема устранена. Например:
+    Наконец, в .NET Framework 4.7 и более ранних версий установка стиля элемента управления <xref:System.Windows.Controls.ComboBox> в значение `Toolbar.ComboBoxStyleKey` приводила к тому, что стрелка раскрывающегося списка была невидимой. Начиная с .NET Framework 4.7.1 эта проблема устранена. Например:
 
     До: 
 
@@ -273,7 +534,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - Элемент управления <xref:System.Windows.Controls.DataGrid>
 
-    Начиная с .NET Framework 4.7.1, стрелка индикатора сортировки в элементе управления <xref:System.Windows.Controls.DataGrid> теперь использует правильные цвета темы. Например:
+    Начиная с .NET Framework 4.7.1 стрелка индикатора сортировки в элементе управления <xref:System.Windows.Controls.DataGrid> имеет правильные цвета темы. Например:
 
     До: 
 
@@ -283,7 +544,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
     ![Стрелка индикатора сортировки после внесения улучшений](media/sort-indicator-after.png) 
 
-    Кроме того, в .NET Framework 4.7 и более ранних версий стиль ссылки по умолчанию изменялся на неправильный цвет при наведении указателя мыши в режимах высокой контрастности. Начиная с .NET Framework 4.7.1, эта проблема устранена. Аналогичным образом, столбец флажка <xref:System.Windows.Controls.DataGrid> использует ожидаемые цвета для отзывов на фокус клавиатуры, начиная с .NET Framework 4.7.1.
+    Кроме того, в .NET Framework 4.7 и более ранних версий стиль ссылки по умолчанию изменялся на неправильный цвет при наведении указателя мыши в режимах высокой контрастности. Начиная с .NET Framework 4.7.1 эта проблема устранена. Аналогичным образом, столбец флажка <xref:System.Windows.Controls.DataGrid> использует ожидаемые цвета для отзывов на фокус клавиатуры начиная с .NET Framework 4.7.1.
 
     До: 
 
@@ -293,17 +554,17 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
     ![Стиль ссылки по умолчанию DataGrid после внесения улучшений](media/default-link-style-after.png) 
 
-Дополнительные сведения об улучшениях специальных возможностей WPF в .NET Framework 4.7.1 см. в разделе [Улучшения специальных возможностей в WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
+Дополнительные сведения об улучшениях специальных возможностей WPF в .NET Framework 4.7.1 см. в разделе [Улучшения специальных возможностей в WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
 <a name="winforms471"></a>
 
 ### <a name="windows-forms-accessibility-improvements"></a>Улучшения специальных возможностей в Windows Forms
 
-В компонент Windows Forms (WinForms) платформы .NET Framework 4.7.1 были внесены изменения специальных возможностей в следующих областях:
+В модель Windows Forms (WinForms) платформы .NET Framework 4.7.1 были внесены изменения специальных возможностей в следующих областях:
 
 **Улучшенное отображение в режиме высокой контрастности**
 
-Начиная с .NET Framework 4.7.1 различные элементы управления WinForms обеспечивают улучшенную отрисовку в режимах высокой контрастности, доступных в операционной системе. В Windows 10 были изменены некоторые системные цвета в режиме высокой контрастности, а Windows Forms основан на платформе Win32 Windows 10. Для достижения наилучших результатов используйте самую последнюю версию Windows и согласитесь на последние изменения операционной системы, добавив файл app.manifest в тестовое приложение и раскомментировав строку поддержки Windows 10, чтобы она выглядела следующим образом:
+Начиная с .NET Framework 4.7.1 различные элементы управления WinForms обеспечивают улучшенную отрисовку в режимах высокой контрастности, доступных в операционной системе. В Windows 10 были изменены некоторые системные цвета в режиме высокой контрастности, а Windows Forms основан на платформе Win32 Windows 10. Для достижения наилучших результатов используйте самую последнюю версию Windows и согласитесь на последние изменения операционной системы, добавив файл app.manifest в тестовое приложение и раскомментировав строку поддержки Windows 10, чтобы она выглядела следующим образом:
 
 ```xml
 <!-- Windows 10 -->
@@ -332,7 +593,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **Улучшенная поддержка экранного диктора**
 
-Компонент Windows Forms в .NET Framework 4.7.1 содержит следующие улучшения специальных возможностей для экранного диктора:
+Модель Windows Forms в .NET Framework 4.7.1 содержит следующие улучшения специальных возможностей для экранного диктора:
 
 - К элементу управления <xref:System.Windows.Forms.MonthCalendar> может обратиться как экранный диктор, так и любое другое средство автоматизации пользовательского интерфейса.
 
@@ -344,7 +605,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **Улучшенная поддержка шаблонов специальных возможностей автоматизации пользовательского интерфейса**
 
-Начиная с .NET Framework 4.7.1, разработчики средств специальных возможностей могут использовать стандартные шаблоны специальных возможностей API и свойства для нескольких элементов управления WinForms. Некоторые из этих улучшений специальных возможностей:
+Начиная с .NET Framework 4.7.1 разработчики средств специальных возможностей могут использовать стандартные шаблоны специальных возможностей API и свойства для нескольких элементов управления WinForms. Некоторые из этих улучшений специальных возможностей:
 
 - <xref:System.Windows.Forms.ComboBox> и <xref:System.Windows.Forms.ToolStripSplitButton> теперь поддерживают [шаблон развертывания/свертывания](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md).
 
@@ -356,7 +617,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **Улучшенное взаимодействие с обозревателем свойств**
 
-Начиная с .NET Framework 4.7.1, компонент Windows Forms включает в себя следующее:
+Начиная с .NET Framework 4.7.1 модель Windows Forms включает в себя следующее:
 
 - Улучшенная навигация с помощью клавиатуры посредством различных окон выбора с раскрывающимися списками.
 - Сокращение ненужных позиций табуляции.
@@ -367,7 +628,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 ### <a name="aspnet-web-controls"></a>Веб-элементы управления ASP.NET
 
-Начиная с .NET Framework 4.7.1 и Visual Studio 2017 15.3 в ASP.NET улучшена работа веб-элементов управления ASP.NET с технологией специальных возможностей в Visual Studio. Внесены следующие изменения:
+Начиная с .NET Framework 4.7.1 и Visual Studio 2017 15.3 в ASP.NET улучшена работа веб-элементов управления ASP.NET с технологией специальных возможностей в Visual Studio. Внесены следующие изменения:
 
 - Изменения для реализации отсутствующих шаблонов специальных возможностей пользовательского интерфейса в элементах управления, например в диалоговом окне **Добавить поле** в мастере **представления сведений** или в диалоговом окне **Настройка ListView** в мастере **ListView**.
 

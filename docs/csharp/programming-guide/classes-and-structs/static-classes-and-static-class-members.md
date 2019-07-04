@@ -9,15 +9,16 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 98d697aa7f4fa839b41509244993ced195730fdb
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 11cbe6600a75b2db6174841790aa69efdf5da035
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585924"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398292"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Статические классы и члены статических классов (Руководство по программированию в C#)
-[Статический](../../../csharp/language-reference/keywords/static.md) класс в основном такой же, как и нестатический класс, но имеется одно отличие: нельзя создавать экземпляры статического класса. Другими словами, нельзя использовать ключевое слово [new](../../../csharp/language-reference/keywords/new.md) для создания переменной типа класса. Поскольку нет переменной экземпляра, доступ к членам статического класса осуществляется с использованием самого имени класса. Например, если есть статический класс, называемый `UtilityClass`, имеющий открытый статический метод с именем `MethodA`, вызов метода выполняется, как показано в следующем примере:  
+
+[Статический](../../../csharp/language-reference/keywords/static.md) класс в основном такой же, как и нестатический класс, но имеется одно отличие: нельзя создавать экземпляры статического класса. Другими словами, нельзя использовать оператор [new](../../../csharp/language-reference/operators/new-operator.md) для создания переменной типа класса. Поскольку нет переменной экземпляра, доступ к членам статического класса осуществляется с использованием самого имени класса. Например, если есть статический класс, называемый `UtilityClass`, имеющий открытый статический метод с именем `MethodA`, вызов метода выполняется, как показано в следующем примере:  
   
 ```csharp  
 UtilityClass.MethodA();  

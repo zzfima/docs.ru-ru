@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bbf579540ccb93101dba05c5b2577ae8f24ec09
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 30e013d39d403bef5fe060fd1c64dc435de5be06
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486527"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347394"
 ---
 # <a name="shadow-copying-assemblies"></a>Теневое копирование сборок
 Теневое копирование позволяет обновлять используемые в домене приложения сборки без выгрузки домена приложения. Это особенно полезно для приложений, которые должны быть доступны постоянно, таких как сайты ASP.NET.  
@@ -34,7 +34,7 @@ ms.locfileid: "66486527"
   
 - [Производительность при запуске](#StartupPerformance) — содержит описание изменений, внесенных в теневое копирование в .NET Framework 4 с целью улучшить производительность при запуске, а также способов возврата к поведению более ранних версий.  
   
-- [Устаревшие методы](#ObsoleteMethods) — содержит описание изменений, внесенных в свойства и методы, которые контролируют теневое копирование в [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)].  
+- [Устаревшие методы](#ObsoleteMethods) — содержит описание изменений, внесенных в свойства и методы, которые контролируют теневое копирование в .NET Framework 2.0.  
   
 <a name="EnablingAndUsing"></a>   
 ## <a name="enabling-and-using-shadow-copying"></a>Включение и использование теневого копирования  

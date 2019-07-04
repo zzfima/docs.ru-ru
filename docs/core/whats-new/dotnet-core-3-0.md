@@ -6,19 +6,19 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 05/06/2019
-ms.openlocfilehash: 369c74d2d8e82f157de0eec4294a5ee50542292b
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.date: 06/14/2019
+ms.openlocfilehash: bb100ea064585235768ecb46781eb830c7dae0c6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169784"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401955"
 ---
-# <a name="whats-new-in-net-core-30-preview-5"></a>Новые возможности .NET Core 3.0 (предварительная версия 5)
+# <a name="whats-new-in-net-core-30-preview-6"></a>Новые возможности .NET Core 3.0 (предварительная версия 6)
 
-В этой статье описываются новые возможности .NET Core 3.0 (предварительная версия 5). Одно из основных усовершенствований — это поддержка классических приложений Windows (только Windows). С помощью пакета SDK для .NET Core 3.0 под названием Windows Desktop можно переносить приложения Windows Forms и Windows Presentation Foundation (WPF). Следует уточнить, что компонент Windows Desktop поддерживается и включен только в Windows. Дополнительные сведения см. далее в этой статье, в разделе [Рабочий стол Windows](#windows-desktop).
+Статья описывает новые возможности .NET Core 3.0 (вплоть до предварительной версии 6). Одно из основных усовершенствований — это поддержка классических приложений Windows (только Windows). С помощью пакета SDK для .NET Core 3.0 под названием Windows Desktop можно переносить приложения Windows Forms и Windows Presentation Foundation (WPF). Следует уточнить, что компонент Windows Desktop поддерживается и включен только в Windows. Дополнительные сведения см. далее в этой статье, в разделе [Рабочий стол Windows](#windows-desktop).
 
-В .NET Core 3.0 добавлена поддержка C# 8.0. Настоятельно рекомендуется использовать последний выпуск Visual Studio 2019 с обновлением 1 Preview или VSCode с расширением OmniSharp.
+В .NET Core 3.0 добавлена поддержка C# 8.0. Настоятельно рекомендуется использовать [последний выпуск Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview) или Visual Studio Code с расширением OmniSharp.
 
 [Скачайте .NET Core 3.0 (предварительная версия 6) и начните работу с ](https://aka.ms/netcore3download) прямо сейчас в Windows, Mac и Linux.
 
@@ -55,7 +55,7 @@ ms.locfileid: "67169784"
 </Project>
 ```
 
-Если вы используете Visual Studio, вам потребуется Visual Studio 2019, поскольку Visual Studio 2017 не поддерживает **.NET Standard 2.1** или **.NET Core 3.0**. Мы настоятельно рекомендуем использовать [Visual Studio 2019 с обновлением 1 Preview](https://visualstudio.microsoft.com/vs/preview/).
+Если вы используете Visual Studio, у вас должна быть версия [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), так как Visual Studio 2017 не поддерживает **.NET Standard 2.1** или **.NET Core 3.0**.
 
 ## <a name="improved-net-core-version-apis"></a>Улучшенные API версий .NET Core
 
@@ -187,7 +187,7 @@ dotnet publish -c Release -r win-x64 --self-contained true
 
 Компилятор ReadyToRun пока не поддерживает перекрестное нацеливание. Компиляцию необходимо выполнять в конкретной целевой среде. Например, если вам нужен образ R2R для 64-разрядной ОС Windows, команду публикации следует выполнять именно в этой среде.
 
-Исключения из ограничений перекрестного нацеливания:
+Исключения для кроссплатформенного таргетирования:
 
 - можно использовать Windows x64 для компиляции образов Windows ARM32, ARM64 и x86;
 - можно использовать Windows x86 для компиляции образов Windows ARM32;

@@ -5,24 +5,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new constraint keyword [C#]
 ms.assetid: 58850b64-cb97-4136-be50-1f3bc7fc1da9
-ms.openlocfilehash: 2aa68bec13322e332bfe3841bc99403f72301183
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 7c788be52010cdfadbd3c03f9e570815d25bdbef
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421800"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401484"
 ---
 # <a name="new-constraint-c-reference"></a>Ограничение new (справочник по C#)
 
-Ограничение `new` указывает, что аргумент любого типа в объявлении универсального класса должен иметь открытый конструктор без параметров. Использовать ограничение new можно только в том случае, если тип не является абстрактным.
-
-## <a name="example"></a>Пример
+Ограничение `new` указывает, что аргумент типа в объявлении универсального класса должен иметь открытый конструктор без параметров. Использовать ограничение `new` можно только в том случае, если тип не является абстрактным.
 
 Примените ограничение `new` к параметру типа, когда общий класс создает новые экземпляры этого типа, как показано в следующем примере:
 
 [!code-csharp[csrefKeywordsOperator#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#5)]
-
-## <a name="example"></a>Пример
 
 При использовании ограничения `new()` с другими ограничениями его необходимо указывать последним:
 
@@ -30,13 +26,14 @@ ms.locfileid: "66421800"
 
 Дополнительные сведения см. в разделе [Ограничения параметров типа](../../programming-guide/generics/constraints-on-type-parameters.md).
 
+Ключевое слово `new` можно также использовать для [создания экземпляра типа](../operators/new-operator.md) или как [модификатор объявления члена](new-modifier.md).
+
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Дополнительные сведения см. в разделе [Ограничения параметров типа](~/_csharplang/spec/classes.md#type-parameter-constraints) в [спецификации языка C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Collections.Generic>
 - [Справочник по C#](../../language-reference/index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Ключевые слова в C#](index.md)

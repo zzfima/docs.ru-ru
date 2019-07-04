@@ -4,12 +4,12 @@ description: Узнайте, как разместить среду выполн
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6cddb6fa7dcd7a7d050749c26249f1f5d876322d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: d3bdaacd4be776e0e9fff01698cca360ea4c9c6d
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306200"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402026"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Написание пользовательского хост-приложения NET Core для управления средой выполнения .NET из машинного кода
 

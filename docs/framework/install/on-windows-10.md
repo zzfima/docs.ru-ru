@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 69c647e57dead3b4f61bb45202c6b039099f0499
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 13ccdafc00f7a43d456126e3ec3afc1ae5897564
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052174"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422669"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Установка платформы .NET Framework в Windows 10 и Windows Server 2016 и более поздней версии
 
@@ -34,7 +34,7 @@ ms.locfileid: "66052174"
 Вы можете установить [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) в:
 
 * обновлении Windows 10 за октябрь 2018 г. (версия 1809);
-* обновлении Windows 10 за апрель 2018 г. (версия 1803);
+* Windows 10, обновление за апрель 2018 г. (версия 1803)
 * Windows 10 Fall Creators Update (версия 1709)
 * Обновление Windows 10 Creators Update (версия 1703)
 * Юбилейное обновление Windows 10 Anniversary Update (версия 1607)

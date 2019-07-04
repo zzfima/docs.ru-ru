@@ -1,20 +1,20 @@
 ---
-title: Обучение и оценка модели машинного обучения с использованием кросс-валидации
-description: Обучение и оценка модели машинного обучения с использованием кросс-валидации
-ms.date: 05/03/2019
+title: Обучение модели машинного обучения с помощью перекрестной проверки
+description: Узнайте, как использовать кросс-валидацию для создания более надежных моделей машинного обучения в ML.NET. Кросс-валидация — это методика обучения и оценки модели, которая разбивает данные на несколько секций и обучает несколько алгоритмов на этих секциях.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc,how-to
-ms.openlocfilehash: a06711ca83ea545adc7292cf6d8173f006fdb94d
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.custom: mvc,how-to,title-hack-0625
+ms.openlocfilehash: c68c2b61054f59f03b4743ec30a694e94086ebab
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557836"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397649"
 ---
-# <a name="train-and-evaluate-a-machine-learning-model-using-cross-validation"></a>Обучение и оценка модели машинного обучения с использованием кросс-валидации
+# <a name="train-a-machine-learning-model-using-cross-validation"></a>Обучение модели машинного обучения с помощью перекрестной проверки
 
-Узнайте, как использовать кросс-валидацию для создания более надежных моделей машинного обучения в ML.NET. 
+Узнайте, как использовать перекрестную проверку для обучения более надежных моделей машинного обучения в ML.NET. 
 
 Кросс-валидация — это методика обучения и оценки модели, которая разбивает данные на несколько секций и обучает несколько алгоритмов на этих секциях. Этот метод повышает надежность модели, удерживая данные вне процесса обучения. Кроме повышения производительности на многих неучитываемых наблюдениях, в средах с ограниченными данными он может быть эффективным инструментом для обучения моделей с меньшим набором данных.
 
@@ -93,7 +93,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 
 Результат в `cvResults` сохраняется в коллекции объектов [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601). Этот объект включает обученную модель, а также метрики, доступные через свойства [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) и [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) соответственно. В этом примере свойство `Model` имеет тип [`ITransformer`](xref:Microsoft.ML.ITransformer), а свойство `Metrics` имеет тип [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics). 
 
-## <a name="extract-metrics"></a>Извлечение метрик
+## <a name="evaluate-the-model"></a>Оценка модели
 
 Метрики для разных обученных моделей доступны через свойства `Metrics` отдельного объекта [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601). В этом случае [метрика R-квадрат](https://en.wikipedia.org/wiki/Coefficient_of_determination) извлекается и сохраняется в переменной `rSquared`. 
 
@@ -103,11 +103,7 @@ IEnumerable<double> rSquared =
         .Select(fold => fold.Metrics.RSquared);
 ```
 
-Если проверить содержимое переменной `rSquared`, в выходных данных должно быть пять значений в диапазоне от 0 до 1, где близость к 1 означает, что эта модель лучше.
-
-## <a name="select-the-best-performing-model"></a>Выбор наиболее эффективной модели
-
-С помощью таких метрик, как R-квадрат, отранжируйте модели от лучших к наихудшим. Затем выберите лучшую модель для прогнозов или дополнительных операций.
+Если проверить содержимое переменной `rSquared`, в выходных данных должно быть пять значений в диапазоне от 0 до 1, где близость к 1 означает, что эта модель лучше. С помощью таких метрик, как R-квадрат, отранжируйте модели от лучших к наихудшим. Затем выберите лучшую модель для прогнозов или дополнительных операций.
 
 ```csharp
 // Select all models

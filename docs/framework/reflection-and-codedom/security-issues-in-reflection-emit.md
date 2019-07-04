@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 434a88e305f833a5a95bb62835b5badd4a2c4949
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 4579e00bdaf89b4cf5d0da24a343fb5070609863
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816145"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347315"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Вопросы безопасности в порождаемом отражении
 Платформа .NET Framework предоставляет три способа создания промежуточного языка Майкрософт (MSIL), каждый из которых имеет собственные вопросы безопасности:  
@@ -151,7 +151,7 @@ ms.locfileid: "66816145"
  Наконец, в .NET Framework 2.0 с пакетом обновления 1 (SP1) реализованы анонимно размещенные методы.  
   
 ### <a name="obtaining-information-on-types-and-members"></a>Получение сведений о типах и членах  
- Начиная с [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] для получения сведений о закрытых типах и членах никакие разрешения не требуются. Для получения сведений, необходимых для порождения динамических методов, используется отражение. Например, объекты <xref:System.Reflection.MethodInfo> используются для порождения вызовов метода. Более ранние версии платформы .NET Framework требуют <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [Соображения о безопасности для отражения](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  
+ Начиная с .NET Framework 2.0 для получения сведений о закрытых типах и членах никакие разрешения не требуются. Для получения сведений, необходимых для порождения динамических методов, используется отражение. Например, объекты <xref:System.Reflection.MethodInfo> используются для порождения вызовов метода. Более ранние версии платформы .NET Framework требуют <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [Соображения о безопасности для отражения](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  
   
 ## <a name="see-also"></a>См. также
 

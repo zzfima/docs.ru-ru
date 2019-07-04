@@ -6,14 +6,15 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: 18734627e299c696e23bb0ec9bc63ed37fe3e601
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b12aeaeb5414d911abea4dfda654183ffa02b3e6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294981"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398459"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Практическое руководство. Переопределение метода ToString (руководство по программированию на C#)
+
 Каждый класс или структура в языке C# неявно наследует класс <xref:System.Object>. Поэтому каждый объект в языке C# получает метод <xref:System.Object.ToString%2A>, который возвращает строковое представление данного объекта. Например, все переменные типа `int` имеют метод `ToString`, который позволяет им возвращать их содержимое в виде строки:  
   
  [!code-csharp[csProgGuideInheritance#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#37)]  
@@ -23,9 +24,9 @@ ms.locfileid: "59294981"
  Дополнительные сведения об использовании строк форматирования и других типов пользовательского форматирования с методом `ToString` см. в разделе [Типы форматирования](../../../standard/base-types/formatting-types.md).  
   
 > [!IMPORTANT]
->  При принятии решения относительно того, какая информация должна будет предоставляться посредством этого метода, подумайте, будет ли создаваемый класс или структура когда-либо использоваться ненадежным кодом. Постарайтесь не предоставлять информацию, которая может быть использована вредоносным кодом.  
+> При принятии решения относительно того, какая информация должна будет предоставляться посредством этого метода, подумайте, будет ли создаваемый класс или структура когда-либо использоваться ненадежным кодом. Постарайтесь не предоставлять информацию, которая может быть использована вредоносным кодом.  
   
-### <a name="to-override-the-tostring-method-in-your-class-or-struct"></a>Переопределение метода ToString в классе или структуре  
+Чтобы переопределить метод `ToString` в классе или структуре, выполните указанные ниже действия.
   
 1. Объявите метод `ToString` со следующими модификаторами и типом возвращаемого значения:  
   
@@ -50,7 +51,6 @@ ms.locfileid: "59294981"
 - [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)
 - [Строки](../../../csharp/programming-guide/strings/index.md)
 - [string](../../../csharp/language-reference/keywords/string.md)
-- [new](../../../csharp/language-reference/keywords/new.md)
 - [override](../../../csharp/language-reference/keywords/override.md)
 - [virtual](../../../csharp/language-reference/keywords/virtual.md)
 - [Типы форматирования](../../../standard/base-types/formatting-types.md)

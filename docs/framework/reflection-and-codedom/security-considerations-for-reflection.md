@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6446cc3ee102fa57f5bf60c1353f7b9d5522be69
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 178255c03c2f5da41579f00c0c81ba3c85a0b0ee
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816130"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347350"
 ---
 # <a name="security-considerations-for-reflection"></a>Соображения о безопасности для отражения
 Отражение дает возможность получать информацию о типах и членах, а также обращаться к членам (то есть вызывать методы и конструкторы для получения и задания значений свойств, добавления и удаления обработчиков событий и т. д.). Использование отражения для получения информации о типах и членах не ограничено. В любом коде отражение можно использовать для выполнения следующих задач:  
@@ -102,7 +102,7 @@ ms.locfileid: "66816130"
   
 - Флаг <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> впервые появился в .NET Framework 2.0 с пакетом обновления 1 (SP1). Более ранние версии платформы .NET Framework требуют флаг <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> для кода, который использует отражение для доступа к закрытым членам. Это разрешение, которое ни в коем случае нельзя предоставлять коду с частичным доверием.  
   
-- Начиная с версии [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] использование отражения для получения сведений о закрытых типах и членах не требует никаких разрешений. В более ранних версиях для этого требовалось разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>.  
+- Начиная с .NET Framework 2.0 использование отражения для получения сведений о закрытых типах и членах не требует никаких разрешений. В более ранних версиях для этого требовалось разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
 

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 93b414eea5849ed020b521fcd5e5d5f5d194c35f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6c37e494431eae9d17f442b2c32dea5f0b4bcf2b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589805"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397790"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>Интеграция XML с реляционными данными и ADO.NET
 Класс **XmlDataDocument** является производным от класса **XmlDocument** и содержит XML-данные. Класс **XmlDataDocument** полезен тем, что он организует связь между реляционными и иерархическими данными. Этот класс **XmlDocument** можно привязать к объекту **DataSet**, после чего любые изменения их данных будут одновременно отображаться в обоих классах. Класс **XmlDocument**, привязанный к объекту **DataSet**, позволяет интегрировать XML-данные с реляционными данными, не преобразуя все данные в формат XML или в реляционный формат. Можно использовать оба формата, не ограничиваясь единым способом представления данных.  
@@ -45,7 +45,7 @@ ms.locfileid: "64589805"
   
  Если непосредственная загрузка XML-данных в объект и из объекта **DataSet** соответствует поставленным задачам, изучите документацию о [загрузке DataSet из XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) и [записи DataSet в виде XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).  
   
- Если нужно загружать данные в объект **DataSet** из класса **XmlDataDocument**, переходите к документу [о синхронизации объекта DataSet с XML-документом](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
+ Если нужно загружать данные в объект **DataSet** из класса **XmlDataDocument**, переходите к документу о [синхронизации объекта DataSet с XML-документом](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
   
 ## <a name="see-also"></a>См. также
 

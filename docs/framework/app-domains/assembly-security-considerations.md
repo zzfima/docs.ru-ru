@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f6f6fa8afe2e4aaea6e9f2b96329542b7fe5292
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b78b770417b9599719ea219041a9fd6adaf5a84
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607693"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423408"
 ---
 # <a name="assembly-security-considerations"></a>Вопросы безопасности сборок
 <a name="top"></a> При создании сборки можно указать набор разрешений, который требуется для ее выполнения. От свидетельства зависит, предоставляются ли сборке определенные разрешения.  
@@ -31,7 +31,7 @@ ms.locfileid: "64607693"
   
 - Входное свидетельство объединяется со свидетельством, собранным загрузчиком для создания окончательного набора свидетельств, используемых для разрешения политики. К методам, использующим такую модель, относятся **Assembly.Load**, **Assembly.LoadFrom** и **Activator.CreateInstance**.  
   
-- В качестве окончательного набора свидетельств для разрешения политики используется неизмененное входное свидетельство. К методам, использующим такую модель, относятся **Assembly.Load(byte[])** и **AppDomain.DefineDynamicAssembly()**.  
+- В качестве окончательного набора свидетельств для разрешения политики используется неизмененное входное свидетельство. К методам, использующим такую модель, относятся **Assembly.Load(byte[])** и **AppDomain.DefineDynamicAssembly()** .  
   
  Дополнительные разрешения могут предоставляться [политикой безопасности](../../../docs/framework/misc/code-access-security-basics.md), заданной на компьютере, где будет работать сборка. Для обработки в коде всех возможных исключений безопасности необходимо выполнить одно из следующих действий.  
   

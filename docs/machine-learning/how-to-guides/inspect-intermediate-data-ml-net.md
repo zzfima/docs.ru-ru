@@ -1,22 +1,22 @@
 ---
-title: Проверка значений промежуточных данных при обработке ML.NET
-description: Сведения о проверке значений промежуточных данных при конвейерной обработке машинного обучения ML.NET
-ms.date: 04/29/2019
+title: Проверка промежуточных данных при обработке ML.NET
+description: Сведения о проверке промежуточных данных при конвейерной загрузке, обработке и обучении модели машинного обучения в ML.NET.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to
-ms.openlocfilehash: 06c4a473841db62a10dfc24025f842df7ae2c583
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: d6ddeb523fb229eb0ebc9c2f22809312060e4266
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063520"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402390"
 ---
-# <a name="inspect-intermediate-data-values-during-processing"></a>Проверка значений промежуточных данных при обработке
+# <a name="inspect-intermediate-data-during-processing"></a>Проверка промежуточных данных при обработке
 
-Сведения о том, как проверить значения на этапах загрузки, обработки и обучения в ML.NET.
+Сведения о проверке промежуточных данных при загрузке, обработке и обучении модели в ML.NET. Промежуточные данные — это выходные данные после каждого этапа конвейера машинного обучения.
 
-Данные, аналогичные представленным ниже, которые загружаются в [`IDataView`](xref:Microsoft.ML.IDataView), в ML.NET можно проверить разными способами.
+Промежуточные данные, аналогичные представленным ниже, которые загружаются в [`IDataView`](xref:Microsoft.ML.IDataView), в ML.NET можно проверить разными способами.
  
 ```csharp
 HousingData[] housingData = new HousingData[]
@@ -62,7 +62,7 @@ HousingData[] housingData = new HousingData[]
 
 ## <a name="convert-idataview-to-ienumerable"></a>Преобразование IDataView в IEnumerable
 
-Одним из самых быстрых способов проверки значений [`IDataView`](xref:Microsoft.ML.IDataView) является преобразование в [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601). Чтобы преобразовать [`IDataView`](xref:Microsoft.ML.IDataView) в [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601), используйте метод [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*). 
+Одним из самых быстрых способов проверки [`IDataView`](xref:Microsoft.ML.IDataView) является преобразование в [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601). Чтобы преобразовать [`IDataView`](xref:Microsoft.ML.IDataView) в [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601), используйте метод [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*). 
 
 Для оптимизации производительности установите для параметра `reuseRowObject` значение `true`. Это приведет к отложенному заполнению одного объекта данными из текущей строки при оценке вместо создания объекта для каждой строки в наборе данных.
 
@@ -78,6 +78,8 @@ foreach (HousingData row in housingDataEnumerable)
     Console.WriteLine(row.Size);
 }
 ```
+
+## <a name="accessing-specific-indices-with-ienumerable"></a>Доступ к определенным индексам с помощью IEnumerable
 
 Если вам нужно обратиться лишь к части данных или конкретным индексам, используйте [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) и задайте для параметра `reuseRowObject` значение `false`, чтобы создавать объект для каждой из запрошенных срок в наборе данных. После этого преобразуйте [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) в массив или список.
 
