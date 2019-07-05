@@ -2,12 +2,12 @@
 title: Новые возможности C# 8.0. Руководство по языку C#
 description: Обзор новых функций, доступных в C# 8.0. В этой статье представлены возможности предварительной версии 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: 99056c9cd330c0c3ae6c63239989a2e9e9dc496c
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 962829b68c5d02c3a7e563a00d391c4698024d47
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67151979"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397772"
 ---
 # <a name="whats-new-in-c-80"></a>Новые возможности C# 8.0
 
@@ -30,7 +30,12 @@ ms.locfileid: "67151979"
 > [!NOTE]
 > Эта статья последний раз обновлялась для предварительной версии 5 C# 8.0.
 
-В остальных разделах этой статьи кратко описываются эти возможности. Здесь приведены ссылки на эти подробные руководства и обзоры (если они доступны).
+В остальных разделах этой статьи кратко описываются эти возможности. Здесь приведены ссылки на эти подробные руководства и обзоры (если они доступны). Эти функции можно изучить в своей среде с помощью глобального средства `dotnet try`:
+
+1. Установите глобальное средство [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
+1. Клонируйте репозиторий [dotnet/try-samples](https://github.com/dotnet/try-samples).
+1. Для репозитория *try-samples* установите в качестве текущего каталога подкаталог *csharp8*.
+1. Запустите `dotnet try`.
 
 ## <a name="readonly-members"></a>Члены только для чтения
 
@@ -425,7 +430,7 @@ var lazyDog = words[^2..^0];
 ```csharp
 var allWords = words[..]; // contains "The" through "dog".
 var firstPhrase = words[..4]; // contains "The" through "fox"
-var lastPhrase = words[6..]; // contains "the, "lazy" and "dog"
+var lastPhrase = words[6..]; // contains "the", "lazy" and "dog"
 ```
 
 Вы также можете объявить диапазоны как переменные:

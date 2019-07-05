@@ -1,18 +1,18 @@
 ---
-title: Подготовка данных
+title: Подготовка данных для построения модели
 description: Узнайте, как использовать преобразования в ML.NET для обработки и подготовки данных для дополнительной обработки или построения модели.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 05/03/2019
-ms.custom: mvc, how-to
-ms.openlocfilehash: abf43260a438c9b1febffc77cf39e7328e0377ee
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.date: 06/25/2019
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: 4b7d5a09044e49f1b57b8276b893e0fc962a3be2
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268248"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397717"
 ---
-# <a name="prepare-data"></a>Подготовка данных
+# <a name="prepare-data-for-building-a-model"></a>Подготовка данных для построения модели
 
 Сведения об использовании ML.NET для подготовки данных к дополнительной обработке или построению модели.
 
