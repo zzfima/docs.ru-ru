@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-ms.openlocfilehash: 2f923bd7069e29eeb20cbc77cef02c8378917d4f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aba8c37059cfc58fdffda55bcf1c485b61c3d249
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665400"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569499"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Практическое руководство. Выведение имен свойств и типов в объявлениях анонимного типа (Visual Basic)
 Анонимные типы не предоставляют механизм для прямого указания типов данных для свойств. Типы всех свойств определяются посредством вывода. В следующем примере типы `Name` и `Price` выводятся напрямую из значений, которые используются для их инициализации.  
@@ -43,10 +43,11 @@ ms.locfileid: "64665400"
      Результирующий тип для `anon` будет иметь одно свойство `Book`c типом <xref:System.Collections.IEnumerable>(XElement).  
   
 - Из функции, которая не имеет параметров, например `SomeFunction` в следующем примере.  
-  
-     `Dim sc As New SomeClass`  
-  
-     `Dim anon1 = New With {Key sc.SomeFunction()}`  
+
+  ```vb
+     Dim sc As New SomeClass
+     Dim anon1 = New With {Key sc.SomeFunction()}
+  ```
   
      Переменная `anon2` в следующем коде является анонимным типом, который имеет одно свойство: знак с именем `First`. Этот код будет отображать букву E — букву, которая возвращена функцией <xref:System.Linq.Enumerable.First%2A>.  
   
@@ -57,20 +58,22 @@ ms.locfileid: "64665400"
 #### <a name="name-inference-will-fail-in-many-circumstances-including-the-following"></a>Вывод имени завершится сбоем во многих случаях, в том числе в следующих.  
   
 - Вывод является производным от вызова метода, конструктора или параметризованного свойства, для которого требуются аргументы. Предыдущее объявление `anon1` завершается сбоем, если `someFunction` имеет один или несколько аргументов.  
-  
-     `' Not valid.`  
-  
-     `' Dim anon3 = New With {Key sc.someFunction(someArg)}`  
-  
+
+    ```vb
+    ' Not valid.
+    ' Dim anon3 = New With {Key sc.someFunction(someArg)}
+    ```
+    
      Проблема решается путем назначения новому имени свойства.  
-  
-     `' Valid.`  
-  
-     `Dim anon4 = New With {Key .FunResult = sc.someFunction(someArg)}`  
-  
+
+    ```vb
+    ' Valid.
+    Dim anon4 = New With {Key .FunResult = sc.someFunction(someArg)}
+    ```
+
 - Вывод является производным от сложного выражения.  
   
-    ```  
+    ```vb  
     Dim aString As String = "Act "  
     ' Not valid.  
     ' Dim label = New With {Key aString & "IV"}  
@@ -81,41 +84,43 @@ ms.locfileid: "64665400"
      [!code-vb[VbVbalrAnonymousTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#14)]  
   
 - Вывод нескольких свойств создает два или более свойств с одинаковым именем. Возвращаясь к объявлениям в предыдущих примерах, невозможно указывать `product.Name` и `car1.Name` в качестве свойств для одного анонимного типа. Это связано с тем, что выводимый идентификатор для каждого из них будет `Name`.  
-  
-     `' Not valid.`  
-  
-     `' Dim anon5 = New With {Key product.Name, Key car1.Name}`  
-  
+
+     ```vb
+     ' Not valid.
+     ' Dim anon5 = New With {Key product.Name, Key car1.Name}
+     ```
+     
      Проблему можно решить, назначив значения уникальным именам свойств.  
   
      [!code-vb[VbVbalrAnonymousTypes#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#36)]  
   
      Обратите внимание, что изменение регистра (изменение прописных букв на строчные и наоборот) не делает имя уникальным.  
-  
-     `Dim price = 0`  
-  
-     `' Not valid, because Price and price are the same name.`  
-  
-     `' Dim anon7 = New With {Key product.Price, Key price}`  
+
+     ```vb
+     Dim price = 0
+     ' Not valid, because Price and price are the same name.
+     ' Dim anon7 = New With {Key product.Price, Key price}
+     ```
   
 - Исходные тип и значение одного свойства зависят от другого свойства, которое еще не установлено. Например, `.IDName = .LastName` не является допустимым в объявлении анонимного типа, если только `.LastName` уже не инициализирован.  
-  
-     `' Not valid.`  
-  
-     `' Dim anon8 = New With {Key .IDName = .LastName, Key .LastName = "Jones"}`  
-  
+
+     ```vb
+     ' Not valid.
+     ' Dim anon8 = New With {Key .IDName = .LastName, Key .LastName = "Jones"}
+     ```
+     
      В этом примере проблему можно устранить, изменив порядок, в котором объявлены свойства, на обратный.  
   
      [!code-vb[VbVbalrAnonymousTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#15)]  
   
 - Имя свойства анонимного типа совпадает с именем элемента <xref:System.Object>. Например, следующее объявление завершится сбоем, так как `Equals` — это метод <xref:System.Object>.  
   
-     `' Not valid.`  
-  
-     `' Dim relationsLabels1 = New With {Key .Equals = "equals", Key .Greater = _`  
-  
-     `'                       "greater than", Key .Less = "less than"}`  
-  
+     ```vb
+     ' Not valid.
+     ' Dim relationsLabels1 = New With {Key .Equals = "equals", Key .Greater = _
+     '                       "greater than", Key .Less = "less than"}
+     ```
+     
      Проблему можно устранить, изменив имя свойства:  
   
      [!code-vb[VbVbalrAnonymousTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#16)]  
