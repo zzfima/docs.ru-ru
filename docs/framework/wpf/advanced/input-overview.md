@@ -24,31 +24,31 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 6aae66de973c357b4b87578221a169bf750739fb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 47d892db8418b44fffeec870e56b49d5f986b563
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599014"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610482"
 ---
 # <a name="input-overview"></a>Общие сведения о входных данных
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Подсистема предоставляет мощный [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] для получения входных данных из широкого спектра устройств, включая мышь, клавиатура, сенсорного ввода и пера. В этом разделе описываются службы, предоставляемые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], и объясняется архитектура систем ввода.
 
 <a name="input_api"></a>
 ## <a name="input-api"></a>API ввода
- Основные входные данные [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] находится в классах базовых элементов: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, и <xref:System.Windows.FrameworkContentElement>.  Дополнительные сведения о базовых элементах см. в разделе [Обзор базовых элементов](base-elements-overview.md).  Эти классы предоставляют функциональность для входных событий, связанных, например, с нажатием клавиш, кнопками мыши, колесиком мыши, движением мыши, управлением фокусом и захватом мыши. Благодаря помещению [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ввода в базовые элементы, вместо того чтобы рассматривать все события ввода как службу, архитектура ввода позволяет событиям ввода поступать от конкретного объекта в пользовательском интерфейсе и поддерживать схему маршрутизации событий, при которой более чем один элемент имеет возможность обрабатывать событие ввода. Многие события ввода имеют пару связанных с ними событий.  Например, событие нажатия клавиши связан с <xref:System.Windows.Input.Keyboard.KeyDown> и <xref:System.Windows.Input.Keyboard.PreviewKeyDown> события.  Различие этих событий заключается в способе их маршрутизации в целевой элемент.  События предварительного просмотра проходят вниз по дереву элементов от корневого элемента в целевой элемент.  События восходящей маршрутизации поднимаются от целевого элемента в корневой элемент.  Маршрутизация событий в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] рассматривается более подробно далее в этом обзоре и в разделе [Общие сведения о перенаправленных событиях](routed-events-overview.md).
+ Главный входной API находится в классах базовых элементов: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, и <xref:System.Windows.FrameworkContentElement>.  Дополнительные сведения о базовых элементах см. в разделе [Обзор базовых элементов](base-elements-overview.md).  Эти классы предоставляют функциональность для входных событий, связанных, например, с нажатием клавиш, кнопками мыши, колесиком мыши, движением мыши, управлением фокусом и захватом мыши. Размещение API ввода в базовые элементы, а не рассматривать все события ввода как службу, архитектура ввода позволяет событиям ввода поступать от конкретного объекта в пользовательском Интерфейсе и поддерживать схему маршрутизации событий, при котором более одного элемента имеет подвижных ortunity для обработки события ввода. Многие события ввода имеют пару связанных с ними событий.  Например, событие нажатия клавиши связан с <xref:System.Windows.Input.Keyboard.KeyDown> и <xref:System.Windows.Input.Keyboard.PreviewKeyDown> события.  Различие этих событий заключается в способе их маршрутизации в целевой элемент.  События предварительного просмотра проходят вниз по дереву элементов от корневого элемента в целевой элемент.  События восходящей маршрутизации поднимаются от целевого элемента в корневой элемент.  Маршрутизация событий в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] рассматривается более подробно далее в этом обзоре и в разделе [Общие сведения о перенаправленных событиях](routed-events-overview.md).
 
 ### <a name="keyboard-and-mouse-classes"></a>Классы Keyboard и Mouse
- В дополнение к входные данные [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] в классах базовых элементов, <xref:System.Windows.Input.Keyboard> класс и <xref:System.Windows.Input.Mouse> классы предоставляют дополнительные [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] для работы с клавиатуру и мышь.
+ В дополнение к API ввода в классах базовых элементов <xref:System.Windows.Input.Keyboard> класс и <xref:System.Windows.Input.Mouse> классы предоставляют дополнительный API-Интерфейс для работы с клавиатуру и мышь.
 
- Примеры входных данных [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] на <xref:System.Windows.Input.Keyboard> класса <xref:System.Windows.Input.Keyboard.Modifiers%2A> свойство, которое возвращает <xref:System.Windows.Input.ModifierKeys> в данный момент нажата и <xref:System.Windows.Input.Keyboard.IsKeyDown%2A> метод, который определяет, нажата ли указанный ключ.
+ Примеры API ввода на <xref:System.Windows.Input.Keyboard> класса <xref:System.Windows.Input.Keyboard.Modifiers%2A> свойство, которое возвращает <xref:System.Windows.Input.ModifierKeys> в данный момент нажата и <xref:System.Windows.Input.Keyboard.IsKeyDown%2A> метод, который определяет, нажата ли указанный ключ.
 
  В следующем примере используется <xref:System.Windows.Input.Keyboard.GetKeyStates%2A> метод на предмет <xref:System.Windows.Input.Key> находится в нерабочем состоянии.
 
  [!code-csharp[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeyboardgetkeystates)]
  [!code-vb[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeyboardgetkeystates)]
 
- Примеры входных данных [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] на <xref:System.Windows.Input.Mouse> класса <xref:System.Windows.Input.Mouse.MiddleButton%2A>, который получает состояние средней кнопки мыши, и <xref:System.Windows.Input.Mouse.DirectlyOver%2A>, получающий указатель мыши на элемент наведен.
+ Примеры API ввода на <xref:System.Windows.Input.Mouse> класса <xref:System.Windows.Input.Mouse.MiddleButton%2A>, который получает состояние средней кнопки мыши, и <xref:System.Windows.Input.Mouse.DirectlyOver%2A>, получающий указатель мыши на элемент наведен.
 
  В следующем примере определяется ли <xref:System.Windows.Input.Mouse.LeftButton%2A> мыши находится в <xref:System.Windows.Input.MouseButtonState.Pressed> состояние.
 
@@ -58,7 +58,7 @@ ms.locfileid: "64599014"
  <xref:System.Windows.Input.Mouse> И <xref:System.Windows.Input.Keyboard> классы рассматриваются более подробно в этом обзоре.
 
 ### <a name="stylus-input"></a>Ввод с помощью пера
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предусмотрена встроенная поддержка <xref:System.Windows.Input.Stylus>.  <xref:System.Windows.Input.Stylus> — Рукописный ввод, ставший популярным благодаря [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  Приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] могут обрабатывать перо как мышь с помощью [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] мыши, но [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] также предоставляет перо как абстрактное устройство, использующее модель, аналогичную клавиатуре и мыши.  Все связанные с пером [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] содержат слово Stylus.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предусмотрена встроенная поддержка <xref:System.Windows.Input.Stylus>.  <xref:System.Windows.Input.Stylus> — Рукописный ввод, ставший популярным благодаря [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения могут обрабатывать перо как мышь с помощью мыши API, но [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] также предоставляет перо как абстрактное устройство, используйте модель, аналогичную клавиатуру и мышь.  Все связанные с пером [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] содержат слово Stylus.
 
  Поскольку перо может действовать как мышь, приложения, поддерживающие только ввод с помощью мыши, по-прежнему могут автоматически получать определенный уровень поддержки пера. При использовании пера таким образом приложение получает возможность обработать соответствующее событие пера, а затем обрабатывает соответствующее событие мыши. Кроме того, через абстрактное устройство «перо» доступны также службы более высокого уровня, например рукописный ввод.  Дополнительные сведения о рукописном вводе см. в разделе [Начало работы с рукописным вводом](getting-started-with-ink.md).
 
@@ -350,7 +350,7 @@ ms.locfileid: "64599014"
 
 <a name="mouse_position"></a>
 ## <a name="mouse-position"></a>Положение мыши
- [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ввода в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет полезные сведения о координатных пространствах.  Например, координата `(0,0)` является верхней левой координатой, но какого элемента в дереве? Элемента, который является целевым объектом ввода? Элемента, к которому присоединен обработчик событий? Или какого-нибудь другого элемента? Чтобы избежать путаницы, [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ввода в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] требует указания системы координат при работе с координатами, полученными посредством мыши. <xref:System.Windows.Input.Mouse.GetPosition%2A> Метод возвращает координаты указателя мыши относительно заданного элемента.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API ввода предоставляет полезные сведения о координатных пространствах.  Например, координата `(0,0)` является верхней левой координатой, но какого элемента в дереве? Элемента, который является целевым объектом ввода? Элемента, к которому присоединен обработчик событий? Или какого-нибудь другого элемента? Чтобы избежать путаницы, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API ввода требует указания системы координат при работе с координатами, полученными посредством мыши. <xref:System.Windows.Input.Mouse.GetPosition%2A> Метод возвращает координаты указателя мыши относительно заданного элемента.
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>Захват мыши

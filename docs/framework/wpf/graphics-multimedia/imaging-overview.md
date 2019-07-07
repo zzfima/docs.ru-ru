@@ -21,21 +21,21 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 6cb389cd0458d1c9e7af94586c394764f01e4bab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b84a2e4c3cf4126a6efa7edaf868080dbc48b859
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665186"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610393"
 ---
 # <a name="imaging-overview"></a>Общие сведения об обработке изображений
 В этом разделе содержатся общие сведения о платформе [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. Платформа [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] позволяет разработчикам выполнять отображение, преобразование и форматирование изображений.  
 
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>Компонент обработки изображений WPF  
- Платформа [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] предоставляет значительные расширения возможностей в обработке изображений в [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Возможности обработки изображений, например вывод растрового изображения или использование изображения на общем элементе управления были ранее реализованы с помощью библиотек [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] и [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)]. Эти библиотеки [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] обеспечивают базовые функции обработки изображений, но в них отсутствуют такие возможности, как поддержка расширяемости кодеков и изображений высокого качества. При разработке платформы [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] были устранены недостатки [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] и [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)]. Новый набор [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] позволяет отображать и использовать изображения в приложениях.  
+ Платформа [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] предоставляет значительные расширения возможностей в обработке изображений в [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Возможности обработки изображений, например вывод растрового изображения или использование изображения на общем элементе управления были ранее реализованы с помощью библиотек [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] и [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)]. Эти API обеспечивают базовые функции, но отсутствие функции, такие как поддержка расширяемости кодеков и изображений высокого качества обработки изображений. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] предназначен для преодоления недостатков [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] и [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] и предоставляет новый набор API для отображения и использования изображений в приложениях.  
   
- Существует два способа доступа к [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] — управляемый компонент и неуправляемый компонент. Неуправляемый компонент предоставляет следующие возможности.  
+ Существует два способа для доступа к [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] API, управляемый компонент и неуправляемый компонент. Неуправляемый компонент предоставляет следующие возможности.  
   
 - Модель расширяемости для новых или собственных форматов изображений.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "64665186"
   
 - Управляемый компонент использует неуправляемую инфраструктуру для обеспечения плавной интеграции изображений с другими функциями [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], такими как [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], анимация и графика. Управляемый компонент также использует преимущества Windows Presentation Foundation (WPF) работы с образами модели расширяемости кодека которая позволяет автоматически распознавать новые форматы изображений в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений.  
   
- Большинство управляемых [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] находятся в <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> пространства имен, хотя несколько важных типов, таких как <xref:System.Windows.Media.ImageBrush> и <xref:System.Windows.Media.ImageDrawing> находятся в <xref:System.Windows.Media?displayProperty=nameWithType> пространства имен и <xref:System.Windows.Controls.Image> находится в <xref:System.Windows.Controls?displayProperty=nameWithType> пространства имен.  
+ Большинство управляемых [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] API находятся в <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> пространства имен, хотя несколько важных типов, таких как <xref:System.Windows.Media.ImageBrush> и <xref:System.Windows.Media.ImageDrawing> находятся в <xref:System.Windows.Media?displayProperty=nameWithType> пространства имен и <xref:System.Windows.Controls.Image> находится в <xref:System.Windows.Controls?displayProperty=nameWithType> пространство имен.  
   
- В этом разделе содержатся дополнительные сведения об управляемом компоненте. Дополнительные сведения о неуправляемом компоненте [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] см. в документации по [неуправляемому компоненту обработки изображений WPF](/windows/desktop/wic/-wic-lh).  
+ В этом разделе содержатся дополнительные сведения об управляемом компоненте. Дополнительные сведения о неуправляемых API см. раздел [неуправляемый компонент обработки изображений WPF](/windows/desktop/wic/-wic-lh) документации.  
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>Форматы изображений в WPF  
@@ -132,13 +132,13 @@ ms.locfileid: "64665186"
 #### <a name="stretching-images"></a>Растягивание изображений  
  <xref:System.Windows.Controls.Image.Stretch%2A> Свойство определяет, как изображение растягивается для заполнения его контейнера. <xref:System.Windows.Controls.Image.Stretch%2A> Свойство принимает следующие значения, определенные <xref:System.Windows.Media.Stretch> перечисления:  
   
-- <xref:System.Windows.Media.Stretch.None>: Изображение не растягивается для заполнения области вывода. Если изображение больше, чем область вывода, изображение заполняет область вывода с обрезкой тех частей, которые не входят.  
+- <xref:System.Windows.Media.Stretch.None>. Изображение не растягивается для заполнения области вывода. Если изображение больше, чем область вывода, изображение заполняет область вывода с обрезкой тех частей, которые не входят.  
   
 - <xref:System.Windows.Media.Stretch.Fill>: Изображение масштабируется в соответствии с области вывода. Так как высота и ширина изображения масштабируются независимо друг от друга, исходные пропорции изображения могут не сохраниться. То есть изображение может быть деформировано для полного заполнения контейнера вывода.  
   
 - <xref:System.Windows.Media.Stretch.Uniform>: Изображение масштабируется таким образом, чтобы полностью уместиться внутри области вывода. Пропорции изображения сохраняются.  
   
-- <xref:System.Windows.Media.Stretch.UniformToFill>: Изображение масштабируется таким образом, чтобы полностью заполнить область вывода при этом сохранить исходные пропорции изображения.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>. Изображение масштабируется таким образом, чтобы полностью заполнить область вывода при этом сохранить исходные пропорции изображения.  
   
  В следующем примере применяется, каждое из доступных <xref:System.Windows.Media.Stretch> перечислений для <xref:System.Windows.Controls.Image>.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "64665186"
   
  Доступ к метаданным предоставляется через <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> свойство <xref:System.Windows.Media.Imaging.BitmapSource> объекта. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> Возвращает <xref:System.Windows.Media.Imaging.BitmapMetadata> объекта, который содержит все метаданные, содержащиеся в изображении. Эти данные могут представлять собой одну схему метаданных или комбинацию различных схем. Платформа [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] поддерживает следующие схемы метаданных изображения: [!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)], текст (текстовые данные PNG), [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)] и [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
   
- Для упрощения процесса чтения метаданных <xref:System.Windows.Media.Imaging.BitmapMetadata> предоставляет несколько именованных свойств, которые легко доступны такие как <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>, и <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>. Многие из этих именованных свойств могут также использоваться для записи метаданных. Дополнительная поддержка чтения метаданных обеспечивается благодаря использованию считывателя запросов метаданных. <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> Метод используется для извлечения считывателя запросов метаданных, предоставляя строки запроса, такие как *«/ app1/exif /»*. В следующем примере <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> используется для получения текста, хранящегося в *«/ Text/Description»* расположение.  
+ Для упрощения процесса чтения метаданных <xref:System.Windows.Media.Imaging.BitmapMetadata> предоставляет несколько именованных свойств, которые легко доступны такие как <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>, и <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>. Многие из этих именованных свойств могут также использоваться для записи метаданных. Дополнительная поддержка чтения метаданных обеспечивается благодаря использованию считывателя запросов метаданных. <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> Метод используется для извлечения считывателя запросов метаданных, предоставляя строки запроса, такие как *«/ app1/exif /»* . В следующем примере <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> используется для получения текста, хранящегося в *«/ Text/Description»* расположение.  
   
  [!code-cpp[BitmapMetadata#GetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
  [!code-csharp[BitmapMetadata#GetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
@@ -183,7 +183,7 @@ ms.locfileid: "64665186"
 ## <a name="codec-extensibility"></a>Расширяемость кодеков  
  Основной особенностью [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] является модель расширяемости для новых кодеков изображений. Эти неуправляемые интерфейсы позволяют разработчикам кодеков интегрировать кодеки в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Благодаря этому новые форматы изображений могут автоматически использоваться приложениями [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
- Пример расширяемости [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] см. в разделе [Пример кодека Win32](https://go.microsoft.com/fwlink/?LinkID=160052). В этом примере показано создание декодера и кодировщика для пользовательского формата изображения.  
+ Пример расширяемости API, см. в разделе [пример кодека Win32](https://go.microsoft.com/fwlink/?LinkID=160052). В этом примере показано создание декодера и кодировщика для пользовательского формата изображения.  
   
 > [!NOTE]
 >  Чтобы система могла распознать кодек, он должен иметь цифровую подпись.  

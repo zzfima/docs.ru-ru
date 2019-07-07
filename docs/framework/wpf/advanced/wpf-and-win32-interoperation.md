@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: 997ea7bd1c18d3817457ad109cd611c989f50d8a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cbae3011634fb6c6b68e477a10931a1ef13c3f55
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650743"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610363"
 ---
 # <a name="wpf-and-win32-interoperation"></a>Взаимодействие WPF и Win32
 В этом разделе приводится общее описание метода обеспечения взаимодействия [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и кода [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. Служба [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Однако если имеется сложный код [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], возможно, более эффективным будет повторное использование части этого кода.  
@@ -29,7 +29,7 @@ ms.locfileid: "64650743"
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>Проекты взаимодействия WPF  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] являются управляемым кодом, но большинство существующих программ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] создаются в виде неуправляемого кода [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].  Невозможно вызвать [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] из подлинной неуправляемой программы. Однако используя параметр `/clr` с компилятором [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)], можно создать смешанную управляемую-неуправляемую программу, где могут равномерно смешиваться управляемые и неуправляемые вызовы [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)].  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] являются управляемым кодом, но большинство существующих программ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] создаются в виде неуправляемого кода [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].  Невозможно вызвать [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] из подлинной неуправляемой программы. Тем не менее, с помощью `/clr` с параметром [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] компилятора, можно создать смешанную управляемую неуправляемую программу где могут равномерно смешиваться управляемые и неуправляемые вызовы API.  
   
  Существует одна сложность на уровне проекта, которая заключается в том, что нельзя скомпилировать файлы [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] в проект [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].  Имеется несколько методов разделения проектов для решения данной проблемы.  
   

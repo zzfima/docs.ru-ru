@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: ce54c3299d599e990fa02abd3cea1460d588e280
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28aeaae7292224dc8f56787efbde82712340af11
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662258"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610403"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Общие сведения о глобализации и локализации WPF
 
@@ -90,7 +90,7 @@ ms.locfileid: "64662258"
 
 Процесс локализации начинается после сборки нелокализованного `MyDialog.resources.dll` файла. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Элементы и свойства в исходном [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] извлекаются из BAML-формы XAML в пары "ключ значение" с помощью [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] под <xref:System.Windows.Markup.Localizer>. Локализаторы используют пары "ключ —значение" для локализации приложения. После завершения локализации можно создать файл .resource.dll на основе новых значений.
   
- Ключи пар "ключ значение" `x:Uid` значения, которые помещаются разработчиком в исходный [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Эти `x:Uid` включить значения [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] для отслеживания и объединения изменений, разработчик и локализатором во время локализации. Например, если разработчик изменяет [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] после начала локализации, можно слить изменения с уже выполненной работой по локализации, так что теряется минимум работы по переводу.  
+ Ключи пар "ключ значение" `x:Uid` значения, которые помещаются разработчиком в исходный [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Эти `x:Uid` значения включить API для отслеживания и объединения изменений, разработчик и локализатором во время локализации. Например, если разработчик изменяет [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] после начала локализации, можно слить изменения с уже выполненной работой по локализации, так что теряется минимум работы по переводу.  
   
  На приведенном ниже рисунке показан типичный рабочий процесс локализации на основе BAML-формы XAML. Эта диаграмма предполагает, что разработчик создает приложение на английском языке. Разработчик создает и глобализует приложение WPF. В файле проекта разработчик задает `<UICulture>en-US</UICulture>` , чтобы на сборки, от основного языка сборка получает созданный вспомогательной. resources.dll, содержащий все локализуемые ресурсы. Кроме того, можно сохранить исходный язык в основной сборке, так как интерфейсы API локализации WPF поддерживают извлечение из основной сборки. По завершении процесса сборки XAML компилируется в BAML. Независимый от языка и региональных параметров файл MyDialog.exe.resources.dll поставляется англоязычному пользователю.  
   

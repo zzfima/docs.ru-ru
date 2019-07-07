@@ -2,12 +2,12 @@
 title: Ссылка
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: a874cb659bc8701d7f894617d4e1db25f949fbcd
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 659bd64fe06e2de7bd9dd8e929faa5d0353a5b58
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881316"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610570"
 ---
 # <a name="reference"></a>Ссылка
 В этом разделе содержатся справочные сведения для разработчиков [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -27,11 +27,11 @@ ms.locfileid: "65881316"
  [Внешнее сопоставление](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
  Описывает [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] подхода внешнего сопоставления для сопоставления [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объектной модели в базу данных SQL Server. Предоставляет определение схемы XSD для файлов сопоставлений.  
   
- [Часто задаваемые вопросы](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)  
+ [Вопросы и ответы](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)  
  Содержит ответы на общие вопросы о [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [SQL Server Compact и LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
- Описывает способ [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] отличается от SQL Server в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] приложений.  
+ Описание отличий от SQL Server в SQL Server Compact 3.5 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] приложений.  
   
  [Преобразование стандартных операторов запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
  Описывает способ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] преобразует стандартные операторы запросов в команды SQL.  
