@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Руководство по программированию на C#. Предоставление диалогового окна "Ход выполнения" для операций с файлами
+title: Практическое руководство. Предоставление диалогового окна "Ход выполнения" для операций с файлами (Руководство по программированию на C#)
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,7 +12,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309541"
 ---
-# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Предоставление диалогового окна "Ход выполнения" для операций с файлами
+# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>Практическое руководство. Предоставление диалогового окна "Ход выполнения" для операций с файлами (Руководство по программированию на C#)
 Вы можете предоставить стандартное диалоговое окно, в котором будет отображаться ход выполнения операций с файлами в Windows, при использовании метода <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> из пространства имен <xref:Microsoft.VisualBasic?displayProperty=nameWithType>.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
