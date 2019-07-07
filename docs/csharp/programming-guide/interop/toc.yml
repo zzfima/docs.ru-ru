@@ -3,11 +3,11 @@
   items:
     - name: Общие сведения о взаимодействии
       href: interoperability-overview.md
-    - name: 'Как выполнить Доступ к объектам взаимодействия Office с помощью функций Visual C#'
+    - name: 'Практическое руководство. Доступ к объектам взаимодействия Office с помощью возможностей Visual C#'
       href: how-to-access-office-onterop-objects.md
-    - name: Как выполнить Использование индексированных свойств в программировании COM-взаимодействия
+    - name: Практическое руководство. Использование индексированных свойств в программировании COM-взаимодействия
       href: how-to-use-indexed-properties-in-com-interop-rogramming.md
-    - name: Как выполнить Использование вызова неуправляемого кода для воспроизведения звукового файла
+    - name: Практическое руководство. Использование вызова неуправляемого кода для воспроизведения звукового файла
       href: how-to-use-platform-invoke-to-play-a-wave-file.md
     - name: 'Пошаговое руководство. Программирование для Office (C# и Visual Basic)'
       href: walkthrough-office-programming.md
