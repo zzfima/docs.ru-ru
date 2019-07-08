@@ -6,12 +6,12 @@ ms.date: 05/01/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
-ms.openlocfilehash: 39e454d67f60280c6a43e3b80d788d873345ab77
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: e34694eedd06c0a3e3558c9137c6add9a7f802e4
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307377"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410528"
 ---
 # <a name="automated-machine-learning-with-mlnet"></a>Автоматизированное машинное обучение в ML.NET
 
@@ -26,6 +26,6 @@ ms.locfileid: "67307377"
 В настоящее время автоматизированное машинное обучение ограничено выполнением [задач](resources/tasks.md) двоичной классификации, многоклассовой классификации и регрессии. Другие задачи машинного обучения будут поддерживаться в будущих выпусках.
 
 Автоматизированное машинное обучение можно использовать тремя способами:
+1. в графическом пользовательском интерфейсе с помощью [построителя моделей ML.NET](automate-training-with-model-builder.md);
 1. в командной строке с помощью [ML.NET CLI](automate-training-with-cli.md);
 1. в приложении с помощью [API автоматизированного машинного обучения](how-to-guides/how-to-use-the-automl-api.md);
-1. в графическом пользовательском интерфейсе с помощью построителя моделей ML.NET.
