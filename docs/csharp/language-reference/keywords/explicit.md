@@ -8,53 +8,53 @@ f1_keywords:
 helpviewer_keywords:
 - explicit keyword [C#]
 ms.assetid: cfb8f42a-e411-4db2-af9b-796b05644846
-ms.openlocfilehash: 4949b88a32dae2a727e623bb6e4db0a4f9d8418c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a260c6f1ccac6e09770f1cb8f43d5d872b4b2650
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557998"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610098"
 ---
-# <a name="explicit-c-reference"></a><span data-ttu-id="8f2ee-102">explicit (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="8f2ee-102">explicit (C# Reference)</span></span>
+# <a name="explicit-c-reference"></a><span data-ttu-id="b2954-102">explicit (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="b2954-102">explicit (C# Reference)</span></span>
 
-<span data-ttu-id="8f2ee-103">Ключевое слово `explicit` объявляет оператор преобразования определяемого пользователем типа, который должен быть вызван с помощью приведения.</span><span class="sxs-lookup"><span data-stu-id="8f2ee-103">The `explicit` keyword declares a user-defined type conversion operator that must be invoked with a cast.</span></span>
+<span data-ttu-id="b2954-103">Ключевое слово `explicit` объявляет оператор преобразования определяемого пользователем типа, который должен быть вызван с помощью приведения.</span><span class="sxs-lookup"><span data-stu-id="b2954-103">The `explicit` keyword declares a user-defined type conversion operator that must be invoked with a cast.</span></span>
 
-<span data-ttu-id="8f2ee-104">В следующем примере определяется оператор, который преобразует класс `Fahrenheit` в класс `Celsius`.</span><span class="sxs-lookup"><span data-stu-id="8f2ee-104">The following example defines the operator that converts from a `Fahrenheit` class to a `Celsius` class.</span></span> <span data-ttu-id="8f2ee-105">Оператор должен быть определен в классе `Fahrenheit` или в классе `Celsius`:</span><span class="sxs-lookup"><span data-stu-id="8f2ee-105">The operator must be defined either inside a `Fahrenheit` class or a `Celsius` class:</span></span>
+<span data-ttu-id="b2954-104">В следующем примере определяется оператор, который преобразует класс `Fahrenheit` в класс `Celsius`.</span><span class="sxs-lookup"><span data-stu-id="b2954-104">The following example defines the operator that converts from a `Fahrenheit` class to a `Celsius` class.</span></span> <span data-ttu-id="b2954-105">Оператор должен быть определен в классе `Fahrenheit` или в классе `Celsius`:</span><span class="sxs-lookup"><span data-stu-id="b2954-105">The operator must be defined either inside a `Fahrenheit` class or a `Celsius` class:</span></span>
 
 [!code-csharp[csrefKeywordsConversion#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#2)]
 
-<span data-ttu-id="8f2ee-106">Вызовите определенный оператор преобразования с помощью приведения, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="8f2ee-106">You invoke the defined conversion operator with a cast, as the following example shows:</span></span>
+<span data-ttu-id="b2954-106">Вызовите определенный оператор преобразования с помощью приведения, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="b2954-106">You invoke the defined conversion operator with a cast, as the following example shows:</span></span>
 
 [!code-csharp[csrefKeywordsConversion#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#3)]
 
-<span data-ttu-id="8f2ee-107">Оператор преобразования преобразует исходный тип в конечный.</span><span class="sxs-lookup"><span data-stu-id="8f2ee-107">The conversion operator converts from a source type to a target type.</span></span> <span data-ttu-id="8f2ee-108">Исходный тип предоставляет оператор преобразования.</span><span class="sxs-lookup"><span data-stu-id="8f2ee-108">The source type provides the conversion operator.</span></span> <span data-ttu-id="8f2ee-109">В отличие от неявного преобразования, операторы явного преобразования должны вызываться с помощью приведения.</span><span class="sxs-lookup"><span data-stu-id="8f2ee-109">Unlike implicit conversion, explicit conversion operators must be invoked by means of a cast.</span></span> <span data-ttu-id="8f2ee-110">Если операция преобразования может вызвать исключения или привести к потере данных, следует пометить ее как `explicit`.</span><span class="sxs-lookup"><span data-stu-id="8f2ee-110">If a conversion operation can cause exceptions or lose information, you should mark it `explicit`.</span></span> <span data-ttu-id="8f2ee-111">Это предотвращает выполнение компилятором скрытого вызова операции преобразования с возможно непредвиденными последствиями.</span><span class="sxs-lookup"><span data-stu-id="8f2ee-111">This prevents the compiler from silently invoking the conversion operation with possibly unforeseen consequences.</span></span>
+<span data-ttu-id="b2954-107">Оператор преобразования преобразует исходный тип в конечный.</span><span class="sxs-lookup"><span data-stu-id="b2954-107">The conversion operator converts from a source type to a target type.</span></span> <span data-ttu-id="b2954-108">Исходный тип предоставляет оператор преобразования.</span><span class="sxs-lookup"><span data-stu-id="b2954-108">The source type provides the conversion operator.</span></span> <span data-ttu-id="b2954-109">В отличие от неявного преобразования, операторы явного преобразования должны вызываться с помощью приведения.</span><span class="sxs-lookup"><span data-stu-id="b2954-109">Unlike implicit conversion, explicit conversion operators must be invoked by means of a cast.</span></span> <span data-ttu-id="b2954-110">Если операция преобразования может вызвать исключения или привести к потере данных, следует пометить ее как `explicit`.</span><span class="sxs-lookup"><span data-stu-id="b2954-110">If a conversion operation can cause exceptions or lose information, you should mark it `explicit`.</span></span> <span data-ttu-id="b2954-111">Это предотвращает выполнение компилятором скрытого вызова операции преобразования с возможно непредвиденными последствиями.</span><span class="sxs-lookup"><span data-stu-id="b2954-111">This prevents the compiler from silently invoking the conversion operation with possibly unforeseen consequences.</span></span>
 
-<span data-ttu-id="8f2ee-112">Пропуск приведения приводит к ошибке времени компиляции CS0266.</span><span class="sxs-lookup"><span data-stu-id="8f2ee-112">Omitting the cast results in compile-time error CS0266.</span></span>
+<span data-ttu-id="b2954-112">Пропуск приведения приводит к ошибке времени компиляции CS0266.</span><span class="sxs-lookup"><span data-stu-id="b2954-112">Omitting the cast results in compile-time error CS0266.</span></span>
 
-<span data-ttu-id="8f2ee-113">Дополнительные сведения см. в разделе [Использование операторов преобразования](../../programming-guide/statements-expressions-operators/using-conversion-operators.md).</span><span class="sxs-lookup"><span data-stu-id="8f2ee-113">For more information, see [Using Conversion Operators](../../programming-guide/statements-expressions-operators/using-conversion-operators.md).</span></span>
+<span data-ttu-id="b2954-113">Дополнительные сведения см. в разделе [Использование операторов преобразования](../../programming-guide/statements-expressions-operators/using-conversion-operators.md).</span><span class="sxs-lookup"><span data-stu-id="b2954-113">For more information, see [Using Conversion Operators](../../programming-guide/statements-expressions-operators/using-conversion-operators.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="8f2ee-114">Пример</span><span class="sxs-lookup"><span data-stu-id="8f2ee-114">Example</span></span>
+## <a name="example"></a><span data-ttu-id="b2954-114">Пример</span><span class="sxs-lookup"><span data-stu-id="b2954-114">Example</span></span>
 
-<span data-ttu-id="8f2ee-115">В следующем примере приводятся классы `Fahrenheit` и `Celsius`, каждый из которых предоставляет явный оператор преобразования в другой класс.</span><span class="sxs-lookup"><span data-stu-id="8f2ee-115">The following example provides a `Fahrenheit` and a `Celsius` class, each of which provides an explicit conversion operator to the other class.</span></span>
+<span data-ttu-id="b2954-115">В следующем примере приводятся классы `Fahrenheit` и `Celsius`, каждый из которых предоставляет явный оператор преобразования в другой класс.</span><span class="sxs-lookup"><span data-stu-id="b2954-115">The following example provides a `Fahrenheit` and a `Celsius` class, each of which provides an explicit conversion operator to the other class.</span></span>
 
 [!code-csharp[csrefKeywordsConversion#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#1)]
 
-## <a name="example"></a><span data-ttu-id="8f2ee-116">Пример</span><span class="sxs-lookup"><span data-stu-id="8f2ee-116">Example</span></span>
+## <a name="example"></a><span data-ttu-id="b2954-116">Пример</span><span class="sxs-lookup"><span data-stu-id="b2954-116">Example</span></span>
 
-<span data-ttu-id="8f2ee-117">В следующем примере определяется структура `Digit`, представляющая одну десятичную цифру.</span><span class="sxs-lookup"><span data-stu-id="8f2ee-117">The following example defines a struct, `Digit`, that represents a single decimal digit.</span></span> <span data-ttu-id="8f2ee-118">Оператор определен для преобразования из `byte` в `Digit`, но поскольку не все байты могут быть преобразованы в `Digit`, выполняется явное преобразование.</span><span class="sxs-lookup"><span data-stu-id="8f2ee-118">An operator is defined for conversions from `byte` to `Digit`, but because not all bytes can be converted to a `Digit`, the conversion is explicit.</span></span>
+<span data-ttu-id="b2954-117">В следующем примере определяется структура `Digit`, представляющая одну десятичную цифру.</span><span class="sxs-lookup"><span data-stu-id="b2954-117">The following example defines a struct, `Digit`, that represents a single decimal digit.</span></span> <span data-ttu-id="b2954-118">Оператор определен для преобразования из `byte` в `Digit`, но поскольку не все байты могут быть преобразованы в `Digit`, выполняется явное преобразование.</span><span class="sxs-lookup"><span data-stu-id="b2954-118">An operator is defined for conversions from `byte` to `Digit`, but because not all bytes can be converted to a `Digit`, the conversion is explicit.</span></span>
 
 [!code-csharp[csrefKeywordsConversion#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#4)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="8f2ee-119">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="8f2ee-119">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="b2954-119">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="b2954-119">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="8f2ee-120">См. также</span><span class="sxs-lookup"><span data-stu-id="8f2ee-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2954-120">См. также</span><span class="sxs-lookup"><span data-stu-id="b2954-120">See also</span></span>
 
-- [<span data-ttu-id="8f2ee-121">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="8f2ee-121">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="8f2ee-122">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="8f2ee-122">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="8f2ee-123">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="8f2ee-123">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="8f2ee-124">implicit</span><span class="sxs-lookup"><span data-stu-id="8f2ee-124">implicit</span></span>](implicit.md)
-- [<span data-ttu-id="8f2ee-125">operator (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="8f2ee-125">operator (C# Reference)</span></span>](operator.md)
-- [<span data-ttu-id="8f2ee-126">Практическое руководство. Реализация определяемых пользователем преобразований между структурами</span><span class="sxs-lookup"><span data-stu-id="8f2ee-126">How to: Implement User-Defined Conversions Between Structs</span></span>](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
-- [<span data-ttu-id="8f2ee-127">Связанные пользовательские явные преобразования в C#</span><span class="sxs-lookup"><span data-stu-id="8f2ee-127">Chained user-defined explicit conversions in C#</span></span>](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)
+- [<span data-ttu-id="b2954-121">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="b2954-121">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="b2954-122">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="b2954-122">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="b2954-123">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="b2954-123">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="b2954-124">implicit</span><span class="sxs-lookup"><span data-stu-id="b2954-124">implicit</span></span>](implicit.md)
+- [<span data-ttu-id="b2954-125">Перегрузка операторов</span><span class="sxs-lookup"><span data-stu-id="b2954-125">Operator overloading</span></span>](../operators/operator-overloading.md)
+- [<span data-ttu-id="b2954-126">Практическое руководство. Реализация определяемых пользователем преобразований между структурами</span><span class="sxs-lookup"><span data-stu-id="b2954-126">How to: Implement User-Defined Conversions Between Structs</span></span>](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+- [<span data-ttu-id="b2954-127">Связанные пользовательские явные преобразования в C#</span><span class="sxs-lookup"><span data-stu-id="b2954-127">Chained user-defined explicit conversions in C#</span></span>](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)
