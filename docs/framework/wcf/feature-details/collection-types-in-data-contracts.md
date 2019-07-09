@@ -9,392 +9,407 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: 6425b0df5735c2469079e1c5a07a1ddd3be414a1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 20ed5a0dab9dfc67a242ef09f459b3d00d766593
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588815"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663443"
 ---
 # <a name="collection-types-in-data-contracts"></a>Типы коллекций в контрактах данных
-Под *коллекцией* понимается список элементов определенного типа. В .NET Framework, такие списки могут быть представлены с помощью массивов или других типов (универсальный список, универсальные <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, или <xref:System.Collections.ArrayList>). Например, в коллекции может содержаться список адресов конкретного клиента. Такие коллекции называются *коллекциями списков*, независимо от их фактического типа.  
-  
- Существует специальная форма коллекции, которая представляет собой сопоставление одного элемента ("ключа") другому ("значению"). В .NET Framework, они представлены типы например <xref:System.Collections.Hashtable> и универсальный словарь. Например, в коллекции сопоставлений город ("ключ") может быть сопоставлен его населению ("значению"). Такие коллекции называются *коллекциями-словарями*, независимо от их фактического типа.  
-  
- Коллекции подвергаются специальной обработке в модели контракта данных.  
-  
- Типы, реализующие интерфейс <xref:System.Collections.IEnumerable> , включая массивы и универсальные коллекции, распознаются как коллекции. Те из них, которые реализуют интерфейс <xref:System.Collections.IDictionary> или универсальный интерфейс <xref:System.Collections.Generic.IDictionary%602> , относятся к коллекциям-словарям; все остальные относятся к коллекциям списков.  
-  
- Дополнительные требования к типам коллекций, такие как наличие метода с названием `Add` и конструктора по умолчанию, подробно обсуждаются в следующих разделах. Этим обеспечивается возможность как сериализации, так и десериализации таких типов коллекций. Это означает, что некоторые коллекции не поддерживаются напрямую, например универсальные коллекции <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> (поскольку у них нет конструктора по умолчанию). Тем не менее, информацию о том, как обойти эти ограничения, см. далее в разделе «Использование типов интерфейса и коллекций только для чтения».  
-  
- Типы, содержащиеся в коллекциях, должны быть контрактными данными, либо сериализуемые другим способом. Дополнительные сведения см. в разделе [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
-  
- Дополнительные сведения о возможностях и что не считается действительной коллекцией, а также способа сериализации коллекций см. сведения о сериализации коллекций в разделе «Расширенные правила коллекции» этого раздела.  
-  
-## <a name="interchangeable-collections"></a>Взаимозаменяемые коллекции  
- Считается, что все коллекции-списки одного типа имеют одинаковый контракт данных (кроме случая, когда они создаются пользователем с помощью атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> как будет описано ниже в статье). Таким образом, указанные ниже контракты данных являются эквивалентными.  
-  
- [!code-csharp[c_collection_types_in_data_contracts#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#0)]
- [!code-vb[c_collection_types_in_data_contracts#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#0)]  
-  
- В итоге, от обоих контрактов данных получается код XML, подобный приведенному ниже.  
-  
-```xml  
-<PurchaseOrder>  
-    <customerName>...</customerName>  
-    <items>  
-        <Item>...</Item>  
-        <Item>...</Item>  
-        <Item>...</Item>  
-        ...  
-    </items>  
-    <comments>  
-        <string>...</string>  
-        <string>...</string>  
-        <string>...</string>  
-        ...  
-    </comments>  
-</PurchaseOrder>  
-```  
-  
- Взаимозаменяемость коллекций позволяет, например, использовать тип коллекции, оптимизированный для производительности, на сервере, а тип коллекции, предназначенный для привязки к компонентам пользовательского интерфейса - на клиенте.  
-  
- Подобно коллекциям списков, все коллекции-словари, имеющие одинаковые ключи и типы значений, рассматриваются как имеющие одинаковый контракт данных (кроме случаев настройки с помощью атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> ).  
-  
- Поскольку рассматривается эквивалентность коллекции, значение имеет только тип контракта данных, а не типы .NET. То есть, коллекция типа1 считается эквивалентной коллекции типа2, если тип1 и тип2 имеют эквивалентные контракты данных.  
-  
- Считается, что неуниверсальные коллекции имеют тот же контракт данных, что и универсальные коллекции типа `Object`. (Например, контракты данных для <xref:System.Collections.ArrayList> и универсального <xref:System.Collections.Generic.List%601>					`Object` являются одинаковыми.)  
-  
-## <a name="using-collection-interface-types-and-read-only-collections"></a>Использование типов интерфейса коллекции и коллекций только для чтения  
- Типы интерфейсов коллекции (<xref:System.Collections.IEnumerable>, <xref:System.Collections.IDictionary>, универсальный <xref:System.Collections.Generic.IDictionary%602>или интерфейсы, наследованные от данных интерфейсов) также считаются интерфейсам, имеющими контракты данных коллекций, эквивалентные контрактам данных коллекций текущих типов коллекций. Таким образом, можно объявить сериализуемый тип как тип коллекции интерфейса, и результаты будут такими же, как если бы использовался текущий тип коллекции. Например, указанные ниже контракты данных эквивалентны.  
-  
- [!code-csharp[c_collection_types_in_data_contracts#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#1)]
- [!code-vb[c_collection_types_in_data_contracts#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#1)]  
-  
- Во время сериализации, если объявленный тип является интерфейсом, текущий используемый тип экземпляра может быть любым типом, реализующим этот интерфейс. Описанные ранее ограничения (имеющие конструктор по умолчанию и метод `Add` ) не применяются. Например, можно задать адреса в Customer2 в экземпляре универсального <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> значения Address, даже несмотря на то что непосредственно объявить элемент данных универсального класса <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>невозможно.  
-  
- Во время десериализации, если объявленный тип является интерфейсом, ядро сериализации выбирает тип, который реализует объявленный интерфейс, и создается экземпляр типа. Механизм известных типов (описано в разделе [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) не влияет; Выбор типа интегрирован в WCF.  
-  
-## <a name="customizing-collection-types"></a>Настройка типов коллекции  
- Настройка типов коллекции может быть выполнена с помощью атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , имеющего несколько вариантов использования.  
-  
- Обратите внимание, что настройка типов коллекции отрицательно влияет на взаимозаменяемость коллекции, т. е. обычно рекомендуется избегать использования данного атрибута. Дополнительные сведения об этой проблеме см. в разделе «Расширенные правила коллекции» далее в этом разделе.  
-  
-### <a name="collection-data-contract-naming"></a>Именование контракта данных коллекции  
- Правила именования типов коллекций подобны правилам именования обычных типов контракта данных, как описано в разделе [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md). Однако есть некоторые различия.  
-  
-- Для пользовательского имени вместо атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> используется атрибут <xref:System.Runtime.Serialization.DataContractAttribute> . Атрибут <xref:System.Runtime.Serialization.CollectionDataContractAttribute> также имеет свойства `Name` и `Namespace` .  
-  
-- Если атрибут <xref:System.Runtime.Serialization.CollectionDataContractAttribute> не применяется, имя по умолчанию и пространство имен типов коллекций зависит от имен и пространств имен типов, входящих в коллекцию. На них не влияют имя и пространство имен самого типа коллекции. Например, см. следующие типы.  
-  
-    ```csharp  
-    public CustomerList1 : Collection<string> {}  
-    public StringList1 : Collection<string> {}  
-    ```  
-  
- Имя контракта данных обоих типов "ArrayOfstring", а не "CustomerList1" или "StringList1". Это значит, что при сериализации любого из данных типов на корневом уровне будет получен код XML, подобный приведенному ниже.  
-  
-```xml  
-<ArrayOfstring>  
-    <string>...</string>  
-    <string>...</string>  
-    <string>...</string>  
-    ...  
-</ArrayOfstring>  
-```  
-  
- Правило именования выбрано таким образом, чтобы любой не настроенный пользователем тип, являющийся списком строк, имел одинаковый контракт данных и представление XML. Это делает возможной взаимозаменяемость коллекции. В данном примере CustomerList1 и StringList1 полностью взаимозаменяемы.  
-  
- Однако при применении атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> коллекция становится настроенным пользователем контрактом данных коллекции, даже если к атрибуту не применяются свойства. Теперь имя и пространство имен контракта данных коллекции зависят от типа самой коллекции. Например, см. следующий тип.  
-  
- [!code-csharp[c_collection_types_in_data_contracts#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#2)]
- [!code-vb[c_collection_types_in_data_contracts#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#2)]  
-  
- При сериализации получаемый код XML подобен приведенному ниже.  
-  
-```xml  
-<CustomerList2>  
-    <string>...</string>  
-    <string>...</string>  
-    <string>...</string>  
-    ...  
-</CustomerList2>  
-```  
-  
- Необходимо обратить внимание, что полученный XML уже не эквивалентен XML-представлению ненастроенных типов.  
-  
-- Для дополнительной настройки можно использовать свойства `Name` и `Namespace` . См. приведенный ниже класс.  
-  
-     [!code-csharp[c_collection_types_in_data_contracts#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#3)]
-     [!code-vb[c_collection_types_in_data_contracts#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#3)]  
-  
- Получаемый код XML подобен приведенному ниже.  
-  
-```xml  
-<cust_list>  
-    <string>...</string>  
-    <string>...</string>  
-    <string>...</string>  
-    ...  
-</cust_list>  
-```  
-  
- Дополнительные сведения см. в разделе «Расширенные правила коллекции» далее в этом разделе.  
-  
-### <a name="customizing-the-repeating-element-name-in-list-collections"></a>Настройка имени повторяющегося элемента в коллекциях списков  
- Коллекции списков содержат повторяющиеся записи. Обычно каждая повторяющаяся запись представляется как элемент с именем, соответствующим имени контракта данных типа, содержащегося в коллекции.  
-  
- В примерах `CustomerList` коллекции содержали строки. Имя контракта данных для типа-примитива строки является «string», поэтому повторяющимся элементом был "\<строка >».  
-  
- Однако при применении свойства <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName%2A> к атрибуту <xref:System.Runtime.Serialization.CollectionDataContractAttribute> данное имя повторяющегося элемента может быть настроено. Например, см. следующий тип.  
-  
- [!code-csharp[c_collection_types_in_data_contracts#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#4)]
- [!code-vb[c_collection_types_in_data_contracts#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#4)]  
-  
- Получаемый код XML подобен приведенному ниже.  
-  
-```xml  
-<CustomerList4>  
-    <customer>...</customer>  
-    <customer>...</customer>  
-    <customer>...</customer>  
-    ...  
-</CustomerList4>  
-```  
-  
- Пространство имен повторяющегося элемента всегда такое же, как пространство имен коллекции контракта данных, которое может быть настроено с помощью свойства `Namespace` , как было описано выше.  
-  
-### <a name="customizing-dictionary-collections"></a>Настройка коллекций-словарей  
- Коллекции-словари в основном являются списками записей, где каждая запись имеет ключ с последующим значением. Как и с обычными списками, имя элемента, которое соответствует повторяющемуся элементу, можно изменить с помощью свойства <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName%2A> .  
-  
- Кроме того, можно изменить имена элементов, представляющих ключ и значение, с помощью свойств <xref:System.Runtime.Serialization.CollectionDataContractAttribute.KeyName%2A> и <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ValueName%2A> . Пространства имен для данных элементов такие же, как пространство имен контракта данных коллекции.  
-  
- Например, см. следующий тип.  
-  
- [!code-csharp[c_collection_types_in_data_contracts#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#5)]
- [!code-vb[c_collection_types_in_data_contracts#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#5)]  
-  
- При сериализации получаемый код XML подобен приведенному ниже.  
-  
-```xml  
-<CountriesOrRegionsWithCapitals>  
-    <entry>  
-        <countryorregion>USA</countryorregion>  
-        <capital>Washington</capital>  
-    </entry>  
-    <entry>  
-        <countryorregion>France</countryorregion>  
-        <capital>Paris</capital>  
-    </entry>  
-    ...  
-</CountriesOrRegionsWithCapitals>  
-```  
-  
- Дополнительные сведения о коллекции-словари см. в разделе «Расширенные правила коллекции» далее в этом разделе.  
-  
-## <a name="collections-and-known-types"></a>Коллекции и известные типы  
- При полиморфном использовании вместо других коллекций или интерфейсов коллекций не нужно добавлять типы коллекций в известные типы. Например, при объявлении элемента данных типа <xref:System.Collections.IEnumerable> и использовании его для отправки экземпляра <xref:System.Collections.ArrayList>не нужно добавлять <xref:System.Collections.ArrayList> в известные типы.  
-  
- При полиморфном использовании вместо типов, не являющихся коллекциями, коллекции должны быть добавлены в известные типы. Например, при объявлении члена данных типа `Object` и использовании его для отправки экземпляра <xref:System.Collections.ArrayList>не нужно добавлять <xref:System.Collections.ArrayList> в известные типы.  
-  
- Это не позволяет сериализовать какую-либо эквивалентную коллекцию полиморфно. Например, добавление <xref:System.Collections.ArrayList> в список известных типов в предыдущем примере не позволяет присвоить класс `Array of Object` , несмотря на то что он имеет эквивалентный контракт данных. Такое поведение не отличается от обычного поведения известных типов при сериализации типов, не являющихся коллекциями, но в случае с коллекциями особенно важно понимать это, поскольку эквивалентность коллекций является очень распространенным свойством.  
-  
- Во время сериализации только один тип может быть известен в данной области для данного контракта данных, а все эквивалентные коллекции имеют те же контракты данных. Это означает, что в предыдущем примере нельзя добавить одновременно <xref:System.Collections.ArrayList> и `Array of Object` в известные типы в той же области. И вновь, такое поведение эквивалентно поведению известных типов для типов, не являющихся коллекциями, но особенно важно понимать этот принцип при работе с коллекциями.  
-  
- Известные типы также могут требоваться для содержимого коллекций. Например, если <xref:System.Collections.ArrayList> в настоящий момент содержит экземпляры `Type1` и `Type2`, оба данных типа должны быть добавлены в известные типы.  
-  
- В следующем примере показан правильно сконструированный с помощью коллекций и известных типов граф объекта. Пример несколько надуманный, поскольку в настоящем приложении следующие члены данных обычно не определяются как `Object`и поэтому не имеют каких-либо проблем с известным типом/полиморфизмом.  
-  
- [!code-csharp[c_collection_types_in_data_contracts#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#6)]
- [!code-vb[c_collection_types_in_data_contracts#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#6)]  
-  
- Во время десериализации, если объявленный тип является коллекцией, экземпляр объявленного типа создается независимо от типа, который был фактически отправлен. Если объявленный тип является интерфейсом коллекции, десериализатор выбирает тип для создания экземпляра независимо от известных типов.  
-  
- Кроме того, если объявленный тип не является типом коллекции, но при десериализации отправляется тип коллекции, совпадающий тип коллекции извлекается из списка известных типов. Типы интерфейса коллекций можно добавить в список известных типов при десериализации. В таком случае ядро десериализации повторно выбирает тип для создания экземпляра.  
-  
-## <a name="collections-and-the-netdatacontractserializer-class"></a>Коллекции и класс NetDataContractSerializer  
- При использовании класса <xref:System.Runtime.Serialization.NetDataContractSerializer> ненастроенные типы коллекций (без атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> ), не являющиеся массивами, теряют свое особое значение.  
-  
- Ненастроенные типы коллекций, отмеченные атрибутом <xref:System.SerializableAttribute> , все равно могут быть сериализованы с помощью класса <xref:System.Runtime.Serialization.NetDataContractSerializer> в соответствии с атрибутом <xref:System.SerializableAttribute> или правилами интерфейса <xref:System.Runtime.Serialization.ISerializable> .  
-  
- Настроенные типы коллекций, интерфейсы коллекций и массивы даже при использовании класса <xref:System.Runtime.Serialization.NetDataContractSerializer> обрабатываются как коллекции.  
-  
-## <a name="collections-and-schema"></a>Коллекции и схема  
- Все эквивалентные коллекции имеют одинаковое представление в схеме на языке определения схемы XML (XSD). По этой причине, в коде, созданном клиентом, и в коде, созданном на сервере, тип коллекции обычно отличается. Например, сервер может использовать контракт данных с универсальным <xref:System.Collections.Generic.List%601> целочисленного элемента данных, а в коде, созданном клиентом, тот же элемент данных может стать массивом целых чисел.  
-  
- Коллекции-словари отмечаются заметки схемы относящиеся конкретно к WCF, которые указывают, что они являются словарями; в противном случае они будут отличаться от простых списков, содержащих записи с ключом и значением. Подробное описание представлений коллекций в схеме контракта данных см. в статье [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
-  
- По умолчанию в импортированном коде типы для ненастроенных коллекций не создаются. Элементы данных коллекций списков импортируются как массивы, а элементы данных коллекций-словарей импортируются как универсальный словарь.  
-  
- Тем не менее, для настроенных коллекций создаются отдельные типы, отмеченные атрибутом <xref:System.Runtime.Serialization.CollectionDataContractAttribute> . (Тип настроенной коллекции в схеме является типом, который не использует пространство имен, имя, имя повторяющегося элемента или имена ключа/значения элемента по умолчанию). Данные типы являются пустыми типами, наследованными от универсального <xref:System.Collections.Generic.List%601> для типов списков и универсальным словарем для типов словаря.  
-  
- Например, на сервере могут быть следующие типы.  
-  
- [!code-csharp[c_collection_types_in_data_contracts#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#7)]
- [!code-vb[c_collection_types_in_data_contracts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#7)]  
-  
- При экспорте схемы и ее импорте обратно, созданный клиентом код подобен следующему коду (для простоты чтения вместо свойств показаны поля).  
-  
- [!code-csharp[c_collection_types_in_data_contracts#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#8)]
- [!code-vb[c_collection_types_in_data_contracts#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#8)]  
-  
- Возможно, пользователь захочет использовать в созданном коде другие типы, отличные от типов по умолчанию. Например, чтобы облегчить привязку элементов данных к компонентам интерфейса, пользователь может использовать для элементов данных универсальный класс <xref:System.ComponentModel.BindingList%601> вместо обычных массивов.  
-  
- Чтобы выбрать тип коллекции для создания, передайте во время импорта схемы желаемый список типов коллекции в свойство <xref:System.Runtime.Serialization.ImportOptions.ReferencedCollectionTypes%2A> объекта <xref:System.Runtime.Serialization.ImportOptions> . Данные типы называются *ссылочными типами коллекций*.  
-  
- При создании ссылки на них, универсальные типы должны быть либо полностью открытыми универсальными шаблонами, либо полностью закрытыми универсальными шаблонами.  
-  
+
+Под *коллекцией* понимается список элементов определенного типа. В .NET Framework, такие списки могут быть представлены с помощью массивов или других типов (универсальный список, универсальные <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, или <xref:System.Collections.ArrayList>). Например, в коллекции может содержаться список адресов конкретного клиента. Такие коллекции называются *коллекциями списков*, независимо от их фактического типа.
+
+Существует специальная форма коллекции, которая представляет собой сопоставление одного элемента ("ключа") другому ("значению"). В .NET Framework, они представлены типы например <xref:System.Collections.Hashtable> и универсальный словарь. Например, в коллекции сопоставлений город ("ключ") может быть сопоставлен его населению ("значению"). Такие коллекции называются *коллекциями-словарями*, независимо от их фактического типа.
+
+Коллекции подвергаются специальной обработке в модели контракта данных.
+
+Типы, реализующие интерфейс <xref:System.Collections.IEnumerable> , включая массивы и универсальные коллекции, распознаются как коллекции. Те из них, которые реализуют интерфейс <xref:System.Collections.IDictionary> или универсальный интерфейс <xref:System.Collections.Generic.IDictionary%602> , относятся к коллекциям-словарям; все остальные относятся к коллекциям списков.
+
+Дополнительные требования к типам коллекций, такие как наличие метода с названием `Add` и конструктора по умолчанию, подробно обсуждаются в следующих разделах. Этим обеспечивается возможность как сериализации, так и десериализации таких типов коллекций. Это означает, что некоторые коллекции не поддерживаются напрямую, например универсальные коллекции <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> (поскольку у них нет конструктора по умолчанию). Тем не менее, информацию о том, как обойти эти ограничения, см. далее в разделе «Использование типов интерфейса и коллекций только для чтения».
+
+Типы, содержащиеся в коллекциях, должны быть контрактными данными, либо сериализуемые другим способом. Дополнительные сведения см. в разделе [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).
+
+Дополнительные сведения о возможностях и что не считается действительной коллекцией, а также способа сериализации коллекций см. сведения о сериализации коллекций в разделе «Расширенные правила коллекции» этого раздела.
+
+## <a name="interchangeable-collections"></a>Взаимозаменяемые коллекции
+
+Считается, что все коллекции-списки одного типа имеют одинаковый контракт данных (кроме случая, когда они создаются пользователем с помощью атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> как будет описано ниже в статье). Таким образом, указанные ниже контракты данных являются эквивалентными.
+
+[!code-csharp[c_collection_types_in_data_contracts#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#0)]
+[!code-vb[c_collection_types_in_data_contracts#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#0)]
+
+В итоге, от обоих контрактов данных получается код XML, подобный приведенному ниже.
+
+```xml
+<PurchaseOrder>
+    <customerName>...</customerName>
+    <items>
+        <Item>...</Item>
+        <Item>...</Item>
+        <Item>...</Item>
+        ...
+    </items>
+    <comments>
+        <string>...</string>
+        <string>...</string>
+        <string>...</string>
+        ...
+    </comments>
+</PurchaseOrder>
+```
+
+Взаимозаменяемость коллекций позволяет, например, использовать тип коллекции, оптимизированный для производительности, на сервере, а тип коллекции, предназначенный для привязки к компонентам пользовательского интерфейса - на клиенте.
+
+Подобно коллекциям списков, все коллекции-словари, имеющие одинаковые ключи и типы значений, рассматриваются как имеющие одинаковый контракт данных (кроме случаев настройки с помощью атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> ).
+
+Поскольку рассматривается эквивалентность коллекции, значение имеет только тип контракта данных, а не типы .NET. То есть, коллекция типа1 считается эквивалентной коллекции типа2, если тип1 и тип2 имеют эквивалентные контракты данных.
+
+Считается, что неуниверсальные коллекции имеют тот же контракт данных, что и универсальные коллекции типа `Object`. (Например, контракты данных для <xref:System.Collections.ArrayList> и универсального <xref:System.Collections.Generic.List%601>					`Object` являются одинаковыми.)
+
+## <a name="using-collection-interface-types-and-read-only-collections"></a>Использование типов интерфейса коллекции и коллекций только для чтения
+
+Типы интерфейсов коллекции (<xref:System.Collections.IEnumerable>, <xref:System.Collections.IDictionary>, универсальный <xref:System.Collections.Generic.IDictionary%602>или интерфейсы, наследованные от данных интерфейсов) также считаются интерфейсам, имеющими контракты данных коллекций, эквивалентные контрактам данных коллекций текущих типов коллекций. Таким образом, можно объявить сериализуемый тип как тип коллекции интерфейса, и результаты будут такими же, как если бы использовался текущий тип коллекции. Например, указанные ниже контракты данных эквивалентны.
+
+[!code-csharp[c_collection_types_in_data_contracts#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#1)]
+[!code-vb[c_collection_types_in_data_contracts#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#1)]
+
+Во время сериализации, если объявленный тип является интерфейсом, текущий используемый тип экземпляра может быть любым типом, реализующим этот интерфейс. Описанные ранее ограничения (имеющие конструктор по умолчанию и метод `Add` ) не применяются. Например, можно задать адреса в Customer2 в экземпляре универсального <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> значения Address, даже несмотря на то что непосредственно объявить элемент данных универсального класса <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>невозможно.
+
+Во время десериализации, если объявленный тип является интерфейсом, ядро сериализации выбирает тип, который реализует объявленный интерфейс, и создается экземпляр типа. Механизм известных типов (описано в разделе [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) не влияет; Выбор типа интегрирован в WCF.
+
+## <a name="customizing-collection-types"></a>Настройка типов коллекции
+
+Настройка типов коллекции может быть выполнена с помощью атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , имеющего несколько вариантов использования.
+
+Обратите внимание, что настройка типов коллекции отрицательно влияет на взаимозаменяемость коллекции, т. е. обычно рекомендуется избегать использования данного атрибута. Дополнительные сведения об этой проблеме см. в разделе «Расширенные правила коллекции» далее в этом разделе.
+
+### <a name="collection-data-contract-naming"></a>Именование контракта данных коллекции
+
+Правила именования типов коллекций подобны правилам именования обычных типов контракта данных, как описано в разделе [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md). Однако есть некоторые различия.
+
+- Для пользовательского имени вместо атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> используется атрибут <xref:System.Runtime.Serialization.DataContractAttribute> . Атрибут <xref:System.Runtime.Serialization.CollectionDataContractAttribute> также имеет свойства `Name` и `Namespace` .
+
+- Если атрибут <xref:System.Runtime.Serialization.CollectionDataContractAttribute> не применяется, имя по умолчанию и пространство имен типов коллекций зависит от имен и пространств имен типов, входящих в коллекцию. На них не влияют имя и пространство имен самого типа коллекции. Например, см. следующие типы.
+
+  ```csharp
+  public CustomerList1 : Collection<string> {}
+  public StringList1 : Collection<string> {}
+  ```
+
+Имя контракта данных обоих типов "ArrayOfstring", а не "CustomerList1" или "StringList1". Это значит, что при сериализации любого из данных типов на корневом уровне будет получен код XML, подобный приведенному ниже.
+
+```xml
+<ArrayOfstring>
+    <string>...</string>
+    <string>...</string>
+    <string>...</string>
+    ...
+</ArrayOfstring>
+```
+
+Правило именования выбрано таким образом, чтобы любой не настроенный пользователем тип, являющийся списком строк, имел одинаковый контракт данных и представление XML. Это делает возможной взаимозаменяемость коллекции. В данном примере CustomerList1 и StringList1 полностью взаимозаменяемы.
+
+Однако при применении атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> коллекция становится настроенным пользователем контрактом данных коллекции, даже если к атрибуту не применяются свойства. Теперь имя и пространство имен контракта данных коллекции зависят от типа самой коллекции. Например, см. следующий тип.
+
+[!code-csharp[c_collection_types_in_data_contracts#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#2)]
+[!code-vb[c_collection_types_in_data_contracts#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#2)]
+
+При сериализации получаемый код XML подобен приведенному ниже.
+
+```xml
+<CustomerList2>
+    <string>...</string>
+    <string>...</string>
+    <string>...</string>
+    ...
+</CustomerList2>
+```
+
+Необходимо обратить внимание, что полученный XML уже не эквивалентен XML-представлению ненастроенных типов.
+
+- Для дополнительной настройки можно использовать свойства `Name` и `Namespace` . См. приведенный ниже класс.
+
+  [!code-csharp[c_collection_types_in_data_contracts#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#3)]
+  [!code-vb[c_collection_types_in_data_contracts#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#3)]
+
+Получаемый код XML подобен приведенному ниже.
+
+```xml
+<cust_list>
+    <string>...</string>
+    <string>...</string>
+    <string>...</string>
+    ...
+</cust_list>
+```
+
+Дополнительные сведения см. в разделе «Расширенные правила коллекции» далее в этом разделе.
+
+### <a name="customizing-the-repeating-element-name-in-list-collections"></a>Настройка имени повторяющегося элемента в коллекциях списков
+
+Коллекции списков содержат повторяющиеся записи. Обычно каждая повторяющаяся запись представляется как элемент с именем, соответствующим имени контракта данных типа, содержащегося в коллекции.
+
+В примерах `CustomerList` коллекции содержали строки. Имя контракта данных для типа-примитива строки является «string», поэтому повторяющимся элементом был "\<строка >».
+
+Однако при применении свойства <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName%2A> к атрибуту <xref:System.Runtime.Serialization.CollectionDataContractAttribute> данное имя повторяющегося элемента может быть настроено. Например, см. следующий тип.
+
+[!code-csharp[c_collection_types_in_data_contracts#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#4)]
+[!code-vb[c_collection_types_in_data_contracts#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#4)]
+
+Получаемый код XML подобен приведенному ниже.
+
+```xml
+<CustomerList4>
+    <customer>...</customer>
+    <customer>...</customer>
+    <customer>...</customer>
+    ...
+</CustomerList4>
+```
+
+Пространство имен повторяющегося элемента всегда такое же, как пространство имен коллекции контракта данных, которое может быть настроено с помощью свойства `Namespace` , как было описано выше.
+
+### <a name="customizing-dictionary-collections"></a>Настройка коллекций-словарей
+
+Коллекции-словари в основном являются списками записей, где каждая запись имеет ключ с последующим значением. Как и с обычными списками, имя элемента, которое соответствует повторяющемуся элементу, можно изменить с помощью свойства <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ItemName%2A> .
+
+Кроме того, можно изменить имена элементов, представляющих ключ и значение, с помощью свойств <xref:System.Runtime.Serialization.CollectionDataContractAttribute.KeyName%2A> и <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ValueName%2A> . Пространства имен для данных элементов такие же, как пространство имен контракта данных коллекции.
+
+Например, см. следующий тип.
+
+[!code-csharp[c_collection_types_in_data_contracts#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#5)]
+[!code-vb[c_collection_types_in_data_contracts#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#5)]
+
+При сериализации получаемый код XML подобен приведенному ниже.
+
+```xml
+<CountriesOrRegionsWithCapitals>
+    <entry>
+        <countryorregion>USA</countryorregion>
+        <capital>Washington</capital>
+    </entry>
+    <entry>
+        <countryorregion>France</countryorregion>
+        <capital>Paris</capital>
+    </entry>
+    ...
+</CountriesOrRegionsWithCapitals>
+```
+
+Дополнительные сведения о коллекции-словари см. в разделе «Расширенные правила коллекции» далее в этом разделе.
+
+## <a name="collections-and-known-types"></a>Коллекции и известные типы
+
+При полиморфном использовании вместо других коллекций или интерфейсов коллекций не нужно добавлять типы коллекций в известные типы. Например, при объявлении элемента данных типа <xref:System.Collections.IEnumerable> и использовании его для отправки экземпляра <xref:System.Collections.ArrayList>не нужно добавлять <xref:System.Collections.ArrayList> в известные типы.
+
+При полиморфном использовании вместо типов, не являющихся коллекциями, коллекции должны быть добавлены в известные типы. Например, при объявлении члена данных типа `Object` и использовании его для отправки экземпляра <xref:System.Collections.ArrayList>не нужно добавлять <xref:System.Collections.ArrayList> в известные типы.
+
+Это не позволяет сериализовать какую-либо эквивалентную коллекцию полиморфно. Например, добавление <xref:System.Collections.ArrayList> в список известных типов в предыдущем примере не позволяет присвоить класс `Array of Object` , несмотря на то что он имеет эквивалентный контракт данных. Такое поведение не отличается от обычного поведения известных типов при сериализации типов, не являющихся коллекциями, но в случае с коллекциями особенно важно понимать это, поскольку эквивалентность коллекций является очень распространенным свойством.
+
+Во время сериализации только один тип может быть известен в данной области для данного контракта данных, а все эквивалентные коллекции имеют те же контракты данных. Это означает, что в предыдущем примере нельзя добавить одновременно <xref:System.Collections.ArrayList> и `Array of Object` в известные типы в той же области. И вновь, такое поведение эквивалентно поведению известных типов для типов, не являющихся коллекциями, но особенно важно понимать этот принцип при работе с коллекциями.
+
+Известные типы также могут требоваться для содержимого коллекций. Например, если <xref:System.Collections.ArrayList> в настоящий момент содержит экземпляры `Type1` и `Type2`, оба данных типа должны быть добавлены в известные типы.
+
+В следующем примере показан правильно сконструированный с помощью коллекций и известных типов граф объекта. Пример несколько надуманный, поскольку в настоящем приложении следующие члены данных обычно не определяются как `Object`и поэтому не имеют каких-либо проблем с известным типом/полиморфизмом.
+
+[!code-csharp[c_collection_types_in_data_contracts#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#6)]
+[!code-vb[c_collection_types_in_data_contracts#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#6)]
+
+Во время десериализации, если объявленный тип является коллекцией, экземпляр объявленного типа создается независимо от типа, который был фактически отправлен. Если объявленный тип является интерфейсом коллекции, десериализатор выбирает тип для создания экземпляра независимо от известных типов.
+
+Кроме того, если объявленный тип не является типом коллекции, но при десериализации отправляется тип коллекции, совпадающий тип коллекции извлекается из списка известных типов. Типы интерфейса коллекций можно добавить в список известных типов при десериализации. В таком случае ядро десериализации повторно выбирает тип для создания экземпляра.
+
+## <a name="collections-and-the-netdatacontractserializer-class"></a>Коллекции и класс NetDataContractSerializer
+
+При использовании класса <xref:System.Runtime.Serialization.NetDataContractSerializer> ненастроенные типы коллекций (без атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> ), не являющиеся массивами, теряют свое особое значение.
+
+Ненастроенные типы коллекций, отмеченные атрибутом <xref:System.SerializableAttribute> , все равно могут быть сериализованы с помощью класса <xref:System.Runtime.Serialization.NetDataContractSerializer> в соответствии с атрибутом <xref:System.SerializableAttribute> или правилами интерфейса <xref:System.Runtime.Serialization.ISerializable> .
+
+Настроенные типы коллекций, интерфейсы коллекций и массивы даже при использовании класса <xref:System.Runtime.Serialization.NetDataContractSerializer> обрабатываются как коллекции.
+
+## <a name="collections-and-schema"></a>Коллекции и схема
+
+Все эквивалентные коллекции имеют одинаковое представление в схеме на языке определения схемы XML (XSD). По этой причине, в коде, созданном клиентом, и в коде, созданном на сервере, тип коллекции обычно отличается. Например, сервер может использовать контракт данных с универсальным <xref:System.Collections.Generic.List%601> целочисленного элемента данных, а в коде, созданном клиентом, тот же элемент данных может стать массивом целых чисел.
+
+Коллекции-словари отмечаются заметки схемы относящиеся конкретно к WCF, которые указывают, что они являются словарями; в противном случае они будут отличаться от простых списков, содержащих записи с ключом и значением. Подробное описание представлений коллекций в схеме контракта данных см. в статье [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).
+
+По умолчанию в импортированном коде типы для ненастроенных коллекций не создаются. Элементы данных коллекций списков импортируются как массивы, а элементы данных коллекций-словарей импортируются как универсальный словарь.
+
+Тем не менее, для настроенных коллекций создаются отдельные типы, отмеченные атрибутом <xref:System.Runtime.Serialization.CollectionDataContractAttribute> . (Тип настроенной коллекции в схеме является типом, который не использует пространство имен, имя, имя повторяющегося элемента или имена ключа/значения элемента по умолчанию). Данные типы являются пустыми типами, наследованными от универсального <xref:System.Collections.Generic.List%601> для типов списков и универсальным словарем для типов словаря.
+
+Например, на сервере могут быть следующие типы.
+
+[!code-csharp[c_collection_types_in_data_contracts#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#7)]
+[!code-vb[c_collection_types_in_data_contracts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#7)]
+
+При экспорте схемы и ее импорте обратно, созданный клиентом код подобен следующему коду (для простоты чтения вместо свойств показаны поля).
+
+[!code-csharp[c_collection_types_in_data_contracts#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#8)]
+[!code-vb[c_collection_types_in_data_contracts#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#8)]
+
+Возможно, пользователь захочет использовать в созданном коде другие типы, отличные от типов по умолчанию. Например, чтобы облегчить привязку элементов данных к компонентам интерфейса, пользователь может использовать для элементов данных универсальный класс <xref:System.ComponentModel.BindingList%601> вместо обычных массивов.
+
+Чтобы выбрать тип коллекции для создания, передайте во время импорта схемы желаемый список типов коллекции в свойство <xref:System.Runtime.Serialization.ImportOptions.ReferencedCollectionTypes%2A> объекта <xref:System.Runtime.Serialization.ImportOptions> . Данные типы называются *ссылочными типами коллекций*.
+
+При создании ссылки на них, универсальные типы должны быть либо полностью открытыми универсальными шаблонами, либо полностью закрытыми универсальными шаблонами.
+
 > [!NOTE]
->  При использовании средства Svcutil.exe данная ссылка может быть выполнена с помощью параметра командной строки **/collectionType** (сокращенная форма: **/ct**). Следует помнить, что нужно также указать сборку для ссылочных типов коллекций с помощью параметра **/reference** (сокращенная форма: **/r**). Если тип является универсальным, после имени типа должен следовать обратный апостроф и число, указывающее количество универсальных параметров. Обратного апострофа (\`) не следует путать с символ одинарной кавычки ('). Несколько ссылочных типов коллекций можно указывать несколько раз с помощью параметра **/collectionType** .  
-  
- Например, чтобы все списки были импортированы как универсальные <xref:System.Collections.Generic.List%601>.  
-  
-```console  
-svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\System.dll /ct:System.Collections.Generic.List`1  
-```  
-  
- При импорте какой-либо коллекции сканируется список коллекций ссылочного типа, и наиболее подходящая коллекция, если таковая найдена, используется как элемент данных (для ненастроенных коллекций) или как базовый тип для получения производных (для настроенных коллекций). Словари подходят только к словарям, а списки подходят только к спискам.  
-  
- Например, при добавлении универсальных классов <xref:System.ComponentModel.BindingList%601> и <xref:System.Collections.Hashtable> в список ссылочных типов созданный клиентом код для предыдущего примера будет подобен следующему.  
-  
- [!code-csharp[c_collection_types_in_data_contracts#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#9)]
- [!code-vb[c_collection_types_in_data_contracts#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#9)]  
-  
- Типы интерфейсов коллекции можно указать как коллекции ссылочного типа, но нельзя указать недействительные типы коллекций (такие как коллекции без метода `Add` или открытого конструктора).  
-  
- Закрытый универсальный шаблон считается наиболее подходящим. (Неуниверсальные типы считаются эквивалентными закрытым универсальным `Object`). Например, если типы универсальных <xref:System.Collections.Generic.List%601> , относящихся к <xref:System.DateTime>, универсального <xref:System.ComponentModel.BindingList%601> (открытый универсальный шаблон) и <xref:System.Collections.ArrayList> являются коллекциями ссылочного типа, создается следующий код.  
-  
- [!code-csharp[c_collection_types_in_data_contracts#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#10)]
- [!code-vb[c_collection_types_in_data_contracts#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#10)]  
-  
- При работе с коллекциями списков поддерживаются только указанные в следующей таблице случаи.  
-  
-|Ссылочный тип|Интерфейс, реализованный ссылочным типом|Пример|Тип обрабатывается как:|  
-|---------------------|----------------------------------------------|-------------|----------------------|  
-|Неуниверсальный или закрытый универсальный (любое количество параметров)|неуниверсальный|`MyType : IList`<br /><br /> или<br /><br /> `MyType<T> : IList`<br /><br /> где T= `int`|Закрытый универсальный тип `Object` (например, `IList<object>`)|  
-|Неуниверсальный или закрытый универсальный (любое количество параметров, которое не обязательно совпадает с типом коллекции)|Закрытый универсальный тип|`MyType : IList<string>`<br /><br /> или<br /><br /> `MyType<T> : IList<string>` где T=`int`|Закрытый универсальный тип (например, `IList<string>`)|  
-|Закрытый универсальный тип с любым количеством параметров|Открытый универсальный тип с использованием одного из параметров типа|`MyType<T,U,V> : IList<U>`<br /><br /> где T=`int`, U=`string`, V=`bool`|Закрытый универсальный тип (например, `IList<string>`)|  
-|Открытый универсальный тип с одним параметром|Открытый универсальный тип с использованием параметра типа|`MyType<T> : IList<T>`, T является открытым|Открытый универсальный тип (например, `IList<T>`)|  
-  
- Если тип реализует несколько интерфейсов коллекции списка, применяются следующие ограничения.  
-  
-- Если тип несколько раз для разных типов реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601> (или наследованные от него интерфейсы), тип не рассматривается как действительная коллекция ссылочного типа и не учитываются. Это верно, даже если некоторые реализации недействительны или используют открытые универсальные шаблоны. Например, тип, реализующий универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601> , относящийся к `int` , и универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601> , относящийся к T, никогда не будет использован как коллекция ссылочного типа `int` или другого типа, независимо от того, имеется ли в типе метод `Add` , принимающий метод `int` , или `Add` , принимающий параметр типа T, или оба.  
-  
-- Если тип реализует универсальный интерфейс коллекции, а так же интерфейс <xref:System.Collections.IList>, тип никогда не будет использован как коллекция ссылочного типа, кроме случая, когда интерфейс универсальной коллекции является закрытым универсальным шаблоном типа <xref:System.Object>.  
-  
- При работе с коллекциями-словарями поддерживаются только указанные в следующей таблице случаи.  
-  
-|Ссылочный тип|Интерфейс, реализованный ссылочным типом|Пример|Тип обрабатывается как|  
-|---------------------|----------------------------------------------|-------------|---------------------|  
-|Неуниверсальный или закрытый универсальный (любое количество параметров)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> или<br /><br /> `MyType<T> : IDictionary` где T=`int`|Закрытый универсальный тип `IDictionary<object,object>`|  
-|Закрытый универсальный тип (любое количество параметров)|<xref:System.Collections.Generic.IDictionary%602>, закрытый|`MyType<T> : IDictionary<string, bool>` где T=`int`|Закрытый универсальный тип (например, `IDIctionary<string,bool>`)|  
-|Закрытый универсальный тип (любое количество параметров)|Универсальный <xref:System.Collections.Generic.IDictionary%602>, ключ или значение закрыто, другой (ключ или значение) открыт и использует один из параметров типа.|`MyType<T,U,V> : IDictionary<string,V>` , где T=`int`, U=`float`, V=`bool`<br /><br /> или<br /><br /> `MyType<Z> : IDictionary<Z,bool>` , где Z=`string`|Закрытый универсальный тип (например, `IDictionary<string,bool>`)|  
-|Закрытый универсальный тип (любое количество параметров)|Универсальный <xref:System.Collections.Generic.IDictionary%602>, ключ и значение открыты, и оба используют один из параметров типа|`MyType<T,U,V> : IDictionary<V,U>` где T=`int`, U=`bool`, V=`string`|Закрытый универсальный тип (например, `IDictionary<string,bool>`)|  
-|Открытый универсальный тип (два параметра)|Универсальный <xref:System.Collections.Generic.IDictionary%602>, открытый, использует оба типа универсальных параметров в порядке их появления|`MyType<K,V> : IDictionary<K,V>`, K и V, оба открыты|Открытый универсальный тип (например, `IDictionary<K,V>`)|  
-  
- Если тип реализует и интерфейс <xref:System.Collections.IDictionary> , и универсальный интерфейс <xref:System.Collections.Generic.IDictionary%602>, рассматривается только универсальный <xref:System.Collections.Generic.IDictionary%602> .  
-  
- Ссылка на частично универсальные типы не поддерживается.  
-  
- Дубликаты не разрешены. Например, нельзя добавить одновременно универсальный класс <xref:System.Collections.Generic.List%601> типа `Integer` и универсальную коллекцию `Integer` в <xref:System.Runtime.Serialization.ImportOptions.ReferencedCollectionTypes%2A>, поскольку в таком случае будет невозможно определить, какой из них использовать при обнаружении списка целых чисел в схеме. Дубликаты обнаруживаются, только если в схеме есть тип, указывающий на проблему дубликатов. Например, если импортируемая схема не содержит список целых чисел, допускается иметь в <xref:System.Collections.Generic.List%601> как универсальный `Integer` типа `Integer` , так и универсальную коллекцию <xref:System.Runtime.Serialization.ImportOptions.ReferencedCollectionTypes%2A>, но ни тот, ни другой не будут действовать.  
-  
-## <a name="advanced-collection-rules"></a>Расширенные правила коллекции  
-  
-### <a name="serializing-collections"></a>Сериализация коллекций  
- Далее приводится список правил сериализации коллекций.  
-  
-- Разрешено комбинирование типов коллекции (наличие коллекций коллекций). Неровные массивы обрабатываются как коллекции коллекций. Многомерные массивы не поддерживаются.  
-  
-- Массивы байтов и массивы <xref:System.Xml.XmlNode> являются специальными типами массивов, которые обрабатываются как базисные элементы, а не коллекции. В результате сериализации массива байтов получается один XML-элемент, содержащий фрагмент данных в кодировке Base64, вместо отдельного элемента для каждого байта. Дополнительные сведения о том, как массив <xref:System.Xml.XmlNode> является обработки, см. в разделе [типы XML и ADO.NET в контрактах данных](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Конечно, такие специальные типы могут сами по себе участвовать в коллекциях: результатом массива массивов байтов является несколько элементов XML, каждый из которых содержит фрагмент данных, закодированных в Base64.  
-  
-- Если к типу коллекции применяется атрибут <xref:System.Runtime.Serialization.DataContractAttribute> , тип обрабатывается как тип с обычным контрактом данных, а не как коллекция.  
-  
-- Если тип коллекции реализует интерфейс <xref:System.Xml.Serialization.IXmlSerializable> , применяются следующие правила для типа `myType:IList<string>, IXmlSerializable`.  
-  
-    - Если объявленный тип - `IList<string>`, тип сериализуется как список.  
-  
-    - Если объявленный тип - `myType`, он сериализуется как `IXmlSerializable`.  
-  
-    - Если объявленный тип - `IXmlSerializable`, он сериализуется как `IXmlSerializable`, но только при условии добавления `myType` в список известных типов.  
-  
-- Коллекции сериализуются и десериализуются с помощью методов, показанных в следующей таблице.  
-  
-|Реализованные в коллекции элементы|Методы, вызываемые при сериализации|Методы, вызываемые при десериализации|  
-|--------------------------------|-----------------------------------------|-------------------------------------------|  
-|Универсальный тип <xref:System.Collections.Generic.IDictionary%602>|`get_Keys`, `get_Values`|Универсальное добавление|  
-|<xref:System.Collections.IDictionary>|`get_Keys`, `get_Values`|`Add`|  
-|Универсальный тип <xref:System.Collections.Generic.IList%601>|Универсальный индексатор <xref:System.Collections.Generic.IList%601>|Универсальное добавление|  
-|Универсальный тип <xref:System.Collections.Generic.ICollection%601>|Перечислитель|Универсальное добавление|  
-|<xref:System.Collections.IList>|Индексатор<xref:System.Collections.IList> |`Add`|  
-|Универсальный тип <xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|Нестатический метод с названием `Add` , принимающий один параметр соответствующего типа (тип универсального параметра или один из его базовых типов). Такой метод должен быть предусмотрен для обработки коллекции сериализатором во время сериализации и десериализации.|  
-|<xref:System.Collections.IEnumerable> (и, следовательно, унаследованный от него <xref:System.Collections.ICollection>)|`GetEnumerator`|Нестатический метод с названием `Add` , принимающий один параметр типа `Object`. Такой метод должен быть предусмотрен для обработки коллекции сериализатором во время сериализации и десериализации.|  
-  
- В предыдущей таблице приведен список интерфейсов коллекции, упорядоченный по убыванию приоритета. Это означает, что, например, если тип реализует интерфейс <xref:System.Collections.IList> и универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601>, коллекция сериализуется и десериализуется согласно правилам интерфейса <xref:System.Collections.IList> :  
-  
-- При десериализации все коллекции десериализуются путем создания, в первую очередь, экземпляра типа путем вызова конструктора по умолчанию, присутствие которого обеспечивает обработку сериализатором типа коллекции как коллекции во время сериализации и десериализации.  
-  
-- Если один и тот же универсальный интерфейс коллекции реализуется несколько раз (например, если тип одновременно реализует как универсальный интерфейс <xref:System.Collections.Generic.ICollection%601> типа `Integer` , так и универсальный интерфейс <xref:System.Collections.Generic.ICollection%601> типа <xref:System.String>), и при этом не обнаружен интерфейс с более высоким приоритетом, коллекция не обрабатывается как действительная.  
-  
-- Типы коллекций могут иметь применяемый к ним атрибут <xref:System.SerializableAttribute> и могут реализовать интерфейс <xref:System.Runtime.Serialization.ISerializable> . Оба данных типа не учитываются. Однако если тип не полностью соответствует требованиям к типу коллекции (например, отсутствует метод `Add` ), тип не рассматривается как тип коллекции, и поэтому для определения того, можно ли сериализовать данный тип, используются атрибут <xref:System.SerializableAttribute> и интерфейс <xref:System.Runtime.Serialization.ISerializable> .  
-  
-- При применении атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> к коллекции для ее настройки удаляется предшествующий резервный механизм <xref:System.SerializableAttribute> . Вместо этого, если настроенная коллекция не соответствует требованиям к типу коллекции, выдается исключение <xref:System.Runtime.Serialization.InvalidDataContractException> . Строка исключения часто содержит информацию, в которой объясняется, почему данный тип не считается действительной коллекцией (отсутствует метод `Add` , отсутствует конструктор по умолчанию, и т. п.), поэтому при отладке может быть полезным применение атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> .  
-  
-### <a name="collection-naming"></a>Именование коллекций  
- Далее приводится список правил именования коллекций.  
-  
-- Пространство имен по умолчанию для всех контрактов данных коллекций словаря, а также для контрактов данных коллекций списков, содержащих типы-примитивы, `http://schemas.microsoft.com/2003/10/Serialization/Arrays` переопределено с помощью пространства имен. С этой целью типы, сопоставляемые встроенным типам XSD, а также типы `char`, `Timespan`и `Guid` рассматриваются как примитивы.  
-  
-- По умолчанию пространство имен для типов коллекции, содержащей не типы-примитивы, кроме случая, когда оно переопределено с помощью пространства имени, является таким же, как пространство имен контракта данных, содержащегося в коллекции типа.  
-  
-- Имя по умолчанию контрактов данных коллекций списков, если оно не переопределено с помощью Name, является строкой "ArrayOf", комбинированной с именем контракта данных типа, содержащегося в коллекции. Например, именем контракта данных для универсального списка целых чисел является "ArrayOfint". Следует иметь в виду, что именем контракта данных `Object` является "anyType", т. е. именем контракта данных неуниверсальных списков, таких как <xref:System.Collections.ArrayList> , является "ArrayOfanyType".  
-  
- Имя по умолчанию контрактов данных коллекций-словарей, если оно не переопределено с помощью `Name`, является строкой "ArrayOfKeyValueOf", комбинированной с именем контракта данных ключевого типа, за которым следует имя контракта данных типа значения. Например, именем контракта данных для универсального словаря строк и целых чисел является "ArrayOfKeyValueOfstringint". Кроме того, если ключ или типы значения не являются типами-примитивами, к имени присоединяется хэш пространств имен ключа или типов значения. Дополнительные сведения о хэшах пространств имен, см. в разделе [имена контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
-  
- Каждый контракт данных коллекции-словаря имеет сопровождающий контракт данных, который представляет одну запись в словаре. Имя у него такое же, как у контракта данных словаря, кроме префикса "ArrayOf", и его пространство имен такое же, как у контракта данных словаря. Например, для контракта данных словаря "ArrayOfKeyValueOfstringint", контракт данных "KeyValueofstringint" представляет одну запись в словаре. Имя данного контракта данных можно настроить с помощью свойства `ItemName` , как описано в следующем разделе.  
-  
- Правила именования универсальных типов, как описано в разделе [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md), полностью применяются к типам коллекций, то есть для обозначения параметров универсального типа можно использовать фигурные скобки. Однако числа, указанные в скобках, относятся к универсальным параметрам, а не к типам, содержащимся в коллекции.  
-  
-## <a name="collection-customization"></a>Настройка коллекции  
- Следующие варианты использования атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> запрещены и приводят к вызову исключения <xref:System.Runtime.Serialization.InvalidDataContractException> :  
-  
-- Применение атрибута <xref:System.Runtime.Serialization.DataContractAttribute> к типу, к которому был применен атрибут <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , или к одному из наследованных от него типов.  
-  
-- Применение атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> к типу, реализующему интерфейс <xref:System.Xml.Serialization.IXmlSerializable> .  
-  
-- Применение атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> к типу, не являющемуся коллекцией.  
-  
-- Попытка задать <xref:System.Runtime.Serialization.CollectionDataContractAttribute.KeyName%2A> или <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ValueName%2A> атрибуту <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , применяемому к типу, не являющемуся словарем.  
-  
-### <a name="polymorphism-rules"></a>Правила полиморфизма  
- Как было указано выше, настройка коллекций с помощью атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> может мешать взаимозаменяемости коллекций. Два типа настроенных коллекций могут считаться эквивалентными только при условии совпадения их имен, пространств имен, имен элементов, а также имен ключей и значений (если это коллекции-словари).  
-  
- Благодаря возможности настроек, можно случайно использовать один контракт данных там, где ожидается другой. Этого следует избегать. См. указанные ниже типы.  
-  
- [!code-csharp[c_collection_types_in_data_contracts#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#11)]
- [!code-vb[c_collection_types_in_data_contracts#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#11)]  
-  
- В таком случае экземпляру `Marks1` может быть присвоен `testMarks`. Однако `Marks2` не должен использоваться, поскольку его контракт данных рассматривается как эквивалентный контракту данных `IList<int>` . Имя контракта данных является «Marks2», а не «ArrayOfint» и именем повторяющегося элемента является "\<пометить >» и не"\<int >».  
-  
- Правила, приведенные в следующей таблице, применяются к полиморфному назначению коллекций.  
-  
-|Объявленный тип|Назначение ненастроенной коллекции|Назначение настроенной коллекции|  
-|-------------------|--------------------------------------------|---------------------------------------|  
-|Object|Имя контракта сериализовано.|Имя контракта сериализовано.<br /><br /> Используется настройка.|  
-|Интерфейс коллекции|Имя контракта не сериализовано.|Имя контракта не сериализовано.<br /><br /> Настройка не используется.*|  
-|Ненастроенная коллекция|Имя контракта не сериализовано.|Имя контракта сериализовано.<br /><br /> Используется настройка.**|  
-|Настроенная коллекция|Имя контракта сериализовано. Настройка не используется.**|Имя контракта сериализовано.<br /><br /> Используется настройка назначенного типа.**|  
-  
- *С классом <xref:System.Runtime.Serialization.NetDataContractSerializer> в данном случае используется настройка. В данном случае класс <xref:System.Runtime.Serialization.NetDataContractSerializer> также сериализует текущее имя типа, т. е. десериализация выполняется так, как ожидалось.  
-  
- **В данных случаях получаются экземпляры с недействительной схемой. Этого следует избегать.  
-  
- В случаях, когда имя контракта сериализовано, назначенный тип коллекции должен находиться в списке известных типов. Также верно и противоположное: в случаях, когда имя не сериализовалось, добавление типа в список известных типов не требуется.  
-  
- Массив унаследованного типа может быть соотнесен с массивом базового типа. В таком случае имя контракта наследованного типа сериализуется для каждого повторяющегося элемента. Например, если тип `Book` унаследован от типа `LibraryItem`, массив `Book` можно соотнести с массивом `LibraryItem`. Это не распространяется на другие типы коллекций. Например, нельзя соотнести `Generic List of Book` с `Generic List of LibraryItem`. Можно, однако, соотнести `Generic List of LibraryItem` , содержащий экземпляры `Book` . В обоих случаях, с массивом и без массива, `Book` должен быть в списке известных типов.  
-  
-## <a name="collections-and-object-reference-preservation"></a>Сохранение коллекций и ссылок на объект  
- Когда сериализатор работает в режиме сохранения ссылок на объект, сохранение ссылок на объект также распространяется на коллекции. В частности, идентичность объекта сохраняется и во всей коллекции, и в отдельных элементах, содержащихся в коллекциях. В словарях удостоверение объекта сохраняется как в объектах пары ключ-значение, так и в отдельных объектах ключа и значения.  
-  
+> При использовании средства Svcutil.exe данная ссылка может быть выполнена с помощью параметра командной строки **/collectionType** (сокращенная форма: **/ct**). Следует помнить, что нужно также указать сборку для ссылочных типов коллекций с помощью параметра **/reference** (сокращенная форма: **/r**). Если тип является универсальным, после имени типа должен следовать обратный апостроф и число, указывающее количество универсальных параметров. Обратного апострофа (\`) не следует путать с символ одинарной кавычки ('). Несколько ссылочных типов коллекций можно указывать несколько раз с помощью параметра **/collectionType** .
+
+Например, чтобы все списки были импортированы как универсальные <xref:System.Collections.Generic.List%601>.
+
+```console
+svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\System.dll /ct:System.Collections.Generic.List`1
+```
+
+При импорте какой-либо коллекции сканируется список коллекций ссылочного типа, и наиболее подходящая коллекция, если таковая найдена, используется как элемент данных (для ненастроенных коллекций) или как базовый тип для получения производных (для настроенных коллекций). Словари подходят только к словарям, а списки подходят только к спискам.
+
+Например, при добавлении универсальных классов <xref:System.ComponentModel.BindingList%601> и <xref:System.Collections.Hashtable> в список ссылочных типов созданный клиентом код для предыдущего примера будет подобен следующему.
+
+[!code-csharp[c_collection_types_in_data_contracts#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#9)]
+[!code-vb[c_collection_types_in_data_contracts#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#9)]
+
+Типы интерфейсов коллекции можно указать как коллекции ссылочного типа, но нельзя указать недействительные типы коллекций (такие как коллекции без метода `Add` или открытого конструктора).
+
+Закрытый универсальный шаблон считается наиболее подходящим. (Неуниверсальные типы считаются эквивалентными закрытым универсальным `Object`). Например, если типы универсальных <xref:System.Collections.Generic.List%601> , относящихся к <xref:System.DateTime>, универсального <xref:System.ComponentModel.BindingList%601> (открытый универсальный шаблон) и <xref:System.Collections.ArrayList> являются коллекциями ссылочного типа, создается следующий код.
+
+[!code-csharp[c_collection_types_in_data_contracts#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#10)]
+[!code-vb[c_collection_types_in_data_contracts#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#10)]
+
+При работе с коллекциями списков поддерживаются только указанные в следующей таблице случаи.
+
+|Ссылочный тип|Интерфейс, реализованный ссылочным типом|Пример|Тип обрабатывается как:|
+|---------------------|----------------------------------------------|-------------|----------------------|
+|Неуниверсальный или закрытый универсальный (любое количество параметров)|неуниверсальный|`MyType : IList`<br /><br /> или<br /><br /> `MyType<T> : IList`<br /><br /> где T= `int`|Закрытый универсальный тип `Object` (например, `IList<object>`)|
+|Неуниверсальный или закрытый универсальный (любое количество параметров, которое не обязательно совпадает с типом коллекции)|Закрытый универсальный тип|`MyType : IList<string>`<br /><br /> или<br /><br /> `MyType<T> : IList<string>` где T=`int`|Закрытый универсальный тип (например, `IList<string>`)|
+|Закрытый универсальный тип с любым количеством параметров|Открытый универсальный тип с использованием одного из параметров типа|`MyType<T,U,V> : IList<U>`<br /><br /> где T=`int`, U=`string`, V=`bool`|Закрытый универсальный тип (например, `IList<string>`)|
+|Открытый универсальный тип с одним параметром|Открытый универсальный тип с использованием параметра типа|`MyType<T> : IList<T>`, T является открытым|Открытый универсальный тип (например, `IList<T>`)|
+
+Если тип реализует несколько интерфейсов коллекции списка, применяются следующие ограничения.
+
+- Если тип несколько раз для разных типов реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601> (или наследованные от него интерфейсы), тип не рассматривается как действительная коллекция ссылочного типа и не учитываются. Это верно, даже если некоторые реализации недействительны или используют открытые универсальные шаблоны. Например, тип, реализующий универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601> , относящийся к `int` , и универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601> , относящийся к T, никогда не будет использован как коллекция ссылочного типа `int` или другого типа, независимо от того, имеется ли в типе метод `Add` , принимающий метод `int` , или `Add` , принимающий параметр типа T, или оба.
+
+- Если тип реализует универсальный интерфейс коллекции, а так же интерфейс <xref:System.Collections.IList>, тип никогда не будет использован как коллекция ссылочного типа, кроме случая, когда интерфейс универсальной коллекции является закрытым универсальным шаблоном типа <xref:System.Object>.
+
+При работе с коллекциями-словарями поддерживаются только указанные в следующей таблице случаи.
+
+|Ссылочный тип|Интерфейс, реализованный ссылочным типом|Пример|Тип обрабатывается как|
+|---------------------|----------------------------------------------|-------------|---------------------|
+|Неуниверсальный или закрытый универсальный (любое количество параметров)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> или<br /><br /> `MyType<T> : IDictionary` где T=`int`|Закрытый универсальный тип `IDictionary<object,object>`|
+|Закрытый универсальный тип (любое количество параметров)|<xref:System.Collections.Generic.IDictionary%602>, закрытый|`MyType<T> : IDictionary<string, bool>` где T=`int`|Закрытый универсальный тип (например, `IDIctionary<string,bool>`)|
+|Закрытый универсальный тип (любое количество параметров)|Универсальный <xref:System.Collections.Generic.IDictionary%602>, ключ или значение закрыто, другой (ключ или значение) открыт и использует один из параметров типа.|`MyType<T,U,V> : IDictionary<string,V>` , где T=`int`, U=`float`, V=`bool`<br /><br /> или<br /><br /> `MyType<Z> : IDictionary<Z,bool>` , где Z=`string`|Закрытый универсальный тип (например, `IDictionary<string,bool>`)|
+|Закрытый универсальный тип (любое количество параметров)|Универсальный <xref:System.Collections.Generic.IDictionary%602>, ключ и значение открыты, и оба используют один из параметров типа|`MyType<T,U,V> : IDictionary<V,U>` где T=`int`, U=`bool`, V=`string`|Закрытый универсальный тип (например, `IDictionary<string,bool>`)|
+|Открытый универсальный тип (два параметра)|Универсальный <xref:System.Collections.Generic.IDictionary%602>, открытый, использует оба типа универсальных параметров в порядке их появления|`MyType<K,V> : IDictionary<K,V>`, K и V, оба открыты|Открытый универсальный тип (например, `IDictionary<K,V>`)|
+
+Если тип реализует и интерфейс <xref:System.Collections.IDictionary> , и универсальный интерфейс <xref:System.Collections.Generic.IDictionary%602>, рассматривается только универсальный <xref:System.Collections.Generic.IDictionary%602> .
+
+Ссылка на частично универсальные типы не поддерживается.
+
+Дубликаты не разрешены. Например, нельзя добавить одновременно универсальный класс <xref:System.Collections.Generic.List%601> типа `Integer` и универсальную коллекцию `Integer` в <xref:System.Runtime.Serialization.ImportOptions.ReferencedCollectionTypes%2A>, поскольку в таком случае будет невозможно определить, какой из них использовать при обнаружении списка целых чисел в схеме. Дубликаты обнаруживаются, только если в схеме есть тип, указывающий на проблему дубликатов. Например, если импортируемая схема не содержит список целых чисел, допускается иметь в <xref:System.Collections.Generic.List%601> как универсальный `Integer` типа `Integer` , так и универсальную коллекцию <xref:System.Runtime.Serialization.ImportOptions.ReferencedCollectionTypes%2A>, но ни тот, ни другой не будут действовать.
+
+## <a name="advanced-collection-rules"></a>Расширенные правила коллекции
+
+### <a name="serializing-collections"></a>Сериализация коллекций
+
+Далее приводится список правил сериализации коллекций.
+
+- Разрешено комбинирование типов коллекции (наличие коллекций коллекций). Неровные массивы обрабатываются как коллекции коллекций. Многомерные массивы не поддерживаются.
+
+- Массивы байтов и массивы <xref:System.Xml.XmlNode> являются специальными типами массивов, которые обрабатываются как базисные элементы, а не коллекции. В результате сериализации массива байтов получается один XML-элемент, содержащий фрагмент данных в кодировке Base64, вместо отдельного элемента для каждого байта. Дополнительные сведения о том, как массив <xref:System.Xml.XmlNode> является обработки, см. в разделе [типы XML и ADO.NET в контрактах данных](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Конечно, такие специальные типы могут сами по себе участвовать в коллекциях: результатом массива массивов байтов является несколько элементов XML, каждый из которых содержит фрагмент данных, закодированных в Base64.
+
+- Если к типу коллекции применяется атрибут <xref:System.Runtime.Serialization.DataContractAttribute> , тип обрабатывается как тип с обычным контрактом данных, а не как коллекция.
+
+- Если тип коллекции реализует интерфейс <xref:System.Xml.Serialization.IXmlSerializable> , применяются следующие правила для типа `myType:IList<string>, IXmlSerializable`.
+
+  - Если объявленный тип - `IList<string>`, тип сериализуется как список.
+
+  - Если объявленный тип - `myType`, он сериализуется как `IXmlSerializable`.
+
+  - Если объявленный тип - `IXmlSerializable`, он сериализуется как `IXmlSerializable`, но только при условии добавления `myType` в список известных типов.
+
+- Коллекции сериализуются и десериализуются с помощью методов, показанных в следующей таблице.
+
+|Реализованные в коллекции элементы|Методы, вызываемые при сериализации|Методы, вызываемые при десериализации|
+|--------------------------------|-----------------------------------------|-------------------------------------------|
+|Универсальный тип <xref:System.Collections.Generic.IDictionary%602>|`get_Keys`, `get_Values`|Универсальное добавление|
+|<xref:System.Collections.IDictionary>|`get_Keys`, `get_Values`|`Add`|
+|Универсальный тип <xref:System.Collections.Generic.IList%601>|Универсальный индексатор <xref:System.Collections.Generic.IList%601>|Универсальное добавление|
+|Универсальный тип <xref:System.Collections.Generic.ICollection%601>|Перечислитель|Универсальное добавление|
+|<xref:System.Collections.IList>|Индексатор<xref:System.Collections.IList>|`Add`|
+|Универсальный тип <xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|Нестатический метод с названием `Add` , принимающий один параметр соответствующего типа (тип универсального параметра или один из его базовых типов). Такой метод должен быть предусмотрен для обработки коллекции сериализатором во время сериализации и десериализации.|
+|<xref:System.Collections.IEnumerable> (и, следовательно, унаследованный от него <xref:System.Collections.ICollection>)|`GetEnumerator`|Нестатический метод с названием `Add` , принимающий один параметр типа `Object`. Такой метод должен быть предусмотрен для обработки коллекции сериализатором во время сериализации и десериализации.|
+
+В предыдущей таблице приведен список интерфейсов коллекции, упорядоченный по убыванию приоритета. Это означает, что, например, если тип реализует интерфейс <xref:System.Collections.IList> и универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601>, коллекция сериализуется и десериализуется согласно правилам интерфейса <xref:System.Collections.IList> :
+
+- При десериализации все коллекции десериализуются путем создания, в первую очередь, экземпляра типа путем вызова конструктора по умолчанию, присутствие которого обеспечивает обработку сериализатором типа коллекции как коллекции во время сериализации и десериализации.
+
+- Если один и тот же универсальный интерфейс коллекции реализуется несколько раз (например, если тип одновременно реализует как универсальный интерфейс <xref:System.Collections.Generic.ICollection%601> типа `Integer` , так и универсальный интерфейс <xref:System.Collections.Generic.ICollection%601> типа <xref:System.String>), и при этом не обнаружен интерфейс с более высоким приоритетом, коллекция не обрабатывается как действительная.
+
+- Типы коллекций могут иметь применяемый к ним атрибут <xref:System.SerializableAttribute> и могут реализовать интерфейс <xref:System.Runtime.Serialization.ISerializable> . Оба данных типа не учитываются. Однако если тип не полностью соответствует требованиям к типу коллекции (например, отсутствует метод `Add` ), тип не рассматривается как тип коллекции, и поэтому для определения того, можно ли сериализовать данный тип, используются атрибут <xref:System.SerializableAttribute> и интерфейс <xref:System.Runtime.Serialization.ISerializable> .
+
+- При применении атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> к коллекции для ее настройки удаляется предшествующий резервный механизм <xref:System.SerializableAttribute> . Вместо этого, если настроенная коллекция не соответствует требованиям к типу коллекции, выдается исключение <xref:System.Runtime.Serialization.InvalidDataContractException> . Строка исключения часто содержит информацию, в которой объясняется, почему данный тип не считается действительной коллекцией (отсутствует метод `Add` , отсутствует конструктор по умолчанию, и т. п.), поэтому при отладке может быть полезным применение атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> .
+
+### <a name="collection-naming"></a>Именование коллекций
+
+Далее приводится список правил именования коллекций.
+
+- Пространство имен по умолчанию для всех контрактов данных коллекций словаря, а также для контрактов данных коллекций списков, содержащих типы-примитивы, `http://schemas.microsoft.com/2003/10/Serialization/Arrays` переопределено с помощью пространства имен. С этой целью типы, сопоставляемые встроенным типам XSD, а также типы `char`, `Timespan`и `Guid` рассматриваются как примитивы.
+
+- По умолчанию пространство имен для типов коллекции, содержащей не типы-примитивы, кроме случая, когда оно переопределено с помощью пространства имени, является таким же, как пространство имен контракта данных, содержащегося в коллекции типа.
+
+- Имя по умолчанию контрактов данных коллекций списков, если оно не переопределено с помощью Name, является строкой "ArrayOf", комбинированной с именем контракта данных типа, содержащегося в коллекции. Например, именем контракта данных для универсального списка целых чисел является "ArrayOfint". Следует иметь в виду, что именем контракта данных `Object` является "anyType", т. е. именем контракта данных неуниверсальных списков, таких как <xref:System.Collections.ArrayList> , является "ArrayOfanyType".
+
+Имя по умолчанию контрактов данных коллекций-словарей, если оно не переопределено с помощью `Name`, является строкой "ArrayOfKeyValueOf", комбинированной с именем контракта данных ключевого типа, за которым следует имя контракта данных типа значения. Например, именем контракта данных для универсального словаря строк и целых чисел является "ArrayOfKeyValueOfstringint". Кроме того, если ключ или типы значения не являются типами-примитивами, к имени присоединяется хэш пространств имен ключа или типов значения. Дополнительные сведения о хэшах пространств имен, см. в разделе [имена контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-names.md).
+
+Каждый контракт данных коллекции-словаря имеет сопровождающий контракт данных, который представляет одну запись в словаре. Имя у него такое же, как у контракта данных словаря, кроме префикса "ArrayOf", и его пространство имен такое же, как у контракта данных словаря. Например, для контракта данных словаря "ArrayOfKeyValueOfstringint", контракт данных "KeyValueofstringint" представляет одну запись в словаре. Имя данного контракта данных можно настроить с помощью свойства `ItemName` , как описано в следующем разделе.
+
+Правила именования универсальных типов, как описано в разделе [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md), полностью применяются к типам коллекций, то есть для обозначения параметров универсального типа можно использовать фигурные скобки. Однако числа, указанные в скобках, относятся к универсальным параметрам, а не к типам, содержащимся в коллекции.
+
+## <a name="collection-customization"></a>Настройка коллекции
+
+Следующие варианты использования атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> запрещены и приводят к вызову исключения <xref:System.Runtime.Serialization.InvalidDataContractException> :
+
+- Применение атрибута <xref:System.Runtime.Serialization.DataContractAttribute> к типу, к которому был применен атрибут <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , или к одному из наследованных от него типов.
+
+- Применение атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> к типу, реализующему интерфейс <xref:System.Xml.Serialization.IXmlSerializable> .
+
+- Применение атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> к типу, не являющемуся коллекцией.
+
+- Попытка задать <xref:System.Runtime.Serialization.CollectionDataContractAttribute.KeyName%2A> или <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ValueName%2A> атрибуту <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , применяемому к типу, не являющемуся словарем.
+
+### <a name="polymorphism-rules"></a>Правила полиморфизма
+
+Как было указано выше, настройка коллекций с помощью атрибута <xref:System.Runtime.Serialization.CollectionDataContractAttribute> может мешать взаимозаменяемости коллекций. Два типа настроенных коллекций могут считаться эквивалентными только при условии совпадения их имен, пространств имен, имен элементов, а также имен ключей и значений (если это коллекции-словари).
+
+Благодаря возможности настроек, можно случайно использовать один контракт данных там, где ожидается другой. Этого следует избегать. См. указанные ниже типы.
+
+[!code-csharp[c_collection_types_in_data_contracts#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#11)]
+[!code-vb[c_collection_types_in_data_contracts#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#11)]
+
+В таком случае экземпляру `Marks1` может быть присвоен `testMarks`. Однако `Marks2` не должен использоваться, поскольку его контракт данных рассматривается как эквивалентный контракту данных `IList<int>` . Имя контракта данных является «Marks2», а не «ArrayOfint» и именем повторяющегося элемента является "\<пометить >» и не"\<int >».
+
+Правила, приведенные в следующей таблице, применяются к полиморфному назначению коллекций.
+
+|Объявленный тип|Назначение ненастроенной коллекции|Назначение настроенной коллекции|
+|-------------------|--------------------------------------------|---------------------------------------|
+|Object|Имя контракта сериализовано.|Имя контракта сериализовано.<br /><br /> Используется настройка.|
+|Интерфейс коллекции|Имя контракта не сериализовано.|Имя контракта не сериализовано.<br /><br /> Настройки не используется.\*|
+|Ненастроенная коллекция|Имя контракта не сериализовано.|Имя контракта сериализовано.<br /><br /> Используется настройка.**|
+|Настроенная коллекция|Имя контракта сериализовано. Настройки не используется.\*\*|Имя контракта сериализовано.<br /><br /> Используется настройка назначенного типа.\*\*|
+
+\*С помощью <xref:System.Runtime.Serialization.NetDataContractSerializer> класса, в этом случае используется настройка. В данном случае класс <xref:System.Runtime.Serialization.NetDataContractSerializer> также сериализует текущее имя типа, т. е. десериализация выполняется так, как ожидалось.
+
+\*\*Эти случаи привести к недопустимой схемой экземпляров и таким образом следует избегать.
+
+В случаях, когда имя контракта сериализовано, назначенный тип коллекции должен находиться в списке известных типов. Также верно и противоположное: в случаях, когда имя не сериализовалось, добавление типа в список известных типов не требуется.
+
+Массив унаследованного типа может быть соотнесен с массивом базового типа. В таком случае имя контракта наследованного типа сериализуется для каждого повторяющегося элемента. Например, если тип `Book` унаследован от типа `LibraryItem`, массив `Book` можно соотнести с массивом `LibraryItem`. Это не распространяется на другие типы коллекций. Например, нельзя соотнести `Generic List of Book` с `Generic List of LibraryItem`. Можно, однако, соотнести `Generic List of LibraryItem` , содержащий экземпляры `Book` . В обоих случаях, с массивом и без массива, `Book` должен быть в списке известных типов.
+
+## <a name="collections-and-object-reference-preservation"></a>Сохранение коллекций и ссылок на объект
+
+Когда сериализатор работает в режиме сохранения ссылок на объект, сохранение ссылок на объект также распространяется на коллекции. В частности, идентичность объекта сохраняется и во всей коллекции, и в отдельных элементах, содержащихся в коллекциях. В словарях удостоверение объекта сохраняется как в объектах пары ключ-значение, так и в отдельных объектах ключа и значения.
+
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Runtime.Serialization.CollectionDataContractAttribute>

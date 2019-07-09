@@ -14,28 +14,31 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 4ef97af17893fa7a4e85d09e989539f7f5b32a36
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 27554d7e0a7e980d240e0609fe0561c2138f0aa1
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627366"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67664061"
 ---
 # <a name="custom-dependency-properties"></a>Пользовательские свойства зависимостей
 
 В этом разделе описываются основания для создания настраиваемых свойств зависимостей для приложений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], а также этапы и некоторые варианты реализации, которые могут повысить производительность, удобство использования и универсальность свойств.
 
 <a name="prerequisites"></a>
+
 ## <a name="prerequisites"></a>Предварительные требования
 
 Предполагается, что вы имеете представление о свойствах зависимостей с точки зрения потребителя существующих свойств зависимостей в классах [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и ознакомились с разделом [Общие сведения о свойствах зависимостей](dependency-properties-overview.md). Чтобы выполнить примеры в этом разделе, следует также иметь представление о [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и написании простых приложений [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 <a name="whatis"></a>
+
 ## <a name="what-is-a-dependency-property"></a>Что такое свойство зависимостей?
 
 Реализовать поведение, аналогичное свойству [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], для поддержки стилизации, привязки данных, наследования, анимации и значений по умолчанию можно путем реализации его как свойства зависимостей. Свойства зависимостей являются свойствами, которые зарегистрированы в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] системы свойств путем вызова <xref:System.Windows.DependencyProperty.Register%2A> метод (или <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>), и снабжаются <xref:System.Windows.DependencyProperty> поле идентификатора. Свойства зависимостей могут использоваться только <xref:System.Windows.DependencyObject> типов, но <xref:System.Windows.DependencyObject> находится достаточно высоко в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] иерархии классов, поэтому большинство классов, доступных в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] могут поддерживать свойства зависимостей. Дополнительные сведения о свойствах зависимостей и некоторых терминах и соглашениях, используемых для их описания в этом [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)], см. в разделе [Общие сведения о свойствах зависимостей](dependency-properties-overview.md).
 
 <a name="example_dp"></a>
+
 ## <a name="examples-of-dependency-properties"></a>Примеры свойств зависимостей
 
 Примеры свойств зависимостей, реализуемых в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] классы включают <xref:System.Windows.Controls.Control.Background%2A> свойство, <xref:System.Windows.FrameworkElement.Width%2A> свойство и <xref:System.Windows.Controls.TextBox.Text%2A> свойство среди многих других. Каждое свойство зависимости, предоставленное классом имеет соответствующий открытое статическое поле типа <xref:System.Windows.DependencyProperty> на том же классе. Это идентификатор для свойства зависимостей. Идентификатор именуется по следующему соглашению: имя свойства зависимостей, за которым следует строка `Property`. Например, соответствующий <xref:System.Windows.DependencyProperty> поле идентификатора для <xref:System.Windows.Controls.Control.Background%2A> свойство <xref:System.Windows.Controls.Control.BackgroundProperty>. Идентификатор хранит сведения о свойстве зависимостей, как она была зарегистрирована, а затем идентификатор позже используется для других операций, в которых участвует свойство зависимостей, например, вызов <xref:System.Windows.DependencyObject.SetValue%2A>.
@@ -43,6 +46,7 @@ ms.locfileid: "64627366"
 Как упоминалось в разделе [Общие сведения о свойствах зависимостей](dependency-properties-overview.md), все свойства зависимостей в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (за исключением наиболее присоединенных свойств) также являются свойствами [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] из-за реализации "оболочки". Таким образом, из кода можно получать или задавать свойства зависимостей путем вызова методов доступа [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], определяющих оболочки таким же образом, как и для других свойств [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Как потребитель созданных свойств зависимостей, вы обычно не используете <xref:System.Windows.DependencyObject> методы <xref:System.Windows.DependencyObject.GetValue%2A> и <xref:System.Windows.DependencyObject.SetValue%2A>, которые являются точки подключения к базовой системе свойств. Вместо этого существующая реализация [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] уже будет вызван свойства <xref:System.Windows.DependencyObject.GetValue%2A> и <xref:System.Windows.DependencyObject.SetValue%2A> в `get` и `set` реализации оболочки свойства, соответствующим образом используя поле идентификатора . При собственной реализации настраиваемого свойства зависимостей вы будете определять оболочку аналогичным образом.
 
 <a name="backing_with_dp"></a>
+
 ## <a name="when-should-you-implement-a-dependency-property"></a>Почему требуется реализовывать свойство зависимостей?
 
 При реализации свойства в классе, до тех пор, пока ваш класс является производным от <xref:System.Windows.DependencyObject>, вы можете снабдить свое свойство с <xref:System.Windows.DependencyProperty> идентификатор и, следовательно, чтобы сделать его свойства зависимостей. Назначение свойства свойством зависимостей не всегда требуется и не всегда уместно и зависит от конкретной ситуации. В некоторых случаях достаточно просто снабдить свойство закрытым полем. Тем не менее реализовать свойство как свойство зависимостей потребуется, если свойство должно поддерживать одну или несколько из следующих возможностей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
@@ -66,6 +70,7 @@ ms.locfileid: "64627366"
 Рекомендуется рассмотреть возможность реализации сценариев путем переопределения метаданных существующего свойства зависимостей, вместо реализации совершенно нового свойства. Практическая польза переопределения метаданных зависит от сценария и того, насколько этот сценарий схож с реализацией существующих свойств зависимостей и классов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Дополнительные сведения о переопределении метаданных для существующих свойств см. в разделе [Метаданные свойств зависимостей](dependency-property-metadata.md).
 
 <a name="checklist"></a>
+
 ## <a name="checklist-for-defining-a-dependency-property"></a>Контрольный список определения свойства зависимостей
 
 Определение свойства зависимостей состоит из четырех различных понятий. Эти понятия не обязательно являются строгими этапами процедуры, так как некоторые из них в итоге объединяются в одну строку кода в реализации.
@@ -79,6 +84,7 @@ ms.locfileid: "64627366"
 - Определите свойство-"оболочку" [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], имя которого соответствует имени свойства зависимостей. Реализуйте методы доступа `get` и `set` свойства-"оболочки" [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] для подключения к свойству зависимостей, которое оно поддерживает.
 
 <a name="registering"></a>
+
 ### <a name="registering-the-property-with-the-property-system"></a>Регистрация свойства в системе свойств
 
 Чтобы назначить свойство свойством зависимостей, необходимо зарегистрировать это свойство в таблице, обслуживаемой системой свойств, и предоставить ему уникальный идентификатор, используемый в качестве квалификатора для последующих операций системы свойств. Эти операции могут быть внутренними операциями или вашим собственным кодом, вызывающим систему свойств [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. Чтобы зарегистрировать свойство, вызовите <xref:System.Windows.DependencyProperty.Register%2A> метод в теле класса (внутри класса, но вне определения любого из членов). Поле идентификатора также предоставляется <xref:System.Windows.DependencyProperty.Register%2A> вызова метода, в качестве возвращаемого значения. Причина, <xref:System.Windows.DependencyProperty.Register%2A> вызов выполняется за пределами другого элемента определения обусловлено это возвращаемое значение используется для назначения и создания `public` `static` `readonly` поле типа <xref:System.Windows.DependencyProperty> как часть класса. Это поле становится идентификатором для вашего свойства зависимостей.
@@ -87,6 +93,7 @@ ms.locfileid: "64627366"
 [!code-vb[WPFAquariumSln#RegisterAG](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerag)]
 
 <a name="nameconventions"></a>
+
 ### <a name="dependency-property-name-conventions"></a>Соглашения об именовании свойств зависимостей
 
 Существуют установленные соглашения об именовании, касающиеся свойств зависимостей, которым необходимо следовать, если ситуация не является исключительной.
@@ -99,6 +106,7 @@ ms.locfileid: "64627366"
 > Определение свойства зависимостей в теле класса является обычной реализацией, однако его также можно определить в статическом конструкторе класса. Этот подход может оказаться целесообразным, если для инициализации свойства зависимостей требуется несколько строк кода.
 
 <a name="wrapper1"></a>
+
 ### <a name="implementing-the-wrapper"></a>Реализация "оболочки"
 
 Реализация оболочки должна вызывать <xref:System.Windows.DependencyObject.GetValue%2A> в `get` реализации, и <xref:System.Windows.DependencyObject.SetValue%2A> в `set` (исходный вызов регистрации и поле показанная здесь реализация слишком для ясности).
@@ -119,6 +127,7 @@ ms.locfileid: "64627366"
 - Текущая реализация загрузчика [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] полностью обходит оболочки и основывается на соглашении об именовании при обработке значений атрибутов. Дополнительные сведения см. в разделе [Загрузка кода XAML и свойства зависимостей](xaml-loading-and-dependency-properties.md).
 
 <a name="metadata"></a>
+
 ### <a name="property-metadata-for-a-new-dependency-property"></a>Метаданные свойства для нового свойства зависимостей
 
 При регистрации свойства зависимостей через систему свойств создается объект метаданных, который хранит характеристики свойства. Многие из этих характеристик имеют значения по умолчанию, заданные в случае, если данное свойство зарегистрировано с помощью простых сигнатур <xref:System.Windows.DependencyProperty.Register%2A>. Другие сигнатуры <xref:System.Windows.DependencyProperty.Register%2A> позволяют указывать метаданные, требуемые при регистрации свойства. Как правило, метаданные, задаваемые для свойства зависимостей, предполагают предоставление значений по умолчанию, применяемых для новых экземпляров, которые используют свойство.
@@ -131,13 +140,13 @@ ms.locfileid: "64627366"
 
 - Если свойство (или изменения в его значении) влияет на [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], и в частности затрагивает как система макета размер или отрисовку элемента на странице, задайте одно или несколько из следующих флагов: <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>.
 
-    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> Указывает, что изменение этого свойства требует изменения для [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] подготовки отчетов, где содержащего его объекта может потребовать больше или меньше места в родительском элементе. Например, этот флаг следует задать для свойства "Ширина".
+  - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> Указывает, что изменение этого свойства требует изменения для [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] подготовки отчетов, где содержащего его объекта может потребовать больше или меньше места в родительском элементе. Например, этот флаг следует задать для свойства "Ширина".
 
-    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> Указывает, что изменение этого свойства требует изменения для [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] отрисовки, обычно не требует изменения в выделенном пространстве, однако означает, что изменилось размещение в пространстве. Например, этот флаг следует задать для свойства "Выравнивание".
+  - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> Указывает, что изменение этого свойства требует изменения для [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] отрисовки, обычно не требует изменения в выделенном пространстве, однако означает, что изменилось размещение в пространстве. Например, этот флаг следует задать для свойства "Выравнивание".
 
-    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> Указывает, что произошло некоторое другое изменение, не повлияет на макет и измерение, но требуют повторной визуализации. Примером будет свойство, изменяющее цвет существующего элемента, например "Фон".
+  - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> Указывает, что произошло некоторое другое изменение, не повлияет на макет и измерение, но требуют повторной визуализации. Примером будет свойство, изменяющее цвет существующего элемента, например "Фон".
 
-    - Эти флаги часто используются в качестве протокола в метаданных для собственных реализаций переопределения системы свойств или обратных вызовов макета. Например, возможно, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> обратного вызова, который будет вызывать <xref:System.Windows.UIElement.InvalidateArrange%2A> Если любое свойство экземпляра сообщает об изменении значения и имеет <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> как `true` в своих метаданных.
+  - Эти флаги часто используются в качестве протокола в метаданных для собственных реализаций переопределения системы свойств или обратных вызовов макета. Например, возможно, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> обратного вызова, который будет вызывать <xref:System.Windows.UIElement.InvalidateArrange%2A> Если любое свойство экземпляра сообщает об изменении значения и имеет <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> как `true` в своих метаданных.
 
 - Некоторые свойства могут влиять на характеристики отрисовки содержащего их родительского элемента указанными выше способами и помимо изменений в обязательном размере, упомянутых выше. Например, <xref:System.Windows.Documents.Paragraph.MinOrphanLines%2A> свойства, используемого в модели потокового документа, где изменения этого свойства можно изменять общую отрисовку документа нефиксированного формата, содержащего абзац. Используйте <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentArrange> или <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentMeasure> для определения аналогичных случаев в ваших собственных свойствах.
 
@@ -150,21 +159,25 @@ ms.locfileid: "64627366"
 - Задайте <xref:System.Windows.FrameworkPropertyMetadataOptions.Journal> флаг, указывающий, если свойство зависимостей должны обнаруживаться или использоваться службами ведения журнала переходов. Пример — <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> свойство; любой элемент, выбранный в выделенной области элемента управления должны сохраняться при навигации по истории ведения журнала.
 
 <a name="RODP"></a>
+
 ## <a name="read-only-dependency-properties"></a>Свойства зависимости "только для чтения"
 
 Можно определить свойство зависимости, которое доступно только для чтения. Однако ситуации для такого использования немного отличаются, как и процедура регистрации свойства в системе свойств и предоставление идентификатора. Дополнительные сведения см. в разделе [Свойства зависимостей "только для чтения"](read-only-dependency-properties.md).
 
 <a name="CTDP"></a>
+
 ## <a name="collection-type-dependency-properties"></a>Свойства зависимостей типа коллекция
 
 Свойства зависимостей типа коллекции имеют некоторые дополнительные проблемы при реализации, которые необходимо учитывать. Подробности см. в разделе [Свойства зависимостей типа коллекции](collection-type-dependency-properties.md).
 
 <a name="SecurityC"></a>
+
 ## <a name="dependency-property-security-considerations"></a>Замечания по безопасности свойств зависимостей
 
 Свойства зависимостей должны объявляться как открытые свойства. Поля идентификаторов свойств зависимостей должны объявляться как открытые статические поля. Даже при попытке объявить другие уровни доступа (например, защищенный) к свойству зависимостей всегда можно обращаться через идентификатор в сочетании с [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] системы свойств. Даже защищенное поле идентификатора потенциально доступно из-за метаданных reporting или определения значения [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] , которые являются частью системы свойств, таких как <xref:System.Windows.LocalValueEnumerator>. Дополнительные сведения см. в разделе [Безопасность свойств зависимостей](dependency-property-security.md).
 
 <a name="DPCtor"></a>
+
 ## <a name="dependency-properties-and-class-constructors"></a>Свойства зависимостей и конструкторы класса
 
 Есть общий принцип в программировании управляемого кода (он часто принудительно применяется средствами анализа кода, такими как FxCop), подразумевающий, что конструкторы класса не должны вызывать виртуальные методы. Этот принцип обусловлен тем, что конструкторы могут быть вызваны в качестве базовой инициализации конструктора производного класса, а ввод виртуального метода через конструктор может произойти в состоянии неполной инициализации конструируемого экземпляра объекта. При наследовании от любого класса, который уже является производным от <xref:System.Windows.DependencyObject>, следует иметь в виду, что сама система свойств вызывает и предоставляет виртуальные методы. Эти виртуальные методы являются частью служб системы свойств [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Переопределение методов позволяет производным классам участвовать в определении значения. Чтобы избежать потенциальных проблем при инициализации среды выполнения, не задавайте значения свойств зависимостей в конструкторах классов (если только вы не следуете конкретному шаблону конструктора). Подробнее см. в разделе [Шаблоны безопасного конструктора для DependencyObjects](safe-constructor-patterns-for-dependencyobjects.md).

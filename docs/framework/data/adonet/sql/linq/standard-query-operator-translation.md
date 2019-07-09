@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 1bba36579fce4fe78289ccb986073280b531420a
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610557"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661879"
 ---
 # <a name="standard-query-operator-translation"></a>Трансляция стандартных операторов запросов
 
@@ -198,13 +198,13 @@ ORDER BY [t0].[CustomerID]
 
 ## <a name="sql-server-2000-support"></a>Поддержка SQL Server 2000
 
-Следующие [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] ограничения (по сравнению с Microsoft SQL Server 2005) влияют на [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддержки.
+Влияет на следующие ограничения SQL Server 2000 (по сравнению с Microsoft SQL Server 2005) [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддержки.
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Операторы «Cross Apply» и «Outer Apply»
 
-Эти операторы недоступны в [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. Технология [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] пытается выполнить ряд операций перезаписи, чтобы заменить их соответствующими объединениями.
+Эти операторы недоступны в SQL Server 2000. Технология [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] пытается выполнить ряд операций перезаписи, чтобы заменить их соответствующими объединениями.
 
-Операторы `Cross Apply` и `Outer Apply` создаются для перехода по отношениям. Набор запросов, для которого такие операции перезаписи возможны, не является правильно определенным. По этой причине минимальным набором запросов, поддерживаемым для [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)], является набор, который не включает переходов по отношениям.
+Операторы `Cross Apply` и `Outer Apply` создаются для перехода по отношениям. Набор запросов, для которого такие операции перезаписи возможны, не является правильно определенным. По этой причине минимальным набором запросов, поддерживаемым для SQL Server 2000 — это набор, который не включает переходов по отношениям.
 
 ### <a name="text--ntext"></a>text / ntext
 
@@ -214,11 +214,11 @@ ORDER BY [t0].[CustomerID]
 
 ### <a name="behavior-triggered-by-nested-queries"></a>Поведение, инициируемое вложенными запросами
 
-[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] ((SP4)) связыватель обладает некоторыми особенностями поведения, которые инициируются вложенными запросами. Набор запросов SQL, которые инициируют эти особенности, не является правильно определенным. По этой причине невозможно определить набор [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] запросы, которые могут вызывать исключения SQL Server.
+Связыватель SQL Server 2000 (SP4)) обладает некоторыми особенностями поведения, которые инициируются вложенными запросами. Набор запросов SQL, которые инициируют эти особенности, не является правильно определенным. По этой причине невозможно определить набор [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] запросы, которые могут вызывать исключения SQL Server.
 
 ### <a name="skip-and-take-operators"></a>Операторы «Skip» и «Take»
 
-На методы <xref:System.Linq.Enumerable.Take%2A> и <xref:System.Linq.Enumerable.Skip%2A> накладываются некоторые ограничения при их использовании в запросах для [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. Дополнительные сведения см. в записи «"Skip и делаются исключения в SQL Server 2000» в [Устранение неполадок](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).
+На методы <xref:System.Linq.Enumerable.Take%2A> и <xref:System.Linq.Enumerable.Skip%2A> накладываются некоторые ограничения при их использовании в запросах для SQL Server 2000. Дополнительные сведения см. в записи «"Skip и делаются исключения в SQL Server 2000» в [Устранение неполадок](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).
 
 ## <a name="object-materialization"></a>Материализация объектов
 

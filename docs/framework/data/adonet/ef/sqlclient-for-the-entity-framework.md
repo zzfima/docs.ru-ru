@@ -2,12 +2,12 @@
 title: SqlClient для Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-ms.openlocfilehash: d81499961e7e47bba3b2594ddddd192c87a4a936
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8933a975c075407066bff97672f1b82f125bb47
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879126"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662110"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>SqlClient для Entity Framework
 В этом разделе описан поставщик данных .NET Framework для SQL Server (SqlClient), который позволяет платформе Entity Framework работать с сервером Microsoft SQL Server.  
@@ -20,7 +20,7 @@ ms.locfileid: "61879126"
 ## <a name="providermanifesttoken-schema-attribute"></a>Атрибут ProviderManifestToken элемента Schema  
  `ProviderManifestToken` - обязательный атрибут элемента `Schema` в SSDL. Этот маркер используется для загрузки манифеста поставщика при автономном использовании. Дополнительные сведения о `ProviderManifestToken` атрибут, см. в разделе [элемент схемы (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl).  
   
- SqlClient можно использовать в качестве поставщика данных для различных версий SQL Server. Эти версии имеют разные возможности. Например, [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] не поддерживает типы `varchar(max)` и `nvarchar(max)`, представленные в [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)].  
+ SqlClient можно использовать в качестве поставщика данных для различных версий SQL Server. Эти версии имеют разные возможности. Например, SQL Server 2000 не поддерживает `varchar(max)` и `nvarchar(max)` типов, которые впервые появились в SQL Server 2005.  
   
  SqlClient формирует и принимает следующие маркеры манифеста поставщика для различных версий SQL Server.  
   

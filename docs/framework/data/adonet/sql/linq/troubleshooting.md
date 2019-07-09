@@ -2,12 +2,12 @@
 title: Устранение неполадок
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 8b34336871d599b72e548e2db90487c17377ba66
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: c09871abcdfb9243b5170386ffe79012c9c3f71d
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307187"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661863"
 ---
 # <a name="troubleshooting"></a>Устранение неполадок
 В данном материале представлен ряд проблем, которые могут возникнуть в приложениях [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], и даны рекомендации, как их избежать или, по крайней мере, снизить их негативное влияние.  
@@ -57,7 +57,7 @@ ms.locfileid: "67307187"
 ## <a name="skip-and-take-exceptions-in-sql-server-2000"></a>Исключения методов "Skip" и "Take" в SQL Server 2000  
  При использовании <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> или <xref:System.Linq.Queryable.Take%2A> в базе данных SQL Server 2000 необходимо применять члены идентификации (<xref:System.Linq.Queryable.Skip%2A>) Запрос должен быть выполнен в одной таблице (без объединения) либо он должен представлять операцию <xref:System.Linq.Queryable.Distinct%2A>, <xref:System.Linq.Queryable.Except%2A>, <xref:System.Linq.Queryable.Intersect%2A> или <xref:System.Linq.Queryable.Union%2A> и не включать операцию <xref:System.Linq.Queryable.Concat%2A> operation. Дополнительные сведения см. в разделе «Поддержка SQL Server 2000» [преобразование стандартного оператора запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
   
- Это требование не относится к [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)].  
+ Это требование не относится к SQL Server 2005.  
   
 ## <a name="groupby-invalidoperationexception"></a>GroupBy InvalidOperationException  
  Данное исключение возникает, если в запросе <xref:System.Linq.Enumerable.GroupBy%2A>, выполняющем группировку по выражению `boolean`, например `group x by (Phone==@phone)`, столбец имеет значение NULL. Поскольку выражение является `boolean`, ключ определяется как `boolean`, а не `nullable` `boolean`. При результате преобразованного сравнения выводится значение null, будет предпринята попытка назначить `nullable` `boolean` для `boolean`, и возникает исключение.  
