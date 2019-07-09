@@ -4,651 +4,668 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e4d3d7bc574dd27aaea0d43ee6f507dd0c413f2
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 93fd1aaab4be25273d34c58a1e6c22faffe41050
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063820"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662340"
 ---
-# <a name="migrating-your-windows-store-app-to-net-native"></a><span data-ttu-id="a8122-102">Миграция приложения для магазина Windows в машинный код .NET</span><span class="sxs-lookup"><span data-stu-id="a8122-102">Migrating Your Windows Store App to .NET Native</span></span>
-<span data-ttu-id="a8122-103">.NET native обеспечивает статическую компиляцию приложений в Windows Store или на компьютере разработчика.</span><span class="sxs-lookup"><span data-stu-id="a8122-103">.NET Native provides static compilation of apps in the Windows Store or on the developer’s computer.</span></span> <span data-ttu-id="a8122-104">В отличие от динамической компиляции, выполняемой JIT-компилятором для приложений магазина Windows или [Генератором машинных образов (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) на устройстве.</span><span class="sxs-lookup"><span data-stu-id="a8122-104">This differs from the dynamic compilation performed for Windows Store apps by the just-in-time (JIT) compiler or the [Native Image Generator (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) on the device.</span></span> <span data-ttu-id="a8122-105">Несмотря на различия, .NET Native пытается поддерживать совместимость с [.NET для Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29).</span><span class="sxs-lookup"><span data-stu-id="a8122-105">Despite the differences, .NET Native tries to maintain compatibility with the [.NET for Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29).</span></span> <span data-ttu-id="a8122-106">В большинстве случаев вещи, которые работают в приложениях .NET для Windows Store также работать с .NET Native.</span><span class="sxs-lookup"><span data-stu-id="a8122-106">For the most part, things that work on the .NET for Windows Store apps also work with .NET Native.</span></span>  <span data-ttu-id="a8122-107">Тем не менее в некоторых случаях могут произойти изменения поведения.</span><span class="sxs-lookup"><span data-stu-id="a8122-107">However, in some cases, you may encounter behavioral changes.</span></span> <span data-ttu-id="a8122-108">В этом документе рассматриваются различия между стандартных приложениях .NET для Windows Store и .NET Native в следующих областях:</span><span class="sxs-lookup"><span data-stu-id="a8122-108">This document discusses these differences between the standard .NET for Windows Store apps and .NET Native in the following areas:</span></span>  
-  
-- [<span data-ttu-id="a8122-109">Общие различия среды выполнения</span><span class="sxs-lookup"><span data-stu-id="a8122-109">General runtime differences</span></span>](#Runtime)  
-  
-- [<span data-ttu-id="a8122-110">Различия динамического программирования</span><span class="sxs-lookup"><span data-stu-id="a8122-110">Dynamic programming differences</span></span>](#Dynamic)  
-  
-- [<span data-ttu-id="a8122-111">Другие различия, связанным с отражением</span><span class="sxs-lookup"><span data-stu-id="a8122-111">Other reflection-related differences</span></span>](#Reflection)  
-  
-- [<span data-ttu-id="a8122-112">Неподдерживаемые сценарии и API-интерфейсы</span><span class="sxs-lookup"><span data-stu-id="a8122-112">Unsupported scenarios and APIs</span></span>](#Unsupported)  
-  
-- [<span data-ttu-id="a8122-113">Различия в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="a8122-113">Visual Studio differences</span></span>](#VS)  
-  
-<a name="Runtime"></a>   
-## <a name="general-runtime-differences"></a><span data-ttu-id="a8122-114">Общие различия среды выполнения</span><span class="sxs-lookup"><span data-stu-id="a8122-114">General runtime differences</span></span>  
-  
-- <span data-ttu-id="a8122-115">Исключения, такие как <xref:System.TypeLoadException>, создаваемых компилятором JIT, при запуске приложения в общеязыковой среды выполнения (CLR) обычно привести к ошибкам во время компиляции при обработке машинного кода .NET.</span><span class="sxs-lookup"><span data-stu-id="a8122-115">Exceptions, such as <xref:System.TypeLoadException>, that are thrown by the JIT compiler when an app runs on the common language runtime (CLR) generally result in compile-time errors when processed by .NET Native.</span></span>  
-  
-- <span data-ttu-id="a8122-116">Не вызывайте метод <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> из потока пользовательского интерфейса приложения.</span><span class="sxs-lookup"><span data-stu-id="a8122-116">Don't call the <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> method from an app's UI thread.</span></span> <span data-ttu-id="a8122-117">Это может привести к взаимоблокировке в среде .NET Native.</span><span class="sxs-lookup"><span data-stu-id="a8122-117">This can result in a deadlock on .NET Native.</span></span>  
-  
-- <span data-ttu-id="a8122-118">Не полагайтесь на порядок вызова конструктора статического класса.</span><span class="sxs-lookup"><span data-stu-id="a8122-118">Don't rely on static class constructor invocation ordering.</span></span> <span data-ttu-id="a8122-119">В .NET Native порядок вызова отличается от порядка в стандартной среде выполнения.</span><span class="sxs-lookup"><span data-stu-id="a8122-119">In .NET Native, the invocation order is different from the order on the standard runtime.</span></span> <span data-ttu-id="a8122-120">(Даже со стандартной средой выполнения, не следует рассчитывать на порядок выполнения конструкторов статических классов.)</span><span class="sxs-lookup"><span data-stu-id="a8122-120">(Even with the standard runtime, you shouldn't rely on the order of execution of static class constructors.)</span></span>  
-  
-- <span data-ttu-id="a8122-121">Бесконечный цикл без вызовов (например, `while(true);`) на любом потоке может привести к остановке приложения.</span><span class="sxs-lookup"><span data-stu-id="a8122-121">Infinite looping without making a call (for example, `while(true);`) on any thread may bring the app to a halt.</span></span> <span data-ttu-id="a8122-122">Аналогичным образом, большие или бесконечные ожидания могут также привести приложение к остановке.</span><span class="sxs-lookup"><span data-stu-id="a8122-122">Similarly, large or infinite waits may bring the app to a halt.</span></span>  
-  
-- <span data-ttu-id="a8122-123">Некоторые циклы универсальной инициализации не создают исключения в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="a8122-123">Certain generic initialization cycles don't throw exceptions in .NET Native.</span></span> <span data-ttu-id="a8122-124">Например, следующий код создает исключение <xref:System.TypeLoadException> исключений в стандартной среде CLR.</span><span class="sxs-lookup"><span data-stu-id="a8122-124">For example, the following code throws a <xref:System.TypeLoadException> exception on the standard CLR.</span></span> <span data-ttu-id="a8122-125">В .NET Native нет.</span><span class="sxs-lookup"><span data-stu-id="a8122-125">In .NET Native, it doesn't.</span></span>  
-  
-     [!code-csharp[ProjectN#8](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat1.cs#8)]  
-  
-- <span data-ttu-id="a8122-126">В некоторых случаях .NET Native предоставляет различные реализации библиотеки классов .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a8122-126">In some cases, .NET Native provides different implementations of .NET Framework class libraries.</span></span> <span data-ttu-id="a8122-127">Объект, возвращенный из метода, всегда будет реализовать члены возвращаемого типа.</span><span class="sxs-lookup"><span data-stu-id="a8122-127">An object returned from a method will always implement the members of the returned type.</span></span> <span data-ttu-id="a8122-128">Тем не менее, поскольку его резервная реализация отличается, может оказаться невозможным привести его к тому же набору типов, как это можно было бы сделать на платформах .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a8122-128">However, since its backing implementation is different, you may not be able to cast it to the same set of types as you could on other .NET Framework platforms.</span></span> <span data-ttu-id="a8122-129">Например, в некоторых случаях может оказаться невозможным привести объект интерфейса <xref:System.Collections.Generic.IEnumerable%601> , возвращенный такими методами как <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> или <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> , к `T[]`.</span><span class="sxs-lookup"><span data-stu-id="a8122-129">For example, in some cases, you may not be able to cast the <xref:System.Collections.Generic.IEnumerable%601> interface object returned by methods such as <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> or <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> to `T[]`.</span></span>  
-  
-- <span data-ttu-id="a8122-130">Кэш WinInet не включен по умолчанию в приложениях .NET для Windows Store, но это в среде .NET Native.</span><span class="sxs-lookup"><span data-stu-id="a8122-130">The WinInet cache isn't enabled by default on .NET for Windows Store apps, but it is on .NET Native.</span></span> <span data-ttu-id="a8122-131">Это повышает производительность, но сказывается на рабочем наборе.</span><span class="sxs-lookup"><span data-stu-id="a8122-131">This improves performance but has working set implications.</span></span> <span data-ttu-id="a8122-132">Не требуется никаких действий разработчика.</span><span class="sxs-lookup"><span data-stu-id="a8122-132">No developer action is necessary.</span></span>  
-  
-<a name="Dynamic"></a>   
-## <a name="dynamic-programming-differences"></a><span data-ttu-id="a8122-133">Различия динамического программирования</span><span class="sxs-lookup"><span data-stu-id="a8122-133">Dynamic programming differences</span></span>  
- <span data-ttu-id="a8122-134">.NET native статически связывает код из платформы .NET Framework, чтобы сделать код локальным для достижения максимальной производительности приложения.</span><span class="sxs-lookup"><span data-stu-id="a8122-134">.NET Native statically links in code from the .NET Framework to make the code app-local for maximum performance.</span></span> <span data-ttu-id="a8122-135">Тем не менее, двоичные размеры должны оставаться небольшими, поэтому не удается подключить всю платформу .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a8122-135">However, binary sizes have to remain small, so the entire .NET Framework can't be brought in.</span></span> <span data-ttu-id="a8122-136">.NET Native компилятор разрешает это ограничение с помощью редуктора зависимостей, который удаляет ссылки на неиспользуемый код.</span><span class="sxs-lookup"><span data-stu-id="a8122-136">The .NET Native compiler resolves this limitation by using a dependency reducer that removes references to unused code.</span></span> <span data-ttu-id="a8122-137">Тем не менее .NET Native не может поддерживать или создавать некоторые сведения о типе и код, когда эти сведения не могут быть определены статически во время компиляции, но вместо этого извлекаются динамически во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="a8122-137">However, .NET Native might not maintain or generate some type information and code when that information can't be inferred statically at compile time, but instead is retrieved dynamically at runtime.</span></span>  
-  
- <span data-ttu-id="a8122-138">.NET native включает отражение и динамическое программирование.</span><span class="sxs-lookup"><span data-stu-id="a8122-138">.NET Native does enable reflection and dynamic programming.</span></span> <span data-ttu-id="a8122-139">При этом, не все типы могут быть помечены для отражения, так как это сделает размер созданного кода слишком большим (особенно потому, что поддерживается отражение на общедоступных API в платформе .NET Framework).</span><span class="sxs-lookup"><span data-stu-id="a8122-139">However, not all types can be marked for reflection, because this would make the generated code size too large (especially because reflecting on public APIs in the .NET Framework is supported).</span></span> <span data-ttu-id="a8122-140">.NET Native компилятор делает интеллектуальный Выбор о том, какие типы должны поддерживать отражение, и он сохраняет метаданные и создает код только для этих типов.</span><span class="sxs-lookup"><span data-stu-id="a8122-140">The .NET Native compiler makes smart choices about which types should support reflection, and it keeps the metadata and generates code only for those types.</span></span>  
-  
- <span data-ttu-id="a8122-141">Например, привязка данных требует, чтобы приложение обеспечивало сопоставление имен свойств с функциями.</span><span class="sxs-lookup"><span data-stu-id="a8122-141">For example, data binding requires an app to be able to map property names to functions.</span></span> <span data-ttu-id="a8122-142">В приложениях .NET для магазина Windows среда CLR автоматически использует отражение для обеспечения этой возможности для управляемых и общедоступных собственных типов.</span><span class="sxs-lookup"><span data-stu-id="a8122-142">In .NET for Windows Store apps, the common language runtime automatically uses reflection to provide this capability for managed types and publicly available native types.</span></span> <span data-ttu-id="a8122-143">В .NET Native компилятор автоматически включает метаданные для типов, к которым осуществляется привязка данных.</span><span class="sxs-lookup"><span data-stu-id="a8122-143">In .NET Native, the compiler automatically includes metadata for types to which you bind data.</span></span>  
-  
- <span data-ttu-id="a8122-144">.NET Native, компилятор может также обрабатывать часто используемые универсальные типы, такие <xref:System.Collections.Generic.List%601> и <xref:System.Collections.Generic.Dictionary%602>, которые работают, не требуя подсказок или директив.</span><span class="sxs-lookup"><span data-stu-id="a8122-144">The .NET Native compiler can also handle commonly used generic types such as <xref:System.Collections.Generic.List%601> and <xref:System.Collections.Generic.Dictionary%602>, which work without requiring any hints or directives.</span></span> <span data-ttu-id="a8122-145">Ключевое слово [dynamic](~/docs/csharp/language-reference/keywords/dynamic.md) также поддерживается в заданных пределах.</span><span class="sxs-lookup"><span data-stu-id="a8122-145">The [dynamic](~/docs/csharp/language-reference/keywords/dynamic.md) keyword is also supported within certain limits.</span></span>  
-  
+# <a name="migrating-your-windows-store-app-to-net-native"></a><span data-ttu-id="63b4f-102">Миграция приложения для магазина Windows в машинный код .NET</span><span class="sxs-lookup"><span data-stu-id="63b4f-102">Migrating Your Windows Store App to .NET Native</span></span>
+
+<span data-ttu-id="63b4f-103">.NET native обеспечивает статическую компиляцию приложений в Windows Store или на компьютере разработчика.</span><span class="sxs-lookup"><span data-stu-id="63b4f-103">.NET Native provides static compilation of apps in the Windows Store or on the developer’s computer.</span></span> <span data-ttu-id="63b4f-104">В отличие от динамической компиляции, выполняемой JIT-компилятором для приложений магазина Windows или [Генератором машинных образов (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) на устройстве.</span><span class="sxs-lookup"><span data-stu-id="63b4f-104">This differs from the dynamic compilation performed for Windows Store apps by the just-in-time (JIT) compiler or the [Native Image Generator (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) on the device.</span></span> <span data-ttu-id="63b4f-105">Несмотря на различия, .NET Native пытается поддерживать совместимость с [.NET для Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29).</span><span class="sxs-lookup"><span data-stu-id="63b4f-105">Despite the differences, .NET Native tries to maintain compatibility with the [.NET for Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29).</span></span> <span data-ttu-id="63b4f-106">В большинстве случаев вещи, которые работают в приложениях .NET для Windows Store также работать с .NET Native.</span><span class="sxs-lookup"><span data-stu-id="63b4f-106">For the most part, things that work on the .NET for Windows Store apps also work with .NET Native.</span></span>  <span data-ttu-id="63b4f-107">Тем не менее в некоторых случаях могут произойти изменения поведения.</span><span class="sxs-lookup"><span data-stu-id="63b4f-107">However, in some cases, you may encounter behavioral changes.</span></span> <span data-ttu-id="63b4f-108">В этом документе рассматриваются различия между стандартных приложениях .NET для Windows Store и .NET Native в следующих областях:</span><span class="sxs-lookup"><span data-stu-id="63b4f-108">This document discusses these differences between the standard .NET for Windows Store apps and .NET Native in the following areas:</span></span>
+
+- [<span data-ttu-id="63b4f-109">Общие различия среды выполнения</span><span class="sxs-lookup"><span data-stu-id="63b4f-109">General runtime differences</span></span>](#Runtime)
+
+- [<span data-ttu-id="63b4f-110">Различия динамического программирования</span><span class="sxs-lookup"><span data-stu-id="63b4f-110">Dynamic programming differences</span></span>](#Dynamic)
+
+- [<span data-ttu-id="63b4f-111">Другие различия, связанным с отражением</span><span class="sxs-lookup"><span data-stu-id="63b4f-111">Other reflection-related differences</span></span>](#Reflection)
+
+- [<span data-ttu-id="63b4f-112">Неподдерживаемые сценарии и API-интерфейсы</span><span class="sxs-lookup"><span data-stu-id="63b4f-112">Unsupported scenarios and APIs</span></span>](#Unsupported)
+
+- [<span data-ttu-id="63b4f-113">Различия в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="63b4f-113">Visual Studio differences</span></span>](#VS)
+
+<a name="Runtime"></a>
+
+## <a name="general-runtime-differences"></a><span data-ttu-id="63b4f-114">Общие различия среды выполнения</span><span class="sxs-lookup"><span data-stu-id="63b4f-114">General runtime differences</span></span>
+
+- <span data-ttu-id="63b4f-115">Исключения, такие как <xref:System.TypeLoadException>, создаваемых компилятором JIT, при запуске приложения в общеязыковой среды выполнения (CLR) обычно привести к ошибкам во время компиляции при обработке машинного кода .NET.</span><span class="sxs-lookup"><span data-stu-id="63b4f-115">Exceptions, such as <xref:System.TypeLoadException>, that are thrown by the JIT compiler when an app runs on the common language runtime (CLR) generally result in compile-time errors when processed by .NET Native.</span></span>
+
+- <span data-ttu-id="63b4f-116">Не вызывайте метод <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> из потока пользовательского интерфейса приложения.</span><span class="sxs-lookup"><span data-stu-id="63b4f-116">Don't call the <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> method from an app's UI thread.</span></span> <span data-ttu-id="63b4f-117">Это может привести к взаимоблокировке в среде .NET Native.</span><span class="sxs-lookup"><span data-stu-id="63b4f-117">This can result in a deadlock on .NET Native.</span></span>
+
+- <span data-ttu-id="63b4f-118">Не полагайтесь на порядок вызова конструктора статического класса.</span><span class="sxs-lookup"><span data-stu-id="63b4f-118">Don't rely on static class constructor invocation ordering.</span></span> <span data-ttu-id="63b4f-119">В .NET Native порядок вызова отличается от порядка в стандартной среде выполнения.</span><span class="sxs-lookup"><span data-stu-id="63b4f-119">In .NET Native, the invocation order is different from the order on the standard runtime.</span></span> <span data-ttu-id="63b4f-120">(Даже со стандартной средой выполнения, не следует рассчитывать на порядок выполнения конструкторов статических классов.)</span><span class="sxs-lookup"><span data-stu-id="63b4f-120">(Even with the standard runtime, you shouldn't rely on the order of execution of static class constructors.)</span></span>
+
+- <span data-ttu-id="63b4f-121">Бесконечный цикл без вызовов (например, `while(true);`) на любом потоке может привести к остановке приложения.</span><span class="sxs-lookup"><span data-stu-id="63b4f-121">Infinite looping without making a call (for example, `while(true);`) on any thread may bring the app to a halt.</span></span> <span data-ttu-id="63b4f-122">Аналогичным образом, большие или бесконечные ожидания могут также привести приложение к остановке.</span><span class="sxs-lookup"><span data-stu-id="63b4f-122">Similarly, large or infinite waits may bring the app to a halt.</span></span>
+
+- <span data-ttu-id="63b4f-123">Некоторые циклы универсальной инициализации не создают исключения в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="63b4f-123">Certain generic initialization cycles don't throw exceptions in .NET Native.</span></span> <span data-ttu-id="63b4f-124">Например, следующий код создает исключение <xref:System.TypeLoadException> исключений в стандартной среде CLR.</span><span class="sxs-lookup"><span data-stu-id="63b4f-124">For example, the following code throws a <xref:System.TypeLoadException> exception on the standard CLR.</span></span> <span data-ttu-id="63b4f-125">В .NET Native нет.</span><span class="sxs-lookup"><span data-stu-id="63b4f-125">In .NET Native, it doesn't.</span></span>
+
+  [!code-csharp[ProjectN#8](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat1.cs#8)]
+
+- <span data-ttu-id="63b4f-126">В некоторых случаях .NET Native предоставляет различные реализации библиотеки классов .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="63b4f-126">In some cases, .NET Native provides different implementations of .NET Framework class libraries.</span></span> <span data-ttu-id="63b4f-127">Объект, возвращенный из метода, всегда будет реализовать члены возвращаемого типа.</span><span class="sxs-lookup"><span data-stu-id="63b4f-127">An object returned from a method will always implement the members of the returned type.</span></span> <span data-ttu-id="63b4f-128">Тем не менее, поскольку его резервная реализация отличается, может оказаться невозможным привести его к тому же набору типов, как это можно было бы сделать на платформах .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="63b4f-128">However, since its backing implementation is different, you may not be able to cast it to the same set of types as you could on other .NET Framework platforms.</span></span> <span data-ttu-id="63b4f-129">Например, в некоторых случаях может оказаться невозможным привести объект интерфейса <xref:System.Collections.Generic.IEnumerable%601> , возвращенный такими методами как <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> или <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> , к `T[]`.</span><span class="sxs-lookup"><span data-stu-id="63b4f-129">For example, in some cases, you may not be able to cast the <xref:System.Collections.Generic.IEnumerable%601> interface object returned by methods such as <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> or <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> to `T[]`.</span></span>
+
+- <span data-ttu-id="63b4f-130">Кэш WinInet не включен по умолчанию в приложениях .NET для Windows Store, но это в среде .NET Native.</span><span class="sxs-lookup"><span data-stu-id="63b4f-130">The WinInet cache isn't enabled by default on .NET for Windows Store apps, but it is on .NET Native.</span></span> <span data-ttu-id="63b4f-131">Это повышает производительность, но сказывается на рабочем наборе.</span><span class="sxs-lookup"><span data-stu-id="63b4f-131">This improves performance but has working set implications.</span></span> <span data-ttu-id="63b4f-132">Не требуется никаких действий разработчика.</span><span class="sxs-lookup"><span data-stu-id="63b4f-132">No developer action is necessary.</span></span>
+
+<a name="Dynamic"></a>
+
+## <a name="dynamic-programming-differences"></a><span data-ttu-id="63b4f-133">Различия динамического программирования</span><span class="sxs-lookup"><span data-stu-id="63b4f-133">Dynamic programming differences</span></span>
+
+<span data-ttu-id="63b4f-134">.NET native статически связывает код из платформы .NET Framework, чтобы сделать код локальным для достижения максимальной производительности приложения.</span><span class="sxs-lookup"><span data-stu-id="63b4f-134">.NET Native statically links in code from the .NET Framework to make the code app-local for maximum performance.</span></span> <span data-ttu-id="63b4f-135">Тем не менее, двоичные размеры должны оставаться небольшими, поэтому не удается подключить всю платформу .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="63b4f-135">However, binary sizes have to remain small, so the entire .NET Framework can't be brought in.</span></span> <span data-ttu-id="63b4f-136">.NET Native компилятор разрешает это ограничение с помощью редуктора зависимостей, который удаляет ссылки на неиспользуемый код.</span><span class="sxs-lookup"><span data-stu-id="63b4f-136">The .NET Native compiler resolves this limitation by using a dependency reducer that removes references to unused code.</span></span> <span data-ttu-id="63b4f-137">Тем не менее .NET Native не может поддерживать или создавать некоторые сведения о типе и код, когда эти сведения не могут быть определены статически во время компиляции, но вместо этого извлекаются динамически во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="63b4f-137">However, .NET Native might not maintain or generate some type information and code when that information can't be inferred statically at compile time, but instead is retrieved dynamically at runtime.</span></span>
+
+<span data-ttu-id="63b4f-138">.NET native включает отражение и динамическое программирование.</span><span class="sxs-lookup"><span data-stu-id="63b4f-138">.NET Native does enable reflection and dynamic programming.</span></span> <span data-ttu-id="63b4f-139">При этом, не все типы могут быть помечены для отражения, так как это сделает размер созданного кода слишком большим (особенно потому, что поддерживается отражение на общедоступных API в платформе .NET Framework).</span><span class="sxs-lookup"><span data-stu-id="63b4f-139">However, not all types can be marked for reflection, because this would make the generated code size too large (especially because reflecting on public APIs in the .NET Framework is supported).</span></span> <span data-ttu-id="63b4f-140">.NET Native компилятор делает интеллектуальный Выбор о том, какие типы должны поддерживать отражение, и он сохраняет метаданные и создает код только для этих типов.</span><span class="sxs-lookup"><span data-stu-id="63b4f-140">The .NET Native compiler makes smart choices about which types should support reflection, and it keeps the metadata and generates code only for those types.</span></span>
+
+<span data-ttu-id="63b4f-141">Например, привязка данных требует, чтобы приложение обеспечивало сопоставление имен свойств с функциями.</span><span class="sxs-lookup"><span data-stu-id="63b4f-141">For example, data binding requires an app to be able to map property names to functions.</span></span> <span data-ttu-id="63b4f-142">В приложениях .NET для магазина Windows среда CLR автоматически использует отражение для обеспечения этой возможности для управляемых и общедоступных собственных типов.</span><span class="sxs-lookup"><span data-stu-id="63b4f-142">In .NET for Windows Store apps, the common language runtime automatically uses reflection to provide this capability for managed types and publicly available native types.</span></span> <span data-ttu-id="63b4f-143">В .NET Native компилятор автоматически включает метаданные для типов, к которым осуществляется привязка данных.</span><span class="sxs-lookup"><span data-stu-id="63b4f-143">In .NET Native, the compiler automatically includes metadata for types to which you bind data.</span></span>
+
+<span data-ttu-id="63b4f-144">.NET Native, компилятор может также обрабатывать часто используемые универсальные типы, такие <xref:System.Collections.Generic.List%601> и <xref:System.Collections.Generic.Dictionary%602>, которые работают, не требуя подсказок или директив.</span><span class="sxs-lookup"><span data-stu-id="63b4f-144">The .NET Native compiler can also handle commonly used generic types such as <xref:System.Collections.Generic.List%601> and <xref:System.Collections.Generic.Dictionary%602>, which work without requiring any hints or directives.</span></span> <span data-ttu-id="63b4f-145">Ключевое слово [dynamic](~/docs/csharp/language-reference/keywords/dynamic.md) также поддерживается в заданных пределах.</span><span class="sxs-lookup"><span data-stu-id="63b4f-145">The [dynamic](~/docs/csharp/language-reference/keywords/dynamic.md) keyword is also supported within certain limits.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="a8122-146">Следует тщательно протестировать все пути динамического кода, при переносе приложения в машинный код .NET.</span><span class="sxs-lookup"><span data-stu-id="a8122-146">You should test all dynamic code paths thoroughly when porting your app to .NET Native.</span></span>  
-  
- <span data-ttu-id="a8122-147">Конфигурация по умолчанию для машинного кода .NET достаточно для большинства разработчиков, но некоторым разработчикам может потребоваться точная настройка своих конфигураций с помощью директив среды выполнения (. rd.xml) файла.</span><span class="sxs-lookup"><span data-stu-id="a8122-147">The default configuration for .NET Native is sufficient for most developers, but some developers might want to fine- tune their configurations by using a runtime directives (.rd.xml) file.</span></span> <span data-ttu-id="a8122-148">Кроме того в некоторых случаях компилятор .NET Native не удается определить, какие метаданные должны быть доступны для отражения и опирается на подсказки, особенно в следующих случаях:</span><span class="sxs-lookup"><span data-stu-id="a8122-148">In addition, in some cases, the .NET Native compiler is unable to determine which metadata must be available for reflection and relies on hints, particularly in the following cases:</span></span>  
-  
-- <span data-ttu-id="a8122-149">Некоторые конструкции, такие как <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> и <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> не удается определить статически.</span><span class="sxs-lookup"><span data-stu-id="a8122-149">Some constructs like <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> and <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> can't be determined statically.</span></span>  
-  
-- <span data-ttu-id="a8122-150">Поскольку компилятор не может определить экземпляры, универсальный тип, который требуется отразить на нем должен быть указан директивами среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="a8122-150">Because the compiler can't determine the instantiations, a generic type that you want to reflect on has to be specified by runtime directives.</span></span> <span data-ttu-id="a8122-151">Это необходимо не только потому, что весь код должен быть включен, но так же и вследствие того, что отражение на универсальных типах могут образовывать бесконечный цикл (например, при вызове универсального метода для универсального типа).</span><span class="sxs-lookup"><span data-stu-id="a8122-151">This isn't just because all code must be included, but because reflection on generic types can form an infinite cycle (for example, when a generic method is invoked on a generic type).</span></span>  
-  
+> <span data-ttu-id="63b4f-146">Следует тщательно протестировать все пути динамического кода, при переносе приложения в машинный код .NET.</span><span class="sxs-lookup"><span data-stu-id="63b4f-146">You should test all dynamic code paths thoroughly when porting your app to .NET Native.</span></span>
+
+<span data-ttu-id="63b4f-147">Конфигурация по умолчанию для машинного кода .NET достаточно для большинства разработчиков, но некоторым разработчикам может потребоваться точная настройка своих конфигураций с помощью директив среды выполнения (. rd.xml) файла.</span><span class="sxs-lookup"><span data-stu-id="63b4f-147">The default configuration for .NET Native is sufficient for most developers, but some developers might want to fine- tune their configurations by using a runtime directives (.rd.xml) file.</span></span> <span data-ttu-id="63b4f-148">Кроме того в некоторых случаях компилятор .NET Native не удается определить, какие метаданные должны быть доступны для отражения и опирается на подсказки, особенно в следующих случаях:</span><span class="sxs-lookup"><span data-stu-id="63b4f-148">In addition, in some cases, the .NET Native compiler is unable to determine which metadata must be available for reflection and relies on hints, particularly in the following cases:</span></span>
+
+- <span data-ttu-id="63b4f-149">Некоторые конструкции, такие как <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> и <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> не удается определить статически.</span><span class="sxs-lookup"><span data-stu-id="63b4f-149">Some constructs like <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> and <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> can't be determined statically.</span></span>
+
+- <span data-ttu-id="63b4f-150">Поскольку компилятор не может определить экземпляры, универсальный тип, который требуется отразить на нем должен быть указан директивами среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="63b4f-150">Because the compiler can't determine the instantiations, a generic type that you want to reflect on has to be specified by runtime directives.</span></span> <span data-ttu-id="63b4f-151">Это необходимо не только потому, что весь код должен быть включен, но так же и вследствие того, что отражение на универсальных типах могут образовывать бесконечный цикл (например, при вызове универсального метода для универсального типа).</span><span class="sxs-lookup"><span data-stu-id="63b4f-151">This isn't just because all code must be included, but because reflection on generic types can form an infinite cycle (for example, when a generic method is invoked on a generic type).</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="a8122-152">Директивы среды выполнения определяются в файле директив среды выполнения (. rd.xml).</span><span class="sxs-lookup"><span data-stu-id="a8122-152">Runtime directives are defined in a runtime directives (.rd.xml) file.</span></span> <span data-ttu-id="a8122-153">Общие сведения об использовании этого файла см. в разделе [Приступая к работе](../../../docs/framework/net-native/getting-started-with-net-native.md).</span><span class="sxs-lookup"><span data-stu-id="a8122-153">For general information about using this file, see [Getting Started](../../../docs/framework/net-native/getting-started-with-net-native.md).</span></span> <span data-ttu-id="a8122-154">Сведения о директивах среды выполнения см. в разделе [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).</span><span class="sxs-lookup"><span data-stu-id="a8122-154">For information about the runtime directives, see [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).</span></span>  
-  
- <span data-ttu-id="a8122-155">.NET native также включает средства профилирования, помогающие определить, какие типы, не входящие в набор по умолчанию, должны поддерживать отражения.</span><span class="sxs-lookup"><span data-stu-id="a8122-155">.NET Native also includes profiling tools that help the developer determine which types outside the default set should support reflection.</span></span>  
-  
-<a name="Reflection"></a>   
-## <a name="other-reflection-related-differences"></a><span data-ttu-id="a8122-156">Другие различия, связанным с отражением</span><span class="sxs-lookup"><span data-stu-id="a8122-156">Other reflection-related differences</span></span>  
- <span data-ttu-id="a8122-157">Существует ряд других отдельных связанным с отражением различий в поведении между приложениями .NET для Windows Store и .NET Native.</span><span class="sxs-lookup"><span data-stu-id="a8122-157">There are a number of other individual reflection-related differences in behavior between the .NET for Windows Store apps and .NET Native.</span></span>  
-  
- <span data-ttu-id="a8122-158">В машинный код .NET:</span><span class="sxs-lookup"><span data-stu-id="a8122-158">In .NET Native:</span></span>  
-  
-- <span data-ttu-id="a8122-159">Отражение закрытых типов и членов в библиотеке классов платформы .NET Framework не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="a8122-159">Private reflection over types and members in the .NET Framework class library is not supported.</span></span> <span data-ttu-id="a8122-160">Тем не менее, можно выполнить отражение на собственных закрытых типах и членах, а также типах и членах библиотек сторонних поставщиков.</span><span class="sxs-lookup"><span data-stu-id="a8122-160">You can, however, reflect over your own private types and members, as well as types and members in third-party libraries.</span></span>  
-  
-- <span data-ttu-id="a8122-161">Свойство <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> корректно возвращает `false` для объекта <xref:System.Reflection.ParameterInfo> , который представляет возвращаемое значение.</span><span class="sxs-lookup"><span data-stu-id="a8122-161">The <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> property correctly returns `false` for a <xref:System.Reflection.ParameterInfo> object that represents a return value.</span></span> <span data-ttu-id="a8122-162">В приложениях .NET для магазина Windows, будет возвращено значение `true`.</span><span class="sxs-lookup"><span data-stu-id="a8122-162">In the .NET for Windows Store apps, it returns `true`.</span></span> <span data-ttu-id="a8122-163">Промежуточный язык (IL) не поддерживает это непосредственно, и интерпретация выполняется языком.</span><span class="sxs-lookup"><span data-stu-id="a8122-163">Intermediate language (IL) doesn’t support this directly, and interpretation is left to the language.</span></span>  
-  
-- <span data-ttu-id="a8122-164">Открытые члены на структурах <xref:System.RuntimeFieldHandle> и <xref:System.RuntimeMethodHandle> не поддерживаются.</span><span class="sxs-lookup"><span data-stu-id="a8122-164">Public members on the <xref:System.RuntimeFieldHandle> and <xref:System.RuntimeMethodHandle> structures aren't supported.</span></span> <span data-ttu-id="a8122-165">Эти типы поддерживаются только для LINQ, деревьев выражений и инициализации статического массива.</span><span class="sxs-lookup"><span data-stu-id="a8122-165">These types are supported only for LINQ, expression trees, and static array initialization.</span></span>  
-  
-- <span data-ttu-id="a8122-166"><xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> и <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> включают скрытые члены в базовых классах и поэтому могут переопределяться без явного переопределения.</span><span class="sxs-lookup"><span data-stu-id="a8122-166"><xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> and <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> include hidden members in base classes and thus may be overridden without explicit overrides.</span></span> <span data-ttu-id="a8122-167">Это также справедливо для других методов [RuntimeReflectionExtensions.GetRuntime\*](xref:System.Reflection.RuntimeReflectionExtensions) .</span><span class="sxs-lookup"><span data-stu-id="a8122-167">This is also true of other [RuntimeReflectionExtensions.GetRuntime\*](xref:System.Reflection.RuntimeReflectionExtensions) methods.</span></span>  
-  
-- <span data-ttu-id="a8122-168"><xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> и <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> не дают сбой при попытке создать определенные комбинации (например, массив byrefs).</span><span class="sxs-lookup"><span data-stu-id="a8122-168"><xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> and <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> don't fail when you try to create certain combinations (for example, an array of byrefs).</span></span>  
-  
-- <span data-ttu-id="a8122-169">Нельзя использовать отражение для вызова членов, которые содержат параметры указателя.</span><span class="sxs-lookup"><span data-stu-id="a8122-169">You can't use reflection to invoke members that have pointer parameters.</span></span>  
-  
-- <span data-ttu-id="a8122-170">Чтобы получить или задать поле указателя, нельзя использовать отражение.</span><span class="sxs-lookup"><span data-stu-id="a8122-170">You can't use reflection to get or set a pointer field.</span></span>  
-  
-- <span data-ttu-id="a8122-171">Если неверное количество аргументов и тип одного из аргументов неверен, .NET Native вызывает <xref:System.ArgumentException> вместо <xref:System.Reflection.TargetParameterCountException>.</span><span class="sxs-lookup"><span data-stu-id="a8122-171">When the argument count is wrong and the type of one of the arguments is incorrect, .NET Native throws an <xref:System.ArgumentException> instead of a <xref:System.Reflection.TargetParameterCountException>.</span></span>  
-  
-- <span data-ttu-id="a8122-172">Обычно двоичная сериализация исключений не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="a8122-172">Binary serialization of exceptions is generally not supported.</span></span> <span data-ttu-id="a8122-173">В результате несериализуемые объекты могут быть добавлены к словарю <xref:System.Exception.Data%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="a8122-173">As a result, non-serializable objects can be added to the <xref:System.Exception.Data%2A?displayProperty=nameWithType> dictionary.</span></span>  
-  
-<a name="Unsupported"></a>   
-## <a name="unsupported-scenarios-and-apis"></a><span data-ttu-id="a8122-174">Неподдерживаемые сценарии и API-интерфейсы</span><span class="sxs-lookup"><span data-stu-id="a8122-174">Unsupported scenarios and APIs</span></span>  
- <span data-ttu-id="a8122-175">В следующих разделах перечислены неподдерживаемые сценарии и интерфейсы API для общей разработки, взаимодействия и таких технологий, как HTTPClient и Windows Communication Foundation (WCF):</span><span class="sxs-lookup"><span data-stu-id="a8122-175">The following sections list unsupported scenarios and APIs for general development, interop, and technologies such as HTTPClient and Windows Communication Foundation (WCF):</span></span>  
-  
-- [<span data-ttu-id="a8122-176">Общая разработка</span><span class="sxs-lookup"><span data-stu-id="a8122-176">General development</span></span>](#General)  
-  
-- [<span data-ttu-id="a8122-177">HttpClient</span><span class="sxs-lookup"><span data-stu-id="a8122-177">HttpClient</span></span>](#HttpClient)  
-  
-- [<span data-ttu-id="a8122-178">Interop</span><span class="sxs-lookup"><span data-stu-id="a8122-178">Interop</span></span>](#Interop)  
-  
-- [<span data-ttu-id="a8122-179">Неподдерживаемые API</span><span class="sxs-lookup"><span data-stu-id="a8122-179">Unsupported APIs</span></span>](#APIs)  
-  
-<a name="General"></a>   
-### <a name="general-development-differences"></a><span data-ttu-id="a8122-180">Различия общей разработки</span><span class="sxs-lookup"><span data-stu-id="a8122-180">General development differences</span></span>  
- <span data-ttu-id="a8122-181">**Типы значений**</span><span class="sxs-lookup"><span data-stu-id="a8122-181">**Value types**</span></span>  
-  
-- <span data-ttu-id="a8122-182">При переопределении методов <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> и <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> для типа значения не вызывайте реализации базового класса.</span><span class="sxs-lookup"><span data-stu-id="a8122-182">If you override the <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> and <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> methods for a value type, don't call the base class implementations.</span></span> <span data-ttu-id="a8122-183">В приложениях .NET для магазина Windows эти методы основаны на отражении.</span><span class="sxs-lookup"><span data-stu-id="a8122-183">In .NET for Windows Store apps, these methods rely on reflection.</span></span> <span data-ttu-id="a8122-184">Во время компиляции .NET Native создает реализацию, которая не зависит от отражения среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="a8122-184">At compile time, .NET Native generates an implementation that doesn't rely on runtime reflection.</span></span> <span data-ttu-id="a8122-185">Это означает, что если не переопределить эти два метода, они будут работать как и ожидалось, так как .NET Native создает реализацию во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="a8122-185">This means that if you don't override these two methods, they will work as expected, because .NET Native generates the implementation at compile time.</span></span> <span data-ttu-id="a8122-186">Однако, переопределение этих методов с помощью вызова реализации базового класса приводит к возникновению исключения.</span><span class="sxs-lookup"><span data-stu-id="a8122-186">However, overriding these methods but calling the base class implementation results in an exception.</span></span>  
-  
-- <span data-ttu-id="a8122-187">Типы значений больше одного мегабайта не поддерживаются.</span><span class="sxs-lookup"><span data-stu-id="a8122-187">Value types larger than one megabyte aren't supported.</span></span>  
-  
-- <span data-ttu-id="a8122-188">Типы значений не может иметь конструктор по умолчанию в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="a8122-188">Value types can't have a default constructor in .NET Native.</span></span> <span data-ttu-id="a8122-189">(C# и Visual Basic запрещают конструкторы по умолчанию для типов значений.</span><span class="sxs-lookup"><span data-stu-id="a8122-189">(C# and Visual Basic prohibit default constructors on value types.</span></span> <span data-ttu-id="a8122-190">Тем не менее их можно создать в IL.)</span><span class="sxs-lookup"><span data-stu-id="a8122-190">However, these can be created in IL.)</span></span>  
-  
- <span data-ttu-id="a8122-191">**Массивы**</span><span class="sxs-lookup"><span data-stu-id="a8122-191">**Arrays**</span></span>  
-  
-- <span data-ttu-id="a8122-192">Массивы с нижней границей, отличной от нуля, не поддерживаются.</span><span class="sxs-lookup"><span data-stu-id="a8122-192">Arrays with a lower bound other than zero aren't supported.</span></span> <span data-ttu-id="a8122-193">Как правило, эти массивы создаются путем вызова перегрузки <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="a8122-193">Typically, these arrays are created by calling the <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> overload.</span></span>  
-  
-- <span data-ttu-id="a8122-194">Динамическое создание многомерных массивов не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="a8122-194">Dynamic creation of multidimensional arrays isn't supported.</span></span> <span data-ttu-id="a8122-195">Такие массивы обычно создаются путем вызова перегрузки метода <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> , который включает в себя параметр `lengths` , или же путем вызова метода <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="a8122-195">Such arrays are typically created by calling an overload of the <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> method that includes a `lengths` parameter, or by calling the <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> method.</span></span>  
-  
-- <span data-ttu-id="a8122-196">Многомерные массивы, имеющие четыре или более измерений не поддерживаются; т.е. их значение свойства <xref:System.Array.Rank%2A?displayProperty=nameWithType> равно или больше четырех.</span><span class="sxs-lookup"><span data-stu-id="a8122-196">Multidimensional arrays that have four or more dimensions aren't supported; that is, their <xref:System.Array.Rank%2A?displayProperty=nameWithType> property value is four or greater.</span></span> <span data-ttu-id="a8122-197">Вместо этого используйте [ступенчатые массивы](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (массива массивов).</span><span class="sxs-lookup"><span data-stu-id="a8122-197">Use [jagged arrays](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (an array of arrays) instead.</span></span> <span data-ttu-id="a8122-198">Например `array[x,y,z]` является недопустимым, но `array[x][y][z]` нет.</span><span class="sxs-lookup"><span data-stu-id="a8122-198">For example, `array[x,y,z]` is invalid, but `array[x][y][z]` isn't.</span></span>  
-  
-- <span data-ttu-id="a8122-199">Вариативность для многомерных массивов не поддерживается и вызывает исключение <xref:System.InvalidCastException> во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="a8122-199">Variance for multidimensional arrays isn't supported and causes an <xref:System.InvalidCastException> exception at run time.</span></span>  
-  
- <span data-ttu-id="a8122-200">**Универсальные шаблоны**</span><span class="sxs-lookup"><span data-stu-id="a8122-200">**Generics**</span></span>  
-  
-- <span data-ttu-id="a8122-201">Расширения бесконечного универсального типа приводят к ошибке компилятора.</span><span class="sxs-lookup"><span data-stu-id="a8122-201">Infinite generic type expansion results in a compiler error.</span></span> <span data-ttu-id="a8122-202">Например, этот код вызывает ошибку при компиляции:</span><span class="sxs-lookup"><span data-stu-id="a8122-202">For example, this code fails to compile:</span></span>  
-  
-     [!code-csharp[ProjectN#9](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat2.cs#9)]  
-  
- <span data-ttu-id="a8122-203">**Pointers**</span><span class="sxs-lookup"><span data-stu-id="a8122-203">**Pointers**</span></span>  
-  
-- <span data-ttu-id="a8122-204">Массивы указателей не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="a8122-204">Arrays of pointers aren't supported.</span></span>  
-  
-- <span data-ttu-id="a8122-205">Чтобы получить или задать поле указателя, нельзя использовать отражение.</span><span class="sxs-lookup"><span data-stu-id="a8122-205">You can't use reflection to get or set a pointer field.</span></span>  
-  
- <span data-ttu-id="a8122-206">**Сериализация**</span><span class="sxs-lookup"><span data-stu-id="a8122-206">**Serialization**</span></span>  
-  
- <span data-ttu-id="a8122-207">Атрибут <xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.String%29> не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="a8122-207">The <xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.String%29> attribute isn't supported.</span></span> <span data-ttu-id="a8122-208">Вместо этого используйте атрибут <xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.Type%29> .</span><span class="sxs-lookup"><span data-stu-id="a8122-208">Use the <xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.Type%29> attribute instead.</span></span>  
-  
- <span data-ttu-id="a8122-209">**Ресурсы**</span><span class="sxs-lookup"><span data-stu-id="a8122-209">**Resources**</span></span>  
-  
- <span data-ttu-id="a8122-210">Использование локализованных ресурсов с классом <xref:System.Diagnostics.Tracing.EventSource> не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="a8122-210">The use of localized resources with the <xref:System.Diagnostics.Tracing.EventSource> class isn't supported.</span></span> <span data-ttu-id="a8122-211">Свойство <xref:System.Diagnostics.Tracing.EventSourceAttribute.LocalizationResources%2A?displayProperty=nameWithType> не определяет локализованные ресурсы.</span><span class="sxs-lookup"><span data-stu-id="a8122-211">The <xref:System.Diagnostics.Tracing.EventSourceAttribute.LocalizationResources%2A?displayProperty=nameWithType> property doesn't define localized resources.</span></span>  
-  
- <span data-ttu-id="a8122-212">**Делегаты**</span><span class="sxs-lookup"><span data-stu-id="a8122-212">**Delegates**</span></span>  
-  
- <span data-ttu-id="a8122-213">`Delegate.BeginInvoke` и `Delegate.EndInvoke` не поддерживаются.</span><span class="sxs-lookup"><span data-stu-id="a8122-213">`Delegate.BeginInvoke` and `Delegate.EndInvoke` aren't supported.</span></span>  
-  
- <span data-ttu-id="a8122-214">**Различные API**</span><span class="sxs-lookup"><span data-stu-id="a8122-214">**Miscellaneous APIs**</span></span>  
-  
-- <span data-ttu-id="a8122-215">[TypeInfo.GUID](xref:System.Type.GUID) свойство выдает исключение <xref:System.PlatformNotSupportedException> исключения Если <xref:System.Runtime.InteropServices.GuidAttribute> атрибут не применяется к типу.</span><span class="sxs-lookup"><span data-stu-id="a8122-215">The [TypeInfo.GUID](xref:System.Type.GUID) property throws a <xref:System.PlatformNotSupportedException> exception if a <xref:System.Runtime.InteropServices.GuidAttribute> attribute isn't applied to the type.</span></span> <span data-ttu-id="a8122-216">Идентификатор GUID используется в основном для поддержки модели COM.</span><span class="sxs-lookup"><span data-stu-id="a8122-216">The GUID is used primarily for COM support.</span></span>  
-  
-- <span data-ttu-id="a8122-217"><xref:System.DateTime.Parse%2A?displayProperty=nameWithType> Метод правильно выполняет синтаксический анализ строк, содержащих даты в коротком формате в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="a8122-217">The <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> method correctly parses strings that contain short dates in .NET Native.</span></span> <span data-ttu-id="a8122-218">Тем не менее он не поддерживает совместимость с синтаксическим анализом изменений даты и времени, описанным в статьях базы знаний Microsoft: [KB2803771](https://support.microsoft.com/kb/2803771) и [KB2803755](https://support.microsoft.com/kb/2803755).</span><span class="sxs-lookup"><span data-stu-id="a8122-218">However, it doesn't maintain compatibility with the changes in date and time parsing described in the Microsoft Knowledge Base articles [KB2803771](https://support.microsoft.com/kb/2803771) and [KB2803755](https://support.microsoft.com/kb/2803755).</span></span>  
-  
-- <span data-ttu-id="a8122-219"><xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` правильно округляется в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="a8122-219"><xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` is correctly rounded in .NET Native.</span></span> <span data-ttu-id="a8122-220">В некоторых версиях среды CLR, результирующая строка усекается вместо округления.</span><span class="sxs-lookup"><span data-stu-id="a8122-220">In some versions of the CLR, the result string is truncated instead of rounded.</span></span>  
-  
-<a name="HttpClient"></a>   
-### <a name="httpclient-differences"></a><span data-ttu-id="a8122-221">Различия HttpClient</span><span class="sxs-lookup"><span data-stu-id="a8122-221">HttpClient differences</span></span>  
- <span data-ttu-id="a8122-222">В .NET Native <xref:System.Net.Http.HttpClientHandler> класс внутренним образом использует WinINet (через <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> класс) вместо <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> классы, используемые в стандартных приложениях .NET для Windows Store.</span><span class="sxs-lookup"><span data-stu-id="a8122-222">In .NET Native, the <xref:System.Net.Http.HttpClientHandler> class internally uses WinINet (through the <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> class) instead of the <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse> classes used in the standard .NET for Windows Store apps.</span></span>  <span data-ttu-id="a8122-223">WinINet не поддерживает все параметры конфигурации, которые поддерживает класс <xref:System.Net.Http.HttpClientHandler> .</span><span class="sxs-lookup"><span data-stu-id="a8122-223">WinINet doesn't support all the configuration options that the <xref:System.Net.Http.HttpClientHandler> class supports.</span></span>  <span data-ttu-id="a8122-224">Это приводит к следующим результатам.</span><span class="sxs-lookup"><span data-stu-id="a8122-224">As a result:</span></span>  
-  
-- <span data-ttu-id="a8122-225">Некоторые свойства возможности на <xref:System.Net.Http.HttpClientHandler> возвращают `false` машинного кода .NET, в то время как они возвращают `true` в стандартных приложениях .NET для Windows Store.</span><span class="sxs-lookup"><span data-stu-id="a8122-225">Some of the capability properties on <xref:System.Net.Http.HttpClientHandler> return `false` on .NET Native, whereas they return `true` in the standard .NET for Windows Store apps.</span></span>  
-  
-- <span data-ttu-id="a8122-226">Некоторые свойства конфигурации `get` методы доступа всегда возвращают фиксированное значение в среде .NET Native, отличный от значение по умолчанию можно настроить в приложениях .NET для Windows Store.</span><span class="sxs-lookup"><span data-stu-id="a8122-226">Some of the configuration property `get` accessors always return a fixed value on .NET Native that is different than the default configurable value in .NET for Windows Store apps.</span></span>  
-  
- <span data-ttu-id="a8122-227">В следующих подразделах описаны некоторые дополнительные различия в поведении.</span><span class="sxs-lookup"><span data-stu-id="a8122-227">Some additional behavior differences are covered in the following subsections.</span></span>  
-  
- <span data-ttu-id="a8122-228">**Прокси-сервер**</span><span class="sxs-lookup"><span data-stu-id="a8122-228">**Proxy**</span></span>  
-  
- <span data-ttu-id="a8122-229"><xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> Класс не поддерживает настройку или переопределение прокси для каждого запроса.</span><span class="sxs-lookup"><span data-stu-id="a8122-229">The <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> class doesn’t support configuring or overriding the proxy on a per-request basis.</span></span>  <span data-ttu-id="a8122-230">Это означает, что все запросы на .NET Native использовать системные настройки прокси-сервера или прокси-сервер, в зависимости от значения <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType> свойство.</span><span class="sxs-lookup"><span data-stu-id="a8122-230">This means that all requests on .NET Native use the system-configured proxy server or no proxy server, depending on the value of the <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType> property.</span></span>  <span data-ttu-id="a8122-231">В приложениях .NET для магазина Windows, прокси-сервер определяется свойством <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="a8122-231">In .NET for Windows Store apps, the proxy server is defined by the <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> property.</span></span>  <span data-ttu-id="a8122-232">В среде .NET Native, установка <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> на значение, отличное от `null` вызывает <xref:System.PlatformNotSupportedException> исключение.</span><span class="sxs-lookup"><span data-stu-id="a8122-232">On .NET Native, setting the <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> to a value other than `null` throws a <xref:System.PlatformNotSupportedException> exception.</span></span>  <span data-ttu-id="a8122-233"><xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType> Возвращает `false` машинного кода .NET, в то время как он возвращает `true` в стандартных приложениях .NET Framework для Windows Store.</span><span class="sxs-lookup"><span data-stu-id="a8122-233">The <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType> property returns `false` on .NET Native, whereas it returns `true` in the standard .NET Framework for Windows Store apps.</span></span>  
-  
- <span data-ttu-id="a8122-234">**Автоматическое перенаправление**</span><span class="sxs-lookup"><span data-stu-id="a8122-234">**Automatic redirection**</span></span>  
-  
- <span data-ttu-id="a8122-235"><xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> Не допускает максимальное число автоматических перенаправлений к конфигурированию.</span><span class="sxs-lookup"><span data-stu-id="a8122-235">The <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> class doesn't allow the maximum number of automatic redirections to be configured.</span></span>  <span data-ttu-id="a8122-236">Значение свойства <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> равно 50 по умолчанию в стандартных приложениях .NET для магазина Windows и может быть изменено.</span><span class="sxs-lookup"><span data-stu-id="a8122-236">The value of the <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> property is 50 by default in the standard .NET for Windows Store apps and can be modified.</span></span> <span data-ttu-id="a8122-237">На .NET Native, значение этого свойства равно 10 и попытка его изменить вызывает <xref:System.PlatformNotSupportedException> исключение.</span><span class="sxs-lookup"><span data-stu-id="a8122-237">On .NET Native, the value of this property is 10, and trying to modify it throws a <xref:System.PlatformNotSupportedException> exception.</span></span>  <span data-ttu-id="a8122-238"><xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType> Возвращает `false` машинного кода .NET, в то время как он возвращает `true` в приложениях .NET для Windows Store.</span><span class="sxs-lookup"><span data-stu-id="a8122-238">The <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType> property returns `false` on .NET Native, whereas it returns `true` in .NET for Windows Store apps.</span></span>  
-  
- <span data-ttu-id="a8122-239">**Автоматическая распаковка**</span><span class="sxs-lookup"><span data-stu-id="a8122-239">**Automatic decompression**</span></span>  
-  
- <span data-ttu-id="a8122-240">Приложения .NET для магазина Windows позволяют задать свойство <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> на <xref:System.Net.DecompressionMethods.Deflate>, <xref:System.Net.DecompressionMethods.GZip>, оба <xref:System.Net.DecompressionMethods.Deflate> и <xref:System.Net.DecompressionMethods.GZip>или <xref:System.Net.DecompressionMethods.None>.</span><span class="sxs-lookup"><span data-stu-id="a8122-240">.NET for Windows Store apps allows you to set the <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> property to <xref:System.Net.DecompressionMethods.Deflate>, <xref:System.Net.DecompressionMethods.GZip>, both <xref:System.Net.DecompressionMethods.Deflate> and <xref:System.Net.DecompressionMethods.GZip>, or <xref:System.Net.DecompressionMethods.None>.</span></span>  <span data-ttu-id="a8122-241">.NET native поддерживает только <xref:System.Net.DecompressionMethods.Deflate> вместе с <xref:System.Net.DecompressionMethods.GZip>, или <xref:System.Net.DecompressionMethods.None>.</span><span class="sxs-lookup"><span data-stu-id="a8122-241">.NET Native only supports <xref:System.Net.DecompressionMethods.Deflate> together with <xref:System.Net.DecompressionMethods.GZip>, or <xref:System.Net.DecompressionMethods.None>.</span></span>  <span data-ttu-id="a8122-242">При попытке задать свойство <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> только на <xref:System.Net.DecompressionMethods.Deflate> или <xref:System.Net.DecompressionMethods.GZip> происходит его автоматическое задание на оба <xref:System.Net.DecompressionMethods.Deflate> и <xref:System.Net.DecompressionMethods.GZip>.</span><span class="sxs-lookup"><span data-stu-id="a8122-242">Trying to set the <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> property to either <xref:System.Net.DecompressionMethods.Deflate> or <xref:System.Net.DecompressionMethods.GZip> alone silently sets it to both <xref:System.Net.DecompressionMethods.Deflate> and <xref:System.Net.DecompressionMethods.GZip>.</span></span>  
-  
- <span data-ttu-id="a8122-243">**Файлы cookie**</span><span class="sxs-lookup"><span data-stu-id="a8122-243">**Cookies**</span></span>  
-  
- <span data-ttu-id="a8122-244">Обработка файлов cookie выполняется одновременно с <xref:System.Net.Http.HttpClient> и WinINet.</span><span class="sxs-lookup"><span data-stu-id="a8122-244">Cookie handling is performed simultaneously by <xref:System.Net.Http.HttpClient> and WinINet.</span></span>  <span data-ttu-id="a8122-245">Файлы cookie из <xref:System.Net.CookieContainer> объединяются вместе файла cookie в кэше WinINet cookie.</span><span class="sxs-lookup"><span data-stu-id="a8122-245">Cookies from the <xref:System.Net.CookieContainer> are combined with cookies in the WinINet cookie cache.</span></span>  <span data-ttu-id="a8122-246">Удаление файла cookie из <xref:System.Net.CookieContainer> запрещает <xref:System.Net.Http.HttpClient> отправлять файл cookie, но если файл cookie уже был просмотрен WinINet и файлы "cookie" не были удалены пользователем, WinINet отправляет его.</span><span class="sxs-lookup"><span data-stu-id="a8122-246">Removing a cookie from <xref:System.Net.CookieContainer> prevents <xref:System.Net.Http.HttpClient> from sending the cookie, but if the cookie was already seen by WinINet, and cookies weren't deleted by the user, WinINet sends it.</span></span>  <span data-ttu-id="a8122-247">Не существует средств программного удаления файла cookie из WinINet с использованием API <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.HttpClientHandler>или <xref:System.Net.CookieContainer> .</span><span class="sxs-lookup"><span data-stu-id="a8122-247">It isn't possible to programmatically remove a cookie from WinINet by using the <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.HttpClientHandler>, or <xref:System.Net.CookieContainer> API.</span></span>  <span data-ttu-id="a8122-248">Задание свойства <xref:System.Net.Http.HttpClientHandler.UseCookies%2A?displayProperty=nameWithType> на `false` вызывает только <xref:System.Net.Http.HttpClient> , чтобы остановить отправку файлов "cookie"; WinINet может по-прежнему включить свои файлы cookie в запрос.</span><span class="sxs-lookup"><span data-stu-id="a8122-248">Setting the <xref:System.Net.Http.HttpClientHandler.UseCookies%2A?displayProperty=nameWithType> property to `false` causes only <xref:System.Net.Http.HttpClient> to stop sending cookies; WinINet might still include its cookies in the request.</span></span>  
-  
- <span data-ttu-id="a8122-249">**Учетные данные**</span><span class="sxs-lookup"><span data-stu-id="a8122-249">**Credentials**</span></span>  
-  
- <span data-ttu-id="a8122-250">В приложениях .NET для магазина Windows свойства <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> и <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> работают независимо друг от друга.</span><span class="sxs-lookup"><span data-stu-id="a8122-250">In .NET for Windows Store apps, the <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> and <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> properties work independently.</span></span>  <span data-ttu-id="a8122-251">Кроме того, свойство <xref:System.Net.Http.HttpClientHandler.Credentials%2A> принимает любой объект, реализующий интерфейс <xref:System.Net.ICredentials> .</span><span class="sxs-lookup"><span data-stu-id="a8122-251">Additionally, the <xref:System.Net.Http.HttpClientHandler.Credentials%2A> property accepts any object that implements the <xref:System.Net.ICredentials> interface.</span></span>  <span data-ttu-id="a8122-252">В .NET Native, установка <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> свойства `true` вызывает <xref:System.Net.Http.HttpClientHandler.Credentials%2A> свойство станет `null`.</span><span class="sxs-lookup"><span data-stu-id="a8122-252">In .NET Native, setting the <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> property to `true` causes the <xref:System.Net.Http.HttpClientHandler.Credentials%2A> property to become `null`.</span></span>  <span data-ttu-id="a8122-253">Кроме этого, свойство <xref:System.Net.Http.HttpClientHandler.Credentials%2A> может быть задано только в `null`, <xref:System.Net.CredentialCache.DefaultCredentials%2A>или объект типа <xref:System.Net.NetworkCredential>.</span><span class="sxs-lookup"><span data-stu-id="a8122-253">In addition, the <xref:System.Net.Http.HttpClientHandler.Credentials%2A> property can be set only to `null`, <xref:System.Net.CredentialCache.DefaultCredentials%2A>, or an object of type <xref:System.Net.NetworkCredential>.</span></span>  <span data-ttu-id="a8122-254">Назначение любого другого объекта <xref:System.Net.ICredentials> , наиболее популярный из которых <xref:System.Net.CredentialCache>, свойству <xref:System.Net.Http.HttpClientHandler.Credentials%2A> вызывает исключение <xref:System.PlatformNotSupportedException>.</span><span class="sxs-lookup"><span data-stu-id="a8122-254">Assigning any other <xref:System.Net.ICredentials> object, the most popular of which is <xref:System.Net.CredentialCache>, to the <xref:System.Net.Http.HttpClientHandler.Credentials%2A> property throws a <xref:System.PlatformNotSupportedException>.</span></span>  
-  
- <span data-ttu-id="a8122-255">**Другие неподдерживаемые и ненастраиваемые функции**</span><span class="sxs-lookup"><span data-stu-id="a8122-255">**Other unsupported or unconfigurable features**</span></span>  
-  
- <span data-ttu-id="a8122-256">В машинный код .NET:</span><span class="sxs-lookup"><span data-stu-id="a8122-256">In .NET Native:</span></span>  
-  
-- <span data-ttu-id="a8122-257">Значение свойства <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> всегда <xref:System.Net.Http.ClientCertificateOption.Automatic>.</span><span class="sxs-lookup"><span data-stu-id="a8122-257">The value of the <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> property is always <xref:System.Net.Http.ClientCertificateOption.Automatic>.</span></span>  <span data-ttu-id="a8122-258">В приложения .NET для магазина Windows, по умолчанию используется <xref:System.Net.Http.ClientCertificateOption.Manual>.</span><span class="sxs-lookup"><span data-stu-id="a8122-258">In .NET for Windows Store apps, the default is <xref:System.Net.Http.ClientCertificateOption.Manual>.</span></span>  
-  
-- <span data-ttu-id="a8122-259">Свойство <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A?displayProperty=nameWithType> не настраивается.</span><span class="sxs-lookup"><span data-stu-id="a8122-259">The <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A?displayProperty=nameWithType> property isn't configurable.</span></span>  
-  
-- <span data-ttu-id="a8122-260">Свойство <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> всегда имеет значение `true`.</span><span class="sxs-lookup"><span data-stu-id="a8122-260">The <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> property is always `true`.</span></span>  <span data-ttu-id="a8122-261">В приложения .NET для магазина Windows, по умолчанию используется `false`.</span><span class="sxs-lookup"><span data-stu-id="a8122-261">In .NET for Windows Store apps, the default is `false`.</span></span>  
-  
-- <span data-ttu-id="a8122-262">Заголовок `SetCookie2` в ответах игнорируется как устаревший.</span><span class="sxs-lookup"><span data-stu-id="a8122-262">The `SetCookie2` header in responses is ignored as obsolete.</span></span>  
-  
-<a name="Interop"></a>   
-### <a name="interop-differences"></a><span data-ttu-id="a8122-263">Различия взаимодействия</span><span class="sxs-lookup"><span data-stu-id="a8122-263">Interop differences</span></span>  
- <span data-ttu-id="a8122-264">**Устаревшие интерфейсы API**</span><span class="sxs-lookup"><span data-stu-id="a8122-264">**Deprecated APIs**</span></span>  
-  
- <span data-ttu-id="a8122-265">Не рекомендуется использовать несколько редко применяемых API-интерфейсов для взаимодействия с управляемым кодом.</span><span class="sxs-lookup"><span data-stu-id="a8122-265">A number of infrequently used APIs for interoperability with managed code have been deprecated.</span></span> <span data-ttu-id="a8122-266">При использовании с .NET Native, могут вызывать эти API-интерфейсы <xref:System.NotImplementedException> или <xref:System.PlatformNotSupportedException> исключение или приводят к ошибке компилятора.</span><span class="sxs-lookup"><span data-stu-id="a8122-266">When used with .NET Native, these APIs may throw a <xref:System.NotImplementedException> or <xref:System.PlatformNotSupportedException> exception, or result in a compiler error.</span></span> <span data-ttu-id="a8122-267">В приложениях .NET для магазина Windows эти API-интерфейсы отмечены как устаревшие, хотя их вызов создает предупреждение компилятора, а не ошибку компилятора.</span><span class="sxs-lookup"><span data-stu-id="a8122-267">In .NET for Windows Store apps, these APIs are marked as obsolete, although calling them generates a compiler warning rather than a compiler error.</span></span>  
-  
- <span data-ttu-id="a8122-268">Устаревшие интерфейсы API для `VARIANT` маршалинг включают:</span><span class="sxs-lookup"><span data-stu-id="a8122-268">Deprecated APIs for `VARIANT` marshaling include:</span></span>  
+> <span data-ttu-id="63b4f-152">Директивы среды выполнения определяются в файле директив среды выполнения (. rd.xml).</span><span class="sxs-lookup"><span data-stu-id="63b4f-152">Runtime directives are defined in a runtime directives (.rd.xml) file.</span></span> <span data-ttu-id="63b4f-153">Общие сведения об использовании этого файла см. в разделе [Приступая к работе](../../../docs/framework/net-native/getting-started-with-net-native.md).</span><span class="sxs-lookup"><span data-stu-id="63b4f-153">For general information about using this file, see [Getting Started](../../../docs/framework/net-native/getting-started-with-net-native.md).</span></span> <span data-ttu-id="63b4f-154">Сведения о директивах среды выполнения см. в разделе [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).</span><span class="sxs-lookup"><span data-stu-id="63b4f-154">For information about the runtime directives, see [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).</span></span>
+
+<span data-ttu-id="63b4f-155">.NET native также включает средства профилирования, помогающие определить, какие типы, не входящие в набор по умолчанию, должны поддерживать отражения.</span><span class="sxs-lookup"><span data-stu-id="63b4f-155">.NET Native also includes profiling tools that help the developer determine which types outside the default set should support reflection.</span></span>
+
+<a name="Reflection"></a>
+
+## <a name="other-reflection-related-differences"></a><span data-ttu-id="63b4f-156">Другие различия, связанным с отражением</span><span class="sxs-lookup"><span data-stu-id="63b4f-156">Other reflection-related differences</span></span>
+
+<span data-ttu-id="63b4f-157">Существует ряд других отдельных связанным с отражением различий в поведении между приложениями .NET для Windows Store и .NET Native.</span><span class="sxs-lookup"><span data-stu-id="63b4f-157">There are a number of other individual reflection-related differences in behavior between the .NET for Windows Store apps and .NET Native.</span></span>
+
+<span data-ttu-id="63b4f-158">В машинный код .NET:</span><span class="sxs-lookup"><span data-stu-id="63b4f-158">In .NET Native:</span></span>
+
+- <span data-ttu-id="63b4f-159">Отражение закрытых типов и членов в библиотеке классов платформы .NET Framework не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="63b4f-159">Private reflection over types and members in the .NET Framework class library is not supported.</span></span> <span data-ttu-id="63b4f-160">Тем не менее, можно выполнить отражение на собственных закрытых типах и членах, а также типах и членах библиотек сторонних поставщиков.</span><span class="sxs-lookup"><span data-stu-id="63b4f-160">You can, however, reflect over your own private types and members, as well as types and members in third-party libraries.</span></span>
+
+- <span data-ttu-id="63b4f-161">Свойство <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> корректно возвращает `false` для объекта <xref:System.Reflection.ParameterInfo> , который представляет возвращаемое значение.</span><span class="sxs-lookup"><span data-stu-id="63b4f-161">The <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> property correctly returns `false` for a <xref:System.Reflection.ParameterInfo> object that represents a return value.</span></span> <span data-ttu-id="63b4f-162">В приложениях .NET для магазина Windows, будет возвращено значение `true`.</span><span class="sxs-lookup"><span data-stu-id="63b4f-162">In the .NET for Windows Store apps, it returns `true`.</span></span> <span data-ttu-id="63b4f-163">Промежуточный язык (IL) не поддерживает это непосредственно, и интерпретация выполняется языком.</span><span class="sxs-lookup"><span data-stu-id="63b4f-163">Intermediate language (IL) doesn’t support this directly, and interpretation is left to the language.</span></span>
+
+- <span data-ttu-id="63b4f-164">Открытые члены на структурах <xref:System.RuntimeFieldHandle> и <xref:System.RuntimeMethodHandle> не поддерживаются.</span><span class="sxs-lookup"><span data-stu-id="63b4f-164">Public members on the <xref:System.RuntimeFieldHandle> and <xref:System.RuntimeMethodHandle> structures aren't supported.</span></span> <span data-ttu-id="63b4f-165">Эти типы поддерживаются только для LINQ, деревьев выражений и инициализации статического массива.</span><span class="sxs-lookup"><span data-stu-id="63b4f-165">These types are supported only for LINQ, expression trees, and static array initialization.</span></span>
+
+- <span data-ttu-id="63b4f-166"><xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> и <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> включают скрытые члены в базовых классах и поэтому могут переопределяться без явного переопределения.</span><span class="sxs-lookup"><span data-stu-id="63b4f-166"><xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> and <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> include hidden members in base classes and thus may be overridden without explicit overrides.</span></span> <span data-ttu-id="63b4f-167">Это также справедливо для других методов [RuntimeReflectionExtensions.GetRuntime\*](xref:System.Reflection.RuntimeReflectionExtensions) .</span><span class="sxs-lookup"><span data-stu-id="63b4f-167">This is also true of other [RuntimeReflectionExtensions.GetRuntime\*](xref:System.Reflection.RuntimeReflectionExtensions) methods.</span></span>
+
+- <span data-ttu-id="63b4f-168"><xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> и <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> не дают сбой при попытке создать определенные комбинации (например, массив byrefs).</span><span class="sxs-lookup"><span data-stu-id="63b4f-168"><xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> and <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> don't fail when you try to create certain combinations (for example, an array of byrefs).</span></span>
+
+- <span data-ttu-id="63b4f-169">Нельзя использовать отражение для вызова членов, которые содержат параметры указателя.</span><span class="sxs-lookup"><span data-stu-id="63b4f-169">You can't use reflection to invoke members that have pointer parameters.</span></span>
+
+- <span data-ttu-id="63b4f-170">Чтобы получить или задать поле указателя, нельзя использовать отражение.</span><span class="sxs-lookup"><span data-stu-id="63b4f-170">You can't use reflection to get or set a pointer field.</span></span>
+
+- <span data-ttu-id="63b4f-171">Если неверное количество аргументов и тип одного из аргументов неверен, .NET Native вызывает <xref:System.ArgumentException> вместо <xref:System.Reflection.TargetParameterCountException>.</span><span class="sxs-lookup"><span data-stu-id="63b4f-171">When the argument count is wrong and the type of one of the arguments is incorrect, .NET Native throws an <xref:System.ArgumentException> instead of a <xref:System.Reflection.TargetParameterCountException>.</span></span>
+
+- <span data-ttu-id="63b4f-172">Обычно двоичная сериализация исключений не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="63b4f-172">Binary serialization of exceptions is generally not supported.</span></span> <span data-ttu-id="63b4f-173">В результате несериализуемые объекты могут быть добавлены к словарю <xref:System.Exception.Data%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="63b4f-173">As a result, non-serializable objects can be added to the <xref:System.Exception.Data%2A?displayProperty=nameWithType> dictionary.</span></span>
+
+<a name="Unsupported"></a>
+
+## <a name="unsupported-scenarios-and-apis"></a><span data-ttu-id="63b4f-174">Неподдерживаемые сценарии и API-интерфейсы</span><span class="sxs-lookup"><span data-stu-id="63b4f-174">Unsupported scenarios and APIs</span></span>
+
+<span data-ttu-id="63b4f-175">В следующих разделах перечислены неподдерживаемые сценарии и интерфейсы API для общей разработки, взаимодействия и таких технологий, как HTTPClient и Windows Communication Foundation (WCF):</span><span class="sxs-lookup"><span data-stu-id="63b4f-175">The following sections list unsupported scenarios and APIs for general development, interop, and technologies such as HTTPClient and Windows Communication Foundation (WCF):</span></span>
+
+- [<span data-ttu-id="63b4f-176">Общая разработка</span><span class="sxs-lookup"><span data-stu-id="63b4f-176">General development</span></span>](#General)
+
+- [<span data-ttu-id="63b4f-177">HttpClient</span><span class="sxs-lookup"><span data-stu-id="63b4f-177">HttpClient</span></span>](#HttpClient)
+
+- [<span data-ttu-id="63b4f-178">Interop</span><span class="sxs-lookup"><span data-stu-id="63b4f-178">Interop</span></span>](#Interop)
+
+- [<span data-ttu-id="63b4f-179">Неподдерживаемые API</span><span class="sxs-lookup"><span data-stu-id="63b4f-179">Unsupported APIs</span></span>](#APIs)
+
+<a name="General"></a>
+
+### <a name="general-development-differences"></a><span data-ttu-id="63b4f-180">Различия общей разработки</span><span class="sxs-lookup"><span data-stu-id="63b4f-180">General development differences</span></span>
+
+<span data-ttu-id="63b4f-181">**Типы значений**</span><span class="sxs-lookup"><span data-stu-id="63b4f-181">**Value types**</span></span>
+
+- <span data-ttu-id="63b4f-182">При переопределении методов <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> и <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> для типа значения не вызывайте реализации базового класса.</span><span class="sxs-lookup"><span data-stu-id="63b4f-182">If you override the <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> and <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> methods for a value type, don't call the base class implementations.</span></span> <span data-ttu-id="63b4f-183">В приложениях .NET для магазина Windows эти методы основаны на отражении.</span><span class="sxs-lookup"><span data-stu-id="63b4f-183">In .NET for Windows Store apps, these methods rely on reflection.</span></span> <span data-ttu-id="63b4f-184">Во время компиляции .NET Native создает реализацию, которая не зависит от отражения среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="63b4f-184">At compile time, .NET Native generates an implementation that doesn't rely on runtime reflection.</span></span> <span data-ttu-id="63b4f-185">Это означает, что если не переопределить эти два метода, они будут работать как и ожидалось, так как .NET Native создает реализацию во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="63b4f-185">This means that if you don't override these two methods, they will work as expected, because .NET Native generates the implementation at compile time.</span></span> <span data-ttu-id="63b4f-186">Однако, переопределение этих методов с помощью вызова реализации базового класса приводит к возникновению исключения.</span><span class="sxs-lookup"><span data-stu-id="63b4f-186">However, overriding these methods but calling the base class implementation results in an exception.</span></span>
+
+- <span data-ttu-id="63b4f-187">Типы значений больше одного мегабайта не поддерживаются.</span><span class="sxs-lookup"><span data-stu-id="63b4f-187">Value types larger than one megabyte aren't supported.</span></span>
+
+- <span data-ttu-id="63b4f-188">Типы значений не может иметь конструктор по умолчанию в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="63b4f-188">Value types can't have a default constructor in .NET Native.</span></span> <span data-ttu-id="63b4f-189">(C# и Visual Basic запрещают конструкторы по умолчанию для типов значений.</span><span class="sxs-lookup"><span data-stu-id="63b4f-189">(C# and Visual Basic prohibit default constructors on value types.</span></span> <span data-ttu-id="63b4f-190">Тем не менее их можно создать в IL.)</span><span class="sxs-lookup"><span data-stu-id="63b4f-190">However, these can be created in IL.)</span></span>
+
+<span data-ttu-id="63b4f-191">**Массивы**</span><span class="sxs-lookup"><span data-stu-id="63b4f-191">**Arrays**</span></span>
+
+- <span data-ttu-id="63b4f-192">Массивы с нижней границей, отличной от нуля, не поддерживаются.</span><span class="sxs-lookup"><span data-stu-id="63b4f-192">Arrays with a lower bound other than zero aren't supported.</span></span> <span data-ttu-id="63b4f-193">Как правило, эти массивы создаются путем вызова перегрузки <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="63b4f-193">Typically, these arrays are created by calling the <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> overload.</span></span>
+
+- <span data-ttu-id="63b4f-194">Динамическое создание многомерных массивов не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="63b4f-194">Dynamic creation of multidimensional arrays isn't supported.</span></span> <span data-ttu-id="63b4f-195">Такие массивы обычно создаются путем вызова перегрузки метода <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> , который включает в себя параметр `lengths` , или же путем вызова метода <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="63b4f-195">Such arrays are typically created by calling an overload of the <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> method that includes a `lengths` parameter, or by calling the <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> method.</span></span>
+
+- <span data-ttu-id="63b4f-196">Многомерные массивы, имеющие четыре или более измерений не поддерживаются; т.е. их значение свойства <xref:System.Array.Rank%2A?displayProperty=nameWithType> равно или больше четырех.</span><span class="sxs-lookup"><span data-stu-id="63b4f-196">Multidimensional arrays that have four or more dimensions aren't supported; that is, their <xref:System.Array.Rank%2A?displayProperty=nameWithType> property value is four or greater.</span></span> <span data-ttu-id="63b4f-197">Вместо этого используйте [ступенчатые массивы](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (массива массивов).</span><span class="sxs-lookup"><span data-stu-id="63b4f-197">Use [jagged arrays](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (an array of arrays) instead.</span></span> <span data-ttu-id="63b4f-198">Например `array[x,y,z]` является недопустимым, но `array[x][y][z]` нет.</span><span class="sxs-lookup"><span data-stu-id="63b4f-198">For example, `array[x,y,z]` is invalid, but `array[x][y][z]` isn't.</span></span>
+
+- <span data-ttu-id="63b4f-199">Вариативность для многомерных массивов не поддерживается и вызывает исключение <xref:System.InvalidCastException> во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="63b4f-199">Variance for multidimensional arrays isn't supported and causes an <xref:System.InvalidCastException> exception at run time.</span></span>
+
+<span data-ttu-id="63b4f-200">**Универсальные шаблоны**</span><span class="sxs-lookup"><span data-stu-id="63b4f-200">**Generics**</span></span>
+
+- <span data-ttu-id="63b4f-201">Расширения бесконечного универсального типа приводят к ошибке компилятора.</span><span class="sxs-lookup"><span data-stu-id="63b4f-201">Infinite generic type expansion results in a compiler error.</span></span> <span data-ttu-id="63b4f-202">Например, этот код вызывает ошибку при компиляции:</span><span class="sxs-lookup"><span data-stu-id="63b4f-202">For example, this code fails to compile:</span></span>
+
+  [!code-csharp[ProjectN#9](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat2.cs#9)]
+
+<span data-ttu-id="63b4f-203">**Pointers**</span><span class="sxs-lookup"><span data-stu-id="63b4f-203">**Pointers**</span></span>
+
+- <span data-ttu-id="63b4f-204">Массивы указателей не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="63b4f-204">Arrays of pointers aren't supported.</span></span>
+
+- <span data-ttu-id="63b4f-205">Чтобы получить или задать поле указателя, нельзя использовать отражение.</span><span class="sxs-lookup"><span data-stu-id="63b4f-205">You can't use reflection to get or set a pointer field.</span></span>
+
+<span data-ttu-id="63b4f-206">**Сериализация**</span><span class="sxs-lookup"><span data-stu-id="63b4f-206">**Serialization**</span></span>
+
+<span data-ttu-id="63b4f-207">Атрибут <xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.String%29> не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="63b4f-207">The <xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.String%29> attribute isn't supported.</span></span> <span data-ttu-id="63b4f-208">Вместо этого используйте атрибут <xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.Type%29> .</span><span class="sxs-lookup"><span data-stu-id="63b4f-208">Use the <xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.Type%29> attribute instead.</span></span>
+
+<span data-ttu-id="63b4f-209">**Ресурсы**</span><span class="sxs-lookup"><span data-stu-id="63b4f-209">**Resources**</span></span>
+
+<span data-ttu-id="63b4f-210">Использование локализованных ресурсов с классом <xref:System.Diagnostics.Tracing.EventSource> не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="63b4f-210">The use of localized resources with the <xref:System.Diagnostics.Tracing.EventSource> class isn't supported.</span></span> <span data-ttu-id="63b4f-211">Свойство <xref:System.Diagnostics.Tracing.EventSourceAttribute.LocalizationResources%2A?displayProperty=nameWithType> не определяет локализованные ресурсы.</span><span class="sxs-lookup"><span data-stu-id="63b4f-211">The <xref:System.Diagnostics.Tracing.EventSourceAttribute.LocalizationResources%2A?displayProperty=nameWithType> property doesn't define localized resources.</span></span>
+
+<span data-ttu-id="63b4f-212">**Делегаты**</span><span class="sxs-lookup"><span data-stu-id="63b4f-212">**Delegates**</span></span>
+
+<span data-ttu-id="63b4f-213">`Delegate.BeginInvoke` и `Delegate.EndInvoke` не поддерживаются.</span><span class="sxs-lookup"><span data-stu-id="63b4f-213">`Delegate.BeginInvoke` and `Delegate.EndInvoke` aren't supported.</span></span>
+
+<span data-ttu-id="63b4f-214">**Различные API**</span><span class="sxs-lookup"><span data-stu-id="63b4f-214">**Miscellaneous APIs**</span></span>
+
+- <span data-ttu-id="63b4f-215">[TypeInfo.GUID](xref:System.Type.GUID) свойство выдает исключение <xref:System.PlatformNotSupportedException> исключения Если <xref:System.Runtime.InteropServices.GuidAttribute> атрибут не применяется к типу.</span><span class="sxs-lookup"><span data-stu-id="63b4f-215">The [TypeInfo.GUID](xref:System.Type.GUID) property throws a <xref:System.PlatformNotSupportedException> exception if a <xref:System.Runtime.InteropServices.GuidAttribute> attribute isn't applied to the type.</span></span> <span data-ttu-id="63b4f-216">Идентификатор GUID используется в основном для поддержки модели COM.</span><span class="sxs-lookup"><span data-stu-id="63b4f-216">The GUID is used primarily for COM support.</span></span>
+
+- <span data-ttu-id="63b4f-217"><xref:System.DateTime.Parse%2A?displayProperty=nameWithType> Метод правильно выполняет синтаксический анализ строк, содержащих даты в коротком формате в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="63b4f-217">The <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> method correctly parses strings that contain short dates in .NET Native.</span></span> <span data-ttu-id="63b4f-218">Тем не менее он не поддерживает совместимость с синтаксическим анализом изменений даты и времени, описанным в статьях базы знаний Microsoft: [KB2803771](https://support.microsoft.com/kb/2803771) и [KB2803755](https://support.microsoft.com/kb/2803755).</span><span class="sxs-lookup"><span data-stu-id="63b4f-218">However, it doesn't maintain compatibility with the changes in date and time parsing described in the Microsoft Knowledge Base articles [KB2803771](https://support.microsoft.com/kb/2803771) and [KB2803755](https://support.microsoft.com/kb/2803755).</span></span>
+
+- <span data-ttu-id="63b4f-219"><xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` правильно округляется в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="63b4f-219"><xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` is correctly rounded in .NET Native.</span></span> <span data-ttu-id="63b4f-220">В некоторых версиях среды CLR, результирующая строка усекается вместо округления.</span><span class="sxs-lookup"><span data-stu-id="63b4f-220">In some versions of the CLR, the result string is truncated instead of rounded.</span></span>
+
+<a name="HttpClient"></a>
+
+### <a name="httpclient-differences"></a><span data-ttu-id="63b4f-221">Различия HttpClient</span><span class="sxs-lookup"><span data-stu-id="63b4f-221">HttpClient differences</span></span>
+
+<span data-ttu-id="63b4f-222">В .NET Native <xref:System.Net.Http.HttpClientHandler> класс внутренним образом использует WinINet (через <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> класс) вместо <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> классы, используемые в стандартных приложениях .NET для Windows Store.</span><span class="sxs-lookup"><span data-stu-id="63b4f-222">In .NET Native, the <xref:System.Net.Http.HttpClientHandler> class internally uses WinINet (through the <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> class) instead of the <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse> classes used in the standard .NET for Windows Store apps.</span></span>  <span data-ttu-id="63b4f-223">WinINet не поддерживает все параметры конфигурации, которые поддерживает класс <xref:System.Net.Http.HttpClientHandler> .</span><span class="sxs-lookup"><span data-stu-id="63b4f-223">WinINet doesn't support all the configuration options that the <xref:System.Net.Http.HttpClientHandler> class supports.</span></span>  <span data-ttu-id="63b4f-224">Это приводит к следующим результатам.</span><span class="sxs-lookup"><span data-stu-id="63b4f-224">As a result:</span></span>
+
+- <span data-ttu-id="63b4f-225">Некоторые свойства возможности на <xref:System.Net.Http.HttpClientHandler> возвращают `false` машинного кода .NET, в то время как они возвращают `true` в стандартных приложениях .NET для Windows Store.</span><span class="sxs-lookup"><span data-stu-id="63b4f-225">Some of the capability properties on <xref:System.Net.Http.HttpClientHandler> return `false` on .NET Native, whereas they return `true` in the standard .NET for Windows Store apps.</span></span>
+
+- <span data-ttu-id="63b4f-226">Некоторые свойства конфигурации `get` методы доступа всегда возвращают фиксированное значение в среде .NET Native, отличный от значение по умолчанию можно настроить в приложениях .NET для Windows Store.</span><span class="sxs-lookup"><span data-stu-id="63b4f-226">Some of the configuration property `get` accessors always return a fixed value on .NET Native that is different than the default configurable value in .NET for Windows Store apps.</span></span>
+
+<span data-ttu-id="63b4f-227">В следующих подразделах описаны некоторые дополнительные различия в поведении.</span><span class="sxs-lookup"><span data-stu-id="63b4f-227">Some additional behavior differences are covered in the following subsections.</span></span>
+
+<span data-ttu-id="63b4f-228">**Прокси-сервер**</span><span class="sxs-lookup"><span data-stu-id="63b4f-228">**Proxy**</span></span>
+
+<span data-ttu-id="63b4f-229"><xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> Класс не поддерживает настройку или переопределение прокси для каждого запроса.</span><span class="sxs-lookup"><span data-stu-id="63b4f-229">The <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> class doesn’t support configuring or overriding the proxy on a per-request basis.</span></span>  <span data-ttu-id="63b4f-230">Это означает, что все запросы на .NET Native использовать системные настройки прокси-сервера или прокси-сервер, в зависимости от значения <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType> свойство.</span><span class="sxs-lookup"><span data-stu-id="63b4f-230">This means that all requests on .NET Native use the system-configured proxy server or no proxy server, depending on the value of the <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType> property.</span></span>  <span data-ttu-id="63b4f-231">В приложениях .NET для магазина Windows, прокси-сервер определяется свойством <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="63b4f-231">In .NET for Windows Store apps, the proxy server is defined by the <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> property.</span></span>  <span data-ttu-id="63b4f-232">В среде .NET Native, установка <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> на значение, отличное от `null` вызывает <xref:System.PlatformNotSupportedException> исключение.</span><span class="sxs-lookup"><span data-stu-id="63b4f-232">On .NET Native, setting the <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> to a value other than `null` throws a <xref:System.PlatformNotSupportedException> exception.</span></span>  <span data-ttu-id="63b4f-233"><xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType> Возвращает `false` машинного кода .NET, в то время как он возвращает `true` в стандартных приложениях .NET Framework для Windows Store.</span><span class="sxs-lookup"><span data-stu-id="63b4f-233">The <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType> property returns `false` on .NET Native, whereas it returns `true` in the standard .NET Framework for Windows Store apps.</span></span>
+
+<span data-ttu-id="63b4f-234">**Автоматическое перенаправление**</span><span class="sxs-lookup"><span data-stu-id="63b4f-234">**Automatic redirection**</span></span>
+
+<span data-ttu-id="63b4f-235"><xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> Не допускает максимальное число автоматических перенаправлений к конфигурированию.</span><span class="sxs-lookup"><span data-stu-id="63b4f-235">The <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> class doesn't allow the maximum number of automatic redirections to be configured.</span></span>  <span data-ttu-id="63b4f-236">Значение свойства <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> равно 50 по умолчанию в стандартных приложениях .NET для магазина Windows и может быть изменено.</span><span class="sxs-lookup"><span data-stu-id="63b4f-236">The value of the <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> property is 50 by default in the standard .NET for Windows Store apps and can be modified.</span></span> <span data-ttu-id="63b4f-237">На .NET Native, значение этого свойства равно 10 и попытка его изменить вызывает <xref:System.PlatformNotSupportedException> исключение.</span><span class="sxs-lookup"><span data-stu-id="63b4f-237">On .NET Native, the value of this property is 10, and trying to modify it throws a <xref:System.PlatformNotSupportedException> exception.</span></span>  <span data-ttu-id="63b4f-238"><xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType> Возвращает `false` машинного кода .NET, в то время как он возвращает `true` в приложениях .NET для Windows Store.</span><span class="sxs-lookup"><span data-stu-id="63b4f-238">The <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType> property returns `false` on .NET Native, whereas it returns `true` in .NET for Windows Store apps.</span></span>
+
+<span data-ttu-id="63b4f-239">**Автоматическая распаковка**</span><span class="sxs-lookup"><span data-stu-id="63b4f-239">**Automatic decompression**</span></span>
+
+<span data-ttu-id="63b4f-240">Приложения .NET для магазина Windows позволяют задать свойство <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> на <xref:System.Net.DecompressionMethods.Deflate>, <xref:System.Net.DecompressionMethods.GZip>, оба <xref:System.Net.DecompressionMethods.Deflate> и <xref:System.Net.DecompressionMethods.GZip>или <xref:System.Net.DecompressionMethods.None>.</span><span class="sxs-lookup"><span data-stu-id="63b4f-240">.NET for Windows Store apps allows you to set the <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> property to <xref:System.Net.DecompressionMethods.Deflate>, <xref:System.Net.DecompressionMethods.GZip>, both <xref:System.Net.DecompressionMethods.Deflate> and <xref:System.Net.DecompressionMethods.GZip>, or <xref:System.Net.DecompressionMethods.None>.</span></span>  <span data-ttu-id="63b4f-241">.NET native поддерживает только <xref:System.Net.DecompressionMethods.Deflate> вместе с <xref:System.Net.DecompressionMethods.GZip>, или <xref:System.Net.DecompressionMethods.None>.</span><span class="sxs-lookup"><span data-stu-id="63b4f-241">.NET Native only supports <xref:System.Net.DecompressionMethods.Deflate> together with <xref:System.Net.DecompressionMethods.GZip>, or <xref:System.Net.DecompressionMethods.None>.</span></span>  <span data-ttu-id="63b4f-242">При попытке задать свойство <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> только на <xref:System.Net.DecompressionMethods.Deflate> или <xref:System.Net.DecompressionMethods.GZip> происходит его автоматическое задание на оба <xref:System.Net.DecompressionMethods.Deflate> и <xref:System.Net.DecompressionMethods.GZip>.</span><span class="sxs-lookup"><span data-stu-id="63b4f-242">Trying to set the <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> property to either <xref:System.Net.DecompressionMethods.Deflate> or <xref:System.Net.DecompressionMethods.GZip> alone silently sets it to both <xref:System.Net.DecompressionMethods.Deflate> and <xref:System.Net.DecompressionMethods.GZip>.</span></span>
+
+<span data-ttu-id="63b4f-243">**Файлы cookie**</span><span class="sxs-lookup"><span data-stu-id="63b4f-243">**Cookies**</span></span>
+
+<span data-ttu-id="63b4f-244">Обработка файлов cookie выполняется одновременно с <xref:System.Net.Http.HttpClient> и WinINet.</span><span class="sxs-lookup"><span data-stu-id="63b4f-244">Cookie handling is performed simultaneously by <xref:System.Net.Http.HttpClient> and WinINet.</span></span>  <span data-ttu-id="63b4f-245">Файлы cookie из <xref:System.Net.CookieContainer> объединяются вместе файла cookie в кэше WinINet cookie.</span><span class="sxs-lookup"><span data-stu-id="63b4f-245">Cookies from the <xref:System.Net.CookieContainer> are combined with cookies in the WinINet cookie cache.</span></span>  <span data-ttu-id="63b4f-246">Удаление файла cookie из <xref:System.Net.CookieContainer> запрещает <xref:System.Net.Http.HttpClient> отправлять файл cookie, но если файл cookie уже был просмотрен WinINet и файлы "cookie" не были удалены пользователем, WinINet отправляет его.</span><span class="sxs-lookup"><span data-stu-id="63b4f-246">Removing a cookie from <xref:System.Net.CookieContainer> prevents <xref:System.Net.Http.HttpClient> from sending the cookie, but if the cookie was already seen by WinINet, and cookies weren't deleted by the user, WinINet sends it.</span></span>  <span data-ttu-id="63b4f-247">Не существует средств программного удаления файла cookie из WinINet с использованием API <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.HttpClientHandler>или <xref:System.Net.CookieContainer> .</span><span class="sxs-lookup"><span data-stu-id="63b4f-247">It isn't possible to programmatically remove a cookie from WinINet by using the <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.HttpClientHandler>, or <xref:System.Net.CookieContainer> API.</span></span>  <span data-ttu-id="63b4f-248">Задание свойства <xref:System.Net.Http.HttpClientHandler.UseCookies%2A?displayProperty=nameWithType> на `false` вызывает только <xref:System.Net.Http.HttpClient> , чтобы остановить отправку файлов "cookie"; WinINet может по-прежнему включить свои файлы cookie в запрос.</span><span class="sxs-lookup"><span data-stu-id="63b4f-248">Setting the <xref:System.Net.Http.HttpClientHandler.UseCookies%2A?displayProperty=nameWithType> property to `false` causes only <xref:System.Net.Http.HttpClient> to stop sending cookies; WinINet might still include its cookies in the request.</span></span>
+
+<span data-ttu-id="63b4f-249">**Учетные данные**</span><span class="sxs-lookup"><span data-stu-id="63b4f-249">**Credentials**</span></span>
+
+<span data-ttu-id="63b4f-250">В приложениях .NET для магазина Windows свойства <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> и <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> работают независимо друг от друга.</span><span class="sxs-lookup"><span data-stu-id="63b4f-250">In .NET for Windows Store apps, the <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> and <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> properties work independently.</span></span>  <span data-ttu-id="63b4f-251">Кроме того, свойство <xref:System.Net.Http.HttpClientHandler.Credentials%2A> принимает любой объект, реализующий интерфейс <xref:System.Net.ICredentials> .</span><span class="sxs-lookup"><span data-stu-id="63b4f-251">Additionally, the <xref:System.Net.Http.HttpClientHandler.Credentials%2A> property accepts any object that implements the <xref:System.Net.ICredentials> interface.</span></span>  <span data-ttu-id="63b4f-252">В .NET Native, установка <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> свойства `true` вызывает <xref:System.Net.Http.HttpClientHandler.Credentials%2A> свойство станет `null`.</span><span class="sxs-lookup"><span data-stu-id="63b4f-252">In .NET Native, setting the <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> property to `true` causes the <xref:System.Net.Http.HttpClientHandler.Credentials%2A> property to become `null`.</span></span>  <span data-ttu-id="63b4f-253">Кроме этого, свойство <xref:System.Net.Http.HttpClientHandler.Credentials%2A> может быть задано только в `null`, <xref:System.Net.CredentialCache.DefaultCredentials%2A>или объект типа <xref:System.Net.NetworkCredential>.</span><span class="sxs-lookup"><span data-stu-id="63b4f-253">In addition, the <xref:System.Net.Http.HttpClientHandler.Credentials%2A> property can be set only to `null`, <xref:System.Net.CredentialCache.DefaultCredentials%2A>, or an object of type <xref:System.Net.NetworkCredential>.</span></span>  <span data-ttu-id="63b4f-254">Назначение любого другого объекта <xref:System.Net.ICredentials> , наиболее популярный из которых <xref:System.Net.CredentialCache>, свойству <xref:System.Net.Http.HttpClientHandler.Credentials%2A> вызывает исключение <xref:System.PlatformNotSupportedException>.</span><span class="sxs-lookup"><span data-stu-id="63b4f-254">Assigning any other <xref:System.Net.ICredentials> object, the most popular of which is <xref:System.Net.CredentialCache>, to the <xref:System.Net.Http.HttpClientHandler.Credentials%2A> property throws a <xref:System.PlatformNotSupportedException>.</span></span>
+
+<span data-ttu-id="63b4f-255">**Другие неподдерживаемые и ненастраиваемые функции**</span><span class="sxs-lookup"><span data-stu-id="63b4f-255">**Other unsupported or unconfigurable features**</span></span>
+
+<span data-ttu-id="63b4f-256">В машинный код .NET:</span><span class="sxs-lookup"><span data-stu-id="63b4f-256">In .NET Native:</span></span>
+
+- <span data-ttu-id="63b4f-257">Значение свойства <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> всегда <xref:System.Net.Http.ClientCertificateOption.Automatic>.</span><span class="sxs-lookup"><span data-stu-id="63b4f-257">The value of the <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> property is always <xref:System.Net.Http.ClientCertificateOption.Automatic>.</span></span>  <span data-ttu-id="63b4f-258">В приложения .NET для магазина Windows, по умолчанию используется <xref:System.Net.Http.ClientCertificateOption.Manual>.</span><span class="sxs-lookup"><span data-stu-id="63b4f-258">In .NET for Windows Store apps, the default is <xref:System.Net.Http.ClientCertificateOption.Manual>.</span></span>
+
+- <span data-ttu-id="63b4f-259">Свойство <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A?displayProperty=nameWithType> не настраивается.</span><span class="sxs-lookup"><span data-stu-id="63b4f-259">The <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A?displayProperty=nameWithType> property isn't configurable.</span></span>
+
+- <span data-ttu-id="63b4f-260">Свойство <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> всегда имеет значение `true`.</span><span class="sxs-lookup"><span data-stu-id="63b4f-260">The <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> property is always `true`.</span></span>  <span data-ttu-id="63b4f-261">В приложения .NET для магазина Windows, по умолчанию используется `false`.</span><span class="sxs-lookup"><span data-stu-id="63b4f-261">In .NET for Windows Store apps, the default is `false`.</span></span>
+
+- <span data-ttu-id="63b4f-262">Заголовок `SetCookie2` в ответах игнорируется как устаревший.</span><span class="sxs-lookup"><span data-stu-id="63b4f-262">The `SetCookie2` header in responses is ignored as obsolete.</span></span>
+
+<a name="Interop"></a>
+### <a name="interop-differences"></a><span data-ttu-id="63b4f-263">Различия взаимодействия</span><span class="sxs-lookup"><span data-stu-id="63b4f-263">Interop differences</span></span>
+ <span data-ttu-id="63b4f-264">**Устаревшие интерфейсы API**</span><span class="sxs-lookup"><span data-stu-id="63b4f-264">**Deprecated APIs**</span></span>
+
+ <span data-ttu-id="63b4f-265">Не рекомендуется использовать несколько редко применяемых API-интерфейсов для взаимодействия с управляемым кодом.</span><span class="sxs-lookup"><span data-stu-id="63b4f-265">A number of infrequently used APIs for interoperability with managed code have been deprecated.</span></span> <span data-ttu-id="63b4f-266">При использовании с .NET Native, могут вызывать эти API-интерфейсы <xref:System.NotImplementedException> или <xref:System.PlatformNotSupportedException> исключение или приводят к ошибке компилятора.</span><span class="sxs-lookup"><span data-stu-id="63b4f-266">When used with .NET Native, these APIs may throw a <xref:System.NotImplementedException> or <xref:System.PlatformNotSupportedException> exception, or result in a compiler error.</span></span> <span data-ttu-id="63b4f-267">В приложениях .NET для магазина Windows эти API-интерфейсы отмечены как устаревшие, хотя их вызов создает предупреждение компилятора, а не ошибку компилятора.</span><span class="sxs-lookup"><span data-stu-id="63b4f-267">In .NET for Windows Store apps, these APIs are marked as obsolete, although calling them generates a compiler warning rather than a compiler error.</span></span>
+
+ <span data-ttu-id="63b4f-268">Устаревшие интерфейсы API для `VARIANT` маршалинг включают:</span><span class="sxs-lookup"><span data-stu-id="63b4f-268">Deprecated APIs for `VARIANT` marshaling include:</span></span>
 
 - <xref:System.Runtime.InteropServices.BStrWrapper?displayProperty=nameWithType>
-- <xref:System.Runtime.InteropServices.CurrencyWrapper?displayProperty=nameWithType>  
+- <xref:System.Runtime.InteropServices.CurrencyWrapper?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.DispatchWrapper?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.ErrorWrapper?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.UnknownWrapper?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.VariantWrapper?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType>
-- <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>  
+- <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
-  
- <span data-ttu-id="a8122-269"><xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> поддерживается, но создает исключение в некоторых сценариях, например когда используется с вариантами [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) или byref.</span><span class="sxs-lookup"><span data-stu-id="a8122-269"><xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> is supported, but it throws an exception in some scenarios, such as when it is used with [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) or byref variants.</span></span>  
-  
- <span data-ttu-id="a8122-270">Устаревшие интерфейсы API для [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) Техническая поддержка включает:</span><span class="sxs-lookup"><span data-stu-id="a8122-270">Deprecated APIs for [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) support include:</span></span>  
-  
-- <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch?displayProperty=fullName>
-- <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual?displayProperty=fullName> 
-- <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType>  
 
-<span data-ttu-id="a8122-271">Устаревшие интерфейсы API для классических COM-событий включают:</span><span class="sxs-lookup"><span data-stu-id="a8122-271">Deprecated APIs for classic COM events include:</span></span>
+ <span data-ttu-id="63b4f-269"><xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> поддерживается, но создает исключение в некоторых сценариях, например когда используется с вариантами [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) или byref.</span><span class="sxs-lookup"><span data-stu-id="63b4f-269"><xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> is supported, but it throws an exception in some scenarios, such as when it is used with [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) or byref variants.</span></span>
+
+ <span data-ttu-id="63b4f-270">Устаревшие интерфейсы API для [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) Техническая поддержка включает:</span><span class="sxs-lookup"><span data-stu-id="63b4f-270">Deprecated APIs for [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) support include:</span></span>
+
+- <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch?displayProperty=fullName>
+- <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual?displayProperty=fullName>
+- <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType>
+
+<span data-ttu-id="63b4f-271">Устаревшие интерфейсы API для классических COM-событий включают:</span><span class="sxs-lookup"><span data-stu-id="63b4f-271">Deprecated APIs for classic COM events include:</span></span>
 
 - <xref:System.Runtime.InteropServices.ComEventsHelper?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>
-  
-<span data-ttu-id="a8122-272">Устаревшие интерфейсы API в <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> интерфейс, который не поддерживается в .NET Native, включают:</span><span class="sxs-lookup"><span data-stu-id="a8122-272">Deprecated APIs in the <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> interface, which isn't supported in .NET Native, include:</span></span>  
-  
-- <span data-ttu-id="a8122-273"><xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> (все элементы)</span><span class="sxs-lookup"><span data-stu-id="a8122-273"><xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> (all members)</span></span>  
-- <span data-ttu-id="a8122-274"><xref:System.Runtime.InteropServices.CustomQueryInterfaceMode?displayProperty=nameWithType> (все элементы)</span><span class="sxs-lookup"><span data-stu-id="a8122-274"><xref:System.Runtime.InteropServices.CustomQueryInterfaceMode?displayProperty=nameWithType> (all members)</span></span>  
-- <span data-ttu-id="a8122-275"><xref:System.Runtime.InteropServices.CustomQueryInterfaceResult?displayProperty=nameWithType> (все элементы)</span><span class="sxs-lookup"><span data-stu-id="a8122-275"><xref:System.Runtime.InteropServices.CustomQueryInterfaceResult?displayProperty=nameWithType> (all members)</span></span>  
-- <xref:System.Runtime.InteropServices.Marshal.GetComInterfaceForObject%28System.Object%2CSystem.Type%2CSystem.Runtime.InteropServices.CustomQueryInterfaceMode%29?displayProperty=fullName>  
-  
-<span data-ttu-id="a8122-276">Другие неподдерживаемые функции взаимодействия:</span><span class="sxs-lookup"><span data-stu-id="a8122-276">Other unsupported interop features include:</span></span>  
-  
-- <span data-ttu-id="a8122-277"><xref:System.Runtime.InteropServices.ICustomAdapter?displayProperty=nameWithType> (все элементы)</span><span class="sxs-lookup"><span data-stu-id="a8122-277"><xref:System.Runtime.InteropServices.ICustomAdapter?displayProperty=nameWithType> (all members)</span></span>  
-- <span data-ttu-id="a8122-278"><xref:System.Runtime.InteropServices.SafeBuffer?displayProperty=nameWithType> (все элементы)</span><span class="sxs-lookup"><span data-stu-id="a8122-278"><xref:System.Runtime.InteropServices.SafeBuffer?displayProperty=nameWithType> (all members)</span></span>  
-- <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=fullName>  
-- <xref:System.Runtime.InteropServices.UnmanagedType.VBByRefStr?displayProperty=fullName>  
-- <xref:System.Runtime.InteropServices.UnmanagedType.AnsiBStr?displayProperty=fullName>  
-- <xref:System.Runtime.InteropServices.UnmanagedType.AsAny?displayProperty=fullName>  
-- <xref:System.Runtime.InteropServices.UnmanagedType.CustomMarshaler?displayProperty=fullName>  
-  
- <span data-ttu-id="a8122-279">Редко используемые интерфейсы API маршалинга:</span><span class="sxs-lookup"><span data-stu-id="a8122-279">Rarely used marshaling APIs:</span></span>  
-  
-- <xref:System.Runtime.InteropServices.Marshal.ReadByte%28System.Object%2CSystem.Int32%29?displayProperty=fullName>  
-- <xref:System.Runtime.InteropServices.Marshal.ReadInt16%28System.Object%2CSystem.Int32%29?displayProperty=fullName>  
-- <xref:System.Runtime.InteropServices.Marshal.ReadInt32%28System.Object%2CSystem.Int32%29?displayProperty=fullName>  
-- <xref:System.Runtime.InteropServices.Marshal.ReadInt64%28System.Object%2CSystem.Int32%29?displayProperty=fullName>  
-- <xref:System.Runtime.InteropServices.Marshal.ReadIntPtr%28System.Object%2CSystem.Int32%29?displayProperty=fullName>  
-- <xref:System.Runtime.InteropServices.Marshal.WriteByte%28System.Object%2CSystem.Int32%2CSystem.Byte%29?displayProperty=fullName>  
-- <xref:System.Runtime.InteropServices.Marshal.WriteInt16%28System.Object%2CSystem.Int32%2CSystem.Int16%29?displayProperty=fullName>  
-- <xref:System.Runtime.InteropServices.Marshal.WriteInt32%28System.Object%2CSystem.Int32%2CSystem.Int32%29?displayProperty=fullName>  
-- <xref:System.Runtime.InteropServices.Marshal.WriteInt64%28System.Object%2CSystem.Int32%2CSystem.Int64%29?displayProperty=fullName>  
-- <xref:System.Runtime.InteropServices.Marshal.WriteIntPtr%28System.Object%2CSystem.Int32%2CSystem.IntPtr%29?displayProperty=fullName>  
-  
- <span data-ttu-id="a8122-280">**Вызов неуправляемого кода и совместимость взаимодействия COM**</span><span class="sxs-lookup"><span data-stu-id="a8122-280">**Platform invoke and COM interop compatibility**</span></span>  
-  
- <span data-ttu-id="a8122-281">Большинство вызовов неуправляемого и сценариях COM-взаимодействия по-прежнему поддерживаются в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="a8122-281">Most platform invoke and COM interop scenarios are still supported in .NET Native.</span></span> <span data-ttu-id="a8122-282">В частности, поддерживаются все взаимодействия с API среды выполнения Windows (WinRT) и весь необходимый маршалинг для среды выполнения Windows.</span><span class="sxs-lookup"><span data-stu-id="a8122-282">In particular, all interoperability with Windows Runtime (WinRT) APIs and all marshaling required for the Windows Runtime is supported.</span></span> <span data-ttu-id="a8122-283">Это включает поддержку маршалинга:</span><span class="sxs-lookup"><span data-stu-id="a8122-283">This includes marshaling support for:</span></span>  
-  
-- <span data-ttu-id="a8122-284">Массивы (включая <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>)</span><span class="sxs-lookup"><span data-stu-id="a8122-284">Arrays (including <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>)</span></span>  
-  
-- `BStr`  
-  
-- <span data-ttu-id="a8122-285">Делегаты</span><span class="sxs-lookup"><span data-stu-id="a8122-285">Delegates</span></span>  
-  
-- <span data-ttu-id="a8122-286">Строки (Юникод, Ansi и HSTRING)</span><span class="sxs-lookup"><span data-stu-id="a8122-286">Strings (Unicode, Ansi, and HSTRING)</span></span>  
-  
-- <span data-ttu-id="a8122-287">Структуры (`byref` и `byval`)</span><span class="sxs-lookup"><span data-stu-id="a8122-287">Structs (`byref` and `byval`)</span></span>  
-  
-- <span data-ttu-id="a8122-288">Объединения</span><span class="sxs-lookup"><span data-stu-id="a8122-288">Unions</span></span>  
-  
-- <span data-ttu-id="a8122-289">Дескрипторы Win32</span><span class="sxs-lookup"><span data-stu-id="a8122-289">Win32 handles</span></span>  
-  
-- <span data-ttu-id="a8122-290">Все конструкции WinRT</span><span class="sxs-lookup"><span data-stu-id="a8122-290">All WinRT constructs</span></span>  
-  
-- <span data-ttu-id="a8122-291">Частичная поддержка маршалинга типов variant.</span><span class="sxs-lookup"><span data-stu-id="a8122-291">Partial support for marshaling variant types.</span></span> <span data-ttu-id="a8122-292">Поддерживаются следующие функции:</span><span class="sxs-lookup"><span data-stu-id="a8122-292">The following are supported:</span></span>  
-  
-    - <xref:System.Boolean>  
-  
-    - <xref:System.Byte>  
-  
-    - <xref:System.Decimal>  
-  
-    - <xref:System.Double>  
-  
-    - <xref:System.Int16>  
-  
-    - <xref:System.Int32>  
-  
-    - <xref:System.Int64>  
-  
-    - <xref:System.SByte>  
-  
-    - <xref:System.Single>  
-  
-    - <xref:System.UInt16>  
-  
-    - <xref:System.UInt32>  
-  
-    - <xref:System.UInt64>  
-  
-    - `BStr`  
-  
-    - [<span data-ttu-id="a8122-293">IUnknown</span><span class="sxs-lookup"><span data-stu-id="a8122-293">IUnknown</span></span>](/windows/desktop/api/unknwn/nn-unknwn-iunknown)  
-  
- <span data-ttu-id="a8122-294">Тем не менее .NET Native не поддерживает следующее:</span><span class="sxs-lookup"><span data-stu-id="a8122-294">However, .NET Native doesn't support the following:</span></span>  
-  
-- <span data-ttu-id="a8122-295">использование классических COM-событий</span><span class="sxs-lookup"><span data-stu-id="a8122-295">Using classic COM events</span></span>  
-  
-- <span data-ttu-id="a8122-296">Реализация интерфейса <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> на управляемом типе</span><span class="sxs-lookup"><span data-stu-id="a8122-296">Implementing the <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> interface on a managed type</span></span>  
-  
-- <span data-ttu-id="a8122-297">Реализация интерфейса [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) в управляемом типе через атрибут <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="a8122-297">Implementing the [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) interface on a managed type through the <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> attribute.</span></span> <span data-ttu-id="a8122-298">Однако, обратите внимание, что нельзя вызывать COM-объекты через `IDispatch`, а управляемый объект не может реализовать `IDispatch`.</span><span class="sxs-lookup"><span data-stu-id="a8122-298">However, note that you can't call COM objects through `IDispatch`, and your managed object can't implement `IDispatch`.</span></span>  
-  
- <span data-ttu-id="a8122-299">Использование отражения для вызова метода неуправляемого кода не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="a8122-299">Using reflection to invoke a platform invoke method isn't supported.</span></span> <span data-ttu-id="a8122-300">Это ограничение можно обойти путем заключения вызова метода в другой метод, вместо этого используя вызов оболочки.</span><span class="sxs-lookup"><span data-stu-id="a8122-300">You can work around this limitation by wrapping the method call in another method and using reflection to call the wrapper instead.</span></span>  
-  
-<a name="APIs"></a>   
-### <a name="other-differences-from-net-apis-for-windows-store-apps"></a><span data-ttu-id="a8122-301">Другие отличия от API-интерфейсов приложений .NET для магазина Windows</span><span class="sxs-lookup"><span data-stu-id="a8122-301">Other differences from .NET APIs for Windows Store apps</span></span>  
- <span data-ttu-id="a8122-302">В этом разделе перечислены остальные интерфейсы API, которые не поддерживаются в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="a8122-302">This section lists the remaining APIs that aren't supported in .NET Native.</span></span> <span data-ttu-id="a8122-303">Самый большой набор неподдерживаемых интерфейсов API — это API-интерфейсы Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="a8122-303">The largest set of the unsupported APIs are Windows Communication Foundation (WCF) APIs.</span></span>  
-  
- <span data-ttu-id="a8122-304">**DataAnnotations (System.ComponentModel.DataAnnotations)**</span><span class="sxs-lookup"><span data-stu-id="a8122-304">**DataAnnotations (System.ComponentModel.DataAnnotations)**</span></span>  
-  
- <span data-ttu-id="a8122-305">Типы в <xref:System.ComponentModel.DataAnnotations> и <xref:System.ComponentModel.DataAnnotations.Schema> пространства имен не поддерживаются в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="a8122-305">The types in the <xref:System.ComponentModel.DataAnnotations> and <xref:System.ComponentModel.DataAnnotations.Schema> namespaces aren't supported in .NET Native.</span></span> <span data-ttu-id="a8122-306">К ним относятся следующие типы, которые присутствуют в приложениях .NET для Windows Store для Windows 8:</span><span class="sxs-lookup"><span data-stu-id="a8122-306">These include the following types that are present in .NET for Windows Store apps for Windows 8:</span></span>  
-  
-- <xref:System.ComponentModel.DataAnnotations.AssociationAttribute?displayProperty=nameWithType>  
-- <xref:System.ComponentModel.DataAnnotations.ConcurrencyCheckAttribute?displayProperty=nameWithType>  
-- <xref:System.ComponentModel.DataAnnotations.CustomValidationAttribute?displayProperty=nameWithType>  
+
+<span data-ttu-id="63b4f-272">Устаревшие интерфейсы API в <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> интерфейс, который не поддерживается в .NET Native, включают:</span><span class="sxs-lookup"><span data-stu-id="63b4f-272">Deprecated APIs in the <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> interface, which isn't supported in .NET Native, include:</span></span>
+
+- <span data-ttu-id="63b4f-273"><xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> (все элементы)</span><span class="sxs-lookup"><span data-stu-id="63b4f-273"><xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> (all members)</span></span>
+- <span data-ttu-id="63b4f-274"><xref:System.Runtime.InteropServices.CustomQueryInterfaceMode?displayProperty=nameWithType> (все элементы)</span><span class="sxs-lookup"><span data-stu-id="63b4f-274"><xref:System.Runtime.InteropServices.CustomQueryInterfaceMode?displayProperty=nameWithType> (all members)</span></span>
+- <span data-ttu-id="63b4f-275"><xref:System.Runtime.InteropServices.CustomQueryInterfaceResult?displayProperty=nameWithType> (все элементы)</span><span class="sxs-lookup"><span data-stu-id="63b4f-275"><xref:System.Runtime.InteropServices.CustomQueryInterfaceResult?displayProperty=nameWithType> (all members)</span></span>
+- <xref:System.Runtime.InteropServices.Marshal.GetComInterfaceForObject%28System.Object%2CSystem.Type%2CSystem.Runtime.InteropServices.CustomQueryInterfaceMode%29?displayProperty=fullName>
+
+<span data-ttu-id="63b4f-276">Другие неподдерживаемые функции взаимодействия:</span><span class="sxs-lookup"><span data-stu-id="63b4f-276">Other unsupported interop features include:</span></span>
+
+- <span data-ttu-id="63b4f-277"><xref:System.Runtime.InteropServices.ICustomAdapter?displayProperty=nameWithType> (все элементы)</span><span class="sxs-lookup"><span data-stu-id="63b4f-277"><xref:System.Runtime.InteropServices.ICustomAdapter?displayProperty=nameWithType> (all members)</span></span>
+- <span data-ttu-id="63b4f-278"><xref:System.Runtime.InteropServices.SafeBuffer?displayProperty=nameWithType> (все элементы)</span><span class="sxs-lookup"><span data-stu-id="63b4f-278"><xref:System.Runtime.InteropServices.SafeBuffer?displayProperty=nameWithType> (all members)</span></span>
+- <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=fullName>
+- <xref:System.Runtime.InteropServices.UnmanagedType.VBByRefStr?displayProperty=fullName>
+- <xref:System.Runtime.InteropServices.UnmanagedType.AnsiBStr?displayProperty=fullName>
+- <xref:System.Runtime.InteropServices.UnmanagedType.AsAny?displayProperty=fullName>
+- <xref:System.Runtime.InteropServices.UnmanagedType.CustomMarshaler?displayProperty=fullName>
+
+ <span data-ttu-id="63b4f-279">Редко используемые интерфейсы API маршалинга:</span><span class="sxs-lookup"><span data-stu-id="63b4f-279">Rarely used marshaling APIs:</span></span>
+
+- <xref:System.Runtime.InteropServices.Marshal.ReadByte%28System.Object%2CSystem.Int32%29?displayProperty=fullName>
+- <xref:System.Runtime.InteropServices.Marshal.ReadInt16%28System.Object%2CSystem.Int32%29?displayProperty=fullName>
+- <xref:System.Runtime.InteropServices.Marshal.ReadInt32%28System.Object%2CSystem.Int32%29?displayProperty=fullName>
+- <xref:System.Runtime.InteropServices.Marshal.ReadInt64%28System.Object%2CSystem.Int32%29?displayProperty=fullName>
+- <xref:System.Runtime.InteropServices.Marshal.ReadIntPtr%28System.Object%2CSystem.Int32%29?displayProperty=fullName>
+- <xref:System.Runtime.InteropServices.Marshal.WriteByte%28System.Object%2CSystem.Int32%2CSystem.Byte%29?displayProperty=fullName>
+- <xref:System.Runtime.InteropServices.Marshal.WriteInt16%28System.Object%2CSystem.Int32%2CSystem.Int16%29?displayProperty=fullName>
+- <xref:System.Runtime.InteropServices.Marshal.WriteInt32%28System.Object%2CSystem.Int32%2CSystem.Int32%29?displayProperty=fullName>
+- <xref:System.Runtime.InteropServices.Marshal.WriteInt64%28System.Object%2CSystem.Int32%2CSystem.Int64%29?displayProperty=fullName>
+- <xref:System.Runtime.InteropServices.Marshal.WriteIntPtr%28System.Object%2CSystem.Int32%2CSystem.IntPtr%29?displayProperty=fullName>
+
+ <span data-ttu-id="63b4f-280">**Вызов неуправляемого кода и совместимость взаимодействия COM**</span><span class="sxs-lookup"><span data-stu-id="63b4f-280">**Platform invoke and COM interop compatibility**</span></span>
+
+ <span data-ttu-id="63b4f-281">Большинство вызовов неуправляемого и сценариях COM-взаимодействия по-прежнему поддерживаются в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="63b4f-281">Most platform invoke and COM interop scenarios are still supported in .NET Native.</span></span> <span data-ttu-id="63b4f-282">В частности, поддерживаются все взаимодействия с API среды выполнения Windows (WinRT) и весь необходимый маршалинг для среды выполнения Windows.</span><span class="sxs-lookup"><span data-stu-id="63b4f-282">In particular, all interoperability with Windows Runtime (WinRT) APIs and all marshaling required for the Windows Runtime is supported.</span></span> <span data-ttu-id="63b4f-283">Это включает поддержку маршалинга:</span><span class="sxs-lookup"><span data-stu-id="63b4f-283">This includes marshaling support for:</span></span>
+
+- <span data-ttu-id="63b4f-284">Массивы (включая <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>)</span><span class="sxs-lookup"><span data-stu-id="63b4f-284">Arrays (including <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>)</span></span>
+
+- `BStr`
+
+- <span data-ttu-id="63b4f-285">Делегаты</span><span class="sxs-lookup"><span data-stu-id="63b4f-285">Delegates</span></span>
+
+- <span data-ttu-id="63b4f-286">Строки (Юникод, Ansi и HSTRING)</span><span class="sxs-lookup"><span data-stu-id="63b4f-286">Strings (Unicode, Ansi, and HSTRING)</span></span>
+
+- <span data-ttu-id="63b4f-287">Структуры (`byref` и `byval`)</span><span class="sxs-lookup"><span data-stu-id="63b4f-287">Structs (`byref` and `byval`)</span></span>
+
+- <span data-ttu-id="63b4f-288">Объединения</span><span class="sxs-lookup"><span data-stu-id="63b4f-288">Unions</span></span>
+
+- <span data-ttu-id="63b4f-289">Дескрипторы Win32</span><span class="sxs-lookup"><span data-stu-id="63b4f-289">Win32 handles</span></span>
+
+- <span data-ttu-id="63b4f-290">Все конструкции WinRT</span><span class="sxs-lookup"><span data-stu-id="63b4f-290">All WinRT constructs</span></span>
+
+- <span data-ttu-id="63b4f-291">Частичная поддержка маршалинга типов variant.</span><span class="sxs-lookup"><span data-stu-id="63b4f-291">Partial support for marshaling variant types.</span></span> <span data-ttu-id="63b4f-292">Поддерживаются следующие функции:</span><span class="sxs-lookup"><span data-stu-id="63b4f-292">The following are supported:</span></span>
+
+  - <xref:System.Boolean>
+
+  - <xref:System.Byte>
+
+  - <xref:System.Decimal>
+
+  - <xref:System.Double>
+
+  - <xref:System.Int16>
+
+  - <xref:System.Int32>
+
+  - <xref:System.Int64>
+
+  - <xref:System.SByte>
+
+  - <xref:System.Single>
+
+  - <xref:System.UInt16>
+
+  - <xref:System.UInt32>
+
+  - <xref:System.UInt64>
+
+  - `BStr`
+
+  - [<span data-ttu-id="63b4f-293">IUnknown</span><span class="sxs-lookup"><span data-stu-id="63b4f-293">IUnknown</span></span>](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
+
+<span data-ttu-id="63b4f-294">Тем не менее .NET Native не поддерживает следующее:</span><span class="sxs-lookup"><span data-stu-id="63b4f-294">However, .NET Native doesn't support the following:</span></span>
+
+- <span data-ttu-id="63b4f-295">использование классических COM-событий</span><span class="sxs-lookup"><span data-stu-id="63b4f-295">Using classic COM events</span></span>
+
+- <span data-ttu-id="63b4f-296">Реализация интерфейса <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> на управляемом типе</span><span class="sxs-lookup"><span data-stu-id="63b4f-296">Implementing the <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> interface on a managed type</span></span>
+
+- <span data-ttu-id="63b4f-297">Реализация интерфейса [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) в управляемом типе через атрибут <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="63b4f-297">Implementing the [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) interface on a managed type through the <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> attribute.</span></span> <span data-ttu-id="63b4f-298">Однако, обратите внимание, что нельзя вызывать COM-объекты через `IDispatch`, а управляемый объект не может реализовать `IDispatch`.</span><span class="sxs-lookup"><span data-stu-id="63b4f-298">However, note that you can't call COM objects through `IDispatch`, and your managed object can't implement `IDispatch`.</span></span>
+
+<span data-ttu-id="63b4f-299">Использование отражения для вызова метода неуправляемого кода не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="63b4f-299">Using reflection to invoke a platform invoke method isn't supported.</span></span> <span data-ttu-id="63b4f-300">Это ограничение можно обойти путем заключения вызова метода в другой метод, вместо этого используя вызов оболочки.</span><span class="sxs-lookup"><span data-stu-id="63b4f-300">You can work around this limitation by wrapping the method call in another method and using reflection to call the wrapper instead.</span></span>
+
+<a name="APIs"></a>
+
+### <a name="other-differences-from-net-apis-for-windows-store-apps"></a><span data-ttu-id="63b4f-301">Другие отличия от API-интерфейсов приложений .NET для магазина Windows</span><span class="sxs-lookup"><span data-stu-id="63b4f-301">Other differences from .NET APIs for Windows Store apps</span></span>
+
+<span data-ttu-id="63b4f-302">В этом разделе перечислены остальные интерфейсы API, которые не поддерживаются в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="63b4f-302">This section lists the remaining APIs that aren't supported in .NET Native.</span></span> <span data-ttu-id="63b4f-303">Самый большой набор неподдерживаемых интерфейсов API — это API-интерфейсы Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="63b4f-303">The largest set of the unsupported APIs are Windows Communication Foundation (WCF) APIs.</span></span>
+
+<span data-ttu-id="63b4f-304">**DataAnnotations (System.ComponentModel.DataAnnotations)**</span><span class="sxs-lookup"><span data-stu-id="63b4f-304">**DataAnnotations (System.ComponentModel.DataAnnotations)**</span></span>
+
+<span data-ttu-id="63b4f-305">Типы в <xref:System.ComponentModel.DataAnnotations> и <xref:System.ComponentModel.DataAnnotations.Schema> пространства имен не поддерживаются в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="63b4f-305">The types in the <xref:System.ComponentModel.DataAnnotations> and <xref:System.ComponentModel.DataAnnotations.Schema> namespaces aren't supported in .NET Native.</span></span> <span data-ttu-id="63b4f-306">К ним относятся следующие типы, которые присутствуют в приложениях .NET для Windows Store для Windows 8:</span><span class="sxs-lookup"><span data-stu-id="63b4f-306">These include the following types that are present in .NET for Windows Store apps for Windows 8:</span></span>
+
+- <xref:System.ComponentModel.DataAnnotations.AssociationAttribute?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.ConcurrencyCheckAttribute?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.CustomValidationAttribute?displayProperty=nameWithType>
 - <xref:System.ComponentModel.DataAnnotations.DataType?displayProperty=nameWithType>
 - <xref:System.ComponentModel.DataAnnotations.DataTypeAttribute?displayProperty=nameWithType>
 - <xref:System.ComponentModel.DataAnnotations.DisplayAttribute?displayProperty=nameWithType>
 - <xref:System.ComponentModel.DataAnnotations.DisplayColumnAttribute?displayProperty=nameWithType>
 - <xref:System.ComponentModel.DataAnnotations.DisplayFormatAttribute>
-- <xref:System.ComponentModel.DataAnnotations.EditableAttribute>  
-- <xref:System.ComponentModel.DataAnnotations.EnumDataTypeAttribute>  
-- <xref:System.ComponentModel.DataAnnotations.FilterUIHintAttribute?displayProperty=nameWithType>  
-- <xref:System.ComponentModel.DataAnnotations.KeyAttribute?displayProperty=nameWithType>  
-- <xref:System.ComponentModel.DataAnnotations.RangeAttribute?displayProperty=nameWithType>  
-- <xref:System.ComponentModel.DataAnnotations.RegularExpressionAttribute?displayProperty=nameWithType>  
-- <xref:System.ComponentModel.DataAnnotations.RequiredAttribute?displayProperty=nameWithType>  
-- <xref:System.ComponentModel.DataAnnotations.StringLengthAttribute?displayProperty=nameWithType>  
-- <xref:System.ComponentModel.DataAnnotations.TimestampAttribute?displayProperty=nameWithType>  
-- <xref:System.ComponentModel.DataAnnotations.UIHintAttribute?displayProperty=nameWithType>  
-- <xref:System.ComponentModel.DataAnnotations.ValidationAttribute?displayProperty=nameWithType>  
-- <xref:System.ComponentModel.DataAnnotations.ValidationContext?displayProperty=nameWithType>  
-- <xref:System.ComponentModel.DataAnnotations.ValidationException?displayProperty=nameWithType>  
-- <xref:System.ComponentModel.DataAnnotations.ValidationResult?displayProperty=nameWithType>  
-- <xref:System.ComponentModel.DataAnnotations.Validator?displayProperty=nameWithType>  
-- <xref:System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute?displayProperty=nameWithType>  
-- <xref:System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption?displayProperty=nameWithType>  
-  
- <span data-ttu-id="a8122-307">**Visual Basic**</span><span class="sxs-lookup"><span data-stu-id="a8122-307">**Visual Basic**</span></span>  
-  
- <span data-ttu-id="a8122-308">Visual Basic сейчас не поддерживается в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="a8122-308">Visual Basic isn't currently supported in .NET Native.</span></span> <span data-ttu-id="a8122-309">Следующие типы в <xref:Microsoft.VisualBasic> и <xref:Microsoft.VisualBasic.CompilerServices> пространства имен недоступны в .NET Native:</span><span class="sxs-lookup"><span data-stu-id="a8122-309">The following types in the <xref:Microsoft.VisualBasic> and <xref:Microsoft.VisualBasic.CompilerServices> namespaces aren't available in .NET Native:</span></span>  
+- <xref:System.ComponentModel.DataAnnotations.EditableAttribute>
+- <xref:System.ComponentModel.DataAnnotations.EnumDataTypeAttribute>
+- <xref:System.ComponentModel.DataAnnotations.FilterUIHintAttribute?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.KeyAttribute?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.RangeAttribute?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.RegularExpressionAttribute?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.RequiredAttribute?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.StringLengthAttribute?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.TimestampAttribute?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.UIHintAttribute?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.ValidationAttribute?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.ValidationContext?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.ValidationException?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.ValidationResult?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.Validator?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute?displayProperty=nameWithType>
+- <xref:System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption?displayProperty=nameWithType>
 
-- <xref:Microsoft.VisualBasic.CallType?displayProperty=nameWithType>  
-- <xref:Microsoft.VisualBasic.Constants?displayProperty=nameWithType>  
-- <xref:Microsoft.VisualBasic.HideModuleNameAttribute?displayProperty=nameWithType>  
-- <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType>  
-- <xref:Microsoft.VisualBasic.CompilerServices.Conversions?displayProperty=nameWithType>  
-- <xref:Microsoft.VisualBasic.CompilerServices.DesignerGeneratedAttribute?displayProperty=nameWithType>  
-- <xref:Microsoft.VisualBasic.CompilerServices.IncompleteInitialization?displayProperty=nameWithType>  
-- <xref:Microsoft.VisualBasic.CompilerServices.NewLateBinding?displayProperty=nameWithType>  
-- <xref:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl?displayProperty=nameWithType>  
-- <xref:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl.ForLoopControl?displayProperty=nameWithType>  
-- <xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=nameWithType>  
-- <xref:Microsoft.VisualBasic.CompilerServices.OptionCompareAttribute?displayProperty=nameWithType>  
-- <xref:Microsoft.VisualBasic.CompilerServices.OptionTextAttribute?displayProperty=nameWithType>  
-- <xref:Microsoft.VisualBasic.CompilerServices.ProjectData?displayProperty=nameWithType>  
-- <xref:Microsoft.VisualBasic.CompilerServices.StandardModuleAttribute?displayProperty=nameWithType>  
-- <xref:Microsoft.VisualBasic.CompilerServices.StaticLocalInitFlag?displayProperty=nameWithType>  
-- <xref:Microsoft.VisualBasic.CompilerServices.Utils?displayProperty=nameWithType>  
-  
- <span data-ttu-id="a8122-310">**Контекст отражения (пространство имен System.Reflection.Context)**</span><span class="sxs-lookup"><span data-stu-id="a8122-310">**Reflection Context (System.Reflection.Context namespace)**</span></span>  
-  
- <span data-ttu-id="a8122-311"><xref:System.Reflection.Context.CustomReflectionContext?displayProperty=nameWithType> Класс не поддерживается в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="a8122-311">The <xref:System.Reflection.Context.CustomReflectionContext?displayProperty=nameWithType> class isn't supported in .NET Native.</span></span>  
-  
- <span data-ttu-id="a8122-312">**Часы реального времени (System.Net.Http.Rtc)**</span><span class="sxs-lookup"><span data-stu-id="a8122-312">**RTC (System.Net.Http.Rtc)**</span></span>  
-  
- <span data-ttu-id="a8122-313">`System.Net.Http.RtcRequestFactory` Класс не поддерживается в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="a8122-313">The `System.Net.Http.RtcRequestFactory` class isn't supported in .NET Native.</span></span>  
-  
- <span data-ttu-id="a8122-314">**Windows Communication Foundation (WCF) (System.ServiceModel.\*)**</span><span class="sxs-lookup"><span data-stu-id="a8122-314">**Windows Communication Foundation (WCF) (System.ServiceModel.\*)**</span></span>  
-  
- <span data-ttu-id="a8122-315">Типы в [пространствах имен System.ServiceModel.\*](xref:System.ServiceModel) не поддерживаются в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="a8122-315">The types in the [System.ServiceModel.\* namespaces](xref:System.ServiceModel) aren't supported in .NET Native.</span></span> <span data-ttu-id="a8122-316">В число этих типов входят следующие:</span><span class="sxs-lookup"><span data-stu-id="a8122-316">These includes the following types:</span></span>  
-  
-- <xref:System.ServiceModel.ActionNotSupportedException?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.BasicHttpMessageCredentialType?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.BasicHttpSecurity?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.BasicHttpSecurityMode?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.ClientBase%601.BeginOperationDelegate?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.ClientBase%601.ChannelBase%601?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.ClientBase%601.EndOperationDelegate?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.ClientBase%601.InvokeAsyncCompletedEventArgs?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.CommunicationState?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.DataContractFormatAttribute?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.DnsEndpointIdentity?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.EndpointAddress?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.EndpointAddressBuilder?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.EndpointIdentity?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.EnvelopeVersion?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.ExceptionDetail?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.FaultCode?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.FaultReason?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.FaultReasonText?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.HttpBindingBase?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.HttpClientCredentialType?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.HttpTransportSecurity?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.IContextChannel?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.IDefaultCommunicationTimeouts?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.IExtensibleObject%601?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.IExtension%601?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.IExtensionCollection%601?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.InvalidMessageContractException?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.MessageBodyMemberAttribute?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.MessageContractMemberAttribute?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.MessageCredentialType?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.MessageHeader%601?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.MessageHeaderException?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.MessageSecurityOverTcp?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.MessageSecurityVersion?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.NetHttpBinding?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.NetHttpMessageEncoding?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.NetTcpSecurity?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.OperationContext?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.OperationContextScope?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.OperationContractAttribute?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.OperationFormatStyle?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.ProtocolException?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.QuotaExceededException?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.ServerTooBusyException?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.ServiceActivationException?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.ServiceKnownTypeAttribute?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.SpnEndpointIdentity?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.TcpClientCredentialType?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.TcpTransportSecurity?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.TransferMode?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.UnknownMessageReceivedEventArgs?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.UpnEndpointIdentity?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.AddressHeader?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.AddressHeaderCollection?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.AddressingVersion?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.ChannelManagerBase?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.ChannelParameterCollection?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.CommunicationObject?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.CompressionFormat?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.FaultConverter?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.HttpRequestMessageProperty?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.HttpResponseMessageProperty?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.IChannel?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.IChannelFactory?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.IChannelFactory%601?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.IDuplexChannel?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.IDuplexSession?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.IDuplexSessionChannel?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.IHttpCookieContainerManager?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.IInputChannel?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.IInputSession?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.IInputSessionChannel?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.IMessageProperty?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.IOutputChannel?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.IOutputSession?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.IOutputSessionChannel?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.IRequestSessionChannel?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.MessageBuffer?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.MessageEncoder?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.MessageEncoderFactory?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.MessageHeader?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.MessageHeaderInfo?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.MessageHeaders?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.MessageProperties?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.MessageState?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.RequestContext?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.SecurityHeaderLayout?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.TransportBindingElement?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.WebSocketTransportSettings?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.WebSocketTransportUsage?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.ClientCredentials?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.FaultDescription?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.FaultDescriptionCollection?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.MessageBodyDescription?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.MessageDescription?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.MessageDescriptionCollection?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.MessageDirection?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.MessageHeaderDescription?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.MessageHeaderDescriptionCollection?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.MessagePartDescription?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.MessagePartDescriptionCollection?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.MessagePropertyDescription?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.MessagePropertyDescriptionCollection?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.OperationDescription?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.OperationDescriptionCollection?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Dispatcher.ClientOperation?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Dispatcher.ClientRuntime?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Dispatcher.DispatchOperation?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Dispatcher.DispatchRuntime?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Dispatcher.EndpointDispatcher?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Dispatcher.IClientOperationSelector?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Security.BasicSecurityProfileVersion?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Security.HttpDigestClientCredential?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Security.SecureConversationVersion?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Security.SecurityAccessDeniedException?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Security.SecurityPolicyVersion?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Security.SecurityVersion?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Security.TrustVersion?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Security.WindowsClientCredential?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters?displayProperty=nameWithType>  
-- <xref:System.ServiceModel.Security.Tokens.UserNameSecurityTokenParameters?displayProperty=nameWithType>  
-  
-### <a name="differences-in-serializers"></a><span data-ttu-id="a8122-317">Различия в сериализаторах</span><span class="sxs-lookup"><span data-stu-id="a8122-317">Differences in serializers</span></span>  
- <span data-ttu-id="a8122-318">Существуют следующие различия, касающиеся сериализации и десериализации с классами <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>и <xref:System.Xml.Serialization.XmlSerializer> :</span><span class="sxs-lookup"><span data-stu-id="a8122-318">The following differences concern serialization and deserialization with the <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, and <xref:System.Xml.Serialization.XmlSerializer> classes:</span></span>  
-  
-- <span data-ttu-id="a8122-319">В .NET Native <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> не удается сериализовать или десериализовать производный класс, имеющий член базового класса, тип которого не является корневым тип сериализации.</span><span class="sxs-lookup"><span data-stu-id="a8122-319">In .NET Native, <xref:System.Runtime.Serialization.DataContractSerializer> and <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> fail to serialize or deserialize a derived class that has a base class member whose type isn't a root serialization type.</span></span> <span data-ttu-id="a8122-320">Например, в следующем коде при сериализации или десериализации `Y` возникает ошибка:</span><span class="sxs-lookup"><span data-stu-id="a8122-320">For example, in the following code, trying to serialize or deserialize `Y` results in an error:</span></span>  
-  
-     [!code-csharp[ProjectN#10](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat3.cs#10)]  
-  
-     <span data-ttu-id="a8122-321">Тип `InnerType` не известен сериализатору, так как члены базового класса не передаются во время сериализации.</span><span class="sxs-lookup"><span data-stu-id="a8122-321">Type `InnerType` isn't known to the serializer, because the members of the base class aren't traversed during serialization.</span></span>  
-  
-- <span data-ttu-id="a8122-322"><xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> не удается сериализовать класс или структуру, которая реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601> .</span><span class="sxs-lookup"><span data-stu-id="a8122-322"><xref:System.Runtime.Serialization.DataContractSerializer> and <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> fail to serialize a class or structure that implements the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="a8122-323">Например, не удается сериализовать или десериализовать следующие типы:</span><span class="sxs-lookup"><span data-stu-id="a8122-323">For example, the following types fail to serialize or deserialize:</span></span>  
+ <span data-ttu-id="63b4f-307">**Visual Basic**</span><span class="sxs-lookup"><span data-stu-id="63b4f-307">**Visual Basic**</span></span>
 
-- <span data-ttu-id="a8122-324"><xref:System.Xml.Serialization.XmlSerializer> не удается сериализовать следующие значения объекта, так как он не знает точный тип объекта для сериализации:</span><span class="sxs-lookup"><span data-stu-id="a8122-324"><xref:System.Xml.Serialization.XmlSerializer> fails to serialize the following object value, because it doesn't know the exact type of the object to be serialized:</span></span>  
+<span data-ttu-id="63b4f-308">Visual Basic сейчас не поддерживается в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="63b4f-308">Visual Basic isn't currently supported in .NET Native.</span></span> <span data-ttu-id="63b4f-309">Следующие типы в <xref:Microsoft.VisualBasic> и <xref:Microsoft.VisualBasic.CompilerServices> пространства имен недоступны в .NET Native:</span><span class="sxs-lookup"><span data-stu-id="63b4f-309">The following types in the <xref:Microsoft.VisualBasic> and <xref:Microsoft.VisualBasic.CompilerServices> namespaces aren't available in .NET Native:</span></span>
 
-- <span data-ttu-id="a8122-325"><xref:System.Xml.Serialization.XmlSerializer> не удается сериализация или десериализация, если тип сериализованного объекта <xref:System.Xml.XmlQualifiedName>.</span><span class="sxs-lookup"><span data-stu-id="a8122-325"><xref:System.Xml.Serialization.XmlSerializer> fails to serialize or deserialize if the type of the serialized object is <xref:System.Xml.XmlQualifiedName>.</span></span>  
-  
-- <span data-ttu-id="a8122-326">Все сериализаторам (<xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>и <xref:System.Xml.Serialization.XmlSerializer>) не удается создать код сериализации для типа <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> или типа, содержащего <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="a8122-326">All serializers (<xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, and <xref:System.Xml.Serialization.XmlSerializer>) fail to generate serialization code for type <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> or for a type that contains <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="a8122-327">Вместо этого они отображают ошибки во время построения.</span><span class="sxs-lookup"><span data-stu-id="a8122-327">They display build-time errors instead.</span></span>  
-  
-- <span data-ttu-id="a8122-328">Следующие конструкторы типов сериализации не обязательно работают, как должны:</span><span class="sxs-lookup"><span data-stu-id="a8122-328">The following constructors of the serialization types aren't guaranteed to work as expected:</span></span>  
-  
-    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
-  
-    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.DataContractSerializerSettings%29?displayProperty=nameWithType>  
-  
-    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
-  
-    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Xml.XmlDictionaryString%2CSystem.Xml.XmlDictionaryString%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
-  
-    - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.Json.DataContractJsonSerializerSettings%29?displayProperty=nameWithType>  
-  
-    - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
-  
-    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.String%29?displayProperty=nameWithType>  
-  
-    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>  
-  
-    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%29?displayProperty=nameWithType>  
-  
-    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlRootAttribute%29?displayProperty=nameWithType>  
-  
-    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
-  
-- <span data-ttu-id="a8122-329"><xref:System.Xml.Serialization.XmlSerializer> не удается создать код для типа, который содержит методы, определенные любым из следующих атрибутов:</span><span class="sxs-lookup"><span data-stu-id="a8122-329"><xref:System.Xml.Serialization.XmlSerializer> fails to generate code for a type that has methods attributed with any of the following attributes:</span></span>  
-  
-    - <xref:System.Runtime.Serialization.OnSerializingAttribute>  
-  
-    - <xref:System.Runtime.Serialization.OnSerializedAttribute>  
-  
-    - <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
-  
-    - <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
-  
-- <span data-ttu-id="a8122-330"><xref:System.Xml.Serialization.XmlSerializer> не поддерживает настраиваемый интерфейс сериализации <xref:System.Xml.Serialization.IXmlSerializable> .</span><span class="sxs-lookup"><span data-stu-id="a8122-330"><xref:System.Xml.Serialization.XmlSerializer> doesn't honor the <xref:System.Xml.Serialization.IXmlSerializable> custom serialization interface.</span></span> <span data-ttu-id="a8122-331">Если имеется класс, реализующий этот интерфейс, <xref:System.Xml.Serialization.XmlSerializer> рассматривает тип, как тип объекта (POCO) простой старой среды CLR и сериализует только его открытые свойства.</span><span class="sxs-lookup"><span data-stu-id="a8122-331">If you have a class that implements this interface, <xref:System.Xml.Serialization.XmlSerializer> considers the type a plain old CLR object (POCO) type and serializes only its public properties.</span></span>  
-  
-- <span data-ttu-id="a8122-332">Сериализация простого <xref:System.Exception> объекта не работает с <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span><span class="sxs-lookup"><span data-stu-id="a8122-332">Serializing a plain <xref:System.Exception> object doesn't work well with <xref:System.Runtime.Serialization.DataContractSerializer> and <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span>
+- <xref:Microsoft.VisualBasic.CallType?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Constants?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.HideModuleNameAttribute?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.CompilerServices.Conversions?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.CompilerServices.DesignerGeneratedAttribute?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.CompilerServices.IncompleteInitialization?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.CompilerServices.NewLateBinding?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl.ForLoopControl?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.CompilerServices.OptionCompareAttribute?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.CompilerServices.OptionTextAttribute?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.CompilerServices.ProjectData?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.CompilerServices.StandardModuleAttribute?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.CompilerServices.StaticLocalInitFlag?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.CompilerServices.Utils?displayProperty=nameWithType>
 
-<a name="VS"></a>   
-## <a name="visual-studio-differences"></a><span data-ttu-id="a8122-333">Различия в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="a8122-333">Visual Studio differences</span></span>  
- <span data-ttu-id="a8122-334">**Исключения и отладка**</span><span class="sxs-lookup"><span data-stu-id="a8122-334">**Exceptions and debugging**</span></span>  
-  
- <span data-ttu-id="a8122-335">При запуске приложений, скомпилированных с помощью .NET Native в отладчике исключения первого шанса включены для следующих типов исключений:</span><span class="sxs-lookup"><span data-stu-id="a8122-335">When you're running apps compiled by using .NET Native in the debugger, first-chance exceptions are enabled for the following exception types:</span></span>  
-  
-- <xref:System.MemberAccessException>  
-  
-- <xref:System.TypeAccessException>  
-  
- <span data-ttu-id="a8122-336">**Создание приложений**</span><span class="sxs-lookup"><span data-stu-id="a8122-336">**Building apps**</span></span>  
-  
- <span data-ttu-id="a8122-337">Используйте средства построения x 86, которые используются по умолчанию в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a8122-337">Use the x86 build tools that are used by default by Visual Studio.</span></span> <span data-ttu-id="a8122-338">Не рекомендуется использование средств AMD64 MSBuild, которые находятся в C:\Program Files (x86)\MSBuild\12.0\bin\amd64; Это может создать проблемы построения.</span><span class="sxs-lookup"><span data-stu-id="a8122-338">We don't recommend using the AMD64 MSBuild tools, which are found in C:\Program Files (x86)\MSBuild\12.0\bin\amd64; these may create build problems.</span></span>  
-  
- <span data-ttu-id="a8122-339">**Профилировщики**</span><span class="sxs-lookup"><span data-stu-id="a8122-339">**Profilers**</span></span>  
-  
-- <span data-ttu-id="a8122-340">Профилировщик ЦП в Visual Studio и профилировщик памяти XAML неправильно отображают «только мой код».</span><span class="sxs-lookup"><span data-stu-id="a8122-340">The Visual Studio CPU Profiler and XAML Memory Profiler don't display Just-My-Code correctly.</span></span>  
-  
-- <span data-ttu-id="a8122-341">Профилировщик памяти XAML неточно отображает данные управляемой кучи.</span><span class="sxs-lookup"><span data-stu-id="a8122-341">The XAML Memory Profiler doesn't accurately display managed heap data.</span></span>  
-  
-- <span data-ttu-id="a8122-342">Профилировщик ЦП неправильно идентифицирует модули и отображает имена функций с префиксами.</span><span class="sxs-lookup"><span data-stu-id="a8122-342">The CPU Profiler doesn't correctly identify modules, and displays prefixed function names.</span></span>  
-  
- <span data-ttu-id="a8122-343">**Проекты модульных тестов библиотеки**</span><span class="sxs-lookup"><span data-stu-id="a8122-343">**Unit Test Library projects**</span></span>  
-  
- <span data-ttu-id="a8122-344">Включение машинного кода .NET на библиотека модульных тестов для проекта приложения Windows Store не поддерживается и приводит к сбою построения проекта.</span><span class="sxs-lookup"><span data-stu-id="a8122-344">Enabling .NET Native on a Unit Test Library for a Windows Store apps project isn't supported and causes the project to fail to build.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="a8122-345">См. также</span><span class="sxs-lookup"><span data-stu-id="a8122-345">See also</span></span>
+<span data-ttu-id="63b4f-310">**Контекст отражения (пространство имен System.Reflection.Context)**</span><span class="sxs-lookup"><span data-stu-id="63b4f-310">**Reflection Context (System.Reflection.Context namespace)**</span></span>
 
-- [<span data-ttu-id="a8122-346">Начало работы</span><span class="sxs-lookup"><span data-stu-id="a8122-346">Getting Started</span></span>](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [<span data-ttu-id="a8122-347">Справочник по конфигурационному файлу директив среды выполнения (rd.xml)</span><span class="sxs-lookup"><span data-stu-id="a8122-347">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [<span data-ttu-id="a8122-348">Обзор приложений .NET для Windows Store</span><span class="sxs-lookup"><span data-stu-id="a8122-348">.NET For Windows Store apps overview</span></span>](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
-- [<span data-ttu-id="a8122-349">Поддержка платформы .NET Framework для приложений магазина Windows и среды выполнения Windows</span><span class="sxs-lookup"><span data-stu-id="a8122-349">.NET Framework Support for Windows Store Apps and Windows Runtime</span></span>](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+<span data-ttu-id="63b4f-311"><xref:System.Reflection.Context.CustomReflectionContext?displayProperty=nameWithType> Класс не поддерживается в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="63b4f-311">The <xref:System.Reflection.Context.CustomReflectionContext?displayProperty=nameWithType> class isn't supported in .NET Native.</span></span>
+
+<span data-ttu-id="63b4f-312">**Часы реального времени (System.Net.Http.Rtc)**</span><span class="sxs-lookup"><span data-stu-id="63b4f-312">**RTC (System.Net.Http.Rtc)**</span></span>
+
+<span data-ttu-id="63b4f-313">`System.Net.Http.RtcRequestFactory` Класс не поддерживается в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="63b4f-313">The `System.Net.Http.RtcRequestFactory` class isn't supported in .NET Native.</span></span>
+
+<span data-ttu-id="63b4f-314">**Windows Communication Foundation (WCF) (System.ServiceModel.\*)**</span><span class="sxs-lookup"><span data-stu-id="63b4f-314">**Windows Communication Foundation (WCF) (System.ServiceModel.\*)**</span></span>
+
+<span data-ttu-id="63b4f-315">Типы в [пространствах имен System.ServiceModel.\*](xref:System.ServiceModel) не поддерживаются в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="63b4f-315">The types in the [System.ServiceModel.\* namespaces](xref:System.ServiceModel) aren't supported in .NET Native.</span></span> <span data-ttu-id="63b4f-316">В число этих типов входят следующие:</span><span class="sxs-lookup"><span data-stu-id="63b4f-316">These includes the following types:</span></span>
+
+- <xref:System.ServiceModel.ActionNotSupportedException?displayProperty=nameWithType>
+- <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>
+- <xref:System.ServiceModel.BasicHttpMessageCredentialType?displayProperty=nameWithType>
+- <xref:System.ServiceModel.BasicHttpSecurity?displayProperty=nameWithType>
+- <xref:System.ServiceModel.BasicHttpSecurityMode?displayProperty=nameWithType>
+- <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ClientBase%601.BeginOperationDelegate?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ClientBase%601.ChannelBase%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ClientBase%601.EndOperationDelegate?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ClientBase%601.InvokeAsyncCompletedEventArgs?displayProperty=nameWithType>
+- <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
+- <xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>
+- <xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>
+- <xref:System.ServiceModel.CommunicationState?displayProperty=nameWithType>
+- <xref:System.ServiceModel.DataContractFormatAttribute?displayProperty=nameWithType>
+- <xref:System.ServiceModel.DnsEndpointIdentity?displayProperty=nameWithType>
+- <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.EndpointAddress?displayProperty=nameWithType>
+- <xref:System.ServiceModel.EndpointAddressBuilder?displayProperty=nameWithType>
+- <xref:System.ServiceModel.EndpointIdentity?displayProperty=nameWithType>
+- <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType>
+- <xref:System.ServiceModel.EnvelopeVersion?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ExceptionDetail?displayProperty=nameWithType>
+- <xref:System.ServiceModel.FaultCode?displayProperty=nameWithType>
+- <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>
+- <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>
+- <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.FaultReason?displayProperty=nameWithType>
+- <xref:System.ServiceModel.FaultReasonText?displayProperty=nameWithType>
+- <xref:System.ServiceModel.HttpBindingBase?displayProperty=nameWithType>
+- <xref:System.ServiceModel.HttpClientCredentialType?displayProperty=nameWithType>
+- <xref:System.ServiceModel.HttpTransportSecurity?displayProperty=nameWithType>
+- <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType>
+- <xref:System.ServiceModel.IContextChannel?displayProperty=nameWithType>
+- <xref:System.ServiceModel.IDefaultCommunicationTimeouts?displayProperty=nameWithType>
+- <xref:System.ServiceModel.IExtensibleObject%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.IExtension%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.IExtensionCollection%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>
+- <xref:System.ServiceModel.InvalidMessageContractException?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageBodyMemberAttribute?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageContractMemberAttribute?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageCredentialType?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageHeader%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageHeaderException?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityOverTcp?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityVersion?displayProperty=nameWithType>
+- <xref:System.ServiceModel.NetHttpBinding?displayProperty=nameWithType>
+- <xref:System.ServiceModel.NetHttpMessageEncoding?displayProperty=nameWithType>
+- <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType>
+- <xref:System.ServiceModel.NetTcpSecurity?displayProperty=nameWithType>
+- <xref:System.ServiceModel.OperationContext?displayProperty=nameWithType>
+- <xref:System.ServiceModel.OperationContextScope?displayProperty=nameWithType>
+- <xref:System.ServiceModel.OperationContractAttribute?displayProperty=nameWithType>
+- <xref:System.ServiceModel.OperationFormatStyle?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ProtocolException?displayProperty=nameWithType>
+- <xref:System.ServiceModel.QuotaExceededException?displayProperty=nameWithType>
+- <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ServerTooBusyException?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ServiceActivationException?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ServiceKnownTypeAttribute?displayProperty=nameWithType>
+- <xref:System.ServiceModel.SpnEndpointIdentity?displayProperty=nameWithType>
+- <xref:System.ServiceModel.TcpClientCredentialType?displayProperty=nameWithType>
+- <xref:System.ServiceModel.TcpTransportSecurity?displayProperty=nameWithType>
+- <xref:System.ServiceModel.TransferMode?displayProperty=nameWithType>
+- <xref:System.ServiceModel.UnknownMessageReceivedEventArgs?displayProperty=nameWithType>
+- <xref:System.ServiceModel.UpnEndpointIdentity?displayProperty=nameWithType>
+- <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.AddressHeader?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.AddressHeaderCollection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.AddressingVersion?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.ChannelManagerBase?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.ChannelParameterCollection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.CommunicationObject?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.CompressionFormat?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.FaultConverter?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.HttpRequestMessageProperty?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.HttpResponseMessageProperty?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.IChannel?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.IChannelFactory?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.IChannelFactory%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.IDuplexChannel?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.IDuplexSession?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.IDuplexSessionChannel?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.IHttpCookieContainerManager?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.IInputChannel?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.IInputSession?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.IInputSessionChannel?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.IMessageProperty?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.IOutputChannel?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.IOutputSession?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.IOutputSessionChannel?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.IRequestSessionChannel?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.MessageBuffer?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.MessageEncoder?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.MessageHeader?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.MessageHeaderInfo?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.MessageHeaders?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.MessageProperties?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.MessageState?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.RequestContext?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.SecurityHeaderLayout?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.TransportBindingElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.WebSocketTransportSettings?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.WebSocketTransportUsage?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.ClientCredentials?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.FaultDescription?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.FaultDescriptionCollection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.MessageBodyDescription?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.MessageDescription?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.MessageDescriptionCollection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.MessageDirection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.MessageHeaderDescription?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.MessageHeaderDescriptionCollection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.MessagePartDescription?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.MessagePartDescriptionCollection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.MessagePropertyDescription?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.MessagePropertyDescriptionCollection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.OperationDescription?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.OperationDescriptionCollection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Dispatcher.ClientOperation?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Dispatcher.DispatchRuntime?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Dispatcher.EndpointDispatcher?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Dispatcher.IClientOperationSelector?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.BasicSecurityProfileVersion?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.HttpDigestClientCredential?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.SecureConversationVersion?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.SecurityAccessDeniedException?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.SecurityPolicyVersion?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.SecurityVersion?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.TrustVersion?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.WindowsClientCredential?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.Tokens.UserNameSecurityTokenParameters?displayProperty=nameWithType>
+
+### <a name="differences-in-serializers"></a><span data-ttu-id="63b4f-317">Различия в сериализаторах</span><span class="sxs-lookup"><span data-stu-id="63b4f-317">Differences in serializers</span></span>
+
+<span data-ttu-id="63b4f-318">Существуют следующие различия, касающиеся сериализации и десериализации с классами <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>и <xref:System.Xml.Serialization.XmlSerializer> :</span><span class="sxs-lookup"><span data-stu-id="63b4f-318">The following differences concern serialization and deserialization with the <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, and <xref:System.Xml.Serialization.XmlSerializer> classes:</span></span>
+
+- <span data-ttu-id="63b4f-319">В .NET Native <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> не удается сериализовать или десериализовать производный класс, имеющий член базового класса, тип которого не является корневым тип сериализации.</span><span class="sxs-lookup"><span data-stu-id="63b4f-319">In .NET Native, <xref:System.Runtime.Serialization.DataContractSerializer> and <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> fail to serialize or deserialize a derived class that has a base class member whose type isn't a root serialization type.</span></span> <span data-ttu-id="63b4f-320">Например, в следующем коде при сериализации или десериализации `Y` возникает ошибка:</span><span class="sxs-lookup"><span data-stu-id="63b4f-320">For example, in the following code, trying to serialize or deserialize `Y` results in an error:</span></span>
+
+  [!code-csharp[ProjectN#10](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat3.cs#10)]
+
+  <span data-ttu-id="63b4f-321">Тип `InnerType` не известен сериализатору, так как члены базового класса не передаются во время сериализации.</span><span class="sxs-lookup"><span data-stu-id="63b4f-321">Type `InnerType` isn't known to the serializer, because the members of the base class aren't traversed during serialization.</span></span>
+
+- <span data-ttu-id="63b4f-322"><xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> не удается сериализовать класс или структуру, которая реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601> .</span><span class="sxs-lookup"><span data-stu-id="63b4f-322"><xref:System.Runtime.Serialization.DataContractSerializer> and <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> fail to serialize a class or structure that implements the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="63b4f-323">Например, не удается сериализовать или десериализовать следующие типы:</span><span class="sxs-lookup"><span data-stu-id="63b4f-323">For example, the following types fail to serialize or deserialize:</span></span>
+
+- <span data-ttu-id="63b4f-324"><xref:System.Xml.Serialization.XmlSerializer> не удается сериализовать следующие значения объекта, так как он не знает точный тип объекта для сериализации:</span><span class="sxs-lookup"><span data-stu-id="63b4f-324"><xref:System.Xml.Serialization.XmlSerializer> fails to serialize the following object value, because it doesn't know the exact type of the object to be serialized:</span></span>
+
+- <span data-ttu-id="63b4f-325"><xref:System.Xml.Serialization.XmlSerializer> не удается сериализация или десериализация, если тип сериализованного объекта <xref:System.Xml.XmlQualifiedName>.</span><span class="sxs-lookup"><span data-stu-id="63b4f-325"><xref:System.Xml.Serialization.XmlSerializer> fails to serialize or deserialize if the type of the serialized object is <xref:System.Xml.XmlQualifiedName>.</span></span>
+
+- <span data-ttu-id="63b4f-326">Все сериализаторам (<xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>и <xref:System.Xml.Serialization.XmlSerializer>) не удается создать код сериализации для типа <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> или типа, содержащего <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="63b4f-326">All serializers (<xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, and <xref:System.Xml.Serialization.XmlSerializer>) fail to generate serialization code for type <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> or for a type that contains <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="63b4f-327">Вместо этого они отображают ошибки во время построения.</span><span class="sxs-lookup"><span data-stu-id="63b4f-327">They display build-time errors instead.</span></span>
+
+- <span data-ttu-id="63b4f-328">Следующие конструкторы типов сериализации не обязательно работают, как должны:</span><span class="sxs-lookup"><span data-stu-id="63b4f-328">The following constructors of the serialization types aren't guaranteed to work as expected:</span></span>
+
+  - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>
+
+  - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.DataContractSerializerSettings%29?displayProperty=nameWithType>
+
+  - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>
+
+  - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Xml.XmlDictionaryString%2CSystem.Xml.XmlDictionaryString%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>
+
+  - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.Json.DataContractJsonSerializerSettings%29?displayProperty=nameWithType>
+
+  - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>
+
+  - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.String%29?displayProperty=nameWithType>
+
+  - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>
+
+  - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%29?displayProperty=nameWithType>
+
+  - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlRootAttribute%29?displayProperty=nameWithType>
+
+  - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>
+
+- <span data-ttu-id="63b4f-329"><xref:System.Xml.Serialization.XmlSerializer> не удается создать код для типа, который содержит методы, определенные любым из следующих атрибутов:</span><span class="sxs-lookup"><span data-stu-id="63b4f-329"><xref:System.Xml.Serialization.XmlSerializer> fails to generate code for a type that has methods attributed with any of the following attributes:</span></span>
+
+  - <xref:System.Runtime.Serialization.OnSerializingAttribute>
+
+  - <xref:System.Runtime.Serialization.OnSerializedAttribute>
+
+  - <xref:System.Runtime.Serialization.OnDeserializingAttribute>
+
+  - <xref:System.Runtime.Serialization.OnDeserializedAttribute>
+
+- <span data-ttu-id="63b4f-330"><xref:System.Xml.Serialization.XmlSerializer> не поддерживает настраиваемый интерфейс сериализации <xref:System.Xml.Serialization.IXmlSerializable> .</span><span class="sxs-lookup"><span data-stu-id="63b4f-330"><xref:System.Xml.Serialization.XmlSerializer> doesn't honor the <xref:System.Xml.Serialization.IXmlSerializable> custom serialization interface.</span></span> <span data-ttu-id="63b4f-331">Если имеется класс, реализующий этот интерфейс, <xref:System.Xml.Serialization.XmlSerializer> рассматривает тип, как тип объекта (POCO) простой старой среды CLR и сериализует только его открытые свойства.</span><span class="sxs-lookup"><span data-stu-id="63b4f-331">If you have a class that implements this interface, <xref:System.Xml.Serialization.XmlSerializer> considers the type a plain old CLR object (POCO) type and serializes only its public properties.</span></span>
+
+- <span data-ttu-id="63b4f-332">Сериализация простого <xref:System.Exception> объекта не работает с <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span><span class="sxs-lookup"><span data-stu-id="63b4f-332">Serializing a plain <xref:System.Exception> object doesn't work well with <xref:System.Runtime.Serialization.DataContractSerializer> and <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span>
+
+<a name="VS"></a>
+
+## <a name="visual-studio-differences"></a><span data-ttu-id="63b4f-333">Различия в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="63b4f-333">Visual Studio differences</span></span>
+
+<span data-ttu-id="63b4f-334">**Исключения и отладка**</span><span class="sxs-lookup"><span data-stu-id="63b4f-334">**Exceptions and debugging**</span></span>
+
+<span data-ttu-id="63b4f-335">При запуске приложений, скомпилированных с помощью .NET Native в отладчике исключения первого шанса включены для следующих типов исключений:</span><span class="sxs-lookup"><span data-stu-id="63b4f-335">When you're running apps compiled by using .NET Native in the debugger, first-chance exceptions are enabled for the following exception types:</span></span>
+
+- <xref:System.MemberAccessException>
+
+- <xref:System.TypeAccessException>
+
+<span data-ttu-id="63b4f-336">**Создание приложений**</span><span class="sxs-lookup"><span data-stu-id="63b4f-336">**Building apps**</span></span>
+
+<span data-ttu-id="63b4f-337">Используйте средства построения x 86, которые используются по умолчанию в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="63b4f-337">Use the x86 build tools that are used by default by Visual Studio.</span></span> <span data-ttu-id="63b4f-338">Не рекомендуется использование средств AMD64 MSBuild, которые находятся в C:\Program Files (x86)\MSBuild\12.0\bin\amd64; Это может создать проблемы построения.</span><span class="sxs-lookup"><span data-stu-id="63b4f-338">We don't recommend using the AMD64 MSBuild tools, which are found in C:\Program Files (x86)\MSBuild\12.0\bin\amd64; these may create build problems.</span></span>
+
+<span data-ttu-id="63b4f-339">**Профилировщики**</span><span class="sxs-lookup"><span data-stu-id="63b4f-339">**Profilers**</span></span>
+
+- <span data-ttu-id="63b4f-340">Профилировщик ЦП в Visual Studio и профилировщик памяти XAML неправильно отображают «только мой код».</span><span class="sxs-lookup"><span data-stu-id="63b4f-340">The Visual Studio CPU Profiler and XAML Memory Profiler don't display Just-My-Code correctly.</span></span>
+
+- <span data-ttu-id="63b4f-341">Профилировщик памяти XAML неточно отображает данные управляемой кучи.</span><span class="sxs-lookup"><span data-stu-id="63b4f-341">The XAML Memory Profiler doesn't accurately display managed heap data.</span></span>
+
+- <span data-ttu-id="63b4f-342">Профилировщик ЦП неправильно идентифицирует модули и отображает имена функций с префиксами.</span><span class="sxs-lookup"><span data-stu-id="63b4f-342">The CPU Profiler doesn't correctly identify modules, and displays prefixed function names.</span></span>
+
+<span data-ttu-id="63b4f-343">**Проекты модульных тестов библиотеки**</span><span class="sxs-lookup"><span data-stu-id="63b4f-343">**Unit Test Library projects**</span></span>
+
+<span data-ttu-id="63b4f-344">Включение машинного кода .NET на библиотека модульных тестов для проекта приложения Windows Store не поддерживается и приводит к сбою построения проекта.</span><span class="sxs-lookup"><span data-stu-id="63b4f-344">Enabling .NET Native on a Unit Test Library for a Windows Store apps project isn't supported and causes the project to fail to build.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="63b4f-345">См. также</span><span class="sxs-lookup"><span data-stu-id="63b4f-345">See also</span></span>
+
+- [<span data-ttu-id="63b4f-346">Начало работы</span><span class="sxs-lookup"><span data-stu-id="63b4f-346">Getting Started</span></span>](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [<span data-ttu-id="63b4f-347">Справочник по конфигурационному файлу директив среды выполнения (rd.xml)</span><span class="sxs-lookup"><span data-stu-id="63b4f-347">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [<span data-ttu-id="63b4f-348">Обзор приложений .NET для Windows Store</span><span class="sxs-lookup"><span data-stu-id="63b4f-348">.NET For Windows Store apps overview</span></span>](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
+- [<span data-ttu-id="63b4f-349">Поддержка платформы .NET Framework для приложений магазина Windows и среды выполнения Windows</span><span class="sxs-lookup"><span data-stu-id="63b4f-349">.NET Framework Support for Windows Store Apps and Windows Runtime</span></span>](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

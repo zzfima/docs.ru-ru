@@ -2,158 +2,168 @@
 title: Использование WorkflowIdentity и управления версиями
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: acf2b2c9502487c8bc8960f2a5625db94c31945f
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: f7e66d1827c5224ab97faeceaedc6ec0532a1923
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380121"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661217"
 ---
-# <a name="using-workflowidentity-and-versioning"></a><span data-ttu-id="b6a25-102">Использование WorkflowIdentity и управления версиями</span><span class="sxs-lookup"><span data-stu-id="b6a25-102">Using WorkflowIdentity and Versioning</span></span>
-<span data-ttu-id="b6a25-103"><xref:System.Activities.WorkflowIdentity> предоставляет разработчикам приложений рабочих процессов способ связать имя и <xref:System.Version> с определением рабочего процесса, а также связать эти сведения с сохраненным экземпляром рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b6a25-103"><xref:System.Activities.WorkflowIdentity> provides a way for workflow application developers to associate a name and a <xref:System.Version> with a workflow definition, and for this information to be associated with a persisted workflow instance.</span></span> <span data-ttu-id="b6a25-104">Эти идентификационные данные могут быть использованы разработчиками приложений рабочего процесса для поддержки таких сценариев, как параллельное выполнение нескольких версий определения рабочего процесса, и являются ключевым элементом для других функциональных возможностей, таких как динамическое обновление.</span><span class="sxs-lookup"><span data-stu-id="b6a25-104">This identity information can be used by workflow application developers to enable scenarios such as side-by-side execution of multiple versions of a workflow definition, and provides the cornerstone for other functionality such as dynamic update.</span></span> <span data-ttu-id="b6a25-105">В этом разделе представлены общие сведения об использовании <xref:System.Activities.WorkflowIdentity> с размещением <xref:System.Activities.WorkflowApplication>.</span><span class="sxs-lookup"><span data-stu-id="b6a25-105">This topic provides as overview of using <xref:System.Activities.WorkflowIdentity> with <xref:System.Activities.WorkflowApplication> hosting.</span></span> <span data-ttu-id="b6a25-106">Сведения о выполнении side-by-side определений рабочих процессов в службе рабочего процесса, см. в разделе [параллельное управление версиями в WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md).</span><span class="sxs-lookup"><span data-stu-id="b6a25-106">For information on side-by-side execution of workflow definitions in a workflow service, see [Side by Side Versioning in WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md).</span></span> <span data-ttu-id="b6a25-107">Сведения о динамическом обновлении, см. в разделе [динамического обновления](dynamic-update.md).</span><span class="sxs-lookup"><span data-stu-id="b6a25-107">For information on dynamic update, see [Dynamic Update](dynamic-update.md).</span></span>  
-  
-## <a name="in-this-topic"></a><span data-ttu-id="b6a25-108">Содержание раздела</span><span class="sxs-lookup"><span data-stu-id="b6a25-108">In this topic</span></span>  
-  
-- [<span data-ttu-id="b6a25-109">Использование WorkflowIdentity</span><span class="sxs-lookup"><span data-stu-id="b6a25-109">Using WorkflowIdentity</span></span>](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)  
-  
-    - [<span data-ttu-id="b6a25-110">Выполнение Side-by-side, с помощью WorkflowIdentity</span><span class="sxs-lookup"><span data-stu-id="b6a25-110">Side-by-side Execution using WorkflowIdentity</span></span>](using-workflowidentity-and-versioning.md#SxS)  
-  
-- [<span data-ttu-id="b6a25-111">Обновление .NET Framework 4 постоянного хранения и баз данных для поддержки управления версиями рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="b6a25-111">Upgrading .NET Framework 4 Persistence Databases to Support Workflow Versioning</span></span>](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
-  
-    - [<span data-ttu-id="b6a25-112">Чтобы обновить схему базы данных</span><span class="sxs-lookup"><span data-stu-id="b6a25-112">To upgrade the database schema</span></span>](using-workflowidentity-and-versioning.md#ToUpgrade)  
-  
-## <a name="UsingWorkflowIdentity"></a> <span data-ttu-id="b6a25-113">Использование WorkflowIdentity</span><span class="sxs-lookup"><span data-stu-id="b6a25-113">Using WorkflowIdentity</span></span>  
- <span data-ttu-id="b6a25-114">Чтобы использовать <xref:System.Activities.WorkflowIdentity>, создайте экземпляр, настройте его и свяжите с экземпляром <xref:System.Activities.WorkflowApplication>.</span><span class="sxs-lookup"><span data-stu-id="b6a25-114">To use <xref:System.Activities.WorkflowIdentity>, create an instance, configure it, and associate it with a <xref:System.Activities.WorkflowApplication> instance.</span></span> <span data-ttu-id="b6a25-115">В экземпляре <xref:System.Activities.WorkflowIdentity> содержатся три элемента информации для идентификации.</span><span class="sxs-lookup"><span data-stu-id="b6a25-115">A <xref:System.Activities.WorkflowIdentity> instance contains three identifying pieces of information.</span></span> <span data-ttu-id="b6a25-116"><xref:System.Activities.WorkflowIdentity.Name%2A> и <xref:System.Activities.WorkflowIdentity.Version%2A> содержат имя и <xref:System.Version> и являются обязательными, а <xref:System.Activities.WorkflowIdentity.Package%2A> является необязательным и может использоваться для указания дополнительной строки с информацией (например, именем сборки или другими полезными сведениями).</span><span class="sxs-lookup"><span data-stu-id="b6a25-116"><xref:System.Activities.WorkflowIdentity.Name%2A> and <xref:System.Activities.WorkflowIdentity.Version%2A> contain a name and a <xref:System.Version> and are required, and <xref:System.Activities.WorkflowIdentity.Package%2A> is optional and can be used to specify an additional string containing information such as assembly name or other desired information.</span></span> <span data-ttu-id="b6a25-117"><xref:System.Activities.WorkflowIdentity> уникален, если какое-либо из его трех свойств отличается от другого <xref:System.Activities.WorkflowIdentity>.</span><span class="sxs-lookup"><span data-stu-id="b6a25-117">A <xref:System.Activities.WorkflowIdentity> is unique if any of its three properties are different from another <xref:System.Activities.WorkflowIdentity>.</span></span>  
-  
+# <a name="using-workflowidentity-and-versioning"></a><span data-ttu-id="8e89e-102">Использование WorkflowIdentity и управления версиями</span><span class="sxs-lookup"><span data-stu-id="8e89e-102">Using WorkflowIdentity and Versioning</span></span>
+
+<span data-ttu-id="8e89e-103"><xref:System.Activities.WorkflowIdentity> предоставляет разработчикам приложений рабочих процессов способ связать имя и <xref:System.Version> с определением рабочего процесса, а также связать эти сведения с сохраненным экземпляром рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="8e89e-103"><xref:System.Activities.WorkflowIdentity> provides a way for workflow application developers to associate a name and a <xref:System.Version> with a workflow definition, and for this information to be associated with a persisted workflow instance.</span></span> <span data-ttu-id="8e89e-104">Эти идентификационные данные могут быть использованы разработчиками приложений рабочего процесса для поддержки таких сценариев, как параллельное выполнение нескольких версий определения рабочего процесса, и являются ключевым элементом для других функциональных возможностей, таких как динамическое обновление.</span><span class="sxs-lookup"><span data-stu-id="8e89e-104">This identity information can be used by workflow application developers to enable scenarios such as side-by-side execution of multiple versions of a workflow definition, and provides the cornerstone for other functionality such as dynamic update.</span></span> <span data-ttu-id="8e89e-105">В этом разделе представлены общие сведения об использовании <xref:System.Activities.WorkflowIdentity> с размещением <xref:System.Activities.WorkflowApplication>.</span><span class="sxs-lookup"><span data-stu-id="8e89e-105">This topic provides as overview of using <xref:System.Activities.WorkflowIdentity> with <xref:System.Activities.WorkflowApplication> hosting.</span></span> <span data-ttu-id="8e89e-106">Сведения о выполнении side-by-side определений рабочих процессов в службе рабочего процесса, см. в разделе [параллельное управление версиями в WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md).</span><span class="sxs-lookup"><span data-stu-id="8e89e-106">For information on side-by-side execution of workflow definitions in a workflow service, see [Side by Side Versioning in WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md).</span></span> <span data-ttu-id="8e89e-107">Сведения о динамическом обновлении, см. в разделе [динамического обновления](dynamic-update.md).</span><span class="sxs-lookup"><span data-stu-id="8e89e-107">For information on dynamic update, see [Dynamic Update](dynamic-update.md).</span></span>
+
+## <a name="in-this-topic"></a><span data-ttu-id="8e89e-108">Содержание раздела</span><span class="sxs-lookup"><span data-stu-id="8e89e-108">In this topic</span></span>
+
+- [<span data-ttu-id="8e89e-109">Использование WorkflowIdentity</span><span class="sxs-lookup"><span data-stu-id="8e89e-109">Using WorkflowIdentity</span></span>](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)
+
+  - [<span data-ttu-id="8e89e-110">Выполнение Side-by-side, с помощью WorkflowIdentity</span><span class="sxs-lookup"><span data-stu-id="8e89e-110">Side-by-side Execution using WorkflowIdentity</span></span>](using-workflowidentity-and-versioning.md#SxS)
+
+- [<span data-ttu-id="8e89e-111">Обновление .NET Framework 4 постоянного хранения и баз данных для поддержки управления версиями рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="8e89e-111">Upgrading .NET Framework 4 Persistence Databases to Support Workflow Versioning</span></span>](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)
+
+  - [<span data-ttu-id="8e89e-112">Чтобы обновить схему базы данных</span><span class="sxs-lookup"><span data-stu-id="8e89e-112">To upgrade the database schema</span></span>](using-workflowidentity-and-versioning.md#ToUpgrade)
+
+## <a name="UsingWorkflowIdentity"></a> <span data-ttu-id="8e89e-113">Использование WorkflowIdentity</span><span class="sxs-lookup"><span data-stu-id="8e89e-113">Using WorkflowIdentity</span></span>
+
+<span data-ttu-id="8e89e-114">Чтобы использовать <xref:System.Activities.WorkflowIdentity>, создайте экземпляр, настройте его и свяжите с экземпляром <xref:System.Activities.WorkflowApplication>.</span><span class="sxs-lookup"><span data-stu-id="8e89e-114">To use <xref:System.Activities.WorkflowIdentity>, create an instance, configure it, and associate it with a <xref:System.Activities.WorkflowApplication> instance.</span></span> <span data-ttu-id="8e89e-115">В экземпляре <xref:System.Activities.WorkflowIdentity> содержатся три элемента информации для идентификации.</span><span class="sxs-lookup"><span data-stu-id="8e89e-115">A <xref:System.Activities.WorkflowIdentity> instance contains three identifying pieces of information.</span></span> <span data-ttu-id="8e89e-116"><xref:System.Activities.WorkflowIdentity.Name%2A> и <xref:System.Activities.WorkflowIdentity.Version%2A> содержат имя и <xref:System.Version> и являются обязательными, а <xref:System.Activities.WorkflowIdentity.Package%2A> является необязательным и может использоваться для указания дополнительной строки с информацией (например, именем сборки или другими полезными сведениями).</span><span class="sxs-lookup"><span data-stu-id="8e89e-116"><xref:System.Activities.WorkflowIdentity.Name%2A> and <xref:System.Activities.WorkflowIdentity.Version%2A> contain a name and a <xref:System.Version> and are required, and <xref:System.Activities.WorkflowIdentity.Package%2A> is optional and can be used to specify an additional string containing information such as assembly name or other desired information.</span></span> <span data-ttu-id="8e89e-117"><xref:System.Activities.WorkflowIdentity> уникален, если какое-либо из его трех свойств отличается от другого <xref:System.Activities.WorkflowIdentity>.</span><span class="sxs-lookup"><span data-stu-id="8e89e-117">A <xref:System.Activities.WorkflowIdentity> is unique if any of its three properties are different from another <xref:System.Activities.WorkflowIdentity>.</span></span>
+
 > [!IMPORTANT]
->  <span data-ttu-id="b6a25-118">Экземпляр <xref:System.Activities.WorkflowIdentity> не должен содержать персональные данные (PII).</span><span class="sxs-lookup"><span data-stu-id="b6a25-118">A <xref:System.Activities.WorkflowIdentity> should not contain any personally identifiable information (PII).</span></span> <span data-ttu-id="b6a25-119">Сведения об объекте <xref:System.Activities.WorkflowIdentity>, используемом для создания экземпляра, передаются средой выполнения всем настроенным службам отслеживания на различных этапах жизненного цикла действия.</span><span class="sxs-lookup"><span data-stu-id="b6a25-119">Information about the <xref:System.Activities.WorkflowIdentity> used to create an instance is emitted to any configured tracking services at several different points of the activity life-cycle by the runtime.</span></span> <span data-ttu-id="b6a25-120">Отслеживание WF не имеет механизмов, позволяющих скрывать персональные данные (конфиденциальные пользовательские данные).</span><span class="sxs-lookup"><span data-stu-id="b6a25-120">WF Tracking does not have any mechanism to hide PII (sensitive user data).</span></span> <span data-ttu-id="b6a25-121">Поэтому экземпляр <xref:System.Activities.WorkflowIdentity> не должен содержать никаких персональных данных, так как они будут передаваться средой выполнения в записях отслеживания и могут отображаться любому пользователю с доступом к записям отслеживания.</span><span class="sxs-lookup"><span data-stu-id="b6a25-121">Therefore, a <xref:System.Activities.WorkflowIdentity> instance should not contain any PII data as it will be emitted by the runtime in tracking records and may be visible to anyone with access to view the tracking records.</span></span>  
-  
- <span data-ttu-id="b6a25-122">В следующем примере создается <xref:System.Activities.WorkflowIdentity> и связывается с экземпляром рабочего процесса, созданного с использованием определения рабочего процесса `MortgageWorkflow`.</span><span class="sxs-lookup"><span data-stu-id="b6a25-122">In the following example, a <xref:System.Activities.WorkflowIdentity> is created and associated with an instance of a workflow created using a `MortgageWorkflow` workflow definition.</span></span>  
-  
-```csharp  
-WorkflowIdentity identityV1 = new WorkflowIdentity  
-{  
-    Name = "MortgageWorkflow v1",  
-    Version = new Version(1, 0, 0, 0)  
-};  
-  
-WorkflowApplication wfApp = new WorkflowApplication(new MortgageWorkflow(), identity);  
-  
-// Configure the WorkflowApplication with persistence and desired workflow event handlers.  
-ConfigureWorkflowApplication(wfApp);  
-  
-// Run the workflow.  
-wfApp.Run();  
-```  
-  
- <span data-ttu-id="b6a25-123">При повторной загрузке и возобновлении рабочего процесса необходимо использовать <xref:System.Activities.WorkflowIdentity>, который настроен так, чтобы соответствовать <xref:System.Activities.WorkflowIdentity> сохраненного экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b6a25-123">When reloading and resuming a workflow, a <xref:System.Activities.WorkflowIdentity> that is configured to match the <xref:System.Activities.WorkflowIdentity> of the persisted workflow instance must be used.</span></span>  
-  
-```csharp  
-WorkflowApplication wfApp = new WorkflowApplication(new MortgageWorkflow(), identityV1);  
-  
-// Configure the WorkflowApplication with persistence and desired workflow event handlers.  
-ConfigureWorkflowApplication(wfApp);  
-  
-// Load the workflow.  
-wfApp.Load(instanceId);  
-  
-// Resume the workflow...  
-```  
-  
- <span data-ttu-id="b6a25-124">Если <xref:System.Activities.WorkflowIdentity> используется, когда заново загружаемый экземпляр рабочего процесса не соответствует сохраненному <xref:System.Activities.WorkflowIdentity>, выдается исключение <xref:System.Activities.VersionMismatchException>.</span><span class="sxs-lookup"><span data-stu-id="b6a25-124">If the <xref:System.Activities.WorkflowIdentity> used when reloading the workflow instance does not match the persisted <xref:System.Activities.WorkflowIdentity>, a <xref:System.Activities.VersionMismatchException> is thrown.</span></span> <span data-ttu-id="b6a25-125">В следующем примере предпринимается попытка загрузки для экземпляра `MortgageWorkflow`, который был сохранен в предыдущем примере.</span><span class="sxs-lookup"><span data-stu-id="b6a25-125">In the following example a load attempt is made on the `MortgageWorkflow` instance that was persisted in the previous example.</span></span> <span data-ttu-id="b6a25-126">Эта попытка загрузки выполняется с помощью <xref:System.Activities.WorkflowIdentity>, настроенного для более новой версии рабочего процесса ипотеки, не соответствующей сохраненному экземпляру.</span><span class="sxs-lookup"><span data-stu-id="b6a25-126">This load attempt is made using a <xref:System.Activities.WorkflowIdentity> configured for a newer version of the mortgage workflow that does not match the persisted instance.</span></span>  
-  
-```csharp  
-WorkflowApplication wfApp = new WorkflowApplication(new MortgageWorkflow_v2(), identityV2);  
-  
-// Configure the WorkflowApplication with persistence and desired workflow event handlers.  
-ConfigureWorkflowApplication(wfApp);  
-  
-// Attempt to load the workflow instance.  
-wfApp.Load(instanceId);  
-  
-// Resume the workflow...  
-```  
-  
- <span data-ttu-id="b6a25-127">Если предыдущий код выполняется, выдается исключение <xref:System.Activities.VersionMismatchException>.</span><span class="sxs-lookup"><span data-stu-id="b6a25-127">When the previous code is executed, the following <xref:System.Activities.VersionMismatchException> is thrown.</span></span>  
-  
- <span data-ttu-id="b6a25-128">**WorkflowIdentity ("MortgageWorkflow v1. Версия = 1.0.0.0") загружаемого экземпляра не соответствует WorkflowIdentity (" MortgageWorkflow v2. Версия = 2.0.0.0") из указанное определение рабочего процесса. Экземпляр можно загрузить с помощью различные определения или обновить с помощью динамического обновления.**</span><span class="sxs-lookup"><span data-stu-id="b6a25-128">**The WorkflowIdentity ('MortgageWorkflow v1; Version=1.0.0.0') of the loaded instance does not match the WorkflowIdentity ('MortgageWorkflow v2; Version=2.0.0.0') of the provided workflow definition. The instance can be loaded using a different definition, or updated using Dynamic Update.**</span></span>  
-### <a name="SxS"></a> <span data-ttu-id="b6a25-129">Выполнение Side-by-side, с помощью WorkflowIdentity</span><span class="sxs-lookup"><span data-stu-id="b6a25-129">Side-by-side Execution using WorkflowIdentity</span></span>  
- <span data-ttu-id="b6a25-130">Метод <xref:System.Activities.WorkflowIdentity> можно использовать, чтобы облегчить параллельное выполнение нескольких версий рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b6a25-130"><xref:System.Activities.WorkflowIdentity> can be used to facilitate the execution of multiple versions of a workflow side-by-side.</span></span> <span data-ttu-id="b6a25-131">Одним из типичных сценариев является изменение бизнес-требований в длительном рабочем процессе.</span><span class="sxs-lookup"><span data-stu-id="b6a25-131">One common scenario is changing business requirements on a long-running workflow.</span></span> <span data-ttu-id="b6a25-132">Несколько экземпляров рабочего процесса могут выполняться при развертывании обновленной версии.</span><span class="sxs-lookup"><span data-stu-id="b6a25-132">Many instances of a workflow could be running when an updated version is deployed.</span></span> <span data-ttu-id="b6a25-133">Ведущее приложение можно настроить для использования обновленного определения рабочего процесса при запуске новых экземпляров. Обязанностью ведущего приложения является предоставление правильного определения рабочего процесса при возобновлении экземпляров.</span><span class="sxs-lookup"><span data-stu-id="b6a25-133">The host application can be configured to use the updated workflow definition when starting new instances, and it is the responsibility of the host application to provide the correct workflow definition when resuming instances.</span></span> <span data-ttu-id="b6a25-134"><xref:System.Activities.WorkflowIdentity> можно использовать для определения и предоставления соответствующего определения рабочего процесса при возобновлении экземпляров рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b6a25-134"><xref:System.Activities.WorkflowIdentity> can be used to identify and supply the matching workflow definition when resuming workflow instances.</span></span>  
-  
- <span data-ttu-id="b6a25-135">Для получения <xref:System.Activities.WorkflowIdentity> сохраненного экземпляра рабочего процесса используется метод <xref:System.Activities.WorkflowApplication.GetInstance%2A>.</span><span class="sxs-lookup"><span data-stu-id="b6a25-135">To retrieve the <xref:System.Activities.WorkflowIdentity> of a persisted workflow instance, the <xref:System.Activities.WorkflowApplication.GetInstance%2A> method is used.</span></span> <span data-ttu-id="b6a25-136">Метод <xref:System.Activities.WorkflowApplication.GetInstance%2A> принимает <xref:System.Activities.WorkflowApplication.Id%2A> сохраненного экземпляра рабочего процесса и <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, который содержит сохраненный экземпляр и возвращает <xref:System.Activities.WorkflowApplicationInstance>.</span><span class="sxs-lookup"><span data-stu-id="b6a25-136">The <xref:System.Activities.WorkflowApplication.GetInstance%2A> method takes the <xref:System.Activities.WorkflowApplication.Id%2A> of the persisted workflow instance and the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> that contains the persisted instance and returns a <xref:System.Activities.WorkflowApplicationInstance>.</span></span> <span data-ttu-id="b6a25-137">Объект <xref:System.Activities.WorkflowApplicationInstance> содержит сведения о сохраненном экземпляре рабочего процесса, включая связанный с ним <xref:System.Activities.WorkflowIdentity>.</span><span class="sxs-lookup"><span data-stu-id="b6a25-137">A <xref:System.Activities.WorkflowApplicationInstance> contains information about a persisted workflow instance, including its associated <xref:System.Activities.WorkflowIdentity>.</span></span> <span data-ttu-id="b6a25-138">Связанный объект <xref:System.Activities.WorkflowIdentity> может использоваться ведущим приложением, чтобы указать правильное определение рабочего процесса при загрузке и возобновлении экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b6a25-138">This associated <xref:System.Activities.WorkflowIdentity> can be used by the host to supply the correct workflow definition when loading and resuming the workflow instance.</span></span>  
-  
+> <span data-ttu-id="8e89e-118">Экземпляр <xref:System.Activities.WorkflowIdentity> не должен содержать персональные данные (PII).</span><span class="sxs-lookup"><span data-stu-id="8e89e-118">A <xref:System.Activities.WorkflowIdentity> should not contain any personally identifiable information (PII).</span></span> <span data-ttu-id="8e89e-119">Сведения об объекте <xref:System.Activities.WorkflowIdentity>, используемом для создания экземпляра, передаются средой выполнения всем настроенным службам отслеживания на различных этапах жизненного цикла действия.</span><span class="sxs-lookup"><span data-stu-id="8e89e-119">Information about the <xref:System.Activities.WorkflowIdentity> used to create an instance is emitted to any configured tracking services at several different points of the activity life-cycle by the runtime.</span></span> <span data-ttu-id="8e89e-120">Отслеживание WF не имеет механизмов, позволяющих скрывать персональные данные (конфиденциальные пользовательские данные).</span><span class="sxs-lookup"><span data-stu-id="8e89e-120">WF Tracking does not have any mechanism to hide PII (sensitive user data).</span></span> <span data-ttu-id="8e89e-121">Поэтому экземпляр <xref:System.Activities.WorkflowIdentity> не должен содержать никаких персональных данных, так как они будут передаваться средой выполнения в записях отслеживания и могут отображаться любому пользователю с доступом к записям отслеживания.</span><span class="sxs-lookup"><span data-stu-id="8e89e-121">Therefore, a <xref:System.Activities.WorkflowIdentity> instance should not contain any PII data as it will be emitted by the runtime in tracking records and may be visible to anyone with access to view the tracking records.</span></span>
+
+<span data-ttu-id="8e89e-122">В следующем примере создается <xref:System.Activities.WorkflowIdentity> и связывается с экземпляром рабочего процесса, созданного с использованием определения рабочего процесса `MortgageWorkflow`.</span><span class="sxs-lookup"><span data-stu-id="8e89e-122">In the following example, a <xref:System.Activities.WorkflowIdentity> is created and associated with an instance of a workflow created using a `MortgageWorkflow` workflow definition.</span></span>
+
+```csharp
+WorkflowIdentity identityV1 = new WorkflowIdentity
+{
+    Name = "MortgageWorkflow v1",
+    Version = new Version(1, 0, 0, 0)
+};
+
+WorkflowApplication wfApp = new WorkflowApplication(new MortgageWorkflow(), identity);
+
+// Configure the WorkflowApplication with persistence and desired workflow event handlers.
+ConfigureWorkflowApplication(wfApp);
+
+// Run the workflow.
+wfApp.Run();
+```
+
+<span data-ttu-id="8e89e-123">При повторной загрузке и возобновлении рабочего процесса необходимо использовать <xref:System.Activities.WorkflowIdentity>, который настроен так, чтобы соответствовать <xref:System.Activities.WorkflowIdentity> сохраненного экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="8e89e-123">When reloading and resuming a workflow, a <xref:System.Activities.WorkflowIdentity> that is configured to match the <xref:System.Activities.WorkflowIdentity> of the persisted workflow instance must be used.</span></span>
+
+```csharp
+WorkflowApplication wfApp = new WorkflowApplication(new MortgageWorkflow(), identityV1);
+
+// Configure the WorkflowApplication with persistence and desired workflow event handlers.
+ConfigureWorkflowApplication(wfApp);
+
+// Load the workflow.
+wfApp.Load(instanceId);
+
+// Resume the workflow...
+```
+
+<span data-ttu-id="8e89e-124">Если <xref:System.Activities.WorkflowIdentity> используется, когда заново загружаемый экземпляр рабочего процесса не соответствует сохраненному <xref:System.Activities.WorkflowIdentity>, выдается исключение <xref:System.Activities.VersionMismatchException>.</span><span class="sxs-lookup"><span data-stu-id="8e89e-124">If the <xref:System.Activities.WorkflowIdentity> used when reloading the workflow instance does not match the persisted <xref:System.Activities.WorkflowIdentity>, a <xref:System.Activities.VersionMismatchException> is thrown.</span></span> <span data-ttu-id="8e89e-125">В следующем примере предпринимается попытка загрузки для экземпляра `MortgageWorkflow`, который был сохранен в предыдущем примере.</span><span class="sxs-lookup"><span data-stu-id="8e89e-125">In the following example a load attempt is made on the `MortgageWorkflow` instance that was persisted in the previous example.</span></span> <span data-ttu-id="8e89e-126">Эта попытка загрузки выполняется с помощью <xref:System.Activities.WorkflowIdentity>, настроенного для более новой версии рабочего процесса ипотеки, не соответствующей сохраненному экземпляру.</span><span class="sxs-lookup"><span data-stu-id="8e89e-126">This load attempt is made using a <xref:System.Activities.WorkflowIdentity> configured for a newer version of the mortgage workflow that does not match the persisted instance.</span></span>
+
+```csharp
+WorkflowApplication wfApp = new WorkflowApplication(new MortgageWorkflow_v2(), identityV2);
+
+// Configure the WorkflowApplication with persistence and desired workflow event handlers.
+ConfigureWorkflowApplication(wfApp);
+
+// Attempt to load the workflow instance.
+wfApp.Load(instanceId);
+
+// Resume the workflow...
+```
+
+<span data-ttu-id="8e89e-127">Если предыдущий код выполняется, выдается исключение <xref:System.Activities.VersionMismatchException>.</span><span class="sxs-lookup"><span data-stu-id="8e89e-127">When the previous code is executed, the following <xref:System.Activities.VersionMismatchException> is thrown.</span></span>
+
+```
+The WorkflowIdentity ('MortgageWorkflow v1; Version=1.0.0.0') of the loaded instance does not match the WorkflowIdentity ('MortgageWorkflow v2; Version=2.0.0.0') of the provided workflow definition. The instance can be loaded using a different definition, or updated using Dynamic Update.
+```
+
+### <a name="SxS"></a> <span data-ttu-id="8e89e-128">Выполнение Side-by-side, с помощью WorkflowIdentity</span><span class="sxs-lookup"><span data-stu-id="8e89e-128">Side-by-side Execution using WorkflowIdentity</span></span>
+
+<span data-ttu-id="8e89e-129">Метод <xref:System.Activities.WorkflowIdentity> можно использовать, чтобы облегчить параллельное выполнение нескольких версий рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="8e89e-129"><xref:System.Activities.WorkflowIdentity> can be used to facilitate the execution of multiple versions of a workflow side-by-side.</span></span> <span data-ttu-id="8e89e-130">Одним из типичных сценариев является изменение бизнес-требований в длительном рабочем процессе.</span><span class="sxs-lookup"><span data-stu-id="8e89e-130">One common scenario is changing business requirements on a long-running workflow.</span></span> <span data-ttu-id="8e89e-131">Несколько экземпляров рабочего процесса могут выполняться при развертывании обновленной версии.</span><span class="sxs-lookup"><span data-stu-id="8e89e-131">Many instances of a workflow could be running when an updated version is deployed.</span></span> <span data-ttu-id="8e89e-132">Ведущее приложение можно настроить для использования обновленного определения рабочего процесса при запуске новых экземпляров. Обязанностью ведущего приложения является предоставление правильного определения рабочего процесса при возобновлении экземпляров.</span><span class="sxs-lookup"><span data-stu-id="8e89e-132">The host application can be configured to use the updated workflow definition when starting new instances, and it is the responsibility of the host application to provide the correct workflow definition when resuming instances.</span></span> <span data-ttu-id="8e89e-133"><xref:System.Activities.WorkflowIdentity> можно использовать для определения и предоставления соответствующего определения рабочего процесса при возобновлении экземпляров рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="8e89e-133"><xref:System.Activities.WorkflowIdentity> can be used to identify and supply the matching workflow definition when resuming workflow instances.</span></span>
+
+<span data-ttu-id="8e89e-134">Для получения <xref:System.Activities.WorkflowIdentity> сохраненного экземпляра рабочего процесса используется метод <xref:System.Activities.WorkflowApplication.GetInstance%2A>.</span><span class="sxs-lookup"><span data-stu-id="8e89e-134">To retrieve the <xref:System.Activities.WorkflowIdentity> of a persisted workflow instance, the <xref:System.Activities.WorkflowApplication.GetInstance%2A> method is used.</span></span> <span data-ttu-id="8e89e-135">Метод <xref:System.Activities.WorkflowApplication.GetInstance%2A> принимает <xref:System.Activities.WorkflowApplication.Id%2A> сохраненного экземпляра рабочего процесса и <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, который содержит сохраненный экземпляр и возвращает <xref:System.Activities.WorkflowApplicationInstance>.</span><span class="sxs-lookup"><span data-stu-id="8e89e-135">The <xref:System.Activities.WorkflowApplication.GetInstance%2A> method takes the <xref:System.Activities.WorkflowApplication.Id%2A> of the persisted workflow instance and the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> that contains the persisted instance and returns a <xref:System.Activities.WorkflowApplicationInstance>.</span></span> <span data-ttu-id="8e89e-136">Объект <xref:System.Activities.WorkflowApplicationInstance> содержит сведения о сохраненном экземпляре рабочего процесса, включая связанный с ним <xref:System.Activities.WorkflowIdentity>.</span><span class="sxs-lookup"><span data-stu-id="8e89e-136">A <xref:System.Activities.WorkflowApplicationInstance> contains information about a persisted workflow instance, including its associated <xref:System.Activities.WorkflowIdentity>.</span></span> <span data-ttu-id="8e89e-137">Связанный объект <xref:System.Activities.WorkflowIdentity> может использоваться ведущим приложением, чтобы указать правильное определение рабочего процесса при загрузке и возобновлении экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="8e89e-137">This associated <xref:System.Activities.WorkflowIdentity> can be used by the host to supply the correct workflow definition when loading and resuming the workflow instance.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="b6a25-139">Значение NULL для <xref:System.Activities.WorkflowIdentity> допустимо и может использоваться основным приложением для сопоставления экземпляров, которые были сохранены без связанного объекта <xref:System.Activities.WorkflowIdentity> в правильном определении рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b6a25-139">A null <xref:System.Activities.WorkflowIdentity> is valid, and can be used by the host to map instances that were persisted with no associated <xref:System.Activities.WorkflowIdentity> to the proper workflow definition.</span></span> <span data-ttu-id="b6a25-140">Этот сценарий может возникнуть, когда приложение рабочего процесса изначально не было написано с использованием управления версиями рабочего процесса или если приложение обновлено с версии [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b6a25-140">This scenario can occur when a workflow application was not initially written with workflow versioning, or when an application is upgraded from [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].</span></span> <span data-ttu-id="b6a25-141">Дополнительные сведения см. в разделе [обновление .NET Framework 4 баз данных постоянного хранения для поддержки управления версиями рабочего процесса](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).</span><span class="sxs-lookup"><span data-stu-id="b6a25-141">For more information, see [Upgrading .NET Framework 4 Persistence Databases to Support Workflow Versioning](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).</span></span>  
-  
- <span data-ttu-id="b6a25-142">В следующем примере `Dictionary<WorkflowIdentity, Activity>` позволяет связать <xref:System.Activities.WorkflowIdentity> экземпляры с их соответствующими определениями рабочих процессов и рабочий процесс запускается с помощью `MortgageWorkflow` определения рабочего процесса, связанного с `identityV1` <xref:System.Activities.WorkflowIdentity>.</span><span class="sxs-lookup"><span data-stu-id="b6a25-142">In the following example a `Dictionary<WorkflowIdentity, Activity>` is used to associate <xref:System.Activities.WorkflowIdentity> instances with their matching workflow definitions, and a workflow is started using the `MortgageWorkflow` workflow definition, which is associated with the `identityV1` <xref:System.Activities.WorkflowIdentity>.</span></span>  
-  
-```csharp  
-WorkflowIdentity identityV1 = new WorkflowIdentity  
-{  
-    Name = "MortgageWorkflow v1",  
-    Version = new Version(1, 0, 0, 0)  
-};  
-  
-WorkflowIdentity identityV2 = new WorkflowIdentity  
-{  
-    Name = "MortgageWorkflow v2",  
-    Version = new Version(2, 0, 0, 0)  
-};  
-  
-Dictionary<WorkflowIdentity, Activity> WorkflowVersionMap = new Dictionary<WorkflowIdentity, Activity>();  
-WorkflowVersionMap.Add(identityV1, new MortgageWorkflow());  
-WorkflowVersionMap.Add(identityV2, new MortgageWorkflow_v2());  
-  
-WorkflowApplication wfApp = new WorkflowApplication(new MortgageWorkflow(), identityV1);  
-  
-// Configure the WorkflowApplication with persistence and desired workflow event handlers.  
-ConfigureWorkflowApplication(wfApp);  
-  
-// Run the workflow.  
-wfApp.Run();  
-```  
-  
- <span data-ttu-id="b6a25-143">В следующем примере сведения о сохраненном экземпляре рабочего процесса из предыдущего примера возвращаются путем вызова метода <xref:System.Activities.WorkflowApplication.GetInstance%2A> и сохраненные данные <xref:System.Activities.WorkflowIdentity> используются для получения соответствующего определения рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="b6a25-143">In the following example, information about the persisted workflow instance from the previous example is retrieved by calling <xref:System.Activities.WorkflowApplication.GetInstance%2A>, and the persisted <xref:System.Activities.WorkflowIdentity> information is used to retrieve the matching workflow definition.</span></span> <span data-ttu-id="b6a25-144">Эти сведения используются для настройки <xref:System.Activities.WorkflowApplication>, а затем загружается рабочий процесс.</span><span class="sxs-lookup"><span data-stu-id="b6a25-144">This information is used to configure the <xref:System.Activities.WorkflowApplication>, and then the workflow is loaded.</span></span> <span data-ttu-id="b6a25-145">Обратите внимание, что, поскольку используется перегрузка <xref:System.Activities.WorkflowApplication.Load%2A>, принимающая <xref:System.Activities.WorkflowApplicationInstance>, <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, который настроен на <xref:System.Activities.WorkflowApplicationInstance>, используется <xref:System.Activities.WorkflowApplication> и, следовательно, его свойству <xref:System.Activities.WorkflowApplication.InstanceStore%2A> не нужно задавать значение.</span><span class="sxs-lookup"><span data-stu-id="b6a25-145">Note that because the <xref:System.Activities.WorkflowApplication.Load%2A> overload that takes the <xref:System.Activities.WorkflowApplicationInstance> is used, the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> that was configured on the <xref:System.Activities.WorkflowApplicationInstance> is used by the <xref:System.Activities.WorkflowApplication> and therefore its <xref:System.Activities.WorkflowApplication.InstanceStore%2A> property does not need to be configured.</span></span>  
-  
+> <span data-ttu-id="8e89e-138">Значение NULL для <xref:System.Activities.WorkflowIdentity> допустимо и может использоваться основным приложением для сопоставления экземпляров, которые были сохранены без связанного объекта <xref:System.Activities.WorkflowIdentity> в правильном определении рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="8e89e-138">A null <xref:System.Activities.WorkflowIdentity> is valid, and can be used by the host to map instances that were persisted with no associated <xref:System.Activities.WorkflowIdentity> to the proper workflow definition.</span></span> <span data-ttu-id="8e89e-139">Этот сценарий может возникнуть, когда приложение рабочего процесса изначально не было написано с использованием управления версиями рабочего процесса или если приложение обновлено с версии [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8e89e-139">This scenario can occur when a workflow application was not initially written with workflow versioning, or when an application is upgraded from [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].</span></span> <span data-ttu-id="8e89e-140">Дополнительные сведения см. в разделе [обновление .NET Framework 4 баз данных постоянного хранения для поддержки управления версиями рабочего процесса](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).</span><span class="sxs-lookup"><span data-stu-id="8e89e-140">For more information, see [Upgrading .NET Framework 4 Persistence Databases to Support Workflow Versioning](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).</span></span>
+
+<span data-ttu-id="8e89e-141">В следующем примере `Dictionary<WorkflowIdentity, Activity>` позволяет связать <xref:System.Activities.WorkflowIdentity> экземпляры с их соответствующими определениями рабочих процессов и рабочий процесс запускается с помощью `MortgageWorkflow` определения рабочего процесса, связанного с `identityV1` <xref:System.Activities.WorkflowIdentity>.</span><span class="sxs-lookup"><span data-stu-id="8e89e-141">In the following example a `Dictionary<WorkflowIdentity, Activity>` is used to associate <xref:System.Activities.WorkflowIdentity> instances with their matching workflow definitions, and a workflow is started using the `MortgageWorkflow` workflow definition, which is associated with the `identityV1` <xref:System.Activities.WorkflowIdentity>.</span></span>
+
+```csharp
+WorkflowIdentity identityV1 = new WorkflowIdentity
+{
+    Name = "MortgageWorkflow v1",
+    Version = new Version(1, 0, 0, 0)
+};
+
+WorkflowIdentity identityV2 = new WorkflowIdentity
+{
+    Name = "MortgageWorkflow v2",
+    Version = new Version(2, 0, 0, 0)
+};
+
+Dictionary<WorkflowIdentity, Activity> WorkflowVersionMap = new Dictionary<WorkflowIdentity, Activity>();
+WorkflowVersionMap.Add(identityV1, new MortgageWorkflow());
+WorkflowVersionMap.Add(identityV2, new MortgageWorkflow_v2());
+
+WorkflowApplication wfApp = new WorkflowApplication(new MortgageWorkflow(), identityV1);
+
+// Configure the WorkflowApplication with persistence and desired workflow event handlers.
+ConfigureWorkflowApplication(wfApp);
+
+// Run the workflow.
+wfApp.Run();
+```
+
+<span data-ttu-id="8e89e-142">В следующем примере сведения о сохраненном экземпляре рабочего процесса из предыдущего примера возвращаются путем вызова метода <xref:System.Activities.WorkflowApplication.GetInstance%2A> и сохраненные данные <xref:System.Activities.WorkflowIdentity> используются для получения соответствующего определения рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="8e89e-142">In the following example, information about the persisted workflow instance from the previous example is retrieved by calling <xref:System.Activities.WorkflowApplication.GetInstance%2A>, and the persisted <xref:System.Activities.WorkflowIdentity> information is used to retrieve the matching workflow definition.</span></span> <span data-ttu-id="8e89e-143">Эти сведения используются для настройки <xref:System.Activities.WorkflowApplication>, а затем загружается рабочий процесс.</span><span class="sxs-lookup"><span data-stu-id="8e89e-143">This information is used to configure the <xref:System.Activities.WorkflowApplication>, and then the workflow is loaded.</span></span> <span data-ttu-id="8e89e-144">Обратите внимание, что, поскольку используется перегрузка <xref:System.Activities.WorkflowApplication.Load%2A>, принимающая <xref:System.Activities.WorkflowApplicationInstance>, <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, который настроен на <xref:System.Activities.WorkflowApplicationInstance>, используется <xref:System.Activities.WorkflowApplication> и, следовательно, его свойству <xref:System.Activities.WorkflowApplication.InstanceStore%2A> не нужно задавать значение.</span><span class="sxs-lookup"><span data-stu-id="8e89e-144">Note that because the <xref:System.Activities.WorkflowApplication.Load%2A> overload that takes the <xref:System.Activities.WorkflowApplicationInstance> is used, the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> that was configured on the <xref:System.Activities.WorkflowApplicationInstance> is used by the <xref:System.Activities.WorkflowApplication> and therefore its <xref:System.Activities.WorkflowApplication.InstanceStore%2A> property does not need to be configured.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="b6a25-146">Если свойство <xref:System.Activities.WorkflowApplication.InstanceStore%2A> имеет значение, то его необходимо установить на один и тот же экземпляр <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, используемый <xref:System.Activities.WorkflowApplicationInstance>, иначе будет создаваться исключение <xref:System.ArgumentException> со следующим сообщением: `The instance is configured with a different InstanceStore than this WorkflowApplication.`</span><span class="sxs-lookup"><span data-stu-id="b6a25-146">If the <xref:System.Activities.WorkflowApplication.InstanceStore%2A> property is set, it must be set with the same <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> instance used by the <xref:System.Activities.WorkflowApplicationInstance> or else an <xref:System.ArgumentException> will be thrown with the following message: `The instance is configured with a different InstanceStore than this WorkflowApplication.`.</span></span>  
-  
-```csharp  
-// Get the WorkflowApplicationInstance of the desired workflow from the specified  
-// SqlWorkflowInstanceStore.  
-WorkflowApplicationInstance instance = WorkflowApplication.GetInstance(instanceId, store);  
-  
-// Use the persisted WorkflowIdentity to retrieve the correct workflow  
-// definition from the dictionary.  
-Activity definition = WorkflowVersionMap[instance.DefinitionIdentity];  
-  
-WorkflowApplication wfApp = new WorkflowApplication(definition, instance.DefinitionIdentity);  
-  
-// Configure the WorkflowApplication with persistence and desired workflow event handlers.  
-ConfigureWorkflowApplication(wfApp);  
-  
-// Load the persisted workflow instance.  
-wfApp.Load(instance);  
-  
-// Resume the workflow...  
-```  
-  
-## <a name="UpdatingWF4PersistenceDatabases"></a> <span data-ttu-id="b6a25-147">Обновление .NET Framework 4 постоянного хранения и баз данных для поддержки управления версиями рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="b6a25-147">Upgrading .NET Framework 4 Persistence Databases to Support Workflow Versioning</span></span>  
- <span data-ttu-id="b6a25-148">Предоставляется скрипт базы данных SqlWorkflowInstanceStoreSchemaUpgrade.sql для обновления баз данных сохраняемости, созданных с помощью скриптов базы данных [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b6a25-148">A SqlWorkflowInstanceStoreSchemaUpgrade.sql database script is provided to upgrade persistence databases created using the [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] database scripts.</span></span> <span data-ttu-id="b6a25-149">Этот скрипт обновляет базы данных для поддержки новых возможностей управления версиями, представленных в .NET Framework 4.5.</span><span class="sxs-lookup"><span data-stu-id="b6a25-149">This script updates the databases to support the new versioning capabilities introduced in .NET Framework 4.5.</span></span> <span data-ttu-id="b6a25-150">Все сохраняемые экземпляры рабочих процессов в базах данных получают значения управления версиями по умолчанию и затем могут участвовать в параллельном выполнении и динамическом обновлении.</span><span class="sxs-lookup"><span data-stu-id="b6a25-150">Any persisted workflow instances in the databases are given default versioning values, and can then participate in side-by-side execution and dynamic update.</span></span>  
-  
- <span data-ttu-id="b6a25-151">Если приложение рабочего процесса .NET Framework 4.5 попытки любые операции сохраняемости, использующих новые возможности управления версиями на базу данных сохраняемости, которая не была обновлена с помощью указанного скрипта, <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> возникает исключение с сообщением, аналогичным следующее сообщение.</span><span class="sxs-lookup"><span data-stu-id="b6a25-151">If a .NET Framework 4.5 workflow application attempts any persistence operations that use the new versioning features on a persistence database which has not been upgraded using the provided script, an <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> is thrown with a message similar to the following message.</span></span>  
-  
- <span data-ttu-id="b6a25-152">**Хранилище SqlWorkflowInstanceStore содержит версию базы данных "4.0.0.0». Команда InstancePersistenceCommand «System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand» не может быть выполнена для этой версии базы данных.  Обновите базу данных для "4.5.0.0».**</span><span class="sxs-lookup"><span data-stu-id="b6a25-152">**The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' cannot be run against this database version.  Please upgrade the database to '4.5.0.0'.**</span></span>  
-### <a name="ToUpgrade"></a> <span data-ttu-id="b6a25-153">Чтобы обновить схему базы данных</span><span class="sxs-lookup"><span data-stu-id="b6a25-153">To upgrade the database schema</span></span>  
-  
-1. <span data-ttu-id="b6a25-154">Откройте SQL Server Management Studio и подключитесь к серверу долговременной базы данных, например **. \SQLEXPRESS**.</span><span class="sxs-lookup"><span data-stu-id="b6a25-154">Open SQL Server Management Studio and connect to the persistence database server, for example **.\SQLEXPRESS**.</span></span>  
-  
-2. <span data-ttu-id="b6a25-155">Выберите **откройте**, **файл** из **файл** меню.</span><span class="sxs-lookup"><span data-stu-id="b6a25-155">Choose **Open**, **File** from the **File** menu.</span></span> <span data-ttu-id="b6a25-156">Перейдите в следующую папку: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`</span><span class="sxs-lookup"><span data-stu-id="b6a25-156">Browse to the following folder: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`</span></span>  
-  
-3. <span data-ttu-id="b6a25-157">Выберите **SqlWorkflowInstanceStoreSchemaUpgrade.sql** и нажмите кнопку **откройте**.</span><span class="sxs-lookup"><span data-stu-id="b6a25-157">Select **SqlWorkflowInstanceStoreSchemaUpgrade.sql** and click **Open**.</span></span>  
-  
-4. <span data-ttu-id="b6a25-158">Выберите имя базы данных сохраняемости в **доступных баз данных** раскрывающегося списка.</span><span class="sxs-lookup"><span data-stu-id="b6a25-158">Select the name of the persistence database in the **Available Databases** drop-down.</span></span>  
-  
-5. <span data-ttu-id="b6a25-159">Выберите **Execute** из **запроса** меню.</span><span class="sxs-lookup"><span data-stu-id="b6a25-159">Choose **Execute** from the **Query** menu.</span></span>  
-  
- <span data-ttu-id="b6a25-160">По завершении запроса обновляется схема базы данных, и при желании можно просмотреть идентификатор рабочего процесса по умолчанию, который был назначен сохраняемым экземплярам рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="b6a25-160">When the query completes, the database schema is upgraded, and if desired, you can view the default workflow identity that was assigned to the persisted workflow instances.</span></span> <span data-ttu-id="b6a25-161">Разверните долговременную базу данных в **баз данных** узел **обозревателя объектов**, а затем разверните **представления** узла.</span><span class="sxs-lookup"><span data-stu-id="b6a25-161">Expand your persistence database in the **Databases** node of the **Object Explorer**, and then expand the **Views** node.</span></span> <span data-ttu-id="b6a25-162">Щелкните правой кнопкой мыши **System.Activities.DurableInstancing.Instances** и выберите **выделить 1000 верхних строк**.</span><span class="sxs-lookup"><span data-stu-id="b6a25-162">Right-click **System.Activities.DurableInstancing.Instances** and choose **Select Top 1000 Rows**.</span></span> <span data-ttu-id="b6a25-163">Перейдите в конец столбцов и обратите внимание, что в представление добавлены 6 дополнительных столбцов: **IdentityName**, **IdentityPackage**, **построения**, **основных**, **незначительные**, и **редакции**.</span><span class="sxs-lookup"><span data-stu-id="b6a25-163">Scroll to end of the columns and note that there are six additional columns added to the view: **IdentityName**, **IdentityPackage**, **Build**, **Major**, **Minor**, and **Revision**.</span></span> <span data-ttu-id="b6a25-164">Все сохраненные рабочие процессы будут иметь значение **NULL** для этих полей, представляющий удостоверение рабочего процесса значение null.</span><span class="sxs-lookup"><span data-stu-id="b6a25-164">Any persisted workflows will have a value of **NULL** for these fields, representing a null workflow identity.</span></span>
+>  <span data-ttu-id="8e89e-145">Если свойство <xref:System.Activities.WorkflowApplication.InstanceStore%2A> имеет значение, то его необходимо установить на один и тот же экземпляр <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, используемый <xref:System.Activities.WorkflowApplicationInstance>, иначе будет создаваться исключение <xref:System.ArgumentException> со следующим сообщением: `The instance is configured with a different InstanceStore than this WorkflowApplication.`</span><span class="sxs-lookup"><span data-stu-id="8e89e-145">If the <xref:System.Activities.WorkflowApplication.InstanceStore%2A> property is set, it must be set with the same <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> instance used by the <xref:System.Activities.WorkflowApplicationInstance> or else an <xref:System.ArgumentException> will be thrown with the following message: `The instance is configured with a different InstanceStore than this WorkflowApplication.`.</span></span>
+
+```csharp
+// Get the WorkflowApplicationInstance of the desired workflow from the specified
+// SqlWorkflowInstanceStore.
+WorkflowApplicationInstance instance = WorkflowApplication.GetInstance(instanceId, store);
+
+// Use the persisted WorkflowIdentity to retrieve the correct workflow
+// definition from the dictionary.
+Activity definition = WorkflowVersionMap[instance.DefinitionIdentity];
+
+WorkflowApplication wfApp = new WorkflowApplication(definition, instance.DefinitionIdentity);
+
+// Configure the WorkflowApplication with persistence and desired workflow event handlers.
+ConfigureWorkflowApplication(wfApp);
+
+// Load the persisted workflow instance.
+wfApp.Load(instance);
+
+// Resume the workflow...
+```
+
+## <a name="UpdatingWF4PersistenceDatabases"></a> <span data-ttu-id="8e89e-146">Обновление .NET Framework 4 постоянного хранения и баз данных для поддержки управления версиями рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="8e89e-146">Upgrading .NET Framework 4 Persistence Databases to Support Workflow Versioning</span></span>
+
+<span data-ttu-id="8e89e-147">Предоставляется скрипт базы данных SqlWorkflowInstanceStoreSchemaUpgrade.sql для обновления баз данных сохраняемости, созданных с помощью скриптов базы данных [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8e89e-147">A SqlWorkflowInstanceStoreSchemaUpgrade.sql database script is provided to upgrade persistence databases created using the [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] database scripts.</span></span> <span data-ttu-id="8e89e-148">Этот скрипт обновляет базы данных для поддержки новых возможностей управления версиями, представленных в .NET Framework 4.5.</span><span class="sxs-lookup"><span data-stu-id="8e89e-148">This script updates the databases to support the new versioning capabilities introduced in .NET Framework 4.5.</span></span> <span data-ttu-id="8e89e-149">Все сохраняемые экземпляры рабочих процессов в базах данных получают значения управления версиями по умолчанию и затем могут участвовать в параллельном выполнении и динамическом обновлении.</span><span class="sxs-lookup"><span data-stu-id="8e89e-149">Any persisted workflow instances in the databases are given default versioning values, and can then participate in side-by-side execution and dynamic update.</span></span>
+
+<span data-ttu-id="8e89e-150">Если приложение рабочего процесса .NET Framework 4.5 попытки любые операции сохраняемости, использующих новые возможности управления версиями на базу данных сохраняемости, которая не была обновлена с помощью указанного скрипта, <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> возникает исключение с сообщением, аналогичным следующее сообщение.</span><span class="sxs-lookup"><span data-stu-id="8e89e-150">If a .NET Framework 4.5 workflow application attempts any persistence operations that use the new versioning features on a persistence database which has not been upgraded using the provided script, an <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> is thrown with a message similar to the following message.</span></span>
+
+```
+The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' cannot be run against this database version.  Please upgrade the database to '4.5.0.0'.
+```
+
+### <a name="ToUpgrade"></a> <span data-ttu-id="8e89e-151">Чтобы обновить схему базы данных</span><span class="sxs-lookup"><span data-stu-id="8e89e-151">To upgrade the database schema</span></span>
+
+1. <span data-ttu-id="8e89e-152">Откройте SQL Server Management Studio и подключитесь к серверу долговременной базы данных, например **. \SQLEXPRESS**.</span><span class="sxs-lookup"><span data-stu-id="8e89e-152">Open SQL Server Management Studio and connect to the persistence database server, for example **.\SQLEXPRESS**.</span></span>
+
+2. <span data-ttu-id="8e89e-153">Выберите **откройте**, **файл** из **файл** меню.</span><span class="sxs-lookup"><span data-stu-id="8e89e-153">Choose **Open**, **File** from the **File** menu.</span></span> <span data-ttu-id="8e89e-154">Перейдите в следующую папку: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`</span><span class="sxs-lookup"><span data-stu-id="8e89e-154">Browse to the following folder: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`</span></span>
+
+3. <span data-ttu-id="8e89e-155">Выберите **SqlWorkflowInstanceStoreSchemaUpgrade.sql** и нажмите кнопку **откройте**.</span><span class="sxs-lookup"><span data-stu-id="8e89e-155">Select **SqlWorkflowInstanceStoreSchemaUpgrade.sql** and click **Open**.</span></span>
+
+4. <span data-ttu-id="8e89e-156">Выберите имя базы данных сохраняемости в **доступных баз данных** раскрывающегося списка.</span><span class="sxs-lookup"><span data-stu-id="8e89e-156">Select the name of the persistence database in the **Available Databases** drop-down.</span></span>
+
+5. <span data-ttu-id="8e89e-157">Выберите **Execute** из **запроса** меню.</span><span class="sxs-lookup"><span data-stu-id="8e89e-157">Choose **Execute** from the **Query** menu.</span></span>
+
+<span data-ttu-id="8e89e-158">По завершении запроса обновляется схема базы данных, и при желании можно просмотреть идентификатор рабочего процесса по умолчанию, который был назначен сохраняемым экземплярам рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="8e89e-158">When the query completes, the database schema is upgraded, and if desired, you can view the default workflow identity that was assigned to the persisted workflow instances.</span></span> <span data-ttu-id="8e89e-159">Разверните долговременную базу данных в **баз данных** узел **обозревателя объектов**, а затем разверните **представления** узла.</span><span class="sxs-lookup"><span data-stu-id="8e89e-159">Expand your persistence database in the **Databases** node of the **Object Explorer**, and then expand the **Views** node.</span></span> <span data-ttu-id="8e89e-160">Щелкните правой кнопкой мыши **System.Activities.DurableInstancing.Instances** и выберите **выделить 1000 верхних строк**.</span><span class="sxs-lookup"><span data-stu-id="8e89e-160">Right-click **System.Activities.DurableInstancing.Instances** and choose **Select Top 1000 Rows**.</span></span> <span data-ttu-id="8e89e-161">Перейдите в конец столбцов и обратите внимание, что в представление добавлены 6 дополнительных столбцов: **IdentityName**, **IdentityPackage**, **построения**, **основных**, **незначительные**, и **редакции**.</span><span class="sxs-lookup"><span data-stu-id="8e89e-161">Scroll to end of the columns and note that there are six additional columns added to the view: **IdentityName**, **IdentityPackage**, **Build**, **Major**, **Minor**, and **Revision**.</span></span> <span data-ttu-id="8e89e-162">Все сохраненные рабочие процессы будут иметь значение **NULL** для этих полей, представляющий удостоверение рабочего процесса значение null.</span><span class="sxs-lookup"><span data-stu-id="8e89e-162">Any persisted workflows will have a value of **NULL** for these fields, representing a null workflow identity.</span></span>

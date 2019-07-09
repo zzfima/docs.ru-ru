@@ -7,36 +7,36 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 4f091835-28d1-498c-b660-9b3acf34ed13
-ms.openlocfilehash: 1f78d2f0ff8887ca5cf1cd1129fb946d2224246d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9689e3c42010b7de641bee47af34e6888c415ed9
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020287"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663960"
 ---
-# <a name="3-d-graphics-how-to-topics"></a><span data-ttu-id="fee46-102">Практические руководства, посвященные 3-D графике</span><span class="sxs-lookup"><span data-stu-id="fee46-102">3-D Graphics How-to Topics</span></span>
-<span data-ttu-id="fee46-103">В подразделах этого раздела демонстрируется использование [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] графики в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений.</span><span class="sxs-lookup"><span data-stu-id="fee46-103">The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] graphics in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
+# <a name="3-d-graphics-how-to-topics"></a><span data-ttu-id="30aee-102">Практические руководства, посвященные 3-D графике</span><span class="sxs-lookup"><span data-stu-id="30aee-102">3-D Graphics How-to Topics</span></span>
+<span data-ttu-id="30aee-103">В подразделах этого раздела демонстрируется использование трехмерной графики в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений.</span><span class="sxs-lookup"><span data-stu-id="30aee-103">The topics in this section demonstrate how to use 3-D graphics in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="fee46-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="fee46-104">In This Section</span></span>  
- [<span data-ttu-id="fee46-105">Создание трехмерной сцены</span><span class="sxs-lookup"><span data-stu-id="fee46-105">Create a 3-D Scene</span></span>](how-to-create-a-3-d-scene.md)  
- [<span data-ttu-id="fee46-106">Применение рисования к трехмерной модели</span><span class="sxs-lookup"><span data-stu-id="fee46-106">Apply a Drawing to a 3-D Model</span></span>](how-to-apply-a-drawing-to-a-3-d-model.md)  
- [<span data-ttu-id="fee46-107">Применение материала к лицевой и обратной стороне трехмерного объекта</span><span class="sxs-lookup"><span data-stu-id="fee46-107">Apply Material to the Front and Back of a 3-D Object</span></span>](how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
- [<span data-ttu-id="fee46-108">Применение эмиссионного материала к трехмерному объекту</span><span class="sxs-lookup"><span data-stu-id="fee46-108">Apply Emissive Material to a 3-D Object</span></span>](how-to-apply-emissive-material-to-a-3-d-object.md)  
- [<span data-ttu-id="fee46-109">Преобразование масштаба трехмерной модели</span><span class="sxs-lookup"><span data-stu-id="fee46-109">Transform the Scale of a 3-D Model</span></span>](how-to-transform-the-scale-of-a-3-d-model.md)  
- [<span data-ttu-id="fee46-110">Применение множественных преобразований к трехмерной модели</span><span class="sxs-lookup"><span data-stu-id="fee46-110">Apply Multiple Transformations to a 3-D Model</span></span>](how-to-apply-multiple-transformations-to-a-3-d-model.md)  
- [<span data-ttu-id="fee46-111">Анимация трехмерных преобразований</span><span class="sxs-lookup"><span data-stu-id="fee46-111">Animate 3-D Translations</span></span>](how-to-animate-3-d-translations.md)  
- [<span data-ttu-id="fee46-112">Анимация трехмерного вращения с помощью раскадровки</span><span class="sxs-lookup"><span data-stu-id="fee46-112">Animate a 3-D Rotation Using Storyboards</span></span>](how-to-animate-a-3-d-rotation-using-storyboards.md)  
- [<span data-ttu-id="fee46-113">Анимация трехмерного поворота с помощью Rotation3DAnimation</span><span class="sxs-lookup"><span data-stu-id="fee46-113">Animate a 3-D Rotation Using Rotation3DAnimation</span></span>](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
- [<span data-ttu-id="fee46-114">Анимация трехмерного вращения с помощью кватернионов</span><span class="sxs-lookup"><span data-stu-id="fee46-114">Animate a 3-D Rotation Using Quaternions</span></span>](how-to-animate-a-3-d-rotation-using-quaternions.md)  
- [<span data-ttu-id="fee46-115">Анимация трехмерного поворота с помощью ключевых кадров (Rotation3DAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="fee46-115">Animate a 3-D Rotation Using Key Frames (Rotation3DAnimationUsingKeyFrames)</span></span>](how-to-animate-a-3-d-rotation-using-key-frames.md)  
- [<span data-ttu-id="fee46-116">Анимация трехмерного поворота с помощью ключевых кадров (QuaternionAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="fee46-116">Animate a 3-D Rotation Using Key Frames (QuaternionAnimationUsingKeyFrames)</span></span>](animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
- [<span data-ttu-id="fee46-117">Анимация положения и направления камеры в трехмерной сцене</span><span class="sxs-lookup"><span data-stu-id="fee46-117">Animate Camera Position and Direction in a 3D Scene</span></span>](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
- [<span data-ttu-id="fee46-118">Анимация положения и направления камеры с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="fee46-118">Animate Camera Position and Direction Using Key Frames</span></span>](how-to-animate-camera-position-and-direction-using-key-frames.md)  
- [<span data-ttu-id="fee46-119">Анимация свойств материалов в трехмерной сцене</span><span class="sxs-lookup"><span data-stu-id="fee46-119">Animate Material Properties in a 3-D Scene</span></span>](how-to-animate-material-properties-in-a-3-d-scene.md)  
- [<span data-ttu-id="fee46-120">Проверка нажатия в Viewport3D</span><span class="sxs-lookup"><span data-stu-id="fee46-120">Hit Test in a Viewport3D</span></span>](how-to-hit-test-in-a-viewport3d.md)  
- [<span data-ttu-id="fee46-121">Проверка структур Point4D на равенство и неравенство</span><span class="sxs-lookup"><span data-stu-id="fee46-121">Test Point4D structures for equality and inequality</span></span>](how-to-test-point4d-structures-for-equality-and-inequality.md)  
+## <a name="in-this-section"></a><span data-ttu-id="30aee-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="30aee-104">In This Section</span></span>  
+ [<span data-ttu-id="30aee-105">Создание трехмерной сцены</span><span class="sxs-lookup"><span data-stu-id="30aee-105">Create a 3-D Scene</span></span>](how-to-create-a-3-d-scene.md)  
+ [<span data-ttu-id="30aee-106">Применение рисования к трехмерной модели</span><span class="sxs-lookup"><span data-stu-id="30aee-106">Apply a Drawing to a 3-D Model</span></span>](how-to-apply-a-drawing-to-a-3-d-model.md)  
+ [<span data-ttu-id="30aee-107">Применение материала к лицевой и обратной стороне трехмерного объекта</span><span class="sxs-lookup"><span data-stu-id="30aee-107">Apply Material to the Front and Back of a 3-D Object</span></span>](how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
+ [<span data-ttu-id="30aee-108">Применение эмиссионного материала к трехмерному объекту</span><span class="sxs-lookup"><span data-stu-id="30aee-108">Apply Emissive Material to a 3-D Object</span></span>](how-to-apply-emissive-material-to-a-3-d-object.md)  
+ [<span data-ttu-id="30aee-109">Преобразование масштаба трехмерной модели</span><span class="sxs-lookup"><span data-stu-id="30aee-109">Transform the Scale of a 3-D Model</span></span>](how-to-transform-the-scale-of-a-3-d-model.md)  
+ [<span data-ttu-id="30aee-110">Применение множественных преобразований к трехмерной модели</span><span class="sxs-lookup"><span data-stu-id="30aee-110">Apply Multiple Transformations to a 3-D Model</span></span>](how-to-apply-multiple-transformations-to-a-3-d-model.md)  
+ [<span data-ttu-id="30aee-111">Анимация трехмерных преобразований</span><span class="sxs-lookup"><span data-stu-id="30aee-111">Animate 3-D Translations</span></span>](how-to-animate-3-d-translations.md)  
+ [<span data-ttu-id="30aee-112">Анимация трехмерного вращения с помощью раскадровки</span><span class="sxs-lookup"><span data-stu-id="30aee-112">Animate a 3-D Rotation Using Storyboards</span></span>](how-to-animate-a-3-d-rotation-using-storyboards.md)  
+ [<span data-ttu-id="30aee-113">Анимация трехмерного поворота с помощью Rotation3DAnimation</span><span class="sxs-lookup"><span data-stu-id="30aee-113">Animate a 3-D Rotation Using Rotation3DAnimation</span></span>](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
+ [<span data-ttu-id="30aee-114">Анимация трехмерного вращения с помощью кватернионов</span><span class="sxs-lookup"><span data-stu-id="30aee-114">Animate a 3-D Rotation Using Quaternions</span></span>](how-to-animate-a-3-d-rotation-using-quaternions.md)  
+ [<span data-ttu-id="30aee-115">Анимация трехмерного поворота с помощью ключевых кадров (Rotation3DAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="30aee-115">Animate a 3-D Rotation Using Key Frames (Rotation3DAnimationUsingKeyFrames)</span></span>](how-to-animate-a-3-d-rotation-using-key-frames.md)  
+ [<span data-ttu-id="30aee-116">Анимация трехмерного поворота с помощью ключевых кадров (QuaternionAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="30aee-116">Animate a 3-D Rotation Using Key Frames (QuaternionAnimationUsingKeyFrames)</span></span>](animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
+ [<span data-ttu-id="30aee-117">Анимация положения и направления камеры в трехмерной сцене</span><span class="sxs-lookup"><span data-stu-id="30aee-117">Animate Camera Position and Direction in a 3D Scene</span></span>](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
+ [<span data-ttu-id="30aee-118">Анимация положения и направления камеры с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="30aee-118">Animate Camera Position and Direction Using Key Frames</span></span>](how-to-animate-camera-position-and-direction-using-key-frames.md)  
+ [<span data-ttu-id="30aee-119">Анимация свойств материалов в трехмерной сцене</span><span class="sxs-lookup"><span data-stu-id="30aee-119">Animate Material Properties in a 3-D Scene</span></span>](how-to-animate-material-properties-in-a-3-d-scene.md)  
+ [<span data-ttu-id="30aee-120">Проверка нажатия в Viewport3D</span><span class="sxs-lookup"><span data-stu-id="30aee-120">Hit Test in a Viewport3D</span></span>](how-to-hit-test-in-a-viewport3d.md)  
+ [<span data-ttu-id="30aee-121">Проверка структур Point4D на равенство и неравенство</span><span class="sxs-lookup"><span data-stu-id="30aee-121">Test Point4D structures for equality and inequality</span></span>](how-to-test-point4d-structures-for-equality-and-inequality.md)  
   
-## <a name="reference"></a><span data-ttu-id="fee46-122">Ссылка</span><span class="sxs-lookup"><span data-stu-id="fee46-122">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="30aee-122">Ссылка</span><span class="sxs-lookup"><span data-stu-id="30aee-122">Reference</span></span>  
  <xref:System.Windows.Controls.Viewport3D>  
   
  <xref:System.Windows.Media.Media3D.PerspectiveCamera>  
@@ -45,5 +45,5 @@ ms.locfileid: "62020287"
   
  <xref:System.Windows.Media.Media3D.Material>  
   
-## <a name="related-sections"></a><span data-ttu-id="fee46-123">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="fee46-123">Related Sections</span></span>  
- [<span data-ttu-id="fee46-124">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="fee46-124">Graphics and Multimedia</span></span>](index.md)
+## <a name="related-sections"></a><span data-ttu-id="30aee-123">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="30aee-123">Related Sections</span></span>  
+ [<span data-ttu-id="30aee-124">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="30aee-124">Graphics and Multimedia</span></span>](index.md)
