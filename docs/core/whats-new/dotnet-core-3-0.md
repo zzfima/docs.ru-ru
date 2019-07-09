@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 06/14/2019
-ms.openlocfilehash: bb100ea064585235768ecb46781eb830c7dae0c6
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: a808a35876df8d2f6cee3c240c606b7bd979e9ee
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401955"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539274"
 ---
 # <a name="whats-new-in-net-core-30-preview-6"></a>Новые возможности .NET Core 3.0 (предварительная версия 6)
 
@@ -106,6 +106,15 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 Команда `dotnet publish` поддерживает упаковку приложения в однофайловый исполняемый файл для конкретной платформы. Исполняемый файл является самоизвлекаемым и содержит все зависимости (включая машинные), необходимые для запуска приложения. При первом запуске приложение извлекается в каталог, который зависит от имени и идентификатора сборки приложения. Впоследствии запуск происходит быстрее. Если версия не изменилась, приложению не нужно извлекать себя заново.
 
 Чтобы опубликовать однофайловый исполняемый файл, задайте `PublishSingleFile` в своем проекте или в командной строке с помощью команды `dotnet publish`:
+
+```xml
+<PropertyGroup>
+  <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+  <PublishSingleFile>true</PublishSingleFile>
+</PropertyGroup>
+```
+
+-или-
 
 ```console
 dotnet publish -r win10-x64 /p:PublishSingleFile=true

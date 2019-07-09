@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5b45a24e719a03d052c88b5afd64bbe13eb0793e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116260"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610065"
 ---
 # <a name="ref-c-reference"></a>ref (Справочник по C#)
 
@@ -138,7 +138,7 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 - `ref struct` не поддерживает упаковку. Тип `ref struct` невозможно присвоить переменной типа `object`, `dynamic` или любому типу интерфейса.
 - Типы `ref struct` не могут реализовывать интерфейсы.
-- `ref struct` невозможно объявить как член класса или обычной структуры.
+- `ref struct` невозможно объявить как член поля класса или обычной структуры. Сюда входит объявление автоматически реализуемого свойства, которое создает резервное поле, созданное компилятором. 
 - Невозможно объявить локальные переменные, которые являются типами `ref struct` в асинхронных методах. Вы можете объявлять их в синхронных методах, которые возвращают типы <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> или `Task`.
 - Локальные переменные `ref struct` невозможно объявить в итераторах.
 - Невозможно захватить переменные `ref struct` в лямбда-выражениях или локальных функциях.

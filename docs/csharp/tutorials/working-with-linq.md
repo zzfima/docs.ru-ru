@@ -3,12 +3,12 @@ title: Работа с LINQ
 description: В этом руководстве мы научим вас создавать последовательности с помощью LINQ, создавать методы для использования в запросах LINQ, а также различать упреждающее и отложенное вычисление.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e51fb166ccba793f9f2aa9d11a109280bf8eea93
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e37c013add02f651875db7b908ae2b49711d996d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486985"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609310"
 ---
 # <a name="working-with-linq"></a>Работа с LINQ
 
@@ -268,6 +268,14 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 [!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
+Вы увидите красную волнистую линию под `File`, означающую, что его не существует. Он не будет компилироваться, поскольку компилятор не знает, что такое `File`. Чтобы решить эту проблему, добавьте следующую строку кода под самой первой строкой в `Extensions.cs`:
+
+```csharp
+using System.IO;
+```
+
+Это позволит решить проблему, и красная линия ошибки исчезнет.
+
 Теперь давайте дополним определение каждого запроса сообщением для журнала:
 
 ```csharp
@@ -345,4 +353,3 @@ public static void Main(string[] args)
   - [Преобразования данных с помощью LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
   - [Синтаксис запросов и синтаксис методов в LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
   - [Возможности C#, поддерживающие LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)
-    

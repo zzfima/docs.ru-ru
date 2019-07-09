@@ -1,15 +1,15 @@
 ---
 title: Руководство "Контейнеризация приложений с помощью Docker"
 description: Из этого руководства вы узнаете, как контейнеризировать приложение .NET Core с помощью Docker.
-ms.date: 04/10/2019
+ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 2ea9e9bc2614e62fe6ec0d59e39d42c2e32a80a1
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 16edb129be679179450c485ced2586cea9ed9763
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051805"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609298"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Учебник. Контейнеризация приложения .NET Core
 
@@ -29,12 +29,12 @@ ms.locfileid: "66051805"
 
 Установите следующие необходимые компоненты:
 
-- [Пакет .NET для Core версии 2.2](https://dotnet.microsoft.com/download)\.
+* [Пакет .NET для Core версии 2.2](https://dotnet.microsoft.com/download)\.
 Если у вас установлена платформа .NET Core, воспользуйтесь командой `dotnet --info`, чтобы определить версию пакета SDK.
 
-- [Docker Community Edition](https://www.docker.com/products/docker-desktop).
+* [Docker Community Edition](https://www.docker.com/products/docker-desktop).
 
-- Временная рабочая папка для *Dockerfile* и примера приложения .NET Core.
+* Временная рабочая папка для *Dockerfile* и примера приложения .NET Core. В этом руководстве имя `docker-working` используется в качестве рабочей папки.
 
 ### <a name="use-sdk-version-22"></a>Использование пакета SDK версии 2.2
 
@@ -52,13 +52,30 @@ ms.locfileid: "66051805"
 
 ## <a name="create-net-core-app"></a>Создание приложения .NET Core
 
-Вам нужно создать приложение .NET Core для выполнения контейнера Docker. Откройте терминал, создайте рабочую папку и перейдите в нее. Выполните следующую команду в рабочей папке, чтобы создать проект в подпапке с именем app:
+Вам нужно создать приложение .NET Core для выполнения контейнера Docker. Откройте терминал, создайте рабочую папку, если вы еще этого не сделали, и войдите в нее. Выполните следующую команду в рабочей папке, чтобы создать проект в подпапке с именем app:
 
 ```console
 dotnet new console -o app -n myapp
 ```
 
-Эта команда создает папку с именем *app* и приложение Hello World. Вы можете протестировать это приложение, чтобы понять, что оно делает. Перейдите в каталог *app* и выполните команду `dotnet run`. Вы увидите следующие выходные данные:
+Дерево папок будет выглядеть следующим образом:
+
+```console
+docker-working
+│   global.json
+│
+└───app
+    │   myapp.csproj
+    │   Program.cs
+    │
+    └───obj
+            myapp.csproj.nuget.cache
+            myapp.csproj.nuget.g.props
+            myapp.csproj.nuget.g.targets
+            project.assets.json
+```
+
+Команда `dotnet new` создает папку с именем *app* и приложение Hello World. Войдите в папку *app* и выполните команду `dotnet run`. Вы увидите следующие выходные данные:
 
 ```console
 > dotnet run
@@ -120,25 +137,25 @@ Counter: 4
 Если приложению передать число в командной строке, оно досчитает до такого числа и завершит работу. Введите команду `dotnet run -- 5`, чтобы приложение досчитало до пяти.
 
 > [!NOTE]
-> Все параметры после `--` передаются приложению.
+> Все параметры после `--` не передаются команде `dotnet run`, а передаются в приложение.
 
 ## <a name="publish-net-core-app"></a>Публикация приложения .NET Core
 
-Прежде чем добавить приложение .NET Core в образ Docker, опубликуйте его. Выполняемый контейнер будет запускать опубликованную версию приложения.
+Прежде чем добавить приложение .NET Core в образ Docker, опубликуйте его. Убедитесь, что выполняемый контейнер запускает опубликованную версию приложения.
 
-Из рабочей папки перейдите в каталог **app** с примером исходного кода и выполните следующую команду:
+Из рабочей папки перейдите в папку **app** с примером исходного кода и выполните следующую команду:
 
 ```console
 dotnet publish -c Release
 ```
 
-Эта команда компилирует приложение и помещает результат в папку **publish** в выходной папке приложения. Путь к папке **publish** из рабочей папки должен быть таким: `.\app\bin\Release\netcoreapp2.2\publish\`.
+Эта команда компилирует приложение и помещает результат в папку **publish**. Путь к папке **publish** из рабочей папки должен быть таким: `.\app\bin\Release\netcoreapp2.2\publish\`
 
-Получите список файлов для папки publish, чтобы убедиться в наличии файла **myapp.dll**. Из каталога **app** выполните одну из следующих команд:
+Получите список файлов для папки publish, чтобы убедиться в наличии файла **myapp.dll**. Из папки **app** выполните одну из следующих команд:
 
 ```console
 > dir bin\Release\netcoreapp2.2\publish
- Directory of C:\path-to-working-dir\app\bin\Release\netcoreapp2.2\publish
+ Directory of C:\docker-working\app\bin\Release\netcoreapp2.2\publish
 
 04/05/2019  11:00 AM    <DIR>          .
 04/05/2019  11:00 AM    <DIR>          ..
@@ -149,23 +166,46 @@ dotnet publish -c Release
 ```
 
 ```bash
-me@DESKTOP:/path-to-working-dir/app$ ls bin/Release/netcoreapp2.2/publish
+me@DESKTOP:/docker-working/app$ ls bin/Release/netcoreapp2.2/publish
 myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
 ```
 
-В окне терминала перейдите на уровень выше к рабочей папке.
-
 ## <a name="create-the-dockerfile"></a>Создание файла Dockerfile
 
-Файл *Dockerfile* используется командой `docker build` для создания образа контейнера. Это текстовый файл с именем *Dockerfile* и без расширения. Создайте файл с именем *Dockerfile* в рабочей папке и откройте его в текстовом редакторе. Добавьте следующую команду в первую строку файла:
+Файл *Dockerfile* используется командой `docker build` для создания образа контейнера. Это текстовый файл с именем *Dockerfile* и без расширения.
+
+В окне терминала перейдите на папку вверх от рабочей папки, созданной в начале. Создайте файл с именем *Dockerfile* в рабочей папке и откройте его в текстовом редакторе. Добавьте следующую команду в первую строку файла:
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/runtime:2.2
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 ```
 
 Команда `FROM` указывает Docker вызвать образ с тегом **2.2** из репозитория **mcr.microsoft.com/dotnet/core/runtime**. Убедитесь, что вы вызываете среду выполнения .NET Core, версия которой соответствует версии среды выполнения, с которой работает пакет SDK. Например, приложение, созданное в предыдущем разделе, использует пакет SDK для .NET Core версии 2.2. Также было создано приложение для .NET Core 2.2. Поэтому базовый образ, который указан в файле *Dockerfile*, должен иметь тег **2.2**.
 
-Сохраните файл. В окне терминала выполните команду `docker build -t myimage .`, и Docker обработает все строки файла *Dockerfile*. Символ `.` в команде `docker build` указывает Docker выполнить поиск файла *Dockerfile* в текущем каталоге. Эта команда создает образ и локальный репозиторий с именем **myimage**, который указывает на такой образ. После завершения работы этой команды выполните команду `docker images`, чтобы просмотреть список установленных образов:
+Сохраните файл *Dockerfile*. Структура каталогов рабочей папки должна выглядеть следующим образом. Некоторые файлы и папки на более глубоком уровне были вырезаны для экономии места в статье:
+
+```console
+docker-working
+│   Dockerfile
+│   global.json
+│
+└───app
+    │   myapp.csproj
+    │   Program.cs
+    │
+    ├───bin
+    │   └───Release
+    │       └───netcoreapp2.2
+    │           └───publish
+    │                   myapp.deps.json
+    │                   myapp.dll
+    │                   myapp.pdb
+    │                   myapp.runtimeconfig.json
+    │
+    └───obj
+```
+
+В окне терминала выполните команду `docker build -t myimage -f Dockerfile .`, и Docker обработает все строки файла *Dockerfile*. Символ `.` в команде `docker build` указывает Docker выполнить поиск файла *Dockerfile* в текущей папке. Эта команда создает образ и локальный репозиторий с именем **myimage**, который указывает на такой образ. После завершения работы этой команды выполните команду `docker images`, чтобы просмотреть список установленных образов:
 
 ```console
 > docker images
@@ -186,10 +226,10 @@ ENTRYPOINT ["dotnet", "app/myapp.dll"]
 
 Следующая команда, `ENTRYPOINT`, указывает Docker настроить контейнер для запуска в качестве исполняемого файла. При запуске контейнера выполняется команда `ENTRYPOINT`. После выполнения команды контейнер автоматически остановится.
 
-Сохраните файл. В окне терминала выполните команду `docker build -t myimage .`, а после ее выполнения — команду `docker images`.
+В окне терминала выполните команду `docker build -t myimage -f Dockerfile .`, а после ее выполнения — команду `docker images`.
 
 ```console
-> docker build -t myimage .
+> docker build -t myimage -f Dockerfile .
 Sending build context to Docker daemon  819.7kB
 Step 1/3 : FROM mcr.microsoft.com/dotnet/core/runtime:2.2
  ---> d51bb4452469
@@ -324,7 +364,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 Команда `docker run` также позволяет изменить команду `ENTRYPOINT` из файла *Dockerfile* для запуска другой программы, но только для соответствующего контейнера. Например, воспользуйтесь указанной ниже командой, чтобы запустить `bash` или `cmd.exe`. При необходимости измените команду.
 
 #### <a name="windows"></a>Windows
-В этом примере команда `ENTRYPOINT` изменена для запуска `cmd.exe`. Нажав клавиши <kbd>CTRL+C</kbd>, вы можете завершить процесс и остановить контейнер.
+В этом примере команда `ENTRYPOINT` изменена на `cmd.exe`. Нажав клавиши <kbd>CTRL+C</kbd>, вы можете завершить процесс и остановить контейнер.
 
 ```console
 > docker run -it --rm --entrypoint "cmd.exe" myimage
@@ -351,7 +391,7 @@ C:\>^C
 
 #### <a name="linux"></a>Linux
 
-В этом примере команда `ENTRYPOINT` изменена для запуска `bash`. Команда `quit` позволяет завершить процесс и остановить контейнер.
+В этом примере команда `ENTRYPOINT` изменена на `bash`. Команда `quit` позволяет завершить процесс и остановить контейнер.
 
 ```bash
 root@user:~# docker run -it --rm --entrypoint "bash" myimage
