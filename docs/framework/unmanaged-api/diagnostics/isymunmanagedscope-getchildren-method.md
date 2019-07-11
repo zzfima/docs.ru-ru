@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3cad217ddf2d5354ad019f26fd10fb9ccd004d61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ffc4d5a1e6b8f1acc7603e9c2e01216e3188989e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986210"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751304"
 ---
-# <a name="isymunmanagedscopegetchildren-method"></a><span data-ttu-id="d1fd5-102">Метод ISymUnmanagedScope::GetChildren</span><span class="sxs-lookup"><span data-stu-id="d1fd5-102">ISymUnmanagedScope::GetChildren Method</span></span>
-<span data-ttu-id="d1fd5-103">Возвращает дочерние элементы данной области.</span><span class="sxs-lookup"><span data-stu-id="d1fd5-103">Gets the children of this scope.</span></span>  
+# <a name="isymunmanagedscopegetchildren-method"></a><span data-ttu-id="f29d1-102">Метод ISymUnmanagedScope::GetChildren</span><span class="sxs-lookup"><span data-stu-id="f29d1-102">ISymUnmanagedScope::GetChildren Method</span></span>
+<span data-ttu-id="f29d1-103">Возвращает дочерние элементы данной области.</span><span class="sxs-lookup"><span data-stu-id="f29d1-103">Gets the children of this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d1fd5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d1fd5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f29d1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f29d1-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetChildren(  
     [in]  ULONG32  cChildren,  
     [out] ULONG32  *pcChildren,  
@@ -37,23 +37,23 @@ HRESULT GetChildren(
         length_is(*pcChildren)] ISymUnmanagedScope* children[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d1fd5-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d1fd5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f29d1-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f29d1-105">Parameters</span></span>  
  `cChildren`  
- <span data-ttu-id="d1fd5-106">[in] Объект `ULONG32` указывает размер `children` массива.</span><span class="sxs-lookup"><span data-stu-id="d1fd5-106">[in] A `ULONG32` that indicates the size of the `children` array.</span></span>  
+ <span data-ttu-id="f29d1-106">[in] Объект `ULONG32` указывает размер `children` массива.</span><span class="sxs-lookup"><span data-stu-id="f29d1-106">[in] A `ULONG32` that indicates the size of the `children` array.</span></span>  
   
  `pcChildren`  
- <span data-ttu-id="d1fd5-107">[out] Указатель на `ULONG32` , принимает размер буфера, требуемого для хранения дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="d1fd5-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the children.</span></span>  
+ <span data-ttu-id="f29d1-107">[out] Указатель на `ULONG32` , принимает размер буфера, требуемого для хранения дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="f29d1-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the children.</span></span>  
   
  `children`  
- <span data-ttu-id="d1fd5-108">[out] Возвращаемый массив дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="d1fd5-108">[out] The returned array of children.</span></span>  
+ <span data-ttu-id="f29d1-108">[out] Возвращаемый массив дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="f29d1-108">[out] The returned array of children.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d1fd5-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="d1fd5-109">Return Value</span></span>  
- <span data-ttu-id="d1fd5-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="d1fd5-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f29d1-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="f29d1-109">Return Value</span></span>  
+ <span data-ttu-id="f29d1-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="f29d1-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d1fd5-111">Требования</span><span class="sxs-lookup"><span data-stu-id="d1fd5-111">Requirements</span></span>  
- <span data-ttu-id="d1fd5-112">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d1fd5-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f29d1-111">Требования</span><span class="sxs-lookup"><span data-stu-id="f29d1-111">Requirements</span></span>  
+ <span data-ttu-id="f29d1-112">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f29d1-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d1fd5-113">См. также</span><span class="sxs-lookup"><span data-stu-id="d1fd5-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f29d1-113">См. также</span><span class="sxs-lookup"><span data-stu-id="f29d1-113">See also</span></span>
 
-- [<span data-ttu-id="d1fd5-114">Интерфейс ISymUnmanagedScope</span><span class="sxs-lookup"><span data-stu-id="d1fd5-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [<span data-ttu-id="d1fd5-115">Метод GetParent</span><span class="sxs-lookup"><span data-stu-id="d1fd5-115">GetParent Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)
+- [<span data-ttu-id="f29d1-114">Интерфейс ISymUnmanagedScope</span><span class="sxs-lookup"><span data-stu-id="f29d1-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [<span data-ttu-id="f29d1-115">Метод GetParent</span><span class="sxs-lookup"><span data-stu-id="f29d1-115">GetParent Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)

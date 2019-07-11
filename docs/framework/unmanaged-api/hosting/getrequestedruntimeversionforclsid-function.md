@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ca125932ede48aa43bc51e3d5a7851fb7762547
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9dfce10c94e04dcd405e06ab6d0984e64984709e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490322"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779569"
 ---
-# <a name="getrequestedruntimeversionforclsid-function"></a><span data-ttu-id="5db80-102">Функция GetRequestedRuntimeVersionForCLSID</span><span class="sxs-lookup"><span data-stu-id="5db80-102">GetRequestedRuntimeVersionForCLSID Function</span></span>
-<span data-ttu-id="5db80-103">Получает соответствующий информация среды CLR (CLR) версии для класса с указанным `CLSID`.</span><span class="sxs-lookup"><span data-stu-id="5db80-103">Gets the appropriate common language runtime (CLR) version information for the class with the specified `CLSID`.</span></span>  
+# <a name="getrequestedruntimeversionforclsid-function"></a><span data-ttu-id="f5cd0-102">Функция GetRequestedRuntimeVersionForCLSID</span><span class="sxs-lookup"><span data-stu-id="f5cd0-102">GetRequestedRuntimeVersionForCLSID Function</span></span>
+<span data-ttu-id="f5cd0-103">Получает соответствующий информация среды CLR (CLR) версии для класса с указанным `CLSID`.</span><span class="sxs-lookup"><span data-stu-id="f5cd0-103">Gets the appropriate common language runtime (CLR) version information for the class with the specified `CLSID`.</span></span>  
   
- <span data-ttu-id="5db80-104">Эта функция является устаревшим в .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="5db80-104">This function has been deprecated in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="f5cd0-104">Эта функция является устаревшим в .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="f5cd0-104">This function has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5db80-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5db80-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f5cd0-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f5cd0-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetRequestedRuntimeVersionForCLSID (  
     [in]  REFCLSID   rclsid,   
     [out]  LPWSTR     pVersion,   
@@ -40,43 +40,43 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5db80-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="5db80-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f5cd0-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="f5cd0-106">Parameters</span></span>  
  `rclsid`  
- <span data-ttu-id="5db80-107">[in]  `CLSID` Компонента.</span><span class="sxs-lookup"><span data-stu-id="5db80-107">[in]  The `CLSID` of the component.</span></span>  
+ <span data-ttu-id="f5cd0-107">[in]  `CLSID` Компонента.</span><span class="sxs-lookup"><span data-stu-id="f5cd0-107">[in]  The `CLSID` of the component.</span></span>  
   
  `pVersion`  
- <span data-ttu-id="5db80-108">[out]  Буфер, содержащий строку номера версии после успешного завершения.</span><span class="sxs-lookup"><span data-stu-id="5db80-108">[out]  A buffer that contains the version number string upon successful completion.</span></span>  
+ <span data-ttu-id="f5cd0-108">[out]  Буфер, содержащий строку номера версии после успешного завершения.</span><span class="sxs-lookup"><span data-stu-id="f5cd0-108">[out]  A buffer that contains the version number string upon successful completion.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="5db80-109">[in]  Размер в расширенные символы из `pVersion` буфера.</span><span class="sxs-lookup"><span data-stu-id="5db80-109">[in]  The size, in wide characters, of the `pVersion` buffer.</span></span>  
+ <span data-ttu-id="f5cd0-109">[in]  Размер в расширенные символы из `pVersion` буфера.</span><span class="sxs-lookup"><span data-stu-id="f5cd0-109">[in]  The size, in wide characters, of the `pVersion` buffer.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="5db80-110">[out] Длина в байтах, возвращенного буфера.</span><span class="sxs-lookup"><span data-stu-id="5db80-110">[out] The length, in bytes, of the returned buffer.</span></span>  
+ <span data-ttu-id="f5cd0-110">[out] Длина в байтах, возвращенного буфера.</span><span class="sxs-lookup"><span data-stu-id="f5cd0-110">[out] The length, in bytes, of the returned buffer.</span></span>  
   
  `dwResolutionFlags`  
- <span data-ttu-id="5db80-111">[in]  Одно из значений CLSID_RESOLUTION_FLAGS.</span><span class="sxs-lookup"><span data-stu-id="5db80-111">[in]  One of the CLSID_RESOLUTION_FLAGS values.</span></span> <span data-ttu-id="5db80-112">Поддерживаются следующие значения:</span><span class="sxs-lookup"><span data-stu-id="5db80-112">The following values are supported:</span></span>  
+ <span data-ttu-id="f5cd0-111">[in]  Одно из значений CLSID_RESOLUTION_FLAGS.</span><span class="sxs-lookup"><span data-stu-id="f5cd0-111">[in]  One of the CLSID_RESOLUTION_FLAGS values.</span></span> <span data-ttu-id="f5cd0-112">Поддерживаются следующие значения:</span><span class="sxs-lookup"><span data-stu-id="f5cd0-112">The following values are supported:</span></span>  
   
-- <span data-ttu-id="5db80-113">CLSID_RESOLUTION_DEFAULT: (0x0) указывает, что следует использовать взаимодействия по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="5db80-113">CLSID_RESOLUTION_DEFAULT: (0x0) Specifies that default interop behavior should be used.</span></span>  
+- <span data-ttu-id="f5cd0-113">CLSID_RESOLUTION_DEFAULT: (0x0) указывает, что следует использовать взаимодействия по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="f5cd0-113">CLSID_RESOLUTION_DEFAULT: (0x0) Specifies that default interop behavior should be used.</span></span>  
   
-- <span data-ttu-id="5db80-114">CLSID_RESOLUTION_REGISTERED: (0x1) указывает, следует ли выполнять поиск реестра и должна ли применяться политика оболочек совместимости.</span><span class="sxs-lookup"><span data-stu-id="5db80-114">CLSID_RESOLUTION_REGISTERED: (0x1) Specifies that the registry should be searched and shim policy should be applied.</span></span>  
+- <span data-ttu-id="f5cd0-114">CLSID_RESOLUTION_REGISTERED: (0x1) указывает, следует ли выполнять поиск реестра и должна ли применяться политика оболочек совместимости.</span><span class="sxs-lookup"><span data-stu-id="f5cd0-114">CLSID_RESOLUTION_REGISTERED: (0x1) Specifies that the registry should be searched and shim policy should be applied.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5db80-115">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="5db80-115">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f5cd0-115">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="f5cd0-115">Return Value</span></span>  
   
-|<span data-ttu-id="5db80-116">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5db80-116">HRESULT</span></span>|<span data-ttu-id="5db80-117">Описание</span><span class="sxs-lookup"><span data-stu-id="5db80-117">Description</span></span>|  
+|<span data-ttu-id="f5cd0-116">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f5cd0-116">HRESULT</span></span>|<span data-ttu-id="f5cd0-117">Описание</span><span class="sxs-lookup"><span data-stu-id="f5cd0-117">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="5db80-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="5db80-118">S_OK</span></span>|<span data-ttu-id="5db80-119">Функция успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="5db80-119">The function returned successfully.</span></span>|  
-|<span data-ttu-id="5db80-120">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="5db80-120">E_INVALIDARG</span></span>|<span data-ttu-id="5db80-121">Один из параметров имеет недопустимый тип или формат.</span><span class="sxs-lookup"><span data-stu-id="5db80-121">One of the parameters has an invalid type or format.</span></span>|  
-|<span data-ttu-id="5db80-122">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="5db80-122">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="5db80-123">`pVersion` Буфера недостаточен для хранения всей строки версии.</span><span class="sxs-lookup"><span data-stu-id="5db80-123">The `pVersion` buffer is not large enough to hold the entire version string.</span></span>|  
-|<span data-ttu-id="5db80-124">REGDB_E_CLASSNOTREG</span><span class="sxs-lookup"><span data-stu-id="5db80-124">REGDB_E_CLASSNOTREG</span></span>|<span data-ttu-id="5db80-125">Отсутствует класс зарегистрирован с указанным `CLSID`.</span><span class="sxs-lookup"><span data-stu-id="5db80-125">There is no class registered with the specified `CLSID`.</span></span>|  
-|<span data-ttu-id="5db80-126">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="5db80-126">E_POINTER</span></span>|<span data-ttu-id="5db80-127">`dwLength` имеет значение null, или `cchBuffer` достаточно велик для хранения строки версии, но `pVersion` имеет значение null.</span><span class="sxs-lookup"><span data-stu-id="5db80-127">`dwLength` is null, or `cchBuffer` is large enough to hold the version string, but `pVersion` is null.</span></span>|  
+|<span data-ttu-id="f5cd0-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="f5cd0-118">S_OK</span></span>|<span data-ttu-id="f5cd0-119">Функция успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="f5cd0-119">The function returned successfully.</span></span>|  
+|<span data-ttu-id="f5cd0-120">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="f5cd0-120">E_INVALIDARG</span></span>|<span data-ttu-id="f5cd0-121">Один из параметров имеет недопустимый тип или формат.</span><span class="sxs-lookup"><span data-stu-id="f5cd0-121">One of the parameters has an invalid type or format.</span></span>|  
+|<span data-ttu-id="f5cd0-122">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="f5cd0-122">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="f5cd0-123">`pVersion` Буфера недостаточен для хранения всей строки версии.</span><span class="sxs-lookup"><span data-stu-id="f5cd0-123">The `pVersion` buffer is not large enough to hold the entire version string.</span></span>|  
+|<span data-ttu-id="f5cd0-124">REGDB_E_CLASSNOTREG</span><span class="sxs-lookup"><span data-stu-id="f5cd0-124">REGDB_E_CLASSNOTREG</span></span>|<span data-ttu-id="f5cd0-125">Отсутствует класс зарегистрирован с указанным `CLSID`.</span><span class="sxs-lookup"><span data-stu-id="f5cd0-125">There is no class registered with the specified `CLSID`.</span></span>|  
+|<span data-ttu-id="f5cd0-126">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="f5cd0-126">E_POINTER</span></span>|<span data-ttu-id="f5cd0-127">`dwLength` имеет значение null, или `cchBuffer` достаточно велик для хранения строки версии, но `pVersion` имеет значение null.</span><span class="sxs-lookup"><span data-stu-id="f5cd0-127">`dwLength` is null, or `cchBuffer` is large enough to hold the version string, but `pVersion` is null.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5db80-128">Требования</span><span class="sxs-lookup"><span data-stu-id="5db80-128">Requirements</span></span>  
- <span data-ttu-id="5db80-129">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5db80-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f5cd0-128">Требования</span><span class="sxs-lookup"><span data-stu-id="f5cd0-128">Requirements</span></span>  
+ <span data-ttu-id="f5cd0-129">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f5cd0-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5db80-130">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5db80-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f5cd0-130">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f5cd0-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="5db80-131">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5db80-131">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="f5cd0-131">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f5cd0-131">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5db80-132">См. также</span><span class="sxs-lookup"><span data-stu-id="5db80-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f5cd0-132">См. также</span><span class="sxs-lookup"><span data-stu-id="f5cd0-132">See also</span></span>
 
-- [<span data-ttu-id="5db80-133">Устаревшие функции размещения CLR</span><span class="sxs-lookup"><span data-stu-id="5db80-133">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="f5cd0-133">Устаревшие функции размещения CLR</span><span class="sxs-lookup"><span data-stu-id="f5cd0-133">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
