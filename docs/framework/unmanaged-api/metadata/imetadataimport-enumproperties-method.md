@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 410fd7a702d3aa3812b4ea053c43fdaa507a474a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c63797b60354b461891f44d32cf1840f7fdcf3d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042514"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756492"
 ---
-# <a name="imetadataimportenumproperties-method"></a><span data-ttu-id="7343e-102">Метод IMetaDataImport::EnumProperties</span><span class="sxs-lookup"><span data-stu-id="7343e-102">IMetaDataImport::EnumProperties Method</span></span>
-<span data-ttu-id="7343e-103">Перечисляет токены PropertyDef, представляющие свойства типа, на который ссылается указанный токен TypeDef.</span><span class="sxs-lookup"><span data-stu-id="7343e-103">Enumerates PropertyDef tokens representing the properties of the type referenced by the specified TypeDef token.</span></span>  
+# <a name="imetadataimportenumproperties-method"></a><span data-ttu-id="28006-102">Метод IMetaDataImport::EnumProperties</span><span class="sxs-lookup"><span data-stu-id="28006-102">IMetaDataImport::EnumProperties Method</span></span>
+<span data-ttu-id="28006-103">Перечисляет токены PropertyDef, представляющие свойства типа, на который ссылается указанный токен TypeDef.</span><span class="sxs-lookup"><span data-stu-id="28006-103">Enumerates PropertyDef tokens representing the properties of the type referenced by the specified TypeDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7343e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7343e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="28006-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="28006-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EnumProperties (  
    [in, out] HCORENUM    *phEnum,  
    [in]      mdTypeDef   td,  
@@ -39,39 +39,39 @@ HRESULT EnumProperties (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7343e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="7343e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="28006-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="28006-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="7343e-106">[in, out] Указатель на перечислитель.</span><span class="sxs-lookup"><span data-stu-id="7343e-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="7343e-107">Это должно быть NULL при первом вызове этого метода.</span><span class="sxs-lookup"><span data-stu-id="7343e-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="28006-106">[in, out] Указатель на перечислитель.</span><span class="sxs-lookup"><span data-stu-id="28006-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="28006-107">Это должно быть NULL при первом вызове этого метода.</span><span class="sxs-lookup"><span data-stu-id="28006-107">This must be NULL for the first call of this method.</span></span>  
   
  `td`  
- <span data-ttu-id="7343e-108">[in] Токен TypeDef, представляющий тип со свойствами для перечисления.</span><span class="sxs-lookup"><span data-stu-id="7343e-108">[in] A TypeDef token representing the type with properties to enumerate.</span></span>  
+ <span data-ttu-id="28006-108">[in] Токен TypeDef, представляющий тип со свойствами для перечисления.</span><span class="sxs-lookup"><span data-stu-id="28006-108">[in] A TypeDef token representing the type with properties to enumerate.</span></span>  
   
  `rProperties`  
- <span data-ttu-id="7343e-109">[out] Массив, используемый для хранения токены PropertyDef.</span><span class="sxs-lookup"><span data-stu-id="7343e-109">[out] The array used to store the PropertyDef tokens.</span></span>  
+ <span data-ttu-id="28006-109">[out] Массив, используемый для хранения токены PropertyDef.</span><span class="sxs-lookup"><span data-stu-id="28006-109">[out] The array used to store the PropertyDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="7343e-110">[in] Максимальный размер массива `rProperties`.</span><span class="sxs-lookup"><span data-stu-id="7343e-110">[in] The maximum size of the `rProperties` array.</span></span>  
+ <span data-ttu-id="28006-110">[in] Максимальный размер массива `rProperties`.</span><span class="sxs-lookup"><span data-stu-id="28006-110">[in] The maximum size of the `rProperties` array.</span></span>  
   
  `pcProperties`  
- <span data-ttu-id="7343e-111">[out] Число возвращенных в токены PropertyDef `rProperties`.</span><span class="sxs-lookup"><span data-stu-id="7343e-111">[out] The number of PropertyDef tokens returned in `rProperties`.</span></span>  
+ <span data-ttu-id="28006-111">[out] Число возвращенных в токены PropertyDef `rProperties`.</span><span class="sxs-lookup"><span data-stu-id="28006-111">[out] The number of PropertyDef tokens returned in `rProperties`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7343e-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="7343e-112">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="28006-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="28006-112">Return Value</span></span>  
   
-|<span data-ttu-id="7343e-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7343e-113">HRESULT</span></span>|<span data-ttu-id="7343e-114">Описание</span><span class="sxs-lookup"><span data-stu-id="7343e-114">Description</span></span>|  
+|<span data-ttu-id="28006-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="28006-113">HRESULT</span></span>|<span data-ttu-id="28006-114">Описание</span><span class="sxs-lookup"><span data-stu-id="28006-114">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="7343e-115">`EnumProperties` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="7343e-115">`EnumProperties` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="7343e-116">Существуют маркеры для перечисления отсутствуют.</span><span class="sxs-lookup"><span data-stu-id="7343e-116">There are no tokens to enumerate.</span></span> <span data-ttu-id="7343e-117">В этом случае `pcProperties` равно нулю.</span><span class="sxs-lookup"><span data-stu-id="7343e-117">In that case, `pcProperties` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="28006-115">`EnumProperties` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="28006-115">`EnumProperties` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="28006-116">Существуют маркеры для перечисления отсутствуют.</span><span class="sxs-lookup"><span data-stu-id="28006-116">There are no tokens to enumerate.</span></span> <span data-ttu-id="28006-117">В этом случае `pcProperties` равно нулю.</span><span class="sxs-lookup"><span data-stu-id="28006-117">In that case, `pcProperties` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="7343e-118">Требования</span><span class="sxs-lookup"><span data-stu-id="7343e-118">Requirements</span></span>  
- <span data-ttu-id="7343e-119">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7343e-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="28006-118">Требования</span><span class="sxs-lookup"><span data-stu-id="28006-118">Requirements</span></span>  
+ <span data-ttu-id="28006-119">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="28006-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7343e-120">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7343e-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="28006-120">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="28006-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7343e-121">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7343e-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="28006-121">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="28006-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7343e-122">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7343e-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="28006-122">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="28006-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7343e-123">См. также</span><span class="sxs-lookup"><span data-stu-id="7343e-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="28006-123">См. также</span><span class="sxs-lookup"><span data-stu-id="28006-123">See also</span></span>
 
-- [<span data-ttu-id="7343e-124">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="7343e-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="7343e-125">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="7343e-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="28006-124">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="28006-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="28006-125">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="28006-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

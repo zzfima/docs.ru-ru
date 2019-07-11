@@ -17,34 +17,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe237ca01d409636f184930d26ca970d58e90437
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b199d3226ec391fadc356b5efacdbf10a3e25adf
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749524"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766159"
 ---
-# <a name="icordebugprocessenablelogmessages-method"></a><span data-ttu-id="cf88d-102">Метод ICorDebugProcess::EnableLogMessages</span><span class="sxs-lookup"><span data-stu-id="cf88d-102">ICorDebugProcess::EnableLogMessages Method</span></span>
-<span data-ttu-id="cf88d-103">Включает и отключает передачу сообщений журнала в отладчик.</span><span class="sxs-lookup"><span data-stu-id="cf88d-103">Enables and disables the transmission of log messages to the debugger.</span></span>  
+# <a name="icordebugprocessenablelogmessages-method"></a><span data-ttu-id="e8764-102">Метод ICorDebugProcess::EnableLogMessages</span><span class="sxs-lookup"><span data-stu-id="e8764-102">ICorDebugProcess::EnableLogMessages Method</span></span>
+<span data-ttu-id="e8764-103">Включает и отключает передачу сообщений журнала в отладчик.</span><span class="sxs-lookup"><span data-stu-id="e8764-103">Enables and disables the transmission of log messages to the debugger.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cf88d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="cf88d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e8764-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e8764-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EnableLogMessages([in]BOOL fOnOff);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cf88d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="cf88d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e8764-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e8764-105">Parameters</span></span>  
  `fOnOff`  
- <span data-ttu-id="cf88d-106">[in] `true` позволяет передавать сообщения журнала; `false` отключает передачу.</span><span class="sxs-lookup"><span data-stu-id="cf88d-106">[in] `true` enables the transmission of log messages; `false` disables the transmission.</span></span>  
+ <span data-ttu-id="e8764-106">[in] `true` позволяет передавать сообщения журнала; `false` отключает передачу.</span><span class="sxs-lookup"><span data-stu-id="e8764-106">[in] `true` enables the transmission of log messages; `false` disables the transmission.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cf88d-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="cf88d-107">Remarks</span></span>  
- <span data-ttu-id="cf88d-108">Этот метод допустим только после [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) происходит обратный вызов.</span><span class="sxs-lookup"><span data-stu-id="cf88d-108">This method is valid only after the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback occurs.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e8764-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="e8764-107">Remarks</span></span>  
+ <span data-ttu-id="e8764-108">Этот метод допустим только после [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) происходит обратный вызов.</span><span class="sxs-lookup"><span data-stu-id="e8764-108">This method is valid only after the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback occurs.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cf88d-109">Требования</span><span class="sxs-lookup"><span data-stu-id="cf88d-109">Requirements</span></span>  
- <span data-ttu-id="cf88d-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cf88d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e8764-109">Требования</span><span class="sxs-lookup"><span data-stu-id="e8764-109">Requirements</span></span>  
+ <span data-ttu-id="e8764-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e8764-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cf88d-111">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cf88d-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e8764-111">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e8764-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="cf88d-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cf88d-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e8764-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e8764-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cf88d-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cf88d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="e8764-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e8764-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
