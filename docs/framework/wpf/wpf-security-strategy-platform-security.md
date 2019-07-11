@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: f99a9f38d5fbb62732f157720ee544042e346469
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5b40302d93ce1bfc378b86210ed7bb54732d294b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663563"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756759"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Стратегия безопасности WPF — безопасность платформы
 Хотя Windows Presentation Foundation (WPF) предоставляет широкий набор служб безопасности, предусмотрена также возможность средства безопасности базовой платформы, включая операционную систему, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], и [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Эти уровни объединяются для обеспечения в [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] надежной модели безопасности с глубокой защитой, которая пытается исключить любые точки сбоя, как показано на следующем рисунке.  
@@ -140,14 +140,14 @@ ms.locfileid: "67663563"
   
  ![Схема, показывающая наборы разрешений CAS.](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
- Ограничения песочницы безопасности зоны Интернета в равной степени применяются к любому коду, который [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] импортирует из системной библиотеки, включая [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Это гарантирует, что каждый бит кода блокируется, даже [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. К сожалению, чтобы иметь возможность выполнения, [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] необходимо выполнять функции, которым требуется больше разрешений, чем те, которые включены в песочнице безопасности зоны Интернета.  
+ Ограничения песочницы безопасности зоны Интернета в равной мере применимы к любой код, который приложение XBAP импортирует из системной библиотеки, включая [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Это гарантирует, что каждый бит кода блокируется, даже [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. К сожалению чтобы иметь возможность выполнения, приложение XBAP необходимо выполнять функции, которым требуется больше разрешений, чем те, которые включены в песочнице безопасности зоны Интернета.  
   
- Рассмотрим приложение [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], в котором имеется следующая страница:  
+ Рассмотрим приложение XBAP, имеется следующая страница:  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- Для выполнения этого [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] базовый код [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] должен выполнить больше функций, чем доступно вызываемому [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], в том числе:  
+ Для выполнения этого XBAP, базовый [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] код должен выполнить больше функций, чем доступно для вызывающего XBAP, включая:  
   
 - Создание дескриптора окна (HWND) для подготовки к просмотру  
   
@@ -157,7 +157,7 @@ ms.locfileid: "67663563"
   
  С точки зрения безопасности предоставление прямого доступа к любой из этих операций из изолированного приложения будет иметь катастрофические последствия.  
   
- К счастью, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] разрешает данную ситуацию, позволяя этим операциям выполняться с повышенными привилегиями от имени изолированного приложения. Хотя все [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] операций проверяются на соответствие ограниченным разрешениям безопасности зоны Интернета домена приложения [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (как и другим системным библиотекам) предоставляется набор разрешений, который включает все возможные разрешения.
+ К счастью, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] разрешает данную ситуацию, позволяя этим операциям выполняться с повышенными привилегиями от имени изолированного приложения. Хотя все [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] операций проверяются на соответствие ограниченным разрешениям безопасности зоны Интернета домена приложения XBAP, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (как и другим системным библиотекам) предоставляется набор разрешений, который включает все возможные разрешения.
   
  Для этого необходимо, чтобы [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] предоставлялись повышенные привилегии с одновременным запретом набору разрешений зоны Интернета несущего домена приложения распоряжаться этими привилегиями.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "67663563"
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- **Assert** сущности, предотвращает ограничение неограниченных разрешений, необходимых [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Интернет не будучи ограниченными разрешениями зоны [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)].  
+ **Assert** сущности, предотвращает ограничение неограниченных разрешений, необходимых [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Интернета зоны разрешения XBAP.  
   
  С точки зрения платформы [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] несет ответственность за использование **Assert** правильно; неправильное использование **Assert** может позволить вредоносный код может повышать уровень привилегий. Следовательно, важно только вызвать **Assert** при необходимости, и чтобы убедиться, что "песочницы" ограничения остаются без изменений. Например, изолированному коду не разрешается открывать случайные файлы, но разрешается использовать шрифты. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] позволяет изолированным приложениям использовать функциональность шрифтов путем вызова **Assert**, а также для [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] для чтения файлов, которые заведомо содержат эти шрифты, от имени изолированного приложения.  
   
@@ -178,11 +178,11 @@ ms.locfileid: "67663563"
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>Методология, критическая с точки зрения безопасности  
- В отношении кода [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], который использует разрешения для включения песочницы зоны Интернета для приложений [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], должна поддерживаться наивысшая возможная степень аудита и контроля безопасности. Для облегчения этого требования, .NET Framework обеспечивает новую поддержку для управляемого кода, который повышает привилегии. В частности [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] позволяет определить код, который повышает привилегии и пометьте его атрибутом <xref:System.Security.SecurityCriticalAttribute>; любой код, который не помечен атрибутом <xref:System.Security.SecurityCriticalAttribute> становится *прозрачного* использовании этой методологии. В свою очередь, управляемому коду, который не помечен атрибутом <xref:System.Security.SecurityCriticalAttribute>, запрещено повышать привилегии.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Код, который использует разрешения для включения песочницы зоны Интернета для приложений XBAP должен храниться на наивысшая возможная степень аудита и контроля безопасности. Для облегчения этого требования, .NET Framework обеспечивает новую поддержку для управляемого кода, который повышает привилегии. В частности [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] позволяет определить код, который повышает привилегии и пометьте его атрибутом <xref:System.Security.SecurityCriticalAttribute>; любой код, который не помечен атрибутом <xref:System.Security.SecurityCriticalAttribute> становится *прозрачного* использовании этой методологии. В свою очередь, управляемому коду, который не помечен атрибутом <xref:System.Security.SecurityCriticalAttribute>, запрещено повышать привилегии.  
   
  С точки зрения безопасности методологии, позволяет организацию [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] кода, который повышает привилегии в *с точки зрения безопасности ядра*, а остальное остается прозрачным. Изоляция кода, с точки зрения безопасности позволяет [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] командой инженеров сосредоточиться дополнительный анализ и источника контроль безопасности с точки зрения безопасности ядре, критическом стандартных методов безопасности (см. в разделе [стратегия безопасности WPF — Проектирование безопасности](wpf-security-strategy-security-engineering.md)).  
   
- Обратите внимание на то, что платформа .NET Framework позволяет доверенному коду расширять [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] песочнице зоны Интернета, позволяя разработчикам создавать управляемые сборки, которые помечены атрибутом <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) и развертываются для пользователя глобального кэша СБОРОК. Пометка сборки атрибутом APTCA является исключительно важной операцией безопасности, так как позволяет вызывать эту сборку любому коду, включая вредоносный код из Интернета. При этом необходимо использовать особую осторожность и рекомендации, и пользователи должны указывать, что доверяют этому программному обеспечению, чтобы установить его.  
+ Обратите внимание на то, что платформа .NET Framework позволяет доверенному коду расширять песочницу зоны Интернета XBAP, позволяя разработчикам создавать управляемые сборки, которые помечены атрибутом <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) и развертываются для пользователя глобального кэша СБОРОК. Пометка сборки атрибутом APTCA является исключительно важной операцией безопасности, так как позволяет вызывать эту сборку любому коду, включая вредоносный код из Интернета. При этом необходимо использовать особую осторожность и рекомендации, и пользователи должны указывать, что доверяют этому программному обеспечению, чтобы установить его.  
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Безопасность Microsoft Internet Explorer  

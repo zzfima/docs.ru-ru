@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8bec96ef50416d946b1f12fd503e04f976ca58f1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a1f73b36fc1e3a464155f390c25e956f9d706a73
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662936"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782935"
 ---
 # <a name="icorprofilercallbackremotingclientinvocationstarted-method"></a>Метод ICorProfilerCallback::RemotingClientInvocationStarted
 Уведомляет профилировщик о начале вызова удаленного взаимодействия.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT RemotingClientInvocationStarted();  
 ```  
   

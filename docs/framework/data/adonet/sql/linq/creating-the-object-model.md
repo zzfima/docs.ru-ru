@@ -2,21 +2,21 @@
 title: Создание модели объектов
 ms.date: 03/30/2017
 ms.assetid: 27afce86-9b1d-45fb-8e0b-636bf671a236
-ms.openlocfilehash: 7724d6e75b350e5c57f090d42ef1f49c4d3593b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f1a0d035f2b11f33a9899ededd876155d45de3c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032452"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743585"
 ---
 # <a name="creating-the-object-model"></a>Создание модели объектов
 Объектную модель можно создать из существующей базы данных и использовать ее в заданном по умолчанию состоянии. Кроме того, можно настроить ряд аспектов модели и ее поведение.  
   
- Если вы используете Visual Studio, можно использовать [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для создания объектной модели.  
+ Если вы используете Visual Studio, реляционный конструктор объектов можно использовать для создания объектной модели.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Создание модели объектов на языке Visual Basic или C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
- Описано, как применять средство командной строки SQLMetal. Также содержит ссылку на [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для пользователей Visual Studio  
+ Описано, как применять средство командной строки SQLMetal. Также содержит ссылку на реляционном конструкторе объектов для пользователей Visual Studio  
   
  [Практическое руководство. Создание модели объектов в виде внешнего файла](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
  Содержит описание способов создания внешнего файла сопоставлений вместо использования сопоставления на основе атрибутов.  
