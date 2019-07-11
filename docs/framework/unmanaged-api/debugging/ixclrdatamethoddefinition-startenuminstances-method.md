@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7f45a5b13e767fa6849f307ee96fb822447f1263
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 89473f2a6a3da73ee5d172a3700bdb4d624278ff
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629949"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756297"
 ---
 # <a name="ixclrdatamethoddefinitionstartenuminstances-method"></a>Метод IXCLRDataMethodDefinition::StartEnumInstances
 
@@ -30,7 +30,7 @@ ms.locfileid: "65629949"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 HRESULT StartEnumInstances(
     [in] IXCLRDataAppDomain* appDomain,
     [out] CLRDATA_ENUM *handle
@@ -52,8 +52,8 @@ HRESULT StartEnumInstances(
 ## <a name="requirements"></a>Требования
 
 **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
-**Заголовок.** Нет  
-**Библиотека:** Нет  
+**Заголовок.** None  
+**Библиотека:** None  
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>См. также
