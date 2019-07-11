@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 193caa894b8697a65e8821c01a63dde9cc5b5ccc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b21e08d3bf6845b9fc44d5a5edef0ea39b91da5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608948"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746535"
 ---
 # <a name="getmethodorigin-function"></a>Функция GetMethodOrigin
 Определяет класс, в котором объявлен метод.
@@ -30,7 +30,7 @@ ms.locfileid: "61608948"
     
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT GetMethodOrigin (
    [in] int                 vFunc, 
    [in] IWbemClassObject*   ptr, 

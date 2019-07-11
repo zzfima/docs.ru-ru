@@ -2,19 +2,19 @@
 title: Сопоставление, основанное на атрибутах
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a524e37640959c20c9883aa68e978a89428e43a4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032972"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743615"
 ---
 # <a name="attribute-based-mapping"></a>Сопоставление, основанное на атрибутах
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сопоставляет базу данных SQL Server для [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объектной модели, либо путем применения атрибутов или с помощью внешнего файла сопоставления. В этом разделе представлен подход на основе атрибутов.  
   
- В своей самой простой форме [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сопоставляет базу данных с <xref:System.Data.Linq.DataContext>, таблицу с классом, а столбцы и связи - со свойствами этих классов. Атрибуты также можно использовать для сопоставления иерархии наследования в объектной модели. Дополнительные сведения см. в разделе [Как Создание модели объектов в Visual Basic или C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ В своей самой простой форме [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сопоставляет базу данных с <xref:System.Data.Linq.DataContext>, таблицу с классом, а столбцы и связи - со свойствами этих классов. Атрибуты также можно использовать для сопоставления иерархии наследования в объектной модели. Дополнительные сведения см. в разделе [Практическое руководство. Создание модели объектов в Visual Basic или C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
- Разработчики, использующие Visual Studio обычно выполняют сопоставление, основанное на атрибутах с помощью [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Можно также использовать программу командной строки SQLMetal или вручную написать код атрибутов самостоятельно. Дополнительные сведения см. в разделе [Как Создание модели объектов в Visual Basic или C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Разработчики, использующие Visual Studio обычно выполняют сопоставление на основе атрибутов с помощью реляционного конструктора объектов. Можно также использовать программу командной строки SQLMetal или вручную написать код атрибутов самостоятельно. Дополнительные сведения см. в разделе [Практическое руководство. Создание модели объектов в Visual Basic или C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
 > [!NOTE]
 >  Сопоставление можно также выполнять с помощью внешнего файла XML. Дополнительные сведения см. в разделе [внешнего сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
@@ -24,7 +24,7 @@ ms.locfileid: "62032972"
 ## <a name="databaseattribute-attribute"></a>Атрибут DatabaseAttribute  
  Этот атрибут используется для указания имени базы данных по умолчанию, если оно не предоставлено при подключении. Данный атрибут является необязательным, однако если он используется, следует применить свойство <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>, как описано в следующей таблице.  
   
-|Свойство|Тип|Значение по умолчанию|Описание|  
+|Свойство.|Тип|Значение по умолчанию|Описание|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|См. раздел <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>.|Используется со свойством <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>, указывает имя базы данных.|  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62032972"
 ## <a name="tableattribute-attribute"></a>Атрибут TableAttribute  
  Чтобы определить класс как класс сущности, связанный с таблицей базы данных или представлением, используется атрибут. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] интерпретирует классы, имеющие данный атрибут, как постоянные. В следующей таблице приводится описание свойства <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>.  
   
-|Свойство|Тип|Значение по умолчанию|Описание|  
+|Свойство.|Тип|Значение по умолчанию|Описание|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>|String|Строка, соответствующая имени класса|Определяет класс как класс сущности, связанный с таблицей базы данных.|  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62032972"
   
  В следующей таблице представлено описание свойств этого атрибута.  
   
-|Свойство|Тип|Значение по умолчанию|Описание|  
+|Свойство.|Тип|Значение по умолчанию|Описание|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|Никогда|Указывает среде CLR на необходимость получить значение после выполнения операции вставки или обновления.<br /><br /> Параметры: Always, Never, OnUpdate, OnInsert.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Boolean|`true`|Указывает, что столбец может содержать значения NULL.|  
@@ -68,10 +68,10 @@ ms.locfileid: "62032972"
   
  В следующей таблице представлено описание свойств этого атрибута.  
   
-|Свойство|Тип|Значение по умолчанию|Описание|  
+|Свойство.|Тип|Значение по умолчанию|Описание|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|Boolean|`false`|При задании данного свойства для ассоциации, в которой члены внешнего ключа не поддерживают значение NULL, удаляет объект при установке ассоциации значения NULL.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|String|Нет|Добавляет в ассоциацию поведение удаления.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|String|None|Добавляет в ассоциацию поведение удаления.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|Boolean|`false`|При значении "true" назначает член в качестве внешнего ключа в ассоциации, представляющей отношение базы данных.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|Boolean|`false`|При значении «true» указывает ограничение уникальности для первичного ключа.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A>|String|Идентификатор связанного класса|Назначает один или более членов целевого класса сущности в качестве ключевых значений на другой стороне ассоциации.|  
@@ -87,7 +87,7 @@ ms.locfileid: "62032972"
   
  В следующей таблице представлено описание свойств этого атрибута.  
   
-|Свойство|Тип|Значение по умолчанию|Описание|  
+|Свойство.|Тип|Значение по умолчанию|Описание|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|String|Отсутствует. Необходимо предоставить значение.|Указывает значение кода дискриминатора.|  
 |<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|Boolean|`false`|При значении "true" создает объект данного типа, когда значение дискриминатора в хранилище не соответствует ни одному заданному значению.|  
@@ -100,7 +100,7 @@ ms.locfileid: "62032972"
   
  В следующей таблице представлено описание свойств этого атрибута.  
   
-|Свойство|Тип|Значение по умолчанию|Описание|  
+|Свойство.|Тип|Значение по умолчанию|Описание|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|Boolean|`false`|Если значение равно false, указывает сопоставление с хранимой процедурой. При значении «true» указывает сопоставление с пользовательской функцией.|  
 |<xref:System.Data.Linq.Mapping.FunctionAttribute.Name%2A>|String|Строка, соответствующая имени базы данных|Указывает имя хранимой процедуры или пользовательской функции.|  
@@ -112,19 +112,19 @@ ms.locfileid: "62032972"
   
  В следующей таблице представлено описание свойств этого атрибута.  
   
-|Свойство|Тип|Значение по умолчанию|Описание|  
+|Свойство.|Тип|Значение по умолчанию|Описание|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|String|Нет|Указывает тип базы данных.|  
+|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|String|None|Указывает тип базы данных.|  
 |<xref:System.Data.Linq.Mapping.ParameterAttribute.Name%2A>|String|Строка, соответствующая имени параметра в базе данных|Указывает имя для параметра.|  
   
  Дополнительные сведения см. в разделе <xref:System.Data.Linq.Mapping.ParameterAttribute>.  
   
-## <a name="resulttypeattribute-attribute"></a>Атрибут ResultTypeAttribute   
+## <a name="resulttypeattribute-attribute"></a>Атрибут ResultTypeAttribute  
  Этот атрибут используется для указания типа результата.  
   
  В следующей таблице представлено описание свойств этого атрибута.  
   
-|Свойство|Тип|Значение по умолчанию|Описание|  
+|Свойство.|Тип|Значение по умолчанию|Описание|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.ResultTypeAttribute.Type%2A>|Тип|(Нет)|Используется в методах, сопоставленных с хранимыми процедурами, возвращающих <xref:System.Data.Linq.IMultipleResults>. Объявляет допустимые или ожидаемые сопоставления типов для хранимых процедур.|  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62032972"
   
  В следующей таблице представлено описание свойств этого атрибута.  
   
-|Свойство|Тип|Значение по умолчанию|Описание|  
+|Свойство.|Тип|Значение по умолчанию|Описание|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.DataAttribute.Name%2A>|String|Строка, соответствующая имени базы данных|Указывает имя таблицы, столбца и т. д.|  
 |<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>|String|Открытые методы доступа|Указывает имя базового поля хранения.|  

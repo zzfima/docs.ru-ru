@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5e14749c3596ad22a435a11f75c928110c434de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c2d2e5454a26111748f9676cfe1ce5caa76cad5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969844"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772849"
 ---
 # <a name="iclrerrorreportingmanagerendcustomdump-method"></a>Метод ICLRErrorReportingManager::EndCustomDump
 Удаляет конфигурацию пользовательского дампа стека, указанное в вызове [ICLRErrorReportingManager::BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT EndCustomDump ();  
 ```  
   

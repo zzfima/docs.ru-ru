@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 325db05cc322d85e836ca9ba62b6a169e8965241
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ef32a963b73f2109b9747ef303e8ccd6a729838
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766367"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778262"
 ---
 # <a name="isymunmanagedvariablegetendoffset-method"></a>Метод ISymUnmanagedVariable::GetEndOffset
 Возвращает конечное смещение переменной внутри родительского. Если это локальной переменной в области, конечное смещение выходит в границах смещений, определенных для данной области.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT GetEndOffset(  
     [out, retval] ULONG32* pRetVal);  
 ```  

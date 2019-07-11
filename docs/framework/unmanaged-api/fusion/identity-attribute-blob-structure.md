@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 074cca51cee2b0227e1d124f1d40a2ffc31e3c85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e478cb89821ce8666f1746e752e06d2caa3ad2bb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697359"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751591"
 ---
 # <a name="identityattributeblob-structure"></a>Структура IDENTITY_ATTRIBUTE_BLOB
 Содержит сведения об отдельном атрибуте в сборке и состоит из трех `DWORD`s. Каждый `DWORD` — это смещение в буфер символов, полученных при `CurrentIntoBuffer` метод [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) интерфейса  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 typedef struct _IDENTITY_ATTRIBUTE_BLOB {  
     DWORD  ofsNamespace;  
     DWORD  ofsName;  
@@ -57,7 +57,7 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 4. Вызовите `CurrentIntoBuffer` метод `IEnumIDENTITY_ATTRIBUTE` интерфейс. Этот метод копирует атрибуты `Namespace`, `Name`, и `Value` в буфере символов. Три смещения в эти строки будут доступны в `IDENTITY_ATTRIBUTE_BLOB` структуры.  
   
-```  
+```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
   
 #include "stdafx.h"  

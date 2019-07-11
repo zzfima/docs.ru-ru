@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7e600f29a9036bb28031bd7854bc8cbb34c4566a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84ccbd7a8be7d90a541fb2d54baa3d7f66d3d31e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905506"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746114"
 ---
 # <a name="iceegengetsectionblock-method"></a>Метод ICeeGen::GetSectionBlock
 Получает блок разделе базы кода.  
@@ -31,7 +31,7 @@ ms.locfileid: "61905506"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT GetSectionBlock (  
     [in]  HCEESECTION    section,     
     [in]  ULONG          len,  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cdc1b0de9795a000ee680df880c73acc4f711db2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a390187e5fd73824f2fad026365371642235a6f9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044373"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777878"
 ---
 # <a name="imetadataconvertergetmetadatafromtypelib-method"></a>Метод IMetaDataConverter::GetMetaDataFromTypeLib
 Получает указатель интерфейса на [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) экземпляр, представляющий подпись метаданных для библиотеки типов, представленного указанным `ITypeLib` экземпляра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT GetMetaDataFromTypeLib (  
     [in]  ITypeLib        *pITL,   
     [out] IMetaDataImport **ppMDI  

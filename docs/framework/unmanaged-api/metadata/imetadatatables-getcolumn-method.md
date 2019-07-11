@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90ce56b3959c4768ef9cb6a9c551d53c5300a39e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22f9ceab2f01ac12762710f313c56f3f0ee4e6be
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049782"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781534"
 ---
 # <a name="imetadatatablesgetcolumn-method"></a>Метод IMetaDataTables::GetColumn
 Возвращает указатель на значение, содержащееся в ячейке указанного столбца и строки в данной таблице.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT GetColumn (   
     [in]  ULONG   ixTbl,  
     [in]  ULONG   ixCol,  

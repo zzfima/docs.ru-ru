@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 242618fb2a5ab748132baf68e24240d1ffaf2301
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: afc2192fe46ed75ed6fb75e0d58268152856b746
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139845"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770780"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a>Метод IMetaDataEmit::GetTokenFromSig
 Получает токен для заданной подписью метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT GetTokenFromSig (   
     [in]  PCCOR_SIGNATURE pvSig,   
     [in]  ULONG       cbSig,   

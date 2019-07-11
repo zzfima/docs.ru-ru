@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38b6785afae75888398f1c0d3d69be2ce21d67bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cbc0262062eddb363b0a00535a2d099100124b67
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993100"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748074"
 ---
 # <a name="iclrstrongnamestrongnamegetblob-method"></a>Метод ICLRStrongName::StrongNameGetBlob
 Заполняет указанный буфер двоичным представлением исполняемого файла по указанному адресу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT StrongNameGetBlob (  
     [in]  LPCWSTR    wszFilePath,  
     [in]  BYTE       *pbBlob,  

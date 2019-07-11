@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a236dcae29d00afe3b72dce8f81d657fb4fac28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a070d2e863aecf7b13eb59a118848b96d2cccc17
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598926"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781308"
 ---
 # <a name="functionidmapper2-function"></a>Функция FunctionIDMapper2
 Уведомляет профилировщик о заданному идентификатору функции может быть альтернативный идентификатор для использования в [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md), и [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md), или[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), и [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) обратные вызовы для этой функции. `FunctionIDMapper2` также позволяет профилировщику указать, желает ли он получать обратные вызовы для этой функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 UINT_PTR __stdcall FunctionIDMapper2 (  
     [in]  FunctionID  funcId,  
     [in]  void * clientData,  

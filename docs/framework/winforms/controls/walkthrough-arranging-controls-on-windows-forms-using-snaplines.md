@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: a0b78afb653d3a47fa12b856de730131e5f8448e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c91fecf9e786f4a8e35486e7b30e9efe36c972e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606416"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771643"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки
 Точное расположение элементов управления на форме является важным для многих приложений. В конструкторе Windows Forms предоставляет множество средств форматирования, для выполнения этой задачи. Одним из наиболее важных является <xref:System.Windows.Forms.Design.Behavior.SnapLine> функции.  
@@ -53,7 +53,7 @@ ms.locfileid: "64606416"
 ## <a name="creating-the-project"></a>Создание проекта  
  Первым шагом является создание проекта и настройка формы.  
   
-#### <a name="to-create-the-project"></a>Создание проекта  
+### <a name="to-create-the-project"></a>Создание проекта  
   
 1. Создайте проект приложения на основе Windows с именем «SnaplineExample» (**файл** > **New** > **проекта**  >  **Visual C#** или **Visual Basic** > **классический рабочий стол** > **Windows Forms Application**).  
   
@@ -62,7 +62,7 @@ ms.locfileid: "64606416"
 ## <a name="spacing-and-aligning-controls-using-snaplines"></a>Интервал и выравнивание элементов управления с помощью линий привязки  
  Линии привязки позволяют легко и точно для выравнивания элементов управления в форме. Они отображаются при перемещении выбранного элемента или элементов управления рядом с положением, которое будет соответствовать с другим элементом управления или набора элементов управления. Выбор «привяжется» предлагаемую позицию при перемещении за другими элементами управления.  
   
-#### <a name="to-arrange-controls-using-snaplines"></a>Размещение элементов управления с помощью линий привязки  
+### <a name="to-arrange-controls-using-snaplines"></a>Размещение элементов управления с помощью линий привязки  
   
 1. Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в свою форму.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "64606416"
 ## <a name="aligning-to-form-and-container-margins"></a>Выравнивание по полям формы и контейнера  
  Линии привязки помогают выровнять элементы управления формы и контейнера поля согласованным способом.  
   
-#### <a name="to-align-controls-to-form-and-container-margins"></a>Для выравнивания элементов управления для поля формы и контейнера  
+### <a name="to-align-controls-to-form-and-container-margins"></a>Для выравнивания элементов управления для поля формы и контейнера  
   
 1. Выберите один из <xref:System.Windows.Forms.Button> управляет и переместите его ближе к правой границе формы, пока не появится линия привязки. Линии привязки расстояние от правой границы складывается из элемента управления <xref:System.Windows.Forms.Control.Margin%2A> свойство и формы <xref:System.Windows.Forms.Control.Padding%2A> значения свойств.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "64606416"
 ## <a name="aligning-to-grouped-controls"></a>Выравнивание по сгруппированным элементам управления  
  Линии привязки можно использовать для выравнивания сгруппированных элементов управления, а также элементов управления в пределах <xref:System.Windows.Forms.GroupBox> элемента управления.  
   
-#### <a name="to-align-to-grouped-controls"></a>Выравнивание по сгруппированным элементам управления  
+### <a name="to-align-to-grouped-controls"></a>Выравнивание по сгруппированным элементам управления  
   
 1. Выберите два элемента управления в форме. Перемещение выделения и обратите внимание на линии привязки, между выбранными элементами и другими элементами управления.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "64606416"
 ## <a name="using-snaplines-to-place-a-control-by-outlining-its-size"></a>С помощью линий привязки для размещения элемента управления, его размер структуры  
  Линии привязки помогают выравнивать элементы управления при их первом размещении на форме.  
   
-#### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>Для размещения элемента управления, структурирование его размер с помощью линий привязки  
+### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>Для размещения элемента управления, структурирование его размер с помощью линий привязки  
   
 1. В **панели элементов**щелкните значок элемента управления <xref:System.Windows.Forms.Button> . Не перетаскивайте его в форму.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "64606416"
 ## <a name="using-snaplines-when-dragging-a-control-from-the-toolbox"></a>С помощью линий привязки, при перетаскивании элемента управления из панели элементов  
  Линии привязки помогают выравнивать элементы управления, при перетаскивании их из **элементов** на форму.  
   
-#### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>Чтобы использовать линии привязки, при перетаскивании элемента управления из панели элементов  
+### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>Чтобы использовать линии привязки, при перетаскивании элемента управления из панели элементов  
   
 1. Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** на форму, но не отпустите кнопку мыши.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "64606416"
 ## <a name="resizing-controls-using-snaplines"></a>Изменение размеров элементов управления с помощью линий привязки  
  Линии привязки помогают выравнивать элементы управления при изменении их размеров.  
   
-#### <a name="to-resize-a-control-using-snaplines"></a>Размер элемента управления с помощью линий привязки  
+### <a name="to-resize-a-control-using-snaplines"></a>Размер элемента управления с помощью линий привязки  
   
 1. Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в свою форму.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "64606416"
 ## <a name="aligning-a-label-to-a-controls-text"></a>Выравнивание метки по тексту элемента управления  
  Некоторые элементы управления линии привязки для выравнивания другие элементы управления для отображаемого текста.  
   
-#### <a name="to-align-a-label-to-a-controls-text"></a>Для выравнивания метки к тексту элемента управления  
+### <a name="to-align-a-label-to-a-controls-text"></a>Для выравнивания метки к тексту элемента управления  
   
 1. Перетащите элемент управления <xref:System.Windows.Forms.TextBox> из **панели элементов** в свою форму. При размещении <xref:System.Windows.Forms.TextBox> в форму, щелкните глиф смарт тега и выберите **значение текста textBox1** параметр. Дополнительные сведения см. в разделе [Пошаговое руководство: Выполнение типичных задач, с помощью смарт-тегов в Windows Forms элементы управления](performing-common-tasks-using-smart-tags-on-wf-controls.md).  
   
@@ -178,7 +178,7 @@ ms.locfileid: "64606416"
 ## <a name="using-snaplines-with-keyboard-navigation"></a>С помощью линий привязки с помощью клавиатуры  
  Линии привязки помогают выравнивать элементы управления, когда вы их расположении с помощью клавиши со стрелками.  
   
-#### <a name="to-use-snaplines-with-keyboard-navigation"></a>Чтобы использовать линии привязки с помощью клавиатуры  
+### <a name="to-use-snaplines-with-keyboard-navigation"></a>Чтобы использовать линии привязки с помощью клавиатуры  
   
 1. Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в свою форму. Поместите его в левом верхнем углу формы.  
   
@@ -199,7 +199,7 @@ ms.locfileid: "64606416"
 ## <a name="snaplines-and-layout-panels"></a>Линии привязки и панели макета  
  Линии привязки отключаются внутри панели макета.  
   
-#### <a name="to-selectively-disable-snaplines"></a>Чтобы выборочно отключить линии привязки  
+### <a name="to-selectively-disable-snaplines"></a>Чтобы выборочно отключить линии привязки  
   
 1. Перетащите элемент управления <xref:System.Windows.Forms.TableLayoutPanel> из **панели элементов** в свою форму.  
   
@@ -214,13 +214,13 @@ ms.locfileid: "64606416"
 ## <a name="disabling-snaplines"></a>Отключение линий привязки  
  Линии привязки включены по умолчанию. Вы можете выборочно отключить линии привязки, или их можно отключить в среде разработки.  
   
-#### <a name="to-selectively-disable-snaplines"></a>Чтобы выборочно отключить линии привязки  
+### <a name="to-selectively-disable-snaplines"></a>Чтобы выборочно отключить линии привязки  
   
 - Нажмите клавишу ALT и при перемещении элемента управления по форме.  
   
      Обратите внимание, что линии привязки не появляются, и элемент управления не привязываются к одному из возможных положений выравнивания.  
   
-#### <a name="to-disable-snaplines-in-the-design-environment"></a>Чтобы отключить линии привязки в среде разработки  
+### <a name="to-disable-snaplines-in-the-design-environment"></a>Чтобы отключить линии привязки в среде разработки  
   
 1. Из **средства** откройте в меню **параметры** диалоговое окно. Откройте диалоговое окно конструктора Windows Forms. Дополнительные сведения см. в разделе [Общие, конструктор Windows Forms, диалоговое окно параметров](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100)).  
   

@@ -15,19 +15,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1da347fd85e1b3856615faf49c60b607cc7f0da
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: c7325e84d8fe4df9a31543426c6376d0941306fd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025836"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748451"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacetypes-method"></a>Метод ICorDebugComObjectValue::GetCachedInterfaceTypes
 Предоставляет перечислитель для типов интерфейсов, что текущий объект был приведен к или использовать в качестве.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT GetCachedInterfaceTypes(  
     [in] BOOL bIInspectableOnly,  
     [out] ICorDebugTypeEnum **ppInterfacesEnum);  

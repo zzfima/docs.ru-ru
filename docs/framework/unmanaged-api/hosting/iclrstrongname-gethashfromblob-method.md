@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f84d50579feade09df1b42a8e2f0c6b3e6a94fac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4839f098a41e0d2b8e87616791b69ffd83e139f0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771661"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748200"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>Метод ICLRStrongName::GetHashFromBlob
 Получает хэш сборки по указанному адресу памяти с помощью указанного хэш-алгоритма.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT GetHashFromBlob (  
     [in]  BYTE    *pbBlob,  
     [in]  DWORD   cchBlob,  

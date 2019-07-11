@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a50c9f7fc5921d3e5c21dd3566de81ac2249f3dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9074201cb56ad9e6c4ddadc8468d2ceadbafcb75
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796608"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749311"
 ---
 # <a name="ihosttaskmanagerswitchtotask-method"></a>Метод IHostTaskManager::SwitchToTask
 Уведомляет основное приложение, что он должен исходящего переключения текущей задачи.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT SwitchToTask (  
     [in] DWORD option  
 );  

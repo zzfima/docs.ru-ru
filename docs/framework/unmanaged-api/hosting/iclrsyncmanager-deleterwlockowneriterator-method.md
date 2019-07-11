@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82988d25926a4e61d91a98e7cd5995dacde4e5b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a30ac0ab8c985af04709ddd8e8e5dd9bca776dcb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763703"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759088"
 ---
 # <a name="iclrsyncmanagerdeleterwlockowneriterator-method"></a>Метод ICLRSyncManager::DeleteRWLockOwnerIterator
 Запрашивает, что общеязыковая среда выполнения (CLR) уничтожить итератор, который был создан с помощью вызова [ICLRSyncManager::CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT DeleteRWLockOwnerIterator (  
     [in] SIZE_T  Iterator  
 );  

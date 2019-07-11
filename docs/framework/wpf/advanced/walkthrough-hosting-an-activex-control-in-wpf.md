@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: 976679e4b6e6bba7288756616db639ed61472591
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f19186380b0cbc71cdd64013ca5e49361ba26cda
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605444"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778383"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Пошаговое руководство. Размещение элемента управления ActiveX в приложении WPF
 Для улучшенного взаимодействия с браузерами, можно использовать [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] элементов управления в вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложения на основе. В этом пошаговом руководстве показано, как разместить [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] как элемент управления на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] страницы.
@@ -37,7 +37,7 @@ ms.locfileid: "64605444"
 
 ## <a name="creating-the-project"></a>Создание проекта
 
-#### <a name="to-create-and-set-up-the-project"></a>Создание и настройка проекта
+### <a name="to-create-and-set-up-the-project"></a>Создание и настройка проекта
 
 1. Создание проекта приложения WPF с именем `HostingAxInWpf`.
 
@@ -62,7 +62,7 @@ ms.locfileid: "64605444"
 ## <a name="creating-the-activex-control"></a>Создание элемента управления ActiveX
  [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] автоматически создает <xref:System.Windows.Forms.AxHost> класс-оболочку для [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] управления, когда элемент управления добавляется в рабочую область конструирования. В следующей процедуре создается управляемая сборка с именем AxInterop.WMPLib.dll.
 
-#### <a name="to-create-the-activex-control"></a>Чтобы создать элемент управления ActiveX
+### <a name="to-create-the-activex-control"></a>Чтобы создать элемент управления ActiveX
 
 1. Откройте WmpAxControl.vb или WmpAxControl.cs в конструкторе Windows Forms.
 
@@ -74,7 +74,7 @@ ms.locfileid: "64605444"
 
 ## <a name="hosting-the-activex-control-on-a-wpf-page"></a>Размещение элемента управления ActiveX в страницу WPF
 
-#### <a name="to-host-the-activex-control"></a>Размещение элемента управления ActiveX
+### <a name="to-host-the-activex-control"></a>Размещение элемента управления ActiveX
 
 1. В проекте HostingAxInWpf, добавьте ссылку на созданный [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] сборка взаимодействия.
 

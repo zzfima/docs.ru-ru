@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: ff2b2f6575c82f3769823431ec6363775bf9d698
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ff6f8b58e01c86ae1c1e2e1533b1997ba2eb6b0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616070"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742886"
 ---
 # <a name="serialization"></a>Сериализация
 В этом разделе описывается [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] возможности сериализации. В приведенных ниже подразделах приводятся сведения о добавлении сериализации в процессе создания кода во время разработки, а также о поведении классов [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] при сериализации во время выполнения.  
   
  Код сериализации можно добавить во время разработки одним из перечисленных ниже методов.  
   
-- В [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], изменить **режим сериализации** свойства **Unidirectional**.  
+- В реляционном конструкторе объектов, изменить **режим сериализации** свойства **Unidirectional**.  
   
 - В программе командной строки SQLMetal добавьте **/serialization** параметр. Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   

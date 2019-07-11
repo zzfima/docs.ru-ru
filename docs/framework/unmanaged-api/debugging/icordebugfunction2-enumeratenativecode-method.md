@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4d15d9ae63e63f98ab73e250df558dfa16002a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61dcf014a65f524d2b2e7b92bcc7f007d1a47125
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61959969"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754511"
 ---
 # <a name="icordebugfunction2enumeratenativecode-method"></a>Метод ICorDebugFunction2::EnumerateNativeCode
 Получает указатель интерфейса на объект, содержащий инструкции машинного кода в функции, на которые ссылается этот объект ICorDebugFunction2 ICorDebugCodeEnum.  
@@ -32,7 +32,7 @@ ms.locfileid: "61959969"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT EnumerateNativeCode (  
     [out] ICorDebugCodeEnum   **ppCodeEnum  
 );  

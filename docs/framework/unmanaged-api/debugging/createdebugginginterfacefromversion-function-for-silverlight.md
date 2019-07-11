@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77164f9d8a1641ba37fa504d09d77ec6aecc3db5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 96968956b513e1ae80a25f5fb4afea48bf888876
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965819"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739267"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>Функция CreateDebuggingInterfaceFromVersion Silverlight
 Принимает общую строку версии среды выполнения (CLR) языка, возвращенный [функция CreateVersionStringFromModule](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)и возвращает соответствующий интерфейс отладчика (как правило, [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)).  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT CreateDebuggingInterfaceFromVersion (  
     [in]  LPCWSTR      szDebuggeeVersion,  
     [out] IUnknown**   ppCordb,  

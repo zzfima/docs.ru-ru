@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfca06c656f3274f4c5ddb06373a0296dc5e6905
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dde8971f9f08cc9e0930f6ea133d9a06b22e4c96
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995193"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761421"
 ---
 # <a name="icordebugmanagedcallbackloadmodule-method"></a>Метод ICorDebugManagedCallback::LoadModule
 Уведомляет отладчик, что общий модуль среды выполнения (CLR) язык был успешно загружен.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT LoadModule (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugModule    *pModule  
