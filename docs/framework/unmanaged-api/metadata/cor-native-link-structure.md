@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7024140ed9b870b5db38dba7e9b13321dd37386a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae518e5a736a78a261dc3821d53d93afee95a271
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046167"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779995"
 ---
-# <a name="cornativelink-structure"></a><span data-ttu-id="9fc14-102">Структура COR_NATIVE_LINK</span><span class="sxs-lookup"><span data-stu-id="9fc14-102">COR_NATIVE_LINK Structure</span></span>
-<span data-ttu-id="9fc14-103">Содержит сведения, используемые для связи с машинным кодом.</span><span class="sxs-lookup"><span data-stu-id="9fc14-103">Contains information that is used to link native code.</span></span>  
+# <a name="cornativelink-structure"></a><span data-ttu-id="6c3b9-102">Структура COR_NATIVE_LINK</span><span class="sxs-lookup"><span data-stu-id="6c3b9-102">COR_NATIVE_LINK Structure</span></span>
+<span data-ttu-id="6c3b9-103">Содержит сведения, используемые для связи с машинным кодом.</span><span class="sxs-lookup"><span data-stu-id="6c3b9-103">Contains information that is used to link native code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9fc14-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9fc14-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6c3b9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6c3b9-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef struct   
 {  
     BYTE        m_linkType;  
@@ -37,25 +37,25 @@ typedef struct
 } COR_NATIVE_LINK;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="9fc14-105">Участники</span><span class="sxs-lookup"><span data-stu-id="9fc14-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="6c3b9-105">Участники</span><span class="sxs-lookup"><span data-stu-id="6c3b9-105">Members</span></span>  
   
-|<span data-ttu-id="9fc14-106">Член</span><span class="sxs-lookup"><span data-stu-id="9fc14-106">Member</span></span>|<span data-ttu-id="9fc14-107">Описание</span><span class="sxs-lookup"><span data-stu-id="9fc14-107">Description</span></span>|  
+|<span data-ttu-id="6c3b9-106">Член</span><span class="sxs-lookup"><span data-stu-id="6c3b9-106">Member</span></span>|<span data-ttu-id="6c3b9-107">Описание</span><span class="sxs-lookup"><span data-stu-id="6c3b9-107">Description</span></span>|  
 |------------|-----------------|  
-|`m_linkType`|<span data-ttu-id="9fc14-108">Тип, связанный в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="9fc14-108">The type to be linked in native code.</span></span> <span data-ttu-id="9fc14-109">Это значение является одним из [CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) значения.</span><span class="sxs-lookup"><span data-stu-id="9fc14-109">This value is one of the [CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) values.</span></span>|  
-|`m_flags`|<span data-ttu-id="9fc14-110">Флаги, используемые компоновщиком при связывании машинного кода.</span><span class="sxs-lookup"><span data-stu-id="9fc14-110">Flags used by the linker when linking native code.</span></span> <span data-ttu-id="9fc14-111">Это значение является одним из [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) значения.</span><span class="sxs-lookup"><span data-stu-id="9fc14-111">This value is one of the [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) values.</span></span>|  
-|`m_entryPoint`|<span data-ttu-id="9fc14-112">Маркер метаданных MemberRef, представляющий точку входа.</span><span class="sxs-lookup"><span data-stu-id="9fc14-112">The MemberRef metadata token that represents the entry point.</span></span> <span data-ttu-id="9fc14-113">Формат `lib:entrypoint`.</span><span class="sxs-lookup"><span data-stu-id="9fc14-113">The format is `lib:entrypoint`.</span></span>|  
+|`m_linkType`|<span data-ttu-id="6c3b9-108">Тип, связанный в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="6c3b9-108">The type to be linked in native code.</span></span> <span data-ttu-id="6c3b9-109">Это значение является одним из [CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) значения.</span><span class="sxs-lookup"><span data-stu-id="6c3b9-109">This value is one of the [CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) values.</span></span>|  
+|`m_flags`|<span data-ttu-id="6c3b9-110">Флаги, используемые компоновщиком при связывании машинного кода.</span><span class="sxs-lookup"><span data-stu-id="6c3b9-110">Flags used by the linker when linking native code.</span></span> <span data-ttu-id="6c3b9-111">Это значение является одним из [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) значения.</span><span class="sxs-lookup"><span data-stu-id="6c3b9-111">This value is one of the [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) values.</span></span>|  
+|`m_entryPoint`|<span data-ttu-id="6c3b9-112">Маркер метаданных MemberRef, представляющий точку входа.</span><span class="sxs-lookup"><span data-stu-id="6c3b9-112">The MemberRef metadata token that represents the entry point.</span></span> <span data-ttu-id="6c3b9-113">Формат `lib:entrypoint`.</span><span class="sxs-lookup"><span data-stu-id="6c3b9-113">The format is `lib:entrypoint`.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9fc14-114">Требования</span><span class="sxs-lookup"><span data-stu-id="9fc14-114">Requirements</span></span>  
- <span data-ttu-id="9fc14-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9fc14-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6c3b9-114">Требования</span><span class="sxs-lookup"><span data-stu-id="6c3b9-114">Requirements</span></span>  
+ <span data-ttu-id="6c3b9-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6c3b9-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9fc14-116">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9fc14-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6c3b9-116">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6c3b9-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9fc14-117">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9fc14-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="6c3b9-117">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6c3b9-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9fc14-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9fc14-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6c3b9-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6c3b9-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9fc14-119">См. также</span><span class="sxs-lookup"><span data-stu-id="9fc14-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6c3b9-119">См. также</span><span class="sxs-lookup"><span data-stu-id="6c3b9-119">See also</span></span>
 
-- [<span data-ttu-id="9fc14-120">Структуры метаданных</span><span class="sxs-lookup"><span data-stu-id="9fc14-120">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
-- [<span data-ttu-id="9fc14-121">Перечисление CorNativeLinkType</span><span class="sxs-lookup"><span data-stu-id="9fc14-121">CorNativeLinkType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)
-- [<span data-ttu-id="9fc14-122">Перечисление CorNativeLinkFlags</span><span class="sxs-lookup"><span data-stu-id="9fc14-122">CorNativeLinkFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)
+- [<span data-ttu-id="6c3b9-120">Структуры метаданных</span><span class="sxs-lookup"><span data-stu-id="6c3b9-120">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [<span data-ttu-id="6c3b9-121">Перечисление CorNativeLinkType</span><span class="sxs-lookup"><span data-stu-id="6c3b9-121">CorNativeLinkType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)
+- [<span data-ttu-id="6c3b9-122">Перечисление CorNativeLinkFlags</span><span class="sxs-lookup"><span data-stu-id="6c3b9-122">CorNativeLinkFlags Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)

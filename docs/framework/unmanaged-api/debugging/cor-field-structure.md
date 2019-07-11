@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 691041632312bf8ac7c82a11724dcd725e14a420
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2efe159eaa8b49d4d3825e9737593d0a12fc4d4c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609494"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740736"
 ---
-# <a name="corfield-structure"></a><span data-ttu-id="0d577-102">Структура COR_FIELD</span><span class="sxs-lookup"><span data-stu-id="0d577-102">COR_FIELD Structure</span></span>
-<span data-ttu-id="0d577-103">Предоставляет сведения о поле в объекте.</span><span class="sxs-lookup"><span data-stu-id="0d577-103">Provides information about a field in an object.</span></span>  
+# <a name="corfield-structure"></a><span data-ttu-id="89bf4-102">Структура COR_FIELD</span><span class="sxs-lookup"><span data-stu-id="89bf4-102">COR_FIELD Structure</span></span>
+<span data-ttu-id="89bf4-103">Предоставляет сведения о поле в объекте.</span><span class="sxs-lookup"><span data-stu-id="89bf4-103">Provides information about a field in an object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0d577-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0d577-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="89bf4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="89bf4-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef struct COR_FIELD{  
     mdFieldDef token;  
     ULONG32 offset;  
@@ -37,27 +37,27 @@ typedef struct COR_FIELD{
 } COR_FIELD;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="0d577-105">Участники</span><span class="sxs-lookup"><span data-stu-id="0d577-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="89bf4-105">Участники</span><span class="sxs-lookup"><span data-stu-id="89bf4-105">Members</span></span>  
   
-|<span data-ttu-id="0d577-106">Член</span><span class="sxs-lookup"><span data-stu-id="0d577-106">Member</span></span>|<span data-ttu-id="0d577-107">Описание</span><span class="sxs-lookup"><span data-stu-id="0d577-107">Description</span></span>|  
+|<span data-ttu-id="89bf4-106">Член</span><span class="sxs-lookup"><span data-stu-id="89bf4-106">Member</span></span>|<span data-ttu-id="89bf4-107">Описание</span><span class="sxs-lookup"><span data-stu-id="89bf4-107">Description</span></span>|  
 |------------|-----------------|  
-|`token`|<span data-ttu-id="0d577-108">`mdFieldDef` Токен, который может использоваться для получения сведений о поле.</span><span class="sxs-lookup"><span data-stu-id="0d577-108">An `mdFieldDef` token that can be used to get field information.</span></span>|  
-|`offset`|<span data-ttu-id="0d577-109">Смещение в байтах к данным поля в объекте.</span><span class="sxs-lookup"><span data-stu-id="0d577-109">The offset, in bytes, to the field data in the object.</span></span>|  
-|`id`|<span data-ttu-id="0d577-110">Объект [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) значение, определяющее тип этого поля.</span><span class="sxs-lookup"><span data-stu-id="0d577-110">A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) value that identifies the type of this field.</span></span>|  
-|`fieldType`|<span data-ttu-id="0d577-111">CorElementType значение перечисления, указывающее тип поля.</span><span class="sxs-lookup"><span data-stu-id="0d577-111">A CorElementType enumeration value that indicates the type of the field.</span></span>|  
+|`token`|<span data-ttu-id="89bf4-108">`mdFieldDef` Токен, который может использоваться для получения сведений о поле.</span><span class="sxs-lookup"><span data-stu-id="89bf4-108">An `mdFieldDef` token that can be used to get field information.</span></span>|  
+|`offset`|<span data-ttu-id="89bf4-109">Смещение в байтах к данным поля в объекте.</span><span class="sxs-lookup"><span data-stu-id="89bf4-109">The offset, in bytes, to the field data in the object.</span></span>|  
+|`id`|<span data-ttu-id="89bf4-110">Объект [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) значение, определяющее тип этого поля.</span><span class="sxs-lookup"><span data-stu-id="89bf4-110">A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) value that identifies the type of this field.</span></span>|  
+|`fieldType`|<span data-ttu-id="89bf4-111">CorElementType значение перечисления, указывающее тип поля.</span><span class="sxs-lookup"><span data-stu-id="89bf4-111">A CorElementType enumeration value that indicates the type of the field.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0d577-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="0d577-112">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="89bf4-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="89bf4-112">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0d577-113">Требования</span><span class="sxs-lookup"><span data-stu-id="0d577-113">Requirements</span></span>  
- <span data-ttu-id="0d577-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0d577-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="89bf4-113">Требования</span><span class="sxs-lookup"><span data-stu-id="89bf4-113">Requirements</span></span>  
+ <span data-ttu-id="89bf4-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="89bf4-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0d577-115">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0d577-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="89bf4-115">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="89bf4-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0d577-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0d577-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="89bf4-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="89bf4-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0d577-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0d577-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="89bf4-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89bf4-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0d577-118">См. также</span><span class="sxs-lookup"><span data-stu-id="0d577-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="89bf4-118">См. также</span><span class="sxs-lookup"><span data-stu-id="89bf4-118">See also</span></span>
 
-- [<span data-ttu-id="0d577-119">Структуры отладки</span><span class="sxs-lookup"><span data-stu-id="0d577-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="0d577-120">Отладка</span><span class="sxs-lookup"><span data-stu-id="0d577-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="89bf4-119">Структуры отладки</span><span class="sxs-lookup"><span data-stu-id="89bf4-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="89bf4-120">Отладка</span><span class="sxs-lookup"><span data-stu-id="89bf4-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -2,28 +2,28 @@
 title: Практическое руководство. Как создать модель объектов в виде внешнего файла
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 2e439cd6628daa5b574be2049393dc2964896679
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 828e92903447b5c7cd3d7d27ed72bfe61d0dc6a9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033752"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743290"
 ---
-# <a name="how-to-generate-the-object-model-as-an-external-file"></a><span data-ttu-id="754db-102">Практическое руководство. Как создать модель объектов в виде внешнего файла</span><span class="sxs-lookup"><span data-stu-id="754db-102">How to: Generate the Object Model as an External File</span></span>
-<span data-ttu-id="754db-103">В качестве альтернативы сопоставления на основе атрибутов с помощью инструмента командной строки SQLMetal можно создать собственную объектную модель в виде внешнего файла XML.</span><span class="sxs-lookup"><span data-stu-id="754db-103">As an alternative to attribute-based mapping, you can generate your object model as an external XML file by using the SQLMetal command-line tool.</span></span> <span data-ttu-id="754db-104">Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="754db-104">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="754db-105">За счет использования внешнего XML-файла сопоставления можно снизить перегруженность кода.</span><span class="sxs-lookup"><span data-stu-id="754db-105">By using an external XML mapping file, you reduce clutter in your code.</span></span> <span data-ttu-id="754db-106">Кроме того, можно изменить поведение, отредактировав внешний файл без повторной компиляции двоичных файлов приложения.</span><span class="sxs-lookup"><span data-stu-id="754db-106">You can also change behavior by modifying the external file without recompiling the binaries of your application.</span></span> <span data-ttu-id="754db-107">Дополнительные сведения см. в разделе [внешнего сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="754db-107">For more information, see [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).</span></span>  
+# <a name="how-to-generate-the-object-model-as-an-external-file"></a><span data-ttu-id="12206-102">Практическое руководство. Как создать модель объектов в виде внешнего файла</span><span class="sxs-lookup"><span data-stu-id="12206-102">How to: Generate the Object Model as an External File</span></span>
+<span data-ttu-id="12206-103">В качестве альтернативы сопоставления на основе атрибутов с помощью инструмента командной строки SQLMetal можно создать собственную объектную модель в виде внешнего файла XML.</span><span class="sxs-lookup"><span data-stu-id="12206-103">As an alternative to attribute-based mapping, you can generate your object model as an external XML file by using the SQLMetal command-line tool.</span></span> <span data-ttu-id="12206-104">Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="12206-104">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="12206-105">За счет использования внешнего XML-файла сопоставления можно снизить перегруженность кода.</span><span class="sxs-lookup"><span data-stu-id="12206-105">By using an external XML mapping file, you reduce clutter in your code.</span></span> <span data-ttu-id="12206-106">Кроме того, можно изменить поведение, отредактировав внешний файл без повторной компиляции двоичных файлов приложения.</span><span class="sxs-lookup"><span data-stu-id="12206-106">You can also change behavior by modifying the external file without recompiling the binaries of your application.</span></span> <span data-ttu-id="12206-107">Дополнительные сведения см. в разделе [внешнего сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="12206-107">For more information, see [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="754db-108">[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] не поддерживает создание внешнего файла сопоставления.</span><span class="sxs-lookup"><span data-stu-id="754db-108">The [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] does not support generation of an external mapping file.</span></span>  
+>  <span data-ttu-id="12206-108">Реляционный конструктор объектов не поддерживают создание внешнего файла сопоставления.</span><span class="sxs-lookup"><span data-stu-id="12206-108">The Object Relational Designer does not support generation of an external mapping file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="754db-109">Пример</span><span class="sxs-lookup"><span data-stu-id="754db-109">Example</span></span>  
- <span data-ttu-id="754db-110">Следующая команда формирует внешний файл сопоставления из образца базы данных Northwind.</span><span class="sxs-lookup"><span data-stu-id="754db-110">The following command generates an external mapping file from the Northwind sample database.</span></span>  
+## <a name="example"></a><span data-ttu-id="12206-109">Пример</span><span class="sxs-lookup"><span data-stu-id="12206-109">Example</span></span>  
+ <span data-ttu-id="12206-110">Следующая команда формирует внешний файл сопоставления из образца базы данных Northwind.</span><span class="sxs-lookup"><span data-stu-id="12206-110">The following command generates an external mapping file from the Northwind sample database.</span></span>  
   
 ```  
 sqlmetal /server:myserver /database:northwind /map:externalfile.xml  
 ```  
   
-## <a name="example"></a><span data-ttu-id="754db-111">Пример</span><span class="sxs-lookup"><span data-stu-id="754db-111">Example</span></span>  
- <span data-ttu-id="754db-112">Следующий фрагмент внешнего файла сопоставления показывает сопоставление для таблицы Customers в образце базы данных Northwind.</span><span class="sxs-lookup"><span data-stu-id="754db-112">The following excerpt from an external mapping file shows the mapping for the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="754db-113">Этот фрагмент создан путем запуска программы SQLMetal с **/map** параметр.</span><span class="sxs-lookup"><span data-stu-id="754db-113">This excerpt was generated by executing SQLMetal with the **/map** option.</span></span>  
+## <a name="example"></a><span data-ttu-id="12206-111">Пример</span><span class="sxs-lookup"><span data-stu-id="12206-111">Example</span></span>  
+ <span data-ttu-id="12206-112">Следующий фрагмент внешнего файла сопоставления показывает сопоставление для таблицы Customers в образце базы данных Northwind.</span><span class="sxs-lookup"><span data-stu-id="12206-112">The following excerpt from an external mapping file shows the mapping for the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="12206-113">Этот фрагмент создан путем запуска программы SQLMetal с **/map** параметр.</span><span class="sxs-lookup"><span data-stu-id="12206-113">This excerpt was generated by executing SQLMetal with the **/map** option.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -48,8 +48,8 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 </Database>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="754db-114">См. также</span><span class="sxs-lookup"><span data-stu-id="754db-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="12206-114">См. также</span><span class="sxs-lookup"><span data-stu-id="12206-114">See also</span></span>
 
-- [<span data-ttu-id="754db-115">Создание модели объектов</span><span class="sxs-lookup"><span data-stu-id="754db-115">Creating the Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [<span data-ttu-id="754db-116">Внешнее сопоставление</span><span class="sxs-lookup"><span data-stu-id="754db-116">External Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [<span data-ttu-id="754db-117">Практическое руководство. Создание модели объектов на языке Visual Basic или C#</span><span class="sxs-lookup"><span data-stu-id="754db-117">How to: Generate the Object Model in Visual Basic or C#</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [<span data-ttu-id="12206-115">Создание модели объектов</span><span class="sxs-lookup"><span data-stu-id="12206-115">Creating the Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
+- [<span data-ttu-id="12206-116">Внешнее сопоставление</span><span class="sxs-lookup"><span data-stu-id="12206-116">External Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [<span data-ttu-id="12206-117">Практическое руководство. Создание модели объектов на языке Visual Basic или C#</span><span class="sxs-lookup"><span data-stu-id="12206-117">How to: Generate the Object Model in Visual Basic or C#</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)

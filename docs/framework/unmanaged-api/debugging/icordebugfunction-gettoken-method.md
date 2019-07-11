@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e56c8eba49260eba9e3e0ca7e9ab4c7cfcd3261f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a4613e11896a34ed1a7fe91d4767fb38ac75aab8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995635"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754515"
 ---
-# <a name="icordebugfunctiongettoken-method"></a><span data-ttu-id="c9914-102">Метод ICorDebugFunction::GetToken</span><span class="sxs-lookup"><span data-stu-id="c9914-102">ICorDebugFunction::GetToken Method</span></span>
-<span data-ttu-id="c9914-103">Получает маркер метаданных для этой функции.</span><span class="sxs-lookup"><span data-stu-id="c9914-103">Gets the metadata token for this function.</span></span>  
+# <a name="icordebugfunctiongettoken-method"></a><span data-ttu-id="84c5a-102">Метод ICorDebugFunction::GetToken</span><span class="sxs-lookup"><span data-stu-id="84c5a-102">ICorDebugFunction::GetToken Method</span></span>
+<span data-ttu-id="84c5a-103">Получает маркер метаданных для этой функции.</span><span class="sxs-lookup"><span data-stu-id="84c5a-103">Gets the metadata token for this function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c9914-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c9914-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84c5a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="84c5a-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetToken (  
     [out] mdMethodDef *pMethodDef  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c9914-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c9914-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="84c5a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="84c5a-105">Parameters</span></span>  
  `pMethodDef`  
- <span data-ttu-id="c9914-106">[out] Указатель на `mdMethodDef` маркер, который ссылается на метаданные для этой функции.</span><span class="sxs-lookup"><span data-stu-id="c9914-106">[out] A pointer to an `mdMethodDef` token that references the metadata for this function.</span></span>  
+ <span data-ttu-id="84c5a-106">[out] Указатель на `mdMethodDef` маркер, который ссылается на метаданные для этой функции.</span><span class="sxs-lookup"><span data-stu-id="84c5a-106">[out] A pointer to an `mdMethodDef` token that references the metadata for this function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c9914-107">Требования</span><span class="sxs-lookup"><span data-stu-id="c9914-107">Requirements</span></span>  
- <span data-ttu-id="c9914-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9914-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="84c5a-107">Требования</span><span class="sxs-lookup"><span data-stu-id="84c5a-107">Requirements</span></span>  
+ <span data-ttu-id="84c5a-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="84c5a-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c9914-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c9914-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="84c5a-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="84c5a-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c9914-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c9914-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="84c5a-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="84c5a-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c9914-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9914-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="84c5a-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84c5a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

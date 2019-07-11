@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e23232b55a841672ee193b980c310995ba688e00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12daac766a09c297bfa129f69342ebad20977e7c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049366"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780136"
 ---
-# <a name="strongnamegetblob-function"></a><span data-ttu-id="89825-102">Функция StrongNameGetBlob</span><span class="sxs-lookup"><span data-stu-id="89825-102">StrongNameGetBlob Function</span></span>
-<span data-ttu-id="89825-103">Заполняет указанный буфер двоичным представлением исполняемого файла по указанному адресу.</span><span class="sxs-lookup"><span data-stu-id="89825-103">Fills the specified buffer with the binary representation of the executable file at the specified address.</span></span>  
+# <a name="strongnamegetblob-function"></a><span data-ttu-id="8d620-102">Функция StrongNameGetBlob</span><span class="sxs-lookup"><span data-stu-id="8d620-102">StrongNameGetBlob Function</span></span>
+<span data-ttu-id="8d620-103">Заполняет указанный буфер двоичным представлением исполняемого файла по указанному адресу.</span><span class="sxs-lookup"><span data-stu-id="8d620-103">Fills the specified buffer with the binary representation of the executable file at the specified address.</span></span>  
   
- <span data-ttu-id="89825-104">Эта функция является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="89825-104">This function has been deprecated.</span></span> <span data-ttu-id="89825-105">Используйте [ICLRStrongName::StrongNameGetBLob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md) метод вместо этого.</span><span class="sxs-lookup"><span data-stu-id="89825-105">Use the [ICLRStrongName::StrongNameGetBLob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md) method instead.</span></span>  
+ <span data-ttu-id="8d620-104">Эта функция является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="8d620-104">This function has been deprecated.</span></span> <span data-ttu-id="8d620-105">Используйте [ICLRStrongName::StrongNameGetBLob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md) метод вместо этого.</span><span class="sxs-lookup"><span data-stu-id="8d620-105">Use the [ICLRStrongName::StrongNameGetBLob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="89825-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="89825-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8d620-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8d620-106">Syntax</span></span>  
   
-```  
+```cpp  
 BOOLEAN StrongNameGetBlob (  
     [in]  LPCWSTR    wszFilePath,  
     [in]  BYTE       *pbBlob,  
@@ -38,33 +38,33 @@ BOOLEAN StrongNameGetBlob (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="89825-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="89825-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8d620-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="8d620-107">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="89825-108">[in] Допустимый путь к исполняемому файлу для загрузки.</span><span class="sxs-lookup"><span data-stu-id="89825-108">[in] A valid path to the executable file to be loaded.</span></span>  
+ <span data-ttu-id="8d620-108">[in] Допустимый путь к исполняемому файлу для загрузки.</span><span class="sxs-lookup"><span data-stu-id="8d620-108">[in] A valid path to the executable file to be loaded.</span></span>  
   
  `pbBlob`  
- <span data-ttu-id="89825-109">[in] Буфер, в которой для загрузки исполняемого файла.</span><span class="sxs-lookup"><span data-stu-id="89825-109">[in] The buffer into which to load the executable file.</span></span>  
+ <span data-ttu-id="8d620-109">[in] Буфер, в которой для загрузки исполняемого файла.</span><span class="sxs-lookup"><span data-stu-id="8d620-109">[in] The buffer into which to load the executable file.</span></span>  
   
  `pcbBlob`  
- <span data-ttu-id="89825-110">[in, out] Максимальный размер в байтах, запрошенную `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="89825-110">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="89825-111">По возвращении фактический размер в байтах из `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="89825-111">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
+ <span data-ttu-id="8d620-110">[in, out] Максимальный размер в байтах, запрошенную `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="8d620-110">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="8d620-111">По возвращении фактический размер в байтах из `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="8d620-111">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="89825-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="89825-112">Return Value</span></span>  
- <span data-ttu-id="89825-113">`true` После успешного выполнения; в противном случае `false`.</span><span class="sxs-lookup"><span data-stu-id="89825-113">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8d620-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="8d620-112">Return Value</span></span>  
+ <span data-ttu-id="8d620-113">`true` После успешного выполнения; в противном случае `false`.</span><span class="sxs-lookup"><span data-stu-id="8d620-113">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="89825-114">Примечания</span><span class="sxs-lookup"><span data-stu-id="89825-114">Remarks</span></span>  
- <span data-ttu-id="89825-115">Если `StrongNameGetBlob` функция не завершена, вызвать [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.</span><span class="sxs-lookup"><span data-stu-id="89825-115">If the `StrongNameGetBlob` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8d620-114">Примечания</span><span class="sxs-lookup"><span data-stu-id="8d620-114">Remarks</span></span>  
+ <span data-ttu-id="8d620-115">Если `StrongNameGetBlob` функция не завершена, вызвать [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.</span><span class="sxs-lookup"><span data-stu-id="8d620-115">If the `StrongNameGetBlob` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="89825-116">Требования</span><span class="sxs-lookup"><span data-stu-id="89825-116">Requirements</span></span>  
- <span data-ttu-id="89825-117">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="89825-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8d620-116">Требования</span><span class="sxs-lookup"><span data-stu-id="8d620-116">Requirements</span></span>  
+ <span data-ttu-id="8d620-117">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8d620-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="89825-118">**Заголовок.** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="89825-118">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="8d620-118">**Заголовок.** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="8d620-118">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="89825-119">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="89825-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="8d620-119">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8d620-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="89825-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89825-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8d620-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8d620-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="89825-121">См. также</span><span class="sxs-lookup"><span data-stu-id="89825-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8d620-121">См. также</span><span class="sxs-lookup"><span data-stu-id="8d620-121">See also</span></span>
 
-- [<span data-ttu-id="89825-122">Метод StrongNameGetBlob</span><span class="sxs-lookup"><span data-stu-id="89825-122">StrongNameGetBlob Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
-- [<span data-ttu-id="89825-123">Метод StrongNameGetBlobFromImage</span><span class="sxs-lookup"><span data-stu-id="89825-123">StrongNameGetBlobFromImage Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
-- [<span data-ttu-id="89825-124">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="89825-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="8d620-122">Метод StrongNameGetBlob</span><span class="sxs-lookup"><span data-stu-id="8d620-122">StrongNameGetBlob Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
+- [<span data-ttu-id="8d620-123">Метод StrongNameGetBlobFromImage</span><span class="sxs-lookup"><span data-stu-id="8d620-123">StrongNameGetBlobFromImage Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
+- [<span data-ttu-id="8d620-124">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="8d620-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

@@ -17,37 +17,37 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11a75ca89a3537ce8ee72e8ba24401800eacff20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d56785815105e2f4b06217d3375e2d1cfdf0494c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939741"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776909"
 ---
-# <a name="isymunmanagedencupdategetlocalvariablecount-method"></a><span data-ttu-id="a7878-102">Метод ISymUnmanagedENCUpdate::GetLocalVariableCount</span><span class="sxs-lookup"><span data-stu-id="a7878-102">ISymUnmanagedENCUpdate::GetLocalVariableCount Method</span></span>
-<span data-ttu-id="a7878-103">Получает количество локальных переменных.</span><span class="sxs-lookup"><span data-stu-id="a7878-103">Gets the number of local variables.</span></span>  
+# <a name="isymunmanagedencupdategetlocalvariablecount-method"></a><span data-ttu-id="26daf-102">Метод ISymUnmanagedENCUpdate::GetLocalVariableCount</span><span class="sxs-lookup"><span data-stu-id="26daf-102">ISymUnmanagedENCUpdate::GetLocalVariableCount Method</span></span>
+<span data-ttu-id="26daf-103">Получает количество локальных переменных.</span><span class="sxs-lookup"><span data-stu-id="26daf-103">Gets the number of local variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a7878-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a7878-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="26daf-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="26daf-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetLocalVariableCount(  
     [in]  mdMethodDef  mdMethodToken,  
     [out] ULONG        *pcLocals);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a7878-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a7878-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="26daf-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="26daf-105">Parameters</span></span>  
  `mdMethodToken`  
- <span data-ttu-id="a7878-106">[in] Маркер метаданных для методов.</span><span class="sxs-lookup"><span data-stu-id="a7878-106">[in] The metadata token of methods.</span></span>  
+ <span data-ttu-id="26daf-106">[in] Маркер метаданных для методов.</span><span class="sxs-lookup"><span data-stu-id="26daf-106">[in] The metadata token of methods.</span></span>  
   
  `pcLocals`  
- <span data-ttu-id="a7878-107">[out] Указатель на `ULONG32` размер, который получает в символах, буфера, требуемого для хранения количество локальных переменных.</span><span class="sxs-lookup"><span data-stu-id="a7878-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the number of local variables.</span></span>  
+ <span data-ttu-id="26daf-107">[out] Указатель на `ULONG32` размер, который получает в символах, буфера, требуемого для хранения количество локальных переменных.</span><span class="sxs-lookup"><span data-stu-id="26daf-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the number of local variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a7878-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="a7878-108">Return Value</span></span>  
- <span data-ttu-id="a7878-109">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="a7878-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="26daf-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="26daf-108">Return Value</span></span>  
+ <span data-ttu-id="26daf-109">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="26daf-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a7878-110">Требования</span><span class="sxs-lookup"><span data-stu-id="a7878-110">Requirements</span></span>  
- <span data-ttu-id="a7878-111">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a7878-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="26daf-110">Требования</span><span class="sxs-lookup"><span data-stu-id="26daf-110">Requirements</span></span>  
+ <span data-ttu-id="26daf-111">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="26daf-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a7878-112">См. также</span><span class="sxs-lookup"><span data-stu-id="a7878-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="26daf-112">См. также</span><span class="sxs-lookup"><span data-stu-id="26daf-112">See also</span></span>
 
-- [<span data-ttu-id="a7878-113">Интерфейс ISymUnmanagedENCUpdate</span><span class="sxs-lookup"><span data-stu-id="a7878-113">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [<span data-ttu-id="26daf-113">Интерфейс ISymUnmanagedENCUpdate</span><span class="sxs-lookup"><span data-stu-id="26daf-113">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
