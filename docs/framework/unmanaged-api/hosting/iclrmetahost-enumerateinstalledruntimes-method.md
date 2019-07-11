@@ -17,45 +17,45 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09931dce7afdb7944cf9912b5146e44fda131935
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b116a1f422daa20a2b51f0a5fc12d6065c2a01e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993282"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779815"
 ---
-# <a name="iclrmetahostenumerateinstalledruntimes-method"></a><span data-ttu-id="559d3-102">Метод ICLRMetaHost::EnumerateInstalledRuntimes</span><span class="sxs-lookup"><span data-stu-id="559d3-102">ICLRMetaHost::EnumerateInstalledRuntimes Method</span></span>
-<span data-ttu-id="559d3-103">Возвращает перечисление, содержащее допустимый [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) интерфейс для каждой версии среда CLR (CLR), установленного на компьютере.</span><span class="sxs-lookup"><span data-stu-id="559d3-103">Returns an enumeration that contains a valid [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface for each version of the common language runtime (CLR) that is installed on a computer.</span></span>  
+# <a name="iclrmetahostenumerateinstalledruntimes-method"></a><span data-ttu-id="9e85e-102">Метод ICLRMetaHost::EnumerateInstalledRuntimes</span><span class="sxs-lookup"><span data-stu-id="9e85e-102">ICLRMetaHost::EnumerateInstalledRuntimes Method</span></span>
+<span data-ttu-id="9e85e-103">Возвращает перечисление, содержащее допустимый [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) интерфейс для каждой версии среда CLR (CLR), установленного на компьютере.</span><span class="sxs-lookup"><span data-stu-id="9e85e-103">Returns an enumeration that contains a valid [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface for each version of the common language runtime (CLR) that is installed on a computer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="559d3-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="559d3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9e85e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9e85e-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EnumerateInstalledRuntimes (  
     [out, retval] IEnumUnknown **ppEnumerator);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="559d3-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="559d3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9e85e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9e85e-105">Parameters</span></span>  
  `ppEnumerator`  
- <span data-ttu-id="559d3-106">[out] Перечисление [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) интерфейсы для каждой версии среды CLR, которая установлена на компьютере.</span><span class="sxs-lookup"><span data-stu-id="559d3-106">[out] An enumeration of [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaces corresponding to each version of the CLR that is installed on the computer.</span></span>  
+ <span data-ttu-id="9e85e-106">[out] Перечисление [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) интерфейсы для каждой версии среды CLR, которая установлена на компьютере.</span><span class="sxs-lookup"><span data-stu-id="9e85e-106">[out] An enumeration of [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaces corresponding to each version of the CLR that is installed on the computer.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="559d3-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="559d3-107">Return Value</span></span>  
- <span data-ttu-id="559d3-108">Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.</span><span class="sxs-lookup"><span data-stu-id="559d3-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9e85e-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="9e85e-107">Return Value</span></span>  
+ <span data-ttu-id="9e85e-108">Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.</span><span class="sxs-lookup"><span data-stu-id="9e85e-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="559d3-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="559d3-109">HRESULT</span></span>|<span data-ttu-id="559d3-110">Описание</span><span class="sxs-lookup"><span data-stu-id="559d3-110">Description</span></span>|  
+|<span data-ttu-id="9e85e-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9e85e-109">HRESULT</span></span>|<span data-ttu-id="9e85e-110">Описание</span><span class="sxs-lookup"><span data-stu-id="9e85e-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="559d3-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="559d3-111">S_OK</span></span>|<span data-ttu-id="559d3-112">Метод завершился успешно.</span><span class="sxs-lookup"><span data-stu-id="559d3-112">The method completed successfully.</span></span>|  
-|<span data-ttu-id="559d3-113">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="559d3-113">E_POINTER</span></span>|<span data-ttu-id="559d3-114">Параметр `ppEnumerator` имеет значение null.</span><span class="sxs-lookup"><span data-stu-id="559d3-114">`ppEnumerator` is null.</span></span>|  
+|<span data-ttu-id="9e85e-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="9e85e-111">S_OK</span></span>|<span data-ttu-id="9e85e-112">Метод завершился успешно.</span><span class="sxs-lookup"><span data-stu-id="9e85e-112">The method completed successfully.</span></span>|  
+|<span data-ttu-id="9e85e-113">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="9e85e-113">E_POINTER</span></span>|<span data-ttu-id="9e85e-114">Параметр `ppEnumerator` имеет значение null.</span><span class="sxs-lookup"><span data-stu-id="9e85e-114">`ppEnumerator` is null.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="559d3-115">Требования</span><span class="sxs-lookup"><span data-stu-id="559d3-115">Requirements</span></span>  
- <span data-ttu-id="559d3-116">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="559d3-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9e85e-115">Требования</span><span class="sxs-lookup"><span data-stu-id="9e85e-115">Requirements</span></span>  
+ <span data-ttu-id="9e85e-116">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9e85e-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="559d3-117">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="559d3-117">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="9e85e-117">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="9e85e-117">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="559d3-118">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="559d3-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9e85e-118">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9e85e-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="559d3-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="559d3-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="9e85e-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e85e-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="559d3-120">См. также</span><span class="sxs-lookup"><span data-stu-id="559d3-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9e85e-120">См. также</span><span class="sxs-lookup"><span data-stu-id="9e85e-120">See also</span></span>
 
-- [<span data-ttu-id="559d3-121">Интерфейс ICLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="559d3-121">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
-- [<span data-ttu-id="559d3-122">Размещение</span><span class="sxs-lookup"><span data-stu-id="559d3-122">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="9e85e-121">Интерфейс ICLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="9e85e-121">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [<span data-ttu-id="9e85e-122">Размещение</span><span class="sxs-lookup"><span data-stu-id="9e85e-122">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

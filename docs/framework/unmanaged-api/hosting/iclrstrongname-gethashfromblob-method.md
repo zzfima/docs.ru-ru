@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f84d50579feade09df1b42a8e2f0c6b3e6a94fac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4839f098a41e0d2b8e87616791b69ffd83e139f0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771661"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748200"
 ---
-# <a name="iclrstrongnamegethashfromblob-method"></a><span data-ttu-id="e9c10-102">Метод ICLRStrongName::GetHashFromBlob</span><span class="sxs-lookup"><span data-stu-id="e9c10-102">ICLRStrongName::GetHashFromBlob Method</span></span>
-<span data-ttu-id="e9c10-103">Получает хэш сборки по указанному адресу памяти с помощью указанного хэш-алгоритма.</span><span class="sxs-lookup"><span data-stu-id="e9c10-103">Gets a hash of the assembly at the specified memory address, using the specified hash algorithm.</span></span>  
+# <a name="iclrstrongnamegethashfromblob-method"></a><span data-ttu-id="17960-102">Метод ICLRStrongName::GetHashFromBlob</span><span class="sxs-lookup"><span data-stu-id="17960-102">ICLRStrongName::GetHashFromBlob Method</span></span>
+<span data-ttu-id="17960-103">Получает хэш сборки по указанному адресу памяти с помощью указанного хэш-алгоритма.</span><span class="sxs-lookup"><span data-stu-id="17960-103">Gets a hash of the assembly at the specified memory address, using the specified hash algorithm.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e9c10-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e9c10-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="17960-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="17960-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetHashFromBlob (  
     [in]  BYTE    *pbBlob,  
     [in]  DWORD   cchBlob,  
@@ -40,37 +40,37 @@ HRESULT GetHashFromBlob (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e9c10-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e9c10-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="17960-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="17960-105">Parameters</span></span>  
  `pbBlob`  
- <span data-ttu-id="e9c10-106">[in] Указатель на адрес блока памяти, хэширование которого требуется выполнить.</span><span class="sxs-lookup"><span data-stu-id="e9c10-106">[in] A pointer to the address of the memory block to be hashed.</span></span>  
+ <span data-ttu-id="17960-106">[in] Указатель на адрес блока памяти, хэширование которого требуется выполнить.</span><span class="sxs-lookup"><span data-stu-id="17960-106">[in] A pointer to the address of the memory block to be hashed.</span></span>  
   
  `cchBlob`  
- <span data-ttu-id="e9c10-107">[in] Длина в байтах блока памяти.</span><span class="sxs-lookup"><span data-stu-id="e9c10-107">[in] The length, in bytes, of the memory block.</span></span>  
+ <span data-ttu-id="17960-107">[in] Длина в байтах блока памяти.</span><span class="sxs-lookup"><span data-stu-id="17960-107">[in] The length, in bytes, of the memory block.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="e9c10-108">[in, out] Константа, указывающая хэш-алгоритм.</span><span class="sxs-lookup"><span data-stu-id="e9c10-108">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="e9c10-109">Использовать нуль для алгоритма по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="e9c10-109">Use zero for the default algorithm.</span></span>  
+ <span data-ttu-id="17960-108">[in, out] Константа, указывающая хэш-алгоритм.</span><span class="sxs-lookup"><span data-stu-id="17960-108">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="17960-109">Использовать нуль для алгоритма по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="17960-109">Use zero for the default algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="e9c10-110">[out] Буфер, возвращенный хэша.</span><span class="sxs-lookup"><span data-stu-id="e9c10-110">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="17960-110">[out] Буфер, возвращенный хэша.</span><span class="sxs-lookup"><span data-stu-id="17960-110">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="e9c10-111">[in] Запрошенный максимальный размер `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="e9c10-111">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="17960-111">[in] Запрошенный максимальный размер `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="17960-111">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="e9c10-112">[out] Размер в байтах, возвращаемого `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="e9c10-112">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
+ <span data-ttu-id="17960-112">[out] Размер в байтах, возвращаемого `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="17960-112">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e9c10-113">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="e9c10-113">Return Value</span></span>  
- <span data-ttu-id="e9c10-114">`S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="e9c10-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="17960-113">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="17960-113">Return Value</span></span>  
+ <span data-ttu-id="17960-114">`S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="17960-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e9c10-115">Требования</span><span class="sxs-lookup"><span data-stu-id="e9c10-115">Requirements</span></span>  
- <span data-ttu-id="e9c10-116">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e9c10-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="17960-115">Требования</span><span class="sxs-lookup"><span data-stu-id="17960-115">Requirements</span></span>  
+ <span data-ttu-id="17960-116">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="17960-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e9c10-117">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="e9c10-117">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="17960-117">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="17960-117">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="e9c10-118">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e9c10-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="17960-118">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="17960-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e9c10-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e9c10-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="17960-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17960-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9c10-120">См. также</span><span class="sxs-lookup"><span data-stu-id="e9c10-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="17960-120">См. также</span><span class="sxs-lookup"><span data-stu-id="17960-120">See also</span></span>
 
-- [<span data-ttu-id="e9c10-121">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="e9c10-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="17960-121">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="17960-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

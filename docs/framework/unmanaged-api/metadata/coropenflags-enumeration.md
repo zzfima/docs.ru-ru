@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 55934ef08b10764bb705d7c166621ec7cfcadd0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 831f4665967f2cd07a7ebb4de750fbe456a82261
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992684"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781685"
 ---
-# <a name="coropenflags-enumeration"></a><span data-ttu-id="c6514-102">Перечисление CorOpenFlags</span><span class="sxs-lookup"><span data-stu-id="c6514-102">CorOpenFlags Enumeration</span></span>
-<span data-ttu-id="c6514-103">Содержит значения флага, которые управляют поведением метаданных при открытии файлов манифеста.</span><span class="sxs-lookup"><span data-stu-id="c6514-103">Contains flag values that control metadata behavior upon opening manifest files.</span></span>  
+# <a name="coropenflags-enumeration"></a><span data-ttu-id="2bdbd-102">Перечисление CorOpenFlags</span><span class="sxs-lookup"><span data-stu-id="2bdbd-102">CorOpenFlags Enumeration</span></span>
+<span data-ttu-id="2bdbd-103">Содержит значения флага, которые управляют поведением метаданных при открытии файлов манифеста.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-103">Contains flag values that control metadata behavior upon opening manifest files.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c6514-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c6514-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2bdbd-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2bdbd-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum CorOpenFlags  
 {  
     ofRead              =   0x00000000,  
@@ -48,31 +48,31 @@ typedef enum CorOpenFlags
 } CorOpenFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c6514-105">Участники</span><span class="sxs-lookup"><span data-stu-id="c6514-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="2bdbd-105">Участники</span><span class="sxs-lookup"><span data-stu-id="2bdbd-105">Members</span></span>  
   
-|<span data-ttu-id="c6514-106">Член</span><span class="sxs-lookup"><span data-stu-id="c6514-106">Member</span></span>|<span data-ttu-id="c6514-107">Описание</span><span class="sxs-lookup"><span data-stu-id="c6514-107">Description</span></span>|  
+|<span data-ttu-id="2bdbd-106">Член</span><span class="sxs-lookup"><span data-stu-id="2bdbd-106">Member</span></span>|<span data-ttu-id="2bdbd-107">Описание</span><span class="sxs-lookup"><span data-stu-id="2bdbd-107">Description</span></span>|  
 |------------|-----------------|  
-|`ofRead`|<span data-ttu-id="c6514-108">Указывает, что файл следует открывать только для чтения.</span><span class="sxs-lookup"><span data-stu-id="c6514-108">Indicates that the file should be opened for reading only.</span></span>|  
-|`ofWrite`|<span data-ttu-id="c6514-109">Указывает, что файл следует открывать для записи.</span><span class="sxs-lookup"><span data-stu-id="c6514-109">Indicates that the file should be opened for writing.</span></span><br /><br /> <span data-ttu-id="c6514-110">При использовании флага `ofWrite` во время открытия файла .WINMD также следует передавать флаг `ofNoTransform`.</span><span class="sxs-lookup"><span data-stu-id="c6514-110">If you are using the `ofWrite` flag when opening a .winmd file, you should also pass the `ofNoTransform` flag.</span></span>|  
-|`ofReadWriteMask`|<span data-ttu-id="c6514-111">Маска для чтения и записи.</span><span class="sxs-lookup"><span data-stu-id="c6514-111">A mask for reading and writing.</span></span>|  
-|`ofCopyMemory`|<span data-ttu-id="c6514-112">Указывает, что файл следует считывать в память.</span><span class="sxs-lookup"><span data-stu-id="c6514-112">Indicates that the file should be read into memory.</span></span> <span data-ttu-id="c6514-113">Метаданным следует создавать свою собственную копию.</span><span class="sxs-lookup"><span data-stu-id="c6514-113">Metadata should maintain its own copy.</span></span>|  
-|`ofCacheImage`|<span data-ttu-id="c6514-114">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="c6514-114">Obsolete.</span></span> <span data-ttu-id="c6514-115">Этот флаг отклонен.</span><span class="sxs-lookup"><span data-stu-id="c6514-115">This flag is ignored.</span></span>|  
-|`ofManifestMetadata`|<span data-ttu-id="c6514-116">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="c6514-116">Obsolete.</span></span> <span data-ttu-id="c6514-117">Этот флаг отклонен.</span><span class="sxs-lookup"><span data-stu-id="c6514-117">This flag is ignored.</span></span>|  
-|`ofReadOnly`|<span data-ttu-id="c6514-118">Указывает, что файл должен быть открыт для чтения, а вызов `QueryInterface` для [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) нельзя сделать.</span><span class="sxs-lookup"><span data-stu-id="c6514-118">Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) cannot be made.</span></span>|  
-|`ofTakeOwnership`|<span data-ttu-id="c6514-119">Указывает, что память была выделена с помощью вызова [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) и будет освобождена метаданными.</span><span class="sxs-lookup"><span data-stu-id="c6514-119">Indicates that the memory was allocated using a call to [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) and will be freed by the metadata.</span></span>|  
-|`ofNoTypeLib`|<span data-ttu-id="c6514-120">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="c6514-120">Obsolete.</span></span> <span data-ttu-id="c6514-121">Этот флаг отклонен.</span><span class="sxs-lookup"><span data-stu-id="c6514-121">This flag is ignored.</span></span>|  
-|`ofNoTransform`|<span data-ttu-id="c6514-122">Указывает, что автоматические преобразования из файла .WINMD следует отключить.</span><span class="sxs-lookup"><span data-stu-id="c6514-122">Indicates that automatic transforms of .winmd files should be disabled.</span></span> <span data-ttu-id="c6514-123">Другими словами, проекцию типа среды выполнения Windows на тип платформы .NET Framework следует отключить.</span><span class="sxs-lookup"><span data-stu-id="c6514-123">In other words, the projection of a Windows Runtime type to a .NET Framework type should be disabled.</span></span> <span data-ttu-id="c6514-124">Дополнительные сведения см. в разделе [среды выполнения Windows и среда CLR - под представление о внутренней работе с .NET и среды выполнения Windows](https://msdn.microsoft.com/magazine/jj651569.aspx).</span><span class="sxs-lookup"><span data-stu-id="c6514-124">For more information, see [Windows Runtime and the CLR - Underneath the Hood with .NET and the Windows Runtime](https://msdn.microsoft.com/magazine/jj651569.aspx).</span></span>|  
-|`ofReserved1`|<span data-ttu-id="c6514-125">Зарезервировано для внутреннего использования.</span><span class="sxs-lookup"><span data-stu-id="c6514-125">Reserved for internal use.</span></span>|  
-|`ofReserved2`|<span data-ttu-id="c6514-126">Зарезервировано для внутреннего использования.</span><span class="sxs-lookup"><span data-stu-id="c6514-126">Reserved for internal use.</span></span>|  
-|`ofReserved`|<span data-ttu-id="c6514-127">Зарезервировано для внутреннего использования.</span><span class="sxs-lookup"><span data-stu-id="c6514-127">Reserved for internal use.</span></span>|  
+|`ofRead`|<span data-ttu-id="2bdbd-108">Указывает, что файл следует открывать только для чтения.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-108">Indicates that the file should be opened for reading only.</span></span>|  
+|`ofWrite`|<span data-ttu-id="2bdbd-109">Указывает, что файл следует открывать для записи.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-109">Indicates that the file should be opened for writing.</span></span><br /><br /> <span data-ttu-id="2bdbd-110">При использовании флага `ofWrite` во время открытия файла .WINMD также следует передавать флаг `ofNoTransform`.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-110">If you are using the `ofWrite` flag when opening a .winmd file, you should also pass the `ofNoTransform` flag.</span></span>|  
+|`ofReadWriteMask`|<span data-ttu-id="2bdbd-111">Маска для чтения и записи.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-111">A mask for reading and writing.</span></span>|  
+|`ofCopyMemory`|<span data-ttu-id="2bdbd-112">Указывает, что файл следует считывать в память.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-112">Indicates that the file should be read into memory.</span></span> <span data-ttu-id="2bdbd-113">Метаданным следует создавать свою собственную копию.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-113">Metadata should maintain its own copy.</span></span>|  
+|`ofCacheImage`|<span data-ttu-id="2bdbd-114">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-114">Obsolete.</span></span> <span data-ttu-id="2bdbd-115">Этот флаг отклонен.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-115">This flag is ignored.</span></span>|  
+|`ofManifestMetadata`|<span data-ttu-id="2bdbd-116">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-116">Obsolete.</span></span> <span data-ttu-id="2bdbd-117">Этот флаг отклонен.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-117">This flag is ignored.</span></span>|  
+|`ofReadOnly`|<span data-ttu-id="2bdbd-118">Указывает, что файл должен быть открыт для чтения, а вызов `QueryInterface` для [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) нельзя сделать.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-118">Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) cannot be made.</span></span>|  
+|`ofTakeOwnership`|<span data-ttu-id="2bdbd-119">Указывает, что память была выделена с помощью вызова [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) и будет освобождена метаданными.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-119">Indicates that the memory was allocated using a call to [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) and will be freed by the metadata.</span></span>|  
+|`ofNoTypeLib`|<span data-ttu-id="2bdbd-120">Является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-120">Obsolete.</span></span> <span data-ttu-id="2bdbd-121">Этот флаг отклонен.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-121">This flag is ignored.</span></span>|  
+|`ofNoTransform`|<span data-ttu-id="2bdbd-122">Указывает, что автоматические преобразования из файла .WINMD следует отключить.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-122">Indicates that automatic transforms of .winmd files should be disabled.</span></span> <span data-ttu-id="2bdbd-123">Другими словами, проекцию типа среды выполнения Windows на тип платформы .NET Framework следует отключить.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-123">In other words, the projection of a Windows Runtime type to a .NET Framework type should be disabled.</span></span> <span data-ttu-id="2bdbd-124">Дополнительные сведения см. в разделе [среды выполнения Windows и среда CLR - под представление о внутренней работе с .NET и среды выполнения Windows](https://msdn.microsoft.com/magazine/jj651569.aspx).</span><span class="sxs-lookup"><span data-stu-id="2bdbd-124">For more information, see [Windows Runtime and the CLR - Underneath the Hood with .NET and the Windows Runtime](https://msdn.microsoft.com/magazine/jj651569.aspx).</span></span>|  
+|`ofReserved1`|<span data-ttu-id="2bdbd-125">Зарезервировано для внутреннего использования.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-125">Reserved for internal use.</span></span>|  
+|`ofReserved2`|<span data-ttu-id="2bdbd-126">Зарезервировано для внутреннего использования.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-126">Reserved for internal use.</span></span>|  
+|`ofReserved`|<span data-ttu-id="2bdbd-127">Зарезервировано для внутреннего использования.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-127">Reserved for internal use.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c6514-128">Требования</span><span class="sxs-lookup"><span data-stu-id="c6514-128">Requirements</span></span>  
- <span data-ttu-id="c6514-129">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c6514-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2bdbd-128">Требования</span><span class="sxs-lookup"><span data-stu-id="2bdbd-128">Requirements</span></span>  
+ <span data-ttu-id="2bdbd-129">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2bdbd-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c6514-130">**Заголовок.** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="c6514-130">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="2bdbd-130">**Заголовок.** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="2bdbd-130">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="c6514-131">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6514-131">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2bdbd-131">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2bdbd-131">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c6514-132">См. также</span><span class="sxs-lookup"><span data-stu-id="c6514-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2bdbd-132">См. также</span><span class="sxs-lookup"><span data-stu-id="2bdbd-132">See also</span></span>
 
-- [<span data-ttu-id="c6514-133">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="c6514-133">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="2bdbd-133">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="2bdbd-133">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

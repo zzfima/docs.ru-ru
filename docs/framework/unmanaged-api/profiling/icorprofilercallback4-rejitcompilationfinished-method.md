@@ -17,52 +17,52 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ec2981cbee4675f9cd2a4fd13d507f50ad2a3ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80bff6f06851206ff01b861001c6ed7c90db7d1e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597145"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758191"
 ---
-# <a name="icorprofilercallback4rejitcompilationfinished-method"></a><span data-ttu-id="20da0-102">Метод ICorProfilerCallback4::ReJITCompilationFinished</span><span class="sxs-lookup"><span data-stu-id="20da0-102">ICorProfilerCallback4::ReJITCompilationFinished Method</span></span>
-<span data-ttu-id="20da0-103">Уведомляет профилировщик о завершении повторной компиляции функции компилятор just-in-time (JIT).</span><span class="sxs-lookup"><span data-stu-id="20da0-103">Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.</span></span>  
+# <a name="icorprofilercallback4rejitcompilationfinished-method"></a><span data-ttu-id="d16a8-102">Метод ICorProfilerCallback4::ReJITCompilationFinished</span><span class="sxs-lookup"><span data-stu-id="d16a8-102">ICorProfilerCallback4::ReJITCompilationFinished Method</span></span>
+<span data-ttu-id="d16a8-103">Уведомляет профилировщик о завершении повторной компиляции функции компилятор just-in-time (JIT).</span><span class="sxs-lookup"><span data-stu-id="d16a8-103">Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="20da0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="20da0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d16a8-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d16a8-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT ReJITCompilationFinished(  
     [in] FunctionID functionId,    [in] ReJITID rejitId,  
     [in] HRESULT    hrStatus,  
     [in] BOOL       fIsSafeToBlock);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="20da0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="20da0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d16a8-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d16a8-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="20da0-106">[in] Идентификатор функции, который был перекомпилирован.</span><span class="sxs-lookup"><span data-stu-id="20da0-106">[in] The ID of the function that was recompiled.</span></span>  
+ <span data-ttu-id="d16a8-106">[in] Идентификатор функции, который был перекомпилирован.</span><span class="sxs-lookup"><span data-stu-id="d16a8-106">[in] The ID of the function that was recompiled.</span></span>  
   
  `rejitId`  
- <span data-ttu-id="20da0-107">[in] Идентификатор функции, перекомпилированной с помощью JIT-компилятора.</span><span class="sxs-lookup"><span data-stu-id="20da0-107">[in] The identity of the JIT-recompiled function.</span></span>  
+ <span data-ttu-id="d16a8-107">[in] Идентификатор функции, перекомпилированной с помощью JIT-компилятора.</span><span class="sxs-lookup"><span data-stu-id="d16a8-107">[in] The identity of the JIT-recompiled function.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="20da0-108">[in] Значение, указывающее, успешно ли перекомпиляции JIT.</span><span class="sxs-lookup"><span data-stu-id="20da0-108">[in] A value that indicates whether the JIT recompilation was successful.</span></span>  
+ <span data-ttu-id="d16a8-108">[in] Значение, указывающее, успешно ли перекомпиляции JIT.</span><span class="sxs-lookup"><span data-stu-id="d16a8-108">[in] A value that indicates whether the JIT recompilation was successful.</span></span>  
   
  `fIsSafeToBlock`  
- <span data-ttu-id="20da0-109">[in] `true` для указания, что блокировок может вызвать среды выполнения для вызывающего потока для возврата из этого обратного вызова; `false` для указания, что блокировка не повлияет на работу среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="20da0-109">[in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.</span></span>  
+ <span data-ttu-id="d16a8-109">[in] `true` для указания, что блокировок может вызвать среды выполнения для вызывающего потока для возврата из этого обратного вызова; `false` для указания, что блокировка не повлияет на работу среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="d16a8-109">[in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.</span></span>  
   
- <span data-ttu-id="20da0-110">Значение `true` не повреждает среды выполнения, но могут повлиять на результаты профилирования.</span><span class="sxs-lookup"><span data-stu-id="20da0-110">A value of `true` does not harm the runtime, but can affect the profiling results.</span></span>  
+ <span data-ttu-id="d16a8-110">Значение `true` не повреждает среды выполнения, но могут повлиять на результаты профилирования.</span><span class="sxs-lookup"><span data-stu-id="d16a8-110">A value of `true` does not harm the runtime, but can affect the profiling results.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="20da0-111">Требования</span><span class="sxs-lookup"><span data-stu-id="20da0-111">Requirements</span></span>  
- <span data-ttu-id="20da0-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="20da0-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d16a8-111">Требования</span><span class="sxs-lookup"><span data-stu-id="d16a8-111">Requirements</span></span>  
+ <span data-ttu-id="d16a8-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d16a8-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="20da0-113">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="20da0-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d16a8-113">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d16a8-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="20da0-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="20da0-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d16a8-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d16a8-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="20da0-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20da0-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="d16a8-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d16a8-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="20da0-116">См. также</span><span class="sxs-lookup"><span data-stu-id="20da0-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d16a8-116">См. также</span><span class="sxs-lookup"><span data-stu-id="d16a8-116">See also</span></span>
 
-- [<span data-ttu-id="20da0-117">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="20da0-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="20da0-118">Интерфейс ICorProfilerCallback4</span><span class="sxs-lookup"><span data-stu-id="20da0-118">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
-- [<span data-ttu-id="20da0-119">Метод JITCompilationStarted</span><span class="sxs-lookup"><span data-stu-id="20da0-119">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
-- [<span data-ttu-id="20da0-120">Метод ReJITCompilationStarted</span><span class="sxs-lookup"><span data-stu-id="20da0-120">ReJITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)
+- [<span data-ttu-id="d16a8-117">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="d16a8-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="d16a8-118">Интерфейс ICorProfilerCallback4</span><span class="sxs-lookup"><span data-stu-id="d16a8-118">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [<span data-ttu-id="d16a8-119">Метод JITCompilationStarted</span><span class="sxs-lookup"><span data-stu-id="d16a8-119">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
+- [<span data-ttu-id="d16a8-120">Метод ReJITCompilationStarted</span><span class="sxs-lookup"><span data-stu-id="d16a8-120">ReJITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)

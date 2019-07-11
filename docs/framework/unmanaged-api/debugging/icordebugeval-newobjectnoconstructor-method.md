@@ -17,39 +17,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6846b866fd47674ca6b5fd187b580fd28e080fd0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e4a09db3cedce7b0ae6049c7e550c0c3e21cc8c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995934"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753174"
 ---
-# <a name="icordebugevalnewobjectnoconstructor-method"></a><span data-ttu-id="173e2-102">Метод ICorDebugEval::NewObjectNoConstructor</span><span class="sxs-lookup"><span data-stu-id="173e2-102">ICorDebugEval::NewObjectNoConstructor Method</span></span>
-<span data-ttu-id="173e2-103">Выделяет новый экземпляр объекта указанного типа, не пытается вызвать метод-конструктор.</span><span class="sxs-lookup"><span data-stu-id="173e2-103">Allocates a new object instance of the specified type, without attempting to call a constructor method.</span></span>  
+# <a name="icordebugevalnewobjectnoconstructor-method"></a><span data-ttu-id="b2ed6-102">Метод ICorDebugEval::NewObjectNoConstructor</span><span class="sxs-lookup"><span data-stu-id="b2ed6-102">ICorDebugEval::NewObjectNoConstructor Method</span></span>
+<span data-ttu-id="b2ed6-103">Выделяет новый экземпляр объекта указанного типа, не пытается вызвать метод-конструктор.</span><span class="sxs-lookup"><span data-stu-id="b2ed6-103">Allocates a new object instance of the specified type, without attempting to call a constructor method.</span></span>  
   
- <span data-ttu-id="173e2-104">Этот метод является устаревшим в .NET Framework версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="173e2-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="173e2-105">Используйте [ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) вместо этого.</span><span class="sxs-lookup"><span data-stu-id="173e2-105">Use [ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) instead.</span></span>  
+ <span data-ttu-id="b2ed6-104">Этот метод является устаревшим в .NET Framework версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="b2ed6-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="b2ed6-105">Используйте [ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) вместо этого.</span><span class="sxs-lookup"><span data-stu-id="b2ed6-105">Use [ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="173e2-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="173e2-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2ed6-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b2ed6-106">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT NewObjectNoConstructor (  
     [in] ICorDebugClass     *pClass  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="173e2-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="173e2-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b2ed6-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="b2ed6-107">Parameters</span></span>  
  `pClass`  
- <span data-ttu-id="173e2-108">[in] Указатель на объект ICorDebugClass, представляющий тип объекта для создания экземпляра.</span><span class="sxs-lookup"><span data-stu-id="173e2-108">[in] Pointer to an ICorDebugClass object that represents the type of object to be instantiated.</span></span>  
+ <span data-ttu-id="b2ed6-108">[in] Указатель на объект ICorDebugClass, представляющий тип объекта для создания экземпляра.</span><span class="sxs-lookup"><span data-stu-id="b2ed6-108">[in] Pointer to an ICorDebugClass object that represents the type of object to be instantiated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="173e2-109">Требования</span><span class="sxs-lookup"><span data-stu-id="173e2-109">Requirements</span></span>  
- <span data-ttu-id="173e2-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="173e2-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2ed6-109">Требования</span><span class="sxs-lookup"><span data-stu-id="b2ed6-109">Requirements</span></span>  
+ <span data-ttu-id="b2ed6-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b2ed6-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="173e2-111">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="173e2-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b2ed6-111">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b2ed6-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="173e2-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="173e2-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b2ed6-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b2ed6-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="173e2-113">**Версии платформы .NET framework:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="173e2-113">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="b2ed6-113">**Версии платформы .NET framework:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="b2ed6-113">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="173e2-114">См. также</span><span class="sxs-lookup"><span data-stu-id="173e2-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2ed6-114">См. также</span><span class="sxs-lookup"><span data-stu-id="b2ed6-114">See also</span></span>
 
-- [<span data-ttu-id="173e2-115">Метод NewParameterizedObjectNoConstructor</span><span class="sxs-lookup"><span data-stu-id="173e2-115">NewParameterizedObjectNoConstructor Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)
+- [<span data-ttu-id="b2ed6-115">Метод NewParameterizedObjectNoConstructor</span><span class="sxs-lookup"><span data-stu-id="b2ed6-115">NewParameterizedObjectNoConstructor Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)

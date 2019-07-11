@@ -17,26 +17,26 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 612d09c8303f7216e4f384668bee755ac375f6ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1e8ffefbe52344edd782b7d5d5b8d01b57f11f3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942315"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766252"
 ---
-# <a name="icordebugobjectvaluegetvirtualmethod-method"></a><span data-ttu-id="bd15a-102">Метод ICorDebugObjectValue::GetVirtualMethod</span><span class="sxs-lookup"><span data-stu-id="bd15a-102">ICorDebugObjectValue::GetVirtualMethod Method</span></span>
-<span data-ttu-id="bd15a-103">`GetVirtualMethod` не реализован в этой версии платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="bd15a-103">`GetVirtualMethod` is not implemented in this version of the .NET Framework.</span></span>  
+# <a name="icordebugobjectvaluegetvirtualmethod-method"></a><span data-ttu-id="64e54-102">Метод ICorDebugObjectValue::GetVirtualMethod</span><span class="sxs-lookup"><span data-stu-id="64e54-102">ICorDebugObjectValue::GetVirtualMethod Method</span></span>
+<span data-ttu-id="64e54-103">`GetVirtualMethod` не реализован в этой версии платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="64e54-103">`GetVirtualMethod` is not implemented in this version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bd15a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bd15a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="64e54-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="64e54-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetVirtualMethod (  
     [in]  mdMemberRef        memberRef,  
     [out] ICorDebugFunction  **ppFunction  
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="bd15a-105">Требования</span><span class="sxs-lookup"><span data-stu-id="bd15a-105">Requirements</span></span>  
- <span data-ttu-id="bd15a-106">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bd15a-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="64e54-105">Требования</span><span class="sxs-lookup"><span data-stu-id="64e54-105">Requirements</span></span>  
+ <span data-ttu-id="64e54-106">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="64e54-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bd15a-107">См. также</span><span class="sxs-lookup"><span data-stu-id="bd15a-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="64e54-107">См. также</span><span class="sxs-lookup"><span data-stu-id="64e54-107">See also</span></span>

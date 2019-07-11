@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 679afd7b1053043a7cc43304a544a516024a4696
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 78a99132b1d4e0c61041bba3fe064c61c4722f19
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663804"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775683"
 ---
-# <a name="iclrstrongnamestrongnamesignaturegeneration-method"></a><span data-ttu-id="be5d0-102">Метод ICLRStrongName::StrongNameSignatureGeneration</span><span class="sxs-lookup"><span data-stu-id="be5d0-102">ICLRStrongName::StrongNameSignatureGeneration Method</span></span>
-<span data-ttu-id="be5d0-103">Создает подпись строгого имени для указанной сборки.</span><span class="sxs-lookup"><span data-stu-id="be5d0-103">Generates a strong name signature for the specified assembly.</span></span>  
+# <a name="iclrstrongnamestrongnamesignaturegeneration-method"></a><span data-ttu-id="f0444-102">Метод ICLRStrongName::StrongNameSignatureGeneration</span><span class="sxs-lookup"><span data-stu-id="f0444-102">ICLRStrongName::StrongNameSignatureGeneration Method</span></span>
+<span data-ttu-id="f0444-103">Создает подпись строгого имени для указанной сборки.</span><span class="sxs-lookup"><span data-stu-id="f0444-103">Generates a strong name signature for the specified assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="be5d0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="be5d0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f0444-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f0444-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT StrongNameSignatureGeneration (   
     [in]  LPCWSTR   wszFilePath,  
     [in]  LPCWSTR   wszKeyContainer,  
@@ -40,51 +40,51 @@ HRESULT StrongNameSignatureGeneration (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="be5d0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="be5d0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f0444-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f0444-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="be5d0-106">[in] Путь к файлу, содержащему манифест сборки, для которого требуется создать подпись строгого имени.</span><span class="sxs-lookup"><span data-stu-id="be5d0-106">[in] The path to the file that contains the manifest of the assembly for which the strong name signature will be generated.</span></span>  
+ <span data-ttu-id="f0444-106">[in] Путь к файлу, содержащему манифест сборки, для которого требуется создать подпись строгого имени.</span><span class="sxs-lookup"><span data-stu-id="f0444-106">[in] The path to the file that contains the manifest of the assembly for which the strong name signature will be generated.</span></span>  
   
  `wszKeyContainer`  
- <span data-ttu-id="be5d0-107">[in] Имя контейнера ключа, который содержит пару открытого и закрытого ключей.</span><span class="sxs-lookup"><span data-stu-id="be5d0-107">[in] The name of the key container that contains the public/private key pair.</span></span>  
+ <span data-ttu-id="f0444-107">[in] Имя контейнера ключа, который содержит пару открытого и закрытого ключей.</span><span class="sxs-lookup"><span data-stu-id="f0444-107">[in] The name of the key container that contains the public/private key pair.</span></span>  
   
- <span data-ttu-id="be5d0-108">Если `pbKeyBlob` имеет значение null, `wszKeyContainer` необходимо указать допустимый контейнер в поставщик служб шифрования (CSP).</span><span class="sxs-lookup"><span data-stu-id="be5d0-108">If `pbKeyBlob` is null, `wszKeyContainer` must specify a valid container within the cryptographic service provider (CSP).</span></span> <span data-ttu-id="be5d0-109">В этом случае для подписывания файла используется пара ключей, хранящихся в контейнере.</span><span class="sxs-lookup"><span data-stu-id="be5d0-109">In this case, the key pair stored in the container is used to sign the file.</span></span>  
+ <span data-ttu-id="f0444-108">Если `pbKeyBlob` имеет значение null, `wszKeyContainer` необходимо указать допустимый контейнер в поставщик служб шифрования (CSP).</span><span class="sxs-lookup"><span data-stu-id="f0444-108">If `pbKeyBlob` is null, `wszKeyContainer` must specify a valid container within the cryptographic service provider (CSP).</span></span> <span data-ttu-id="f0444-109">В этом случае для подписывания файла используется пара ключей, хранящихся в контейнере.</span><span class="sxs-lookup"><span data-stu-id="f0444-109">In this case, the key pair stored in the container is used to sign the file.</span></span>  
   
- <span data-ttu-id="be5d0-110">Если `pbKeyBlob` не равно null, предполагается, что пары ключей должен содержаться в ключевых большой двоичный объект (BLOB).</span><span class="sxs-lookup"><span data-stu-id="be5d0-110">If `pbKeyBlob` is not null, the key pair is assumed to be contained in the key binary large object (BLOB).</span></span>  
+ <span data-ttu-id="f0444-110">Если `pbKeyBlob` не равно null, предполагается, что пары ключей должен содержаться в ключевых большой двоичный объект (BLOB).</span><span class="sxs-lookup"><span data-stu-id="f0444-110">If `pbKeyBlob` is not null, the key pair is assumed to be contained in the key binary large object (BLOB).</span></span>  
   
- <span data-ttu-id="be5d0-111">Ключи должны быть Rivest-Шамир-Adleman 1024-разрядный (RSA) ключи подписывания.</span><span class="sxs-lookup"><span data-stu-id="be5d0-111">The keys must be 1024-bit Rivest-Shamir-Adleman (RSA) signing keys.</span></span> <span data-ttu-id="be5d0-112">Другие типы ключей не поддерживаются в настоящее время.</span><span class="sxs-lookup"><span data-stu-id="be5d0-112">No other types of keys are supported at this time.</span></span>  
+ <span data-ttu-id="f0444-111">Ключи должны быть Rivest-Шамир-Adleman 1024-разрядный (RSA) ключи подписывания.</span><span class="sxs-lookup"><span data-stu-id="f0444-111">The keys must be 1024-bit Rivest-Shamir-Adleman (RSA) signing keys.</span></span> <span data-ttu-id="f0444-112">Другие типы ключей не поддерживаются в настоящее время.</span><span class="sxs-lookup"><span data-stu-id="f0444-112">No other types of keys are supported at this time.</span></span>  
   
  `pbKeyBlob`  
- <span data-ttu-id="be5d0-113">[in] Указатель на пару открытого и закрытого ключей.</span><span class="sxs-lookup"><span data-stu-id="be5d0-113">[in] A pointer to the public/private key pair.</span></span> <span data-ttu-id="be5d0-114">Эта пара имеет формат, созданные Win32 `CryptExportKey` функции.</span><span class="sxs-lookup"><span data-stu-id="be5d0-114">This pair is in the format created by the Win32 `CryptExportKey` function.</span></span> <span data-ttu-id="be5d0-115">Если `pbKeyBlob` имеет значение null, контейнере ключей `wszKeyContainer` предполагается, что содержит пару ключей.</span><span class="sxs-lookup"><span data-stu-id="be5d0-115">If `pbKeyBlob` is null, the key container specified by `wszKeyContainer` is assumed to contain the key pair.</span></span>  
+ <span data-ttu-id="f0444-113">[in] Указатель на пару открытого и закрытого ключей.</span><span class="sxs-lookup"><span data-stu-id="f0444-113">[in] A pointer to the public/private key pair.</span></span> <span data-ttu-id="f0444-114">Эта пара имеет формат, созданные Win32 `CryptExportKey` функции.</span><span class="sxs-lookup"><span data-stu-id="f0444-114">This pair is in the format created by the Win32 `CryptExportKey` function.</span></span> <span data-ttu-id="f0444-115">Если `pbKeyBlob` имеет значение null, контейнере ключей `wszKeyContainer` предполагается, что содержит пару ключей.</span><span class="sxs-lookup"><span data-stu-id="f0444-115">If `pbKeyBlob` is null, the key container specified by `wszKeyContainer` is assumed to contain the key pair.</span></span>  
   
  `cbKeyBlob`  
- <span data-ttu-id="be5d0-116">[in] Размер в байтах из `pbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="be5d0-116">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
+ <span data-ttu-id="f0444-116">[in] Размер в байтах из `pbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="f0444-116">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
   
  `ppbSignatureBlob`  
- <span data-ttu-id="be5d0-117">[out] Указатель на расположение, к которому среда CLR возвращает подпись.</span><span class="sxs-lookup"><span data-stu-id="be5d0-117">[out] A pointer to the location to which the common language runtime returns the signature.</span></span> <span data-ttu-id="be5d0-118">Если `ppbSignatureBlob` имеет значение null, среда выполнения сохраняет подпись в файл, указанный параметром `wszFilePath`.</span><span class="sxs-lookup"><span data-stu-id="be5d0-118">If `ppbSignatureBlob` is null, the runtime stores the signature in the file specified by `wszFilePath`.</span></span>  
+ <span data-ttu-id="f0444-117">[out] Указатель на расположение, к которому среда CLR возвращает подпись.</span><span class="sxs-lookup"><span data-stu-id="f0444-117">[out] A pointer to the location to which the common language runtime returns the signature.</span></span> <span data-ttu-id="f0444-118">Если `ppbSignatureBlob` имеет значение null, среда выполнения сохраняет подпись в файл, указанный параметром `wszFilePath`.</span><span class="sxs-lookup"><span data-stu-id="f0444-118">If `ppbSignatureBlob` is null, the runtime stores the signature in the file specified by `wszFilePath`.</span></span>  
   
- <span data-ttu-id="be5d0-119">Если `ppbSignatureBlob` — не равно null, среда CLR выделяет место для возвращения подписи.</span><span class="sxs-lookup"><span data-stu-id="be5d0-119">If `ppbSignatureBlob` is not null, the common language runtime allocates space in which to return the signature.</span></span> <span data-ttu-id="be5d0-120">Вызывающий объект должен освободить это пространство с помощью [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="be5d0-120">The caller must free this space by using the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method.</span></span>  
+ <span data-ttu-id="f0444-119">Если `ppbSignatureBlob` — не равно null, среда CLR выделяет место для возвращения подписи.</span><span class="sxs-lookup"><span data-stu-id="f0444-119">If `ppbSignatureBlob` is not null, the common language runtime allocates space in which to return the signature.</span></span> <span data-ttu-id="f0444-120">Вызывающий объект должен освободить это пространство с помощью [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="f0444-120">The caller must free this space by using the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method.</span></span>  
   
  `pcbSignatureBlob`  
- <span data-ttu-id="be5d0-121">[out] Размер в байтах, возвращаемой сигнатуры.</span><span class="sxs-lookup"><span data-stu-id="be5d0-121">[out] The size, in bytes, of the returned signature.</span></span>  
+ <span data-ttu-id="f0444-121">[out] Размер в байтах, возвращаемой сигнатуры.</span><span class="sxs-lookup"><span data-stu-id="f0444-121">[out] The size, in bytes, of the returned signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="be5d0-122">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="be5d0-122">Return Value</span></span>  
- <span data-ttu-id="be5d0-123">`S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="be5d0-123">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f0444-122">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="f0444-122">Return Value</span></span>  
+ <span data-ttu-id="f0444-123">`S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="f0444-123">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="be5d0-124">Примечания</span><span class="sxs-lookup"><span data-stu-id="be5d0-124">Remarks</span></span>  
- <span data-ttu-id="be5d0-125">Укажите значение null для `wszFilePath` для вычисления размера подписи без создания подписи.</span><span class="sxs-lookup"><span data-stu-id="be5d0-125">Specify null for `wszFilePath` to calculate the size of the signature without creating the signature.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f0444-124">Примечания</span><span class="sxs-lookup"><span data-stu-id="f0444-124">Remarks</span></span>  
+ <span data-ttu-id="f0444-125">Укажите значение null для `wszFilePath` для вычисления размера подписи без создания подписи.</span><span class="sxs-lookup"><span data-stu-id="f0444-125">Specify null for `wszFilePath` to calculate the size of the signature without creating the signature.</span></span>  
   
- <span data-ttu-id="be5d0-126">Подписи могут быть сохранены либо непосредственно в файле или возвращается вызывающей стороне.</span><span class="sxs-lookup"><span data-stu-id="be5d0-126">The signature can be stored either directly in the file, or returned to the caller.</span></span>  
+ <span data-ttu-id="f0444-126">Подписи могут быть сохранены либо непосредственно в файле или возвращается вызывающей стороне.</span><span class="sxs-lookup"><span data-stu-id="f0444-126">The signature can be stored either directly in the file, or returned to the caller.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="be5d0-127">Требования</span><span class="sxs-lookup"><span data-stu-id="be5d0-127">Requirements</span></span>  
- <span data-ttu-id="be5d0-128">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="be5d0-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f0444-127">Требования</span><span class="sxs-lookup"><span data-stu-id="f0444-127">Requirements</span></span>  
+ <span data-ttu-id="f0444-128">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f0444-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="be5d0-129">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="be5d0-129">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="f0444-129">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="f0444-129">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="be5d0-130">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="be5d0-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f0444-130">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f0444-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="be5d0-131">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be5d0-131">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="f0444-131">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f0444-131">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="be5d0-132">См. также</span><span class="sxs-lookup"><span data-stu-id="be5d0-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f0444-132">См. также</span><span class="sxs-lookup"><span data-stu-id="f0444-132">See also</span></span>
 
-- [<span data-ttu-id="be5d0-133">Метод StrongNameSignatureGenerationEx</span><span class="sxs-lookup"><span data-stu-id="be5d0-133">StrongNameSignatureGenerationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
-- [<span data-ttu-id="be5d0-134">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="be5d0-134">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="f0444-133">Метод StrongNameSignatureGenerationEx</span><span class="sxs-lookup"><span data-stu-id="f0444-133">StrongNameSignatureGenerationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
+- [<span data-ttu-id="f0444-134">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="f0444-134">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

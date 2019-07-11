@@ -17,38 +17,38 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 742be1467d2f1e6eb7d8567ddf85f8e65ea4b8d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b8a8c3dbfb7b9949811025846484ab233ed3741
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794333"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776624"
 ---
-# <a name="inotifyconnection2unregisternotifysource-method"></a><span data-ttu-id="3100d-102">Метод INotifyConnection2::UnregisterNotifySource</span><span class="sxs-lookup"><span data-stu-id="3100d-102">INotifyConnection2::UnregisterNotifySource Method</span></span>
-<span data-ttu-id="3100d-103">Удаляет заданный исходный объект уведомлений из соединения.</span><span class="sxs-lookup"><span data-stu-id="3100d-103">Removes a specified notification source object from the connection.</span></span>  
+# <a name="inotifyconnection2unregisternotifysource-method"></a><span data-ttu-id="9eda1-102">Метод INotifyConnection2::UnregisterNotifySource</span><span class="sxs-lookup"><span data-stu-id="9eda1-102">INotifyConnection2::UnregisterNotifySource Method</span></span>
+<span data-ttu-id="9eda1-103">Удаляет заданный исходный объект уведомлений из соединения.</span><span class="sxs-lookup"><span data-stu-id="9eda1-103">Removes a specified notification source object from the connection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3100d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3100d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9eda1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9eda1-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT UnregisterNotifySource  
 (  
     [in]  INotifySource2*  in_pNotifySource  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3100d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="3100d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9eda1-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9eda1-105">Parameters</span></span>  
  `in_pNotifySource`  
- <span data-ttu-id="3100d-106">[in] Объект уведомления для отмены регистрации.</span><span class="sxs-lookup"><span data-stu-id="3100d-106">[in] Notification object to be unregistered.</span></span>  
+ <span data-ttu-id="9eda1-106">[in] Объект уведомления для отмены регистрации.</span><span class="sxs-lookup"><span data-stu-id="9eda1-106">[in] Notification object to be unregistered.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3100d-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="3100d-107">Return Value</span></span>  
- <span data-ttu-id="3100d-108">Значение S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="3100d-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9eda1-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="9eda1-107">Return Value</span></span>  
+ <span data-ttu-id="9eda1-108">Значение S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="9eda1-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3100d-109">Требования</span><span class="sxs-lookup"><span data-stu-id="3100d-109">Requirements</span></span>  
- <span data-ttu-id="3100d-110">**Заголовок.** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="3100d-110">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9eda1-109">Требования</span><span class="sxs-lookup"><span data-stu-id="9eda1-109">Requirements</span></span>  
+ <span data-ttu-id="9eda1-110">**Заголовок.** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="9eda1-110">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3100d-111">См. также</span><span class="sxs-lookup"><span data-stu-id="3100d-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9eda1-111">См. также</span><span class="sxs-lookup"><span data-stu-id="9eda1-111">See also</span></span>
 
-- [<span data-ttu-id="3100d-112">Интерфейс INotifyConnection2</span><span class="sxs-lookup"><span data-stu-id="3100d-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [<span data-ttu-id="3100d-113">Интерфейс INotifySource2</span><span class="sxs-lookup"><span data-stu-id="3100d-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="3100d-114">Интерфейс INotifySink2</span><span class="sxs-lookup"><span data-stu-id="3100d-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="3100d-115">Метод RegisterNotifySource</span><span class="sxs-lookup"><span data-stu-id="3100d-115">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)
+- [<span data-ttu-id="9eda1-112">Интерфейс INotifyConnection2</span><span class="sxs-lookup"><span data-stu-id="9eda1-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="9eda1-113">Интерфейс INotifySource2</span><span class="sxs-lookup"><span data-stu-id="9eda1-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="9eda1-114">Интерфейс INotifySink2</span><span class="sxs-lookup"><span data-stu-id="9eda1-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="9eda1-115">Метод RegisterNotifySource</span><span class="sxs-lookup"><span data-stu-id="9eda1-115">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)

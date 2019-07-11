@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1b33b50e53c454f2b62253d12943ea044240d8cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4f34340c18fddc46695fe64946c3afd90ed7454
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045205"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772292"
 ---
-# <a name="cortokentype-enumeration"></a><span data-ttu-id="aca0e-102">Перечисление CorTokenType</span><span class="sxs-lookup"><span data-stu-id="aca0e-102">CorTokenType Enumeration</span></span>
-<span data-ttu-id="aca0e-103">Указывает тип маркера метаданных.</span><span class="sxs-lookup"><span data-stu-id="aca0e-103">Indicates the type of a metadata token.</span></span>  
+# <a name="cortokentype-enumeration"></a><span data-ttu-id="2df5f-102">Перечисление CorTokenType</span><span class="sxs-lookup"><span data-stu-id="2df5f-102">CorTokenType Enumeration</span></span>
+<span data-ttu-id="2df5f-103">Указывает тип маркера метаданных.</span><span class="sxs-lookup"><span data-stu-id="2df5f-103">Indicates the type of a metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aca0e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="aca0e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2df5f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2df5f-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum CorTokenType {  
   
     mdtModule                       = 0x00000000,  
@@ -61,47 +61,47 @@ typedef enum CorTokenType {
 } CorTokenType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="aca0e-105">Участники</span><span class="sxs-lookup"><span data-stu-id="aca0e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="2df5f-105">Участники</span><span class="sxs-lookup"><span data-stu-id="2df5f-105">Members</span></span>  
   
-|<span data-ttu-id="aca0e-106">Член</span><span class="sxs-lookup"><span data-stu-id="aca0e-106">Member</span></span>|<span data-ttu-id="aca0e-107">Описание</span><span class="sxs-lookup"><span data-stu-id="aca0e-107">Description</span></span>|  
+|<span data-ttu-id="2df5f-106">Член</span><span class="sxs-lookup"><span data-stu-id="2df5f-106">Member</span></span>|<span data-ttu-id="2df5f-107">Описание</span><span class="sxs-lookup"><span data-stu-id="2df5f-107">Description</span></span>|  
 |------------|-----------------|  
-|`mdtModule`|<span data-ttu-id="aca0e-108">`mdModule` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-108">An `mdModule` token.</span></span>|  
-|`mdtTypeRef`|<span data-ttu-id="aca0e-109">`mdTypeRef` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-109">An `mdTypeRef` token.</span></span>|  
-|`mdtTypeDef`|<span data-ttu-id="aca0e-110">`mdTypeDef` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-110">An `mdTypeDef` token.</span></span>|  
-|`mdtFieldDef`|<span data-ttu-id="aca0e-111">`mdFieldDef` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-111">An `mdFieldDef` token.</span></span>|  
-|`mdtMethodDef`|<span data-ttu-id="aca0e-112">`mdMethodDef` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-112">An `mdMethodDef` token.</span></span>|  
-|`mdtParamDef`|<span data-ttu-id="aca0e-113">`mdParamDef` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-113">An `mdParamDef` token.</span></span>|  
-|`mdtInterfaceImpl`|<span data-ttu-id="aca0e-114">`mdInterfaceImpl` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-114">An `mdInterfaceImpl` token.</span></span>|  
-|`mdtMemberRef`|<span data-ttu-id="aca0e-115">`mdMemberRef` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-115">An `mdMemberRef` token.</span></span>|  
-|`mdtCustomAttribute`|<span data-ttu-id="aca0e-116">`mdCustomAttribute` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-116">An `mdCustomAttribute` token.</span></span>|  
-|`mdtPermission`|<span data-ttu-id="aca0e-117">`mdPermission` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-117">An `mdPermission` token.</span></span>|  
-|`mdtSignature`|<span data-ttu-id="aca0e-118">`mdSignature` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-118">An `mdSignature` token.</span></span>|  
-|`mdtEvent`|<span data-ttu-id="aca0e-119">`mdEvent` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-119">An `mdEvent` token.</span></span>|  
-|`mdtProperty`|<span data-ttu-id="aca0e-120">`mdProperty` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-120">An `mdProperty` token.</span></span>|  
-|`mdtModuleRef`|<span data-ttu-id="aca0e-121">`mdModuleRef` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-121">An `mdModuleRef` token.</span></span>|  
-|`mdtTypeSpec`|<span data-ttu-id="aca0e-122">`mdTypeSpec` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-122">An `mdTypeSpec` token.</span></span>|  
-|`mdtAssembly`|<span data-ttu-id="aca0e-123">`mdAssembly` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-123">An `mdAssembly` token.</span></span>|  
-|`mdtAssemblyRef`|<span data-ttu-id="aca0e-124">`mdAssemblyRef` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-124">An `mdAssemblyRef` token.</span></span>|  
-|`mdtFile`|<span data-ttu-id="aca0e-125">`mdFile` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-125">An `mdFile` token.</span></span>|  
-|`mdtExportedType`|<span data-ttu-id="aca0e-126">`mdExportedType` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-126">An `mdExportedType` token.</span></span>|  
-|`mdtManifestResource`|<span data-ttu-id="aca0e-127">`mdManifestResource` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-127">An `mdManifestResource` token.</span></span>|  
-|`mdtGenericParam`|<span data-ttu-id="aca0e-128">`mdGenericParam` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-128">An `mdGenericParam` token.</span></span>|  
-|`mdtMethodSpec`|<span data-ttu-id="aca0e-129">`mdMethodSpec` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-129">An `mdMethodSpec` token.</span></span>|  
-|`mdtGenericParamConstraint`|<span data-ttu-id="aca0e-130">`mdGenericParamConstraint` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-130">An `mdGenericParamConstraint` token.</span></span>|  
-|`mdtString`|<span data-ttu-id="aca0e-131">`mdString` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-131">An `mdString` token.</span></span>|  
-|`mdtName`|<span data-ttu-id="aca0e-132">`mdName` Токена.</span><span class="sxs-lookup"><span data-stu-id="aca0e-132">An `mdName` token.</span></span>|  
-|`mdtBaseType`|<span data-ttu-id="aca0e-133">Не используется.</span><span class="sxs-lookup"><span data-stu-id="aca0e-133">Not used.</span></span>|  
+|`mdtModule`|<span data-ttu-id="2df5f-108">`mdModule` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-108">An `mdModule` token.</span></span>|  
+|`mdtTypeRef`|<span data-ttu-id="2df5f-109">`mdTypeRef` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-109">An `mdTypeRef` token.</span></span>|  
+|`mdtTypeDef`|<span data-ttu-id="2df5f-110">`mdTypeDef` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-110">An `mdTypeDef` token.</span></span>|  
+|`mdtFieldDef`|<span data-ttu-id="2df5f-111">`mdFieldDef` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-111">An `mdFieldDef` token.</span></span>|  
+|`mdtMethodDef`|<span data-ttu-id="2df5f-112">`mdMethodDef` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-112">An `mdMethodDef` token.</span></span>|  
+|`mdtParamDef`|<span data-ttu-id="2df5f-113">`mdParamDef` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-113">An `mdParamDef` token.</span></span>|  
+|`mdtInterfaceImpl`|<span data-ttu-id="2df5f-114">`mdInterfaceImpl` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-114">An `mdInterfaceImpl` token.</span></span>|  
+|`mdtMemberRef`|<span data-ttu-id="2df5f-115">`mdMemberRef` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-115">An `mdMemberRef` token.</span></span>|  
+|`mdtCustomAttribute`|<span data-ttu-id="2df5f-116">`mdCustomAttribute` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-116">An `mdCustomAttribute` token.</span></span>|  
+|`mdtPermission`|<span data-ttu-id="2df5f-117">`mdPermission` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-117">An `mdPermission` token.</span></span>|  
+|`mdtSignature`|<span data-ttu-id="2df5f-118">`mdSignature` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-118">An `mdSignature` token.</span></span>|  
+|`mdtEvent`|<span data-ttu-id="2df5f-119">`mdEvent` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-119">An `mdEvent` token.</span></span>|  
+|`mdtProperty`|<span data-ttu-id="2df5f-120">`mdProperty` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-120">An `mdProperty` token.</span></span>|  
+|`mdtModuleRef`|<span data-ttu-id="2df5f-121">`mdModuleRef` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-121">An `mdModuleRef` token.</span></span>|  
+|`mdtTypeSpec`|<span data-ttu-id="2df5f-122">`mdTypeSpec` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-122">An `mdTypeSpec` token.</span></span>|  
+|`mdtAssembly`|<span data-ttu-id="2df5f-123">`mdAssembly` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-123">An `mdAssembly` token.</span></span>|  
+|`mdtAssemblyRef`|<span data-ttu-id="2df5f-124">`mdAssemblyRef` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-124">An `mdAssemblyRef` token.</span></span>|  
+|`mdtFile`|<span data-ttu-id="2df5f-125">`mdFile` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-125">An `mdFile` token.</span></span>|  
+|`mdtExportedType`|<span data-ttu-id="2df5f-126">`mdExportedType` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-126">An `mdExportedType` token.</span></span>|  
+|`mdtManifestResource`|<span data-ttu-id="2df5f-127">`mdManifestResource` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-127">An `mdManifestResource` token.</span></span>|  
+|`mdtGenericParam`|<span data-ttu-id="2df5f-128">`mdGenericParam` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-128">An `mdGenericParam` token.</span></span>|  
+|`mdtMethodSpec`|<span data-ttu-id="2df5f-129">`mdMethodSpec` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-129">An `mdMethodSpec` token.</span></span>|  
+|`mdtGenericParamConstraint`|<span data-ttu-id="2df5f-130">`mdGenericParamConstraint` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-130">An `mdGenericParamConstraint` token.</span></span>|  
+|`mdtString`|<span data-ttu-id="2df5f-131">`mdString` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-131">An `mdString` token.</span></span>|  
+|`mdtName`|<span data-ttu-id="2df5f-132">`mdName` Токена.</span><span class="sxs-lookup"><span data-stu-id="2df5f-132">An `mdName` token.</span></span>|  
+|`mdtBaseType`|<span data-ttu-id="2df5f-133">Не используется.</span><span class="sxs-lookup"><span data-stu-id="2df5f-133">Not used.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="aca0e-134">Примечания</span><span class="sxs-lookup"><span data-stu-id="aca0e-134">Remarks</span></span>  
- <span data-ttu-id="aca0e-135">Каждое значение равно значению старший байт в соответствующий маркер метаданных.</span><span class="sxs-lookup"><span data-stu-id="aca0e-135">Each value is equal to the value of the top byte in the corresponding metadata token.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2df5f-134">Примечания</span><span class="sxs-lookup"><span data-stu-id="2df5f-134">Remarks</span></span>  
+ <span data-ttu-id="2df5f-135">Каждое значение равно значению старший байт в соответствующий маркер метаданных.</span><span class="sxs-lookup"><span data-stu-id="2df5f-135">Each value is equal to the value of the top byte in the corresponding metadata token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="aca0e-136">Требования</span><span class="sxs-lookup"><span data-stu-id="aca0e-136">Requirements</span></span>  
- <span data-ttu-id="aca0e-137">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aca0e-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2df5f-136">Требования</span><span class="sxs-lookup"><span data-stu-id="2df5f-136">Requirements</span></span>  
+ <span data-ttu-id="2df5f-137">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2df5f-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aca0e-138">**Заголовок.** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="aca0e-138">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="2df5f-138">**Заголовок.** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="2df5f-138">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="aca0e-139">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aca0e-139">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2df5f-139">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2df5f-139">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aca0e-140">См. также</span><span class="sxs-lookup"><span data-stu-id="aca0e-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2df5f-140">См. также</span><span class="sxs-lookup"><span data-stu-id="2df5f-140">See also</span></span>
 
-- [<span data-ttu-id="aca0e-141">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="aca0e-141">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="2df5f-141">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="2df5f-141">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

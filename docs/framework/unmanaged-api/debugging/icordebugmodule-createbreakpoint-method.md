@@ -17,23 +17,23 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 313d3d74356a378351270916e1043a1cc4d799ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28d96177e839613d40e8c500e334c92b05c6e96a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927325"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762195"
 ---
-# <a name="icordebugmodulecreatebreakpoint-method"></a><span data-ttu-id="bfd36-102">Метод ICorDebugModule::CreateBreakpoint</span><span class="sxs-lookup"><span data-stu-id="bfd36-102">ICorDebugModule::CreateBreakpoint Method</span></span>
-<span data-ttu-id="bfd36-103">Этот метод не реализован в текущей версии платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="bfd36-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugmodulecreatebreakpoint-method"></a><span data-ttu-id="dd291-102">Метод ICorDebugModule::CreateBreakpoint</span><span class="sxs-lookup"><span data-stu-id="dd291-102">ICorDebugModule::CreateBreakpoint Method</span></span>
+<span data-ttu-id="dd291-103">Этот метод не реализован в текущей версии платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="dd291-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bfd36-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bfd36-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dd291-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="dd291-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT CreateBreakpoint(  
     [out] ICorDebugModuleBreakpoint **ppBreakpoint  
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="bfd36-105">Требования</span><span class="sxs-lookup"><span data-stu-id="bfd36-105">Requirements</span></span>  
- <span data-ttu-id="bfd36-106">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bfd36-106">**Header:** CorDebug.idl, CorDebug.h</span></span>
+## <a name="requirements"></a><span data-ttu-id="dd291-105">Требования</span><span class="sxs-lookup"><span data-stu-id="dd291-105">Requirements</span></span>  
+ <span data-ttu-id="dd291-106">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dd291-106">**Header:** CorDebug.idl, CorDebug.h</span></span>

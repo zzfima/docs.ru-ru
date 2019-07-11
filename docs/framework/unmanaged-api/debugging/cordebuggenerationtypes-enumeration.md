@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1707a09f14fbab6150c2ecbcd188d7bf88064fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 193f5ffe96e89a00bed8a3c88ee346ba3ea9f2b4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989668"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740016"
 ---
-# <a name="cordebuggenerationtypes-enumeration"></a><span data-ttu-id="6bc4a-102">Перечисление CorDebugGenerationTypes</span><span class="sxs-lookup"><span data-stu-id="6bc4a-102">CorDebugGenerationTypes Enumeration</span></span>
-<span data-ttu-id="6bc4a-103">Указывает на создание области памяти в управляемой куче.</span><span class="sxs-lookup"><span data-stu-id="6bc4a-103">Specifies the generation of a region of memory on the managed heap.</span></span>  
+# <a name="cordebuggenerationtypes-enumeration"></a><span data-ttu-id="4b5f1-102">Перечисление CorDebugGenerationTypes</span><span class="sxs-lookup"><span data-stu-id="4b5f1-102">CorDebugGenerationTypes Enumeration</span></span>
+<span data-ttu-id="4b5f1-103">Указывает на создание области памяти в управляемой куче.</span><span class="sxs-lookup"><span data-stu-id="4b5f1-103">Specifies the generation of a region of memory on the managed heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6bc4a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6bc4a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4b5f1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4b5f1-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum CorDebugGenerationTypes {  
     CorDebug_Gen0 = 0,  
     CorDebug_Gen1 = 1,  
@@ -37,26 +37,26 @@ typedef enum CorDebugGenerationTypes {
 } CorDebugRegionTypes;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="6bc4a-105">Участники</span><span class="sxs-lookup"><span data-stu-id="6bc4a-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="4b5f1-105">Участники</span><span class="sxs-lookup"><span data-stu-id="4b5f1-105">Members</span></span>  
   
-|<span data-ttu-id="6bc4a-106">Имя члена</span><span class="sxs-lookup"><span data-stu-id="6bc4a-106">Member name</span></span>|<span data-ttu-id="6bc4a-107">Описание</span><span class="sxs-lookup"><span data-stu-id="6bc4a-107">Description</span></span>|  
+|<span data-ttu-id="4b5f1-106">Имя члена</span><span class="sxs-lookup"><span data-stu-id="4b5f1-106">Member name</span></span>|<span data-ttu-id="4b5f1-107">Описание</span><span class="sxs-lookup"><span data-stu-id="4b5f1-107">Description</span></span>|  
 |-----------------|-----------------|  
-|`CorDebug_Gen0`|<span data-ttu-id="6bc4a-108">Поколение 0.</span><span class="sxs-lookup"><span data-stu-id="6bc4a-108">Generation 0.</span></span>|  
-|`CorDebug_Gen1`|<span data-ttu-id="6bc4a-109">Поколение 1.</span><span class="sxs-lookup"><span data-stu-id="6bc4a-109">Generation 1.</span></span>|  
-|`CorDebug_Gen2`|<span data-ttu-id="6bc4a-110">Поколение 2.</span><span class="sxs-lookup"><span data-stu-id="6bc4a-110">Generation 2.</span></span>|  
-|`CorDebug_LOH`|<span data-ttu-id="6bc4a-111">Куча больших объектов.</span><span class="sxs-lookup"><span data-stu-id="6bc4a-111">The large object heap.</span></span>|  
+|`CorDebug_Gen0`|<span data-ttu-id="4b5f1-108">Поколение 0.</span><span class="sxs-lookup"><span data-stu-id="4b5f1-108">Generation 0.</span></span>|  
+|`CorDebug_Gen1`|<span data-ttu-id="4b5f1-109">Поколение 1.</span><span class="sxs-lookup"><span data-stu-id="4b5f1-109">Generation 1.</span></span>|  
+|`CorDebug_Gen2`|<span data-ttu-id="4b5f1-110">Поколение 2.</span><span class="sxs-lookup"><span data-stu-id="4b5f1-110">Generation 2.</span></span>|  
+|`CorDebug_LOH`|<span data-ttu-id="4b5f1-111">Куча больших объектов.</span><span class="sxs-lookup"><span data-stu-id="4b5f1-111">The large object heap.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6bc4a-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="6bc4a-112">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4b5f1-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="4b5f1-112">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6bc4a-113">Требования</span><span class="sxs-lookup"><span data-stu-id="6bc4a-113">Requirements</span></span>  
- <span data-ttu-id="6bc4a-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6bc4a-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4b5f1-113">Требования</span><span class="sxs-lookup"><span data-stu-id="4b5f1-113">Requirements</span></span>  
+ <span data-ttu-id="4b5f1-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4b5f1-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6bc4a-115">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6bc4a-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4b5f1-115">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4b5f1-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6bc4a-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6bc4a-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4b5f1-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4b5f1-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6bc4a-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6bc4a-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="4b5f1-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4b5f1-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6bc4a-118">См. также</span><span class="sxs-lookup"><span data-stu-id="6bc4a-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4b5f1-118">См. также</span><span class="sxs-lookup"><span data-stu-id="4b5f1-118">See also</span></span>
 
-- [<span data-ttu-id="6bc4a-119">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="6bc4a-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="4b5f1-119">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="4b5f1-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

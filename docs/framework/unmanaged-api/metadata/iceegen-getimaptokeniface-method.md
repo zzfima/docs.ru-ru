@@ -17,39 +17,39 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc6581fc21b975ff5f50db62a571881606765c54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b42c7ed5614f5f436559ce4af462ff16896a89c0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076605"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746153"
 ---
-# <a name="iceegengetimaptokeniface-method"></a><span data-ttu-id="39272-102">Метод ICeeGen::GetIMapTokenIface</span><span class="sxs-lookup"><span data-stu-id="39272-102">ICeeGen::GetIMapTokenIface Method</span></span>
-<span data-ttu-id="39272-103">Получает интерфейс, который ссылается указанный токен.</span><span class="sxs-lookup"><span data-stu-id="39272-103">Gets the interface referenced by the specified token.</span></span>  
+# <a name="iceegengetimaptokeniface-method"></a><span data-ttu-id="64a12-102">Метод ICeeGen::GetIMapTokenIface</span><span class="sxs-lookup"><span data-stu-id="64a12-102">ICeeGen::GetIMapTokenIface Method</span></span>
+<span data-ttu-id="64a12-103">Получает интерфейс, который ссылается указанный токен.</span><span class="sxs-lookup"><span data-stu-id="64a12-103">Gets the interface referenced by the specified token.</span></span>  
   
- <span data-ttu-id="39272-104">Этот метод является устаревшим и не должны использоваться.</span><span class="sxs-lookup"><span data-stu-id="39272-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="64a12-104">Этот метод является устаревшим и не должны использоваться.</span><span class="sxs-lookup"><span data-stu-id="64a12-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="39272-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="39272-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="64a12-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="64a12-105">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetIMapTokenIface (  
     [in, out] IUnknown   **pIMapToken  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="39272-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="39272-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="64a12-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="64a12-106">Parameters</span></span>  
  `pIMapToken`  
- <span data-ttu-id="39272-107">[in, out] Токен метаданных для интерфейса должны быть возвращены.</span><span class="sxs-lookup"><span data-stu-id="39272-107">[in, out] The metadata token for the interface to be returned.</span></span>  
+ <span data-ttu-id="64a12-107">[in, out] Токен метаданных для интерфейса должны быть возвращены.</span><span class="sxs-lookup"><span data-stu-id="64a12-107">[in, out] The metadata token for the interface to be returned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="39272-108">Требования</span><span class="sxs-lookup"><span data-stu-id="39272-108">Requirements</span></span>  
- <span data-ttu-id="39272-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="39272-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="64a12-108">Требования</span><span class="sxs-lookup"><span data-stu-id="64a12-108">Requirements</span></span>  
+ <span data-ttu-id="64a12-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="64a12-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="39272-110">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="39272-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="64a12-110">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="64a12-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="39272-111">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="39272-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="64a12-111">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="64a12-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="39272-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="39272-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="64a12-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="64a12-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="39272-113">См. также</span><span class="sxs-lookup"><span data-stu-id="39272-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="64a12-113">См. также</span><span class="sxs-lookup"><span data-stu-id="64a12-113">See also</span></span>
 
-- [<span data-ttu-id="39272-114">Интерфейс ICeeGen</span><span class="sxs-lookup"><span data-stu-id="39272-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="64a12-114">Интерфейс ICeeGen</span><span class="sxs-lookup"><span data-stu-id="64a12-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

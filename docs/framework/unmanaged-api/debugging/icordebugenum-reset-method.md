@@ -17,31 +17,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3f70d2d90df43fdfe759387bebd776736843a1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e809cad8098ccb80685545c9e7f9deea2f73540
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996181"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752235"
 ---
-# <a name="icordebugenumreset-method"></a><span data-ttu-id="d7655-102">Метод ICorDebugEnum::Reset</span><span class="sxs-lookup"><span data-stu-id="d7655-102">ICorDebugEnum::Reset Method</span></span>
-<span data-ttu-id="d7655-103">Перемещает курсор в начало перечисления.</span><span class="sxs-lookup"><span data-stu-id="d7655-103">Moves the cursor to the beginning of the enumeration.</span></span>  
+# <a name="icordebugenumreset-method"></a><span data-ttu-id="01da0-102">Метод ICorDebugEnum::Reset</span><span class="sxs-lookup"><span data-stu-id="01da0-102">ICorDebugEnum::Reset Method</span></span>
+<span data-ttu-id="01da0-103">Перемещает курсор в начало перечисления.</span><span class="sxs-lookup"><span data-stu-id="01da0-103">Moves the cursor to the beginning of the enumeration.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d7655-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d7655-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="01da0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="01da0-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT Reset ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="d7655-105">Требования</span><span class="sxs-lookup"><span data-stu-id="d7655-105">Requirements</span></span>  
- <span data-ttu-id="d7655-106">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d7655-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="01da0-105">Требования</span><span class="sxs-lookup"><span data-stu-id="01da0-105">Requirements</span></span>  
+ <span data-ttu-id="01da0-106">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="01da0-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d7655-107">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d7655-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="01da0-107">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="01da0-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d7655-108">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d7655-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="01da0-108">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="01da0-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d7655-109">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d7655-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="01da0-109">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01da0-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d7655-110">См. также</span><span class="sxs-lookup"><span data-stu-id="d7655-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="01da0-110">См. также</span><span class="sxs-lookup"><span data-stu-id="01da0-110">See also</span></span>
 
-- [<span data-ttu-id="d7655-111">Интерфейс ICorDebugEnum</span><span class="sxs-lookup"><span data-stu-id="d7655-111">ICorDebugEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)
+- [<span data-ttu-id="01da0-111">Интерфейс ICorDebugEnum</span><span class="sxs-lookup"><span data-stu-id="01da0-111">ICorDebugEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)

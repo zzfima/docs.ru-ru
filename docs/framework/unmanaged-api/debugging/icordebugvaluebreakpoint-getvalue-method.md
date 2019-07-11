@@ -17,35 +17,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acdfddd015013215bba9039d871837a60ead1405
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 639b34093e79933b4daaa0e3ae5223f1a1a51bf6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986821"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773775"
 ---
-# <a name="icordebugvaluebreakpointgetvalue-method"></a><span data-ttu-id="2d27d-102">Метод ICorDebugValueBreakpoint::GetValue</span><span class="sxs-lookup"><span data-stu-id="2d27d-102">ICorDebugValueBreakpoint::GetValue Method</span></span>
-<span data-ttu-id="2d27d-103">Получает указатель интерфейса на объект «ICorDebugValue», который представляет значение объекта, на котором установлена точка останова.</span><span class="sxs-lookup"><span data-stu-id="2d27d-103">Gets an interface pointer to an "ICorDebugValue" object that represents the value of the object on which the breakpoint is set.</span></span>  
+# <a name="icordebugvaluebreakpointgetvalue-method"></a><span data-ttu-id="a74b5-102">Метод ICorDebugValueBreakpoint::GetValue</span><span class="sxs-lookup"><span data-stu-id="a74b5-102">ICorDebugValueBreakpoint::GetValue Method</span></span>
+<span data-ttu-id="a74b5-103">Получает указатель интерфейса на объект «ICorDebugValue», который представляет значение объекта, на котором установлена точка останова.</span><span class="sxs-lookup"><span data-stu-id="a74b5-103">Gets an interface pointer to an "ICorDebugValue" object that represents the value of the object on which the breakpoint is set.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2d27d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2d27d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a74b5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a74b5-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetValue (  
     [out] ICorDebugValue   **ppValue  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2d27d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="2d27d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a74b5-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a74b5-105">Parameters</span></span>  
  `ppValue`  
- <span data-ttu-id="2d27d-106">[out] Указатель на адрес `ICorDebugValue` объекта.</span><span class="sxs-lookup"><span data-stu-id="2d27d-106">[out] A pointer to the address of an `ICorDebugValue` object.</span></span>  
+ <span data-ttu-id="a74b5-106">[out] Указатель на адрес `ICorDebugValue` объекта.</span><span class="sxs-lookup"><span data-stu-id="a74b5-106">[out] A pointer to the address of an `ICorDebugValue` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2d27d-107">Требования</span><span class="sxs-lookup"><span data-stu-id="2d27d-107">Requirements</span></span>  
- <span data-ttu-id="2d27d-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2d27d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a74b5-107">Требования</span><span class="sxs-lookup"><span data-stu-id="a74b5-107">Requirements</span></span>  
+ <span data-ttu-id="a74b5-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a74b5-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2d27d-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2d27d-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a74b5-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a74b5-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2d27d-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2d27d-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a74b5-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a74b5-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2d27d-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2d27d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a74b5-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a74b5-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2d27d-112">См. также</span><span class="sxs-lookup"><span data-stu-id="2d27d-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a74b5-112">См. также</span><span class="sxs-lookup"><span data-stu-id="a74b5-112">See also</span></span>

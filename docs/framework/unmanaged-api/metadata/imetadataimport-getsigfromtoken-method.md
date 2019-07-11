@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 823a172c05d2ce76fef790966f54d7216f579fde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2060a70e2a3ce355f43ade67e6d6843670e00ad3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777537"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778850"
 ---
-# <a name="imetadataimportgetsigfromtoken-method"></a><span data-ttu-id="beff5-102">Метод IMetaDataImport::GetSigFromToken</span><span class="sxs-lookup"><span data-stu-id="beff5-102">IMetaDataImport::GetSigFromToken Method</span></span>
-<span data-ttu-id="beff5-103">Возвращает двоичную подпись метаданных, связанную с указанным токеном.</span><span class="sxs-lookup"><span data-stu-id="beff5-103">Gets the binary metadata signature associated with the specified token.</span></span>  
+# <a name="imetadataimportgetsigfromtoken-method"></a><span data-ttu-id="1aa36-102">Метод IMetaDataImport::GetSigFromToken</span><span class="sxs-lookup"><span data-stu-id="1aa36-102">IMetaDataImport::GetSigFromToken Method</span></span>
+<span data-ttu-id="1aa36-103">Возвращает двоичную подпись метаданных, связанную с указанным токеном.</span><span class="sxs-lookup"><span data-stu-id="1aa36-103">Gets the binary metadata signature associated with the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="beff5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="beff5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1aa36-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1aa36-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetSigFromToken (   
    [in]   mdSignature        mdSig,   
    [out]  PCCOR_SIGNATURE    *ppvSig,   
@@ -37,26 +37,26 @@ HRESULT GetSigFromToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="beff5-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="beff5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1aa36-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="1aa36-105">Parameters</span></span>  
  `mdSig`  
- <span data-ttu-id="beff5-106">[in] Токен для двоичную подпись метаданных для возврата.</span><span class="sxs-lookup"><span data-stu-id="beff5-106">[in] The token to return the binary metadata signature for.</span></span>  
+ <span data-ttu-id="1aa36-106">[in] Токен для двоичную подпись метаданных для возврата.</span><span class="sxs-lookup"><span data-stu-id="1aa36-106">[in] The token to return the binary metadata signature for.</span></span>  
   
  `ppvSig`  
- <span data-ttu-id="beff5-107">[out] Указатель на подпись возвращенные метаданные.</span><span class="sxs-lookup"><span data-stu-id="beff5-107">[out] A pointer to the returned metadata signature.</span></span>  
+ <span data-ttu-id="1aa36-107">[out] Указатель на подпись возвращенные метаданные.</span><span class="sxs-lookup"><span data-stu-id="1aa36-107">[out] A pointer to the returned metadata signature.</span></span>  
   
  `pcbSig`  
- <span data-ttu-id="beff5-108">[out] Размер в байтах двоичную подпись метаданных.</span><span class="sxs-lookup"><span data-stu-id="beff5-108">[out] The size in bytes of the binary metadata signature.</span></span>  
+ <span data-ttu-id="1aa36-108">[out] Размер в байтах двоичную подпись метаданных.</span><span class="sxs-lookup"><span data-stu-id="1aa36-108">[out] The size in bytes of the binary metadata signature.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="beff5-109">Требования</span><span class="sxs-lookup"><span data-stu-id="beff5-109">Requirements</span></span>  
- <span data-ttu-id="beff5-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="beff5-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1aa36-109">Требования</span><span class="sxs-lookup"><span data-stu-id="1aa36-109">Requirements</span></span>  
+ <span data-ttu-id="1aa36-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1aa36-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="beff5-111">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="beff5-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="1aa36-111">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="1aa36-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="beff5-112">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="beff5-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="1aa36-112">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1aa36-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="beff5-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="beff5-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="1aa36-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1aa36-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="beff5-114">См. также</span><span class="sxs-lookup"><span data-stu-id="beff5-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1aa36-114">См. также</span><span class="sxs-lookup"><span data-stu-id="1aa36-114">See also</span></span>
 
-- [<span data-ttu-id="beff5-115">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="beff5-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="beff5-116">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="beff5-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="1aa36-115">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="1aa36-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="1aa36-116">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="1aa36-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

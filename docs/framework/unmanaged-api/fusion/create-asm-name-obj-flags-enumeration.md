@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aebc6dfe4830e6477cda8fd279b8ef2a8040895c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 871ad81cd83c40d7299f39ede404e274b95b2ac0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914567"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778454"
 ---
-# <a name="createasmnameobjflags-enumeration"></a><span data-ttu-id="aa312-102">Перечисление CREATE_ASM_NAME_OBJ_FLAGS</span><span class="sxs-lookup"><span data-stu-id="aa312-102">CREATE_ASM_NAME_OBJ_FLAGS Enumeration</span></span>
-<span data-ttu-id="aa312-103">Указывает атрибуты [IAssemblyName-интерфейс](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) объекта при построении с [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) функции.</span><span class="sxs-lookup"><span data-stu-id="aa312-103">Specifies the attributes of an [IAssemblyName Interface](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object when it is constructed by the [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) function.</span></span>  
+# <a name="createasmnameobjflags-enumeration"></a><span data-ttu-id="7f145-102">Перечисление CREATE_ASM_NAME_OBJ_FLAGS</span><span class="sxs-lookup"><span data-stu-id="7f145-102">CREATE_ASM_NAME_OBJ_FLAGS Enumeration</span></span>
+<span data-ttu-id="7f145-103">Указывает атрибуты [IAssemblyName-интерфейс](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) объекта при построении с [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) функции.</span><span class="sxs-lookup"><span data-stu-id="7f145-103">Specifies the attributes of an [IAssemblyName Interface](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object when it is constructed by the [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aa312-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="aa312-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7f145-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7f145-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum {  
   
     CANOF_PARSE_DISPLAY_NAME            = 0x1,  
@@ -40,24 +40,24 @@ typedef enum {
 } CREATE_ASM_NAME_OBJ_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="aa312-105">Участники</span><span class="sxs-lookup"><span data-stu-id="aa312-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="7f145-105">Участники</span><span class="sxs-lookup"><span data-stu-id="7f145-105">Members</span></span>  
   
-|<span data-ttu-id="aa312-106">Член</span><span class="sxs-lookup"><span data-stu-id="aa312-106">Member</span></span>|<span data-ttu-id="aa312-107">Описание</span><span class="sxs-lookup"><span data-stu-id="aa312-107">Description</span></span>|  
+|<span data-ttu-id="7f145-106">Член</span><span class="sxs-lookup"><span data-stu-id="7f145-106">Member</span></span>|<span data-ttu-id="7f145-107">Описание</span><span class="sxs-lookup"><span data-stu-id="7f145-107">Description</span></span>|  
 |------------|-----------------|  
-|`CANOF_PARSE_DISPLAY_NAME`|<span data-ttu-id="aa312-108">Указывает, что переданный параметр является текстовым идентификатором.</span><span class="sxs-lookup"><span data-stu-id="aa312-108">Indicates that the parameter passed is a textual identity.</span></span>|  
-|`CANOF_SET_DEFAULT_VALUES`|<span data-ttu-id="aa312-109">Задает несколько значений по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="aa312-109">Sets a few default values.</span></span>|  
-|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|<span data-ttu-id="aa312-110">Проверяет правило дружественной сборки (только имя и открытый ключ).</span><span class="sxs-lookup"><span data-stu-id="aa312-110">Verifies the friend assembly rule (only name and public key).</span></span> <span data-ttu-id="aa312-111">Этот член является только для внутреннего использования.</span><span class="sxs-lookup"><span data-stu-id="aa312-111">This member is for internal use only.</span></span>|  
-|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|<span data-ttu-id="aa312-112">Сочетание `CANOF_PARSE_DISPLAY_NAME` и `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` флаги.</span><span class="sxs-lookup"><span data-stu-id="aa312-112">A combination of the `CANOF_PARSE_DISPLAY_NAME` and `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` flags.</span></span> <span data-ttu-id="aa312-113">Этот член является только для внутреннего использования.</span><span class="sxs-lookup"><span data-stu-id="aa312-113">This member is for internal use only.</span></span>|  
+|`CANOF_PARSE_DISPLAY_NAME`|<span data-ttu-id="7f145-108">Указывает, что переданный параметр является текстовым идентификатором.</span><span class="sxs-lookup"><span data-stu-id="7f145-108">Indicates that the parameter passed is a textual identity.</span></span>|  
+|`CANOF_SET_DEFAULT_VALUES`|<span data-ttu-id="7f145-109">Задает несколько значений по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="7f145-109">Sets a few default values.</span></span>|  
+|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|<span data-ttu-id="7f145-110">Проверяет правило дружественной сборки (только имя и открытый ключ).</span><span class="sxs-lookup"><span data-stu-id="7f145-110">Verifies the friend assembly rule (only name and public key).</span></span> <span data-ttu-id="7f145-111">Этот член является только для внутреннего использования.</span><span class="sxs-lookup"><span data-stu-id="7f145-111">This member is for internal use only.</span></span>|  
+|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|<span data-ttu-id="7f145-112">Сочетание `CANOF_PARSE_DISPLAY_NAME` и `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` флаги.</span><span class="sxs-lookup"><span data-stu-id="7f145-112">A combination of the `CANOF_PARSE_DISPLAY_NAME` and `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` flags.</span></span> <span data-ttu-id="7f145-113">Этот член является только для внутреннего использования.</span><span class="sxs-lookup"><span data-stu-id="7f145-113">This member is for internal use only.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="aa312-114">Требования</span><span class="sxs-lookup"><span data-stu-id="aa312-114">Requirements</span></span>  
- <span data-ttu-id="aa312-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aa312-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7f145-114">Требования</span><span class="sxs-lookup"><span data-stu-id="7f145-114">Requirements</span></span>  
+ <span data-ttu-id="7f145-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7f145-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aa312-116">**Заголовок.** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="aa312-116">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="7f145-116">**Заголовок.** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="7f145-116">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="aa312-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aa312-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7f145-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7f145-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aa312-118">См. также</span><span class="sxs-lookup"><span data-stu-id="aa312-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7f145-118">См. также</span><span class="sxs-lookup"><span data-stu-id="7f145-118">See also</span></span>
 
-- [<span data-ttu-id="aa312-119">Интерфейс IAssemblyName</span><span class="sxs-lookup"><span data-stu-id="aa312-119">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [<span data-ttu-id="aa312-120">Функция CreateAssemblyNameObject</span><span class="sxs-lookup"><span data-stu-id="aa312-120">CreateAssemblyNameObject Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)
-- [<span data-ttu-id="aa312-121">Перечисления Fusion</span><span class="sxs-lookup"><span data-stu-id="aa312-121">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [<span data-ttu-id="7f145-119">Интерфейс IAssemblyName</span><span class="sxs-lookup"><span data-stu-id="7f145-119">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="7f145-120">Функция CreateAssemblyNameObject</span><span class="sxs-lookup"><span data-stu-id="7f145-120">CreateAssemblyNameObject Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)
+- [<span data-ttu-id="7f145-121">Перечисления Fusion</span><span class="sxs-lookup"><span data-stu-id="7f145-121">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

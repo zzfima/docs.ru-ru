@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15fd75ae807ee5cd7f94f6e650639c3be0628429
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6421ca47c3439d94c1ae86caaf2198298872d53
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043905"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777520"
 ---
-# <a name="imetadataemitdefinepinvokemap-method"></a><span data-ttu-id="9ab30-102">Метод IMetaDataEmit::DefinePinvokeMap</span><span class="sxs-lookup"><span data-stu-id="9ab30-102">IMetaDataEmit::DefinePinvokeMap Method</span></span>
-<span data-ttu-id="9ab30-103">Задает функции PInvoke подписи метода, который ссылается указанный токен.</span><span class="sxs-lookup"><span data-stu-id="9ab30-103">Sets features of the PInvoke signature of the method referenced by the specified token.</span></span>  
+# <a name="imetadataemitdefinepinvokemap-method"></a><span data-ttu-id="c5eb4-102">Метод IMetaDataEmit::DefinePinvokeMap</span><span class="sxs-lookup"><span data-stu-id="c5eb4-102">IMetaDataEmit::DefinePinvokeMap Method</span></span>
+<span data-ttu-id="c5eb4-103">Задает функции PInvoke подписи метода, который ссылается указанный токен.</span><span class="sxs-lookup"><span data-stu-id="c5eb4-103">Sets features of the PInvoke signature of the method referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ab30-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9ab30-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c5eb4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c5eb4-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT DefinePinvokeMap (   
     [in]  mdToken            tk,   
     [in]  DWORD              dwMappingFlags,   
@@ -38,29 +38,29 @@ HRESULT DefinePinvokeMap (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9ab30-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9ab30-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c5eb4-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c5eb4-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="9ab30-106">[in] Маркер целевого метода.</span><span class="sxs-lookup"><span data-stu-id="9ab30-106">[in] The token for the target method.</span></span>  
+ <span data-ttu-id="c5eb4-106">[in] Маркер целевого метода.</span><span class="sxs-lookup"><span data-stu-id="c5eb4-106">[in] The token for the target method.</span></span>  
   
  `dwMappingFlags`  
- <span data-ttu-id="9ab30-107">[in] Флаги, используемые PInvoke для сопоставления.</span><span class="sxs-lookup"><span data-stu-id="9ab30-107">[in] Flags used by PInvoke to do the mapping.</span></span>  
+ <span data-ttu-id="c5eb4-107">[in] Флаги, используемые PInvoke для сопоставления.</span><span class="sxs-lookup"><span data-stu-id="c5eb4-107">[in] Flags used by PInvoke to do the mapping.</span></span>  
   
  `szImportName`  
- <span data-ttu-id="9ab30-108">[in] Имя целевого объекта метод export в неуправляемой библиотеки DLL.</span><span class="sxs-lookup"><span data-stu-id="9ab30-108">[in] The name of the target export method in an unmanaged DLL.</span></span>  
+ <span data-ttu-id="c5eb4-108">[in] Имя целевого объекта метод export в неуправляемой библиотеки DLL.</span><span class="sxs-lookup"><span data-stu-id="c5eb4-108">[in] The name of the target export method in an unmanaged DLL.</span></span>  
   
  `mrImportDLL`  
- <span data-ttu-id="9ab30-109">[in] Маркер для целевого DLL в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="9ab30-109">[in] The token for the target native DLL.</span></span>  
+ <span data-ttu-id="c5eb4-109">[in] Маркер для целевого DLL в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="c5eb4-109">[in] The token for the target native DLL.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9ab30-110">Требования</span><span class="sxs-lookup"><span data-stu-id="9ab30-110">Requirements</span></span>  
- <span data-ttu-id="9ab30-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9ab30-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c5eb4-110">Требования</span><span class="sxs-lookup"><span data-stu-id="c5eb4-110">Requirements</span></span>  
+ <span data-ttu-id="c5eb4-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c5eb4-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9ab30-112">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9ab30-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c5eb4-112">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c5eb4-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9ab30-113">**Библиотека:** Используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9ab30-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c5eb4-113">**Библиотека:** Используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c5eb4-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9ab30-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9ab30-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c5eb4-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c5eb4-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ab30-115">См. также</span><span class="sxs-lookup"><span data-stu-id="9ab30-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c5eb4-115">См. также</span><span class="sxs-lookup"><span data-stu-id="c5eb4-115">See also</span></span>
 
-- [<span data-ttu-id="9ab30-116">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="9ab30-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="9ab30-117">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="9ab30-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="c5eb4-116">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="c5eb4-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="c5eb4-117">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="c5eb4-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

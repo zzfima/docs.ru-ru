@@ -17,30 +17,30 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7694c9b736700466ac1299b9632440e133109288
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae3575b759d8b6191f0b5e5cd557a6f6e56323fc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939897"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776742"
 ---
-# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="47a28-102">Метод ISymUnmanagedDocument::GetDocumentType</span><span class="sxs-lookup"><span data-stu-id="47a28-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
-<span data-ttu-id="47a28-103">Получает тип документа в этом документе.</span><span class="sxs-lookup"><span data-stu-id="47a28-103">Gets the document type of this document.</span></span>  
+# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="f9f1d-102">Метод ISymUnmanagedDocument::GetDocumentType</span><span class="sxs-lookup"><span data-stu-id="f9f1d-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
+<span data-ttu-id="f9f1d-103">Получает тип документа в этом документе.</span><span class="sxs-lookup"><span data-stu-id="f9f1d-103">Gets the document type of this document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="47a28-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="47a28-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f9f1d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f9f1d-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetDocumentType(  
     [out, retval] GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="47a28-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="47a28-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f9f1d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f9f1d-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="47a28-106">[out] Указатель на переменную, которая получает тип документа.</span><span class="sxs-lookup"><span data-stu-id="47a28-106">[out] Pointer to a variable that receives the document type.</span></span>  
+ <span data-ttu-id="f9f1d-106">[out] Указатель на переменную, которая получает тип документа.</span><span class="sxs-lookup"><span data-stu-id="f9f1d-106">[out] Pointer to a variable that receives the document type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="47a28-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="47a28-107">Return Value</span></span>  
- <span data-ttu-id="47a28-108">Значение S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="47a28-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f9f1d-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="f9f1d-107">Return Value</span></span>  
+ <span data-ttu-id="f9f1d-108">Значение S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="f9f1d-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="47a28-109">См. также</span><span class="sxs-lookup"><span data-stu-id="47a28-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f9f1d-109">См. также</span><span class="sxs-lookup"><span data-stu-id="f9f1d-109">See also</span></span>
 
-- [<span data-ttu-id="47a28-110">Интерфейс ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="47a28-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="f9f1d-110">Интерфейс ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="f9f1d-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

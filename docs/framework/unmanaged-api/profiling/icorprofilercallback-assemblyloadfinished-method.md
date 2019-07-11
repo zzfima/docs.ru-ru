@@ -17,45 +17,45 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e32af790c755f65b5435455c326d011656da19ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 174e71fca8c59dbd4842d0fc0b84bb9a3d7b10df
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597379"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763042"
 ---
-# <a name="icorprofilercallbackassemblyloadfinished-method"></a><span data-ttu-id="2d8f3-102">Метод ICorProfilerCallback::AssemblyLoadFinished</span><span class="sxs-lookup"><span data-stu-id="2d8f3-102">ICorProfilerCallback::AssemblyLoadFinished Method</span></span>
-<span data-ttu-id="2d8f3-103">Уведомляет профилировщик об окончании загрузки сборки.</span><span class="sxs-lookup"><span data-stu-id="2d8f3-103">Notifies the profiler that an assembly has finished loading.</span></span>  
+# <a name="icorprofilercallbackassemblyloadfinished-method"></a><span data-ttu-id="7eb63-102">Метод ICorProfilerCallback::AssemblyLoadFinished</span><span class="sxs-lookup"><span data-stu-id="7eb63-102">ICorProfilerCallback::AssemblyLoadFinished Method</span></span>
+<span data-ttu-id="7eb63-103">Уведомляет профилировщик об окончании загрузки сборки.</span><span class="sxs-lookup"><span data-stu-id="7eb63-103">Notifies the profiler that an assembly has finished loading.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2d8f3-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2d8f3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7eb63-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7eb63-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT AssemblyLoadFinished(  
     [in] AssemblyID assemblyId,  
     [in] HRESULT    hrStatus);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2d8f3-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="2d8f3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7eb63-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="7eb63-105">Parameters</span></span>  
  `assemblyId`  
- <span data-ttu-id="2d8f3-106">[in] Идентифицирует сборку, которая была загружена.</span><span class="sxs-lookup"><span data-stu-id="2d8f3-106">[in] Identifies the assembly that was loaded.</span></span>  
+ <span data-ttu-id="7eb63-106">[in] Идентифицирует сборку, которая была загружена.</span><span class="sxs-lookup"><span data-stu-id="7eb63-106">[in] Identifies the assembly that was loaded.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="2d8f3-107">[in] Значение HRESULT, указывающее, является ли сборка Загрузка завершена успешно.</span><span class="sxs-lookup"><span data-stu-id="2d8f3-107">[in] An HRESULT that indicates whether the assembly finished loading successfully.</span></span>  
+ <span data-ttu-id="7eb63-107">[in] Значение HRESULT, указывающее, является ли сборка Загрузка завершена успешно.</span><span class="sxs-lookup"><span data-stu-id="7eb63-107">[in] An HRESULT that indicates whether the assembly finished loading successfully.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2d8f3-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="2d8f3-108">Remarks</span></span>  
- <span data-ttu-id="2d8f3-109">Значение `assemblyId` не является допустимым для информационного запроса до `AssemblyLoadFinished` вызывается метод.</span><span class="sxs-lookup"><span data-stu-id="2d8f3-109">The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7eb63-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="7eb63-108">Remarks</span></span>  
+ <span data-ttu-id="7eb63-109">Значение `assemblyId` не является допустимым для информационного запроса до `AssemblyLoadFinished` вызывается метод.</span><span class="sxs-lookup"><span data-stu-id="7eb63-109">The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.</span></span>  
   
- <span data-ttu-id="2d8f3-110">Некоторые части загрузки сборки может по-прежнему после `AssemblyLoadFinished` обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="2d8f3-110">Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback.</span></span> <span data-ttu-id="2d8f3-111">Значение HRESULT в `hrStatus` указывает на сбой.</span><span class="sxs-lookup"><span data-stu-id="2d8f3-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="2d8f3-112">Тем не менее значение HRESULT в `hrStatus` указывает только что первая часть загрузки сборки.</span><span class="sxs-lookup"><span data-stu-id="2d8f3-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.</span></span>  
+ <span data-ttu-id="7eb63-110">Некоторые части загрузки сборки может по-прежнему после `AssemblyLoadFinished` обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="7eb63-110">Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback.</span></span> <span data-ttu-id="7eb63-111">Значение HRESULT в `hrStatus` указывает на сбой.</span><span class="sxs-lookup"><span data-stu-id="7eb63-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="7eb63-112">Тем не менее значение HRESULT в `hrStatus` указывает только что первая часть загрузки сборки.</span><span class="sxs-lookup"><span data-stu-id="7eb63-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2d8f3-113">Требования</span><span class="sxs-lookup"><span data-stu-id="2d8f3-113">Requirements</span></span>  
- <span data-ttu-id="2d8f3-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2d8f3-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7eb63-113">Требования</span><span class="sxs-lookup"><span data-stu-id="7eb63-113">Requirements</span></span>  
+ <span data-ttu-id="7eb63-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7eb63-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2d8f3-115">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2d8f3-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="7eb63-115">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7eb63-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="2d8f3-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2d8f3-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7eb63-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7eb63-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2d8f3-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2d8f3-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7eb63-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7eb63-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2d8f3-118">См. также</span><span class="sxs-lookup"><span data-stu-id="2d8f3-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7eb63-118">См. также</span><span class="sxs-lookup"><span data-stu-id="7eb63-118">See also</span></span>
 
-- [<span data-ttu-id="2d8f3-119">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="2d8f3-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="7eb63-119">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="7eb63-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

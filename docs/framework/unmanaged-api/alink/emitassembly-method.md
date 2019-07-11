@@ -17,36 +17,36 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf7b54ab7a2318e8194bf39dbe41b864633ddb43
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0e6250987997b8d1c833b7b33a985900510fb03
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790069"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742135"
 ---
-# <a name="emitassembly-method"></a><span data-ttu-id="bdf87-102">Метод EmitAssembly</span><span class="sxs-lookup"><span data-stu-id="bdf87-102">EmitAssembly Method</span></span>
-<span data-ttu-id="bdf87-103">Создает сборку.</span><span class="sxs-lookup"><span data-stu-id="bdf87-103">Creates the assembly.</span></span> <span data-ttu-id="bdf87-104">Этот метод следует вызывайте после закрытия всех остальных файлов за исключением файла сборки.</span><span class="sxs-lookup"><span data-stu-id="bdf87-104">Call this method after all other files are closed except for the assembly file.</span></span> <span data-ttu-id="bdf87-105">Не вызывайте этот метод при создании несвязанных модулей.</span><span class="sxs-lookup"><span data-stu-id="bdf87-105">Do not call this method when producing unbound modules.</span></span>  
+# <a name="emitassembly-method"></a><span data-ttu-id="0a3af-102">Метод EmitAssembly</span><span class="sxs-lookup"><span data-stu-id="0a3af-102">EmitAssembly Method</span></span>
+<span data-ttu-id="0a3af-103">Создает сборку.</span><span class="sxs-lookup"><span data-stu-id="0a3af-103">Creates the assembly.</span></span> <span data-ttu-id="0a3af-104">Этот метод следует вызывайте после закрытия всех остальных файлов за исключением файла сборки.</span><span class="sxs-lookup"><span data-stu-id="0a3af-104">Call this method after all other files are closed except for the assembly file.</span></span> <span data-ttu-id="0a3af-105">Не вызывайте этот метод при создании несвязанных модулей.</span><span class="sxs-lookup"><span data-stu-id="0a3af-105">Do not call this method when producing unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bdf87-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bdf87-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0a3af-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0a3af-106">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT EmitAssembly(  
     mdAssembly AssemblyID  
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bdf87-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="bdf87-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0a3af-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="0a3af-107">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="bdf87-108">Идентификатор сборки.</span><span class="sxs-lookup"><span data-stu-id="bdf87-108">ID of the assembly.</span></span>  
+ <span data-ttu-id="0a3af-108">Идентификатор сборки.</span><span class="sxs-lookup"><span data-stu-id="0a3af-108">ID of the assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="bdf87-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="bdf87-109">Return Value</span></span>  
- <span data-ttu-id="bdf87-110">Возвращает S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="bdf87-110">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0a3af-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="0a3af-109">Return Value</span></span>  
+ <span data-ttu-id="0a3af-110">Возвращает S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="0a3af-110">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bdf87-111">Требования</span><span class="sxs-lookup"><span data-stu-id="bdf87-111">Requirements</span></span>  
- <span data-ttu-id="bdf87-112">Требуется alink.h</span><span class="sxs-lookup"><span data-stu-id="bdf87-112">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0a3af-111">Требования</span><span class="sxs-lookup"><span data-stu-id="0a3af-111">Requirements</span></span>  
+ <span data-ttu-id="0a3af-112">Требуется alink.h</span><span class="sxs-lookup"><span data-stu-id="0a3af-112">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bdf87-113">См. также</span><span class="sxs-lookup"><span data-stu-id="bdf87-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a3af-113">См. также</span><span class="sxs-lookup"><span data-stu-id="0a3af-113">See also</span></span>
 
-- [<span data-ttu-id="bdf87-114">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="bdf87-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="bdf87-115">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="bdf87-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="bdf87-116">API ALink</span><span class="sxs-lookup"><span data-stu-id="bdf87-116">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="0a3af-114">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="0a3af-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="0a3af-115">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="0a3af-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="0a3af-116">API ALink</span><span class="sxs-lookup"><span data-stu-id="0a3af-116">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -17,44 +17,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4675c34bfe8d1d79c184c43e5f7f5dd3a03be6a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 423fbfc2bda9d3544a5c32b6cd650643209f0e86
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935672"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767242"
 ---
-# <a name="ihostmemorymanageracquiredvirtualaddressspace-method"></a><span data-ttu-id="1b640-102">Метод IHostMemoryManager::AcquiredVirtualAddressSpace</span><span class="sxs-lookup"><span data-stu-id="1b640-102">IHostMemoryManager::AcquiredVirtualAddressSpace Method</span></span>
-<span data-ttu-id="1b640-103">Уведомляет основное приложение, что общеязыковая среда выполнения (CLR) получила указанную память от операционной системы.</span><span class="sxs-lookup"><span data-stu-id="1b640-103">Notifies the host that the common language runtime (CLR) has acquired the specified memory from the operating system.</span></span>  
+# <a name="ihostmemorymanageracquiredvirtualaddressspace-method"></a><span data-ttu-id="1a6e1-102">Метод IHostMemoryManager::AcquiredVirtualAddressSpace</span><span class="sxs-lookup"><span data-stu-id="1a6e1-102">IHostMemoryManager::AcquiredVirtualAddressSpace Method</span></span>
+<span data-ttu-id="1a6e1-103">Уведомляет основное приложение, что общеязыковая среда выполнения (CLR) получила указанную память от операционной системы.</span><span class="sxs-lookup"><span data-stu-id="1a6e1-103">Notifies the host that the common language runtime (CLR) has acquired the specified memory from the operating system.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1b640-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1b640-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1a6e1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1a6e1-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT AcquiredVirtualAddressSpace(  
     [in] LPVOID  startAddress,  
     [in] SIZE_T  size  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1b640-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="1b640-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1a6e1-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="1a6e1-105">Parameters</span></span>  
  `startAddress`  
- <span data-ttu-id="1b640-106">[in] Начальный адрес памяти.</span><span class="sxs-lookup"><span data-stu-id="1b640-106">[in] The starting address of the memory.</span></span>  
+ <span data-ttu-id="1a6e1-106">[in] Начальный адрес памяти.</span><span class="sxs-lookup"><span data-stu-id="1a6e1-106">[in] The starting address of the memory.</span></span>  
   
  `size`  
- <span data-ttu-id="1b640-107">[in] Размер в байтах объем памяти.</span><span class="sxs-lookup"><span data-stu-id="1b640-107">[in] The size, in bytes, of the memory.</span></span>  
+ <span data-ttu-id="1a6e1-107">[in] Размер в байтах объем памяти.</span><span class="sxs-lookup"><span data-stu-id="1a6e1-107">[in] The size, in bytes, of the memory.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1b640-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="1b640-108">Remarks</span></span>  
- <span data-ttu-id="1b640-109">`AcquiredVirtualAddressSpace` Метод является методом обратного вызова и должны быть реализованы модулем записи ведущего приложения.</span><span class="sxs-lookup"><span data-stu-id="1b640-109">The `AcquiredVirtualAddressSpace` method is a callback method and must be implemented by the writer of the hosting application.</span></span> <span data-ttu-id="1b640-110">Он вызывается средой CLR.</span><span class="sxs-lookup"><span data-stu-id="1b640-110">It is called by the CLR.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1a6e1-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="1a6e1-108">Remarks</span></span>  
+ <span data-ttu-id="1a6e1-109">`AcquiredVirtualAddressSpace` Метод является методом обратного вызова и должны быть реализованы модулем записи ведущего приложения.</span><span class="sxs-lookup"><span data-stu-id="1a6e1-109">The `AcquiredVirtualAddressSpace` method is a callback method and must be implemented by the writer of the hosting application.</span></span> <span data-ttu-id="1a6e1-110">Он вызывается средой CLR.</span><span class="sxs-lookup"><span data-stu-id="1a6e1-110">It is called by the CLR.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1b640-111">Требования</span><span class="sxs-lookup"><span data-stu-id="1b640-111">Requirements</span></span>  
- <span data-ttu-id="1b640-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1b640-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1a6e1-111">Требования</span><span class="sxs-lookup"><span data-stu-id="1a6e1-111">Requirements</span></span>  
+ <span data-ttu-id="1a6e1-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1a6e1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1b640-113">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1b640-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="1a6e1-113">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1a6e1-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="1b640-114">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1b640-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="1a6e1-114">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1a6e1-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1b640-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1b640-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1a6e1-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1a6e1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b640-116">См. также</span><span class="sxs-lookup"><span data-stu-id="1b640-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1a6e1-116">См. также</span><span class="sxs-lookup"><span data-stu-id="1a6e1-116">See also</span></span>
 
-- [<span data-ttu-id="1b640-117">Интерфейс IHostMemoryManager</span><span class="sxs-lookup"><span data-stu-id="1b640-117">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [<span data-ttu-id="1a6e1-117">Интерфейс IHostMemoryManager</span><span class="sxs-lookup"><span data-stu-id="1a6e1-117">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
