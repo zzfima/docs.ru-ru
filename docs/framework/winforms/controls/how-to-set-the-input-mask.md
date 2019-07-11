@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: dd156f9e5bf6519363f66ca61687f1e9f2bfc6ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac747bf46c4dd1451e58615b1ec0311d75c899e8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630431"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760476"
 ---
 # <a name="how-to-set-the-input-mask"></a>Практическое руководство. Определение маски ввода
 Элементе скрытого текстового поля является элементом поля расширенный текст, который поддерживает декларативный синтаксис для принятия или отклонения введенных пользователем данных. Установив свойство маски, можно указать допустимых входных данных без написания настраиваемую логику проверки в приложении. Дополнительные сведения см. в разделе "Примечания" <xref:System.Windows.Forms.MaskedTextBox> класса.  
@@ -19,7 +19,7 @@ ms.locfileid: "64630431"
 ## <a name="setting-the-mask-property-manually"></a>Установка свойства маски вручную  
  Если вы знакомы с символами, которые поддерживает свойство маски, можно ввести вручную. Сводка символы, которые поддерживает свойство маски, см. в разделе "Примечания" <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> свойство.  
   
-#### <a name="to-set-the-mask-property-manually"></a>Чтобы вручную задать свойство маски  
+### <a name="to-set-the-mask-property-manually"></a>Чтобы вручную задать свойство маски  
   
 1. В **разработки** представление, выберите <xref:System.Windows.Forms.MaskedTextBox>.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "64630431"
 ## <a name="using-the-input-mask-dialog-box"></a>С помощью диалогового окна маски ввода  
  В диалоговом окне маски ввода предоставляет несколько предопределенных масок ввода. Можно также изменить предопределенные маски или ввести собственную маску вручную.  
   
-#### <a name="to-open-the-input-mask-dialog-box"></a>Чтобы открыть диалоговое окно маска ввода  
+### <a name="to-open-the-input-mask-dialog-box"></a>Чтобы открыть диалоговое окно маска ввода  
   
 1. В **разработки** представление, выберите <xref:System.Windows.Forms.MaskedTextBox>.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "64630431"
   
      **Маска ввода** откроется диалоговое окно.  
   
-#### <a name="to-use-the-input-mask-dialog-box"></a>Чтобы использовать это диалоговое окно маска ввода  
+### <a name="to-use-the-input-mask-dialog-box"></a>Чтобы использовать это диалоговое окно маска ввода  
   
 1. (Необязательно) Щелкните одну из стандартных масок в списке.  
   

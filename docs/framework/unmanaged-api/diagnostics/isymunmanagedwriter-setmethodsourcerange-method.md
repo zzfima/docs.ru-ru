@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 734857428c205b6d806a4279213afb1193f914c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e06695f5ba348315523c7414822ce87d594bdbc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650776"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776602"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>Метод ISymUnmanagedWriter::SetMethodSourceRange
 Указывает истинные начало и конец метода в исходном файле. Используйте этот метод для задания длины метода независимо от точек следования, имеющихся в методе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT SetMethodSourceRange(  
     [in] ISymUnmanagedDocumentWriter  *startDoc,  
     [in] ULONG32                      startLine,  

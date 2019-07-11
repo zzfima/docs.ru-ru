@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4c77ade46d2401e2499a94504808efd94f79f93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bdc1ef6490f250ebe93b0482adf244adfc0ffd56
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789796"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741783"
 ---
 # <a name="getwin32resblob-method"></a>Метод GetWin32ResBlob
 Извлекает большой двоичный объект ресурса Win32. Этот метод вызывается после задания параметров сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT GetWin32ResBlob(  
     mdAssembly    AssemblyID,  
     mdToken       FileToken,  

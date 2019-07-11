@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 63353f670528cd52f3e2927426ae715432422504
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5c776942bced836437fdcb8aaf30faef48e3aaff
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663866"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780144"
 ---
 # <a name="animation-overview"></a>Общие сведения об эффектах анимации
 
@@ -231,10 +231,10 @@ ms.locfileid: "67663866"
 
 |Тип свойства|Соответствующая базовая (From/To/By) анимация|Соответствующая анимация с ключевыми кадрами|Соответствующая анимация с использованием пути|Пример использования|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Нет|Анимация <xref:System.Windows.Media.SolidColorBrush.Color%2A> из <xref:System.Windows.Media.SolidColorBrush> или <xref:System.Windows.Media.GradientStop>.|
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|Анимация <xref:System.Windows.Media.SolidColorBrush.Color%2A> из <xref:System.Windows.Media.SolidColorBrush> или <xref:System.Windows.Media.GradientStop>.|
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Анимация <xref:System.Windows.FrameworkElement.Width%2A> из <xref:System.Windows.Controls.DockPanel> или <xref:System.Windows.FrameworkElement.Height%2A> из <xref:System.Windows.Controls.Button>.|
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|Анимация <xref:System.Windows.Media.EllipseGeometry.Center%2A> положение элемента <xref:System.Windows.Media.EllipseGeometry>.|
-|<xref:System.String>|Нет|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Нет|Анимация <xref:System.Windows.Controls.TextBlock.Text%2A> из <xref:System.Windows.Controls.TextBlock> или <xref:System.Windows.Controls.ContentControl.Content%2A> из <xref:System.Windows.Controls.Button>.|
+|<xref:System.String>|None|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|None|Анимация <xref:System.Windows.Controls.TextBlock.Text%2A> из <xref:System.Windows.Controls.TextBlock> или <xref:System.Windows.Controls.ContentControl.Content%2A> из <xref:System.Windows.Controls.Button>.|
 
 <a name="animationsaretimelines"></a>
 
@@ -321,7 +321,7 @@ ms.locfileid: "67663866"
 [!code-csharp[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_procedural_snip/CSharp/FillBehaviorExample.cs#fillbehaviorexamplerectangleinline)]
 [!code-vb[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws_procedural_snip/visualbasic/fillbehaviorexample.vb#fillbehaviorexamplerectangleinline)]
 
-Так как его <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> не был изменен со значения по умолчанию, который является <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, анимации сохраняется ее конечное значение 0, по ее завершении. Таким образом <xref:System.Windows.UIElement.Opacity%2A> прямоугольника в 0 после анимация завершается. Если задать <xref:System.Windows.UIElement.Opacity%2A> прямоугольника с другим значением, видимых не произойдет, поскольку по-прежнему управляется анимацией <xref:System.Windows.UIElement.Opacity%2A> свойство.
+Так как его <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> не был изменен со значения по умолчанию, который является <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, анимация поддерживает конечное значение, 0, по ее завершении. Таким образом <xref:System.Windows.UIElement.Opacity%2A> прямоугольника в 0 после анимация завершается. Если задать <xref:System.Windows.UIElement.Opacity%2A> прямоугольника с другим значением, видимых не произойдет, поскольку по-прежнему управляется анимацией <xref:System.Windows.UIElement.Opacity%2A> свойство.
 
 Один из способов, чтобы возвратить управление анимированным свойством в коде является использование <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> метод и указать значение null для <xref:System.Windows.Media.Animation.AnimationTimeline> параметра. Дополнительные сведения и пример см. в разделе [Установка свойства после его анимации с помощью раскадровки](how-to-set-a-property-after-animating-it-with-a-storyboard.md).
 
@@ -372,7 +372,7 @@ ms.locfileid: "67663866"
 |[Общие сведения об анимации и системе управления временем](animation-and-timing-system-overview.md)|Описывает, как система управления временем использует <xref:System.Windows.Media.Animation.Timeline> и <xref:System.Windows.Media.Animation.Clock> классы, которые позволяют создавать анимации.|
 |[Советы и рекомендации по анимации](animation-tips-and-tricks.md)|Список полезных советов по устранению проблем с анимацией, например проблем производительности.|
 |[Общие сведения о пользовательской анимации](custom-animations-overview.md)|Описание способов расширения системы анимации полными кадрами, классами анимации и покадровым обратным вызовом.|
-|Общие сведения об анимациях From/To/By|Описание способов создания анимации, которая переходит между двумя значениями.|
+|[Общие сведения об анимациях From, To и By](from-to-by-animations-overview.md)|Описание способов создания анимации, которая переходит между двумя значениями.|
 |[Общие сведения об анимации по ключевым кадрам](key-frame-animations-overview.md)|Описание способов создания анимации с несколькими целевыми значениями, включая возможность управления методом интерполяции.|
 |[Функции плавности](easing-functions.md)|Описание способов применения математических формул к анимациям для получения реалистичного поведения, такого как подскок.|
 |[Общие сведения об анимации с использованием пути](path-animations-overview.md)|Описание способов перемещения или поворота объекта по сложному пути.|

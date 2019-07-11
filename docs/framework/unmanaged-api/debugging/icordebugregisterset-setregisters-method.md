@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d17c353d8e2358a1651ba3fbbb1dd718cc681f7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 472e92e4e7a69c437c66cc9f221ab357292c345e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782854"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769595"
 ---
 # <a name="icordebugregistersetsetregisters-method"></a>Метод ICorDebugRegisterSet::SetRegisters
 `SetRegisters` не реализуется в .NET Framework версии 2.0. Этот метод не вызывается.  
@@ -32,7 +32,7 @@ ms.locfileid: "61782854"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT SetRegisters (  
     [in] ULONG64   mask,  
     [in] ULONG32   regCount,  

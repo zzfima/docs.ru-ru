@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f24a1434f737e8281a0c68dd09d2e17b34371694
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f4ecb700a19a4e06f9f0056881fe3cdb9753aae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786286"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737607"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>Метод ICorDebugArrayValue::GetBaseIndicies
 Получает базовый индекс каждого измерения в массиве.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT GetBaseIndicies (  
     [in] ULONG32          cdim,  
     [out, size_is(cdim), length_is(cdim)]   

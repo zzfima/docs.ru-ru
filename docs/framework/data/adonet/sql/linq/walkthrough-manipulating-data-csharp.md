@@ -2,12 +2,12 @@
 title: Пошаговое руководство. Обработка данных (C#)
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 7bac370ae8dc260ca4b665fd51680a80fd9846fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d45861569bc4a8b57427b01e107f87809203e11
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618039"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742730"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>Пошаговое руководство. Обработка данных (C#)
 В данном руководстве представлен основной и полный сценарий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] по добавлению, изменению и удалению данных в базе данных. Для добавления клиента, изменения его имени и удаления заказа следует использовать копию учебной базы данных Northwind.  
@@ -27,7 +27,7 @@ ms.locfileid: "64618039"
   
 - Наличие файла кода C#, созданного из базы данных Northwind.  
   
-     Его можно создать либо помощью оператора [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], либо с помощью средства SQLMetal. Данное пошаговое руководство было написано с использованием средства SQLMetal со следующей командной строкой:  
+     Этот файл можно создать с помощью средства SQLMetal или реляционного конструктора объектов. Данное пошаговое руководство было написано с использованием средства SQLMetal со следующей командной строкой:  
   
      **sqlmetal /code:"c:\linqtest6\northwind.cs" /language:csharp "C:\linqtest6\northwnd.mdf" /pluralize**  
   

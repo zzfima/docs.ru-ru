@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1291d4e69843db7bd90af07291da415220d98807
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 33729e9efa999eb276140ddd2571a4844e15dd6d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700297"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770825"
 ---
 # <a name="icorruntimehostswitchoutlogicalthreadstate-method"></a>Метод ICorRuntimeHost::SwitchOutLogicalThreadState
 Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT SwitchOutLogicalThreadState(  
     [out] DWORD **pFiberCookie  
 );  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fc141cbebe08f8d0974788409d5aef0f68d2878
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebbc076f52c661a394eff51954fceefe8e439ded
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763260"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779891"
 ---
 # <a name="icorconfigurationsetdebuggerthreadcontrol-method"></a>Метод ICorConfiguration::SetDebuggerThreadControl
 Задает интерфейс обратного вызова, который будет вызывать службы отладки при блокировании и разблокировании общие потоки среды выполнения (CLR) языка для отладки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT SetDebuggerThreadControl (  
     [in] IDebuggerThreadControl* pDebuggerThreadControl  
 );  
