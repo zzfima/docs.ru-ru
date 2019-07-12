@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: d07816718ebee2507f1888cffb70e6f8037bb996
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 90768a0c816e790138ba60bd24afee242e41e652
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010401"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860287"
 ---
 # <a name="dynamicresource-markup-extension"></a>Расширение разметки DynamicResource
 Предоставляет значение для любого [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] свойства атрибута, отложенной до был ссылкой на определенный ресурс. Поведение подстановки для этого ресурса является аналогом во время выполнения.  
@@ -52,7 +52,7 @@ ms.locfileid: "62010401"
   
  Ключ ресурса может быть любой строкой, определенные в [Грамматика XamlName](../../xaml-services/xamlname-grammar.md). Ключ ресурса также может быть других типов объектов, например <xref:System.Type>. Объект <xref:System.Type> ключ — это основа для как можно применить различные стили элементов управления темы. Дополнительные сведения см. в разделе [Общие сведения о разработке элементов управления](../controls/control-authoring-overview.md).  
   
- [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] для поиска значений ресурсов таких как <xref:System.Windows.FrameworkElement.FindResource%2A>, выполните ту же логику поиска ресурсов, используемой средой `DynamicResource`.  
+ API-интерфейсы для поиска ресурса значения, такие как <xref:System.Windows.FrameworkElement.FindResource%2A>, выполните ту же логику поиска ресурсов, используемой средой `DynamicResource`.  
   
  Декларативные альтернативные методы ссылкой на ресурс — как [расширение разметки StaticResource](staticresource-markup-extension.md).  
   

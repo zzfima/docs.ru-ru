@@ -10,19 +10,19 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: c68e6a69553f2cb14eb442c31e5138009f3c8411
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee38caedc5d5a29d2221d6e5a6bf6cf74617bf8c
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619448"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859718"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Практическое руководство. Определение возможности печати в заданное время суток
 Очереди печати не всегда доступны для 24 часа в сутки. Они имеют свойства времени начала и окончания, которые могут устанавливаться отключив их в определенное время суток. Эту функцию можно, например, чтобы зарезервировать принтер для использования только определенным подразделением после 17: 00. Этот отдел будет иметь другой очереди обслуживания принтера от других отделов использовать. Устанавливается в очередь для других отделов станет недоступной после 17: 00, то время как очередь для привилегированного отдела может быть быть доступна в любое время.  
   
  Кроме того задания печати, сами можно задать для печати только в указанный промежуток времени.  
   
- <xref:System.Printing.PrintQueue> И <xref:System.Printing.PrintSystemJobInfo> классы представлены в [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] платформы Microsoft .NET Framework предоставляют средства для удаленной проверки, можно ли печати данного задания печати из данной очереди в настоящее время.  
+ <xref:System.Printing.PrintQueue> И <xref:System.Printing.PrintSystemJobInfo> классы, предоставляемые в API-интерфейсы Microsoft .NET Framework предоставляют средства для удаленной проверки, можно ли печати данного задания печати из данной очереди в настоящее время.  
   
 ## <a name="example"></a>Пример  
  В приведенном ниже примере приведен пример, можно диагностировать проблемы с заданием печати.  
@@ -54,7 +54,7 @@ ms.locfileid: "64619448"
  Две перегруженные версии **ReportAvailabilityAtThisTime** метод идентичны, за исключением типа, переданные им, поэтому только <xref:System.Printing.PrintQueue> версии представлена ниже.  
   
 > [!NOTE]
->  Тот факт, что методы идентичны за исключением типа возникает вопрос, почему в этом образце создаются универсального метода **ReportAvailabilityAtThisTime\<T >**. Причина заключается в том, что такой метод пришлось бы быть ограничен классом, имеющим **StartTimeOfDay** и **UntilTimeOfDay** только можно ограничить свойства, которые вызывает метод, но универсальный метод один класс и единственным классом, общие для обоих <xref:System.Printing.PrintQueue> и <xref:System.Printing.PrintSystemJobInfo> в наследовании дерево является <xref:System.Printing.PrintSystemObject> которого не имеет таких свойств.  
+>  Тот факт, что методы идентичны за исключением типа возникает вопрос, почему в этом образце создаются универсального метода **ReportAvailabilityAtThisTime\<T >** . Причина заключается в том, что такой метод пришлось бы быть ограничен классом, имеющим **StartTimeOfDay** и **UntilTimeOfDay** только можно ограничить свойства, которые вызывает метод, но универсальный метод один класс и единственным классом, общие для обоих <xref:System.Printing.PrintQueue> и <xref:System.Printing.PrintSystemJobInfo> в наследовании дерево является <xref:System.Printing.PrintSystemObject> которого не имеет таких свойств.  
   
  **ReportAvailabilityAtThisTime** метод (представленный в следующем примере кода) начинается с инициализации <xref:System.Boolean> sentinel переменной `true`. Оно будет сброшено к `false`, если очередь не доступна.  
   

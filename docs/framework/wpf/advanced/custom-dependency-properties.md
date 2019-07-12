@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 27554d7e0a7e980d240e0609fe0561c2138f0aa1
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 659497543d40c8eda18b55b4d98feac976c5abf5
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664061"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860249"
 ---
 # <a name="custom-dependency-properties"></a>Пользовательские свойства зависимостей
 
@@ -87,7 +87,7 @@ ms.locfileid: "67664061"
 
 ### <a name="registering-the-property-with-the-property-system"></a>Регистрация свойства в системе свойств
 
-Чтобы назначить свойство свойством зависимостей, необходимо зарегистрировать это свойство в таблице, обслуживаемой системой свойств, и предоставить ему уникальный идентификатор, используемый в качестве квалификатора для последующих операций системы свойств. Эти операции могут быть внутренними операциями или вашим собственным кодом, вызывающим систему свойств [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. Чтобы зарегистрировать свойство, вызовите <xref:System.Windows.DependencyProperty.Register%2A> метод в теле класса (внутри класса, но вне определения любого из членов). Поле идентификатора также предоставляется <xref:System.Windows.DependencyProperty.Register%2A> вызова метода, в качестве возвращаемого значения. Причина, <xref:System.Windows.DependencyProperty.Register%2A> вызов выполняется за пределами другого элемента определения обусловлено это возвращаемое значение используется для назначения и создания `public` `static` `readonly` поле типа <xref:System.Windows.DependencyProperty> как часть класса. Это поле становится идентификатором для вашего свойства зависимостей.
+Чтобы назначить свойство свойством зависимостей, необходимо зарегистрировать это свойство в таблице, обслуживаемой системой свойств, и предоставить ему уникальный идентификатор, используемый в качестве квалификатора для последующих операций системы свойств. Эти операции могут быть внутренними операциями или собственный код, вызывающим систему свойств API-интерфейсы. Чтобы зарегистрировать свойство, вызовите <xref:System.Windows.DependencyProperty.Register%2A> метод в теле класса (внутри класса, но вне определения любого из членов). Поле идентификатора также предоставляется <xref:System.Windows.DependencyProperty.Register%2A> вызова метода, в качестве возвращаемого значения. Причина, <xref:System.Windows.DependencyProperty.Register%2A> вызов выполняется за пределами другого элемента определения обусловлено это возвращаемое значение используется для назначения и создания `public` `static` `readonly` поле типа <xref:System.Windows.DependencyProperty> как часть класса. Это поле становится идентификатором для вашего свойства зависимостей.
 
 [!code-csharp[WPFAquariumSln#RegisterAG](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerag)]
 [!code-vb[WPFAquariumSln#RegisterAG](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerag)]
@@ -174,7 +174,7 @@ ms.locfileid: "67664061"
 
 ## <a name="dependency-property-security-considerations"></a>Замечания по безопасности свойств зависимостей
 
-Свойства зависимостей должны объявляться как открытые свойства. Поля идентификаторов свойств зависимостей должны объявляться как открытые статические поля. Даже при попытке объявить другие уровни доступа (например, защищенный) к свойству зависимостей всегда можно обращаться через идентификатор в сочетании с [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] системы свойств. Даже защищенное поле идентификатора потенциально доступно из-за метаданных reporting или определения значения [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] , которые являются частью системы свойств, таких как <xref:System.Windows.LocalValueEnumerator>. Дополнительные сведения см. в разделе [Безопасность свойств зависимостей](dependency-property-security.md).
+Свойства зависимостей должны объявляться как открытые свойства. Поля идентификаторов свойств зависимостей должны объявляться как открытые статические поля. Даже при попытке объявить другие уровни доступа (например, защищенный), свойство зависимости всегда может осуществляться через идентификатор в сочетании с системой свойств API-интерфейсы. Даже защищенное поле идентификатора потенциально доступно из-за метаданных reporting или определения значения API-интерфейсы, которые являются частью системы свойств, таких как <xref:System.Windows.LocalValueEnumerator>. Дополнительные сведения см. в разделе [Безопасность свойств зависимостей](dependency-property-security.md).
 
 <a name="DPCtor"></a>
 
