@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: fee2aad90485d3d06f1730d5937fd4e1240b4801
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 0bf9fe8124578ba9bd192e10d517e3b0df7e5982
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65064033"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744252"
 ---
 # <a name="c-guide"></a>Руководство по языку C#
 
@@ -35,7 +35,7 @@ ms.locfileid: "65064033"
 * [Начало работы](getting-started/index.md)
   * В этом разделе описано, что вам нужно установить для создания среды разработки C# на вашей платформе. Несколько статей в этом разделе описывают процесс создания первой программы на C# в разных поддерживаемых средах.
 
-* [Ознакомительные руководства по C#](tutorials/intro-to-csharp/index.md).
+* [Ознакомительные руководства по C#](tutorials/intro-to-csharp/index.md)
   * Ознакомительные руководства по C# — это интерактивные руководства для разработчиков, которые делают первые шаги на поприще разработке. С помощью этих руководств вы сможете изучить C# прямо в браузере с помощью интерфейса REPL (read–eval–print loop — цикл "чтение — вычисление — вывод"). По завершении интерактивных занятий вы можете пройти их еще раз уже на компьютере, чтобы усовершенствовать навыки написания кода.
 
 * [Учебники](tutorials/index.md)
