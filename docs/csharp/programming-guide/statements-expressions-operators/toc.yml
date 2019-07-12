@@ -21,14 +21,6 @@
           href: how-to-use-lambda-expressions-outside-linq.md
         - name: Анонимные методы
           href: anonymous-methods.md
-    - name: Операторы преобразования
-      items:
-        - name: Общие сведения о преобразованиях
-          href: conversion-operators.md
-        - name: Использование операторов преобразования
-          href: using-conversion-operators.md
-        - name: Практическое руководство. Реализация определяемых пользователем преобразований между структурами
-          href: how-to-implement-user-defined-conversions-between-structs.md
     - name: Выражения значения по умолчанию
       href: default-value-expressions.md
     - name: Равенства и сравнения на равенство
