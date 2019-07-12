@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: cdd0331ee8ffc664e9fbe04bd1494f1f7d714464
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b83d9c972dbdadb721bae8b7d616c94a0c1c831f
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663385"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804743"
 ---
 # <a name="documents-in-wpf"></a>Документы в WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предлагает широкий ассортимент функций для работы с документами, позволяющих создавать содержимое высокого качества. Работать с ним удобнее, чем в предыдущих поколениях [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. В дополнение к расширенным возможностям и повышенному качеству [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет интегрированные службы для отображения, упаковки и обеспечения безопасности документов. В этом разделе содержатся вводные сведения о типах и упаковке документов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -39,7 +39,9 @@ ms.locfileid: "64663385"
   
 <a name="flow_document"></a>   
 ### <a name="flow-document-controls"></a>Элементы управления документа нефиксированного формата  
- **Примечание.** Дополнительные сведения о функциях документов нефиксированного формата и способах их создания см. в разделе [Общие](flow-document-overview.md).  
+
+> [!NOTE]
+>  Дополнительные сведения о функциях документов нефиксированного формата и способах их создания см. в разделе [Общие](flow-document-overview.md).  
   
  Отображение содержимого документа нефиксированного поддерживается три элемента управления: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, и <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   

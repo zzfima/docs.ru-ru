@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 0e5e2252225c824dfbc9d799b29a16ab6206eb3c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1137052c13571cf31fdf98512f2fe62533387e80
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630665"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802253"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Использование Автоматизации Пользовательского Интерфейса для автоматизированного тестирования
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "64630665"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] предоставляет унифицированную объектную модель, поддерживающую все платформы [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] для представления сложных и широких функциональных возможностей доступным и легко автоматизируемым образом.  
   
- Модель[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] была разработана для замены [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] — это существующая платформа, предназначенная для предоставления решения по обеспечению доступности приложений и элементов управления. Модель[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] не разрабатывалась для автоматизации тестирования, хотя и стала выполнять эту роль из-за очень схожих требований доступности и автоматизации. Помимо предоставления более качественных решений для специальных возможностей, модель[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]также специально разрабатывалась в целях предоставления надежной функциональности для автоматического тестирования. Например, [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] опирается на единый интерфейс и для предоставления сведений о пользовательском интерфейсе, и для сбора сведений, необходимых для продуктов автоматического тестирования; [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] разделяет эти две модели.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] была разработана для замены Microsoft Active Accessibility. Active Accessibility — это существующая платформа обеспечивает решение по обеспечению доступности приложений и элементов управления. Active Accessibility не была разработана с помощью автоматизации тестирования, несмотря на то, что она стала выполнять эту роль из-за очень схожих требований доступности и автоматизации. Помимо предоставления более качественных решений для специальных возможностей, модель[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]также специально разрабатывалась в целях предоставления надежной функциональности для автоматического тестирования. Например Active Accessibility полагается на единый интерфейс для предоставления информации о пользовательском Интерфейсе и сбора сведений, необходимых для продуктов; [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] разделяет эти две модели.  
   
  Чтобы модель [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] можно было использовать в качестве средства автоматических тестов, для ее реализации требуется как клиент, так и поставщик. Поставщики автоматизации пользовательского интерфейса — это приложения, такие как Microsoft Word, Excel, а также другие сторонние приложения или элементы управления на основе операционной системы [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] . Клиенты автоматизации пользовательского интерфейса включают скрипты автоматических тестов приложения и приложения специальных возможностей.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "64630665"
 |Тип элемента управления модели автоматизации пользовательского интерфейса|Инфраструктура пользовательского интерфейса|Свойство инфраструктуры|Свойство модели автоматизации пользовательского интерфейса|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  
 |Кнопка|Windows Presentation Foundation (WPF)|Content|NameProperty|  
-|Кнопка|Win32|Подпись|NameProperty|  
+|Кнопка|Win32|Заголовок|NameProperty|  
 |Изображение|HTML|alt|NameProperty|  
   
  Поставщики автоматизации пользовательского интерфейса отвечают за сопоставление свойств элементов управления, относящихся к инфраструктуре, с эквивалентными свойствами [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
@@ -105,7 +105,7 @@ ms.locfileid: "64630665"
   
 - Inspect.exe — [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)] приложения, который может использоваться для сбора [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] сведения для поставщика и клиента разработки и отладки. Inspect.exe включается в [!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)].  
   
-- MSAABridge предоставляет сведения [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] клиентам [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] . Основная цель соединения мостом [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] с [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] заключается в том, чтобы разрешить существующим клиентам [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] возможность взаимодействия с любой платформой, реализующей [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
+- MSAABridge предоставляет [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] сведения клиентам Active Accessibility. Основная цель соединения мостом [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] для Active Accessibility — разрешить существующие клиенты Active Accessibility возможность взаимодействовать с любой платформой, реализующей [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
 <a name="Security"></a>   
 ## <a name="security"></a>Безопасность  
