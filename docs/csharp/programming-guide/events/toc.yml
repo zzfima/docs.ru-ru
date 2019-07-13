@@ -9,7 +9,5 @@
       href: how-to-raise-base-class-events-in-derived-classes.md
     - name: Как реализовать события интерфейса
       href: how-to-implement-interface-events.md
-    - name: Как использовать словарь для хранения экземпляров событий
-      href: how-to-use-a-dictionary-to-store-event-instances.md
-    - name: Как реализовать пользовательские методы доступа к событиям
+    - name: 'Практическое руководство: реализовать пользовательские методы доступа к событиям'
       href: how-to-implement-custom-event-accessors.md
