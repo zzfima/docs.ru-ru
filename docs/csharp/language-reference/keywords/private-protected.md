@@ -3,12 +3,12 @@ title: Справочник по C#. Комбинация ключевых сл�
 ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 35b7c6c4e271b7772968ad63926fe1e66b10a6fa
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c739dd0b5a5457a66c11962ed86bcd2ffbf811ab
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633346"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661678"
 ---
 # <a name="private-protected-c-reference"></a>private protected (справочник по C#)
 
@@ -33,7 +33,7 @@ public class DerivedClass1 : BaseClass
 {
     void Access()
     {
-        BaseClass baseObject = new BaseClass();
+        var baseObject = new BaseClass();
 
         // Error CS1540, because myValue can only be accessed by
         // classes derived from BaseClass.

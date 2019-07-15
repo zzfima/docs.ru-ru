@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 4108583a5f97d1349fb54c335d55252352ea4883
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 02b27270c93550278308900382ae05091edb2543
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609996"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661533"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Арифметические операторы (справочник по C#)
 
@@ -41,7 +41,7 @@ ms.locfileid: "67609996"
 - унарные — [`++` (приращение)](#increment-operator-), [`--` (уменьшение)](#decrement-operator---), [`+` (плюс)](#unary-plus-and-minus-operators) и [`-` (минус)](#unary-plus-and-minus-operators);
 - бинарные — [`*` (умножение)](#multiplication-operator-), [`/` (деление)](#division-operator-), [`%` (остаток от деления)](#remainder-operator-), [`+` (сложение)](#addition-operator-) и [`-` (вычитание)](#subtraction-operator--).
 
-Эти операторы поддерживают все [целочисленные](../builtin-types/integral-numeric-types.md) типы и типы с [плавающей запятой](../keywords/floating-point-types-table.md).
+Эти операторы поддерживают все [целочисленные](../builtin-types/integral-numeric-types.md) типы и типы с [плавающей запятой](../builtin-types/floating-point-numeric-types.md).
 
 ## <a name="increment-operator-"></a>Оператор инкремента ++
 

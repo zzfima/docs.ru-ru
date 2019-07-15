@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 81e9a86c4761b329918bf04023dea42d2e1ad6f5
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 59846affb1eea5bd9d6a80c623eab5e3aa9db87c
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423527"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661087"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Типы указателей (Руководство по программированию на C#)
 
@@ -24,10 +24,10 @@ void* identifier; //allowed but not recommended
 Тип, указанный до `*` в типе указателя, называется **ссылочным типом**. Ссылочным может быть любой из указанных ниже типов.
 
 - Любой целочисленный тип: [sbyte](../../language-reference/builtin-types/integral-numeric-types.md), [byte](../../language-reference/builtin-types/integral-numeric-types.md), [short](../../language-reference/builtin-types/integral-numeric-types.md), [ushort](../../language-reference/builtin-types/integral-numeric-types.md), [int](../../language-reference/builtin-types/integral-numeric-types.md), [uint](../../language-reference/builtin-types/integral-numeric-types.md), [long](../../language-reference/builtin-types/integral-numeric-types.md), [ulong](../../language-reference/builtin-types/integral-numeric-types.md).
-- Любой тип с плавающей запятой: [float](../../language-reference/keywords/float.md), [double](../../language-reference/keywords/double.md).
+- Любой тип с плавающей запятой: [float](../../language-reference/builtin-types/floating-point-numeric-types.md), [double](../../language-reference/builtin-types/floating-point-numeric-types.md).
 - [char](../../language-reference/keywords/char.md).
 - [bool](../../language-reference/keywords/bool.md).
-- [decimal](../../language-reference/keywords/decimal.md).
+- [decimal](../../language-reference/builtin-types/floating-point-numeric-types.md).
 - Любой тип [enum](../../language-reference/keywords/enum.md).
 - Любой тип указателя. Это позволяет использовать выражения, такие как `void**`.
 - Любой пользовательский тип структуры, содержащий поля только неуправляемых типов.

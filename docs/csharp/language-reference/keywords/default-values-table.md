@@ -12,12 +12,12 @@ helpviewer_keywords:
 - variables [C#], value types
 - constructors [C#], parameterless constructor
 - types [C#], parameterless constructor return values
-ms.openlocfilehash: dfab5107d4a0ad14c3ffbfc6a5f3c4317b44d17c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: ec5fb4681f0e0562c5aefdf336841416f96bdf98
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424220"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661411"
 ---
 # <a name="default-values-table-c-reference"></a>Таблица значений по умолчанию (справочник по C#)
 
@@ -28,10 +28,10 @@ ms.locfileid: "67424220"
 |[bool](bool.md)|`false`|
 |[byte](../builtin-types/integral-numeric-types.md)|0|
 |[char](char.md)|'\0'|
-|[decimal](decimal.md)|0M|
-|[double](double.md)|0,0D|
+|[decimal](../builtin-types/floating-point-numeric-types.md)|0M|
+|[double](../builtin-types/floating-point-numeric-types.md)|0,0D|
 |[enum](enum.md)|Значение, создаваемое выражением `(E)0`, где `E` — это идентификатор перечисления.|
-|[float](float.md)|0,0F|
+|[float](../builtin-types/floating-point-numeric-types.md)|0,0F|
 |[int](../builtin-types/integral-numeric-types.md)|0|
 |[long](../builtin-types/integral-numeric-types.md)|0L|
 |[sbyte](../builtin-types/integral-numeric-types.md)|0|

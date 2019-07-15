@@ -3,12 +3,12 @@ title: Числа в C#. Вводное руководство по C#
 description: Изучите C# на примере числовых типов, их свойств и методов.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 65b31c29fa9662619f92efb7977577f12d23fb30
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: d95d5ce16abadf441158b7f8af93acc73b154e99
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423424"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661056"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Управление целыми числами и числами с плавающей запятой в C\#
 
@@ -321,7 +321,7 @@ Console.WriteLine(c / d);
 Дополнительные сведения о числах в C# см. в следующих статьях:
 
 - [Целочисленные типы](../../language-reference/builtin-types/integral-numeric-types.md)
-- [Таблица типов с плавающей запятой](../../language-reference/keywords/floating-point-types-table.md)
+- [Таблица типов с плавающей запятой](../../language-reference/builtin-types/floating-point-numeric-types.md)
 - [Таблица встроенных типов](../../language-reference/keywords/built-in-types-table.md)
 - [Таблица неявных числовых преобразований](../../language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Таблица явных числовых преобразований](../../language-reference/keywords/explicit-numeric-conversions-table.md)

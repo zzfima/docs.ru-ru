@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 0b4f04a1ba6244373e36cc6a6188edabe33ec453
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b58730d945582ded7b76fcd5c4c65bc1dd9324da
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424345"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661458"
 ---
 # <a name="char-c-reference"></a>char (Справочник по C#)
 
@@ -33,7 +33,7 @@ ms.locfileid: "67424345"
 
 ## <a name="conversions"></a>Преобразования
 
-Тип `char` может быть неявно преобразован в тип [ushort](../builtin-types/integral-numeric-types.md), [int](../builtin-types/integral-numeric-types.md), [uint](../builtin-types/integral-numeric-types.md), [double](../../../csharp/language-reference/keywords/double.md) или [decimal](../../../csharp/language-reference/keywords/decimal.md). Тем не менее неявные преобразования из других типов в тип `char` не предусмотрены.
+Тип `char` может быть неявно преобразован в тип [ushort](../builtin-types/integral-numeric-types.md), [int](../builtin-types/integral-numeric-types.md), [uint](../builtin-types/integral-numeric-types.md), [double](../builtin-types/floating-point-numeric-types.md) или [decimal](../builtin-types/floating-point-numeric-types.md). Тем не менее неявные преобразования из других типов в тип `char` не предусмотрены.
 
 Тип <xref:System.Char?displayProperty=nameWithType> предоставляет несколько статических методов для работы со значениями `char`.
 
