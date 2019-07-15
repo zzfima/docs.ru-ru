@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2278d82d5362fe217ca4bce02a052d4b440843c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8d058d3297471e67459164f18358b1d143465712
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774273"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67803238"
 ---
 ### <a name="aspnet-mvc-now-escapes-spaces-in-strings-passed-in-via-route-parameters"></a>ASP.NET MVC теперь экранирует пробелы в строках, переданных через параметры маршрута
 
@@ -16,3 +16,4 @@ ms.locfileid: "59774273"
 |Версия|4.5.2|
 |Тип|Среда выполнения|
 |Затронутые API|<ul><li><xref:System.Web.Mvc.RouteAttribute.%23ctor(System.String)?displayProperty=nameWithType></li></ul>|
+

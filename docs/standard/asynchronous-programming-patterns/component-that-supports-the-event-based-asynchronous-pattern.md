@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 85e7f10643c57837cf0b66613825241db94c0065
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 5171b9b9878331069e354eeb17ad57ca9bd594a8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423879"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773664"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Практическое руководство. Реализация компонента, поддерживающего асинхронную модель на основе событий
 Если вы создаете класс и некоторые операции этого класса могут привести к значительным задержкам, подумайте о том, чтобы реализовать для этого класса асинхронные функции с помощью [асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -53,14 +53,14 @@ ms.locfileid: "66423879"
 ## <a name="creating-the-component"></a>создание компонента;  
  На первом шаге мы создадим компонент, который будет реализовать асинхронную модель на основе событий.  
   
-#### <a name="to-create-the-component"></a>Создание компонента  
+### <a name="to-create-the-component"></a>Создание компонента  
   
 - Создайте класс `PrimeNumberCalculator`, производный от <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Определение открытых асинхронных событий и делегатов  
  Этот компонент взаимодействует с клиентами с помощью событий. Событие _имя_метода_**Completed** предупреждает клиенты о завершении асинхронной задачи, а событие _имя_метода_**ProgressChanged** информирует клиенты о ходе выполнения асинхронной задачи.  
   
-#### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Чтобы определить асинхронные события для клиентов своего компонента, выполните следующие действия.  
+### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Чтобы определить асинхронные события для клиентов своего компонента, выполните следующие действия.  
   
 1. Импортируйте пространства имен <xref:System.Threading?displayProperty=nameWithType> и <xref:System.Collections.Specialized?displayProperty=nameWithType> в верхней части файла.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66423879"
 ## <a name="checkpoint"></a>Контрольная точка  
  На этом этапе можно выполнить сборку компонента.  
   
-#### <a name="to-test-your-component"></a>Проверка компонента  
+### <a name="to-test-your-component"></a>Проверка компонента  
   
 - Скомпилируйте компонент.  
   
@@ -99,9 +99,9 @@ ms.locfileid: "66423879"
      Мы рассмотрим эти предупреждения в следующем разделе.  
   
 ## <a name="defining-private-delegates"></a>Определение закрытых делегатов  
- Асинхронные аспекты компонента `PrimeNumberCalculator` реализуются внутри него в виде специального делегата <xref:System.Threading.SendOrPostCallback>. <xref:System.Threading.SendOrPostCallback> представляет метод обратного вызова, который выполняется для потока <xref:System.Threading.ThreadPool>. Метод обратного вызова должен содержать подпись, которая принимает один параметр типа <xref:System.Object>. Это значит, что вам следует передавать состояние вместе с делегатами в классе-оболочке. Для получения дополнительной информации см. <xref:System.Threading.SendOrPostCallback>.  
+ Асинхронные аспекты компонента `PrimeNumberCalculator` реализуются внутри него в виде специального делегата <xref:System.Threading.SendOrPostCallback>. <xref:System.Threading.SendOrPostCallback> представляет метод обратного вызова, который выполняется для потока <xref:System.Threading.ThreadPool>. Метод обратного вызова должен содержать подпись, которая принимает один параметр типа <xref:System.Object>. Это значит, что вам следует передавать состояние вместе с делегатами в классе-оболочке. Дополнительные сведения можно найти по адресу: <xref:System.Threading.SendOrPostCallback>.  
   
-#### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>Чтобы реализовать внутреннее асинхронное поведение компонента, выполните следующие действия.  
+### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>Чтобы реализовать внутреннее асинхронное поведение компонента, выполните следующие действия.  
   
 1. Объявите и создайте делегаты <xref:System.Threading.SendOrPostCallback> в классе `PrimeNumberCalculator`. Создайте объекты <xref:System.Threading.SendOrPostCallback> во вспомогательном методе с именем `InitializeDelegates`.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "66423879"
 ## <a name="implementing-public-events"></a>Реализация открытых событий  
  Компоненты, реализующие асинхронную модель на основе событий, взаимодействуют с клиентами через события. Эти события вызываются в соответствующем потоке с помощью класса <xref:System.ComponentModel.AsyncOperation>.  
   
-#### <a name="to-raise-events-to-your-components-clients"></a>Чтобы создать события в клиентах компонента, выполните следующие действия.  
+### <a name="to-raise-events-to-your-components-clients"></a>Чтобы создать события в клиентах компонента, выполните следующие действия.  
   
 1. Реализуйте открытые события, которые будут передавать информацию клиентам. Вам потребуется одно событие для информирования о ходе выполнения, и еще одно — для информирования о завершении.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "66423879"
   
  Подпись `CompletionMethod` должна содержать все состояния, необходимые для описания результата асинхронной операции. Она содержит информацию о числе, которое проверялось в конкретной асинхронной операции: является ли число простым и каково значение его первого делителя, если число не является простым. Также она содержит состояние, которое описывает все возникшие исключения, и объект <xref:System.ComponentModel.AsyncOperation>, соответствующий этой конкретной задаче.  
   
-#### <a name="to-complete-an-asynchronous-operation"></a>Для завершения асинхронной операции сделайте следующее.  
+### <a name="to-complete-an-asynchronous-operation"></a>Для завершения асинхронной операции сделайте следующее.  
   
 - Реализуйте метод завершения. Он принимает шесть параметров, на основании которых заполняет класс `CalculatePrimeCompletedEventArgs` и возвращает их клиенту через `CalculatePrimeCompletedEventHandler` для этого клиента. Он также удаляет маркер идентификатора задачи из внутренней коллекции, после чего завершает срок существования асинхронной операции с помощью вызова <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>. <xref:System.ComponentModel.AsyncOperation> маршалирует вызов в поток или контекст, соответствующий модели приложения.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "66423879"
 ## <a name="checkpoint"></a>Контрольная точка  
  На этом этапе можно выполнить сборку компонента.  
   
-#### <a name="to-test-your-component"></a>Проверка компонента  
+### <a name="to-test-your-component"></a>Проверка компонента  
   
 - Скомпилируйте компонент.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "66423879"
 > [!NOTE]
 >  Отчет о ходе выполнения реализован в методе `BuildPrimeNumberList`. На быстрых компьютерах события `ProgressChanged` могут возникать быстро друг за другом. Клиентский поток, в котором возникают эти события, должен быть готов к такой ситуации. Если код пользовательского интерфейса будет перегружен сообщениями, это приведет к зависанию. Пример пользовательского интерфейса, который успешно справляется с этой ситуацией, см. в разделе [Практическое руководство. Реализация клиента асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
-#### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Для асинхронного вычисления простых чисел выполните следующие действия.  
+### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Для асинхронного вычисления простых чисел выполните следующие действия.  
   
 1. Реализуйте вспомогательный класс `TaskCanceled`. Он проверяет, существует ли определенный идентификатор в коллекции жизненных циклов задач, и возвращает `true`, если не обнаружит его.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "66423879"
 ## <a name="checkpoint"></a>Контрольная точка  
  На этом этапе можно выполнить сборку компонента.  
   
-#### <a name="to-test-your-component"></a>Проверка компонента  
+### <a name="to-test-your-component"></a>Проверка компонента  
   
 - Скомпилируйте компонент.  
   
@@ -221,7 +221,7 @@ ms.locfileid: "66423879"
   
  Чтобы отменить незавершенную операцию, вызовите <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> для соответствующего <xref:System.ComponentModel.AsyncOperation>. Это действие завершает операцию, а все последующие вызовы <xref:System.ComponentModel.AsyncOperation> приводят к исключениям.  
   
-#### <a name="to-implement-start-and-cancel-functionality"></a>Чтобы реализовать функциональные возможности запуска и отмены, выполните следующие действия.  
+### <a name="to-implement-start-and-cancel-functionality"></a>Чтобы реализовать функциональные возможности запуска и отмены, выполните следующие действия.  
   
 1. Выполните метод `CalculatePrimeAsync`. Обеспечьте уникальность маркера (идентификатора задачи), предоставляемого клиентом, среди всех маркеров для незавершенных в конкретный момент задач. Если клиент передает неуникальный маркер, `CalculatePrimeAsync` создает исключение. В противном случае этот маркер добавляется в коллекцию идентификаторов задач.  
   
@@ -236,7 +236,7 @@ ms.locfileid: "66423879"
 ## <a name="checkpoint"></a>Контрольная точка  
  На этом этапе можно выполнить сборку компонента.  
   
-#### <a name="to-test-your-component"></a>Проверка компонента  
+### <a name="to-test-your-component"></a>Проверка компонента  
   
 - Скомпилируйте компонент.  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: f3fecf521ca4a9397bacffbb084c4107af97f5b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fc96baaff3b70fcb32e19e2ce08bdb0187c86c01
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345278"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783205"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Пошаговое руководство. Управление файлами с помощью методов .NET Framework (Visual Basic)
 В этом пошаговом руководстве демонстрируются открытие и чтение файла с помощью класса <xref:System.IO.StreamReader>, проверка доступа к файлу, поиск строки в файле, считанном с помощью экземпляра класса <xref:System.IO.StreamReader>, и запись в файл с помощью класса <xref:System.IO.StreamWriter>.  
@@ -30,7 +30,7 @@ ms.locfileid: "59345278"
 ## <a name="creating-the-application"></a>Создание приложения  
  Запустите Visual Studio и начните проект с создания формы, которую пользователь сможет использовать для записи в намеченный файл.  
   
-#### <a name="to-create-the-project"></a>Создание проекта  
+### <a name="to-create-the-project"></a>Создание проекта  
   
 1. В меню **Файл** выберите **Создать проект**.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "59345278"
 ## <a name="writing-to-the-file"></a>Запись в файл  
  Чтобы добавить возможность записи в файл с помощью приложения, воспользуйтесь классом <xref:System.IO.StreamWriter>. Класс <xref:System.IO.StreamWriter> предназначен для вывода символов в определенной кодировке, тогда как класс <xref:System.IO.Stream> предназначен для ввода и вывода двоичных данных. Класс <xref:System.IO.StreamWriter> следует использовать для записи строк данных в стандартный текстовый файл. Дополнительные сведения о классе <xref:System.IO.StreamWriter> см. в статье <xref:System.IO.StreamWriter>.  
   
-#### <a name="to-add-writing-functionality"></a>Добавление возможности записи  
+### <a name="to-add-writing-functionality"></a>Добавление возможности записи  
   
 1. В меню **Вид** выберите пункт **Код**, чтобы открыть редактор кода.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "59345278"
 |<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Текст**|`GetEntries`<br /><br /> **Показать записи**|  
 |<xref:System.Windows.Forms.ComboBox>|**Name**<br /><br /> **Text**<br /><br /> **Включено**|`PickEntries`<br /><br /> **Выберите запись**<br /><br /> `False`|  
   
-#### <a name="to-populate-the-combo-box"></a>Заполнение элемента управления ComboBox  
+### <a name="to-populate-the-combo-box"></a>Заполнение элемента управления ComboBox  
   
 1. В элементе управления `PickEntries`<xref:System.Windows.Forms.ComboBox> отображается дата создания каждой из записей, чтобы пользователь мог выбрать запись за определенную дату. Создайте обработчик события <xref:System.Windows.Forms.Control.Click> для кнопки `GetEntries` и добавьте в него следующий код.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "59345278"
   
 2. Чтобы протестировать код, нажмите клавишу F5 для компиляции, а затем нажмите кнопку **Показать записи**. Щелкните стрелку раскрывающегося списка в <xref:System.Windows.Forms.ComboBox>, чтобы отобразить даты записей.  
   
-#### <a name="to-choose-and-display-individual-entries"></a>Выбор и просмотр отдельных записей  
+### <a name="to-choose-and-display-individual-entries"></a>Выбор и просмотр отдельных записей  
   
 1. Создайте обработчик события <xref:System.Windows.Forms.Control.Click> для кнопки `Display` и добавьте в него следующий код.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "59345278"
 |<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Включено**|`EditEntry`<br /><br /> **Изменить запись**<br /><br /> `False`|  
 |<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **Сохранить изменения**<br /><br /> `False`|  
   
-#### <a name="to-enable-deletion-and-modification-of-entries"></a>Включение возможности удаления и изменения записей  
+### <a name="to-enable-deletion-and-modification-of-entries"></a>Включение возможности удаления и изменения записей  
   
 1. Добавьте следующий код в обработчик события `Display` для кнопки <xref:System.Windows.Forms.Control.Click> после элемента `DisplayEntry.Text = ReadString`.  
   

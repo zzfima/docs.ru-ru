@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0a3dc43ebdc58d54675f2264a8ee56d9f4358cd8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3b7b50700541649a785fa9bbe3ecc56c2697fbfc
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804931"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859087"
 ---
 ### <a name="wcf-message-security-now-is-able-to-use-tls11-and-tls12"></a>Для безопасности сообщений WCF теперь могут использоваться TLS1.1 и TLS1.2
 
@@ -15,3 +15,4 @@ ms.locfileid: "59804931"
 |Область|Пограничный случай|
 |Версия|4.7|
 |Тип|Изменение целевой платформы|
+
