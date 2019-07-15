@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0200ad36490efc546daebfa93904676b0af7684
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3da22faa5e8863275cdfa8d03b980a5cbb55e87d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490525"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758346"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a>Функция CorMarkThreadInThreadPool
 Помечает текущий выполняемый поток пула потоков для выполнения управляемого кода. Начиная с .NET Framework версии 2.0, эта функция не оказывает влияния. Он не является обязательным и может быть удалена из кода. Эта функция является устаревшей в .NET Framework 4.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 void CorMarkThreadInThreadPool ();  
 ```  
   

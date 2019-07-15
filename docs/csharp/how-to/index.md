@@ -2,12 +2,12 @@
 title: Статьи с практическими руководствами (руководств по языку C#)
 description: Коллекция советов и кратких конкретных примеров кода
 ms.date: 12/20/2017
-ms.openlocfilehash: 77b68af5802f79060e30b2817661de4cb5e46942
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 63410d687bd09f95a5ce7ce9304f2281b2f8d334
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879012"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859536"
 ---
 # <a name="how-to-c"></a>Практическое руководство (C#)
 
@@ -21,7 +21,7 @@ ms.locfileid: "65879012"
 - [Различия между передачей структуры и класса в метод](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [Использование лямбда-выражений](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).
 - [Устранение конфликтов имен типов с помощью псевдонима глобального пространства имен](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
-- [Использование перегрузки операторов](../language-reference/keywords/operator.md).
+- [Использование перегрузки операторов](../language-reference/operators/operator-overloading.md).
 - [Реализация и вызов пользовательского метода расширения](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
 - Даже программистам на C# может потребоваться [использовать пространство имен `My` из VB](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
 - [Создание метода для типа `enum` с помощью методов расширения](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
@@ -66,7 +66,7 @@ ms.locfileid: "65879012"
 - [Преобразование массива байтов в значение типа int](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md).
 - [Преобразование строки в число](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
 - [Использование операторов сопоставления шаблонов `as` и `is` для безопасного приведения к другому типу](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
-- [Определение операторов преобразования для типов `struct`](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md).
+- [Определение пользовательского преобразования типов.](../language-reference/operators/user-defined-conversion-operators.md)
 - [Определение того, допускает ли тип значения NULL](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
 - [Преобразование между типами значений, допускающие значения NULL, и типами, не допускающими значения NULL](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type).
 
@@ -98,7 +98,6 @@ ms.locfileid: "65879012"
 - [Реализация событий, объявленных в интерфейсах](../programming-guide/events/how-to-implement-interface-events.md).
 - [Соответствие рекомендациям .NET Framework при публикации событий кодом](../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).
 - [Создание событий, определенных в базовых классах, из производных классов](../programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md).
-- [Хранение экземпляров событий в словаре](../programming-guide/events/how-to-use-a-dictionary-to-store-event-instances.md).
 - [Реализация пользовательских методов доступа к событиям](../programming-guide/events/how-to-implement-custom-event-accessors.md).
 
 ## <a name="linq-practices"></a>Рекомендации по LINQ

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 06cbc82f3636c4063b445a0ccbe871e0be1dd847
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02700c75152c32ebee3a0898de1e322ddf9b6e17
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032400"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802233"
 ---
 # <a name="ui-automation-overview"></a>Общие сведения о модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -28,7 +28,7 @@ ms.locfileid: "62032400"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] обеспечивает полную функциональность в [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)]и [!INCLUDE[TLA2#tla_winnetsvrfam](../../../includes/tla2sharptla-winnetsvrfam-md.md)].  
   
- Поставщики автоматизации пользовательского интерфейса предлагают некоторую поддержку клиентских приложений [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] через встроенную службу моста.  
+ Поставщики автоматизации пользовательского интерфейса предлагают некоторую поддержку клиентских приложений Microsoft Active Accessibility, через встроенную службу моста.  
   
 <a name="Providers_and_Clients"></a>   
 ## <a name="providers-and-clients"></a>Поставщики и клиенты  

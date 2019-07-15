@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 9907811a43f408020e2ee76621d4975a53945570
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: fd865f2a9c4a6d2c17f79a21866103a2db982e5f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424034"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661591"
 ---
 # <a name="value-types-c-reference"></a>Типы значений (справочник по C#)
 
@@ -41,7 +41,7 @@ ms.locfileid: "67424034"
 *Простые типы* — это набор предопределенных типов структур, предоставленных C#, который содержит следующие типы:
 
 - [Целочисленные типы](../builtin-types/integral-numeric-types.md): типы целого числа и тип [char](char.md).
-- [Типы с плавающей запятой](floating-point-types-table.md)
+- [Типы с плавающей запятой](../builtin-types/floating-point-numeric-types.md)
 - [bool](bool.md)
 
 Простые типы определяются с помощью ключевых слов, но эти ключевые слова являются просто псевдонимами для предопределенных типов структур в пространстве имен <xref:System>. Например, [int](../builtin-types/integral-numeric-types.md) является псевдонимом типа <xref:System.Int32?displayProperty=nameWithType>. Полный список псевдонимов см. в разделе [Таблица встроенных типов (Справочник по C#)](built-in-types-table.md).
@@ -93,7 +93,7 @@ int myInt = 0;
 С определяемыми пользователем типами используйте [new](../operators/new-operator.md) для вызова конструктора без параметров. Например, следующая инструкция вызывает конструктор без параметров структуры `Point`:
 
 ```csharp
-Point p = new Point(); // Invoke parameterless constructor for the struct.
+var p = new Point(); // Invoke parameterless constructor for the struct.
 ```
 
 После этого вызова структура считается определенно присвоенной, то есть все ее элементы будут инициализированы и получат значения по умолчанию.

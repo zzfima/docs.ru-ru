@@ -2,12 +2,12 @@
 title: Пошаговое руководство. Применение только хранимых процедур (C#)
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: f4c34252f7d92985dac94663c85d3cca0dc58ab3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f16cbdc1d22e7ec08237c0f13db9499ee2f9194f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655125"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742559"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>Пошаговое руководство. Применение только хранимых процедур (C#)
 В данном пошаговом руководстве представлен основной полный сценарий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] для получения доступа к данным, выполняя только хранимые процедуры. Этот метод часто используется администраторами баз данных для ограничения способов получения доступа к хранилищам данных.  
@@ -17,7 +17,7 @@ ms.locfileid: "64655125"
   
  Для целей данного пошагового руководства будут использованы два метода, которые были сопоставлены с хранимыми процедурами в образце базы данных Northwind: CustOrdersDetail и CustOrderHist. Сопоставление осуществляется при запуске программы командной строки SQLMetal для создания файла C#. Дополнительные сведения см. в разделе "Предварительные требования" далее в этом руководстве.  
   
- В пошаговом руководстве не используется [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Разработчики, использующие Visual Studio можно также использовать [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] для реализации функций хранимых процедур. См. в разделе [средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ В этом пошаговом руководстве не зависит от реляционного конструктора объектов. Разработчики, использующие Visual Studio также можно использовать конструктор O/R для реализации функций хранимых процедур. См. в разделе [средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -112,7 +112,7 @@ ms.locfileid: "64655125"
   
 #### <a name="to-set-up-the-user-interface"></a>Настройка пользовательского интерфейса  
   
-1. Конструктор вернуться в Windows Forms (**Form1.cs[Design]**).  
+1. Конструктор вернуться в Windows Forms (**Form1.cs[Design]** ).  
   
 2. В меню **Вид** выберите пункт **Панель элементов**.  
   
@@ -127,9 +127,9 @@ ms.locfileid: "64655125"
   
 4. Щелкните правой кнопкой мыши **label1**, а затем нажмите кнопку **свойства**.  
   
-5. Изменение **текст** свойства из **label1** для **введите код заказа:**.  
+5. Изменение **текст** свойства из **label1** для **введите код заказа:** .  
   
-6. Таким же образом для **label2**, изменить **текст** свойства из **label2** для **введите код клиента:**.  
+6. Таким же образом для **label2**, изменить **текст** свойства из **label2** для **введите код клиента:** .  
   
 7. Таким же образом, изменить **текст** свойство для **button1** для **Order Details**.  
   

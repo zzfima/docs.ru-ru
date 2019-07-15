@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0b42e320ba439a4cfc196471fc6dd4b3c15cd9d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f007a2b81820a1d25a2d101b35f3a49e7794fec1
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804880"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859163"
 ---
 ### <a name="workflow-checksums-changed-from-md5-to-sha1"></a>Контрольные суммы рабочего процесса переведены с MD5 на SHA1
 
@@ -15,3 +15,4 @@ ms.locfileid: "59804880"
 |Область|Дополнительный номер|
 |Версия|4.7|
 |Тип|Изменение целевой платформы|
+

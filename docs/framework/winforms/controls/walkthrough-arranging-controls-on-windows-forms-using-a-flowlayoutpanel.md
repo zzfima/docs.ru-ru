@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: 8cfcdf8595733434cc56c621428c31238dd166dc
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: c9ee615a610c383c97b5d4f0de195cfc7422d3ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211172"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771661"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel
 
@@ -55,7 +55,7 @@ ms.locfileid: "65211172"
 
  Элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> может изменять размер или положение своих дочерних элементов управления по мере измерения размеров родительской формы.
 
-#### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>Размещение элементов управления по горизонтали или по вертикали с помощью FlowLayoutPanel
+### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>Размещение элементов управления по горизонтали или по вертикали с помощью FlowLayoutPanel
 
 1. Перетащите элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> из **панели элементов** в свою форму.
 
@@ -76,7 +76,7 @@ ms.locfileid: "65211172"
 ## <a name="changing-flow-direction"></a>Изменение направления потока
  Свойство <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> позволяет изменить направление расположения элементов управления. Вы можете размещать дочерние элементы управления слева направо, справа налево, сверху вниз или снизу вверх.
 
-#### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a>Изменение направления потока в элементе управления FlowLayoutPanel
+### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a>Изменение направления потока в элементе управления FlowLayoutPanel
 
 1. Измените значение свойства <xref:System.Windows.Forms.FlowLayoutPanel> элемента управления <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> на <xref:System.Windows.Forms.FlowDirection.TopDown>. Обратите внимание, что дочерние элементы управления перестраиваются в один или несколько столбцов, в зависимости от высоты данного элемента управления.
 
@@ -85,7 +85,7 @@ ms.locfileid: "65211172"
 ## <a name="inserting-flow-breaks"></a>Вставка разрывов потока
  Элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> предоставляет свойство FlowBreak своим дочерним элементам управления. Если свойству FlowBreak присвоено значение `true`, элементы управления внутри элемента <xref:System.Windows.Forms.FlowLayoutPanel> перестают размещаться в текущем направлении и переносятся на следующую строку или в следующий столбец.
 
-#### <a name="to-insert-flow-breaks"></a>Вставка разрывов потока
+### <a name="to-insert-flow-breaks"></a>Вставка разрывов потока
 
 1. Измените значение свойства <xref:System.Windows.Forms.FlowLayoutPanel> элемента управления <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> на <xref:System.Windows.Forms.FlowDirection.TopDown>.
 
@@ -96,7 +96,7 @@ ms.locfileid: "65211172"
 ## <a name="positioning-controls-using-docking-and-anchoring"></a>Размещение элементов управления с использованием закрепления и привязки
  Функциональные возможности закрепления и привязки дочерних элементов управления отличаются от их функциональных возможностей в других контейнерных элементах управления. И закрепление, и привязка относятся к самому крупному элементу управления в направлении потока.
 
-#### <a name="to-position-controls-using-docking-and-anchoring"></a>Размещение элементов управления с использованием закрепления и привязки
+### <a name="to-position-controls-using-docking-and-anchoring"></a>Размещение элементов управления с использованием закрепления и привязки
 
 1. Увеличивайте размер <xref:System.Windows.Forms.FlowLayoutPanel> , пока все элементы управления <xref:System.Windows.Forms.Button> не будут расположены в столбце.
 
@@ -115,7 +115,7 @@ ms.locfileid: "65211172"
 
  Свойство <xref:System.Windows.Forms.Control.Margin%2A> позволяет управлять расстоянием между элементами управления.
 
-#### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>Размещение элементов управления с помощью свойств Padding и Margin
+### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>Размещение элементов управления с помощью свойств Padding и Margin
 
 1. Измените значение свойства <xref:System.Windows.Forms.FlowLayoutPanel> элемента управления <xref:System.Windows.Forms.Control.Dock%2A> на <xref:System.Windows.Forms.DockStyle.Fill>. Если ваша форма достаточно большая, элементы управления <xref:System.Windows.Forms.Button> будут перемещены в первый столбец элемента управления <xref:System.Windows.Forms.FlowLayoutPanel> .
 
@@ -126,7 +126,7 @@ ms.locfileid: "65211172"
 ## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a>Вставка элементов управления двойным щелчком по ним в панели элементов
  Вы можете заполнять свой элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> , дважды щелкая элементы управления в **панели элементов**.
 
-#### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>Вставка элементов управления двойным щелчком по ним в панели элементов
+### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>Вставка элементов управления двойным щелчком по ним в панели элементов
 
 1. Дважды щелкните значок элемента управления <xref:System.Windows.Forms.Button> в **панели элементов**. Обратите внимание, что в элементе управления <xref:System.Windows.Forms.Button> появился новый элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> .
 
@@ -135,7 +135,7 @@ ms.locfileid: "65211172"
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>Вставка элемента управления путем рисования его контура
  Вы можете вставить элемент управления в элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> и задать его размер, нарисовав его контур в ячейке.
 
-#### <a name="to-insert-a-control-by-drawing-its-outline"></a>Вставка элемента управления путем рисования его контура
+### <a name="to-insert-a-control-by-drawing-its-outline"></a>Вставка элемента управления путем рисования его контура
 
 1. В **панели элементов**щелкните значок элемента управления <xref:System.Windows.Forms.Button> . Не перетаскивайте его в форму.
 
@@ -148,7 +148,7 @@ ms.locfileid: "65211172"
 ## <a name="inserting-controls-using-the-insertion-bar"></a>Вставка элементов управления с помощью полосы вставки
  Вы можете вставлять элементы управления в определенном месте в элементе управления <xref:System.Windows.Forms.FlowLayoutPanel> . При перетаскивании элемента управления в клиентскую область элемента управления <xref:System.Windows.Forms.FlowLayoutPanel> появляется полоса вставки, указывающая место, куда будет вставлен элемент управления.
 
-#### <a name="to-insert-a-control-using-the-caret"></a>Вставка элемента управления с помощью курсора
+### <a name="to-insert-a-control-using-the-caret"></a>Вставка элемента управления с помощью курсора
 
 1. Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> и укажите место между двумя элементами управления <xref:System.Windows.Forms.Button> . Обратите внимание, что выводится полоса вставки, показывающая, где <xref:System.Windows.Forms.Button> помещаются при его вставке в <xref:System.Windows.Forms.FlowLayoutPanel> элемента управления. Прежде чем вставить новый элемент управления <xref:System.Windows.Forms.Button> в элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> , перемещайте указатель мыши, чтобы понаблюдать за перемещением полосы вставки.
 
@@ -157,7 +157,7 @@ ms.locfileid: "65211172"
 ## <a name="reassigning-existing-controls-to-a-different-parent"></a>Переназначение существующих элементов управления другим родительским элементам
  Вы можете назначать элементы управления, существующие в вашей форме, новому элементу управления <xref:System.Windows.Forms.FlowLayoutPanel> .
 
-#### <a name="to-reparent-existing-controls"></a>Изменение родительского объекта существующих элементов управления
+### <a name="to-reparent-existing-controls"></a>Изменение родительского объекта существующих элементов управления
 
 1. Перетащите три элемента управления <xref:System.Windows.Forms.Button> с **панели элементов** в форму. Расположите их рядом друг с другом, но не выравнивайте.
 

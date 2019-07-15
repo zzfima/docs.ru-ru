@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: d2fe63ed4bdefc91e4847af799747219bd7b4a76
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 31efc6e514682502e91487565869285dad22cab0
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611730"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860022"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Совместное использование циклов обработки сообщений между Win32 и WPF
 В этом разделе описывается, как реализовать цикл обработки сообщений для взаимодействия с [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], либо с помощью существующих сообщений раскрытия цикл в <xref:System.Windows.Threading.Dispatcher> или создав цикл обработки отдельных сообщений на [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] сторона кода взаимодействия.  
@@ -20,7 +20,7 @@ ms.locfileid: "64611730"
 ## <a name="componentdispatcher-and-the-message-loop"></a>Диспетчер компонента и цикл обработки сообщений  
  Обычный сценарий для взаимодействия и поддержки события клавиатуры — для реализации <xref:System.Windows.Interop.IKeyboardInputSink>, или подкласса из классов, которые уже реализуют <xref:System.Windows.Interop.IKeyboardInputSink>, такие как <xref:System.Windows.Interop.HwndSource> или <xref:System.Windows.Interop.HwndHost>. Тем не менее поддержка приемника клавиатуры не рассматриваются все возможные циклам обработки сообщений вы можете столкнуться при отправке и получении сообщений через ваши границы взаимодействия. Чтобы помочь формализовать архитектуру цикла обработки сообщений приложения, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет <xref:System.Windows.Interop.ComponentDispatcher> класс, который определяет простой протокол для цикла обработки сообщений для выполнения.  
   
- <xref:System.Windows.Interop.ComponentDispatcher> — Это статический класс, предоставляющий несколько членов. Область каждого метода неявно привязаны в вызывающий поток. Цикл обработки сообщений должен вызывать некоторые из них [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] в критические моменты времени (как определено в следующем разделе).  
+ <xref:System.Windows.Interop.ComponentDispatcher> — Это статический класс, предоставляющий несколько членов. Область каждого метода неявно привязаны в вызывающий поток. Цикл обработки сообщений должен вызывать некоторые из этих интерфейсов API в критические моменты времени (как определено в следующем разделе).  
   
  <xref:System.Windows.Interop.ComponentDispatcher> Предоставляет события, которые может прослушивать других компонентов (таких как приемник ввода от клавиатуры). <xref:System.Windows.Threading.Dispatcher> Класса вызывает соответствующие <xref:System.Windows.Interop.ComponentDispatcher> методов в соответствующей последовательности. Если вы реализуете собственный цикл обработки сообщений, код отвечает за вызов метода <xref:System.Windows.Interop.ComponentDispatcher> методы таким же образом.  
   

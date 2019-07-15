@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 7f5fad56d00e9a7e33843222a81593a90bf7e733
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28d990bc2ea043fa1770054877148f1f09acefd0
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651908"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662632"
 ---
 # <a name="transforms-overview"></a>Общие сведения о классах Transform
-В этом разделе описывается использование [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> классы для поворота, масштабирования, сдвига и наклона <xref:System.Windows.FrameworkElement> объектов.  
+В этом разделе описывается использование 2-D <xref:System.Windows.Media.Transform> классы для поворота, масштабирования, сдвига и наклона <xref:System.Windows.FrameworkElement> объектов.  
 
 <a name="whatIsATransformSection"></a>   
 ## <a name="what-is-a-transform"></a>Что такое преобразование?  
@@ -45,7 +45,7 @@ ms.locfileid: "64651908"
   
 <a name="transformClassesSection"></a>   
 ## <a name="transform-classes"></a>Классы преобразования  
- Windows Presentation Foundation (WPF) предоставляет следующие [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> классы для распространенных операций преобразования:  
+ Windows Presentation Foundation (WPF) предоставляет следующие 2-D <xref:System.Windows.Media.Transform> классы для распространенных операций преобразования:  
   
 |Класс|Описание|Пример|Рисунки|  
 |-----------|-----------------|-------------|------------------|  
@@ -61,7 +61,7 @@ ms.locfileid: "64651908"
 |<xref:System.Windows.Media.TransformGroup>|Группирует несколько <xref:System.Windows.Media.TransformGroup> объекты в единую <xref:System.Windows.Media.Transform> , затем можно применить для преобразования свойств.|[Применение нескольких преобразований к объекту](how-to-apply-multiple-transforms-to-an-object.md)|  
 |<xref:System.Windows.Media.MatrixTransform>|Создает пользовательские преобразования, которые не предоставляются с использованием других <xref:System.Windows.Media.Transform> классы. При использовании <xref:System.Windows.Media.MatrixTransform>, напрямую управлять матрицу.|[Использование MatrixTransform для создания пользовательских преобразований](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
- Windows Presentation Foundation (WPF) также предоставляет [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] преобразования. Дополнительные сведения см. в описании класса <xref:System.Windows.Media.Media3D.Transform3D>.  
+ Windows Presentation Foundation (WPF) предоставляет также трехмерные преобразования. Дополнительные сведения см. в описании класса <xref:System.Windows.Media.Media3D.Transform3D>.  
   
 <a name="transformationproperties"></a>   
 ## <a name="common-transformation-properties"></a>Общие свойства преобразования  

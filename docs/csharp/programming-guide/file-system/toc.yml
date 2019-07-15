@@ -18,4 +18,6 @@
     - name: "Практическое руководство. Построчное чтение текстового файла (Visual\_C#)"
       href: how-to-read-a-text-file-one-line-at-a-time.md
     - name: 'Практическое руководство. Создание раздела в реестре (Visual C#)'
+
       href: how-to-create-a-key-in-the-registry.md
+

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 9c3efe1dbea355e8bc00ef44e08efcc9d0e0bdca
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 516505ccacfd2a8a5c275b0de033e1316fa06d3a
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424168"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661347"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Таблица неявных числовых преобразований (Справочник по C#)
 
@@ -30,11 +30,11 @@ ms.locfileid: "67424168"
 |[uint](../builtin-types/integral-numeric-types.md)|`long`, `ulong`, `float`, `double` или `decimal`|  
 |[long](../builtin-types/integral-numeric-types.md)|`float`, `double`или `decimal`|  
 |[ulong](../builtin-types/integral-numeric-types.md)|`float`, `double`или `decimal`|  
-|[float](float.md)|`double`|  
+|[float](../builtin-types/floating-point-numeric-types.md)|`double`|  
   
 ## <a name="remarks"></a>Примечания  
 
-- Любой [целочисленный тип](../builtin-types/integral-numeric-types.md) неявно преобразуется к любому [типу с плавающей запятой](floating-point-types-table.md).
+- Любой [целочисленный тип](../builtin-types/integral-numeric-types.md) неявно преобразуется к любому [типу с плавающей запятой](../builtin-types/floating-point-numeric-types.md).
 
 - При преобразовании из `int`, `uint`, `long` или `ulong` в `float` и из `long` или `ulong` в `double` может быть потеряна точность, но не величина.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "67424168"
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Целочисленные типы](../builtin-types/integral-numeric-types.md)
-- [Таблица типов с плавающей запятой](floating-point-types-table.md)
+- [Таблица типов с плавающей запятой](../builtin-types/floating-point-numeric-types.md)
 - [Таблица встроенных типов](built-in-types-table.md)
 - [Таблица явных числовых преобразований](explicit-numeric-conversions-table.md)
 - [Приведение и преобразование типов](../../programming-guide/types/casting-and-type-conversions.md)

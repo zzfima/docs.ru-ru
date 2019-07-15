@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - hybrid control [WPF interoperability]
 ms.assetid: 9e8aa6b6-112c-4579-98d1-c974917df499
-ms.openlocfilehash: 6b8fcfb6b2795b1b41b5292a3d2c61ecd017f173
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b2e0ee85a7edd07e7372b04c3a26a06416fb39d9
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662268"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859870"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>Взаимодействие WPF и Windows Forms
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] представляют собой две различные архитектуры для создания интерфейсов приложений. <xref:System.Windows.Forms.Integration?displayProperty=nameWithType> Пространство имен предоставляет классы, обеспечивающие общие сценарии взаимодействия. Ключевыми классами, реализующими возможности взаимодействия, <xref:System.Windows.Forms.Integration.WindowsFormsHost> и <xref:System.Windows.Forms.Integration.ElementHost>. В этом разделе описано, какие сценарии взаимодействия поддерживаются, а какие нет.  
@@ -35,7 +35,7 @@ ms.locfileid: "64662268"
   
 - В него может быть вложена форма с отношением "главный-подчиненный" с главным элементом [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] и подчиненными элементами [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
-- В него могут быть вложены один или несколько элементов [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)].  
+- Него могут быть вложены один или несколько элементов управления ActiveX.  
   
 - В него могут быть вложены один или несколько составных элементов управления.  
   

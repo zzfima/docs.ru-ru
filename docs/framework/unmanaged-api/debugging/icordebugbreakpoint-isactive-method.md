@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5df5bed730211676acc4770c91cc6551bde0179b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d78208c180638e9048ae39664b8ce8f57be90da
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645338"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745170"
 ---
 # <a name="icordebugbreakpointisactive-method"></a>Метод ICorDebugBreakpoint::IsActive
 Получает значение, указывающее, является ли это `ICorDebugBreakpoint` активен.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT IsActive (  
     [out] BOOL *pbActive  
 );  

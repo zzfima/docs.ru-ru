@@ -11,63 +11,65 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
-ms.openlocfilehash: bbad42a2bffc397696a8da51bcdf86ebc5ff4ca6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c9dfff99e2634b79ad6b44721f40583d21c9b98e
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647676"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67664133"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
-Указывает, что объявленный программный элемент повторно объявляет и скрывает одинаково названные элементы или набор перегруженных элементов в базовом классе.  
-  
-## <a name="remarks"></a>Примечания  
- Основная цель затенение (который также называется *скрытие по имени*) — Сохранение определения членов класса. Базовый класс может претерпеть изменения, создается элемент с тем же именем, как один, которые вы уже определили. В этом случае `Shadows` применении модификатора ссылается в классе быть член определенный, а не к новому элементу базового класса.  
-  
- Сокрытие и переопределение заменяют наследуемый элемент, но между этими подходами существуют значительные различия. Дополнительные сведения см. в разделе [сокрытие в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
-  
-## <a name="rules"></a>Правила  
-  
-- **Контекст объявления.** Можно использовать `Shadows` только на уровне класса. Это означает, что контекст объявления для `Shadows` элемент должен быть классом и не может быть исходный файл, пространство имен, интерфейс, модуль, структуру или процедуры.  
-  
-     Можно объявить только один затененный элемент в одном операторе объявления.  
-  
-- **Комбинированные модификаторы.** Нельзя указать `Shadows` вместе с `Overloads`, `Overrides`, или `Static` в одном объявлении.  
-  
-- **Типы элементов.** Можно скрыть любой тип объявленного элемента, используя любой другой тип. При скрытии свойства или процедуры с другое свойство или процедура, параметры и тип возвращаемого значения имеют для получения соответствия строкам в процедуру или свойство базового класса.  
-  
-- **Доступ к.** Затененный элемент в базовом классе обычно недоступен из производного класса, который его скрывает. Тем не менее следующие соображения.  
-  
-    - Если скрывающий элемент недоступен из кода, обращения к нему, ссылка разрешается переопределяемый элемент. Например если `Private` элемент скрывает элемент базового класса, код, который не имеет разрешения на доступ к `Private` элемент обращается к элементу базового класса.  
-  
-    - При скрытии элемент скрыт элемент можно получить доступ через объект объявлен с типом базового класса. Также доступен через `MyBase`.  
-  
- Модификатор `Shadows` можно использовать в следующих контекстах:  
-  
- [Оператор Class](../../../visual-basic/language-reference/statements/class-statement.md)  
-  
- [Оператор Const](../../../visual-basic/language-reference/statements/const-statement.md)  
-  
- [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
-  
- [Оператор Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)  
-  
- [Оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)  
-  
- [Оператор Enum](../../../visual-basic/language-reference/statements/enum-statement.md)  
-  
- [Оператор Event](../../../visual-basic/language-reference/statements/event-statement.md)  
-  
- [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)  
-  
- [Оператор Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
-  
- [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)  
-  
- [Оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md)  
-  
- [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
-  
+
+Указывает, что объявленный программный элемент повторно объявляет и скрывает одинаково названные элементы или набор перегруженных элементов в базовом классе.
+
+## <a name="remarks"></a>Примечания
+
+Основная цель затенение (который также называется *скрытие по имени*) — Сохранение определения членов класса. Базовый класс может претерпеть изменения, создается элемент с тем же именем, как один, которые вы уже определили. В этом случае `Shadows` применении модификатора ссылается в классе быть член определенный, а не к новому элементу базового класса.
+
+Сокрытие и переопределение заменяют наследуемый элемент, но между этими подходами существуют значительные различия. Дополнительные сведения см. в разделе [сокрытие в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+
+## <a name="rules"></a>Правила
+
+- **Контекст объявления.** Можно использовать `Shadows` только на уровне класса. Это означает, что контекст объявления для `Shadows` элемент должен быть классом и не может быть исходный файл, пространство имен, интерфейс, модуль, структуру или процедуры.
+
+  Можно объявить только один затененный элемент в одном операторе объявления.
+
+- **Комбинированные модификаторы.** Нельзя указать `Shadows` вместе с `Overloads`, `Overrides`, или `Static` в одном объявлении.
+
+- **Типы элементов.** Можно скрыть любой тип объявленного элемента, используя любой другой тип. При скрытии свойства или процедуры с другое свойство или процедура, параметры и тип возвращаемого значения имеют для получения соответствия строкам в процедуру или свойство базового класса.
+
+- **Доступ к.** Затененный элемент в базовом классе обычно недоступен из производного класса, который его скрывает. Тем не менее следующие соображения.
+
+  - Если скрывающий элемент недоступен из кода, обращения к нему, ссылка разрешается переопределяемый элемент. Например если `Private` элемент скрывает элемент базового класса, код, который не имеет разрешения на доступ к `Private` элемент обращается к элементу базового класса.
+
+  - При скрытии элемент скрыт элемент можно получить доступ через объект объявлен с типом базового класса. Также доступен через `MyBase`.
+
+Модификатор `Shadows` можно использовать в следующих контекстах:
+
+- [Оператор Class](../../../visual-basic/language-reference/statements/class-statement.md)
+
+- [Оператор Const](../../../visual-basic/language-reference/statements/const-statement.md)
+
+- [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
+
+- [Оператор Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)
+
+- [Оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
+
+- [Оператор Enum](../../../visual-basic/language-reference/statements/enum-statement.md)
+
+- [Оператор Event](../../../visual-basic/language-reference/statements/event-statement.md)
+
+- [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)
+
+- [Оператор Interface](../../../visual-basic/language-reference/statements/interface-statement.md)
+
+- [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)
+
+- [Оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md)
+
+- [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
+
 ## <a name="see-also"></a>См. также
 
 - [Общие](../../../visual-basic/language-reference/modifiers/shared.md)

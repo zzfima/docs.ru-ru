@@ -2,12 +2,12 @@
 title: Известные проблемы SqlClient для Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 5c500a61a00914df7b106b7e89485921123e56ec
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8cadb234ffc0f00049edd0c09475031eeec275df
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489534"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662259"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Известные проблемы SqlClient для Entity Framework
 В данном разделе описаны известные проблемы, связанные с поставщиком данных .NET Framework для SQL Server (SqlClient).  
@@ -21,7 +21,7 @@ ms.locfileid: "66489534"
  Если в `null`, 0`RIGHT(nvarchar(max)` или `)`, 0`RIGHT(varchar(max)` в качестве первого аргумента передается значение, отличное от `)`, а в качестве второго аргумента передается значение, равное 0, то вместо строки `NULL` будет возвращено значение типа `empty`.  
   
 ## <a name="cross-and-outer-apply-operators"></a>Операторы CROSS APPLY и OUTER APPLY  
- Операторы CROSS и OUTER APPLY появились в версии [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]. В некоторых случаях конвейер запросов может сформировать инструкцию Transact-SQL, содержащую операторы CROSS APPLY и OUTER APPLY. Так как некоторые внутренние поставщики, включая версии SQL Server более ранней, чем [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], не поддерживают данные операторы, эти запросы нельзя выполнить на данных поставщиках.  
+ CROSS и OUTER APPLY операторы, представленные в SQL Server 2005. В некоторых случаях конвейер запросов может сформировать инструкцию Transact-SQL, содержащую операторы CROSS APPLY и OUTER APPLY. Так как некоторые внутренние поставщики, включая версиях SQL Server до SQL Server 2005, не поддерживают данные операторы, эти запросы нельзя выполнить на данных поставщиках.  
   
  Далее показаны некоторые стандартные сценарии, которые могут привести к появлению операторов CROSS APPLY и OUTER APPLY в выходном запросе.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66489534"
 - Запрос, имеющий конструкцию DEREF над конструкцией REF.  
   
 ## <a name="skip-operator"></a>Оператор SKIP  
- Если вы используете [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)], применение оператора SKIP вместе с ORDER BY для неключевых столбцов может вернуть неправильные результаты. Если неключевой столбец содержит повторяющиеся данные, то может быть пропущено больше указанного числа строк. Причина этого заключается в способе преобразования предложения SKIP для выполнения в [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]. Например, в следующем запросе, более пяти строк могут быть пропущены при `E.NonKeyColumn` содержит повторяющиеся значения:  
+ Если вы используете SQL Server 2000, применение оператора SKIP вместе с ORDER BY для неключевых столбцов может вернуть неправильные результаты. Если неключевой столбец содержит повторяющиеся данные, то может быть пропущено больше указанного числа строк. Это обусловлено как преобразования предложения SKIP для SQL Server 2000. Например, в следующем запросе, более пяти строк могут быть пропущены при `E.NonKeyColumn` содержит повторяющиеся значения:  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: e84319c60534c3ecf154c3f58973bcc429a73842
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: d7d87a3e95cf66efb91b71f6ff3c7c9bb1fbb311
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539826"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662149"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities: рекомендации и известные проблемы
 Этот раздел содержит сведения об известных проблемах, с помощью LINQ для запросов сущностей.  
@@ -35,7 +35,7 @@ ms.locfileid: "67539826"
   
 <a name="OrderingInfoLost"></a>   
 ## <a name="ordering-information-lost"></a>Потеря данных об упорядочении  
- Проецирование столбцов на анонимные типы приведет к потере данных об упорядочении в некоторых запросах к базе данных [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], для которой установлен уровень совместимости «80».  Это происходит в том случае, если имя столбца в списке упорядочения соответствует имени столбца в селекторе, как показано в следующем примере.  
+ Проецирование столбцов на анонимный тип вызовет данные об упорядочивании в некоторые запросы, которые выполняются для базы данных SQL Server 2005, установить уровень совместимости «80».  Это происходит в том случае, если имя столбца в списке упорядочения соответствует имени столбца в селекторе, как показано в следующем примере.  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  

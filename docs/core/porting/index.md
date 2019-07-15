@@ -2,14 +2,14 @@
 title: Перенос кода в .NET Core из .NET Framework
 description: Общие сведения о процессе переноса и инструментах, которые могут оказаться полезными при переносе проектов .NET Framework в .NET Core.
 author: cartermp
-ms.date: 12/07/2018
+ms.date: 07/03/2019
 ms.custom: seodec18
-ms.openlocfilehash: 870320c8467237e87a2675ec5cfb57647026d8ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c408beb97290c41d2ab6944b9d1f68bbc5e946fb
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663236"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609237"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>Перенос кода в .NET Core из .NET Framework
 
@@ -39,13 +39,13 @@ ms.locfileid: "61663236"
 
 Ниже перечислены средства, которые могут оказаться полезными при переносе.
 
-* Анализатор переносимости API — [программа командной строки](https://github.com/Microsoft/dotnet-apiport/releases) или [расширение для Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) — цепочка инструментов для создания отчетов о переносимости кода между .NET Framework и .NET Core с разбивкой проблем по сборкам. См. дополнительные сведения об [анализаторе переносимости .NET](../../standard/analyzers/portability-analyzer.md).
-* Анализатор API .NET на основе Roslyn выявляет риски совместимости для API на языке C# на разных платформах, а также отслеживает вызовы устаревших API. См. дополнительные сведения об [анализаторе API .NET](../../standard/analyzers/api-analyzer.md).
+* Анализатор переносимости API — [программа командной строки](https://github.com/Microsoft/dotnet-apiport/releases) или [расширение для Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) — инструмент для создания отчетов о переносимости кода между .NET Framework и целевой платформой .NET Core. Отчет содержит разбивку по сборкам для отсутствующих API и типа в целевой платформе .NET Core. См. дополнительные сведения об [анализаторе переносимости .NET](../../standard/analyzers/portability-analyzer.md). Рекомендуется запустить средство .NET Portability Analyzer, прежде чем начать перенос, так как это поможет вам найти все пробелы в отсутствующих API.
+* Анализатор API .NET — анализатор на основе Roslyn, который обнаруживает API .NET Standard, создающий исключение <xref:System.PlatformNotSupportedException> на некоторых платформах, отслеживает вызовы к устаревшим API и выявляет риски совместимости для API на языке C# на разных платформах. См. дополнительные сведения об [анализаторе API .NET](../../standard/analyzers/api-analyzer.md). Этот анализатор полезно использовать, если вы уже создали проект .NET Core для определения различий в поведении в среде выполнения на разных платформах.
 * Reverse Package Search — [полезная веб-служба](https://packagesearch.azurewebsites.net), которая позволяет выполнять поиск типа и находить пакеты, содержащие его.
 
 Кроме того, можно попытаться перенести более мелкие решения или отдельные проекты в формат файла проекта .NET Core с помощью средства [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017).
 
-> [!WARNING] 
+> [!WARNING]
 > CsprojToVs2017 — это стороннее средство. Нет никакой гарантии, что оно будет поддерживать все проекты. Кроме того, оно может вызвать незначительные изменения в ожидаемом поведении. CsprojToVs2017 следует использовать в качестве _начальной точки_, которая автоматизирует соответствующие основные процессы. Это решение не может гарантировать перенос форматов файлов проекта.
 
 >[!div class="step-by-step"]

@@ -2,15 +2,15 @@
 title: Руководство по программированию
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: 102d2ecba162e19258b707c1c902c29b0a7f2f02
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: c63fbedc1cf7484943614c50e7dd7554a2ddea0e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490044"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742937"
 ---
 # <a name="programming-guide"></a>Руководство по программированию
-В этом разделе содержатся сведения о создании и использовании объектной модели [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Если вы используете Visual Studio, можно также использовать [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для выполнения многих из этих задач.  
+В этом разделе содержатся сведения о создании и использовании объектной модели [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Если вы используете Visual Studio, можно также использовать реляционный конструктор объектов для выполнения многих из этих задач.  
   
  Можно также поискать документы Microsoft для конкретных проблем, и вы можете принять участие в [LINQ Forum](https://go.microsoft.com/fwlink/?LinkId=76488), где можно обсудить со специалистами более сложные вопросы подробно. Наконец [LINQ to SQL: запросы запросы LINQ .NET для реляционных данных](https://go.microsoft.com/fwlink/?LinkId=93205) документ содержит описание [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] технологии, проиллюстрированные примерами кода Visual Basic и C#.  
   

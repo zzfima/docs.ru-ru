@@ -20,19 +20,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d2b82bc056acd2e620461081b5f8c9d45fc152c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 74548df512f68761b006e064a6db968e82b03813
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490643"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779120"
 ---
 # <a name="coeeshutdowncom-function"></a>Функция CoEEShutDownCOM
 Заставляет общеязыковой среды выполнения (CLR), чтобы освободить все указатели на интерфейс, содержащиеся внутри вызываемых оболочек времени выполнения (RCW). Это приводит к по освобождению всех кэшей вызываемой оболочки времени Выполнения. Это глобальная функция является устаревшим в .NET Framework 4. Вместо этого используйте точку входа для конкретной среды выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 void CoEEShutDownCOM ();  
 ```  
   

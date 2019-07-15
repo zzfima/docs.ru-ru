@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0e38a85b688d66e9f44bd8026bb4c9e141a6eb7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6e9e5c199ad437290d7bf19d65b5f29a0abed5e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000341"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780114"
 ---
 # <a name="strongnamegetpublickey-function"></a>Функция StrongNameGetPublicKey
 Получает открытый ключ из пары закрытого и открытого ключей. Пару ключей можно указать как имя контейнера ключей в поставщике служб шифрования (CSP) или как коллекция необработанных байтов.  
@@ -31,7 +31,7 @@ ms.locfileid: "62000341"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 BOOLEAN StrongNameGetPublicKey (   
     [in]  LPCWSTR   szKeyContainer,  
     [in]  BYTE      *pbKeyBlob,  

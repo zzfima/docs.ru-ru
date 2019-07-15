@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea63627bc1e689c93634c8fe8b9048b271758573
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fdacb690b31e7b9930825e5d54ef8fc95bb3a5a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937053"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762130"
 ---
 # <a name="icorruntimehostcreatedomain-method"></a>Метод ICorRuntimeHost::CreateDomain
 Создает домен приложения. Вызывающий объект получает указатель интерфейса типа <xref:System._AppDomain> для экземпляра типа <xref:System.AppDomain?displayProperty=nameWithType>.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT CreateDomain (  
     [in] LPWSTR    pwzFriendlyName,  
     [in] IUnknown* pIdentityArray,  

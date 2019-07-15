@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 216de8f70e0ad6856bf5d708347a7e5f852fe4c6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: dd2968f7ab528fa07ef0c5af85f2a7f07147a76e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591565"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755162"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Объекты и классы Visual Basic
 
@@ -28,7 +28,7 @@ ms.locfileid: "65591565"
 
 Чтобы получить доступ к членам объекта, необходимо создать этот объект.
 
-#### <a name="to-create-an-object-from-a-class"></a>Создание объекта из класса
+### <a name="to-create-an-object-from-a-class"></a>Создание объекта из класса
 
 1. Выберите класс, на основе которого вы хотите создать объект.
 
@@ -135,7 +135,7 @@ safetyTimer.Start()
 
 #### <a name="accessing-nonshared-members"></a>Доступ к членам экземпляров
 
-###### <a name="to-access-a-nonshared-member-of-an-object"></a>Условия для обращения к члену экземпляра конкретного объекта
+##### <a name="to-access-a-nonshared-member-of-an-object"></a>Условия для обращения к члену экземпляра конкретного объекта
 
 1. Убедитесь, что объект уже создан на основе нужного класса и сохранен в объектной переменной.
 
@@ -151,7 +151,7 @@ safetyTimer.Start()
 
 #### <a name="accessing-shared-members"></a>Доступ к общим членам
 
-###### <a name="to-access-a-shared-member-of-an-object"></a>Условия для обращения к общему члену объекта
+##### <a name="to-access-a-shared-member-of-an-object"></a>Условия для обращения к общему члену объекта
 
 - После имени класса введите *оператор доступа к члену* (`.`), а затем имя члена. К члену объекта, объявленному с ключевым словом `Shared`, нужно всегда обращаться напрямую через имя класса.
 
@@ -204,7 +204,7 @@ End Sub
 
 Для следующего примера предположим, что нам нужен особый вид объекта <xref:System.Windows.Forms.Button>, который действует как обычная кнопка <xref:System.Windows.Forms.Button>, но в дополнение имеет метод, меняющий местами цвет фона и цвет переднего плана.
 
-##### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>Определение класса, производного от уже существующего класса
+#### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>Определение класса, производного от уже существующего класса
 
 1. С помощью [инструкции Class](../../../../visual-basic/language-reference/statements/class-statement.md) определите класс, из которого вы будете создавать нужный объект.
 
@@ -239,7 +239,7 @@ End Sub
 
 Производные классы наследуют члены класса, на котором они основаны, что позволяет постепенно повышать сложность при продвижении по иерархии классов. Дополнительные сведения см. в статье [Inheritance Basics (Visual Basic)](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md) (Основная информация о наследовании в Visual Basic).
 
-#### <a name="compiling-the-code"></a>Компиляция кода
+### <a name="compiling-the-code"></a>Компиляция кода
 
 Убедитесь, что компилятор сможет получить доступ к классу, на основе которого вы намерены создать новый класс. Возможно, для этого придется указать его полное имя, как в предыдущем примере, или определить его пространства имен в [операторе Imports](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Если класс находится в другом проекте, может потребоваться ссылка на этот проект. Дополнительные сведения см. в статье [Управление ссылками в проекте](/visualstudio/ide/managing-references-in-a-project).
 

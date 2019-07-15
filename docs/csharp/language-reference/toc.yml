@@ -19,16 +19,13 @@
                 - name: Целочисленные типы
                   displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
                   href: builtin-types/integral-numeric-types.md
+                - name: Числовые типы с плавающей запятой
+                  displayName: 'float, decimal, double, rational, real'
+                  href: builtin-types/floating-point-numeric-types.md
                 - name: char
                   href: keywords/char.md
-                - name: decimal
-                  href: keywords/decimal.md
-                - name: double
-                  href: keywords/double.md
                 - name: enum
                   href: keywords/enum.md
-                - name: float
-                  href: keywords/float.md
                 - name: struct
                   href: keywords/struct.md
             - name: Ссылочные типы
@@ -55,8 +52,6 @@
               items:
                 - name: Таблица встроенных типов
                   href: keywords/built-in-types-table.md
-                - name: Таблица типов с плавающей запятой
-                  href: keywords/floating-point-types-table.md
                 - name: Таблица типов значений
                   href: keywords/value-types-table.md
                 - name: Таблица значений по умолчанию
@@ -219,14 +214,6 @@
               href: keywords/sizeof.md
             - name: nameof
               href: keywords/nameof.md
-        - name: Ключевые слова преобразований
-          items:
-            - name: explicit
-              href: keywords/explicit.md
-            - name: implicit
-              href: keywords/implicit.md
-            - name: оператор
-              href: keywords/operator.md
         - name: Ключевые слова доступа
           items:
             - name: base
@@ -324,6 +311,9 @@
         - name: Операторы тестирования и преобразования типов
           href: operators/type-testing-and-conversion-operators.md
           displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), cast'
+        - name: Операторы пользовательского преобразования
+          href: operators/user-defined-conversion-operators.md
+          displayName: 'implicit, explicit'
         - name: 'Операторы, связанные с указателем'
           href: operators/pointer-related-operators.md
           displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
@@ -354,6 +344,8 @@
           href: operators/stackalloc.md
         - name: Операторы true и false
           href: operators/true-false-operators.md
+        - name: Перегрузка операторов
+          href: operators/operator-overloading.md
     - name: 'Специальные символы C#'
       items:
         - name: Обзор

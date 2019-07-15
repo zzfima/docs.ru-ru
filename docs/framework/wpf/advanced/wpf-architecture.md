@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: f4a6e6c2a63e58c40e0cca9c67b12d1f65af0d2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 697a3dff663b333ce97e05783df6b163692b5d9e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053149"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610345"
 ---
 # <a name="wpf-architecture"></a>Архитектура WPF
 В этом разделе предлагается интерактивный обзор иерархии классов Windows Presentation Foundation (WPF). Он охватывает большую часть основных подсистем [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и описывает их взаимодействие. Здесь также подробно рассматриваются некоторые архитектурные решения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -62,7 +62,7 @@ ms.locfileid: "62053149"
   
 <a name="System_Windows_Media_Visual"></a>   
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
- После определения системы следующим шагом является рисование пикселей на экране. <xref:System.Windows.Media.Visual> Предоставляет класс для построения дерева визуальных объектов, которые дополнительно включают инструкции по рисованию и метаданные по способу визуализации этих инструкций (обрезки, преобразования, и т.д.). <xref:System.Windows.Media.Visual> разработан максимально облегченным и гибким, так что большинство функций без общего [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] раскрытия и сильно зависит от защищенных функций обратного вызова.  
+ После определения системы следующим шагом является рисование пикселей на экране. <xref:System.Windows.Media.Visual> Предоставляет класс для построения дерева визуальных объектов, которые дополнительно включают инструкции по рисованию и метаданные по способу визуализации этих инструкций (обрезки, преобразования, и т.д.). <xref:System.Windows.Media.Visual> должна быть максимально облегченным и гибким, поэтому большинство возможностей отсутствие общих проблем API и сильно зависит от защищенных функций обратного вызова.  
   
  <xref:System.Windows.Media.Visual> действительно является точкой входа для [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] систему композиции. <xref:System.Windows.Media.Visual> представляет собой точку соединения между этими двумя подсистемами: управляемым [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] и неуправляемым компонентом milcore.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62053149"
   
  Основная политика, представленная с <xref:System.Windows.FrameworkElement> макет приложения. <xref:System.Windows.FrameworkElement> основан на базового контракта макета представленные <xref:System.Windows.UIElement> и добавляет понятие "ячейки «макета», упрощает для авторов макета создание согласованного набора управляемых свойствами семантик макета. Свойства, такие как <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>, <xref:System.Windows.FrameworkElement.MinWidth%2A>, и <xref:System.Windows.FrameworkElement.Margin%2A> (по) обеспечивают всем компонентам, производным от <xref:System.Windows.FrameworkElement> согласованное поведение внутри контейнеров макета.  
   
- <xref:System.Windows.FrameworkElement> упрощает также [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] представление о многих функциях см. в на уровне ядра [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Например <xref:System.Windows.FrameworkElement> обеспечивает прямой доступ к анимации с помощью <xref:System.Windows.FrameworkElement.BeginStoryboard%2A> метод. Объект <xref:System.Windows.Media.Animation.Storyboard> предоставляет способ создания скриптов нескольких анимаций на основе набора свойств.  
+ <xref:System.Windows.FrameworkElement> также предоставляет простой API подверженность многочисленные функции на уровне ядра [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Например <xref:System.Windows.FrameworkElement> обеспечивает прямой доступ к анимации с помощью <xref:System.Windows.FrameworkElement.BeginStoryboard%2A> метод. Объект <xref:System.Windows.Media.Animation.Storyboard> предоставляет способ создания скриптов нескольких анимаций на основе набора свойств.  
   
  Две наиболее важные вещи, <xref:System.Windows.FrameworkElement> вводит являются привязка данных и стили.  
   

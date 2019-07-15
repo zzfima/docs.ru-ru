@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 408e72eeaa1dac83c45488d186425f30c6043280
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef3f1d5e78efe37070bb2bdd6d2834178947af7b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786377"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740089"
 ---
 # <a name="cordebugexceptionunwindcallbacktype-enumeration"></a>Перечисление CorDebugExceptionUnwindCallbackType
 Указывает событие, о котором сообщает обратный вызов во время фазы перемотки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 typedef enum CorDebugExceptionUnwindCallbackType {  
     DEBUG_EXCEPTION_UNWIND_BEGIN = 1,  
     DEBUG_EXCEPTION_INTERCEPTED  = 2  

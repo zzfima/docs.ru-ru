@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c929b9434507ea7cce936767f2ac72ff98fda7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43d22e5b6fcbbb006d9745942ca94434ee64c08c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700284"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751314"
 ---
 # <a name="icorthreadpoolcorgetavailablethreads-method"></a>Метод ICorThreadpool::CorGetAvailableThreads
 Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT CorGetAvailableThreads (  
     [out] DWORD *AvailableWorkerThreads,  
     [out] DWORD *AvailableIOCompletionThreads  

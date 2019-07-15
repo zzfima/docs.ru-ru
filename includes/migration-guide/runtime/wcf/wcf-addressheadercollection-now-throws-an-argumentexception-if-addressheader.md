@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d8c9cec723ec4e57fb4868cc95881be8eb4001b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a26b8c8a6315e57e70f4810ac4f5fb7ab4ba9b58
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804920"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857245"
 ---
 ### <a name="wcf-addressheadercollection-now-throws-an-argumentexception-if-an-addressheader-element-is-null"></a>WCF AddressHeaderCollection теперь создает исключение ArgumentException, если элемент addressHeader равен NULL
 
@@ -16,3 +16,4 @@ ms.locfileid: "59804920"
 |Версия|4.7.1|
 |Тип|Среда выполнения|
 |Затронутые API|<ul><li><xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})?displayProperty=nameWithType></li></ul>|
+

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91b09be04499396a2229962fd592f29cb8bc8d04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b712ee0bb8e67f448b7ea2bee3c092367181abad
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609040"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740209"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>Перечисление CorDebugExceptionCallbackType
 Указывает тип обратного вызова, состоящее из [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) событий.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 typedef enum CorDebugExceptionCallbackType {  
     DEBUG_EXCEPTION_FIRST_CHANCE         = 1,  
     DEBUG_EXCEPTION_USER_FIRST_CHANCE    = 2,  

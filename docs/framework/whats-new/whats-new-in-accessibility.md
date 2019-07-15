@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19d9752e1c7cfbc0a7c85e7cf8053c09c5baca7a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: da73df97524b9e394fac795daf14a3f0fb1f4e3d
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425580"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661377"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Улучшения специальных возможностей в .NET Framework
 
@@ -257,39 +257,39 @@ internal class AutoSuggestTextBoxAutomationPeer : TextBoxAutomationPeer
 
 - С помощью свойств зависимостей.
 
-   В WPF добавлены два новых свойства зависимостей: <xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> и <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType>. Разработчик может задавать их значения с помощью XAML:
+  В WPF добавлены два новых свойства зависимостей: <xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> и <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType>. Разработчик может задавать их значения с помощью XAML:
 
-   ```xaml
-   <Button AutomationProperties.SizeOfSet="3"
-     AutomationProperties.PositionInSet="1">Button 1</Button>
+  ```xaml
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="1">Button 1</Button>
 
-   <Button AutomationProperties.SizeOfSet="3"
-     AutomationProperties.PositionInSet="2">Button 2</Button>
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="2">Button 2</Button>
 
-   <Button AutomationProperties.SizeOfSet="3"
-     AutomationProperties.PositionInSet="3">Button 3</Button>
-   ```
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="3">Button 3</Button>
+  ```
 
 - Путем переопределения виртуальных методов AutomationPeer.
 
-   В класс AutomationPeer добавлены виртуальные методы <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> и <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore>. Разработчик может указывать значения для `SizeOfSet` и `PositionInSet`, переопределяя эти методы, как показано в следующем примере:
+  В класс AutomationPeer добавлены виртуальные методы <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> и <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore>. Разработчик может указывать значения для `SizeOfSet` и `PositionInSet`, переопределяя эти методы, как показано в следующем примере:
 
-   ```csharp
-   public class MyButtonAutomationPeer : ButtonAutomationPeer
-   {
-      protected override int GetSizeOfSetCore()
-      {
-         // Call into your own logic to provide a value for SizeOfSet
-         return CalculateSizeOfSet();
-      }
+  ```csharp
+  public class MyButtonAutomationPeer : ButtonAutomationPeer
+  {
+    protected override int GetSizeOfSetCore()
+    {
+        // Call into your own logic to provide a value for SizeOfSet
+        return CalculateSizeOfSet();
+    }
 
-      protected override int GetPositionInSetCore()
-      {
-         // Call into your own logic to provide a value for PositionInSet
-         return CalculatePositionInSet();
-      }
-   }
-   ```
+    protected override int GetPositionInSetCore()
+    {
+        // Call into your own logic to provide a value for PositionInSet
+        return CalculatePositionInSet();
+    }
+  }
+  ```
 
 Кроме того, элементы в экземплярах <xref:System.Windows.Controls.ItemsControl> предоставляют значения для этих свойств автоматически. Разработчику делать это не требуется. Если экземпляр <xref:System.Windows.Controls.ItemsControl> сгруппирован, коллекция групп представлена как набор. Каждая группа считается отдельным набором, а каждый элемент в группе указывает свое положение в ней, а также размер группы. Виртуализация не влияет на автоматически задаваемые значения. Даже если элемент не реализован, он по-прежнему учитывается при определении общего размера набора и влияет на положение других элементов в наборе.
 
@@ -447,10 +447,10 @@ internal class AutoSuggestTextBoxAutomationPeer : TextBoxAutomationPeer
 
 - Перечисление <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType>, которое определяет следующие возможные значения **LiveSetting**:
 
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. Элемент не отправляет уведомления при изменении содержимого динамической области.
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. Элемент отправляет уведомления, не прерывающие работу, при изменении содержимого динамической области.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. Элемент не отправляет уведомления при изменении содержимого динамической области.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. Элемент отправляет уведомления, не прерывающие работу, при изменении содержимого динамической области.
 
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. Элемент отправляет уведомления, прерывающие работу, при изменении содержимого динамической области.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. Элемент отправляет уведомления, прерывающие работу, при изменении содержимого динамической области.
 
 Вы можете создать динамическую область, задав свойство **AutomationProperties.LiveSetting** для нужного элемента, как показано в следующем примере:
 
@@ -478,81 +478,81 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - Элемент управления <xref:System.Windows.Controls.Expander>
 
-    Визуальный элемент фокуса для элемента управления <xref:System.Windows.Controls.Expander> теперь отображается. Визуальные элементы клавиатуры для элементов управления <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> и <xref:System.Windows.Controls.RadioButton> также видимы. Например:
+  Визуальный элемент фокуса для элемента управления <xref:System.Windows.Controls.Expander> теперь отображается. Визуальные элементы клавиатуры для элементов управления <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> и <xref:System.Windows.Controls.RadioButton> также видимы. Например:
 
-    До: 
+  До: 
 
-    ![Элемент управления Expander с фокусом до внесения улучшений](media/expander-before.png)
+  ![Элемент управления Expander с фокусом до внесения улучшений](media/expander-before.png)
 
-    После: 
+  После: 
 
-    ![Элемент управления Expander с фокусом после внесения улучшений](media/expander-after.png)
+  ![Элемент управления Expander с фокусом после внесения улучшений](media/expander-after.png)
 
 - Элементы управления <xref:System.Windows.Controls.CheckBox> и <xref:System.Windows.Controls.RadioButton>
 
-    Текст в элементах управления <xref:System.Windows.Controls.CheckBox> и <xref:System.Windows.Controls.RadioButton> теперь стало проще читать, когда он выбран при использовании тем с высокой контрастностью. Например:
+  Текст в элементах управления <xref:System.Windows.Controls.CheckBox> и <xref:System.Windows.Controls.RadioButton> теперь стало проще читать, когда он выбран при использовании тем с высокой контрастностью. Например:
 
-    До: 
+  До: 
 
-    ![Переключатель высокой контрастности до внесения улучшений](media/radio-button-before.png)
+  ![Переключатель высокой контрастности до внесения улучшений](media/radio-button-before.png)
 
-    После: 
+  После: 
 
-    ![Переключатель высокой контрастности после внесения улучшений](media/radio-button-after.png)
+  ![Переключатель высокой контрастности после внесения улучшений](media/radio-button-after.png)
 
 - Элемент управления <xref:System.Windows.Controls.ComboBox>
 
-    Начиная с .NET Framework 4.7.1 граница отключенного элемента управления <xref:System.Windows.Controls.ComboBox> имеет цвет отключенного текста. Например:
+  Начиная с .NET Framework 4.7.1 граница отключенного элемента управления <xref:System.Windows.Controls.ComboBox> имеет цвет отключенного текста. Например:
 
-    До: 
+  До: 
 
-     ![Отключенная граница и текст поля со списком до внесения улучшений](media/combo-disabled-before.png)
+  ![Отключенная граница и текст поля со списком до внесения улучшений](media/combo-disabled-before.png)
 
-    После:   
+  После:   
 
-     ![Отключенная граница и текст поля со списком после внесения улучшений](media/combo-disabled-after.png)
+  ![Отключенная граница и текст поля со списком после внесения улучшений](media/combo-disabled-after.png)
 
-    Кроме того, отключенные и находящиеся в фокусе кнопки используют правильный цвет темы.
+  Кроме того, отключенные и находящиеся в фокусе кнопки используют правильный цвет темы.
 
-    До:
+  До:
 
-    ![Цвета темы для кнопок до внесения улучшений](media/button-themes-before.png) 
+  ![Цвета темы для кнопок до внесения улучшений](media/button-themes-before.png) 
 
-    После: 
+  После: 
 
-    ![Цвета темы для кнопок после внесения улучшений](media/button-themes-after.png) 
+  ![Цвета темы для кнопок после внесения улучшений](media/button-themes-after.png) 
 
-    Наконец, в .NET Framework 4.7 и более ранних версий установка стиля элемента управления <xref:System.Windows.Controls.ComboBox> в значение `Toolbar.ComboBoxStyleKey` приводила к тому, что стрелка раскрывающегося списка была невидимой. Начиная с .NET Framework 4.7.1 эта проблема устранена. Например:
+  Наконец, в .NET Framework 4.7 и более ранних версий установка стиля элемента управления <xref:System.Windows.Controls.ComboBox> в значение `Toolbar.ComboBoxStyleKey` приводила к тому, что стрелка раскрывающегося списка была невидимой. Начиная с .NET Framework 4.7.1 эта проблема устранена. Например:
 
-    До: 
+  До: 
 
-    ![Toolbar.ComboBoxStyleKey до внесения улучшений](media/comboboxstylekey-before.png) 
+  ![Toolbar.ComboBoxStyleKey до внесения улучшений](media/comboboxstylekey-before.png) 
 
-    После: 
+  После: 
 
-    ![Toolbar.ComboBoxStyleKey после внесения улучшений](media/comboboxstylekey-after.png) 
+  ![Toolbar.ComboBoxStyleKey после внесения улучшений](media/comboboxstylekey-after.png) 
 
 - Элемент управления <xref:System.Windows.Controls.DataGrid>
 
-    Начиная с .NET Framework 4.7.1 стрелка индикатора сортировки в элементе управления <xref:System.Windows.Controls.DataGrid> имеет правильные цвета темы. Например:
+  Начиная с .NET Framework 4.7.1 стрелка индикатора сортировки в элементе управления <xref:System.Windows.Controls.DataGrid> имеет правильные цвета темы. Например:
 
-    До: 
+  До: 
 
-    ![Стрелка индикатора сортировки до внесения улучшений](media/sort-indicator-before.png) 
+  ![Стрелка индикатора сортировки до внесения улучшений](media/sort-indicator-before.png) 
 
-    После:   
+  После:   
 
-    ![Стрелка индикатора сортировки после внесения улучшений](media/sort-indicator-after.png) 
+  ![Стрелка индикатора сортировки после внесения улучшений](media/sort-indicator-after.png) 
 
-    Кроме того, в .NET Framework 4.7 и более ранних версий стиль ссылки по умолчанию изменялся на неправильный цвет при наведении указателя мыши в режимах высокой контрастности. Начиная с .NET Framework 4.7.1 эта проблема устранена. Аналогичным образом, столбец флажка <xref:System.Windows.Controls.DataGrid> использует ожидаемые цвета для отзывов на фокус клавиатуры начиная с .NET Framework 4.7.1.
+  Кроме того, в .NET Framework 4.7 и более ранних версий стиль ссылки по умолчанию изменялся на неправильный цвет при наведении указателя мыши в режимах высокой контрастности. Начиная с .NET Framework 4.7.1 эта проблема устранена. Аналогичным образом, столбец флажка <xref:System.Windows.Controls.DataGrid> использует ожидаемые цвета для отзывов на фокус клавиатуры начиная с .NET Framework 4.7.1.
 
-    До: 
+  До: 
 
-    ![Стиль ссылки по умолчанию DataGrid до внесения улучшений](media/default-link-style-before.png) 
+  ![Стиль ссылки по умолчанию DataGrid до внесения улучшений](media/default-link-style-before.png) 
 
-    После:    
+  После:    
 
-    ![Стиль ссылки по умолчанию DataGrid после внесения улучшений](media/default-link-style-after.png) 
+  ![Стиль ссылки по умолчанию DataGrid после внесения улучшений](media/default-link-style-after.png) 
 
 Дополнительные сведения об улучшениях специальных возможностей WPF в .NET Framework 4.7.1 см. в разделе [Улучшения специальных возможностей в WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
@@ -581,13 +581,13 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - Отключенный текст проще читать. Например:
 
-    До:
+  До:
 
-    ![Отключенный текст до внесения улучшений](media/wf-disabled-before.png) 
+  ![Отключенный текст до внесения улучшений](media/wf-disabled-before.png) 
 
-    После:
+  После:
 
-    ![Отключенный текст после внесения улучшений](media/wf-disabled-after.png) 
+  ![Отключенный текст после внесения улучшений](media/wf-disabled-after.png) 
 
 - Усовершенствования режима высокой контрастности в диалоговом окне исключения потока.
 

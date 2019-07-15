@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: 98829f30c2c25c0710cf3fe044359d3c7538fe76
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 2e2897ff647140b58b3a1812e153a44a6fcdaef7
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424042"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859564"
 ---
 # <a name="value-types-table-c-reference"></a>Таблица типов значений (справочник по C#)
 
@@ -21,21 +21,20 @@ ms.locfileid: "67424042"
 |Тип значения|Категория|Суффикс типа|
 |----------------|--------------|-----------------|
 |[bool](bool.md)|Boolean||
-|[byte](../builtin-types/integral-numeric-types.md)|Без знака, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)||
+|`byte`|Без знака, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)||
 |[char](char.md)|Без знака, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)
-)||
-|[decimal](decimal.md)|Числовой, [с плавающей запятой](floating-point-types-table.md)|M или m|
-|[double](double.md)|Числовой, [с плавающей запятой](floating-point-types-table.md)|D или d|
+|`decimal`|Числовой, [с плавающей запятой](../builtin-types/floating-point-numeric-types.md)|M или m|
+|`double`|Числовой, [с плавающей запятой](../builtin-types/floating-point-numeric-types.md)|D или d|
 |[enum](enum.md)|Перечисление||
-|[float](float.md)|Числовой, [с плавающей запятой](floating-point-types-table.md)|F или f|
-|[int](../builtin-types/integral-numeric-types.md)|Со знаком, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)||
-|[long](../builtin-types/integral-numeric-types.md)|Со знаком, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)|L или l|
-|[sbyte](../builtin-types/integral-numeric-types.md)|Со знаком, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)||
-|[short](../builtin-types/integral-numeric-types.md)|Со знаком, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)||
+|`float`|Числовой, [с плавающей запятой](../builtin-types/floating-point-numeric-types.md)|F или f|
+|`int`|Со знаком, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)||
+|`long`|Со знаком, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)|L или l|
+|`sbyte`|Со знаком, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)||
+|`short`|Со знаком, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)||
 |[struct](struct.md)|Определяемая пользователем структура||
-|[uint](../builtin-types/integral-numeric-types.md)|Без знака, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)|U или u|
-|[ulong](../builtin-types/integral-numeric-types.md)|Без знака, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)|UL, Ul, uL, ul, LU, Lu, lU или lu|
-|[ushort](../builtin-types/integral-numeric-types.md)|Без знака, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)||
+|`uint`|Без знака, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)|U или u|
+|`ulong`|Без знака, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)|UL, Ul, uL, ul, LU, Lu, lU или lu|
+|`ushort`|Без знака, числовой, [целочисленный](../builtin-types/integral-numeric-types.md)||
 
 ## <a name="remarks"></a>Примечания
 

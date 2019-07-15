@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 2d896708c702f5261239eb74f925c10eacd89619
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7073ddc50b47ff239e8b310c0a5a1fbd84504133
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61709891"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743876"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Операторы и выражения (Руководство по программированию на C#)
 
@@ -32,14 +32,6 @@ ms.locfileid: "61709891"
 - [Инструкции](operators.md)
 
 - [Анонимные функции](anonymous-functions.md)
-
-- [Перегружаемые операторы](overloadable-operators.md)
-
-- [Операторы преобразования](conversion-operators.md)
-
-  - [Использование операторов преобразования](using-conversion-operators.md)
-
-  - [Практическое руководство. Реализация определяемых пользователем преобразований между структурами](how-to-implement-user-defined-conversions-between-structs.md)
 
 - [Сравнения на равенство](equality-comparisons.md)
 

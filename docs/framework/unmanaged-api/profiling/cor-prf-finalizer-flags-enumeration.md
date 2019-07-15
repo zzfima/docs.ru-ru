@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5037f335e8d66c341d70d91d955a1ac7571b823
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a66b2b94765c3d59327e500f1e208dc93cd8e231
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775151"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781935"
 ---
 # <a name="corprffinalizerflags-enumeration"></a>Перечисление COR_PRF_FINALIZER_FLAGS
 Описывает метод завершения для объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_FINALIZER_CRITICAL = 0x1  
 } COR_PRF_FINALIZER_FLAGS;  

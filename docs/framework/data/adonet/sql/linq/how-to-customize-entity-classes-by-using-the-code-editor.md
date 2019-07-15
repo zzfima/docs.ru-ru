@@ -2,15 +2,15 @@
 title: Практическое руководство. Как настроить классы сущностей с помощью редактора кода
 ms.date: 03/30/2017
 ms.assetid: ec28332f-9f3c-4e0a-baca-60f9141a68c0
-ms.openlocfilehash: 05a523f8b98c7b64350b67c217baba07dca14de3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67a0e17b6a81d804ce101bf56d8da82fe330479c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037834"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743424"
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>Практическое руководство. Как настроить классы сущностей с помощью редактора кода
-С помощью Visual Studio разработчики могут использовать [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для создания или настройки своих классов сущностей.  
+Разработчики, использующие Visual Studio можно использовать реляционный конструктор объектов для создания или настройки своих классов сущностей.  
   
  В редакторе кода Visual Studio также можно написать собственный код сопоставления или настроить код, который уже был создан. Дополнительные сведения см. в разделе [сопоставление, основанное на атрибутах](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   

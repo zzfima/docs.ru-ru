@@ -10,12 +10,12 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f8ee4b31c135595770338831c23d8a0f419e8cd
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62001472"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67857013"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Инициализация для элементов типа Object вне дерева объектов
 За некоторые аспекты инициализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] отвечают процессы, которые обычно предполагают, что элемент подключен либо к логическому, либо к визуальному дереву. В этом разделе описываются действия, необходимые для инициализации элемента, который не подключен ни к одному из деревьев.  
@@ -33,7 +33,7 @@ ms.locfileid: "62001472"
  Если элемент при установке свойств на <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement> производного класса, то можно вызвать версии класса <xref:System.Windows.FrameworkElement.BeginInit%2A> и <xref:System.Windows.FrameworkElement.EndInit%2A> вместо приведения к <xref:System.ComponentModel.ISupportInitialize>.  
   
 ### <a name="sample-code"></a>Пример кода  
- Ниже приведен пример кода для консольного приложения, использующего отрисовки [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] и <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType> свободного [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файл для иллюстрации правильного размещения <xref:System.Windows.FrameworkElement.BeginInit%2A> и <xref:System.Windows.FrameworkElement.EndInit%2A> относительно других [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] вызовы корректировать, влияющих на отрисовку.  
+ Ниже приведен пример кода для консольного приложения, использующего отрисовки API-интерфейсы и <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType> свободного [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файл для иллюстрации правильного размещения <xref:System.Windows.FrameworkElement.BeginInit%2A> и <xref:System.Windows.FrameworkElement.EndInit%2A> вокруг остальные вызовы API, измените его свойства, влияют на отрисовку.  
   
  В этом примере иллюстрируется только основная функция. Функции `Rasterize` и `Save` (не показаны) являются служебными функциями, которые отвечают за обработку изображения и ввод-вывод.  
   

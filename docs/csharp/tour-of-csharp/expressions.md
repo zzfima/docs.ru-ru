@@ -3,12 +3,12 @@ title: Выражения в C#. Краткий обзор языка C#
 description: Выражения, операнды и операторы являются стандартными блоками языка C#
 ms.date: 04/25/2019
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: ffe800304a9125e11e20d96a84919936f1fee2c1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2553730d495942730c53d3646f35e80759a4d168
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753645"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609316"
 ---
 # <a name="expressions"></a>Выражения
 
@@ -23,7 +23,7 @@ ms.locfileid: "64753645"
 
 Приоритет и ассоциативность операторов можно изменять, используя скобки. Например, в выражении `x + y * z` сначала `y` умножается на `z`, а результат прибавляется к `x`, а в выражении `(x + y) * z` сначала суммируются `x` и `y`, а результат умножается на `z`.
 
-Большинство операторов могут быть [*перегружены*](../language-reference/keywords/operator.md). Перегрузка операторов позволяет создать пользовательскую реализацию оператора для таких операций, в которых один или оба операнда имеют определяемый пользователем тип класса или структуры.
+Большинство операторов могут быть [*перегружены*](../language-reference/operators/operator-overloading.md). Перегрузка операторов позволяет создать пользовательскую реализацию оператора для таких операций, в которых один или оба операнда имеют определяемый пользователем тип класса или структуры.
 
 C# предоставляет несколько операторов для выполнения [арифметических](../language-reference/operators/arithmetic-operators.md), [логических](../language-reference/operators/boolean-logical-operators.md) операций, [побитовых операций и сдвигов](../language-reference/operators/bitwise-and-shift-operators.md), сравнения на [равенство](../language-reference/operators/equality-operators.md) и [порядок](../language-reference/operators/comparison-operators.md).
 

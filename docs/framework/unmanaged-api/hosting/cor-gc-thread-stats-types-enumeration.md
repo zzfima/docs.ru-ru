@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c631a0a3abb3cb2a342dfd44fdffb147b742ae3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a984e8645bec0f58d8a31965b762e0a3a190ba59
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698126"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768017"
 ---
 # <a name="corgcthreadstatstypes-enumeration"></a>Перечисление COR_GC_THREAD_STATS_TYPES
 Указывает, статистика сборки мусора для потока.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 typedef enum {  
     COR_GC_THREAD_HAS_PROMOTED_BYTES  = 0x00000001  
 } COR_GC_THREAD_STATS_TYPES;  

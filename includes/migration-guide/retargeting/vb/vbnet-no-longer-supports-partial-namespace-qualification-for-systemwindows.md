@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8db115a46df3fcea103e8fa6896542d0116aa256
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 43e9c1c2f03daedf4d56152da5672b89399a3c69
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236742"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804681"
 ---
 ### <a name="vbnet-no-longer-supports-partial-namespace-qualification-for-systemwindows-apis"></a>VB.NET больше не поддерживает частичные квалификации пространства имен для API-интерфейсов System.Windows
 
@@ -15,3 +15,4 @@ ms.locfileid: "59236742"
 |Область|Дополнительный номер|
 |Версия|4.5.2|
 |Тип|Изменение целевой платформы|
+

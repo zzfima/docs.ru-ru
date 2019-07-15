@@ -1,16 +1,16 @@
 ---
-title: 'Как выполнить: Создание приложения ASP.NET, поддерживающего утверждения, с использованием аутентификации Windows'
+title: Как Создание приложения ASP.NET, поддерживающего утверждения, с использованием аутентификации Windows
 ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
-ms.openlocfilehash: 039fccde55dd48571e38f064f68b16480b65cb44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b58a4066538441a48bc6646f364e846a25cc8c8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650411"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742501"
 ---
-# <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Как выполнить: Создание приложения ASP.NET, поддерживающего утверждения, с использованием аутентификации Windows
+# <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Как Создание приложения ASP.NET, поддерживающего утверждения, с использованием аутентификации Windows
 ## <a name="applies-to"></a>Применение  
   
 - Microsoft® Windows® Identity Foundation (WIF)  
@@ -56,7 +56,7 @@ ms.locfileid: "64650411"
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Шаг 1. Создание простого приложения веб-форм ASP.NET  
  На этом шаге создается новое приложение веб-форм ASP.NET.  
   
-#### <a name="to-create-a-simple-aspnet-application"></a>Создание простого приложения ASP.NET  
+### <a name="to-create-a-simple-aspnet-application"></a>Создание простого приложения ASP.NET  
   
 1. Запустите Visual Studio и выберите **Файл**, **Создать** и затем **Проект**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "64650411"
 ## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Шаг 2. Настройка приложения веб-форм ASP.NET на применение утверждений с использованием проверки подлинности Windows  
  На этом шаге в файл конфигурации *Web.config* добавляется запись конфигурации. Также в файл *Default.aspx* вносятся изменения, позволяющие отображать сведения об утверждениях для учетной записи.  
   
-#### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Настройка приложения ASP.NET на применение утверждений с использованием проверки подлинности Windows  
+### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Настройка приложения ASP.NET на применение утверждений с использованием проверки подлинности Windows  
   
 1. В проекте **TestApp** в файле *Default.aspx* замените существующую разметку следующей:  
   
@@ -136,6 +136,6 @@ ms.locfileid: "64650411"
 ## <a name="step-3--test-your-solution"></a>Шаг 3. Тестирование решения  
  На этом шаге тестируется приложение веб-форм ASP.NET и проверяется наличие утверждений при входе пользователя с помощью проверки подлинности Windows.  
   
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Тестирование приложения веб-форм ASP.NET на наличие утверждений с использованием проверки подлинности Windows  
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Тестирование приложения веб-форм ASP.NET на наличие утверждений с использованием проверки подлинности Windows  
   
 1. Нажмите клавишу **F5**, чтобы выполнить сборку приложения и запустить его. В верхней правой части страницы появятся страница *Default.aspx*, а также имя учетной записи (с доменным именем) в качестве прошедшего проверку пользователя. Кроме того, на странице должна быть представлена таблица с утверждениями, полученными от учетной записи Windows.

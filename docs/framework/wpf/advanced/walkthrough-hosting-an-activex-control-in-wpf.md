@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: 976679e4b6e6bba7288756616db639ed61472591
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0181093de1c40889110ab7eae75a3847a17845a9
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605444"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859941"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Пошаговое руководство. Размещение элемента управления ActiveX в приложении WPF
-Для улучшенного взаимодействия с браузерами, можно использовать [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] элементов управления в вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложения на основе. В этом пошаговом руководстве показано, как разместить [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] как элемент управления на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] страницы.
+Для улучшенного взаимодействия с браузерами, можно использовать элементы управления ActiveX в вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложения на основе. В этом пошаговом руководстве показано, как разместить [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] как элемент управления на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] страницы.
 
  В данном пошаговом руководстве представлены следующие задачи.
 
@@ -26,7 +26,7 @@ ms.locfileid: "64605444"
 
 - Размещение элемента управления ActiveX на странице WPF.
 
- После завершения этого пошагового руководства вы узнаете, как использовать [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] элементов управления в вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложения на основе.
+ После завершения этого пошагового руководства вы узнаете, как использовать элементы управления ActiveX в вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложения на основе.
 
 ## <a name="prerequisites"></a>Предварительные требования
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.
@@ -37,7 +37,7 @@ ms.locfileid: "64605444"
 
 ## <a name="creating-the-project"></a>Создание проекта
 
-#### <a name="to-create-and-set-up-the-project"></a>Создание и настройка проекта
+### <a name="to-create-and-set-up-the-project"></a>Создание и настройка проекта
 
 1. Создание проекта приложения WPF с именем `HostingAxInWpf`.
 
@@ -60,9 +60,9 @@ ms.locfileid: "64605444"
 9. Если в ответ на приглашение переименовать все ссылки, нажмите кнопку **Да**.
 
 ## <a name="creating-the-activex-control"></a>Создание элемента управления ActiveX
- [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] автоматически создает <xref:System.Windows.Forms.AxHost> класс-оболочку для [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] управления, когда элемент управления добавляется в рабочую область конструирования. В следующей процедуре создается управляемая сборка с именем AxInterop.WMPLib.dll.
+ [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] автоматически создает <xref:System.Windows.Forms.AxHost> класс-оболочку для элемента управления Microsoft ActiveX, когда элемент управления добавляется в рабочую область конструирования. В следующей процедуре создается управляемая сборка с именем AxInterop.WMPLib.dll.
 
-#### <a name="to-create-the-activex-control"></a>Чтобы создать элемент управления ActiveX
+### <a name="to-create-the-activex-control"></a>Чтобы создать элемент управления ActiveX
 
 1. Откройте WmpAxControl.vb или WmpAxControl.cs в конструкторе Windows Forms.
 
@@ -74,9 +74,9 @@ ms.locfileid: "64605444"
 
 ## <a name="hosting-the-activex-control-on-a-wpf-page"></a>Размещение элемента управления ActiveX в страницу WPF
 
-#### <a name="to-host-the-activex-control"></a>Размещение элемента управления ActiveX
+### <a name="to-host-the-activex-control"></a>Размещение элемента управления ActiveX
 
-1. В проекте HostingAxInWpf, добавьте ссылку на созданный [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] сборка взаимодействия.
+1. В проекте HostingAxInWpf добавьте ссылку на созданную сборку взаимодействия ActiveX.
 
      Эта сборка называется AxInterop.WMPLib.dll и был добавлен в папку отладки проекта WmpAxLib при импорте элементом управления проигрывателя Windows Media.
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bcd7bfb52cadf740d8fe3cb92a09b071f530b7ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b577e915422814fbd0060fdda53b9e2bf7cd091a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994335"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760725"
 ---
 # <a name="icordebugstepperdeactivate-method"></a>Метод ICorDebugStepper::Deactivate
 Принуждает ICorDebugStepper для отмены последней команды шага, оно получено.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT Deactivate ();  
 ```  
   

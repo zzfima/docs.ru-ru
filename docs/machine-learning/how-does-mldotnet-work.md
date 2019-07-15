@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 58e79cf0b017d65644f25250d05d252b5635c21e
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 06085091a13ad76dcd554cfe637bcc151bbb8476
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67152004"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610182"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Что такое ML.NET и принципы работы этой системы
 
@@ -164,16 +164,19 @@ ML.NET позволяет добавлять в приложения .NET маш
 Приложение ML.NET начинается с объекта <xref:Microsoft.ML.MLContext>. Этот одноэлементный объект содержит **каталоги**. Каталог — это фабрика загрузки и сохранения данных, преобразований, инструкторов и компонентов операций модели. Каждый объект каталога имеет методы для создания различных типов компонентов:
 
 ||||
-|-|-|-|
-|Загрузка и сохранение данных||<xref:Microsoft.ML.DataOperationsCatalog>|
-|Подготовка данных||<xref:Microsoft.ML.TransformsCatalog>|
-|Алгоритмы обучения|Двоичная классификация|<xref:Microsoft.ML.BinaryClassificationCatalog>|
-||Многоклассовая классификация|<xref:Microsoft.ML.MulticlassClassificationCatalog>|
-||Обнаружение аномалий|<xref:Microsoft.ML.AnomalyDetectionCatalog>|
-||Ранжирование|<xref:Microsoft.ML.RankingCatalog>|
-||Регрессия|<xref:Microsoft.ML.RegressionCatalog>|
-||Рекомендация|<xref:Microsoft.ML.RecommendationCatalog>|
-|Использование модели ||<xref:Microsoft.ML.ModelOperationsCatalog>|
+|-|-|-|-|
+|Загрузка и сохранение данных||<xref:Microsoft.ML.DataOperationsCatalog>||
+|Подготовка данных||<xref:Microsoft.ML.TransformsCatalog>||
+|Алгоритмы обучения|Двоичная классификация|<xref:Microsoft.ML.BinaryClassificationCatalog>||
+||Многоклассовая классификация|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
+||Обнаружение аномалий|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
+||Кластеризация|<xref:Microsoft.ML.ClusteringCatalog>||
+||Прогнозирование|<xref:Microsoft.ML.Forecasting>||
+||Ранжирование|<xref:Microsoft.ML.RankingCatalog>||
+||Регрессия|<xref:Microsoft.ML.RegressionCatalog>||
+||Рекомендация|<xref:Microsoft.ML.RecommendationCatalog>|добавление Microsoft.ML.Recommender|
+||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|добавление Microsoft.ML.TimeSeries|
+|Использование модели ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
 Через каждую из указанных выше категорий можно перейти к соответствующим методам создания. В Visual Studio каталоги отображаются с помощью IntelliSense.
 

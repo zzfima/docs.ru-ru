@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: beb76f18a55d6e197c1c6bcfc91e3a8ef0f8119b
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: de3fc8b23bd132179fc7fb67d29010552138e3ab
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063113"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742824"
 ---
 # <a name="the-linq-to-sql-object-model"></a>Модель объектов LINQ to SQL
 В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], в модель данных реляционной базы данных сопоставляется объектной модели, выраженной на языке программирования разработчика. После этого операции с данными выполняются в соответствии с объектной моделью.  
@@ -72,7 +72,7 @@ ms.locfileid: "65063113"
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сопоставляет хранимые процедуры и функции с методами с помощью атрибутов <xref:System.Data.Linq.Mapping.FunctionAttribute> и <xref:System.Data.Linq.Mapping.ParameterAttribute>. Методы, представляющие хранимые процедуры, отличаются от методов, представляющих пользовательские функции, свойством <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>. Если данное свойство имеет значение `false` (значение по умолчанию), значит метод представляет хранимую процедуру. Если свойству задано значение `true`, метод представляет функцию базы данных.  
   
 > [!NOTE]
->  Если вы используете Visual Studio, можно использовать [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для создания методов, сопоставленных с хранимыми процедурами и пользовательскими функциями.  
+>  Если вы используете Visual Studio, реляционный конструктор объектов можно использовать для создания методов, сопоставленных с хранимыми процедурами и пользовательскими функциями.  
   
 ### <a name="example"></a>Пример  
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0c9447e53a874da856eb59932ec3871a9a1371d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f4f8e25edb7d61e21406a5f7719f6dc98f686a9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654418"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755047"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Пошаговое руководство. Использование потока данных в приложении Windows Forms
 В этом документе демонстрируется способ создания сети блоков потока данных, которые выполняют обработку изображений в приложении Windows Forms.  
@@ -41,7 +41,7 @@ ms.locfileid: "64654418"
 ## <a name="creating-the-windows-forms-application"></a>Создание приложения Windows Forms  
  В этом разделе описывается, как создать простое приложение Windows Forms и добавить элементы управления в главную форму.  
   
-#### <a name="to-create-the-windows-forms-application"></a>Создание приложения Windows Forms  
+### <a name="to-create-the-windows-forms-application"></a>Создание приложения Windows Forms  
   
 1. В Visual Studio создайте проект **Приложение Windows Forms** на Visual C# или Visual Basic. В этом документе проект называется `CompositeImages`.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "64654418"
 ## <a name="creating-the-dataflow-network"></a>Создание сети потока данных  
  В этом разделе описывается способ создания сети потока данных, которая выполняет обработку изображений.  
   
-#### <a name="to-create-the-dataflow-network"></a>Создание сети потока данных  
+### <a name="to-create-the-dataflow-network"></a>Создание сети потока данных  
   
 1. В своем проекте добавьте ссылку на System.Threading.Tasks.Dataflow.dll.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "64654418"
   
  Следующая таблица описывает члены сети.  
   
-|Член|Тип|Описание|  
+|Член|Тип|ОПИСАНИЕ|  
 |------------|----------|-----------------|  
 |`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Принимает путь папки на входе и создает коллекцию объектов <xref:System.Drawing.Bitmap> на выходе.|  
 |`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Принимает коллекцию объектов <xref:System.Drawing.Bitmap> на входе и подает составной точечный рисунок на выход.|  
@@ -107,7 +107,7 @@ ms.locfileid: "64654418"
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Подключение сети потока данных к пользовательскому интерфейсу  
  В этом разделе описывается, как подключить сеть потока данных к интерфейсу пользователя. Создание составного изображения и отмена операции инициализируются кнопками **Выбрать папку** и **Отмена**. Когда пользователь выбирает какую-либо из этих кнопок, соответствующее действие выполняется асинхронно.  
   
-#### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>Подключение сети потока данных к пользовательскому интерфейсу  
+### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>Подключение сети потока данных к пользовательскому интерфейсу  
   
 1. В конструкторе форм главной формы создайте обработчик событий для события <xref:System.Windows.Forms.ToolStripItem.Click> кнопки **Выбрать папку**.  
   

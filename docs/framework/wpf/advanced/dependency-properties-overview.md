@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 483710281feafdf97cfef9b72a67af035dcf0efa
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052941"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860162"
 ---
 # <a name="dependency-properties-overview"></a>Общие сведения о свойствах зависимости
 
@@ -78,7 +78,7 @@ Windows Presentation Foundation (WPF) предоставляет набор сл
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-Систему свойств [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] <xref:System.Windows.DependencyObject.GetValue%2A> и <xref:System.Windows.DependencyObject.SetValue%2A> также можно вызывать напрямую. Обычно в этом нет необходимости при использовании существующих свойств (оболочки более удобны и дают лучшее предоставление свойства для средств разработчика), но в некоторых сценариях удобнее использовать непосредственный вызов [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)].
+Можно также вызвать API системы свойство <xref:System.Windows.DependencyObject.GetValue%2A> и <xref:System.Windows.DependencyObject.SetValue%2A> напрямую. Это не обычно необходима, если при использовании существующих свойств (оболочки более удобны и дают лучшее предоставление свойства для средств разработчика), но прямого вызова API-интерфейсы подходит для определенных сценариев.
 
 Свойства можно задать на языке XAML, а затем использовать их в коде, с помощью кода программной части. Дополнительные сведения см. в разделе [Код программной части и XAML в WPF](code-behind-and-xaml-in-wpf.md).
 

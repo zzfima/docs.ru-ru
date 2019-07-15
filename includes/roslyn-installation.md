@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 72acd0029d0189de1c724856572957f111b9d18f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dab6b435a885d862d08f94dd31de79625f19bcc0
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870511"
 ---
-## <a name="installation-instructions"></a>Инструкции по установке 
+## <a name="installation-instructions---visual-studio-installer"></a>Инструкции по установке — Visual Studio Installer
 
 Найти **SDK-пакет .NET Compiler Platform** в **Visual Studio Installer** можно двумя способами:
 
-### <a name="install-using-the-workloads-view"></a>Установка с помощью представления рабочих нагрузок
+### <a name="install-using-the-visual-studio-installer---workloads-view"></a>Установка с помощью Visual Studio Installer — представление "Рабочие нагрузки"
 
 SDK-пакет .NET Compiler Platform не выбирается автоматически в рамках рабочей нагрузки разработки расширений Visual Studio. Его необходимо выбрать как дополнительный компонент.
 
@@ -25,7 +25,7 @@ SDK-пакет .NET Compiler Platform не выбирается автомати
 1. Откройте узел **Отдельные компоненты** в дереве сводки.
 1. Установите флажок **Редактор DGML**
 
-### <a name="install-using-the-individual-components-tab"></a>Установка с использованием вкладки "Отдельные компоненты"
+### <a name="install-using-the-visual-studio-installer---individual-components-tab"></a>Установка с помощью Visual Studio Installer — вкладка "Отдельные компоненты"
 
 1. Запустите **Visual Studio Installer**. 
 1. Выберите **Изменить**. 

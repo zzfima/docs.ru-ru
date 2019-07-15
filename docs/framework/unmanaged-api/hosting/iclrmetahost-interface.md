@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1b189b79a02f04b7f795ff2524441f12b053cec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45089d1b64264e000c07603808f0c5fb1263b042
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984637"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776570"
 ---
 # <a name="iclrmetahost-interface"></a>Интерфейс ICLRMetaHost
 Предоставляет методы, которые возвращают определенную версию общеязыковой среды выполнения (CLR) в зависимости от номера версии, перечислены все установленные среды CLR, все среды выполнения, которые загружены в указанного процесса, версию среды CLR, используемый для компиляции сборки, выхода из процесса с помощью чистая среда завершение работы и устаревшие API привязки запроса.  
@@ -41,7 +41,7 @@ ms.locfileid: "61984637"
 ## <a name="remarks"></a>Примечания  
  Единственный способ получить экземпляр этого интерфейса — путем вызова [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) функцию следующим образом:  
   
-```  
+```cpp  
 ICLRMetaHost *pMetaHost = NULL;  
 HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,  
                    IID_ICLRMetaHost, (LPVOID*)&pMetaHost);  

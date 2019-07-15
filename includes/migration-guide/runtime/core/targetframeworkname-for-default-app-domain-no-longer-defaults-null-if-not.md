@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cbe1b32fa40e509f620845866c7a584e37f49a80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f221f923381d874e1d9e8b420811a770d86f7578
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774224"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858612"
 ---
 ### <a name="targetframeworkname-for-default-app-domain-no-longer-defaults-to-null-if-not-set"></a>TargetFrameworkName для домена приложения по умолчанию больше не принимает значение NULL по умолчанию, если оно не задано
 
@@ -16,3 +16,4 @@ ms.locfileid: "59774224"
 |Версия|4.6|
 |Тип|Среда выполнения|
 |Затронутые API|<ul><li><xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=nameWithType></li></ul>|
+

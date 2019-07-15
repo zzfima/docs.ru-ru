@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08bf4022f7cd7f85ffe7939c16fd47950e131a77
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f38f9a3ebd88e0a5abb7a6bc8cb4026dc7d0f068
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948906"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736935"
 ---
 # <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a>Метод ICorDebugProcess2::GetReferenceValueFromGCHandle
 Получает указатель ссылки на указанный управляемый объект, с дескриптором сборки мусора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
 HRESULT GetReferenceValueFromGCHandle (  
     [in]  UINT_PTR                 handle,  
     [out] ICorDebugReferenceValue  **pOutValue  

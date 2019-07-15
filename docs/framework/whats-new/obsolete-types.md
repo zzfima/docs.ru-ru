@@ -8,73 +8,77 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a1243ad856bc5f8cc104c9f2e08fce515a849d8
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: d8af0f32c676f4438334f7c64b771e237db90dd3
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457066"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663844"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Устаревшие типы в платформе .NET Framework
+
 <a name="introduction"></a> В таблицах этой статьи перечислены устаревшие в .NET Framework 4.5 и .NET Framework 4.6 типы, упорядоченные по сборкам. Используйте следующие ссылки для просмотра списка устаревших типов и рекомендованных альтернатив в каждой сборке. Поскольку эти типы считаются устаревшими, все их члены также являются устаревшими. Список дополнительных устаревших членов в библиотеке классов платформы .NET Framework см. в разделе [Устаревшие члены](obsolete-members.md).
 
 - [Устаревшие типы в системных сборках](#obsolete_types_in_system_assemblies)
 
-    - [mscorlib.dll](#mscorlib)
+  - [mscorlib.dll](#mscorlib)
 
-    - [System.Core.dll](#Core)
+  - [System.Core.dll](#Core)
 
-    - [System.Data.dll](#data)
+  - [System.Data.dll](#data)
 
-    - [System.Data.OracleClient.dll](#oracleclient)
+  - [System.Data.OracleClient.dll](#oracleclient)
 
-    - [System.Design.dll](#design)
+  - [System.Design.dll](#design)
 
-    - [System.dll](#system)
+  - [System.dll](#system)
 
-    - [System.EnterpriseServices.dll](#enterpriseservices)
+  - [System.EnterpriseServices.dll](#enterpriseservices)
 
-    - [System.Net.dll](#net)
+  - [System.Net.dll](#net)
 
-    - [System.ServiceModel.dll](#servicemodel)
+  - [System.ServiceModel.dll](#servicemodel)
 
-    - [System.Web.dll](#web)
+  - [System.Web.dll](#web)
 
-    - [System.Web.Mobile.dll](#mobile)
+  - [System.Web.Mobile.dll](#mobile)
 
-    - [System.Workflow.Activities.dll](#workflow_activities)
+  - [System.Workflow.Activities.dll](#workflow_activities)
 
-    - [System.Workflow.ComponentModel.dll](#workflow_componentmodel)
+  - [System.Workflow.ComponentModel.dll](#workflow_componentmodel)
 
-    - [System.Workflow.Runtime.dll](#workflow_runtime)
+  - [System.Workflow.Runtime.dll](#workflow_runtime)
 
-    - [System.WorkflowServices.dll](#workflowservices)
+  - [System.WorkflowServices.dll](#workflowservices)
 
-    - [System.Xaml.dll](#xaml)
+  - [System.Xaml.dll](#xaml)
 
-    - [System.Xml.dll](#xml)
+  - [System.Xml.dll](#xml)
 
-    - [WindowsBase.dll](#WindowsBase)
+  - [WindowsBase.dll](#WindowsBase)
 
 - [Устаревшие типы в сборках Microsoft](#obsolete_types_in_microsoft_assemblies)
 
-    - [IEHost.dll и IEExec.exe](#IEHost)
+  - [IEHost.dll и IEExec.exe](#IEHost)
 
-    - [Microsoft.Build.Engine.dll](#Engine)
+  - [Microsoft.Build.Engine.dll](#Engine)
 
-    - [Microsoft.JScript.dll](#jscript)
+  - [Microsoft.JScript.dll](#jscript)
 
-    - [Microsoft.VisualBasic.Compatibility.dll](#VBCompat)
+  - [Microsoft.VisualBasic.Compatibility.dll](#VBCompat)
 
-    - [Microsoft.VisualBasic.Compatibility.Data.dll](#VBCompatData)
+  - [Microsoft.VisualBasic.Compatibility.Data.dll](#VBCompatData)
 
-    - [Microsoft.VisualC.dll](#visualc)
+  - [Microsoft.VisualC.dll](#visualc)
 
 <a name="obsolete_types_in_system_assemblies"></a>
+
 ## <a name="obsolete-types-in-system-assemblies"></a>Устаревшие типы в системных сборках
- В следующих разделах перечислены типы, объявленные устаревшими в системных сборках. Такие сборки используются при разработке неспециализированных\- приложений, основанных на платформе .NET Framework.
+
+В следующих разделах перечислены типы, объявленные устаревшими в системных сборках. Такие сборки используются при разработке неспециализированных\- приложений, основанных на платформе .NET Framework.
 
 <a name="mscorlib"></a>
+
 ### <a name="assembly-mscorlibdll"></a>Сборка: mscorlib.dll
 
 |Тип|Сообщение|
@@ -137,18 +141,20 @@ ms.locfileid: "66457066"
 |<xref:System.Security.Policy.PermissionRequestEvidence?displayProperty=nameWithType>|Декларативная безопасность на уровне сборки устарела и больше не обеспечивается средой CLR по умолчанию.|
 |<xref:System.Security.Policy.UnionCodeGroup?displayProperty=nameWithType>|Этот тип устарел и будет удален в одном из будущих выпусков платформы .NET Framework.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="Core"></a>
+
 ### <a name="assembly-systemcoredll"></a>Сборка: System.Core.dll
 
 |Тип|Сообщение|
 |----------|-------------|
 |<xref:System.Runtime.CompilerServices.ExecutionScope?displayProperty=nameWithType>|Использование данного типа создает ошибку компилятора.<br /><br /> Этот тип использовать не следует.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="data"></a>
+
 ### <a name="assembly-systemdatadll"></a>Сборка: System.Data.dll
 
 |Тип|Сообщение|
@@ -158,9 +164,10 @@ ms.locfileid: "66457066"
 |<xref:System.Data.TypedDataSetGenerator?displayProperty=nameWithType>|Класс <xref:System.Data.TypedDataSetGenerator> будет удален в будущем выпуске. В System.Design.dll рекомендуется использовать <xref:System.Data.Design.TypedDataSetGenerator?displayProperty=nameWithType>.|
 |<xref:System.Xml.XmlDataDocument?displayProperty=nameWithType>|Класс <xref:System.Xml.XmlDataDocument> будет удален в будущем выпуске.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="oracleclient"></a>
+
 ### <a name="assembly-systemdataoracleclientdll"></a>Сборка: System.Data.OracleClient.dll
 
 |Тип|Сообщение|
@@ -174,9 +181,10 @@ ms.locfileid: "66457066"
 |<xref:System.Data.OracleClient.OraclePermission?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermission> не рекомендуется к использованию.|
 |<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType> не рекомендуется к использованию.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="design"></a>
+
 ### <a name="assembly-systemdesigndll"></a>Сборка: System.Design.dll
 
 |Тип|Сообщение|
@@ -196,9 +204,10 @@ ms.locfileid: "66457066"
 |<xref:System.Web.UI.Design.WebControls.CalendarAutoFormatDialog?displayProperty=nameWithType>|Этот тип использовать не рекомендуется, поскольку диалоговое окно автоформата запускается узлом конструктора. Список доступных автоформатов предоставляется посредством <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> в свойстве <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A?displayProperty=nameWithType>.|
 |<xref:System.Web.UI.Design.WebControls.PanelDesigner?displayProperty=nameWithType>|Взамен рекомендуется прибегнуть к <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner?displayProperty=nameWithType>, поскольку для редактирования содержимого будет использоваться <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=nameWithType>. Области конструктора упрощают редактирование содержимого.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="system"></a>
+
 ### <a name="assembly-systemdll"></a>Сборка: System.dll
 
 |Тип|Сообщение|
@@ -211,18 +220,20 @@ ms.locfileid: "66457066"
 |<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|Этот класс не рекомендуется к использованию. Взамен для получения доступа и задания глобального прокси-сервера по умолчанию следует использовать <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType>. Вместо <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType> следует использовать null.|
 |<xref:System.Net.Sockets.SocketClientAccessPolicyProtocol?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Использование данного типа создает ошибку компилятора.<br /><br /> Данный API поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из кода.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="enterpriseservices"></a>
+
 ### <a name="assembly-systementerpriseservicesdll"></a>Сборка: System.EnterpriseServices.dll
 
 |Тип|Сообщение|
 |----------|-------------|
 |<xref:System.EnterpriseServices.RegistrationHelperTx?displayProperty=nameWithType>|Класс <xref:System.EnterpriseServices.RegistrationHelperTx> не рекомендуется к использованию.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="net"></a>
+
 ### <a name="assembly-systemnetdll"></a>Сборка: System.Net.dll
 
 |Тип|Сообщение|
@@ -237,9 +248,10 @@ ms.locfileid: "66457066"
 |<xref:System.Net.Sockets.UdpAnySourceMulticastClient?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Использование данного типа создает ошибку компилятора.<br /><br /> Данный API поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из кода.|
 |<xref:System.Net.Sockets.UdpSingleSourceMulticastClient?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Использование данного типа создает ошибку компилятора.<br /><br /> Данный API поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из кода.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="servicemodel"></a>
+
 ### <a name="assembly-systemservicemodeldll"></a>Сборка: System.ServiceModel.dll
 
 |Тип|Сообщение|
@@ -253,9 +265,10 @@ ms.locfileid: "66457066"
 |<xref:System.ServiceModel.Configuration.PeerTransportElement?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Функция одноранговых каналов является устаревшей и будет удалена в будущем.|
 |<xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Функция одноранговых каналов является устаревшей и будет удалена в будущем.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="web"></a>
+
 ### <a name="assembly-systemwebdll"></a>Сборка: System.Web.dll.
 
 |Тип|Сообщение|
@@ -274,9 +287,10 @@ ms.locfileid: "66457066"
 |<xref:System.Web.Security.PassportPrincipal?displayProperty=nameWithType>|Этот тип устарел. Проверка подлинности паспорта используется однократно при создании [учетной записи Майкрософт](https://go.microsoft.com/fwlink/?LinkId=733413), и в дальнейшем необходимости в ней нет.|
 |<xref:System.Web.UI.ObjectConverter?displayProperty=nameWithType>|Взамен рекомендуется использовать <xref:System.Convert?displayProperty=nameWithType> и <xref:System.String.Format%2A?displayProperty=nameWithType>.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="mobile"></a>
+
 ### <a name="assembly-systemwebmobiledll"></a>Сборка: System.Web.Mobile.dll
 
 |Тип|Сообщение|
@@ -474,9 +488,10 @@ ms.locfileid: "66457066"
 |<xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlValidationSummaryAdapter?displayProperty=nameWithType>|Сборка System.Web.Mobile.dll не рекомендуется к использованию и больше не должна использоваться. Сведения о разработке мобильных приложений ASP.NET см. в разделе [ASP.NET для мобильных устройств](https://go.microsoft.com/fwlink/?LinkId=157231).|
 |<xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlValidatorAdapter?displayProperty=nameWithType>|Сборка System.Web.Mobile.dll не рекомендуется к использованию и больше не должна использоваться. Сведения о разработке мобильных приложений ASP.NET см. в разделе [ASP.NET для мобильных устройств](https://go.microsoft.com/fwlink/?LinkId=157231).|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="workflow_activities"></a>
+
 ### <a name="assembly-systemworkflowactivitiesdll"></a>Сборка: System.Workflow.Activities.dll
 
 |Тип|Сообщение|
@@ -487,9 +502,10 @@ ms.locfileid: "66457066"
 |<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|
 |<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="workflow_componentmodel"></a>
+
 ### <a name="assembly-systemworkflowcomponentmodeldll"></a>Сборка: System.Workflow.ComponentModel.dll
 
 |Тип|Сообщение|
@@ -505,9 +521,10 @@ ms.locfileid: "66457066"
 |<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|
 |<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="workflow_runtime"></a>
+
 ### <a name="assembly-systemworkflowruntimedll"></a>Сборка: System.Workflow.Runtime.dll
 
 |Тип|Сообщение|
@@ -520,9 +537,10 @@ ms.locfileid: "66457066"
 |Все типы в пространстве имен <xref:System.Workflow.Runtime.Hosting>, кроме <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|
 |Все типы в пространстве имен <xref:System.Workflow.Runtime.Tracking>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>\*.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="workflowservices"></a>
+
 ### <a name="assembly-systemworkflowservicesdll"></a>Сборка: System.WorkflowServices.dll
 
 |Тип|Сообщение|
@@ -549,18 +567,20 @@ ms.locfileid: "66457066"
 |Все типы в пространстве имен <xref:System.Workflow.Activities?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|
 |<xref:System.Workflow.Runtime.Hosting.ChannelManagerService?displayProperty=nameWithType>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы WF 3 не рекомендуется использовать. Вместо этого используйте новые типы WF 4 из <xref:System.Activities>\*.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="xaml"></a>
+
 ### <a name="assembly-systemxamldll"></a>Сборка: System.Xaml.dll
 
 |Тип|Сообщение|
 |----------|-------------|
 |<xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute?displayProperty=nameWithType>|Не используется синтаксическим анализатором XAML. Дополнительные сведения см. в <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="xml"></a>
+
 ### <a name="assembly-systemxmldll"></a>Сборка: System.Xml.dll
 
 |Тип|Сообщение|
@@ -571,28 +591,34 @@ ms.locfileid: "66457066"
 |<xref:System.Xml.XmlXapResolver?displayProperty=nameWithType>|Использование данного типа создает ошибку компилятора. Данный API поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из кода.|
 |<xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType>|Этот класс не рекомендуется к использованию. Взамен рекомендуется использовать <xref:System.Xml.Xsl.XslCompiledTransform?displayProperty=nameWithType>.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="WindowsBase"></a>
+
 ### <a name="assembly-windowsbasedll"></a>Сборка: WindowsBase.dll
 
 |Тип|Сообщение|
 |----------|-------------|
 |<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType> не рекомендуется к использованию. Этот интерфейс больше не используется.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="obsolete_types_in_microsoft_assemblies"></a>
+
 ## <a name="obsolete-types-in-microsoft-assemblies"></a>Устаревшие типы в сборках Microsoft
- В следующих разделах перечислены устаревшие типы в системных сборках корпорации Microsoft. Это сборки специального назначения, например, сборки для конкретного языка (как Microsoft.JScript.dll или Microsoft.VisualC.dll).
+
+В следующих разделах перечислены устаревшие типы в системных сборках корпорации Microsoft. Это сборки специального назначения, например, сборки для конкретного языка (как Microsoft.JScript.dll или Microsoft.VisualC.dll).
 
 <a name="IEHost"></a>
-### <a name="assembly-iehostdll-and-ieexecexe"></a>Сборка: IEHost.dll and IEExec.exe
- Сборки IEHost.dll и IEExec.exe удалены из платформы .NET Framework. Все их типы и члены устарели и не поддерживаются начиная с .NET Framework 4. Эти сборки использовались для размещения элементов управления Windows Forms и для запуска исполняемых файлов в Internet Explorer. Взамен рекомендуется использовать ClickOnce, XAML-приложения браузера (XBAP) и Microsoft Silverlight.
 
- [К началу](#introduction)
+### <a name="assembly-iehostdll-and-ieexecexe"></a>Сборка: IEHost.dll and IEExec.exe
+
+Сборки IEHost.dll и IEExec.exe удалены из платформы .NET Framework. Все их типы и члены устарели и не поддерживаются начиная с .NET Framework 4. Эти сборки использовались для размещения элементов управления Windows Forms и для запуска исполняемых файлов в Internet Explorer. Взамен рекомендуется использовать ClickOnce, XAML-приложения браузера (XBAP) и Microsoft Silverlight.
+
+[К началу](#introduction)
 
 <a name="Engine"></a>
+
 ### <a name="assembly-microsoftbuildenginedll"></a>Сборка: Microsoft.Build.Engine.dll
 
 |Тип|Сообщение|
@@ -600,9 +626,10 @@ ms.locfileid: "66457066"
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|Этот класс не рекомендуется к использованию. Вместо него используйте <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> из сборки *Microsoft.Build*.|
 |<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|Этот класс не рекомендуется к использованию. Вместо него используйте <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> из сборки *Microsoft.Build*.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="jscript"></a>
+
 ### <a name="assembly-microsoftjscriptdll"></a>Сборка: Microsoft.JScript.dll
 
 |Тип|Сообщение|
@@ -626,13 +653,14 @@ ms.locfileid: "66457066"
 |<xref:Microsoft.JScript.Vsa.ResInfo?displayProperty=nameWithType>|Этот тип был объявлен устаревшим в Visual Studio 2005; тип для замены отсутствует. Дополнительные справочные сведения см. в документации по <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType>.|
 |<xref:Microsoft.JScript.Vsa.VsaEngine?displayProperty=nameWithType>|Этот тип был объявлен устаревшим в Visual Studio 2005; тип для замены отсутствует. Дополнительные справочные сведения см. в документации по <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType>.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="VBCompat"></a>
+
 ### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>Сборка: Microsoft.VisualBasic.Compatibility.dll
 
 Сведения о миграции с Visual Basic 6 см. в разделе [Центр ресурсов по Visual Basic 6.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation).
-  
+
 |Тип|Сообщение|
 |----------|-------------|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray?displayProperty=nameWithType>|Этот элемент устарел.|
@@ -703,9 +731,10 @@ ms.locfileid: "66457066"
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.WebItemUnexpectedErrorReadingTemplateFile?displayProperty=nameWithType>|Этот элемент устарел.|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.ZOrderConstants?displayProperty=nameWithType>|Этот элемент устарел.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="VBCompatData"></a>
+
 ### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>Сборка: Microsoft.VisualBasic.Compatibility.Data.dll
 
 |Тип|Сообщение|
@@ -760,9 +789,10 @@ ms.locfileid: "66457066"
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.UNAME?displayProperty=nameWithType>|Этот элемент устарел.|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.UpdateMode?displayProperty=nameWithType>|Этот элемент устарел.|
 
- [К началу](#introduction)
+[К началу](#introduction)
 
 <a name="visualc"></a>
+
 ### <a name="assembly-microsoftvisualcdll"></a>Сборка: Microsoft.VisualC.dll
 
 |Тип|Сообщение|
