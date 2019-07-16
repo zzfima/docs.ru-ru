@@ -9,9 +9,9 @@
       href: creating-and-throwing-exceptions.md
     - name: 'Исключения, создаваемые компилятором'
       href: compiler-generated-exceptions.md
-    - name: Как выполнить Обработка исключений с помощью блока try-catch
+    - name: Практическое руководство. Обработка исключений с помощью блока try-catch
       href: how-to-handle-an-exception-using-try-catch.md
-    - name: Как выполнить Выполнение кода очистки с использованием блока finally
+    - name: Практическое руководство. Выполнение кода очистки с использованием блока finally
       href: how-to-execute-cleanup-code-using-finally.md
-    - name: Как выполнить Перехват несовместимого с CLS исключения
+    - name: Практическое руководство. Перехват несовместимого с CLS исключения
       href: how-to-catch-a-non-cls-exception.md
