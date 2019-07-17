@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: c47e1ba89179b38055244c01507318836c899fda
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a7784f37c9e8009adc3735974a6fb0423f24ea37
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637520"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238512"
 ---
 # <a name="how-to-run-a-workflow"></a>Практическое руководство. Запуск рабочего процесса
 Этот раздел продолжает учебник Windows Workflow Foundation Приступая к работе и описывает, как создать узел рабочего процесса и запустить рабочий процесс, описанный в предыдущем [как: Создание рабочего процесса](how-to-create-a-workflow.md) раздела.
@@ -51,13 +51,13 @@ ms.locfileid: "65637520"
      Поскольку этот проект был создан с помощью шаблона **Консольное приложение рабочего процесса** , **Program.cs** или **Module1.vb** содержит следующий базовый код размещения рабочего процесса.
 
     ```vb
-    ' Create and cache the workflow definition
-    Activity workflow1 = new Workflow1()
+    ' Create and cache the workflow definition.
+    Dim workflow1 As Activity = New Workflow1()
     WorkflowInvoker.Invoke(workflow1)
     ```
 
     ```csharp
-    // Create and cache the workflow definition
+    // Create and cache the workflow definition.
     Activity workflow1 = new Workflow1();
     WorkflowInvoker.Invoke(workflow1);
     ```

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 8903b6a47aa2800ef4fa4fba2cd2537d2b3896e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b6d594a3d92a7b666e52c92221d60956e718b42
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033245"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237542"
 ---
 # <a name="accessibility"></a>Специальные возможности
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "62033245"
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] — это новая платформа специальных возможностей для [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]. Она удовлетворяет потребности новых технологий специальных возможностей и платформ автоматического тестирования, обеспечивая программный доступ к сведениям о [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]. Кроме того, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] позволяет разработчикам элементов управления и приложений реализовывать специальные возможности в своих продуктах.  
   
- В этой документации описывается [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] для управляемого кода. Сведения о программировании для [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] на C++ см. в статье [Автоматизация пользовательского интерфейса для приложений Win32](/windows/desktop/winauto/windows-automation-api-portal).  
+ В настоящей документации описывается [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API для управляемого кода. Сведения о программировании для [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] на C++ см. в статье [Автоматизация пользовательского интерфейса для приложений Win32](/windows/desktop/winauto/windows-automation-api-portal).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Рекомендации по специальным возможностям](../../../docs/framework/ui-automation/accessibility-best-practices.md)  

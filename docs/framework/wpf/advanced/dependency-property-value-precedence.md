@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 4ea417b2a922574eb92a07aa845c360f6e843f17
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7d5ff09bb9cc8da45f44cf6fe952411e7cd3f4c4
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663404"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238543"
 ---
 # <a name="dependency-property-value-precedence"></a>Приоритет значения свойств зависимостей
 <a name="introduction"></a> В этом разделе рассказывается, как работа системы свойств [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] может повлиять на значение свойства зависимости, и описывается приоритет применения аспектов системы свойств к действительному значению свойства.  
@@ -43,7 +43,7 @@ ms.locfileid: "64663404"
   
 2. **Активные анимации или анимации с поведением Hold.** Анимация свойства имеет практический эффект только в том случае, если она может иметь приоритет над базовым (неанимированным) значением, даже если это значение было задано локально. Дополнительные сведения см. в теме [Приведение, анимация и базовое значение](#animations) далее в этом разделе.  
   
-3. **Локальное значение.** Локальное значение может устанавливаться с помощью «оболочки» свойства, которое приравнивается к настройке атрибут или свойство в качестве элемента [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], или с помощью вызова <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] с помощью свойства конкретного экземпляра. Если задано локальное значение с помощью привязки или ресурса, каждый из них функционирует в таком приоритете, как если бы было задано прямое значение.  
+3. **Локальное значение.** Локальное значение может устанавливаться с помощью «оболочки» свойства, которое приравнивается к настройке атрибут или свойство в качестве элемента [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], или с помощью вызова <xref:System.Windows.DependencyObject.SetValue%2A> API, с помощью свойства конкретного экземпляра. Если задано локальное значение с помощью привязки или ресурса, каждый из них функционирует в таком приоритете, как если бы было задано прямое значение.  
   
 4. **Свойства шаблона TemplatedParent.** Элемент имеет <xref:System.Windows.FrameworkElement.TemplatedParent%2A> если она была создана как часть шаблона ( <xref:System.Windows.Controls.ControlTemplate> или <xref:System.Windows.DataTemplate>). Дополнительные сведения о случаях его применения см. в теме [TemplatedParent](#templatedparent) далее в этом разделе. В шаблоне действует следующий приоритет:  
   

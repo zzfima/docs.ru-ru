@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 02700c75152c32ebee3a0898de1e322ddf9b6e17
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: a914f2c54e5e5b368533b686b1926f7f7ef2e12a
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802233"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237326"
 ---
 # <a name="ui-automation-overview"></a>Общие сведения о модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "67802233"
   
 |Компонент|Описание|  
 |---------------|-----------------|  
-|Поставщик [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] (UIAutomationProvider.dll и UIAutomationTypes.dll)|Набор определений интерфейса, которые реализуются поставщиками автоматизации пользовательского интерфейса, объектами, предоставляющими сведения об элементах [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] и реагирующими на ввод данных программными средствами.|  
+|Поставщик API (UIAutomationProvider.dll и UIAutomationTypes.dll)|Набор определений интерфейса, которые реализуются поставщиками автоматизации пользовательского интерфейса, объектами, предоставляющими сведения об элементах [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] и реагирующими на ввод данных программными средствами.|  
 |API клиента (UIAutomationClient.dll и UIAutomationTypes.dll)|Набор типов для управляемого кода, который позволяет клиентским приложениям модели автоматизации пользовательского интерфейса получать сведения о [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] и отправлять входные данные в элементы управления.|  
 |UiAutomationCore.dll|Базовый код (иногда называемый ядром [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ), который обрабатывает взаимодействие между поставщиками и клиентами.|  
 |UIAutomationClientsideProviders.dll|Набор поставщиков автоматизации пользовательского интерфейса для стандартных элементов управления прежних версий. (Элементы управления [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] имеют встроенную поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].) Эта поддержка автоматически доступна для клиентских приложений.|  

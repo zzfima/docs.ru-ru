@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: acfc252708bf8be7abacb1adc2968122501315a0
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: bb3737ca879f3687b25b021348da0c50f663c58e
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860199"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238672"
 ---
 # <a name="printing-overview"></a>Общие сведения о печати
 С помощью Microsoft .NET Framework разработчики приложений с помощью Windows Presentation Foundation (WPF) имеют новый богатый набор печати и API-интерфейсы Управление печатью. В [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] некоторые из усовершенствований управления печатью также доступны для разработчиков, создающих приложения [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], и разработчиков, использующих неуправляемый код. В основе этой новой функциональности лежит новый формат файла [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] и способ печати [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
@@ -69,7 +69,7 @@ ms.locfileid: "67860199"
  ![Снимок экрана показывает, что система печати XPS.](./media/printing-overview/xml-paper-specification-print-system.png)  
   
 ### <a name="basic-xps-printing"></a>Базовая печать XPS  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] определяет как базовый, так и расширенный [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Для приложений, которые не требуют расширенной настройки печати или доступ к компоненту полный XPS задано "и" базовый поддержка печати доступна. Базовая поддержка печати предоставляется с помощью элемента управления диалогового окна печати, который требует минимальной конфигурации и представляет знакомый [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Многие компоненты XPS входят, доступных с помощью этой упрощенной модели печати.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Определяет, как базовые и расширенные API. Для приложений, которые не требуют расширенной настройки печати или доступ к компоненту полный XPS задано "и" базовый поддержка печати доступна. Базовая поддержка печати предоставляется с помощью элемента управления диалогового окна печати, который требует минимальной конфигурации и представляет знакомый [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Многие компоненты XPS входят, доступных с помощью этой упрощенной модели печати.  
   
 #### <a name="printdialog"></a>PrintDialog  
  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Элемент управления предоставляет единую точку входа для [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], конфигурации и отправки заданий XPS. Сведения о том, как создать и использовать элемент управления, см. в разделе [Вызов диалогового окна печати](how-to-invoke-a-print-dialog.md).  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 79c539bd0117c712670601b7498c490fca76090e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: b2ef3c3dbbfbcef08f58c47948f76cb2c238b48a
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610519"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238532"
 ---
 # <a name="freezable-objects-overview"></a>Общие сведения об объектах класса Freezable
 В этом разделе описывается, как эффективно использовать и создавать <xref:System.Windows.Freezable> объекты, которые предоставляют специальные функции, которые могут помочь повысить производительность приложения. Объекты freezable примеры кисти, перья, преобразования, геометрии и анимации.  
@@ -148,7 +148,7 @@ mc:Ignorable="PresentationOptions"
   
  Также необходимо соблюдать следующие правила для доступа и записи на данные-члены, которые не являются свойствами зависимостей:  
   
-- В начале любого [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] , считывает элементы данных не свойство зависимости, вызовите <xref:System.Windows.Freezable.ReadPreamble%2A> метод.  
+- В начале любого API, который считывает элементы данных не свойство зависимости, вызовите <xref:System.Windows.Freezable.ReadPreamble%2A> метод.  
   
 - В начале любого API, который записывает элементы данных не свойство зависимости, вызовите <xref:System.Windows.Freezable.WritePreamble%2A> метод. (После вызова <xref:System.Windows.Freezable.WritePreamble%2A> в интерфейсе API, не требуется дополнительный вызов к <xref:System.Windows.Freezable.ReadPreamble%2A> также считывать элементы данных не свойство зависимости.)  
   

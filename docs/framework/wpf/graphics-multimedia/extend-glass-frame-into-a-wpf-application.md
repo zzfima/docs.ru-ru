@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 1c3316fa88d3024af4e81072cbe64c13cfbdb18e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 11c872767b5e3595da1fb4982d3b12e0fc77db98
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610283"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238592"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Использование стеклянной рамки в приложении WPF
 
@@ -30,7 +30,7 @@ ms.locfileid: "67610283"
 
 ![Снимок экрана, показывающий стекла фреймом, расширенный за адресной строки обозревателя IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-Чтобы расширить стеклянную рамку в приложении [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], требуется доступ к неуправляемому [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. В следующем примере кода так и неуправляемого кода (pinvoke) для двух API, необходимые для расширения рамки на клиентскую область. Каждый из этих API объявляются в классе с именем **NonClientRegionAPI**.
+Чтобы расширить стеклянную рамку в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения, необходим доступ к неуправляемый интерфейс API. В следующем примере кода так и неуправляемого кода (pinvoke) для двух API, необходимые для расширения рамки на клиентскую область. Каждый из этих API объявляются в классе с именем **NonClientRegionAPI**.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]

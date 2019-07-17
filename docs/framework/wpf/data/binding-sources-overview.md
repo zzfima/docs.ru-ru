@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: fe5cb97b4802c2b638a4b218a27da05468dc50fb
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 99f01983a575e9c6f96fdb66590e9d762eb882f7
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505563"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238437"
 ---
 # <a name="binding-sources-overview"></a>Общие сведения об источниках привязки
 В привязке данных объект источника привязки (источник) ссылается на объект, из которого вы получаете данные. В этом разделе рассматриваются типы объектов, которые можно использовать в качестве источника привязки.  
@@ -24,7 +24,7 @@ ms.locfileid: "67505563"
 |--------------------|-----------------|  
 |Объекты [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)].|Можно осуществить привязку к открытым свойствам, подсвойствам, а также индексаторам любого объекта [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Обработчик привязки использует отражение [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] для получения значений свойств. Кроме того, объекты, реализующие <xref:System.ComponentModel.ICustomTypeDescriptor> или имеют зарегистрированные <xref:System.ComponentModel.TypeDescriptionProvider> также работают с обработчиком привязки.<br /><br /> Дополнительные сведения о том, как реализовать класс, который можно использовать в качестве источника привязки, см. в разделе [Использование класса в качестве источника привязки](#classes).|  
 |динамические объекты|Можно привязать к доступным свойствам и индексаторам объекта, который реализует <xref:System.Dynamic.IDynamicMetaObjectProvider> интерфейс. Если можно обратиться к члену кода, к нему можно выполнить привязку. Например, если динамический объект позволяет получить доступ к члену в коде с помощью `someObjet.AProperty`, к нему можно выполнить привязку, задав в качестве пути привязки `AProperty`.|  
-|Объекты [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)].|Можно привязать к объекты ADO.NET, такие как <xref:System.Data.DataTable>. ADO.NET <xref:System.Data.DataView> реализует <xref:System.ComponentModel.IBindingList> интерфейс, который предоставляет уведомления об изменениях, которые прослушивает механизм привязки.|  
+|Объекты ADO.NET|Можно привязать к объекты ADO.NET, такие как <xref:System.Data.DataTable>. ADO.NET <xref:System.Data.DataView> реализует <xref:System.ComponentModel.IBindingList> интерфейс, который предоставляет уведомления об изменениях, которые прослушивает механизм привязки.|  
 |Объекты [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].|Можно привязать к и запустить `XPath` запрашивает на <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>, или <xref:System.Xml.XmlElement>. Удобный способ доступа к [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данных, который является источником привязки в разметке, можно выполнить <xref:System.Windows.Data.XmlDataProvider> объекта. Дополнительные сведения см. в разделе [Привязка к XML-данным с помощью XMLDataProvider и запросов XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Также можно привязать к <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XDocument>, или выполнить привязку к результатам запросов, выполняемых для объектов этих типов с помощью LINQ to XML. Для использования LINQ to XML для доступа к данным XML, который является источником привязки в разметке удобно использовать <xref:System.Windows.Data.ObjectDataProvider> объекта. Дополнительные сведения см. в разделе [Привязка к XDocument, XElement или LINQ для результатов запросов XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
 |Объекты <xref:System.Windows.DependencyObject>.|Можно привязать к свойствам зависимости любого <xref:System.Windows.DependencyObject>. Пример см. в разделе [Как привязать свойства двух элементов управления](how-to-bind-the-properties-of-two-controls.md).|  
   

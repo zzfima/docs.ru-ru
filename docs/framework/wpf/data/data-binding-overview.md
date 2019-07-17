@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 3e4438b309d4e443d07a6c2db2310733927fd38b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 86178f3e49dc25bee57b0896f2ebc2cf729b69bd
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625348"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238470"
 ---
 # <a name="data-binding-overview"></a>Общие сведения о привязке данных
 Привязка данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет приложениям простой и последовательный способ представления данных и взаимодействия с ними. Можно связывать элементы с данными из различных источников данных в виде объектов [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>например <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.ItemsControl>, например <xref:System.Windows.Controls.ListBox> и <xref:System.Windows.Controls.ListView> у встроенной возможностью включения гибких стилей для отдельных элементов данных и коллекций элементов данных. Представления сортировки, фильтрации и группировки могут быть организованы поверх данных.  
@@ -28,7 +28,7 @@ ms.locfileid: "64625348"
 ## <a name="what-is-data-binding"></a>Понятие привязки данных  
  Привязка данных — это процесс установки соединения между [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] приложения и бизнес-логикой. Если для привязки заданы правильные настройки, а изменения значений данных сопровождаются правильными уведомлениями, привязанные к данным элементы автоматически отражают изменения. Привязка данных может также означать, что, если внешнее представление данных в элементе изменяется, то базовые данные могут автоматически обновляться для отражения изменений. Например, если пользователь изменяет значение в <xref:System.Windows.Controls.TextBox> элемент, базовое значение данных автоматически обновляется в соответствии с изменениями.  
   
- Привязка к данным обычно используется для того, чтобы поместить серверный или локальные данные конфигурации в формы или другие элементы управления [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] эта концепция расширяется и уже включает привязку широкого диапазона свойств к различным источникам данных. В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] свойства зависимости элементов могут быть привязаны к объектам [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] (включая объекты [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] или объекты, связанные с веб-службами и веб-свойства) и к данным [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  
+ Привязка к данным обычно используется для того, чтобы поместить серверный или локальные данные конфигурации в формы или другие элементы управления [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] эта концепция расширяется и уже включает привязку широкого диапазона свойств к различным источникам данных. В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], свойства зависимости элементов могут быть привязаны к [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] объекты (включая объекты ADO.NET или объекты, связанные с веб-служб и веб-свойств) и [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данных.  
   
  Привязку данных можно рассмотреть на примере следующего [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] приложения со страницы [примера привязки данных](https://go.microsoft.com/fwlink/?LinkID=163703).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "64625348"
   
 - Пользователя можно группировать, фильтровать или сортировать данные с помощью <xref:System.Windows.Controls.CheckBox>предоставленных. На приведенном выше рисунке, «Группировать по категории» и «Сортировать по категориям и дате» <xref:System.Windows.Controls.CheckBox>выбраны. Можно увидеть, что данные группируются по категориям продуктов, а имена категорий приводятся в алфавитном порядке. Из рисунка трудно заметить, что элементы в каждой категории также сортируются по начальной дате. Это делается с помощью *представления коллекции*. Представления коллекций рассматриваются в разделе [Привязка к коллекциям](#binding_to_collections).  
   
-- Когда пользователь выбирает элемент, <xref:System.Windows.Controls.ContentControl> отображает сведения о выбранного элемента. Это называется *Сценарий привязки "основной-подробности"*. Сведения об этом типе скрипта привязки см. в разделе [Сценарий привязки "основной-подробности"](#master_detail_scenario).  
+- Когда пользователь выбирает элемент, <xref:System.Windows.Controls.ContentControl> отображает сведения о выбранного элемента. Это называется *Сценарий привязки "основной-подробности"* . Сведения об этом типе скрипта привязки см. в разделе [Сценарий привязки "основной-подробности"](#master_detail_scenario).  
   
 - Тип *StartDate* свойство <xref:System.DateTime>, который возвращает дату, включая время с точностью до миллисекунды. В этом приложении пользовательский преобразователь использовался для отображения даты в укороченном формате. Сведения о преобразователях см. в разделе [Преобразование данных](#data_conversion).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "64625348"
   
 - Целевое свойство должно быть свойством зависимостей. Большинство <xref:System.Windows.UIElement> свойств являются свойствами зависимостей, и большинство свойств зависимостей, за исключением доступных только для чтения, по умолчанию поддерживает привязку данных. (Только <xref:System.Windows.DependencyObject> типы могут определять свойства зависимостей и все <xref:System.Windows.UIElement>являются производными от <xref:System.Windows.DependencyObject>.)  
   
-- Несмотря на то что это не указано на рисунке, следует отметить, что источник привязки не обязан быть пользовательским объектом [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Привязка данных [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает данные в виде объектов [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] и [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Представлены некоторые, возможно, источнике привязки <xref:System.Windows.UIElement>, любой объект списка [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] объекта, связанного с [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] данных или веб-службы или XmlNode, содержащий ваш [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данных. Дополнительные сведения см. в разделе [Общие сведения об источниках привязки](binding-sources-overview.md).  
+- Несмотря на то что это не указано на рисунке, следует отметить, что источник привязки не обязан быть пользовательским объектом [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Привязка данных [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает данные в виде объектов [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] и [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Представлены некоторые, возможно, источнике привязки <xref:System.Windows.UIElement>, любой объект списка [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] объекта, связанного с данными ADO.NET или веб-службы, или узел XmlNode, содержащий ваш [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данных. Дополнительные сведения см. в разделе [Общие сведения об источниках привязки](binding-sources-overview.md).  
   
  В процессе чтения других разделов [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] важно помнить, что при связывании цель привязки *привязывается к* источнику привязки. Например, при отображении некоторых базовых [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данные в <xref:System.Windows.Controls.ListBox> с использованием привязки данных, выполняется привязка к <xref:System.Windows.Controls.ListBox> для [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данных.  
   

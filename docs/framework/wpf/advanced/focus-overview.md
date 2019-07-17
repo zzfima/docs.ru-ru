@@ -8,12 +8,12 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8546516124b2156e02446e15d7bdcaf3cdbd717d
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703430"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238607"
 ---
 # <a name="focus-overview"></a>Общие сведения о фокусе
 Существует два основных понятия, относящихся к фокусу в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: фокус клавиатуры и логический фокус.  Фокус клавиатуры ссылается на элемент, получающий ввод с клавиатуры, а логический фокус ссылается на элемент в области фокуса, имеющий фокус.  Эти понятия подробно освещаются в этом обзоре.  Важно понимать разницу между этими понятиями, чтобы создавать сложные приложения с несколькими областями, в которых можно получить фокус.  
@@ -82,7 +82,7 @@ ms.locfileid: "61703430"
   
 <a name="Manipulating_Focus_Programmatically"></a>   
 ## <a name="navigating-focus-programmatically"></a>Перемещение фокуса программными средствами  
- Дополнительные [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] для работы с фокусом являются <xref:System.Windows.UIElement.MoveFocus%2A> и <xref:System.Windows.UIElement.PredictFocus%2A>.  
+ Дополнительные API для работы с фокусом, <xref:System.Windows.UIElement.MoveFocus%2A> и <xref:System.Windows.UIElement.PredictFocus%2A>.  
   
  <xref:System.Windows.FrameworkElement.MoveFocus%2A> изменения фокуса к следующему элементу в приложении.  Объект <xref:System.Windows.Input.TraversalRequest> используется для указания направления.   <xref:System.Windows.Input.FocusNavigationDirection> Передается <xref:System.Windows.UIElement.MoveFocus%2A> указывает, можно перемещать фокус разных направлениях, таких как <xref:System.Windows.Input.FocusNavigationDirection.First>, <xref:System.Windows.Input.FocusNavigationDirection.Last>, <xref:System.Windows.Input.FocusNavigationDirection.Up> и <xref:System.Windows.Input.FocusNavigationDirection.Down>.  
   

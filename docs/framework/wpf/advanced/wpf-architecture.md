@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 697a3dff663b333ce97e05783df6b163692b5d9e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 2fa2e039d73d079b6dacc9326c64fc2015eecc49
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610345"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238489"
 ---
 # <a name="wpf-architecture"></a>Архитектура WPF
 В этом разделе предлагается интерактивный обзор иерархии классов Windows Presentation Foundation (WPF). Он охватывает большую часть основных подсистем [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и описывает их взаимодействие. Здесь также подробно рассматриваются некоторые архитектурные решения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -64,7 +64,7 @@ ms.locfileid: "67610345"
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
  После определения системы следующим шагом является рисование пикселей на экране. <xref:System.Windows.Media.Visual> Предоставляет класс для построения дерева визуальных объектов, которые дополнительно включают инструкции по рисованию и метаданные по способу визуализации этих инструкций (обрезки, преобразования, и т.д.). <xref:System.Windows.Media.Visual> должна быть максимально облегченным и гибким, поэтому большинство возможностей отсутствие общих проблем API и сильно зависит от защищенных функций обратного вызова.  
   
- <xref:System.Windows.Media.Visual> действительно является точкой входа для [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] систему композиции. <xref:System.Windows.Media.Visual> представляет собой точку соединения между этими двумя подсистемами: управляемым [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] и неуправляемым компонентом milcore.  
+ <xref:System.Windows.Media.Visual> действительно является точкой входа для [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] систему композиции. <xref:System.Windows.Media.Visual> является точкой соединения между двумя подсистемами, управляемый API-Интерфейс и неуправляемым компонентом milcore.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] отображает данные, проходя по неуправляемым структурам данных под управлением milcore. Эти структуры, называемые узлами композиции, представляют собой иерархическое дерево отображения с инструкциями по отрисовке в каждом узле. Это дерево, показанное в правой части расположенного ниже рисунка, доступно только через протокол обмена сообщениями.  
   
