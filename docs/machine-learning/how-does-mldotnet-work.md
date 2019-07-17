@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 06085091a13ad76dcd554cfe637bcc151bbb8476
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 30e96d85ecc04332bc5e6c8f57badd000f729904
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610182"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660633"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Что такое ML.NET и принципы работы этой системы
 
@@ -163,7 +163,7 @@ ML.NET позволяет добавлять в приложения .NET маш
 
 Приложение ML.NET начинается с объекта <xref:Microsoft.ML.MLContext>. Этот одноэлементный объект содержит **каталоги**. Каталог — это фабрика загрузки и сохранения данных, преобразований, инструкторов и компонентов операций модели. Каждый объект каталога имеет методы для создания различных типов компонентов:
 
-||||
+|||||
 |-|-|-|-|
 |Загрузка и сохранение данных||<xref:Microsoft.ML.DataOperationsCatalog>||
 |Подготовка данных||<xref:Microsoft.ML.TransformsCatalog>||
@@ -171,11 +171,11 @@ ML.NET позволяет добавлять в приложения .NET маш
 ||Многоклассовая классификация|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||Обнаружение аномалий|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
 ||Кластеризация|<xref:Microsoft.ML.ClusteringCatalog>||
-||Прогнозирование|<xref:Microsoft.ML.Forecasting>||
+||Прогнозирование|<xref:Microsoft.ML.ForecastingCatalog>||
 ||Ранжирование|<xref:Microsoft.ML.RankingCatalog>||
 ||Регрессия|<xref:Microsoft.ML.RegressionCatalog>||
-||Рекомендация|<xref:Microsoft.ML.RecommendationCatalog>|добавление Microsoft.ML.Recommender|
-||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|добавление Microsoft.ML.TimeSeries|
+||Рекомендация|<xref:Microsoft.ML.RecommendationCatalog>|Добавление пакета NuGet `Microsoft.ML.Recommender`|
+||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|Добавление пакета NuGet `Microsoft.ML.TimeSeries`|
 |Использование модели ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
 Через каждую из указанных выше категорий можно перейти к соответствующим методам создания. В Visual Studio каталоги отображаются с помощью IntelliSense.

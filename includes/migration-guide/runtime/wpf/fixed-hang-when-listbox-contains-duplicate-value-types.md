@@ -1,16 +1,17 @@
 ---
-ms.openlocfilehash: 5d59c5c448d2bb7f17f51c50fd468f67a71c93f2
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 68491da9cb7d2b460eb70ccbf4fc8de20db815a5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423795"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802586"
 ---
-### <a name="fixed-problem-of-unresponsiveness-when-listbox-contains-duplicate-value-types"></a>Исправлена ошибка отсутствия отклика, когда ListBox содержит повторяющиеся типы значений
+### <a name="fixed-a-hang-when-listbox-contains-duplicate-value-types"></a>Исправлено зависание, если ListBox содержит повторяющиеся типы значений
 
 |   |   |
 |---|---|
-|Подробные сведения|Устранена проблема, при которой виртуализация <xref:System.Windows.Controls.ItemsControl> приводила к зависанию при прокрутке, когда коллекция <xref:System.Windows.Controls.ItemsControl.Items> содержит повторяющиеся объекты типов значений.|
+|Подробные сведения|Устранена проблема, при которой виртуализация <xref:System.Windows.Controls.ItemsControl> приводила к зависанию при прокрутке, когда коллекция элементов содержит повторяющиеся объекты типов значений.|
 |Область|Значительно|
 |Версия|4.8|
 |Тип|Среда выполнения|
+

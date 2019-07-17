@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: f9085f2a550dfacc670857a70f5b22de9e028107
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: ec2012a256214dc5f3fb144f1d828634553742c2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610597"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744086"
 ---
 # <a name="operator-overloading-c-reference"></a>Перегрузка операторов (справочник по C#)
 
@@ -27,6 +27,10 @@ ms.locfileid: "67610597"
 
 [!code-csharp[fraction example](~/samples/csharp/language-reference/operators/OperatorOverloading.cs)]
 
+Вы можете расширить предыдущий пример, определив неявное преобразование из `int` в `Fraction`. Затем перегруженные операторы будут поддерживать аргументы этих двух типов. То есть можно будет добавить целое число к дроби и получить дробь.
+
+Можно также использовать ключевое слово `operator` для определения пользовательского преобразования типа. Дополнительные сведения см. в разделе [Операторы пользовательского преобразования](user-defined-conversion-operators.md).
+
 ## <a name="overloadable-operators"></a>Перегружаемые операторы
 
 Следующая таблица содержит сведения о возможности перегрузки операторов C#:
@@ -37,7 +41,7 @@ ms.locfileid: "67610597"
 |[+](addition-operator.md), [-](subtraction-operator.md), [\*](arithmetic-operators.md#multiplication-operator-), [/](arithmetic-operators.md#division-operator-), [%](arithmetic-operators.md#remainder-operator-), [&](boolean-logical-operators.md#logical-and-operator-), [&#124;](boolean-logical-operators.md#logical-or-operator-), [^](boolean-logical-operators.md#logical-exclusive-or-operator-), [\<\<](bitwise-and-shift-operators.md#left-shift-operator-), [>>](bitwise-and-shift-operators.md#right-shift-operator-), [==](equality-operators.md#equality-operator-), [!=](equality-operators.md#inequality-operator-), [\<](comparison-operators.md#less-than-operator-), [>](comparison-operators.md#greater-than-operator-), [\<=](comparison-operators.md#less-than-or-equal-operator-), [>=](comparison-operators.md#greater-than-or-equal-operator-)|Эти бинарные операторы могут быть перегружены. Некоторые операторы должны перегружаться парами; дополнительные сведения см. в примечаниях после этой таблицы.|
 |[&&](boolean-logical-operators.md#conditional-logical-and-operator-), [&#124;&#124;](boolean-logical-operators.md#conditional-logical-or-operator-)|Условный логический оператор не может быть перегружен. При этом, если тип с перегруженными [операторами `true` и `false`](true-false-operators.md) также перегружает оператор `&` или <code>&#124;</code>, оператор `&&` или <code>&#124;&#124;</code>, соответственно, может быть применен для операндов этого типа. Дополнительные сведения см. в разделе [Пользовательские условные логические операторы](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) в [Спецификации языка C#](~/_csharplang/spec/introduction.md).|
 |[&#91;&#93;](member-access-operators.md#indexer-operator-)|Доступ к элементам не считается перегружаемым оператором, но вы можете определить [индексатор](../../programming-guide/indexers/index.md).|
-|[(T)x](type-testing-and-conversion-operators.md#cast-operator-)|Оператор приведения типов не может быть перегружен, но можно определить новые операторы преобразования (см. [explicit](../keywords/explicit.md) и [implicit](../keywords/implicit.md)).|
+|[(T)x](type-testing-and-conversion-operators.md#cast-operator-)|Оператор приведения типов не может быть перегружен, но можно определить новые операторы преобразования. Дополнительные сведения см. в разделе [Операторы пользовательского преобразования](user-defined-conversion-operators.md).|
 |[+=](arithmetic-operators.md#compound-assignment), [-=](arithmetic-operators.md#compound-assignment), [\*=](arithmetic-operators.md#compound-assignment), [/=](arithmetic-operators.md#compound-assignment), [%=](arithmetic-operators.md#compound-assignment), [&=](boolean-logical-operators.md#compound-assignment), [&#124;=](boolean-logical-operators.md#compound-assignment), [^=](boolean-logical-operators.md#compound-assignment), [\<\<=](bitwise-and-shift-operators.md#compound-assignment), [>>=](bitwise-and-shift-operators.md#compound-assignment)|Составные операторы присваивания не могут быть перегружены явным образом. Однако при перегрузке бинарного оператора соответствующий составной оператор присваивания (если таковой имеется) также неявно перегружается. Например, `+=` вычисляется с помощью `+`, который может быть перегружен.|
 |[=](assignment-operator.md), [.](member-access-operators.md#member-access-operator-), [?:](conditional-operator.md), [??](null-coalescing-operator.md), [->](pointer-related-operators.md#pointer-member-access-operator--), [=>](lambda-operator.md), [f(x)](member-access-operators.md#invocation-operator-), [as](type-testing-and-conversion-operators.md#as-operator), [checked](../keywords/checked.md), [unchecked](../keywords/unchecked.md), [default](../../programming-guide/statements-expressions-operators/default-value-expressions.md), [delegate](../../programming-guide/statements-expressions-operators/anonymous-methods.md), [is](type-testing-and-conversion-operators.md#is-operator), [nameof](../keywords/nameof.md), [new](new-operator.md), [sizeof](../keywords/sizeof.md), [typeof](type-testing-and-conversion-operators.md#typeof-operator)|Эти операторы не могут быть перегружены.|
 
@@ -59,4 +63,5 @@ ms.locfileid: "67610597"
 
 - [справочник по C#](../index.md)
 - [Операторы в C#](index.md)
+- [Операторы пользовательского преобразования](user-defined-conversion-operators.md)
 - [Почему перегруженные операторы всегда являются статическими в C#?](https://blogs.msdn.microsoft.com/ericlippert/2007/05/14/why-are-overloaded-operators-always-static-in-c/)

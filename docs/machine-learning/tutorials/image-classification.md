@@ -1,15 +1,15 @@
 ---
 title: Учебник. Повторное обучение классификатора изображений TensorFlow (передача обучения)
 description: Из этой статьи вы узнаете, как повторно обучить модель TensorFlow для классификации изображений с помощью передачи обучения и ML.NET. Исходная модель была обучена для классификации отдельных изображений. После повторного обучения новая модель сортирует изображения по различным категориям.
-ms.date: 06/12/2019
+ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 9344d0757e140995dfd9ce7d1a355910a81c6d31
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 65f94fa5e725703d79d0dddae761cbfbc3f89e0e
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539854"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804760"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Учебник. Повторное обучение классификатора изображений TensorFlow с помощью передачи обучения и ML.NET
 
@@ -43,7 +43,7 @@ ms.locfileid: "67539854"
 
 * [ZIP-файл каталога ресурсов руководства.](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
 
-* [Модель машинного обучения Inception версии 3.](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
+* [Модель машинного обучения Inception версии 1](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>Выбор подходящей задачи машинного обучения
 
@@ -77,7 +77,7 @@ ms.locfileid: "67539854"
 
 Ваш пример модели классификации изображений повторно использует [модель Inception](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip), популярную модель распознавания изображений, обученную на наборе данных `ImageNet`. В ходе этого процесса модель TensorFlow пытается выполнять классификацию целых изображений по множеству классов, например "Зонтик", "Майка" и "Посудомойка".
 
-`Inception v3 model` можно классифицировать как [сверточную глубокую нейронную сеть](https://en.wikipedia.org/wiki/Convolutional_neural_network), которая может обеспечить достаточную производительность при выполнении сложных задач визуального распознавания, достигая в некоторых областях уровней не ниже или даже выше человеческих возможностей. Эта модель (алгоритм) разработана коллективом исследователей на основе исходной публикации [Rethinking the Inception Architecture for Computer Vision за авторством Szegedy и др.](https://arxiv.org/abs/1512.00567)
+`Inception v1 model` можно классифицировать как [сверточную глубокую нейронную сеть](https://en.wikipedia.org/wiki/Convolutional_neural_network), которая может обеспечить достаточную производительность при выполнении сложных задач визуального распознавания, достигая в некоторых областях уровней не ниже или даже выше человеческих возможностей. Эта модель (алгоритм) разработана коллективом исследователей на основе исходной публикации [Rethinking the Inception Architecture for Computer Vision за авторством Szegedy и др.](https://arxiv.org/abs/1512.00567)
 
 Так как `Inception model` уже обучена на тысячах различных изображений, она содержит [признаки изображений](https://en.wikipedia.org/wiki/Feature_(computer_vision)), необходимые для их идентификации. Нижние слои признаков изображений распознают простые признаки (например, контуры), а верхние слои — более сложные признаки (например, формы). Последний слой обучается на наборе данных намного меньшего размера, так как вы используете уже обученную модель, которая может классифицировать изображения. Так как ваша модель позволяет классифицировать изображения более чем по двум категориям, она относится к [многоклассовым классификаторам](../resources/tasks.md#multiclass-classification). 
 

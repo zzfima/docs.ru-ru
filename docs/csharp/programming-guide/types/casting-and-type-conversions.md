@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 2aee15443172e753846574806565f7804f1716d1
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e46083a9b8261cf8635d07e3b16f9c291bcc69a4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423680"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743802"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Руководство по программированию на C#. Приведение и преобразование типов
 
@@ -32,7 +32,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Явные преобразования (приведения)** . Для явных преобразований требуется оператор приведения. Приведение требуется, если в ходе преобразования данные могут быть утрачены или преобразование может завершиться сбоем по другим причинам.  Типичными примерами являются числовое преобразование в тип с меньшей точностью или меньшим диапазоном и преобразование экземпляра базового класса в производный класс.  
   
-- **Пользовательские преобразования**. Такие преобразования выполняются специальными методами, которые можно определить для включения явных и неявных преобразований между пользовательскими типами без связи "базовый класс — производный класс". Дополнительные сведения см. в разделе [Операторы преобразования](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md).  
+- **Пользовательские преобразования**. Такие преобразования выполняются специальными методами, которые можно определить для включения явных и неявных преобразований между пользовательскими типами без связи "базовый класс — производный класс". Дополнительные сведения см. в разделе [Операторы пользовательского преобразования](../../../csharp/language-reference/operators/user-defined-conversion-operators.md).  
   
 - **Преобразования с использованием вспомогательных классов**. Чтобы выполнить преобразование между несовместимыми типами, например целыми числами и объектами <xref:System.DateTime?displayProperty=nameWithType> или шестнадцатеричными строками и массивами байтов, можно использовать классы <xref:System.BitConverter?displayProperty=nameWithType> и <xref:System.Convert?displayProperty=nameWithType>, а также методы `Parse` встроенных числовых типов, такие как <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [Практическое руководство. преобразованию массива байтов в значение типа int](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [ преобразованию строки в число](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md) и [ преобразованию из шестнадцатеричных строк в числовые типы](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
   
@@ -46,14 +46,14 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
  Для ссылочных типов неявное преобразование всегда предусмотрено из класса в любой из его прямых или косвенных базовых классов или интерфейсов. Никакой специальный синтаксис не требуется, поскольку производный класс всегда содержит все члены базового класса.  
   
-```  
+```csharp
 Derived d = new Derived();  
 Base b = d; // Always OK.  
 ```  
   
 ## <a name="explicit-conversions"></a>Явные преобразования
 
- Тем не менее если преобразование нельзя выполнить без риска потери данных, компилятор требует выполнения явного преобразования, которое называется *приведением*. Приведение — это способ явно указать компилятору, что необходимо выполнить преобразование и что вам известно, что может произойти потеря данных. Чтобы выполнить приведение, укажите тип, в который производится приведение, в круглых скобках перед преобразуемым значением или переменной. В следующей программе выполняется приведение типа [double](../../../csharp/language-reference/keywords/double.md) в [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md). Программа не будет компилироваться без приведения.  
+ Тем не менее если преобразование нельзя выполнить без риска потери данных, компилятор требует выполнения явного преобразования, которое называется *приведением*. Приведение — это способ явно указать компилятору, что необходимо выполнить преобразование и что вам известно, что может произойти потеря данных. Чтобы выполнить приведение, укажите тип, в который производится приведение, в круглых скобках перед преобразуемым значением или переменной. В следующей программе выполняется приведение типа [double](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md) в [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md). Программа не будет компилироваться без приведения.  
   
  [!code-csharp[csProgGuideTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#2)]  
   
@@ -87,15 +87,13 @@ Giraffe g2 = (Giraffe) a;
   
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+Дополнительные сведения см. в разделе [Преобразования](~/_csharplang/spec/conversions.md) [спецификация языка C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>См. также
 
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [Типы](../../../csharp/programming-guide/types/index.md)
-- [Оператор ()](../../../csharp/language-reference/operators/type-testing-and-conversion-operators.md#cast-operator-)
-- [explicit](../../../csharp/language-reference/keywords/explicit.md)
-- [implicit](../../../csharp/language-reference/keywords/implicit.md)
-- [Операторы преобразования](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)
+- [Оператор приведения ()](../../../csharp/language-reference/operators/type-testing-and-conversion-operators.md#cast-operator-)
+- [Операторы пользовательского преобразования](../../../csharp/language-reference/operators/user-defined-conversion-operators.md)
 - [Обобщенное преобразование типов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
 - [Практическое руководство. Преобразование строки в число](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

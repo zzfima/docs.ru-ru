@@ -3,12 +3,12 @@ title: Учебник. Создание средства для анализа �
 description: В этом руководстве описано, как создать анализатор и исправление кода с помощью пакета SDK для .NET Compiler Platform (API Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 1a4280741650b41174f93c4403008ee3522adbe6
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 45529a72e3c64a573bfc043fe44da29caed1a0c4
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452705"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870562"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Учебник. Создание средства для анализа и исправления кода
 
@@ -18,9 +18,10 @@ ms.locfileid: "65452705"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-* [Visual Studio 2017](https://www.visualstudio.com/downloads)
+* [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
+* [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
-Вам нужно установить **пакет SDK для .NET Compiler Platform**:
+Необходимо установить **пакет SDK для .NET Compiler Platform** через установщик Visual Studio:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 4468bc86634ad97f2dfbdb5f842eb5206f957a79
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: a9e5139e6d650aa6935bff934ca25502fdc14775
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307528"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744072"
 ---
 # <a name="type-testing-and-conversion-operators-c-reference"></a>Операторы тестирования и преобразования типов (справочник по C#)
 
@@ -109,7 +109,7 @@ E is T ? (T)(E) : (T)null
 
 [!code-csharp-interactive[cast expression](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#Cast)]
 
-Сведения о поддерживаемых явных преобразованиях см. в разделе [о явных преобразованиях](~/_csharplang/spec/conversions.md#explicit-conversions) в [спецификации по языку C#](~/_csharplang/spec/introduction.md). Сведения о том, как определять пользовательские операторы явного или косвенного преобразования, см. в статьях о ключевых словах [explicit](../keywords/explicit.md) и [implicit](../keywords/implicit.md), соответственно.
+Сведения о поддерживаемых явных преобразованиях см. в разделе [о явных преобразованиях](~/_csharplang/spec/conversions.md#explicit-conversions) в [спецификации по языку C#](~/_csharplang/spec/introduction.md). Сведения о том, как определять пользовательские операторы явного или неявного преобразования, см. в разделе [Операторы пользовательского преобразования](user-defined-conversion-operators.md).
 
 ### <a name="other-usages-of-"></a>Другие данные об использовании ()
 
@@ -139,7 +139,7 @@ E is T ? (T)(E) : (T)null
 
 Операторы `is`, `as` и `typeof` не поддерживают перегрузку.
 
-Определяемый пользователем тип нельзя использовать для перегрузки оператора `()`, но на его основе можно определить пользовательское преобразование типа и выполнить его с помощью выражения приведения. Дополнительные сведения см. в статьях о ключевых словах [explicit](../keywords/explicit.md) и [implicit](../keywords/implicit.md).
+Определяемый пользователем тип нельзя использовать для перегрузки оператора `()`, но на его основе можно определить пользовательское преобразование типа и выполнить его с помощью выражения приведения. Дополнительные сведения см. в разделе [Операторы пользовательского преобразования](user-defined-conversion-operators.md).
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 

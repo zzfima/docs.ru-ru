@@ -2,12 +2,12 @@
 title: Команда dotnet
 description: Сведения о команде dotnet (универсальном драйвере для средств CLI .NET Core) и ее использовании.
 ms.date: 06/04/2018
-ms.openlocfilehash: 5278adf44d12e428cdeacf1d475377ce9155c314
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 2134bf8ed66157619499b027f01d39e03e84411f
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613009"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859550"
 ---
 # <a name="dotnet-command"></a>Команда dotnet
 
@@ -42,7 +42,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ---
 
-## <a name="description"></a>Описание
+## <a name="description"></a>ОПИСАНИЕ
 
 `dotnet` — это средство для управления исходным кодом .NET и двоичными объектами. Он предоставляет команды, выполняющие определенные задачи, такие как [`dotnet build`](dotnet-build.md) и [`dotnet run`](dotnet-run.md). Каждая команда определяет свои аргументы. Введите `--help` после каждой команды для доступа к краткой справочной документации.
 
@@ -304,7 +304,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `DOTNET_PACKAGES`
 
-Основной кэш пакетов. Если значение не задано, то по умолчанию в Unix используется `$HOME/.nuget/packages`, а в Windows — `%HOME%\NuGet\Packages`.
+Папка глобальных пакетов. Если значение не задано, то по умолчанию в Unix используется `~/.nuget/packages`, а в Windows — `%userprofile%\.nuget\packages`.
 
 `DOTNET_SERVICING`
 
@@ -326,7 +326,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `DOTNET_PACKAGES`
 
-Основной кэш пакетов. Если значение не задано, то по умолчанию в Unix используется `$HOME/.nuget/packages`, а в Windows — `%HOME%\NuGet\Packages`.
+Основной кэш пакетов. Если значение не задано, то по умолчанию в Unix используется `$HOME/.nuget/packages`, а в Windows — `%userprofile%\.nuget\packages`.
 
 `DOTNET_SERVICING`
 
@@ -344,7 +344,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `DOTNET_PACKAGES`
 
-Основной кэш пакетов. Если значение не задано, то по умолчанию в Unix используется `$HOME/.nuget/packages`, а в Windows — `%HOME%\NuGet\Packages`.
+Основной кэш пакетов. Если значение не задано, то по умолчанию в Unix используется `$HOME/.nuget/packages`, а в Windows — `%userprofile%\.nuget\packages`.
 
 `DOTNET_SERVICING`
 

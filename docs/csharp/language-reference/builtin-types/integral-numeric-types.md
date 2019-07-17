@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: bde0b7cea52951cd72bde6cfd7d8f1c7dbcb8f46
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 0a1ed01d9e6cb86ea177e8b947627f9dc02eedae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425599"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744217"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Целочисленные типы (справочник по C#)
 
@@ -76,14 +76,14 @@ var binaryLiteral = 0b_0010_1010;
 
 Десятичные литералы не требуют префикса. Префикс `x` или `X` означает, что это *шестнадцатеричный литерал*. Префикс `b` или `B` означает, что это *двоичный литерал*. Объявление `binaryLiteral` демонстрирует использование символа `_` в качестве *разделителя разрядов*. Разделитель разрядов можно использовать с любыми числовыми литералами. Двоичные литералы и разделитель разрядов `_` поддерживаются начиная с C# 7.0.
 
-## <a name="literal-suffixes"></a>Суффиксы литералов 
+### <a name="literal-suffixes"></a>Суффиксы литералов 
 
 Суффикс `l` или `L` указывает, что целочисленный литерал должен иметь тип `long`. Суффикс `ul` или `UL` указывает тип `ulong`. Если суффикс `L` используется с литералом, значение которого больше 9 223 372 036 854 775 807 (максимальное значение типа `long`), литерал преобразуется в тип `ulong`. Если значение, представленное целочисленным литералом, превышает <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, происходит ошибка компиляции [CS1021](../../misc/cs1021.md). 
 
 > [!NOTE]
 > Строчную букву "l" можно использовать в качестве суффикса. Однако при этом выдается предупреждение компилятора, так как букву "l" легко перепутать с цифрой "1". Для ясности используйте "L".
 
-## <a name="type-of-an-integral-literal"></a>Тип целочисленного литерала
+### <a name="type-of-an-integral-literal"></a>Тип целочисленного литерала
 
 Если целочисленный литерал не имеет суффикса, его типом будет первый из следующих типов, в котором может быть представлено его значение:
 
@@ -118,8 +118,16 @@ var anotherLong = (long)42;
 
 - [Спецификация языка C# — целочисленные типы](~/_csharplang/spec/types.md#integral-types)
 - [справочник по C#](../index.md)
-- [Таблица типов с плавающей запятой](../keywords/floating-point-types-table.md)
+- [Типы с плавающей запятой](floating-point-numeric-types.md)
 - [Таблица значений по умолчанию](../keywords/default-values-table.md)
 - [Таблица форматирования числовых результатов](../keywords/formatting-numeric-results-table.md)
 - [Таблица встроенных типов](../keywords/built-in-types-table.md)
 - [Числовые значения в .NET](../../../standard/numerics.md)
+- <xref:System.Byte?displayProperty=nameWithType>
+- <xref:System.SByte?displayProperty=nameWithType>
+- <xref:System.Int16?displayProperty=nameWithType>
+- <xref:System.UInt16?displayProperty=nameWithType>
+- <xref:System.Int32?displayProperty=nameWithType>
+- <xref:System.UInt32?displayProperty=nameWithType>
+- <xref:System.Int64?displayProperty=nameWithType>
+- <xref:System.UInt64?displayProperty=nameWithType>

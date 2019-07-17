@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86ddb4ed45479e483dde447983f6dc31edcc8930
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae1e5c89676eaebfed5bbcae76048c7c48db5a18
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738843"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779945"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Выполнение в коллекциях строковых операций, не зависящих от языка и региональных параметров
-В пространстве имен <xref:System.Collections> существуют классы и члены, поведение которых по умолчанию зависит от языка и региональных параметров. Конструкторы по умолчанию для классов <xref:System.Collections.CaseInsensitiveComparer> и <xref:System.Collections.CaseInsensitiveHashCodeProvider> инициализируют новый экземпляра с помощью свойства <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Все перегрузки метода <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> создают новый экземпляр класса <xref:System.Collections.Hashtable>, по умолчанию используя свойство `Thread.CurrentCulture`. Перегруженные версии метода <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> по умолчанию выполняют сортировку с учетом языка и региональных параметров, используя свойства `Thread.CurrentCulture`. Если в качестве ключей используются строки, на сортировку и поиск по <xref:System.Collections.SortedList> влияет значение `Thread.CurrentCulture`. Для получения результатов, не зависящих от языка и региональных параметров, для этих классов и методов в пространстве имен `Collections` следуйте рекомендациям, приведенным в этом разделе.  
+В пространстве имен <xref:System.Collections> существуют классы и члены, поведение которых по умолчанию зависит от языка и региональных параметров. Конструкторы без параметров для классов <xref:System.Collections.CaseInsensitiveComparer> и <xref:System.Collections.CaseInsensitiveHashCodeProvider> инициализируют новый экземпляр с помощью свойства <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Все перегрузки метода <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> создают новый экземпляр класса <xref:System.Collections.Hashtable>, по умолчанию используя свойство `Thread.CurrentCulture`. Перегруженные версии метода <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> по умолчанию выполняют сортировку с учетом языка и региональных параметров, используя свойства `Thread.CurrentCulture`. Если в качестве ключей используются строки, на сортировку и поиск по <xref:System.Collections.SortedList> влияет значение `Thread.CurrentCulture`. Для получения результатов, не зависящих от языка и региональных параметров, для этих классов и методов в пространстве имен `Collections` следуйте рекомендациям, приведенным в этом разделе.  
   
  **Примечание**. Если передать в метод сравнения <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>, сравнение выполняется без учета языка и региональных параметров. Однако при этом не выполняется нелингвистическое сравнение, например для путей к файлам, разделов реестра и переменных среды. Также не поддерживается принятие решений по безопасности на основе результата сравнения. Для нелингвистического сравнения и (или) поддержки принятия решений по безопасности в приложении следует использовать метод сравнения, который принимает значение <xref:System.StringComparison>. Приложение должно передавать <xref:System.StringComparison>.  
   
 ## <a name="using-the-caseinsensitivecomparer-and-caseinsensitivehashcodeprovider-classes"></a>Использование классов CaseInsensitiveComparer и CaseInsensitiveHashCodeProvider  
- В конструкторах по умолчанию для `CaseInsensitiveHashCodeProvider` и `CaseInsensitiveComparer` инициализируется новый экземпляр класса с использованием `Thread.CurrentCulture`. Это приводит к тому, что язык и региональные параметры учитываются при сравнении. В следующем примере кода показан конструктор для `Hashtable`, который учитывает язык и региональные параметры, так как он использует конструкторы по умолчанию для `CaseInsensitiveHashCodeProvider` и `CaseInsensitiveComparer`.  
+ В конструкторах без параметров для `CaseInsensitiveHashCodeProvider` и `CaseInsensitiveComparer` инициализируется новый экземпляр класса с использованием `Thread.CurrentCulture`. Это приводит к тому, что язык и региональные параметры учитываются при сравнении. В следующем примере кода показан конструктор для `Hashtable`, который учитывает язык и региональные параметры, так как он использует конструкторы без параметров для `CaseInsensitiveHashCodeProvider` и `CaseInsensitiveComparer`.  
   
 ```vb  
 internalHashtable = New Hashtable(CaseInsensitiveHashCodeProvider.Default, CaseInsensitiveComparer.Default)  

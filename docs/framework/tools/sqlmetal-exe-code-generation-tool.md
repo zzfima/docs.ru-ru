@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: d2ee9537df540936e0a5ec448e6aaddbbbc162b1
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 56fed00ec049fd2746d5b07b9926b8abda998260
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610539"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742438"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (средство создания кода)
 Средство командной строки SqlMetal создает код и сопоставление для компонента [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] платформы .NET Framework. С помощью описанных ниже параметров можно настраивать SqlMetal на выполнение различных действий, включая следующие.  
@@ -28,7 +28,7 @@ ms.locfileid: "67610539"
  Эта программа автоматически устанавливается вместе с Visual Studio. По умолчанию файл располагается в папке `drive`:\Program Files\Microsoft SDKs\Windows\v`n.nn`\bin. Если Visual Studio не установлена, файл SQLMetal можно получить, скачав [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225).  
   
 > [!NOTE]
->  Разработчики, работающие в Visual Studio также могут использовать [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] для создания классов сущностей. Командная строка удобна при работе с большими базами данных. Поскольку SqlMetal представляет собой программу командной строки, ее можно использовать в процессе построения.  
+>  Разработчики, работающие в Visual Studio, также могут использовать реляционный конструктор объектов для создания классов сущностей. Командная строка удобна при работе с большими базами данных. Поскольку SqlMetal представляет собой программу командной строки, ее можно использовать в процессе построения.  
   
  Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Подробнее см. в разделе [Командная строка](../../../docs/framework/tools/developer-command-prompt-for-vs.md). В командной строке введите следующее:  
   

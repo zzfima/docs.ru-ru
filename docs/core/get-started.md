@@ -4,12 +4,12 @@ description: Ресурсы, посвященные созданию прило�
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: 2ec7f57250db8779552305b2ee69cbcf1db55d0c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b111d464b83f3bc6a4a0da86678c5364bf4a9537
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977182"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802300"
 ---
 # <a name="get-started-with-net-core"></a>Начало работы с .NET Core
 
@@ -34,7 +34,7 @@ dotnet run --project sample1
 Hello World!
 ```
 
-Поздравляем! Вы создали простое приложение .NET Core. Вы также можете использовать [Visual Studio Code](tutorials/with-visual-studio-code.md), [Visual Studio 2017](tutorials/with-visual-studio.md) (только для Windows) или [Visual Studio для Mac](tutorials/using-on-mac-vs.md) (только для macOS), чтобы создать приложение .NET Core.
+Поздравляем! Вы создали простое приложение .NET Core. Вы также можете использовать [Visual Studio Code](tutorials/with-visual-studio-code.md), [Visual Studio](tutorials/with-visual-studio.md) (только для Windows) или [Visual Studio для Mac](tutorials/using-on-mac-vs.md) (только для macOS), чтобы создать приложение .NET Core.
 
 ## <a name="tutorials"></a>Учебники
 

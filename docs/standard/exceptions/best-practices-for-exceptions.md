@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 752a7e5233d8b1d88b49be450972fc964f82d2c4
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: d212ba9beaa0ccc229204045c5a8174381440dfc
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690655"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860151"
 ---
 # <a name="best-practices-for-exceptions"></a>Лучшие методики обработки исключений
 
@@ -80,7 +80,7 @@ ms.locfileid: "66690655"
 
 ## <a name="include-three-constructors-in-custom-exception-classes"></a>Включение трех конструкторов в пользовательские классы исключений
 
-При создании собственных классов исключений можно использовать по меньшей мере три общих конструктора: конструктор по умолчанию, конструктор, принимающий строковое сообщение, и конструктор, принимающий строковое сообщение и внутреннее исключение.
+При создании собственных классов исключений можно использовать по меньшей мере три общих конструктора: конструктор без параметров, конструктор, принимающий строковое сообщение, и конструктор, принимающий строковое сообщение и внутреннее исключение.
 
 * <xref:System.Exception.%23ctor>, использующий значения по умолчанию.
 
@@ -143,6 +143,14 @@ public void TransferFunds(Account from, Account to, decimal amount)
 }
 ```
 
+```vb
+Public Sub TransferFunds(from As Account, [to] As Account, amount As Decimal)
+    from.Withdrawal(amount)
+    ' If the deposit fails, the withdrawal shouldn't remain in effect.
+    [to].Deposit(amount)
+End Sub
+```
+
 Описанный выше метод непосредственно не создает исключения, однако при его написании необходимо соблюдать осторожность, чтобы при сбое операции начисления списание отменялось.
 
 Один из способов обработки в этой ситуации заключается в перехвате всех исключений, выданных транзакцией начисления средств, и откате транзакции списания средств.
@@ -163,19 +171,43 @@ private static void TransferFunds(Account from, Account to, decimal amount)
 }
 ```
 
+```vb
+Private Shared Sub TransferFunds(from As Account, [to] As Account, amount As Decimal)
+    Dim withdrawalTrxID As String = from.Withdrawal(amount)
+    Try
+        [to].Deposit(amount)
+    Catch
+        from.RollbackTransaction(withdrawalTrxID)
+        Throw
+    End Try
+End Sub
+```
+
 В этом примере показано использование `throw` для повторного порождения исходного исключения. Это позволяет вызывающим объектам проще установить фактическую причину проблемы, не обращаясь к свойству <xref:System.Exception.InnerException>. Альтернативным способом является выдача нового исключения с включением исходного исключения в качестве внутреннего:
 
 ```csharp
 catch (Exception ex)
 {
     from.RollbackTransaction(withdrawalTrxID);
-    throw new TransferFundsException("Withdrawal failed", innerException: ex)
+    throw new TransferFundsException("Withdrawal failed.", innerException: ex)
     {
         From = from,
         To = to,
         Amount = amount
     };
 }
+```
+
+```vb
+Catch ex As Exception
+    from.RollbackTransaction(withdrawalTrxID)
+    Throw New TransferFundsException("Withdrawal failed.", innerException:=ex) With
+    {
+        .From = from,
+        .[To] = [to],
+        .Amount = amount
+    }
+End Try
 ```
 
 ## <a name="see-also"></a>См. также
