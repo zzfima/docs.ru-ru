@@ -203,6 +203,14 @@
     - name: Учебники
       href: core/tutorials/index.md
       items:
+        - name: Шаблоны для интерфейса командной строки
+          items:
+            - name: 1. Создание шаблона элемента
+              href: core/tutorials/cli-templates-create-item-template.md
+            - name: 2. Создание шаблона проекта
+              href: core/tutorials/cli-templates-create-project-template.md
+            - name: 3. Создание пакета шаблонов
+              href: core/tutorials/cli-templates-create-template-pack.md
         - name: Начало работы с .NET Core в macOS
           href: core/tutorials/using-on-macos.md
         - name: Начало работы с .NET Core в macOS с помощью Visual Studio для Mac
@@ -219,8 +227,6 @@
           href: core/tutorials/aspnet-core.md
         - name: Размещение .NET Core из машинного кода
           href: core/tutorials/netcore-hosting.md
-        - name: Создание пользовательского шаблона для команды dotnet new
-          href: core/tutorials/create-custom-template.md
     - name: 'Пакеты, метапакеты и платформы'
       href: core/packages.md
     - name: Общие сведения об изменениях интерфейса командной строки
@@ -2252,7 +2258,7 @@
               href: visual-basic/language-reference/error-messages/xml-literals-and-xml-properties-are-not-supported-in-embedded-code-in-aspnet.md
             - name: URI-код пространства имен XML <uri> может быть связан только с префиксом xmlns
               href: visual-basic/language-reference/error-messages/xml-namespace-uri-uri-can-be-bound-only-to-xmlns.md
-    - name: Ссылка
+    - name: Справочники
       href: visual-basic/reference/index.md
       items:
         - name: Компилятор с интерфейсом командной строки
