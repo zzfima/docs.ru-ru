@@ -27,7 +27,7 @@ dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```console
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output] [-u|--uninstall] [Template options]
@@ -96,7 +96,7 @@ dotnet new [-h|--help]
 | Веб-конфигурация                                   | `webconfig`       |              | Config                                |
 | Файл решения                                | `sln`             |              | Решение                              |
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 Команда содержит список шаблонов по умолчанию. Используйте `dotnet new -l`, чтобы получить список доступных шаблонов. В приведенной ниже таблице представлены шаблоны, которые устанавливаются вместе с пакетом SDK для .NET Core 2.1.300. Язык по умолчанию для шаблона указан внутри квадратных скобок.
 
