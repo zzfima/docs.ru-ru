@@ -15,11 +15,11 @@ ms.locfileid: "65878317"
 
 ## <a name="name"></a>name
 
-`dotnet new` — создает проект, файл конфигурации или решений на основе указанного шаблона.
+`dotnet new` - создает проект, файл конфигурации или решений на основе указанного шаблона.
 
 ## <a name="synopsis"></a>Краткий обзор
 
-# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22).
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
 
 ```console
 dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output] [-u|--uninstall] [Template options]
