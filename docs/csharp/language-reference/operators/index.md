@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 0639becb1620daf7d457995392d134d40b90e826
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: b6a1cc3ced3205037eb5b83ac3841efbfbd1b5b9
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68235945"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331216"
 ---
 # <a name="c-operators-c-reference"></a>Операторы C# (справочник по C#)
 
@@ -63,7 +63,7 @@ C# предоставляет ряд стандартных операторов
 
 [nameof](nameof.md) — используется для получения простого (неполного) имени переменной, типа или члена в виде строковой константы.
 
-[delegate](../../programming-guide/statements-expressions-operators/anonymous-methods.md) — объявляет и возвращает экземпляр делегата.
+[delegate](delegate-operator.md) — объявляет и возвращает экземпляр делегата.
 
 [sizeof](../keywords/sizeof.md) — возвращает размер в байтах для типа операнда.
 
