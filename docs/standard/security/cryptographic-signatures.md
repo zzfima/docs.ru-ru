@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15fd79a1289bd54b81db551abbdfcd63deef3e24
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 862d520073dde1b935510bc7c68782c1204c6111
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795256"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331654"
 ---
 # <a name="cryptographic-signatures"></a>Криптографические подписи
 
@@ -44,6 +44,8 @@ ms.locfileid: "61795256"
 ## <a name="generating-signatures"></a>Создание подписей
 
 Цифровые подписи обычно применяются к хэш-значениям, которые представляют массивы данных большого размера. В примере ниже демонстрируется применение цифровой подписи к хэш-значению. Сначала создается экземпляр класса <xref:System.Security.Cryptography.RSACryptoServiceProvider> с целью формирования набора, состоящего из открытого и закрытого ключей. Затем экземпляр <xref:System.Security.Cryptography.RSACryptoServiceProvider> передается в новый экземпляр класса <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> . При этом экземпляру <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>передается закрытый ключ, который и создает цифровую подпись. Перед тем как подписать хэш-код, вам необходимо указать используемый хэш-алгоритм. В этом примере используется алгоритм SHA1. Наконец, вызывается метод <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> для выполнения подписи.
+
+Из-за проблем с алгоритмом SHA1 Корпорация Майкрософт рекомендует использовать SHA256 или более высокий уровень.
 
 ```vb
 Imports System
@@ -145,7 +147,7 @@ rsaKeyInfo.Exponent = exponentData;
 
 После создания объекта <xref:System.Security.Cryptography.RSAParameters> можно инициализировать новый экземпляр класса <xref:System.Security.Cryptography.RSACryptoServiceProvider> значениями, указанными в <xref:System.Security.Cryptography.RSAParameters>. Экземпляр <xref:System.Security.Cryptography.RSACryptoServiceProvider> , в свою очередь, передается в конструктор класса <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> для передачи ключа.
 
-Этот процесс показан в приведенном ниже примере. В этом коде `hashValue` и `signedHashValue` — байтовые массивы, предоставленные удаленной стороной. Удаленная сторона подписала объект `hashValue` с помощью алгоритма SHA1, создающего цифровую подпись `signedHashValue`. <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> Метод проверяет, что цифровая подпись допустима и использовался для подписи `hashValue`.
+Этот процесс показан в приведенном ниже примере. В этом коде `hashValue` и `signedHashValue` — байтовые массивы, предоставленные удаленной стороной. Удаленная сторона подписала объект `hashValue` с помощью алгоритма SHA1, создающего цифровую подпись `signedHashValue`. Метод проверяет, является ли цифровая подпись допустимой и использовалась для `hashValue`подписывания. <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType>
 
 ```vb
 Dim rsa As New RSACryptoServiceProvider()
