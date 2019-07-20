@@ -6,34 +6,34 @@ helpviewer_keywords:
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-ms.openlocfilehash: 503858b717ef541675b642a735289e3903b91fdc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d11b0bb2086bb449c0ffc0ff89430a55096a28d
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777085"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364344"
 ---
 # <a name="annotations-schema"></a>Схема примечаний
 
 В этом разделе описывается определение схемы XML (XSD), используемое структурой заметок для сохранения и извлечения данных заметок пользователей.
 
-[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] сериализует данные заметки из внутреннего представления в формат XML.  Формат XML, используемый для этого преобразования, описывается XSD-схемой [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)].  Схема определяет независимый от реализации формат XML, который может использоваться для обмена данными заметок между приложениями.
+Платформа примечаний сериализует данные аннотации из внутреннего представления в формат XML.  Формат XML, используемый для этого преобразования, описывается схемой XSD платформы Annotations.  Схема определяет независимый от реализации формат XML, который может использоваться для обмена данными заметок между приложениями.
 
-Определение схемы XML [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] состоит из двух подсхем:
+Определение XML-схемы платформы Annotations состоит из двух подсхем.
 
 - основная схема XML-заметок (основная схема);
 
 - базовая схема XML-заметок (базовая схема).
 
-Основная схема определяет первичную XML-структуру <xref:System.Windows.Annotations.Annotation>.  Большая часть XML-элементов, определенных в основной схеме соответствуют типам в <xref:System.Windows.Annotations> пространства имен.  Основная схема предоставляет три точки расширения, в которых приложения могут добавлять собственные XML-данные.  Эти точки расширения включают <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>и «Содержимое».  (Элементы содержимого представлены в виде <xref:System.Xml.XmlElement> списка.)
+Основная схема определяет первичную XML-структуру <xref:System.Windows.Annotations.Annotation>.  Большинство XML-элементов, определенных в основной схеме, соответствуют типам в <xref:System.Windows.Annotations> пространстве имен.  Основная схема предоставляет три точки расширения, в которых приложения могут добавлять собственные XML-данные.  Эти точки расширения включают в <xref:System.Windows.Annotations.Annotation.Authors%2A>себя <xref:System.Windows.Annotations.ContentLocatorPart>, и "содержимое".  (Элементы содержимого предоставляются в виде <xref:System.Xml.XmlElement> списка.)
 
-Базовая схема, описанная в этом разделе, определяет расширения для <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>и типы содержимого, включая в первоначальном выпуске Windows Presentation Foundation (WPF).
+Базовая схема <xref:System.Windows.Annotations.Annotation.Authors%2A>, описанная в этом разделе, определяет расширения для типов <xref:System.Windows.Annotations.ContentLocatorPart>содержимого, и, входящих в начальный выпуск Windows Presentation Foundation (WPF).
 
 <a name="CoreSchema"></a>
 
 ## <a name="annotations-xml-core-schema"></a>Основная схема XML-заметок
 
-Основная схема XML заметок определяет структуру XML, которая используется для хранения <xref:System.Windows.Annotations.Annotation> объектов.
+Базовая схема XML Annotations определяет XML-структуру, используемую для хранения <xref:System.Windows.Annotations.Annotation> объектов.
 
 ```xml
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
@@ -187,7 +187,7 @@ ms.locfileid: "61777085"
 
 ## <a name="annotations-xml-base-schema"></a>Базовая схема XML-заметок
 
-Базовая схема определяет структуру XML для трех абстрактных элементов, определенных в основной схеме: <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, и <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.
+Базовая схема определяет XML-структуру для трех абстрактных элементов, определенных в основной схеме — <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>и <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.
 
 ```xml
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
@@ -500,7 +500,7 @@ ms.locfileid: "61777085"
 
 ## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>Пример XML-кода, созданный классом XmlStreamStore Annotations
 
-XML, ниже показан результат выполнения заметки <xref:System.Windows.Annotations.Storage.XmlStreamStore> и организацию примера файла, который содержит три заметки: выделение текста-записки и рукописную записку.
+Следующий XML-код показывает выходные данные заметок <xref:System.Windows.Annotations.Storage.XmlStreamStore> и организацию примера файла, которая содержит три заметки: выделение, текст с заметкой и рукописный ввод-записка.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

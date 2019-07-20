@@ -2,12 +2,12 @@
 title: Основные сведения об изменении состояния
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 858da2a88c17920910c05966bb3b211d754fb278
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 549620ee5317e68735b392ce35b73c92f2474eab
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424767"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363939"
 ---
 # <a name="understanding-state-changes"></a>Основные сведения об изменении состояния
 В данном разделе рассматриваются состояния и переходы каналов, а также типы, используемые для структуризации каналов, и способы их реализации.  
@@ -24,16 +24,16 @@ ms.locfileid: "67424767"
 ## <a name="icommunicationobject-communicationobject-and-states-and-state-transition"></a>ICommunicationObject, CommunicationObject, а также состояния и переход состояния  
  Объект <xref:System.ServiceModel.ICommunicationObject> запускается в состоянии Created, где можно настроить его различные свойства. В состоянии Opened объект используется для отправки и получения сообщений, но его свойства считаются неизменяемыми. В состоянии Closing объект больше не может обрабатывать новые запросы отправки и получения, но существующие запросы могут быть завершены, пока не истечет время ожидания закрытия.  В случае неустранимой ошибки объект переходит в состояние Faulted, где можно проверить сведения об ошибке и в конечном счете закрыть объект. В состоянии Closed объект по сути завершает конечный автомат. После того как объект переходит из одного состояния в другое, он не возвращается в предыдущее состояние.  
   
- На следующей схеме показаны состояния и переходы состояния объекта <xref:System.ServiceModel.ICommunicationObject>. Переходы состояния может быть вызвана вызова одного из трех методов: Abort, Open или закрыть. Их также можно вызвать другими методами, которые зависят от реализации. Переход в состояние Faulted может произойти в результате ошибки во время или после открытия коммуникационного объекта.  
+ На следующей схеме показаны состояния и переходы состояния объекта <xref:System.ServiceModel.ICommunicationObject>. Переходы состояния могут быть вызваны вызовом одного из трех методов: Прервать, открыть или закрыть. Их также можно вызвать другими методами, которые зависят от реализации. Переход в состояние Faulted может произойти в результате ошибки во время или после открытия коммуникационного объекта.  
   
  Каждый объект <xref:System.ServiceModel.ICommunicationObject> запускается в состоянии Created. В этом состоянии приложение может настраивать объект с помощью изменения его свойств. После того как объект находится в состоянии, отличном от Created, он считается неизменяемым.  
   
- ![Переход состояния канала](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
+ ![Смена состояния канала](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "Чаннелстатетранитионшигхлевелдиаграм")  
 Рис. 1. Конечный автомат ICommunicationObject.  
   
- Windows Communication Foundation (WCF) предоставляет абстрактный базовый класс с именем <xref:System.ServiceModel.Channels.CommunicationObject> , реализующий <xref:System.ServiceModel.ICommunicationObject> и конечный автомат каналов. Ниже приведена схема изменившегося состояния, относящаяся к <xref:System.ServiceModel.Channels.CommunicationObject>. Кроме конечного автомата <xref:System.ServiceModel.ICommunicationObject>, на схеме также показано время, когда вызываются дополнительные методы <xref:System.ServiceModel.Channels.CommunicationObject>.  
+ Windows Communication Foundation (WCF) предоставляет абстрактный базовый класс с <xref:System.ServiceModel.Channels.CommunicationObject> именем, <xref:System.ServiceModel.ICommunicationObject> который реализует и конечный автомат канала. Ниже приведена схема изменившегося состояния, относящаяся к <xref:System.ServiceModel.Channels.CommunicationObject>. Кроме конечного автомата <xref:System.ServiceModel.ICommunicationObject>, на схеме также показано время, когда вызываются дополнительные методы <xref:System.ServiceModel.Channels.CommunicationObject>.  
   
- ![Изменений состояния](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
+ ![Изменения состояния](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 Рис. 2. Реализация CommunicationObject конечного автомата ICommunicationObject, включая вызовы событий и защищенных методов.  
   
 ### <a name="icommunicationobject-events"></a>События ICommunicationObject  
@@ -64,7 +64,7 @@ ms.locfileid: "67424767"
   
  Класс <xref:System.ServiceModel.Channels.CommunicationObject> предоставляет три конструктора, которые оставляют объект в состоянии Created. Конструкторы определяются следующим образом.  
   
- Первый конструктор - это конструктор по умолчанию, который делегирует перегрузке конструктора, приминающей объект:  
+ Первый конструктор является конструктором без параметров, который делегирует перегрузке конструктора, принимающей объект:  
   
  `protected CommunicationObject() : this(new object()) { … }`  
   
@@ -80,9 +80,9 @@ ms.locfileid: "67424767"
   
  Метод Open  
   
- Предусловие: Состояние Created.  
+ Предусловие Состояние создано.  
   
- Постусловие: Находится в состоянии Opened или Faulted. Может создаваться исключение.  
+ Условие после: Состояние "открыто" или "ошибка". Может создаваться исключение.  
   
  Метод Open() попытается открыть коммуникационный объект и установить состояние Opened. При возникновении ошибки метод установит состояние Faulted.  
   
@@ -90,37 +90,37 @@ ms.locfileid: "67424767"
   
  Затем устанавливается состояние Opening и вызывается метод OnOpening() (создающий событие Opening), OnOpen() и OnOpened() в указанном порядке. Метод OnOpened() устанавливает состояние Opened и вызывает событие Opened. Если любое из этих событий создает исключение, метод Open() вызывает Fault() и выдает исключение. Следующая схема содержит подробные сведения о процессе Open.  
   
- ![Изменений состояния](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
+ ![Изменения состояния](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
 Переопределите метод OnOpen, чтобы реализовать пользовательскую логику открытия, например, открыть внутренний коммуникационный объект.  
   
  Метод Close  
   
- Предусловие: Отсутствует.  
+ Предусловие Отсутствует.  
   
- Постусловие: Состояние Closed. Может создаваться исключение.  
+ Условие после: Состояние закрыто. Может создаваться исключение.  
   
  Метод Close() можно вызвать в любом состоянии. Метод пытается закрыть объект в обычном режиме. Если происходит ошибка, метод завершает выполнение объекта. Метод не выполняет никаких действий, если текущим состоянием является Closing или Closed. В противном случае он устанавливает состояние Closing. Если исходным состоянием является Created, Opening или Faulted, метод вызывает Abort() (см. следующую схему). Если исходным состоянием является Opened, вызывается метод OnClosing() (создающий событие Closing), OnClose() и OnClosed() в указанном порядке. Если любое из этих событий создает исключение, метод Close() вызывает Abort() и выдает исключение. Метод OnClosed() устанавливает состояние Closed и вызывает событие Closed. Следующая схема содержит подробные сведения о процессе Close.  
   
- ![Изменений состояния](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO CloseFlowChartc")  
+ ![Изменения состояния](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO — клосефловчартк")  
 Переопределите метод OnClose, чтобы реализовать пользовательскую логику закрытия, например, закрыть внутренний коммуникационный объект. Для мягкой логики закрытия, которая может выполнять блокировку на длительное время (например, для ожидания ответа другой стороны), следует реализовать метод OnClose(), поскольку он использует параметр времени ожидания и не вызывается как часть Abort().  
   
  Прервать  
   
- Предусловие: Отсутствует.  
-Постусловие: Состояние Closed. Может создаваться исключение.  
+ Предусловие Отсутствует.  
+Условие после: Состояние закрыто. Может создаваться исключение.  
   
  Метод Abort() не выполняет никаких действий, если текущим состоянием является Closed или объект был завершен ранее (например, с помощью выполнения метода Abort() в другом потоке). В противном случае устанавливается состояние Closing и вызывается метод OnClosing() (создающий событие Closing), OnAbort() и OnClosed() в указанном порядке (метод OnClose не вызывается, поскольку объект завершается, а не закрывается). Метод OnClosed() устанавливает состояние Closed и вызывает событие Closed. Если какое-либо из этих событий создает исключение, оно повторно выдается объекту, вызвавшему метод Abort. Реализации методов OnClosing(), OnClosed() и OnAbort() не должны выполнять блокировку (например, ввода-вывода). Следующая схема содержит подробные сведения о процессе Abort.  
   
- ![Изменений состояния](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO AbortFlowChartc")  
+ ![Изменения состояния](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO — абортфловчартк")  
 Переопределите метод OnAbort, чтобы реализовать пользовательскую логику завершения, например, завершить внутренний коммуникационный объект.  
   
  Fault  
   
  Метод Fault относится конкретно к классу <xref:System.ServiceModel.Channels.CommunicationObject> и не является частью интерфейса <xref:System.ServiceModel.ICommunicationObject>. Указан для полноты представления информации.  
   
- Предусловие: Отсутствует.  
+ Предусловие Отсутствует.  
   
- Постусловие: Состояние Faulted. Может создаваться исключение.  
+ Условие после: Состояние "сбой". Может создаваться исключение.  
   
  Метод Fault() не выполняет никаких действий, если текущим состоянием является Faulted или Closed. В противном случае устанавливается состояние Faulted и вызывается метод OnFaulted(), который создает событие Faulted. Если метод OnFaulted вызывает исключение, оно вызывается повторно.  
   

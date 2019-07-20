@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание приложения Windows Forms из командной строки
+title: Практическое руководство. Создание Windows Forms приложения из командной строки
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 72195dd49c163b26a5bcfa739768718f2a32f346
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6c87419a4d730f72a7ee15fcc3127781a8eaff75
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588975"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364214"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Практическое руководство. Создание приложения Windows Forms из командной строки
-В процедурах ниже описаны основные шаги, которые необходимо выполнить для создания и запуска приложения Windows Forms из командной строки. Visual Studio предлагает расширенную поддержку этих процедур.  Также см. в разделе [Пошаговое руководство: Размещение Windows Forms элемента управления в WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).  
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Практическое руководство. Создание Windows Forms приложения из командной строки
+В процедурах ниже описаны основные шаги, которые необходимо выполнить для создания и запуска приложения Windows Forms из командной строки. Visual Studio предлагает расширенную поддержку этих процедур.  См. [также раздел Пошаговое руководство. Размещение элемента управления Windows Forms в WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).  
   
 ## <a name="procedure"></a>Процедура  
   
@@ -35,7 +35,7 @@ ms.locfileid: "65588975"
      [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3. Создайте конструктор по умолчанию для класса `Form1`.  
+3. Создайте конструктор без параметров для `Form1`.  
   
      В следующий процедуре будет добавлен дополнительный код конструктора.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "65588975"
   
 4. Добавьте в класс метод `Main`.  
   
-    1. Применить <xref:System.STAThreadAttribute> в C# `Main` метод, чтобы указать приложения Windows Forms является однопотоковое подразделение. (Атрибут не требуется в Visual Basic, так как приложения Windows forms разработанных с помощью Visual Basic используйте модели однопотоковое подразделение по умолчанию.)  
+    1. Примените <xref:System.STAThreadAttribute> C# к методу, чтобы указать Windows Forms приложение является однопотоковым апартаментом. `Main` (Атрибут не является обязательным в Visual Basic, так как приложения Windows Forms, разработанные с помощью Visual Basic, по умолчанию используют модель апартамента с одним потоком.)  
   
-    2. Вызовите <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> применение стилей операционной системы для приложения.  
+    2. Вызовите <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> , чтобы применить стили операционной системы к приложению.  
   
     3. Создайте экземпляр формы и запустите его.  
   
@@ -59,18 +59,18 @@ ms.locfileid: "65588975"
   
 2. Скомпилируйте форму.  
   
-    - Если вы используете C#, введите: `csc form1.cs`  
+    - При использовании C#введите:`csc form1.cs`  
   
          `-or-`  
   
-    - Если вы используете Visual Basic, введите: `vbc form1.vb`  
+    - При использовании Visual Basic введите:`vbc form1.vb`  
   
-3. В командной строке введите следующую команду: `Form1.exe`  
+3. В командной строке введите:`Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Добавление элемента управления и обработка события  
- В предыдущей процедуре продемонстрировано, как создать простейшую форму Windows Forms, скомпилировать и запустить ее. В следующей процедуре будет показано, как создать и добавить в форму элемент управления и как обрабатывать событие для него. Дополнительные сведения об элементах управления, можно добавить в формы Windows Forms, см. в разделе [элементов управления Windows Forms](./controls/index.md).  
+ В предыдущей процедуре продемонстрировано, как создать простейшую форму Windows Forms, скомпилировать и запустить ее. В следующей процедуре будет показано, как создать и добавить в форму элемент управления и как обрабатывать событие для него. Дополнительные сведения об элементах управления, которые можно добавить в Windows Forms, см. в разделе [элементы управления Windows Forms](./controls/index.md).  
   
- Помимо понимания способов создания приложений Windows Forms, следует обладать общими знаниями о программировании на основе событий и способах обработки данных, введенных пользователем. Дополнительные сведения см. в разделе [Создание обработчиков событий в Windows Forms](creating-event-handlers-in-windows-forms.md), и [Обработка введенных пользователем данных](./controls/handling-user-input.md)  
+ Помимо понимания способов создания приложений Windows Forms, следует обладать общими знаниями о программировании на основе событий и способах обработки данных, введенных пользователем. Дополнительные сведения см. в статьях [Создание обработчиков событий в Windows Forms](creating-event-handlers-in-windows-forms.md)и [обработка входных данных пользователя](./controls/handling-user-input.md) .  
   
 #### <a name="to-declare-a-button-control-and-handle-its-click-event"></a>Объявление элемента управления типа "Кнопка" и обработка событий щелчка мышью для нее  
   

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 2237ba71487afc132f9164243a664b277397ccfa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c9c9fb574b9f3e687b2d8d5c4606bfb66ebfa64
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939115"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364448"
 ---
 # <a name="bindingsource-component-overview"></a>Общие сведения о компоненте BindingSource
 Компонент <xref:System.Windows.Forms.BindingSource> предназначен для упрощения процесса привязки элементов управления к источнику данных. Компонент <xref:System.Windows.Forms.BindingSource> выступает в качестве источника и канала передачи данных для привязки других элементов управления. Он реализует абстракцию подключения данных формы, перенаправляя команды к базовому списку данных. Кроме того, можно добавлять данные непосредственно в него, поэтому сам компонент выступает и в качестве источника данных.  
   
 ## <a name="bindingsource-component-as-an-intermediary"></a>Компонент BindingSource в качестве посредника  
- Компонент <xref:System.Windows.Forms.BindingSource> выступает в качестве источника данных для некоторых или всех элементов управления формы. В Visual Studio <xref:System.Windows.Forms.BindingSource> можно привязать к элементу управления с помощью параметра `DataBindings` свойство, доступное из **свойства** окна. Также см. раздел [Как Привязка элементов управления Windows Forms с компонентом BindingSource с помощью конструктора](bind-wf-controls-with-the-bindingsource.md).  
+ Компонент <xref:System.Windows.Forms.BindingSource> выступает в качестве источника данных для некоторых или всех элементов управления формы. В Visual Studio объект <xref:System.Windows.Forms.BindingSource> можно привязать к элементу управления с помощью `DataBindings` свойства, доступного в окне **Свойства** . Также см. раздел [Как Привяжите Windows Forms элементы управления к компоненту BindingSource с](bind-wf-controls-with-the-bindingsource.md)помощью конструктора.  
   
  Компонент <xref:System.Windows.Forms.BindingSource> можно привязать как к источникам простых данных, например одиночному свойству объекта или базовой коллекции, такому как <xref:System.Collections.ArrayList>, так и к источникам сложных данных, таким как таблица базы данных. Компонент <xref:System.Windows.Forms.BindingSource> является посредником, обеспечивающим привязку и управление валютой. Во время разработки или во время выполнения компонент <xref:System.Windows.Forms.BindingSource> можно привязать к источнику сложных данных, указав в качестве значений его свойств <xref:System.Windows.Forms.BindingSource.DataSource%2A> и <xref:System.Windows.Forms.BindingSource.DataMember%2A> базу данных и таблицу. На следующем рисунке показано, как компонент <xref:System.Windows.Forms.BindingSource> встраивается в существующую архитектуру привязки данных.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "61939115"
 |Метод <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A>|Удаляет текущий элемент из списка.|  
 |Метод <xref:System.Windows.Forms.BindingSource.EndEdit%2A>|Применяет ожидающие изменения к базовому источнику данных.|  
 |Метод <xref:System.Windows.Forms.BindingSource.CancelEdit%2A>|Отменяет текущую операцию редактирования.|  
-|Метод <xref:System.Windows.Forms.BindingSource.AddNew%2A>|Добавляет новый элемент в базовый список. Если источник данных реализует <xref:System.ComponentModel.IBindingList> и возвращает элемент из события <xref:System.Windows.Forms.BindingSource.AddingNew>, то  добавляется этот элемент. В противном случае запрос передается в метод <xref:System.ComponentModel.IBindingList.AddNew%2A> списка. Если базовый список не является <xref:System.ComponentModel.IBindingList>, элемент автоматически создается с помощью его общего конструктора по умолчанию.|  
+|Метод <xref:System.Windows.Forms.BindingSource.AddNew%2A>|Добавляет новый элемент в базовый список. Если источник данных реализует <xref:System.ComponentModel.IBindingList> и возвращает элемент из события <xref:System.Windows.Forms.BindingSource.AddingNew>, то  добавляется этот элемент. В противном случае запрос передается в метод <xref:System.ComponentModel.IBindingList.AddNew%2A> списка. Если базовый список не <xref:System.ComponentModel.IBindingList>является, элемент автоматически создается с помощью открытого конструктора без параметров.|  
   
 ## <a name="sorting-and-filtering"></a>Сортировка и фильтрация  
  Как правило, работа осуществляется с упорядоченным или отфильтрованным представлением источника данных. В следующей таблице показаны члены, предоставляемые компонентом <xref:System.Windows.Forms.BindingSource> источника данных.  
