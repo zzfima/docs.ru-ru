@@ -3,12 +3,12 @@ title: Необходимые компоненты для .NET Core в Windows
 description: Узнайте о том, какие зависимости необходимы для разработки и запуска приложений .NET Core на компьютере Windows.
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 9c4c15a08e0988955ecdf442307059868cb377d1
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 1921ef565c2d04624009f7684e439ddba1cdf57e
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539354"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331074"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Необходимые компоненты для .NET Core в Windows
 
@@ -20,25 +20,13 @@ ms.locfileid: "67539354"
 
 Кроме того, если вы разрабатываете приложение в Windows с помощью Visual Studio 2017, ознакомьтесь с минимальными поддерживаемыми версиями для разработки .NET Core в разделе [Необходимые компоненты для Visual Studio 2017](#prerequisites-with-visual-studio-2017).
 
-## <a name="net-core-supported-windows-versions"></a>Версии Windows, поддерживаемые .NET Core
-
-Платформа .NET Core поддерживается в следующих версиях:
-
-* Windows 7 SP1
-* Windows 8.1
-* Windows 10, юбилейное обновление (версия 1607) или более поздние версии
-* Windows Server 2008 R2 с пакетом обновления 1 (SP1) (полный сервер или основные серверные компоненты)
-* Windows Server 2012 с пакетом обновления 1 (SP1) (полный сервер или основные серверные компоненты)
-* Windows Server 2012 R2 (полный сервер или основные серверные компоненты)
-* Windows Server 2016 или более поздних версий (полный вариант сервера, основные серверные компоненты или сервер Nano)
-
 ## <a name="net-core-supported-operating-systems"></a>Поддерживаемые операционные системы для .NET Core
 
 В следующих статьях содержится полный список операционных систем с указанием версий, в которых поддерживается .NET Core:
 
 * [.NET Core 3.0 (предварительная версия)](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)
-* [.NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).
-* [.NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
+* [.NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)
+* [.NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
 * [.NET Core 1.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
 
 Дополнительные сведения и ссылки для скачивания см. на следующих страницах: [на странице скачиваемых файлов .NET](https://dotnet.microsoft.com/download) для загрузки новой версии и [на странице архива загрузок .NET](https://dotnet.microsoft.com/download/archives#dotnet-core) для более старых версий.
