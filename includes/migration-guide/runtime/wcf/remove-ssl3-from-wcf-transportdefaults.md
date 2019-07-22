@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 492138ffc6af6bd98d0d45eea4ddfdf54c86988c
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: d75eff2d2a43ab4488577014ec43a9826b2b2924
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67857478"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237849"
 ---
 ### <a name="remove-ssl3-from-the-wcf-transportdefaults"></a>Удаление Ssl3 из WCF TransportDefaults
 
@@ -16,4 +16,3 @@ ms.locfileid: "67857478"
 |Версия|4.6.2|
 |Тип|Среда выполнения|
 |Затронутые API|<ul><li><xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement.SslProtocols?displayProperty=nameWithType></li><li><xref:System.ServiceModel.TcpTransportSecurity.SslProtocols?displayProperty=nameWithType></li></ul>|
-

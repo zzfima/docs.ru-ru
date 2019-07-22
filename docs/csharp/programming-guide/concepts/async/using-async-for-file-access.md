@@ -2,12 +2,12 @@
 title: Использование метода Async для доступа к файлам (C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: 34ce05bd1270877aa3c626292e8b2464a23fad0c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6ca47157575ef4569a43f334dae4f99a1986a7ce
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583439"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330938"
 ---
 # <a name="using-async-for-file-access-c"></a>Использование метода Async для доступа к файлам (C#)
 Для доступа к файлам можно использовать функцию Async. При использовании функции Async вы можете вызывать асинхронные методы без использования обратных вызовов или разделения вашего кода на множество методов или лямбда-выражений. Для выполнения последовательного кода асинхронно просто вызовите асинхронный метод вместо синхронного метода и добавьте несколько ключевых слов в код.  
@@ -47,7 +47,7 @@ using System.Threading.Tasks;
  Следующие примеры записывают текст в файл. На каждой точке await происходит немедленный выход из метода. После завершения файлового ввода-вывода метод возобновляет работу с пункта, следующего за await. Обратите внимание, что модификатор async в определении методов требует наличия await в теле метода.  
   
 ```csharp  
-public async void ProcessWrite()  
+public async Task ProcessWriteAsync()  
 {  
     string filePath = @"temp2.txt";  
     string text = "Hello World\r\n";  
@@ -81,7 +81,7 @@ await theTask;
  Следующий пример считывает текст из файла. Текст добавляется в буфер обмена, а затем, в данном случае, помещается в <xref:System.Text.StringBuilder>. В отличие от предыдущего примера await выдаёт в результате значение. Метод <xref:System.IO.Stream.ReadAsync%2A> возвращает <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, поэтому по завершении операции оценка await выдает значение `Int32` (`numRead`). Дополнительные сведения см. в разделе [Асинхронные типы возвращаемых значений (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   
 ```csharp  
-public async void ProcessRead()  
+public async Task ProcessReadAsync()  
 {  
     string filePath = @"temp2.txt";  
   
@@ -132,7 +132,7 @@ private async Task<string> ReadTextAsync(string filePath)
  Обратите внимание, что любое увеличение производительности зависит почти полностью от параллельной, а не асинхронной обработки. Преимущества асинхронности в том, что она не привязана к количеству потоков и не связана с потоком пользовательского интерфейса.  
   
 ```csharp  
-public async void ProcessWriteMult()  
+public async Task ProcessWriteMultAsync()  
 {  
     string folder = @"tempfolder\";  
     List<Task> tasks = new List<Task>();  

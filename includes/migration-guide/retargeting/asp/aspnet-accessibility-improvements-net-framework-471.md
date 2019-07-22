@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 100b34941b045619c7424921f9315e679f173a60
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: a58ea1a16824cf4a1407221dfb0123efa79e48f9
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67859004"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68235678"
 ---
 ### <a name="aspnet-accessibility-improvements-in-net-framework-471"></a>Усовершенствованные специальные возможности ASP.NET в .NET Framework 4.7.1
 
@@ -15,4 +15,3 @@ ms.locfileid: "67859004"
 |Область|Дополнительный номер|
 |Версия|4.7.1|
 |Тип|Изменение целевой платформы|
-

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5d8c5dcadcea446a88e2ccaa73b1be91eea0956b
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 79a251f3d08a253db2e1a805113f46f83c6a9410
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67859170"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68235537"
 ---
 ### <a name="wpf-grid-allocation-of-space-to-star-columns"></a>Выделение пространства для *-столбцов в элементе Grid WPF
 
@@ -15,4 +15,3 @@ ms.locfileid: "67859170"
 |Область|Дополнительный номер|
 |Версия|4.7|
 |Тип|Изменение целевой платформы|
-

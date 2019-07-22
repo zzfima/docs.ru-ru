@@ -3,12 +3,12 @@ title: История языка C# (руководство по C#)
 description: На что был похож этот язык в ранних версиях и во что он превратился сейчас?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 351e4de01a7c3c50cb815a99f0bde546848a9e51
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8230efcbcdd67cc99f321efc6509df3665d9f2f7
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423239"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363875"
 ---
 # <a name="the-history-of-c"></a>История языка C\#
 
@@ -56,7 +56,7 @@ ms.locfileid: "66423239"
 
 - [Универсальные шаблоны](../programming-guide/generics/index.md)
 - [Разделяемые типы](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
-- [Анонимные методы](../programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [Анонимные методы](../language-reference/operators/delegate-operator.md)
 - [Типы, допускающие значения NULL](../programming-guide/nullable-types/index.md)
 - [Итераторы](../programming-guide/concepts/iterators.md)
 - [Ковариантность и контравариантность](../programming-guide/concepts/covariance-contravariance/index.md)
@@ -122,7 +122,7 @@ C# версии 3.0 был выпущен в конце 2007 года вмест
 - [Асинхронные члены](../async.md)
 - [Информационные атрибуты вызывающего объекта](../programming-guide/concepts/caller-information.md)
 
-### <a name="see-also"></a>См. также раздел
+### <a name="see-also"></a>См. также
 
 * [Code Project. Информационные атрибуты вызывающего объекта в C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 

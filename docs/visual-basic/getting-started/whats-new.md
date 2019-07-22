@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 5b1547f596a0ff1c52a402f90457dced6ef604a0
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 49c39e12aa67b1f36fc46c21f5d2b23223b3264d
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611800"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238638"
 ---
 # <a name="whats-new-for-visual-basic"></a>Новые возможности Visual Basic
 
@@ -122,7 +122,7 @@ Dim number As Integer = &H_C305_F860
 
 **Дополнительные параметры компилятора**
 
-Теперь компилятор командной строки Visual Basic поддерживает параметры [**-refout**](../reference/command-line-compiler/refout-compiler-option.md) и [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) для управления выводом базовых сборок. **-refout** определяет выходной каталог базовой сборки, а **-refonly** указывает, что в результате компиляции будет выводиться только базовая сборка.
+Теперь компилятор командной строки Visual Basic поддерживает параметры [ **-refout**](../reference/command-line-compiler/refout-compiler-option.md) и [ **-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) для управления выводом базовых сборок. **-refout** определяет выходной каталог базовой сборки, а **-refonly** указывает, что в результате компиляции будет выводиться только базовая сборка.
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -174,7 +174,7 @@ Dim number As Integer = &H_C305_F860
 
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
-[Nameof](../../csharp/language-reference/keywords/nameof.md)
+[Nameof](../../csharp/language-reference/operators/nameof.md)
 
 Можно получить неполное имя строки типа или элемента для использования в сообщении об ошибке, не выполняя жесткого программирования строки.  Это позволяет сохранить правильный код при рефакторинге.  Эта возможность также полезна для прикрепления связей MVC контроллера model-view-controller и инициирования событий изменения свойств.
 

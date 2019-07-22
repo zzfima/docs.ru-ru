@@ -9,15 +9,16 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 346cfccd076866e9c321974aaa8c8ddd367a17ea
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 3bf71bbe0e3f4e14f140f5a1b98a662ceaaea419
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859580"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68362994"
 ---
 # <a name="async-c-reference"></a>async (справочник по C#)
-Модификатор `async` позволяет указать, что метод, [лямбда-выражение](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) или [анонимный метод](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) является асинхронным. Если этот модификатор используется в методе или выражении, они называются *асинхронными методами*. Ниже приводится пример асинхронного метода с именем `ExampleMethodAsync`: 
+
+Модификатор `async` позволяет указать, что метод, [лямбда-выражение](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) или [анонимный метод](../../../csharp/language-reference/operators/delegate-operator.md) является асинхронным. Если этот модификатор используется в методе или выражении, они называются *асинхронными методами*. Ниже приводится пример асинхронного метода с именем `ExampleMethodAsync`:
   
 ```csharp  
 public async Task<int> ExampleMethodAsync()  
@@ -25,7 +26,7 @@ public async Task<int> ExampleMethodAsync()
     // . . . .  
 }  
 ```  
- 
+
 Если вы только начали заниматься асинхронным программированием или не понимаете, как в асинхронном методе используется ключевое слово `await` для выполнения потенциально долгой работы без блокировки потока вызывающего объекта, ознакомьтесь с общими сведениями в статье [Асинхронное программирование с использованием ключевых слов Async и Await](../../../csharp/programming-guide/concepts/async/index.md). Следующий код размещается внутри асинхронного метода и вызывает метод <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType>: 
   
 ```csharp  
