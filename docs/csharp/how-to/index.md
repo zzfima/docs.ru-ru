@@ -2,16 +2,16 @@
 title: Статьи с практическими руководствами (руководств по языку C#)
 description: Коллекция советов и кратких конкретных примеров кода
 ms.date: 12/20/2017
-ms.openlocfilehash: 63410d687bd09f95a5ce7ce9304f2281b2f8d334
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 09e39e3c9bea5d4b9240039e37d2a5998fe1ebf8
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859536"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400737"
 ---
 # <a name="how-to-c"></a>Практическое руководство (C#)
 
-В практическом руководстве по языку C# в разделе с инструкциями содержатся ответы на часто задаваемые вопросы. В некоторых случаях статьи могут быть указаны в нескольких разделах. Мы хотели упростить их обнаружение при использовании нескольких вариантов поиска. 
+В практическом руководстве по языку C# в разделе с инструкциями содержатся ответы на часто задаваемые вопросы. В некоторых случаях статьи могут быть указаны в нескольких разделах. Мы хотели упростить их обнаружение при использовании нескольких вариантов поиска.
 
 ## <a name="general-c-concepts"></a>Основные понятия C#
 
@@ -19,7 +19,6 @@ ms.locfileid: "67859536"
 
 - [Инициализация объектов с помощью инициализатора объектов](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md).
 - [Различия между передачей структуры и класса в метод](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
-- [Использование лямбда-выражений](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).
 - [Устранение конфликтов имен типов с помощью псевдонима глобального пространства имен](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
 - [Использование перегрузки операторов](../language-reference/operators/operator-overloading.md).
 - [Реализация и вызов пользовательского метода расширения](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
