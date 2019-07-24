@@ -2,12 +2,12 @@
 title: Управление версиями языка C# — руководство по C#
 description: Дополнительные сведения о том, как версия языка C# определяется на основе вашего проекта и какие значения можно настроить вручную.
 ms.date: 07/10/2019
-ms.openlocfilehash: 2d593ca0588f291c61cdf52fbc1eb60a1f3f7ecb
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e35fdf2bcdb1a31b752c760f3f6df59232e498a4
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859605"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236094"
 ---
 # <a name="c-language-versioning"></a>Управление версиями языка C#
 
@@ -34,7 +34,7 @@ ms.locfileid: "67859605"
 
 - Вручную изменить [файл проекта](#edit-the-project-file).
 - задание языковой версии [для нескольких проектов в подкаталоге](#configure-multiple-projects);
-- настройка [параметра компилятора `-langversion`](#set-the-langversion-compiler-option).
+- настройка [параметра компилятора `-langversion`](compiler-options/langversion-compiler-option.md).
 
 ### <a name="edit-the-project-file"></a>Изменение файла проекта
 

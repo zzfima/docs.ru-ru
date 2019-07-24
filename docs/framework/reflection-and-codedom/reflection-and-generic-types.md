@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0536acbcc71ae7792ec668ac352e95e604bd979
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 05b1d80887186466044acdb088d7f45a386b37f7
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591370"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364032"
 ---
 # <a name="reflection-and-generic-types"></a>Отражение и универсальные типы
 <a name="top"></a> С точки зрения отражения различие между универсальным типом и обычным заключается в том, что с универсальным типом связан набор параметров типа (если это определение универсального типа) или аргументы типа (если это сконструированный тип). Универсальный метод отличается от обычного тем же.  
@@ -134,7 +134,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
  Чтобы определить, является ли параметр типа ковариантным или контравариантным, примените маску <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> к значению <xref:System.Reflection.GenericParameterAttributes> , возвращаемому свойством <xref:System.Type.GenericParameterAttributes%2A> . Если результатом является <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, параметр типа является инвариантным. См. раздел [Ковариация и контрвариация](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
 #### <a name="special-constraints"></a>Особые ограничения  
- Чтобы определить особые ограничения параметра типа, примените маску <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> к значению <xref:System.Reflection.GenericParameterAttributes> , возвращаемому свойством <xref:System.Type.GenericParameterAttributes%2A> . Если результатом является <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, специальные ограничения отсутствуют. Параметр типа может быть ограничен ссылочным типом, являться типом значения, не допускающим значения NULL, и иметь конструктор по умолчанию.  
+ Чтобы определить особые ограничения параметра типа, примените маску <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> к значению <xref:System.Reflection.GenericParameterAttributes> , возвращаемому свойством <xref:System.Type.GenericParameterAttributes%2A> . Если результатом является <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, специальные ограничения отсутствуют. Параметр типа может быть ограничен ссылочным типом, являться типом значения, не допускающим значения NULL, и иметь конструктор без параметров.  
   
  [К началу](#top)  
   
@@ -147,7 +147,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|ОПИСАНИЕ|  
 |-----------|-----------------|  
 |[Практическое руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|Показано использование свойств и методов <xref:System.Type> и <xref:System.Reflection.MethodInfo> для изучения универсальных типов.|  
 |[Универсальные шаблоны](../../../docs/standard/generics/index.md)|Описана универсальность и поддержка этой технологии в .NET Framework.|  

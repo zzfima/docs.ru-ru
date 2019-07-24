@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: dd9b77a90030a96d17104c8c0e48964b6a85d165
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 546feb6f3c4515ceecdb5b5afa14c0fc99ab7020
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125737"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363910"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Лямбда-выражения (руководство по программированию на C#)
 
@@ -41,8 +41,6 @@ ms.locfileid: "58125737"
 [!code-csharp-interactive[lambda is argument](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 
 При использовании синтаксиса на основе методов для вызова метода <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> в классе <xref:System.Linq.Enumerable?displayProperty=nameWithType> (как это делается в LINQ to Objects и LINQ to XML) параметром является тип делегата <xref:System.Func%602?displayProperty=nameWithType>. Лямбда-выражение — это наиболее удобный способ создания делегата. При вызове метода <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> в классе <xref:System.Linq.Queryable?displayProperty=nameWithType> (как это делается в LINQ to SQL) типом параметра является тип дерева выражения [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>). Опять же, лямбда-выражения представляют собой самый быстрый способ построения дерева выражений. Лямбда-выражения позволяют вызовам `Select` выглядеть одинаково, хотя на самом деле объект, созданный из лямбда-выражения, имеет другой тип.
-
-Все ограничения, применяемые к [анонимным методам](anonymous-methods.md), применяются также к лямбда-выражениям.
   
 ## <a name="expression-lambdas"></a>Выражения-лямбды
 
@@ -82,7 +80,7 @@ ms.locfileid: "58125737"
 
 [!code-csharp-interactive[statement lambda](~/samples/snippets/csharp/programming-guide/lambda-expressions/ExpressionAndStatementLambdas.cs#StatementLambda)]
 
-Лямбды операторов, как и анонимные методы, не могут использоваться для создания деревьев выражений.
+Лямбды операторов нельзя использовать для создания деревьев выражений.
   
 ## <a name="async-lambdas"></a>Асинхронные лямбда-выражения
 
@@ -196,9 +194,9 @@ customers.Where(c => c.City == "London");
   
 Обратите внимание, что у лямбда-выражений нет типа, так как в системе общих типов изначально отсутствует такое понятие, как лямбда-выражения. Но применительно к лямбда-выражениям иногда бывает удобно оперировать понятием типа. При этом под типом понимается тип делегата или тип <xref:System.Linq.Expressions.Expression> , в который преобразуется лямбда-выражение.
 
-## <a name="variable-scope-in-lambda-expressions"></a>Область действия переменной в лямбда-выражениях
+## <a name="capture-of-outer-variables-and-variable-scope-in-lambda-expressions"></a>Запись внешних переменных и области видимости переменной в лямбда-выражениях
 
-Лямбда-выражения могут ссылаться на *внешние переменные* (см. раздел [Анонимные методы](anonymous-methods.md)), находящиеся в области метода, в котором определено лямбда-выражение, или области типа, который содержит лямбда-выражение. Переменные, полученные таким способом, сохраняются для использования в лямбда-выражениях, даже если бы в ином случае они оказались за границами области действия и уничтожились сборщиком мусора. Внешняя переменная должна быть определенным образом присвоена, прежде чем она сможет использоваться в лямбда-выражениях. В следующем примере демонстрируются эти правила.
+Лямбда-выражения могут ссылаться *на внешние переменные*. Это переменные в области метода, в котором определено лямбда-выражение, или области типа, который содержит лямбда-выражение. Переменные, полученные таким способом, сохраняются для использования в лямбда-выражениях, даже если бы в ином случае они оказались за границами области действия и уничтожились сборщиком мусора. Внешняя переменная должна быть определенным образом присвоена, прежде чем она сможет использоваться в лямбда-выражениях. В следующем примере демонстрируются эти правила.
 
 [!code-csharp[variable scope](~/samples/snippets/csharp/programming-guide/lambda-expressions/VariableScopeWithLambdas.cs#VariableScope)]
 
@@ -226,7 +224,6 @@ customers.Where(c => c.City == "London");
 
 - [Руководство по программированию на C#](../index.md)
 - [Встроенный язык запросов LINQ](../concepts/linq/index.md)
-- [Анонимные методы](anonymous-methods.md)
 - [Деревья выражений](../concepts/expression-trees/index.md)
 - [Локальные функции в сравнении с лямбда-выражениями](../../local-functions-vs-lambdas.md)
 - [Неявно типизированные лямбда-выражения](../../implicitly-typed-lambda-expressions.md)

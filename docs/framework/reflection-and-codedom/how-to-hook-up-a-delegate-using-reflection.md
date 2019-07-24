@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4640e776cc76ef56227858f6a4aa04e77ecbbdc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8b07c3eb9d96bb6f675a6a2ca742cc9bdf3c3826
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586000"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364062"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Практическое руководство. Подключение делегата с помощью отражения
 При использовании отражения для загрузки и запуска сборок невозможно использовать функциональные возможности языка, такие как оператор C# `+=` или [оператор AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) в Visual Basic. В следующих процедурах показано, как подключить существующий метод к событию посредством получения всех необходимых типов через отражение и как создать динамический метод с помощью порожденного отражения и подключить этот метод к событию.  
@@ -33,7 +33,7 @@ ms.locfileid: "65586000"
      [!code-csharp[HookUpDelegate#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#3)]
      [!code-vb[HookUpDelegate#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#3)]  
   
-2. Получите объект <xref:System.Type>, который представляет тип, и создайте экземпляр типа. Метод <xref:System.Activator.CreateInstance%28System.Type%29> используется в следующем коде, так как эта форма имеет конструктор по умолчанию. Существует несколько других перегрузок метода <xref:System.Activator.CreateInstance%2A>, которые можно использовать, если создаваемый тип не имеет конструктора по умолчанию. Новый экземпляр сохраняется как тип <xref:System.Object> для поддержки утверждения, что об этой сборке ничего не известно. (Отражение позволяет получить типы в сборке, заведомо не зная их имена.)  
+2. Получите объект <xref:System.Type>, который представляет тип, и создайте экземпляр типа. Метод <xref:System.Activator.CreateInstance%28System.Type%29> используется в следующем коде, так как эта форма имеет конструктор без параметров. Существует несколько других перегрузок метода <xref:System.Activator.CreateInstance%2A>, которые можно использовать, если создаваемый тип не имеет конструктор без параметров. Новый экземпляр сохраняется как тип <xref:System.Object> для поддержки утверждения, что об этой сборке ничего не известно. (Отражение позволяет получить типы в сборке, заведомо не зная их имена.)  
   
      [!code-cpp[HookUpDelegate#4](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#4)]
      [!code-csharp[HookUpDelegate#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#4)]

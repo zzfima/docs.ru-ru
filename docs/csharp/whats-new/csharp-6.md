@@ -2,12 +2,12 @@
 title: Новые возможности C# 6. Руководство по языку C#
 description: Сведения о новых возможностях в C# 6
 ms.date: 12/12/2018
-ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 49247109bd1acbf697f5700b5cfe9a2b85393b2c
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920679"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68235722"
 ---
 # <a name="whats-new-in-c-6"></a>Новые возможности C# 6
 
@@ -137,7 +137,7 @@ var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 
 ## <a name="the-nameof-expression"></a>Выражение `nameof`
 
-Результатом выражения `nameof` является имя символа. Это отличный способ заставить инструменты работать, если вам требуется имя переменной, свойства или поля члена. Одно из наиболее распространенных применений `nameof` — предоставление имени символа, который вызвал исключение:
+Результатом применения выражения [nameof](../language-reference/operators/nameof.md) является имя символа. Это отличный способ заставить инструменты работать, если вам требуется имя переменной, свойства или поля члена. Одно из наиболее распространенных применений `nameof` — предоставление имени символа, который вызвал исключение:
 
 [!code-csharp[nameof](../../../samples/snippets/csharp/new-in-6/NewCode.cs#UsingStaticString)]
 

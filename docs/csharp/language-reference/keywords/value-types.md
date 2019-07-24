@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: fd865f2a9c4a6d2c17f79a21866103a2db982e5f
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 72771ee494b6be7142ce3f9bec43dcb8aa8a8401
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661591"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363083"
 ---
 # <a name="value-types-c-reference"></a>Типы значений (справочник по C#)
 
@@ -88,7 +88,7 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-Оператор [new](../operators/new-operator.md) вызывает конструктор без параметров конкретного типа и присваивает переменной значение по умолчанию. В приведенном выше примере конструктору без параметров присвоено значение `0` для `myInt`. Дополнительные сведения о значениях, присваиваемых путем вызова конструктора по умолчанию, см. в разделе [Таблица значений по умолчанию (справочник по C#)](default-values-table.md).
+Оператор [new](../operators/new-operator.md) вызывает конструктор без параметров конкретного типа и присваивает переменной значение по умолчанию. В приведенном выше примере конструктору без параметров присвоено значение `0` для `myInt`. См. подробнее о значениях, присваиваемых путем вызова конструктора без параметров в [таблице значений по умолчанию](default-values-table.md).
 
 С определяемыми пользователем типами используйте [new](../operators/new-operator.md) для вызова конструктора без параметров. Например, следующая инструкция вызывает конструктор без параметров структуры `Point`:
 

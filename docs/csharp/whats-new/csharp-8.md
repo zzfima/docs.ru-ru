@@ -2,12 +2,12 @@
 title: Новые возможности C# 8.0. Руководство по языку C#
 description: Обзор новых функций, доступных в C# 8.0. В этой статье представлены возможности предварительной версии 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: 962829b68c5d02c3a7e563a00d391c4698024d47
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: bf67baba926effd012ae01d3d802ba921e41ad5a
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397772"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363899"
 ---
 # <a name="whats-new-in-c-80"></a>Новые возможности C# 8.0
 
@@ -265,7 +265,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
     using var file = new System.IO.StreamWriter("WriteLines2.txt");
     foreach (string line in lines)
     {
-        // If the line doesn't contain the word 'Second', write the line to the file.
         if (!line.Contains("Second"))
         {
             file.WriteLine(line);
@@ -275,7 +274,7 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 }
 ```
 
-В приведенном выше примере файл удаляется при достижении закрывающей фигурной скобки метода. Это конец области, в котором объявляется `file`. Приведенный выше код эквивалентен следующему коду, в котором используется классическая инструкция [using](../language-reference/keywords/using-statement.md):
+В приведенном выше примере файл удаляется при достижении закрывающей фигурной скобки метода. Это конец области, в котором объявляется `file`. Приведенный выше код эквивалентен следующему коду, в котором используется классическая [инструкция using](../language-reference/keywords/using-statement.md):
 
 ```csharp
 static void WriteLinesToFile(IEnumerable<string> lines)
@@ -284,7 +283,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
     {
         foreach (string line in lines)
         {
-            // If the line doesn't contain the word 'Second', write the line to the file.
             if (!line.Contains("Second"))
             {
                 file.WriteLine(line);
@@ -296,7 +294,7 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 
 В приведенном выше примере файл удаляется при достижении закрывающей фигурной скобки, связанной с инструкцией `using`.
 
-В обоих случаях компилятор создает вызов метода `Dispose()`. Компилятор создает ошибку, если выражение в инструкции using не может быть удалено.
+В обоих случаях компилятор создает вызов метода `Dispose()`. Компилятор создает ошибку, если выражение в инструкции `using` нельзя удалить.
 
 ## <a name="static-local-functions"></a>Статические локальные функции
 

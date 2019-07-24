@@ -4,12 +4,12 @@ description: Из этого руководства вы узнаете, как 
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 16edb129be679179450c485ced2586cea9ed9763
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 81b3ce2d6ebb73648d9026c92f490dcc723014f6
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609298"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331044"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Учебник. Контейнеризация приложения .NET Core
 
@@ -174,10 +174,10 @@ myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
 
 Файл *Dockerfile* используется командой `docker build` для создания образа контейнера. Это текстовый файл с именем *Dockerfile* и без расширения.
 
-В окне терминала перейдите на папку вверх от рабочей папки, созданной в начале. Создайте файл с именем *Dockerfile* в рабочей папке и откройте его в текстовом редакторе. Добавьте следующую команду в первую строку файла:
+В окне терминала перейдите к каталогу на один уровень выше рабочей папки, созданной ранее. Создайте файл с именем *Dockerfile* в рабочей папке и откройте его в текстовом редакторе. Добавьте следующую команду в первую строку файла:
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
+FROM mcr.microsoft.com/dotnet/core/runtime:2.2
 ```
 
 Команда `FROM` указывает Docker вызвать образ с тегом **2.2** из репозитория **mcr.microsoft.com/dotnet/core/runtime**. Убедитесь, что вы вызываете среду выполнения .NET Core, версия которой соответствует версии среды выполнения, с которой работает пакет SDK. Например, приложение, созданное в предыдущем разделе, использует пакет SDK для .NET Core версии 2.2. Также было создано приложение для .NET Core 2.2. Поэтому базовый образ, который указан в файле *Dockerfile*, должен иметь тег **2.2**.
@@ -205,7 +205,13 @@ docker-working
     └───obj
 ```
 
-В окне терминала выполните команду `docker build -t myimage -f Dockerfile .`, и Docker обработает все строки файла *Dockerfile*. Символ `.` в команде `docker build` указывает Docker выполнить поиск файла *Dockerfile* в текущей папке. Эта команда создает образ и локальный репозиторий с именем **myimage**, который указывает на такой образ. После завершения работы этой команды выполните команду `docker images`, чтобы просмотреть список установленных образов:
+В терминале выполните следующую команду:
+
+```console
+docker build -t myimage -f Dockerfile .
+```
+
+Docker обработает все строки файла *Dockerfile*. Символ `.` в команде `docker build` используется, чтобы выполнить с помощью Docker поиск файла *Dockerfile* в текущей папке. Эта команда создает образ и локальный репозиторий с именем **myimage**, который указывает на такой образ. После завершения работы этой команды выполните команду `docker images`, чтобы просмотреть список установленных образов:
 
 ```console
 > docker images
@@ -224,7 +230,7 @@ ENTRYPOINT ["dotnet", "app/myapp.dll"]
 
 Команда `COPY` предписывает Docker скопировать указанную папку на вашем компьютере в папку в контейнере. В этом примере папка **publish** копируется в папку с именем **app** в контейнере.
 
-Следующая команда, `ENTRYPOINT`, указывает Docker настроить контейнер для запуска в качестве исполняемого файла. При запуске контейнера выполняется команда `ENTRYPOINT`. После выполнения команды контейнер автоматически остановится.
+Следующая команда `ENTRYPOINT` используется, чтобы настроить с помощью Docker контейнер для запуска в качестве исполняемого файла. При запуске контейнера выполняется команда `ENTRYPOINT`. После выполнения команды контейнер автоматически остановится.
 
 В окне терминала выполните команду `docker build -t myimage -f Dockerfile .`, а после ее выполнения — команду `docker images`.
 
@@ -241,7 +247,6 @@ Removing intermediate container f34da5c18e7c
  ---> ddcc6646461b
 Successfully built ddcc6646461b
 Successfully tagged myimage:latest
-
 
 > docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE

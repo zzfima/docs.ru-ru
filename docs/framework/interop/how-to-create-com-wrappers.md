@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0e34785fce3cd88bfe4fe4b075ba34b8d22bff4
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: e10b6fd7df003de739b57bbb3e17deb46215763f
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469660"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364003"
 ---
 # <a name="how-to-create-com-wrappers"></a>Практическое руководство. Создание оболочек COM
 
@@ -53,7 +53,7 @@ ms.locfileid: "65469660"
   
 ### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>Создание вызываемой оболочки COM с использованием Visual Studio  
   
-1. Создайте проект библиотеки классов для управляемого класса, который требуется выполнять в машинном коде. Этот класс должен иметь конструктор по умолчанию.  
+1. Создайте проект библиотеки классов для управляемого класса, который требуется выполнять в машинном коде. Класс должен содержать конструктор без параметров.  
   
      Убедитесь, что в файле AssemblyInfo присутствует полный номер версии сборки, состоящий из четырех частей. Этот номер необходим для управления версиями в реестре Windows. Дополнительные сведения о номерах версий см. в разделе [Управление версиями сборки](../../../docs/framework/app-domains/assembly-versioning.md).  
   

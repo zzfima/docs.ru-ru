@@ -5,19 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: eb5721d1c04ad761821bcdae03159f290a802ec0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 27f47d74a6e0775588e40760fe54c281a7f5e233
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979844"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363785"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Использование делегатов (Руководство по программированию на C#)
 [Делегат](../../../csharp/language-reference/keywords/delegate.md) — это тип, который безопасно инкапсулирует метод, схожий с указателем функции в C и C++. В отличие от указателей функций в C делегаты объектно-ориентированы, типобезопасны и безопасны. Тип делегата задается его именем. В следующем примере объявляется делегат с именем `Del`, который может инкапсулировать метод, использующий в качестве аргумента значение [string](../../../csharp/language-reference/keywords/string.md) и возвращающий значение [void](../../../csharp/language-reference/keywords/void.md):  
   
  [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]  
   
- Объект делегата обычно создается указанием имени метода, для которого делегат будет служить оболочкой, или с помощью [анонимного метода](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md). После создания экземпляра делегата вызов метода, выполненный в делегате передается делегатом в этот метод. Параметры, передаваемые делегату вызывающим объектом, передаются в метод, а возвращаемое методом значение (при его наличии) возвращается делегатом в вызывающий объект. Эта процедура называется вызовом делегата. Делегат, для которого создан экземпляр, можно вызвать, как если бы это был метод, для которого создается оболочка. Например:  
+ Объект делегата обычно создается путем указания имени метода, для которого делегат будет служить оболочкой, или с помощью [анонимной функции](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md). После создания экземпляра делегата вызов метода, выполненный в делегате передается делегатом в этот метод. Параметры, передаваемые делегату вызывающим объектом, передаются в метод, а возвращаемое методом значение (при его наличии) возвращается делегатом в вызывающий объект. Эта процедура называется вызовом делегата. Делегат, для которого создан экземпляр, можно вызвать, как если бы это был метод, для которого создается оболочка. Например:  
   
  [!code-csharp[csProgGuideDelegates#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#22)]  
   

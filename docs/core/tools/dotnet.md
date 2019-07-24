@@ -2,12 +2,12 @@
 title: Команда dotnet
 description: Сведения о команде dotnet (универсальном драйвере для средств CLI .NET Core) и ее использовании.
 ms.date: 06/04/2018
-ms.openlocfilehash: 2134bf8ed66157619499b027f01d39e03e84411f
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e1571bea1594b492427bdf5b3a7959733459c54e
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859550"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331023"
 ---
 # <a name="dotnet-command"></a>Команда dotnet
 
@@ -19,7 +19,7 @@ ms.locfileid: "67859550"
 
 ## <a name="synopsis"></a>Краткий обзор
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
@@ -50,11 +50,11 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ## <a name="options"></a>Параметры
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--additional-deps <PATH>`
 
-Путь к дополнительному файлу *deps.json*.
+Путь к дополнительному файлу *.deps.json*.
 
 `--additionalprobingpath <PATH>`
 
@@ -105,7 +105,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--additional-deps <PATH>`
 
-Путь к дополнительному файлу *deps.json*.
+Путь к дополнительному файлу *.deps.json*.
 
 `--additionalprobingpath <PATH>`
 
@@ -175,7 +175,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ### <a name="general"></a>Общие
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 | Команда                                       | Функция                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
@@ -300,7 +300,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ## <a name="environment-variables"></a>Переменные среды
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `DOTNET_PACKAGES`
 

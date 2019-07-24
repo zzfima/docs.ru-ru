@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: 3e5bb96357293c42d4bd2161756260fd849cc099
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 0d2c3f67715b9b2161a6c908576ac9f964ff13d6
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267791"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363131"
 ---
 # <a name="yield-c-reference"></a>yield (справочник по C#)
 
@@ -46,9 +46,9 @@ yield break;
 
 Тип `yield` итератора, который возвращает <xref:System.Collections.IEnumerable> или <xref:System.Collections.IEnumerator>, — `object`.  Если итератор возвращает <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Collections.Generic.IEnumerator%601>, необходимо выполнить неявное преобразование из типа выражения в операторе `yield return` в параметр универсального типа.
 
-Ниже указаны методы, в которых операторы `yield return` и `yield break` использовать нельзя.
+Нельзя включать инструкцию `yield return` или `yield break`:
 
-- Анонимные методы. Дополнительные сведения см. в разделе [Анонимные методы](../../programming-guide/statements-expressions-operators/anonymous-methods.md).
+- [Лямбда-выражения](../../programming-guide/statements-expressions-operators/lambda-expressions.md) и [анонимные методы](../operators/delegate-operator.md).
 
 - Методы, содержащие небезопасные блоки. Дополнительные сведения см. в разделе [unsafe](unsafe.md).
 

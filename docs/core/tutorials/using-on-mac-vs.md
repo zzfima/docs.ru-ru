@@ -2,14 +2,14 @@
 title: Начало работы с .NET Core в macOS с помощью Visual Studio для Mac
 description: В этом разделе рассматривается создание простого консольного приложения с помощью Visual Studio для Mac и .NET Core.
 author: mairaw
-ms.date: 06/12/2017
+ms.date: 07/11/2019
 ms.custom: seodec18
-ms.openlocfilehash: 4467842c0b65ea536cc26601981d9fcc2bc68f2d
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: a6d58d2a54ce9742542a3f7e5c9378be89b8f89a
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300053"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870515"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Начало работы с .NET Core в macOS с помощью Visual Studio для Mac
 
@@ -24,21 +24,25 @@ Visual Studio для Mac предоставляет полнофункциона
 
 См. раздел с перечислением [необходимых компонентов для .NET Core в Mac](../../core/macos-prerequisites.md).
 
+Просмотрите руководство по [поддержке .NET Core](https://docs.microsoft.com/visualstudio/mac/net-core-support?view=vsmac-2019) и убедитесь, что вы используете поддерживаемую версию .NET Core.
+
 ## <a name="get-started"></a>Начало работы
 
 Если вы уже установили необходимые компоненты и Visual Studio для Mac, пропустите этот раздел и перейдите к разделу [Создание проекта](#creating-a-project). Выполните следующие действия, чтобы установить необходимые компоненты и Visual Studio для Mac:
 
-Скачайте [установщик Visual Studio для Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Запустите установщик. Прочитайте и примите условия лицензионного соглашения. Во время установки у вас будет возможность установить Xamarin — технологию разработки кроссплатформенных мобильных приложений. Установка Xamarin и связанных ее компонентов является необязательным шагом для разработки .NET Core. Пошаговые инструкции по установке Visual Studio для Mac см. в документации по [Visual Studio для Mac](/visualstudio/mac/). После завершения установки запустите интегрированную среду разработки Visual Studio для Mac.
+Скачайте [установщик Visual Studio для Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Запустите установщик. Прочитайте и примите условия лицензионного соглашения. Во время установки выберите вариант с установкой .NET Core. У вас будет возможность установить Xamarin — технологию разработки кроссплатформенных мобильных приложений. Установка Xamarin и связанных ее компонентов является необязательным шагом для разработки .NET Core. Пошаговые инструкции по установке Visual Studio для Mac см. в документации по [Visual Studio для Mac](/visualstudio/mac/). После завершения установки запустите интегрированную среду разработки Visual Studio для Mac.
 
 ## <a name="creating-a-project"></a>Создание проекта
 
-1. На экране приветствия выберите **Создать проект**.
+1. Нажмите кнопку **Создать** в окне запуска.
 
-   ![Кнопка "Создать проект" на экране приветствия в Visual Studio для Mac](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
+   ![Кнопка "Создать" на экране запуска Visual Studio для Mac](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 
 1. В узле **.NET Core** диалогового окна **Создание проекта** выберите **Приложение**. Выберите шаблон **Консольное приложение** и нажмите кнопку **Далее**.
 
    ![Список шаблонов для создания проектов](./media/using-on-mac-vs/visual-studio-mac-new-dialog.png)
+
+1. Если у вас установлено несколько версий .NET Core, выберите нужную версию для своего проекта.
 
 1. Введите "HelloWorld" в поле **Имя проекта**. Выберите **Создать**.
 
@@ -50,7 +54,7 @@ Visual Studio для Mac предоставляет полнофункциона
 
 ## <a name="run-the-application"></a>Запуск приложения
 
-Запустите приложение в режиме отладки с помощью клавиши <kbd>F5</kbd> или в режиме выпуска с помощью сочетания клавиш <kbd>CTRL</kbd>+<kbd>F5</kbd>.
+Запустите приложение в режиме отладки, нажав клавиши ⌘ ↵ (Command + ВВОД), или в режиме выпуска, нажав клавиши ⌥ ⌘ ↵ (Option + Command + ВВОД).
 
 ![В области вывода приложения отображается "Hello World!"](./media/using-on-mac-vs/visual-studio-mac-output.png)
 

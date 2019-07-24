@@ -2,12 +2,12 @@
 title: Команда dotnet publish
 description: Команда dotnet publish публикует проект .NET Core в каталоге.
 ms.date: 05/29/2018
-ms.openlocfilehash: 24490bd0fbfca65692d7025b5ed2aea659c35473
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 8cefeae17e464e14abc54dce1feb414a72c44164
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611553"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331031"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -19,7 +19,7 @@ ms.locfileid: "59611553"
 
 ## <a name="synopsis"></a>Краткий обзор
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-build] [--no-dependencies]
@@ -45,13 +45,13 @@ dotnet publish [-h|--help]
 
 ---
 
-## <a name="description"></a>Описание
+## <a name="description"></a>ОПИСАНИЕ
 
 `dotnet publish` компилирует приложение, считывает его зависимости, указанные в файле проекта, и публикует итоговый набор файлов в каталоге. Выходные данные включают следующие ресурсы:
 
 * Код на промежуточном языке (IL) в сборке с расширением *DLL*.
 * Файл *.deps.json*, содержащий все зависимости проекта.
-* Файл *.runtime.config.json*, указывающий общую среду выполнения, которую ожидает приложение, а также другие параметры конфигурации для среды выполнения (например, тип сборки мусора).
+* Файл *.runtimeconfig.json*, определяющий общую среду выполнения, которую ожидает приложение, а также другие параметры конфигурации для среды выполнения (например, тип сборки мусора).
 * Зависимости приложения, которые копируются из кэша NuGet в выходную папку.
 
 Выходные данные команды `dotnet publish` готовы к развертыванию в размещающей системе (например, на сервере, ПК, Mac, ноутбуке) для выполнения. Это единственный официальный способ подготовить приложение к развертыванию. В зависимости от указанного в проекте типа развертывания размещающая система может как иметь, так и не иметь общую среду выполнения .NET Core. Дополнительные сведения см. в разделе [Развертывание приложений .NET Core](../deploying/index.md). Структуру каталогов опубликованного приложения см. в разделе [Структура каталогов](/aspnet/core/hosting/directory-structure).
@@ -66,7 +66,7 @@ dotnet publish [-h|--help]
 
 ## <a name="options"></a>Параметры
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `-c|--configuration {Debug|Release}`
 

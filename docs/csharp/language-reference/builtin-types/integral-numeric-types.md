@@ -32,35 +32,40 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 0a1ed01d9e6cb86ea177e8b947627f9dc02eedae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dfb1298abaff0cfe8eae7536f94511a30012a4a9
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744217"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236075"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Целочисленные типы (справочник по C#)
 
-**Целочисленные типы** — это подмножество **простых типов**. Они могут инициализироваться [*литералами*](#integral-literals). Кроме того, все целочисленные типы являются типами значений.
+**Целочисленные типы** — это подмножество **простых типов**. Они могут инициализироваться [*литералами*](#integral-literals). Кроме того, все целочисленные типы являются типами значений. Все целочисленные типы поддерживают [арифметические](../operators/arithmetic-operators.md) операторы, [побитовые логические](../operators/bitwise-and-shift-operators.md) операторы, операторы [сравнения и равенства](../operators/equality-operators.md).
 
-Все целочисленные типы поддерживают [арифметические](../operators/arithmetic-operators.md) операторы, [побитовые логические](../operators/bitwise-and-shift-operators.md) операторы, операторы [сравнения и равенства](../operators/equality-operators.md).
+## <a name="characteristics-of-the-integral-types"></a>Характеристики целочисленных типов
 
-## <a name="sizes-and-ranges"></a>Размеры и диапазоны
+C# поддерживает следующие предварительно определенные целочисленные типы:
 
-В таблице ниже приводятся сведения о размерах и диапазонах для целочисленных типов.
+|Ключевое слово или тип C#|Диапазон|Размер|Тип .NET|
+|----------|-----------|----------|-------------|
+|`sbyte`|От -128 до 127|8-разрядное целое число со знаком|<xref:System.SByte?displayProperty=nameWithType>|
+|`byte`|От 0 до 255|8-разрядное целое число без знака|<xref:System.Byte?displayProperty=nameWithType>|
+|`short`|От -32 768 до 32 767|16-разрядное целое число со знаком|<xref:System.Int16?displayProperty=nameWithType>|
+|`ushort`|От 0 до 65 535|16-разрядное целое число без знака|<xref:System.UInt16?displayProperty=nameWithType>|
+|`int`|От -2 147 483 648 до 2 147 483 647|32-разрядное целое число со знаком|<xref:System.Int32?displayProperty=nameWithType>|
+|`uint`|От 0 до 4 294 967 295|32-разрядное целое число без знака|<xref:System.UInt32?displayProperty=nameWithType>|
+|`long`|От -9 223 372 036 854 775 808 до 9 223 372 036 854 775 807|64-разрядное целое число со знаком|<xref:System.Int64?displayProperty=nameWithType>|
+|`ulong`|От 0 до 18 446 744 073 709 551 615|64-разрядное целое число без знака|<xref:System.UInt64?displayProperty=nameWithType>|
 
-|Тип|Диапазон|Размер|  
-|----------|-----------|----------|  
-|`sbyte`|От -128 до 127|8-разрядное целое число со знаком|  
-|`byte`|От 0 до 255|8-разрядное целое число без знака|  
-|`short`|От -32 768 до 32 767|16-разрядное целое число со знаком|  
-|`ushort`|От 0 до 65 535|16-разрядное целое число без знака|  
-|`int`|От -2 147 483 648 до 2 147 483 647|32-разрядное целое число со знаком|  
-|`uint`|От 0 до 4 294 967 295|32-разрядное целое число без знака|  
-|`long`|От -9 223 372 036 854 775 808 до 9 223 372 036 854 775 807|64-разрядное целое число со знаком|  
-|`ulong`|От 0 до 18 446 744 073 709 551 615|64-разрядное целое число без знака|  
+В приведенной выше таблице каждый тип ключевого слова C# из крайнего левого столбца является псевдонимом для соответствующего типа .NET. Они взаимозаменяемые. Например, следующие объявления объявляют переменные одного типа:
 
-Значение по умолчанию для всех целочисленных типов — `0`. Каждый целочисленный тип имеет константы `MinValue` и `MaxValue` с минимальным и максимальным значениями этого типа.
+```csharp
+int a = 123;
+System.Int32 b = 123;
+```
+
+По умолчанию все целочисленные типы имеют значение `0`. Все целочисленные типы имеют константы `MinValue` и `MaxValue` с минимальным и максимальными итоговыми значениями этого типа.
 
 Используйте структуру <xref:System.Numerics.BigInteger?displayProperty=nameWithType>, чтобы представить целое число со знаком без верхней и нижней границ.
 
@@ -76,7 +81,7 @@ var binaryLiteral = 0b_0010_1010;
 
 Десятичные литералы не требуют префикса. Префикс `x` или `X` означает, что это *шестнадцатеричный литерал*. Префикс `b` или `B` означает, что это *двоичный литерал*. Объявление `binaryLiteral` демонстрирует использование символа `_` в качестве *разделителя разрядов*. Разделитель разрядов можно использовать с любыми числовыми литералами. Двоичные литералы и разделитель разрядов `_` поддерживаются начиная с C# 7.0.
 
-### <a name="literal-suffixes"></a>Суффиксы литералов 
+### <a name="literal-suffixes"></a>Суффиксы литералов
 
 Суффикс `l` или `L` указывает, что целочисленный литерал должен иметь тип `long`. Суффикс `ul` или `UL` указывает тип `ulong`. Если суффикс `L` используется с литералом, значение которого больше 9 223 372 036 854 775 807 (максимальное значение типа `long`), литерал преобразуется в тип `ulong`. Если значение, представленное целочисленным литералом, превышает <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, происходит ошибка компиляции [CS1021](../../misc/cs1021.md). 
 
@@ -123,11 +128,3 @@ var anotherLong = (long)42;
 - [Таблица форматирования числовых результатов](../keywords/formatting-numeric-results-table.md)
 - [Таблица встроенных типов](../keywords/built-in-types-table.md)
 - [Числовые значения в .NET](../../../standard/numerics.md)
-- <xref:System.Byte?displayProperty=nameWithType>
-- <xref:System.SByte?displayProperty=nameWithType>
-- <xref:System.Int16?displayProperty=nameWithType>
-- <xref:System.UInt16?displayProperty=nameWithType>
-- <xref:System.Int32?displayProperty=nameWithType>
-- <xref:System.UInt32?displayProperty=nameWithType>
-- <xref:System.Int64?displayProperty=nameWithType>
-- <xref:System.UInt64?displayProperty=nameWithType>
