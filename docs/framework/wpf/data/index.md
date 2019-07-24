@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: ee45771a289804395387f9d6d49b667da1a76024
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8fc25407eda75c7f2fbb188b96c68ac1b8342ad
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020547"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400374"
 ---
 # <a name="data"></a>Данные
-Привязка данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет приложениям простой и последовательный способ представления данных и взаимодействия с ними. Элементы можно связывать с данными из различных источников данных в виде объектов [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] также предоставляет механизм передачи данных с помощью операций перетаскивания.  
+Привязка данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет приложениям простой и последовательный способ представления данных и взаимодействия с ними. Элементы могут быть привязаны к данным из различных источников данных в форме объектов среды CLR и XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] также предоставляет механизм передачи данных с помощью операций перетаскивания.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Привязка данных](data-binding-wpf.md)  
@@ -41,4 +41,4 @@ ms.locfileid: "62020547"
 ## <a name="see-also"></a>См. также
 
 - [Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)
-- [Пошаговое руководство: Кэширование данных приложения WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Пошаговое руководство: Кэширование данных приложения в приложении WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

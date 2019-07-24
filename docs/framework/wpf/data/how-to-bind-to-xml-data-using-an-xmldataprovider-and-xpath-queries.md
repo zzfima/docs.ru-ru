@@ -6,35 +6,35 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: 49f32ae4f358885268044cbfd785239f537940ae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dc4fb2d5f0c48c077d2ff7ca5e5269ce5cba71e5
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609423"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400497"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Практическое руководство. Привязка к XML-данным с помощью XMLDataProvider и запросов XPath
-В этом примере показано, как выполнить привязку к [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] данных с помощью <xref:System.Windows.Data.XmlDataProvider>.  
+В этом примере показано, как выполнить [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] привязку к <xref:System.Windows.Data.XmlDataProvider>данным с помощью.  
   
- С помощью <xref:System.Windows.Data.XmlDataProvider>, базовые данные, может осуществляться через привязку данных в приложении может быть любым деревом [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] узлов. Другими словами <xref:System.Windows.Data.XmlDataProvider> предоставляет удобный способ использования любого дерева из [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] узлов, в качестве источника привязки.  
+ В службах базовые данные, к которым можно получить доступ через привязку данных в приложении [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] ,могутбытьлюбымдеревомузлов.<xref:System.Windows.Data.XmlDataProvider> Иными словами, <xref:System.Windows.Data.XmlDataProvider> предоставляет удобный способ использовать любое [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] дерево узлов в качестве источника привязки.  
   
 ## <a name="example"></a>Пример  
- В следующем примере данные внедряются непосредственно как [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] *острова данных* в <xref:System.Windows.FrameworkElement.Resources%2A> разделе. Остров данных [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] должен быть заключен в теги `<x:XData>` и всегда иметь один корневой узел, который в этом примере является *Инвентаризацией*.  
+ В следующем примере данные внедряются непосредственно как [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] <xref:System.Windows.FrameworkElement.Resources%2A> *остров данных* в разделе. Остров данных [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] должен быть заключен в теги `<x:XData>` и всегда иметь один корневой узел, который в этом примере является *Инвентаризацией*.  
   
 > [!NOTE]
->  Корневой узел данных [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] имеет атрибут **xmlns**, который задает для пространства имен [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] пустую строку. Это обязательное требование для выполнения запросов XPath к островам данных, встроенным в страницу [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. В данном случае [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], и таким образом, остров данных наследует <xref:System.Windows> пространства имен. По этой причине необходимо задать пространство имен пустым, чтобы запретить определять запросы XPath с пространством <xref:System.Windows> пространства имен, которое неправильно направляло бы запросы.  
+>  Корневой узел данных [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] имеет атрибут **xmlns**, который задает для пространства имен [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] пустую строку. Это обязательное требование для выполнения запросов XPath к островам данных, встроенным в страницу [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. В этом случае [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], и, поэтому остров данных наследует <xref:System.Windows> пространство имен. Поэтому необходимо задать пустое пространство имен, чтобы запросы <xref:System.Windows> XPath не задаются пространством имен, что приведет к невозможности направить запросы.  
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
  Как показано в следующем примере, для создания такого же объявления привязки в синтаксисе атрибутов необходимо экранировать специальные символы правильно. Дополнительные сведения см. в разделе [Сущности знаков XML и XAML](../../xaml-services/xml-character-entities-and-xaml.md).  
   
- <xref:System.Windows.Controls.ListBox> Будут показаны следующие элементы, при запуске этого примера. Это *заголовки* всех элементов в группе *Книги* со значением *Stock*, равным *out*, или значением *Number*, равным 3 или больше или равным 8. Обратите внимание, что не *компакт-диска* элементы возвращаются, потому что <xref:System.Windows.Data.XmlDataProvider.XPath%2A> заданное <xref:System.Windows.Data.XmlDataProvider> указывает, что только *книг* элементы должны предоставляться ему (по существу установки фильтра).  
+ При выполнении этого примера будутпоказаныследующиеэлементы.<xref:System.Windows.Controls.ListBox> Это *заголовки* всех элементов в группе *Книги* со значением *Stock*, равным *out*, или значением *Number*, равным 3 или больше или равным 8. Обратите внимание, что элементы *компакт-диска* не возвращаются, <xref:System.Windows.Data.XmlDataProvider.XPath%2A> поскольку <xref:System.Windows.Data.XmlDataProvider> значение, установленное на, указывает, что должны быть предоставлены только элементы *Books* (по сути, установка фильтра).  
   
- ![Снимок экрана примера XPath, отображается название четырех книг.](./media/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries/xpath-example-listbox-details.png)  
+ ![Снимок экрана примера XPath, показывающий название четырех книг.](./media/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries/xpath-example-listbox-details.png)  
   
- В этом примере отображаются названия книг, так как <xref:System.Windows.Data.Binding.XPath%2A> из <xref:System.Windows.Controls.TextBlock> привязки в <xref:System.Windows.DataTemplate> имеет значение "*Title*«. Если вы хотите отображать значение атрибута, например *ISBN*, следует установить для <xref:System.Windows.Data.Binding.XPath%2A> значение "`@ISBN`«.  
+ В этом примере отображаются названия книг, <xref:System.Windows.Data.Binding.XPath%2A> так как <xref:System.Windows.Controls.TextBlock> для привязки в <xref:System.Windows.DataTemplate> задано значение*Title*. Если требуется отобразить значение атрибута, например *ISBN*, это <xref:System.Windows.Data.Binding.XPath%2A> значение можно задать равным "`@ISBN`".  
   
- Свойства **XPath** в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] обрабатываются методом XmlNode.SelectNodes. Можно изменить запросы **XPath** для получения других результатов. Ниже приведено несколько примеров для <xref:System.Windows.Data.Binding.XPath%2A> запрос к привязанному элементу <xref:System.Windows.Controls.ListBox> из предыдущего примера:  
+ Свойства **XPath** в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] обрабатываются методом XmlNode.SelectNodes. Можно изменить запросы **XPath** для получения других результатов. Ниже приведены некоторые примеры для <xref:System.Windows.Data.Binding.XPath%2A> запроса, привязанного <xref:System.Windows.Controls.ListBox> к предыдущему примеру.  
   
 - `XPath="Book[1]"` возвращает первый элемент книги (XML в действии). Обратите внимание, что индексы **XPath** основаны на 1, а не на 0.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "64609423"
   
 - `XPath="*[position()>3]"` возвращает все элементы книги, за исключением первых трех.  
   
- При запуске **XPath** запрос, он возвращает <xref:System.Xml.XmlNode> или список XmlNodes. <xref:System.Xml.XmlNode> — [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] объектом, то есть можно использовать <xref:System.Windows.Data.Binding.Path%2A> свойство для привязки к [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] свойства. Вернемся к нашему предыдущему примеру еще раз. Если остальная часть примера остается неизменной и вы изменяете <xref:System.Windows.Controls.TextBlock> привязке следующего, будут отображаться имена возвращенных XMLNodes в <xref:System.Windows.Controls.ListBox>. В этом случае все возвращаемые узлы называются "*книги*".  
+ При выполнении запроса **XPath** он возвращает <xref:System.Xml.XmlNode> или список XMLNodes. <xref:System.Xml.XmlNode>— Это объект среды CLR, который означает, что можно использовать <xref:System.Windows.Data.Binding.Path%2A> свойство для привязки к свойствам среды CLR. Вернемся к нашему предыдущему примеру еще раз. Если остальная часть примера остается неизменной и вы изменяете <xref:System.Windows.Controls.TextBlock> привязку на следующую, вы увидите имена возвращенных XMLNodes <xref:System.Windows.Controls.ListBox>в. В этом случае все возвращаемые узлы называются "*книги*".  
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   
@@ -52,7 +52,7 @@ ms.locfileid: "64609423"
   
  [!code-xaml[XMLDataSource2#XmlFileExample](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource2/CS/Window1.xaml#xmlfileexample)]  
   
- Если [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данные находятся в удаленном [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] файл, можно будет определить доступ к данным путем назначения соответствующих [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] для <xref:System.Windows.Data.XmlDataProvider.Source%2A> следующим образом:  
+ Если данные находятся в удаленном [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] файле, необходимо определить доступ к данным, <xref:System.Windows.Data.XmlDataProvider.Source%2A> назначив соответствующий [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] атрибуту следующие значения: [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]  
   
 ```xml  
 <XmlDataProvider x:Key="BookData" Source="http://MyUrl" XPath="Books"/>  

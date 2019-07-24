@@ -8,15 +8,15 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fd851ac413b54769bf6606b2220cf38934902be
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020924"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401424"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Практическое руководство. Создание и привязка ObservableCollection
-В этом примере показано, как создать и выполнить привязку к коллекции, который является производным от <xref:System.Collections.ObjectModel.ObservableCollection%601> класс, который является классом коллекции, которая выдает уведомления при добавлении или удалении элементов.  
+В этом примере показано, как создать и привязать коллекцию, производную от <xref:System.Collections.ObjectModel.ObservableCollection%601> класса, который представляет собой класс коллекции, который предоставляет уведомления при добавлении или удалении элементов.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показана реализация коллекции `NameList`.  
@@ -104,7 +104,7 @@ Public Class PersonName
 End Class  
 ```  
   
- Коллекции можно сделать доступными для привязки так же, как с другими объектами [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], как описано в разделе [Обеспечение доступности данных для привязки в XAML](how-to-make-data-available-for-binding-in-xaml.md). Например, можно создать экземпляр коллекции в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и указать коллекцию в качестве ресурса, как показано ниже.  
+ Коллекцию можно сделать доступной для привязки так же, как и с другими объектами среды CLR, как описано в разделе [обеспечение доступности данных для привязки в XAML](how-to-make-data-available-for-binding-in-xaml.md). Например, можно создать экземпляр коллекции в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и указать коллекцию в качестве ресурса, как показано ниже.  
   
 ```xaml  
 <Window  
@@ -136,7 +136,7 @@ End Class
  Определение `NameItemTemplate` здесь не показано.  
   
 > [!NOTE]
->  Объекты в коллекции должны удовлетворять требованиям, описанным в разделе [Общие сведения об источниках привязки](binding-sources-overview.md). В частности, если вы используете <xref:System.Windows.Data.BindingMode.OneWay> или <xref:System.Windows.Data.BindingMode.TwoWay> (например, требуется вашей [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] обновление при динамическом изменении свойств источника), необходимо реализовать механизм уведомлений об подходящий изменения свойств, таких как <xref:System.ComponentModel.INotifyPropertyChanged>интерфейс.  
+>  Объекты в коллекции должны удовлетворять требованиям, описанным в разделе [Общие сведения об источниках привязки](binding-sources-overview.md). В частности, если вы используете <xref:System.Windows.Data.BindingMode.OneWay> или <xref:System.Windows.Data.BindingMode.TwoWay> ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] например, хотите обновлять, когда исходные свойства изменяются динамически), необходимо реализовать подходящий механизм уведомления об изменении свойств, например <xref:System.ComponentModel.INotifyPropertyChanged>интерфейс.  
   
  Дополнительные сведения см. в разделе "Привязка к коллекциям" в разделе [Общие сведения о привязке данных](data-binding-overview.md).  
   

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: 8e65e89fb0406d9d2849e0a1be4b1aa764b935ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c685a5227f4339a094ae74af4e1314d4c47f7585
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62030352"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400867"
 ---
 # <a name="properties-wpf"></a>Свойства (WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет набор служб, которые можно использовать для расширения функциональных возможностей свойства [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. В совокупности эти службы обычно называются системой свойств WPF. Свойство, обеспечиваемое системой свойств [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)], называется свойством зависимости.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]предоставляет набор служб, которые можно использовать для расширения функциональных возможностей свойства среды CLR. В совокупности эти службы обычно называются системой свойств WPF. Свойство, обеспечиваемое системой свойств [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)], называется свойством зависимости.  
   
 ## <a name="in-this-section"></a>В этом разделе  
 - [Общие сведения о свойствах зависимости](dependency-properties-overview.md)

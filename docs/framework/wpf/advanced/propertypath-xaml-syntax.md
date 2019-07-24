@@ -5,36 +5,36 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 5dc8fc8c43e43691c46ad84379fe2bcb23987667
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: deebdb690a6ba831730701de2608089af2d6bdfd
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660801"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401661"
 ---
 # <a name="propertypath-xaml-syntax"></a>Синтаксис PropertyPath XAML
 
-<xref:System.Windows.PropertyPath> Поддерживает сложный встроенный объект [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] синтаксиса для настройки различных свойств, которые принимают <xref:System.Windows.PropertyPath> тип в качестве значения. Этом разделе описана <xref:System.Windows.PropertyPath> синтаксис применительно к привязки и анимации.
+Объект поддерживает сложный встроенный [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] синтаксис для установки <xref:System.Windows.PropertyPath> различных свойств, которые принимают тип в качестве значения. <xref:System.Windows.PropertyPath> В <xref:System.Windows.PropertyPath> этом разделе документируется синтаксис, примененный к синтаксису привязки и анимации.
 
 <a name="where"></a>
 
 ## <a name="where-propertypath-is-used"></a>Где используется PropertyPath
 
-<xref:System.Windows.PropertyPath> представляет собой общий объект, который используется в нескольких [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] функции. Несмотря на использование общего <xref:System.Windows.PropertyPath> для передачи информации о пути к свойству, варианты использования для каждой области возможностей где <xref:System.Windows.PropertyPath> используется как тип варьироваться. Таким образом, более практично документировать синтаксис для каждой функции.
+<xref:System.Windows.PropertyPath>— Это общий объект, используемый в нескольких [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] функциях. Несмотря на использование общих <xref:System.Windows.PropertyPath> для передачи сведений о пути к свойству, использование каждой области функций, где <xref:System.Windows.PropertyPath> используется в качестве типа, различается. Таким образом, более практично документировать синтаксис для каждой функции.
 
-В основном [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует <xref:System.Windows.PropertyPath> для описания путей объектной модели для нахождения свойств источника данных и для описания конечного пути для целевой анимации.
+В основном <xref:System.Windows.PropertyPath> использует для описания путей объектной модели для обхода свойств источника данных объекта и для описания целевого пути для целевых анимаций. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]
 
-Некоторые свойства стиля и шаблона, такие как <xref:System.Windows.Setter.Property%2A?displayProperty=nameWithType> принимают имя полное свойство, которое внешне напоминает <xref:System.Windows.PropertyPath>. Но это не подлинный <xref:System.Windows.PropertyPath>; вместо этого это *owner.property* строка для использования формата обеспечивается WPF [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] процессора в сочетании с преобразователем типов для <xref:System.Windows.DependencyProperty>.
+Некоторые свойства стиля и шаблона, например <xref:System.Windows.Setter.Property%2A?displayProperty=nameWithType> , получают полное имя свойства, которое внешне напоминает. <xref:System.Windows.PropertyPath> Но это не значение <xref:System.Windows.PropertyPath>true, а является полным *владельцем.* использование формата строки свойства, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] включенное в сочетании с преобразователем типов для. <xref:System.Windows.DependencyProperty>
 
 <a name="databinding_s"></a>
 
 ## <a name="propertypath-for-objects-in-data-binding"></a>PropertyPath для объектов в привязке данных
 
-Привязка данных является функцией [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], которую можно привязать к целевому значению любого свойства зависимостей. Однако источник такой привязки данных не обязательно должен быть свойством зависимостей. Это может быть любой тип свойства, распознаваемый применимым поставщиком данных. Пути свойств используются особенно для <xref:System.Windows.Data.ObjectDataProvider>, который используется для получения источников привязки из [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] объектов и их свойств.
+Привязка данных является функцией [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], которую можно привязать к целевому значению любого свойства зависимостей. Однако источник такой привязки данных не обязательно должен быть свойством зависимостей. Это может быть любой тип свойства, распознаваемый применимым поставщиком данных. Пути к свойствам особенно используются для <xref:System.Windows.Data.ObjectDataProvider>, который используется для получения источников привязки из объектов среды CLR и их свойств.
 
-Обратите внимание, что привязка данных к [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] не использует <xref:System.Windows.PropertyPath>, так как он не использует <xref:System.Windows.Data.Binding.Path%2A> в <xref:System.Windows.Data.Binding>. Вместо этого использовать <xref:System.Windows.Data.Binding.XPath%2A> и укажите допустимый синтаксис XPath в [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] данных. <xref:System.Windows.Data.Binding.XPath%2A> также указываются в виде строки, но не документируется здесь. см. в разделе [привязка к данным XML с помощью XMLDataProvider и запросов XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).
+Обратите внимание, что [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] привязка данных не <xref:System.Windows.PropertyPath>использует, так как она не <xref:System.Windows.Data.Binding.Path%2A> используется в <xref:System.Windows.Data.Binding>. Вместо этого используется <xref:System.Windows.Data.Binding.XPath%2A> и указывается допустимый синтаксис XPath [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] в данных. <xref:System.Windows.Data.Binding.XPath%2A>также указывается в виде строки, но здесь не описывается. см. статью [Привязка к XML-данным с помощью XmlDataProvider и запросов XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).
 
-Ключом к пониманию путей к свойствам в привязке к данным является то, что можно настроить целевой объект привязки на отдельное значение свойства либо использовать привязку к целевым свойствам, которые принимают списки или коллекции. При связывании коллекций, например привязки <xref:System.Windows.Controls.ListBox> , будет расширяться в зависимости от количества элементов данных в коллекции, а затем путь к свойству должен ссылаться на объект коллекции, а не отдельные элементы коллекции. Механизм привязки данных будет соответствовать коллекции, используемой как источник данных в тип целевого объекта привязки автоматически, что приводит к заполнению <xref:System.Windows.Controls.ListBox> массивом элементов.
+Ключом к пониманию путей к свойствам в привязке к данным является то, что можно настроить целевой объект привязки на отдельное значение свойства либо использовать привязку к целевым свойствам, которые принимают списки или коллекции. При привязке коллекций для привязки <xref:System.Windows.Controls.ListBox> экземпляра, который будет расширяться в зависимости от количества элементов данных в коллекции, путь к свойству должен ссылаться на объект коллекции, а не на отдельные элементы коллекции. Обработчик привязки данных будет сопоставлять коллекцию, используемую в качестве источника данных, с типом целевого объекта привязки автоматически, что приводит к <xref:System.Windows.Controls.ListBox> поведению, например заполнению с массивом элементов.
 
 <a name="singlecurrent"></a>
 
@@ -44,7 +44,7 @@ ms.locfileid: "67660801"
 <Binding Path="propertyName" .../>
 ```
 
-*propertyName* должно разрешаться как имя свойства, которое находится в текущем <xref:System.Windows.FrameworkElement.DataContext%2A> для <xref:System.Windows.Data.Binding.Path%2A> использования. Если привязка обновляет источник, это свойство должно быть доступно для чтения и записи, а исходный объект должен быть изменяемым.
+*PropertyName* должен быть разрешен в качестве имени свойства, которое находится в текущем <xref:System.Windows.FrameworkElement.DataContext%2A> экземпляре для <xref:System.Windows.Data.Binding.Path%2A> использования. Если привязка обновляет источник, это свойство должно быть доступно для чтения и записи, а исходный объект должен быть изменяемым.
 
 <a name="singleindex"></a>
 
@@ -54,9 +54,9 @@ ms.locfileid: "67660801"
 <Binding Path="[key]" .../>
 ```
 
-`key` должен быть либо типизированным индексом для словаря или хэш-таблицы, либо целочисленным индексом массива. Кроме того, значение ключа должно быть типом, который можно непосредственно привязать к свойству, в котором оно применяется. Например, хэш-таблицу, содержащий строковых ключей и строковых значений можно использовать таким образом для привязки к тексту для <xref:System.Windows.Controls.TextBox>. Либо, если ключ указывает на коллекцию или субиндекс, этот синтаксис можно использовать для привязки к целевому свойству коллекции. В противном случае необходимо ссылаться на конкретное свойство, например с помощью синтаксиса `<Binding Path="[key].propertyName" .../>`.
+`key` должен быть либо типизированным индексом для словаря или хэш-таблицы, либо целочисленным индексом массива. Кроме того, значение ключа должно быть типом, который можно непосредственно привязать к свойству, в котором оно применяется. Например, хэш-таблица, содержащая строковые ключи и строковые значения, может использоваться таким образом для привязки к тексту <xref:System.Windows.Controls.TextBox>для. Либо, если ключ указывает на коллекцию или субиндекс, этот синтаксис можно использовать для привязки к целевому свойству коллекции. В противном случае необходимо ссылаться на конкретное свойство, например с помощью синтаксиса `<Binding Path="[key].propertyName" .../>`.
 
-При необходимости можно указать тип индекса. Дополнительные сведения об этом аспекте индексированного пути свойства, см. в разделе <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>.
+При необходимости можно указать тип индекса. Дополнительные сведения об этом аспекте пути индексированного свойства см. в <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>разделе.
 
 <a name="multipleindirect"></a>
 
@@ -66,7 +66,7 @@ ms.locfileid: "67660801"
 <Binding Path="propertyName.propertyName2" .../>
 ```
 
-`propertyName` должно разрешаться как имя свойства, которое является текущим <xref:System.Windows.FrameworkElement.DataContext%2A>. Свойствами пути `propertyName` и `propertyName2` могут быть любые свойства, которые существуют в связи, где `propertyName2` — свойство, которое существует в типе, являющемся значением `propertyName`.
+`propertyName`должен быть разрешен в качестве имени свойства, которое является текущим <xref:System.Windows.FrameworkElement.DataContext%2A>. Свойствами пути `propertyName` и `propertyName2` могут быть любые свойства, которые существуют в связи, где `propertyName2` — свойство, которое существует в типе, являющемся значением `propertyName`.
 
 <a name="singleattached"></a>
 
@@ -76,7 +76,7 @@ ms.locfileid: "67660801"
 <object property="(ownerType.propertyName)" .../>
 ```
 
-Скобки означают, что это свойство в <xref:System.Windows.PropertyPath> должно быть создано с использованием частичной квалификации. Может использоваться пространство имен XML для поиска типа с соответствующим сопоставлением. `ownerType` Выполняет поиск типов, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] обработчик имеет доступ к, до <xref:System.Windows.Markup.XmlnsDefinitionAttribute> объявления в каждой сборке. В большинстве приложений есть пространство имен XML по умолчанию, сопоставленное пространству имен [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)], поэтому префикс обычно требуется только для настраиваемых типов или типов вне этого пространства имен.  `propertyName` должно разрешаться как имя свойства, существующего в `ownerType`. Этот синтаксис обычно используется в одном из следующих случаев.
+Круглые скобки указывают, что это свойство в <xref:System.Windows.PropertyPath> должно быть создано с использованием частичной квалификации. Может использоваться пространство имен XML для поиска типа с соответствующим сопоставлением. Поисковые типы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ,<xref:System.Windows.Markup.XmlnsDefinitionAttribute> к которым обработчик имеет доступ, через объявления в каждой сборке. `ownerType` В большинстве приложений есть пространство имен XML по умолчанию, сопоставленное пространству имен [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)], поэтому префикс обычно требуется только для настраиваемых типов или типов вне этого пространства имен.  `propertyName` должно разрешаться как имя свойства, существующего в `ownerType`. Этот синтаксис обычно используется в одном из следующих случаев.
 
 - Путь, указанный в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], который находится в стиле или шаблоне, не имеющем указанного целевого типа. Использование полных имен обычно недействительно для иных случаев, поскольку в отличие от стилей и шаблонов свойство существует в экземпляре, а не в типе.
 
@@ -84,7 +84,7 @@ ms.locfileid: "67660801"
 
 - Выполняется привязка к статическому свойству.
 
-Для использования в качестве цели раскадровки свойство, указанное как `propertyName` должно быть <xref:System.Windows.DependencyProperty>.
+Для использования в качестве цели раскадровки свойство, `propertyName` указанное как, <xref:System.Windows.DependencyProperty>должно иметь значение.
 
 <a name="sourcetraversal"></a>
 
@@ -97,7 +97,7 @@ ms.locfileid: "67660801"
 / в этом синтаксисе используется для навигации в иерархическом объекте источника данных. Поддерживается несколько шагов в иерархии с последовательными символами /. Обход источников учитывает текущую позицию указателя записи, которая определяется синхронизацией данных с пользовательским интерфейсом его представления. Дополнительные сведения о привязке к иерархическим объектам источника данных и концепции указателя текущей записи в привязке данных см. в разделе [Использование шаблона "Основной/подробности" с иерархическими данными](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) или [Общие сведения о привязке данных](../data/data-binding-overview.md).
 
 > [!NOTE]
-> Внешне этот синтаксис походит на [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]. Настоящую [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] выражение для привязки к [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] источник данных не используется в качестве <xref:System.Windows.Data.Binding.Path%2A> значение и вместо этого следует использовать для взаимоисключающего <xref:System.Windows.Data.Binding.XPath%2A> свойство.
+> Внешне этот синтаксис походит на [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]. Истинное [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] выражение для привязки [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] к источнику данных не используется в качестве <xref:System.Windows.Data.Binding.Path%2A> значения и вместо этого должно использоваться для взаимоисключающего <xref:System.Windows.Data.Binding.XPath%2A> свойства.
 
 ### <a name="collection-views"></a>Представления коллекций
 
@@ -113,7 +113,7 @@ ms.locfileid: "67660801"
 <object Path="[index1,index2...]" .../>
 ```
 
-или
+или диспетчер конфигурации служб
 
 ```xaml
 <object Path="propertyName[index,index2...]" .../>
@@ -121,13 +121,13 @@ ms.locfileid: "67660801"
 
 Если данный объект поддерживает несколько индексаторов, их можно указать по порядку, аналогично синтаксису ссылок на массив. Рассматриваемый объект может быть либо текущим контекстом, либо значением свойства, содержащего объект с несколькими индексами.
 
-По умолчанию значения индексатора вводятся с использованием характеристик базового объекта. При необходимости можно указать тип индекса. Дополнительные сведения о вводе индексаторов см. в разделе <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>.
+По умолчанию значения индексатора вводятся с использованием характеристик базового объекта. При необходимости можно указать тип индекса. Дополнительные сведения о вводе индексаторов см. <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>в разделе.
 
 <a name="mixing"></a>
 
 ### <a name="mixing-syntaxes"></a>Смешанные синтаксисы
 
-Можно смешивать все синтаксисы, показанные выше. Например, ниже приведен пример, в котором создается путь к свойству цвета в определенных координатах x, y `ColorGrid` свойства, содержащего массив сетки пикселей <xref:System.Windows.Media.SolidColorBrush> объектов:
+Можно смешивать все синтаксисы, показанные выше. Например, ниже приведен пример, который создает путь к свойству для цвета в определенном x, y `ColorGrid` свойства, которое содержит <xref:System.Windows.Media.SolidColorBrush> массив объектов в виде пиксельной сетки.
 
 ```xml
 <Rectangle Fill="{Binding ColorGrid[20,30].SolidColorBrushResult}" .../>
@@ -158,7 +158,7 @@ ms.locfileid: "67660801"
 
 ## <a name="propertypath-for-animation-targets"></a>PropertyPath для целевых объектов анимации
 
-Целевое свойство анимации должно быть свойством зависимостей, который принимает либо <xref:System.Windows.Freezable> или типом-примитивом. Однако целевое свойство типа и конечное анимированное свойство могут существовать в различных объектах. Для анимаций путь к свойству используется для определения связи между свойством целевого объекта именованной анимации и заданным целевым свойством анимации путем обхода отношений "объект/свойство" в значениях свойств.
+Целевое свойство анимации должно быть свойством зависимости, которое принимает <xref:System.Windows.Freezable> или либо примитивный тип. Однако целевое свойство типа и конечное анимированное свойство могут существовать в различных объектах. Для анимаций путь к свойству используется для определения связи между свойством целевого объекта именованной анимации и заданным целевым свойством анимации путем обхода отношений "объект/свойство" в значениях свойств.
 
 <a name="general"></a>
 
@@ -166,9 +166,9 @@ ms.locfileid: "67660801"
 
 Подробнее о концепциях анимации в целом см. в разделах [Общие сведения о раскадровке ](../graphics-multimedia/storyboards-overview.md) и [Общие сведения об анимации ](../graphics-multimedia/animation-overview.md).
 
-Тип значения или анимируемое свойство должны являться объектами <xref:System.Windows.Freezable> тип или типы-примитивы. Свойство, которое запускает путь должен разрешаться как имя свойства зависимостей, которое существует в указанном <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> типа.
+Тип значения или анимированное свойство должны быть либо <xref:System.Windows.Freezable> типом, либо примитивом. Свойство, запускающее путь, должно быть разрешено в качестве имени свойства зависимостей, существующего для указанного <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> типа.
 
-Для поддержки клонирования в целях анимации <xref:System.Windows.Freezable> который уже был заморожен, объекта, заданного параметром <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> должно быть <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement> производного класса.
+<xref:System.Windows.Freezable> Для поддержки клонирования для анимации, которая уже заморожена, объект, указанный параметром <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> , должен быть <xref:System.Windows.FrameworkElement> производным классом или <xref:System.Windows.FrameworkContentElement> .
 
 <a name="singlestepanim"></a>
 
@@ -178,7 +178,7 @@ ms.locfileid: "67660801"
 <animation Storyboard.TargetProperty="propertyName" .../>
 ```
 
-`propertyName` должно разрешаться как имя свойства зависимостей, которое существует в указанном <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> типа.
+`propertyName`необходимо разрешить в виде имени свойства зависимостей, существующего в указанном <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> типе.
 
 <a name="indirectanim"></a>
 
@@ -188,13 +188,13 @@ ms.locfileid: "67660801"
 <animation Storyboard.TargetProperty="propertyName.propertyName2" .../>
 ```
 
-`propertyName` должно быть свойством, либо <xref:System.Windows.Freezable> типом значения или примитивом, который существует на указанном <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> типа.
+`propertyName`должно быть свойством, которое является либо <xref:System.Windows.Freezable> типом значения, либо примитивом, который существует для указанного <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> типа.
 
-`propertyName2` должно быть именем свойства зависимостей, существующего в объекте, который является значением `propertyName`. Другими словами `propertyName2` существовать как свойства зависимости в тип, являющийся `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>.
+`propertyName2` должно быть именем свойства зависимостей, существующего в объекте, который является значением `propertyName`. Иными словами, `propertyName2` должен существовать как свойство зависимостей для типа, который `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>является.
 
-Косвенное назначение анимации необходимо из-за примененных стилей и шаблонов. Чтобы целевой объект анимации, <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> на целевой объект и что имя устанавливается с помощью [x: Name](../../xaml-services/x-name-directive.md) или <xref:System.Windows.FrameworkElement.Name%2A>. Хотя элементы шаблона и стиля также могут иметь имена, эти имена действительны только в области имен стиля и шаблона. (Если бы шаблоны и стили совместно использовали пространства имен с разметкой приложения, имена не могли бы быть уникальными. Стили и шаблоны буквально разделяются между экземплярами и могут сохранять повторяющиеся имена). Таким образом, если отдельные свойства элемента, которые нужно анимировать, исходят из стиля или шаблона, то нужно начать с именованного экземпляра элемента, который не происходит из шаблона стиля. Затем укажите целевой объект в визуальном дереве стиля или шаблона, чтобы достичь свойства, которое нужно анимировать.
+Косвенное назначение анимации необходимо из-за примененных стилей и шаблонов. Чтобы ориентироваться на анимацию, <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> требуется объект на целевом объекте, и это имя устанавливается с помощью [x:Name](../../xaml-services/x-name-directive.md) или. <xref:System.Windows.FrameworkElement.Name%2A> Хотя элементы шаблона и стиля также могут иметь имена, эти имена действительны только в области имен стиля и шаблона. (Если бы шаблоны и стили совместно использовали пространства имен с разметкой приложения, имена не могли бы быть уникальными. Стили и шаблоны буквально разделяются между экземплярами и могут сохранять повторяющиеся имена). Таким образом, если отдельные свойства элемента, которые нужно анимировать, исходят из стиля или шаблона, то нужно начать с именованного экземпляра элемента, который не происходит из шаблона стиля. Затем укажите целевой объект в визуальном дереве стиля или шаблона, чтобы достичь свойства, которое нужно анимировать.
 
-Например <xref:System.Windows.Controls.Panel.Background%2A> свойство <xref:System.Windows.Controls.Panel> является полным <xref:System.Windows.Media.Brush> (фактически <xref:System.Windows.Media.SolidColorBrush>), который поступил из шаблона темы. Для анимации <xref:System.Windows.Media.Brush> полностью, то потребуется потребовалась бы BrushAnimation (возможно, одна для каждого <xref:System.Windows.Media.Brush> типа) и нет такого типа. Чтобы анимировать кисть, вместо этого анимируются свойства определенного <xref:System.Windows.Media.Brush> типа. Необходимо получить из <xref:System.Windows.Media.SolidColorBrush> для его <xref:System.Windows.Media.SolidColorBrush.Color%2A> для применения <xref:System.Windows.Media.Animation.ColorAnimation> существует. Путь к свойству в этом примере будет `Background.Color`.
+Например, <xref:System.Windows.Controls.Panel.Background%2A> свойство <xref:System.Windows.Controls.Panel> объекта является полным <xref:System.Windows.Media.Brush> (фактически <xref:System.Windows.Media.SolidColorBrush>), полученным из шаблона темы. Чтобы <xref:System.Windows.Media.Brush> полностью анимировать анимацию, необходимо быть брушаниматион (возможно, по одному для каждого <xref:System.Windows.Media.Brush> типа) и такого типа нет. Чтобы анимировать кисть, необходимо анимировать свойства определенного <xref:System.Windows.Media.Brush> типа. Чтобы применить <xref:System.Windows.Media.SolidColorBrush> его<xref:System.Windows.Media.Animation.ColorAnimation> , необходимо получить из. <xref:System.Windows.Media.SolidColorBrush.Color%2A> Путь к свойству в этом примере будет `Background.Color`.
 
 <a name="attachedanim"></a>
 
@@ -204,7 +204,7 @@ ms.locfileid: "67660801"
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>
 ```
 
-Скобки означают, что это свойство в <xref:System.Windows.PropertyPath> должно быть создано с использованием частичной квалификации. Для поиска типа может использоваться пространство имен XML. `ownerType` Выполняет поиск типов, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] обработчик имеет доступ к, до <xref:System.Windows.Markup.XmlnsDefinitionAttribute> объявления в каждой сборке. В большинстве приложений есть пространство имен XML по умолчанию, сопоставленное пространству имен [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)], поэтому префикс обычно требуется только для настраиваемых типов или типов вне этого пространства имен. `propertyName` должно разрешаться как имя свойства, существующего в `ownerType`. Свойство, указанное как `propertyName` должно быть <xref:System.Windows.DependencyProperty>. (Все присоединенные свойства [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] реализуются как свойства взаимозависимостей, поэтому эта проблема возникает только для настраиваемых присоединенных свойств.)
+Круглые скобки указывают, что это свойство в <xref:System.Windows.PropertyPath> должно быть создано с использованием частичной квалификации. Для поиска типа может использоваться пространство имен XML. Поисковые типы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ,<xref:System.Windows.Markup.XmlnsDefinitionAttribute> к которым обработчик имеет доступ, через объявления в каждой сборке. `ownerType` В большинстве приложений есть пространство имен XML по умолчанию, сопоставленное пространству имен [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)], поэтому префикс обычно требуется только для настраиваемых типов или типов вне этого пространства имен. `propertyName` должно разрешаться как имя свойства, существующего в `ownerType`. Свойство, указанное как `propertyName` , должно иметь <xref:System.Windows.DependencyProperty>значение. (Все присоединенные свойства [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] реализуются как свойства взаимозависимостей, поэтому эта проблема возникает только для настраиваемых присоединенных свойств.)
 
 <a name="indexanim"></a>
 
@@ -214,15 +214,15 @@ ms.locfileid: "67660801"
 <animation Storyboard.TargetProperty="propertyName.propertyName2[index].propertyName3" .../>
 ```
 
-Большинство свойств зависимостей или <xref:System.Windows.Freezable> типы не поддерживают индексатор. Таким образом, единственное использование индексатора в пути к анимации — это промежуточное положение между свойством, которое запускает цепочку в именованном целевом объекте и конечным анимированным свойством. В предоставленном синтаксисе это `propertyName2`. Например, может быть необходимо, если промежуточные свойство является коллекцией, такие как индексатор <xref:System.Windows.Media.TransformGroup>, в путь свойства, такие как `RenderTransform.Children[1].Angle`.
+Большинство свойств или <xref:System.Windows.Freezable> типов зависимостей не поддерживает индексатор. Таким образом, единственное использование индексатора в пути к анимации — это промежуточное положение между свойством, которое запускает цепочку в именованном целевом объекте и конечным анимированным свойством. В предоставленном синтаксисе это `propertyName2`. Например, может потребоваться использование индексатора, если промежуточное свойство является коллекцией <xref:System.Windows.Media.TransformGroup>, например, в пути к свойству, `RenderTransform.Children[1].Angle`например.
 
 <a name="ppincode"></a>
 
 ## <a name="propertypath-in-code"></a>PropertyPath в коде
 
-Использование кода <xref:System.Windows.PropertyPath>, включая способы создания <xref:System.Windows.PropertyPath>, см. в разделе справки по <xref:System.Windows.PropertyPath>.
+Использование кода для <xref:System.Windows.PropertyPath>, включая <xref:System.Windows.PropertyPath>создание, описано в разделе справки по <xref:System.Windows.PropertyPath>.
 
-В общем случае <xref:System.Windows.PropertyPath> предназначен для использования двух различных конструкторов, один для привязки и простейших анимаций и один для сложных анимаций. Используйте <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> подписи для привязок, где объект — строка. Используйте <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> подпись для одношаговых путей к анимации, когда этот объект является <xref:System.Windows.DependencyProperty>. Используйте <xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29> для сложной анимации. Последний конструктор использует строку токена для первого параметра и массив объектов, которые заполняют позиции в строке токена, чтобы определить отношение пути к свойству.
+В целом, <xref:System.Windows.PropertyPath> предназначен для использования двух различных конструкторов: один для использования привязки и простейший способ использования анимации и один для сложных использований анимации. <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> Используйте сигнатуру для использования привязки, где объект является строкой. Используйте сигнатуру для одношаговых путей анимации, где объект <xref:System.Windows.DependencyProperty>является. <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> <xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29> Используйте сигнатуру для сложных анимаций. Последний конструктор использует строку токена для первого параметра и массив объектов, которые заполняют позиции в строке токена, чтобы определить отношение пути к свойству.
 
 ## <a name="see-also"></a>См. также
 

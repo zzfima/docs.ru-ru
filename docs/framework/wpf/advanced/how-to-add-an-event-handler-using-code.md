@@ -8,26 +8,26 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 32e3926bb4c519b7be14a26484603d6d4ea88b6a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 00b12d9dc25e0704eb73d8bc727ae6647493f494
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665800"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401165"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Практическое руководство. Добавление обработчика событий с помощью кода
-В этом примере показано, как добавить обработчик событий к элементу с помощью кода.  
+В этом примере показано, как добавить обработчик событий в элемент с помощью кода.  
   
- Если вы хотите добавить обработчик событий к [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] элемент и разметка страницы, которая содержит элемент уже был загружен, необходимо добавить обработчик с помощью кода. Кроме того Если вы создаете вверх по дереву элементов, для приложения, используя только код и не объявляет никаких элементов, используя [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], можно вызывать методы, определенные для добавления обработчиков событий в построенное дерево элементов.  
+ Если необходимо добавить обработчик событий к [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] элементу, а страница разметки, содержащая этот элемент, уже загружена, необходимо добавить обработчик с помощью кода. Кроме того, если вы создаете дерево элементов для приложения полностью с помощью кода и не объявляете какие бы то ни [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]было элементы с помощью, можно вызывать определенные методы для добавления обработчиков событий в сконструированное дерево элементов.  
   
 ## <a name="example"></a>Пример  
- В следующем примере добавляется новый <xref:System.Windows.Controls.Button> на существующую страницу, которая изначально определена в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Файл с выделенным кодом реализует метод обработчика событий и добавляет этот метод как новый обработчик событий на <xref:System.Windows.Controls.Button>.  
+ В следующем примере добавляется новый <xref:System.Windows.Controls.Button> объект в существующую страницу, которая изначально определена [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]в. Файл кода программной части реализует метод обработчика событий, а затем добавляет этот метод в качестве нового обработчика <xref:System.Windows.Controls.Button>событий в.  
   
- C# Примере `+=` оператор присвоения обработчика события. Это тот же оператор, который используется для назначения обработчика в [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] модели обработки событий. Microsoft Visual Basic не поддерживает этот оператор как средства для добавления обработчиков событий. Вместо этого требуется один из двух способов:  
+ В C# примере `+=` оператор используется для назначения обработчика для события. Это тот же оператор, который используется для назначения обработчика в модели обработки событий среды CLR. Microsoft Visual Basic не поддерживает этот оператор как средство добавления обработчиков событий. Вместо этого требуется один из двух методов:  
   
-- Используйте <xref:System.Windows.UIElement.AddHandler%2A> метод совместно с `AddressOf` оператор, для ссылки на реализацию обработчика событий.  
+- Используйте метод вместе `AddressOf` с оператором для ссылки на реализацию обработчика событий. <xref:System.Windows.UIElement.AddHandler%2A>  
   
-- Используйте `Handles` ключевое слово как часть определения обработчика событий. Этот способ не показан здесь. см. в разделе [Visual Basic и обработка событий WPF](visual-basic-and-wpf-event-handling.md).  
+- `Handles` Используйте ключевое слово как часть определения обработчика событий. Этот метод не показан здесь; см. раздел [Обработка событий Visual Basic и WPF](visual-basic-and-wpf-event-handling.md).  
   
  [!code-xaml[RoutedEventAddRemoveHandler#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
   
@@ -35,7 +35,7 @@ ms.locfileid: "64665800"
  [!code-vb[RoutedEventAddRemoveHandler#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/VisualBasic/default.xaml.vb#handler)]  
   
 > [!NOTE]
->  Добавление обработчика событий в изначально разобранную [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] страницы намного проще. В элементе объекта, где вы хотите добавить обработчик событий добавьте атрибут, который совпадает с именем события, которое необходимо обработать. Затем укажите значение этого атрибута в качестве имени метода обработчика событий, определенные в файле кода программной [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] страницы. Дополнительные сведения см. в разделе [Обзор XAML (WPF)](xaml-overview-wpf.md) или [Routed Events Overview](routed-events-overview.md).  
+>  Добавление обработчика событий на [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] странице изначально проанализировано гораздо проще. В элементе Object, куда нужно добавить обработчик событий, добавьте атрибут, соответствующий имени события, которое необходимо обменять. Затем укажите значение этого атрибута в качестве имени метода обработчика событий, определенного в файле кода программной части [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] страницы. Дополнительные сведения см. в разделе Общие сведения [о XAML (WPF)](xaml-overview-wpf.md) или перенаправленные [события](routed-events-overview.md).  
   
 ## <a name="see-also"></a>См. также
 

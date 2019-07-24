@@ -5,16 +5,16 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 5be2ca8b4247fcd6bdc628ae0f4aefff30a11256
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7587c8cd24197252506967208869bd454b4f27f2
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652228"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400670"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
   
  В этом обзоре представлены шаблоны элементов управления [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] . Шаблоны элементов управления позволяют классифицировать и предоставлять функции элемента управления независимо от типа или внешнего вида элемента управления.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "64652228"
   
  Клиенты автоматизации пользовательского интерфейса получают доступ к методам и свойствам классов шаблонов элементов управления [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] и используют их для получения сведений о [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]или для работы с [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Эти классы шаблонов элементов управления находятся в пространстве имен <xref:System.Windows.Automation> (например, в <xref:System.Windows.Automation.InvokePattern> или в <xref:System.Windows.Automation.SelectionPattern>).  
   
- Клиенты используют методы <xref:System.Windows.Automation.AutomationElement> (такие как <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> и <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) или методы доступа [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] для доступа к свойствам [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] шаблона. Каждый класс шаблона элемента управления имеет элемент поля (например, <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType> или <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>), идентифицирует этот шаблон элемента управления и может быть передан в качестве параметра <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> или <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> Чтобы получить этот шаблон для <xref:System.Windows.Automation.AutomationElement>.  
+ Клиенты используют <xref:System.Windows.Automation.AutomationElement> методы ( <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> например, или <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) или способы доступа среды CLR для доступа к [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] свойствам в шаблоне. Каждый класс шаблона элемента управления имеет элемент Field (например, <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType> или <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>), который определяет шаблон элемента управления и может быть передан в качестве параметра в <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> или <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> для получения этого шаблона для <xref:System.Windows.Automation.AutomationElement>.  
   
 <a name="uiautomation_control_patterns_dynamic"></a>   
 ## <a name="dynamic-control-patterns"></a>Динамические шаблоны элементов управления  

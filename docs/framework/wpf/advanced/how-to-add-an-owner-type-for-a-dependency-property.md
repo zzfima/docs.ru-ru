@@ -8,21 +8,21 @@ helpviewer_keywords:
 - classes [WPF], adding as owners of dependency properties
 - dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
-ms.openlocfilehash: 1b1f2b241868b02e430af82bac8e9f6a617e511b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ddc85d159b4bf81751428c13c234c5e53be8ad4
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777121"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401129"
 ---
 # <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>Практическое руководство. Добавление типа владельца для свойства зависимостей
-В этом примере показано, как добавить класс в качестве владельца свойства зависимостей, зарегистрированные для другого типа. Таким образом, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] чтения и система свойств способны распознать класс в качестве дополнительного владельца свойства. Добавление в качестве владельца при необходимости позволяет добавлять класс для предоставления метаданных определенного типа.  
+В этом примере показано, как добавить класс в качестве владельца свойства зависимостей, зарегистрированного для другого типа. Таким образом, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] читатель и система свойств могут распознать класс как дополнительный владелец свойства. Добавление в качестве владельца (необязательно) позволяет добавить класс для предоставления метаданных конкретного типа.  
   
- В следующем примере `StateProperty` свойство регистрируется путем `MyStateControl` класса. Класс `UnrelatedStateControl` добавляет себя в качестве владельца `StateProperty` с помощью <xref:System.Windows.DependencyProperty.AddOwner%2A> метода, в частности с помощью подпись, которая обеспечивает более новые метаданные для свойства зависимостей, так как оно существует в типе добавление. Обратите внимание, что необходимо предоставить [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] методы доступа для свойства, как показано в примере [реализация свойства зависимостей](how-to-implement-a-dependency-property.md) пример, а также повторно предоставить идентификатор свойства зависимостей для класса, добавляемого в как владелец.  
+ В следующем примере — это `StateProperty` свойство, зарегистрированное `MyStateControl` классом. Класс `UnrelatedStateControl` добавляет себя в качестве владельца `StateProperty` с помощью <xref:System.Windows.DependencyProperty.AddOwner%2A> метода, в частности с помощью сигнатуры, которая позволяет использовать новые метаданные для свойства зависимостей в том виде, в котором оно существует в добавлении типа. Обратите внимание, что необходимо предоставить методы доступа среды CLR для свойства, аналогичные примеру, приведенному в примере [реализации свойства зависимостей](how-to-implement-a-dependency-property.md) , а также повторно предоставлять идентификатор свойства зависимости для класса, добавляемого в качестве владельца.  
   
- Без оболочки свойства зависимостей по-прежнему будет работать с точки зрения программный доступ с помощью <xref:System.Windows.DependencyObject.GetValue%2A> или <xref:System.Windows.DependencyObject.SetValue%2A>. Но чаще всего требуется параллельное поведение системы свойств [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] оболочек свойств. Оболочки упрощают установку свойства зависимости и обеспечить возможность задать свойства, как [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] атрибуты.  
+ Без оболочек свойство зависимости по-прежнему будет работать с точки зрения программного доступа с помощью <xref:System.Windows.DependencyObject.GetValue%2A> или <xref:System.Windows.DependencyObject.SetValue%2A>. Но обычно требуется параллельное поведение системы свойств с оболочками свойств CLR. Оболочки упрощают задание свойства зависимостей программным способом и позволяют задавать свойства в качестве [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] атрибутов.  
   
- Чтобы узнать, как переопределить метаданные по умолчанию, см. в разделе [переопределение метаданных для свойства зависимостей](how-to-override-metadata-for-a-dependency-property.md).  
+ Чтобы узнать, как переопределить метаданные по умолчанию, см. раздел [Переопределение метаданных для свойства зависимостей](how-to-override-metadata-for-a-dependency-property.md).  
   
 ## <a name="example"></a>Пример  
  [!code-csharp[PropertySystemEsoterics#MyStateControl](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
