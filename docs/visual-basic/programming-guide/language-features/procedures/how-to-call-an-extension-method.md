@@ -5,97 +5,98 @@ helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: 5cb0684637a716dfec947740ba345c62eaabddd7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2058162ab939d2619d7255c884d88c35ee63715
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863679"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512675"
 ---
-# <a name="how-to-call-an-extension-method-visual-basic"></a><span data-ttu-id="58716-102">Практическое руководство. Вызов метода расширения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="58716-102">How to: Call an Extension Method (Visual Basic)</span></span>
-<span data-ttu-id="58716-103">Методы расширения позволяют добавлять методы к существующему классу.</span><span class="sxs-lookup"><span data-stu-id="58716-103">Extension methods enable you to add methods to an existing class.</span></span> <span data-ttu-id="58716-104">После объявления и добавлены в область действия методом расширения, его можно вызывать как метод экземпляра типа, который он расширяет.</span><span class="sxs-lookup"><span data-stu-id="58716-104">After an extension method is declared and brought into scope, you can call it like an instance method of the type that it extends.</span></span> <span data-ttu-id="58716-105">Дополнительные сведения о том, как написание метода расширения, см. в разделе [как: Написание метода расширения](./how-to-write-an-extension-method.md).</span><span class="sxs-lookup"><span data-stu-id="58716-105">For more information about how to write an extension method, see [How to: Write an Extension Method](./how-to-write-an-extension-method.md).</span></span>  
-  
- <span data-ttu-id="58716-106">Приведенные ниже инструкции относятся к методу расширения `PrintAndPunctuate`, для второго параметра, который будет отображать экземпляр строки и вызывает его, любое значение отправляется в `punc`.</span><span class="sxs-lookup"><span data-stu-id="58716-106">The following instructions refer to extension method `PrintAndPunctuate`, which will display the string instance that invokes it, followed by whatever value is sent in for the second parameter, `punc`.</span></span>  
-  
-```vb  
-Imports System.Runtime.CompilerServices  
-  
-Module StringExtensions  
-    <Extension()>   
-    Public Sub PrintAndPunctuate(ByVal aString As String,   
-                                 ByVal punc As String)  
-        Console.WriteLine(aString & punc)  
-    End Sub  
-  
-End Module  
-```  
-  
- <span data-ttu-id="58716-107">Метод должен находиться в области, при вызове.</span><span class="sxs-lookup"><span data-stu-id="58716-107">The method must be in scope when it is called.</span></span>  
-  
-### <a name="to-call-an-extension-method"></a><span data-ttu-id="58716-108">Для вызова метода расширения</span><span class="sxs-lookup"><span data-stu-id="58716-108">To call an extension method</span></span>  
-  
-1. <span data-ttu-id="58716-109">Объявите переменную, которая имеет тип данных первого параметра метода расширения.</span><span class="sxs-lookup"><span data-stu-id="58716-109">Declare a variable that has the data type of the first parameter of the extension method.</span></span> <span data-ttu-id="58716-110">Для `PrintAndPunctuate`, вам потребуется <xref:System.String> переменной:</span><span class="sxs-lookup"><span data-stu-id="58716-110">For `PrintAndPunctuate`, you need a <xref:System.String> variable:</span></span>  
-  
-    ```  
-    Dim example = "Ready"  
-    ```  
-  
-2. <span data-ttu-id="58716-111">Переменная будет вызвать метод расширения, что его значение, привязанное к первому параметру `aString`.</span><span class="sxs-lookup"><span data-stu-id="58716-111">That variable will invoke the extension method, and its value is bound to the first parameter, `aString`.</span></span> <span data-ttu-id="58716-112">Следующая инструкция вызова будет отображать `Ready?`.</span><span class="sxs-lookup"><span data-stu-id="58716-112">The following calling statement will display `Ready?`.</span></span>  
-  
-    ```  
-    example.PrintAndPunctuate("?")  
-    ```  
-  
-     <span data-ttu-id="58716-113">Обратите внимание, что вызов этого метода расширения выглядит, как вызов любого из <xref:System.String> экземпляра методов, которым требуется один параметр:</span><span class="sxs-lookup"><span data-stu-id="58716-113">Notice that the call to this extension method looks just like a call to any one of the <xref:System.String> instance methods that require one parameter:</span></span>  
-  
-    ```  
-    example.EndsWith("dy")  
-    example.IndexOf("R")  
-    ```  
-  
-3. <span data-ttu-id="58716-114">Объявите другую строковую переменную и вызовите метод еще раз, чтобы увидеть, что он работает с любой строкой.</span><span class="sxs-lookup"><span data-stu-id="58716-114">Declare another string variable and call the method again to see that it works with any string.</span></span>  
-  
-    ```  
-    Dim example2 = " or not"  
-    example2.PrintAndPunctuate("!!!")  
-    ```  
-  
-     <span data-ttu-id="58716-115">Результатом является это время: `or not!!!`.</span><span class="sxs-lookup"><span data-stu-id="58716-115">The result this time is: `or not!!!`.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="58716-116">Пример</span><span class="sxs-lookup"><span data-stu-id="58716-116">Example</span></span>  
- <span data-ttu-id="58716-117">Ниже приведен полный пример создания и использования метода простого расширения.</span><span class="sxs-lookup"><span data-stu-id="58716-117">The following code is a complete example of the creation and use of a simple extension method.</span></span>  
-  
-```vb  
-Imports System.Runtime.CompilerServices  
-Imports ConsoleApplication1.StringExtensions  
-  
-Module Module1  
-  
-    Sub Main()  
-  
-        Dim example = "Hello"  
-        example.PrintAndPunctuate(".")  
-        example.PrintAndPunctuate("!!!!")  
-  
-        Dim example2 = "Goodbye"  
-        example2.PrintAndPunctuate("?")  
-    End Sub  
-  
-    <Extension()>   
-    Public Sub PrintAndPunctuate(ByVal aString As String,   
-                                 ByVal punc As String)  
-        Console.WriteLine(aString & punc)  
-    End Sub  
-End Module  
-  
-' Output:  
-' Hello.  
-' Hello!!!!  
-' Goodbye?  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="58716-118">См. также</span><span class="sxs-lookup"><span data-stu-id="58716-118">See also</span></span>
+# <a name="how-to-call-an-extension-method-visual-basic"></a><span data-ttu-id="e2c4a-102">Практическое руководство. Вызов метода расширения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2c4a-102">How to: Call an Extension Method (Visual Basic)</span></span>
 
-- [<span data-ttu-id="58716-119">Практическое руководство. Написание метода расширения</span><span class="sxs-lookup"><span data-stu-id="58716-119">How to: Write an Extension Method</span></span>](./how-to-write-an-extension-method.md)
-- [<span data-ttu-id="58716-120">Методы расширения</span><span class="sxs-lookup"><span data-stu-id="58716-120">Extension Methods</span></span>](./extension-methods.md)
-- [<span data-ttu-id="58716-121">Область, в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="58716-121">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+<span data-ttu-id="e2c4a-103">Методы расширения позволяют добавлять методы в существующий класс.</span><span class="sxs-lookup"><span data-stu-id="e2c4a-103">Extension methods enable you to add methods to an existing class.</span></span> <span data-ttu-id="e2c4a-104">После объявления и включения в область действия метода расширения можно вызвать его как метод экземпляра типа, который он расширяет.</span><span class="sxs-lookup"><span data-stu-id="e2c4a-104">After an extension method is declared and brought into scope, you can call it like an instance method of the type that it extends.</span></span> <span data-ttu-id="e2c4a-105">Дополнительные сведения о написании метода расширения см. в разделе [как Напишите метод](./how-to-write-an-extension-method.md)расширения.</span><span class="sxs-lookup"><span data-stu-id="e2c4a-105">For more information about how to write an extension method, see [How to: Write an Extension Method](./how-to-write-an-extension-method.md).</span></span>
+
+ <span data-ttu-id="e2c4a-106">Следующие инструкции относятся к методу `PrintAndPunctuate`расширения, который отображает экземпляр строки, который вызывает его, за которым следует любое значение, отправляемое для второго `punc`параметра.</span><span class="sxs-lookup"><span data-stu-id="e2c4a-106">The following instructions refer to extension method `PrintAndPunctuate`, which will display the string instance that invokes it, followed by whatever value is sent in for the second parameter, `punc`.</span></span>
+
+```vb
+Imports System.Runtime.CompilerServices
+
+Module StringExtensions
+    <Extension()>
+    Public Sub PrintAndPunctuate(ByVal aString As String,
+                                 ByVal punc As String)
+        Console.WriteLine(aString & punc)
+    End Sub
+
+End Module
+```
+
+<span data-ttu-id="e2c4a-107">Метод должен находиться в области видимости при его вызове.</span><span class="sxs-lookup"><span data-stu-id="e2c4a-107">The method must be in scope when it is called.</span></span>
+
+### <a name="to-call-an-extension-method"></a><span data-ttu-id="e2c4a-108">Вызов метода расширения</span><span class="sxs-lookup"><span data-stu-id="e2c4a-108">To call an extension method</span></span>
+
+1. <span data-ttu-id="e2c4a-109">Объявите переменную с типом данных первого параметра метода расширения.</span><span class="sxs-lookup"><span data-stu-id="e2c4a-109">Declare a variable that has the data type of the first parameter of the extension method.</span></span> <span data-ttu-id="e2c4a-110">Для `PrintAndPunctuate` необходимо<xref:System.String> иметь переменную:</span><span class="sxs-lookup"><span data-stu-id="e2c4a-110">For `PrintAndPunctuate`, you need a <xref:System.String> variable:</span></span>
+
+    ```vb
+    Dim example = "Ready"
+    ```
+
+2. <span data-ttu-id="e2c4a-111">Эта переменная вызывает метод расширения, и его значение привязывается к первому параметру, `aString`.</span><span class="sxs-lookup"><span data-stu-id="e2c4a-111">That variable will invoke the extension method, and its value is bound to the first parameter, `aString`.</span></span> <span data-ttu-id="e2c4a-112">Отобразится следующая инструкция `Ready?`вызова.</span><span class="sxs-lookup"><span data-stu-id="e2c4a-112">The following calling statement will display `Ready?`.</span></span>
+
+    ```vb
+    example.PrintAndPunctuate("?")
+    ```
+
+     <span data-ttu-id="e2c4a-113">Обратите внимание, что вызов этого метода расширения выглядит так же, как вызов любого <xref:System.String> метода экземпляра, для которого требуется один параметр:</span><span class="sxs-lookup"><span data-stu-id="e2c4a-113">Notice that the call to this extension method looks just like a call to any one of the <xref:System.String> instance methods that require one parameter:</span></span>
+
+    ```vb
+    example.EndsWith("dy")
+    example.IndexOf("R")
+    ```
+
+3. <span data-ttu-id="e2c4a-114">Объявите другую строковую переменную и снова вызовите метод, чтобы увидеть, что он работает с любой строкой.</span><span class="sxs-lookup"><span data-stu-id="e2c4a-114">Declare another string variable and call the method again to see that it works with any string.</span></span>
+
+    ```vb
+    Dim example2 = " or not"
+    example2.PrintAndPunctuate("!!!")
+    ```
+
+     <span data-ttu-id="e2c4a-115">Результат в этом случае: `or not!!!`.</span><span class="sxs-lookup"><span data-stu-id="e2c4a-115">The result this time is: `or not!!!`.</span></span>
+
+## <a name="example"></a><span data-ttu-id="e2c4a-116">Пример</span><span class="sxs-lookup"><span data-stu-id="e2c4a-116">Example</span></span>
+ <span data-ttu-id="e2c4a-117">Следующий код является полным примером создания и использования простого метода расширения.</span><span class="sxs-lookup"><span data-stu-id="e2c4a-117">The following code is a complete example of the creation and use of a simple extension method.</span></span>
+
+```vb
+Imports System.Runtime.CompilerServices
+Imports ConsoleApplication1.StringExtensions
+
+Module Module1
+
+    Sub Main()
+
+        Dim example = "Hello"
+        example.PrintAndPunctuate(".")
+        example.PrintAndPunctuate("!!!!")
+
+        Dim example2 = "Goodbye"
+        example2.PrintAndPunctuate("?")
+    End Sub
+
+    <Extension()>
+    Public Sub PrintAndPunctuate(ByVal aString As String,
+                                 ByVal punc As String)
+        Console.WriteLine(aString & punc)
+    End Sub
+End Module
+
+' Output:
+' Hello.
+' Hello!!!!
+' Goodbye?
+```
+
+## <a name="see-also"></a><span data-ttu-id="e2c4a-118">См. также</span><span class="sxs-lookup"><span data-stu-id="e2c4a-118">See also</span></span>
+
+- [<span data-ttu-id="e2c4a-119">Практическое руководство. Написание метода расширения</span><span class="sxs-lookup"><span data-stu-id="e2c4a-119">How to: Write an Extension Method</span></span>](./how-to-write-an-extension-method.md)
+- [<span data-ttu-id="e2c4a-120">Методы расширения</span><span class="sxs-lookup"><span data-stu-id="e2c4a-120">Extension Methods</span></span>](./extension-methods.md)
+- [<span data-ttu-id="e2c4a-121">Область в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e2c4a-121">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
