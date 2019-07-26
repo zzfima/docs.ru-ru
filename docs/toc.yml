@@ -68,12 +68,7 @@
     - name: Обработка и создание исключений
       href: standard/exceptions/
     - name: Сборки в .NET
-      href: standard/assembly/index.md
-      items:
-        - name: Формат файла сборки .NET
-          href: standard/assembly/file-format.md
-        - name: Практическое руководство. Использование и отладка сборок с возможностью выгрузки в .NET Core
-          href: standard/assembly/unloadability-howto.md
+      href: standard/assembly/
     - name: Сборка мусора
       href: standard/garbage-collection/
     - name: универсальные типы;
@@ -2260,7 +2255,7 @@
               href: visual-basic/language-reference/error-messages/xml-literals-and-xml-properties-are-not-supported-in-embedded-code-in-aspnet.md
             - name: URI-код пространства имен XML <uri> может быть связан только с префиксом xmlns
               href: visual-basic/language-reference/error-messages/xml-namespace-uri-uri-can-be-bound-only-to-xmlns.md
-    - name: Справочник
+    - name: Справочники
       href: visual-basic/reference/index.md
       items:
         - name: Компилятор с интерфейсом командной строки
