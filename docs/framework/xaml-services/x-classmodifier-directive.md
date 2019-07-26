@@ -10,15 +10,15 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-ms.openlocfilehash: 8f90f56a595fa175d5c48a929fc19ceb81ab0d63
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c3c08f61b49a6367663cf02099dda86d1a692284
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617108"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484750"
 ---
 # <a name="xclassmodifier-directive"></a>Директива x:ClassModifier
-Изменяет поведение компиляции XAML при `x:Class` также предоставляется. В частности, вместо того чтобы создавать частичной `class` с `Public` обращаться к уровню (по умолчанию), предоставленный `x:Class` создается с `NotPublic` уровень доступа. Это поведение влияет на уровень доступа для класса в созданных сборок.  
+Изменяет поведение компиляции XAML, если `x:Class` также предоставляется. В частности, вместо создания частичного `class` уровня, `Public` имеющего уровень доступа (по умолчанию), `x:Class` `NotPublic` предоставленный объект создается с уровнем доступа. Это поведение влияет на уровень доступа для класса в создаваемых сборках.  
   
 ## <a name="xaml-attribute-usage"></a>Использование атрибута XAML  
   
@@ -32,26 +32,26 @@ ms.locfileid: "64617108"
   
 |||  
 |-|-|  
-|*NotPublic*|Точная строка для указания <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> и <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> зависит от кода языка программирования, используемом. См. заметки.|  
+|*нотпублик*|Точная строка, которую необходимо передать в <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> параметре, и <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> зависит от используемого языка программирования кода программной части. См. заметки.|  
   
 ## <a name="dependencies"></a>Зависимости  
- [x: Class](x-class-directive.md) также должен быть предоставлен в том же элементе, и этот элемент должен быть корневым элементом страницы. Дополнительные сведения см. в разделе [ \[MS-XAML\] разделе 4.3.1.8](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ [x:Class](x-class-directive.md) также должен быть указан в том же элементе, и этот элемент должен быть корневым элементом на странице. Дополнительные сведения см [ \[. в разделе 4.3.1.8 в\] MS-XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="remarks"></a>Примечания  
- Значение `x:ClassModifier` в службах XAML .NET Framework использования зависит от языка программирования. Строка, используемая зависит от того, как каждый язык реализует его <xref:System.CodeDom.Compiler.CodeDomProvider> и преобразователями типов, он возвращает для определения значений для <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> и <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, а также является ли этот язык с учетом регистра.  
+ Значение `x:ClassModifier` в .NET Framework службах XAML зависит от языка программирования. Используемая строка зависит от того, как каждый язык реализует <xref:System.CodeDom.Compiler.CodeDomProvider> его и какие преобразователи типов он возвращает, чтобы определить значения для <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> и <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, а также указать, учитывается ли регистр в этом языке.  
   
-- Для C#, строка, передаваемая для обозначения <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> является `internal`.  
+- Для C#строка, которую необходимо передать для обозначения <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> , —. `internal`  
   
-- Для Microsoft Visual Basic .NET, строка, передаваемая для обозначения <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> является `Friend`.  
+- Для Microsoft Visual Basic .NET строка, которую необходимо передать для обозначения <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> , — это. `Friend`  
   
-- Для [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], целевые объекты не существуют, поддерживающие компиляции XAML; таким образом, не указано значение для передачи.  
+- Для C++/CLI не существует целей, поддерживающих компиляцию XAML; Поэтому значение для передачи не указано.  
   
- Можно также указать <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> (`public` в C# `Public` в Visual Basic), однако указание <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> делается нечасто, потому, что <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> уже является поведением по умолчанию.  
+ <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> Можно также указать (`public` в C#, `Public` в Visual Basic), однако указание <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> выполняется редко, так как <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> уже является поведением по умолчанию.  
   
- Другие значения, с помощью эквивалентных пользовательский код доступа уровня ограничения, такие как `private` в C#, не являются значимыми для `x:ClassModifier` так, как вложенный класс ссылки не поддерживаются в XAML и, следовательно, <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> модификатор имеет тот же эффект.  
+ Другие значения с эквивалентными ограничениями уровня доступа для пользовательского кода, `private` например C#в, не являются значимыми для `x:ClassModifier` , поскольку ссылки на вложенные классы не поддерживаются <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> в XAML, поэтому модификатор имеет тот же результат. .  
   
-## <a name="security-notes"></a>Заметки о безопасности  
- Уровень доступа, как объявлено в `x:ClassModifier` интерпретируется по-прежнему с определенными платформами и их возможности. WPF включает возможности для загрузки и создания экземпляров типов где `x:ClassModifier` является `internal`, если этот класс ссылается ресурс WPF с помощью пакета URI-ссылка. В результате этот случай и другие пользователи, как и реализацией других платформ, не следует полагаться исключительно на `x:ClassModifier` блокировать создание экземпляра все возможные попытки.  
+## <a name="security-notes"></a>Примечания по безопасности  
+ Уровень доступа, объявленный в `x:ClassModifier` , по-прежнему подвергается интерпретации определенными платформами и их возможностями. WPF включает возможности для загрузки и создания экземпляров типов, `x:ClassModifier` где `internal`имеет значение, если на этот класс имеется ссылка из ресурса WPF через ссылку на URI типа "Pack". Как следствие этого случая и другие, например, реализованные другими платформами, не полагайтесь исключительно на `x:ClassModifier` блокировку всех возможных попыток создания экземпляров.  
   
 ## <a name="see-also"></a>См. также
 

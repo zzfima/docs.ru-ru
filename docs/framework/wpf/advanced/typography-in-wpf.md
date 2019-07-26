@@ -4,24 +4,24 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 98dc2899fd2c6a294f9f878ccbf87f60520bbe78
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: ffbd59cb398d417a36d75ff0ef9ef4ef143c30c0
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238689"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484651"
 ---
 # <a name="typography-in-wpf"></a>Оформление в WPF
 В этом разделе содержатся вводные сведения об основных типографических возможностях [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Эти возможности включают в себя повышение качества и производительности отрисовки текста, типографическую поддержку [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], расширенный международный текст, улучшенную поддержку шрифтов и новые текстовые API.  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Улучшенное качество и производительность работы с текстом  
- Текст в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] отрисовывается с помощью [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], что улучшает четкость и читаемость текста. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] — это программная технология, разработанная [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] для улучшения удобочитаемости текста на современных ЖК-мониторах (жидкокристаллических дисплеях), например экранах ноутбуков, карманных ПК и плоскопанельных мониторах. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] применяет отрисовку на субпиксельном уровне, которая позволяет отображать текст с повышенной точностью формы, выравнивая символы до дробной части пикселя. Дополнительное разрешение повышает четкость мелких деталей отображаемого текста, значительно облегчая его длительное чтение. Другим улучшением [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] является применение устранения контурных неровностей по направлению оси Y, которое сглаживает неровные края на верхних и нижних частях в текстовых знаках. Дополнительные сведения о возможностях [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] см. в разделе [Общие сведения о технологии ClearType](cleartype-overview.md).  
+ Текст в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] отрисовывается с помощью [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], что улучшает четкость и читаемость текста. Технология ClearType представляет собой программную технологию [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] , разработанную таким образом, улучшая удобочитаемость текста на существующих LCDs (жидкокристаллических дисплеях), таких как экраны ноутбука, карманные экраны и мониторы с плоскими панелями. Технология ClearType использует отрисовку в виде вложенных точек, что позволяет отображать текст с большей точностью до своей реальной фигуры, выполняя символы в дробной части пикселя. Дополнительное разрешение повышает четкость мелких деталей отображаемого текста, значительно облегчая его длительное чтение. Еще одним улучшением технологии [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ClearType в является сглаживание по оси y, которое сглаживает верхние и нижние границы мелких кривых в текстовых символах. Дополнительные сведения о функциях ClearType см. в разделе [Общие сведения о технологии](cleartype-overview.md)ClearType.  
   
  ![Текст со сглаживанием ClearType по оси Y](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 Текст со сглаживанием ClearType по оси Y  
   
- Весь конвейер отрисовки текста может поддерживать аппаратное ускорение в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], позволяя применять компьютер с минимальными требованиями к оборудованию. Отрисовка, которая не может быть выполнена на аппаратном уровне, использует программный рендеринг. Аппаратное ускорение влияет на все этапы конвейера отрисовки текста — от сохранения отдельных глифов, их компоновки в глифы для выполнения, применения эффектов и до применения алгоритма смешивания [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] для окончательной отрисовки. Дополнительные сведения об аппаратном ускорении см. в разделе [Уровни графической отрисовки](graphics-rendering-tiers.md).  
+ Весь конвейер отрисовки текста может поддерживать аппаратное ускорение в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], позволяя применять компьютер с минимальными требованиями к оборудованию. Отрисовка, которая не может быть выполнена на аппаратном уровне, использует программный рендеринг. Аппаратное ускорение влияет на все этапы конвейера отрисовки текста — от хранения отдельных глифов, совмещения глифов в выполнении глифов, применения эффектов к применению алгоритма смешения ClearType к окончательно отображаемым выходным данным. Дополнительные сведения об аппаратном ускорении см. в разделе [Уровни графической отрисовки](graphics-rendering-tiers.md).  
   
  ![Диаграмма конвейера отрисовки текста](./media/typography-in-wpf/text-rendering-pipeline.png)  
   
@@ -29,15 +29,15 @@ ms.locfileid: "68238689"
   
 <a name="Rich_Typography"></a>   
 ## <a name="rich-typography"></a>Типография с широкими возможностями  
- Формат шрифта [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] является расширением формата [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]. Формат шрифта [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] был разработан совместно корпорацией [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] и Adobe и предоставляет широкий набор дополнительных типографических возможностей. <xref:System.Windows.Documents.Typography> Объект предоставляет многие расширенные возможности [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] шрифтов, таких как изменение стилей и swash. [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] предоставляет набор образцов шрифтов [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)], разработанных с широкими возможностями, такие как шрифты Pericles и Pescadero. Дополнительные сведения см. в разделе [Пакет образцов шрифтов OpenType](sample-opentype-font-pack.md).  
+ Формат шрифта [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] является расширением формата [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]. Формат шрифта [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] был разработан совместно корпорацией [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] и Adobe и предоставляет широкий набор дополнительных типографических возможностей. Объект предоставляет множество дополнительных [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] возможностей шрифтов, таких как стилистические варианты и глифы. <xref:System.Windows.Documents.Typography> [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] предоставляет набор образцов шрифтов [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)], разработанных с широкими возможностями, такие как шрифты Pericles и Pescadero. Дополнительные сведения см. в разделе [Пакет образцов шрифтов OpenType](sample-opentype-font-pack.md).  
   
  Шрифт [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Pericles содержит дополнительные глифы, поддерживающие изменение стилей для стандартных наборов глифов. Приведенный ниже текст отображает глифы с изменением стиля.  
   
- ![Текст, использующий OpenType Стилистические варианты глифов](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "текст, использующий OpenType Стилистические варианты глифов")  
+ ![Текст, использующий стилистические альтернативные глифы OpenType](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "Текст, использующий стилистические альтернативные глифы OpenType")  
   
  Swash-глифы являются декоративными глифами, которые используют сложную орнаментацию, часто связанную с каллиграфией. Следующий текст отображает стандартные и swash-глифы для шрифта Pescadero.  
   
- ![Текст, использующий стандартные и swash-глифы OpenType](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "текст, использующий стандартные и swash-глифы OpenType")  
+ ![Текст, использующий стандартные и swash глифы OpenType](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "Текст, использующий стандартные и swash глифы OpenType")  
   
  Дополнительные сведения о возможностях [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] см. в разделе [Возможности шрифта OpenType](opentype-font-features.md).  
   
@@ -59,19 +59,19 @@ ms.locfileid: "68238689"
   
 - Поведение шрифта зависит от глобальных настроек, таких как язык системы.  
   
-- Отдельные <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>, и <xref:System.Windows.FontStyle> типов для определения <xref:System.Windows.Media.FontFamily>. Это обеспечивает большую гибкость, чем в программировании [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], в котором логические сочетания курсивного и полужирного шрифта используются для определения семейства шрифтов.  
+- Отдельные <xref:System.Windows.FontWeight>типы <xref:System.Windows.FontStretch>, и<xref:System.Windows.FontStyle>для определения .<xref:System.Windows.Media.FontFamily> Это обеспечивает большую гибкость, чем в программировании [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], в котором логические сочетания курсивного и полужирного шрифта используются для определения семейства шрифтов.  
   
 - Направление письма (горизонтальное или вертикальное) обрабатывается в зависимости от имени шрифта.  
   
-- Связывание и восстановление шрифта в переносимом файле [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] с использованием технологии составного шрифта. Составные шрифты позволяют конструировать все шрифты многоязычного диапазона. Составные шрифты также предоставляют механизм, который позволяет избежать отображения отсутствующих глифов. Дополнительные сведения см. в разделе "Примечания" в <xref:System.Windows.Media.FontFamily> класса.  
+- Связывание и восстановление шрифта в переносимом файле [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] с использованием технологии составного шрифта. Составные шрифты позволяют конструировать все шрифты многоязычного диапазона. Составные шрифты также предоставляют механизм, который позволяет избежать отображения отсутствующих глифов. Дополнительные сведения см. в разделе Примечания в <xref:System.Windows.Media.FontFamily> классе.  
   
 - Международные шрифты, созданные из составных шрифтов с использованием группы одноязыковых шрифтов. Это позволяет избежать затрат ресурсов при разработке шрифтов для нескольких языков.  
   
-- Составные шрифты внедряются в документ, тем самым обеспечивая его совместимость. Дополнительные сведения см. в разделе "Примечания" в <xref:System.Windows.Media.FontFamily> класса.  
+- Составные шрифты внедряются в документ, тем самым обеспечивая его совместимость. Дополнительные сведения см. в разделе Примечания в <xref:System.Windows.Media.FontFamily> классе.  
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>Новые API  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет несколько текстовых API для разработчиков, которые используются при включении текста в своих приложениях. Эти интерфейсы API сгруппированы в три категории:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]предоставляет разработчикам несколько текстовых интерфейсов для использования при включении текста в свои приложения. Эти API группируются по трем категориям:  
   
 - **Макет и пользовательский интерфейс**. Общие элементы управления текстом для [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)].  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68238689"
 - **Дополнительное форматирование текста**. Позволяет реализовать пользовательский обработчик текста.  
   
 ### <a name="layout-and-user-interface"></a>Макет и пользовательский интерфейс  
- На высоком уровне функциональности текстовые интерфейсы API предоставляют Общие [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] элементы управления, например <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock>, и <xref:System.Windows.Controls.TextBox>. Эти элементы управления предоставляют основные элементы [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] в приложении и способ представления текста и взаимодействия с ним. Элементы управления, например <xref:System.Windows.Controls.RichTextBox> и <xref:System.Windows.Controls.PasswordBox> включить более сложных или специализированные обработки текста. И классы, такие как <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection>, и <xref:System.Windows.Documents.TextPointer> предоставляют удобное управление текстом. Эти [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элементы управления предоставляют свойства, такие как <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, и <xref:System.Windows.Controls.Control.FontStyle%2A>, позволяющие управлять шрифтами, используемый для отрисовки текста.  
+ На самом верхнем уровне функциональности интерфейсы API [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] текста предоставляют общие элементы управления, такие как <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock>и. <xref:System.Windows.Controls.TextBox> Эти элементы управления предоставляют основные элементы [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] в приложении и способ представления текста и взаимодействия с ним. Такие элементы управления <xref:System.Windows.Controls.RichTextBox> , <xref:System.Windows.Controls.PasswordBox> как и, обеспечивают более расширенную или специализированную обработку текста. И такие классы, <xref:System.Windows.Documents.TextRange>как <xref:System.Windows.Documents.TextSelection>,, <xref:System.Windows.Documents.TextPointer> и обеспечивают полезную обработку текста. Эти [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элементы управления предоставляют такие свойства <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>как, <xref:System.Windows.Controls.Control.FontStyle%2A>и, которые позволяют управлять шрифтом, используемым для отрисовки текста.  
   
 #### <a name="using-bitmap-effects-transforms-and-text-effects"></a>Использование эффектов точечных рисунков и текстовых эффектов  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] позволяет создавать визуально интересные применения текста, используя такие возможности, как эффекты точечных рисунков, преобразования и текстовые эффекты. В следующем примере показан типичный эффект тени, примененный к тексту.  
@@ -107,25 +107,25 @@ ms.locfileid: "68238689"
   
  ![Текст, искаженный с использованием SkewTransform](./media/typography-in-wpf/skewed-transformed-text.jpg)
   
- Объект <xref:System.Windows.Media.TextEffect> объект — это вспомогательный объект, который позволяет обрабатывать текст как одну или несколько групп символов в текстовой строке. В следующем примере показан поворот отдельных символов. Поворот каждого символа осуществляется независимо от других с интервалом в 1 секунду.  
+ <xref:System.Windows.Media.TextEffect> Объект — это вспомогательный объект, который позволяет обрабатывать текст как одну или несколько групп символов в текстовой строке. В следующем примере показан поворот отдельных символов. Поворот каждого символа осуществляется независимо от других с интервалом в 1 секунду.  
   
  ![Снимок экрана текстового эффекта: повернутый текст](./media/typography-in-wpf/rotating-text-effect.jpg) 
   
 #### <a name="using-flow-documents"></a>Использование документов нефиксированного формата  
- Помимо общих [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элементов управления, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предлагает элемент управления макетом для презентации текста — <xref:System.Windows.Documents.FlowDocument> элемент. <xref:System.Windows.Documents.FlowDocument> Элемент, в сочетании с <xref:System.Windows.Controls.DocumentViewer> элемент предоставляет элемент управления для больших объемов текста с различными требованиями к макету. Элементы управления макета обеспечивают доступ к дополнительным возможностям оформления посредством <xref:System.Windows.Documents.Typography> объекта и свойств, относящихся к шрифту, других [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элементов управления.  
+ Помимо стандартных [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элементов управления, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предлагает элемент управления макетом <xref:System.Windows.Documents.FlowDocument> для представления текста — элемент. Элемент в сочетании <xref:System.Windows.Controls.DocumentViewer> с элементом предоставляет элемент управления для больших объемов текста с различными требованиями к макету. <xref:System.Windows.Documents.FlowDocument> Элементы управления "макет" предоставляют доступ к расширенному оформлению с помощью <xref:System.Windows.Documents.Typography> свойств объекта и шрифта других [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элементов управления.  
   
- В следующем примере показано текстовое содержимое, размещенное в <xref:System.Windows.Controls.FlowDocumentReader>, который предоставляет поиска, переходов, разбиения на страницы и масштабирования содержимого.  
+ В следующем примере показано текстовое содержимое, размещенное <xref:System.Windows.Controls.FlowDocumentReader>в, которое обеспечивает поддержку поиска, навигации, разбивки на страницы и масштабирования содержимого.  
   
  ![Снимок экрана, показывающий шрифты OpenType.](./media/typography-in-wpf/typography-text-flowdocumentreader.png)
   
  Дополнительные сведения см. в разделе [Документы в WPF](documents-in-wpf.md).  
   
 ### <a name="lightweight-text-drawing"></a>Облегченное рисование текста  
- Можно рисовать текст непосредственно в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] объектов с помощью <xref:System.Windows.Media.DrawingContext.DrawText%2A> метод <xref:System.Windows.Media.DrawingContext> объекта. Чтобы использовать этот метод, создайте <xref:System.Windows.Media.FormattedText> объекта. Этот объект позволяет рисовать многострочный текст, в котором каждый символ в текст можно форматировать отдельно. Функциональные возможности <xref:System.Windows.Media.FormattedText> объект содержит множество функциональных возможностей флагов DrawText в Windows API. Кроме того <xref:System.Windows.Media.FormattedText> содержит функциональные возможности, такие как поддержка многоточия, в котором многоточие отображается, когда текст выходит за границы. В следующем примере показан текст, имеющий несколько примененных к нему форматов, в том числе линейный градиент на втором и третьем словах.  
+ Текст можно нарисовать непосредственно в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] объектах с <xref:System.Windows.Media.DrawingContext.DrawText%2A> помощью метода <xref:System.Windows.Media.DrawingContext> объекта. Чтобы использовать этот метод, создайте <xref:System.Windows.Media.FormattedText> объект. Этот объект позволяет рисовать многострочный текст, в котором каждый символ в текст можно форматировать отдельно. Функциональность <xref:System.Windows.Media.FormattedText> объекта содержит большую часть функциональных возможностей флагов DrawText в Windows API. Кроме того <xref:System.Windows.Media.FormattedText> , объект содержит такие функции, как поддержка многоточия, при котором многоточие отображается, когда текст превышает границы. В следующем примере показан текст, имеющий несколько примененных к нему форматов, в том числе линейный градиент на втором и третьем словах.  
   
  ![Отображенный текст с использованием объекта FormattedText](./media/typography-in-wpf/text-formatted-linear-gradient.jpg) 
   
- Можно преобразовать форматированный текст в <xref:System.Windows.Media.Geometry> объектов, что позволяет создавать другие типы наглядного текста. Например, можно создать <xref:System.Windows.Media.Geometry> объект, основанный на контуре строки текста.  
+ Форматированный текст можно преобразовать в <xref:System.Windows.Media.Geometry> объекты, что позволяет создавать другие типы визуально интересного текста. Например, можно создать <xref:System.Windows.Media.Geometry> объект на основе контура текстовой строки.  
   
  ![Оконтуривание текста с использованием кисти линейного градиента](./media/typography-in-wpf/text-outline-linear-gradient.jpg)  
   
@@ -135,14 +135,14 @@ ms.locfileid: "68238689"
   
  ![Текст с кистью изображения, примененной к штриху](./media/typography-in-wpf/image-brush-application.jpg)
   
- ![Текст с кистью изображения, примененной для вычерчивания и выделения](./media/typography-in-wpf/image-brush-text-application.jpg)
+ ![Текст с кистью изображения, примененной к обводке и выделению](./media/typography-in-wpf/image-brush-text-application.jpg)
   
- Дополнительные сведения о <xref:System.Windows.Media.FormattedText> объекта, см. в разделе [Рисование форматированного текста](drawing-formatted-text.md).  
+ Дополнительные сведения <xref:System.Windows.Media.FormattedText> об объекте см. в разделе [Рисование форматированного текста](drawing-formatted-text.md).  
   
 ### <a name="advanced-text-formatting"></a>Дополнительное форматирование текста  
- На наиболее продвинутом уровне текста API-интерфейсы, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предлагает возможность создания пользовательской разметки текста с помощью <xref:System.Windows.Media.TextFormatting.TextFormatter> объектов и других типов в <xref:System.Windows.Media.TextFormatting> пространства имен. <xref:System.Windows.Media.TextFormatting.TextFormatter> И связанные классы позволяют реализовать макет пользовательского текста, который поддерживает пользовательское определение формата символов, стили абзаца, правила разрыва строки и другие возможности разметки для международного текста. Существует несколько случаев, когда нужно переопределить реализацию по умолчанию поддержки макета текста [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Однако если был создан элемент управления или приложение редактирования текста, может потребоваться реализация, отличная от реализации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] по умолчанию.  
+ На наиболее продвинутых уровнях API [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] текста предусмотрена возможность создания пользовательского макета текста с <xref:System.Windows.Media.TextFormatting.TextFormatter> помощью объекта <xref:System.Windows.Media.TextFormatting> и других типов в пространстве имен. Связанные <xref:System.Windows.Media.TextFormatting.TextFormatter> классы и позволяют реализовать пользовательский макет текста, который поддерживает собственное определение форматов символов, стилей абзацев, правил переноса строк и других функций макета для международного текста. Существует несколько случаев, когда нужно переопределить реализацию по умолчанию поддержки макета текста [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Однако если был создан элемент управления или приложение редактирования текста, может потребоваться реализация, отличная от реализации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] по умолчанию.  
   
- В отличие от традиционного текстового API <xref:System.Windows.Media.TextFormatting.TextFormatter> взаимодействует с клиентом макета текста через набор методов обратного вызова. Требуется клиент для предоставления этих методов в реализации <xref:System.Windows.Media.TextFormatting.TextSource> класса. Следующая диаграмма иллюстрирует взаимодействие макета текста между клиентским приложением и <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
+ В <xref:System.Windows.Media.TextFormatting.TextFormatter> отличие от традиционного текстового API, взаимодействует с клиентом макета текста через набор методов обратного вызова. Он требует, чтобы клиент предоставил эти методы в реализации <xref:System.Windows.Media.TextFormatting.TextSource> класса. На следующей диаграмме показано взаимодействие макета текста между клиентским приложением и <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
  ![Схема клиента структуры текста и TextFormatter](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   

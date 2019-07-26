@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: 390f63fca912de6de2a1349363e239eb603df549
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee260d58cdb4dc971fc32ca5c889b459b6a48489
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750613"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484738"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>Размещение содержимого Win32 в WPF
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-См. в разделе [взаимодействие WPF и Win32](wpf-and-win32-interoperation.md).
+См. раздел [взаимодействие WPF и Win32](wpf-and-win32-interoperation.md).
 
-## <a name="a-walkthrough-of-win32-inside-windows-presentation-framework-hwndhost"></a>Пошаговое руководство на основе Win32 в Windows Presentation Framework (HwndHost)
+## <a name="a-walkthrough-of-win32-inside-windows-presentation-framework-hwndhost"></a>Пошаговое руководство по Win32 в Windows Presentation Framework (HwndHost)
 
-Для повторного использования [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] содержимое внутри [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения, используют <xref:System.Windows.Interop.HwndHost>, который является элементом управления, который заставляет HWND выглядеть [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержимого. Как <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost> проста в использовании: являются производными от <xref:System.Windows.Interop.HwndHost> и реализовать `BuildWindowCore` и `DestroyWindowCore` методы, затем экземпляр вашего <xref:System.Windows.Interop.HwndHost> производного класса и поместите его внутри вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложение.
+Чтобы повторно [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] использовать содержимое [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] внутри приложений, <xref:System.Windows.Interop.HwndHost>используйте, который является элементом управления, который делает HWND похожими [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] на содержимое. Как <xref:System.Windows.Interop.HwndSource>, `BuildWindowCore` <xref:System.Windows.Interop.HwndHost> `DestroyWindowCore` [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Interop.HwndHost> прост в использовании: наследовать от и реализовать методы и, создать экземпляр производного класса и поместить его в <xref:System.Windows.Interop.HwndHost> приклад.
 
-Если ваш [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] логики уже упакован как элемент управления, то `BuildWindowCore` реализации нечто большее, чем вызов `CreateWindow`. Например, чтобы создать [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] управления LISTBOX в [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]:
+Если логика уже упакована как элемент управления, ваша `BuildWindowCore` реализация немного `CreateWindow`больше, чем вызов. [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Например, чтобы создать [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] элемент управления ListBox в: C++
 
 ```cpp
 virtual HandleRef BuildWindowCore(HandleRef hwndParent) override {
@@ -46,42 +46,42 @@ virtual void DestroyWindowCore(HandleRef hwnd) override {
 }
 ```
 
-Но предположим, что [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] код не столь автономно? Если таким образом, можно создать [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] диалоговое окно и внедрить его содержимое в одно крупное [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения. В этом примере это в [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] и [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)], несмотря на то, что это также можно сделать на другом языке или из командной строки.
+Но предположим, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] что код не вполне сам самодостаточный? В этом случае можно создать [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] диалоговое окно и внедрить его содержимое в более крупное [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложение. В этом примере это показано [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] в C++и, хотя это также можно сделать на другом языке или в командной строке.
 
-Начните с простого диалога, который компилируется в [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] проекта.
+Начните с простого диалогового окна, компилируемого в C++ [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] проект.
 
-Затем поместим диалог в большее [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения:
+Затем Познакомьтесь с диалоговым окном [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в приложении большего размера:
 
-- Скомпилируйте [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] как управляемый (`/clr`)
+- Скомпилируйте как управляемый (`/clr`) [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]
 
-- Включить диалоговое окно в элемент управления
+- Преобразование диалогового окна в элемент управления
 
-- Определить класс, производный от <xref:System.Windows.Interop.HwndHost> с `BuildWindowCore` и `DestroyWindowCore` методы
+- Определение производного класса <xref:System.Windows.Interop.HwndHost> с помощью `BuildWindowCore` методов `DestroyWindowCore` и
 
-- Переопределить `TranslateAccelerator` метод для обработки ключей диалоговое окно
+- Переопределение `TranslateAccelerator` метода для работы с диалоговыми ключами
 
-- Переопределить `TabInto` метод для поддержки переходов
+- Переопределение `TabInto` метода для поддержки перехода по клавише TAB
 
-- Переопределить `OnMnemonic` метод для поддержки назначенных клавиш
+- Переопределение `OnMnemonic` метода для поддержки назначенных клавиш
 
-- Создать экземпляр <xref:System.Windows.Interop.HwndHost> подкласс и поместить его в правом [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элемент
+- Создание экземпляра [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] подкласса и помещение его в правый элемент <xref:System.Windows.Interop.HwndHost>
 
-### <a name="turn-the-dialog-into-a-control"></a>Включить диалоговое окно в элемент управления
+### <a name="turn-the-dialog-into-a-control"></a>Преобразование диалогового окна в элемент управления
 
-Диалоговое окно можно превратить в дочерний элемент с использованием стилей WS_CHILD и DS_CONTROL HWND. Перейдите в файл ресурсов (.rc), где определено диалоговое окно и найти начало определения диалогового окна:
+Диалоговое окно можно преобразовать в дочерний HWND с помощью стилей WS_CHILD и DS_CONTROL. Перейдите в файл ресурсов (. RC), в котором определено диалоговое окно, и найдите начало определения диалогового окна:
 
 ```
 IDD_DIALOG1 DIALOGEX 0, 0, 303, 121
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 ```
 
-Измените второй строки, чтобы:
+Измените вторую строку на:
 
 ```
 STYLE DS_SETFONT | WS_CHILD | WS_BORDER | DS_CONTROL
 ```
 
-Это действие не полностью его в автономное элемента управления; необходимо по-прежнему вызвать `IsDialogMessage()` , [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] может обрабатывать определенные сообщения, но изменение элемента управления предоставляют простой способ размещения этих элементов управления внутри другого HWND.
+Это действие не полностью упаковывается в самодостаточный элемент управления. по-прежнему необходимо вызывать `IsDialogMessage()` , [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] чтобы обрабатывать определенные сообщения, но изменение элемента управления обеспечивает простой способ размещения этих элементов управления в другом HWND.
 
 ## <a name="subclass-hwndhost"></a>Подкласс HwndHost
 
@@ -98,7 +98,7 @@ namespace ManagedCpp
     using namespace System::Runtime::InteropServices;
 ```
 
-Создайте класс, производный от <xref:System.Windows.Interop.HwndHost> и переопределить `BuildWindowCore` и `DestroyWindowCore` методов:
+Затем создайте производный класс класса <xref:System.Windows.Interop.HwndHost> и `BuildWindowCore` Переопределите методы `DestroyWindowCore` и:
 
 ```cpp
 public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
@@ -120,7 +120,7 @@ public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
         }
 ```
 
-Здесь используется `CreateDialog` Создание диалогового окна, которое на самом деле элемент управления. Так как это один из первых методов, вызванных внутри [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)], необходимо выполнить некоторые стандартные [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] инициализацию путем вызова функции, будут определены позже, вызывается `InitializeGlobals()`:
+Здесь используется `CreateDialog` для создания диалогового окна, которое на самом деле является элементом управления. Поскольку это один из первых методов [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)], вызываемых внутри, необходимо также выполнить стандартную [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] инициализацию, вызвав функцию, которая будет определена позже `InitializeGlobals()`, с именем:
 
 ```cpp
 bool initialized = false;
@@ -138,9 +138,9 @@ bool initialized = false;
         MyRegisterClass(hInstance);
 ```
 
-### <a name="override-translateaccelerator-method-to-handle-dialog-keys"></a>Переопределите метод TranslateAccelerator обрабатывать ключи диалоговое окно
+### <a name="override-translateaccelerator-method-to-handle-dialog-keys"></a>Переопределение метода TranslateAccelerator для работы с диалоговыми ключами
 
-Если запустить этот пример, получится элемент управления диалогового окна, отображающий, но будет игнорировать всю обработку, которая делает клавиатуры диалоговое окно функциональной диалоговое окно. Теперь необходимо переопределить `TranslateAccelerator` реализации (который поставляется вместе с `IKeyboardInputSink`, интерфейс, <xref:System.Windows.Interop.HwndHost> реализует). Этот метод вызывается, когда приложение получает WM_KEYDOWN и WM_SYSKEYDOWN.
+Если вы запустили этот пример, вы получите элемент управления диалогового окна, отображающий, но при этом будет игнорироваться вся обработка клавиатуры, которая делает диалоговое окно функциональным. Теперь необходимо переопределить `TranslateAccelerator` реализацию (которая поступает из `IKeyboardInputSink`интерфейса <xref:System.Windows.Interop.HwndHost> , реализующего). Этот метод вызывается, когда приложение получает WM_KEYDOWN и WM_SYSKEYDOWN.
 
 ```cpp
 #undef TranslateAccelerator
@@ -193,15 +193,15 @@ bool initialized = false;
         }
 ```
 
-Это много кода, поэтому она может использовать более подробные пояснения. Во-первых, код, используя [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] и [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] макросы; вы должны знать, что уже макрос с именем `TranslateAccelerator`, который определен в winuser.h:
+Это большой объем кода в одной части, поэтому он может использовать некоторые более подробные объяснения. Во первых, код использует C++ макросы и C++ ; необходимо иметь в виду, что уже существует макрос с именем `TranslateAccelerator`, который определен в файле WinUser. h:
 
 ```cpp
 #define TranslateAccelerator  TranslateAcceleratorW
 ```
 
-Поэтому убедитесь, что определение `TranslateAccelerator` метода и не `TranslateAcceleratorW` метод.
+Поэтому убедитесь, что определен `TranslateAccelerator` метод, а `TranslateAcceleratorW` не метод.
 
-Таким же образом есть неуправляемый код winuser.h MSG и управляемое `Microsoft::Win32::MSG` структуры. Чтобы устранить неоднозначность между ними с помощью [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] `::` оператор.
+Точно так же существует и неуправляемый Winuser. h MSG, и управляемая `Microsoft::Win32::MSG` структура. Можно определить неоднозначность между двумя с C++ `::` помощью оператора.
 
 ```cpp
 virtual bool TranslateAccelerator(System::Windows::Interop::MSG% msg,
@@ -231,7 +231,7 @@ Both MSGs have the same data, but sometimes it is easier to work with the unmana
 }
 ```
 
-К `TranslateAccelerator`. Основным критерием является вызов [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] функция `IsDialogMessage` делать столько работы, возможно, но `IsDialogMessage` не имеет доступа к любому за пределами диалогового окна. По мере выполнения вне диалогового окна, заставляя следующую за последним элементом управления в нашем диалоге, вам потребуется установить фокус на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] часть путем вызова `IKeyboardInputSite::OnNoMoreStops`.
+Вернуться к `TranslateAccelerator`. Основным принципом является вызов [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] функции `IsDialogMessage` для выполнения максимально возможной работы, но `IsDialogMessage` не имеет доступа к каким-либо данным за пределами диалогового окна. В качестве вкладки пользователя в диалоговом окне, когда Табуляция выполняется после последнего элемента управления в нашем диалоговом окне, необходимо установить фокус на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] эту часть, `IKeyboardInputSite::OnNoMoreStops`вызвав.
 
 ```cpp
 // Win32's IsDialogMessage() will handle most of the tabbing, but doesn't know
@@ -253,7 +253,7 @@ if (m.message == WM_KEYDOWN && m.wParam == VK_TAB) {
 }
 ```
 
-Теперь вызовите `IsDialogMessage`. Но один из ответственности `TranslateAccelerator` метод сообщается [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ли нажатие клавиши или нет. Если вы не обрабатывает его, событие ввода может Туннелировать и поднимаются по остальной части приложения. Здесь, будут предоставлены особенности обработки клавиатуры и характера архитектура ввода в [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. К сожалению `IsDialogMessage` не возвращает никоим образом обрабатывает ли конкретное нажатие клавиши. Что еще хуже, он вызывает `DispatchMessage()` на нажатия клавиш, он не должен обрабатывать!  Чтобы вы могли реконструировать `IsDialogMessage`и вызвать его только для ключей, вы знаете, что он будет обрабатывать:
+Теперь вызовите `IsDialogMessage`. Но одной из обязанностей `TranslateAccelerator` метода [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] является то, что вы обработали нажатие клавиши. Если вы не обработали его, входное событие может быть туннелем и пузырьковым через остальную часть приложения. Здесь вы узнаете о том, как работать с клавиатурой мессанже и природы входной архитектуры в [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. К сожалению, не возвращает никакого способа, `IsDialogMessage` обрабатывает ли он определенное нажатие клавиши. Еще хуже, он будет вызывать `DispatchMessage()` нажатия клавиш, которые не должны обработаны!  Поэтому необходимо выполнить реконструирование `IsDialogMessage`и вызвать его только для тех ключей, которые будут обработаны:
 
 ```cpp
 // Only call IsDialogMessage for keys it will do something with.
@@ -276,9 +276,9 @@ if (msg.message == WM_SYSKEYDOWN || msg.message == WM_KEYDOWN) {
     }
 ```
 
-### <a name="override-tabinto-method-to-support-tabbing"></a>Переопределение метода TabInto для поддержки переходов
+### <a name="override-tabinto-method-to-support-tabbing"></a>Переопределение метода Табинто для поддержки перехода по клавише TAB
 
-Теперь, когда вы реализовали `TranslateAccelerator`, пользователь может совершать переходы внутри диалогового окна поле и выйти в большее [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения. Но пользователь не может перейти обратно в диалоговом окне. Чтобы разрешить это, переопределите `TabInto`:
+Теперь, когда вы реализуете `TranslateAccelerator`, пользователь может переходить на вкладку внутри диалогового окна и использовать его в более [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] масштабном приложении. Но пользователь не может вернуться на вкладку в диалоговое окно. Чтобы решить эту проблему, переопределите `TabInto`:
 
 ```cpp
 public:
@@ -295,11 +295,11 @@ public:
     }
 ```
 
-`TraversalRequest` Параметр указывает, является ли действие tab или shift.
+`TraversalRequest` Параметр указывает, является ли действие вкладки вкладкой TAB или Shift.
 
 ### <a name="override-onmnemonic-method-to-support-mnemonics"></a>Переопределение метода OnMnemonic для поддержки назначенных клавиш
 
-Обработка событий клавиатуры почти завершена, но имеется еще один аспекте — назначенные клавиши не работают. Если пользователь нажимает клавишу alt-F, фокус не переходит в «First name:» поле ввода. Таким образом, необходимо переопределить `OnMnemonic` метод:
+Обработка клавиатуры почти завершена, но есть одна вещь, что не работает. Если пользователь нажмет клавишу Alt-F, фокус не будет переходить к полю "First Name:" (изменить). Поэтому Переопределите `OnMnemonic` метод:
 
 ```cpp
 virtual bool OnMnemonic(System::Windows::Interop::MSG% msg, ModifierKeys modifiers) override {
@@ -329,11 +329,11 @@ virtual bool OnMnemonic(System::Windows::Interop::MSG% msg, ModifierKeys modifie
 };
 ```
 
-Почему бы не вызвать `IsDialogMessage` здесь?  Имеют ту же проблему как — необходимо иметь возможность сообщить [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] кода, обработал ли код нажатие клавиши или нет, и `IsDialogMessage` не предусмотрена. Есть также вторая проблема, так как `IsDialogMessage` отказывается обрабатывать мнемонический символ, если фокус HWND не содержится в диалоговом окне.
+Почему это не `IsDialogMessage` вызывается?  У вас есть та же самая ошибка, что и перед--необходимо иметь возможность [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] информировать код о том, обрабатывает ли код нажатие клавиши `IsDialogMessage` или нет, и не может сделать это. Кроме того, существует вторая ошибка, так `IsDialogMessage` как отказывается обрабатывать назначенный символ, если HWND не находится внутри диалогового окна.
 
-### <a name="instantiate-the-hwndhost-derived-class"></a>Создать экземпляр производного класса HwndHost
+### <a name="instantiate-the-hwndhost-derived-class"></a>Создание экземпляра производного класса HwndHost
 
-Наконец, после того, вся поддержка ключа и вкладку на месте, можно поместить в <xref:System.Windows.Interop.HwndHost> в большее [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения. Если основное приложение создается на языке [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], чтобы поместить его в нужном месте проще всего оставить пустым <xref:System.Windows.Controls.Border> элемент, где необходимо поместить <xref:System.Windows.Interop.HwndHost>. Вы создадите <xref:System.Windows.Controls.Border> с именем `insertHwndHostHere`:
+Наконец, теперь, когда все ключи и поддержка вкладок есть, вы можете поместить их <xref:System.Windows.Interop.HwndHost> в более крупное [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложение. Если основное приложение написано в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], самый простой способ поместить его в нужное место — оставить пустой <xref:System.Windows.Controls.Border> элемент, где нужно поместить <xref:System.Windows.Interop.HwndHost>. Здесь вы создадите <xref:System.Windows.Controls.Border> именованную `insertHwndHostHere`:
 
 ```xaml
 <Window x:Class="WPFApplication1.Window1"
@@ -350,7 +350,7 @@ virtual bool OnMnemonic(System::Windows::Interop::MSG% msg, ModifierKeys modifie
 </Window>
 ```
 
-Затем все, что остается лишь найти правильное место в коде для создания экземпляра <xref:System.Windows.Interop.HwndHost> и подключите его к <xref:System.Windows.Controls.Border>. В этом примере будет поместить его в конструктор для <xref:System.Windows.Window> производного класса:
+Все, что остается, — найти хорошее место в коде, чтобы создать экземпляр <xref:System.Windows.Interop.HwndHost> и подключить его <xref:System.Windows.Controls.Border>к. В этом примере он будет размещен в конструкторе для <xref:System.Windows.Window> производного класса:
 
 ```csharp
 public partial class Window1 : Window {
@@ -364,9 +364,9 @@ public partial class Window1 : Window {
 }
 ```
 
-Что позволяет:
+Это позволяет:
 
-![Снимок экрана запуска приложения WPF.](./media/hosting-win32-content-in-wpf/windows-presentation-foundation-application.png)
+![Снимок экрана: приложение WPF работает.](./media/hosting-win32-content-in-wpf/windows-presentation-foundation-application.png)
 
 ## <a name="see-also"></a>См. также
 

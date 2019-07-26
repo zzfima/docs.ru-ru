@@ -6,15 +6,15 @@ helpviewer_keywords:
 - x:FieldModifier attribute [XAML Services]
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
-ms.openlocfilehash: 0394522b8a006d6b187219c8ef7dfccd6556ffca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 646ad1ca99d83f9fb2994f3c394eca27a60c0eac
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617079"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484723"
 ---
 # <a name="xfieldmodifier-directive"></a>Директива x:FieldModifier
-Изменяет поведение компиляции XAML таким образом, чтобы поля для ссылки на именованные объекты определяются с помощью <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> доступа вместо <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> поведение по умолчанию.  
+Изменяет поведение компиляции XAML таким образом, чтобы поля для ссылок на именованные объекты <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> определялись с доступом <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> , а не с поведением по умолчанию.  
   
 ## <a name="xaml-attribute-usage"></a>Использование атрибута XAML  
   
@@ -26,29 +26,29 @@ ms.locfileid: "64617079"
   
 |||  
 |-|-|  
-|*Public*|Точная строка передается укажите <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> и <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> зависит от кода языка программирования, который используется. См. заметки.|  
+|*Public*|Точная строка, которую вы передаете <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> для указания <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> , и зависит от используемого языка программирования кода программной части. См. заметки.|  
   
 ## <a name="dependencies"></a>Зависимости  
- Если используется XAML рабочей `x:FieldModifier` в любом месте, необходимо объявить корневой элемент XAML производственные [директива x: Class](x-class-directive.md).  
+ Если в рабочей среде XAML `x:FieldModifier` используется где угодно, корневой элемент в этом производстве XAML должен объявить [директиву x:Class](x-class-directive.md).  
   
 ## <a name="remarks"></a>Примечания  
- `x:FieldModifier` не относится к объявлению общего уровня доступа класса или его членов. Это касается только поведение обработки XAML в тех случаях, когда конкретного объекта XAML, который является частью рабочей XAML обрабатывается и становится объектом, который потенциально может быть доступен в графе объектов приложения. По умолчанию ссылка на поле в такой ситуации являются закрытыми, что предотвращает непосредственное изменение графа объектов пользователей элемента управления. Вместо этого управления потребители должны изменять граф объектов с помощью стандартных шаблонов, включенных по модели программирования, таких как путем получения корневым элементом макета, дочерний элемент коллекции, выделенные открытые свойства, и так далее.  
+ `x:FieldModifier`не относится к объявлению общего уровня доступа класса или его членов. Он важен только для обработки XAML при обработке определенного объекта XAML, который является частью рабочего процесса XAML, и становится объектом, который потенциально доступен в графе объектов приложения. По умолчанию ссылка на поле для такого объекта хранится в закрытом состоянии, что предотвращает возможность непосредственного изменения графа объектов потребителями управления. Вместо этого, потребители элементов управления должны изменить граф объектов с помощью стандартных шаблонов, включенных моделями программирования, например путем получения корня макета, коллекций дочерних элементов, выделенных общих свойств и т. д.  
   
- Значение для `x:FieldModifier` атрибута различается в зависимости от языка программирования, и его назначение могут различаться в конкретных платформах. Строка, используемая зависит от того, как каждый язык реализует его <xref:System.CodeDom.Compiler.CodeDomProvider> и преобразователями типов, он возвращает для определения значений для <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> и <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, а также является ли этот язык с учетом регистра.  
+ Значение `x:FieldModifier` атрибута зависит от языка программирования, и его назначение может различаться в конкретных платформах. Используемая строка зависит от того, как каждый язык реализует <xref:System.CodeDom.Compiler.CodeDomProvider> его и какие преобразователи типов он возвращает, чтобы определить значения для <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> и <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, а также указать, учитывается ли регистр в этом языке.  
   
-- Для C#, строка, передаваемая для обозначения <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> является `public`.  
+- Для C#строка, которую необходимо передать для обозначения <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> , —. `public`  
   
-- Для Microsoft Visual Basic .NET, строка, передаваемая для обозначения <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> является `Public`.  
+- Для Microsoft Visual Basic .NET строка, которую необходимо передать для обозначения <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> , — это. `Public`  
   
-- Для [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], нет целевых объектов для XAML в настоящее время существует; таким образом, строка, передаваемая не определено.  
+- Для C++/CLI целевые объекты для XAML в настоящее время не существуют; Таким образом, строка для передачи не определена.  
   
- Можно также указать <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> (`internal` в C#, `Friend` в Visual Basic) но указав <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> необычен поскольку `NotPublic` , поведение уже используется по умолчанию.  
+ <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> Можно также указать (`internal` в C#Visual Basic) `Friend` , но указание <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> не является необычным, `NotPublic` так как по умолчанию это поведение уже используется.  
   
- <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> значение по умолчанию, так как это редко, что кода за пределами сборки XAML требуется доступ к элементу XAML создан. Архитектура безопасности WPF вместе с поведение компиляции XAML не объявляйте поля, которые содержат экземпляры элементов как public, если только специально настроены, `x:FieldModifier` допускает открытый доступ.  
+ <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>является поведением по умолчанию, поскольку нередко, что код за пределами сборки, в которой скомпилирован XAML, требует доступа к элементу, созданному XAML. Архитектура безопасности WPF вместе с поведением компиляции XAML не приводит `x:FieldModifier` к объявлению полей, которые хранят экземпляры элементов как открытые, если только вы явно не установили для разрешения общего доступа.  
   
- `x:FieldModifier` применяется только для элементов с [директива x: Name](x-name-directive.md) так, как это имя используется для ссылки на поле после он является открытым.  
+ `x:FieldModifier`относится только к элементам с директивой [x:Name](x-name-directive.md) , так как это имя используется для ссылки на поле после того, как оно является открытым.  
   
- По умолчанию разделяемый класс для корневого элемента является открытым; Тем не менее, вы может сделать его закрытым, с помощью [директива x: ClassModifier](x-classmodifier-directive.md). [Директива x: ClassModifier](x-classmodifier-directive.md) также влияет на уровень доступа для экземпляра класса корневого элемента. Вы можете поместить оба `x:Name` и `x:FieldModifier` на корневой элемент, но это только создается копия открытого поля корневого элемента, а значение true, корневой элемент класса уровень доступа по-прежнему управляет [директива x: ClassModifier](x-classmodifier-directive.md).  
+ По умолчанию разделяемый класс для корневого элемента является открытым; Однако его можно сделать неоткрытым с помощью [директивы КС:классмодифиер](x-classmodifier-directive.md). [Директива КС:классмодифиер](x-classmodifier-directive.md) также влияет на уровень доступа экземпляра класса корневого элемента. Можно разместить `x:Name` и `x:FieldModifier` в корневом элементе, но это только копию открытого поля корневого элемента, при этом уровень доступа класса корневого элемента по-прежнему управляется директивой [КС:классмодифиер](x-classmodifier-directive.md).  
   
 ## <a name="see-also"></a>См. также
 

@@ -5,57 +5,57 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 0127ee4112c4b42a7a55b9233217ea1e02604042
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7bf04e7c22bf13ed681be7afb582176edc2f3072
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051349"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484703"
 ---
 # <a name="cleartype-overview"></a>Общие сведения о технологии ClearType
 В этой статье дается обзор технологии [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], доступной в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Общие сведения о технологии  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] — это программная технология, разработанная [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] для улучшения удобочитаемости текста на современных ЖК-мониторах (жидкокристаллических дисплеях), например экранах ноутбуков, карманных ПК и плоскопанельных мониторах.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] работает путем обращения к отдельным элементам вертикальных цветных полос в каждом пикселе ЖК-экрана. До представления технологии [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] минимальным уровнем детализации изображения на компьютере был один пиксель, однако благодаря [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] на ЖК-экране могут отображаться детали текста вплоть до доли ширины пикселя. Дополнительное разрешение повышает четкость мелких деталей отображаемого текста, значительно облегчая его длительное чтение.  
+ Технология ClearType представляет собой программную технологию [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] , разработанную таким образом, улучшая удобочитаемость текста на существующих LCDs (жидкокристаллических дисплеях), таких как экраны ноутбука, карманные экраны и мониторы с плоскими панелями.  Технология ClearType работает путем доступа к отдельным элементам вертикальных цветных полос в каждом пикселе ЖК-экрана. Прежде чем технологии ClearType, самый маленький уровень детализации, который может отобразить компьютер, был одним пикселем, но с помощью технологии ClearType, работающей на ЖК-мониторе, можно отобразить функции текста как небольшие доли пикселя в ширине. Дополнительное разрешение повышает четкость мелких деталей отображаемого текста, значительно облегчая его длительное чтение.  
   
- Технология [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], доступная в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], — это новое поколение [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], которое включает несколько преимуществ по сравнению с версией [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)].  
+ Технология ClearType, доступная в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] , — это последнее поколение ClearType, которое имеет несколько улучшений по сравнению с версией, обнаруженной в. [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]  
   
 <a name="sub-pixel_positioning"></a>   
 ## <a name="sub-pixel-positioning"></a>Субпиксельная отрисовка  
- Значительным преимуществом по сравнению с предыдущей версией [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] является использование субпиксельной отрисовки. В отличие от реализации [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] технология [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] позволяет глифам начинаться внутри пикселя, а не только на его начальной границе. Благодаря дополнительному разрешению при отрисовке глифов интервалы и пропорции глифов становятся более точными и согласованными.  
+ Важным улучшением по сравнению с предыдущей версией технологии ClearType является использование позиционирования в пикселях. В отличие от реализации технологии ClearType, [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]обнаруженной в, технология [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType, найденная в, позволяет запускать глифы в пикселях, а не только на начальной границе пикселя. Благодаря дополнительному разрешению при отрисовке глифов интервалы и пропорции глифов становятся более точными и согласованными.  
   
- В следующих двух примерах показано, как глифы могут начинаться на любой субпиксельной границе при использовании субпиксельной отрисовки. Отрисовка примера справа выполнена с использованием более ранней версии отрисовщика [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], в котором не использовалась субпиксельная отрисовка. Отрисовка примера справа выполнена с использованием новой версии отрисовщика [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] и функции субпиксельной отрисовки. Обратите внимание на то, что каждая буква **e** и **l** на рисунке справа отображается немного по-разному, так разные глифы начинаются в разных субпикселях. При просмотре текста в обычном размере на экране это различие незаметно из-за высокой контрастности изображения глифа. Это возможно только благодаря сложной цветовой фильтрации, которая включена в функцию [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)].  
+ В следующих двух примерах показано, как глифы могут начинаться на любой субпиксельной границе при использовании субпиксельной отрисовки. Пример слева отображается с использованием более ранней версии визуализатора ClearType, которая не применяла позиционирование в пикселях. Пример справа отображается с использованием новой версии визуализатора ClearType с использованием позиционирования в пикселях. Обратите внимание на то, что каждая буква **e** и **l** на рисунке справа отображается немного по-разному, так разные глифы начинаются в разных субпикселях. При просмотре текста в обычном размере на экране это различие незаметно из-за высокой контрастности изображения глифа. Это возможно только из-за сложной фильтрации цветов, включенной в ClearType.  
   
- ![Текст, отображаемый двумя версиями ClearType](./media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
+ ![Текст, отображаемый с двумя версиями технологии ClearType](./media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
 Текст, отображаемый более ранней и более поздней версией ClearType  
   
- Сравните вывод предыдущего отрисовщика [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] с новой версией отрисовщика [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в следующих двух примерах. Субпиксельная отрисовка, показанная справа, значительно улучшает плотность знаков на экране, особенно при небольших размерах, когда разница между субпикселем и целым пикселем представляет значительную часть ширины глифа. Обратите внимание, что расстояние между буквами более однородно на втором изображении. Совокупное влияние субпиксельной отрисовки на общий вид текста на экране значительно увеличено и демонстрирует существенное развитие технологии [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)].  
+ Следующие два примера сравнивают выходные данные из более раннего визуализатора ClearType с новой версией визуализатора ClearType. Субпиксельная отрисовка, показанная справа, значительно улучшает плотность знаков на экране, особенно при небольших размерах, когда разница между субпикселем и целым пикселем представляет значительную часть ширины глифа. Обратите внимание, что расстояние между буквами более однородно на втором изображении. Совокупное преимущество позиционирования подпикселей на общий вид экрана текста значительно увеличено и представляет значительную эволюцию технологии ClearType.  
   
- ![Текст, отображаемый ранней версией ClearType](./media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
+ ![Текст, отображаемый в более ранней версии ClearType](./media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
 Текст, отображаемый более ранней и более поздней версией ClearType  
   
 <a name="y-direction_antialiasing"></a>   
 ## <a name="y-direction-antialiasing"></a>Сглаживание по оси Y  
- Другим преимуществом [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] является сглаживание по оси Y. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] без сглаживания по оси Y обеспечивает лучшее разрешение по оси X, но не Y. В верхних и нижних границах мелких изгибов неровные края влияют на их удобочитаемость.  
+ Еще одним улучшением технологии [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType в является направление сглаживания по оси y. Технология ClearType в [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] без сглаживания по оси y обеспечивает лучшее разрешение на ось x, но не на ось y. В верхних и нижних границах мелких изгибов неровные края влияют на их удобочитаемость.  
   
  В следующем примере к тексту не применено сглаживание по оси Y. В этом случае неровные края верхней и нижней частей буквы сильно заметны.  
   
- ![Текст с неровными краями у мелких изгибов](./media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
+ ![Текст с зубчатыми краями на поверхностных кривых](./media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
 Текст с неровными краями у мелких изгибов  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] обеспечивает сглаживание по оси Y, позволяющее сгладить неровные края. Это особенно важно для повышения удобочитаемости восточно-азиатских языков, в которых иероглифы имеют почти равное количество горизонтальных и вертикальных мелких изгибов.  
+ Технология ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] в обеспечивает сглаживание на уровне y, чтобы сгладить неровные края. Это особенно важно для повышения удобочитаемости восточно-азиатских языков, в которых иероглифы имеют почти равное количество горизонтальных и вертикальных мелких изгибов.  
   
  В следующем примере к тексту применено сглаживание по оси Y. В этом случае заметны гладкие изгибы верхней и нижней частей буквы.  
   
- ![Текст с ClearType по оси y&#45;направление anti&#45;сглаживание](./media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
+ ![Текст с двунаправленным&#45;&#45;сглаживанием с помощью ClearType y](./media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
 Текст со сглаживанием ClearType по оси Y  
   
 <a name="hardware_acceleration"></a>   
 ## <a name="hardware-acceleration"></a>Аппаратное ускорение  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] может использовать преимущества аппаратного ускорения для повышения производительности и снижения нагрузки на ЦП и системную память. Используя построители текстуры и память видеокарты, [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] обеспечивает быструю визуализацию текста, особенно при использовании анимации.  
+ Технология ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] в может использовать преимущества аппаратного ускорения для повышения производительности и снижения требований к нагрузке на ЦП и системной памяти. С помощью шейдеров пикселей и видеопамяти графической карты технология ClearType обеспечивает более быструю визуализацию текста, особенно при использовании анимации.  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] не изменяет параметры [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] на уровне системы. Отключение [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] задает [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] для сглаживания режим "оттенки серого". Кроме того, [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] не изменяет параметры [средства настройки ClearType, PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
+ Технология ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] в не изменяет параметры ClearType на уровне системы. Отключение технологии ClearType [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] устанавливает сглаживание в режим градаций серого. Кроме того, технология ClearType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] в не изменяет параметры средства PowerToy для [тюнера ClearType](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
   
  Одно из архитектурных решений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предполагает наличие независимого от разрешения макета, который обеспечивает более эффективную поддержку мониторов с высоким разрешением, получающих все большее распространение. Вследствие этого [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] не поддерживает отрисовку сглаженного текста или точечных рисунков в некоторых восточно-азиатских шрифтах, поскольку они являются зависимыми от разрешения.  
   
