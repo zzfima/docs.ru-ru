@@ -2,12 +2,12 @@
 title: Что нового в C# 7.3
 description: Обзор новых возможностей в C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 768070ead2b180d5f4491ac87be6c248c39e9944
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: ca53073db1b61300186a483001f79bf0caa79169
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397782"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433524"
 ---
 # <a name="whats-new-in-c-73"></a>Что нового в C# 7.3
 
@@ -129,7 +129,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 Теперь вы можете указать тип <xref:System.Enum?displayProperty=nameWithType> или <xref:System.Delegate?displayProperty=nameWithType> в качестве ограничения базового класса для параметра типа.
 
-Вы также можете использовать новое ограничение `unmanaged`, чтобы указать, что параметр типа должен быть **неуправляемым типом**. **Неуправляемый тип** — это тип, который не является ссылочным и не содержит ни одного ссылочного типа на любом уровне вложения.
+Вы также можете использовать новое ограничение `unmanaged`, чтобы указать, что параметр типа должен быть [неуправляемым типом](../language-reference/builtin-types/unmanaged-types.md).
 
 Дополнительные сведения см. в статьях [об универсальных ограничениях `where`](../language-reference/keywords/where-generic-type-constraint.md) и [ограничениях параметров типа](../programming-guide/generics/constraints-on-type-parameters.md).
 

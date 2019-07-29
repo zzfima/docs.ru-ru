@@ -4,10 +4,10 @@ description: Сведения о типах и об объявлении пер�
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
 ms.openlocfilehash: f06894d986973e4394b0586906d67ef41a9d9152
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 07/26/2019
 ms.locfileid: "67661072"
 ---
 # <a name="types-and-variables"></a>Типы и переменные

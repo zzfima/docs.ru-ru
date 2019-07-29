@@ -7,12 +7,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 3982c97bc56b42237700343b2572d1bba930bbbd
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: bccc22f5362b22540dadf08e6b21a07cbc578327
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422772"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433850"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (ограничение универсального типа) (справочник по C#)
 
@@ -33,7 +33,7 @@ ms.locfileid: "66422772"
 
 [!code-csharp[using the class and struct constraints](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-Предложение `where` также может включать ограничение `unmanaged`. Ограничение `unmanaged` позволяет использовать в качестве параметра типа только типы, называемые **неуправляемыми типами**. **Неуправляемый тип** — это тип, который не является ссылочным и не содержит поля ссылочного типа на любом уровне вложения. Ограничение `unmanaged` упрощает написание кода взаимодействия низкого уровня на языке C#. Это ограничение включает подпрограммы с возможностью повторного использования для всех неуправляемых типов. Ограничение `unmanaged` нельзя использовать с ограничением `class` или `struct`. Ограничение `unmanaged` требует тип `struct`:
+Предложение `where` также может включать ограничение `unmanaged`. Ограничение `unmanaged` позволяет использовать в качестве параметра типа только типы, называемые [неуправляемыми типами](../builtin-types/unmanaged-types.md). Ограничение `unmanaged` упрощает написание кода взаимодействия низкого уровня на языке C#. Это ограничение включает подпрограммы с возможностью повторного использования для всех неуправляемых типов. Ограничение `unmanaged` нельзя использовать с ограничением `class` или `struct`. Ограничение `unmanaged` требует тип `struct`:
 
 [!code-csharp[using the unmanaged constraint](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 

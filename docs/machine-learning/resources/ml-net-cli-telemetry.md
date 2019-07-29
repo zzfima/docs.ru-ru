@@ -4,16 +4,16 @@ description: Узнайте о функциях телеметрии в инте
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 94c66267dfeec4b70ba4dd1fc47518eb0e01509a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: eab1e37d7d0d47251c4f92422730b105cf2db265
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053579"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433796"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Сбор данных телеметрии интерфейсом командной строки ML.NET
 
-[Интерфейс командной строки ML.NET](http://aka.ms/mlnet-cli) включает функцию телеметрии, которая собирает анонимные данные об использовании, агрегированные для использования корпорацией Майкрософт.
+[Интерфейс командной строки ML.NET](https://aka.ms/mlnet-cli) включает функцию телеметрии, которая собирает анонимные данные об использовании, агрегированные для использования корпорацией Майкрософт.
 
 ## <a name="how-microsoft-uses-the-data"></a>Как корпорация Майкрософт использует данные
 

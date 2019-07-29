@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 03d6ed19ef01be7712ff2fdde0c1be2a6673e64f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 830aef8546191df3df4a70e350ba561367a9e474
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401433"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512356"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Операторы, связанные с указателем (справочник по C#)
 
@@ -124,7 +124,7 @@ x->y
 - Выражения `p + n` и `n + p` создают указатель типа `T*`, полученный добавлением `n * sizeof(T)` к адресу, предоставленному `p`.
 - Выражение `p - n` создает указатель типа `T*`, полученный вычитанием `n * sizeof(T)` из адреса, предоставленного `p`.
 
-[Оператор `sizeof`](../keywords/sizeof.md) получает размер типа в байтах.
+[Оператор `sizeof`](sizeof.md) получает размер типа в байтах.
 
 В следующем примере показано использование оператора `+` с указателем:
 
@@ -193,4 +193,4 @@ x->y
 - [Ключевое слово unsafe](../keywords/unsafe.md)
 - [Ключевое слово fixed](../keywords/fixed-statement.md)
 - [Оператор stackalloc](stackalloc.md)
-- [Оператор sizeof](../keywords/sizeof.md)
+- [Оператор sizeof](sizeof.md)
