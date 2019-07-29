@@ -1,0 +1,11 @@
+- name: Сборки в .NET
+  href: index.md
+  items:
+    - name: Дружественные сборки
+      items:
+        - name: Обзор
+          href: friend-assemblies.md
+    - name: Формат файла сборки .NET
+      href: file-format.md
+    - name: Использование и отладка сборок с возможностью выгрузки в .NET Core
+      href: unloadability-howto.md
