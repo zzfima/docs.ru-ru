@@ -6,9 +6,9 @@
       items:
         - name: Импорт библиотеки типов в виде сборки
           href: importing-a-type-library-as-an-assembly.md
-        - name: Как выполнить Добавление ссылок на библиотеки типов
+        - name: Практическое руководство. Добавление ссылок на библиотеки типов
           href: how-to-add-references-to-type-libraries.md
-        - name: Как выполнить Создание сборок взаимодействия из библиотек типов
+        - name: Практическое руководство. Создание сборок взаимодействия из библиотек типов
           href: how-to-generate-interop-assemblies-from-type-libraries.md
         - name: 'Компиляция проекта, использующего взаимодействие'
           href: compiling-an-interop-project.md
@@ -19,15 +19,11 @@
     - name: Предоставление COM-клиентам доступа к компонентам .NET Framework
       href: exposing-dotnet-components-to-com.md
       items:
-        - name: Уточнение типов .NET для взаимодействия
-          href: qualifying-net-types-for-interoperation.md
-        - name: Применение атрибутов взаимодействия
-          href: applying-interop-attributes.md
         - name: Упаковка сборки для модели COM
           href: packaging-an-assembly-for-com.md
         - name: Регистрация сборок в COM
           href: registering-assemblies-with-com.md
-        - name: Как выполнить Создание ссылки на типы .NET из COM
+        - name: Практическое руководство. Создание ссылки на типы .NET из COM
           href: how-to-reference-net-types-from-com.md
         - name: Пример COM-взаимодействия. COM-клиент и сервер .NET
           href: com-interop-sample-com-client-and-net-server.md
@@ -54,7 +50,7 @@
               href: passing-structures.md
             - name: Функции обратного вызова
               href: callback-functions.md
-            - name: Как выполнить Реализация функций обратного вызова
+            - name: Практическое руководство. Реализация функций обратного вызова
               href: how-to-implement-callback-functions.md
     - name: Маршалинг взаимодействия
       href: interop-marshaling.md
@@ -88,28 +84,21 @@
         - name: Маршалинг с помощью COM- взаимодействия
           href: marshaling-data-with-com-interop.md
           items:
-            - name: Как выполнить Создание оболочек вручную
+            - name: Практическое руководство. Создание оболочек вручную
               href: how-to-create-wrappers-manually.md
-            - name: Как выполнить Миграция DCOM с управляемым кодом в WCF
+            - name: Практическое руководство. Миграция DCOM с управляемым кодом в WCF
               href: how-to-migrate-managed-code-dcom-to-wcf.md
-    - name: Как выполнить Сопоставление значений HRESULT и исключений
+    - name: Практическое руководство. Сопоставление значений HRESULT и исключений
       href: how-to-map-hresults-and-exceptions.md
-    - name: Оболочки COM
-      href: com-wrappers.md
-      items:
-        - name: Вызываемая оболочка времени выполнения
-          href: runtime-callable-wrapper.md
-        - name: Вызываемая оболочка COM
-          href: com-callable-wrapper.md
-        - name: Как выполнить Создание оболочек COM
-          href: how-to-create-com-wrappers.md
+    - name: Практическое руководство. Создание оболочек COM
+      href: how-to-create-com-wrappers.md
     - name: Эквивалентность типов и внедренные типы взаимодействия
       href: type-equivalence-and-embedded-interop-types.md
-    - name: Как выполнить Создание основной сборки взаимодействия с помощью программы Tlbimp.exe
+    - name: Практическое руководство. Создание основной сборки взаимодействия с помощью программы Tlbimp.exe
       href: how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md
-    - name: Как выполнить Регистрация основных сборок взаимодействия
+    - name: Практическое руководство. Регистрация основных сборок взаимодействия
       href: how-to-register-primary-interop-assemblies.md
     - name: COM-взаимодействие без регистрации
       href: registration-free-com-interop.md
-    - name: Как выполнить Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
+    - name: Практическое руководство. Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
       href: configure-net-framework-based-com-components-for-reg.md

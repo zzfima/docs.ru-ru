@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 893ac7bbfcfe159787789238c3142f34ac7ecf35
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 79b7057b1f6a9cdba2215124160b28efb9a1c0be
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423291"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629517"
 ---
 # <a name="namespaces-c-programming-guide"></a>Пространства имен (Руководство по программированию в C#)
 
@@ -54,4 +54,4 @@ ms.locfileid: "66423291"
 - [Практическое руководство. Использование пространства имен My](how-to-use-the-my-namespace.md)
 - [Имена идентификаторов](../inside-a-program/identifier-names.md)
 - [Директива using](../../language-reference/keywords/using-directive.md)
-- [:: Оператор](../../language-reference/operators/namespace-alias-qualifer.md)
+- [:: Оператор](../../language-reference/operators/namespace-alias-qualifier.md)

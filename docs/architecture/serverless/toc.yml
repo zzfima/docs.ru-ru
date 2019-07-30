@@ -1,0 +1,35 @@
+- name: Электронная книга о бессерверных приложениях
+  href: index.md
+  items:
+    - name: Подходы к архитектуре
+      href: architecture-approaches.md
+      items:
+        - name: Подходы к развертыванию архитектуры
+          href: architecture-deployment-approaches.md
+    - name: Бессерверная архитектура
+      href: serverless-architecture.md
+      items:
+        - name: Рекомендации по бессерверной архитектуре
+          href: serverless-architecture-considerations.md
+        - name: Примеры бессерверного проектирования
+          href: serverless-design-examples.md
+    - name: Бессерверная платформа Azure
+      href: azure-serverless-platform.md
+      items:
+        - name: Проверка
+          href: azure-functions.md
+        - name: Application Insights
+          href: application-insights.md
+        - name: Azure Logic Apps
+          href: logic-apps.md
+        - name: Сетка событий Azure
+          href: event-grid.md
+    - name: Устойчивые функции Azure
+      href: durable-azure-functions.md
+      items:
+        - name: Шаблоны оркестрации
+          href: orchestration-patterns.md
+    - name: Бессерверные сценарии и варианты использования для бизнеса
+      href: serverless-business-scenarios.md
+    - name: Заключение
+      href: serverless-conclusion.md
