@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 365ea55a112a4a04964a8271f2f7e5591a3b0d5d
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 777eb3be5cbefe0a136bf49f826ad67685a8456d
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301046"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401080"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Подписка и отмена подписки на события
 Необходимость подписки на событие, опубликованное другим классом, может возникнуть, когда требуется написать пользовательский код, вызываемый при инициировании такого события. Например, можно подписаться на событие кнопки `click`, чтобы приложение выполняло некоторое действие при нажатии пользователем кнопки.  
@@ -58,19 +58,18 @@ ms.locfileid: "66301046"
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
-     Для добавления обработчика событий можно также использовать лямбда-выражение.  
+     Чтобы указать обработчик событий, можно также воспользоваться [лямбда-выражением](../statements-expressions-operators/lambda-expressions.md):
   
     ```csharp
     public Form1()  
     {  
         InitializeComponent();  
-        // Use a lambda expression to define an event handler.  
-        this.Click += (s,e) => { MessageBox.Show(  
-           ((MouseEventArgs)e).Location.ToString());};  
+        this.Click += (s,e) =>
+            {
+                MessageBox.Show(((MouseEventArgs)e).Location.ToString());
+            };
     }  
     ```  
-  
-     Дополнительные сведения см. в разделе [Практическое руководство. Руководство по программированию на C#. Использование лямбда-выражений вне LINQ](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).  
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>Подписка на события с помощью анонимного метода  
   

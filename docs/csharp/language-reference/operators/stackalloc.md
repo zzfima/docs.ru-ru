@@ -6,16 +6,18 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: 3be4e827e75e4e26a34d9ed70423af5aa317e7fb
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: f211acaa8c47ab42a1f7f06cff6c35570cd22b75
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025000"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433831"
 ---
 # <a name="stackalloc-operator-c-reference"></a>Оператор stackalloc (Справочник по C#)
 
 Оператор `stackalloc` выделяет блок памяти в стеке. Выделенный в стеке блок памяти, который создает этот метод, автоматически удаляется по завершении выполнения метода. Вы не можете явным образом освободить память, выделенную оператором `stackalloc`. Выделенный в стеке блок памяти не подвергается [сборке мусора](../../../standard/garbage-collection/index.md), а значит, ее не нужно закреплять с помощью [инструкции `fixed`](../keywords/fixed-statement.md).
+
+В выражении `stackalloc T[E]` элемент `T` должен быть [неуправляемым типом](../builtin-types/unmanaged-types.md), а элемент `E` — выражением типа `int`.
 
 Результат выполнения оператора `stackalloc` вы можете присвоить переменной любого из следующих типов:
 

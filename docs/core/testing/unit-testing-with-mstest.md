@@ -5,18 +5,18 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: c396be926d743b672cb4611dc5569ecb48b09fec
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 9d34b946dd13af4636b58a70c19721c5e381b69c
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397486"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484596"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Модульное тестирование кода C# с использованием MSTest и .NET Core
 
 Этот учебник описывает пошаговую процедуру по созданию примера решения для изучения концепций модульного тестирования. Если при изучении учебника вы предпочитаете использовать готовое решение, [просмотрите или скачайте пример кода](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/) перед началом работы. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-### <a name="creating-the-source-project"></a>Создание исходного проекта
+### <a name="create-the-source-project"></a>Создание исходного проекта
 
 Откройте окно оболочки. Создайте каталог с именем *unit-testing-using-mstest* для хранения решения. В этом каталоге выполните команду [`dotnet new sln`](../tools/dotnet-new.md), чтобы создать файл решения для библиотеки классов и тестового проекта. Затем создайте каталог *PrimeService*. Ниже приведена актуальная структура каталогов и файлов:
 
@@ -45,7 +45,7 @@ namespace Prime.Services
 
 Вернитесь в каталог *unit-testing-using-mstest*. Чтобы добавить проект библиотеки классов в решение, выполните команду [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md). 
 
-### <a name="creating-the-test-project"></a>Создание тестового проекта
+### <a name="create-the-test-project"></a>Создание тестового проекта
 
 Затем создайте каталог *PrimeService.Tests*. Ниже представлена структура каталогов:
 
@@ -91,7 +91,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
 
 Выполните команду [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) в каталоге *unit-testing-using-mstest*. 
 
-## <a name="creating-the-first-test"></a>Создание первого теста
+## <a name="create-the-first-test"></a>Создание первого теста
 
 Напишите один тест сбоя теста, запустите его, а затем повторите этот процесс. Удалите *UnitTest1.cs* из каталога *PrimeService.Tests* и создайте файл C# *PrimeService_IsPrimeShould.cs* со следующим содержимым:
 
@@ -122,7 +122,7 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-Атрибут `[TestClass]` обозначает класс, содержащий модульные тесты. Атрибут `[TestMethod]` указывает, что метод — это метода теста. 
+[Атрибут TestClass](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) обозначает класс, содержащий модульные тесты. [Атрибут TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) указывает, что метод — это метода теста. 
 
 Сохраните этот файл и выполните [`dotnet test`](../tools/dotnet-test.md), чтобы создать тесты и библиотеку классов, а затем запустите тесты. Средство запуска тестов MSTest содержит точку входа в программу для выполнения тестов. `dotnet test` запускает средство выполнения тестов с помощью проекта модульного теста, который вы создали.
 
@@ -141,9 +141,9 @@ public bool IsPrime(int candidate)
 
 Выполните команду `dotnet test` еще раз в каталоге *unit-testing-using-mstest*. Команда `dotnet test` запускает сборку для проекта `PrimeService` и затем для проекта `PrimeService.Tests`. После сборки обоих проектов она запускает этот отдельный тест. Он выполняется.
 
-## <a name="adding-more-features"></a>Добавление дополнительных возможностей
+## <a name="add-more-features"></a>Добавление дополнительных возможностей
 
-Теперь, когда тест проходит успешно, пора создать дополнительные тесты. Есть еще ряд элементарных случаев с простыми числами 0, -1. Можно добавить новые тесты с помощью атрибута `[TestMethod]`, но это скоро станет утомительным. Есть другие атрибуты MSTest, которые позволяют создавать наборы похожих тестов.  Атрибут `[DataTestMethod]` представляет набор тестов, которые выполняют один и тот же код, но имеют разные входные аргументы. С помощью атрибута `[DataRow]` можно указать значения для этих входных аргументов.
+Теперь, когда тест проходит успешно, пора создать дополнительные тесты. Есть еще ряд элементарных случаев с простыми числами 0, -1. Можно добавлять новые тесты с помощью [атрибута TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute), но это скоро станет утомительным. Есть другие атрибуты MSTest, которые позволяют создавать наборы похожих тестов.  [Атрибут DataTestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataTestMethodAttribute) представляет набор тестов, которые выполняют один и тот же код, но имеют разные входные аргументы. С помощью [атрибута DataRow](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute) можно указать значения для этих входных аргументов.
 
 Вместо того чтобы создавать новые тесты, используйте эти два атрибута, чтобы создать единый управляемый данными тест, который проверяет несколько значений меньше 2, то есть наименьшего простого числа.
 
@@ -158,3 +158,9 @@ if (candidate < 2)
 Продолжайте итерации, добавляя тесты, алгоритмы и код в главной библиотеке. В результате вы получите [готовую версию тестов](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.cs) и [полную реализацию библиотеки](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/PrimeService/PrimeService.cs).
 
 Вы создали небольшую библиотеку и набор модульных тестов для нее. Вы структурировали решение, чтобы сделать добавление новых пакетов и тестов частью обычного рабочего процесса и получить возможность сосредоточиться на задачах приложения.
+
+## <a name="see-also"></a>См. также
+
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting>
+- [Использование платформы MSTest в модульных тестах](/visualstudio/test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests)
+- [Документация по платформе тестирования MSTest V2](https://github.com/Microsoft/testfx-docs)

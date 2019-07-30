@@ -4,13 +4,13 @@ description: Поддерживаемые версии macOS и зависимо
 author: mairaw
 ms.author: adegeo
 ms.custom: updateeachvsrelease
-ms.date: 12/14/2018
-ms.openlocfilehash: 57346eb5cfdcc9f51c3aab173ed575067b124150
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.date: 07/13/2019
+ms.openlocfilehash: 5086b185ee2d49c7b569ed0cb62b4c8995f9982c
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66299982"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433912"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>Необходимые компоненты для .NET Core в macOS
 
@@ -41,9 +41,9 @@ ms.locfileid: "66299982"
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
-Платформа .NET Core 3.0. (предварительная версия 3) поддерживается следующими версиями macOS:
+Платформа .NET Core 3.0 поддерживается на устройствах под управлением следующих версий macOS:
 
-* macOS 10.12 "Sierra" и более поздних версий
+* macOS 10.13 "High Sierra" и более поздних версий
 
 Полный список операционных систем, дистрибутивов и версий, поддерживаемых .NET Core 3.0, неподдерживаемых версий ОС, а также ссылки на политики жизненного цикла см. на странице [версий ОС, поддерживаемых .NET Core 3.0](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md).
 
