@@ -9,53 +9,55 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-ms.openlocfilehash: 43f7af1a1b540dd630cc2f228f1e5a6018d7c5d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 68f92142cdc435ebd82101eea83035e1d09dcf25
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610459"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630014"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Практическое руководство. Доступ к переменной, скрытой производным классом (Visual Basic)
-Когда код в производном классе получает доступ к переменной, компилятор обычно разрешает ссылку на ближайшую доступную версию, то есть доступный минимальное количество производных действий обратно из доступа к классу. Если переменная определена в производном классе, код обычно обращается к этому определению.  
-  
- Если переменная производного класса скрывает переменную в базовом классе, он скрывает версии базового класса. Тем не менее, можно получить доступ к переменной базового класса путем определения ее с `MyBase` ключевое слово.  
-  
-### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>Для доступа к переменной базового класса, скрытой производным классом  
-  
-- В выражение или оператор присваивания, перед именем переменной с `MyBase` ключевое слово и точка (`.`).  
-  
-     Компилятор разрешает ссылку на версию базового класса переменной.  
-  
-     В следующем примере показано, затемнения посредством наследования. Он делает две ссылки, который обращается к переменной затенения, а другой обходит затенение.  
-  
-    ```  
-    Public Class shadowBaseClass  
-        Public shadowString As String = "This is the base class string."  
-    End Class  
-    Public Class shadowDerivedClass  
-        Inherits shadowBaseClass  
-        Public Shadows shadowString As String = "This is the derived class string."  
-        Public Sub showStrings()  
-            Dim s As String = "Unqualified shadowString: " & shadowString &  
-                vbCrLf & "MyBase.shadowString: " & MyBase.shadowString  
-            MsgBox(s)  
-        End Sub  
-    End Class  
-    ```  
-  
-     В предыдущем примере объявляется переменной `shadowString` в базовом классе, скрывается в производном классе. Процедура `showStrings` в производном классе отображает версию затенения строки при имя `shadowString` не обработаны квалификатором. Затем он отобразит затененная версия при `shadowString` квалифицируется `MyBase` ключевое слово.  
-  
-## <a name="robust-programming"></a>Отказоустойчивость  
- Чтобы уменьшить риск ссылки на неправильную версию затененной переменной, можно полностью определить все ссылки на переменную тенью. Затенение представляет несколько версий переменной с тем же именем. Если оператор кода ссылается на имя переменной, версии, к которому компилятор разрешает ссылку зависит от факторов, таких как расположение оператор кода, а также наличие уточняющей строки. Это может увеличить риск ссылки на неправильную версию переменной.  
-  
+
+Когда код в производном классе получает доступ к переменной, компилятор обычно разрешает ссылку на ближайшую доступную версию, то есть доступную версию с минимальными производными шагами назад от класса доступа. Если переменная определена в производном классе, код обычно получает доступ к определению.
+
+Если переменная производного класса затеняет переменную в базовом классе, она скрывает версию базового класса. Однако можно получить доступ к переменной базового класса, указав ее с `MyBase` помощью ключевого слова.
+
+### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>Доступ к переменной базового класса, скрытой производным классом
+
+- В выражении или операторе присваивания перед именем `MyBase` переменной следует указать ключевое слово и точку (`.`).
+
+    Компилятор разрешает ссылку на версию базового класса переменной.
+
+    В следующем примере показано затенение с помощью наследования. Он делает две ссылки — одну, которая обращается к переменной с тенью, и одну, которая обходит затенение.
+
+    ```vb
+    Public Class shadowBaseClass
+        Public shadowString As String = "This is the base class string."
+    End Class
+    Public Class shadowDerivedClass
+        Inherits shadowBaseClass
+        Public Shadows shadowString As String = "This is the derived class string."
+        Public Sub showStrings()
+            Dim s As String = "Unqualified shadowString: " & shadowString &
+                vbCrLf & "MyBase.shadowString: " & MyBase.shadowString
+            MsgBox(s)
+        End Sub
+    End Class
+    ```
+
+    В предыдущем примере переменная `shadowString` объявляется в базовом классе и переобъявляется в производном классе. Процедура `showStrings` в производном классе отображает версию строки с тенью, если ее имя `shadowString` не является полным. После этого она отображает затененную версию, `shadowString` если дополнена `MyBase` ключевым словом.
+
+## <a name="robust-programming"></a>Отказоустойчивость
+
+Чтобы снизить риск обращения к непреднамеренной версии затененной переменной, можно полностью определить все ссылки на затененную переменную. При затенении введено более одной версии переменной с тем же именем. Если инструкция Code ссылается на имя переменной, версия, на которую компилятор разрешает ссылку, зависит от таких факторов, как расположение инструкции Code и наличие подходящих строк. Это может увеличить риск обращения к неверной версии переменной.
+
 ## <a name="see-also"></a>См. также
 
 - [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Сокрытие в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Затенение в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Различия между затемнением и переопределением](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
-- [Практическое руководство. Сокрытие переменной с тем же именем, что и ваша переменная](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
-- [Практическое руководство. Сокрытие наследуемой переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
+- [Практическое руководство. Скрыть переменную с тем же именем, что и у вашей переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
+- [Практическое руководство. Скрыть унаследованную переменную](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
 - [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Переопределения](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me, My, MyBase и MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

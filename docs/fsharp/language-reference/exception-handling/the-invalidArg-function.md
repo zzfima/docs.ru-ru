@@ -1,15 +1,15 @@
 ---
-title: 'Исключения: Функция invalidArg'
-description: Узнайте, как F# «invalidArg» функция создает исключение аргумента.
+title: Исключения. Функция invalidArg
+description: Узнайте, F# как функция "invalidArg" создает исключение аргумента.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1f0cbc9b7e805822544d6d54bc1fc69adf82967a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 010dbfe313f539093b4ee7a19984ef54500b072d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645491"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630304"
 ---
-# <a name="exceptions-the-invalidarg-function"></a>Исключения: Функция invalidArg
+# <a name="exceptions-the-invalidarg-function"></a>Исключения. Функция invalidArg
 
 `invalidArg` Функция создает исключение аргумента.
 
@@ -21,13 +21,13 @@ invalidArg parameter-name error-message-string
 
 ## <a name="remarks"></a>Примечания
 
-Имя параметра в предыдущем синтаксисе является строка с именем параметра, аргумент которого был недопустимым. *Строку сообщения об* является строковым литералом или значением типа `string`. Он становится `Message` свойства объекта исключения.
+Параметр-Name в предыдущем синтаксисе представляет собой строку с именем параметра, аргумент которого был недопустимым. *Строка сообщения Error-Message-* представляет собой литеральную строку или значение типа `string`. Он станет `Message` свойством объекта исключения.
 
-Исключение, вызванное `invalidArg` является `System.ArgumentException` исключение. Следующий код иллюстрирует использование `invalidArg` для создания исключения.
+Исключение, созданное `invalidArg` , `System.ArgumentException` является исключением. Следующий код иллюстрирует использование `invalidArg` для создания исключения.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6101.fs)]
 
-Вывод будет следующий, следуют трассировки стека (не показано).
+Ниже приведены выходные данные, за которыми следует трассировка стека (не показана).
 
 ```
 December
@@ -42,4 +42,4 @@ System.ArgumentException: Month parameter out of range.
 - [Исключения. `try...with` Выражение](the-try-with-expression.md)
 - [Исключения. `try...finally` Выражение](the-try-finally-expression.md)
 - [Исключения: функция `raise`](the-raise-function.md)
-- [Исключения. `failwith` Функции](the-failwith-function.md)
+- [Исключения. `failwith` Функция](the-failwith-function.md)

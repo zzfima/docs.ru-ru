@@ -14,44 +14,37 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: 2494eac2f61f112f3ba6321ada7404f8cd618049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6d10982cf199e9285334e0d72e6622275d51b4d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766640"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626194"
 ---
 # <a name="throw-statement-visual-basic"></a>Оператор Throw (Visual Basic)
-Возникло исключение в процедуре.  
+Создает исключение в процедуре.
+
+## <a name="syntax"></a>Синтаксис
+
+```vb
+Throw [ expression ]
+```
+
+## <a name="part"></a>Отделение
+ `expression`Предоставляет сведения о вызываемом исключении. Необязательно, если размещен в `Catch` операторе, в противном случае является обязательным.
   
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-Throw [ expression ]  
-```  
-  
-## <a name="part"></a>Отделение  
- `expression`  
- Сведения об исключении исключение. Необязательно, если находятся в `Catch` инструкции, в противном случае необходимо.  
-  
-## <a name="remarks"></a>Примечания  
- `Throw` Оператор создает исключение, которое можно обработать с помощью структурированный код обработки исключений (`Try`... `Catch`... `Finally`) или неструктурированных код обработки исключений (`On Error GoTo`). Можно использовать `Throw` инструкции для перехвата ошибок в коде, поскольку Visual Basic перемещается вверх по стеку вызовов, пока не найдет соответствующий код обработки исключений.  
-  
- Объект `Throw` оператор выражения не может использоваться только в `Catch` инструкции, в котором операторе case повторно вызывает исключение, обрабатываемое в данный момент `Catch` инструкции.  
-  
- `Throw` Инструкция сбрасывает стек вызовов для `expression` исключение. Если `expression` не указан, стек вызовов останется без изменений. Можно получить доступ к стек вызовов для исключения через <xref:System.Exception.StackTrace%2A> свойство.  
-  
-## <a name="example"></a>Пример  
- В следующем коде используется `Throw` инструкции для создания исключения:  
-  
- [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]  
-  
-## <a name="requirements"></a>Требования  
- **Пространство имен:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
-  
- **Модуль:** `Interaction`  
-  
- **Сборка:** Visual Basic (библиотека времени выполнения, в Microsoft.VisualBasic.dll)  
+## <a name="remarks"></a>Примечания
+ Оператор создает исключение, которое можно обработать с помощью структурированного кода обработки исключений (`Try`... `Throw` `Catch`... ) или неструктурированный код обработки исключений (`On Error GoTo`). `Finally` Можно использовать `Throw` инструкцию для перехвата ошибок в коде, так как Visual Basic перемещается вверх по стеку вызовов до тех пор, пока не найдет соответствующий код обработки исключений.
+ 
+ Инструкцию без выражения можно использовать только `Catch` в операторе, в этом случае инструкция повторно создает исключение, которое `Catch` в настоящее время обрабатывается инструкцией. `Throw`
+
+ Инструкция сбрасывает стек вызовов `expression` для исключения. `Throw` Если `expression` параметр не указан, стек вызовов остается без изменений. Доступ к стеку вызовов для исключения можно получить с помощью <xref:System.Exception.StackTrace%2A> свойства.
+
+## <a name="example"></a>Пример
+ Следующий код использует `Throw` инструкцию для создания исключения:
+ 
+ [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
+
   
 ## <a name="see-also"></a>См. также
 

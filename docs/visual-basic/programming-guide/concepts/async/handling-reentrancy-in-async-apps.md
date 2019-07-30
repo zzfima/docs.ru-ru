@@ -2,19 +2,19 @@
 title: Обработка повторного входа в асинхронных приложениях (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 35d2b75e14d6223463b45d585c6742e62cdad2a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bc8156b1d2baa53255870364e680d62d7b93a50f
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751017"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630937"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Обработка повторного входа в асинхронных приложениях (Visual Basic)
 
 При включении асинхронного кода в приложение следует учесть и по возможности избежать повторного входа, под которым подразумевается повторный ввод асинхронной операции до ее завершения. Если не определить и не обработать возможности повторного входа, это может привести к непредвиденным результатам.
 
 > [!NOTE]
->  Для выполнения этого примера на компьютере должны быть установлены Visual Studio 2012 или более поздней версии и .NET Framework 4.5 или более поздней версии.
+> Для выполнения этого примера на компьютере должны быть установлены Visual Studio 2012 или более поздней версии и .NET Framework 4.5 или более поздней версии.
 
 ## <a name="BKMK_RecognizingReentrancy"></a> Распознавание поддержки повторного входа
 
@@ -94,7 +94,7 @@ TOTAL bytes returned:  890591
 
 Можно заблокировать кнопку **Start`StartButton_Click` во время операции, отключив кнопку в верхней части обработчика событий** . Затем можно повторно включить кнопку из блока `Finally` по завершении операции, чтобы пользователь мог запустить приложение повторно.
 
-В следующем коде показаны эти изменения, которые помечены звездочками. Можно добавить изменения в код в конце этого раздела, или можно загрузить готовое приложение в [Async Samples: Поддержка повторного входа в классических приложениях .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Имя проекта — DisableStartButton.
+В следующем коде показаны эти изменения, которые помечены звездочками. Вы можете добавить изменения в код в конце этого раздела или скачать готовое приложение из [асинхронных примеров: Поддержка повторного входа в классических приложениях .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Имя проекта — DisableStartButton.
 
 ```vb
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
@@ -123,7 +123,7 @@ End Sub
 
 Вместо отключения кнопки **Start** можно оставить кнопку активной, но при этом, если пользователь нажмет эту кнопку еще раз, нужно отменить операцию, которая уже выполняется, и задать продолжение выполнения последней запущенной операции.
 
-Дополнительные сведения об отмене см. в разделе [точная настройка асинхронного приложения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
+Дополнительные сведения об отмене см. [в разделе тонкая настройка асинхронного приложения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
 
 Чтобы настроить этот сценарий, внесите следующие изменения в основной код, который содержится в разделе [Проверка и выполнение примера приложения](#BKMD_SettingUpTheExample). Также можно загрузить готовое приложение в разделе [Примеры асинхронности. Поддержка повторного входа в классических приложениях .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Этот проект называется CancelAndRestart.
 
@@ -136,7 +136,7 @@ End Sub
         Dim cts As CancellationTokenSource
     ```
 
-2. В `StartButton_Click` определите, выполняется ли операция на данный момент. Если значение `cts` является `Nothing`, ни одна из операций уже активен. Если значение не `Nothing`, выполняющаяся операция отменена.
+2. В `StartButton_Click` определите, выполняется ли операция на данный момент. Если значение `cts` равно `Nothing`, операция уже не активна. Если значение не `Nothing`равно, операция, которая уже выполняется, отменяется.
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -153,7 +153,7 @@ End Sub
     cts = newCTS
     ```
 
-4. В конце `StartButton_Click`, текущий процесс будет завершен, поэтому установите для параметра `cts` обратно `Nothing`.
+4. В конце `StartButton_Click`, текущий процесс завершен, поэтому установите `cts` значение обратно на `Nothing`.
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -513,7 +513,7 @@ End Function
   TOTAL bytes returned:  915908
   ```
 
-- `pendingWork` Делом `Nothing` в начале `FinishOneGroupAsync` только для группы A, которая запускается первой. Группа A еще не завершила выражение await, когда она достигает метода `FinishOneGroupAsync`. Таким образом, управление не возвращается `AccessTheWebAsync`, а первое присваивание задаче `pendingWork` не возникает.
+- Задача находится `Nothing` в начале`FinishOneGroupAsync` только для группы A, которая была запущена первой. `pendingWork` Группа A еще не завершила выражение await, когда она достигает метода `FinishOneGroupAsync`. Таким образом, управление не возвращается `AccessTheWebAsync`, а первое присваивание задаче `pendingWork` не возникает.
 
 - Следующие две строки всегда отображаются в выходных данных вместе. Код не прерывается нигде между запуском операции группы в обработчике `StartButton_Click` и назначением задачи для группы в `pendingWork`.
 
@@ -557,7 +557,7 @@ End Function
 
      Откроется диалоговое окно **Новый проект** .
 
-3. В **установленные шаблоны** панели разверните **Visual Basic**, а затем разверните **Windows**.
+3. В области **Установленные шаблоны** разверните узел **Visual Basic**, а затем узел **Windows**.
 
 4. В списке типов проектов выберите **Приложение WPF**.
 
@@ -591,9 +591,9 @@ End Function
 
 8. Добавьте ссылку для <xref:System.Net.Http>.
 
-9. В **обозревателе решений**, откройте контекстное меню для MainWindow.xaml.vb и затем выберите **Просмотр кода**.
+9. В **Обозреватель решений**откройте контекстное меню файла MainWindow. XAML. vb и выберите пункт **Просмотреть код**.
 
-10. В файле MainWindow.xaml.vb замените код следующим кодом.
+10. В файле MainWindow. XAML. vb замените код следующим кодом.
 
     ```vb
     ' Add the following Imports statements, and add a reference for System.Net.Http.
@@ -677,5 +677,5 @@ End Function
 
 ## <a name="see-also"></a>См. также
 
-- [Пошаговое руководство: Доступ к Интернету с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Пошаговое руководство: Доступ к Интернету с помощью Async и await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

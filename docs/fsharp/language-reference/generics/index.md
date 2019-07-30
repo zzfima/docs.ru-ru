@@ -1,13 +1,13 @@
 ---
 title: Универсальные шаблоны
-description: Сведения об использовании F# универсальные функции и типы, которые позволяют писать код, который работает с множеством типов без повторения кода.
+description: Узнайте, как использовать F# универсальные функции и типы, которые позволяют писать код, работающий с различными типами, без повторения кода.
 ms.date: 05/16/2016
-ms.openlocfilehash: e30b00343e48d3a8abd51f62c003ba0d1984db18
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 47eed0b8e074cfb591e6d8e2c382b9ea6a6e97f0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641857"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630609"
 ---
 # <a name="generics"></a>Универсальные шаблоны
 
@@ -49,19 +49,19 @@ type type-name<type-parameters> type-definition
 
 В следующем примере кода `makeList` является универсальной, хотя ни она, ни ее параметры не объявляются явно как универсальные.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1700.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1700.fs)]
 
 Подпись функции определяется как `'a -> 'a -> 'a list`. Обратите внимание, что `a` и `b` в этом примере определяются, как имеющие одинаковый тип. Это вызвано тем, что они включаются в список вместе, а все элементы списка должны иметь один тип.
 
 Кроме того, функцию можно сделать универсальной, применив синтаксис с одинарной кавычкой в заметке типа, чтобы показать, что тип параметра является параметром универсального типа. В следующем коде `function1` является универсальной, так как ее параметры объявляются указанным образом — как параметры типа.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1701.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1701.fs)]
 
 ## <a name="explicitly-generic-constructs"></a>Явно универсальные конструкции
 
 Вы также можете сделать функцию универсальной, явно объявив ее параметры типа в угловых скобках (`<type-parameter>`). Это проиллюстрировано в следующем коде.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1703.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1703.fs)]
 
 ## <a name="using-generic-constructs"></a>Использование универсальных конструкций
 
@@ -69,7 +69,7 @@ type type-name<type-parameters> type-definition
 
 Следующий код показывает использование функций, определенных в предыдущих разделах.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
 
 > [!NOTE]
 > Сослаться на универсальный тип по имени можно двумя способами. Например, `list<int>` и `int list` представляют два способа сослаться на универсальный тип `list` с одним аргументом типа `int`. Последняя форма обычно используется только со встроенными типами F#, такими как `list` и `option`. При наличии нескольких аргументов типа обычно используется синтаксис `Dictionary<int, string>`, но можно также использовать синтаксис `(int, string) Dictionary`.
@@ -78,7 +78,7 @@ type type-name<type-parameters> type-definition
 
 Чтобы указать, что аргумент типа должен определяться компилятором, можно использовать символ подчеркивания или подстановочный знак (`_`) вместо именованного аргумента типа. Это показано в приведенном ниже коде.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1704.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1704.fs)]
 
 ## <a name="constraints-in-generic-types-and-functions"></a>Ограничения в универсальных типах и функциях
 
@@ -90,7 +90,7 @@ type type-name<type-parameters> type-definition
 
 ## <a name="examples"></a>Примеры
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1705.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1705.fs)]
 
 ## <a name="see-also"></a>См. также
 

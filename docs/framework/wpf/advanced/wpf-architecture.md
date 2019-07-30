@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 987e48f163d35d27f6736464d7497451cca82c0c
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 440a6d76e5295613d2887c0a77d9a49e870e580b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400858"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629817"
 ---
 # <a name="wpf-architecture"></a>Архитектура WPF
 В этом разделе представлен обзор иерархии классов Windows Presentation Foundation (WPF). Он охватывает большую часть основных подсистем [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и описывает их взаимодействие. Здесь также подробно рассматриваются некоторые архитектурные решения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "68400858"
 ## <a name="systemobject"></a>System.Object  
  Основная модель программирования [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] доступна через управляемый код. Ранее, на этапе проектирования [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], несколько раз обсуждалось, где следует провести черту между управляемыми и неуправляемыми компонентами системы. Среда CLR предоставляет ряд функций, повышающих производительность и надежность разработки (включая управление памятью, обработку ошибок, систему общих типов и т. д.), но они поставляются по цене.  
   
- Основные компоненты [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] показаны на приведенном ниже рисунке. Красные разделы диаграммы (PresentationFramework, PresentationCore и milcore) представляют собой основные части кода [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Только один из этих компонентов является неуправляемым — milcore. Компонент milcore написан в неуправляемом коде, чтобы обеспечить тесную интеграцию с [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. Все отрисовки в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] выполняются с помощью подсистемы [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], позволяющей эффективно использовать оборудование и программное обеспечение для отрисовки. Для [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] также необходим тонкий контроль над памятью и выполнением. Механизм композиции в milcore чрезвычайно чувствителен к производительности, и для повышения производительности требуется предоставить множество преимуществ среды CLR.  
+ Основные компоненты [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] показаны на приведенном ниже рисунке. Красные разделы диаграммы (PresentationFramework, PresentationCore и milcore) представляют собой основные части кода [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Только один из этих компонентов является неуправляемым — milcore. Milcore написан на неуправляемом коде, чтобы обеспечить тесную интеграцию с DirectX. Все экраны [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] в выполняются с помощью механизма DirectX, что обеспечивает эффективную визуализацию оборудования и программного обеспечения. Для [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] также необходим тонкий контроль над памятью и выполнением. Механизм композиции в milcore чрезвычайно чувствителен к производительности, и для повышения производительности требуется предоставить множество преимуществ среды CLR.  
   
  ![Положение WPF в платформе .NET Framework.](./media/wpf-architect1.PNG "wpf_architect1")  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: ee260d58cdb4dc971fc32ca5c889b459b6a48489
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 10bdeae8fe46f78e60d278fdbe93883a1c6bd356
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484738"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629880"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>Размещение содержимого Win32 в WPF
 
@@ -48,11 +48,11 @@ virtual void DestroyWindowCore(HandleRef hwnd) override {
 
 Но предположим, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] что код не вполне сам самодостаточный? В этом случае можно создать [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] диалоговое окно и внедрить его содержимое в более крупное [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложение. В этом примере это показано [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] в C++и, хотя это также можно сделать на другом языке или в командной строке.
 
-Начните с простого диалогового окна, компилируемого в C++ [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] проект.
+Начните с простого диалогового окна, которое компилируется в C++ проект DLL.
 
 Затем Познакомьтесь с диалоговым окном [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в приложении большего размера:
 
-- Скомпилируйте как управляемый (`/clr`) [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]
+- Компиляция библиотеки DLL как управляемой`/clr`()
 
 - Преобразование диалогового окна в элемент управления
 
@@ -120,7 +120,7 @@ public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
         }
 ```
 
-Здесь используется `CreateDialog` для создания диалогового окна, которое на самом деле является элементом управления. Поскольку это один из первых методов [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)], вызываемых внутри, необходимо также выполнить стандартную [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] инициализацию, вызвав функцию, которая будет определена позже `InitializeGlobals()`, с именем:
+Здесь используется `CreateDialog` для создания диалогового окна, которое на самом деле является элементом управления. Поскольку это один из первых методов, вызываемых в библиотеке DLL, необходимо также выполнить стандартную [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] инициализацию, вызвав функцию, которая будет определена `InitializeGlobals()`позже, с именем:
 
 ```cpp
 bool initialized = false;

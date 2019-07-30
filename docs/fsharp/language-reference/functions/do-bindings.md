@@ -1,13 +1,13 @@
 ---
 title: Привязки do
-description: Узнайте, как F# «do» привязка используется для выполнения кода без определения функции или значения.
+description: Узнайте, как F# привязка do используется для выполнения кода без определения функции или значения.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0755e36912fc4e5a645e55eb4bee5c730a56cadf
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f98f523296bfaceeda35d4861eafbfeaa5a60c32
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641914"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630542"
 ---
 # <a name="do-bindings"></a>Привязки do
 
@@ -26,7 +26,7 @@ ms.locfileid: "65641914"
 
 Атрибуты могут быть применены к привязке `do` верхнего уровня. Например, если программа использует COM-взаимодействия, может потребоваться применить в программе атрибут `STAThread`. Это можно сделать с помощью атрибута привязки `do`, как показано в следующем коде.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet201.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet201.fs)]
 
 ## <a name="see-also"></a>См. также
 

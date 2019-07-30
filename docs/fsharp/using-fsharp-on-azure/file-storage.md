@@ -1,159 +1,159 @@
 ---
-title: Начало работы с хранилищем файлов Azure с использованиемF#
-description: Store файла данных в облаке с хранилищем файлов Azure и подключить к общей облачной папке из виртуальной машины Azure (ВМ) или из локального приложения под управлением Windows.
+title: Начало работы с хранилищем файлов Azure с помощью языка F#
+description: Храните данные файлов в облаке с помощью хранилища файлов Azure и подключите облачный файловый ресурс из виртуальной машины Azure или из локального приложения под управлением Windows.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: fa6dadc863bb9116cfac5afd7cd22a724bc7afe2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0e3cab56ba0f3db27335822616b4976a5d9de62
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031230"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630495"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>Начало работы с хранилищем файлов Azure с помощью языка F\#
+# <a name="get-started-with-azure-file-storage-using-f"></a>Начало работы с хранилищем файлов Azure с помощью F\#
 
-Хранилище файлов Azure — это служба, предоставляющая файловые ресурсы в облаке, используя стандартные [протокол Server Message Block (SMB)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). Поддерживаются протоколы SMB 2.1 и SMB 3.0. С хранилищем файлов Azure можно переносить устаревшие приложения, использующие файловые ресурсы Azure быстро и без дорогостоящей перезаписи. Приложения, работающие на виртуальных машинах Azure или облачных службах или из локальных клиентов можно подключить файловый ресурс в облаке, так же, как настольное приложение подключает обычную общую папку SMB. Любое количество компонентов приложений можно подключать и одновременно получить доступ к общей папки хранилища.
+Хранилище файлов Azure — это служба, которая предлагает общие файловые ресурсы в облаке с помощью стандартного [протокола SMB](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). Поддерживаются SMB 2,1 и SMB 3,0. С помощью хранилища файлов Azure можно быстро перенести устаревшие приложения, использующие общие файловые ресурсы, в Azure и без дорогостоящей перезаписи. Приложения, работающие на виртуальных машинах или облачных службах Azure или локальных клиентах, могут подключать общую папку в облаке, так же как настольные приложения подключаются к типичному общему ресурсу SMB. После этого любое количество компонентов приложения может одновременно подключаться и обращаться к общей папке хранилища файлов.
 
-Общие сведения о хранилище файлов, см. в разделе [руководство по .NET для хранилища файлов](/azure/storage/storage-dotnet-how-to-use-files).
+Общие сведения о хранилище файлов см. [в этом](/azure/storage/storage-dotnet-how-to-use-files)разделе.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Чтобы использовать это руководство, необходимо сначала [создать учетную запись хранения](/azure/storage/storage-create-storage-account).
+Для работы с этим руководством необходимо сначала [создать учетную запись хранения Azure](/azure/storage/storage-create-storage-account).
 Вам также потребуется ключ доступа к хранилищу для этой учетной записи.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Создание F# сценариев и запустить F# интерактивный
+## <a name="create-an-f-script-and-start-f-interactive"></a>Создание F# скрипта и запуск F# интерактивного
 
-Примеры в этой статье можно использовать в любом F# приложения или F# скрипта. Чтобы создать F# скрипт, создайте файл с `.fsx` расширение, например `files.fsx`в вашей F# среды разработки.
+Примеры в этой статье можно использовать как в F# приложении, так и в F# сценарии. Чтобы создать F# скрипт, создайте файл с `.fsx` `files.fsx`расширением, например в среде F# разработки.
 
-Затем используйте [диспетчера пакетов](package-management.md) например [Paket](https://fsprojects.github.io/Paket/) или [NuGet](https://www.nuget.org/) для установки `WindowsAzure.Storage` пакета и ссылка `WindowsAzure.Storage.dll` в скрипте, с помощью `#r`директива.
+Затем используйте [Диспетчер пакетов](package-management.md) , например [пакет](https://fsprojects.github.io/Paket/) или `WindowsAzure.Storage` [NuGet](https://www.nuget.org/) , для установки `#r` пакета и ссылки `WindowsAzure.Storage.dll` в скрипте с помощью директивы.
 
-### <a name="add-namespace-declarations"></a>Добавьте объявления пространств имен
+### <a name="add-namespace-declarations"></a>Добавить объявления пространств имен
 
-Добавьте следующий `open` операторы в верхнюю часть `files.fsx` файла:
+Добавьте следующие `open` инструкции в начало `files.fsx` файла:
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L1-L5)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L1-L5)]
 
-### <a name="get-your-connection-string"></a>Получить строку подключения
+### <a name="get-your-connection-string"></a>Получение строки подключения
 
-В этом руководстве вам потребуется строки подключения к службе хранилища Azure. Дополнительные сведения о строках подключения см. в разделе [Настройка строк подключения службы хранилища](/azure/storage/storage-configure-connection-string).
+Для работы с этим руководством вам потребуется строка подключения к службе хранилища Azure. Дополнительные сведения о строках подключения см. в разделе [Настройка строк подключения к хранилищу](/azure/storage/storage-configure-connection-string).
 
-Для этого руководства вы введете строку подключения в скрипте, следующим образом:
+В этом руководстве вы введете строку подключения в сценарий следующим образом:
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L11-L11)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L11-L11)]
 
-Однако это **не рекомендуется** реальных проектов. Ключ учетной записи хранения похож на корневой пароль для учетной записи хранения. Не забудьте защитить ключ учетной записи хранения. Избегайте распределения его другим пользователям, в коде, или сохранить его в текстовом файле, доступном другим пользователям. Можно повторно создать ключ с помощью портала Azure, если вы считаете, что он мог быть скомпрометирован.
+Однако это **не рекомендуется** для реальных проектов. Ключ учетной записи хранения аналогичен корневому паролю для вашей учетной записи хранения. Всегда будьте внимательны, чтобы защитить ключ учетной записи хранения. Не рекомендуется распространять его другим пользователям, жестко программировать или сохранять в виде обычного текстового файла, доступного для других пользователей. Вы можете повторно создать ключ с помощью портала Azure, если считаете, что он был скомпрометирован.
 
-Для реальных приложений, чтобы сохранить строку подключения хранилища рекомендуется в файле конфигурации. Чтобы получить строку подключения из файла конфигурации, это можно сделать:
+Для реальных приложений лучшим способом поддержания строки подключения к хранилищу является файл конфигурации. Чтобы получить строку подключения из файла конфигурации, можно сделать следующее:
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L13-L15)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L13-L15)]
 
-Использование диспетчера конфигураций Azure не является обязательным. Можно также использовать API, например .NET Framework `ConfigurationManager` типа.
+Использование Configuration Manager Azure является необязательным. Можно также использовать API, например `ConfigurationManager` тип .NET Framework.
 
-### <a name="parse-the-connection-string"></a>Проанализировать строку подключения
+### <a name="parse-the-connection-string"></a>Анализ строки подключения
 
-Чтобы проанализировать строку подключения, используйте следующую команду:
+Чтобы проанализировать строку подключения, используйте:
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L21-L22)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L21-L22)]
 
-Эта команда возвращает `CloudStorageAccount`.
+Будет возвращен `CloudStorageAccount`.
 
 ### <a name="create-the-file-service-client"></a>Создание клиента службы файлов
 
-`CloudFileClient` Типа позволяет программно использовать файлы, хранящиеся в хранилище файлов. Вот один из способов создания клиента службы:
+`CloudFileClient` Тип позволяет программно использовать файлы, хранящиеся в хранилище файлов. Вот один из способов создания клиента службы:
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L28-L28)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L28-L28)]
 
-Теперь вы готовы написать код, который считывает и записывает данные в хранилище файлов.
+Теперь все готово для написания кода, считывающего данные из хранилища файлов и записывающего их в хранилище.
 
 ## <a name="create-a-file-share"></a>Создание общей папки
 
-В этом примере показано, как создать файловый ресурс в том случае, если он еще не существует:
+В этом примере показано, как создать файловый ресурс, если он еще не существует:
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L34-L35)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L34-L35)]
 
 ## <a name="create-a-root-directory-and-a-subdirectory"></a>Создание корневого каталога и подкаталога
 
-Здесь вы получаете корневой каталог и получите вложенный каталог корневого элемента. Можно создать, и если они еще не существуют.
+Здесь вы получаете корневой каталог и подкаталогом корневого каталога. Они создаются, если они еще не существуют.
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L41-L43)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L41-L43)]
 
-## <a name="upload-text-as-a-file"></a>Загрузить текст в формате
+## <a name="upload-text-as-a-file"></a>Отправка текста в виде файла
 
-В этом примере показано, как загрузить текст в формате.
+В этом примере показано, как передать текст в виде файла.
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L49-L50)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L49-L50)]
 
-### <a name="download-a-file-to-a-local-copy-of-the-file"></a>Загрузите файл локальную копию файла
+### <a name="download-a-file-to-a-local-copy-of-the-file"></a>Скачать файл в локальную копию файла
 
-Здесь необходимо скачать файл, который только что создали, добавив содержимое в локальном файле.
+Здесь вы скачиваете только что созданный файл, добавляя содержимое в локальный файл.
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L56-L56)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L56-L56)]
 
-### <a name="set-the-maximum-size-for-a-file-share"></a>Установить максимальный размер для общей папки
+### <a name="set-the-maximum-size-for-a-file-share"></a>Установка максимального размера для общей папки
 
-В приведенном ниже примере показано, как проверить текущее использование для общей папки и как задать квоту для общей папки. `FetchAttributes` для заполнения общего ресурса необходимо вызвать `Properties`, и `SetProperties` для распространения локальных изменений в хранилище файлов Azure.
+В приведенном ниже примере показано, как проверить текущее использование общего ресурса и задать квоту для общей папки. `FetchAttributes`должен вызываться для заполнения общей папки `Properties`и `SetProperties` распространения локальных изменений в хранилище файлов Azure.
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L62-L72)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L62-L72)]
 
-### <a name="generate-a-shared-access-signature-for-a-file-or-file-share"></a>Создание подписи общего доступа для файла или общей папки
+### <a name="generate-a-shared-access-signature-for-a-file-or-file-share"></a>Создание подписи общего доступа для файла или файлового ресурса
 
-Вы можете создать подпись общего доступа (SAS) для общей папки или отдельного файла. Можно также создать политики общего доступа в общей папке, чтобы управлять подписями общего доступа. Создание политики общего доступа рекомендуется, так как она позволяет отменить SAS, если она скомпрометирована.
+Вы можете создать подписанный URL-адрес (SAS) для общей папки или отдельного файла. Кроме того, можно создать политику общего доступа в общей папке для управления подписанными URL-доступом. Рекомендуется создать политику общего доступа, так как она предоставляет средства отмены SAS, если она должна быть скомпрометирована.
 
-Здесь создается общий доступ к политике в общей папке, а затем использовать эту политику для обеспечения ограничения SAS для файла в общей папке.
+Здесь вы создаете политику общего доступа для общей папки, а затем используете эту политику для предоставления ограничений для SAS для файла в общей папке.
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L78-L94)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L78-L94)]
 
-Дополнительные сведения о создании и использовании подписей общего доступа см. в разделе [использование подписи доступа (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1) и [Создание и использование SAS с помощью хранилища BLOB-объектов](/azure/storage/storage-dotnet-shared-access-signature-part-2).
+Дополнительные сведения о создании и использовании подписанных URL-адресов см. в статьях [Использование подписей общего доступа (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1) и [Создание и использование SAS с хранилищем BLOB-объектов](/azure/storage/storage-dotnet-shared-access-signature-part-2).
 
 ### <a name="copy-files"></a>Копирование файлов
 
-Файл можно скопировать в другой файл или большой двоичный объект или большой двоичный объект в файл. При копировании большого двоичного объекта в файл или файл в большой двоичный объект, вы *необходимо* использовать подпись общего доступа (SAS) для проверки подлинности исходного объекта, даже если копирование производится внутри одной учетной записи.
+Файл можно скопировать в другой файл или в большой двоичный объект или в большой двоичный объект в файл. Если вы копируете большой двоичный объект в файл или файл в большой двоичный объект, *необходимо* использовать подписанный URL-адрес (SAS) для проверки подлинности исходного объекта, даже если вы копируете его в ту же учетную запись хранения.
 
-### <a name="copy-a-file-to-another-file"></a>Скопируйте файл в другой файл
+### <a name="copy-a-file-to-another-file"></a>Копирование файла в другой файл
 
-Здесь можно скопировать файл в другой файл в той же общей папке. Так как эта операция копирования осуществляет копирование между файлами в одну и ту же учетную запись хранения, можно использовать проверку подлинности Shared Key для выполнения копирования.
+Здесь вы копируете файл в другой файл в той же общей папке. Так как эта операция копирования копирует между файлами в одной учетной записи хранения, для копирования можно использовать проверку подлинности с помощью общего ключа.
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L100-L101)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L100-L101)]
 
-### <a name="copy-a-file-to-a-blob"></a>Скопируйте файл в большой двоичный объект
+### <a name="copy-a-file-to-a-blob"></a>Копирование файла в большой двоичный объект
 
-Здесь, создайте файл и скопируйте его в большой двоичный объект в учетной записи хранения. Можно создать подписанный URL-адрес для исходного файла, который используется службой для проверки подлинности доступа к исходному файлу во время операции копирования.
+Здесь вы создаете файл и копируете его в большой двоичный объект в той же учетной записи хранения. Создайте SAS для исходного файла, который служба использует для проверки подлинности доступа к исходному файлу во время операции копирования.
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L107-L120)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L107-L120)]
 
-Таким же образом можно скопировать большой двоичный объект в файл. Если исходный объект является большой двоичный объект, создайте SAS для аутентификации доступа к этого большого двоичного объекта во время операции копирования.
+Вы можете скопировать большой двоичный объект в файл таким же образом. Если исходный объект является BLOB-объектом, создайте SAS для проверки подлинности доступа к этому большому двоичному объекту во время операции копирования.
 
 ## <a name="troubleshooting-file-storage-using-metrics"></a>Устранение неполадок хранилища файлов с помощью метрик
 
-Аналитика службы хранилища Azure поддерживает метрики для хранилища файлов. С данными метрик можно отслеживать запросы и диагностировать проблемы.
+Аналитика Службы хранилища Azure поддерживает метрики для хранилища файлов. С помощью данных метрик можно отслеживать запросы и диагностировать проблемы.
 
-Вы можете включить метрики для хранилища файлов из [портал Azure](https://portal.azure.com), или это можно сделать из F# следующим образом:
+Вы можете включить метрики для хранилища файлов на [портале Azure](https://portal.azure.com). также можно сделать это F# следующим образом:
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L126-L140)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L126-L140)]
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Найти по следующим ссылкам, Дополнительные сведения о хранилище файлов Azure.
+Дополнительные сведения о хранилище файлов Azure см. в этих ссылках.
 
-### <a name="conceptual-articles-and-videos"></a>Тематические статьи и видео
+### <a name="conceptual-articles-and-videos"></a>Концептуальные статьи и видеоматериалы
 
-- [Хранилище файлов Azure: удобная облачная файловая система SMB для Windows и Linux](https://azure.microsoft.com/resources/videos/azurecon-2015-azure-files-storage-a-frictionless-cloud-smb-file-system-for-windows-and-linux/)
-- [Как использовать хранилище файлов Azure с Linux](/azure/storage/storage-how-to-use-files-linux)
+- [Хранилище файлов Azure. облачная файловая система SMB для Windows и Linux](https://azure.microsoft.com/resources/videos/azurecon-2015-azure-files-storage-a-frictionless-cloud-smb-file-system-for-windows-and-linux/)
+- [Использование хранилища файлов Azure с Linux](/azure/storage/storage-how-to-use-files-linux)
 
-### <a name="tooling-support-for-file-storage"></a>Поддержка средств для хранилища файлов
+### <a name="tooling-support-for-file-storage"></a>Поддержка инструментария для хранилища файлов
 
-- [С помощью Azure PowerShell со службой хранилища Azure](/azure/storage/storage-powershell-guide-full)
-- [Как использовать AzCopy со службой хранилища Microsoft Azure](/azure/storage/storage-use-azcopy)
-- [С помощью Azure CLI со службой хранилища Azure](/azure/storage/storage-azure-cli#create-and-manage-file-shares)
+- [Использование Azure PowerShell с хранилищем Azure](/azure/storage/storage-powershell-guide-full)
+- [Использование AzCopy с служба хранилища Microsoft Azure](/azure/storage/storage-use-azcopy)
+- [Использование Azure CLI с хранилищем Azure](/azure/storage/storage-azure-cli#create-and-manage-file-shares)
 
 ### <a name="reference"></a>Ссылка
 
-- [Клиентская библиотека хранилища для .NET](https://msdn.microsoft.com/library/azure/mt347887.aspx)
-- [Справочник по API REST службы файлов](/rest/api/storageservices/fileservices/File-Service-REST-API)
+- [Справочник по клиентской библиотеке хранилища для .NET](https://msdn.microsoft.com/library/azure/mt347887.aspx)
+- [Справочник по REST API службы файлов](/rest/api/storageservices/fileservices/File-Service-REST-API)
 
-### <a name="blog-posts"></a>Сообщения в блогах
+### <a name="blog-posts"></a>Записи блога
 
-- [Хранилище файлов Azure теперь общедоступна](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
-- [Хранилище внутри файлов Azure](https://azure.microsoft.com/blog/inside-azure-file-storage/) 
-- [Введение в службы файлов Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/12/introducing-microsoft-azure-file-service/)
-- [Сохраняемые подключения к файлам Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/26/persisting-connections-to-microsoft-azure-files/)
+- [Хранилище файлов Azure теперь общедоступно](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
+- [Внутреннее хранилище файлов Azure](https://azure.microsoft.com/blog/inside-azure-file-storage/) 
+- [Введение в Microsoft Azure файловую службу](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/12/introducing-microsoft-azure-file-service/)
+- [Сохранение соединений с файлами Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/26/persisting-connections-to-microsoft-azure-files/)

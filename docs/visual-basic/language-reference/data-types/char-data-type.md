@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: ca40e6c8dcba3da29bdb68b29c91c852e477f8f7
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 8313c2282a3b4b7b035f9f3b685a786c4471f53a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512790"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630142"
 ---
 # <a name="char-data-type-visual-basic"></a>Тип данных Char (Visual Basic)
 
@@ -37,16 +37,22 @@ ms.locfileid: "68512790"
 
 Visual Basic не выполняет прямое преобразование между `Char` и числовыми типами. Можно использовать <xref:Microsoft.VisualBasic.Strings.Asc%2A> функцию или <xref:Microsoft.VisualBasic.Strings.AscW%2A> `Char` для`Integer` преобразования значения в, представляющего ее кодовую точку. <xref:Microsoft.VisualBasic.Strings.Chr%2A> <xref:Microsoft.VisualBasic.Strings.ChrW%2A> Для преобразования`Integer` значения в ,котороеимеетэтукодовуюточку,можноиспользоватьфункциюили.`Char`
 
-Если включен параметр проверки типов ([оператор Option строго](../../../visual-basic/language-reference/statements/option-strict-statement.md)), необходимо добавить символ типа литерала в односимвольный строковый литерал, чтобы его можно было обозначить `Char` как тип данных. Это показано в следующем примере.
+Если параметр проверки типов ( [оператор Option строго](../../../visual-basic/language-reference/statements/option-strict-statement.md)) включен, необходимо добавить символ типа литерала в односимвольный строковый литерал, чтобы его можно было обозначить как `Char` тип данных. Это показано в следующем примере. Первое присваивание `charVar` переменной приводит к ошибке компилятора [BC30512](../../misc/bc30512.md) , `Option Strict` так как имеет значение ON. Вторая компилируется успешно, так как `c` символ типа литерала определяет литерал `Char` как значение.
 
 ```vb
 Option Strict On
-Dim charVar As Char
-' The following statement attempts to convert a String literal to Char.
-' Because Option Strict is On, it generates a compiler error.
-charVar = "Z"
-' The following statement succeeds because it specifies a Char literal.
-charVar = "Z"C
+
+Module CharType
+    Public Sub Main()
+        Dim charVar As Char
+
+        ' This statement generates compiler error BC30512 because Option Strict is On.  
+        charVar = "Z"  
+
+        ' The following statement succeeds because it specifies a Char literal.  
+        charVar = "Z"c
+    End Sub
+End Module
 ```
 
 ## <a name="programming-tips"></a>Советы по программированию
@@ -55,7 +61,7 @@ charVar = "Z"C
 
 - **Вопросы взаимодействия.** Если вы используете компоненты, не написанные для .NET Framework, например автоматизацию или COM-объекты, помните, что в других средах символьные типы имеют разную ширину данных (8 бит). При передаче 8-разрядного аргумента в такой компонент объявите его как `Byte` `Char` вместо в новом коде Visual Basic.
 
-- **Расширяющие.** Тип данных расширяется до `String`. `Char` Это означает, что вы `Char` можете `String` преобразовать в <xref:System.OverflowException?displayProperty=nameWithType> и не получит ошибку.
+- **Расширяющие.** Тип данных расширяется до `String`. `Char` Это означает, что можно `Char` выполнить `String` преобразование в <xref:System.OverflowException?displayProperty=nameWithType>и не будет возникать.
 
 - **Символы типа.** Добавление символа `C` типа литерала к строковому литералу с одним символом приводит к тому `Char` , что он применяет его к типу данных. `Char`не имеет символа типа идентификатора.
 

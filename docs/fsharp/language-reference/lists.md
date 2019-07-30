@@ -1,79 +1,79 @@
 ---
 title: Списки
-description: Дополнительные сведения о F# списки, упорядоченная, неизменная серия элементов одного типа.
+description: Сведения о F# списках, упорядоченной, неизменяемой последовательности элементов одного и того же типа.
 ms.date: 05/16/2016
-ms.openlocfilehash: cc4e292280cca0dca37f69cf5a46ec2822d08d5c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8c4a464306cfedfd36a4685507684d3a1a97a2e
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904128"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630727"
 ---
 # <a name="lists"></a>Списки
 
 > [!NOTE]
 > Ссылки на справочник по API в этой статье ведут на сайт MSDN.  Работа над справочником по API docs.microsoft.com не завершена.
 
-В языке F# список — это упорядоченная, неизменная серия элементов одного типа. Для выполнения основных операций со списками используйте функции в [модуль списка](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788).
+В языке F# список — это упорядоченная, неизменная серия элементов одного типа. Для выполнения основных операций со списками используйте функции в [модуле List](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788).
 
 ## <a name="creating-and-initializing-lists"></a>Создание и инициализация списков
 
 Список можно определить путем прямого перечисления элементов, разделенных точкой с запятой и заключенных в квадратные скобки, как показано в следующей строке кода.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1301.fs)]
 
 Вместо точки с запятой для разделения элементов можно также использовать разрыв строки. Такой синтаксис позволяет получить более удобный для чтения код, если список содержит длинные выражения инициализации или к каждому элементу необходимо написать комментарий.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet13011.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet13011.fs)]
 
 Обычно все элементы в списке должны быть одного типа. Исключением является список, в котором элементы основного типа могут иметь элементы производных типов. Следующий вариант считается приемлемым, так как типы `Button` и `CheckBox` являются производными от типа `Control`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet13012.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet13012.fs)]
 
 Определить элементы списка можно также с помощью диапазона, который будет ограничен целыми числами, разделенными оператором (`..`), как показано в следующем коде.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1302.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1302.fs)]
 
 Пустой список определяется парой квадратных скобок, между которыми ничего не указано.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1304.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1304.fs)]
 
-Также список можно создать с помощью выражения последовательности. См. в разделе [выражения последовательности](sequences.md#sequence-expressions) Дополнительные сведения. Например, в следующем коде создается список квадратов целочисленных значений от 1 до 10.
+Также список можно создать с помощью выражения последовательности. Дополнительные сведения см. в разделе [выражения](sequences.md#sequence-expressions) последовательностей. Например, в следующем коде создается список квадратов целочисленных значений от 1 до 10.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1303.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1303.fs)]
 
 ## <a name="operators-for-working-with-lists"></a>Операторы для работы со списками
 
 Оператор `::` позволяет добавлять элементы в список. Если список `list1` включает `[2; 3; 4]`, то следующий код создает список `list2` как `[100; 2; 3; 4]`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1305.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1305.fs)]
 
 Оператор `@` позволяет объединять списки совместимых типов, как показано в следующем коде. Если список `list1` включает `[2; 3; 4]`, список `list2` — `[100; 2; 3; 4]`, то следующий код создает список `list3` как `[2; 3; 4; 100; 2; 3; 4]`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1306.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1306.fs)]
 
-В доступных функций для выполнения операций со списками [модуль списка](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788).
+Функции для выполнения операций с списками доступны в [модуле List](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788).
 
 Поскольку списки в языке F# являются неизменными, то операции изменения не изменяют существующие списки, а создают новые.
 
-Списки в F# реализуются как однократно связанные списки, это означает, что операции, обращающиеся только к началу списка выглядят как O(1), а доступ к элементам — O (*n*).
+Списки в F# реализуются как однонаправленные списки. Это означает, что операции, обращающиеся только к заголовку списка, являются o (1), а доступ к элементу — o (*n*).
 
 ## <a name="properties"></a>Свойства
 
 Тип списка поддерживает следующие свойства.
 
-|Свойство|Тип|Описание|
+|Свойство.|Тип|Описание|
 |--------|----|-----------|
-|[HEAD](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|Первый элемент|
-|[пустой](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Статическое свойство, которое возвращает пустой список соответствующего типа.|
-|[IsEmpty](https://msdn.microsoft.com/library/3ba087b2-2fc2-406d-b10a-cff6a19322da)|`bool`|`true` Если в списке нет элементов.|
+|[Глава](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|Первый элемент|
+|[Указано](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Статическое свойство, которое возвращает пустой список соответствующего типа.|
+|[IsEmpty](https://msdn.microsoft.com/library/3ba087b2-2fc2-406d-b10a-cff6a19322da)|`bool`|`true`значение, если список не содержит элементов.|
 |[Элемент](https://msdn.microsoft.com/library/bdb2553a-0e54-4ff8-baed-ab1aac8f5dae)|`'T`|Элемент с указанным индексом (начинается с нуля).|
 |[Длина](https://msdn.microsoft.com/library/25f715c8-9daa-4c4d-a6c7-26772f9dab4d)|`int`|Количество элементов|
-|[заключительный фрагмент](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91)|`'T list`|Список без первого элемента|
+|[Односторонне](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91)|`'T list`|Список без первого элемента|
 
 Ниже приведены некоторые примеры использования данных свойств.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1307.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1307.fs)]
 
 ## <a name="using-lists"></a>Использование списков
 
@@ -87,15 +87,15 @@ ms.locfileid: "61904128"
 
 Следующий пример кода показывает, как использовать сопоставление шаблонов для реализации рекурсивной функции, выполняющей операции над списком.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet13071.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet13071.fs)]
 
 Предыдущий код хорошо работает для небольших списков, но при работе со списками большого размера может случиться переполнение стека. Следующий код улучшает предыдущий за счет использования аргумента аккумулирования — это стандартная техника работы с рекурсивными функциями. Использование аргумента аккумулирования делает функцию рекурсивной по отношению к хвосту, что экономит место в стеке.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet13072.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet13072.fs)]
 
 Функция `RemoveAllMultiples` — это рекурсивная функция, которая обрабатывает два списка. Первый список содержит цифры, кратные которым будут удалены, а второй представляет собой список, из которого будут удаляться цифры. Код в следующем примере использует рекурсивную функцию для удаления всех непростых чисел из списка. После его выполнения в списке остаются только простые числа.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1308.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1308.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -106,17 +106,17 @@ Primes Up To 100:
 
 ## <a name="module-functions"></a>Функции модуля
 
-[Модуль списка](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788) предоставляет функции для доступа к элементам списка. Самым легким и быстрым для доступа является первоначальный элемент. Используйте свойство [Head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740) или функция модуля [List.head](https://msdn.microsoft.com/library/22514cc5-0511-498b-a2cc-837b688a6da2). Доступ к хвосту списка с помощью [заключительного](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91) свойство или [List.tail](https://msdn.microsoft.com/library/da0a0638-4420-4571-84b6-d09ae601f601) функции. Чтобы найти элемент по индексу, используйте [List.nth](https://msdn.microsoft.com/library/1f717d57-89be-4007-a971-9cf5a28d83b1) функции. `List.nth` проходит по списку. Таким образом, он является O (*n*). Если в коде часто используется `List.nth`, то вместо списка можно использовать массив. Доступ к элементам массива осуществляется через O(1).
+[Модуль List](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788) предоставляет функции, которые обращаются к элементам списка. Самым легким и быстрым для доступа является первоначальный элемент. Используйте [заголовок](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740) свойства или список функций модуля [. Head](https://msdn.microsoft.com/library/22514cc5-0511-498b-a2cc-837b688a6da2). Можно получить доступ к заключительному фрагменту списка с помощью свойства [tail](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91) или функции [List. tail](https://msdn.microsoft.com/library/da0a0638-4420-4571-84b6-d09ae601f601) . Чтобы найти элемент по индексу, используйте функцию [List. nth](https://msdn.microsoft.com/library/1f717d57-89be-4007-a971-9cf5a28d83b1) . `List.nth`проходит по списку. Таким образом, это O (*n*). Если в коде часто используется `List.nth`, то вместо списка можно использовать массив. Доступ к элементам массива осуществляется через O(1).
 
 ### <a name="boolean-operations-on-lists"></a>Логические операции со списками
 
-[List.isEmpty](https://msdn.microsoft.com/library/a7941d44-9e92-427c-b806-c378f4558107) функция определяет, имеет ли список какие-либо элементы.
+Функция [List. isEmpty](https://msdn.microsoft.com/library/a7941d44-9e92-427c-b806-c378f4558107) определяет, содержит ли список какие-либо элементы.
 
-[List.exists](https://msdn.microsoft.com/library/15a3ebd5-98f0-44c0-8220-7dedec3e68a8) функция применяет логический тест к элементам списка и возвращает `true` Если любой элемент удовлетворяет его условиям. [List.exists2](https://msdn.microsoft.com/library/7532b39e-3f4f-4534-a60b-d7721dc6fa7e) аналогична, но работает с последовательными парами элементов в двух списках.
+Функция [List. Exists](https://msdn.microsoft.com/library/15a3ebd5-98f0-44c0-8220-7dedec3e68a8) применяет логический тест к элементам списка и возвращает `true` значение, если какой-либо элемент удовлетворяет данному тесту. [List. exists2-](https://msdn.microsoft.com/library/7532b39e-3f4f-4534-a60b-d7721dc6fa7e) аналогичен, но работает с последовательными парами элементов в двух списках.
 
 В следующем коде показано использование функции `List.exists`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet1.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet1.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -126,7 +126,7 @@ For list [0; 1; 2; 3], contains zero is true
 
 В следующем примере показано использование функции `List.exists2`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet2.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet2.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -134,9 +134,9 @@ For list [0; 1; 2; 3], contains zero is true
 Lists [1; 2; 3; 4; 5] and [5; 4; 3; 2; 1] have at least one equal element at the same position.
 ```
 
-Можно использовать [List.forall](https://msdn.microsoft.com/library/e11a5233-d612-40ac-833b-d5cf496900b7) Если вы хотите проверить все элементы списка удовлетворяют ли условию.
+[List. forall](https://msdn.microsoft.com/library/e11a5233-d612-40ac-833b-d5cf496900b7) можно использовать, если требуется проверить, соответствуют ли все элементы списка условию.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet3.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet3.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -145,9 +145,9 @@ true
 false
 ```
 
-Аналогичным образом [List.forall2](https://msdn.microsoft.com/library/bb611f02-8277-48f5-9af3-6194ae27d07e) определяет, удовлетворяют ли все элементы в соответствующих позициях из двух списков логическое выражение, которое входит каждая пара элементов.
+Аналогичным образом [List. forall2](https://msdn.microsoft.com/library/bb611f02-8277-48f5-9af3-6194ae27d07e) определяет, соответствуют ли все элементы в соответствующих позициях в двух списках логическому выражению, включающему в себя каждую пару элементов.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet4.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet4.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -158,13 +158,13 @@ false
 
 ### <a name="sort-operations-on-lists"></a>Операции сортировки списков
 
-[List.sort](https://msdn.microsoft.com/library/17f1030e-aa7e-41dd-94ea-72cb6c04fd3d), [List.sortBy](https://msdn.microsoft.com/library/955bfc5f-ad9c-4f2d-a7ab-91e43eb21359), и [List.sortWith](https://msdn.microsoft.com/library/1d806a54-9166-4198-906d-15101f7916c7) функции сортировки списков. Функция сортировки определяет, какую из этих трех функций использовать. `List.sort` использует общее сравнение по умолчанию. Общее сравнение выполняется с помощью глобальных операторов на основе функции общего сравнения значений. Оно эффективно работает с различными типами элементов, такими как числовые типы, кортежи, записи, размеченные объединения, списки, массивы и любой другой тип, включающий `System.IComparable`. Для типов, включающих `System.IComparable`, общее сравнение выполняется с помощью функции `System.IComparable.CompareTo()`. Общее сравнение также работает со строками, но использует культурно-независимый порядок сортировки. Общее сравнение не следует применять к неподдерживаемым типам, например типам функций. К тому же выполнение общего сравнения по умолчанию лучше всего подходит для слабо структурированных типов. Для сильно структурированных типов, которые необходимо часто сравнивать и сортировать, можно использовать функцию `System.IComparable` и метод `System.IComparable.CompareTo()`.
+Функции [List. Sort](https://msdn.microsoft.com/library/17f1030e-aa7e-41dd-94ea-72cb6c04fd3d), [List. sortBy](https://msdn.microsoft.com/library/955bfc5f-ad9c-4f2d-a7ab-91e43eb21359)и [List. сортвис](https://msdn.microsoft.com/library/1d806a54-9166-4198-906d-15101f7916c7) сортируют списки сортировки. Функция сортировки определяет, какую из этих трех функций использовать. `List.sort`использует универсальное сравнение по умолчанию. Общее сравнение выполняется с помощью глобальных операторов на основе функции общего сравнения значений. Оно эффективно работает с различными типами элементов, такими как числовые типы, кортежи, записи, размеченные объединения, списки, массивы и любой другой тип, включающий `System.IComparable`. Для типов, включающих `System.IComparable`, общее сравнение выполняется с помощью функции `System.IComparable.CompareTo()`. Общее сравнение также работает со строками, но использует культурно-независимый порядок сортировки. Общее сравнение не следует применять к неподдерживаемым типам, например типам функций. К тому же выполнение общего сравнения по умолчанию лучше всего подходит для слабо структурированных типов. Для сильно структурированных типов, которые необходимо часто сравнивать и сортировать, можно использовать функцию `System.IComparable` и метод `System.IComparable.CompareTo()`.
 
-`List.sortBy` принимает функцию, которая возвращает значение, которое используется в качестве критерия сортировки, и `List.sortWith` использует функцию сравнения в качестве аргумента. Две последние функции полезны при работе с типами, которые не поддерживают сравнение, а также если сравнение требует более сложной семантики, например в случае со строками, учитывающими язык и регион.
+`List.sortBy`принимает функцию, которая возвращает значение, используемое в качестве критерия сортировки, и `List.sortWith` принимает в качестве аргумента функцию сравнения. Две последние функции полезны при работе с типами, которые не поддерживают сравнение, а также если сравнение требует более сложной семантики, например в случае со строками, учитывающими язык и регион.
 
 В следующем примере показано использование функции `List.sort`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet5.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet5.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -174,7 +174,7 @@ false
 
 В следующем примере показано использование функции `List.sortBy`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet6.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet6.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -184,7 +184,7 @@ false
 
 В следующем примере показано использование `List.sortWith`. В этом примере обычная функция сравнения `compareWidgets` используется сначала для сравнения одного поля пользовательского типа, а затем другого, если значения первого поля равны.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet7.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet7.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -199,17 +199,17 @@ Rev = 1;}]
 
 ### <a name="search-operations-on-lists"></a>Операции поиска в списках
 
-Списки поддерживают различные операции поиска. Самая простая, [List.find](https://msdn.microsoft.com/library/0594593e-9c75-44c1-8f5a-a37b2e561c06), позволяет найти первый элемент, соответствующий заданному условию.
+Списки поддерживают различные операции поиска. Простейшая функция [List. Find](https://msdn.microsoft.com/library/0594593e-9c75-44c1-8f5a-a37b2e561c06)позволяет найти первый элемент, соответствующий заданному условию.
 
 В следующем примере кода показано, как использовать `List.find` для поиска первого числа в списке, которое делится на 5.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet8.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet8.fs)]
 
 Результат — 5.
 
-Если элементы необходимо сначала преобразовать, вызовите [List.pick](https://msdn.microsoft.com/library/0430b515-7fe4-49a1-a616-d2286d8b08b2), который принимает функцию, возвращающую параметр и значение, которое выполняет поиск первый вариант — `Some(x)`. Вместо возвращения элемента функция `List.pick` возвращает результат `x`. Если совпадения не найдены, функция `List.pick` возвращает `System.Collections.Generic.KeyNotFoundException`. В следующем коде показано использование `List.pick`.
+Если элементы должны быть преобразованы первыми, вызовите [List. Pick](https://msdn.microsoft.com/library/0430b515-7fe4-49a1-a616-d2286d8b08b2), который принимает функцию, возвращающую параметр, и ищет первое значение параметра, равное `Some(x)`. Вместо возвращения элемента функция `List.pick` возвращает результат `x`. Если совпадения не найдены, функция `List.pick` возвращает `System.Collections.Generic.KeyNotFoundException`. В следующем коде показано использование `List.pick`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet9.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet9.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -217,9 +217,9 @@ Rev = 1;}]
 "b"
 ```
 
-Другая группа операций поиска, [List.tryFind](https://msdn.microsoft.com/library/37f4532e-9fd0-4802-8bbd-e1aa2380287d) и связанные функции возвращают значение параметра. Функция `List.tryFind` возвращает первый элемент списка, который удовлетворяет условию, если такой элемент есть, и значение параметра `None`, если нет. Вариант [List.tryFindIndex](https://msdn.microsoft.com/library/5e31968c-c3d3-43d2-859a-0526825895ec) возвращает индекс элемента, если он найден, а не сам элемент. Эти функции представлены в следующем коде.
+Другая группа операций поиска, [List. tryFind](https://msdn.microsoft.com/library/37f4532e-9fd0-4802-8bbd-e1aa2380287d) и связанных функций, возвращает значение параметра. Функция `List.tryFind` возвращает первый элемент списка, который удовлетворяет условию, если такой элемент есть, и значение параметра `None`, если нет. Список вариантов [. tryFindIndex](https://msdn.microsoft.com/library/5e31968c-c3d3-43d2-859a-0526825895ec) возвращает индекс элемента, если он найден, а не сам элемент. Эти функции представлены в следующем коде.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet10.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet10.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -230,25 +230,25 @@ The first even value is at position 8.
 
 ### <a name="arithmetic-operations-on-lists"></a>Арифметические операции со списками
 
-Стандартные арифметические операции, такие как сумма и среднее, встроены в [модуль списка](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788). Для работы с [List.sum](https://msdn.microsoft.com/library/54d47fe3-5ecf-4883-beb5-e915342a17f9), должен поддерживать тип элемента списка `+` оператор и иметь нулевое значение. Все встроенные арифметические типы удовлетворяют этим условиям. Для работы с [List.average](https://msdn.microsoft.com/library/2b9a627b-106d-4548-8c4c-ab5058b8f8e1), тип элемента должен поддерживать деление без остатка, что исключает целочисленные типы, но позволяет типы с плавающей запятой. [List.sumBy](https://msdn.microsoft.com/library/b7623389-0fe1-4762-9c67-51079903ab7d) и [List.averageBy](https://msdn.microsoft.com/library/936cc9ec-62af-464d-8726-7999c2f48403) функции принимают функцию в качестве параметра, а также результаты этой функции используются для вычисления суммы или среднего значения.
+Общие арифметические операции, такие как Sum и Average, встроены в [модуль List](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788). Для работы с [List. Sum](https://msdn.microsoft.com/library/54d47fe3-5ecf-4883-beb5-e915342a17f9)тип элемента списка должен поддерживать `+` оператор и иметь нулевое значение. Все встроенные арифметические типы удовлетворяют этим условиям. Для работы с [List. Average](https://msdn.microsoft.com/library/2b9a627b-106d-4548-8c4c-ab5058b8f8e1)тип элемента должен поддерживать деление без остатка, который исключает целочисленные типы, но допускает типы с плавающей запятой. Функции [List. sumBy](https://msdn.microsoft.com/library/b7623389-0fe1-4762-9c67-51079903ab7d) и [List. averageBy](https://msdn.microsoft.com/library/936cc9ec-62af-464d-8726-7999c2f48403) принимают в качестве параметра функцию, а результаты этой функции используются для вычисления значений суммы или среднего значения.
 
 В следующем коде показано использование `List.sum`, `List.sumBy` и `List.average`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet11.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet11.fs)]
 
 В результате получается `1.000000`.
 
 В следующем коде показано использование `List.averageBy`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet12.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet12.fs)]
 
 В результате получается `5.5`.
 
 ### <a name="lists-and-tuples"></a>Списки и кортежи
 
-Для работы со списками, содержащими кортежи, можно использовать функции упаковки и распаковки. Они объединяют два списка с одним значением в один список кортежей или разбивают один список кортежей на два списка с одним значением. Самый простой [List.zip](https://msdn.microsoft.com/library/3028d790-8f48-4c94-bf08-b058bec3689c) функция принимает два списка отдельных элементов и создает один список пар кортежей. Другая версия [List.zip3](https://msdn.microsoft.com/library/003cc28e-0de3-4d99-89ed-cb19028e3c5b), берет три списка с одним элементом и создает один список кортежей с тремя элементами. В следующем коде показано использование функции `List.zip`.
+Для работы со списками, содержащими кортежи, можно использовать функции упаковки и распаковки. Они объединяют два списка с одним значением в один список кортежей или разбивают один список кортежей на два списка с одним значением. Простейшая функция [List. zip](https://msdn.microsoft.com/library/3028d790-8f48-4c94-bf08-b058bec3689c) принимает два списка отдельных элементов и создает один список пар кортежей. Другая версия, [List. zip3](https://msdn.microsoft.com/library/003cc28e-0de3-4d99-89ed-cb19028e3c5b), принимает три списка отдельных элементов и создает один список кортежей с тремя элементами. В следующем коде показано использование функции `List.zip`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet13.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet13.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -258,7 +258,7 @@ The first even value is at position 8.
 
 В следующем коде показано использование функции `List.zip3`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet14.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet14.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -266,11 +266,11 @@ The first even value is at position 8.
 [(1, -1, 0); (2, -2, 0); (3, -3, 0)]
 ```
 
-Соответствующие версии распаковки, [List.unzip](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21) и [List.unzip3](https://msdn.microsoft.com/library/43078c77-32ec-4342-85b3-c31ccf984db4), использовать списки кортежей и возвращают списки в кортеж, где первый список содержит все элементы, которые были первыми в каждом кортеже и второй список содержит второй элемент каждого кортежа и т. д.
+Соответствующие версии распаковать, [List. unzip](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21) и [List. unzip3](https://msdn.microsoft.com/library/43078c77-32ec-4342-85b3-c31ccf984db4), принимают списки кортежей и возвращаемых списков в кортеже, где первый список содержит все элементы, которые были первыми в каждом кортеже, а второй список содержит второй элемент каждого кортеж и т. д.
 
-В следующем примере кода демонстрируется использование [List.unzip](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21).
+В следующем примере кода показано использование [List. unzip](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21).
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet15.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet15.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -279,9 +279,9 @@ The first even value is at position 8.
 [1; 3] [2; 4]
 ```
 
-В следующем примере кода демонстрируется использование [List.unzip3](https://msdn.microsoft.com/library/43078c77-32ec-4342-85b3-c31ccf984db4).
+В следующем примере кода показано использование [List. unzip3](https://msdn.microsoft.com/library/43078c77-32ec-4342-85b3-c31ccf984db4).
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet16.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet16.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -291,9 +291,9 @@ The first even value is at position 8.
 
 ### <a name="operating-on-list-elements"></a>Операции с элементами списка
 
-F# поддерживает различные операции с элементами списка. Самый простой способ — [List.iter](https://msdn.microsoft.com/library/f778d075-81a9-4994-af60-cddcc53a201f), что позволяет вызвать функцию для каждого элемента списка. Вариантам относятся [List.iter2](https://msdn.microsoft.com/library/ea3b7761-916c-4016-9bd8-651124c98b40), что позволяет выполнять операции над элементы двух списков [List.iteri](https://msdn.microsoft.com/library/6dd21ae6-5c00-41cd-8306-821e513d8f60), который аналогичен `List.iter` за исключением того, что индекс каждого элемента передается как аргумент в функцию, которая вызывается для каждого элемента и [List.iteri2](https://msdn.microsoft.com/library/9658d740-9be5-4bf7-b663-c8ab2b3e196c), который представляет собой сочетание функциональные возможности `List.iter2` и `List.iteri`. Эти функции показаны в следующем примере кода.
+F# поддерживает различные операции с элементами списка. Самый простой — [List. iter](https://msdn.microsoft.com/library/f778d075-81a9-4994-af60-cddcc53a201f), который позволяет вызывать функцию для каждого элемента списка. Варианты включают [List. iter2](https://msdn.microsoft.com/library/ea3b7761-916c-4016-9bd8-651124c98b40), который позволяет выполнять операции над элементами двух списков, [List. iteri](https://msdn.microsoft.com/library/6dd21ae6-5c00-41cd-8306-821e513d8f60), которые подобны `List.iter` , за исключением того, что индекс каждого элемента передается в качестве аргумента функции, вызываемой для каждого Element и [List. iteri2](https://msdn.microsoft.com/library/9658d740-9be5-4bf7-b663-c8ab2b3e196c), являющийся сочетанием функций `List.iter2` и. `List.iteri` Эти функции показаны в следующем примере кода.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet17.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet17.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -312,9 +312,9 @@ List.iteri2: element 1 of list1 is 2; element 1 of list2 is 5
 List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 ```
 
-Другая часто используемая функция, которая трансформирует список элементов является [List.map](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6), что позволяет применить функцию к каждому элементу списка и поместить результаты в новый список. [List.map2](https://msdn.microsoft.com/library/5f48cce7-6eaf-4e54-8996-2b04d3c31e57) и [List.map3](https://msdn.microsoft.com/library/dd9fb190-6980-4537-be96-5645a64908f8) , на котором несколькими списками. Можно также использовать [List.mapi](https://msdn.microsoft.com/library/284b9234-3d26-409b-b328-ac79638d9e14) и [List.mapi2](https://msdn.microsoft.com/library/680643af-233c-40a3-82f2-43d5af27ec49), если наряду с элементом функции необходимо передать также индекс каждого элемента. Единственное различие между `List.mapi2` и `List.mapi` состоит в том, что функция `List.mapi2` работает с двумя списками. В следующем примере показано [List.map](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6).
+Другой часто используемой функцией, которая преобразует элементы списка, является [List. Map](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6), которая позволяет применить функцию к каждому элементу списка и поместит все результаты в новый список. [List. map2](https://msdn.microsoft.com/library/5f48cce7-6eaf-4e54-8996-2b04d3c31e57) и [List. map3](https://msdn.microsoft.com/library/dd9fb190-6980-4537-be96-5645a64908f8) — это варианты, принимающие несколько списков. Можно также использовать [List. MAPI](https://msdn.microsoft.com/library/284b9234-3d26-409b-b328-ac79638d9e14) и [List. mapi2](https://msdn.microsoft.com/library/680643af-233c-40a3-82f2-43d5af27ec49), если в дополнение к элементу, функции необходимо передать индекс каждого элемента. Единственное различие между `List.mapi2` и `List.mapi` состоит в том, что функция `List.mapi2` работает с двумя списками. В следующем примере показан [List. Map](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6).
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet18.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet18.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -324,7 +324,7 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 В следующем коде показано использование функции `List.map2`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet19.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet19.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -334,7 +334,7 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 В следующем коде показано использование функции `List.map3`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet20.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet20.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -344,7 +344,7 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 В следующем коде показано использование функции `List.mapi`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet21.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet21.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -354,7 +354,7 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 В следующем коде показано использование функции `List.mapi2`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet22.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet22.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -362,9 +362,9 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 [0; 7; 18]
 ```
 
-[List.Collect](https://msdn.microsoft.com/library/cd08bbc7-a3b9-40ab-8c20-4e85ec84664f) аналогичен `List.map`, за исключением того, что каждый элемент создает список, а все эти списки соединяются в конечный список. В следующем коде каждый элемент списка генерирует три числа. Все они собираются в один список.
+[List. собирающий](https://msdn.microsoft.com/library/cd08bbc7-a3b9-40ab-8c20-4e85ec84664f) аналогичен `List.map`, за исключением того, что каждый элемент создает список, а все эти списки объединяются в окончательный список. В следующем коде каждый элемент списка генерирует три числа. Все они собираются в один список.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet23.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet23.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -372,17 +372,17 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 [1; 2; 3; 2; 4; 6; 3; 6; 9]
 ```
 
-Можно также использовать [List.filter](https://msdn.microsoft.com/library/11a8c926-547b-44dd-bbae-98d44f3dd248), который принимает логическое условие и создает новый список, содержащий только элементы, которые удовлетворяют заданному условию.
+Можно также использовать [List. Filter](https://msdn.microsoft.com/library/11a8c926-547b-44dd-bbae-98d44f3dd248), который принимает логическое условие и создает новый список, состоящий только из элементов, которые соответствуют заданному условию.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet24.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet24.fs)]
 
 Результатом является список `[2; 4; 6]`.
 
-Сочетание сопоставление и фильтрацию [List.choose](https://msdn.microsoft.com/library/2e21d3fb-ce35-4824-8a57-c4404616093d) позволяет трансформировать и выбирать элементы одновременно. `List.choose` Применяет функцию, возвращающую параметр к каждому элементу списка и возвращает новый список результатов для элементов, при возврате функции значение параметра `Some`.
+Сочетание Map и Filter, [List. Choose](https://msdn.microsoft.com/library/2e21d3fb-ce35-4824-8a57-c4404616093d) позволяет одновременно преобразовывать и выбирать элементы. `List.choose`применяет функцию, возвращающую параметр для каждого элемента списка, и возвращает новый список результатов для элементов, когда функция возвращает значение `Some`параметра.
 
 В следующем коде показано использование функции `List.choose` для выбора из списка слов с заглавными буквами.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet25.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet25.fs)]
 
 Выходные данные выглядят следующим образом:
 
@@ -392,55 +392,55 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 ### <a name="operating-on-multiple-lists"></a>Операции с несколькими списками
 
-Списки могут быть объединены. Чтобы объединить два списка в один, используйте [List.append](https://msdn.microsoft.com/library/2954da80-3f4a-4a4b-9371-794645c03426). Чтобы объединить больше двух списков, используется [List.concat](https://msdn.microsoft.com/library/c5afd433-8764-4ea8-a6a8-937fb4d77c4c).
+Списки могут быть объединены. Чтобы объединить два списка в один, используйте [List. append](https://msdn.microsoft.com/library/2954da80-3f4a-4a4b-9371-794645c03426). Для объединения более двух списков используйте [List. Concat](https://msdn.microsoft.com/library/c5afd433-8764-4ea8-a6a8-937fb4d77c4c).
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet26.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet26.fs)]
 
 ### <a name="fold-and-scan-operations"></a>Операции сворачивания и сканирования
 
-Некоторые операции со списками включают взаимозависимости между всеми элементами списка. Операции свертывания и сканирования похожи на `List.iter` и `List.map` , вызвать функцию для каждого элемента, но включают дополнительный параметр, называемый *агрегатное* содержит результат вычисление.
+Некоторые операции со списками включают взаимозависимости между всеми элементами списка. Операции свертывания и сканирования подобны `List.iter` и `List.map` в том, что вы вызываете функцию для каждого элемента, но эти операции предоставляют дополнительный параметр, называемый *накопительным* , который передает информацию через вычисления.
 
 `List.fold` можно использовать для выполнения расчетов со списком.
 
-В следующем примере кода демонстрируется использование [List.fold](https://msdn.microsoft.com/library/c272779e-bae7-4983-8d7f-16b345bb33a0) для выполнения различных операций.
+В следующем примере кода показано использование [List. fold](https://msdn.microsoft.com/library/c272779e-bae7-4983-8d7f-16b345bb33a0) для выполнения различных операций.
 
 Лист обходится. Аккумулятор `acc` — это значение, которое передается дальше, пока продолжается расчет. Первый аргумент забирает аккумулятор и элемент списка и возвращает промежуточный результат расчета для этого элемента списка. Второй аргумент является исходным значением аккумулятора.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet27.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet27.fs)]
 
-Версии этих функций с цифрой в имени функции работают с несколькими списками. Например [List.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343) выполняет вычисления с двумя списками.
+Версии этих функций с цифрой в имени функции работают с несколькими списками. Например, [List. fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343) выполняет вычисления в двух списках.
 
 В следующем примере показано использование функции `List.fold2`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet28.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet28.fs)]
 
-`List.fold` и [List.scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8) отличается тем, что `List.fold` Возвращает конечное значение дополнительного параметра, но `List.scan` возвращает список промежуточных значений (вместе с конечным значением) дополнительного параметра.
+`List.fold`и [List. Scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8) различаются в, `List.fold` возвращающие окончательное значение дополнительного параметра, но `List.scan` возвращает список промежуточных значений (вместе с окончательным значением) дополнительного параметра.
 
-Каждая из этих функций включает обратную вариацию, например [List.foldBack](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7), который отличается в порядке, в которой обхода списка и порядка аргументов. Кроме того `List.fold` и `List.foldBack` отличаются друг от друга, [List.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343) и [List.foldBack2](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2), которые берут два списка одинаковой длины. Функция, которая выполняется по каждому элементу, может использовать соответствующие элементы обоих списков для выполнения некоторых действий. Типы элементов этих списков могут отличаться, как в следующем примере, где один список содержит суммы транзакций на банковском счете, а другой — типы транзакций (внесение или снятие).
+Каждая из этих функций включает обратную вариацию, например [List. foldBack](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7), которая отличается в порядке обхода списка и порядком аргументов. Кроме того `List.fold` , `List.foldBack` и имеют варианты [List. fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343) и [List. foldBack2](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2), которые принимают два списка одинаковой длины. Функция, которая выполняется по каждому элементу, может использовать соответствующие элементы обоих списков для выполнения некоторых действий. Типы элементов этих списков могут отличаться, как в следующем примере, где один список содержит суммы транзакций на банковском счете, а другой — типы транзакций (внесение или снятие).
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet29.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet29.fs)]
 
 При расчете суммы функции `List.fold` и `List.foldBack` действуют одинаково, так как результат не зависит от порядка обхода. В следующем примере кода функция `List.foldBack` используется для добавления элемента в список.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet30.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet30.fs)]
 
 В следующем примере снова используется банковский счет. В этот раз добавляется новый тип транзакций: расчет процентов. Конечный баланс теперь зависит от порядка транзакций.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet34.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet34.fs)]
 
-Функция [List.reduce](https://msdn.microsoft.com/library/048e1f95-691b-49cb-bb99-fb85f68f3d8b) – это примерно то `List.fold` и `List.scan`, за исключением того, что вместо передачи отдельного аккумулятора `List.reduce` принимает функцию, которая принимает два аргумента типа элемента вместо одну и один из этих аргументов играет роль аккумулятора, это означает, что он хранит промежуточный результат вычисления. `List.reduce` начинает работу на первых двух элементов списка с, а затем использует результат операции вместе со следующим элементом. Так как здесь нет отдельного аккумулятора с собственным типом, функция `List.reduce` может использоваться вместо `List.fold` только в том случае, если аккумулятор и элемент имеют одинаковые типы. В следующем коде показано использование функции `List.reduce`. `List.reduce` создает исключение, если предоставленный список не содержит элементов.
+Список функций [. reduce](https://msdn.microsoft.com/library/048e1f95-691b-49cb-bb99-fb85f68f3d8b) в некоторой степени `List.fold` аналогичен `List.scan`и, за исключением того, что вместо `List.reduce` передачи отдельного агрегата функция принимает функцию, которая принимает два аргумента типа элемента, а не только один, и один из них аргументы действуют как совокупность, что означает сохранение промежуточного результата вычисления. `List.reduce`начинается с работы на первых двух элементах списка, а затем использует результат операции вместе со следующим элементом. Так как здесь нет отдельного аккумулятора с собственным типом, функция `List.reduce` может использоваться вместо `List.fold` только в том случае, если аккумулятор и элемент имеют одинаковые типы. В следующем коде показано использование функции `List.reduce`. `List.reduce`создает исключение, если предоставленный список не содержит элементов.
 
 В следующем коде первый вызов лямбда-выражения дает аргументы 2 и 4 и возвращает 6. В следующем вызове даются аргументы 6 и 10 и возвращается результат 16.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet33.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet33.fs)]
 
 ### <a name="converting-between-lists-and-other-collection-types"></a>Конвертация списков и другие типы коллекций
 
-Модуль `List` предоставляет функции для прямой и обратной конвертации обоих последовательностей и массивов. Для преобразования, или из последовательности, используйте [List.toSeq](https://msdn.microsoft.com/library/7024be4b-ee70-43cc-8d0a-e6564a4ff7c0) или [List.ofSeq](https://msdn.microsoft.com/library/74ab9289-4a59-4433-92eb-3f662d7f7db0). Для преобразования из массива или используйте [List.toArray](https://msdn.microsoft.com/library/ac87dd82-a0cd-40b3-b1fa-dd3168134547) или [List.ofArray](https://msdn.microsoft.com/library/f4bddc26-8c8f-4307-a6d7-a49dceb97032).
+Модуль `List` предоставляет функции для прямой и обратной конвертации обоих последовательностей и массивов. Для преобразования в последовательность или из последовательности используйте [List. toSeq](https://msdn.microsoft.com/library/7024be4b-ee70-43cc-8d0a-e6564a4ff7c0) или [List. ofSeq](https://msdn.microsoft.com/library/74ab9289-4a59-4433-92eb-3f662d7f7db0). Для преобразования в массив или из массива используйте [List. ToArray](https://msdn.microsoft.com/library/ac87dd82-a0cd-40b3-b1fa-dd3168134547) или [List. офаррай](https://msdn.microsoft.com/library/f4bddc26-8c8f-4307-a6d7-a49dceb97032).
 
 ### <a name="additional-operations"></a>Дополнительные операции
 
-Сведения о дополнительных операциях со списками, см. в разделе в библиотеке справочных материалов [модуль Collections.List](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.list-module-%5bfsharp%5d).
+Дополнительные сведения о дополнительных операциях со списками см. в разделе Справочник по библиотеке [Collections. List](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.list-module-%5bfsharp%5d).
 
 ## <a name="see-also"></a>См. также
 

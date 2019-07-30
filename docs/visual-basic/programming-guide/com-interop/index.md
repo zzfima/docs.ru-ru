@@ -5,25 +5,25 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1bcfba25c86c46f986c061241a5d09f9aaa6d248
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022419"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627084"
 ---
 # <a name="com-interop-visual-basic"></a>COM-взаимодействие (Visual Basic)
-Объектная модель компонентов (модель COM) позволяет объекту предоставлять свою функциональность другим компонентам и ведущим приложениям. COM-объекты входят в состав большей части современного программного обеспечения. Хотя сборки .NET являются наилучшим решением для новых приложений, в некоторых случаях необходимо использование COM-объектов. В этом разделе рассматриваются некоторые вопросы, связанные с созданием и использованием COM-объектов с помощью Visual Basic.  
+Объектная модель компонентов (модель COM) позволяет объекту предоставлять свою функциональность другим компонентам и ведущим приложениям. COM-объекты входят в состав большей части современного программного обеспечения. Хотя сборки .NET являются наилучшим решением для новых приложений, в некоторых случаях необходимо использование COM-объектов. В этом разделе рассматриваются некоторые проблемы, связанные с созданием и использованием COM-объектов с Visual Basic.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Знакомство с COM-взаимодействием](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  Общие сведения о COM-взаимодействии.  
   
- [Практическое руководство. Ссылаться на COM-объекты из Visual Basic](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
+ [Практическое руководство. Ссылки на COM-объекты из Visual Basic](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
  Описывает, как добавлять ссылки на COM-объекты, имеющие библиотеки типов.  
   
  [Практическое руководство. Работа с элементами управления ActiveX](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- В этой статье демонстрируется использование элементов управления ActiveX, чтобы добавить компоненты к панели элементов Visual Studio.  
+ Демонстрирует использование существующих элементов управления ActiveX для добавления компонентов в панель элементов Visual Studio.  
   
  [Пошаговое руководство: Вызов API Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Пошаговое описание процесса вызова API-интерфейсов, входящих в операционную систему Windows.  
@@ -34,7 +34,7 @@ ms.locfileid: "62022419"
  [Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  Демонстрация вызова функции Windows, которая имеет параметр с типом без знака.  
   
- [Пошаговое руководство: Создание объектов COM с помощью Visual Basic](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
+ [Пошаговое руководство: Создание COM-объектов с помощью Visual Basic](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
  Пошаговое описание создания COM-объектов с использованием шаблона класса COM и без него.  
   
  [Устранение неполадок взаимодействия](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
@@ -56,5 +56,5 @@ ms.locfileid: "62022419"
  [Предоставление компонентов .NET Framework клиентам COM](../../../framework/interop/exposing-dotnet-components-to-com.md)  
  Описание подготовки и использования управляемых типов из COM.  
   
- [Применение атрибутов взаимодействия](../../../framework/interop/applying-interop-attributes.md)  
+ [Применение атрибутов взаимодействия](../../../standard/native-interop/apply-interop-attributes.md)  
  Описание атрибутов, которые можно использовать при работе с неуправляемым кодом.
