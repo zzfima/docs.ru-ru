@@ -2,313 +2,316 @@
 title: Поиск текста в документах Word (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
-ms.openlocfilehash: 30ba39e58566e2f6c4396708fb2ec279d9b8b3bb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f05df74f09373af140766f601cfae26404ada1b8
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618874"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630910"
 ---
-# <a name="finding-text-in-word-documents-visual-basic"></a><span data-ttu-id="a935f-102">Поиск текста в документах Word (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a935f-102">Finding Text in Word Documents (Visual Basic)</span></span>
-<span data-ttu-id="a935f-103">В этом разделе производится расширение предыдущих запросов, которое позволит выполнить некоторые полезные действия: найти все повторения определенной строки в документе.</span><span class="sxs-lookup"><span data-stu-id="a935f-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="a935f-104">Пример</span><span class="sxs-lookup"><span data-stu-id="a935f-104">Example</span></span>  
- <span data-ttu-id="a935f-105">В этом примере выполняется обработка документа WordprocessingML, чтобы найти все вхождения определенного фрагмента текста в документе.</span><span class="sxs-lookup"><span data-stu-id="a935f-105">This example processes a WordprocessingML document, to find all the occurrences of a specific piece of text in the document.</span></span> <span data-ttu-id="a935f-106">Чтобы сделать это, для примера используем запрос, по которому найдем строку «Здравствуйте».</span><span class="sxs-lookup"><span data-stu-id="a935f-106">To do this, we use a query that finds the string "Hello".</span></span> <span data-ttu-id="a935f-107">Этот пример основан на предыдущих примерах данного учебника.</span><span class="sxs-lookup"><span data-stu-id="a935f-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="a935f-108">Новый запрос выявляется в комментариях в нижеприведенном коде.</span><span class="sxs-lookup"><span data-stu-id="a935f-108">The new query is called out in comments in the code below.</span></span>  
-  
- <span data-ttu-id="a935f-109">Инструкции по созданию исходного документа в этом примере, см. в разделе [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="a935f-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
-  
- <span data-ttu-id="a935f-110">В этом примере используются классы, находящиеся в сборке WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="a935f-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="a935f-111">Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="a935f-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
-  
-```vb  
-Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
-  
-Module Module1  
-    <System.Runtime.CompilerServices.Extension()> _  
-    Public Function StringConcatenate(ByVal source As IEnumerable(Of String)) As String  
-        Dim sb As StringBuilder = New StringBuilder()  
-        For Each s As String In source  
-            sb.Append(s)  
-        Next  
-        Return sb.ToString()  
-    End Function  
-  
-    <System.Runtime.CompilerServices.Extension()> _  
-    Public Function StringConcatenate(Of T)(ByVal source As IEnumerable(Of T), _  
-    ByVal func As Func(Of T, String)) As String  
-        Dim sb As StringBuilder = New StringBuilder()  
-        For Each item As T In source  
-            sb.Append(func(item))  
-        Next  
-        Return sb.ToString()  
-    End Function  
-  
-    <System.Runtime.CompilerServices.Extension()> _  
-    Public Function StringConcatenate(Of T)(ByVal source As IEnumerable(Of T), _  
-    ByVal separator As String) As String  
-        Dim sb As StringBuilder = New StringBuilder()  
-        For Each s As T In source  
-            sb.Append(s).Append(separator)  
-        Next  
-        Return sb.ToString()  
-    End Function  
-  
-    <System.Runtime.CompilerServices.Extension()> _  
-    Public Function StringConcatenate(Of T)(ByVal source As IEnumerable(Of T), _  
-    ByVal func As Func(Of T, String), ByVal separator As String) As String  
-        Dim sb As StringBuilder = New StringBuilder()  
-        For Each item As T In source  
-            sb.Append(func(item)).Append(separator)  
-        Next  
-        Return sb.ToString()  
-    End Function  
-  
-    Public Function ParagraphText(ByVal e As XElement) As String  
-        Dim w As XNamespace = e.Name.Namespace  
-        Return (e.<w:r>.<w:t>).StringConcatenate(Function(element) CStr(element))  
-    End Function  
-  
-    ' Following function is required because VB does not support short circuit evaluation  
-    Private Function GetStyleOfParagraph(ByVal styleNode As XElement, ByVal defaultStyle As String) As String  
-        If (styleNode Is Nothing) Then  
-            Return defaultStyle  
-        Else  
-            Return styleNode.@w:val  
-        End If  
-    End Function  
-  
-    Sub Main()  
-        Dim fileName = "SampleDoc.docx"  
-  
-        Dim documentRelationshipType = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument"  
-        Dim stylesRelationshipType = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles"  
-        Dim wordmlNamespace = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"  
-        Dim xDoc As XDocument = Nothing  
-        Dim styleDoc As XDocument = Nothing  
-  
-        Using wdPackage As Package = Package.Open(fileName, FileMode.Open, FileAccess.Read)  
-            Dim docPackageRelationship As PackageRelationship = wdPackage.GetRelationshipsByType(documentRelationshipType).FirstOrDefault()  
-            If (docPackageRelationship IsNot Nothing) Then  
-                Dim documentUri As Uri = PackUriHelper.ResolvePartUri(New Uri("/", UriKind.Relative), docPackageRelationship.TargetUri)  
-                Dim documentPart As PackagePart = wdPackage.GetPart(documentUri)  
-  
-                '  Load the document XML in the part into an XDocument instance.  
-                xDoc = XDocument.Load(XmlReader.Create(documentPart.GetStream()))  
-  
-                '  Find the styles part. There will only be one.  
-                Dim styleRelation As PackageRelationship = documentPart.GetRelationshipsByType(stylesRelationshipType).FirstOrDefault()  
-                If (styleRelation IsNot Nothing) Then  
-                    Dim styleUri As Uri = PackUriHelper.ResolvePartUri(documentUri, styleRelation.TargetUri)  
-                    Dim stylePart As PackagePart = wdPackage.GetPart(styleUri)  
-  
-                    '  Load the style XML in the part into an XDocument instance.  
-                    styleDoc = XDocument.Load(XmlReader.Create(stylePart.GetStream()))  
-                End If  
-            End If  
-        End Using  
-  
-        Dim defaultStyle As String = _  
-            ( _  
-                From style In styleDoc.Root.<w:style> _  
-                Where style.@w:type = "paragraph" And _  
-                      style.@w:default = "1" _  
-                Select style _  
-            ).First().@w:styleId  
-  
-        ' Find all paragraphs in the document.  
-        Dim paragraphs = _  
-            From para In xDoc.Root.<w:body>...<w:p> _  
-        Let styleNode As XElement = para.<w:pPr>.<w:pStyle>.FirstOrDefault _  
-        Select New With { _  
-            .ParagraphNode = para, _  
-            .StyleName = GetStyleOfParagraph(styleNode, defaultStyle) _  
-        }  
-  
-        ' Retrieve the text of each paragraph.  
-        Dim paraWithText = _  
-            From para In paragraphs _  
-            Select New With { _  
-                .ParagraphNode = para.ParagraphNode, _  
-                .StyleName = para.StyleName, _  
-                .Text = ParagraphText(para.ParagraphNode) _  
-            }  
-  
-        ' Following is the new query that retrieves all paragraphs  
-        ' that have specific text in them.  
-        Dim helloParagraphs = _  
-            From para In paraWithText _  
-            Where para.Text.Contains("Hello") _  
-            Select New With _  
-            { _  
-                .ParagraphNode = para.ParagraphNode, _  
-                .StyleName = para.StyleName, _  
-                .Text = para.Text _  
-            }  
-  
-        For Each p In helloParagraphs  
-            Console.WriteLine("StyleName:{0} >{1}<", p.StyleName, p.Text)  
-        Next  
-    End Sub  
-End Module  
-```  
-  
- <span data-ttu-id="a935f-112">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="a935f-112">This example produces the following output:</span></span>  
-  
-```  
-StyleName:Code >        Console.WriteLine("Hello World")<  
-StyleName:Code >Hello World<  
-```  
-  
- <span data-ttu-id="a935f-113">Можно изменить поисковый запрос таким способом, чтобы был выполнен поиск строк по определенному стилю.</span><span class="sxs-lookup"><span data-stu-id="a935f-113">You can, of course, modify the search so that it searches for lines with a specific style.</span></span> <span data-ttu-id="a935f-114">В следующем запросе выполняется поиск всех пустых строк со стилем Code:</span><span class="sxs-lookup"><span data-stu-id="a935f-114">The following query finds all blank lines that have the Code style:</span></span>  
-  
-```vb  
-Imports System.IO.Packaging  
-Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
-  
-Module Module1  
-    <System.Runtime.CompilerServices.Extension()> _  
-    Public Function StringConcatenate(ByVal source As IEnumerable(Of String)) As String  
-        Dim sb As StringBuilder = New StringBuilder()  
-        For Each s As String In source  
-            sb.Append(s)  
-        Next  
-        Return sb.ToString()  
-    End Function  
-  
-    <System.Runtime.CompilerServices.Extension()> _  
-    Public Function StringConcatenate(Of T)(ByVal source As IEnumerable(Of T), _  
-    ByVal func As Func(Of T, String)) As String  
-        Dim sb As StringBuilder = New StringBuilder()  
-        For Each item As T In source  
-            sb.Append(func(item))  
-        Next  
-        Return sb.ToString()  
-    End Function  
-  
-    <System.Runtime.CompilerServices.Extension()> _  
-    Public Function StringConcatenate(Of T)(ByVal source As IEnumerable(Of T), _  
-    ByVal separator As String) As String  
-        Dim sb As StringBuilder = New StringBuilder()  
-        For Each s As T In source  
-            sb.Append(s).Append(separator)  
-        Next  
-        Return sb.ToString()  
-    End Function  
-  
-    <System.Runtime.CompilerServices.Extension()> _  
-    Public Function StringConcatenate(Of T)(ByVal source As IEnumerable(Of T), _  
-    ByVal func As Func(Of T, String), ByVal separator As String) As String  
-        Dim sb As StringBuilder = New StringBuilder()  
-        For Each item As T In source  
-            sb.Append(func(item)).Append(separator)  
-        Next  
-        Return sb.ToString()  
-    End Function  
-  
-    Public Function ParagraphText(ByVal e As XElement) As String  
-        Dim w As XNamespace = e.Name.Namespace  
-        Return (e.<w:r>.<w:t>).StringConcatenate(Function(element) CStr(element))  
-    End Function  
-  
-    ' Following function is required because VB does not support short circuit evaluation  
-    Private Function GetStyleOfParagraph(ByVal styleNode As XElement, ByVal defaultStyle As String) As String  
-        If (styleNode Is Nothing) Then  
-            Return defaultStyle  
-        Else  
-            Return styleNode.@w:val  
-        End If  
-    End Function  
-  
-    Sub Main()  
-        Dim fileName = "SampleDoc.docx"  
-  
-        Dim documentRelationshipType = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument"  
-        Dim stylesRelationshipType = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles"  
-        Dim wordmlNamespace = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"  
-        Dim xDoc As XDocument = Nothing  
-        Dim styleDoc As XDocument = Nothing  
-  
-        Using wdPackage As Package = Package.Open(fileName, FileMode.Open, FileAccess.Read)  
-            Dim docPackageRelationship As PackageRelationship = wdPackage.GetRelationshipsByType(documentRelationshipType).FirstOrDefault()  
-            If (docPackageRelationship IsNot Nothing) Then  
-                Dim documentUri As Uri = PackUriHelper.ResolvePartUri(New Uri("/", UriKind.Relative), docPackageRelationship.TargetUri)  
-                Dim documentPart As PackagePart = wdPackage.GetPart(documentUri)  
-  
-                '  Load the document XML in the part into an XDocument instance.  
-                xDoc = XDocument.Load(XmlReader.Create(documentPart.GetStream()))  
-  
-                '  Find the styles part. There will only be one.  
-                Dim styleRelation As PackageRelationship = documentPart.GetRelationshipsByType(stylesRelationshipType).FirstOrDefault()  
-                If (styleRelation IsNot Nothing) Then  
-                    Dim styleUri As Uri = PackUriHelper.ResolvePartUri(documentUri, styleRelation.TargetUri)  
-                    Dim stylePart As PackagePart = wdPackage.GetPart(styleUri)  
-  
-                    '  Load the style XML in the part into an XDocument instance.  
-                    styleDoc = XDocument.Load(XmlReader.Create(stylePart.GetStream()))  
-                End If  
-            End If  
-        End Using  
-  
-        Dim defaultStyle As String = _  
-            ( _  
-                From style In styleDoc.Root.<w:style> _  
-                Where style.@w:type = "paragraph" And _  
-                      style.@w:default = "1" _  
-                Select style _  
-            ).First().@w:styleId  
-  
-        ' Find all paragraphs in the document.  
-        Dim paragraphs = _  
-            From para In xDoc.Root.<w:body>...<w:p> _  
-        Let styleNode As XElement = para.<w:pPr>.<w:pStyle>.FirstOrDefault _  
-        Select New With { _  
-            .ParagraphNode = para, _  
-            .StyleName = GetStyleOfParagraph(styleNode, defaultStyle) _  
-        }  
-  
-        ' Retrieve the text of each paragraph.  
-        Dim paraWithText = _  
-            From para In paragraphs _  
-            Select New With { _  
-                .ParagraphNode = para.ParagraphNode, _  
-                .StyleName = para.StyleName, _  
-                .Text = ParagraphText(para.ParagraphNode) _  
-            }  
-  
-        ' Retrieve all paragraphs that have no text and are styled Code.  
-        Dim blankCodeParagraphs = _  
-            From para In paraWithText _  
-            Where String.IsNullOrEmpty(para.Text) And para.StyleName.Equals("Code") _  
-            Select New With _  
-            { _  
-                .ParagraphNode = para.ParagraphNode, _  
-                .StyleName = para.StyleName, _  
-                .Text = para.Text _  
-            }  
-  
-        For Each p In blankCodeParagraphs  
-            Console.WriteLine("StyleName:{0} >{1}<", p.StyleName, p.Text)  
-        Next  
-    End Sub  
-End Module  
-```  
-  
- <span data-ttu-id="a935f-115">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="a935f-115">This example produces the following output:</span></span>  
-  
-```  
-StyleName:Code ><  
-```  
-  
- <span data-ttu-id="a935f-116">Это пример можно улучшить несколькими способами.</span><span class="sxs-lookup"><span data-stu-id="a935f-116">Of course, this example could be enhanced in a number of ways.</span></span> <span data-ttu-id="a935f-117">Например, чтобы выполнить поиск по тексту, можно использовать регулярные выражения, можно последовательно пройти по всем файлам Word в определенном каталоге и т. п.</span><span class="sxs-lookup"><span data-stu-id="a935f-117">For example, we could use regular expressions to search for text, we could iterate through all the Word files in a particular directory, and so on.</span></span>  
-  
- <span data-ttu-id="a935f-118">Обратите внимание, что этот пример работает почти так же хорошо, как если бы составлялся только один запрос.</span><span class="sxs-lookup"><span data-stu-id="a935f-118">Note that this example performs approximately as well as if it were written as a single query.</span></span> <span data-ttu-id="a935f-119">Поскольку каждый запрос выполняется отложенным неспешным образом, не происходит выдачи результатов каждого запроса до тех пор, пока не будет закончен поиск по всему заданному пространству.</span><span class="sxs-lookup"><span data-stu-id="a935f-119">Because each query is implemented in a lazy, deferred fashion, each query does not yield its results until the query is iterated.</span></span> <span data-ttu-id="a935f-120">Дополнительные сведения о выполнение и отложенное вычисление, см. в разделе [отложенное выполнение и отложенное вычисление в LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="a935f-120">For more information about execution and lazy evaluation, see [Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span></span>  
-  
-## <a name="next-steps"></a><span data-ttu-id="a935f-121">Следующие шаги</span><span class="sxs-lookup"><span data-stu-id="a935f-121">Next Steps</span></span>  
- <span data-ttu-id="a935f-122">В следующем разделе приводятся дополнительные сведения о документах WordprocessingML:</span><span class="sxs-lookup"><span data-stu-id="a935f-122">The next section provides more information about WordprocessingML documents:</span></span>  
-  
-- [<span data-ttu-id="a935f-123">Сведения о Office Open XML-документов WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a935f-123">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
-  
-## <a name="see-also"></a><span data-ttu-id="a935f-124">См. также</span><span class="sxs-lookup"><span data-stu-id="a935f-124">See also</span></span>
+# <a name="finding-text-in-word-documents-visual-basic"></a><span data-ttu-id="c5f22-102">Поиск текста в документах Word (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c5f22-102">Finding Text in Word Documents (Visual Basic)</span></span>
 
-- [<span data-ttu-id="a935f-125">Учебник. Управление содержимым в документе WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a935f-125">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [<span data-ttu-id="a935f-126">Рефакторинг с использованием чистых функций (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a935f-126">Refactoring Using a Pure Function (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
-- [<span data-ttu-id="a935f-127">Отложенное выполнение и отложенное вычисление в LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a935f-127">Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+<span data-ttu-id="c5f22-103">В этом разделе производится расширение предыдущих запросов, которое позволит выполнить некоторые полезные действия: найти все повторения определенной строки в документе.</span><span class="sxs-lookup"><span data-stu-id="c5f22-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>
+
+## <a name="example"></a><span data-ttu-id="c5f22-104">Пример</span><span class="sxs-lookup"><span data-stu-id="c5f22-104">Example</span></span>
+
+<span data-ttu-id="c5f22-105">В этом примере выполняется обработка документа WordprocessingML, чтобы найти все вхождения определенного фрагмента текста в документе.</span><span class="sxs-lookup"><span data-stu-id="c5f22-105">This example processes a WordprocessingML document, to find all the occurrences of a specific piece of text in the document.</span></span> <span data-ttu-id="c5f22-106">Чтобы сделать это, для примера используем запрос, по которому найдем строку «Здравствуйте».</span><span class="sxs-lookup"><span data-stu-id="c5f22-106">To do this, we use a query that finds the string "Hello".</span></span> <span data-ttu-id="c5f22-107">Этот пример основан на предыдущих примерах данного учебника.</span><span class="sxs-lookup"><span data-stu-id="c5f22-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="c5f22-108">Новый запрос выявляется в комментариях в нижеприведенном коде.</span><span class="sxs-lookup"><span data-stu-id="c5f22-108">The new query is called out in comments in the code below.</span></span>
+
+<span data-ttu-id="c5f22-109">Инструкции по созданию исходного документа для этого примера см. в разделе [Создание исходного документа Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="c5f22-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>
+
+<span data-ttu-id="c5f22-110">В этом примере используются классы, находящиеся в сборке WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="c5f22-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="c5f22-111">Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c5f22-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>
+
+```vb
+Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+
+Module Module1
+    <System.Runtime.CompilerServices.Extension()> _
+    Public Function StringConcatenate(ByVal source As IEnumerable(Of String)) As String
+        Dim sb As StringBuilder = New StringBuilder()
+        For Each s As String In source
+            sb.Append(s)
+        Next
+        Return sb.ToString()
+    End Function
+
+    <System.Runtime.CompilerServices.Extension()> _
+    Public Function StringConcatenate(Of T)(ByVal source As IEnumerable(Of T), _
+    ByVal func As Func(Of T, String)) As String
+        Dim sb As StringBuilder = New StringBuilder()
+        For Each item As T In source
+            sb.Append(func(item))
+        Next
+        Return sb.ToString()
+    End Function
+
+    <System.Runtime.CompilerServices.Extension()> _
+    Public Function StringConcatenate(Of T)(ByVal source As IEnumerable(Of T), _
+    ByVal separator As String) As String
+        Dim sb As StringBuilder = New StringBuilder()
+        For Each s As T In source
+            sb.Append(s).Append(separator)
+        Next
+        Return sb.ToString()
+    End Function
+
+    <System.Runtime.CompilerServices.Extension()> _
+    Public Function StringConcatenate(Of T)(ByVal source As IEnumerable(Of T), _
+    ByVal func As Func(Of T, String), ByVal separator As String) As String
+        Dim sb As StringBuilder = New StringBuilder()
+        For Each item As T In source
+            sb.Append(func(item)).Append(separator)
+        Next
+        Return sb.ToString()
+    End Function
+
+    Public Function ParagraphText(ByVal e As XElement) As String
+        Dim w As XNamespace = e.Name.Namespace
+        Return (e.<w:r>.<w:t>).StringConcatenate(Function(element) CStr(element))
+    End Function
+
+    ' Following function is required because VB does not support short circuit evaluation
+    Private Function GetStyleOfParagraph(ByVal styleNode As XElement, ByVal defaultStyle As String) As String
+        If (styleNode Is Nothing) Then
+            Return defaultStyle
+        Else
+            Return styleNode.@w:val
+        End If
+    End Function
+
+    Sub Main()
+        Dim fileName = "SampleDoc.docx"
+
+        Dim documentRelationshipType = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument"
+        Dim stylesRelationshipType = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles"
+        Dim wordmlNamespace = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+        Dim xDoc As XDocument = Nothing
+        Dim styleDoc As XDocument = Nothing
+
+        Using wdPackage As Package = Package.Open(fileName, FileMode.Open, FileAccess.Read)
+            Dim docPackageRelationship As PackageRelationship = wdPackage.GetRelationshipsByType(documentRelationshipType).FirstOrDefault()
+            If (docPackageRelationship IsNot Nothing) Then
+                Dim documentUri As Uri = PackUriHelper.ResolvePartUri(New Uri("/", UriKind.Relative), docPackageRelationship.TargetUri)
+                Dim documentPart As PackagePart = wdPackage.GetPart(documentUri)
+
+                '  Load the document XML in the part into an XDocument instance.
+                xDoc = XDocument.Load(XmlReader.Create(documentPart.GetStream()))
+
+                '  Find the styles part. There will only be one.
+                Dim styleRelation As PackageRelationship = documentPart.GetRelationshipsByType(stylesRelationshipType).FirstOrDefault()
+                If (styleRelation IsNot Nothing) Then
+                    Dim styleUri As Uri = PackUriHelper.ResolvePartUri(documentUri, styleRelation.TargetUri)
+                    Dim stylePart As PackagePart = wdPackage.GetPart(styleUri)
+
+                    '  Load the style XML in the part into an XDocument instance.
+                    styleDoc = XDocument.Load(XmlReader.Create(stylePart.GetStream()))
+                End If
+            End If
+        End Using
+
+        Dim defaultStyle As String = _
+            ( _
+                From style In styleDoc.Root.<w:style> _
+                Where style.@w:type = "paragraph" And _
+                      style.@w:default = "1" _
+                Select style _
+            ).First().@w:styleId
+
+        ' Find all paragraphs in the document.
+        Dim paragraphs = _
+            From para In xDoc.Root.<w:body>...<w:p> _
+        Let styleNode As XElement = para.<w:pPr>.<w:pStyle>.FirstOrDefault _
+        Select New With { _
+            .ParagraphNode = para, _
+            .StyleName = GetStyleOfParagraph(styleNode, defaultStyle) _
+        }
+
+        ' Retrieve the text of each paragraph.
+        Dim paraWithText = _
+            From para In paragraphs _
+            Select New With { _
+                .ParagraphNode = para.ParagraphNode, _
+                .StyleName = para.StyleName, _
+                .Text = ParagraphText(para.ParagraphNode) _
+            }
+
+        ' Following is the new query that retrieves all paragraphs
+        ' that have specific text in them.
+        Dim helloParagraphs = _
+            From para In paraWithText _
+            Where para.Text.Contains("Hello") _
+            Select New With _
+            { _
+                .ParagraphNode = para.ParagraphNode, _
+                .StyleName = para.StyleName, _
+                .Text = para.Text _
+            }
+
+        For Each p In helloParagraphs
+            Console.WriteLine("StyleName:{0} >{1}<", p.StyleName, p.Text)
+        Next
+    End Sub
+End Module
+```
+
+<span data-ttu-id="c5f22-112">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="c5f22-112">This example produces the following output:</span></span>
+
+```
+StyleName:Code >        Console.WriteLine("Hello World")<
+StyleName:Code >Hello World<
+```
+
+<span data-ttu-id="c5f22-113">Можно изменить поисковый запрос таким способом, чтобы был выполнен поиск строк по определенному стилю.</span><span class="sxs-lookup"><span data-stu-id="c5f22-113">You can, of course, modify the search so that it searches for lines with a specific style.</span></span> <span data-ttu-id="c5f22-114">В следующем запросе выполняется поиск всех пустых строк со стилем Code:</span><span class="sxs-lookup"><span data-stu-id="c5f22-114">The following query finds all blank lines that have the Code style:</span></span>
+
+```vb
+Imports System.IO.Packaging
+Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+
+Module Module1
+    <System.Runtime.CompilerServices.Extension()> _
+    Public Function StringConcatenate(ByVal source As IEnumerable(Of String)) As String
+        Dim sb As StringBuilder = New StringBuilder()
+        For Each s As String In source
+            sb.Append(s)
+        Next
+        Return sb.ToString()
+    End Function
+
+    <System.Runtime.CompilerServices.Extension()> _
+    Public Function StringConcatenate(Of T)(ByVal source As IEnumerable(Of T), _
+    ByVal func As Func(Of T, String)) As String
+        Dim sb As StringBuilder = New StringBuilder()
+        For Each item As T In source
+            sb.Append(func(item))
+        Next
+        Return sb.ToString()
+    End Function
+
+    <System.Runtime.CompilerServices.Extension()> _
+    Public Function StringConcatenate(Of T)(ByVal source As IEnumerable(Of T), _
+    ByVal separator As String) As String
+        Dim sb As StringBuilder = New StringBuilder()
+        For Each s As T In source
+            sb.Append(s).Append(separator)
+        Next
+        Return sb.ToString()
+    End Function
+
+    <System.Runtime.CompilerServices.Extension()> _
+    Public Function StringConcatenate(Of T)(ByVal source As IEnumerable(Of T), _
+    ByVal func As Func(Of T, String), ByVal separator As String) As String
+        Dim sb As StringBuilder = New StringBuilder()
+        For Each item As T In source
+            sb.Append(func(item)).Append(separator)
+        Next
+        Return sb.ToString()
+    End Function
+
+    Public Function ParagraphText(ByVal e As XElement) As String
+        Dim w As XNamespace = e.Name.Namespace
+        Return (e.<w:r>.<w:t>).StringConcatenate(Function(element) CStr(element))
+    End Function
+
+    ' Following function is required because VB does not support short circuit evaluation
+    Private Function GetStyleOfParagraph(ByVal styleNode As XElement, ByVal defaultStyle As String) As String
+        If (styleNode Is Nothing) Then
+            Return defaultStyle
+        Else
+            Return styleNode.@w:val
+        End If
+    End Function
+
+    Sub Main()
+        Dim fileName = "SampleDoc.docx"
+
+        Dim documentRelationshipType = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument"
+        Dim stylesRelationshipType = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles"
+        Dim wordmlNamespace = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+        Dim xDoc As XDocument = Nothing
+        Dim styleDoc As XDocument = Nothing
+
+        Using wdPackage As Package = Package.Open(fileName, FileMode.Open, FileAccess.Read)
+            Dim docPackageRelationship As PackageRelationship = wdPackage.GetRelationshipsByType(documentRelationshipType).FirstOrDefault()
+            If (docPackageRelationship IsNot Nothing) Then
+                Dim documentUri As Uri = PackUriHelper.ResolvePartUri(New Uri("/", UriKind.Relative), docPackageRelationship.TargetUri)
+                Dim documentPart As PackagePart = wdPackage.GetPart(documentUri)
+
+                '  Load the document XML in the part into an XDocument instance.
+                xDoc = XDocument.Load(XmlReader.Create(documentPart.GetStream()))
+
+                '  Find the styles part. There will only be one.
+                Dim styleRelation As PackageRelationship = documentPart.GetRelationshipsByType(stylesRelationshipType).FirstOrDefault()
+                If (styleRelation IsNot Nothing) Then
+                    Dim styleUri As Uri = PackUriHelper.ResolvePartUri(documentUri, styleRelation.TargetUri)
+                    Dim stylePart As PackagePart = wdPackage.GetPart(styleUri)
+
+                    '  Load the style XML in the part into an XDocument instance.
+                    styleDoc = XDocument.Load(XmlReader.Create(stylePart.GetStream()))
+                End If
+            End If
+        End Using
+
+        Dim defaultStyle As String = _
+            ( _
+                From style In styleDoc.Root.<w:style> _
+                Where style.@w:type = "paragraph" And _
+                      style.@w:default = "1" _
+                Select style _
+            ).First().@w:styleId
+
+        ' Find all paragraphs in the document.
+        Dim paragraphs = _
+            From para In xDoc.Root.<w:body>...<w:p> _
+        Let styleNode As XElement = para.<w:pPr>.<w:pStyle>.FirstOrDefault _
+        Select New With { _
+            .ParagraphNode = para, _
+            .StyleName = GetStyleOfParagraph(styleNode, defaultStyle) _
+        }
+
+        ' Retrieve the text of each paragraph.
+        Dim paraWithText = _
+            From para In paragraphs _
+            Select New With { _
+                .ParagraphNode = para.ParagraphNode, _
+                .StyleName = para.StyleName, _
+                .Text = ParagraphText(para.ParagraphNode) _
+            }
+
+        ' Retrieve all paragraphs that have no text and are styled Code.
+        Dim blankCodeParagraphs = _
+            From para In paraWithText _
+            Where String.IsNullOrEmpty(para.Text) And para.StyleName.Equals("Code") _
+            Select New With _
+            { _
+                .ParagraphNode = para.ParagraphNode, _
+                .StyleName = para.StyleName, _
+                .Text = para.Text _
+            }
+
+        For Each p In blankCodeParagraphs
+            Console.WriteLine("StyleName:{0} >{1}<", p.StyleName, p.Text)
+        Next
+    End Sub
+End Module
+```
+
+<span data-ttu-id="c5f22-115">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="c5f22-115">This example produces the following output:</span></span>
+
+```
+StyleName:Code ><
+```
+
+<span data-ttu-id="c5f22-116">Это пример можно улучшить несколькими способами.</span><span class="sxs-lookup"><span data-stu-id="c5f22-116">Of course, this example could be enhanced in a number of ways.</span></span> <span data-ttu-id="c5f22-117">Например, чтобы выполнить поиск по тексту, можно использовать регулярные выражения, можно последовательно пройти по всем файлам Word в определенном каталоге и т. п.</span><span class="sxs-lookup"><span data-stu-id="c5f22-117">For example, we could use regular expressions to search for text, we could iterate through all the Word files in a particular directory, and so on.</span></span>
+
+<span data-ttu-id="c5f22-118">Обратите внимание, что этот пример работает почти так же хорошо, как если бы составлялся только один запрос.</span><span class="sxs-lookup"><span data-stu-id="c5f22-118">Note that this example performs approximately as well as if it were written as a single query.</span></span> <span data-ttu-id="c5f22-119">Поскольку каждый запрос выполняется отложенным неспешным образом, не происходит выдачи результатов каждого запроса до тех пор, пока не будет закончен поиск по всему заданному пространству.</span><span class="sxs-lookup"><span data-stu-id="c5f22-119">Because each query is implemented in a lazy, deferred fashion, each query does not yield its results until the query is iterated.</span></span> <span data-ttu-id="c5f22-120">Дополнительные сведения о выполнении и отложенном вычислении см. [в разделе Отложенное выполнение и отложенное вычисление в LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="c5f22-120">For more information about execution and lazy evaluation, see [Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span></span>
+
+## <a name="next-steps"></a><span data-ttu-id="c5f22-121">Следующие шаги</span><span class="sxs-lookup"><span data-stu-id="c5f22-121">Next Steps</span></span>
+
+<span data-ttu-id="c5f22-122">В следующем разделе приводятся дополнительные сведения о документах WordprocessingML:</span><span class="sxs-lookup"><span data-stu-id="c5f22-122">The next section provides more information about WordprocessingML documents:</span></span>
+
+- [<span data-ttu-id="c5f22-123">Сведения о документах WordprocessingML в формате Office Open XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c5f22-123">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+
+## <a name="see-also"></a><span data-ttu-id="c5f22-124">См. также</span><span class="sxs-lookup"><span data-stu-id="c5f22-124">See also</span></span>
+
+- [<span data-ttu-id="c5f22-125">Учебник. Управление содержимым в документе WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c5f22-125">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [<span data-ttu-id="c5f22-126">Рефакторинг с использованием чистых функций (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c5f22-126">Refactoring Using a Pure Function (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
+- [<span data-ttu-id="c5f22-127">Отложенное выполнение и отложенное вычисление в LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c5f22-127">Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

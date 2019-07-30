@@ -14,46 +14,39 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: 2494eac2f61f112f3ba6321ada7404f8cd618049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6d10982cf199e9285334e0d72e6622275d51b4d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766640"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626194"
 ---
-# <a name="throw-statement-visual-basic"></a><span data-ttu-id="a712a-102">Оператор Throw (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a712a-102">Throw Statement (Visual Basic)</span></span>
-<span data-ttu-id="a712a-103">Возникло исключение в процедуре.</span><span class="sxs-lookup"><span data-stu-id="a712a-103">Throws an exception within a procedure.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="a712a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a712a-104">Syntax</span></span>  
-  
-```  
-Throw [ expression ]  
-```  
-  
-## <a name="part"></a><span data-ttu-id="a712a-105">Отделение</span><span class="sxs-lookup"><span data-stu-id="a712a-105">Part</span></span>  
- `expression`  
- <span data-ttu-id="a712a-106">Сведения об исключении исключение.</span><span class="sxs-lookup"><span data-stu-id="a712a-106">Provides information about the exception to be thrown.</span></span> <span data-ttu-id="a712a-107">Необязательно, если находятся в `Catch` инструкции, в противном случае необходимо.</span><span class="sxs-lookup"><span data-stu-id="a712a-107">Optional when residing in a `Catch` statement, otherwise required.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="a712a-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="a712a-108">Remarks</span></span>  
- <span data-ttu-id="a712a-109">`Throw` Оператор создает исключение, которое можно обработать с помощью структурированный код обработки исключений (`Try`... `Catch`... `Finally`) или неструктурированных код обработки исключений (`On Error GoTo`).</span><span class="sxs-lookup"><span data-stu-id="a712a-109">The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`).</span></span> <span data-ttu-id="a712a-110">Можно использовать `Throw` инструкции для перехвата ошибок в коде, поскольку Visual Basic перемещается вверх по стеку вызовов, пока не найдет соответствующий код обработки исключений.</span><span class="sxs-lookup"><span data-stu-id="a712a-110">You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.</span></span>  
-  
- <span data-ttu-id="a712a-111">Объект `Throw` оператор выражения не может использоваться только в `Catch` инструкции, в котором операторе case повторно вызывает исключение, обрабатываемое в данный момент `Catch` инструкции.</span><span class="sxs-lookup"><span data-stu-id="a712a-111">A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.</span></span>  
-  
- <span data-ttu-id="a712a-112">`Throw` Инструкция сбрасывает стек вызовов для `expression` исключение.</span><span class="sxs-lookup"><span data-stu-id="a712a-112">The `Throw` statement resets the call stack for the `expression` exception.</span></span> <span data-ttu-id="a712a-113">Если `expression` не указан, стек вызовов останется без изменений.</span><span class="sxs-lookup"><span data-stu-id="a712a-113">If `expression` is not provided, the call stack is left unchanged.</span></span> <span data-ttu-id="a712a-114">Можно получить доступ к стек вызовов для исключения через <xref:System.Exception.StackTrace%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="a712a-114">You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="a712a-115">Пример</span><span class="sxs-lookup"><span data-stu-id="a712a-115">Example</span></span>  
- <span data-ttu-id="a712a-116">В следующем коде используется `Throw` инструкции для создания исключения:</span><span class="sxs-lookup"><span data-stu-id="a712a-116">The following code uses the `Throw` statement to throw an exception:</span></span>  
-  
- [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]  
-  
-## <a name="requirements"></a><span data-ttu-id="a712a-117">Требования</span><span class="sxs-lookup"><span data-stu-id="a712a-117">Requirements</span></span>  
- <span data-ttu-id="a712a-118">**Пространство имен:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="a712a-118">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
-  
- <span data-ttu-id="a712a-119">**Модуль:** `Interaction`</span><span class="sxs-lookup"><span data-stu-id="a712a-119">**Module:** `Interaction`</span></span>  
-  
- <span data-ttu-id="a712a-120">**Сборка:** Visual Basic (библиотека времени выполнения, в Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="a712a-120">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="a712a-121">См. также</span><span class="sxs-lookup"><span data-stu-id="a712a-121">See also</span></span>
+# <a name="throw-statement-visual-basic"></a><span data-ttu-id="a6ddd-102">Оператор Throw (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a6ddd-102">Throw Statement (Visual Basic)</span></span>
+<span data-ttu-id="a6ddd-103">Создает исключение в процедуре.</span><span class="sxs-lookup"><span data-stu-id="a6ddd-103">Throws an exception within a procedure.</span></span>
 
-- [<span data-ttu-id="a712a-122">Оператор Try...Catch...Finally</span><span class="sxs-lookup"><span data-stu-id="a712a-122">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [<span data-ttu-id="a712a-123">Оператор On Error</span><span class="sxs-lookup"><span data-stu-id="a712a-123">On Error Statement</span></span>](../../../visual-basic/language-reference/statements/on-error-statement.md)
+## <a name="syntax"></a><span data-ttu-id="a6ddd-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a6ddd-104">Syntax</span></span>
+
+```vb
+Throw [ expression ]
+```
+
+## <a name="part"></a><span data-ttu-id="a6ddd-105">Отделение</span><span class="sxs-lookup"><span data-stu-id="a6ddd-105">Part</span></span>
+ <span data-ttu-id="a6ddd-106">`expression`Предоставляет сведения о вызываемом исключении.</span><span class="sxs-lookup"><span data-stu-id="a6ddd-106">`expression` Provides information about the exception to be thrown.</span></span> <span data-ttu-id="a6ddd-107">Необязательно, если размещен в `Catch` операторе, в противном случае является обязательным.</span><span class="sxs-lookup"><span data-stu-id="a6ddd-107">Optional when residing in a `Catch` statement, otherwise required.</span></span>
+  
+## <a name="remarks"></a><span data-ttu-id="a6ddd-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="a6ddd-108">Remarks</span></span>
+ <span data-ttu-id="a6ddd-109">Оператор создает исключение, которое можно обработать с помощью структурированного кода обработки исключений (`Try`... `Throw` `Catch`... ) или неструктурированный код обработки исключений (`On Error GoTo`). `Finally`</span><span class="sxs-lookup"><span data-stu-id="a6ddd-109">The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`).</span></span> <span data-ttu-id="a6ddd-110">Можно использовать `Throw` инструкцию для перехвата ошибок в коде, так как Visual Basic перемещается вверх по стеку вызовов до тех пор, пока не найдет соответствующий код обработки исключений.</span><span class="sxs-lookup"><span data-stu-id="a6ddd-110">You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.</span></span>
+ 
+ <span data-ttu-id="a6ddd-111">Инструкцию без выражения можно использовать только `Catch` в операторе, в этом случае инструкция повторно создает исключение, которое `Catch` в настоящее время обрабатывается инструкцией. `Throw`</span><span class="sxs-lookup"><span data-stu-id="a6ddd-111">A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.</span></span>
+
+ <span data-ttu-id="a6ddd-112">Инструкция сбрасывает стек вызовов `expression` для исключения. `Throw`</span><span class="sxs-lookup"><span data-stu-id="a6ddd-112">The `Throw` statement resets the call stack for the `expression` exception.</span></span> <span data-ttu-id="a6ddd-113">Если `expression` параметр не указан, стек вызовов остается без изменений.</span><span class="sxs-lookup"><span data-stu-id="a6ddd-113">If `expression` is not provided, the call stack is left unchanged.</span></span> <span data-ttu-id="a6ddd-114">Доступ к стеку вызовов для исключения можно получить с помощью <xref:System.Exception.StackTrace%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="a6ddd-114">You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.</span></span>
+
+## <a name="example"></a><span data-ttu-id="a6ddd-115">Пример</span><span class="sxs-lookup"><span data-stu-id="a6ddd-115">Example</span></span>
+ <span data-ttu-id="a6ddd-116">Следующий код использует `Throw` инструкцию для создания исключения:</span><span class="sxs-lookup"><span data-stu-id="a6ddd-116">The following code uses the `Throw` statement to throw an exception:</span></span>
+ 
+ [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
+
+  
+## <a name="see-also"></a><span data-ttu-id="a6ddd-117">См. также</span><span class="sxs-lookup"><span data-stu-id="a6ddd-117">See also</span></span>
+
+- [<span data-ttu-id="a6ddd-118">Оператор Try...Catch...Finally</span><span class="sxs-lookup"><span data-stu-id="a6ddd-118">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [<span data-ttu-id="a6ddd-119">Оператор On Error</span><span class="sxs-lookup"><span data-stu-id="a6ddd-119">On Error Statement</span></span>](../../../visual-basic/language-reference/statements/on-error-statement.md)
