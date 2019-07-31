@@ -1,0 +1,15 @@
+- name: Руководство по архитектуре приложений .NET
+  href: index.yml
+- name: Электронные книги
+  expanded: true
+  items:
+    - name: Разработка современных веб-приложений с помощью ASP.NET Core и Microsoft Azure
+      href: modern-web-apps-azure/
+    - name: Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows
+      href: modernize-with-azure-containers/
+    - name: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
+      href: containerized-lifecycle/
+    - name: 'Микрослужбы .NET: Архитектура контейнерных приложений .NET'
+      href: microservices/
+    - name: 'Бессерверные приложения: Архитектура, шаблоны и реализация в Azure'
+      href: serverless/

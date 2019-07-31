@@ -18,19 +18,6 @@
       href: standard/frameworks.md
     - name: Глоссарий по .NET
       href: standard/glossary.md
-    - name: Руководство по архитектуре
-      href: standard/guidance-architecture.md
-      items:
-        - name: Разработка современных веб-приложений с помощью ASP.NET Core и Microsoft Azure
-          href: standard/modern-web-apps-azure-architecture/
-        - name: Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows
-          href: standard/modernize-with-azure-and-containers/
-        - name: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
-          href: standard/containerized-lifecycle-architecture/
-        - name: 'Микрослужбы .NET: Архитектура контейнерных приложений .NET'
-          href: standard/microservices-architecture/
-        - name: 'Бессерверные приложения: Архитектура, шаблоны и реализация в Azure'
-          href: standard/serverless-architecture/
     - name: Руководство по библиотекам с открытым кодом
       href: standard/library-guidance/
     - name: Выбор между .NET Core и .NET Framework для серверных приложений
@@ -113,6 +100,20 @@
           href: standard/native-interop/best-practices.md
         - name: Кодировки и маршалинг
           href: standard/native-interop/charset.md
+        - name: COM-взаимодействие
+          href: standard/native-interop/cominterop.md
+          items:
+            - name: Оболочки COM
+              href: standard/native-interop/com-wrappers.md
+              items:
+                - name: Вызываемая оболочка времени выполнения
+                  href: standard/native-interop/runtime-callable-wrapper.md
+                - name: Вызываемая оболочка COM
+                  href: standard/native-interop/com-callable-wrapper.md
+            - name: Уточнение типов .NET для COM-взаимодействия
+              href: standard/native-interop/qualify-net-types-for-interoperation.md
+        - name: Применение атрибутов взаимодействия
+          href: standard/native-interop/apply-interop-attributes.md
     - name: Коллекции и структуры данных
       href: standard/collections/
     - name: Числовые значения в .NET
@@ -222,6 +223,10 @@
           href: core/tutorials/aspnet-core.md
         - name: Размещение .NET Core из машинного кода
           href: core/tutorials/netcore-hosting.md
+    - name: Взаимодействие на уровне машинного кода
+      items:
+        - name: Предоставление доступа к компонентам .NET Core для COM
+          href: core/native-interop/expose-components-to-com.md
     - name: 'Пакеты, метапакеты и платформы'
       href: core/packages.md
     - name: Общие сведения об изменениях интерфейса командной строки
@@ -1037,6 +1042,24 @@
     - name: Основные понятия программирования
       href: visual-basic/programming-guide/concepts/index.md
       items:
+        - name: Сборки
+          items:
+            - name: Дружественные сборки
+              items:
+                - name: Практическое руководство. Создание неподписанных дружественных сборок
+                  href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md
+                - name: Практическое руководство. Создание подписанных дружественных сборок
+                  href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md
+            - name: Практическое руководство. Создание и использование сборок с помощью командной строки
+              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md
+            - name: 'Практическое руководство. Определение того, является ли файл сборкой'
+              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md
+            - name: Практическое руководство. Загрузка и выгрузка сборок
+              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md
+            - name: Практическое руководство. Совместное использование сборки с другими приложениями
+              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-share-an-assembly-with-other-applications.md
+            - name: Пошаговое руководство. Внедрение типов из управляемых сборок
+              href: visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md
         - name: Асинхронное программирование с использованием ключевых слов Async и Await
           href: visual-basic/programming-guide/concepts/async/index.md
         - name: Атрибуты
@@ -2255,7 +2278,7 @@
               href: visual-basic/language-reference/error-messages/xml-literals-and-xml-properties-are-not-supported-in-embedded-code-in-aspnet.md
             - name: URI-код пространства имен XML <uri> может быть связан только с префиксом xmlns
               href: visual-basic/language-reference/error-messages/xml-namespace-uri-uri-can-be-bound-only-to-xmlns.md
-    - name: Справочники
+    - name: Справочник
       href: visual-basic/reference/index.md
       items:
         - name: Компилятор с интерфейсом командной строки
@@ -2393,5 +2416,7 @@
   href: machine-learning/index.yml
 - name: Руководство по.NET для Apache Spark
   href: spark/index.yml
+- name: Руководство по архитектуре приложений .NET
+  href: architecture/index.yml
 - name: Примеры и учебники
   href: samples-and-tutorials/index.md
