@@ -7,39 +7,42 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 0d04b656492dd934199164920e35bdaaa0663032
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 33b40ddbb0c959332f7d95ffa0f1633b910bcb33
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007088"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672017"
 ---
 # <a name="xaml-in-wpf"></a>XAML в WPF
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] — это язык разметки для декларативной приложения программирования. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] реализован обработчик и обеспечивает поддержку языка XAML. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Типы реализованы таким образом, что они предоставляют требуемый тип, резервирующий представление XAML. Как правило, можно создать большую часть вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] пользовательский Интерфейс приложения в разметке XAML.  
+
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]— Это язык разметки для декларативного программирования приложений. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]реализует реализацию процессора XAML и обеспечивает поддержку языка XAML. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Типы реализуются так, что они могут предоставлять требуемое резервное копирование для представления XAML. Как правило, большинство [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] пользовательских интерфейсов приложения можно создать в разметке XAML.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)  
- [Подробное описание синтаксиса XAML](xaml-syntax-in-detail.md)  
- [Код программной части и XAML в WPF](code-behind-and-xaml-in-wpf.md)  
- [Код XAML и пользовательские классы для WPF](xaml-and-custom-classes-for-wpf.md)  
- [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md)  
- [Пространства имен XAML и сопоставление пространств имен для WPF XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
- [Области видимости имен XAML в WPF](wpf-xaml-namescopes.md)  
- [Встроенные стили и шаблоны](inline-styles-and-templates.md)  
- [Обработки пробелов в XAML](../../xaml-services/whitespace-processing-in-xaml.md)  
- [TypeConverters и XAML](typeconverters-and-xaml.md)  
- [Сущности знаков XML и XAML](../../xaml-services/xml-character-entities-and-xaml.md)  
- [Пространства имен XAML (x:) Возможности языка](../../xaml-services/xaml-namespace-x-language-features.md)  
- [Расширения XAML WPF](wpf-xaml-extensions.md)  
- [Совместимость разметки (mc:) Возможности языка](markup-compatibility-mc-language-features.md)  
+
+[Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)  
+[Подробное описание синтаксиса XAML](xaml-syntax-in-detail.md)  
+[Код программной части и XAML в WPF](code-behind-and-xaml-in-wpf.md)  
+[Код XAML и пользовательские классы для WPF](xaml-and-custom-classes-for-wpf.md)  
+[Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md)  
+[Пространства имен XAML и сопоставление пространств имен для WPF XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
+[Области видимости имен XAML в WPF](wpf-xaml-namescopes.md)  
+[Встроенные стили и шаблоны](inline-styles-and-templates.md)  
+[Обработка пробелов в XAML](../../xaml-services/whitespace-processing-in-xaml.md)  
+[TypeConverters и XAML](typeconverters-and-xaml.md)  
+[Сущности знаков XML и XAML](../../xaml-services/xml-character-entities-and-xaml.md)  
+[Пространство имен XAML (x:) Языковые возможности](../../xaml-services/xaml-namespace-x-language-features.md)  
+[Расширения XAML WPF](wpf-xaml-extensions.md)  
+[Совместимость разметки (MC:) Языковые возможности](markup-compatibility-mc-language-features.md)  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Архитектура WPF](wpf-architecture.md)  
-  [Базовые элементы](base-elements.md)  
-  [Дерево элементов и сериализация](element-tree-and-serialization.md)  
-  [Свойства](properties-wpf.md)  
-  [События](events-wpf.md)  
-  [Ввод](input-wpf.md)  
-  [Ресурсы](resources-wpf.md)  
-  [Стилизация и использование шаблонов](../controls/styling-and-templating.md)  
-  [Потоковая модель](threading-model.md)
+
+[Архитектура WPF](wpf-architecture.md)  
+[Базовые элементы](base-elements.md)  
+[Дерево элементов и сериализация](element-tree-and-serialization.md)  
+[Свойства](properties-wpf.md)  
+[События](events-wpf.md)  
+[Ввод](input-wpf.md)  
+[Ресурсы](resources-wpf.md)  
+[Стилизация и использование шаблонов](../controls/styling-and-templating.md)  
+[Потоковая модель](threading-model.md)

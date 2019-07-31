@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: e2c93f4471db2d72851a5d5bd8806b59a3e5ee28
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a169064052a567694b1cbd1e2f8ac2f00b047a68
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629861"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671838"
 ---
 # <a name="technology-regions-overview"></a>Общие сведения об областях применения технологий
 Если в приложении используются несколько технологий представления, такие как WPF, Win32 или DirectX, то они должны совместно использовать области отрисовки в общем окне верхнего уровня. В этом разделе описываются проблемы, которые могут повлиять на представление и выходные данные приложения взаимодействия с WPF.  
@@ -52,13 +52,13 @@ ms.locfileid: "68629861"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]поддерживает HRGN; Однако для этой функции нет управляемых API. Можно использовать вызов неуправляемого <xref:System.Windows.Interop.HwndSource> кода и вызывать соответствующие [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] API. Дополнительную информацию см. в разделе [Вызов встроенных функций из управляемого кода](/cpp/dotnet/calling-native-functions-from-managed-code).  
   
- Многослойные окна [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеют разные функциональные возможности в различных операционных системах. Это обусловлено [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] тем, что использует DirectX для подготовки к просмотру, а многослойные [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] окна — в основном для отрисовки, а не для отрисовки DirectX.  
+ Многослойные окна [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеют разные функциональные возможности в различных операционных системах. Это обусловлено [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] тем, что использует DirectX для подготовки к просмотру, а многослойные окна — в первую очередь для отрисовки GDI, а не для отрисовки DirectX.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает аппаратное ускорение многослойных окон в [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] и более поздних версиях. Для многослойных окон с [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] аппаратным ускорением требуется поддержка Microsoft DirectX, поэтому возможности будут зависеть от версии Microsoft DirectX на этом компьютере.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] не поддерживает цветовые ключи прозрачности, так как [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] не может гарантировать отрисовку необходимого цвета, особенно при использовании аппаратного ускорения.  
   
-- Если приложение работает в [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], многослойные окна на вершинах DirectX замерцаниются при визуализации приложения DirectX.  (Фактическая последовательность отрисовки заключается [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] в скрытии многоуровневого окна, затем DirectX рисует, а [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] затем помещает многоуровневый окно обратно).  Это ограничение накладывается и на многослойные окна вне [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+- Если приложение работает в [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], многослойные окна на вершинах DirectX замерцаниются при визуализации приложения DirectX.  (Фактическая последовательность отрисовки заключается в том, что Microsoft Windows интерфейс графических устройств (GDI) скрывает многослойное окно, затем DirectX рисует, а затем Microsoft Windows интерфейс графических устройств (GDI) помещает многоуровневый окно обратно).  Это ограничение накладывается и на многослойные окна вне [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 ## <a name="see-also"></a>См. также
 
