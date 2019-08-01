@@ -9,18 +9,18 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 7acf5a3f48ac4987037873c63111d988ec3a4979
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a47a4aae785d817904c30fe7c865a1c033eb3cca
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629648"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709227"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Оптимизация производительности: Использование преимуществ оборудования
 Внутренняя архитектура [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеет два конвейера отрисовки: оборудование и программное обеспечение. Этот раздел содержит сведения об этих конвейерах отрисовки, которые помогают принимать решения о оптимизации производительности приложений.  
   
 ## <a name="hardware-rendering-pipeline"></a>Аппаратный конвейер отрисовки  
- Одним из наиболее важных факторов, связанных с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] определением производительности, является то, что он привязан к отрисовке — чем больше пикселов нужно визуализировать, тем выше стоимость производительности. Тем не менее, чем больше возможностей отрисовки можно разгрузить [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)]в, тем больше преимуществ производительности можно получить. Конвейер визуализации оборудования приложений использует все преимущества функций Microsoft DirectX на оборудовании, поддерживающем минимум Microsoft DirectX версии 7,0. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Дополнительные оптимизации можно получить с помощью оборудования, поддерживающего функции Microsoft DirectX версии 7,0 и PixelShader 2.0 +.  
+ Одним из наиболее важных факторов, связанных с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] определением производительности, является то, что он привязан к отрисовке — чем больше пикселов нужно визуализировать, тем выше стоимость производительности. Тем не менее, чем больше возможностей отрисовки можно разгрузить в графический процессор (GPU), тем больше преимуществ производительности можно получить. Конвейер визуализации оборудования приложений использует все преимущества функций Microsoft DirectX на оборудовании, поддерживающем минимум Microsoft DirectX версии 7,0. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Дополнительные оптимизации можно получить с помощью оборудования, поддерживающего функции Microsoft DirectX версии 7,0 и PixelShader 2.0 +.  
   
 ## <a name="software-rendering-pipeline"></a>Конвейер отрисовки программного обеспечения  
  Конвейер [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] отрисовки программного обеспечения полностью привязан к ЦП. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]использует преимущества наборов инструкций SSE и SSE2 в ЦП для реализации оптимизированного полнофункционального программного средства для прорисовки. Откат к программному обеспечению — это эффективное использование функций приложения, которые не могут быть отображены с помощью конвейера аппаратной отрисовки.  

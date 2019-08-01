@@ -9,27 +9,31 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 13225779cb3ed844e6ea8622ad559db83fadc166
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942809"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710215"
 ---
 # <a name="advanced-windows-presentation-foundation"></a>Дополнительные сведения (Windows Presentation Foundation)
 В этом разделе описываются некоторые из дополнительных областей в WPF.  
   
-## <a name="in-this-section"></a>В этом разделе  
- [Архитектура WPF](wpf-architecture.md)  
- [Базовые элементы](base-elements.md)  
- [Дерево элементов и сериализация](element-tree-and-serialization.md)  
- [Перетаскивание](drag-and-drop.md)  
- [Документы](documents.md)  
- [Глобализация и локализация](globalization-and-localization.md)  
- [Миграция и взаимодействие систем](migration-and-interoperability.md)  
- [Производительность](performance.md)  
- [Потоковая модель](threading-model.md)  
- [Общие сведения о надстройках WPF](../app-development/wpf-add-ins-overview.md)  
- [Справочник по неуправляемым API WPF](wpf-unmanaged-api-reference.md)  
-  
-## <a name="related-sections"></a>Связанные разделы
+## <a name="in-this-section"></a>В этом разделе
+
+[Архитектура WPF](wpf-architecture.md)  
+[XAML в WPF](xaml-in-wpf.md)  
+[Классы базовых элементов](base-elements.md)  
+[Дерево элементов и сериализация](element-tree-and-serialization.md)  
+[Система свойств WPF](properties-wpf.md)  
+[События в WPF](events-wpf.md)  
+[Ввод](input-wpf.md)  
+[Перетаскивание](drag-and-drop.md)  
+[Ресурсы](resources-wpf.md)  
+[Документы](documents.md)  
+[Глобализация и локализация](globalization-and-localization.md)  
+[Макет](layout.md)  
+[Миграция и взаимодействие систем](migration-and-interoperability.md)  
+[Производительность](performance.md)  
+[Потоковая модель](threading-model.md)  
+[Справочник по неуправляемым API WPF](wpf-unmanaged-api-reference.md)  

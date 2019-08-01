@@ -2,12 +2,12 @@
 title: Практическое руководство. управлять префиксами пространств имен (Visual Basic) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-ms.openlocfilehash: 7e5a05d2fa93e61338f450d0a4d890fa94c04fd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b89b49aa76df526c08143cad49685386ffd5e7c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855404"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709821"
 ---
 # <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Практическое руководство. управлять префиксами пространств имен (Visual Basic) (LINQ to XML)
 В этом разделе рассматривается управление префиксами пространств имен.  
@@ -15,7 +15,7 @@ ms.locfileid: "61855404"
 ## <a name="example"></a>Пример  
   
 ### <a name="description"></a>Описание  
- В этом примере объявляются два пространства имен. Указывает, что `http://www.adventure-works.com` пространства имен имеет префикс `aw`и что `www.fourthcoffee.com` пространства имен имеет префикс `fc`.  
+ В этом примере объявляются два пространства имен. Он указывает, что `http://www.adventure-works.com` пространство имен имеет префикс `aw`, а `www.fourthcoffee.com` пространство имен имеет префикс `fc`.  
   
 ### <a name="code"></a>Код  
   
@@ -55,4 +55,4 @@ End Module
   
 ## <a name="see-also"></a>См. также
 
-- [Работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [Общие сведения о пространствах имен (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

@@ -6,20 +6,20 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: 07b17ae1ed89c84bac4ac40e9934a0d36fda357f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9cab4dbbcd3302a6e74783eaefdbbd8463332224
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625844"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710246"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Реализация шаблона элемента управления Window автоматизированного пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API службы автоматизации Windows: Модель автоматизации](https://go.microsoft.com/fwlink/?LinkID=156746)пользовательского интерфейса.  
   
  В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IWindowProvider>, включая сведения о свойствах, методах и событиях <xref:System.Windows.Automation.WindowPattern> . Ссылки на дополнительные материалы перечислены в конце раздела.  
   
- Шаблон элемента управления <xref:System.Windows.Automation.WindowPattern> используется для поддержки элементов управления, обеспечивающих фундаментальные функциональные возможности на основе окон в традиционном [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)]. В качестве примеров элементов управления, которые должны реализовывать этот шаблон элемента управления, можно назвать окна приложения верхнего уровня, дочерние окна [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] , элементы управления "Область разделения с возможностью изменения размера", модальные диалоговые окна и окна всплывающей справки.  
+ Шаблон <xref:System.Windows.Automation.WindowPattern> элемента управления используется для поддержки элементов управления, которые предоставляют фундаментальные функции на основе окна в традиционном графическом интерфейсе пользователя. В качестве примеров элементов управления, которые должны реализовывать этот шаблон элемента управления, можно назвать окна приложения верхнего уровня, дочерние окна [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] , элементы управления "Область разделения с возможностью изменения размера", модальные диалоговые окна и окна всплывающей справки.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Правила и соглашения реализации  
@@ -41,17 +41,17 @@ ms.locfileid: "64625844"
   
 |Обязательный член|Тип члена|Примечания|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Метод|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Метод|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Метод|Нет|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|событие|Нет|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|событие|Нет|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Свойство.|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Свойство.|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Свойство.|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Свойство.|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Свойство.|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Свойство.|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Метод|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Метод|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Метод|None|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|событие|None|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|событие|None|  
 |<xref:System.Windows.Automation.WindowInteractionState>|событие|Не гарантируется, что будет <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   

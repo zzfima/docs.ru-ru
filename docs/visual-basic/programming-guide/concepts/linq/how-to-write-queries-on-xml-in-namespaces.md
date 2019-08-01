@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Создание запросов к XML в пространствах имен (Visual Basic)
+title: Практическое руководство. Написание запросов к XML в пространствах имен (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: 4efa1de254a0264752514c5ae6e601a66fa56f95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b910e8b46632fbff2228baef44a45e8c22d731e
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614834"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709876"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Практическое руководство. Создание запросов к XML в пространствах имен (Visual Basic)
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Практическое руководство. Написание запросов к XML в пространствах имен (Visual Basic)
 Для записи XML-запросов в пространстве имен необходимо использовать объекты <xref:System.Xml.Linq.XName> с правильно заданным пространством имен.  
   
  В Visual Basic наиболее распространенным подходом является определение глобального пространства имен и последующее применение XML-литералов и XML-свойств, в которых указано это пространство имен. Можно определить глобальное пространство имен по умолчанию, и в этом случае элементы XML-литералов будут представлены в этом пространстве имен по умолчанию. Иначе можно определить глобальное пространство имен с помощью префикса, а затем использовать этот префикс в XML-литералах и XML-свойствах в соответствии с необходимостью. Как и в других формах XML, по умолчанию атрибуты всегда находятся вне пространства имен.  
@@ -90,4 +90,4 @@ End Module
   
 ## <a name="see-also"></a>См. также
 
-- [Работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [Общие сведения о пространствах имен (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

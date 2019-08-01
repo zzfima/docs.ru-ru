@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Сортировка элементов (Visual Basic)
+title: Практическое руководство. Элементы сортировки (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c2c09279-6c8a-482e-8e71-b1453a815052
-ms.openlocfilehash: b6f2e0056582e60066b2c0715a663022b72a6c9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f92d8ca36d1b322bb8d1538fd199e7256c982b85
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614392"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710487"
 ---
-# <a name="how-to-sort-elements-visual-basic"></a>Практическое руководство. Сортировка элементов (Visual Basic)
+# <a name="how-to-sort-elements-visual-basic"></a>Практическое руководство. Элементы сортировки (Visual Basic)
 В этом примере показано, как создавать запросы с сортировкой результатов.  
   
 ## <a name="example"></a>Пример  
@@ -40,7 +40,7 @@ Next
 ```  
   
 ## <a name="example"></a>Пример  
- Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен. Дополнительные сведения см. в разделе [работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен. Дополнительные сведения см. в разделе [Общие сведения о пространствах имен (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
  В этом примере используется следующий XML-документ: [Пример XML-файла. Числовые данные в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
@@ -77,4 +77,4 @@ End Module
 ## <a name="see-also"></a>См. также
 
 - [Сортировка данных](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
-- [Базовые запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Основные запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

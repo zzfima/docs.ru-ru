@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 2667417c5d25821f2fed2101e1d485280e171eab
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6bea25fbd321eead9137caaeb212b76a9d528e88
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400643"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710399"
 ---
 # <a name="threading-model"></a>Модель потоков
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] призвана помочь разработчикам избежать трудностей при разработке потоков. В результате большинству [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] разработчиков не придется писать интерфейс, использующий более одного потока. Поскольку многопотоковые программы являются сложными и трудно отлаживаемыми, их следует избегать, если существуют однопоточные решения.  
@@ -56,7 +56,7 @@ ms.locfileid: "68400643"
   
 <a name="prime_number"></a>   
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>Пример однопоточного приложения с длительным выполнением вычислений  
- Большинство [!INCLUDE[TLA#tla_gui#plural](../../../../includes/tlasharptla-guisharpplural-md.md)] тратит большую часть времени простоя при ожидании событий, создаваемых в ответ на взаимодействие с пользователем. При тщательном программировании это время простоя можно использовать в конструкторе, не влияя на [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]скорость реагирования. Потоковая модель не позволяет входным данным прерывать операции, происходящие [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] в потоке. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Это означает, что необходимо периодически возвращаться к, чтобы <xref:System.Windows.Threading.Dispatcher> обрабатывать ожидающие события ввода, прежде чем они станут устаревшими.  
+ Большинство графических интерфейсов пользователя (GUI) тратят большую часть времени простоя, когда ожидают события, создаваемые в ответ на взаимодействие с пользователем. При тщательном программировании это время простоя можно использовать в конструкторе, не влияя на [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]скорость реагирования. Потоковая модель не позволяет входным данным прерывать операции, происходящие [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] в потоке. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Это означает, что необходимо периодически возвращаться к, чтобы <xref:System.Windows.Threading.Dispatcher> обрабатывать ожидающие события ввода, прежде чем они станут устаревшими.  
   
  Рассмотрим следующий пример.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "68400643"
   
 <a name="weather_sim"></a>   
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>Обработка блокирующей операции с фоновым потоком  
- Обработка блокировки операций в графическом приложении может оказаться трудной задачей. Мы не будем вызывать методы блокировки из обработчиков событий, так как приложение будет остановлено. Для обработки этих операций можно использовать отдельный поток, но когда мы готовы, нам нужно выполнить синхронизацию с [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] потоком, так как мы не можем напрямую [!INCLUDE[TLA2#tla_gui](../../../../includes/tla2sharptla-gui-md.md)] изменять из нашего рабочего потока. Можно использовать <xref:System.Windows.Threading.Dispatcher.Invoke%2A> или <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> длявставки[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] делегатов в поток. <xref:System.Windows.Threading.Dispatcher> Со временем эти делегаты будут выполняться с разрешением на изменение [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элементов.  
+ Обработка блокировки операций в графическом приложении может оказаться трудной задачей. Мы не будем вызывать методы блокировки из обработчиков событий, так как приложение будет остановлено. Для обработки этих операций можно использовать отдельный поток, но после этого нам нужно выполнить синхронизацию с [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] потоком, так как мы не можем напрямую изменить GUI из нашего рабочего потока. Можно использовать <xref:System.Windows.Threading.Dispatcher.Invoke%2A> или <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> длявставки[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] делегатов в поток. <xref:System.Windows.Threading.Dispatcher> Со временем эти делегаты будут выполняться с разрешением на изменение [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элементов.  
   
  В этом примере мы имитируем вызов удаленной процедуры, который получает прогноз погоды. Мы используем отдельный рабочий поток для выполнения этого вызова и планируем метод обновления в <xref:System.Windows.Threading.Dispatcher> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] потоке после завершения.  
   
