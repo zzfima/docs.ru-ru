@@ -23,6 +23,8 @@
       href: tutorials/image-classification.md
     - name: Анализ продаж продукта (обнаружение аномалий)
       href: tutorials/sales-anomaly-detection.md
+    - name: Обнаружение объектов на изображениях (обнаружение объектов)
+      href: tutorials/object-detection-onnx.md
 - name: Практические руководства
   items:
     - name: Загрузка данных
@@ -55,7 +57,7 @@
       items:
         - name: Вероятностное программирование с использованием Infer.NET
           href: how-to-guides/matchup-app-infer-net.md
-- name: Ссылка
+- name: Справочник
   items:
     - name: Справочник по интерфейсам API
       href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
