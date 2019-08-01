@@ -3,12 +3,12 @@ title: Руководства по ML.NET
 description: Наши руководства по ML.NET помогут вам научиться создавать специализированные решения на базе искусственного интеллекта и интегрировать их в свои .NET-приложения.
 ms.custom: seodec18
 ms.date: 07/08/2019
-ms.openlocfilehash: 16311a892f9b1da5d6de10f52bec2ad9410966b7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dfc4779a94ae74e35095f654571c6e7c43f295a0
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777965"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671880"
 ---
 # <a name="mlnet-tutorials"></a>Руководства по ML.NET 
 
@@ -21,6 +21,7 @@ ms.locfileid: "67777965"
 - [Рекомендация.](movie-recommendation.md) Создание **рекомендаций** фильмов на основе предыдущих оценок пользователя.
 - [Классификация изображений.](image-classification.md) Здесь показано, как переобучить существующую модель Tensorflow для создания классификатора пользовательских изображений с помощью ML.NET.
 - [Обнаружение аномалий.](sales-anomaly-detection.md) Здесь вы узнаете, как создать приложение для обнаружения аномалий в анализе данных о продажах товаров.
+- [Обнаружение объектов на изображениях.](object-detection-onnx.md) Здесь описан способ обнаружения объектов на изображениях с помощью предварительно обученной модели ONNX.
 
 ## <a name="next-steps"></a>Следующие шаги
 
