@@ -2,22 +2,22 @@
 title: Практическое руководство. управлять префиксами пространств имен (Visual Basic) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-ms.openlocfilehash: 7e5a05d2fa93e61338f450d0a4d890fa94c04fd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b89b49aa76df526c08143cad49685386ffd5e7c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855404"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709821"
 ---
-# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a><span data-ttu-id="c854f-102">Практическое руководство. управлять префиксами пространств имен (Visual Basic) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c854f-102">How to: Control Namespace Prefixes (Visual Basic) (LINQ to XML)</span></span>
-<span data-ttu-id="c854f-103">В этом разделе рассматривается управление префиксами пространств имен.</span><span class="sxs-lookup"><span data-stu-id="c854f-103">This topic describes how you can control namespace prefixes.</span></span>  
+# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a><span data-ttu-id="b9683-102">Практическое руководство. управлять префиксами пространств имен (Visual Basic) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="b9683-102">How to: Control Namespace Prefixes (Visual Basic) (LINQ to XML)</span></span>
+<span data-ttu-id="b9683-103">В этом разделе рассматривается управление префиксами пространств имен.</span><span class="sxs-lookup"><span data-stu-id="b9683-103">This topic describes how you can control namespace prefixes.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c854f-104">Пример</span><span class="sxs-lookup"><span data-stu-id="c854f-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b9683-104">Пример</span><span class="sxs-lookup"><span data-stu-id="b9683-104">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="c854f-105">Описание</span><span class="sxs-lookup"><span data-stu-id="c854f-105">Description</span></span>  
- <span data-ttu-id="c854f-106">В этом примере объявляются два пространства имен.</span><span class="sxs-lookup"><span data-stu-id="c854f-106">This example declares two namespaces.</span></span> <span data-ttu-id="c854f-107">Указывает, что `http://www.adventure-works.com` пространства имен имеет префикс `aw`и что `www.fourthcoffee.com` пространства имен имеет префикс `fc`.</span><span class="sxs-lookup"><span data-stu-id="c854f-107">It specifies that the `http://www.adventure-works.com` namespace has the prefix `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.</span></span>  
+### <a name="description"></a><span data-ttu-id="b9683-105">Описание</span><span class="sxs-lookup"><span data-stu-id="b9683-105">Description</span></span>  
+ <span data-ttu-id="b9683-106">В этом примере объявляются два пространства имен.</span><span class="sxs-lookup"><span data-stu-id="b9683-106">This example declares two namespaces.</span></span> <span data-ttu-id="b9683-107">Он указывает, что `http://www.adventure-works.com` пространство имен имеет префикс `aw`, а `www.fourthcoffee.com` пространство имен имеет префикс `fc`.</span><span class="sxs-lookup"><span data-stu-id="b9683-107">It specifies that the `http://www.adventure-works.com` namespace has the prefix `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="c854f-108">Код</span><span class="sxs-lookup"><span data-stu-id="c854f-108">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="b9683-108">Код</span><span class="sxs-lookup"><span data-stu-id="b9683-108">Code</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -40,8 +40,8 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="c854f-109">Комментарии</span><span class="sxs-lookup"><span data-stu-id="c854f-109">Comments</span></span>  
- <span data-ttu-id="c854f-110">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="c854f-110">This example produces the following output:</span></span>  
+### <a name="comments"></a><span data-ttu-id="b9683-109">Комментарии</span><span class="sxs-lookup"><span data-stu-id="b9683-109">Comments</span></span>  
+ <span data-ttu-id="b9683-110">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="b9683-110">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Root xmlns:fc="www.fourthcoffee.com" xmlns:aw="http://www.adventure-works.com">  
@@ -53,6 +53,6 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c854f-111">См. также</span><span class="sxs-lookup"><span data-stu-id="c854f-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b9683-111">См. также</span><span class="sxs-lookup"><span data-stu-id="b9683-111">See also</span></span>
 
-- [<span data-ttu-id="c854f-112">Работа с пространствами имен XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c854f-112">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [<span data-ttu-id="b9683-112">Общие сведения о пространствах имен (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b9683-112">Namespaces Overview (LINQ to XML) (Visual Basic)</span></span>](namespaces-overview-linq-to-xml.md)

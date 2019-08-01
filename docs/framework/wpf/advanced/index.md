@@ -9,27 +9,31 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 13225779cb3ed844e6ea8622ad559db83fadc166
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942809"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710215"
 ---
-# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="0111e-102">Дополнительные сведения (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="0111e-102">Advanced (Windows Presentation Foundation)</span></span>
-<span data-ttu-id="0111e-103">В этом разделе описываются некоторые из дополнительных областей в WPF.</span><span class="sxs-lookup"><span data-stu-id="0111e-103">This section describes some of the advanced areas in WPF.</span></span>  
+# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="7a57f-102">Дополнительные сведения (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="7a57f-102">Advanced (Windows Presentation Foundation)</span></span>
+<span data-ttu-id="7a57f-103">В этом разделе описываются некоторые из дополнительных областей в WPF.</span><span class="sxs-lookup"><span data-stu-id="7a57f-103">This section describes some of the advanced areas in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0111e-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="0111e-104">In This Section</span></span>  
- [<span data-ttu-id="0111e-105">Архитектура WPF</span><span class="sxs-lookup"><span data-stu-id="0111e-105">WPF Architecture</span></span>](wpf-architecture.md)  
- [<span data-ttu-id="0111e-106">Базовые элементы</span><span class="sxs-lookup"><span data-stu-id="0111e-106">Base Elements</span></span>](base-elements.md)  
- [<span data-ttu-id="0111e-107">Дерево элементов и сериализация</span><span class="sxs-lookup"><span data-stu-id="0111e-107">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
- [<span data-ttu-id="0111e-108">Перетаскивание</span><span class="sxs-lookup"><span data-stu-id="0111e-108">Drag and Drop</span></span>](drag-and-drop.md)  
- [<span data-ttu-id="0111e-109">Документы</span><span class="sxs-lookup"><span data-stu-id="0111e-109">Documents</span></span>](documents.md)  
- [<span data-ttu-id="0111e-110">Глобализация и локализация</span><span class="sxs-lookup"><span data-stu-id="0111e-110">Globalization and Localization</span></span>](globalization-and-localization.md)  
- [<span data-ttu-id="0111e-111">Миграция и взаимодействие систем</span><span class="sxs-lookup"><span data-stu-id="0111e-111">Migration and Interoperability</span></span>](migration-and-interoperability.md)  
- [<span data-ttu-id="0111e-112">Производительность</span><span class="sxs-lookup"><span data-stu-id="0111e-112">Performance</span></span>](performance.md)  
- [<span data-ttu-id="0111e-113">Потоковая модель</span><span class="sxs-lookup"><span data-stu-id="0111e-113">Threading Model</span></span>](threading-model.md)  
- [<span data-ttu-id="0111e-114">Общие сведения о надстройках WPF</span><span class="sxs-lookup"><span data-stu-id="0111e-114">WPF Add-Ins Overview</span></span>](../app-development/wpf-add-ins-overview.md)  
- [<span data-ttu-id="0111e-115">Справочник по неуправляемым API WPF</span><span class="sxs-lookup"><span data-stu-id="0111e-115">Unmanaged WPF API Reference</span></span>](wpf-unmanaged-api-reference.md)  
-  
-## <a name="related-sections"></a><span data-ttu-id="0111e-116">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="0111e-116">Related Sections</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="7a57f-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="7a57f-104">In This Section</span></span>
+
+[<span data-ttu-id="7a57f-105">Архитектура WPF</span><span class="sxs-lookup"><span data-stu-id="7a57f-105">WPF Architecture</span></span>](wpf-architecture.md)  
+[<span data-ttu-id="7a57f-106">XAML в WPF</span><span class="sxs-lookup"><span data-stu-id="7a57f-106">XAML in WPF</span></span>](xaml-in-wpf.md)  
+[<span data-ttu-id="7a57f-107">Классы базовых элементов</span><span class="sxs-lookup"><span data-stu-id="7a57f-107">Base Element Classes</span></span>](base-elements.md)  
+[<span data-ttu-id="7a57f-108">Дерево элементов и сериализация</span><span class="sxs-lookup"><span data-stu-id="7a57f-108">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+[<span data-ttu-id="7a57f-109">Система свойств WPF</span><span class="sxs-lookup"><span data-stu-id="7a57f-109">WPF Property System</span></span>](properties-wpf.md)  
+[<span data-ttu-id="7a57f-110">События в WPF</span><span class="sxs-lookup"><span data-stu-id="7a57f-110">Events in WPF</span></span>](events-wpf.md)  
+[<span data-ttu-id="7a57f-111">Ввод</span><span class="sxs-lookup"><span data-stu-id="7a57f-111">Input</span></span>](input-wpf.md)  
+[<span data-ttu-id="7a57f-112">Перетаскивание</span><span class="sxs-lookup"><span data-stu-id="7a57f-112">Drag and Drop</span></span>](drag-and-drop.md)  
+[<span data-ttu-id="7a57f-113">Ресурсы</span><span class="sxs-lookup"><span data-stu-id="7a57f-113">Resources</span></span>](resources-wpf.md)  
+[<span data-ttu-id="7a57f-114">Документы</span><span class="sxs-lookup"><span data-stu-id="7a57f-114">Documents</span></span>](documents.md)  
+[<span data-ttu-id="7a57f-115">Глобализация и локализация</span><span class="sxs-lookup"><span data-stu-id="7a57f-115">Globalization and Localization</span></span>](globalization-and-localization.md)  
+[<span data-ttu-id="7a57f-116">Макет</span><span class="sxs-lookup"><span data-stu-id="7a57f-116">Layout</span></span>](layout.md)  
+[<span data-ttu-id="7a57f-117">Миграция и взаимодействие систем</span><span class="sxs-lookup"><span data-stu-id="7a57f-117">Migration and Interoperability</span></span>](migration-and-interoperability.md)  
+[<span data-ttu-id="7a57f-118">Производительность</span><span class="sxs-lookup"><span data-stu-id="7a57f-118">Performance</span></span>](performance.md)  
+[<span data-ttu-id="7a57f-119">Потоковая модель</span><span class="sxs-lookup"><span data-stu-id="7a57f-119">Threading Model</span></span>](threading-model.md)  
+[<span data-ttu-id="7a57f-120">Справочник по неуправляемым API WPF</span><span class="sxs-lookup"><span data-stu-id="7a57f-120">Unmanaged WPF API Reference</span></span>](wpf-unmanaged-api-reference.md)  
