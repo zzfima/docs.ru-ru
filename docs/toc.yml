@@ -332,7 +332,7 @@
           href: core/tools/telemetry.md
         - name: Обзор global.json
           href: core/tools/global-json.md
-        - name: Справочник
+        - name: Справочники
           items:
             - name: dotnet
               href: core/tools/dotnet.md
@@ -595,14 +595,16 @@
       items:
         - name: 'Система типов C#'
           href: csharp/programming-guide/types/index.md
+        - name: 'Ссылочные типы, допускающие значение null'
+          href: csharp/nullable-references.md
+        - name: 'Описание API, допускающих значение null, с помощью атрибутов и ограничений'
+          href: csharp/nullable-attributes.md
         - name: Пространства имен
           href: csharp/programming-guide/namespaces/index.md
         - name: Базовые типы
           href: csharp/basic-types.md
         - name: Классы
           href: csharp/programming-guide/classes-and-structs/classes.md
-        - name: 'Ссылочные типы, допускающие значение null'
-          href: csharp/nullable-references.md
         - name: Структуры
           href: csharp/structs.md
         - name: Кортежи
@@ -2278,7 +2280,7 @@
               href: visual-basic/language-reference/error-messages/xml-literals-and-xml-properties-are-not-supported-in-embedded-code-in-aspnet.md
             - name: URI-код пространства имен XML <uri> может быть связан только с префиксом xmlns
               href: visual-basic/language-reference/error-messages/xml-namespace-uri-uri-can-be-bound-only-to-xmlns.md
-    - name: Справочник
+    - name: Справочники
       href: visual-basic/reference/index.md
       items:
         - name: Компилятор с интерфейсом командной строки

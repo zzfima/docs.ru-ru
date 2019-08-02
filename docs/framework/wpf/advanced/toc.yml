@@ -1,4 +1,4 @@
-- name: Дополнительно
+- name: Дополнительные возможности WPF
   href: index.md
   items:
     - name: Архитектура WPF
@@ -56,7 +56,7 @@
               href: mc-ignorable-attribute.md
             - name: 'Атрибут mc:ProcessContent'
               href: mc-processcontent-attribute.md
-    - name: Базовые элементы
+    - name: Базовые классы элементов
       href: base-elements.md
       items:
         - name: Общие сведения о базовых элементах
@@ -104,7 +104,7 @@
               href: how-to-find-an-element-by-its-name.md
             - name: Переопределение логического дерева
               href: how-to-override-the-logical-tree.md
-    - name: Свойства
+    - name: Система свойств WPF
       href: properties-wpf.md
       items:
         - name: Общие сведения о свойствах зависимости
@@ -325,7 +325,7 @@
               href: annotations-overview.md
             - name: Схема примечаний
               href: annotations-schema.md
-        - name: Размещение содержимого
+        - name: Содержимое нефиксированного формата
           href: flow-content.md
           items:
             - name: Общие сведения о документах нефиксированного формата
@@ -401,7 +401,7 @@
               items:
                 - name: Знакомство с объектом GlyphRun и элементом Glyphs
                   href: introduction-to-the-glyphrun-object-and-glyphs-element.md
-                - name: Как выполнить Рисование текста с помощью глифов
+                - name: Практическое руководство. Рисование текста с помощью глифов
                   href: draw-text-using-glyphs.md
             - name: Практические руководства
               href: typography-how-to-topics.md
@@ -502,7 +502,7 @@
               href: walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md
             - name: Пошаговое руководство. Размещение элемента управления ActiveX в приложении WPF
               href: walkthrough-hosting-an-activex-control-in-wpf.md
-            - name: Как выполнить Включение визуальных стилей в гибридном приложении
+            - name: Практическое руководство. Включение визуальных стилей в гибридном приложении
               href: how-to-enable-visual-styles-in-a-hybrid-application.md
             - name: Пошаговое руководство. Упорядочение элементов управления Windows Forms в WPF
               href: walkthrough-arranging-windows-forms-controls-in-wpf.md
