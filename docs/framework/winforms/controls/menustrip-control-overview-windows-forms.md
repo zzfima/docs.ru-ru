@@ -7,52 +7,52 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], about MenuStrip control
 - menus [Windows Forms], creating
 ms.assetid: f45516e5-bf01-4468-b851-d45f4c33c055
-ms.openlocfilehash: b72fcf75aeebc297d09cbaa9dbf00bb2370b1222
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 46a3a25415db77ee261f5fb1c3bf114b2275a2d4
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625756"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733459"
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>Общие сведения об элементе управления MenuStrip (Windows Forms)
-Меню предоставлять функциональные возможности для пользователей, команд, сгруппированные по общей теме.  
+Меню предоставляют пользователям функциональные возможности, сохраняя команды, сгруппированные по общей теме.  
   
- <xref:System.Windows.Forms.MenuStrip> Элемент управления является новой возможностью в этой версии Visual Studio и .NET Framework. С помощью элемента управления можно легко создать меню, например, используемых в Microsoft Office.  
+ Этот <xref:System.Windows.Forms.MenuStrip> элемент управления появился в версии 2,0 .NET Framework. С помощью <xref:System.Windows.Forms.MenuStrip> этого элемента управления можно легко создавать меню, аналогичные тем, которые находятся в Microsoft Office.  
   
- <xref:System.Windows.Forms.MenuStrip> Элемент управления поддерживает многодокументного интерфейса (MDI) и слияние меню, всплывающие подсказки и переполнения. Можно улучшить удобство использования и меню, добавив ключи доступа, сочетания клавиш, метки, изображения и разделителей.  
+ <xref:System.Windows.Forms.MenuStrip> Элемент управления поддерживает многодокументный интерфейс (MDI) и слияние меню, всплывающие подсказки и переполнение. Вы можете повысить удобство использования и удобочитаемость меню, добавив ключи доступа, сочетания клавиш, флажки, изображения и разделители.  
   
- <xref:System.Windows.Forms.MenuStrip> Управления заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.MainMenu> управления; Однако <xref:System.Windows.Forms.MainMenu> элемент управления можно сохранить для обратной совместимости и использования в будущем, если выбран.  
+ Элемент управления заменяет и расширяет функциональные возможности <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.MainMenu> элемента управления, однако он сохраняется для обеспечения обратной совместимости и использования в будущем при выборе. <xref:System.Windows.Forms.MenuStrip>  
   
 ## <a name="ways-to-use-the-menustrip-control"></a>Способы использования элемента управления MenuStrip  
- Используйте <xref:System.Windows.Forms.MenuStrip> управления:  
+ <xref:System.Windows.Forms.MenuStrip> Используйте элемент управления для:  
   
-- Создание легко настраиваемых, стандартных меню, которые поддерживают Расширенный пользовательский интерфейс и структура функции, такие как текст и изображения упорядочение и выравнивание, операции перетаскивания и вставки, MDI, переполнения и альтернативные режимы доступа к пунктам меню.  
+- Создание легко настраиваемых, часто используемых меню, поддерживающих расширенные функции пользовательского интерфейса и макета, таких как упорядочение текста и изображений и выравнивание, операции перетаскивания, MDI, переполнение и альтернативные режимы доступа к командам меню.  
   
-- Поддерживает типичные внешний вид и поведение операционной системы.  
+- Поддержка типичного внешнего вида и поведения операционной системы.  
   
-- Согласованная обработка событий для всех контейнеров и вложенными элементами, так же, обработки событий для других элементов управления.  
+- Согласованность событий для всех контейнеров и содержащихся в них элементов аналогично обработке событий для других элементов управления.  
   
- В следующей таблице показаны некоторые особенно важно свойства <xref:System.Windows.Forms.MenuStrip> и связанные классы.  
+ В следующей таблице приведены некоторые особо важные свойства <xref:System.Windows.Forms.MenuStrip> и связанные классы.  
   
-|Свойство|Описание|  
+|Свойство.|Описание|  
 |--------------|-----------------|  
-|<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>|Возвращает или задает <xref:System.Windows.Forms.ToolStripMenuItem> , используемый для отображения списка дочерних форм интерфейса MDI.|  
-|<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A?displayProperty=nameWithType>|Возвращает или задает способ слияния дочерних меню с родительскими меню в приложениях MDI.|  
-|<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A?displayProperty=nameWithType>|Возвращает или задает положение элемента при слиянии в меню в приложениях MDI.|  
-|<xref:System.Windows.Forms.Form.IsMdiContainer%2A?displayProperty=nameWithType>|Возвращает или задает значение, указывающее, находится ли форма контейнером для дочерних MDI-форм.|  
-|<xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A>|Возвращает или задает значение, указывающее, отображаются ли всплывающие подсказки для <xref:System.Windows.Forms.MenuStrip>.|  
+|<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>|Возвращает или задает объект <xref:System.Windows.Forms.ToolStripMenuItem> , используемый для вывода списка дочерних MDI-форм.|  
+|<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A?displayProperty=nameWithType>|Возвращает или задает, как дочерние меню объединяются с родительскими меню в приложениях MDI.|  
+|<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A?displayProperty=nameWithType>|Возвращает или задает позицию объединенного элемента в меню в приложениях MDI.|  
+|<xref:System.Windows.Forms.Form.IsMdiContainer%2A?displayProperty=nameWithType>|Возвращает или задает значение, указывающее, является ли форма контейнером для дочерних форм MDI.|  
+|<xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A>|Возвращает или задает значение, указывающее, отображаются ли подсказки для <xref:System.Windows.Forms.MenuStrip>.|  
 |<xref:System.Windows.Forms.MenuStrip.CanOverflow%2A>|Возвращает или задает значение, которое указывает, поддерживает ли <xref:System.Windows.Forms.MenuStrip> область переполнения.|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|Возвращает или задает сочетания клавиш, связанные с <xref:System.Windows.Forms.ToolStripMenuItem>.|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|Получает или задает значение, указывающее, является ли сочетание клавиш, связанных с <xref:System.Windows.Forms.ToolStripMenuItem> , отображаться рядом с <xref:System.Windows.Forms.ToolStripMenuItem>.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|Возвращает или задает сочетания клавиш, <xref:System.Windows.Forms.ToolStripMenuItem>связанные с.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|Возвращает или задает значение, указывающее, отображаются ли сочетания клавиш, связанные с, <xref:System.Windows.Forms.ToolStripMenuItem> рядом <xref:System.Windows.Forms.ToolStripMenuItem>с.|  
   
- В следующей таблице показаны важные <xref:System.Windows.Forms.MenuStrip> сопутствующих классов.  
+ В следующей таблице показаны важные <xref:System.Windows.Forms.MenuStrip> сопутствующие классы.  
   
 |Класс|Описание|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|Представляет отдельные пункты, отображаемые на <xref:System.Windows.Forms.MenuStrip> или <xref:System.Windows.Forms.ContextMenuStrip>.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|Представляет выбираемый параметр, отображаемый в <xref:System.Windows.Forms.MenuStrip> или <xref:System.Windows.Forms.ContextMenuStrip>.|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|Представляет контекстное меню.|  
-|<xref:System.Windows.Forms.ToolStripDropDown>|Представляет элемент управления, позволяющий пользователю выбрать один элемент из списка, который отображается, когда пользователь щелкает <xref:System.Windows.Forms.ToolStripDropDownButton> или пункта меню более высокого уровня.|  
-|<xref:System.Windows.Forms.ToolStripDropDownItem>|Предоставляет базовую функциональность для элементов управления, производных от <xref:System.Windows.Forms.ToolStripItem> , отображения элементов раскрывающегося списка при нажатии.|  
+|<xref:System.Windows.Forms.ToolStripDropDown>|Представляет элемент управления, позволяющий пользователю выбрать один элемент из списка, который отображается, когда пользователь щелкает <xref:System.Windows.Forms.ToolStripDropDownButton> или элемент меню более высокого уровня.|  
+|<xref:System.Windows.Forms.ToolStripDropDownItem>|Предоставляет базовые функциональные возможности для элементов управления <xref:System.Windows.Forms.ToolStripItem> , производных от элементов с раскрывающимися списками при щелчке.|  
   
 ## <a name="see-also"></a>См. также
 
