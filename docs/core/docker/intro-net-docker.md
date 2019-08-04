@@ -3,12 +3,12 @@ title: Введение в Docker
 description: Эта статья содержит общие сведения об использовании Docker в контексте приложения .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d0bce09d7acdcf474fbb8849c8fc82dae4a69598
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5da71215e3b539f10993677d23d89e2b8a49cb39
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753293"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626476"
 ---
 # <a name="introduction-to-net-and-docker"></a>Введение в .NET и Docker
 
@@ -32,7 +32,7 @@ ms.locfileid: "64753293"
 
 ### <a name="registries"></a>Реестры
 
-Реестры контейнеров — это коллекции из репозиториев образов. Образ может быть основан на образе из реестра. Контейнеры можно создавать непосредственно из образа в реестре. [Связь между контейнерами, образами и реестрами Docker](../../standard/microservices-architecture/container-docker-introduction/docker-containers-images-registries.md) — это важный элемент в [разработке архитектуры и создании контейнерных приложений или микрослужб](../../standard/microservices-architecture/architect-microservice-container-applications/index.md). Этой подход значительно сокращает время между разработкой и развертыванием.
+Реестры контейнеров — это коллекции из репозиториев образов. Образ может быть основан на образе из реестра. Контейнеры можно создавать непосредственно из образа в реестре. [Связь между контейнерами, образами и реестрами Docker](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md) — это важный элемент в [разработке архитектуры и создании контейнерных приложений или микрослужб](../../architecture/microservices/architect-microservice-container-applications/index.md). Этой подход значительно сокращает время между разработкой и развертыванием.
 
 Docker содержит общедоступный реестр, размещенный в [Docker Hub](https://hub.docker.com/). [Образы для .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/) также доступны в Docker Hub. 
 

@@ -4,12 +4,12 @@ description: Дополнительные сведения о новых воз�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 2d0f6a9faaec4d4438452054624751a40c96c8e5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f48b8e88a716df0f07a5626bdc8f66000cfaeed8
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464077"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626361"
 ---
 # <a name="whats-new-in-net-core-20"></a>Новые возможности .NET Core 2.0
 
@@ -156,8 +156,8 @@ ms.locfileid: "58464077"
 
 Благодаря [архитектуре приложений .NET](https://www.microsoft.com/net/learn/architecture) вы получаете доступ к набору электронных книг, в которых представлены инструкции, рекомендации и примеры приложений при использовании .NET для сборки:
 
-- [Микрослужбы и контейнеры Docker](../../standard/microservices-architecture/index.md)
-- [Разработка веб-приложений с помощью ASP.NET](../../standard/modern-web-apps-azure-architecture/index.md)
+- [Микрослужбы и контейнеры Docker](../../architecture/microservices/index.md)
+- [Разработка веб-приложений с помощью ASP.NET](../../architecture/modern-web-apps-azure/index.md)
 - [Мобильные приложения в Xamarin](/xamarin/xamarin-forms/enterprise-application-patterns/index)
 - [Приложения, развертываемые в облаке с помощью Azure](/azure/architecture/reference-architectures/index)
 

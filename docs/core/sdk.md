@@ -1,14 +1,14 @@
 ---
 title: Обзор пакета SDK для .NET Core
 description: Сведения о пакете SDK для .NET Core, который является набором библиотек и средств, используемых для создания проектов .NET Core.
-ms.date: 05/13/2019
+ms.date: 07/31/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: f56d7238eaaaa677db38430358ce94890632469e
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 0231c08f780455c4956c044815a2e80cef4d827e
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959229"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733393"
 ---
 # <a name="net-core-sdk-overview"></a>Обзор пакета SDK для .NET Core
 
@@ -16,7 +16,7 @@ ms.locfileid: "65959229"
 
 - Средства .NET Core CLI.
 - Библиотеки .NET Core и среда выполнения.
-- [Драйвер](/tools/index.md#driver) `dotnet`.
+- [Драйвер](tools/index.md#driver) `dotnet`.
 
 ## <a name="acquiring-the-net-core-sdk"></a>Получение пакета SDK для .NET Core
 
@@ -29,11 +29,11 @@ ms.locfileid: "65959229"
 
 Скрипты установки, с другой стороны, не требуют прав администратора. Но они не устанавливают все необходимые компоненты на компьютере; вы должны установить их вручную. Скрипты предназначены в первую очередь для настройки серверов сборки или установки средств без прав администратора (не забывайте об особенности, касающейся необходимых компонентов). Дополнительные сведения см. в [справочнике по скриптам установки](tools/dotnet-install-script.md). Если вам интересно, как настроить пакет SDK на сервере сборки CI, читайте статью [Использование пакета SDK и средств .NET Core при непрерывной интеграции (CI)](tools/using-ci-with-cli.md).
 
-По умолчанию пакет SDK устанавливается параллельно (SxS), то есть на одном компьютере может быть установлено несколько версий средств CLI. Выбор конкретной версии при выполнении команд интерфейса командной строки подробно описан в статье [Выбор версии .NET Core для использования](/versions/selection.md).
+По умолчанию пакет SDK устанавливается параллельно (SxS), то есть на одном компьютере может быть установлено несколько версий средств CLI. Выбор конкретной версии при выполнении команд интерфейса командной строки подробно описан в статье [Выбор версии .NET Core для использования](versions/selection.md).
 
 ## <a name="see-also"></a>См. также
 
 - [Интерфейс командной строки .NET Core](tools/index.md)
-- [Общие сведения об управлении версиями .NET Core](/versions/index.md)
+- [Общие сведения об управлении версиями .NET Core](versions/index.md)
 - [Как удалить среду выполнения .NET Core и пакет SDK](versions/remove-runtime-sdk-versions.md)
-- [Выбор версии .NET Core для использования](/versions/selection.md)
+- [Выбор версии .NET Core для использования](versions/selection.md)

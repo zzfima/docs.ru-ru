@@ -4,15 +4,13 @@ description: Сведения о концепциях модульного те�
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-dev_langs:
-- fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 1765c16cb55857b83a8206ae97327d0fd2809019
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 3b93f4ed21d9d5eccf1dd02f253e7456aec02807
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747496"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626464"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Модульное тестирование библиотек F# в .NET Core с использованием dotnet test и MSTest
 
@@ -125,7 +123,7 @@ member this.TestEvenSequence() =
 
 Когда вы запустите этот тест, он завершится сбоем. Вы еще не создали реализацию. Чтобы тест был пройден, напишите простейший код в классе `Mathservice`, который работает:
 
-```csharp
+```fsharp
 let squaresOfOdds xs =
     Seq.empty<int> |> Seq.toList
 ```
