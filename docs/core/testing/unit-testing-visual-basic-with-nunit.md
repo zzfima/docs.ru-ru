@@ -3,34 +3,32 @@ title: Модульное тестирование Visual Basic в .NET Core с 
 description: Сведения о концепциях модульного тестирования в .NET Core в рамках пошаговой процедуры по созданию примера Visual Basic решения с помощью NUnit.
 author: rprouse
 ms.date: 10/04/2018
-dev_langs:
-- vb
 ms.custom: seodec18
-ms.openlocfilehash: cf8a81241c93a6eeecf04052aba57750774aa050
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 84287a94504594c731c0fbccf2e61a957a15a36f
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397508"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626398"
 ---
-# <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a><span data-ttu-id="de572-103">Модульное тестирование библиотек .NET Core в Visual Basic с использованием dotnet test и NUnit</span><span class="sxs-lookup"><span data-stu-id="de572-103">Unit testing Visual Basic .NET Core libraries using dotnet test and NUnit</span></span>
+# <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a><span data-ttu-id="82eaa-103">Модульное тестирование библиотек .NET Core в Visual Basic с использованием dotnet test и NUnit</span><span class="sxs-lookup"><span data-stu-id="82eaa-103">Unit testing Visual Basic .NET Core libraries using dotnet test and NUnit</span></span>
 
-<span data-ttu-id="de572-104">Этот учебник описывает пошаговую процедуру по созданию примера решения для изучения концепций модульного тестирования.</span><span class="sxs-lookup"><span data-stu-id="de572-104">This tutorial takes you through an interactive experience building a sample solution step-by-step to learn unit testing concepts.</span></span> <span data-ttu-id="de572-105">Если при изучении учебника вы предпочитаете использовать готовое решение, [просмотрите или скачайте пример кода](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-nunit/) перед началом работы.</span><span class="sxs-lookup"><span data-stu-id="de572-105">If you prefer to follow the tutorial using a pre-built solution, [view or download the sample code](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-nunit/) before you begin.</span></span> <span data-ttu-id="de572-106">Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="de572-106">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
+<span data-ttu-id="82eaa-104">Этот учебник описывает пошаговую процедуру по созданию примера решения для изучения концепций модульного тестирования.</span><span class="sxs-lookup"><span data-stu-id="82eaa-104">This tutorial takes you through an interactive experience building a sample solution step-by-step to learn unit testing concepts.</span></span> <span data-ttu-id="82eaa-105">Если при изучении учебника вы предпочитаете использовать готовое решение, [просмотрите или скачайте пример кода](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-nunit/) перед началом работы.</span><span class="sxs-lookup"><span data-stu-id="82eaa-105">If you prefer to follow the tutorial using a pre-built solution, [view or download the sample code](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-nunit/) before you begin.</span></span> <span data-ttu-id="82eaa-106">Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="82eaa-106">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="de572-107">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="de572-107">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="82eaa-107">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="82eaa-107">Prerequisites</span></span>
 
-- <span data-ttu-id="de572-108">[Пакет SDK для .NET Core 2.1](https://www.microsoft.com/net/download) или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="de572-108">[.NET Core 2.1 SDK](https://www.microsoft.com/net/download) or later versions.</span></span>
-- <span data-ttu-id="de572-109">Текстовый редактор или редактор кода по вашему выбору.</span><span class="sxs-lookup"><span data-stu-id="de572-109">A text editor or code editor of your choice.</span></span>
+- <span data-ttu-id="82eaa-108">[Пакет SDK для .NET Core 2.1](https://www.microsoft.com/net/download) или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="82eaa-108">[.NET Core 2.1 SDK](https://www.microsoft.com/net/download) or later versions.</span></span>
+- <span data-ttu-id="82eaa-109">Текстовый редактор или редактор кода по вашему выбору.</span><span class="sxs-lookup"><span data-stu-id="82eaa-109">A text editor or code editor of your choice.</span></span>
 
-## <a name="creating-the-source-project"></a><span data-ttu-id="de572-110">Создание исходного проекта</span><span class="sxs-lookup"><span data-stu-id="de572-110">Creating the source project</span></span>
+## <a name="creating-the-source-project"></a><span data-ttu-id="82eaa-110">Создание исходного проекта</span><span class="sxs-lookup"><span data-stu-id="82eaa-110">Creating the source project</span></span>
 
-<span data-ttu-id="de572-111">Откройте окно оболочки.</span><span class="sxs-lookup"><span data-stu-id="de572-111">Open a shell window.</span></span> <span data-ttu-id="de572-112">Создайте каталог с именем *unit-testing-vb-nunit* для хранения решения.</span><span class="sxs-lookup"><span data-stu-id="de572-112">Create a directory called *unit-testing-vb-nunit* to hold the solution.</span></span> <span data-ttu-id="de572-113">В этом каталоге выполните следующую команду, чтобы создать файл решения для библиотеки классов и тестового проекта:</span><span class="sxs-lookup"><span data-stu-id="de572-113">Inside this new directory, run the following command to create a new solution file for the class library and the test project:</span></span>
+<span data-ttu-id="82eaa-111">Откройте окно оболочки.</span><span class="sxs-lookup"><span data-stu-id="82eaa-111">Open a shell window.</span></span> <span data-ttu-id="82eaa-112">Создайте каталог с именем *unit-testing-vb-nunit* для хранения решения.</span><span class="sxs-lookup"><span data-stu-id="82eaa-112">Create a directory called *unit-testing-vb-nunit* to hold the solution.</span></span> <span data-ttu-id="82eaa-113">В этом каталоге выполните следующую команду, чтобы создать файл решения для библиотеки классов и тестового проекта:</span><span class="sxs-lookup"><span data-stu-id="82eaa-113">Inside this new directory, run the following command to create a new solution file for the class library and the test project:</span></span>
 
 ```console
 dotnet new sln
 ```
 
-<span data-ttu-id="de572-114">Затем создайте каталог *PrimeService*.</span><span class="sxs-lookup"><span data-stu-id="de572-114">Next, create a *PrimeService* directory.</span></span> <span data-ttu-id="de572-115">Ниже приведена актуальная структура файлов:</span><span class="sxs-lookup"><span data-stu-id="de572-115">The following outline shows the file structure so far:</span></span>
+<span data-ttu-id="82eaa-114">Затем создайте каталог *PrimeService*.</span><span class="sxs-lookup"><span data-stu-id="82eaa-114">Next, create a *PrimeService* directory.</span></span> <span data-ttu-id="82eaa-115">Ниже приведена актуальная структура файлов:</span><span class="sxs-lookup"><span data-stu-id="82eaa-115">The following outline shows the file structure so far:</span></span>
 
 ```
 /unit-testing-vb-nunit
@@ -38,13 +36,13 @@ dotnet new sln
     /PrimeService
 ```
 
-<span data-ttu-id="de572-116">Перейдите в каталог *PrimeService* и выполните следующую команду, чтобы создать исходный проект:</span><span class="sxs-lookup"><span data-stu-id="de572-116">Make *PrimeService* the current directory and run the following command to create the source project:</span></span>
+<span data-ttu-id="82eaa-116">Перейдите в каталог *PrimeService* и выполните следующую команду, чтобы создать исходный проект:</span><span class="sxs-lookup"><span data-stu-id="82eaa-116">Make *PrimeService* the current directory and run the following command to create the source project:</span></span>
 
 ```console
 dotnet new classlib -lang VB
 ```
 
-<span data-ttu-id="de572-117">Переименуйте *Class1.VB* в *PrimeService.VB*.</span><span class="sxs-lookup"><span data-stu-id="de572-117">Rename *Class1.VB* to *PrimeService.VB*.</span></span> <span data-ttu-id="de572-118">Создайте сбойную реализацию класса `PrimeService`:</span><span class="sxs-lookup"><span data-stu-id="de572-118">You create a failing implementation of the `PrimeService` class:</span></span>
+<span data-ttu-id="82eaa-117">Переименуйте *Class1.VB* в *PrimeService.VB*.</span><span class="sxs-lookup"><span data-stu-id="82eaa-117">Rename *Class1.VB* to *PrimeService.VB*.</span></span> <span data-ttu-id="82eaa-118">Создайте сбойную реализацию класса `PrimeService`:</span><span class="sxs-lookup"><span data-stu-id="82eaa-118">You create a failing implementation of the `PrimeService` class:</span></span>
 
 ```vb
 Imports System
@@ -52,21 +50,21 @@ Imports System
 Namespace Prime.Services
     Public Class PrimeService
         Public Function IsPrime(candidate As Integer) As Boolean
-            Throw New NotImplementedException("Please create a test first")
+            Throw New NotImplementedException("Please create a test first.")
         End Function
     End Class
 End Namespace
 ```
 
-<span data-ttu-id="de572-119">Вернитесь в каталог *unit-testing-vb-using-mstest*.</span><span class="sxs-lookup"><span data-stu-id="de572-119">Change the directory back to the *unit-testing-vb-using-mstest* directory.</span></span> <span data-ttu-id="de572-120">Чтобы добавить проект библиотеки классов в решение, выполните следующую команду:</span><span class="sxs-lookup"><span data-stu-id="de572-120">Run the following command to add the class library project to the solution:</span></span>
+<span data-ttu-id="82eaa-119">Вернитесь в каталог *unit-testing-vb-using-mstest*.</span><span class="sxs-lookup"><span data-stu-id="82eaa-119">Change the directory back to the *unit-testing-vb-using-mstest* directory.</span></span> <span data-ttu-id="82eaa-120">Чтобы добавить проект библиотеки классов в решение, выполните следующую команду:</span><span class="sxs-lookup"><span data-stu-id="82eaa-120">Run the following command to add the class library project to the solution:</span></span>
 
 ```console
 dotnet sln add .\PrimeService\PrimeService.vbproj
 ```
 
-## <a name="creating-the-test-project"></a><span data-ttu-id="de572-121">Создание тестового проекта</span><span class="sxs-lookup"><span data-stu-id="de572-121">Creating the test project</span></span>
+## <a name="creating-the-test-project"></a><span data-ttu-id="82eaa-121">Создание тестового проекта</span><span class="sxs-lookup"><span data-stu-id="82eaa-121">Creating the test project</span></span>
 
-<span data-ttu-id="de572-122">Затем создайте каталог *PrimeService.Tests*.</span><span class="sxs-lookup"><span data-stu-id="de572-122">Next, create the *PrimeService.Tests* directory.</span></span> <span data-ttu-id="de572-123">Ниже представлена структура каталогов:</span><span class="sxs-lookup"><span data-stu-id="de572-123">The following outline shows the directory structure:</span></span>
+<span data-ttu-id="82eaa-122">Затем создайте каталог *PrimeService.Tests*.</span><span class="sxs-lookup"><span data-stu-id="82eaa-122">Next, create the *PrimeService.Tests* directory.</span></span> <span data-ttu-id="82eaa-123">Ниже представлена структура каталогов:</span><span class="sxs-lookup"><span data-stu-id="82eaa-123">The following outline shows the directory structure:</span></span>
 
 ```
 /unit-testing-vb-nunit
@@ -77,25 +75,25 @@ dotnet sln add .\PrimeService\PrimeService.vbproj
     /PrimeService.Tests
 ```
 
-<span data-ttu-id="de572-124">Перейдите в каталог *PrimeService.Tests* и создайте проект, выполнив следующую команду:</span><span class="sxs-lookup"><span data-stu-id="de572-124">Make the *PrimeService.Tests* directory the current directory and create a new project using the following command:</span></span>
+<span data-ttu-id="82eaa-124">Перейдите в каталог *PrimeService.Tests* и создайте проект, выполнив следующую команду:</span><span class="sxs-lookup"><span data-stu-id="82eaa-124">Make the *PrimeService.Tests* directory the current directory and create a new project using the following command:</span></span>
 
 ```console
 dotnet new nunit -lang VB
 ```
 
-<span data-ttu-id="de572-125">Команда [dotnet new](../tools/dotnet-new.md) создает тестовый проект, который использует NUnit в качестве библиотеки тестов.</span><span class="sxs-lookup"><span data-stu-id="de572-125">The [dotnet new](../tools/dotnet-new.md) command creates a test project that uses NUnit as the test library.</span></span> <span data-ttu-id="de572-126">Созданный шаблон позволяет настроить средство выполнения тестов в файле *PrimeServiceTests.vbproj*:</span><span class="sxs-lookup"><span data-stu-id="de572-126">The generated template configures the test runner in the *PrimeServiceTests.vbproj* file:</span></span>
+<span data-ttu-id="82eaa-125">Команда [dotnet new](../tools/dotnet-new.md) создает тестовый проект, который использует NUnit в качестве библиотеки тестов.</span><span class="sxs-lookup"><span data-stu-id="82eaa-125">The [dotnet new](../tools/dotnet-new.md) command creates a test project that uses NUnit as the test library.</span></span> <span data-ttu-id="82eaa-126">Созданный шаблон позволяет настроить средство выполнения тестов в файле *PrimeServiceTests.vbproj*:</span><span class="sxs-lookup"><span data-stu-id="82eaa-126">The generated template configures the test runner in the *PrimeServiceTests.vbproj* file:</span></span>
 
 [!code-xml[Packages](~/samples/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService.Tests.vbproj#Packages)]
 
-<span data-ttu-id="de572-127">Тестовый проект требует других пакетов для создания и выполнения модульных тестов. Команда</span><span class="sxs-lookup"><span data-stu-id="de572-127">The test project requires other packages to create and run unit tests.</span></span> <span data-ttu-id="de572-128">`dotnet new` на предыдущем шаге добавляет NUnit и адаптер тестирования NUnit.</span><span class="sxs-lookup"><span data-stu-id="de572-128">`dotnet new` in the previous step added NUnit and the NUnit test adapter.</span></span> <span data-ttu-id="de572-129">Теперь добавьте в проект библиотеку классов `PrimeService` в качестве еще одной зависимости.</span><span class="sxs-lookup"><span data-stu-id="de572-129">Now, add the `PrimeService` class library as another dependency to the project.</span></span> <span data-ttu-id="de572-130">Используйте команду [`dotnet add reference`](../tools/dotnet-add-reference.md):</span><span class="sxs-lookup"><span data-stu-id="de572-130">Use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
+<span data-ttu-id="82eaa-127">Тестовый проект требует других пакетов для создания и выполнения модульных тестов. Команда</span><span class="sxs-lookup"><span data-stu-id="82eaa-127">The test project requires other packages to create and run unit tests.</span></span> <span data-ttu-id="82eaa-128">`dotnet new` на предыдущем шаге добавляет NUnit и адаптер тестирования NUnit.</span><span class="sxs-lookup"><span data-stu-id="82eaa-128">`dotnet new` in the previous step added NUnit and the NUnit test adapter.</span></span> <span data-ttu-id="82eaa-129">Теперь добавьте в проект библиотеку классов `PrimeService` в качестве еще одной зависимости.</span><span class="sxs-lookup"><span data-stu-id="82eaa-129">Now, add the `PrimeService` class library as another dependency to the project.</span></span> <span data-ttu-id="82eaa-130">Используйте команду [`dotnet add reference`](../tools/dotnet-add-reference.md):</span><span class="sxs-lookup"><span data-stu-id="82eaa-130">Use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
 
 ```console
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
-<span data-ttu-id="de572-131">Все содержимое файла можно просмотреть в [репозитории образцов](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService.Tests.vbproj) на сайте GitHub.</span><span class="sxs-lookup"><span data-stu-id="de572-131">You can see the entire file in the [samples repository](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService.Tests.vbproj) on GitHub.</span></span>
+<span data-ttu-id="82eaa-131">Все содержимое файла можно просмотреть в [репозитории образцов](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService.Tests.vbproj) на сайте GitHub.</span><span class="sxs-lookup"><span data-stu-id="82eaa-131">You can see the entire file in the [samples repository](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService.Tests.vbproj) on GitHub.</span></span>
 
-<span data-ttu-id="de572-132">Ниже показан окончательный макет решения:</span><span class="sxs-lookup"><span data-stu-id="de572-132">You have the following final solution layout:</span></span>
+<span data-ttu-id="82eaa-132">Ниже показан окончательный макет решения:</span><span class="sxs-lookup"><span data-stu-id="82eaa-132">You have the following final solution layout:</span></span>
 
 ```
 /unit-testing-vb-nunit
@@ -108,15 +106,15 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
         PrimeService.Tests.vbproj
 ```
 
-<span data-ttu-id="de572-133">Выполните следующую команду в каталоге *unit-testing-vb-nunit*:</span><span class="sxs-lookup"><span data-stu-id="de572-133">Execute the following command in the *unit-testing-vb-nunit* directory:</span></span>
+<span data-ttu-id="82eaa-133">Выполните следующую команду в каталоге *unit-testing-vb-nunit*:</span><span class="sxs-lookup"><span data-stu-id="82eaa-133">Execute the following command in the *unit-testing-vb-nunit* directory:</span></span>
 
 ```console
 dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj
 ```
 
-## <a name="creating-the-first-test"></a><span data-ttu-id="de572-134">Создание первого теста</span><span class="sxs-lookup"><span data-stu-id="de572-134">Creating the first test</span></span>
+## <a name="creating-the-first-test"></a><span data-ttu-id="82eaa-134">Создание первого теста</span><span class="sxs-lookup"><span data-stu-id="82eaa-134">Creating the first test</span></span>
 
-<span data-ttu-id="de572-135">Напишите один тест сбоя теста, запустите его, а затем повторите этот процесс.</span><span class="sxs-lookup"><span data-stu-id="de572-135">You write one failing test, make it pass, then repeat the process.</span></span> <span data-ttu-id="de572-136">В каталоге *PrimeService.Tests* переименуйте файл *UnitTest1.vb* в *PrimeService_IsPrimeShould.VB* и замените его содержимое следующим кодом:</span><span class="sxs-lookup"><span data-stu-id="de572-136">In the *PrimeService.Tests* directory, rename the *UnitTest1.vb* file to *PrimeService_IsPrimeShould.VB* and replace its entire contents with the following code:</span></span>
+<span data-ttu-id="82eaa-135">Напишите один тест сбоя теста, запустите его, а затем повторите этот процесс.</span><span class="sxs-lookup"><span data-stu-id="82eaa-135">You write one failing test, make it pass, then repeat the process.</span></span> <span data-ttu-id="82eaa-136">В каталоге *PrimeService.Tests* переименуйте файл *UnitTest1.vb* в *PrimeService_IsPrimeShould.VB* и замените его содержимое следующим кодом:</span><span class="sxs-lookup"><span data-stu-id="82eaa-136">In the *PrimeService.Tests* directory, rename the *UnitTest1.vb* file to *PrimeService_IsPrimeShould.VB* and replace its entire contents with the following code:</span></span>
 
 ```vb
 Imports NUnit.Framework
@@ -127,7 +125,7 @@ Namespace PrimeService.Tests
         Private _primeService As Prime.Services.PrimeService = New Prime.Services.PrimeService()
 
         <Test>
-        Sub ReturnFalseGivenValueOf1()
+        Sub IsPrime_InputIs1_ReturnFalse()
             Dim result As Boolean = _primeService.IsPrime(1)
 
             Assert.False(result, "1 should not be prime")
@@ -137,35 +135,35 @@ Namespace PrimeService.Tests
 End Namespace
 ```
 
-<span data-ttu-id="de572-137">Атрибут `<TestFixture>` указывает класс, который содержит тесты.</span><span class="sxs-lookup"><span data-stu-id="de572-137">The `<TestFixture>` attribute indicates a class that contains tests.</span></span> <span data-ttu-id="de572-138">Атрибут `<Test>` обозначает метод, который выполняется с помощью средства выполнения тестов.</span><span class="sxs-lookup"><span data-stu-id="de572-138">The `<Test>` attribute denotes a method that is run by the test runner.</span></span> <span data-ttu-id="de572-139">Из каталога *unit-testing-vb-nunit* выполните команду [`dotnet test`](../tools/dotnet-test.md) для создания тестов и библиотеки классов, а затем выполните тесты.</span><span class="sxs-lookup"><span data-stu-id="de572-139">From the *unit-testing-vb-nunit*, execute [`dotnet test`](../tools/dotnet-test.md) to build the tests and the class library and then run the tests.</span></span> <span data-ttu-id="de572-140">Средство запуска тестов NUnit содержит точку входа в программу для выполнения тестов.</span><span class="sxs-lookup"><span data-stu-id="de572-140">The NUnit test runner contains the program entry point to run your tests.</span></span> <span data-ttu-id="de572-141">`dotnet test` запускает средство выполнения тестов с помощью проекта модульного теста, который вы создали.</span><span class="sxs-lookup"><span data-stu-id="de572-141">`dotnet test` starts the test runner using the unit test project you've created.</span></span>
+<span data-ttu-id="82eaa-137">Атрибут `<TestFixture>` указывает класс, который содержит тесты.</span><span class="sxs-lookup"><span data-stu-id="82eaa-137">The `<TestFixture>` attribute indicates a class that contains tests.</span></span> <span data-ttu-id="82eaa-138">Атрибут `<Test>` обозначает метод, который выполняется с помощью средства выполнения тестов.</span><span class="sxs-lookup"><span data-stu-id="82eaa-138">The `<Test>` attribute denotes a method that is run by the test runner.</span></span> <span data-ttu-id="82eaa-139">Из каталога *unit-testing-vb-nunit* выполните команду [`dotnet test`](../tools/dotnet-test.md) для создания тестов и библиотеки классов, а затем выполните тесты.</span><span class="sxs-lookup"><span data-stu-id="82eaa-139">From the *unit-testing-vb-nunit*, execute [`dotnet test`](../tools/dotnet-test.md) to build the tests and the class library and then run the tests.</span></span> <span data-ttu-id="82eaa-140">Средство запуска тестов NUnit содержит точку входа в программу для выполнения тестов.</span><span class="sxs-lookup"><span data-stu-id="82eaa-140">The NUnit test runner contains the program entry point to run your tests.</span></span> <span data-ttu-id="82eaa-141">`dotnet test` запускает средство выполнения тестов с помощью проекта модульного теста, который вы создали.</span><span class="sxs-lookup"><span data-stu-id="82eaa-141">`dotnet test` starts the test runner using the unit test project you've created.</span></span>
 
-<span data-ttu-id="de572-142">Тест не будет пройден.</span><span class="sxs-lookup"><span data-stu-id="de572-142">Your test fails.</span></span> <span data-ttu-id="de572-143">Вы еще не создали реализацию.</span><span class="sxs-lookup"><span data-stu-id="de572-143">You haven't created the implementation yet.</span></span> <span data-ttu-id="de572-144">Чтобы тест был пройден, напишите простейший код в классе `PrimeService`, который работает:</span><span class="sxs-lookup"><span data-stu-id="de572-144">Make this test by writing the simplest code in the `PrimeService` class that works:</span></span>
+<span data-ttu-id="82eaa-142">Тест не будет пройден.</span><span class="sxs-lookup"><span data-stu-id="82eaa-142">Your test fails.</span></span> <span data-ttu-id="82eaa-143">Вы еще не создали реализацию.</span><span class="sxs-lookup"><span data-stu-id="82eaa-143">You haven't created the implementation yet.</span></span> <span data-ttu-id="82eaa-144">Чтобы тест был пройден, напишите простейший код в классе `PrimeService`, который работает:</span><span class="sxs-lookup"><span data-stu-id="82eaa-144">Make this test pass by writing the simplest code in the `PrimeService` class that works:</span></span>
 
 ```vb
 Public Function IsPrime(candidate As Integer) As Boolean
     If candidate = 1 Then
         Return False
     End If
-    Throw New NotImplementedException("Please create a test first")
+    Throw New NotImplementedException("Please create a test first.")
 End Function
 ```
 
-<span data-ttu-id="de572-145">Выполните команду `dotnet test` еще раз в каталоге *unit-testing-vb-nunit*.</span><span class="sxs-lookup"><span data-stu-id="de572-145">In the *unit-testing-vb-nunit* directory, run `dotnet test` again.</span></span> <span data-ttu-id="de572-146">Команда `dotnet test` запускает сборку для проекта `PrimeService` и затем для проекта `PrimeService.Tests`.</span><span class="sxs-lookup"><span data-stu-id="de572-146">The `dotnet test` command runs a build for the `PrimeService` project and then for the `PrimeService.Tests` project.</span></span> <span data-ttu-id="de572-147">После сборки обоих проектов она запускает этот отдельный тест.</span><span class="sxs-lookup"><span data-stu-id="de572-147">After building both projects, it runs this single test.</span></span> <span data-ttu-id="de572-148">Он выполняется.</span><span class="sxs-lookup"><span data-stu-id="de572-148">It passes.</span></span>
+<span data-ttu-id="82eaa-145">Выполните команду `dotnet test` еще раз в каталоге *unit-testing-vb-nunit*.</span><span class="sxs-lookup"><span data-stu-id="82eaa-145">In the *unit-testing-vb-nunit* directory, run `dotnet test` again.</span></span> <span data-ttu-id="82eaa-146">Команда `dotnet test` запускает сборку для проекта `PrimeService` и затем для проекта `PrimeService.Tests`.</span><span class="sxs-lookup"><span data-stu-id="82eaa-146">The `dotnet test` command runs a build for the `PrimeService` project and then for the `PrimeService.Tests` project.</span></span> <span data-ttu-id="82eaa-147">После сборки обоих проектов она запускает этот отдельный тест.</span><span class="sxs-lookup"><span data-stu-id="82eaa-147">After building both projects, it runs this single test.</span></span> <span data-ttu-id="82eaa-148">Он выполняется.</span><span class="sxs-lookup"><span data-stu-id="82eaa-148">It passes.</span></span>
 
-## <a name="adding-more-features"></a><span data-ttu-id="de572-149">Добавление дополнительных возможностей</span><span class="sxs-lookup"><span data-stu-id="de572-149">Adding more features</span></span>
+## <a name="adding-more-features"></a><span data-ttu-id="82eaa-149">Добавление дополнительных возможностей</span><span class="sxs-lookup"><span data-stu-id="82eaa-149">Adding more features</span></span>
 
-<span data-ttu-id="de572-150">Теперь, когда тест проходит успешно, пора создать дополнительные тесты.</span><span class="sxs-lookup"><span data-stu-id="de572-150">Now that you've made one test pass, it's time to write more.</span></span> <span data-ttu-id="de572-151">Есть еще ряд элементарных случаев с простыми числами 0, -1.</span><span class="sxs-lookup"><span data-stu-id="de572-151">There are a few other simple cases for prime numbers: 0, -1.</span></span> <span data-ttu-id="de572-152">Можно добавить их в качестве тестов с помощью атрибута `<Test>`, но это скоро станет утомительным.</span><span class="sxs-lookup"><span data-stu-id="de572-152">You could add those cases as new tests with the `<Test>` attribute, but that quickly becomes tedious.</span></span> <span data-ttu-id="de572-153">Есть другие атрибуты xUnit, которые позволяют создавать наборы похожих тестов.</span><span class="sxs-lookup"><span data-stu-id="de572-153">There are other xUnit attributes that enable you to write a suite of similar tests.</span></span>  <span data-ttu-id="de572-154">Атрибут `<TestCase>` представляет набор тестов, которые выполняют один и тот же код, но имеют разные входные аргументы.</span><span class="sxs-lookup"><span data-stu-id="de572-154">A `<TestCase>` attribute represents a suite of tests that execute the same code but have different input arguments.</span></span> <span data-ttu-id="de572-155">С помощью атрибута `<TestCase>` можно указать значения для этих входных аргументов.</span><span class="sxs-lookup"><span data-stu-id="de572-155">You can use the `<TestCase>` attribute to specify values for those inputs.</span></span>
+<span data-ttu-id="82eaa-150">Теперь, когда тест проходит успешно, пора создать дополнительные тесты.</span><span class="sxs-lookup"><span data-stu-id="82eaa-150">Now that you've made one test pass, it's time to write more.</span></span> <span data-ttu-id="82eaa-151">Есть еще ряд элементарных случаев с простыми числами 0, -1.</span><span class="sxs-lookup"><span data-stu-id="82eaa-151">There are a few other simple cases for prime numbers: 0, -1.</span></span> <span data-ttu-id="82eaa-152">Можно добавить их в качестве тестов с помощью атрибута `<Test>`, но это скоро станет утомительным.</span><span class="sxs-lookup"><span data-stu-id="82eaa-152">You could add those cases as new tests with the `<Test>` attribute, but that quickly becomes tedious.</span></span> <span data-ttu-id="82eaa-153">Есть другие атрибуты xUnit, которые позволяют создавать наборы похожих тестов.</span><span class="sxs-lookup"><span data-stu-id="82eaa-153">There are other xUnit attributes that enable you to write a suite of similar tests.</span></span>  <span data-ttu-id="82eaa-154">Атрибут `<TestCase>` представляет набор тестов, которые выполняют один и тот же код, но имеют разные входные аргументы.</span><span class="sxs-lookup"><span data-stu-id="82eaa-154">A `<TestCase>` attribute represents a suite of tests that execute the same code but have different input arguments.</span></span> <span data-ttu-id="82eaa-155">С помощью атрибута `<TestCase>` можно указать значения для этих входных аргументов.</span><span class="sxs-lookup"><span data-stu-id="82eaa-155">You can use the `<TestCase>` attribute to specify values for those inputs.</span></span>
 
-<span data-ttu-id="de572-156">Вместо создания тестов примените эти два атрибута, чтобы создать последовательность тестов, которая проверяет несколько значений меньше 2, то есть наименьшего простого числа.</span><span class="sxs-lookup"><span data-stu-id="de572-156">Instead of creating new tests, apply these two attributes to create a series of tests that test several values less than two, which is the lowest prime number:</span></span>
+<span data-ttu-id="82eaa-156">Вместо создания тестов примените эти два атрибута, чтобы создать последовательность тестов, которая проверяет несколько значений меньше 2, то есть наименьшего простого числа.</span><span class="sxs-lookup"><span data-stu-id="82eaa-156">Instead of creating new tests, apply these two attributes to create a series of tests that test several values less than two, which is the lowest prime number:</span></span>
 
 [!code-vb[Sample_TestCode](../../../samples/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
-<span data-ttu-id="de572-157">Выполните команду `dotnet test`, и два из этих тестов завершаются ошибкой.</span><span class="sxs-lookup"><span data-stu-id="de572-157">Run `dotnet test`, and two of these tests fail.</span></span> <span data-ttu-id="de572-158">Для успешного выполнения всех тестов нужно изменить предложение `if` в начале метода `Main` в файле *PrimeServices.cs*:</span><span class="sxs-lookup"><span data-stu-id="de572-158">To make all of the tests pass, change the `if` clause at the beginning of the `Main` method in the *PrimeServices.cs* file:</span></span>
+<span data-ttu-id="82eaa-157">Выполните команду `dotnet test`, и два из этих тестов завершаются ошибкой.</span><span class="sxs-lookup"><span data-stu-id="82eaa-157">Run `dotnet test`, and two of these tests fail.</span></span> <span data-ttu-id="82eaa-158">Для успешного выполнения всех тестов нужно изменить предложение `if` в начале метода `Main` в файле *PrimeServices.cs*:</span><span class="sxs-lookup"><span data-stu-id="82eaa-158">To make all of the tests pass, change the `if` clause at the beginning of the `Main` method in the *PrimeServices.cs* file:</span></span>
 
 ```vb
 if candidate < 2
 ```
 
-<span data-ttu-id="de572-159">Продолжайте итерации, добавляя тесты, алгоритмы и код в главной библиотеке.</span><span class="sxs-lookup"><span data-stu-id="de572-159">Continue to iterate by adding more tests, more theories, and more code in the main library.</span></span> <span data-ttu-id="de572-160">В результате вы получите [готовую версию тестов](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.vb) и [полную реализацию библиотеки](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-nunit/PrimeService/PrimeService.vb).</span><span class="sxs-lookup"><span data-stu-id="de572-160">You have the [finished version of the tests](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.vb) and the [complete implementation of the library](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-nunit/PrimeService/PrimeService.vb).</span></span>
+<span data-ttu-id="82eaa-159">Продолжайте итерации, добавляя тесты, алгоритмы и код в главной библиотеке.</span><span class="sxs-lookup"><span data-stu-id="82eaa-159">Continue to iterate by adding more tests, more theories, and more code in the main library.</span></span> <span data-ttu-id="82eaa-160">В результате вы получите [готовую версию тестов](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.vb) и [полную реализацию библиотеки](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-nunit/PrimeService/PrimeService.vb).</span><span class="sxs-lookup"><span data-stu-id="82eaa-160">You have the [finished version of the tests](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.vb) and the [complete implementation of the library](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-nunit/PrimeService/PrimeService.vb).</span></span>
 
-<span data-ttu-id="de572-161">Вы создали небольшую библиотеку и набор модульных тестов для нее.</span><span class="sxs-lookup"><span data-stu-id="de572-161">You've built a small library and a set of unit tests for that library.</span></span> <span data-ttu-id="de572-162">Вы структурировали решение, чтобы сделать добавление новых пакетов и тестов частью обычного рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="de572-162">You've structured the solution so that adding new packages and tests is part of the normal workflow.</span></span> <span data-ttu-id="de572-163">и получить возможность сосредоточиться на задачах приложения.</span><span class="sxs-lookup"><span data-stu-id="de572-163">You've concentrated most of your time and effort on solving the goals of the application.</span></span>
+<span data-ttu-id="82eaa-161">Вы создали небольшую библиотеку и набор модульных тестов для нее.</span><span class="sxs-lookup"><span data-stu-id="82eaa-161">You've built a small library and a set of unit tests for that library.</span></span> <span data-ttu-id="82eaa-162">Вы структурировали решение, чтобы сделать добавление новых пакетов и тестов частью обычного рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="82eaa-162">You've structured the solution so that adding new packages and tests is part of the normal workflow.</span></span> <span data-ttu-id="82eaa-163">и получить возможность сосредоточиться на задачах приложения.</span><span class="sxs-lookup"><span data-stu-id="82eaa-163">You've concentrated most of your time and effort on solving the goals of the application.</span></span>
