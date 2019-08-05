@@ -7,12 +7,12 @@ helpviewer_keywords:
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: 6d3e0740a472f74116712e737e49f86d4202dea5
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: f44bb1f010f154973fc6982882c9b5a09528da76
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452801"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629443"
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Использование псевдонима глобального пространства имен
 Возможность доступа к члену в глобальном [пространстве имен](../../../csharp/language-reference/keywords/namespace.md) полезна в тех случаях, когда член может быть скрыт другой сущностью с таким же именем.  
@@ -50,5 +50,5 @@ ms.locfileid: "65452801"
 
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [Пространства имен](../../../csharp/programming-guide/namespaces/index.md)
-- [:: Оператор](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
+- [:: Оператор](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

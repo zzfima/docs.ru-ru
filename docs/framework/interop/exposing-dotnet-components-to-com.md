@@ -8,21 +8,21 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2b2f550b21a8d64968c6280cc1a29c1d18bfabd
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c88466df32a4167b2b32a7cc0f64eb306e392611
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364007"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629345"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Предоставление COM-клиентам доступа к компонентам .NET Framework
 Написание типа .NET и его использование из неуправляемого кода — это разные операции с точки зрения разработчика. В этом разделе приводятся советы по написанию управляемого кода, который взаимодействует с клиентами COM:  
   
-- [Уточнение типов .NET для взаимодействия](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).  
+- [Уточнение типов .NET для взаимодействия](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md).  
   
      Все управляемые типы, методы, свойства, поля и события, которые требуется предоставить модели COM, должны быть открытыми. Типы должны иметь открытый конструктор без параметров, который является единственным конструктором, доступным для вызова из модели COM.  
   
-- [Применение атрибутов взаимодействия](../../../docs/framework/interop/applying-interop-attributes.md).  
+- [Применение атрибутов взаимодействия](../../../docs/standard/native-interop/apply-interop-attributes.md).  
   
      С помощью настраиваемых атрибутов в управляемом коде можно расширять возможности взаимодействия для компонента.  
   

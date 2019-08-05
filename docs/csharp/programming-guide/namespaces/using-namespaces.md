@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: abd4c34661d96d8c3188e92dd2d76f847e17aae7
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: bf194e207262ecea0511a0b67bbafeadd8d5d31d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433535"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629494"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Использование пространств имен (Руководство по программированию в C#)
 Пространства имен часто используются в программировании на C# двумя способами. Первый способ — платформа .NET Framework использует пространства имен для упорядочения множества ее классов. Второй способ — объявление собственных пространств имен поможет вам контролировать область имен классов и методов в более крупных проектах.  
@@ -93,5 +93,5 @@ ms.locfileid: "68433535"
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [Пространства имен](../../../csharp/programming-guide/namespaces/index.md)
 - [. Оператор](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
-- [:: Оператор](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
-- [extern](../../../csharp/language-reference/keywords/extern.md)
+- [:: Оператор](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
+- [Псевдоним extern](../../../csharp/language-reference/keywords/extern-alias.md)
