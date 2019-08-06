@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: b6fb530bbc4132b09cc17ad692e6e9e23cd75598
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 9adceb78f53d9c855ec05859a0b3449a1623e62b
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671841"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796840"
 ---
 # <a name="imaging-overview"></a>Общие сведения об обработке изображений
 В этом разделе содержатся общие сведения о платформе [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. Платформа [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] позволяет разработчикам выполнять отображение, преобразование и форматирование изображений.  
@@ -165,7 +165,7 @@ ms.locfileid: "68671841"
 ## <a name="image-metadata"></a>Метаданные изображений  
  Некоторые файлы изображений содержат метаданные, описывающие содержимое или характеристики файла. Например, большинство цифровых фотоаппаратов создают изображения, содержащие метаданные об изготовителе и модели фотоаппарата, использованного для создания изображения. В разных форматах изображения метаданные обрабатываются по-разному. Платформа [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] предоставляет универсальный способ хранения и извлечения метаданных для всех поддерживаемых форматов изображения.  
   
- Доступ к метаданным предоставляется через <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> свойство <xref:System.Windows.Media.Imaging.BitmapSource> объекта. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A><xref:System.Windows.Media.Imaging.BitmapMetadata> возвращает объект, содержащий все метаданные, содержащиеся в изображении. Эти данные могут представлять собой одну схему метаданных или комбинацию различных схем. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]поддерживает следующие схемы метаданных изображения: Файл обмена изображениями (EXIF), текст (текстовые данные PNG), [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)] [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)], и [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
+ Доступ к метаданным предоставляется через <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> свойство <xref:System.Windows.Media.Imaging.BitmapSource> объекта. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A><xref:System.Windows.Media.Imaging.BitmapMetadata> возвращает объект, содержащий все метаданные, содержащиеся в изображении. Эти данные могут представлять собой одну схему метаданных или комбинацию различных схем. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]поддерживает следующие схемы метаданных изображения: Файл обмена изображениями (EXIF), текст (текстовые данные PNG), каталог файлов изображений (IFD), [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)]и. [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]  
   
  Чтобы упростить процесс чтения метаданных <xref:System.Windows.Media.Imaging.BitmapMetadata> , предоставляет несколько именованных свойств, которые можно легко получить, <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>например, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>, и <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>. Многие из этих именованных свойств могут также использоваться для записи метаданных. Дополнительная поддержка чтения метаданных обеспечивается благодаря использованию считывателя запросов метаданных. Метод используется для получения считывателя запросов метаданных путем предоставления строкового запроса, например *"/APP1/EXIF/".* <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> В следующем примере <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> используется для получения текста, хранящегося в расположении *"/Text/Description"* .  
   

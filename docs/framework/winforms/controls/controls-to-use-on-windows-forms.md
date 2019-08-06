@@ -5,22 +5,22 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 3d8e6d37a5c27eac6af303819fb50b28acd225c6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 114b9a6db7b41c5aac24bcd1badcf5f5b4b2fb08
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589044"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796268"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Элементы управления для использования в формах Windows Forms
 Ниже приведен алфавитный список элементов управления и компонентов, используемых в формах Windows Forms. Помимо элементов управления Windows Forms, описанных в этом разделе, в формы Windows Forms можно добавлять элементы управления ActiveX и пользовательские элементы управления. Если вам не удается найти нужный элемент управления в этом списке, вы можете создать свой собственный. См. раздел [Создание элементов управления Windows Forms во время разработки](developing-windows-forms-controls-at-design-time.md). Дополнительные сведения о выборе необходимого элемента управления см. в разделе [Функциональная классификация элементов управления Windows Forms](windows-forms-controls-by-function.md).  
   
 > [!NOTE]
->  Элементы управления Visual Basic основаны на классах, предоставляемых платформой .NET Framework.  
+>  Visual Basic элементы управления основаны на классах, предоставляемых .NET Framework.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Функциональная классификация элементов управления Windows Forms](windows-forms-controls-by-function.md)  
- Перечисляются и описываются элементы управления Windows Forms, на основе .NET Framework.  
+ Содержит список и описание Windows Forms элементов управления на основе .NET Framework.  
   
  [Элементы управления со встроенной поддержкой рисования владельцем](controls-with-built-in-owner-drawing-support.md)  
  Описание возможностей изменения аспектов внешнего вида элемента управления, которые недоступны через свойства.  
@@ -50,10 +50,10 @@ ms.locfileid: "65589044"
  Отображает данные в раскрывающемся поле со списком.  
   
  [Компонент ContextMenu](contextmenu-component-windows-forms.md)  
- Предоставляет пользователям быстрый доступ к меню часто используемых команд, связанных с выбранным объектом. Несмотря на то что <xref:System.Windows.Forms.ContextMenuStrip> заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.ContextMenu> элемента управления предыдущих версий <xref:System.Windows.Forms.ContextMenu> при желании можно сохранить для обратной совместимости и использования в будущем.  
+ Предоставляет пользователям быстрый доступ к меню часто используемых команд, связанных с выбранным объектом. Хотя <xref:System.Windows.Forms.ContextMenuStrip> заменяет и добавляет функциональные возможности <xref:System.Windows.Forms.ContextMenu> для управления предыдущими версиями, <xref:System.Windows.Forms.ContextMenu> сохраняется как для обратной совместимости, так и для будущего использования, если это необходимо.  
   
  [Элемент управления ContextMenuStrip](contextmenustrip-control.md)  
- Представляет контекстное меню. Несмотря на то что <xref:System.Windows.Forms.ContextMenuStrip> заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.ContextMenu> элемента управления предыдущих версий <xref:System.Windows.Forms.ContextMenu> при желании можно сохранить для обратной совместимости и использования в будущем.  
+ Представляет контекстное меню. Хотя <xref:System.Windows.Forms.ContextMenuStrip> заменяет и добавляет функциональные возможности <xref:System.Windows.Forms.ContextMenu> для управления предыдущими версиями, <xref:System.Windows.Forms.ContextMenu> сохраняется как для обратной совместимости, так и для будущего использования, если это необходимо.  
   
  [Элемент управления DataGrid](datagrid-control-windows-forms.md)  
  Отображает табличные данные из набора данных и позволяет вносить изменения в источник данных.  
@@ -73,7 +73,7 @@ ms.locfileid: "65589044"
  [Компонент ErrorProvider](errorprovider-component-windows-forms.md)  
  Отображает сведения об ошибке для пользователя в фоновом режиме.  
   
- [Класс FileDialog](filedialog-class.md) предоставляет функциональные возможности базового класса для файловых диалоговых окон.
+ [Класс FileDialog](filedialog-class.md) Предоставляет функциональные возможности базового класса для диалоговых окон файлов.
 
  [Элемент управления FlowLayoutPanel](flowlayoutpanel-control-windows-forms.md)  
  Представляет панель, которая динамически располагает содержимое по горизонтали или вертикали.  
@@ -109,13 +109,13 @@ ms.locfileid: "65589044"
  Отображает список элементов со значками в стиле проводника Windows.  
   
  [Компонент MainMenu](mainmenu-component-windows-forms.md)  
- Отображает меню во время выполнения. Несмотря на то что <xref:System.Windows.Forms.MenuStrip> заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.MainMenu> элемента управления предыдущих версий <xref:System.Windows.Forms.MainMenu> сохраняется для обратной совместимости и использования в будущем, если вы выберете.  
+ Отображает меню во время выполнения. Несмотря <xref:System.Windows.Forms.MenuStrip> наточтофункция<xref:System.Windows.Forms.MainMenu> заменяет и добавляет функции к управлениюпредыдущимиверсиями,сохраняетсякакдляобратнойсовместимости,такидлябудущегоиспользованияпривыборе.<xref:System.Windows.Forms.MainMenu>  
   
  [Элемент управления MaskedTextBox](maskedtextbox-control-windows-forms.md)  
  Ограничивает формат вводимых пользователем данных в форме.  
   
  [Элемент управления MenuStrip](menustrip-control-windows-forms.md)  
- Предоставляет систему меню для формы. Несмотря на то что <xref:System.Windows.Forms.MenuStrip> заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.MainMenu> элемента управления предыдущих версий <xref:System.Windows.Forms.MainMenu> сохраняется для обратной совместимости и использования в будущем, если вы выберете.  
+ Предоставляет систему меню для формы. Несмотря <xref:System.Windows.Forms.MenuStrip> наточтофункция<xref:System.Windows.Forms.MainMenu> заменяет и добавляет функции к управлениюпредыдущимиверсиями,сохраняетсякакдляобратнойсовместимости,такидлябудущегоиспользованияпривыборе.<xref:System.Windows.Forms.MainMenu>  
   
  [Элемент управления MonthCalendar](monthcalendar-control-windows-forms.md)  
  Предоставляет интуитивно понятный графический интерфейс для пользователей для просмотра и задания сведений о дате.  
@@ -162,13 +162,13 @@ ms.locfileid: "65589044"
  [Компонент SaveFileDialog](savefiledialog-component-windows-forms.md)  
  Служит для выбора сохраняемых файлов и места их сохранения.  
   
- [Класс SoundPlayer](soundplayer-class.md) позволяет облегчить добавление звуков в приложениях.
+ [SoundPlayer, класс](soundplayer-class.md) Позволяет легко включать звуки в приложения.
   
  [Элемент управления SplitContainer](splitcontainer-control-windows-forms.md)  
  Позволяет пользователю изменять размер закрепленного элемента управления.  
   
  [Элемент управления Splitter](splitter-control-windows-forms.md)  
- Позволяет пользователю изменять размер закрепленного элемента управления (версии .NET Framework 1.x).  
+ Разрешает пользователю изменять размер закрепленного элемента управления (.NET Framework версии 1. x).  
   
  [Элемент управления StatusBar](statusbar-control-windows-forms.md)  
  Отображает сведения о состоянии элемента управления, который находится в фокусе. Хотя <xref:System.Windows.Forms.StatusStrip> заменяет и расширяет элемент управления <xref:System.Windows.Forms.StatusBar> предыдущих версий, <xref:System.Windows.Forms.StatusBar> сохраняется для обеспечения обратной совместимости и использования в будущем при его выборе.  
@@ -189,19 +189,19 @@ ms.locfileid: "65589044"
  Вызывает событие через определенные интервалы.  
   
  [Элемент управления ToolBar](toolbar-control-windows-forms.md)  
- Отображает меню и кнопки с растровыми изображениями, активирующие команды. Вы можете расширить функциональные возможности элемента управления и изменить его внешний вид и поведение. Несмотря на то что <xref:System.Windows.Forms.ToolStrip> заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.ToolBar> элемента управления предыдущих версий <xref:System.Windows.Forms.ToolBar> сохраняется для обратной совместимости и использования в будущем, если вы выберете.  
+ Отображает меню и кнопки с растровыми изображениями, активирующие команды. Вы можете расширить функциональные возможности элемента управления и изменить его внешний вид и поведение. Несмотря <xref:System.Windows.Forms.ToolStrip> наточтофункция<xref:System.Windows.Forms.ToolBar> заменяет и добавляет функции к управлениюпредыдущимиверсиями,сохраняетсякакдляобратнойсовместимости,такидлябудущегоиспользованияпривыборе.<xref:System.Windows.Forms.ToolBar>  
   
  [Элемент управления ToolStrip](toolstrip-control-windows-forms.md)  
- Создает пользовательские панели инструментов и меню в приложениях Windows Forms. Несмотря на то что <xref:System.Windows.Forms.ToolStrip> заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.ToolBar> элемента управления предыдущих версий <xref:System.Windows.Forms.ToolBar> сохраняется для обратной совместимости и использования в будущем, если вы выберете.  
+ Создает пользовательские панели инструментов и меню в приложениях Windows Forms. Несмотря <xref:System.Windows.Forms.ToolStrip> наточтофункция<xref:System.Windows.Forms.ToolBar> заменяет и добавляет функции к управлениюпредыдущимиверсиями,сохраняетсякакдляобратнойсовместимости,такидлябудущегоиспользованияпривыборе.<xref:System.Windows.Forms.ToolBar>  
   
  [Элемент управления ToolStripContainer](toolstripcontainer-control.md)  
- Предоставляет панели на каждой стороне формы для прикрепления, наслоения и упорядочения <xref:System.Windows.Forms.ToolStrip> элементов управления, а также центральную <xref:System.Windows.Forms.ToolStripContentPanel> для традиционных элементов управления.  
+ Предоставляет панели на каждой стороне формы для закрепления, нависания и упорядочения <xref:System.Windows.Forms.ToolStrip> элементов управления, а также для использования в качестве центра <xref:System.Windows.Forms.ToolStripContentPanel> для традиционных элементов управления.  
   
  [Элемент управления ToolStripPanel](toolstrippanel-control.md)  
- Предоставляет одну панель для прикрепления, наслоения и упорядочения <xref:System.Windows.Forms.ToolStrip> элементов управления.  
+ Предоставляет одну панель для стыковки, нависания и упорядочения <xref:System.Windows.Forms.ToolStrip> элементов управления.  
   
  [Элемент управления ToolStripProgressBar](toolstripprogressbar-control-overview.md)  
- Графически показывает ход выполнения действия. <xref:System.Windows.Forms.ToolStripProgressBar> Обычно содержится в <xref:System.Windows.Forms.StatusStrip>.  
+ Графически показывает ход выполнения действия. <xref:System.Windows.Forms.ToolStripProgressBar> Обычно содержится <xref:System.Windows.Forms.StatusStrip>в.  
   
  [Элемент управления ToolStripStatusLabel](toolstripstatuslabel-control.md)  
  Представляет панель элемента управления <xref:System.Windows.Forms.StatusStrip>.  
@@ -229,7 +229,7 @@ ms.locfileid: "65589044"
  Ссылки на разделы с инструкциями, рекомендации по выбору создаваемого элемента управления, а также другие сведения о создании собственных элементов управления.  
   
  [Сравнение элементов управления и программируемых объектов в разных языках и библиотеках](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
- Предоставляет таблицу, которая сопоставляет элементы управления Visual Basic 6.0 с соответствующими элементами управления в Visual Basic. Обратите внимание на то, что элементы управления теперь являются классами в .NET Framework.  
+ Предоставляет таблицу, которая сопоставляет элементы управления в Visual Basic 6,0 с соответствующим элементом управления в Visual Basic .NET. Обратите внимание, что элементы управления теперь являются классами в .NET Framework.  
   
- [Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms](how-to-add-activex-controls-to-windows-forms.md)  
+ [Практическое руководство. Добавление элементов управления ActiveX в Windows Forms](how-to-add-activex-controls-to-windows-forms.md)  
  В этой статье описывается использование элементов управления ActiveX в формах Windows Forms.
