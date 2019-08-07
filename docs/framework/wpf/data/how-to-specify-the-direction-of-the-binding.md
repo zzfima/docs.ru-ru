@@ -6,28 +6,29 @@ helpviewer_keywords:
 - binding direction [WPF]
 - data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
-ms.openlocfilehash: 164fae937fc3935c7640a898c0c1908fd0a6b6b1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 023cd42ad5fb321e7ffa65f08673cb4145f49af4
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625332"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817909"
 ---
-# <a name="how-to-specify-the-direction-of-the-binding"></a>Практическое руководство. Указание направления привязки
+# <a name="how-to-specify-the-direction-of-the-binding"></a>Практическое руководство. Укажите направление привязки
+
 В этом примере показано, как указать, что привязка обновляет только свойство цели привязки (цель), свойство источника привязки (источник) или обновляет свойство цели и свойство источника.  
   
 ## <a name="example"></a>Пример  
- Использовании <xref:System.Windows.Data.Binding.Mode%2A> свойство, чтобы указать направление привязки. В следующем списке перечислены доступные параметры для обновлений привязки.  
+ <xref:System.Windows.Data.Binding.Mode%2A?displayProperty=nameWithType> Свойство используется для указания направления привязки. Ниже приведены доступные варианты обновления привязок.  
   
-- <xref:System.Windows.Data.BindingMode.TwoWay> обновляет свойство цели или свойство, при каждом изменении целевого свойства или свойства источника.  
+- <xref:System.Windows.Data.BindingMode.TwoWay?displayProperty=nameWithType>обновляет целевое свойство или свойство, когда изменяется либо свойство Target, либо свойство Source.  
   
-- <xref:System.Windows.Data.BindingMode.OneWay> обновляет свойство цели только при изменении свойства источника.  
+- <xref:System.Windows.Data.BindingMode.OneWay?displayProperty=nameWithType>обновляет свойство Target только при изменении свойства Source.  
   
-- <xref:System.Windows.Data.BindingMode.OneTime> обновляет свойство цели только при запуске приложения или при <xref:System.Windows.FrameworkElement.DataContext%2A> подвергается изменению.  
+- <xref:System.Windows.Data.BindingMode.OneTime?displayProperty=nameWithType>обновляет целевое свойство только при запуске приложения или при <xref:System.Windows.FrameworkElement.DataContext%2A> изменении.  
   
-- <xref:System.Windows.Data.BindingMode.OneWayToSource> Обновляет свойство источника при изменении свойства цели.  
+- <xref:System.Windows.Data.BindingMode.OneWayToSource?displayProperty=nameWithType>обновляет свойство Source при изменении целевого свойства.  
   
-- <xref:System.Windows.Data.BindingMode.Default> по умолчанию <xref:System.Windows.Data.Binding.Mode%2A> значение целевого свойства для использования.  
+- <xref:System.Windows.Data.BindingMode.Default?displayProperty=nameWithType>вызывает использование значения <xref:System.Windows.Data.Binding.Mode%2A> по умолчанию целевого свойства.  
   
  Дополнительные сведения см. в описании перечисления <xref:System.Windows.Data.BindingMode>.  
   
@@ -35,9 +36,9 @@ ms.locfileid: "64625332"
   
  [!code-xaml[DirectionalBinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#4)]  
   
- Для обнаружения изменений в источнике (применимо к <xref:System.Windows.Data.BindingMode.OneWay> и <xref:System.Windows.Data.BindingMode.TwoWay> привязок), источник должен реализовывать механизм уведомлений об изменениях соответствующее свойство <xref:System.ComponentModel.INotifyPropertyChanged>. См. в разделе [реализация уведомления об изменении свойства](how-to-implement-property-change-notification.md) пример <xref:System.ComponentModel.INotifyPropertyChanged> реализации.  
+ Для обнаружения изменений источника (применимо <xref:System.Windows.Data.BindingMode.OneWay> к <xref:System.Windows.Data.BindingMode.TwoWay> привязкам и) источник должен реализовать подходящий механизм уведомления об <xref:System.ComponentModel.INotifyPropertyChanged>изменении свойств, например. Пример<xref:System.ComponentModel.INotifyPropertyChanged> реализации см. в разделе [Реализация уведомления об изменении свойства](how-to-implement-property-change-notification.md) .  
   
- Для <xref:System.Windows.Data.BindingMode.TwoWay> или <xref:System.Windows.Data.BindingMode.OneWayToSource> привязок, можно управлять временем обновлений источника, задав <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> свойство. Дополнительные сведения см. в разделе <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
+ Для <xref:System.Windows.Data.BindingMode.TwoWay> привязок или <xref:System.Windows.Data.BindingMode.OneWayToSource> можно управлять временем обновлений <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> источника, задав свойство. Дополнительные сведения см. в разделе <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
   
 ## <a name="see-also"></a>См. также
 

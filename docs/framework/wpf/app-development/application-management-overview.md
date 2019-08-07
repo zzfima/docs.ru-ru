@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: d8e26ff197e22ffa18b4acdd020b80879023c0f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a5808261ec9fe957ee993177590446389f219609
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364088"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818017"
 ---
 # <a name="application-management-overview"></a>Общие сведения об управлении приложением
 Все приложения имеют тенденцию совместно использовать общий набор функциональных возможностей, который применяется к реализации приложения и управлению им. В этом разделе приводятся общие сведения о функциональных <xref:System.Windows.Application> возможностях класса для создания приложений и управления ими.  
@@ -293,7 +293,7 @@ ms.locfileid: "68364088"
   
 - Выполняется переход к XBAP из.  
   
-- В [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]при закрытии вкладки, на которой размещается XBAP.  
+- В Internet Explorer, когда вкладка, на которой размещается XBAP, закрыта.  
   
 - Закрывается браузер.  
   

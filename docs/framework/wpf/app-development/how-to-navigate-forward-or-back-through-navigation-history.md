@@ -8,36 +8,36 @@ helpviewer_keywords:
 - history [WPF], navigating forward
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
-ms.openlocfilehash: 00a41fcf85583ec0d081a2fa099f3a77cfcd2900
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85d3562246170901d83d6314caec5747d52fb9a0
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625358"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817967"
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>Практическое руководство. Переход вперед или назад по журналу навигации
-В этом примере показано, как для перехода к записи в журнале переходов вперед или назад.  
+В этом примере показано, как перейти вперед или назад к записям в журнале навигации.  
   
 ## <a name="example"></a>Пример  
- Код, выполняемый из содержимого в следующими узлами можно перейти вперед или назад по журналу переходов, одной записи за раз.  
+ Код, запускаемый из содержимого на следующих узлах, может перемещаться вперед или назад через журнал навигации, по одной записи за раз.  
   
-- <xref:System.Windows.Navigation.NavigationWindow> С помощью <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Navigation.NavigationWindow>использующ<xref:System.Windows.Navigation.NavigationService>  
   
-- <xref:System.Windows.Controls.Frame> С помощью <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Controls.Frame>использующ<xref:System.Windows.Navigation.NavigationService>  
   
-- [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
+- Internet Explorer  
   
- Прежде чем можно будет перейти вперед на одну запись, сначала следует проверить, записи в журнале переходов вперед, проверяя **CanGoForward** свойство. Чтобы перейти вперед на одну запись, необходимо вызвать **GoForward** метод. Это показано в следующем примере:  
+ Прежде чем можно будет перейти вперед к одной записи, необходимо сначала проверить наличие записей в журнале переходов вперед, проверив свойство **кангофорвард** . Для перехода вперед на одну запись вызывается метод **GoForward** . Это показано в следующем примере:  
   
  [!code-csharp[HOWTONavigationSnippets#NavigateForwardCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigateforwardcode)]
  [!code-vb[HOWTONavigationSnippets#NavigateForwardCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigateforwardcode)]  
   
- Прежде чем вы можете перейти назад на одну запись, необходимо сначала проверить, записи в журнале переходов назад, проверяя **CanGoBack** свойство. Чтобы перейти назад на одну запись, необходимо вызвать **GoBack** метод. Это показано в следующем примере:  
+ Прежде чем переходить к одной записи, необходимо сначала проверить наличие записей в журнале переходов назад, изучив свойство **CanGoBack** . Для перехода назад к одной записи вызывается метод **GoBack** . Это показано в следующем примере:  
   
  [!code-csharp[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigatebackcode)]
  [!code-vb[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigatebackcode)]  
   
- **Значение свойства CanGoForward**, **GoForward**, **CanGoBack**, и **GoBack** реализуются <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>, и <xref:System.Windows.Navigation.NavigationService>.  
+ **Кангофорвард**, **GoForward**, **CanGoBack**и **GoBack** реализуются с помощью <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>и <xref:System.Windows.Navigation.NavigationService>.  
   
 > [!NOTE]
->  При вызове метода **GoForward**, и нет записей в журнале переходов вперед, или при вызове **GoBack**, и нет записей в журнале переходов назад, <xref:System.InvalidOperationException> возникает исключение.
+>  При вызове **GoForward**и отсутствии записей в журнале переходов вперед или при вызове программы **GoBack**и отсутствии записей в <xref:System.InvalidOperationException> журнале переходов назад создается исключение.

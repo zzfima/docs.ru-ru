@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 13ad16ab768cdaee96cab29811e2ed058dee977a
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: bc5e2c88314c2f590aeddcfd37bd04c3a7400804
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512241"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796477"
 ---
 # <a name="c-operators-c-reference"></a>Операторы C# (справочник по C#)
 
@@ -59,7 +59,7 @@ C# предоставляет ряд стандартных операторов
 
 [unchecked](../keywords/unchecked.md) — отключает проверку на переполнение при выполнении операций с целыми числами. Это поведение установлено для компилятора по умолчанию.
 
-[default(T)](../../programming-guide/statements-expressions-operators/default-value-expressions.md) — создает значение типа T по умолчанию.
+[default(T)](default.md) — создает значение типа T по умолчанию.
 
 [nameof](nameof.md) — используется для получения простого (неполного) имени переменной, типа или члена в виде строковой константы.
 

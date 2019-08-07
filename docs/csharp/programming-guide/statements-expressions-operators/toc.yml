@@ -17,8 +17,6 @@
           href: lambda-expressions.md
         - name: Практическое руководство. Использование лямбда-выражений в запросах
           href: how-to-use-lambda-expressions-in-a-query.md
-    - name: Выражения значения по умолчанию
-      href: default-value-expressions.md
     - name: Равенства и сравнения на равенство
       items:
         - name: Сравнения на равенство

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 1149a70fc723a82144d13cbd079e3287b52ec4fb
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 8fa9f2dd668efca6a3108973ff792cc17b37b410
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401483"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818038"
 ---
 # <a name="input-overview"></a>Общие сведения о входных данных
 <a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Подсистема предоставляет мощный API для получения входных данных с различных устройств, включая мышь, клавиатуру, касание и перо. В этом разделе описываются службы, предоставляемые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], и объясняется архитектура систем ввода.
@@ -113,7 +113,7 @@ ms.locfileid: "68401483"
 ## <a name="text-input"></a>Текстовый ввод
  Это <xref:System.Windows.ContentElement.TextInput> событие позволяет ожидать ввода текста независимым от устройства образом. Клавиатура является основным средством ввода текста, но текст также можно вводить и с помощью речи, рукописного ввода и других устройств.
 
- Для ввода [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] с клавиатуры сначала отправляет соответствующие <xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp> события. Если эти события не обрабатываются и ключ является текстовым (а не управляющим ключом, например стрелками направления или функциональными клавишами), <xref:System.Windows.ContentElement.TextInput> то возникает событие.  Не всегда существует простое <xref:System.Windows.ContentElement.KeyDown> однозначное сопоставление между / <xref:System.Windows.ContentElement.KeyUp> событиями и, <xref:System.Windows.ContentElement.TextInput> так как несколько нажатий клавиш могут создавать один символ текстового ввода, а отдельные нажатия клавиш могут создавать несколько символов. Строка.  В первую очередь это относится к таким языкам, как китайский, японский и корейский, которые используют [!INCLUDE[TLA#tla_ime#plural](../../../../includes/tlasharptla-imesharpplural-md.md)] для формирования тысяч возможных символов в соответствующем алфавите.
+ Для ввода [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] с клавиатуры сначала отправляет соответствующие <xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp> события. Если эти события не обрабатываются и ключ является текстовым (а не управляющим ключом, например стрелками направления или функциональными клавишами), <xref:System.Windows.ContentElement.TextInput> то возникает событие.  Не всегда существует простое <xref:System.Windows.ContentElement.KeyDown> однозначное сопоставление между / <xref:System.Windows.ContentElement.KeyUp> событиями и, <xref:System.Windows.ContentElement.TextInput> так как несколько нажатий клавиш могут создавать один символ текстового ввода, а отдельные нажатия клавиш могут создавать несколько символов. Строка.  Это особенно справедливо для таких языков, как китайский, японский и корейский, которые используют редакторы методов ввода (IME) для создания тысяч возможных символов в соответствующих алфавитах.
 
  При [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.KeyEventArgs.Key%2A> <xref:System.Windows.ContentElement.TextInput> отправке <xref:System.Windows.ContentElement.KeyUp> событияустанавливаетсяв<xref:System.Windows.Input.Key.System?displayProperty=nameWithType> значение, если нажатия клавиш могут стать частью события (например, если нажата клавиша ALT + S). / <xref:System.Windows.ContentElement.KeyDown> Это позволяет коду в <xref:System.Windows.ContentElement.KeyDown> обработчике событий <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> проверить наличие и, если он найден, оставить обработку <xref:System.Windows.ContentElement.TextInput> обработчика последующего события. В таких случаях для определения исходного нажатия клавиш <xref:System.Windows.Input.TextCompositionEventArgs> можно использовать различные свойства аргумента. Аналогично, если [!INCLUDE[TLA2#tla_ime](../../../../includes/tla2sharptla-ime-md.md)] объект является активным <xref:System.Windows.Input.Key> , имеет значение <xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>и <xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A> возвращает исходное нажатие клавиши или нажатия клавиш.
 
