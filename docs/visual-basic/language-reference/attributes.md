@@ -4,22 +4,23 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - attributes [Visual Basic]
 ms.assetid: 5deb2b8a-1afd-4dbd-8ee8-f093d74ad0eb
-ms.openlocfilehash: b3f93cfdde8e5063c5bf0503857dfc149ee90026
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a734823d1fedbbd7bb8196c501ac2ee149f3098
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797050"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869046"
 ---
 # <a name="attributes-visual-basic"></a>Атрибуты (Visual Basic)
-Visual Basic предоставляет несколько атрибутов, которые позволяют объектам взаимодействовать с неуправляемым кодом и один атрибут, который позволяет членам модуля осуществляться без имени модуля. Ниже перечислены атрибуты, используемые Visual Basic.  
+
+Visual Basic предоставляет несколько атрибутов, которые позволяют объектам взаимодействовать с неуправляемым кодом и одним атрибутом, который позволяет обращаться к членам модуля без имени модуля. В следующей таблице перечислены атрибуты, используемые Visual Basic.  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|Предписывает компилятору о необходимости добавления метаданных, позволяющих использовать класс должен быть предоставлен как COM-объекта.|  
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Позволяет членам модуля доступны, используя только квалификацию, необходимую для модуля.|  
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Указывает, что массив в структуре или внешней переменной следует рассматривать как массив фиксированной длины.|  
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Указывает, что строка должна рассматриваться как фиксированной длины.|  
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Предписывает компилятору добавлять метаданные, позволяющие предоставить класс в качестве COM-объекта.|
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Разрешает доступ к членам модуля только по квалификации, необходимой для модуля.|
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Указывает, что массив в структуре или нелокальной переменной должен рассматриваться как массив фиксированной длины.|
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Указывает, что строка должна рассматриваться как фиксированная длина.|
   
 ## <a name="see-also"></a>См. также
 
