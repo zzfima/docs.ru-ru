@@ -1,5 +1,5 @@
 ---
-title: Перечисление1 CorElementType
+title: Перечисление CorElementType
 ms.date: 03/30/2017
 api_name:
 - CorElementType
@@ -16,16 +16,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d47e250a35640d15bd494d99442271a070a1dd0a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6057bd48ff4fe3f852f82de2bab972d95fef138c
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781902"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868570"
 ---
-# <a name="corelementtype-enumeration1"></a>Перечисление1 CorElementType
+# <a name="corelementtype-enumeration"></a>Перечисление CorElementType
 
-Указывает, среда CLR <xref:System.Type>, модификатор типа или сведения о типе в сигнатуре типа метаданных.
+Задает среду <xref:System.Type>CLR, модификатор типа или сведения о типе в сигнатуре типа метаданных.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -82,69 +82,69 @@ typedef enum CorElementType {
 |Член|Описание|
 |------------|-----------------|
 |`ELEMENT_TYPE_END`|Используется внутренним образом.|
-|`ELEMENT_TYPE_VOID`|Значение типа void.|
-|`ELEMENT_TYPE_BOOLEAN`|Логический тип.|
+|`ELEMENT_TYPE_VOID`|Тип void.|
+|`ELEMENT_TYPE_BOOLEAN`|Логический тип|
 |`ELEMENT_TYPE_CHAR`|Тип символа.|
 |`ELEMENT_TYPE_I1`|1-байтовое целое число со знаком.|
 |`ELEMENT_TYPE_U1`|1-байтовое целое число без знака.|
-|`ELEMENT_TYPE_I2`|Целое число со знаком длиной 2 байта.|
+|`ELEMENT_TYPE_I2`|2-байтовое целое число со знаком.|
 |`ELEMENT_TYPE_U2`|2-байтовое целое число без знака.|
 |`ELEMENT_TYPE_I4`|4-байтовое целое число со знаком.|
 |`ELEMENT_TYPE_U4`|4-байтовое целое число без знака.|
-|`ELEMENT_TYPE_I8`|8-байтное целое число со знаком.|
+|`ELEMENT_TYPE_I8`|8-байтовое целое число со знаком.|
 |`ELEMENT_TYPE_U8`|8-байтовое целое число без знака.|
-|`ELEMENT_TYPE_R4`|4-байтовое с плавающей запятой.|
-|`ELEMENT_TYPE_R8`|8-байтовое с плавающей запятой.|
-|`ELEMENT_TYPE_STRING`|Тип System.String.|
+|`ELEMENT_TYPE_R4`|4-байтовое число с плавающей запятой.|
+|`ELEMENT_TYPE_R8`|8-байтная плавающая точка.|
+|`ELEMENT_TYPE_STRING`|Тип System. String.|
 |`ELEMENT_TYPE_PTR`|Модификатор типа указателя.|
 |`ELEMENT_TYPE_BYREF`|Модификатор ссылочного типа.|
 |`ELEMENT_TYPE_VALUETYPE`|Модификатор типа значения.|
 |`ELEMENT_TYPE_CLASS`|Модификатор типа класса.|
-|`ELEMENT_TYPE_VAR`|Модификатор типа переменной.|
-|`ELEMENT_TYPE_ARRAY`|Модификатор типа многомерного массива.|
+|`ELEMENT_TYPE_VAR`|Модификатор типа переменной класса.|
+|`ELEMENT_TYPE_ARRAY`|Модификатор многомерного типа массива.|
 |`ELEMENT_TYPE_GENERICINST`|Модификатор типа для универсальных типов.|
 |`ELEMENT_TYPE_TYPEDBYREF`|Типизированная ссылка.|
 |`ELEMENT_TYPE_I`|Размер собственного целого числа.|
-|`ELEMENT_TYPE_U`|Размер собственного целое число без знака.|
+|`ELEMENT_TYPE_U`|Размер целого числа без знака в машинном кодах.|
 |`ELEMENT_TYPE_FNPTR`|Указатель на функцию.|
-|`ELEMENT_TYPE_OBJECT`|Тип System.Object.|
-|`ELEMENT_TYPE_SZARRAY`|Создает одномерный, модификатор типа нулевой нижней границы массива.|
+|`ELEMENT_TYPE_OBJECT`|Тип System. Object.|
+|`ELEMENT_TYPE_SZARRAY`|Модификатор одномерного типа массива с нулевой нижней границей.|
 |`ELEMENT_TYPE_MVAR`|Модификатор типа переменной метода.|
-|`ELEMENT_TYPE_CMOD_REQD`|Обязательный модификатор языка C|
+|`ELEMENT_TYPE_CMOD_REQD`|Обязательный модификатор языка C.|
 |`ELEMENT_TYPE_CMOD_OPT`|Необязательный модификатор языка C.|
 |`ELEMENT_TYPE_INTERNAL`|Используется внутренним образом.|
 |`ELEMENT_TYPE_MAX`|Недопустимый тип.|
 |`ELEMENT_TYPE_MODIFIER`|Используется внутренним образом.|
-|`ELEMENT_TYPE_SENTINEL`|Модификатор типа, который является sentinel список переменное количество параметров.|
+|`ELEMENT_TYPE_SENTINEL`|Модификатор типа, который является Sentinel для списка переменного числа параметров.|
 |`ELEMENT_TYPE_PINNED`|Используется внутренним образом.|
 
 ## <a name="remarks"></a>Примечания
 
-Модификаторы типа формируют основу для представления более сложных типов. Объект `CorElementType` значение модификатора типа применяется к значению, следующим непосредственно за ним в сигнатуре типа. Значение, которое следует за `CorElementType` значение модификатора типа может быть `CorElementType` значение простого типа, маркер метаданных или другое значение, как указано в следующей таблице.
+Модификаторы типа формируют базу для представления более сложных типов. Значение `CorElementType` модификатора типа применяется к значению, которое непосредственно следует за ним в сигнатуре типа. Значение, следующее за `CorElementType` значением модификатора типа, может `CorElementType` быть простым значением типа, маркером метаданных или другим значением, как указано в следующей таблице.
 
 > [!NOTE]
-> Все числа (*номер*, *счетчик аргументов*, *токен метаданных*, *ранг*, *число*и *привязан*) хранятся в виде сжатых целых чисел. См. в разделе [стандарт ECMA-335 — Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) ECMA на веб-сайте сведения.
+> Все числа (*число*, число *аргументов*, *маркер метаданных*, *ранг*, *количество*и *граница*) хранятся в виде сжатых целых чисел. Дополнительные сведения см. в статье [стандартный ECMA-335-Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) на веб-сайте ECMA.
 
 |Модификатор типа|Формат|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \< `CorElementType` значение >|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \< `CorElementType` значение >|
-|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<an `mdTypeDef` metadata token>|
-|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \< `mdTypeDef` токен метаданных >|
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<номер >|
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN> \<boundN>|
-|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \< `mdTypeDef` токен метаданных > \<аргумент Count > \<arg1 >... \<argN >|
-|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<Полная сигнатура для функции, включая соглашение о вызовах >|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<a `CorElementType` value>|
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<номер >|
-|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\< `mdTypeRef` или `mdTypeDef` маркер метаданных >|
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \< `mdTypeRef` или `mdTypeDef` маркер метаданных >|
+|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<значение> `CorElementType`|
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<значение> `CorElementType`|
+|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<маркераметаданных> `mdTypeDef`|
+|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<маркераметаданных> `mdTypeDef`|
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<число >|
+|`ELEMENT_TYPE_ARRAY`|\<ELEMENT_TYPE_ARRAY значение >\<ранг >\<count1 >\<bound1 >... `CorElementType` \<каунтн >\<баундн >|
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<маркер \<метаданных > \<число аргументов > arg1 >... `mdTypeDef` \<argN >|
+|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<полную сигнатуру для функции, включая соглашение о вызовах >|
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<значение> `CorElementType`|
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<число >|
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<> или`mdTypeDef`маркер метаданных `mdTypeRef`|
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<> или`mdTypeDef`маркер метаданных `mdTypeRef`|
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+**Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
 
-**Заголовок.** CorHdr.h
+**Заголовок.** Корхдр. h
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
