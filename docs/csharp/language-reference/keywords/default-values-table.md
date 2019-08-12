@@ -1,75 +1,62 @@
 ---
-title: Справочник по C#. Таблица значений по умолчанию
+title: Таблица значений по умолчанию — справочник по C#
 ms.custom: seodec18
-description: Узнайте значения по умолчанию для типов значений в C#.
-ms.date: 08/23/2018
+description: Узнайте значения по умолчанию для типов в C#.
+ms.date: 07/29/2019
 helpviewer_keywords:
-- constructors [C#], return values
-- keywords [C#], new
+- default [C#]
 - parameterless constructor [C#]
-- defaults [C#]
-- value types [C#], initializing
-- variables [C#], value types
-- constructors [C#], parameterless constructor
-- types [C#], parameterless constructor return values
-ms.openlocfilehash: ec5fb4681f0e0562c5aefdf336841416f96bdf98
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 23fba8269670156000cb68b3aa07ae7c770eada1
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661411"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627742"
 ---
-# <a name="default-values-table-c-reference"></a><span data-ttu-id="dae21-103">Таблица значений по умолчанию (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="dae21-103">Default values table (C# Reference)</span></span>
+# <a name="default-values-table-c-reference"></a><span data-ttu-id="1a89a-103">Таблица значений по умолчанию (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="1a89a-103">Default values table (C# reference)</span></span>
 
-<span data-ttu-id="dae21-104">В следующей таблице показаны значения по умолчанию для [типов значений](value-types.md).</span><span class="sxs-lookup"><span data-stu-id="dae21-104">The following table shows the default values of [value types](value-types.md).</span></span>
+<span data-ttu-id="1a89a-104">В следующей таблице показаны значения по умолчанию для типов C#:</span><span class="sxs-lookup"><span data-stu-id="1a89a-104">The following table shows the default values of C# types:</span></span>
 
-|<span data-ttu-id="dae21-105">Тип значения</span><span class="sxs-lookup"><span data-stu-id="dae21-105">Value type</span></span>|<span data-ttu-id="dae21-106">Значение по умолчанию</span><span class="sxs-lookup"><span data-stu-id="dae21-106">Default value</span></span>|
-|----------------|-------------------|
-|[<span data-ttu-id="dae21-107">bool</span><span class="sxs-lookup"><span data-stu-id="dae21-107">bool</span></span>](bool.md)|`false`|
-|[<span data-ttu-id="dae21-108">byte</span><span class="sxs-lookup"><span data-stu-id="dae21-108">byte</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="dae21-109">0</span><span class="sxs-lookup"><span data-stu-id="dae21-109">0</span></span>|
-|[<span data-ttu-id="dae21-110">char</span><span class="sxs-lookup"><span data-stu-id="dae21-110">char</span></span>](char.md)|<span data-ttu-id="dae21-111">'\0'</span><span class="sxs-lookup"><span data-stu-id="dae21-111">'\0'</span></span>|
-|[<span data-ttu-id="dae21-112">decimal</span><span class="sxs-lookup"><span data-stu-id="dae21-112">decimal</span></span>](../builtin-types/floating-point-numeric-types.md)|<span data-ttu-id="dae21-113">0M</span><span class="sxs-lookup"><span data-stu-id="dae21-113">0M</span></span>|
-|[<span data-ttu-id="dae21-114">double</span><span class="sxs-lookup"><span data-stu-id="dae21-114">double</span></span>](../builtin-types/floating-point-numeric-types.md)|<span data-ttu-id="dae21-115">0,0D</span><span class="sxs-lookup"><span data-stu-id="dae21-115">0.0D</span></span>|
-|[<span data-ttu-id="dae21-116">enum</span><span class="sxs-lookup"><span data-stu-id="dae21-116">enum</span></span>](enum.md)|<span data-ttu-id="dae21-117">Значение, создаваемое выражением `(E)0`, где `E` — это идентификатор перечисления.</span><span class="sxs-lookup"><span data-stu-id="dae21-117">The value produced by the expression `(E)0`, where `E` is the enum identifier.</span></span>|
-|[<span data-ttu-id="dae21-118">float</span><span class="sxs-lookup"><span data-stu-id="dae21-118">float</span></span>](../builtin-types/floating-point-numeric-types.md)|<span data-ttu-id="dae21-119">0,0F</span><span class="sxs-lookup"><span data-stu-id="dae21-119">0.0F</span></span>|
-|[<span data-ttu-id="dae21-120">int</span><span class="sxs-lookup"><span data-stu-id="dae21-120">int</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="dae21-121">0</span><span class="sxs-lookup"><span data-stu-id="dae21-121">0</span></span>|
-|[<span data-ttu-id="dae21-122">long</span><span class="sxs-lookup"><span data-stu-id="dae21-122">long</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="dae21-123">0L</span><span class="sxs-lookup"><span data-stu-id="dae21-123">0L</span></span>|
-|[<span data-ttu-id="dae21-124">sbyte</span><span class="sxs-lookup"><span data-stu-id="dae21-124">sbyte</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="dae21-125">0</span><span class="sxs-lookup"><span data-stu-id="dae21-125">0</span></span>|
-|[<span data-ttu-id="dae21-126">short</span><span class="sxs-lookup"><span data-stu-id="dae21-126">short</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="dae21-127">0</span><span class="sxs-lookup"><span data-stu-id="dae21-127">0</span></span>|
-|[<span data-ttu-id="dae21-128">struct</span><span class="sxs-lookup"><span data-stu-id="dae21-128">struct</span></span>](struct.md)|<span data-ttu-id="dae21-129">Значение, создаваемое путем установки значений по умолчанию для всех полей с типами значений и значений `null` для всех полей ссылочного типа.</span><span class="sxs-lookup"><span data-stu-id="dae21-129">The value produced by setting all value-type fields to their default values and all reference-type fields to `null`.</span></span>|
-|[<span data-ttu-id="dae21-130">uint</span><span class="sxs-lookup"><span data-stu-id="dae21-130">uint</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="dae21-131">0</span><span class="sxs-lookup"><span data-stu-id="dae21-131">0</span></span>|
-|[<span data-ttu-id="dae21-132">ulong</span><span class="sxs-lookup"><span data-stu-id="dae21-132">ulong</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="dae21-133">0</span><span class="sxs-lookup"><span data-stu-id="dae21-133">0</span></span>|
-|[<span data-ttu-id="dae21-134">ushort</span><span class="sxs-lookup"><span data-stu-id="dae21-134">ushort</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="dae21-135">0</span><span class="sxs-lookup"><span data-stu-id="dae21-135">0</span></span>|
+|<span data-ttu-id="1a89a-105">Тип</span><span class="sxs-lookup"><span data-stu-id="1a89a-105">Type</span></span>|<span data-ttu-id="1a89a-106">Значение по умолчанию</span><span class="sxs-lookup"><span data-stu-id="1a89a-106">Default value</span></span>|
+|---------|------------------|
+|<span data-ttu-id="1a89a-107">любой ссылочный тип;</span><span class="sxs-lookup"><span data-stu-id="1a89a-107">Any reference type</span></span>|`null`|
+|<span data-ttu-id="1a89a-108">Любой [встроенный целочисленный тип](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="1a89a-108">Any [built-in integral numeric type](../builtin-types/integral-numeric-types.md)</span></span>|<span data-ttu-id="1a89a-109">Ноль (0)</span><span class="sxs-lookup"><span data-stu-id="1a89a-109">0 (zero)</span></span>|
+|<span data-ttu-id="1a89a-110">Любой [встроенный тип с плавающей запятой](../builtin-types/floating-point-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="1a89a-110">Any [built-in floating-point numeric type](../builtin-types/floating-point-numeric-types.md)</span></span>|<span data-ttu-id="1a89a-111">Ноль (0)</span><span class="sxs-lookup"><span data-stu-id="1a89a-111">0 (zero)</span></span>|
+|[<span data-ttu-id="1a89a-112">bool</span><span class="sxs-lookup"><span data-stu-id="1a89a-112">bool</span></span>](bool.md)|`false`|
+|[<span data-ttu-id="1a89a-113">char</span><span class="sxs-lookup"><span data-stu-id="1a89a-113">char</span></span>](char.md)|<span data-ttu-id="1a89a-114">`'\0'` (U+0000)</span><span class="sxs-lookup"><span data-stu-id="1a89a-114">`'\0'` (U+0000)</span></span>|
+|[<span data-ttu-id="1a89a-115">enum</span><span class="sxs-lookup"><span data-stu-id="1a89a-115">enum</span></span>](enum.md)|<span data-ttu-id="1a89a-116">Значение, создаваемое выражением `(E)0`, где `E` — это идентификатор перечисления.</span><span class="sxs-lookup"><span data-stu-id="1a89a-116">The value produced by the expression `(E)0`, where `E` is the enum identifier.</span></span>|
+|[<span data-ttu-id="1a89a-117">struct</span><span class="sxs-lookup"><span data-stu-id="1a89a-117">struct</span></span>](struct.md)|<span data-ttu-id="1a89a-118">Значение, создаваемое путем установки значений по умолчанию для всех полей с типами значений и значений `null` для всех полей ссылочного типа.</span><span class="sxs-lookup"><span data-stu-id="1a89a-118">The value produced by setting all value-type fields to their default values and all reference-type fields to `null`.</span></span>|
+|<span data-ttu-id="1a89a-119">Любой [тип значения, допускающий значение NULL](../../programming-guide/nullable-types/index.md)</span><span class="sxs-lookup"><span data-stu-id="1a89a-119">Any [nullable value type](../../programming-guide/nullable-types/index.md)</span></span>|<span data-ttu-id="1a89a-120">Экземпляр, свойство `false` которого имеет значение <xref:System.Nullable%601.HasValue%2A>, а свойство <xref:System.Nullable%601.Value%2A> не определено.</span><span class="sxs-lookup"><span data-stu-id="1a89a-120">An instance for which the <xref:System.Nullable%601.HasValue%2A> property is `false` and the <xref:System.Nullable%601.Value%2A> property is undefined.</span></span> <span data-ttu-id="1a89a-121">Это значение по умолчанию также называется значением *NULL* типа значения, допускающего значение NULL.</span><span class="sxs-lookup"><span data-stu-id="1a89a-121">That default value is also known as the *null* value of the nullable value type.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="dae21-136">Примечания</span><span class="sxs-lookup"><span data-stu-id="dae21-136">Remarks</span></span>
-
-<span data-ttu-id="dae21-137">Неинициализированные переменные нельзя использовать в C#.</span><span class="sxs-lookup"><span data-stu-id="dae21-137">You cannot use uninitialized variables in C#.</span></span> <span data-ttu-id="dae21-138">Вы можете инициализировать переменную со значением по умолчанию для ее типа.</span><span class="sxs-lookup"><span data-stu-id="dae21-138">You can initialize a variable with the default value of its type.</span></span> <span data-ttu-id="dae21-139">Вы также можете использовать значение типа по умолчанию для указания значения по умолчанию [необязательного аргумента](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments) метода.</span><span class="sxs-lookup"><span data-stu-id="dae21-139">You also can use the default value of a type to specify the default value of a method's [optional argument](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments).</span></span>
-
-<span data-ttu-id="dae21-140">Используйте [выражение значения по умолчанию](../../programming-guide/statements-expressions-operators/default-value-expressions.md), чтобы получить значение типа по умолчанию, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="dae21-140">Use the [default value expression](../../programming-guide/statements-expressions-operators/default-value-expressions.md) to produce the default value of a type, as the following example shows:</span></span>
+<span data-ttu-id="1a89a-122">Используйте [выражение значения по умолчанию](../../programming-guide/statements-expressions-operators/default-value-expressions.md), чтобы получить значение типа по умолчанию, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="1a89a-122">Use the [default value expression](../../programming-guide/statements-expressions-operators/default-value-expressions.md) to produce the default value of a type, as the following example shows:</span></span>
 
 ```csharp
 int a = default(int);
 ```
 
-<span data-ttu-id="dae21-141">Начиная с C# 7.1 вы можете использовать литерал [`default` ](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) для инициализации переменной со значением по умолчанию для ее типа:</span><span class="sxs-lookup"><span data-stu-id="dae21-141">Beginning with C# 7.1, you can use the [`default` literal](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) to initialize a variable with the default value of its type:</span></span>
+<span data-ttu-id="1a89a-123">Начиная с C# 7.1 вы можете использовать литерал [`default` ](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) для инициализации переменной со значением по умолчанию для ее типа:</span><span class="sxs-lookup"><span data-stu-id="1a89a-123">Beginning with C# 7.1, you can use the [`default` literal](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) to initialize a variable with the default value of its type:</span></span>
 
 ```csharp
 int a = default;
 ```
 
-<span data-ttu-id="dae21-142">Также можно использовать конструктор без параметров или неявный конструктор без параметров, чтобы получить значение по умолчанию для типа значения, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="dae21-142">You also can use the parameterless constructor or the implicit parameterless constructor to produce the default value of a value type, as the following example shows.</span></span> <span data-ttu-id="dae21-143">Дополнительные сведения о конструкторах см. в статье [Конструкторы](../../programming-guide/classes-and-structs/constructors.md).</span><span class="sxs-lookup"><span data-stu-id="dae21-143">For more information about constructors, see the [Constructors](../../programming-guide/classes-and-structs/constructors.md) article.</span></span>
+<span data-ttu-id="1a89a-124">Для типа значения неявный конструктор без параметров также создает значение по умолчанию для типа, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="1a89a-124">For a value type, the implicit parameterless constructor also produces the default value of the type, as the following example shows:</span></span>
 
-```csharp
-int a = new int();
+```csharp-interactive
+var n = new System.Numerics.Complex();
+Console.WriteLine(n);  // output: (0, 0)
 ```
 
-<span data-ttu-id="dae21-144">Значение по умолчанию любого [ссылочного типа](reference-types.md) — `null`.</span><span class="sxs-lookup"><span data-stu-id="dae21-144">The default value of any [reference type](reference-types.md) is `null`.</span></span> <span data-ttu-id="dae21-145">Значение по умолчанию для [типа, допускающего значение null](../../programming-guide/nullable-types/index.md), — это экземпляр, свойство <xref:System.Nullable%601.HasValue%2A> которого имеет значение `false` и свойство <xref:System.Nullable%601.Value%2A> которого не определено.</span><span class="sxs-lookup"><span data-stu-id="dae21-145">The default value of a [nullable type](../../programming-guide/nullable-types/index.md) is an instance for which the <xref:System.Nullable%601.HasValue%2A> property is `false` and the <xref:System.Nullable%601.Value%2A> property is undefined.</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="1a89a-125">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="1a89a-125">C# language specification</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="dae21-146">См. также</span><span class="sxs-lookup"><span data-stu-id="dae21-146">See also</span></span>
+<span data-ttu-id="1a89a-126">Дополнительные сведения см. в следующих разделах статьи [Спецификация языка C#](~/_csharplang/spec/introduction.md):</span><span class="sxs-lookup"><span data-stu-id="1a89a-126">For more information, see the following sections of the [C# language specification](~/_csharplang/spec/introduction.md):</span></span>
 
-- [<span data-ttu-id="dae21-147">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="dae21-147">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="dae21-148">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="dae21-148">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="dae21-149">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="dae21-149">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="dae21-150">Типы значений</span><span class="sxs-lookup"><span data-stu-id="dae21-150">Value types</span></span>](value-types.md)
-- [<span data-ttu-id="dae21-151">Таблица типов значений</span><span class="sxs-lookup"><span data-stu-id="dae21-151">Value types table</span></span>](value-types-table.md)
-- [<span data-ttu-id="dae21-152">Таблица встроенных типов</span><span class="sxs-lookup"><span data-stu-id="dae21-152">Built-in types table</span></span>](built-in-types-table.md)
+- [<span data-ttu-id="1a89a-127">Значения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="1a89a-127">Default values</span></span>](~/_csharplang/spec/variables.md#default-values)
+- [<span data-ttu-id="1a89a-128">Конструкторы по умолчанию</span><span class="sxs-lookup"><span data-stu-id="1a89a-128">Default constructors</span></span>](~/_csharplang/spec/types.md#default-constructors)
+
+## <a name="see-also"></a><span data-ttu-id="1a89a-129">См. также</span><span class="sxs-lookup"><span data-stu-id="1a89a-129">See also</span></span>
+
+- [<span data-ttu-id="1a89a-130">справочник по C#</span><span class="sxs-lookup"><span data-stu-id="1a89a-130">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="1a89a-131">Ключевые слова C#</span><span class="sxs-lookup"><span data-stu-id="1a89a-131">C# keywords</span></span>](index.md)
+- [<span data-ttu-id="1a89a-132">Таблица встроенных типов</span><span class="sxs-lookup"><span data-stu-id="1a89a-132">Built-in types table</span></span>](built-in-types-table.md)
+- [<span data-ttu-id="1a89a-133">Конструкторы</span><span class="sxs-lookup"><span data-stu-id="1a89a-133">Constructors</span></span>](../../programming-guide/classes-and-structs/constructors.md)
