@@ -1,49 +1,32 @@
 ---
-title: Справочник по C#. Таблица значений по умолчанию
+title: Таблица значений по умолчанию — справочник по C#
 ms.custom: seodec18
-description: Узнайте значения по умолчанию для типов значений в C#.
-ms.date: 08/23/2018
+description: Узнайте значения по умолчанию для типов в C#.
+ms.date: 07/29/2019
 helpviewer_keywords:
-- constructors [C#], return values
-- keywords [C#], new
+- default [C#]
 - parameterless constructor [C#]
-- defaults [C#]
-- value types [C#], initializing
-- variables [C#], value types
-- constructors [C#], parameterless constructor
-- types [C#], parameterless constructor return values
-ms.openlocfilehash: ec5fb4681f0e0562c5aefdf336841416f96bdf98
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 23fba8269670156000cb68b3aa07ae7c770eada1
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661411"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627742"
 ---
 # <a name="default-values-table-c-reference"></a>Таблица значений по умолчанию (справочник по C#)
 
-В следующей таблице показаны значения по умолчанию для [типов значений](value-types.md).
+В следующей таблице показаны значения по умолчанию для типов C#:
 
-|Тип значения|Значение по умолчанию|
-|----------------|-------------------|
+|Тип|Значение по умолчанию|
+|---------|------------------|
+|любой ссылочный тип;|`null`|
+|Любой [встроенный целочисленный тип](../builtin-types/integral-numeric-types.md)|Ноль (0)|
+|Любой [встроенный тип с плавающей запятой](../builtin-types/floating-point-numeric-types.md)|Ноль (0)|
 |[bool](bool.md)|`false`|
-|[byte](../builtin-types/integral-numeric-types.md)|0|
-|[char](char.md)|'\0'|
-|[decimal](../builtin-types/floating-point-numeric-types.md)|0M|
-|[double](../builtin-types/floating-point-numeric-types.md)|0,0D|
+|[char](char.md)|`'\0'` (U+0000)|
 |[enum](enum.md)|Значение, создаваемое выражением `(E)0`, где `E` — это идентификатор перечисления.|
-|[float](../builtin-types/floating-point-numeric-types.md)|0,0F|
-|[int](../builtin-types/integral-numeric-types.md)|0|
-|[long](../builtin-types/integral-numeric-types.md)|0L|
-|[sbyte](../builtin-types/integral-numeric-types.md)|0|
-|[short](../builtin-types/integral-numeric-types.md)|0|
 |[struct](struct.md)|Значение, создаваемое путем установки значений по умолчанию для всех полей с типами значений и значений `null` для всех полей ссылочного типа.|
-|[uint](../builtin-types/integral-numeric-types.md)|0|
-|[ulong](../builtin-types/integral-numeric-types.md)|0|
-|[ushort](../builtin-types/integral-numeric-types.md)|0|
-
-## <a name="remarks"></a>Примечания
-
-Неинициализированные переменные нельзя использовать в C#. Вы можете инициализировать переменную со значением по умолчанию для ее типа. Вы также можете использовать значение типа по умолчанию для указания значения по умолчанию [необязательного аргумента](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments) метода.
+|Любой [тип значения, допускающий значение NULL](../../programming-guide/nullable-types/index.md)|Экземпляр, свойство `false` которого имеет значение <xref:System.Nullable%601.HasValue%2A>, а свойство <xref:System.Nullable%601.Value%2A> не определено. Это значение по умолчанию также называется значением *NULL* типа значения, допускающего значение NULL.|
 
 Используйте [выражение значения по умолчанию](../../programming-guide/statements-expressions-operators/default-value-expressions.md), чтобы получить значение типа по умолчанию, как показано в следующем примере:
 
@@ -57,19 +40,23 @@ int a = default(int);
 int a = default;
 ```
 
-Также можно использовать конструктор без параметров или неявный конструктор без параметров, чтобы получить значение по умолчанию для типа значения, как показано в следующем примере. Дополнительные сведения о конструкторах см. в статье [Конструкторы](../../programming-guide/classes-and-structs/constructors.md).
+Для типа значения неявный конструктор без параметров также создает значение по умолчанию для типа, как показано в следующем примере:
 
-```csharp
-int a = new int();
+```csharp-interactive
+var n = new System.Numerics.Complex();
+Console.WriteLine(n);  // output: (0, 0)
 ```
 
-Значение по умолчанию любого [ссылочного типа](reference-types.md) — `null`. Значение по умолчанию для [типа, допускающего значение null](../../programming-guide/nullable-types/index.md), — это экземпляр, свойство <xref:System.Nullable%601.HasValue%2A> которого имеет значение `false` и свойство <xref:System.Nullable%601.Value%2A> которого не определено.
+## <a name="c-language-specification"></a>Спецификация языка C#
+
+Дополнительные сведения см. в следующих разделах статьи [Спецификация языка C#](~/_csharplang/spec/introduction.md):
+
+- [Значения по умолчанию](~/_csharplang/spec/variables.md#default-values)
+- [Конструкторы по умолчанию](~/_csharplang/spec/types.md#default-constructors)
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)
-- [Руководство по программированию на C#](../../programming-guide/index.md)
-- [Ключевые слова в C#](index.md)
-- [Типы значений](value-types.md)
-- [Таблица типов значений](value-types-table.md)
+- [справочник по C#](../index.md)
+- [Ключевые слова C#](index.md)
 - [Таблица встроенных типов](built-in-types-table.md)
+- [Конструкторы](../../programming-guide/classes-and-structs/constructors.md)

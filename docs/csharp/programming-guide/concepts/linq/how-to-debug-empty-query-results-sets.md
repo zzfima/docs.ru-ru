@@ -2,12 +2,12 @@
 title: Практическое руководство. Отладка пустых наборов результатов запроса (C#)
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: ba82e37ef4f57c78e7ba66676ba90312c2a9400f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 06c878a7751a14a3043b450d9242037ca91ad754
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485762"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710132"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>Практическое руководство. Отладка пустых наборов результатов запроса (C#)
 Одной из наиболее типичных проблем при запросах к XML-деревьям является то, что, если XML-дерево содержит пространство имен по умолчанию, разработчик иногда пишет запрос так, как если бы XML-код не располагался в пространстве имен.  
@@ -16,7 +16,7 @@ ms.locfileid: "66485762"
   
  Второй набор примеров показывает необходимые исправления для запроса XML в пространстве имен.  
   
- Дополнительные сведения см. в разделе [Работа с пространствами имен XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).  
+ Дополнительные сведения см. в статье [Обзор пространств имен DFS (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
 ## <a name="example"></a>Пример  
  Этот пример показывает создание XML в пространстве имен, а также запрос, возвращающий пустой результирующий набор.  

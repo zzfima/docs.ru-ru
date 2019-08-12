@@ -1,15 +1,15 @@
 ---
 title: Учебник. Классификация заявок на поддержку — мультиклассовая классификация
 description: Узнайте, как использовать ML.NET для сценариев многоклассовой классификации, чтобы назначать задачи GitHub определенным областям.
-ms.date: 05/16/2019
+ms.date: 07/31/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: da4f82c1b2c4ebdc8ccc8f307722c2719909cf56
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 3bb556cc591ee35fc14c548e7f53bad58a786e99
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195577"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710308"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Учебник. Классификация заявок на поддержку с использованием мультиклассовой классификации с помощью ML .NET
 
@@ -285,6 +285,25 @@ public static void Evaluate(DataViewSchema trainingDataViewSchema)
 
 [!code-csharp[DisplayMetrics](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#DisplayMetrics)]
 
+### <a name="save-the-model-to-a-file"></a>Сохранение модели в файл
+
+После того как модель будет готова, сохраните ее в файл, чтобы делать прогнозы позднее или в другом приложении. Добавьте следующий код в метод `Evaluate` . 
+
+[!code-csharp[SnippetCallSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetCallSaveModel)]
+
+Создайте метод `SaveModelAsFile` под методом `Evaluate`.
+
+```csharp
+private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingDataViewSchema, ITransformer model)
+{
+
+}
+```
+
+Добавьте приведенный ниже код в метод `SaveModelAsFile`. Этот код использует метод [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) для сериализации и хранения обученной модели в виде ZIP-файла.
+
+[!code-csharp[SnippetSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetSaveModel)]
+
 ## <a name="deploy-and-predict-with-a-model"></a>Развертывание и прогнозирование с помощью модели
 
 Добавьте вызов нового метода из метода `Main`, сразу после вызова метода `Evaluate`, используя следующий код:
@@ -302,10 +321,15 @@ private static void PredictIssue()
 
 Метод `PredictIssue` выполняет следующие задачи:
 
+* загрузка сохраненной модели;
 * создание одной задачи с тестовыми данными;
 * прогнозирование области на основе тестовых данных;
 * объединение тестовых данных и прогнозов для создания отчетов;
 * отображение результатов прогнозирования.
+
+Загрузите сохраненную модель в приложение, добавив в метод `PredictIssue` следующий код:
+
+[!code-csharp[SnippetLoadModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetLoadModel)]
 
 Добавьте задачу GitHub для тестирования прогноза обученной модели в методе `Predict`, создав экземпляр `GitHubIssue`:
 

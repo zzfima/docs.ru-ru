@@ -1,5 +1,5 @@
 ---
-title: Упаковка сборки для модели COM
+title: Упаковка сборки .NET Framework для COM
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb45fc253e24c9770436432d2734ba8fce249453
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 1ca87d688d6802df967ea81b8297b099350f1c86
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662372"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629323"
 ---
-# <a name="packaging-an-assembly-for-com"></a>Упаковка сборки для модели COM
+# <a name="packaging-a-net-framework-assembly-for-com"></a>Упаковка сборки .NET Framework для COM
 
 Разработчики приложений на основе модели COM могут использовать следующую информацию об управляемых типах, которые они планируют включать в свои приложения:
 
@@ -33,13 +33,13 @@ ms.locfileid: "67662372"
 
   Некоторые управляемые типы невидимы в модели COM, другие видны, но недоступны для создания, однако третьи можно как видеть, так и создавать. В сборку можно включать типы любого вида в любом сочетании. Для полноты информации определите типы в сборке, которые будут предоставлены модели COM. Особое внимание уделите типам, входящим в подмножество типов, предоставляемых платформе .NET Framework.
 
-  Дополнительные сведения см. в разделе [Уточнение типов .NET для взаимодействия](qualifying-net-types-for-interoperation.md).
+  Дополнительные сведения см. в разделе [Уточнение типов .NET для взаимодействия](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md).
 
 - Инструкции по управлению версиями
 
   В отношении управления версиями управляемых классов, которые реализуют интерфейс класса (создаваемые в результате COM-взаимодействия класс), действуют определенные ограничения.
 
-  Рекомендации по использованию интерфейса класса см. в разделе [Introducing the class interface](com-callable-wrapper.md#introducing-the-class-interface) (Введение в интерфейс класса).
+  Рекомендации по использованию интерфейса класса см. в разделе [Introducing the class interface](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface) (Введение в интерфейс класса).
 
 - Инструкции по развертыванию
 
@@ -94,8 +94,8 @@ ms.locfileid: "67662372"
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [Предоставление компонентов .NET Framework клиентам COM](exposing-dotnet-components-to-com.md)
-- [Oпределение типов .NET для взаимодействия](qualifying-net-types-for-interoperation.md)
-- [Introducing the class interface](com-callable-wrapper.md#introducing-the-class-interface) (Введение в интерфейс класса)
+- [Oпределение типов .NET для взаимодействия](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
+- [Introducing the class interface](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface) (Введение в интерфейс класса)
 - [Вопросы безопасности сборок](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (программа экспорта библиотек типов)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Регистрация сборок в COM](registering-assemblies-with-com.md)

@@ -1,7 +1,7 @@
 ---
 title: Лямбда-выражения (руководство по программированию на C#)
 ms.custom: seodec18
-ms.date: 03/14/2019
+ms.date: 07/29/2019
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -9,38 +9,44 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 546feb6f3c4515ceecdb5b5afa14c0fc99ab7020
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 36dab520d67d08d1b3304f1453bfb2c07a2f1c32
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363910"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671705"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Лямбда-выражения (руководство по программированию на C#)
 
-*Лямбда-выражение* представляет собой блок кода (выражение или блок оператора), который рассматривается как объект. Оно может передаваться в качестве аргумента в методы, а также возвращаться вызовами метода. Лямбда-выражения широко используются для:
+*Лямбда-выражение* является выражением любой из следующих двух форм:
 
-- передачи выполняемого кода в асинхронные методы, такие как <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType>;
+- [Лямбда выражения](#expression-lambdas), имеющая выражение в качестве текста:
 
-- написания [выражений запросов LINQ](../../linq/index.md);
+  ```csharp
+  (input-parameters) => expression
+  ```
 
-- создания [деревьев выражений](../concepts/expression-trees/index.md).
+- [Лямбда оператора](#statement-lambdas), имеющая блок операторов в качестве текста:
 
-Лямбда-выражения — это код, который может быть представлен как делегат или дерево выражений, которое компилируется в делегат. Конкретный тип делегата лямбда-выражения зависит от его параметров и возвращаемого значения. Лямбда-выражения, которые не возвращают значение, соответствуют конкретному делегату `Action` в зависимости от числа параметров. Лямбда-выражения, которые возвращают значение, соответствуют конкретному делегату `Func` в зависимости от числа параметров. Например, лямбда-выражение, которое имеет два параметра, но не возвращает значение, соответствует делегату <xref:System.Action%602>. Лямбда-выражение, которое имеет один параметр и возвращает значение, соответствует делегату <xref:System.Func%602>.
+  ```csharp  
+  (input-parameters) => { <sequence-of-statements> }
+  ```
 
-Лямбда-выражение использует `=>`, [оператор объявления лямбда-выражения](../../language-reference/operators/lambda-operator.md), для отделения списка параметров лямбда-выражения от исполняемого кода. Чтобы создать лямбда-выражение, необходимо указать входные параметры (если они есть) с левой стороны лямбда-оператора, и поместить блок выражений или операторов с другой стороны. Например, однострочное лямбда-выражение `x => x * x` задает параметр с именем `x` и возвращает значение `x` в квадрате. Можно назначить это выражение типу делегата, как показано в следующем примере:
+Используйте [оператор объявления лямбда-выражения`=>`](../../language-reference/operators/lambda-operator.md) для отделения списка параметров лямбда-выражения от исполняемого кода. Чтобы создать лямбда-выражение, необходимо указать входные параметры (если они есть) с левой стороны лямбда-оператора и блок выражений или операторов с другой стороны.
+
+Лямбда-выражение может быть преобразовано в тип [делегата](../../language-reference/builtin-types/reference-types.md#the-delegate-type). Тип делегата, в который может быть преобразовано лямбда-выражение, определяется типами его параметров и возвращаемым значением. Если лямбда-выражение не возвращает значение, оно может быть преобразовано в один из типов делегата `Action`; в противном случае его можно преобразовать в один из типов делегатов `Func`. Например, лямбда-выражение, которое имеет два параметра и не возвращает значение, можно преобразовать в делегат <xref:System.Action%602>. Лямбда-выражение, которое имеет два параметра и возвращает значение, можно преобразовать в делегат <xref:System.Func%602>. В следующем примере лямбда-выражение `x => x * x`, которое указывает параметр с именем `x` и возвращает значение `x` в квадрате, присваивается переменной типа делегата:
 
 [!code-csharp-interactive[lambda is delegate](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Delegate)]
 
-Кроме того, вы можете назначить лямбда-выражение в качестве типа дерева выражения:
+Лямбда выражений также можно преобразовать в типы [дерева выражения](../concepts/expression-trees/index.md), как показано в следующем примере:
 
 [!code-csharp-interactive[lambda is expression tree](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#ExpressionTree)]
 
-Можно также передать его непосредственно в качестве аргумента метода:
+Лямбда-выражения можно использовать в любом коде, для которого требуются экземпляры типов делегатов или деревьев выражений, например в качестве аргумента метода <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> для передачи кода, который должен выполняться в фоновом режиме. Можно также использовать лямбда-выражения при написании [выражений запросов LINQ](../../linq/index.md), как показано в следующем примере:
 
-[!code-csharp-interactive[lambda is argument](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
+[!code-csharp-interactive[lambda is argument in LINQ](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 
-При использовании синтаксиса на основе методов для вызова метода <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> в классе <xref:System.Linq.Enumerable?displayProperty=nameWithType> (как это делается в LINQ to Objects и LINQ to XML) параметром является тип делегата <xref:System.Func%602?displayProperty=nameWithType>. Лямбда-выражение — это наиболее удобный способ создания делегата. При вызове метода <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> в классе <xref:System.Linq.Queryable?displayProperty=nameWithType> (как это делается в LINQ to SQL) типом параметра является тип дерева выражения [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>). Опять же, лямбда-выражения представляют собой самый быстрый способ построения дерева выражений. Лямбда-выражения позволяют вызовам `Select` выглядеть одинаково, хотя на самом деле объект, созданный из лямбда-выражения, имеет другой тип.
+При использовании синтаксиса на основе методов для вызова метода <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> в классе <xref:System.Linq.Enumerable?displayProperty=nameWithType> (например, в LINQ to Objects и LINQ to XML) параметром является тип делегата <xref:System.Func%602?displayProperty=nameWithType>. При вызове метода <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> в классе <xref:System.Linq.Queryable?displayProperty=nameWithType> (например, в LINQ to SQL) типом параметра является тип дерева выражения [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>). В обоих случаях можно использовать одно и то же лямбда-выражение для указания значения параметра. Поэтому оба вызова `Select` выглядят одинаково, хотя на самом деле объект, созданный из лямбда-выражения, имеет другой тип.
   
 ## <a name="expression-lambdas"></a>Выражения-лямбды
 
@@ -73,7 +79,7 @@ ms.locfileid: "68363910"
 Лямбда оператора напоминает выражение-лямбду, за исключением того, что оператор (или операторы) заключается в фигурные скобки:
 
 ```csharp  
-(input-parameters) => { statement; }
+(input-parameters) => { <sequence-of-statements> }
 ```
 
 Тело лямбды оператора может состоять из любого количества операторов; однако на практике обычно используется не более двух-трех.

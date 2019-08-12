@@ -4,16 +4,21 @@ description: Изучите компоненты проектирования п
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: 7ea06e19b4651017079a6ae57136f033e0ce981c
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: cbcdef5b8f5f6334d5545f100976347ade9ee6fd
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65558015"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671872"
 ---
 # <a name="data-transformations"></a>Преобразования данных
 
-Преобразования используются для подготовки данных, применяемых при обучении модели. В этом руководстве рассматриваются преобразования, которые возвращают классы, реализующие интерфейс [IEstimator](xref:Microsoft.ML.IEstimator%601). Преобразования данных можно соединять в цепочки. Каждое преобразование принимает и выводит данные определенных типов и форматов, которые указаны в связанной справочной документации.
+Преобразования данных используются, чтобы:
+- подготовить данные для обучения модели;
+- применить импортированную модель в формате TensorFlow или ONNX;
+- обработать данных после передачи через модель.
+
+В этом руководстве рассматриваются преобразования, которые возвращают классы, реализующие интерфейс [IEstimator](xref:Microsoft.ML.IEstimator%601). Преобразования данных можно соединять в цепочки. Каждое преобразование принимает и выводит данные определенных типов и форматов, которые указаны в связанной справочной документации.
 
 Некоторым преобразованиям данных требуются данные для обучения, чтобы вычислять их параметры. Например, преобразователь <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> позволяет вычислить среднее значение и дисперсию данных для обучения при выполнении операции `Fit()` и использует эти параметры в операции `Transform()`. 
 
@@ -78,6 +83,7 @@ ms.locfileid: "65558015"
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*> | Преобразование пикселей из входного изображения в вектор чисел |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*> | Загрузка изображений из папки в память |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages*> | Изменение размеров изображений |
+| <xref:Microsoft.ML.OnnxCatalog.DnnFeaturizeImage*> | Применяет предварительно обученную модель глубокой нейронной сети (DNN) для преобразования входного изображения в вектор признаков. |
 
 ## <a name="categorical-data-transformations"></a>Преобразование категориальных данных
 
@@ -85,6 +91,17 @@ ms.locfileid: "65558015"
 | --- | --- |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*> | Преобразование одного или нескольких текстовых столбцов в векторы с использованием [прямой](https://en.wikipedia.org/wiki/One-hot) кодировки |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotHashEncoding*> | Преобразование одного или нескольких текстовых столбцов в векторы с использованием прямой кодировки на основе хэша |
+
+## <a name="time-series-data-transformations"></a>Преобразования данных временных рядов
+
+| Transform | Определение |
+| --- | --- |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectAnomalyBySrCnn*> | Обнаружение аномалий во входных данных временных рядов с помощью алгоритма спектрального остатка (SR) |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectChangePointBySsa*> | Обнаружение точек изменений в данных временных рядов с помощью анализа сингулярного спектра (SSA) |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectIidChangePoint*> | Обнаружение точек изменения в независимых и одинаково распределенных (IID) данных временных рядов с использованием адаптивных оценок плотности ядра и показателей мартингала |
+| <xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*> | Прогнозирование данных временных рядов с помощью анализа сингулярного спектра (SSA) |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectSpikeBySsa*> | Обнаружение пиков данных временных рядов с помощью анализа сингулярного спектра (SSA) |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectIidSpike*> | Обнаружение пиков в независимых и одинаково распределенных (IID) данных временных рядов с использованием адаптивных оценок плотности ядра и показателей мартингала |
 
 ## <a name="missing-values"></a>Отсутствующие значения
 
@@ -99,6 +116,35 @@ ms.locfileid: "65558015"
 | --- | --- |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnCount*> | Выбор признаков, у которых значения, заданные не по умолчанию, превышают порог |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnMutualInformation*> | Выбор признаков, от которых больше всего зависят данные в столбце метки |
+
+## <a name="feature-transformations"></a>Преобразования признаков
+
+| Transform | Определение |
+| --- | --- |
+| <xref:Microsoft.ML.KernelExpansionCatalog.ApproximatedKernelMap*> | Сопоставление каждого входного вектора с пространством признаков нижнего измерения, где внутренние продукты приближены к функции ядра, чтобы эти признаки можно было использовать в качестве входных для линейных алгоритмов. |
+| <xref:Microsoft.ML.PcaCatalog.ProjectToPrincipalComponents*> | Уменьшение измерений входного вектора признаков путем применения алгоритма анализа основных компонентов. |
+
+## <a name="explainability-transformations"></a>Преобразования объясняемости
+
+| Transform | Определение |
+| --- | --- |
+| <xref:Microsoft.ML.ExplainabilityCatalog.CalculateFeatureContribution*> | Вычисление результатов вклада для каждого элемента вектора признаков |
+
+## <a name="calibration-transformations"></a>Преобразования калибровки
+
+| Transform | Определение |
+| --- | --- |
+|<xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.String%2CSystem.String%2CSystem.String%29> | Преобразует необработанный показатель двоичного классификатора в вероятность класса с помощью логистической регрессии с параметрами, оцененными с помощью обучающих данных |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.Double%2CSystem.Double%2CSystem.String%29> | Преобразует необработанный показатель двоичного классификатора в вероятность класса с помощью логистической регрессии с фиксированными параметрами |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Naive*> | Преобразует необработанный показатель двоичного классификатора в вероятность класса путем назначения оценки ячейкам и вычисления вероятности на основе распределения между ячейками. |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Isotonic*> | Преобразует необработанную оценку двоичного классификатора в вероятность класса путем назначения оценки ячейкам, где расположение границ и размер ячеек оцениваются с помощью обучающих данных.  |
+
+## <a name="deep-learning-transformations"></a>Преобразование глубокого обучения
+
+| Transform | Определение |
+| --- | --- |
+| <xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel*> | Преобразование входных данных в импортированную модель ONNX |
+| <xref:Microsoft.ML.TensorflowCatalog.LoadTensorFlowModel*> | Преобразование входных данных в импортированную модель TensorFlow |
 
 ## <a name="custom-transformations"></a>Пользовательские преобразования
 

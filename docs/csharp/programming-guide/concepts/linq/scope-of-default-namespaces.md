@@ -1,13 +1,13 @@
 ---
-title: Области пространств имен по умолчанию в C#1
+title: Области пространств имен по умолчанию в C#
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 2eee1b0c79f585710962d8e84fe584bca6b8228b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 0c5f5cccda6ba6a75a8631ed095921b90b02916b
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483611"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868861"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>Области пространств имен по умолчанию в C\#
 Применяемые по умолчанию пространства имен, представленные в XML-дереве, находятся вне области запросов. Если имеется XML, расположенный в используемом по умолчанию пространстве имен, для получения полного имени, которое может быть применено в запросе, то необходимо объявить переменную <xref:System.Xml.Linq.XNamespace> и использовать ее в сочетании с локальным именем.  
@@ -90,4 +90,4 @@ End of result set
   
 ## <a name="see-also"></a>См. также
 
-- [Работа с пространствами имен XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)
+- [Обзор пространств имен (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)

@@ -1,14 +1,14 @@
 ---
 title: Загрузка данных из файлов и других источников
 description: В этой инструкции показано, как загружать данные для обработки и обучения в ML.NET. Изначально данные хранились в файлах или других источниках данных, таких как базы данных, JSON, XML или коллекции в памяти.
-ms.date: 06/25/2019
+ms.date: 08/01/2019
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: fafbe3fed9e3f0b509eda4f9d8967965bde19767
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: d5f3aab14a60a8c9860dc67f1cc98f3b1b3188ed
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397747"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733375"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>Загрузка данных из файлов и других источников
 
@@ -55,7 +55,7 @@ public class HousingData
 - Отдельные столбцы, например `Size` и `CurrentPrices` в классе `HousingData`.
 - Несколько столбцов за раз в виде вектора, например `HistoricalPrices` в классе `HousingData`.
 
-Если у вас есть свойство вектора, примените атрибут [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) к этому свойству в модели данных. Следует отметить, что все элементы в векторе должны быть одного типа.
+Если у вас есть свойство вектора, примените атрибут [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) к этому свойству в модели данных. Следует отметить, что все элементы в векторе должны быть одного типа. Хранение разделенных столбцов позволяет упростить и облегчить проектирование признаков, но в случае большого количества столбцов работа с отдельными столбцами отрицательно влияет на скорость обучения.
 
 ML.NET работает с именами столбцов. Если вы хотите изменить имя столбца, чтобы оно отличалось от имени свойства, используйте атрибут [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute). При создании объектов в памяти тоже можно создавать объекты, используя имя свойства. Однако для обработки данных и создания моделей машинного обучения ML.NET переопределяет свойство со значением, указанным в атрибуте [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) и ссылается на него.
 
@@ -139,6 +139,9 @@ HousingData[] inMemoryCollection = new HousingData[]
 ```
 
 Загрузите эту коллекцию в памяти в [`IDataView`](xref:Microsoft.ML.IDataView) с помощью метода [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*):
+
+> [!IMPORTANT]
+> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) предполагает, что [`IEnumerable`](xref:System.Collections.IEnumerable), откуда он загружается, является потокобезопасным. 
 
 ```csharp
 // Create MLContext
