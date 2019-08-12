@@ -5,7 +5,7 @@
       href: using-delegates.md
     - name: Делегаты с именованными методами и Анонимные методы
       href: delegates-with-named-vs-anonymous-methods.md
-    - name: 'Как выполнить Руководство по программированию на C#. Объединение делегатов (многоадресные делегаты)'
+    - name: 'Руководство по программированию на C#. Объединение делегатов (многоадресные делегаты)'
       href: how-to-combine-delegates-multicast-delegates.md
-    - name: 'Как выполнить Объявление, создание и использование делегата'
+    - name: 'Практическое руководство. Объявление, создание и использование делегата'
       href: how-to-declare-instantiate-and-use-a-delegate.md
