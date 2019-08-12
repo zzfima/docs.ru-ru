@@ -2,12 +2,12 @@
 title: Создание составного пользовательского интерфейса на основе микрослужб
 description: Архитектура микрослужб подходит не только для серверной части. Здесь вы можете кратко ознакомиться с ее применением во внешней интерфейсной части.
 ms.date: 09/20/2018
-ms.openlocfilehash: 55cb2a8096cc8122c94cae50af4384e9392868cf
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0d1825d6183b79a0e10f70fc6cfee6ca79a837d8
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673001"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817829"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Создание составного пользовательского интерфейса на основе микрослужб
 
@@ -43,7 +43,7 @@ ms.locfileid: "68673001"
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
 - **Рубен Оостинга (Ruben Oostinga). Монолитный пользовательский интерфейс в архитектуре микрослужб** \
-  <https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/>
+  <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
 - **Мауро Сервьенти (Mauro Servienti). Как лучше всего скомпоновать пользовательский интерфейс** \
   <https://particular.net/blog/secret-of-better-ui-composition>

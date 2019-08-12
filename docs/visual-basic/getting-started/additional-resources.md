@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: febfe0ae0a3e478109b338b228d0bc306bf56454
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: dc7653b1d792c66b40c0ab1d55a1614c7a69b7d1
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052790"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869064"
 ---
 # <a name="additional-resources"></a>Дополнительные ресурсы
 
@@ -23,40 +23,39 @@ ms.locfileid: "66052790"
 
 ### <a name="on-the-web"></a>В Интернете
 
-|Термин|Определение|
+|URL-адрес|ОПИСАНИЕ|
 |----------|----------------|
 |[Спецификация языка Visual Basic .NET](https://github.com/dotnet/vblang)|Официальный репозиторий в GitHub для проектирования на языке Visual Basic .NET.|
 |[Блог группы разработчиков Microsoft Visual Basic](https://devblogs.microsoft.com/vbteam/)|Доступ к блогу команды разработчиков Visual Basic.|
 
 ### <a name="code-samples"></a>Примеры кода
 
-|Термин|Определение|
+|URL-адрес|ОПИСАНИЕ|
 |----------|----------------|
-|[Коллекция кодов](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=VB&f%5B0%5D.Text=VB.NET)|Скачивайте примеры приложений и другие ресурсы и делитесь ими с сообществом разработчиков.|
 |[Документация по Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)|Содержит примеры, используемые в документации по Visual Basic и .NET.|
 
 ### <a name="forums"></a>Форумы
 
-|Термин|Определение|
+|URL-адрес|ОПИСАНИЕ|
 |----------|----------------|
 |[Форумы по Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|Рассматриваются общие вопросы по Visual Basic.|
 
 ### <a name="videos-and-webcasts"></a>Видеозаписи и веб-трансляции
 
-|Термин|Определение|
+|URL-адрес|ОПИСАНИЕ|
 |----------|----------------|
 |[Channel9](https://channel9.msdn.com/)|Доступ к сообществу посредством видео, вики и форумов.|
 
 ### <a name="support"></a>Поддержка
 
-|Термин|Определение|
+|URL-адрес|ОПИСАНИЕ|
 |----------|----------------|
 |[Поддержка Microsoft](https://support.microsoft.com)|Доступ к статьям базы знаний, страницам загрузки программ и обновлений, веб-трансляциям и другим службам.|
 |[Вопросы по Visual Studio](https://developercommunity.visualstudio.com)|Позволяет регистрировать ошибки или отправлять предложения по .NET и Visual Studio в Майкрософт. Чтобы отправить отчет об ошибке, можно также выбрать **Справка** > **Отправить отзыв** > **Сообщить о проблеме** в Visual Studio.|
 
 ## <a name="third-party-resources"></a>Ресурсы сторонних организаций
 
-|Термин|Определение|
+|URL-адрес|ОПИСАНИЕ|
 |----------|----------------|
 |[VBForums](http://www.vbforums.com/)|Форум для обсуждения Visual Basic, .NET и многого другого.|
 |[vbCity](http://vbcity.com/)|Веб-сайт сообщества, где можно изучать информацию и задавать вопросы по Visual Basic и .NET.|

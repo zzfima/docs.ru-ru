@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 4d1acc758f0121e7450351c63538fd47f28ef732
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 5577a5042ba77e133e3c6ee7760f7c3a4cce0537
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398053"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796581"
 ---
 # <a name="using-structs-c-programming-guide"></a>Использование структур (Руководство по программированию на C#)
 Тип `struct` подходит для представления простых объектов, таких как `Point`, `Rectangle`и `Color`. Хотя point удобно представить в виде [класса](../../../csharp/language-reference/keywords/class.md) с [автоматически реализуемыми свойствами](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), в некоторых сценариях [структура](../../../csharp/language-reference/keywords/struct.md) может оказаться более эффективной. Например, при объявлении массива из 1000 объектов `Point` потребуется выделить дополнительную память для ссылки на каждый объект. В этом случае использование структуры будет более экономичным вариантом. Поскольку платформа .NET Framework содержит объект с именем <xref:System.Drawing.Point>, структура в этом примере называется "Coords".  
@@ -21,7 +21,7 @@ ms.locfileid: "67398053"
   
  При создании объекта структуры с помощью оператора [new](../../../csharp/language-reference/operators/new-operator.md) вызывается соответствующий конструктор в соответствии с [сигнатурой конструктора](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax). В отличие от классов, создавать структуры можно без оператора `new` . В этом случае вызов конструктора не выполняется, что способствует более эффективному выделению ресурсов. Однако поля остаются неназначенными и объект нельзя использовать до инициализации всех полей. Например, невозможно получить или задать значения с помощью свойств.
 
- При создании экземпляра объекта структуры с помощью используемого по умолчанию конструктора без параметров все члены назначаются согласно их [значениям по умолчанию](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md).
+ При создании экземпляра объекта структуры с помощью используемого по умолчанию конструктора без параметров все члены назначаются согласно их [значениям по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md).
   
  При создании конструктора с параметрами для структуры необходимо явно инициализировать все члены. В противном случае один или несколько членов остаются неназначенными и такую структуру использовать невозможно: это вызывает ошибку компилятора CS0171.  
   
