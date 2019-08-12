@@ -3,7 +3,7 @@ items:
     href: index.md
   - name: Буферы фиксированного размера
     href: fixed-size-buffers.md
-  - name: Типы указателей
+  - name: типы указателей
     items:
       - name: Обзор
         href: pointer-types.md
