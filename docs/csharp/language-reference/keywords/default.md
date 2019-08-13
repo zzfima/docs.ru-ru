@@ -8,21 +8,22 @@ f1_keywords:
 helpviewer_keywords:
 - default keyword [C#]
 ms.assetid: 14c48aaa-7d35-4058-a1a4-f53353050579
-ms.openlocfilehash: d1ee9dc731f3cb96bd40935b94113c7c2aa91ff4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f64cab1f6666a0b6c6816eb0d6deeec21dcb454d
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183200"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796317"
 ---
-# <a name="default-c-reference"></a><span data-ttu-id="b57d1-102">default (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="b57d1-102">default (C# Reference)</span></span>
+# <a name="default-c-reference"></a><span data-ttu-id="598a2-102">default (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="598a2-102">default (C# Reference)</span></span>
 
-<span data-ttu-id="b57d1-103">Ключевое слово `default` можно использовать двумя способами:</span><span class="sxs-lookup"><span data-stu-id="b57d1-103">The `default` keyword can be used in two ways:</span></span>
-- <span data-ttu-id="b57d1-104">в качестве [инструкции `switch`](switch.md) для указания метки по умолчанию;</span><span class="sxs-lookup"><span data-stu-id="b57d1-104">The [`switch` statement](switch.md) to specify the default label.</span></span>
-- <span data-ttu-id="b57d1-105">в качестве [выражения значения по умолчанию](../../programming-guide/statements-expressions-operators/default-value-expressions.md) для создания значения типа по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="b57d1-105">A [default value expression](../../programming-guide/statements-expressions-operators/default-value-expressions.md) to produce the default value of a type.</span></span>
+<span data-ttu-id="598a2-103">Ключевое слово `default` можно использовать двумя способами:</span><span class="sxs-lookup"><span data-stu-id="598a2-103">The `default` keyword can be used in two ways:</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="b57d1-106">См. также</span><span class="sxs-lookup"><span data-stu-id="b57d1-106">See also</span></span>
+- <span data-ttu-id="598a2-104">для указания метки по умолчанию в [инструкции `switch`](switch.md);</span><span class="sxs-lookup"><span data-stu-id="598a2-104">To specify the default label in the [`switch` statement](switch.md).</span></span>
+- <span data-ttu-id="598a2-105">в качестве [оператора или литерала по умолчанию](../operators/default.md) для создания значения по умолчанию для типа.</span><span class="sxs-lookup"><span data-stu-id="598a2-105">As the [default operator or literal](../operators/default.md) to produce the default value of a type.</span></span>
 
-- [<span data-ttu-id="b57d1-107">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="b57d1-107">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="b57d1-108">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="b57d1-108">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="b57d1-109">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="b57d1-109">C# Keywords</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="598a2-106">См. также</span><span class="sxs-lookup"><span data-stu-id="598a2-106">See also</span></span>
+
+- [<span data-ttu-id="598a2-107">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="598a2-107">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="598a2-108">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="598a2-108">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="598a2-109">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="598a2-109">C# Keywords</span></span>](index.md)
