@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 364ac31744d41d95ba20b598f8f137257ddbc608
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 64ffd57d8c0bce1d9f409adebd169b4fd3e17e06
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663658"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796858"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Основы сборки мусора
 
 <a name="top"></a> В среде CLR сборщик мусора выполняет функции автоматического диспетчера памяти. Это предоставляет следующие преимущества:
 
-- Позволяет разрабатывать приложение без необходимости освобождать память.
+- Позволяет разрабатывать приложение без необходимости вручную освобождать память для создаваемых объектов.
 
 - Эффективно выделяет память для объектов в управляемой куче.
 

@@ -2,12 +2,12 @@
 title: Новые возможности C# 7.1
 description: Обзор новых возможностей в C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: a95111b6f217a2ca5c520c2d4d70efa0e23742f9
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 18306da709ea30f03f6c42b4a917e9b39695eb16
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347605"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796595"
 ---
 # <a name="whats-new-in-c-71"></a>Новые возможности C# 7.1
 
@@ -30,7 +30,7 @@ C# 7.1 — это первая доработанная версия для C#. 
 
 Чтобы использовать новые возможности доработанного выпуска, [настройте версию языка компилятора](../language-reference/configure-language-version.md), выбрав необходимую.
 
-В оставшейся части этой статьи представлены общие сведения об этих функциях. Каждая функция сопровождается обоснованием. Вы изучите синтаксис Эти функции можно изучить в своей среде с помощью глобального средства `dotnet try`.
+В оставшейся части этой статьи представлены общие сведения об этих функциях. Каждая функция сопровождается обоснованием. Вы изучите синтаксис Эти функции можно изучить в своей среде с помощью глобального средства `dotnet try`:
 
 1. Установите глобальное средство [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
 1. Клонируйте репозиторий [dotnet/try-samples](https://github.com/dotnet/try-samples).
@@ -86,9 +86,7 @@ Func<string, bool> whereClause = default(Func<string, bool>);
 Func<string, bool> whereClause = default;
 ```
 
-См. подробнее об этом усовершенствовании в описании [выражений значений по умолчанию](../programming-guide/statements-expressions-operators/default-value-expressions.md) в руководстве по программированию на C#.
-
-В этом усовершенствовании также изменены некоторые правила синтаксического анализа для [ключевого слова default](../language-reference/keywords/default.md).
+Дополнительные сведения см. в разделе [о литерале default](../language-reference/operators/default.md#default-literal) в статье об [операторе default](../language-reference/operators/default.md).
 
 ## <a name="inferred-tuple-element-names"></a>Выводимые имена элементов кортежа
 

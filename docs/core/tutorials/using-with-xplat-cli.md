@@ -1,16 +1,17 @@
 ---
 title: Начало работы с .NET Core с помощью средств интерфейса командной строки
 description: Пошаговое руководство, описывающее начало работы с .NET Core в Windows, Linux или macOS с помощью интерфейса командной строки (CLI) .NET Core.
-author: cartermp
-ms.date: 09/10/2018
+author: thraka
+ms.author: adegeo
+ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 92ca5149ad5f0e4a50c809a316123fbf77d4152d
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 88e9501a776a026a311c5002674c15acf2324f2b
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545368"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868593"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Начало работы с .NET Core в Windows, Linux и Mac OS с помощью командной строки
 
@@ -153,10 +154,23 @@ dotnet run
    377
    ```
 
-Вот и все! Теперь вы можете воспользоваться изученными здесь основными концепциями, чтобы создавать собственные программы.
+## <a name="publish-your-app"></a>Публикация приложения
 
-Заметьте, что описанные в этом учебнике команды и шаги для запуска приложения используются только во время разработки. Когда вы будете готовы развернуть приложение, рекомендуем ознакомиться с другими [стратегиями развертывания](../deploying/index.md) для приложений .NET Core и командой [`dotnet publish`](../tools/dotnet-publish.md).
+Когда вы будете готовы к распространению приложения, используйте команду [`dotnet publish`](../tools/dotnet-publish.md) для создания папки _publish_ в _bin\\debug\\netcoreapp 2.1.\\publish\\_ (используйте `/` для систем, отличных от Windows). Содержимое папки _publish_ можно распространить на другие платформы, если на них установлена среда выполнения .NET.
+
+Запустить опубликованное приложение можно с помощью команды [dotnet](../tools/dotnet.md):
+
+```console
+$ dotnet bin\Debug\netcoreapp2.1\publish\Hello.dll
+Hello World!
+```
+
+## <a name="conclusion"></a>Заключение
+
+Вот и все! Теперь вы можете воспользоваться изученными здесь основными концепциями, чтобы создавать собственные программы.
 
 ## <a name="see-also"></a>См. также
 
 - [Организация и тестирование проектов с помощью инструментов командной строки .NET Core](testing-with-cli.md)
+- [Публикация приложений .NET Core с помощью интерфейса командной строки](../deploying/deploy-with-cli.md)
+- [Подробнее о развертывании приложений](../deploying/index.md)

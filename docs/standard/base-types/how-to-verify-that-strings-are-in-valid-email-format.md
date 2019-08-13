@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Проверка строк на соответствие формату электронной почты
+title: 'Практическое руководство: Проверка строк на соответствие формату электронной почты'
 ms.date: 12/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -21,13 +21,13 @@ ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6381747bc998f73b374442fcb15e025ca15795d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/24/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "65589520"
 ---
-# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Практическое руководство. Проверка строк на соответствие формату электронной почты
+# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Практическое руководство: Проверка строк на соответствие формату электронной почты
 В следующем примере регулярное выражение используется, чтобы проверить, имеет ли строка допустимый формат адреса электронной почты.  
 
 ## <a name="example"></a>Пример  

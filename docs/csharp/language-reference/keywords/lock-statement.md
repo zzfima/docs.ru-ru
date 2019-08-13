@@ -1,5 +1,5 @@
 ---
-title: Справочник по C#. Оператор lock
+title: Инструкция lock. Справочник по C#
 ms.custom: seodec18
 description: Синхронизация доступа потоков к общему ресурсу с помощью оператора блокировки C#
 ms.date: 10/01/2018
@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: c7d5d4ef7d812e186813cd08f9e4e2adf2ab1a58
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 96609264044e531bcc8671cb226a02fdc1b962b8
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306657"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796458"
 ---
-# <a name="lock-statement-c-reference"></a>Оператор lock (справочник по C#)
+# <a name="lock-statement-c-reference"></a>Инструкция lock. (Справочник по C#)
 
 Оператор `lock` получает взаимоисключающую блокировку заданного объекта перед выполнением определенных операторов, а затем снимает блокировку. Во время блокировки поток, удерживающий блокировку, может снова поставить и снять блокировку. Любой другой поток не может получить блокировку и ожидает ее снятия.
 
@@ -65,14 +65,13 @@ finally
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Дополнительные сведения см. в разделе об [инструкции lock](~/_csharplang/spec/statements.md#the-lock-statement) в документации [Предварительная спецификация C# 6.0](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.SpinLock?displayProperty=nameWithType>
 - <xref:System.Threading.Interlocked?displayProperty=nameWithType>
-- [Справочник по C#](../index.md)
-- [Ключевые слова в C#](index.md)
-- [Ключевые слова инструкций](statement-keywords.md)
+- [справочник по C#](../index.md)
+- [Ключевые слова C#](index.md)
 - [Обзор примитивов синхронизации](../../../standard/threading/overview-of-synchronization-primitives.md)

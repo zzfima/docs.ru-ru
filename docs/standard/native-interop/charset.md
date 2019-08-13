@@ -4,12 +4,12 @@ description: Узнайте, как различные значения коди
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: c50c58ad639b1efb29c13e5124fe3c32e8af96fc
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: cac71c5d09514dfe1244d16224944e05826edfa9
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063340"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817850"
 ---
 # <a name="charsets-and-marshaling"></a>Кодировки и маршалинг
 
@@ -17,9 +17,9 @@ ms.locfileid: "65063340"
 
 В следующей таблице показаны кодировки и способ представления символа или строки при маршалировании в этой кодировке.
 
-| Значение`CharSet`  | Windows            | .NET Core 2.2 и более ранние версии в Unix | .NET Core 3.0 и более поздние версии, Mono в Unix |
+| Значение`CharSet` | Windows            | .NET Core 2.2 и более ранние версии в Unix | .NET Core 3.0 и более поздние версии, Mono в Unix |
 |-----------------|--------------------|-----------------------------------|------------------------------------------|
-| Ansi            | `char` (ANSI)      | `char` (UTF-8)                    | `char` (UTF-8)                           |
+| Ansi            | `char` (системная [кодовая страница Windows (ANSI)](/windows/win32/intl/code-pages) по умолчанию)      | `char` (UTF-8)                    | `char` (UTF-8)                           |
 | Юникод         | `wchar_t` (UTF-16) | `char16_t` (UTF-16)               | `char16_t` (UTF-16)                      |
 | Авто            | `wchar_t` (UTF-16) | `char16_t` (UTF-16)               | `char` (UTF-8)                           |
 

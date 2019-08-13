@@ -8,17 +8,19 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: bf194e207262ecea0511a0b67bbafeadd8d5d31d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 06ebb9edfaf4753b98c3305a90b52e93ee7b4486
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629494"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796632"
 ---
-# <a name="using-namespaces-c-programming-guide"></a>Использование пространств имен (Руководство по программированию в C#)
+# <a name="using-namespaces-c-programming-guide"></a>Использование пространств имен. (Руководство по программированию в C#)
+
 Пространства имен часто используются в программировании на C# двумя способами. Первый способ — платформа .NET Framework использует пространства имен для упорядочения множества ее классов. Второй способ — объявление собственных пространств имен поможет вам контролировать область имен классов и методов в более крупных проектах.  
   
-## <a name="accessing-namespaces"></a>Доступ к пространствам имен  
+## <a name="accessing-namespaces"></a>Доступ к пространствам имен
+
  Большинство приложений на языке C# начинается с раздела директив `using`. В этом разделе перечисляются пространства имен, которые будут часто использоваться приложением, благодаря чему программист может не указывать их полные названия каждый раз, когда вызывается содержащийся в них метод.  
   
  Например, включив строку  
@@ -33,17 +35,20 @@ ms.locfileid: "68629494"
   
  [!code-csharp[csProgGuide#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#30)]  
   
-## <a name="namespace-aliases"></a>Псевдонимы пространств имен  
- С помощью [директивы using](../../../csharp/language-reference/keywords/using-directive.md) также можно создавать псевдонимы [пространств имен](../../../csharp/language-reference/keywords/namespace.md). Например, при использовании ранее указанного пространства имен, содержащего вложенные пространства имен, можно объявить псевдоним для быстрого обращения к нему, как показано в следующем примере:  
+## <a name="namespace-aliases"></a>Псевдонимы пространств имен
+
+ Можно также использовать [директиву `using`](../../language-reference/keywords/using-directive.md) для создания псевдонимов пространства имен. Используйте [квалификатор псевдонима пространства имен `::`](../../language-reference/operators/namespace-alias-qualifier.md) для доступа к членам пространства имен, обозначенного псевдонимом. В следующем примере показано, как создать и использовать псевдоним для пространства имен.
   
- [!code-csharp[csProgGuideNamespaces#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#7)]  
+[!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]
   
-## <a name="using-namespaces-to-control-scope"></a>Использование пространств имен для управления областью действия  
+## <a name="using-namespaces-to-control-scope"></a>Использование пространств имен для управления областью действия
+
  Область действия объявляется с помощью ключевого слова `namespace`. Определяя области действия в проекте, вы можете упорядочивать код и создавать уникальные на глобальном уровне типы. В следующем примере класс `SampleClass` определяется в двух пространствах имен, одно из которых вложено в другое. [Оператор доступа к членам `.`](../../language-reference/operators/member-access-operators.md#member-access-operator-) используется для отличения вызываемого метода.  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
-## <a name="fully-qualified-names"></a>полные имена  
+## <a name="fully-qualified-names"></a>Полные имена
+
  Пространства имен и типы имеют уникальные названия, которые описываются полными именами, определяющими их место в логической иерархии. Например, инструкция `A.B` указывает, что `A` — это пространство имен или тип, а `B` — вложенный в него элемент.  
   
  В следующем примере показаны вложенные классы и пространства имен. Полное имя каждого элемента указано в комментарии рядом с ним.  
@@ -92,6 +97,6 @@ ms.locfileid: "68629494"
 
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [Пространства имен](../../../csharp/programming-guide/namespaces/index.md)
-- [. Оператор](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
-- [:: Оператор](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
+- [Оператор .](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
+- [Оператор ::](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
 - [Псевдоним extern](../../../csharp/language-reference/keywords/extern-alias.md)
