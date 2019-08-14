@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: b689bb7299d541708db7ae786bff62a1007608e5
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 32ca9658ddf4ab6e8690f29797b7ac7b09df2ca7
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557892"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012957"
 ---
 # <a name="walkthrough-style-wpf-content"></a>Пошаговое руководство. Стиль содержимого WPF
 
@@ -23,7 +23,7 @@ ms.locfileid: "65557892"
 
 - создание элемента управления WPF;
 
-- Применение стиля к WPF control.a
+- применение стиля к элементу управления WPF.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -31,24 +31,24 @@ ms.locfileid: "65557892"
 
 ## <a name="create-the-project"></a>Создание проекта
 
-Откройте Visual Studio и создайте новый проект приложения Windows Forms в Visual Basic или Visual C# с именем `StylingWpfContent`.
+Откройте Visual Studio и создайте новый проект Windows Forms приложения в Visual Basic или Visual C# с именем `StylingWpfContent`.
 
 > [!NOTE]
 > При размещении содержимого WPF поддерживаются только проекты C# и Visual Basic.
 
-## <a name="create-the-wpf-control-types"></a>Создание типов элемента управления WPF
+## <a name="create-the-wpf-control-types"></a>Создание типов элементов управления WPF
 
 После добавления в проект типа элемента управления WPF можно разместить его в элементе управления <xref:System.Windows.Forms.Integration.ElementHost>.
 
-1. Добавьте в решение новый проект WPF <xref:System.Windows.Controls.UserControl>. Используйте имя по умолчанию для этого типа элемента управления (`UserControl1.xaml`). Дополнительные сведения см. в разделе [Пошаговое руководство: Создание нового содержимого WPF в формах Windows Forms во время разработки](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).
+1. Добавьте в решение новый проект WPF <xref:System.Windows.Controls.UserControl>. Используйте имя по умолчанию для этого типа элемента управления (`UserControl1.xaml`). Дополнительные сведения см. в разделе [Пошаговое руководство: Создание нового содержимого WPF на Windows Forms во время](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)разработки.
 
-2. Убедитесь в том, что элемент `UserControl1` выбран в представлении конструирования. Дополнительные сведения см. в разделе [Практическое руководство. Выберите и перемещать элементы в области конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).
+2. Убедитесь в том, что элемент `UserControl1` выбран в представлении конструирования. Дополнительные сведения см. в разделе [Практическое руководство. Выберите и переместите элементы в область конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).
 
-3. В **свойства** окна, установите для параметра <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> свойства `200`.
+3. В окне **Свойства** задайте для <xref:System.Windows.FrameworkElement.Width%2A> `200`свойств и <xref:System.Windows.FrameworkElement.Height%2A> значение.
 
-4. Добавить <xref:System.Windows.Controls.Button?displayProperty=nameWithType> управления <xref:System.Windows.Controls.UserControl> и установите для параметра <xref:System.Windows.Controls.ContentControl.Content%2A> свойства **отменить**.
+4. Добавьте элемент управления <xref:System.Windows.Controls.UserControl> в и <xref:System.Windows.Controls.ContentControl.Content%2A> присвойте свойству значение **Cancel.** <xref:System.Windows.Controls.Button?displayProperty=nameWithType>
 
-5. Добавьте второй <xref:System.Windows.Controls.Button?displayProperty=nameWithType> управления <xref:System.Windows.Controls.UserControl> и установите для параметра <xref:System.Windows.Controls.ContentControl.Content%2A> свойства **ОК**.
+5. Добавьте второй <xref:System.Windows.Controls.Button?displayProperty=nameWithType> элемент управления <xref:System.Windows.Controls.UserControl> в и <xref:System.Windows.Controls.ContentControl.Content%2A> задайте для свойства значение **ОК**.
 
 6. Выполните построение проекта.
 
@@ -58,11 +58,11 @@ ms.locfileid: "65557892"
 
 1. Откройте `Form1` в конструкторе Windows Forms.
 
-1. В **элементов**, дважды щелкните `UserControl1` для создания экземпляра `UserControl1` в форме.
+1. На **панели элементов**дважды щелкните `UserControl1` , чтобы `UserControl1` создать экземпляр в форме.
 
      Экземпляр `UserControl1` размещается в новом элементе управления <xref:System.Windows.Forms.Integration.ElementHost> с именем `elementHost1`.
 
-1. В панели смарт-тега для `elementHost1`, нажмите кнопку **редактировать содержимое** из раскрывающегося списка.
+1. На панели `elementHost1`смарт-тегов нажмите кнопку **Изменить размещенное содержимое** из раскрывающегося списка.
 
      `UserControl1` откроется в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
 
@@ -124,7 +124,7 @@ ms.locfileid: "65557892"
    Style="{StaticResource SimpleButton}
    ```
 
-   Объявление кнопки будет напоминать следующий XAML:
+   Объявление кнопки будет похоже на следующий XAML:
 
    ```xaml
    <Button Height="23" Margin="41,52,98,0" Name="button1" VerticalAlignment="Top"
@@ -137,7 +137,7 @@ ms.locfileid: "65557892"
 
 1. Новый стиль применяется для элемента управления button.
 
-1. Из **Отладка** меню, выберите **начать отладку** для запуска приложения.
+1. В меню **Отладка** выберите команду **начать отладку** , чтобы запустить приложение.
 
 1. Нажмите кнопки OK и Отмена и просмотрите  различия.
 
