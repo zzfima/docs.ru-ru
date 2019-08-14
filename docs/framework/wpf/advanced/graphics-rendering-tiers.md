@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: b5bedae16a6c53aebf4d577b8cd812da992106f2
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: fa59621aaf73922af957961af5401170c2872aa9
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629897"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972347"
 ---
 # <a name="graphics-rendering-tiers"></a>Уровни графической отрисовки
 Уровень отрисовки определяет уровень возможностей графического оборудования и производительность для устройства, на котором выполняется приложение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -108,7 +108,7 @@ ms.locfileid: "68629897"
  Эти параметры доступны любой внешней служебной программе настройки, которая знает, как ссылаться на параметры реестра [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Эти параметры также можно создать или изменить через прямой доступ к значениям с использованием редактора реестра [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Более подробную информацию см. в разделе [Настройки реестра графической отрисовки](../graphics-multimedia/graphics-rendering-registry-settings.md).  
   
 ### <a name="wpf-performance-profiling-tools"></a>Средства профилирования производительности WPF  
- В состав [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] входит пакет инструментов для профилирования производительности, с помощью которых можно проанализировать поведение приложения во время выполнения и определить, каким образом можно повысить производительность. В следующей таблице перечислены средства профилирования производительности, включенные в средство [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)], WPF Performance Suite.  
+ В состав [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] входит пакет инструментов для профилирования производительности, с помощью которых можно проанализировать поведение приложения во время выполнения и определить, каким образом можно повысить производительность. В следующей таблице перечислены средства профилирования производительности, которые включены в средство Windows SDK, WPF Performance Suite:  
   
 |Средство|Описание|  
 |----------|-----------------|  

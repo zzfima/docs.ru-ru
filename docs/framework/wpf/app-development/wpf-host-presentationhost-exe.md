@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: 88e4c6895039c84a57ed215a37a10a4b68851b2d
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: eda34c71f5735ae7ea3fcedea3a400e92756243b
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817925"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972258"
 ---
 # <a name="wpf-host-presentationhostexe"></a>Ведущее приложение WPF (PresentationHost.exe)
-Узел Windows Presentation Foundation (WPF) (PresentationHost. exe) — это приложение, которое [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позволяет размещать приложения в совместимых браузерах (включая Microsoft Internet Explorer 6 и более поздние версии). По умолчанию узел Windows Presentation Foundation (WPF) регистрируется в качестве оболочки и [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] обработчика для содержимого, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] размещенного в браузере, в том числе:  
+Узел Windows Presentation Foundation (WPF) (PresentationHost. exe) — это приложение, которое [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позволяет размещать приложения в совместимых браузерах (включая Microsoft Internet Explorer 6 и более поздние версии). По умолчанию узел Windows Presentation Foundation (WPF) регистрируется в качестве оболочки и обработчика MIME для содержимого, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] размещенного в браузере, в том числе:  
   
 - Свободные (нескомпилированные) файлы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (.xaml).  
   

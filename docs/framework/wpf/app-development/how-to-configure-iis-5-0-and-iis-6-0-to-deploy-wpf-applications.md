@@ -13,21 +13,21 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: 6fa00c4ced8c05d056703560e5740689c6dcfe39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1e58aef6d02b6cf05a126b6afd25ab2a6004002
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981459"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972298"
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Практическое руководство. Настройка служб IIS 5.0 и IIS 6.0 для развертывания приложений WPF
 
-Приложение [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] можно разворачивать с большинства веб-серверов при условии, что они настроены с соответствующими типами [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]. По умолчанию [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] настроена с типами [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)], в отличие от [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] и [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)].
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Приложение можно развернуть с большинства веб-серверов, если они настроены с использованием соответствующих типов MIME. По умолчанию [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] настраивается с этими типами MIME [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] , а [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] не с помощью.
 
 В этом разделе описывается настройка [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] и [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] для развертывания приложений [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 > [!NOTE]
-> Вы можете проверить *UserAgent* строку в реестре, чтобы определить, имеет ли система установлена платформа .NET Framework. Дополнительные сведения и скрипт, проверяющий *UserAgent* строку, чтобы определить, установлена ли платформа .NET Framework в системе, см. в разделе [обнаруживать ли .NET Framework 3.0 устанавливается](how-to-detect-whether-the-net-framework-3-0-is-installed.md).
+> Вы можете проверить строку *UserAgent* в реестре, чтобы определить, установлена ли в системе .NET Framework. Дополнительные сведения и сценарий, проверяющий строку *UserAgent* для определения того, установлена ли .NET Framework в системе, см. в разделе [обнаружение установки .NET Framework 3,0](how-to-detect-whether-the-net-framework-3-0-is-installed.md).
 
 <a name="content_expiration"></a>
 
@@ -49,7 +49,7 @@ ms.locfileid: "61981459"
 
 ## <a name="register-mime-types-and-file-extensions"></a>Регистрация типов MIME и расширений файлов
 
-Вы должны зарегистрировать несколько типов [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] и расширений файлов, чтобы браузер в клиентской системе мог загрузить правильный обработчик. Необходимо добавить следующие типы.
+Необходимо зарегистрировать несколько типов MIME и расширений файлов, чтобы браузер в клиентской системе мог загрузить правильный обработчик. Необходимо добавить следующие типы.
 
 |Расширение|Тип MIME|
 |---------------|---------------|
@@ -61,9 +61,9 @@ ms.locfileid: "61981459"
 |.xps|application/vnd.ms-xpsdocument|
 
 > [!NOTE]
-> В клиентских системах регистрация типов [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] или расширений файлов не требуется. Они регистрируются автоматически при установке Microsoft .NET Framework.
+> Не нужно регистрировать типы MIME или расширения файлов в клиентских системах. Они регистрируются автоматически при установке Microsoft .NET Framework.
 
-В следующем примере Microsoft Visual Basic Scripting Edition (VBScript) автоматически добавляет необходимые [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] типов [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]. Чтобы использовать скрипт, скопируйте код в VBS-файл на своем сервере. Затем выполните скрипт, запустив файл из командной строки или дважды щелкнув этот файл в [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].
+Следующий пример Microsoft Visual Basic Scripting Edition (VBScript) автоматически добавляет необходимые типы MIME в [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]. Чтобы использовать скрипт, скопируйте код в VBS-файл на своем сервере. Затем выполните скрипт, запустив файл из командной строки или дважды щелкнув этот файл в [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].
 
 ```vb
 ' This script adds the necessary Windows Presentation Foundation MIME types
@@ -126,9 +126,9 @@ End Sub
 ```
 
 > [!NOTE]
-> При многократном запуске скрипта создастся множество записей сопоставления [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] в метабазе [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] или [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)].
+> Многократное выполнение этого сценария создает несколько записей сопоставлений MIME [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] в [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] метабазе или.
 
-После выполнения этого скрипта дополнительные типы [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] могут быть не видны из служб [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] или [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] [!INCLUDE[TLA#tla_mmc](../../../../includes/tlasharptla-mmc-md.md)]. Однако эти типы [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] были добавлены в метабазу [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] или [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]. Следующий скрипт отобразит все типы [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] в метабазе [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] или [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)].
+После выполнения этого скрипта могут не отображаться дополнительные типы MIME из [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] или. [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] [!INCLUDE[TLA#tla_mmc](../../../../includes/tlasharptla-mmc-md.md)] Однако эти типы MIME были добавлены в [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] метабазу или. [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] В следующем скрипте будут показаны все типы MIME в [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] метабазе или. [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]
 
 ```vb
 ' This script lists the MIME types for an IIS Server.

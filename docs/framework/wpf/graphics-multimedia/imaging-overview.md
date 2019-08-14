@@ -21,17 +21,16 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 845095567459fc486dd2f1c52e575444612c7bb8
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: fcf5e8e68492f4d1ff75221384b08ffad2b939f3
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869119"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971949"
 ---
 # <a name="imaging-overview"></a>Общие сведения об обработке изображений
 В этом разделе содержатся общие сведения о платформе [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. Платформа [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] позволяет разработчикам выполнять отображение, преобразование и форматирование изображений.  
 
-<a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>Компонент обработки изображений WPF  
  Платформа [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] предоставляет значительные расширения возможностей в обработке изображений в [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Возможности работы с образами, такие как отображение точечного рисунка или использование изображения в стандартном элементе управления, ранее были связаны с библиотеками Microsoft Windows интерфейс графических устройств (GDI) или Microsoft Windows GDI+. Эти API предоставляют базовые функции создания образов, но не имеют таких функций, как поддержка расширения кодека и поддержка изображений высокого качества. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]предназначен для преодоления недостатков GDI и GDI+ и предоставления нового набора API для вывода и использования изображений в приложениях.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "68869119"
   
 - Модель расширяемости для новых или собственных форматов изображений.  
   
-- Улучшена производительность и безопасность в собственных форматах образов, включая точечные [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)]рисунки ( [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]BMP [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]),, [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)],,, формат GIF и значок (ICO-файл).  
+- Улучшена производительность и безопасность в собственных форматах образов, включая точечные рисунки (BMP), группу экспертов по печати [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]( [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]JPEG [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]),,,, формат GIF и значок (ICO-файл).  
   
 - Сохранение изображений с большой глубиной цвета — до 8 бит на канал (32 бита на пиксель).  
   
@@ -165,7 +164,7 @@ ms.locfileid: "68869119"
 ## <a name="image-metadata"></a>Метаданные изображений  
  Некоторые файлы изображений содержат метаданные, описывающие содержимое или характеристики файла. Например, большинство цифровых фотоаппаратов создают изображения, содержащие метаданные об изготовителе и модели фотоаппарата, использованного для создания изображения. В разных форматах изображения метаданные обрабатываются по-разному. Платформа [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] предоставляет универсальный способ хранения и извлечения метаданных для всех поддерживаемых форматов изображения.  
   
- Доступ к метаданным предоставляется через <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> свойство <xref:System.Windows.Media.Imaging.BitmapSource> объекта. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A><xref:System.Windows.Media.Imaging.BitmapMetadata> возвращает объект, содержащий все метаданные, содержащиеся в изображении. Эти данные могут представлять собой одну схему метаданных или комбинацию различных схем. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]поддерживает следующие схемы метаданных изображения: Файл обмена изображениями (EXIF), текст (текстовые данные PNG), каталог файлов изображений (IFD), [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)]и. [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]  
+ Доступ к метаданным предоставляется через <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> свойство <xref:System.Windows.Media.Imaging.BitmapSource> объекта. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A><xref:System.Windows.Media.Imaging.BitmapMetadata> возвращает объект, содержащий все метаданные, содержащиеся в изображении. Эти данные могут представлять собой одну схему метаданных или комбинацию различных схем. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]поддерживает следующие схемы метаданных изображения: Файл обмена изображениями (EXIF), текст (текстовые данные PNG), каталог файлов изображений (IFD), Международный совет по Прессским коммуникациям (IPTC [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]) и.  
   
  Чтобы упростить процесс чтения метаданных <xref:System.Windows.Media.Imaging.BitmapMetadata> , предоставляет несколько именованных свойств, которые можно легко получить, <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>например, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>, и <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>. Многие из этих именованных свойств могут также использоваться для записи метаданных. Дополнительная поддержка чтения метаданных обеспечивается благодаря использованию считывателя запросов метаданных. Метод используется для получения считывателя запросов метаданных путем предоставления строкового запроса, например *"/APP1/EXIF/".* <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> В следующем примере <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> используется для получения текста, хранящегося в расположении *"/Text/Description"* .  
   

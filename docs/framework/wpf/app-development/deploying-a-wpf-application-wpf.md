@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 924553bf457a6668143785c78871ebac6e01efa4
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 16a0436accfb031ddd0bb413e519d80e550786b4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818024"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972269"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Развертывание приложений WPF
 После сборки приложений Windows Presentation Foundation (WPF) их необходимо развернуть. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]а .NET Framework включают несколько технологий развертывания. Технология развертывания, используемая для развертывания приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], зависит от типа приложения. Этот раздел содержит краткое описание каждой из технологий развертывания и их использования в сочетании с требованиями к развертыванию для каждого типа приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -114,7 +114,7 @@ ms.locfileid: "68818024"
 ## <a name="installing-the-net-framework"></a>Установка .NET Framework  
  Для запуска [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения на клиенте должна быть установлена платформа Microsoft .NET Framework. Internet Explorer автоматически определяет, устанавливаются ли клиенты с .NET Framework [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] при просмотре приложений, размещаемых в браузере. Если .NET Framework не установлен, Internet Explorer предлагает пользователям установить его.  
   
- Чтобы определить, установлена ли .NET Framework, Internet Explorer включает в себя приложение начального загрузчика, зарегистрированное в качестве [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] резервного обработчика для файлов содержимого со следующими расширениями: XAML, XPS, XBAP и. Application. Если вы перейдете к этим типам файлов и на клиенте не установлен .NET Framework, приложение начального загрузчика запрашивает разрешение на его установку. Если разрешение не предоставлено, ни .NET Framework, ни приложение не установлено.  
+ Чтобы определить, установлена ли .NET Framework, Internet Explorer включает приложение загрузчика, зарегистрированное в качестве обработчика MIME для файлов содержимого со следующими расширениями: XAML, XPS, XBAP. и. Application. Если вы перейдете к этим типам файлов и на клиенте не установлен .NET Framework, приложение начального загрузчика запрашивает разрешение на его установку. Если разрешение не предоставлено, ни .NET Framework, ни приложение не установлено.  
   
  Если предоставлено разрешение, Internet Explorer скачивает и устанавливает .NET Framework с помощью Microsoft фоновая интеллектуальная служба передачи (BITS). После успешной установки .NET Framework изначально запрошенный файл открывается в новом окне браузера.  
   

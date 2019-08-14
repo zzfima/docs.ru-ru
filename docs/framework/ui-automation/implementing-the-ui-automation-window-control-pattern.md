@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: 9cab4dbbcd3302a6e74783eaefdbbd8463332224
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 1d40b133beb68c14e7392139bf0753cedb67a4ef
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710246"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971822"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Реализация шаблона элемента управления Window автоматизированного пользовательского интерфейса
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "68710246"
   
  В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IWindowProvider>, включая сведения о свойствах, методах и событиях <xref:System.Windows.Automation.WindowPattern> . Ссылки на дополнительные материалы перечислены в конце раздела.  
   
- Шаблон <xref:System.Windows.Automation.WindowPattern> элемента управления используется для поддержки элементов управления, которые предоставляют фундаментальные функции на основе окна в традиционном графическом интерфейсе пользователя. В качестве примеров элементов управления, которые должны реализовывать этот шаблон элемента управления, можно назвать окна приложения верхнего уровня, дочерние окна [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] , элементы управления "Область разделения с возможностью изменения размера", модальные диалоговые окна и окна всплывающей справки.  
+ Шаблон <xref:System.Windows.Automation.WindowPattern> элемента управления используется для поддержки элементов управления, которые предоставляют фундаментальные функции на основе окна в традиционном графическом интерфейсе пользователя. Примеры элементов управления, которые должны реализовывать этот шаблон элемента управления, включают в себя окна приложений верхнего уровня, дочерние окна многодокументного интерфейса (MDI), элементы управления "область разделения" с изменяемыми размерами, модальные диалоговые окна и окна справки.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Правила и соглашения реализации  

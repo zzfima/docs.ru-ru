@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 6e2b5eaff3ee80434d5cdf39391273685da9faf0
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 259594858e96897cb377cde4104e17b748f902c4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434077"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971809"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -70,7 +70,7 @@ ms.locfileid: "68434077"
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|Используется для элементов управления, в которых можно переключать состояние. Например, это могут быть флажки и элементы меню с флажками.|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|Используется для элементов управления с возможностью изменения размера, перемещения и вращения. Обычно шаблон элемента управления Transform используется в конструкторах, формах, графических редакторах и графических приложениях.|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|Позволяет клиентам получать или задавать значения для элементов управления, которые не поддерживают диапазон значений. Например, это может быть элемент управления "Выбор даты и времени".|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Предоставляет сведения, относящиеся к окнам, фундаментальному понятию в операционной системе [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] . Примеры элементов управления "Окно" — это окна верхнего уровня приложений ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]и т. д.), дочерние окна [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] и диалоговые окна.|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Предоставляет сведения, относящиеся к окнам, фундаментальному понятию в операционной системе [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] . Примерами элементов управления, являющихся окнами, являются окна приложений верхнего[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]уровня [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)](, и т. д.), дочерние окна многодокументного интерфейса (MDI) и диалоговые окна.|  
   
 ## <a name="see-also"></a>См. также
 

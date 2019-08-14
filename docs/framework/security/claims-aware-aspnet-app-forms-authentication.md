@@ -1,16 +1,16 @@
 ---
-title: 'Как выполнить: создание приложения ASP.NET, поддерживающего утверждения, с использованием аутентификации на основе форм'
+title: Как создание приложения ASP.NET, поддерживающего утверждения, с использованием аутентификации на основе форм
 ms.date: 03/30/2017
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 author: BrucePerlerMS
-ms.openlocfilehash: ecaf1de0b806d5568d81fac2ddb2b39b697135ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75db96a621d7863ef445efb24814111b34da6960
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792754"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971838"
 ---
-# <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>Как выполнить: создание приложения ASP.NET, поддерживающего утверждения, с использованием аутентификации на основе форм
+# <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>Как создание приложения ASP.NET, поддерживающего утверждения, с использованием аутентификации на основе форм
 
 ## <a name="applies-to"></a>Применение
 
@@ -60,7 +60,7 @@ ms.locfileid: "61792754"
 
 На этом шаге создается новое приложение веб-форм ASP.NET.
 
-#### <a name="to-create-a-simple-aspnet-application"></a>Создание простого приложения ASP.NET
+### <a name="to-create-a-simple-aspnet-application"></a>Создание простого приложения ASP.NET
 
 1. Запустите Visual Studio и выберите **Файл**, **Создать** и затем **Проект**.
 
@@ -72,7 +72,7 @@ ms.locfileid: "61792754"
 
 На этом шаге в файл конфигурации *Web.config* добавляется запись конфигурации. Также в файл *Default.aspx* вносятся изменения, позволяющие отображать сведения об утверждениях для учетной записи.
 
-#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>Настройка приложения ASP.NET на применение утверждений с использованием проверки подлинности на основе форм
+### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>Настройка приложения ASP.NET на применение утверждений с использованием проверки подлинности на основе форм
 
 1. В файле *Default.aspx* замените существующую разметку следующей:
 
@@ -126,7 +126,7 @@ ms.locfileid: "61792754"
 
 На этом шаге тестируется приложение веб-форм ASP.NET и проверяется наличие утверждений при входе пользователя с помощью проверки подлинности на основе форм.
 
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Тестирование приложения веб-форм ASP.NET на наличие утверждений с использованием проверки подлинности на основе форм
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Тестирование приложения веб-форм ASP.NET на наличие утверждений с использованием проверки подлинности на основе форм
 
 1. Нажмите клавишу **F5**, чтобы выполнить сборку приложения и запустить его. В верхней правой части страницы *Default.aspx* будут представлены ссылки **Регистрация** и **Вход**. Щелкните ссылку **Регистрация**.
 
