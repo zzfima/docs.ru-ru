@@ -6,12 +6,12 @@ title: Документация по .NET
 description: Сведения об использовании .NET для создания различных приложений на любой платформе с помощью C#, Visual Basic и F#. Ознакомьтесь со справочником по API, образцами кода, учебниками и другими материалами.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 7cf46b0c4d88b7657a5c82c7aa0ae30655c9d5ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a6f6bc91a3055ffd0efe9f6b89ba0499921ed1d4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589987"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972385"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -77,7 +77,7 @@ ms.locfileid: "65589987"
         <h1>Документация по .NET</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Документы</a>
+                <a data-default="true" href="#docs">Документация</a>
                 <ul id="docs">
                     <li>
                         <a href="#getstarted">Начало работы</a>
@@ -268,7 +268,7 @@ ms.locfileid: "65589987"
                         </ul>
                     </li>
                     <li>
-                        <a href="#web">Веб-приложения</a>
+                        <a href="#web">Интернет</a>
                         <ul id="web" class="cardsC">
                             <li>
                                 <a href="https://www.asp.net/get-started">
@@ -309,7 +309,7 @@ ms.locfileid: "65589987"
                                 </a>
                             </li>
                             <li>
-                                <a href="/aspnet/overview">
+                                <a href="/aspnet/core/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -319,8 +319,8 @@ ms.locfileid: "65589987"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Что такое ASP.NET?</h3>
-                                                    <p>Сведения о создании веб-приложений ASP.NET.</p>
+                                                    <h3>Что такое ASP.NET Core?</h3>
+                                                    <p>Узнайте, как создавать веб-приложения ASP.NET Core.</p>
                                                 </div>
                                             </div>
                                         </div>

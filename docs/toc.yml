@@ -267,6 +267,14 @@
           href: core/docker/build-container.md
         - name: Средства для контейнеров в Visual Studio
           href: /visualstudio/containers/overview
+    - name: Диагностические средства
+      items:
+        - name: Обзор
+          href: core/diagnostics/index.md
+        - name: Управляемые отладчики
+          href: core/diagnostics/managed-debuggers.md
+        - name: Ведение журнала и трассировка
+          href: core/diagnostics/logging-tracing.md
     - name: Модульное тестирование
       href: core/testing/index.md
       items:
@@ -332,7 +340,7 @@
           href: core/tools/telemetry.md
         - name: Обзор global.json
           href: core/tools/global-json.md
-        - name: Справочники
+        - name: Справочник
           items:
             - name: dotnet
               href: core/tools/dotnet.md
@@ -2280,7 +2288,7 @@
               href: visual-basic/language-reference/error-messages/xml-literals-and-xml-properties-are-not-supported-in-embedded-code-in-aspnet.md
             - name: URI-код пространства имен XML <uri> может быть связан только с префиксом xmlns
               href: visual-basic/language-reference/error-messages/xml-namespace-uri-uri-can-be-bound-only-to-xmlns.md
-    - name: Справочники
+    - name: Справочник
       href: visual-basic/reference/index.md
       items:
         - name: Компилятор с интерфейсом командной строки
