@@ -1,6 +1,6 @@
 ---
-title: Функция GetPropertyHandle (Справочник по неуправляемым API)
-description: Функция GetPropertyHandle возвращает уникальный дескриптор, который определяет свойство.
+title: Функция Жетпропертихандле (Справочник по неуправляемым API)
+description: Функция Жетпропертихандле Возвращает уникальный маркер, идентифицирующий свойство.
 ms.date: 11/06/2017
 api_name:
 - GetPropertyHandle
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1397188b38066bac6375da0c76e7d66724a75d7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d6dc2792b572aae30e9989c81967b86f340d7b83
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636244"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038262"
 ---
 # <a name="getpropertyhandle-function"></a>Функция GetPropertyHandle
 
@@ -44,47 +44,47 @@ HRESULT GetPropertyHandle (
 ## <a name="parameters"></a>Параметры
 
 `vFunc`\
-[in] Этот параметр не используется.
+окне Этот параметр не используется.
 
 `ptr`\
-[in] Указатель на [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) экземпляра.
+окне Указатель на экземпляр [ивбемобжектакцесс](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) .
 
 `wszPropertyName`\
-[in] Завершающаяся нулем строка символов в кодировке UTF16, содержащая имя свойства.
+окне Строка символов в кодировке UTF16, заканчивающаяся нулем и содержащая имя свойства.
 
 `pType`\
-[out] Указатель на [ `CIMTYPE` ](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) член перечисления, представляющее тип CIM данного свойства.
+заполняет Указатель на [`CIMTYPE`](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) член перечисления, представляющий CIM-тип свойства.
 
 `pHandle`\
-[out] Указатель на целое число, которое содержит дескриптор свойства.
+заполняет Указатель на целое число, содержащее маркер свойства.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
+Следующие значения, возвращаемые этой функцией, определены в файле заголовка *вбемкли. h* , или их можно определить как константы в коде:
 
 |Константа  |Значение  |Описание  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | 0x80041002 | Свойство с указанным именем не найден. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр не является допустимым. |
-|`WBEM_E_NOT_SUPPORTED` | 0x8004100c | Запрошенное свойство имеет тип, `CIM_OBJECT` или `CIM_ARRAY`. |
-|`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | Указанное имя свойства не найдено. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Недопустимый параметр. |
+|`WBEM_E_NOT_SUPPORTED` | 0x8004100c | Запрошенное свойство имеет тип `CIM_OBJECT` или. `CIM_ARRAY` |
+|`WBEM_S_NO_ERROR` | 0 | Вызов функции выполнен успешно.  |
 
 ## <a name="remarks"></a>Примечания
 
-Эта функция создает оболочку для вызова [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) метод.
+Эта функция заключает в оболочку вызов метода [ивбемклассобжект:: жетпропертихандле](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) .
 
-Вы можете использовать этот дескриптор для идентификации свойств, при использовании [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) методы для чтения или записи значения свойств.
+Этот обработчик можно использовать для обнаружения свойств при использовании методов [ивбемобжектакцесс](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) для чтения или записи значений свойств.
 
-Дескрипторы может быть извлечен для свойства всех типов данных, отличных от `CIM_OBJECT` и `CIM_ARRAY`. Возвращаемые дескрипторы работы для всех экземпляров класса.
+Дескрипторы могут быть получены для свойств всех типов `CIM_OBJECT` данных, кроме и. `CIM_ARRAY` Возвращаемые дескрипторы работают для всех экземпляров класса.
 
 ## <a name="requirements"></a>Требования
 
-**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
+**Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
 
-**Заголовок.** WMINet_Utils.idl
+**Заголовок.** WMINet_Utils. idl
 
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>См. также
 
-- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+- [WMI и счетчики производительности (Справочник по неуправляемым интерфейсам API)](index.md)

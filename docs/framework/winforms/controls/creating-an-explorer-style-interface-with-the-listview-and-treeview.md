@@ -13,101 +13,99 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 22c1e51e546891edefd359bcc7f65c7d8f531f65
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 540226dbbada0373854144ac874d2164208ad943
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959463"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039916"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Пошаговое руководство. Создание интерфейса в стиле проводника с использованием элементов управления ListView и TreeView с помощью конструктора
 
-Одним из преимуществ Visual Studio является возможность создания профессиональных приложений Windows Forms в короткие сроки. Распространенным сценарием Создание пользовательского интерфейса (UI) с <xref:System.Windows.Forms.ListView> и <xref:System.Windows.Forms.TreeView> элементы управления похож на функцию Windows Explorer операционных систем Windows. Windows Explorer отображает иерархическую структуру файлов и папок на компьютере пользователя.
+Одним из преимуществ Visual Studio является возможность создания профессионально оформленных Windows Forms приложений в течение короткого промежутка времени. Распространенным сценарием является создание пользовательского интерфейса с <xref:System.Windows.Forms.ListView> элементами управления и <xref:System.Windows.Forms.TreeView> , которые похожи на проводник Windows в операционных системах Windows. Проводник Windows отображает иерархическую структуру файлов и папок на компьютере пользователя.
 
-> [!NOTE]
-> Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>Чтобы создать форму, содержащую элемент управления ListView и TreeView
+### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>Создание формы, содержащей элемент управления ListView и TreeView
 
 1. В меню **Файл** выберите пункт **Создать**, а затем команду **Проект**.
 
-2. В **новый проект** диалоговом окне сделайте следующее:
+2. В диалоговом окне **Новый проект** выполните следующие действия.
 
-    1. В категориях, выбрав **Visual Basic** или **Visual C#**.
+    1. В категории выберите либо **Visual Basic** , либо **визуальный C#** элемент.
 
-    2. В списке шаблонов выберите **приложение Windows Forms**.
+    2. В списке шаблонов выберите **Windows Forms приложение**.
 
-3. Нажмите кнопку **ОК**. Создается новый проект Windows Forms.
+3. Нажмите кнопку **ОК**. Будет создан новый проект Windows Forms.
 
-4. Добавить <xref:System.Windows.Forms.SplitContainer> управления в форму и задайте его <xref:System.Windows.Forms.SplitContainer.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Fill>.
+4. Добавьте в форму <xref:System.Windows.Forms.SplitContainer.Dock%2A> <xref:System.Windows.Forms.DockStyle.Fill>элемент управления и задайте для его свойства значение. <xref:System.Windows.Forms.SplitContainer>
 
-5. Добавить <xref:System.Windows.Forms.ImageList> с именем `imageList1` в форму и используйте окно свойств для добавления двух изображений: папки и документа, в указанном порядке.
+5. Добавьте именованный `imageList1` элемент в форму и используйте окно свойств, чтобы добавить два изображения: изображение папки и изображение документа в указанном порядке. <xref:System.Windows.Forms.ImageList>
 
-6. Добавить <xref:System.Windows.Forms.TreeView> управления с именем `treeview1` в форму и расположите его в левой части <xref:System.Windows.Forms.SplitContainer> элемента управления. В окне «Свойства» для `treeView1` выполните следующие действия:
+6. Добавьте элемент управления с `treeview1` именем в форму и разместите его в левой <xref:System.Windows.Forms.SplitContainer> части элемента управления. <xref:System.Windows.Forms.TreeView> В окно свойств `treeView1` выполните следующие действия.
 
     1. Задайте для свойства <xref:System.Windows.Forms.Control.Dock%2A> значение <xref:System.Windows.Forms.DockStyle.Fill>.
 
     2. Задайте свойству <xref:System.Windows.Forms.TreeView.ImageList%2A> значение `imagelist1.`
 
-7. Добавить <xref:System.Windows.Forms.ListView> управления с именем `listView1` в форму и разместите его справа от <xref:System.Windows.Forms.SplitContainer> элемента управления. В окне «Свойства» для `listview1` выполните следующие действия:
+7. Добавьте элемент управления с `listView1` именем в форму и разместите его в правой <xref:System.Windows.Forms.SplitContainer> части элемента управления. <xref:System.Windows.Forms.ListView> В окно свойств `listview1` выполните следующие действия.
 
     1. Задайте для свойства <xref:System.Windows.Forms.Control.Dock%2A> значение <xref:System.Windows.Forms.DockStyle.Fill>.
 
     2. Задайте для свойства <xref:System.Windows.Forms.ListView.View%2A> значение <xref:System.Windows.Forms.View.Details>.
 
-    3. Откройте редактор коллекции заголовков столбцов, нажав кнопку с многоточием (![кнопку с многоточием (...) в окне свойств Visual Studio.](./media/visual-studio-ellipsis-button.png)) в <xref:System.Windows.Forms.ListView.Columns%2A> свойство **.** Добавьте три столбца и задайте их <xref:System.Windows.Forms.ColumnHeader.Text%2A> свойства `Name`, `Type`, и `Last Modified`, соответственно. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.
+    3. Откройте редактор коллекции колумнхеадер, нажав кнопку с многоточием (![...) в окно свойств Visual Studio.](./media/visual-studio-ellipsis-button.png)) в <xref:System.Windows.Forms.ListView.Columns%2A> свойстве **.** Добавьте три столбца и задайте для <xref:System.Windows.Forms.ColumnHeader.Text%2A> `Name`них свойства, `Type`и `Last Modified`соответственно. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.
 
     4. Задайте свойству <xref:System.Windows.Forms.ListView.SmallImageList%2A> значение `imageList1.`
 
-8. Реализуйте код для заполнения <xref:System.Windows.Forms.TreeView> с узлов и подузлов. Добавьте следующий код в `Form1` класса.
+8. Реализуйте код, чтобы заполнить <xref:System.Windows.Forms.TreeView> узлы и подузлы. Добавьте этот код в `Form1` класс.
 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]
 
-9. Так как предыдущий код использует пространство имен System.IO, добавьте соответствующий или импортировать инструкцию в верхней части формы.
+9. Поскольку в предыдущем коде используется пространство имен System.IO, добавьте соответствующий оператор using или Import в верхней части формы.
 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#4)]
 
-10. Вызовите метод настройки из предыдущего шага в конструкторе формы или <xref:System.Windows.Forms.Form.Load> метод обработки событий. Добавьте следующий код в конструктор формы.
+10. Вызовите метод Set-up из предыдущего шага в конструкторе формы или <xref:System.Windows.Forms.Form.Load> методе обработки событий. Добавьте этот код в конструктор формы.
 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#2)]
 
-11. Обрабатывать <xref:System.Windows.Forms.TreeView.NodeMouseClick> событие для `treeview1` **,** и реализации кода для заполнения `listview1` содержимое узла, при щелчке узла. Добавьте следующий код в `Form1` класса.
+11. Обработайте `treeview1` событиедля`listview1` и реализуйте код, который заполняется содержимым узла при щелчке узла. <xref:System.Windows.Forms.TreeView.NodeMouseClick> Добавьте этот код в `Form1` класс.
 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#3)]
 
-     Если вы используете C#, убедитесь, что у вас есть <xref:System.Windows.Forms.TreeView.NodeMouseClick> событие, связанное со своим методом обработки событий. Добавьте следующий код в конструктор формы.
+     Если используется C#, убедитесь, что у вас есть <xref:System.Windows.Forms.TreeView.NodeMouseClick> событие, связанное с методом обработки событий. Добавьте этот код в конструктор формы.
 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#5)]
 
 ## <a name="testing-the-application"></a>Тестирование приложения
 
-Теперь можно проверить форму, чтобы убедиться, что она правильно работает.
+Теперь можно проверить форму, чтобы убедиться, что она ведет себя так, как ожидалось.
 
-#### <a name="to-test-the-form"></a>Чтобы проверить форму
+#### <a name="to-test-the-form"></a>Тестирование формы
 
 - Нажмите клавишу F5 для запуска приложения.
 
-     Вы увидите разбиения форму, содержащую <xref:System.Windows.Forms.TreeView> элемент управления, отображающий каталог проекта на левой стороне, и <xref:System.Windows.Forms.ListView> управления справа от оператора с тремя столбцами. Вы сможете просматривать <xref:System.Windows.Forms.TreeView> , выбрав узлы каталога и <xref:System.Windows.Forms.ListView> заполняется содержимое выбранного каталога.
+     Вы увидите разделенную форму, содержащую <xref:System.Windows.Forms.TreeView> элемент управления, который отображает каталог проекта слева, <xref:System.Windows.Forms.ListView> и элемент управления с правой стороны с тремя столбцами. Можно просмотреть <xref:System.Windows.Forms.TreeView> , выбрав узлы каталога, <xref:System.Windows.Forms.ListView> и заполнится содержимым выбранного каталога.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Это приложение служит примером способом, можно использовать <xref:System.Windows.Forms.TreeView> и <xref:System.Windows.Forms.ListView> вместе элементы управления. Дополнительные сведения об этих элементах управления см. в разделах:
+Это приложение предоставляет пример того, как можно использовать <xref:System.Windows.Forms.TreeView> вместе элементы управления и. <xref:System.Windows.Forms.ListView> Дополнительные сведения об этих элементах управления см. в следующих разделах:
 
-- [Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или элемент управления ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Практическое руководство. Добавление пользовательских сведений в элемент управления TreeView или ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
 
 - [Практическое руководство. Добавление возможностей поиска в элемент управления ListView](how-to-add-search-capabilities-to-a-listview-control.md)
 
-- [Практическое руководство. Подключение контекстного меню к узлу элемента управления TreeView](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)
+- [Практическое руководство. Присоединение контекстного меню к узлу TreeView](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)
 
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.TreeView>
 - [Элемент управления ListView](listview-control-windows-forms.md)
-- [Практическое руководство. Добавление и удаление узлов с помощью элемента управления TreeView в Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [Практическое руководство. Добавление и удаление элементов с помощью элемента управления ListView в Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Практическое руководство. Добавить столбцы для элемента управления ListView в Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Практическое руководство. Добавление и удаление узлов с помощью элемента управления Windows Forms TreeView](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [Практическое руководство. Добавление и удаление элементов с помощью элемента управления ListView Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Практическое руководство. Добавление столбцов в Windows Forms элемент управления ListView](how-to-add-columns-to-the-windows-forms-listview-control.md)

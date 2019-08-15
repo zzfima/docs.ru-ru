@@ -10,14 +10,14 @@ api_type:
 ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de55594db68e084009a095a083e065fbd0b8f0df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1cfc2f5cde22bf63275dd4bdc65857ac1d51b3fe
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741331"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038433"
 ---
-# <a name="axlgetissuerpublickeyhash-function"></a>\_Функция AxlGetIssuerPublicKeyHash
+# <a name="_axlgetissuerpublickeyhash-function"></a>\_Функция Акслжетиссуерпубликкэйхаш
 Получает хэш SHA-1 открытого ключа, связанного с закрытым ключом, который используется для подписания указанного сертификата.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -31,7 +31,7 @@ HRESULT _AxlGetIssuerPublicKeyHash (
   
 ## <a name="parameters"></a>Параметры  
  `pChainContext`  
- [в] Большой двоичный объект открытого ключа CSP. См. в разделе [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) структуры.  
+ [в] Большой двоичный объект открытого ключа CSP. См. структуру [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
   
  `ppwszPublicKeyHash`  
  [из] Указатель на WCHAR * для получения шестнадцатеричного кодированного маркера открытого ключа.  

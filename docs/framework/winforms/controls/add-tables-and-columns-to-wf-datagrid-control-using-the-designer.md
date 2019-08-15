@@ -6,58 +6,55 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: a5955840988cb747b21f32efbd5c6091a86f483a
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: d11c4f7e4cdfb597477bb99f38612ed648849f20
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959517"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040042"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>Практическое руководство. Добавление таблиц и столбцов в элемент управления DataGrid в формах Windows Forms с помощью конструктора
 
 > [!NOTE]
 > Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
 
-Можно отобразить данные в Windows Forms <xref:System.Windows.Forms.DataGrid> элемента управления в таблицах и столбцах, создав <xref:System.Windows.Forms.DataGridTableStyle> объектов и добавления их в <xref:System.Windows.Forms.GridTableStylesCollection> объекта, доступном через <xref:System.Windows.Forms.DataGrid> элемента управления <xref:System.Windows.Forms.DataGrid.TableStyles%2A> свойство. Каждая таблица отображает содержимое таблицы данных указывается в <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> свойство <xref:System.Windows.Forms.DataGridTableStyle>. По умолчанию стиль таблицы не определены стили столбцов будет отображать все столбцы этой таблицы данных. Можно ограничить, какие столбцы из таблицы должны отображаться, добавив <xref:System.Windows.Forms.DataGridColumnStyle> объектов <xref:System.Windows.Forms.GridColumnStylesCollection>, которой осуществляется через <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> свойства каждого <xref:System.Windows.Forms.DataGridTableStyle>.
+Данные можно отображать в элементах управления <xref:System.Windows.Forms.DataGrid> Windows Forms в таблицах и столбцах <xref:System.Windows.Forms.DataGridTableStyle> , создавая объекты <xref:System.Windows.Forms.GridTableStylesCollection> и добавляя их к объекту <xref:System.Windows.Forms.DataGrid.TableStyles%2A> , доступ к которому <xref:System.Windows.Forms.DataGrid> осуществляется через свойство элемента управления. Каждый стиль таблицы отображает содержимое любой таблицы данных, указанной в <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> свойстве <xref:System.Windows.Forms.DataGridTableStyle>объекта. По умолчанию стиль таблицы без заданных стилей столбцов будет отображать все столбцы в этой таблице данных. Можно ограничить <xref:System.Windows.Forms.DataGridColumnStyle> список отображаемых столбцов таблицы, добавив объекты <xref:System.Windows.Forms.GridColumnStylesCollection>в коллекцию, доступ к <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> которой осуществляется через свойство каждого из них <xref:System.Windows.Forms.DataGridTableStyle>.
 
-Следующие процедуры требуют **приложения Windows** проект с формой, содержащей <xref:System.Windows.Forms.DataGrid> элемента управления. Сведения о настройке такого проекта см. в разделе [как: Создайте проект приложения Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) и [как: Добавление элементов управления в Windows Forms](how-to-add-controls-to-windows-forms.md). По умолчанию в Visual Studio 2005 <xref:System.Windows.Forms.DataGrid> элемент управления отсутствует в **элементов**. Сведения о его добавлении см. в разделе [как: Добавление элементов на панель инструментов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).
+Для следующих процедур требуется проект **приложения Windows** с формой, содержащей <xref:System.Windows.Forms.DataGrid> элемент управления. Сведения о настройке такого проекта см. в разделе [как Создайте проект](/visualstudio/ide/step-1-create-a-windows-forms-application-project) приложения Windows Forms и [выполните следующие действия. Добавьте элементы управления в](how-to-add-controls-to-windows-forms.md)Windows Forms. По умолчанию в Visual Studio 2005 <xref:System.Windows.Forms.DataGrid> элемент управления не находится на **панели элементов**. Дополнительные сведения о добавлении см. в [разделе как Добавление элементов на панель элементов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).
 
-> [!NOTE]
-> Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+### <a name="to-add-a-table-to-the-datagrid-control-in-the-designer"></a>Добавление таблицы в элемент управления DataGrid в конструкторе
 
-### <a name="to-add-a-table-to-the-datagrid-control-in-the-designer"></a>Чтобы добавить таблицу в элемент управления DataGrid в конструкторе
+1. Чтобы отобразить данные в таблице, необходимо сначала привязать <xref:System.Windows.Forms.DataGrid> элемент управления к набору данных. Дополнительные сведения см. в разделе [Практическое руководство. Привязка Windows Forms элемента управления DataGrid к источнику данных с помощью конструктора](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).
 
-1. Для отображения данных в таблице, необходимо сначала привязать <xref:System.Windows.Forms.DataGrid> элемента управления к набору данных. Дополнительные сведения см. в разделе [Практическое руководство. Привязка элемента управления DataGrid в Windows Forms к источнику данных с помощью конструктора](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).
+2. ![](./media/visual-studio-ellipsis-button.png)Выберите свойство <xref:System.Windows.Forms.DataGrid> <xref:System.Windows.Forms.DataGrid.TableStyles%2A> элемента управления в окно свойств, а затем нажмите кнопку с многоточием (...) в окно свойств Visual Studio.) рядом со свойством, чтобы отобразить **Редактор коллекции DataGridTableStyle**.
 
-2. Выберите <xref:System.Windows.Forms.DataGrid> элемента управления <xref:System.Windows.Forms.DataGrid.TableStyles%2A> свойства в окне «Свойства» и затем нажмите кнопку с многоточием (![кнопку с многоточием (...) в окне свойств Visual Studio.](./media/visual-studio-ellipsis-button.png)) рядом со свойством для отображения **Редактор коллекции DataGridTableStyle**.
+3. В редакторе коллекции нажмите кнопку **Добавить** , чтобы вставить стиль таблицы.
 
-3. В редакторе коллекции щелкните **добавить** Вставляемый стиль таблицы.
+4. Нажмите кнопку **ОК** , чтобы закрыть редактор коллекции, а затем снова откройте его, нажав кнопку с многоточием рядом со <xref:System.Windows.Forms.DataGrid.TableStyles%2A> свойством.
 
-4. Нажмите кнопку **ОК** чтобы закрыть редактор коллекции, а затем повторно открыть его, нажав кнопку с многоточием рядом с полем <xref:System.Windows.Forms.DataGrid.TableStyles%2A> свойство.
+     При повторном открытии редактора коллекции все таблицы данных, привязанные к элементу управления, будут отображаться в раскрывающемся списке для <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> свойства стиля таблицы.
 
-     При повторном открытии редактора коллекции, все таблицы данных, привязанных к элементу управления будет отображаться в раскрывающемся списке для <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> свойство стиля таблицы.
+5. В поле **члены** редактора коллекции выберите стиль таблицы.
 
-5. В **члены** окно редактора коллекции, выберите стиль таблицы.
+6. В диалоговом окне **Свойства** редактора коллекции выберите <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> значение для таблицы, которую необходимо отобразить.
 
-6. В **свойства** редактора коллекции, выберите <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> значение для таблицы будет отображаться.
+### <a name="to-add-a-column-to-the-datagrid-control-in-the-designer"></a>Добавление столбца в элемент управления DataGrid в конструкторе
 
-### <a name="to-add-a-column-to-the-datagrid-control-in-the-designer"></a>Чтобы добавить столбец в элемент управления DataGrid в конструкторе
+1. В поле **члены** **редактора коллекции DataGridTableStyle**выберите соответствующий стиль таблицы. В диалоговом окне **Свойства** редактора коллекции выберите <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> коллекцию, а затем нажмите кнопку![с многоточием (...) в окно свойств Visual Studio.](./media/visual-studio-ellipsis-button.png)) рядом со свойством, чтобы отобразить **Редактор коллекции DataGridColumnStyle**.
 
-1. В **члены** поле **редактор коллекции DataGridTableStyle**, выберите требуемый стиль таблицы. В **свойства** редактора коллекции, выберите <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> коллекции, а затем нажмите кнопку с многоточием (![кнопку с многоточием (...) в окне свойств Visual Studio.](./media/visual-studio-ellipsis-button.png)) рядом с полем свойство отображения **редактор коллекции DataGridColumnStyle**.
+2. В редакторе коллекции нажмите кнопку **Добавить** , чтобы вставить стиль столбца, или щелкните стрелку вниз рядом с пунктом **Добавить** , чтобы указать тип столбца.
 
-2. В редакторе коллекции щелкните **добавить** для вставки стиль столбца или щелкните стрелку вниз рядом с полем **добавить** для указания типа столбца.
+     В раскрывающемся списке можно выбрать <xref:System.Windows.Forms.DataGridTextBoxColumn> тип или. <xref:System.Windows.Forms.DataGridBoolColumn>
 
-     В раскрывающемся списке можно выбрать либо <xref:System.Windows.Forms.DataGridTextBoxColumn> или <xref:System.Windows.Forms.DataGridBoolColumn> типа.
+3. Нажмите кнопку ОК, чтобы закрыть **Редактор коллекции DataGridColumnStyle**, а затем снова откройте его, нажав кнопку с многоточием рядом <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> со свойством.
 
-3. Нажмите кнопку ОК, чтобы закрыть **редактор коллекции DataGridColumnStyle**, а затем повторно открыть его, нажав кнопку с многоточием рядом с полем <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> свойство.
+     При повторном открытии редактора коллекции все столбцы данных в связанных таблицах данных будут отображаться в раскрывающемся списке для <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> свойства стиля столбца.
 
-     При повторном открытии редактора коллекции, все столбцы данных в связанной таблице данных будет отображаться в раскрывающемся списке для <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> свойство стиля столбца.
+4. В поле **члены** редактора коллекции щелкните стиль столбца.
 
-4. В **члены** окно редактора коллекции, выберите стиль столбца.
-
-5. В **свойства** редактора коллекции, выберите <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> значение для столбца, который вы хотите отобразить.
+5. В диалоговом окне **Свойства** редактора коллекции выберите <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> значение для столбца, который необходимо отобразить.
 
 ## <a name="see-also"></a>См. также
 
 - [Элемент управления DataGrid](datagrid-control-windows-forms.md)
-- [Практическое руководство. Удаление или скрытие столбцов элемента управления DataGrid в Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Практическое руководство. Удаление или скрытие столбцов в элементе управления Windows Forms DataGrid](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

@@ -1,6 +1,6 @@
 ---
-title: Функция GetCurrentApartmentType (Справочник по неуправляемым API)
-description: Функция GetCurrentApartmentType извлекает тип апартамента, в котором выполняется вызывающий объект.
+title: Функция Жеткуррентапартменттипе (Справочник по неуправляемым API)
+description: Функция Жеткуррентапартменттипе Извлекает тип подразделения, в котором выполняется вызывающий объект.
 ms.date: 11/06/2017
 api_name:
 - GetCurrentApartmentType
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76c852ac81126895ea3a2e1b40473722c8445201
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 68eb4ba653098d847022da45e610cb4fa5496a8c
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746556"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037969"
 ---
-# <a name="getcurrentapartmenttype-function"></a>Функция GetCurrentApartmentType
+# <a name="getcurrentapartmenttype-function"></a>Функция Жеткуррентапартменттипе
 Получает тип подразделения, в котором выполняется вызывающий объект.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -41,32 +41,32 @@ HRESULT GetCurrentApartmentType (
 ## <a name="parameters"></a>Параметры
 
 `vFunc`  
-[in] Этот параметр не используется.
+окне Этот параметр не используется.
 
 `ptr`  
-[in] Указатель на [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) экземпляра.
+окне Указатель на экземпляр [икомсреадингинфо](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) .
 
 `aptType`  
-[out] Указатель на [APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype) значение перечисления, указывающее подразделения вызывающей стороны.
+заполняет Указатель на значение перечисления [апттипе](/windows/win32/api/objidlbase/ne-objidlbase-apttype) , указывающее подразделение вызывающего объекта.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 |Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `S_OK` | 0 | Функция успешно завершена. |
-| `E_FAIL` | 0x80000008 | Вызывающий объект не выполняется в подразделении. |
+| `E_FAIL` | 0x80000008 | Вызывающий объект не выполняется в апартаменте. |
   
 ## <a name="remarks"></a>Примечания
 
-Эта функция создает оболочку для вызова [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) метод.
+Эта функция заключает в оболочку вызов метода [икомсреадингинфо:: жеткуррентапартменттипе](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) .
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** WMINet_Utils.idl  
+ **Заголовок.** WMINet_Utils. idl  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+- [WMI и счетчики производительности (Справочник по неуправляемым интерфейсам API)](index.md)

@@ -8,112 +8,112 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: a1eebc3d384d2efef050672a9c589b14559977f5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6c8ec4052d834d410df7fef12e59434f5fdfb44
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648759"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039984"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Процедура Main в Visual Basic
-Каждое приложение Visual Basic должен содержать процедура с именем `Main`. Эта процедура служит начальной точкой программы и осуществляющей общее управление для вашего приложения. Платформа .NET Framework вызывает ваш `Main` процедуру при загрузке приложения и все готово для передачи управления. Если вы создаете приложение Windows Forms, необходимо написать `Main` процедуры для приложений, работающих на собственные.  
-  
- `Main` содержит код, который выполняется первым. В `Main`, можно определить, какая форма загружается первой при запуске программы, узнать, если копия приложения уже выполняется в системе, ввести набор переменных для приложения или открыть базу данных, которая необходима для приложения.  
-  
-## <a name="requirements-for-the-main-procedure"></a>Требования для процедуры Main  
- Файл, который запускается сам по себе (обычно с расширением .exe) должен содержать `Main` процедуры. Библиотека (например с расширением .dll) не работает на собственный и не требует `Main` процедуры. Далее приведены требования для различных типов проектов, которые можно создать.  
-  
-- Консольные приложения выполняются самостоятельно, и необходимо указать по крайней мере `Main` процедуры. .  
-  
-- Приложения Windows Forms выполняются самостоятельно. Тем не менее, компилятор Visual Basic автоматически создает `Main` процедуры таким приложением и не обязательно должны написать.  
-  
-- Библиотеки классов не требуют `Main` процедуры. Сюда входят библиотеки элементов управления Windows и библиотеки управления Web. Веб-приложения развертываются как библиотеки классов.  
-  
-## <a name="declaring-the-main-procedure"></a>Объявление процедуры Main  
- Существуют четыре способа объявления `Main` процедуры. Он может принимать аргументы, или нет и она может возвращать значение, или нет.  
-  
+Каждое приложение Visual Basic должно содержать процедуру с именем `Main`. Эта процедура выступает в качестве начальной точки и общего управления для приложения. .NET Framework вызывает `Main` процедуру, когда она загрузила приложение и готова передать ему управление. Если вы не создаете Windows Forms приложение, необходимо написать `Main` процедуру для приложений, выполняемых самостоятельно.
+
+ `Main`содержит код, который выполняется в первую очередь. В `Main`можно определить, какая форма должна загружаться первым при запуске программы, определить, выполняется ли в системе копия приложения, установить набор переменных для приложения или открыть базу данных, требуемую для приложения.
+
+## <a name="requirements-for-the-main-procedure"></a>Требования для основной процедуры
+ Файл, который выполняется самостоятельно (обычно с расширением exe), должен содержать `Main` процедуру. Библиотека (например, с расширением DLL) не запускается самостоятельно и не требует `Main` процедуры. Ниже приведены требования к различным типам проектов, которые можно создать.
+
+- Консольные приложения выполняются самостоятельно, и необходимо указать хотя бы одну `Main` процедуру.
+
+- Windows Forms приложения выполняются самостоятельно. Однако компилятор Visual Basic автоматически создает `Main` процедуру в таком приложении, и вам не нужно писать его.
+
+- Библиотеки классов не нуждаются в `Main` процедуре. К ним относятся библиотеки элементов управления Windows и библиотеки веб-элементов управления. Веб-приложения развертываются в виде библиотек классов.
+
+## <a name="declaring-the-main-procedure"></a>Объявление основной процедуры
+ Существует четыре способа объявления `Main` процедуры. Он может принимать аргументы, а также не может возвращать значение.
+
 > [!NOTE]
->  При объявлении `Main` в классе, необходимо использовать `Shared` ключевое слово. В модуле `Main` не нужно быть `Shared`.  
-  
-- Проще всего объявить `Sub` процедуру, которая не принимает аргументы и возвращать значение.  
-  
-    ```  
-    Module mainModule  
-        Sub Main()  
-            MsgBox("The Main procedure is starting the application.")  
-            ' Insert call to appropriate starting place in your code.  
-            MsgBox("The application is terminating.")  
-        End Sub  
-    End Module  
-    ```  
-  
-- `Main` также может возвращать `Integer` значение, которое операционная система использует как код выхода программы. Другие программы можно проверить этот код, путем проверки значения Windows ERRORLEVEL. Чтобы вернуть код завершения, необходимо объявить `Main` как `Function` вместо `Sub` процедуры.  
-  
-    ```  
-    Module mainModule  
-        Function Main() As Integer  
-            MsgBox("The Main procedure is starting the application.")  
-            Dim returnValue As Integer = 0  
-            ' Insert call to appropriate starting place in your code.  
-            ' On return, assign appropriate value to returnValue.  
-            ' 0 usually means successful completion.  
-            MsgBox("The application is terminating with error level " &  
-                 CStr(returnValue) & ".")  
-            Return returnValue  
-        End Function  
-    End Module  
-    ```  
-  
-- `Main` Можно также воспользоваться `String` массива в качестве аргумента. Каждая строка в массиве содержит один из аргументов командной строки, используемые для вызова программы. Можно выполнять разные действия в зависимости от их значения.  
-  
-    ```  
-    Module mainModule  
-        Function Main(ByVal cmdArgs() As String) As Integer  
-            MsgBox("The Main procedure is starting the application.")  
-            Dim returnValue As Integer = 0  
-            ' See if there are any arguments.  
-            If cmdArgs.Length > 0 Then  
-                For argNum As Integer = 0 To UBound(cmdArgs, 1)  
-                    ' Insert code to examine cmdArgs(argNum) and take  
-                    ' appropriate action based on its value.  
-                Next argNum  
-            End If  
-            ' Insert call to appropriate starting place in your code.  
-            ' On return, assign appropriate value to returnValue.  
-            ' 0 usually means successful completion.  
-            MsgBox("The application is terminating with error level " &  
-                 CStr(returnValue) & ".")  
-            Return returnValue  
-        End Function  
-    End Module  
-    ```  
-  
-- Можно объявить `Main` аргументы командной строки, но возвращает код выхода, как показано ниже.  
-  
-    ```  
-    Module mainModule  
-        Sub Main(ByVal cmdArgs() As String)  
-            MsgBox("The Main procedure is starting the application.")  
-            Dim returnValue As Integer = 0  
-            ' See if there are any arguments.  
-            If cmdArgs.Length > 0 Then  
-                For argNum As Integer = 0 To UBound(cmdArgs, 1)  
-                    ' Insert code to examine cmdArgs(argNum) and take  
-                    ' appropriate action based on its value.  
-                Next argNum  
-            End If  
-            ' Insert call to appropriate starting place in your code.  
-            MsgBox("The application is terminating.")  
-        End Sub  
-    End Module  
-    ```  
+>  При объявлении `Main` в классе необходимо `Shared` использовать ключевое слово. В модуле `Main` не обязательно должен быть `Shared`.
+
+- Самый простой способ — объявить `Sub` процедуру, которая не принимает аргументы или не возвращает значение.
+
+    ```vb
+    Module mainModule
+        Sub Main()
+            MsgBox("The Main procedure is starting the application.")
+            ' Insert call to appropriate starting place in your code.
+            MsgBox("The application is terminating.")
+        End Sub
+    End Module
+    ```
+
+- `Main`также может возвращать `Integer` значение, которое операционная система использует в качестве кода выхода для программы. Другие программы могут протестировать этот код, изучая значение ERRORLEVEL Windows. Чтобы вернуть код выхода, вместо `Main` `Sub` процедуры необходимо объявить `Function` процедуру.
+
+    ```vb
+    Module mainModule
+        Function Main() As Integer
+            MsgBox("The Main procedure is starting the application.")
+            Dim returnValue As Integer = 0
+            ' Insert call to appropriate starting place in your code.
+            ' On return, assign appropriate value to returnValue.
+            ' 0 usually means successful completion.
+            MsgBox("The application is terminating with error level " &
+                 CStr(returnValue) & ".")
+            Return returnValue
+        End Function
+    End Module
+    ```
+
+- `Main`также может принимать `String` массив в качестве аргумента. Каждая строка в массиве содержит один из аргументов командной строки, используемых для вызова программы. В зависимости от их значений можно выполнять различные действия.
+
+    ```vb
+    Module mainModule
+        Function Main(ByVal cmdArgs() As String) As Integer
+            MsgBox("The Main procedure is starting the application.")
+            Dim returnValue As Integer = 0
+            ' See if there are any arguments.
+            If cmdArgs.Length > 0 Then
+                For argNum As Integer = 0 To UBound(cmdArgs, 1)
+                    ' Insert code to examine cmdArgs(argNum) and take
+                    ' appropriate action based on its value.
+                Next
+            End If
+            ' Insert call to appropriate starting place in your code.
+            ' On return, assign appropriate value to returnValue.
+            ' 0 usually means successful completion.
+            MsgBox("The application is terminating with error level " &
+                 CStr(returnValue) & ".")
+            Return returnValue
+        End Function
+    End Module
+    ```
+
+- Можно объявить `Main` , чтобы проверить аргументы командной строки, но не вернуть код выхода, как показано ниже.
+
+    ```vb
+    Module mainModule
+        Sub Main(ByVal cmdArgs() As String)
+            MsgBox("The Main procedure is starting the application.")
+            Dim returnValue As Integer = 0
+            ' See if there are any arguments.
+            If cmdArgs.Length > 0 Then
+                For argNum As Integer = 0 To UBound(cmdArgs, 1)
+                    ' Insert code to examine cmdArgs(argNum) and take
+                    ' appropriate action based on its value.
+                Next
+            End If
+            ' Insert call to appropriate starting place in your code.
+            MsgBox("The application is terminating.")
+        End Sub
+    End Module
+    ```
   
 ## <a name="see-also"></a>См. также
 
 - <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>
 - <xref:System.Array.Length%2A>
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>
-- [Структура программы на Visual Basic](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
+- [Структура программы Visual Basic](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
 - [/main](../../../visual-basic/reference/command-line-compiler/main.md)
 - [Общие](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)

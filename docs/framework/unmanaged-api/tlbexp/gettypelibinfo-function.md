@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 916d62a2b79a44d92611e735c6f9bbb3e01970e2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7da0986269189ba5c2dfa0f10d509bf51deb446d
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782732"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040206"
 ---
 # <a name="gettypelibinfo-function"></a>Функция GetTypeLibInfo
-Возвращает сведения об указанной библиотеки типов с помощью проверки его [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr) структуры.  
+Возвращает сведения о указанной библиотеке типов, изучая ее структуру [тлибаттр](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,38 +41,38 @@ HRESULT GetTypeLibInfo(
   
 ## <a name="parameters"></a>Параметры  
  `szFile`  
- [in] Имя файла библиотеки типов.  
+ окне Имя файла библиотеки типов.  
   
  `pTypeLibID`  
- [out] Идентификатор GUID библиотеки типов.  
+ заполняет Идентификатор GUID библиотеки типов.  
   
  `pTypeLibLCID`  
- [out] Идентификатор локализации библиотеки типов.  
+ заполняет ИДЕНТИФИКАТОР локализации библиотеки типов.  
   
  `pTypeLibPlatform`  
- [out] Объект [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) флаг, определяющий, Целевая операционная система для библиотеки типов. Обычные значения: SYS_WIN32 и SYS_WIN64.  
+ заполняет Флаг [Сискинд](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind) , определяющий целевую операционную систему для библиотеки типов. Распространенные значения — SYS_WIN32 и SYS_WIN64.  
   
  `pTypeLibMajorVer`  
- [out] Основной номер версии библиотеки типов. Например, для версии *x.y*, основной номер версии — *x*.  
+ заполняет Основной номер версии библиотеки типов. Например, для версии *x. y*основной номер версии — *x*.  
   
  `pTypeLibMinorVer`  
- [out] Дополнительный номер версии библиотеки типов. Например, для версии *x.y*, дополнительный номер версии — *y*.  
+ заполняет Дополнительный номер версии библиотеки типов. Например, для версии *x. y*дополнительный номер версии — *y*.  
   
 ## <a name="remarks"></a>Примечания  
- `GetTypeLibInfo` Функция вызывается из [Tlbexp.exe (программа экспорта библиотек типов)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md). Это средство создает библиотеку типов, описывающую типы в сборке среды CLR.  
+ Функция вызывается программой [Tlbexp. exe (программа экспорта библиотек типов).](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) `GetTypeLibInfo` Это средство создает библиотеку типов, описывающую типы в сборке среды CLR.  
   
- Если какой-либо параметр имеет значение null, функция возвращает `HRESULT` из `E_POINTER`. В противном случае она возвращает `S_OK`.  
+ Если какой-либо из параметров имеет значение null, `HRESULT` функция `E_POINTER`возвращает объект. В противном случае она возвращает `S_OK`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформ** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок.** TlbRef.h  
+ **Заголовок.** Тлбреф. h  
   
- **Библиотека:** TlbRef.lib  
+ **Библиотечная** Тлбреф. lib  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
 - [Вспомогательные функции Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
-- [Функция LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+- [Функция Лоадтипелибекс](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

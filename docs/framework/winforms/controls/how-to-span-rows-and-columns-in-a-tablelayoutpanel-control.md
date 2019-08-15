@@ -10,31 +10,28 @@ helpviewer_keywords:
 - rows [Windows Forms], spanning
 - cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
-ms.openlocfilehash: 02db78b07930676235e55e535fb24f6ff618d823
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a215b2b4e05bab5c81d2779d4b67d5b9d57b6ba5
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012975"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039698"
 ---
 # <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>Практическое руководство. Объединение строк и столбцов в элементе управления TableLayoutPanel
-Элементы управления в <xref:System.Windows.Forms.TableLayoutPanel> элемент управления может охватывать соседних строк и столбцов.  
-  
-> [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-span-columns-and-rows"></a>Чтобы объединить столбцы и строки  
-  
-1. Перетащите элемент управления <xref:System.Windows.Forms.TableLayoutPanel> из **панели элементов** в свою форму.  
-  
-2. Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** в левый верхний угол объекта <xref:System.Windows.Forms.TableLayoutPanel> элемента управления.  
-  
-3. Задайте <xref:System.Windows.Forms.Button> элемента управления **ColumnSpan** свойства **2**. Обратите внимание, что <xref:System.Windows.Forms.Button> управления охватывает первый и второй столбцы.  
-  
-4. Задайте <xref:System.Windows.Forms.Button> элемента управления **RowSpan** свойства **2**. Обратите внимание, что <xref:System.Windows.Forms.Button> управления охватывает первую и вторую строку.  
-  
-5. Задайте <xref:System.Windows.Forms.Button> элемента управления **ColumnSpan** свойства **1**. Обратите внимание, что <xref:System.Windows.Forms.Button> управления перемещается в первый столбец, но охватывает первую и вторую строку.  
-  
+<xref:System.Windows.Forms.TableLayoutPanel> Элементы управления могут охватывать смежные строки и столбцы.
+
+## <a name="to-span-columns-and-rows"></a>Охват столбцов и строк
+
+1. Перетащите элемент управления <xref:System.Windows.Forms.TableLayoutPanel> из **панели элементов** в свою форму.
+
+2. Перетащите элемент управления из **области элементов** в верхнюю <xref:System.Windows.Forms.TableLayoutPanel> левую ячейку элемента управления. <xref:System.Windows.Forms.Button>
+
+3. Задайте для свойства **ColumnSpan** элементауправлениязначение<xref:System.Windows.Forms.Button> 2. Обратите внимание <xref:System.Windows.Forms.Button> , что элемент управления охватывает первый и второй столбцы.
+
+4. Присвойте свойству **RowSpan** элементауправлениязначение<xref:System.Windows.Forms.Button> 2. Обратите внимание <xref:System.Windows.Forms.Button> , что элемент управления охватывает первую и вторую строки.
+
+5. Задайте для свойства **ColumnSpan** элементауправлениязначение<xref:System.Windows.Forms.Button> 1. Обратите внимание <xref:System.Windows.Forms.Button> , что элемент управления перемещается в первый столбец и охватывает первую и вторую строки.
+
 ## <a name="see-also"></a>См. также
 
 - [Элемент управления TableLayoutPanel](tablelayoutpanel-control-windows-forms.md)

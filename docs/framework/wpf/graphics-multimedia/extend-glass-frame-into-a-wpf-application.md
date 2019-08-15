@@ -10,27 +10,27 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 11c872767b5e3595da1fb4982d3b12e0fc77db98
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: f8d50cb4d0112232f86579542650418a1906bda2
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238592"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039834"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Использование стеклянной рамки в приложении WPF
 
-В этом разделе показано, как расширить [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] стеклянную рамку на клиентскую область приложения Windows Presentation Foundation (WPF).
+В этом разделе показано, как расширить [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] стеклянную рамку в клиентскую область приложения Windows Presentation Foundation (WPF).
 
 > [!NOTE]
 > Этот пример будет работать только на компьютере под управлением [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], где работает диспетчер окон рабочего стола (DWM) с включенным эффектом прозрачного стекла. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] Home Basic edition не поддерживает эффект прозрачного стекла. Области, которые обычно отображаются с эффектом прозрачного стекла, в других выпусках [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] отображаются непрозрачными.
 
 ## <a name="example"></a>Пример
 
-На следующем рисунке показан Стеклянная рамка, расширенная в адресной строке Internet Explorer 7:
+На следующем рисунке показана стеклянная рамка, расширенная в адресной строке Internet Explorer 7:
 
-![Снимок экрана, показывающий стекла фреймом, расширенный за адресной строки обозревателя IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
+![Снимок экрана: стеклянная рамка, расширенная за адресной строкой IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-Чтобы расширить стеклянную рамку в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения, необходим доступ к неуправляемый интерфейс API. В следующем примере кода так и неуправляемого кода (pinvoke) для двух API, необходимые для расширения рамки на клиентскую область. Каждый из этих API объявляются в классе с именем **NonClientRegionAPI**.
+Для расширения стеклянного фрейма в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложении требуется доступ к неуправляемому API. В следующем примере кода выполняется вызов платформы (PInvoke) для двух API, необходимых для расширения рамки в клиентскую область. Каждый из этих API объявлен в классе с именем **нонклиентрегионапи**.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -62,11 +62,11 @@ Public Shared Function DwmExtendFrameIntoClientArea(ByVal hwnd As IntPtr, ByRef 
 End Function
 ```
 
-[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) — функция DWM, которая расширяет рамку на клиентскую область. Она принимает два параметра — дескриптор окна и структуру [MARGINS](/windows/desktop/api/uxtheme/ns-uxtheme-_margins). [MARGINS](/windows/desktop/api/uxtheme/ns-uxtheme-_margins) используется для сообщения DWM, насколько следует расширить рамку в клиентской области.
+[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) — функция DWM, которая расширяет рамку на клиентскую область. Она принимает два параметра — дескриптор окна и структуру [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins). [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) используется для сообщения DWM, насколько следует расширить рамку в клиентской области.
 
 ## <a name="example"></a>Пример
 
-Для использования функции [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) необходимо получить дескриптор окна. В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], дескриптор окна может быть получен из <xref:System.Windows.Interop.HwndSource.Handle%2A> свойство <xref:System.Windows.Interop.HwndSource>. В следующем примере рамка расширяется на клиентскую область на <xref:System.Windows.FrameworkElement.Loaded> событий окна.
+Для использования функции [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) необходимо получить дескриптор окна. В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]обработчик окна может быть получен <xref:System.Windows.Interop.HwndSource.Handle%2A> из свойства объекта <xref:System.Windows.Interop.HwndSource>. В следующем примере фрейм расширяется в клиентскую область <xref:System.Windows.FrameworkElement.Loaded> события окна.
 
 ```csharp
 void OnLoaded(object sender, RoutedEventArgs e)
@@ -111,7 +111,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано простое окно, в котором рамка расширяется на клиентскую область. Рамка расширяется за пределы верхней границы, содержащей два <xref:System.Windows.Controls.TextBox> объектов.
+В следующем примере показано простое окно, в котором рамка расширяется на клиентскую область. Рамка расширяется позади верхней границы, содержащей два <xref:System.Windows.Controls.TextBox> объекта.
 
 ```xaml
 <Window x:Class="SDKSample.Window1"
@@ -145,12 +145,12 @@ void OnLoaded(object sender, RoutedEventArgs e)
 </Window>
 ```
 
-На следующем рисунке показан Стеклянная рамка, расширенная в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения:
+На следующем рисунке показана стеклянная рамка, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] расширенная в приложении:
 
-![Снимок экрана, показывающий Стеклянная рамка, расширенная в приложение WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
+![Снимок экрана, показывающий стеклянную рамку, расширенную в приложение WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения о диспетчере окон рабочего стола](/windows/desktop/dwm/dwm-overview)
-- [Общие сведения о размытии для диспетчера окон рабочего стола](/windows/desktop/dwm/blur-ovw)
+- [Обзор диспетчер окон рабочего стола](/windows/desktop/dwm/dwm-overview)
+- [Общие сведения об размытии диспетчер окон рабочего стола](/windows/desktop/dwm/blur-ovw)
 - [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)
