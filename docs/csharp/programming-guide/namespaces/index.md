@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 79b7057b1f6a9cdba2215124160b28efb9a1c0be
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cf5a7f239cf7d3cd3a6e39f31d16adb830646afc
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629517"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039497"
 ---
 # <a name="namespaces-c-programming-guide"></a>Пространства имен (Руководство по программированию в C#)
 
@@ -44,13 +44,12 @@ ms.locfileid: "68629517"
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+Дополнительные сведения см. в статье [Пространства имен](~/_csharplang/spec/namespaces.md) в разделе [Предварительная спецификация C# 6.0](~/_csharplang/spec/introduction.md).
   
 ## <a name="see-also"></a>См. также
 
 - [Руководство по программированию на C#](../index.md)
 - [Использование пространств имен](using-namespaces.md)
-- [Практическое руководство. Использование псевдонима глобального пространства имен](how-to-use-the-global-namespace-alias.md)
 - [Практическое руководство. Использование пространства имен My](how-to-use-the-my-namespace.md)
 - [Имена идентификаторов](../inside-a-program/identifier-names.md)
 - [Директива using](../../language-reference/keywords/using-directive.md)
